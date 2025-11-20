@@ -20,7 +20,7 @@ class Contexts implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  上下文的名称。 - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internal”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的context的name的值为“external”。
+    * name  **参数解释**： 上下文的名称。 **约束限制**： 不涉及 **取值范围**： - internal：私网访问 - external：公网访问  **默认取值**： - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internal”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的context的name的值为“external”。
     * context  context
     *
     * @var string[]
@@ -32,7 +32,7 @@ class Contexts implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  上下文的名称。 - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internal”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的context的name的值为“external”。
+    * name  **参数解释**： 上下文的名称。 **约束限制**： 不涉及 **取值范围**： - internal：私网访问 - external：公网访问  **默认取值**： - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internal”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的context的name的值为“external”。
     * context  context
     *
     * @var string[]
@@ -65,7 +65,7 @@ class Contexts implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  上下文的名称。 - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internal”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的context的name的值为“external”。
+    * name  **参数解释**： 上下文的名称。 **约束限制**： 不涉及 **取值范围**： - internal：私网访问 - external：公网访问  **默认取值**： - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internal”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的context的name的值为“external”。
     * context  context
     *
     * @var string[]
@@ -77,7 +77,7 @@ class Contexts implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  上下文的名称。 - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internal”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的context的name的值为“external”。
+    * name  **参数解释**： 上下文的名称。 **约束限制**： 不涉及 **取值范围**： - internal：私网访问 - external：公网访问  **默认取值**： - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internal”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的context的name的值为“external”。
     * context  context
     *
     * @var string[]
@@ -89,7 +89,7 @@ class Contexts implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  上下文的名称。 - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internal”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的context的name的值为“external”。
+    * name  **参数解释**： 上下文的名称。 **约束限制**： 不涉及 **取值范围**： - internal：私网访问 - external：公网访问  **默认取值**： - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internal”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的context的name的值为“external”。
     * context  context
     *
     * @var string[]
@@ -185,7 +185,7 @@ class Contexts implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  上下文的名称。 - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internal”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的context的name的值为“external”。
+    *  **参数解释**： 上下文的名称。 **约束限制**： 不涉及 **取值范围**： - internal：私网访问 - external：公网访问  **默认取值**： - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internal”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的context的name的值为“external”。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class Contexts implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 上下文的名称。 - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internal”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的context的name的值为“external”。
+    * @param string|null $name **参数解释**： 上下文的名称。 **约束限制**： 不涉及 **取值范围**： - internal：私网访问 - external：公网访问  **默认取值**： - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internal”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的context的name的值为“external”。
     *
     * @return $this
     */

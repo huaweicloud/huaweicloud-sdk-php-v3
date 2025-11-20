@@ -21,21 +21,25 @@ class AnalyzerConfigurationUnusedAccess implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * unusedAccessAge  生成分析结果的预设天数。
+    * unusedAnalysisRule  unusedAnalysisRule
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'unusedAccessAge' => 'int'
+            'unusedAccessAge' => 'int',
+            'unusedAnalysisRule' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\UnusedAnalysisRule'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * unusedAccessAge  生成分析结果的预设天数。
+    * unusedAnalysisRule  unusedAnalysisRule
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'unusedAccessAge' => 'int32'
+        'unusedAccessAge' => 'int32',
+        'unusedAnalysisRule' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class AnalyzerConfigurationUnusedAccess implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * unusedAccessAge  生成分析结果的预设天数。
+    * unusedAnalysisRule  unusedAnalysisRule
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'unusedAccessAge' => 'unused_access_age'
+            'unusedAccessAge' => 'unused_access_age',
+            'unusedAnalysisRule' => 'unused_analysis_rule'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * unusedAccessAge  生成分析结果的预设天数。
+    * unusedAnalysisRule  unusedAnalysisRule
     *
     * @var string[]
     */
     protected static $setters = [
-            'unusedAccessAge' => 'setUnusedAccessAge'
+            'unusedAccessAge' => 'setUnusedAccessAge',
+            'unusedAnalysisRule' => 'setUnusedAnalysisRule'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * unusedAccessAge  生成分析结果的预设天数。
+    * unusedAnalysisRule  unusedAnalysisRule
     *
     * @var string[]
     */
     protected static $getters = [
-            'unusedAccessAge' => 'getUnusedAccessAge'
+            'unusedAccessAge' => 'getUnusedAccessAge',
+            'unusedAnalysisRule' => 'getUnusedAnalysisRule'
     ];
 
     /**
@@ -148,6 +158,7 @@ class AnalyzerConfigurationUnusedAccess implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['unusedAccessAge'] = isset($data['unusedAccessAge']) ? $data['unusedAccessAge'] : null;
+        $this->container['unusedAnalysisRule'] = isset($data['unusedAnalysisRule']) ? $data['unusedAnalysisRule'] : null;
     }
 
     /**
@@ -199,6 +210,30 @@ class AnalyzerConfigurationUnusedAccess implements ModelInterface, ArrayAccess
     public function setUnusedAccessAge($unusedAccessAge)
     {
         $this->container['unusedAccessAge'] = $unusedAccessAge;
+        return $this;
+    }
+
+    /**
+    * Gets unusedAnalysisRule
+    *  unusedAnalysisRule
+    *
+    * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\UnusedAnalysisRule|null
+    */
+    public function getUnusedAnalysisRule()
+    {
+        return $this->container['unusedAnalysisRule'];
+    }
+
+    /**
+    * Sets unusedAnalysisRule
+    *
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\UnusedAnalysisRule|null $unusedAnalysisRule unusedAnalysisRule
+    *
+    * @return $this
+    */
+    public function setUnusedAnalysisRule($unusedAnalysisRule)
+    {
+        $this->container['unusedAnalysisRule'] = $unusedAnalysisRule;
         return $this;
     }
 

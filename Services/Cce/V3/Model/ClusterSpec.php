@@ -21,6 +21,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * category  集群类别： - CCE：CCE集群   CCE集群支持虚拟机与裸金属服务器混合、GPU、NPU等异构节点的混合部署，基于高性能网络模型提供全方位、多场景、安全稳定的容器运行环境。 [- Turbo: CCE Turbo集群。   全面基于云原生基础设施构建的云原生2.0的容器引擎服务，具备软硬协同、网络无损、安全可靠、调度智能的优势，为用户提供一站式、高性价比的全新容器服务体验。](tag:hws,hws_hk,dt,hcs,g42,sbc)
+    * agencyName  **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。当不传或为空时，集群将自动选择使用CCE的系统委托cce_admin_trust或cce_cluster_agency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅1.27及以上版本集群支持该参数  **取值范围：** 不涉及 **默认取值：** 空
     * type  **参数解释：** 集群Master节点架构 **约束限制：** 不涉及 **取值范围：** - VirtualMachine：Master节点为x86架构服务器 - [ARM64: Master节点为鲲鹏（ARM架构）服务器](tag:hws,hws_hk,hcs)  **默认取值：** VirtualMachine[，如若VirtualMachine资源不足，取值为ARM64](tag:hws,hws_hk,hcs)
     * flavor  **参数解释：** 集群规格，当集群为v1.15及以上版本时支持创建后变更，详情请参见[变更集群规格](ResizeCluster.xml)。请按实际业务需求进行选择 **约束限制：** 不涉及 **取值范围：** - cce.s1.small: 小规模单控制节点CCE集群（最大50节点） - cce.s1.medium: 中等规模单控制节点CCE集群（最大200节点） - cce.s1.large: 大规模单控制节点CCE集群（最大1000节点） - cce.s2.small: 小规模三控制节点CCE集群（最大50节点） - cce.s2.medium: 中等规模三控制节点CCE集群（最大200节点） - cce.s2.large: 大规模三控制节点CCE集群（最大1000节点） - cce.s2.xlarge: 超大规模三控制节点CCE集群（最大2000节点） [- cce.s3.small: 小规模五控制节点CCE集群（最大50节点）](tag:hcs,hcs_sm) [- cce.s3.medium: 中等规模五控制节点CCE集群（最大200节点）](tag:hcs,hcs_sm) [- cce.s3.large: 大规模五控制节点CCE集群（最大1000节点）](tag:hcs,hcs_sm) [- cce.s3.xlarge: 超大规模五控制节点CCE集群（最大2000节点）](tag:hcs,hcs_sm)  [专属云特殊规格如下：](tag:hws,hws_hk,hcs,hcs_sm) [- cce.dec.s1.small: 小规模单控制节点的专属云CCE集群（最大50节点）](tag:hws,hws_hk) [- cce.dec.s1.medium: 中等规模单控制节点的专属云CCE集群（最大200节点）](tag:hws,hws_hk) [- cce.dec.s1.large: 大规模单控制节点的专属云CCE集群（最大1000节点）](tag:hws,hws_hk) [- cce.dec.s1.xlarge: 超大规模单控制节点的专属云CCE集群（最大2000节点）](tag:hws,hws_hk) [- cce.dec.s2.small: 小规模三控制节点的专属云CCE集群（最大50节点）](tag:hws,hws_hk) [- cce.dec.s2.medium: 中等规模三控制节点的专属云CCE集群（最大200节点）](tag:hws,hws_hk) [- cce.dec.s2.large: 大规模三控制节点的专属云CCE集群（最大1000节点）](tag:hws,hws_hk) [- cce.dec.s2.xlarge: 超大规模三控制节点的专属云CCE集群（最大2000节点）](tag:hws,hws_hk) [- cce.dec.s3.small: 小规模五控制节点的专属云CCE集群（最大50节点）](tag:hcs,hcs_sm) [- cce.dec.s3.medium: 中等规模五控制节点的专属云CCE集群（最大200节点）](tag:hcs,hcs_sm) [- cce.dec.s3.large: 大规模五控制节点的专属云CCE集群（最大1000节点）](tag:hcs,hcs_sm) [- cce.dec.s3.xlarge: 超大规模五控制节点的专属云CCE集群（最大2000节点）](tag:hcs,hcs_sm)  **默认取值：** 不涉及  >    关于规格参数中的字段说明如下： >    - s1：单控制节点的集群，控制节点数为1。单控制节点故障后，集群将不可用，但已运行工作负载不受影响。 >    - s2：三控制节点的集群，即高可用集群，控制节点数为3。当某个控制节点故障时，集群仍然可用。 [>   - s3：五控制节点的集群，即超高可用集群，控制节点数为5。当某2个控制节点故障时，集群仍然可用。](tag:hcs,hcs_sm) [>   - dec：表示专属云的CCE集群规格。例如cce.dec.s1.small表示小规模单控制节点的专属云CCE集群（最大50节点）。](tag:hws,hws_hk) >    - small：表示集群支持管理的最大节点规模为50节点。 >    - medium：表示集群支持管理的最大节点规模为200节点。 >    - large：表示集群支持管理的最大节点规模为1000节点。 >    - xlarge：表示集群支持管理的最大节点规模为2000节点。
     * version  **参数解释：** 集群版本，与Kubernetes社区基线版本保持一致，建议选择最新商用版本。 [> 关于Kubernetes版本策略，请参见[Kubernetes版本策略](https://support.huaweicloud.com/bulletin-cce/cce_bulletin_0033.html)](tag:hws) [> 关于Kubernetes版本策略，请参见[Kubernetes版本策略](https://support.huaweicloud.com/intl/zh-cn/bulletin-cce/cce_bulletin_0033.html)](tag:hws_hk)  在CCE控制台支持创建三种最新版本的集群。可登录CCE控制台创建集群，在“版本”处获取到集群版本。 其它集群版本，当前仍可通过api创建，但后续会逐渐下线，具体下线策略请关注CCE官方公告。 **约束限制：** 格式必须为：vX.Y[.Z[-rN]]，例如 v1.30，v1.30.0，v1.30.0-r0 都将创建1.30版本的集群 - X: 对应社区Kubernetes的主要版本 - Y: 对应社区Kubernetes的次要版本 - Z: 对应社区Kubernetes的补丁版本 [- N: 对应CCE补丁版本，关于CCE补丁版本详情，请参见[补丁版本发布记录](https://support.huaweicloud.com/bulletin-cce/cce_10_0405.html)](tag:hws) [- N: 对应CCE补丁版本，关于CCE补丁版本详情，请参见[补丁版本发布记录](https://support.huaweicloud.com/intl/zh-cn/bulletin-cce/cce_10_0405.html)](tag:hws_hk)  **取值范围：** 不涉及 **默认取值：** - 若不配置，默认创建最新版本的集群。 - 若指定集群基线版本但是不指定具体r版本，则系统默认选择对应集群版本的最新r版本。建议不指定具体r版本由系统选择最新版本。  [>    - Turbo集群支持1.19及以上版本商用。](tag:hws,hws_hk,dt) [>    - Turbo集群支持1.23及以上版本商用。](tag:hcs,g42,sbc)
@@ -53,6 +54,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'category' => 'string',
+            'agencyName' => 'string',
             'type' => 'string',
             'flavor' => 'string',
             'version' => 'string',
@@ -85,6 +87,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * category  集群类别： - CCE：CCE集群   CCE集群支持虚拟机与裸金属服务器混合、GPU、NPU等异构节点的混合部署，基于高性能网络模型提供全方位、多场景、安全稳定的容器运行环境。 [- Turbo: CCE Turbo集群。   全面基于云原生基础设施构建的云原生2.0的容器引擎服务，具备软硬协同、网络无损、安全可靠、调度智能的优势，为用户提供一站式、高性价比的全新容器服务体验。](tag:hws,hws_hk,dt,hcs,g42,sbc)
+    * agencyName  **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。当不传或为空时，集群将自动选择使用CCE的系统委托cce_admin_trust或cce_cluster_agency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅1.27及以上版本集群支持该参数  **取值范围：** 不涉及 **默认取值：** 空
     * type  **参数解释：** 集群Master节点架构 **约束限制：** 不涉及 **取值范围：** - VirtualMachine：Master节点为x86架构服务器 - [ARM64: Master节点为鲲鹏（ARM架构）服务器](tag:hws,hws_hk,hcs)  **默认取值：** VirtualMachine[，如若VirtualMachine资源不足，取值为ARM64](tag:hws,hws_hk,hcs)
     * flavor  **参数解释：** 集群规格，当集群为v1.15及以上版本时支持创建后变更，详情请参见[变更集群规格](ResizeCluster.xml)。请按实际业务需求进行选择 **约束限制：** 不涉及 **取值范围：** - cce.s1.small: 小规模单控制节点CCE集群（最大50节点） - cce.s1.medium: 中等规模单控制节点CCE集群（最大200节点） - cce.s1.large: 大规模单控制节点CCE集群（最大1000节点） - cce.s2.small: 小规模三控制节点CCE集群（最大50节点） - cce.s2.medium: 中等规模三控制节点CCE集群（最大200节点） - cce.s2.large: 大规模三控制节点CCE集群（最大1000节点） - cce.s2.xlarge: 超大规模三控制节点CCE集群（最大2000节点） [- cce.s3.small: 小规模五控制节点CCE集群（最大50节点）](tag:hcs,hcs_sm) [- cce.s3.medium: 中等规模五控制节点CCE集群（最大200节点）](tag:hcs,hcs_sm) [- cce.s3.large: 大规模五控制节点CCE集群（最大1000节点）](tag:hcs,hcs_sm) [- cce.s3.xlarge: 超大规模五控制节点CCE集群（最大2000节点）](tag:hcs,hcs_sm)  [专属云特殊规格如下：](tag:hws,hws_hk,hcs,hcs_sm) [- cce.dec.s1.small: 小规模单控制节点的专属云CCE集群（最大50节点）](tag:hws,hws_hk) [- cce.dec.s1.medium: 中等规模单控制节点的专属云CCE集群（最大200节点）](tag:hws,hws_hk) [- cce.dec.s1.large: 大规模单控制节点的专属云CCE集群（最大1000节点）](tag:hws,hws_hk) [- cce.dec.s1.xlarge: 超大规模单控制节点的专属云CCE集群（最大2000节点）](tag:hws,hws_hk) [- cce.dec.s2.small: 小规模三控制节点的专属云CCE集群（最大50节点）](tag:hws,hws_hk) [- cce.dec.s2.medium: 中等规模三控制节点的专属云CCE集群（最大200节点）](tag:hws,hws_hk) [- cce.dec.s2.large: 大规模三控制节点的专属云CCE集群（最大1000节点）](tag:hws,hws_hk) [- cce.dec.s2.xlarge: 超大规模三控制节点的专属云CCE集群（最大2000节点）](tag:hws,hws_hk) [- cce.dec.s3.small: 小规模五控制节点的专属云CCE集群（最大50节点）](tag:hcs,hcs_sm) [- cce.dec.s3.medium: 中等规模五控制节点的专属云CCE集群（最大200节点）](tag:hcs,hcs_sm) [- cce.dec.s3.large: 大规模五控制节点的专属云CCE集群（最大1000节点）](tag:hcs,hcs_sm) [- cce.dec.s3.xlarge: 超大规模五控制节点的专属云CCE集群（最大2000节点）](tag:hcs,hcs_sm)  **默认取值：** 不涉及  >    关于规格参数中的字段说明如下： >    - s1：单控制节点的集群，控制节点数为1。单控制节点故障后，集群将不可用，但已运行工作负载不受影响。 >    - s2：三控制节点的集群，即高可用集群，控制节点数为3。当某个控制节点故障时，集群仍然可用。 [>   - s3：五控制节点的集群，即超高可用集群，控制节点数为5。当某2个控制节点故障时，集群仍然可用。](tag:hcs,hcs_sm) [>   - dec：表示专属云的CCE集群规格。例如cce.dec.s1.small表示小规模单控制节点的专属云CCE集群（最大50节点）。](tag:hws,hws_hk) >    - small：表示集群支持管理的最大节点规模为50节点。 >    - medium：表示集群支持管理的最大节点规模为200节点。 >    - large：表示集群支持管理的最大节点规模为1000节点。 >    - xlarge：表示集群支持管理的最大节点规模为2000节点。
     * version  **参数解释：** 集群版本，与Kubernetes社区基线版本保持一致，建议选择最新商用版本。 [> 关于Kubernetes版本策略，请参见[Kubernetes版本策略](https://support.huaweicloud.com/bulletin-cce/cce_bulletin_0033.html)](tag:hws) [> 关于Kubernetes版本策略，请参见[Kubernetes版本策略](https://support.huaweicloud.com/intl/zh-cn/bulletin-cce/cce_bulletin_0033.html)](tag:hws_hk)  在CCE控制台支持创建三种最新版本的集群。可登录CCE控制台创建集群，在“版本”处获取到集群版本。 其它集群版本，当前仍可通过api创建，但后续会逐渐下线，具体下线策略请关注CCE官方公告。 **约束限制：** 格式必须为：vX.Y[.Z[-rN]]，例如 v1.30，v1.30.0，v1.30.0-r0 都将创建1.30版本的集群 - X: 对应社区Kubernetes的主要版本 - Y: 对应社区Kubernetes的次要版本 - Z: 对应社区Kubernetes的补丁版本 [- N: 对应CCE补丁版本，关于CCE补丁版本详情，请参见[补丁版本发布记录](https://support.huaweicloud.com/bulletin-cce/cce_10_0405.html)](tag:hws) [- N: 对应CCE补丁版本，关于CCE补丁版本详情，请参见[补丁版本发布记录](https://support.huaweicloud.com/intl/zh-cn/bulletin-cce/cce_10_0405.html)](tag:hws_hk)  **取值范围：** 不涉及 **默认取值：** - 若不配置，默认创建最新版本的集群。 - 若指定集群基线版本但是不指定具体r版本，则系统默认选择对应集群版本的最新r版本。建议不指定具体r版本由系统选择最新版本。  [>    - Turbo集群支持1.19及以上版本商用。](tag:hws,hws_hk,dt) [>    - Turbo集群支持1.23及以上版本商用。](tag:hcs,g42,sbc)
@@ -117,6 +120,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'category' => null,
+        'agencyName' => null,
         'type' => null,
         'flavor' => null,
         'version' => null,
@@ -170,6 +174,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * category  集群类别： - CCE：CCE集群   CCE集群支持虚拟机与裸金属服务器混合、GPU、NPU等异构节点的混合部署，基于高性能网络模型提供全方位、多场景、安全稳定的容器运行环境。 [- Turbo: CCE Turbo集群。   全面基于云原生基础设施构建的云原生2.0的容器引擎服务，具备软硬协同、网络无损、安全可靠、调度智能的优势，为用户提供一站式、高性价比的全新容器服务体验。](tag:hws,hws_hk,dt,hcs,g42,sbc)
+    * agencyName  **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。当不传或为空时，集群将自动选择使用CCE的系统委托cce_admin_trust或cce_cluster_agency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅1.27及以上版本集群支持该参数  **取值范围：** 不涉及 **默认取值：** 空
     * type  **参数解释：** 集群Master节点架构 **约束限制：** 不涉及 **取值范围：** - VirtualMachine：Master节点为x86架构服务器 - [ARM64: Master节点为鲲鹏（ARM架构）服务器](tag:hws,hws_hk,hcs)  **默认取值：** VirtualMachine[，如若VirtualMachine资源不足，取值为ARM64](tag:hws,hws_hk,hcs)
     * flavor  **参数解释：** 集群规格，当集群为v1.15及以上版本时支持创建后变更，详情请参见[变更集群规格](ResizeCluster.xml)。请按实际业务需求进行选择 **约束限制：** 不涉及 **取值范围：** - cce.s1.small: 小规模单控制节点CCE集群（最大50节点） - cce.s1.medium: 中等规模单控制节点CCE集群（最大200节点） - cce.s1.large: 大规模单控制节点CCE集群（最大1000节点） - cce.s2.small: 小规模三控制节点CCE集群（最大50节点） - cce.s2.medium: 中等规模三控制节点CCE集群（最大200节点） - cce.s2.large: 大规模三控制节点CCE集群（最大1000节点） - cce.s2.xlarge: 超大规模三控制节点CCE集群（最大2000节点） [- cce.s3.small: 小规模五控制节点CCE集群（最大50节点）](tag:hcs,hcs_sm) [- cce.s3.medium: 中等规模五控制节点CCE集群（最大200节点）](tag:hcs,hcs_sm) [- cce.s3.large: 大规模五控制节点CCE集群（最大1000节点）](tag:hcs,hcs_sm) [- cce.s3.xlarge: 超大规模五控制节点CCE集群（最大2000节点）](tag:hcs,hcs_sm)  [专属云特殊规格如下：](tag:hws,hws_hk,hcs,hcs_sm) [- cce.dec.s1.small: 小规模单控制节点的专属云CCE集群（最大50节点）](tag:hws,hws_hk) [- cce.dec.s1.medium: 中等规模单控制节点的专属云CCE集群（最大200节点）](tag:hws,hws_hk) [- cce.dec.s1.large: 大规模单控制节点的专属云CCE集群（最大1000节点）](tag:hws,hws_hk) [- cce.dec.s1.xlarge: 超大规模单控制节点的专属云CCE集群（最大2000节点）](tag:hws,hws_hk) [- cce.dec.s2.small: 小规模三控制节点的专属云CCE集群（最大50节点）](tag:hws,hws_hk) [- cce.dec.s2.medium: 中等规模三控制节点的专属云CCE集群（最大200节点）](tag:hws,hws_hk) [- cce.dec.s2.large: 大规模三控制节点的专属云CCE集群（最大1000节点）](tag:hws,hws_hk) [- cce.dec.s2.xlarge: 超大规模三控制节点的专属云CCE集群（最大2000节点）](tag:hws,hws_hk) [- cce.dec.s3.small: 小规模五控制节点的专属云CCE集群（最大50节点）](tag:hcs,hcs_sm) [- cce.dec.s3.medium: 中等规模五控制节点的专属云CCE集群（最大200节点）](tag:hcs,hcs_sm) [- cce.dec.s3.large: 大规模五控制节点的专属云CCE集群（最大1000节点）](tag:hcs,hcs_sm) [- cce.dec.s3.xlarge: 超大规模五控制节点的专属云CCE集群（最大2000节点）](tag:hcs,hcs_sm)  **默认取值：** 不涉及  >    关于规格参数中的字段说明如下： >    - s1：单控制节点的集群，控制节点数为1。单控制节点故障后，集群将不可用，但已运行工作负载不受影响。 >    - s2：三控制节点的集群，即高可用集群，控制节点数为3。当某个控制节点故障时，集群仍然可用。 [>   - s3：五控制节点的集群，即超高可用集群，控制节点数为5。当某2个控制节点故障时，集群仍然可用。](tag:hcs,hcs_sm) [>   - dec：表示专属云的CCE集群规格。例如cce.dec.s1.small表示小规模单控制节点的专属云CCE集群（最大50节点）。](tag:hws,hws_hk) >    - small：表示集群支持管理的最大节点规模为50节点。 >    - medium：表示集群支持管理的最大节点规模为200节点。 >    - large：表示集群支持管理的最大节点规模为1000节点。 >    - xlarge：表示集群支持管理的最大节点规模为2000节点。
     * version  **参数解释：** 集群版本，与Kubernetes社区基线版本保持一致，建议选择最新商用版本。 [> 关于Kubernetes版本策略，请参见[Kubernetes版本策略](https://support.huaweicloud.com/bulletin-cce/cce_bulletin_0033.html)](tag:hws) [> 关于Kubernetes版本策略，请参见[Kubernetes版本策略](https://support.huaweicloud.com/intl/zh-cn/bulletin-cce/cce_bulletin_0033.html)](tag:hws_hk)  在CCE控制台支持创建三种最新版本的集群。可登录CCE控制台创建集群，在“版本”处获取到集群版本。 其它集群版本，当前仍可通过api创建，但后续会逐渐下线，具体下线策略请关注CCE官方公告。 **约束限制：** 格式必须为：vX.Y[.Z[-rN]]，例如 v1.30，v1.30.0，v1.30.0-r0 都将创建1.30版本的集群 - X: 对应社区Kubernetes的主要版本 - Y: 对应社区Kubernetes的次要版本 - Z: 对应社区Kubernetes的补丁版本 [- N: 对应CCE补丁版本，关于CCE补丁版本详情，请参见[补丁版本发布记录](https://support.huaweicloud.com/bulletin-cce/cce_10_0405.html)](tag:hws) [- N: 对应CCE补丁版本，关于CCE补丁版本详情，请参见[补丁版本发布记录](https://support.huaweicloud.com/intl/zh-cn/bulletin-cce/cce_10_0405.html)](tag:hws_hk)  **取值范围：** 不涉及 **默认取值：** - 若不配置，默认创建最新版本的集群。 - 若指定集群基线版本但是不指定具体r版本，则系统默认选择对应集群版本的最新r版本。建议不指定具体r版本由系统选择最新版本。  [>    - Turbo集群支持1.19及以上版本商用。](tag:hws,hws_hk,dt) [>    - Turbo集群支持1.23及以上版本商用。](tag:hcs,g42,sbc)
@@ -202,6 +207,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'category' => 'category',
+            'agencyName' => 'agencyName',
             'type' => 'type',
             'flavor' => 'flavor',
             'version' => 'version',
@@ -234,6 +240,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * category  集群类别： - CCE：CCE集群   CCE集群支持虚拟机与裸金属服务器混合、GPU、NPU等异构节点的混合部署，基于高性能网络模型提供全方位、多场景、安全稳定的容器运行环境。 [- Turbo: CCE Turbo集群。   全面基于云原生基础设施构建的云原生2.0的容器引擎服务，具备软硬协同、网络无损、安全可靠、调度智能的优势，为用户提供一站式、高性价比的全新容器服务体验。](tag:hws,hws_hk,dt,hcs,g42,sbc)
+    * agencyName  **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。当不传或为空时，集群将自动选择使用CCE的系统委托cce_admin_trust或cce_cluster_agency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅1.27及以上版本集群支持该参数  **取值范围：** 不涉及 **默认取值：** 空
     * type  **参数解释：** 集群Master节点架构 **约束限制：** 不涉及 **取值范围：** - VirtualMachine：Master节点为x86架构服务器 - [ARM64: Master节点为鲲鹏（ARM架构）服务器](tag:hws,hws_hk,hcs)  **默认取值：** VirtualMachine[，如若VirtualMachine资源不足，取值为ARM64](tag:hws,hws_hk,hcs)
     * flavor  **参数解释：** 集群规格，当集群为v1.15及以上版本时支持创建后变更，详情请参见[变更集群规格](ResizeCluster.xml)。请按实际业务需求进行选择 **约束限制：** 不涉及 **取值范围：** - cce.s1.small: 小规模单控制节点CCE集群（最大50节点） - cce.s1.medium: 中等规模单控制节点CCE集群（最大200节点） - cce.s1.large: 大规模单控制节点CCE集群（最大1000节点） - cce.s2.small: 小规模三控制节点CCE集群（最大50节点） - cce.s2.medium: 中等规模三控制节点CCE集群（最大200节点） - cce.s2.large: 大规模三控制节点CCE集群（最大1000节点） - cce.s2.xlarge: 超大规模三控制节点CCE集群（最大2000节点） [- cce.s3.small: 小规模五控制节点CCE集群（最大50节点）](tag:hcs,hcs_sm) [- cce.s3.medium: 中等规模五控制节点CCE集群（最大200节点）](tag:hcs,hcs_sm) [- cce.s3.large: 大规模五控制节点CCE集群（最大1000节点）](tag:hcs,hcs_sm) [- cce.s3.xlarge: 超大规模五控制节点CCE集群（最大2000节点）](tag:hcs,hcs_sm)  [专属云特殊规格如下：](tag:hws,hws_hk,hcs,hcs_sm) [- cce.dec.s1.small: 小规模单控制节点的专属云CCE集群（最大50节点）](tag:hws,hws_hk) [- cce.dec.s1.medium: 中等规模单控制节点的专属云CCE集群（最大200节点）](tag:hws,hws_hk) [- cce.dec.s1.large: 大规模单控制节点的专属云CCE集群（最大1000节点）](tag:hws,hws_hk) [- cce.dec.s1.xlarge: 超大规模单控制节点的专属云CCE集群（最大2000节点）](tag:hws,hws_hk) [- cce.dec.s2.small: 小规模三控制节点的专属云CCE集群（最大50节点）](tag:hws,hws_hk) [- cce.dec.s2.medium: 中等规模三控制节点的专属云CCE集群（最大200节点）](tag:hws,hws_hk) [- cce.dec.s2.large: 大规模三控制节点的专属云CCE集群（最大1000节点）](tag:hws,hws_hk) [- cce.dec.s2.xlarge: 超大规模三控制节点的专属云CCE集群（最大2000节点）](tag:hws,hws_hk) [- cce.dec.s3.small: 小规模五控制节点的专属云CCE集群（最大50节点）](tag:hcs,hcs_sm) [- cce.dec.s3.medium: 中等规模五控制节点的专属云CCE集群（最大200节点）](tag:hcs,hcs_sm) [- cce.dec.s3.large: 大规模五控制节点的专属云CCE集群（最大1000节点）](tag:hcs,hcs_sm) [- cce.dec.s3.xlarge: 超大规模五控制节点的专属云CCE集群（最大2000节点）](tag:hcs,hcs_sm)  **默认取值：** 不涉及  >    关于规格参数中的字段说明如下： >    - s1：单控制节点的集群，控制节点数为1。单控制节点故障后，集群将不可用，但已运行工作负载不受影响。 >    - s2：三控制节点的集群，即高可用集群，控制节点数为3。当某个控制节点故障时，集群仍然可用。 [>   - s3：五控制节点的集群，即超高可用集群，控制节点数为5。当某2个控制节点故障时，集群仍然可用。](tag:hcs,hcs_sm) [>   - dec：表示专属云的CCE集群规格。例如cce.dec.s1.small表示小规模单控制节点的专属云CCE集群（最大50节点）。](tag:hws,hws_hk) >    - small：表示集群支持管理的最大节点规模为50节点。 >    - medium：表示集群支持管理的最大节点规模为200节点。 >    - large：表示集群支持管理的最大节点规模为1000节点。 >    - xlarge：表示集群支持管理的最大节点规模为2000节点。
     * version  **参数解释：** 集群版本，与Kubernetes社区基线版本保持一致，建议选择最新商用版本。 [> 关于Kubernetes版本策略，请参见[Kubernetes版本策略](https://support.huaweicloud.com/bulletin-cce/cce_bulletin_0033.html)](tag:hws) [> 关于Kubernetes版本策略，请参见[Kubernetes版本策略](https://support.huaweicloud.com/intl/zh-cn/bulletin-cce/cce_bulletin_0033.html)](tag:hws_hk)  在CCE控制台支持创建三种最新版本的集群。可登录CCE控制台创建集群，在“版本”处获取到集群版本。 其它集群版本，当前仍可通过api创建，但后续会逐渐下线，具体下线策略请关注CCE官方公告。 **约束限制：** 格式必须为：vX.Y[.Z[-rN]]，例如 v1.30，v1.30.0，v1.30.0-r0 都将创建1.30版本的集群 - X: 对应社区Kubernetes的主要版本 - Y: 对应社区Kubernetes的次要版本 - Z: 对应社区Kubernetes的补丁版本 [- N: 对应CCE补丁版本，关于CCE补丁版本详情，请参见[补丁版本发布记录](https://support.huaweicloud.com/bulletin-cce/cce_10_0405.html)](tag:hws) [- N: 对应CCE补丁版本，关于CCE补丁版本详情，请参见[补丁版本发布记录](https://support.huaweicloud.com/intl/zh-cn/bulletin-cce/cce_10_0405.html)](tag:hws_hk)  **取值范围：** 不涉及 **默认取值：** - 若不配置，默认创建最新版本的集群。 - 若指定集群基线版本但是不指定具体r版本，则系统默认选择对应集群版本的最新r版本。建议不指定具体r版本由系统选择最新版本。  [>    - Turbo集群支持1.19及以上版本商用。](tag:hws,hws_hk,dt) [>    - Turbo集群支持1.23及以上版本商用。](tag:hcs,g42,sbc)
@@ -266,6 +273,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'category' => 'setCategory',
+            'agencyName' => 'setAgencyName',
             'type' => 'setType',
             'flavor' => 'setFlavor',
             'version' => 'setVersion',
@@ -298,6 +306,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * category  集群类别： - CCE：CCE集群   CCE集群支持虚拟机与裸金属服务器混合、GPU、NPU等异构节点的混合部署，基于高性能网络模型提供全方位、多场景、安全稳定的容器运行环境。 [- Turbo: CCE Turbo集群。   全面基于云原生基础设施构建的云原生2.0的容器引擎服务，具备软硬协同、网络无损、安全可靠、调度智能的优势，为用户提供一站式、高性价比的全新容器服务体验。](tag:hws,hws_hk,dt,hcs,g42,sbc)
+    * agencyName  **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。当不传或为空时，集群将自动选择使用CCE的系统委托cce_admin_trust或cce_cluster_agency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅1.27及以上版本集群支持该参数  **取值范围：** 不涉及 **默认取值：** 空
     * type  **参数解释：** 集群Master节点架构 **约束限制：** 不涉及 **取值范围：** - VirtualMachine：Master节点为x86架构服务器 - [ARM64: Master节点为鲲鹏（ARM架构）服务器](tag:hws,hws_hk,hcs)  **默认取值：** VirtualMachine[，如若VirtualMachine资源不足，取值为ARM64](tag:hws,hws_hk,hcs)
     * flavor  **参数解释：** 集群规格，当集群为v1.15及以上版本时支持创建后变更，详情请参见[变更集群规格](ResizeCluster.xml)。请按实际业务需求进行选择 **约束限制：** 不涉及 **取值范围：** - cce.s1.small: 小规模单控制节点CCE集群（最大50节点） - cce.s1.medium: 中等规模单控制节点CCE集群（最大200节点） - cce.s1.large: 大规模单控制节点CCE集群（最大1000节点） - cce.s2.small: 小规模三控制节点CCE集群（最大50节点） - cce.s2.medium: 中等规模三控制节点CCE集群（最大200节点） - cce.s2.large: 大规模三控制节点CCE集群（最大1000节点） - cce.s2.xlarge: 超大规模三控制节点CCE集群（最大2000节点） [- cce.s3.small: 小规模五控制节点CCE集群（最大50节点）](tag:hcs,hcs_sm) [- cce.s3.medium: 中等规模五控制节点CCE集群（最大200节点）](tag:hcs,hcs_sm) [- cce.s3.large: 大规模五控制节点CCE集群（最大1000节点）](tag:hcs,hcs_sm) [- cce.s3.xlarge: 超大规模五控制节点CCE集群（最大2000节点）](tag:hcs,hcs_sm)  [专属云特殊规格如下：](tag:hws,hws_hk,hcs,hcs_sm) [- cce.dec.s1.small: 小规模单控制节点的专属云CCE集群（最大50节点）](tag:hws,hws_hk) [- cce.dec.s1.medium: 中等规模单控制节点的专属云CCE集群（最大200节点）](tag:hws,hws_hk) [- cce.dec.s1.large: 大规模单控制节点的专属云CCE集群（最大1000节点）](tag:hws,hws_hk) [- cce.dec.s1.xlarge: 超大规模单控制节点的专属云CCE集群（最大2000节点）](tag:hws,hws_hk) [- cce.dec.s2.small: 小规模三控制节点的专属云CCE集群（最大50节点）](tag:hws,hws_hk) [- cce.dec.s2.medium: 中等规模三控制节点的专属云CCE集群（最大200节点）](tag:hws,hws_hk) [- cce.dec.s2.large: 大规模三控制节点的专属云CCE集群（最大1000节点）](tag:hws,hws_hk) [- cce.dec.s2.xlarge: 超大规模三控制节点的专属云CCE集群（最大2000节点）](tag:hws,hws_hk) [- cce.dec.s3.small: 小规模五控制节点的专属云CCE集群（最大50节点）](tag:hcs,hcs_sm) [- cce.dec.s3.medium: 中等规模五控制节点的专属云CCE集群（最大200节点）](tag:hcs,hcs_sm) [- cce.dec.s3.large: 大规模五控制节点的专属云CCE集群（最大1000节点）](tag:hcs,hcs_sm) [- cce.dec.s3.xlarge: 超大规模五控制节点的专属云CCE集群（最大2000节点）](tag:hcs,hcs_sm)  **默认取值：** 不涉及  >    关于规格参数中的字段说明如下： >    - s1：单控制节点的集群，控制节点数为1。单控制节点故障后，集群将不可用，但已运行工作负载不受影响。 >    - s2：三控制节点的集群，即高可用集群，控制节点数为3。当某个控制节点故障时，集群仍然可用。 [>   - s3：五控制节点的集群，即超高可用集群，控制节点数为5。当某2个控制节点故障时，集群仍然可用。](tag:hcs,hcs_sm) [>   - dec：表示专属云的CCE集群规格。例如cce.dec.s1.small表示小规模单控制节点的专属云CCE集群（最大50节点）。](tag:hws,hws_hk) >    - small：表示集群支持管理的最大节点规模为50节点。 >    - medium：表示集群支持管理的最大节点规模为200节点。 >    - large：表示集群支持管理的最大节点规模为1000节点。 >    - xlarge：表示集群支持管理的最大节点规模为2000节点。
     * version  **参数解释：** 集群版本，与Kubernetes社区基线版本保持一致，建议选择最新商用版本。 [> 关于Kubernetes版本策略，请参见[Kubernetes版本策略](https://support.huaweicloud.com/bulletin-cce/cce_bulletin_0033.html)](tag:hws) [> 关于Kubernetes版本策略，请参见[Kubernetes版本策略](https://support.huaweicloud.com/intl/zh-cn/bulletin-cce/cce_bulletin_0033.html)](tag:hws_hk)  在CCE控制台支持创建三种最新版本的集群。可登录CCE控制台创建集群，在“版本”处获取到集群版本。 其它集群版本，当前仍可通过api创建，但后续会逐渐下线，具体下线策略请关注CCE官方公告。 **约束限制：** 格式必须为：vX.Y[.Z[-rN]]，例如 v1.30，v1.30.0，v1.30.0-r0 都将创建1.30版本的集群 - X: 对应社区Kubernetes的主要版本 - Y: 对应社区Kubernetes的次要版本 - Z: 对应社区Kubernetes的补丁版本 [- N: 对应CCE补丁版本，关于CCE补丁版本详情，请参见[补丁版本发布记录](https://support.huaweicloud.com/bulletin-cce/cce_10_0405.html)](tag:hws) [- N: 对应CCE补丁版本，关于CCE补丁版本详情，请参见[补丁版本发布记录](https://support.huaweicloud.com/intl/zh-cn/bulletin-cce/cce_10_0405.html)](tag:hws_hk)  **取值范围：** 不涉及 **默认取值：** - 若不配置，默认创建最新版本的集群。 - 若指定集群基线版本但是不指定具体r版本，则系统默认选择对应集群版本的最新r版本。建议不指定具体r版本由系统选择最新版本。  [>    - Turbo集群支持1.19及以上版本商用。](tag:hws,hws_hk,dt) [>    - Turbo集群支持1.23及以上版本商用。](tag:hcs,g42,sbc)
@@ -330,6 +339,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'category' => 'getCategory',
+            'agencyName' => 'getAgencyName',
             'type' => 'getType',
             'flavor' => 'getFlavor',
             'version' => 'getVersion',
@@ -463,6 +473,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['category'] = isset($data['category']) ? $data['category'] : null;
+        $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['flavor'] = isset($data['flavor']) ? $data['flavor'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
@@ -580,6 +591,30 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     public function setCategory($category)
     {
         $this->container['category'] = $category;
+        return $this;
+    }
+
+    /**
+    * Gets agencyName
+    *  **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。当不传或为空时，集群将自动选择使用CCE的系统委托cce_admin_trust或cce_cluster_agency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅1.27及以上版本集群支持该参数  **取值范围：** 不涉及 **默认取值：** 空
+    *
+    * @return string|null
+    */
+    public function getAgencyName()
+    {
+        return $this->container['agencyName'];
+    }
+
+    /**
+    * Sets agencyName
+    *
+    * @param string|null $agencyName **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。当不传或为空时，集群将自动选择使用CCE的系统委托cce_admin_trust或cce_cluster_agency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅1.27及以上版本集群支持该参数  **取值范围：** 不涉及 **默认取值：** 空
+    *
+    * @return $this
+    */
+    public function setAgencyName($agencyName)
+    {
+        $this->container['agencyName'] = $agencyName;
         return $this;
     }
 

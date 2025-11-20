@@ -24,6 +24,7 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
     * resourceOwnerAccount  拥有资源的账号ID。
     * resourceProjectId  资源所属的项目标识符
     * resourceUrn  资源的唯一资源标识符。
+    * findingType  findingType
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
             'resourceId' => 'string',
             'resourceOwnerAccount' => 'string',
             'resourceProjectId' => 'string',
-            'resourceUrn' => 'string'
+            'resourceUrn' => 'string',
+            'findingType' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingType'
     ];
 
     /**
@@ -40,6 +42,7 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
     * resourceOwnerAccount  拥有资源的账号ID。
     * resourceProjectId  资源所属的项目标识符
     * resourceUrn  资源的唯一资源标识符。
+    * findingType  findingType
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
         'resourceId' => null,
         'resourceOwnerAccount' => null,
         'resourceProjectId' => null,
-        'resourceUrn' => null
+        'resourceUrn' => null,
+        'findingType' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
     * resourceOwnerAccount  拥有资源的账号ID。
     * resourceProjectId  资源所属的项目标识符
     * resourceUrn  资源的唯一资源标识符。
+    * findingType  findingType
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
             'resourceId' => 'resource_id',
             'resourceOwnerAccount' => 'resource_owner_account',
             'resourceProjectId' => 'resource_project_id',
-            'resourceUrn' => 'resource_urn'
+            'resourceUrn' => 'resource_urn',
+            'findingType' => 'finding_type'
     ];
 
     /**
@@ -93,6 +99,7 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
     * resourceOwnerAccount  拥有资源的账号ID。
     * resourceProjectId  资源所属的项目标识符
     * resourceUrn  资源的唯一资源标识符。
+    * findingType  findingType
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
             'resourceId' => 'setResourceId',
             'resourceOwnerAccount' => 'setResourceOwnerAccount',
             'resourceProjectId' => 'setResourceProjectId',
-            'resourceUrn' => 'setResourceUrn'
+            'resourceUrn' => 'setResourceUrn',
+            'findingType' => 'setFindingType'
     ];
 
     /**
@@ -109,6 +117,7 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
     * resourceOwnerAccount  拥有资源的账号ID。
     * resourceProjectId  资源所属的项目标识符
     * resourceUrn  资源的唯一资源标识符。
+    * findingType  findingType
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
             'resourceId' => 'getResourceId',
             'resourceOwnerAccount' => 'getResourceOwnerAccount',
             'resourceProjectId' => 'getResourceProjectId',
-            'resourceUrn' => 'getResourceUrn'
+            'resourceUrn' => 'getResourceUrn',
+            'findingType' => 'getFindingType'
     ];
 
     /**
@@ -181,6 +191,7 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
         $this->container['resourceOwnerAccount'] = isset($data['resourceOwnerAccount']) ? $data['resourceOwnerAccount'] : null;
         $this->container['resourceProjectId'] = isset($data['resourceProjectId']) ? $data['resourceProjectId'] : null;
         $this->container['resourceUrn'] = isset($data['resourceUrn']) ? $data['resourceUrn'] : null;
+        $this->container['findingType'] = isset($data['findingType']) ? $data['findingType'] : null;
     }
 
     /**
@@ -331,6 +342,30 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
     public function setResourceUrn($resourceUrn)
     {
         $this->container['resourceUrn'] = $resourceUrn;
+        return $this;
+    }
+
+    /**
+    * Gets findingType
+    *  findingType
+    *
+    * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingType|null
+    */
+    public function getFindingType()
+    {
+        return $this->container['findingType'];
+    }
+
+    /**
+    * Sets findingType
+    *
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingType|null $findingType findingType
+    *
+    * @return $this
+    */
+    public function setFindingType($findingType)
+    {
+        $this->container['findingType'] = $findingType;
         return $this;
     }
 

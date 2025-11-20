@@ -282,8 +282,8 @@ class ListImagePwdComplexityRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['imageType']) && (mb_strlen($this->container['imageType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'imageType', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['imageType']) && !preg_match("/^private_image|shared_image|instance_image|cicd|harbor|registry$/", $this->container['imageType'])) {
-                $invalidProperties[] = "invalid value for 'imageType', must be conform to the pattern /^private_image|shared_image|instance_image|cicd|harbor|registry$/.";
+            if (!is_null($this->container['imageType']) && !preg_match("/^(private_image|shared_image|instance_image|cicd|harbor|registry)$/", $this->container['imageType'])) {
+                $invalidProperties[] = "invalid value for 'imageType', must be conform to the pattern /^(private_image|shared_image|instance_image|cicd|harbor|registry)$/.";
             }
             if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) > 65535)) {
                 $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 65535.";

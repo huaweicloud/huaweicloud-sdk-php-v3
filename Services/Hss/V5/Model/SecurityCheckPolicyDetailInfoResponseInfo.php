@@ -25,8 +25,8 @@ class SecurityCheckPolicyDetailInfoResponseInfo implements ModelInterface, Array
     * checkRuleName  **参数解释** 检查项（检查规则）名称 **取值范围** 字符长度0-65534位
     * checkRuleType  **参数解释** 检查项类型是否是数值类型 **取值范围** - 1 : 是 - 0 : 不是
     * checkType  **参数解释** 配置检查（基线）的类型，例如SSH、CentOS 7、Windows **取值范围** 字符长度0-256位
-    * severity  **参数解释** 检查项的风险程度，包含如下: **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危
-    * level  **参数解释** 检查项的等级 **取值范围** 字符长度0-32位
+    * severity  **参数解释** 检查项的风险程度 **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危
+    * level  **参数解释** 配置检查（基线）检查项的版本信息 **取值范围** 字符长度0-32位
     * checked  **参数解释** 检查项是否被选中 **取值范围** - true  : 被选中 - false : 未被选中
     * ruleParams  **参数解释** 可自定义配置的参数
     *
@@ -51,8 +51,8 @@ class SecurityCheckPolicyDetailInfoResponseInfo implements ModelInterface, Array
     * checkRuleName  **参数解释** 检查项（检查规则）名称 **取值范围** 字符长度0-65534位
     * checkRuleType  **参数解释** 检查项类型是否是数值类型 **取值范围** - 1 : 是 - 0 : 不是
     * checkType  **参数解释** 配置检查（基线）的类型，例如SSH、CentOS 7、Windows **取值范围** 字符长度0-256位
-    * severity  **参数解释** 检查项的风险程度，包含如下: **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危
-    * level  **参数解释** 检查项的等级 **取值范围** 字符长度0-32位
+    * severity  **参数解释** 检查项的风险程度 **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危
+    * level  **参数解释** 配置检查（基线）检查项的版本信息 **取值范围** 字符长度0-32位
     * checked  **参数解释** 检查项是否被选中 **取值范围** - true  : 被选中 - false : 未被选中
     * ruleParams  **参数解释** 可自定义配置的参数
     *
@@ -98,8 +98,8 @@ class SecurityCheckPolicyDetailInfoResponseInfo implements ModelInterface, Array
     * checkRuleName  **参数解释** 检查项（检查规则）名称 **取值范围** 字符长度0-65534位
     * checkRuleType  **参数解释** 检查项类型是否是数值类型 **取值范围** - 1 : 是 - 0 : 不是
     * checkType  **参数解释** 配置检查（基线）的类型，例如SSH、CentOS 7、Windows **取值范围** 字符长度0-256位
-    * severity  **参数解释** 检查项的风险程度，包含如下: **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危
-    * level  **参数解释** 检查项的等级 **取值范围** 字符长度0-32位
+    * severity  **参数解释** 检查项的风险程度 **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危
+    * level  **参数解释** 配置检查（基线）检查项的版本信息 **取值范围** 字符长度0-32位
     * checked  **参数解释** 检查项是否被选中 **取值范围** - true  : 被选中 - false : 未被选中
     * ruleParams  **参数解释** 可自定义配置的参数
     *
@@ -124,8 +124,8 @@ class SecurityCheckPolicyDetailInfoResponseInfo implements ModelInterface, Array
     * checkRuleName  **参数解释** 检查项（检查规则）名称 **取值范围** 字符长度0-65534位
     * checkRuleType  **参数解释** 检查项类型是否是数值类型 **取值范围** - 1 : 是 - 0 : 不是
     * checkType  **参数解释** 配置检查（基线）的类型，例如SSH、CentOS 7、Windows **取值范围** 字符长度0-256位
-    * severity  **参数解释** 检查项的风险程度，包含如下: **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危
-    * level  **参数解释** 检查项的等级 **取值范围** 字符长度0-32位
+    * severity  **参数解释** 检查项的风险程度 **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危
+    * level  **参数解释** 配置检查（基线）检查项的版本信息 **取值范围** 字符长度0-32位
     * checked  **参数解释** 检查项是否被选中 **取值范围** - true  : 被选中 - false : 未被选中
     * ruleParams  **参数解释** 可自定义配置的参数
     *
@@ -150,8 +150,8 @@ class SecurityCheckPolicyDetailInfoResponseInfo implements ModelInterface, Array
     * checkRuleName  **参数解释** 检查项（检查规则）名称 **取值范围** 字符长度0-65534位
     * checkRuleType  **参数解释** 检查项类型是否是数值类型 **取值范围** - 1 : 是 - 0 : 不是
     * checkType  **参数解释** 配置检查（基线）的类型，例如SSH、CentOS 7、Windows **取值范围** 字符长度0-256位
-    * severity  **参数解释** 检查项的风险程度，包含如下: **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危
-    * level  **参数解释** 检查项的等级 **取值范围** 字符长度0-32位
+    * severity  **参数解释** 检查项的风险程度 **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危
+    * level  **参数解释** 配置检查（基线）检查项的版本信息 **取值范围** 字符长度0-32位
     * checked  **参数解释** 检查项是否被选中 **取值范围** - true  : 被选中 - false : 未被选中
     * ruleParams  **参数解释** 可自定义配置的参数
     *
@@ -430,7 +430,7 @@ class SecurityCheckPolicyDetailInfoResponseInfo implements ModelInterface, Array
 
     /**
     * Gets severity
-    *  **参数解释** 检查项的风险程度，包含如下: **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危
+    *  **参数解释** 检查项的风险程度 **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class SecurityCheckPolicyDetailInfoResponseInfo implements ModelInterface, Array
     /**
     * Sets severity
     *
-    * @param string|null $severity **参数解释** 检查项的风险程度，包含如下: **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危
+    * @param string|null $severity **参数解释** 检查项的风险程度 **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class SecurityCheckPolicyDetailInfoResponseInfo implements ModelInterface, Array
 
     /**
     * Gets level
-    *  **参数解释** 检查项的等级 **取值范围** 字符长度0-32位
+    *  **参数解释** 配置检查（基线）检查项的版本信息 **取值范围** 字符长度0-32位
     *
     * @return string|null
     */
@@ -466,7 +466,7 @@ class SecurityCheckPolicyDetailInfoResponseInfo implements ModelInterface, Array
     /**
     * Sets level
     *
-    * @param string|null $level **参数解释** 检查项的等级 **取值范围** 字符长度0-32位
+    * @param string|null $level **参数解释** 配置检查（基线）检查项的版本信息 **取值范围** 字符长度0-32位
     *
     * @return $this
     */

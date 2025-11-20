@@ -307,8 +307,8 @@ class ListImageWeakPwdUsersRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['imageType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'imageType', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^private_image|shared_image|instance_image|registry|cicd$/", $this->container['imageType'])) {
-                $invalidProperties[] = "invalid value for 'imageType', must be conform to the pattern /^private_image|shared_image|instance_image|registry|cicd$/.";
+            if (!preg_match("/^(private_image|shared_image|instance_image|registry|cicd)$/", $this->container['imageType'])) {
+                $invalidProperties[] = "invalid value for 'imageType', must be conform to the pattern /^(private_image|shared_image|instance_image|registry|cicd)$/.";
             }
             if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) > 65535)) {
                 $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 65535.";

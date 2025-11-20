@@ -27,7 +27,7 @@ class ShowBackupInfoByBackupIdResponse implements ModelInterface, ArrayAccess
     * vaultId  **参数解释** 备份所在的存储库ID **取值范围** 字符长度0-65535位
     * createdAt  **参数解释** 创建时间 **取值范围** 取值0-9223372036854775807
     * status  **参数解释** 备份状态 **取值范围** 字符长度0-65535位
-    * resourceSize  **参数解释** 创建时间 **取值范围** 取值0-2147483647
+    * resourceSize  **参数解释** 资源大小 **取值范围** 取值0-2147483647
     * resourceId  **参数解释** 资源ID 对应host主机ID **取值范围** 字符长度0-65535位
     * resourceType  **参数解释** 资源类型 **取值范围** 字符长度0-65535位
     * resourceName  **参数解释** 资源名称 对应host主机名称 **取值范围** 字符长度0-65535位
@@ -57,7 +57,7 @@ class ShowBackupInfoByBackupIdResponse implements ModelInterface, ArrayAccess
     * vaultId  **参数解释** 备份所在的存储库ID **取值范围** 字符长度0-65535位
     * createdAt  **参数解释** 创建时间 **取值范围** 取值0-9223372036854775807
     * status  **参数解释** 备份状态 **取值范围** 字符长度0-65535位
-    * resourceSize  **参数解释** 创建时间 **取值范围** 取值0-2147483647
+    * resourceSize  **参数解释** 资源大小 **取值范围** 取值0-2147483647
     * resourceId  **参数解释** 资源ID 对应host主机ID **取值范围** 字符长度0-65535位
     * resourceType  **参数解释** 资源类型 **取值范围** 字符长度0-65535位
     * resourceName  **参数解释** 资源名称 对应host主机名称 **取值范围** 字符长度0-65535位
@@ -108,7 +108,7 @@ class ShowBackupInfoByBackupIdResponse implements ModelInterface, ArrayAccess
     * vaultId  **参数解释** 备份所在的存储库ID **取值范围** 字符长度0-65535位
     * createdAt  **参数解释** 创建时间 **取值范围** 取值0-9223372036854775807
     * status  **参数解释** 备份状态 **取值范围** 字符长度0-65535位
-    * resourceSize  **参数解释** 创建时间 **取值范围** 取值0-2147483647
+    * resourceSize  **参数解释** 资源大小 **取值范围** 取值0-2147483647
     * resourceId  **参数解释** 资源ID 对应host主机ID **取值范围** 字符长度0-65535位
     * resourceType  **参数解释** 资源类型 **取值范围** 字符长度0-65535位
     * resourceName  **参数解释** 资源名称 对应host主机名称 **取值范围** 字符长度0-65535位
@@ -138,7 +138,7 @@ class ShowBackupInfoByBackupIdResponse implements ModelInterface, ArrayAccess
     * vaultId  **参数解释** 备份所在的存储库ID **取值范围** 字符长度0-65535位
     * createdAt  **参数解释** 创建时间 **取值范围** 取值0-9223372036854775807
     * status  **参数解释** 备份状态 **取值范围** 字符长度0-65535位
-    * resourceSize  **参数解释** 创建时间 **取值范围** 取值0-2147483647
+    * resourceSize  **参数解释** 资源大小 **取值范围** 取值0-2147483647
     * resourceId  **参数解释** 资源ID 对应host主机ID **取值范围** 字符长度0-65535位
     * resourceType  **参数解释** 资源类型 **取值范围** 字符长度0-65535位
     * resourceName  **参数解释** 资源名称 对应host主机名称 **取值范围** 字符长度0-65535位
@@ -168,7 +168,7 @@ class ShowBackupInfoByBackupIdResponse implements ModelInterface, ArrayAccess
     * vaultId  **参数解释** 备份所在的存储库ID **取值范围** 字符长度0-65535位
     * createdAt  **参数解释** 创建时间 **取值范围** 取值0-9223372036854775807
     * status  **参数解释** 备份状态 **取值范围** 字符长度0-65535位
-    * resourceSize  **参数解释** 创建时间 **取值范围** 取值0-2147483647
+    * resourceSize  **参数解释** 资源大小 **取值范围** 取值0-2147483647
     * resourceId  **参数解释** 资源ID 对应host主机ID **取值范围** 字符长度0-65535位
     * resourceType  **参数解释** 资源类型 **取值范围** 字符长度0-65535位
     * resourceName  **参数解释** 资源名称 对应host主机名称 **取值范围** 字符长度0-65535位
@@ -489,7 +489,7 @@ class ShowBackupInfoByBackupIdResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSize
-    *  **参数解释** 创建时间 **取值范围** 取值0-2147483647
+    *  **参数解释** 资源大小 **取值范围** 取值0-2147483647
     *
     * @return int|null
     */
@@ -501,7 +501,7 @@ class ShowBackupInfoByBackupIdResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSize
     *
-    * @param int|null $resourceSize **参数解释** 创建时间 **取值范围** 取值0-2147483647
+    * @param int|null $resourceSize **参数解释** 资源大小 **取值范围** 取值0-2147483647
     *
     * @return $this
     */

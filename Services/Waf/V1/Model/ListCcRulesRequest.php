@@ -25,6 +25,10 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
     * policyId  策略id（策略id从查询防护策略列表接口获取）
     * offset  偏移量，表示查询该偏移量之后的记录。
     * limit  查询返回记录的数量限制。
+    * name  规则名称
+    * status  规则的开启状态，1表示开启，0表示关闭
+    * category  **参数解释：** 防护动作 **取值范围：** - block: 拦截，表示超过“限速频率”将直接拦截。 - log：仅记录，表示超过“限速频率”将只记录不拦截。 - captcha：表示超过“限速频率”后弹出验证码，进行人机验证，完成验证后，请求将不受访问限制。人机验证目前支持英文。 - dynamic_block：上一个限速周期内，请求频率超过“限速频率”将被拦截，那么在下一个限速周期内，请求频率超过“放行频率”将被拦截。 - advanced_captcha：高阶人机验证，表示超过“限速频率”后弹出验证码，进行人机验证。 - js_challenge：要求客户端完成一段脚本的执行或验证，从而验证请求来源的合法性。
+    * tagType  限速模式：   - ip：IP限速，根据IP区分单个Web访问者。   - cookie：用户限速，根据Cookie键值区分单个Web访问者。   - header：用户限速，根据Header区分单个Web访问者。   - other：根据Referer（自定义请求访问的来源）字段区分单个Web访问者。   - policy: 策略限速   - domain: 域名限速     - url: url限速
     *
     * @var string[]
     */
@@ -33,7 +37,11 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'policyId' => 'string',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'name' => 'string',
+            'status' => 'int',
+            'category' => 'string',
+            'tagType' => 'string'
     ];
 
     /**
@@ -43,6 +51,10 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
     * policyId  策略id（策略id从查询防护策略列表接口获取）
     * offset  偏移量，表示查询该偏移量之后的记录。
     * limit  查询返回记录的数量限制。
+    * name  规则名称
+    * status  规则的开启状态，1表示开启，0表示关闭
+    * category  **参数解释：** 防护动作 **取值范围：** - block: 拦截，表示超过“限速频率”将直接拦截。 - log：仅记录，表示超过“限速频率”将只记录不拦截。 - captcha：表示超过“限速频率”后弹出验证码，进行人机验证，完成验证后，请求将不受访问限制。人机验证目前支持英文。 - dynamic_block：上一个限速周期内，请求频率超过“限速频率”将被拦截，那么在下一个限速周期内，请求频率超过“放行频率”将被拦截。 - advanced_captcha：高阶人机验证，表示超过“限速频率”后弹出验证码，进行人机验证。 - js_challenge：要求客户端完成一段脚本的执行或验证，从而验证请求来源的合法性。
+    * tagType  限速模式：   - ip：IP限速，根据IP区分单个Web访问者。   - cookie：用户限速，根据Cookie键值区分单个Web访问者。   - header：用户限速，根据Header区分单个Web访问者。   - other：根据Referer（自定义请求访问的来源）字段区分单个Web访问者。   - policy: 策略限速   - domain: 域名限速     - url: url限速
     *
     * @var string[]
     */
@@ -51,7 +63,11 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'policyId' => null,
         'offset' => null,
-        'limit' => null
+        'limit' => null,
+        'name' => null,
+        'status' => null,
+        'category' => null,
+        'tagType' => null
     ];
 
     /**
@@ -82,6 +98,10 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
     * policyId  策略id（策略id从查询防护策略列表接口获取）
     * offset  偏移量，表示查询该偏移量之后的记录。
     * limit  查询返回记录的数量限制。
+    * name  规则名称
+    * status  规则的开启状态，1表示开启，0表示关闭
+    * category  **参数解释：** 防护动作 **取值范围：** - block: 拦截，表示超过“限速频率”将直接拦截。 - log：仅记录，表示超过“限速频率”将只记录不拦截。 - captcha：表示超过“限速频率”后弹出验证码，进行人机验证，完成验证后，请求将不受访问限制。人机验证目前支持英文。 - dynamic_block：上一个限速周期内，请求频率超过“限速频率”将被拦截，那么在下一个限速周期内，请求频率超过“放行频率”将被拦截。 - advanced_captcha：高阶人机验证，表示超过“限速频率”后弹出验证码，进行人机验证。 - js_challenge：要求客户端完成一段脚本的执行或验证，从而验证请求来源的合法性。
+    * tagType  限速模式：   - ip：IP限速，根据IP区分单个Web访问者。   - cookie：用户限速，根据Cookie键值区分单个Web访问者。   - header：用户限速，根据Header区分单个Web访问者。   - other：根据Referer（自定义请求访问的来源）字段区分单个Web访问者。   - policy: 策略限速   - domain: 域名限速     - url: url限速
     *
     * @var string[]
     */
@@ -90,7 +110,11 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'policyId' => 'policy_id',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'name' => 'name',
+            'status' => 'status',
+            'category' => 'category',
+            'tagType' => 'tag_type'
     ];
 
     /**
@@ -100,6 +124,10 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
     * policyId  策略id（策略id从查询防护策略列表接口获取）
     * offset  偏移量，表示查询该偏移量之后的记录。
     * limit  查询返回记录的数量限制。
+    * name  规则名称
+    * status  规则的开启状态，1表示开启，0表示关闭
+    * category  **参数解释：** 防护动作 **取值范围：** - block: 拦截，表示超过“限速频率”将直接拦截。 - log：仅记录，表示超过“限速频率”将只记录不拦截。 - captcha：表示超过“限速频率”后弹出验证码，进行人机验证，完成验证后，请求将不受访问限制。人机验证目前支持英文。 - dynamic_block：上一个限速周期内，请求频率超过“限速频率”将被拦截，那么在下一个限速周期内，请求频率超过“放行频率”将被拦截。 - advanced_captcha：高阶人机验证，表示超过“限速频率”后弹出验证码，进行人机验证。 - js_challenge：要求客户端完成一段脚本的执行或验证，从而验证请求来源的合法性。
+    * tagType  限速模式：   - ip：IP限速，根据IP区分单个Web访问者。   - cookie：用户限速，根据Cookie键值区分单个Web访问者。   - header：用户限速，根据Header区分单个Web访问者。   - other：根据Referer（自定义请求访问的来源）字段区分单个Web访问者。   - policy: 策略限速   - domain: 域名限速     - url: url限速
     *
     * @var string[]
     */
@@ -108,7 +136,11 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'policyId' => 'setPolicyId',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'name' => 'setName',
+            'status' => 'setStatus',
+            'category' => 'setCategory',
+            'tagType' => 'setTagType'
     ];
 
     /**
@@ -118,6 +150,10 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
     * policyId  策略id（策略id从查询防护策略列表接口获取）
     * offset  偏移量，表示查询该偏移量之后的记录。
     * limit  查询返回记录的数量限制。
+    * name  规则名称
+    * status  规则的开启状态，1表示开启，0表示关闭
+    * category  **参数解释：** 防护动作 **取值范围：** - block: 拦截，表示超过“限速频率”将直接拦截。 - log：仅记录，表示超过“限速频率”将只记录不拦截。 - captcha：表示超过“限速频率”后弹出验证码，进行人机验证，完成验证后，请求将不受访问限制。人机验证目前支持英文。 - dynamic_block：上一个限速周期内，请求频率超过“限速频率”将被拦截，那么在下一个限速周期内，请求频率超过“放行频率”将被拦截。 - advanced_captcha：高阶人机验证，表示超过“限速频率”后弹出验证码，进行人机验证。 - js_challenge：要求客户端完成一段脚本的执行或验证，从而验证请求来源的合法性。
+    * tagType  限速模式：   - ip：IP限速，根据IP区分单个Web访问者。   - cookie：用户限速，根据Cookie键值区分单个Web访问者。   - header：用户限速，根据Header区分单个Web访问者。   - other：根据Referer（自定义请求访问的来源）字段区分单个Web访问者。   - policy: 策略限速   - domain: 域名限速     - url: url限速
     *
     * @var string[]
     */
@@ -126,7 +162,11 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'policyId' => 'getPolicyId',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'name' => 'getName',
+            'status' => 'getStatus',
+            'category' => 'getCategory',
+            'tagType' => 'getTagType'
     ];
 
     /**
@@ -192,6 +232,10 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
         $this->container['policyId'] = isset($data['policyId']) ? $data['policyId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
+        $this->container['tagType'] = isset($data['tagType']) ? $data['tagType'] : null;
     }
 
     /**
@@ -345,6 +389,102 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  规则名称
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name 规则名称
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  规则的开启状态，1表示开启，0表示关闭
+    *
+    * @return int|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param int|null $status 规则的开启状态，1表示开启，0表示关闭
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets category
+    *  **参数解释：** 防护动作 **取值范围：** - block: 拦截，表示超过“限速频率”将直接拦截。 - log：仅记录，表示超过“限速频率”将只记录不拦截。 - captcha：表示超过“限速频率”后弹出验证码，进行人机验证，完成验证后，请求将不受访问限制。人机验证目前支持英文。 - dynamic_block：上一个限速周期内，请求频率超过“限速频率”将被拦截，那么在下一个限速周期内，请求频率超过“放行频率”将被拦截。 - advanced_captcha：高阶人机验证，表示超过“限速频率”后弹出验证码，进行人机验证。 - js_challenge：要求客户端完成一段脚本的执行或验证，从而验证请求来源的合法性。
+    *
+    * @return string|null
+    */
+    public function getCategory()
+    {
+        return $this->container['category'];
+    }
+
+    /**
+    * Sets category
+    *
+    * @param string|null $category **参数解释：** 防护动作 **取值范围：** - block: 拦截，表示超过“限速频率”将直接拦截。 - log：仅记录，表示超过“限速频率”将只记录不拦截。 - captcha：表示超过“限速频率”后弹出验证码，进行人机验证，完成验证后，请求将不受访问限制。人机验证目前支持英文。 - dynamic_block：上一个限速周期内，请求频率超过“限速频率”将被拦截，那么在下一个限速周期内，请求频率超过“放行频率”将被拦截。 - advanced_captcha：高阶人机验证，表示超过“限速频率”后弹出验证码，进行人机验证。 - js_challenge：要求客户端完成一段脚本的执行或验证，从而验证请求来源的合法性。
+    *
+    * @return $this
+    */
+    public function setCategory($category)
+    {
+        $this->container['category'] = $category;
+        return $this;
+    }
+
+    /**
+    * Gets tagType
+    *  限速模式：   - ip：IP限速，根据IP区分单个Web访问者。   - cookie：用户限速，根据Cookie键值区分单个Web访问者。   - header：用户限速，根据Header区分单个Web访问者。   - other：根据Referer（自定义请求访问的来源）字段区分单个Web访问者。   - policy: 策略限速   - domain: 域名限速     - url: url限速
+    *
+    * @return string|null
+    */
+    public function getTagType()
+    {
+        return $this->container['tagType'];
+    }
+
+    /**
+    * Sets tagType
+    *
+    * @param string|null $tagType 限速模式：   - ip：IP限速，根据IP区分单个Web访问者。   - cookie：用户限速，根据Cookie键值区分单个Web访问者。   - header：用户限速，根据Header区分单个Web访问者。   - other：根据Referer（自定义请求访问的来源）字段区分单个Web访问者。   - policy: 策略限速   - domain: 域名限速     - url: url限速
+    *
+    * @return $this
+    */
+    public function setTagType($tagType)
+    {
+        $this->container['tagType'] = $tagType;
         return $this;
     }
 

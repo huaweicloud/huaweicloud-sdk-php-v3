@@ -21,24 +21,28 @@ class UnusedPermissionDetails implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * service  权限对应的云服务名称。
+    * lastAccessed  用户使用云服务的最后访问时间。
     * actions  未使用的操作列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'service' => 'string',
+            'lastAccessed' => '\DateTime',
             'actions' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\UnusedAction[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * service  权限对应的云服务名称。
+    * lastAccessed  用户使用云服务的最后访问时间。
     * actions  未使用的操作列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'service' => null,
+        'lastAccessed' => 'date-time',
         'actions' => null
     ];
 
@@ -66,36 +70,42 @@ class UnusedPermissionDetails implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * service  权限对应的云服务名称。
+    * lastAccessed  用户使用云服务的最后访问时间。
     * actions  未使用的操作列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'service' => 'service',
+            'lastAccessed' => 'last_accessed',
             'actions' => 'actions'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * service  权限对应的云服务名称。
+    * lastAccessed  用户使用云服务的最后访问时间。
     * actions  未使用的操作列表。
     *
     * @var string[]
     */
     protected static $setters = [
             'service' => 'setService',
+            'lastAccessed' => 'setLastAccessed',
             'actions' => 'setActions'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * service  权限对应的云服务名称。
+    * lastAccessed  用户使用云服务的最后访问时间。
     * actions  未使用的操作列表。
     *
     * @var string[]
     */
     protected static $getters = [
             'service' => 'getService',
+            'lastAccessed' => 'getLastAccessed',
             'actions' => 'getActions'
     ];
 
@@ -158,6 +168,7 @@ class UnusedPermissionDetails implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['service'] = isset($data['service']) ? $data['service'] : null;
+        $this->container['lastAccessed'] = isset($data['lastAccessed']) ? $data['lastAccessed'] : null;
         $this->container['actions'] = isset($data['actions']) ? $data['actions'] : null;
     }
 
@@ -210,6 +221,30 @@ class UnusedPermissionDetails implements ModelInterface, ArrayAccess
     public function setService($service)
     {
         $this->container['service'] = $service;
+        return $this;
+    }
+
+    /**
+    * Gets lastAccessed
+    *  用户使用云服务的最后访问时间。
+    *
+    * @return \DateTime|null
+    */
+    public function getLastAccessed()
+    {
+        return $this->container['lastAccessed'];
+    }
+
+    /**
+    * Sets lastAccessed
+    *
+    * @param \DateTime|null $lastAccessed 用户使用云服务的最后访问时间。
+    *
+    * @return $this
+    */
+    public function setLastAccessed($lastAccessed)
+    {
+        $this->container['lastAccessed'] = $lastAccessed;
         return $this;
     }
 

@@ -21,9 +21,9 @@ class ListNodesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * kind  API类型，固定值“List”
-    * apiVersion  API版本，固定值“v3”
-    * items  节点对象列表，包含了当前集群下所有节点的详细信息。可通过items.metadata.name下的值来找到对应的节点。
+    * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
+    * apiVersion  **参数解释**： API版本 **约束限制**： 固定值,不允许修改 **取值范围**： 不涉及 **默认取值**： v3
+    * items  **参数解释**： 节点对象列表，包含了当前集群下所有节点的详细信息。可通过items.metadata.name下的值来找到对应的节点。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ListNodesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * kind  API类型，固定值“List”
-    * apiVersion  API版本，固定值“v3”
-    * items  节点对象列表，包含了当前集群下所有节点的详细信息。可通过items.metadata.name下的值来找到对应的节点。
+    * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
+    * apiVersion  **参数解释**： API版本 **约束限制**： 固定值,不允许修改 **取值范围**： 不涉及 **默认取值**： v3
+    * items  **参数解释**： 节点对象列表，包含了当前集群下所有节点的详细信息。可通过items.metadata.name下的值来找到对应的节点。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ListNodesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * kind  API类型，固定值“List”
-    * apiVersion  API版本，固定值“v3”
-    * items  节点对象列表，包含了当前集群下所有节点的详细信息。可通过items.metadata.name下的值来找到对应的节点。
+    * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
+    * apiVersion  **参数解释**： API版本 **约束限制**： 固定值,不允许修改 **取值范围**： 不涉及 **默认取值**： v3
+    * items  **参数解释**： 节点对象列表，包含了当前集群下所有节点的详细信息。可通过items.metadata.name下的值来找到对应的节点。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListNodesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * kind  API类型，固定值“List”
-    * apiVersion  API版本，固定值“v3”
-    * items  节点对象列表，包含了当前集群下所有节点的详细信息。可通过items.metadata.name下的值来找到对应的节点。
+    * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
+    * apiVersion  **参数解释**： API版本 **约束限制**： 固定值,不允许修改 **取值范围**： 不涉及 **默认取值**： v3
+    * items  **参数解释**： 节点对象列表，包含了当前集群下所有节点的详细信息。可通过items.metadata.name下的值来找到对应的节点。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ListNodesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * kind  API类型，固定值“List”
-    * apiVersion  API版本，固定值“v3”
-    * items  节点对象列表，包含了当前集群下所有节点的详细信息。可通过items.metadata.name下的值来找到对应的节点。
+    * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
+    * apiVersion  **参数解释**： API版本 **约束限制**： 固定值,不允许修改 **取值范围**： 不涉及 **默认取值**： v3
+    * items  **参数解释**： 节点对象列表，包含了当前集群下所有节点的详细信息。可通过items.metadata.name下的值来找到对应的节点。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ListNodesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets kind
-    *  API类型，固定值“List”
+    *  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class ListNodesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets kind
     *
-    * @param string|null $kind API类型，固定值“List”
+    * @param string|null $kind **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ListNodesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiVersion
-    *  API版本，固定值“v3”
+    *  **参数解释**： API版本 **约束限制**： 固定值,不允许修改 **取值范围**： 不涉及 **默认取值**： v3
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class ListNodesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets apiVersion
     *
-    * @param string|null $apiVersion API版本，固定值“v3”
+    * @param string|null $apiVersion **参数解释**： API版本 **约束限制**： 固定值,不允许修改 **取值范围**： 不涉及 **默认取值**： v3
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ListNodesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets items
-    *  节点对象列表，包含了当前集群下所有节点的详细信息。可通过items.metadata.name下的值来找到对应的节点。
+    *  **参数解释**： 节点对象列表，包含了当前集群下所有节点的详细信息。可通过items.metadata.name下的值来找到对应的节点。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\Node[]|null
     */
@@ -257,7 +257,7 @@ class ListNodesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\Node[]|null $items 节点对象列表，包含了当前集群下所有节点的详细信息。可通过items.metadata.name下的值来找到对应的节点。
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\Node[]|null $items **参数解释**： 节点对象列表，包含了当前集群下所有节点的详细信息。可通过items.metadata.name下的值来找到对应的节点。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

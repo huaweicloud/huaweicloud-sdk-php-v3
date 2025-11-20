@@ -17220,6 +17220,157 @@ class RdsClient extends Client
     }
 
     /**
+     * 查询数据库代理作业执行历史步骤
+     *
+     * 查询数据库代理作业执行历史步骤。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDbAgentJobHistorySteps($request)
+    {
+        return $this->listDbAgentJobHistoryStepsWithHttpInfo($request);
+    }
+
+    public function listDbAgentJobHistoryStepsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/db-jobs/histories/{history_id}/steps';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['historyId'] !== null) {
+            $pathParams['history_id'] = $localVarParams['historyId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListDbAgentJobHistoryStepsResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListDbAgentJobHistoryStepsRequest');
+    }
+
+    /**
+     * 查询数据库代理作业执行历史
+     *
+     * 查询数据库代理作业执行历史。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDbAgentJobHistorys($request)
+    {
+        return $this->listDbAgentJobHistorysWithHttpInfo($request);
+    }
+
+    public function listDbAgentJobHistorysWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/db-jobs/{job_id}/histories';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['runStatus'] !== null) {
+            $queryParams['run_status'] = $localVarParams['runStatus'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListDbAgentJobHistorysResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListDbAgentJobHistorysRequest');
+    }
+
+    /**
      * 查询数据库代理作业列表
      *
      * 查询数据库代理作业列表。
@@ -18241,6 +18392,142 @@ class RdsClient extends Client
     }
 
     /**
+     * 重新生成发布快照
+     *
+     * 重新生成发布快照。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function refreshPublicationSnapshot($request)
+    {
+        return $this->refreshPublicationSnapshotWithHttpInfo($request);
+    }
+
+    public function refreshPublicationSnapshotWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/replication/publications/{publication_id}/reinitialize';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['publicationId'] !== null) {
+            $pathParams['publication_id'] = $localVarParams['publicationId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\RefreshPublicationSnapshotResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\RefreshPublicationSnapshotRequest');
+    }
+
+    /**
+     * 重新生成订阅
+     *
+     * 重新生成订阅。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function refreshSubscription($request)
+    {
+        return $this->refreshSubscriptionWithHttpInfo($request);
+    }
+
+    public function refreshSubscriptionWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/replication/subscriptions/{subscription_id}/reinitialize';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['subscriptionId'] !== null) {
+            $pathParams['subscription_id'] = $localVarParams['subscriptionId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\RefreshSubscriptionResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\RefreshSubscriptionRequest');
+    }
+
+    /**
      * 解除数据库帐号权限
      *
      * 解除数据库帐号权限。
@@ -18436,6 +18723,71 @@ class RdsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Rds\V3\Model\SetInstancesNewDbShrinkResponse',
             $requestType='\HuaweiCloud\SDK\Rds\V3\Model\SetInstancesNewDbShrinkRequest');
+    }
+
+    /**
+     * 同步发布订阅元数据
+     *
+     * 同步发布订阅元数据。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function syncReplicationMetadata($request)
+    {
+        return $this->syncReplicationMetadataWithHttpInfo($request);
+    }
+
+    public function syncReplicationMetadataWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/replication/metadata/sync';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\SyncReplicationMetadataResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\SyncReplicationMetadataRequest');
     }
 
     /**

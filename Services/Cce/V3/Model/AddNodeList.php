@@ -20,9 +20,9 @@ class AddNodeList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * apiVersion  **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
-    * kind  **参数解释**： API类型，，固定值“List”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“List”。 **默认取值**： 不涉及
-    * nodeList  **参数解释**： 纳管节点列表。 **约束限制**： 当前最多支持同时纳管200个节点。
+    * apiVersion  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
+    * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
+    * nodeList  **参数解释**： 纳管节点列表，当前最多支持同时纳管200个节点。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class AddNodeList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * apiVersion  **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
-    * kind  **参数解释**： API类型，，固定值“List”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“List”。 **默认取值**： 不涉及
-    * nodeList  **参数解释**： 纳管节点列表。 **约束限制**： 当前最多支持同时纳管200个节点。
+    * apiVersion  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
+    * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
+    * nodeList  **参数解释**： 纳管节点列表，当前最多支持同时纳管200个节点。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class AddNodeList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * apiVersion  **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
-    * kind  **参数解释**： API类型，，固定值“List”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“List”。 **默认取值**： 不涉及
-    * nodeList  **参数解释**： 纳管节点列表。 **约束限制**： 当前最多支持同时纳管200个节点。
+    * apiVersion  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
+    * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
+    * nodeList  **参数解释**： 纳管节点列表，当前最多支持同时纳管200个节点。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class AddNodeList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * apiVersion  **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
-    * kind  **参数解释**： API类型，，固定值“List”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“List”。 **默认取值**： 不涉及
-    * nodeList  **参数解释**： 纳管节点列表。 **约束限制**： 当前最多支持同时纳管200个节点。
+    * apiVersion  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
+    * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
+    * nodeList  **参数解释**： 纳管节点列表，当前最多支持同时纳管200个节点。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class AddNodeList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * apiVersion  **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
-    * kind  **参数解释**： API类型，，固定值“List”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“List”。 **默认取值**： 不涉及
-    * nodeList  **参数解释**： 纳管节点列表。 **约束限制**： 当前最多支持同时纳管200个节点。
+    * apiVersion  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
+    * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
+    * nodeList  **参数解释**： 纳管节点列表，当前最多支持同时纳管200个节点。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class AddNodeList implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiVersion
-    *  **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
+    *  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class AddNodeList implements ModelInterface, ArrayAccess
     /**
     * Sets apiVersion
     *
-    * @param string $apiVersion **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
+    * @param string $apiVersion **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class AddNodeList implements ModelInterface, ArrayAccess
 
     /**
     * Gets kind
-    *  **参数解释**： API类型，，固定值“List”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“List”。 **默认取值**： 不涉及
+    *  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class AddNodeList implements ModelInterface, ArrayAccess
     /**
     * Sets kind
     *
-    * @param string $kind **参数解释**： API类型，，固定值“List”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“List”。 **默认取值**： 不涉及
+    * @param string $kind **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class AddNodeList implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeList
-    *  **参数解释**： 纳管节点列表。 **约束限制**： 当前最多支持同时纳管200个节点。
+    *  **参数解释**： 纳管节点列表，当前最多支持同时纳管200个节点。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\AddNode[]
     */
@@ -265,7 +265,7 @@ class AddNodeList implements ModelInterface, ArrayAccess
     /**
     * Sets nodeList
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\AddNode[] $nodeList **参数解释**： 纳管节点列表。 **约束限制**： 当前最多支持同时纳管200个节点。
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\AddNode[] $nodeList **参数解释**： 纳管节点列表，当前最多支持同时纳管200个节点。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

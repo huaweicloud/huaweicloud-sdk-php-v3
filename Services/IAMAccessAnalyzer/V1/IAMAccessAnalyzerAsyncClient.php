@@ -360,6 +360,74 @@ class IAMAccessAnalyzerAsyncClient extends Client
     }
 
     /**
+     * 更新指定分析器的配置
+     *
+     * 更新指定分析器的配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateAnalyzerAsync($request)
+    {
+        return $this->updateAnalyzerAsyncWithHttpInfo($request);
+    }
+    
+    public function updateAnalyzerAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/analyzers/{analyzer_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['analyzerId'] !== null) {
+            $pathParams['analyzer_id'] = $localVarParams['analyzerId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\UpdateAnalyzerResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\UpdateAnalyzerRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 应用存档规则
      *
      * 以追溯方式将存档规则应用于符合存档规则条件的现有结果。
@@ -774,6 +842,213 @@ class IAMAccessAnalyzerAsyncClient extends Client
     }
 
     /**
+     * 创建资源分析配置
+     *
+     * 创建指定分析器的资源分析配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createResourceConfigurationsAsync($request)
+    {
+        return $this->createResourceConfigurationsAsyncWithHttpInfo($request);
+    }
+    
+    public function createResourceConfigurationsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/analyzers/{analyzer_id}/resource-configurations/create';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['analyzerId'] !== null) {
+            $pathParams['analyzer_id'] = $localVarParams['analyzerId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\CreateResourceConfigurationsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\CreateResourceConfigurationsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除资源分析配置
+     *
+     * 删除指定分析器的资源分析配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteResourceConfigurationsAsync($request)
+    {
+        return $this->deleteResourceConfigurationsAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteResourceConfigurationsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/analyzers/{analyzer_id}/resource-configurations/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['analyzerId'] !== null) {
+            $pathParams['analyzer_id'] = $localVarParams['analyzerId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\DeleteResourceConfigurationsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\DeleteResourceConfigurationsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 列举资源分析配置
+     *
+     * 列举指定分析器的资源分析配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listResourceConfigurationsAsync($request)
+    {
+        return $this->listResourceConfigurationsAsyncWithHttpInfo($request);
+    }
+    
+    public function listResourceConfigurationsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/analyzers/{analyzer_id}/resource-configurations';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['analyzerId'] !== null) {
+            $pathParams['analyzer_id'] = $localVarParams['analyzerId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ListResourceConfigurationsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ListResourceConfigurationsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 检索指定分析器生成的访问分析结果列表
      *
      * 检索指定分析器生成的访问分析结果列表。
@@ -974,6 +1249,337 @@ class IAMAccessAnalyzerAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\UpdateFindingsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\UpdateFindingsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建消息通知配置
+     *
+     * 创建消息通知配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createNotificationSettingAsync($request)
+    {
+        return $this->createNotificationSettingAsyncWithHttpInfo($request);
+    }
+    
+    public function createNotificationSettingAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/notification-settings';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\CreateNotificationSettingResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\CreateNotificationSettingRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除消息通知配置
+     *
+     * 删除消息通知配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteNotificationSettingAsync($request)
+    {
+        return $this->deleteNotificationSettingAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteNotificationSettingAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/notification-settings/{notification_setting_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['notificationSettingId'] !== null) {
+            $pathParams['notification_setting_id'] = $localVarParams['notificationSettingId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\DeleteNotificationSettingResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\DeleteNotificationSettingRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取消息通知配置列表
+     *
+     * 获取消息通知配置列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listNotificationSettingsAsync($request)
+    {
+        return $this->listNotificationSettingsAsyncWithHttpInfo($request);
+    }
+    
+    public function listNotificationSettingsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/notification-settings';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ListNotificationSettingsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ListNotificationSettingsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取消息通知配置
+     *
+     * 获取消息通知配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showNotificationSettingAsync($request)
+    {
+        return $this->showNotificationSettingAsyncWithHttpInfo($request);
+    }
+    
+    public function showNotificationSettingAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/notification-settings/{notification_setting_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['notificationSettingId'] !== null) {
+            $pathParams['notification_setting_id'] = $localVarParams['notificationSettingId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ShowNotificationSettingResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ShowNotificationSettingRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新消息通知配置
+     *
+     * 更新消息通知配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateNotificationSettingAsync($request)
+    {
+        return $this->updateNotificationSettingAsyncWithHttpInfo($request);
+    }
+    
+    public function updateNotificationSettingAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/notification-settings/{notification_setting_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['notificationSettingId'] !== null) {
+            $pathParams['notification_setting_id'] = $localVarParams['notificationSettingId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\UpdateNotificationSettingResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\UpdateNotificationSettingRequest',
             $asyncRequest = true);
     }
 

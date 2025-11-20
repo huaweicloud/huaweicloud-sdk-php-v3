@@ -20,12 +20,12 @@ class JobSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  任务的类型，例：“CreateCluster”- 创建集群。
-    * clusterUid  任务所在的集群的ID。
-    * resourceId  任务操作的资源ID。
-    * resourceName  任务操作的资源名称。
-    * extendParam  扩展参数。
-    * subJobs  子任务的列表。  - 包含了所有子任务的详细信息 - 在创建集群、节点等场景下，通常会由多个子任务共同组成创建任务，在子任务都完成后，任务才会完成
+    * type  **参数解释**： 任务的类型。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * clusterUid  **参数解释**： 任务所在的集群的ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * resourceId  **参数解释**： 任务操作的资源ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * resourceName  **参数解释**： 任务操作的资源名称。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * extendParam  **参数解释**： 扩展参数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * subJobs  **参数解释**： 子任务的列表。 - 包含了所有子任务的详细信息 - 在创建集群、节点等场景下，通常会由多个子任务共同组成创建任务，在子任务都完成后，任务才会完成  **约束限制**： 不涉及
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class JobSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  任务的类型，例：“CreateCluster”- 创建集群。
-    * clusterUid  任务所在的集群的ID。
-    * resourceId  任务操作的资源ID。
-    * resourceName  任务操作的资源名称。
-    * extendParam  扩展参数。
-    * subJobs  子任务的列表。  - 包含了所有子任务的详细信息 - 在创建集群、节点等场景下，通常会由多个子任务共同组成创建任务，在子任务都完成后，任务才会完成
+    * type  **参数解释**： 任务的类型。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * clusterUid  **参数解释**： 任务所在的集群的ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * resourceId  **参数解释**： 任务操作的资源ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * resourceName  **参数解释**： 任务操作的资源名称。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * extendParam  **参数解释**： 扩展参数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * subJobs  **参数解释**： 子任务的列表。 - 包含了所有子任务的详细信息 - 在创建集群、节点等场景下，通常会由多个子任务共同组成创建任务，在子任务都完成后，任务才会完成  **约束限制**： 不涉及
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class JobSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  任务的类型，例：“CreateCluster”- 创建集群。
-    * clusterUid  任务所在的集群的ID。
-    * resourceId  任务操作的资源ID。
-    * resourceName  任务操作的资源名称。
-    * extendParam  扩展参数。
-    * subJobs  子任务的列表。  - 包含了所有子任务的详细信息 - 在创建集群、节点等场景下，通常会由多个子任务共同组成创建任务，在子任务都完成后，任务才会完成
+    * type  **参数解释**： 任务的类型。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * clusterUid  **参数解释**： 任务所在的集群的ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * resourceId  **参数解释**： 任务操作的资源ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * resourceName  **参数解释**： 任务操作的资源名称。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * extendParam  **参数解释**： 扩展参数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * subJobs  **参数解释**： 子任务的列表。 - 包含了所有子任务的详细信息 - 在创建集群、节点等场景下，通常会由多个子任务共同组成创建任务，在子任务都完成后，任务才会完成  **约束限制**： 不涉及
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class JobSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  任务的类型，例：“CreateCluster”- 创建集群。
-    * clusterUid  任务所在的集群的ID。
-    * resourceId  任务操作的资源ID。
-    * resourceName  任务操作的资源名称。
-    * extendParam  扩展参数。
-    * subJobs  子任务的列表。  - 包含了所有子任务的详细信息 - 在创建集群、节点等场景下，通常会由多个子任务共同组成创建任务，在子任务都完成后，任务才会完成
+    * type  **参数解释**： 任务的类型。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * clusterUid  **参数解释**： 任务所在的集群的ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * resourceId  **参数解释**： 任务操作的资源ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * resourceName  **参数解释**： 任务操作的资源名称。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * extendParam  **参数解释**： 扩展参数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * subJobs  **参数解释**： 子任务的列表。 - 包含了所有子任务的详细信息 - 在创建集群、节点等场景下，通常会由多个子任务共同组成创建任务，在子任务都完成后，任务才会完成  **约束限制**： 不涉及
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class JobSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  任务的类型，例：“CreateCluster”- 创建集群。
-    * clusterUid  任务所在的集群的ID。
-    * resourceId  任务操作的资源ID。
-    * resourceName  任务操作的资源名称。
-    * extendParam  扩展参数。
-    * subJobs  子任务的列表。  - 包含了所有子任务的详细信息 - 在创建集群、节点等场景下，通常会由多个子任务共同组成创建任务，在子任务都完成后，任务才会完成
+    * type  **参数解释**： 任务的类型。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * clusterUid  **参数解释**： 任务所在的集群的ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * resourceId  **参数解释**： 任务操作的资源ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * resourceName  **参数解释**： 任务操作的资源名称。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * extendParam  **参数解释**： 扩展参数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * subJobs  **参数解释**： 子任务的列表。 - 包含了所有子任务的详细信息 - 在创建集群、节点等场景下，通常会由多个子任务共同组成创建任务，在子任务都完成后，任务才会完成  **约束限制**： 不涉及
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class JobSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  任务的类型，例：“CreateCluster”- 创建集群。
+    *  **参数解释**： 任务的类型。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class JobSpec implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 任务的类型，例：“CreateCluster”- 创建集群。
+    * @param string|null $type **参数解释**： 任务的类型。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class JobSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterUid
-    *  任务所在的集群的ID。
+    *  **参数解释**： 任务所在的集群的ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class JobSpec implements ModelInterface, ArrayAccess
     /**
     * Sets clusterUid
     *
-    * @param string|null $clusterUid 任务所在的集群的ID。
+    * @param string|null $clusterUid **参数解释**： 任务所在的集群的ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class JobSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  任务操作的资源ID。
+    *  **参数解释**： 任务操作的资源ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class JobSpec implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId 任务操作的资源ID。
+    * @param string|null $resourceId **参数解释**： 任务操作的资源ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class JobSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceName
-    *  任务操作的资源名称。
+    *  **参数解释**： 任务操作的资源名称。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class JobSpec implements ModelInterface, ArrayAccess
     /**
     * Sets resourceName
     *
-    * @param string|null $resourceName 任务操作的资源名称。
+    * @param string|null $resourceName **参数解释**： 任务操作的资源名称。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class JobSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendParam
-    *  扩展参数。
+    *  **参数解释**： 扩展参数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return map[string,string]|null
     */
@@ -337,7 +337,7 @@ class JobSpec implements ModelInterface, ArrayAccess
     /**
     * Sets extendParam
     *
-    * @param map[string,string]|null $extendParam 扩展参数。
+    * @param map[string,string]|null $extendParam **参数解释**： 扩展参数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class JobSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets subJobs
-    *  子任务的列表。  - 包含了所有子任务的详细信息 - 在创建集群、节点等场景下，通常会由多个子任务共同组成创建任务，在子任务都完成后，任务才会完成
+    *  **参数解释**： 子任务的列表。 - 包含了所有子任务的详细信息 - 在创建集群、节点等场景下，通常会由多个子任务共同组成创建任务，在子任务都完成后，任务才会完成  **约束限制**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\Job[]|null
     */
@@ -361,7 +361,7 @@ class JobSpec implements ModelInterface, ArrayAccess
     /**
     * Sets subJobs
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\Job[]|null $subJobs 子任务的列表。  - 包含了所有子任务的详细信息 - 在创建集群、节点等场景下，通常会由多个子任务共同组成创建任务，在子任务都完成后，任务才会完成
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\Job[]|null $subJobs **参数解释**： 子任务的列表。 - 包含了所有子任务的详细信息 - 在创建集群、节点等场景下，通常会由多个子任务共同组成创建任务，在子任务都完成后，任务才会完成  **约束限制**： 不涉及
     *
     * @return $this
     */

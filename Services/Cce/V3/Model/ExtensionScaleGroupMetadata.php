@@ -20,7 +20,7 @@ class ExtensionScaleGroupMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * uid  扩展伸缩组的uuid，由系统自动生成
+    * uid  **参数解释**： 扩展伸缩组的uuid **约束限制**： - 创建节点池时自动生成，填写无效。 - 更新节点池时，如果填写则更新指定伸缩组。 - 更新节点池时，如果不填写则删除当前绑定的伸缩组，并创建新的伸缩组。  **取值范围**： 不涉及 **默认取值**： 不涉及
     * name  **参数解释**： 扩展伸缩组的名称。 **约束限制**： 不能为 **default**。 **取值范围**： 长度不能超过56个字符，只能包含数字和小写字母以及连字符（-），必须以小写字母开头以小写字母或者数字结尾。 **默认取值**： 不涉及
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ExtensionScaleGroupMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * uid  扩展伸缩组的uuid，由系统自动生成
+    * uid  **参数解释**： 扩展伸缩组的uuid **约束限制**： - 创建节点池时自动生成，填写无效。 - 更新节点池时，如果填写则更新指定伸缩组。 - 更新节点池时，如果不填写则删除当前绑定的伸缩组，并创建新的伸缩组。  **取值范围**： 不涉及 **默认取值**： 不涉及
     * name  **参数解释**： 扩展伸缩组的名称。 **约束限制**： 不能为 **default**。 **取值范围**： 长度不能超过56个字符，只能包含数字和小写字母以及连字符（-），必须以小写字母开头以小写字母或者数字结尾。 **默认取值**： 不涉及
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ExtensionScaleGroupMetadata implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * uid  扩展伸缩组的uuid，由系统自动生成
+    * uid  **参数解释**： 扩展伸缩组的uuid **约束限制**： - 创建节点池时自动生成，填写无效。 - 更新节点池时，如果填写则更新指定伸缩组。 - 更新节点池时，如果不填写则删除当前绑定的伸缩组，并创建新的伸缩组。  **取值范围**： 不涉及 **默认取值**： 不涉及
     * name  **参数解释**： 扩展伸缩组的名称。 **约束限制**： 不能为 **default**。 **取值范围**： 长度不能超过56个字符，只能包含数字和小写字母以及连字符（-），必须以小写字母开头以小写字母或者数字结尾。 **默认取值**： 不涉及
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ExtensionScaleGroupMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * uid  扩展伸缩组的uuid，由系统自动生成
+    * uid  **参数解释**： 扩展伸缩组的uuid **约束限制**： - 创建节点池时自动生成，填写无效。 - 更新节点池时，如果填写则更新指定伸缩组。 - 更新节点池时，如果不填写则删除当前绑定的伸缩组，并创建新的伸缩组。  **取值范围**： 不涉及 **默认取值**： 不涉及
     * name  **参数解释**： 扩展伸缩组的名称。 **约束限制**： 不能为 **default**。 **取值范围**： 长度不能超过56个字符，只能包含数字和小写字母以及连字符（-），必须以小写字母开头以小写字母或者数字结尾。 **默认取值**： 不涉及
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ExtensionScaleGroupMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * uid  扩展伸缩组的uuid，由系统自动生成
+    * uid  **参数解释**： 扩展伸缩组的uuid **约束限制**： - 创建节点池时自动生成，填写无效。 - 更新节点池时，如果填写则更新指定伸缩组。 - 更新节点池时，如果不填写则删除当前绑定的伸缩组，并创建新的伸缩组。  **取值范围**： 不涉及 **默认取值**： 不涉及
     * name  **参数解释**： 扩展伸缩组的名称。 **约束限制**： 不能为 **default**。 **取值范围**： 长度不能超过56个字符，只能包含数字和小写字母以及连字符（-），必须以小写字母开头以小写字母或者数字结尾。 **默认取值**： 不涉及
     *
     * @var string[]
@@ -185,7 +185,7 @@ class ExtensionScaleGroupMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets uid
-    *  扩展伸缩组的uuid，由系统自动生成
+    *  **参数解释**： 扩展伸缩组的uuid **约束限制**： - 创建节点池时自动生成，填写无效。 - 更新节点池时，如果填写则更新指定伸缩组。 - 更新节点池时，如果不填写则删除当前绑定的伸缩组，并创建新的伸缩组。  **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class ExtensionScaleGroupMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets uid
     *
-    * @param string|null $uid 扩展伸缩组的uuid，由系统自动生成
+    * @param string|null $uid **参数解释**： 扩展伸缩组的uuid **约束限制**： - 创建节点池时自动生成，填写无效。 - 更新节点池时，如果填写则更新指定伸缩组。 - 更新节点池时，如果不填写则删除当前绑定的伸缩组，并创建新的伸缩组。  **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

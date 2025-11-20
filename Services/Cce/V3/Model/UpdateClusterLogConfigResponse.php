@@ -21,7 +21,7 @@ class UpdateClusterLogConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ttlInDays  **参数解释**： 日志存储时长，单位（天） **取值范围**： 0-30
+    * ttlInDays  **参数解释**：  存储时长，单位：天。  **约束限制**：  不涉及  **取值范围**： 0-30  **默认取值**： 不涉及
     * logConfigs  **参数解释**： 日志配置项详细信息 **约束限制**: 不涉及
     *
     * @var string[]
@@ -33,7 +33,7 @@ class UpdateClusterLogConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ttlInDays  **参数解释**： 日志存储时长，单位（天） **取值范围**： 0-30
+    * ttlInDays  **参数解释**：  存储时长，单位：天。  **约束限制**：  不涉及  **取值范围**： 0-30  **默认取值**： 不涉及
     * logConfigs  **参数解释**： 日志配置项详细信息 **约束限制**: 不涉及
     *
     * @var string[]
@@ -66,7 +66,7 @@ class UpdateClusterLogConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ttlInDays  **参数解释**： 日志存储时长，单位（天） **取值范围**： 0-30
+    * ttlInDays  **参数解释**：  存储时长，单位：天。  **约束限制**：  不涉及  **取值范围**： 0-30  **默认取值**： 不涉及
     * logConfigs  **参数解释**： 日志配置项详细信息 **约束限制**: 不涉及
     *
     * @var string[]
@@ -78,7 +78,7 @@ class UpdateClusterLogConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ttlInDays  **参数解释**： 日志存储时长，单位（天） **取值范围**： 0-30
+    * ttlInDays  **参数解释**：  存储时长，单位：天。  **约束限制**：  不涉及  **取值范围**： 0-30  **默认取值**： 不涉及
     * logConfigs  **参数解释**： 日志配置项详细信息 **约束限制**: 不涉及
     *
     * @var string[]
@@ -90,7 +90,7 @@ class UpdateClusterLogConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ttlInDays  **参数解释**： 日志存储时长，单位（天） **取值范围**： 0-30
+    * ttlInDays  **参数解释**：  存储时长，单位：天。  **约束限制**：  不涉及  **取值范围**： 0-30  **默认取值**： 不涉及
     * logConfigs  **参数解释**： 日志配置项详细信息 **约束限制**: 不涉及
     *
     * @var string[]
@@ -192,7 +192,7 @@ class UpdateClusterLogConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ttlInDays
-    *  **参数解释**： 日志存储时长，单位（天） **取值范围**： 0-30
+    *  **参数解释**：  存储时长，单位：天。  **约束限制**：  不涉及  **取值范围**： 0-30  **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class UpdateClusterLogConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ttlInDays
     *
-    * @param int|null $ttlInDays **参数解释**： 日志存储时长，单位（天） **取值范围**： 0-30
+    * @param int|null $ttlInDays **参数解释**：  存储时长，单位：天。  **约束限制**：  不涉及  **取值范围**： 0-30  **默认取值**： 不涉及
     *
     * @return $this
     */

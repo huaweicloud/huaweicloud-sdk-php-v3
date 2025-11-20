@@ -22,6 +22,7 @@ class CreateCertificateRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * contentType  内容类型
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
+    * verifyCertKey  是否验证证书和私钥，true为验证，false为不验证
     * body  body
     *
     * @var string[]
@@ -29,6 +30,7 @@ class CreateCertificateRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'contentType' => 'string',
             'enterpriseProjectId' => 'string',
+            'verifyCertKey' => 'bool',
             'body' => '\HuaweiCloud\SDK\Waf\V1\Model\CreateCertificateRequestBody'
     ];
 
@@ -36,6 +38,7 @@ class CreateCertificateRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * contentType  内容类型
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
+    * verifyCertKey  是否验证证书和私钥，true为验证，false为不验证
     * body  body
     *
     * @var string[]
@@ -43,6 +46,7 @@ class CreateCertificateRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'contentType' => null,
         'enterpriseProjectId' => null,
+        'verifyCertKey' => null,
         'body' => null
     ];
 
@@ -71,6 +75,7 @@ class CreateCertificateRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * contentType  内容类型
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
+    * verifyCertKey  是否验证证书和私钥，true为验证，false为不验证
     * body  body
     *
     * @var string[]
@@ -78,6 +83,7 @@ class CreateCertificateRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'contentType' => 'Content-Type',
             'enterpriseProjectId' => 'enterprise_project_id',
+            'verifyCertKey' => 'verify_cert_key',
             'body' => 'body'
     ];
 
@@ -85,6 +91,7 @@ class CreateCertificateRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * contentType  内容类型
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
+    * verifyCertKey  是否验证证书和私钥，true为验证，false为不验证
     * body  body
     *
     * @var string[]
@@ -92,6 +99,7 @@ class CreateCertificateRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'contentType' => 'setContentType',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'verifyCertKey' => 'setVerifyCertKey',
             'body' => 'setBody'
     ];
 
@@ -99,6 +107,7 @@ class CreateCertificateRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * contentType  内容类型
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
+    * verifyCertKey  是否验证证书和私钥，true为验证，false为不验证
     * body  body
     *
     * @var string[]
@@ -106,6 +115,7 @@ class CreateCertificateRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'contentType' => 'getContentType',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'verifyCertKey' => 'getVerifyCertKey',
             'body' => 'getBody'
     ];
 
@@ -169,6 +179,7 @@ class CreateCertificateRequest implements ModelInterface, ArrayAccess
     {
         $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['verifyCertKey'] = isset($data['verifyCertKey']) ? $data['verifyCertKey'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -242,6 +253,30 @@ class CreateCertificateRequest implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets verifyCertKey
+    *  是否验证证书和私钥，true为验证，false为不验证
+    *
+    * @return bool|null
+    */
+    public function getVerifyCertKey()
+    {
+        return $this->container['verifyCertKey'];
+    }
+
+    /**
+    * Sets verifyCertKey
+    *
+    * @param bool|null $verifyCertKey 是否验证证书和私钥，true为验证，false为不验证
+    *
+    * @return $this
+    */
+    public function setVerifyCertKey($verifyCertKey)
+    {
+        $this->container['verifyCertKey'] = $verifyCertKey;
         return $this;
     }
 

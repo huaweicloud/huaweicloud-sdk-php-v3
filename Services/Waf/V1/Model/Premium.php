@@ -20,10 +20,10 @@ class Premium implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * purchased  是否开通独享模式
-    * total  独享实例数量，包括elb
-    * elb  elb实例数量
-    * dedicated  独享WAF实例数量
+    * purchased  **参数解释：** 是否开通独享模式 **取值范围：** 不涉及
+    * total  **参数解释：** 独享实例数量，包括elb **取值范围：** 不涉及
+    * elb  **参数解释：** elb实例数量 **取值范围：** 不涉及
+    * dedicated  **参数解释：** 独享WAF实例数量 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class Premium implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * purchased  是否开通独享模式
-    * total  独享实例数量，包括elb
-    * elb  elb实例数量
-    * dedicated  独享WAF实例数量
+    * purchased  **参数解释：** 是否开通独享模式 **取值范围：** 不涉及
+    * total  **参数解释：** 独享实例数量，包括elb **取值范围：** 不涉及
+    * elb  **参数解释：** elb实例数量 **取值范围：** 不涉及
+    * dedicated  **参数解释：** 独享WAF实例数量 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class Premium implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * purchased  是否开通独享模式
-    * total  独享实例数量，包括elb
-    * elb  elb实例数量
-    * dedicated  独享WAF实例数量
+    * purchased  **参数解释：** 是否开通独享模式 **取值范围：** 不涉及
+    * total  **参数解释：** 独享实例数量，包括elb **取值范围：** 不涉及
+    * elb  **参数解释：** elb实例数量 **取值范围：** 不涉及
+    * dedicated  **参数解释：** 独享WAF实例数量 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class Premium implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * purchased  是否开通独享模式
-    * total  独享实例数量，包括elb
-    * elb  elb实例数量
-    * dedicated  独享WAF实例数量
+    * purchased  **参数解释：** 是否开通独享模式 **取值范围：** 不涉及
+    * total  **参数解释：** 独享实例数量，包括elb **取值范围：** 不涉及
+    * elb  **参数解释：** elb实例数量 **取值范围：** 不涉及
+    * dedicated  **参数解释：** 独享WAF实例数量 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class Premium implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * purchased  是否开通独享模式
-    * total  独享实例数量，包括elb
-    * elb  elb实例数量
-    * dedicated  独享WAF实例数量
+    * purchased  **参数解释：** 是否开通独享模式 **取值范围：** 不涉及
+    * total  **参数解释：** 独享实例数量，包括elb **取值范围：** 不涉及
+    * elb  **参数解释：** elb实例数量 **取值范围：** 不涉及
+    * dedicated  **参数解释：** 独享WAF实例数量 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class Premium implements ModelInterface, ArrayAccess
 
     /**
     * Gets purchased
-    *  是否开通独享模式
+    *  **参数解释：** 是否开通独享模式 **取值范围：** 不涉及
     *
     * @return bool|null
     */
@@ -219,7 +219,7 @@ class Premium implements ModelInterface, ArrayAccess
     /**
     * Sets purchased
     *
-    * @param bool|null $purchased 是否开通独享模式
+    * @param bool|null $purchased **参数解释：** 是否开通独享模式 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class Premium implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  独享实例数量，包括elb
+    *  **参数解释：** 独享实例数量，包括elb **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -243,7 +243,7 @@ class Premium implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 独享实例数量，包括elb
+    * @param int|null $total **参数解释：** 独享实例数量，包括elb **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class Premium implements ModelInterface, ArrayAccess
 
     /**
     * Gets elb
-    *  elb实例数量
+    *  **参数解释：** elb实例数量 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -267,7 +267,7 @@ class Premium implements ModelInterface, ArrayAccess
     /**
     * Sets elb
     *
-    * @param int|null $elb elb实例数量
+    * @param int|null $elb **参数解释：** elb实例数量 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class Premium implements ModelInterface, ArrayAccess
 
     /**
     * Gets dedicated
-    *  独享WAF实例数量
+    *  **参数解释：** 独享WAF实例数量 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class Premium implements ModelInterface, ArrayAccess
     /**
     * Sets dedicated
     *
-    * @param int|null $dedicated 独享WAF实例数量
+    * @param int|null $dedicated **参数解释：** 独享WAF实例数量 **取值范围：** 不涉及
     *
     * @return $this
     */

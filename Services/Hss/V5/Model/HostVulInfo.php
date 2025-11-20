@@ -23,27 +23,29 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * vulName  **参数解释**: 漏洞名称 **取值范围**: 字符范围0-256位
     * vulId  **参数解释**: 漏洞ID **取值范围**: 字符范围0-64位
     * labelList  **参数解释**: 漏洞标签列表 **取值范围**: 最小值0，最大值2147483647
-    * repairNecessity  **参数解释**: 修复紧急度 **取值范围**: - immediate_repair  : 尽快修复 - delay_repair      : 延后修复 - not_needed_repair : 暂可不修复
+    * repairNecessity  **参数解释**: 修复紧急度 **取值范围**: - Critical：漏洞cvss评分大于等于9；对应控制台页面的高危 - High：漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium：漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low：漏洞cvss评分小于4；对应控制台页面的低危
     * scanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
-    * type  **参数解释**: 漏洞类型 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞
+    * type  **参数解释**: 漏洞类型 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞
     * appList  **参数解释**: 服务器上受该漏洞影响的软件列表 **取值范围**: 最小值0，最大值2147483647
     * severityLevel  **参数解释**: 危险程度 **取值范围**: - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危 - High     : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium   : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low      : 漏洞cvss评分小于4；对应控制台页面的低危
     * solutionDetail  **参数解释**: 解决方案 **取值范围**: 字符范围0-65534位
-    * url  **参数解释**: URL链接 **取值范围**: 字符范围0-2083位
+    * url  **参数解释**: URL链接 **取值范围**: 字符范围0-2048位
     * description  **参数解释**: 漏洞描述 **取值范围**: 字符范围0-65534位
     * repairCmd  **参数解释**: 修复命令行 **取值范围**: 字符范围1-256位
-    * status  **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复
+    * status  **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复成功 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：请重启主机再次修复
     * repairSuccessNum  **参数解释**: HSS全网修复该漏洞的次数 **取值范围**: 最小值0，最大值1000000
     * cveList  **参数解释**: CVE列表 **取值范围**: 最小值1，最大值10000
     * isAffectBusiness  **参数解释**: 是否影响业务 **取值范围**: - true  : 影响业务 - false : 不影响业务
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
-    * appName  **参数解释**: 软件名称 **取值范围**: 字符长度0-256位
-    * appVersion  **参数解释**: 软件版本 **取值范围**: 字符长度0-256位
-    * appPath  **参数解释**: 软件路径 **取值范围**: 字符长度0-512位
+    * appName  **参数解释**: 软件名称（应用漏洞、应急漏洞） **取值范围**: 字符长度0-256位
+    * appPath  **参数解释**: 应用漏洞软件路径 **取值范围**: 字符长度0-512位
     * version  **参数解释**: 主机配额 **取值范围**: 字符长度0-128位
     * supportRestore  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
     * disabledOperateTypes  **参数解释**: 该漏洞不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
     * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
+    * softwareVersion  **参数解释**: linux当前及修复软件信息 **取值范围**: 字符长度1-2048位
+    * backupName  **参数解释**: 备份名称 **取值范围**: 字符长度1-2048位
+    * failedReason  **参数解释**: 修复失败原因 **取值范围**: 字符长度1-65535位
     *
     * @var string[]
     */
@@ -66,12 +68,14 @@ class HostVulInfo implements ModelInterface, ArrayAccess
             'isAffectBusiness' => 'bool',
             'firstScanTime' => 'int',
             'appName' => 'string',
-            'appVersion' => 'string',
             'appPath' => 'string',
             'version' => 'string',
             'supportRestore' => 'bool',
             'disabledOperateTypes' => '\HuaweiCloud\SDK\Hss\V5\Model\HostVulInfoDisabledOperateTypes[]',
-            'repairPriority' => 'string'
+            'repairPriority' => 'string',
+            'softwareVersion' => 'string',
+            'backupName' => 'string',
+            'failedReason' => 'string'
     ];
 
     /**
@@ -79,27 +83,29 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * vulName  **参数解释**: 漏洞名称 **取值范围**: 字符范围0-256位
     * vulId  **参数解释**: 漏洞ID **取值范围**: 字符范围0-64位
     * labelList  **参数解释**: 漏洞标签列表 **取值范围**: 最小值0，最大值2147483647
-    * repairNecessity  **参数解释**: 修复紧急度 **取值范围**: - immediate_repair  : 尽快修复 - delay_repair      : 延后修复 - not_needed_repair : 暂可不修复
+    * repairNecessity  **参数解释**: 修复紧急度 **取值范围**: - Critical：漏洞cvss评分大于等于9；对应控制台页面的高危 - High：漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium：漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low：漏洞cvss评分小于4；对应控制台页面的低危
     * scanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
-    * type  **参数解释**: 漏洞类型 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞
+    * type  **参数解释**: 漏洞类型 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞
     * appList  **参数解释**: 服务器上受该漏洞影响的软件列表 **取值范围**: 最小值0，最大值2147483647
     * severityLevel  **参数解释**: 危险程度 **取值范围**: - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危 - High     : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium   : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low      : 漏洞cvss评分小于4；对应控制台页面的低危
     * solutionDetail  **参数解释**: 解决方案 **取值范围**: 字符范围0-65534位
-    * url  **参数解释**: URL链接 **取值范围**: 字符范围0-2083位
+    * url  **参数解释**: URL链接 **取值范围**: 字符范围0-2048位
     * description  **参数解释**: 漏洞描述 **取值范围**: 字符范围0-65534位
     * repairCmd  **参数解释**: 修复命令行 **取值范围**: 字符范围1-256位
-    * status  **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复
+    * status  **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复成功 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：请重启主机再次修复
     * repairSuccessNum  **参数解释**: HSS全网修复该漏洞的次数 **取值范围**: 最小值0，最大值1000000
     * cveList  **参数解释**: CVE列表 **取值范围**: 最小值1，最大值10000
     * isAffectBusiness  **参数解释**: 是否影响业务 **取值范围**: - true  : 影响业务 - false : 不影响业务
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
-    * appName  **参数解释**: 软件名称 **取值范围**: 字符长度0-256位
-    * appVersion  **参数解释**: 软件版本 **取值范围**: 字符长度0-256位
-    * appPath  **参数解释**: 软件路径 **取值范围**: 字符长度0-512位
+    * appName  **参数解释**: 软件名称（应用漏洞、应急漏洞） **取值范围**: 字符长度0-256位
+    * appPath  **参数解释**: 应用漏洞软件路径 **取值范围**: 字符长度0-512位
     * version  **参数解释**: 主机配额 **取值范围**: 字符长度0-128位
     * supportRestore  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
     * disabledOperateTypes  **参数解释**: 该漏洞不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
     * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
+    * softwareVersion  **参数解释**: linux当前及修复软件信息 **取值范围**: 字符长度1-2048位
+    * backupName  **参数解释**: 备份名称 **取值范围**: 字符长度1-2048位
+    * failedReason  **参数解释**: 修复失败原因 **取值范围**: 字符长度1-65535位
     *
     * @var string[]
     */
@@ -122,12 +128,14 @@ class HostVulInfo implements ModelInterface, ArrayAccess
         'isAffectBusiness' => null,
         'firstScanTime' => 'int64',
         'appName' => null,
-        'appVersion' => null,
         'appPath' => null,
         'version' => null,
         'supportRestore' => null,
         'disabledOperateTypes' => null,
-        'repairPriority' => null
+        'repairPriority' => null,
+        'softwareVersion' => null,
+        'backupName' => null,
+        'failedReason' => null
     ];
 
     /**
@@ -156,27 +164,29 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * vulName  **参数解释**: 漏洞名称 **取值范围**: 字符范围0-256位
     * vulId  **参数解释**: 漏洞ID **取值范围**: 字符范围0-64位
     * labelList  **参数解释**: 漏洞标签列表 **取值范围**: 最小值0，最大值2147483647
-    * repairNecessity  **参数解释**: 修复紧急度 **取值范围**: - immediate_repair  : 尽快修复 - delay_repair      : 延后修复 - not_needed_repair : 暂可不修复
+    * repairNecessity  **参数解释**: 修复紧急度 **取值范围**: - Critical：漏洞cvss评分大于等于9；对应控制台页面的高危 - High：漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium：漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low：漏洞cvss评分小于4；对应控制台页面的低危
     * scanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
-    * type  **参数解释**: 漏洞类型 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞
+    * type  **参数解释**: 漏洞类型 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞
     * appList  **参数解释**: 服务器上受该漏洞影响的软件列表 **取值范围**: 最小值0，最大值2147483647
     * severityLevel  **参数解释**: 危险程度 **取值范围**: - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危 - High     : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium   : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low      : 漏洞cvss评分小于4；对应控制台页面的低危
     * solutionDetail  **参数解释**: 解决方案 **取值范围**: 字符范围0-65534位
-    * url  **参数解释**: URL链接 **取值范围**: 字符范围0-2083位
+    * url  **参数解释**: URL链接 **取值范围**: 字符范围0-2048位
     * description  **参数解释**: 漏洞描述 **取值范围**: 字符范围0-65534位
     * repairCmd  **参数解释**: 修复命令行 **取值范围**: 字符范围1-256位
-    * status  **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复
+    * status  **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复成功 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：请重启主机再次修复
     * repairSuccessNum  **参数解释**: HSS全网修复该漏洞的次数 **取值范围**: 最小值0，最大值1000000
     * cveList  **参数解释**: CVE列表 **取值范围**: 最小值1，最大值10000
     * isAffectBusiness  **参数解释**: 是否影响业务 **取值范围**: - true  : 影响业务 - false : 不影响业务
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
-    * appName  **参数解释**: 软件名称 **取值范围**: 字符长度0-256位
-    * appVersion  **参数解释**: 软件版本 **取值范围**: 字符长度0-256位
-    * appPath  **参数解释**: 软件路径 **取值范围**: 字符长度0-512位
+    * appName  **参数解释**: 软件名称（应用漏洞、应急漏洞） **取值范围**: 字符长度0-256位
+    * appPath  **参数解释**: 应用漏洞软件路径 **取值范围**: 字符长度0-512位
     * version  **参数解释**: 主机配额 **取值范围**: 字符长度0-128位
     * supportRestore  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
     * disabledOperateTypes  **参数解释**: 该漏洞不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
     * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
+    * softwareVersion  **参数解释**: linux当前及修复软件信息 **取值范围**: 字符长度1-2048位
+    * backupName  **参数解释**: 备份名称 **取值范围**: 字符长度1-2048位
+    * failedReason  **参数解释**: 修复失败原因 **取值范围**: 字符长度1-65535位
     *
     * @var string[]
     */
@@ -199,12 +209,14 @@ class HostVulInfo implements ModelInterface, ArrayAccess
             'isAffectBusiness' => 'is_affect_business',
             'firstScanTime' => 'first_scan_time',
             'appName' => 'app_name',
-            'appVersion' => 'app_version',
             'appPath' => 'app_path',
             'version' => 'version',
             'supportRestore' => 'support_restore',
             'disabledOperateTypes' => 'disabled_operate_types',
-            'repairPriority' => 'repair_priority'
+            'repairPriority' => 'repair_priority',
+            'softwareVersion' => 'software_version',
+            'backupName' => 'backup_name',
+            'failedReason' => 'failed_reason'
     ];
 
     /**
@@ -212,27 +224,29 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * vulName  **参数解释**: 漏洞名称 **取值范围**: 字符范围0-256位
     * vulId  **参数解释**: 漏洞ID **取值范围**: 字符范围0-64位
     * labelList  **参数解释**: 漏洞标签列表 **取值范围**: 最小值0，最大值2147483647
-    * repairNecessity  **参数解释**: 修复紧急度 **取值范围**: - immediate_repair  : 尽快修复 - delay_repair      : 延后修复 - not_needed_repair : 暂可不修复
+    * repairNecessity  **参数解释**: 修复紧急度 **取值范围**: - Critical：漏洞cvss评分大于等于9；对应控制台页面的高危 - High：漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium：漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low：漏洞cvss评分小于4；对应控制台页面的低危
     * scanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
-    * type  **参数解释**: 漏洞类型 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞
+    * type  **参数解释**: 漏洞类型 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞
     * appList  **参数解释**: 服务器上受该漏洞影响的软件列表 **取值范围**: 最小值0，最大值2147483647
     * severityLevel  **参数解释**: 危险程度 **取值范围**: - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危 - High     : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium   : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low      : 漏洞cvss评分小于4；对应控制台页面的低危
     * solutionDetail  **参数解释**: 解决方案 **取值范围**: 字符范围0-65534位
-    * url  **参数解释**: URL链接 **取值范围**: 字符范围0-2083位
+    * url  **参数解释**: URL链接 **取值范围**: 字符范围0-2048位
     * description  **参数解释**: 漏洞描述 **取值范围**: 字符范围0-65534位
     * repairCmd  **参数解释**: 修复命令行 **取值范围**: 字符范围1-256位
-    * status  **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复
+    * status  **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复成功 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：请重启主机再次修复
     * repairSuccessNum  **参数解释**: HSS全网修复该漏洞的次数 **取值范围**: 最小值0，最大值1000000
     * cveList  **参数解释**: CVE列表 **取值范围**: 最小值1，最大值10000
     * isAffectBusiness  **参数解释**: 是否影响业务 **取值范围**: - true  : 影响业务 - false : 不影响业务
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
-    * appName  **参数解释**: 软件名称 **取值范围**: 字符长度0-256位
-    * appVersion  **参数解释**: 软件版本 **取值范围**: 字符长度0-256位
-    * appPath  **参数解释**: 软件路径 **取值范围**: 字符长度0-512位
+    * appName  **参数解释**: 软件名称（应用漏洞、应急漏洞） **取值范围**: 字符长度0-256位
+    * appPath  **参数解释**: 应用漏洞软件路径 **取值范围**: 字符长度0-512位
     * version  **参数解释**: 主机配额 **取值范围**: 字符长度0-128位
     * supportRestore  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
     * disabledOperateTypes  **参数解释**: 该漏洞不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
     * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
+    * softwareVersion  **参数解释**: linux当前及修复软件信息 **取值范围**: 字符长度1-2048位
+    * backupName  **参数解释**: 备份名称 **取值范围**: 字符长度1-2048位
+    * failedReason  **参数解释**: 修复失败原因 **取值范围**: 字符长度1-65535位
     *
     * @var string[]
     */
@@ -255,12 +269,14 @@ class HostVulInfo implements ModelInterface, ArrayAccess
             'isAffectBusiness' => 'setIsAffectBusiness',
             'firstScanTime' => 'setFirstScanTime',
             'appName' => 'setAppName',
-            'appVersion' => 'setAppVersion',
             'appPath' => 'setAppPath',
             'version' => 'setVersion',
             'supportRestore' => 'setSupportRestore',
             'disabledOperateTypes' => 'setDisabledOperateTypes',
-            'repairPriority' => 'setRepairPriority'
+            'repairPriority' => 'setRepairPriority',
+            'softwareVersion' => 'setSoftwareVersion',
+            'backupName' => 'setBackupName',
+            'failedReason' => 'setFailedReason'
     ];
 
     /**
@@ -268,27 +284,29 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     * vulName  **参数解释**: 漏洞名称 **取值范围**: 字符范围0-256位
     * vulId  **参数解释**: 漏洞ID **取值范围**: 字符范围0-64位
     * labelList  **参数解释**: 漏洞标签列表 **取值范围**: 最小值0，最大值2147483647
-    * repairNecessity  **参数解释**: 修复紧急度 **取值范围**: - immediate_repair  : 尽快修复 - delay_repair      : 延后修复 - not_needed_repair : 暂可不修复
+    * repairNecessity  **参数解释**: 修复紧急度 **取值范围**: - Critical：漏洞cvss评分大于等于9；对应控制台页面的高危 - High：漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium：漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low：漏洞cvss评分小于4；对应控制台页面的低危
     * scanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
-    * type  **参数解释**: 漏洞类型 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞
+    * type  **参数解释**: 漏洞类型 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞
     * appList  **参数解释**: 服务器上受该漏洞影响的软件列表 **取值范围**: 最小值0，最大值2147483647
     * severityLevel  **参数解释**: 危险程度 **取值范围**: - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危 - High     : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium   : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low      : 漏洞cvss评分小于4；对应控制台页面的低危
     * solutionDetail  **参数解释**: 解决方案 **取值范围**: 字符范围0-65534位
-    * url  **参数解释**: URL链接 **取值范围**: 字符范围0-2083位
+    * url  **参数解释**: URL链接 **取值范围**: 字符范围0-2048位
     * description  **参数解释**: 漏洞描述 **取值范围**: 字符范围0-65534位
     * repairCmd  **参数解释**: 修复命令行 **取值范围**: 字符范围1-256位
-    * status  **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复
+    * status  **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复成功 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：请重启主机再次修复
     * repairSuccessNum  **参数解释**: HSS全网修复该漏洞的次数 **取值范围**: 最小值0，最大值1000000
     * cveList  **参数解释**: CVE列表 **取值范围**: 最小值1，最大值10000
     * isAffectBusiness  **参数解释**: 是否影响业务 **取值范围**: - true  : 影响业务 - false : 不影响业务
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
-    * appName  **参数解释**: 软件名称 **取值范围**: 字符长度0-256位
-    * appVersion  **参数解释**: 软件版本 **取值范围**: 字符长度0-256位
-    * appPath  **参数解释**: 软件路径 **取值范围**: 字符长度0-512位
+    * appName  **参数解释**: 软件名称（应用漏洞、应急漏洞） **取值范围**: 字符长度0-256位
+    * appPath  **参数解释**: 应用漏洞软件路径 **取值范围**: 字符长度0-512位
     * version  **参数解释**: 主机配额 **取值范围**: 字符长度0-128位
     * supportRestore  **参数解释**: 是否可以回滚到修复漏洞时创建的备份 **取值范围**: - true  : 可以回滚 - false : 不可以回滚
     * disabledOperateTypes  **参数解释**: 该漏洞不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
     * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
+    * softwareVersion  **参数解释**: linux当前及修复软件信息 **取值范围**: 字符长度1-2048位
+    * backupName  **参数解释**: 备份名称 **取值范围**: 字符长度1-2048位
+    * failedReason  **参数解释**: 修复失败原因 **取值范围**: 字符长度1-65535位
     *
     * @var string[]
     */
@@ -311,12 +329,14 @@ class HostVulInfo implements ModelInterface, ArrayAccess
             'isAffectBusiness' => 'getIsAffectBusiness',
             'firstScanTime' => 'getFirstScanTime',
             'appName' => 'getAppName',
-            'appVersion' => 'getAppVersion',
             'appPath' => 'getAppPath',
             'version' => 'getVersion',
             'supportRestore' => 'getSupportRestore',
             'disabledOperateTypes' => 'getDisabledOperateTypes',
-            'repairPriority' => 'getRepairPriority'
+            'repairPriority' => 'getRepairPriority',
+            'softwareVersion' => 'getSoftwareVersion',
+            'backupName' => 'getBackupName',
+            'failedReason' => 'getFailedReason'
     ];
 
     /**
@@ -395,12 +415,14 @@ class HostVulInfo implements ModelInterface, ArrayAccess
         $this->container['isAffectBusiness'] = isset($data['isAffectBusiness']) ? $data['isAffectBusiness'] : null;
         $this->container['firstScanTime'] = isset($data['firstScanTime']) ? $data['firstScanTime'] : null;
         $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
-        $this->container['appVersion'] = isset($data['appVersion']) ? $data['appVersion'] : null;
         $this->container['appPath'] = isset($data['appPath']) ? $data['appPath'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['supportRestore'] = isset($data['supportRestore']) ? $data['supportRestore'] : null;
         $this->container['disabledOperateTypes'] = isset($data['disabledOperateTypes']) ? $data['disabledOperateTypes'] : null;
         $this->container['repairPriority'] = isset($data['repairPriority']) ? $data['repairPriority'] : null;
+        $this->container['softwareVersion'] = isset($data['softwareVersion']) ? $data['softwareVersion'] : null;
+        $this->container['backupName'] = isset($data['backupName']) ? $data['backupName'] : null;
+        $this->container['failedReason'] = isset($data['failedReason']) ? $data['failedReason'] : null;
     }
 
     /**
@@ -453,8 +475,8 @@ class HostVulInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['solutionDetail']) && (mb_strlen($this->container['solutionDetail']) < 0)) {
                 $invalidProperties[] = "invalid value for 'solutionDetail', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['url']) && (mb_strlen($this->container['url']) > 2083)) {
-                $invalidProperties[] = "invalid value for 'url', the character length must be smaller than or equal to 2083.";
+            if (!is_null($this->container['url']) && (mb_strlen($this->container['url']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'url', the character length must be smaller than or equal to 2048.";
             }
             if (!is_null($this->container['url']) && (mb_strlen($this->container['url']) < 0)) {
                 $invalidProperties[] = "invalid value for 'url', the character length must be bigger than or equal to 0.";
@@ -495,12 +517,6 @@ class HostVulInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['appName']) && (mb_strlen($this->container['appName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'appName', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['appVersion']) && (mb_strlen($this->container['appVersion']) > 256)) {
-                $invalidProperties[] = "invalid value for 'appVersion', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['appVersion']) && (mb_strlen($this->container['appVersion']) < 0)) {
-                $invalidProperties[] = "invalid value for 'appVersion', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['appPath']) && (mb_strlen($this->container['appPath']) > 512)) {
                 $invalidProperties[] = "invalid value for 'appPath', the character length must be smaller than or equal to 512.";
             }
@@ -518,6 +534,24 @@ class HostVulInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['repairPriority']) && (mb_strlen($this->container['repairPriority']) < 1)) {
                 $invalidProperties[] = "invalid value for 'repairPriority', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['softwareVersion']) && (mb_strlen($this->container['softwareVersion']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'softwareVersion', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['softwareVersion']) && (mb_strlen($this->container['softwareVersion']) < 1)) {
+                $invalidProperties[] = "invalid value for 'softwareVersion', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['backupName']) && (mb_strlen($this->container['backupName']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'backupName', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['backupName']) && (mb_strlen($this->container['backupName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'backupName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['failedReason']) && (mb_strlen($this->container['failedReason']) > 65535)) {
+                $invalidProperties[] = "invalid value for 'failedReason', the character length must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['failedReason']) && (mb_strlen($this->container['failedReason']) < 1)) {
+                $invalidProperties[] = "invalid value for 'failedReason', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -607,7 +641,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets repairNecessity
-    *  **参数解释**: 修复紧急度 **取值范围**: - immediate_repair  : 尽快修复 - delay_repair      : 延后修复 - not_needed_repair : 暂可不修复
+    *  **参数解释**: 修复紧急度 **取值范围**: - Critical：漏洞cvss评分大于等于9；对应控制台页面的高危 - High：漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium：漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low：漏洞cvss评分小于4；对应控制台页面的低危
     *
     * @return string|null
     */
@@ -619,7 +653,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets repairNecessity
     *
-    * @param string|null $repairNecessity **参数解释**: 修复紧急度 **取值范围**: - immediate_repair  : 尽快修复 - delay_repair      : 延后修复 - not_needed_repair : 暂可不修复
+    * @param string|null $repairNecessity **参数解释**: 修复紧急度 **取值范围**: - Critical：漏洞cvss评分大于等于9；对应控制台页面的高危 - High：漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium：漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low：漏洞cvss评分小于4；对应控制台页面的低危
     *
     * @return $this
     */
@@ -655,7 +689,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**: 漏洞类型 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞
+    *  **参数解释**: 漏洞类型 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞
     *
     * @return string|null
     */
@@ -667,7 +701,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释**: 漏洞类型 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞
+    * @param string|null $type **参数解释**: 漏洞类型 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞
     *
     * @return $this
     */
@@ -751,7 +785,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets url
-    *  **参数解释**: URL链接 **取值范围**: 字符范围0-2083位
+    *  **参数解释**: URL链接 **取值范围**: 字符范围0-2048位
     *
     * @return string|null
     */
@@ -763,7 +797,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets url
     *
-    * @param string|null $url **参数解释**: URL链接 **取值范围**: 字符范围0-2083位
+    * @param string|null $url **参数解释**: URL链接 **取值范围**: 字符范围0-2048位
     *
     * @return $this
     */
@@ -823,7 +857,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复
+    *  **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复成功 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：请重启主机再次修复
     *
     * @return string|null
     */
@@ -835,7 +869,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复
+    * @param string|null $status **参数解释**: 漏洞状态 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复成功 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：请重启主机再次修复
     *
     * @return $this
     */
@@ -943,7 +977,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets appName
-    *  **参数解释**: 软件名称 **取值范围**: 字符长度0-256位
+    *  **参数解释**: 软件名称（应用漏洞、应急漏洞） **取值范围**: 字符长度0-256位
     *
     * @return string|null
     */
@@ -955,7 +989,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets appName
     *
-    * @param string|null $appName **参数解释**: 软件名称 **取值范围**: 字符长度0-256位
+    * @param string|null $appName **参数解释**: 软件名称（应用漏洞、应急漏洞） **取值范围**: 字符长度0-256位
     *
     * @return $this
     */
@@ -966,32 +1000,8 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets appVersion
-    *  **参数解释**: 软件版本 **取值范围**: 字符长度0-256位
-    *
-    * @return string|null
-    */
-    public function getAppVersion()
-    {
-        return $this->container['appVersion'];
-    }
-
-    /**
-    * Sets appVersion
-    *
-    * @param string|null $appVersion **参数解释**: 软件版本 **取值范围**: 字符长度0-256位
-    *
-    * @return $this
-    */
-    public function setAppVersion($appVersion)
-    {
-        $this->container['appVersion'] = $appVersion;
-        return $this;
-    }
-
-    /**
     * Gets appPath
-    *  **参数解释**: 软件路径 **取值范围**: 字符长度0-512位
+    *  **参数解释**: 应用漏洞软件路径 **取值范围**: 字符长度0-512位
     *
     * @return string|null
     */
@@ -1003,7 +1013,7 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets appPath
     *
-    * @param string|null $appPath **参数解释**: 软件路径 **取值范围**: 字符长度0-512位
+    * @param string|null $appPath **参数解释**: 应用漏洞软件路径 **取值范围**: 字符长度0-512位
     *
     * @return $this
     */
@@ -1106,6 +1116,78 @@ class HostVulInfo implements ModelInterface, ArrayAccess
     public function setRepairPriority($repairPriority)
     {
         $this->container['repairPriority'] = $repairPriority;
+        return $this;
+    }
+
+    /**
+    * Gets softwareVersion
+    *  **参数解释**: linux当前及修复软件信息 **取值范围**: 字符长度1-2048位
+    *
+    * @return string|null
+    */
+    public function getSoftwareVersion()
+    {
+        return $this->container['softwareVersion'];
+    }
+
+    /**
+    * Sets softwareVersion
+    *
+    * @param string|null $softwareVersion **参数解释**: linux当前及修复软件信息 **取值范围**: 字符长度1-2048位
+    *
+    * @return $this
+    */
+    public function setSoftwareVersion($softwareVersion)
+    {
+        $this->container['softwareVersion'] = $softwareVersion;
+        return $this;
+    }
+
+    /**
+    * Gets backupName
+    *  **参数解释**: 备份名称 **取值范围**: 字符长度1-2048位
+    *
+    * @return string|null
+    */
+    public function getBackupName()
+    {
+        return $this->container['backupName'];
+    }
+
+    /**
+    * Sets backupName
+    *
+    * @param string|null $backupName **参数解释**: 备份名称 **取值范围**: 字符长度1-2048位
+    *
+    * @return $this
+    */
+    public function setBackupName($backupName)
+    {
+        $this->container['backupName'] = $backupName;
+        return $this;
+    }
+
+    /**
+    * Gets failedReason
+    *  **参数解释**: 修复失败原因 **取值范围**: 字符长度1-65535位
+    *
+    * @return string|null
+    */
+    public function getFailedReason()
+    {
+        return $this->container['failedReason'];
+    }
+
+    /**
+    * Sets failedReason
+    *
+    * @param string|null $failedReason **参数解释**: 修复失败原因 **取值范围**: 字符长度1-65535位
+    *
+    * @return $this
+    */
+    public function setFailedReason($failedReason)
+    {
+        $this->container['failedReason'] = $failedReason;
         return $this;
     }
 

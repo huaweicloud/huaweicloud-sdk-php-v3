@@ -20,8 +20,8 @@ class PartitionMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  分区名称
-    * creationTimestamp  创建时间
+    * name  **参数解释**： 分区名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class PartitionMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  分区名称
-    * creationTimestamp  创建时间
+    * name  **参数解释**： 分区名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class PartitionMetadata implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  分区名称
-    * creationTimestamp  创建时间
+    * name  **参数解释**： 分区名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class PartitionMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  分区名称
-    * creationTimestamp  创建时间
+    * name  **参数解释**： 分区名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class PartitionMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  分区名称
-    * creationTimestamp  创建时间
+    * name  **参数解释**： 分区名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class PartitionMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  分区名称
+    *  **参数解释**： 分区名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class PartitionMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 分区名称
+    * @param string|null $name **参数解释**： 分区名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class PartitionMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets creationTimestamp
-    *  创建时间
+    *  **参数解释**： 创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class PartitionMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets creationTimestamp
     *
-    * @param string|null $creationTimestamp 创建时间
+    * @param string|null $creationTimestamp **参数解释**： 创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

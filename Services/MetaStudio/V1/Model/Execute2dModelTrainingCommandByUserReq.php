@@ -20,30 +20,34 @@ class Execute2dModelTrainingCommandByUserReq implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * command  命令类型。 * SUBMITVERIFYING: 提交审核 * CONFIRM_ACCEPT：用户确认训练效果 * CONFIRM_REJECT：用户驳回训练效果 * CONFIRM_ANSWER：用户答复 * CONFIRM_PENDING：用户挂起任务 * CONFIRM_ACTIVE：用户激活任务 * GET_MULTIPART_UPLOADED：获取训练视频已上传分片信息 * CONFIRM_REPAIR:用户发起优化模型请求 * CONFIRM_MULTIPART_UPLOADED：确认训练视频所有分片文件已上传 * GET_ACTION_VIDEO_MULTIPART_UPLOADED：获取动作编排视频分片上传地址 * CONFIRM_ACTION_VIDEO_MULTIPART_UPLOADED：确认动作编排视频所有分片文件已上传 > * CONFIRM_ACCEPT、CONFIRM_REJECT、CONFIRM_ANSWER、CONFIRM_PENDING、CONFIRM_ACTIVE命令仅NA白名单用户可用。
+    * command  命令类型。 * SUBMITVERIFYING: 提交审核 * CONFIRM_ACCEPT：用户确认训练效果 * CONFIRM_REJECT：用户驳回训练效果 * CONFIRM_ANSWER：用户答复 * CONFIRM_PENDING：用户挂起任务 * CONFIRM_ACTIVE：用户激活任务 * GET_MULTIPART_UPLOADED：获取训练视频已上传分片信息 * CONFIRM_REPAIR:用户发起优化模型请求 * CONFIRM_MULTIPART_UPLOADED：确认训练视频所有分片文件已上传 * GET_ACTION_VIDEO_MULTIPART_UPLOADED：获取动作编排视频分片上传地址 * CONFIRM_ACTION_VIDEO_MULTIPART_UPLOADED：确认动作编排视频所有分片文件已上传 * CONFIRM_AUTHORIZATION_LETTER：确认授权书已上传 > * CONFIRM_ACCEPT、CONFIRM_REJECT、CONFIRM_ANSWER、CONFIRM_PENDING、CONFIRM_ACTIVE命令仅NA白名单用户可用。 * DELETE_JOB_VIDEO：删除任务相关视频
     * commandMessage  命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO: 上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
     * commentData  commentData
+    * operationReason  操作原因
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'command' => 'string',
             'commandMessage' => 'string',
-            'commentData' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CommentData'
+            'commentData' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CommentData',
+            'operationReason' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * command  命令类型。 * SUBMITVERIFYING: 提交审核 * CONFIRM_ACCEPT：用户确认训练效果 * CONFIRM_REJECT：用户驳回训练效果 * CONFIRM_ANSWER：用户答复 * CONFIRM_PENDING：用户挂起任务 * CONFIRM_ACTIVE：用户激活任务 * GET_MULTIPART_UPLOADED：获取训练视频已上传分片信息 * CONFIRM_REPAIR:用户发起优化模型请求 * CONFIRM_MULTIPART_UPLOADED：确认训练视频所有分片文件已上传 * GET_ACTION_VIDEO_MULTIPART_UPLOADED：获取动作编排视频分片上传地址 * CONFIRM_ACTION_VIDEO_MULTIPART_UPLOADED：确认动作编排视频所有分片文件已上传 > * CONFIRM_ACCEPT、CONFIRM_REJECT、CONFIRM_ANSWER、CONFIRM_PENDING、CONFIRM_ACTIVE命令仅NA白名单用户可用。
+    * command  命令类型。 * SUBMITVERIFYING: 提交审核 * CONFIRM_ACCEPT：用户确认训练效果 * CONFIRM_REJECT：用户驳回训练效果 * CONFIRM_ANSWER：用户答复 * CONFIRM_PENDING：用户挂起任务 * CONFIRM_ACTIVE：用户激活任务 * GET_MULTIPART_UPLOADED：获取训练视频已上传分片信息 * CONFIRM_REPAIR:用户发起优化模型请求 * CONFIRM_MULTIPART_UPLOADED：确认训练视频所有分片文件已上传 * GET_ACTION_VIDEO_MULTIPART_UPLOADED：获取动作编排视频分片上传地址 * CONFIRM_ACTION_VIDEO_MULTIPART_UPLOADED：确认动作编排视频所有分片文件已上传 * CONFIRM_AUTHORIZATION_LETTER：确认授权书已上传 > * CONFIRM_ACCEPT、CONFIRM_REJECT、CONFIRM_ANSWER、CONFIRM_PENDING、CONFIRM_ACTIVE命令仅NA白名单用户可用。 * DELETE_JOB_VIDEO：删除任务相关视频
     * commandMessage  命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO: 上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
     * commentData  commentData
+    * operationReason  操作原因
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'command' => null,
         'commandMessage' => null,
-        'commentData' => null
+        'commentData' => null,
+        'operationReason' => null
     ];
 
     /**
@@ -69,44 +73,50 @@ class Execute2dModelTrainingCommandByUserReq implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * command  命令类型。 * SUBMITVERIFYING: 提交审核 * CONFIRM_ACCEPT：用户确认训练效果 * CONFIRM_REJECT：用户驳回训练效果 * CONFIRM_ANSWER：用户答复 * CONFIRM_PENDING：用户挂起任务 * CONFIRM_ACTIVE：用户激活任务 * GET_MULTIPART_UPLOADED：获取训练视频已上传分片信息 * CONFIRM_REPAIR:用户发起优化模型请求 * CONFIRM_MULTIPART_UPLOADED：确认训练视频所有分片文件已上传 * GET_ACTION_VIDEO_MULTIPART_UPLOADED：获取动作编排视频分片上传地址 * CONFIRM_ACTION_VIDEO_MULTIPART_UPLOADED：确认动作编排视频所有分片文件已上传 > * CONFIRM_ACCEPT、CONFIRM_REJECT、CONFIRM_ANSWER、CONFIRM_PENDING、CONFIRM_ACTIVE命令仅NA白名单用户可用。
+    * command  命令类型。 * SUBMITVERIFYING: 提交审核 * CONFIRM_ACCEPT：用户确认训练效果 * CONFIRM_REJECT：用户驳回训练效果 * CONFIRM_ANSWER：用户答复 * CONFIRM_PENDING：用户挂起任务 * CONFIRM_ACTIVE：用户激活任务 * GET_MULTIPART_UPLOADED：获取训练视频已上传分片信息 * CONFIRM_REPAIR:用户发起优化模型请求 * CONFIRM_MULTIPART_UPLOADED：确认训练视频所有分片文件已上传 * GET_ACTION_VIDEO_MULTIPART_UPLOADED：获取动作编排视频分片上传地址 * CONFIRM_ACTION_VIDEO_MULTIPART_UPLOADED：确认动作编排视频所有分片文件已上传 * CONFIRM_AUTHORIZATION_LETTER：确认授权书已上传 > * CONFIRM_ACCEPT、CONFIRM_REJECT、CONFIRM_ANSWER、CONFIRM_PENDING、CONFIRM_ACTIVE命令仅NA白名单用户可用。 * DELETE_JOB_VIDEO：删除任务相关视频
     * commandMessage  命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO: 上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
     * commentData  commentData
+    * operationReason  操作原因
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'command' => 'command',
             'commandMessage' => 'command_message',
-            'commentData' => 'comment_data'
+            'commentData' => 'comment_data',
+            'operationReason' => 'operation_reason'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * command  命令类型。 * SUBMITVERIFYING: 提交审核 * CONFIRM_ACCEPT：用户确认训练效果 * CONFIRM_REJECT：用户驳回训练效果 * CONFIRM_ANSWER：用户答复 * CONFIRM_PENDING：用户挂起任务 * CONFIRM_ACTIVE：用户激活任务 * GET_MULTIPART_UPLOADED：获取训练视频已上传分片信息 * CONFIRM_REPAIR:用户发起优化模型请求 * CONFIRM_MULTIPART_UPLOADED：确认训练视频所有分片文件已上传 * GET_ACTION_VIDEO_MULTIPART_UPLOADED：获取动作编排视频分片上传地址 * CONFIRM_ACTION_VIDEO_MULTIPART_UPLOADED：确认动作编排视频所有分片文件已上传 > * CONFIRM_ACCEPT、CONFIRM_REJECT、CONFIRM_ANSWER、CONFIRM_PENDING、CONFIRM_ACTIVE命令仅NA白名单用户可用。
+    * command  命令类型。 * SUBMITVERIFYING: 提交审核 * CONFIRM_ACCEPT：用户确认训练效果 * CONFIRM_REJECT：用户驳回训练效果 * CONFIRM_ANSWER：用户答复 * CONFIRM_PENDING：用户挂起任务 * CONFIRM_ACTIVE：用户激活任务 * GET_MULTIPART_UPLOADED：获取训练视频已上传分片信息 * CONFIRM_REPAIR:用户发起优化模型请求 * CONFIRM_MULTIPART_UPLOADED：确认训练视频所有分片文件已上传 * GET_ACTION_VIDEO_MULTIPART_UPLOADED：获取动作编排视频分片上传地址 * CONFIRM_ACTION_VIDEO_MULTIPART_UPLOADED：确认动作编排视频所有分片文件已上传 * CONFIRM_AUTHORIZATION_LETTER：确认授权书已上传 > * CONFIRM_ACCEPT、CONFIRM_REJECT、CONFIRM_ANSWER、CONFIRM_PENDING、CONFIRM_ACTIVE命令仅NA白名单用户可用。 * DELETE_JOB_VIDEO：删除任务相关视频
     * commandMessage  命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO: 上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
     * commentData  commentData
+    * operationReason  操作原因
     *
     * @var string[]
     */
     protected static $setters = [
             'command' => 'setCommand',
             'commandMessage' => 'setCommandMessage',
-            'commentData' => 'setCommentData'
+            'commentData' => 'setCommentData',
+            'operationReason' => 'setOperationReason'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * command  命令类型。 * SUBMITVERIFYING: 提交审核 * CONFIRM_ACCEPT：用户确认训练效果 * CONFIRM_REJECT：用户驳回训练效果 * CONFIRM_ANSWER：用户答复 * CONFIRM_PENDING：用户挂起任务 * CONFIRM_ACTIVE：用户激活任务 * GET_MULTIPART_UPLOADED：获取训练视频已上传分片信息 * CONFIRM_REPAIR:用户发起优化模型请求 * CONFIRM_MULTIPART_UPLOADED：确认训练视频所有分片文件已上传 * GET_ACTION_VIDEO_MULTIPART_UPLOADED：获取动作编排视频分片上传地址 * CONFIRM_ACTION_VIDEO_MULTIPART_UPLOADED：确认动作编排视频所有分片文件已上传 > * CONFIRM_ACCEPT、CONFIRM_REJECT、CONFIRM_ANSWER、CONFIRM_PENDING、CONFIRM_ACTIVE命令仅NA白名单用户可用。
+    * command  命令类型。 * SUBMITVERIFYING: 提交审核 * CONFIRM_ACCEPT：用户确认训练效果 * CONFIRM_REJECT：用户驳回训练效果 * CONFIRM_ANSWER：用户答复 * CONFIRM_PENDING：用户挂起任务 * CONFIRM_ACTIVE：用户激活任务 * GET_MULTIPART_UPLOADED：获取训练视频已上传分片信息 * CONFIRM_REPAIR:用户发起优化模型请求 * CONFIRM_MULTIPART_UPLOADED：确认训练视频所有分片文件已上传 * GET_ACTION_VIDEO_MULTIPART_UPLOADED：获取动作编排视频分片上传地址 * CONFIRM_ACTION_VIDEO_MULTIPART_UPLOADED：确认动作编排视频所有分片文件已上传 * CONFIRM_AUTHORIZATION_LETTER：确认授权书已上传 > * CONFIRM_ACCEPT、CONFIRM_REJECT、CONFIRM_ANSWER、CONFIRM_PENDING、CONFIRM_ACTIVE命令仅NA白名单用户可用。 * DELETE_JOB_VIDEO：删除任务相关视频
     * commandMessage  命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO: 上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
     * commentData  commentData
+    * operationReason  操作原因
     *
     * @var string[]
     */
     protected static $getters = [
             'command' => 'getCommand',
             'commandMessage' => 'getCommandMessage',
-            'commentData' => 'getCommentData'
+            'commentData' => 'getCommentData',
+            'operationReason' => 'getOperationReason'
     ];
 
     /**
@@ -160,6 +170,8 @@ class Execute2dModelTrainingCommandByUserReq implements ModelInterface, ArrayAcc
     const COMMAND_CONFIRM_MULTIPART_UPLOADED = 'CONFIRM_MULTIPART_UPLOADED';
     const COMMAND_GET_ACTION_VIDEO_MULTIPART_UPLOADED = 'GET_ACTION_VIDEO_MULTIPART_UPLOADED';
     const COMMAND_CONFIRM_ACTION_VIDEO_MULTIPART_UPLOADED = 'CONFIRM_ACTION_VIDEO_MULTIPART_UPLOADED';
+    const COMMAND_CONFIRM_AUTHORIZATION_LETTER = 'CONFIRM_AUTHORIZATION_LETTER';
+    const COMMAND_DELETE_JOB_VIDEO = 'DELETE_JOB_VIDEO';
     const COMMAND_MESSAGE_UPDATE_VIDEO = 'UPDATE_VIDEO';
     const COMMAND_MESSAGE_UPLOAD_VIDEO = 'UPLOAD_VIDEO';
     const COMMAND_MESSAGE_CONFIRM_ACTION_VIDEO = 'CONFIRM_ACTION_VIDEO';
@@ -185,6 +197,8 @@ class Execute2dModelTrainingCommandByUserReq implements ModelInterface, ArrayAcc
             self::COMMAND_CONFIRM_MULTIPART_UPLOADED,
             self::COMMAND_GET_ACTION_VIDEO_MULTIPART_UPLOADED,
             self::COMMAND_CONFIRM_ACTION_VIDEO_MULTIPART_UPLOADED,
+            self::COMMAND_CONFIRM_AUTHORIZATION_LETTER,
+            self::COMMAND_DELETE_JOB_VIDEO,
         ];
     }
 
@@ -222,6 +236,7 @@ class Execute2dModelTrainingCommandByUserReq implements ModelInterface, ArrayAcc
         $this->container['command'] = isset($data['command']) ? $data['command'] : null;
         $this->container['commandMessage'] = isset($data['commandMessage']) ? $data['commandMessage'] : null;
         $this->container['commentData'] = isset($data['commentData']) ? $data['commentData'] : null;
+        $this->container['operationReason'] = isset($data['operationReason']) ? $data['operationReason'] : null;
     }
 
     /**
@@ -251,6 +266,12 @@ class Execute2dModelTrainingCommandByUserReq implements ModelInterface, ArrayAcc
                 );
             }
 
+            if (!is_null($this->container['operationReason']) && (mb_strlen($this->container['operationReason']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'operationReason', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['operationReason']) && (mb_strlen($this->container['operationReason']) < 0)) {
+                $invalidProperties[] = "invalid value for 'operationReason', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -267,7 +288,7 @@ class Execute2dModelTrainingCommandByUserReq implements ModelInterface, ArrayAcc
 
     /**
     * Gets command
-    *  命令类型。 * SUBMITVERIFYING: 提交审核 * CONFIRM_ACCEPT：用户确认训练效果 * CONFIRM_REJECT：用户驳回训练效果 * CONFIRM_ANSWER：用户答复 * CONFIRM_PENDING：用户挂起任务 * CONFIRM_ACTIVE：用户激活任务 * GET_MULTIPART_UPLOADED：获取训练视频已上传分片信息 * CONFIRM_REPAIR:用户发起优化模型请求 * CONFIRM_MULTIPART_UPLOADED：确认训练视频所有分片文件已上传 * GET_ACTION_VIDEO_MULTIPART_UPLOADED：获取动作编排视频分片上传地址 * CONFIRM_ACTION_VIDEO_MULTIPART_UPLOADED：确认动作编排视频所有分片文件已上传 > * CONFIRM_ACCEPT、CONFIRM_REJECT、CONFIRM_ANSWER、CONFIRM_PENDING、CONFIRM_ACTIVE命令仅NA白名单用户可用。
+    *  命令类型。 * SUBMITVERIFYING: 提交审核 * CONFIRM_ACCEPT：用户确认训练效果 * CONFIRM_REJECT：用户驳回训练效果 * CONFIRM_ANSWER：用户答复 * CONFIRM_PENDING：用户挂起任务 * CONFIRM_ACTIVE：用户激活任务 * GET_MULTIPART_UPLOADED：获取训练视频已上传分片信息 * CONFIRM_REPAIR:用户发起优化模型请求 * CONFIRM_MULTIPART_UPLOADED：确认训练视频所有分片文件已上传 * GET_ACTION_VIDEO_MULTIPART_UPLOADED：获取动作编排视频分片上传地址 * CONFIRM_ACTION_VIDEO_MULTIPART_UPLOADED：确认动作编排视频所有分片文件已上传 * CONFIRM_AUTHORIZATION_LETTER：确认授权书已上传 > * CONFIRM_ACCEPT、CONFIRM_REJECT、CONFIRM_ANSWER、CONFIRM_PENDING、CONFIRM_ACTIVE命令仅NA白名单用户可用。 * DELETE_JOB_VIDEO：删除任务相关视频
     *
     * @return string
     */
@@ -279,7 +300,7 @@ class Execute2dModelTrainingCommandByUserReq implements ModelInterface, ArrayAcc
     /**
     * Sets command
     *
-    * @param string $command 命令类型。 * SUBMITVERIFYING: 提交审核 * CONFIRM_ACCEPT：用户确认训练效果 * CONFIRM_REJECT：用户驳回训练效果 * CONFIRM_ANSWER：用户答复 * CONFIRM_PENDING：用户挂起任务 * CONFIRM_ACTIVE：用户激活任务 * GET_MULTIPART_UPLOADED：获取训练视频已上传分片信息 * CONFIRM_REPAIR:用户发起优化模型请求 * CONFIRM_MULTIPART_UPLOADED：确认训练视频所有分片文件已上传 * GET_ACTION_VIDEO_MULTIPART_UPLOADED：获取动作编排视频分片上传地址 * CONFIRM_ACTION_VIDEO_MULTIPART_UPLOADED：确认动作编排视频所有分片文件已上传 > * CONFIRM_ACCEPT、CONFIRM_REJECT、CONFIRM_ANSWER、CONFIRM_PENDING、CONFIRM_ACTIVE命令仅NA白名单用户可用。
+    * @param string $command 命令类型。 * SUBMITVERIFYING: 提交审核 * CONFIRM_ACCEPT：用户确认训练效果 * CONFIRM_REJECT：用户驳回训练效果 * CONFIRM_ANSWER：用户答复 * CONFIRM_PENDING：用户挂起任务 * CONFIRM_ACTIVE：用户激活任务 * GET_MULTIPART_UPLOADED：获取训练视频已上传分片信息 * CONFIRM_REPAIR:用户发起优化模型请求 * CONFIRM_MULTIPART_UPLOADED：确认训练视频所有分片文件已上传 * GET_ACTION_VIDEO_MULTIPART_UPLOADED：获取动作编排视频分片上传地址 * CONFIRM_ACTION_VIDEO_MULTIPART_UPLOADED：确认动作编排视频所有分片文件已上传 * CONFIRM_AUTHORIZATION_LETTER：确认授权书已上传 > * CONFIRM_ACCEPT、CONFIRM_REJECT、CONFIRM_ANSWER、CONFIRM_PENDING、CONFIRM_ACTIVE命令仅NA白名单用户可用。 * DELETE_JOB_VIDEO：删除任务相关视频
     *
     * @return $this
     */
@@ -334,6 +355,30 @@ class Execute2dModelTrainingCommandByUserReq implements ModelInterface, ArrayAcc
     public function setCommentData($commentData)
     {
         $this->container['commentData'] = $commentData;
+        return $this;
+    }
+
+    /**
+    * Gets operationReason
+    *  操作原因
+    *
+    * @return string|null
+    */
+    public function getOperationReason()
+    {
+        return $this->container['operationReason'];
+    }
+
+    /**
+    * Sets operationReason
+    *
+    * @param string|null $operationReason 操作原因
+    *
+    * @return $this
+    */
+    public function setOperationReason($operationReason)
+    {
+        $this->container['operationReason'] = $operationReason;
         return $this;
     }
 

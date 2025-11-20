@@ -21,9 +21,9 @@ class PartitionSpec implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * hostNetwork  hostNetwork
-    * containerNetwork  分区容器子网
-    * publicBorderGroup  群组
-    * category  类别
+    * containerNetwork  **参数解释**： 分区容器子网 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * publicBorderGroup  **参数解释**： 群组，IES边缘场景为可用区ID，中心区统一为“center”。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * category  **参数解释**： 可用区分类 **约束限制**： 不涉及 **取值范围**： - Default: 中心云可用区 - IES: 专属云可用区 - HomeZone: 智能边缘云可用区  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -37,9 +37,9 @@ class PartitionSpec implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * hostNetwork  hostNetwork
-    * containerNetwork  分区容器子网
-    * publicBorderGroup  群组
-    * category  类别
+    * containerNetwork  **参数解释**： 分区容器子网 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * publicBorderGroup  **参数解释**： 群组，IES边缘场景为可用区ID，中心区统一为“center”。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * category  **参数解释**： 可用区分类 **约束限制**： 不涉及 **取值范围**： - Default: 中心云可用区 - IES: 专属云可用区 - HomeZone: 智能边缘云可用区  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -74,9 +74,9 @@ class PartitionSpec implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * hostNetwork  hostNetwork
-    * containerNetwork  分区容器子网
-    * publicBorderGroup  群组
-    * category  类别
+    * containerNetwork  **参数解释**： 分区容器子网 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * publicBorderGroup  **参数解释**： 群组，IES边缘场景为可用区ID，中心区统一为“center”。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * category  **参数解释**： 可用区分类 **约束限制**： 不涉及 **取值范围**： - Default: 中心云可用区 - IES: 专属云可用区 - HomeZone: 智能边缘云可用区  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -90,9 +90,9 @@ class PartitionSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * hostNetwork  hostNetwork
-    * containerNetwork  分区容器子网
-    * publicBorderGroup  群组
-    * category  类别
+    * containerNetwork  **参数解释**： 分区容器子网 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * publicBorderGroup  **参数解释**： 群组，IES边缘场景为可用区ID，中心区统一为“center”。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * category  **参数解释**： 可用区分类 **约束限制**： 不涉及 **取值范围**： - Default: 中心云可用区 - IES: 专属云可用区 - HomeZone: 智能边缘云可用区  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -106,9 +106,9 @@ class PartitionSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * hostNetwork  hostNetwork
-    * containerNetwork  分区容器子网
-    * publicBorderGroup  群组
-    * category  类别
+    * containerNetwork  **参数解释**： 分区容器子网 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * publicBorderGroup  **参数解释**： 群组，IES边缘场景为可用区ID，中心区统一为“center”。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * category  **参数解释**： 可用区分类 **约束限制**： 不涉及 **取值范围**： - Default: 中心云可用区 - IES: 专属云可用区 - HomeZone: 智能边缘云可用区  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -231,7 +231,7 @@ class PartitionSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerNetwork
-    *  分区容器子网
+    *  **参数解释**： 分区容器子网 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\PartitionSpecContainerNetwork[]|null
     */
@@ -243,7 +243,7 @@ class PartitionSpec implements ModelInterface, ArrayAccess
     /**
     * Sets containerNetwork
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\PartitionSpecContainerNetwork[]|null $containerNetwork 分区容器子网
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\PartitionSpecContainerNetwork[]|null $containerNetwork **参数解释**： 分区容器子网 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class PartitionSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicBorderGroup
-    *  群组
+    *  **参数解释**： 群组，IES边缘场景为可用区ID，中心区统一为“center”。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class PartitionSpec implements ModelInterface, ArrayAccess
     /**
     * Sets publicBorderGroup
     *
-    * @param string|null $publicBorderGroup 群组
+    * @param string|null $publicBorderGroup **参数解释**： 群组，IES边缘场景为可用区ID，中心区统一为“center”。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class PartitionSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  类别
+    *  **参数解释**： 可用区分类 **约束限制**： 不涉及 **取值范围**： - Default: 中心云可用区 - IES: 专属云可用区 - HomeZone: 智能边缘云可用区  **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class PartitionSpec implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string|null $category 类别
+    * @param string|null $category **参数解释**： 可用区分类 **约束限制**： 不涉及 **取值范围**： - Default: 中心云可用区 - IES: 专属云可用区 - HomeZone: 智能边缘云可用区  **默认取值**： 不涉及
     *
     * @return $this
     */

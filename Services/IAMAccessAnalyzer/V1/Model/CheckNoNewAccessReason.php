@@ -180,6 +180,9 @@ class CheckNoNewAccessReason implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['statementIndex']) && ($this->container['statementIndex'] < 0)) {
+                $invalidProperties[] = "invalid value for 'statementIndex', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 

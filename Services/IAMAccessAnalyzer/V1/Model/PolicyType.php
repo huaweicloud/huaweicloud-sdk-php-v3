@@ -13,6 +13,8 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     const IDENTITY_POLICY = 'identity_policy';
     const RESOURCE_POLICY = 'resource_policy';
     const SERVICE_CONTROL_POLICY = 'service_control_policy';
+    const RESOURCE_CONTROL_POLICY = 'resource_control_policy';
+    const NETWORK_CONTROL_POLICY = 'network_control_policy';
     
     /**
      * Gets allowable values of the enum
@@ -24,6 +26,8 @@ use HuaweiCloud\SDK\Core\SdkResponse;
             self::IDENTITY_POLICY,
             self::RESOURCE_POLICY,
             self::SERVICE_CONTROL_POLICY,
+            self::RESOURCE_CONTROL_POLICY,
+            self::NETWORK_CONTROL_POLICY,
         ];
     }
 }

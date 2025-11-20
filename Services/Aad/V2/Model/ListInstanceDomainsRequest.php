@@ -21,21 +21,29 @@ class ListInstanceDomainsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例id
+    * limit  限制条数
+    * offset  偏移量
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instanceId' => 'string'
+            'instanceId' => 'string',
+            'limit' => 'int',
+            'offset' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例id
+    * limit  限制条数
+    * offset  偏移量
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instanceId' => null
+        'instanceId' => null,
+        'limit' => 'int32',
+        'offset' => 'int32'
     ];
 
     /**
@@ -62,31 +70,43 @@ class ListInstanceDomainsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例id
+    * limit  限制条数
+    * offset  偏移量
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instanceId' => 'instance_id'
+            'instanceId' => 'instance_id',
+            'limit' => 'limit',
+            'offset' => 'offset'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例id
+    * limit  限制条数
+    * offset  偏移量
     *
     * @var string[]
     */
     protected static $setters = [
-            'instanceId' => 'setInstanceId'
+            'instanceId' => 'setInstanceId',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例id
+    * limit  限制条数
+    * offset  偏移量
     *
     * @var string[]
     */
     protected static $getters = [
-            'instanceId' => 'getInstanceId'
+            'instanceId' => 'getInstanceId',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset'
     ];
 
     /**
@@ -148,6 +168,8 @@ class ListInstanceDomainsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**
@@ -161,6 +183,15 @@ class ListInstanceDomainsRequest implements ModelInterface, ArrayAccess
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -196,6 +227,54 @@ class ListInstanceDomainsRequest implements ModelInterface, ArrayAccess
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  限制条数
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 限制条数
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  偏移量
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 偏移量
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
         return $this;
     }
 

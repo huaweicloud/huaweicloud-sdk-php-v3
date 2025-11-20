@@ -21,9 +21,9 @@ class ShowImageBaselineStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * imageWeakPwd  **参数解释**: 弱口令检测 **取值范围**: 最小值0，2147483647
-    * pwdPolicy  **参数解释**: 口令复杂度策略检测 **取值范围**: 最小值0，2147483647
-    * securityCheck  **参数解释**: 服务器配置检测 **取值范围**: 最小值0，2147483647
+    * imageWeakPwd  **参数解释**: 弱口令检测 **取值范围**: 最小值0，最大值2147483647
+    * pwdPolicy  **参数解释**: 口令复杂度策略检测 **取值范围**: 最小值0，最大值2147483647
+    * securityCheck  **参数解释**: 服务器配置检测 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ShowImageBaselineStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * imageWeakPwd  **参数解释**: 弱口令检测 **取值范围**: 最小值0，2147483647
-    * pwdPolicy  **参数解释**: 口令复杂度策略检测 **取值范围**: 最小值0，2147483647
-    * securityCheck  **参数解释**: 服务器配置检测 **取值范围**: 最小值0，2147483647
+    * imageWeakPwd  **参数解释**: 弱口令检测 **取值范围**: 最小值0，最大值2147483647
+    * pwdPolicy  **参数解释**: 口令复杂度策略检测 **取值范围**: 最小值0，最大值2147483647
+    * securityCheck  **参数解释**: 服务器配置检测 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ShowImageBaselineStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * imageWeakPwd  **参数解释**: 弱口令检测 **取值范围**: 最小值0，2147483647
-    * pwdPolicy  **参数解释**: 口令复杂度策略检测 **取值范围**: 最小值0，2147483647
-    * securityCheck  **参数解释**: 服务器配置检测 **取值范围**: 最小值0，2147483647
+    * imageWeakPwd  **参数解释**: 弱口令检测 **取值范围**: 最小值0，最大值2147483647
+    * pwdPolicy  **参数解释**: 口令复杂度策略检测 **取值范围**: 最小值0，最大值2147483647
+    * securityCheck  **参数解释**: 服务器配置检测 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ShowImageBaselineStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * imageWeakPwd  **参数解释**: 弱口令检测 **取值范围**: 最小值0，2147483647
-    * pwdPolicy  **参数解释**: 口令复杂度策略检测 **取值范围**: 最小值0，2147483647
-    * securityCheck  **参数解释**: 服务器配置检测 **取值范围**: 最小值0，2147483647
+    * imageWeakPwd  **参数解释**: 弱口令检测 **取值范围**: 最小值0，最大值2147483647
+    * pwdPolicy  **参数解释**: 口令复杂度策略检测 **取值范围**: 最小值0，最大值2147483647
+    * securityCheck  **参数解释**: 服务器配置检测 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ShowImageBaselineStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * imageWeakPwd  **参数解释**: 弱口令检测 **取值范围**: 最小值0，2147483647
-    * pwdPolicy  **参数解释**: 口令复杂度策略检测 **取值范围**: 最小值0，2147483647
-    * securityCheck  **参数解释**: 服务器配置检测 **取值范围**: 最小值0，2147483647
+    * imageWeakPwd  **参数解释**: 弱口令检测 **取值范围**: 最小值0，最大值2147483647
+    * pwdPolicy  **参数解释**: 口令复杂度策略检测 **取值范围**: 最小值0，最大值2147483647
+    * securityCheck  **参数解释**: 服务器配置检测 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class ShowImageBaselineStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageWeakPwd
-    *  **参数解释**: 弱口令检测 **取值范围**: 最小值0，2147483647
+    *  **参数解释**: 弱口令检测 **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -227,7 +227,7 @@ class ShowImageBaselineStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets imageWeakPwd
     *
-    * @param int|null $imageWeakPwd **参数解释**: 弱口令检测 **取值范围**: 最小值0，2147483647
+    * @param int|null $imageWeakPwd **参数解释**: 弱口令检测 **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -239,7 +239,7 @@ class ShowImageBaselineStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwdPolicy
-    *  **参数解释**: 口令复杂度策略检测 **取值范围**: 最小值0，2147483647
+    *  **参数解释**: 口令复杂度策略检测 **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -251,7 +251,7 @@ class ShowImageBaselineStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets pwdPolicy
     *
-    * @param int|null $pwdPolicy **参数解释**: 口令复杂度策略检测 **取值范围**: 最小值0，2147483647
+    * @param int|null $pwdPolicy **参数解释**: 口令复杂度策略检测 **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -263,7 +263,7 @@ class ShowImageBaselineStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityCheck
-    *  **参数解释**: 服务器配置检测 **取值范围**: 最小值0，2147483647
+    *  **参数解释**: 服务器配置检测 **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -275,7 +275,7 @@ class ShowImageBaselineStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets securityCheck
     *
-    * @param int|null $securityCheck **参数解释**: 服务器配置检测 **取值范围**: 最小值0，2147483647
+    * @param int|null $securityCheck **参数解释**: 服务器配置检测 **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class UntagResourceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  资源类型。
+    * resourceType  资源类型。 - analyzers：分析器
     * resourceId  资源的唯一标识符。
     * body  body
     *
@@ -34,7 +34,7 @@ class UntagResourceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  资源类型。
+    * resourceType  资源类型。 - analyzers：分析器
     * resourceId  资源的唯一标识符。
     * body  body
     *
@@ -69,7 +69,7 @@ class UntagResourceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  资源类型。
+    * resourceType  资源类型。 - analyzers：分析器
     * resourceId  资源的唯一标识符。
     * body  body
     *
@@ -83,7 +83,7 @@ class UntagResourceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  资源类型。
+    * resourceType  资源类型。 - analyzers：分析器
     * resourceId  资源的唯一标识符。
     * body  body
     *
@@ -97,7 +97,7 @@ class UntagResourceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  资源类型。
+    * resourceType  资源类型。 - analyzers：分析器
     * resourceId  资源的唯一标识符。
     * body  body
     *
@@ -232,7 +232,7 @@ class UntagResourceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  资源类型。
+    *  资源类型。 - analyzers：分析器
     *
     * @return string
     */
@@ -244,7 +244,7 @@ class UntagResourceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 资源类型。
+    * @param string $resourceType 资源类型。 - analyzers：分析器
     *
     * @return $this
     */

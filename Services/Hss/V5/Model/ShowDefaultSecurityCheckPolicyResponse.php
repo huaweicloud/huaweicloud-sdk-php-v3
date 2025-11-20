@@ -21,34 +21,22 @@ class ShowDefaultSecurityCheckPolicyResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * policyName  **参数解释**： 策略名称 **取值范围**： 字符长度1-256位
-    * policyId  **参数解释**： 策略ID **取值范围**： 字符长度0-64位
-    * content  策略详情
-    * pwdPolicyContent  pwdPolicyContent
+    * content  **参数解释**: 策略详情 **取值范围**: 最小值0，最大值10241
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'policyName' => 'string',
-            'policyId' => 'string',
-            'content' => 'string',
-            'pwdPolicyContent' => '\HuaweiCloud\SDK\Hss\V5\Model\PwdCheckTagInfo'
+            'content' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * policyName  **参数解释**： 策略名称 **取值范围**： 字符长度1-256位
-    * policyId  **参数解释**： 策略ID **取值范围**： 字符长度0-64位
-    * content  策略详情
-    * pwdPolicyContent  pwdPolicyContent
+    * content  **参数解释**: 策略详情 **取值范围**: 最小值0，最大值10241
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'policyName' => null,
-        'policyId' => null,
-        'content' => null,
-        'pwdPolicyContent' => null
+        'content' => null
     ];
 
     /**
@@ -74,50 +62,32 @@ class ShowDefaultSecurityCheckPolicyResponse implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * policyName  **参数解释**： 策略名称 **取值范围**： 字符长度1-256位
-    * policyId  **参数解释**： 策略ID **取值范围**： 字符长度0-64位
-    * content  策略详情
-    * pwdPolicyContent  pwdPolicyContent
+    * content  **参数解释**: 策略详情 **取值范围**: 最小值0，最大值10241
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'policyName' => 'policy_name',
-            'policyId' => 'policy_id',
-            'content' => 'content',
-            'pwdPolicyContent' => 'pwd_policy_content'
+            'content' => 'content'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * policyName  **参数解释**： 策略名称 **取值范围**： 字符长度1-256位
-    * policyId  **参数解释**： 策略ID **取值范围**： 字符长度0-64位
-    * content  策略详情
-    * pwdPolicyContent  pwdPolicyContent
+    * content  **参数解释**: 策略详情 **取值范围**: 最小值0，最大值10241
     *
     * @var string[]
     */
     protected static $setters = [
-            'policyName' => 'setPolicyName',
-            'policyId' => 'setPolicyId',
-            'content' => 'setContent',
-            'pwdPolicyContent' => 'setPwdPolicyContent'
+            'content' => 'setContent'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * policyName  **参数解释**： 策略名称 **取值范围**： 字符长度1-256位
-    * policyId  **参数解释**： 策略ID **取值范围**： 字符长度0-64位
-    * content  策略详情
-    * pwdPolicyContent  pwdPolicyContent
+    * content  **参数解释**: 策略详情 **取值范围**: 最小值0，最大值10241
     *
     * @var string[]
     */
     protected static $getters = [
-            'policyName' => 'getPolicyName',
-            'policyId' => 'getPolicyId',
-            'content' => 'getContent',
-            'pwdPolicyContent' => 'getPwdPolicyContent'
+            'content' => 'getContent'
     ];
 
     /**
@@ -178,10 +148,7 @@ class ShowDefaultSecurityCheckPolicyResponse implements ModelInterface, ArrayAcc
     */
     public function __construct(array $data = null)
     {
-        $this->container['policyName'] = isset($data['policyName']) ? $data['policyName'] : null;
-        $this->container['policyId'] = isset($data['policyId']) ? $data['policyId'] : null;
         $this->container['content'] = isset($data['content']) ? $data['content'] : null;
-        $this->container['pwdPolicyContent'] = isset($data['pwdPolicyContent']) ? $data['pwdPolicyContent'] : null;
     }
 
     /**
@@ -192,18 +159,6 @@ class ShowDefaultSecurityCheckPolicyResponse implements ModelInterface, ArrayAcc
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['policyName']) && (mb_strlen($this->container['policyName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'policyName', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['policyName']) && (mb_strlen($this->container['policyName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'policyName', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['policyId']) && (mb_strlen($this->container['policyId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'policyId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['policyId']) && (mb_strlen($this->container['policyId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'policyId', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['content']) && (mb_strlen($this->container['content']) > 65535)) {
                 $invalidProperties[] = "invalid value for 'content', the character length must be smaller than or equal to 65535.";
             }
@@ -225,56 +180,8 @@ class ShowDefaultSecurityCheckPolicyResponse implements ModelInterface, ArrayAcc
     }
 
     /**
-    * Gets policyName
-    *  **参数解释**： 策略名称 **取值范围**： 字符长度1-256位
-    *
-    * @return string|null
-    */
-    public function getPolicyName()
-    {
-        return $this->container['policyName'];
-    }
-
-    /**
-    * Sets policyName
-    *
-    * @param string|null $policyName **参数解释**： 策略名称 **取值范围**： 字符长度1-256位
-    *
-    * @return $this
-    */
-    public function setPolicyName($policyName)
-    {
-        $this->container['policyName'] = $policyName;
-        return $this;
-    }
-
-    /**
-    * Gets policyId
-    *  **参数解释**： 策略ID **取值范围**： 字符长度0-64位
-    *
-    * @return string|null
-    */
-    public function getPolicyId()
-    {
-        return $this->container['policyId'];
-    }
-
-    /**
-    * Sets policyId
-    *
-    * @param string|null $policyId **参数解释**： 策略ID **取值范围**： 字符长度0-64位
-    *
-    * @return $this
-    */
-    public function setPolicyId($policyId)
-    {
-        $this->container['policyId'] = $policyId;
-        return $this;
-    }
-
-    /**
     * Gets content
-    *  策略详情
+    *  **参数解释**: 策略详情 **取值范围**: 最小值0，最大值10241
     *
     * @return string|null
     */
@@ -286,37 +193,13 @@ class ShowDefaultSecurityCheckPolicyResponse implements ModelInterface, ArrayAcc
     /**
     * Sets content
     *
-    * @param string|null $content 策略详情
+    * @param string|null $content **参数解释**: 策略详情 **取值范围**: 最小值0，最大值10241
     *
     * @return $this
     */
     public function setContent($content)
     {
         $this->container['content'] = $content;
-        return $this;
-    }
-
-    /**
-    * Gets pwdPolicyContent
-    *  pwdPolicyContent
-    *
-    * @return \HuaweiCloud\SDK\Hss\V5\Model\PwdCheckTagInfo|null
-    */
-    public function getPwdPolicyContent()
-    {
-        return $this->container['pwdPolicyContent'];
-    }
-
-    /**
-    * Sets pwdPolicyContent
-    *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\PwdCheckTagInfo|null $pwdPolicyContent pwdPolicyContent
-    *
-    * @return $this
-    */
-    public function setPwdPolicyContent($pwdPolicyContent)
-    {
-        $this->container['pwdPolicyContent'] = $pwdPolicyContent;
         return $this;
     }
 

@@ -31,6 +31,8 @@ class ShowNodeResponse implements ModelInterface, ArrayAccess
     * datavolumeId  数据盘id。
     * resSubnetIp  资源子网ip。
     * systemvolumeId  系统盘id。
+    * groupId  节点所在组ID。
+    * subnetId  子网ID。
     *
     * @var string[]
     */
@@ -44,7 +46,9 @@ class ShowNodeResponse implements ModelInterface, ArrayAccess
             'subnetName' => 'string',
             'datavolumeId' => 'string',
             'resSubnetIp' => 'string',
-            'systemvolumeId' => 'string'
+            'systemvolumeId' => 'string',
+            'groupId' => 'string',
+            'subnetId' => 'string'
     ];
 
     /**
@@ -59,6 +63,8 @@ class ShowNodeResponse implements ModelInterface, ArrayAccess
     * datavolumeId  数据盘id。
     * resSubnetIp  资源子网ip。
     * systemvolumeId  系统盘id。
+    * groupId  节点所在组ID。
+    * subnetId  子网ID。
     *
     * @var string[]
     */
@@ -72,7 +78,9 @@ class ShowNodeResponse implements ModelInterface, ArrayAccess
         'subnetName' => null,
         'datavolumeId' => null,
         'resSubnetIp' => null,
-        'systemvolumeId' => null
+        'systemvolumeId' => null,
+        'groupId' => null,
+        'subnetId' => null
     ];
 
     /**
@@ -108,6 +116,8 @@ class ShowNodeResponse implements ModelInterface, ArrayAccess
     * datavolumeId  数据盘id。
     * resSubnetIp  资源子网ip。
     * systemvolumeId  系统盘id。
+    * groupId  节点所在组ID。
+    * subnetId  子网ID。
     *
     * @var string[]
     */
@@ -121,7 +131,9 @@ class ShowNodeResponse implements ModelInterface, ArrayAccess
             'subnetName' => 'subnet_name',
             'datavolumeId' => 'datavolume_id',
             'resSubnetIp' => 'res_subnet_ip',
-            'systemvolumeId' => 'systemvolume_id'
+            'systemvolumeId' => 'systemvolume_id',
+            'groupId' => 'group_id',
+            'subnetId' => 'subnet_id'
     ];
 
     /**
@@ -136,6 +148,8 @@ class ShowNodeResponse implements ModelInterface, ArrayAccess
     * datavolumeId  数据盘id。
     * resSubnetIp  资源子网ip。
     * systemvolumeId  系统盘id。
+    * groupId  节点所在组ID。
+    * subnetId  子网ID。
     *
     * @var string[]
     */
@@ -149,7 +163,9 @@ class ShowNodeResponse implements ModelInterface, ArrayAccess
             'subnetName' => 'setSubnetName',
             'datavolumeId' => 'setDatavolumeId',
             'resSubnetIp' => 'setResSubnetIp',
-            'systemvolumeId' => 'setSystemvolumeId'
+            'systemvolumeId' => 'setSystemvolumeId',
+            'groupId' => 'setGroupId',
+            'subnetId' => 'setSubnetId'
     ];
 
     /**
@@ -164,6 +180,8 @@ class ShowNodeResponse implements ModelInterface, ArrayAccess
     * datavolumeId  数据盘id。
     * resSubnetIp  资源子网ip。
     * systemvolumeId  系统盘id。
+    * groupId  节点所在组ID。
+    * subnetId  子网ID。
     *
     * @var string[]
     */
@@ -177,7 +195,9 @@ class ShowNodeResponse implements ModelInterface, ArrayAccess
             'subnetName' => 'getSubnetName',
             'datavolumeId' => 'getDatavolumeId',
             'resSubnetIp' => 'getResSubnetIp',
-            'systemvolumeId' => 'getSystemvolumeId'
+            'systemvolumeId' => 'getSystemvolumeId',
+            'groupId' => 'getGroupId',
+            'subnetId' => 'getSubnetId'
     ];
 
     /**
@@ -248,6 +268,8 @@ class ShowNodeResponse implements ModelInterface, ArrayAccess
         $this->container['datavolumeId'] = isset($data['datavolumeId']) ? $data['datavolumeId'] : null;
         $this->container['resSubnetIp'] = isset($data['resSubnetIp']) ? $data['resSubnetIp'] : null;
         $this->container['systemvolumeId'] = isset($data['systemvolumeId']) ? $data['systemvolumeId'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
+        $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
     }
 
     /**
@@ -509,6 +531,54 @@ class ShowNodeResponse implements ModelInterface, ArrayAccess
     public function setSystemvolumeId($systemvolumeId)
     {
         $this->container['systemvolumeId'] = $systemvolumeId;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  节点所在组ID。
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 节点所在组ID。
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
+        return $this;
+    }
+
+    /**
+    * Gets subnetId
+    *  子网ID。
+    *
+    * @return string|null
+    */
+    public function getSubnetId()
+    {
+        return $this->container['subnetId'];
+    }
+
+    /**
+    * Sets subnetId
+    *
+    * @param string|null $subnetId 子网ID。
+    *
+    * @return $this
+    */
+    public function setSubnetId($subnetId)
+    {
+        $this->container['subnetId'] = $subnetId;
         return $this;
     }
 

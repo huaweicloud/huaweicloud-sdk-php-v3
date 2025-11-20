@@ -49,7 +49,7 @@ class UpdateHostResponse implements ModelInterface, ArrayAccess
     * flag  flag
     * description  网站备注
     * http2Enable  是否支持http2   - true：表示支持http2   - false：表示不支持http2
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     * accessProgress  接入进度，仅用于新版console(前端)使用
     * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
@@ -119,7 +119,7 @@ class UpdateHostResponse implements ModelInterface, ArrayAccess
     * flag  flag
     * description  网站备注
     * http2Enable  是否支持http2   - true：表示支持http2   - false：表示不支持http2
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     * accessProgress  接入进度，仅用于新版console(前端)使用
     * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
@@ -210,7 +210,7 @@ class UpdateHostResponse implements ModelInterface, ArrayAccess
     * flag  flag
     * description  网站备注
     * http2Enable  是否支持http2   - true：表示支持http2   - false：表示不支持http2
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     * accessProgress  接入进度，仅用于新版console(前端)使用
     * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
@@ -280,7 +280,7 @@ class UpdateHostResponse implements ModelInterface, ArrayAccess
     * flag  flag
     * description  网站备注
     * http2Enable  是否支持http2   - true：表示支持http2   - false：表示不支持http2
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     * accessProgress  接入进度，仅用于新版console(前端)使用
     * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
@@ -350,7 +350,7 @@ class UpdateHostResponse implements ModelInterface, ArrayAccess
     * flag  flag
     * description  网站备注
     * http2Enable  是否支持http2   - true：表示支持http2   - false：表示不支持http2
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     * accessProgress  接入进度，仅用于新版console(前端)使用
     * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
@@ -1260,7 +1260,7 @@ class UpdateHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets exclusiveIp
-    *  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
+    *  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     *
     * @return bool|null
     */
@@ -1272,7 +1272,7 @@ class UpdateHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets exclusiveIp
     *
-    * @param bool|null $exclusiveIp 是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
+    * @param bool|null $exclusiveIp 是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     *
     * @return $this
     */

@@ -29,7 +29,7 @@ class ImageSensitiveInfo implements ModelInterface, ArrayAccess
     * content  **参数解释**: 敏感信息内容 **取值范围**: 字符长度0-128位
     * latestScanTime  **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值2147483647
     * handleStatus  **参数解释**: 是否已处理 **取值范围**: - unhandled：未处理。 - handled：已处理。
-    * operateAccept  **参数解释**: 操作 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
+    * operateAccept  **参数解释**: 操作类型 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
     *
     * @var string[]
     */
@@ -57,7 +57,7 @@ class ImageSensitiveInfo implements ModelInterface, ArrayAccess
     * content  **参数解释**: 敏感信息内容 **取值范围**: 字符长度0-128位
     * latestScanTime  **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值2147483647
     * handleStatus  **参数解释**: 是否已处理 **取值范围**: - unhandled：未处理。 - handled：已处理。
-    * operateAccept  **参数解释**: 操作 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
+    * operateAccept  **参数解释**: 操作类型 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class ImageSensitiveInfo implements ModelInterface, ArrayAccess
     * content  **参数解释**: 敏感信息内容 **取值范围**: 字符长度0-128位
     * latestScanTime  **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值2147483647
     * handleStatus  **参数解释**: 是否已处理 **取值范围**: - unhandled：未处理。 - handled：已处理。
-    * operateAccept  **参数解释**: 操作 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
+    * operateAccept  **参数解释**: 操作类型 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
     *
     * @var string[]
     */
@@ -134,7 +134,7 @@ class ImageSensitiveInfo implements ModelInterface, ArrayAccess
     * content  **参数解释**: 敏感信息内容 **取值范围**: 字符长度0-128位
     * latestScanTime  **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值2147483647
     * handleStatus  **参数解释**: 是否已处理 **取值范围**: - unhandled：未处理。 - handled：已处理。
-    * operateAccept  **参数解释**: 操作 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
+    * operateAccept  **参数解释**: 操作类型 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
     *
     * @var string[]
     */
@@ -162,7 +162,7 @@ class ImageSensitiveInfo implements ModelInterface, ArrayAccess
     * content  **参数解释**: 敏感信息内容 **取值范围**: 字符长度0-128位
     * latestScanTime  **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值2147483647
     * handleStatus  **参数解释**: 是否已处理 **取值范围**: - unhandled：未处理。 - handled：已处理。
-    * operateAccept  **参数解释**: 操作 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
+    * operateAccept  **参数解释**: 操作类型 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
     *
     * @var string[]
     */
@@ -549,7 +549,7 @@ class ImageSensitiveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets operateAccept
-    *  **参数解释**: 操作 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
+    *  **参数解释**: 操作类型 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
     *
     * @return string|null
     */
@@ -561,7 +561,7 @@ class ImageSensitiveInfo implements ModelInterface, ArrayAccess
     /**
     * Sets operateAccept
     *
-    * @param string|null $operateAccept **参数解释**: 操作 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
+    * @param string|null $operateAccept **参数解释**: 操作类型 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
     *
     * @return $this
     */

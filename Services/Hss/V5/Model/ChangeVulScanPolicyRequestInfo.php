@@ -20,11 +20,12 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * scanPeriod  扫描周期 - one_day : 每天 - three_day : 每三天 - one_week : 每周
-    * scanRangeType  扫描主机的范围，包含如下：   -all_host : 扫描全部主机   -specific_host : 扫描指定主机
-    * hostIds  主机ID列表；当scan_range_type的值为specific_host时必填
-    * scanVulTypes  扫描的漏洞类型列表
-    * status  扫描策略状态，包含如下：   -open : 开启   -close : 关闭
+    * scanPeriod  **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月 **默认取值**: 不涉及
+    * scanRangeType  **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机 **默认取值**: 不涉及
+    * hostIds  **参数解释**: 主机ID列表； **约束限制**: 当scan_range_type的值为specific_host时 表示扫描的主机列表 必填 **取值范围**: 最小值0，最大值20000 **默认取值**: 不涉及
+    * scanVulTypes  **参数解释**: \"扫描的漏洞类型列表\" **约束限制**: 不涉及 **取值范围**: 最小值0，最大值5 **默认取值**: 不涉及
+    * status  **参数解释**: 扫描策略状态 **约束限制**: 不涉及 **取值范围**: - open : 开启 - close : 关闭  **默认取值** : 不涉及
+    * time  time
     *
     * @var string[]
     */
@@ -33,16 +34,18 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
             'scanRangeType' => 'string',
             'hostIds' => 'string[]',
             'scanVulTypes' => 'string[]',
-            'status' => 'string'
+            'status' => 'string',
+            'time' => '\HuaweiCloud\SDK\Hss\V5\Model\ChangeVulScanPolicyRequestInfoTime'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * scanPeriod  扫描周期 - one_day : 每天 - three_day : 每三天 - one_week : 每周
-    * scanRangeType  扫描主机的范围，包含如下：   -all_host : 扫描全部主机   -specific_host : 扫描指定主机
-    * hostIds  主机ID列表；当scan_range_type的值为specific_host时必填
-    * scanVulTypes  扫描的漏洞类型列表
-    * status  扫描策略状态，包含如下：   -open : 开启   -close : 关闭
+    * scanPeriod  **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月 **默认取值**: 不涉及
+    * scanRangeType  **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机 **默认取值**: 不涉及
+    * hostIds  **参数解释**: 主机ID列表； **约束限制**: 当scan_range_type的值为specific_host时 表示扫描的主机列表 必填 **取值范围**: 最小值0，最大值20000 **默认取值**: 不涉及
+    * scanVulTypes  **参数解释**: \"扫描的漏洞类型列表\" **约束限制**: 不涉及 **取值范围**: 最小值0，最大值5 **默认取值**: 不涉及
+    * status  **参数解释**: 扫描策略状态 **约束限制**: 不涉及 **取值范围**: - open : 开启 - close : 关闭  **默认取值** : 不涉及
+    * time  time
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
         'scanRangeType' => null,
         'hostIds' => null,
         'scanVulTypes' => null,
-        'status' => null
+        'status' => null,
+        'time' => null
     ];
 
     /**
@@ -77,11 +81,12 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * scanPeriod  扫描周期 - one_day : 每天 - three_day : 每三天 - one_week : 每周
-    * scanRangeType  扫描主机的范围，包含如下：   -all_host : 扫描全部主机   -specific_host : 扫描指定主机
-    * hostIds  主机ID列表；当scan_range_type的值为specific_host时必填
-    * scanVulTypes  扫描的漏洞类型列表
-    * status  扫描策略状态，包含如下：   -open : 开启   -close : 关闭
+    * scanPeriod  **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月 **默认取值**: 不涉及
+    * scanRangeType  **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机 **默认取值**: 不涉及
+    * hostIds  **参数解释**: 主机ID列表； **约束限制**: 当scan_range_type的值为specific_host时 表示扫描的主机列表 必填 **取值范围**: 最小值0，最大值20000 **默认取值**: 不涉及
+    * scanVulTypes  **参数解释**: \"扫描的漏洞类型列表\" **约束限制**: 不涉及 **取值范围**: 最小值0，最大值5 **默认取值**: 不涉及
+    * status  **参数解释**: 扫描策略状态 **约束限制**: 不涉及 **取值范围**: - open : 开启 - close : 关闭  **默认取值** : 不涉及
+    * time  time
     *
     * @var string[]
     */
@@ -90,16 +95,18 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
             'scanRangeType' => 'scan_range_type',
             'hostIds' => 'host_ids',
             'scanVulTypes' => 'scan_vul_types',
-            'status' => 'status'
+            'status' => 'status',
+            'time' => 'time'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * scanPeriod  扫描周期 - one_day : 每天 - three_day : 每三天 - one_week : 每周
-    * scanRangeType  扫描主机的范围，包含如下：   -all_host : 扫描全部主机   -specific_host : 扫描指定主机
-    * hostIds  主机ID列表；当scan_range_type的值为specific_host时必填
-    * scanVulTypes  扫描的漏洞类型列表
-    * status  扫描策略状态，包含如下：   -open : 开启   -close : 关闭
+    * scanPeriod  **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月 **默认取值**: 不涉及
+    * scanRangeType  **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机 **默认取值**: 不涉及
+    * hostIds  **参数解释**: 主机ID列表； **约束限制**: 当scan_range_type的值为specific_host时 表示扫描的主机列表 必填 **取值范围**: 最小值0，最大值20000 **默认取值**: 不涉及
+    * scanVulTypes  **参数解释**: \"扫描的漏洞类型列表\" **约束限制**: 不涉及 **取值范围**: 最小值0，最大值5 **默认取值**: 不涉及
+    * status  **参数解释**: 扫描策略状态 **约束限制**: 不涉及 **取值范围**: - open : 开启 - close : 关闭  **默认取值** : 不涉及
+    * time  time
     *
     * @var string[]
     */
@@ -108,16 +115,18 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
             'scanRangeType' => 'setScanRangeType',
             'hostIds' => 'setHostIds',
             'scanVulTypes' => 'setScanVulTypes',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'time' => 'setTime'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * scanPeriod  扫描周期 - one_day : 每天 - three_day : 每三天 - one_week : 每周
-    * scanRangeType  扫描主机的范围，包含如下：   -all_host : 扫描全部主机   -specific_host : 扫描指定主机
-    * hostIds  主机ID列表；当scan_range_type的值为specific_host时必填
-    * scanVulTypes  扫描的漏洞类型列表
-    * status  扫描策略状态，包含如下：   -open : 开启   -close : 关闭
+    * scanPeriod  **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月 **默认取值**: 不涉及
+    * scanRangeType  **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机 **默认取值**: 不涉及
+    * hostIds  **参数解释**: 主机ID列表； **约束限制**: 当scan_range_type的值为specific_host时 表示扫描的主机列表 必填 **取值范围**: 最小值0，最大值20000 **默认取值**: 不涉及
+    * scanVulTypes  **参数解释**: \"扫描的漏洞类型列表\" **约束限制**: 不涉及 **取值范围**: 最小值0，最大值5 **默认取值**: 不涉及
+    * status  **参数解释**: 扫描策略状态 **约束限制**: 不涉及 **取值范围**: - open : 开启 - close : 关闭  **默认取值** : 不涉及
+    * time  time
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
             'scanRangeType' => 'getScanRangeType',
             'hostIds' => 'getHostIds',
             'scanVulTypes' => 'getScanVulTypes',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'time' => 'getTime'
     ];
 
     /**
@@ -192,6 +202,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
         $this->container['hostIds'] = isset($data['hostIds']) ? $data['hostIds'] : null;
         $this->container['scanVulTypes'] = isset($data['scanVulTypes']) ? $data['scanVulTypes'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['time'] = isset($data['time']) ? $data['time'] : null;
     }
 
     /**
@@ -245,7 +256,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanPeriod
-    *  扫描周期 - one_day : 每天 - three_day : 每三天 - one_week : 每周
+    *  **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月 **默认取值**: 不涉及
     *
     * @return string
     */
@@ -257,7 +268,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanPeriod
     *
-    * @param string $scanPeriod 扫描周期 - one_day : 每天 - three_day : 每三天 - one_week : 每周
+    * @param string $scanPeriod **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -269,7 +280,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanRangeType
-    *  扫描主机的范围，包含如下：   -all_host : 扫描全部主机   -specific_host : 扫描指定主机
+    *  **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机 **默认取值**: 不涉及
     *
     * @return string
     */
@@ -281,7 +292,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanRangeType
     *
-    * @param string $scanRangeType 扫描主机的范围，包含如下：   -all_host : 扫描全部主机   -specific_host : 扫描指定主机
+    * @param string $scanRangeType **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -293,7 +304,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIds
-    *  主机ID列表；当scan_range_type的值为specific_host时必填
+    *  **参数解释**: 主机ID列表； **约束限制**: 当scan_range_type的值为specific_host时 表示扫描的主机列表 必填 **取值范围**: 最小值0，最大值20000 **默认取值**: 不涉及
     *
     * @return string[]|null
     */
@@ -305,7 +316,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIds
     *
-    * @param string[]|null $hostIds 主机ID列表；当scan_range_type的值为specific_host时必填
+    * @param string[]|null $hostIds **参数解释**: 主机ID列表； **约束限制**: 当scan_range_type的值为specific_host时 表示扫描的主机列表 必填 **取值范围**: 最小值0，最大值20000 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -317,7 +328,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanVulTypes
-    *  扫描的漏洞类型列表
+    *  **参数解释**: \"扫描的漏洞类型列表\" **约束限制**: 不涉及 **取值范围**: 最小值0，最大值5 **默认取值**: 不涉及
     *
     * @return string[]|null
     */
@@ -329,7 +340,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanVulTypes
     *
-    * @param string[]|null $scanVulTypes 扫描的漏洞类型列表
+    * @param string[]|null $scanVulTypes **参数解释**: \"扫描的漏洞类型列表\" **约束限制**: 不涉及 **取值范围**: 最小值0，最大值5 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -341,7 +352,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  扫描策略状态，包含如下：   -open : 开启   -close : 关闭
+    *  **参数解释**: 扫描策略状态 **约束限制**: 不涉及 **取值范围**: - open : 开启 - close : 关闭  **默认取值** : 不涉及
     *
     * @return string
     */
@@ -353,13 +364,37 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 扫描策略状态，包含如下：   -open : 开启   -close : 关闭
+    * @param string $status **参数解释**: 扫描策略状态 **约束限制**: 不涉及 **取值范围**: - open : 开启 - close : 关闭  **默认取值** : 不涉及
     *
     * @return $this
     */
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets time
+    *  time
+    *
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\ChangeVulScanPolicyRequestInfoTime|null
+    */
+    public function getTime()
+    {
+        return $this->container['time'];
+    }
+
+    /**
+    * Sets time
+    *
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\ChangeVulScanPolicyRequestInfoTime|null $time time
+    *
+    * @return $this
+    */
+    public function setTime($time)
+    {
+        $this->container['time'] = $time;
         return $this;
     }
 

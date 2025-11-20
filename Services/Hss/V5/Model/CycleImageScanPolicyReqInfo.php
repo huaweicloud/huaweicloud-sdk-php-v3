@@ -213,30 +213,48 @@ class CycleImageScanPolicyReqInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['scanCycle']) && ($this->container['scanCycle'] > 31)) {
+        if ($this->container['enabled'] === null) {
+            $invalidProperties[] = "'enabled' can't be null";
+        }
+        if ($this->container['scanCycle'] === null) {
+            $invalidProperties[] = "'scanCycle' can't be null";
+        }
+            if (($this->container['scanCycle'] > 31)) {
                 $invalidProperties[] = "invalid value for 'scanCycle', must be smaller than or equal to 31.";
             }
-            if (!is_null($this->container['scanCycle']) && ($this->container['scanCycle'] < 0)) {
+            if (($this->container['scanCycle'] < 0)) {
                 $invalidProperties[] = "invalid value for 'scanCycle', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['scanScope']) && ($this->container['scanScope'] > 2147483547)) {
+        if ($this->container['scanScope'] === null) {
+            $invalidProperties[] = "'scanScope' can't be null";
+        }
+            if (($this->container['scanScope'] > 2147483547)) {
                 $invalidProperties[] = "invalid value for 'scanScope', must be smaller than or equal to 2147483547.";
             }
-            if (!is_null($this->container['scanScope']) && ($this->container['scanScope'] < 0)) {
+            if (($this->container['scanScope'] < 0)) {
                 $invalidProperties[] = "invalid value for 'scanScope', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['rateLimit']) && ($this->container['rateLimit'] > 1001)) {
+        if ($this->container['rateLimit'] === null) {
+            $invalidProperties[] = "'rateLimit' can't be null";
+        }
+            if (($this->container['rateLimit'] > 1001)) {
                 $invalidProperties[] = "invalid value for 'rateLimit', must be smaller than or equal to 1001.";
             }
-            if (!is_null($this->container['rateLimit']) && ($this->container['rateLimit'] < 0)) {
+            if (($this->container['rateLimit'] < 0)) {
                 $invalidProperties[] = "invalid value for 'rateLimit', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['timeScope']) && ($this->container['timeScope'] > 365)) {
+        if ($this->container['timeScope'] === null) {
+            $invalidProperties[] = "'timeScope' can't be null";
+        }
+            if (($this->container['timeScope'] > 365)) {
                 $invalidProperties[] = "invalid value for 'timeScope', must be smaller than or equal to 365.";
             }
-            if (!is_null($this->container['timeScope']) && ($this->container['timeScope'] < 0)) {
+            if (($this->container['timeScope'] < 0)) {
                 $invalidProperties[] = "invalid value for 'timeScope', must be bigger than or equal to 0.";
             }
+        if ($this->container['registryInfo'] === null) {
+            $invalidProperties[] = "'registryInfo' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -255,7 +273,7 @@ class CycleImageScanPolicyReqInfo implements ModelInterface, ArrayAccess
     * Gets enabled
     *  定时扫描策略开关
     *
-    * @return bool|null
+    * @return bool
     */
     public function getEnabled()
     {
@@ -265,7 +283,7 @@ class CycleImageScanPolicyReqInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool|null $enabled 定时扫描策略开关
+    * @param bool $enabled 定时扫描策略开关
     *
     * @return $this
     */
@@ -279,7 +297,7 @@ class CycleImageScanPolicyReqInfo implements ModelInterface, ArrayAccess
     * Gets scanCycle
     *  定时扫描周期 | 3 每三天 7 每一周 14 每两周
     *
-    * @return int|null
+    * @return int
     */
     public function getScanCycle()
     {
@@ -289,7 +307,7 @@ class CycleImageScanPolicyReqInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanCycle
     *
-    * @param int|null $scanCycle 定时扫描周期 | 3 每三天 7 每一周 14 每两周
+    * @param int $scanCycle 定时扫描周期 | 3 每三天 7 每一周 14 每两周
     *
     * @return $this
     */
@@ -303,7 +321,7 @@ class CycleImageScanPolicyReqInfo implements ModelInterface, ArrayAccess
     * Gets scanScope
     *  扫描风险类型 | 0:无 0x7fffffff:全部 0x000f0000:漏洞 0x0000f000:基线检查 0x00000f00:恶意文件 0x000000f0:敏感信息 0x0000000f:软件合规
     *
-    * @return int|null
+    * @return int
     */
     public function getScanScope()
     {
@@ -313,7 +331,7 @@ class CycleImageScanPolicyReqInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanScope
     *
-    * @param int|null $scanScope 扫描风险类型 | 0:无 0x7fffffff:全部 0x000f0000:漏洞 0x0000f000:基线检查 0x00000f00:恶意文件 0x000000f0:敏感信息 0x0000000f:软件合规
+    * @param int $scanScope 扫描风险类型 | 0:无 0x7fffffff:全部 0x000f0000:漏洞 0x0000f000:基线检查 0x00000f00:恶意文件 0x000000f0:敏感信息 0x0000000f:软件合规
     *
     * @return $this
     */
@@ -327,7 +345,7 @@ class CycleImageScanPolicyReqInfo implements ModelInterface, ArrayAccess
     * Gets rateLimit
     *  扫描限速 单位：个/h | 0 不限制
     *
-    * @return int|null
+    * @return int
     */
     public function getRateLimit()
     {
@@ -337,7 +355,7 @@ class CycleImageScanPolicyReqInfo implements ModelInterface, ArrayAccess
     /**
     * Sets rateLimit
     *
-    * @param int|null $rateLimit 扫描限速 单位：个/h | 0 不限制
+    * @param int $rateLimit 扫描限速 单位：个/h | 0 不限制
     *
     * @return $this
     */
@@ -351,7 +369,7 @@ class CycleImageScanPolicyReqInfo implements ModelInterface, ArrayAccess
     * Gets timeScope
     *  时间范围 单位：天 | 0 全部镜像 1 3 7
     *
-    * @return int|null
+    * @return int
     */
     public function getTimeScope()
     {
@@ -361,7 +379,7 @@ class CycleImageScanPolicyReqInfo implements ModelInterface, ArrayAccess
     /**
     * Sets timeScope
     *
-    * @param int|null $timeScope 时间范围 单位：天 | 0 全部镜像 1 3 7
+    * @param int $timeScope 时间范围 单位：天 | 0 全部镜像 1 3 7
     *
     * @return $this
     */
@@ -375,7 +393,7 @@ class CycleImageScanPolicyReqInfo implements ModelInterface, ArrayAccess
     * Gets registryInfo
     *  镜像仓库列表
     *
-    * @return \HuaweiCloud\SDK\Hss\V5\Model\CycleImageScanPolicyReqInfoRegistryInfo[]|null
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\CycleImageScanPolicyReqInfoRegistryInfo[]
     */
     public function getRegistryInfo()
     {
@@ -385,7 +403,7 @@ class CycleImageScanPolicyReqInfo implements ModelInterface, ArrayAccess
     /**
     * Sets registryInfo
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\CycleImageScanPolicyReqInfoRegistryInfo[]|null $registryInfo 镜像仓库列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\CycleImageScanPolicyReqInfoRegistryInfo[] $registryInfo 镜像仓库列表
     *
     * @return $this
     */

@@ -22,7 +22,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * os  **参数解释**： 操作系统。指定自定义镜像场景将以IMS镜像的实际操作系统版本为准。请选择当前集群支持的操作系统版本。[例如Huawei Cloud EulerOS 2.0、Ubuntu 22.04、EulerOS 2.9、CentOS 7.6、EulerOS 2.8。](tag:hws,hws_hk) **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * login  login
-    * name  **参数解释**： 节点名称，重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * name  **参数解释**： 节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。  **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * serverConfig  serverConfig
     * volumeConfig  volumeConfig
     * runtimeConfig  runtimeConfig
@@ -54,7 +54,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * os  **参数解释**： 操作系统。指定自定义镜像场景将以IMS镜像的实际操作系统版本为准。请选择当前集群支持的操作系统版本。[例如Huawei Cloud EulerOS 2.0、Ubuntu 22.04、EulerOS 2.9、CentOS 7.6、EulerOS 2.8。](tag:hws,hws_hk) **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * login  login
-    * name  **参数解释**： 节点名称，重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * name  **参数解释**： 节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。  **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * serverConfig  serverConfig
     * volumeConfig  volumeConfig
     * runtimeConfig  runtimeConfig
@@ -107,7 +107,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     * and the value is the original name
     * os  **参数解释**： 操作系统。指定自定义镜像场景将以IMS镜像的实际操作系统版本为准。请选择当前集群支持的操作系统版本。[例如Huawei Cloud EulerOS 2.0、Ubuntu 22.04、EulerOS 2.9、CentOS 7.6、EulerOS 2.8。](tag:hws,hws_hk) **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * login  login
-    * name  **参数解释**： 节点名称，重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * name  **参数解释**： 节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。  **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * serverConfig  serverConfig
     * volumeConfig  volumeConfig
     * runtimeConfig  runtimeConfig
@@ -139,7 +139,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * os  **参数解释**： 操作系统。指定自定义镜像场景将以IMS镜像的实际操作系统版本为准。请选择当前集群支持的操作系统版本。[例如Huawei Cloud EulerOS 2.0、Ubuntu 22.04、EulerOS 2.9、CentOS 7.6、EulerOS 2.8。](tag:hws,hws_hk) **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * login  login
-    * name  **参数解释**： 节点名称，重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * name  **参数解释**： 节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。  **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * serverConfig  serverConfig
     * volumeConfig  volumeConfig
     * runtimeConfig  runtimeConfig
@@ -171,7 +171,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * os  **参数解释**： 操作系统。指定自定义镜像场景将以IMS镜像的实际操作系统版本为准。请选择当前集群支持的操作系统版本。[例如Huawei Cloud EulerOS 2.0、Ubuntu 22.04、EulerOS 2.9、CentOS 7.6、EulerOS 2.8。](tag:hws,hws_hk) **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * login  login
-    * name  **参数解释**： 节点名称，重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * name  **参数解释**： 节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。  **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * serverConfig  serverConfig
     * volumeConfig  volumeConfig
     * runtimeConfig  runtimeConfig
@@ -369,7 +369,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  **参数解释**： 节点名称，重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *  **参数解释**： 节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。  **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位。 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -381,7 +381,7 @@ class ReinstallNodeSpec implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name **参数解释**： 节点名称，重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * @param string|null $name **参数解释**： 节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。  **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位。 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

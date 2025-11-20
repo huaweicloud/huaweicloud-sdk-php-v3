@@ -780,12 +780,12 @@ class AadAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function createAadDomainAsync($request)
+    public function createDomainAsync($request)
     {
-        return $this->createAadDomainAsyncWithHttpInfo($request);
+        return $this->createDomainAsyncWithHttpInfo($request);
     }
     
-    public function createAadDomainAsyncWithHttpInfo($request){
+    public function createDomainAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/aad/external/domains';
         $formParams = [];
@@ -829,9 +829,9 @@ class AadAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Aad\V1\Model\CreateAadDomainResponse',
+            $responseType='\HuaweiCloud\SDK\Aad\V1\Model\CreateDomainResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Aad\V1\Model\CreateAadDomainRequest',
+            $requestType='\HuaweiCloud\SDK\Aad\V1\Model\CreateDomainRequest',
             $asyncRequest = true);
     }
 
@@ -1327,6 +1327,12 @@ class AadAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1515,6 +1521,12 @@ class AadAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];

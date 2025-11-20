@@ -25,9 +25,10 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     * id  分析器的唯一标识符。
     * lastAnalyzedResource  最近分析的资源的唯一资源标识符。
     * lastResourceAnalyzedAt  最近一次分析资源的时间。
+    * lastAllAnalyzedAt  最近一次分析全量资源的时间。
     * name  分析器的名称。
     * organizationId  组织ID。
-    * status  分析器的状态。
+    * status  分析器的状态。 - active：激活 - creating：创建中 - disabled：禁用 - failed：创建失败
     * statusReason  statusReason
     * tags  自定义标签列表。
     * type  type
@@ -41,6 +42,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
             'id' => 'string',
             'lastAnalyzedResource' => 'string',
             'lastResourceAnalyzedAt' => '\DateTime',
+            'lastAllAnalyzedAt' => '\DateTime',
             'name' => 'string',
             'organizationId' => 'string',
             'status' => 'string',
@@ -57,9 +59,10 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     * id  分析器的唯一标识符。
     * lastAnalyzedResource  最近分析的资源的唯一资源标识符。
     * lastResourceAnalyzedAt  最近一次分析资源的时间。
+    * lastAllAnalyzedAt  最近一次分析全量资源的时间。
     * name  分析器的名称。
     * organizationId  组织ID。
-    * status  分析器的状态。
+    * status  分析器的状态。 - active：激活 - creating：创建中 - disabled：禁用 - failed：创建失败
     * statusReason  statusReason
     * tags  自定义标签列表。
     * type  type
@@ -73,6 +76,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
         'id' => null,
         'lastAnalyzedResource' => null,
         'lastResourceAnalyzedAt' => 'date-time',
+        'lastAllAnalyzedAt' => 'date-time',
         'name' => null,
         'organizationId' => null,
         'status' => null,
@@ -110,9 +114,10 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     * id  分析器的唯一标识符。
     * lastAnalyzedResource  最近分析的资源的唯一资源标识符。
     * lastResourceAnalyzedAt  最近一次分析资源的时间。
+    * lastAllAnalyzedAt  最近一次分析全量资源的时间。
     * name  分析器的名称。
     * organizationId  组织ID。
-    * status  分析器的状态。
+    * status  分析器的状态。 - active：激活 - creating：创建中 - disabled：禁用 - failed：创建失败
     * statusReason  statusReason
     * tags  自定义标签列表。
     * type  type
@@ -126,6 +131,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
             'id' => 'id',
             'lastAnalyzedResource' => 'last_analyzed_resource',
             'lastResourceAnalyzedAt' => 'last_resource_analyzed_at',
+            'lastAllAnalyzedAt' => 'last_all_analyzed_at',
             'name' => 'name',
             'organizationId' => 'organization_id',
             'status' => 'status',
@@ -142,9 +148,10 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     * id  分析器的唯一标识符。
     * lastAnalyzedResource  最近分析的资源的唯一资源标识符。
     * lastResourceAnalyzedAt  最近一次分析资源的时间。
+    * lastAllAnalyzedAt  最近一次分析全量资源的时间。
     * name  分析器的名称。
     * organizationId  组织ID。
-    * status  分析器的状态。
+    * status  分析器的状态。 - active：激活 - creating：创建中 - disabled：禁用 - failed：创建失败
     * statusReason  statusReason
     * tags  自定义标签列表。
     * type  type
@@ -158,6 +165,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'lastAnalyzedResource' => 'setLastAnalyzedResource',
             'lastResourceAnalyzedAt' => 'setLastResourceAnalyzedAt',
+            'lastAllAnalyzedAt' => 'setLastAllAnalyzedAt',
             'name' => 'setName',
             'organizationId' => 'setOrganizationId',
             'status' => 'setStatus',
@@ -174,9 +182,10 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     * id  分析器的唯一标识符。
     * lastAnalyzedResource  最近分析的资源的唯一资源标识符。
     * lastResourceAnalyzedAt  最近一次分析资源的时间。
+    * lastAllAnalyzedAt  最近一次分析全量资源的时间。
     * name  分析器的名称。
     * organizationId  组织ID。
-    * status  分析器的状态。
+    * status  分析器的状态。 - active：激活 - creating：创建中 - disabled：禁用 - failed：创建失败
     * statusReason  statusReason
     * tags  自定义标签列表。
     * type  type
@@ -190,6 +199,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'lastAnalyzedResource' => 'getLastAnalyzedResource',
             'lastResourceAnalyzedAt' => 'getLastResourceAnalyzedAt',
+            'lastAllAnalyzedAt' => 'getLastAllAnalyzedAt',
             'name' => 'getName',
             'organizationId' => 'getOrganizationId',
             'status' => 'getStatus',
@@ -281,6 +291,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['lastAnalyzedResource'] = isset($data['lastAnalyzedResource']) ? $data['lastAnalyzedResource'] : null;
         $this->container['lastResourceAnalyzedAt'] = isset($data['lastResourceAnalyzedAt']) ? $data['lastResourceAnalyzedAt'] : null;
+        $this->container['lastAllAnalyzedAt'] = isset($data['lastAllAnalyzedAt']) ? $data['lastAllAnalyzedAt'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['organizationId'] = isset($data['organizationId']) ? $data['organizationId'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -492,6 +503,30 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets lastAllAnalyzedAt
+    *  最近一次分析全量资源的时间。
+    *
+    * @return \DateTime|null
+    */
+    public function getLastAllAnalyzedAt()
+    {
+        return $this->container['lastAllAnalyzedAt'];
+    }
+
+    /**
+    * Sets lastAllAnalyzedAt
+    *
+    * @param \DateTime|null $lastAllAnalyzedAt 最近一次分析全量资源的时间。
+    *
+    * @return $this
+    */
+    public function setLastAllAnalyzedAt($lastAllAnalyzedAt)
+    {
+        $this->container['lastAllAnalyzedAt'] = $lastAllAnalyzedAt;
+        return $this;
+    }
+
+    /**
     * Gets name
     *  分析器的名称。
     *
@@ -541,7 +576,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  分析器的状态。
+    *  分析器的状态。 - active：激活 - creating：创建中 - disabled：禁用 - failed：创建失败
     *
     * @return string
     */
@@ -553,7 +588,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 分析器的状态。
+    * @param string $status 分析器的状态。 - active：激活 - creating：创建中 - disabled：禁用 - failed：创建失败
     *
     * @return $this
     */

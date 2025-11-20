@@ -24,11 +24,16 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * type  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞  **默认取值**: linux_vul : linux漏洞
+    * type  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞  **默认取值**: linux_vul：linux漏洞
     * vulName  **参数解释**: 漏洞名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
-    * handleStatus  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled ：未处理 - handled : 已处理  **默认取值**: 不涉及
-    * status  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复  **默认取值**: 不涉及
-    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低  **默认取值**: 不涉及
+    * vulId  **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * handleStatus  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled：未处理 - handled：已处理  **默认取值**: 不涉及
+    * status  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复成功 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：请重启主机再次修复  **默认取值**: 不涉及
+    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低  **默认取值**: 不涉及
+    * severityLevel  **参数解释**: 危险程度（风险等级） **约束限制**: 不涉及 **取值范围**: - Critical：漏洞cvss评分大于等于9；对应控制台页面的高危 - High：漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium：漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low：漏洞cvss评分小于4；对应控制台页面的低危  可用逗号连接作为多选 **默认取值**: 不涉及
+    * isAffectBusiness  **参数解释**: 是否影响业务 **约束限制**: 不涉及 **取值范围**: - true：影响业务 - false：不影响业务  **默认取值**: 不涉及
+    * labelList  **参数解释**: 漏洞标签（多个标签之间用逗号连接） **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * excludedLabelList  **参数解释**: 反选漏洞标签（多个标签之间用逗号连接） **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -39,9 +44,14 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
             'hostId' => 'string',
             'type' => 'string',
             'vulName' => 'string',
+            'vulId' => 'string',
             'handleStatus' => 'string',
             'status' => 'string',
-            'repairPriority' => 'string'
+            'repairPriority' => 'string',
+            'severityLevel' => 'string',
+            'isAffectBusiness' => 'bool',
+            'labelList' => 'string',
+            'excludedLabelList' => 'string'
     ];
 
     /**
@@ -50,11 +60,16 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * type  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞  **默认取值**: linux_vul : linux漏洞
+    * type  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞  **默认取值**: linux_vul：linux漏洞
     * vulName  **参数解释**: 漏洞名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
-    * handleStatus  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled ：未处理 - handled : 已处理  **默认取值**: 不涉及
-    * status  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复  **默认取值**: 不涉及
-    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低  **默认取值**: 不涉及
+    * vulId  **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * handleStatus  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled：未处理 - handled：已处理  **默认取值**: 不涉及
+    * status  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复成功 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：请重启主机再次修复  **默认取值**: 不涉及
+    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低  **默认取值**: 不涉及
+    * severityLevel  **参数解释**: 危险程度（风险等级） **约束限制**: 不涉及 **取值范围**: - Critical：漏洞cvss评分大于等于9；对应控制台页面的高危 - High：漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium：漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low：漏洞cvss评分小于4；对应控制台页面的低危  可用逗号连接作为多选 **默认取值**: 不涉及
+    * isAffectBusiness  **参数解释**: 是否影响业务 **约束限制**: 不涉及 **取值范围**: - true：影响业务 - false：不影响业务  **默认取值**: 不涉及
+    * labelList  **参数解释**: 漏洞标签（多个标签之间用逗号连接） **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * excludedLabelList  **参数解释**: 反选漏洞标签（多个标签之间用逗号连接） **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -65,9 +80,14 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
         'hostId' => null,
         'type' => null,
         'vulName' => null,
+        'vulId' => null,
         'handleStatus' => null,
         'status' => null,
-        'repairPriority' => null
+        'repairPriority' => null,
+        'severityLevel' => null,
+        'isAffectBusiness' => null,
+        'labelList' => null,
+        'excludedLabelList' => null
     ];
 
     /**
@@ -97,11 +117,16 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * type  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞  **默认取值**: linux_vul : linux漏洞
+    * type  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞  **默认取值**: linux_vul：linux漏洞
     * vulName  **参数解释**: 漏洞名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
-    * handleStatus  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled ：未处理 - handled : 已处理  **默认取值**: 不涉及
-    * status  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复  **默认取值**: 不涉及
-    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低  **默认取值**: 不涉及
+    * vulId  **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * handleStatus  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled：未处理 - handled：已处理  **默认取值**: 不涉及
+    * status  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复成功 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：请重启主机再次修复  **默认取值**: 不涉及
+    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低  **默认取值**: 不涉及
+    * severityLevel  **参数解释**: 危险程度（风险等级） **约束限制**: 不涉及 **取值范围**: - Critical：漏洞cvss评分大于等于9；对应控制台页面的高危 - High：漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium：漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low：漏洞cvss评分小于4；对应控制台页面的低危  可用逗号连接作为多选 **默认取值**: 不涉及
+    * isAffectBusiness  **参数解释**: 是否影响业务 **约束限制**: 不涉及 **取值范围**: - true：影响业务 - false：不影响业务  **默认取值**: 不涉及
+    * labelList  **参数解释**: 漏洞标签（多个标签之间用逗号连接） **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * excludedLabelList  **参数解释**: 反选漏洞标签（多个标签之间用逗号连接） **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -112,9 +137,14 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
             'hostId' => 'host_id',
             'type' => 'type',
             'vulName' => 'vul_name',
+            'vulId' => 'vul_id',
             'handleStatus' => 'handle_status',
             'status' => 'status',
-            'repairPriority' => 'repair_priority'
+            'repairPriority' => 'repair_priority',
+            'severityLevel' => 'severity_level',
+            'isAffectBusiness' => 'is_affect_business',
+            'labelList' => 'label_list',
+            'excludedLabelList' => 'excluded_label_list'
     ];
 
     /**
@@ -123,11 +153,16 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * type  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞  **默认取值**: linux_vul : linux漏洞
+    * type  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞  **默认取值**: linux_vul：linux漏洞
     * vulName  **参数解释**: 漏洞名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
-    * handleStatus  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled ：未处理 - handled : 已处理  **默认取值**: 不涉及
-    * status  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复  **默认取值**: 不涉及
-    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低  **默认取值**: 不涉及
+    * vulId  **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * handleStatus  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled：未处理 - handled：已处理  **默认取值**: 不涉及
+    * status  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复成功 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：请重启主机再次修复  **默认取值**: 不涉及
+    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低  **默认取值**: 不涉及
+    * severityLevel  **参数解释**: 危险程度（风险等级） **约束限制**: 不涉及 **取值范围**: - Critical：漏洞cvss评分大于等于9；对应控制台页面的高危 - High：漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium：漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low：漏洞cvss评分小于4；对应控制台页面的低危  可用逗号连接作为多选 **默认取值**: 不涉及
+    * isAffectBusiness  **参数解释**: 是否影响业务 **约束限制**: 不涉及 **取值范围**: - true：影响业务 - false：不影响业务  **默认取值**: 不涉及
+    * labelList  **参数解释**: 漏洞标签（多个标签之间用逗号连接） **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * excludedLabelList  **参数解释**: 反选漏洞标签（多个标签之间用逗号连接） **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -138,9 +173,14 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
             'hostId' => 'setHostId',
             'type' => 'setType',
             'vulName' => 'setVulName',
+            'vulId' => 'setVulId',
             'handleStatus' => 'setHandleStatus',
             'status' => 'setStatus',
-            'repairPriority' => 'setRepairPriority'
+            'repairPriority' => 'setRepairPriority',
+            'severityLevel' => 'setSeverityLevel',
+            'isAffectBusiness' => 'setIsAffectBusiness',
+            'labelList' => 'setLabelList',
+            'excludedLabelList' => 'setExcludedLabelList'
     ];
 
     /**
@@ -149,11 +189,16 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * type  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞  **默认取值**: linux_vul : linux漏洞
+    * type  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞  **默认取值**: linux_vul：linux漏洞
     * vulName  **参数解释**: 漏洞名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
-    * handleStatus  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled ：未处理 - handled : 已处理  **默认取值**: 不涉及
-    * status  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复  **默认取值**: 不涉及
-    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低  **默认取值**: 不涉及
+    * vulId  **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * handleStatus  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled：未处理 - handled：已处理  **默认取值**: 不涉及
+    * status  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复成功 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：请重启主机再次修复  **默认取值**: 不涉及
+    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低  **默认取值**: 不涉及
+    * severityLevel  **参数解释**: 危险程度（风险等级） **约束限制**: 不涉及 **取值范围**: - Critical：漏洞cvss评分大于等于9；对应控制台页面的高危 - High：漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium：漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low：漏洞cvss评分小于4；对应控制台页面的低危  可用逗号连接作为多选 **默认取值**: 不涉及
+    * isAffectBusiness  **参数解释**: 是否影响业务 **约束限制**: 不涉及 **取值范围**: - true：影响业务 - false：不影响业务  **默认取值**: 不涉及
+    * labelList  **参数解释**: 漏洞标签（多个标签之间用逗号连接） **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * excludedLabelList  **参数解释**: 反选漏洞标签（多个标签之间用逗号连接） **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -164,9 +209,14 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
             'hostId' => 'getHostId',
             'type' => 'getType',
             'vulName' => 'getVulName',
+            'vulId' => 'getVulId',
             'handleStatus' => 'getHandleStatus',
             'status' => 'getStatus',
-            'repairPriority' => 'getRepairPriority'
+            'repairPriority' => 'getRepairPriority',
+            'severityLevel' => 'getSeverityLevel',
+            'isAffectBusiness' => 'getIsAffectBusiness',
+            'labelList' => 'getLabelList',
+            'excludedLabelList' => 'getExcludedLabelList'
     ];
 
     /**
@@ -233,9 +283,14 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
         $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['vulName'] = isset($data['vulName']) ? $data['vulName'] : null;
+        $this->container['vulId'] = isset($data['vulId']) ? $data['vulId'] : null;
         $this->container['handleStatus'] = isset($data['handleStatus']) ? $data['handleStatus'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['repairPriority'] = isset($data['repairPriority']) ? $data['repairPriority'] : null;
+        $this->container['severityLevel'] = isset($data['severityLevel']) ? $data['severityLevel'] : null;
+        $this->container['isAffectBusiness'] = isset($data['isAffectBusiness']) ? $data['isAffectBusiness'] : null;
+        $this->container['labelList'] = isset($data['labelList']) ? $data['labelList'] : null;
+        $this->container['excludedLabelList'] = isset($data['excludedLabelList']) ? $data['excludedLabelList'] : null;
     }
 
     /**
@@ -297,6 +352,12 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['vulName']) && !preg_match("/^.*$/", $this->container['vulName'])) {
                 $invalidProperties[] = "invalid value for 'vulName', must be conform to the pattern /^.*$/.";
             }
+            if (!is_null($this->container['vulId']) && (mb_strlen($this->container['vulId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'vulId', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['vulId']) && (mb_strlen($this->container['vulId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'vulId', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['handleStatus']) && (mb_strlen($this->container['handleStatus']) > 32)) {
                 $invalidProperties[] = "invalid value for 'handleStatus', the character length must be smaller than or equal to 32.";
             }
@@ -323,6 +384,27 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['repairPriority']) && !preg_match("/^(Critical|High|Medium|Low)$/", $this->container['repairPriority'])) {
                 $invalidProperties[] = "invalid value for 'repairPriority', must be conform to the pattern /^(Critical|High|Medium|Low)$/.";
+            }
+            if (!is_null($this->container['severityLevel']) && (mb_strlen($this->container['severityLevel']) > 32)) {
+                $invalidProperties[] = "invalid value for 'severityLevel', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['severityLevel']) && (mb_strlen($this->container['severityLevel']) < 0)) {
+                $invalidProperties[] = "invalid value for 'severityLevel', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['severityLevel']) && !preg_match("/^.*$/", $this->container['severityLevel'])) {
+                $invalidProperties[] = "invalid value for 'severityLevel', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['labelList']) && (mb_strlen($this->container['labelList']) > 128)) {
+                $invalidProperties[] = "invalid value for 'labelList', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['labelList']) && (mb_strlen($this->container['labelList']) < 0)) {
+                $invalidProperties[] = "invalid value for 'labelList', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['excludedLabelList']) && (mb_strlen($this->container['excludedLabelList']) > 128)) {
+                $invalidProperties[] = "invalid value for 'excludedLabelList', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['excludedLabelList']) && (mb_strlen($this->container['excludedLabelList']) < 0)) {
+                $invalidProperties[] = "invalid value for 'excludedLabelList', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -436,7 +518,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞  **默认取值**: linux_vul : linux漏洞
+    *  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞  **默认取值**: linux_vul：linux漏洞
     *
     * @return string|null
     */
@@ -448,7 +530,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul   : linux漏洞 - windows_vul : windows漏洞 - web_cms     : Web-CMS漏洞 - app_vul     : 应用漏洞 - urgent_vul  : 应急漏洞  **默认取值**: linux_vul : linux漏洞
+    * @param string|null $type **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞  **默认取值**: linux_vul：linux漏洞
     *
     * @return $this
     */
@@ -483,8 +565,32 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets vulId
+    *  **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getVulId()
+    {
+        return $this->container['vulId'];
+    }
+
+    /**
+    * Sets vulId
+    *
+    * @param string|null $vulId **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setVulId($vulId)
+    {
+        $this->container['vulId'] = $vulId;
+        return $this;
+    }
+
+    /**
     * Gets handleStatus
-    *  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled ：未处理 - handled : 已处理  **默认取值**: 不涉及
+    *  **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled：未处理 - handled：已处理  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -496,7 +602,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets handleStatus
     *
-    * @param string|null $handleStatus **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled ：未处理 - handled : 已处理  **默认取值**: 不涉及
+    * @param string|null $handleStatus **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled：未处理 - handled：已处理  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -508,7 +614,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复  **默认取值**: 不涉及
+    *  **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复成功 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：请重启主机再次修复  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -520,7 +626,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix            : 未处理 - vul_status_ignored          : 已忽略 - vul_status_verified         : 验证中 - vul_status_fixing           : 修复中 - vul_status_fixed            : 修复成功 - vul_status_reboot           : 修复成功待重启 - vul_status_failed           : 修复失败 - vul_status_fix_after_reboot : 请重启主机再次修复  **默认取值**: 不涉及
+    * @param string|null $status **参数解释**: 漏洞当前的漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复成功 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：请重启主机再次修复  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -532,7 +638,7 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets repairPriority
-    *  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低  **默认取值**: 不涉及
+    *  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -544,13 +650,109 @@ class ListHostVulsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets repairPriority
     *
-    * @param string|null $repairPriority **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低  **默认取值**: 不涉及
+    * @param string|null $repairPriority **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低  **默认取值**: 不涉及
     *
     * @return $this
     */
     public function setRepairPriority($repairPriority)
     {
         $this->container['repairPriority'] = $repairPriority;
+        return $this;
+    }
+
+    /**
+    * Gets severityLevel
+    *  **参数解释**: 危险程度（风险等级） **约束限制**: 不涉及 **取值范围**: - Critical：漏洞cvss评分大于等于9；对应控制台页面的高危 - High：漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium：漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low：漏洞cvss评分小于4；对应控制台页面的低危  可用逗号连接作为多选 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getSeverityLevel()
+    {
+        return $this->container['severityLevel'];
+    }
+
+    /**
+    * Sets severityLevel
+    *
+    * @param string|null $severityLevel **参数解释**: 危险程度（风险等级） **约束限制**: 不涉及 **取值范围**: - Critical：漏洞cvss评分大于等于9；对应控制台页面的高危 - High：漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium：漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low：漏洞cvss评分小于4；对应控制台页面的低危  可用逗号连接作为多选 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setSeverityLevel($severityLevel)
+    {
+        $this->container['severityLevel'] = $severityLevel;
+        return $this;
+    }
+
+    /**
+    * Gets isAffectBusiness
+    *  **参数解释**: 是否影响业务 **约束限制**: 不涉及 **取值范围**: - true：影响业务 - false：不影响业务  **默认取值**: 不涉及
+    *
+    * @return bool|null
+    */
+    public function getIsAffectBusiness()
+    {
+        return $this->container['isAffectBusiness'];
+    }
+
+    /**
+    * Sets isAffectBusiness
+    *
+    * @param bool|null $isAffectBusiness **参数解释**: 是否影响业务 **约束限制**: 不涉及 **取值范围**: - true：影响业务 - false：不影响业务  **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setIsAffectBusiness($isAffectBusiness)
+    {
+        $this->container['isAffectBusiness'] = $isAffectBusiness;
+        return $this;
+    }
+
+    /**
+    * Gets labelList
+    *  **参数解释**: 漏洞标签（多个标签之间用逗号连接） **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getLabelList()
+    {
+        return $this->container['labelList'];
+    }
+
+    /**
+    * Sets labelList
+    *
+    * @param string|null $labelList **参数解释**: 漏洞标签（多个标签之间用逗号连接） **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setLabelList($labelList)
+    {
+        $this->container['labelList'] = $labelList;
+        return $this;
+    }
+
+    /**
+    * Gets excludedLabelList
+    *  **参数解释**: 反选漏洞标签（多个标签之间用逗号连接） **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getExcludedLabelList()
+    {
+        return $this->container['excludedLabelList'];
+    }
+
+    /**
+    * Sets excludedLabelList
+    *
+    * @param string|null $excludedLabelList **参数解释**: 反选漏洞标签（多个标签之间用逗号连接） **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setExcludedLabelList($excludedLabelList)
+    {
+        $this->container['excludedLabelList'] = $excludedLabelList;
         return $this;
     }
 

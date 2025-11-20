@@ -20,7 +20,7 @@ class StatusReason implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * code  分析器当前状态的原因。
+    * code  分析器当前状态的原因。 - delegated_administrator_deregistered：委托管理员未注册 - trusted_service_disabled：可信服务未开启 - internal_error：内部错误 - organization_deleted：组织已删除 - service_linked_agency_creation_failed：服务关联委托创建失败
     * details  分析器当前状态的详细原因。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class StatusReason implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * code  分析器当前状态的原因。
+    * code  分析器当前状态的原因。 - delegated_administrator_deregistered：委托管理员未注册 - trusted_service_disabled：可信服务未开启 - internal_error：内部错误 - organization_deleted：组织已删除 - service_linked_agency_creation_failed：服务关联委托创建失败
     * details  分析器当前状态的详细原因。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class StatusReason implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * code  分析器当前状态的原因。
+    * code  分析器当前状态的原因。 - delegated_administrator_deregistered：委托管理员未注册 - trusted_service_disabled：可信服务未开启 - internal_error：内部错误 - organization_deleted：组织已删除 - service_linked_agency_creation_failed：服务关联委托创建失败
     * details  分析器当前状态的详细原因。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class StatusReason implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * code  分析器当前状态的原因。
+    * code  分析器当前状态的原因。 - delegated_administrator_deregistered：委托管理员未注册 - trusted_service_disabled：可信服务未开启 - internal_error：内部错误 - organization_deleted：组织已删除 - service_linked_agency_creation_failed：服务关联委托创建失败
     * details  分析器当前状态的详细原因。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class StatusReason implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * code  分析器当前状态的原因。
+    * code  分析器当前状态的原因。 - delegated_administrator_deregistered：委托管理员未注册 - trusted_service_disabled：可信服务未开启 - internal_error：内部错误 - organization_deleted：组织已删除 - service_linked_agency_creation_failed：服务关联委托创建失败
     * details  分析器当前状态的详细原因。
     *
     * @var string[]
@@ -217,7 +217,7 @@ class StatusReason implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
-    *  分析器当前状态的原因。
+    *  分析器当前状态的原因。 - delegated_administrator_deregistered：委托管理员未注册 - trusted_service_disabled：可信服务未开启 - internal_error：内部错误 - organization_deleted：组织已删除 - service_linked_agency_creation_failed：服务关联委托创建失败
     *
     * @return string
     */
@@ -229,7 +229,7 @@ class StatusReason implements ModelInterface, ArrayAccess
     /**
     * Sets code
     *
-    * @param string $code 分析器当前状态的原因。
+    * @param string $code 分析器当前状态的原因。 - delegated_administrator_deregistered：委托管理员未注册 - trusted_service_disabled：可信服务未开启 - internal_error：内部错误 - organization_deleted：组织已删除 - service_linked_agency_creation_failed：服务关联委托创建失败
     *
     * @return $this
     */

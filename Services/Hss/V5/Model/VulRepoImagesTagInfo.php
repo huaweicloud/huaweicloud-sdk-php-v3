@@ -22,7 +22,7 @@ class VulRepoImagesTagInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * tagId  **参数解释**: 版本id **取值范围**: 字符长度0-65535位
     * tagName  **参数解释**: 版本名称 **取值范围**: 字符长度0-65535位
-    * size  **参数解释**: \"版本大小\" **取值范围**: 最小值0，最大值2147483547
+    * size  **参数解释**: 版本大小 **取值范围**: 最小值0，最大值2147483547
     * appName  **参数解释**: 版本app名称 **取值范围**: 字符长度0-65535位
     *
     * @var string[]
@@ -38,7 +38,7 @@ class VulRepoImagesTagInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * tagId  **参数解释**: 版本id **取值范围**: 字符长度0-65535位
     * tagName  **参数解释**: 版本名称 **取值范围**: 字符长度0-65535位
-    * size  **参数解释**: \"版本大小\" **取值范围**: 最小值0，最大值2147483547
+    * size  **参数解释**: 版本大小 **取值范围**: 最小值0，最大值2147483547
     * appName  **参数解释**: 版本app名称 **取值范围**: 字符长度0-65535位
     *
     * @var string[]
@@ -75,7 +75,7 @@ class VulRepoImagesTagInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * tagId  **参数解释**: 版本id **取值范围**: 字符长度0-65535位
     * tagName  **参数解释**: 版本名称 **取值范围**: 字符长度0-65535位
-    * size  **参数解释**: \"版本大小\" **取值范围**: 最小值0，最大值2147483547
+    * size  **参数解释**: 版本大小 **取值范围**: 最小值0，最大值2147483547
     * appName  **参数解释**: 版本app名称 **取值范围**: 字符长度0-65535位
     *
     * @var string[]
@@ -91,7 +91,7 @@ class VulRepoImagesTagInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * tagId  **参数解释**: 版本id **取值范围**: 字符长度0-65535位
     * tagName  **参数解释**: 版本名称 **取值范围**: 字符长度0-65535位
-    * size  **参数解释**: \"版本大小\" **取值范围**: 最小值0，最大值2147483547
+    * size  **参数解释**: 版本大小 **取值范围**: 最小值0，最大值2147483547
     * appName  **参数解释**: 版本app名称 **取值范围**: 字符长度0-65535位
     *
     * @var string[]
@@ -107,7 +107,7 @@ class VulRepoImagesTagInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * tagId  **参数解释**: 版本id **取值范围**: 字符长度0-65535位
     * tagName  **参数解释**: 版本名称 **取值范围**: 字符长度0-65535位
-    * size  **参数解释**: \"版本大小\" **取值范围**: 最小值0，最大值2147483547
+    * size  **参数解释**: 版本大小 **取值范围**: 最小值0，最大值2147483547
     * appName  **参数解释**: 版本app名称 **取值范围**: 字符长度0-65535位
     *
     * @var string[]
@@ -279,7 +279,7 @@ class VulRepoImagesTagInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  **参数解释**: \"版本大小\" **取值范围**: 最小值0，最大值2147483547
+    *  **参数解释**: 版本大小 **取值范围**: 最小值0，最大值2147483547
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class VulRepoImagesTagInfo implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size **参数解释**: \"版本大小\" **取值范围**: 最小值0，最大值2147483547
+    * @param int|null $size **参数解释**: 版本大小 **取值范围**: 最小值0，最大值2147483547
     *
     * @return $this
     */

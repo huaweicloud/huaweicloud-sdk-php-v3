@@ -28,11 +28,11 @@ class ListCheckRuleHostRequest implements ModelInterface, ArrayAccess
     * checkType  **参数解释** 配置检查（基线）的类型，如SSH、CentOS 7、Windows，通过检查项维度查询时，传check_type **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
     * standard  **参数解释** 基线分类 **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard：通用安全标准  **默认取值** 不涉及
     * resultType  **参数解释** 检测结果类型 **约束限制** 不涉及 **取值范围** - safe             : 已通过 - unhandled        : 未处理 - ignored          : 已忽略 - fixing           : 修复中 - fix-failed       : 修复失败 - verifying        : 验证中 - add_to_whitelist : 已加白  **默认取值** 不涉及
-    * hostType  **参数解释** 检测结果类型 **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
-    * checkCce  **参数解释** 是否校验cce **约束限制** 不涉及 **取值范围** - true  : 校验cce - false : 不校验cce  **默认取值** false
     * clusterId  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
-    * policyGroupId  **参数解释** 策略组ID，不赋值时，查此检查项租户所有主机，host_id存在时，此值无效 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
     * hostName  **参数解释** 主机名称或ip **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
+    * hostType  **参数解释** 主机类型，已废弃 **约束限制** 不涉及 **取值范围** - cce **默认取值** 不涉及
+    * checkCce  **参数解释**: 是否只筛选cce主机，已废弃 **约束限制**: 不涉及 **取值范围**: -true：是。 -false：否。 **默认取值**: false
+    * policyGroupId  **参数解释** 策略组ID，已废弃 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -45,11 +45,11 @@ class ListCheckRuleHostRequest implements ModelInterface, ArrayAccess
             'checkType' => 'string',
             'standard' => 'string',
             'resultType' => 'string',
+            'clusterId' => 'string',
+            'hostName' => 'string',
             'hostType' => 'string',
             'checkCce' => 'bool',
-            'clusterId' => 'string',
-            'policyGroupId' => 'string',
-            'hostName' => 'string'
+            'policyGroupId' => 'string'
     ];
 
     /**
@@ -62,11 +62,11 @@ class ListCheckRuleHostRequest implements ModelInterface, ArrayAccess
     * checkType  **参数解释** 配置检查（基线）的类型，如SSH、CentOS 7、Windows，通过检查项维度查询时，传check_type **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
     * standard  **参数解释** 基线分类 **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard：通用安全标准  **默认取值** 不涉及
     * resultType  **参数解释** 检测结果类型 **约束限制** 不涉及 **取值范围** - safe             : 已通过 - unhandled        : 未处理 - ignored          : 已忽略 - fixing           : 修复中 - fix-failed       : 修复失败 - verifying        : 验证中 - add_to_whitelist : 已加白  **默认取值** 不涉及
-    * hostType  **参数解释** 检测结果类型 **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
-    * checkCce  **参数解释** 是否校验cce **约束限制** 不涉及 **取值范围** - true  : 校验cce - false : 不校验cce  **默认取值** false
     * clusterId  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
-    * policyGroupId  **参数解释** 策略组ID，不赋值时，查此检查项租户所有主机，host_id存在时，此值无效 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
     * hostName  **参数解释** 主机名称或ip **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
+    * hostType  **参数解释** 主机类型，已废弃 **约束限制** 不涉及 **取值范围** - cce **默认取值** 不涉及
+    * checkCce  **参数解释**: 是否只筛选cce主机，已废弃 **约束限制**: 不涉及 **取值范围**: -true：是。 -false：否。 **默认取值**: false
+    * policyGroupId  **参数解释** 策略组ID，已废弃 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -79,11 +79,11 @@ class ListCheckRuleHostRequest implements ModelInterface, ArrayAccess
         'checkType' => null,
         'standard' => null,
         'resultType' => null,
+        'clusterId' => null,
+        'hostName' => null,
         'hostType' => null,
         'checkCce' => null,
-        'clusterId' => null,
-        'policyGroupId' => null,
-        'hostName' => null
+        'policyGroupId' => null
     ];
 
     /**
@@ -117,11 +117,11 @@ class ListCheckRuleHostRequest implements ModelInterface, ArrayAccess
     * checkType  **参数解释** 配置检查（基线）的类型，如SSH、CentOS 7、Windows，通过检查项维度查询时，传check_type **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
     * standard  **参数解释** 基线分类 **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard：通用安全标准  **默认取值** 不涉及
     * resultType  **参数解释** 检测结果类型 **约束限制** 不涉及 **取值范围** - safe             : 已通过 - unhandled        : 未处理 - ignored          : 已忽略 - fixing           : 修复中 - fix-failed       : 修复失败 - verifying        : 验证中 - add_to_whitelist : 已加白  **默认取值** 不涉及
-    * hostType  **参数解释** 检测结果类型 **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
-    * checkCce  **参数解释** 是否校验cce **约束限制** 不涉及 **取值范围** - true  : 校验cce - false : 不校验cce  **默认取值** false
     * clusterId  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
-    * policyGroupId  **参数解释** 策略组ID，不赋值时，查此检查项租户所有主机，host_id存在时，此值无效 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
     * hostName  **参数解释** 主机名称或ip **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
+    * hostType  **参数解释** 主机类型，已废弃 **约束限制** 不涉及 **取值范围** - cce **默认取值** 不涉及
+    * checkCce  **参数解释**: 是否只筛选cce主机，已废弃 **约束限制**: 不涉及 **取值范围**: -true：是。 -false：否。 **默认取值**: false
+    * policyGroupId  **参数解释** 策略组ID，已废弃 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -134,11 +134,11 @@ class ListCheckRuleHostRequest implements ModelInterface, ArrayAccess
             'checkType' => 'check_type',
             'standard' => 'standard',
             'resultType' => 'result_type',
+            'clusterId' => 'cluster_id',
+            'hostName' => 'host_name',
             'hostType' => 'host_type',
             'checkCce' => 'check_cce',
-            'clusterId' => 'cluster_id',
-            'policyGroupId' => 'policy_group_id',
-            'hostName' => 'host_name'
+            'policyGroupId' => 'policy_group_id'
     ];
 
     /**
@@ -151,11 +151,11 @@ class ListCheckRuleHostRequest implements ModelInterface, ArrayAccess
     * checkType  **参数解释** 配置检查（基线）的类型，如SSH、CentOS 7、Windows，通过检查项维度查询时，传check_type **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
     * standard  **参数解释** 基线分类 **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard：通用安全标准  **默认取值** 不涉及
     * resultType  **参数解释** 检测结果类型 **约束限制** 不涉及 **取值范围** - safe             : 已通过 - unhandled        : 未处理 - ignored          : 已忽略 - fixing           : 修复中 - fix-failed       : 修复失败 - verifying        : 验证中 - add_to_whitelist : 已加白  **默认取值** 不涉及
-    * hostType  **参数解释** 检测结果类型 **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
-    * checkCce  **参数解释** 是否校验cce **约束限制** 不涉及 **取值范围** - true  : 校验cce - false : 不校验cce  **默认取值** false
     * clusterId  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
-    * policyGroupId  **参数解释** 策略组ID，不赋值时，查此检查项租户所有主机，host_id存在时，此值无效 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
     * hostName  **参数解释** 主机名称或ip **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
+    * hostType  **参数解释** 主机类型，已废弃 **约束限制** 不涉及 **取值范围** - cce **默认取值** 不涉及
+    * checkCce  **参数解释**: 是否只筛选cce主机，已废弃 **约束限制**: 不涉及 **取值范围**: -true：是。 -false：否。 **默认取值**: false
+    * policyGroupId  **参数解释** 策略组ID，已废弃 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -168,11 +168,11 @@ class ListCheckRuleHostRequest implements ModelInterface, ArrayAccess
             'checkType' => 'setCheckType',
             'standard' => 'setStandard',
             'resultType' => 'setResultType',
+            'clusterId' => 'setClusterId',
+            'hostName' => 'setHostName',
             'hostType' => 'setHostType',
             'checkCce' => 'setCheckCce',
-            'clusterId' => 'setClusterId',
-            'policyGroupId' => 'setPolicyGroupId',
-            'hostName' => 'setHostName'
+            'policyGroupId' => 'setPolicyGroupId'
     ];
 
     /**
@@ -185,11 +185,11 @@ class ListCheckRuleHostRequest implements ModelInterface, ArrayAccess
     * checkType  **参数解释** 配置检查（基线）的类型，如SSH、CentOS 7、Windows，通过检查项维度查询时，传check_type **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
     * standard  **参数解释** 基线分类 **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard：通用安全标准  **默认取值** 不涉及
     * resultType  **参数解释** 检测结果类型 **约束限制** 不涉及 **取值范围** - safe             : 已通过 - unhandled        : 未处理 - ignored          : 已忽略 - fixing           : 修复中 - fix-failed       : 修复失败 - verifying        : 验证中 - add_to_whitelist : 已加白  **默认取值** 不涉及
-    * hostType  **参数解释** 检测结果类型 **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
-    * checkCce  **参数解释** 是否校验cce **约束限制** 不涉及 **取值范围** - true  : 校验cce - false : 不校验cce  **默认取值** false
     * clusterId  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
-    * policyGroupId  **参数解释** 策略组ID，不赋值时，查此检查项租户所有主机，host_id存在时，此值无效 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
     * hostName  **参数解释** 主机名称或ip **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
+    * hostType  **参数解释** 主机类型，已废弃 **约束限制** 不涉及 **取值范围** - cce **默认取值** 不涉及
+    * checkCce  **参数解释**: 是否只筛选cce主机，已废弃 **约束限制**: 不涉及 **取值范围**: -true：是。 -false：否。 **默认取值**: false
+    * policyGroupId  **参数解释** 策略组ID，已废弃 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -202,11 +202,11 @@ class ListCheckRuleHostRequest implements ModelInterface, ArrayAccess
             'checkType' => 'getCheckType',
             'standard' => 'getStandard',
             'resultType' => 'getResultType',
+            'clusterId' => 'getClusterId',
+            'hostName' => 'getHostName',
             'hostType' => 'getHostType',
             'checkCce' => 'getCheckCce',
-            'clusterId' => 'getClusterId',
-            'policyGroupId' => 'getPolicyGroupId',
-            'hostName' => 'getHostName'
+            'policyGroupId' => 'getPolicyGroupId'
     ];
 
     /**
@@ -275,11 +275,11 @@ class ListCheckRuleHostRequest implements ModelInterface, ArrayAccess
         $this->container['checkType'] = isset($data['checkType']) ? $data['checkType'] : null;
         $this->container['standard'] = isset($data['standard']) ? $data['standard'] : null;
         $this->container['resultType'] = isset($data['resultType']) ? $data['resultType'] : null;
+        $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
+        $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
         $this->container['hostType'] = isset($data['hostType']) ? $data['hostType'] : null;
         $this->container['checkCce'] = isset($data['checkCce']) ? $data['checkCce'] : null;
-        $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['policyGroupId'] = isset($data['policyGroupId']) ? $data['policyGroupId'] : null;
-        $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
     }
 
     /**
@@ -359,12 +359,6 @@ class ListCheckRuleHostRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['resultType']) && !preg_match("/^(safe|unhandled|ignored|fixing|fix-failed|verifying|add_to_whitelist)$/", $this->container['resultType'])) {
                 $invalidProperties[] = "invalid value for 'resultType', must be conform to the pattern /^(safe|unhandled|ignored|fixing|fix-failed|verifying|add_to_whitelist)$/.";
             }
-            if (!is_null($this->container['hostType']) && (mb_strlen($this->container['hostType']) > 32)) {
-                $invalidProperties[] = "invalid value for 'hostType', the character length must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['hostType']) && (mb_strlen($this->container['hostType']) < 0)) {
-                $invalidProperties[] = "invalid value for 'hostType', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['clusterId']) && (mb_strlen($this->container['clusterId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'clusterId', the character length must be smaller than or equal to 64.";
             }
@@ -374,6 +368,18 @@ class ListCheckRuleHostRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['clusterId']) && !preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['clusterId'])) {
                 $invalidProperties[] = "invalid value for 'clusterId', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
             }
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['hostType']) && (mb_strlen($this->container['hostType']) > 256)) {
+                $invalidProperties[] = "invalid value for 'hostType', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['hostType']) && (mb_strlen($this->container['hostType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'hostType', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['policyGroupId']) && (mb_strlen($this->container['policyGroupId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'policyGroupId', the character length must be smaller than or equal to 128.";
             }
@@ -382,12 +388,6 @@ class ListCheckRuleHostRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['policyGroupId']) && !preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['policyGroupId'])) {
                 $invalidProperties[] = "invalid value for 'policyGroupId', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
-            }
-            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -596,54 +596,6 @@ class ListCheckRuleHostRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets hostType
-    *  **参数解释** 检测结果类型 **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
-    *
-    * @return string|null
-    */
-    public function getHostType()
-    {
-        return $this->container['hostType'];
-    }
-
-    /**
-    * Sets hostType
-    *
-    * @param string|null $hostType **参数解释** 检测结果类型 **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
-    *
-    * @return $this
-    */
-    public function setHostType($hostType)
-    {
-        $this->container['hostType'] = $hostType;
-        return $this;
-    }
-
-    /**
-    * Gets checkCce
-    *  **参数解释** 是否校验cce **约束限制** 不涉及 **取值范围** - true  : 校验cce - false : 不校验cce  **默认取值** false
-    *
-    * @return bool|null
-    */
-    public function getCheckCce()
-    {
-        return $this->container['checkCce'];
-    }
-
-    /**
-    * Sets checkCce
-    *
-    * @param bool|null $checkCce **参数解释** 是否校验cce **约束限制** 不涉及 **取值范围** - true  : 校验cce - false : 不校验cce  **默认取值** false
-    *
-    * @return $this
-    */
-    public function setCheckCce($checkCce)
-    {
-        $this->container['checkCce'] = $checkCce;
-        return $this;
-    }
-
-    /**
     * Gets clusterId
     *  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
     *
@@ -668,30 +620,6 @@ class ListCheckRuleHostRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets policyGroupId
-    *  **参数解释** 策略组ID，不赋值时，查此检查项租户所有主机，host_id存在时，此值无效 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
-    *
-    * @return string|null
-    */
-    public function getPolicyGroupId()
-    {
-        return $this->container['policyGroupId'];
-    }
-
-    /**
-    * Sets policyGroupId
-    *
-    * @param string|null $policyGroupId **参数解释** 策略组ID，不赋值时，查此检查项租户所有主机，host_id存在时，此值无效 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
-    *
-    * @return $this
-    */
-    public function setPolicyGroupId($policyGroupId)
-    {
-        $this->container['policyGroupId'] = $policyGroupId;
-        return $this;
-    }
-
-    /**
     * Gets hostName
     *  **参数解释** 主机名称或ip **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
     *
@@ -712,6 +640,78 @@ class ListCheckRuleHostRequest implements ModelInterface, ArrayAccess
     public function setHostName($hostName)
     {
         $this->container['hostName'] = $hostName;
+        return $this;
+    }
+
+    /**
+    * Gets hostType
+    *  **参数解释** 主机类型，已废弃 **约束限制** 不涉及 **取值范围** - cce **默认取值** 不涉及
+    *
+    * @return string|null
+    */
+    public function getHostType()
+    {
+        return $this->container['hostType'];
+    }
+
+    /**
+    * Sets hostType
+    *
+    * @param string|null $hostType **参数解释** 主机类型，已废弃 **约束限制** 不涉及 **取值范围** - cce **默认取值** 不涉及
+    *
+    * @return $this
+    */
+    public function setHostType($hostType)
+    {
+        $this->container['hostType'] = $hostType;
+        return $this;
+    }
+
+    /**
+    * Gets checkCce
+    *  **参数解释**: 是否只筛选cce主机，已废弃 **约束限制**: 不涉及 **取值范围**: -true：是。 -false：否。 **默认取值**: false
+    *
+    * @return bool|null
+    */
+    public function getCheckCce()
+    {
+        return $this->container['checkCce'];
+    }
+
+    /**
+    * Sets checkCce
+    *
+    * @param bool|null $checkCce **参数解释**: 是否只筛选cce主机，已废弃 **约束限制**: 不涉及 **取值范围**: -true：是。 -false：否。 **默认取值**: false
+    *
+    * @return $this
+    */
+    public function setCheckCce($checkCce)
+    {
+        $this->container['checkCce'] = $checkCce;
+        return $this;
+    }
+
+    /**
+    * Gets policyGroupId
+    *  **参数解释** 策略组ID，已废弃 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
+    *
+    * @return string|null
+    */
+    public function getPolicyGroupId()
+    {
+        return $this->container['policyGroupId'];
+    }
+
+    /**
+    * Sets policyGroupId
+    *
+    * @param string|null $policyGroupId **参数解释** 策略组ID，已废弃 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
+    *
+    * @return $this
+    */
+    public function setPolicyGroupId($policyGroupId)
+    {
+        $this->container['policyGroupId'] = $policyGroupId;
         return $this;
     }
 

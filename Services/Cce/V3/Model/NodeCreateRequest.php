@@ -20,8 +20,8 @@ class NodeCreateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * kind  **参数解释**： API类型，固定值“Node”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“Node”。 **默认取值**： 不涉及
-    * apiVersion  **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
+    * kind  **参数解释**： API类型 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： Node
+    * apiVersion  **参数解释**： API版本 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： v3
     * metadata  metadata
     * spec  spec
     *
@@ -36,8 +36,8 @@ class NodeCreateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * kind  **参数解释**： API类型，固定值“Node”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“Node”。 **默认取值**： 不涉及
-    * apiVersion  **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
+    * kind  **参数解释**： API类型 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： Node
+    * apiVersion  **参数解释**： API版本 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： v3
     * metadata  metadata
     * spec  spec
     *
@@ -73,8 +73,8 @@ class NodeCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * kind  **参数解释**： API类型，固定值“Node”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“Node”。 **默认取值**： 不涉及
-    * apiVersion  **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
+    * kind  **参数解释**： API类型 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： Node
+    * apiVersion  **参数解释**： API版本 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： v3
     * metadata  metadata
     * spec  spec
     *
@@ -89,8 +89,8 @@ class NodeCreateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * kind  **参数解释**： API类型，固定值“Node”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“Node”。 **默认取值**： 不涉及
-    * apiVersion  **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
+    * kind  **参数解释**： API类型 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： Node
+    * apiVersion  **参数解释**： API版本 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： v3
     * metadata  metadata
     * spec  spec
     *
@@ -105,8 +105,8 @@ class NodeCreateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * kind  **参数解释**： API类型，固定值“Node”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“Node”。 **默认取值**： 不涉及
-    * apiVersion  **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
+    * kind  **参数解释**： API类型 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： Node
+    * apiVersion  **参数解释**： API版本 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： v3
     * metadata  metadata
     * spec  spec
     *
@@ -216,7 +216,7 @@ class NodeCreateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets kind
-    *  **参数解释**： API类型，固定值“Node”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“Node”。 **默认取值**： 不涉及
+    *  **参数解释**： API类型 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： Node
     *
     * @return string
     */
@@ -228,7 +228,7 @@ class NodeCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets kind
     *
-    * @param string $kind **参数解释**： API类型，固定值“Node”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“Node”。 **默认取值**： 不涉及
+    * @param string $kind **参数解释**： API类型 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： Node
     *
     * @return $this
     */
@@ -240,7 +240,7 @@ class NodeCreateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiVersion
-    *  **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
+    *  **参数解释**： API版本 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： v3
     *
     * @return string
     */
@@ -252,7 +252,7 @@ class NodeCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets apiVersion
     *
-    * @param string $apiVersion **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
+    * @param string $apiVersion **参数解释**： API版本 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： v3
     *
     * @return $this
     */

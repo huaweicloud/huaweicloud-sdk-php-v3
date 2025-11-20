@@ -5765,6 +5765,340 @@ class IoTDAClient extends Client
     }
 
     /**
+     * 添加域配置
+     *
+     * 应用服务器可调用此接口在物联网平台上添加域配置，域配置配额上限为：1个。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createDomainConfiguration($request)
+    {
+        return $this->createDomainConfigurationWithHttpInfo($request);
+    }
+
+    public function createDomainConfigurationWithHttpInfo($request)
+    {
+        $resourcePath = '/{project_id}/domain-configurations';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateDomainConfigurationResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateDomainConfigurationRequest');
+    }
+
+    /**
+     * 删除域配置
+     *
+     * 应用服务器可调用此接口在物联网平台删除域配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDomainConfiguration($request)
+    {
+        return $this->deleteDomainConfigurationWithHttpInfo($request);
+    }
+
+    public function deleteDomainConfigurationWithHttpInfo($request)
+    {
+        $resourcePath = '/{project_id}/domain-configurations/{configuration_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['configurationId'] !== null) {
+            $pathParams['configuration_id'] = $localVarParams['configurationId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteDomainConfigurationResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteDomainConfigurationRequest');
+    }
+
+    /**
+     * 获取域配置列表
+     *
+     * 应用服务器可调用此接口在物联网平台获取域配置列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDomainConfigurations($request)
+    {
+        return $this->listDomainConfigurationsWithHttpInfo($request);
+    }
+
+    public function listDomainConfigurationsWithHttpInfo($request)
+    {
+        $resourcePath = '/{project_id}/domain-configurations';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListDomainConfigurationsResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListDomainConfigurationsRequest');
+    }
+
+    /**
+     * 查询域配置
+     *
+     * 应用服务器可调用此接口在物联网平台查询域配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDomainConfiguration($request)
+    {
+        return $this->showDomainConfigurationWithHttpInfo($request);
+    }
+
+    public function showDomainConfigurationWithHttpInfo($request)
+    {
+        $resourcePath = '/{project_id}/domain-configurations/{configuration_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['configurationId'] !== null) {
+            $pathParams['configuration_id'] = $localVarParams['configurationId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowDomainConfigurationResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowDomainConfigurationRequest');
+    }
+
+    /**
+     * 更新域配置
+     *
+     * 应用服务器可调用此接口在物联网平台上更新域配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDomainConfiguration($request)
+    {
+        return $this->updateDomainConfigurationWithHttpInfo($request);
+    }
+
+    public function updateDomainConfigurationWithHttpInfo($request)
+    {
+        $resourcePath = '/{project_id}/domain-configurations/{configuration_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['configurationId'] !== null) {
+            $pathParams['configuration_id'] = $localVarParams['configurationId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateDomainConfigurationResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateDomainConfigurationRequest');
+    }
+
+    /**
      * 新建数据流转流控策略
      *
      * 应用服务器可调用此接口在物联网平台创建数据流转流控策略。
@@ -10440,6 +10774,272 @@ class IoTDAClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateSecurityProfileResponse',
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateSecurityProfileRequest');
+    }
+
+    /**
+     * 添加服务器证书
+     *
+     * 应用服务器可调用此接口在物联网平台上添加服务器证书，服务器证书配额限制为：2个。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createServerCertificate($request)
+    {
+        return $this->createServerCertificateWithHttpInfo($request);
+    }
+
+    public function createServerCertificateWithHttpInfo($request)
+    {
+        $resourcePath = '/{project_id}/server-certificates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateServerCertificateResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateServerCertificateRequest');
+    }
+
+    /**
+     * 删除服务端证书
+     *
+     * 应用服务器可调用此接口在物联网平台删除服务器证书
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteServerCertificate($request)
+    {
+        return $this->deleteServerCertificateWithHttpInfo($request);
+    }
+
+    public function deleteServerCertificateWithHttpInfo($request)
+    {
+        $resourcePath = '/{project_id}/server-certificates/{server_certificate_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['serverCertificateId'] !== null) {
+            $pathParams['server_certificate_id'] = $localVarParams['serverCertificateId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteServerCertificateResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteServerCertificateRequest');
+    }
+
+    /**
+     * 获取服务器证书列表
+     *
+     * 应用服务器可调用此接口在物联网平台上获取服务器证书列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listServerCertificate($request)
+    {
+        return $this->listServerCertificateWithHttpInfo($request);
+    }
+
+    public function listServerCertificateWithHttpInfo($request)
+    {
+        $resourcePath = '/{project_id}/server-certificates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListServerCertificateResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListServerCertificateRequest');
+    }
+
+    /**
+     * 查询服务器证书
+     *
+     * 应用服务器可调用此接口在物联网平台查询服务器证书
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showServerCertificate($request)
+    {
+        return $this->showServerCertificateWithHttpInfo($request);
+    }
+
+    public function showServerCertificateWithHttpInfo($request)
+    {
+        $resourcePath = '/{project_id}/server-certificates/{server_certificate_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['serverCertificateId'] !== null) {
+            $pathParams['server_certificate_id'] = $localVarParams['serverCertificateId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowServerCertificateResponse',
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowServerCertificateRequest');
     }
 
     /**

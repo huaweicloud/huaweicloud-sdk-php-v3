@@ -32,7 +32,7 @@ class ListProductsRequest implements ModelInterface, ArrayAccess
     * createSince  过滤创建时间>=输入时间的记录。
     * name  按名称模糊查询。
     * tag  按标签模糊查询。
-    * state  按状态查询，多状态使用英文逗号分隔。
+    * state  根据状态查询。多个状态用英文逗号分隔。 文件状态枚举:   * ACTIVED：已激活   * UNACTIVED：未激活   * BLOCK：已冻结   * DELETED：已删除
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ListProductsRequest implements ModelInterface, ArrayAccess
     * createSince  过滤创建时间>=输入时间的记录。
     * name  按名称模糊查询。
     * tag  按标签模糊查询。
-    * state  按状态查询，多状态使用英文逗号分隔。
+    * state  根据状态查询。多个状态用英文逗号分隔。 文件状态枚举:   * ACTIVED：已激活   * UNACTIVED：未激活   * BLOCK：已冻结   * DELETED：已删除
     *
     * @var string[]
     */
@@ -121,7 +121,7 @@ class ListProductsRequest implements ModelInterface, ArrayAccess
     * createSince  过滤创建时间>=输入时间的记录。
     * name  按名称模糊查询。
     * tag  按标签模糊查询。
-    * state  按状态查询，多状态使用英文逗号分隔。
+    * state  根据状态查询。多个状态用英文逗号分隔。 文件状态枚举:   * ACTIVED：已激活   * UNACTIVED：未激活   * BLOCK：已冻结   * DELETED：已删除
     *
     * @var string[]
     */
@@ -155,7 +155,7 @@ class ListProductsRequest implements ModelInterface, ArrayAccess
     * createSince  过滤创建时间>=输入时间的记录。
     * name  按名称模糊查询。
     * tag  按标签模糊查询。
-    * state  按状态查询，多状态使用英文逗号分隔。
+    * state  根据状态查询。多个状态用英文逗号分隔。 文件状态枚举:   * ACTIVED：已激活   * UNACTIVED：未激活   * BLOCK：已冻结   * DELETED：已删除
     *
     * @var string[]
     */
@@ -189,7 +189,7 @@ class ListProductsRequest implements ModelInterface, ArrayAccess
     * createSince  过滤创建时间>=输入时间的记录。
     * name  按名称模糊查询。
     * tag  按标签模糊查询。
-    * state  按状态查询，多状态使用英文逗号分隔。
+    * state  根据状态查询。多个状态用英文逗号分隔。 文件状态枚举:   * ACTIVED：已激活   * UNACTIVED：未激活   * BLOCK：已冻结   * DELETED：已删除
     *
     * @var string[]
     */
@@ -672,7 +672,7 @@ class ListProductsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  按状态查询，多状态使用英文逗号分隔。
+    *  根据状态查询。多个状态用英文逗号分隔。 文件状态枚举:   * ACTIVED：已激活   * UNACTIVED：未激活   * BLOCK：已冻结   * DELETED：已删除
     *
     * @return string|null
     */
@@ -684,7 +684,7 @@ class ListProductsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state 按状态查询，多状态使用英文逗号分隔。
+    * @param string|null $state 根据状态查询。多个状态用英文逗号分隔。 文件状态枚举:   * ACTIVED：已激活   * UNACTIVED：未激活   * BLOCK：已冻结   * DELETED：已删除
     *
     * @return $this
     */

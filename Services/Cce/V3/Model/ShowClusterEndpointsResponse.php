@@ -30,7 +30,7 @@ class ShowClusterEndpointsResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'metadata' => '\HuaweiCloud\SDK\Cce\V3\Model\Metadata',
             'spec' => '\HuaweiCloud\SDK\Cce\V3\Model\OpenAPISpec',
-            'status' => '\HuaweiCloud\SDK\Cce\V3\Model\MasterEIPResponseStatus'
+            'status' => '\HuaweiCloud\SDK\Cce\V3\Model\OpenAPIResponseStatus'
     ];
 
     /**
@@ -247,7 +247,7 @@ class ShowClusterEndpointsResponse implements ModelInterface, ArrayAccess
     * Gets status
     *  status
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\MasterEIPResponseStatus|null
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\OpenAPIResponseStatus|null
     */
     public function getStatus()
     {
@@ -257,7 +257,7 @@ class ShowClusterEndpointsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\MasterEIPResponseStatus|null $status status
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\OpenAPIResponseStatus|null $status status
     *
     * @return $this
     */

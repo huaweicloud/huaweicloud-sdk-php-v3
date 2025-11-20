@@ -377,6 +377,9 @@ class ExportVulHandleHistoryRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['exportSize']) && ($this->container['exportSize'] < 1)) {
                 $invalidProperties[] = "invalid value for 'exportSize', must be bigger than or equal to 1.";
             }
+        if ($this->container['exportHeaderList'] === null) {
+            $invalidProperties[] = "'exportHeaderList' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -587,7 +590,7 @@ class ExportVulHandleHistoryRequestBody implements ModelInterface, ArrayAccess
     * Gets exportHeaderList
     *  导出漏洞数据的表头信息列表
     *
-    * @return string[][]|null
+    * @return string[][]
     */
     public function getExportHeaderList()
     {
@@ -597,7 +600,7 @@ class ExportVulHandleHistoryRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets exportHeaderList
     *
-    * @param string[][]|null $exportHeaderList 导出漏洞数据的表头信息列表
+    * @param string[][] $exportHeaderList 导出漏洞数据的表头信息列表
     *
     * @return $this
     */

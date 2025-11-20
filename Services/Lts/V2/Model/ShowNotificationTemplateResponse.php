@@ -21,12 +21,12 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  通知规则名称，必填，只含有汉字、数字、字母、下划线、中划线，不能以下划线等特殊符号开头和结尾，长度为 1 - 100，创建后不可修改
-    * type  保留字段，非必填，只支持sms（短信），dingding（钉钉），wechat（企业微信），email（邮件）和webhook（网络钩子）
-    * desc  模板描述，必填，只含有汉字、数字、字母、下划线不能以下划线开头和结尾，长度为0--1024
-    * source  模板来源，目前必填为LTS，否则会筛选不出来
-    * locale  语言，必填，目前可填zh-cn和en-us
-    * templates  模板正文，为一个数组
+    * name  **参数解释：**  消息模板名称。 **取值范围：**  不涉及。
+    * type  **参数解释：**  消息通知方式。 **取值范围：**  - sms - dingding - wechat - webhook - email - voice - feishu - welink
+    * desc  **参数解释：**  消息模板描述。 **取值范围：**  不涉及。
+    * source  **参数解释：**  消息模板来源。 **取值范围：**  不涉及。
+    * templates  **参数解释：**  不同通知渠道下消息模板的详细信息。
+    * locale  **参数解释：**  消息头语言，系统在发送消息时会默认添加消息头，中文如：“尊敬的用户...”；英文如：“Dear User...”。 **取值范围：**  - zh-cn - en-us
     * createTime  创建时间，为毫秒时间戳
     * modifyTime  更新时间，为毫秒时间戳
     * projectId  项目ID，获取方式请参见：获取账号ID、项目ID、日志组ID、日志流ID（https://support.huaweicloud.com/api-lts/lts_api_0006.html）。
@@ -38,8 +38,8 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
             'type' => 'string[]',
             'desc' => 'string',
             'source' => 'string',
+            'templates' => '\HuaweiCloud\SDK\Lts\V2\Model\SubTemplateResBody[]',
             'locale' => 'string',
-            'templates' => '\HuaweiCloud\SDK\Lts\V2\Model\SubTemplate[]',
             'createTime' => 'int',
             'modifyTime' => 'int',
             'projectId' => 'string'
@@ -47,12 +47,12 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  通知规则名称，必填，只含有汉字、数字、字母、下划线、中划线，不能以下划线等特殊符号开头和结尾，长度为 1 - 100，创建后不可修改
-    * type  保留字段，非必填，只支持sms（短信），dingding（钉钉），wechat（企业微信），email（邮件）和webhook（网络钩子）
-    * desc  模板描述，必填，只含有汉字、数字、字母、下划线不能以下划线开头和结尾，长度为0--1024
-    * source  模板来源，目前必填为LTS，否则会筛选不出来
-    * locale  语言，必填，目前可填zh-cn和en-us
-    * templates  模板正文，为一个数组
+    * name  **参数解释：**  消息模板名称。 **取值范围：**  不涉及。
+    * type  **参数解释：**  消息通知方式。 **取值范围：**  - sms - dingding - wechat - webhook - email - voice - feishu - welink
+    * desc  **参数解释：**  消息模板描述。 **取值范围：**  不涉及。
+    * source  **参数解释：**  消息模板来源。 **取值范围：**  不涉及。
+    * templates  **参数解释：**  不同通知渠道下消息模板的详细信息。
+    * locale  **参数解释：**  消息头语言，系统在发送消息时会默认添加消息头，中文如：“尊敬的用户...”；英文如：“Dear User...”。 **取值范围：**  - zh-cn - en-us
     * createTime  创建时间，为毫秒时间戳
     * modifyTime  更新时间，为毫秒时间戳
     * projectId  项目ID，获取方式请参见：获取账号ID、项目ID、日志组ID、日志流ID（https://support.huaweicloud.com/api-lts/lts_api_0006.html）。
@@ -64,8 +64,8 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
         'type' => null,
         'desc' => null,
         'source' => null,
-        'locale' => null,
         'templates' => null,
+        'locale' => null,
         'createTime' => 'int64',
         'modifyTime' => 'int64',
         'projectId' => null
@@ -94,12 +94,12 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  通知规则名称，必填，只含有汉字、数字、字母、下划线、中划线，不能以下划线等特殊符号开头和结尾，长度为 1 - 100，创建后不可修改
-    * type  保留字段，非必填，只支持sms（短信），dingding（钉钉），wechat（企业微信），email（邮件）和webhook（网络钩子）
-    * desc  模板描述，必填，只含有汉字、数字、字母、下划线不能以下划线开头和结尾，长度为0--1024
-    * source  模板来源，目前必填为LTS，否则会筛选不出来
-    * locale  语言，必填，目前可填zh-cn和en-us
-    * templates  模板正文，为一个数组
+    * name  **参数解释：**  消息模板名称。 **取值范围：**  不涉及。
+    * type  **参数解释：**  消息通知方式。 **取值范围：**  - sms - dingding - wechat - webhook - email - voice - feishu - welink
+    * desc  **参数解释：**  消息模板描述。 **取值范围：**  不涉及。
+    * source  **参数解释：**  消息模板来源。 **取值范围：**  不涉及。
+    * templates  **参数解释：**  不同通知渠道下消息模板的详细信息。
+    * locale  **参数解释：**  消息头语言，系统在发送消息时会默认添加消息头，中文如：“尊敬的用户...”；英文如：“Dear User...”。 **取值范围：**  - zh-cn - en-us
     * createTime  创建时间，为毫秒时间戳
     * modifyTime  更新时间，为毫秒时间戳
     * projectId  项目ID，获取方式请参见：获取账号ID、项目ID、日志组ID、日志流ID（https://support.huaweicloud.com/api-lts/lts_api_0006.html）。
@@ -111,8 +111,8 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
             'type' => 'type',
             'desc' => 'desc',
             'source' => 'source',
-            'locale' => 'locale',
             'templates' => 'templates',
+            'locale' => 'locale',
             'createTime' => 'create_time',
             'modifyTime' => 'modify_time',
             'projectId' => 'project_id'
@@ -120,12 +120,12 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  通知规则名称，必填，只含有汉字、数字、字母、下划线、中划线，不能以下划线等特殊符号开头和结尾，长度为 1 - 100，创建后不可修改
-    * type  保留字段，非必填，只支持sms（短信），dingding（钉钉），wechat（企业微信），email（邮件）和webhook（网络钩子）
-    * desc  模板描述，必填，只含有汉字、数字、字母、下划线不能以下划线开头和结尾，长度为0--1024
-    * source  模板来源，目前必填为LTS，否则会筛选不出来
-    * locale  语言，必填，目前可填zh-cn和en-us
-    * templates  模板正文，为一个数组
+    * name  **参数解释：**  消息模板名称。 **取值范围：**  不涉及。
+    * type  **参数解释：**  消息通知方式。 **取值范围：**  - sms - dingding - wechat - webhook - email - voice - feishu - welink
+    * desc  **参数解释：**  消息模板描述。 **取值范围：**  不涉及。
+    * source  **参数解释：**  消息模板来源。 **取值范围：**  不涉及。
+    * templates  **参数解释：**  不同通知渠道下消息模板的详细信息。
+    * locale  **参数解释：**  消息头语言，系统在发送消息时会默认添加消息头，中文如：“尊敬的用户...”；英文如：“Dear User...”。 **取值范围：**  - zh-cn - en-us
     * createTime  创建时间，为毫秒时间戳
     * modifyTime  更新时间，为毫秒时间戳
     * projectId  项目ID，获取方式请参见：获取账号ID、项目ID、日志组ID、日志流ID（https://support.huaweicloud.com/api-lts/lts_api_0006.html）。
@@ -137,8 +137,8 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'desc' => 'setDesc',
             'source' => 'setSource',
-            'locale' => 'setLocale',
             'templates' => 'setTemplates',
+            'locale' => 'setLocale',
             'createTime' => 'setCreateTime',
             'modifyTime' => 'setModifyTime',
             'projectId' => 'setProjectId'
@@ -146,12 +146,12 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  通知规则名称，必填，只含有汉字、数字、字母、下划线、中划线，不能以下划线等特殊符号开头和结尾，长度为 1 - 100，创建后不可修改
-    * type  保留字段，非必填，只支持sms（短信），dingding（钉钉），wechat（企业微信），email（邮件）和webhook（网络钩子）
-    * desc  模板描述，必填，只含有汉字、数字、字母、下划线不能以下划线开头和结尾，长度为0--1024
-    * source  模板来源，目前必填为LTS，否则会筛选不出来
-    * locale  语言，必填，目前可填zh-cn和en-us
-    * templates  模板正文，为一个数组
+    * name  **参数解释：**  消息模板名称。 **取值范围：**  不涉及。
+    * type  **参数解释：**  消息通知方式。 **取值范围：**  - sms - dingding - wechat - webhook - email - voice - feishu - welink
+    * desc  **参数解释：**  消息模板描述。 **取值范围：**  不涉及。
+    * source  **参数解释：**  消息模板来源。 **取值范围：**  不涉及。
+    * templates  **参数解释：**  不同通知渠道下消息模板的详细信息。
+    * locale  **参数解释：**  消息头语言，系统在发送消息时会默认添加消息头，中文如：“尊敬的用户...”；英文如：“Dear User...”。 **取值范围：**  - zh-cn - en-us
     * createTime  创建时间，为毫秒时间戳
     * modifyTime  更新时间，为毫秒时间戳
     * projectId  项目ID，获取方式请参见：获取账号ID、项目ID、日志组ID、日志流ID（https://support.huaweicloud.com/api-lts/lts_api_0006.html）。
@@ -163,8 +163,8 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'desc' => 'getDesc',
             'source' => 'getSource',
-            'locale' => 'getLocale',
             'templates' => 'getTemplates',
+            'locale' => 'getLocale',
             'createTime' => 'getCreateTime',
             'modifyTime' => 'getModifyTime',
             'projectId' => 'getProjectId'
@@ -210,22 +210,7 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const LOCALE_ZH_CN = 'zh-cn';
-    const LOCALE_EN_US = 'en-us';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getLocaleAllowableValues()
-    {
-        return [
-            self::LOCALE_ZH_CN,
-            self::LOCALE_EN_US,
-        ];
-    }
 
 
     /**
@@ -247,8 +232,8 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['desc'] = isset($data['desc']) ? $data['desc'] : null;
         $this->container['source'] = isset($data['source']) ? $data['source'] : null;
-        $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
         $this->container['templates'] = isset($data['templates']) ? $data['templates'] : null;
+        $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['modifyTime'] = isset($data['modifyTime']) ? $data['modifyTime'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
@@ -265,38 +250,9 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-            if ((mb_strlen($this->container['name']) > 100)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 100.";
-            }
-            if ((mb_strlen($this->container['name']) < 1)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['desc']) && (mb_strlen($this->container['desc']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'desc', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['desc']) && (mb_strlen($this->container['desc']) < 0)) {
-                $invalidProperties[] = "invalid value for 'desc', the character length must be bigger than or equal to 0.";
-            }
         if ($this->container['source'] === null) {
             $invalidProperties[] = "'source' can't be null";
         }
-            if ((mb_strlen($this->container['source']) > 3)) {
-                $invalidProperties[] = "invalid value for 'source', the character length must be smaller than or equal to 3.";
-            }
-            if ((mb_strlen($this->container['source']) < 3)) {
-                $invalidProperties[] = "invalid value for 'source', the character length must be bigger than or equal to 3.";
-            }
-        if ($this->container['locale'] === null) {
-            $invalidProperties[] = "'locale' can't be null";
-        }
-            $allowedValues = $this->getLocaleAllowableValues();
-                if (!is_null($this->container['locale']) && !in_array($this->container['locale'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'locale', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         if ($this->container['templates'] === null) {
             $invalidProperties[] = "'templates' can't be null";
         }
@@ -343,7 +299,7 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  通知规则名称，必填，只含有汉字、数字、字母、下划线、中划线，不能以下划线等特殊符号开头和结尾，长度为 1 - 100，创建后不可修改
+    *  **参数解释：**  消息模板名称。 **取值范围：**  不涉及。
     *
     * @return string
     */
@@ -355,7 +311,7 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 通知规则名称，必填，只含有汉字、数字、字母、下划线、中划线，不能以下划线等特殊符号开头和结尾，长度为 1 - 100，创建后不可修改
+    * @param string $name **参数解释：**  消息模板名称。 **取值范围：**  不涉及。
     *
     * @return $this
     */
@@ -367,7 +323,7 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  保留字段，非必填，只支持sms（短信），dingding（钉钉），wechat（企业微信），email（邮件）和webhook（网络钩子）
+    *  **参数解释：**  消息通知方式。 **取值范围：**  - sms - dingding - wechat - webhook - email - voice - feishu - welink
     *
     * @return string[]|null
     */
@@ -379,7 +335,7 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string[]|null $type 保留字段，非必填，只支持sms（短信），dingding（钉钉），wechat（企业微信），email（邮件）和webhook（网络钩子）
+    * @param string[]|null $type **参数解释：**  消息通知方式。 **取值范围：**  - sms - dingding - wechat - webhook - email - voice - feishu - welink
     *
     * @return $this
     */
@@ -391,7 +347,7 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets desc
-    *  模板描述，必填，只含有汉字、数字、字母、下划线不能以下划线开头和结尾，长度为0--1024
+    *  **参数解释：**  消息模板描述。 **取值范围：**  不涉及。
     *
     * @return string|null
     */
@@ -403,7 +359,7 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets desc
     *
-    * @param string|null $desc 模板描述，必填，只含有汉字、数字、字母、下划线不能以下划线开头和结尾，长度为0--1024
+    * @param string|null $desc **参数解释：**  消息模板描述。 **取值范围：**  不涉及。
     *
     * @return $this
     */
@@ -415,7 +371,7 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets source
-    *  模板来源，目前必填为LTS，否则会筛选不出来
+    *  **参数解释：**  消息模板来源。 **取值范围：**  不涉及。
     *
     * @return string
     */
@@ -427,7 +383,7 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets source
     *
-    * @param string $source 模板来源，目前必填为LTS，否则会筛选不出来
+    * @param string $source **参数解释：**  消息模板来源。 **取值范围：**  不涉及。
     *
     * @return $this
     */
@@ -438,34 +394,10 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets locale
-    *  语言，必填，目前可填zh-cn和en-us
-    *
-    * @return string
-    */
-    public function getLocale()
-    {
-        return $this->container['locale'];
-    }
-
-    /**
-    * Sets locale
-    *
-    * @param string $locale 语言，必填，目前可填zh-cn和en-us
-    *
-    * @return $this
-    */
-    public function setLocale($locale)
-    {
-        $this->container['locale'] = $locale;
-        return $this;
-    }
-
-    /**
     * Gets templates
-    *  模板正文，为一个数组
+    *  **参数解释：**  不同通知渠道下消息模板的详细信息。
     *
-    * @return \HuaweiCloud\SDK\Lts\V2\Model\SubTemplate[]
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\SubTemplateResBody[]
     */
     public function getTemplates()
     {
@@ -475,13 +407,37 @@ class ShowNotificationTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets templates
     *
-    * @param \HuaweiCloud\SDK\Lts\V2\Model\SubTemplate[] $templates 模板正文，为一个数组
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\SubTemplateResBody[] $templates **参数解释：**  不同通知渠道下消息模板的详细信息。
     *
     * @return $this
     */
     public function setTemplates($templates)
     {
         $this->container['templates'] = $templates;
+        return $this;
+    }
+
+    /**
+    * Gets locale
+    *  **参数解释：**  消息头语言，系统在发送消息时会默认添加消息头，中文如：“尊敬的用户...”；英文如：“Dear User...”。 **取值范围：**  - zh-cn - en-us
+    *
+    * @return string|null
+    */
+    public function getLocale()
+    {
+        return $this->container['locale'];
+    }
+
+    /**
+    * Sets locale
+    *
+    * @param string|null $locale **参数解释：**  消息头语言，系统在发送消息时会默认添加消息头，中文如：“尊敬的用户...”；英文如：“Dear User...”。 **取值范围：**  - zh-cn - en-us
+    *
+    * @return $this
+    */
+    public function setLocale($locale)
+    {
+        $this->container['locale'] = $locale;
         return $this;
     }
 

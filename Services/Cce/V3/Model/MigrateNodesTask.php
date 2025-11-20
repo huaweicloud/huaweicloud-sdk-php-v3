@@ -20,8 +20,8 @@ class MigrateNodesTask implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * apiVersion  API版本，固定值“v3”。
-    * kind  API类型，固定值“MigrateNodesTask”。
+    * apiVersion  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
+    * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： MigrateNodesTask
     * spec  spec
     * status  status
     *
@@ -36,8 +36,8 @@ class MigrateNodesTask implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * apiVersion  API版本，固定值“v3”。
-    * kind  API类型，固定值“MigrateNodesTask”。
+    * apiVersion  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
+    * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： MigrateNodesTask
     * spec  spec
     * status  status
     *
@@ -73,8 +73,8 @@ class MigrateNodesTask implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * apiVersion  API版本，固定值“v3”。
-    * kind  API类型，固定值“MigrateNodesTask”。
+    * apiVersion  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
+    * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： MigrateNodesTask
     * spec  spec
     * status  status
     *
@@ -89,8 +89,8 @@ class MigrateNodesTask implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * apiVersion  API版本，固定值“v3”。
-    * kind  API类型，固定值“MigrateNodesTask”。
+    * apiVersion  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
+    * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： MigrateNodesTask
     * spec  spec
     * status  status
     *
@@ -105,8 +105,8 @@ class MigrateNodesTask implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * apiVersion  API版本，固定值“v3”。
-    * kind  API类型，固定值“MigrateNodesTask”。
+    * apiVersion  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
+    * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： MigrateNodesTask
     * spec  spec
     * status  status
     *
@@ -210,7 +210,7 @@ class MigrateNodesTask implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiVersion
-    *  API版本，固定值“v3”。
+    *  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class MigrateNodesTask implements ModelInterface, ArrayAccess
     /**
     * Sets apiVersion
     *
-    * @param string|null $apiVersion API版本，固定值“v3”。
+    * @param string|null $apiVersion **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
     *
     * @return $this
     */
@@ -234,7 +234,7 @@ class MigrateNodesTask implements ModelInterface, ArrayAccess
 
     /**
     * Gets kind
-    *  API类型，固定值“MigrateNodesTask”。
+    *  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： MigrateNodesTask
     *
     * @return string|null
     */
@@ -246,7 +246,7 @@ class MigrateNodesTask implements ModelInterface, ArrayAccess
     /**
     * Sets kind
     *
-    * @param string|null $kind API类型，固定值“MigrateNodesTask”。
+    * @param string|null $kind **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： MigrateNodesTask
     *
     * @return $this
     */

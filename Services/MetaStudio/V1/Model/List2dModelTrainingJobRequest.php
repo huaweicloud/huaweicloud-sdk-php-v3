@@ -26,18 +26,23 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
+    * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
     * sortKey  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
-    * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
     * queryProjectId  查询租户id。
+    * updateSince  过滤更新时间>=输入时间的记录。
+    * updateUntil  过滤更新时间>=输入时间的记录。
     * batchName  任务批次名称。
     * tag  任务标签。
     * jobId  任务ID。
     * name  分身数字人模型名称
     * modelResolution  模型分辨率
     * isFlexus  是否是flexus任务
+    * isLiveCopy  是否是直播间复刻任务
+    * trainLocation  训练region
+    * isOndemandResource  是否测试版
     *
     * @var string[]
     */
@@ -48,18 +53,23 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
             'xAppUserId' => 'string',
             'offset' => 'int',
             'limit' => 'int',
+            'state' => 'string',
             'sortKey' => 'string',
             'sortDir' => 'string',
             'createUntil' => 'string',
             'createSince' => 'string',
-            'state' => 'string',
             'queryProjectId' => 'string',
+            'updateSince' => 'string',
+            'updateUntil' => 'string',
             'batchName' => 'string',
             'tag' => 'string',
             'jobId' => 'string',
             'name' => 'string',
             'modelResolution' => 'string',
-            'isFlexus' => 'bool'
+            'isFlexus' => 'bool',
+            'isLiveCopy' => 'bool',
+            'trainLocation' => 'string',
+            'isOndemandResource' => 'bool'
     ];
 
     /**
@@ -70,18 +80,23 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
+    * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
     * sortKey  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
-    * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
     * queryProjectId  查询租户id。
+    * updateSince  过滤更新时间>=输入时间的记录。
+    * updateUntil  过滤更新时间>=输入时间的记录。
     * batchName  任务批次名称。
     * tag  任务标签。
     * jobId  任务ID。
     * name  分身数字人模型名称
     * modelResolution  模型分辨率
     * isFlexus  是否是flexus任务
+    * isLiveCopy  是否是直播间复刻任务
+    * trainLocation  训练region
+    * isOndemandResource  是否测试版
     *
     * @var string[]
     */
@@ -92,18 +107,23 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
         'xAppUserId' => null,
         'offset' => 'uint32',
         'limit' => 'uint32',
+        'state' => null,
         'sortKey' => null,
         'sortDir' => null,
         'createUntil' => null,
         'createSince' => null,
-        'state' => null,
         'queryProjectId' => null,
+        'updateSince' => null,
+        'updateUntil' => null,
         'batchName' => null,
         'tag' => null,
         'jobId' => null,
         'name' => null,
         'modelResolution' => null,
-        'isFlexus' => null
+        'isFlexus' => null,
+        'isLiveCopy' => null,
+        'trainLocation' => null,
+        'isOndemandResource' => null
     ];
 
     /**
@@ -135,18 +155,23 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
+    * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
     * sortKey  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
-    * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
     * queryProjectId  查询租户id。
+    * updateSince  过滤更新时间>=输入时间的记录。
+    * updateUntil  过滤更新时间>=输入时间的记录。
     * batchName  任务批次名称。
     * tag  任务标签。
     * jobId  任务ID。
     * name  分身数字人模型名称
     * modelResolution  模型分辨率
     * isFlexus  是否是flexus任务
+    * isLiveCopy  是否是直播间复刻任务
+    * trainLocation  训练region
+    * isOndemandResource  是否测试版
     *
     * @var string[]
     */
@@ -157,18 +182,23 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
             'xAppUserId' => 'X-App-UserId',
             'offset' => 'offset',
             'limit' => 'limit',
+            'state' => 'state',
             'sortKey' => 'sort_key',
             'sortDir' => 'sort_dir',
             'createUntil' => 'create_until',
             'createSince' => 'create_since',
-            'state' => 'state',
             'queryProjectId' => 'query_project_id',
+            'updateSince' => 'update_since',
+            'updateUntil' => 'update_until',
             'batchName' => 'batch_name',
             'tag' => 'tag',
             'jobId' => 'job_id',
             'name' => 'name',
             'modelResolution' => 'model_resolution',
-            'isFlexus' => 'is_flexus'
+            'isFlexus' => 'is_flexus',
+            'isLiveCopy' => 'is_live_copy',
+            'trainLocation' => 'train_location',
+            'isOndemandResource' => 'is_ondemand_resource'
     ];
 
     /**
@@ -179,18 +209,23 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
+    * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
     * sortKey  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
-    * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
     * queryProjectId  查询租户id。
+    * updateSince  过滤更新时间>=输入时间的记录。
+    * updateUntil  过滤更新时间>=输入时间的记录。
     * batchName  任务批次名称。
     * tag  任务标签。
     * jobId  任务ID。
     * name  分身数字人模型名称
     * modelResolution  模型分辨率
     * isFlexus  是否是flexus任务
+    * isLiveCopy  是否是直播间复刻任务
+    * trainLocation  训练region
+    * isOndemandResource  是否测试版
     *
     * @var string[]
     */
@@ -201,18 +236,23 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
             'xAppUserId' => 'setXAppUserId',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
+            'state' => 'setState',
             'sortKey' => 'setSortKey',
             'sortDir' => 'setSortDir',
             'createUntil' => 'setCreateUntil',
             'createSince' => 'setCreateSince',
-            'state' => 'setState',
             'queryProjectId' => 'setQueryProjectId',
+            'updateSince' => 'setUpdateSince',
+            'updateUntil' => 'setUpdateUntil',
             'batchName' => 'setBatchName',
             'tag' => 'setTag',
             'jobId' => 'setJobId',
             'name' => 'setName',
             'modelResolution' => 'setModelResolution',
-            'isFlexus' => 'setIsFlexus'
+            'isFlexus' => 'setIsFlexus',
+            'isLiveCopy' => 'setIsLiveCopy',
+            'trainLocation' => 'setTrainLocation',
+            'isOndemandResource' => 'setIsOndemandResource'
     ];
 
     /**
@@ -223,18 +263,23 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
+    * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
     * sortKey  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
-    * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
     * queryProjectId  查询租户id。
+    * updateSince  过滤更新时间>=输入时间的记录。
+    * updateUntil  过滤更新时间>=输入时间的记录。
     * batchName  任务批次名称。
     * tag  任务标签。
     * jobId  任务ID。
     * name  分身数字人模型名称
     * modelResolution  模型分辨率
     * isFlexus  是否是flexus任务
+    * isLiveCopy  是否是直播间复刻任务
+    * trainLocation  训练region
+    * isOndemandResource  是否测试版
     *
     * @var string[]
     */
@@ -245,18 +290,23 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
             'xAppUserId' => 'getXAppUserId',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
+            'state' => 'getState',
             'sortKey' => 'getSortKey',
             'sortDir' => 'getSortDir',
             'createUntil' => 'getCreateUntil',
             'createSince' => 'getCreateSince',
-            'state' => 'getState',
             'queryProjectId' => 'getQueryProjectId',
+            'updateSince' => 'getUpdateSince',
+            'updateUntil' => 'getUpdateUntil',
             'batchName' => 'getBatchName',
             'tag' => 'getTag',
             'jobId' => 'getJobId',
             'name' => 'getName',
             'modelResolution' => 'getModelResolution',
-            'isFlexus' => 'getIsFlexus'
+            'isFlexus' => 'getIsFlexus',
+            'isLiveCopy' => 'getIsLiveCopy',
+            'trainLocation' => 'getTrainLocation',
+            'isOndemandResource' => 'getIsOndemandResource'
     ];
 
     /**
@@ -323,18 +373,23 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
         $this->container['xAppUserId'] = isset($data['xAppUserId']) ? $data['xAppUserId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
         $this->container['createUntil'] = isset($data['createUntil']) ? $data['createUntil'] : null;
         $this->container['createSince'] = isset($data['createSince']) ? $data['createSince'] : null;
-        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['queryProjectId'] = isset($data['queryProjectId']) ? $data['queryProjectId'] : null;
+        $this->container['updateSince'] = isset($data['updateSince']) ? $data['updateSince'] : null;
+        $this->container['updateUntil'] = isset($data['updateUntil']) ? $data['updateUntil'] : null;
         $this->container['batchName'] = isset($data['batchName']) ? $data['batchName'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['modelResolution'] = isset($data['modelResolution']) ? $data['modelResolution'] : null;
         $this->container['isFlexus'] = isset($data['isFlexus']) ? $data['isFlexus'] : null;
+        $this->container['isLiveCopy'] = isset($data['isLiveCopy']) ? $data['isLiveCopy'] : null;
+        $this->container['trainLocation'] = isset($data['trainLocation']) ? $data['trainLocation'] : null;
+        $this->container['isOndemandResource'] = isset($data['isOndemandResource']) ? $data['isOndemandResource'] : null;
     }
 
     /**
@@ -381,6 +436,12 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'state', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) < 0)) {
+                $invalidProperties[] = "invalid value for 'state', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) > 128)) {
                 $invalidProperties[] = "invalid value for 'sortKey', the character length must be smaller than or equal to 128.";
             }
@@ -405,17 +466,23 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['createSince']) && (mb_strlen($this->container['createSince']) < 0)) {
                 $invalidProperties[] = "invalid value for 'createSince', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'state', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) < 0)) {
-                $invalidProperties[] = "invalid value for 'state', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['queryProjectId']) && (mb_strlen($this->container['queryProjectId']) > 256)) {
                 $invalidProperties[] = "invalid value for 'queryProjectId', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['queryProjectId']) && (mb_strlen($this->container['queryProjectId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'queryProjectId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['updateSince']) && (mb_strlen($this->container['updateSince']) > 20)) {
+                $invalidProperties[] = "invalid value for 'updateSince', the character length must be smaller than or equal to 20.";
+            }
+            if (!is_null($this->container['updateSince']) && (mb_strlen($this->container['updateSince']) < 20)) {
+                $invalidProperties[] = "invalid value for 'updateSince', the character length must be bigger than or equal to 20.";
+            }
+            if (!is_null($this->container['updateUntil']) && (mb_strlen($this->container['updateUntil']) > 20)) {
+                $invalidProperties[] = "invalid value for 'updateUntil', the character length must be smaller than or equal to 20.";
+            }
+            if (!is_null($this->container['updateUntil']) && (mb_strlen($this->container['updateUntil']) < 20)) {
+                $invalidProperties[] = "invalid value for 'updateUntil', the character length must be bigger than or equal to 20.";
             }
             if (!is_null($this->container['batchName']) && (mb_strlen($this->container['batchName']) > 256)) {
                 $invalidProperties[] = "invalid value for 'batchName', the character length must be smaller than or equal to 256.";
@@ -606,6 +673,30 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets state
+    *  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
+    *
+    * @return string|null
+    */
+    public function getState()
+    {
+        return $this->container['state'];
+    }
+
+    /**
+    * Sets state
+    *
+    * @param string|null $state 任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
+    *
+    * @return $this
+    */
+    public function setState($state)
+    {
+        $this->container['state'] = $state;
+        return $this;
+    }
+
+    /**
     * Gets sortKey
     *  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     *
@@ -702,30 +793,6 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets state
-    *  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
-    *
-    * @return string|null
-    */
-    public function getState()
-    {
-        return $this->container['state'];
-    }
-
-    /**
-    * Sets state
-    *
-    * @param string|null $state 任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
-    *
-    * @return $this
-    */
-    public function setState($state)
-    {
-        $this->container['state'] = $state;
-        return $this;
-    }
-
-    /**
     * Gets queryProjectId
     *  查询租户id。
     *
@@ -746,6 +813,54 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     public function setQueryProjectId($queryProjectId)
     {
         $this->container['queryProjectId'] = $queryProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets updateSince
+    *  过滤更新时间>=输入时间的记录。
+    *
+    * @return string|null
+    */
+    public function getUpdateSince()
+    {
+        return $this->container['updateSince'];
+    }
+
+    /**
+    * Sets updateSince
+    *
+    * @param string|null $updateSince 过滤更新时间>=输入时间的记录。
+    *
+    * @return $this
+    */
+    public function setUpdateSince($updateSince)
+    {
+        $this->container['updateSince'] = $updateSince;
+        return $this;
+    }
+
+    /**
+    * Gets updateUntil
+    *  过滤更新时间>=输入时间的记录。
+    *
+    * @return string|null
+    */
+    public function getUpdateUntil()
+    {
+        return $this->container['updateUntil'];
+    }
+
+    /**
+    * Sets updateUntil
+    *
+    * @param string|null $updateUntil 过滤更新时间>=输入时间的记录。
+    *
+    * @return $this
+    */
+    public function setUpdateUntil($updateUntil)
+    {
+        $this->container['updateUntil'] = $updateUntil;
         return $this;
     }
 
@@ -890,6 +1005,78 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     public function setIsFlexus($isFlexus)
     {
         $this->container['isFlexus'] = $isFlexus;
+        return $this;
+    }
+
+    /**
+    * Gets isLiveCopy
+    *  是否是直播间复刻任务
+    *
+    * @return bool|null
+    */
+    public function getIsLiveCopy()
+    {
+        return $this->container['isLiveCopy'];
+    }
+
+    /**
+    * Sets isLiveCopy
+    *
+    * @param bool|null $isLiveCopy 是否是直播间复刻任务
+    *
+    * @return $this
+    */
+    public function setIsLiveCopy($isLiveCopy)
+    {
+        $this->container['isLiveCopy'] = $isLiveCopy;
+        return $this;
+    }
+
+    /**
+    * Gets trainLocation
+    *  训练region
+    *
+    * @return string|null
+    */
+    public function getTrainLocation()
+    {
+        return $this->container['trainLocation'];
+    }
+
+    /**
+    * Sets trainLocation
+    *
+    * @param string|null $trainLocation 训练region
+    *
+    * @return $this
+    */
+    public function setTrainLocation($trainLocation)
+    {
+        $this->container['trainLocation'] = $trainLocation;
+        return $this;
+    }
+
+    /**
+    * Gets isOndemandResource
+    *  是否测试版
+    *
+    * @return bool|null
+    */
+    public function getIsOndemandResource()
+    {
+        return $this->container['isOndemandResource'];
+    }
+
+    /**
+    * Sets isOndemandResource
+    *
+    * @param bool|null $isOndemandResource 是否测试版
+    *
+    * @return $this
+    */
+    public function setIsOndemandResource($isOndemandResource)
+    {
+        $this->container['isOndemandResource'] = $isOndemandResource;
         return $this;
     }
 

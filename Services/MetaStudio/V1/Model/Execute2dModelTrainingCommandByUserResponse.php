@@ -25,6 +25,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
     * attachmentUploadUrl  附件上传地址
     * multipartData  训练视频已上传分片信息
     * excuteFailedMsg  命令执行失败原因描述
+    * errorInfo  errorInfo
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -34,6 +35,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
             'attachmentUploadUrl' => 'string[]',
             'multipartData' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\MultipartUploadInfo[]',
             'excuteFailedMsg' => 'string',
+            'errorInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ErrorResponse',
             'xRequestId' => 'string'
     ];
 
@@ -43,6 +45,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
     * attachmentUploadUrl  附件上传地址
     * multipartData  训练视频已上传分片信息
     * excuteFailedMsg  命令执行失败原因描述
+    * errorInfo  errorInfo
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -52,6 +55,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
         'attachmentUploadUrl' => null,
         'multipartData' => null,
         'excuteFailedMsg' => null,
+        'errorInfo' => null,
         'xRequestId' => null
     ];
 
@@ -82,6 +86,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
     * attachmentUploadUrl  附件上传地址
     * multipartData  训练视频已上传分片信息
     * excuteFailedMsg  命令执行失败原因描述
+    * errorInfo  errorInfo
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -91,6 +96,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
             'attachmentUploadUrl' => 'attachment_upload_url',
             'multipartData' => 'multipart_data',
             'excuteFailedMsg' => 'excute_failed_msg',
+            'errorInfo' => 'error_info',
             'xRequestId' => 'X-Request-Id'
     ];
 
@@ -100,6 +106,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
     * attachmentUploadUrl  附件上传地址
     * multipartData  训练视频已上传分片信息
     * excuteFailedMsg  命令执行失败原因描述
+    * errorInfo  errorInfo
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -109,6 +116,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
             'attachmentUploadUrl' => 'setAttachmentUploadUrl',
             'multipartData' => 'setMultipartData',
             'excuteFailedMsg' => 'setExcuteFailedMsg',
+            'errorInfo' => 'setErrorInfo',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -118,6 +126,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
     * attachmentUploadUrl  附件上传地址
     * multipartData  训练视频已上传分片信息
     * excuteFailedMsg  命令执行失败原因描述
+    * errorInfo  errorInfo
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -127,6 +136,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
             'attachmentUploadUrl' => 'getAttachmentUploadUrl',
             'multipartData' => 'getMultipartData',
             'excuteFailedMsg' => 'getExcuteFailedMsg',
+            'errorInfo' => 'getErrorInfo',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -207,6 +217,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
         $this->container['attachmentUploadUrl'] = isset($data['attachmentUploadUrl']) ? $data['attachmentUploadUrl'] : null;
         $this->container['multipartData'] = isset($data['multipartData']) ? $data['multipartData'] : null;
         $this->container['excuteFailedMsg'] = isset($data['excuteFailedMsg']) ? $data['excuteFailedMsg'] : null;
+        $this->container['errorInfo'] = isset($data['errorInfo']) ? $data['errorInfo'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -339,6 +350,30 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
     public function setExcuteFailedMsg($excuteFailedMsg)
     {
         $this->container['excuteFailedMsg'] = $excuteFailedMsg;
+        return $this;
+    }
+
+    /**
+    * Gets errorInfo
+    *  errorInfo
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ErrorResponse|null
+    */
+    public function getErrorInfo()
+    {
+        return $this->container['errorInfo'];
+    }
+
+    /**
+    * Sets errorInfo
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ErrorResponse|null $errorInfo errorInfo
+    *
+    * @return $this
+    */
+    public function setErrorInfo($errorInfo)
+    {
+        $this->container['errorInfo'] = $errorInfo;
         return $this;
     }
 

@@ -42,6 +42,7 @@ class ListCicdImagesRequest implements ModelInterface, ArrayAccess
     * hasVul  **参数解释**: 是否存在软件漏洞 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     * severityLevel  **参数解释** 镜像风险程度，在镜像扫描完成后展示 **约束限制** 不涉及 **取值范围** - Security : 安全。 - Low : 低危。 - Medium : 中危 - High : 高危。  **默认取值**: 不涉及
     * risky  **参数解释**: 有安全风险 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * pipelineType  **参数解释**: 流水线类型 **约束限制**: 不涉及 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -67,7 +68,8 @@ class ListCicdImagesRequest implements ModelInterface, ArrayAccess
             'hasUnsafeSetting' => 'bool',
             'hasVul' => 'bool',
             'severityLevel' => 'string',
-            'risky' => 'bool'
+            'risky' => 'bool',
+            'pipelineType' => 'string'
     ];
 
     /**
@@ -94,6 +96,7 @@ class ListCicdImagesRequest implements ModelInterface, ArrayAccess
     * hasVul  **参数解释**: 是否存在软件漏洞 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     * severityLevel  **参数解释** 镜像风险程度，在镜像扫描完成后展示 **约束限制** 不涉及 **取值范围** - Security : 安全。 - Low : 低危。 - Medium : 中危 - High : 高危。  **默认取值**: 不涉及
     * risky  **参数解释**: 有安全风险 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * pipelineType  **参数解释**: 流水线类型 **约束限制**: 不涉及 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -119,7 +122,8 @@ class ListCicdImagesRequest implements ModelInterface, ArrayAccess
         'hasUnsafeSetting' => null,
         'hasVul' => null,
         'severityLevel' => null,
-        'risky' => null
+        'risky' => null,
+        'pipelineType' => null
     ];
 
     /**
@@ -167,6 +171,7 @@ class ListCicdImagesRequest implements ModelInterface, ArrayAccess
     * hasVul  **参数解释**: 是否存在软件漏洞 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     * severityLevel  **参数解释** 镜像风险程度，在镜像扫描完成后展示 **约束限制** 不涉及 **取值范围** - Security : 安全。 - Low : 低危。 - Medium : 中危 - High : 高危。  **默认取值**: 不涉及
     * risky  **参数解释**: 有安全风险 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * pipelineType  **参数解释**: 流水线类型 **约束限制**: 不涉及 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -192,7 +197,8 @@ class ListCicdImagesRequest implements ModelInterface, ArrayAccess
             'hasUnsafeSetting' => 'has_unsafe_setting',
             'hasVul' => 'has_vul',
             'severityLevel' => 'severity_level',
-            'risky' => 'risky'
+            'risky' => 'risky',
+            'pipelineType' => 'pipeline_type'
     ];
 
     /**
@@ -219,6 +225,7 @@ class ListCicdImagesRequest implements ModelInterface, ArrayAccess
     * hasVul  **参数解释**: 是否存在软件漏洞 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     * severityLevel  **参数解释** 镜像风险程度，在镜像扫描完成后展示 **约束限制** 不涉及 **取值范围** - Security : 安全。 - Low : 低危。 - Medium : 中危 - High : 高危。  **默认取值**: 不涉及
     * risky  **参数解释**: 有安全风险 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * pipelineType  **参数解释**: 流水线类型 **约束限制**: 不涉及 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -244,7 +251,8 @@ class ListCicdImagesRequest implements ModelInterface, ArrayAccess
             'hasUnsafeSetting' => 'setHasUnsafeSetting',
             'hasVul' => 'setHasVul',
             'severityLevel' => 'setSeverityLevel',
-            'risky' => 'setRisky'
+            'risky' => 'setRisky',
+            'pipelineType' => 'setPipelineType'
     ];
 
     /**
@@ -271,6 +279,7 @@ class ListCicdImagesRequest implements ModelInterface, ArrayAccess
     * hasVul  **参数解释**: 是否存在软件漏洞 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     * severityLevel  **参数解释** 镜像风险程度，在镜像扫描完成后展示 **约束限制** 不涉及 **取值范围** - Security : 安全。 - Low : 低危。 - Medium : 中危 - High : 高危。  **默认取值**: 不涉及
     * risky  **参数解释**: 有安全风险 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * pipelineType  **参数解释**: 流水线类型 **约束限制**: 不涉及 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -296,7 +305,8 @@ class ListCicdImagesRequest implements ModelInterface, ArrayAccess
             'hasUnsafeSetting' => 'getHasUnsafeSetting',
             'hasVul' => 'getHasVul',
             'severityLevel' => 'getSeverityLevel',
-            'risky' => 'getRisky'
+            'risky' => 'getRisky',
+            'pipelineType' => 'getPipelineType'
     ];
 
     /**
@@ -379,6 +389,7 @@ class ListCicdImagesRequest implements ModelInterface, ArrayAccess
         $this->container['hasVul'] = isset($data['hasVul']) ? $data['hasVul'] : null;
         $this->container['severityLevel'] = isset($data['severityLevel']) ? $data['severityLevel'] : null;
         $this->container['risky'] = isset($data['risky']) ? $data['risky'] : null;
+        $this->container['pipelineType'] = isset($data['pipelineType']) ? $data['pipelineType'] : null;
     }
 
     /**
@@ -520,6 +531,15 @@ class ListCicdImagesRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['severityLevel']) && !preg_match("/(^((Security|Low|Medium|High),){0,3}(|(Security|Low|Medium|High))$)|(^$)/", $this->container['severityLevel'])) {
                 $invalidProperties[] = "invalid value for 'severityLevel', must be conform to the pattern /(^((Security|Low|Medium|High),){0,3}(|(Security|Low|Medium|High))$)|(^$)/.";
+            }
+            if (!is_null($this->container['pipelineType']) && (mb_strlen($this->container['pipelineType']) > 32)) {
+                $invalidProperties[] = "invalid value for 'pipelineType', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['pipelineType']) && (mb_strlen($this->container['pipelineType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'pipelineType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['pipelineType']) && !preg_match("/^(jenkins|codearts)$/", $this->container['pipelineType'])) {
+                $invalidProperties[] = "invalid value for 'pipelineType', must be conform to the pattern /^(jenkins|codearts)$/.";
             }
         return $invalidProperties;
     }
@@ -1060,6 +1080,30 @@ class ListCicdImagesRequest implements ModelInterface, ArrayAccess
     public function setRisky($risky)
     {
         $this->container['risky'] = $risky;
+        return $this;
+    }
+
+    /**
+    * Gets pipelineType
+    *  **参数解释**: 流水线类型 **约束限制**: 不涉及 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。  **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getPipelineType()
+    {
+        return $this->container['pipelineType'];
+    }
+
+    /**
+    * Sets pipelineType
+    *
+    * @param string|null $pipelineType **参数解释**: 流水线类型 **约束限制**: 不涉及 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。  **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setPipelineType($pipelineType)
+    {
+        $this->container['pipelineType'] = $pipelineType;
         return $this;
     }
 

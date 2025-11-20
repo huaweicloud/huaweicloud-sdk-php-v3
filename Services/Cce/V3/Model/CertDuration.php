@@ -20,7 +20,7 @@ class CertDuration implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * duration  集群证书有效时间，单位为天，最小值为1，最大值为1825(5*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值5年。
+    * duration  **参数解释：** 集群证书有效时间 **约束限制：** 不涉及 **取值范围：** -1或[1,1827] > - 最小值为1天，最大值为5年，因此取值范围为1-1827（以天为单位，实际上限取决于5年内闰年的数量，例如5年内存在一个闰年则上限为1826天）； > - 若填-1则为最大值5年。  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class CertDuration implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * duration  集群证书有效时间，单位为天，最小值为1，最大值为1825(5*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值5年。
+    * duration  **参数解释：** 集群证书有效时间 **约束限制：** 不涉及 **取值范围：** -1或[1,1827] > - 最小值为1天，最大值为5年，因此取值范围为1-1827（以天为单位，实际上限取决于5年内闰年的数量，例如5年内存在一个闰年则上限为1826天）； > - 若填-1则为最大值5年。  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class CertDuration implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * duration  集群证书有效时间，单位为天，最小值为1，最大值为1825(5*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值5年。
+    * duration  **参数解释：** 集群证书有效时间 **约束限制：** 不涉及 **取值范围：** -1或[1,1827] > - 最小值为1天，最大值为5年，因此取值范围为1-1827（以天为单位，实际上限取决于5年内闰年的数量，例如5年内存在一个闰年则上限为1826天）； > - 若填-1则为最大值5年。  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CertDuration implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * duration  集群证书有效时间，单位为天，最小值为1，最大值为1825(5*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值5年。
+    * duration  **参数解释：** 集群证书有效时间 **约束限制：** 不涉及 **取值范围：** -1或[1,1827] > - 最小值为1天，最大值为5年，因此取值范围为1-1827（以天为单位，实际上限取决于5年内闰年的数量，例如5年内存在一个闰年则上限为1826天）； > - 若填-1则为最大值5年。  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CertDuration implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * duration  集群证书有效时间，单位为天，最小值为1，最大值为1825(5*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值5年。
+    * duration  **参数解释：** 集群证书有效时间 **约束限制：** 不涉及 **取值范围：** -1或[1,1827] > - 最小值为1天，最大值为5年，因此取值范围为1-1827（以天为单位，实际上限取决于5年内闰年的数量，例如5年内存在一个闰年则上限为1826天）； > - 若填-1则为最大值5年。  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -161,11 +161,11 @@ class CertDuration implements ModelInterface, ArrayAccess
         if ($this->container['duration'] === null) {
             $invalidProperties[] = "'duration' can't be null";
         }
-            if (($this->container['duration'] > 1825)) {
-                $invalidProperties[] = "invalid value for 'duration', must be smaller than or equal to 1825.";
+            if (($this->container['duration'] > 1827)) {
+                $invalidProperties[] = "invalid value for 'duration', must be smaller than or equal to 1827.";
             }
-            if (($this->container['duration'] < 1)) {
-                $invalidProperties[] = "invalid value for 'duration', must be bigger than or equal to 1.";
+            if (($this->container['duration'] < -1)) {
+                $invalidProperties[] = "invalid value for 'duration', must be bigger than or equal to -1.";
             }
         return $invalidProperties;
     }
@@ -183,7 +183,7 @@ class CertDuration implements ModelInterface, ArrayAccess
 
     /**
     * Gets duration
-    *  集群证书有效时间，单位为天，最小值为1，最大值为1825(5*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值5年。
+    *  **参数解释：** 集群证书有效时间 **约束限制：** 不涉及 **取值范围：** -1或[1,1827] > - 最小值为1天，最大值为5年，因此取值范围为1-1827（以天为单位，实际上限取决于5年内闰年的数量，例如5年内存在一个闰年则上限为1826天）； > - 若填-1则为最大值5年。  **默认取值：** 不涉及
     *
     * @return int
     */
@@ -195,7 +195,7 @@ class CertDuration implements ModelInterface, ArrayAccess
     /**
     * Sets duration
     *
-    * @param int $duration 集群证书有效时间，单位为天，最小值为1，最大值为1825(5*365，1年固定计365天，忽略闰年影响)；若填-1则为最大值5年。
+    * @param int $duration **参数解释：** 集群证书有效时间 **约束限制：** 不涉及 **取值范围：** -1或[1,1827] > - 最小值为1天，最大值为5年，因此取值范围为1-1827（以天为单位，实际上限取决于5年内闰年的数量，例如5年内存在一个闰年则上限为1826天）； > - 若填-1则为最大值5年。  **默认取值：** 不涉及
     *
     * @return $this
     */

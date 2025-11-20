@@ -20,8 +20,8 @@ class CertRevokeConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * userId  用户ID
-    * agencyId  委托用户ID
+    * userId  **参数解释**： 用户ID，获取方式参见本接口的接口约束 **约束限制**： 与agencyId互斥，二选一填写 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * agencyId  **参数解释**： 用户ID，获取方式参见[如何获取用户ID](cce_02_0249.xml#section1) **约束限制**： 与agencyId互斥，二选一填写 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CertRevokeConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * userId  用户ID
-    * agencyId  委托用户ID
+    * userId  **参数解释**： 用户ID，获取方式参见本接口的接口约束 **约束限制**： 与agencyId互斥，二选一填写 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * agencyId  **参数解释**： 用户ID，获取方式参见[如何获取用户ID](cce_02_0249.xml#section1) **约束限制**： 与agencyId互斥，二选一填写 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CertRevokeConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * userId  用户ID
-    * agencyId  委托用户ID
+    * userId  **参数解释**： 用户ID，获取方式参见本接口的接口约束 **约束限制**： 与agencyId互斥，二选一填写 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * agencyId  **参数解释**： 用户ID，获取方式参见[如何获取用户ID](cce_02_0249.xml#section1) **约束限制**： 与agencyId互斥，二选一填写 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CertRevokeConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * userId  用户ID
-    * agencyId  委托用户ID
+    * userId  **参数解释**： 用户ID，获取方式参见本接口的接口约束 **约束限制**： 与agencyId互斥，二选一填写 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * agencyId  **参数解释**： 用户ID，获取方式参见[如何获取用户ID](cce_02_0249.xml#section1) **约束限制**： 与agencyId互斥，二选一填写 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CertRevokeConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * userId  用户ID
-    * agencyId  委托用户ID
+    * userId  **参数解释**： 用户ID，获取方式参见本接口的接口约束 **约束限制**： 与agencyId互斥，二选一填写 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * agencyId  **参数解释**： 用户ID，获取方式参见[如何获取用户ID](cce_02_0249.xml#section1) **约束限制**： 与agencyId互斥，二选一填写 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class CertRevokeConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
-    *  用户ID
+    *  **参数解释**： 用户ID，获取方式参见本接口的接口约束 **约束限制**： 与agencyId互斥，二选一填写 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class CertRevokeConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param string|null $userId 用户ID
+    * @param string|null $userId **参数解释**： 用户ID，获取方式参见本接口的接口约束 **约束限制**： 与agencyId互斥，二选一填写 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class CertRevokeConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets agencyId
-    *  委托用户ID
+    *  **参数解释**： 用户ID，获取方式参见[如何获取用户ID](cce_02_0249.xml#section1) **约束限制**： 与agencyId互斥，二选一填写 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class CertRevokeConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets agencyId
     *
-    * @param string|null $agencyId 委托用户ID
+    * @param string|null $agencyId **参数解释**： 用户ID，获取方式参见[如何获取用户ID](cce_02_0249.xml#section1) **约束限制**： 与agencyId互斥，二选一填写 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

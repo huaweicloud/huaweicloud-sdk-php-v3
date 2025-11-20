@@ -26,7 +26,7 @@ class ShowBaselineOverviewResponse implements ModelInterface, ArrayAccess
     * failedHostNum  **参数解释**: 未通过主机数。 **取值范围**: 取值0-2147483647
     * checkTypeNum  **参数解释**: 检测基线数量。例如共检测了SSH、CentOS 7这2个配置检测（基线）类型，值就是2。 **取值范围**: 取值0-2147483647
     * checkRuleNum  **参数解释**: 基线检测项（检测规则）数量。例如SSH基线检测了17条规则，CentOS 7基线检测了60条规则，值就是17+60=77。 **取值范围**: 取值0-2147483647
-    * checkRulePassRate  **参数解释**: 基线检查项通过率\"。 **取值范围**: 取值0-2147483647
+    * checkRulePassRate  **参数解释**: 基线检查项通过率。 **取值范围**: 取值0-2147483647
     * cnStandardCheckRulePassRate  **参数解释**: 云安全实践基线检查项通过率。 **取值范围**: 取值0-2147483647
     * hwStandardCheckRulePassRate  **参数解释**: 等保合规基线检查项通过率。 **取值范围**: 取值0-2147483647
     * checkRuleFailedNum  **参数解释**: 未通过的检查项数量。 **取值范围**: 取值0-2147483647
@@ -70,7 +70,7 @@ class ShowBaselineOverviewResponse implements ModelInterface, ArrayAccess
     * failedHostNum  **参数解释**: 未通过主机数。 **取值范围**: 取值0-2147483647
     * checkTypeNum  **参数解释**: 检测基线数量。例如共检测了SSH、CentOS 7这2个配置检测（基线）类型，值就是2。 **取值范围**: 取值0-2147483647
     * checkRuleNum  **参数解释**: 基线检测项（检测规则）数量。例如SSH基线检测了17条规则，CentOS 7基线检测了60条规则，值就是17+60=77。 **取值范围**: 取值0-2147483647
-    * checkRulePassRate  **参数解释**: 基线检查项通过率\"。 **取值范围**: 取值0-2147483647
+    * checkRulePassRate  **参数解释**: 基线检查项通过率。 **取值范围**: 取值0-2147483647
     * cnStandardCheckRulePassRate  **参数解释**: 云安全实践基线检查项通过率。 **取值范围**: 取值0-2147483647
     * hwStandardCheckRulePassRate  **参数解释**: 等保合规基线检查项通过率。 **取值范围**: 取值0-2147483647
     * checkRuleFailedNum  **参数解释**: 未通过的检查项数量。 **取值范围**: 取值0-2147483647
@@ -135,7 +135,7 @@ class ShowBaselineOverviewResponse implements ModelInterface, ArrayAccess
     * failedHostNum  **参数解释**: 未通过主机数。 **取值范围**: 取值0-2147483647
     * checkTypeNum  **参数解释**: 检测基线数量。例如共检测了SSH、CentOS 7这2个配置检测（基线）类型，值就是2。 **取值范围**: 取值0-2147483647
     * checkRuleNum  **参数解释**: 基线检测项（检测规则）数量。例如SSH基线检测了17条规则，CentOS 7基线检测了60条规则，值就是17+60=77。 **取值范围**: 取值0-2147483647
-    * checkRulePassRate  **参数解释**: 基线检查项通过率\"。 **取值范围**: 取值0-2147483647
+    * checkRulePassRate  **参数解释**: 基线检查项通过率。 **取值范围**: 取值0-2147483647
     * cnStandardCheckRulePassRate  **参数解释**: 云安全实践基线检查项通过率。 **取值范围**: 取值0-2147483647
     * hwStandardCheckRulePassRate  **参数解释**: 等保合规基线检查项通过率。 **取值范围**: 取值0-2147483647
     * checkRuleFailedNum  **参数解释**: 未通过的检查项数量。 **取值范围**: 取值0-2147483647
@@ -179,7 +179,7 @@ class ShowBaselineOverviewResponse implements ModelInterface, ArrayAccess
     * failedHostNum  **参数解释**: 未通过主机数。 **取值范围**: 取值0-2147483647
     * checkTypeNum  **参数解释**: 检测基线数量。例如共检测了SSH、CentOS 7这2个配置检测（基线）类型，值就是2。 **取值范围**: 取值0-2147483647
     * checkRuleNum  **参数解释**: 基线检测项（检测规则）数量。例如SSH基线检测了17条规则，CentOS 7基线检测了60条规则，值就是17+60=77。 **取值范围**: 取值0-2147483647
-    * checkRulePassRate  **参数解释**: 基线检查项通过率\"。 **取值范围**: 取值0-2147483647
+    * checkRulePassRate  **参数解释**: 基线检查项通过率。 **取值范围**: 取值0-2147483647
     * cnStandardCheckRulePassRate  **参数解释**: 云安全实践基线检查项通过率。 **取值范围**: 取值0-2147483647
     * hwStandardCheckRulePassRate  **参数解释**: 等保合规基线检查项通过率。 **取值范围**: 取值0-2147483647
     * checkRuleFailedNum  **参数解释**: 未通过的检查项数量。 **取值范围**: 取值0-2147483647
@@ -223,7 +223,7 @@ class ShowBaselineOverviewResponse implements ModelInterface, ArrayAccess
     * failedHostNum  **参数解释**: 未通过主机数。 **取值范围**: 取值0-2147483647
     * checkTypeNum  **参数解释**: 检测基线数量。例如共检测了SSH、CentOS 7这2个配置检测（基线）类型，值就是2。 **取值范围**: 取值0-2147483647
     * checkRuleNum  **参数解释**: 基线检测项（检测规则）数量。例如SSH基线检测了17条规则，CentOS 7基线检测了60条规则，值就是17+60=77。 **取值范围**: 取值0-2147483647
-    * checkRulePassRate  **参数解释**: 基线检查项通过率\"。 **取值范围**: 取值0-2147483647
+    * checkRulePassRate  **参数解释**: 基线检查项通过率。 **取值范围**: 取值0-2147483647
     * cnStandardCheckRulePassRate  **参数解释**: 云安全实践基线检查项通过率。 **取值范围**: 取值0-2147483647
     * hwStandardCheckRulePassRate  **参数解释**: 等保合规基线检查项通过率。 **取值范围**: 取值0-2147483647
     * checkRuleFailedNum  **参数解释**: 未通过的检查项数量。 **取值范围**: 取值0-2147483647
@@ -578,7 +578,7 @@ class ShowBaselineOverviewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkRulePassRate
-    *  **参数解释**: 基线检查项通过率\"。 **取值范围**: 取值0-2147483647
+    *  **参数解释**: 基线检查项通过率。 **取值范围**: 取值0-2147483647
     *
     * @return int|null
     */
@@ -590,7 +590,7 @@ class ShowBaselineOverviewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets checkRulePassRate
     *
-    * @param int|null $checkRulePassRate **参数解释**: 基线检查项通过率\"。 **取值范围**: 取值0-2147483647
+    * @param int|null $checkRulePassRate **参数解释**: 基线检查项通过率。 **取值范围**: 取值0-2147483647
     *
     * @return $this
     */

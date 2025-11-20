@@ -34,7 +34,7 @@ class FindingSummary implements ModelInterface, ArrayAccess
     * resourceProjectId  资源所属的项目标识符
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
-    * status  访问分析结果当前状态。
+    * status  访问分析结果当前状态。 - active：活跃 - archived：已归档 - resolved：已解决
     * updatedAt  更新访问分析结果的时间。
     *
     * @var string[]
@@ -74,7 +74,7 @@ class FindingSummary implements ModelInterface, ArrayAccess
     * resourceProjectId  资源所属的项目标识符
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
-    * status  访问分析结果当前状态。
+    * status  访问分析结果当前状态。 - active：活跃 - archived：已归档 - resolved：已解决
     * updatedAt  更新访问分析结果的时间。
     *
     * @var string[]
@@ -135,7 +135,7 @@ class FindingSummary implements ModelInterface, ArrayAccess
     * resourceProjectId  资源所属的项目标识符
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
-    * status  访问分析结果当前状态。
+    * status  访问分析结果当前状态。 - active：活跃 - archived：已归档 - resolved：已解决
     * updatedAt  更新访问分析结果的时间。
     *
     * @var string[]
@@ -175,7 +175,7 @@ class FindingSummary implements ModelInterface, ArrayAccess
     * resourceProjectId  资源所属的项目标识符
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
-    * status  访问分析结果当前状态。
+    * status  访问分析结果当前状态。 - active：活跃 - archived：已归档 - resolved：已解决
     * updatedAt  更新访问分析结果的时间。
     *
     * @var string[]
@@ -215,7 +215,7 @@ class FindingSummary implements ModelInterface, ArrayAccess
     * resourceProjectId  资源所属的项目标识符
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
-    * status  访问分析结果当前状态。
+    * status  访问分析结果当前状态。 - active：活跃 - archived：已归档 - resolved：已解决
     * updatedAt  更新访问分析结果的时间。
     *
     * @var string[]
@@ -763,7 +763,7 @@ class FindingSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  访问分析结果当前状态。
+    *  访问分析结果当前状态。 - active：活跃 - archived：已归档 - resolved：已解决
     *
     * @return string
     */
@@ -775,7 +775,7 @@ class FindingSummary implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 访问分析结果当前状态。
+    * @param string $status 访问分析结果当前状态。 - active：活跃 - archived：已归档 - resolved：已解决
     *
     * @return $this
     */

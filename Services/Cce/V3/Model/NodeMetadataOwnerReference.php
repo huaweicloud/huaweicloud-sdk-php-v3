@@ -21,25 +21,33 @@ class NodeMetadataOwnerReference implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * nodepoolName  **参数解释**： 节点池名称 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * nodepoolId  **参数解释**： 节点池UID **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodepoolId  **参数解释**： 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * hyperNodeName  **参数解释**： 超节点名称。如果节点不属于超节点，此字段不展示。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * hyperNodeId  **参数解释**： 超节点ID。如果节点不属于超节点，此字段不展示。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'nodepoolName' => 'string',
-            'nodepoolId' => 'string'
+            'nodepoolId' => 'string',
+            'hyperNodeName' => 'string',
+            'hyperNodeId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * nodepoolName  **参数解释**： 节点池名称 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * nodepoolId  **参数解释**： 节点池UID **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodepoolId  **参数解释**： 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * hyperNodeName  **参数解释**： 超节点名称。如果节点不属于超节点，此字段不展示。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * hyperNodeId  **参数解释**： 超节点ID。如果节点不属于超节点，此字段不展示。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'nodepoolName' => null,
-        'nodepoolId' => null
+        'nodepoolId' => null,
+        'hyperNodeName' => null,
+        'hyperNodeId' => null
     ];
 
     /**
@@ -66,37 +74,49 @@ class NodeMetadataOwnerReference implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * nodepoolName  **参数解释**： 节点池名称 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * nodepoolId  **参数解释**： 节点池UID **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodepoolId  **参数解释**： 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * hyperNodeName  **参数解释**： 超节点名称。如果节点不属于超节点，此字段不展示。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * hyperNodeId  **参数解释**： 超节点ID。如果节点不属于超节点，此字段不展示。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'nodepoolName' => 'nodepoolName',
-            'nodepoolId' => 'nodepoolID'
+            'nodepoolId' => 'nodepoolID',
+            'hyperNodeName' => 'hyperNodeName',
+            'hyperNodeId' => 'hyperNodeID'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * nodepoolName  **参数解释**： 节点池名称 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * nodepoolId  **参数解释**： 节点池UID **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodepoolId  **参数解释**： 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * hyperNodeName  **参数解释**： 超节点名称。如果节点不属于超节点，此字段不展示。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * hyperNodeId  **参数解释**： 超节点ID。如果节点不属于超节点，此字段不展示。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
             'nodepoolName' => 'setNodepoolName',
-            'nodepoolId' => 'setNodepoolId'
+            'nodepoolId' => 'setNodepoolId',
+            'hyperNodeName' => 'setHyperNodeName',
+            'hyperNodeId' => 'setHyperNodeId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * nodepoolName  **参数解释**： 节点池名称 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * nodepoolId  **参数解释**： 节点池UID **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodepoolId  **参数解释**： 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * hyperNodeName  **参数解释**： 超节点名称。如果节点不属于超节点，此字段不展示。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * hyperNodeId  **参数解释**： 超节点ID。如果节点不属于超节点，此字段不展示。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
             'nodepoolName' => 'getNodepoolName',
-            'nodepoolId' => 'getNodepoolId'
+            'nodepoolId' => 'getNodepoolId',
+            'hyperNodeName' => 'getHyperNodeName',
+            'hyperNodeId' => 'getHyperNodeId'
     ];
 
     /**
@@ -159,6 +179,8 @@ class NodeMetadataOwnerReference implements ModelInterface, ArrayAccess
     {
         $this->container['nodepoolName'] = isset($data['nodepoolName']) ? $data['nodepoolName'] : null;
         $this->container['nodepoolId'] = isset($data['nodepoolId']) ? $data['nodepoolId'] : null;
+        $this->container['hyperNodeName'] = isset($data['hyperNodeName']) ? $data['hyperNodeName'] : null;
+        $this->container['hyperNodeId'] = isset($data['hyperNodeId']) ? $data['hyperNodeId'] : null;
     }
 
     /**
@@ -209,7 +231,7 @@ class NodeMetadataOwnerReference implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodepoolId
-    *  **参数解释**： 节点池UID **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *  **参数解释**： 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -221,13 +243,61 @@ class NodeMetadataOwnerReference implements ModelInterface, ArrayAccess
     /**
     * Sets nodepoolId
     *
-    * @param string|null $nodepoolId **参数解释**： 节点池UID **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * @param string|null $nodepoolId **参数解释**： 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
     public function setNodepoolId($nodepoolId)
     {
         $this->container['nodepoolId'] = $nodepoolId;
+        return $this;
+    }
+
+    /**
+    * Gets hyperNodeName
+    *  **参数解释**： 超节点名称。如果节点不属于超节点，此字段不展示。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getHyperNodeName()
+    {
+        return $this->container['hyperNodeName'];
+    }
+
+    /**
+    * Sets hyperNodeName
+    *
+    * @param string|null $hyperNodeName **参数解释**： 超节点名称。如果节点不属于超节点，此字段不展示。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setHyperNodeName($hyperNodeName)
+    {
+        $this->container['hyperNodeName'] = $hyperNodeName;
+        return $this;
+    }
+
+    /**
+    * Gets hyperNodeId
+    *  **参数解释**： 超节点ID。如果节点不属于超节点，此字段不展示。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getHyperNodeId()
+    {
+        return $this->container['hyperNodeId'];
+    }
+
+    /**
+    * Sets hyperNodeId
+    *
+    * @param string|null $hyperNodeId **参数解释**： 超节点ID。如果节点不属于超节点，此字段不展示。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setHyperNodeId($hyperNodeId)
+    {
+        $this->container['hyperNodeId'] = $hyperNodeId;
         return $this;
     }
 

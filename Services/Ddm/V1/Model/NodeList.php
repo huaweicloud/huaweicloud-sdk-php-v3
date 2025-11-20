@@ -24,6 +24,7 @@ class NodeList implements ModelInterface, ArrayAccess
     * status  节点状态。
     * nodeId  节点id。
     * ip  ip
+    * groupId  节点所在组ID。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class NodeList implements ModelInterface, ArrayAccess
             'port' => 'string',
             'status' => 'string',
             'nodeId' => 'string',
-            'ip' => 'string'
+            'ip' => 'string',
+            'groupId' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class NodeList implements ModelInterface, ArrayAccess
     * status  节点状态。
     * nodeId  节点id。
     * ip  ip
+    * groupId  节点所在组ID。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class NodeList implements ModelInterface, ArrayAccess
         'port' => null,
         'status' => null,
         'nodeId' => null,
-        'ip' => null
+        'ip' => null,
+        'groupId' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class NodeList implements ModelInterface, ArrayAccess
     * status  节点状态。
     * nodeId  节点id。
     * ip  ip
+    * groupId  节点所在组ID。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class NodeList implements ModelInterface, ArrayAccess
             'port' => 'port',
             'status' => 'status',
             'nodeId' => 'node_id',
-            'ip' => 'ip'
+            'ip' => 'ip',
+            'groupId' => 'group_id'
     ];
 
     /**
@@ -93,6 +99,7 @@ class NodeList implements ModelInterface, ArrayAccess
     * status  节点状态。
     * nodeId  节点id。
     * ip  ip
+    * groupId  节点所在组ID。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class NodeList implements ModelInterface, ArrayAccess
             'port' => 'setPort',
             'status' => 'setStatus',
             'nodeId' => 'setNodeId',
-            'ip' => 'setIp'
+            'ip' => 'setIp',
+            'groupId' => 'setGroupId'
     ];
 
     /**
@@ -109,6 +117,7 @@ class NodeList implements ModelInterface, ArrayAccess
     * status  节点状态。
     * nodeId  节点id。
     * ip  ip
+    * groupId  节点所在组ID。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class NodeList implements ModelInterface, ArrayAccess
             'port' => 'getPort',
             'status' => 'getStatus',
             'nodeId' => 'getNodeId',
-            'ip' => 'getIp'
+            'ip' => 'getIp',
+            'groupId' => 'getGroupId'
     ];
 
     /**
@@ -181,6 +191,7 @@ class NodeList implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['nodeId'] = isset($data['nodeId']) ? $data['nodeId'] : null;
         $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
     }
 
     /**
@@ -298,6 +309,30 @@ class NodeList implements ModelInterface, ArrayAccess
     public function setIp($ip)
     {
         $this->container['ip'] = $ip;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  节点所在组ID。
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 节点所在组ID。
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
         return $this;
     }
 

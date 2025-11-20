@@ -31,7 +31,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     * passedNum  **参数解释** 通过项数量 **取值范围** 取值0-2147483647
     * diffDescription  **参数解释** 差异化展示提示信息 **取值范围** 字符长度0-512位
     * description  **参数解释** 忽略或加白的备注 **取值范围** 字符长度0-1024位
-    * hostType  **参数解释** 主机类型 **取值范围** - cce
+    * hostType  **参数解释** 主机类型，当主机为cce类型时，返回cce **取值范围** - cce
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的修复&忽略&验证按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
@@ -75,7 +75,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     * passedNum  **参数解释** 通过项数量 **取值范围** 取值0-2147483647
     * diffDescription  **参数解释** 差异化展示提示信息 **取值范围** 字符长度0-512位
     * description  **参数解释** 忽略或加白的备注 **取值范围** 字符长度0-1024位
-    * hostType  **参数解释** 主机类型 **取值范围** - cce
+    * hostType  **参数解释** 主机类型，当主机为cce类型时，返回cce **取值范围** - cce
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的修复&忽略&验证按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
@@ -140,7 +140,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     * passedNum  **参数解释** 通过项数量 **取值范围** 取值0-2147483647
     * diffDescription  **参数解释** 差异化展示提示信息 **取值范围** 字符长度0-512位
     * description  **参数解释** 忽略或加白的备注 **取值范围** 字符长度0-1024位
-    * hostType  **参数解释** 主机类型 **取值范围** - cce
+    * hostType  **参数解释** 主机类型，当主机为cce类型时，返回cce **取值范围** - cce
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的修复&忽略&验证按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
@@ -184,7 +184,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     * passedNum  **参数解释** 通过项数量 **取值范围** 取值0-2147483647
     * diffDescription  **参数解释** 差异化展示提示信息 **取值范围** 字符长度0-512位
     * description  **参数解释** 忽略或加白的备注 **取值范围** 字符长度0-1024位
-    * hostType  **参数解释** 主机类型 **取值范围** - cce
+    * hostType  **参数解释** 主机类型，当主机为cce类型时，返回cce **取值范围** - cce
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的修复&忽略&验证按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
@@ -228,7 +228,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     * passedNum  **参数解释** 通过项数量 **取值范围** 取值0-2147483647
     * diffDescription  **参数解释** 差异化展示提示信息 **取值范围** 字符长度0-512位
     * description  **参数解释** 忽略或加白的备注 **取值范围** 字符长度0-1024位
-    * hostType  **参数解释** 主机类型 **取值范围** - cce
+    * hostType  **参数解释** 主机类型，当主机为cce类型时，返回cce **取值范围** - cce
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的修复&忽略&验证按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
@@ -727,7 +727,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostType
-    *  **参数解释** 主机类型 **取值范围** - cce
+    *  **参数解释** 主机类型，当主机为cce类型时，返回cce **取值范围** - cce
     *
     * @return string|null
     */
@@ -739,7 +739,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostType
     *
-    * @param string|null $hostType **参数解释** 主机类型 **取值范围** - cce
+    * @param string|null $hostType **参数解释** 主机类型，当主机为cce类型时，返回cce **取值范围** - cce
     *
     * @return $this
     */

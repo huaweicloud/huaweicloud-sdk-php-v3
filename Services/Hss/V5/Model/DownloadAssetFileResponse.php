@@ -21,7 +21,7 @@ class DownloadAssetFileResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskId  导出任务ID
+    * taskId  **参数解释**： 导出任务ID **取值范围**： 字符长度0-128位
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class DownloadAssetFileResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskId  导出任务ID
+    * taskId  **参数解释**： 导出任务ID **取值范围**： 字符长度0-128位
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class DownloadAssetFileResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskId  导出任务ID
+    * taskId  **参数解释**： 导出任务ID **取值范围**： 字符长度0-128位
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class DownloadAssetFileResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskId  导出任务ID
+    * taskId  **参数解释**： 导出任务ID **取值范围**： 字符长度0-128位
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class DownloadAssetFileResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskId  导出任务ID
+    * taskId  **参数解释**： 导出任务ID **取值范围**： 字符长度0-128位
     *
     * @var string[]
     */
@@ -181,7 +181,7 @@ class DownloadAssetFileResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskId
-    *  导出任务ID
+    *  **参数解释**： 导出任务ID **取值范围**： 字符长度0-128位
     *
     * @return string|null
     */
@@ -193,7 +193,7 @@ class DownloadAssetFileResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string|null $taskId 导出任务ID
+    * @param string|null $taskId **参数解释**： 导出任务ID **取值范围**： 字符长度0-128位
     *
     * @return $this
     */

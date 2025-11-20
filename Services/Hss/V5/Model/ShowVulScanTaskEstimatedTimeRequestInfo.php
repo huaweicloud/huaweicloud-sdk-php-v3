@@ -20,7 +20,7 @@ class ShowVulScanTaskEstimatedTimeRequestInfo implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * manualScanType  **参数解释**: 漏洞手动检测类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms - app_vul - urgent_vul  **默认取值**: 不涉及
+    * manualScanType  **参数解释**: 漏洞手动检测类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：紧急漏洞  **默认取值**: 不涉及
     * rangeType  **参数解释**: 检测的主机范围 **约束限制**: 不涉及 **取值范围**: - all_host：全部主机 - specific_host：部分主机  **默认取值**: 不涉及
     * agentIds  **参数解释**: 待检测的agent列表 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
@@ -34,7 +34,7 @@ class ShowVulScanTaskEstimatedTimeRequestInfo implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * manualScanType  **参数解释**: 漏洞手动检测类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms - app_vul - urgent_vul  **默认取值**: 不涉及
+    * manualScanType  **参数解释**: 漏洞手动检测类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：紧急漏洞  **默认取值**: 不涉及
     * rangeType  **参数解释**: 检测的主机范围 **约束限制**: 不涉及 **取值范围**: - all_host：全部主机 - specific_host：部分主机  **默认取值**: 不涉及
     * agentIds  **参数解释**: 待检测的agent列表 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
@@ -69,7 +69,7 @@ class ShowVulScanTaskEstimatedTimeRequestInfo implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * manualScanType  **参数解释**: 漏洞手动检测类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms - app_vul - urgent_vul  **默认取值**: 不涉及
+    * manualScanType  **参数解释**: 漏洞手动检测类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：紧急漏洞  **默认取值**: 不涉及
     * rangeType  **参数解释**: 检测的主机范围 **约束限制**: 不涉及 **取值范围**: - all_host：全部主机 - specific_host：部分主机  **默认取值**: 不涉及
     * agentIds  **参数解释**: 待检测的agent列表 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
@@ -83,7 +83,7 @@ class ShowVulScanTaskEstimatedTimeRequestInfo implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * manualScanType  **参数解释**: 漏洞手动检测类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms - app_vul - urgent_vul  **默认取值**: 不涉及
+    * manualScanType  **参数解释**: 漏洞手动检测类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：紧急漏洞  **默认取值**: 不涉及
     * rangeType  **参数解释**: 检测的主机范围 **约束限制**: 不涉及 **取值范围**: - all_host：全部主机 - specific_host：部分主机  **默认取值**: 不涉及
     * agentIds  **参数解释**: 待检测的agent列表 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
@@ -97,7 +97,7 @@ class ShowVulScanTaskEstimatedTimeRequestInfo implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * manualScanType  **参数解释**: 漏洞手动检测类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms - app_vul - urgent_vul  **默认取值**: 不涉及
+    * manualScanType  **参数解释**: 漏洞手动检测类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：紧急漏洞  **默认取值**: 不涉及
     * rangeType  **参数解释**: 检测的主机范围 **约束限制**: 不涉及 **取值范围**: - all_host：全部主机 - specific_host：部分主机  **默认取值**: 不涉及
     * agentIds  **参数解释**: 待检测的agent列表 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
@@ -205,7 +205,7 @@ class ShowVulScanTaskEstimatedTimeRequestInfo implements ModelInterface, ArrayAc
 
     /**
     * Gets manualScanType
-    *  **参数解释**: 漏洞手动检测类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms - app_vul - urgent_vul  **默认取值**: 不涉及
+    *  **参数解释**: 漏洞手动检测类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：紧急漏洞  **默认取值**: 不涉及
     *
     * @return string[]|null
     */
@@ -217,7 +217,7 @@ class ShowVulScanTaskEstimatedTimeRequestInfo implements ModelInterface, ArrayAc
     /**
     * Sets manualScanType
     *
-    * @param string[]|null $manualScanType **参数解释**: 漏洞手动检测类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms - app_vul - urgent_vul  **默认取值**: 不涉及
+    * @param string[]|null $manualScanType **参数解释**: 漏洞手动检测类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：紧急漏洞  **默认取值**: 不涉及
     *
     * @return $this
     */

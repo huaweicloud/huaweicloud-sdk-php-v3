@@ -20,9 +20,9 @@ class ClusterCert implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * server  服务器地址。
-    * certificateAuthorityData  证书授权数据。
-    * insecureSkipTlsVerify  不校验服务端证书，在 cluster 类型为 externalCluster 时，该值为 true。
+    * server  **参数解释**： 上下文user信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * certificateAuthorityData  **参数解释**： 证书授权数据 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * insecureSkipTlsVerify  **参数解释**： 不校验服务端证书 **约束限制**： 不涉及 **取值范围**： - true：跳过校验服务端证书 - false：校验服务端证书  **默认取值**： 在 cluster 类型为 externalCluster 时，该值为 true。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ClusterCert implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * server  服务器地址。
-    * certificateAuthorityData  证书授权数据。
-    * insecureSkipTlsVerify  不校验服务端证书，在 cluster 类型为 externalCluster 时，该值为 true。
+    * server  **参数解释**： 上下文user信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * certificateAuthorityData  **参数解释**： 证书授权数据 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * insecureSkipTlsVerify  **参数解释**： 不校验服务端证书 **约束限制**： 不涉及 **取值范围**： - true：跳过校验服务端证书 - false：校验服务端证书  **默认取值**： 在 cluster 类型为 externalCluster 时，该值为 true。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ClusterCert implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * server  服务器地址。
-    * certificateAuthorityData  证书授权数据。
-    * insecureSkipTlsVerify  不校验服务端证书，在 cluster 类型为 externalCluster 时，该值为 true。
+    * server  **参数解释**： 上下文user信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * certificateAuthorityData  **参数解释**： 证书授权数据 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * insecureSkipTlsVerify  **参数解释**： 不校验服务端证书 **约束限制**： 不涉及 **取值范围**： - true：跳过校验服务端证书 - false：校验服务端证书  **默认取值**： 在 cluster 类型为 externalCluster 时，该值为 true。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ClusterCert implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * server  服务器地址。
-    * certificateAuthorityData  证书授权数据。
-    * insecureSkipTlsVerify  不校验服务端证书，在 cluster 类型为 externalCluster 时，该值为 true。
+    * server  **参数解释**： 上下文user信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * certificateAuthorityData  **参数解释**： 证书授权数据 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * insecureSkipTlsVerify  **参数解释**： 不校验服务端证书 **约束限制**： 不涉及 **取值范围**： - true：跳过校验服务端证书 - false：校验服务端证书  **默认取值**： 在 cluster 类型为 externalCluster 时，该值为 true。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ClusterCert implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * server  服务器地址。
-    * certificateAuthorityData  证书授权数据。
-    * insecureSkipTlsVerify  不校验服务端证书，在 cluster 类型为 externalCluster 时，该值为 true。
+    * server  **参数解释**： 上下文user信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * certificateAuthorityData  **参数解释**： 证书授权数据 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * insecureSkipTlsVerify  **参数解释**： 不校验服务端证书 **约束限制**： 不涉及 **取值范围**： - true：跳过校验服务端证书 - false：校验服务端证书  **默认取值**： 在 cluster 类型为 externalCluster 时，该值为 true。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class ClusterCert implements ModelInterface, ArrayAccess
 
     /**
     * Gets server
-    *  服务器地址。
+    *  **参数解释**： 上下文user信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class ClusterCert implements ModelInterface, ArrayAccess
     /**
     * Sets server
     *
-    * @param string|null $server 服务器地址。
+    * @param string|null $server **参数解释**： 上下文user信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class ClusterCert implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificateAuthorityData
-    *  证书授权数据。
+    *  **参数解释**： 证书授权数据 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class ClusterCert implements ModelInterface, ArrayAccess
     /**
     * Sets certificateAuthorityData
     *
-    * @param string|null $certificateAuthorityData 证书授权数据。
+    * @param string|null $certificateAuthorityData **参数解释**： 证书授权数据 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class ClusterCert implements ModelInterface, ArrayAccess
 
     /**
     * Gets insecureSkipTlsVerify
-    *  不校验服务端证书，在 cluster 类型为 externalCluster 时，该值为 true。
+    *  **参数解释**： 不校验服务端证书 **约束限制**： 不涉及 **取值范围**： - true：跳过校验服务端证书 - false：校验服务端证书  **默认取值**： 在 cluster 类型为 externalCluster 时，该值为 true。
     *
     * @return bool|null
     */
@@ -256,7 +256,7 @@ class ClusterCert implements ModelInterface, ArrayAccess
     /**
     * Sets insecureSkipTlsVerify
     *
-    * @param bool|null $insecureSkipTlsVerify 不校验服务端证书，在 cluster 类型为 externalCluster 时，该值为 true。
+    * @param bool|null $insecureSkipTlsVerify **参数解释**： 不校验服务端证书 **约束限制**： 不涉及 **取值范围**： - true：跳过校验服务端证书 - false：校验服务端证书  **默认取值**： 在 cluster 类型为 externalCluster 时，该值为 true。
     *
     * @return $this
     */

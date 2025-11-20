@@ -20,9 +20,9 @@ class MasterEIPResponseSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  绑定动作
+    * action  **参数解释**： 绑定动作 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * spec  spec
-    * elasticIp  弹性公网IP
+    * elasticIp  **参数解释**： 弹性公网IP **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class MasterEIPResponseSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  绑定动作
+    * action  **参数解释**： 绑定动作 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * spec  spec
-    * elasticIp  弹性公网IP
+    * elasticIp  **参数解释**： 弹性公网IP **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class MasterEIPResponseSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  绑定动作
+    * action  **参数解释**： 绑定动作 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * spec  spec
-    * elasticIp  弹性公网IP
+    * elasticIp  **参数解释**： 弹性公网IP **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class MasterEIPResponseSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  绑定动作
+    * action  **参数解释**： 绑定动作 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * spec  spec
-    * elasticIp  弹性公网IP
+    * elasticIp  **参数解释**： 弹性公网IP **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class MasterEIPResponseSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  绑定动作
+    * action  **参数解释**： 绑定动作 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * spec  spec
-    * elasticIp  弹性公网IP
+    * elasticIp  **参数解释**： 弹性公网IP **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -217,7 +217,7 @@ class MasterEIPResponseSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  绑定动作
+    *  **参数解释**： 绑定动作 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -229,7 +229,7 @@ class MasterEIPResponseSpec implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 绑定动作
+    * @param string|null $action **参数解释**： 绑定动作 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -265,7 +265,7 @@ class MasterEIPResponseSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets elasticIp
-    *  弹性公网IP
+    *  **参数解释**： 弹性公网IP **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -277,7 +277,7 @@ class MasterEIPResponseSpec implements ModelInterface, ArrayAccess
     /**
     * Sets elasticIp
     *
-    * @param string|null $elasticIp 弹性公网IP
+    * @param string|null $elasticIp **参数解释**： 弹性公网IP **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

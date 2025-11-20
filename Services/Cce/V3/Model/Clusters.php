@@ -20,7 +20,7 @@ class Clusters implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  集群名字。 - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internalCluster”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的cluster的name的值为“externalCluster”。
+    * name  **参数解释**： 集群名字。 **约束限制**： 不涉及 **取值范围**： - internalCluster：私网访问的集群 - externalCluster：公网访问的集群  **默认取值**： - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internalCluster”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的cluster的name的值为“externalCluster”。
     * cluster  cluster
     *
     * @var string[]
@@ -32,7 +32,7 @@ class Clusters implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  集群名字。 - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internalCluster”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的cluster的name的值为“externalCluster”。
+    * name  **参数解释**： 集群名字。 **约束限制**： 不涉及 **取值范围**： - internalCluster：私网访问的集群 - externalCluster：公网访问的集群  **默认取值**： - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internalCluster”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的cluster的name的值为“externalCluster”。
     * cluster  cluster
     *
     * @var string[]
@@ -65,7 +65,7 @@ class Clusters implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  集群名字。 - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internalCluster”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的cluster的name的值为“externalCluster”。
+    * name  **参数解释**： 集群名字。 **约束限制**： 不涉及 **取值范围**： - internalCluster：私网访问的集群 - externalCluster：公网访问的集群  **默认取值**： - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internalCluster”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的cluster的name的值为“externalCluster”。
     * cluster  cluster
     *
     * @var string[]
@@ -77,7 +77,7 @@ class Clusters implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  集群名字。 - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internalCluster”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的cluster的name的值为“externalCluster”。
+    * name  **参数解释**： 集群名字。 **约束限制**： 不涉及 **取值范围**： - internalCluster：私网访问的集群 - externalCluster：公网访问的集群  **默认取值**： - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internalCluster”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的cluster的name的值为“externalCluster”。
     * cluster  cluster
     *
     * @var string[]
@@ -89,7 +89,7 @@ class Clusters implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  集群名字。 - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internalCluster”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的cluster的name的值为“externalCluster”。
+    * name  **参数解释**： 集群名字。 **约束限制**： 不涉及 **取值范围**： - internalCluster：私网访问的集群 - externalCluster：公网访问的集群  **默认取值**： - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internalCluster”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的cluster的name的值为“externalCluster”。
     * cluster  cluster
     *
     * @var string[]
@@ -185,7 +185,7 @@ class Clusters implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  集群名字。 - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internalCluster”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的cluster的name的值为“externalCluster”。
+    *  **参数解释**： 集群名字。 **约束限制**： 不涉及 **取值范围**： - internalCluster：私网访问的集群 - externalCluster：公网访问的集群  **默认取值**： - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internalCluster”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的cluster的name的值为“externalCluster”。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class Clusters implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 集群名字。 - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internalCluster”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的cluster的name的值为“externalCluster”。
+    * @param string|null $name **参数解释**： 集群名字。 **约束限制**： 不涉及 **取值范围**： - internalCluster：私网访问的集群 - externalCluster：公网访问的集群  **默认取值**： - 若不存在publicIp（虚拟机弹性IP），则集群列表的集群数量为1，该字段值为“internalCluster”。 - 若存在publicIp，则集群列表的集群数量大于1，所有扩展的cluster的name的值为“externalCluster”。
     *
     * @return $this
     */

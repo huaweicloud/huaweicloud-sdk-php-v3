@@ -412,8 +412,8 @@ class ShowEventSeverityRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['category']) < 0)) {
                 $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 0.";
             }
-            if (!preg_match("/^host|container|serverless$/", $this->container['category'])) {
-                $invalidProperties[] = "invalid value for 'category', must be conform to the pattern /^host|container|serverless$/.";
+            if (!preg_match("/^(host|container|serverless)$/", $this->container['category'])) {
+                $invalidProperties[] = "invalid value for 'category', must be conform to the pattern /^(host|container|serverless)$/.";
             }
             if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 1.";
@@ -469,11 +469,17 @@ class ShowEventSeverityRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['handleStatus']) && (mb_strlen($this->container['handleStatus']) < 1)) {
                 $invalidProperties[] = "invalid value for 'handleStatus', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['handleStatus']) && !preg_match("/^(unhandled|handled)$/", $this->container['handleStatus'])) {
+                $invalidProperties[] = "invalid value for 'handleStatus', must be conform to the pattern /^(unhandled|handled)$/.";
+            }
             if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) > 32)) {
                 $invalidProperties[] = "invalid value for 'severity', the character length must be smaller than or equal to 32.";
             }
             if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) < 1)) {
                 $invalidProperties[] = "invalid value for 'severity', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['severity']) && !preg_match("/^(Security|Low|Medium|High|Critical)$/", $this->container['severity'])) {
+                $invalidProperties[] = "invalid value for 'severity', must be conform to the pattern /^(Security|Low|Medium|High|Critical)$/.";
             }
             if (!is_null($this->container['attackTag']) && (mb_strlen($this->container['attackTag']) > 32)) {
                 $invalidProperties[] = "invalid value for 'attackTag', the character length must be smaller than or equal to 32.";
@@ -481,17 +487,26 @@ class ShowEventSeverityRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['attackTag']) && (mb_strlen($this->container['attackTag']) < 0)) {
                 $invalidProperties[] = "invalid value for 'attackTag', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['attackTag']) && !preg_match("/^(attack_success|attack_attempt|attack_blocked|abnormal_behavior|collapsible_host|system_vulnerability)$/", $this->container['attackTag'])) {
+                $invalidProperties[] = "invalid value for 'attackTag', must be conform to the pattern /^(attack_success|attack_attempt|attack_blocked|abnormal_behavior|collapsible_host|system_vulnerability)$/.";
+            }
             if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) > 128)) {
                 $invalidProperties[] = "invalid value for 'assetValue', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) < 0)) {
                 $invalidProperties[] = "invalid value for 'assetValue', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['assetValue']) && !preg_match("/^(important|common|test)$/", $this->container['assetValue'])) {
+                $invalidProperties[] = "invalid value for 'assetValue', must be conform to the pattern /^(important|common|test)$/.";
+            }
             if (!is_null($this->container['attCk']) && (mb_strlen($this->container['attCk']) > 32)) {
                 $invalidProperties[] = "invalid value for 'attCk', the character length must be smaller than or equal to 32.";
             }
             if (!is_null($this->container['attCk']) && (mb_strlen($this->container['attCk']) < 0)) {
                 $invalidProperties[] = "invalid value for 'attCk', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['attCk']) && !preg_match("/^(Reconnaissance|Initial Access|Execution|Persistence|Privilege Escalation|Defense Evasion|Credential Access|Command and Control|Impact)$/", $this->container['attCk'])) {
+                $invalidProperties[] = "invalid value for 'attCk', must be conform to the pattern /^(Reconnaissance|Initial Access|Execution|Persistence|Privilege Escalation|Defense Evasion|Credential Access|Command and Control|Impact)$/.";
             }
             if (!is_null($this->container['eventName']) && (mb_strlen($this->container['eventName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'eventName', the character length must be smaller than or equal to 128.";

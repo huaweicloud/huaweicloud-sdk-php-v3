@@ -20,8 +20,8 @@ class NodeLabelInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * label  **参数解释**: 节点标签名称。 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
-    * children  **参数解释**: 节点名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * label  **参数解释**: 节点标签名称。 **取值范围**: 字符长度1-512位
+    * children  **参数解释**: 节点名称 **取值范围**: 字符长度0-256位
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class NodeLabelInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * label  **参数解释**: 节点标签名称。 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
-    * children  **参数解释**: 节点名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * label  **参数解释**: 节点标签名称。 **取值范围**: 字符长度1-512位
+    * children  **参数解释**: 节点名称 **取值范围**: 字符长度0-256位
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class NodeLabelInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * label  **参数解释**: 节点标签名称。 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
-    * children  **参数解释**: 节点名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * label  **参数解释**: 节点标签名称。 **取值范围**: 字符长度1-512位
+    * children  **参数解释**: 节点名称 **取值范围**: 字符长度0-256位
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class NodeLabelInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * label  **参数解释**: 节点标签名称。 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
-    * children  **参数解释**: 节点名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * label  **参数解释**: 节点标签名称。 **取值范围**: 字符长度1-512位
+    * children  **参数解释**: 节点名称 **取值范围**: 字符长度0-256位
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class NodeLabelInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * label  **参数解释**: 节点标签名称。 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
-    * children  **参数解释**: 节点名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * label  **参数解释**: 节点标签名称。 **取值范围**: 字符长度1-512位
+    * children  **参数解释**: 节点名称 **取值范围**: 字符长度0-256位
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class NodeLabelInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets label
-    *  **参数解释**: 节点标签名称。 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
+    *  **参数解释**: 节点标签名称。 **取值范围**: 字符长度1-512位
     *
     * @return string|null
     */
@@ -203,7 +203,7 @@ class NodeLabelInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets label
     *
-    * @param string|null $label **参数解释**: 节点标签名称。 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
+    * @param string|null $label **参数解释**: 节点标签名称。 **取值范围**: 字符长度1-512位
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class NodeLabelInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets children
-    *  **参数解释**: 节点名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    *  **参数解释**: 节点名称 **取值范围**: 字符长度0-256位
     *
     * @return string[]|null
     */
@@ -227,7 +227,7 @@ class NodeLabelInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets children
     *
-    * @param string[]|null $children **参数解释**: 节点名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * @param string[]|null $children **参数解释**: 节点名称 **取值范围**: 字符长度0-256位
     *
     * @return $this
     */

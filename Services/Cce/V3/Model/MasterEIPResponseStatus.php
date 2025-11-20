@@ -20,8 +20,8 @@ class MasterEIPResponseStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * privateEndpoint  集群访问的PrivateIP(HA集群返回VIP)
-    * publicEndpoint  集群访问的PublicIP
+    * privateEndpoint  **参数解释**： 集群访问的PrivateIP(HA集群返回VIP) **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * publicEndpoint  **参数解释**： 集群访问的PublicIP **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class MasterEIPResponseStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * privateEndpoint  集群访问的PrivateIP(HA集群返回VIP)
-    * publicEndpoint  集群访问的PublicIP
+    * privateEndpoint  **参数解释**： 集群访问的PrivateIP(HA集群返回VIP) **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * publicEndpoint  **参数解释**： 集群访问的PublicIP **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class MasterEIPResponseStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * privateEndpoint  集群访问的PrivateIP(HA集群返回VIP)
-    * publicEndpoint  集群访问的PublicIP
+    * privateEndpoint  **参数解释**： 集群访问的PrivateIP(HA集群返回VIP) **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * publicEndpoint  **参数解释**： 集群访问的PublicIP **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class MasterEIPResponseStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * privateEndpoint  集群访问的PrivateIP(HA集群返回VIP)
-    * publicEndpoint  集群访问的PublicIP
+    * privateEndpoint  **参数解释**： 集群访问的PrivateIP(HA集群返回VIP) **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * publicEndpoint  **参数解释**： 集群访问的PublicIP **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class MasterEIPResponseStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * privateEndpoint  集群访问的PrivateIP(HA集群返回VIP)
-    * publicEndpoint  集群访问的PublicIP
+    * privateEndpoint  **参数解释**： 集群访问的PrivateIP(HA集群返回VIP) **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * publicEndpoint  **参数解释**： 集群访问的PublicIP **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class MasterEIPResponseStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateEndpoint
-    *  集群访问的PrivateIP(HA集群返回VIP)
+    *  **参数解释**： 集群访问的PrivateIP(HA集群返回VIP) **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class MasterEIPResponseStatus implements ModelInterface, ArrayAccess
     /**
     * Sets privateEndpoint
     *
-    * @param string|null $privateEndpoint 集群访问的PrivateIP(HA集群返回VIP)
+    * @param string|null $privateEndpoint **参数解释**： 集群访问的PrivateIP(HA集群返回VIP) **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class MasterEIPResponseStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicEndpoint
-    *  集群访问的PublicIP
+    *  **参数解释**： 集群访问的PublicIP **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class MasterEIPResponseStatus implements ModelInterface, ArrayAccess
     /**
     * Sets publicEndpoint
     *
-    * @param string|null $publicEndpoint 集群访问的PublicIP
+    * @param string|null $publicEndpoint **参数解释**： 集群访问的PublicIP **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

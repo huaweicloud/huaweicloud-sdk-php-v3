@@ -180,31 +180,40 @@ class CycleImageScanPolicyReqInfoRegistryInfo implements ModelInterface, ArrayAc
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['registryId']) && (mb_strlen($this->container['registryId']) > 256)) {
+        if ($this->container['registryId'] === null) {
+            $invalidProperties[] = "'registryId' can't be null";
+        }
+            if ((mb_strlen($this->container['registryId']) > 256)) {
                 $invalidProperties[] = "invalid value for 'registryId', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['registryId']) && (mb_strlen($this->container['registryId']) < 1)) {
+            if ((mb_strlen($this->container['registryId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'registryId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['registryId']) && !preg_match("/^.*$/", $this->container['registryId'])) {
+            if (!preg_match("/^.*$/", $this->container['registryId'])) {
                 $invalidProperties[] = "invalid value for 'registryId', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['registryName']) && (mb_strlen($this->container['registryName']) > 128)) {
+        if ($this->container['registryName'] === null) {
+            $invalidProperties[] = "'registryName' can't be null";
+        }
+            if ((mb_strlen($this->container['registryName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'registryName', the character length must be smaller than or equal to 128.";
             }
-            if (!is_null($this->container['registryName']) && (mb_strlen($this->container['registryName']) < 1)) {
+            if ((mb_strlen($this->container['registryName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'registryName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['registryName']) && !preg_match("/^.*$/", $this->container['registryName'])) {
+            if (!preg_match("/^.*$/", $this->container['registryName'])) {
                 $invalidProperties[] = "invalid value for 'registryName', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['registryType']) && (mb_strlen($this->container['registryType']) > 256)) {
+        if ($this->container['registryType'] === null) {
+            $invalidProperties[] = "'registryType' can't be null";
+        }
+            if ((mb_strlen($this->container['registryType']) > 256)) {
                 $invalidProperties[] = "invalid value for 'registryType', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['registryType']) && (mb_strlen($this->container['registryType']) < 1)) {
+            if ((mb_strlen($this->container['registryType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'registryType', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['registryType']) && !preg_match("/^.*$/", $this->container['registryType'])) {
+            if (!preg_match("/^.*$/", $this->container['registryType'])) {
                 $invalidProperties[] = "invalid value for 'registryType', must be conform to the pattern /^.*$/.";
             }
         return $invalidProperties;
@@ -225,7 +234,7 @@ class CycleImageScanPolicyReqInfoRegistryInfo implements ModelInterface, ArrayAc
     * Gets registryId
     *  镜像仓库Id
     *
-    * @return string|null
+    * @return string
     */
     public function getRegistryId()
     {
@@ -235,7 +244,7 @@ class CycleImageScanPolicyReqInfoRegistryInfo implements ModelInterface, ArrayAc
     /**
     * Sets registryId
     *
-    * @param string|null $registryId 镜像仓库Id
+    * @param string $registryId 镜像仓库Id
     *
     * @return $this
     */
@@ -249,7 +258,7 @@ class CycleImageScanPolicyReqInfoRegistryInfo implements ModelInterface, ArrayAc
     * Gets registryName
     *  镜像仓库名称
     *
-    * @return string|null
+    * @return string
     */
     public function getRegistryName()
     {
@@ -259,7 +268,7 @@ class CycleImageScanPolicyReqInfoRegistryInfo implements ModelInterface, ArrayAc
     /**
     * Sets registryName
     *
-    * @param string|null $registryName 镜像仓库名称
+    * @param string $registryName 镜像仓库名称
     *
     * @return $this
     */
@@ -273,7 +282,7 @@ class CycleImageScanPolicyReqInfoRegistryInfo implements ModelInterface, ArrayAc
     * Gets registryType
     *  镜像仓库类型 | SwrPrivate:swr私有 SwrShared:swr共享 SwrEnterprise:swr企业 Harbor:harbor仓库 Jfrog:jfrog仓库 Other:其他仓库
     *
-    * @return string|null
+    * @return string
     */
     public function getRegistryType()
     {
@@ -283,7 +292,7 @@ class CycleImageScanPolicyReqInfoRegistryInfo implements ModelInterface, ArrayAc
     /**
     * Sets registryType
     *
-    * @param string|null $registryType 镜像仓库类型 | SwrPrivate:swr私有 SwrShared:swr共享 SwrEnterprise:swr企业 Harbor:harbor仓库 Jfrog:jfrog仓库 Other:其他仓库
+    * @param string $registryType 镜像仓库类型 | SwrPrivate:swr私有 SwrShared:swr共享 SwrEnterprise:swr企业 Harbor:harbor仓库 Jfrog:jfrog仓库 Other:其他仓库
     *
     * @return $this
     */

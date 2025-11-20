@@ -21,7 +21,7 @@ class TrainingAllocatedResource implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resourceId  资源ID。
-    * chargeMode  资源计费类型。 * PERIODIC: 包周期 * ONE_TIME：一次性计费 > * 一次性计费包括：租户订购的一次性资源，SP管理员分配给租户的一次性资源。
+    * chargeMode  资源计费类型。 * PERIODIC: 包周期 * ONE_TIME：一次性计费 > * 一次性计费包括：租户订购的一次性资源，SP管理员分配给租户的一次性资源。 * ON_DEMAND: 按需
     * expireTime  资源过期时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     *
     * @var string[]
@@ -35,7 +35,7 @@ class TrainingAllocatedResource implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resourceId  资源ID。
-    * chargeMode  资源计费类型。 * PERIODIC: 包周期 * ONE_TIME：一次性计费 > * 一次性计费包括：租户订购的一次性资源，SP管理员分配给租户的一次性资源。
+    * chargeMode  资源计费类型。 * PERIODIC: 包周期 * ONE_TIME：一次性计费 > * 一次性计费包括：租户订购的一次性资源，SP管理员分配给租户的一次性资源。 * ON_DEMAND: 按需
     * expireTime  资源过期时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     *
     * @var string[]
@@ -70,7 +70,7 @@ class TrainingAllocatedResource implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resourceId  资源ID。
-    * chargeMode  资源计费类型。 * PERIODIC: 包周期 * ONE_TIME：一次性计费 > * 一次性计费包括：租户订购的一次性资源，SP管理员分配给租户的一次性资源。
+    * chargeMode  资源计费类型。 * PERIODIC: 包周期 * ONE_TIME：一次性计费 > * 一次性计费包括：租户订购的一次性资源，SP管理员分配给租户的一次性资源。 * ON_DEMAND: 按需
     * expireTime  资源过期时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     *
     * @var string[]
@@ -84,7 +84,7 @@ class TrainingAllocatedResource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceId  资源ID。
-    * chargeMode  资源计费类型。 * PERIODIC: 包周期 * ONE_TIME：一次性计费 > * 一次性计费包括：租户订购的一次性资源，SP管理员分配给租户的一次性资源。
+    * chargeMode  资源计费类型。 * PERIODIC: 包周期 * ONE_TIME：一次性计费 > * 一次性计费包括：租户订购的一次性资源，SP管理员分配给租户的一次性资源。 * ON_DEMAND: 按需
     * expireTime  资源过期时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     *
     * @var string[]
@@ -98,7 +98,7 @@ class TrainingAllocatedResource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resourceId  资源ID。
-    * chargeMode  资源计费类型。 * PERIODIC: 包周期 * ONE_TIME：一次性计费 > * 一次性计费包括：租户订购的一次性资源，SP管理员分配给租户的一次性资源。
+    * chargeMode  资源计费类型。 * PERIODIC: 包周期 * ONE_TIME：一次性计费 > * 一次性计费包括：租户订购的一次性资源，SP管理员分配给租户的一次性资源。 * ON_DEMAND: 按需
     * expireTime  资源过期时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     *
     * @var string[]
@@ -151,6 +151,7 @@ class TrainingAllocatedResource implements ModelInterface, ArrayAccess
     }
     const CHARGE_MODE_PERIODIC = 'PERIODIC';
     const CHARGE_MODE_ONE_TIME = 'ONE_TIME';
+    const CHARGE_MODE_ON_DEMAND = 'ON_DEMAND';
     
 
     /**
@@ -163,6 +164,7 @@ class TrainingAllocatedResource implements ModelInterface, ArrayAccess
         return [
             self::CHARGE_MODE_PERIODIC,
             self::CHARGE_MODE_ONE_TIME,
+            self::CHARGE_MODE_ON_DEMAND,
         ];
     }
 
@@ -255,7 +257,7 @@ class TrainingAllocatedResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  资源计费类型。 * PERIODIC: 包周期 * ONE_TIME：一次性计费 > * 一次性计费包括：租户订购的一次性资源，SP管理员分配给租户的一次性资源。
+    *  资源计费类型。 * PERIODIC: 包周期 * ONE_TIME：一次性计费 > * 一次性计费包括：租户订购的一次性资源，SP管理员分配给租户的一次性资源。 * ON_DEMAND: 按需
     *
     * @return string|null
     */
@@ -267,7 +269,7 @@ class TrainingAllocatedResource implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string|null $chargeMode 资源计费类型。 * PERIODIC: 包周期 * ONE_TIME：一次性计费 > * 一次性计费包括：租户订购的一次性资源，SP管理员分配给租户的一次性资源。
+    * @param string|null $chargeMode 资源计费类型。 * PERIODIC: 包周期 * ONE_TIME：一次性计费 > * 一次性计费包括：租户订购的一次性资源，SP管理员分配给租户的一次性资源。 * ON_DEMAND: 按需
     *
     * @return $this
     */

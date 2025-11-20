@@ -24,6 +24,8 @@ class ListDDoSConnectionNumberRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间（毫秒时间戳）
     * instanceId  实例id
     * ip  高防ip
+    * limit  限制条数
+    * offset  偏移量
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class ListDDoSConnectionNumberRequest implements ModelInterface, ArrayAccess
             'startTime' => 'string',
             'endTime' => 'string',
             'instanceId' => 'string',
-            'ip' => 'string'
+            'ip' => 'string',
+            'limit' => 'int',
+            'offset' => 'int'
     ];
 
     /**
@@ -40,6 +44,8 @@ class ListDDoSConnectionNumberRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间（毫秒时间戳）
     * instanceId  实例id
     * ip  高防ip
+    * limit  限制条数
+    * offset  偏移量
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class ListDDoSConnectionNumberRequest implements ModelInterface, ArrayAccess
         'startTime' => null,
         'endTime' => null,
         'instanceId' => null,
-        'ip' => null
+        'ip' => null,
+        'limit' => 'int32',
+        'offset' => 'int32'
     ];
 
     /**
@@ -77,6 +85,8 @@ class ListDDoSConnectionNumberRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间（毫秒时间戳）
     * instanceId  实例id
     * ip  高防ip
+    * limit  限制条数
+    * offset  偏移量
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class ListDDoSConnectionNumberRequest implements ModelInterface, ArrayAccess
             'startTime' => 'start_time',
             'endTime' => 'end_time',
             'instanceId' => 'instance_id',
-            'ip' => 'ip'
+            'ip' => 'ip',
+            'limit' => 'limit',
+            'offset' => 'offset'
     ];
 
     /**
@@ -93,6 +105,8 @@ class ListDDoSConnectionNumberRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间（毫秒时间戳）
     * instanceId  实例id
     * ip  高防ip
+    * limit  限制条数
+    * offset  偏移量
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class ListDDoSConnectionNumberRequest implements ModelInterface, ArrayAccess
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
             'instanceId' => 'setInstanceId',
-            'ip' => 'setIp'
+            'ip' => 'setIp',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset'
     ];
 
     /**
@@ -109,6 +125,8 @@ class ListDDoSConnectionNumberRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间（毫秒时间戳）
     * instanceId  实例id
     * ip  高防ip
+    * limit  限制条数
+    * offset  偏移量
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class ListDDoSConnectionNumberRequest implements ModelInterface, ArrayAccess
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
             'instanceId' => 'getInstanceId',
-            'ip' => 'getIp'
+            'ip' => 'getIp',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset'
     ];
 
     /**
@@ -181,6 +201,8 @@ class ListDDoSConnectionNumberRequest implements ModelInterface, ArrayAccess
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**
@@ -203,6 +225,15 @@ class ListDDoSConnectionNumberRequest implements ModelInterface, ArrayAccess
         if ($this->container['ip'] === null) {
             $invalidProperties[] = "'ip' can't be null";
         }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -310,6 +341,54 @@ class ListDDoSConnectionNumberRequest implements ModelInterface, ArrayAccess
     public function setIp($ip)
     {
         $this->container['ip'] = $ip;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  限制条数
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 限制条数
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  偏移量
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 偏移量
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
         return $this;
     }
 

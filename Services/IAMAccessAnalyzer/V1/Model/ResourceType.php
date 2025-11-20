@@ -14,6 +14,9 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     const IAMUSER = 'iam:user';
     const KMSCMK = 'kms:cmk';
     const OBSBUCKET = 'obs:bucket';
+    const SWRREPO = 'swr:repo';
+    const CBRBACKUP = 'cbr:backup';
+    const IMSIMAGE = 'ims:image';
     
     /**
      * Gets allowable values of the enum
@@ -26,6 +29,9 @@ use HuaweiCloud\SDK\Core\SdkResponse;
             self::IAMUSER,
             self::KMSCMK,
             self::OBSBUCKET,
+            self::SWRREPO,
+            self::CBRBACKUP,
+            self::IMSIMAGE,
         ];
     }
 }

@@ -340,6 +340,74 @@ class AadClient extends Client
     }
 
     /**
+     * 黑洞事件列表
+     *
+     * 黑洞事件列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDDoSBlackHoleEvent($request)
+    {
+        return $this->listDDoSBlackHoleEventWithHttpInfo($request);
+    }
+
+    public function listDDoSBlackHoleEventWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/aad/instances/ddos-info/attack/blackhole-event';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['ip'] !== null) {
+            $queryParams['ip'] = $localVarParams['ip'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V2\Model\ListDDoSBlackHoleEventResponse',
+            $requestType='\HuaweiCloud\SDK\Aad\V2\Model\ListDDoSBlackHoleEventRequest');
+    }
+
+    /**
      * 查询新建连接数和并发连接数
      *
      * 查询新建连接数和并发连接数
@@ -378,6 +446,12 @@ class AadClient extends Client
         }
         if ($localVarParams['ip'] !== null) {
             $queryParams['ip'] = $localVarParams['ip'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
@@ -547,6 +621,65 @@ class AadClient extends Client
     }
 
     /**
+     * 查询控制台WAF全局配置
+     *
+     * 查询控制台WAF全局配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listGlobalConfig($request)
+    {
+        return $this->listGlobalConfigWithHttpInfo($request);
+    }
+
+    public function listGlobalConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/aad/domains/global-config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V2\Model\ListGlobalConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Aad\V2\Model\ListGlobalConfigRequest');
+    }
+
+    /**
      * 查询实例关联的域名信息
      *
      * 查询实例关联的域名信息
@@ -577,6 +710,12 @@ class AadClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
         }
@@ -606,6 +745,65 @@ class AadClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Aad\V2\Model\ListInstanceDomainsResponse',
             $requestType='\HuaweiCloud\SDK\Aad\V2\Model\ListInstanceDomainsRequest');
+    }
+
+    /**
+     * 查询回源ip列表
+     *
+     * 查询回源ip列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSourceIp($request)
+    {
+        return $this->listSourceIpWithHttpInfo($request);
+    }
+
+    public function listSourceIpWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/aad/source-ip';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V2\Model\ListSourceIpResponse',
+            $requestType='\HuaweiCloud\SDK\Aad\V2\Model\ListSourceIpRequest');
     }
 
     /**
@@ -947,6 +1145,12 @@ class AadClient extends Client
         if ($localVarParams['overseasType'] !== null) {
             $queryParams['overseas_type'] = $localVarParams['overseasType'];
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
@@ -1106,6 +1310,136 @@ class AadClient extends Client
     }
 
     /**
+     * 查询告警设置
+     *
+     * 查询告警设置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAlarmConfig($request)
+    {
+        return $this->showAlarmConfigWithHttpInfo($request);
+    }
+
+    public function showAlarmConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/aad/alarm';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V2\Model\ShowAlarmConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Aad\V2\Model\ShowAlarmConfigRequest');
+    }
+
+    /**
+     * 查询高防入流量峰值、攻击流量峰值、DDoS攻击次数
+     *
+     * 查询高防入流量峰值、攻击流量峰值、DDoS攻击次数
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDDoSPeak($request)
+    {
+        return $this->showDDoSPeakWithHttpInfo($request);
+    }
+
+    public function showDDoSPeakWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/aad/instances/{instance_id}/ddos-info/flow/peak';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['ip'] !== null) {
+            $queryParams['ip'] = $localVarParams['ip'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V2\Model\ShowDDoSPeakResponse',
+            $requestType='\HuaweiCloud\SDK\Aad\V2\Model\ShowDDoSPeakRequest');
+    }
+
+    /**
      * 查询域名关联的证书信息
      *
      * 查询域名关联的证书信息
@@ -1168,6 +1502,133 @@ class AadClient extends Client
     }
 
     /**
+     * 查询域名详情
+     *
+     * 查询域名详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDomainDetail($request)
+    {
+        return $this->showDomainDetailWithHttpInfo($request);
+    }
+
+    public function showDomainDetailWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/aad/domains/{domain_id}/detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domainId'] !== null) {
+            $pathParams['domain_id'] = $localVarParams['domainId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V2\Model\ShowDomainDetailResponse',
+            $requestType='\HuaweiCloud\SDK\Aad\V2\Model\ShowDomainDetailRequest');
+    }
+
+    /**
+     * 查看域名配置
+     *
+     * 查看域名配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDomainNameConfig($request)
+    {
+        return $this->showDomainNameConfigWithHttpInfo($request);
+    }
+
+    public function showDomainNameConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/aad/domains/{domain_id}/config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['domainId'] !== null) {
+            $pathParams['domain_id'] = $localVarParams['domainId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V2\Model\ShowDomainNameConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Aad\V2\Model\ShowDomainNameConfigRequest');
+    }
+
+    /**
      * 查询流量封禁信息
      *
      * 查询流量封禁信息
@@ -1227,6 +1688,68 @@ class AadClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Aad\V2\Model\ShowFlowBlockResponse',
             $requestType='\HuaweiCloud\SDK\Aad\V2\Model\ShowFlowBlockRequest');
+    }
+
+    /**
+     * 查询实例详情
+     *
+     * 查询实例详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showInstanceByInstanceId($request)
+    {
+        return $this->showInstanceByInstanceIdWithHttpInfo($request);
+    }
+
+    public function showInstanceByInstanceIdWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/aad/instances/{instance_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V2\Model\ShowInstanceByInstanceIdResponse',
+            $requestType='\HuaweiCloud\SDK\Aad\V2\Model\ShowInstanceByInstanceIdRequest');
     }
 
     /**
@@ -1366,6 +1889,142 @@ class AadClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Aad\V2\Model\ShowWafQpsResponse',
             $requestType='\HuaweiCloud\SDK\Aad\V2\Model\ShowWafQpsRequest');
+    }
+
+    /**
+     * 修改域名配置
+     *
+     * 修改域名配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDomainConfig($request)
+    {
+        return $this->updateDomainConfigWithHttpInfo($request);
+    }
+
+    public function updateDomainConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/aad/domains/{domain_id}/config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domainId'] !== null) {
+            $pathParams['domain_id'] = $localVarParams['domainId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V2\Model\UpdateDomainConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Aad\V2\Model\UpdateDomainConfigRequest');
+    }
+
+    /**
+     * 修改转发规则中的源站IP
+     *
+     * 修改转发规则中的源站IP
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateForwardRule($request)
+    {
+        return $this->updateForwardRuleWithHttpInfo($request);
+    }
+
+    public function updateForwardRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/aad/forward-rules/{instance_id}/{ip}/{rule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['ruleId'] !== null) {
+            $pathParams['rule_id'] = $localVarParams['ruleId'];
+        }
+        if ($localVarParams['ip'] !== null) {
+            $pathParams['ip'] = $localVarParams['ip'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V2\Model\UpdateForwardRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Aad\V2\Model\UpdateForwardRuleRequest');
     }
 
     /**

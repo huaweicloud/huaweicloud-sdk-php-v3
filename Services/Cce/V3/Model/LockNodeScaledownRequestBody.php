@@ -20,9 +20,9 @@ class LockNodeScaledownRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * apiVersion  **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
-    * kind  **参数解释**： API版本，固定值“List”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
-    * nodeList  **参数解释**： 需要关闭缩容保护的节点ID列表，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及
+    * apiVersion  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
+    * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
+    * nodeList  **参数解释**： 需要开启缩容保护的节点ID列表，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class LockNodeScaledownRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * apiVersion  **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
-    * kind  **参数解释**： API版本，固定值“List”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
-    * nodeList  **参数解释**： 需要关闭缩容保护的节点ID列表，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及
+    * apiVersion  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
+    * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
+    * nodeList  **参数解释**： 需要开启缩容保护的节点ID列表，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class LockNodeScaledownRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * apiVersion  **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
-    * kind  **参数解释**： API版本，固定值“List”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
-    * nodeList  **参数解释**： 需要关闭缩容保护的节点ID列表，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及
+    * apiVersion  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
+    * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
+    * nodeList  **参数解释**： 需要开启缩容保护的节点ID列表，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class LockNodeScaledownRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * apiVersion  **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
-    * kind  **参数解释**： API版本，固定值“List”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
-    * nodeList  **参数解释**： 需要关闭缩容保护的节点ID列表，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及
+    * apiVersion  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
+    * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
+    * nodeList  **参数解释**： 需要开启缩容保护的节点ID列表，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class LockNodeScaledownRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * apiVersion  **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
-    * kind  **参数解释**： API版本，固定值“List”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
-    * nodeList  **参数解释**： 需要关闭缩容保护的节点ID列表，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及
+    * apiVersion  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
+    * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
+    * nodeList  **参数解释**： 需要开启缩容保护的节点ID列表，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -202,7 +202,7 @@ class LockNodeScaledownRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiVersion
-    *  **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
+    *  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
     *
     * @return string
     */
@@ -214,7 +214,7 @@ class LockNodeScaledownRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets apiVersion
     *
-    * @param string $apiVersion **参数解释**： API版本，固定值“v3”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
+    * @param string $apiVersion **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
     *
     * @return $this
     */
@@ -226,7 +226,7 @@ class LockNodeScaledownRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets kind
-    *  **参数解释**： API版本，固定值“List”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
+    *  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
     *
     * @return string
     */
@@ -238,7 +238,7 @@ class LockNodeScaledownRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets kind
     *
-    * @param string $kind **参数解释**： API版本，固定值“List”。 **约束限制**： 不涉及 **取值范围**： 只能为固定值“v3”。 **默认取值**： 不涉及
+    * @param string $kind **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
     *
     * @return $this
     */
@@ -250,7 +250,7 @@ class LockNodeScaledownRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeList
-    *  **参数解释**： 需要关闭缩容保护的节点ID列表，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及
+    *  **参数解释**： 需要开启缩容保护的节点ID列表，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string[]|null
     */
@@ -262,7 +262,7 @@ class LockNodeScaledownRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets nodeList
     *
-    * @param string[]|null $nodeList **参数解释**： 需要关闭缩容保护的节点ID列表，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及
+    * @param string[]|null $nodeList **参数解释**： 需要开启缩容保护的节点ID列表，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

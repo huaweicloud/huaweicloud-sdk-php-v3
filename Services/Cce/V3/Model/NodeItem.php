@@ -20,7 +20,7 @@ class NodeItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * uid  节点ID
+    * uid  **参数解释**： 节点ID，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class NodeItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * uid  节点ID
+    * uid  **参数解释**： 节点ID，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class NodeItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * uid  节点ID
+    * uid  **参数解释**： 节点ID，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class NodeItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * uid  节点ID
+    * uid  **参数解释**： 节点ID，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class NodeItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * uid  节点ID
+    * uid  **参数解释**： 节点ID，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class NodeItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets uid
-    *  节点ID
+    *  **参数解释**： 节点ID，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class NodeItem implements ModelInterface, ArrayAccess
     /**
     * Sets uid
     *
-    * @param string $uid 节点ID
+    * @param string $uid **参数解释**： 节点ID，节点ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

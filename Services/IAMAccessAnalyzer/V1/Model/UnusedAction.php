@@ -20,22 +20,26 @@ class UnusedAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  Action 名称。
+    * action  授权项名称。
+    * lastAccessed  用户使用授权项的最后访问时间。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'action' => 'string'
+            'action' => 'string',
+            'lastAccessed' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  Action 名称。
+    * action  授权项名称。
+    * lastAccessed  用户使用授权项的最后访问时间。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'action' => null
+        'action' => null,
+        'lastAccessed' => 'date-time'
     ];
 
     /**
@@ -61,32 +65,38 @@ class UnusedAction implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  Action 名称。
+    * action  授权项名称。
+    * lastAccessed  用户使用授权项的最后访问时间。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'action' => 'action'
+            'action' => 'action',
+            'lastAccessed' => 'last_accessed'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  Action 名称。
+    * action  授权项名称。
+    * lastAccessed  用户使用授权项的最后访问时间。
     *
     * @var string[]
     */
     protected static $setters = [
-            'action' => 'setAction'
+            'action' => 'setAction',
+            'lastAccessed' => 'setLastAccessed'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  Action 名称。
+    * action  授权项名称。
+    * lastAccessed  用户使用授权项的最后访问时间。
     *
     * @var string[]
     */
     protected static $getters = [
-            'action' => 'getAction'
+            'action' => 'getAction',
+            'lastAccessed' => 'getLastAccessed'
     ];
 
     /**
@@ -148,6 +158,7 @@ class UnusedAction implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
+        $this->container['lastAccessed'] = isset($data['lastAccessed']) ? $data['lastAccessed'] : null;
     }
 
     /**
@@ -177,7 +188,7 @@ class UnusedAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  Action 名称。
+    *  授权项名称。
     *
     * @return string
     */
@@ -189,13 +200,37 @@ class UnusedAction implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string $action Action 名称。
+    * @param string $action 授权项名称。
     *
     * @return $this
     */
     public function setAction($action)
     {
         $this->container['action'] = $action;
+        return $this;
+    }
+
+    /**
+    * Gets lastAccessed
+    *  用户使用授权项的最后访问时间。
+    *
+    * @return object|null
+    */
+    public function getLastAccessed()
+    {
+        return $this->container['lastAccessed'];
+    }
+
+    /**
+    * Sets lastAccessed
+    *
+    * @param object|null $lastAccessed 用户使用授权项的最后访问时间。
+    *
+    * @return $this
+    */
+    public function setLastAccessed($lastAccessed)
+    {
+        $this->container['lastAccessed'] = $lastAccessed;
         return $this;
     }
 

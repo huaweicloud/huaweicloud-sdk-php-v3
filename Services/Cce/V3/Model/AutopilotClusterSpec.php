@@ -41,6 +41,9 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
     * kubeProxyMode  服务转发模式：  - iptables：社区传统的kube-proxy模式，完全以iptables规则的方式来实现service负载均衡。该方式最主要的问题是在服务多的时候产生太多的iptables规则，非增量式更新会引入一定的时延，大规模情况下有明显的性能问题。  > 默认使用iptables转发模式。
     * az  可用区（仅查询返回字段）。  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/endpoint?CCE)](tag:hws)  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?CCE)](tag:hws_hk)
     * extendParam  extendParam
+    * enableMasterVolumeEncryption  **参数解释：** 集群控制节点系统盘、数据盘加密。默认使用AES_256加密算法。CCE、Turbo集群1.25及以上版本开始支持。 **约束限制：** 集群创建后不支持修改。开启后存在一定的磁盘读写性能损耗。 **取值范围：** - true: 开启控制节点磁盘加密 - false: 关闭控制节点磁盘加密  **默认取值：** 默认false
+    * enableDistMgt  **参数解释：** 集群开启对分布式云支持。 **约束限制：** 目前只有Turbo集群支持。 **取值范围：** - true: 开启对分布式云支持 - false: 关闭对分布式云支持  **默认取值：** 默认false
+    * deletionProtection  **参数解释：** 集群删除保护，如果开启后用户将无法删除该集群。 **约束限制：** 不涉及。 **取值范围：** - true: 开启集群删除保护 - false: 关闭集群删除保护  **默认取值：** 默认false
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
     *
     * @var string[]
@@ -67,6 +70,9 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
             'kubeProxyMode' => 'string',
             'az' => 'string',
             'extendParam' => '\HuaweiCloud\SDK\Cce\V3\Model\AutopilotClusterExtendParam',
+            'enableMasterVolumeEncryption' => 'bool',
+            'enableDistMgt' => 'bool',
+            'deletionProtection' => 'bool',
             'configurationsOverride' => '\HuaweiCloud\SDK\Cce\V3\Model\AutopilotPackageConfiguration[]'
     ];
 
@@ -93,6 +99,9 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
     * kubeProxyMode  服务转发模式：  - iptables：社区传统的kube-proxy模式，完全以iptables规则的方式来实现service负载均衡。该方式最主要的问题是在服务多的时候产生太多的iptables规则，非增量式更新会引入一定的时延，大规模情况下有明显的性能问题。  > 默认使用iptables转发模式。
     * az  可用区（仅查询返回字段）。  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/endpoint?CCE)](tag:hws)  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?CCE)](tag:hws_hk)
     * extendParam  extendParam
+    * enableMasterVolumeEncryption  **参数解释：** 集群控制节点系统盘、数据盘加密。默认使用AES_256加密算法。CCE、Turbo集群1.25及以上版本开始支持。 **约束限制：** 集群创建后不支持修改。开启后存在一定的磁盘读写性能损耗。 **取值范围：** - true: 开启控制节点磁盘加密 - false: 关闭控制节点磁盘加密  **默认取值：** 默认false
+    * enableDistMgt  **参数解释：** 集群开启对分布式云支持。 **约束限制：** 目前只有Turbo集群支持。 **取值范围：** - true: 开启对分布式云支持 - false: 关闭对分布式云支持  **默认取值：** 默认false
+    * deletionProtection  **参数解释：** 集群删除保护，如果开启后用户将无法删除该集群。 **约束限制：** 不涉及。 **取值范围：** - true: 开启集群删除保护 - false: 关闭集群删除保护  **默认取值：** 默认false
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
     *
     * @var string[]
@@ -119,6 +128,9 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
         'kubeProxyMode' => null,
         'az' => null,
         'extendParam' => null,
+        'enableMasterVolumeEncryption' => null,
+        'enableDistMgt' => null,
+        'deletionProtection' => null,
         'configurationsOverride' => null
     ];
 
@@ -166,6 +178,9 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
     * kubeProxyMode  服务转发模式：  - iptables：社区传统的kube-proxy模式，完全以iptables规则的方式来实现service负载均衡。该方式最主要的问题是在服务多的时候产生太多的iptables规则，非增量式更新会引入一定的时延，大规模情况下有明显的性能问题。  > 默认使用iptables转发模式。
     * az  可用区（仅查询返回字段）。  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/endpoint?CCE)](tag:hws)  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?CCE)](tag:hws_hk)
     * extendParam  extendParam
+    * enableMasterVolumeEncryption  **参数解释：** 集群控制节点系统盘、数据盘加密。默认使用AES_256加密算法。CCE、Turbo集群1.25及以上版本开始支持。 **约束限制：** 集群创建后不支持修改。开启后存在一定的磁盘读写性能损耗。 **取值范围：** - true: 开启控制节点磁盘加密 - false: 关闭控制节点磁盘加密  **默认取值：** 默认false
+    * enableDistMgt  **参数解释：** 集群开启对分布式云支持。 **约束限制：** 目前只有Turbo集群支持。 **取值范围：** - true: 开启对分布式云支持 - false: 关闭对分布式云支持  **默认取值：** 默认false
+    * deletionProtection  **参数解释：** 集群删除保护，如果开启后用户将无法删除该集群。 **约束限制：** 不涉及。 **取值范围：** - true: 开启集群删除保护 - false: 关闭集群删除保护  **默认取值：** 默认false
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
     *
     * @var string[]
@@ -192,6 +207,9 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
             'kubeProxyMode' => 'kubeProxyMode',
             'az' => 'az',
             'extendParam' => 'extendParam',
+            'enableMasterVolumeEncryption' => 'enableMasterVolumeEncryption',
+            'enableDistMgt' => 'enableDistMgt',
+            'deletionProtection' => 'deletionProtection',
             'configurationsOverride' => 'configurationsOverride'
     ];
 
@@ -218,6 +236,9 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
     * kubeProxyMode  服务转发模式：  - iptables：社区传统的kube-proxy模式，完全以iptables规则的方式来实现service负载均衡。该方式最主要的问题是在服务多的时候产生太多的iptables规则，非增量式更新会引入一定的时延，大规模情况下有明显的性能问题。  > 默认使用iptables转发模式。
     * az  可用区（仅查询返回字段）。  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/endpoint?CCE)](tag:hws)  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?CCE)](tag:hws_hk)
     * extendParam  extendParam
+    * enableMasterVolumeEncryption  **参数解释：** 集群控制节点系统盘、数据盘加密。默认使用AES_256加密算法。CCE、Turbo集群1.25及以上版本开始支持。 **约束限制：** 集群创建后不支持修改。开启后存在一定的磁盘读写性能损耗。 **取值范围：** - true: 开启控制节点磁盘加密 - false: 关闭控制节点磁盘加密  **默认取值：** 默认false
+    * enableDistMgt  **参数解释：** 集群开启对分布式云支持。 **约束限制：** 目前只有Turbo集群支持。 **取值范围：** - true: 开启对分布式云支持 - false: 关闭对分布式云支持  **默认取值：** 默认false
+    * deletionProtection  **参数解释：** 集群删除保护，如果开启后用户将无法删除该集群。 **约束限制：** 不涉及。 **取值范围：** - true: 开启集群删除保护 - false: 关闭集群删除保护  **默认取值：** 默认false
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
     *
     * @var string[]
@@ -244,6 +265,9 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
             'kubeProxyMode' => 'setKubeProxyMode',
             'az' => 'setAz',
             'extendParam' => 'setExtendParam',
+            'enableMasterVolumeEncryption' => 'setEnableMasterVolumeEncryption',
+            'enableDistMgt' => 'setEnableDistMgt',
+            'deletionProtection' => 'setDeletionProtection',
             'configurationsOverride' => 'setConfigurationsOverride'
     ];
 
@@ -270,6 +294,9 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
     * kubeProxyMode  服务转发模式：  - iptables：社区传统的kube-proxy模式，完全以iptables规则的方式来实现service负载均衡。该方式最主要的问题是在服务多的时候产生太多的iptables规则，非增量式更新会引入一定的时延，大规模情况下有明显的性能问题。  > 默认使用iptables转发模式。
     * az  可用区（仅查询返回字段）。  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/endpoint?CCE)](tag:hws)  [CCE支持的可用区请参考[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?CCE)](tag:hws_hk)
     * extendParam  extendParam
+    * enableMasterVolumeEncryption  **参数解释：** 集群控制节点系统盘、数据盘加密。默认使用AES_256加密算法。CCE、Turbo集群1.25及以上版本开始支持。 **约束限制：** 集群创建后不支持修改。开启后存在一定的磁盘读写性能损耗。 **取值范围：** - true: 开启控制节点磁盘加密 - false: 关闭控制节点磁盘加密  **默认取值：** 默认false
+    * enableDistMgt  **参数解释：** 集群开启对分布式云支持。 **约束限制：** 目前只有Turbo集群支持。 **取值范围：** - true: 开启对分布式云支持 - false: 关闭对分布式云支持  **默认取值：** 默认false
+    * deletionProtection  **参数解释：** 集群删除保护，如果开启后用户将无法删除该集群。 **约束限制：** 不涉及。 **取值范围：** - true: 开启集群删除保护 - false: 关闭集群删除保护  **默认取值：** 默认false
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
     *
     * @var string[]
@@ -296,6 +323,9 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
             'kubeProxyMode' => 'getKubeProxyMode',
             'az' => 'getAz',
             'extendParam' => 'getExtendParam',
+            'enableMasterVolumeEncryption' => 'getEnableMasterVolumeEncryption',
+            'enableDistMgt' => 'getEnableDistMgt',
+            'deletionProtection' => 'getDeletionProtection',
             'configurationsOverride' => 'getConfigurationsOverride'
     ];
 
@@ -417,6 +447,9 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
         $this->container['kubeProxyMode'] = isset($data['kubeProxyMode']) ? $data['kubeProxyMode'] : null;
         $this->container['az'] = isset($data['az']) ? $data['az'] : null;
         $this->container['extendParam'] = isset($data['extendParam']) ? $data['extendParam'] : null;
+        $this->container['enableMasterVolumeEncryption'] = isset($data['enableMasterVolumeEncryption']) ? $data['enableMasterVolumeEncryption'] : null;
+        $this->container['enableDistMgt'] = isset($data['enableDistMgt']) ? $data['enableDistMgt'] : null;
+        $this->container['deletionProtection'] = isset($data['deletionProtection']) ? $data['deletionProtection'] : null;
         $this->container['configurationsOverride'] = isset($data['configurationsOverride']) ? $data['configurationsOverride'] : null;
     }
 
@@ -985,6 +1018,78 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
     public function setExtendParam($extendParam)
     {
         $this->container['extendParam'] = $extendParam;
+        return $this;
+    }
+
+    /**
+    * Gets enableMasterVolumeEncryption
+    *  **参数解释：** 集群控制节点系统盘、数据盘加密。默认使用AES_256加密算法。CCE、Turbo集群1.25及以上版本开始支持。 **约束限制：** 集群创建后不支持修改。开启后存在一定的磁盘读写性能损耗。 **取值范围：** - true: 开启控制节点磁盘加密 - false: 关闭控制节点磁盘加密  **默认取值：** 默认false
+    *
+    * @return bool|null
+    */
+    public function getEnableMasterVolumeEncryption()
+    {
+        return $this->container['enableMasterVolumeEncryption'];
+    }
+
+    /**
+    * Sets enableMasterVolumeEncryption
+    *
+    * @param bool|null $enableMasterVolumeEncryption **参数解释：** 集群控制节点系统盘、数据盘加密。默认使用AES_256加密算法。CCE、Turbo集群1.25及以上版本开始支持。 **约束限制：** 集群创建后不支持修改。开启后存在一定的磁盘读写性能损耗。 **取值范围：** - true: 开启控制节点磁盘加密 - false: 关闭控制节点磁盘加密  **默认取值：** 默认false
+    *
+    * @return $this
+    */
+    public function setEnableMasterVolumeEncryption($enableMasterVolumeEncryption)
+    {
+        $this->container['enableMasterVolumeEncryption'] = $enableMasterVolumeEncryption;
+        return $this;
+    }
+
+    /**
+    * Gets enableDistMgt
+    *  **参数解释：** 集群开启对分布式云支持。 **约束限制：** 目前只有Turbo集群支持。 **取值范围：** - true: 开启对分布式云支持 - false: 关闭对分布式云支持  **默认取值：** 默认false
+    *
+    * @return bool|null
+    */
+    public function getEnableDistMgt()
+    {
+        return $this->container['enableDistMgt'];
+    }
+
+    /**
+    * Sets enableDistMgt
+    *
+    * @param bool|null $enableDistMgt **参数解释：** 集群开启对分布式云支持。 **约束限制：** 目前只有Turbo集群支持。 **取值范围：** - true: 开启对分布式云支持 - false: 关闭对分布式云支持  **默认取值：** 默认false
+    *
+    * @return $this
+    */
+    public function setEnableDistMgt($enableDistMgt)
+    {
+        $this->container['enableDistMgt'] = $enableDistMgt;
+        return $this;
+    }
+
+    /**
+    * Gets deletionProtection
+    *  **参数解释：** 集群删除保护，如果开启后用户将无法删除该集群。 **约束限制：** 不涉及。 **取值范围：** - true: 开启集群删除保护 - false: 关闭集群删除保护  **默认取值：** 默认false
+    *
+    * @return bool|null
+    */
+    public function getDeletionProtection()
+    {
+        return $this->container['deletionProtection'];
+    }
+
+    /**
+    * Sets deletionProtection
+    *
+    * @param bool|null $deletionProtection **参数解释：** 集群删除保护，如果开启后用户将无法删除该集群。 **约束限制：** 不涉及。 **取值范围：** - true: 开启集群删除保护 - false: 关闭集群删除保护  **默认取值：** 默认false
+    *
+    * @return $this
+    */
+    public function setDeletionProtection($deletionProtection)
+    {
+        $this->container['deletionProtection'] = $deletionProtection;
         return $this;
     }
 

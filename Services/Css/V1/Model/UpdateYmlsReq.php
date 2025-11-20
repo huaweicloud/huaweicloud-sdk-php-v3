@@ -21,21 +21,25 @@ class UpdateYmlsReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * edit  edit
+    * instType  节点类型 目前koosearch集群涉及不同类型的节点。 kos: koosearch的搜索中控节点 kos-doc: koosearch的文档解析节点
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'edit' => '\HuaweiCloud\SDK\Css\V1\Model\UpdateYmlsReqEdit'
+            'edit' => '\HuaweiCloud\SDK\Css\V1\Model\UpdateYmlsReqEdit',
+            'instType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * edit  edit
+    * instType  节点类型 目前koosearch集群涉及不同类型的节点。 kos: koosearch的搜索中控节点 kos-doc: koosearch的文档解析节点
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'edit' => null
+        'edit' => null,
+        'instType' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class UpdateYmlsReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * edit  edit
+    * instType  节点类型 目前koosearch集群涉及不同类型的节点。 kos: koosearch的搜索中控节点 kos-doc: koosearch的文档解析节点
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'edit' => 'edit'
+            'edit' => 'edit',
+            'instType' => 'inst_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * edit  edit
+    * instType  节点类型 目前koosearch集群涉及不同类型的节点。 kos: koosearch的搜索中控节点 kos-doc: koosearch的文档解析节点
     *
     * @var string[]
     */
     protected static $setters = [
-            'edit' => 'setEdit'
+            'edit' => 'setEdit',
+            'instType' => 'setInstType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * edit  edit
+    * instType  节点类型 目前koosearch集群涉及不同类型的节点。 kos: koosearch的搜索中控节点 kos-doc: koosearch的文档解析节点
     *
     * @var string[]
     */
     protected static $getters = [
-            'edit' => 'getEdit'
+            'edit' => 'getEdit',
+            'instType' => 'getInstType'
     ];
 
     /**
@@ -129,7 +139,22 @@ class UpdateYmlsReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const INST_TYPE_KOS = 'kos';
+    const INST_TYPE_KOS_DOC = 'kos-doc';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getInstTypeAllowableValues()
+    {
+        return [
+            self::INST_TYPE_KOS,
+            self::INST_TYPE_KOS_DOC,
+        ];
+    }
 
 
     /**
@@ -148,6 +173,7 @@ class UpdateYmlsReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['edit'] = isset($data['edit']) ? $data['edit'] : null;
+        $this->container['instType'] = isset($data['instType']) ? $data['instType'] : null;
     }
 
     /**
@@ -161,6 +187,14 @@ class UpdateYmlsReq implements ModelInterface, ArrayAccess
         if ($this->container['edit'] === null) {
             $invalidProperties[] = "'edit' can't be null";
         }
+            $allowedValues = $this->getInstTypeAllowableValues();
+                if (!is_null($this->container['instType']) && !in_array($this->container['instType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'instType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -196,6 +230,30 @@ class UpdateYmlsReq implements ModelInterface, ArrayAccess
     public function setEdit($edit)
     {
         $this->container['edit'] = $edit;
+        return $this;
+    }
+
+    /**
+    * Gets instType
+    *  节点类型 目前koosearch集群涉及不同类型的节点。 kos: koosearch的搜索中控节点 kos-doc: koosearch的文档解析节点
+    *
+    * @return string|null
+    */
+    public function getInstType()
+    {
+        return $this->container['instType'];
+    }
+
+    /**
+    * Sets instType
+    *
+    * @param string|null $instType 节点类型 目前koosearch集群涉及不同类型的节点。 kos: koosearch的搜索中控节点 kos-doc: koosearch的文档解析节点
+    *
+    * @return $this
+    */
+    public function setInstType($instType)
+    {
+        $this->container['instType'] = $instType;
         return $this;
     }
 

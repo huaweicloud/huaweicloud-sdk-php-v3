@@ -20,9 +20,9 @@ class JobMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * uid  任务的ID。
-    * creationTimestamp  任务的创建时间。
-    * updateTimestamp  任务的更新时间。
+    * uid  **参数解释**： 任务的ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 任务的创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 任务的更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class JobMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * uid  任务的ID。
-    * creationTimestamp  任务的创建时间。
-    * updateTimestamp  任务的更新时间。
+    * uid  **参数解释**： 任务的ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 任务的创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 任务的更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class JobMetadata implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * uid  任务的ID。
-    * creationTimestamp  任务的创建时间。
-    * updateTimestamp  任务的更新时间。
+    * uid  **参数解释**： 任务的ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 任务的创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 任务的更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class JobMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * uid  任务的ID。
-    * creationTimestamp  任务的创建时间。
-    * updateTimestamp  任务的更新时间。
+    * uid  **参数解释**： 任务的ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 任务的创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 任务的更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class JobMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * uid  任务的ID。
-    * creationTimestamp  任务的创建时间。
-    * updateTimestamp  任务的更新时间。
+    * uid  **参数解释**： 任务的ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 任务的创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 任务的更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class JobMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets uid
-    *  任务的ID。
+    *  **参数解释**： 任务的ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class JobMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets uid
     *
-    * @param string|null $uid 任务的ID。
+    * @param string|null $uid **参数解释**： 任务的ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class JobMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets creationTimestamp
-    *  任务的创建时间。
+    *  **参数解释**： 任务的创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class JobMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets creationTimestamp
     *
-    * @param string|null $creationTimestamp 任务的创建时间。
+    * @param string|null $creationTimestamp **参数解释**： 任务的创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class JobMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTimestamp
-    *  任务的更新时间。
+    *  **参数解释**： 任务的更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class JobMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets updateTimestamp
     *
-    * @param string|null $updateTimestamp 任务的更新时间。
+    * @param string|null $updateTimestamp **参数解释**： 任务的更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

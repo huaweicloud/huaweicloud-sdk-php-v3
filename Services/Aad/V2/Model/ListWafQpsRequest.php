@@ -26,6 +26,8 @@ class ListWafQpsRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间（毫秒时间戳）
     * recent  枚举值：yesterday,today,3days,1week,1month 与开始结束时间不同时为空
     * overseasType  实例类型，0-大陆，1-海外
+    * limit  限制条数
+    * offset  偏移量
     *
     * @var string[]
     */
@@ -35,7 +37,9 @@ class ListWafQpsRequest implements ModelInterface, ArrayAccess
             'startTime' => 'string',
             'endTime' => 'string',
             'recent' => 'string',
-            'overseasType' => 'int'
+            'overseasType' => 'int',
+            'limit' => 'int',
+            'offset' => 'int'
     ];
 
     /**
@@ -46,6 +50,8 @@ class ListWafQpsRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间（毫秒时间戳）
     * recent  枚举值：yesterday,today,3days,1week,1month 与开始结束时间不同时为空
     * overseasType  实例类型，0-大陆，1-海外
+    * limit  限制条数
+    * offset  偏移量
     *
     * @var string[]
     */
@@ -55,7 +61,9 @@ class ListWafQpsRequest implements ModelInterface, ArrayAccess
         'startTime' => 'int64',
         'endTime' => 'int64',
         'recent' => null,
-        'overseasType' => 'int32'
+        'overseasType' => 'int32',
+        'limit' => 'int32',
+        'offset' => 'int32'
     ];
 
     /**
@@ -87,6 +95,8 @@ class ListWafQpsRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间（毫秒时间戳）
     * recent  枚举值：yesterday,today,3days,1week,1month 与开始结束时间不同时为空
     * overseasType  实例类型，0-大陆，1-海外
+    * limit  限制条数
+    * offset  偏移量
     *
     * @var string[]
     */
@@ -96,7 +106,9 @@ class ListWafQpsRequest implements ModelInterface, ArrayAccess
             'startTime' => 'start_time',
             'endTime' => 'end_time',
             'recent' => 'recent',
-            'overseasType' => 'overseas_type'
+            'overseasType' => 'overseas_type',
+            'limit' => 'limit',
+            'offset' => 'offset'
     ];
 
     /**
@@ -107,6 +119,8 @@ class ListWafQpsRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间（毫秒时间戳）
     * recent  枚举值：yesterday,today,3days,1week,1month 与开始结束时间不同时为空
     * overseasType  实例类型，0-大陆，1-海外
+    * limit  限制条数
+    * offset  偏移量
     *
     * @var string[]
     */
@@ -116,7 +130,9 @@ class ListWafQpsRequest implements ModelInterface, ArrayAccess
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
             'recent' => 'setRecent',
-            'overseasType' => 'setOverseasType'
+            'overseasType' => 'setOverseasType',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset'
     ];
 
     /**
@@ -127,6 +143,8 @@ class ListWafQpsRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间（毫秒时间戳）
     * recent  枚举值：yesterday,today,3days,1week,1month 与开始结束时间不同时为空
     * overseasType  实例类型，0-大陆，1-海外
+    * limit  限制条数
+    * offset  偏移量
     *
     * @var string[]
     */
@@ -136,7 +154,9 @@ class ListWafQpsRequest implements ModelInterface, ArrayAccess
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
             'recent' => 'getRecent',
-            'overseasType' => 'getOverseasType'
+            'overseasType' => 'getOverseasType',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset'
     ];
 
     /**
@@ -203,6 +223,8 @@ class ListWafQpsRequest implements ModelInterface, ArrayAccess
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['recent'] = isset($data['recent']) ? $data['recent'] : null;
         $this->container['overseasType'] = isset($data['overseasType']) ? $data['overseasType'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**
@@ -216,6 +238,15 @@ class ListWafQpsRequest implements ModelInterface, ArrayAccess
         if ($this->container['valueType'] === null) {
             $invalidProperties[] = "'valueType' can't be null";
         }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -371,6 +402,54 @@ class ListWafQpsRequest implements ModelInterface, ArrayAccess
     public function setOverseasType($overseasType)
     {
         $this->container['overseasType'] = $overseasType;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  限制条数
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 限制条数
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  偏移量
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 偏移量
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
         return $this;
     }
 

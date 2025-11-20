@@ -20,8 +20,8 @@ class User implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clientCertificateData  客户端证书。
-    * clientKeyData  包含来自TLS客户端密钥文件的PEM编码数据。
+    * clientCertificateData  **参数解释**： 客户端证书。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * clientKeyData  **参数解释**： 包含来自TLS客户端密钥文件的PEM编码数据。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class User implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clientCertificateData  客户端证书。
-    * clientKeyData  包含来自TLS客户端密钥文件的PEM编码数据。
+    * clientCertificateData  **参数解释**： 客户端证书。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * clientKeyData  **参数解释**： 包含来自TLS客户端密钥文件的PEM编码数据。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class User implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clientCertificateData  客户端证书。
-    * clientKeyData  包含来自TLS客户端密钥文件的PEM编码数据。
+    * clientCertificateData  **参数解释**： 客户端证书。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * clientKeyData  **参数解释**： 包含来自TLS客户端密钥文件的PEM编码数据。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class User implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clientCertificateData  客户端证书。
-    * clientKeyData  包含来自TLS客户端密钥文件的PEM编码数据。
+    * clientCertificateData  **参数解释**： 客户端证书。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * clientKeyData  **参数解释**： 包含来自TLS客户端密钥文件的PEM编码数据。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class User implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clientCertificateData  客户端证书。
-    * clientKeyData  包含来自TLS客户端密钥文件的PEM编码数据。
+    * clientCertificateData  **参数解释**： 客户端证书。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * clientKeyData  **参数解释**： 包含来自TLS客户端密钥文件的PEM编码数据。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class User implements ModelInterface, ArrayAccess
 
     /**
     * Gets clientCertificateData
-    *  客户端证书。
+    *  **参数解释**： 客户端证书。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class User implements ModelInterface, ArrayAccess
     /**
     * Sets clientCertificateData
     *
-    * @param string|null $clientCertificateData 客户端证书。
+    * @param string|null $clientCertificateData **参数解释**： 客户端证书。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class User implements ModelInterface, ArrayAccess
 
     /**
     * Gets clientKeyData
-    *  包含来自TLS客户端密钥文件的PEM编码数据。
+    *  **参数解释**： 包含来自TLS客户端密钥文件的PEM编码数据。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class User implements ModelInterface, ArrayAccess
     /**
     * Sets clientKeyData
     *
-    * @param string|null $clientKeyData 包含来自TLS客户端密钥文件的PEM编码数据。
+    * @param string|null $clientKeyData **参数解释**： 包含来自TLS客户端密钥文件的PEM编码数据。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

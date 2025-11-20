@@ -32,6 +32,7 @@ class CreateWarRoomRequestBody implements ModelInterface, ArrayAccess
     * regionNames  region名称列表
     * enterpriseProjectId  企业项目id
     * notificationType  创建群组方式
+    * notificationModes  发送通知的方式，支持多个通知方式。
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class CreateWarRoomRequestBody implements ModelInterface, ArrayAccess
             'applicationNames' => 'string[]',
             'regionNames' => 'string[]',
             'enterpriseProjectId' => 'string',
-            'notificationType' => 'string'
+            'notificationType' => 'string',
+            'notificationModes' => '\HuaweiCloud\SDK\Coc\V1\Model\NotificationMode[]'
     ];
 
     /**
@@ -64,6 +66,7 @@ class CreateWarRoomRequestBody implements ModelInterface, ArrayAccess
     * regionNames  region名称列表
     * enterpriseProjectId  企业项目id
     * notificationType  创建群组方式
+    * notificationModes  发送通知的方式，支持多个通知方式。
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class CreateWarRoomRequestBody implements ModelInterface, ArrayAccess
         'applicationNames' => null,
         'regionNames' => null,
         'enterpriseProjectId' => null,
-        'notificationType' => null
+        'notificationType' => null,
+        'notificationModes' => null
     ];
 
     /**
@@ -117,6 +121,7 @@ class CreateWarRoomRequestBody implements ModelInterface, ArrayAccess
     * regionNames  region名称列表
     * enterpriseProjectId  企业项目id
     * notificationType  创建群组方式
+    * notificationModes  发送通知的方式，支持多个通知方式。
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class CreateWarRoomRequestBody implements ModelInterface, ArrayAccess
             'applicationNames' => 'application_names',
             'regionNames' => 'region_names',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'notificationType' => 'notification_type'
+            'notificationType' => 'notification_type',
+            'notificationModes' => 'notification_modes'
     ];
 
     /**
@@ -149,6 +155,7 @@ class CreateWarRoomRequestBody implements ModelInterface, ArrayAccess
     * regionNames  region名称列表
     * enterpriseProjectId  企业项目id
     * notificationType  创建群组方式
+    * notificationModes  发送通知的方式，支持多个通知方式。
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class CreateWarRoomRequestBody implements ModelInterface, ArrayAccess
             'applicationNames' => 'setApplicationNames',
             'regionNames' => 'setRegionNames',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'notificationType' => 'setNotificationType'
+            'notificationType' => 'setNotificationType',
+            'notificationModes' => 'setNotificationModes'
     ];
 
     /**
@@ -181,6 +189,7 @@ class CreateWarRoomRequestBody implements ModelInterface, ArrayAccess
     * regionNames  region名称列表
     * enterpriseProjectId  企业项目id
     * notificationType  创建群组方式
+    * notificationModes  发送通知的方式，支持多个通知方式。
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class CreateWarRoomRequestBody implements ModelInterface, ArrayAccess
             'applicationNames' => 'getApplicationNames',
             'regionNames' => 'getRegionNames',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'notificationType' => 'getNotificationType'
+            'notificationType' => 'getNotificationType',
+            'notificationModes' => 'getNotificationModes'
     ];
 
     /**
@@ -269,6 +279,7 @@ class CreateWarRoomRequestBody implements ModelInterface, ArrayAccess
         $this->container['regionNames'] = isset($data['regionNames']) ? $data['regionNames'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['notificationType'] = isset($data['notificationType']) ? $data['notificationType'] : null;
+        $this->container['notificationModes'] = isset($data['notificationModes']) ? $data['notificationModes'] : null;
     }
 
     /**
@@ -632,6 +643,30 @@ class CreateWarRoomRequestBody implements ModelInterface, ArrayAccess
     public function setNotificationType($notificationType)
     {
         $this->container['notificationType'] = $notificationType;
+        return $this;
+    }
+
+    /**
+    * Gets notificationModes
+    *  发送通知的方式，支持多个通知方式。
+    *
+    * @return \HuaweiCloud\SDK\Coc\V1\Model\NotificationMode[]|null
+    */
+    public function getNotificationModes()
+    {
+        return $this->container['notificationModes'];
+    }
+
+    /**
+    * Sets notificationModes
+    *
+    * @param \HuaweiCloud\SDK\Coc\V1\Model\NotificationMode[]|null $notificationModes 发送通知的方式，支持多个通知方式。
+    *
+    * @return $this
+    */
+    public function setNotificationModes($notificationModes)
+    {
+        $this->container['notificationModes'] = $notificationModes;
         return $this;
     }
 

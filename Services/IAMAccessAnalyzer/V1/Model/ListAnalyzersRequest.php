@@ -22,7 +22,7 @@ class ListAnalyzersRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * limit  单页最大结果数。
     * marker  页面标记。
-    * type  分析器的类型。
+    * type  分析器的类型。 - account：账号级外部访问分析器 - organization：组织级外部访问分析器 - account_unused_access：账号级未使用访问分析器 - organization_unused_access：组织级未使用访问分析器 - account_privilege_escalation：账号级提权访问分析器 - account_iam_best_practice：账号级IAM最佳实践分析器
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ListAnalyzersRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * limit  单页最大结果数。
     * marker  页面标记。
-    * type  分析器的类型。
+    * type  分析器的类型。 - account：账号级外部访问分析器 - organization：组织级外部访问分析器 - account_unused_access：账号级未使用访问分析器 - organization_unused_access：组织级未使用访问分析器 - account_privilege_escalation：账号级提权访问分析器 - account_iam_best_practice：账号级IAM最佳实践分析器
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListAnalyzersRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * limit  单页最大结果数。
     * marker  页面标记。
-    * type  分析器的类型。
+    * type  分析器的类型。 - account：账号级外部访问分析器 - organization：组织级外部访问分析器 - account_unused_access：账号级未使用访问分析器 - organization_unused_access：组织级未使用访问分析器 - account_privilege_escalation：账号级提权访问分析器 - account_iam_best_practice：账号级IAM最佳实践分析器
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ListAnalyzersRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * limit  单页最大结果数。
     * marker  页面标记。
-    * type  分析器的类型。
+    * type  分析器的类型。 - account：账号级外部访问分析器 - organization：组织级外部访问分析器 - account_unused_access：账号级未使用访问分析器 - organization_unused_access：组织级未使用访问分析器 - account_privilege_escalation：账号级提权访问分析器 - account_iam_best_practice：账号级IAM最佳实践分析器
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ListAnalyzersRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * limit  单页最大结果数。
     * marker  页面标记。
-    * type  分析器的类型。
+    * type  分析器的类型。 - account：账号级外部访问分析器 - organization：组织级外部访问分析器 - account_unused_access：账号级未使用访问分析器 - organization_unused_access：组织级未使用访问分析器 - account_privilege_escalation：账号级提权访问分析器 - account_iam_best_practice：账号级IAM最佳实践分析器
     *
     * @var string[]
     */
@@ -153,6 +153,8 @@ class ListAnalyzersRequest implements ModelInterface, ArrayAccess
     const TYPE_ORGANIZATION = 'organization';
     const TYPE_ACCOUNT_UNUSED_ACCESS = 'account_unused_access';
     const TYPE_ORGANIZATION_UNUSED_ACCESS = 'organization_unused_access';
+    const TYPE_ACCOUNT_PRIVILEGE_ESCALATION = 'account_privilege_escalation';
+    const TYPE_ACCOUNT_IAM_BEST_PRACTICE = 'account_iam_best_practice';
     
 
     /**
@@ -167,6 +169,8 @@ class ListAnalyzersRequest implements ModelInterface, ArrayAccess
             self::TYPE_ORGANIZATION,
             self::TYPE_ACCOUNT_UNUSED_ACCESS,
             self::TYPE_ORGANIZATION_UNUSED_ACCESS,
+            self::TYPE_ACCOUNT_PRIVILEGE_ESCALATION,
+            self::TYPE_ACCOUNT_IAM_BEST_PRACTICE,
         ];
     }
 
@@ -286,7 +290,7 @@ class ListAnalyzersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  分析器的类型。
+    *  分析器的类型。 - account：账号级外部访问分析器 - organization：组织级外部访问分析器 - account_unused_access：账号级未使用访问分析器 - organization_unused_access：组织级未使用访问分析器 - account_privilege_escalation：账号级提权访问分析器 - account_iam_best_practice：账号级IAM最佳实践分析器
     *
     * @return string|null
     */
@@ -298,7 +302,7 @@ class ListAnalyzersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 分析器的类型。
+    * @param string|null $type 分析器的类型。 - account：账号级外部访问分析器 - organization：组织级外部访问分析器 - account_unused_access：账号级未使用访问分析器 - organization_unused_access：组织级未使用访问分析器 - account_privilege_escalation：账号级提权访问分析器 - account_iam_best_practice：账号级IAM最佳实践分析器
     *
     * @return $this
     */

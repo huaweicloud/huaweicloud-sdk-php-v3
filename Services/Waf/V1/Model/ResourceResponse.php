@@ -20,13 +20,16 @@ class ResourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceId  资源id
-    * cloudServiceType  云服务产品对应的云服务类型
-    * resourceType  云服务产品的资源类型   - hws.resource.type.waf：云模式包周期WAF   - hws.resource.type.waf.domain：云模式包周期WAF域名扩展包   - hws.resource.type.waf.bandwidth：云模式包周期WAF带宽扩展包   - hws.resource.type.waf.rule：云模式包周期WAF规则扩展包   - hws.resource.type.waf.instance：独享实例WAF   - hws.resource.type.waf.payperuserequest : Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名   - hws.resource.type.waf.payperuserule: Web应用防火墙按需规则
-    * resourceSpecCode  云服务产品的资源规格
-    * status  资源状态   - 0：解冻/正常   - 1：冻结   - 2：删除
-    * expireTime  资源到期时间
-    * resourceSize  资源数量
+    * resourceId  **参数解释：** 资源id **取值范围：** 不涉及
+    * cloudServiceType  **参数解释：** 云服务产品对应的云服务类型 **取值范围：** 不涉及
+    * resourceType  **参数解释：** 云服务产品的资源类型 **取值范围：**  - hws.resource.type.waf：云模式包周期WAF  - hws.resource.type.waf.domain：云模式包周期WAF域名扩展包  - hws.resource.type.waf.bandwidth：云模式包周期WAF带宽扩展包  - hws.resource.type.waf.rule：云模式包周期WAF规则扩展包  - hws.resource.type.waf.payperuserequest：Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名  - hws.resource.type.waf.payperuserule：Web应用防火墙按需规则
+    * resourceSpecCode  **参数解释：** 云服务产品的资源规格 **取值范围：** 不涉及
+    * status  **参数解释：** 资源状态 **取值范围：**  - 0：解冻/正常   - 1：冻结   - 2：删除
+    * expireTime  **参数解释：** 资源到期时间 **取值范围：** 不涉及
+    * resourceSize  **参数解释：** 资源数量 **取值范围：** 不涉及
+    * timestamp  **参数解释：** 资源创建时间 **取值范围：** 不涉及
+    * relativeType  **参数解释：** 当资源项为附属资源(域名扩展包/带宽扩展包/规则扩展包/高阶功能扩展包),描述附属资源与主资源的关系 **取值范围：**  - 0：附属资源与主资源为挂载关系  - 1：附属资源与主资源为绑定关系  - 2：从属关系
+    * region  **参数解释：** 华为云区域ID,资源所属的区域id **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -37,18 +40,24 @@ class ResourceResponse implements ModelInterface, ArrayAccess
             'resourceSpecCode' => 'string',
             'status' => 'int',
             'expireTime' => 'string',
-            'resourceSize' => 'int'
+            'resourceSize' => 'int',
+            'timestamp' => 'int',
+            'relativeType' => 'int',
+            'region' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceId  资源id
-    * cloudServiceType  云服务产品对应的云服务类型
-    * resourceType  云服务产品的资源类型   - hws.resource.type.waf：云模式包周期WAF   - hws.resource.type.waf.domain：云模式包周期WAF域名扩展包   - hws.resource.type.waf.bandwidth：云模式包周期WAF带宽扩展包   - hws.resource.type.waf.rule：云模式包周期WAF规则扩展包   - hws.resource.type.waf.instance：独享实例WAF   - hws.resource.type.waf.payperuserequest : Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名   - hws.resource.type.waf.payperuserule: Web应用防火墙按需规则
-    * resourceSpecCode  云服务产品的资源规格
-    * status  资源状态   - 0：解冻/正常   - 1：冻结   - 2：删除
-    * expireTime  资源到期时间
-    * resourceSize  资源数量
+    * resourceId  **参数解释：** 资源id **取值范围：** 不涉及
+    * cloudServiceType  **参数解释：** 云服务产品对应的云服务类型 **取值范围：** 不涉及
+    * resourceType  **参数解释：** 云服务产品的资源类型 **取值范围：**  - hws.resource.type.waf：云模式包周期WAF  - hws.resource.type.waf.domain：云模式包周期WAF域名扩展包  - hws.resource.type.waf.bandwidth：云模式包周期WAF带宽扩展包  - hws.resource.type.waf.rule：云模式包周期WAF规则扩展包  - hws.resource.type.waf.payperuserequest：Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名  - hws.resource.type.waf.payperuserule：Web应用防火墙按需规则
+    * resourceSpecCode  **参数解释：** 云服务产品的资源规格 **取值范围：** 不涉及
+    * status  **参数解释：** 资源状态 **取值范围：**  - 0：解冻/正常   - 1：冻结   - 2：删除
+    * expireTime  **参数解释：** 资源到期时间 **取值范围：** 不涉及
+    * resourceSize  **参数解释：** 资源数量 **取值范围：** 不涉及
+    * timestamp  **参数解释：** 资源创建时间 **取值范围：** 不涉及
+    * relativeType  **参数解释：** 当资源项为附属资源(域名扩展包/带宽扩展包/规则扩展包/高阶功能扩展包),描述附属资源与主资源的关系 **取值范围：**  - 0：附属资源与主资源为挂载关系  - 1：附属资源与主资源为绑定关系  - 2：从属关系
+    * region  **参数解释：** 华为云区域ID,资源所属的区域id **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -59,7 +68,10 @@ class ResourceResponse implements ModelInterface, ArrayAccess
         'resourceSpecCode' => null,
         'status' => null,
         'expireTime' => null,
-        'resourceSize' => null
+        'resourceSize' => null,
+        'timestamp' => 'int64',
+        'relativeType' => null,
+        'region' => null
     ];
 
     /**
@@ -85,13 +97,16 @@ class ResourceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceId  资源id
-    * cloudServiceType  云服务产品对应的云服务类型
-    * resourceType  云服务产品的资源类型   - hws.resource.type.waf：云模式包周期WAF   - hws.resource.type.waf.domain：云模式包周期WAF域名扩展包   - hws.resource.type.waf.bandwidth：云模式包周期WAF带宽扩展包   - hws.resource.type.waf.rule：云模式包周期WAF规则扩展包   - hws.resource.type.waf.instance：独享实例WAF   - hws.resource.type.waf.payperuserequest : Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名   - hws.resource.type.waf.payperuserule: Web应用防火墙按需规则
-    * resourceSpecCode  云服务产品的资源规格
-    * status  资源状态   - 0：解冻/正常   - 1：冻结   - 2：删除
-    * expireTime  资源到期时间
-    * resourceSize  资源数量
+    * resourceId  **参数解释：** 资源id **取值范围：** 不涉及
+    * cloudServiceType  **参数解释：** 云服务产品对应的云服务类型 **取值范围：** 不涉及
+    * resourceType  **参数解释：** 云服务产品的资源类型 **取值范围：**  - hws.resource.type.waf：云模式包周期WAF  - hws.resource.type.waf.domain：云模式包周期WAF域名扩展包  - hws.resource.type.waf.bandwidth：云模式包周期WAF带宽扩展包  - hws.resource.type.waf.rule：云模式包周期WAF规则扩展包  - hws.resource.type.waf.payperuserequest：Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名  - hws.resource.type.waf.payperuserule：Web应用防火墙按需规则
+    * resourceSpecCode  **参数解释：** 云服务产品的资源规格 **取值范围：** 不涉及
+    * status  **参数解释：** 资源状态 **取值范围：**  - 0：解冻/正常   - 1：冻结   - 2：删除
+    * expireTime  **参数解释：** 资源到期时间 **取值范围：** 不涉及
+    * resourceSize  **参数解释：** 资源数量 **取值范围：** 不涉及
+    * timestamp  **参数解释：** 资源创建时间 **取值范围：** 不涉及
+    * relativeType  **参数解释：** 当资源项为附属资源(域名扩展包/带宽扩展包/规则扩展包/高阶功能扩展包),描述附属资源与主资源的关系 **取值范围：**  - 0：附属资源与主资源为挂载关系  - 1：附属资源与主资源为绑定关系  - 2：从属关系
+    * region  **参数解释：** 华为云区域ID,资源所属的区域id **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -102,18 +117,24 @@ class ResourceResponse implements ModelInterface, ArrayAccess
             'resourceSpecCode' => 'resourceSpecCode',
             'status' => 'status',
             'expireTime' => 'expireTime',
-            'resourceSize' => 'resourceSize'
+            'resourceSize' => 'resourceSize',
+            'timestamp' => 'timestamp',
+            'relativeType' => 'relativeType',
+            'region' => 'region'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceId  资源id
-    * cloudServiceType  云服务产品对应的云服务类型
-    * resourceType  云服务产品的资源类型   - hws.resource.type.waf：云模式包周期WAF   - hws.resource.type.waf.domain：云模式包周期WAF域名扩展包   - hws.resource.type.waf.bandwidth：云模式包周期WAF带宽扩展包   - hws.resource.type.waf.rule：云模式包周期WAF规则扩展包   - hws.resource.type.waf.instance：独享实例WAF   - hws.resource.type.waf.payperuserequest : Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名   - hws.resource.type.waf.payperuserule: Web应用防火墙按需规则
-    * resourceSpecCode  云服务产品的资源规格
-    * status  资源状态   - 0：解冻/正常   - 1：冻结   - 2：删除
-    * expireTime  资源到期时间
-    * resourceSize  资源数量
+    * resourceId  **参数解释：** 资源id **取值范围：** 不涉及
+    * cloudServiceType  **参数解释：** 云服务产品对应的云服务类型 **取值范围：** 不涉及
+    * resourceType  **参数解释：** 云服务产品的资源类型 **取值范围：**  - hws.resource.type.waf：云模式包周期WAF  - hws.resource.type.waf.domain：云模式包周期WAF域名扩展包  - hws.resource.type.waf.bandwidth：云模式包周期WAF带宽扩展包  - hws.resource.type.waf.rule：云模式包周期WAF规则扩展包  - hws.resource.type.waf.payperuserequest：Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名  - hws.resource.type.waf.payperuserule：Web应用防火墙按需规则
+    * resourceSpecCode  **参数解释：** 云服务产品的资源规格 **取值范围：** 不涉及
+    * status  **参数解释：** 资源状态 **取值范围：**  - 0：解冻/正常   - 1：冻结   - 2：删除
+    * expireTime  **参数解释：** 资源到期时间 **取值范围：** 不涉及
+    * resourceSize  **参数解释：** 资源数量 **取值范围：** 不涉及
+    * timestamp  **参数解释：** 资源创建时间 **取值范围：** 不涉及
+    * relativeType  **参数解释：** 当资源项为附属资源(域名扩展包/带宽扩展包/规则扩展包/高阶功能扩展包),描述附属资源与主资源的关系 **取值范围：**  - 0：附属资源与主资源为挂载关系  - 1：附属资源与主资源为绑定关系  - 2：从属关系
+    * region  **参数解释：** 华为云区域ID,资源所属的区域id **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -124,18 +145,24 @@ class ResourceResponse implements ModelInterface, ArrayAccess
             'resourceSpecCode' => 'setResourceSpecCode',
             'status' => 'setStatus',
             'expireTime' => 'setExpireTime',
-            'resourceSize' => 'setResourceSize'
+            'resourceSize' => 'setResourceSize',
+            'timestamp' => 'setTimestamp',
+            'relativeType' => 'setRelativeType',
+            'region' => 'setRegion'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceId  资源id
-    * cloudServiceType  云服务产品对应的云服务类型
-    * resourceType  云服务产品的资源类型   - hws.resource.type.waf：云模式包周期WAF   - hws.resource.type.waf.domain：云模式包周期WAF域名扩展包   - hws.resource.type.waf.bandwidth：云模式包周期WAF带宽扩展包   - hws.resource.type.waf.rule：云模式包周期WAF规则扩展包   - hws.resource.type.waf.instance：独享实例WAF   - hws.resource.type.waf.payperuserequest : Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名   - hws.resource.type.waf.payperuserule: Web应用防火墙按需规则
-    * resourceSpecCode  云服务产品的资源规格
-    * status  资源状态   - 0：解冻/正常   - 1：冻结   - 2：删除
-    * expireTime  资源到期时间
-    * resourceSize  资源数量
+    * resourceId  **参数解释：** 资源id **取值范围：** 不涉及
+    * cloudServiceType  **参数解释：** 云服务产品对应的云服务类型 **取值范围：** 不涉及
+    * resourceType  **参数解释：** 云服务产品的资源类型 **取值范围：**  - hws.resource.type.waf：云模式包周期WAF  - hws.resource.type.waf.domain：云模式包周期WAF域名扩展包  - hws.resource.type.waf.bandwidth：云模式包周期WAF带宽扩展包  - hws.resource.type.waf.rule：云模式包周期WAF规则扩展包  - hws.resource.type.waf.payperuserequest：Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名  - hws.resource.type.waf.payperuserule：Web应用防火墙按需规则
+    * resourceSpecCode  **参数解释：** 云服务产品的资源规格 **取值范围：** 不涉及
+    * status  **参数解释：** 资源状态 **取值范围：**  - 0：解冻/正常   - 1：冻结   - 2：删除
+    * expireTime  **参数解释：** 资源到期时间 **取值范围：** 不涉及
+    * resourceSize  **参数解释：** 资源数量 **取值范围：** 不涉及
+    * timestamp  **参数解释：** 资源创建时间 **取值范围：** 不涉及
+    * relativeType  **参数解释：** 当资源项为附属资源(域名扩展包/带宽扩展包/规则扩展包/高阶功能扩展包),描述附属资源与主资源的关系 **取值范围：**  - 0：附属资源与主资源为挂载关系  - 1：附属资源与主资源为绑定关系  - 2：从属关系
+    * region  **参数解释：** 华为云区域ID,资源所属的区域id **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -146,7 +173,10 @@ class ResourceResponse implements ModelInterface, ArrayAccess
             'resourceSpecCode' => 'getResourceSpecCode',
             'status' => 'getStatus',
             'expireTime' => 'getExpireTime',
-            'resourceSize' => 'getResourceSize'
+            'resourceSize' => 'getResourceSize',
+            'timestamp' => 'getTimestamp',
+            'relativeType' => 'getRelativeType',
+            'region' => 'getRegion'
     ];
 
     /**
@@ -214,6 +244,9 @@ class ResourceResponse implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
         $this->container['resourceSize'] = isset($data['resourceSize']) ? $data['resourceSize'] : null;
+        $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
+        $this->container['relativeType'] = isset($data['relativeType']) ? $data['relativeType'] : null;
+        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
     }
 
     /**
@@ -240,7 +273,7 @@ class ResourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  资源id
+    *  **参数解释：** 资源id **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -252,7 +285,7 @@ class ResourceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId 资源id
+    * @param string|null $resourceId **参数解释：** 资源id **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -264,7 +297,7 @@ class ResourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudServiceType
-    *  云服务产品对应的云服务类型
+    *  **参数解释：** 云服务产品对应的云服务类型 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -276,7 +309,7 @@ class ResourceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets cloudServiceType
     *
-    * @param string|null $cloudServiceType 云服务产品对应的云服务类型
+    * @param string|null $cloudServiceType **参数解释：** 云服务产品对应的云服务类型 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -288,7 +321,7 @@ class ResourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  云服务产品的资源类型   - hws.resource.type.waf：云模式包周期WAF   - hws.resource.type.waf.domain：云模式包周期WAF域名扩展包   - hws.resource.type.waf.bandwidth：云模式包周期WAF带宽扩展包   - hws.resource.type.waf.rule：云模式包周期WAF规则扩展包   - hws.resource.type.waf.instance：独享实例WAF   - hws.resource.type.waf.payperuserequest : Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名   - hws.resource.type.waf.payperuserule: Web应用防火墙按需规则
+    *  **参数解释：** 云服务产品的资源类型 **取值范围：**  - hws.resource.type.waf：云模式包周期WAF  - hws.resource.type.waf.domain：云模式包周期WAF域名扩展包  - hws.resource.type.waf.bandwidth：云模式包周期WAF带宽扩展包  - hws.resource.type.waf.rule：云模式包周期WAF规则扩展包  - hws.resource.type.waf.payperuserequest：Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名  - hws.resource.type.waf.payperuserule：Web应用防火墙按需规则
     *
     * @return string|null
     */
@@ -300,7 +333,7 @@ class ResourceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string|null $resourceType 云服务产品的资源类型   - hws.resource.type.waf：云模式包周期WAF   - hws.resource.type.waf.domain：云模式包周期WAF域名扩展包   - hws.resource.type.waf.bandwidth：云模式包周期WAF带宽扩展包   - hws.resource.type.waf.rule：云模式包周期WAF规则扩展包   - hws.resource.type.waf.instance：独享实例WAF   - hws.resource.type.waf.payperuserequest : Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名   - hws.resource.type.waf.payperuserule: Web应用防火墙按需规则
+    * @param string|null $resourceType **参数解释：** 云服务产品的资源类型 **取值范围：**  - hws.resource.type.waf：云模式包周期WAF  - hws.resource.type.waf.domain：云模式包周期WAF域名扩展包  - hws.resource.type.waf.bandwidth：云模式包周期WAF带宽扩展包  - hws.resource.type.waf.rule：云模式包周期WAF规则扩展包  - hws.resource.type.waf.payperuserequest：Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名  - hws.resource.type.waf.payperuserule：Web应用防火墙按需规则
     *
     * @return $this
     */
@@ -312,7 +345,7 @@ class ResourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSpecCode
-    *  云服务产品的资源规格
+    *  **参数解释：** 云服务产品的资源规格 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -324,7 +357,7 @@ class ResourceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSpecCode
     *
-    * @param string|null $resourceSpecCode 云服务产品的资源规格
+    * @param string|null $resourceSpecCode **参数解释：** 云服务产品的资源规格 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -336,7 +369,7 @@ class ResourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源状态   - 0：解冻/正常   - 1：冻结   - 2：删除
+    *  **参数解释：** 资源状态 **取值范围：**  - 0：解冻/正常   - 1：冻结   - 2：删除
     *
     * @return int|null
     */
@@ -348,7 +381,7 @@ class ResourceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 资源状态   - 0：解冻/正常   - 1：冻结   - 2：删除
+    * @param int|null $status **参数解释：** 资源状态 **取值范围：**  - 0：解冻/正常   - 1：冻结   - 2：删除
     *
     * @return $this
     */
@@ -360,7 +393,7 @@ class ResourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets expireTime
-    *  资源到期时间
+    *  **参数解释：** 资源到期时间 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -372,7 +405,7 @@ class ResourceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets expireTime
     *
-    * @param string|null $expireTime 资源到期时间
+    * @param string|null $expireTime **参数解释：** 资源到期时间 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -384,7 +417,7 @@ class ResourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSize
-    *  资源数量
+    *  **参数解释：** 资源数量 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -396,13 +429,85 @@ class ResourceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSize
     *
-    * @param int|null $resourceSize 资源数量
+    * @param int|null $resourceSize **参数解释：** 资源数量 **取值范围：** 不涉及
     *
     * @return $this
     */
     public function setResourceSize($resourceSize)
     {
         $this->container['resourceSize'] = $resourceSize;
+        return $this;
+    }
+
+    /**
+    * Gets timestamp
+    *  **参数解释：** 资源创建时间 **取值范围：** 不涉及
+    *
+    * @return int|null
+    */
+    public function getTimestamp()
+    {
+        return $this->container['timestamp'];
+    }
+
+    /**
+    * Sets timestamp
+    *
+    * @param int|null $timestamp **参数解释：** 资源创建时间 **取值范围：** 不涉及
+    *
+    * @return $this
+    */
+    public function setTimestamp($timestamp)
+    {
+        $this->container['timestamp'] = $timestamp;
+        return $this;
+    }
+
+    /**
+    * Gets relativeType
+    *  **参数解释：** 当资源项为附属资源(域名扩展包/带宽扩展包/规则扩展包/高阶功能扩展包),描述附属资源与主资源的关系 **取值范围：**  - 0：附属资源与主资源为挂载关系  - 1：附属资源与主资源为绑定关系  - 2：从属关系
+    *
+    * @return int|null
+    */
+    public function getRelativeType()
+    {
+        return $this->container['relativeType'];
+    }
+
+    /**
+    * Sets relativeType
+    *
+    * @param int|null $relativeType **参数解释：** 当资源项为附属资源(域名扩展包/带宽扩展包/规则扩展包/高阶功能扩展包),描述附属资源与主资源的关系 **取值范围：**  - 0：附属资源与主资源为挂载关系  - 1：附属资源与主资源为绑定关系  - 2：从属关系
+    *
+    * @return $this
+    */
+    public function setRelativeType($relativeType)
+    {
+        $this->container['relativeType'] = $relativeType;
+        return $this;
+    }
+
+    /**
+    * Gets region
+    *  **参数解释：** 华为云区域ID,资源所属的区域id **取值范围：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getRegion()
+    {
+        return $this->container['region'];
+    }
+
+    /**
+    * Sets region
+    *
+    * @param string|null $region **参数解释：** 华为云区域ID,资源所属的区域id **取值范围：** 不涉及
+    *
+    * @return $this
+    */
+    public function setRegion($region)
+    {
+        $this->container['region'] = $region;
         return $this;
     }
 

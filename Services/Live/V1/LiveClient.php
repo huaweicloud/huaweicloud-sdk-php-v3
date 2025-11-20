@@ -251,11 +251,11 @@ class LiveClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8']
+                ['application/json;charset=utf-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8'],
+                ['application/json;charset=utf-8', 'application/json'],
                 ['application/json;charset=utf-8']
             );
         }
@@ -313,11 +313,11 @@ class LiveClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8']
+                ['application/json;charset=utf-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8'],
+                ['application/json;charset=utf-8', 'application/json'],
                 ['application/json;charset=utf-8']
             );
         }
@@ -2070,11 +2070,11 @@ class LiveClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=UTF-8']
+                ['application/json; charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=UTF-8'],
+                ['application/json; charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -3141,11 +3141,11 @@ class LiveClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8']
+                ['application/json;charset=utf-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8'],
+                ['application/json;charset=utf-8', 'application/json'],
                 ['application/json;charset=utf-8']
             );
         }
@@ -3209,11 +3209,11 @@ class LiveClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8']
+                ['application/json;charset=utf-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8'],
+                ['application/json;charset=utf-8', 'application/json'],
                 ['application/json;charset=utf-8']
             );
         }
@@ -3271,11 +3271,11 @@ class LiveClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=UTF-8']
+                ['application/json; charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=UTF-8'],
+                ['application/json; charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -3333,11 +3333,11 @@ class LiveClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=UTF-8']
+                ['application/json; charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=UTF-8'],
+                ['application/json; charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -3649,11 +3649,11 @@ class LiveClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=UTF-8']
+                ['application/json; charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=UTF-8'],
+                ['application/json; charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -3717,11 +3717,11 @@ class LiveClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=UTF-8']
+                ['application/json; charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=UTF-8'],
+                ['application/json; charset=UTF-8', 'application/json'],
                 []
             );
         }

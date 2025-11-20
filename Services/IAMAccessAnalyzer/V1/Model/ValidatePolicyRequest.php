@@ -22,7 +22,7 @@ class ValidatePolicyRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * limit  单页最大结果数。
     * marker  页面标记。
-    * xLanguage  返回消息的语言，默认值为'zh-cn'，表示中文。
+    * xLanguage  返回消息的语言，默认值为'zh-cn'。 - zh-cn：中文 - en-us：英文
     * body  body
     *
     * @var string[]
@@ -38,7 +38,7 @@ class ValidatePolicyRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * limit  单页最大结果数。
     * marker  页面标记。
-    * xLanguage  返回消息的语言，默认值为'zh-cn'，表示中文。
+    * xLanguage  返回消息的语言，默认值为'zh-cn'。 - zh-cn：中文 - en-us：英文
     * body  body
     *
     * @var string[]
@@ -75,7 +75,7 @@ class ValidatePolicyRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * limit  单页最大结果数。
     * marker  页面标记。
-    * xLanguage  返回消息的语言，默认值为'zh-cn'，表示中文。
+    * xLanguage  返回消息的语言，默认值为'zh-cn'。 - zh-cn：中文 - en-us：英文
     * body  body
     *
     * @var string[]
@@ -91,7 +91,7 @@ class ValidatePolicyRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * limit  单页最大结果数。
     * marker  页面标记。
-    * xLanguage  返回消息的语言，默认值为'zh-cn'，表示中文。
+    * xLanguage  返回消息的语言，默认值为'zh-cn'。 - zh-cn：中文 - en-us：英文
     * body  body
     *
     * @var string[]
@@ -107,7 +107,7 @@ class ValidatePolicyRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * limit  单页最大结果数。
     * marker  页面标记。
-    * xLanguage  返回消息的语言，默认值为'zh-cn'，表示中文。
+    * xLanguage  返回消息的语言，默认值为'zh-cn'。 - zh-cn：中文 - en-us：英文
     * body  body
     *
     * @var string[]
@@ -293,7 +293,7 @@ class ValidatePolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xLanguage
-    *  返回消息的语言，默认值为'zh-cn'，表示中文。
+    *  返回消息的语言，默认值为'zh-cn'。 - zh-cn：中文 - en-us：英文
     *
     * @return string|null
     */
@@ -305,7 +305,7 @@ class ValidatePolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xLanguage
     *
-    * @param string|null $xLanguage 返回消息的语言，默认值为'zh-cn'，表示中文。
+    * @param string|null $xLanguage 返回消息的语言，默认值为'zh-cn'。 - zh-cn：中文 - en-us：英文
     *
     * @return $this
     */

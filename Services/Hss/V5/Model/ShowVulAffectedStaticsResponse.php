@@ -27,8 +27,8 @@ class ShowVulAffectedStaticsResponse implements ModelInterface, ArrayAccess
     * containerNum  **参数解释**: 影响容器数量 **取值范围**: 最小值0，最大值2147483647
     * dataList  **参数解释**: 按漏洞类型的统计值，当select_type为all_host或空时，有该字段
     * totalVulNum  **参数解释**: 影响的总漏洞条数(主机+漏洞 以此维度计算) **取值范围**: 最小值0，最大值2147483647
-    * extendTips  **参数解释**: 漏洞修复提示 **取值范围**: - cce_kernel_vul_tips：cce内核修复提示信息 - ubuntu_pro_tips：ubuntu pro的修复提示
-    * extendTextTips  **参数解释**: 漏洞修复提示文本 **取值范围**: 字符长度0-4096位
+    * extendTips  extendTips
+    * extendTextTips  extendTextTips
     * disabledOperateTypes  disabledOperateTypes
     * cceVulNum  **参数解释**: CCE漏洞数量 **取值范围**: 最小值0，最大值2147483647
     * basicHostNum  **参数解释**: 基础版主机数量 **取值范围**: 最小值0，最大值2147483647
@@ -43,8 +43,8 @@ class ShowVulAffectedStaticsResponse implements ModelInterface, ArrayAccess
             'containerNum' => 'int',
             'dataList' => '\HuaweiCloud\SDK\Hss\V5\Model\VulAffectedStatisticsResponseInfoDataList[]',
             'totalVulNum' => 'int',
-            'extendTips' => 'string',
-            'extendTextTips' => 'string',
+            'extendTips' => 'string[]',
+            'extendTextTips' => 'string[]',
             'disabledOperateTypes' => '\HuaweiCloud\SDK\Hss\V5\Model\VulAffectedStatisticsResponseInfoDisabledOperateTypes',
             'cceVulNum' => 'int',
             'basicHostNum' => 'int',
@@ -59,8 +59,8 @@ class ShowVulAffectedStaticsResponse implements ModelInterface, ArrayAccess
     * containerNum  **参数解释**: 影响容器数量 **取值范围**: 最小值0，最大值2147483647
     * dataList  **参数解释**: 按漏洞类型的统计值，当select_type为all_host或空时，有该字段
     * totalVulNum  **参数解释**: 影响的总漏洞条数(主机+漏洞 以此维度计算) **取值范围**: 最小值0，最大值2147483647
-    * extendTips  **参数解释**: 漏洞修复提示 **取值范围**: - cce_kernel_vul_tips：cce内核修复提示信息 - ubuntu_pro_tips：ubuntu pro的修复提示
-    * extendTextTips  **参数解释**: 漏洞修复提示文本 **取值范围**: 字符长度0-4096位
+    * extendTips  extendTips
+    * extendTextTips  extendTextTips
     * disabledOperateTypes  disabledOperateTypes
     * cceVulNum  **参数解释**: CCE漏洞数量 **取值范围**: 最小值0，最大值2147483647
     * basicHostNum  **参数解释**: 基础版主机数量 **取值范围**: 最小值0，最大值2147483647
@@ -112,8 +112,8 @@ class ShowVulAffectedStaticsResponse implements ModelInterface, ArrayAccess
     * containerNum  **参数解释**: 影响容器数量 **取值范围**: 最小值0，最大值2147483647
     * dataList  **参数解释**: 按漏洞类型的统计值，当select_type为all_host或空时，有该字段
     * totalVulNum  **参数解释**: 影响的总漏洞条数(主机+漏洞 以此维度计算) **取值范围**: 最小值0，最大值2147483647
-    * extendTips  **参数解释**: 漏洞修复提示 **取值范围**: - cce_kernel_vul_tips：cce内核修复提示信息 - ubuntu_pro_tips：ubuntu pro的修复提示
-    * extendTextTips  **参数解释**: 漏洞修复提示文本 **取值范围**: 字符长度0-4096位
+    * extendTips  extendTips
+    * extendTextTips  extendTextTips
     * disabledOperateTypes  disabledOperateTypes
     * cceVulNum  **参数解释**: CCE漏洞数量 **取值范围**: 最小值0，最大值2147483647
     * basicHostNum  **参数解释**: 基础版主机数量 **取值范围**: 最小值0，最大值2147483647
@@ -144,8 +144,8 @@ class ShowVulAffectedStaticsResponse implements ModelInterface, ArrayAccess
     * containerNum  **参数解释**: 影响容器数量 **取值范围**: 最小值0，最大值2147483647
     * dataList  **参数解释**: 按漏洞类型的统计值，当select_type为all_host或空时，有该字段
     * totalVulNum  **参数解释**: 影响的总漏洞条数(主机+漏洞 以此维度计算) **取值范围**: 最小值0，最大值2147483647
-    * extendTips  **参数解释**: 漏洞修复提示 **取值范围**: - cce_kernel_vul_tips：cce内核修复提示信息 - ubuntu_pro_tips：ubuntu pro的修复提示
-    * extendTextTips  **参数解释**: 漏洞修复提示文本 **取值范围**: 字符长度0-4096位
+    * extendTips  extendTips
+    * extendTextTips  extendTextTips
     * disabledOperateTypes  disabledOperateTypes
     * cceVulNum  **参数解释**: CCE漏洞数量 **取值范围**: 最小值0，最大值2147483647
     * basicHostNum  **参数解释**: 基础版主机数量 **取值范围**: 最小值0，最大值2147483647
@@ -176,8 +176,8 @@ class ShowVulAffectedStaticsResponse implements ModelInterface, ArrayAccess
     * containerNum  **参数解释**: 影响容器数量 **取值范围**: 最小值0，最大值2147483647
     * dataList  **参数解释**: 按漏洞类型的统计值，当select_type为all_host或空时，有该字段
     * totalVulNum  **参数解释**: 影响的总漏洞条数(主机+漏洞 以此维度计算) **取值范围**: 最小值0，最大值2147483647
-    * extendTips  **参数解释**: 漏洞修复提示 **取值范围**: - cce_kernel_vul_tips：cce内核修复提示信息 - ubuntu_pro_tips：ubuntu pro的修复提示
-    * extendTextTips  **参数解释**: 漏洞修复提示文本 **取值范围**: 字符长度0-4096位
+    * extendTips  extendTips
+    * extendTextTips  extendTextTips
     * disabledOperateTypes  disabledOperateTypes
     * cceVulNum  **参数解释**: CCE漏洞数量 **取值范围**: 最小值0，最大值2147483647
     * basicHostNum  **参数解释**: 基础版主机数量 **取值范围**: 最小值0，最大值2147483647
@@ -482,9 +482,9 @@ class ShowVulAffectedStaticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendTips
-    *  **参数解释**: 漏洞修复提示 **取值范围**: - cce_kernel_vul_tips：cce内核修复提示信息 - ubuntu_pro_tips：ubuntu pro的修复提示
+    *  extendTips
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getExtendTips()
     {
@@ -494,7 +494,7 @@ class ShowVulAffectedStaticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets extendTips
     *
-    * @param string|null $extendTips **参数解释**: 漏洞修复提示 **取值范围**: - cce_kernel_vul_tips：cce内核修复提示信息 - ubuntu_pro_tips：ubuntu pro的修复提示
+    * @param string[]|null $extendTips extendTips
     *
     * @return $this
     */
@@ -506,9 +506,9 @@ class ShowVulAffectedStaticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendTextTips
-    *  **参数解释**: 漏洞修复提示文本 **取值范围**: 字符长度0-4096位
+    *  extendTextTips
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getExtendTextTips()
     {
@@ -518,7 +518,7 @@ class ShowVulAffectedStaticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets extendTextTips
     *
-    * @param string|null $extendTextTips **参数解释**: 漏洞修复提示文本 **取值范围**: 字符长度0-4096位
+    * @param string[]|null $extendTextTips extendTextTips
     *
     * @return $this
     */

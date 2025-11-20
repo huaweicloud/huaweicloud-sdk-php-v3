@@ -21,7 +21,7 @@ class FindingFilter implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * criterion  criterion
-    * key  过滤键。
+    * key  过滤键。 - resource：资源URN - resource_type：资源类型 - resource_owner_account：资源所有者账号 - is_public：公共访问权限 - id：分析结果ID - status：分析结果类型 - principal_type：主体类型 - principal_identifier：主体Identifier - change_type：分析结果状态的变化 - existing_finding_id：已有分析结果ID - existing_finding_status：已有分析结果状态 - condition.g:PrincipalUrn：主体URN - condition.g:PrincipalId：主体ID - condition.g:PrincipalAccount：主体账号 - condition.g:PrincipalOrgId：主体OrgID - condition.g:PrincipalOrgPath：主体组织路径 - condition.g:PrincipalOrgManagementAccountId：主体组织管理账号ID - condition.g:SourceIp：源IP - condition.g:SourceVpc：源VPC - condition.g:SourceVpce：源VPCE - finding_type：分析结果类型
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class FindingFilter implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * criterion  criterion
-    * key  过滤键。
+    * key  过滤键。 - resource：资源URN - resource_type：资源类型 - resource_owner_account：资源所有者账号 - is_public：公共访问权限 - id：分析结果ID - status：分析结果类型 - principal_type：主体类型 - principal_identifier：主体Identifier - change_type：分析结果状态的变化 - existing_finding_id：已有分析结果ID - existing_finding_status：已有分析结果状态 - condition.g:PrincipalUrn：主体URN - condition.g:PrincipalId：主体ID - condition.g:PrincipalAccount：主体账号 - condition.g:PrincipalOrgId：主体OrgID - condition.g:PrincipalOrgPath：主体组织路径 - condition.g:PrincipalOrgManagementAccountId：主体组织管理账号ID - condition.g:SourceIp：源IP - condition.g:SourceVpc：源VPC - condition.g:SourceVpce：源VPCE - finding_type：分析结果类型
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class FindingFilter implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * criterion  criterion
-    * key  过滤键。
+    * key  过滤键。 - resource：资源URN - resource_type：资源类型 - resource_owner_account：资源所有者账号 - is_public：公共访问权限 - id：分析结果ID - status：分析结果类型 - principal_type：主体类型 - principal_identifier：主体Identifier - change_type：分析结果状态的变化 - existing_finding_id：已有分析结果ID - existing_finding_status：已有分析结果状态 - condition.g:PrincipalUrn：主体URN - condition.g:PrincipalId：主体ID - condition.g:PrincipalAccount：主体账号 - condition.g:PrincipalOrgId：主体OrgID - condition.g:PrincipalOrgPath：主体组织路径 - condition.g:PrincipalOrgManagementAccountId：主体组织管理账号ID - condition.g:SourceIp：源IP - condition.g:SourceVpc：源VPC - condition.g:SourceVpce：源VPCE - finding_type：分析结果类型
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class FindingFilter implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * criterion  criterion
-    * key  过滤键。
+    * key  过滤键。 - resource：资源URN - resource_type：资源类型 - resource_owner_account：资源所有者账号 - is_public：公共访问权限 - id：分析结果ID - status：分析结果类型 - principal_type：主体类型 - principal_identifier：主体Identifier - change_type：分析结果状态的变化 - existing_finding_id：已有分析结果ID - existing_finding_status：已有分析结果状态 - condition.g:PrincipalUrn：主体URN - condition.g:PrincipalId：主体ID - condition.g:PrincipalAccount：主体账号 - condition.g:PrincipalOrgId：主体OrgID - condition.g:PrincipalOrgPath：主体组织路径 - condition.g:PrincipalOrgManagementAccountId：主体组织管理账号ID - condition.g:SourceIp：源IP - condition.g:SourceVpc：源VPC - condition.g:SourceVpce：源VPCE - finding_type：分析结果类型
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class FindingFilter implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * criterion  criterion
-    * key  过滤键。
+    * key  过滤键。 - resource：资源URN - resource_type：资源类型 - resource_owner_account：资源所有者账号 - is_public：公共访问权限 - id：分析结果ID - status：分析结果类型 - principal_type：主体类型 - principal_identifier：主体Identifier - change_type：分析结果状态的变化 - existing_finding_id：已有分析结果ID - existing_finding_status：已有分析结果状态 - condition.g:PrincipalUrn：主体URN - condition.g:PrincipalId：主体ID - condition.g:PrincipalAccount：主体账号 - condition.g:PrincipalOrgId：主体OrgID - condition.g:PrincipalOrgPath：主体组织路径 - condition.g:PrincipalOrgManagementAccountId：主体组织管理账号ID - condition.g:SourceIp：源IP - condition.g:SourceVpc：源VPC - condition.g:SourceVpce：源VPCE - finding_type：分析结果类型
     *
     * @var string[]
     */
@@ -276,7 +276,7 @@ class FindingFilter implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  过滤键。
+    *  过滤键。 - resource：资源URN - resource_type：资源类型 - resource_owner_account：资源所有者账号 - is_public：公共访问权限 - id：分析结果ID - status：分析结果类型 - principal_type：主体类型 - principal_identifier：主体Identifier - change_type：分析结果状态的变化 - existing_finding_id：已有分析结果ID - existing_finding_status：已有分析结果状态 - condition.g:PrincipalUrn：主体URN - condition.g:PrincipalId：主体ID - condition.g:PrincipalAccount：主体账号 - condition.g:PrincipalOrgId：主体OrgID - condition.g:PrincipalOrgPath：主体组织路径 - condition.g:PrincipalOrgManagementAccountId：主体组织管理账号ID - condition.g:SourceIp：源IP - condition.g:SourceVpc：源VPC - condition.g:SourceVpce：源VPCE - finding_type：分析结果类型
     *
     * @return string
     */
@@ -288,7 +288,7 @@ class FindingFilter implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 过滤键。
+    * @param string $key 过滤键。 - resource：资源URN - resource_type：资源类型 - resource_owner_account：资源所有者账号 - is_public：公共访问权限 - id：分析结果ID - status：分析结果类型 - principal_type：主体类型 - principal_identifier：主体Identifier - change_type：分析结果状态的变化 - existing_finding_id：已有分析结果ID - existing_finding_status：已有分析结果状态 - condition.g:PrincipalUrn：主体URN - condition.g:PrincipalId：主体ID - condition.g:PrincipalAccount：主体账号 - condition.g:PrincipalOrgId：主体OrgID - condition.g:PrincipalOrgPath：主体组织路径 - condition.g:PrincipalOrgManagementAccountId：主体组织管理账号ID - condition.g:SourceIp：源IP - condition.g:SourceVpc：源VPC - condition.g:SourceVpce：源VPCE - finding_type：分析结果类型
     *
     * @return $this
     */

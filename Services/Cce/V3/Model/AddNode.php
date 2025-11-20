@@ -20,7 +20,7 @@ class AddNode implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serverId  **参数解释**： 服务器ID，从ECS/BMS控制台获取。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * serverId  **参数解释**： 服务器ID，从ECS/BMS控制台获取。 > 获取方式:在控制台的“服务列表”中，单击“计算 > 弹性云服务器 ECS/裸金属服务器 BMS”，单击服务器的名称，在服务器详情页的“基本信息”页签下找到“ID”字段复制即可。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * spec  spec
     *
     * @var string[]
@@ -32,7 +32,7 @@ class AddNode implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serverId  **参数解释**： 服务器ID，从ECS/BMS控制台获取。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * serverId  **参数解释**： 服务器ID，从ECS/BMS控制台获取。 > 获取方式:在控制台的“服务列表”中，单击“计算 > 弹性云服务器 ECS/裸金属服务器 BMS”，单击服务器的名称，在服务器详情页的“基本信息”页签下找到“ID”字段复制即可。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * spec  spec
     *
     * @var string[]
@@ -65,7 +65,7 @@ class AddNode implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serverId  **参数解释**： 服务器ID，从ECS/BMS控制台获取。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * serverId  **参数解释**： 服务器ID，从ECS/BMS控制台获取。 > 获取方式:在控制台的“服务列表”中，单击“计算 > 弹性云服务器 ECS/裸金属服务器 BMS”，单击服务器的名称，在服务器详情页的“基本信息”页签下找到“ID”字段复制即可。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * spec  spec
     *
     * @var string[]
@@ -77,7 +77,7 @@ class AddNode implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serverId  **参数解释**： 服务器ID，从ECS/BMS控制台获取。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * serverId  **参数解释**： 服务器ID，从ECS/BMS控制台获取。 > 获取方式:在控制台的“服务列表”中，单击“计算 > 弹性云服务器 ECS/裸金属服务器 BMS”，单击服务器的名称，在服务器详情页的“基本信息”页签下找到“ID”字段复制即可。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * spec  spec
     *
     * @var string[]
@@ -89,7 +89,7 @@ class AddNode implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serverId  **参数解释**： 服务器ID，从ECS/BMS控制台获取。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * serverId  **参数解释**： 服务器ID，从ECS/BMS控制台获取。 > 获取方式:在控制台的“服务列表”中，单击“计算 > 弹性云服务器 ECS/裸金属服务器 BMS”，单击服务器的名称，在服务器详情页的“基本信息”页签下找到“ID”字段复制即可。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * spec  spec
     *
     * @var string[]
@@ -191,7 +191,7 @@ class AddNode implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverId
-    *  **参数解释**： 服务器ID，从ECS/BMS控制台获取。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *  **参数解释**： 服务器ID，从ECS/BMS控制台获取。 > 获取方式:在控制台的“服务列表”中，单击“计算 > 弹性云服务器 ECS/裸金属服务器 BMS”，单击服务器的名称，在服务器详情页的“基本信息”页签下找到“ID”字段复制即可。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class AddNode implements ModelInterface, ArrayAccess
     /**
     * Sets serverId
     *
-    * @param string $serverId **参数解释**： 服务器ID，从ECS/BMS控制台获取。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * @param string $serverId **参数解释**： 服务器ID，从ECS/BMS控制台获取。 > 获取方式:在控制台的“服务列表”中，单击“计算 > 弹性云服务器 ECS/裸金属服务器 BMS”，单击服务器的名称，在服务器详情页的“基本信息”页签下找到“ID”字段复制即可。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

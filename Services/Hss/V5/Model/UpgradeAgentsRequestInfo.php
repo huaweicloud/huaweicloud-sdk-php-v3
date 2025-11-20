@@ -27,10 +27,10 @@ class UpgradeAgentsRequestInfo implements ModelInterface, ArrayAccess
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * version  **参数解释**： 防护版本 **约束限制**: 不涉及 **取值范围**： - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。  **默认取值**: 不涉及
     * protectStatus  **参数解释**： 防护状态 **约束限制**: 不涉及 **取值范围**： - closed ：未防护。 - opened ：防护中。  **默认取值**: 不涉及
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * osType  **参数解释**： 操作系统类型 **约束限制**: 不涉及 **取值范围**： - Linux：Linux系统。 - Windows：Windows系统。  **默认取值**: 不涉及
     * policyGroupId  **参数解释**： 策略组ID **取值范围**： 字符长度36-64位
     * groupId  **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  资产重要性 **参数解释**： 资产重要性 **约束限制**: 不涉及 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。  **默认取值**: 不涉及
     * hostIdList  **参数解释**: 服务器ID列表 **取值范围**: 不涉及
     *
     * @var string[]
@@ -59,10 +59,10 @@ class UpgradeAgentsRequestInfo implements ModelInterface, ArrayAccess
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * version  **参数解释**： 防护版本 **约束限制**: 不涉及 **取值范围**： - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。  **默认取值**: 不涉及
     * protectStatus  **参数解释**： 防护状态 **约束限制**: 不涉及 **取值范围**： - closed ：未防护。 - opened ：防护中。  **默认取值**: 不涉及
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * osType  **参数解释**： 操作系统类型 **约束限制**: 不涉及 **取值范围**： - Linux：Linux系统。 - Windows：Windows系统。  **默认取值**: 不涉及
     * policyGroupId  **参数解释**： 策略组ID **取值范围**： 字符长度36-64位
     * groupId  **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  资产重要性 **参数解释**： 资产重要性 **约束限制**: 不涉及 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。  **默认取值**: 不涉及
     * hostIdList  **参数解释**: 服务器ID列表 **取值范围**: 不涉及
     *
     * @var string[]
@@ -112,10 +112,10 @@ class UpgradeAgentsRequestInfo implements ModelInterface, ArrayAccess
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * version  **参数解释**： 防护版本 **约束限制**: 不涉及 **取值范围**： - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。  **默认取值**: 不涉及
     * protectStatus  **参数解释**： 防护状态 **约束限制**: 不涉及 **取值范围**： - closed ：未防护。 - opened ：防护中。  **默认取值**: 不涉及
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * osType  **参数解释**： 操作系统类型 **约束限制**: 不涉及 **取值范围**： - Linux：Linux系统。 - Windows：Windows系统。  **默认取值**: 不涉及
     * policyGroupId  **参数解释**： 策略组ID **取值范围**： 字符长度36-64位
     * groupId  **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  资产重要性 **参数解释**： 资产重要性 **约束限制**: 不涉及 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。  **默认取值**: 不涉及
     * hostIdList  **参数解释**: 服务器ID列表 **取值范围**: 不涉及
     *
     * @var string[]
@@ -144,10 +144,10 @@ class UpgradeAgentsRequestInfo implements ModelInterface, ArrayAccess
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * version  **参数解释**： 防护版本 **约束限制**: 不涉及 **取值范围**： - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。  **默认取值**: 不涉及
     * protectStatus  **参数解释**： 防护状态 **约束限制**: 不涉及 **取值范围**： - closed ：未防护。 - opened ：防护中。  **默认取值**: 不涉及
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * osType  **参数解释**： 操作系统类型 **约束限制**: 不涉及 **取值范围**： - Linux：Linux系统。 - Windows：Windows系统。  **默认取值**: 不涉及
     * policyGroupId  **参数解释**： 策略组ID **取值范围**： 字符长度36-64位
     * groupId  **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  资产重要性 **参数解释**： 资产重要性 **约束限制**: 不涉及 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。  **默认取值**: 不涉及
     * hostIdList  **参数解释**: 服务器ID列表 **取值范围**: 不涉及
     *
     * @var string[]
@@ -176,10 +176,10 @@ class UpgradeAgentsRequestInfo implements ModelInterface, ArrayAccess
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * version  **参数解释**： 防护版本 **约束限制**: 不涉及 **取值范围**： - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。  **默认取值**: 不涉及
     * protectStatus  **参数解释**： 防护状态 **约束限制**: 不涉及 **取值范围**： - closed ：未防护。 - opened ：防护中。  **默认取值**: 不涉及
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * osType  **参数解释**： 操作系统类型 **约束限制**: 不涉及 **取值范围**： - Linux：Linux系统。 - Windows：Windows系统。  **默认取值**: 不涉及
     * policyGroupId  **参数解释**： 策略组ID **取值范围**： 字符长度36-64位
     * groupId  **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  资产重要性 **参数解释**： 资产重要性 **约束限制**: 不涉及 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。  **默认取值**: 不涉及
     * hostIdList  **参数解释**: 服务器ID列表 **取值范围**: 不涉及
     *
     * @var string[]
@@ -324,17 +324,26 @@ class UpgradeAgentsRequestInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) < 1)) {
                 $invalidProperties[] = "invalid value for 'version', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['version']) && !preg_match("/^hss.version.basic|hss.version.advanced|hss.version.enterprise|hss.version.premium|hss.version.wtp|hss.version.container.enterprise$/", $this->container['version'])) {
+                $invalidProperties[] = "invalid value for 'version', must be conform to the pattern /^hss.version.basic|hss.version.advanced|hss.version.enterprise|hss.version.premium|hss.version.wtp|hss.version.container.enterprise$/.";
+            }
             if (!is_null($this->container['protectStatus']) && (mb_strlen($this->container['protectStatus']) > 32)) {
                 $invalidProperties[] = "invalid value for 'protectStatus', the character length must be smaller than or equal to 32.";
             }
             if (!is_null($this->container['protectStatus']) && (mb_strlen($this->container['protectStatus']) < 1)) {
                 $invalidProperties[] = "invalid value for 'protectStatus', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['protectStatus']) && !preg_match("/^closed|opened$/", $this->container['protectStatus'])) {
+                $invalidProperties[] = "invalid value for 'protectStatus', must be conform to the pattern /^closed|opened$/.";
+            }
             if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) > 64)) {
                 $invalidProperties[] = "invalid value for 'osType', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'osType', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['osType']) && !preg_match("/^Linux|Windows$/", $this->container['osType'])) {
+                $invalidProperties[] = "invalid value for 'osType', must be conform to the pattern /^Linux|Windows$/.";
             }
             if (!is_null($this->container['policyGroupId']) && (mb_strlen($this->container['policyGroupId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'policyGroupId', the character length must be smaller than or equal to 64.";
@@ -547,7 +556,7 @@ class UpgradeAgentsRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    *  **参数解释**： 操作系统类型 **约束限制**: 不涉及 **取值范围**： - Linux：Linux系统。 - Windows：Windows系统。  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -559,7 +568,7 @@ class UpgradeAgentsRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * @param string|null $osType **参数解释**： 操作系统类型 **约束限制**: 不涉及 **取值范围**： - Linux：Linux系统。 - Windows：Windows系统。  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -619,7 +628,7 @@ class UpgradeAgentsRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetValue
-    *  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    *  资产重要性 **参数解释**： 资产重要性 **约束限制**: 不涉及 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -631,7 +640,7 @@ class UpgradeAgentsRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets assetValue
     *
-    * @param string|null $assetValue 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * @param string|null $assetValue 资产重要性 **参数解释**： 资产重要性 **约束限制**: 不涉及 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。  **默认取值**: 不涉及
     *
     * @return $this
     */

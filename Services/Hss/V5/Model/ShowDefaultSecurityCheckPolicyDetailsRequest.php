@@ -25,11 +25,11 @@ class ShowDefaultSecurityCheckPolicyDetailsRequest implements ModelInterface, Ar
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * supportOs  **参数解释** 策略支持的操作系统类型 **约束限制** 不涉及 **取值范围** - Linux : Linux操作系统 - Windows : Windows操作系统  **默认取值** Linux
     * checkType  **参数解释** 配置检查（基线）的类型,例如SSH、CentOS 7、Windows Server 2019 R2、Windows Server 2016 R2、MySQL5-Windows、weakpwd、pwdcomplexity **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
-    * standard  **参数解释** 标准类型，包含如下: **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard: 通用安全标准  **默认取值** 不涉及
+    * standard  **参数解释** 标准类型 **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard: 通用安全标准  **默认取值** 不涉及
     * tag  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
     * checkRuleName  **参数解释** 配置检查（基线）检查项的名称 **约束限制** 不涉及 **取值范围** 字符长度0-2048位 **默认取值** 不涉及
     * severity  **参数解释** 配置检查（基线）检查项的风险程度 **约束限制** 不涉及 **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危  **默认取值** 不涉及
-    * level  **参数解释** 配置检查（基线）检查项的等级 **约束限制** 不涉及 **取值范围** 字符长度0-32位 **默认取值** 不涉及
+    * level  **参数解释** 配置检查（基线）检查项的版本信息 **约束限制** 不涉及 **取值范围** 字符长度0-32位 **默认取值** 不涉及
     * groupId  **参数解释** 策略组ID **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
     * checked  **参数解释** 默认是否被选中 **约束限制** 不涉及 **取值范围** false : 不选中 true  : 默认  **默认取值** true
     *
@@ -57,11 +57,11 @@ class ShowDefaultSecurityCheckPolicyDetailsRequest implements ModelInterface, Ar
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * supportOs  **参数解释** 策略支持的操作系统类型 **约束限制** 不涉及 **取值范围** - Linux : Linux操作系统 - Windows : Windows操作系统  **默认取值** Linux
     * checkType  **参数解释** 配置检查（基线）的类型,例如SSH、CentOS 7、Windows Server 2019 R2、Windows Server 2016 R2、MySQL5-Windows、weakpwd、pwdcomplexity **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
-    * standard  **参数解释** 标准类型，包含如下: **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard: 通用安全标准  **默认取值** 不涉及
+    * standard  **参数解释** 标准类型 **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard: 通用安全标准  **默认取值** 不涉及
     * tag  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
     * checkRuleName  **参数解释** 配置检查（基线）检查项的名称 **约束限制** 不涉及 **取值范围** 字符长度0-2048位 **默认取值** 不涉及
     * severity  **参数解释** 配置检查（基线）检查项的风险程度 **约束限制** 不涉及 **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危  **默认取值** 不涉及
-    * level  **参数解释** 配置检查（基线）检查项的等级 **约束限制** 不涉及 **取值范围** 字符长度0-32位 **默认取值** 不涉及
+    * level  **参数解释** 配置检查（基线）检查项的版本信息 **约束限制** 不涉及 **取值范围** 字符长度0-32位 **默认取值** 不涉及
     * groupId  **参数解释** 策略组ID **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
     * checked  **参数解释** 默认是否被选中 **约束限制** 不涉及 **取值范围** false : 不选中 true  : 默认  **默认取值** true
     *
@@ -110,11 +110,11 @@ class ShowDefaultSecurityCheckPolicyDetailsRequest implements ModelInterface, Ar
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * supportOs  **参数解释** 策略支持的操作系统类型 **约束限制** 不涉及 **取值范围** - Linux : Linux操作系统 - Windows : Windows操作系统  **默认取值** Linux
     * checkType  **参数解释** 配置检查（基线）的类型,例如SSH、CentOS 7、Windows Server 2019 R2、Windows Server 2016 R2、MySQL5-Windows、weakpwd、pwdcomplexity **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
-    * standard  **参数解释** 标准类型，包含如下: **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard: 通用安全标准  **默认取值** 不涉及
+    * standard  **参数解释** 标准类型 **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard: 通用安全标准  **默认取值** 不涉及
     * tag  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
     * checkRuleName  **参数解释** 配置检查（基线）检查项的名称 **约束限制** 不涉及 **取值范围** 字符长度0-2048位 **默认取值** 不涉及
     * severity  **参数解释** 配置检查（基线）检查项的风险程度 **约束限制** 不涉及 **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危  **默认取值** 不涉及
-    * level  **参数解释** 配置检查（基线）检查项的等级 **约束限制** 不涉及 **取值范围** 字符长度0-32位 **默认取值** 不涉及
+    * level  **参数解释** 配置检查（基线）检查项的版本信息 **约束限制** 不涉及 **取值范围** 字符长度0-32位 **默认取值** 不涉及
     * groupId  **参数解释** 策略组ID **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
     * checked  **参数解释** 默认是否被选中 **约束限制** 不涉及 **取值范围** false : 不选中 true  : 默认  **默认取值** true
     *
@@ -142,11 +142,11 @@ class ShowDefaultSecurityCheckPolicyDetailsRequest implements ModelInterface, Ar
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * supportOs  **参数解释** 策略支持的操作系统类型 **约束限制** 不涉及 **取值范围** - Linux : Linux操作系统 - Windows : Windows操作系统  **默认取值** Linux
     * checkType  **参数解释** 配置检查（基线）的类型,例如SSH、CentOS 7、Windows Server 2019 R2、Windows Server 2016 R2、MySQL5-Windows、weakpwd、pwdcomplexity **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
-    * standard  **参数解释** 标准类型，包含如下: **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard: 通用安全标准  **默认取值** 不涉及
+    * standard  **参数解释** 标准类型 **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard: 通用安全标准  **默认取值** 不涉及
     * tag  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
     * checkRuleName  **参数解释** 配置检查（基线）检查项的名称 **约束限制** 不涉及 **取值范围** 字符长度0-2048位 **默认取值** 不涉及
     * severity  **参数解释** 配置检查（基线）检查项的风险程度 **约束限制** 不涉及 **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危  **默认取值** 不涉及
-    * level  **参数解释** 配置检查（基线）检查项的等级 **约束限制** 不涉及 **取值范围** 字符长度0-32位 **默认取值** 不涉及
+    * level  **参数解释** 配置检查（基线）检查项的版本信息 **约束限制** 不涉及 **取值范围** 字符长度0-32位 **默认取值** 不涉及
     * groupId  **参数解释** 策略组ID **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
     * checked  **参数解释** 默认是否被选中 **约束限制** 不涉及 **取值范围** false : 不选中 true  : 默认  **默认取值** true
     *
@@ -174,11 +174,11 @@ class ShowDefaultSecurityCheckPolicyDetailsRequest implements ModelInterface, Ar
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * supportOs  **参数解释** 策略支持的操作系统类型 **约束限制** 不涉及 **取值范围** - Linux : Linux操作系统 - Windows : Windows操作系统  **默认取值** Linux
     * checkType  **参数解释** 配置检查（基线）的类型,例如SSH、CentOS 7、Windows Server 2019 R2、Windows Server 2016 R2、MySQL5-Windows、weakpwd、pwdcomplexity **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
-    * standard  **参数解释** 标准类型，包含如下: **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard: 通用安全标准  **默认取值** 不涉及
+    * standard  **参数解释** 标准类型 **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard: 通用安全标准  **默认取值** 不涉及
     * tag  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
     * checkRuleName  **参数解释** 配置检查（基线）检查项的名称 **约束限制** 不涉及 **取值范围** 字符长度0-2048位 **默认取值** 不涉及
     * severity  **参数解释** 配置检查（基线）检查项的风险程度 **约束限制** 不涉及 **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危  **默认取值** 不涉及
-    * level  **参数解释** 配置检查（基线）检查项的等级 **约束限制** 不涉及 **取值范围** 字符长度0-32位 **默认取值** 不涉及
+    * level  **参数解释** 配置检查（基线）检查项的版本信息 **约束限制** 不涉及 **取值范围** 字符长度0-32位 **默认取值** 不涉及
     * groupId  **参数解释** 策略组ID **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
     * checked  **参数解释** 默认是否被选中 **约束限制** 不涉及 **取值范围** false : 不选中 true  : 默认  **默认取值** true
     *
@@ -514,7 +514,7 @@ class ShowDefaultSecurityCheckPolicyDetailsRequest implements ModelInterface, Ar
 
     /**
     * Gets standard
-    *  **参数解释** 标准类型，包含如下: **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard: 通用安全标准  **默认取值** 不涉及
+    *  **参数解释** 标准类型 **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard: 通用安全标准  **默认取值** 不涉及
     *
     * @return string
     */
@@ -526,7 +526,7 @@ class ShowDefaultSecurityCheckPolicyDetailsRequest implements ModelInterface, Ar
     /**
     * Sets standard
     *
-    * @param string $standard **参数解释** 标准类型，包含如下: **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard: 通用安全标准  **默认取值** 不涉及
+    * @param string $standard **参数解释** 标准类型 **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard: 通用安全标准  **默认取值** 不涉及
     *
     * @return $this
     */
@@ -610,7 +610,7 @@ class ShowDefaultSecurityCheckPolicyDetailsRequest implements ModelInterface, Ar
 
     /**
     * Gets level
-    *  **参数解释** 配置检查（基线）检查项的等级 **约束限制** 不涉及 **取值范围** 字符长度0-32位 **默认取值** 不涉及
+    *  **参数解释** 配置检查（基线）检查项的版本信息 **约束限制** 不涉及 **取值范围** 字符长度0-32位 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -622,7 +622,7 @@ class ShowDefaultSecurityCheckPolicyDetailsRequest implements ModelInterface, Ar
     /**
     * Sets level
     *
-    * @param string|null $level **参数解释** 配置检查（基线）检查项的等级 **约束限制** 不涉及 **取值范围** 字符长度0-32位 **默认取值** 不涉及
+    * @param string|null $level **参数解释** 配置检查（基线）检查项的版本信息 **约束限制** 不涉及 **取值范围** 字符长度0-32位 **默认取值** 不涉及
     *
     * @return $this
     */

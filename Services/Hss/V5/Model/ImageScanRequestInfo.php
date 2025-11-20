@@ -28,6 +28,7 @@ class ImageScanRequestInfo implements ModelInterface, ArrayAccess
     * loginUserName  **参数解释**: 镜像仓登录用户名 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * loginPassword  **参数解释**: 镜像仓登录密码 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * namespace  **参数解释**: 组织名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * pipelineType  **参数解释**: 流水线类型 **约束限制**: 不涉及 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class ImageScanRequestInfo implements ModelInterface, ArrayAccess
             'repositoryAddress' => 'string',
             'loginUserName' => 'string',
             'loginPassword' => 'string',
-            'namespace' => 'string'
+            'namespace' => 'string',
+            'pipelineType' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class ImageScanRequestInfo implements ModelInterface, ArrayAccess
     * loginUserName  **参数解释**: 镜像仓登录用户名 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * loginPassword  **参数解释**: 镜像仓登录密码 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * namespace  **参数解释**: 组织名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * pipelineType  **参数解释**: 流水线类型 **约束限制**: 不涉及 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class ImageScanRequestInfo implements ModelInterface, ArrayAccess
         'repositoryAddress' => null,
         'loginUserName' => null,
         'loginPassword' => null,
-        'namespace' => null
+        'namespace' => null,
+        'pipelineType' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class ImageScanRequestInfo implements ModelInterface, ArrayAccess
     * loginUserName  **参数解释**: 镜像仓登录用户名 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * loginPassword  **参数解释**: 镜像仓登录密码 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * namespace  **参数解释**: 组织名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * pipelineType  **参数解释**: 流水线类型 **约束限制**: 不涉及 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class ImageScanRequestInfo implements ModelInterface, ArrayAccess
             'repositoryAddress' => 'repository_address',
             'loginUserName' => 'login_user_name',
             'loginPassword' => 'login_password',
-            'namespace' => 'namespace'
+            'namespace' => 'namespace',
+            'pipelineType' => 'pipeline_type'
     ];
 
     /**
@@ -121,6 +127,7 @@ class ImageScanRequestInfo implements ModelInterface, ArrayAccess
     * loginUserName  **参数解释**: 镜像仓登录用户名 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * loginPassword  **参数解释**: 镜像仓登录密码 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * namespace  **参数解释**: 组织名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * pipelineType  **参数解释**: 流水线类型 **约束限制**: 不涉及 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class ImageScanRequestInfo implements ModelInterface, ArrayAccess
             'repositoryAddress' => 'setRepositoryAddress',
             'loginUserName' => 'setLoginUserName',
             'loginPassword' => 'setLoginPassword',
-            'namespace' => 'setNamespace'
+            'namespace' => 'setNamespace',
+            'pipelineType' => 'setPipelineType'
     ];
 
     /**
@@ -145,6 +153,7 @@ class ImageScanRequestInfo implements ModelInterface, ArrayAccess
     * loginUserName  **参数解释**: 镜像仓登录用户名 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * loginPassword  **参数解释**: 镜像仓登录密码 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * namespace  **参数解释**: 组织名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * pipelineType  **参数解释**: 流水线类型 **约束限制**: 不涉及 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class ImageScanRequestInfo implements ModelInterface, ArrayAccess
             'repositoryAddress' => 'getRepositoryAddress',
             'loginUserName' => 'getLoginUserName',
             'loginPassword' => 'getLoginPassword',
-            'namespace' => 'getNamespace'
+            'namespace' => 'getNamespace',
+            'pipelineType' => 'getPipelineType'
     ];
 
     /**
@@ -225,6 +235,7 @@ class ImageScanRequestInfo implements ModelInterface, ArrayAccess
         $this->container['loginUserName'] = isset($data['loginUserName']) ? $data['loginUserName'] : null;
         $this->container['loginPassword'] = isset($data['loginPassword']) ? $data['loginPassword'] : null;
         $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
+        $this->container['pipelineType'] = isset($data['pipelineType']) ? $data['pipelineType'] : null;
     }
 
     /**
@@ -297,6 +308,15 @@ class ImageScanRequestInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['namespace']) && !preg_match("/^.*$/", $this->container['namespace'])) {
                 $invalidProperties[] = "invalid value for 'namespace', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['pipelineType']) && (mb_strlen($this->container['pipelineType']) > 32)) {
+                $invalidProperties[] = "invalid value for 'pipelineType', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['pipelineType']) && (mb_strlen($this->container['pipelineType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'pipelineType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['pipelineType']) && !preg_match("/^(jenkins|codearts)$/", $this->container['pipelineType'])) {
+                $invalidProperties[] = "invalid value for 'pipelineType', must be conform to the pattern /^(jenkins|codearts)$/.";
             }
         return $invalidProperties;
     }
@@ -501,6 +521,30 @@ class ImageScanRequestInfo implements ModelInterface, ArrayAccess
     public function setNamespace($namespace)
     {
         $this->container['namespace'] = $namespace;
+        return $this;
+    }
+
+    /**
+    * Gets pipelineType
+    *  **参数解释**: 流水线类型 **约束限制**: 不涉及 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。  **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getPipelineType()
+    {
+        return $this->container['pipelineType'];
+    }
+
+    /**
+    * Sets pipelineType
+    *
+    * @param string|null $pipelineType **参数解释**: 流水线类型 **约束限制**: 不涉及 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。  **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setPipelineType($pipelineType)
+    {
+        $this->container['pipelineType'] = $pipelineType;
         return $this;
     }
 

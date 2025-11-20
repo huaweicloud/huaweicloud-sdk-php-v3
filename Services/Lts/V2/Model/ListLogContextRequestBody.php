@@ -83,8 +83,8 @@ class ListLogContextRequestBody implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'lineNum' => 'line_num',
             'time' => '__time__',
-            'backwardsSize' => 'backwardsSize',
-            'forwardsSize' => 'forwardsSize'
+            'backwardsSize' => 'backwards_size',
+            'forwardsSize' => 'forwards_size'
     ];
 
     /**

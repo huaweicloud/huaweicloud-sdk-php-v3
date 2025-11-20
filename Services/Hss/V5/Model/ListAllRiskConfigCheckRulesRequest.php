@@ -24,10 +24,10 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * checkType  **参数解释** 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
-    * standard  **参数解释** 标准类型，包含如下: **约束限制** 不涉及 **取值范围** - cn_standard：等保合规标准 - hw_standard：云安全实践标准 - cis_standard：通用安全标准  **默认取值** 不涉及
-    * statisticsScanResult  **参数解释** 统计结果类型，包含如下： **约束限制** 不涉及 **取值范围** - pass：已通过，表示查看主机全部通过的检查项 - failed：未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed：已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项 **默认取值** 不涉及
+    * standard  **参数解释** 标准类型 **约束限制** 不涉及 **取值范围** - cn_standard：等保合规标准 - hw_standard：云安全实践标准 - cis_standard：通用安全标准  **默认取值** 不涉及
+    * statisticsScanResult  **参数解释** 统计结果类型 **约束限制** 不涉及 **取值范围** - pass：已通过，表示查看主机全部通过的检查项 - failed：未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed：已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项  **默认取值** 不涉及
     * checkRuleName  **参数解释** 检查项（检查规则）名称，支持模糊匹配 **约束限制** 不涉及 **取值范围** 字符长度0-2048位 **默认取值** 不涉及
-    * severity  **参数解释** 风险等级，包含如下: **约束限制** 不涉及 **取值范围** - Security : 安全 - Low      : 低危 - Medium   : 中危 - High     : 高危 - Critical : 危急 **默认取值** 不涉及
+    * severity  **参数解释** 风险等级 **约束限制** 不涉及 **取值范围** - Security：安全 - Low：低危 - Medium：中危 - High：高危 - Critical：危急 **默认取值** 不涉及
     * clusterId  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
     * tag  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
     * policyGroupId  **参数解释** 策略组ID，不赋值时，查租户所有主机，host_id存在时，此值无效 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
@@ -54,10 +54,10 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * checkType  **参数解释** 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
-    * standard  **参数解释** 标准类型，包含如下: **约束限制** 不涉及 **取值范围** - cn_standard：等保合规标准 - hw_standard：云安全实践标准 - cis_standard：通用安全标准  **默认取值** 不涉及
-    * statisticsScanResult  **参数解释** 统计结果类型，包含如下： **约束限制** 不涉及 **取值范围** - pass：已通过，表示查看主机全部通过的检查项 - failed：未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed：已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项 **默认取值** 不涉及
+    * standard  **参数解释** 标准类型 **约束限制** 不涉及 **取值范围** - cn_standard：等保合规标准 - hw_standard：云安全实践标准 - cis_standard：通用安全标准  **默认取值** 不涉及
+    * statisticsScanResult  **参数解释** 统计结果类型 **约束限制** 不涉及 **取值范围** - pass：已通过，表示查看主机全部通过的检查项 - failed：未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed：已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项  **默认取值** 不涉及
     * checkRuleName  **参数解释** 检查项（检查规则）名称，支持模糊匹配 **约束限制** 不涉及 **取值范围** 字符长度0-2048位 **默认取值** 不涉及
-    * severity  **参数解释** 风险等级，包含如下: **约束限制** 不涉及 **取值范围** - Security : 安全 - Low      : 低危 - Medium   : 中危 - High     : 高危 - Critical : 危急 **默认取值** 不涉及
+    * severity  **参数解释** 风险等级 **约束限制** 不涉及 **取值范围** - Security：安全 - Low：低危 - Medium：中危 - High：高危 - Critical：危急 **默认取值** 不涉及
     * clusterId  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
     * tag  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
     * policyGroupId  **参数解释** 策略组ID，不赋值时，查租户所有主机，host_id存在时，此值无效 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
@@ -105,10 +105,10 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * checkType  **参数解释** 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
-    * standard  **参数解释** 标准类型，包含如下: **约束限制** 不涉及 **取值范围** - cn_standard：等保合规标准 - hw_standard：云安全实践标准 - cis_standard：通用安全标准  **默认取值** 不涉及
-    * statisticsScanResult  **参数解释** 统计结果类型，包含如下： **约束限制** 不涉及 **取值范围** - pass：已通过，表示查看主机全部通过的检查项 - failed：未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed：已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项 **默认取值** 不涉及
+    * standard  **参数解释** 标准类型 **约束限制** 不涉及 **取值范围** - cn_standard：等保合规标准 - hw_standard：云安全实践标准 - cis_standard：通用安全标准  **默认取值** 不涉及
+    * statisticsScanResult  **参数解释** 统计结果类型 **约束限制** 不涉及 **取值范围** - pass：已通过，表示查看主机全部通过的检查项 - failed：未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed：已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项  **默认取值** 不涉及
     * checkRuleName  **参数解释** 检查项（检查规则）名称，支持模糊匹配 **约束限制** 不涉及 **取值范围** 字符长度0-2048位 **默认取值** 不涉及
-    * severity  **参数解释** 风险等级，包含如下: **约束限制** 不涉及 **取值范围** - Security : 安全 - Low      : 低危 - Medium   : 中危 - High     : 高危 - Critical : 危急 **默认取值** 不涉及
+    * severity  **参数解释** 风险等级 **约束限制** 不涉及 **取值范围** - Security：安全 - Low：低危 - Medium：中危 - High：高危 - Critical：危急 **默认取值** 不涉及
     * clusterId  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
     * tag  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
     * policyGroupId  **参数解释** 策略组ID，不赋值时，查租户所有主机，host_id存在时，此值无效 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
@@ -135,10 +135,10 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * checkType  **参数解释** 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
-    * standard  **参数解释** 标准类型，包含如下: **约束限制** 不涉及 **取值范围** - cn_standard：等保合规标准 - hw_standard：云安全实践标准 - cis_standard：通用安全标准  **默认取值** 不涉及
-    * statisticsScanResult  **参数解释** 统计结果类型，包含如下： **约束限制** 不涉及 **取值范围** - pass：已通过，表示查看主机全部通过的检查项 - failed：未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed：已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项 **默认取值** 不涉及
+    * standard  **参数解释** 标准类型 **约束限制** 不涉及 **取值范围** - cn_standard：等保合规标准 - hw_standard：云安全实践标准 - cis_standard：通用安全标准  **默认取值** 不涉及
+    * statisticsScanResult  **参数解释** 统计结果类型 **约束限制** 不涉及 **取值范围** - pass：已通过，表示查看主机全部通过的检查项 - failed：未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed：已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项  **默认取值** 不涉及
     * checkRuleName  **参数解释** 检查项（检查规则）名称，支持模糊匹配 **约束限制** 不涉及 **取值范围** 字符长度0-2048位 **默认取值** 不涉及
-    * severity  **参数解释** 风险等级，包含如下: **约束限制** 不涉及 **取值范围** - Security : 安全 - Low      : 低危 - Medium   : 中危 - High     : 高危 - Critical : 危急 **默认取值** 不涉及
+    * severity  **参数解释** 风险等级 **约束限制** 不涉及 **取值范围** - Security：安全 - Low：低危 - Medium：中危 - High：高危 - Critical：危急 **默认取值** 不涉及
     * clusterId  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
     * tag  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
     * policyGroupId  **参数解释** 策略组ID，不赋值时，查租户所有主机，host_id存在时，此值无效 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
@@ -165,10 +165,10 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * checkType  **参数解释** 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
-    * standard  **参数解释** 标准类型，包含如下: **约束限制** 不涉及 **取值范围** - cn_standard：等保合规标准 - hw_standard：云安全实践标准 - cis_standard：通用安全标准  **默认取值** 不涉及
-    * statisticsScanResult  **参数解释** 统计结果类型，包含如下： **约束限制** 不涉及 **取值范围** - pass：已通过，表示查看主机全部通过的检查项 - failed：未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed：已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项 **默认取值** 不涉及
+    * standard  **参数解释** 标准类型 **约束限制** 不涉及 **取值范围** - cn_standard：等保合规标准 - hw_standard：云安全实践标准 - cis_standard：通用安全标准  **默认取值** 不涉及
+    * statisticsScanResult  **参数解释** 统计结果类型 **约束限制** 不涉及 **取值范围** - pass：已通过，表示查看主机全部通过的检查项 - failed：未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed：已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项  **默认取值** 不涉及
     * checkRuleName  **参数解释** 检查项（检查规则）名称，支持模糊匹配 **约束限制** 不涉及 **取值范围** 字符长度0-2048位 **默认取值** 不涉及
-    * severity  **参数解释** 风险等级，包含如下: **约束限制** 不涉及 **取值范围** - Security : 安全 - Low      : 低危 - Medium   : 中危 - High     : 高危 - Critical : 危急 **默认取值** 不涉及
+    * severity  **参数解释** 风险等级 **约束限制** 不涉及 **取值范围** - Security：安全 - Low：低危 - Medium：中危 - High：高危 - Critical：危急 **默认取值** 不涉及
     * clusterId  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
     * tag  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
     * policyGroupId  **参数解释** 策略组ID，不赋值时，查租户所有主机，host_id存在时，此值无效 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
@@ -479,7 +479,7 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets standard
-    *  **参数解释** 标准类型，包含如下: **约束限制** 不涉及 **取值范围** - cn_standard：等保合规标准 - hw_standard：云安全实践标准 - cis_standard：通用安全标准  **默认取值** 不涉及
+    *  **参数解释** 标准类型 **约束限制** 不涉及 **取值范围** - cn_standard：等保合规标准 - hw_standard：云安全实践标准 - cis_standard：通用安全标准  **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -491,7 +491,7 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets standard
     *
-    * @param string|null $standard **参数解释** 标准类型，包含如下: **约束限制** 不涉及 **取值范围** - cn_standard：等保合规标准 - hw_standard：云安全实践标准 - cis_standard：通用安全标准  **默认取值** 不涉及
+    * @param string|null $standard **参数解释** 标准类型 **约束限制** 不涉及 **取值范围** - cn_standard：等保合规标准 - hw_standard：云安全实践标准 - cis_standard：通用安全标准  **默认取值** 不涉及
     *
     * @return $this
     */
@@ -503,7 +503,7 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets statisticsScanResult
-    *  **参数解释** 统计结果类型，包含如下： **约束限制** 不涉及 **取值范围** - pass：已通过，表示查看主机全部通过的检查项 - failed：未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed：已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项 **默认取值** 不涉及
+    *  **参数解释** 统计结果类型 **约束限制** 不涉及 **取值范围** - pass：已通过，表示查看主机全部通过的检查项 - failed：未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed：已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项  **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -515,7 +515,7 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets statisticsScanResult
     *
-    * @param string|null $statisticsScanResult **参数解释** 统计结果类型，包含如下： **约束限制** 不涉及 **取值范围** - pass：已通过，表示查看主机全部通过的检查项 - failed：未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed：已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项 **默认取值** 不涉及
+    * @param string|null $statisticsScanResult **参数解释** 统计结果类型 **约束限制** 不涉及 **取值范围** - pass：已通过，表示查看主机全部通过的检查项 - failed：未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed：已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项  **默认取值** 不涉及
     *
     * @return $this
     */
@@ -551,7 +551,7 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  **参数解释** 风险等级，包含如下: **约束限制** 不涉及 **取值范围** - Security : 安全 - Low      : 低危 - Medium   : 中危 - High     : 高危 - Critical : 危急 **默认取值** 不涉及
+    *  **参数解释** 风险等级 **约束限制** 不涉及 **取值范围** - Security：安全 - Low：低危 - Medium：中危 - High：高危 - Critical：危急 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -563,7 +563,7 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param string|null $severity **参数解释** 风险等级，包含如下: **约束限制** 不涉及 **取值范围** - Security : 安全 - Low      : 低危 - Medium   : 中危 - High     : 高危 - Critical : 危急 **默认取值** 不涉及
+    * @param string|null $severity **参数解释** 风险等级 **约束限制** 不涉及 **取值范围** - Security：安全 - Low：低危 - Medium：中危 - High：高危 - Critical：危急 **默认取值** 不涉及
     *
     * @return $this
     */

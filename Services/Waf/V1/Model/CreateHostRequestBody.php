@@ -26,8 +26,8 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     * certificateid  证书id，通过查询证书列表接口（ListCertificates）接口获取证书id   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
     * certificatename  证书名   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * lbAlgorithm  LB负载均衡，仅专业版和企业版支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
     * description  域名描述
@@ -58,8 +58,8 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     * certificateid  证书id，通过查询证书列表接口（ListCertificates）接口获取证书id   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
     * certificatename  证书名   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * lbAlgorithm  LB负载均衡，仅专业版和企业版支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
     * description  域名描述
@@ -111,8 +111,8 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     * certificateid  证书id，通过查询证书列表接口（ListCertificates）接口获取证书id   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
     * certificatename  证书名   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * lbAlgorithm  LB负载均衡，仅专业版和企业版支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
     * description  域名描述
@@ -143,8 +143,8 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     * certificateid  证书id，通过查询证书列表接口（ListCertificates）接口获取证书id   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
     * certificatename  证书名   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * lbAlgorithm  LB负载均衡，仅专业版和企业版支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
     * description  域名描述
@@ -175,8 +175,8 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     * certificateid  证书id，通过查询证书列表接口（ListCertificates）接口获取证书id   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
     * certificatename  证书名   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * lbAlgorithm  LB负载均衡，仅专业版和企业版支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
     * description  域名描述
@@ -473,7 +473,7 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets exclusiveIp
-    *  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
+    *  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     *
     * @return bool|null
     */
@@ -485,7 +485,7 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets exclusiveIp
     *
-    * @param bool|null $exclusiveIp 是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
+    * @param bool|null $exclusiveIp 是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     *
     * @return $this
     */
@@ -497,7 +497,7 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets paidType
-    *  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
+    *  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
     *
     * @return string|null
     */
@@ -509,7 +509,7 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets paidType
     *
-    * @param string|null $paidType 套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
+    * @param string|null $paidType 套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
     *
     * @return $this
     */

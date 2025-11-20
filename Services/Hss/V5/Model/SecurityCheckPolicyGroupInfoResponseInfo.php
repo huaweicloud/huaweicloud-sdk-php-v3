@@ -29,9 +29,9 @@ class SecurityCheckPolicyGroupInfoResponseInfo implements ModelInterface, ArrayA
     * supportOs  **参数解释** 策略支持的操作系统类型 **取值范围** - Linux：linux系统 - Windows：windows系统
     * policyInfo  policyInfo
     * weakPwdPolicyInfo  weakPwdPolicyInfo
-    * agentIdList  **参数解释** 应用的主机的agentID列表
+    * agentIdList  **参数解释** 应用的主机的agentID列表 **取值范围** 字符串大小范围20-64
     * taskCondition  taskCondition
-    * detectionPeriod  **参数解释** 检测周期
+    * detectionPeriod  **参数解释** 检测周期 **取值范围** 字符串大小范围1-128
     *
     * @var string[]
     */
@@ -61,9 +61,9 @@ class SecurityCheckPolicyGroupInfoResponseInfo implements ModelInterface, ArrayA
     * supportOs  **参数解释** 策略支持的操作系统类型 **取值范围** - Linux：linux系统 - Windows：windows系统
     * policyInfo  policyInfo
     * weakPwdPolicyInfo  weakPwdPolicyInfo
-    * agentIdList  **参数解释** 应用的主机的agentID列表
+    * agentIdList  **参数解释** 应用的主机的agentID列表 **取值范围** 字符串大小范围20-64
     * taskCondition  taskCondition
-    * detectionPeriod  **参数解释** 检测周期
+    * detectionPeriod  **参数解释** 检测周期 **取值范围** 字符串大小范围1-128
     *
     * @var string[]
     */
@@ -114,9 +114,9 @@ class SecurityCheckPolicyGroupInfoResponseInfo implements ModelInterface, ArrayA
     * supportOs  **参数解释** 策略支持的操作系统类型 **取值范围** - Linux：linux系统 - Windows：windows系统
     * policyInfo  policyInfo
     * weakPwdPolicyInfo  weakPwdPolicyInfo
-    * agentIdList  **参数解释** 应用的主机的agentID列表
+    * agentIdList  **参数解释** 应用的主机的agentID列表 **取值范围** 字符串大小范围20-64
     * taskCondition  taskCondition
-    * detectionPeriod  **参数解释** 检测周期
+    * detectionPeriod  **参数解释** 检测周期 **取值范围** 字符串大小范围1-128
     *
     * @var string[]
     */
@@ -146,9 +146,9 @@ class SecurityCheckPolicyGroupInfoResponseInfo implements ModelInterface, ArrayA
     * supportOs  **参数解释** 策略支持的操作系统类型 **取值范围** - Linux：linux系统 - Windows：windows系统
     * policyInfo  policyInfo
     * weakPwdPolicyInfo  weakPwdPolicyInfo
-    * agentIdList  **参数解释** 应用的主机的agentID列表
+    * agentIdList  **参数解释** 应用的主机的agentID列表 **取值范围** 字符串大小范围20-64
     * taskCondition  taskCondition
-    * detectionPeriod  **参数解释** 检测周期
+    * detectionPeriod  **参数解释** 检测周期 **取值范围** 字符串大小范围1-128
     *
     * @var string[]
     */
@@ -178,9 +178,9 @@ class SecurityCheckPolicyGroupInfoResponseInfo implements ModelInterface, ArrayA
     * supportOs  **参数解释** 策略支持的操作系统类型 **取值范围** - Linux：linux系统 - Windows：windows系统
     * policyInfo  policyInfo
     * weakPwdPolicyInfo  weakPwdPolicyInfo
-    * agentIdList  **参数解释** 应用的主机的agentID列表
+    * agentIdList  **参数解释** 应用的主机的agentID列表 **取值范围** 字符串大小范围20-64
     * taskCondition  taskCondition
-    * detectionPeriod  **参数解释** 检测周期
+    * detectionPeriod  **参数解释** 检测周期 **取值范围** 字符串大小范围1-128
     *
     * @var string[]
     */
@@ -550,7 +550,7 @@ class SecurityCheckPolicyGroupInfoResponseInfo implements ModelInterface, ArrayA
 
     /**
     * Gets agentIdList
-    *  **参数解释** 应用的主机的agentID列表
+    *  **参数解释** 应用的主机的agentID列表 **取值范围** 字符串大小范围20-64
     *
     * @return string[]|null
     */
@@ -562,7 +562,7 @@ class SecurityCheckPolicyGroupInfoResponseInfo implements ModelInterface, ArrayA
     /**
     * Sets agentIdList
     *
-    * @param string[]|null $agentIdList **参数解释** 应用的主机的agentID列表
+    * @param string[]|null $agentIdList **参数解释** 应用的主机的agentID列表 **取值范围** 字符串大小范围20-64
     *
     * @return $this
     */
@@ -598,7 +598,7 @@ class SecurityCheckPolicyGroupInfoResponseInfo implements ModelInterface, ArrayA
 
     /**
     * Gets detectionPeriod
-    *  **参数解释** 检测周期
+    *  **参数解释** 检测周期 **取值范围** 字符串大小范围1-128
     *
     * @return string|null
     */
@@ -610,7 +610,7 @@ class SecurityCheckPolicyGroupInfoResponseInfo implements ModelInterface, ArrayA
     /**
     * Sets detectionPeriod
     *
-    * @param string|null $detectionPeriod **参数解释** 检测周期
+    * @param string|null $detectionPeriod **参数解释** 检测周期 **取值范围** 字符串大小范围1-128
     *
     * @return $this
     */

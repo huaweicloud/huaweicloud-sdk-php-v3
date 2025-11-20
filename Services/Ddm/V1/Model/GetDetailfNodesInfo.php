@@ -23,13 +23,17 @@ class GetDetailfNodesInfo implements ModelInterface, ArrayAccess
     * status  DDM实例节点状态。
     * port  DDM实例节点port。
     * ip  DDM实例节点IP。
+    * groupId  节点所在组ID。
+    * nodeId  节点ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'status' => 'string',
             'port' => 'string',
-            'ip' => 'string'
+            'ip' => 'string',
+            'groupId' => 'string',
+            'nodeId' => 'string'
     ];
 
     /**
@@ -37,13 +41,17 @@ class GetDetailfNodesInfo implements ModelInterface, ArrayAccess
     * status  DDM实例节点状态。
     * port  DDM实例节点port。
     * ip  DDM实例节点IP。
+    * groupId  节点所在组ID。
+    * nodeId  节点ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'status' => null,
         'port' => null,
-        'ip' => null
+        'ip' => null,
+        'groupId' => null,
+        'nodeId' => null
     ];
 
     /**
@@ -72,13 +80,17 @@ class GetDetailfNodesInfo implements ModelInterface, ArrayAccess
     * status  DDM实例节点状态。
     * port  DDM实例节点port。
     * ip  DDM实例节点IP。
+    * groupId  节点所在组ID。
+    * nodeId  节点ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'status' => 'status',
             'port' => 'port',
-            'ip' => 'ip'
+            'ip' => 'ip',
+            'groupId' => 'group_id',
+            'nodeId' => 'node_id'
     ];
 
     /**
@@ -86,13 +98,17 @@ class GetDetailfNodesInfo implements ModelInterface, ArrayAccess
     * status  DDM实例节点状态。
     * port  DDM实例节点port。
     * ip  DDM实例节点IP。
+    * groupId  节点所在组ID。
+    * nodeId  节点ID。
     *
     * @var string[]
     */
     protected static $setters = [
             'status' => 'setStatus',
             'port' => 'setPort',
-            'ip' => 'setIp'
+            'ip' => 'setIp',
+            'groupId' => 'setGroupId',
+            'nodeId' => 'setNodeId'
     ];
 
     /**
@@ -100,13 +116,17 @@ class GetDetailfNodesInfo implements ModelInterface, ArrayAccess
     * status  DDM实例节点状态。
     * port  DDM实例节点port。
     * ip  DDM实例节点IP。
+    * groupId  节点所在组ID。
+    * nodeId  节点ID。
     *
     * @var string[]
     */
     protected static $getters = [
             'status' => 'getStatus',
             'port' => 'getPort',
-            'ip' => 'getIp'
+            'ip' => 'getIp',
+            'groupId' => 'getGroupId',
+            'nodeId' => 'getNodeId'
     ];
 
     /**
@@ -170,6 +190,8 @@ class GetDetailfNodesInfo implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
         $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
+        $this->container['nodeId'] = isset($data['nodeId']) ? $data['nodeId'] : null;
     }
 
     /**
@@ -188,6 +210,12 @@ class GetDetailfNodesInfo implements ModelInterface, ArrayAccess
         }
         if ($this->container['ip'] === null) {
             $invalidProperties[] = "'ip' can't be null";
+        }
+        if ($this->container['groupId'] === null) {
+            $invalidProperties[] = "'groupId' can't be null";
+        }
+        if ($this->container['nodeId'] === null) {
+            $invalidProperties[] = "'nodeId' can't be null";
         }
         return $invalidProperties;
     }
@@ -272,6 +300,54 @@ class GetDetailfNodesInfo implements ModelInterface, ArrayAccess
     public function setIp($ip)
     {
         $this->container['ip'] = $ip;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  节点所在组ID。
+    *
+    * @return string
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string $groupId 节点所在组ID。
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
+        return $this;
+    }
+
+    /**
+    * Gets nodeId
+    *  节点ID。
+    *
+    * @return string
+    */
+    public function getNodeId()
+    {
+        return $this->container['nodeId'];
+    }
+
+    /**
+    * Sets nodeId
+    *
+    * @param string $nodeId 节点ID。
+    *
+    * @return $this
+    */
+    public function setNodeId($nodeId)
+    {
+        $this->container['nodeId'] = $nodeId;
         return $this;
     }
 

@@ -30,7 +30,7 @@ class CheckRulesResponseInfo implements ModelInterface, ArrayAccess
     * hostNum  **参数解释** 受影响的服务器的数量，进行了当前基线检测的服务器数量 **取值范围** 取值0-2147483647
     * failedNum  **参数解释** 此检测项失败，且未忽略且未加白的主机数 **取值范围** 取值0-2147483647
     * scanTime  最新检测时间(ms)
-    * statisticsScanResult  **参数解释** 检查项统计结果： **取值范围** - pass      : 已通过，表示此检查项涉及的主机，全部检查通过。 - failed    : 未通过，表示此检查项涉及的主机，存在检查不通过，且不通过的主机中，存在存在未处理(忽略、加白)主机。 - processed : 已处理，表示此检查项涉及的主机，存在未通过，但所有的未通过主机均已处理(忽略、加白)。
+    * statisticsScanResult  **参数解释** 检查项统计结果： **取值范围** - pass      : 已通过，表示此检查项涉及的主机，全部检查通过。 - failed    : 未通过，表示此检查项涉及的主机，存在检查不通过，且不通过的主机中，存在未处理(忽略、加白)主机。 - processed : 已处理，表示此检查项涉及的主机，存在未通过，但所有的未通过主机均已处理(忽略、加白)。
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的 修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
@@ -68,7 +68,7 @@ class CheckRulesResponseInfo implements ModelInterface, ArrayAccess
     * hostNum  **参数解释** 受影响的服务器的数量，进行了当前基线检测的服务器数量 **取值范围** 取值0-2147483647
     * failedNum  **参数解释** 此检测项失败，且未忽略且未加白的主机数 **取值范围** 取值0-2147483647
     * scanTime  最新检测时间(ms)
-    * statisticsScanResult  **参数解释** 检查项统计结果： **取值范围** - pass      : 已通过，表示此检查项涉及的主机，全部检查通过。 - failed    : 未通过，表示此检查项涉及的主机，存在检查不通过，且不通过的主机中，存在存在未处理(忽略、加白)主机。 - processed : 已处理，表示此检查项涉及的主机，存在未通过，但所有的未通过主机均已处理(忽略、加白)。
+    * statisticsScanResult  **参数解释** 检查项统计结果： **取值范围** - pass      : 已通过，表示此检查项涉及的主机，全部检查通过。 - failed    : 未通过，表示此检查项涉及的主机，存在检查不通过，且不通过的主机中，存在未处理(忽略、加白)主机。 - processed : 已处理，表示此检查项涉及的主机，存在未通过，但所有的未通过主机均已处理(忽略、加白)。
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的 修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
@@ -127,7 +127,7 @@ class CheckRulesResponseInfo implements ModelInterface, ArrayAccess
     * hostNum  **参数解释** 受影响的服务器的数量，进行了当前基线检测的服务器数量 **取值范围** 取值0-2147483647
     * failedNum  **参数解释** 此检测项失败，且未忽略且未加白的主机数 **取值范围** 取值0-2147483647
     * scanTime  最新检测时间(ms)
-    * statisticsScanResult  **参数解释** 检查项统计结果： **取值范围** - pass      : 已通过，表示此检查项涉及的主机，全部检查通过。 - failed    : 未通过，表示此检查项涉及的主机，存在检查不通过，且不通过的主机中，存在存在未处理(忽略、加白)主机。 - processed : 已处理，表示此检查项涉及的主机，存在未通过，但所有的未通过主机均已处理(忽略、加白)。
+    * statisticsScanResult  **参数解释** 检查项统计结果： **取值范围** - pass      : 已通过，表示此检查项涉及的主机，全部检查通过。 - failed    : 未通过，表示此检查项涉及的主机，存在检查不通过，且不通过的主机中，存在未处理(忽略、加白)主机。 - processed : 已处理，表示此检查项涉及的主机，存在未通过，但所有的未通过主机均已处理(忽略、加白)。
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的 修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
@@ -165,7 +165,7 @@ class CheckRulesResponseInfo implements ModelInterface, ArrayAccess
     * hostNum  **参数解释** 受影响的服务器的数量，进行了当前基线检测的服务器数量 **取值范围** 取值0-2147483647
     * failedNum  **参数解释** 此检测项失败，且未忽略且未加白的主机数 **取值范围** 取值0-2147483647
     * scanTime  最新检测时间(ms)
-    * statisticsScanResult  **参数解释** 检查项统计结果： **取值范围** - pass      : 已通过，表示此检查项涉及的主机，全部检查通过。 - failed    : 未通过，表示此检查项涉及的主机，存在检查不通过，且不通过的主机中，存在存在未处理(忽略、加白)主机。 - processed : 已处理，表示此检查项涉及的主机，存在未通过，但所有的未通过主机均已处理(忽略、加白)。
+    * statisticsScanResult  **参数解释** 检查项统计结果： **取值范围** - pass      : 已通过，表示此检查项涉及的主机，全部检查通过。 - failed    : 未通过，表示此检查项涉及的主机，存在检查不通过，且不通过的主机中，存在未处理(忽略、加白)主机。 - processed : 已处理，表示此检查项涉及的主机，存在未通过，但所有的未通过主机均已处理(忽略、加白)。
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的 修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
@@ -203,7 +203,7 @@ class CheckRulesResponseInfo implements ModelInterface, ArrayAccess
     * hostNum  **参数解释** 受影响的服务器的数量，进行了当前基线检测的服务器数量 **取值范围** 取值0-2147483647
     * failedNum  **参数解释** 此检测项失败，且未忽略且未加白的主机数 **取值范围** 取值0-2147483647
     * scanTime  最新检测时间(ms)
-    * statisticsScanResult  **参数解释** 检查项统计结果： **取值范围** - pass      : 已通过，表示此检查项涉及的主机，全部检查通过。 - failed    : 未通过，表示此检查项涉及的主机，存在检查不通过，且不通过的主机中，存在存在未处理(忽略、加白)主机。 - processed : 已处理，表示此检查项涉及的主机，存在未通过，但所有的未通过主机均已处理(忽略、加白)。
+    * statisticsScanResult  **参数解释** 检查项统计结果： **取值范围** - pass      : 已通过，表示此检查项涉及的主机，全部检查通过。 - failed    : 未通过，表示此检查项涉及的主机，存在检查不通过，且不通过的主机中，存在未处理(忽略、加白)主机。 - processed : 已处理，表示此检查项涉及的主机，存在未通过，但所有的未通过主机均已处理(忽略、加白)。
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的 修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
@@ -640,7 +640,7 @@ class CheckRulesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets statisticsScanResult
-    *  **参数解释** 检查项统计结果： **取值范围** - pass      : 已通过，表示此检查项涉及的主机，全部检查通过。 - failed    : 未通过，表示此检查项涉及的主机，存在检查不通过，且不通过的主机中，存在存在未处理(忽略、加白)主机。 - processed : 已处理，表示此检查项涉及的主机，存在未通过，但所有的未通过主机均已处理(忽略、加白)。
+    *  **参数解释** 检查项统计结果： **取值范围** - pass      : 已通过，表示此检查项涉及的主机，全部检查通过。 - failed    : 未通过，表示此检查项涉及的主机，存在检查不通过，且不通过的主机中，存在未处理(忽略、加白)主机。 - processed : 已处理，表示此检查项涉及的主机，存在未通过，但所有的未通过主机均已处理(忽略、加白)。
     *
     * @return string|null
     */
@@ -652,7 +652,7 @@ class CheckRulesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets statisticsScanResult
     *
-    * @param string|null $statisticsScanResult **参数解释** 检查项统计结果： **取值范围** - pass      : 已通过，表示此检查项涉及的主机，全部检查通过。 - failed    : 未通过，表示此检查项涉及的主机，存在检查不通过，且不通过的主机中，存在存在未处理(忽略、加白)主机。 - processed : 已处理，表示此检查项涉及的主机，存在未通过，但所有的未通过主机均已处理(忽略、加白)。
+    * @param string|null $statisticsScanResult **参数解释** 检查项统计结果： **取值范围** - pass      : 已通过，表示此检查项涉及的主机，全部检查通过。 - failed    : 未通过，表示此检查项涉及的主机，存在检查不通过，且不通过的主机中，存在未处理(忽略、加白)主机。 - processed : 已处理，表示此检查项涉及的主机，存在未通过，但所有的未通过主机均已处理(忽略、加白)。
     *
     * @return $this
     */

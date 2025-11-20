@@ -22,7 +22,7 @@ class CheckNoNewAccessResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * message  更新后的策略是否允许新访问权限的消息。
-    * checkResult  检查新访问权限的结果。
+    * checkResult  检查新访问权限的结果。 - pass：无新增访问权限 - fail：有新增访问权限
     * reasons  新增action的statement描述。
     *
     * @var string[]
@@ -36,7 +36,7 @@ class CheckNoNewAccessResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * message  更新后的策略是否允许新访问权限的消息。
-    * checkResult  检查新访问权限的结果。
+    * checkResult  检查新访问权限的结果。 - pass：无新增访问权限 - fail：有新增访问权限
     * reasons  新增action的statement描述。
     *
     * @var string[]
@@ -71,7 +71,7 @@ class CheckNoNewAccessResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * message  更新后的策略是否允许新访问权限的消息。
-    * checkResult  检查新访问权限的结果。
+    * checkResult  检查新访问权限的结果。 - pass：无新增访问权限 - fail：有新增访问权限
     * reasons  新增action的statement描述。
     *
     * @var string[]
@@ -85,7 +85,7 @@ class CheckNoNewAccessResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * message  更新后的策略是否允许新访问权限的消息。
-    * checkResult  检查新访问权限的结果。
+    * checkResult  检查新访问权限的结果。 - pass：无新增访问权限 - fail：有新增访问权限
     * reasons  新增action的statement描述。
     *
     * @var string[]
@@ -99,7 +99,7 @@ class CheckNoNewAccessResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * message  更新后的策略是否允许新访问权限的消息。
-    * checkResult  检查新访问权限的结果。
+    * checkResult  检查新访问权限的结果。 - pass：无新增访问权限 - fail：有新增访问权限
     * reasons  新增action的statement描述。
     *
     * @var string[]
@@ -244,7 +244,7 @@ class CheckNoNewAccessResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkResult
-    *  检查新访问权限的结果。
+    *  检查新访问权限的结果。 - pass：无新增访问权限 - fail：有新增访问权限
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class CheckNoNewAccessResponse implements ModelInterface, ArrayAccess
     /**
     * Sets checkResult
     *
-    * @param string|null $checkResult 检查新访问权限的结果。
+    * @param string|null $checkResult 检查新访问权限的结果。 - pass：无新增访问权限 - fail：有新增访问权限
     *
     * @return $this
     */

@@ -30,14 +30,14 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * timestamp  创建防护域名的时间
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
     * flag  flag
     * wafType  域名所属WAF模式,cloud为云模式，premium为独享模式
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * accessProgress  接入进度，仅用于新版console(前端)使用
     * premiumWafInstances  租户引擎实例信息列表
     * description  域名描述
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     * server  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
     * enterpriseProjectId  企业项目id
@@ -78,14 +78,14 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * timestamp  创建防护域名的时间
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
     * flag  flag
     * wafType  域名所属WAF模式,cloud为云模式，premium为独享模式
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * accessProgress  接入进度，仅用于新版console(前端)使用
     * premiumWafInstances  租户引擎实例信息列表
     * description  域名描述
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     * server  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
     * enterpriseProjectId  企业项目id
@@ -147,14 +147,14 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * timestamp  创建防护域名的时间
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
     * flag  flag
     * wafType  域名所属WAF模式,cloud为云模式，premium为独享模式
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * accessProgress  接入进度，仅用于新版console(前端)使用
     * premiumWafInstances  租户引擎实例信息列表
     * description  域名描述
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     * server  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
     * enterpriseProjectId  企业项目id
@@ -195,14 +195,14 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * timestamp  创建防护域名的时间
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
     * flag  flag
     * wafType  域名所属WAF模式,cloud为云模式，premium为独享模式
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * accessProgress  接入进度，仅用于新版console(前端)使用
     * premiumWafInstances  租户引擎实例信息列表
     * description  域名描述
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     * server  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
     * enterpriseProjectId  企业项目id
@@ -243,14 +243,14 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * timestamp  创建防护域名的时间
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
     * flag  flag
     * wafType  域名所属WAF模式,cloud为云模式，premium为独享模式
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * accessProgress  接入进度，仅用于新版console(前端)使用
     * premiumWafInstances  租户引擎实例信息列表
     * description  域名描述
-    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
+    * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     * server  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
     * enterpriseProjectId  企业项目id
@@ -600,7 +600,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets paidType
-    *  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
+    *  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
     *
     * @return string|null
     */
@@ -612,7 +612,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets paidType
     *
-    * @param string|null $paidType 套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
+    * @param string|null $paidType 套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
     *
     * @return $this
     */
@@ -768,7 +768,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets exclusiveIp
-    *  是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
+    *  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     *
     * @return bool|null
     */
@@ -780,7 +780,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets exclusiveIp
     *
-    * @param bool|null $exclusiveIp 是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
+    * @param bool|null $exclusiveIp 是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     *
     * @return $this
     */

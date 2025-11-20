@@ -21,7 +21,7 @@ class OpenAPISpecSpec implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * eip  eip
-    * isDynamic  是否动态创建
+    * isDynamic  **参数解释**： 是否动态创建 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class OpenAPISpecSpec implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * eip  eip
-    * isDynamic  是否动态创建
+    * isDynamic  **参数解释**： 是否动态创建 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class OpenAPISpecSpec implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * eip  eip
-    * isDynamic  是否动态创建
+    * isDynamic  **参数解释**： 是否动态创建 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class OpenAPISpecSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * eip  eip
-    * isDynamic  是否动态创建
+    * isDynamic  **参数解释**： 是否动态创建 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class OpenAPISpecSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * eip  eip
-    * isDynamic  是否动态创建
+    * isDynamic  **参数解释**： 是否动态创建 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class OpenAPISpecSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets isDynamic
-    *  是否动态创建
+    *  **参数解释**： 是否动态创建 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return bool|null
     */
@@ -221,7 +221,7 @@ class OpenAPISpecSpec implements ModelInterface, ArrayAccess
     /**
     * Sets isDynamic
     *
-    * @param bool|null $isDynamic 是否动态创建
+    * @param bool|null $isDynamic **参数解释**： 是否动态创建 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

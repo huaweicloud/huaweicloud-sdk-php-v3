@@ -20,16 +20,18 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * description  集群的描述信息。  1. 字符取值范围[0,200]。不包含~$%^&*<>[]{}()'\"#\\等特殊字符。 2. 仅运行和扩容状态（Available、ScalingUp、ScalingDown）的集群允许修改。
+    * agencyName  **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。当不传或为空时，集群将自动选择使用CCE的系统委托cce_admin_trust或cce_cluster_agency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅1.27及以上版本集群支持该参数  **取值范围：** 不涉及 **默认取值：** 空
+    * description  **参数解释：** 集群的描述信息。 **约束限制：** 仅运行和扩容状态（Available、ScalingUp、ScalingDown）的集群允许修改。 **取值范围：** 字符取值范围[0,200]。不包含~$%^&*<>[]{}()'\"#\\等特殊字符。 **默认取值：** 无
     * customSan  集群的API Server服务端证书中的自定义SAN（Subject Alternative Name）字段，遵从SSL标准X509定义的格式规范。  1. 不允许出现同名重复。 2. 格式符合IP和域名格式。  示例: ``` SAN 1: DNS Name=example.com SAN 2: DNS Name=www.example.com SAN 3: DNS Name=example.net SAN 4: IP Address=93.184.216.34 ```
     * containerNetwork  containerNetwork
     * eniNetwork  eniNetwork
     * hostNetwork  hostNetwork
-    * deletionProtection  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
+    * deletionProtection  **参数解释：** 集群删除保护，如果开启后用户将无法删除该集群。 **约束限制：** 不涉及 **取值范围：** - true: 开启集群删除保护 - false: 关闭集群删除保护  **默认取值：** 默认false
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'agencyName' => 'string',
             'description' => 'string',
             'customSan' => 'string[]',
             'containerNetwork' => '\HuaweiCloud\SDK\Cce\V3\Model\ContainerNetworkUpdate',
@@ -40,16 +42,18 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * description  集群的描述信息。  1. 字符取值范围[0,200]。不包含~$%^&*<>[]{}()'\"#\\等特殊字符。 2. 仅运行和扩容状态（Available、ScalingUp、ScalingDown）的集群允许修改。
+    * agencyName  **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。当不传或为空时，集群将自动选择使用CCE的系统委托cce_admin_trust或cce_cluster_agency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅1.27及以上版本集群支持该参数  **取值范围：** 不涉及 **默认取值：** 空
+    * description  **参数解释：** 集群的描述信息。 **约束限制：** 仅运行和扩容状态（Available、ScalingUp、ScalingDown）的集群允许修改。 **取值范围：** 字符取值范围[0,200]。不包含~$%^&*<>[]{}()'\"#\\等特殊字符。 **默认取值：** 无
     * customSan  集群的API Server服务端证书中的自定义SAN（Subject Alternative Name）字段，遵从SSL标准X509定义的格式规范。  1. 不允许出现同名重复。 2. 格式符合IP和域名格式。  示例: ``` SAN 1: DNS Name=example.com SAN 2: DNS Name=www.example.com SAN 3: DNS Name=example.net SAN 4: IP Address=93.184.216.34 ```
     * containerNetwork  containerNetwork
     * eniNetwork  eniNetwork
     * hostNetwork  hostNetwork
-    * deletionProtection  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
+    * deletionProtection  **参数解释：** 集群删除保护，如果开启后用户将无法删除该集群。 **约束限制：** 不涉及 **取值范围：** - true: 开启集群删除保护 - false: 关闭集群删除保护  **默认取值：** 默认false
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'agencyName' => null,
         'description' => null,
         'customSan' => null,
         'containerNetwork' => null,
@@ -81,16 +85,18 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * description  集群的描述信息。  1. 字符取值范围[0,200]。不包含~$%^&*<>[]{}()'\"#\\等特殊字符。 2. 仅运行和扩容状态（Available、ScalingUp、ScalingDown）的集群允许修改。
+    * agencyName  **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。当不传或为空时，集群将自动选择使用CCE的系统委托cce_admin_trust或cce_cluster_agency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅1.27及以上版本集群支持该参数  **取值范围：** 不涉及 **默认取值：** 空
+    * description  **参数解释：** 集群的描述信息。 **约束限制：** 仅运行和扩容状态（Available、ScalingUp、ScalingDown）的集群允许修改。 **取值范围：** 字符取值范围[0,200]。不包含~$%^&*<>[]{}()'\"#\\等特殊字符。 **默认取值：** 无
     * customSan  集群的API Server服务端证书中的自定义SAN（Subject Alternative Name）字段，遵从SSL标准X509定义的格式规范。  1. 不允许出现同名重复。 2. 格式符合IP和域名格式。  示例: ``` SAN 1: DNS Name=example.com SAN 2: DNS Name=www.example.com SAN 3: DNS Name=example.net SAN 4: IP Address=93.184.216.34 ```
     * containerNetwork  containerNetwork
     * eniNetwork  eniNetwork
     * hostNetwork  hostNetwork
-    * deletionProtection  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
+    * deletionProtection  **参数解释：** 集群删除保护，如果开启后用户将无法删除该集群。 **约束限制：** 不涉及 **取值范围：** - true: 开启集群删除保护 - false: 关闭集群删除保护  **默认取值：** 默认false
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'agencyName' => 'agencyName',
             'description' => 'description',
             'customSan' => 'customSan',
             'containerNetwork' => 'containerNetwork',
@@ -101,16 +107,18 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * description  集群的描述信息。  1. 字符取值范围[0,200]。不包含~$%^&*<>[]{}()'\"#\\等特殊字符。 2. 仅运行和扩容状态（Available、ScalingUp、ScalingDown）的集群允许修改。
+    * agencyName  **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。当不传或为空时，集群将自动选择使用CCE的系统委托cce_admin_trust或cce_cluster_agency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅1.27及以上版本集群支持该参数  **取值范围：** 不涉及 **默认取值：** 空
+    * description  **参数解释：** 集群的描述信息。 **约束限制：** 仅运行和扩容状态（Available、ScalingUp、ScalingDown）的集群允许修改。 **取值范围：** 字符取值范围[0,200]。不包含~$%^&*<>[]{}()'\"#\\等特殊字符。 **默认取值：** 无
     * customSan  集群的API Server服务端证书中的自定义SAN（Subject Alternative Name）字段，遵从SSL标准X509定义的格式规范。  1. 不允许出现同名重复。 2. 格式符合IP和域名格式。  示例: ``` SAN 1: DNS Name=example.com SAN 2: DNS Name=www.example.com SAN 3: DNS Name=example.net SAN 4: IP Address=93.184.216.34 ```
     * containerNetwork  containerNetwork
     * eniNetwork  eniNetwork
     * hostNetwork  hostNetwork
-    * deletionProtection  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
+    * deletionProtection  **参数解释：** 集群删除保护，如果开启后用户将无法删除该集群。 **约束限制：** 不涉及 **取值范围：** - true: 开启集群删除保护 - false: 关闭集群删除保护  **默认取值：** 默认false
     *
     * @var string[]
     */
     protected static $setters = [
+            'agencyName' => 'setAgencyName',
             'description' => 'setDescription',
             'customSan' => 'setCustomSan',
             'containerNetwork' => 'setContainerNetwork',
@@ -121,16 +129,18 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * description  集群的描述信息。  1. 字符取值范围[0,200]。不包含~$%^&*<>[]{}()'\"#\\等特殊字符。 2. 仅运行和扩容状态（Available、ScalingUp、ScalingDown）的集群允许修改。
+    * agencyName  **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。当不传或为空时，集群将自动选择使用CCE的系统委托cce_admin_trust或cce_cluster_agency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅1.27及以上版本集群支持该参数  **取值范围：** 不涉及 **默认取值：** 空
+    * description  **参数解释：** 集群的描述信息。 **约束限制：** 仅运行和扩容状态（Available、ScalingUp、ScalingDown）的集群允许修改。 **取值范围：** 字符取值范围[0,200]。不包含~$%^&*<>[]{}()'\"#\\等特殊字符。 **默认取值：** 无
     * customSan  集群的API Server服务端证书中的自定义SAN（Subject Alternative Name）字段，遵从SSL标准X509定义的格式规范。  1. 不允许出现同名重复。 2. 格式符合IP和域名格式。  示例: ``` SAN 1: DNS Name=example.com SAN 2: DNS Name=www.example.com SAN 3: DNS Name=example.net SAN 4: IP Address=93.184.216.34 ```
     * containerNetwork  containerNetwork
     * eniNetwork  eniNetwork
     * hostNetwork  hostNetwork
-    * deletionProtection  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
+    * deletionProtection  **参数解释：** 集群删除保护，如果开启后用户将无法删除该集群。 **约束限制：** 不涉及 **取值范围：** - true: 开启集群删除保护 - false: 关闭集群删除保护  **默认取值：** 默认false
     *
     * @var string[]
     */
     protected static $getters = [
+            'agencyName' => 'getAgencyName',
             'description' => 'getDescription',
             'customSan' => 'getCustomSan',
             'containerNetwork' => 'getContainerNetwork',
@@ -197,6 +207,7 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['customSan'] = isset($data['customSan']) ? $data['customSan'] : null;
         $this->container['containerNetwork'] = isset($data['containerNetwork']) ? $data['containerNetwork'] : null;
@@ -234,8 +245,32 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets agencyName
+    *  **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。当不传或为空时，集群将自动选择使用CCE的系统委托cce_admin_trust或cce_cluster_agency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅1.27及以上版本集群支持该参数  **取值范围：** 不涉及 **默认取值：** 空
+    *
+    * @return string|null
+    */
+    public function getAgencyName()
+    {
+        return $this->container['agencyName'];
+    }
+
+    /**
+    * Sets agencyName
+    *
+    * @param string|null $agencyName **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。当不传或为空时，集群将自动选择使用CCE的系统委托cce_admin_trust或cce_cluster_agency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅1.27及以上版本集群支持该参数  **取值范围：** 不涉及 **默认取值：** 空
+    *
+    * @return $this
+    */
+    public function setAgencyName($agencyName)
+    {
+        $this->container['agencyName'] = $agencyName;
+        return $this;
+    }
+
+    /**
     * Gets description
-    *  集群的描述信息。  1. 字符取值范围[0,200]。不包含~$%^&*<>[]{}()'\"#\\等特殊字符。 2. 仅运行和扩容状态（Available、ScalingUp、ScalingDown）的集群允许修改。
+    *  **参数解释：** 集群的描述信息。 **约束限制：** 仅运行和扩容状态（Available、ScalingUp、ScalingDown）的集群允许修改。 **取值范围：** 字符取值范围[0,200]。不包含~$%^&*<>[]{}()'\"#\\等特殊字符。 **默认取值：** 无
     *
     * @return string|null
     */
@@ -247,7 +282,7 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 集群的描述信息。  1. 字符取值范围[0,200]。不包含~$%^&*<>[]{}()'\"#\\等特殊字符。 2. 仅运行和扩容状态（Available、ScalingUp、ScalingDown）的集群允许修改。
+    * @param string|null $description **参数解释：** 集群的描述信息。 **约束限制：** 仅运行和扩容状态（Available、ScalingUp、ScalingDown）的集群允许修改。 **取值范围：** 字符取值范围[0,200]。不包含~$%^&*<>[]{}()'\"#\\等特殊字符。 **默认取值：** 无
     *
     * @return $this
     */
@@ -355,7 +390,7 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets deletionProtection
-    *  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
+    *  **参数解释：** 集群删除保护，如果开启后用户将无法删除该集群。 **约束限制：** 不涉及 **取值范围：** - true: 开启集群删除保护 - false: 关闭集群删除保护  **默认取值：** 默认false
     *
     * @return bool|null
     */
@@ -367,7 +402,7 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
     /**
     * Sets deletionProtection
     *
-    * @param bool|null $deletionProtection 集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
+    * @param bool|null $deletionProtection **参数解释：** 集群删除保护，如果开启后用户将无法删除该集群。 **约束限制：** 不涉及 **取值范围：** - true: 开启集群删除保护 - false: 关闭集群删除保护  **默认取值：** 默认false
     *
     * @return $this
     */

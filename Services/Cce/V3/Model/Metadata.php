@@ -20,12 +20,12 @@ class Metadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * uid  唯一id标识
-    * name  资源名称
-    * labels  资源标签，key/value对格式，接口保留字段，填写不会生效
-    * annotations  资源注解，由key/value组成
-    * updateTimestamp  更新时间
-    * creationTimestamp  创建时间
+    * uid  **参数解释**： 唯一id标识 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * name  **参数解释**： 资源名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * labels  **参数解释**： 资源标签，key/value对格式，接口保留字段，填写不会生效 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * annotations  **参数解释**： 资源注解，由key/value组成 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class Metadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * uid  唯一id标识
-    * name  资源名称
-    * labels  资源标签，key/value对格式，接口保留字段，填写不会生效
-    * annotations  资源注解，由key/value组成
-    * updateTimestamp  更新时间
-    * creationTimestamp  创建时间
+    * uid  **参数解释**： 唯一id标识 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * name  **参数解释**： 资源名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * labels  **参数解释**： 资源标签，key/value对格式，接口保留字段，填写不会生效 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * annotations  **参数解释**： 资源注解，由key/value组成 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class Metadata implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * uid  唯一id标识
-    * name  资源名称
-    * labels  资源标签，key/value对格式，接口保留字段，填写不会生效
-    * annotations  资源注解，由key/value组成
-    * updateTimestamp  更新时间
-    * creationTimestamp  创建时间
+    * uid  **参数解释**： 唯一id标识 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * name  **参数解释**： 资源名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * labels  **参数解释**： 资源标签，key/value对格式，接口保留字段，填写不会生效 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * annotations  **参数解释**： 资源注解，由key/value组成 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class Metadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * uid  唯一id标识
-    * name  资源名称
-    * labels  资源标签，key/value对格式，接口保留字段，填写不会生效
-    * annotations  资源注解，由key/value组成
-    * updateTimestamp  更新时间
-    * creationTimestamp  创建时间
+    * uid  **参数解释**： 唯一id标识 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * name  **参数解释**： 资源名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * labels  **参数解释**： 资源标签，key/value对格式，接口保留字段，填写不会生效 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * annotations  **参数解释**： 资源注解，由key/value组成 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class Metadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * uid  唯一id标识
-    * name  资源名称
-    * labels  资源标签，key/value对格式，接口保留字段，填写不会生效
-    * annotations  资源注解，由key/value组成
-    * updateTimestamp  更新时间
-    * creationTimestamp  创建时间
+    * uid  **参数解释**： 唯一id标识 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * name  **参数解释**： 资源名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * labels  **参数解释**： 资源标签，key/value对格式，接口保留字段，填写不会生效 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * annotations  **参数解释**： 资源注解，由key/value组成 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class Metadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets uid
-    *  唯一id标识
+    *  **参数解释**： 唯一id标识 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class Metadata implements ModelInterface, ArrayAccess
     /**
     * Sets uid
     *
-    * @param string|null $uid 唯一id标识
+    * @param string|null $uid **参数解释**： 唯一id标识 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class Metadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  资源名称
+    *  **参数解释**： 资源名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class Metadata implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 资源名称
+    * @param string|null $name **参数解释**： 资源名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class Metadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets labels
-    *  资源标签，key/value对格式，接口保留字段，填写不会生效
+    *  **参数解释**： 资源标签，key/value对格式，接口保留字段，填写不会生效 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return map[string,string]|null
     */
@@ -289,7 +289,7 @@ class Metadata implements ModelInterface, ArrayAccess
     /**
     * Sets labels
     *
-    * @param map[string,string]|null $labels 资源标签，key/value对格式，接口保留字段，填写不会生效
+    * @param map[string,string]|null $labels **参数解释**： 资源标签，key/value对格式，接口保留字段，填写不会生效 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class Metadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets annotations
-    *  资源注解，由key/value组成
+    *  **参数解释**： 资源注解，由key/value组成 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return map[string,string]|null
     */
@@ -313,7 +313,7 @@ class Metadata implements ModelInterface, ArrayAccess
     /**
     * Sets annotations
     *
-    * @param map[string,string]|null $annotations 资源注解，由key/value组成
+    * @param map[string,string]|null $annotations **参数解释**： 资源注解，由key/value组成 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class Metadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTimestamp
-    *  更新时间
+    *  **参数解释**： 更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return \DateTime|null
     */
@@ -337,7 +337,7 @@ class Metadata implements ModelInterface, ArrayAccess
     /**
     * Sets updateTimestamp
     *
-    * @param \DateTime|null $updateTimestamp 更新时间
+    * @param \DateTime|null $updateTimestamp **参数解释**： 更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class Metadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets creationTimestamp
-    *  创建时间
+    *  **参数解释**： 创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return \DateTime|null
     */
@@ -361,7 +361,7 @@ class Metadata implements ModelInterface, ArrayAccess
     /**
     * Sets creationTimestamp
     *
-    * @param \DateTime|null $creationTimestamp 创建时间
+    * @param \DateTime|null $creationTimestamp **参数解释**： 创建时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

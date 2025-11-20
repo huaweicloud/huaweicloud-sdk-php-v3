@@ -49,6 +49,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     * count  批量创建实例的数量，取值范围为1~50。
     * serverlessInfo  serverlessInfo
     * isAutoUpgrade  是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
+    * autoEnlargeStrategy  autoEnlargeStrategy
     *
     * @var string[]
     */
@@ -81,7 +82,8 @@ class InstanceRequest implements ModelInterface, ArrayAccess
             'dryRun' => 'bool',
             'count' => 'int',
             'serverlessInfo' => '\HuaweiCloud\SDK\Rds\V3\Model\ServerlessInfo',
-            'isAutoUpgrade' => 'bool'
+            'isAutoUpgrade' => 'bool',
+            'autoEnlargeStrategy' => '\HuaweiCloud\SDK\Rds\V3\Model\AutoEnlargeStrategyForConsoleApi'
     ];
 
     /**
@@ -115,6 +117,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     * count  批量创建实例的数量，取值范围为1~50。
     * serverlessInfo  serverlessInfo
     * isAutoUpgrade  是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
+    * autoEnlargeStrategy  autoEnlargeStrategy
     *
     * @var string[]
     */
@@ -147,7 +150,8 @@ class InstanceRequest implements ModelInterface, ArrayAccess
         'dryRun' => null,
         'count' => 'int32',
         'serverlessInfo' => null,
-        'isAutoUpgrade' => null
+        'isAutoUpgrade' => null,
+        'autoEnlargeStrategy' => null
     ];
 
     /**
@@ -202,6 +206,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     * count  批量创建实例的数量，取值范围为1~50。
     * serverlessInfo  serverlessInfo
     * isAutoUpgrade  是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
+    * autoEnlargeStrategy  autoEnlargeStrategy
     *
     * @var string[]
     */
@@ -234,7 +239,8 @@ class InstanceRequest implements ModelInterface, ArrayAccess
             'dryRun' => 'dry_run',
             'count' => 'count',
             'serverlessInfo' => 'serverless_info',
-            'isAutoUpgrade' => 'is_auto_upgrade'
+            'isAutoUpgrade' => 'is_auto_upgrade',
+            'autoEnlargeStrategy' => 'auto_enlarge_strategy'
     ];
 
     /**
@@ -268,6 +274,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     * count  批量创建实例的数量，取值范围为1~50。
     * serverlessInfo  serverlessInfo
     * isAutoUpgrade  是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
+    * autoEnlargeStrategy  autoEnlargeStrategy
     *
     * @var string[]
     */
@@ -300,7 +307,8 @@ class InstanceRequest implements ModelInterface, ArrayAccess
             'dryRun' => 'setDryRun',
             'count' => 'setCount',
             'serverlessInfo' => 'setServerlessInfo',
-            'isAutoUpgrade' => 'setIsAutoUpgrade'
+            'isAutoUpgrade' => 'setIsAutoUpgrade',
+            'autoEnlargeStrategy' => 'setAutoEnlargeStrategy'
     ];
 
     /**
@@ -334,6 +342,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     * count  批量创建实例的数量，取值范围为1~50。
     * serverlessInfo  serverlessInfo
     * isAutoUpgrade  是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
+    * autoEnlargeStrategy  autoEnlargeStrategy
     *
     * @var string[]
     */
@@ -366,7 +375,8 @@ class InstanceRequest implements ModelInterface, ArrayAccess
             'dryRun' => 'getDryRun',
             'count' => 'getCount',
             'serverlessInfo' => 'getServerlessInfo',
-            'isAutoUpgrade' => 'getIsAutoUpgrade'
+            'isAutoUpgrade' => 'getIsAutoUpgrade',
+            'autoEnlargeStrategy' => 'getAutoEnlargeStrategy'
     ];
 
     /**
@@ -456,6 +466,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['serverlessInfo'] = isset($data['serverlessInfo']) ? $data['serverlessInfo'] : null;
         $this->container['isAutoUpgrade'] = isset($data['isAutoUpgrade']) ? $data['isAutoUpgrade'] : null;
+        $this->container['autoEnlargeStrategy'] = isset($data['autoEnlargeStrategy']) ? $data['autoEnlargeStrategy'] : null;
     }
 
     /**
@@ -1200,6 +1211,30 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     public function setIsAutoUpgrade($isAutoUpgrade)
     {
         $this->container['isAutoUpgrade'] = $isAutoUpgrade;
+        return $this;
+    }
+
+    /**
+    * Gets autoEnlargeStrategy
+    *  autoEnlargeStrategy
+    *
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\AutoEnlargeStrategyForConsoleApi|null
+    */
+    public function getAutoEnlargeStrategy()
+    {
+        return $this->container['autoEnlargeStrategy'];
+    }
+
+    /**
+    * Sets autoEnlargeStrategy
+    *
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\AutoEnlargeStrategyForConsoleApi|null $autoEnlargeStrategy autoEnlargeStrategy
+    *
+    * @return $this
+    */
+    public function setAutoEnlargeStrategy($autoEnlargeStrategy)
+    {
+        $this->container['autoEnlargeStrategy'] = $autoEnlargeStrategy;
         return $this;
     }
 

@@ -40,6 +40,7 @@ class CICDImageResponseInfo implements ModelInterface, ArrayAccess
     * unsafeSettingNum  **参数解释**: 基线扫描未通过数 **取值范围**: 最小值0，最大值2147483647
     * maliciousFileNum  **参数解释**: 恶意文件数 **取值范围**: 最小值0，最大值2147483647
     * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **取值范围**: - Security：安全。 - Low：低危。 - Medium：中危。 - High：高危。
+    * pipelineType  **参数解释**: 流水线类型 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。 minLength: 1 maxLength: 32 x-example: \"jenkins\"
     *
     * @var string[]
     */
@@ -63,7 +64,8 @@ class CICDImageResponseInfo implements ModelInterface, ArrayAccess
             'vulNum' => 'int',
             'unsafeSettingNum' => 'int',
             'maliciousFileNum' => 'int',
-            'severityLevel' => 'string'
+            'severityLevel' => 'string',
+            'pipelineType' => 'string'
     ];
 
     /**
@@ -88,6 +90,7 @@ class CICDImageResponseInfo implements ModelInterface, ArrayAccess
     * unsafeSettingNum  **参数解释**: 基线扫描未通过数 **取值范围**: 最小值0，最大值2147483647
     * maliciousFileNum  **参数解释**: 恶意文件数 **取值范围**: 最小值0，最大值2147483647
     * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **取值范围**: - Security：安全。 - Low：低危。 - Medium：中危。 - High：高危。
+    * pipelineType  **参数解释**: 流水线类型 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。 minLength: 1 maxLength: 32 x-example: \"jenkins\"
     *
     * @var string[]
     */
@@ -111,7 +114,8 @@ class CICDImageResponseInfo implements ModelInterface, ArrayAccess
         'vulNum' => 'int32',
         'unsafeSettingNum' => 'int32',
         'maliciousFileNum' => 'int32',
-        'severityLevel' => null
+        'severityLevel' => null,
+        'pipelineType' => null
     ];
 
     /**
@@ -157,6 +161,7 @@ class CICDImageResponseInfo implements ModelInterface, ArrayAccess
     * unsafeSettingNum  **参数解释**: 基线扫描未通过数 **取值范围**: 最小值0，最大值2147483647
     * maliciousFileNum  **参数解释**: 恶意文件数 **取值范围**: 最小值0，最大值2147483647
     * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **取值范围**: - Security：安全。 - Low：低危。 - Medium：中危。 - High：高危。
+    * pipelineType  **参数解释**: 流水线类型 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。 minLength: 1 maxLength: 32 x-example: \"jenkins\"
     *
     * @var string[]
     */
@@ -180,7 +185,8 @@ class CICDImageResponseInfo implements ModelInterface, ArrayAccess
             'vulNum' => 'vul_num',
             'unsafeSettingNum' => 'unsafe_setting_num',
             'maliciousFileNum' => 'malicious_file_num',
-            'severityLevel' => 'severity_level'
+            'severityLevel' => 'severity_level',
+            'pipelineType' => 'pipeline_type'
     ];
 
     /**
@@ -205,6 +211,7 @@ class CICDImageResponseInfo implements ModelInterface, ArrayAccess
     * unsafeSettingNum  **参数解释**: 基线扫描未通过数 **取值范围**: 最小值0，最大值2147483647
     * maliciousFileNum  **参数解释**: 恶意文件数 **取值范围**: 最小值0，最大值2147483647
     * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **取值范围**: - Security：安全。 - Low：低危。 - Medium：中危。 - High：高危。
+    * pipelineType  **参数解释**: 流水线类型 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。 minLength: 1 maxLength: 32 x-example: \"jenkins\"
     *
     * @var string[]
     */
@@ -228,7 +235,8 @@ class CICDImageResponseInfo implements ModelInterface, ArrayAccess
             'vulNum' => 'setVulNum',
             'unsafeSettingNum' => 'setUnsafeSettingNum',
             'maliciousFileNum' => 'setMaliciousFileNum',
-            'severityLevel' => 'setSeverityLevel'
+            'severityLevel' => 'setSeverityLevel',
+            'pipelineType' => 'setPipelineType'
     ];
 
     /**
@@ -253,6 +261,7 @@ class CICDImageResponseInfo implements ModelInterface, ArrayAccess
     * unsafeSettingNum  **参数解释**: 基线扫描未通过数 **取值范围**: 最小值0，最大值2147483647
     * maliciousFileNum  **参数解释**: 恶意文件数 **取值范围**: 最小值0，最大值2147483647
     * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **取值范围**: - Security：安全。 - Low：低危。 - Medium：中危。 - High：高危。
+    * pipelineType  **参数解释**: 流水线类型 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。 minLength: 1 maxLength: 32 x-example: \"jenkins\"
     *
     * @var string[]
     */
@@ -276,7 +285,8 @@ class CICDImageResponseInfo implements ModelInterface, ArrayAccess
             'vulNum' => 'getVulNum',
             'unsafeSettingNum' => 'getUnsafeSettingNum',
             'maliciousFileNum' => 'getMaliciousFileNum',
-            'severityLevel' => 'getSeverityLevel'
+            'severityLevel' => 'getSeverityLevel',
+            'pipelineType' => 'getPipelineType'
     ];
 
     /**
@@ -357,6 +367,7 @@ class CICDImageResponseInfo implements ModelInterface, ArrayAccess
         $this->container['unsafeSettingNum'] = isset($data['unsafeSettingNum']) ? $data['unsafeSettingNum'] : null;
         $this->container['maliciousFileNum'] = isset($data['maliciousFileNum']) ? $data['maliciousFileNum'] : null;
         $this->container['severityLevel'] = isset($data['severityLevel']) ? $data['severityLevel'] : null;
+        $this->container['pipelineType'] = isset($data['pipelineType']) ? $data['pipelineType'] : null;
     }
 
     /**
@@ -972,6 +983,30 @@ class CICDImageResponseInfo implements ModelInterface, ArrayAccess
     public function setSeverityLevel($severityLevel)
     {
         $this->container['severityLevel'] = $severityLevel;
+        return $this;
+    }
+
+    /**
+    * Gets pipelineType
+    *  **参数解释**: 流水线类型 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。 minLength: 1 maxLength: 32 x-example: \"jenkins\"
+    *
+    * @return string|null
+    */
+    public function getPipelineType()
+    {
+        return $this->container['pipelineType'];
+    }
+
+    /**
+    * Sets pipelineType
+    *
+    * @param string|null $pipelineType **参数解释**: 流水线类型 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。 minLength: 1 maxLength: 32 x-example: \"jenkins\"
+    *
+    * @return $this
+    */
+    public function setPipelineType($pipelineType)
+    {
+        $this->container['pipelineType'] = $pipelineType;
         return $this;
     }
 

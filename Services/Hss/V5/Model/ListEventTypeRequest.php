@@ -31,7 +31,6 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
     * privateIp  服务器私有IP
     * publicIp  服务器公网IP
     * containerName  容器实例名称
-    * eventType  事件类型，包含如下:   - 1001 : 通用恶意软件   - 1002 : 病毒   - 1003 : 蠕虫   - 1004 : 木马   - 1005 : 僵尸网络   - 1006 : 后门   - 1010 : Rootkit   - 1011 : 勒索软件   - 1012 ：黑客工具   - 1015 : Webshell   - 1016 : 挖矿   - 1017 : 反弹Shell   - 2001 : 一般漏洞利用   - 2012 : 远程代码执行   - 2047 : Redis漏洞利用   - 2048 : Hadoop漏洞利用   - 2049 : MySQL漏洞利用   - 3002 : 文件提权   - 3003 : 进程提权   - 3004 : 关键文件变更   - 3005 : 文件/目录变更   - 3007 : 进程异常行为   - 3015 : 高危命令执行   - 3018 : 异常Shell   - 3027 : Crontab可疑任务   - 3029 ：系统安全防护被禁用   - 3030 ：备份删除   - 3031 ：异常注册表操作   - 3036 : 容器镜像阻断   - 4002 : 暴力破解   - 4004 : 异常登录   - 4006 : 非法系统账号   - 4014 : 用户账号添加   - 4020 : 用户密码窃取   - 6002 : 端口扫描   - 6003 : 主机扫描   - 13001 : Kubernetes事件删除   - 13002 : Pod异常行为   - 13003 : 枚举用户信息   - 13004 : 绑定集群用户角色
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * severity  威胁等级，包含如下:   - Security ：安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * severityList  威胁等级，包含如下:   - Security ：安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
@@ -55,7 +54,6 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
             'privateIp' => 'string',
             'publicIp' => 'string',
             'containerName' => 'string',
-            'eventType' => 'int',
             'handleStatus' => 'string',
             'severity' => 'string',
             'severityList' => 'string[]',
@@ -79,7 +77,6 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
     * privateIp  服务器私有IP
     * publicIp  服务器公网IP
     * containerName  容器实例名称
-    * eventType  事件类型，包含如下:   - 1001 : 通用恶意软件   - 1002 : 病毒   - 1003 : 蠕虫   - 1004 : 木马   - 1005 : 僵尸网络   - 1006 : 后门   - 1010 : Rootkit   - 1011 : 勒索软件   - 1012 ：黑客工具   - 1015 : Webshell   - 1016 : 挖矿   - 1017 : 反弹Shell   - 2001 : 一般漏洞利用   - 2012 : 远程代码执行   - 2047 : Redis漏洞利用   - 2048 : Hadoop漏洞利用   - 2049 : MySQL漏洞利用   - 3002 : 文件提权   - 3003 : 进程提权   - 3004 : 关键文件变更   - 3005 : 文件/目录变更   - 3007 : 进程异常行为   - 3015 : 高危命令执行   - 3018 : 异常Shell   - 3027 : Crontab可疑任务   - 3029 ：系统安全防护被禁用   - 3030 ：备份删除   - 3031 ：异常注册表操作   - 3036 : 容器镜像阻断   - 4002 : 暴力破解   - 4004 : 异常登录   - 4006 : 非法系统账号   - 4014 : 用户账号添加   - 4020 : 用户密码窃取   - 6002 : 端口扫描   - 6003 : 主机扫描   - 13001 : Kubernetes事件删除   - 13002 : Pod异常行为   - 13003 : 枚举用户信息   - 13004 : 绑定集群用户角色
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * severity  威胁等级，包含如下:   - Security ：安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * severityList  威胁等级，包含如下:   - Security ：安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
@@ -103,7 +100,6 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
         'privateIp' => null,
         'publicIp' => null,
         'containerName' => null,
-        'eventType' => 'int32',
         'handleStatus' => null,
         'severity' => null,
         'severityList' => null,
@@ -148,7 +144,6 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
     * privateIp  服务器私有IP
     * publicIp  服务器公网IP
     * containerName  容器实例名称
-    * eventType  事件类型，包含如下:   - 1001 : 通用恶意软件   - 1002 : 病毒   - 1003 : 蠕虫   - 1004 : 木马   - 1005 : 僵尸网络   - 1006 : 后门   - 1010 : Rootkit   - 1011 : 勒索软件   - 1012 ：黑客工具   - 1015 : Webshell   - 1016 : 挖矿   - 1017 : 反弹Shell   - 2001 : 一般漏洞利用   - 2012 : 远程代码执行   - 2047 : Redis漏洞利用   - 2048 : Hadoop漏洞利用   - 2049 : MySQL漏洞利用   - 3002 : 文件提权   - 3003 : 进程提权   - 3004 : 关键文件变更   - 3005 : 文件/目录变更   - 3007 : 进程异常行为   - 3015 : 高危命令执行   - 3018 : 异常Shell   - 3027 : Crontab可疑任务   - 3029 ：系统安全防护被禁用   - 3030 ：备份删除   - 3031 ：异常注册表操作   - 3036 : 容器镜像阻断   - 4002 : 暴力破解   - 4004 : 异常登录   - 4006 : 非法系统账号   - 4014 : 用户账号添加   - 4020 : 用户密码窃取   - 6002 : 端口扫描   - 6003 : 主机扫描   - 13001 : Kubernetes事件删除   - 13002 : Pod异常行为   - 13003 : 枚举用户信息   - 13004 : 绑定集群用户角色
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * severity  威胁等级，包含如下:   - Security ：安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * severityList  威胁等级，包含如下:   - Security ：安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
@@ -172,7 +167,6 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
             'privateIp' => 'private_ip',
             'publicIp' => 'public_ip',
             'containerName' => 'container_name',
-            'eventType' => 'event_type',
             'handleStatus' => 'handle_status',
             'severity' => 'severity',
             'severityList' => 'severity_list',
@@ -196,7 +190,6 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
     * privateIp  服务器私有IP
     * publicIp  服务器公网IP
     * containerName  容器实例名称
-    * eventType  事件类型，包含如下:   - 1001 : 通用恶意软件   - 1002 : 病毒   - 1003 : 蠕虫   - 1004 : 木马   - 1005 : 僵尸网络   - 1006 : 后门   - 1010 : Rootkit   - 1011 : 勒索软件   - 1012 ：黑客工具   - 1015 : Webshell   - 1016 : 挖矿   - 1017 : 反弹Shell   - 2001 : 一般漏洞利用   - 2012 : 远程代码执行   - 2047 : Redis漏洞利用   - 2048 : Hadoop漏洞利用   - 2049 : MySQL漏洞利用   - 3002 : 文件提权   - 3003 : 进程提权   - 3004 : 关键文件变更   - 3005 : 文件/目录变更   - 3007 : 进程异常行为   - 3015 : 高危命令执行   - 3018 : 异常Shell   - 3027 : Crontab可疑任务   - 3029 ：系统安全防护被禁用   - 3030 ：备份删除   - 3031 ：异常注册表操作   - 3036 : 容器镜像阻断   - 4002 : 暴力破解   - 4004 : 异常登录   - 4006 : 非法系统账号   - 4014 : 用户账号添加   - 4020 : 用户密码窃取   - 6002 : 端口扫描   - 6003 : 主机扫描   - 13001 : Kubernetes事件删除   - 13002 : Pod异常行为   - 13003 : 枚举用户信息   - 13004 : 绑定集群用户角色
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * severity  威胁等级，包含如下:   - Security ：安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * severityList  威胁等级，包含如下:   - Security ：安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
@@ -220,7 +213,6 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
             'privateIp' => 'setPrivateIp',
             'publicIp' => 'setPublicIp',
             'containerName' => 'setContainerName',
-            'eventType' => 'setEventType',
             'handleStatus' => 'setHandleStatus',
             'severity' => 'setSeverity',
             'severityList' => 'setSeverityList',
@@ -244,7 +236,6 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
     * privateIp  服务器私有IP
     * publicIp  服务器公网IP
     * containerName  容器实例名称
-    * eventType  事件类型，包含如下:   - 1001 : 通用恶意软件   - 1002 : 病毒   - 1003 : 蠕虫   - 1004 : 木马   - 1005 : 僵尸网络   - 1006 : 后门   - 1010 : Rootkit   - 1011 : 勒索软件   - 1012 ：黑客工具   - 1015 : Webshell   - 1016 : 挖矿   - 1017 : 反弹Shell   - 2001 : 一般漏洞利用   - 2012 : 远程代码执行   - 2047 : Redis漏洞利用   - 2048 : Hadoop漏洞利用   - 2049 : MySQL漏洞利用   - 3002 : 文件提权   - 3003 : 进程提权   - 3004 : 关键文件变更   - 3005 : 文件/目录变更   - 3007 : 进程异常行为   - 3015 : 高危命令执行   - 3018 : 异常Shell   - 3027 : Crontab可疑任务   - 3029 ：系统安全防护被禁用   - 3030 ：备份删除   - 3031 ：异常注册表操作   - 3036 : 容器镜像阻断   - 4002 : 暴力破解   - 4004 : 异常登录   - 4006 : 非法系统账号   - 4014 : 用户账号添加   - 4020 : 用户密码窃取   - 6002 : 端口扫描   - 6003 : 主机扫描   - 13001 : Kubernetes事件删除   - 13002 : Pod异常行为   - 13003 : 枚举用户信息   - 13004 : 绑定集群用户角色
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * severity  威胁等级，包含如下:   - Security ：安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * severityList  威胁等级，包含如下:   - Security ：安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
@@ -268,7 +259,6 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
             'privateIp' => 'getPrivateIp',
             'publicIp' => 'getPublicIp',
             'containerName' => 'getContainerName',
-            'eventType' => 'getEventType',
             'handleStatus' => 'getHandleStatus',
             'severity' => 'getSeverity',
             'severityList' => 'getSeverityList',
@@ -348,7 +338,6 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
         $this->container['privateIp'] = isset($data['privateIp']) ? $data['privateIp'] : null;
         $this->container['publicIp'] = isset($data['publicIp']) ? $data['publicIp'] : null;
         $this->container['containerName'] = isset($data['containerName']) ? $data['containerName'] : null;
-        $this->container['eventType'] = isset($data['eventType']) ? $data['eventType'] : null;
         $this->container['handleStatus'] = isset($data['handleStatus']) ? $data['handleStatus'] : null;
         $this->container['severity'] = isset($data['severity']) ? $data['severity'] : null;
         $this->container['severityList'] = isset($data['severityList']) ? $data['severityList'] : null;
@@ -457,17 +446,14 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['containerName']) && !preg_match("/^.*$/", $this->container['containerName'])) {
                 $invalidProperties[] = "invalid value for 'containerName', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['eventType']) && ($this->container['eventType'] > 30000)) {
-                $invalidProperties[] = "invalid value for 'eventType', must be smaller than or equal to 30000.";
-            }
-            if (!is_null($this->container['eventType']) && ($this->container['eventType'] < 1000)) {
-                $invalidProperties[] = "invalid value for 'eventType', must be bigger than or equal to 1000.";
-            }
             if (!is_null($this->container['handleStatus']) && (mb_strlen($this->container['handleStatus']) > 32)) {
                 $invalidProperties[] = "invalid value for 'handleStatus', the character length must be smaller than or equal to 32.";
             }
             if (!is_null($this->container['handleStatus']) && (mb_strlen($this->container['handleStatus']) < 1)) {
                 $invalidProperties[] = "invalid value for 'handleStatus', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['handleStatus']) && !preg_match("/^(unhandled|handled)$/", $this->container['handleStatus'])) {
+                $invalidProperties[] = "invalid value for 'handleStatus', must be conform to the pattern /^(unhandled|handled)$/.";
             }
             if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) > 32)) {
                 $invalidProperties[] = "invalid value for 'severity', the character length must be smaller than or equal to 32.";
@@ -475,11 +461,17 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) < 1)) {
                 $invalidProperties[] = "invalid value for 'severity', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['severity']) && !preg_match("/^(Security|Low|Medium|High|Critical)$/", $this->container['severity'])) {
+                $invalidProperties[] = "invalid value for 'severity', must be conform to the pattern /^(Security|Low|Medium|High|Critical)$/.";
+            }
             if (!is_null($this->container['attackTag']) && (mb_strlen($this->container['attackTag']) > 32)) {
                 $invalidProperties[] = "invalid value for 'attackTag', the character length must be smaller than or equal to 32.";
             }
             if (!is_null($this->container['attackTag']) && (mb_strlen($this->container['attackTag']) < 0)) {
                 $invalidProperties[] = "invalid value for 'attackTag', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['attackTag']) && !preg_match("/^(attack_success|attack_attempt|attack_blocked|abnormal_behavior|collapsible_host|system_vulnerability)$/", $this->container['attackTag'])) {
+                $invalidProperties[] = "invalid value for 'attackTag', must be conform to the pattern /^(attack_success|attack_attempt|attack_blocked|abnormal_behavior|collapsible_host|system_vulnerability)$/.";
             }
             if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) > 128)) {
                 $invalidProperties[] = "invalid value for 'assetValue', the character length must be smaller than or equal to 128.";
@@ -487,11 +479,17 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) < 0)) {
                 $invalidProperties[] = "invalid value for 'assetValue', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['assetValue']) && !preg_match("/^(important|common|test)$/", $this->container['assetValue'])) {
+                $invalidProperties[] = "invalid value for 'assetValue', must be conform to the pattern /^(important|common|test)$/.";
+            }
             if (!is_null($this->container['attCk']) && (mb_strlen($this->container['attCk']) > 32)) {
                 $invalidProperties[] = "invalid value for 'attCk', the character length must be smaller than or equal to 32.";
             }
             if (!is_null($this->container['attCk']) && (mb_strlen($this->container['attCk']) < 0)) {
                 $invalidProperties[] = "invalid value for 'attCk', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['attCk']) && !preg_match("/^(Reconnaissance|Initial Access|Execution|Persistence|Privilege Escalation|Defense Evasion|Credential Access|Command and Control|Impact)$/", $this->container['attCk'])) {
+                $invalidProperties[] = "invalid value for 'attCk', must be conform to the pattern /^(Reconnaissance|Initial Access|Execution|Persistence|Privilege Escalation|Defense Evasion|Credential Access|Command and Control|Impact)$/.";
             }
             if (!is_null($this->container['eventName']) && (mb_strlen($this->container['eventName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'eventName', the character length must be smaller than or equal to 128.";
@@ -777,30 +775,6 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
     public function setContainerName($containerName)
     {
         $this->container['containerName'] = $containerName;
-        return $this;
-    }
-
-    /**
-    * Gets eventType
-    *  事件类型，包含如下:   - 1001 : 通用恶意软件   - 1002 : 病毒   - 1003 : 蠕虫   - 1004 : 木马   - 1005 : 僵尸网络   - 1006 : 后门   - 1010 : Rootkit   - 1011 : 勒索软件   - 1012 ：黑客工具   - 1015 : Webshell   - 1016 : 挖矿   - 1017 : 反弹Shell   - 2001 : 一般漏洞利用   - 2012 : 远程代码执行   - 2047 : Redis漏洞利用   - 2048 : Hadoop漏洞利用   - 2049 : MySQL漏洞利用   - 3002 : 文件提权   - 3003 : 进程提权   - 3004 : 关键文件变更   - 3005 : 文件/目录变更   - 3007 : 进程异常行为   - 3015 : 高危命令执行   - 3018 : 异常Shell   - 3027 : Crontab可疑任务   - 3029 ：系统安全防护被禁用   - 3030 ：备份删除   - 3031 ：异常注册表操作   - 3036 : 容器镜像阻断   - 4002 : 暴力破解   - 4004 : 异常登录   - 4006 : 非法系统账号   - 4014 : 用户账号添加   - 4020 : 用户密码窃取   - 6002 : 端口扫描   - 6003 : 主机扫描   - 13001 : Kubernetes事件删除   - 13002 : Pod异常行为   - 13003 : 枚举用户信息   - 13004 : 绑定集群用户角色
-    *
-    * @return int|null
-    */
-    public function getEventType()
-    {
-        return $this->container['eventType'];
-    }
-
-    /**
-    * Sets eventType
-    *
-    * @param int|null $eventType 事件类型，包含如下:   - 1001 : 通用恶意软件   - 1002 : 病毒   - 1003 : 蠕虫   - 1004 : 木马   - 1005 : 僵尸网络   - 1006 : 后门   - 1010 : Rootkit   - 1011 : 勒索软件   - 1012 ：黑客工具   - 1015 : Webshell   - 1016 : 挖矿   - 1017 : 反弹Shell   - 2001 : 一般漏洞利用   - 2012 : 远程代码执行   - 2047 : Redis漏洞利用   - 2048 : Hadoop漏洞利用   - 2049 : MySQL漏洞利用   - 3002 : 文件提权   - 3003 : 进程提权   - 3004 : 关键文件变更   - 3005 : 文件/目录变更   - 3007 : 进程异常行为   - 3015 : 高危命令执行   - 3018 : 异常Shell   - 3027 : Crontab可疑任务   - 3029 ：系统安全防护被禁用   - 3030 ：备份删除   - 3031 ：异常注册表操作   - 3036 : 容器镜像阻断   - 4002 : 暴力破解   - 4004 : 异常登录   - 4006 : 非法系统账号   - 4014 : 用户账号添加   - 4020 : 用户密码窃取   - 6002 : 端口扫描   - 6003 : 主机扫描   - 13001 : Kubernetes事件删除   - 13002 : Pod异常行为   - 13003 : 枚举用户信息   - 13004 : 绑定集群用户角色
-    *
-    * @return $this
-    */
-    public function setEventType($eventType)
-    {
-        $this->container['eventType'] = $eventType;
         return $this;
     }
 

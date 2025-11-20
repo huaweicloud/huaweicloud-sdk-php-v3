@@ -22,7 +22,7 @@ class DeleteWafWhiteIpRuleV2RequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * ids  待删除规则id
     * domainName  域名+端口组合，标准端口80/443无须加端口。
-    * overseasType  防护区域
+    * overseasType  防护区域,0-大陆,1-海外
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class DeleteWafWhiteIpRuleV2RequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * ids  待删除规则id
     * domainName  域名+端口组合，标准端口80/443无须加端口。
-    * overseasType  防护区域
+    * overseasType  防护区域,0-大陆,1-海外
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteWafWhiteIpRuleV2RequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * ids  待删除规则id
     * domainName  域名+端口组合，标准端口80/443无须加端口。
-    * overseasType  防护区域
+    * overseasType  防护区域,0-大陆,1-海外
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class DeleteWafWhiteIpRuleV2RequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * ids  待删除规则id
     * domainName  域名+端口组合，标准端口80/443无须加端口。
-    * overseasType  防护区域
+    * overseasType  防护区域,0-大陆,1-海外
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class DeleteWafWhiteIpRuleV2RequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * ids  待删除规则id
     * domainName  域名+端口组合，标准端口80/443无须加端口。
-    * overseasType  防护区域
+    * overseasType  防护区域,0-大陆,1-海外
     *
     * @var string[]
     */
@@ -253,7 +253,7 @@ class DeleteWafWhiteIpRuleV2RequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets overseasType
-    *  防护区域
+    *  防护区域,0-大陆,1-海外
     *
     * @return int
     */
@@ -265,7 +265,7 @@ class DeleteWafWhiteIpRuleV2RequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets overseasType
     *
-    * @param int $overseasType 防护区域
+    * @param int $overseasType 防护区域,0-大陆,1-海外
     *
     * @return $this
     */

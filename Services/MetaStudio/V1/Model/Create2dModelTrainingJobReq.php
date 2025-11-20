@@ -21,15 +21,18 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  分身数字人模型名称。该名称会作为资产库中分身数字人模型资产名称。
-    * contact  分身数字人训练任务创建者的手机号。
+    * contact  分身数字人训练任务创建者的手机号
     * commandMessage  命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO：上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
     * videoMultipartCount  训练视频上传分片数（上传时对唯一训练视频文件的数据分片，用于对该文件的并发上传，不是分多个视频文件上传）。
     * actionVideoMultipartCount  动作视频上传分片数。
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
-    * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
+    * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 * V3.3: 极速版flexus训练用的模型 > * V3和V2版本已废弃不用
+    * isOndemandResource  分身数字人训练任务类型 true 按需任务 false 普通任务
     * isFlexus  是否是基础版的形象训练
+    * isFastFlexus  是否极速版flexus
+    * isLiveCopy  是否是直播间复刻任务
     * isOnlyHumanModel  是否只训练形象模型，不训练声音模型。仅Flexus版本时有效，默认false。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     * voiceProperties  voiceProperties
@@ -47,7 +50,10 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             'batchName' => 'string',
             'tags' => 'string[]',
             'modelVersion' => 'string',
+            'isOndemandResource' => 'bool',
             'isFlexus' => 'bool',
+            'isFastFlexus' => 'bool',
+            'isLiveCopy' => 'bool',
             'isOnlyHumanModel' => 'bool',
             'audioSourceType' => 'string',
             'voiceProperties' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceProperties',
@@ -57,15 +63,18 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  分身数字人模型名称。该名称会作为资产库中分身数字人模型资产名称。
-    * contact  分身数字人训练任务创建者的手机号。
+    * contact  分身数字人训练任务创建者的手机号
     * commandMessage  命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO：上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
     * videoMultipartCount  训练视频上传分片数（上传时对唯一训练视频文件的数据分片，用于对该文件的并发上传，不是分多个视频文件上传）。
     * actionVideoMultipartCount  动作视频上传分片数。
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
-    * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
+    * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 * V3.3: 极速版flexus训练用的模型 > * V3和V2版本已废弃不用
+    * isOndemandResource  分身数字人训练任务类型 true 按需任务 false 普通任务
     * isFlexus  是否是基础版的形象训练
+    * isFastFlexus  是否极速版flexus
+    * isLiveCopy  是否是直播间复刻任务
     * isOnlyHumanModel  是否只训练形象模型，不训练声音模型。仅Flexus版本时有效，默认false。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     * voiceProperties  voiceProperties
@@ -83,7 +92,10 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
         'batchName' => null,
         'tags' => null,
         'modelVersion' => null,
+        'isOndemandResource' => null,
         'isFlexus' => null,
+        'isFastFlexus' => null,
+        'isLiveCopy' => null,
         'isOnlyHumanModel' => null,
         'audioSourceType' => null,
         'voiceProperties' => null,
@@ -114,15 +126,18 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  分身数字人模型名称。该名称会作为资产库中分身数字人模型资产名称。
-    * contact  分身数字人训练任务创建者的手机号。
+    * contact  分身数字人训练任务创建者的手机号
     * commandMessage  命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO：上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
     * videoMultipartCount  训练视频上传分片数（上传时对唯一训练视频文件的数据分片，用于对该文件的并发上传，不是分多个视频文件上传）。
     * actionVideoMultipartCount  动作视频上传分片数。
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
-    * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
+    * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 * V3.3: 极速版flexus训练用的模型 > * V3和V2版本已废弃不用
+    * isOndemandResource  分身数字人训练任务类型 true 按需任务 false 普通任务
     * isFlexus  是否是基础版的形象训练
+    * isFastFlexus  是否极速版flexus
+    * isLiveCopy  是否是直播间复刻任务
     * isOnlyHumanModel  是否只训练形象模型，不训练声音模型。仅Flexus版本时有效，默认false。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     * voiceProperties  voiceProperties
@@ -140,7 +155,10 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             'batchName' => 'batch_name',
             'tags' => 'tags',
             'modelVersion' => 'model_version',
+            'isOndemandResource' => 'is_ondemand_resource',
             'isFlexus' => 'is_flexus',
+            'isFastFlexus' => 'is_fast_flexus',
+            'isLiveCopy' => 'is_live_copy',
             'isOnlyHumanModel' => 'is_only_human_model',
             'audioSourceType' => 'audio_source_type',
             'voiceProperties' => 'voice_properties',
@@ -150,15 +168,18 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  分身数字人模型名称。该名称会作为资产库中分身数字人模型资产名称。
-    * contact  分身数字人训练任务创建者的手机号。
+    * contact  分身数字人训练任务创建者的手机号
     * commandMessage  命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO：上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
     * videoMultipartCount  训练视频上传分片数（上传时对唯一训练视频文件的数据分片，用于对该文件的并发上传，不是分多个视频文件上传）。
     * actionVideoMultipartCount  动作视频上传分片数。
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
-    * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
+    * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 * V3.3: 极速版flexus训练用的模型 > * V3和V2版本已废弃不用
+    * isOndemandResource  分身数字人训练任务类型 true 按需任务 false 普通任务
     * isFlexus  是否是基础版的形象训练
+    * isFastFlexus  是否极速版flexus
+    * isLiveCopy  是否是直播间复刻任务
     * isOnlyHumanModel  是否只训练形象模型，不训练声音模型。仅Flexus版本时有效，默认false。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     * voiceProperties  voiceProperties
@@ -176,7 +197,10 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             'batchName' => 'setBatchName',
             'tags' => 'setTags',
             'modelVersion' => 'setModelVersion',
+            'isOndemandResource' => 'setIsOndemandResource',
             'isFlexus' => 'setIsFlexus',
+            'isFastFlexus' => 'setIsFastFlexus',
+            'isLiveCopy' => 'setIsLiveCopy',
             'isOnlyHumanModel' => 'setIsOnlyHumanModel',
             'audioSourceType' => 'setAudioSourceType',
             'voiceProperties' => 'setVoiceProperties',
@@ -186,15 +210,18 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  分身数字人模型名称。该名称会作为资产库中分身数字人模型资产名称。
-    * contact  分身数字人训练任务创建者的手机号。
+    * contact  分身数字人训练任务创建者的手机号
     * commandMessage  命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO：上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
     * videoMultipartCount  训练视频上传分片数（上传时对唯一训练视频文件的数据分片，用于对该文件的并发上传，不是分多个视频文件上传）。
     * actionVideoMultipartCount  动作视频上传分片数。
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
-    * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
+    * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 * V3.3: 极速版flexus训练用的模型 > * V3和V2版本已废弃不用
+    * isOndemandResource  分身数字人训练任务类型 true 按需任务 false 普通任务
     * isFlexus  是否是基础版的形象训练
+    * isFastFlexus  是否极速版flexus
+    * isLiveCopy  是否是直播间复刻任务
     * isOnlyHumanModel  是否只训练形象模型，不训练声音模型。仅Flexus版本时有效，默认false。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     * voiceProperties  voiceProperties
@@ -212,7 +239,10 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             'batchName' => 'getBatchName',
             'tags' => 'getTags',
             'modelVersion' => 'getModelVersion',
+            'isOndemandResource' => 'getIsOndemandResource',
             'isFlexus' => 'getIsFlexus',
+            'isFastFlexus' => 'getIsFastFlexus',
+            'isLiveCopy' => 'getIsLiveCopy',
             'isOnlyHumanModel' => 'getIsOnlyHumanModel',
             'audioSourceType' => 'getAudioSourceType',
             'voiceProperties' => 'getVoiceProperties',
@@ -266,6 +296,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     const MODEL_VERSION_V2 = 'V2';
     const MODEL_VERSION_V3 = 'V3';
     const MODEL_VERSION_V3_2 = 'V3.2';
+    const MODEL_VERSION_V3_3 = 'V3.3';
     const AUDIO_SOURCE_TYPE_VIDEO = 'VIDEO';
     const AUDIO_SOURCE_TYPE_AUDIO = 'AUDIO';
     
@@ -296,6 +327,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             self::MODEL_VERSION_V2,
             self::MODEL_VERSION_V3,
             self::MODEL_VERSION_V3_2,
+            self::MODEL_VERSION_V3_3,
         ];
     }
 
@@ -337,7 +369,10 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
         $this->container['batchName'] = isset($data['batchName']) ? $data['batchName'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['modelVersion'] = isset($data['modelVersion']) ? $data['modelVersion'] : null;
+        $this->container['isOndemandResource'] = isset($data['isOndemandResource']) ? $data['isOndemandResource'] : null;
         $this->container['isFlexus'] = isset($data['isFlexus']) ? $data['isFlexus'] : null;
+        $this->container['isFastFlexus'] = isset($data['isFastFlexus']) ? $data['isFastFlexus'] : null;
+        $this->container['isLiveCopy'] = isset($data['isLiveCopy']) ? $data['isLiveCopy'] : null;
         $this->container['isOnlyHumanModel'] = isset($data['isOnlyHumanModel']) ? $data['isOnlyHumanModel'] : null;
         $this->container['audioSourceType'] = isset($data['audioSourceType']) ? $data['audioSourceType'] : null;
         $this->container['voiceProperties'] = isset($data['voiceProperties']) ? $data['voiceProperties'] : null;
@@ -364,8 +399,8 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['contact']) && (mb_strlen($this->container['contact']) > 64)) {
                 $invalidProperties[] = "invalid value for 'contact', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['contact']) && (mb_strlen($this->container['contact']) < 1)) {
-                $invalidProperties[] = "invalid value for 'contact', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['contact']) && (mb_strlen($this->container['contact']) < 0)) {
+                $invalidProperties[] = "invalid value for 'contact', the character length must be bigger than or equal to 0.";
             }
             $allowedValues = $this->getCommandMessageAllowableValues();
                 if (!is_null($this->container['commandMessage']) && !in_array($this->container['commandMessage'], $allowedValues, true)) {
@@ -449,7 +484,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets contact
-    *  分身数字人训练任务创建者的手机号。
+    *  分身数字人训练任务创建者的手机号
     *
     * @return string|null
     */
@@ -461,7 +496,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     /**
     * Sets contact
     *
-    * @param string|null $contact 分身数字人训练任务创建者的手机号。
+    * @param string|null $contact 分身数字人训练任务创建者的手机号
     *
     * @return $this
     */
@@ -617,7 +652,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelVersion
-    *  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
+    *  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 * V3.3: 极速版flexus训练用的模型 > * V3和V2版本已废弃不用
     *
     * @return string|null
     */
@@ -629,13 +664,37 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     /**
     * Sets modelVersion
     *
-    * @param string|null $modelVersion 分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
+    * @param string|null $modelVersion 分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 * V3.3: 极速版flexus训练用的模型 > * V3和V2版本已废弃不用
     *
     * @return $this
     */
     public function setModelVersion($modelVersion)
     {
         $this->container['modelVersion'] = $modelVersion;
+        return $this;
+    }
+
+    /**
+    * Gets isOndemandResource
+    *  分身数字人训练任务类型 true 按需任务 false 普通任务
+    *
+    * @return bool|null
+    */
+    public function getIsOndemandResource()
+    {
+        return $this->container['isOndemandResource'];
+    }
+
+    /**
+    * Sets isOndemandResource
+    *
+    * @param bool|null $isOndemandResource 分身数字人训练任务类型 true 按需任务 false 普通任务
+    *
+    * @return $this
+    */
+    public function setIsOndemandResource($isOndemandResource)
+    {
+        $this->container['isOndemandResource'] = $isOndemandResource;
         return $this;
     }
 
@@ -660,6 +719,54 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     public function setIsFlexus($isFlexus)
     {
         $this->container['isFlexus'] = $isFlexus;
+        return $this;
+    }
+
+    /**
+    * Gets isFastFlexus
+    *  是否极速版flexus
+    *
+    * @return bool|null
+    */
+    public function getIsFastFlexus()
+    {
+        return $this->container['isFastFlexus'];
+    }
+
+    /**
+    * Sets isFastFlexus
+    *
+    * @param bool|null $isFastFlexus 是否极速版flexus
+    *
+    * @return $this
+    */
+    public function setIsFastFlexus($isFastFlexus)
+    {
+        $this->container['isFastFlexus'] = $isFastFlexus;
+        return $this;
+    }
+
+    /**
+    * Gets isLiveCopy
+    *  是否是直播间复刻任务
+    *
+    * @return bool|null
+    */
+    public function getIsLiveCopy()
+    {
+        return $this->container['isLiveCopy'];
+    }
+
+    /**
+    * Sets isLiveCopy
+    *
+    * @param bool|null $isLiveCopy 是否是直播间复刻任务
+    *
+    * @return $this
+    */
+    public function setIsLiveCopy($isLiveCopy)
+    {
+        $this->container['isLiveCopy'] = $isLiveCopy;
         return $this;
     }
 

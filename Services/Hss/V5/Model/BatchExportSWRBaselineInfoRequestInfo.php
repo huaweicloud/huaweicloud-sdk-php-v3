@@ -39,7 +39,7 @@ class BatchExportSWRBaselineInfoRequestInfo implements ModelInterface, ArrayAcce
     * hasVul  **参数解释**： 是否存在软件漏洞 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
     * hasUnsafeSetting  **参数解释**： 是否存在基线检查 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
     * risky  **参数解释**： 是否有安全风险 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
-    * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示，包含如下: **约束限制**: 不涉及 **取值范围**: - Security : 安全。 - Low : 低危。 - Medium : 中危。 - High : 高危。  **默认取值**: 不涉及
+    * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **约束限制**: 不涉及 **取值范围**: - Security : 安全。 - Low : 低危。 - Medium : 中危。 - High : 高危。  **默认取值**: 不涉及
     * instanceName  **参数解释**: 企业镜像实例名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * instanceId  **参数解释**: 企业仓库实例ID **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * cicdName  **参数解释**: cicd名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
@@ -103,7 +103,7 @@ class BatchExportSWRBaselineInfoRequestInfo implements ModelInterface, ArrayAcce
     * hasVul  **参数解释**： 是否存在软件漏洞 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
     * hasUnsafeSetting  **参数解释**： 是否存在基线检查 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
     * risky  **参数解释**： 是否有安全风险 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
-    * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示，包含如下: **约束限制**: 不涉及 **取值范围**: - Security : 安全。 - Low : 低危。 - Medium : 中危。 - High : 高危。  **默认取值**: 不涉及
+    * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **约束限制**: 不涉及 **取值范围**: - Security : 安全。 - Low : 低危。 - Medium : 中危。 - High : 高危。  **默认取值**: 不涉及
     * instanceName  **参数解释**: 企业镜像实例名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * instanceId  **参数解释**: 企业仓库实例ID **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * cicdName  **参数解释**: cicd名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
@@ -188,7 +188,7 @@ class BatchExportSWRBaselineInfoRequestInfo implements ModelInterface, ArrayAcce
     * hasVul  **参数解释**： 是否存在软件漏洞 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
     * hasUnsafeSetting  **参数解释**： 是否存在基线检查 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
     * risky  **参数解释**： 是否有安全风险 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
-    * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示，包含如下: **约束限制**: 不涉及 **取值范围**: - Security : 安全。 - Low : 低危。 - Medium : 中危。 - High : 高危。  **默认取值**: 不涉及
+    * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **约束限制**: 不涉及 **取值范围**: - Security : 安全。 - Low : 低危。 - Medium : 中危。 - High : 高危。  **默认取值**: 不涉及
     * instanceName  **参数解释**: 企业镜像实例名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * instanceId  **参数解释**: 企业仓库实例ID **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * cicdName  **参数解释**: cicd名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
@@ -252,7 +252,7 @@ class BatchExportSWRBaselineInfoRequestInfo implements ModelInterface, ArrayAcce
     * hasVul  **参数解释**： 是否存在软件漏洞 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
     * hasUnsafeSetting  **参数解释**： 是否存在基线检查 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
     * risky  **参数解释**： 是否有安全风险 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
-    * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示，包含如下: **约束限制**: 不涉及 **取值范围**: - Security : 安全。 - Low : 低危。 - Medium : 中危。 - High : 高危。  **默认取值**: 不涉及
+    * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **约束限制**: 不涉及 **取值范围**: - Security : 安全。 - Low : 低危。 - Medium : 中危。 - High : 高危。  **默认取值**: 不涉及
     * instanceName  **参数解释**: 企业镜像实例名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * instanceId  **参数解释**: 企业仓库实例ID **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * cicdName  **参数解释**: cicd名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
@@ -316,7 +316,7 @@ class BatchExportSWRBaselineInfoRequestInfo implements ModelInterface, ArrayAcce
     * hasVul  **参数解释**： 是否存在软件漏洞 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
     * hasUnsafeSetting  **参数解释**： 是否存在基线检查 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
     * risky  **参数解释**： 是否有安全风险 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
-    * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示，包含如下: **约束限制**: 不涉及 **取值范围**: - Security : 安全。 - Low : 低危。 - Medium : 中危。 - High : 高危。  **默认取值**: 不涉及
+    * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **约束限制**: 不涉及 **取值范围**: - Security : 安全。 - Low : 低危。 - Medium : 中危。 - High : 高危。  **默认取值**: 不涉及
     * instanceName  **参数解释**: 企业镜像实例名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * instanceId  **参数解释**: 企业仓库实例ID **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * cicdName  **参数解释**: cicd名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
@@ -554,8 +554,8 @@ class BatchExportSWRBaselineInfoRequestInfo implements ModelInterface, ArrayAcce
             if (!is_null($this->container['severityLevel']) && (mb_strlen($this->container['severityLevel']) < 0)) {
                 $invalidProperties[] = "invalid value for 'severityLevel', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['severityLevel']) && !preg_match("/^Security|Low|Medium|High$/", $this->container['severityLevel'])) {
-                $invalidProperties[] = "invalid value for 'severityLevel', must be conform to the pattern /^Security|Low|Medium|High$/.";
+            if (!is_null($this->container['severityLevel']) && !preg_match("/^(Security|Low|Medium|High)$/", $this->container['severityLevel'])) {
+                $invalidProperties[] = "invalid value for 'severityLevel', must be conform to the pattern /^(Security|Low|Medium|High)$/.";
             }
             if (!is_null($this->container['instanceName']) && (mb_strlen($this->container['instanceName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'instanceName', the character length must be smaller than or equal to 128.";
@@ -590,8 +590,8 @@ class BatchExportSWRBaselineInfoRequestInfo implements ModelInterface, ArrayAcce
             if (!is_null($this->container['buildCommandRiskLevel']) && (mb_strlen($this->container['buildCommandRiskLevel']) < 1)) {
                 $invalidProperties[] = "invalid value for 'buildCommandRiskLevel', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['buildCommandRiskLevel']) && !preg_match("/^critical|high|medium|low$/", $this->container['buildCommandRiskLevel'])) {
-                $invalidProperties[] = "invalid value for 'buildCommandRiskLevel', must be conform to the pattern /^critical|high|medium|low$/.";
+            if (!is_null($this->container['buildCommandRiskLevel']) && !preg_match("/^(critical|high|medium|low)$/", $this->container['buildCommandRiskLevel'])) {
+                $invalidProperties[] = "invalid value for 'buildCommandRiskLevel', must be conform to the pattern /^(critical|high|medium|low)$/.";
             }
             if (!is_null($this->container['buildCommandRiskName']) && (mb_strlen($this->container['buildCommandRiskName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'buildCommandRiskName', the character length must be smaller than or equal to 128.";
@@ -1074,7 +1074,7 @@ class BatchExportSWRBaselineInfoRequestInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets severityLevel
-    *  **参数解释**: 镜像风险程度，在镜像扫描完成后展示，包含如下: **约束限制**: 不涉及 **取值范围**: - Security : 安全。 - Low : 低危。 - Medium : 中危。 - High : 高危。  **默认取值**: 不涉及
+    *  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **约束限制**: 不涉及 **取值范围**: - Security : 安全。 - Low : 低危。 - Medium : 中危。 - High : 高危。  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -1086,7 +1086,7 @@ class BatchExportSWRBaselineInfoRequestInfo implements ModelInterface, ArrayAcce
     /**
     * Sets severityLevel
     *
-    * @param string|null $severityLevel **参数解释**: 镜像风险程度，在镜像扫描完成后展示，包含如下: **约束限制**: 不涉及 **取值范围**: - Security : 安全。 - Low : 低危。 - Medium : 中危。 - High : 高危。  **默认取值**: 不涉及
+    * @param string|null $severityLevel **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **约束限制**: 不涉及 **取值范围**: - Security : 安全。 - Low : 低危。 - Medium : 中危。 - High : 高危。  **默认取值**: 不涉及
     *
     * @return $this
     */

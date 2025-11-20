@@ -20,7 +20,7 @@ class ClusterNodeInformationMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  节点名称  > 修改节点名称后，弹性云服务器名称（虚拟机名称）会同步修改。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。
+    * name  **参数解释**： 节点名称 **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位，且不能以中划线(-)结尾。 **取值范围**： 不涉及 **默认取值**： 不涉及  > 修改节点名称后，弹性云服务器名称（虚拟机名称）会同步修改。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ClusterNodeInformationMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  节点名称  > 修改节点名称后，弹性云服务器名称（虚拟机名称）会同步修改。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。
+    * name  **参数解释**： 节点名称 **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位，且不能以中划线(-)结尾。 **取值范围**： 不涉及 **默认取值**： 不涉及  > 修改节点名称后，弹性云服务器名称（虚拟机名称）会同步修改。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ClusterNodeInformationMetadata implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  节点名称  > 修改节点名称后，弹性云服务器名称（虚拟机名称）会同步修改。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。
+    * name  **参数解释**： 节点名称 **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位，且不能以中划线(-)结尾。 **取值范围**： 不涉及 **默认取值**： 不涉及  > 修改节点名称后，弹性云服务器名称（虚拟机名称）会同步修改。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ClusterNodeInformationMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  节点名称  > 修改节点名称后，弹性云服务器名称（虚拟机名称）会同步修改。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。
+    * name  **参数解释**： 节点名称 **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位，且不能以中划线(-)结尾。 **取值范围**： 不涉及 **默认取值**： 不涉及  > 修改节点名称后，弹性云服务器名称（虚拟机名称）会同步修改。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ClusterNodeInformationMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  节点名称  > 修改节点名称后，弹性云服务器名称（虚拟机名称）会同步修改。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。
+    * name  **参数解释**： 节点名称 **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位，且不能以中划线(-)结尾。 **取值范围**： 不涉及 **默认取值**： 不涉及  > 修改节点名称后，弹性云服务器名称（虚拟机名称）会同步修改。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ClusterNodeInformationMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  节点名称  > 修改节点名称后，弹性云服务器名称（虚拟机名称）会同步修改。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。
+    *  **参数解释**： 节点名称 **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位，且不能以中划线(-)结尾。 **取值范围**： 不涉及 **默认取值**： 不涉及  > 修改节点名称后，弹性云服务器名称（虚拟机名称）会同步修改。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class ClusterNodeInformationMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 节点名称  > 修改节点名称后，弹性云服务器名称（虚拟机名称）会同步修改。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。
+    * @param string $name **参数解释**： 节点名称 **约束限制**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位，且不能以中划线(-)结尾。 **取值范围**： 不涉及 **默认取值**： 不涉及  > 修改节点名称后，弹性云服务器名称（虚拟机名称）会同步修改。
     *
     * @return $this
     */

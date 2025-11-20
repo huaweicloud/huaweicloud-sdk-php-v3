@@ -22,7 +22,9 @@ class WarRoomIncident implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  主键
     * incidentId  事件id
+    * alarmId  告警id
     * isChangeEvent  是否变更事件
+    * sourceId  源id
     * failureLevel  事件级别
     * incidentUrl  事件单号链接
     *
@@ -31,7 +33,9 @@ class WarRoomIncident implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'incidentId' => 'string',
+            'alarmId' => 'string',
             'isChangeEvent' => 'bool',
+            'sourceId' => 'int',
             'failureLevel' => 'string',
             'incidentUrl' => 'string'
     ];
@@ -40,7 +44,9 @@ class WarRoomIncident implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  主键
     * incidentId  事件id
+    * alarmId  告警id
     * isChangeEvent  是否变更事件
+    * sourceId  源id
     * failureLevel  事件级别
     * incidentUrl  事件单号链接
     *
@@ -49,7 +55,9 @@ class WarRoomIncident implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'incidentId' => null,
+        'alarmId' => null,
         'isChangeEvent' => null,
+        'sourceId' => 'int64',
         'failureLevel' => null,
         'incidentUrl' => null
     ];
@@ -79,7 +87,9 @@ class WarRoomIncident implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  主键
     * incidentId  事件id
+    * alarmId  告警id
     * isChangeEvent  是否变更事件
+    * sourceId  源id
     * failureLevel  事件级别
     * incidentUrl  事件单号链接
     *
@@ -88,7 +98,9 @@ class WarRoomIncident implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'id' => 'id',
             'incidentId' => 'incident_id',
+            'alarmId' => 'alarm_id',
             'isChangeEvent' => 'is_change_event',
+            'sourceId' => 'source_id',
             'failureLevel' => 'failure_level',
             'incidentUrl' => 'incident_url'
     ];
@@ -97,7 +109,9 @@ class WarRoomIncident implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  主键
     * incidentId  事件id
+    * alarmId  告警id
     * isChangeEvent  是否变更事件
+    * sourceId  源id
     * failureLevel  事件级别
     * incidentUrl  事件单号链接
     *
@@ -106,7 +120,9 @@ class WarRoomIncident implements ModelInterface, ArrayAccess
     protected static $setters = [
             'id' => 'setId',
             'incidentId' => 'setIncidentId',
+            'alarmId' => 'setAlarmId',
             'isChangeEvent' => 'setIsChangeEvent',
+            'sourceId' => 'setSourceId',
             'failureLevel' => 'setFailureLevel',
             'incidentUrl' => 'setIncidentUrl'
     ];
@@ -115,7 +131,9 @@ class WarRoomIncident implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  主键
     * incidentId  事件id
+    * alarmId  告警id
     * isChangeEvent  是否变更事件
+    * sourceId  源id
     * failureLevel  事件级别
     * incidentUrl  事件单号链接
     *
@@ -124,7 +142,9 @@ class WarRoomIncident implements ModelInterface, ArrayAccess
     protected static $getters = [
             'id' => 'getId',
             'incidentId' => 'getIncidentId',
+            'alarmId' => 'getAlarmId',
             'isChangeEvent' => 'getIsChangeEvent',
+            'sourceId' => 'getSourceId',
             'failureLevel' => 'getFailureLevel',
             'incidentUrl' => 'getIncidentUrl'
     ];
@@ -189,7 +209,9 @@ class WarRoomIncident implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['incidentId'] = isset($data['incidentId']) ? $data['incidentId'] : null;
+        $this->container['alarmId'] = isset($data['alarmId']) ? $data['alarmId'] : null;
         $this->container['isChangeEvent'] = isset($data['isChangeEvent']) ? $data['isChangeEvent'] : null;
+        $this->container['sourceId'] = isset($data['sourceId']) ? $data['sourceId'] : null;
         $this->container['failureLevel'] = isset($data['failureLevel']) ? $data['failureLevel'] : null;
         $this->container['incidentUrl'] = isset($data['incidentUrl']) ? $data['incidentUrl'] : null;
     }
@@ -216,6 +238,18 @@ class WarRoomIncident implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['incidentId']) && (mb_strlen($this->container['incidentId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'incidentId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['alarmId']) && (mb_strlen($this->container['alarmId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'alarmId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['alarmId']) && (mb_strlen($this->container['alarmId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'alarmId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['sourceId']) && ($this->container['sourceId'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'sourceId', must be smaller than or equal to 9223372036854775807.";
+            }
+            if (!is_null($this->container['sourceId']) && ($this->container['sourceId'] < 0)) {
+                $invalidProperties[] = "invalid value for 'sourceId', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['failureLevel']) && (mb_strlen($this->container['failureLevel']) > 32)) {
                 $invalidProperties[] = "invalid value for 'failureLevel', the character length must be smaller than or equal to 32.";
@@ -292,6 +326,30 @@ class WarRoomIncident implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets alarmId
+    *  告警id
+    *
+    * @return string|null
+    */
+    public function getAlarmId()
+    {
+        return $this->container['alarmId'];
+    }
+
+    /**
+    * Sets alarmId
+    *
+    * @param string|null $alarmId 告警id
+    *
+    * @return $this
+    */
+    public function setAlarmId($alarmId)
+    {
+        $this->container['alarmId'] = $alarmId;
+        return $this;
+    }
+
+    /**
     * Gets isChangeEvent
     *  是否变更事件
     *
@@ -312,6 +370,30 @@ class WarRoomIncident implements ModelInterface, ArrayAccess
     public function setIsChangeEvent($isChangeEvent)
     {
         $this->container['isChangeEvent'] = $isChangeEvent;
+        return $this;
+    }
+
+    /**
+    * Gets sourceId
+    *  源id
+    *
+    * @return int|null
+    */
+    public function getSourceId()
+    {
+        return $this->container['sourceId'];
+    }
+
+    /**
+    * Sets sourceId
+    *
+    * @param int|null $sourceId 源id
+    *
+    * @return $this
+    */
+    public function setSourceId($sourceId)
+    {
+        $this->container['sourceId'] = $sourceId;
         return $this;
     }
 

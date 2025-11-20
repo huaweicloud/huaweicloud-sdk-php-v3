@@ -20,11 +20,11 @@ class SecurityCheckTaskCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  定时任务，包含如下:   - fixed_weekday : 固定工作日
+    * type  **参数解释**： 定时任务类型 **取值范围**： - fixed_weekday : 固定工作日
     * dayOfWeek  周几触发，可选0或多个
-    * hour  在此参数表示的小时触发定时任务
-    * minute  在此参数表示的分钟触发定时任务
-    * randomOffset  随机偏移时间
+    * hour  **参数解释**： 在此参数表示的小时触发定时任务 **取值范围**： 最小值0，最大值23
+    * minute  **参数解释**： 在此参数表示的分钟触发定时任务 **取值范围**： 最小值0，最大值59
+    * randomOffset  **参数解释**： 随机偏移时间 **取值范围**： 最小值0，最大值7200
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class SecurityCheckTaskCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  定时任务，包含如下:   - fixed_weekday : 固定工作日
+    * type  **参数解释**： 定时任务类型 **取值范围**： - fixed_weekday : 固定工作日
     * dayOfWeek  周几触发，可选0或多个
-    * hour  在此参数表示的小时触发定时任务
-    * minute  在此参数表示的分钟触发定时任务
-    * randomOffset  随机偏移时间
+    * hour  **参数解释**： 在此参数表示的小时触发定时任务 **取值范围**： 最小值0，最大值23
+    * minute  **参数解释**： 在此参数表示的分钟触发定时任务 **取值范围**： 最小值0，最大值59
+    * randomOffset  **参数解释**： 随机偏移时间 **取值范围**： 最小值0，最大值7200
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class SecurityCheckTaskCondition implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  定时任务，包含如下:   - fixed_weekday : 固定工作日
+    * type  **参数解释**： 定时任务类型 **取值范围**： - fixed_weekday : 固定工作日
     * dayOfWeek  周几触发，可选0或多个
-    * hour  在此参数表示的小时触发定时任务
-    * minute  在此参数表示的分钟触发定时任务
-    * randomOffset  随机偏移时间
+    * hour  **参数解释**： 在此参数表示的小时触发定时任务 **取值范围**： 最小值0，最大值23
+    * minute  **参数解释**： 在此参数表示的分钟触发定时任务 **取值范围**： 最小值0，最大值59
+    * randomOffset  **参数解释**： 随机偏移时间 **取值范围**： 最小值0，最大值7200
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class SecurityCheckTaskCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  定时任务，包含如下:   - fixed_weekday : 固定工作日
+    * type  **参数解释**： 定时任务类型 **取值范围**： - fixed_weekday : 固定工作日
     * dayOfWeek  周几触发，可选0或多个
-    * hour  在此参数表示的小时触发定时任务
-    * minute  在此参数表示的分钟触发定时任务
-    * randomOffset  随机偏移时间
+    * hour  **参数解释**： 在此参数表示的小时触发定时任务 **取值范围**： 最小值0，最大值23
+    * minute  **参数解释**： 在此参数表示的分钟触发定时任务 **取值范围**： 最小值0，最大值59
+    * randomOffset  **参数解释**： 随机偏移时间 **取值范围**： 最小值0，最大值7200
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class SecurityCheckTaskCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  定时任务，包含如下:   - fixed_weekday : 固定工作日
+    * type  **参数解释**： 定时任务类型 **取值范围**： - fixed_weekday : 固定工作日
     * dayOfWeek  周几触发，可选0或多个
-    * hour  在此参数表示的小时触发定时任务
-    * minute  在此参数表示的分钟触发定时任务
-    * randomOffset  随机偏移时间
+    * hour  **参数解释**： 在此参数表示的小时触发定时任务 **取值范围**： 最小值0，最大值23
+    * minute  **参数解释**： 在此参数表示的分钟触发定时任务 **取值范围**： 最小值0，最大值59
+    * randomOffset  **参数解释**： 随机偏移时间 **取值范围**： 最小值0，最大值7200
     *
     * @var string[]
     */
@@ -220,8 +220,8 @@ class SecurityCheckTaskCondition implements ModelInterface, ArrayAccess
             if (!is_null($this->container['minute']) && ($this->container['minute'] < 0)) {
                 $invalidProperties[] = "invalid value for 'minute', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['randomOffset']) && ($this->container['randomOffset'] > 3600)) {
-                $invalidProperties[] = "invalid value for 'randomOffset', must be smaller than or equal to 3600.";
+            if (!is_null($this->container['randomOffset']) && ($this->container['randomOffset'] > 7200)) {
+                $invalidProperties[] = "invalid value for 'randomOffset', must be smaller than or equal to 7200.";
             }
             if (!is_null($this->container['randomOffset']) && ($this->container['randomOffset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'randomOffset', must be bigger than or equal to 0.";
@@ -242,7 +242,7 @@ class SecurityCheckTaskCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  定时任务，包含如下:   - fixed_weekday : 固定工作日
+    *  **参数解释**： 定时任务类型 **取值范围**： - fixed_weekday : 固定工作日
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class SecurityCheckTaskCondition implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 定时任务，包含如下:   - fixed_weekday : 固定工作日
+    * @param string|null $type **参数解释**： 定时任务类型 **取值范围**： - fixed_weekday : 固定工作日
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class SecurityCheckTaskCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets hour
-    *  在此参数表示的小时触发定时任务
+    *  **参数解释**： 在此参数表示的小时触发定时任务 **取值范围**： 最小值0，最大值23
     *
     * @return int|null
     */
@@ -302,7 +302,7 @@ class SecurityCheckTaskCondition implements ModelInterface, ArrayAccess
     /**
     * Sets hour
     *
-    * @param int|null $hour 在此参数表示的小时触发定时任务
+    * @param int|null $hour **参数解释**： 在此参数表示的小时触发定时任务 **取值范围**： 最小值0，最大值23
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class SecurityCheckTaskCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets minute
-    *  在此参数表示的分钟触发定时任务
+    *  **参数解释**： 在此参数表示的分钟触发定时任务 **取值范围**： 最小值0，最大值59
     *
     * @return int|null
     */
@@ -326,7 +326,7 @@ class SecurityCheckTaskCondition implements ModelInterface, ArrayAccess
     /**
     * Sets minute
     *
-    * @param int|null $minute 在此参数表示的分钟触发定时任务
+    * @param int|null $minute **参数解释**： 在此参数表示的分钟触发定时任务 **取值范围**： 最小值0，最大值59
     *
     * @return $this
     */
@@ -338,7 +338,7 @@ class SecurityCheckTaskCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets randomOffset
-    *  随机偏移时间
+    *  **参数解释**： 随机偏移时间 **取值范围**： 最小值0，最大值7200
     *
     * @return int|null
     */
@@ -350,7 +350,7 @@ class SecurityCheckTaskCondition implements ModelInterface, ArrayAccess
     /**
     * Sets randomOffset
     *
-    * @param int|null $randomOffset 随机偏移时间
+    * @param int|null $randomOffset **参数解释**： 随机偏移时间 **取值范围**： 最小值0，最大值7200
     *
     * @return $this
     */

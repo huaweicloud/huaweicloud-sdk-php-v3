@@ -21,7 +21,7 @@ class ListTrustServiceStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * trustedServicesEnabled  xxx
+    * trustedServicesEnabled  **参数解释**: 可信服务状态 **取值范围**: - true：是。 - false：否。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ListTrustServiceStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * trustedServicesEnabled  xxx
+    * trustedServicesEnabled  **参数解释**: 可信服务状态 **取值范围**: - true：是。 - false：否。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListTrustServiceStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * trustedServicesEnabled  xxx
+    * trustedServicesEnabled  **参数解释**: 可信服务状态 **取值范围**: - true：是。 - false：否。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListTrustServiceStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * trustedServicesEnabled  xxx
+    * trustedServicesEnabled  **参数解释**: 可信服务状态 **取值范围**: - true：是。 - false：否。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListTrustServiceStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * trustedServicesEnabled  xxx
+    * trustedServicesEnabled  **参数解释**: 可信服务状态 **取值范围**: - true：是。 - false：否。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ListTrustServiceStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets trustedServicesEnabled
-    *  xxx
+    *  **参数解释**: 可信服务状态 **取值范围**: - true：是。 - false：否。
     *
     * @return bool|null
     */
@@ -198,7 +198,7 @@ class ListTrustServiceStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets trustedServicesEnabled
     *
-    * @param bool|null $trustedServicesEnabled xxx
+    * @param bool|null $trustedServicesEnabled **参数解释**: 可信服务状态 **取值范围**: - true：是。 - false：否。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class PartitionSpecHostNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * subnetId  子网ID
+    * subnetId  **参数解释**： 子网ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class PartitionSpecHostNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * subnetId  子网ID
+    * subnetId  **参数解释**： 子网ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class PartitionSpecHostNetwork implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * subnetId  子网ID
+    * subnetId  **参数解释**： 子网ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class PartitionSpecHostNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * subnetId  子网ID
+    * subnetId  **参数解释**： 子网ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class PartitionSpecHostNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * subnetId  子网ID
+    * subnetId  **参数解释**： 子网ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class PartitionSpecHostNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  子网ID
+    *  **参数解释**： 子网ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class PartitionSpecHostNetwork implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string|null $subnetId 子网ID
+    * @param string|null $subnetId **参数解释**： 子网ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

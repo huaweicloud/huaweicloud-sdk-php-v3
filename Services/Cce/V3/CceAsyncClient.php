@@ -2704,6 +2704,80 @@ class CceAsyncClient extends Client
     }
 
     /**
+     * 获取插件检查任务结果列表
+     *
+     * 获取集群下插件检查任务结果列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAddonPrecheckTasksAsync($request)
+    {
+        return $this->listAddonPrecheckTasksAsyncWithHttpInfo($request);
+    }
+    
+    public function listAddonPrecheckTasksAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/api/v3/projects/{project_id}/clusters/{cluster_id}/addons/precheck/tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $queryParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['addonInstanceId'] !== null) {
+            $queryParams['addon_instance_id'] = $localVarParams['addonInstanceId'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListAddonPrecheckTasksResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListAddonPrecheckTasksRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询AddonTemplates列表
      *
      * 插件模板查询接口，查询插件信息。
@@ -3090,6 +3164,77 @@ class CceAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListClustersResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListClustersRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询集群中超节点列表
+     *
+     * 该API用于获取指定集群下所有超节点的详细信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listHyperNodesAsync($request)
+    {
+        return $this->listHyperNodesAsyncWithHttpInfo($request);
+    }
+    
+    public function listHyperNodesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/api/v3/projects/{project_id}/clusters/{cluster_id}/hypernodes';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListHyperNodesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListHyperNodesRequest',
             $asyncRequest = true);
     }
 
@@ -6440,8 +6585,8 @@ class CceAsyncClient extends Client
      * 
      * 
      * &gt; - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
-     * 
-     * &gt; - 当前仅支持更新节点池名称，spec下的initialNodeCount，k8sTags，taints，login，userTags与节点池的扩缩容配置相关字段。若此次更新未设置相关值，默认更新为初始值。
+     * &gt; - 当前仅支持更新节点池名称，spec下的initialNodeCount，k8sTags，taints，login，userTags与节点池的扩缩容配置相关字段。
+     * &gt; - 若此次更新节点池未设置initialNodeCount的相关值，节点池期望节点个数将默认更新为初始值0，如果此时节点池节点个数大于0将导致节点池缩容。若用户期望不填该参数，请在此次更新设置spec下的ignoreInitialNodeCount为true，用于忽略spec.initialNodeCount参数。特殊场景说明：若节点池当前节点数等于0时，可忽略initialNodeCount和ignoreInitialNodeCount参数配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

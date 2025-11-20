@@ -28,7 +28,9 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
+    * isFastFlexus  是否极速版flexus
     * samplesBasicInfo  动作视频样例可修改信息。
+    * voiceProperties  voiceProperties
     * supportedService  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     *
@@ -43,7 +45,9 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             'isBackgroundReplacement' => 'bool',
             'batchName' => 'string',
             'tags' => 'string[]',
+            'isFastFlexus' => 'bool',
             'samplesBasicInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ActionBasicSampleInfo[]',
+            'voiceProperties' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceProperties',
             'supportedService' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]',
             'audioSourceType' => 'string'
     ];
@@ -58,7 +62,9 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
+    * isFastFlexus  是否极速版flexus
     * samplesBasicInfo  动作视频样例可修改信息。
+    * voiceProperties  voiceProperties
     * supportedService  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     *
@@ -73,7 +79,9 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
         'isBackgroundReplacement' => null,
         'batchName' => null,
         'tags' => null,
+        'isFastFlexus' => null,
         'samplesBasicInfo' => null,
+        'voiceProperties' => null,
         'supportedService' => null,
         'audioSourceType' => null
     ];
@@ -109,7 +117,9 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
+    * isFastFlexus  是否极速版flexus
     * samplesBasicInfo  动作视频样例可修改信息。
+    * voiceProperties  voiceProperties
     * supportedService  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     *
@@ -124,7 +134,9 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             'isBackgroundReplacement' => 'is_background_replacement',
             'batchName' => 'batch_name',
             'tags' => 'tags',
+            'isFastFlexus' => 'is_fast_flexus',
             'samplesBasicInfo' => 'samples_basic_info',
+            'voiceProperties' => 'voice_properties',
             'supportedService' => 'supported_service',
             'audioSourceType' => 'audio_source_type'
     ];
@@ -139,7 +151,9 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
+    * isFastFlexus  是否极速版flexus
     * samplesBasicInfo  动作视频样例可修改信息。
+    * voiceProperties  voiceProperties
     * supportedService  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     *
@@ -154,7 +168,9 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             'isBackgroundReplacement' => 'setIsBackgroundReplacement',
             'batchName' => 'setBatchName',
             'tags' => 'setTags',
+            'isFastFlexus' => 'setIsFastFlexus',
             'samplesBasicInfo' => 'setSamplesBasicInfo',
+            'voiceProperties' => 'setVoiceProperties',
             'supportedService' => 'setSupportedService',
             'audioSourceType' => 'setAudioSourceType'
     ];
@@ -169,7 +185,9 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
+    * isFastFlexus  是否极速版flexus
     * samplesBasicInfo  动作视频样例可修改信息。
+    * voiceProperties  voiceProperties
     * supportedService  该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     *
@@ -184,7 +202,9 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             'isBackgroundReplacement' => 'getIsBackgroundReplacement',
             'batchName' => 'getBatchName',
             'tags' => 'getTags',
+            'isFastFlexus' => 'getIsFastFlexus',
             'samplesBasicInfo' => 'getSamplesBasicInfo',
+            'voiceProperties' => 'getVoiceProperties',
             'supportedService' => 'getSupportedService',
             'audioSourceType' => 'getAudioSourceType'
     ];
@@ -289,7 +309,9 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
         $this->container['isBackgroundReplacement'] = isset($data['isBackgroundReplacement']) ? $data['isBackgroundReplacement'] : null;
         $this->container['batchName'] = isset($data['batchName']) ? $data['batchName'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['isFastFlexus'] = isset($data['isFastFlexus']) ? $data['isFastFlexus'] : null;
         $this->container['samplesBasicInfo'] = isset($data['samplesBasicInfo']) ? $data['samplesBasicInfo'] : null;
+        $this->container['voiceProperties'] = isset($data['voiceProperties']) ? $data['voiceProperties'] : null;
         $this->container['supportedService'] = isset($data['supportedService']) ? $data['supportedService'] : null;
         $this->container['audioSourceType'] = isset($data['audioSourceType']) ? $data['audioSourceType'] : null;
     }
@@ -311,8 +333,8 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['contact']) && (mb_strlen($this->container['contact']) > 64)) {
                 $invalidProperties[] = "invalid value for 'contact', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['contact']) && (mb_strlen($this->container['contact']) < 1)) {
-                $invalidProperties[] = "invalid value for 'contact', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['contact']) && (mb_strlen($this->container['contact']) < 0)) {
+                $invalidProperties[] = "invalid value for 'contact', the character length must be bigger than or equal to 0.";
             }
             $allowedValues = $this->getCommandMessageAllowableValues();
                 if (!is_null($this->container['commandMessage']) && !in_array($this->container['commandMessage'], $allowedValues, true)) {
@@ -555,6 +577,30 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets isFastFlexus
+    *  是否极速版flexus
+    *
+    * @return bool|null
+    */
+    public function getIsFastFlexus()
+    {
+        return $this->container['isFastFlexus'];
+    }
+
+    /**
+    * Sets isFastFlexus
+    *
+    * @param bool|null $isFastFlexus 是否极速版flexus
+    *
+    * @return $this
+    */
+    public function setIsFastFlexus($isFastFlexus)
+    {
+        $this->container['isFastFlexus'] = $isFastFlexus;
+        return $this;
+    }
+
+    /**
     * Gets samplesBasicInfo
     *  动作视频样例可修改信息。
     *
@@ -575,6 +621,30 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     public function setSamplesBasicInfo($samplesBasicInfo)
     {
         $this->container['samplesBasicInfo'] = $samplesBasicInfo;
+        return $this;
+    }
+
+    /**
+    * Gets voiceProperties
+    *  voiceProperties
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceProperties|null
+    */
+    public function getVoiceProperties()
+    {
+        return $this->container['voiceProperties'];
+    }
+
+    /**
+    * Sets voiceProperties
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceProperties|null $voiceProperties voiceProperties
+    *
+    * @return $this
+    */
+    public function setVoiceProperties($voiceProperties)
+    {
+        $this->container['voiceProperties'] = $voiceProperties;
         return $this;
     }
 

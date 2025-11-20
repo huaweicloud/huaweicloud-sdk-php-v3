@@ -24,6 +24,8 @@ class ShowLivePlatformAccessTypeRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
+    * offset  偏移量，表示从此偏移量开始查询。
+    * limit  每页显示的条目数量。
     * used  是否已使用
     *
     * @var string[]
@@ -33,6 +35,8 @@ class ShowLivePlatformAccessTypeRequest implements ModelInterface, ArrayAccess
             'xSdkDate' => 'string',
             'xProjectId' => 'string',
             'xAppUserId' => 'string',
+            'offset' => 'int',
+            'limit' => 'int',
             'used' => 'bool'
     ];
 
@@ -42,6 +46,8 @@ class ShowLivePlatformAccessTypeRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
+    * offset  偏移量，表示从此偏移量开始查询。
+    * limit  每页显示的条目数量。
     * used  是否已使用
     *
     * @var string[]
@@ -51,6 +57,8 @@ class ShowLivePlatformAccessTypeRequest implements ModelInterface, ArrayAccess
         'xSdkDate' => null,
         'xProjectId' => null,
         'xAppUserId' => null,
+        'offset' => 'uint32',
+        'limit' => 'uint32',
         'used' => null
     ];
 
@@ -81,6 +89,8 @@ class ShowLivePlatformAccessTypeRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
+    * offset  偏移量，表示从此偏移量开始查询。
+    * limit  每页显示的条目数量。
     * used  是否已使用
     *
     * @var string[]
@@ -90,6 +100,8 @@ class ShowLivePlatformAccessTypeRequest implements ModelInterface, ArrayAccess
             'xSdkDate' => 'X-Sdk-Date',
             'xProjectId' => 'X-Project-Id',
             'xAppUserId' => 'X-App-UserId',
+            'offset' => 'offset',
+            'limit' => 'limit',
             'used' => 'used'
     ];
 
@@ -99,6 +111,8 @@ class ShowLivePlatformAccessTypeRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
+    * offset  偏移量，表示从此偏移量开始查询。
+    * limit  每页显示的条目数量。
     * used  是否已使用
     *
     * @var string[]
@@ -108,6 +122,8 @@ class ShowLivePlatformAccessTypeRequest implements ModelInterface, ArrayAccess
             'xSdkDate' => 'setXSdkDate',
             'xProjectId' => 'setXProjectId',
             'xAppUserId' => 'setXAppUserId',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit',
             'used' => 'setUsed'
     ];
 
@@ -117,6 +133,8 @@ class ShowLivePlatformAccessTypeRequest implements ModelInterface, ArrayAccess
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
+    * offset  偏移量，表示从此偏移量开始查询。
+    * limit  每页显示的条目数量。
     * used  是否已使用
     *
     * @var string[]
@@ -126,6 +144,8 @@ class ShowLivePlatformAccessTypeRequest implements ModelInterface, ArrayAccess
             'xSdkDate' => 'getXSdkDate',
             'xProjectId' => 'getXProjectId',
             'xAppUserId' => 'getXAppUserId',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit',
             'used' => 'getUsed'
     ];
 
@@ -191,6 +211,8 @@ class ShowLivePlatformAccessTypeRequest implements ModelInterface, ArrayAccess
         $this->container['xSdkDate'] = isset($data['xSdkDate']) ? $data['xSdkDate'] : null;
         $this->container['xProjectId'] = isset($data['xProjectId']) ? $data['xProjectId'] : null;
         $this->container['xAppUserId'] = isset($data['xAppUserId']) ? $data['xAppUserId'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['used'] = isset($data['used']) ? $data['used'] : null;
     }
 
@@ -225,6 +247,18 @@ class ShowLivePlatformAccessTypeRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['xAppUserId']) && (mb_strlen($this->container['xAppUserId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'xAppUserId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -333,6 +367,54 @@ class ShowLivePlatformAccessTypeRequest implements ModelInterface, ArrayAccess
     public function setXAppUserId($xAppUserId)
     {
         $this->container['xAppUserId'] = $xAppUserId;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  偏移量，表示从此偏移量开始查询。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 偏移量，表示从此偏移量开始查询。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  每页显示的条目数量。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每页显示的条目数量。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

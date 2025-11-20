@@ -20,8 +20,8 @@ class ResizeClusterRequestBodyExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * decMasterFlavor  专属云CCE集群可指定控制节点的规格
-    * isAutoPay  是否自动扣款 - “true”：自动扣款 - “false”：不自动扣款 > 包周期集群时生效，不填写此参数时默认不会自动扣款。
+    * decMasterFlavor  **参数解释**： 专属云CCE集群可指定控制节点的规格 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * isAutoPay  **参数解释**： 是否自动扣款 **约束限制**： 不涉及 **取值范围**： - “true”：自动扣款 - “false”：不自动扣款 > 包周期集群时生效，不填写此参数时默认不会自动扣款。  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ResizeClusterRequestBodyExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * decMasterFlavor  专属云CCE集群可指定控制节点的规格
-    * isAutoPay  是否自动扣款 - “true”：自动扣款 - “false”：不自动扣款 > 包周期集群时生效，不填写此参数时默认不会自动扣款。
+    * decMasterFlavor  **参数解释**： 专属云CCE集群可指定控制节点的规格 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * isAutoPay  **参数解释**： 是否自动扣款 **约束限制**： 不涉及 **取值范围**： - “true”：自动扣款 - “false”：不自动扣款 > 包周期集群时生效，不填写此参数时默认不会自动扣款。  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ResizeClusterRequestBodyExtendParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * decMasterFlavor  专属云CCE集群可指定控制节点的规格
-    * isAutoPay  是否自动扣款 - “true”：自动扣款 - “false”：不自动扣款 > 包周期集群时生效，不填写此参数时默认不会自动扣款。
+    * decMasterFlavor  **参数解释**： 专属云CCE集群可指定控制节点的规格 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * isAutoPay  **参数解释**： 是否自动扣款 **约束限制**： 不涉及 **取值范围**： - “true”：自动扣款 - “false”：不自动扣款 > 包周期集群时生效，不填写此参数时默认不会自动扣款。  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ResizeClusterRequestBodyExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * decMasterFlavor  专属云CCE集群可指定控制节点的规格
-    * isAutoPay  是否自动扣款 - “true”：自动扣款 - “false”：不自动扣款 > 包周期集群时生效，不填写此参数时默认不会自动扣款。
+    * decMasterFlavor  **参数解释**： 专属云CCE集群可指定控制节点的规格 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * isAutoPay  **参数解释**： 是否自动扣款 **约束限制**： 不涉及 **取值范围**： - “true”：自动扣款 - “false”：不自动扣款 > 包周期集群时生效，不填写此参数时默认不会自动扣款。  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ResizeClusterRequestBodyExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * decMasterFlavor  专属云CCE集群可指定控制节点的规格
-    * isAutoPay  是否自动扣款 - “true”：自动扣款 - “false”：不自动扣款 > 包周期集群时生效，不填写此参数时默认不会自动扣款。
+    * decMasterFlavor  **参数解释**： 专属云CCE集群可指定控制节点的规格 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * isAutoPay  **参数解释**： 是否自动扣款 **约束限制**： 不涉及 **取值范围**： - “true”：自动扣款 - “false”：不自动扣款 > 包周期集群时生效，不填写此参数时默认不会自动扣款。  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ResizeClusterRequestBodyExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets decMasterFlavor
-    *  专属云CCE集群可指定控制节点的规格
+    *  **参数解释**： 专属云CCE集群可指定控制节点的规格 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class ResizeClusterRequestBodyExtendParam implements ModelInterface, ArrayAccess
     /**
     * Sets decMasterFlavor
     *
-    * @param string|null $decMasterFlavor 专属云CCE集群可指定控制节点的规格
+    * @param string|null $decMasterFlavor **参数解释**： 专属云CCE集群可指定控制节点的规格 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ResizeClusterRequestBodyExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoPay
-    *  是否自动扣款 - “true”：自动扣款 - “false”：不自动扣款 > 包周期集群时生效，不填写此参数时默认不会自动扣款。
+    *  **参数解释**： 是否自动扣款 **约束限制**： 不涉及 **取值范围**： - “true”：自动扣款 - “false”：不自动扣款 > 包周期集群时生效，不填写此参数时默认不会自动扣款。  **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class ResizeClusterRequestBodyExtendParam implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoPay
     *
-    * @param string|null $isAutoPay 是否自动扣款 - “true”：自动扣款 - “false”：不自动扣款 > 包周期集群时生效，不填写此参数时默认不会自动扣款。
+    * @param string|null $isAutoPay **参数解释**： 是否自动扣款 **约束限制**： 不涉及 **取值范围**： - “true”：自动扣款 - “false”：不自动扣款 > 包周期集群时生效，不填写此参数时默认不会自动扣款。  **默认取值**： 不涉及
     *
     * @return $this
     */

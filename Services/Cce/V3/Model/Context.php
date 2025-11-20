@@ -20,8 +20,8 @@ class Context implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * cluster  上下文cluster信息。
-    * user  上下文user信息。
+    * cluster  **参数解释**： 上下文cluster信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * user  **参数解释**： 上下文user信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Context implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * cluster  上下文cluster信息。
-    * user  上下文user信息。
+    * cluster  **参数解释**： 上下文cluster信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * user  **参数解释**： 上下文user信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Context implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * cluster  上下文cluster信息。
-    * user  上下文user信息。
+    * cluster  **参数解释**： 上下文cluster信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * user  **参数解释**： 上下文user信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Context implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * cluster  上下文cluster信息。
-    * user  上下文user信息。
+    * cluster  **参数解释**： 上下文cluster信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * user  **参数解释**： 上下文user信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Context implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * cluster  上下文cluster信息。
-    * user  上下文user信息。
+    * cluster  **参数解释**： 上下文cluster信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * user  **参数解释**： 上下文user信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class Context implements ModelInterface, ArrayAccess
 
     /**
     * Gets cluster
-    *  上下文cluster信息。
+    *  **参数解释**： 上下文cluster信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class Context implements ModelInterface, ArrayAccess
     /**
     * Sets cluster
     *
-    * @param string|null $cluster 上下文cluster信息。
+    * @param string|null $cluster **参数解释**： 上下文cluster信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class Context implements ModelInterface, ArrayAccess
 
     /**
     * Gets user
-    *  上下文user信息。
+    *  **参数解释**： 上下文user信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class Context implements ModelInterface, ArrayAccess
     /**
     * Sets user
     *
-    * @param string|null $user 上下文user信息。
+    * @param string|null $user **参数解释**： 上下文user信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

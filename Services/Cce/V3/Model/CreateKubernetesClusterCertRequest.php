@@ -27,7 +27,7 @@ class CreateKubernetesClusterCertRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'clusterId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Cce\V3\Model\CertDuration'
+            'body' => '\HuaweiCloud\SDK\Cce\V3\Model\ClusterCertDuration'
     ];
 
     /**
@@ -217,7 +217,7 @@ class CreateKubernetesClusterCertRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\CertDuration|null
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\ClusterCertDuration|null
     */
     public function getBody()
     {
@@ -227,7 +227,7 @@ class CreateKubernetesClusterCertRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\CertDuration|null $body body
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\ClusterCertDuration|null $body body
     *
     * @return $this
     */

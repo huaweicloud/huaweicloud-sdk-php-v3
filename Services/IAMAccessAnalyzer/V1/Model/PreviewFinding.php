@@ -21,11 +21,11 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * action  允许外部主体使用的操作。
-    * changeType  结果状态的变化。
+    * changeType  结果状态的变化。 - unchanged：没有变化 - new：新增 - changed：有变化
     * condition  分析的策略语句中导致访问预览分析结果的条件。
     * createdAt  生成访问预览分析结果的时间。
     * existingFindingId  访问分析结果的唯一标识符。
-    * existingFindingStatus  访问分析结果当前状态。
+    * existingFindingStatus  访问分析结果当前状态。 - active：活跃 - archived：已解决 - resolved：已存档
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
@@ -33,7 +33,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     * resourceOwnerAccount  拥有资源的账号ID。
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
-    * status  变化后的状态。
+    * status  变化后的状态。 - active：活跃 - archived：已解决 - resolved：已存档
     *
     * @var string[]
     */
@@ -57,11 +57,11 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * action  允许外部主体使用的操作。
-    * changeType  结果状态的变化。
+    * changeType  结果状态的变化。 - unchanged：没有变化 - new：新增 - changed：有变化
     * condition  分析的策略语句中导致访问预览分析结果的条件。
     * createdAt  生成访问预览分析结果的时间。
     * existingFindingId  访问分析结果的唯一标识符。
-    * existingFindingStatus  访问分析结果当前状态。
+    * existingFindingStatus  访问分析结果当前状态。 - active：活跃 - archived：已解决 - resolved：已存档
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
@@ -69,7 +69,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     * resourceOwnerAccount  拥有资源的账号ID。
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
-    * status  变化后的状态。
+    * status  变化后的状态。 - active：活跃 - archived：已解决 - resolved：已存档
     *
     * @var string[]
     */
@@ -114,11 +114,11 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * action  允许外部主体使用的操作。
-    * changeType  结果状态的变化。
+    * changeType  结果状态的变化。 - unchanged：没有变化 - new：新增 - changed：有变化
     * condition  分析的策略语句中导致访问预览分析结果的条件。
     * createdAt  生成访问预览分析结果的时间。
     * existingFindingId  访问分析结果的唯一标识符。
-    * existingFindingStatus  访问分析结果当前状态。
+    * existingFindingStatus  访问分析结果当前状态。 - active：活跃 - archived：已解决 - resolved：已存档
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
@@ -126,7 +126,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     * resourceOwnerAccount  拥有资源的账号ID。
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
-    * status  变化后的状态。
+    * status  变化后的状态。 - active：活跃 - archived：已解决 - resolved：已存档
     *
     * @var string[]
     */
@@ -150,11 +150,11 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * action  允许外部主体使用的操作。
-    * changeType  结果状态的变化。
+    * changeType  结果状态的变化。 - unchanged：没有变化 - new：新增 - changed：有变化
     * condition  分析的策略语句中导致访问预览分析结果的条件。
     * createdAt  生成访问预览分析结果的时间。
     * existingFindingId  访问分析结果的唯一标识符。
-    * existingFindingStatus  访问分析结果当前状态。
+    * existingFindingStatus  访问分析结果当前状态。 - active：活跃 - archived：已解决 - resolved：已存档
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
@@ -162,7 +162,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     * resourceOwnerAccount  拥有资源的账号ID。
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
-    * status  变化后的状态。
+    * status  变化后的状态。 - active：活跃 - archived：已解决 - resolved：已存档
     *
     * @var string[]
     */
@@ -186,11 +186,11 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * action  允许外部主体使用的操作。
-    * changeType  结果状态的变化。
+    * changeType  结果状态的变化。 - unchanged：没有变化 - new：新增 - changed：有变化
     * condition  分析的策略语句中导致访问预览分析结果的条件。
     * createdAt  生成访问预览分析结果的时间。
     * existingFindingId  访问分析结果的唯一标识符。
-    * existingFindingStatus  访问分析结果当前状态。
+    * existingFindingStatus  访问分析结果当前状态。 - active：活跃 - archived：已解决 - resolved：已存档
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
@@ -198,7 +198,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     * resourceOwnerAccount  拥有资源的账号ID。
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
-    * status  变化后的状态。
+    * status  变化后的状态。 - active：活跃 - archived：已解决 - resolved：已存档
     *
     * @var string[]
     */
@@ -479,7 +479,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets changeType
-    *  结果状态的变化。
+    *  结果状态的变化。 - unchanged：没有变化 - new：新增 - changed：有变化
     *
     * @return string
     */
@@ -491,7 +491,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Sets changeType
     *
-    * @param string $changeType 结果状态的变化。
+    * @param string $changeType 结果状态的变化。 - unchanged：没有变化 - new：新增 - changed：有变化
     *
     * @return $this
     */
@@ -575,7 +575,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets existingFindingStatus
-    *  访问分析结果当前状态。
+    *  访问分析结果当前状态。 - active：活跃 - archived：已解决 - resolved：已存档
     *
     * @return string|null
     */
@@ -587,7 +587,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Sets existingFindingStatus
     *
-    * @param string|null $existingFindingStatus 访问分析结果当前状态。
+    * @param string|null $existingFindingStatus 访问分析结果当前状态。 - active：活跃 - archived：已解决 - resolved：已存档
     *
     * @return $this
     */
@@ -767,7 +767,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  变化后的状态。
+    *  变化后的状态。 - active：活跃 - archived：已解决 - resolved：已存档
     *
     * @return string
     */
@@ -779,7 +779,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 变化后的状态。
+    * @param string $status 变化后的状态。 - active：活跃 - archived：已解决 - resolved：已存档
     *
     * @return $this
     */

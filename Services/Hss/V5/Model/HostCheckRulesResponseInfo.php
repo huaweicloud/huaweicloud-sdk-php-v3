@@ -29,7 +29,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
     * scanTime  **参数解释** 检查项扫描时间(ms) **取值范围** 不涉及
     * hostType  **参数解释** 主机类型，是cce则返回cce，否则返回null **取值范围** - cce
     * diffDescription  **参数解释** 差异化展示提示信息 **取值范围** 字符长度0-2048位
-    * description  **参数解释** 差异化展示提示信息 **取值范围** 字符长度0-512位
+    * description  **参数解释** 忽略或加白的描述 **取值范围** 字符长度0-512位
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
@@ -65,7 +65,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
     * scanTime  **参数解释** 检查项扫描时间(ms) **取值范围** 不涉及
     * hostType  **参数解释** 主机类型，是cce则返回cce，否则返回null **取值范围** - cce
     * diffDescription  **参数解释** 差异化展示提示信息 **取值范围** 字符长度0-2048位
-    * description  **参数解释** 差异化展示提示信息 **取值范围** 字符长度0-512位
+    * description  **参数解释** 忽略或加白的描述 **取值范围** 字符长度0-512位
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
@@ -122,7 +122,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
     * scanTime  **参数解释** 检查项扫描时间(ms) **取值范围** 不涉及
     * hostType  **参数解释** 主机类型，是cce则返回cce，否则返回null **取值范围** - cce
     * diffDescription  **参数解释** 差异化展示提示信息 **取值范围** 字符长度0-2048位
-    * description  **参数解释** 差异化展示提示信息 **取值范围** 字符长度0-512位
+    * description  **参数解释** 忽略或加白的描述 **取值范围** 字符长度0-512位
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
@@ -158,7 +158,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
     * scanTime  **参数解释** 检查项扫描时间(ms) **取值范围** 不涉及
     * hostType  **参数解释** 主机类型，是cce则返回cce，否则返回null **取值范围** - cce
     * diffDescription  **参数解释** 差异化展示提示信息 **取值范围** 字符长度0-2048位
-    * description  **参数解释** 差异化展示提示信息 **取值范围** 字符长度0-512位
+    * description  **参数解释** 忽略或加白的描述 **取值范围** 字符长度0-512位
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
@@ -194,7 +194,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
     * scanTime  **参数解释** 检查项扫描时间(ms) **取值范围** 不涉及
     * hostType  **参数解释** 主机类型，是cce则返回cce，否则返回null **取值范围** - cce
     * diffDescription  **参数解释** 差异化展示提示信息 **取值范围** 字符长度0-2048位
-    * description  **参数解释** 差异化展示提示信息 **取值范围** 字符长度0-512位
+    * description  **参数解释** 忽略或加白的描述 **取值范围** 字符长度0-512位
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
@@ -602,7 +602,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  **参数解释** 差异化展示提示信息 **取值范围** 字符长度0-512位
+    *  **参数解释** 忽略或加白的描述 **取值范围** 字符长度0-512位
     *
     * @return string|null
     */
@@ -614,7 +614,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description **参数解释** 差异化展示提示信息 **取值范围** 字符长度0-512位
+    * @param string|null $description **参数解释** 忽略或加白的描述 **取值范围** 字符长度0-512位
     *
     * @return $this
     */

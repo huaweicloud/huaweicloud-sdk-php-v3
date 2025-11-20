@@ -20,8 +20,8 @@ class ReinstallVolumeSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * imageId  **参数解释**: 用户自定义镜像ID，从IMS控制台获取。 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
-    * cmkId  **参数解释**: 用户主密钥ID，为空时，表示云硬盘不加密。 [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)。](tag:hws) [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/intl/zh-cn/api-dew/ListKeys.html)。](tag:hws_hk)  **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及。
+    * imageId  **参数解释**： 用户自定义镜像ID > 获取方式:在控制台的“服务列表”中，单击“计算 > 镜像服务 > 私有镜像”，单击镜像的名称，在服务器详情页的“基本信息”页签下找到“镜像ID”字段复制即可。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * cmkId  **参数解释**： 用户主密钥ID。默认为空时，表示云硬盘不加密。 [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)](tag:hws) [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/intl/zh-cn/api-dew/ListKeys.html)](tag:hws_hk)  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ReinstallVolumeSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * imageId  **参数解释**: 用户自定义镜像ID，从IMS控制台获取。 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
-    * cmkId  **参数解释**: 用户主密钥ID，为空时，表示云硬盘不加密。 [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)。](tag:hws) [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/intl/zh-cn/api-dew/ListKeys.html)。](tag:hws_hk)  **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及。
+    * imageId  **参数解释**： 用户自定义镜像ID > 获取方式:在控制台的“服务列表”中，单击“计算 > 镜像服务 > 私有镜像”，单击镜像的名称，在服务器详情页的“基本信息”页签下找到“镜像ID”字段复制即可。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * cmkId  **参数解释**： 用户主密钥ID。默认为空时，表示云硬盘不加密。 [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)](tag:hws) [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/intl/zh-cn/api-dew/ListKeys.html)](tag:hws_hk)  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ReinstallVolumeSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * imageId  **参数解释**: 用户自定义镜像ID，从IMS控制台获取。 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
-    * cmkId  **参数解释**: 用户主密钥ID，为空时，表示云硬盘不加密。 [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)。](tag:hws) [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/intl/zh-cn/api-dew/ListKeys.html)。](tag:hws_hk)  **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及。
+    * imageId  **参数解释**： 用户自定义镜像ID > 获取方式:在控制台的“服务列表”中，单击“计算 > 镜像服务 > 私有镜像”，单击镜像的名称，在服务器详情页的“基本信息”页签下找到“镜像ID”字段复制即可。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * cmkId  **参数解释**： 用户主密钥ID。默认为空时，表示云硬盘不加密。 [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)](tag:hws) [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/intl/zh-cn/api-dew/ListKeys.html)](tag:hws_hk)  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ReinstallVolumeSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * imageId  **参数解释**: 用户自定义镜像ID，从IMS控制台获取。 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
-    * cmkId  **参数解释**: 用户主密钥ID，为空时，表示云硬盘不加密。 [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)。](tag:hws) [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/intl/zh-cn/api-dew/ListKeys.html)。](tag:hws_hk)  **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及。
+    * imageId  **参数解释**： 用户自定义镜像ID > 获取方式:在控制台的“服务列表”中，单击“计算 > 镜像服务 > 私有镜像”，单击镜像的名称，在服务器详情页的“基本信息”页签下找到“镜像ID”字段复制即可。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * cmkId  **参数解释**： 用户主密钥ID。默认为空时，表示云硬盘不加密。 [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)](tag:hws) [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/intl/zh-cn/api-dew/ListKeys.html)](tag:hws_hk)  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ReinstallVolumeSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * imageId  **参数解释**: 用户自定义镜像ID，从IMS控制台获取。 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
-    * cmkId  **参数解释**: 用户主密钥ID，为空时，表示云硬盘不加密。 [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)。](tag:hws) [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/intl/zh-cn/api-dew/ListKeys.html)。](tag:hws_hk)  **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及。
+    * imageId  **参数解释**： 用户自定义镜像ID > 获取方式:在控制台的“服务列表”中，单击“计算 > 镜像服务 > 私有镜像”，单击镜像的名称，在服务器详情页的“基本信息”页签下找到“镜像ID”字段复制即可。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * cmkId  **参数解释**： 用户主密钥ID。默认为空时，表示云硬盘不加密。 [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)](tag:hws) [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/intl/zh-cn/api-dew/ListKeys.html)](tag:hws_hk)  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ReinstallVolumeSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageId
-    *  **参数解释**: 用户自定义镜像ID，从IMS控制台获取。 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
+    *  **参数解释**： 用户自定义镜像ID > 获取方式:在控制台的“服务列表”中，单击“计算 > 镜像服务 > 私有镜像”，单击镜像的名称，在服务器详情页的“基本信息”页签下找到“镜像ID”字段复制即可。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class ReinstallVolumeSpec implements ModelInterface, ArrayAccess
     /**
     * Sets imageId
     *
-    * @param string|null $imageId **参数解释**: 用户自定义镜像ID，从IMS控制台获取。 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
+    * @param string|null $imageId **参数解释**： 用户自定义镜像ID > 获取方式:在控制台的“服务列表”中，单击“计算 > 镜像服务 > 私有镜像”，单击镜像的名称，在服务器详情页的“基本信息”页签下找到“镜像ID”字段复制即可。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ReinstallVolumeSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets cmkId
-    *  **参数解释**: 用户主密钥ID，为空时，表示云硬盘不加密。 [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)。](tag:hws) [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/intl/zh-cn/api-dew/ListKeys.html)。](tag:hws_hk)  **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及。
+    *  **参数解释**： 用户主密钥ID。默认为空时，表示云硬盘不加密。 [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)](tag:hws) [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/intl/zh-cn/api-dew/ListKeys.html)](tag:hws_hk)  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class ReinstallVolumeSpec implements ModelInterface, ArrayAccess
     /**
     * Sets cmkId
     *
-    * @param string|null $cmkId **参数解释**: 用户主密钥ID，为空时，表示云硬盘不加密。 [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)。](tag:hws) [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/intl/zh-cn/api-dew/ListKeys.html)。](tag:hws_hk)  **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及。
+    * @param string|null $cmkId **参数解释**： 用户主密钥ID。默认为空时，表示云硬盘不加密。 [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)](tag:hws) [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/intl/zh-cn/api-dew/ListKeys.html)](tag:hws_hk)  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

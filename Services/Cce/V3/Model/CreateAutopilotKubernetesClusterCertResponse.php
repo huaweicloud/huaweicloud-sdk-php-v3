@@ -21,13 +21,13 @@ class CreateAutopilotKubernetesClusterCertResponse implements ModelInterface, Ar
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * kind  API类型，固定值“Config”，该值不可修改。
-    * apiVersion  API版本，固定值“v1”。
-    * preferences  当前未使用该字段，当前默认为空。
-    * clusters  集群列表。
-    * users  存放了指定用户的一些证书信息和ClientKey信息。
-    * contexts  上下文列表。
-    * currentContext  当前上下文，若存在publicIp（虚拟机弹性IP）时为 external; 若不存在publicIp为 internal。
+    * kind  **参数解释**： API类型 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： Config
+    * apiVersion  **参数解释**： API版本 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： v1
+    * preferences  **参数解释**： 当前未使用该字段 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 默认为空
+    * clusters  **参数解释**： 集群列表。 **约束限制**： 不涉及
+    * users  **参数解释**： 存放了指定用户的一些证书信息和ClientKey信息。 **约束限制**： 不涉及
+    * contexts  **参数解释**： 上下文列表。 **约束限制**： 不涉及
+    * currentContext  **参数解释**： 当前上下文 **约束限制**： 不涉及 **取值范围**： - external：公网访问  - internal：私网访问  **默认取值**： - 若存在publicIp（虚拟机弹性IP）时为 external。 - 若不存在publicIp为 internal。
     * portId  portId
     *
     * @var string[]
@@ -45,13 +45,13 @@ class CreateAutopilotKubernetesClusterCertResponse implements ModelInterface, Ar
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * kind  API类型，固定值“Config”，该值不可修改。
-    * apiVersion  API版本，固定值“v1”。
-    * preferences  当前未使用该字段，当前默认为空。
-    * clusters  集群列表。
-    * users  存放了指定用户的一些证书信息和ClientKey信息。
-    * contexts  上下文列表。
-    * currentContext  当前上下文，若存在publicIp（虚拟机弹性IP）时为 external; 若不存在publicIp为 internal。
+    * kind  **参数解释**： API类型 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： Config
+    * apiVersion  **参数解释**： API版本 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： v1
+    * preferences  **参数解释**： 当前未使用该字段 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 默认为空
+    * clusters  **参数解释**： 集群列表。 **约束限制**： 不涉及
+    * users  **参数解释**： 存放了指定用户的一些证书信息和ClientKey信息。 **约束限制**： 不涉及
+    * contexts  **参数解释**： 上下文列表。 **约束限制**： 不涉及
+    * currentContext  **参数解释**： 当前上下文 **约束限制**： 不涉及 **取值范围**： - external：公网访问  - internal：私网访问  **默认取值**： - 若存在publicIp（虚拟机弹性IP）时为 external。 - 若不存在publicIp为 internal。
     * portId  portId
     *
     * @var string[]
@@ -90,13 +90,13 @@ class CreateAutopilotKubernetesClusterCertResponse implements ModelInterface, Ar
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * kind  API类型，固定值“Config”，该值不可修改。
-    * apiVersion  API版本，固定值“v1”。
-    * preferences  当前未使用该字段，当前默认为空。
-    * clusters  集群列表。
-    * users  存放了指定用户的一些证书信息和ClientKey信息。
-    * contexts  上下文列表。
-    * currentContext  当前上下文，若存在publicIp（虚拟机弹性IP）时为 external; 若不存在publicIp为 internal。
+    * kind  **参数解释**： API类型 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： Config
+    * apiVersion  **参数解释**： API版本 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： v1
+    * preferences  **参数解释**： 当前未使用该字段 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 默认为空
+    * clusters  **参数解释**： 集群列表。 **约束限制**： 不涉及
+    * users  **参数解释**： 存放了指定用户的一些证书信息和ClientKey信息。 **约束限制**： 不涉及
+    * contexts  **参数解释**： 上下文列表。 **约束限制**： 不涉及
+    * currentContext  **参数解释**： 当前上下文 **约束限制**： 不涉及 **取值范围**： - external：公网访问  - internal：私网访问  **默认取值**： - 若存在publicIp（虚拟机弹性IP）时为 external。 - 若不存在publicIp为 internal。
     * portId  portId
     *
     * @var string[]
@@ -114,13 +114,13 @@ class CreateAutopilotKubernetesClusterCertResponse implements ModelInterface, Ar
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * kind  API类型，固定值“Config”，该值不可修改。
-    * apiVersion  API版本，固定值“v1”。
-    * preferences  当前未使用该字段，当前默认为空。
-    * clusters  集群列表。
-    * users  存放了指定用户的一些证书信息和ClientKey信息。
-    * contexts  上下文列表。
-    * currentContext  当前上下文，若存在publicIp（虚拟机弹性IP）时为 external; 若不存在publicIp为 internal。
+    * kind  **参数解释**： API类型 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： Config
+    * apiVersion  **参数解释**： API版本 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： v1
+    * preferences  **参数解释**： 当前未使用该字段 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 默认为空
+    * clusters  **参数解释**： 集群列表。 **约束限制**： 不涉及
+    * users  **参数解释**： 存放了指定用户的一些证书信息和ClientKey信息。 **约束限制**： 不涉及
+    * contexts  **参数解释**： 上下文列表。 **约束限制**： 不涉及
+    * currentContext  **参数解释**： 当前上下文 **约束限制**： 不涉及 **取值范围**： - external：公网访问  - internal：私网访问  **默认取值**： - 若存在publicIp（虚拟机弹性IP）时为 external。 - 若不存在publicIp为 internal。
     * portId  portId
     *
     * @var string[]
@@ -138,13 +138,13 @@ class CreateAutopilotKubernetesClusterCertResponse implements ModelInterface, Ar
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * kind  API类型，固定值“Config”，该值不可修改。
-    * apiVersion  API版本，固定值“v1”。
-    * preferences  当前未使用该字段，当前默认为空。
-    * clusters  集群列表。
-    * users  存放了指定用户的一些证书信息和ClientKey信息。
-    * contexts  上下文列表。
-    * currentContext  当前上下文，若存在publicIp（虚拟机弹性IP）时为 external; 若不存在publicIp为 internal。
+    * kind  **参数解释**： API类型 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： Config
+    * apiVersion  **参数解释**： API版本 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： v1
+    * preferences  **参数解释**： 当前未使用该字段 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 默认为空
+    * clusters  **参数解释**： 集群列表。 **约束限制**： 不涉及
+    * users  **参数解释**： 存放了指定用户的一些证书信息和ClientKey信息。 **约束限制**： 不涉及
+    * contexts  **参数解释**： 上下文列表。 **约束限制**： 不涉及
+    * currentContext  **参数解释**： 当前上下文 **约束限制**： 不涉及 **取值范围**： - external：公网访问  - internal：私网访问  **默认取值**： - 若存在publicIp（虚拟机弹性IP）时为 external。 - 若不存在publicIp为 internal。
     * portId  portId
     *
     * @var string[]
@@ -252,7 +252,7 @@ class CreateAutopilotKubernetesClusterCertResponse implements ModelInterface, Ar
 
     /**
     * Gets kind
-    *  API类型，固定值“Config”，该值不可修改。
+    *  **参数解释**： API类型 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： Config
     *
     * @return string|null
     */
@@ -264,7 +264,7 @@ class CreateAutopilotKubernetesClusterCertResponse implements ModelInterface, Ar
     /**
     * Sets kind
     *
-    * @param string|null $kind API类型，固定值“Config”，该值不可修改。
+    * @param string|null $kind **参数解释**： API类型 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： Config
     *
     * @return $this
     */
@@ -276,7 +276,7 @@ class CreateAutopilotKubernetesClusterCertResponse implements ModelInterface, Ar
 
     /**
     * Gets apiVersion
-    *  API版本，固定值“v1”。
+    *  **参数解释**： API版本 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： v1
     *
     * @return string|null
     */
@@ -288,7 +288,7 @@ class CreateAutopilotKubernetesClusterCertResponse implements ModelInterface, Ar
     /**
     * Sets apiVersion
     *
-    * @param string|null $apiVersion API版本，固定值“v1”。
+    * @param string|null $apiVersion **参数解释**： API版本 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： v1
     *
     * @return $this
     */
@@ -300,7 +300,7 @@ class CreateAutopilotKubernetesClusterCertResponse implements ModelInterface, Ar
 
     /**
     * Gets preferences
-    *  当前未使用该字段，当前默认为空。
+    *  **参数解释**： 当前未使用该字段 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 默认为空
     *
     * @return object|null
     */
@@ -312,7 +312,7 @@ class CreateAutopilotKubernetesClusterCertResponse implements ModelInterface, Ar
     /**
     * Sets preferences
     *
-    * @param object|null $preferences 当前未使用该字段，当前默认为空。
+    * @param object|null $preferences **参数解释**： 当前未使用该字段 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 默认为空
     *
     * @return $this
     */
@@ -324,7 +324,7 @@ class CreateAutopilotKubernetesClusterCertResponse implements ModelInterface, Ar
 
     /**
     * Gets clusters
-    *  集群列表。
+    *  **参数解释**： 集群列表。 **约束限制**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\Clusters[]|null
     */
@@ -336,7 +336,7 @@ class CreateAutopilotKubernetesClusterCertResponse implements ModelInterface, Ar
     /**
     * Sets clusters
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\Clusters[]|null $clusters 集群列表。
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\Clusters[]|null $clusters **参数解释**： 集群列表。 **约束限制**： 不涉及
     *
     * @return $this
     */
@@ -348,7 +348,7 @@ class CreateAutopilotKubernetesClusterCertResponse implements ModelInterface, Ar
 
     /**
     * Gets users
-    *  存放了指定用户的一些证书信息和ClientKey信息。
+    *  **参数解释**： 存放了指定用户的一些证书信息和ClientKey信息。 **约束限制**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\Users[]|null
     */
@@ -360,7 +360,7 @@ class CreateAutopilotKubernetesClusterCertResponse implements ModelInterface, Ar
     /**
     * Sets users
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\Users[]|null $users 存放了指定用户的一些证书信息和ClientKey信息。
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\Users[]|null $users **参数解释**： 存放了指定用户的一些证书信息和ClientKey信息。 **约束限制**： 不涉及
     *
     * @return $this
     */
@@ -372,7 +372,7 @@ class CreateAutopilotKubernetesClusterCertResponse implements ModelInterface, Ar
 
     /**
     * Gets contexts
-    *  上下文列表。
+    *  **参数解释**： 上下文列表。 **约束限制**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\Contexts[]|null
     */
@@ -384,7 +384,7 @@ class CreateAutopilotKubernetesClusterCertResponse implements ModelInterface, Ar
     /**
     * Sets contexts
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\Contexts[]|null $contexts 上下文列表。
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\Contexts[]|null $contexts **参数解释**： 上下文列表。 **约束限制**： 不涉及
     *
     * @return $this
     */
@@ -396,7 +396,7 @@ class CreateAutopilotKubernetesClusterCertResponse implements ModelInterface, Ar
 
     /**
     * Gets currentContext
-    *  当前上下文，若存在publicIp（虚拟机弹性IP）时为 external; 若不存在publicIp为 internal。
+    *  **参数解释**： 当前上下文 **约束限制**： 不涉及 **取值范围**： - external：公网访问  - internal：私网访问  **默认取值**： - 若存在publicIp（虚拟机弹性IP）时为 external。 - 若不存在publicIp为 internal。
     *
     * @return string|null
     */
@@ -408,7 +408,7 @@ class CreateAutopilotKubernetesClusterCertResponse implements ModelInterface, Ar
     /**
     * Sets currentContext
     *
-    * @param string|null $currentContext 当前上下文，若存在publicIp（虚拟机弹性IP）时为 external; 若不存在publicIp为 internal。
+    * @param string|null $currentContext **参数解释**： 当前上下文 **约束限制**： 不涉及 **取值范围**： - external：公网访问  - internal：私网访问  **默认取值**： - 若存在publicIp（虚拟机弹性IP）时为 external。 - 若不存在publicIp为 internal。
     *
     * @return $this
     */

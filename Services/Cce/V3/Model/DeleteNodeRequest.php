@@ -21,8 +21,8 @@ class DeleteNodeRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodeId  节点ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodepoolScaleDown  标明是否为nodepool下发的请求。若不为“NoScaleDown”将自动更新对应节点池的实例数
+    * nodeId  **参数解释**： 节点ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodepoolScaleDown  **参数解释**： 标明是否为nodepool下发的请求。若不为“NoScaleDown”将自动更新对应节点池的实例数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class DeleteNodeRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodeId  节点ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodepoolScaleDown  标明是否为nodepool下发的请求。若不为“NoScaleDown”将自动更新对应节点池的实例数
+    * nodeId  **参数解释**： 节点ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodepoolScaleDown  **参数解释**： 标明是否为nodepool下发的请求。若不为“NoScaleDown”将自动更新对应节点池的实例数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class DeleteNodeRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodeId  节点ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodepoolScaleDown  标明是否为nodepool下发的请求。若不为“NoScaleDown”将自动更新对应节点池的实例数
+    * nodeId  **参数解释**： 节点ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodepoolScaleDown  **参数解释**： 标明是否为nodepool下发的请求。若不为“NoScaleDown”将自动更新对应节点池的实例数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class DeleteNodeRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodeId  节点ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodepoolScaleDown  标明是否为nodepool下发的请求。若不为“NoScaleDown”将自动更新对应节点池的实例数
+    * nodeId  **参数解释**： 节点ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodepoolScaleDown  **参数解释**： 标明是否为nodepool下发的请求。若不为“NoScaleDown”将自动更新对应节点池的实例数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class DeleteNodeRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodeId  节点ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodepoolScaleDown  标明是否为nodepool下发的请求。若不为“NoScaleDown”将自动更新对应节点池的实例数
+    * nodeId  **参数解释**： 节点ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodepoolScaleDown  **参数解释**： 标明是否为nodepool下发的请求。若不为“NoScaleDown”将自动更新对应节点池的实例数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -253,7 +253,7 @@ class DeleteNodeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeId
-    *  节点ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    *  **参数解释**： 节点ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class DeleteNodeRequest implements ModelInterface, ArrayAccess
     /**
     * Sets nodeId
     *
-    * @param string $nodeId 节点ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * @param string $nodeId **参数解释**： 节点ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class DeleteNodeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodepoolScaleDown
-    *  标明是否为nodepool下发的请求。若不为“NoScaleDown”将自动更新对应节点池的实例数
+    *  **参数解释**： 标明是否为nodepool下发的请求。若不为“NoScaleDown”将自动更新对应节点池的实例数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class DeleteNodeRequest implements ModelInterface, ArrayAccess
     /**
     * Sets nodepoolScaleDown
     *
-    * @param string|null $nodepoolScaleDown 标明是否为nodepool下发的请求。若不为“NoScaleDown”将自动更新对应节点池的实例数
+    * @param string|null $nodepoolScaleDown **参数解释**： 标明是否为nodepool下发的请求。若不为“NoScaleDown”将自动更新对应节点池的实例数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

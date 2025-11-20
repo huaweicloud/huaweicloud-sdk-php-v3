@@ -189,6 +189,9 @@ class ModifyLoginWhiteIpRequestBody implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['whiteIp']) < 1)) {
                 $invalidProperties[] = "invalid value for 'whiteIp', the character length must be bigger than or equal to 1.";
             }
+        if ($this->container['hostIdList'] === null) {
+            $invalidProperties[] = "'hostIdList' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -255,7 +258,7 @@ class ModifyLoginWhiteIpRequestBody implements ModelInterface, ArrayAccess
     * Gets hostIdList
     *  **参数解释**： 服务器列表，不可为NULL，删除白名单IP或IP网段时，需要将服务器ID列表置为空列表[]。 **约束限制**： 不可为NULL **取值范围**： 不涉及 **默认取值**： 不涉及
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getHostIdList()
     {
@@ -265,7 +268,7 @@ class ModifyLoginWhiteIpRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets hostIdList
     *
-    * @param string[]|null $hostIdList **参数解释**： 服务器列表，不可为NULL，删除白名单IP或IP网段时，需要将服务器ID列表置为空列表[]。 **约束限制**： 不可为NULL **取值范围**： 不涉及 **默认取值**： 不涉及
+    * @param string[] $hostIdList **参数解释**： 服务器列表，不可为NULL，删除白名单IP或IP网段时，需要将服务器ID列表置为空列表[]。 **约束限制**： 不可为NULL **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

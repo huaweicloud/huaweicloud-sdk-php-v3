@@ -20,15 +20,15 @@ class NodeStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * phase  **参数解释**： 节点状态 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 节点资源生命周期管理（如安装卸载等）状态和集群内K8s node状态的综合体现，取值如下 - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。
-    * lastProbeTime  **参数解释**： 节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
-    * jobId  **参数解释**： 创建或删除时的任务ID。 **取值范围**： 不涉及
-    * serverId  **参数解释**： 底层云服务器或裸金属节点ID。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
-    * privateIp  **参数解释**： 节点主网卡私有网段IP地址。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
-    * privateIPv6Ip  **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
-    * publicIp  **参数解释**： 节点弹性公网IP地址。如果ECS的数据没有实时同步，可在界面上通过“同步节点信息”手动进行更新。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
+    * phase  **参数解释**： 节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现 **约束限制**： 不涉及 **取值范围**： - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。  **默认取值**： 不涉及
+    * lastProbeTime  **参数解释**： 节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * jobId  **参数解释**： 创建或删除时的任务ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * serverId  **参数解释**： 底层云服务器或裸金属节点ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * privateIp  **参数解释**： 节点主网卡私有网段IP地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * privateIPv6Ip  **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * publicIp  **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * deleteStatus  deleteStatus
-    * configurationUpToDate  **参数解释**： 节点配置是否与所属节点池的节点模板最新配置一致。当更新节点池os或runtime后，该节点池中存量节点的os或runtime便与节点池存在差异，configurationUpToDate参数值即为false。重置节点后，存量节点的os和runtime与节点池配置保持一致，configurationUpToDate参数值即为true。 **约束限制**： 创建、更新节点接口返回中无该参数。 **取值范围**： 不涉及
+    * configurationUpToDate  **参数解释**： 节点配置是否与所属节点池的节点模板最新配置一致。 当更新节点池os或runtime后，该节点池中存量节点的os或runtime便与节点池存在差异，configurationUpToDate参数值即为false。 重置节点后，存量节点的os和runtime与节点池配置保持一致，configurationUpToDate参数值即为true。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class NodeStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * phase  **参数解释**： 节点状态 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 节点资源生命周期管理（如安装卸载等）状态和集群内K8s node状态的综合体现，取值如下 - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。
-    * lastProbeTime  **参数解释**： 节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
-    * jobId  **参数解释**： 创建或删除时的任务ID。 **取值范围**： 不涉及
-    * serverId  **参数解释**： 底层云服务器或裸金属节点ID。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
-    * privateIp  **参数解释**： 节点主网卡私有网段IP地址。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
-    * privateIPv6Ip  **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
-    * publicIp  **参数解释**： 节点弹性公网IP地址。如果ECS的数据没有实时同步，可在界面上通过“同步节点信息”手动进行更新。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
+    * phase  **参数解释**： 节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现 **约束限制**： 不涉及 **取值范围**： - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。  **默认取值**： 不涉及
+    * lastProbeTime  **参数解释**： 节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * jobId  **参数解释**： 创建或删除时的任务ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * serverId  **参数解释**： 底层云服务器或裸金属节点ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * privateIp  **参数解释**： 节点主网卡私有网段IP地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * privateIPv6Ip  **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * publicIp  **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * deleteStatus  deleteStatus
-    * configurationUpToDate  **参数解释**： 节点配置是否与所属节点池的节点模板最新配置一致。当更新节点池os或runtime后，该节点池中存量节点的os或runtime便与节点池存在差异，configurationUpToDate参数值即为false。重置节点后，存量节点的os和runtime与节点池配置保持一致，configurationUpToDate参数值即为true。 **约束限制**： 创建、更新节点接口返回中无该参数。 **取值范围**： 不涉及
+    * configurationUpToDate  **参数解释**： 节点配置是否与所属节点池的节点模板最新配置一致。 当更新节点池os或runtime后，该节点池中存量节点的os或runtime便与节点池存在差异，configurationUpToDate参数值即为false。 重置节点后，存量节点的os和runtime与节点池配置保持一致，configurationUpToDate参数值即为true。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class NodeStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * phase  **参数解释**： 节点状态 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 节点资源生命周期管理（如安装卸载等）状态和集群内K8s node状态的综合体现，取值如下 - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。
-    * lastProbeTime  **参数解释**： 节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
-    * jobId  **参数解释**： 创建或删除时的任务ID。 **取值范围**： 不涉及
-    * serverId  **参数解释**： 底层云服务器或裸金属节点ID。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
-    * privateIp  **参数解释**： 节点主网卡私有网段IP地址。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
-    * privateIPv6Ip  **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
-    * publicIp  **参数解释**： 节点弹性公网IP地址。如果ECS的数据没有实时同步，可在界面上通过“同步节点信息”手动进行更新。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
+    * phase  **参数解释**： 节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现 **约束限制**： 不涉及 **取值范围**： - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。  **默认取值**： 不涉及
+    * lastProbeTime  **参数解释**： 节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * jobId  **参数解释**： 创建或删除时的任务ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * serverId  **参数解释**： 底层云服务器或裸金属节点ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * privateIp  **参数解释**： 节点主网卡私有网段IP地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * privateIPv6Ip  **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * publicIp  **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * deleteStatus  deleteStatus
-    * configurationUpToDate  **参数解释**： 节点配置是否与所属节点池的节点模板最新配置一致。当更新节点池os或runtime后，该节点池中存量节点的os或runtime便与节点池存在差异，configurationUpToDate参数值即为false。重置节点后，存量节点的os和runtime与节点池配置保持一致，configurationUpToDate参数值即为true。 **约束限制**： 创建、更新节点接口返回中无该参数。 **取值范围**： 不涉及
+    * configurationUpToDate  **参数解释**： 节点配置是否与所属节点池的节点模板最新配置一致。 当更新节点池os或runtime后，该节点池中存量节点的os或runtime便与节点池存在差异，configurationUpToDate参数值即为false。 重置节点后，存量节点的os和runtime与节点池配置保持一致，configurationUpToDate参数值即为true。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class NodeStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * phase  **参数解释**： 节点状态 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 节点资源生命周期管理（如安装卸载等）状态和集群内K8s node状态的综合体现，取值如下 - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。
-    * lastProbeTime  **参数解释**： 节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
-    * jobId  **参数解释**： 创建或删除时的任务ID。 **取值范围**： 不涉及
-    * serverId  **参数解释**： 底层云服务器或裸金属节点ID。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
-    * privateIp  **参数解释**： 节点主网卡私有网段IP地址。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
-    * privateIPv6Ip  **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
-    * publicIp  **参数解释**： 节点弹性公网IP地址。如果ECS的数据没有实时同步，可在界面上通过“同步节点信息”手动进行更新。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
+    * phase  **参数解释**： 节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现 **约束限制**： 不涉及 **取值范围**： - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。  **默认取值**： 不涉及
+    * lastProbeTime  **参数解释**： 节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * jobId  **参数解释**： 创建或删除时的任务ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * serverId  **参数解释**： 底层云服务器或裸金属节点ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * privateIp  **参数解释**： 节点主网卡私有网段IP地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * privateIPv6Ip  **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * publicIp  **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * deleteStatus  deleteStatus
-    * configurationUpToDate  **参数解释**： 节点配置是否与所属节点池的节点模板最新配置一致。当更新节点池os或runtime后，该节点池中存量节点的os或runtime便与节点池存在差异，configurationUpToDate参数值即为false。重置节点后，存量节点的os和runtime与节点池配置保持一致，configurationUpToDate参数值即为true。 **约束限制**： 创建、更新节点接口返回中无该参数。 **取值范围**： 不涉及
+    * configurationUpToDate  **参数解释**： 节点配置是否与所属节点池的节点模板最新配置一致。 当更新节点池os或runtime后，该节点池中存量节点的os或runtime便与节点池存在差异，configurationUpToDate参数值即为false。 重置节点后，存量节点的os和runtime与节点池配置保持一致，configurationUpToDate参数值即为true。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class NodeStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * phase  **参数解释**： 节点状态 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 节点资源生命周期管理（如安装卸载等）状态和集群内K8s node状态的综合体现，取值如下 - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。
-    * lastProbeTime  **参数解释**： 节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
-    * jobId  **参数解释**： 创建或删除时的任务ID。 **取值范围**： 不涉及
-    * serverId  **参数解释**： 底层云服务器或裸金属节点ID。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
-    * privateIp  **参数解释**： 节点主网卡私有网段IP地址。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
-    * privateIPv6Ip  **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
-    * publicIp  **参数解释**： 节点弹性公网IP地址。如果ECS的数据没有实时同步，可在界面上通过“同步节点信息”手动进行更新。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
+    * phase  **参数解释**： 节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现 **约束限制**： 不涉及 **取值范围**： - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。  **默认取值**： 不涉及
+    * lastProbeTime  **参数解释**： 节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * jobId  **参数解释**： 创建或删除时的任务ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * serverId  **参数解释**： 底层云服务器或裸金属节点ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * privateIp  **参数解释**： 节点主网卡私有网段IP地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * privateIPv6Ip  **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * publicIp  **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * deleteStatus  deleteStatus
-    * configurationUpToDate  **参数解释**： 节点配置是否与所属节点池的节点模板最新配置一致。当更新节点池os或runtime后，该节点池中存量节点的os或runtime便与节点池存在差异，configurationUpToDate参数值即为false。重置节点后，存量节点的os和runtime与节点池配置保持一致，configurationUpToDate参数值即为true。 **约束限制**： 创建、更新节点接口返回中无该参数。 **取值范围**： 不涉及
+    * configurationUpToDate  **参数解释**： 节点配置是否与所属节点池的节点模板最新配置一致。 当更新节点池os或runtime后，该节点池中存量节点的os或runtime便与节点池存在差异，configurationUpToDate参数值即为false。 重置节点后，存量节点的os和runtime与节点池配置保持一致，configurationUpToDate参数值即为true。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -295,7 +295,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets phase
-    *  **参数解释**： 节点状态 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 节点资源生命周期管理（如安装卸载等）状态和集群内K8s node状态的综合体现，取值如下 - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。
+    *  **参数解释**： 节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现 **约束限制**： 不涉及 **取值范围**： - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。  **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -307,7 +307,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
     /**
     * Sets phase
     *
-    * @param string|null $phase **参数解释**： 节点状态 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 节点资源生命周期管理（如安装卸载等）状态和集群内K8s node状态的综合体现，取值如下 - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。
+    * @param string|null $phase **参数解释**： 节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现 **约束限制**： 不涉及 **取值范围**： - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。  **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -319,7 +319,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastProbeTime
-    *  **参数解释**： 节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
+    *  **参数解释**： 节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -331,7 +331,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
     /**
     * Sets lastProbeTime
     *
-    * @param string|null $lastProbeTime **参数解释**： 节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
+    * @param string|null $lastProbeTime **参数解释**： 节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -343,7 +343,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  **参数解释**： 创建或删除时的任务ID。 **取值范围**： 不涉及
+    *  **参数解释**： 创建或删除时的任务ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -355,7 +355,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId **参数解释**： 创建或删除时的任务ID。 **取值范围**： 不涉及
+    * @param string|null $jobId **参数解释**： 创建或删除时的任务ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -367,7 +367,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverId
-    *  **参数解释**： 底层云服务器或裸金属节点ID。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
+    *  **参数解释**： 底层云服务器或裸金属节点ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -379,7 +379,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
     /**
     * Sets serverId
     *
-    * @param string|null $serverId **参数解释**： 底层云服务器或裸金属节点ID。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
+    * @param string|null $serverId **参数解释**： 底层云服务器或裸金属节点ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -391,7 +391,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  **参数解释**： 节点主网卡私有网段IP地址。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
+    *  **参数解释**： 节点主网卡私有网段IP地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -403,7 +403,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string|null $privateIp **参数解释**： 节点主网卡私有网段IP地址。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
+    * @param string|null $privateIp **参数解释**： 节点主网卡私有网段IP地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -415,7 +415,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIPv6Ip
-    *  **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
+    *  **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -427,7 +427,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
     /**
     * Sets privateIPv6Ip
     *
-    * @param string|null $privateIPv6Ip **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
+    * @param string|null $privateIPv6Ip **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -439,7 +439,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  **参数解释**： 节点弹性公网IP地址。如果ECS的数据没有实时同步，可在界面上通过“同步节点信息”手动进行更新。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
+    *  **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -451,7 +451,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp **参数解释**： 节点弹性公网IP地址。如果ECS的数据没有实时同步，可在界面上通过“同步节点信息”手动进行更新。 **约束限制**： 创建节点接口返回中无该参数。 **取值范围**： 不涉及
+    * @param string|null $publicIp **参数解释**： 节点主网卡私有网段IPv6地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -487,7 +487,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets configurationUpToDate
-    *  **参数解释**： 节点配置是否与所属节点池的节点模板最新配置一致。当更新节点池os或runtime后，该节点池中存量节点的os或runtime便与节点池存在差异，configurationUpToDate参数值即为false。重置节点后，存量节点的os和runtime与节点池配置保持一致，configurationUpToDate参数值即为true。 **约束限制**： 创建、更新节点接口返回中无该参数。 **取值范围**： 不涉及
+    *  **参数解释**： 节点配置是否与所属节点池的节点模板最新配置一致。 当更新节点池os或runtime后，该节点池中存量节点的os或runtime便与节点池存在差异，configurationUpToDate参数值即为false。 重置节点后，存量节点的os和runtime与节点池配置保持一致，configurationUpToDate参数值即为true。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return bool|null
     */
@@ -499,7 +499,7 @@ class NodeStatus implements ModelInterface, ArrayAccess
     /**
     * Sets configurationUpToDate
     *
-    * @param bool|null $configurationUpToDate **参数解释**： 节点配置是否与所属节点池的节点模板最新配置一致。当更新节点池os或runtime后，该节点池中存量节点的os或runtime便与节点池存在差异，configurationUpToDate参数值即为false。重置节点后，存量节点的os和runtime与节点池配置保持一致，configurationUpToDate参数值即为true。 **约束限制**： 创建、更新节点接口返回中无该参数。 **取值范围**： 不涉及
+    * @param bool|null $configurationUpToDate **参数解释**： 节点配置是否与所属节点池的节点模板最新配置一致。 当更新节点池os或runtime后，该节点池中存量节点的os或runtime便与节点池存在差异，configurationUpToDate参数值即为false。 重置节点后，存量节点的os和runtime与节点池配置保持一致，configurationUpToDate参数值即为true。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

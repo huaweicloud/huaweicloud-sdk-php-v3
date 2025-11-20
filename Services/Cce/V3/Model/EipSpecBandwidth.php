@@ -20,8 +20,8 @@ class EipSpecBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * size  带宽大小
-    * sharetype  带宽类型
+    * size  **参数解释**： 带宽大小 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * sharetype  **参数解释**： 带宽大小 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class EipSpecBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * size  带宽大小
-    * sharetype  带宽类型
+    * size  **参数解释**： 带宽大小 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * sharetype  **参数解释**： 带宽大小 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class EipSpecBandwidth implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * size  带宽大小
-    * sharetype  带宽类型
+    * size  **参数解释**： 带宽大小 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * sharetype  **参数解释**： 带宽大小 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class EipSpecBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * size  带宽大小
-    * sharetype  带宽类型
+    * size  **参数解释**： 带宽大小 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * sharetype  **参数解释**： 带宽大小 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class EipSpecBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * size  带宽大小
-    * sharetype  带宽类型
+    * size  **参数解释**： 带宽大小 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * sharetype  **参数解释**： 带宽大小 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class EipSpecBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  带宽大小
+    *  **参数解释**： 带宽大小 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -220,7 +220,7 @@ class EipSpecBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 带宽大小
+    * @param int|null $size **参数解释**： 带宽大小 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class EipSpecBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets sharetype
-    *  带宽类型
+    *  **参数解释**： 带宽大小 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class EipSpecBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets sharetype
     *
-    * @param string|null $sharetype 带宽类型
+    * @param string|null $sharetype **参数解释**： 带宽大小 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

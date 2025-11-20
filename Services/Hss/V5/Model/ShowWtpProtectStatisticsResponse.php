@@ -21,7 +21,7 @@ class ShowWtpProtectStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * protectHostNum  **参数解释**: 防护服务器总数，包含防护状态是防护中、部分防护、防护暂停、防护失败、防护中断和开启中共6中状态的服务器总数 **取值范围**: 最小值0，最大值1000000
+    * protectHostNum  **参数解释**: 防护服务器总数，包含防护状态是防护中、部分防护、防护暂停、防护失败、防护中断和开启中共6种状态的服务器总数 **取值范围**: 最小值0，最大值1000000
     * protectSuccessHostNum  **参数解释**: 防护状态为防护中的服务器总数 **取值范围**: 最小值0，最大值1000000
     * protectFailHostNum  **参数解释**: 防护状态为防护失败的服务器总数 **取值范围**: 最小值0，最大值1000000
     * antiTamperingNum  **参数解释**: 近168小时防护事件数 **取值范围**: 最小值0，最大值50000000
@@ -37,7 +37,7 @@ class ShowWtpProtectStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * protectHostNum  **参数解释**: 防护服务器总数，包含防护状态是防护中、部分防护、防护暂停、防护失败、防护中断和开启中共6中状态的服务器总数 **取值范围**: 最小值0，最大值1000000
+    * protectHostNum  **参数解释**: 防护服务器总数，包含防护状态是防护中、部分防护、防护暂停、防护失败、防护中断和开启中共6种状态的服务器总数 **取值范围**: 最小值0，最大值1000000
     * protectSuccessHostNum  **参数解释**: 防护状态为防护中的服务器总数 **取值范围**: 最小值0，最大值1000000
     * protectFailHostNum  **参数解释**: 防护状态为防护失败的服务器总数 **取值范围**: 最小值0，最大值1000000
     * antiTamperingNum  **参数解释**: 近168小时防护事件数 **取值范围**: 最小值0，最大值50000000
@@ -74,7 +74,7 @@ class ShowWtpProtectStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * protectHostNum  **参数解释**: 防护服务器总数，包含防护状态是防护中、部分防护、防护暂停、防护失败、防护中断和开启中共6中状态的服务器总数 **取值范围**: 最小值0，最大值1000000
+    * protectHostNum  **参数解释**: 防护服务器总数，包含防护状态是防护中、部分防护、防护暂停、防护失败、防护中断和开启中共6种状态的服务器总数 **取值范围**: 最小值0，最大值1000000
     * protectSuccessHostNum  **参数解释**: 防护状态为防护中的服务器总数 **取值范围**: 最小值0，最大值1000000
     * protectFailHostNum  **参数解释**: 防护状态为防护失败的服务器总数 **取值范围**: 最小值0，最大值1000000
     * antiTamperingNum  **参数解释**: 近168小时防护事件数 **取值范围**: 最小值0，最大值50000000
@@ -90,7 +90,7 @@ class ShowWtpProtectStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * protectHostNum  **参数解释**: 防护服务器总数，包含防护状态是防护中、部分防护、防护暂停、防护失败、防护中断和开启中共6中状态的服务器总数 **取值范围**: 最小值0，最大值1000000
+    * protectHostNum  **参数解释**: 防护服务器总数，包含防护状态是防护中、部分防护、防护暂停、防护失败、防护中断和开启中共6种状态的服务器总数 **取值范围**: 最小值0，最大值1000000
     * protectSuccessHostNum  **参数解释**: 防护状态为防护中的服务器总数 **取值范围**: 最小值0，最大值1000000
     * protectFailHostNum  **参数解释**: 防护状态为防护失败的服务器总数 **取值范围**: 最小值0，最大值1000000
     * antiTamperingNum  **参数解释**: 近168小时防护事件数 **取值范围**: 最小值0，最大值50000000
@@ -106,7 +106,7 @@ class ShowWtpProtectStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * protectHostNum  **参数解释**: 防护服务器总数，包含防护状态是防护中、部分防护、防护暂停、防护失败、防护中断和开启中共6中状态的服务器总数 **取值范围**: 最小值0，最大值1000000
+    * protectHostNum  **参数解释**: 防护服务器总数，包含防护状态是防护中、部分防护、防护暂停、防护失败、防护中断和开启中共6种状态的服务器总数 **取值范围**: 最小值0，最大值1000000
     * protectSuccessHostNum  **参数解释**: 防护状态为防护中的服务器总数 **取值范围**: 最小值0，最大值1000000
     * protectFailHostNum  **参数解释**: 防护状态为防护失败的服务器总数 **取值范围**: 最小值0，最大值1000000
     * antiTamperingNum  **参数解释**: 近168小时防护事件数 **取值范围**: 最小值0，最大值50000000
@@ -232,7 +232,7 @@ class ShowWtpProtectStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectHostNum
-    *  **参数解释**: 防护服务器总数，包含防护状态是防护中、部分防护、防护暂停、防护失败、防护中断和开启中共6中状态的服务器总数 **取值范围**: 最小值0，最大值1000000
+    *  **参数解释**: 防护服务器总数，包含防护状态是防护中、部分防护、防护暂停、防护失败、防护中断和开启中共6种状态的服务器总数 **取值范围**: 最小值0，最大值1000000
     *
     * @return int|null
     */
@@ -244,7 +244,7 @@ class ShowWtpProtectStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets protectHostNum
     *
-    * @param int|null $protectHostNum **参数解释**: 防护服务器总数，包含防护状态是防护中、部分防护、防护暂停、防护失败、防护中断和开启中共6中状态的服务器总数 **取值范围**: 最小值0，最大值1000000
+    * @param int|null $protectHostNum **参数解释**: 防护服务器总数，包含防护状态是防护中、部分防护、防护暂停、防护失败、防护中断和开启中共6种状态的服务器总数 **取值范围**: 最小值0，最大值1000000
     *
     * @return $this
     */
