@@ -31,6 +31,7 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     * clusterId  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
     * tag  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
     * policyGroupId  **参数解释** 策略组ID，不赋值时，查租户所有主机，host_id存在时，此值无效 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
+    * statisticsFlag  **参数解释** 是否从统计维度展示数据 **约束限制** 不涉及 **取值范围** - false : 不从统计维度展示 - true  : 从统计维度展示  **默认取值** false
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
             'severity' => 'string',
             'clusterId' => 'string',
             'tag' => 'string',
-            'policyGroupId' => 'string'
+            'policyGroupId' => 'string',
+            'statisticsFlag' => 'string'
     ];
 
     /**
@@ -61,6 +63,7 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     * clusterId  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
     * tag  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
     * policyGroupId  **参数解释** 策略组ID，不赋值时，查租户所有主机，host_id存在时，此值无效 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
+    * statisticsFlag  **参数解释** 是否从统计维度展示数据 **约束限制** 不涉及 **取值范围** - false : 不从统计维度展示 - true  : 从统计维度展示  **默认取值** false
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
         'severity' => null,
         'clusterId' => null,
         'tag' => null,
-        'policyGroupId' => null
+        'policyGroupId' => null,
+        'statisticsFlag' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     * clusterId  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
     * tag  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
     * policyGroupId  **参数解释** 策略组ID，不赋值时，查租户所有主机，host_id存在时，此值无效 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
+    * statisticsFlag  **参数解释** 是否从统计维度展示数据 **约束限制** 不涉及 **取值范围** - false : 不从统计维度展示 - true  : 从统计维度展示  **默认取值** false
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
             'severity' => 'severity',
             'clusterId' => 'cluster_id',
             'tag' => 'tag',
-            'policyGroupId' => 'policy_group_id'
+            'policyGroupId' => 'policy_group_id',
+            'statisticsFlag' => 'statistics_flag'
     ];
 
     /**
@@ -142,6 +148,7 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     * clusterId  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
     * tag  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
     * policyGroupId  **参数解释** 策略组ID，不赋值时，查租户所有主机，host_id存在时，此值无效 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
+    * statisticsFlag  **参数解释** 是否从统计维度展示数据 **约束限制** 不涉及 **取值范围** - false : 不从统计维度展示 - true  : 从统计维度展示  **默认取值** false
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
             'severity' => 'setSeverity',
             'clusterId' => 'setClusterId',
             'tag' => 'setTag',
-            'policyGroupId' => 'setPolicyGroupId'
+            'policyGroupId' => 'setPolicyGroupId',
+            'statisticsFlag' => 'setStatisticsFlag'
     ];
 
     /**
@@ -172,6 +180,7 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     * clusterId  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
     * tag  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
     * policyGroupId  **参数解释** 策略组ID，不赋值时，查租户所有主机，host_id存在时，此值无效 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
+    * statisticsFlag  **参数解释** 是否从统计维度展示数据 **约束限制** 不涉及 **取值范围** - false : 不从统计维度展示 - true  : 从统计维度展示  **默认取值** false
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
             'severity' => 'getSeverity',
             'clusterId' => 'getClusterId',
             'tag' => 'getTag',
-            'policyGroupId' => 'getPolicyGroupId'
+            'policyGroupId' => 'getPolicyGroupId',
+            'statisticsFlag' => 'getStatisticsFlag'
     ];
 
     /**
@@ -258,6 +268,7 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
         $this->container['policyGroupId'] = isset($data['policyGroupId']) ? $data['policyGroupId'] : null;
+        $this->container['statisticsFlag'] = isset($data['statisticsFlag']) ? $data['statisticsFlag'] : null;
     }
 
     /**
@@ -642,6 +653,30 @@ class ListAllRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     public function setPolicyGroupId($policyGroupId)
     {
         $this->container['policyGroupId'] = $policyGroupId;
+        return $this;
+    }
+
+    /**
+    * Gets statisticsFlag
+    *  **参数解释** 是否从统计维度展示数据 **约束限制** 不涉及 **取值范围** - false : 不从统计维度展示 - true  : 从统计维度展示  **默认取值** false
+    *
+    * @return string|null
+    */
+    public function getStatisticsFlag()
+    {
+        return $this->container['statisticsFlag'];
+    }
+
+    /**
+    * Sets statisticsFlag
+    *
+    * @param string|null $statisticsFlag **参数解释** 是否从统计维度展示数据 **约束限制** 不涉及 **取值范围** - false : 不从统计维度展示 - true  : 从统计维度展示  **默认取值** false
+    *
+    * @return $this
+    */
+    public function setStatisticsFlag($statisticsFlag)
+    {
+        $this->container['statisticsFlag'] = $statisticsFlag;
         return $this;
     }
 

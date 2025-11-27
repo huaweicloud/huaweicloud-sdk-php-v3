@@ -22,21 +22,25 @@ class UpdateNatGatewayResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * natGateway  natGateway
+    * orderId  订单ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'natGateway' => '\HuaweiCloud\SDK\Nat\V2\Model\NatGatewayResponseBody'
+            'natGateway' => '\HuaweiCloud\SDK\Nat\V2\Model\NatGatewayResponseBody',
+            'orderId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * natGateway  natGateway
+    * orderId  订单ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'natGateway' => null
+        'natGateway' => null,
+        'orderId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class UpdateNatGatewayResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * natGateway  natGateway
+    * orderId  订单ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'natGateway' => 'nat_gateway'
+            'natGateway' => 'nat_gateway',
+            'orderId' => 'order_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * natGateway  natGateway
+    * orderId  订单ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'natGateway' => 'setNatGateway'
+            'natGateway' => 'setNatGateway',
+            'orderId' => 'setOrderId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * natGateway  natGateway
+    * orderId  订单ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'natGateway' => 'getNatGateway'
+            'natGateway' => 'getNatGateway',
+            'orderId' => 'getOrderId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class UpdateNatGatewayResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['natGateway'] = isset($data['natGateway']) ? $data['natGateway'] : null;
+        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
     }
 
     /**
@@ -159,6 +170,12 @@ class UpdateNatGatewayResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['orderId']) && (mb_strlen($this->container['orderId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'orderId', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['orderId']) && (mb_strlen($this->container['orderId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'orderId', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -194,6 +211,30 @@ class UpdateNatGatewayResponse implements ModelInterface, ArrayAccess
     public function setNatGateway($natGateway)
     {
         $this->container['natGateway'] = $natGateway;
+        return $this;
+    }
+
+    /**
+    * Gets orderId
+    *  订单ID。
+    *
+    * @return string|null
+    */
+    public function getOrderId()
+    {
+        return $this->container['orderId'];
+    }
+
+    /**
+    * Sets orderId
+    *
+    * @param string|null $orderId 订单ID。
+    *
+    * @return $this
+    */
+    public function setOrderId($orderId)
+    {
+        $this->container['orderId'] = $orderId;
         return $this;
     }
 

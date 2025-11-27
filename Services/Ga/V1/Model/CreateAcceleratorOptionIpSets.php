@@ -20,7 +20,7 @@ class CreateAcceleratorOptionIpSets implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ipType  IP地址类型，取值：IPV4，IPV6
+    * ipType  IP地址类型。 约束限制： 支持单独配置IPV4或同时配置IPV4和IPV6。 取值范围：IPV4、IPV6
     * area  area
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CreateAcceleratorOptionIpSets implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ipType  IP地址类型，取值：IPV4，IPV6
+    * ipType  IP地址类型。 约束限制： 支持单独配置IPV4或同时配置IPV4和IPV6。 取值范围：IPV4、IPV6
     * area  area
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CreateAcceleratorOptionIpSets implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ipType  IP地址类型，取值：IPV4，IPV6
+    * ipType  IP地址类型。 约束限制： 支持单独配置IPV4或同时配置IPV4和IPV6。 取值范围：IPV4、IPV6
     * area  area
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CreateAcceleratorOptionIpSets implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ipType  IP地址类型，取值：IPV4，IPV6
+    * ipType  IP地址类型。 约束限制： 支持单独配置IPV4或同时配置IPV4和IPV6。 取值范围：IPV4、IPV6
     * area  area
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CreateAcceleratorOptionIpSets implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ipType  IP地址类型，取值：IPV4，IPV6
+    * ipType  IP地址类型。 约束限制： 支持单独配置IPV4或同时配置IPV4和IPV6。 取值范围：IPV4、IPV6
     * area  area
     *
     * @var string[]
@@ -214,7 +214,7 @@ class CreateAcceleratorOptionIpSets implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipType
-    *  IP地址类型，取值：IPV4，IPV6
+    *  IP地址类型。 约束限制： 支持单独配置IPV4或同时配置IPV4和IPV6。 取值范围：IPV4、IPV6
     *
     * @return string
     */
@@ -226,7 +226,7 @@ class CreateAcceleratorOptionIpSets implements ModelInterface, ArrayAccess
     /**
     * Sets ipType
     *
-    * @param string $ipType IP地址类型，取值：IPV4，IPV6
+    * @param string $ipType IP地址类型。 约束限制： 支持单独配置IPV4或同时配置IPV4和IPV6。 取值范围：IPV4、IPV6
     *
     * @return $this
     */

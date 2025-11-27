@@ -11,6 +11,7 @@ use HuaweiCloud\SDK\Core\SdkResponse;
      * Possible values of this enum
      */
     const TCP = 'TCP';
+    const UDP = 'UDP';
     
     /**
      * Gets allowable values of the enum
@@ -20,6 +21,7 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     {
         return [
             self::TCP,
+            self::UDP,
         ];
     }
 }

@@ -21,9 +21,9 @@ class ListClusterEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  总数
-    * lastUpdateTime  最近更新时间
-    * dataList  集群安全事件列表
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值10000
+    * lastUpdateTime  **参数解释**: 最近更新时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * dataList  **参数解释**: 集群安全事件列表 **取值范围**: 取值0-10000个ClusterEventResponseInfo对象
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ListClusterEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  总数
-    * lastUpdateTime  最近更新时间
-    * dataList  集群安全事件列表
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值10000
+    * lastUpdateTime  **参数解释**: 最近更新时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * dataList  **参数解释**: 集群安全事件列表 **取值范围**: 取值0-10000个ClusterEventResponseInfo对象
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ListClusterEventsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  总数
-    * lastUpdateTime  最近更新时间
-    * dataList  集群安全事件列表
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值10000
+    * lastUpdateTime  **参数解释**: 最近更新时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * dataList  **参数解释**: 集群安全事件列表 **取值范围**: 取值0-10000个ClusterEventResponseInfo对象
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListClusterEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  总数
-    * lastUpdateTime  最近更新时间
-    * dataList  集群安全事件列表
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值10000
+    * lastUpdateTime  **参数解释**: 最近更新时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * dataList  **参数解释**: 集群安全事件列表 **取值范围**: 取值0-10000个ClusterEventResponseInfo对象
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ListClusterEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  总数
-    * lastUpdateTime  最近更新时间
-    * dataList  集群安全事件列表
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值10000
+    * lastUpdateTime  **参数解释**: 最近更新时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * dataList  **参数解释**: 集群安全事件列表 **取值范围**: 取值0-10000个ClusterEventResponseInfo对象
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class ListClusterEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  总数
+    *  **参数解释**: 总数 **取值范围**: 最小值0，最大值10000
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class ListClusterEventsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 总数
+    * @param int|null $totalNum **参数解释**: 总数 **取值范围**: 最小值0，最大值10000
     *
     * @return $this
     */
@@ -233,7 +233,7 @@ class ListClusterEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastUpdateTime
-    *  最近更新时间
+    *  **参数解释**: 最近更新时间 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -245,7 +245,7 @@ class ListClusterEventsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets lastUpdateTime
     *
-    * @param int|null $lastUpdateTime 最近更新时间
+    * @param int|null $lastUpdateTime **参数解释**: 最近更新时间 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -257,7 +257,7 @@ class ListClusterEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  集群安全事件列表
+    *  **参数解释**: 集群安全事件列表 **取值范围**: 取值0-10000个ClusterEventResponseInfo对象
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\ClusterEventResponseInfo[]|null
     */
@@ -269,7 +269,7 @@ class ListClusterEventsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\ClusterEventResponseInfo[]|null $dataList 集群安全事件列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\ClusterEventResponseInfo[]|null $dataList **参数解释**: 集群安全事件列表 **取值范围**: 取值0-10000个ClusterEventResponseInfo对象
     *
     * @return $this
     */

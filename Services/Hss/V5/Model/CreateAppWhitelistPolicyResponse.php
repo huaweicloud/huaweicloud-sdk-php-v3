@@ -21,20 +21,22 @@ class CreateAppWhitelistPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * policyId  策略ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'policyId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * policyId  策略ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'policyId' => null
     ];
 
     /**
@@ -60,29 +62,32 @@ class CreateAppWhitelistPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * policyId  策略ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'policyId' => 'policy_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * policyId  策略ID
     *
     * @var string[]
     */
     protected static $setters = [
+            'policyId' => 'setPolicyId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * policyId  策略ID
     *
     * @var string[]
     */
     protected static $getters = [
+            'policyId' => 'getPolicyId'
     ];
 
     /**
@@ -143,6 +148,7 @@ class CreateAppWhitelistPolicyResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['policyId'] = isset($data['policyId']) ? $data['policyId'] : null;
     }
 
     /**
@@ -153,6 +159,15 @@ class CreateAppWhitelistPolicyResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['policyId']) && (mb_strlen($this->container['policyId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'policyId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['policyId']) && (mb_strlen($this->container['policyId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'policyId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['policyId']) && !preg_match("/^.*$/", $this->container['policyId'])) {
+                $invalidProperties[] = "invalid value for 'policyId', must be conform to the pattern /^.*$/.";
+            }
         return $invalidProperties;
     }
 
@@ -165,6 +180,30 @@ class CreateAppWhitelistPolicyResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets policyId
+    *  策略ID
+    *
+    * @return string|null
+    */
+    public function getPolicyId()
+    {
+        return $this->container['policyId'];
+    }
+
+    /**
+    * Sets policyId
+    *
+    * @param string|null $policyId 策略ID
+    *
+    * @return $this
+    */
+    public function setPolicyId($policyId)
+    {
+        $this->container['policyId'] = $policyId;
+        return $this;
     }
 
     /**

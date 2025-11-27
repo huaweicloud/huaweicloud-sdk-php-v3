@@ -20,24 +20,24 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  集群id
-    * clusterName  集群名称
-    * content  策略内容
-    * deployContent  deploy内容
-    * parameters  参数
-    * policyName  策略名称
-    * policyId  策略ID
-    * resources  资源
-    * templateId  模板ID
-    * templateName  模板名称
-    * templateType  模板类型
-    * description  策略描述
-    * updateTime  更新时间
-    * createTime  创建时间
-    * imageNum  防护镜像数量
-    * labelsNum  防护标签数量
-    * status  状态
-    * whiteImages  白名单镜像
+    * clusterId  **参数解释**： 集群ID **取值范围**： 不涉及
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
+    * content  **参数解释**： 策略内容 **取值范围**： 不涉及
+    * deployContent  **参数解释**： 部署内容 **取值范围**： 不涉及
+    * parameters  **参数解释**： 参数 **取值范围**： 不涉及
+    * policyName  **参数解释**： 策略名称 **取值范围**： 不涉及
+    * policyId  **参数解释**： 策略ID **取值范围**： 不涉及
+    * resources  **参数解释**： 资源 **取值范围**： 不涉及
+    * templateId  **参数解释**： 模板ID **取值范围**： 不涉及
+    * templateName  **参数解释**： 模板名称 **取值范围**： 不涉及
+    * templateType  **参数解释**： 模板类型 **取值范围**： 不涉及
+    * description  **参数解释**： 策略描述 **取值范围**： 不涉及
+    * updateTime  **参数解释**： 更新时间 **取值范围**： 不涉及
+    * createTime  **参数解释**： 创建时间 **取值范围**： 不涉及
+    * imageNum  **参数解释**： 防护镜像数量 **取值范围**： 不涉及
+    * labelsNum  **参数解释**： 防护标签数量 **取值范围**： 不涉及
+    * status  **参数解释**： 状态 **取值范围**： 不涉及
+    * whiteImages  **参数解释**： 白名单镜像 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -64,24 +64,24 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  集群id
-    * clusterName  集群名称
-    * content  策略内容
-    * deployContent  deploy内容
-    * parameters  参数
-    * policyName  策略名称
-    * policyId  策略ID
-    * resources  资源
-    * templateId  模板ID
-    * templateName  模板名称
-    * templateType  模板类型
-    * description  策略描述
-    * updateTime  更新时间
-    * createTime  创建时间
-    * imageNum  防护镜像数量
-    * labelsNum  防护标签数量
-    * status  状态
-    * whiteImages  白名单镜像
+    * clusterId  **参数解释**： 集群ID **取值范围**： 不涉及
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
+    * content  **参数解释**： 策略内容 **取值范围**： 不涉及
+    * deployContent  **参数解释**： 部署内容 **取值范围**： 不涉及
+    * parameters  **参数解释**： 参数 **取值范围**： 不涉及
+    * policyName  **参数解释**： 策略名称 **取值范围**： 不涉及
+    * policyId  **参数解释**： 策略ID **取值范围**： 不涉及
+    * resources  **参数解释**： 资源 **取值范围**： 不涉及
+    * templateId  **参数解释**： 模板ID **取值范围**： 不涉及
+    * templateName  **参数解释**： 模板名称 **取值范围**： 不涉及
+    * templateType  **参数解释**： 模板类型 **取值范围**： 不涉及
+    * description  **参数解释**： 策略描述 **取值范围**： 不涉及
+    * updateTime  **参数解释**： 更新时间 **取值范围**： 不涉及
+    * createTime  **参数解释**： 创建时间 **取值范围**： 不涉及
+    * imageNum  **参数解释**： 防护镜像数量 **取值范围**： 不涉及
+    * labelsNum  **参数解释**： 防护标签数量 **取值范围**： 不涉及
+    * status  **参数解释**： 状态 **取值范围**： 不涉及
+    * whiteImages  **参数解释**： 白名单镜像 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -129,24 +129,24 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  集群id
-    * clusterName  集群名称
-    * content  策略内容
-    * deployContent  deploy内容
-    * parameters  参数
-    * policyName  策略名称
-    * policyId  策略ID
-    * resources  资源
-    * templateId  模板ID
-    * templateName  模板名称
-    * templateType  模板类型
-    * description  策略描述
-    * updateTime  更新时间
-    * createTime  创建时间
-    * imageNum  防护镜像数量
-    * labelsNum  防护标签数量
-    * status  状态
-    * whiteImages  白名单镜像
+    * clusterId  **参数解释**： 集群ID **取值范围**： 不涉及
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
+    * content  **参数解释**： 策略内容 **取值范围**： 不涉及
+    * deployContent  **参数解释**： 部署内容 **取值范围**： 不涉及
+    * parameters  **参数解释**： 参数 **取值范围**： 不涉及
+    * policyName  **参数解释**： 策略名称 **取值范围**： 不涉及
+    * policyId  **参数解释**： 策略ID **取值范围**： 不涉及
+    * resources  **参数解释**： 资源 **取值范围**： 不涉及
+    * templateId  **参数解释**： 模板ID **取值范围**： 不涉及
+    * templateName  **参数解释**： 模板名称 **取值范围**： 不涉及
+    * templateType  **参数解释**： 模板类型 **取值范围**： 不涉及
+    * description  **参数解释**： 策略描述 **取值范围**： 不涉及
+    * updateTime  **参数解释**： 更新时间 **取值范围**： 不涉及
+    * createTime  **参数解释**： 创建时间 **取值范围**： 不涉及
+    * imageNum  **参数解释**： 防护镜像数量 **取值范围**： 不涉及
+    * labelsNum  **参数解释**： 防护标签数量 **取值范围**： 不涉及
+    * status  **参数解释**： 状态 **取值范围**： 不涉及
+    * whiteImages  **参数解释**： 白名单镜像 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -173,24 +173,24 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  集群id
-    * clusterName  集群名称
-    * content  策略内容
-    * deployContent  deploy内容
-    * parameters  参数
-    * policyName  策略名称
-    * policyId  策略ID
-    * resources  资源
-    * templateId  模板ID
-    * templateName  模板名称
-    * templateType  模板类型
-    * description  策略描述
-    * updateTime  更新时间
-    * createTime  创建时间
-    * imageNum  防护镜像数量
-    * labelsNum  防护标签数量
-    * status  状态
-    * whiteImages  白名单镜像
+    * clusterId  **参数解释**： 集群ID **取值范围**： 不涉及
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
+    * content  **参数解释**： 策略内容 **取值范围**： 不涉及
+    * deployContent  **参数解释**： 部署内容 **取值范围**： 不涉及
+    * parameters  **参数解释**： 参数 **取值范围**： 不涉及
+    * policyName  **参数解释**： 策略名称 **取值范围**： 不涉及
+    * policyId  **参数解释**： 策略ID **取值范围**： 不涉及
+    * resources  **参数解释**： 资源 **取值范围**： 不涉及
+    * templateId  **参数解释**： 模板ID **取值范围**： 不涉及
+    * templateName  **参数解释**： 模板名称 **取值范围**： 不涉及
+    * templateType  **参数解释**： 模板类型 **取值范围**： 不涉及
+    * description  **参数解释**： 策略描述 **取值范围**： 不涉及
+    * updateTime  **参数解释**： 更新时间 **取值范围**： 不涉及
+    * createTime  **参数解释**： 创建时间 **取值范围**： 不涉及
+    * imageNum  **参数解释**： 防护镜像数量 **取值范围**： 不涉及
+    * labelsNum  **参数解释**： 防护标签数量 **取值范围**： 不涉及
+    * status  **参数解释**： 状态 **取值范围**： 不涉及
+    * whiteImages  **参数解释**： 白名单镜像 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -217,24 +217,24 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  集群id
-    * clusterName  集群名称
-    * content  策略内容
-    * deployContent  deploy内容
-    * parameters  参数
-    * policyName  策略名称
-    * policyId  策略ID
-    * resources  资源
-    * templateId  模板ID
-    * templateName  模板名称
-    * templateType  模板类型
-    * description  策略描述
-    * updateTime  更新时间
-    * createTime  创建时间
-    * imageNum  防护镜像数量
-    * labelsNum  防护标签数量
-    * status  状态
-    * whiteImages  白名单镜像
+    * clusterId  **参数解释**： 集群ID **取值范围**： 不涉及
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
+    * content  **参数解释**： 策略内容 **取值范围**： 不涉及
+    * deployContent  **参数解释**： 部署内容 **取值范围**： 不涉及
+    * parameters  **参数解释**： 参数 **取值范围**： 不涉及
+    * policyName  **参数解释**： 策略名称 **取值范围**： 不涉及
+    * policyId  **参数解释**： 策略ID **取值范围**： 不涉及
+    * resources  **参数解释**： 资源 **取值范围**： 不涉及
+    * templateId  **参数解释**： 模板ID **取值范围**： 不涉及
+    * templateName  **参数解释**： 模板名称 **取值范围**： 不涉及
+    * templateType  **参数解释**： 模板类型 **取值范围**： 不涉及
+    * description  **参数解释**： 策略描述 **取值范围**： 不涉及
+    * updateTime  **参数解释**： 更新时间 **取值范围**： 不涉及
+    * createTime  **参数解释**： 创建时间 **取值范围**： 不涉及
+    * imageNum  **参数解释**： 防护镜像数量 **取值范围**： 不涉及
+    * labelsNum  **参数解释**： 防护标签数量 **取值范围**： 不涉及
+    * status  **参数解释**： 状态 **取值范围**： 不涉及
+    * whiteImages  **参数解释**： 白名单镜像 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -451,7 +451,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群id
+    *  **参数解释**： 集群ID **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -463,7 +463,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群id
+    * @param string|null $clusterId **参数解释**： 集群ID **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -475,7 +475,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterName
-    *  集群名称
+    *  **参数解释**： 集群名称 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -487,7 +487,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterName
     *
-    * @param string|null $clusterName 集群名称
+    * @param string|null $clusterName **参数解释**： 集群名称 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -499,7 +499,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets content
-    *  策略内容
+    *  **参数解释**： 策略内容 **取值范围**： 不涉及
     *
     * @return object|null
     */
@@ -511,7 +511,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets content
     *
-    * @param object|null $content 策略内容
+    * @param object|null $content **参数解释**： 策略内容 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -523,7 +523,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets deployContent
-    *  deploy内容
+    *  **参数解释**： 部署内容 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -535,7 +535,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets deployContent
     *
-    * @param string|null $deployContent deploy内容
+    * @param string|null $deployContent **参数解释**： 部署内容 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -547,7 +547,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets parameters
-    *  参数
+    *  **参数解释**： 参数 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -559,7 +559,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets parameters
     *
-    * @param string|null $parameters 参数
+    * @param string|null $parameters **参数解释**： 参数 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -571,7 +571,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyName
-    *  策略名称
+    *  **参数解释**： 策略名称 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -583,7 +583,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets policyName
     *
-    * @param string|null $policyName 策略名称
+    * @param string|null $policyName **参数解释**： 策略名称 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -595,7 +595,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyId
-    *  策略ID
+    *  **参数解释**： 策略ID **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -607,7 +607,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets policyId
     *
-    * @param string|null $policyId 策略ID
+    * @param string|null $policyId **参数解释**： 策略ID **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -619,7 +619,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resources
-    *  资源
+    *  **参数解释**： 资源 **取值范围**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\Resources[]|null
     */
@@ -631,7 +631,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\Resources[]|null $resources 资源
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\Resources[]|null $resources **参数解释**： 资源 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -643,7 +643,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateId
-    *  模板ID
+    *  **参数解释**： 模板ID **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -655,7 +655,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets templateId
     *
-    * @param string|null $templateId 模板ID
+    * @param string|null $templateId **参数解释**： 模板ID **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -667,7 +667,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateName
-    *  模板名称
+    *  **参数解释**： 模板名称 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -679,7 +679,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets templateName
     *
-    * @param string|null $templateName 模板名称
+    * @param string|null $templateName **参数解释**： 模板名称 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -691,7 +691,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateType
-    *  模板类型
+    *  **参数解释**： 模板类型 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -703,7 +703,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets templateType
     *
-    * @param string|null $templateType 模板类型
+    * @param string|null $templateType **参数解释**： 模板类型 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -715,7 +715,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  策略描述
+    *  **参数解释**： 策略描述 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -727,7 +727,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 策略描述
+    * @param string|null $description **参数解释**： 策略描述 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -739,7 +739,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  **参数解释**： 更新时间 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -751,7 +751,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int|null $updateTime 更新时间
+    * @param int|null $updateTime **参数解释**： 更新时间 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -763,7 +763,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  **参数解释**： 创建时间 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -775,7 +775,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 创建时间
+    * @param int|null $createTime **参数解释**： 创建时间 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -787,7 +787,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageNum
-    *  防护镜像数量
+    *  **参数解释**： 防护镜像数量 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -799,7 +799,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imageNum
     *
-    * @param int|null $imageNum 防护镜像数量
+    * @param int|null $imageNum **参数解释**： 防护镜像数量 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -811,7 +811,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets labelsNum
-    *  防护标签数量
+    *  **参数解释**： 防护标签数量 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -823,7 +823,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets labelsNum
     *
-    * @param int|null $labelsNum 防护标签数量
+    * @param int|null $labelsNum **参数解释**： 防护标签数量 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -835,7 +835,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态
+    *  **参数解释**： 状态 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -847,7 +847,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态
+    * @param string|null $status **参数解释**： 状态 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -859,7 +859,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets whiteImages
-    *  白名单镜像
+    *  **参数解释**： 白名单镜像 **取值范围**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\WhiteImageInfo[]|null
     */
@@ -871,7 +871,7 @@ class ClusterPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets whiteImages
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\WhiteImageInfo[]|null $whiteImages 白名单镜像
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\WhiteImageInfo[]|null $whiteImages **参数解释**： 白名单镜像 **取值范围**： 不涉及
     *
     * @return $this
     */

@@ -1117,68 +1117,6 @@ class DdsClient extends Client
     }
 
     /**
-     * 创建实例
-     *
-     * 创建文档数据库实例，包括集群实例、副本集实例、以及单节点实例。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function createInstance($request)
-    {
-        return $this->createInstanceWithHttpInfo($request);
-    }
-
-    public function createInstanceWithHttpInfo($request)
-    {
-        $resourcePath = '/v3/{project_id}/instances';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dds\V3\Model\CreateInstanceResponse',
-            $requestType='\HuaweiCloud\SDK\Dds\V3\Model\CreateInstanceRequest');
-    }
-
-    /**
      * 创建集群的Shard/Config IP
      *
      * 创建集群的Shard/Config IP
@@ -3372,92 +3310,6 @@ class DdsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dds\V3\Model\ListInstanceTagsResponse',
             $requestType='\HuaweiCloud\SDK\Dds\V3\Model\ListInstanceTagsRequest');
-    }
-
-    /**
-     * 查询实例列表和详情
-     *
-     * 根据指定条件查询实例列表和详情。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listInstances($request)
-    {
-        return $this->listInstancesWithHttpInfo($request);
-    }
-
-    public function listInstancesWithHttpInfo($request)
-    {
-        $resourcePath = '/v3/{project_id}/instances';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['id'] !== null) {
-            $queryParams['id'] = $localVarParams['id'];
-        }
-        if ($localVarParams['name'] !== null) {
-            $queryParams['name'] = $localVarParams['name'];
-        }
-        if ($localVarParams['mode'] !== null) {
-            $queryParams['mode'] = $localVarParams['mode'];
-        }
-        if ($localVarParams['datastoreType'] !== null) {
-            $queryParams['datastore_type'] = $localVarParams['datastoreType'];
-        }
-        if ($localVarParams['vpcId'] !== null) {
-            $queryParams['vpc_id'] = $localVarParams['vpcId'];
-        }
-        if ($localVarParams['subnetId'] !== null) {
-            $queryParams['subnet_id'] = $localVarParams['subnetId'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['tags'] !== null) {
-            $queryParams['tags'] = $localVarParams['tags'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dds\V3\Model\ListInstancesResponse',
-            $requestType='\HuaweiCloud\SDK\Dds\V3\Model\ListInstancesRequest');
     }
 
     /**
@@ -5698,9 +5550,6 @@ class DdsClient extends Client
         }
         if ($localVarParams['backupId'] !== null) {
             $queryParams['backup_id'] = $localVarParams['backupId'];
-        }
-        if ($localVarParams['xLanguage'] !== null) {
-            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

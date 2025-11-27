@@ -20,7 +20,7 @@ class DeletingResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  标签键，规则： - 1.key不能为空，长度1~128个字符（中文也可以输入128个字符）。 - 2.可用 UTF-8 格式表示的字母（包含中文）、数字和空格，以及以下字符_ . : = + - @。 - 3._sys_开头属于系统标签，租户不能输入。
+    * key  标签键，取值范围： - key不能为空，长度1~128个字符（中文也可以输入128个字符）。 - 可用 UTF-8 格式表示的字母（包含中文）、数字和空格，以及以下字符_ . : = + - @。 - _sys_开头属于系统标签，租户不能输入。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeletingResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  标签键，规则： - 1.key不能为空，长度1~128个字符（中文也可以输入128个字符）。 - 2.可用 UTF-8 格式表示的字母（包含中文）、数字和空格，以及以下字符_ . : = + - @。 - 3._sys_开头属于系统标签，租户不能输入。
+    * key  标签键，取值范围： - key不能为空，长度1~128个字符（中文也可以输入128个字符）。 - 可用 UTF-8 格式表示的字母（包含中文）、数字和空格，以及以下字符_ . : = + - @。 - _sys_开头属于系统标签，租户不能输入。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeletingResourceTag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  标签键，规则： - 1.key不能为空，长度1~128个字符（中文也可以输入128个字符）。 - 2.可用 UTF-8 格式表示的字母（包含中文）、数字和空格，以及以下字符_ . : = + - @。 - 3._sys_开头属于系统标签，租户不能输入。
+    * key  标签键，取值范围： - key不能为空，长度1~128个字符（中文也可以输入128个字符）。 - 可用 UTF-8 格式表示的字母（包含中文）、数字和空格，以及以下字符_ . : = + - @。 - _sys_开头属于系统标签，租户不能输入。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeletingResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  标签键，规则： - 1.key不能为空，长度1~128个字符（中文也可以输入128个字符）。 - 2.可用 UTF-8 格式表示的字母（包含中文）、数字和空格，以及以下字符_ . : = + - @。 - 3._sys_开头属于系统标签，租户不能输入。
+    * key  标签键，取值范围： - key不能为空，长度1~128个字符（中文也可以输入128个字符）。 - 可用 UTF-8 格式表示的字母（包含中文）、数字和空格，以及以下字符_ . : = + - @。 - _sys_开头属于系统标签，租户不能输入。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeletingResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  标签键，规则： - 1.key不能为空，长度1~128个字符（中文也可以输入128个字符）。 - 2.可用 UTF-8 格式表示的字母（包含中文）、数字和空格，以及以下字符_ . : = + - @。 - 3._sys_开头属于系统标签，租户不能输入。
+    * key  标签键，取值范围： - key不能为空，长度1~128个字符（中文也可以输入128个字符）。 - 可用 UTF-8 格式表示的字母（包含中文）、数字和空格，以及以下字符_ . : = + - @。 - _sys_开头属于系统标签，租户不能输入。
     *
     * @var string[]
     */
@@ -183,7 +183,7 @@ class DeletingResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  标签键，规则： - 1.key不能为空，长度1~128个字符（中文也可以输入128个字符）。 - 2.可用 UTF-8 格式表示的字母（包含中文）、数字和空格，以及以下字符_ . : = + - @。 - 3._sys_开头属于系统标签，租户不能输入。
+    *  标签键，取值范围： - key不能为空，长度1~128个字符（中文也可以输入128个字符）。 - 可用 UTF-8 格式表示的字母（包含中文）、数字和空格，以及以下字符_ . : = + - @。 - _sys_开头属于系统标签，租户不能输入。
     *
     * @return string
     */
@@ -195,7 +195,7 @@ class DeletingResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 标签键，规则： - 1.key不能为空，长度1~128个字符（中文也可以输入128个字符）。 - 2.可用 UTF-8 格式表示的字母（包含中文）、数字和空格，以及以下字符_ . : = + - @。 - 3._sys_开头属于系统标签，租户不能输入。
+    * @param string $key 标签键，取值范围： - key不能为空，长度1~128个字符（中文也可以输入128个字符）。 - 可用 UTF-8 格式表示的字母（包含中文）、数字和空格，以及以下字符_ . : = + - @。 - _sys_开头属于系统标签，租户不能输入。
     *
     * @return $this
     */

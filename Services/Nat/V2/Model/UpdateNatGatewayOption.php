@@ -22,8 +22,9 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
     * description  公网NAT网关的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  公网NAT网关的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
+    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     * sessionConf  sessionConf
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -31,15 +32,17 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'spec' => 'string',
-            'sessionConf' => '\HuaweiCloud\SDK\Nat\V2\Model\SessionConfiguration'
+            'sessionConf' => '\HuaweiCloud\SDK\Nat\V2\Model\SessionConfiguration',
+            'prepaidOptions' => '\HuaweiCloud\SDK\Nat\V2\Model\UpdateNatGatewayOptionPrepaidOptions'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
     * description  公网NAT网关的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  公网NAT网关的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
+    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     * sessionConf  sessionConf
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'spec' => null,
-        'sessionConf' => null
+        'sessionConf' => null,
+        'prepaidOptions' => null
     ];
 
     /**
@@ -75,8 +79,9 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
     * description  公网NAT网关的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  公网NAT网关的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
+    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     * sessionConf  sessionConf
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -84,15 +89,17 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'spec' => 'spec',
-            'sessionConf' => 'session_conf'
+            'sessionConf' => 'session_conf',
+            'prepaidOptions' => 'prepaid_options'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
     * description  公网NAT网关的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  公网NAT网关的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
+    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     * sessionConf  sessionConf
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -100,15 +107,17 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'spec' => 'setSpec',
-            'sessionConf' => 'setSessionConf'
+            'sessionConf' => 'setSessionConf',
+            'prepaidOptions' => 'setPrepaidOptions'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
     * description  公网NAT网关的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  公网NAT网关的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
+    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     * sessionConf  sessionConf
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'spec' => 'getSpec',
-            'sessionConf' => 'getSessionConf'
+            'sessionConf' => 'getSessionConf',
+            'prepaidOptions' => 'getPrepaidOptions'
     ];
 
     /**
@@ -163,6 +173,7 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
     const SPEC__2 = '2';
     const SPEC__3 = '3';
     const SPEC__4 = '4';
+    const SPEC__5 = '5';
     
 
     /**
@@ -177,6 +188,7 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
             self::SPEC__2,
             self::SPEC__3,
             self::SPEC__4,
+            self::SPEC__5,
         ];
     }
 
@@ -200,6 +212,7 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['spec'] = isset($data['spec']) ? $data['spec'] : null;
         $this->container['sessionConf'] = isset($data['sessionConf']) ? $data['sessionConf'] : null;
+        $this->container['prepaidOptions'] = isset($data['prepaidOptions']) ? $data['prepaidOptions'] : null;
     }
 
     /**
@@ -294,7 +307,7 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets spec
-    *  公网NAT网关的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
+    *  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     *
     * @return string|null
     */
@@ -306,7 +319,7 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
     /**
     * Sets spec
     *
-    * @param string|null $spec 公网NAT网关的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
+    * @param string|null $spec 公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     *
     * @return $this
     */
@@ -337,6 +350,30 @@ class UpdateNatGatewayOption implements ModelInterface, ArrayAccess
     public function setSessionConf($sessionConf)
     {
         $this->container['sessionConf'] = $sessionConf;
+        return $this;
+    }
+
+    /**
+    * Gets prepaidOptions
+    *  prepaidOptions
+    *
+    * @return \HuaweiCloud\SDK\Nat\V2\Model\UpdateNatGatewayOptionPrepaidOptions|null
+    */
+    public function getPrepaidOptions()
+    {
+        return $this->container['prepaidOptions'];
+    }
+
+    /**
+    * Sets prepaidOptions
+    *
+    * @param \HuaweiCloud\SDK\Nat\V2\Model\UpdateNatGatewayOptionPrepaidOptions|null $prepaidOptions prepaidOptions
+    *
+    * @return $this
+    */
+    public function setPrepaidOptions($prepaidOptions)
+    {
+        $this->container['prepaidOptions'] = $prepaidOptions;
         return $this;
     }
 

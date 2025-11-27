@@ -21,8 +21,8 @@ class ListClusterProtectPolicyTemplatesResponse implements ModelInterface, Array
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  策略模板总数
-    * dataList  策略模板列表
+    * totalNum  **参数解释**: 策略模板总数 **取值范围**: 最小值0，最大值9223372036854775807
+    * dataList  **参数解释**: 策略模板列表 **取值范围**: 取值0-2147483647个PolicyTemplateInfo对象
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListClusterProtectPolicyTemplatesResponse implements ModelInterface, Array
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  策略模板总数
-    * dataList  策略模板列表
+    * totalNum  **参数解释**: 策略模板总数 **取值范围**: 最小值0，最大值9223372036854775807
+    * dataList  **参数解释**: 策略模板列表 **取值范围**: 取值0-2147483647个PolicyTemplateInfo对象
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListClusterProtectPolicyTemplatesResponse implements ModelInterface, Array
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  策略模板总数
-    * dataList  策略模板列表
+    * totalNum  **参数解释**: 策略模板总数 **取值范围**: 最小值0，最大值9223372036854775807
+    * dataList  **参数解释**: 策略模板列表 **取值范围**: 取值0-2147483647个PolicyTemplateInfo对象
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListClusterProtectPolicyTemplatesResponse implements ModelInterface, Array
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  策略模板总数
-    * dataList  策略模板列表
+    * totalNum  **参数解释**: 策略模板总数 **取值范围**: 最小值0，最大值9223372036854775807
+    * dataList  **参数解释**: 策略模板列表 **取值范围**: 取值0-2147483647个PolicyTemplateInfo对象
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListClusterProtectPolicyTemplatesResponse implements ModelInterface, Array
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  策略模板总数
-    * dataList  策略模板列表
+    * totalNum  **参数解释**: 策略模板总数 **取值范围**: 最小值0，最大值9223372036854775807
+    * dataList  **参数解释**: 策略模板列表 **取值范围**: 取值0-2147483647个PolicyTemplateInfo对象
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ListClusterProtectPolicyTemplatesResponse implements ModelInterface, Array
 
     /**
     * Gets totalNum
-    *  策略模板总数
+    *  **参数解释**: 策略模板总数 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListClusterProtectPolicyTemplatesResponse implements ModelInterface, Array
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 策略模板总数
+    * @param int|null $totalNum **参数解释**: 策略模板总数 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListClusterProtectPolicyTemplatesResponse implements ModelInterface, Array
 
     /**
     * Gets dataList
-    *  策略模板列表
+    *  **参数解释**: 策略模板列表 **取值范围**: 取值0-2147483647个PolicyTemplateInfo对象
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\PolicyTemplateInfo[]|null
     */
@@ -228,7 +228,7 @@ class ListClusterProtectPolicyTemplatesResponse implements ModelInterface, Array
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\PolicyTemplateInfo[]|null $dataList 策略模板列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\PolicyTemplateInfo[]|null $dataList **参数解释**: 策略模板列表 **取值范围**: 取值0-2147483647个PolicyTemplateInfo对象
     *
     * @return $this
     */

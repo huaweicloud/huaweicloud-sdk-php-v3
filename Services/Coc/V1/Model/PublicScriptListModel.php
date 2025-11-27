@@ -24,6 +24,7 @@ class PublicScriptListModel implements ModelInterface, ArrayAccess
     * scriptUuid  脚本uuid
     * name  脚本名称
     * type  脚本类型 SHELL:shell脚本 PYTHON:python脚本 BAT:bat脚本
+    * status  脚本状态
     * gmtCreated  创建时间
     * description  脚本描述： 根据X-Language(X-Language) 进行国际化
     * properties  properties
@@ -35,6 +36,7 @@ class PublicScriptListModel implements ModelInterface, ArrayAccess
             'scriptUuid' => 'string',
             'name' => 'string',
             'type' => 'string',
+            'status' => 'string',
             'gmtCreated' => 'int',
             'description' => 'string',
             'properties' => '\HuaweiCloud\SDK\Coc\V1\Model\PublicScriptPropertiesModel'
@@ -46,6 +48,7 @@ class PublicScriptListModel implements ModelInterface, ArrayAccess
     * scriptUuid  脚本uuid
     * name  脚本名称
     * type  脚本类型 SHELL:shell脚本 PYTHON:python脚本 BAT:bat脚本
+    * status  脚本状态
     * gmtCreated  创建时间
     * description  脚本描述： 根据X-Language(X-Language) 进行国际化
     * properties  properties
@@ -57,6 +60,7 @@ class PublicScriptListModel implements ModelInterface, ArrayAccess
         'scriptUuid' => null,
         'name' => null,
         'type' => null,
+        'status' => null,
         'gmtCreated' => 'int64',
         'description' => null,
         'properties' => null
@@ -89,6 +93,7 @@ class PublicScriptListModel implements ModelInterface, ArrayAccess
     * scriptUuid  脚本uuid
     * name  脚本名称
     * type  脚本类型 SHELL:shell脚本 PYTHON:python脚本 BAT:bat脚本
+    * status  脚本状态
     * gmtCreated  创建时间
     * description  脚本描述： 根据X-Language(X-Language) 进行国际化
     * properties  properties
@@ -100,6 +105,7 @@ class PublicScriptListModel implements ModelInterface, ArrayAccess
             'scriptUuid' => 'script_uuid',
             'name' => 'name',
             'type' => 'type',
+            'status' => 'status',
             'gmtCreated' => 'gmt_created',
             'description' => 'description',
             'properties' => 'properties'
@@ -111,6 +117,7 @@ class PublicScriptListModel implements ModelInterface, ArrayAccess
     * scriptUuid  脚本uuid
     * name  脚本名称
     * type  脚本类型 SHELL:shell脚本 PYTHON:python脚本 BAT:bat脚本
+    * status  脚本状态
     * gmtCreated  创建时间
     * description  脚本描述： 根据X-Language(X-Language) 进行国际化
     * properties  properties
@@ -122,6 +129,7 @@ class PublicScriptListModel implements ModelInterface, ArrayAccess
             'scriptUuid' => 'setScriptUuid',
             'name' => 'setName',
             'type' => 'setType',
+            'status' => 'setStatus',
             'gmtCreated' => 'setGmtCreated',
             'description' => 'setDescription',
             'properties' => 'setProperties'
@@ -133,6 +141,7 @@ class PublicScriptListModel implements ModelInterface, ArrayAccess
     * scriptUuid  脚本uuid
     * name  脚本名称
     * type  脚本类型 SHELL:shell脚本 PYTHON:python脚本 BAT:bat脚本
+    * status  脚本状态
     * gmtCreated  创建时间
     * description  脚本描述： 根据X-Language(X-Language) 进行国际化
     * properties  properties
@@ -144,6 +153,7 @@ class PublicScriptListModel implements ModelInterface, ArrayAccess
             'scriptUuid' => 'getScriptUuid',
             'name' => 'getName',
             'type' => 'getType',
+            'status' => 'getStatus',
             'gmtCreated' => 'getGmtCreated',
             'description' => 'getDescription',
             'properties' => 'getProperties'
@@ -192,6 +202,9 @@ class PublicScriptListModel implements ModelInterface, ArrayAccess
     const TYPE_SHELL = 'SHELL';
     const TYPE_PYTHON = 'PYTHON';
     const TYPE_BAT = 'BAT';
+    const STATUS_PENDING_APPROVE = 'PENDING_APPROVE';
+    const STATUS_APPROVED = 'APPROVED';
+    const STATUS_REJECTED = 'REJECTED';
     
 
     /**
@@ -205,6 +218,20 @@ class PublicScriptListModel implements ModelInterface, ArrayAccess
             self::TYPE_SHELL,
             self::TYPE_PYTHON,
             self::TYPE_BAT,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_PENDING_APPROVE,
+            self::STATUS_APPROVED,
+            self::STATUS_REJECTED,
         ];
     }
 
@@ -228,6 +255,7 @@ class PublicScriptListModel implements ModelInterface, ArrayAccess
         $this->container['scriptUuid'] = isset($data['scriptUuid']) ? $data['scriptUuid'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['gmtCreated'] = isset($data['gmtCreated']) ? $data['gmtCreated'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['properties'] = isset($data['properties']) ? $data['properties'] : null;
@@ -275,6 +303,14 @@ class PublicScriptListModel implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -407,6 +443,30 @@ class PublicScriptListModel implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  脚本状态
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status 脚本状态
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

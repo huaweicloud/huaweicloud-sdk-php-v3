@@ -23,7 +23,7 @@ class Version implements ModelInterface, ArrayAccess
     * id  API版本号。
     * links  API链接地址信息。
     * status  版本状态。 SUPPORTED表示支持的版本
-    * updated  版本更新时间。 格式为“yyyy-mm-dd Thh:mm:ssZ”。 其中，T指某个时间的开始；Z指UTC时间。例如：2018-09-30T00:00:00Z
+    * updated  版本更新时间。 格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指UTC时间。例如：2018-09-30T00:00:00Z
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class Version implements ModelInterface, ArrayAccess
     * id  API版本号。
     * links  API链接地址信息。
     * status  版本状态。 SUPPORTED表示支持的版本
-    * updated  版本更新时间。 格式为“yyyy-mm-dd Thh:mm:ssZ”。 其中，T指某个时间的开始；Z指UTC时间。例如：2018-09-30T00:00:00Z
+    * updated  版本更新时间。 格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指UTC时间。例如：2018-09-30T00:00:00Z
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class Version implements ModelInterface, ArrayAccess
     * id  API版本号。
     * links  API链接地址信息。
     * status  版本状态。 SUPPORTED表示支持的版本
-    * updated  版本更新时间。 格式为“yyyy-mm-dd Thh:mm:ssZ”。 其中，T指某个时间的开始；Z指UTC时间。例如：2018-09-30T00:00:00Z
+    * updated  版本更新时间。 格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指UTC时间。例如：2018-09-30T00:00:00Z
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class Version implements ModelInterface, ArrayAccess
     * id  API版本号。
     * links  API链接地址信息。
     * status  版本状态。 SUPPORTED表示支持的版本
-    * updated  版本更新时间。 格式为“yyyy-mm-dd Thh:mm:ssZ”。 其中，T指某个时间的开始；Z指UTC时间。例如：2018-09-30T00:00:00Z
+    * updated  版本更新时间。 格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指UTC时间。例如：2018-09-30T00:00:00Z
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class Version implements ModelInterface, ArrayAccess
     * id  API版本号。
     * links  API链接地址信息。
     * status  版本状态。 SUPPORTED表示支持的版本
-    * updated  版本更新时间。 格式为“yyyy-mm-dd Thh:mm:ssZ”。 其中，T指某个时间的开始；Z指UTC时间。例如：2018-09-30T00:00:00Z
+    * updated  版本更新时间。 格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指UTC时间。例如：2018-09-30T00:00:00Z
     *
     * @var string[]
     */
@@ -297,7 +297,7 @@ class Version implements ModelInterface, ArrayAccess
 
     /**
     * Gets updated
-    *  版本更新时间。 格式为“yyyy-mm-dd Thh:mm:ssZ”。 其中，T指某个时间的开始；Z指UTC时间。例如：2018-09-30T00:00:00Z
+    *  版本更新时间。 格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指UTC时间。例如：2018-09-30T00:00:00Z
     *
     * @return string|null
     */
@@ -309,7 +309,7 @@ class Version implements ModelInterface, ArrayAccess
     /**
     * Sets updated
     *
-    * @param string|null $updated 版本更新时间。 格式为“yyyy-mm-dd Thh:mm:ssZ”。 其中，T指某个时间的开始；Z指UTC时间。例如：2018-09-30T00:00:00Z
+    * @param string|null $updated 版本更新时间。 格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指UTC时间。例如：2018-09-30T00:00:00Z
     *
     * @return $this
     */

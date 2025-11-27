@@ -21,10 +21,10 @@ class ShowClusterAssetStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterNum  集群数量
-    * workLoadNum  工作负载数量
-    * serviceNum  服务数量
-    * podNum  pod数量
+    * clusterNum  **参数解释**: 集群数量 **取值范围**: 最小值0，最大值65535
+    * workLoadNum  **参数解释**: 工作负载数量 **取值范围**: 最小值0，最大值65535
+    * serviceNum  **参数解释**: 服务数量 **取值范围**: 最小值0，最大值65535
+    * podNum  **参数解释**: pod数量 **取值范围**: 最小值0，最大值65535
     *
     * @var string[]
     */
@@ -37,10 +37,10 @@ class ShowClusterAssetStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterNum  集群数量
-    * workLoadNum  工作负载数量
-    * serviceNum  服务数量
-    * podNum  pod数量
+    * clusterNum  **参数解释**: 集群数量 **取值范围**: 最小值0，最大值65535
+    * workLoadNum  **参数解释**: 工作负载数量 **取值范围**: 最小值0，最大值65535
+    * serviceNum  **参数解释**: 服务数量 **取值范围**: 最小值0，最大值65535
+    * podNum  **参数解释**: pod数量 **取值范围**: 最小值0，最大值65535
     *
     * @var string[]
     */
@@ -74,10 +74,10 @@ class ShowClusterAssetStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterNum  集群数量
-    * workLoadNum  工作负载数量
-    * serviceNum  服务数量
-    * podNum  pod数量
+    * clusterNum  **参数解释**: 集群数量 **取值范围**: 最小值0，最大值65535
+    * workLoadNum  **参数解释**: 工作负载数量 **取值范围**: 最小值0，最大值65535
+    * serviceNum  **参数解释**: 服务数量 **取值范围**: 最小值0，最大值65535
+    * podNum  **参数解释**: pod数量 **取值范围**: 最小值0，最大值65535
     *
     * @var string[]
     */
@@ -90,10 +90,10 @@ class ShowClusterAssetStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterNum  集群数量
-    * workLoadNum  工作负载数量
-    * serviceNum  服务数量
-    * podNum  pod数量
+    * clusterNum  **参数解释**: 集群数量 **取值范围**: 最小值0，最大值65535
+    * workLoadNum  **参数解释**: 工作负载数量 **取值范围**: 最小值0，最大值65535
+    * serviceNum  **参数解释**: 服务数量 **取值范围**: 最小值0，最大值65535
+    * podNum  **参数解释**: pod数量 **取值范围**: 最小值0，最大值65535
     *
     * @var string[]
     */
@@ -106,10 +106,10 @@ class ShowClusterAssetStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterNum  集群数量
-    * workLoadNum  工作负载数量
-    * serviceNum  服务数量
-    * podNum  pod数量
+    * clusterNum  **参数解释**: 集群数量 **取值范围**: 最小值0，最大值65535
+    * workLoadNum  **参数解释**: 工作负载数量 **取值范围**: 最小值0，最大值65535
+    * serviceNum  **参数解释**: 服务数量 **取值范围**: 最小值0，最大值65535
+    * podNum  **参数解释**: pod数量 **取值范围**: 最小值0，最大值65535
     *
     * @var string[]
     */
@@ -232,7 +232,7 @@ class ShowClusterAssetStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterNum
-    *  集群数量
+    *  **参数解释**: 集群数量 **取值范围**: 最小值0，最大值65535
     *
     * @return int|null
     */
@@ -244,7 +244,7 @@ class ShowClusterAssetStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets clusterNum
     *
-    * @param int|null $clusterNum 集群数量
+    * @param int|null $clusterNum **参数解释**: 集群数量 **取值范围**: 最小值0，最大值65535
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class ShowClusterAssetStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets workLoadNum
-    *  工作负载数量
+    *  **参数解释**: 工作负载数量 **取值范围**: 最小值0，最大值65535
     *
     * @return int|null
     */
@@ -268,7 +268,7 @@ class ShowClusterAssetStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets workLoadNum
     *
-    * @param int|null $workLoadNum 工作负载数量
+    * @param int|null $workLoadNum **参数解释**: 工作负载数量 **取值范围**: 最小值0，最大值65535
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class ShowClusterAssetStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceNum
-    *  服务数量
+    *  **参数解释**: 服务数量 **取值范围**: 最小值0，最大值65535
     *
     * @return int|null
     */
@@ -292,7 +292,7 @@ class ShowClusterAssetStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets serviceNum
     *
-    * @param int|null $serviceNum 服务数量
+    * @param int|null $serviceNum **参数解释**: 服务数量 **取值范围**: 最小值0，最大值65535
     *
     * @return $this
     */
@@ -304,7 +304,7 @@ class ShowClusterAssetStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets podNum
-    *  pod数量
+    *  **参数解释**: pod数量 **取值范围**: 最小值0，最大值65535
     *
     * @return int|null
     */
@@ -316,7 +316,7 @@ class ShowClusterAssetStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets podNum
     *
-    * @param int|null $podNum pod数量
+    * @param int|null $podNum **参数解释**: pod数量 **取值范围**: 最小值0，最大值65535
     *
     * @return $this
     */

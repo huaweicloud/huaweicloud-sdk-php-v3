@@ -29,6 +29,8 @@ class AvailableZoneV2 implements ModelInterface, ArrayAccess
     * azGroupId  可用区分组id
     * azType  当前AZ的类型 Core 核心 Satellite 卫星 Dedicated 专属 Virtual 虚拟 Edge 边缘 EdgeCental 中心边缘 Hybrid 混合云
     * azTags  azTags
+    * azCategory  当前可用区的类型，包括： - 0: 大云主可用区 - 21: 本地可用区 - 41: 边缘可用区
+    * chargePolicy  当前可用区的销售策略，包括： - charge: 计费 - notCharge: 非计费
     *
     * @var string[]
     */
@@ -41,7 +43,9 @@ class AvailableZoneV2 implements ModelInterface, ArrayAccess
             'regionId' => 'string',
             'azGroupId' => 'string',
             'azType' => 'string',
-            'azTags' => '\HuaweiCloud\SDK\Mrs\V1\Model\AvailableTag'
+            'azTags' => '\HuaweiCloud\SDK\Mrs\V1\Model\AvailableTag',
+            'azCategory' => 'int',
+            'chargePolicy' => 'string'
     ];
 
     /**
@@ -55,6 +59,8 @@ class AvailableZoneV2 implements ModelInterface, ArrayAccess
     * azGroupId  可用区分组id
     * azType  当前AZ的类型 Core 核心 Satellite 卫星 Dedicated 专属 Virtual 虚拟 Edge 边缘 EdgeCental 中心边缘 Hybrid 混合云
     * azTags  azTags
+    * azCategory  当前可用区的类型，包括： - 0: 大云主可用区 - 21: 本地可用区 - 41: 边缘可用区
+    * chargePolicy  当前可用区的销售策略，包括： - charge: 计费 - notCharge: 非计费
     *
     * @var string[]
     */
@@ -67,7 +73,9 @@ class AvailableZoneV2 implements ModelInterface, ArrayAccess
         'regionId' => null,
         'azGroupId' => null,
         'azType' => null,
-        'azTags' => null
+        'azTags' => null,
+        'azCategory' => 'int32',
+        'chargePolicy' => null
     ];
 
     /**
@@ -102,6 +110,8 @@ class AvailableZoneV2 implements ModelInterface, ArrayAccess
     * azGroupId  可用区分组id
     * azType  当前AZ的类型 Core 核心 Satellite 卫星 Dedicated 专属 Virtual 虚拟 Edge 边缘 EdgeCental 中心边缘 Hybrid 混合云
     * azTags  azTags
+    * azCategory  当前可用区的类型，包括： - 0: 大云主可用区 - 21: 本地可用区 - 41: 边缘可用区
+    * chargePolicy  当前可用区的销售策略，包括： - charge: 计费 - notCharge: 非计费
     *
     * @var string[]
     */
@@ -114,7 +124,9 @@ class AvailableZoneV2 implements ModelInterface, ArrayAccess
             'regionId' => 'region_id',
             'azGroupId' => 'az_group_id',
             'azType' => 'az_type',
-            'azTags' => 'az_tags'
+            'azTags' => 'az_tags',
+            'azCategory' => 'az_category',
+            'chargePolicy' => 'charge_policy'
     ];
 
     /**
@@ -128,6 +140,8 @@ class AvailableZoneV2 implements ModelInterface, ArrayAccess
     * azGroupId  可用区分组id
     * azType  当前AZ的类型 Core 核心 Satellite 卫星 Dedicated 专属 Virtual 虚拟 Edge 边缘 EdgeCental 中心边缘 Hybrid 混合云
     * azTags  azTags
+    * azCategory  当前可用区的类型，包括： - 0: 大云主可用区 - 21: 本地可用区 - 41: 边缘可用区
+    * chargePolicy  当前可用区的销售策略，包括： - charge: 计费 - notCharge: 非计费
     *
     * @var string[]
     */
@@ -140,7 +154,9 @@ class AvailableZoneV2 implements ModelInterface, ArrayAccess
             'regionId' => 'setRegionId',
             'azGroupId' => 'setAzGroupId',
             'azType' => 'setAzType',
-            'azTags' => 'setAzTags'
+            'azTags' => 'setAzTags',
+            'azCategory' => 'setAzCategory',
+            'chargePolicy' => 'setChargePolicy'
     ];
 
     /**
@@ -154,6 +170,8 @@ class AvailableZoneV2 implements ModelInterface, ArrayAccess
     * azGroupId  可用区分组id
     * azType  当前AZ的类型 Core 核心 Satellite 卫星 Dedicated 专属 Virtual 虚拟 Edge 边缘 EdgeCental 中心边缘 Hybrid 混合云
     * azTags  azTags
+    * azCategory  当前可用区的类型，包括： - 0: 大云主可用区 - 21: 本地可用区 - 41: 边缘可用区
+    * chargePolicy  当前可用区的销售策略，包括： - charge: 计费 - notCharge: 非计费
     *
     * @var string[]
     */
@@ -166,7 +184,9 @@ class AvailableZoneV2 implements ModelInterface, ArrayAccess
             'regionId' => 'getRegionId',
             'azGroupId' => 'getAzGroupId',
             'azType' => 'getAzType',
-            'azTags' => 'getAzTags'
+            'azTags' => 'getAzTags',
+            'azCategory' => 'getAzCategory',
+            'chargePolicy' => 'getChargePolicy'
     ];
 
     /**
@@ -209,7 +229,22 @@ class AvailableZoneV2 implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const CHARGE_POLICY_CHARGE = 'charge';
+    const CHARGE_POLICY_NOT_CHARGE = 'notCharge';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getChargePolicyAllowableValues()
+    {
+        return [
+            self::CHARGE_POLICY_CHARGE,
+            self::CHARGE_POLICY_NOT_CHARGE,
+        ];
+    }
 
 
     /**
@@ -236,6 +271,8 @@ class AvailableZoneV2 implements ModelInterface, ArrayAccess
         $this->container['azGroupId'] = isset($data['azGroupId']) ? $data['azGroupId'] : null;
         $this->container['azType'] = isset($data['azType']) ? $data['azType'] : null;
         $this->container['azTags'] = isset($data['azTags']) ? $data['azTags'] : null;
+        $this->container['azCategory'] = isset($data['azCategory']) ? $data['azCategory'] : null;
+        $this->container['chargePolicy'] = isset($data['chargePolicy']) ? $data['chargePolicy'] : null;
     }
 
     /**
@@ -246,6 +283,14 @@ class AvailableZoneV2 implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getChargePolicyAllowableValues();
+                if (!is_null($this->container['chargePolicy']) && !in_array($this->container['chargePolicy'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'chargePolicy', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -473,6 +518,54 @@ class AvailableZoneV2 implements ModelInterface, ArrayAccess
     public function setAzTags($azTags)
     {
         $this->container['azTags'] = $azTags;
+        return $this;
+    }
+
+    /**
+    * Gets azCategory
+    *  当前可用区的类型，包括： - 0: 大云主可用区 - 21: 本地可用区 - 41: 边缘可用区
+    *
+    * @return int|null
+    */
+    public function getAzCategory()
+    {
+        return $this->container['azCategory'];
+    }
+
+    /**
+    * Sets azCategory
+    *
+    * @param int|null $azCategory 当前可用区的类型，包括： - 0: 大云主可用区 - 21: 本地可用区 - 41: 边缘可用区
+    *
+    * @return $this
+    */
+    public function setAzCategory($azCategory)
+    {
+        $this->container['azCategory'] = $azCategory;
+        return $this;
+    }
+
+    /**
+    * Gets chargePolicy
+    *  当前可用区的销售策略，包括： - charge: 计费 - notCharge: 非计费
+    *
+    * @return string|null
+    */
+    public function getChargePolicy()
+    {
+        return $this->container['chargePolicy'];
+    }
+
+    /**
+    * Sets chargePolicy
+    *
+    * @param string|null $chargePolicy 当前可用区的销售策略，包括： - charge: 计费 - notCharge: 非计费
+    *
+    * @return $this
+    */
+    public function setChargePolicy($chargePolicy)
+    {
+        $this->container['chargePolicy'] = $chargePolicy;
         return $this;
     }
 

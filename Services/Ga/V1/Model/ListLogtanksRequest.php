@@ -25,7 +25,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
     * id  资源ID。
     * status  配置状态，可选范围: - ACTIVE：运行中 - PENDING：待定 - ERROR：错误 - DELETING：正在删除
     * resourceIds  资源ID列表。
-    * resourceType  关联云日志的资源类型。
+    * resourceType  云日志的资源类型。 取值范围： LISTENER：监听器
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
     * id  资源ID。
     * status  配置状态，可选范围: - ACTIVE：运行中 - PENDING：待定 - ERROR：错误 - DELETING：正在删除
     * resourceIds  资源ID列表。
-    * resourceType  关联云日志的资源类型。
+    * resourceType  云日志的资源类型。 取值范围： LISTENER：监听器
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
     * id  资源ID。
     * status  配置状态，可选范围: - ACTIVE：运行中 - PENDING：待定 - ERROR：错误 - DELETING：正在删除
     * resourceIds  资源ID列表。
-    * resourceType  关联云日志的资源类型。
+    * resourceType  云日志的资源类型。 取值范围： LISTENER：监听器
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
     * id  资源ID。
     * status  配置状态，可选范围: - ACTIVE：运行中 - PENDING：待定 - ERROR：错误 - DELETING：正在删除
     * resourceIds  资源ID列表。
-    * resourceType  关联云日志的资源类型。
+    * resourceType  云日志的资源类型。 取值范围： LISTENER：监听器
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
     * id  资源ID。
     * status  配置状态，可选范围: - ACTIVE：运行中 - PENDING：待定 - ERROR：错误 - DELETING：正在删除
     * resourceIds  资源ID列表。
-    * resourceType  关联云日志的资源类型。
+    * resourceType  云日志的资源类型。 取值范围： LISTENER：监听器
     *
     * @var string[]
     */
@@ -427,7 +427,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  关联云日志的资源类型。
+    *  云日志的资源类型。 取值范围： LISTENER：监听器
     *
     * @return string|null
     */
@@ -439,7 +439,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string|null $resourceType 关联云日志的资源类型。
+    * @param string|null $resourceType 云日志的资源类型。 取值范围： LISTENER：监听器
     *
     * @return $this
     */

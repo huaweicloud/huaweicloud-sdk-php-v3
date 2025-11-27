@@ -20,14 +20,14 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
-    * templateName  模板名称
-    * templateType  模板类型
-    * targetKind  策略模板应用资源类型，多个资源类型通过分号分隔连接
-    * tag  标签
-    * level  推荐等级
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * templateName  **参数解释**： 模板名称 **约束限制**： 不涉及 **取值范围**： 字符长度1-64位 **默认取值**： 不涉及
+    * templateType  **参数解释**： 模板类型 **约束限制**： 不涉及 **取值范围**： 字符长度1-16位 **默认取值**： 不涉及
+    * targetKind  **参数解释**： 策略模板应用资源类型，多个资源类型通过分号分隔连接 **约束限制**： 不涉及 **取值范围**： 字符长度1-255位 **默认取值**： 不涉及
+    * tag  **参数解释**： 标签 **约束限制**： 不涉及 **取值范围**： 字符长度1-2048位 **默认取值**： 不涉及
+    * level  **参数解释**： 推荐等级 **约束限制**： 不涉及 **取值范围**： 字符长度1-5位 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
-    * templateName  模板名称
-    * templateType  模板类型
-    * targetKind  策略模板应用资源类型，多个资源类型通过分号分隔连接
-    * tag  标签
-    * level  推荐等级
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * templateName  **参数解释**： 模板名称 **约束限制**： 不涉及 **取值范围**： 字符长度1-64位 **默认取值**： 不涉及
+    * templateType  **参数解释**： 模板类型 **约束限制**： 不涉及 **取值范围**： 字符长度1-16位 **默认取值**： 不涉及
+    * targetKind  **参数解释**： 策略模板应用资源类型，多个资源类型通过分号分隔连接 **约束限制**： 不涉及 **取值范围**： 字符长度1-255位 **默认取值**： 不涉及
+    * tag  **参数解释**： 标签 **约束限制**： 不涉及 **取值范围**： 字符长度1-2048位 **默认取值**： 不涉及
+    * level  **参数解释**： 推荐等级 **约束限制**： 不涉及 **取值范围**： 字符长度1-5位 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
-    * templateName  模板名称
-    * templateType  模板类型
-    * targetKind  策略模板应用资源类型，多个资源类型通过分号分隔连接
-    * tag  标签
-    * level  推荐等级
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * templateName  **参数解释**： 模板名称 **约束限制**： 不涉及 **取值范围**： 字符长度1-64位 **默认取值**： 不涉及
+    * templateType  **参数解释**： 模板类型 **约束限制**： 不涉及 **取值范围**： 字符长度1-16位 **默认取值**： 不涉及
+    * targetKind  **参数解释**： 策略模板应用资源类型，多个资源类型通过分号分隔连接 **约束限制**： 不涉及 **取值范围**： 字符长度1-255位 **默认取值**： 不涉及
+    * tag  **参数解释**： 标签 **约束限制**： 不涉及 **取值范围**： 字符长度1-2048位 **默认取值**： 不涉及
+    * level  **参数解释**： 推荐等级 **约束限制**： 不涉及 **取值范围**： 字符长度1-5位 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
-    * templateName  模板名称
-    * templateType  模板类型
-    * targetKind  策略模板应用资源类型，多个资源类型通过分号分隔连接
-    * tag  标签
-    * level  推荐等级
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * templateName  **参数解释**： 模板名称 **约束限制**： 不涉及 **取值范围**： 字符长度1-64位 **默认取值**： 不涉及
+    * templateType  **参数解释**： 模板类型 **约束限制**： 不涉及 **取值范围**： 字符长度1-16位 **默认取值**： 不涉及
+    * targetKind  **参数解释**： 策略模板应用资源类型，多个资源类型通过分号分隔连接 **约束限制**： 不涉及 **取值范围**： 字符长度1-255位 **默认取值**： 不涉及
+    * tag  **参数解释**： 标签 **约束限制**： 不涉及 **取值范围**： 字符长度1-2048位 **默认取值**： 不涉及
+    * level  **参数解释**： 推荐等级 **约束限制**： 不涉及 **取值范围**： 字符长度1-5位 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
-    * templateName  模板名称
-    * templateType  模板类型
-    * targetKind  策略模板应用资源类型，多个资源类型通过分号分隔连接
-    * tag  标签
-    * level  推荐等级
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * templateName  **参数解释**： 模板名称 **约束限制**： 不涉及 **取值范围**： 字符长度1-64位 **默认取值**： 不涉及
+    * templateType  **参数解释**： 模板类型 **约束限制**： 不涉及 **取值范围**： 字符长度1-16位 **默认取值**： 不涉及
+    * targetKind  **参数解释**： 策略模板应用资源类型，多个资源类型通过分号分隔连接 **约束限制**： 不涉及 **取值范围**： 字符长度1-255位 **默认取值**： 不涉及
+    * tag  **参数解释**： 标签 **约束限制**： 不涉及 **取值范围**： 字符长度1-2048位 **默认取值**： 不涉及
+    * level  **参数解释**： 推荐等级 **约束限制**： 不涉及 **取值范围**： 字符长度1-5位 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -244,22 +244,16 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
             if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^.*$/", $this->container['enterpriseProjectId'])) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^.*$/.";
             }
-        if ($this->container['limit'] === null) {
-            $invalidProperties[] = "'limit' can't be null";
-        }
-            if (($this->container['limit'] > 200)) {
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
             }
-            if (($this->container['limit'] < 10)) {
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
             }
-        if ($this->container['offset'] === null) {
-            $invalidProperties[] = "'offset' can't be null";
-        }
-            if (($this->container['offset'] > 2000000)) {
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2000000)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2000000.";
             }
-            if (($this->container['offset'] < 0)) {
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['templateName']) && (mb_strlen($this->container['templateName']) > 64)) {
@@ -323,7 +317,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
 
     /**
     * Gets enterpriseProjectId
-    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    *  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return string|null
     */
@@ -335,7 +329,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * @param string|null $enterpriseProjectId **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return $this
     */
@@ -347,9 +341,9 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
 
     /**
     * Gets limit
-    *  每页显示数量
+    *  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
-    * @return int
+    * @return int|null
     */
     public function getLimit()
     {
@@ -359,7 +353,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
     /**
     * Sets limit
     *
-    * @param int $limit 每页显示数量
+    * @param int|null $limit **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return $this
     */
@@ -371,9 +365,9 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置
+    *  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
-    * @return int
+    * @return int|null
     */
     public function getOffset()
     {
@@ -383,7 +377,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
     /**
     * Sets offset
     *
-    * @param int $offset 偏移量：指定返回记录的开始位置
+    * @param int|null $offset **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return $this
     */
@@ -395,7 +389,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
 
     /**
     * Gets templateName
-    *  模板名称
+    *  **参数解释**： 模板名称 **约束限制**： 不涉及 **取值范围**： 字符长度1-64位 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -407,7 +401,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
     /**
     * Sets templateName
     *
-    * @param string|null $templateName 模板名称
+    * @param string|null $templateName **参数解释**： 模板名称 **约束限制**： 不涉及 **取值范围**： 字符长度1-64位 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -419,7 +413,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
 
     /**
     * Gets templateType
-    *  模板类型
+    *  **参数解释**： 模板类型 **约束限制**： 不涉及 **取值范围**： 字符长度1-16位 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -431,7 +425,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
     /**
     * Sets templateType
     *
-    * @param string|null $templateType 模板类型
+    * @param string|null $templateType **参数解释**： 模板类型 **约束限制**： 不涉及 **取值范围**： 字符长度1-16位 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -443,7 +437,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
 
     /**
     * Gets targetKind
-    *  策略模板应用资源类型，多个资源类型通过分号分隔连接
+    *  **参数解释**： 策略模板应用资源类型，多个资源类型通过分号分隔连接 **约束限制**： 不涉及 **取值范围**： 字符长度1-255位 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -455,7 +449,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
     /**
     * Sets targetKind
     *
-    * @param string|null $targetKind 策略模板应用资源类型，多个资源类型通过分号分隔连接
+    * @param string|null $targetKind **参数解释**： 策略模板应用资源类型，多个资源类型通过分号分隔连接 **约束限制**： 不涉及 **取值范围**： 字符长度1-255位 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -467,7 +461,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
 
     /**
     * Gets tag
-    *  标签
+    *  **参数解释**： 标签 **约束限制**： 不涉及 **取值范围**： 字符长度1-2048位 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -479,7 +473,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
     /**
     * Sets tag
     *
-    * @param string|null $tag 标签
+    * @param string|null $tag **参数解释**： 标签 **约束限制**： 不涉及 **取值范围**： 字符长度1-2048位 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -491,7 +485,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
 
     /**
     * Gets level
-    *  推荐等级
+    *  **参数解释**： 推荐等级 **约束限制**： 不涉及 **取值范围**： 字符长度1-5位 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -503,7 +497,7 @@ class ListClusterProtectPolicyTemplatesRequest implements ModelInterface, ArrayA
     /**
     * Sets level
     *
-    * @param string|null $level 推荐等级
+    * @param string|null $level **参数解释**： 推荐等级 **约束限制**： 不涉及 **取值范围**： 字符长度1-5位 **默认取值**： 不涉及
     *
     * @return $this
     */

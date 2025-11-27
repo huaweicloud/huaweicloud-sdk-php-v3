@@ -21,21 +21,25 @@ class DownlinkVpcOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * virsubnetId  私网NAT网关实例所属的子网的ID。
+    * ngportIpAddress  私网NAT网关的ngport_ip_addrss。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'virsubnetId' => 'string'
+            'virsubnetId' => 'string',
+            'ngportIpAddress' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * virsubnetId  私网NAT网关实例所属的子网的ID。
+    * ngportIpAddress  私网NAT网关的ngport_ip_addrss。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'virsubnetId' => null
+        'virsubnetId' => null,
+        'ngportIpAddress' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class DownlinkVpcOption implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * virsubnetId  私网NAT网关实例所属的子网的ID。
+    * ngportIpAddress  私网NAT网关的ngport_ip_addrss。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'virsubnetId' => 'virsubnet_id'
+            'virsubnetId' => 'virsubnet_id',
+            'ngportIpAddress' => 'ngport_ip_address'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * virsubnetId  私网NAT网关实例所属的子网的ID。
+    * ngportIpAddress  私网NAT网关的ngport_ip_addrss。
     *
     * @var string[]
     */
     protected static $setters = [
-            'virsubnetId' => 'setVirsubnetId'
+            'virsubnetId' => 'setVirsubnetId',
+            'ngportIpAddress' => 'setNgportIpAddress'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * virsubnetId  私网NAT网关实例所属的子网的ID。
+    * ngportIpAddress  私网NAT网关的ngport_ip_addrss。
     *
     * @var string[]
     */
     protected static $getters = [
-            'virsubnetId' => 'getVirsubnetId'
+            'virsubnetId' => 'getVirsubnetId',
+            'ngportIpAddress' => 'getNgportIpAddress'
     ];
 
     /**
@@ -148,6 +158,7 @@ class DownlinkVpcOption implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['virsubnetId'] = isset($data['virsubnetId']) ? $data['virsubnetId'] : null;
+        $this->container['ngportIpAddress'] = isset($data['ngportIpAddress']) ? $data['ngportIpAddress'] : null;
     }
 
     /**
@@ -166,6 +177,12 @@ class DownlinkVpcOption implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['virsubnetId']) < 36)) {
                 $invalidProperties[] = "invalid value for 'virsubnetId', the character length must be bigger than or equal to 36.";
+            }
+            if (!is_null($this->container['ngportIpAddress']) && (mb_strlen($this->container['ngportIpAddress']) > 36)) {
+                $invalidProperties[] = "invalid value for 'ngportIpAddress', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['ngportIpAddress']) && (mb_strlen($this->container['ngportIpAddress']) < 36)) {
+                $invalidProperties[] = "invalid value for 'ngportIpAddress', the character length must be bigger than or equal to 36.";
             }
         return $invalidProperties;
     }
@@ -202,6 +219,30 @@ class DownlinkVpcOption implements ModelInterface, ArrayAccess
     public function setVirsubnetId($virsubnetId)
     {
         $this->container['virsubnetId'] = $virsubnetId;
+        return $this;
+    }
+
+    /**
+    * Gets ngportIpAddress
+    *  私网NAT网关的ngport_ip_addrss。
+    *
+    * @return string|null
+    */
+    public function getNgportIpAddress()
+    {
+        return $this->container['ngportIpAddress'];
+    }
+
+    /**
+    * Sets ngportIpAddress
+    *
+    * @param string|null $ngportIpAddress 私网NAT网关的ngport_ip_addrss。
+    *
+    * @return $this
+    */
+    public function setNgportIpAddress($ngportIpAddress)
+    {
+        $this->container['ngportIpAddress'] = $ngportIpAddress;
         return $this;
     }
 

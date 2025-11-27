@@ -26,6 +26,766 @@ class NatAsyncClient extends Client
     }
 
     /**
+     * 批量添加删除中转子网标签
+     *
+     * - 为指定中转子网实例批量添加或删除标签
+     * - 标签管理服务需要使用该接口批量管理中转子网实例的标签。
+     * - 一个中转子网上最多有20个标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreateDeleteTransitSubnetTagsAsync($request)
+    {
+        return $this->batchCreateDeleteTransitSubnetTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function batchCreateDeleteTransitSubnetTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/transit-subnets/{resource_id}/tags/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Nat\V2\Model\BatchCreateDeleteTransitSubnetTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Nat\V2\Model\BatchCreateDeleteTransitSubnetTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建中转子网
+     *
+     * 创建中转子网。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createTransitSubnetAsync($request)
+    {
+        return $this->createTransitSubnetAsyncWithHttpInfo($request);
+    }
+    
+    public function createTransitSubnetAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/private-nat/transit-subnets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Nat\V2\Model\CreateTransitSubnetResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Nat\V2\Model\CreateTransitSubnetRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 添加中转子网标签
+     *
+     * - 为指定中转子网添加标签
+     * - 一个中转子网上最多有20个标签。
+     * - 此接口为幂等接口：
+     * - 创建时，如果创建的标签已经存在（key相同），则覆盖。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createTransitSubnetTagAsync($request)
+    {
+        return $this->createTransitSubnetTagAsyncWithHttpInfo($request);
+    }
+    
+    public function createTransitSubnetTagAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/transit-subnets/{resource_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Nat\V2\Model\CreateTransitSubnetTagResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Nat\V2\Model\CreateTransitSubnetTagRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除中转子网
+     *
+     * 删除中转子网。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteTransitSubnetAsync($request)
+    {
+        return $this->deleteTransitSubnetAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteTransitSubnetAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/private-nat/transit-subnets/{transit_subnet_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['transitSubnetId'] !== null) {
+            $pathParams['transit_subnet_id'] = $localVarParams['transitSubnetId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Nat\V2\Model\DeleteTransitSubnetResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Nat\V2\Model\DeleteTransitSubnetRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除中转子网标签
+     *
+     * - 幂等接口：
+     * - 删除时，不对标签字符集做校验，调用接口前必须要做encodeURI，服务端需要对接口uri做decodeURI。删除的key不存在报404，key不能为空或者空字符串。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteTransitSubnetTagAsync($request)
+    {
+        return $this->deleteTransitSubnetTagAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteTransitSubnetTagAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/transit-subnets/{resource_id}/tags/{key}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['key'] !== null) {
+            $pathParams['key'] = $localVarParams['key'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Nat\V2\Model\DeleteTransitSubnetTagResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Nat\V2\Model\DeleteTransitSubnetTagRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询中转子网列表
+     *
+     * 查询中转子网列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTransitSubnetAsync($request)
+    {
+        return $this->listTransitSubnetAsyncWithHttpInfo($request);
+    }
+    
+    public function listTransitSubnetAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/private-nat/transit-subnets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['description'] !== null) {
+            $queryParams['description'] = $localVarParams['description'];
+        }
+        if ($localVarParams['virsubnetProjectId'] !== null) {
+            $queryParams['virsubnet_project_id'] = $localVarParams['virsubnetProjectId'];
+        }
+        if ($localVarParams['vpcId'] !== null) {
+            $queryParams['vpc_id'] = $localVarParams['vpcId'];
+        }
+        if ($localVarParams['virsubnetId'] !== null) {
+            $queryParams['virsubnet_id'] = $localVarParams['virsubnetId'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['pageReverse'] !== null) {
+            $queryParams['page_reverse'] = $localVarParams['pageReverse'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Nat\V2\Model\ListTransitSubnetResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Nat\V2\Model\ListTransitSubnetRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询中转子网项目标签
+     *
+     * - 查询租户在指定Project的所有中转子网标签集合。
+     * - 标签管理服务需要能够列出当前租户全部已使用的中转子网标签集合，为打中转子网标签和过滤中转子网实例时提供标签联想功能。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTransitSubnetTagsAsync($request)
+    {
+        return $this->listTransitSubnetTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function listTransitSubnetTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/transit-subnets/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Nat\V2\Model\ListTransitSubnetTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Nat\V2\Model\ListTransitSubnetTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询中转子网实例
+     *
+     * - 使用标签过滤中转子网实例。
+     * - 标签管理服务需要提供按标签过滤中转子网服务实例并汇总显示在列表中，需要中转子网服务提供查询能力。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTransitSubnetsByTagsAsync($request)
+    {
+        return $this->listTransitSubnetsByTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function listTransitSubnetsByTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/transit-subnets/resource_instances/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'application/json-1']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'application/json-1'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Nat\V2\Model\ListTransitSubnetsByTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Nat\V2\Model\ListTransitSubnetsByTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询指定的中转子网详情
+     *
+     * 查询指定的中转子网详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showTransitSubnetAsync($request)
+    {
+        return $this->showTransitSubnetAsyncWithHttpInfo($request);
+    }
+    
+    public function showTransitSubnetAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/private-nat/transit-subnets/{transit_subnet_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['transitSubnetId'] !== null) {
+            $pathParams['transit_subnet_id'] = $localVarParams['transitSubnetId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Nat\V2\Model\ShowTransitSubnetResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Nat\V2\Model\ShowTransitSubnetRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询中转子网标签
+     *
+     * - 查询指定中转子网实例的标签信息。
+     * - 标签管理服务需要使用该接口查询指定中转子网实例的全部标签数据。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showTransitSubnetTagsAsync($request)
+    {
+        return $this->showTransitSubnetTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function showTransitSubnetTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/transit-subnets/{resource_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Nat\V2\Model\ShowTransitSubnetTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Nat\V2\Model\ShowTransitSubnetTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新中转子网
+     *
+     * 更新指定的中转子网。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateTransitSubnetAsync($request)
+    {
+        return $this->updateTransitSubnetAsyncWithHttpInfo($request);
+    }
+    
+    public function updateTransitSubnetAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/private-nat/transit-subnets/{transit_subnet_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['transitSubnetId'] !== null) {
+            $pathParams['transit_subnet_id'] = $localVarParams['transitSubnetId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Nat\V2\Model\UpdateTransitSubnetResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Nat\V2\Model\UpdateTransitSubnetRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 批量创建DNAT规则
      *
      * 批量创建DNAT规则。
@@ -393,11 +1153,17 @@ class NatAsyncClient extends Client
         if ($localVarParams['floatingIpAddress'] !== null) {
             $queryParams['floating_ip_address'] = $localVarParams['floatingIpAddress'];
         }
+        if ($localVarParams['globalEipAddress'] !== null) {
+            $queryParams['global_eip_address'] = $localVarParams['globalEipAddress'];
+        }
         if ($localVarParams['status'] !== null) {
             $queryParams['status'] = $localVarParams['status'];
         }
         if ($localVarParams['floatingIpId'] !== null) {
             $queryParams['floating_ip_id'] = $localVarParams['floatingIpId'];
+        }
+        if ($localVarParams['globalEipId'] !== null) {
+            $queryParams['global_eip_id'] = $localVarParams['globalEipId'];
         }
         if ($localVarParams['internalServicePort'] !== null) {
             $queryParams['internal_service_port'] = $localVarParams['internalServicePort'];
@@ -515,9 +1281,6 @@ class NatAsyncClient extends Client
         if ($localVarParams['transitIpId'] !== null) {
             $queryParams['transit_ip_id'] = $localVarParams['transitIpId'];
         }
-        if ($localVarParams['externalIpAddress'] !== null) {
-            $queryParams['external_ip_address'] = $localVarParams['externalIpAddress'];
-        }
         if ($localVarParams['networkInterfaceId'] !== null) {
             $queryParams['network_interface_id'] = $localVarParams['networkInterfaceId'];
         }
@@ -526,6 +1289,18 @@ class NatAsyncClient extends Client
         }
         if ($localVarParams['privateIpAddress'] !== null) {
             $queryParams['private_ip_address'] = $localVarParams['privateIpAddress'];
+        }
+        if ($localVarParams['protocol'] !== null) {
+            $queryParams['protocol'] = $localVarParams['protocol'];
+        }
+        if ($localVarParams['internalServicePort'] !== null) {
+            $queryParams['internal_service_port'] = $localVarParams['internalServicePort'];
+        }
+        if ($localVarParams['transitServicePort'] !== null) {
+            $queryParams['transit_service_port'] = $localVarParams['transitServicePort'];
+        }
+        if ($localVarParams['transitIpAddress'] !== null) {
+            $queryParams['transit_ip_address'] = $localVarParams['transitIpAddress'];
         }
 
         if ($multipart) {
@@ -1971,6 +2746,68 @@ class NatAsyncClient extends Client
     }
 
     /**
+     * 支持创建的NAT网关规格列表
+     *
+     * 支持创建的NAT网关规格列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listNatGatewaySpecsAsync($request)
+    {
+        return $this->listNatGatewaySpecsAsyncWithHttpInfo($request);
+    }
+    
+    public function listNatGatewaySpecsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/nat_gateway_specs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'specs']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'specs'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Nat\V2\Model\ListNatGatewaySpecsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Nat\V2\Model\ListNatGatewaySpecsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询公网NAT网关项目标签
      *
      * - 查询租户在指定项目和公网NAT网关实例类型的所有标签集合。
@@ -2064,6 +2901,9 @@ class NatAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['tenantId'] !== null) {
+            $queryParams['tenant_id'] = $localVarParams['tenantId'];
+        }
         if ($localVarParams['id'] !== null) {
             $queryParams['id'] = $localVarParams['id'];
         }
@@ -2099,6 +2939,12 @@ class NatAsyncClient extends Client
         }
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
         }
 
         if ($multipart) {
@@ -2352,6 +3198,68 @@ class NatAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Nat\V2\Model\ListPrivateNatsByTagsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Nat\V2\Model\ListPrivateNatsByTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询项目支持的网关规格列表
+     *
+     * 查询项目支持的网关规格列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSpecsAsync($request)
+    {
+        return $this->listSpecsAsyncWithHttpInfo($request);
+    }
+    
+    public function listSpecsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/private-nat/specs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Nat\V2\Model\ListSpecsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Nat\V2\Model\ListSpecsRequest',
             $asyncRequest = true);
     }
 
@@ -2941,6 +3849,9 @@ class NatAsyncClient extends Client
         if ($localVarParams['virsubnetId'] !== null) {
             $queryParams['virsubnet_id'] = $localVarParams['virsubnetId'];
         }
+        if ($localVarParams['transitSubnetId'] !== null) {
+            $queryParams['transit_subnet_id'] = $localVarParams['transitSubnetId'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3343,8 +4254,14 @@ class NatAsyncClient extends Client
         if ($localVarParams['floatingIpAddress'] !== null) {
             $queryParams['floating_ip_address'] = $localVarParams['floatingIpAddress'];
         }
+        if ($localVarParams['globalEipAddress'] !== null) {
+            $queryParams['global_eip_address'] = $localVarParams['globalEipAddress'];
+        }
         if ($localVarParams['floatingIpId'] !== null) {
             $queryParams['floating_ip_id'] = $localVarParams['floatingIpId'];
+        }
+        if ($localVarParams['globalEipId'] !== null) {
+            $queryParams['global_eip_id'] = $localVarParams['globalEipId'];
         }
         if ($localVarParams['id'] !== null) {
             $queryParams['id'] = $localVarParams['id'];

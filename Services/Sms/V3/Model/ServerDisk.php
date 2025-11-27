@@ -28,7 +28,7 @@ class ServerDisk implements ModelInterface, ArrayAccess
     * physicalVolumes  磁盘上的物理分区信息
     * osDisk  是否为系统盘
     * relationName  Linux系统 目的端ECS中与源端关联的磁盘名称
-    * inodeSize  inode数量
+    * inodeSize  inode大小
     *
     * @var string[]
     */
@@ -54,7 +54,7 @@ class ServerDisk implements ModelInterface, ArrayAccess
     * physicalVolumes  磁盘上的物理分区信息
     * osDisk  是否为系统盘
     * relationName  Linux系统 目的端ECS中与源端关联的磁盘名称
-    * inodeSize  inode数量
+    * inodeSize  inode大小
     *
     * @var string[]
     */
@@ -101,7 +101,7 @@ class ServerDisk implements ModelInterface, ArrayAccess
     * physicalVolumes  磁盘上的物理分区信息
     * osDisk  是否为系统盘
     * relationName  Linux系统 目的端ECS中与源端关联的磁盘名称
-    * inodeSize  inode数量
+    * inodeSize  inode大小
     *
     * @var string[]
     */
@@ -127,7 +127,7 @@ class ServerDisk implements ModelInterface, ArrayAccess
     * physicalVolumes  磁盘上的物理分区信息
     * osDisk  是否为系统盘
     * relationName  Linux系统 目的端ECS中与源端关联的磁盘名称
-    * inodeSize  inode数量
+    * inodeSize  inode大小
     *
     * @var string[]
     */
@@ -153,7 +153,7 @@ class ServerDisk implements ModelInterface, ArrayAccess
     * physicalVolumes  磁盘上的物理分区信息
     * osDisk  是否为系统盘
     * relationName  Linux系统 目的端ECS中与源端关联的磁盘名称
-    * inodeSize  inode数量
+    * inodeSize  inode大小
     *
     * @var string[]
     */
@@ -545,7 +545,7 @@ class ServerDisk implements ModelInterface, ArrayAccess
 
     /**
     * Gets inodeSize
-    *  inode数量
+    *  inode大小
     *
     * @return int|null
     */
@@ -557,7 +557,7 @@ class ServerDisk implements ModelInterface, ArrayAccess
     /**
     * Sets inodeSize
     *
-    * @param int|null $inodeSize inode数量
+    * @param int|null $inodeSize inode大小
     *
     * @return $this
     */

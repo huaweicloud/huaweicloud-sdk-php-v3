@@ -21,15 +21,15 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  总数
-    * xAuthToken  用户Token。
-    * projectId  项目ID
-    * enterpriseProjectId  企业ID
-    * region  Region
-    * generalPolicyNum  general策略数
-    * maliciousImagePolicyNum  malicious_image策略数
-    * securityPolicyNum  security_policy策略数
-    * dataList  集群防护策略列表
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值10000
+    * xAuthToken  **参数解释**: 用户Token **取值范围**: 字符长度1-32768位
+    * projectId  **参数解释**: 项目ID **取值范围**: 字符长度1-32768位
+    * enterpriseProjectId  **参数解释**: 主机所属的企业项目ID **取值范围**: 字符长度1-256位
+    * region  **参数解释**: Region ID **取值范围**: 字符长度1-32768位
+    * generalPolicyNum  **参数解释**: 通用策略数 **取值范围**: 最小值0，最大值2147483647
+    * maliciousImagePolicyNum  **参数解释**: 恶意镜像策略数 **取值范围**: 最小值0，最大值2147483647
+    * securityPolicyNum  **参数解释**: 安全镜像策略数 **取值范围**: 最小值0，最大值2147483647
+    * dataList  **参数解释**: 集群防护策略列表 **取值范围**: 取值0-10000个ClusterPolicyResponseInfo对象
     *
     * @var string[]
     */
@@ -47,15 +47,15 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  总数
-    * xAuthToken  用户Token。
-    * projectId  项目ID
-    * enterpriseProjectId  企业ID
-    * region  Region
-    * generalPolicyNum  general策略数
-    * maliciousImagePolicyNum  malicious_image策略数
-    * securityPolicyNum  security_policy策略数
-    * dataList  集群防护策略列表
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值10000
+    * xAuthToken  **参数解释**: 用户Token **取值范围**: 字符长度1-32768位
+    * projectId  **参数解释**: 项目ID **取值范围**: 字符长度1-32768位
+    * enterpriseProjectId  **参数解释**: 主机所属的企业项目ID **取值范围**: 字符长度1-256位
+    * region  **参数解释**: Region ID **取值范围**: 字符长度1-32768位
+    * generalPolicyNum  **参数解释**: 通用策略数 **取值范围**: 最小值0，最大值2147483647
+    * maliciousImagePolicyNum  **参数解释**: 恶意镜像策略数 **取值范围**: 最小值0，最大值2147483647
+    * securityPolicyNum  **参数解释**: 安全镜像策略数 **取值范围**: 最小值0，最大值2147483647
+    * dataList  **参数解释**: 集群防护策略列表 **取值范围**: 取值0-10000个ClusterPolicyResponseInfo对象
     *
     * @var string[]
     */
@@ -94,15 +94,15 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  总数
-    * xAuthToken  用户Token。
-    * projectId  项目ID
-    * enterpriseProjectId  企业ID
-    * region  Region
-    * generalPolicyNum  general策略数
-    * maliciousImagePolicyNum  malicious_image策略数
-    * securityPolicyNum  security_policy策略数
-    * dataList  集群防护策略列表
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值10000
+    * xAuthToken  **参数解释**: 用户Token **取值范围**: 字符长度1-32768位
+    * projectId  **参数解释**: 项目ID **取值范围**: 字符长度1-32768位
+    * enterpriseProjectId  **参数解释**: 主机所属的企业项目ID **取值范围**: 字符长度1-256位
+    * region  **参数解释**: Region ID **取值范围**: 字符长度1-32768位
+    * generalPolicyNum  **参数解释**: 通用策略数 **取值范围**: 最小值0，最大值2147483647
+    * maliciousImagePolicyNum  **参数解释**: 恶意镜像策略数 **取值范围**: 最小值0，最大值2147483647
+    * securityPolicyNum  **参数解释**: 安全镜像策略数 **取值范围**: 最小值0，最大值2147483647
+    * dataList  **参数解释**: 集群防护策略列表 **取值范围**: 取值0-10000个ClusterPolicyResponseInfo对象
     *
     * @var string[]
     */
@@ -120,15 +120,15 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  总数
-    * xAuthToken  用户Token。
-    * projectId  项目ID
-    * enterpriseProjectId  企业ID
-    * region  Region
-    * generalPolicyNum  general策略数
-    * maliciousImagePolicyNum  malicious_image策略数
-    * securityPolicyNum  security_policy策略数
-    * dataList  集群防护策略列表
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值10000
+    * xAuthToken  **参数解释**: 用户Token **取值范围**: 字符长度1-32768位
+    * projectId  **参数解释**: 项目ID **取值范围**: 字符长度1-32768位
+    * enterpriseProjectId  **参数解释**: 主机所属的企业项目ID **取值范围**: 字符长度1-256位
+    * region  **参数解释**: Region ID **取值范围**: 字符长度1-32768位
+    * generalPolicyNum  **参数解释**: 通用策略数 **取值范围**: 最小值0，最大值2147483647
+    * maliciousImagePolicyNum  **参数解释**: 恶意镜像策略数 **取值范围**: 最小值0，最大值2147483647
+    * securityPolicyNum  **参数解释**: 安全镜像策略数 **取值范围**: 最小值0，最大值2147483647
+    * dataList  **参数解释**: 集群防护策略列表 **取值范围**: 取值0-10000个ClusterPolicyResponseInfo对象
     *
     * @var string[]
     */
@@ -146,15 +146,15 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  总数
-    * xAuthToken  用户Token。
-    * projectId  项目ID
-    * enterpriseProjectId  企业ID
-    * region  Region
-    * generalPolicyNum  general策略数
-    * maliciousImagePolicyNum  malicious_image策略数
-    * securityPolicyNum  security_policy策略数
-    * dataList  集群防护策略列表
+    * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值10000
+    * xAuthToken  **参数解释**: 用户Token **取值范围**: 字符长度1-32768位
+    * projectId  **参数解释**: 项目ID **取值范围**: 字符长度1-32768位
+    * enterpriseProjectId  **参数解释**: 主机所属的企业项目ID **取值范围**: 字符长度1-256位
+    * region  **参数解释**: Region ID **取值范围**: 字符长度1-32768位
+    * generalPolicyNum  **参数解释**: 通用策略数 **取值范围**: 最小值0，最大值2147483647
+    * maliciousImagePolicyNum  **参数解释**: 恶意镜像策略数 **取值范围**: 最小值0，最大值2147483647
+    * securityPolicyNum  **参数解释**: 安全镜像策略数 **取值范围**: 最小值0，最大值2147483647
+    * dataList  **参数解释**: 集群防护策略列表 **取值范围**: 取值0-10000个ClusterPolicyResponseInfo对象
     *
     * @var string[]
     */
@@ -311,7 +311,7 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
 
     /**
     * Gets totalNum
-    *  总数
+    *  **参数解释**: 总数 **取值范围**: 最小值0，最大值10000
     *
     * @return int|null
     */
@@ -323,7 +323,7 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 总数
+    * @param int|null $totalNum **参数解释**: 总数 **取值范围**: 最小值0，最大值10000
     *
     * @return $this
     */
@@ -335,7 +335,7 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
 
     /**
     * Gets xAuthToken
-    *  用户Token。
+    *  **参数解释**: 用户Token **取值范围**: 字符长度1-32768位
     *
     * @return string|null
     */
@@ -347,7 +347,7 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
     /**
     * Sets xAuthToken
     *
-    * @param string|null $xAuthToken 用户Token。
+    * @param string|null $xAuthToken **参数解释**: 用户Token **取值范围**: 字符长度1-32768位
     *
     * @return $this
     */
@@ -359,7 +359,7 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
 
     /**
     * Gets projectId
-    *  项目ID
+    *  **参数解释**: 项目ID **取值范围**: 字符长度1-32768位
     *
     * @return string|null
     */
@@ -371,7 +371,7 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID
+    * @param string|null $projectId **参数解释**: 项目ID **取值范围**: 字符长度1-32768位
     *
     * @return $this
     */
@@ -383,7 +383,7 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
 
     /**
     * Gets enterpriseProjectId
-    *  企业ID
+    *  **参数解释**: 主机所属的企业项目ID **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -395,7 +395,7 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业ID
+    * @param string|null $enterpriseProjectId **参数解释**: 主机所属的企业项目ID **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -407,7 +407,7 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
 
     /**
     * Gets region
-    *  Region
+    *  **参数解释**: Region ID **取值范围**: 字符长度1-32768位
     *
     * @return string|null
     */
@@ -419,7 +419,7 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
     /**
     * Sets region
     *
-    * @param string|null $region Region
+    * @param string|null $region **参数解释**: Region ID **取值范围**: 字符长度1-32768位
     *
     * @return $this
     */
@@ -431,7 +431,7 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
 
     /**
     * Gets generalPolicyNum
-    *  general策略数
+    *  **参数解释**: 通用策略数 **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -443,7 +443,7 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
     /**
     * Sets generalPolicyNum
     *
-    * @param int|null $generalPolicyNum general策略数
+    * @param int|null $generalPolicyNum **参数解释**: 通用策略数 **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -455,7 +455,7 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
 
     /**
     * Gets maliciousImagePolicyNum
-    *  malicious_image策略数
+    *  **参数解释**: 恶意镜像策略数 **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -467,7 +467,7 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
     /**
     * Sets maliciousImagePolicyNum
     *
-    * @param int|null $maliciousImagePolicyNum malicious_image策略数
+    * @param int|null $maliciousImagePolicyNum **参数解释**: 恶意镜像策略数 **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -479,7 +479,7 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
 
     /**
     * Gets securityPolicyNum
-    *  security_policy策略数
+    *  **参数解释**: 安全镜像策略数 **取值范围**: 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -491,7 +491,7 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
     /**
     * Sets securityPolicyNum
     *
-    * @param int|null $securityPolicyNum security_policy策略数
+    * @param int|null $securityPolicyNum **参数解释**: 安全镜像策略数 **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -503,7 +503,7 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
 
     /**
     * Gets dataList
-    *  集群防护策略列表
+    *  **参数解释**: 集群防护策略列表 **取值范围**: 取值0-10000个ClusterPolicyResponseInfo对象
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\ClusterPolicyResponseInfo[]|null
     */
@@ -515,7 +515,7 @@ class ListClusterProtectionDefaultPolicyResponse implements ModelInterface, Arra
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\ClusterPolicyResponseInfo[]|null $dataList 集群防护策略列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\ClusterPolicyResponseInfo[]|null $dataList **参数解释**: 集群防护策略列表 **取值范围**: 取值0-10000个ClusterPolicyResponseInfo对象
     *
     * @return $this
     */

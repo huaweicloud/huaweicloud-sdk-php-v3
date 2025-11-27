@@ -22,7 +22,7 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  任务ID
     * name  任务名称
-    * type  任务类型
+    * type  迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
     * state  任务状态
     * estimateCompleteTime  预估结束时间
     * startDate  开始时间
@@ -35,11 +35,11 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     * projectName  项目名称
     * projectId  项目ID
     * targetServer  targetServer
-    * logCollectStatus  日志收集状态
+    * logCollectStatus  日志收集状态 INIT:就绪 UPLOADING:上传中 UPLOAD_FAIL:上传失败 UPLOADED:已上传
     * existServer  是否使用已有虚拟机
     * usePublicIp  是否使用公网IP
     * cloneServer  cloneServer
-    * remainSeconds  已迁移时长
+    * remainSeconds  迁移剩余时间（秒）
     * logBucket  上传日志指定桶名称
     * logExpire  分享链接有效期
     * logUploadTime  日志上传时间
@@ -80,7 +80,7 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  任务ID
     * name  任务名称
-    * type  任务类型
+    * type  迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
     * state  任务状态
     * estimateCompleteTime  预估结束时间
     * startDate  开始时间
@@ -93,11 +93,11 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     * projectName  项目名称
     * projectId  项目ID
     * targetServer  targetServer
-    * logCollectStatus  日志收集状态
+    * logCollectStatus  日志收集状态 INIT:就绪 UPLOADING:上传中 UPLOAD_FAIL:上传失败 UPLOADED:已上传
     * existServer  是否使用已有虚拟机
     * usePublicIp  是否使用公网IP
     * cloneServer  cloneServer
-    * remainSeconds  已迁移时长
+    * remainSeconds  迁移剩余时间（秒）
     * logBucket  上传日志指定桶名称
     * logExpire  分享链接有效期
     * logUploadTime  日志上传时间
@@ -159,7 +159,7 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  任务ID
     * name  任务名称
-    * type  任务类型
+    * type  迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
     * state  任务状态
     * estimateCompleteTime  预估结束时间
     * startDate  开始时间
@@ -172,11 +172,11 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     * projectName  项目名称
     * projectId  项目ID
     * targetServer  targetServer
-    * logCollectStatus  日志收集状态
+    * logCollectStatus  日志收集状态 INIT:就绪 UPLOADING:上传中 UPLOAD_FAIL:上传失败 UPLOADED:已上传
     * existServer  是否使用已有虚拟机
     * usePublicIp  是否使用公网IP
     * cloneServer  cloneServer
-    * remainSeconds  已迁移时长
+    * remainSeconds  迁移剩余时间（秒）
     * logBucket  上传日志指定桶名称
     * logExpire  分享链接有效期
     * logUploadTime  日志上传时间
@@ -217,7 +217,7 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  任务ID
     * name  任务名称
-    * type  任务类型
+    * type  迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
     * state  任务状态
     * estimateCompleteTime  预估结束时间
     * startDate  开始时间
@@ -230,11 +230,11 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     * projectName  项目名称
     * projectId  项目ID
     * targetServer  targetServer
-    * logCollectStatus  日志收集状态
+    * logCollectStatus  日志收集状态 INIT:就绪 UPLOADING:上传中 UPLOAD_FAIL:上传失败 UPLOADED:已上传
     * existServer  是否使用已有虚拟机
     * usePublicIp  是否使用公网IP
     * cloneServer  cloneServer
-    * remainSeconds  已迁移时长
+    * remainSeconds  迁移剩余时间（秒）
     * logBucket  上传日志指定桶名称
     * logExpire  分享链接有效期
     * logUploadTime  日志上传时间
@@ -275,7 +275,7 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  任务ID
     * name  任务名称
-    * type  任务类型
+    * type  迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
     * state  任务状态
     * estimateCompleteTime  预估结束时间
     * startDate  开始时间
@@ -288,11 +288,11 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     * projectName  项目名称
     * projectId  项目ID
     * targetServer  targetServer
-    * logCollectStatus  日志收集状态
+    * logCollectStatus  日志收集状态 INIT:就绪 UPLOADING:上传中 UPLOAD_FAIL:上传失败 UPLOADED:已上传
     * existServer  是否使用已有虚拟机
     * usePublicIp  是否使用公网IP
     * cloneServer  cloneServer
-    * remainSeconds  已迁移时长
+    * remainSeconds  迁移剩余时间（秒）
     * logBucket  上传日志指定桶名称
     * logExpire  分享链接有效期
     * logUploadTime  日志上传时间
@@ -369,7 +369,41 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TYPE_MIGRATE_BLOCK = 'MIGRATE_BLOCK';
+    const TYPE_MIGRATE_FILE = 'MIGRATE_FILE';
+    const LOG_COLLECT_STATUS_INIT = 'INIT';
+    const LOG_COLLECT_STATUS_UPLOADING = 'UPLOADING';
+    const LOG_COLLECT_STATUS_UPLOAD_FAIL = 'UPLOAD_FAIL';
+    const LOG_COLLECT_STATUS_UPLOADED = 'UPLOADED';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_MIGRATE_BLOCK,
+            self::TYPE_MIGRATE_FILE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getLogCollectStatusAllowableValues()
+    {
+        return [
+            self::LOG_COLLECT_STATUS_INIT,
+            self::LOG_COLLECT_STATUS_UPLOADING,
+            self::LOG_COLLECT_STATUS_UPLOAD_FAIL,
+            self::LOG_COLLECT_STATUS_UPLOADED,
+        ];
+    }
 
 
     /**
@@ -434,12 +468,14 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) > 255)) {
-                $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 255.";
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 0)) {
-                $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
-            }
+
             if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) > 255)) {
                 $invalidProperties[] = "invalid value for 'state', the character length must be smaller than or equal to 255.";
             }
@@ -500,12 +536,14 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
             if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['logCollectStatus']) && (mb_strlen($this->container['logCollectStatus']) > 255)) {
-                $invalidProperties[] = "invalid value for 'logCollectStatus', the character length must be smaller than or equal to 255.";
+            $allowedValues = $this->getLogCollectStatusAllowableValues();
+                if (!is_null($this->container['logCollectStatus']) && !in_array($this->container['logCollectStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'logCollectStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if (!is_null($this->container['logCollectStatus']) && (mb_strlen($this->container['logCollectStatus']) < 0)) {
-                $invalidProperties[] = "invalid value for 'logCollectStatus', the character length must be bigger than or equal to 0.";
-            }
+
             if (!is_null($this->container['remainSeconds']) && ($this->container['remainSeconds'] > 9223372036854775807)) {
                 $invalidProperties[] = "invalid value for 'remainSeconds', must be smaller than or equal to 9223372036854775807.";
             }
@@ -606,7 +644,7 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  任务类型
+    *  迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
     *
     * @return string|null
     */
@@ -618,7 +656,7 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 任务类型
+    * @param string|null $type 迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
     *
     * @return $this
     */
@@ -918,7 +956,7 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
 
     /**
     * Gets logCollectStatus
-    *  日志收集状态
+    *  日志收集状态 INIT:就绪 UPLOADING:上传中 UPLOAD_FAIL:上传失败 UPLOADED:已上传
     *
     * @return string|null
     */
@@ -930,7 +968,7 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     /**
     * Sets logCollectStatus
     *
-    * @param string|null $logCollectStatus 日志收集状态
+    * @param string|null $logCollectStatus 日志收集状态 INIT:就绪 UPLOADING:上传中 UPLOAD_FAIL:上传失败 UPLOADED:已上传
     *
     * @return $this
     */
@@ -1014,7 +1052,7 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
 
     /**
     * Gets remainSeconds
-    *  已迁移时长
+    *  迁移剩余时间（秒）
     *
     * @return int|null
     */
@@ -1026,7 +1064,7 @@ class TaskByServerSources implements ModelInterface, ArrayAccess
     /**
     * Sets remainSeconds
     *
-    * @param int|null $remainSeconds 已迁移时长
+    * @param int|null $remainSeconds 迁移剩余时间（秒）
     *
     * @return $this
     */

@@ -20,21 +20,21 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  阻断动作
-    * clusterName  集群名称
-    * clusterId  集群Id
-    * eventName  事件名称
-    * eventClassId  事件唯一标识
-    * eventId  事件id
-    * eventType  事件类型
-    * eventContent  事件内容
-    * handleStatus  处理状态，包含如下:   - unhandled：未处理   - handled：已处理
-    * createTime  创建时间
-    * updateTime  更新时间
-    * projectId  项目ID
-    * enterpriseProjectId  企业ID
-    * policyName  策略名称
-    * policyId  策略ID
+    * action  **参数解释**: 阻断动作 **取值范围**: 字符长度1-32位
+    * clusterName  **参数解释**: 集群名称 **取值范围**: 字符长度1-64位
+    * clusterId  **参数解释**: 集群Id **取值范围**: 字符长度1-256位
+    * eventName  **参数解释**: 事件名称 **取值范围**: 字符长度1-128位
+    * eventClassId  **参数解释**: 事件唯一标识 **取值范围**: 字符长度1-128位
+    * eventId  **参数解释**: 事件id **取值范围**: 字符长度1-128位
+    * eventType  **参数解释**: 事件类型 **取值范围**: 最小值1000，最大值30000
+    * eventContent  **参数解释**: 事件内容 **取值范围**: 字符长度1-128位
+    * handleStatus  **参数解释**: 处理状态 **取值范围**: - unhandled：未处理。 - handled：已处理。
+    * createTime  **参数解释**: 创建时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * updateTime  **参数解释**: 更新时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * projectId  **参数解释**: 项目ID **取值范围**: 字符长度1-128位
+    * enterpriseProjectId  **参数解释**: 企业ID **取值范围**: 字符长度1-256位
+    * policyName  **参数解释**: 策略名称 **取值范围**: 字符长度1-128位
+    * policyId  **参数解释**: 策略ID **取值范围**: 字符长度1-128位
     * resourceInfo  resourceInfo
     *
     * @var string[]
@@ -60,21 +60,21 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  阻断动作
-    * clusterName  集群名称
-    * clusterId  集群Id
-    * eventName  事件名称
-    * eventClassId  事件唯一标识
-    * eventId  事件id
-    * eventType  事件类型
-    * eventContent  事件内容
-    * handleStatus  处理状态，包含如下:   - unhandled：未处理   - handled：已处理
-    * createTime  创建时间
-    * updateTime  更新时间
-    * projectId  项目ID
-    * enterpriseProjectId  企业ID
-    * policyName  策略名称
-    * policyId  策略ID
+    * action  **参数解释**: 阻断动作 **取值范围**: 字符长度1-32位
+    * clusterName  **参数解释**: 集群名称 **取值范围**: 字符长度1-64位
+    * clusterId  **参数解释**: 集群Id **取值范围**: 字符长度1-256位
+    * eventName  **参数解释**: 事件名称 **取值范围**: 字符长度1-128位
+    * eventClassId  **参数解释**: 事件唯一标识 **取值范围**: 字符长度1-128位
+    * eventId  **参数解释**: 事件id **取值范围**: 字符长度1-128位
+    * eventType  **参数解释**: 事件类型 **取值范围**: 最小值1000，最大值30000
+    * eventContent  **参数解释**: 事件内容 **取值范围**: 字符长度1-128位
+    * handleStatus  **参数解释**: 处理状态 **取值范围**: - unhandled：未处理。 - handled：已处理。
+    * createTime  **参数解释**: 创建时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * updateTime  **参数解释**: 更新时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * projectId  **参数解释**: 项目ID **取值范围**: 字符长度1-128位
+    * enterpriseProjectId  **参数解释**: 企业ID **取值范围**: 字符长度1-256位
+    * policyName  **参数解释**: 策略名称 **取值范围**: 字符长度1-128位
+    * policyId  **参数解释**: 策略ID **取值范围**: 字符长度1-128位
     * resourceInfo  resourceInfo
     *
     * @var string[]
@@ -121,21 +121,21 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  阻断动作
-    * clusterName  集群名称
-    * clusterId  集群Id
-    * eventName  事件名称
-    * eventClassId  事件唯一标识
-    * eventId  事件id
-    * eventType  事件类型
-    * eventContent  事件内容
-    * handleStatus  处理状态，包含如下:   - unhandled：未处理   - handled：已处理
-    * createTime  创建时间
-    * updateTime  更新时间
-    * projectId  项目ID
-    * enterpriseProjectId  企业ID
-    * policyName  策略名称
-    * policyId  策略ID
+    * action  **参数解释**: 阻断动作 **取值范围**: 字符长度1-32位
+    * clusterName  **参数解释**: 集群名称 **取值范围**: 字符长度1-64位
+    * clusterId  **参数解释**: 集群Id **取值范围**: 字符长度1-256位
+    * eventName  **参数解释**: 事件名称 **取值范围**: 字符长度1-128位
+    * eventClassId  **参数解释**: 事件唯一标识 **取值范围**: 字符长度1-128位
+    * eventId  **参数解释**: 事件id **取值范围**: 字符长度1-128位
+    * eventType  **参数解释**: 事件类型 **取值范围**: 最小值1000，最大值30000
+    * eventContent  **参数解释**: 事件内容 **取值范围**: 字符长度1-128位
+    * handleStatus  **参数解释**: 处理状态 **取值范围**: - unhandled：未处理。 - handled：已处理。
+    * createTime  **参数解释**: 创建时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * updateTime  **参数解释**: 更新时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * projectId  **参数解释**: 项目ID **取值范围**: 字符长度1-128位
+    * enterpriseProjectId  **参数解释**: 企业ID **取值范围**: 字符长度1-256位
+    * policyName  **参数解释**: 策略名称 **取值范围**: 字符长度1-128位
+    * policyId  **参数解释**: 策略ID **取值范围**: 字符长度1-128位
     * resourceInfo  resourceInfo
     *
     * @var string[]
@@ -161,21 +161,21 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  阻断动作
-    * clusterName  集群名称
-    * clusterId  集群Id
-    * eventName  事件名称
-    * eventClassId  事件唯一标识
-    * eventId  事件id
-    * eventType  事件类型
-    * eventContent  事件内容
-    * handleStatus  处理状态，包含如下:   - unhandled：未处理   - handled：已处理
-    * createTime  创建时间
-    * updateTime  更新时间
-    * projectId  项目ID
-    * enterpriseProjectId  企业ID
-    * policyName  策略名称
-    * policyId  策略ID
+    * action  **参数解释**: 阻断动作 **取值范围**: 字符长度1-32位
+    * clusterName  **参数解释**: 集群名称 **取值范围**: 字符长度1-64位
+    * clusterId  **参数解释**: 集群Id **取值范围**: 字符长度1-256位
+    * eventName  **参数解释**: 事件名称 **取值范围**: 字符长度1-128位
+    * eventClassId  **参数解释**: 事件唯一标识 **取值范围**: 字符长度1-128位
+    * eventId  **参数解释**: 事件id **取值范围**: 字符长度1-128位
+    * eventType  **参数解释**: 事件类型 **取值范围**: 最小值1000，最大值30000
+    * eventContent  **参数解释**: 事件内容 **取值范围**: 字符长度1-128位
+    * handleStatus  **参数解释**: 处理状态 **取值范围**: - unhandled：未处理。 - handled：已处理。
+    * createTime  **参数解释**: 创建时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * updateTime  **参数解释**: 更新时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * projectId  **参数解释**: 项目ID **取值范围**: 字符长度1-128位
+    * enterpriseProjectId  **参数解释**: 企业ID **取值范围**: 字符长度1-256位
+    * policyName  **参数解释**: 策略名称 **取值范围**: 字符长度1-128位
+    * policyId  **参数解释**: 策略ID **取值范围**: 字符长度1-128位
     * resourceInfo  resourceInfo
     *
     * @var string[]
@@ -201,21 +201,21 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  阻断动作
-    * clusterName  集群名称
-    * clusterId  集群Id
-    * eventName  事件名称
-    * eventClassId  事件唯一标识
-    * eventId  事件id
-    * eventType  事件类型
-    * eventContent  事件内容
-    * handleStatus  处理状态，包含如下:   - unhandled：未处理   - handled：已处理
-    * createTime  创建时间
-    * updateTime  更新时间
-    * projectId  项目ID
-    * enterpriseProjectId  企业ID
-    * policyName  策略名称
-    * policyId  策略ID
+    * action  **参数解释**: 阻断动作 **取值范围**: 字符长度1-32位
+    * clusterName  **参数解释**: 集群名称 **取值范围**: 字符长度1-64位
+    * clusterId  **参数解释**: 集群Id **取值范围**: 字符长度1-256位
+    * eventName  **参数解释**: 事件名称 **取值范围**: 字符长度1-128位
+    * eventClassId  **参数解释**: 事件唯一标识 **取值范围**: 字符长度1-128位
+    * eventId  **参数解释**: 事件id **取值范围**: 字符长度1-128位
+    * eventType  **参数解释**: 事件类型 **取值范围**: 最小值1000，最大值30000
+    * eventContent  **参数解释**: 事件内容 **取值范围**: 字符长度1-128位
+    * handleStatus  **参数解释**: 处理状态 **取值范围**: - unhandled：未处理。 - handled：已处理。
+    * createTime  **参数解释**: 创建时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * updateTime  **参数解释**: 更新时间 **取值范围**: 最小值0，最大值9223372036854775807
+    * projectId  **参数解释**: 项目ID **取值范围**: 字符长度1-128位
+    * enterpriseProjectId  **参数解释**: 企业ID **取值范围**: 字符长度1-256位
+    * policyName  **参数解释**: 策略名称 **取值范围**: 字符长度1-128位
+    * policyId  **参数解释**: 策略ID **取值范围**: 字符长度1-128位
     * resourceInfo  resourceInfo
     *
     * @var string[]
@@ -429,7 +429,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  阻断动作
+    *  **参数解释**: 阻断动作 **取值范围**: 字符长度1-32位
     *
     * @return string|null
     */
@@ -441,7 +441,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 阻断动作
+    * @param string|null $action **参数解释**: 阻断动作 **取值范围**: 字符长度1-32位
     *
     * @return $this
     */
@@ -453,7 +453,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterName
-    *  集群名称
+    *  **参数解释**: 集群名称 **取值范围**: 字符长度1-64位
     *
     * @return string|null
     */
@@ -465,7 +465,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterName
     *
-    * @param string|null $clusterName 集群名称
+    * @param string|null $clusterName **参数解释**: 集群名称 **取值范围**: 字符长度1-64位
     *
     * @return $this
     */
@@ -477,7 +477,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群Id
+    *  **参数解释**: 集群Id **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -489,7 +489,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群Id
+    * @param string|null $clusterId **参数解释**: 集群Id **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -501,7 +501,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventName
-    *  事件名称
+    *  **参数解释**: 事件名称 **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -513,7 +513,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets eventName
     *
-    * @param string|null $eventName 事件名称
+    * @param string|null $eventName **参数解释**: 事件名称 **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -525,7 +525,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventClassId
-    *  事件唯一标识
+    *  **参数解释**: 事件唯一标识 **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -537,7 +537,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets eventClassId
     *
-    * @param string|null $eventClassId 事件唯一标识
+    * @param string|null $eventClassId **参数解释**: 事件唯一标识 **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -549,7 +549,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventId
-    *  事件id
+    *  **参数解释**: 事件id **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -561,7 +561,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets eventId
     *
-    * @param string|null $eventId 事件id
+    * @param string|null $eventId **参数解释**: 事件id **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -573,7 +573,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventType
-    *  事件类型
+    *  **参数解释**: 事件类型 **取值范围**: 最小值1000，最大值30000
     *
     * @return int|null
     */
@@ -585,7 +585,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets eventType
     *
-    * @param int|null $eventType 事件类型
+    * @param int|null $eventType **参数解释**: 事件类型 **取值范围**: 最小值1000，最大值30000
     *
     * @return $this
     */
@@ -597,7 +597,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventContent
-    *  事件内容
+    *  **参数解释**: 事件内容 **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -609,7 +609,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets eventContent
     *
-    * @param string|null $eventContent 事件内容
+    * @param string|null $eventContent **参数解释**: 事件内容 **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -621,7 +621,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets handleStatus
-    *  处理状态，包含如下:   - unhandled：未处理   - handled：已处理
+    *  **参数解释**: 处理状态 **取值范围**: - unhandled：未处理。 - handled：已处理。
     *
     * @return string|null
     */
@@ -633,7 +633,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets handleStatus
     *
-    * @param string|null $handleStatus 处理状态，包含如下:   - unhandled：未处理   - handled：已处理
+    * @param string|null $handleStatus **参数解释**: 处理状态 **取值范围**: - unhandled：未处理。 - handled：已处理。
     *
     * @return $this
     */
@@ -645,7 +645,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  **参数解释**: 创建时间 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -657,7 +657,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 创建时间
+    * @param int|null $createTime **参数解释**: 创建时间 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -669,7 +669,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  **参数解释**: 更新时间 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -681,7 +681,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int|null $updateTime 更新时间
+    * @param int|null $updateTime **参数解释**: 更新时间 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -693,7 +693,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  **参数解释**: 项目ID **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -705,7 +705,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID
+    * @param string|null $projectId **参数解释**: 项目ID **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -717,7 +717,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业ID
+    *  **参数解释**: 企业ID **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -729,7 +729,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业ID
+    * @param string|null $enterpriseProjectId **参数解释**: 企业ID **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -741,7 +741,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyName
-    *  策略名称
+    *  **参数解释**: 策略名称 **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -753,7 +753,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets policyName
     *
-    * @param string|null $policyName 策略名称
+    * @param string|null $policyName **参数解释**: 策略名称 **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -765,7 +765,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyId
-    *  策略ID
+    *  **参数解释**: 策略ID **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -777,7 +777,7 @@ class ClusterEventResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets policyId
     *
-    * @param string|null $policyId 策略ID
+    * @param string|null $policyId **参数解释**: 策略ID **取值范围**: 字符长度1-128位
     *
     * @return $this
     */

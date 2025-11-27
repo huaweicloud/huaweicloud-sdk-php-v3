@@ -67,6 +67,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * subResourceTypeName  整机的子云服务的自身的资源类型名称。
     * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
+    * periodNum  周期数量，该参数非必填
     *
     * @var string[]
     */
@@ -117,7 +118,8 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'subResourceTypeCode' => 'string',
             'subResourceTypeName' => 'string',
             'subResourceId' => 'string',
-            'subResourceName' => 'string'
+            'subResourceName' => 'string',
+            'periodNum' => 'float'
     ];
 
     /**
@@ -169,6 +171,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * subResourceTypeName  整机的子云服务的自身的资源类型名称。
     * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
+    * periodNum  周期数量，该参数非必填
     *
     * @var string[]
     */
@@ -219,7 +222,8 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
         'subResourceTypeCode' => null,
         'subResourceTypeName' => null,
         'subResourceId' => null,
-        'subResourceName' => null
+        'subResourceName' => null,
+        'periodNum' => 'bigdecimal'
     ];
 
     /**
@@ -292,6 +296,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * subResourceTypeName  整机的子云服务的自身的资源类型名称。
     * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
+    * periodNum  周期数量，该参数非必填
     *
     * @var string[]
     */
@@ -342,7 +347,8 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'subResourceTypeCode' => 'sub_resource_type_code',
             'subResourceTypeName' => 'sub_resource_type_name',
             'subResourceId' => 'sub_resource_id',
-            'subResourceName' => 'sub_resource_name'
+            'subResourceName' => 'sub_resource_name',
+            'periodNum' => 'period_num'
     ];
 
     /**
@@ -394,6 +400,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * subResourceTypeName  整机的子云服务的自身的资源类型名称。
     * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
+    * periodNum  周期数量，该参数非必填
     *
     * @var string[]
     */
@@ -444,7 +451,8 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'subResourceTypeCode' => 'setSubResourceTypeCode',
             'subResourceTypeName' => 'setSubResourceTypeName',
             'subResourceId' => 'setSubResourceId',
-            'subResourceName' => 'setSubResourceName'
+            'subResourceName' => 'setSubResourceName',
+            'periodNum' => 'setPeriodNum'
     ];
 
     /**
@@ -496,6 +504,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * subResourceTypeName  整机的子云服务的自身的资源类型名称。
     * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
+    * periodNum  周期数量，该参数非必填
     *
     * @var string[]
     */
@@ -546,7 +555,8 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'subResourceTypeCode' => 'getSubResourceTypeCode',
             'subResourceTypeName' => 'getSubResourceTypeName',
             'subResourceId' => 'getSubResourceId',
-            'subResourceName' => 'getSubResourceName'
+            'subResourceName' => 'getSubResourceName',
+            'periodNum' => 'getPeriodNum'
     ];
 
     /**
@@ -654,6 +664,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
         $this->container['subResourceTypeName'] = isset($data['subResourceTypeName']) ? $data['subResourceTypeName'] : null;
         $this->container['subResourceId'] = isset($data['subResourceId']) ? $data['subResourceId'] : null;
         $this->container['subResourceName'] = isset($data['subResourceName']) ? $data['subResourceName'] : null;
+        $this->container['periodNum'] = isset($data['periodNum']) ? $data['periodNum'] : null;
     }
 
     /**
@@ -1803,6 +1814,30 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     public function setSubResourceName($subResourceName)
     {
         $this->container['subResourceName'] = $subResourceName;
+        return $this;
+    }
+
+    /**
+    * Gets periodNum
+    *  周期数量，该参数非必填
+    *
+    * @return float|null
+    */
+    public function getPeriodNum()
+    {
+        return $this->container['periodNum'];
+    }
+
+    /**
+    * Sets periodNum
+    *
+    * @param float|null $periodNum 周期数量，该参数非必填
+    *
+    * @return $this
+    */
+    public function setPeriodNum($periodNum)
+    {
+        $this->container['periodNum'] = $periodNum;
         return $this;
     }
 

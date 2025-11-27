@@ -21,42 +21,30 @@ class GetDocumentAtomicInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * atomicUniqueKey  原子能力唯一标识：只允许字母+下划线，字母开头
-    * atomicNameZh  中文名
-    * atomicNameEn  英文名
-    * tags  标签信息
-    * inputs  原子能力入参
-    * outputs  outputs
+    * errorCode  错误码
+    * errorMsg  错误信息
+    * data  返回数据。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'atomicUniqueKey' => 'string',
-            'atomicNameZh' => 'string',
-            'atomicNameEn' => 'string',
-            'tags' => 'string[]',
-            'inputs' => '\HuaweiCloud\SDK\Coc\V1\Model\AtomicInputModel[]',
-            'outputs' => '\HuaweiCloud\SDK\Coc\V1\Model\AtomicOutputModel'
+            'errorCode' => 'string',
+            'errorMsg' => 'string',
+            'data' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * atomicUniqueKey  原子能力唯一标识：只允许字母+下划线，字母开头
-    * atomicNameZh  中文名
-    * atomicNameEn  英文名
-    * tags  标签信息
-    * inputs  原子能力入参
-    * outputs  outputs
+    * errorCode  错误码
+    * errorMsg  错误信息
+    * data  返回数据。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'atomicUniqueKey' => null,
-        'atomicNameZh' => null,
-        'atomicNameEn' => null,
-        'tags' => null,
-        'inputs' => null,
-        'outputs' => null
+        'errorCode' => null,
+        'errorMsg' => null,
+        'data' => null
     ];
 
     /**
@@ -82,62 +70,44 @@ class GetDocumentAtomicInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * atomicUniqueKey  原子能力唯一标识：只允许字母+下划线，字母开头
-    * atomicNameZh  中文名
-    * atomicNameEn  英文名
-    * tags  标签信息
-    * inputs  原子能力入参
-    * outputs  outputs
+    * errorCode  错误码
+    * errorMsg  错误信息
+    * data  返回数据。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'atomicUniqueKey' => 'atomic_unique_key',
-            'atomicNameZh' => 'atomic_name_zh',
-            'atomicNameEn' => 'atomic_name_en',
-            'tags' => 'tags',
-            'inputs' => 'inputs',
-            'outputs' => 'outputs'
+            'errorCode' => 'error_code',
+            'errorMsg' => 'error_msg',
+            'data' => 'data'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * atomicUniqueKey  原子能力唯一标识：只允许字母+下划线，字母开头
-    * atomicNameZh  中文名
-    * atomicNameEn  英文名
-    * tags  标签信息
-    * inputs  原子能力入参
-    * outputs  outputs
+    * errorCode  错误码
+    * errorMsg  错误信息
+    * data  返回数据。
     *
     * @var string[]
     */
     protected static $setters = [
-            'atomicUniqueKey' => 'setAtomicUniqueKey',
-            'atomicNameZh' => 'setAtomicNameZh',
-            'atomicNameEn' => 'setAtomicNameEn',
-            'tags' => 'setTags',
-            'inputs' => 'setInputs',
-            'outputs' => 'setOutputs'
+            'errorCode' => 'setErrorCode',
+            'errorMsg' => 'setErrorMsg',
+            'data' => 'setData'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * atomicUniqueKey  原子能力唯一标识：只允许字母+下划线，字母开头
-    * atomicNameZh  中文名
-    * atomicNameEn  英文名
-    * tags  标签信息
-    * inputs  原子能力入参
-    * outputs  outputs
+    * errorCode  错误码
+    * errorMsg  错误信息
+    * data  返回数据。
     *
     * @var string[]
     */
     protected static $getters = [
-            'atomicUniqueKey' => 'getAtomicUniqueKey',
-            'atomicNameZh' => 'getAtomicNameZh',
-            'atomicNameEn' => 'getAtomicNameEn',
-            'tags' => 'getTags',
-            'inputs' => 'getInputs',
-            'outputs' => 'getOutputs'
+            'errorCode' => 'getErrorCode',
+            'errorMsg' => 'getErrorMsg',
+            'data' => 'getData'
     ];
 
     /**
@@ -198,12 +168,9 @@ class GetDocumentAtomicInfoResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['atomicUniqueKey'] = isset($data['atomicUniqueKey']) ? $data['atomicUniqueKey'] : null;
-        $this->container['atomicNameZh'] = isset($data['atomicNameZh']) ? $data['atomicNameZh'] : null;
-        $this->container['atomicNameEn'] = isset($data['atomicNameEn']) ? $data['atomicNameEn'] : null;
-        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['inputs'] = isset($data['inputs']) ? $data['inputs'] : null;
-        $this->container['outputs'] = isset($data['outputs']) ? $data['outputs'] : null;
+        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
+        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -229,146 +196,74 @@ class GetDocumentAtomicInfoResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets atomicUniqueKey
-    *  原子能力唯一标识：只允许字母+下划线，字母开头
+    * Gets errorCode
+    *  错误码
     *
     * @return string|null
     */
-    public function getAtomicUniqueKey()
+    public function getErrorCode()
     {
-        return $this->container['atomicUniqueKey'];
+        return $this->container['errorCode'];
     }
 
     /**
-    * Sets atomicUniqueKey
+    * Sets errorCode
     *
-    * @param string|null $atomicUniqueKey 原子能力唯一标识：只允许字母+下划线，字母开头
+    * @param string|null $errorCode 错误码
     *
     * @return $this
     */
-    public function setAtomicUniqueKey($atomicUniqueKey)
+    public function setErrorCode($errorCode)
     {
-        $this->container['atomicUniqueKey'] = $atomicUniqueKey;
+        $this->container['errorCode'] = $errorCode;
         return $this;
     }
 
     /**
-    * Gets atomicNameZh
-    *  中文名
+    * Gets errorMsg
+    *  错误信息
     *
     * @return string|null
     */
-    public function getAtomicNameZh()
+    public function getErrorMsg()
     {
-        return $this->container['atomicNameZh'];
+        return $this->container['errorMsg'];
     }
 
     /**
-    * Sets atomicNameZh
+    * Sets errorMsg
     *
-    * @param string|null $atomicNameZh 中文名
+    * @param string|null $errorMsg 错误信息
     *
     * @return $this
     */
-    public function setAtomicNameZh($atomicNameZh)
+    public function setErrorMsg($errorMsg)
     {
-        $this->container['atomicNameZh'] = $atomicNameZh;
+        $this->container['errorMsg'] = $errorMsg;
         return $this;
     }
 
     /**
-    * Gets atomicNameEn
-    *  英文名
+    * Gets data
+    *  返回数据。
     *
-    * @return string|null
+    * @return object|null
     */
-    public function getAtomicNameEn()
+    public function getData()
     {
-        return $this->container['atomicNameEn'];
+        return $this->container['data'];
     }
 
     /**
-    * Sets atomicNameEn
+    * Sets data
     *
-    * @param string|null $atomicNameEn 英文名
+    * @param object|null $data 返回数据。
     *
     * @return $this
     */
-    public function setAtomicNameEn($atomicNameEn)
+    public function setData($data)
     {
-        $this->container['atomicNameEn'] = $atomicNameEn;
-        return $this;
-    }
-
-    /**
-    * Gets tags
-    *  标签信息
-    *
-    * @return string[]|null
-    */
-    public function getTags()
-    {
-        return $this->container['tags'];
-    }
-
-    /**
-    * Sets tags
-    *
-    * @param string[]|null $tags 标签信息
-    *
-    * @return $this
-    */
-    public function setTags($tags)
-    {
-        $this->container['tags'] = $tags;
-        return $this;
-    }
-
-    /**
-    * Gets inputs
-    *  原子能力入参
-    *
-    * @return \HuaweiCloud\SDK\Coc\V1\Model\AtomicInputModel[]|null
-    */
-    public function getInputs()
-    {
-        return $this->container['inputs'];
-    }
-
-    /**
-    * Sets inputs
-    *
-    * @param \HuaweiCloud\SDK\Coc\V1\Model\AtomicInputModel[]|null $inputs 原子能力入参
-    *
-    * @return $this
-    */
-    public function setInputs($inputs)
-    {
-        $this->container['inputs'] = $inputs;
-        return $this;
-    }
-
-    /**
-    * Gets outputs
-    *  outputs
-    *
-    * @return \HuaweiCloud\SDK\Coc\V1\Model\AtomicOutputModel|null
-    */
-    public function getOutputs()
-    {
-        return $this->container['outputs'];
-    }
-
-    /**
-    * Sets outputs
-    *
-    * @param \HuaweiCloud\SDK\Coc\V1\Model\AtomicOutputModel|null $outputs outputs
-    *
-    * @return $this
-    */
-    public function setOutputs($outputs)
-    {
-        $this->container['outputs'] = $outputs;
+        $this->container['data'] = $data;
         return $this;
     }
 

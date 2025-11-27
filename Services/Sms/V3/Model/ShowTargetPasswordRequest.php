@@ -161,11 +161,11 @@ class ShowTargetPasswordRequest implements ModelInterface, ArrayAccess
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-            if ((mb_strlen($this->container['id']) > 255)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 255.";
+            if ((mb_strlen($this->container['id']) > 36)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['id']) < 0)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['id']) < 1)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }

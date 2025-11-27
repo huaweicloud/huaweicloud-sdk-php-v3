@@ -20,14 +20,14 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enforcementAction  执行动作
-    * group  Group
-    * message  信息
-    * name  名称
-    * namespace  命名空间
-    * version  版本
-    * kind  资源类型
-    * resourceName  资源名称
+    * enforcementAction  **参数解释**: 执行动作 **取值范围**: 字符长度1-256位
+    * group  **参数解释**: 组 **取值范围**: 字符长度1-256位
+    * message  **参数解释**: 信息 **取值范围**: 字符长度1-256位
+    * name  **参数解释**: 名称 **取值范围**: 字符长度1-256位
+    * namespace  **参数解释**: 命名空间 **取值范围**: 字符长度0-256位
+    * version  **参数解释**: 版本 **取值范围**: 字符长度0-128位
+    * kind  **参数解释**: 资源类型 **取值范围**: 字符长度1-64位
+    * resourceName  **参数解释**: 资源名称 **取值范围**: 字符长度1-256位
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enforcementAction  执行动作
-    * group  Group
-    * message  信息
-    * name  名称
-    * namespace  命名空间
-    * version  版本
-    * kind  资源类型
-    * resourceName  资源名称
+    * enforcementAction  **参数解释**: 执行动作 **取值范围**: 字符长度1-256位
+    * group  **参数解释**: 组 **取值范围**: 字符长度1-256位
+    * message  **参数解释**: 信息 **取值范围**: 字符长度1-256位
+    * name  **参数解释**: 名称 **取值范围**: 字符长度1-256位
+    * namespace  **参数解释**: 命名空间 **取值范围**: 字符长度0-256位
+    * version  **参数解释**: 版本 **取值范围**: 字符长度0-128位
+    * kind  **参数解释**: 资源类型 **取值范围**: 字符长度1-64位
+    * resourceName  **参数解释**: 资源名称 **取值范围**: 字符长度1-256位
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enforcementAction  执行动作
-    * group  Group
-    * message  信息
-    * name  名称
-    * namespace  命名空间
-    * version  版本
-    * kind  资源类型
-    * resourceName  资源名称
+    * enforcementAction  **参数解释**: 执行动作 **取值范围**: 字符长度1-256位
+    * group  **参数解释**: 组 **取值范围**: 字符长度1-256位
+    * message  **参数解释**: 信息 **取值范围**: 字符长度1-256位
+    * name  **参数解释**: 名称 **取值范围**: 字符长度1-256位
+    * namespace  **参数解释**: 命名空间 **取值范围**: 字符长度0-256位
+    * version  **参数解释**: 版本 **取值范围**: 字符长度0-128位
+    * kind  **参数解释**: 资源类型 **取值范围**: 字符长度1-64位
+    * resourceName  **参数解释**: 资源名称 **取值范围**: 字符长度1-256位
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enforcementAction  执行动作
-    * group  Group
-    * message  信息
-    * name  名称
-    * namespace  命名空间
-    * version  版本
-    * kind  资源类型
-    * resourceName  资源名称
+    * enforcementAction  **参数解释**: 执行动作 **取值范围**: 字符长度1-256位
+    * group  **参数解释**: 组 **取值范围**: 字符长度1-256位
+    * message  **参数解释**: 信息 **取值范围**: 字符长度1-256位
+    * name  **参数解释**: 名称 **取值范围**: 字符长度1-256位
+    * namespace  **参数解释**: 命名空间 **取值范围**: 字符长度0-256位
+    * version  **参数解释**: 版本 **取值范围**: 字符长度0-128位
+    * kind  **参数解释**: 资源类型 **取值范围**: 字符长度1-64位
+    * resourceName  **参数解释**: 资源名称 **取值范围**: 字符长度1-256位
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enforcementAction  执行动作
-    * group  Group
-    * message  信息
-    * name  名称
-    * namespace  命名空间
-    * version  版本
-    * kind  资源类型
-    * resourceName  资源名称
+    * enforcementAction  **参数解释**: 执行动作 **取值范围**: 字符长度1-256位
+    * group  **参数解释**: 组 **取值范围**: 字符长度1-256位
+    * message  **参数解释**: 信息 **取值范围**: 字符长度1-256位
+    * name  **参数解释**: 名称 **取值范围**: 字符长度1-256位
+    * namespace  **参数解释**: 命名空间 **取值范围**: 字符长度0-256位
+    * version  **参数解释**: 版本 **取值范围**: 字符长度0-128位
+    * kind  **参数解释**: 资源类型 **取值范围**: 字符长度1-64位
+    * resourceName  **参数解释**: 资源名称 **取值范围**: 字符长度1-256位
     *
     * @var string[]
     */
@@ -299,7 +299,7 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enforcementAction
-    *  执行动作
+    *  **参数解释**: 执行动作 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -311,7 +311,7 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enforcementAction
     *
-    * @param string|null $enforcementAction 执行动作
+    * @param string|null $enforcementAction **参数解释**: 执行动作 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets group
-    *  Group
+    *  **参数解释**: 组 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -335,7 +335,7 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets group
     *
-    * @param string|null $group Group
+    * @param string|null $group **参数解释**: 组 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets message
-    *  信息
+    *  **参数解释**: 信息 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -359,7 +359,7 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets message
     *
-    * @param string|null $message 信息
+    * @param string|null $message **参数解释**: 信息 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称
+    *  **参数解释**: 名称 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -383,7 +383,7 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 名称
+    * @param string|null $name **参数解释**: 名称 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -395,7 +395,7 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  命名空间
+    *  **参数解释**: 命名空间 **取值范围**: 字符长度0-256位
     *
     * @return string|null
     */
@@ -407,7 +407,7 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 命名空间
+    * @param string|null $namespace **参数解释**: 命名空间 **取值范围**: 字符长度0-256位
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  版本
+    *  **参数解释**: 版本 **取值范围**: 字符长度0-128位
     *
     * @return string|null
     */
@@ -431,7 +431,7 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 版本
+    * @param string|null $version **参数解释**: 版本 **取值范围**: 字符长度0-128位
     *
     * @return $this
     */
@@ -443,7 +443,7 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets kind
-    *  资源类型
+    *  **参数解释**: 资源类型 **取值范围**: 字符长度1-64位
     *
     * @return string|null
     */
@@ -455,7 +455,7 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets kind
     *
-    * @param string|null $kind 资源类型
+    * @param string|null $kind **参数解释**: 资源类型 **取值范围**: 字符长度1-64位
     *
     * @return $this
     */
@@ -467,7 +467,7 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceName
-    *  资源名称
+    *  **参数解释**: 资源名称 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -479,7 +479,7 @@ class ClusterEventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resourceName
     *
-    * @param string|null $resourceName 资源名称
+    * @param string|null $resourceName **参数解释**: 资源名称 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */

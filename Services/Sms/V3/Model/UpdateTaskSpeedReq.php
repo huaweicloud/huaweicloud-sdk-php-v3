@@ -25,15 +25,15 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
     * replicatesize  当前任务已经复制的数据量大小（B）
     * totalsize  当前任务的总迁移数据大小
     * processTrace  迁移或同步时，具体的迁移详情
-    * migrateSpeed  实施迁移速率，单位Mb/s
+    * migrateSpeed  实施迁移速率，单位Mbit/s
     * compressRate  实施文件压缩率
     * remainTime  剩余时间
     * totalCpuUsage  主机的CPU使用率，0到100，单位是百分比
     * agentCpuUsage  Agent的CPU使用率，0到100，单位是百分比
     * totalMemUsage  主机的内存使用值，单位是MB
     * agentMemUsage  Agent的内存使用值，单位是MB
-    * totalDiskIo  主机的磁盘I/O值，单位是MB/s
-    * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
+    * totalDiskIo  主机的磁盘I/O值，单位是Mbit/s
+    * agentDiskIo  Agent的磁盘I/O值，单位是Mbit/s
     * needMigrationTest  是否开启迁移演练
     * agentTime  Agent的当前时间，用于超速检测，因为限速值是可以分时间段设置的
     *
@@ -65,15 +65,15 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
     * replicatesize  当前任务已经复制的数据量大小（B）
     * totalsize  当前任务的总迁移数据大小
     * processTrace  迁移或同步时，具体的迁移详情
-    * migrateSpeed  实施迁移速率，单位Mb/s
+    * migrateSpeed  实施迁移速率，单位Mbit/s
     * compressRate  实施文件压缩率
     * remainTime  剩余时间
     * totalCpuUsage  主机的CPU使用率，0到100，单位是百分比
     * agentCpuUsage  Agent的CPU使用率，0到100，单位是百分比
     * totalMemUsage  主机的内存使用值，单位是MB
     * agentMemUsage  Agent的内存使用值，单位是MB
-    * totalDiskIo  主机的磁盘I/O值，单位是MB/s
-    * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
+    * totalDiskIo  主机的磁盘I/O值，单位是Mbit/s
+    * agentDiskIo  Agent的磁盘I/O值，单位是Mbit/s
     * needMigrationTest  是否开启迁移演练
     * agentTime  Agent的当前时间，用于超速检测，因为限速值是可以分时间段设置的
     *
@@ -126,15 +126,15 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
     * replicatesize  当前任务已经复制的数据量大小（B）
     * totalsize  当前任务的总迁移数据大小
     * processTrace  迁移或同步时，具体的迁移详情
-    * migrateSpeed  实施迁移速率，单位Mb/s
+    * migrateSpeed  实施迁移速率，单位Mbit/s
     * compressRate  实施文件压缩率
     * remainTime  剩余时间
     * totalCpuUsage  主机的CPU使用率，0到100，单位是百分比
     * agentCpuUsage  Agent的CPU使用率，0到100，单位是百分比
     * totalMemUsage  主机的内存使用值，单位是MB
     * agentMemUsage  Agent的内存使用值，单位是MB
-    * totalDiskIo  主机的磁盘I/O值，单位是MB/s
-    * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
+    * totalDiskIo  主机的磁盘I/O值，单位是Mbit/s
+    * agentDiskIo  Agent的磁盘I/O值，单位是Mbit/s
     * needMigrationTest  是否开启迁移演练
     * agentTime  Agent的当前时间，用于超速检测，因为限速值是可以分时间段设置的
     *
@@ -166,15 +166,15 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
     * replicatesize  当前任务已经复制的数据量大小（B）
     * totalsize  当前任务的总迁移数据大小
     * processTrace  迁移或同步时，具体的迁移详情
-    * migrateSpeed  实施迁移速率，单位Mb/s
+    * migrateSpeed  实施迁移速率，单位Mbit/s
     * compressRate  实施文件压缩率
     * remainTime  剩余时间
     * totalCpuUsage  主机的CPU使用率，0到100，单位是百分比
     * agentCpuUsage  Agent的CPU使用率，0到100，单位是百分比
     * totalMemUsage  主机的内存使用值，单位是MB
     * agentMemUsage  Agent的内存使用值，单位是MB
-    * totalDiskIo  主机的磁盘I/O值，单位是MB/s
-    * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
+    * totalDiskIo  主机的磁盘I/O值，单位是Mbit/s
+    * agentDiskIo  Agent的磁盘I/O值，单位是Mbit/s
     * needMigrationTest  是否开启迁移演练
     * agentTime  Agent的当前时间，用于超速检测，因为限速值是可以分时间段设置的
     *
@@ -206,15 +206,15 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
     * replicatesize  当前任务已经复制的数据量大小（B）
     * totalsize  当前任务的总迁移数据大小
     * processTrace  迁移或同步时，具体的迁移详情
-    * migrateSpeed  实施迁移速率，单位Mb/s
+    * migrateSpeed  实施迁移速率，单位Mbit/s
     * compressRate  实施文件压缩率
     * remainTime  剩余时间
     * totalCpuUsage  主机的CPU使用率，0到100，单位是百分比
     * agentCpuUsage  Agent的CPU使用率，0到100，单位是百分比
     * totalMemUsage  主机的内存使用值，单位是MB
     * agentMemUsage  Agent的内存使用值，单位是MB
-    * totalDiskIo  主机的磁盘I/O值，单位是MB/s
-    * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
+    * totalDiskIo  主机的磁盘I/O值，单位是Mbit/s
+    * agentDiskIo  Agent的磁盘I/O值，单位是Mbit/s
     * needMigrationTest  是否开启迁移演练
     * agentTime  Agent的当前时间，用于超速检测，因为限速值是可以分时间段设置的
     *
@@ -621,7 +621,7 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets migrateSpeed
-    *  实施迁移速率，单位Mb/s
+    *  实施迁移速率，单位Mbit/s
     *
     * @return double|null
     */
@@ -633,7 +633,7 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
     /**
     * Sets migrateSpeed
     *
-    * @param double|null $migrateSpeed 实施迁移速率，单位Mb/s
+    * @param double|null $migrateSpeed 实施迁移速率，单位Mbit/s
     *
     * @return $this
     */
@@ -789,7 +789,7 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalDiskIo
-    *  主机的磁盘I/O值，单位是MB/s
+    *  主机的磁盘I/O值，单位是Mbit/s
     *
     * @return double|null
     */
@@ -801,7 +801,7 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
     /**
     * Sets totalDiskIo
     *
-    * @param double|null $totalDiskIo 主机的磁盘I/O值，单位是MB/s
+    * @param double|null $totalDiskIo 主机的磁盘I/O值，单位是Mbit/s
     *
     * @return $this
     */
@@ -813,7 +813,7 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentDiskIo
-    *  Agent的磁盘I/O值，单位是MB/s
+    *  Agent的磁盘I/O值，单位是Mbit/s
     *
     * @return double|null
     */
@@ -825,7 +825,7 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
     /**
     * Sets agentDiskIo
     *
-    * @param double|null $agentDiskIo Agent的磁盘I/O值，单位是MB/s
+    * @param double|null $agentDiskIo Agent的磁盘I/O值，单位是Mbit/s
     *
     * @return $this
     */

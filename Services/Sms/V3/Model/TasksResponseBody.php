@@ -24,12 +24,12 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     * name  任务名称（用户自定义）
     * type  任务类型，创建时必选，更新时可选 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
     * osType  操作系统类型，分为WINDOWS和LINUX，创建时必选，更新时可选
-    * state  任务状态
+    * state  迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
     * estimateCompleteTime  预估完成时间
     * createDate  任务创建时间
     * priority  进程优先级 0：低 1：标准 2：高
     * speedLimit  迁移限速
-    * migrateSpeed  迁移速率，单位：MB/S
+    * migrateSpeed  迁移速率，单位：Mbit/s
     * compressRate  压缩率
     * startTargetServer  迁移完成后是否启动目的端服务器 true：启动 false：停止
     * errorJson  错误信息
@@ -39,7 +39,7 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     * sourceServer  sourceServer
     * enterpriseProjectId  迁移项目ID
     * targetServer  targetServer
-    * logCollectStatus  日志收集状态 INIT TELL_AGENT_TO_COLLECT WAIT_AGENT_COLLECT_ACK AGENT_COLLECT_FAIL AGENT_COLLECT_SUCCESS WAIT_SERVER_COLLECT SERVER_COLLECT_FAIL SERVER_COLLECT_SUCCESS TELL_AGENT_RESET_ACL WAIT_AGENT_RESET_ACL_ACK
+    * logCollectStatus  日志收集状态 INIT:就绪 UPLOADING:上传中 UPLOAD_FAIL:上传失败 UPLOADED:已上传
     * cloneServer  cloneServer
     * syncing  是否同步
     * networkCheckInfo  networkCheckInfo
@@ -48,8 +48,8 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     * agentCpuUsage  Agent的CPU使用率，单位是百分比
     * totalMemUsage  主机的内存使用值，单位是MB
     * agentMemUsage  Agent的内存使用值，单位是MB
-    * totalDiskIo  主机的磁盘I/O值，单位是MB/s
-    * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
+    * totalDiskIo  主机的磁盘I/O值，单位是Mbit/s
+    * agentDiskIo  Agent的磁盘I/O值，单位是Mbit/s
     * needMigrationTest  是否开启迁移演练
     * subtaskInfo  当前子任务及进度
     *
@@ -96,12 +96,12 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     * name  任务名称（用户自定义）
     * type  任务类型，创建时必选，更新时可选 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
     * osType  操作系统类型，分为WINDOWS和LINUX，创建时必选，更新时可选
-    * state  任务状态
+    * state  迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
     * estimateCompleteTime  预估完成时间
     * createDate  任务创建时间
     * priority  进程优先级 0：低 1：标准 2：高
     * speedLimit  迁移限速
-    * migrateSpeed  迁移速率，单位：MB/S
+    * migrateSpeed  迁移速率，单位：Mbit/s
     * compressRate  压缩率
     * startTargetServer  迁移完成后是否启动目的端服务器 true：启动 false：停止
     * errorJson  错误信息
@@ -111,7 +111,7 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     * sourceServer  sourceServer
     * enterpriseProjectId  迁移项目ID
     * targetServer  targetServer
-    * logCollectStatus  日志收集状态 INIT TELL_AGENT_TO_COLLECT WAIT_AGENT_COLLECT_ACK AGENT_COLLECT_FAIL AGENT_COLLECT_SUCCESS WAIT_SERVER_COLLECT SERVER_COLLECT_FAIL SERVER_COLLECT_SUCCESS TELL_AGENT_RESET_ACL WAIT_AGENT_RESET_ACL_ACK
+    * logCollectStatus  日志收集状态 INIT:就绪 UPLOADING:上传中 UPLOAD_FAIL:上传失败 UPLOADED:已上传
     * cloneServer  cloneServer
     * syncing  是否同步
     * networkCheckInfo  networkCheckInfo
@@ -120,8 +120,8 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     * agentCpuUsage  Agent的CPU使用率，单位是百分比
     * totalMemUsage  主机的内存使用值，单位是MB
     * agentMemUsage  Agent的内存使用值，单位是MB
-    * totalDiskIo  主机的磁盘I/O值，单位是MB/s
-    * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
+    * totalDiskIo  主机的磁盘I/O值，单位是Mbit/s
+    * agentDiskIo  Agent的磁盘I/O值，单位是Mbit/s
     * needMigrationTest  是否开启迁移演练
     * subtaskInfo  当前子任务及进度
     *
@@ -189,12 +189,12 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     * name  任务名称（用户自定义）
     * type  任务类型，创建时必选，更新时可选 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
     * osType  操作系统类型，分为WINDOWS和LINUX，创建时必选，更新时可选
-    * state  任务状态
+    * state  迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
     * estimateCompleteTime  预估完成时间
     * createDate  任务创建时间
     * priority  进程优先级 0：低 1：标准 2：高
     * speedLimit  迁移限速
-    * migrateSpeed  迁移速率，单位：MB/S
+    * migrateSpeed  迁移速率，单位：Mbit/s
     * compressRate  压缩率
     * startTargetServer  迁移完成后是否启动目的端服务器 true：启动 false：停止
     * errorJson  错误信息
@@ -204,7 +204,7 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     * sourceServer  sourceServer
     * enterpriseProjectId  迁移项目ID
     * targetServer  targetServer
-    * logCollectStatus  日志收集状态 INIT TELL_AGENT_TO_COLLECT WAIT_AGENT_COLLECT_ACK AGENT_COLLECT_FAIL AGENT_COLLECT_SUCCESS WAIT_SERVER_COLLECT SERVER_COLLECT_FAIL SERVER_COLLECT_SUCCESS TELL_AGENT_RESET_ACL WAIT_AGENT_RESET_ACL_ACK
+    * logCollectStatus  日志收集状态 INIT:就绪 UPLOADING:上传中 UPLOAD_FAIL:上传失败 UPLOADED:已上传
     * cloneServer  cloneServer
     * syncing  是否同步
     * networkCheckInfo  networkCheckInfo
@@ -213,8 +213,8 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     * agentCpuUsage  Agent的CPU使用率，单位是百分比
     * totalMemUsage  主机的内存使用值，单位是MB
     * agentMemUsage  Agent的内存使用值，单位是MB
-    * totalDiskIo  主机的磁盘I/O值，单位是MB/s
-    * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
+    * totalDiskIo  主机的磁盘I/O值，单位是Mbit/s
+    * agentDiskIo  Agent的磁盘I/O值，单位是Mbit/s
     * needMigrationTest  是否开启迁移演练
     * subtaskInfo  当前子任务及进度
     *
@@ -261,12 +261,12 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     * name  任务名称（用户自定义）
     * type  任务类型，创建时必选，更新时可选 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
     * osType  操作系统类型，分为WINDOWS和LINUX，创建时必选，更新时可选
-    * state  任务状态
+    * state  迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
     * estimateCompleteTime  预估完成时间
     * createDate  任务创建时间
     * priority  进程优先级 0：低 1：标准 2：高
     * speedLimit  迁移限速
-    * migrateSpeed  迁移速率，单位：MB/S
+    * migrateSpeed  迁移速率，单位：Mbit/s
     * compressRate  压缩率
     * startTargetServer  迁移完成后是否启动目的端服务器 true：启动 false：停止
     * errorJson  错误信息
@@ -276,7 +276,7 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     * sourceServer  sourceServer
     * enterpriseProjectId  迁移项目ID
     * targetServer  targetServer
-    * logCollectStatus  日志收集状态 INIT TELL_AGENT_TO_COLLECT WAIT_AGENT_COLLECT_ACK AGENT_COLLECT_FAIL AGENT_COLLECT_SUCCESS WAIT_SERVER_COLLECT SERVER_COLLECT_FAIL SERVER_COLLECT_SUCCESS TELL_AGENT_RESET_ACL WAIT_AGENT_RESET_ACL_ACK
+    * logCollectStatus  日志收集状态 INIT:就绪 UPLOADING:上传中 UPLOAD_FAIL:上传失败 UPLOADED:已上传
     * cloneServer  cloneServer
     * syncing  是否同步
     * networkCheckInfo  networkCheckInfo
@@ -285,8 +285,8 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     * agentCpuUsage  Agent的CPU使用率，单位是百分比
     * totalMemUsage  主机的内存使用值，单位是MB
     * agentMemUsage  Agent的内存使用值，单位是MB
-    * totalDiskIo  主机的磁盘I/O值，单位是MB/s
-    * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
+    * totalDiskIo  主机的磁盘I/O值，单位是Mbit/s
+    * agentDiskIo  Agent的磁盘I/O值，单位是Mbit/s
     * needMigrationTest  是否开启迁移演练
     * subtaskInfo  当前子任务及进度
     *
@@ -333,12 +333,12 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     * name  任务名称（用户自定义）
     * type  任务类型，创建时必选，更新时可选 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
     * osType  操作系统类型，分为WINDOWS和LINUX，创建时必选，更新时可选
-    * state  任务状态
+    * state  迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
     * estimateCompleteTime  预估完成时间
     * createDate  任务创建时间
     * priority  进程优先级 0：低 1：标准 2：高
     * speedLimit  迁移限速
-    * migrateSpeed  迁移速率，单位：MB/S
+    * migrateSpeed  迁移速率，单位：Mbit/s
     * compressRate  压缩率
     * startTargetServer  迁移完成后是否启动目的端服务器 true：启动 false：停止
     * errorJson  错误信息
@@ -348,7 +348,7 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     * sourceServer  sourceServer
     * enterpriseProjectId  迁移项目ID
     * targetServer  targetServer
-    * logCollectStatus  日志收集状态 INIT TELL_AGENT_TO_COLLECT WAIT_AGENT_COLLECT_ACK AGENT_COLLECT_FAIL AGENT_COLLECT_SUCCESS WAIT_SERVER_COLLECT SERVER_COLLECT_FAIL SERVER_COLLECT_SUCCESS TELL_AGENT_RESET_ACL WAIT_AGENT_RESET_ACL_ACK
+    * logCollectStatus  日志收集状态 INIT:就绪 UPLOADING:上传中 UPLOAD_FAIL:上传失败 UPLOADED:已上传
     * cloneServer  cloneServer
     * syncing  是否同步
     * networkCheckInfo  networkCheckInfo
@@ -357,8 +357,8 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     * agentCpuUsage  Agent的CPU使用率，单位是百分比
     * totalMemUsage  主机的内存使用值，单位是MB
     * agentMemUsage  Agent的内存使用值，单位是MB
-    * totalDiskIo  主机的磁盘I/O值，单位是MB/s
-    * agentDiskIo  Agent的磁盘I/O值，单位是MB/s
+    * totalDiskIo  主机的磁盘I/O值，单位是Mbit/s
+    * agentDiskIo  Agent的磁盘I/O值，单位是Mbit/s
     * needMigrationTest  是否开启迁移演练
     * subtaskInfo  当前子任务及进度
     *
@@ -443,19 +443,25 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     const TYPE_MIGRATE_BLOCK = 'MIGRATE_BLOCK';
     const OS_TYPE_WINDOWS = 'WINDOWS';
     const OS_TYPE_LINUX = 'LINUX';
+    const STATE_READY = 'READY';
+    const STATE_RUNNING = 'RUNNING';
+    const STATE_SYNCING = 'SYNCING';
+    const STATE_MIGRATE_SUCCESS = 'MIGRATE_SUCCESS';
+    const STATE_SYNC_SUCCESS = 'SYNC_SUCCESS';
+    const STATE_MIGRATE_FAIL = 'MIGRATE_FAIL';
+    const STATE_SYNC_FAIL = 'SYNC_FAIL';
+    const STATE_ABORTING = 'ABORTING';
+    const STATE_ABORT = 'ABORT';
+    const STATE_SKIPPING = 'SKIPPING';
+    const STATE_DELETING = 'DELETING';
+    const STATE_RESETING = 'RESETING';
     const PRIORITY_0 = 0;
     const PRIORITY_1 = 1;
     const PRIORITY_2 = 2;
     const LOG_COLLECT_STATUS_INIT = 'INIT';
-    const LOG_COLLECT_STATUS_TELL_AGENT_TO_COLLECT = 'TELL_AGENT_TO_COLLECT';
-    const LOG_COLLECT_STATUS_WAIT_AGENT_COLLECT_ACK = 'WAIT_AGENT_COLLECT_ACK';
-    const LOG_COLLECT_STATUS_AGENT_COLLECT_FAIL = 'AGENT_COLLECT_FAIL';
-    const LOG_COLLECT_STATUS_AGENT_COLLECT_SUCCESS = 'AGENT_COLLECT_SUCCESS';
-    const LOG_COLLECT_STATUS_WAIT_SERVER_COLLECT = 'WAIT_SERVER_COLLECT';
-    const LOG_COLLECT_STATUS_SERVER_COLLECT_FAIL = 'SERVER_COLLECT_FAIL';
-    const LOG_COLLECT_STATUS_SERVER_COLLECT_SUCCESS = 'SERVER_COLLECT_SUCCESS';
-    const LOG_COLLECT_STATUS_TELL_AGENT_RESET_ACL = 'TELL_AGENT_RESET_ACL';
-    const LOG_COLLECT_STATUS_WAIT_AGENT_RESET_ACL_ACK = 'WAIT_AGENT_RESET_ACL_ACK';
+    const LOG_COLLECT_STATUS_UPLOADING = 'UPLOADING';
+    const LOG_COLLECT_STATUS_UPLOAD_FAIL = 'UPLOAD_FAIL';
+    const LOG_COLLECT_STATUS_UPLOADED = 'UPLOADED';
     
 
     /**
@@ -489,6 +495,29 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     *
     * @return string[]
     */
+    public function getStateAllowableValues()
+    {
+        return [
+            self::STATE_READY,
+            self::STATE_RUNNING,
+            self::STATE_SYNCING,
+            self::STATE_MIGRATE_SUCCESS,
+            self::STATE_SYNC_SUCCESS,
+            self::STATE_MIGRATE_FAIL,
+            self::STATE_SYNC_FAIL,
+            self::STATE_ABORTING,
+            self::STATE_ABORT,
+            self::STATE_SKIPPING,
+            self::STATE_DELETING,
+            self::STATE_RESETING,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
     public function getPriorityAllowableValues()
     {
         return [
@@ -507,15 +536,9 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     {
         return [
             self::LOG_COLLECT_STATUS_INIT,
-            self::LOG_COLLECT_STATUS_TELL_AGENT_TO_COLLECT,
-            self::LOG_COLLECT_STATUS_WAIT_AGENT_COLLECT_ACK,
-            self::LOG_COLLECT_STATUS_AGENT_COLLECT_FAIL,
-            self::LOG_COLLECT_STATUS_AGENT_COLLECT_SUCCESS,
-            self::LOG_COLLECT_STATUS_WAIT_SERVER_COLLECT,
-            self::LOG_COLLECT_STATUS_SERVER_COLLECT_FAIL,
-            self::LOG_COLLECT_STATUS_SERVER_COLLECT_SUCCESS,
-            self::LOG_COLLECT_STATUS_TELL_AGENT_RESET_ACL,
-            self::LOG_COLLECT_STATUS_WAIT_AGENT_RESET_ACL_ACK,
+            self::LOG_COLLECT_STATUS_UPLOADING,
+            self::LOG_COLLECT_STATUS_UPLOAD_FAIL,
+            self::LOG_COLLECT_STATUS_UPLOADED,
         ];
     }
 
@@ -617,12 +640,14 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'osType', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) > 255)) {
-                $invalidProperties[] = "invalid value for 'state', the character length must be smaller than or equal to 255.";
+            $allowedValues = $this->getStateAllowableValues();
+                if (!is_null($this->container['state']) && !in_array($this->container['state'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'state', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) < 0)) {
-                $invalidProperties[] = "invalid value for 'state', the character length must be bigger than or equal to 0.";
-            }
+
             if (!is_null($this->container['estimateCompleteTime']) && ($this->container['estimateCompleteTime'] > 9223372036854775807)) {
                 $invalidProperties[] = "invalid value for 'estimateCompleteTime', must be smaller than or equal to 9223372036854775807.";
             }
@@ -853,7 +878,7 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  任务状态
+    *  迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
     *
     * @return string|null
     */
@@ -865,7 +890,7 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state 任务状态
+    * @param string|null $state 迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
     *
     * @return $this
     */
@@ -973,7 +998,7 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets migrateSpeed
-    *  迁移速率，单位：MB/S
+    *  迁移速率，单位：Mbit/s
     *
     * @return double|null
     */
@@ -985,7 +1010,7 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets migrateSpeed
     *
-    * @param double|null $migrateSpeed 迁移速率，单位：MB/S
+    * @param double|null $migrateSpeed 迁移速率，单位：Mbit/s
     *
     * @return $this
     */
@@ -1213,7 +1238,7 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets logCollectStatus
-    *  日志收集状态 INIT TELL_AGENT_TO_COLLECT WAIT_AGENT_COLLECT_ACK AGENT_COLLECT_FAIL AGENT_COLLECT_SUCCESS WAIT_SERVER_COLLECT SERVER_COLLECT_FAIL SERVER_COLLECT_SUCCESS TELL_AGENT_RESET_ACL WAIT_AGENT_RESET_ACL_ACK
+    *  日志收集状态 INIT:就绪 UPLOADING:上传中 UPLOAD_FAIL:上传失败 UPLOADED:已上传
     *
     * @return string|null
     */
@@ -1225,7 +1250,7 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets logCollectStatus
     *
-    * @param string|null $logCollectStatus 日志收集状态 INIT TELL_AGENT_TO_COLLECT WAIT_AGENT_COLLECT_ACK AGENT_COLLECT_FAIL AGENT_COLLECT_SUCCESS WAIT_SERVER_COLLECT SERVER_COLLECT_FAIL SERVER_COLLECT_SUCCESS TELL_AGENT_RESET_ACL WAIT_AGENT_RESET_ACL_ACK
+    * @param string|null $logCollectStatus 日志收集状态 INIT:就绪 UPLOADING:上传中 UPLOAD_FAIL:上传失败 UPLOADED:已上传
     *
     * @return $this
     */
@@ -1429,7 +1454,7 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalDiskIo
-    *  主机的磁盘I/O值，单位是MB/s
+    *  主机的磁盘I/O值，单位是Mbit/s
     *
     * @return double|null
     */
@@ -1441,7 +1466,7 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets totalDiskIo
     *
-    * @param double|null $totalDiskIo 主机的磁盘I/O值，单位是MB/s
+    * @param double|null $totalDiskIo 主机的磁盘I/O值，单位是Mbit/s
     *
     * @return $this
     */
@@ -1453,7 +1478,7 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentDiskIo
-    *  Agent的磁盘I/O值，单位是MB/s
+    *  Agent的磁盘I/O值，单位是Mbit/s
     *
     * @return double|null
     */
@@ -1465,7 +1490,7 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets agentDiskIo
     *
-    * @param double|null $agentDiskIo Agent的磁盘I/O值，单位是MB/s
+    * @param double|null $agentDiskIo Agent的磁盘I/O值，单位是Mbit/s
     *
     * @return $this
     */

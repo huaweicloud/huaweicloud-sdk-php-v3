@@ -20,14 +20,14 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  私网NAT网关实例的ID。
     * name  私网NAT网关实例的名字。
     * description  私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
-    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结
+    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
+    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     * vpcId  私网NAT网关实例所属VPC的ID。
     * virsubnetId  私网NAT网关实例所属子网的ID。
     * enterpriseProjectId  企业项目ID。创建私网NAT网关实例时，关联的企业项目ID。
@@ -50,14 +50,14 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  私网NAT网关实例的ID。
     * name  私网NAT网关实例的名字。
     * description  私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
-    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结
+    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
+    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     * vpcId  私网NAT网关实例所属VPC的ID。
     * virsubnetId  私网NAT网关实例所属子网的ID。
     * enterpriseProjectId  企业项目ID。创建私网NAT网关实例时，关联的企业项目ID。
@@ -101,14 +101,14 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  私网NAT网关实例的ID。
     * name  私网NAT网关实例的名字。
     * description  私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
-    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结
+    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
+    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     * vpcId  私网NAT网关实例所属VPC的ID。
     * virsubnetId  私网NAT网关实例所属子网的ID。
     * enterpriseProjectId  企业项目ID。创建私网NAT网关实例时，关联的企业项目ID。
@@ -131,14 +131,14 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  私网NAT网关实例的ID。
     * name  私网NAT网关实例的名字。
     * description  私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
-    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结
+    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
+    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     * vpcId  私网NAT网关实例所属VPC的ID。
     * virsubnetId  私网NAT网关实例所属子网的ID。
     * enterpriseProjectId  企业项目ID。创建私网NAT网关实例时，关联的企业项目ID。
@@ -161,14 +161,14 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  私网NAT网关实例的ID。
     * name  私网NAT网关实例的名字。
     * description  私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
-    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结
+    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
+    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     * vpcId  私网NAT网关实例所属VPC的ID。
     * virsubnetId  私网NAT网关实例所属子网的ID。
     * enterpriseProjectId  企业项目ID。创建私网NAT网关实例时，关联的企业项目ID。
@@ -233,8 +233,10 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
     const SPEC_MEDIUM = 'Medium';
     const SPEC_LARGE = 'Large';
     const SPEC_EXTRA_LARGE = 'Extra-large';
+    const SPEC_EXTRA_XLARGE = 'Extra-xlarge';
     const STATUS_ACTIVE = 'ACTIVE';
     const STATUS_FROZEN = 'FROZEN';
+    const STATUS_INACTIVE = 'INACTIVE';
     
 
     /**
@@ -249,6 +251,7 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
             self::SPEC_MEDIUM,
             self::SPEC_LARGE,
             self::SPEC_EXTRA_LARGE,
+            self::SPEC_EXTRA_XLARGE,
         ];
     }
 
@@ -262,6 +265,7 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
         return [
             self::STATUS_ACTIVE,
             self::STATUS_FROZEN,
+            self::STATUS_INACTIVE,
         ];
     }
 
@@ -330,7 +334,7 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    *  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     *
     * @return int|null
     */
@@ -342,7 +346,7 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * @param int|null $limit 功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     *
     * @return $this
     */
@@ -474,7 +478,7 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets spec
-    *  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
+    *  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
     *
     * @return string[]|null
     */
@@ -486,7 +490,7 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets spec
     *
-    * @param string[]|null $spec 私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
+    * @param string[]|null $spec 私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
     *
     * @return $this
     */
@@ -498,7 +502,7 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结
+    *  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     *
     * @return string[]|null
     */
@@ -510,7 +514,7 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status 私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结
+    * @param string[]|null $status 私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     *
     * @return $this
     */

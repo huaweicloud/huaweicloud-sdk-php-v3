@@ -26,7 +26,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示数量
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
-    * localImageType  镜像类型，包含如下:  - other_image : 非SWR镜像  - swr_image : SWR镜像
+    * localImageType  **参数解释** : 镜像类型 **约束限制** : 不涉及 **取值范围** : 包含如下两种:  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** : 不涉及
     * imageSize  镜像大小，单位字节
     * startLatestUpdateTime  最近更新时间搜索开始日期，时间单位：毫秒（ms）
     * endLatestUpdateTime  最近更新时间搜索结束日期，时间单位：毫秒（ms）
@@ -78,7 +78,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示数量
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
-    * localImageType  镜像类型，包含如下:  - other_image : 非SWR镜像  - swr_image : SWR镜像
+    * localImageType  **参数解释** : 镜像类型 **约束限制** : 不涉及 **取值范围** : 包含如下两种:  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** : 不涉及
     * imageSize  镜像大小，单位字节
     * startLatestUpdateTime  最近更新时间搜索开始日期，时间单位：毫秒（ms）
     * endLatestUpdateTime  最近更新时间搜索结束日期，时间单位：毫秒（ms）
@@ -151,7 +151,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示数量
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
-    * localImageType  镜像类型，包含如下:  - other_image : 非SWR镜像  - swr_image : SWR镜像
+    * localImageType  **参数解释** : 镜像类型 **约束限制** : 不涉及 **取值范围** : 包含如下两种:  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** : 不涉及
     * imageSize  镜像大小，单位字节
     * startLatestUpdateTime  最近更新时间搜索开始日期，时间单位：毫秒（ms）
     * endLatestUpdateTime  最近更新时间搜索结束日期，时间单位：毫秒（ms）
@@ -203,7 +203,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示数量
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
-    * localImageType  镜像类型，包含如下:  - other_image : 非SWR镜像  - swr_image : SWR镜像
+    * localImageType  **参数解释** : 镜像类型 **约束限制** : 不涉及 **取值范围** : 包含如下两种:  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** : 不涉及
     * imageSize  镜像大小，单位字节
     * startLatestUpdateTime  最近更新时间搜索开始日期，时间单位：毫秒（ms）
     * endLatestUpdateTime  最近更新时间搜索结束日期，时间单位：毫秒（ms）
@@ -255,7 +255,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示数量
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
-    * localImageType  镜像类型，包含如下:  - other_image : 非SWR镜像  - swr_image : SWR镜像
+    * localImageType  **参数解释** : 镜像类型 **约束限制** : 不涉及 **取值范围** : 包含如下两种:  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** : 不涉及
     * imageSize  镜像大小，单位字节
     * startLatestUpdateTime  最近更新时间搜索开始日期，时间单位：毫秒（ms）
     * endLatestUpdateTime  最近更新时间搜索结束日期，时间单位：毫秒（ms）
@@ -439,6 +439,9 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['localImageType']) && (mb_strlen($this->container['localImageType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'localImageType', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['localImageType']) && !preg_match("/^(other_image|swr_image)$/", $this->container['localImageType'])) {
+                $invalidProperties[] = "invalid value for 'localImageType', must be conform to the pattern /^(other_image|swr_image)$/.";
             }
             if (!is_null($this->container['imageSize']) && ($this->container['imageSize'] > 2147483547)) {
                 $invalidProperties[] = "invalid value for 'imageSize', must be smaller than or equal to 2147483547.";
@@ -678,7 +681,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets localImageType
-    *  镜像类型，包含如下:  - other_image : 非SWR镜像  - swr_image : SWR镜像
+    *  **参数解释** : 镜像类型 **约束限制** : 不涉及 **取值范围** : 包含如下两种:  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** : 不涉及
     *
     * @return string|null
     */
@@ -690,7 +693,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets localImageType
     *
-    * @param string|null $localImageType 镜像类型，包含如下:  - other_image : 非SWR镜像  - swr_image : SWR镜像
+    * @param string|null $localImageType **参数解释** : 镜像类型 **约束限制** : 不涉及 **取值范围** : 包含如下两种:  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** : 不涉及
     *
     * @return $this
     */

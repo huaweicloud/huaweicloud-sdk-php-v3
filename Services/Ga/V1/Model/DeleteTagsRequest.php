@@ -20,7 +20,7 @@ class DeleteTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  资源类型。
+    * resourceType  资源类型，取值范围： - ga-accelerators：加速实例 - ga-listeners：监听器
     * resourceId  资源ID。
     * body  body
     *
@@ -34,7 +34,7 @@ class DeleteTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  资源类型。
+    * resourceType  资源类型，取值范围： - ga-accelerators：加速实例 - ga-listeners：监听器
     * resourceId  资源ID。
     * body  body
     *
@@ -69,7 +69,7 @@ class DeleteTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  资源类型。
+    * resourceType  资源类型，取值范围： - ga-accelerators：加速实例 - ga-listeners：监听器
     * resourceId  资源ID。
     * body  body
     *
@@ -83,7 +83,7 @@ class DeleteTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  资源类型。
+    * resourceType  资源类型，取值范围： - ga-accelerators：加速实例 - ga-listeners：监听器
     * resourceId  资源ID。
     * body  body
     *
@@ -97,7 +97,7 @@ class DeleteTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  资源类型。
+    * resourceType  资源类型，取值范围： - ga-accelerators：加速实例 - ga-listeners：监听器
     * resourceId  资源ID。
     * body  body
     *
@@ -211,7 +211,7 @@ class DeleteTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  资源类型。
+    *  资源类型，取值范围： - ga-accelerators：加速实例 - ga-listeners：监听器
     *
     * @return \HuaweiCloud\SDK\Ga\V1\Model\ResourceType
     */
@@ -223,7 +223,7 @@ class DeleteTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param \HuaweiCloud\SDK\Ga\V1\Model\ResourceType $resourceType 资源类型。
+    * @param \HuaweiCloud\SDK\Ga\V1\Model\ResourceType $resourceType 资源类型，取值范围： - ga-accelerators：加速实例 - ga-listeners：监听器
     *
     * @return $this
     */

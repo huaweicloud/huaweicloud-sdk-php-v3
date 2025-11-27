@@ -28,7 +28,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
     * imageVersion  镜像版本名称
     * imageId  镜像id
     * checkName  基线名称
-    * checkType  基线类型
+    * checkType  **参数解释** : 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **约束限制** : 不涉及 **取值范围** : check_type的值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-configs **默认取值** : 不涉及
     * checkRuleId  检查项id
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
@@ -60,7 +60,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
     * imageVersion  镜像版本名称
     * imageId  镜像id
     * checkName  基线名称
-    * checkType  基线类型
+    * checkType  **参数解释** : 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **约束限制** : 不涉及 **取值范围** : check_type的值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-configs **默认取值** : 不涉及
     * checkRuleId  检查项id
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
@@ -113,7 +113,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
     * imageVersion  镜像版本名称
     * imageId  镜像id
     * checkName  基线名称
-    * checkType  基线类型
+    * checkType  **参数解释** : 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **约束限制** : 不涉及 **取值范围** : check_type的值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-configs **默认取值** : 不涉及
     * checkRuleId  检查项id
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
@@ -145,7 +145,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
     * imageVersion  镜像版本名称
     * imageId  镜像id
     * checkName  基线名称
-    * checkType  基线类型
+    * checkType  **参数解释** : 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **约束限制** : 不涉及 **取值范围** : check_type的值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-configs **默认取值** : 不涉及
     * checkRuleId  检查项id
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
@@ -177,7 +177,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
     * imageVersion  镜像版本名称
     * imageId  镜像id
     * checkName  基线名称
-    * checkType  基线类型
+    * checkType  **参数解释** : 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **约束限制** : 不涉及 **取值范围** : check_type的值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-configs **默认取值** : 不涉及
     * checkRuleId  检查项id
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
@@ -580,7 +580,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkType
-    *  基线类型
+    *  **参数解释** : 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **约束限制** : 不涉及 **取值范围** : check_type的值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-configs **默认取值** : 不涉及
     *
     * @return string
     */
@@ -592,7 +592,7 @@ class ShowImageCheckRuleDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets checkType
     *
-    * @param string $checkType 基线类型
+    * @param string $checkType **参数解释** : 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **约束限制** : 不涉及 **取值范围** : check_type的值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-configs **默认取值** : 不涉及
     *
     * @return $this
     */

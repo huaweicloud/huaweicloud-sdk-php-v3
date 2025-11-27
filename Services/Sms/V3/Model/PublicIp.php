@@ -20,9 +20,9 @@ class PublicIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  弹性公网IP类型，默认为5_bgp
+    * type  弹性公网IP类型，默认为5_bgp。 详细类型请参考EIP服务API文档中“查询弹性公网IP详情”部分，查看响应参数的中type字段描述
     * bandwidthSize  带宽大小，单位：Mbit/s。 调整带宽时的最小单位会根据带宽范围不同存在差异。 小于等于300Mbit/s，默认最小单位为1Mbit/s。300Mbit/s~1000Mbit/s，默认最小单位为50Mbit/s。大于1000Mbit/s：默认最小单位为500Mbit/s。
-    * bandwidthShareType  带宽共享类型
+    * bandwidthShareType  带宽共享类型（长文本信息，非枚举数据，来源于EIP服务） 详细类型请参考EIP服务API文档中“查询弹性公网IP详情”部分，查看响应参数的中bandwidth_share_type字段描述
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class PublicIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  弹性公网IP类型，默认为5_bgp
+    * type  弹性公网IP类型，默认为5_bgp。 详细类型请参考EIP服务API文档中“查询弹性公网IP详情”部分，查看响应参数的中type字段描述
     * bandwidthSize  带宽大小，单位：Mbit/s。 调整带宽时的最小单位会根据带宽范围不同存在差异。 小于等于300Mbit/s，默认最小单位为1Mbit/s。300Mbit/s~1000Mbit/s，默认最小单位为50Mbit/s。大于1000Mbit/s：默认最小单位为500Mbit/s。
-    * bandwidthShareType  带宽共享类型
+    * bandwidthShareType  带宽共享类型（长文本信息，非枚举数据，来源于EIP服务） 详细类型请参考EIP服务API文档中“查询弹性公网IP详情”部分，查看响应参数的中bandwidth_share_type字段描述
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class PublicIp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  弹性公网IP类型，默认为5_bgp
+    * type  弹性公网IP类型，默认为5_bgp。 详细类型请参考EIP服务API文档中“查询弹性公网IP详情”部分，查看响应参数的中type字段描述
     * bandwidthSize  带宽大小，单位：Mbit/s。 调整带宽时的最小单位会根据带宽范围不同存在差异。 小于等于300Mbit/s，默认最小单位为1Mbit/s。300Mbit/s~1000Mbit/s，默认最小单位为50Mbit/s。大于1000Mbit/s：默认最小单位为500Mbit/s。
-    * bandwidthShareType  带宽共享类型
+    * bandwidthShareType  带宽共享类型（长文本信息，非枚举数据，来源于EIP服务） 详细类型请参考EIP服务API文档中“查询弹性公网IP详情”部分，查看响应参数的中bandwidth_share_type字段描述
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class PublicIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  弹性公网IP类型，默认为5_bgp
+    * type  弹性公网IP类型，默认为5_bgp。 详细类型请参考EIP服务API文档中“查询弹性公网IP详情”部分，查看响应参数的中type字段描述
     * bandwidthSize  带宽大小，单位：Mbit/s。 调整带宽时的最小单位会根据带宽范围不同存在差异。 小于等于300Mbit/s，默认最小单位为1Mbit/s。300Mbit/s~1000Mbit/s，默认最小单位为50Mbit/s。大于1000Mbit/s：默认最小单位为500Mbit/s。
-    * bandwidthShareType  带宽共享类型
+    * bandwidthShareType  带宽共享类型（长文本信息，非枚举数据，来源于EIP服务） 详细类型请参考EIP服务API文档中“查询弹性公网IP详情”部分，查看响应参数的中bandwidth_share_type字段描述
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class PublicIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  弹性公网IP类型，默认为5_bgp
+    * type  弹性公网IP类型，默认为5_bgp。 详细类型请参考EIP服务API文档中“查询弹性公网IP详情”部分，查看响应参数的中type字段描述
     * bandwidthSize  带宽大小，单位：Mbit/s。 调整带宽时的最小单位会根据带宽范围不同存在差异。 小于等于300Mbit/s，默认最小单位为1Mbit/s。300Mbit/s~1000Mbit/s，默认最小单位为50Mbit/s。大于1000Mbit/s：默认最小单位为500Mbit/s。
-    * bandwidthShareType  带宽共享类型
+    * bandwidthShareType  带宽共享类型（长文本信息，非枚举数据，来源于EIP服务） 详细类型请参考EIP服务API文档中“查询弹性公网IP详情”部分，查看响应参数的中bandwidth_share_type字段描述
     *
     * @var string[]
     */
@@ -220,7 +220,7 @@ class PublicIp implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  弹性公网IP类型，默认为5_bgp
+    *  弹性公网IP类型，默认为5_bgp。 详细类型请参考EIP服务API文档中“查询弹性公网IP详情”部分，查看响应参数的中type字段描述
     *
     * @return string
     */
@@ -232,7 +232,7 @@ class PublicIp implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 弹性公网IP类型，默认为5_bgp
+    * @param string $type 弹性公网IP类型，默认为5_bgp。 详细类型请参考EIP服务API文档中“查询弹性公网IP详情”部分，查看响应参数的中type字段描述
     *
     * @return $this
     */
@@ -268,7 +268,7 @@ class PublicIp implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidthShareType
-    *  带宽共享类型
+    *  带宽共享类型（长文本信息，非枚举数据，来源于EIP服务） 详细类型请参考EIP服务API文档中“查询弹性公网IP详情”部分，查看响应参数的中bandwidth_share_type字段描述
     *
     * @return string|null
     */
@@ -280,7 +280,7 @@ class PublicIp implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidthShareType
     *
-    * @param string|null $bandwidthShareType 带宽共享类型
+    * @param string|null $bandwidthShareType 带宽共享类型（长文本信息，非枚举数据，来源于EIP服务） 详细类型请参考EIP服务API文档中“查询弹性公网IP详情”部分，查看响应参数的中bandwidth_share_type字段描述
     *
     * @return $this
     */

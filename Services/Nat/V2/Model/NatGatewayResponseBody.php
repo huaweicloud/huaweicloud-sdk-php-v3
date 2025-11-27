@@ -24,10 +24,10 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * tenantId  项目的ID。
     * name  公网NAT网关实例的名字，长度限制为64。
     * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
-    * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
+    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
+    * status  公网NAT网关实例的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 INACTIVE: 不可用
     * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
-    * createdAt  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * createdAt  公网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * routerId  VPC的id。
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
     * enterpriseProjectId  企业项目ID。 创建公网NAT网关实例时，关联的企业项目ID。
@@ -36,6 +36,8 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * billingInfo  订单信息。此字段只有在订购包周期资源时才会有订单信息，而在订购按需资源时则为空。
     * dnatRulesLimit  公网NAT网关下DNAT规则数量限制，默认为200。
     * snatRulePublicIpLimit  公网NAT网关下SNAT规则EIP池中EIP数量限制，默认为20。
+    * ppsMax  网关每秒能够接收或发送的数据包数量，代表网络设备的流量处理能力。
+    * bpsMax  网关每秒能够接收或发送的带宽大小，代表网络设备的流量处理能力。单位M
     *
     * @var string[]
     */
@@ -47,7 +49,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
             'spec' => 'string',
             'status' => 'string',
             'adminStateUp' => 'bool',
-            'createdAt' => 'string',
+            'createdAt' => '\DateTime',
             'routerId' => 'string',
             'internalNetworkId' => 'string',
             'enterpriseProjectId' => 'string',
@@ -55,7 +57,9 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
             'ngportIpAddress' => 'string',
             'billingInfo' => 'string',
             'dnatRulesLimit' => 'int',
-            'snatRulePublicIpLimit' => 'int'
+            'snatRulePublicIpLimit' => 'int',
+            'ppsMax' => 'int',
+            'bpsMax' => 'int'
     ];
 
     /**
@@ -64,10 +68,10 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * tenantId  项目的ID。
     * name  公网NAT网关实例的名字，长度限制为64。
     * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
-    * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
+    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
+    * status  公网NAT网关实例的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 INACTIVE: 不可用
     * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
-    * createdAt  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * createdAt  公网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * routerId  VPC的id。
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
     * enterpriseProjectId  企业项目ID。 创建公网NAT网关实例时，关联的企业项目ID。
@@ -76,6 +80,8 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * billingInfo  订单信息。此字段只有在订购包周期资源时才会有订单信息，而在订购按需资源时则为空。
     * dnatRulesLimit  公网NAT网关下DNAT规则数量限制，默认为200。
     * snatRulePublicIpLimit  公网NAT网关下SNAT规则EIP池中EIP数量限制，默认为20。
+    * ppsMax  网关每秒能够接收或发送的数据包数量，代表网络设备的流量处理能力。
+    * bpsMax  网关每秒能够接收或发送的带宽大小，代表网络设备的流量处理能力。单位M
     *
     * @var string[]
     */
@@ -87,7 +93,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
         'spec' => null,
         'status' => null,
         'adminStateUp' => null,
-        'createdAt' => null,
+        'createdAt' => 'date-time',
         'routerId' => null,
         'internalNetworkId' => null,
         'enterpriseProjectId' => null,
@@ -95,7 +101,9 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
         'ngportIpAddress' => null,
         'billingInfo' => null,
         'dnatRulesLimit' => 'int64',
-        'snatRulePublicIpLimit' => 'int32'
+        'snatRulePublicIpLimit' => 'int32',
+        'ppsMax' => null,
+        'bpsMax' => null
     ];
 
     /**
@@ -125,10 +133,10 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * tenantId  项目的ID。
     * name  公网NAT网关实例的名字，长度限制为64。
     * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
-    * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
+    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
+    * status  公网NAT网关实例的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 INACTIVE: 不可用
     * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
-    * createdAt  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * createdAt  公网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * routerId  VPC的id。
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
     * enterpriseProjectId  企业项目ID。 创建公网NAT网关实例时，关联的企业项目ID。
@@ -137,6 +145,8 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * billingInfo  订单信息。此字段只有在订购包周期资源时才会有订单信息，而在订购按需资源时则为空。
     * dnatRulesLimit  公网NAT网关下DNAT规则数量限制，默认为200。
     * snatRulePublicIpLimit  公网NAT网关下SNAT规则EIP池中EIP数量限制，默认为20。
+    * ppsMax  网关每秒能够接收或发送的数据包数量，代表网络设备的流量处理能力。
+    * bpsMax  网关每秒能够接收或发送的带宽大小，代表网络设备的流量处理能力。单位M
     *
     * @var string[]
     */
@@ -156,7 +166,9 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
             'ngportIpAddress' => 'ngport_ip_address',
             'billingInfo' => 'billing_info',
             'dnatRulesLimit' => 'dnat_rules_limit',
-            'snatRulePublicIpLimit' => 'snat_rule_public_ip_limit'
+            'snatRulePublicIpLimit' => 'snat_rule_public_ip_limit',
+            'ppsMax' => 'pps_max',
+            'bpsMax' => 'bps_max'
     ];
 
     /**
@@ -165,10 +177,10 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * tenantId  项目的ID。
     * name  公网NAT网关实例的名字，长度限制为64。
     * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
-    * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
+    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
+    * status  公网NAT网关实例的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 INACTIVE: 不可用
     * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
-    * createdAt  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * createdAt  公网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * routerId  VPC的id。
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
     * enterpriseProjectId  企业项目ID。 创建公网NAT网关实例时，关联的企业项目ID。
@@ -177,6 +189,8 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * billingInfo  订单信息。此字段只有在订购包周期资源时才会有订单信息，而在订购按需资源时则为空。
     * dnatRulesLimit  公网NAT网关下DNAT规则数量限制，默认为200。
     * snatRulePublicIpLimit  公网NAT网关下SNAT规则EIP池中EIP数量限制，默认为20。
+    * ppsMax  网关每秒能够接收或发送的数据包数量，代表网络设备的流量处理能力。
+    * bpsMax  网关每秒能够接收或发送的带宽大小，代表网络设备的流量处理能力。单位M
     *
     * @var string[]
     */
@@ -196,7 +210,9 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
             'ngportIpAddress' => 'setNgportIpAddress',
             'billingInfo' => 'setBillingInfo',
             'dnatRulesLimit' => 'setDnatRulesLimit',
-            'snatRulePublicIpLimit' => 'setSnatRulePublicIpLimit'
+            'snatRulePublicIpLimit' => 'setSnatRulePublicIpLimit',
+            'ppsMax' => 'setPpsMax',
+            'bpsMax' => 'setBpsMax'
     ];
 
     /**
@@ -205,10 +221,10 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * tenantId  项目的ID。
     * name  公网NAT网关实例的名字，长度限制为64。
     * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
-    * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
+    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
+    * status  公网NAT网关实例的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 INACTIVE: 不可用
     * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
-    * createdAt  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * createdAt  公网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * routerId  VPC的id。
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
     * enterpriseProjectId  企业项目ID。 创建公网NAT网关实例时，关联的企业项目ID。
@@ -217,6 +233,8 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * billingInfo  订单信息。此字段只有在订购包周期资源时才会有订单信息，而在订购按需资源时则为空。
     * dnatRulesLimit  公网NAT网关下DNAT规则数量限制，默认为200。
     * snatRulePublicIpLimit  公网NAT网关下SNAT规则EIP池中EIP数量限制，默认为20。
+    * ppsMax  网关每秒能够接收或发送的数据包数量，代表网络设备的流量处理能力。
+    * bpsMax  网关每秒能够接收或发送的带宽大小，代表网络设备的流量处理能力。单位M
     *
     * @var string[]
     */
@@ -236,7 +254,9 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
             'ngportIpAddress' => 'getNgportIpAddress',
             'billingInfo' => 'getBillingInfo',
             'dnatRulesLimit' => 'getDnatRulesLimit',
-            'snatRulePublicIpLimit' => 'getSnatRulePublicIpLimit'
+            'snatRulePublicIpLimit' => 'getSnatRulePublicIpLimit',
+            'ppsMax' => 'getPpsMax',
+            'bpsMax' => 'getBpsMax'
     ];
 
     /**
@@ -283,6 +303,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     const SPEC__2 = '2';
     const SPEC__3 = '3';
     const SPEC__4 = '4';
+    const SPEC__5 = '5';
     const STATUS_ACTIVE = 'ACTIVE';
     const STATUS_PENDING_CREATE = 'PENDING_CREATE';
     const STATUS_PENDING_UPDATE = 'PENDING_UPDATE';
@@ -302,6 +323,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
             self::SPEC__2,
             self::SPEC__3,
             self::SPEC__4,
+            self::SPEC__5,
         ];
     }
 
@@ -353,6 +375,8 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
         $this->container['billingInfo'] = isset($data['billingInfo']) ? $data['billingInfo'] : null;
         $this->container['dnatRulesLimit'] = isset($data['dnatRulesLimit']) ? $data['dnatRulesLimit'] : null;
         $this->container['snatRulePublicIpLimit'] = isset($data['snatRulePublicIpLimit']) ? $data['snatRulePublicIpLimit'] : null;
+        $this->container['ppsMax'] = isset($data['ppsMax']) ? $data['ppsMax'] : null;
+        $this->container['bpsMax'] = isset($data['bpsMax']) ? $data['bpsMax'] : null;
     }
 
     /**
@@ -363,45 +387,30 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-            if ((mb_strlen($this->container['id']) > 36)) {
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['id']) < 36)) {
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 36.";
             }
-        if ($this->container['tenantId'] === null) {
-            $invalidProperties[] = "'tenantId' can't be null";
-        }
-            if ((mb_strlen($this->container['tenantId']) > 36)) {
+            if (!is_null($this->container['tenantId']) && (mb_strlen($this->container['tenantId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'tenantId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['tenantId']) < 1)) {
+            if (!is_null($this->container['tenantId']) && (mb_strlen($this->container['tenantId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'tenantId', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-            if ((mb_strlen($this->container['name']) > 64)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
             }
-            if ((mb_strlen($this->container['name']) < 1)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['description'] === null) {
-            $invalidProperties[] = "'description' can't be null";
-        }
-            if ((mb_strlen($this->container['description']) > 255)) {
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['description']) < 0)) {
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['spec'] === null) {
-            $invalidProperties[] = "'spec' can't be null";
-        }
             $allowedValues = $this->getSpecAllowableValues();
                 if (!is_null($this->container['spec']) && !in_array($this->container['spec'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -410,9 +419,6 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['status'] === null) {
-            $invalidProperties[] = "'status' can't be null";
-        }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -421,77 +427,59 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['adminStateUp'] === null) {
-            $invalidProperties[] = "'adminStateUp' can't be null";
-        }
-        if ($this->container['createdAt'] === null) {
-            $invalidProperties[] = "'createdAt' can't be null";
-        }
-            if ((mb_strlen($this->container['createdAt']) > 36)) {
-                $invalidProperties[] = "invalid value for 'createdAt', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['createdAt']) < 1)) {
-                $invalidProperties[] = "invalid value for 'createdAt', the character length must be bigger than or equal to 1.";
-            }
-        if ($this->container['routerId'] === null) {
-            $invalidProperties[] = "'routerId' can't be null";
-        }
-            if ((mb_strlen($this->container['routerId']) > 36)) {
+            if (!is_null($this->container['routerId']) && (mb_strlen($this->container['routerId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'routerId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['routerId']) < 36)) {
+            if (!is_null($this->container['routerId']) && (mb_strlen($this->container['routerId']) < 36)) {
                 $invalidProperties[] = "invalid value for 'routerId', the character length must be bigger than or equal to 36.";
             }
-        if ($this->container['internalNetworkId'] === null) {
-            $invalidProperties[] = "'internalNetworkId' can't be null";
-        }
-            if ((mb_strlen($this->container['internalNetworkId']) > 36)) {
+            if (!is_null($this->container['internalNetworkId']) && (mb_strlen($this->container['internalNetworkId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'internalNetworkId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['internalNetworkId']) < 36)) {
+            if (!is_null($this->container['internalNetworkId']) && (mb_strlen($this->container['internalNetworkId']) < 36)) {
                 $invalidProperties[] = "invalid value for 'internalNetworkId', the character length must be bigger than or equal to 36.";
             }
-        if ($this->container['enterpriseProjectId'] === null) {
-            $invalidProperties[] = "'enterpriseProjectId' can't be null";
-        }
-            if ((mb_strlen($this->container['enterpriseProjectId']) > 36)) {
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['enterpriseProjectId']) < 1)) {
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['sessionConf'] === null) {
-            $invalidProperties[] = "'sessionConf' can't be null";
-        }
-        if ($this->container['ngportIpAddress'] === null) {
-            $invalidProperties[] = "'ngportIpAddress' can't be null";
-        }
-            if ((mb_strlen($this->container['ngportIpAddress']) > 15)) {
+            if (!is_null($this->container['ngportIpAddress']) && (mb_strlen($this->container['ngportIpAddress']) > 15)) {
                 $invalidProperties[] = "invalid value for 'ngportIpAddress', the character length must be smaller than or equal to 15.";
             }
-            if ((mb_strlen($this->container['ngportIpAddress']) < 7)) {
+            if (!is_null($this->container['ngportIpAddress']) && (mb_strlen($this->container['ngportIpAddress']) < 7)) {
                 $invalidProperties[] = "invalid value for 'ngportIpAddress', the character length must be bigger than or equal to 7.";
             }
-        if ($this->container['billingInfo'] === null) {
-            $invalidProperties[] = "'billingInfo' can't be null";
-        }
-        if ($this->container['dnatRulesLimit'] === null) {
-            $invalidProperties[] = "'dnatRulesLimit' can't be null";
-        }
-            if (($this->container['dnatRulesLimit'] > 100000)) {
+            if (!is_null($this->container['billingInfo']) && (mb_strlen($this->container['billingInfo']) > 128)) {
+                $invalidProperties[] = "invalid value for 'billingInfo', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['billingInfo']) && (mb_strlen($this->container['billingInfo']) < 0)) {
+                $invalidProperties[] = "invalid value for 'billingInfo', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['dnatRulesLimit']) && ($this->container['dnatRulesLimit'] > 100000)) {
                 $invalidProperties[] = "invalid value for 'dnatRulesLimit', must be smaller than or equal to 100000.";
             }
-            if (($this->container['dnatRulesLimit'] < 1)) {
+            if (!is_null($this->container['dnatRulesLimit']) && ($this->container['dnatRulesLimit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'dnatRulesLimit', must be bigger than or equal to 1.";
             }
-        if ($this->container['snatRulePublicIpLimit'] === null) {
-            $invalidProperties[] = "'snatRulePublicIpLimit' can't be null";
-        }
-            if (($this->container['snatRulePublicIpLimit'] > 100)) {
+            if (!is_null($this->container['snatRulePublicIpLimit']) && ($this->container['snatRulePublicIpLimit'] > 100)) {
                 $invalidProperties[] = "invalid value for 'snatRulePublicIpLimit', must be smaller than or equal to 100.";
             }
-            if (($this->container['snatRulePublicIpLimit'] < 1)) {
+            if (!is_null($this->container['snatRulePublicIpLimit']) && ($this->container['snatRulePublicIpLimit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'snatRulePublicIpLimit', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['ppsMax']) && ($this->container['ppsMax'] > 100000000)) {
+                $invalidProperties[] = "invalid value for 'ppsMax', must be smaller than or equal to 100000000.";
+            }
+            if (!is_null($this->container['ppsMax']) && ($this->container['ppsMax'] < 0)) {
+                $invalidProperties[] = "invalid value for 'ppsMax', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['bpsMax']) && ($this->container['bpsMax'] > 102400)) {
+                $invalidProperties[] = "invalid value for 'bpsMax', must be smaller than or equal to 102400.";
+            }
+            if (!is_null($this->container['bpsMax']) && ($this->container['bpsMax'] < 0)) {
+                $invalidProperties[] = "invalid value for 'bpsMax', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -511,7 +499,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * Gets id
     *  公网NAT网关实例的ID。
     *
-    * @return string
+    * @return string|null
     */
     public function getId()
     {
@@ -521,7 +509,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 公网NAT网关实例的ID。
+    * @param string|null $id 公网NAT网关实例的ID。
     *
     * @return $this
     */
@@ -535,7 +523,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * Gets tenantId
     *  项目的ID。
     *
-    * @return string
+    * @return string|null
     */
     public function getTenantId()
     {
@@ -545,7 +533,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets tenantId
     *
-    * @param string $tenantId 项目的ID。
+    * @param string|null $tenantId 项目的ID。
     *
     * @return $this
     */
@@ -559,7 +547,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * Gets name
     *  公网NAT网关实例的名字，长度限制为64。
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -569,7 +557,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 公网NAT网关实例的名字，长度限制为64。
+    * @param string|null $name 公网NAT网关实例的名字，长度限制为64。
     *
     * @return $this
     */
@@ -583,7 +571,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * Gets description
     *  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     *
-    * @return string
+    * @return string|null
     */
     public function getDescription()
     {
@@ -593,7 +581,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
+    * @param string|null $description 公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     *
     * @return $this
     */
@@ -605,9 +593,9 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets spec
-    *  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
+    *  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     *
-    * @return string
+    * @return string|null
     */
     public function getSpec()
     {
@@ -617,7 +605,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets spec
     *
-    * @param string $spec 公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
+    * @param string|null $spec 公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     *
     * @return $this
     */
@@ -629,9 +617,9 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
+    *  公网NAT网关实例的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 INACTIVE: 不可用
     *
-    * @return string
+    * @return string|null
     */
     public function getStatus()
     {
@@ -641,7 +629,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
+    * @param string|null $status 公网NAT网关实例的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 INACTIVE: 不可用
     *
     * @return $this
     */
@@ -655,7 +643,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * Gets adminStateUp
     *  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
     *
-    * @return bool
+    * @return bool|null
     */
     public function getAdminStateUp()
     {
@@ -665,7 +653,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets adminStateUp
     *
-    * @param bool $adminStateUp 解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
+    * @param bool|null $adminStateUp 解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
     *
     * @return $this
     */
@@ -677,9 +665,9 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    *  公网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     *
-    * @return string
+    * @return \DateTime|null
     */
     public function getCreatedAt()
     {
@@ -689,7 +677,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string $createdAt 公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * @param \DateTime|null $createdAt 公网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     *
     * @return $this
     */
@@ -703,7 +691,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * Gets routerId
     *  VPC的id。
     *
-    * @return string
+    * @return string|null
     */
     public function getRouterId()
     {
@@ -713,7 +701,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets routerId
     *
-    * @param string $routerId VPC的id。
+    * @param string|null $routerId VPC的id。
     *
     * @return $this
     */
@@ -727,7 +715,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * Gets internalNetworkId
     *  公网NAT网关下行口（DVR的下一跳）所属的network id。
     *
-    * @return string
+    * @return string|null
     */
     public function getInternalNetworkId()
     {
@@ -737,7 +725,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets internalNetworkId
     *
-    * @param string $internalNetworkId 公网NAT网关下行口（DVR的下一跳）所属的network id。
+    * @param string|null $internalNetworkId 公网NAT网关下行口（DVR的下一跳）所属的network id。
     *
     * @return $this
     */
@@ -751,7 +739,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * Gets enterpriseProjectId
     *  企业项目ID。 创建公网NAT网关实例时，关联的企业项目ID。
     *
-    * @return string
+    * @return string|null
     */
     public function getEnterpriseProjectId()
     {
@@ -761,7 +749,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string $enterpriseProjectId 企业项目ID。 创建公网NAT网关实例时，关联的企业项目ID。
+    * @param string|null $enterpriseProjectId 企业项目ID。 创建公网NAT网关实例时，关联的企业项目ID。
     *
     * @return $this
     */
@@ -775,7 +763,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * Gets sessionConf
     *  sessionConf
     *
-    * @return \HuaweiCloud\SDK\Nat\V2\Model\SessionConfiguration
+    * @return \HuaweiCloud\SDK\Nat\V2\Model\SessionConfiguration|null
     */
     public function getSessionConf()
     {
@@ -785,7 +773,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets sessionConf
     *
-    * @param \HuaweiCloud\SDK\Nat\V2\Model\SessionConfiguration $sessionConf sessionConf
+    * @param \HuaweiCloud\SDK\Nat\V2\Model\SessionConfiguration|null $sessionConf sessionConf
     *
     * @return $this
     */
@@ -799,7 +787,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * Gets ngportIpAddress
     *  公网NAT网关私有IP地址，由VPC中子网分配。
     *
-    * @return string
+    * @return string|null
     */
     public function getNgportIpAddress()
     {
@@ -809,7 +797,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets ngportIpAddress
     *
-    * @param string $ngportIpAddress 公网NAT网关私有IP地址，由VPC中子网分配。
+    * @param string|null $ngportIpAddress 公网NAT网关私有IP地址，由VPC中子网分配。
     *
     * @return $this
     */
@@ -823,7 +811,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * Gets billingInfo
     *  订单信息。此字段只有在订购包周期资源时才会有订单信息，而在订购按需资源时则为空。
     *
-    * @return string
+    * @return string|null
     */
     public function getBillingInfo()
     {
@@ -833,7 +821,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets billingInfo
     *
-    * @param string $billingInfo 订单信息。此字段只有在订购包周期资源时才会有订单信息，而在订购按需资源时则为空。
+    * @param string|null $billingInfo 订单信息。此字段只有在订购包周期资源时才会有订单信息，而在订购按需资源时则为空。
     *
     * @return $this
     */
@@ -847,7 +835,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * Gets dnatRulesLimit
     *  公网NAT网关下DNAT规则数量限制，默认为200。
     *
-    * @return int
+    * @return int|null
     */
     public function getDnatRulesLimit()
     {
@@ -857,7 +845,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets dnatRulesLimit
     *
-    * @param int $dnatRulesLimit 公网NAT网关下DNAT规则数量限制，默认为200。
+    * @param int|null $dnatRulesLimit 公网NAT网关下DNAT规则数量限制，默认为200。
     *
     * @return $this
     */
@@ -871,7 +859,7 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     * Gets snatRulePublicIpLimit
     *  公网NAT网关下SNAT规则EIP池中EIP数量限制，默认为20。
     *
-    * @return int
+    * @return int|null
     */
     public function getSnatRulePublicIpLimit()
     {
@@ -881,13 +869,61 @@ class NatGatewayResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets snatRulePublicIpLimit
     *
-    * @param int $snatRulePublicIpLimit 公网NAT网关下SNAT规则EIP池中EIP数量限制，默认为20。
+    * @param int|null $snatRulePublicIpLimit 公网NAT网关下SNAT规则EIP池中EIP数量限制，默认为20。
     *
     * @return $this
     */
     public function setSnatRulePublicIpLimit($snatRulePublicIpLimit)
     {
         $this->container['snatRulePublicIpLimit'] = $snatRulePublicIpLimit;
+        return $this;
+    }
+
+    /**
+    * Gets ppsMax
+    *  网关每秒能够接收或发送的数据包数量，代表网络设备的流量处理能力。
+    *
+    * @return int|null
+    */
+    public function getPpsMax()
+    {
+        return $this->container['ppsMax'];
+    }
+
+    /**
+    * Sets ppsMax
+    *
+    * @param int|null $ppsMax 网关每秒能够接收或发送的数据包数量，代表网络设备的流量处理能力。
+    *
+    * @return $this
+    */
+    public function setPpsMax($ppsMax)
+    {
+        $this->container['ppsMax'] = $ppsMax;
+        return $this;
+    }
+
+    /**
+    * Gets bpsMax
+    *  网关每秒能够接收或发送的带宽大小，代表网络设备的流量处理能力。单位M
+    *
+    * @return int|null
+    */
+    public function getBpsMax()
+    {
+        return $this->container['bpsMax'];
+    }
+
+    /**
+    * Sets bpsMax
+    *
+    * @param int|null $bpsMax 网关每秒能够接收或发送的带宽大小，代表网络设备的流量处理能力。单位M
+    *
+    * @return $this
+    */
+    public function setBpsMax($bpsMax)
+    {
+        $this->container['bpsMax'] = $bpsMax;
         return $this;
     }
 

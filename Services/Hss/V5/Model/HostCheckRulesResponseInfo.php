@@ -32,6 +32,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
     * description  **参数解释** 忽略或加白的描述 **取值范围** 字符长度0-512位
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
+    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * fixFailedReason  **参数解释** 修复失败原因 **取值范围** 不涉及
     *
@@ -50,6 +51,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
             'description' => 'string',
             'enableFix' => 'int',
             'enableClick' => 'bool',
+            'enableVerify' => 'bool',
             'cancelIgnoreEnableClick' => 'bool',
             'fixFailedReason' => 'string'
     ];
@@ -68,6 +70,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
     * description  **参数解释** 忽略或加白的描述 **取值范围** 字符长度0-512位
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
+    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * fixFailedReason  **参数解释** 修复失败原因 **取值范围** 不涉及
     *
@@ -86,6 +89,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
         'description' => null,
         'enableFix' => 'int32',
         'enableClick' => null,
+        'enableVerify' => null,
         'cancelIgnoreEnableClick' => null,
         'fixFailedReason' => null
     ];
@@ -125,6 +129,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
     * description  **参数解释** 忽略或加白的描述 **取值范围** 字符长度0-512位
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
+    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * fixFailedReason  **参数解释** 修复失败原因 **取值范围** 不涉及
     *
@@ -143,6 +148,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
             'description' => 'description',
             'enableFix' => 'enable_fix',
             'enableClick' => 'enable_click',
+            'enableVerify' => 'enable_verify',
             'cancelIgnoreEnableClick' => 'cancel_ignore_enable_click',
             'fixFailedReason' => 'fix_failed_reason'
     ];
@@ -161,6 +167,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
     * description  **参数解释** 忽略或加白的描述 **取值范围** 字符长度0-512位
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
+    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * fixFailedReason  **参数解释** 修复失败原因 **取值范围** 不涉及
     *
@@ -179,6 +186,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'enableFix' => 'setEnableFix',
             'enableClick' => 'setEnableClick',
+            'enableVerify' => 'setEnableVerify',
             'cancelIgnoreEnableClick' => 'setCancelIgnoreEnableClick',
             'fixFailedReason' => 'setFixFailedReason'
     ];
@@ -197,6 +205,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
     * description  **参数解释** 忽略或加白的描述 **取值范围** 字符长度0-512位
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
+    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * fixFailedReason  **参数解释** 修复失败原因 **取值范围** 不涉及
     *
@@ -215,6 +224,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'enableFix' => 'getEnableFix',
             'enableClick' => 'getEnableClick',
+            'enableVerify' => 'getEnableVerify',
             'cancelIgnoreEnableClick' => 'getCancelIgnoreEnableClick',
             'fixFailedReason' => 'getFixFailedReason'
     ];
@@ -289,6 +299,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['enableFix'] = isset($data['enableFix']) ? $data['enableFix'] : null;
         $this->container['enableClick'] = isset($data['enableClick']) ? $data['enableClick'] : null;
+        $this->container['enableVerify'] = isset($data['enableVerify']) ? $data['enableVerify'] : null;
         $this->container['cancelIgnoreEnableClick'] = isset($data['cancelIgnoreEnableClick']) ? $data['cancelIgnoreEnableClick'] : null;
         $this->container['fixFailedReason'] = isset($data['fixFailedReason']) ? $data['fixFailedReason'] : null;
     }
@@ -669,6 +680,30 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
     public function setEnableClick($enableClick)
     {
         $this->container['enableClick'] = $enableClick;
+        return $this;
+    }
+
+    /**
+    * Gets enableVerify
+    *  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
+    *
+    * @return bool|null
+    */
+    public function getEnableVerify()
+    {
+        return $this->container['enableVerify'];
+    }
+
+    /**
+    * Sets enableVerify
+    *
+    * @param bool|null $enableVerify **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
+    *
+    * @return $this
+    */
+    public function setEnableVerify($enableVerify)
+    {
+        $this->container['enableVerify'] = $enableVerify;
         return $this;
     }
 

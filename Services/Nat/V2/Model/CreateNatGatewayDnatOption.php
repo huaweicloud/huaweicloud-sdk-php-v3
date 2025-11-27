@@ -24,12 +24,12 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * natGatewayId  公网NAT网关实例的ID。
-    * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
+    * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围: 0~65535。
     * floatingIpId  弹性公网IP的id。
-    * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
+    * externalServicePort  Floatingip对外提供服务的端口号。 取值范围: 0~65535。
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
-    * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
-    * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
+    * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明: 该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围: 1~65535。 约束: 只能以’-’字符连接端口范围。
+    * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明: 该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围: 1~65535。 约束: 只能以’-’字符连接端口范围。
     * globalEipId  全域弹性公网IP的id。
     *
     * @var string[]
@@ -54,12 +54,12 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * natGatewayId  公网NAT网关实例的ID。
-    * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
+    * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围: 0~65535。
     * floatingIpId  弹性公网IP的id。
-    * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
+    * externalServicePort  Floatingip对外提供服务的端口号。 取值范围: 0~65535。
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
-    * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
-    * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
+    * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明: 该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围: 1~65535。 约束: 只能以’-’字符连接端口范围。
+    * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明: 该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围: 1~65535。 约束: 只能以’-’字符连接端口范围。
     * globalEipId  全域弹性公网IP的id。
     *
     * @var string[]
@@ -105,12 +105,12 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * natGatewayId  公网NAT网关实例的ID。
-    * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
+    * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围: 0~65535。
     * floatingIpId  弹性公网IP的id。
-    * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
+    * externalServicePort  Floatingip对外提供服务的端口号。 取值范围: 0~65535。
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
-    * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
-    * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
+    * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明: 该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围: 1~65535。 约束: 只能以’-’字符连接端口范围。
+    * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明: 该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围: 1~65535。 约束: 只能以’-’字符连接端口范围。
     * globalEipId  全域弹性公网IP的id。
     *
     * @var string[]
@@ -135,12 +135,12 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * natGatewayId  公网NAT网关实例的ID。
-    * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
+    * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围: 0~65535。
     * floatingIpId  弹性公网IP的id。
-    * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
+    * externalServicePort  Floatingip对外提供服务的端口号。 取值范围: 0~65535。
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
-    * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
-    * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
+    * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明: 该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围: 1~65535。 约束: 只能以’-’字符连接端口范围。
+    * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明: 该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围: 1~65535。 约束: 只能以’-’字符连接端口范围。
     * globalEipId  全域弹性公网IP的id。
     *
     * @var string[]
@@ -165,12 +165,12 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
     * portId  虚拟机或者裸机的Port ID，对应虚拟私有云场景，与private_ip参数二选一。
     * privateIp  用户私有IP地址，对应专线、云连接场景，与port_id参数二选一。
     * natGatewayId  公网NAT网关实例的ID。
-    * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
+    * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围: 0~65535。
     * floatingIpId  弹性公网IP的id。
-    * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
+    * externalServicePort  Floatingip对外提供服务的端口号。 取值范围: 0~65535。
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
-    * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
-    * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
+    * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明: 该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围: 1~65535。 约束: 只能以’-’字符连接端口范围。
+    * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明: 该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围: 1~65535。 约束: 只能以’-’字符连接端口范围。
     * globalEipId  全域弹性公网IP的id。
     *
     * @var string[]
@@ -325,6 +325,24 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
         if ($this->container['protocol'] === null) {
             $invalidProperties[] = "'protocol' can't be null";
         }
+            if ((mb_strlen($this->container['protocol']) > 60)) {
+                $invalidProperties[] = "invalid value for 'protocol', the character length must be smaller than or equal to 60.";
+            }
+            if ((mb_strlen($this->container['protocol']) < 3)) {
+                $invalidProperties[] = "invalid value for 'protocol', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['internalServicePortRange']) && (mb_strlen($this->container['internalServicePortRange']) > 10)) {
+                $invalidProperties[] = "invalid value for 'internalServicePortRange', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['internalServicePortRange']) && (mb_strlen($this->container['internalServicePortRange']) < 1)) {
+                $invalidProperties[] = "invalid value for 'internalServicePortRange', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['externalServicePortRange']) && (mb_strlen($this->container['externalServicePortRange']) > 10)) {
+                $invalidProperties[] = "invalid value for 'externalServicePortRange', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['externalServicePortRange']) && (mb_strlen($this->container['externalServicePortRange']) < 1)) {
+                $invalidProperties[] = "invalid value for 'externalServicePortRange', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['globalEipId']) && (mb_strlen($this->container['globalEipId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'globalEipId', the character length must be smaller than or equal to 36.";
             }
@@ -443,7 +461,7 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets internalServicePort
-    *  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
+    *  虚拟机或者裸机对外提供服务的协议端口号。 取值范围: 0~65535。
     *
     * @return int
     */
@@ -455,7 +473,7 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
     /**
     * Sets internalServicePort
     *
-    * @param int $internalServicePort 虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
+    * @param int $internalServicePort 虚拟机或者裸机对外提供服务的协议端口号。 取值范围: 0~65535。
     *
     * @return $this
     */
@@ -491,7 +509,7 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets externalServicePort
-    *  Floatingip对外提供服务的端口号。 取值范围：0~65535。
+    *  Floatingip对外提供服务的端口号。 取值范围: 0~65535。
     *
     * @return int
     */
@@ -503,7 +521,7 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
     /**
     * Sets externalServicePort
     *
-    * @param int $externalServicePort Floatingip对外提供服务的端口号。 取值范围：0~65535。
+    * @param int $externalServicePort Floatingip对外提供服务的端口号。 取值范围: 0~65535。
     *
     * @return $this
     */
@@ -539,7 +557,7 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets internalServicePortRange
-    *  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
+    *  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明: 该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围: 1~65535。 约束: 只能以’-’字符连接端口范围。
     *
     * @return string|null
     */
@@ -551,7 +569,7 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
     /**
     * Sets internalServicePortRange
     *
-    * @param string|null $internalServicePortRange 虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
+    * @param string|null $internalServicePortRange 虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明: 该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围: 1~65535。 约束: 只能以’-’字符连接端口范围。
     *
     * @return $this
     */
@@ -563,7 +581,7 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets externalServicePortRange
-    *  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
+    *  Floatingip对外提供服务的端口号范围。 功能说明: 该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围: 1~65535。 约束: 只能以’-’字符连接端口范围。
     *
     * @return string|null
     */
@@ -575,7 +593,7 @@ class CreateNatGatewayDnatOption implements ModelInterface, ArrayAccess
     /**
     * Sets externalServicePortRange
     *
-    * @param string|null $externalServicePortRange Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
+    * @param string|null $externalServicePortRange Floatingip对外提供服务的端口号范围。 功能说明: 该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围: 1~65535。 约束: 只能以’-’字符连接端口范围。
     *
     * @return $this
     */

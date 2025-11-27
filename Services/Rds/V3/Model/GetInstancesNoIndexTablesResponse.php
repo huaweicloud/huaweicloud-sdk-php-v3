@@ -21,20 +21,22 @@ class GetInstancesNoIndexTablesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * tables  特殊表格列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'tables' => '\HuaweiCloud\SDK\Rds\V3\Model\Table[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * tables  特殊表格列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'tables' => null
     ];
 
     /**
@@ -60,29 +62,32 @@ class GetInstancesNoIndexTablesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * tables  特殊表格列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'tables' => 'tables'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * tables  特殊表格列表。
     *
     * @var string[]
     */
     protected static $setters = [
+            'tables' => 'setTables'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * tables  特殊表格列表。
     *
     * @var string[]
     */
     protected static $getters = [
+            'tables' => 'getTables'
     ];
 
     /**
@@ -143,6 +148,7 @@ class GetInstancesNoIndexTablesResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['tables'] = isset($data['tables']) ? $data['tables'] : null;
     }
 
     /**
@@ -165,6 +171,30 @@ class GetInstancesNoIndexTablesResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets tables
+    *  特殊表格列表。
+    *
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\Table[]|null
+    */
+    public function getTables()
+    {
+        return $this->container['tables'];
+    }
+
+    /**
+    * Sets tables
+    *
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\Table[]|null $tables 特殊表格列表。
+    *
+    * @return $this
+    */
+    public function setTables($tables)
+    {
+        $this->container['tables'] = $tables;
+        return $this;
     }
 
     /**

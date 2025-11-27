@@ -21,7 +21,7 @@ class CloneLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * loadbalancerList  loadbalancerList
+    * loadbalancerList  **参数解释**：新实例信息。
     * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * jobId  **参数解释**：实例复制任务ID。  **取值范围**：不涉及
     *
@@ -35,7 +35,7 @@ class CloneLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * loadbalancerList  loadbalancerList
+    * loadbalancerList  **参数解释**：新实例信息。
     * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * jobId  **参数解释**：实例复制任务ID。  **取值范围**：不涉及
     *
@@ -70,7 +70,7 @@ class CloneLoadbalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * loadbalancerList  loadbalancerList
+    * loadbalancerList  **参数解释**：新实例信息。
     * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * jobId  **参数解释**：实例复制任务ID。  **取值范围**：不涉及
     *
@@ -84,7 +84,7 @@ class CloneLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * loadbalancerList  loadbalancerList
+    * loadbalancerList  **参数解释**：新实例信息。
     * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * jobId  **参数解释**：实例复制任务ID。  **取值范围**：不涉及
     *
@@ -98,7 +98,7 @@ class CloneLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * loadbalancerList  loadbalancerList
+    * loadbalancerList  **参数解释**：新实例信息。
     * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * jobId  **参数解释**：实例复制任务ID。  **取值范围**：不涉及
     *
@@ -197,7 +197,7 @@ class CloneLoadbalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets loadbalancerList
-    *  loadbalancerList
+    *  **参数解释**：新实例信息。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\CloneLoadbalancerResponseBodyLoadbalancerList[]|null
     */
@@ -209,7 +209,7 @@ class CloneLoadbalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets loadbalancerList
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\CloneLoadbalancerResponseBodyLoadbalancerList[]|null $loadbalancerList loadbalancerList
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\CloneLoadbalancerResponseBodyLoadbalancerList[]|null $loadbalancerList **参数解释**：新实例信息。
     *
     * @return $this
     */

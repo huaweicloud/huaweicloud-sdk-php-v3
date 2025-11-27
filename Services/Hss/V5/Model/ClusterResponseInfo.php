@@ -20,13 +20,13 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterName  集群名称
-    * clusterId  集群ID
-    * clusterVersion  集群版本
-    * protectStatus  **参数解释**： 防护状态 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
-    * policyNum  策略数量
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
+    * clusterId  **参数解释**： 集群ID **取值范围**： 不涉及
+    * clusterVersion  **参数解释**： 集群版本 **取值范围**： 不涉及
+    * protectStatus  **参数解释**： 白名单规则类型 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
+    * policyNum  **参数解释**： 策略数量 **取值范围**： 不涉及
     * clusterStatus  **参数解释**： 集群运行状态 **取值范围**: - Available：可用。 - Unavailable：不可用。
-    * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
+    * clusterType  **参数解释**： 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterName  集群名称
-    * clusterId  集群ID
-    * clusterVersion  集群版本
-    * protectStatus  **参数解释**： 防护状态 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
-    * policyNum  策略数量
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
+    * clusterId  **参数解释**： 集群ID **取值范围**： 不涉及
+    * clusterVersion  **参数解释**： 集群版本 **取值范围**： 不涉及
+    * protectStatus  **参数解释**： 白名单规则类型 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
+    * policyNum  **参数解释**： 策略数量 **取值范围**： 不涉及
     * clusterStatus  **参数解释**： 集群运行状态 **取值范围**: - Available：可用。 - Unavailable：不可用。
-    * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
+    * clusterType  **参数解释**： 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterName  集群名称
-    * clusterId  集群ID
-    * clusterVersion  集群版本
-    * protectStatus  **参数解释**： 防护状态 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
-    * policyNum  策略数量
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
+    * clusterId  **参数解释**： 集群ID **取值范围**： 不涉及
+    * clusterVersion  **参数解释**： 集群版本 **取值范围**： 不涉及
+    * protectStatus  **参数解释**： 白名单规则类型 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
+    * policyNum  **参数解释**： 策略数量 **取值范围**： 不涉及
     * clusterStatus  **参数解释**： 集群运行状态 **取值范围**: - Available：可用。 - Unavailable：不可用。
-    * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
+    * clusterType  **参数解释**： 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterName  集群名称
-    * clusterId  集群ID
-    * clusterVersion  集群版本
-    * protectStatus  **参数解释**： 防护状态 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
-    * policyNum  策略数量
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
+    * clusterId  **参数解释**： 集群ID **取值范围**： 不涉及
+    * clusterVersion  **参数解释**： 集群版本 **取值范围**： 不涉及
+    * protectStatus  **参数解释**： 白名单规则类型 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
+    * policyNum  **参数解释**： 策略数量 **取值范围**： 不涉及
     * clusterStatus  **参数解释**： 集群运行状态 **取值范围**: - Available：可用。 - Unavailable：不可用。
-    * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
+    * clusterType  **参数解释**： 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterName  集群名称
-    * clusterId  集群ID
-    * clusterVersion  集群版本
-    * protectStatus  **参数解释**： 防护状态 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
-    * policyNum  策略数量
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
+    * clusterId  **参数解释**： 集群ID **取值范围**： 不涉及
+    * clusterVersion  **参数解释**： 集群版本 **取值范围**： 不涉及
+    * protectStatus  **参数解释**： 白名单规则类型 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
+    * policyNum  **参数解释**： 策略数量 **取值范围**： 不涉及
     * clusterStatus  **参数解释**： 集群运行状态 **取值范围**: - Available：可用。 - Unavailable：不可用。
-    * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
+    * clusterType  **参数解释**： 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
     *
     * @var string[]
     */
@@ -282,7 +282,7 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterName
-    *  集群名称
+    *  **参数解释**： 集群名称 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -294,7 +294,7 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterName
     *
-    * @param string|null $clusterName 集群名称
+    * @param string|null $clusterName **参数解释**： 集群名称 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -306,7 +306,7 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群ID
+    *  **参数解释**： 集群ID **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -318,7 +318,7 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群ID
+    * @param string|null $clusterId **参数解释**： 集群ID **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -330,7 +330,7 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterVersion
-    *  集群版本
+    *  **参数解释**： 集群版本 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -342,7 +342,7 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterVersion
     *
-    * @param string|null $clusterVersion 集群版本
+    * @param string|null $clusterVersion **参数解释**： 集群版本 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -354,7 +354,7 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  **参数解释**： 防护状态 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
+    *  **参数解释**： 白名单规则类型 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
     *
     * @return string|null
     */
@@ -366,7 +366,7 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param string|null $protectStatus **参数解释**： 防护状态 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
+    * @param string|null $protectStatus **参数解释**： 白名单规则类型 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
     *
     * @return $this
     */
@@ -378,7 +378,7 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyNum
-    *  策略数量
+    *  **参数解释**： 策略数量 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -390,7 +390,7 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets policyNum
     *
-    * @param int|null $policyNum 策略数量
+    * @param int|null $policyNum **参数解释**： 策略数量 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -426,7 +426,7 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterType
-    *  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
+    *  **参数解释**： 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
     *
     * @return string|null
     */
@@ -438,7 +438,7 @@ class ClusterResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterType
     *
-    * @param string|null $clusterType 集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
+    * @param string|null $clusterType **参数解释**： 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
     *
     * @return $this
     */

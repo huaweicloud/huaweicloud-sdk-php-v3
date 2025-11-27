@@ -305,20 +305,20 @@ class MigProject implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 254)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 254.";
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 255)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 255.";
             }
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 1)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 0)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-            if ((mb_strlen($this->container['name']) > 19)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 19.";
+            if ((mb_strlen($this->container['name']) > 20)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 20.";
             }
-            if ((mb_strlen($this->container['name']) < 2)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 2.";
+            if ((mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";

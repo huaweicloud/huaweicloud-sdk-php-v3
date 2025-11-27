@@ -20,6 +20,7 @@ class ListExecutionResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  id
     * executionId  工单唯一id
     * documentName  作业名称
     * documentId  作业id
@@ -41,6 +42,7 @@ class ListExecutionResponseData implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'id' => 'string',
             'executionId' => 'string',
             'documentName' => 'string',
             'documentId' => 'string',
@@ -62,6 +64,7 @@ class ListExecutionResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  id
     * executionId  工单唯一id
     * documentName  作业名称
     * documentId  作业id
@@ -83,6 +86,7 @@ class ListExecutionResponseData implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'id' => null,
         'executionId' => null,
         'documentName' => null,
         'documentId' => null,
@@ -125,6 +129,7 @@ class ListExecutionResponseData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  id
     * executionId  工单唯一id
     * documentName  作业名称
     * documentId  作业id
@@ -146,6 +151,7 @@ class ListExecutionResponseData implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'id' => 'id',
             'executionId' => 'execution_id',
             'documentName' => 'document_name',
             'documentId' => 'document_id',
@@ -167,6 +173,7 @@ class ListExecutionResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  id
     * executionId  工单唯一id
     * documentName  作业名称
     * documentId  作业id
@@ -188,6 +195,7 @@ class ListExecutionResponseData implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'id' => 'setId',
             'executionId' => 'setExecutionId',
             'documentName' => 'setDocumentName',
             'documentId' => 'setDocumentId',
@@ -209,6 +217,7 @@ class ListExecutionResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  id
     * executionId  工单唯一id
     * documentName  作业名称
     * documentId  作业id
@@ -230,6 +239,7 @@ class ListExecutionResponseData implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'id' => 'getId',
             'executionId' => 'getExecutionId',
             'documentName' => 'getDocumentName',
             'documentId' => 'getDocumentId',
@@ -307,6 +317,7 @@ class ListExecutionResponseData implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['executionId'] = isset($data['executionId']) ? $data['executionId'] : null;
         $this->container['documentName'] = isset($data['documentName']) ? $data['documentName'] : null;
         $this->container['documentId'] = isset($data['documentId']) ? $data['documentId'] : null;
@@ -346,6 +357,30 @@ class ListExecutionResponseData implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets id
+    *  id
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id id
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+        return $this;
     }
 
     /**

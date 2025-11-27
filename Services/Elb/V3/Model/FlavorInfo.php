@@ -22,6 +22,8 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * connection  **参数解释**：最大并发连接数。单位：个。  **取值范围**：不涉及
     * cps  **参数解释**：每秒新建连接数。单位：个。  **取值范围**：不涉及
+    * tlsConnection  **参数解释**：tls最大并发连接数。单位：个。  **取值范围**：不涉及
+    * tlsCps  **参数解释**：tls每秒新建连接数。单位：个。  **取值范围**：不涉及
     * qps  **参数解释**：每秒查询速率。单位：个。仅7层LB有该指标。  **取值范围**：不涉及
     * bandwidth  **参数解释**：带宽。单位：Kbit/s。  **取值范围**：不涉及
     * lcu  **参数解释**：当前flavor对应的lcu数量。单位：个。  **取值范围**：不涉及  > LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。
@@ -32,6 +34,8 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'connection' => 'int',
             'cps' => 'int',
+            'tlsConnection' => 'int',
+            'tlsCps' => 'int',
             'qps' => 'int',
             'bandwidth' => 'int',
             'lcu' => 'int',
@@ -42,6 +46,8 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * connection  **参数解释**：最大并发连接数。单位：个。  **取值范围**：不涉及
     * cps  **参数解释**：每秒新建连接数。单位：个。  **取值范围**：不涉及
+    * tlsConnection  **参数解释**：tls最大并发连接数。单位：个。  **取值范围**：不涉及
+    * tlsCps  **参数解释**：tls每秒新建连接数。单位：个。  **取值范围**：不涉及
     * qps  **参数解释**：每秒查询速率。单位：个。仅7层LB有该指标。  **取值范围**：不涉及
     * bandwidth  **参数解释**：带宽。单位：Kbit/s。  **取值范围**：不涉及
     * lcu  **参数解释**：当前flavor对应的lcu数量。单位：个。  **取值范围**：不涉及  > LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。
@@ -52,6 +58,8 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'connection' => 'int32',
         'cps' => 'int32',
+        'tlsConnection' => 'int32',
+        'tlsCps' => 'int32',
         'qps' => 'int32',
         'bandwidth' => 'int32',
         'lcu' => 'int32',
@@ -83,6 +91,8 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * connection  **参数解释**：最大并发连接数。单位：个。  **取值范围**：不涉及
     * cps  **参数解释**：每秒新建连接数。单位：个。  **取值范围**：不涉及
+    * tlsConnection  **参数解释**：tls最大并发连接数。单位：个。  **取值范围**：不涉及
+    * tlsCps  **参数解释**：tls每秒新建连接数。单位：个。  **取值范围**：不涉及
     * qps  **参数解释**：每秒查询速率。单位：个。仅7层LB有该指标。  **取值范围**：不涉及
     * bandwidth  **参数解释**：带宽。单位：Kbit/s。  **取值范围**：不涉及
     * lcu  **参数解释**：当前flavor对应的lcu数量。单位：个。  **取值范围**：不涉及  > LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。
@@ -93,6 +103,8 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'connection' => 'connection',
             'cps' => 'cps',
+            'tlsConnection' => 'tls_connection',
+            'tlsCps' => 'tls_cps',
             'qps' => 'qps',
             'bandwidth' => 'bandwidth',
             'lcu' => 'lcu',
@@ -103,6 +115,8 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * connection  **参数解释**：最大并发连接数。单位：个。  **取值范围**：不涉及
     * cps  **参数解释**：每秒新建连接数。单位：个。  **取值范围**：不涉及
+    * tlsConnection  **参数解释**：tls最大并发连接数。单位：个。  **取值范围**：不涉及
+    * tlsCps  **参数解释**：tls每秒新建连接数。单位：个。  **取值范围**：不涉及
     * qps  **参数解释**：每秒查询速率。单位：个。仅7层LB有该指标。  **取值范围**：不涉及
     * bandwidth  **参数解释**：带宽。单位：Kbit/s。  **取值范围**：不涉及
     * lcu  **参数解释**：当前flavor对应的lcu数量。单位：个。  **取值范围**：不涉及  > LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。
@@ -113,6 +127,8 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
             'connection' => 'setConnection',
             'cps' => 'setCps',
+            'tlsConnection' => 'setTlsConnection',
+            'tlsCps' => 'setTlsCps',
             'qps' => 'setQps',
             'bandwidth' => 'setBandwidth',
             'lcu' => 'setLcu',
@@ -123,6 +139,8 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * connection  **参数解释**：最大并发连接数。单位：个。  **取值范围**：不涉及
     * cps  **参数解释**：每秒新建连接数。单位：个。  **取值范围**：不涉及
+    * tlsConnection  **参数解释**：tls最大并发连接数。单位：个。  **取值范围**：不涉及
+    * tlsCps  **参数解释**：tls每秒新建连接数。单位：个。  **取值范围**：不涉及
     * qps  **参数解释**：每秒查询速率。单位：个。仅7层LB有该指标。  **取值范围**：不涉及
     * bandwidth  **参数解释**：带宽。单位：Kbit/s。  **取值范围**：不涉及
     * lcu  **参数解释**：当前flavor对应的lcu数量。单位：个。  **取值范围**：不涉及  > LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。
@@ -133,6 +151,8 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
             'connection' => 'getConnection',
             'cps' => 'getCps',
+            'tlsConnection' => 'getTlsConnection',
+            'tlsCps' => 'getTlsCps',
             'qps' => 'getQps',
             'bandwidth' => 'getBandwidth',
             'lcu' => 'getLcu',
@@ -199,6 +219,8 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     {
         $this->container['connection'] = isset($data['connection']) ? $data['connection'] : null;
         $this->container['cps'] = isset($data['cps']) ? $data['cps'] : null;
+        $this->container['tlsConnection'] = isset($data['tlsConnection']) ? $data['tlsConnection'] : null;
+        $this->container['tlsCps'] = isset($data['tlsCps']) ? $data['tlsCps'] : null;
         $this->container['qps'] = isset($data['qps']) ? $data['qps'] : null;
         $this->container['bandwidth'] = isset($data['bandwidth']) ? $data['bandwidth'] : null;
         $this->container['lcu'] = isset($data['lcu']) ? $data['lcu'] : null;
@@ -278,6 +300,54 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     public function setCps($cps)
     {
         $this->container['cps'] = $cps;
+        return $this;
+    }
+
+    /**
+    * Gets tlsConnection
+    *  **参数解释**：tls最大并发连接数。单位：个。  **取值范围**：不涉及
+    *
+    * @return int|null
+    */
+    public function getTlsConnection()
+    {
+        return $this->container['tlsConnection'];
+    }
+
+    /**
+    * Sets tlsConnection
+    *
+    * @param int|null $tlsConnection **参数解释**：tls最大并发连接数。单位：个。  **取值范围**：不涉及
+    *
+    * @return $this
+    */
+    public function setTlsConnection($tlsConnection)
+    {
+        $this->container['tlsConnection'] = $tlsConnection;
+        return $this;
+    }
+
+    /**
+    * Gets tlsCps
+    *  **参数解释**：tls每秒新建连接数。单位：个。  **取值范围**：不涉及
+    *
+    * @return int|null
+    */
+    public function getTlsCps()
+    {
+        return $this->container['tlsCps'];
+    }
+
+    /**
+    * Sets tlsCps
+    *
+    * @param int|null $tlsCps **参数解释**：tls每秒新建连接数。单位：个。  **取值范围**：不涉及
+    *
+    * @return $this
+    */
+    public function setTlsCps($tlsCps)
+    {
+        $this->container['tlsCps'] = $tlsCps;
         return $this;
     }
 

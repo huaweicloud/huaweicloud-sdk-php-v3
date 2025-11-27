@@ -29,7 +29,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * updateTime  更新时间，毫秒
     * agentVersion  agent版本
     * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
@@ -69,7 +69,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * updateTime  更新时间，毫秒
     * agentVersion  agent版本
     * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
@@ -130,7 +130,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * updateTime  更新时间，毫秒
     * agentVersion  agent版本
     * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
@@ -170,7 +170,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * updateTime  更新时间，毫秒
     * agentVersion  agent版本
     * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
@@ -210,7 +210,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     * isolationStatus  隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * updateTime  更新时间，毫秒
     * agentVersion  agent版本
     * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
@@ -675,7 +675,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetValue
-    *  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    *  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     *
     * @return string
     */
@@ -687,7 +687,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets assetValue
     *
-    * @param string $assetValue 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * @param string $assetValue **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     *
     * @return $this
     */

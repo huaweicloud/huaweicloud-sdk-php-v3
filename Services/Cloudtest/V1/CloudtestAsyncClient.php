@@ -653,6 +653,71 @@ class CloudtestAsyncClient extends Client
     }
 
     /**
+     * 在不同分支或者迭代下批量修改用例
+     *
+     * 在不同分支或者迭代下批量修改用例
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchUpdateTestCasesInDiffVersionAsync($request)
+    {
+        return $this->batchUpdateTestCasesInDiffVersionAsyncWithHttpInfo($request);
+    }
+    
+    public function batchUpdateTestCasesInDiffVersionAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v4/batch/update/testcases';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cloudtest\V1\Model\BatchUpdateTestCasesInDiffVersionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cloudtest\V1\Model\BatchUpdateTestCasesInDiffVersionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 批量更新用例属性
      *
      * 批量更新用例属性

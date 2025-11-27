@@ -22,7 +22,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
     * Array of property to type mappings. Used for (de)serialization
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * checkName  基线名称
-    * checkType  基线类型
+    * checkType  **参数解释** : 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **约束限制** : 不涉及 **取值范围** : check_type的值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-configs **默认取值** : 不涉及
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * checkRuleName  检查项
     * checkRuleId  检查项ID
@@ -44,7 +44,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
     * Array of property to format mappings. Used for (de)serialization
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * checkName  基线名称
-    * checkType  基线类型
+    * checkType  **参数解释** : 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **约束限制** : 不涉及 **取值范围** : check_type的值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-configs **默认取值** : 不涉及
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * checkRuleName  检查项
     * checkRuleId  检查项ID
@@ -87,7 +87,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
     * and the value is the original name
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * checkName  基线名称
-    * checkType  基线类型
+    * checkType  **参数解释** : 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **约束限制** : 不涉及 **取值范围** : check_type的值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-configs **默认取值** : 不涉及
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * checkRuleName  检查项
     * checkRuleId  检查项ID
@@ -109,7 +109,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
     * Array of attributes to setter functions (for deserialization of responses)
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * checkName  基线名称
-    * checkType  基线类型
+    * checkType  **参数解释** : 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **约束限制** : 不涉及 **取值范围** : check_type的值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-configs **默认取值** : 不涉及
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * checkRuleName  检查项
     * checkRuleId  检查项ID
@@ -131,7 +131,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
     * Array of attributes to getter functions (for serialization of requests)
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * checkName  基线名称
-    * checkType  基线类型
+    * checkType  **参数解释** : 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **约束限制** : 不涉及 **取值范围** : check_type的值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-configs **默认取值** : 不涉及
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * checkRuleName  检查项
     * checkRuleId  检查项ID
@@ -330,7 +330,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
 
     /**
     * Gets checkType
-    *  基线类型
+    *  **参数解释** : 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **约束限制** : 不涉及 **取值范围** : check_type的值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-configs **默认取值** : 不涉及
     *
     * @return string|null
     */
@@ -342,7 +342,7 @@ class ImageRiskConfigsCheckRulesResponseInfo implements ModelInterface, ArrayAcc
     /**
     * Sets checkType
     *
-    * @param string|null $checkType 基线类型
+    * @param string|null $checkType **参数解释** : 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **约束限制** : 不涉及 **取值范围** : check_type的值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-configs **默认取值** : 不涉及
     *
     * @return $this
     */

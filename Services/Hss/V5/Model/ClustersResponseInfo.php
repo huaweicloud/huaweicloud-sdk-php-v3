@@ -27,7 +27,7 @@ class ClustersResponseInfo implements ModelInterface, ArrayAccess
     * mode  网络模型:   - overlay_l2：容器隧道网络   - vpc-router：VPC网络   - eni：云原生网络2.0   - native-network：K8S原生网络
     * namespaceNum  命名空间数
     * policyNum  策略数量
-    * protectionStatus  防护状态：true、false
+    * protectionStatus  **参数解释**: 防护状态 **取值范围**: - true: 防护中 - false: 未防护
     *
     * @var string[]
     */
@@ -51,7 +51,7 @@ class ClustersResponseInfo implements ModelInterface, ArrayAccess
     * mode  网络模型:   - overlay_l2：容器隧道网络   - vpc-router：VPC网络   - eni：云原生网络2.0   - native-network：K8S原生网络
     * namespaceNum  命名空间数
     * policyNum  策略数量
-    * protectionStatus  防护状态：true、false
+    * protectionStatus  **参数解释**: 防护状态 **取值范围**: - true: 防护中 - false: 未防护
     *
     * @var string[]
     */
@@ -96,7 +96,7 @@ class ClustersResponseInfo implements ModelInterface, ArrayAccess
     * mode  网络模型:   - overlay_l2：容器隧道网络   - vpc-router：VPC网络   - eni：云原生网络2.0   - native-network：K8S原生网络
     * namespaceNum  命名空间数
     * policyNum  策略数量
-    * protectionStatus  防护状态：true、false
+    * protectionStatus  **参数解释**: 防护状态 **取值范围**: - true: 防护中 - false: 未防护
     *
     * @var string[]
     */
@@ -120,7 +120,7 @@ class ClustersResponseInfo implements ModelInterface, ArrayAccess
     * mode  网络模型:   - overlay_l2：容器隧道网络   - vpc-router：VPC网络   - eni：云原生网络2.0   - native-network：K8S原生网络
     * namespaceNum  命名空间数
     * policyNum  策略数量
-    * protectionStatus  防护状态：true、false
+    * protectionStatus  **参数解释**: 防护状态 **取值范围**: - true: 防护中 - false: 未防护
     *
     * @var string[]
     */
@@ -144,7 +144,7 @@ class ClustersResponseInfo implements ModelInterface, ArrayAccess
     * mode  网络模型:   - overlay_l2：容器隧道网络   - vpc-router：VPC网络   - eni：云原生网络2.0   - native-network：K8S原生网络
     * namespaceNum  命名空间数
     * policyNum  策略数量
-    * protectionStatus  防护状态：true、false
+    * protectionStatus  **参数解释**: 防护状态 **取值范围**: - true: 防护中 - false: 未防护
     *
     * @var string[]
     */
@@ -461,7 +461,7 @@ class ClustersResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectionStatus
-    *  防护状态：true、false
+    *  **参数解释**: 防护状态 **取值范围**: - true: 防护中 - false: 未防护
     *
     * @return bool|null
     */
@@ -473,7 +473,7 @@ class ClustersResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectionStatus
     *
-    * @param bool|null $protectionStatus 防护状态：true、false
+    * @param bool|null $protectionStatus **参数解释**: 防护状态 **取值范围**: - true: 防护中 - false: 未防护
     *
     * @return $this
     */

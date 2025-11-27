@@ -23,7 +23,7 @@ class Resource implements ModelInterface, ArrayAccess
     * resourceDetail  资源详情。用于扩展。默认为空。
     * resourceId  资源的ID。
     * resourceName  资源名称，资源没有名称时默认为空字符串。
-    * resourceTag  标签列表，没有标签默认为空数组。
+    * tags  标签列表，没有标签默认为空数组。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class Resource implements ModelInterface, ArrayAccess
             'resourceDetail' => 'object',
             'resourceId' => 'string',
             'resourceName' => 'string',
-            'resourceTag' => '\HuaweiCloud\SDK\Nat\V2\Model\ResourceTag[]'
+            'tags' => '\HuaweiCloud\SDK\Nat\V2\Model\ResourceTag[]'
     ];
 
     /**
@@ -39,7 +39,7 @@ class Resource implements ModelInterface, ArrayAccess
     * resourceDetail  资源详情。用于扩展。默认为空。
     * resourceId  资源的ID。
     * resourceName  资源名称，资源没有名称时默认为空字符串。
-    * resourceTag  标签列表，没有标签默认为空数组。
+    * tags  标签列表，没有标签默认为空数组。
     *
     * @var string[]
     */
@@ -47,7 +47,7 @@ class Resource implements ModelInterface, ArrayAccess
         'resourceDetail' => null,
         'resourceId' => null,
         'resourceName' => null,
-        'resourceTag' => null
+        'tags' => null
     ];
 
     /**
@@ -76,7 +76,7 @@ class Resource implements ModelInterface, ArrayAccess
     * resourceDetail  资源详情。用于扩展。默认为空。
     * resourceId  资源的ID。
     * resourceName  资源名称，资源没有名称时默认为空字符串。
-    * resourceTag  标签列表，没有标签默认为空数组。
+    * tags  标签列表，没有标签默认为空数组。
     *
     * @var string[]
     */
@@ -84,7 +84,7 @@ class Resource implements ModelInterface, ArrayAccess
             'resourceDetail' => 'resource_detail',
             'resourceId' => 'resource_id',
             'resourceName' => 'resource_name',
-            'resourceTag' => 'resource_tag'
+            'tags' => 'tags'
     ];
 
     /**
@@ -92,7 +92,7 @@ class Resource implements ModelInterface, ArrayAccess
     * resourceDetail  资源详情。用于扩展。默认为空。
     * resourceId  资源的ID。
     * resourceName  资源名称，资源没有名称时默认为空字符串。
-    * resourceTag  标签列表，没有标签默认为空数组。
+    * tags  标签列表，没有标签默认为空数组。
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class Resource implements ModelInterface, ArrayAccess
             'resourceDetail' => 'setResourceDetail',
             'resourceId' => 'setResourceId',
             'resourceName' => 'setResourceName',
-            'resourceTag' => 'setResourceTag'
+            'tags' => 'setTags'
     ];
 
     /**
@@ -108,7 +108,7 @@ class Resource implements ModelInterface, ArrayAccess
     * resourceDetail  资源详情。用于扩展。默认为空。
     * resourceId  资源的ID。
     * resourceName  资源名称，资源没有名称时默认为空字符串。
-    * resourceTag  标签列表，没有标签默认为空数组。
+    * tags  标签列表，没有标签默认为空数组。
     *
     * @var string[]
     */
@@ -116,7 +116,7 @@ class Resource implements ModelInterface, ArrayAccess
             'resourceDetail' => 'getResourceDetail',
             'resourceId' => 'getResourceId',
             'resourceName' => 'getResourceName',
-            'resourceTag' => 'getResourceTag'
+            'tags' => 'getTags'
     ];
 
     /**
@@ -180,7 +180,7 @@ class Resource implements ModelInterface, ArrayAccess
         $this->container['resourceDetail'] = isset($data['resourceDetail']) ? $data['resourceDetail'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
-        $this->container['resourceTag'] = isset($data['resourceTag']) ? $data['resourceTag'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -212,8 +212,8 @@ class Resource implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['resourceName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'resourceName', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['resourceTag'] === null) {
-            $invalidProperties[] = "'resourceTag' can't be null";
+        if ($this->container['tags'] === null) {
+            $invalidProperties[] = "'tags' can't be null";
         }
         return $invalidProperties;
     }
@@ -302,26 +302,26 @@ class Resource implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets resourceTag
+    * Gets tags
     *  标签列表，没有标签默认为空数组。
     *
     * @return \HuaweiCloud\SDK\Nat\V2\Model\ResourceTag[]
     */
-    public function getResourceTag()
+    public function getTags()
     {
-        return $this->container['resourceTag'];
+        return $this->container['tags'];
     }
 
     /**
-    * Sets resourceTag
+    * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Nat\V2\Model\ResourceTag[] $resourceTag 标签列表，没有标签默认为空数组。
+    * @param \HuaweiCloud\SDK\Nat\V2\Model\ResourceTag[] $tags 标签列表，没有标签默认为空数组。
     *
     * @return $this
     */
-    public function setResourceTag($resourceTag)
+    public function setTags($tags)
     {
-        $this->container['resourceTag'] = $resourceTag;
+        $this->container['tags'] = $tags;
         return $this;
     }
 

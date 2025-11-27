@@ -269,17 +269,17 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 255)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 255.";
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 36)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 0)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 1)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['sourceServerId']) && (mb_strlen($this->container['sourceServerId']) > 255)) {
-                $invalidProperties[] = "invalid value for 'sourceServerId', the character length must be smaller than or equal to 255.";
+            if (!is_null($this->container['sourceServerId']) && (mb_strlen($this->container['sourceServerId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'sourceServerId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['sourceServerId']) && (mb_strlen($this->container['sourceServerId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'sourceServerId', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['sourceServerId']) && (mb_strlen($this->container['sourceServerId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'sourceServerId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";

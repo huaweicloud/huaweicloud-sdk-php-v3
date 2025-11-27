@@ -26,10 +26,11 @@ class TransitIp implements ModelInterface, ArrayAccess
     * ipAddress  中转IP的地址。
     * createdAt  中转IP的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ
     * updatedAt  中转IP的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ
-    * virsubnetId  当前租户子网的ID。
+    * virsubnetId  当前租户子网的ID。取值约束：与transit_subnet_id参数二选一。默认空字符串。
     * tags  标签列表。
     * gatewayId  中转IP绑定的私网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建中转IP时，关联的企业项目ID。
+    * status  私网NAT中转IP的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     *
     * @var string[]
     */
@@ -41,9 +42,10 @@ class TransitIp implements ModelInterface, ArrayAccess
             'createdAt' => '\DateTime',
             'updatedAt' => '\DateTime',
             'virsubnetId' => 'string',
-            'tags' => '\HuaweiCloud\SDK\Nat\V2\Model\PrivateTag[]',
+            'tags' => '\HuaweiCloud\SDK\Nat\V2\Model\Tag[]',
             'gatewayId' => 'string',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'status' => 'string'
     ];
 
     /**
@@ -54,10 +56,11 @@ class TransitIp implements ModelInterface, ArrayAccess
     * ipAddress  中转IP的地址。
     * createdAt  中转IP的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ
     * updatedAt  中转IP的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ
-    * virsubnetId  当前租户子网的ID。
+    * virsubnetId  当前租户子网的ID。取值约束：与transit_subnet_id参数二选一。默认空字符串。
     * tags  标签列表。
     * gatewayId  中转IP绑定的私网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建中转IP时，关联的企业项目ID。
+    * status  私网NAT中转IP的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class TransitIp implements ModelInterface, ArrayAccess
         'virsubnetId' => null,
         'tags' => null,
         'gatewayId' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'status' => null
     ];
 
     /**
@@ -103,10 +107,11 @@ class TransitIp implements ModelInterface, ArrayAccess
     * ipAddress  中转IP的地址。
     * createdAt  中转IP的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ
     * updatedAt  中转IP的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ
-    * virsubnetId  当前租户子网的ID。
+    * virsubnetId  当前租户子网的ID。取值约束：与transit_subnet_id参数二选一。默认空字符串。
     * tags  标签列表。
     * gatewayId  中转IP绑定的私网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建中转IP时，关联的企业项目ID。
+    * status  私网NAT中转IP的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class TransitIp implements ModelInterface, ArrayAccess
             'virsubnetId' => 'virsubnet_id',
             'tags' => 'tags',
             'gatewayId' => 'gateway_id',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'status' => 'status'
     ];
 
     /**
@@ -131,10 +137,11 @@ class TransitIp implements ModelInterface, ArrayAccess
     * ipAddress  中转IP的地址。
     * createdAt  中转IP的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ
     * updatedAt  中转IP的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ
-    * virsubnetId  当前租户子网的ID。
+    * virsubnetId  当前租户子网的ID。取值约束：与transit_subnet_id参数二选一。默认空字符串。
     * tags  标签列表。
     * gatewayId  中转IP绑定的私网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建中转IP时，关联的企业项目ID。
+    * status  私网NAT中转IP的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class TransitIp implements ModelInterface, ArrayAccess
             'virsubnetId' => 'setVirsubnetId',
             'tags' => 'setTags',
             'gatewayId' => 'setGatewayId',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'status' => 'setStatus'
     ];
 
     /**
@@ -159,10 +167,11 @@ class TransitIp implements ModelInterface, ArrayAccess
     * ipAddress  中转IP的地址。
     * createdAt  中转IP的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ
     * updatedAt  中转IP的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ
-    * virsubnetId  当前租户子网的ID。
+    * virsubnetId  当前租户子网的ID。取值约束：与transit_subnet_id参数二选一。默认空字符串。
     * tags  标签列表。
     * gatewayId  中转IP绑定的私网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建中转IP时，关联的企业项目ID。
+    * status  私网NAT中转IP的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class TransitIp implements ModelInterface, ArrayAccess
             'virsubnetId' => 'getVirsubnetId',
             'tags' => 'getTags',
             'gatewayId' => 'getGatewayId',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'status' => 'getStatus'
     ];
 
     /**
@@ -219,7 +229,24 @@ class TransitIp implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_ACTIVE = 'ACTIVE';
+    const STATUS_FROZEN = 'FROZEN';
+    const STATUS_INACTIVE = 'INACTIVE';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_ACTIVE,
+            self::STATUS_FROZEN,
+            self::STATUS_INACTIVE,
+        ];
+    }
 
 
     /**
@@ -247,6 +274,7 @@ class TransitIp implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['gatewayId'] = isset($data['gatewayId']) ? $data['gatewayId'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -323,6 +351,14 @@ class TransitIp implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['enterpriseProjectId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -483,7 +519,7 @@ class TransitIp implements ModelInterface, ArrayAccess
 
     /**
     * Gets virsubnetId
-    *  当前租户子网的ID。
+    *  当前租户子网的ID。取值约束：与transit_subnet_id参数二选一。默认空字符串。
     *
     * @return string|null
     */
@@ -495,7 +531,7 @@ class TransitIp implements ModelInterface, ArrayAccess
     /**
     * Sets virsubnetId
     *
-    * @param string|null $virsubnetId 当前租户子网的ID。
+    * @param string|null $virsubnetId 当前租户子网的ID。取值约束：与transit_subnet_id参数二选一。默认空字符串。
     *
     * @return $this
     */
@@ -509,7 +545,7 @@ class TransitIp implements ModelInterface, ArrayAccess
     * Gets tags
     *  标签列表。
     *
-    * @return \HuaweiCloud\SDK\Nat\V2\Model\PrivateTag[]|null
+    * @return \HuaweiCloud\SDK\Nat\V2\Model\Tag[]|null
     */
     public function getTags()
     {
@@ -519,7 +555,7 @@ class TransitIp implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Nat\V2\Model\PrivateTag[]|null $tags 标签列表。
+    * @param \HuaweiCloud\SDK\Nat\V2\Model\Tag[]|null $tags 标签列表。
     *
     * @return $this
     */
@@ -574,6 +610,30 @@ class TransitIp implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  私网NAT中转IP的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status 私网NAT中转IP的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

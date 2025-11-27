@@ -37,13 +37,13 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     * vmTemplateId  模板ID
     * sourceServer  sourceServer
     * targetServer  targetServer
-    * state  任务状态
+    * state  迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
     * estimateCompleteTime  预估完成时间
     * connected  连接状态
     * createDate  任务创建时间
     * startDate  任务开始时间
     * finishDate  任务结束时间
-    * migrateSpeed  迁移速率，单位：MB/S
+    * migrateSpeed  迁移速率，单位：Mbit/s
     * errorJson  错误信息
     * totalTime  任务总耗时
     * floatIp  暂时保留float,兼容现网老版本的SMS-Agent
@@ -107,13 +107,13 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     * vmTemplateId  模板ID
     * sourceServer  sourceServer
     * targetServer  targetServer
-    * state  任务状态
+    * state  迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
     * estimateCompleteTime  预估完成时间
     * connected  连接状态
     * createDate  任务创建时间
     * startDate  任务开始时间
     * finishDate  任务结束时间
-    * migrateSpeed  迁移速率，单位：MB/S
+    * migrateSpeed  迁移速率，单位：Mbit/s
     * errorJson  错误信息
     * totalTime  任务总耗时
     * floatIp  暂时保留float,兼容现网老版本的SMS-Agent
@@ -198,13 +198,13 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     * vmTemplateId  模板ID
     * sourceServer  sourceServer
     * targetServer  targetServer
-    * state  任务状态
+    * state  迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
     * estimateCompleteTime  预估完成时间
     * connected  连接状态
     * createDate  任务创建时间
     * startDate  任务开始时间
     * finishDate  任务结束时间
-    * migrateSpeed  迁移速率，单位：MB/S
+    * migrateSpeed  迁移速率，单位：Mbit/s
     * errorJson  错误信息
     * totalTime  任务总耗时
     * floatIp  暂时保留float,兼容现网老版本的SMS-Agent
@@ -268,13 +268,13 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     * vmTemplateId  模板ID
     * sourceServer  sourceServer
     * targetServer  targetServer
-    * state  任务状态
+    * state  迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
     * estimateCompleteTime  预估完成时间
     * connected  连接状态
     * createDate  任务创建时间
     * startDate  任务开始时间
     * finishDate  任务结束时间
-    * migrateSpeed  迁移速率，单位：MB/S
+    * migrateSpeed  迁移速率，单位：Mbit/s
     * errorJson  错误信息
     * totalTime  任务总耗时
     * floatIp  暂时保留float,兼容现网老版本的SMS-Agent
@@ -338,13 +338,13 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     * vmTemplateId  模板ID
     * sourceServer  sourceServer
     * targetServer  targetServer
-    * state  任务状态
+    * state  迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
     * estimateCompleteTime  预估完成时间
     * connected  连接状态
     * createDate  任务创建时间
     * startDate  任务开始时间
     * finishDate  任务结束时间
-    * migrateSpeed  迁移速率，单位：MB/S
+    * migrateSpeed  迁移速率，单位：Mbit/s
     * errorJson  错误信息
     * totalTime  任务总耗时
     * floatIp  暂时保留float,兼容现网老版本的SMS-Agent
@@ -436,6 +436,18 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     const PRIORITY_0 = 0;
     const PRIORITY_1 = 1;
     const PRIORITY_2 = 2;
+    const STATE_READY = 'READY';
+    const STATE_RUNNING = 'RUNNING';
+    const STATE_SYNCING = 'SYNCING';
+    const STATE_MIGRATE_SUCCESS = 'MIGRATE_SUCCESS';
+    const STATE_SYNC_SUCCESS = 'SYNC_SUCCESS';
+    const STATE_MIGRATE_FAIL = 'MIGRATE_FAIL';
+    const STATE_SYNC_FAIL = 'SYNC_FAIL';
+    const STATE_ABORTING = 'ABORTING';
+    const STATE_ABORT = 'ABORT';
+    const STATE_SKIPPING = 'SKIPPING';
+    const STATE_DELETING = 'DELETING';
+    const STATE_RESETING = 'RESETING';
     
 
     /**
@@ -475,6 +487,29 @@ class PutTaskReq implements ModelInterface, ArrayAccess
             self::PRIORITY_0,
             self::PRIORITY_1,
             self::PRIORITY_2,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStateAllowableValues()
+    {
+        return [
+            self::STATE_READY,
+            self::STATE_RUNNING,
+            self::STATE_SYNCING,
+            self::STATE_MIGRATE_SUCCESS,
+            self::STATE_SYNC_SUCCESS,
+            self::STATE_MIGRATE_FAIL,
+            self::STATE_SYNC_FAIL,
+            self::STATE_ABORTING,
+            self::STATE_ABORT,
+            self::STATE_SKIPPING,
+            self::STATE_DELETING,
+            self::STATE_RESETING,
         ];
     }
 
@@ -631,12 +666,14 @@ class PutTaskReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['vmTemplateId']) && (mb_strlen($this->container['vmTemplateId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'vmTemplateId', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) > 255)) {
-                $invalidProperties[] = "invalid value for 'state', the character length must be smaller than or equal to 255.";
+            $allowedValues = $this->getStateAllowableValues();
+                if (!is_null($this->container['state']) && !in_array($this->container['state'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'state', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) < 0)) {
-                $invalidProperties[] = "invalid value for 'state', the character length must be bigger than or equal to 0.";
-            }
+
             if (!is_null($this->container['estimateCompleteTime']) && ($this->container['estimateCompleteTime'] > 9223372036854775807)) {
                 $invalidProperties[] = "invalid value for 'estimateCompleteTime', must be smaller than or equal to 9223372036854775807.";
             }
@@ -1121,7 +1158,7 @@ class PutTaskReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  任务状态
+    *  迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
     *
     * @return string|null
     */
@@ -1133,7 +1170,7 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state 任务状态
+    * @param string|null $state 迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
     *
     * @return $this
     */
@@ -1265,7 +1302,7 @@ class PutTaskReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets migrateSpeed
-    *  迁移速率，单位：MB/S
+    *  迁移速率，单位：Mbit/s
     *
     * @return double|null
     */
@@ -1277,7 +1314,7 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     /**
     * Sets migrateSpeed
     *
-    * @param double|null $migrateSpeed 迁移速率，单位：MB/S
+    * @param double|null $migrateSpeed 迁移速率，单位：Mbit/s
     *
     * @return $this
     */

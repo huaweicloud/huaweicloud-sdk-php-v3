@@ -33,11 +33,12 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     * description  **参数解释** 忽略或加白的备注 **取值范围** 字符长度0-1024位
     * hostType  **参数解释** 主机类型，当主机为cce类型时，返回cce **取值范围** - cce
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
+    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
     * enableClick  **参数解释** 该检查项的修复&忽略&验证按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * resultType  **参数解释** 检测结果类型 **取值范围** - safe             : 已通过 - unhandled        : 未处理 - ignored          : 已忽略 - fixing           : 修复中 - fix-failed       : 修复失败 - verifying        : 验证中 - add_to_whitelist : 已加白(表示检测失败，但已进行加白)
     * fixFailedReason  **参数解释** 修复失败原因 **取值范围** 字符长度0-256位
-    * clusterId  **参数解释** 集群ID **取值范围** 字符长度0-64位
+    * clusterId  **参数解释** 集群ID **取值范围**  字符长度0-64位
     *
     * @var string[]
     */
@@ -55,6 +56,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
             'description' => 'string',
             'hostType' => 'string',
             'enableFix' => 'int',
+            'enableVerify' => 'bool',
             'enableClick' => 'bool',
             'cancelIgnoreEnableClick' => 'bool',
             'resultType' => 'string',
@@ -77,11 +79,12 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     * description  **参数解释** 忽略或加白的备注 **取值范围** 字符长度0-1024位
     * hostType  **参数解释** 主机类型，当主机为cce类型时，返回cce **取值范围** - cce
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
+    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
     * enableClick  **参数解释** 该检查项的修复&忽略&验证按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * resultType  **参数解释** 检测结果类型 **取值范围** - safe             : 已通过 - unhandled        : 未处理 - ignored          : 已忽略 - fixing           : 修复中 - fix-failed       : 修复失败 - verifying        : 验证中 - add_to_whitelist : 已加白(表示检测失败，但已进行加白)
     * fixFailedReason  **参数解释** 修复失败原因 **取值范围** 字符长度0-256位
-    * clusterId  **参数解释** 集群ID **取值范围** 字符长度0-64位
+    * clusterId  **参数解释** 集群ID **取值范围**  字符长度0-64位
     *
     * @var string[]
     */
@@ -99,6 +102,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
         'description' => null,
         'hostType' => null,
         'enableFix' => 'int32',
+        'enableVerify' => null,
         'enableClick' => null,
         'cancelIgnoreEnableClick' => null,
         'resultType' => null,
@@ -142,11 +146,12 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     * description  **参数解释** 忽略或加白的备注 **取值范围** 字符长度0-1024位
     * hostType  **参数解释** 主机类型，当主机为cce类型时，返回cce **取值范围** - cce
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
+    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
     * enableClick  **参数解释** 该检查项的修复&忽略&验证按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * resultType  **参数解释** 检测结果类型 **取值范围** - safe             : 已通过 - unhandled        : 未处理 - ignored          : 已忽略 - fixing           : 修复中 - fix-failed       : 修复失败 - verifying        : 验证中 - add_to_whitelist : 已加白(表示检测失败，但已进行加白)
     * fixFailedReason  **参数解释** 修复失败原因 **取值范围** 字符长度0-256位
-    * clusterId  **参数解释** 集群ID **取值范围** 字符长度0-64位
+    * clusterId  **参数解释** 集群ID **取值范围**  字符长度0-64位
     *
     * @var string[]
     */
@@ -164,6 +169,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
             'description' => 'description',
             'hostType' => 'host_type',
             'enableFix' => 'enable_fix',
+            'enableVerify' => 'enable_verify',
             'enableClick' => 'enable_click',
             'cancelIgnoreEnableClick' => 'cancel_ignore_enable_click',
             'resultType' => 'result_type',
@@ -186,11 +192,12 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     * description  **参数解释** 忽略或加白的备注 **取值范围** 字符长度0-1024位
     * hostType  **参数解释** 主机类型，当主机为cce类型时，返回cce **取值范围** - cce
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
+    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
     * enableClick  **参数解释** 该检查项的修复&忽略&验证按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * resultType  **参数解释** 检测结果类型 **取值范围** - safe             : 已通过 - unhandled        : 未处理 - ignored          : 已忽略 - fixing           : 修复中 - fix-failed       : 修复失败 - verifying        : 验证中 - add_to_whitelist : 已加白(表示检测失败，但已进行加白)
     * fixFailedReason  **参数解释** 修复失败原因 **取值范围** 字符长度0-256位
-    * clusterId  **参数解释** 集群ID **取值范围** 字符长度0-64位
+    * clusterId  **参数解释** 集群ID **取值范围**  字符长度0-64位
     *
     * @var string[]
     */
@@ -208,6 +215,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'hostType' => 'setHostType',
             'enableFix' => 'setEnableFix',
+            'enableVerify' => 'setEnableVerify',
             'enableClick' => 'setEnableClick',
             'cancelIgnoreEnableClick' => 'setCancelIgnoreEnableClick',
             'resultType' => 'setResultType',
@@ -230,11 +238,12 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     * description  **参数解释** 忽略或加白的备注 **取值范围** 字符长度0-1024位
     * hostType  **参数解释** 主机类型，当主机为cce类型时，返回cce **取值范围** - cce
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
+    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
     * enableClick  **参数解释** 该检查项的修复&忽略&验证按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * resultType  **参数解释** 检测结果类型 **取值范围** - safe             : 已通过 - unhandled        : 未处理 - ignored          : 已忽略 - fixing           : 修复中 - fix-failed       : 修复失败 - verifying        : 验证中 - add_to_whitelist : 已加白(表示检测失败，但已进行加白)
     * fixFailedReason  **参数解释** 修复失败原因 **取值范围** 字符长度0-256位
-    * clusterId  **参数解释** 集群ID **取值范围** 字符长度0-64位
+    * clusterId  **参数解释** 集群ID **取值范围**  字符长度0-64位
     *
     * @var string[]
     */
@@ -252,6 +261,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'hostType' => 'getHostType',
             'enableFix' => 'getEnableFix',
+            'enableVerify' => 'getEnableVerify',
             'enableClick' => 'getEnableClick',
             'cancelIgnoreEnableClick' => 'getCancelIgnoreEnableClick',
             'resultType' => 'getResultType',
@@ -330,6 +340,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['hostType'] = isset($data['hostType']) ? $data['hostType'] : null;
         $this->container['enableFix'] = isset($data['enableFix']) ? $data['enableFix'] : null;
+        $this->container['enableVerify'] = isset($data['enableVerify']) ? $data['enableVerify'] : null;
         $this->container['enableClick'] = isset($data['enableClick']) ? $data['enableClick'] : null;
         $this->container['cancelIgnoreEnableClick'] = isset($data['cancelIgnoreEnableClick']) ? $data['cancelIgnoreEnableClick'] : null;
         $this->container['resultType'] = isset($data['resultType']) ? $data['resultType'] : null;
@@ -774,6 +785,30 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets enableVerify
+    *  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
+    *
+    * @return bool|null
+    */
+    public function getEnableVerify()
+    {
+        return $this->container['enableVerify'];
+    }
+
+    /**
+    * Sets enableVerify
+    *
+    * @param bool|null $enableVerify **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
+    *
+    * @return $this
+    */
+    public function setEnableVerify($enableVerify)
+    {
+        $this->container['enableVerify'] = $enableVerify;
+        return $this;
+    }
+
+    /**
     * Gets enableClick
     *  **参数解释** 该检查项的修复&忽略&验证按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     *
@@ -871,7 +906,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  **参数解释** 集群ID **取值范围** 字符长度0-64位
+    *  **参数解释** 集群ID **取值范围**  字符长度0-64位
     *
     * @return string|null
     */
@@ -883,7 +918,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId **参数解释** 集群ID **取值范围** 字符长度0-64位
+    * @param string|null $clusterId **参数解释** 集群ID **取值范围**  字符长度0-64位
     *
     * @return $this
     */

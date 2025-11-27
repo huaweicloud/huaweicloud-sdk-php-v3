@@ -24,7 +24,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * type  任务类型 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
     * startTargetServer  迁移后是否启动目的端虚拟机
     * autoStart  是否自动启动
-    * osType  操作系统类型
+    * osType  操作系统类型 WINDOWS:Windows系统类型 LINUX:Linux系统类型
     * sourceServer  sourceServer
     * targetServer  targetServer
     * migrationIp  迁移IP，如果是自动创建虚拟机，不需要此参数
@@ -78,7 +78,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * type  任务类型 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
     * startTargetServer  迁移后是否启动目的端虚拟机
     * autoStart  是否自动启动
-    * osType  操作系统类型
+    * osType  操作系统类型 WINDOWS:Windows系统类型 LINUX:Linux系统类型
     * sourceServer  sourceServer
     * targetServer  targetServer
     * migrationIp  迁移IP，如果是自动创建虚拟机，不需要此参数
@@ -153,7 +153,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * type  任务类型 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
     * startTargetServer  迁移后是否启动目的端虚拟机
     * autoStart  是否自动启动
-    * osType  操作系统类型
+    * osType  操作系统类型 WINDOWS:Windows系统类型 LINUX:Linux系统类型
     * sourceServer  sourceServer
     * targetServer  targetServer
     * migrationIp  迁移IP，如果是自动创建虚拟机，不需要此参数
@@ -207,7 +207,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * type  任务类型 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
     * startTargetServer  迁移后是否启动目的端虚拟机
     * autoStart  是否自动启动
-    * osType  操作系统类型
+    * osType  操作系统类型 WINDOWS:Windows系统类型 LINUX:Linux系统类型
     * sourceServer  sourceServer
     * targetServer  targetServer
     * migrationIp  迁移IP，如果是自动创建虚拟机，不需要此参数
@@ -261,7 +261,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * type  任务类型 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
     * startTargetServer  迁移后是否启动目的端虚拟机
     * autoStart  是否自动启动
-    * osType  操作系统类型
+    * osType  操作系统类型 WINDOWS:Windows系统类型 LINUX:Linux系统类型
     * sourceServer  sourceServer
     * targetServer  targetServer
     * migrationIp  迁移IP，如果是自动创建虚拟机，不需要此参数
@@ -351,6 +351,8 @@ class PostTask implements ModelInterface, ArrayAccess
     }
     const TYPE_MIGRATE_FILE = 'MIGRATE_FILE';
     const TYPE_MIGRATE_BLOCK = 'MIGRATE_BLOCK';
+    const OS_TYPE_WINDOWS = 'WINDOWS';
+    const OS_TYPE_LINUX = 'LINUX';
     
 
     /**
@@ -363,6 +365,19 @@ class PostTask implements ModelInterface, ArrayAccess
         return [
             self::TYPE_MIGRATE_FILE,
             self::TYPE_MIGRATE_BLOCK,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getOsTypeAllowableValues()
+    {
+        return [
+            self::OS_TYPE_WINDOWS,
+            self::OS_TYPE_LINUX,
         ];
     }
 
@@ -438,12 +453,14 @@ class PostTask implements ModelInterface, ArrayAccess
         if ($this->container['osType'] === null) {
             $invalidProperties[] = "'osType' can't be null";
         }
-            if ((mb_strlen($this->container['osType']) > 255)) {
-                $invalidProperties[] = "invalid value for 'osType', the character length must be smaller than or equal to 255.";
+            $allowedValues = $this->getOsTypeAllowableValues();
+                if (!is_null($this->container['osType']) && !in_array($this->container['osType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'osType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if ((mb_strlen($this->container['osType']) < 0)) {
-                $invalidProperties[] = "invalid value for 'osType', the character length must be bigger than or equal to 0.";
-            }
+
         if ($this->container['sourceServer'] === null) {
             $invalidProperties[] = "'sourceServer' can't be null";
         }
@@ -628,7 +645,7 @@ class PostTask implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  操作系统类型
+    *  操作系统类型 WINDOWS:Windows系统类型 LINUX:Linux系统类型
     *
     * @return string
     */
@@ -640,7 +657,7 @@ class PostTask implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string $osType 操作系统类型
+    * @param string $osType 操作系统类型 WINDOWS:Windows系统类型 LINUX:Linux系统类型
     *
     * @return $this
     */

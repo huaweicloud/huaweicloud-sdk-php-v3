@@ -20,9 +20,9 @@ class WhiteImageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  集群ID
-    * imageName  镜像名称
-    * imageVersion  镜像版本
+    * clusterId  **参数解释**： 集群ID **取值范围**： 不涉及
+    * imageName  **参数解释**： 镜像名称 **取值范围**： 不涉及
+    * imageVersion  **参数解释**： 镜像版本 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class WhiteImageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  集群ID
-    * imageName  镜像名称
-    * imageVersion  镜像版本
+    * clusterId  **参数解释**： 集群ID **取值范围**： 不涉及
+    * imageName  **参数解释**： 镜像名称 **取值范围**： 不涉及
+    * imageVersion  **参数解释**： 镜像版本 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class WhiteImageInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  集群ID
-    * imageName  镜像名称
-    * imageVersion  镜像版本
+    * clusterId  **参数解释**： 集群ID **取值范围**： 不涉及
+    * imageName  **参数解释**： 镜像名称 **取值范围**： 不涉及
+    * imageVersion  **参数解释**： 镜像版本 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class WhiteImageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  集群ID
-    * imageName  镜像名称
-    * imageVersion  镜像版本
+    * clusterId  **参数解释**： 集群ID **取值范围**： 不涉及
+    * imageName  **参数解释**： 镜像名称 **取值范围**： 不涉及
+    * imageVersion  **参数解释**： 镜像版本 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class WhiteImageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  集群ID
-    * imageName  镜像名称
-    * imageVersion  镜像版本
+    * clusterId  **参数解释**： 集群ID **取值范围**： 不涉及
+    * imageName  **参数解释**： 镜像名称 **取值范围**： 不涉及
+    * imageVersion  **参数解释**： 镜像版本 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -232,7 +232,7 @@ class WhiteImageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群ID
+    *  **参数解释**： 集群ID **取值范围**： 不涉及
     *
     * @return string
     */
@@ -244,7 +244,7 @@ class WhiteImageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string $clusterId 集群ID
+    * @param string $clusterId **参数解释**： 集群ID **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class WhiteImageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageName
-    *  镜像名称
+    *  **参数解释**： 镜像名称 **取值范围**： 不涉及
     *
     * @return string
     */
@@ -268,7 +268,7 @@ class WhiteImageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imageName
     *
-    * @param string $imageName 镜像名称
+    * @param string $imageName **参数解释**： 镜像名称 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class WhiteImageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageVersion
-    *  镜像版本
+    *  **参数解释**： 镜像版本 **取值范围**： 不涉及
     *
     * @return string
     */
@@ -292,7 +292,7 @@ class WhiteImageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imageVersion
     *
-    * @param string $imageVersion 镜像版本
+    * @param string $imageVersion **参数解释**： 镜像版本 **取值范围**： 不涉及
     *
     * @return $this
     */

@@ -172,11 +172,11 @@ class UpdateConsistencyResultRequest implements ModelInterface, ArrayAccess
         if ($this->container['taskId'] === null) {
             $invalidProperties[] = "'taskId' can't be null";
         }
-            if ((mb_strlen($this->container['taskId']) > 255)) {
-                $invalidProperties[] = "invalid value for 'taskId', the character length must be smaller than or equal to 255.";
+            if ((mb_strlen($this->container['taskId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'taskId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['taskId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'taskId', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['taskId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'taskId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }

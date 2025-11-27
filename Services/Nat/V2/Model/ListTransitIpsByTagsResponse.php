@@ -187,6 +187,12 @@ class ListTransitIpsByTagsResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['totalCount']) && ($this->container['totalCount'] > 1000000)) {
+                $invalidProperties[] = "invalid value for 'totalCount', must be smaller than or equal to 1000000.";
+            }
+            if (!is_null($this->container['totalCount']) && ($this->container['totalCount'] < 0)) {
+                $invalidProperties[] = "invalid value for 'totalCount', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 

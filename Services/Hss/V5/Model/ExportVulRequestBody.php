@@ -180,6 +180,9 @@ class ExportVulRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['exportHeaders'] === null) {
+            $invalidProperties[] = "'exportHeaders' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -198,7 +201,7 @@ class ExportVulRequestBody implements ModelInterface, ArrayAccess
     * Gets exportHeaders
     *  导出漏洞数据的表头信息列表
     *
-    * @return string[][]|null
+    * @return string[][]
     */
     public function getExportHeaders()
     {
@@ -208,7 +211,7 @@ class ExportVulRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets exportHeaders
     *
-    * @param string[][]|null $exportHeaders 导出漏洞数据的表头信息列表
+    * @param string[][] $exportHeaders 导出漏洞数据的表头信息列表
     *
     * @return $this
     */

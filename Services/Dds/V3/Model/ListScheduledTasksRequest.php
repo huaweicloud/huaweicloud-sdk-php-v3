@@ -20,8 +20,8 @@ class ListScheduledTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobName  任务名称，默认为空。对应取值如下：  \"RESIZE_FLAVOR\"：变更实例的CPU和内存规格
-    * jobStatus  任务执行状态，默认为空。 取值：  值为\"Pending\"，表示任务未执行。  值为\"Running\"，表示任务正在执行。  值为\"Completed\"，表示任务执行成功。  值为\"Failed\"，表示任务执行失败。  值为\"Canceled\"，表示任务取消执行。
+    * jobName  任务名称，默认为空。对应取值如下： \"RESIZE_FLAVOR\"：变更实例的CPU和内存规格
+    * jobStatus  任务执行状态，默认为空。 取值： - 值为\"Pending\"，表示任务未执行。 - 值为\"Running\"，表示任务正在执行。 - 值为\"Completed\"，表示任务执行成功。 - 值为\"Failed\"，表示任务执行失败。 - 值为\"Canceled\"，表示任务取消执行。
     * instanceId  实例ID，不传该值默认查所有符合条件的实例。
     * startTime  任务创建起始时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100，不传默认为当前时间前七天。
     * endTime  任务创建结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100，不传默认为当前时间。
@@ -42,8 +42,8 @@ class ListScheduledTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobName  任务名称，默认为空。对应取值如下：  \"RESIZE_FLAVOR\"：变更实例的CPU和内存规格
-    * jobStatus  任务执行状态，默认为空。 取值：  值为\"Pending\"，表示任务未执行。  值为\"Running\"，表示任务正在执行。  值为\"Completed\"，表示任务执行成功。  值为\"Failed\"，表示任务执行失败。  值为\"Canceled\"，表示任务取消执行。
+    * jobName  任务名称，默认为空。对应取值如下： \"RESIZE_FLAVOR\"：变更实例的CPU和内存规格
+    * jobStatus  任务执行状态，默认为空。 取值： - 值为\"Pending\"，表示任务未执行。 - 值为\"Running\"，表示任务正在执行。 - 值为\"Completed\"，表示任务执行成功。 - 值为\"Failed\"，表示任务执行失败。 - 值为\"Canceled\"，表示任务取消执行。
     * instanceId  实例ID，不传该值默认查所有符合条件的实例。
     * startTime  任务创建起始时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100，不传默认为当前时间前七天。
     * endTime  任务创建结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100，不传默认为当前时间。
@@ -85,8 +85,8 @@ class ListScheduledTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobName  任务名称，默认为空。对应取值如下：  \"RESIZE_FLAVOR\"：变更实例的CPU和内存规格
-    * jobStatus  任务执行状态，默认为空。 取值：  值为\"Pending\"，表示任务未执行。  值为\"Running\"，表示任务正在执行。  值为\"Completed\"，表示任务执行成功。  值为\"Failed\"，表示任务执行失败。  值为\"Canceled\"，表示任务取消执行。
+    * jobName  任务名称，默认为空。对应取值如下： \"RESIZE_FLAVOR\"：变更实例的CPU和内存规格
+    * jobStatus  任务执行状态，默认为空。 取值： - 值为\"Pending\"，表示任务未执行。 - 值为\"Running\"，表示任务正在执行。 - 值为\"Completed\"，表示任务执行成功。 - 值为\"Failed\"，表示任务执行失败。 - 值为\"Canceled\"，表示任务取消执行。
     * instanceId  实例ID，不传该值默认查所有符合条件的实例。
     * startTime  任务创建起始时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100，不传默认为当前时间前七天。
     * endTime  任务创建结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100，不传默认为当前时间。
@@ -107,8 +107,8 @@ class ListScheduledTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobName  任务名称，默认为空。对应取值如下：  \"RESIZE_FLAVOR\"：变更实例的CPU和内存规格
-    * jobStatus  任务执行状态，默认为空。 取值：  值为\"Pending\"，表示任务未执行。  值为\"Running\"，表示任务正在执行。  值为\"Completed\"，表示任务执行成功。  值为\"Failed\"，表示任务执行失败。  值为\"Canceled\"，表示任务取消执行。
+    * jobName  任务名称，默认为空。对应取值如下： \"RESIZE_FLAVOR\"：变更实例的CPU和内存规格
+    * jobStatus  任务执行状态，默认为空。 取值： - 值为\"Pending\"，表示任务未执行。 - 值为\"Running\"，表示任务正在执行。 - 值为\"Completed\"，表示任务执行成功。 - 值为\"Failed\"，表示任务执行失败。 - 值为\"Canceled\"，表示任务取消执行。
     * instanceId  实例ID，不传该值默认查所有符合条件的实例。
     * startTime  任务创建起始时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100，不传默认为当前时间前七天。
     * endTime  任务创建结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100，不传默认为当前时间。
@@ -129,8 +129,8 @@ class ListScheduledTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobName  任务名称，默认为空。对应取值如下：  \"RESIZE_FLAVOR\"：变更实例的CPU和内存规格
-    * jobStatus  任务执行状态，默认为空。 取值：  值为\"Pending\"，表示任务未执行。  值为\"Running\"，表示任务正在执行。  值为\"Completed\"，表示任务执行成功。  值为\"Failed\"，表示任务执行失败。  值为\"Canceled\"，表示任务取消执行。
+    * jobName  任务名称，默认为空。对应取值如下： \"RESIZE_FLAVOR\"：变更实例的CPU和内存规格
+    * jobStatus  任务执行状态，默认为空。 取值： - 值为\"Pending\"，表示任务未执行。 - 值为\"Running\"，表示任务正在执行。 - 值为\"Completed\"，表示任务执行成功。 - 值为\"Failed\"，表示任务执行失败。 - 值为\"Canceled\"，表示任务取消执行。
     * instanceId  实例ID，不传该值默认查所有符合条件的实例。
     * startTime  任务创建起始时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100，不传默认为当前时间前七天。
     * endTime  任务创建结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100，不传默认为当前时间。
@@ -240,7 +240,7 @@ class ListScheduledTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobName
-    *  任务名称，默认为空。对应取值如下：  \"RESIZE_FLAVOR\"：变更实例的CPU和内存规格
+    *  任务名称，默认为空。对应取值如下： \"RESIZE_FLAVOR\"：变更实例的CPU和内存规格
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class ListScheduledTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets jobName
     *
-    * @param string|null $jobName 任务名称，默认为空。对应取值如下：  \"RESIZE_FLAVOR\"：变更实例的CPU和内存规格
+    * @param string|null $jobName 任务名称，默认为空。对应取值如下： \"RESIZE_FLAVOR\"：变更实例的CPU和内存规格
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class ListScheduledTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobStatus
-    *  任务执行状态，默认为空。 取值：  值为\"Pending\"，表示任务未执行。  值为\"Running\"，表示任务正在执行。  值为\"Completed\"，表示任务执行成功。  值为\"Failed\"，表示任务执行失败。  值为\"Canceled\"，表示任务取消执行。
+    *  任务执行状态，默认为空。 取值： - 值为\"Pending\"，表示任务未执行。 - 值为\"Running\"，表示任务正在执行。 - 值为\"Completed\"，表示任务执行成功。 - 值为\"Failed\"，表示任务执行失败。 - 值为\"Canceled\"，表示任务取消执行。
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class ListScheduledTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets jobStatus
     *
-    * @param string|null $jobStatus 任务执行状态，默认为空。 取值：  值为\"Pending\"，表示任务未执行。  值为\"Running\"，表示任务正在执行。  值为\"Completed\"，表示任务执行成功。  值为\"Failed\"，表示任务执行失败。  值为\"Canceled\"，表示任务取消执行。
+    * @param string|null $jobStatus 任务执行状态，默认为空。 取值： - 值为\"Pending\"，表示任务未执行。 - 值为\"Running\"，表示任务正在执行。 - 值为\"Completed\"，表示任务执行成功。 - 值为\"Failed\"，表示任务执行失败。 - 值为\"Canceled\"，表示任务取消执行。
     *
     * @return $this
     */

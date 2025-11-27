@@ -20,8 +20,8 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  匹配的KEY。
-    * value  匹配的VALUE。
+    * key  匹配资源实例的属性类型。 取值范围： resource_name：通过资源名称匹配
+    * value  匹配资源实例的属性值。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  匹配的KEY。
-    * value  匹配的VALUE。
+    * key  匹配资源实例的属性类型。 取值范围： resource_name：通过资源名称匹配
+    * value  匹配资源实例的属性值。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Match implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  匹配的KEY。
-    * value  匹配的VALUE。
+    * key  匹配资源实例的属性类型。 取值范围： resource_name：通过资源名称匹配
+    * value  匹配资源实例的属性值。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  匹配的KEY。
-    * value  匹配的VALUE。
+    * key  匹配资源实例的属性类型。 取值范围： resource_name：通过资源名称匹配
+    * value  匹配资源实例的属性值。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  匹配的KEY。
-    * value  匹配的VALUE。
+    * key  匹配资源实例的属性类型。 取值范围： resource_name：通过资源名称匹配
+    * value  匹配资源实例的属性值。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  匹配的KEY。
+    *  匹配资源实例的属性类型。 取值范围： resource_name：通过资源名称匹配
     *
     * @return string
     */
@@ -230,7 +230,7 @@ class Match implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 匹配的KEY。
+    * @param string $key 匹配资源实例的属性类型。 取值范围： resource_name：通过资源名称匹配
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  匹配的VALUE。
+    *  匹配资源实例的属性值。
     *
     * @return string
     */
@@ -254,7 +254,7 @@ class Match implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 匹配的VALUE。
+    * @param string $value 匹配资源实例的属性值。
     *
     * @return $this
     */

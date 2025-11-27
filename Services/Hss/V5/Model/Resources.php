@@ -20,11 +20,11 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  集群id
-    * clusterName  集群名称
-    * images  镜像
-    * labels  标签
-    * namespace  命名空间
+    * clusterId  **参数解释**： 集群id **取值范围**： 不涉及
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
+    * images  **参数解释**： 镜像 **取值范围**： 不涉及
+    * labels  **参数解释**： 标签 **取值范围**： 不涉及
+    * namespace  **参数解释**： 命名空间 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  集群id
-    * clusterName  集群名称
-    * images  镜像
-    * labels  标签
-    * namespace  命名空间
+    * clusterId  **参数解释**： 集群id **取值范围**： 不涉及
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
+    * images  **参数解释**： 镜像 **取值范围**： 不涉及
+    * labels  **参数解释**： 标签 **取值范围**： 不涉及
+    * namespace  **参数解释**： 命名空间 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class Resources implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  集群id
-    * clusterName  集群名称
-    * images  镜像
-    * labels  标签
-    * namespace  命名空间
+    * clusterId  **参数解释**： 集群id **取值范围**： 不涉及
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
+    * images  **参数解释**： 镜像 **取值范围**： 不涉及
+    * labels  **参数解释**： 标签 **取值范围**： 不涉及
+    * namespace  **参数解释**： 命名空间 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  集群id
-    * clusterName  集群名称
-    * images  镜像
-    * labels  标签
-    * namespace  命名空间
+    * clusterId  **参数解释**： 集群id **取值范围**： 不涉及
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
+    * images  **参数解释**： 镜像 **取值范围**： 不涉及
+    * labels  **参数解释**： 标签 **取值范围**： 不涉及
+    * namespace  **参数解释**： 命名空间 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  集群id
-    * clusterName  集群名称
-    * images  镜像
-    * labels  标签
-    * namespace  命名空间
+    * clusterId  **参数解释**： 集群id **取值范围**： 不涉及
+    * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
+    * images  **参数解释**： 镜像 **取值范围**： 不涉及
+    * labels  **参数解释**： 标签 **取值范围**： 不涉及
+    * namespace  **参数解释**： 命名空间 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -248,7 +248,7 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群id
+    *  **参数解释**： 集群id **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -260,7 +260,7 @@ class Resources implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群id
+    * @param string|null $clusterId **参数解释**： 集群id **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -272,7 +272,7 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterName
-    *  集群名称
+    *  **参数解释**： 集群名称 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -284,7 +284,7 @@ class Resources implements ModelInterface, ArrayAccess
     /**
     * Sets clusterName
     *
-    * @param string|null $clusterName 集群名称
+    * @param string|null $clusterName **参数解释**： 集群名称 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -296,7 +296,7 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Gets images
-    *  镜像
+    *  **参数解释**： 镜像 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -308,7 +308,7 @@ class Resources implements ModelInterface, ArrayAccess
     /**
     * Sets images
     *
-    * @param string|null $images 镜像
+    * @param string|null $images **参数解释**： 镜像 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -320,7 +320,7 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Gets labels
-    *  标签
+    *  **参数解释**： 标签 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -332,7 +332,7 @@ class Resources implements ModelInterface, ArrayAccess
     /**
     * Sets labels
     *
-    * @param string|null $labels 标签
+    * @param string|null $labels **参数解释**： 标签 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -344,7 +344,7 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  命名空间
+    *  **参数解释**： 命名空间 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -356,7 +356,7 @@ class Resources implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 命名空间
+    * @param string|null $namespace **参数解释**： 命名空间 **取值范围**： 不涉及
     *
     * @return $this
     */

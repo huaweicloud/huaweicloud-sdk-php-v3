@@ -23,7 +23,7 @@ class CloneServer implements ModelInterface, ArrayAccess
     * vmId  克隆服务器ID
     * name  克隆虚拟机的名称
     * cloneError  克隆错误信息
-    * cloneState  克隆状态
+    * cloneState  克隆状态 NOT_READY: 未准备好 READY: 就绪 PREPARING: 准备创建中 CREATING: 创建中 ERROR: 克隆错误 FINISHED: 克隆结束
     * errorMsg  克隆错误信息描述
     *
     * @var string[]
@@ -41,7 +41,7 @@ class CloneServer implements ModelInterface, ArrayAccess
     * vmId  克隆服务器ID
     * name  克隆虚拟机的名称
     * cloneError  克隆错误信息
-    * cloneState  克隆状态
+    * cloneState  克隆状态 NOT_READY: 未准备好 READY: 就绪 PREPARING: 准备创建中 CREATING: 创建中 ERROR: 克隆错误 FINISHED: 克隆结束
     * errorMsg  克隆错误信息描述
     *
     * @var string[]
@@ -80,7 +80,7 @@ class CloneServer implements ModelInterface, ArrayAccess
     * vmId  克隆服务器ID
     * name  克隆虚拟机的名称
     * cloneError  克隆错误信息
-    * cloneState  克隆状态
+    * cloneState  克隆状态 NOT_READY: 未准备好 READY: 就绪 PREPARING: 准备创建中 CREATING: 创建中 ERROR: 克隆错误 FINISHED: 克隆结束
     * errorMsg  克隆错误信息描述
     *
     * @var string[]
@@ -98,7 +98,7 @@ class CloneServer implements ModelInterface, ArrayAccess
     * vmId  克隆服务器ID
     * name  克隆虚拟机的名称
     * cloneError  克隆错误信息
-    * cloneState  克隆状态
+    * cloneState  克隆状态 NOT_READY: 未准备好 READY: 就绪 PREPARING: 准备创建中 CREATING: 创建中 ERROR: 克隆错误 FINISHED: 克隆结束
     * errorMsg  克隆错误信息描述
     *
     * @var string[]
@@ -116,7 +116,7 @@ class CloneServer implements ModelInterface, ArrayAccess
     * vmId  克隆服务器ID
     * name  克隆虚拟机的名称
     * cloneError  克隆错误信息
-    * cloneState  克隆状态
+    * cloneState  克隆状态 NOT_READY: 未准备好 READY: 就绪 PREPARING: 准备创建中 CREATING: 创建中 ERROR: 克隆错误 FINISHED: 克隆结束
     * errorMsg  克隆错误信息描述
     *
     * @var string[]
@@ -169,7 +169,30 @@ class CloneServer implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const CLONE_STATE_NOT_READY = 'NOT_READY';
+    const CLONE_STATE_READY = 'READY';
+    const CLONE_STATE_PREPARING = 'PREPARING';
+    const CLONE_STATE_CREATING = 'CREATING';
+    const CLONE_STATE_ERROR = 'ERROR';
+    const CLONE_STATE_FINISHED = 'FINISHED';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getCloneStateAllowableValues()
+    {
+        return [
+            self::CLONE_STATE_NOT_READY,
+            self::CLONE_STATE_READY,
+            self::CLONE_STATE_PREPARING,
+            self::CLONE_STATE_CREATING,
+            self::CLONE_STATE_ERROR,
+            self::CLONE_STATE_FINISHED,
+        ];
+    }
 
 
     /**
@@ -220,12 +243,14 @@ class CloneServer implements ModelInterface, ArrayAccess
             if (!is_null($this->container['cloneError']) && (mb_strlen($this->container['cloneError']) < 0)) {
                 $invalidProperties[] = "invalid value for 'cloneError', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['cloneState']) && (mb_strlen($this->container['cloneState']) > 255)) {
-                $invalidProperties[] = "invalid value for 'cloneState', the character length must be smaller than or equal to 255.";
+            $allowedValues = $this->getCloneStateAllowableValues();
+                if (!is_null($this->container['cloneState']) && !in_array($this->container['cloneState'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'cloneState', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if (!is_null($this->container['cloneState']) && (mb_strlen($this->container['cloneState']) < 0)) {
-                $invalidProperties[] = "invalid value for 'cloneState', the character length must be bigger than or equal to 0.";
-            }
+
             if (!is_null($this->container['errorMsg']) && (mb_strlen($this->container['errorMsg']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'errorMsg', the character length must be smaller than or equal to 1024.";
             }
@@ -320,7 +345,7 @@ class CloneServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloneState
-    *  克隆状态
+    *  克隆状态 NOT_READY: 未准备好 READY: 就绪 PREPARING: 准备创建中 CREATING: 创建中 ERROR: 克隆错误 FINISHED: 克隆结束
     *
     * @return string|null
     */
@@ -332,7 +357,7 @@ class CloneServer implements ModelInterface, ArrayAccess
     /**
     * Sets cloneState
     *
-    * @param string|null $cloneState 克隆状态
+    * @param string|null $cloneState 克隆状态 NOT_READY: 未准备好 READY: 就绪 PREPARING: 准备创建中 CREATING: 创建中 ERROR: 克隆错误 FINISHED: 克隆结束
     *
     * @return $this
     */

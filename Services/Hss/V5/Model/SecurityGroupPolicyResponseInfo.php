@@ -26,7 +26,7 @@ class SecurityGroupPolicyResponseInfo implements ModelInterface, ArrayAccess
     * securityGroups  安全组列表
     * workloadId  工作负载ID
     * workloadName  工作负载名称
-    * workloadType  工作负载类型
+    * workloadType  **参数解释**: 工作负载类型 **取值范围**: - deployments：无状态负载 - statefulsets：有状态负载 - daemonsets：守护进程表
     * namespaceId  命名空间id
     * namespace  命名空间
     * createTime  创建时间
@@ -56,7 +56,7 @@ class SecurityGroupPolicyResponseInfo implements ModelInterface, ArrayAccess
     * securityGroups  安全组列表
     * workloadId  工作负载ID
     * workloadName  工作负载名称
-    * workloadType  工作负载类型
+    * workloadType  **参数解释**: 工作负载类型 **取值范围**: - deployments：无状态负载 - statefulsets：有状态负载 - daemonsets：守护进程表
     * namespaceId  命名空间id
     * namespace  命名空间
     * createTime  创建时间
@@ -107,7 +107,7 @@ class SecurityGroupPolicyResponseInfo implements ModelInterface, ArrayAccess
     * securityGroups  安全组列表
     * workloadId  工作负载ID
     * workloadName  工作负载名称
-    * workloadType  工作负载类型
+    * workloadType  **参数解释**: 工作负载类型 **取值范围**: - deployments：无状态负载 - statefulsets：有状态负载 - daemonsets：守护进程表
     * namespaceId  命名空间id
     * namespace  命名空间
     * createTime  创建时间
@@ -137,7 +137,7 @@ class SecurityGroupPolicyResponseInfo implements ModelInterface, ArrayAccess
     * securityGroups  安全组列表
     * workloadId  工作负载ID
     * workloadName  工作负载名称
-    * workloadType  工作负载类型
+    * workloadType  **参数解释**: 工作负载类型 **取值范围**: - deployments：无状态负载 - statefulsets：有状态负载 - daemonsets：守护进程表
     * namespaceId  命名空间id
     * namespace  命名空间
     * createTime  创建时间
@@ -167,7 +167,7 @@ class SecurityGroupPolicyResponseInfo implements ModelInterface, ArrayAccess
     * securityGroups  安全组列表
     * workloadId  工作负载ID
     * workloadName  工作负载名称
-    * workloadType  工作负载类型
+    * workloadType  **参数解释**: 工作负载类型 **取值范围**: - deployments：无状态负载 - statefulsets：有状态负载 - daemonsets：守护进程表
     * namespaceId  命名空间id
     * namespace  命名空间
     * createTime  创建时间
@@ -518,7 +518,7 @@ class SecurityGroupPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets workloadType
-    *  工作负载类型
+    *  **参数解释**: 工作负载类型 **取值范围**: - deployments：无状态负载 - statefulsets：有状态负载 - daemonsets：守护进程表
     *
     * @return string
     */
@@ -530,7 +530,7 @@ class SecurityGroupPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets workloadType
     *
-    * @param string $workloadType 工作负载类型
+    * @param string $workloadType **参数解释**: 工作负载类型 **取值范围**: - deployments：无状态负载 - statefulsets：有状态负载 - daemonsets：守护进程表
     *
     * @return $this
     */

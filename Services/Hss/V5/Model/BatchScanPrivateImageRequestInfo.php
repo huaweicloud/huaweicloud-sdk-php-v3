@@ -20,7 +20,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * repoType  仓库类型，现阶段接入了swr镜像仓库，包含如下:   - SWR : SWR镜像仓库
+    * repoType  仓库类型。（该字段已废弃）
     * imageInfoList  要扫描的镜像信息列表，operate_all参数为false时为必填
     * operateAll  若为true全量查询，可筛选条件全部查询，若image_info_list为空，则必填
     * namespace  组织名称
@@ -56,7 +56,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * repoType  仓库类型，现阶段接入了swr镜像仓库，包含如下:   - SWR : SWR镜像仓库
+    * repoType  仓库类型。（该字段已废弃）
     * imageInfoList  要扫描的镜像信息列表，operate_all参数为false时为必填
     * operateAll  若为true全量查询，可筛选条件全部查询，若image_info_list为空，则必填
     * namespace  组织名称
@@ -113,7 +113,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * repoType  仓库类型，现阶段接入了swr镜像仓库，包含如下:   - SWR : SWR镜像仓库
+    * repoType  仓库类型。（该字段已废弃）
     * imageInfoList  要扫描的镜像信息列表，operate_all参数为false时为必填
     * operateAll  若为true全量查询，可筛选条件全部查询，若image_info_list为空，则必填
     * namespace  组织名称
@@ -149,7 +149,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * repoType  仓库类型，现阶段接入了swr镜像仓库，包含如下:   - SWR : SWR镜像仓库
+    * repoType  仓库类型。（该字段已废弃）
     * imageInfoList  要扫描的镜像信息列表，operate_all参数为false时为必填
     * operateAll  若为true全量查询，可筛选条件全部查询，若image_info_list为空，则必填
     * namespace  组织名称
@@ -185,7 +185,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * repoType  仓库类型，现阶段接入了swr镜像仓库，包含如下:   - SWR : SWR镜像仓库
+    * repoType  仓库类型。（该字段已废弃）
     * imageInfoList  要扫描的镜像信息列表，operate_all参数为false时为必填
     * operateAll  若为true全量查询，可筛选条件全部查询，若image_info_list为空，则必填
     * namespace  组织名称
@@ -401,7 +401,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets repoType
-    *  仓库类型，现阶段接入了swr镜像仓库，包含如下:   - SWR : SWR镜像仓库
+    *  仓库类型。（该字段已废弃）
     *
     * @return string|null
     */
@@ -413,7 +413,7 @@ class BatchScanPrivateImageRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets repoType
     *
-    * @param string|null $repoType 仓库类型，现阶段接入了swr镜像仓库，包含如下:   - SWR : SWR镜像仓库
+    * @param string|null $repoType 仓库类型。（该字段已废弃）
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  标签的KEY。
-    * values  标签的VALUES。
+    * key  匹配的标签键。
+    * values  匹配的标签值列表。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  标签的KEY。
-    * values  标签的VALUES。
+    * key  匹配的标签键。
+    * values  匹配的标签值列表。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  标签的KEY。
-    * values  标签的VALUES。
+    * key  匹配的标签键。
+    * values  匹配的标签值列表。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  标签的KEY。
-    * values  标签的VALUES。
+    * key  匹配的标签键。
+    * values  匹配的标签值列表。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  标签的KEY。
-    * values  标签的VALUES。
+    * key  匹配的标签键。
+    * values  匹配的标签值列表。
     *
     * @var string[]
     */
@@ -200,7 +200,7 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  标签的KEY。
+    *  匹配的标签键。
     *
     * @return string
     */
@@ -212,7 +212,7 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 标签的KEY。
+    * @param string $key 匹配的标签键。
     *
     * @return $this
     */
@@ -224,7 +224,7 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  标签的VALUES。
+    *  匹配的标签值列表。
     *
     * @return string[]
     */
@@ -236,7 +236,7 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param string[] $values 标签的VALUES。
+    * @param string[] $values 匹配的标签值列表。
     *
     * @return $this
     */

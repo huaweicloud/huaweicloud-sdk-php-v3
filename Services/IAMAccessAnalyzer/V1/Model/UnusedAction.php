@@ -27,7 +27,7 @@ class UnusedAction implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'action' => 'string',
-            'lastAccessed' => 'object'
+            'lastAccessed' => '\DateTime'
     ];
 
     /**
@@ -214,7 +214,7 @@ class UnusedAction implements ModelInterface, ArrayAccess
     * Gets lastAccessed
     *  用户使用授权项的最后访问时间。
     *
-    * @return object|null
+    * @return \DateTime|null
     */
     public function getLastAccessed()
     {
@@ -224,7 +224,7 @@ class UnusedAction implements ModelInterface, ArrayAccess
     /**
     * Sets lastAccessed
     *
-    * @param object|null $lastAccessed 用户使用授权项的最后访问时间。
+    * @param \DateTime|null $lastAccessed 用户使用授权项的最后访问时间。
     *
     * @return $this
     */

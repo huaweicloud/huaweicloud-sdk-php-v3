@@ -24,13 +24,15 @@ class PrivateNat implements ModelInterface, ArrayAccess
     * projectId  项目的ID。
     * name  私网NAT网关实例的名字。
     * description  私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
-    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结
+    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
+    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     * createdAt  私网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  私网NAT网关实例的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * downlinkVpcs  私网NAT网关实例所属的VPC实例。
     * tags  标签列表。
     * enterpriseProjectId  企业项目ID。 创建私网NAT网关实例时，关联的企业项目ID。
+    * ruleMax  最大规则数。
+    * transitIpPoolSizeMax  中转ip池大小
     *
     * @var string[]
     */
@@ -44,8 +46,10 @@ class PrivateNat implements ModelInterface, ArrayAccess
             'createdAt' => '\DateTime',
             'updatedAt' => '\DateTime',
             'downlinkVpcs' => '\HuaweiCloud\SDK\Nat\V2\Model\DownlinkVpc[]',
-            'tags' => '\HuaweiCloud\SDK\Nat\V2\Model\PrivateTag[]',
-            'enterpriseProjectId' => 'string'
+            'tags' => '\HuaweiCloud\SDK\Nat\V2\Model\Tag[]',
+            'enterpriseProjectId' => 'string',
+            'ruleMax' => 'int',
+            'transitIpPoolSizeMax' => 'int'
     ];
 
     /**
@@ -54,13 +58,15 @@ class PrivateNat implements ModelInterface, ArrayAccess
     * projectId  项目的ID。
     * name  私网NAT网关实例的名字。
     * description  私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
-    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结
+    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
+    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     * createdAt  私网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  私网NAT网关实例的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * downlinkVpcs  私网NAT网关实例所属的VPC实例。
     * tags  标签列表。
     * enterpriseProjectId  企业项目ID。 创建私网NAT网关实例时，关联的企业项目ID。
+    * ruleMax  最大规则数。
+    * transitIpPoolSizeMax  中转ip池大小
     *
     * @var string[]
     */
@@ -75,7 +81,9 @@ class PrivateNat implements ModelInterface, ArrayAccess
         'updatedAt' => 'date-time',
         'downlinkVpcs' => null,
         'tags' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'ruleMax' => 'int32',
+        'transitIpPoolSizeMax' => 'int32'
     ];
 
     /**
@@ -105,13 +113,15 @@ class PrivateNat implements ModelInterface, ArrayAccess
     * projectId  项目的ID。
     * name  私网NAT网关实例的名字。
     * description  私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
-    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结
+    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
+    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     * createdAt  私网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  私网NAT网关实例的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * downlinkVpcs  私网NAT网关实例所属的VPC实例。
     * tags  标签列表。
     * enterpriseProjectId  企业项目ID。 创建私网NAT网关实例时，关联的企业项目ID。
+    * ruleMax  最大规则数。
+    * transitIpPoolSizeMax  中转ip池大小
     *
     * @var string[]
     */
@@ -126,7 +136,9 @@ class PrivateNat implements ModelInterface, ArrayAccess
             'updatedAt' => 'updated_at',
             'downlinkVpcs' => 'downlink_vpcs',
             'tags' => 'tags',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'ruleMax' => 'rule_max',
+            'transitIpPoolSizeMax' => 'transit_ip_pool_size_max'
     ];
 
     /**
@@ -135,13 +147,15 @@ class PrivateNat implements ModelInterface, ArrayAccess
     * projectId  项目的ID。
     * name  私网NAT网关实例的名字。
     * description  私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
-    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结
+    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
+    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     * createdAt  私网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  私网NAT网关实例的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * downlinkVpcs  私网NAT网关实例所属的VPC实例。
     * tags  标签列表。
     * enterpriseProjectId  企业项目ID。 创建私网NAT网关实例时，关联的企业项目ID。
+    * ruleMax  最大规则数。
+    * transitIpPoolSizeMax  中转ip池大小
     *
     * @var string[]
     */
@@ -156,7 +170,9 @@ class PrivateNat implements ModelInterface, ArrayAccess
             'updatedAt' => 'setUpdatedAt',
             'downlinkVpcs' => 'setDownlinkVpcs',
             'tags' => 'setTags',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'ruleMax' => 'setRuleMax',
+            'transitIpPoolSizeMax' => 'setTransitIpPoolSizeMax'
     ];
 
     /**
@@ -165,13 +181,15 @@ class PrivateNat implements ModelInterface, ArrayAccess
     * projectId  项目的ID。
     * name  私网NAT网关实例的名字。
     * description  私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
-    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结
+    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
+    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     * createdAt  私网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  私网NAT网关实例的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * downlinkVpcs  私网NAT网关实例所属的VPC实例。
     * tags  标签列表。
     * enterpriseProjectId  企业项目ID。 创建私网NAT网关实例时，关联的企业项目ID。
+    * ruleMax  最大规则数。
+    * transitIpPoolSizeMax  中转ip池大小
     *
     * @var string[]
     */
@@ -186,7 +204,9 @@ class PrivateNat implements ModelInterface, ArrayAccess
             'updatedAt' => 'getUpdatedAt',
             'downlinkVpcs' => 'getDownlinkVpcs',
             'tags' => 'getTags',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'ruleMax' => 'getRuleMax',
+            'transitIpPoolSizeMax' => 'getTransitIpPoolSizeMax'
     ];
 
     /**
@@ -233,8 +253,10 @@ class PrivateNat implements ModelInterface, ArrayAccess
     const SPEC_MEDIUM = 'Medium';
     const SPEC_LARGE = 'Large';
     const SPEC_EXTRA_LARGE = 'Extra-large';
+    const SPEC_EXTRA_XLARGE = 'Extra-xlarge';
     const STATUS_ACTIVE = 'ACTIVE';
     const STATUS_FROZEN = 'FROZEN';
+    const STATUS_INACTIVE = 'INACTIVE';
     
 
     /**
@@ -249,6 +271,7 @@ class PrivateNat implements ModelInterface, ArrayAccess
             self::SPEC_MEDIUM,
             self::SPEC_LARGE,
             self::SPEC_EXTRA_LARGE,
+            self::SPEC_EXTRA_XLARGE,
         ];
     }
 
@@ -262,6 +285,7 @@ class PrivateNat implements ModelInterface, ArrayAccess
         return [
             self::STATUS_ACTIVE,
             self::STATUS_FROZEN,
+            self::STATUS_INACTIVE,
         ];
     }
 
@@ -292,6 +316,8 @@ class PrivateNat implements ModelInterface, ArrayAccess
         $this->container['downlinkVpcs'] = isset($data['downlinkVpcs']) ? $data['downlinkVpcs'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['ruleMax'] = isset($data['ruleMax']) ? $data['ruleMax'] : null;
+        $this->container['transitIpPoolSizeMax'] = isset($data['transitIpPoolSizeMax']) ? $data['transitIpPoolSizeMax'] : null;
     }
 
     /**
@@ -377,6 +403,18 @@ class PrivateNat implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['enterpriseProjectId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['ruleMax']) && ($this->container['ruleMax'] > 65535)) {
+                $invalidProperties[] = "invalid value for 'ruleMax', must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['ruleMax']) && ($this->container['ruleMax'] < 0)) {
+                $invalidProperties[] = "invalid value for 'ruleMax', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['transitIpPoolSizeMax']) && ($this->container['transitIpPoolSizeMax'] > 100)) {
+                $invalidProperties[] = "invalid value for 'transitIpPoolSizeMax', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['transitIpPoolSizeMax']) && ($this->container['transitIpPoolSizeMax'] < 1)) {
+                $invalidProperties[] = "invalid value for 'transitIpPoolSizeMax', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -490,7 +528,7 @@ class PrivateNat implements ModelInterface, ArrayAccess
 
     /**
     * Gets spec
-    *  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
+    *  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
     *
     * @return string
     */
@@ -502,7 +540,7 @@ class PrivateNat implements ModelInterface, ArrayAccess
     /**
     * Sets spec
     *
-    * @param string $spec 私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
+    * @param string $spec 私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
     *
     * @return $this
     */
@@ -514,7 +552,7 @@ class PrivateNat implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结
+    *  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     *
     * @return string
     */
@@ -526,7 +564,7 @@ class PrivateNat implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结
+    * @param string $status 私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     *
     * @return $this
     */
@@ -612,7 +650,7 @@ class PrivateNat implements ModelInterface, ArrayAccess
     * Gets tags
     *  标签列表。
     *
-    * @return \HuaweiCloud\SDK\Nat\V2\Model\PrivateTag[]|null
+    * @return \HuaweiCloud\SDK\Nat\V2\Model\Tag[]|null
     */
     public function getTags()
     {
@@ -622,7 +660,7 @@ class PrivateNat implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Nat\V2\Model\PrivateTag[]|null $tags 标签列表。
+    * @param \HuaweiCloud\SDK\Nat\V2\Model\Tag[]|null $tags 标签列表。
     *
     * @return $this
     */
@@ -653,6 +691,54 @@ class PrivateNat implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets ruleMax
+    *  最大规则数。
+    *
+    * @return int|null
+    */
+    public function getRuleMax()
+    {
+        return $this->container['ruleMax'];
+    }
+
+    /**
+    * Sets ruleMax
+    *
+    * @param int|null $ruleMax 最大规则数。
+    *
+    * @return $this
+    */
+    public function setRuleMax($ruleMax)
+    {
+        $this->container['ruleMax'] = $ruleMax;
+        return $this;
+    }
+
+    /**
+    * Gets transitIpPoolSizeMax
+    *  中转ip池大小
+    *
+    * @return int|null
+    */
+    public function getTransitIpPoolSizeMax()
+    {
+        return $this->container['transitIpPoolSizeMax'];
+    }
+
+    /**
+    * Sets transitIpPoolSizeMax
+    *
+    * @param int|null $transitIpPoolSizeMax 中转ip池大小
+    *
+    * @return $this
+    */
+    public function setTransitIpPoolSizeMax($transitIpPoolSizeMax)
+    {
+        $this->container['transitIpPoolSizeMax'] = $transitIpPoolSizeMax;
         return $this;
     }
 

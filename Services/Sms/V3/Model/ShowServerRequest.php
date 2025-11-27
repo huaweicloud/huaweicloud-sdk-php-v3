@@ -161,11 +161,11 @@ class ShowServerRequest implements ModelInterface, ArrayAccess
         if ($this->container['sourceId'] === null) {
             $invalidProperties[] = "'sourceId' can't be null";
         }
-            if ((mb_strlen($this->container['sourceId']) > 255)) {
-                $invalidProperties[] = "invalid value for 'sourceId', the character length must be smaller than or equal to 255.";
+            if ((mb_strlen($this->container['sourceId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'sourceId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['sourceId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'sourceId', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['sourceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'sourceId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }

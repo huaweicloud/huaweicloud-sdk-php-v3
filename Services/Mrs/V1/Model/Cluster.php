@@ -88,6 +88,7 @@ class Cluster implements ModelInterface, ArrayAccess
     * eipId  集群弹性公网ip的唯一标识
     * eipAddress  集群弹性公网ip的IPV4地址
     * eipv6Address  集群弹性公网ip的IPV6地址，IPv4时无此字段。
+    * azCategory  表示当前可用区的类型。 - 0：大云主可用区 - 21：本地可用区 - 41：边缘可用区
     *
     * @var string[]
     */
@@ -159,7 +160,8 @@ class Cluster implements ModelInterface, ArrayAccess
             'taskNodeGroups' => '\HuaweiCloud\SDK\Mrs\V1\Model\NodeGroupV10[]',
             'eipId' => 'string',
             'eipAddress' => 'string',
-            'eipv6Address' => 'string'
+            'eipv6Address' => 'string',
+            'azCategory' => 'int'
     ];
 
     /**
@@ -232,6 +234,7 @@ class Cluster implements ModelInterface, ArrayAccess
     * eipId  集群弹性公网ip的唯一标识
     * eipAddress  集群弹性公网ip的IPV4地址
     * eipv6Address  集群弹性公网ip的IPV6地址，IPv4时无此字段。
+    * azCategory  表示当前可用区的类型。 - 0：大云主可用区 - 21：本地可用区 - 41：边缘可用区
     *
     * @var string[]
     */
@@ -303,7 +306,8 @@ class Cluster implements ModelInterface, ArrayAccess
         'taskNodeGroups' => null,
         'eipId' => null,
         'eipAddress' => null,
-        'eipv6Address' => null
+        'eipv6Address' => null,
+        'azCategory' => 'int32'
     ];
 
     /**
@@ -397,6 +401,7 @@ class Cluster implements ModelInterface, ArrayAccess
     * eipId  集群弹性公网ip的唯一标识
     * eipAddress  集群弹性公网ip的IPV4地址
     * eipv6Address  集群弹性公网ip的IPV6地址，IPv4时无此字段。
+    * azCategory  表示当前可用区的类型。 - 0：大云主可用区 - 21：本地可用区 - 41：边缘可用区
     *
     * @var string[]
     */
@@ -468,7 +473,8 @@ class Cluster implements ModelInterface, ArrayAccess
             'taskNodeGroups' => 'taskNodeGroups',
             'eipId' => 'eipId',
             'eipAddress' => 'eipAddress',
-            'eipv6Address' => 'eipv6Address'
+            'eipv6Address' => 'eipv6Address',
+            'azCategory' => 'azCategory'
     ];
 
     /**
@@ -541,6 +547,7 @@ class Cluster implements ModelInterface, ArrayAccess
     * eipId  集群弹性公网ip的唯一标识
     * eipAddress  集群弹性公网ip的IPV4地址
     * eipv6Address  集群弹性公网ip的IPV6地址，IPv4时无此字段。
+    * azCategory  表示当前可用区的类型。 - 0：大云主可用区 - 21：本地可用区 - 41：边缘可用区
     *
     * @var string[]
     */
@@ -612,7 +619,8 @@ class Cluster implements ModelInterface, ArrayAccess
             'taskNodeGroups' => 'setTaskNodeGroups',
             'eipId' => 'setEipId',
             'eipAddress' => 'setEipAddress',
-            'eipv6Address' => 'setEipv6Address'
+            'eipv6Address' => 'setEipv6Address',
+            'azCategory' => 'setAzCategory'
     ];
 
     /**
@@ -685,6 +693,7 @@ class Cluster implements ModelInterface, ArrayAccess
     * eipId  集群弹性公网ip的唯一标识
     * eipAddress  集群弹性公网ip的IPV4地址
     * eipv6Address  集群弹性公网ip的IPV6地址，IPv4时无此字段。
+    * azCategory  表示当前可用区的类型。 - 0：大云主可用区 - 21：本地可用区 - 41：边缘可用区
     *
     * @var string[]
     */
@@ -756,7 +765,8 @@ class Cluster implements ModelInterface, ArrayAccess
             'taskNodeGroups' => 'getTaskNodeGroups',
             'eipId' => 'getEipId',
             'eipAddress' => 'getEipAddress',
-            'eipv6Address' => 'getEipv6Address'
+            'eipv6Address' => 'getEipv6Address',
+            'azCategory' => 'getAzCategory'
     ];
 
     /**
@@ -885,6 +895,7 @@ class Cluster implements ModelInterface, ArrayAccess
         $this->container['eipId'] = isset($data['eipId']) ? $data['eipId'] : null;
         $this->container['eipAddress'] = isset($data['eipAddress']) ? $data['eipAddress'] : null;
         $this->container['eipv6Address'] = isset($data['eipv6Address']) ? $data['eipv6Address'] : null;
+        $this->container['azCategory'] = isset($data['azCategory']) ? $data['azCategory'] : null;
     }
 
     /**
@@ -2538,6 +2549,30 @@ class Cluster implements ModelInterface, ArrayAccess
     public function setEipv6Address($eipv6Address)
     {
         $this->container['eipv6Address'] = $eipv6Address;
+        return $this;
+    }
+
+    /**
+    * Gets azCategory
+    *  表示当前可用区的类型。 - 0：大云主可用区 - 21：本地可用区 - 41：边缘可用区
+    *
+    * @return int|null
+    */
+    public function getAzCategory()
+    {
+        return $this->container['azCategory'];
+    }
+
+    /**
+    * Sets azCategory
+    *
+    * @param int|null $azCategory 表示当前可用区的类型。 - 0：大云主可用区 - 21：本地可用区 - 41：边缘可用区
+    *
+    * @return $this
+    */
+    public function setAzCategory($azCategory)
+    {
+        $this->container['azCategory'] = $azCategory;
         return $this;
     }
 

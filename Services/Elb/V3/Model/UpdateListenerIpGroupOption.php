@@ -20,7 +20,7 @@ class UpdateListenerIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ipgroupId  **参数解释**：监听器关联的访问控制组的id。创建时必选，更新时非必选。  **约束限制**：指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。  **取值范围**：不涉及  **默认取值**：不涉及
+    * ipgroupId  **参数解释**：监听器关联的访问控制组的id。关联多个IP地址组时ID使用逗号分隔。  **约束限制**：指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。  **取值范围**：不涉及  **默认取值**：不涉及
     * enableIpgroup  **参数解释**：访问控制组的状态。开启访问控制的监听器，允许直接删除。  **约束限制**：不涉及  **取值范围**： - true:开启访问控制。 - false：关闭访问控制。  **默认取值**：不涉及
     * type  **参数解释**：访问控制组的类型。  **约束限制**：不涉及  **取值范围**： - white:白名单，只允许指定ip访问。 - black:黑名单，不允许指定ip访问。  **默认取值**：不涉及
     *
@@ -34,7 +34,7 @@ class UpdateListenerIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ipgroupId  **参数解释**：监听器关联的访问控制组的id。创建时必选，更新时非必选。  **约束限制**：指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。  **取值范围**：不涉及  **默认取值**：不涉及
+    * ipgroupId  **参数解释**：监听器关联的访问控制组的id。关联多个IP地址组时ID使用逗号分隔。  **约束限制**：指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。  **取值范围**：不涉及  **默认取值**：不涉及
     * enableIpgroup  **参数解释**：访问控制组的状态。开启访问控制的监听器，允许直接删除。  **约束限制**：不涉及  **取值范围**： - true:开启访问控制。 - false：关闭访问控制。  **默认取值**：不涉及
     * type  **参数解释**：访问控制组的类型。  **约束限制**：不涉及  **取值范围**： - white:白名单，只允许指定ip访问。 - black:黑名单，不允许指定ip访问。  **默认取值**：不涉及
     *
@@ -69,7 +69,7 @@ class UpdateListenerIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ipgroupId  **参数解释**：监听器关联的访问控制组的id。创建时必选，更新时非必选。  **约束限制**：指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。  **取值范围**：不涉及  **默认取值**：不涉及
+    * ipgroupId  **参数解释**：监听器关联的访问控制组的id。关联多个IP地址组时ID使用逗号分隔。  **约束限制**：指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。  **取值范围**：不涉及  **默认取值**：不涉及
     * enableIpgroup  **参数解释**：访问控制组的状态。开启访问控制的监听器，允许直接删除。  **约束限制**：不涉及  **取值范围**： - true:开启访问控制。 - false：关闭访问控制。  **默认取值**：不涉及
     * type  **参数解释**：访问控制组的类型。  **约束限制**：不涉及  **取值范围**： - white:白名单，只允许指定ip访问。 - black:黑名单，不允许指定ip访问。  **默认取值**：不涉及
     *
@@ -83,7 +83,7 @@ class UpdateListenerIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ipgroupId  **参数解释**：监听器关联的访问控制组的id。创建时必选，更新时非必选。  **约束限制**：指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。  **取值范围**：不涉及  **默认取值**：不涉及
+    * ipgroupId  **参数解释**：监听器关联的访问控制组的id。关联多个IP地址组时ID使用逗号分隔。  **约束限制**：指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。  **取值范围**：不涉及  **默认取值**：不涉及
     * enableIpgroup  **参数解释**：访问控制组的状态。开启访问控制的监听器，允许直接删除。  **约束限制**：不涉及  **取值范围**： - true:开启访问控制。 - false：关闭访问控制。  **默认取值**：不涉及
     * type  **参数解释**：访问控制组的类型。  **约束限制**：不涉及  **取值范围**： - white:白名单，只允许指定ip访问。 - black:黑名单，不允许指定ip访问。  **默认取值**：不涉及
     *
@@ -97,7 +97,7 @@ class UpdateListenerIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ipgroupId  **参数解释**：监听器关联的访问控制组的id。创建时必选，更新时非必选。  **约束限制**：指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。  **取值范围**：不涉及  **默认取值**：不涉及
+    * ipgroupId  **参数解释**：监听器关联的访问控制组的id。关联多个IP地址组时ID使用逗号分隔。  **约束限制**：指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。  **取值范围**：不涉及  **默认取值**：不涉及
     * enableIpgroup  **参数解释**：访问控制组的状态。开启访问控制的监听器，允许直接删除。  **约束限制**：不涉及  **取值范围**： - true:开启访问控制。 - false：关闭访问控制。  **默认取值**：不涉及
     * type  **参数解释**：访问控制组的类型。  **约束限制**：不涉及  **取值范围**： - white:白名单，只允许指定ip访问。 - black:黑名单，不允许指定ip访问。  **默认取值**：不涉及
     *
@@ -225,7 +225,7 @@ class UpdateListenerIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipgroupId
-    *  **参数解释**：监听器关联的访问控制组的id。创建时必选，更新时非必选。  **约束限制**：指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。  **取值范围**：不涉及  **默认取值**：不涉及
+    *  **参数解释**：监听器关联的访问控制组的id。关联多个IP地址组时ID使用逗号分隔。  **约束限制**：指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -237,7 +237,7 @@ class UpdateListenerIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Sets ipgroupId
     *
-    * @param string|null $ipgroupId **参数解释**：监听器关联的访问控制组的id。创建时必选，更新时非必选。  **约束限制**：指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。  **取值范围**：不涉及  **默认取值**：不涉及
+    * @param string|null $ipgroupId **参数解释**：监听器关联的访问控制组的id。关联多个IP地址组时ID使用逗号分隔。  **约束限制**：指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */

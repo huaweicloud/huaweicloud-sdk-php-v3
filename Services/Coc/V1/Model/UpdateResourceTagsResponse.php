@@ -21,22 +21,22 @@ class UpdateResourceTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * data  更新脚本指定的资源标签，系统返回的脚本ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'string'
+            'data' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * data  更新脚本指定的资源标签，系统返回的脚本ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'data' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class UpdateResourceTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * data  更新脚本指定的资源标签，系统返回的脚本ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'data' => 'data'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * data  更新脚本指定的资源标签，系统返回的脚本ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'data' => 'setData'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * data  更新脚本指定的资源标签，系统返回的脚本ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'data' => 'getData'
     ];
 
     /**
@@ -148,7 +148,7 @@ class UpdateResourceTagsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -159,6 +159,12 @@ class UpdateResourceTagsResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['data']) && (mb_strlen($this->container['data']) > 128)) {
+                $invalidProperties[] = "invalid value for 'data', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['data']) && (mb_strlen($this->container['data']) < 1)) {
+                $invalidProperties[] = "invalid value for 'data', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -174,26 +180,26 @@ class UpdateResourceTagsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets data
+    *  更新脚本指定的资源标签，系统返回的脚本ID。
     *
     * @return string|null
     */
-    public function getBody()
+    public function getData()
     {
-        return $this->container['body'];
+        return $this->container['data'];
     }
 
     /**
-    * Sets body
+    * Sets data
     *
-    * @param string|null $body body
+    * @param string|null $data 更新脚本指定的资源标签，系统返回的脚本ID。
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setData($data)
     {
-        $this->container['body'] = $body;
+        $this->container['data'] = $data;
         return $this;
     }
 

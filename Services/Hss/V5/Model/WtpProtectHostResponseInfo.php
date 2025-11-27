@@ -26,7 +26,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * groupId  **参数解释**： 策略组ID **取值范围**： 字符长度36-64位
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * osBit  **参数解释**： 操作系统位数 **取值范围**： 字符长度1-64位
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * protectStatus  **参数解释**: 网页防篡改防护状态 **取值范围**: - opening : 开启中。 - opened : 防护中。 - closed : 未防护。 - open_failed : 防护失败。 - partial_protection : 部分防护。 - protection_interruption : 防护中断。 - protection_pause : 防护暂停。
@@ -82,7 +82,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * groupId  **参数解释**： 策略组ID **取值范围**： 字符长度36-64位
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * osBit  **参数解释**： 操作系统位数 **取值范围**： 字符长度1-64位
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * protectStatus  **参数解释**: 网页防篡改防护状态 **取值范围**: - opening : 开启中。 - opened : 防护中。 - closed : 未防护。 - open_failed : 防护失败。 - partial_protection : 部分防护。 - protection_interruption : 防护中断。 - protection_pause : 防护暂停。
@@ -159,7 +159,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * groupId  **参数解释**： 策略组ID **取值范围**： 字符长度36-64位
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * osBit  **参数解释**： 操作系统位数 **取值范围**： 字符长度1-64位
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * protectStatus  **参数解释**: 网页防篡改防护状态 **取值范围**: - opening : 开启中。 - opened : 防护中。 - closed : 未防护。 - open_failed : 防护失败。 - partial_protection : 部分防护。 - protection_interruption : 防护中断。 - protection_pause : 防护暂停。
@@ -215,7 +215,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * groupId  **参数解释**： 策略组ID **取值范围**： 字符长度36-64位
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * osBit  **参数解释**： 操作系统位数 **取值范围**： 字符长度1-64位
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * protectStatus  **参数解释**: 网页防篡改防护状态 **取值范围**: - opening : 开启中。 - opened : 防护中。 - closed : 未防护。 - open_failed : 防护失败。 - partial_protection : 部分防护。 - protection_interruption : 防护中断。 - protection_pause : 防护暂停。
@@ -271,7 +271,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * groupId  **参数解释**： 策略组ID **取值范围**： 字符长度36-64位
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * osBit  **参数解释**： 操作系统位数 **取值范围**： 字符长度1-64位
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
     * protectStatus  **参数解释**: 网页防篡改防护状态 **取值范围**: - opening : 开启中。 - opened : 防护中。 - closed : 未防护。 - open_failed : 防护失败。 - partial_protection : 部分防护。 - protection_interruption : 防护中断。 - protection_pause : 防护暂停。
@@ -730,7 +730,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetValue
-    *  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    *  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     *
     * @return string|null
     */
@@ -742,7 +742,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets assetValue
     *
-    * @param string|null $assetValue 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * @param string|null $assetValue **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     *
     * @return $this
     */

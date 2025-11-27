@@ -47,7 +47,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
     * namespace  **参数解释**： 名称空间 **取值范围**： 字符长度1-64位
     * clusterId  集群ID
     * clusterName  集群名称
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * containerStatus  容器状态
     * osVersion  系统版本
     * agentVersion  agent版本
@@ -117,7 +117,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
     * namespace  **参数解释**： 名称空间 **取值范围**： 字符长度1-64位
     * clusterId  集群ID
     * clusterName  集群名称
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * containerStatus  容器状态
     * osVersion  系统版本
     * agentVersion  agent版本
@@ -208,7 +208,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
     * namespace  **参数解释**： 名称空间 **取值范围**： 字符长度1-64位
     * clusterId  集群ID
     * clusterName  集群名称
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * containerStatus  容器状态
     * osVersion  系统版本
     * agentVersion  agent版本
@@ -278,7 +278,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
     * namespace  **参数解释**： 名称空间 **取值范围**： 字符长度1-64位
     * clusterId  集群ID
     * clusterName  集群名称
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * containerStatus  容器状态
     * osVersion  系统版本
     * agentVersion  agent版本
@@ -348,7 +348,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
     * namespace  **参数解释**： 名称空间 **取值范围**： 字符长度1-64位
     * clusterId  集群ID
     * clusterName  集群名称
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * containerStatus  容器状态
     * osVersion  系统版本
     * agentVersion  agent版本
@@ -1317,7 +1317,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetValue
-    *  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    *  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     *
     * @return string|null
     */
@@ -1329,7 +1329,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets assetValue
     *
-    * @param string|null $assetValue 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * @param string|null $assetValue **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     *
     * @return $this
     */

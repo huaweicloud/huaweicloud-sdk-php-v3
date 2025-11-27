@@ -20,7 +20,7 @@ class CreateListenerIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ipgroupId  **参数解释**：监听器关联的访问控制组的id。  **约束限制**： - 当关联的ipgroup中的ip_list为[]，且类型为白名单时，表示禁止所有ip的访问。 - 当关联的ipgroup中的ip_list为[]，且类型为黑名单时，表示允许所有ip的访问。  **取值范围**：不涉及  **默认取值**：不涉及
+    * ipgroupId  **参数解释**：监听器关联的访问控制组的ID。关联多个IP地址组时ID使用逗号分隔。  **约束限制**： - 当关联的ipgroup中的ip_list为[]，且类型为白名单时，表示禁止所有ip的访问。 - 当关联的ipgroup中的ip_list为[]，且类型为黑名单时，表示允许所有ip的访问。  **取值范围**：不涉及  **默认取值**：不涉及
     * enableIpgroup  **参数解释**：访问控制组的状态。  **约束限制**：不涉及  **取值范围**： - true：开启访问控制，默认值。 - false：关闭访问控制。  **默认取值**：不涉及
     * type  **参数解释**：访问控制组的类型。  **约束限制**：不涉及  **取值范围**： - white：白名单，只允许指定ip访问。 - black：黑名单，不允许指定ip访问。  **默认取值**：white
     *
@@ -34,7 +34,7 @@ class CreateListenerIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ipgroupId  **参数解释**：监听器关联的访问控制组的id。  **约束限制**： - 当关联的ipgroup中的ip_list为[]，且类型为白名单时，表示禁止所有ip的访问。 - 当关联的ipgroup中的ip_list为[]，且类型为黑名单时，表示允许所有ip的访问。  **取值范围**：不涉及  **默认取值**：不涉及
+    * ipgroupId  **参数解释**：监听器关联的访问控制组的ID。关联多个IP地址组时ID使用逗号分隔。  **约束限制**： - 当关联的ipgroup中的ip_list为[]，且类型为白名单时，表示禁止所有ip的访问。 - 当关联的ipgroup中的ip_list为[]，且类型为黑名单时，表示允许所有ip的访问。  **取值范围**：不涉及  **默认取值**：不涉及
     * enableIpgroup  **参数解释**：访问控制组的状态。  **约束限制**：不涉及  **取值范围**： - true：开启访问控制，默认值。 - false：关闭访问控制。  **默认取值**：不涉及
     * type  **参数解释**：访问控制组的类型。  **约束限制**：不涉及  **取值范围**： - white：白名单，只允许指定ip访问。 - black：黑名单，不允许指定ip访问。  **默认取值**：white
     *
@@ -69,7 +69,7 @@ class CreateListenerIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ipgroupId  **参数解释**：监听器关联的访问控制组的id。  **约束限制**： - 当关联的ipgroup中的ip_list为[]，且类型为白名单时，表示禁止所有ip的访问。 - 当关联的ipgroup中的ip_list为[]，且类型为黑名单时，表示允许所有ip的访问。  **取值范围**：不涉及  **默认取值**：不涉及
+    * ipgroupId  **参数解释**：监听器关联的访问控制组的ID。关联多个IP地址组时ID使用逗号分隔。  **约束限制**： - 当关联的ipgroup中的ip_list为[]，且类型为白名单时，表示禁止所有ip的访问。 - 当关联的ipgroup中的ip_list为[]，且类型为黑名单时，表示允许所有ip的访问。  **取值范围**：不涉及  **默认取值**：不涉及
     * enableIpgroup  **参数解释**：访问控制组的状态。  **约束限制**：不涉及  **取值范围**： - true：开启访问控制，默认值。 - false：关闭访问控制。  **默认取值**：不涉及
     * type  **参数解释**：访问控制组的类型。  **约束限制**：不涉及  **取值范围**： - white：白名单，只允许指定ip访问。 - black：黑名单，不允许指定ip访问。  **默认取值**：white
     *
@@ -83,7 +83,7 @@ class CreateListenerIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ipgroupId  **参数解释**：监听器关联的访问控制组的id。  **约束限制**： - 当关联的ipgroup中的ip_list为[]，且类型为白名单时，表示禁止所有ip的访问。 - 当关联的ipgroup中的ip_list为[]，且类型为黑名单时，表示允许所有ip的访问。  **取值范围**：不涉及  **默认取值**：不涉及
+    * ipgroupId  **参数解释**：监听器关联的访问控制组的ID。关联多个IP地址组时ID使用逗号分隔。  **约束限制**： - 当关联的ipgroup中的ip_list为[]，且类型为白名单时，表示禁止所有ip的访问。 - 当关联的ipgroup中的ip_list为[]，且类型为黑名单时，表示允许所有ip的访问。  **取值范围**：不涉及  **默认取值**：不涉及
     * enableIpgroup  **参数解释**：访问控制组的状态。  **约束限制**：不涉及  **取值范围**： - true：开启访问控制，默认值。 - false：关闭访问控制。  **默认取值**：不涉及
     * type  **参数解释**：访问控制组的类型。  **约束限制**：不涉及  **取值范围**： - white：白名单，只允许指定ip访问。 - black：黑名单，不允许指定ip访问。  **默认取值**：white
     *
@@ -97,7 +97,7 @@ class CreateListenerIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ipgroupId  **参数解释**：监听器关联的访问控制组的id。  **约束限制**： - 当关联的ipgroup中的ip_list为[]，且类型为白名单时，表示禁止所有ip的访问。 - 当关联的ipgroup中的ip_list为[]，且类型为黑名单时，表示允许所有ip的访问。  **取值范围**：不涉及  **默认取值**：不涉及
+    * ipgroupId  **参数解释**：监听器关联的访问控制组的ID。关联多个IP地址组时ID使用逗号分隔。  **约束限制**： - 当关联的ipgroup中的ip_list为[]，且类型为白名单时，表示禁止所有ip的访问。 - 当关联的ipgroup中的ip_list为[]，且类型为黑名单时，表示允许所有ip的访问。  **取值范围**：不涉及  **默认取值**：不涉及
     * enableIpgroup  **参数解释**：访问控制组的状态。  **约束限制**：不涉及  **取值范围**： - true：开启访问控制，默认值。 - false：关闭访问控制。  **默认取值**：不涉及
     * type  **参数解释**：访问控制组的类型。  **约束限制**：不涉及  **取值范围**： - white：白名单，只允许指定ip访问。 - black：黑名单，不允许指定ip访问。  **默认取值**：white
     *
@@ -228,7 +228,7 @@ class CreateListenerIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipgroupId
-    *  **参数解释**：监听器关联的访问控制组的id。  **约束限制**： - 当关联的ipgroup中的ip_list为[]，且类型为白名单时，表示禁止所有ip的访问。 - 当关联的ipgroup中的ip_list为[]，且类型为黑名单时，表示允许所有ip的访问。  **取值范围**：不涉及  **默认取值**：不涉及
+    *  **参数解释**：监听器关联的访问控制组的ID。关联多个IP地址组时ID使用逗号分隔。  **约束限制**： - 当关联的ipgroup中的ip_list为[]，且类型为白名单时，表示禁止所有ip的访问。 - 当关联的ipgroup中的ip_list为[]，且类型为黑名单时，表示允许所有ip的访问。  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string
     */
@@ -240,7 +240,7 @@ class CreateListenerIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Sets ipgroupId
     *
-    * @param string $ipgroupId **参数解释**：监听器关联的访问控制组的id。  **约束限制**： - 当关联的ipgroup中的ip_list为[]，且类型为白名单时，表示禁止所有ip的访问。 - 当关联的ipgroup中的ip_list为[]，且类型为黑名单时，表示允许所有ip的访问。  **取值范围**：不涉及  **默认取值**：不涉及
+    * @param string $ipgroupId **参数解释**：监听器关联的访问控制组的ID。关联多个IP地址组时ID使用逗号分隔。  **约束限制**： - 当关联的ipgroup中的ip_list为[]，且类型为白名单时，表示禁止所有ip的访问。 - 当关联的ipgroup中的ip_list为[]，且类型为黑名单时，表示允许所有ip的访问。  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */

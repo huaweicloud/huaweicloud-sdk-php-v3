@@ -25,7 +25,7 @@ class GetNetworkPolicy implements ModelInterface, ArrayAccess
     * namespace  命名空间
     * policyContent  policyContent
     * createTime  创建时间
-    * deployStatus  下发策略到cce成功与否
+    * deployStatus  **参数解释**: 下发策略到cce成功与否 **取值范围**: - true: 成功 - false: 失败
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class GetNetworkPolicy implements ModelInterface, ArrayAccess
     * namespace  命名空间
     * policyContent  policyContent
     * createTime  创建时间
-    * deployStatus  下发策略到cce成功与否
+    * deployStatus  **参数解释**: 下发策略到cce成功与否 **取值范围**: - true: 成功 - false: 失败
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class GetNetworkPolicy implements ModelInterface, ArrayAccess
     * namespace  命名空间
     * policyContent  policyContent
     * createTime  创建时间
-    * deployStatus  下发策略到cce成功与否
+    * deployStatus  **参数解释**: 下发策略到cce成功与否 **取值范围**: - true: 成功 - false: 失败
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class GetNetworkPolicy implements ModelInterface, ArrayAccess
     * namespace  命名空间
     * policyContent  policyContent
     * createTime  创建时间
-    * deployStatus  下发策略到cce成功与否
+    * deployStatus  **参数解释**: 下发策略到cce成功与否 **取值范围**: - true: 成功 - false: 失败
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class GetNetworkPolicy implements ModelInterface, ArrayAccess
     * namespace  命名空间
     * policyContent  policyContent
     * createTime  创建时间
-    * deployStatus  下发策略到cce成功与否
+    * deployStatus  **参数解释**: 下发策略到cce成功与否 **取值范围**: - true: 成功 - false: 失败
     *
     * @var string[]
     */
@@ -367,7 +367,7 @@ class GetNetworkPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets deployStatus
-    *  下发策略到cce成功与否
+    *  **参数解释**: 下发策略到cce成功与否 **取值范围**: - true: 成功 - false: 失败
     *
     * @return bool|null
     */
@@ -379,7 +379,7 @@ class GetNetworkPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets deployStatus
     *
-    * @param bool|null $deployStatus 下发策略到cce成功与否
+    * @param bool|null $deployStatus **参数解释**: 下发策略到cce成功与否 **取值范围**: - true: 成功 - false: 失败
     *
     * @return $this
     */

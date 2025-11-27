@@ -982,6 +982,68 @@ class EvsClient extends Client
     }
 
     /**
+     * 删除回收站中单个云硬盘
+     *
+     * 删除回收站中单个云硬盘。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteVolumeInRecycle($request)
+    {
+        return $this->deleteVolumeInRecycleWithHttpInfo($request);
+    }
+
+    public function deleteVolumeInRecycleWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/recycle-bin-volumes/{volume_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['volumeId'] !== null) {
+            $pathParams['volume_id'] = $localVarParams['volumeId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\DeleteVolumeInRecycleResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\DeleteVolumeInRecycleRequest');
+    }
+
+    /**
      * 查询云硬盘快照详情列表
      *
      * 查询云硬盘快照详细列表信息。
@@ -1311,6 +1373,83 @@ class EvsClient extends Client
     }
 
     /**
+     * 查询回收站中所有云硬盘详情
+     *
+     * 查询回收站中所有云硬盘的详细信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVolumesInRecycle($request)
+    {
+        return $this->listVolumesInRecycleWithHttpInfo($request);
+    }
+
+    public function listVolumesInRecycleWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/recycle-bin-volumes/detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['availabilityZone'] !== null) {
+            $queryParams['availability_zone'] = $localVarParams['availabilityZone'];
+        }
+        if ($localVarParams['serviceType'] !== null) {
+            $queryParams['service_type'] = $localVarParams['serviceType'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ListVolumesInRecycleResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ListVolumesInRecycleRequest');
+    }
+
+    /**
      * 修改云硬盘QoS
      *
      * 调整云硬盘的iops或者吞吐量。
@@ -1516,6 +1655,68 @@ class EvsClient extends Client
     }
 
     /**
+     * 还原回收站中单个云硬盘
+     *
+     * 还原回收站中单个云硬盘。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function revertVolumeInRecycle($request)
+    {
+        return $this->revertVolumeInRecycleWithHttpInfo($request);
+    }
+
+    public function revertVolumeInRecycleWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/recycle-bin-volumes/{volume_id}/revert';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['volumeId'] !== null) {
+            $pathParams['volume_id'] = $localVarParams['volumeId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\RevertVolumeInRecycleResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\RevertVolumeInRecycleRequest');
+    }
+
+    /**
      * 回滚快照到云硬盘
      *
      * 将快照数据回滚到云硬盘。支持企业项目授权功能。
@@ -1644,6 +1845,65 @@ class EvsClient extends Client
     }
 
     /**
+     * 查询回收站策略
+     *
+     * 查询回收站策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showRecyclePolicy($request)
+    {
+        return $this->showRecyclePolicyWithHttpInfo($request);
+    }
+
+    public function showRecyclePolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/recycle-bin-volumes/policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ShowRecyclePolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ShowRecyclePolicyRequest');
+    }
+
+    /**
      * 查询单个云硬盘快照详情
      *
      * 查询单个云硬盘快照信息。支持企业项目授权功能。
@@ -1765,6 +2025,68 @@ class EvsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ShowVolumeResponse',
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ShowVolumeRequest');
+    }
+
+    /**
+     * 查询回收站中单个云硬盘详情
+     *
+     * 查询回收站中单个云硬盘的详细信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showVolumeInRecycle($request)
+    {
+        return $this->showVolumeInRecycleWithHttpInfo($request);
+    }
+
+    public function showVolumeInRecycleWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/recycle-bin-volumes/{volume_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['volumeId'] !== null) {
+            $pathParams['volume_id'] = $localVarParams['volumeId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ShowVolumeInRecycleResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ShowVolumeInRecycleRequest');
     }
 
     /**
@@ -1891,6 +2213,68 @@ class EvsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\UnsubscribePostpaidVolumeResponse',
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\UnsubscribePostpaidVolumeRequest');
+    }
+
+    /**
+     * 更新回收站策略
+     *
+     * 更新回收站策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateRecyclePolicy($request)
+    {
+        return $this->updateRecyclePolicyWithHttpInfo($request);
+    }
+
+    public function updateRecyclePolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/recycle-bin-volumes/policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\UpdateRecyclePolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\UpdateRecyclePolicyRequest');
     }
 
     /**

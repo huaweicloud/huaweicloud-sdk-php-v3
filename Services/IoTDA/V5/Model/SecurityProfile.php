@@ -169,6 +169,12 @@ class SecurityProfile implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['key'] === null) {
+            $invalidProperties[] = "'key' can't be null";
+        }
+        if ($this->container['value'] === null) {
+            $invalidProperties[] = "'value' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -187,7 +193,7 @@ class SecurityProfile implements ModelInterface, ArrayAccess
     * Gets key
     *  安全态势感知项配置值名称
     *
-    * @return string|null
+    * @return string
     */
     public function getKey()
     {
@@ -197,7 +203,7 @@ class SecurityProfile implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 安全态势感知项配置值名称
+    * @param string $key 安全态势感知项配置值名称
     *
     * @return $this
     */
@@ -211,7 +217,7 @@ class SecurityProfile implements ModelInterface, ArrayAccess
     * Gets value
     *  安全态势感知项配置值，数据格式参考创建安全态势感知接口说明
     *
-    * @return object|null
+    * @return object
     */
     public function getValue()
     {
@@ -221,7 +227,7 @@ class SecurityProfile implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param object|null $value 安全态势感知项配置值，数据格式参考创建安全态势感知接口说明
+    * @param object $value 安全态势感知项配置值，数据格式参考创建安全态势感知接口说明
     *
     * @return $this
     */

@@ -27,7 +27,7 @@ class ExportWebTamperHostRequestInfo implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * agentId  **参数解释**: Agent ID。（已废弃，请使用host_id） **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
     * protectStatus  防护状态。（已废弃，请使用wtp_status）
     * agentStatus  **参数解释**: Agent状态。 **约束限制**: 不涉及 **取值范围**: - not_installed：未安装。 - online：在线。 - offline：离线。  **默认取值**: 不涉及。
@@ -69,7 +69,7 @@ class ExportWebTamperHostRequestInfo implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * agentId  **参数解释**: Agent ID。（已废弃，请使用host_id） **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
     * protectStatus  防护状态。（已废弃，请使用wtp_status）
     * agentStatus  **参数解释**: Agent状态。 **约束限制**: 不涉及 **取值范围**: - not_installed：未安装。 - online：在线。 - offline：离线。  **默认取值**: 不涉及。
@@ -132,7 +132,7 @@ class ExportWebTamperHostRequestInfo implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * agentId  **参数解释**: Agent ID。（已废弃，请使用host_id） **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
     * protectStatus  防护状态。（已废弃，请使用wtp_status）
     * agentStatus  **参数解释**: Agent状态。 **约束限制**: 不涉及 **取值范围**: - not_installed：未安装。 - online：在线。 - offline：离线。  **默认取值**: 不涉及。
@@ -174,7 +174,7 @@ class ExportWebTamperHostRequestInfo implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * agentId  **参数解释**: Agent ID。（已废弃，请使用host_id） **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
     * protectStatus  防护状态。（已废弃，请使用wtp_status）
     * agentStatus  **参数解释**: Agent状态。 **约束限制**: 不涉及 **取值范围**: - not_installed：未安装。 - online：在线。 - offline：离线。  **默认取值**: 不涉及。
@@ -216,7 +216,7 @@ class ExportWebTamperHostRequestInfo implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * agentId  **参数解释**: Agent ID。（已废弃，请使用host_id） **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
     * protectStatus  防护状态。（已废弃，请使用wtp_status）
     * agentStatus  **参数解释**: Agent状态。 **约束限制**: 不涉及 **取值范围**: - not_installed：未安装。 - online：在线。 - offline：离线。  **默认取值**: 不涉及。
@@ -626,7 +626,7 @@ class ExportWebTamperHostRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetValue
-    *  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    *  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     *
     * @return string|null
     */
@@ -638,7 +638,7 @@ class ExportWebTamperHostRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets assetValue
     *
-    * @param string|null $assetValue 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * @param string|null $assetValue **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     *
     * @return $this
     */

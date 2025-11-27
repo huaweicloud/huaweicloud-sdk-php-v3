@@ -27,7 +27,7 @@ class ExecuteDocumentRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'documentId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Coc\V1\Model\ExecuteDocumentRequsetBody'
+            'body' => '\HuaweiCloud\SDK\Coc\V1\Model\ExecuteDocumentRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class ExecuteDocumentRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Coc\V1\Model\ExecuteDocumentRequsetBody|null
+    * @return \HuaweiCloud\SDK\Coc\V1\Model\ExecuteDocumentRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class ExecuteDocumentRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Coc\V1\Model\ExecuteDocumentRequsetBody|null $body body
+    * @param \HuaweiCloud\SDK\Coc\V1\Model\ExecuteDocumentRequestBody|null $body body
     *
     * @return $this
     */

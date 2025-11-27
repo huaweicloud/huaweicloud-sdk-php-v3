@@ -21,26 +21,22 @@ class ListScriptResourceTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tags  tags
-    * total  总条数。
+    * data  data
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tags' => '\HuaweiCloud\SDK\Coc\V1\Model\ScriptTag[]',
-            'total' => 'int'
+            'data' => '\HuaweiCloud\SDK\Coc\V1\Model\ListTagsResponse'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tags  tags
-    * total  总条数。
+    * data  data
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'tags' => null,
-        'total' => 'int64'
+        'data' => null
     ];
 
     /**
@@ -66,38 +62,32 @@ class ListScriptResourceTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tags  tags
-    * total  总条数。
+    * data  data
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'tags' => 'tags',
-            'total' => 'total'
+            'data' => 'data'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tags  tags
-    * total  总条数。
+    * data  data
     *
     * @var string[]
     */
     protected static $setters = [
-            'tags' => 'setTags',
-            'total' => 'setTotal'
+            'data' => 'setData'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tags  tags
-    * total  总条数。
+    * data  data
     *
     * @var string[]
     */
     protected static $getters = [
-            'tags' => 'getTags',
-            'total' => 'getTotal'
+            'data' => 'getData'
     ];
 
     /**
@@ -158,8 +148,7 @@ class ListScriptResourceTagsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -185,50 +174,26 @@ class ListScriptResourceTagsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets tags
-    *  tags
+    * Gets data
+    *  data
     *
-    * @return \HuaweiCloud\SDK\Coc\V1\Model\ScriptTag[]|null
+    * @return \HuaweiCloud\SDK\Coc\V1\Model\ListTagsResponse|null
     */
-    public function getTags()
+    public function getData()
     {
-        return $this->container['tags'];
+        return $this->container['data'];
     }
 
     /**
-    * Sets tags
+    * Sets data
     *
-    * @param \HuaweiCloud\SDK\Coc\V1\Model\ScriptTag[]|null $tags tags
+    * @param \HuaweiCloud\SDK\Coc\V1\Model\ListTagsResponse|null $data data
     *
     * @return $this
     */
-    public function setTags($tags)
+    public function setData($data)
     {
-        $this->container['tags'] = $tags;
-        return $this;
-    }
-
-    /**
-    * Gets total
-    *  总条数。
-    *
-    * @return int|null
-    */
-    public function getTotal()
-    {
-        return $this->container['total'];
-    }
-
-    /**
-    * Sets total
-    *
-    * @param int|null $total 总条数。
-    *
-    * @return $this
-    */
-    public function setTotal($total)
-    {
-        $this->container['total'] = $total;
+        $this->container['data'] = $data;
         return $this;
     }
 

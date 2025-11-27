@@ -22,7 +22,7 @@ class MasterSlavePool implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * description  **参数解释**：后端服务器组的描述信息。  **取值范围**：不涉及
     * id  **参数解释**：后端服务器组的ID。  **取值范围**：不涉及
-    * lbAlgorithm  **参数解释**：后端服务器组的负载均衡算法。  **取值范围**：不涉及 - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
+    * lbAlgorithm  **参数解释**：后端服务器组的负载均衡算法。  **取值范围**： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
     * listeners  **参数解释**：后端服务器组关联的监听器ID列表。
     * loadbalancers  **参数解释**：后端服务器组关联的负载均衡器ID列表。
     * members  **参数解释**：后端服务器组中的后端服务器列表。
@@ -70,7 +70,7 @@ class MasterSlavePool implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * description  **参数解释**：后端服务器组的描述信息。  **取值范围**：不涉及
     * id  **参数解释**：后端服务器组的ID。  **取值范围**：不涉及
-    * lbAlgorithm  **参数解释**：后端服务器组的负载均衡算法。  **取值范围**：不涉及 - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
+    * lbAlgorithm  **参数解释**：后端服务器组的负载均衡算法。  **取值范围**： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
     * listeners  **参数解释**：后端服务器组关联的监听器ID列表。
     * loadbalancers  **参数解释**：后端服务器组关联的负载均衡器ID列表。
     * members  **参数解释**：后端服务器组中的后端服务器列表。
@@ -139,7 +139,7 @@ class MasterSlavePool implements ModelInterface, ArrayAccess
     * and the value is the original name
     * description  **参数解释**：后端服务器组的描述信息。  **取值范围**：不涉及
     * id  **参数解释**：后端服务器组的ID。  **取值范围**：不涉及
-    * lbAlgorithm  **参数解释**：后端服务器组的负载均衡算法。  **取值范围**：不涉及 - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
+    * lbAlgorithm  **参数解释**：后端服务器组的负载均衡算法。  **取值范围**： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
     * listeners  **参数解释**：后端服务器组关联的监听器ID列表。
     * loadbalancers  **参数解释**：后端服务器组关联的负载均衡器ID列表。
     * members  **参数解释**：后端服务器组中的后端服务器列表。
@@ -187,7 +187,7 @@ class MasterSlavePool implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * description  **参数解释**：后端服务器组的描述信息。  **取值范围**：不涉及
     * id  **参数解释**：后端服务器组的ID。  **取值范围**：不涉及
-    * lbAlgorithm  **参数解释**：后端服务器组的负载均衡算法。  **取值范围**：不涉及 - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
+    * lbAlgorithm  **参数解释**：后端服务器组的负载均衡算法。  **取值范围**： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
     * listeners  **参数解释**：后端服务器组关联的监听器ID列表。
     * loadbalancers  **参数解释**：后端服务器组关联的负载均衡器ID列表。
     * members  **参数解释**：后端服务器组中的后端服务器列表。
@@ -235,7 +235,7 @@ class MasterSlavePool implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * description  **参数解释**：后端服务器组的描述信息。  **取值范围**：不涉及
     * id  **参数解释**：后端服务器组的ID。  **取值范围**：不涉及
-    * lbAlgorithm  **参数解释**：后端服务器组的负载均衡算法。  **取值范围**：不涉及 - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
+    * lbAlgorithm  **参数解释**：后端服务器组的负载均衡算法。  **取值范围**： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
     * listeners  **参数解释**：后端服务器组关联的监听器ID列表。
     * loadbalancers  **参数解释**：后端服务器组关联的负载均衡器ID列表。
     * members  **参数解释**：后端服务器组中的后端服务器列表。
@@ -482,7 +482,7 @@ class MasterSlavePool implements ModelInterface, ArrayAccess
 
     /**
     * Gets lbAlgorithm
-    *  **参数解释**：后端服务器组的负载均衡算法。  **取值范围**：不涉及 - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
+    *  **参数解释**：后端服务器组的负载均衡算法。  **取值范围**： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
     *
     * @return string
     */
@@ -494,7 +494,7 @@ class MasterSlavePool implements ModelInterface, ArrayAccess
     /**
     * Sets lbAlgorithm
     *
-    * @param string $lbAlgorithm **参数解释**：后端服务器组的负载均衡算法。  **取值范围**：不涉及 - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
+    * @param string $lbAlgorithm **参数解释**：后端服务器组的负载均衡算法。  **取值范围**： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
     *
     * @return $this
     */

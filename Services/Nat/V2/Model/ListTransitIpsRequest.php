@@ -20,7 +20,7 @@ class ListTransitIpsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  中转IP的ID。
@@ -29,6 +29,7 @@ class ListTransitIpsRequest implements ModelInterface, ArrayAccess
     * gatewayId  中转IP绑定的私网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建中转IP时，关联的企业项目ID。
     * virsubnetId  当前租户子网的ID。
+    * transitSubnetId  中转子网的ID。
     *
     * @var string[]
     */
@@ -41,12 +42,13 @@ class ListTransitIpsRequest implements ModelInterface, ArrayAccess
             'ipAddress' => 'string[]',
             'gatewayId' => 'string[]',
             'enterpriseProjectId' => 'string[]',
-            'virsubnetId' => 'string[]'
+            'virsubnetId' => 'string[]',
+            'transitSubnetId' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  中转IP的ID。
@@ -55,6 +57,7 @@ class ListTransitIpsRequest implements ModelInterface, ArrayAccess
     * gatewayId  中转IP绑定的私网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建中转IP时，关联的企业项目ID。
     * virsubnetId  当前租户子网的ID。
+    * transitSubnetId  中转子网的ID。
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class ListTransitIpsRequest implements ModelInterface, ArrayAccess
         'ipAddress' => null,
         'gatewayId' => null,
         'enterpriseProjectId' => null,
-        'virsubnetId' => null
+        'virsubnetId' => null,
+        'transitSubnetId' => null
     ];
 
     /**
@@ -93,7 +97,7 @@ class ListTransitIpsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  中转IP的ID。
@@ -102,6 +106,7 @@ class ListTransitIpsRequest implements ModelInterface, ArrayAccess
     * gatewayId  中转IP绑定的私网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建中转IP时，关联的企业项目ID。
     * virsubnetId  当前租户子网的ID。
+    * transitSubnetId  中转子网的ID。
     *
     * @var string[]
     */
@@ -114,12 +119,13 @@ class ListTransitIpsRequest implements ModelInterface, ArrayAccess
             'ipAddress' => 'ip_address',
             'gatewayId' => 'gateway_id',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'virsubnetId' => 'virsubnet_id'
+            'virsubnetId' => 'virsubnet_id',
+            'transitSubnetId' => 'transit_subnet_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  中转IP的ID。
@@ -128,6 +134,7 @@ class ListTransitIpsRequest implements ModelInterface, ArrayAccess
     * gatewayId  中转IP绑定的私网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建中转IP时，关联的企业项目ID。
     * virsubnetId  当前租户子网的ID。
+    * transitSubnetId  中转子网的ID。
     *
     * @var string[]
     */
@@ -140,12 +147,13 @@ class ListTransitIpsRequest implements ModelInterface, ArrayAccess
             'ipAddress' => 'setIpAddress',
             'gatewayId' => 'setGatewayId',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'virsubnetId' => 'setVirsubnetId'
+            'virsubnetId' => 'setVirsubnetId',
+            'transitSubnetId' => 'setTransitSubnetId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  中转IP的ID。
@@ -154,6 +162,7 @@ class ListTransitIpsRequest implements ModelInterface, ArrayAccess
     * gatewayId  中转IP绑定的私网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建中转IP时，关联的企业项目ID。
     * virsubnetId  当前租户子网的ID。
+    * transitSubnetId  中转子网的ID。
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class ListTransitIpsRequest implements ModelInterface, ArrayAccess
             'ipAddress' => 'getIpAddress',
             'gatewayId' => 'getGatewayId',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'virsubnetId' => 'getVirsubnetId'
+            'virsubnetId' => 'getVirsubnetId',
+            'transitSubnetId' => 'getTransitSubnetId'
     ];
 
     /**
@@ -236,6 +246,7 @@ class ListTransitIpsRequest implements ModelInterface, ArrayAccess
         $this->container['gatewayId'] = isset($data['gatewayId']) ? $data['gatewayId'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['virsubnetId'] = isset($data['virsubnetId']) ? $data['virsubnetId'] : null;
+        $this->container['transitSubnetId'] = isset($data['transitSubnetId']) ? $data['transitSubnetId'] : null;
     }
 
     /**
@@ -274,7 +285,7 @@ class ListTransitIpsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    *  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     *
     * @return int|null
     */
@@ -286,7 +297,7 @@ class ListTransitIpsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * @param int|null $limit 功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     *
     * @return $this
     */
@@ -485,6 +496,30 @@ class ListTransitIpsRequest implements ModelInterface, ArrayAccess
     public function setVirsubnetId($virsubnetId)
     {
         $this->container['virsubnetId'] = $virsubnetId;
+        return $this;
+    }
+
+    /**
+    * Gets transitSubnetId
+    *  中转子网的ID。
+    *
+    * @return string[]|null
+    */
+    public function getTransitSubnetId()
+    {
+        return $this->container['transitSubnetId'];
+    }
+
+    /**
+    * Sets transitSubnetId
+    *
+    * @param string[]|null $transitSubnetId 中转子网的ID。
+    *
+    * @return $this
+    */
+    public function setTransitSubnetId($transitSubnetId)
+    {
+        $this->container['transitSubnetId'] = $transitSubnetId;
         return $this;
     }
 

@@ -20,7 +20,7 @@ class ListPrivateSnatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  SNAT规则的ID。
@@ -50,7 +50,7 @@ class ListPrivateSnatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  SNAT规则的ID。
@@ -101,7 +101,7 @@ class ListPrivateSnatsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  SNAT规则的ID。
@@ -131,7 +131,7 @@ class ListPrivateSnatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  SNAT规则的ID。
@@ -161,7 +161,7 @@ class ListPrivateSnatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  SNAT规则的ID。
@@ -296,7 +296,7 @@ class ListPrivateSnatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    *  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     *
     * @return int|null
     */
@@ -308,7 +308,7 @@ class ListPrivateSnatsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * @param int|null $limit 功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     *
     * @return $this
     */

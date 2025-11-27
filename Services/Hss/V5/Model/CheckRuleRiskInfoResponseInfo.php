@@ -31,6 +31,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     * status  **参数解释**: 检测项状态 **取值范围**: - safe : 无需处理 - ignored : 已忽略 - unhandled : 未处理 - fixing : 修复中 - fix-failed : 修复失败 - verifying : 验证中
     * enableFix  **参数解释**: 是否支持一键修复 **取值范围**: - 1：支持一键修复 - 0：不支持
     * enableClick  **参数解释**: 该检查项的修复&忽略&验证按钮是否可单击 **取值范围**: - true：按钮可单击 - false：按钮不可单击
+    * notEnableClickDescription  **参数解释** 不可点击的原因 **取值范围**  字符长度0-512位
     * ruleParams  **参数解释**: 支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据 **取值范围**: 不涉及
     *
     * @var string[]
@@ -47,6 +48,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
             'status' => 'string',
             'enableFix' => 'int',
             'enableClick' => 'bool',
+            'notEnableClickDescription' => 'string',
             'ruleParams' => '\HuaweiCloud\SDK\Hss\V5\Model\CheckRuleFixParamInfo[]'
     ];
 
@@ -63,6 +65,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     * status  **参数解释**: 检测项状态 **取值范围**: - safe : 无需处理 - ignored : 已忽略 - unhandled : 未处理 - fixing : 修复中 - fix-failed : 修复失败 - verifying : 验证中
     * enableFix  **参数解释**: 是否支持一键修复 **取值范围**: - 1：支持一键修复 - 0：不支持
     * enableClick  **参数解释**: 该检查项的修复&忽略&验证按钮是否可单击 **取值范围**: - true：按钮可单击 - false：按钮不可单击
+    * notEnableClickDescription  **参数解释** 不可点击的原因 **取值范围**  字符长度0-512位
     * ruleParams  **参数解释**: 支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据 **取值范围**: 不涉及
     *
     * @var string[]
@@ -79,6 +82,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
         'status' => null,
         'enableFix' => 'int32',
         'enableClick' => null,
+        'notEnableClickDescription' => null,
         'ruleParams' => null
     ];
 
@@ -116,6 +120,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     * status  **参数解释**: 检测项状态 **取值范围**: - safe : 无需处理 - ignored : 已忽略 - unhandled : 未处理 - fixing : 修复中 - fix-failed : 修复失败 - verifying : 验证中
     * enableFix  **参数解释**: 是否支持一键修复 **取值范围**: - 1：支持一键修复 - 0：不支持
     * enableClick  **参数解释**: 该检查项的修复&忽略&验证按钮是否可单击 **取值范围**: - true：按钮可单击 - false：按钮不可单击
+    * notEnableClickDescription  **参数解释** 不可点击的原因 **取值范围**  字符长度0-512位
     * ruleParams  **参数解释**: 支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据 **取值范围**: 不涉及
     *
     * @var string[]
@@ -132,6 +137,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
             'status' => 'status',
             'enableFix' => 'enable_fix',
             'enableClick' => 'enable_click',
+            'notEnableClickDescription' => 'not_enable_click_description',
             'ruleParams' => 'rule_params'
     ];
 
@@ -148,6 +154,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     * status  **参数解释**: 检测项状态 **取值范围**: - safe : 无需处理 - ignored : 已忽略 - unhandled : 未处理 - fixing : 修复中 - fix-failed : 修复失败 - verifying : 验证中
     * enableFix  **参数解释**: 是否支持一键修复 **取值范围**: - 1：支持一键修复 - 0：不支持
     * enableClick  **参数解释**: 该检查项的修复&忽略&验证按钮是否可单击 **取值范围**: - true：按钮可单击 - false：按钮不可单击
+    * notEnableClickDescription  **参数解释** 不可点击的原因 **取值范围**  字符长度0-512位
     * ruleParams  **参数解释**: 支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据 **取值范围**: 不涉及
     *
     * @var string[]
@@ -164,6 +171,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'enableFix' => 'setEnableFix',
             'enableClick' => 'setEnableClick',
+            'notEnableClickDescription' => 'setNotEnableClickDescription',
             'ruleParams' => 'setRuleParams'
     ];
 
@@ -180,6 +188,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     * status  **参数解释**: 检测项状态 **取值范围**: - safe : 无需处理 - ignored : 已忽略 - unhandled : 未处理 - fixing : 修复中 - fix-failed : 修复失败 - verifying : 验证中
     * enableFix  **参数解释**: 是否支持一键修复 **取值范围**: - 1：支持一键修复 - 0：不支持
     * enableClick  **参数解释**: 该检查项的修复&忽略&验证按钮是否可单击 **取值范围**: - true：按钮可单击 - false：按钮不可单击
+    * notEnableClickDescription  **参数解释** 不可点击的原因 **取值范围**  字符长度0-512位
     * ruleParams  **参数解释**: 支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据 **取值范围**: 不涉及
     *
     * @var string[]
@@ -196,6 +205,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'enableFix' => 'getEnableFix',
             'enableClick' => 'getEnableClick',
+            'notEnableClickDescription' => 'getNotEnableClickDescription',
             'ruleParams' => 'getRuleParams'
     ];
 
@@ -268,6 +278,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['enableFix'] = isset($data['enableFix']) ? $data['enableFix'] : null;
         $this->container['enableClick'] = isset($data['enableClick']) ? $data['enableClick'] : null;
+        $this->container['notEnableClickDescription'] = isset($data['notEnableClickDescription']) ? $data['notEnableClickDescription'] : null;
         $this->container['ruleParams'] = isset($data['ruleParams']) ? $data['ruleParams'] : null;
     }
 
@@ -338,6 +349,12 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['enableFix']) && ($this->container['enableFix'] < 0)) {
                 $invalidProperties[] = "invalid value for 'enableFix', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['notEnableClickDescription']) && (mb_strlen($this->container['notEnableClickDescription']) > 512)) {
+                $invalidProperties[] = "invalid value for 'notEnableClickDescription', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['notEnableClickDescription']) && (mb_strlen($this->container['notEnableClickDescription']) < 0)) {
+                $invalidProperties[] = "invalid value for 'notEnableClickDescription', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -614,6 +631,30 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     public function setEnableClick($enableClick)
     {
         $this->container['enableClick'] = $enableClick;
+        return $this;
+    }
+
+    /**
+    * Gets notEnableClickDescription
+    *  **参数解释** 不可点击的原因 **取值范围**  字符长度0-512位
+    *
+    * @return string|null
+    */
+    public function getNotEnableClickDescription()
+    {
+        return $this->container['notEnableClickDescription'];
+    }
+
+    /**
+    * Sets notEnableClickDescription
+    *
+    * @param string|null $notEnableClickDescription **参数解释** 不可点击的原因 **取值范围**  字符长度0-512位
+    *
+    * @return $this
+    */
+    public function setNotEnableClickDescription($notEnableClickDescription)
+    {
+        $this->container['notEnableClickDescription'] = $notEnableClickDescription;
         return $this;
     }
 

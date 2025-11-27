@@ -21,65 +21,33 @@ class GetDocumentResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  作业id
-    * documentId  作业uuid
-    * name  作业名称
-    * content  作业内容，DSL语句
-    * createTime  创建时间
-    * updateTime  更新时间
-    * version  作业版本，如v1
-    * creator  创建人
-    * modifier  修改人
-    * enterpriseProjectId  企业项目id
-    * versions  版本集合
+    * errorCode  错误码
+    * errorMsg  错误信息
+    * data  返回数据。
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
-            'documentId' => 'string',
-            'name' => 'string',
-            'content' => 'string',
-            'createTime' => 'int',
-            'updateTime' => 'int',
-            'version' => 'string',
-            'creator' => 'string',
-            'modifier' => 'string',
-            'enterpriseProjectId' => 'string',
-            'versions' => '\HuaweiCloud\SDK\Coc\V1\Model\DocumentVersionVo[]',
+            'errorCode' => 'string',
+            'errorMsg' => 'string',
+            'data' => 'object',
             'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  作业id
-    * documentId  作业uuid
-    * name  作业名称
-    * content  作业内容，DSL语句
-    * createTime  创建时间
-    * updateTime  更新时间
-    * version  作业版本，如v1
-    * creator  创建人
-    * modifier  修改人
-    * enterpriseProjectId  企业项目id
-    * versions  版本集合
+    * errorCode  错误码
+    * errorMsg  错误信息
+    * data  返回数据。
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
-        'documentId' => null,
-        'name' => null,
-        'content' => null,
-        'createTime' => 'int64',
-        'updateTime' => 'int64',
-        'version' => null,
-        'creator' => null,
-        'modifier' => null,
-        'enterpriseProjectId' => null,
-        'versions' => null,
+        'errorCode' => null,
+        'errorMsg' => null,
+        'data' => null,
         'xRequestId' => null
     ];
 
@@ -106,97 +74,49 @@ class GetDocumentResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  作业id
-    * documentId  作业uuid
-    * name  作业名称
-    * content  作业内容，DSL语句
-    * createTime  创建时间
-    * updateTime  更新时间
-    * version  作业版本，如v1
-    * creator  创建人
-    * modifier  修改人
-    * enterpriseProjectId  企业项目id
-    * versions  版本集合
+    * errorCode  错误码
+    * errorMsg  错误信息
+    * data  返回数据。
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id',
-            'documentId' => 'document_id',
-            'name' => 'name',
-            'content' => 'content',
-            'createTime' => 'create_time',
-            'updateTime' => 'update_time',
-            'version' => 'version',
-            'creator' => 'creator',
-            'modifier' => 'modifier',
-            'enterpriseProjectId' => 'enterprise_project_id',
-            'versions' => 'versions',
+            'errorCode' => 'error_code',
+            'errorMsg' => 'error_msg',
+            'data' => 'data',
             'xRequestId' => 'X-request-id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  作业id
-    * documentId  作业uuid
-    * name  作业名称
-    * content  作业内容，DSL语句
-    * createTime  创建时间
-    * updateTime  更新时间
-    * version  作业版本，如v1
-    * creator  创建人
-    * modifier  修改人
-    * enterpriseProjectId  企业项目id
-    * versions  版本集合
+    * errorCode  错误码
+    * errorMsg  错误信息
+    * data  返回数据。
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId',
-            'documentId' => 'setDocumentId',
-            'name' => 'setName',
-            'content' => 'setContent',
-            'createTime' => 'setCreateTime',
-            'updateTime' => 'setUpdateTime',
-            'version' => 'setVersion',
-            'creator' => 'setCreator',
-            'modifier' => 'setModifier',
-            'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'versions' => 'setVersions',
+            'errorCode' => 'setErrorCode',
+            'errorMsg' => 'setErrorMsg',
+            'data' => 'setData',
             'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  作业id
-    * documentId  作业uuid
-    * name  作业名称
-    * content  作业内容，DSL语句
-    * createTime  创建时间
-    * updateTime  更新时间
-    * version  作业版本，如v1
-    * creator  创建人
-    * modifier  修改人
-    * enterpriseProjectId  企业项目id
-    * versions  版本集合
+    * errorCode  错误码
+    * errorMsg  错误信息
+    * data  返回数据。
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId',
-            'documentId' => 'getDocumentId',
-            'name' => 'getName',
-            'content' => 'getContent',
-            'createTime' => 'getCreateTime',
-            'updateTime' => 'getUpdateTime',
-            'version' => 'getVersion',
-            'creator' => 'getCreator',
-            'modifier' => 'getModifier',
-            'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'versions' => 'getVersions',
+            'errorCode' => 'getErrorCode',
+            'errorMsg' => 'getErrorMsg',
+            'data' => 'getData',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -258,17 +178,9 @@ class GetDocumentResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['documentId'] = isset($data['documentId']) ? $data['documentId'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['content'] = isset($data['content']) ? $data['content'] : null;
-        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
-        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
-        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
-        $this->container['creator'] = isset($data['creator']) ? $data['creator'] : null;
-        $this->container['modifier'] = isset($data['modifier']) ? $data['modifier'] : null;
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
-        $this->container['versions'] = isset($data['versions']) ? $data['versions'] : null;
+        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
+        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -295,266 +207,74 @@ class GetDocumentResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  作业id
+    * Gets errorCode
+    *  错误码
     *
     * @return string|null
     */
-    public function getId()
+    public function getErrorCode()
     {
-        return $this->container['id'];
+        return $this->container['errorCode'];
     }
 
     /**
-    * Sets id
+    * Sets errorCode
     *
-    * @param string|null $id 作业id
+    * @param string|null $errorCode 错误码
     *
     * @return $this
     */
-    public function setId($id)
+    public function setErrorCode($errorCode)
     {
-        $this->container['id'] = $id;
+        $this->container['errorCode'] = $errorCode;
         return $this;
     }
 
     /**
-    * Gets documentId
-    *  作业uuid
+    * Gets errorMsg
+    *  错误信息
     *
     * @return string|null
     */
-    public function getDocumentId()
+    public function getErrorMsg()
     {
-        return $this->container['documentId'];
+        return $this->container['errorMsg'];
     }
 
     /**
-    * Sets documentId
+    * Sets errorMsg
     *
-    * @param string|null $documentId 作业uuid
+    * @param string|null $errorMsg 错误信息
     *
     * @return $this
     */
-    public function setDocumentId($documentId)
+    public function setErrorMsg($errorMsg)
     {
-        $this->container['documentId'] = $documentId;
+        $this->container['errorMsg'] = $errorMsg;
         return $this;
     }
 
     /**
-    * Gets name
-    *  作业名称
+    * Gets data
+    *  返回数据。
     *
-    * @return string|null
+    * @return object|null
     */
-    public function getName()
+    public function getData()
     {
-        return $this->container['name'];
+        return $this->container['data'];
     }
 
     /**
-    * Sets name
+    * Sets data
     *
-    * @param string|null $name 作业名称
+    * @param object|null $data 返回数据。
     *
     * @return $this
     */
-    public function setName($name)
+    public function setData($data)
     {
-        $this->container['name'] = $name;
-        return $this;
-    }
-
-    /**
-    * Gets content
-    *  作业内容，DSL语句
-    *
-    * @return string|null
-    */
-    public function getContent()
-    {
-        return $this->container['content'];
-    }
-
-    /**
-    * Sets content
-    *
-    * @param string|null $content 作业内容，DSL语句
-    *
-    * @return $this
-    */
-    public function setContent($content)
-    {
-        $this->container['content'] = $content;
-        return $this;
-    }
-
-    /**
-    * Gets createTime
-    *  创建时间
-    *
-    * @return int|null
-    */
-    public function getCreateTime()
-    {
-        return $this->container['createTime'];
-    }
-
-    /**
-    * Sets createTime
-    *
-    * @param int|null $createTime 创建时间
-    *
-    * @return $this
-    */
-    public function setCreateTime($createTime)
-    {
-        $this->container['createTime'] = $createTime;
-        return $this;
-    }
-
-    /**
-    * Gets updateTime
-    *  更新时间
-    *
-    * @return int|null
-    */
-    public function getUpdateTime()
-    {
-        return $this->container['updateTime'];
-    }
-
-    /**
-    * Sets updateTime
-    *
-    * @param int|null $updateTime 更新时间
-    *
-    * @return $this
-    */
-    public function setUpdateTime($updateTime)
-    {
-        $this->container['updateTime'] = $updateTime;
-        return $this;
-    }
-
-    /**
-    * Gets version
-    *  作业版本，如v1
-    *
-    * @return string|null
-    */
-    public function getVersion()
-    {
-        return $this->container['version'];
-    }
-
-    /**
-    * Sets version
-    *
-    * @param string|null $version 作业版本，如v1
-    *
-    * @return $this
-    */
-    public function setVersion($version)
-    {
-        $this->container['version'] = $version;
-        return $this;
-    }
-
-    /**
-    * Gets creator
-    *  创建人
-    *
-    * @return string|null
-    */
-    public function getCreator()
-    {
-        return $this->container['creator'];
-    }
-
-    /**
-    * Sets creator
-    *
-    * @param string|null $creator 创建人
-    *
-    * @return $this
-    */
-    public function setCreator($creator)
-    {
-        $this->container['creator'] = $creator;
-        return $this;
-    }
-
-    /**
-    * Gets modifier
-    *  修改人
-    *
-    * @return string|null
-    */
-    public function getModifier()
-    {
-        return $this->container['modifier'];
-    }
-
-    /**
-    * Sets modifier
-    *
-    * @param string|null $modifier 修改人
-    *
-    * @return $this
-    */
-    public function setModifier($modifier)
-    {
-        $this->container['modifier'] = $modifier;
-        return $this;
-    }
-
-    /**
-    * Gets enterpriseProjectId
-    *  企业项目id
-    *
-    * @return string|null
-    */
-    public function getEnterpriseProjectId()
-    {
-        return $this->container['enterpriseProjectId'];
-    }
-
-    /**
-    * Sets enterpriseProjectId
-    *
-    * @param string|null $enterpriseProjectId 企业项目id
-    *
-    * @return $this
-    */
-    public function setEnterpriseProjectId($enterpriseProjectId)
-    {
-        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
-        return $this;
-    }
-
-    /**
-    * Gets versions
-    *  版本集合
-    *
-    * @return \HuaweiCloud\SDK\Coc\V1\Model\DocumentVersionVo[]|null
-    */
-    public function getVersions()
-    {
-        return $this->container['versions'];
-    }
-
-    /**
-    * Sets versions
-    *
-    * @param \HuaweiCloud\SDK\Coc\V1\Model\DocumentVersionVo[]|null $versions 版本集合
-    *
-    * @return $this
-    */
-    public function setVersions($versions)
-    {
-        $this->container['versions'] = $versions;
+        $this->container['data'] = $data;
         return $this;
     }
 

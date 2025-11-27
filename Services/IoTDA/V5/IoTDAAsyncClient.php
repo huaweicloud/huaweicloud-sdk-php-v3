@@ -2715,6 +2715,80 @@ class IoTDAAsyncClient extends Client
     }
 
     /**
+     * 查询CA证书
+     *
+     * 应用服务器可调用此接口在物联网平台查询CA证书
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showCertificateAsync($request)
+    {
+        return $this->showCertificateAsyncWithHttpInfo($request);
+    }
+    
+    public function showCertificateAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/iot/{project_id}/certificates/{certificate_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['spAuthToken'] !== null) {
+            $headerParams['sp_auth_token'] = $localVarParams['spAuthToken'];
+        }
+        if ($localVarParams['stageAuthToken'] !== null) {
+            $headerParams['stage_auth_token'] = $localVarParams['stageAuthToken'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['certificateId'] !== null) {
+            $pathParams['certificate_id'] = $localVarParams['certificateId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowCertificateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowCertificateRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 更新CA证书
      *
      * 应用服务器可调用此接口在物联网平台上更新CA证书。仅标准版实例、企业版实例支持该接口调用，基础版不支持。
@@ -6023,7 +6097,7 @@ class IoTDAAsyncClient extends Client
     
     public function createDomainConfigurationAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/domain-configurations';
+        $resourcePath = '/v5/iot/{project_id}/domain-configurations';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -6091,7 +6165,7 @@ class IoTDAAsyncClient extends Client
     
     public function deleteDomainConfigurationAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/domain-configurations/{configuration_id}';
+        $resourcePath = '/v5/iot/{project_id}/domain-configurations/{configuration_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -6159,7 +6233,7 @@ class IoTDAAsyncClient extends Client
     
     public function listDomainConfigurationsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/domain-configurations';
+        $resourcePath = '/v5/iot/{project_id}/domain-configurations';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -6233,7 +6307,7 @@ class IoTDAAsyncClient extends Client
     
     public function showDomainConfigurationAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/domain-configurations/{configuration_id}';
+        $resourcePath = '/v5/iot/{project_id}/domain-configurations/{configuration_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -6301,7 +6375,7 @@ class IoTDAAsyncClient extends Client
     
     public function updateDomainConfigurationAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/domain-configurations/{configuration_id}';
+        $resourcePath = '/v5/iot/{project_id}/domain-configurations/{configuration_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -6352,6 +6426,296 @@ class IoTDAAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateDomainConfigurationResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateDomainConfigurationRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建导出任务
+     *
+     * 应用服务器可调用此接口创建资源导出任务。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createExportTaskAsync($request)
+    {
+        return $this->createExportTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function createExportTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/iot/{project_id}/export-tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateExportTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateExportTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除导出任务
+     *
+     * 应用服务器可调用此接口删除在平台创建的导出任务。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteExportTaskAsync($request)
+    {
+        return $this->deleteExportTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteExportTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/iot/{project_id}/export-tasks/{export_task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['exportTaskId'] !== null) {
+            $pathParams['export_task_id'] = $localVarParams['exportTaskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteExportTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteExportTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询导出任务列表
+     *
+     * 应用服务器可调用此接口查询已创建的导出任务列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listExportTasksAsync($request)
+    {
+        return $this->listExportTasksAsyncWithHttpInfo($request);
+    }
+    
+    public function listExportTasksAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/iot/{project_id}/export-tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $queryParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['resourceCondition'] !== null) {
+            $queryParams['resource_condition'] = $localVarParams['resourceCondition'];
+        }
+        if ($localVarParams['appType'] !== null) {
+            $queryParams['app_type'] = $localVarParams['appType'];
+        }
+        if ($localVarParams['appId'] !== null) {
+            $queryParams['app_id'] = $localVarParams['appId'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListExportTasksResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListExportTasksRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 下载导出文件
+     *
+     * 应用服务器可调用此接口下载已经完成的导出任务生成的文件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showExportTaskAsync($request)
+    {
+        return $this->showExportTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function showExportTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/iot/{project_id}/export-tasks/{export_task_id}/file';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['exportTaskId'] !== null) {
+            $pathParams['export_task_id'] = $localVarParams['exportTaskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowExportTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowExportTaskRequest',
             $asyncRequest = true);
     }
 
@@ -11254,7 +11618,7 @@ class IoTDAAsyncClient extends Client
     
     public function createServerCertificateAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/server-certificates';
+        $resourcePath = '/v5/iot/{project_id}/server-certificates';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -11322,7 +11686,7 @@ class IoTDAAsyncClient extends Client
     
     public function deleteServerCertificateAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/server-certificates/{server_certificate_id}';
+        $resourcePath = '/v5/iot/{project_id}/server-certificates/{server_certificate_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -11390,7 +11754,7 @@ class IoTDAAsyncClient extends Client
     
     public function listServerCertificateAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/server-certificates';
+        $resourcePath = '/v5/iot/{project_id}/server-certificates';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -11464,7 +11828,7 @@ class IoTDAAsyncClient extends Client
     
     public function showServerCertificateAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/server-certificates/{server_certificate_id}';
+        $resourcePath = '/v5/iot/{project_id}/server-certificates/{server_certificate_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

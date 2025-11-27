@@ -20,28 +20,24 @@ class ShowBackupDownloadLinkRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xLanguage  语言。
     * instanceId  实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
     * backupId  备份ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'xLanguage' => 'string',
             'instanceId' => 'string',
             'backupId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xLanguage  语言。
     * instanceId  实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
     * backupId  备份ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'xLanguage' => null,
         'instanceId' => null,
         'backupId' => null
     ];
@@ -69,42 +65,36 @@ class ShowBackupDownloadLinkRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xLanguage  语言。
     * instanceId  实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
     * backupId  备份ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'xLanguage' => 'X-Language',
             'instanceId' => 'instance_id',
             'backupId' => 'backup_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xLanguage  语言。
     * instanceId  实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
     * backupId  备份ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'xLanguage' => 'setXLanguage',
             'instanceId' => 'setInstanceId',
             'backupId' => 'setBackupId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xLanguage  语言。
     * instanceId  实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
     * backupId  备份ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'xLanguage' => 'getXLanguage',
             'instanceId' => 'getInstanceId',
             'backupId' => 'getBackupId'
     ];
@@ -167,7 +157,6 @@ class ShowBackupDownloadLinkRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['backupId'] = isset($data['backupId']) ? $data['backupId'] : null;
     }
@@ -198,30 +187,6 @@ class ShowBackupDownloadLinkRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets xLanguage
-    *  语言。
-    *
-    * @return string|null
-    */
-    public function getXLanguage()
-    {
-        return $this->container['xLanguage'];
-    }
-
-    /**
-    * Sets xLanguage
-    *
-    * @param string|null $xLanguage 语言。
-    *
-    * @return $this
-    */
-    public function setXLanguage($xLanguage)
-    {
-        $this->container['xLanguage'] = $xLanguage;
-        return $this;
     }
 
     /**

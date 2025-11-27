@@ -21,30 +21,22 @@ class BatchCreateApplicationViewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * applicationIds  **参数解释：** 应用id列表。 **取值范围：** 不涉及。
-    * componentIds  **参数解释：** 组件id列表。 **取值范围：** 不涉及。
-    * groupIds  **参数解释：** 分组id列表。 **取值范围：** 不涉及。
+    * data  data
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'applicationIds' => 'string[]',
-            'componentIds' => 'string[]',
-            'groupIds' => 'string[]'
+            'data' => '\HuaweiCloud\SDK\Coc\V1\Model\BatchCreateApplicationViewResponseBodyData'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * applicationIds  **参数解释：** 应用id列表。 **取值范围：** 不涉及。
-    * componentIds  **参数解释：** 组件id列表。 **取值范围：** 不涉及。
-    * groupIds  **参数解释：** 分组id列表。 **取值范围：** 不涉及。
+    * data  data
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'applicationIds' => null,
-        'componentIds' => null,
-        'groupIds' => null
+        'data' => null
     ];
 
     /**
@@ -70,44 +62,32 @@ class BatchCreateApplicationViewResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * applicationIds  **参数解释：** 应用id列表。 **取值范围：** 不涉及。
-    * componentIds  **参数解释：** 组件id列表。 **取值范围：** 不涉及。
-    * groupIds  **参数解释：** 分组id列表。 **取值范围：** 不涉及。
+    * data  data
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'applicationIds' => 'application_ids',
-            'componentIds' => 'component_ids',
-            'groupIds' => 'group_ids'
+            'data' => 'data'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * applicationIds  **参数解释：** 应用id列表。 **取值范围：** 不涉及。
-    * componentIds  **参数解释：** 组件id列表。 **取值范围：** 不涉及。
-    * groupIds  **参数解释：** 分组id列表。 **取值范围：** 不涉及。
+    * data  data
     *
     * @var string[]
     */
     protected static $setters = [
-            'applicationIds' => 'setApplicationIds',
-            'componentIds' => 'setComponentIds',
-            'groupIds' => 'setGroupIds'
+            'data' => 'setData'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * applicationIds  **参数解释：** 应用id列表。 **取值范围：** 不涉及。
-    * componentIds  **参数解释：** 组件id列表。 **取值范围：** 不涉及。
-    * groupIds  **参数解释：** 分组id列表。 **取值范围：** 不涉及。
+    * data  data
     *
     * @var string[]
     */
     protected static $getters = [
-            'applicationIds' => 'getApplicationIds',
-            'componentIds' => 'getComponentIds',
-            'groupIds' => 'getGroupIds'
+            'data' => 'getData'
     ];
 
     /**
@@ -168,9 +148,7 @@ class BatchCreateApplicationViewResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['applicationIds'] = isset($data['applicationIds']) ? $data['applicationIds'] : null;
-        $this->container['componentIds'] = isset($data['componentIds']) ? $data['componentIds'] : null;
-        $this->container['groupIds'] = isset($data['groupIds']) ? $data['groupIds'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -196,74 +174,26 @@ class BatchCreateApplicationViewResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets applicationIds
-    *  **参数解释：** 应用id列表。 **取值范围：** 不涉及。
+    * Gets data
+    *  data
     *
-    * @return string[]|null
+    * @return \HuaweiCloud\SDK\Coc\V1\Model\BatchCreateApplicationViewResponseBodyData|null
     */
-    public function getApplicationIds()
+    public function getData()
     {
-        return $this->container['applicationIds'];
+        return $this->container['data'];
     }
 
     /**
-    * Sets applicationIds
+    * Sets data
     *
-    * @param string[]|null $applicationIds **参数解释：** 应用id列表。 **取值范围：** 不涉及。
+    * @param \HuaweiCloud\SDK\Coc\V1\Model\BatchCreateApplicationViewResponseBodyData|null $data data
     *
     * @return $this
     */
-    public function setApplicationIds($applicationIds)
+    public function setData($data)
     {
-        $this->container['applicationIds'] = $applicationIds;
-        return $this;
-    }
-
-    /**
-    * Gets componentIds
-    *  **参数解释：** 组件id列表。 **取值范围：** 不涉及。
-    *
-    * @return string[]|null
-    */
-    public function getComponentIds()
-    {
-        return $this->container['componentIds'];
-    }
-
-    /**
-    * Sets componentIds
-    *
-    * @param string[]|null $componentIds **参数解释：** 组件id列表。 **取值范围：** 不涉及。
-    *
-    * @return $this
-    */
-    public function setComponentIds($componentIds)
-    {
-        $this->container['componentIds'] = $componentIds;
-        return $this;
-    }
-
-    /**
-    * Gets groupIds
-    *  **参数解释：** 分组id列表。 **取值范围：** 不涉及。
-    *
-    * @return string[]|null
-    */
-    public function getGroupIds()
-    {
-        return $this->container['groupIds'];
-    }
-
-    /**
-    * Sets groupIds
-    *
-    * @param string[]|null $groupIds **参数解释：** 分组id列表。 **取值范围：** 不涉及。
-    *
-    * @return $this
-    */
-    public function setGroupIds($groupIds)
-    {
-        $this->container['groupIds'] = $groupIds;
+        $this->container['data'] = $data;
         return $this;
     }
 

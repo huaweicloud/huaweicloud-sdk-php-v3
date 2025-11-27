@@ -21,25 +21,25 @@ class CreateDocumentResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * data  **参数解释：** 创建作业，系统返回的作业id。 **取值范围：** 不涉及。
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'string',
+            'data' => 'string',
             'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * data  **参数解释：** 创建作业，系统返回的作业id。 **取值范围：** 不涉及。
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null,
+        'data' => null,
         'xRequestId' => null
     ];
 
@@ -66,37 +66,37 @@ class CreateDocumentResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * data  **参数解释：** 创建作业，系统返回的作业id。 **取值范围：** 不涉及。
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body',
+            'data' => 'data',
             'xRequestId' => 'X-request-id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * data  **参数解释：** 创建作业，系统返回的作业id。 **取值范围：** 不涉及。
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody',
+            'data' => 'setData',
             'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * data  **参数解释：** 创建作业，系统返回的作业id。 **取值范围：** 不涉及。
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody',
+            'data' => 'getData',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -158,7 +158,7 @@ class CreateDocumentResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -170,6 +170,12 @@ class CreateDocumentResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['data']) && (mb_strlen($this->container['data']) > 128)) {
+                $invalidProperties[] = "invalid value for 'data', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['data']) && (mb_strlen($this->container['data']) < 1)) {
+                $invalidProperties[] = "invalid value for 'data', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -185,26 +191,26 @@ class CreateDocumentResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets data
+    *  **参数解释：** 创建作业，系统返回的作业id。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
-    public function getBody()
+    public function getData()
     {
-        return $this->container['body'];
+        return $this->container['data'];
     }
 
     /**
-    * Sets body
+    * Sets data
     *
-    * @param string|null $body body
+    * @param string|null $data **参数解释：** 创建作业，系统返回的作业id。 **取值范围：** 不涉及。
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setData($data)
     {
-        $this->container['body'] = $body;
+        $this->container['data'] = $data;
         return $this;
     }
 

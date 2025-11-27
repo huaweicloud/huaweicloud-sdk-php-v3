@@ -31,6 +31,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     * functiongraphForwarding  functiongraphForwarding
     * mrsKafkaForwarding  mrsKafkaForwarding
     * dmsRocketmqForwarding  dmsRocketmqForwarding
+    * mqttDeviceForwarding  mqttDeviceForwarding
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class ChannelDetail implements ModelInterface, ArrayAccess
             'influxdbForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\InfluxDBForwarding',
             'functiongraphForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\FunctionGraphForwarding',
             'mrsKafkaForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\MrsKafkaForwarding',
-            'dmsRocketmqForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DmsRocketMQForwarding'
+            'dmsRocketmqForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DmsRocketMQForwarding',
+            'mqttDeviceForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\MqttDeviceForwarding'
     ];
 
     /**
@@ -61,6 +63,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     * functiongraphForwarding  functiongraphForwarding
     * mrsKafkaForwarding  mrsKafkaForwarding
     * dmsRocketmqForwarding  dmsRocketmqForwarding
+    * mqttDeviceForwarding  mqttDeviceForwarding
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class ChannelDetail implements ModelInterface, ArrayAccess
         'influxdbForwarding' => null,
         'functiongraphForwarding' => null,
         'mrsKafkaForwarding' => null,
-        'dmsRocketmqForwarding' => null
+        'dmsRocketmqForwarding' => null,
+        'mqttDeviceForwarding' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     * functiongraphForwarding  functiongraphForwarding
     * mrsKafkaForwarding  mrsKafkaForwarding
     * dmsRocketmqForwarding  dmsRocketmqForwarding
+    * mqttDeviceForwarding  mqttDeviceForwarding
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class ChannelDetail implements ModelInterface, ArrayAccess
             'influxdbForwarding' => 'influxdb_forwarding',
             'functiongraphForwarding' => 'functiongraph_forwarding',
             'mrsKafkaForwarding' => 'mrs_kafka_forwarding',
-            'dmsRocketmqForwarding' => 'dms_rocketmq_forwarding'
+            'dmsRocketmqForwarding' => 'dms_rocketmq_forwarding',
+            'mqttDeviceForwarding' => 'mqtt_device_forwarding'
     ];
 
     /**
@@ -142,6 +148,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     * functiongraphForwarding  functiongraphForwarding
     * mrsKafkaForwarding  mrsKafkaForwarding
     * dmsRocketmqForwarding  dmsRocketmqForwarding
+    * mqttDeviceForwarding  mqttDeviceForwarding
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class ChannelDetail implements ModelInterface, ArrayAccess
             'influxdbForwarding' => 'setInfluxdbForwarding',
             'functiongraphForwarding' => 'setFunctiongraphForwarding',
             'mrsKafkaForwarding' => 'setMrsKafkaForwarding',
-            'dmsRocketmqForwarding' => 'setDmsRocketmqForwarding'
+            'dmsRocketmqForwarding' => 'setDmsRocketmqForwarding',
+            'mqttDeviceForwarding' => 'setMqttDeviceForwarding'
     ];
 
     /**
@@ -172,6 +180,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     * functiongraphForwarding  functiongraphForwarding
     * mrsKafkaForwarding  mrsKafkaForwarding
     * dmsRocketmqForwarding  dmsRocketmqForwarding
+    * mqttDeviceForwarding  mqttDeviceForwarding
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class ChannelDetail implements ModelInterface, ArrayAccess
             'influxdbForwarding' => 'getInfluxdbForwarding',
             'functiongraphForwarding' => 'getFunctiongraphForwarding',
             'mrsKafkaForwarding' => 'getMrsKafkaForwarding',
-            'dmsRocketmqForwarding' => 'getDmsRocketmqForwarding'
+            'dmsRocketmqForwarding' => 'getDmsRocketmqForwarding',
+            'mqttDeviceForwarding' => 'getMqttDeviceForwarding'
     ];
 
     /**
@@ -258,6 +268,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
         $this->container['functiongraphForwarding'] = isset($data['functiongraphForwarding']) ? $data['functiongraphForwarding'] : null;
         $this->container['mrsKafkaForwarding'] = isset($data['mrsKafkaForwarding']) ? $data['mrsKafkaForwarding'] : null;
         $this->container['dmsRocketmqForwarding'] = isset($data['dmsRocketmqForwarding']) ? $data['dmsRocketmqForwarding'] : null;
+        $this->container['mqttDeviceForwarding'] = isset($data['mqttDeviceForwarding']) ? $data['mqttDeviceForwarding'] : null;
     }
 
     /**
@@ -543,6 +554,30 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     public function setDmsRocketmqForwarding($dmsRocketmqForwarding)
     {
         $this->container['dmsRocketmqForwarding'] = $dmsRocketmqForwarding;
+        return $this;
+    }
+
+    /**
+    * Gets mqttDeviceForwarding
+    *  mqttDeviceForwarding
+    *
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\MqttDeviceForwarding|null
+    */
+    public function getMqttDeviceForwarding()
+    {
+        return $this->container['mqttDeviceForwarding'];
+    }
+
+    /**
+    * Sets mqttDeviceForwarding
+    *
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\MqttDeviceForwarding|null $mqttDeviceForwarding mqttDeviceForwarding
+    *
+    * @return $this
+    */
+    public function setMqttDeviceForwarding($mqttDeviceForwarding)
+    {
+        $this->container['mqttDeviceForwarding'] = $mqttDeviceForwarding;
         return $this;
     }
 

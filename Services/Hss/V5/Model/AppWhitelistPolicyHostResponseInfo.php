@@ -24,7 +24,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * policyName  策略名称
     * eventNum  **参数解释**: 主机发生事件数 **取值范围**: 最小值0，最大值2147483647
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
@@ -58,7 +58,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * policyName  策略名称
     * eventNum  **参数解释**: 主机发生事件数 **取值范围**: 最小值0，最大值2147483647
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
@@ -113,7 +113,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * policyName  策略名称
     * eventNum  **参数解释**: 主机发生事件数 **取值范围**: 最小值0，最大值2147483647
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
@@ -147,7 +147,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * policyName  策略名称
     * eventNum  **参数解释**: 主机发生事件数 **取值范围**: 最小值0，最大值2147483647
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
@@ -181,7 +181,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
-    * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * policyName  策略名称
     * eventNum  **参数解释**: 主机发生事件数 **取值范围**: 最小值0，最大值2147483647
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
@@ -489,7 +489,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetValue
-    *  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    *  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     *
     * @return string|null
     */
@@ -501,7 +501,7 @@ class AppWhitelistPolicyHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets assetValue
     *
-    * @param string|null $assetValue 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * @param string|null $assetValue **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     *
     * @return $this
     */

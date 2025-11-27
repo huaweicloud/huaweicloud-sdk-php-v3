@@ -22,24 +22,28 @@ class DownlinkVpc implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * vpcId  私网NAT网关实例所属VPC的ID。
     * virsubnetId  私网NAT网关实例所属子网的ID。
+    * ngportIpAddress  私网NAT网关的ngport_ip_addrss。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'vpcId' => 'string',
-            'virsubnetId' => 'string'
+            'virsubnetId' => 'string',
+            'ngportIpAddress' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * vpcId  私网NAT网关实例所属VPC的ID。
     * virsubnetId  私网NAT网关实例所属子网的ID。
+    * ngportIpAddress  私网NAT网关的ngport_ip_addrss。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'vpcId' => null,
-        'virsubnetId' => null
+        'virsubnetId' => null,
+        'ngportIpAddress' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class DownlinkVpc implements ModelInterface, ArrayAccess
     * and the value is the original name
     * vpcId  私网NAT网关实例所属VPC的ID。
     * virsubnetId  私网NAT网关实例所属子网的ID。
+    * ngportIpAddress  私网NAT网关的ngport_ip_addrss。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'vpcId' => 'vpc_id',
-            'virsubnetId' => 'virsubnet_id'
+            'virsubnetId' => 'virsubnet_id',
+            'ngportIpAddress' => 'ngport_ip_address'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * vpcId  私网NAT网关实例所属VPC的ID。
     * virsubnetId  私网NAT网关实例所属子网的ID。
+    * ngportIpAddress  私网NAT网关的ngport_ip_addrss。
     *
     * @var string[]
     */
     protected static $setters = [
             'vpcId' => 'setVpcId',
-            'virsubnetId' => 'setVirsubnetId'
+            'virsubnetId' => 'setVirsubnetId',
+            'ngportIpAddress' => 'setNgportIpAddress'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * vpcId  私网NAT网关实例所属VPC的ID。
     * virsubnetId  私网NAT网关实例所属子网的ID。
+    * ngportIpAddress  私网NAT网关的ngport_ip_addrss。
     *
     * @var string[]
     */
     protected static $getters = [
             'vpcId' => 'getVpcId',
-            'virsubnetId' => 'getVirsubnetId'
+            'virsubnetId' => 'getVirsubnetId',
+            'ngportIpAddress' => 'getNgportIpAddress'
     ];
 
     /**
@@ -159,6 +169,7 @@ class DownlinkVpc implements ModelInterface, ArrayAccess
     {
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['virsubnetId'] = isset($data['virsubnetId']) ? $data['virsubnetId'] : null;
+        $this->container['ngportIpAddress'] = isset($data['ngportIpAddress']) ? $data['ngportIpAddress'] : null;
     }
 
     /**
@@ -186,6 +197,12 @@ class DownlinkVpc implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['virsubnetId']) < 36)) {
                 $invalidProperties[] = "invalid value for 'virsubnetId', the character length must be bigger than or equal to 36.";
+            }
+            if (!is_null($this->container['ngportIpAddress']) && (mb_strlen($this->container['ngportIpAddress']) > 36)) {
+                $invalidProperties[] = "invalid value for 'ngportIpAddress', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['ngportIpAddress']) && (mb_strlen($this->container['ngportIpAddress']) < 36)) {
+                $invalidProperties[] = "invalid value for 'ngportIpAddress', the character length must be bigger than or equal to 36.";
             }
         return $invalidProperties;
     }
@@ -246,6 +263,30 @@ class DownlinkVpc implements ModelInterface, ArrayAccess
     public function setVirsubnetId($virsubnetId)
     {
         $this->container['virsubnetId'] = $virsubnetId;
+        return $this;
+    }
+
+    /**
+    * Gets ngportIpAddress
+    *  私网NAT网关的ngport_ip_addrss。
+    *
+    * @return string|null
+    */
+    public function getNgportIpAddress()
+    {
+        return $this->container['ngportIpAddress'];
+    }
+
+    /**
+    * Sets ngportIpAddress
+    *
+    * @param string|null $ngportIpAddress 私网NAT网关的ngport_ip_addrss。
+    *
+    * @return $this
+    */
+    public function setNgportIpAddress($ngportIpAddress)
+    {
+        $this->container['ngportIpAddress'] = $ngportIpAddress;
         return $this;
     }
 

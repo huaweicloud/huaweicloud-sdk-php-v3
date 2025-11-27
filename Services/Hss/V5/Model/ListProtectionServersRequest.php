@@ -24,7 +24,7 @@ class ListProtectionServersRequest implements ModelInterface, ArrayAccess
     * offset  查询起始点
     * limit  每页显示个数
     * hostName  云主机名称
-    * osType  操作系统类型，包含如下2种。  - linux ：linux类型应用防护。  - windows ：windows类型应用防护。
+    * osType  操作系统类型，包含如下2种。 - Linux - Windows
     * hostIp  云主机私有IP
     * appType  应用类型，包含如下1种。   - java ：java类型应用防护。
     * appStatus  应用防护状态，包含如下2种。   - closed ：未开启。   - opened ：防护中。
@@ -48,7 +48,7 @@ class ListProtectionServersRequest implements ModelInterface, ArrayAccess
     * offset  查询起始点
     * limit  每页显示个数
     * hostName  云主机名称
-    * osType  操作系统类型，包含如下2种。  - linux ：linux类型应用防护。  - windows ：windows类型应用防护。
+    * osType  操作系统类型，包含如下2种。 - Linux - Windows
     * hostIp  云主机私有IP
     * appType  应用类型，包含如下1种。   - java ：java类型应用防护。
     * appStatus  应用防护状态，包含如下2种。   - closed ：未开启。   - opened ：防护中。
@@ -93,7 +93,7 @@ class ListProtectionServersRequest implements ModelInterface, ArrayAccess
     * offset  查询起始点
     * limit  每页显示个数
     * hostName  云主机名称
-    * osType  操作系统类型，包含如下2种。  - linux ：linux类型应用防护。  - windows ：windows类型应用防护。
+    * osType  操作系统类型，包含如下2种。 - Linux - Windows
     * hostIp  云主机私有IP
     * appType  应用类型，包含如下1种。   - java ：java类型应用防护。
     * appStatus  应用防护状态，包含如下2种。   - closed ：未开启。   - opened ：防护中。
@@ -117,7 +117,7 @@ class ListProtectionServersRequest implements ModelInterface, ArrayAccess
     * offset  查询起始点
     * limit  每页显示个数
     * hostName  云主机名称
-    * osType  操作系统类型，包含如下2种。  - linux ：linux类型应用防护。  - windows ：windows类型应用防护。
+    * osType  操作系统类型，包含如下2种。 - Linux - Windows
     * hostIp  云主机私有IP
     * appType  应用类型，包含如下1种。   - java ：java类型应用防护。
     * appStatus  应用防护状态，包含如下2种。   - closed ：未开启。   - opened ：防护中。
@@ -141,7 +141,7 @@ class ListProtectionServersRequest implements ModelInterface, ArrayAccess
     * offset  查询起始点
     * limit  每页显示个数
     * hostName  云主机名称
-    * osType  操作系统类型，包含如下2种。  - linux ：linux类型应用防护。  - windows ：windows类型应用防护。
+    * osType  操作系统类型，包含如下2种。 - Linux - Windows
     * hostIp  云主机私有IP
     * appType  应用类型，包含如下1种。   - java ：java类型应用防护。
     * appStatus  应用防护状态，包含如下2种。   - closed ：未开启。   - opened ：防护中。
@@ -305,6 +305,9 @@ class ListProtectionServersRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'osType', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['osType']) && !preg_match("/^(Linux|Windows)$/", $this->container['osType'])) {
+                $invalidProperties[] = "invalid value for 'osType', must be conform to the pattern /^(Linux|Windows)$/.";
+            }
             if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) > 128)) {
                 $invalidProperties[] = "invalid value for 'hostIp', the character length must be smaller than or equal to 128.";
             }
@@ -445,7 +448,7 @@ class ListProtectionServersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  操作系统类型，包含如下2种。  - linux ：linux类型应用防护。  - windows ：windows类型应用防护。
+    *  操作系统类型，包含如下2种。 - Linux - Windows
     *
     * @return string|null
     */
@@ -457,7 +460,7 @@ class ListProtectionServersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType 操作系统类型，包含如下2种。  - linux ：linux类型应用防护。  - windows ：windows类型应用防护。
+    * @param string|null $osType 操作系统类型，包含如下2种。 - Linux - Windows
     *
     * @return $this
     */

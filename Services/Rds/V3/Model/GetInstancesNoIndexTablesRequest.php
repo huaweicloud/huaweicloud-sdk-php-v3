@@ -23,13 +23,17 @@ class GetInstancesNoIndexTablesRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID
     * newest  指定查询是否应侧重于检索最新或最新的特殊表。
     * tableType  表格类型。
+    * offset  索引位置，偏移量。
+    * limit  查询记录数。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'instanceId' => 'string',
             'newest' => 'bool',
-            'tableType' => 'string'
+            'tableType' => 'string',
+            'offset' => 'string',
+            'limit' => 'string'
     ];
 
     /**
@@ -37,13 +41,17 @@ class GetInstancesNoIndexTablesRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID
     * newest  指定查询是否应侧重于检索最新或最新的特殊表。
     * tableType  表格类型。
+    * offset  索引位置，偏移量。
+    * limit  查询记录数。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'instanceId' => null,
         'newest' => null,
-        'tableType' => null
+        'tableType' => null,
+        'offset' => null,
+        'limit' => null
     ];
 
     /**
@@ -72,13 +80,17 @@ class GetInstancesNoIndexTablesRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID
     * newest  指定查询是否应侧重于检索最新或最新的特殊表。
     * tableType  表格类型。
+    * offset  索引位置，偏移量。
+    * limit  查询记录数。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'instanceId' => 'instance_id',
             'newest' => 'newest',
-            'tableType' => 'table_type'
+            'tableType' => 'table_type',
+            'offset' => 'offset',
+            'limit' => 'limit'
     ];
 
     /**
@@ -86,13 +98,17 @@ class GetInstancesNoIndexTablesRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID
     * newest  指定查询是否应侧重于检索最新或最新的特殊表。
     * tableType  表格类型。
+    * offset  索引位置，偏移量。
+    * limit  查询记录数。
     *
     * @var string[]
     */
     protected static $setters = [
             'instanceId' => 'setInstanceId',
             'newest' => 'setNewest',
-            'tableType' => 'setTableType'
+            'tableType' => 'setTableType',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit'
     ];
 
     /**
@@ -100,13 +116,17 @@ class GetInstancesNoIndexTablesRequest implements ModelInterface, ArrayAccess
     * instanceId  实例ID
     * newest  指定查询是否应侧重于检索最新或最新的特殊表。
     * tableType  表格类型。
+    * offset  索引位置，偏移量。
+    * limit  查询记录数。
     *
     * @var string[]
     */
     protected static $getters = [
             'instanceId' => 'getInstanceId',
             'newest' => 'getNewest',
-            'tableType' => 'getTableType'
+            'tableType' => 'getTableType',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -170,6 +190,8 @@ class GetInstancesNoIndexTablesRequest implements ModelInterface, ArrayAccess
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['newest'] = isset($data['newest']) ? $data['newest'] : null;
         $this->container['tableType'] = isset($data['tableType']) ? $data['tableType'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -272,6 +294,54 @@ class GetInstancesNoIndexTablesRequest implements ModelInterface, ArrayAccess
     public function setTableType($tableType)
     {
         $this->container['tableType'] = $tableType;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  索引位置，偏移量。
+    *
+    * @return string|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param string|null $offset 索引位置，偏移量。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  查询记录数。
+    *
+    * @return string|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param string|null $limit 查询记录数。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

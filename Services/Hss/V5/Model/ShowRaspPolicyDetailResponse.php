@@ -22,7 +22,7 @@ class ShowRaspPolicyDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * policyName  防护策略名称
-    * osType  操作系统类型
+    * osType  **参数解释** 操作系统类型 **取值范围** 包含以下两种: - Linux : linux系统 - Windows: windows系统
     * ruleList  list
     *
     * @var string[]
@@ -36,7 +36,7 @@ class ShowRaspPolicyDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * policyName  防护策略名称
-    * osType  操作系统类型
+    * osType  **参数解释** 操作系统类型 **取值范围** 包含以下两种: - Linux : linux系统 - Windows: windows系统
     * ruleList  list
     *
     * @var string[]
@@ -71,7 +71,7 @@ class ShowRaspPolicyDetailResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * policyName  防护策略名称
-    * osType  操作系统类型
+    * osType  **参数解释** 操作系统类型 **取值范围** 包含以下两种: - Linux : linux系统 - Windows: windows系统
     * ruleList  list
     *
     * @var string[]
@@ -85,7 +85,7 @@ class ShowRaspPolicyDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * policyName  防护策略名称
-    * osType  操作系统类型
+    * osType  **参数解释** 操作系统类型 **取值范围** 包含以下两种: - Linux : linux系统 - Windows: windows系统
     * ruleList  list
     *
     * @var string[]
@@ -99,7 +99,7 @@ class ShowRaspPolicyDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * policyName  防护策略名称
-    * osType  操作系统类型
+    * osType  **参数解释** 操作系统类型 **取值范围** 包含以下两种: - Linux : linux系统 - Windows: windows系统
     * ruleList  list
     *
     * @var string[]
@@ -187,11 +187,14 @@ class ShowRaspPolicyDetailResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['policyName']) && (mb_strlen($this->container['policyName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'policyName', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) > 128)) {
-                $invalidProperties[] = "invalid value for 'osType', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) > 32)) {
+                $invalidProperties[] = "invalid value for 'osType', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) < 0)) {
-                $invalidProperties[] = "invalid value for 'osType', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'osType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['osType']) && !preg_match("/^(Linux|Windows)$/", $this->container['osType'])) {
+                $invalidProperties[] = "invalid value for 'osType', must be conform to the pattern /^(Linux|Windows)$/.";
             }
         return $invalidProperties;
     }
@@ -233,7 +236,7 @@ class ShowRaspPolicyDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  操作系统类型
+    *  **参数解释** 操作系统类型 **取值范围** 包含以下两种: - Linux : linux系统 - Windows: windows系统
     *
     * @return string|null
     */
@@ -245,7 +248,7 @@ class ShowRaspPolicyDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType 操作系统类型
+    * @param string|null $osType **参数解释** 操作系统类型 **取值范围** 包含以下两种: - Linux : linux系统 - Windows: windows系统
     *
     * @return $this
     */

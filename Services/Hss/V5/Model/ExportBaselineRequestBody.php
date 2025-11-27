@@ -31,6 +31,11 @@ class ExportBaselineRequestBody implements ModelInterface, ArrayAccess
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置
     * exportHeaders  导出配置检测数据的表头信息列表
+    * tag  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    * checkType  **参数解释** 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    * statisticsScanResult  **参数解释** 统计结果类型，包含如下： **约束限制** 不涉及 **取值范围** - pass      : 已通过，表示查看主机全部通过的检查项 - failed    : 未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed : 已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项  **默认取值** 不涉及
+    * checkRuleName  **参数解释** 检查项（检查规则）名称，支持模糊匹配 **约束限制** 不涉及 **取值范围** 字符长度0-2048位 **默认取值** 不涉及
+    * clusterId  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -45,7 +50,12 @@ class ExportBaselineRequestBody implements ModelInterface, ArrayAccess
             'hostId' => 'string',
             'limit' => 'int',
             'offset' => 'int',
-            'exportHeaders' => 'string[][]'
+            'exportHeaders' => 'string[][]',
+            'tag' => 'string',
+            'checkType' => 'string',
+            'statisticsScanResult' => 'string',
+            'checkRuleName' => 'string',
+            'clusterId' => 'string'
     ];
 
     /**
@@ -61,6 +71,11 @@ class ExportBaselineRequestBody implements ModelInterface, ArrayAccess
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置
     * exportHeaders  导出配置检测数据的表头信息列表
+    * tag  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    * checkType  **参数解释** 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    * statisticsScanResult  **参数解释** 统计结果类型，包含如下： **约束限制** 不涉及 **取值范围** - pass      : 已通过，表示查看主机全部通过的检查项 - failed    : 未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed : 已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项  **默认取值** 不涉及
+    * checkRuleName  **参数解释** 检查项（检查规则）名称，支持模糊匹配 **约束限制** 不涉及 **取值范围** 字符长度0-2048位 **默认取值** 不涉及
+    * clusterId  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -75,7 +90,12 @@ class ExportBaselineRequestBody implements ModelInterface, ArrayAccess
         'hostId' => null,
         'limit' => 'int32',
         'offset' => 'int32',
-        'exportHeaders' => null
+        'exportHeaders' => null,
+        'tag' => null,
+        'checkType' => null,
+        'statisticsScanResult' => null,
+        'checkRuleName' => null,
+        'clusterId' => null
     ];
 
     /**
@@ -112,6 +132,11 @@ class ExportBaselineRequestBody implements ModelInterface, ArrayAccess
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置
     * exportHeaders  导出配置检测数据的表头信息列表
+    * tag  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    * checkType  **参数解释** 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    * statisticsScanResult  **参数解释** 统计结果类型，包含如下： **约束限制** 不涉及 **取值范围** - pass      : 已通过，表示查看主机全部通过的检查项 - failed    : 未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed : 已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项  **默认取值** 不涉及
+    * checkRuleName  **参数解释** 检查项（检查规则）名称，支持模糊匹配 **约束限制** 不涉及 **取值范围** 字符长度0-2048位 **默认取值** 不涉及
+    * clusterId  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -126,7 +151,12 @@ class ExportBaselineRequestBody implements ModelInterface, ArrayAccess
             'hostId' => 'host_id',
             'limit' => 'limit',
             'offset' => 'offset',
-            'exportHeaders' => 'export_headers'
+            'exportHeaders' => 'export_headers',
+            'tag' => 'tag',
+            'checkType' => 'check_type',
+            'statisticsScanResult' => 'statistics_scan_result',
+            'checkRuleName' => 'check_rule_name',
+            'clusterId' => 'cluster_id'
     ];
 
     /**
@@ -142,6 +172,11 @@ class ExportBaselineRequestBody implements ModelInterface, ArrayAccess
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置
     * exportHeaders  导出配置检测数据的表头信息列表
+    * tag  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    * checkType  **参数解释** 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    * statisticsScanResult  **参数解释** 统计结果类型，包含如下： **约束限制** 不涉及 **取值范围** - pass      : 已通过，表示查看主机全部通过的检查项 - failed    : 未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed : 已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项  **默认取值** 不涉及
+    * checkRuleName  **参数解释** 检查项（检查规则）名称，支持模糊匹配 **约束限制** 不涉及 **取值范围** 字符长度0-2048位 **默认取值** 不涉及
+    * clusterId  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -156,7 +191,12 @@ class ExportBaselineRequestBody implements ModelInterface, ArrayAccess
             'hostId' => 'setHostId',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
-            'exportHeaders' => 'setExportHeaders'
+            'exportHeaders' => 'setExportHeaders',
+            'tag' => 'setTag',
+            'checkType' => 'setCheckType',
+            'statisticsScanResult' => 'setStatisticsScanResult',
+            'checkRuleName' => 'setCheckRuleName',
+            'clusterId' => 'setClusterId'
     ];
 
     /**
@@ -172,6 +212,11 @@ class ExportBaselineRequestBody implements ModelInterface, ArrayAccess
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置
     * exportHeaders  导出配置检测数据的表头信息列表
+    * tag  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    * checkType  **参数解释** 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    * statisticsScanResult  **参数解释** 统计结果类型，包含如下： **约束限制** 不涉及 **取值范围** - pass      : 已通过，表示查看主机全部通过的检查项 - failed    : 未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed : 已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项  **默认取值** 不涉及
+    * checkRuleName  **参数解释** 检查项（检查规则）名称，支持模糊匹配 **约束限制** 不涉及 **取值范围** 字符长度0-2048位 **默认取值** 不涉及
+    * clusterId  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -186,7 +231,12 @@ class ExportBaselineRequestBody implements ModelInterface, ArrayAccess
             'hostId' => 'getHostId',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
-            'exportHeaders' => 'getExportHeaders'
+            'exportHeaders' => 'getExportHeaders',
+            'tag' => 'getTag',
+            'checkType' => 'getCheckType',
+            'statisticsScanResult' => 'getStatisticsScanResult',
+            'checkRuleName' => 'getCheckRuleName',
+            'clusterId' => 'getClusterId'
     ];
 
     /**
@@ -258,6 +308,11 @@ class ExportBaselineRequestBody implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['exportHeaders'] = isset($data['exportHeaders']) ? $data['exportHeaders'] : null;
+        $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
+        $this->container['checkType'] = isset($data['checkType']) ? $data['checkType'] : null;
+        $this->container['statisticsScanResult'] = isset($data['statisticsScanResult']) ? $data['statisticsScanResult'] : null;
+        $this->container['checkRuleName'] = isset($data['checkRuleName']) ? $data['checkRuleName'] : null;
+        $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
     }
 
     /**
@@ -343,6 +398,51 @@ class ExportBaselineRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['exportHeaders'] === null) {
             $invalidProperties[] = "'exportHeaders' can't be null";
         }
+            if (!is_null($this->container['tag']) && (mb_strlen($this->container['tag']) > 256)) {
+                $invalidProperties[] = "invalid value for 'tag', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['tag']) && (mb_strlen($this->container['tag']) < 0)) {
+                $invalidProperties[] = "invalid value for 'tag', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['tag']) && !preg_match("/^.*$/", $this->container['tag'])) {
+                $invalidProperties[] = "invalid value for 'tag', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['checkType']) && (mb_strlen($this->container['checkType']) > 256)) {
+                $invalidProperties[] = "invalid value for 'checkType', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['checkType']) && (mb_strlen($this->container['checkType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'checkType', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['checkType']) && !preg_match("/^.*$/", $this->container['checkType'])) {
+                $invalidProperties[] = "invalid value for 'checkType', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['statisticsScanResult']) && (mb_strlen($this->container['statisticsScanResult']) > 32)) {
+                $invalidProperties[] = "invalid value for 'statisticsScanResult', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['statisticsScanResult']) && (mb_strlen($this->container['statisticsScanResult']) < 0)) {
+                $invalidProperties[] = "invalid value for 'statisticsScanResult', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['statisticsScanResult']) && !preg_match("/^(pass|failed|processed)$/", $this->container['statisticsScanResult'])) {
+                $invalidProperties[] = "invalid value for 'statisticsScanResult', must be conform to the pattern /^(pass|failed|processed)$/.";
+            }
+            if (!is_null($this->container['checkRuleName']) && (mb_strlen($this->container['checkRuleName']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'checkRuleName', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['checkRuleName']) && (mb_strlen($this->container['checkRuleName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'checkRuleName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['checkRuleName']) && !preg_match("/^.*$/", $this->container['checkRuleName'])) {
+                $invalidProperties[] = "invalid value for 'checkRuleName', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['clusterId']) && (mb_strlen($this->container['clusterId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'clusterId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['clusterId']) && (mb_strlen($this->container['clusterId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'clusterId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['clusterId']) && !preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['clusterId'])) {
+                $invalidProperties[] = "invalid value for 'clusterId', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
+            }
         return $invalidProperties;
     }
 
@@ -618,6 +718,126 @@ class ExportBaselineRequestBody implements ModelInterface, ArrayAccess
     public function setExportHeaders($exportHeaders)
     {
         $this->container['exportHeaders'] = $exportHeaders;
+        return $this;
+    }
+
+    /**
+    * Gets tag
+    *  **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    *
+    * @return string|null
+    */
+    public function getTag()
+    {
+        return $this->container['tag'];
+    }
+
+    /**
+    * Sets tag
+    *
+    * @param string|null $tag **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    *
+    * @return $this
+    */
+    public function setTag($tag)
+    {
+        $this->container['tag'] = $tag;
+        return $this;
+    }
+
+    /**
+    * Gets checkType
+    *  **参数解释** 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    *
+    * @return string|null
+    */
+    public function getCheckType()
+    {
+        return $this->container['checkType'];
+    }
+
+    /**
+    * Sets checkType
+    *
+    * @param string|null $checkType **参数解释** 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+    *
+    * @return $this
+    */
+    public function setCheckType($checkType)
+    {
+        $this->container['checkType'] = $checkType;
+        return $this;
+    }
+
+    /**
+    * Gets statisticsScanResult
+    *  **参数解释** 统计结果类型，包含如下： **约束限制** 不涉及 **取值范围** - pass      : 已通过，表示查看主机全部通过的检查项 - failed    : 未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed : 已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项  **默认取值** 不涉及
+    *
+    * @return string|null
+    */
+    public function getStatisticsScanResult()
+    {
+        return $this->container['statisticsScanResult'];
+    }
+
+    /**
+    * Sets statisticsScanResult
+    *
+    * @param string|null $statisticsScanResult **参数解释** 统计结果类型，包含如下： **约束限制** 不涉及 **取值范围** - pass      : 已通过，表示查看主机全部通过的检查项 - failed    : 未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed : 已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项  **默认取值** 不涉及
+    *
+    * @return $this
+    */
+    public function setStatisticsScanResult($statisticsScanResult)
+    {
+        $this->container['statisticsScanResult'] = $statisticsScanResult;
+        return $this;
+    }
+
+    /**
+    * Gets checkRuleName
+    *  **参数解释** 检查项（检查规则）名称，支持模糊匹配 **约束限制** 不涉及 **取值范围** 字符长度0-2048位 **默认取值** 不涉及
+    *
+    * @return string|null
+    */
+    public function getCheckRuleName()
+    {
+        return $this->container['checkRuleName'];
+    }
+
+    /**
+    * Sets checkRuleName
+    *
+    * @param string|null $checkRuleName **参数解释** 检查项（检查规则）名称，支持模糊匹配 **约束限制** 不涉及 **取值范围** 字符长度0-2048位 **默认取值** 不涉及
+    *
+    * @return $this
+    */
+    public function setCheckRuleName($checkRuleName)
+    {
+        $this->container['checkRuleName'] = $checkRuleName;
+        return $this;
+    }
+
+    /**
+    * Gets clusterId
+    *  **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
+    *
+    * @return string|null
+    */
+    public function getClusterId()
+    {
+        return $this->container['clusterId'];
+    }
+
+    /**
+    * Sets clusterId
+    *
+    * @param string|null $clusterId **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
+    *
+    * @return $this
+    */
+    public function setClusterId($clusterId)
+    {
+        $this->container['clusterId'] = $clusterId;
         return $this;
     }
 

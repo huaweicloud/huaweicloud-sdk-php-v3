@@ -20,26 +20,30 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * tenantId  项目的ID。
     * id  公网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建公网NAT网关实例时，关联的企业项目ID。
     * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * createdAt  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * createdAt  公网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文
-    * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
-    * spec  公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
+    * status  公网NAT网关实例的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 INACTIVE: 不可用
+    * spec  公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
     * routerId  VPC的id。
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
+    * sortKey  排序使用的key
+    * sortDir  返回结果按照升序或降序排列，默认降序desc，升序为asc
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'tenantId' => 'string',
             'id' => 'string',
             'enterpriseProjectId' => 'string',
             'description' => 'string',
-            'createdAt' => 'string',
+            'createdAt' => '\DateTime',
             'name' => 'string',
             'status' => 'string[]',
             'spec' => 'string[]',
@@ -47,31 +51,37 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
             'internalNetworkId' => 'string',
             'routerId' => 'string',
             'limit' => 'int',
-            'marker' => 'string'
+            'marker' => 'string',
+            'sortKey' => 'string',
+            'sortDir' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * tenantId  项目的ID。
     * id  公网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建公网NAT网关实例时，关联的企业项目ID。
     * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * createdAt  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * createdAt  公网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文
-    * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
-    * spec  公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
+    * status  公网NAT网关实例的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 INACTIVE: 不可用
+    * spec  公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
     * routerId  VPC的id。
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
+    * sortKey  排序使用的key
+    * sortDir  返回结果按照升序或降序排列，默认降序desc，升序为asc
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'tenantId' => null,
         'id' => null,
         'enterpriseProjectId' => null,
         'description' => null,
-        'createdAt' => null,
+        'createdAt' => 'date-time',
         'name' => null,
         'status' => null,
         'spec' => null,
@@ -79,7 +89,9 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
         'internalNetworkId' => null,
         'routerId' => null,
         'limit' => null,
-        'marker' => null
+        'marker' => null,
+        'sortKey' => null,
+        'sortDir' => null
     ];
 
     /**
@@ -105,22 +117,26 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * tenantId  项目的ID。
     * id  公网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建公网NAT网关实例时，关联的企业项目ID。
     * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * createdAt  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * createdAt  公网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文
-    * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
-    * spec  公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
+    * status  公网NAT网关实例的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 INACTIVE: 不可用
+    * spec  公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
     * routerId  VPC的id。
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
+    * sortKey  排序使用的key
+    * sortDir  返回结果按照升序或降序排列，默认降序desc，升序为asc
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'tenantId' => 'tenant_id',
             'id' => 'id',
             'enterpriseProjectId' => 'enterprise_project_id',
             'description' => 'description',
@@ -132,27 +148,33 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
             'internalNetworkId' => 'internal_network_id',
             'routerId' => 'router_id',
             'limit' => 'limit',
-            'marker' => 'marker'
+            'marker' => 'marker',
+            'sortKey' => 'sort_key',
+            'sortDir' => 'sort_dir'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * tenantId  项目的ID。
     * id  公网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建公网NAT网关实例时，关联的企业项目ID。
     * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * createdAt  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * createdAt  公网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文
-    * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
-    * spec  公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
+    * status  公网NAT网关实例的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 INACTIVE: 不可用
+    * spec  公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
     * routerId  VPC的id。
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
+    * sortKey  排序使用的key
+    * sortDir  返回结果按照升序或降序排列，默认降序desc，升序为asc
     *
     * @var string[]
     */
     protected static $setters = [
+            'tenantId' => 'setTenantId',
             'id' => 'setId',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'description' => 'setDescription',
@@ -164,27 +186,33 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
             'internalNetworkId' => 'setInternalNetworkId',
             'routerId' => 'setRouterId',
             'limit' => 'setLimit',
-            'marker' => 'setMarker'
+            'marker' => 'setMarker',
+            'sortKey' => 'setSortKey',
+            'sortDir' => 'setSortDir'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * tenantId  项目的ID。
     * id  公网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建公网NAT网关实例时，关联的企业项目ID。
     * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * createdAt  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * createdAt  公网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文
-    * status  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
-    * spec  公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
+    * status  公网NAT网关实例的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 INACTIVE: 不可用
+    * spec  公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
     * routerId  VPC的id。
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
+    * sortKey  排序使用的key
+    * sortDir  返回结果按照升序或降序排列，默认降序desc，升序为asc
     *
     * @var string[]
     */
     protected static $getters = [
+            'tenantId' => 'getTenantId',
             'id' => 'getId',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'description' => 'getDescription',
@@ -196,7 +224,9 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
             'internalNetworkId' => 'getInternalNetworkId',
             'routerId' => 'getRouterId',
             'limit' => 'getLimit',
-            'marker' => 'getMarker'
+            'marker' => 'getMarker',
+            'sortKey' => 'getSortKey',
+            'sortDir' => 'getSortDir'
     ];
 
     /**
@@ -248,6 +278,13 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     const SPEC__2 = '2';
     const SPEC__3 = '3';
     const SPEC__4 = '4';
+    const SPEC__5 = '5';
+    const SORT_KEY_ID = 'id';
+    const SORT_KEY_NAME = 'name';
+    const SORT_KEY_STATUS = 'status';
+    const SORT_KEY_CREATED_AT = 'created_at';
+    const SORT_DIR_DESC = 'desc';
+    const SORT_DIR_ASC = 'asc';
     
 
     /**
@@ -278,6 +315,35 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
             self::SPEC__2,
             self::SPEC__3,
             self::SPEC__4,
+            self::SPEC__5,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSortKeyAllowableValues()
+    {
+        return [
+            self::SORT_KEY_ID,
+            self::SORT_KEY_NAME,
+            self::SORT_KEY_STATUS,
+            self::SORT_KEY_CREATED_AT,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSortDirAllowableValues()
+    {
+        return [
+            self::SORT_DIR_DESC,
+            self::SORT_DIR_ASC,
         ];
     }
 
@@ -297,6 +363,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -309,6 +376,8 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
         $this->container['routerId'] = isset($data['routerId']) ? $data['routerId'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
+        $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
+        $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
     }
 
     /**
@@ -319,6 +388,12 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['tenantId']) && (mb_strlen($this->container['tenantId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'tenantId', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['tenantId']) && (mb_strlen($this->container['tenantId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'tenantId', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
@@ -336,12 +411,6 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['createdAt']) && (mb_strlen($this->container['createdAt']) > 36)) {
-                $invalidProperties[] = "invalid value for 'createdAt', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['createdAt']) && (mb_strlen($this->container['createdAt']) < 1)) {
-                $invalidProperties[] = "invalid value for 'createdAt', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
@@ -367,6 +436,34 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 36)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 36)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 36.";
+            }
+            $allowedValues = $this->getSortKeyAllowableValues();
+                if (!is_null($this->container['sortKey']) && !in_array($this->container['sortKey'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'sortKey', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) > 128)) {
+                $invalidProperties[] = "invalid value for 'sortKey', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) < 1)) {
+                $invalidProperties[] = "invalid value for 'sortKey', the character length must be bigger than or equal to 1.";
+            }
+            $allowedValues = $this->getSortDirAllowableValues();
+                if (!is_null($this->container['sortDir']) && !in_array($this->container['sortDir'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'sortDir', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -379,6 +476,30 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets tenantId
+    *  项目的ID。
+    *
+    * @return string|null
+    */
+    public function getTenantId()
+    {
+        return $this->container['tenantId'];
+    }
+
+    /**
+    * Sets tenantId
+    *
+    * @param string|null $tenantId 项目的ID。
+    *
+    * @return $this
+    */
+    public function setTenantId($tenantId)
+    {
+        $this->container['tenantId'] = $tenantId;
+        return $this;
     }
 
     /**
@@ -455,9 +576,9 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    *  公网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     *
-    * @return string|null
+    * @return \DateTime|null
     */
     public function getCreatedAt()
     {
@@ -467,7 +588,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
+    * @param \DateTime|null $createdAt 公网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     *
     * @return $this
     */
@@ -503,7 +624,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
+    *  公网NAT网关实例的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 INACTIVE: 不可用
     *
     * @return string[]|null
     */
@@ -515,7 +636,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status 公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
+    * @param string[]|null $status 公网NAT网关实例的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 INACTIVE: 不可用
     *
     * @return $this
     */
@@ -527,7 +648,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets spec
-    *  公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
+    *  公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     *
     * @return string[]|null
     */
@@ -539,7 +660,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     /**
     * Sets spec
     *
-    * @param string[]|null $spec 公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
+    * @param string[]|null $spec 公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     *
     * @return $this
     */
@@ -623,7 +744,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    *  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     *
     * @return int|null
     */
@@ -635,7 +756,7 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * @param int|null $limit 功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     *
     * @return $this
     */
@@ -666,6 +787,54 @@ class ListNatGatewaysRequest implements ModelInterface, ArrayAccess
     public function setMarker($marker)
     {
         $this->container['marker'] = $marker;
+        return $this;
+    }
+
+    /**
+    * Gets sortKey
+    *  排序使用的key
+    *
+    * @return string|null
+    */
+    public function getSortKey()
+    {
+        return $this->container['sortKey'];
+    }
+
+    /**
+    * Sets sortKey
+    *
+    * @param string|null $sortKey 排序使用的key
+    *
+    * @return $this
+    */
+    public function setSortKey($sortKey)
+    {
+        $this->container['sortKey'] = $sortKey;
+        return $this;
+    }
+
+    /**
+    * Gets sortDir
+    *  返回结果按照升序或降序排列，默认降序desc，升序为asc
+    *
+    * @return string|null
+    */
+    public function getSortDir()
+    {
+        return $this->container['sortDir'];
+    }
+
+    /**
+    * Sets sortDir
+    *
+    * @param string|null $sortDir 返回结果按照升序或降序排列，默认降序desc，升序为asc
+    *
+    * @return $this
+    */
+    public function setSortDir($sortDir)
+    {
+        $this->container['sortDir'] = $sortDir;
         return $this;
     }
 

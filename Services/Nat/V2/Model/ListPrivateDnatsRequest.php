@@ -20,7 +20,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  DNAT规则的ID。
@@ -28,10 +28,13 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * gatewayId  私网NAT网关实例的ID。
     * transitIpId  中转IP的ID。
-    * externalIpAddress  中转IP的地址。
-    * networkInterfaceId  网络接口ID，支持计算、ELB、VIP等实例的网络接口。
-    * type  DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELB的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
-    * privateIpAddress  后端实例的IP私网地址。
+    * networkInterfaceId  计算实例、ELBV2、ELBV3、VIP等资源的端口ID。
+    * type  DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELBv2的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
+    * privateIpAddress  后端资源（计算实例、ELBV2、ELBV3、VIP等）的私网IP地址。
+    * protocol  DNAT规则协议类型， 目前支持TCP/tcp/Tcp/tCp/tcP/TCp/tCP/TcP、 UDP/udp/Udp/uDp/udP/UDp/uDP/UdP、 ANY/any/Any/aNy/anY/ANy/aNY/AnY。 分别对应协议号6、17、0。
+    * internalServicePort  后端实例的端口号（计算实例、ELBV2、ELBV3、VIP等)。
+    * transitServicePort  中转IP的端口号。
+    * transitIpAddress  中转IP的地址。
     *
     * @var string[]
     */
@@ -44,15 +47,18 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
             'description' => 'string[]',
             'gatewayId' => 'string[]',
             'transitIpId' => 'string[]',
-            'externalIpAddress' => 'string[]',
             'networkInterfaceId' => 'string[]',
             'type' => 'string[]',
-            'privateIpAddress' => 'string[]'
+            'privateIpAddress' => 'string[]',
+            'protocol' => 'string[]',
+            'internalServicePort' => 'string[]',
+            'transitServicePort' => 'string[]',
+            'transitIpAddress' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  DNAT规则的ID。
@@ -60,10 +66,13 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * gatewayId  私网NAT网关实例的ID。
     * transitIpId  中转IP的ID。
-    * externalIpAddress  中转IP的地址。
-    * networkInterfaceId  网络接口ID，支持计算、ELB、VIP等实例的网络接口。
-    * type  DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELB的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
-    * privateIpAddress  后端实例的IP私网地址。
+    * networkInterfaceId  计算实例、ELBV2、ELBV3、VIP等资源的端口ID。
+    * type  DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELBv2的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
+    * privateIpAddress  后端资源（计算实例、ELBV2、ELBV3、VIP等）的私网IP地址。
+    * protocol  DNAT规则协议类型， 目前支持TCP/tcp/Tcp/tCp/tcP/TCp/tCP/TcP、 UDP/udp/Udp/uDp/udP/UDp/uDP/UdP、 ANY/any/Any/aNy/anY/ANy/aNY/AnY。 分别对应协议号6、17、0。
+    * internalServicePort  后端实例的端口号（计算实例、ELBV2、ELBV3、VIP等)。
+    * transitServicePort  中转IP的端口号。
+    * transitIpAddress  中转IP的地址。
     *
     * @var string[]
     */
@@ -76,10 +85,13 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
         'description' => null,
         'gatewayId' => null,
         'transitIpId' => null,
-        'externalIpAddress' => null,
         'networkInterfaceId' => null,
         'type' => null,
-        'privateIpAddress' => null
+        'privateIpAddress' => null,
+        'protocol' => null,
+        'internalServicePort' => null,
+        'transitServicePort' => null,
+        'transitIpAddress' => null
     ];
 
     /**
@@ -105,7 +117,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  DNAT规则的ID。
@@ -113,10 +125,13 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * gatewayId  私网NAT网关实例的ID。
     * transitIpId  中转IP的ID。
-    * externalIpAddress  中转IP的地址。
-    * networkInterfaceId  网络接口ID，支持计算、ELB、VIP等实例的网络接口。
-    * type  DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELB的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
-    * privateIpAddress  后端实例的IP私网地址。
+    * networkInterfaceId  计算实例、ELBV2、ELBV3、VIP等资源的端口ID。
+    * type  DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELBv2的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
+    * privateIpAddress  后端资源（计算实例、ELBV2、ELBV3、VIP等）的私网IP地址。
+    * protocol  DNAT规则协议类型， 目前支持TCP/tcp/Tcp/tCp/tcP/TCp/tCP/TcP、 UDP/udp/Udp/uDp/udP/UDp/uDP/UdP、 ANY/any/Any/aNy/anY/ANy/aNY/AnY。 分别对应协议号6、17、0。
+    * internalServicePort  后端实例的端口号（计算实例、ELBV2、ELBV3、VIP等)。
+    * transitServicePort  中转IP的端口号。
+    * transitIpAddress  中转IP的地址。
     *
     * @var string[]
     */
@@ -129,15 +144,18 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
             'description' => 'description',
             'gatewayId' => 'gateway_id',
             'transitIpId' => 'transit_ip_id',
-            'externalIpAddress' => 'external_ip_address',
             'networkInterfaceId' => 'network_interface_id',
             'type' => 'type',
-            'privateIpAddress' => 'private_ip_address'
+            'privateIpAddress' => 'private_ip_address',
+            'protocol' => 'protocol',
+            'internalServicePort' => 'internal_service_port',
+            'transitServicePort' => 'transit_service_port',
+            'transitIpAddress' => 'transit_ip_address'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  DNAT规则的ID。
@@ -145,10 +163,13 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * gatewayId  私网NAT网关实例的ID。
     * transitIpId  中转IP的ID。
-    * externalIpAddress  中转IP的地址。
-    * networkInterfaceId  网络接口ID，支持计算、ELB、VIP等实例的网络接口。
-    * type  DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELB的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
-    * privateIpAddress  后端实例的IP私网地址。
+    * networkInterfaceId  计算实例、ELBV2、ELBV3、VIP等资源的端口ID。
+    * type  DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELBv2的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
+    * privateIpAddress  后端资源（计算实例、ELBV2、ELBV3、VIP等）的私网IP地址。
+    * protocol  DNAT规则协议类型， 目前支持TCP/tcp/Tcp/tCp/tcP/TCp/tCP/TcP、 UDP/udp/Udp/uDp/udP/UDp/uDP/UdP、 ANY/any/Any/aNy/anY/ANy/aNY/AnY。 分别对应协议号6、17、0。
+    * internalServicePort  后端实例的端口号（计算实例、ELBV2、ELBV3、VIP等)。
+    * transitServicePort  中转IP的端口号。
+    * transitIpAddress  中转IP的地址。
     *
     * @var string[]
     */
@@ -161,15 +182,18 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'gatewayId' => 'setGatewayId',
             'transitIpId' => 'setTransitIpId',
-            'externalIpAddress' => 'setExternalIpAddress',
             'networkInterfaceId' => 'setNetworkInterfaceId',
             'type' => 'setType',
-            'privateIpAddress' => 'setPrivateIpAddress'
+            'privateIpAddress' => 'setPrivateIpAddress',
+            'protocol' => 'setProtocol',
+            'internalServicePort' => 'setInternalServicePort',
+            'transitServicePort' => 'setTransitServicePort',
+            'transitIpAddress' => 'setTransitIpAddress'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
     * pageReverse  是否查询前一页。
     * id  DNAT规则的ID。
@@ -177,10 +201,13 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * gatewayId  私网NAT网关实例的ID。
     * transitIpId  中转IP的ID。
-    * externalIpAddress  中转IP的地址。
-    * networkInterfaceId  网络接口ID，支持计算、ELB、VIP等实例的网络接口。
-    * type  DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELB的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
-    * privateIpAddress  后端实例的IP私网地址。
+    * networkInterfaceId  计算实例、ELBV2、ELBV3、VIP等资源的端口ID。
+    * type  DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELBv2的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
+    * privateIpAddress  后端资源（计算实例、ELBV2、ELBV3、VIP等）的私网IP地址。
+    * protocol  DNAT规则协议类型， 目前支持TCP/tcp/Tcp/tCp/tcP/TCp/tCP/TcP、 UDP/udp/Udp/uDp/udP/UDp/uDP/UdP、 ANY/any/Any/aNy/anY/ANy/aNY/AnY。 分别对应协议号6、17、0。
+    * internalServicePort  后端实例的端口号（计算实例、ELBV2、ELBV3、VIP等)。
+    * transitServicePort  中转IP的端口号。
+    * transitIpAddress  中转IP的地址。
     *
     * @var string[]
     */
@@ -193,10 +220,13 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'gatewayId' => 'getGatewayId',
             'transitIpId' => 'getTransitIpId',
-            'externalIpAddress' => 'getExternalIpAddress',
             'networkInterfaceId' => 'getNetworkInterfaceId',
             'type' => 'getType',
-            'privateIpAddress' => 'getPrivateIpAddress'
+            'privateIpAddress' => 'getPrivateIpAddress',
+            'protocol' => 'getProtocol',
+            'internalServicePort' => 'getInternalServicePort',
+            'transitServicePort' => 'getTransitServicePort',
+            'transitIpAddress' => 'getTransitIpAddress'
     ];
 
     /**
@@ -265,10 +295,13 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['gatewayId'] = isset($data['gatewayId']) ? $data['gatewayId'] : null;
         $this->container['transitIpId'] = isset($data['transitIpId']) ? $data['transitIpId'] : null;
-        $this->container['externalIpAddress'] = isset($data['externalIpAddress']) ? $data['externalIpAddress'] : null;
         $this->container['networkInterfaceId'] = isset($data['networkInterfaceId']) ? $data['networkInterfaceId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['privateIpAddress'] = isset($data['privateIpAddress']) ? $data['privateIpAddress'] : null;
+        $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
+        $this->container['internalServicePort'] = isset($data['internalServicePort']) ? $data['internalServicePort'] : null;
+        $this->container['transitServicePort'] = isset($data['transitServicePort']) ? $data['transitServicePort'] : null;
+        $this->container['transitIpAddress'] = isset($data['transitIpAddress']) ? $data['transitIpAddress'] : null;
     }
 
     /**
@@ -307,7 +340,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    *  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     *
     * @return int|null
     */
@@ -319,7 +352,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+    * @param int|null $limit 功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     *
     * @return $this
     */
@@ -498,32 +531,8 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets externalIpAddress
-    *  中转IP的地址。
-    *
-    * @return string[]|null
-    */
-    public function getExternalIpAddress()
-    {
-        return $this->container['externalIpAddress'];
-    }
-
-    /**
-    * Sets externalIpAddress
-    *
-    * @param string[]|null $externalIpAddress 中转IP的地址。
-    *
-    * @return $this
-    */
-    public function setExternalIpAddress($externalIpAddress)
-    {
-        $this->container['externalIpAddress'] = $externalIpAddress;
-        return $this;
-    }
-
-    /**
     * Gets networkInterfaceId
-    *  网络接口ID，支持计算、ELB、VIP等实例的网络接口。
+    *  计算实例、ELBV2、ELBV3、VIP等资源的端口ID。
     *
     * @return string[]|null
     */
@@ -535,7 +544,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets networkInterfaceId
     *
-    * @param string[]|null $networkInterfaceId 网络接口ID，支持计算、ELB、VIP等实例的网络接口。
+    * @param string[]|null $networkInterfaceId 计算实例、ELBV2、ELBV3、VIP等资源的端口ID。
     *
     * @return $this
     */
@@ -547,7 +556,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELB的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
+    *  DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELBv2的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
     *
     * @return string[]|null
     */
@@ -559,7 +568,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string[]|null $type DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELB的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
+    * @param string[]|null $type DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELBv2的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
     *
     * @return $this
     */
@@ -571,7 +580,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIpAddress
-    *  后端实例的IP私网地址。
+    *  后端资源（计算实例、ELBV2、ELBV3、VIP等）的私网IP地址。
     *
     * @return string[]|null
     */
@@ -583,13 +592,109 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets privateIpAddress
     *
-    * @param string[]|null $privateIpAddress 后端实例的IP私网地址。
+    * @param string[]|null $privateIpAddress 后端资源（计算实例、ELBV2、ELBV3、VIP等）的私网IP地址。
     *
     * @return $this
     */
     public function setPrivateIpAddress($privateIpAddress)
     {
         $this->container['privateIpAddress'] = $privateIpAddress;
+        return $this;
+    }
+
+    /**
+    * Gets protocol
+    *  DNAT规则协议类型， 目前支持TCP/tcp/Tcp/tCp/tcP/TCp/tCP/TcP、 UDP/udp/Udp/uDp/udP/UDp/uDP/UdP、 ANY/any/Any/aNy/anY/ANy/aNY/AnY。 分别对应协议号6、17、0。
+    *
+    * @return string[]|null
+    */
+    public function getProtocol()
+    {
+        return $this->container['protocol'];
+    }
+
+    /**
+    * Sets protocol
+    *
+    * @param string[]|null $protocol DNAT规则协议类型， 目前支持TCP/tcp/Tcp/tCp/tcP/TCp/tCP/TcP、 UDP/udp/Udp/uDp/udP/UDp/uDP/UdP、 ANY/any/Any/aNy/anY/ANy/aNY/AnY。 分别对应协议号6、17、0。
+    *
+    * @return $this
+    */
+    public function setProtocol($protocol)
+    {
+        $this->container['protocol'] = $protocol;
+        return $this;
+    }
+
+    /**
+    * Gets internalServicePort
+    *  后端实例的端口号（计算实例、ELBV2、ELBV3、VIP等)。
+    *
+    * @return string[]|null
+    */
+    public function getInternalServicePort()
+    {
+        return $this->container['internalServicePort'];
+    }
+
+    /**
+    * Sets internalServicePort
+    *
+    * @param string[]|null $internalServicePort 后端实例的端口号（计算实例、ELBV2、ELBV3、VIP等)。
+    *
+    * @return $this
+    */
+    public function setInternalServicePort($internalServicePort)
+    {
+        $this->container['internalServicePort'] = $internalServicePort;
+        return $this;
+    }
+
+    /**
+    * Gets transitServicePort
+    *  中转IP的端口号。
+    *
+    * @return string[]|null
+    */
+    public function getTransitServicePort()
+    {
+        return $this->container['transitServicePort'];
+    }
+
+    /**
+    * Sets transitServicePort
+    *
+    * @param string[]|null $transitServicePort 中转IP的端口号。
+    *
+    * @return $this
+    */
+    public function setTransitServicePort($transitServicePort)
+    {
+        $this->container['transitServicePort'] = $transitServicePort;
+        return $this;
+    }
+
+    /**
+    * Gets transitIpAddress
+    *  中转IP的地址。
+    *
+    * @return string[]|null
+    */
+    public function getTransitIpAddress()
+    {
+        return $this->container['transitIpAddress'];
+    }
+
+    /**
+    * Sets transitIpAddress
+    *
+    * @param string[]|null $transitIpAddress 中转IP的地址。
+    *
+    * @return $this
+    */
+    public function setTransitIpAddress($transitIpAddress)
+    {
+        $this->container['transitIpAddress'] = $transitIpAddress;
         return $this;
     }
 

@@ -58,7 +58,7 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
             'regionId' => 'string',
             'epId' => 'string',
             'epName' => 'string',
-            'tags' => 'object',
+            'tags' => '\HuaweiCloud\SDK\Coc\V1\Model\TagResponse[]',
             'agentId' => 'string',
             'agentState' => 'string',
             'properties' => 'object',
@@ -780,7 +780,7 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     * Gets tags
     *  **参数解释：** 资源标签。 **取值范围：** 不涉及。
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Coc\V1\Model\TagResponse[]|null
     */
     public function getTags()
     {
@@ -790,7 +790,7 @@ class BatchListResourceResponseData implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param object|null $tags **参数解释：** 资源标签。 **取值范围：** 不涉及。
+    * @param \HuaweiCloud\SDK\Coc\V1\Model\TagResponse[]|null $tags **参数解释：** 资源标签。 **取值范围：** 不涉及。
     *
     * @return $this
     */

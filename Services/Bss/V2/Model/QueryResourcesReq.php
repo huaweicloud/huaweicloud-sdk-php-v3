@@ -29,6 +29,7 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
     * expireTimeBegin  查询指定时间段内失效的资源列表，时间段的起始时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件，返回其他条件匹配的记录。
     * expireTimeEnd  查询指定时间段内失效的资源列表，时间段的结束时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件，返回其他条件匹配的记录。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带、携带值为null，不作为筛选条件。此参数不允许为空串，有参数校验。
+    * customerId  客户账号ID，非必填，范围限制:0-64，伙伴查询子客户包年/包月资源列表时必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
             'limit' => 'int',
             'expireTimeBegin' => 'string',
             'expireTimeEnd' => 'string',
-            'serviceTypeCode' => 'string'
+            'serviceTypeCode' => 'string',
+            'customerId' => 'string'
     ];
 
     /**
@@ -55,6 +57,7 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
     * expireTimeBegin  查询指定时间段内失效的资源列表，时间段的起始时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件，返回其他条件匹配的记录。
     * expireTimeEnd  查询指定时间段内失效的资源列表，时间段的结束时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件，返回其他条件匹配的记录。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带、携带值为null，不作为筛选条件。此参数不允许为空串，有参数校验。
+    * customerId  客户账号ID，非必填，范围限制:0-64，伙伴查询子客户包年/包月资源列表时必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
         'limit' => 'int32',
         'expireTimeBegin' => null,
         'expireTimeEnd' => null,
-        'serviceTypeCode' => null
+        'serviceTypeCode' => null,
+        'customerId' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
     * expireTimeBegin  查询指定时间段内失效的资源列表，时间段的起始时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件，返回其他条件匹配的记录。
     * expireTimeEnd  查询指定时间段内失效的资源列表，时间段的结束时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件，返回其他条件匹配的记录。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带、携带值为null，不作为筛选条件。此参数不允许为空串，有参数校验。
+    * customerId  客户账号ID，非必填，范围限制:0-64，伙伴查询子客户包年/包月资源列表时必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
             'limit' => 'limit',
             'expireTimeBegin' => 'expire_time_begin',
             'expireTimeEnd' => 'expire_time_end',
-            'serviceTypeCode' => 'service_type_code'
+            'serviceTypeCode' => 'service_type_code',
+            'customerId' => 'customer_id'
     ];
 
     /**
@@ -128,6 +134,7 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
     * expireTimeBegin  查询指定时间段内失效的资源列表，时间段的起始时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件，返回其他条件匹配的记录。
     * expireTimeEnd  查询指定时间段内失效的资源列表，时间段的结束时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件，返回其他条件匹配的记录。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带、携带值为null，不作为筛选条件。此参数不允许为空串，有参数校验。
+    * customerId  客户账号ID，非必填，范围限制:0-64，伙伴查询子客户包年/包月资源列表时必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
             'limit' => 'setLimit',
             'expireTimeBegin' => 'setExpireTimeBegin',
             'expireTimeEnd' => 'setExpireTimeEnd',
-            'serviceTypeCode' => 'setServiceTypeCode'
+            'serviceTypeCode' => 'setServiceTypeCode',
+            'customerId' => 'setCustomerId'
     ];
 
     /**
@@ -154,6 +162,7 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
     * expireTimeBegin  查询指定时间段内失效的资源列表，时间段的起始时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件，返回其他条件匹配的记录。
     * expireTimeEnd  查询指定时间段内失效的资源列表，时间段的结束时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件，返回其他条件匹配的记录。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带、携带值为null，不作为筛选条件。此参数不允许为空串，有参数校验。
+    * customerId  客户账号ID，非必填，范围限制:0-64，伙伴查询子客户包年/包月资源列表时必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
             'limit' => 'getLimit',
             'expireTimeBegin' => 'getExpireTimeBegin',
             'expireTimeEnd' => 'getExpireTimeEnd',
-            'serviceTypeCode' => 'getServiceTypeCode'
+            'serviceTypeCode' => 'getServiceTypeCode',
+            'customerId' => 'getCustomerId'
     ];
 
     /**
@@ -236,6 +246,7 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
         $this->container['expireTimeBegin'] = isset($data['expireTimeBegin']) ? $data['expireTimeBegin'] : null;
         $this->container['expireTimeEnd'] = isset($data['expireTimeEnd']) ? $data['expireTimeEnd'] : null;
         $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
+        $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
     }
 
     /**
@@ -287,6 +298,12 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['serviceTypeCode']) && (mb_strlen($this->container['serviceTypeCode']) < 1)) {
                 $invalidProperties[] = "invalid value for 'serviceTypeCode', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['customerId']) && (mb_strlen($this->container['customerId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'customerId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['customerId']) && (mb_strlen($this->container['customerId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'customerId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -515,6 +532,30 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
     public function setServiceTypeCode($serviceTypeCode)
     {
         $this->container['serviceTypeCode'] = $serviceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets customerId
+    *  客户账号ID，非必填，范围限制:0-64，伙伴查询子客户包年/包月资源列表时必须携带该字段。除此之外，此参数不做处理。
+    *
+    * @return string|null
+    */
+    public function getCustomerId()
+    {
+        return $this->container['customerId'];
+    }
+
+    /**
+    * Sets customerId
+    *
+    * @param string|null $customerId 客户账号ID，非必填，范围限制:0-64，伙伴查询子客户包年/包月资源列表时必须携带该字段。除此之外，此参数不做处理。
+    *
+    * @return $this
+    */
+    public function setCustomerId($customerId)
+    {
+        $this->container['customerId'] = $customerId;
         return $this;
     }
 

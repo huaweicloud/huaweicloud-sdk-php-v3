@@ -47,7 +47,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'hostName' => 'string',
             'privateIp' => 'string',
-            'alarmTime' => 'object',
+            'alarmTime' => 'int',
             'eventName' => 'string',
             'severity' => 'string',
             'reqSrcIp' => 'string',
@@ -390,6 +390,12 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['privateIp']) && (mb_strlen($this->container['privateIp']) < 1)) {
                 $invalidProperties[] = "invalid value for 'privateIp', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['alarmTime']) && ($this->container['alarmTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'alarmTime', must be smaller than or equal to 9223372036854775807.";
+            }
+            if (!is_null($this->container['alarmTime']) && ($this->container['alarmTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'alarmTime', must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['eventName']) && (mb_strlen($this->container['eventName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'eventName', the character length must be smaller than or equal to 128.";
             }
@@ -564,7 +570,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     * Gets alarmTime
     *  告警时间(ms)
     *
-    * @return object|null
+    * @return int|null
     */
     public function getAlarmTime()
     {
@@ -574,7 +580,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets alarmTime
     *
-    * @param object|null $alarmTime 告警时间(ms)
+    * @param int|null $alarmTime 告警时间(ms)
     *
     * @return $this
     */

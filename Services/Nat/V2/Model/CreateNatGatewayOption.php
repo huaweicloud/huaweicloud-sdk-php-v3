@@ -23,11 +23,13 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
     * routerId  VPC的id。
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
+    * ngportIpAddress  公网NAT网关ng口占用的ip。
     * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
+    * tags  标签列表, 用以标识资源类型
+    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     * enterpriseProjectId  企业项目ID 创建公网NAT网关实例时，关联的企业项目ID。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * sessionConf  sessionConf
-    * ngportIpAddress  公网NAT网关私有IP地址，由VPC中子网分配。
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -35,11 +37,13 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
             'name' => 'string',
             'routerId' => 'string',
             'internalNetworkId' => 'string',
+            'ngportIpAddress' => 'string',
             'description' => 'string',
+            'tags' => 'string[]',
             'spec' => 'string',
             'enterpriseProjectId' => 'string',
             'sessionConf' => '\HuaweiCloud\SDK\Nat\V2\Model\SessionConfiguration',
-            'ngportIpAddress' => 'string'
+            'prepaidOptions' => '\HuaweiCloud\SDK\Nat\V2\Model\PrepaidOptions'
     ];
 
     /**
@@ -47,11 +51,13 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
     * routerId  VPC的id。
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
+    * ngportIpAddress  公网NAT网关ng口占用的ip。
     * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
+    * tags  标签列表, 用以标识资源类型
+    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     * enterpriseProjectId  企业项目ID 创建公网NAT网关实例时，关联的企业项目ID。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * sessionConf  sessionConf
-    * ngportIpAddress  公网NAT网关私有IP地址，由VPC中子网分配。
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -59,11 +65,13 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
         'name' => null,
         'routerId' => null,
         'internalNetworkId' => null,
+        'ngportIpAddress' => null,
         'description' => null,
+        'tags' => null,
         'spec' => null,
         'enterpriseProjectId' => null,
         'sessionConf' => null,
-        'ngportIpAddress' => null
+        'prepaidOptions' => null
     ];
 
     /**
@@ -92,11 +100,13 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
     * routerId  VPC的id。
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
+    * ngportIpAddress  公网NAT网关ng口占用的ip。
     * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
+    * tags  标签列表, 用以标识资源类型
+    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     * enterpriseProjectId  企业项目ID 创建公网NAT网关实例时，关联的企业项目ID。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * sessionConf  sessionConf
-    * ngportIpAddress  公网NAT网关私有IP地址，由VPC中子网分配。
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -104,11 +114,13 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
             'name' => 'name',
             'routerId' => 'router_id',
             'internalNetworkId' => 'internal_network_id',
+            'ngportIpAddress' => 'ngport_ip_address',
             'description' => 'description',
+            'tags' => 'tags',
             'spec' => 'spec',
             'enterpriseProjectId' => 'enterprise_project_id',
             'sessionConf' => 'session_conf',
-            'ngportIpAddress' => 'ngport_ip_address'
+            'prepaidOptions' => 'prepaid_options'
     ];
 
     /**
@@ -116,11 +128,13 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
     * routerId  VPC的id。
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
+    * ngportIpAddress  公网NAT网关ng口占用的ip。
     * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
+    * tags  标签列表, 用以标识资源类型
+    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     * enterpriseProjectId  企业项目ID 创建公网NAT网关实例时，关联的企业项目ID。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * sessionConf  sessionConf
-    * ngportIpAddress  公网NAT网关私有IP地址，由VPC中子网分配。
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -128,11 +142,13 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'routerId' => 'setRouterId',
             'internalNetworkId' => 'setInternalNetworkId',
+            'ngportIpAddress' => 'setNgportIpAddress',
             'description' => 'setDescription',
+            'tags' => 'setTags',
             'spec' => 'setSpec',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'sessionConf' => 'setSessionConf',
-            'ngportIpAddress' => 'setNgportIpAddress'
+            'prepaidOptions' => 'setPrepaidOptions'
     ];
 
     /**
@@ -140,11 +156,13 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     * name  公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
     * routerId  VPC的id。
     * internalNetworkId  公网NAT网关下行口（DVR的下一跳）所属的network id。
+    * ngportIpAddress  公网NAT网关ng口占用的ip。
     * description  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
+    * tags  标签列表, 用以标识资源类型
+    * spec  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     * enterpriseProjectId  企业项目ID 创建公网NAT网关实例时，关联的企业项目ID。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * sessionConf  sessionConf
-    * ngportIpAddress  公网NAT网关私有IP地址，由VPC中子网分配。
+    * prepaidOptions  prepaidOptions
     *
     * @var string[]
     */
@@ -152,11 +170,13 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'routerId' => 'getRouterId',
             'internalNetworkId' => 'getInternalNetworkId',
+            'ngportIpAddress' => 'getNgportIpAddress',
             'description' => 'getDescription',
+            'tags' => 'getTags',
             'spec' => 'getSpec',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'sessionConf' => 'getSessionConf',
-            'ngportIpAddress' => 'getNgportIpAddress'
+            'prepaidOptions' => 'getPrepaidOptions'
     ];
 
     /**
@@ -203,6 +223,7 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     const SPEC__2 = '2';
     const SPEC__3 = '3';
     const SPEC__4 = '4';
+    const SPEC__5 = '5';
     
 
     /**
@@ -217,6 +238,7 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
             self::SPEC__2,
             self::SPEC__3,
             self::SPEC__4,
+            self::SPEC__5,
         ];
     }
 
@@ -239,11 +261,13 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['routerId'] = isset($data['routerId']) ? $data['routerId'] : null;
         $this->container['internalNetworkId'] = isset($data['internalNetworkId']) ? $data['internalNetworkId'] : null;
+        $this->container['ngportIpAddress'] = isset($data['ngportIpAddress']) ? $data['ngportIpAddress'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['spec'] = isset($data['spec']) ? $data['spec'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['sessionConf'] = isset($data['sessionConf']) ? $data['sessionConf'] : null;
-        $this->container['ngportIpAddress'] = isset($data['ngportIpAddress']) ? $data['ngportIpAddress'] : null;
+        $this->container['prepaidOptions'] = isset($data['prepaidOptions']) ? $data['prepaidOptions'] : null;
     }
 
     /**
@@ -281,6 +305,12 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['internalNetworkId']) < 36)) {
                 $invalidProperties[] = "invalid value for 'internalNetworkId', the character length must be bigger than or equal to 36.";
             }
+            if (!is_null($this->container['ngportIpAddress']) && (mb_strlen($this->container['ngportIpAddress']) > 15)) {
+                $invalidProperties[] = "invalid value for 'ngportIpAddress', the character length must be smaller than or equal to 15.";
+            }
+            if (!is_null($this->container['ngportIpAddress']) && (mb_strlen($this->container['ngportIpAddress']) < 7)) {
+                $invalidProperties[] = "invalid value for 'ngportIpAddress', the character length must be bigger than or equal to 7.";
+            }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
             }
@@ -303,12 +333,6 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['ngportIpAddress']) && (mb_strlen($this->container['ngportIpAddress']) > 15)) {
-                $invalidProperties[] = "invalid value for 'ngportIpAddress', the character length must be smaller than or equal to 15.";
-            }
-            if (!is_null($this->container['ngportIpAddress']) && (mb_strlen($this->container['ngportIpAddress']) < 7)) {
-                $invalidProperties[] = "invalid value for 'ngportIpAddress', the character length must be bigger than or equal to 7.";
             }
         return $invalidProperties;
     }
@@ -397,6 +421,30 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets ngportIpAddress
+    *  公网NAT网关ng口占用的ip。
+    *
+    * @return string|null
+    */
+    public function getNgportIpAddress()
+    {
+        return $this->container['ngportIpAddress'];
+    }
+
+    /**
+    * Sets ngportIpAddress
+    *
+    * @param string|null $ngportIpAddress 公网NAT网关ng口占用的ip。
+    *
+    * @return $this
+    */
+    public function setNgportIpAddress($ngportIpAddress)
+    {
+        $this->container['ngportIpAddress'] = $ngportIpAddress;
+        return $this;
+    }
+
+    /**
     * Gets description
     *  公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
     *
@@ -421,8 +469,32 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets tags
+    *  标签列表, 用以标识资源类型
+    *
+    * @return string[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string[]|null $tags 标签列表, 用以标识资源类型
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
     * Gets spec
-    *  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
+    *  公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     *
     * @return string
     */
@@ -434,7 +506,7 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     /**
     * Sets spec
     *
-    * @param string $spec 公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
+    * @param string $spec 公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
     *
     * @return $this
     */
@@ -493,26 +565,26 @@ class CreateNatGatewayOption implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets ngportIpAddress
-    *  公网NAT网关私有IP地址，由VPC中子网分配。
+    * Gets prepaidOptions
+    *  prepaidOptions
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Nat\V2\Model\PrepaidOptions|null
     */
-    public function getNgportIpAddress()
+    public function getPrepaidOptions()
     {
-        return $this->container['ngportIpAddress'];
+        return $this->container['prepaidOptions'];
     }
 
     /**
-    * Sets ngportIpAddress
+    * Sets prepaidOptions
     *
-    * @param string|null $ngportIpAddress 公网NAT网关私有IP地址，由VPC中子网分配。
+    * @param \HuaweiCloud\SDK\Nat\V2\Model\PrepaidOptions|null $prepaidOptions prepaidOptions
     *
     * @return $this
     */
-    public function setNgportIpAddress($ngportIpAddress)
+    public function setPrepaidOptions($prepaidOptions)
     {
-        $this->container['ngportIpAddress'] = $ngportIpAddress;
+        $this->container['prepaidOptions'] = $prepaidOptions;
         return $this;
     }
 

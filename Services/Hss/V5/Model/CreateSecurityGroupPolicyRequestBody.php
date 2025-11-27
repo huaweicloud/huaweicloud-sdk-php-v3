@@ -23,7 +23,7 @@ class CreateSecurityGroupPolicyRequestBody implements ModelInterface, ArrayAcces
     * policyName  策略名称
     * workloadId  工作负载ID
     * workloadName  工作负载名称
-    * workloadType  工作负载类型
+    * workloadType  **参数解释**: 工作负载类型 **取值范围**: - deployments：无状态负载 - statefulsets：有状态负载 - daemonsets：守护进程表
     * securityGroups  安全组列表
     *
     * @var string[]
@@ -41,7 +41,7 @@ class CreateSecurityGroupPolicyRequestBody implements ModelInterface, ArrayAcces
     * policyName  策略名称
     * workloadId  工作负载ID
     * workloadName  工作负载名称
-    * workloadType  工作负载类型
+    * workloadType  **参数解释**: 工作负载类型 **取值范围**: - deployments：无状态负载 - statefulsets：有状态负载 - daemonsets：守护进程表
     * securityGroups  安全组列表
     *
     * @var string[]
@@ -80,7 +80,7 @@ class CreateSecurityGroupPolicyRequestBody implements ModelInterface, ArrayAcces
     * policyName  策略名称
     * workloadId  工作负载ID
     * workloadName  工作负载名称
-    * workloadType  工作负载类型
+    * workloadType  **参数解释**: 工作负载类型 **取值范围**: - deployments：无状态负载 - statefulsets：有状态负载 - daemonsets：守护进程表
     * securityGroups  安全组列表
     *
     * @var string[]
@@ -98,7 +98,7 @@ class CreateSecurityGroupPolicyRequestBody implements ModelInterface, ArrayAcces
     * policyName  策略名称
     * workloadId  工作负载ID
     * workloadName  工作负载名称
-    * workloadType  工作负载类型
+    * workloadType  **参数解释**: 工作负载类型 **取值范围**: - deployments：无状态负载 - statefulsets：有状态负载 - daemonsets：守护进程表
     * securityGroups  安全组列表
     *
     * @var string[]
@@ -116,7 +116,7 @@ class CreateSecurityGroupPolicyRequestBody implements ModelInterface, ArrayAcces
     * policyName  策略名称
     * workloadId  工作负载ID
     * workloadName  工作负载名称
-    * workloadType  工作负载类型
+    * workloadType  **参数解释**: 工作负载类型 **取值范围**: - deployments：无状态负载 - statefulsets：有状态负载 - daemonsets：守护进程表
     * securityGroups  安全组列表
     *
     * @var string[]
@@ -329,7 +329,7 @@ class CreateSecurityGroupPolicyRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets workloadType
-    *  工作负载类型
+    *  **参数解释**: 工作负载类型 **取值范围**: - deployments：无状态负载 - statefulsets：有状态负载 - daemonsets：守护进程表
     *
     * @return string
     */
@@ -341,7 +341,7 @@ class CreateSecurityGroupPolicyRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets workloadType
     *
-    * @param string $workloadType 工作负载类型
+    * @param string $workloadType **参数解释**: 工作负载类型 **取值范围**: - deployments：无状态负载 - statefulsets：有状态负载 - daemonsets：守护进程表
     *
     * @return $this
     */

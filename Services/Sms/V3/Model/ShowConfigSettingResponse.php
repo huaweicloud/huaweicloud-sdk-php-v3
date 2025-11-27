@@ -22,7 +22,7 @@ class ShowConfigSettingResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * taskId  任务ID
-    * migrateType  迁移类型
+    * migrateType  迁移类型 WINDOWS_MIGRATE_BLOCK: windows块级迁移 LINUX_MIGRATE_FILE: linux文件级迁移 LINUX_MIGRATE_BLOCK: linux块级迁移
     * configurations  配置项的具体配置信息
     *
     * @var string[]
@@ -36,7 +36,7 @@ class ShowConfigSettingResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * taskId  任务ID
-    * migrateType  迁移类型
+    * migrateType  迁移类型 WINDOWS_MIGRATE_BLOCK: windows块级迁移 LINUX_MIGRATE_FILE: linux文件级迁移 LINUX_MIGRATE_BLOCK: linux块级迁移
     * configurations  配置项的具体配置信息
     *
     * @var string[]
@@ -71,7 +71,7 @@ class ShowConfigSettingResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * taskId  任务ID
-    * migrateType  迁移类型
+    * migrateType  迁移类型 WINDOWS_MIGRATE_BLOCK: windows块级迁移 LINUX_MIGRATE_FILE: linux文件级迁移 LINUX_MIGRATE_BLOCK: linux块级迁移
     * configurations  配置项的具体配置信息
     *
     * @var string[]
@@ -85,7 +85,7 @@ class ShowConfigSettingResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * taskId  任务ID
-    * migrateType  迁移类型
+    * migrateType  迁移类型 WINDOWS_MIGRATE_BLOCK: windows块级迁移 LINUX_MIGRATE_FILE: linux文件级迁移 LINUX_MIGRATE_BLOCK: linux块级迁移
     * configurations  配置项的具体配置信息
     *
     * @var string[]
@@ -99,7 +99,7 @@ class ShowConfigSettingResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * taskId  任务ID
-    * migrateType  迁移类型
+    * migrateType  迁移类型 WINDOWS_MIGRATE_BLOCK: windows块级迁移 LINUX_MIGRATE_FILE: linux文件级迁移 LINUX_MIGRATE_BLOCK: linux块级迁移
     * configurations  配置项的具体配置信息
     *
     * @var string[]
@@ -150,7 +150,24 @@ class ShowConfigSettingResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const MIGRATE_TYPE_WINDOWS_MIGRATE_BLOCK = 'WINDOWS_MIGRATE_BLOCK';
+    const MIGRATE_TYPE_LINUX_MIGRATE_FILE = 'LINUX_MIGRATE_FILE';
+    const MIGRATE_TYPE_LINUX_MIGRATE_BLOCK = 'LINUX_MIGRATE_BLOCK';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getMigrateTypeAllowableValues()
+    {
+        return [
+            self::MIGRATE_TYPE_WINDOWS_MIGRATE_BLOCK,
+            self::MIGRATE_TYPE_LINUX_MIGRATE_FILE,
+            self::MIGRATE_TYPE_LINUX_MIGRATE_BLOCK,
+        ];
+    }
 
 
     /**
@@ -187,12 +204,14 @@ class ShowConfigSettingResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['taskId']) && (mb_strlen($this->container['taskId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'taskId', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['migrateType']) && (mb_strlen($this->container['migrateType']) > 255)) {
-                $invalidProperties[] = "invalid value for 'migrateType', the character length must be smaller than or equal to 255.";
+            $allowedValues = $this->getMigrateTypeAllowableValues();
+                if (!is_null($this->container['migrateType']) && !in_array($this->container['migrateType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'migrateType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if (!is_null($this->container['migrateType']) && (mb_strlen($this->container['migrateType']) < 0)) {
-                $invalidProperties[] = "invalid value for 'migrateType', the character length must be bigger than or equal to 0.";
-            }
+
         return $invalidProperties;
     }
 
@@ -233,7 +252,7 @@ class ShowConfigSettingResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets migrateType
-    *  迁移类型
+    *  迁移类型 WINDOWS_MIGRATE_BLOCK: windows块级迁移 LINUX_MIGRATE_FILE: linux文件级迁移 LINUX_MIGRATE_BLOCK: linux块级迁移
     *
     * @return string|null
     */
@@ -245,7 +264,7 @@ class ShowConfigSettingResponse implements ModelInterface, ArrayAccess
     /**
     * Sets migrateType
     *
-    * @param string|null $migrateType 迁移类型
+    * @param string|null $migrateType 迁移类型 WINDOWS_MIGRATE_BLOCK: windows块级迁移 LINUX_MIGRATE_FILE: linux文件级迁移 LINUX_MIGRATE_BLOCK: linux块级迁移
     *
     * @return $this
     */

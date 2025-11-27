@@ -20,7 +20,7 @@ class AccelerateIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ipType  IP地址类型。
+    * ipType  IP地址类型。 取值范围：IPV4、IPV6
     * ipAddress  IP地址。
     * area  area
     *
@@ -34,7 +34,7 @@ class AccelerateIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ipType  IP地址类型。
+    * ipType  IP地址类型。 取值范围：IPV4、IPV6
     * ipAddress  IP地址。
     * area  area
     *
@@ -69,7 +69,7 @@ class AccelerateIp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ipType  IP地址类型。
+    * ipType  IP地址类型。 取值范围：IPV4、IPV6
     * ipAddress  IP地址。
     * area  area
     *
@@ -83,7 +83,7 @@ class AccelerateIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ipType  IP地址类型。
+    * ipType  IP地址类型。 取值范围：IPV4、IPV6
     * ipAddress  IP地址。
     * area  area
     *
@@ -97,7 +97,7 @@ class AccelerateIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ipType  IP地址类型。
+    * ipType  IP地址类型。 取值范围：IPV4、IPV6
     * ipAddress  IP地址。
     * area  area
     *
@@ -150,6 +150,7 @@ class AccelerateIp implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const IP_TYPE_IPV4 = 'IPV4';
+    const IP_TYPE_IPV6 = 'IPV6';
     
 
     /**
@@ -161,6 +162,7 @@ class AccelerateIp implements ModelInterface, ArrayAccess
     {
         return [
             self::IP_TYPE_IPV4,
+            self::IP_TYPE_IPV6,
         ];
     }
 
@@ -220,7 +222,7 @@ class AccelerateIp implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipType
-    *  IP地址类型。
+    *  IP地址类型。 取值范围：IPV4、IPV6
     *
     * @return string
     */
@@ -232,7 +234,7 @@ class AccelerateIp implements ModelInterface, ArrayAccess
     /**
     * Sets ipType
     *
-    * @param string $ipType IP地址类型。
+    * @param string $ipType IP地址类型。 取值范围：IPV4、IPV6
     *
     * @return $this
     */

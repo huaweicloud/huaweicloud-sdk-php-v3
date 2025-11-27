@@ -21,14 +21,14 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  模板ID
-    * templateName  模板名称
-    * templateType  模板类型
-    * description  描述
-    * targetKind  策略模板应用资源类型，多个资源类型通过分号份隔连接
-    * tag  标签
-    * level  推荐级别
-    * constraintTemplate  策略模板内容
+    * id  **参数解释**: 模板ID **取值范围**: 字符长度0-128
+    * templateName  **参数解释**: 模板名称 **取值范围**: 字符长度1-255
+    * templateType  **参数解释**: 模板类型 **取值范围**: 字符长度1-16
+    * description  **参数解释**: 描述 **取值范围**: 字符长度0-2048
+    * targetKind  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号份隔连接 **取值范围**: 字符长度1-255
+    * tag  **参数解释**: 标签 **取值范围**: 字符长度0-2048
+    * level  **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
+    * constraintTemplate  **参数解释**: 策略模板内容 **取值范围**: 字符长度1-65535
     *
     * @var string[]
     */
@@ -45,14 +45,14 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  模板ID
-    * templateName  模板名称
-    * templateType  模板类型
-    * description  描述
-    * targetKind  策略模板应用资源类型，多个资源类型通过分号份隔连接
-    * tag  标签
-    * level  推荐级别
-    * constraintTemplate  策略模板内容
+    * id  **参数解释**: 模板ID **取值范围**: 字符长度0-128
+    * templateName  **参数解释**: 模板名称 **取值范围**: 字符长度1-255
+    * templateType  **参数解释**: 模板类型 **取值范围**: 字符长度1-16
+    * description  **参数解释**: 描述 **取值范围**: 字符长度0-2048
+    * targetKind  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号份隔连接 **取值范围**: 字符长度1-255
+    * tag  **参数解释**: 标签 **取值范围**: 字符长度0-2048
+    * level  **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
+    * constraintTemplate  **参数解释**: 策略模板内容 **取值范围**: 字符长度1-65535
     *
     * @var string[]
     */
@@ -90,14 +90,14 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  模板ID
-    * templateName  模板名称
-    * templateType  模板类型
-    * description  描述
-    * targetKind  策略模板应用资源类型，多个资源类型通过分号份隔连接
-    * tag  标签
-    * level  推荐级别
-    * constraintTemplate  策略模板内容
+    * id  **参数解释**: 模板ID **取值范围**: 字符长度0-128
+    * templateName  **参数解释**: 模板名称 **取值范围**: 字符长度1-255
+    * templateType  **参数解释**: 模板类型 **取值范围**: 字符长度1-16
+    * description  **参数解释**: 描述 **取值范围**: 字符长度0-2048
+    * targetKind  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号份隔连接 **取值范围**: 字符长度1-255
+    * tag  **参数解释**: 标签 **取值范围**: 字符长度0-2048
+    * level  **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
+    * constraintTemplate  **参数解释**: 策略模板内容 **取值范围**: 字符长度1-65535
     *
     * @var string[]
     */
@@ -114,14 +114,14 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  模板ID
-    * templateName  模板名称
-    * templateType  模板类型
-    * description  描述
-    * targetKind  策略模板应用资源类型，多个资源类型通过分号份隔连接
-    * tag  标签
-    * level  推荐级别
-    * constraintTemplate  策略模板内容
+    * id  **参数解释**: 模板ID **取值范围**: 字符长度0-128
+    * templateName  **参数解释**: 模板名称 **取值范围**: 字符长度1-255
+    * templateType  **参数解释**: 模板类型 **取值范围**: 字符长度1-16
+    * description  **参数解释**: 描述 **取值范围**: 字符长度0-2048
+    * targetKind  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号份隔连接 **取值范围**: 字符长度1-255
+    * tag  **参数解释**: 标签 **取值范围**: 字符长度0-2048
+    * level  **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
+    * constraintTemplate  **参数解释**: 策略模板内容 **取值范围**: 字符长度1-65535
     *
     * @var string[]
     */
@@ -138,14 +138,14 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  模板ID
-    * templateName  模板名称
-    * templateType  模板类型
-    * description  描述
-    * targetKind  策略模板应用资源类型，多个资源类型通过分号份隔连接
-    * tag  标签
-    * level  推荐级别
-    * constraintTemplate  策略模板内容
+    * id  **参数解释**: 模板ID **取值范围**: 字符长度0-128
+    * templateName  **参数解释**: 模板名称 **取值范围**: 字符长度1-255
+    * templateType  **参数解释**: 模板类型 **取值范围**: 字符长度1-16
+    * description  **参数解释**: 描述 **取值范围**: 字符长度0-2048
+    * targetKind  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号份隔连接 **取值范围**: 字符长度1-255
+    * tag  **参数解释**: 标签 **取值范围**: 字符长度0-2048
+    * level  **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
+    * constraintTemplate  **参数解释**: 策略模板内容 **取值范围**: 字符长度1-65535
     *
     * @var string[]
     */
@@ -303,7 +303,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
 
     /**
     * Gets id
-    *  模板ID
+    *  **参数解释**: 模板ID **取值范围**: 字符长度0-128
     *
     * @return string|null
     */
@@ -315,7 +315,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
     /**
     * Sets id
     *
-    * @param string|null $id 模板ID
+    * @param string|null $id **参数解释**: 模板ID **取值范围**: 字符长度0-128
     *
     * @return $this
     */
@@ -327,7 +327,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
 
     /**
     * Gets templateName
-    *  模板名称
+    *  **参数解释**: 模板名称 **取值范围**: 字符长度1-255
     *
     * @return string|null
     */
@@ -339,7 +339,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
     /**
     * Sets templateName
     *
-    * @param string|null $templateName 模板名称
+    * @param string|null $templateName **参数解释**: 模板名称 **取值范围**: 字符长度1-255
     *
     * @return $this
     */
@@ -351,7 +351,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
 
     /**
     * Gets templateType
-    *  模板类型
+    *  **参数解释**: 模板类型 **取值范围**: 字符长度1-16
     *
     * @return string|null
     */
@@ -363,7 +363,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
     /**
     * Sets templateType
     *
-    * @param string|null $templateType 模板类型
+    * @param string|null $templateType **参数解释**: 模板类型 **取值范围**: 字符长度1-16
     *
     * @return $this
     */
@@ -375,7 +375,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
 
     /**
     * Gets description
-    *  描述
+    *  **参数解释**: 描述 **取值范围**: 字符长度0-2048
     *
     * @return string|null
     */
@@ -387,7 +387,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description **参数解释**: 描述 **取值范围**: 字符长度0-2048
     *
     * @return $this
     */
@@ -399,7 +399,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
 
     /**
     * Gets targetKind
-    *  策略模板应用资源类型，多个资源类型通过分号份隔连接
+    *  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号份隔连接 **取值范围**: 字符长度1-255
     *
     * @return string|null
     */
@@ -411,7 +411,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
     /**
     * Sets targetKind
     *
-    * @param string|null $targetKind 策略模板应用资源类型，多个资源类型通过分号份隔连接
+    * @param string|null $targetKind **参数解释**: 策略模板应用资源类型，多个资源类型通过分号份隔连接 **取值范围**: 字符长度1-255
     *
     * @return $this
     */
@@ -423,7 +423,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
 
     /**
     * Gets tag
-    *  标签
+    *  **参数解释**: 标签 **取值范围**: 字符长度0-2048
     *
     * @return string|null
     */
@@ -435,7 +435,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
     /**
     * Sets tag
     *
-    * @param string|null $tag 标签
+    * @param string|null $tag **参数解释**: 标签 **取值范围**: 字符长度0-2048
     *
     * @return $this
     */
@@ -447,7 +447,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
 
     /**
     * Gets level
-    *  推荐级别
+    *  **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
     *
     * @return string|null
     */
@@ -459,7 +459,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
     /**
     * Sets level
     *
-    * @param string|null $level 推荐级别
+    * @param string|null $level **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
     *
     * @return $this
     */
@@ -471,7 +471,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
 
     /**
     * Gets constraintTemplate
-    *  策略模板内容
+    *  **参数解释**: 策略模板内容 **取值范围**: 字符长度1-65535
     *
     * @return string|null
     */
@@ -483,7 +483,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
     /**
     * Sets constraintTemplate
     *
-    * @param string|null $constraintTemplate 策略模板内容
+    * @param string|null $constraintTemplate **参数解释**: 策略模板内容 **取值范围**: 字符长度1-65535
     *
     * @return $this
     */

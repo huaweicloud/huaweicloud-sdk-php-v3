@@ -297,11 +297,11 @@ class PostMigProjectBody implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-            if ((mb_strlen($this->container['name']) > 19)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 19.";
+            if ((mb_strlen($this->container['name']) > 100)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 100.";
             }
-            if ((mb_strlen($this->container['name']) < 2)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 2.";
+            if ((mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
@@ -312,24 +312,18 @@ class PostMigProjectBody implements ModelInterface, ArrayAccess
         if ($this->container['region'] === null) {
             $invalidProperties[] = "'region' can't be null";
         }
-            if ((mb_strlen($this->container['region']) > 255)) {
-                $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 255.";
+            if ((mb_strlen($this->container['region']) > 100)) {
+                $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 100.";
             }
             if ((mb_strlen($this->container['region']) < 0)) {
                 $invalidProperties[] = "invalid value for 'region', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['speedLimit']) && ($this->container['speedLimit'] > 10000)) {
-                $invalidProperties[] = "invalid value for 'speedLimit', must be smaller than or equal to 10000.";
+            if (!is_null($this->container['speedLimit']) && ($this->container['speedLimit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'speedLimit', must be smaller than or equal to 1000.";
             }
             if (!is_null($this->container['speedLimit']) && ($this->container['speedLimit'] < 0)) {
                 $invalidProperties[] = "invalid value for 'speedLimit', must be bigger than or equal to 0.";
             }
-        if ($this->container['usePublicIp'] === null) {
-            $invalidProperties[] = "'usePublicIp' can't be null";
-        }
-        if ($this->container['existServer'] === null) {
-            $invalidProperties[] = "'existServer' can't be null";
-        }
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
@@ -353,9 +347,6 @@ class PostMigProjectBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['enterpriseProject']) && (mb_strlen($this->container['enterpriseProject']) < 0)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProject', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['syncing'] === null) {
-            $invalidProperties[] = "'syncing' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -518,7 +509,7 @@ class PostMigProjectBody implements ModelInterface, ArrayAccess
     * Gets usePublicIp
     *  是否使用公网IP迁移
     *
-    * @return bool
+    * @return bool|null
     */
     public function getUsePublicIp()
     {
@@ -528,7 +519,7 @@ class PostMigProjectBody implements ModelInterface, ArrayAccess
     /**
     * Sets usePublicIp
     *
-    * @param bool $usePublicIp 是否使用公网IP迁移
+    * @param bool|null $usePublicIp 是否使用公网IP迁移
     *
     * @return $this
     */
@@ -542,7 +533,7 @@ class PostMigProjectBody implements ModelInterface, ArrayAccess
     * Gets existServer
     *  是否是已经存在的服务器
     *
-    * @return bool
+    * @return bool|null
     */
     public function getExistServer()
     {
@@ -552,7 +543,7 @@ class PostMigProjectBody implements ModelInterface, ArrayAccess
     /**
     * Sets existServer
     *
-    * @param bool $existServer 是否是已经存在的服务器
+    * @param bool|null $existServer 是否是已经存在的服务器
     *
     * @return $this
     */
@@ -614,7 +605,7 @@ class PostMigProjectBody implements ModelInterface, ArrayAccess
     * Gets syncing
     *  首次复制或者同步后 是否继续持续同步
     *
-    * @return bool
+    * @return bool|null
     */
     public function getSyncing()
     {
@@ -624,7 +615,7 @@ class PostMigProjectBody implements ModelInterface, ArrayAccess
     /**
     * Sets syncing
     *
-    * @param bool $syncing 首次复制或者同步后 是否继续持续同步
+    * @param bool|null $syncing 首次复制或者同步后 是否继续持续同步
     *
     * @return $this
     */

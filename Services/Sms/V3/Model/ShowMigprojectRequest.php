@@ -161,11 +161,11 @@ class ShowMigprojectRequest implements ModelInterface, ArrayAccess
         if ($this->container['migProjectId'] === null) {
             $invalidProperties[] = "'migProjectId' can't be null";
         }
-            if ((mb_strlen($this->container['migProjectId']) > 255)) {
-                $invalidProperties[] = "invalid value for 'migProjectId', the character length must be smaller than or equal to 255.";
+            if ((mb_strlen($this->container['migProjectId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'migProjectId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['migProjectId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'migProjectId', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['migProjectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'migProjectId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }

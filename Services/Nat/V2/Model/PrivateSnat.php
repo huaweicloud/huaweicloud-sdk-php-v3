@@ -30,6 +30,7 @@ class PrivateSnat implements ModelInterface, ArrayAccess
     * createdAt  SNAT规则的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  SNAT规则的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * enterpriseProjectId  企业项目id
+    * status  私网NAT的SNAT规则状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class PrivateSnat implements ModelInterface, ArrayAccess
             'transitIpAssociations' => '\HuaweiCloud\SDK\Nat\V2\Model\AssociatedTransitIp[]',
             'createdAt' => '\DateTime',
             'updatedAt' => '\DateTime',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'status' => 'string'
     ];
 
     /**
@@ -58,6 +60,7 @@ class PrivateSnat implements ModelInterface, ArrayAccess
     * createdAt  SNAT规则的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  SNAT规则的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * enterpriseProjectId  企业项目id
+    * status  私网NAT的SNAT规则状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class PrivateSnat implements ModelInterface, ArrayAccess
         'transitIpAssociations' => null,
         'createdAt' => 'date-time',
         'updatedAt' => 'date-time',
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'status' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class PrivateSnat implements ModelInterface, ArrayAccess
     * createdAt  SNAT规则的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  SNAT规则的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * enterpriseProjectId  企业项目id
+    * status  私网NAT的SNAT规则状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class PrivateSnat implements ModelInterface, ArrayAccess
             'transitIpAssociations' => 'transit_ip_associations',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'status' => 'status'
     ];
 
     /**
@@ -135,6 +141,7 @@ class PrivateSnat implements ModelInterface, ArrayAccess
     * createdAt  SNAT规则的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  SNAT规则的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * enterpriseProjectId  企业项目id
+    * status  私网NAT的SNAT规则状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class PrivateSnat implements ModelInterface, ArrayAccess
             'transitIpAssociations' => 'setTransitIpAssociations',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'status' => 'setStatus'
     ];
 
     /**
@@ -163,6 +171,7 @@ class PrivateSnat implements ModelInterface, ArrayAccess
     * createdAt  SNAT规则的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  SNAT规则的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * enterpriseProjectId  企业项目id
+    * status  私网NAT的SNAT规则状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class PrivateSnat implements ModelInterface, ArrayAccess
             'transitIpAssociations' => 'getTransitIpAssociations',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'status' => 'getStatus'
     ];
 
     /**
@@ -219,7 +229,24 @@ class PrivateSnat implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_ACTIVE = 'ACTIVE';
+    const STATUS_FROZEN = 'FROZEN';
+    const STATUS_INACTIVE = 'INACTIVE';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_ACTIVE,
+            self::STATUS_FROZEN,
+            self::STATUS_INACTIVE,
+        ];
+    }
 
 
     /**
@@ -247,6 +274,7 @@ class PrivateSnat implements ModelInterface, ArrayAccess
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -287,11 +315,11 @@ class PrivateSnat implements ModelInterface, ArrayAccess
             if (!is_null($this->container['virsubnetId']) && (mb_strlen($this->container['virsubnetId']) < 36)) {
                 $invalidProperties[] = "invalid value for 'virsubnetId', the character length must be bigger than or equal to 36.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 36)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 1)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 36.";
@@ -299,6 +327,14 @@ class PrivateSnat implements ModelInterface, ArrayAccess
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -550,6 +586,30 @@ class PrivateSnat implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  私网NAT的SNAT规则状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status 私网NAT的SNAT规则状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

@@ -21,7 +21,7 @@ class ShowErrorLogSwitchStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  采集状态
+    * status  **参数解释**: 采集状态。 **取值范围**: - ON：开启采集 - OFF：关闭采集
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowErrorLogSwitchStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  采集状态
+    * status  **参数解释**: 采集状态。 **取值范围**: - ON：开启采集 - OFF：关闭采集
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowErrorLogSwitchStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  采集状态
+    * status  **参数解释**: 采集状态。 **取值范围**: - ON：开启采集 - OFF：关闭采集
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowErrorLogSwitchStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  采集状态
+    * status  **参数解释**: 采集状态。 **取值范围**: - ON：开启采集 - OFF：关闭采集
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowErrorLogSwitchStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  采集状态
+    * status  **参数解释**: 采集状态。 **取值范围**: - ON：开启采集 - OFF：关闭采集
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowErrorLogSwitchStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  采集状态
+    *  **参数解释**: 采集状态。 **取值范围**: - ON：开启采集 - OFF：关闭采集
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class ShowErrorLogSwitchStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 采集状态
+    * @param string|null $status **参数解释**: 采集状态。 **取值范围**: - ON：开启采集 - OFF：关闭采集
     *
     * @return $this
     */
