@@ -21,8 +21,8 @@ class ConfirmDnsDomainResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nextMarker  nextMarker
-    * items  items
+    * nextMarker  dns标识
+    * items  dns域名列表
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ConfirmDnsDomainResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nextMarker  nextMarker
-    * items  items
+    * nextMarker  dns标识
+    * items  dns域名列表
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ConfirmDnsDomainResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nextMarker  nextMarker
-    * items  items
+    * nextMarker  dns标识
+    * items  dns域名列表
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ConfirmDnsDomainResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nextMarker  nextMarker
-    * items  items
+    * nextMarker  dns标识
+    * items  dns域名列表
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ConfirmDnsDomainResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nextMarker  nextMarker
-    * items  items
+    * nextMarker  dns标识
+    * items  dns域名列表
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ConfirmDnsDomainResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nextMarker
-    *  nextMarker
+    *  dns标识
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class ConfirmDnsDomainResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nextMarker
     *
-    * @param string|null $nextMarker nextMarker
+    * @param string|null $nextMarker dns标识
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ConfirmDnsDomainResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets items
-    *  items
+    *  dns域名列表
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\DnsDomain[]|null
     */
@@ -222,7 +222,7 @@ class ConfirmDnsDomainResponse implements ModelInterface, ArrayAccess
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\DnsDomain[]|null $items items
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\DnsDomain[]|null $items dns域名列表
     *
     * @return $this
     */

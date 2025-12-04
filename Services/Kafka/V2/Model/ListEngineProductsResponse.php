@@ -21,9 +21,9 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  分布式消息服务的产品类型。
-    * versions  支持的产品版本类型。
-    * products  产品规格的详细信息。
+    * engine  **参数解释**： 分布式消息服务的产品类型。 **取值范围**： kafka。
+    * versions  **参数解释**： 支持的产品版本类型。
+    * products  **参数解释**： 产品规格的详细信息。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  分布式消息服务的产品类型。
-    * versions  支持的产品版本类型。
-    * products  产品规格的详细信息。
+    * engine  **参数解释**： 分布式消息服务的产品类型。 **取值范围**： kafka。
+    * versions  **参数解释**： 支持的产品版本类型。
+    * products  **参数解释**： 产品规格的详细信息。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  分布式消息服务的产品类型。
-    * versions  支持的产品版本类型。
-    * products  产品规格的详细信息。
+    * engine  **参数解释**： 分布式消息服务的产品类型。 **取值范围**： kafka。
+    * versions  **参数解释**： 支持的产品版本类型。
+    * products  **参数解释**： 产品规格的详细信息。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  分布式消息服务的产品类型。
-    * versions  支持的产品版本类型。
-    * products  产品规格的详细信息。
+    * engine  **参数解释**： 分布式消息服务的产品类型。 **取值范围**： kafka。
+    * versions  **参数解释**： 支持的产品版本类型。
+    * products  **参数解释**： 产品规格的详细信息。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  分布式消息服务的产品类型。
-    * versions  支持的产品版本类型。
-    * products  产品规格的详细信息。
+    * engine  **参数解释**： 分布式消息服务的产品类型。 **取值范围**： kafka。
+    * versions  **参数解释**： 支持的产品版本类型。
+    * products  **参数解释**： 产品规格的详细信息。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  分布式消息服务的产品类型。
+    *  **参数解释**： 分布式消息服务的产品类型。 **取值范围**： kafka。
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string|null $engine 分布式消息服务的产品类型。
+    * @param string|null $engine **参数解释**： 分布式消息服务的产品类型。 **取值范围**： kafka。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets versions
-    *  支持的产品版本类型。
+    *  **参数解释**： 支持的产品版本类型。
     *
     * @return string[]|null
     */
@@ -233,7 +233,7 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets versions
     *
-    * @param string[]|null $versions 支持的产品版本类型。
+    * @param string[]|null $versions **参数解释**： 支持的产品版本类型。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets products
-    *  产品规格的详细信息。
+    *  **参数解释**： 产品规格的详细信息。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ListEngineProductsEntity[]|null
     */
@@ -257,7 +257,7 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets products
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ListEngineProductsEntity[]|null $products 产品规格的详细信息。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ListEngineProductsEntity[]|null $products **参数解释**： 产品规格的详细信息。
     *
     * @return $this
     */

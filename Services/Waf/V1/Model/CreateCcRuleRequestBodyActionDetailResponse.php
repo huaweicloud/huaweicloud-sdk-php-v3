@@ -20,7 +20,7 @@ class CreateCcRuleRequestBodyActionDetailResponse implements ModelInterface, Arr
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * contentType  内容类型，值可为“application/json”、“text/html”、“text/xml”。
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：**  - text/html  - text/xml  - application/json  **默认取值：** 不涉及
     * content  防护页面内容
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CreateCcRuleRequestBodyActionDetailResponse implements ModelInterface, Arr
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * contentType  内容类型，值可为“application/json”、“text/html”、“text/xml”。
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：**  - text/html  - text/xml  - application/json  **默认取值：** 不涉及
     * content  防护页面内容
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CreateCcRuleRequestBodyActionDetailResponse implements ModelInterface, Arr
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * contentType  内容类型，值可为“application/json”、“text/html”、“text/xml”。
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：**  - text/html  - text/xml  - application/json  **默认取值：** 不涉及
     * content  防护页面内容
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CreateCcRuleRequestBodyActionDetailResponse implements ModelInterface, Arr
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * contentType  内容类型，值可为“application/json”、“text/html”、“text/xml”。
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：**  - text/html  - text/xml  - application/json  **默认取值：** 不涉及
     * content  防护页面内容
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CreateCcRuleRequestBodyActionDetailResponse implements ModelInterface, Arr
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * contentType  内容类型，值可为“application/json”、“text/html”、“text/xml”。
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：**  - text/html  - text/xml  - application/json  **默认取值：** 不涉及
     * content  防护页面内容
     *
     * @var string[]
@@ -210,7 +210,7 @@ class CreateCcRuleRequestBodyActionDetailResponse implements ModelInterface, Arr
 
     /**
     * Gets contentType
-    *  内容类型，值可为“application/json”、“text/html”、“text/xml”。
+    *  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：**  - text/html  - text/xml  - application/json  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class CreateCcRuleRequestBodyActionDetailResponse implements ModelInterface, Arr
     /**
     * Sets contentType
     *
-    * @param string|null $contentType 内容类型，值可为“application/json”、“text/html”、“text/xml”。
+    * @param string|null $contentType **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：**  - text/html  - text/xml  - application/json  **默认取值：** 不涉及
     *
     * @return $this
     */

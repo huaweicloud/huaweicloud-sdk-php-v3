@@ -20,10 +20,10 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ioSpec  磁盘IO编码。
-    * type  磁盘类型。
-    * availableZones  可用区。
-    * unavailableZones  不可用区。
+    * ioSpec  **参数解释**： 磁盘IO编码。 **取值范围**： 不涉及。
+    * type  **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 可用区。
+    * unavailableZones  **参数解释**： 不可用区。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ioSpec  磁盘IO编码。
-    * type  磁盘类型。
-    * availableZones  可用区。
-    * unavailableZones  不可用区。
+    * ioSpec  **参数解释**： 磁盘IO编码。 **取值范围**： 不涉及。
+    * type  **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 可用区。
+    * unavailableZones  **参数解释**： 不可用区。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ioSpec  磁盘IO编码。
-    * type  磁盘类型。
-    * availableZones  可用区。
-    * unavailableZones  不可用区。
+    * ioSpec  **参数解释**： 磁盘IO编码。 **取值范围**： 不涉及。
+    * type  **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 可用区。
+    * unavailableZones  **参数解释**： 不可用区。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ioSpec  磁盘IO编码。
-    * type  磁盘类型。
-    * availableZones  可用区。
-    * unavailableZones  不可用区。
+    * ioSpec  **参数解释**： 磁盘IO编码。 **取值范围**： 不涉及。
+    * type  **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 可用区。
+    * unavailableZones  **参数解释**： 不可用区。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ioSpec  磁盘IO编码。
-    * type  磁盘类型。
-    * availableZones  可用区。
-    * unavailableZones  不可用区。
+    * ioSpec  **参数解释**： 磁盘IO编码。 **取值范围**： 不涉及。
+    * type  **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 可用区。
+    * unavailableZones  **参数解释**： 不可用区。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets ioSpec
-    *  磁盘IO编码。
+    *  **参数解释**： 磁盘IO编码。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
     /**
     * Sets ioSpec
     *
-    * @param string|null $ioSpec 磁盘IO编码。
+    * @param string|null $ioSpec **参数解释**： 磁盘IO编码。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  磁盘类型。
+    *  **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 磁盘类型。
+    * @param string|null $type **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableZones
-    *  可用区。
+    *  **参数解释**： 可用区。
     *
     * @return string[]|null
     */
@@ -267,7 +267,7 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
     /**
     * Sets availableZones
     *
-    * @param string[]|null $availableZones 可用区。
+    * @param string[]|null $availableZones **参数解释**： 可用区。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets unavailableZones
-    *  不可用区。
+    *  **参数解释**： 不可用区。
     *
     * @return string[]|null
     */
@@ -291,7 +291,7 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
     /**
     * Sets unavailableZones
     *
-    * @param string[]|null $unavailableZones 不可用区。
+    * @param string[]|null $unavailableZones **参数解释**： 不可用区。
     *
     * @return $this
     */

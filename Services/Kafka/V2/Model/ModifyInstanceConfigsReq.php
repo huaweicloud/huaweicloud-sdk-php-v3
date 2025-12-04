@@ -20,7 +20,7 @@ class ModifyInstanceConfigsReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * kafkaConfigs  kafka待修改配置列表。
+    * kafkaConfigs  Kafka待修改配置列表。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ModifyInstanceConfigsReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * kafkaConfigs  kafka待修改配置列表。
+    * kafkaConfigs  Kafka待修改配置列表。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ModifyInstanceConfigsReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * kafkaConfigs  kafka待修改配置列表。
+    * kafkaConfigs  Kafka待修改配置列表。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ModifyInstanceConfigsReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * kafkaConfigs  kafka待修改配置列表。
+    * kafkaConfigs  Kafka待修改配置列表。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ModifyInstanceConfigsReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * kafkaConfigs  kafka待修改配置列表。
+    * kafkaConfigs  Kafka待修改配置列表。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class ModifyInstanceConfigsReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets kafkaConfigs
-    *  kafka待修改配置列表。
+    *  Kafka待修改配置列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ModifyInstanceConfig[]|null
     */
@@ -186,7 +186,7 @@ class ModifyInstanceConfigsReq implements ModelInterface, ArrayAccess
     /**
     * Sets kafkaConfigs
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ModifyInstanceConfig[]|null $kafkaConfigs kafka待修改配置列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ModifyInstanceConfig[]|null $kafkaConfigs Kafka待修改配置列表。
     *
     * @return $this
     */

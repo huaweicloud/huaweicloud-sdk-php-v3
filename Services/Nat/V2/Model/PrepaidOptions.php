@@ -20,10 +20,10 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * periodType  month: 包月 year: 包年
-    * periodNum  周期大小
-    * isAutoRenew  是否自动续费
-    * isAutoPay  是否自动支付
+    * periodType  订购周期类型，当前支持包月和包年: month: 包月 year: 包年
+    * periodNum  订购周期数，取值会随运营策略变化。 period_type为month时，为[1,9]， period_type为year时，为[1,3]
+    * isAutoRenew  是否自动续订； true：自动续订 false：不自动续订
+    * isAutoPay  下单订购后，是否自动从客户的账户中支付; true：自动支付 false：不自动支付。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * periodType  month: 包月 year: 包年
-    * periodNum  周期大小
-    * isAutoRenew  是否自动续费
-    * isAutoPay  是否自动支付
+    * periodType  订购周期类型，当前支持包月和包年: month: 包月 year: 包年
+    * periodNum  订购周期数，取值会随运营策略变化。 period_type为month时，为[1,9]， period_type为year时，为[1,3]
+    * isAutoRenew  是否自动续订； true：自动续订 false：不自动续订
+    * isAutoPay  下单订购后，是否自动从客户的账户中支付; true：自动支付 false：不自动支付。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * periodType  month: 包月 year: 包年
-    * periodNum  周期大小
-    * isAutoRenew  是否自动续费
-    * isAutoPay  是否自动支付
+    * periodType  订购周期类型，当前支持包月和包年: month: 包月 year: 包年
+    * periodNum  订购周期数，取值会随运营策略变化。 period_type为month时，为[1,9]， period_type为year时，为[1,3]
+    * isAutoRenew  是否自动续订； true：自动续订 false：不自动续订
+    * isAutoPay  下单订购后，是否自动从客户的账户中支付; true：自动支付 false：不自动支付。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * periodType  month: 包月 year: 包年
-    * periodNum  周期大小
-    * isAutoRenew  是否自动续费
-    * isAutoPay  是否自动支付
+    * periodType  订购周期类型，当前支持包月和包年: month: 包月 year: 包年
+    * periodNum  订购周期数，取值会随运营策略变化。 period_type为month时，为[1,9]， period_type为year时，为[1,3]
+    * isAutoRenew  是否自动续订； true：自动续订 false：不自动续订
+    * isAutoPay  下单订购后，是否自动从客户的账户中支付; true：自动支付 false：不自动支付。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * periodType  month: 包月 year: 包年
-    * periodNum  周期大小
-    * isAutoRenew  是否自动续费
-    * isAutoPay  是否自动支付
+    * periodType  订购周期类型，当前支持包月和包年: month: 包月 year: 包年
+    * periodNum  订购周期数，取值会随运营策略变化。 period_type为month时，为[1,9]， period_type为year时，为[1,3]
+    * isAutoRenew  是否自动续订； true：自动续订 false：不自动续订
+    * isAutoPay  下单订购后，是否自动从客户的账户中支付; true：自动支付 false：不自动支付。
     *
     * @var string[]
     */
@@ -206,6 +206,9 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['periodType'] === null) {
+            $invalidProperties[] = "'periodType' can't be null";
+        }
             $allowedValues = $this->getPeriodTypeAllowableValues();
                 if (!is_null($this->container['periodType']) && !in_array($this->container['periodType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -214,10 +217,13 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['periodNum']) && ($this->container['periodNum'] > 11)) {
+        if ($this->container['periodNum'] === null) {
+            $invalidProperties[] = "'periodNum' can't be null";
+        }
+            if (($this->container['periodNum'] > 11)) {
                 $invalidProperties[] = "invalid value for 'periodNum', must be smaller than or equal to 11.";
             }
-            if (!is_null($this->container['periodNum']) && ($this->container['periodNum'] < 1)) {
+            if (($this->container['periodNum'] < 1)) {
                 $invalidProperties[] = "invalid value for 'periodNum', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
@@ -236,9 +242,9 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodType
-    *  month: 包月 year: 包年
+    *  订购周期类型，当前支持包月和包年: month: 包月 year: 包年
     *
-    * @return string|null
+    * @return string
     */
     public function getPeriodType()
     {
@@ -248,7 +254,7 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
     /**
     * Sets periodType
     *
-    * @param string|null $periodType month: 包月 year: 包年
+    * @param string $periodType 订购周期类型，当前支持包月和包年: month: 包月 year: 包年
     *
     * @return $this
     */
@@ -260,9 +266,9 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodNum
-    *  周期大小
+    *  订购周期数，取值会随运营策略变化。 period_type为month时，为[1,9]， period_type为year时，为[1,3]
     *
-    * @return int|null
+    * @return int
     */
     public function getPeriodNum()
     {
@@ -272,7 +278,7 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
     /**
     * Sets periodNum
     *
-    * @param int|null $periodNum 周期大小
+    * @param int $periodNum 订购周期数，取值会随运营策略变化。 period_type为month时，为[1,9]， period_type为year时，为[1,3]
     *
     * @return $this
     */
@@ -284,7 +290,7 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoRenew
-    *  是否自动续费
+    *  是否自动续订； true：自动续订 false：不自动续订
     *
     * @return bool|null
     */
@@ -296,7 +302,7 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoRenew
     *
-    * @param bool|null $isAutoRenew 是否自动续费
+    * @param bool|null $isAutoRenew 是否自动续订； true：自动续订 false：不自动续订
     *
     * @return $this
     */
@@ -308,7 +314,7 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoPay
-    *  是否自动支付
+    *  下单订购后，是否自动从客户的账户中支付; true：自动支付 false：不自动支付。
     *
     * @return bool|null
     */
@@ -320,7 +326,7 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoPay
     *
-    * @param bool|null $isAutoPay 是否自动支付
+    * @param bool|null $isAutoPay 下单订购后，是否自动从客户的账户中支付; true：自动支付 false：不自动支付。
     *
     * @return $this
     */

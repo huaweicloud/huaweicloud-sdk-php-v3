@@ -21,7 +21,7 @@ class SmartConnectTaskReqSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * consumerStrategy  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时需要填写）
-    * destinationFileType  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时需要填写）
+    * destinationFileType  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： TEXT。
     * deliverTimeInterval  数据转储周期（秒），默认配置为300秒。（仅目标端类型为OBS时需要填写）
     * accessKey  AK，访问密钥ID。（仅目标端类型为OBS时需要填写）
     * secretKey  SK，与访问密钥ID结合使用的密钥。（仅目标端类型为OBS时需要填写）
@@ -49,7 +49,7 @@ class SmartConnectTaskReqSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * consumerStrategy  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时需要填写）
-    * destinationFileType  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时需要填写）
+    * destinationFileType  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： TEXT。
     * deliverTimeInterval  数据转储周期（秒），默认配置为300秒。（仅目标端类型为OBS时需要填写）
     * accessKey  AK，访问密钥ID。（仅目标端类型为OBS时需要填写）
     * secretKey  SK，与访问密钥ID结合使用的密钥。（仅目标端类型为OBS时需要填写）
@@ -98,7 +98,7 @@ class SmartConnectTaskReqSinkConfig implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * consumerStrategy  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时需要填写）
-    * destinationFileType  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时需要填写）
+    * destinationFileType  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： TEXT。
     * deliverTimeInterval  数据转储周期（秒），默认配置为300秒。（仅目标端类型为OBS时需要填写）
     * accessKey  AK，访问密钥ID。（仅目标端类型为OBS时需要填写）
     * secretKey  SK，与访问密钥ID结合使用的密钥。（仅目标端类型为OBS时需要填写）
@@ -126,7 +126,7 @@ class SmartConnectTaskReqSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * consumerStrategy  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时需要填写）
-    * destinationFileType  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时需要填写）
+    * destinationFileType  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： TEXT。
     * deliverTimeInterval  数据转储周期（秒），默认配置为300秒。（仅目标端类型为OBS时需要填写）
     * accessKey  AK，访问密钥ID。（仅目标端类型为OBS时需要填写）
     * secretKey  SK，与访问密钥ID结合使用的密钥。（仅目标端类型为OBS时需要填写）
@@ -154,7 +154,7 @@ class SmartConnectTaskReqSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * consumerStrategy  转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时需要填写）
-    * destinationFileType  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时需要填写）
+    * destinationFileType  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： TEXT。
     * deliverTimeInterval  数据转储周期（秒），默认配置为300秒。（仅目标端类型为OBS时需要填写）
     * accessKey  AK，访问密钥ID。（仅目标端类型为OBS时需要填写）
     * secretKey  SK，与访问密钥ID结合使用的密钥。（仅目标端类型为OBS时需要填写）
@@ -297,7 +297,7 @@ class SmartConnectTaskReqSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets destinationFileType
-    *  转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时需要填写）
+    *  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： TEXT。
     *
     * @return string|null
     */
@@ -309,7 +309,7 @@ class SmartConnectTaskReqSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Sets destinationFileType
     *
-    * @param string|null $destinationFileType 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时需要填写）
+    * @param string|null $destinationFileType **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： TEXT。
     *
     * @return $this
     */

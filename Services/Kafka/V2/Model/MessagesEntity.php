@@ -20,17 +20,17 @@ class MessagesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topic  Topic名称。
-    * partition  消息所在的分区。
-    * key  消息key。
-    * value  消息内容。
-    * size  消息大小。
-    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
-    * hugeMessage  大数据标识。
-    * messageOffset  消息偏移量。
-    * messageId  消息ID。
-    * appId  应用ID。
-    * tag  消息标签。
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * partition  **参数解释**： 消息所在的分区。 **取值范围**： 不涉及。
+    * key  **参数解释**： 消息key。 **取值范围**： 不涉及。
+    * value  **参数解释**： 消息内容。 **取值范围**： 不涉及。
+    * size  **参数解释**： 消息大小。 **取值范围**： 不涉及。
+    * timestamp  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
+    * hugeMessage  **参数解释**： 大数据标识。 **取值范围**： 不涉及。
+    * messageOffset  **参数解释**： 消息偏移量。 **取值范围**： 不涉及。
+    * messageId  **参数解释**： 消息ID。 **取值范围**： 不涉及。
+    * appId  **参数解释**： 应用ID。 **取值范围**： 不涉及。
+    * tag  **参数解释**： 消息标签。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class MessagesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topic  Topic名称。
-    * partition  消息所在的分区。
-    * key  消息key。
-    * value  消息内容。
-    * size  消息大小。
-    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
-    * hugeMessage  大数据标识。
-    * messageOffset  消息偏移量。
-    * messageId  消息ID。
-    * appId  应用ID。
-    * tag  消息标签。
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * partition  **参数解释**： 消息所在的分区。 **取值范围**： 不涉及。
+    * key  **参数解释**： 消息key。 **取值范围**： 不涉及。
+    * value  **参数解释**： 消息内容。 **取值范围**： 不涉及。
+    * size  **参数解释**： 消息大小。 **取值范围**： 不涉及。
+    * timestamp  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
+    * hugeMessage  **参数解释**： 大数据标识。 **取值范围**： 不涉及。
+    * messageOffset  **参数解释**： 消息偏移量。 **取值范围**： 不涉及。
+    * messageId  **参数解释**： 消息ID。 **取值范围**： 不涉及。
+    * appId  **参数解释**： 应用ID。 **取值范围**： 不涉及。
+    * tag  **参数解释**： 消息标签。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class MessagesEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topic  Topic名称。
-    * partition  消息所在的分区。
-    * key  消息key。
-    * value  消息内容。
-    * size  消息大小。
-    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
-    * hugeMessage  大数据标识。
-    * messageOffset  消息偏移量。
-    * messageId  消息ID。
-    * appId  应用ID。
-    * tag  消息标签。
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * partition  **参数解释**： 消息所在的分区。 **取值范围**： 不涉及。
+    * key  **参数解释**： 消息key。 **取值范围**： 不涉及。
+    * value  **参数解释**： 消息内容。 **取值范围**： 不涉及。
+    * size  **参数解释**： 消息大小。 **取值范围**： 不涉及。
+    * timestamp  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
+    * hugeMessage  **参数解释**： 大数据标识。 **取值范围**： 不涉及。
+    * messageOffset  **参数解释**： 消息偏移量。 **取值范围**： 不涉及。
+    * messageId  **参数解释**： 消息ID。 **取值范围**： 不涉及。
+    * appId  **参数解释**： 应用ID。 **取值范围**： 不涉及。
+    * tag  **参数解释**： 消息标签。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class MessagesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topic  Topic名称。
-    * partition  消息所在的分区。
-    * key  消息key。
-    * value  消息内容。
-    * size  消息大小。
-    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
-    * hugeMessage  大数据标识。
-    * messageOffset  消息偏移量。
-    * messageId  消息ID。
-    * appId  应用ID。
-    * tag  消息标签。
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * partition  **参数解释**： 消息所在的分区。 **取值范围**： 不涉及。
+    * key  **参数解释**： 消息key。 **取值范围**： 不涉及。
+    * value  **参数解释**： 消息内容。 **取值范围**： 不涉及。
+    * size  **参数解释**： 消息大小。 **取值范围**： 不涉及。
+    * timestamp  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
+    * hugeMessage  **参数解释**： 大数据标识。 **取值范围**： 不涉及。
+    * messageOffset  **参数解释**： 消息偏移量。 **取值范围**： 不涉及。
+    * messageId  **参数解释**： 消息ID。 **取值范围**： 不涉及。
+    * appId  **参数解释**： 应用ID。 **取值范围**： 不涉及。
+    * tag  **参数解释**： 消息标签。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class MessagesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topic  Topic名称。
-    * partition  消息所在的分区。
-    * key  消息key。
-    * value  消息内容。
-    * size  消息大小。
-    * timestamp  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
-    * hugeMessage  大数据标识。
-    * messageOffset  消息偏移量。
-    * messageId  消息ID。
-    * appId  应用ID。
-    * tag  消息标签。
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * partition  **参数解释**： 消息所在的分区。 **取值范围**： 不涉及。
+    * key  **参数解释**： 消息key。 **取值范围**： 不涉及。
+    * value  **参数解释**： 消息内容。 **取值范围**： 不涉及。
+    * size  **参数解释**： 消息大小。 **取值范围**： 不涉及。
+    * timestamp  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
+    * hugeMessage  **参数解释**： 大数据标识。 **取值范围**： 不涉及。
+    * messageOffset  **参数解释**： 消息偏移量。 **取值范围**： 不涉及。
+    * messageId  **参数解释**： 消息ID。 **取值范围**： 不涉及。
+    * appId  **参数解释**： 应用ID。 **取值范围**： 不涉及。
+    * tag  **参数解释**： 消息标签。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -284,7 +284,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  Topic名称。
+    *  **参数解释**： Topic名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -296,7 +296,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic Topic名称。
+    * @param string|null $topic **参数解释**： Topic名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -308,7 +308,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets partition
-    *  消息所在的分区。
+    *  **参数解释**： 消息所在的分区。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -320,7 +320,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets partition
     *
-    * @param int|null $partition 消息所在的分区。
+    * @param int|null $partition **参数解释**： 消息所在的分区。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  消息key。
+    *  **参数解释**： 消息key。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -344,7 +344,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 消息key。
+    * @param string|null $key **参数解释**： 消息key。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -356,7 +356,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  消息内容。
+    *  **参数解释**： 消息内容。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -368,7 +368,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 消息内容。
+    * @param string|null $value **参数解释**： 消息内容。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -380,7 +380,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  消息大小。
+    *  **参数解释**： 消息大小。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -392,7 +392,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 消息大小。
+    * @param int|null $size **参数解释**： 消息大小。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -404,7 +404,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets timestamp
-    *  生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    *  **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -416,7 +416,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets timestamp
     *
-    * @param int|null $timestamp 生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+    * @param int|null $timestamp **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -428,7 +428,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets hugeMessage
-    *  大数据标识。
+    *  **参数解释**： 大数据标识。 **取值范围**： 不涉及。
     *
     * @return bool|null
     */
@@ -440,7 +440,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets hugeMessage
     *
-    * @param bool|null $hugeMessage 大数据标识。
+    * @param bool|null $hugeMessage **参数解释**： 大数据标识。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -452,7 +452,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageOffset
-    *  消息偏移量。
+    *  **参数解释**： 消息偏移量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -464,7 +464,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets messageOffset
     *
-    * @param int|null $messageOffset 消息偏移量。
+    * @param int|null $messageOffset **参数解释**： 消息偏移量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -476,7 +476,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageId
-    *  消息ID。
+    *  **参数解释**： 消息ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -488,7 +488,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets messageId
     *
-    * @param string|null $messageId 消息ID。
+    * @param string|null $messageId **参数解释**： 消息ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -500,7 +500,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
-    *  应用ID。
+    *  **参数解释**： 应用ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -512,7 +512,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets appId
     *
-    * @param string|null $appId 应用ID。
+    * @param string|null $appId **参数解释**： 应用ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -524,7 +524,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets tag
-    *  消息标签。
+    *  **参数解释**： 消息标签。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -536,7 +536,7 @@ class MessagesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets tag
     *
-    * @param string|null $tag 消息标签。
+    * @param string|null $tag **参数解释**： 消息标签。 **取值范围**： 不涉及。
     *
     * @return $this
     */

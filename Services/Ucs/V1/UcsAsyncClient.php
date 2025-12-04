@@ -1110,12 +1110,12 @@ class UcsAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function disableClustergroupPolicyAsync($request)
+    public function disableClusterGroupPolicyAsync($request)
     {
-        return $this->disableClustergroupPolicyAsyncWithHttpInfo($request);
+        return $this->disableClusterGroupPolicyAsyncWithHttpInfo($request);
     }
     
-    public function disableClustergroupPolicyAsyncWithHttpInfo($request){
+    public function disableClusterGroupPolicyAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1/clustergroups/{clustergroupid}/policy';
         $formParams = [];
@@ -1159,9 +1159,9 @@ class UcsAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Ucs\V1\Model\DisableClustergroupPolicyResponse',
+            $responseType='\HuaweiCloud\SDK\Ucs\V1\Model\DisableClusterGroupPolicyResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Ucs\V1\Model\DisableClustergroupPolicyRequest',
+            $requestType='\HuaweiCloud\SDK\Ucs\V1\Model\DisableClusterGroupPolicyRequest',
             $asyncRequest = true);
     }
 
@@ -1308,12 +1308,12 @@ class UcsAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function enableClustergroupPolicyAsync($request)
+    public function enableClusterGroupPolicyAsync($request)
     {
-        return $this->enableClustergroupPolicyAsyncWithHttpInfo($request);
+        return $this->enableClusterGroupPolicyAsyncWithHttpInfo($request);
     }
     
-    public function enableClustergroupPolicyAsyncWithHttpInfo($request){
+    public function enableClusterGroupPolicyAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v1/clustergroups/{clustergroupid}/policy';
         $formParams = [];
@@ -1360,9 +1360,9 @@ class UcsAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Ucs\V1\Model\EnableClustergroupPolicyResponse',
+            $responseType='\HuaweiCloud\SDK\Ucs\V1\Model\EnableClusterGroupPolicyResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Ucs\V1\Model\EnableClustergroupPolicyRequest',
+            $requestType='\HuaweiCloud\SDK\Ucs\V1\Model\EnableClusterGroupPolicyRequest',
             $asyncRequest = true);
     }
 
@@ -4029,9 +4029,9 @@ class UcsAsyncClient extends Client
     }
 
     /**
-     * 创建集群建策略实例
+     * 创建集群策略实例
      *
-     * 创建集群建策略实例
+     * 创建集群策略实例
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

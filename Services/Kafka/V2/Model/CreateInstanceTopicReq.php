@@ -21,7 +21,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释**： Topic名称。 **约束限制**： 长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。 **取值范围**： 不涉及 **默认取值**： 不涉及。
-    * replication  **参数解释**： 副本数，配置数据的可靠性。副本数和代理数有关，如果有3个代理，最大副本数是3。 **约束限制**： 不涉及。 **取值范围**： 不涉及 **默认取值**： 不涉及。
+    * replication  **参数解释**： 副本数，配置数据的可靠性。 **约束限制**： 副本数和代理数有关，如果有3个代理，最大副本数是3。 **取值范围**： 不涉及 **默认取值**： 不涉及。
     * syncMessageFlush  **参数解释**： 是否使用同步落盘，同步落盘会导致性能降低。 **约束限制**： 不涉及。 **取值范围**： - true：同步落盘。 - false：不使用同步落盘。 **默认取值**： false
     * partition  **参数解释**： Topic分区数，设置消费的并发数。 **约束限制**： 不涉及。 **取值范围**： 1-200。 **默认取值**： 不涉及。
     * syncReplication  **参数解释**： 是否开启同步复制。 **约束限制**： 不涉及。 **取值范围**： - true：开启。开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效。 - false：不开启。 **默认取值**： false。
@@ -45,7 +45,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释**： Topic名称。 **约束限制**： 长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。 **取值范围**： 不涉及 **默认取值**： 不涉及。
-    * replication  **参数解释**： 副本数，配置数据的可靠性。副本数和代理数有关，如果有3个代理，最大副本数是3。 **约束限制**： 不涉及。 **取值范围**： 不涉及 **默认取值**： 不涉及。
+    * replication  **参数解释**： 副本数，配置数据的可靠性。 **约束限制**： 副本数和代理数有关，如果有3个代理，最大副本数是3。 **取值范围**： 不涉及 **默认取值**： 不涉及。
     * syncMessageFlush  **参数解释**： 是否使用同步落盘，同步落盘会导致性能降低。 **约束限制**： 不涉及。 **取值范围**： - true：同步落盘。 - false：不使用同步落盘。 **默认取值**： false
     * partition  **参数解释**： Topic分区数，设置消费的并发数。 **约束限制**： 不涉及。 **取值范围**： 1-200。 **默认取值**： 不涉及。
     * syncReplication  **参数解释**： 是否开启同步复制。 **约束限制**： 不涉及。 **取值范围**： - true：开启。开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效。 - false：不开启。 **默认取值**： false。
@@ -90,7 +90,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  **参数解释**： Topic名称。 **约束限制**： 长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。 **取值范围**： 不涉及 **默认取值**： 不涉及。
-    * replication  **参数解释**： 副本数，配置数据的可靠性。副本数和代理数有关，如果有3个代理，最大副本数是3。 **约束限制**： 不涉及。 **取值范围**： 不涉及 **默认取值**： 不涉及。
+    * replication  **参数解释**： 副本数，配置数据的可靠性。 **约束限制**： 副本数和代理数有关，如果有3个代理，最大副本数是3。 **取值范围**： 不涉及 **默认取值**： 不涉及。
     * syncMessageFlush  **参数解释**： 是否使用同步落盘，同步落盘会导致性能降低。 **约束限制**： 不涉及。 **取值范围**： - true：同步落盘。 - false：不使用同步落盘。 **默认取值**： false
     * partition  **参数解释**： Topic分区数，设置消费的并发数。 **约束限制**： 不涉及。 **取值范围**： 1-200。 **默认取值**： 不涉及。
     * syncReplication  **参数解释**： 是否开启同步复制。 **约束限制**： 不涉及。 **取值范围**： - true：开启。开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效。 - false：不开启。 **默认取值**： false。
@@ -114,7 +114,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释**： Topic名称。 **约束限制**： 长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。 **取值范围**： 不涉及 **默认取值**： 不涉及。
-    * replication  **参数解释**： 副本数，配置数据的可靠性。副本数和代理数有关，如果有3个代理，最大副本数是3。 **约束限制**： 不涉及。 **取值范围**： 不涉及 **默认取值**： 不涉及。
+    * replication  **参数解释**： 副本数，配置数据的可靠性。 **约束限制**： 副本数和代理数有关，如果有3个代理，最大副本数是3。 **取值范围**： 不涉及 **默认取值**： 不涉及。
     * syncMessageFlush  **参数解释**： 是否使用同步落盘，同步落盘会导致性能降低。 **约束限制**： 不涉及。 **取值范围**： - true：同步落盘。 - false：不使用同步落盘。 **默认取值**： false
     * partition  **参数解释**： Topic分区数，设置消费的并发数。 **约束限制**： 不涉及。 **取值范围**： 1-200。 **默认取值**： 不涉及。
     * syncReplication  **参数解释**： 是否开启同步复制。 **约束限制**： 不涉及。 **取值范围**： - true：开启。开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效。 - false：不开启。 **默认取值**： false。
@@ -138,7 +138,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释**： Topic名称。 **约束限制**： 长度为3-200，以字母开头且只支持大小写字母、中横线、下划线、点以及数字。 **取值范围**： 不涉及 **默认取值**： 不涉及。
-    * replication  **参数解释**： 副本数，配置数据的可靠性。副本数和代理数有关，如果有3个代理，最大副本数是3。 **约束限制**： 不涉及。 **取值范围**： 不涉及 **默认取值**： 不涉及。
+    * replication  **参数解释**： 副本数，配置数据的可靠性。 **约束限制**： 副本数和代理数有关，如果有3个代理，最大副本数是3。 **取值范围**： 不涉及 **默认取值**： 不涉及。
     * syncMessageFlush  **参数解释**： 是否使用同步落盘，同步落盘会导致性能降低。 **约束限制**： 不涉及。 **取值范围**： - true：同步落盘。 - false：不使用同步落盘。 **默认取值**： false
     * partition  **参数解释**： Topic分区数，设置消费的并发数。 **约束限制**： 不涉及。 **取值范围**： 1-200。 **默认取值**： 不涉及。
     * syncReplication  **参数解释**： 是否开启同步复制。 **约束限制**： 不涉及。 **取值范围**： - true：开启。开启后，客户端生产消息时相应的也要设置acks=-1，否则不生效。 - false：不开启。 **默认取值**： false。
@@ -296,7 +296,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets replication
-    *  **参数解释**： 副本数，配置数据的可靠性。副本数和代理数有关，如果有3个代理，最大副本数是3。 **约束限制**： 不涉及。 **取值范围**： 不涉及 **默认取值**： 不涉及。
+    *  **参数解释**： 副本数，配置数据的可靠性。 **约束限制**： 副本数和代理数有关，如果有3个代理，最大副本数是3。 **取值范围**： 不涉及 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -308,7 +308,7 @@ class CreateInstanceTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets replication
     *
-    * @param int|null $replication **参数解释**： 副本数，配置数据的可靠性。副本数和代理数有关，如果有3个代理，最大副本数是3。 **约束限制**： 不涉及。 **取值范围**： 不涉及 **默认取值**： 不涉及。
+    * @param int|null $replication **参数解释**： 副本数，配置数据的可靠性。 **约束限制**： 副本数和代理数有关，如果有3个代理，最大副本数是3。 **取值范围**： 不涉及 **默认取值**： 不涉及。
     *
     * @return $this
     */

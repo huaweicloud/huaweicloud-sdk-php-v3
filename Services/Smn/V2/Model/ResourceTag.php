@@ -20,8 +20,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键，表示要匹配的字段。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - key不能重复，value为匹配的值。  - 此字段为固定字典值。  - 不允许为空字符串。
-    * value  值。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - 每个值最大长度255个unicode字符。  - 不可以为空。
+    * key  键。  - 最大长度127个unicode字符。  - key不能为空。
+    * value  值。  - 每个值最大长度255个unicode字符。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键，表示要匹配的字段。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - key不能重复，value为匹配的值。  - 此字段为固定字典值。  - 不允许为空字符串。
-    * value  值。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - 每个值最大长度255个unicode字符。  - 不可以为空。
+    * key  键。  - 最大长度127个unicode字符。  - key不能为空。
+    * value  值。  - 每个值最大长度255个unicode字符。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键，表示要匹配的字段。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - key不能重复，value为匹配的值。  - 此字段为固定字典值。  - 不允许为空字符串。
-    * value  值。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - 每个值最大长度255个unicode字符。  - 不可以为空。
+    * key  键。  - 最大长度127个unicode字符。  - key不能为空。
+    * value  值。  - 每个值最大长度255个unicode字符。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键，表示要匹配的字段。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - key不能重复，value为匹配的值。  - 此字段为固定字典值。  - 不允许为空字符串。
-    * value  值。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - 每个值最大长度255个unicode字符。  - 不可以为空。
+    * key  键。  - 最大长度127个unicode字符。  - key不能为空。
+    * value  值。  - 每个值最大长度255个unicode字符。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键，表示要匹配的字段。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - key不能重复，value为匹配的值。  - 此字段为固定字典值。  - 不允许为空字符串。
-    * value  值。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - 每个值最大长度255个unicode字符。  - 不可以为空。
+    * key  键。  - 最大长度127个unicode字符。  - key不能为空。
+    * value  值。  - 每个值最大长度255个unicode字符。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  键，表示要匹配的字段。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - key不能重复，value为匹配的值。  - 此字段为固定字典值。  - 不允许为空字符串。
+    *  键。  - 最大长度127个unicode字符。  - key不能为空。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 键，表示要匹配的字段。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - key不能重复，value为匹配的值。  - 此字段为固定字典值。  - 不允许为空字符串。
+    * @param string $key 键。  - 最大长度127个unicode字符。  - key不能为空。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  值。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - 每个值最大长度255个unicode字符。  - 不可以为空。
+    *  值。  - 每个值最大长度255个unicode字符。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 值。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - 每个值最大长度255个unicode字符。  - 不可以为空。
+    * @param string $value 值。  - 每个值最大长度255个unicode字符。
     *
     * @return $this
     */

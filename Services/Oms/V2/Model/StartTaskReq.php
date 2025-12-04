@@ -28,7 +28,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     * dstAk  目的端节点AK（最大长度100个字符）。
     * dstSk  目的端节点SK（最大长度100个字符）。
     * dstSecurityToken  目标端节点临时Token
-    * sourceCdnAuthenticationKey  CDN鉴权秘钥。
+    * sourceCdnAuthenticationKey  CDN鉴权密钥。
     * migrateFailedObject  迁移类型，标识是否为全量迁移，默认false（全量迁移）。 值为true时表示只重传失败对象。 值为空或者为false时表示全量迁移。
     *
     * @var string[]
@@ -56,7 +56,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     * dstAk  目的端节点AK（最大长度100个字符）。
     * dstSk  目的端节点SK（最大长度100个字符）。
     * dstSecurityToken  目标端节点临时Token
-    * sourceCdnAuthenticationKey  CDN鉴权秘钥。
+    * sourceCdnAuthenticationKey  CDN鉴权密钥。
     * migrateFailedObject  迁移类型，标识是否为全量迁移，默认false（全量迁移）。 值为true时表示只重传失败对象。 值为空或者为false时表示全量迁移。
     *
     * @var string[]
@@ -105,7 +105,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     * dstAk  目的端节点AK（最大长度100个字符）。
     * dstSk  目的端节点SK（最大长度100个字符）。
     * dstSecurityToken  目标端节点临时Token
-    * sourceCdnAuthenticationKey  CDN鉴权秘钥。
+    * sourceCdnAuthenticationKey  CDN鉴权密钥。
     * migrateFailedObject  迁移类型，标识是否为全量迁移，默认false（全量迁移）。 值为true时表示只重传失败对象。 值为空或者为false时表示全量迁移。
     *
     * @var string[]
@@ -133,7 +133,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     * dstAk  目的端节点AK（最大长度100个字符）。
     * dstSk  目的端节点SK（最大长度100个字符）。
     * dstSecurityToken  目标端节点临时Token
-    * sourceCdnAuthenticationKey  CDN鉴权秘钥。
+    * sourceCdnAuthenticationKey  CDN鉴权密钥。
     * migrateFailedObject  迁移类型，标识是否为全量迁移，默认false（全量迁移）。 值为true时表示只重传失败对象。 值为空或者为false时表示全量迁移。
     *
     * @var string[]
@@ -161,7 +161,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     * dstAk  目的端节点AK（最大长度100个字符）。
     * dstSk  目的端节点SK（最大长度100个字符）。
     * dstSecurityToken  目标端节点临时Token
-    * sourceCdnAuthenticationKey  CDN鉴权秘钥。
+    * sourceCdnAuthenticationKey  CDN鉴权密钥。
     * migrateFailedObject  迁移类型，标识是否为全量迁移，默认false（全量迁移）。 值为true时表示只重传失败对象。 值为空或者为false时表示全量迁移。
     *
     * @var string[]
@@ -546,7 +546,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceCdnAuthenticationKey
-    *  CDN鉴权秘钥。
+    *  CDN鉴权密钥。
     *
     * @return string|null
     */
@@ -558,7 +558,7 @@ class StartTaskReq implements ModelInterface, ArrayAccess
     /**
     * Sets sourceCdnAuthenticationKey
     *
-    * @param string|null $sourceCdnAuthenticationKey CDN鉴权秘钥。
+    * @param string|null $sourceCdnAuthenticationKey CDN鉴权密钥。
     *
     * @return $this
     */

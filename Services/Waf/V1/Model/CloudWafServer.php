@@ -20,8 +20,8 @@ class CloudWafServer implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * frontProtocol  客户端请求访问防护域名源站服务器的协议
-    * backProtocol  WAF转发客户端请求到防护域名源站服务器的协议
+    * frontProtocol  **参数解释：** 客户端请求访问防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
+    * backProtocol  **参数解释：** WAF转发客户端请求到防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
     * weight  源站权重，负载均衡算法将按该权重将请求分配给源站，默认值是1，云模式的冗余字段
     * address  客户端访问的源站服务器的IP地址
     * port  WAF转发客户端请求到源站服务的业务端口
@@ -40,8 +40,8 @@ class CloudWafServer implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * frontProtocol  客户端请求访问防护域名源站服务器的协议
-    * backProtocol  WAF转发客户端请求到防护域名源站服务器的协议
+    * frontProtocol  **参数解释：** 客户端请求访问防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
+    * backProtocol  **参数解释：** WAF转发客户端请求到防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
     * weight  源站权重，负载均衡算法将按该权重将请求分配给源站，默认值是1，云模式的冗余字段
     * address  客户端访问的源站服务器的IP地址
     * port  WAF转发客户端请求到源站服务的业务端口
@@ -81,8 +81,8 @@ class CloudWafServer implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * frontProtocol  客户端请求访问防护域名源站服务器的协议
-    * backProtocol  WAF转发客户端请求到防护域名源站服务器的协议
+    * frontProtocol  **参数解释：** 客户端请求访问防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
+    * backProtocol  **参数解释：** WAF转发客户端请求到防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
     * weight  源站权重，负载均衡算法将按该权重将请求分配给源站，默认值是1，云模式的冗余字段
     * address  客户端访问的源站服务器的IP地址
     * port  WAF转发客户端请求到源站服务的业务端口
@@ -101,8 +101,8 @@ class CloudWafServer implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * frontProtocol  客户端请求访问防护域名源站服务器的协议
-    * backProtocol  WAF转发客户端请求到防护域名源站服务器的协议
+    * frontProtocol  **参数解释：** 客户端请求访问防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
+    * backProtocol  **参数解释：** WAF转发客户端请求到防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
     * weight  源站权重，负载均衡算法将按该权重将请求分配给源站，默认值是1，云模式的冗余字段
     * address  客户端访问的源站服务器的IP地址
     * port  WAF转发客户端请求到源站服务的业务端口
@@ -121,8 +121,8 @@ class CloudWafServer implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * frontProtocol  客户端请求访问防护域名源站服务器的协议
-    * backProtocol  WAF转发客户端请求到防护域名源站服务器的协议
+    * frontProtocol  **参数解释：** 客户端请求访问防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
+    * backProtocol  **参数解释：** WAF转发客户端请求到防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
     * weight  源站权重，负载均衡算法将按该权重将请求分配给源站，默认值是1，云模式的冗余字段
     * address  客户端访问的源站服务器的IP地址
     * port  WAF转发客户端请求到源站服务的业务端口
@@ -313,7 +313,7 @@ class CloudWafServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets frontProtocol
-    *  客户端请求访问防护域名源站服务器的协议
+    *  **参数解释：** 客户端请求访问防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -325,7 +325,7 @@ class CloudWafServer implements ModelInterface, ArrayAccess
     /**
     * Sets frontProtocol
     *
-    * @param string $frontProtocol 客户端请求访问防护域名源站服务器的协议
+    * @param string $frontProtocol **参数解释：** 客户端请求访问防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -337,7 +337,7 @@ class CloudWafServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets backProtocol
-    *  WAF转发客户端请求到防护域名源站服务器的协议
+    *  **参数解释：** WAF转发客户端请求到防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -349,7 +349,7 @@ class CloudWafServer implements ModelInterface, ArrayAccess
     /**
     * Sets backProtocol
     *
-    * @param string $backProtocol WAF转发客户端请求到防护域名源站服务器的协议
+    * @param string $backProtocol **参数解释：** WAF转发客户端请求到防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
     *
     * @return $this
     */

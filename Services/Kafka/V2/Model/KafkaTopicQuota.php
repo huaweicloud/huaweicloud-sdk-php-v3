@@ -77,8 +77,8 @@ class KafkaTopicQuota implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'topic' => 'topic',
-            'producerByteRate' => 'producer-byte-rate',
-            'consumerByteRate' => 'consumer-byte-rate'
+            'producerByteRate' => 'producer_byte_rate',
+            'consumerByteRate' => 'consumer_byte_rate'
     ];
 
     /**

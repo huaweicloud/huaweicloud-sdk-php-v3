@@ -20,7 +20,7 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * category  字段类型
+    * category  **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent  **默认取值：** 不涉及
     * logicOperation  条件列表匹配逻辑, 包括：contain、not_contain、equal、not_equal、prefix、not_prefix、suffix、not_suffix、contain_any、not_contain_all、equal_any、not_equal_all、prefix_any、not_prefix_all、suffix_any、not_suffix_all
     * contents  条件列表逻辑匹配内容。当logic_operation参数不以any或者all结尾时，需要传该参数。
     * valueListId  引用表id。当logic_operation参数以any或者all结尾时，需要传该参数。此外，引用表类型要与category类型保持一致。
@@ -36,7 +36,7 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * category  字段类型
+    * category  **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent  **默认取值：** 不涉及
     * logicOperation  条件列表匹配逻辑, 包括：contain、not_contain、equal、not_equal、prefix、not_prefix、suffix、not_suffix、contain_any、not_contain_all、equal_any、not_equal_all、prefix_any、not_prefix_all、suffix_any、not_suffix_all
     * contents  条件列表逻辑匹配内容。当logic_operation参数不以any或者all结尾时，需要传该参数。
     * valueListId  引用表id。当logic_operation参数以any或者all结尾时，需要传该参数。此外，引用表类型要与category类型保持一致。
@@ -73,7 +73,7 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * category  字段类型
+    * category  **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent  **默认取值：** 不涉及
     * logicOperation  条件列表匹配逻辑, 包括：contain、not_contain、equal、not_equal、prefix、not_prefix、suffix、not_suffix、contain_any、not_contain_all、equal_any、not_equal_all、prefix_any、not_prefix_all、suffix_any、not_suffix_all
     * contents  条件列表逻辑匹配内容。当logic_operation参数不以any或者all结尾时，需要传该参数。
     * valueListId  引用表id。当logic_operation参数以any或者all结尾时，需要传该参数。此外，引用表类型要与category类型保持一致。
@@ -89,7 +89,7 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * category  字段类型
+    * category  **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent  **默认取值：** 不涉及
     * logicOperation  条件列表匹配逻辑, 包括：contain、not_contain、equal、not_equal、prefix、not_prefix、suffix、not_suffix、contain_any、not_contain_all、equal_any、not_equal_all、prefix_any、not_prefix_all、suffix_any、not_suffix_all
     * contents  条件列表逻辑匹配内容。当logic_operation参数不以any或者all结尾时，需要传该参数。
     * valueListId  引用表id。当logic_operation参数以any或者all结尾时，需要传该参数。此外，引用表类型要与category类型保持一致。
@@ -105,7 +105,7 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * category  字段类型
+    * category  **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent  **默认取值：** 不涉及
     * logicOperation  条件列表匹配逻辑, 包括：contain、not_contain、equal、not_equal、prefix、not_prefix、suffix、not_suffix、contain_any、not_contain_all、equal_any、not_equal_all、prefix_any、not_prefix_all、suffix_any、not_suffix_all
     * contents  条件列表逻辑匹配内容。当logic_operation参数不以any或者all结尾时，需要传该参数。
     * valueListId  引用表id。当logic_operation参数以any或者all结尾时，需要传该参数。此外，引用表类型要与category类型保持一致。
@@ -230,7 +230,7 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  字段类型
+    *  **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -242,7 +242,7 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string|null $category 字段类型
+    * @param string|null $category **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent  **默认取值：** 不涉及
     *
     * @return $this
     */

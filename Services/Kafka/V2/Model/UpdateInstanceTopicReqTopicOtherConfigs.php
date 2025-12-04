@@ -20,8 +20,8 @@ class UpdateInstanceTopicReqTopicOtherConfigs implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  配置名称
-    * value  配置值
+    * name  **参数解释**： 配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * value  **参数解释**： 配置值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class UpdateInstanceTopicReqTopicOtherConfigs implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  配置名称
-    * value  配置值
+    * name  **参数解释**： 配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * value  **参数解释**： 配置值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class UpdateInstanceTopicReqTopicOtherConfigs implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  配置名称
-    * value  配置值
+    * name  **参数解释**： 配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * value  **参数解释**： 配置值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class UpdateInstanceTopicReqTopicOtherConfigs implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  配置名称
-    * value  配置值
+    * name  **参数解释**： 配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * value  **参数解释**： 配置值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class UpdateInstanceTopicReqTopicOtherConfigs implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  配置名称
-    * value  配置值
+    * name  **参数解释**： 配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * value  **参数解释**： 配置值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class UpdateInstanceTopicReqTopicOtherConfigs implements ModelInterface, ArrayAc
 
     /**
     * Gets name
-    *  配置名称
+    *  **参数解释**： 配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class UpdateInstanceTopicReqTopicOtherConfigs implements ModelInterface, ArrayAc
     /**
     * Sets name
     *
-    * @param string|null $name 配置名称
+    * @param string|null $name **参数解释**： 配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class UpdateInstanceTopicReqTopicOtherConfigs implements ModelInterface, ArrayAc
 
     /**
     * Gets value
-    *  配置值
+    *  **参数解释**： 配置值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class UpdateInstanceTopicReqTopicOtherConfigs implements ModelInterface, ArrayAc
     /**
     * Sets value
     *
-    * @param string|null $value 配置值
+    * @param string|null $value **参数解释**： 配置值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

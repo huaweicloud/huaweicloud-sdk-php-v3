@@ -21,20 +21,20 @@ class ListProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hourly  表示按需付费的产品列表。
-    * monthly  表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
+    * hourly  **参数解释**： 表示按需付费的产品列表。
+    * monthly  **参数解释**： 表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'hourly' => '\HuaweiCloud\SDK\Kafka\V2\Model\ListProductsRespHourly[]',
-            'monthly' => '\HuaweiCloud\SDK\Kafka\V2\Model\ListProductsRespHourly[]'
+            'monthly' => '\HuaweiCloud\SDK\Kafka\V2\Model\ListProductsRespMonthly[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hourly  表示按需付费的产品列表。
-    * monthly  表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
+    * hourly  **参数解释**： 表示按需付费的产品列表。
+    * monthly  **参数解释**： 表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListProductsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hourly  表示按需付费的产品列表。
-    * monthly  表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
+    * hourly  **参数解释**： 表示按需付费的产品列表。
+    * monthly  **参数解释**： 表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hourly  表示按需付费的产品列表。
-    * monthly  表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
+    * hourly  **参数解释**： 表示按需付费的产品列表。
+    * monthly  **参数解释**： 表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hourly  表示按需付费的产品列表。
-    * monthly  表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
+    * hourly  **参数解释**： 表示按需付费的产品列表。
+    * monthly  **参数解释**： 表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets hourly
-    *  表示按需付费的产品列表。
+    *  **参数解释**： 表示按需付费的产品列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ListProductsRespHourly[]|null
     */
@@ -198,7 +198,7 @@ class ListProductsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets hourly
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ListProductsRespHourly[]|null $hourly 表示按需付费的产品列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ListProductsRespHourly[]|null $hourly **参数解释**： 表示按需付费的产品列表。
     *
     * @return $this
     */
@@ -210,9 +210,9 @@ class ListProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets monthly
-    *  表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
+    *  **参数解释**： 表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
     *
-    * @return \HuaweiCloud\SDK\Kafka\V2\Model\ListProductsRespHourly[]|null
+    * @return \HuaweiCloud\SDK\Kafka\V2\Model\ListProductsRespMonthly[]|null
     */
     public function getMonthly()
     {
@@ -222,7 +222,7 @@ class ListProductsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets monthly
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ListProductsRespHourly[]|null $monthly 表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ListProductsRespMonthly[]|null $monthly **参数解释**： 表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Kafka实例。
     *
     * @return $this
     */

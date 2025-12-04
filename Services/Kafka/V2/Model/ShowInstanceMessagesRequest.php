@@ -20,17 +20,20 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * topic  Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
-    * asc  是否按照时间排序。
-    * startTime  开始时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
-    * endTime  结束时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
-    * limit  每一页显示的message数量。
-    * offset  页数。
-    * download  是否下载。
-    * messageOffset  消息偏移量。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
-    * partition  分区。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
-    * keyword  关键词。 取值范围为0~50。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * asc  **参数解释**： 是否按照时间排序。 **约束限制**： 不涉及。 **取值范围**： - true：按照时间排序。 - false：不按照时间排序。 **默认取值**： 不涉及。
+    * startTime  **参数解释**： 开始时间。  Unix毫秒时间戳。  **约束限制**： 查询消息偏移量时，为必选参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endTime  **参数解释**： 结束时间。  Unix毫秒时间戳。  **约束限制**： 查询消息偏移量时，为必选参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 每一页显示的消息数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 页数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * download  **参数解释**： 是否下载消息到本地。 **约束限制**： 不涉及。 **取值范围**： - true：下载。 - false：不下载。 **默认取值**： 不涉及。
+    * messageOffset  **参数解释**： 消息偏移量。 **约束限制**： 查询消息内容时，为必选参数。  若start_time、end_time参数不为空，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * partition  **参数解释**： 分区。 **约束限制**： 查询消息内容时，为必选参数。  若start_time、end_time参数不为空，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * keyword  **参数解释**： 设置查询消息的关键词。 **约束限制**： 不涉及。 **取值范围**： 0~50字符。 **默认取值**： 不涉及。
+    * key  **参数解释**： 设置消息的KEY，查询结果为包含KEY的所有消息。 **约束限制**： 由于查询资源和性能限制，最大搜索10000条消息且所有消息总大小不超过200MB，最多返回包含KEY的前10条消息。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * include  **参数解释**： 设置消息正文中包含的关键词，查询结果为包含此关键词的消息。 **约束限制**： 多个关键字用%2C隔开，%2C是“,”的URL编码形式。 **取值范围**： include与exclude的关键词总数不得超过20个。 **默认取值**： 不涉及。
+    * exclude  **参数解释**： 设置消息正文中需要排除的关键词，查询结果为不包含此关键词的消息。 **约束限制**： 多个关键字用%2C隔开，%2C是“,”的URL编码形式。 **取值范围**： include与exclude的关键词总数不得超过20个。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -45,22 +48,28 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
             'download' => 'bool',
             'messageOffset' => 'string',
             'partition' => 'string',
-            'keyword' => 'string'
+            'keyword' => 'string',
+            'key' => 'string',
+            'include' => 'string',
+            'exclude' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * topic  Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
-    * asc  是否按照时间排序。
-    * startTime  开始时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
-    * endTime  结束时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
-    * limit  每一页显示的message数量。
-    * offset  页数。
-    * download  是否下载。
-    * messageOffset  消息偏移量。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
-    * partition  分区。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
-    * keyword  关键词。 取值范围为0~50。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * asc  **参数解释**： 是否按照时间排序。 **约束限制**： 不涉及。 **取值范围**： - true：按照时间排序。 - false：不按照时间排序。 **默认取值**： 不涉及。
+    * startTime  **参数解释**： 开始时间。  Unix毫秒时间戳。  **约束限制**： 查询消息偏移量时，为必选参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endTime  **参数解释**： 结束时间。  Unix毫秒时间戳。  **约束限制**： 查询消息偏移量时，为必选参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 每一页显示的消息数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 页数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * download  **参数解释**： 是否下载消息到本地。 **约束限制**： 不涉及。 **取值范围**： - true：下载。 - false：不下载。 **默认取值**： 不涉及。
+    * messageOffset  **参数解释**： 消息偏移量。 **约束限制**： 查询消息内容时，为必选参数。  若start_time、end_time参数不为空，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * partition  **参数解释**： 分区。 **约束限制**： 查询消息内容时，为必选参数。  若start_time、end_time参数不为空，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * keyword  **参数解释**： 设置查询消息的关键词。 **约束限制**： 不涉及。 **取值范围**： 0~50字符。 **默认取值**： 不涉及。
+    * key  **参数解释**： 设置消息的KEY，查询结果为包含KEY的所有消息。 **约束限制**： 由于查询资源和性能限制，最大搜索10000条消息且所有消息总大小不超过200MB，最多返回包含KEY的前10条消息。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * include  **参数解释**： 设置消息正文中包含的关键词，查询结果为包含此关键词的消息。 **约束限制**： 多个关键字用%2C隔开，%2C是“,”的URL编码形式。 **取值范围**： include与exclude的关键词总数不得超过20个。 **默认取值**： 不涉及。
+    * exclude  **参数解释**： 设置消息正文中需要排除的关键词，查询结果为不包含此关键词的消息。 **约束限制**： 多个关键字用%2C隔开，%2C是“,”的URL编码形式。 **取值范围**： include与exclude的关键词总数不得超过20个。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -75,7 +84,10 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
         'download' => null,
         'messageOffset' => null,
         'partition' => null,
-        'keyword' => null
+        'keyword' => null,
+        'key' => null,
+        'include' => null,
+        'exclude' => null
     ];
 
     /**
@@ -101,17 +113,20 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID。
-    * topic  Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
-    * asc  是否按照时间排序。
-    * startTime  开始时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
-    * endTime  结束时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
-    * limit  每一页显示的message数量。
-    * offset  页数。
-    * download  是否下载。
-    * messageOffset  消息偏移量。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
-    * partition  分区。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
-    * keyword  关键词。 取值范围为0~50。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * asc  **参数解释**： 是否按照时间排序。 **约束限制**： 不涉及。 **取值范围**： - true：按照时间排序。 - false：不按照时间排序。 **默认取值**： 不涉及。
+    * startTime  **参数解释**： 开始时间。  Unix毫秒时间戳。  **约束限制**： 查询消息偏移量时，为必选参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endTime  **参数解释**： 结束时间。  Unix毫秒时间戳。  **约束限制**： 查询消息偏移量时，为必选参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 每一页显示的消息数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 页数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * download  **参数解释**： 是否下载消息到本地。 **约束限制**： 不涉及。 **取值范围**： - true：下载。 - false：不下载。 **默认取值**： 不涉及。
+    * messageOffset  **参数解释**： 消息偏移量。 **约束限制**： 查询消息内容时，为必选参数。  若start_time、end_time参数不为空，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * partition  **参数解释**： 分区。 **约束限制**： 查询消息内容时，为必选参数。  若start_time、end_time参数不为空，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * keyword  **参数解释**： 设置查询消息的关键词。 **约束限制**： 不涉及。 **取值范围**： 0~50字符。 **默认取值**： 不涉及。
+    * key  **参数解释**： 设置消息的KEY，查询结果为包含KEY的所有消息。 **约束限制**： 由于查询资源和性能限制，最大搜索10000条消息且所有消息总大小不超过200MB，最多返回包含KEY的前10条消息。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * include  **参数解释**： 设置消息正文中包含的关键词，查询结果为包含此关键词的消息。 **约束限制**： 多个关键字用%2C隔开，%2C是“,”的URL编码形式。 **取值范围**： include与exclude的关键词总数不得超过20个。 **默认取值**： 不涉及。
+    * exclude  **参数解释**： 设置消息正文中需要排除的关键词，查询结果为不包含此关键词的消息。 **约束限制**： 多个关键字用%2C隔开，%2C是“,”的URL编码形式。 **取值范围**： include与exclude的关键词总数不得超过20个。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -126,22 +141,28 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
             'download' => 'download',
             'messageOffset' => 'message_offset',
             'partition' => 'partition',
-            'keyword' => 'keyword'
+            'keyword' => 'keyword',
+            'key' => 'key',
+            'include' => 'include',
+            'exclude' => 'exclude'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID。
-    * topic  Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
-    * asc  是否按照时间排序。
-    * startTime  开始时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
-    * endTime  结束时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
-    * limit  每一页显示的message数量。
-    * offset  页数。
-    * download  是否下载。
-    * messageOffset  消息偏移量。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
-    * partition  分区。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
-    * keyword  关键词。 取值范围为0~50。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * asc  **参数解释**： 是否按照时间排序。 **约束限制**： 不涉及。 **取值范围**： - true：按照时间排序。 - false：不按照时间排序。 **默认取值**： 不涉及。
+    * startTime  **参数解释**： 开始时间。  Unix毫秒时间戳。  **约束限制**： 查询消息偏移量时，为必选参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endTime  **参数解释**： 结束时间。  Unix毫秒时间戳。  **约束限制**： 查询消息偏移量时，为必选参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 每一页显示的消息数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 页数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * download  **参数解释**： 是否下载消息到本地。 **约束限制**： 不涉及。 **取值范围**： - true：下载。 - false：不下载。 **默认取值**： 不涉及。
+    * messageOffset  **参数解释**： 消息偏移量。 **约束限制**： 查询消息内容时，为必选参数。  若start_time、end_time参数不为空，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * partition  **参数解释**： 分区。 **约束限制**： 查询消息内容时，为必选参数。  若start_time、end_time参数不为空，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * keyword  **参数解释**： 设置查询消息的关键词。 **约束限制**： 不涉及。 **取值范围**： 0~50字符。 **默认取值**： 不涉及。
+    * key  **参数解释**： 设置消息的KEY，查询结果为包含KEY的所有消息。 **约束限制**： 由于查询资源和性能限制，最大搜索10000条消息且所有消息总大小不超过200MB，最多返回包含KEY的前10条消息。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * include  **参数解释**： 设置消息正文中包含的关键词，查询结果为包含此关键词的消息。 **约束限制**： 多个关键字用%2C隔开，%2C是“,”的URL编码形式。 **取值范围**： include与exclude的关键词总数不得超过20个。 **默认取值**： 不涉及。
+    * exclude  **参数解释**： 设置消息正文中需要排除的关键词，查询结果为不包含此关键词的消息。 **约束限制**： 多个关键字用%2C隔开，%2C是“,”的URL编码形式。 **取值范围**： include与exclude的关键词总数不得超过20个。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -156,22 +177,28 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
             'download' => 'setDownload',
             'messageOffset' => 'setMessageOffset',
             'partition' => 'setPartition',
-            'keyword' => 'setKeyword'
+            'keyword' => 'setKeyword',
+            'key' => 'setKey',
+            'include' => 'setInclude',
+            'exclude' => 'setExclude'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID。
-    * topic  Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
-    * asc  是否按照时间排序。
-    * startTime  开始时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
-    * endTime  结束时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
-    * limit  每一页显示的message数量。
-    * offset  页数。
-    * download  是否下载。
-    * messageOffset  消息偏移量。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
-    * partition  分区。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
-    * keyword  关键词。 取值范围为0~50。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * asc  **参数解释**： 是否按照时间排序。 **约束限制**： 不涉及。 **取值范围**： - true：按照时间排序。 - false：不按照时间排序。 **默认取值**： 不涉及。
+    * startTime  **参数解释**： 开始时间。  Unix毫秒时间戳。  **约束限制**： 查询消息偏移量时，为必选参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * endTime  **参数解释**： 结束时间。  Unix毫秒时间戳。  **约束限制**： 查询消息偏移量时，为必选参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 每一页显示的消息数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 页数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * download  **参数解释**： 是否下载消息到本地。 **约束限制**： 不涉及。 **取值范围**： - true：下载。 - false：不下载。 **默认取值**： 不涉及。
+    * messageOffset  **参数解释**： 消息偏移量。 **约束限制**： 查询消息内容时，为必选参数。  若start_time、end_time参数不为空，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * partition  **参数解释**： 分区。 **约束限制**： 查询消息内容时，为必选参数。  若start_time、end_time参数不为空，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * keyword  **参数解释**： 设置查询消息的关键词。 **约束限制**： 不涉及。 **取值范围**： 0~50字符。 **默认取值**： 不涉及。
+    * key  **参数解释**： 设置消息的KEY，查询结果为包含KEY的所有消息。 **约束限制**： 由于查询资源和性能限制，最大搜索10000条消息且所有消息总大小不超过200MB，最多返回包含KEY的前10条消息。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * include  **参数解释**： 设置消息正文中包含的关键词，查询结果为包含此关键词的消息。 **约束限制**： 多个关键字用%2C隔开，%2C是“,”的URL编码形式。 **取值范围**： include与exclude的关键词总数不得超过20个。 **默认取值**： 不涉及。
+    * exclude  **参数解释**： 设置消息正文中需要排除的关键词，查询结果为不包含此关键词的消息。 **约束限制**： 多个关键字用%2C隔开，%2C是“,”的URL编码形式。 **取值范围**： include与exclude的关键词总数不得超过20个。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +213,10 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
             'download' => 'getDownload',
             'messageOffset' => 'getMessageOffset',
             'partition' => 'getPartition',
-            'keyword' => 'getKeyword'
+            'keyword' => 'getKeyword',
+            'key' => 'getKey',
+            'include' => 'getInclude',
+            'exclude' => 'getExclude'
     ];
 
     /**
@@ -258,6 +288,9 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
         $this->container['messageOffset'] = isset($data['messageOffset']) ? $data['messageOffset'] : null;
         $this->container['partition'] = isset($data['partition']) ? $data['partition'] : null;
         $this->container['keyword'] = isset($data['keyword']) ? $data['keyword'] : null;
+        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
+        $this->container['include'] = isset($data['include']) ? $data['include'] : null;
+        $this->container['exclude'] = isset($data['exclude']) ? $data['exclude'] : null;
     }
 
     /**
@@ -280,6 +313,12 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['keyword']) && (mb_strlen($this->container['keyword']) < 0)) {
                 $invalidProperties[] = "invalid value for 'keyword', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) > 50)) {
+                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 50.";
+            }
+            if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) < 0)) {
+                $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -296,7 +335,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -308,7 +347,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string $instanceId **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -320,7 +359,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
+    *  **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -332,7 +371,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string $topic Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
+    * @param string $topic **参数解释**： Topic名称。 **约束限制**： Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -344,7 +383,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets asc
-    *  是否按照时间排序。
+    *  **参数解释**： 是否按照时间排序。 **约束限制**： 不涉及。 **取值范围**： - true：按照时间排序。 - false：不按照时间排序。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -356,7 +395,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets asc
     *
-    * @param bool|null $asc 是否按照时间排序。
+    * @param bool|null $asc **参数解释**： 是否按照时间排序。 **约束限制**： 不涉及。 **取值范围**： - true：按照时间排序。 - false：不按照时间排序。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -368,7 +407,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  开始时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
+    *  **参数解释**： 开始时间。  Unix毫秒时间戳。  **约束限制**： 查询消息偏移量时，为必选参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -380,7 +419,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 开始时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
+    * @param string|null $startTime **参数解释**： 开始时间。  Unix毫秒时间戳。  **约束限制**： 查询消息偏移量时，为必选参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -392,7 +431,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
+    *  **参数解释**： 结束时间。  Unix毫秒时间戳。  **约束限制**： 查询消息偏移量时，为必选参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -404,7 +443,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 结束时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
+    * @param string|null $endTime **参数解释**： 结束时间。  Unix毫秒时间戳。  **约束限制**： 查询消息偏移量时，为必选参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -416,7 +455,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每一页显示的message数量。
+    *  **参数解释**： 每一页显示的消息数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -428,7 +467,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 每一页显示的message数量。
+    * @param string|null $limit **参数解释**： 每一页显示的消息数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -440,7 +479,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  页数。
+    *  **参数解释**： 页数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -452,7 +491,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param string|null $offset 页数。
+    * @param string|null $offset **参数解释**： 页数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -464,7 +503,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets download
-    *  是否下载。
+    *  **参数解释**： 是否下载消息到本地。 **约束限制**： 不涉及。 **取值范围**： - true：下载。 - false：不下载。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -476,7 +515,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets download
     *
-    * @param bool|null $download 是否下载。
+    * @param bool|null $download **参数解释**： 是否下载消息到本地。 **约束限制**： 不涉及。 **取值范围**： - true：下载。 - false：不下载。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -488,7 +527,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageOffset
-    *  消息偏移量。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
+    *  **参数解释**： 消息偏移量。 **约束限制**： 查询消息内容时，为必选参数。  若start_time、end_time参数不为空，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -500,7 +539,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets messageOffset
     *
-    * @param string|null $messageOffset 消息偏移量。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
+    * @param string|null $messageOffset **参数解释**： 消息偏移量。 **约束限制**： 查询消息内容时，为必选参数。  若start_time、end_time参数不为空，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -512,7 +551,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets partition
-    *  分区。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
+    *  **参数解释**： 分区。 **约束限制**： 查询消息内容时，为必选参数。  若start_time、end_time参数不为空，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -524,7 +563,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets partition
     *
-    * @param string|null $partition 分区。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
+    * @param string|null $partition **参数解释**： 分区。 **约束限制**： 查询消息内容时，为必选参数。  若start_time、end_time参数不为空，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -536,7 +575,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets keyword
-    *  关键词。 取值范围为0~50。
+    *  **参数解释**： 设置查询消息的关键词。 **约束限制**： 不涉及。 **取值范围**： 0~50字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -548,13 +587,85 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets keyword
     *
-    * @param string|null $keyword 关键词。 取值范围为0~50。
+    * @param string|null $keyword **参数解释**： 设置查询消息的关键词。 **约束限制**： 不涉及。 **取值范围**： 0~50字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
     public function setKeyword($keyword)
     {
         $this->container['keyword'] = $keyword;
+        return $this;
+    }
+
+    /**
+    * Gets key
+    *  **参数解释**： 设置消息的KEY，查询结果为包含KEY的所有消息。 **约束限制**： 由于查询资源和性能限制，最大搜索10000条消息且所有消息总大小不超过200MB，最多返回包含KEY的前10条消息。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getKey()
+    {
+        return $this->container['key'];
+    }
+
+    /**
+    * Sets key
+    *
+    * @param string|null $key **参数解释**： 设置消息的KEY，查询结果为包含KEY的所有消息。 **约束限制**： 由于查询资源和性能限制，最大搜索10000条消息且所有消息总大小不超过200MB，最多返回包含KEY的前10条消息。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setKey($key)
+    {
+        $this->container['key'] = $key;
+        return $this;
+    }
+
+    /**
+    * Gets include
+    *  **参数解释**： 设置消息正文中包含的关键词，查询结果为包含此关键词的消息。 **约束限制**： 多个关键字用%2C隔开，%2C是“,”的URL编码形式。 **取值范围**： include与exclude的关键词总数不得超过20个。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getInclude()
+    {
+        return $this->container['include'];
+    }
+
+    /**
+    * Sets include
+    *
+    * @param string|null $include **参数解释**： 设置消息正文中包含的关键词，查询结果为包含此关键词的消息。 **约束限制**： 多个关键字用%2C隔开，%2C是“,”的URL编码形式。 **取值范围**： include与exclude的关键词总数不得超过20个。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setInclude($include)
+    {
+        $this->container['include'] = $include;
+        return $this;
+    }
+
+    /**
+    * Gets exclude
+    *  **参数解释**： 设置消息正文中需要排除的关键词，查询结果为不包含此关键词的消息。 **约束限制**： 多个关键字用%2C隔开，%2C是“,”的URL编码形式。 **取值范围**： include与exclude的关键词总数不得超过20个。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getExclude()
+    {
+        return $this->container['exclude'];
+    }
+
+    /**
+    * Sets exclude
+    *
+    * @param string|null $exclude **参数解释**： 设置消息正文中需要排除的关键词，查询结果为不包含此关键词的消息。 **约束限制**： 多个关键字用%2C隔开，%2C是“,”的URL编码形式。 **取值范围**： include与exclude的关键词总数不得超过20个。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setExclude($exclude)
+    {
+        $this->container['exclude'] = $exclude;
         return $this;
     }
 

@@ -35,7 +35,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
     * renameTopicEnabled  是否重命名Topic，在目标Topic名称前添加源端Kafka实例的别名，形成目标Topic新的名称。（仅源端类型为Kafka时需要填写）
     * provenanceHeaderEnabled  目标Topic接收复制的消息，此消息header中包含消息来源。两端实例数据双向复制时，请开启“添加来源header”，防止循环复制。（仅源端类型为Kafka时需要填写）
     * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时需要填写）
-    * compressionType  复制消息所使用的压缩算法。（仅源端类型为Kafka时需要填写） - none - gzip - snappy - lz4 - zstd
+    * compressionType  **参数解释**： 压缩算法。（仅源端类型为Kafka时会显示） **约束限制**： 不涉及。 **取值范围**： - none - gzip - snappy - lz4 - zstd **默认取值**： 不涉及。
     * topicsMapping  Topic映射，用于自定义目标端Topic名称。不能同时设置“重命名Topic”和“Topic映射”。Topic映射请按照“源端Topic:目的端Topic”的格式填写，如涉及多个Topic映射，请用“,”分隔开，例如：topic-sc-1:topic-sc-2,topic-sc-3:topic-sc-4。（仅源端类型为Kafka时需要填写）
     *
     * @var string[]
@@ -77,7 +77,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
     * renameTopicEnabled  是否重命名Topic，在目标Topic名称前添加源端Kafka实例的别名，形成目标Topic新的名称。（仅源端类型为Kafka时需要填写）
     * provenanceHeaderEnabled  目标Topic接收复制的消息，此消息header中包含消息来源。两端实例数据双向复制时，请开启“添加来源header”，防止循环复制。（仅源端类型为Kafka时需要填写）
     * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时需要填写）
-    * compressionType  复制消息所使用的压缩算法。（仅源端类型为Kafka时需要填写） - none - gzip - snappy - lz4 - zstd
+    * compressionType  **参数解释**： 压缩算法。（仅源端类型为Kafka时会显示） **约束限制**： 不涉及。 **取值范围**： - none - gzip - snappy - lz4 - zstd **默认取值**： 不涉及。
     * topicsMapping  Topic映射，用于自定义目标端Topic名称。不能同时设置“重命名Topic”和“Topic映射”。Topic映射请按照“源端Topic:目的端Topic”的格式填写，如涉及多个Topic映射，请用“,”分隔开，例如：topic-sc-1:topic-sc-2,topic-sc-3:topic-sc-4。（仅源端类型为Kafka时需要填写）
     *
     * @var string[]
@@ -140,7 +140,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
     * renameTopicEnabled  是否重命名Topic，在目标Topic名称前添加源端Kafka实例的别名，形成目标Topic新的名称。（仅源端类型为Kafka时需要填写）
     * provenanceHeaderEnabled  目标Topic接收复制的消息，此消息header中包含消息来源。两端实例数据双向复制时，请开启“添加来源header”，防止循环复制。（仅源端类型为Kafka时需要填写）
     * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时需要填写）
-    * compressionType  复制消息所使用的压缩算法。（仅源端类型为Kafka时需要填写） - none - gzip - snappy - lz4 - zstd
+    * compressionType  **参数解释**： 压缩算法。（仅源端类型为Kafka时会显示） **约束限制**： 不涉及。 **取值范围**： - none - gzip - snappy - lz4 - zstd **默认取值**： 不涉及。
     * topicsMapping  Topic映射，用于自定义目标端Topic名称。不能同时设置“重命名Topic”和“Topic映射”。Topic映射请按照“源端Topic:目的端Topic”的格式填写，如涉及多个Topic映射，请用“,”分隔开，例如：topic-sc-1:topic-sc-2,topic-sc-3:topic-sc-4。（仅源端类型为Kafka时需要填写）
     *
     * @var string[]
@@ -182,7 +182,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
     * renameTopicEnabled  是否重命名Topic，在目标Topic名称前添加源端Kafka实例的别名，形成目标Topic新的名称。（仅源端类型为Kafka时需要填写）
     * provenanceHeaderEnabled  目标Topic接收复制的消息，此消息header中包含消息来源。两端实例数据双向复制时，请开启“添加来源header”，防止循环复制。（仅源端类型为Kafka时需要填写）
     * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时需要填写）
-    * compressionType  复制消息所使用的压缩算法。（仅源端类型为Kafka时需要填写） - none - gzip - snappy - lz4 - zstd
+    * compressionType  **参数解释**： 压缩算法。（仅源端类型为Kafka时会显示） **约束限制**： 不涉及。 **取值范围**： - none - gzip - snappy - lz4 - zstd **默认取值**： 不涉及。
     * topicsMapping  Topic映射，用于自定义目标端Topic名称。不能同时设置“重命名Topic”和“Topic映射”。Topic映射请按照“源端Topic:目的端Topic”的格式填写，如涉及多个Topic映射，请用“,”分隔开，例如：topic-sc-1:topic-sc-2,topic-sc-3:topic-sc-4。（仅源端类型为Kafka时需要填写）
     *
     * @var string[]
@@ -224,7 +224,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
     * renameTopicEnabled  是否重命名Topic，在目标Topic名称前添加源端Kafka实例的别名，形成目标Topic新的名称。（仅源端类型为Kafka时需要填写）
     * provenanceHeaderEnabled  目标Topic接收复制的消息，此消息header中包含消息来源。两端实例数据双向复制时，请开启“添加来源header”，防止循环复制。（仅源端类型为Kafka时需要填写）
     * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时需要填写）
-    * compressionType  复制消息所使用的压缩算法。（仅源端类型为Kafka时需要填写） - none - gzip - snappy - lz4 - zstd
+    * compressionType  **参数解释**： 压缩算法。（仅源端类型为Kafka时会显示） **约束限制**： 不涉及。 **取值范围**： - none - gzip - snappy - lz4 - zstd **默认取值**： 不涉及。
     * topicsMapping  Topic映射，用于自定义目标端Topic名称。不能同时设置“重命名Topic”和“Topic映射”。Topic映射请按照“源端Topic:目的端Topic”的格式填写，如涉及多个Topic映射，请用“,”分隔开，例如：topic-sc-1:topic-sc-2,topic-sc-3:topic-sc-4。（仅源端类型为Kafka时需要填写）
     *
     * @var string[]
@@ -710,7 +710,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets compressionType
-    *  复制消息所使用的压缩算法。（仅源端类型为Kafka时需要填写） - none - gzip - snappy - lz4 - zstd
+    *  **参数解释**： 压缩算法。（仅源端类型为Kafka时会显示） **约束限制**： 不涉及。 **取值范围**： - none - gzip - snappy - lz4 - zstd **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -722,7 +722,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets compressionType
     *
-    * @param string|null $compressionType 复制消息所使用的压缩算法。（仅源端类型为Kafka时需要填写） - none - gzip - snappy - lz4 - zstd
+    * @param string|null $compressionType **参数解释**： 压缩算法。（仅源端类型为Kafka时会显示） **约束限制**： 不涉及。 **取值范围**： - none - gzip - snappy - lz4 - zstd **默认取值**： 不涉及。
     *
     * @return $this
     */

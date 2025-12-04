@@ -24,7 +24,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs,fcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
     * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。
-    * securityGroupId  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+    * securityGroupId  安全组ID。  获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。
     * retentionPolicy  容量阈值策略。  支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
     * enterpriseProjectId  企业项目。
     *
@@ -46,7 +46,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs,fcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
     * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。
-    * securityGroupId  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+    * securityGroupId  安全组ID。  获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。
     * retentionPolicy  容量阈值策略。  支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
     * enterpriseProjectId  企业项目。
     *
@@ -89,7 +89,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs,fcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
     * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。
-    * securityGroupId  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+    * securityGroupId  安全组ID。  获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。
     * retentionPolicy  容量阈值策略。  支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
     * enterpriseProjectId  企业项目。
     *
@@ -111,7 +111,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs,fcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
     * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。
-    * securityGroupId  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+    * securityGroupId  安全组ID。  获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。
     * retentionPolicy  容量阈值策略。  支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
     * enterpriseProjectId  企业项目。
     *
@@ -133,7 +133,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs,fcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
     * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。
-    * securityGroupId  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+    * securityGroupId  安全组ID。  获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。
     * retentionPolicy  容量阈值策略。  支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除
     * enterpriseProjectId  企业项目。
     *
@@ -359,7 +359,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
-    *  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+    *  安全组ID。  获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。
     *
     * @return string|null
     */
@@ -371,7 +371,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string|null $securityGroupId 安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+    * @param string|null $securityGroupId 安全组ID。  获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。
     *
     * @return $this
     */

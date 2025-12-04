@@ -24,6 +24,7 @@ class ShowInstanceArtifactRequest implements ModelInterface, ArrayAccess
     * namespaceName  命名空间名称
     * repositoryName  制品名称
     * reference  制品摘要
+    * withScanOverview  是否返回制品扫描摘要
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class ShowInstanceArtifactRequest implements ModelInterface, ArrayAccess
             'instanceId' => 'string',
             'namespaceName' => 'string',
             'repositoryName' => 'string',
-            'reference' => 'string'
+            'reference' => 'string',
+            'withScanOverview' => 'bool'
     ];
 
     /**
@@ -40,6 +42,7 @@ class ShowInstanceArtifactRequest implements ModelInterface, ArrayAccess
     * namespaceName  命名空间名称
     * repositoryName  制品名称
     * reference  制品摘要
+    * withScanOverview  是否返回制品扫描摘要
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class ShowInstanceArtifactRequest implements ModelInterface, ArrayAccess
         'instanceId' => null,
         'namespaceName' => null,
         'repositoryName' => null,
-        'reference' => null
+        'reference' => null,
+        'withScanOverview' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class ShowInstanceArtifactRequest implements ModelInterface, ArrayAccess
     * namespaceName  命名空间名称
     * repositoryName  制品名称
     * reference  制品摘要
+    * withScanOverview  是否返回制品扫描摘要
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class ShowInstanceArtifactRequest implements ModelInterface, ArrayAccess
             'instanceId' => 'instance_id',
             'namespaceName' => 'namespace_name',
             'repositoryName' => 'repository_name',
-            'reference' => 'reference'
+            'reference' => 'reference',
+            'withScanOverview' => 'with_scan_overview'
     ];
 
     /**
@@ -93,6 +99,7 @@ class ShowInstanceArtifactRequest implements ModelInterface, ArrayAccess
     * namespaceName  命名空间名称
     * repositoryName  制品名称
     * reference  制品摘要
+    * withScanOverview  是否返回制品扫描摘要
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class ShowInstanceArtifactRequest implements ModelInterface, ArrayAccess
             'instanceId' => 'setInstanceId',
             'namespaceName' => 'setNamespaceName',
             'repositoryName' => 'setRepositoryName',
-            'reference' => 'setReference'
+            'reference' => 'setReference',
+            'withScanOverview' => 'setWithScanOverview'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ShowInstanceArtifactRequest implements ModelInterface, ArrayAccess
     * namespaceName  命名空间名称
     * repositoryName  制品名称
     * reference  制品摘要
+    * withScanOverview  是否返回制品扫描摘要
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class ShowInstanceArtifactRequest implements ModelInterface, ArrayAccess
             'instanceId' => 'getInstanceId',
             'namespaceName' => 'getNamespaceName',
             'repositoryName' => 'getRepositoryName',
-            'reference' => 'getReference'
+            'reference' => 'getReference',
+            'withScanOverview' => 'getWithScanOverview'
     ];
 
     /**
@@ -181,6 +191,7 @@ class ShowInstanceArtifactRequest implements ModelInterface, ArrayAccess
         $this->container['namespaceName'] = isset($data['namespaceName']) ? $data['namespaceName'] : null;
         $this->container['repositoryName'] = isset($data['repositoryName']) ? $data['repositoryName'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
+        $this->container['withScanOverview'] = isset($data['withScanOverview']) ? $data['withScanOverview'] : null;
     }
 
     /**
@@ -310,6 +321,30 @@ class ShowInstanceArtifactRequest implements ModelInterface, ArrayAccess
     public function setReference($reference)
     {
         $this->container['reference'] = $reference;
+        return $this;
+    }
+
+    /**
+    * Gets withScanOverview
+    *  是否返回制品扫描摘要
+    *
+    * @return bool|null
+    */
+    public function getWithScanOverview()
+    {
+        return $this->container['withScanOverview'];
+    }
+
+    /**
+    * Sets withScanOverview
+    *
+    * @param bool|null $withScanOverview 是否返回制品扫描摘要
+    *
+    * @return $this
+    */
+    public function setWithScanOverview($withScanOverview)
+    {
+        $this->container['withScanOverview'] = $withScanOverview;
         return $this;
     }
 

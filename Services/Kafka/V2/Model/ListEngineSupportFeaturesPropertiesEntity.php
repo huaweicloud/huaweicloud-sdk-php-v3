@@ -20,10 +20,10 @@ class ListEngineSupportFeaturesPropertiesEntity implements ModelInterface, Array
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * maxTask  转储功能的最大任务数。
-    * minTask  转储功能的最小任务数。
-    * maxNode  转储功能的最大节点数。
-    * minNode  转储功能的最小节点数。
+    * maxTask  **参数解释**： Smart Connect的最大任务数。 **取值范围**： 不涉及。
+    * minTask  **参数解释**： Smart Connect的最小任务数。 **取值范围**： 不涉及。
+    * maxNode  **参数解释**： Smart Connect的最大节点数。 **取值范围**： 不涉及。
+    * minNode  **参数解释**： Smart Connect的最小节点数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ListEngineSupportFeaturesPropertiesEntity implements ModelInterface, Array
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * maxTask  转储功能的最大任务数。
-    * minTask  转储功能的最小任务数。
-    * maxNode  转储功能的最大节点数。
-    * minNode  转储功能的最小节点数。
+    * maxTask  **参数解释**： Smart Connect的最大任务数。 **取值范围**： 不涉及。
+    * minTask  **参数解释**： Smart Connect的最小任务数。 **取值范围**： 不涉及。
+    * maxNode  **参数解释**： Smart Connect的最大节点数。 **取值范围**： 不涉及。
+    * minNode  **参数解释**： Smart Connect的最小节点数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ListEngineSupportFeaturesPropertiesEntity implements ModelInterface, Array
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * maxTask  转储功能的最大任务数。
-    * minTask  转储功能的最小任务数。
-    * maxNode  转储功能的最大节点数。
-    * minNode  转储功能的最小节点数。
+    * maxTask  **参数解释**： Smart Connect的最大任务数。 **取值范围**： 不涉及。
+    * minTask  **参数解释**： Smart Connect的最小任务数。 **取值范围**： 不涉及。
+    * maxNode  **参数解释**： Smart Connect的最大节点数。 **取值范围**： 不涉及。
+    * minNode  **参数解释**： Smart Connect的最小节点数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ListEngineSupportFeaturesPropertiesEntity implements ModelInterface, Array
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * maxTask  转储功能的最大任务数。
-    * minTask  转储功能的最小任务数。
-    * maxNode  转储功能的最大节点数。
-    * minNode  转储功能的最小节点数。
+    * maxTask  **参数解释**： Smart Connect的最大任务数。 **取值范围**： 不涉及。
+    * minTask  **参数解释**： Smart Connect的最小任务数。 **取值范围**： 不涉及。
+    * maxNode  **参数解释**： Smart Connect的最大节点数。 **取值范围**： 不涉及。
+    * minNode  **参数解释**： Smart Connect的最小节点数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ListEngineSupportFeaturesPropertiesEntity implements ModelInterface, Array
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * maxTask  转储功能的最大任务数。
-    * minTask  转储功能的最小任务数。
-    * maxNode  转储功能的最大节点数。
-    * minNode  转储功能的最小节点数。
+    * maxTask  **参数解释**： Smart Connect的最大任务数。 **取值范围**： 不涉及。
+    * minTask  **参数解释**： Smart Connect的最小任务数。 **取值范围**： 不涉及。
+    * maxNode  **参数解释**： Smart Connect的最大节点数。 **取值范围**： 不涉及。
+    * minNode  **参数解释**： Smart Connect的最小节点数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class ListEngineSupportFeaturesPropertiesEntity implements ModelInterface, Array
 
     /**
     * Gets maxTask
-    *  转储功能的最大任务数。
+    *  **参数解释**： Smart Connect的最大任务数。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class ListEngineSupportFeaturesPropertiesEntity implements ModelInterface, Array
     /**
     * Sets maxTask
     *
-    * @param string|null $maxTask 转储功能的最大任务数。
+    * @param string|null $maxTask **参数解释**： Smart Connect的最大任务数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class ListEngineSupportFeaturesPropertiesEntity implements ModelInterface, Array
 
     /**
     * Gets minTask
-    *  转储功能的最小任务数。
+    *  **参数解释**： Smart Connect的最小任务数。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class ListEngineSupportFeaturesPropertiesEntity implements ModelInterface, Array
     /**
     * Sets minTask
     *
-    * @param string|null $minTask 转储功能的最小任务数。
+    * @param string|null $minTask **参数解释**： Smart Connect的最小任务数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class ListEngineSupportFeaturesPropertiesEntity implements ModelInterface, Array
 
     /**
     * Gets maxNode
-    *  转储功能的最大节点数。
+    *  **参数解释**： Smart Connect的最大节点数。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class ListEngineSupportFeaturesPropertiesEntity implements ModelInterface, Array
     /**
     * Sets maxNode
     *
-    * @param string|null $maxNode 转储功能的最大节点数。
+    * @param string|null $maxNode **参数解释**： Smart Connect的最大节点数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class ListEngineSupportFeaturesPropertiesEntity implements ModelInterface, Array
 
     /**
     * Gets minNode
-    *  转储功能的最小节点数。
+    *  **参数解释**： Smart Connect的最小节点数。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class ListEngineSupportFeaturesPropertiesEntity implements ModelInterface, Array
     /**
     * Sets minNode
     *
-    * @param string|null $minNode 转储功能的最小节点数。
+    * @param string|null $minNode **参数解释**： Smart Connect的最小节点数。 **取值范围**： 不涉及。
     *
     * @return $this
     */

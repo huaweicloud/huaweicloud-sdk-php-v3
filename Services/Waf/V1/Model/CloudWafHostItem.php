@@ -31,10 +31,10 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     * accessCode  cname前缀
     * policyid  防护策略id
     * timestamp  创建防护域名的时间
-    * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-    * accessStatus  域名接入状态，0表示未接入，1表示已接入
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    * paidType  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * flag  flag
     * enterpriseProjectId  企业项目id
@@ -75,10 +75,10 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     * accessCode  cname前缀
     * policyid  防护策略id
     * timestamp  创建防护域名的时间
-    * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-    * accessStatus  域名接入状态，0表示未接入，1表示已接入
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    * paidType  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * flag  flag
     * enterpriseProjectId  企业项目id
@@ -140,10 +140,10 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     * accessCode  cname前缀
     * policyid  防护策略id
     * timestamp  创建防护域名的时间
-    * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-    * accessStatus  域名接入状态，0表示未接入，1表示已接入
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    * paidType  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * flag  flag
     * enterpriseProjectId  企业项目id
@@ -184,10 +184,10 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     * accessCode  cname前缀
     * policyid  防护策略id
     * timestamp  创建防护域名的时间
-    * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-    * accessStatus  域名接入状态，0表示未接入，1表示已接入
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    * paidType  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * flag  flag
     * enterpriseProjectId  企业项目id
@@ -228,10 +228,10 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     * accessCode  cname前缀
     * policyid  防护策略id
     * timestamp  创建防护域名的时间
-    * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-    * accessStatus  域名接入状态，0表示未接入，1表示已接入
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    * paidType  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * flag  flag
     * enterpriseProjectId  企业项目id
@@ -299,7 +299,22 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const PAID_TYPE_PRE_PAID = 'prePaid';
+    const PAID_TYPE_POST_PAID = 'postPaid';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPaidTypeAllowableValues()
+    {
+        return [
+            self::PAID_TYPE_PRE_PAID,
+            self::PAID_TYPE_POST_PAID,
+        ];
+    }
 
 
     /**
@@ -345,6 +360,14 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getPaidTypeAllowableValues();
+                if (!is_null($this->container['paidType']) && !in_array($this->container['paidType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'paidType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -625,7 +648,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    *  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -637,7 +660,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param int|null $protectStatus 域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * @param int|null $protectStatus **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -649,7 +672,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessStatus
-    *  域名接入状态，0表示未接入，1表示已接入
+    *  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -661,7 +684,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     /**
     * Sets accessStatus
     *
-    * @param int|null $accessStatus 域名接入状态，0表示未接入，1表示已接入
+    * @param int|null $accessStatus **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -697,7 +720,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets paidType
-    *  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    *  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     *
     * @return string|null
     */
@@ -709,7 +732,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     /**
     * Sets paidType
     *
-    * @param string|null $paidType 套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    * @param string|null $paidType **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     *
     * @return $this
     */

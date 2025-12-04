@@ -28,6 +28,7 @@ class GroupCreateRequest implements ModelInterface, ArrayAccess
     * syncMode  资源同步方式，MANUAL表示手动，AUTO表示智能关联。
     * syncRules  智能关联规则。
     * relationConfigurations  分组配置信息。
+    * relatedDomainId  关联帐号id。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class GroupCreateRequest implements ModelInterface, ArrayAccess
             'applicationId' => 'string',
             'syncMode' => 'string',
             'syncRules' => '\HuaweiCloud\SDK\Coc\V1\Model\GroupUpdateRequestSyncRules[]',
-            'relationConfigurations' => '\HuaweiCloud\SDK\Coc\V1\Model\GroupRelationConfiguration[]'
+            'relationConfigurations' => '\HuaweiCloud\SDK\Coc\V1\Model\GroupRelationConfiguration[]',
+            'relatedDomainId' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class GroupCreateRequest implements ModelInterface, ArrayAccess
     * syncMode  资源同步方式，MANUAL表示手动，AUTO表示智能关联。
     * syncRules  智能关联规则。
     * relationConfigurations  分组配置信息。
+    * relatedDomainId  关联帐号id。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class GroupCreateRequest implements ModelInterface, ArrayAccess
         'applicationId' => null,
         'syncMode' => null,
         'syncRules' => null,
-        'relationConfigurations' => null
+        'relationConfigurations' => null,
+        'relatedDomainId' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class GroupCreateRequest implements ModelInterface, ArrayAccess
     * syncMode  资源同步方式，MANUAL表示手动，AUTO表示智能关联。
     * syncRules  智能关联规则。
     * relationConfigurations  分组配置信息。
+    * relatedDomainId  关联帐号id。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class GroupCreateRequest implements ModelInterface, ArrayAccess
             'applicationId' => 'application_id',
             'syncMode' => 'sync_mode',
             'syncRules' => 'sync_rules',
-            'relationConfigurations' => 'relation_configurations'
+            'relationConfigurations' => 'relation_configurations',
+            'relatedDomainId' => 'related_domain_id'
     ];
 
     /**
@@ -121,6 +127,7 @@ class GroupCreateRequest implements ModelInterface, ArrayAccess
     * syncMode  资源同步方式，MANUAL表示手动，AUTO表示智能关联。
     * syncRules  智能关联规则。
     * relationConfigurations  分组配置信息。
+    * relatedDomainId  关联帐号id。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class GroupCreateRequest implements ModelInterface, ArrayAccess
             'applicationId' => 'setApplicationId',
             'syncMode' => 'setSyncMode',
             'syncRules' => 'setSyncRules',
-            'relationConfigurations' => 'setRelationConfigurations'
+            'relationConfigurations' => 'setRelationConfigurations',
+            'relatedDomainId' => 'setRelatedDomainId'
     ];
 
     /**
@@ -145,6 +153,7 @@ class GroupCreateRequest implements ModelInterface, ArrayAccess
     * syncMode  资源同步方式，MANUAL表示手动，AUTO表示智能关联。
     * syncRules  智能关联规则。
     * relationConfigurations  分组配置信息。
+    * relatedDomainId  关联帐号id。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class GroupCreateRequest implements ModelInterface, ArrayAccess
             'applicationId' => 'getApplicationId',
             'syncMode' => 'getSyncMode',
             'syncRules' => 'getSyncRules',
-            'relationConfigurations' => 'getRelationConfigurations'
+            'relationConfigurations' => 'getRelationConfigurations',
+            'relatedDomainId' => 'getRelatedDomainId'
     ];
 
     /**
@@ -225,6 +235,7 @@ class GroupCreateRequest implements ModelInterface, ArrayAccess
         $this->container['syncMode'] = isset($data['syncMode']) ? $data['syncMode'] : null;
         $this->container['syncRules'] = isset($data['syncRules']) ? $data['syncRules'] : null;
         $this->container['relationConfigurations'] = isset($data['relationConfigurations']) ? $data['relationConfigurations'] : null;
+        $this->container['relatedDomainId'] = isset($data['relatedDomainId']) ? $data['relatedDomainId'] : null;
     }
 
     /**
@@ -474,6 +485,30 @@ class GroupCreateRequest implements ModelInterface, ArrayAccess
     public function setRelationConfigurations($relationConfigurations)
     {
         $this->container['relationConfigurations'] = $relationConfigurations;
+        return $this;
+    }
+
+    /**
+    * Gets relatedDomainId
+    *  关联帐号id。
+    *
+    * @return string|null
+    */
+    public function getRelatedDomainId()
+    {
+        return $this->container['relatedDomainId'];
+    }
+
+    /**
+    * Sets relatedDomainId
+    *
+    * @param string|null $relatedDomainId 关联帐号id。
+    *
+    * @return $this
+    */
+    public function setRelatedDomainId($relatedDomainId)
+    {
+        $this->container['relatedDomainId'] = $relatedDomainId;
         return $this;
     }
 

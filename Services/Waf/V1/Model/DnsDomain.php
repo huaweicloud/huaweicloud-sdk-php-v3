@@ -20,10 +20,10 @@ class DnsDomain implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  id
-    * domain  domain
-    * servers  servers
-    * protectPort  protectPort
+    * id  dns-id
+    * domain  域名
+    * servers  dns服务信息
+    * protectPort  防护端口
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class DnsDomain implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  id
-    * domain  domain
-    * servers  servers
-    * protectPort  protectPort
+    * id  dns-id
+    * domain  域名
+    * servers  dns服务信息
+    * protectPort  防护端口
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class DnsDomain implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  id
-    * domain  domain
-    * servers  servers
-    * protectPort  protectPort
+    * id  dns-id
+    * domain  域名
+    * servers  dns服务信息
+    * protectPort  防护端口
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class DnsDomain implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  id
-    * domain  domain
-    * servers  servers
-    * protectPort  protectPort
+    * id  dns-id
+    * domain  域名
+    * servers  dns服务信息
+    * protectPort  防护端口
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class DnsDomain implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  id
-    * domain  domain
-    * servers  servers
-    * protectPort  protectPort
+    * id  dns-id
+    * domain  域名
+    * servers  dns服务信息
+    * protectPort  防护端口
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class DnsDomain implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  id
+    *  dns-id
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class DnsDomain implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id id
+    * @param string|null $id dns-id
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class DnsDomain implements ModelInterface, ArrayAccess
 
     /**
     * Gets domain
-    *  domain
+    *  域名
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class DnsDomain implements ModelInterface, ArrayAccess
     /**
     * Sets domain
     *
-    * @param string|null $domain domain
+    * @param string|null $domain 域名
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class DnsDomain implements ModelInterface, ArrayAccess
 
     /**
     * Gets servers
-    *  servers
+    *  dns服务信息
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\Server[]|null
     */
@@ -267,7 +267,7 @@ class DnsDomain implements ModelInterface, ArrayAccess
     /**
     * Sets servers
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\Server[]|null $servers servers
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\Server[]|null $servers dns服务信息
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class DnsDomain implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectPort
-    *  protectPort
+    *  防护端口
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class DnsDomain implements ModelInterface, ArrayAccess
     /**
     * Sets protectPort
     *
-    * @param string|null $protectPort protectPort
+    * @param string|null $protectPort 防护端口
     *
     * @return $this
     */

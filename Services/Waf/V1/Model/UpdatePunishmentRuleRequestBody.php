@@ -20,7 +20,7 @@ class UpdatePunishmentRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * category  攻击惩罚类别
+    * category  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - short_ip_block  - short_cookie_block  - short_params_block  **默认取值：** 不涉及
     * blockTime  拦截时间，如果选择前缀为long的攻击惩罚类别，则block_time时长范围设置为301-1800;选择前缀为short的攻击惩罚类别，则block_time时长范围为0-300之间
     * description  规则描述
     *
@@ -34,7 +34,7 @@ class UpdatePunishmentRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * category  攻击惩罚类别
+    * category  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - short_ip_block  - short_cookie_block  - short_params_block  **默认取值：** 不涉及
     * blockTime  拦截时间，如果选择前缀为long的攻击惩罚类别，则block_time时长范围设置为301-1800;选择前缀为short的攻击惩罚类别，则block_time时长范围为0-300之间
     * description  规则描述
     *
@@ -69,7 +69,7 @@ class UpdatePunishmentRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * category  攻击惩罚类别
+    * category  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - short_ip_block  - short_cookie_block  - short_params_block  **默认取值：** 不涉及
     * blockTime  拦截时间，如果选择前缀为long的攻击惩罚类别，则block_time时长范围设置为301-1800;选择前缀为short的攻击惩罚类别，则block_time时长范围为0-300之间
     * description  规则描述
     *
@@ -83,7 +83,7 @@ class UpdatePunishmentRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * category  攻击惩罚类别
+    * category  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - short_ip_block  - short_cookie_block  - short_params_block  **默认取值：** 不涉及
     * blockTime  拦截时间，如果选择前缀为long的攻击惩罚类别，则block_time时长范围设置为301-1800;选择前缀为short的攻击惩罚类别，则block_time时长范围为0-300之间
     * description  规则描述
     *
@@ -97,7 +97,7 @@ class UpdatePunishmentRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * category  攻击惩罚类别
+    * category  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - short_ip_block  - short_cookie_block  - short_params_block  **默认取值：** 不涉及
     * blockTime  拦截时间，如果选择前缀为long的攻击惩罚类别，则block_time时长范围设置为301-1800;选择前缀为short的攻击惩罚类别，则block_time时长范围为0-300之间
     * description  规则描述
     *
@@ -233,7 +233,7 @@ class UpdatePunishmentRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  攻击惩罚类别
+    *  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - short_ip_block  - short_cookie_block  - short_params_block  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -245,7 +245,7 @@ class UpdatePunishmentRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string $category 攻击惩罚类别
+    * @param string $category **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - short_ip_block  - short_cookie_block  - short_params_block  **默认取值：** 不涉及
     *
     * @return $this
     */

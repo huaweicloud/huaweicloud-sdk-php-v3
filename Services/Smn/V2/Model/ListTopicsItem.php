@@ -26,6 +26,8 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
     * pushPolicy  消息推送的策略，该属性目前不支持修改，后续将支持修改。0表示发送失败，保留到失败队列，1表示直接丢弃发送失败的消息。
     * enterpriseProjectId  企业项目ID。
     * topicId  主题ID。
+    * createTime  创建时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+    * updateTime  更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
     *
     * @var string[]
     */
@@ -35,7 +37,9 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
             'displayName' => 'string',
             'pushPolicy' => 'int',
             'enterpriseProjectId' => 'string',
-            'topicId' => 'string'
+            'topicId' => 'string',
+            'createTime' => 'string',
+            'updateTime' => 'string'
     ];
 
     /**
@@ -46,6 +50,8 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
     * pushPolicy  消息推送的策略，该属性目前不支持修改，后续将支持修改。0表示发送失败，保留到失败队列，1表示直接丢弃发送失败的消息。
     * enterpriseProjectId  企业项目ID。
     * topicId  主题ID。
+    * createTime  创建时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+    * updateTime  更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
     *
     * @var string[]
     */
@@ -55,7 +61,9 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
         'displayName' => null,
         'pushPolicy' => null,
         'enterpriseProjectId' => null,
-        'topicId' => null
+        'topicId' => null,
+        'createTime' => null,
+        'updateTime' => null
     ];
 
     /**
@@ -87,6 +95,8 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
     * pushPolicy  消息推送的策略，该属性目前不支持修改，后续将支持修改。0表示发送失败，保留到失败队列，1表示直接丢弃发送失败的消息。
     * enterpriseProjectId  企业项目ID。
     * topicId  主题ID。
+    * createTime  创建时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+    * updateTime  更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
     *
     * @var string[]
     */
@@ -96,7 +106,9 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
             'displayName' => 'display_name',
             'pushPolicy' => 'push_policy',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'topicId' => 'topic_id'
+            'topicId' => 'topic_id',
+            'createTime' => 'create_time',
+            'updateTime' => 'update_time'
     ];
 
     /**
@@ -107,6 +119,8 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
     * pushPolicy  消息推送的策略，该属性目前不支持修改，后续将支持修改。0表示发送失败，保留到失败队列，1表示直接丢弃发送失败的消息。
     * enterpriseProjectId  企业项目ID。
     * topicId  主题ID。
+    * createTime  创建时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+    * updateTime  更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
     *
     * @var string[]
     */
@@ -116,7 +130,9 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
             'displayName' => 'setDisplayName',
             'pushPolicy' => 'setPushPolicy',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'topicId' => 'setTopicId'
+            'topicId' => 'setTopicId',
+            'createTime' => 'setCreateTime',
+            'updateTime' => 'setUpdateTime'
     ];
 
     /**
@@ -127,6 +143,8 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
     * pushPolicy  消息推送的策略，该属性目前不支持修改，后续将支持修改。0表示发送失败，保留到失败队列，1表示直接丢弃发送失败的消息。
     * enterpriseProjectId  企业项目ID。
     * topicId  主题ID。
+    * createTime  创建时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+    * updateTime  更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
     *
     * @var string[]
     */
@@ -136,7 +154,9 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
             'displayName' => 'getDisplayName',
             'pushPolicy' => 'getPushPolicy',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'topicId' => 'getTopicId'
+            'topicId' => 'getTopicId',
+            'createTime' => 'getCreateTime',
+            'updateTime' => 'getUpdateTime'
     ];
 
     /**
@@ -203,6 +223,8 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
         $this->container['pushPolicy'] = isset($data['pushPolicy']) ? $data['pushPolicy'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['topicId'] = isset($data['topicId']) ? $data['topicId'] : null;
+        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
     }
 
     /**
@@ -230,6 +252,12 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
         }
         if ($this->container['topicId'] === null) {
             $invalidProperties[] = "'topicId' can't be null";
+        }
+        if ($this->container['createTime'] === null) {
+            $invalidProperties[] = "'createTime' can't be null";
+        }
+        if ($this->container['updateTime'] === null) {
+            $invalidProperties[] = "'updateTime' can't be null";
         }
         return $invalidProperties;
     }
@@ -386,6 +414,54 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
     public function setTopicId($topicId)
     {
         $this->container['topicId'] = $topicId;
+        return $this;
+    }
+
+    /**
+    * Gets createTime
+    *  创建时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+    *
+    * @return string
+    */
+    public function getCreateTime()
+    {
+        return $this->container['createTime'];
+    }
+
+    /**
+    * Sets createTime
+    *
+    * @param string $createTime 创建时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+    *
+    * @return $this
+    */
+    public function setCreateTime($createTime)
+    {
+        $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets updateTime
+    *  更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+    *
+    * @return string
+    */
+    public function getUpdateTime()
+    {
+        return $this->container['updateTime'];
+    }
+
+    /**
+    * Sets updateTime
+    *
+    * @param string $updateTime 更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+    *
+    * @return $this
+    */
+    public function setUpdateTime($updateTime)
+    {
+        $this->container['updateTime'] = $updateTime;
         return $this;
     }
 

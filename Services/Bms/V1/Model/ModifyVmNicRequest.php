@@ -27,7 +27,7 @@ class ModifyVmNicRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'nicId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Bms\V1\Model\BareMetalModifyPortRequest'
+            'body' => '\HuaweiCloud\SDK\Bms\V1\Model\BareMetalModifyPortRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class ModifyVmNicRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Bms\V1\Model\BareMetalModifyPortRequest|null
+    * @return \HuaweiCloud\SDK\Bms\V1\Model\BareMetalModifyPortRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class ModifyVmNicRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Bms\V1\Model\BareMetalModifyPortRequest|null $body body
+    * @param \HuaweiCloud\SDK\Bms\V1\Model\BareMetalModifyPortRequestBody|null $body body
     *
     * @return $this
     */

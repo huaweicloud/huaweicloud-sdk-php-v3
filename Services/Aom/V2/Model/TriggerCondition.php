@@ -53,7 +53,7 @@ class TriggerCondition implements ModelInterface, ArrayAccess
             'metricUnit' => 'string',
             'metricLabels' => 'string[]',
             'promql' => 'string',
-            'promqlExpr' => 'string[]',
+            'promqlExpr' => 'string',
             'triggerTimes' => 'int',
             'triggerInterval' => 'string',
             'triggerType' => 'string',
@@ -689,7 +689,7 @@ class TriggerCondition implements ModelInterface, ArrayAccess
     * Gets promqlExpr
     *  Prometheus语句模板。
     *
-    * @return string[]|null
+    * @return string|null
     */
     public function getPromqlExpr()
     {
@@ -699,7 +699,7 @@ class TriggerCondition implements ModelInterface, ArrayAccess
     /**
     * Sets promqlExpr
     *
-    * @param string[]|null $promqlExpr Prometheus语句模板。
+    * @param string|null $promqlExpr Prometheus语句模板。
     *
     * @return $this
     */

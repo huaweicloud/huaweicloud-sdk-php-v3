@@ -20,10 +20,10 @@ class ShowGroupsRespGroupMembers implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * host  消费组consumer地址。
-    * assignment  consumer分配到的分区信息。
-    * memberId  消费组consumer的ID。
-    * clientId  客户端ID。
+    * host  **参数解释**： 消费组consumer地址。 **取值范围**： 不涉及。
+    * assignment  **参数解释**： consumer分配到的分区信息。
+    * memberId  **参数解释**： 消费组consumer的ID。 **取值范围**： 不涉及。
+    * clientId  **参数解释**： 客户端ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ShowGroupsRespGroupMembers implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * host  消费组consumer地址。
-    * assignment  consumer分配到的分区信息。
-    * memberId  消费组consumer的ID。
-    * clientId  客户端ID。
+    * host  **参数解释**： 消费组consumer地址。 **取值范围**： 不涉及。
+    * assignment  **参数解释**： consumer分配到的分区信息。
+    * memberId  **参数解释**： 消费组consumer的ID。 **取值范围**： 不涉及。
+    * clientId  **参数解释**： 客户端ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ShowGroupsRespGroupMembers implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * host  消费组consumer地址。
-    * assignment  consumer分配到的分区信息。
-    * memberId  消费组consumer的ID。
-    * clientId  客户端ID。
+    * host  **参数解释**： 消费组consumer地址。 **取值范围**： 不涉及。
+    * assignment  **参数解释**： consumer分配到的分区信息。
+    * memberId  **参数解释**： 消费组consumer的ID。 **取值范围**： 不涉及。
+    * clientId  **参数解释**： 客户端ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ShowGroupsRespGroupMembers implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * host  消费组consumer地址。
-    * assignment  consumer分配到的分区信息。
-    * memberId  消费组consumer的ID。
-    * clientId  客户端ID。
+    * host  **参数解释**： 消费组consumer地址。 **取值范围**： 不涉及。
+    * assignment  **参数解释**： consumer分配到的分区信息。
+    * memberId  **参数解释**： 消费组consumer的ID。 **取值范围**： 不涉及。
+    * clientId  **参数解释**： 客户端ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ShowGroupsRespGroupMembers implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * host  消费组consumer地址。
-    * assignment  consumer分配到的分区信息。
-    * memberId  消费组consumer的ID。
-    * clientId  客户端ID。
+    * host  **参数解释**： 消费组consumer地址。 **取值范围**： 不涉及。
+    * assignment  **参数解释**： consumer分配到的分区信息。
+    * memberId  **参数解释**： 消费组consumer的ID。 **取值范围**： 不涉及。
+    * clientId  **参数解释**： 客户端ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class ShowGroupsRespGroupMembers implements ModelInterface, ArrayAccess
 
     /**
     * Gets host
-    *  消费组consumer地址。
+    *  **参数解释**： 消费组consumer地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class ShowGroupsRespGroupMembers implements ModelInterface, ArrayAccess
     /**
     * Sets host
     *
-    * @param string|null $host 消费组consumer地址。
+    * @param string|null $host **参数解释**： 消费组consumer地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class ShowGroupsRespGroupMembers implements ModelInterface, ArrayAccess
 
     /**
     * Gets assignment
-    *  consumer分配到的分区信息。
+    *  **参数解释**： consumer分配到的分区信息。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ShowGroupsRespGroupAssignment[]|null
     */
@@ -243,7 +243,7 @@ class ShowGroupsRespGroupMembers implements ModelInterface, ArrayAccess
     /**
     * Sets assignment
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowGroupsRespGroupAssignment[]|null $assignment consumer分配到的分区信息。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowGroupsRespGroupAssignment[]|null $assignment **参数解释**： consumer分配到的分区信息。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class ShowGroupsRespGroupMembers implements ModelInterface, ArrayAccess
 
     /**
     * Gets memberId
-    *  消费组consumer的ID。
+    *  **参数解释**： 消费组consumer的ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class ShowGroupsRespGroupMembers implements ModelInterface, ArrayAccess
     /**
     * Sets memberId
     *
-    * @param string|null $memberId 消费组consumer的ID。
+    * @param string|null $memberId **参数解释**： 消费组consumer的ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class ShowGroupsRespGroupMembers implements ModelInterface, ArrayAccess
 
     /**
     * Gets clientId
-    *  客户端ID。
+    *  **参数解释**： 客户端ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class ShowGroupsRespGroupMembers implements ModelInterface, ArrayAccess
     /**
     * Sets clientId
     *
-    * @param string|null $clientId 客户端ID。
+    * @param string|null $clientId **参数解释**： 客户端ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */

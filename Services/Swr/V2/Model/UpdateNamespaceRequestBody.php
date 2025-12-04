@@ -21,21 +21,25 @@ class UpdateNamespaceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * metadata  metadata
+    * cveAllowlist  cveAllowlist
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'metadata' => '\HuaweiCloud\SDK\Swr\V2\Model\NamespaceMetadata'
+            'metadata' => '\HuaweiCloud\SDK\Swr\V2\Model\NamespaceMetadata',
+            'cveAllowlist' => '\HuaweiCloud\SDK\Swr\V2\Model\UpdateCVEAllowlistRequest'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * metadata  metadata
+    * cveAllowlist  cveAllowlist
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'metadata' => null
+        'metadata' => null,
+        'cveAllowlist' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class UpdateNamespaceRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * metadata  metadata
+    * cveAllowlist  cveAllowlist
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'metadata' => 'metadata'
+            'metadata' => 'metadata',
+            'cveAllowlist' => 'cve_allowlist'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * metadata  metadata
+    * cveAllowlist  cveAllowlist
     *
     * @var string[]
     */
     protected static $setters = [
-            'metadata' => 'setMetadata'
+            'metadata' => 'setMetadata',
+            'cveAllowlist' => 'setCveAllowlist'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * metadata  metadata
+    * cveAllowlist  cveAllowlist
     *
     * @var string[]
     */
     protected static $getters = [
-            'metadata' => 'getMetadata'
+            'metadata' => 'getMetadata',
+            'cveAllowlist' => 'getCveAllowlist'
     ];
 
     /**
@@ -148,6 +158,7 @@ class UpdateNamespaceRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
+        $this->container['cveAllowlist'] = isset($data['cveAllowlist']) ? $data['cveAllowlist'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class UpdateNamespaceRequestBody implements ModelInterface, ArrayAccess
     public function setMetadata($metadata)
     {
         $this->container['metadata'] = $metadata;
+        return $this;
+    }
+
+    /**
+    * Gets cveAllowlist
+    *  cveAllowlist
+    *
+    * @return \HuaweiCloud\SDK\Swr\V2\Model\UpdateCVEAllowlistRequest|null
+    */
+    public function getCveAllowlist()
+    {
+        return $this->container['cveAllowlist'];
+    }
+
+    /**
+    * Sets cveAllowlist
+    *
+    * @param \HuaweiCloud\SDK\Swr\V2\Model\UpdateCVEAllowlistRequest|null $cveAllowlist cveAllowlist
+    *
+    * @return $this
+    */
+    public function setCveAllowlist($cveAllowlist)
+    {
+        $this->container['cveAllowlist'] = $cveAllowlist;
         return $this;
     }
 

@@ -24,7 +24,7 @@ class StartSyncTaskReq implements ModelInterface, ArrayAccess
     * srcSk  源端节点SK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
     * dstAk  目的端节点AK（最大长度100个字符）。
     * dstSk  目的端节点SK（最大长度100个字符）。
-    * sourceCdnAuthenticationKey  CDN鉴权秘钥。
+    * sourceCdnAuthenticationKey  CDN鉴权密钥。
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class StartSyncTaskReq implements ModelInterface, ArrayAccess
     * srcSk  源端节点SK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
     * dstAk  目的端节点AK（最大长度100个字符）。
     * dstSk  目的端节点SK（最大长度100个字符）。
-    * sourceCdnAuthenticationKey  CDN鉴权秘钥。
+    * sourceCdnAuthenticationKey  CDN鉴权密钥。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class StartSyncTaskReq implements ModelInterface, ArrayAccess
     * srcSk  源端节点SK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
     * dstAk  目的端节点AK（最大长度100个字符）。
     * dstSk  目的端节点SK（最大长度100个字符）。
-    * sourceCdnAuthenticationKey  CDN鉴权秘钥。
+    * sourceCdnAuthenticationKey  CDN鉴权密钥。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class StartSyncTaskReq implements ModelInterface, ArrayAccess
     * srcSk  源端节点SK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
     * dstAk  目的端节点AK（最大长度100个字符）。
     * dstSk  目的端节点SK（最大长度100个字符）。
-    * sourceCdnAuthenticationKey  CDN鉴权秘钥。
+    * sourceCdnAuthenticationKey  CDN鉴权密钥。
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class StartSyncTaskReq implements ModelInterface, ArrayAccess
     * srcSk  源端节点SK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
     * dstAk  目的端节点AK（最大长度100个字符）。
     * dstSk  目的端节点SK（最大长度100个字符）。
-    * sourceCdnAuthenticationKey  CDN鉴权秘钥。
+    * sourceCdnAuthenticationKey  CDN鉴权密钥。
     *
     * @var string[]
     */
@@ -371,7 +371,7 @@ class StartSyncTaskReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceCdnAuthenticationKey
-    *  CDN鉴权秘钥。
+    *  CDN鉴权密钥。
     *
     * @return string|null
     */
@@ -383,7 +383,7 @@ class StartSyncTaskReq implements ModelInterface, ArrayAccess
     /**
     * Sets sourceCdnAuthenticationKey
     *
-    * @param string|null $sourceCdnAuthenticationKey CDN鉴权秘钥。
+    * @param string|null $sourceCdnAuthenticationKey CDN鉴权密钥。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class TriggerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  触发类型，镜像签名、老化规则只支持manual(手动)、scheduled(定时+手动)；同步策略支持manual(手动)、scheduled(定时+手动)、event_based(事件触发+手动)
+    * type  触发类型，老化规则只支持manual(手动)、scheduled(定时+手动)；同步策略支持manual(手动)、scheduled(定时+手动)、event_based(事件触发+手动);镜像签名支持manual(手动)、event_based(事件触发+手动)
     * triggerSettings  triggerSettings
     *
     * @var string[]
@@ -32,7 +32,7 @@ class TriggerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  触发类型，镜像签名、老化规则只支持manual(手动)、scheduled(定时+手动)；同步策略支持manual(手动)、scheduled(定时+手动)、event_based(事件触发+手动)
+    * type  触发类型，老化规则只支持manual(手动)、scheduled(定时+手动)；同步策略支持manual(手动)、scheduled(定时+手动)、event_based(事件触发+手动);镜像签名支持manual(手动)、event_based(事件触发+手动)
     * triggerSettings  triggerSettings
     *
     * @var string[]
@@ -65,7 +65,7 @@ class TriggerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  触发类型，镜像签名、老化规则只支持manual(手动)、scheduled(定时+手动)；同步策略支持manual(手动)、scheduled(定时+手动)、event_based(事件触发+手动)
+    * type  触发类型，老化规则只支持manual(手动)、scheduled(定时+手动)；同步策略支持manual(手动)、scheduled(定时+手动)、event_based(事件触发+手动);镜像签名支持manual(手动)、event_based(事件触发+手动)
     * triggerSettings  triggerSettings
     *
     * @var string[]
@@ -77,7 +77,7 @@ class TriggerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  触发类型，镜像签名、老化规则只支持manual(手动)、scheduled(定时+手动)；同步策略支持manual(手动)、scheduled(定时+手动)、event_based(事件触发+手动)
+    * type  触发类型，老化规则只支持manual(手动)、scheduled(定时+手动)；同步策略支持manual(手动)、scheduled(定时+手动)、event_based(事件触发+手动);镜像签名支持manual(手动)、event_based(事件触发+手动)
     * triggerSettings  triggerSettings
     *
     * @var string[]
@@ -89,7 +89,7 @@ class TriggerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  触发类型，镜像签名、老化规则只支持manual(手动)、scheduled(定时+手动)；同步策略支持manual(手动)、scheduled(定时+手动)、event_based(事件触发+手动)
+    * type  触发类型，老化规则只支持manual(手动)、scheduled(定时+手动)；同步策略支持manual(手动)、scheduled(定时+手动)、event_based(事件触发+手动);镜像签名支持manual(手动)、event_based(事件触发+手动)
     * triggerSettings  triggerSettings
     *
     * @var string[]
@@ -139,7 +139,24 @@ class TriggerConfig implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TYPE_MANUAL = 'manual';
+    const TYPE_SCHEDULED = 'scheduled';
+    const TYPE_EVENT_BASED = 'event_based';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_MANUAL,
+            self::TYPE_SCHEDULED,
+            self::TYPE_EVENT_BASED,
+        ];
+    }
 
 
     /**
@@ -172,6 +189,14 @@ class TriggerConfig implements ModelInterface, ArrayAccess
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -188,7 +213,7 @@ class TriggerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  触发类型，镜像签名、老化规则只支持manual(手动)、scheduled(定时+手动)；同步策略支持manual(手动)、scheduled(定时+手动)、event_based(事件触发+手动)
+    *  触发类型，老化规则只支持manual(手动)、scheduled(定时+手动)；同步策略支持manual(手动)、scheduled(定时+手动)、event_based(事件触发+手动);镜像签名支持manual(手动)、event_based(事件触发+手动)
     *
     * @return string
     */
@@ -200,7 +225,7 @@ class TriggerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 触发类型，镜像签名、老化规则只支持manual(手动)、scheduled(定时+手动)；同步策略支持manual(手动)、scheduled(定时+手动)、event_based(事件触发+手动)
+    * @param string $type 触发类型，老化规则只支持manual(手动)、scheduled(定时+手动)；同步策略支持manual(手动)、scheduled(定时+手动)、event_based(事件触发+手动);镜像签名支持manual(手动)、event_based(事件触发+手动)
     *
     * @return $this
     */

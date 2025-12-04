@@ -23,24 +23,28 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * enableDomainName  是否开启域名管理
     * enableCombinationRetention  老化策略是否支持多条规则
+    * enableArtifactScanning  是否支持制品扫描
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'enableDomainName' => 'bool',
-            'enableCombinationRetention' => 'bool'
+            'enableCombinationRetention' => 'bool',
+            'enableArtifactScanning' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * enableDomainName  是否开启域名管理
     * enableCombinationRetention  老化策略是否支持多条规则
+    * enableArtifactScanning  是否支持制品扫描
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'enableDomainName' => null,
-        'enableCombinationRetention' => null
+        'enableCombinationRetention' => null,
+        'enableArtifactScanning' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * enableDomainName  是否开启域名管理
     * enableCombinationRetention  老化策略是否支持多条规则
+    * enableArtifactScanning  是否支持制品扫描
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'enableDomainName' => 'enableDomainName',
-            'enableCombinationRetention' => 'enableCombinationRetention'
+            'enableCombinationRetention' => 'enableCombinationRetention',
+            'enableArtifactScanning' => 'enableArtifactScanning'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * enableDomainName  是否开启域名管理
     * enableCombinationRetention  老化策略是否支持多条规则
+    * enableArtifactScanning  是否支持制品扫描
     *
     * @var string[]
     */
     protected static $setters = [
             'enableDomainName' => 'setEnableDomainName',
-            'enableCombinationRetention' => 'setEnableCombinationRetention'
+            'enableCombinationRetention' => 'setEnableCombinationRetention',
+            'enableArtifactScanning' => 'setEnableArtifactScanning'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * enableDomainName  是否开启域名管理
     * enableCombinationRetention  老化策略是否支持多条规则
+    * enableArtifactScanning  是否支持制品扫描
     *
     * @var string[]
     */
     protected static $getters = [
             'enableDomainName' => 'getEnableDomainName',
-            'enableCombinationRetention' => 'getEnableCombinationRetention'
+            'enableCombinationRetention' => 'getEnableCombinationRetention',
+            'enableArtifactScanning' => 'getEnableArtifactScanning'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
     {
         $this->container['enableDomainName'] = isset($data['enableDomainName']) ? $data['enableDomainName'] : null;
         $this->container['enableCombinationRetention'] = isset($data['enableCombinationRetention']) ? $data['enableCombinationRetention'] : null;
+        $this->container['enableArtifactScanning'] = isset($data['enableArtifactScanning']) ? $data['enableArtifactScanning'] : null;
     }
 
     /**
@@ -229,6 +240,30 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
     public function setEnableCombinationRetention($enableCombinationRetention)
     {
         $this->container['enableCombinationRetention'] = $enableCombinationRetention;
+        return $this;
+    }
+
+    /**
+    * Gets enableArtifactScanning
+    *  是否支持制品扫描
+    *
+    * @return bool|null
+    */
+    public function getEnableArtifactScanning()
+    {
+        return $this->container['enableArtifactScanning'];
+    }
+
+    /**
+    * Sets enableArtifactScanning
+    *
+    * @param bool|null $enableArtifactScanning 是否支持制品扫描
+    *
+    * @return $this
+    */
+    public function setEnableArtifactScanning($enableArtifactScanning)
+    {
+        $this->container['enableArtifactScanning'] = $enableArtifactScanning;
         return $this;
     }
 

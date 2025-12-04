@@ -30,8 +30,8 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
     * protocol  后端包含的协议类型：HTTPS、HTTP、HTTP&HTTPS
     * server  防护域名的源站服务器配置信息
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
-    * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-    * accessStatus  域名接入状态，0表示未接入，1表示已接入
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * accessCode  cname前缀
     * locked  预留参数，用于后期设计冻结域名，解锁域名功能，目前暂不支持
     * timestamp  创建防护域名的时间戳（毫秒）
@@ -43,7 +43,7 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
     * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息
     * trafficMark  trafficMark
     * circuitBreaker  circuitBreaker
-    * lbAlgorithm  LB负载均衡，仅专业版和企业版支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
+    * lbAlgorithm  **参数解释：** LB负载均衡，仅专业版和企业版支持配置负载均衡算法 **约束限制：** 不涉及 **取值范围：**  - ip_hash: 源IP Hash,将某个IP的请求定向到同一个服务器  - round_robin: 加权轮询,所有请求将按权重轮流分配给源站服务器  - session_hash: 将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效  **默认取值：** 不涉及
     * timeoutConfig  timeoutConfig
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * flag  flag
@@ -100,8 +100,8 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
     * protocol  后端包含的协议类型：HTTPS、HTTP、HTTP&HTTPS
     * server  防护域名的源站服务器配置信息
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
-    * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-    * accessStatus  域名接入状态，0表示未接入，1表示已接入
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * accessCode  cname前缀
     * locked  预留参数，用于后期设计冻结域名，解锁域名功能，目前暂不支持
     * timestamp  创建防护域名的时间戳（毫秒）
@@ -113,7 +113,7 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
     * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息
     * trafficMark  trafficMark
     * circuitBreaker  circuitBreaker
-    * lbAlgorithm  LB负载均衡，仅专业版和企业版支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
+    * lbAlgorithm  **参数解释：** LB负载均衡，仅专业版和企业版支持配置负载均衡算法 **约束限制：** 不涉及 **取值范围：**  - ip_hash: 源IP Hash,将某个IP的请求定向到同一个服务器  - round_robin: 加权轮询,所有请求将按权重轮流分配给源站服务器  - session_hash: 将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效  **默认取值：** 不涉及
     * timeoutConfig  timeoutConfig
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * flag  flag
@@ -191,8 +191,8 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
     * protocol  后端包含的协议类型：HTTPS、HTTP、HTTP&HTTPS
     * server  防护域名的源站服务器配置信息
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
-    * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-    * accessStatus  域名接入状态，0表示未接入，1表示已接入
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * accessCode  cname前缀
     * locked  预留参数，用于后期设计冻结域名，解锁域名功能，目前暂不支持
     * timestamp  创建防护域名的时间戳（毫秒）
@@ -204,7 +204,7 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
     * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息
     * trafficMark  trafficMark
     * circuitBreaker  circuitBreaker
-    * lbAlgorithm  LB负载均衡，仅专业版和企业版支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
+    * lbAlgorithm  **参数解释：** LB负载均衡，仅专业版和企业版支持配置负载均衡算法 **约束限制：** 不涉及 **取值范围：**  - ip_hash: 源IP Hash,将某个IP的请求定向到同一个服务器  - round_robin: 加权轮询,所有请求将按权重轮流分配给源站服务器  - session_hash: 将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效  **默认取值：** 不涉及
     * timeoutConfig  timeoutConfig
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * flag  flag
@@ -261,8 +261,8 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
     * protocol  后端包含的协议类型：HTTPS、HTTP、HTTP&HTTPS
     * server  防护域名的源站服务器配置信息
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
-    * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-    * accessStatus  域名接入状态，0表示未接入，1表示已接入
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * accessCode  cname前缀
     * locked  预留参数，用于后期设计冻结域名，解锁域名功能，目前暂不支持
     * timestamp  创建防护域名的时间戳（毫秒）
@@ -274,7 +274,7 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
     * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息
     * trafficMark  trafficMark
     * circuitBreaker  circuitBreaker
-    * lbAlgorithm  LB负载均衡，仅专业版和企业版支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
+    * lbAlgorithm  **参数解释：** LB负载均衡，仅专业版和企业版支持配置负载均衡算法 **约束限制：** 不涉及 **取值范围：**  - ip_hash: 源IP Hash,将某个IP的请求定向到同一个服务器  - round_robin: 加权轮询,所有请求将按权重轮流分配给源站服务器  - session_hash: 将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效  **默认取值：** 不涉及
     * timeoutConfig  timeoutConfig
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * flag  flag
@@ -331,8 +331,8 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
     * protocol  后端包含的协议类型：HTTPS、HTTP、HTTP&HTTPS
     * server  防护域名的源站服务器配置信息
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
-    * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-    * accessStatus  域名接入状态，0表示未接入，1表示已接入
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * accessCode  cname前缀
     * locked  预留参数，用于后期设计冻结域名，解锁域名功能，目前暂不支持
     * timestamp  创建防护域名的时间戳（毫秒）
@@ -344,7 +344,7 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
     * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息
     * trafficMark  trafficMark
     * circuitBreaker  circuitBreaker
-    * lbAlgorithm  LB负载均衡，仅专业版和企业版支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
+    * lbAlgorithm  **参数解释：** LB负载均衡，仅专业版和企业版支持配置负载均衡算法 **约束限制：** 不涉及 **取值范围：**  - ip_hash: 源IP Hash,将某个IP的请求定向到同一个服务器  - round_robin: 加权轮询,所有请求将按权重轮流分配给源站服务器  - session_hash: 将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效  **默认取值：** 不涉及
     * timeoutConfig  timeoutConfig
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * flag  flag
@@ -804,7 +804,7 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    *  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -816,7 +816,7 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param int|null $protectStatus 域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * @param int|null $protectStatus **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -828,7 +828,7 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessStatus
-    *  域名接入状态，0表示未接入，1表示已接入
+    *  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -840,7 +840,7 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets accessStatus
     *
-    * @param int|null $accessStatus 域名接入状态，0表示未接入，1表示已接入
+    * @param int|null $accessStatus **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -1116,7 +1116,7 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets lbAlgorithm
-    *  LB负载均衡，仅专业版和企业版支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
+    *  **参数解释：** LB负载均衡，仅专业版和企业版支持配置负载均衡算法 **约束限制：** 不涉及 **取值范围：**  - ip_hash: 源IP Hash,将某个IP的请求定向到同一个服务器  - round_robin: 加权轮询,所有请求将按权重轮流分配给源站服务器  - session_hash: 将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -1128,7 +1128,7 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets lbAlgorithm
     *
-    * @param string|null $lbAlgorithm LB负载均衡，仅专业版和企业版支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
+    * @param string|null $lbAlgorithm **参数解释：** LB负载均衡，仅专业版和企业版支持配置负载均衡算法 **约束限制：** 不涉及 **取值范围：**  - ip_hash: 源IP Hash,将某个IP的请求定向到同一个服务器  - round_robin: 加权轮询,所有请求将按权重轮流分配给源站服务器  - session_hash: 将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效  **默认取值：** 不涉及
     *
     * @return $this
     */

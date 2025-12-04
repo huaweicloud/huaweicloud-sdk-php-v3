@@ -3594,6 +3594,74 @@ class NatAsyncClient extends Client
     }
 
     /**
+     * 公网NAT网关按需转包
+     *
+     * 公网NAT网关按需转包。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateNatGatewayToPeriodAsync($request)
+    {
+        return $this->updateNatGatewayToPeriodAsyncWithHttpInfo($request);
+    }
+    
+    public function updateNatGatewayToPeriodAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/nat_gateways/{nat_gateway_id}/change_to_period';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['natGatewayId'] !== null) {
+            $pathParams['nat_gateway_id'] = $localVarParams['natGatewayId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Nat\V2\Model\UpdateNatGatewayToPeriodResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Nat\V2\Model\UpdateNatGatewayToPeriodRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 更新私网NAT网关
      *
      * 更新私网NAT网关实例。

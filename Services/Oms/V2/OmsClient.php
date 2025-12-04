@@ -313,11 +313,11 @@ class OmsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -1244,9 +1244,9 @@ class OmsClient extends Client
     }
 
     /**
-     * 查询云厂商支持的reigon
+     * 查询云厂商支持的region
      *
-     * 查询云厂商支持的reigon
+     * 查询云厂商支持的region
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1403,11 +1403,11 @@ class OmsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -1938,6 +1938,65 @@ class OmsClient extends Client
     }
 
     /**
+     * 同意隐私协议
+     *
+     * 创建迁移任务、任务组、评估任务时，记录用户同意隐私协议。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updatePrivacyAgreementRecord($request)
+    {
+        return $this->updatePrivacyAgreementRecordWithHttpInfo($request);
+    }
+
+    public function updatePrivacyAgreementRecordWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/privacy-agreements';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Oms\V2\Model\UpdatePrivacyAgreementRecordResponse',
+            $requestType='\HuaweiCloud\SDK\Oms\V2\Model\UpdatePrivacyAgreementRecordRequest');
+    }
+
+    /**
      * 更新指定id的迁移任务组的流控策略
      *
      * 当迁移任务组未执行完成时，修改迁移任务组的流量控制策略。
@@ -2035,11 +2094,11 @@ class OmsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -2097,11 +2156,11 @@ class OmsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }

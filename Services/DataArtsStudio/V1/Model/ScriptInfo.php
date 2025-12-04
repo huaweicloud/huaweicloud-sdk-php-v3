@@ -30,6 +30,8 @@ class ScriptInfo implements ModelInterface, ArrayAccess
     * queueName  DLI资源队列名称，当type参数值为DLISQL时，才支持此参数。可以通过查询队列列表接口获取队列信息。默认值为空。
     * configuration  用户定义适用于此作业的配置参数，当type参数值为DLISQL时存在。当前支持的配置项列表请参考DLI的conf参数说明。默认值为空。
     * description  描述，长度不能超过255个字符。
+    * owner  责任人名称。
+    * version  脚本最新提交版本。
     *
     * @var string[]
     */
@@ -43,7 +45,9 @@ class ScriptInfo implements ModelInterface, ArrayAccess
             'database' => 'string',
             'queueName' => 'string',
             'configuration' => 'object',
-            'description' => 'string'
+            'description' => 'string',
+            'owner' => 'string',
+            'version' => 'int'
     ];
 
     /**
@@ -58,6 +62,8 @@ class ScriptInfo implements ModelInterface, ArrayAccess
     * queueName  DLI资源队列名称，当type参数值为DLISQL时，才支持此参数。可以通过查询队列列表接口获取队列信息。默认值为空。
     * configuration  用户定义适用于此作业的配置参数，当type参数值为DLISQL时存在。当前支持的配置项列表请参考DLI的conf参数说明。默认值为空。
     * description  描述，长度不能超过255个字符。
+    * owner  责任人名称。
+    * version  脚本最新提交版本。
     *
     * @var string[]
     */
@@ -71,7 +77,9 @@ class ScriptInfo implements ModelInterface, ArrayAccess
         'database' => null,
         'queueName' => null,
         'configuration' => null,
-        'description' => null
+        'description' => null,
+        'owner' => null,
+        'version' => null
     ];
 
     /**
@@ -107,6 +115,8 @@ class ScriptInfo implements ModelInterface, ArrayAccess
     * queueName  DLI资源队列名称，当type参数值为DLISQL时，才支持此参数。可以通过查询队列列表接口获取队列信息。默认值为空。
     * configuration  用户定义适用于此作业的配置参数，当type参数值为DLISQL时存在。当前支持的配置项列表请参考DLI的conf参数说明。默认值为空。
     * description  描述，长度不能超过255个字符。
+    * owner  责任人名称。
+    * version  脚本最新提交版本。
     *
     * @var string[]
     */
@@ -120,7 +130,9 @@ class ScriptInfo implements ModelInterface, ArrayAccess
             'database' => 'database',
             'queueName' => 'queue_name',
             'configuration' => 'configuration',
-            'description' => 'description'
+            'description' => 'description',
+            'owner' => 'owner',
+            'version' => 'version'
     ];
 
     /**
@@ -135,6 +147,8 @@ class ScriptInfo implements ModelInterface, ArrayAccess
     * queueName  DLI资源队列名称，当type参数值为DLISQL时，才支持此参数。可以通过查询队列列表接口获取队列信息。默认值为空。
     * configuration  用户定义适用于此作业的配置参数，当type参数值为DLISQL时存在。当前支持的配置项列表请参考DLI的conf参数说明。默认值为空。
     * description  描述，长度不能超过255个字符。
+    * owner  责任人名称。
+    * version  脚本最新提交版本。
     *
     * @var string[]
     */
@@ -148,7 +162,9 @@ class ScriptInfo implements ModelInterface, ArrayAccess
             'database' => 'setDatabase',
             'queueName' => 'setQueueName',
             'configuration' => 'setConfiguration',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'owner' => 'setOwner',
+            'version' => 'setVersion'
     ];
 
     /**
@@ -163,6 +179,8 @@ class ScriptInfo implements ModelInterface, ArrayAccess
     * queueName  DLI资源队列名称，当type参数值为DLISQL时，才支持此参数。可以通过查询队列列表接口获取队列信息。默认值为空。
     * configuration  用户定义适用于此作业的配置参数，当type参数值为DLISQL时存在。当前支持的配置项列表请参考DLI的conf参数说明。默认值为空。
     * description  描述，长度不能超过255个字符。
+    * owner  责任人名称。
+    * version  脚本最新提交版本。
     *
     * @var string[]
     */
@@ -176,7 +194,9 @@ class ScriptInfo implements ModelInterface, ArrayAccess
             'database' => 'getDatabase',
             'queueName' => 'getQueueName',
             'configuration' => 'getConfiguration',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'owner' => 'getOwner',
+            'version' => 'getVersion'
     ];
 
     /**
@@ -284,6 +304,8 @@ class ScriptInfo implements ModelInterface, ArrayAccess
         $this->container['queueName'] = isset($data['queueName']) ? $data['queueName'] : null;
         $this->container['configuration'] = isset($data['configuration']) ? $data['configuration'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
+        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
     }
 
     /**
@@ -556,6 +578,54 @@ class ScriptInfo implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets owner
+    *  责任人名称。
+    *
+    * @return string|null
+    */
+    public function getOwner()
+    {
+        return $this->container['owner'];
+    }
+
+    /**
+    * Sets owner
+    *
+    * @param string|null $owner 责任人名称。
+    *
+    * @return $this
+    */
+    public function setOwner($owner)
+    {
+        $this->container['owner'] = $owner;
+        return $this;
+    }
+
+    /**
+    * Gets version
+    *  脚本最新提交版本。
+    *
+    * @return int|null
+    */
+    public function getVersion()
+    {
+        return $this->container['version'];
+    }
+
+    /**
+    * Sets version
+    *
+    * @param int|null $version 脚本最新提交版本。
+    *
+    * @return $this
+    */
+    public function setVersion($version)
+    {
+        $this->container['version'] = $version;
         return $this;
     }
 

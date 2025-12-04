@@ -27,7 +27,7 @@ class DeleteAntileakageRuleResponse implements ModelInterface, ArrayAccess
     * category  类别（响应码：code，敏感信息：sensitive）
     * contents  内容
     * timestamp  创建规则时间戳
-    * status  规则状态，0：关闭，1：开启
+    * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * description  规则描述
     *
     * @var string[]
@@ -51,7 +51,7 @@ class DeleteAntileakageRuleResponse implements ModelInterface, ArrayAccess
     * category  类别（响应码：code，敏感信息：sensitive）
     * contents  内容
     * timestamp  创建规则时间戳
-    * status  规则状态，0：关闭，1：开启
+    * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * description  规则描述
     *
     * @var string[]
@@ -96,7 +96,7 @@ class DeleteAntileakageRuleResponse implements ModelInterface, ArrayAccess
     * category  类别（响应码：code，敏感信息：sensitive）
     * contents  内容
     * timestamp  创建规则时间戳
-    * status  规则状态，0：关闭，1：开启
+    * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * description  规则描述
     *
     * @var string[]
@@ -120,7 +120,7 @@ class DeleteAntileakageRuleResponse implements ModelInterface, ArrayAccess
     * category  类别（响应码：code，敏感信息：sensitive）
     * contents  内容
     * timestamp  创建规则时间戳
-    * status  规则状态，0：关闭，1：开启
+    * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * description  规则描述
     *
     * @var string[]
@@ -144,7 +144,7 @@ class DeleteAntileakageRuleResponse implements ModelInterface, ArrayAccess
     * category  类别（响应码：code，敏感信息：sensitive）
     * contents  内容
     * timestamp  创建规则时间戳
-    * status  规则状态，0：关闭，1：开启
+    * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * description  规则描述
     *
     * @var string[]
@@ -396,7 +396,7 @@ class DeleteAntileakageRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  规则状态，0：关闭，1：开启
+    *  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -408,7 +408,7 @@ class DeleteAntileakageRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 规则状态，0：关闭，1：开启
+    * @param int|null $status **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     *
     * @return $this
     */

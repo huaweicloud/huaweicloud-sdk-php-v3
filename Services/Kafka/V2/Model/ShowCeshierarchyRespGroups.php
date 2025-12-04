@@ -20,8 +20,8 @@ class ShowCeshierarchyRespGroups implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  消费组名称。
-    * queues  Topic信息。
+    * name  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * queues  **参数解释**： Topic信息。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ShowCeshierarchyRespGroups implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  消费组名称。
-    * queues  Topic信息。
+    * name  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * queues  **参数解释**： Topic信息。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ShowCeshierarchyRespGroups implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  消费组名称。
-    * queues  Topic信息。
+    * name  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * queues  **参数解释**： Topic信息。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ShowCeshierarchyRespGroups implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  消费组名称。
-    * queues  Topic信息。
+    * name  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * queues  **参数解释**： Topic信息。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ShowCeshierarchyRespGroups implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  消费组名称。
-    * queues  Topic信息。
+    * name  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * queues  **参数解释**： Topic信息。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ShowCeshierarchyRespGroups implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  消费组名称。
+    *  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class ShowCeshierarchyRespGroups implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 消费组名称。
+    * @param string|null $name **参数解释**： 消费组名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ShowCeshierarchyRespGroups implements ModelInterface, ArrayAccess
 
     /**
     * Gets queues
-    *  Topic信息。
+    *  **参数解释**： Topic信息。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ShowCeshierarchyRespQueues1[]|null
     */
@@ -221,7 +221,7 @@ class ShowCeshierarchyRespGroups implements ModelInterface, ArrayAccess
     /**
     * Sets queues
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowCeshierarchyRespQueues1[]|null $queues Topic信息。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowCeshierarchyRespQueues1[]|null $queues **参数解释**： Topic信息。
     *
     * @return $this
     */

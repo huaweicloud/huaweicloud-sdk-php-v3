@@ -20,7 +20,7 @@ class SupportVersion implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * category  支持的集群类型（CCE，thirdParty等）
+    * category  支持的集群类型
     * clusterType  支持的集群类型（BareMetal，VirtualMachine，windows等）
     * clusterVersion  支持的集群版本，支持正则表达式，如\".*\"匹配所有集群版本
     *
@@ -34,7 +34,7 @@ class SupportVersion implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * category  支持的集群类型（CCE，thirdParty等）
+    * category  支持的集群类型
     * clusterType  支持的集群类型（BareMetal，VirtualMachine，windows等）
     * clusterVersion  支持的集群版本，支持正则表达式，如\".*\"匹配所有集群版本
     *
@@ -69,7 +69,7 @@ class SupportVersion implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * category  支持的集群类型（CCE，thirdParty等）
+    * category  支持的集群类型
     * clusterType  支持的集群类型（BareMetal，VirtualMachine，windows等）
     * clusterVersion  支持的集群版本，支持正则表达式，如\".*\"匹配所有集群版本
     *
@@ -83,7 +83,7 @@ class SupportVersion implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * category  支持的集群类型（CCE，thirdParty等）
+    * category  支持的集群类型
     * clusterType  支持的集群类型（BareMetal，VirtualMachine，windows等）
     * clusterVersion  支持的集群版本，支持正则表达式，如\".*\"匹配所有集群版本
     *
@@ -97,7 +97,7 @@ class SupportVersion implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * category  支持的集群类型（CCE，thirdParty等）
+    * category  支持的集群类型
     * clusterType  支持的集群类型（BareMetal，VirtualMachine，windows等）
     * clusterVersion  支持的集群版本，支持正则表达式，如\".*\"匹配所有集群版本
     *
@@ -196,7 +196,7 @@ class SupportVersion implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  支持的集群类型（CCE，thirdParty等）
+    *  支持的集群类型
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class SupportVersion implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string|null $category 支持的集群类型（CCE，thirdParty等）
+    * @param string|null $category 支持的集群类型
     *
     * @return $this
     */

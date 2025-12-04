@@ -26,6 +26,9 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * cuNumber  用户为作业选择的CU数量。默认值为2。
     * managerCuNumber  用户为作业选择的管理节点CU数量，对应为flink jobmanager数量。默认为1。
     * parallelNumber  用户为作业选择的并发量。默认为1。
+    * checkpointEnabled  是否开启作业自动快照功能。 开启：true； 关闭：false； 默认：false
+    * checkpointMode  快照模式。 1：exactly_once（精确一次） 2：at_least_once（至少一次） 默认：1
+    * checkpointInterval  快照间隔，单位为秒。 默认：10 取值范围：1-3600
     * logEnabled  是否开启作业日志。 开启：true； 关闭：false； 默认：false。
     * obsBucket  当log_enabled==true时，用户授权保存日志的OBS路。
     * smnTopic  当作业异常时，向该SMN主题推送告警信息。
@@ -58,6 +61,9 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'cuNumber' => 'int',
             'managerCuNumber' => 'int',
             'parallelNumber' => 'int',
+            'checkpointEnabled' => 'bool',
+            'checkpointMode' => 'int',
+            'checkpointInterval' => 'int',
             'logEnabled' => 'bool',
             'obsBucket' => 'string',
             'smnTopic' => 'string',
@@ -90,6 +96,9 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * cuNumber  用户为作业选择的CU数量。默认值为2。
     * managerCuNumber  用户为作业选择的管理节点CU数量，对应为flink jobmanager数量。默认为1。
     * parallelNumber  用户为作业选择的并发量。默认为1。
+    * checkpointEnabled  是否开启作业自动快照功能。 开启：true； 关闭：false； 默认：false
+    * checkpointMode  快照模式。 1：exactly_once（精确一次） 2：at_least_once（至少一次） 默认：1
+    * checkpointInterval  快照间隔，单位为秒。 默认：10 取值范围：1-3600
     * logEnabled  是否开启作业日志。 开启：true； 关闭：false； 默认：false。
     * obsBucket  当log_enabled==true时，用户授权保存日志的OBS路。
     * smnTopic  当作业异常时，向该SMN主题推送告警信息。
@@ -122,6 +131,9 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
         'cuNumber' => 'int32',
         'managerCuNumber' => 'int32',
         'parallelNumber' => 'int32',
+        'checkpointEnabled' => null,
+        'checkpointMode' => 'int32',
+        'checkpointInterval' => 'int32',
         'logEnabled' => null,
         'obsBucket' => null,
         'smnTopic' => null,
@@ -175,6 +187,9 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * cuNumber  用户为作业选择的CU数量。默认值为2。
     * managerCuNumber  用户为作业选择的管理节点CU数量，对应为flink jobmanager数量。默认为1。
     * parallelNumber  用户为作业选择的并发量。默认为1。
+    * checkpointEnabled  是否开启作业自动快照功能。 开启：true； 关闭：false； 默认：false
+    * checkpointMode  快照模式。 1：exactly_once（精确一次） 2：at_least_once（至少一次） 默认：1
+    * checkpointInterval  快照间隔，单位为秒。 默认：10 取值范围：1-3600
     * logEnabled  是否开启作业日志。 开启：true； 关闭：false； 默认：false。
     * obsBucket  当log_enabled==true时，用户授权保存日志的OBS路。
     * smnTopic  当作业异常时，向该SMN主题推送告警信息。
@@ -207,6 +222,9 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'cuNumber' => 'cu_number',
             'managerCuNumber' => 'manager_cu_number',
             'parallelNumber' => 'parallel_number',
+            'checkpointEnabled' => 'checkpoint_enabled',
+            'checkpointMode' => 'checkpoint_mode',
+            'checkpointInterval' => 'checkpoint_interval',
             'logEnabled' => 'log_enabled',
             'obsBucket' => 'obs_bucket',
             'smnTopic' => 'smn_topic',
@@ -239,6 +257,9 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * cuNumber  用户为作业选择的CU数量。默认值为2。
     * managerCuNumber  用户为作业选择的管理节点CU数量，对应为flink jobmanager数量。默认为1。
     * parallelNumber  用户为作业选择的并发量。默认为1。
+    * checkpointEnabled  是否开启作业自动快照功能。 开启：true； 关闭：false； 默认：false
+    * checkpointMode  快照模式。 1：exactly_once（精确一次） 2：at_least_once（至少一次） 默认：1
+    * checkpointInterval  快照间隔，单位为秒。 默认：10 取值范围：1-3600
     * logEnabled  是否开启作业日志。 开启：true； 关闭：false； 默认：false。
     * obsBucket  当log_enabled==true时，用户授权保存日志的OBS路。
     * smnTopic  当作业异常时，向该SMN主题推送告警信息。
@@ -271,6 +292,9 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'cuNumber' => 'setCuNumber',
             'managerCuNumber' => 'setManagerCuNumber',
             'parallelNumber' => 'setParallelNumber',
+            'checkpointEnabled' => 'setCheckpointEnabled',
+            'checkpointMode' => 'setCheckpointMode',
+            'checkpointInterval' => 'setCheckpointInterval',
             'logEnabled' => 'setLogEnabled',
             'obsBucket' => 'setObsBucket',
             'smnTopic' => 'setSmnTopic',
@@ -303,6 +327,9 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * cuNumber  用户为作业选择的CU数量。默认值为2。
     * managerCuNumber  用户为作业选择的管理节点CU数量，对应为flink jobmanager数量。默认为1。
     * parallelNumber  用户为作业选择的并发量。默认为1。
+    * checkpointEnabled  是否开启作业自动快照功能。 开启：true； 关闭：false； 默认：false
+    * checkpointMode  快照模式。 1：exactly_once（精确一次） 2：at_least_once（至少一次） 默认：1
+    * checkpointInterval  快照间隔，单位为秒。 默认：10 取值范围：1-3600
     * logEnabled  是否开启作业日志。 开启：true； 关闭：false； 默认：false。
     * obsBucket  当log_enabled==true时，用户授权保存日志的OBS路。
     * smnTopic  当作业异常时，向该SMN主题推送告警信息。
@@ -335,6 +362,9 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'cuNumber' => 'getCuNumber',
             'managerCuNumber' => 'getManagerCuNumber',
             'parallelNumber' => 'getParallelNumber',
+            'checkpointEnabled' => 'getCheckpointEnabled',
+            'checkpointMode' => 'getCheckpointMode',
+            'checkpointInterval' => 'getCheckpointInterval',
             'logEnabled' => 'getLogEnabled',
             'obsBucket' => 'getObsBucket',
             'smnTopic' => 'getSmnTopic',
@@ -423,6 +453,9 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
         $this->container['cuNumber'] = isset($data['cuNumber']) ? $data['cuNumber'] : null;
         $this->container['managerCuNumber'] = isset($data['managerCuNumber']) ? $data['managerCuNumber'] : null;
         $this->container['parallelNumber'] = isset($data['parallelNumber']) ? $data['parallelNumber'] : null;
+        $this->container['checkpointEnabled'] = isset($data['checkpointEnabled']) ? $data['checkpointEnabled'] : null;
+        $this->container['checkpointMode'] = isset($data['checkpointMode']) ? $data['checkpointMode'] : null;
+        $this->container['checkpointInterval'] = isset($data['checkpointInterval']) ? $data['checkpointInterval'] : null;
         $this->container['logEnabled'] = isset($data['logEnabled']) ? $data['logEnabled'] : null;
         $this->container['obsBucket'] = isset($data['obsBucket']) ? $data['obsBucket'] : null;
         $this->container['smnTopic'] = isset($data['smnTopic']) ? $data['smnTopic'] : null;
@@ -628,6 +661,78 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     public function setParallelNumber($parallelNumber)
     {
         $this->container['parallelNumber'] = $parallelNumber;
+        return $this;
+    }
+
+    /**
+    * Gets checkpointEnabled
+    *  是否开启作业自动快照功能。 开启：true； 关闭：false； 默认：false
+    *
+    * @return bool|null
+    */
+    public function getCheckpointEnabled()
+    {
+        return $this->container['checkpointEnabled'];
+    }
+
+    /**
+    * Sets checkpointEnabled
+    *
+    * @param bool|null $checkpointEnabled 是否开启作业自动快照功能。 开启：true； 关闭：false； 默认：false
+    *
+    * @return $this
+    */
+    public function setCheckpointEnabled($checkpointEnabled)
+    {
+        $this->container['checkpointEnabled'] = $checkpointEnabled;
+        return $this;
+    }
+
+    /**
+    * Gets checkpointMode
+    *  快照模式。 1：exactly_once（精确一次） 2：at_least_once（至少一次） 默认：1
+    *
+    * @return int|null
+    */
+    public function getCheckpointMode()
+    {
+        return $this->container['checkpointMode'];
+    }
+
+    /**
+    * Sets checkpointMode
+    *
+    * @param int|null $checkpointMode 快照模式。 1：exactly_once（精确一次） 2：at_least_once（至少一次） 默认：1
+    *
+    * @return $this
+    */
+    public function setCheckpointMode($checkpointMode)
+    {
+        $this->container['checkpointMode'] = $checkpointMode;
+        return $this;
+    }
+
+    /**
+    * Gets checkpointInterval
+    *  快照间隔，单位为秒。 默认：10 取值范围：1-3600
+    *
+    * @return int|null
+    */
+    public function getCheckpointInterval()
+    {
+        return $this->container['checkpointInterval'];
+    }
+
+    /**
+    * Sets checkpointInterval
+    *
+    * @param int|null $checkpointInterval 快照间隔，单位为秒。 默认：10 取值范围：1-3600
+    *
+    * @return $this
+    */
+    public function setCheckpointInterval($checkpointInterval)
+    {
+        $this->container['checkpointInterval'] = $checkpointInterval;
         return $this;
     }
 

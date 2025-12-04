@@ -34,10 +34,10 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
     * serviceIpv6  **参数解释：** 独享引擎的业务面IPV6地址 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * floatIp  **参数解释：** 独享引擎的管理面IP **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * securityGroupIds  **参数解释：** 独享引擎ECS绑定的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * status  **参数解释：** 独享引擎计费状态（0：正常计费,1：冻结（资源和数据会保留，但租户无法再正常使用云服务）,2：终止（资源和数据将清除）,3：受限（UDS控制用户桶访问权限）） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * runStatus  **参数解释：** '独享引擎运行状态（0：创建中,1：运行中,2：删除中,3：已删除,4：创建失败,5：已冻结,6：异常,7：更新中,8：更新失败）' **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * accessStatus  **参数解释：** 独享引擎接入状态（0：未接入，1：已接入） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * upgradable  **参数解释：** 独享引擎是否可升级（0：不可升级，1：可升级） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * status  **参数解释：** 独享引擎计费状态标识，用于指示独享引擎当前的计费使用状态 **约束限制：** 不涉及 **取值范围：**  - 0：正常计费  - 1：冻结，资源和数据会保留，但租户无法再正常使用云服务  - 2：终止，资源和数据将清除 **默认取值：** 不涉及
+    * runStatus  **参数解释：** 独享引擎运行状态标识，用于反映独享引擎当前的运行生命周期状态 **约束限制：** 不涉及 **取值范围：**  - 0：创建中  - 1：运行中  - 2：删除中  - 3：已删除  - 4：创建失败  - 5：已冻结  - 6：异常  - 7：更新中  - 8：更新失败 **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 独享引擎接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
+    * upgradable  **参数解释：** 独享引擎是否可升级（0：不可升级，1：可升级） **约束限制：** 不涉及 **取值范围：**  - 0: 不可升级  - 1: 可升级  **默认取值：** 不涉及
     * cloudServiceType  **参数解释：** 云服务代码 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * resourceType  **参数解释：** 云服务资源类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * resourceSpecCode  **参数解释：** 云服务资源代码 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -94,10 +94,10 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
     * serviceIpv6  **参数解释：** 独享引擎的业务面IPV6地址 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * floatIp  **参数解释：** 独享引擎的管理面IP **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * securityGroupIds  **参数解释：** 独享引擎ECS绑定的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * status  **参数解释：** 独享引擎计费状态（0：正常计费,1：冻结（资源和数据会保留，但租户无法再正常使用云服务）,2：终止（资源和数据将清除）,3：受限（UDS控制用户桶访问权限）） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * runStatus  **参数解释：** '独享引擎运行状态（0：创建中,1：运行中,2：删除中,3：已删除,4：创建失败,5：已冻结,6：异常,7：更新中,8：更新失败）' **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * accessStatus  **参数解释：** 独享引擎接入状态（0：未接入，1：已接入） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * upgradable  **参数解释：** 独享引擎是否可升级（0：不可升级，1：可升级） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * status  **参数解释：** 独享引擎计费状态标识，用于指示独享引擎当前的计费使用状态 **约束限制：** 不涉及 **取值范围：**  - 0：正常计费  - 1：冻结，资源和数据会保留，但租户无法再正常使用云服务  - 2：终止，资源和数据将清除 **默认取值：** 不涉及
+    * runStatus  **参数解释：** 独享引擎运行状态标识，用于反映独享引擎当前的运行生命周期状态 **约束限制：** 不涉及 **取值范围：**  - 0：创建中  - 1：运行中  - 2：删除中  - 3：已删除  - 4：创建失败  - 5：已冻结  - 6：异常  - 7：更新中  - 8：更新失败 **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 独享引擎接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
+    * upgradable  **参数解释：** 独享引擎是否可升级（0：不可升级，1：可升级） **约束限制：** 不涉及 **取值范围：**  - 0: 不可升级  - 1: 可升级  **默认取值：** 不涉及
     * cloudServiceType  **参数解释：** 云服务代码 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * resourceType  **参数解释：** 云服务资源类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * resourceSpecCode  **参数解释：** 云服务资源代码 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -175,10 +175,10 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
     * serviceIpv6  **参数解释：** 独享引擎的业务面IPV6地址 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * floatIp  **参数解释：** 独享引擎的管理面IP **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * securityGroupIds  **参数解释：** 独享引擎ECS绑定的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * status  **参数解释：** 独享引擎计费状态（0：正常计费,1：冻结（资源和数据会保留，但租户无法再正常使用云服务）,2：终止（资源和数据将清除）,3：受限（UDS控制用户桶访问权限）） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * runStatus  **参数解释：** '独享引擎运行状态（0：创建中,1：运行中,2：删除中,3：已删除,4：创建失败,5：已冻结,6：异常,7：更新中,8：更新失败）' **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * accessStatus  **参数解释：** 独享引擎接入状态（0：未接入，1：已接入） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * upgradable  **参数解释：** 独享引擎是否可升级（0：不可升级，1：可升级） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * status  **参数解释：** 独享引擎计费状态标识，用于指示独享引擎当前的计费使用状态 **约束限制：** 不涉及 **取值范围：**  - 0：正常计费  - 1：冻结，资源和数据会保留，但租户无法再正常使用云服务  - 2：终止，资源和数据将清除 **默认取值：** 不涉及
+    * runStatus  **参数解释：** 独享引擎运行状态标识，用于反映独享引擎当前的运行生命周期状态 **约束限制：** 不涉及 **取值范围：**  - 0：创建中  - 1：运行中  - 2：删除中  - 3：已删除  - 4：创建失败  - 5：已冻结  - 6：异常  - 7：更新中  - 8：更新失败 **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 独享引擎接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
+    * upgradable  **参数解释：** 独享引擎是否可升级（0：不可升级，1：可升级） **约束限制：** 不涉及 **取值范围：**  - 0: 不可升级  - 1: 可升级  **默认取值：** 不涉及
     * cloudServiceType  **参数解释：** 云服务代码 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * resourceType  **参数解释：** 云服务资源类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * resourceSpecCode  **参数解释：** 云服务资源代码 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -235,10 +235,10 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
     * serviceIpv6  **参数解释：** 独享引擎的业务面IPV6地址 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * floatIp  **参数解释：** 独享引擎的管理面IP **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * securityGroupIds  **参数解释：** 独享引擎ECS绑定的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * status  **参数解释：** 独享引擎计费状态（0：正常计费,1：冻结（资源和数据会保留，但租户无法再正常使用云服务）,2：终止（资源和数据将清除）,3：受限（UDS控制用户桶访问权限）） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * runStatus  **参数解释：** '独享引擎运行状态（0：创建中,1：运行中,2：删除中,3：已删除,4：创建失败,5：已冻结,6：异常,7：更新中,8：更新失败）' **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * accessStatus  **参数解释：** 独享引擎接入状态（0：未接入，1：已接入） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * upgradable  **参数解释：** 独享引擎是否可升级（0：不可升级，1：可升级） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * status  **参数解释：** 独享引擎计费状态标识，用于指示独享引擎当前的计费使用状态 **约束限制：** 不涉及 **取值范围：**  - 0：正常计费  - 1：冻结，资源和数据会保留，但租户无法再正常使用云服务  - 2：终止，资源和数据将清除 **默认取值：** 不涉及
+    * runStatus  **参数解释：** 独享引擎运行状态标识，用于反映独享引擎当前的运行生命周期状态 **约束限制：** 不涉及 **取值范围：**  - 0：创建中  - 1：运行中  - 2：删除中  - 3：已删除  - 4：创建失败  - 5：已冻结  - 6：异常  - 7：更新中  - 8：更新失败 **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 独享引擎接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
+    * upgradable  **参数解释：** 独享引擎是否可升级（0：不可升级，1：可升级） **约束限制：** 不涉及 **取值范围：**  - 0: 不可升级  - 1: 可升级  **默认取值：** 不涉及
     * cloudServiceType  **参数解释：** 云服务代码 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * resourceType  **参数解释：** 云服务资源类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * resourceSpecCode  **参数解释：** 云服务资源代码 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -295,10 +295,10 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
     * serviceIpv6  **参数解释：** 独享引擎的业务面IPV6地址 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * floatIp  **参数解释：** 独享引擎的管理面IP **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * securityGroupIds  **参数解释：** 独享引擎ECS绑定的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * status  **参数解释：** 独享引擎计费状态（0：正常计费,1：冻结（资源和数据会保留，但租户无法再正常使用云服务）,2：终止（资源和数据将清除）,3：受限（UDS控制用户桶访问权限）） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * runStatus  **参数解释：** '独享引擎运行状态（0：创建中,1：运行中,2：删除中,3：已删除,4：创建失败,5：已冻结,6：异常,7：更新中,8：更新失败）' **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * accessStatus  **参数解释：** 独享引擎接入状态（0：未接入，1：已接入） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * upgradable  **参数解释：** 独享引擎是否可升级（0：不可升级，1：可升级） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * status  **参数解释：** 独享引擎计费状态标识，用于指示独享引擎当前的计费使用状态 **约束限制：** 不涉及 **取值范围：**  - 0：正常计费  - 1：冻结，资源和数据会保留，但租户无法再正常使用云服务  - 2：终止，资源和数据将清除 **默认取值：** 不涉及
+    * runStatus  **参数解释：** 独享引擎运行状态标识，用于反映独享引擎当前的运行生命周期状态 **约束限制：** 不涉及 **取值范围：**  - 0：创建中  - 1：运行中  - 2：删除中  - 3：已删除  - 4：创建失败  - 5：已冻结  - 6：异常  - 7：更新中  - 8：更新失败 **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 独享引擎接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
+    * upgradable  **参数解释：** 独享引擎是否可升级（0：不可升级，1：可升级） **约束限制：** 不涉及 **取值范围：**  - 0: 不可升级  - 1: 可升级  **默认取值：** 不涉及
     * cloudServiceType  **参数解释：** 云服务代码 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * resourceType  **参数解释：** 云服务资源类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * resourceSpecCode  **参数解释：** 云服务资源代码 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -380,7 +380,83 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_0 = 0;
+    const STATUS_1 = 1;
+    const STATUS_2 = 2;
+    const RUN_STATUS_0 = 0;
+    const RUN_STATUS_1 = 1;
+    const RUN_STATUS_2 = 2;
+    const RUN_STATUS_3 = 3;
+    const RUN_STATUS_4 = 4;
+    const RUN_STATUS_5 = 5;
+    const RUN_STATUS_6 = 6;
+    const RUN_STATUS_7 = 7;
+    const RUN_STATUS_8 = 8;
+    const ACCESS_STATUS_0 = 0;
+    const ACCESS_STATUS_1 = 1;
+    const UPGRADABLE_0 = 0;
+    const UPGRADABLE_1 = 1;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_0,
+            self::STATUS_1,
+            self::STATUS_2,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getRunStatusAllowableValues()
+    {
+        return [
+            self::RUN_STATUS_0,
+            self::RUN_STATUS_1,
+            self::RUN_STATUS_2,
+            self::RUN_STATUS_3,
+            self::RUN_STATUS_4,
+            self::RUN_STATUS_5,
+            self::RUN_STATUS_6,
+            self::RUN_STATUS_7,
+            self::RUN_STATUS_8,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAccessStatusAllowableValues()
+    {
+        return [
+            self::ACCESS_STATUS_0,
+            self::ACCESS_STATUS_1,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getUpgradableAllowableValues()
+    {
+        return [
+            self::UPGRADABLE_0,
+            self::UPGRADABLE_1,
+        ];
+    }
 
 
     /**
@@ -434,6 +510,38 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getRunStatusAllowableValues();
+                if (!is_null($this->container['runStatus']) && !in_array($this->container['runStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'runStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getAccessStatusAllowableValues();
+                if (!is_null($this->container['accessStatus']) && !in_array($this->container['accessStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'accessStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getUpgradableAllowableValues();
+                if (!is_null($this->container['upgradable']) && !in_array($this->container['upgradable'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'upgradable', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -762,7 +870,7 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释：** 独享引擎计费状态（0：正常计费,1：冻结（资源和数据会保留，但租户无法再正常使用云服务）,2：终止（资源和数据将清除）,3：受限（UDS控制用户桶访问权限）） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  **参数解释：** 独享引擎计费状态标识，用于指示独享引擎当前的计费使用状态 **约束限制：** 不涉及 **取值范围：**  - 0：正常计费  - 1：冻结，资源和数据会保留，但租户无法再正常使用云服务  - 2：终止，资源和数据将清除 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -774,7 +882,7 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status **参数解释：** 独享引擎计费状态（0：正常计费,1：冻结（资源和数据会保留，但租户无法再正常使用云服务）,2：终止（资源和数据将清除）,3：受限（UDS控制用户桶访问权限）） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param int|null $status **参数解释：** 独享引擎计费状态标识，用于指示独享引擎当前的计费使用状态 **约束限制：** 不涉及 **取值范围：**  - 0：正常计费  - 1：冻结，资源和数据会保留，但租户无法再正常使用云服务  - 2：终止，资源和数据将清除 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -786,7 +894,7 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets runStatus
-    *  **参数解释：** '独享引擎运行状态（0：创建中,1：运行中,2：删除中,3：已删除,4：创建失败,5：已冻结,6：异常,7：更新中,8：更新失败）' **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  **参数解释：** 独享引擎运行状态标识，用于反映独享引擎当前的运行生命周期状态 **约束限制：** 不涉及 **取值范围：**  - 0：创建中  - 1：运行中  - 2：删除中  - 3：已删除  - 4：创建失败  - 5：已冻结  - 6：异常  - 7：更新中  - 8：更新失败 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -798,7 +906,7 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets runStatus
     *
-    * @param int|null $runStatus **参数解释：** '独享引擎运行状态（0：创建中,1：运行中,2：删除中,3：已删除,4：创建失败,5：已冻结,6：异常,7：更新中,8：更新失败）' **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param int|null $runStatus **参数解释：** 独享引擎运行状态标识，用于反映独享引擎当前的运行生命周期状态 **约束限制：** 不涉及 **取值范围：**  - 0：创建中  - 1：运行中  - 2：删除中  - 3：已删除  - 4：创建失败  - 5：已冻结  - 6：异常  - 7：更新中  - 8：更新失败 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -810,7 +918,7 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessStatus
-    *  **参数解释：** 独享引擎接入状态（0：未接入，1：已接入） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  **参数解释：** 独享引擎接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -822,7 +930,7 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets accessStatus
     *
-    * @param int|null $accessStatus **参数解释：** 独享引擎接入状态（0：未接入，1：已接入） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param int|null $accessStatus **参数解释：** 独享引擎接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -834,7 +942,7 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets upgradable
-    *  **参数解释：** 独享引擎是否可升级（0：不可升级，1：可升级） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  **参数解释：** 独享引擎是否可升级（0：不可升级，1：可升级） **约束限制：** 不涉及 **取值范围：**  - 0: 不可升级  - 1: 可升级  **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -846,7 +954,7 @@ class UpdatePremiumInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets upgradable
     *
-    * @param int|null $upgradable **参数解释：** 独享引擎是否可升级（0：不可升级，1：可升级） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param int|null $upgradable **参数解释：** 独享引擎是否可升级（0：不可升级，1：可升级） **约束限制：** 不涉及 **取值范围：**  - 0: 不可升级  - 1: 可升级  **默认取值：** 不涉及
     *
     * @return $this
     */

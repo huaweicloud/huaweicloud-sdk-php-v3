@@ -21,7 +21,7 @@ class UpdateValueListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  引用表名称，2-32位字符串组成
-    * type  引用表类型，参见枚举列表
+    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
     * values  引用表的值
     * description  引用表描述，最长128字符
     *
@@ -37,7 +37,7 @@ class UpdateValueListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  引用表名称，2-32位字符串组成
-    * type  引用表类型，参见枚举列表
+    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
     * values  引用表的值
     * description  引用表描述，最长128字符
     *
@@ -74,7 +74,7 @@ class UpdateValueListRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  引用表名称，2-32位字符串组成
-    * type  引用表类型，参见枚举列表
+    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
     * values  引用表的值
     * description  引用表描述，最长128字符
     *
@@ -90,7 +90,7 @@ class UpdateValueListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  引用表名称，2-32位字符串组成
-    * type  引用表类型，参见枚举列表
+    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
     * values  引用表的值
     * description  引用表描述，最长128字符
     *
@@ -106,7 +106,7 @@ class UpdateValueListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  引用表名称，2-32位字符串组成
-    * type  引用表类型，参见枚举列表
+    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
     * values  引用表的值
     * description  引用表描述，最长128字符
     *
@@ -294,7 +294,7 @@ class UpdateValueListRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  引用表类型，参见枚举列表
+    *  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -306,7 +306,7 @@ class UpdateValueListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 引用表类型，参见枚举列表
+    * @param string $type **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
     *
     * @return $this
     */

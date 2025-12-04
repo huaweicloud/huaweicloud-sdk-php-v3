@@ -41,7 +41,7 @@ class ShowInstanceExtendProductInfoRespDetail implements ModelInterface, ArrayAc
             'partitionNum' => 'string',
             'productId' => 'string',
             'specCode' => 'string',
-            'io' => '\HuaweiCloud\SDK\Kafka\V2\Model\ListProductsRespIo[]',
+            'io' => '\HuaweiCloud\SDK\Kafka\V2\Model\ShowInstanceExtendProductInfoRespIo[]',
             'bandwidth' => 'string',
             'recommendMaxConsGroups' => 'string',
             'unavailableZones' => 'string[]',
@@ -417,7 +417,7 @@ class ShowInstanceExtendProductInfoRespDetail implements ModelInterface, ArrayAc
     * Gets io
     *  IO信息。
     *
-    * @return \HuaweiCloud\SDK\Kafka\V2\Model\ListProductsRespIo[]|null
+    * @return \HuaweiCloud\SDK\Kafka\V2\Model\ShowInstanceExtendProductInfoRespIo[]|null
     */
     public function getIo()
     {
@@ -427,7 +427,7 @@ class ShowInstanceExtendProductInfoRespDetail implements ModelInterface, ArrayAc
     /**
     * Sets io
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ListProductsRespIo[]|null $io IO信息。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowInstanceExtendProductInfoRespIo[]|null $io IO信息。
     *
     * @return $this
     */

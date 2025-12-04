@@ -30,7 +30,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
     * ipv6Enable  是否开启IPv6防护，仅专业版和企业版支持IPv6防护。   - true：开启IPv6防护   - false：关闭IPV6防护
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    * paidType  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     * blockPage  blockPage
     * trafficMark  trafficMark
     * flag  flag
@@ -74,7 +74,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
     * ipv6Enable  是否开启IPv6防护，仅专业版和企业版支持IPv6防护。   - true：开启IPv6防护   - false：关闭IPV6防护
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    * paidType  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     * blockPage  blockPage
     * trafficMark  trafficMark
     * flag  flag
@@ -139,7 +139,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
     * ipv6Enable  是否开启IPv6防护，仅专业版和企业版支持IPv6防护。   - true：开启IPv6防护   - false：关闭IPV6防护
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    * paidType  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     * blockPage  blockPage
     * trafficMark  trafficMark
     * flag  flag
@@ -183,7 +183,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
     * ipv6Enable  是否开启IPv6防护，仅专业版和企业版支持IPv6防护。   - true：开启IPv6防护   - false：关闭IPV6防护
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    * paidType  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     * blockPage  blockPage
     * trafficMark  trafficMark
     * flag  flag
@@ -227,7 +227,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
     * ipv6Enable  是否开启IPv6防护，仅专业版和企业版支持IPv6防护。   - true：开启IPv6防护   - false：关闭IPV6防护
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    * paidType  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     * blockPage  blockPage
     * trafficMark  trafficMark
     * flag  flag
@@ -309,6 +309,8 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
     const CIPHER_CIPHER_5 = 'cipher_5';
     const CIPHER_CIPHER_6 = 'cipher_6';
     const CIPHER_CIPHER_DEFAULT = 'cipher_default';
+    const PAID_TYPE_PRE_PAID = 'prePaid';
+    const PAID_TYPE_POST_PAID = 'postPaid';
     
 
     /**
@@ -340,6 +342,19 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
             self::CIPHER_CIPHER_5,
             self::CIPHER_CIPHER_6,
             self::CIPHER_CIPHER_DEFAULT,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPaidTypeAllowableValues()
+    {
+        return [
+            self::PAID_TYPE_PRE_PAID,
+            self::PAID_TYPE_POST_PAID,
         ];
     }
 
@@ -399,6 +414,14 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['cipher']) && !in_array($this->container['cipher'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'cipher', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getPaidTypeAllowableValues();
+                if (!is_null($this->container['paidType']) && !in_array($this->container['paidType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'paidType', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -659,7 +682,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets paidType
-    *  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    *  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     *
     * @return string|null
     */
@@ -671,7 +694,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets paidType
     *
-    * @param string|null $paidType 套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    * @param string|null $paidType **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     *
     * @return $this
     */

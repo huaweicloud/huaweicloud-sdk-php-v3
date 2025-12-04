@@ -20,9 +20,9 @@ class ExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ioSpec  存储IO规格。
+    * ioSpec  **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
     * availableZones  有可用资源的可用区列表。
-    * type  IO类型。
+    * type  **参数解释**： IO类型。 **取值范围**： evs
     * unavailableZones  资源售罄的可用区列表。
     *
     * @var string[]
@@ -36,9 +36,9 @@ class ExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ioSpec  存储IO规格。
+    * ioSpec  **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
     * availableZones  有可用资源的可用区列表。
-    * type  IO类型。
+    * type  **参数解释**： IO类型。 **取值范围**： evs
     * unavailableZones  资源售罄的可用区列表。
     *
     * @var string[]
@@ -73,9 +73,9 @@ class ExtendProductIosEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ioSpec  存储IO规格。
+    * ioSpec  **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
     * availableZones  有可用资源的可用区列表。
-    * type  IO类型。
+    * type  **参数解释**： IO类型。 **取值范围**： evs
     * unavailableZones  资源售罄的可用区列表。
     *
     * @var string[]
@@ -89,9 +89,9 @@ class ExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ioSpec  存储IO规格。
+    * ioSpec  **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
     * availableZones  有可用资源的可用区列表。
-    * type  IO类型。
+    * type  **参数解释**： IO类型。 **取值范围**： evs
     * unavailableZones  资源售罄的可用区列表。
     *
     * @var string[]
@@ -105,9 +105,9 @@ class ExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ioSpec  存储IO规格。
+    * ioSpec  **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
     * availableZones  有可用资源的可用区列表。
-    * type  IO类型。
+    * type  **参数解释**： IO类型。 **取值范围**： evs
     * unavailableZones  资源售罄的可用区列表。
     *
     * @var string[]
@@ -207,7 +207,7 @@ class ExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets ioSpec
-    *  存储IO规格。
+    *  **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class ExtendProductIosEntity implements ModelInterface, ArrayAccess
     /**
     * Sets ioSpec
     *
-    * @param string|null $ioSpec 存储IO规格。
+    * @param string|null $ioSpec **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class ExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  IO类型。
+    *  **参数解释**： IO类型。 **取值范围**： evs
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class ExtendProductIosEntity implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type IO类型。
+    * @param string|null $type **参数解释**： IO类型。 **取值范围**： evs
     *
     * @return $this
     */

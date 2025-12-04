@@ -20,10 +20,10 @@ class ShowCoordinatorsRespCoordinators implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  消费组ID。
-    * id  对应协调器的broker id。
-    * host  对应协调器的地址。
-    * port  端口号。
+    * groupId  **参数解释**： 消费组ID。 **取值范围**： 不涉及。
+    * id  **参数解释**： 对应协调器的broker id。 **取值范围**： 不涉及。
+    * host  **参数解释**： 对应协调器的地址。 **取值范围**： 不涉及。
+    * port  **参数解释**： 端口号。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ShowCoordinatorsRespCoordinators implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  消费组ID。
-    * id  对应协调器的broker id。
-    * host  对应协调器的地址。
-    * port  端口号。
+    * groupId  **参数解释**： 消费组ID。 **取值范围**： 不涉及。
+    * id  **参数解释**： 对应协调器的broker id。 **取值范围**： 不涉及。
+    * host  **参数解释**： 对应协调器的地址。 **取值范围**： 不涉及。
+    * port  **参数解释**： 端口号。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ShowCoordinatorsRespCoordinators implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  消费组ID。
-    * id  对应协调器的broker id。
-    * host  对应协调器的地址。
-    * port  端口号。
+    * groupId  **参数解释**： 消费组ID。 **取值范围**： 不涉及。
+    * id  **参数解释**： 对应协调器的broker id。 **取值范围**： 不涉及。
+    * host  **参数解释**： 对应协调器的地址。 **取值范围**： 不涉及。
+    * port  **参数解释**： 端口号。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ShowCoordinatorsRespCoordinators implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  消费组ID。
-    * id  对应协调器的broker id。
-    * host  对应协调器的地址。
-    * port  端口号。
+    * groupId  **参数解释**： 消费组ID。 **取值范围**： 不涉及。
+    * id  **参数解释**： 对应协调器的broker id。 **取值范围**： 不涉及。
+    * host  **参数解释**： 对应协调器的地址。 **取值范围**： 不涉及。
+    * port  **参数解释**： 端口号。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ShowCoordinatorsRespCoordinators implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  消费组ID。
-    * id  对应协调器的broker id。
-    * host  对应协调器的地址。
-    * port  端口号。
+    * groupId  **参数解释**： 消费组ID。 **取值范围**： 不涉及。
+    * id  **参数解释**： 对应协调器的broker id。 **取值范围**： 不涉及。
+    * host  **参数解释**： 对应协调器的地址。 **取值范围**： 不涉及。
+    * port  **参数解释**： 端口号。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class ShowCoordinatorsRespCoordinators implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  消费组ID。
+    *  **参数解释**： 消费组ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class ShowCoordinatorsRespCoordinators implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 消费组ID。
+    * @param string|null $groupId **参数解释**： 消费组ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class ShowCoordinatorsRespCoordinators implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  对应协调器的broker id。
+    *  **参数解释**： 对应协调器的broker id。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -243,7 +243,7 @@ class ShowCoordinatorsRespCoordinators implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 对应协调器的broker id。
+    * @param int|null $id **参数解释**： 对应协调器的broker id。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class ShowCoordinatorsRespCoordinators implements ModelInterface, ArrayAccess
 
     /**
     * Gets host
-    *  对应协调器的地址。
+    *  **参数解释**： 对应协调器的地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class ShowCoordinatorsRespCoordinators implements ModelInterface, ArrayAccess
     /**
     * Sets host
     *
-    * @param string|null $host 对应协调器的地址。
+    * @param string|null $host **参数解释**： 对应协调器的地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class ShowCoordinatorsRespCoordinators implements ModelInterface, ArrayAccess
 
     /**
     * Gets port
-    *  端口号。
+    *  **参数解释**： 端口号。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class ShowCoordinatorsRespCoordinators implements ModelInterface, ArrayAccess
     /**
     * Sets port
     *
-    * @param int|null $port 端口号。
+    * @param int|null $port **参数解释**： 端口号。 **取值范围**： 不涉及。
     *
     * @return $this
     */

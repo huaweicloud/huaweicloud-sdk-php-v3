@@ -21,7 +21,7 @@ class CustomPage implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * statusCode  返回状态码
-    * contentType  “自定义”告警页面内容类型，可选择text/html、text/xml和application/json三种类型
+    * contentType  **参数解释：** “自定义”告警页面内容类型 **约束限制：** 不涉及 **取值范围：**  - text/html  - text/xml  - application/json  **默认取值：** 不涉及
     * content  根据选择的“页面类型”配置对应的页面内容，具体示例可以参考“Web应用防火墙 WAF”用户手册
     *
     * @var string[]
@@ -35,7 +35,7 @@ class CustomPage implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * statusCode  返回状态码
-    * contentType  “自定义”告警页面内容类型，可选择text/html、text/xml和application/json三种类型
+    * contentType  **参数解释：** “自定义”告警页面内容类型 **约束限制：** 不涉及 **取值范围：**  - text/html  - text/xml  - application/json  **默认取值：** 不涉及
     * content  根据选择的“页面类型”配置对应的页面内容，具体示例可以参考“Web应用防火墙 WAF”用户手册
     *
     * @var string[]
@@ -70,7 +70,7 @@ class CustomPage implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * statusCode  返回状态码
-    * contentType  “自定义”告警页面内容类型，可选择text/html、text/xml和application/json三种类型
+    * contentType  **参数解释：** “自定义”告警页面内容类型 **约束限制：** 不涉及 **取值范围：**  - text/html  - text/xml  - application/json  **默认取值：** 不涉及
     * content  根据选择的“页面类型”配置对应的页面内容，具体示例可以参考“Web应用防火墙 WAF”用户手册
     *
     * @var string[]
@@ -84,7 +84,7 @@ class CustomPage implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * statusCode  返回状态码
-    * contentType  “自定义”告警页面内容类型，可选择text/html、text/xml和application/json三种类型
+    * contentType  **参数解释：** “自定义”告警页面内容类型 **约束限制：** 不涉及 **取值范围：**  - text/html  - text/xml  - application/json  **默认取值：** 不涉及
     * content  根据选择的“页面类型”配置对应的页面内容，具体示例可以参考“Web应用防火墙 WAF”用户手册
     *
     * @var string[]
@@ -98,7 +98,7 @@ class CustomPage implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * statusCode  返回状态码
-    * contentType  “自定义”告警页面内容类型，可选择text/html、text/xml和application/json三种类型
+    * contentType  **参数解释：** “自定义”告警页面内容类型 **约束限制：** 不涉及 **取值范围：**  - text/html  - text/xml  - application/json  **默认取值：** 不涉及
     * content  根据选择的“页面类型”配置对应的页面内容，具体示例可以参考“Web应用防火墙 WAF”用户手册
     *
     * @var string[]
@@ -149,7 +149,24 @@ class CustomPage implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const CONTENT_TYPE_TEXT_HTML = 'text/html';
+    const CONTENT_TYPE_TEXT_XML = 'text/xml';
+    const CONTENT_TYPE_APPLICATION_JSON = 'application/json';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getContentTypeAllowableValues()
+    {
+        return [
+            self::CONTENT_TYPE_TEXT_HTML,
+            self::CONTENT_TYPE_TEXT_XML,
+            self::CONTENT_TYPE_APPLICATION_JSON,
+        ];
+    }
 
 
     /**
@@ -186,6 +203,14 @@ class CustomPage implements ModelInterface, ArrayAccess
         if ($this->container['contentType'] === null) {
             $invalidProperties[] = "'contentType' can't be null";
         }
+            $allowedValues = $this->getContentTypeAllowableValues();
+                if (!is_null($this->container['contentType']) && !in_array($this->container['contentType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'contentType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['content'] === null) {
             $invalidProperties[] = "'content' can't be null";
         }
@@ -229,7 +254,7 @@ class CustomPage implements ModelInterface, ArrayAccess
 
     /**
     * Gets contentType
-    *  “自定义”告警页面内容类型，可选择text/html、text/xml和application/json三种类型
+    *  **参数解释：** “自定义”告警页面内容类型 **约束限制：** 不涉及 **取值范围：**  - text/html  - text/xml  - application/json  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -241,7 +266,7 @@ class CustomPage implements ModelInterface, ArrayAccess
     /**
     * Sets contentType
     *
-    * @param string $contentType “自定义”告警页面内容类型，可选择text/html、text/xml和application/json三种类型
+    * @param string $contentType **参数解释：** “自定义”告警页面内容类型 **约束限制：** 不涉及 **取值范围：**  - text/html  - text/xml  - application/json  **默认取值：** 不涉及
     *
     * @return $this
     */

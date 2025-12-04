@@ -21,7 +21,7 @@ class ShowCoordinatorsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * coordinators  所有消费组对应的协调器列表。
+    * coordinators  **参数解释**： 所有消费组对应的协调器列表。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowCoordinatorsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * coordinators  所有消费组对应的协调器列表。
+    * coordinators  **参数解释**： 所有消费组对应的协调器列表。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowCoordinatorsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * coordinators  所有消费组对应的协调器列表。
+    * coordinators  **参数解释**： 所有消费组对应的协调器列表。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowCoordinatorsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * coordinators  所有消费组对应的协调器列表。
+    * coordinators  **参数解释**： 所有消费组对应的协调器列表。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowCoordinatorsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * coordinators  所有消费组对应的协调器列表。
+    * coordinators  **参数解释**： 所有消费组对应的协调器列表。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowCoordinatorsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets coordinators
-    *  所有消费组对应的协调器列表。
+    *  **参数解释**： 所有消费组对应的协调器列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ShowCoordinatorsRespCoordinators[]|null
     */
@@ -187,7 +187,7 @@ class ShowCoordinatorsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets coordinators
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowCoordinatorsRespCoordinators[]|null $coordinators 所有消费组对应的协调器列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowCoordinatorsRespCoordinators[]|null $coordinators **参数解释**： 所有消费组对应的协调器列表。
     *
     * @return $this
     */

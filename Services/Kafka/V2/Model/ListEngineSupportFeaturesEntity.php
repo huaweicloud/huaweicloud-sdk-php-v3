@@ -20,7 +20,7 @@ class ListEngineSupportFeaturesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  功能名称。
+    * name  **参数解释**： 功能名称。 **取值范围**： 不涉及。
     * properties  properties
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ListEngineSupportFeaturesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  功能名称。
+    * name  **参数解释**： 功能名称。 **取值范围**： 不涉及。
     * properties  properties
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ListEngineSupportFeaturesEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  功能名称。
+    * name  **参数解释**： 功能名称。 **取值范围**： 不涉及。
     * properties  properties
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ListEngineSupportFeaturesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  功能名称。
+    * name  **参数解释**： 功能名称。 **取值范围**： 不涉及。
     * properties  properties
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ListEngineSupportFeaturesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  功能名称。
+    * name  **参数解释**： 功能名称。 **取值范围**： 不涉及。
     * properties  properties
     *
     * @var string[]
@@ -185,7 +185,7 @@ class ListEngineSupportFeaturesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  功能名称。
+    *  **参数解释**： 功能名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class ListEngineSupportFeaturesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 功能名称。
+    * @param string|null $name **参数解释**： 功能名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */

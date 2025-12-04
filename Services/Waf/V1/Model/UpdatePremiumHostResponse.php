@@ -43,8 +43,8 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
     * certificateid  https证书id
     * certificatename  证书名称
-    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-    * accessStatus  域名接入状态，0表示未接入，1表示已接入
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * lbAlgorithm  LB负载均衡，默认轮询，不支持修改
     * blockPage  blockPage
@@ -113,8 +113,8 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
     * certificateid  https证书id
     * certificatename  证书名称
-    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-    * accessStatus  域名接入状态，0表示未接入，1表示已接入
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * lbAlgorithm  LB负载均衡，默认轮询，不支持修改
     * blockPage  blockPage
@@ -204,8 +204,8 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
     * certificateid  https证书id
     * certificatename  证书名称
-    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-    * accessStatus  域名接入状态，0表示未接入，1表示已接入
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * lbAlgorithm  LB负载均衡，默认轮询，不支持修改
     * blockPage  blockPage
@@ -274,8 +274,8 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
     * certificateid  https证书id
     * certificatename  证书名称
-    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-    * accessStatus  域名接入状态，0表示未接入，1表示已接入
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * lbAlgorithm  LB负载均衡，默认轮询，不支持修改
     * blockPage  blockPage
@@ -344,8 +344,8 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
     * certificateid  https证书id
     * certificatename  证书名称
-    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-    * accessStatus  域名接入状态，0表示未接入，1表示已接入
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * lbAlgorithm  LB负载均衡，默认轮询，不支持修改
     * blockPage  blockPage
@@ -440,6 +440,11 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
     const CIPHER_CIPHER_5 = 'cipher_5';
     const CIPHER_CIPHER_6 = 'cipher_6';
     const CIPHER_CIPHER_DEFAULT = 'cipher_default';
+    const PROTECT_STATUS_MINUS_1 = -1;
+    const PROTECT_STATUS_0 = 0;
+    const PROTECT_STATUS_1 = 1;
+    const ACCESS_STATUS_0 = 0;
+    const ACCESS_STATUS_1 = 1;
     
 
     /**
@@ -471,6 +476,33 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
             self::CIPHER_CIPHER_5,
             self::CIPHER_CIPHER_6,
             self::CIPHER_CIPHER_DEFAULT,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getProtectStatusAllowableValues()
+    {
+        return [
+            self::PROTECT_STATUS_MINUS_1,
+            self::PROTECT_STATUS_0,
+            self::PROTECT_STATUS_1,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAccessStatusAllowableValues()
+    {
+        return [
+            self::ACCESS_STATUS_0,
+            self::ACCESS_STATUS_1,
         ];
     }
 
@@ -543,6 +575,22 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['cipher']) && !in_array($this->container['cipher'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'cipher', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getProtectStatusAllowableValues();
+                if (!is_null($this->container['protectStatus']) && !in_array($this->container['protectStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'protectStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getAccessStatusAllowableValues();
+                if (!is_null($this->container['accessStatus']) && !in_array($this->container['accessStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'accessStatus', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -1091,7 +1139,7 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    *  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -1103,7 +1151,7 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param int|null $protectStatus 域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * @param int|null $protectStatus **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -1115,7 +1163,7 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessStatus
-    *  域名接入状态，0表示未接入，1表示已接入
+    *  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -1127,7 +1175,7 @@ class UpdatePremiumHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets accessStatus
     *
-    * @param int|null $accessStatus 域名接入状态，0表示未接入，1表示已接入
+    * @param int|null $accessStatus **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     *
     * @return $this
     */

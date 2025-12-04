@@ -26,7 +26,7 @@ class ShootScript implements ModelInterface, ArrayAccess
     * audioDriveActionConfig  语音驱动时的动作配置。
     * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 只支持分身数字人视频制作  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。  > * 音频文件需要存放在华为云OBS
     * backgroundConfig  背景配置。
-    * layerConfig  图层配置。
+    * layerConfig  图层配置。 > * 视频编码格式采用VP8且数字人模型和输出视频的分辨率不一致时，该参数必须携带
     * audioConfig  audioConfig
     *
     * @var string[]
@@ -50,7 +50,7 @@ class ShootScript implements ModelInterface, ArrayAccess
     * audioDriveActionConfig  语音驱动时的动作配置。
     * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 只支持分身数字人视频制作  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。  > * 音频文件需要存放在华为云OBS
     * backgroundConfig  背景配置。
-    * layerConfig  图层配置。
+    * layerConfig  图层配置。 > * 视频编码格式采用VP8且数字人模型和输出视频的分辨率不一致时，该参数必须携带
     * audioConfig  audioConfig
     *
     * @var string[]
@@ -95,7 +95,7 @@ class ShootScript implements ModelInterface, ArrayAccess
     * audioDriveActionConfig  语音驱动时的动作配置。
     * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 只支持分身数字人视频制作  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。  > * 音频文件需要存放在华为云OBS
     * backgroundConfig  背景配置。
-    * layerConfig  图层配置。
+    * layerConfig  图层配置。 > * 视频编码格式采用VP8且数字人模型和输出视频的分辨率不一致时，该参数必须携带
     * audioConfig  audioConfig
     *
     * @var string[]
@@ -119,7 +119,7 @@ class ShootScript implements ModelInterface, ArrayAccess
     * audioDriveActionConfig  语音驱动时的动作配置。
     * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 只支持分身数字人视频制作  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。  > * 音频文件需要存放在华为云OBS
     * backgroundConfig  背景配置。
-    * layerConfig  图层配置。
+    * layerConfig  图层配置。 > * 视频编码格式采用VP8且数字人模型和输出视频的分辨率不一致时，该参数必须携带
     * audioConfig  audioConfig
     *
     * @var string[]
@@ -143,7 +143,7 @@ class ShootScript implements ModelInterface, ArrayAccess
     * audioDriveActionConfig  语音驱动时的动作配置。
     * audioDriveFileExternalUrl  语音驱动音频文件外部下载URL。  > * 只支持分身数字人视频制作  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。  > * 音频文件需要存放在华为云OBS
     * backgroundConfig  背景配置。
-    * layerConfig  图层配置。
+    * layerConfig  图层配置。 > * 视频编码格式采用VP8且数字人模型和输出视频的分辨率不一致时，该参数必须携带
     * audioConfig  audioConfig
     *
     * @var string[]
@@ -430,7 +430,7 @@ class ShootScript implements ModelInterface, ArrayAccess
 
     /**
     * Gets layerConfig
-    *  图层配置。
+    *  图层配置。 > * 视频编码格式采用VP8且数字人模型和输出视频的分辨率不一致时，该参数必须携带
     *
     * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LayerConfig[]|null
     */
@@ -442,7 +442,7 @@ class ShootScript implements ModelInterface, ArrayAccess
     /**
     * Sets layerConfig
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LayerConfig[]|null $layerConfig 图层配置。
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LayerConfig[]|null $layerConfig 图层配置。 > * 视频编码格式采用VP8且数字人模型和输出视频的分辨率不一致时，该参数必须携带
     *
     * @return $this
     */

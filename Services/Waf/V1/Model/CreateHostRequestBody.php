@@ -27,9 +27,9 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     * certificatename  证书名   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    * paidType  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
-    * lbAlgorithm  LB负载均衡，仅专业版和企业版支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
+    * lbAlgorithm  **参数解释：** LB负载均衡，仅专业版和企业版支持配置负载均衡算法 **约束限制：** 不涉及 **取值范围：**  - ip_hash: 源IP Hash,将某个IP的请求定向到同一个服务器  - round_robin: 加权轮询,所有请求将按权重轮流分配给源站服务器  - session_hash: 将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效  **默认取值：** 不涉及
     * description  域名描述
     * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
@@ -59,9 +59,9 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     * certificatename  证书名   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    * paidType  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
-    * lbAlgorithm  LB负载均衡，仅专业版和企业版支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
+    * lbAlgorithm  **参数解释：** LB负载均衡，仅专业版和企业版支持配置负载均衡算法 **约束限制：** 不涉及 **取值范围：**  - ip_hash: 源IP Hash,将某个IP的请求定向到同一个服务器  - round_robin: 加权轮询,所有请求将按权重轮流分配给源站服务器  - session_hash: 将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效  **默认取值：** 不涉及
     * description  域名描述
     * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
@@ -112,9 +112,9 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     * certificatename  证书名   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    * paidType  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
-    * lbAlgorithm  LB负载均衡，仅专业版和企业版支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
+    * lbAlgorithm  **参数解释：** LB负载均衡，仅专业版和企业版支持配置负载均衡算法 **约束限制：** 不涉及 **取值范围：**  - ip_hash: 源IP Hash,将某个IP的请求定向到同一个服务器  - round_robin: 加权轮询,所有请求将按权重轮流分配给源站服务器  - session_hash: 将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效  **默认取值：** 不涉及
     * description  域名描述
     * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
@@ -144,9 +144,9 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     * certificatename  证书名   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    * paidType  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
-    * lbAlgorithm  LB负载均衡，仅专业版和企业版支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
+    * lbAlgorithm  **参数解释：** LB负载均衡，仅专业版和企业版支持配置负载均衡算法 **约束限制：** 不涉及 **取值范围：**  - ip_hash: 源IP Hash,将某个IP的请求定向到同一个服务器  - round_robin: 加权轮询,所有请求将按权重轮流分配给源站服务器  - session_hash: 将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效  **默认取值：** 不涉及
     * description  域名描述
     * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
@@ -176,9 +176,9 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     * certificatename  证书名   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
-    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    * paidType  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
-    * lbAlgorithm  LB负载均衡，仅专业版和企业版支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
+    * lbAlgorithm  **参数解释：** LB负载均衡，仅专业版和企业版支持配置负载均衡算法 **约束限制：** 不涉及 **取值范围：**  - ip_hash: 源IP Hash,将某个IP的请求定向到同一个服务器  - round_robin: 加权轮询,所有请求将按权重轮流分配给源站服务器  - session_hash: 将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效  **默认取值：** 不涉及
     * description  域名描述
     * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
@@ -239,10 +239,25 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const PAID_TYPE_PRE_PAID = 'prePaid';
+    const PAID_TYPE_POST_PAID = 'postPaid';
     const LB_ALGORITHM_IP_HASH = 'ip_hash';
     const LB_ALGORITHM_ROUND_ROBIN = 'round_robin';
     const LB_ALGORITHM_SESSION_HASH = 'session_hash';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPaidTypeAllowableValues()
+    {
+        return [
+            self::PAID_TYPE_PRE_PAID,
+            self::PAID_TYPE_POST_PAID,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -302,6 +317,14 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['server'] === null) {
             $invalidProperties[] = "'server' can't be null";
         }
+            $allowedValues = $this->getPaidTypeAllowableValues();
+                if (!is_null($this->container['paidType']) && !in_array($this->container['paidType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'paidType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['proxy'] === null) {
             $invalidProperties[] = "'proxy' can't be null";
         }
@@ -497,7 +520,7 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets paidType
-    *  套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    *  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     *
     * @return string|null
     */
@@ -509,7 +532,7 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets paidType
     *
-    * @param string|null $paidType 套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
+    * @param string|null $paidType **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     *
     * @return $this
     */
@@ -545,7 +568,7 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets lbAlgorithm
-    *  LB负载均衡，仅专业版和企业版支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
+    *  **参数解释：** LB负载均衡，仅专业版和企业版支持配置负载均衡算法 **约束限制：** 不涉及 **取值范围：**  - ip_hash: 源IP Hash,将某个IP的请求定向到同一个服务器  - round_robin: 加权轮询,所有请求将按权重轮流分配给源站服务器  - session_hash: 将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -557,7 +580,7 @@ class CreateHostRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets lbAlgorithm
     *
-    * @param string|null $lbAlgorithm LB负载均衡，仅专业版和企业版支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
+    * @param string|null $lbAlgorithm **参数解释：** LB负载均衡，仅专业版和企业版支持配置负载均衡算法 **约束限制：** 不涉及 **取值范围：**  - ip_hash: 源IP Hash,将某个IP的请求定向到同一个服务器  - round_robin: 加权轮询,所有请求将按权重轮流分配给源站服务器  - session_hash: 将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效  **默认取值：** 不涉及
     *
     * @return $this
     */

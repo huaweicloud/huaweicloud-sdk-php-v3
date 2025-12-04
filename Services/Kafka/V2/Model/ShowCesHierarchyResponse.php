@@ -21,11 +21,11 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dimensions  监控维度。
-    * instanceIds  实例信息。
-    * nodes  节点信息。
-    * queues  队列信息。
-    * groups  消费组信息。
+    * dimensions  **参数解释**： 监控维度。
+    * instanceIds  **参数解释**： 实例信息。
+    * nodes  **参数解释**： 节点信息。
+    * queues  **参数解释**： 队列信息。
+    * groups  **参数解释**： 消费组信息。
     *
     * @var string[]
     */
@@ -39,11 +39,11 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dimensions  监控维度。
-    * instanceIds  实例信息。
-    * nodes  节点信息。
-    * queues  队列信息。
-    * groups  消费组信息。
+    * dimensions  **参数解释**： 监控维度。
+    * instanceIds  **参数解释**： 实例信息。
+    * nodes  **参数解释**： 节点信息。
+    * queues  **参数解释**： 队列信息。
+    * groups  **参数解释**： 消费组信息。
     *
     * @var string[]
     */
@@ -78,11 +78,11 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dimensions  监控维度。
-    * instanceIds  实例信息。
-    * nodes  节点信息。
-    * queues  队列信息。
-    * groups  消费组信息。
+    * dimensions  **参数解释**： 监控维度。
+    * instanceIds  **参数解释**： 实例信息。
+    * nodes  **参数解释**： 节点信息。
+    * queues  **参数解释**： 队列信息。
+    * groups  **参数解释**： 消费组信息。
     *
     * @var string[]
     */
@@ -96,11 +96,11 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dimensions  监控维度。
-    * instanceIds  实例信息。
-    * nodes  节点信息。
-    * queues  队列信息。
-    * groups  消费组信息。
+    * dimensions  **参数解释**： 监控维度。
+    * instanceIds  **参数解释**： 实例信息。
+    * nodes  **参数解释**： 节点信息。
+    * queues  **参数解释**： 队列信息。
+    * groups  **参数解释**： 消费组信息。
     *
     * @var string[]
     */
@@ -114,11 +114,11 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dimensions  监控维度。
-    * instanceIds  实例信息。
-    * nodes  节点信息。
-    * queues  队列信息。
-    * groups  消费组信息。
+    * dimensions  **参数解释**： 监控维度。
+    * instanceIds  **参数解释**： 实例信息。
+    * nodes  **参数解释**： 节点信息。
+    * queues  **参数解释**： 队列信息。
+    * groups  **参数解释**： 消费组信息。
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensions
-    *  监控维度。
+    *  **参数解释**： 监控维度。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ShowCeshierarchyRespDimensions[]|null
     */
@@ -231,7 +231,7 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dimensions
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowCeshierarchyRespDimensions[]|null $dimensions 监控维度。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowCeshierarchyRespDimensions[]|null $dimensions **参数解释**： 监控维度。
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceIds
-    *  实例信息。
+    *  **参数解释**： 实例信息。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ShowCeshierarchyRespInstanceIds[]|null
     */
@@ -255,7 +255,7 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets instanceIds
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowCeshierarchyRespInstanceIds[]|null $instanceIds 实例信息。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowCeshierarchyRespInstanceIds[]|null $instanceIds **参数解释**： 实例信息。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodes
-    *  节点信息。
+    *  **参数解释**： 节点信息。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ShowCeshierarchyRespNodes[]|null
     */
@@ -279,7 +279,7 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nodes
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowCeshierarchyRespNodes[]|null $nodes 节点信息。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowCeshierarchyRespNodes[]|null $nodes **参数解释**： 节点信息。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets queues
-    *  队列信息。
+    *  **参数解释**： 队列信息。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ShowCeshierarchyRespQueues[]|null
     */
@@ -303,7 +303,7 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets queues
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowCeshierarchyRespQueues[]|null $queues 队列信息。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowCeshierarchyRespQueues[]|null $queues **参数解释**： 队列信息。
     *
     * @return $this
     */
@@ -315,7 +315,7 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets groups
-    *  消费组信息。
+    *  **参数解释**： 消费组信息。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ShowCeshierarchyRespGroups[]|null
     */
@@ -327,7 +327,7 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets groups
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowCeshierarchyRespGroups[]|null $groups 消费组信息。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowCeshierarchyRespGroups[]|null $groups **参数解释**： 消费组信息。
     *
     * @return $this
     */

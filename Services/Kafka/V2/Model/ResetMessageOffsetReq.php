@@ -191,6 +191,9 @@ class ResetMessageOffsetReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['topic'] === null) {
+            $invalidProperties[] = "'topic' can't be null";
+        }
         if ($this->container['partition'] === null) {
             $invalidProperties[] = "'partition' can't be null";
         }
@@ -212,7 +215,7 @@ class ResetMessageOffsetReq implements ModelInterface, ArrayAccess
     * Gets topic
     *  Topic名称。
     *
-    * @return string|null
+    * @return string
     */
     public function getTopic()
     {
@@ -222,7 +225,7 @@ class ResetMessageOffsetReq implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic Topic名称。
+    * @param string $topic Topic名称。
     *
     * @return $this
     */

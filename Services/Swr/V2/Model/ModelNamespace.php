@@ -26,6 +26,7 @@ class ModelNamespace implements ModelInterface, ArrayAccess
     * createdAt  创建时间
     * updatedAt  更新时间
     * repoCount  镜像数量
+    * cveAllowlist  cveAllowlist
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class ModelNamespace implements ModelInterface, ArrayAccess
             'namespaceId' => 'int',
             'createdAt' => 'string',
             'updatedAt' => 'string',
-            'repoCount' => 'int'
+            'repoCount' => 'int',
+            'cveAllowlist' => '\HuaweiCloud\SDK\Swr\V2\Model\CVEAllowlist'
     ];
 
     /**
@@ -46,6 +48,7 @@ class ModelNamespace implements ModelInterface, ArrayAccess
     * createdAt  创建时间
     * updatedAt  更新时间
     * repoCount  镜像数量
+    * cveAllowlist  cveAllowlist
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class ModelNamespace implements ModelInterface, ArrayAccess
         'namespaceId' => null,
         'createdAt' => null,
         'updatedAt' => null,
-        'repoCount' => null
+        'repoCount' => null,
+        'cveAllowlist' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class ModelNamespace implements ModelInterface, ArrayAccess
     * createdAt  创建时间
     * updatedAt  更新时间
     * repoCount  镜像数量
+    * cveAllowlist  cveAllowlist
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class ModelNamespace implements ModelInterface, ArrayAccess
             'namespaceId' => 'namespace_id',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
-            'repoCount' => 'repo_count'
+            'repoCount' => 'repo_count',
+            'cveAllowlist' => 'cve_allowlist'
     ];
 
     /**
@@ -107,6 +113,7 @@ class ModelNamespace implements ModelInterface, ArrayAccess
     * createdAt  创建时间
     * updatedAt  更新时间
     * repoCount  镜像数量
+    * cveAllowlist  cveAllowlist
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class ModelNamespace implements ModelInterface, ArrayAccess
             'namespaceId' => 'setNamespaceId',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
-            'repoCount' => 'setRepoCount'
+            'repoCount' => 'setRepoCount',
+            'cveAllowlist' => 'setCveAllowlist'
     ];
 
     /**
@@ -127,6 +135,7 @@ class ModelNamespace implements ModelInterface, ArrayAccess
     * createdAt  创建时间
     * updatedAt  更新时间
     * repoCount  镜像数量
+    * cveAllowlist  cveAllowlist
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class ModelNamespace implements ModelInterface, ArrayAccess
             'namespaceId' => 'getNamespaceId',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
-            'repoCount' => 'getRepoCount'
+            'repoCount' => 'getRepoCount',
+            'cveAllowlist' => 'getCveAllowlist'
     ];
 
     /**
@@ -203,6 +213,7 @@ class ModelNamespace implements ModelInterface, ArrayAccess
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['repoCount'] = isset($data['repoCount']) ? $data['repoCount'] : null;
+        $this->container['cveAllowlist'] = isset($data['cveAllowlist']) ? $data['cveAllowlist'] : null;
     }
 
     /**
@@ -368,6 +379,30 @@ class ModelNamespace implements ModelInterface, ArrayAccess
     public function setRepoCount($repoCount)
     {
         $this->container['repoCount'] = $repoCount;
+        return $this;
+    }
+
+    /**
+    * Gets cveAllowlist
+    *  cveAllowlist
+    *
+    * @return \HuaweiCloud\SDK\Swr\V2\Model\CVEAllowlist|null
+    */
+    public function getCveAllowlist()
+    {
+        return $this->container['cveAllowlist'];
+    }
+
+    /**
+    * Sets cveAllowlist
+    *
+    * @param \HuaweiCloud\SDK\Swr\V2\Model\CVEAllowlist|null $cveAllowlist cveAllowlist
+    *
+    * @return $this
+    */
+    public function setCveAllowlist($cveAllowlist)
+    {
+        $this->container['cveAllowlist'] = $cveAllowlist;
         return $this;
     }
 

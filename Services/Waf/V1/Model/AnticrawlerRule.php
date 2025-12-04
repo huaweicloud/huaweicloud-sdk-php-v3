@@ -24,9 +24,9 @@ class AnticrawlerRule implements ModelInterface, ArrayAccess
     * policyid  策略id
     * conditions  匹配条件列表
     * name  规则名称
-    * type  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
+    * type  **参数解释：** JS脚本反爬虫规则防护模式 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
     * timestamp  创建规则时间戳
-    * status  规则状态，0：关闭，1：开启
+    * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @var string[]
@@ -48,9 +48,9 @@ class AnticrawlerRule implements ModelInterface, ArrayAccess
     * policyid  策略id
     * conditions  匹配条件列表
     * name  规则名称
-    * type  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
+    * type  **参数解释：** JS脚本反爬虫规则防护模式 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
     * timestamp  创建规则时间戳
-    * status  规则状态，0：关闭，1：开启
+    * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @var string[]
@@ -93,9 +93,9 @@ class AnticrawlerRule implements ModelInterface, ArrayAccess
     * policyid  策略id
     * conditions  匹配条件列表
     * name  规则名称
-    * type  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
+    * type  **参数解释：** JS脚本反爬虫规则防护模式 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
     * timestamp  创建规则时间戳
-    * status  规则状态，0：关闭，1：开启
+    * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @var string[]
@@ -117,9 +117,9 @@ class AnticrawlerRule implements ModelInterface, ArrayAccess
     * policyid  策略id
     * conditions  匹配条件列表
     * name  规则名称
-    * type  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
+    * type  **参数解释：** JS脚本反爬虫规则防护模式 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
     * timestamp  创建规则时间戳
-    * status  规则状态，0：关闭，1：开启
+    * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @var string[]
@@ -141,9 +141,9 @@ class AnticrawlerRule implements ModelInterface, ArrayAccess
     * policyid  策略id
     * conditions  匹配条件列表
     * name  规则名称
-    * type  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
+    * type  **参数解释：** JS脚本反爬虫规则防护模式 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
     * timestamp  创建规则时间戳
-    * status  规则状态，0：关闭，1：开启
+    * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
     *
     * @var string[]
@@ -199,7 +199,22 @@ class AnticrawlerRule implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TYPE_ANTICRAWLER_EXCEPT_URL = 'anticrawler_except_url';
+    const TYPE_ANTICRAWLER_SPECIFIC_URL = 'anticrawler_specific_url';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_ANTICRAWLER_EXCEPT_URL,
+            self::TYPE_ANTICRAWLER_SPECIFIC_URL,
+        ];
+    }
 
 
     /**
@@ -235,6 +250,14 @@ class AnticrawlerRule implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -347,7 +370,7 @@ class AnticrawlerRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
+    *  **参数解释：** JS脚本反爬虫规则防护模式 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
     *
     * @return string|null
     */
@@ -359,7 +382,7 @@ class AnticrawlerRule implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
+    * @param string|null $type **参数解释：** JS脚本反爬虫规则防护模式 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
     *
     * @return $this
     */
@@ -395,7 +418,7 @@ class AnticrawlerRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  规则状态，0：关闭，1：开启
+    *  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -407,7 +430,7 @@ class AnticrawlerRule implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 规则状态，0：关闭，1：开启
+    * @param int|null $status **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     *
     * @return $this
     */

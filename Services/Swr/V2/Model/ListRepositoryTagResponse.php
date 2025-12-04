@@ -23,24 +23,28 @@ class ListRepositoryTagResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * tags  镜像tag列表.
     * nextMarker  下次分页查询时的起始位置。
+    * hasMore  表示分页查询时是否还有下一页
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'tags' => '\HuaweiCloud\SDK\Swr\V2\Model\ShowReposTagRespV3[]',
-            'nextMarker' => 'string'
+            'nextMarker' => 'string',
+            'hasMore' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * tags  镜像tag列表.
     * nextMarker  下次分页查询时的起始位置。
+    * hasMore  表示分页查询时是否还有下一页
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'tags' => null,
-        'nextMarker' => null
+        'nextMarker' => null,
+        'hasMore' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ListRepositoryTagResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * tags  镜像tag列表.
     * nextMarker  下次分页查询时的起始位置。
+    * hasMore  表示分页查询时是否还有下一页
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'tags' => 'tags',
-            'nextMarker' => 'nextMarker'
+            'nextMarker' => 'nextMarker',
+            'hasMore' => 'has_more'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * tags  镜像tag列表.
     * nextMarker  下次分页查询时的起始位置。
+    * hasMore  表示分页查询时是否还有下一页
     *
     * @var string[]
     */
     protected static $setters = [
             'tags' => 'setTags',
-            'nextMarker' => 'setNextMarker'
+            'nextMarker' => 'setNextMarker',
+            'hasMore' => 'setHasMore'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * tags  镜像tag列表.
     * nextMarker  下次分页查询时的起始位置。
+    * hasMore  表示分页查询时是否还有下一页
     *
     * @var string[]
     */
     protected static $getters = [
             'tags' => 'getTags',
-            'nextMarker' => 'getNextMarker'
+            'nextMarker' => 'getNextMarker',
+            'hasMore' => 'getHasMore'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ListRepositoryTagResponse implements ModelInterface, ArrayAccess
     {
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['nextMarker'] = isset($data['nextMarker']) ? $data['nextMarker'] : null;
+        $this->container['hasMore'] = isset($data['hasMore']) ? $data['hasMore'] : null;
     }
 
     /**
@@ -229,6 +240,30 @@ class ListRepositoryTagResponse implements ModelInterface, ArrayAccess
     public function setNextMarker($nextMarker)
     {
         $this->container['nextMarker'] = $nextMarker;
+        return $this;
+    }
+
+    /**
+    * Gets hasMore
+    *  表示分页查询时是否还有下一页
+    *
+    * @return bool|null
+    */
+    public function getHasMore()
+    {
+        return $this->container['hasMore'];
+    }
+
+    /**
+    * Sets hasMore
+    *
+    * @param bool|null $hasMore 表示分页查询时是否还有下一页
+    *
+    * @return $this
+    */
+    public function setHasMore($hasMore)
+    {
+        $this->container['hasMore'] = $hasMore;
         return $this;
     }
 

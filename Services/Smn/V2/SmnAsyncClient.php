@@ -700,6 +700,74 @@ class SmnAsyncClient extends Client
     }
 
     /**
+     * 主题绑定KMS密钥
+     *
+     * 为主题绑定KMS密钥。KMS密钥于绑定后五分钟生效，生效后该主题下发布的消息（确认订阅消息、取消订阅消息、主题消息）均使用指定密钥的数据密钥进行加解密，并将消息内容在SMN服务内部加密传输。执行绑定KMS密钥时，用户需要先在IAM处创建名为smn_kms_agency的委托，并将资源操作权限授权给SMN服务。SMN会使用该委托进行创建数据密钥操作。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createKmsKeyAsync($request)
+    {
+        return $this->createKmsKeyAsyncWithHttpInfo($request);
+    }
+    
+    public function createKmsKeyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/notifications/topics/{topic_urn}/kms';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['topicUrn'] !== null) {
+            $pathParams['topic_urn'] = $localVarParams['topicUrn'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\CreateKmsKeyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\CreateKmsKeyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 绑定云日志
      *
      * 为指定Topic绑定一个云日志，用于记录主题消息发送状态等信息。
@@ -1035,6 +1103,74 @@ class SmnAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Smn\V2\Model\CreateTopicResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Smn\V2\Model\CreateTopicRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除主题下KMS密钥
+     *
+     * 删除主题绑定的密钥。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteKmsKeyAsync($request)
+    {
+        return $this->deleteKmsKeyAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteKmsKeyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/notifications/topics/{topic_urn}/kms/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['topicUrn'] !== null) {
+            $pathParams['topic_urn'] = $localVarParams['topicUrn'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\DeleteKmsKeyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\DeleteKmsKeyRequest',
             $asyncRequest = true);
     }
 
@@ -1613,11 +1749,11 @@ class SmnAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8'],
+                [],
                 []
             );
         }
@@ -1638,6 +1774,71 @@ class SmnAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Smn\V2\Model\DownloadHttpCertResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Smn\V2\Model\DownloadHttpCertRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 下载HTTP签名证书
+     *
+     * 下载HTTP签名证书
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function downloadHttpSignCertAsync($request)
+    {
+        return $this->downloadHttpSignCertAsyncWithHttpInfo($request);
+    }
+    
+    public function downloadHttpSignCertAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/notifications/certifications/download/{certificate_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['certificateId'] !== null) {
+            $pathParams['certificate_id'] = $localVarParams['certificateId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\DownloadHttpSignCertResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\DownloadHttpSignCertRequest',
             $asyncRequest = true);
     }
 
@@ -1700,6 +1901,68 @@ class SmnAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Smn\V2\Model\ListCloudServiceResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Smn\V2\Model\ListCloudServiceRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询授权服务列表
+     *
+     * 查询授权服务列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCloudServicesAsync($request)
+    {
+        return $this->listCloudServicesAsyncWithHttpInfo($request);
+    }
+    
+    public function listCloudServicesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/notifications/cloud-services';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\ListCloudServicesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\ListCloudServicesRequest',
             $asyncRequest = true);
     }
 
@@ -2612,6 +2875,89 @@ class SmnAsyncClient extends Client
     }
 
     /**
+     * 查询主题列表及主题关联资源信息
+     *
+     * 查询Topic及Topic关联资源信息列表，关联资源信息随业务演进会持续扩展。Topic列表默认按照创建时间进行降序排列。分页查询可以指定offset以及limit。如果不存在Topic，则返回空列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTopicsWithAssociatedResourcesAsync($request)
+    {
+        return $this->listTopicsWithAssociatedResourcesAsyncWithHttpInfo($request);
+    }
+    
+    public function listTopicsWithAssociatedResourcesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/notifications/topics-with-associated-resources';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['topicId'] !== null) {
+            $queryParams['topic_id'] = $localVarParams['topicId'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['fuzzyName'] !== null) {
+            $queryParams['fuzzy_name'] = $localVarParams['fuzzyName'];
+        }
+        if ($localVarParams['fuzzyDisplayName'] !== null) {
+            $queryParams['fuzzy_display_name'] = $localVarParams['fuzzyDisplayName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\ListTopicsWithAssociatedResourcesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\ListTopicsWithAssociatedResourcesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询SMN API V2版本信息
      *
      * 查询SMN API V2版本信息。
@@ -2817,6 +3163,7 @@ class SmnAsyncClient extends Client
      * 
      * 只需要设置其中一个，如果同时设置，生效的优先级为
      * message_structure &gt; message_template_name &gt; message。
+     * 若发布消息的主题下绑定了KMS密钥，请确保发布消息前，用户需要先在IAM处创建名为smn_kms_agency的委托，并将资源操作权限授权给SMN服务。当发布消息时，SMN会使用该委托进行创建数据密钥和解密数据密钥操作。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2950,6 +3297,71 @@ class SmnAsyncClient extends Client
     }
 
     /**
+     * 查询主题下KMS密钥
+     *
+     * 查询主题下密钥ID。执行绑定KMS密钥时，用户需要先在IAM处创建名为smn_kms_agency的委托，并将资源操作权限授权给SMN服务。SMN会使用该委托进行查询密钥信息操作。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showKmsKeyAsync($request)
+    {
+        return $this->showKmsKeyAsyncWithHttpInfo($request);
+    }
+    
+    public function showKmsKeyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/notifications/topics/{topic_urn}/kms';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['topicUrn'] !== null) {
+            $pathParams['topic_urn'] = $localVarParams['topicUrn'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\ShowKmsKeyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\ShowKmsKeyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询通知策略
      *
      * 查询通知策略
@@ -3015,6 +3427,77 @@ class SmnAsyncClient extends Client
     }
 
     /**
+     * 订阅主题
+     *
+     * 订阅终端确认订阅主题消息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function subscribeTopicAsync($request)
+    {
+        return $this->subscribeTopicAsyncWithHttpInfo($request);
+    }
+    
+    public function subscribeTopicAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/notifications/subscriptions/subscribe';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['topicUrn'] !== null) {
+            $queryParams['topic_urn'] = $localVarParams['topicUrn'];
+        }
+        if ($localVarParams['endpoint'] !== null) {
+            $queryParams['endpoint'] = $localVarParams['endpoint'];
+        }
+        if ($localVarParams['token'] !== null) {
+            $queryParams['token'] = $localVarParams['token'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\SubscribeTopicResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\SubscribeTopicRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 取消订阅
      *
      * 取消订阅主题
@@ -3076,6 +3559,142 @@ class SmnAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Smn\V2\Model\UnsubscribeSubscriptionResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Smn\V2\Model\UnsubscribeSubscriptionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 取消订阅主题
+     *
+     * 订阅终端取消订阅主题消息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function unsubscribeTopicAsync($request)
+    {
+        return $this->unsubscribeTopicAsyncWithHttpInfo($request);
+    }
+    
+    public function unsubscribeTopicAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/notifications/subscriptions/unsubscribe';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['subscriptionUrn'] !== null) {
+            $queryParams['subscription_urn'] = $localVarParams['subscriptionUrn'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\UnsubscribeTopicResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\UnsubscribeTopicRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新主题下KMS密钥
+     *
+     * 更新密钥ID。执行更新KMS密钥时，用户需要先在IAM处创建名为smn_kms_agency的委托，并将对应的资源操作权限授权给SMN服务。SMN会使用该委托进行查询密钥状态和创建数据密钥操作。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateKmsKeyAsync($request)
+    {
+        return $this->updateKmsKeyAsyncWithHttpInfo($request);
+    }
+    
+    public function updateKmsKeyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/notifications/topics/{topic_urn}/kms/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['topicUrn'] !== null) {
+            $pathParams['topic_urn'] = $localVarParams['topicUrn'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\UpdateKmsKeyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\UpdateKmsKeyRequest',
             $asyncRequest = true);
     }
 

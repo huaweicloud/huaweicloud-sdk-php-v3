@@ -22,8 +22,8 @@ class ListSubscriberInstancesRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  语言。默认en-us。
     * instanceId  实例ID
-    * subscriberInstanceId  实例ID
-    * subscriberInstanceName  实例名
+    * subscriberInstanceId  订阅实例ID
+    * subscriberInstanceName  订阅实例名
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为10，不能为负数，最小值为1，最大值为100。
     *
@@ -42,8 +42,8 @@ class ListSubscriberInstancesRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  语言。默认en-us。
     * instanceId  实例ID
-    * subscriberInstanceId  实例ID
-    * subscriberInstanceName  实例名
+    * subscriberInstanceId  订阅实例ID
+    * subscriberInstanceName  订阅实例名
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为10，不能为负数，最小值为1，最大值为100。
     *
@@ -83,8 +83,8 @@ class ListSubscriberInstancesRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * xLanguage  语言。默认en-us。
     * instanceId  实例ID
-    * subscriberInstanceId  实例ID
-    * subscriberInstanceName  实例名
+    * subscriberInstanceId  订阅实例ID
+    * subscriberInstanceName  订阅实例名
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为10，不能为负数，最小值为1，最大值为100。
     *
@@ -103,8 +103,8 @@ class ListSubscriberInstancesRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  语言。默认en-us。
     * instanceId  实例ID
-    * subscriberInstanceId  实例ID
-    * subscriberInstanceName  实例名
+    * subscriberInstanceId  订阅实例ID
+    * subscriberInstanceName  订阅实例名
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为10，不能为负数，最小值为1，最大值为100。
     *
@@ -123,8 +123,8 @@ class ListSubscriberInstancesRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  语言。默认en-us。
     * instanceId  实例ID
-    * subscriberInstanceId  实例ID
-    * subscriberInstanceName  实例名
+    * subscriberInstanceId  订阅实例ID
+    * subscriberInstanceName  订阅实例名
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为10，不能为负数，最小值为1，最大值为100。
     *
@@ -280,7 +280,7 @@ class ListSubscriberInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets subscriberInstanceId
-    *  实例ID
+    *  订阅实例ID
     *
     * @return string|null
     */
@@ -292,7 +292,7 @@ class ListSubscriberInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets subscriberInstanceId
     *
-    * @param string|null $subscriberInstanceId 实例ID
+    * @param string|null $subscriberInstanceId 订阅实例ID
     *
     * @return $this
     */
@@ -304,7 +304,7 @@ class ListSubscriberInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets subscriberInstanceName
-    *  实例名
+    *  订阅实例名
     *
     * @return string|null
     */
@@ -316,7 +316,7 @@ class ListSubscriberInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets subscriberInstanceName
     *
-    * @param string|null $subscriberInstanceName 实例名
+    * @param string|null $subscriberInstanceName 订阅实例名
     *
     * @return $this
     */

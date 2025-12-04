@@ -25,7 +25,7 @@ class UpdatePolicyRuleStatusResponse implements ModelInterface, ArrayAccess
     * policyid  策略id
     * timestamp  规则创建时间
     * description  规则描述
-    * status  状态（开启：1，关闭：0）
+    * status  **参数解释：** 功能状态标识，用于指定对应功能的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -43,7 +43,7 @@ class UpdatePolicyRuleStatusResponse implements ModelInterface, ArrayAccess
     * policyid  策略id
     * timestamp  规则创建时间
     * description  规则描述
-    * status  状态（开启：1，关闭：0）
+    * status  **参数解释：** 功能状态标识，用于指定对应功能的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class UpdatePolicyRuleStatusResponse implements ModelInterface, ArrayAccess
     * policyid  策略id
     * timestamp  规则创建时间
     * description  规则描述
-    * status  状态（开启：1，关闭：0）
+    * status  **参数解释：** 功能状态标识，用于指定对应功能的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class UpdatePolicyRuleStatusResponse implements ModelInterface, ArrayAccess
     * policyid  策略id
     * timestamp  规则创建时间
     * description  规则描述
-    * status  状态（开启：1，关闭：0）
+    * status  **参数解释：** 功能状态标识，用于指定对应功能的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -118,7 +118,7 @@ class UpdatePolicyRuleStatusResponse implements ModelInterface, ArrayAccess
     * policyid  策略id
     * timestamp  规则创建时间
     * description  规则描述
-    * status  状态（开启：1，关闭：0）
+    * status  **参数解释：** 功能状态标识，用于指定对应功能的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -315,7 +315,7 @@ class UpdatePolicyRuleStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态（开启：1，关闭：0）
+    *  **参数解释：** 功能状态标识，用于指定对应功能的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -327,7 +327,7 @@ class UpdatePolicyRuleStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 状态（开启：1，关闭：0）
+    * @param int|null $status **参数解释：** 功能状态标识，用于指定对应功能的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     *
     * @return $this
     */

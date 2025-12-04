@@ -31,9 +31,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * subnetId  独享引擎实例所在VPC的子网ID
     * serviceIp  独享引擎实例的业务面IP
     * securityGroupIds  独享引擎绑定的安全组
-    * status  独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
-    * runStatus  独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
-    * accessStatus  独享引擎接入状态（0：未接入，1：已接入）
+    * status  **参数解释：** 独享引擎计费状态标识，用于指示独享引擎当前的计费使用状态 **约束限制：** 不涉及 **取值范围：**  - 0：正常计费  - 1：冻结，资源和数据会保留，但租户无法再正常使用云服务  - 2：终止，资源和数据将清除 **默认取值：** 不涉及
+    * runStatus  **参数解释：** 独享引擎运行状态标识，用于反映独享引擎当前的运行生命周期状态 **约束限制：** 不涉及 **取值范围：**  - 0：创建中  - 1：运行中  - 2：删除中  - 3：已删除  - 4：创建失败  - 5：已冻结  - 6：异常  - 7：更新中  - 8：更新失败 **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 独享引擎接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * upgradable  独享引擎是否可升级（0：不可升级，1：可升级）
     * cloudServiceType  云服务代码。 仅作为标记，用户可忽略。
     * resourceType  云服务资源类型，仅作为标记，用户可忽略。
@@ -79,9 +79,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * subnetId  独享引擎实例所在VPC的子网ID
     * serviceIp  独享引擎实例的业务面IP
     * securityGroupIds  独享引擎绑定的安全组
-    * status  独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
-    * runStatus  独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
-    * accessStatus  独享引擎接入状态（0：未接入，1：已接入）
+    * status  **参数解释：** 独享引擎计费状态标识，用于指示独享引擎当前的计费使用状态 **约束限制：** 不涉及 **取值范围：**  - 0：正常计费  - 1：冻结，资源和数据会保留，但租户无法再正常使用云服务  - 2：终止，资源和数据将清除 **默认取值：** 不涉及
+    * runStatus  **参数解释：** 独享引擎运行状态标识，用于反映独享引擎当前的运行生命周期状态 **约束限制：** 不涉及 **取值范围：**  - 0：创建中  - 1：运行中  - 2：删除中  - 3：已删除  - 4：创建失败  - 5：已冻结  - 6：异常  - 7：更新中  - 8：更新失败 **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 独享引擎接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * upgradable  独享引擎是否可升级（0：不可升级，1：可升级）
     * cloudServiceType  云服务代码。 仅作为标记，用户可忽略。
     * resourceType  云服务资源类型，仅作为标记，用户可忽略。
@@ -148,9 +148,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * subnetId  独享引擎实例所在VPC的子网ID
     * serviceIp  独享引擎实例的业务面IP
     * securityGroupIds  独享引擎绑定的安全组
-    * status  独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
-    * runStatus  独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
-    * accessStatus  独享引擎接入状态（0：未接入，1：已接入）
+    * status  **参数解释：** 独享引擎计费状态标识，用于指示独享引擎当前的计费使用状态 **约束限制：** 不涉及 **取值范围：**  - 0：正常计费  - 1：冻结，资源和数据会保留，但租户无法再正常使用云服务  - 2：终止，资源和数据将清除 **默认取值：** 不涉及
+    * runStatus  **参数解释：** 独享引擎运行状态标识，用于反映独享引擎当前的运行生命周期状态 **约束限制：** 不涉及 **取值范围：**  - 0：创建中  - 1：运行中  - 2：删除中  - 3：已删除  - 4：创建失败  - 5：已冻结  - 6：异常  - 7：更新中  - 8：更新失败 **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 独享引擎接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * upgradable  独享引擎是否可升级（0：不可升级，1：可升级）
     * cloudServiceType  云服务代码。 仅作为标记，用户可忽略。
     * resourceType  云服务资源类型，仅作为标记，用户可忽略。
@@ -196,9 +196,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * subnetId  独享引擎实例所在VPC的子网ID
     * serviceIp  独享引擎实例的业务面IP
     * securityGroupIds  独享引擎绑定的安全组
-    * status  独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
-    * runStatus  独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
-    * accessStatus  独享引擎接入状态（0：未接入，1：已接入）
+    * status  **参数解释：** 独享引擎计费状态标识，用于指示独享引擎当前的计费使用状态 **约束限制：** 不涉及 **取值范围：**  - 0：正常计费  - 1：冻结，资源和数据会保留，但租户无法再正常使用云服务  - 2：终止，资源和数据将清除 **默认取值：** 不涉及
+    * runStatus  **参数解释：** 独享引擎运行状态标识，用于反映独享引擎当前的运行生命周期状态 **约束限制：** 不涉及 **取值范围：**  - 0：创建中  - 1：运行中  - 2：删除中  - 3：已删除  - 4：创建失败  - 5：已冻结  - 6：异常  - 7：更新中  - 8：更新失败 **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 独享引擎接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * upgradable  独享引擎是否可升级（0：不可升级，1：可升级）
     * cloudServiceType  云服务代码。 仅作为标记，用户可忽略。
     * resourceType  云服务资源类型，仅作为标记，用户可忽略。
@@ -244,9 +244,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * subnetId  独享引擎实例所在VPC的子网ID
     * serviceIp  独享引擎实例的业务面IP
     * securityGroupIds  独享引擎绑定的安全组
-    * status  独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
-    * runStatus  独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
-    * accessStatus  独享引擎接入状态（0：未接入，1：已接入）
+    * status  **参数解释：** 独享引擎计费状态标识，用于指示独享引擎当前的计费使用状态 **约束限制：** 不涉及 **取值范围：**  - 0：正常计费  - 1：冻结，资源和数据会保留，但租户无法再正常使用云服务  - 2：终止，资源和数据将清除 **默认取值：** 不涉及
+    * runStatus  **参数解释：** 独享引擎运行状态标识，用于反映独享引擎当前的运行生命周期状态 **约束限制：** 不涉及 **取值范围：**  - 0：创建中  - 1：运行中  - 2：删除中  - 3：已删除  - 4：创建失败  - 5：已冻结  - 6：异常  - 7：更新中  - 8：更新失败 **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 独享引擎接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * upgradable  独享引擎是否可升级（0：不可升级，1：可升级）
     * cloudServiceType  云服务代码。 仅作为标记，用户可忽略。
     * resourceType  云服务资源类型，仅作为标记，用户可忽略。
@@ -320,7 +320,68 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_0 = 0;
+    const STATUS_1 = 1;
+    const STATUS_2 = 2;
+    const RUN_STATUS_0 = 0;
+    const RUN_STATUS_1 = 1;
+    const RUN_STATUS_2 = 2;
+    const RUN_STATUS_3 = 3;
+    const RUN_STATUS_4 = 4;
+    const RUN_STATUS_5 = 5;
+    const RUN_STATUS_6 = 6;
+    const RUN_STATUS_7 = 7;
+    const RUN_STATUS_8 = 8;
+    const ACCESS_STATUS_0 = 0;
+    const ACCESS_STATUS_1 = 1;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_0,
+            self::STATUS_1,
+            self::STATUS_2,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getRunStatusAllowableValues()
+    {
+        return [
+            self::RUN_STATUS_0,
+            self::RUN_STATUS_1,
+            self::RUN_STATUS_2,
+            self::RUN_STATUS_3,
+            self::RUN_STATUS_4,
+            self::RUN_STATUS_5,
+            self::RUN_STATUS_6,
+            self::RUN_STATUS_7,
+            self::RUN_STATUS_8,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAccessStatusAllowableValues()
+    {
+        return [
+            self::ACCESS_STATUS_0,
+            self::ACCESS_STATUS_1,
+        ];
+    }
 
 
     /**
@@ -368,6 +429,30 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getRunStatusAllowableValues();
+                if (!is_null($this->container['runStatus']) && !in_array($this->container['runStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'runStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getAccessStatusAllowableValues();
+                if (!is_null($this->container['accessStatus']) && !in_array($this->container['accessStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'accessStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -624,7 +709,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
+    *  **参数解释：** 独享引擎计费状态标识，用于指示独享引擎当前的计费使用状态 **约束限制：** 不涉及 **取值范围：**  - 0：正常计费  - 1：冻结，资源和数据会保留，但租户无法再正常使用云服务  - 2：终止，资源和数据将清除 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -636,7 +721,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
+    * @param int|null $status **参数解释：** 独享引擎计费状态标识，用于指示独享引擎当前的计费使用状态 **约束限制：** 不涉及 **取值范围：**  - 0：正常计费  - 1：冻结，资源和数据会保留，但租户无法再正常使用云服务  - 2：终止，资源和数据将清除 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -648,7 +733,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets runStatus
-    *  独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
+    *  **参数解释：** 独享引擎运行状态标识，用于反映独享引擎当前的运行生命周期状态 **约束限制：** 不涉及 **取值范围：**  - 0：创建中  - 1：运行中  - 2：删除中  - 3：已删除  - 4：创建失败  - 5：已冻结  - 6：异常  - 7：更新中  - 8：更新失败 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -660,7 +745,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets runStatus
     *
-    * @param int|null $runStatus 独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
+    * @param int|null $runStatus **参数解释：** 独享引擎运行状态标识，用于反映独享引擎当前的运行生命周期状态 **约束限制：** 不涉及 **取值范围：**  - 0：创建中  - 1：运行中  - 2：删除中  - 3：已删除  - 4：创建失败  - 5：已冻结  - 6：异常  - 7：更新中  - 8：更新失败 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -672,7 +757,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessStatus
-    *  独享引擎接入状态（0：未接入，1：已接入）
+    *  **参数解释：** 独享引擎接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -684,7 +769,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets accessStatus
     *
-    * @param int|null $accessStatus 独享引擎接入状态（0：未接入，1：已接入）
+    * @param int|null $accessStatus **参数解释：** 独享引擎接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     *
     * @return $this
     */

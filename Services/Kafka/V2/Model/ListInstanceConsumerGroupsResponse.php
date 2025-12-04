@@ -21,8 +21,8 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groups  所有的消费组。
-    * total  所有的消费组总数。
+    * groups  **参数解释**： 所有消费组的信息。
+    * total  **参数解释**： 消费组总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groups  所有的消费组。
-    * total  所有的消费组总数。
+    * groups  **参数解释**： 所有消费组的信息。
+    * total  **参数解释**： 消费组总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groups  所有的消费组。
-    * total  所有的消费组总数。
+    * groups  **参数解释**： 所有消费组的信息。
+    * total  **参数解释**： 消费组总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groups  所有的消费组。
-    * total  所有的消费组总数。
+    * groups  **参数解释**： 所有消费组的信息。
+    * total  **参数解释**： 消费组总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groups  所有的消费组。
-    * total  所有的消费组总数。
+    * groups  **参数解释**： 所有消费组的信息。
+    * total  **参数解释**： 消费组总数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets groups
-    *  所有的消费组。
+    *  **参数解释**： 所有消费组的信息。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\GroupInfoSimple[]|null
     */
@@ -198,7 +198,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets groups
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\GroupInfoSimple[]|null $groups 所有的消费组。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\GroupInfoSimple[]|null $groups **参数解释**： 所有消费组的信息。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  所有的消费组总数。
+    *  **参数解释**： 消费组总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 所有的消费组总数。
+    * @param int|null $total **参数解释**： 消费组总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */

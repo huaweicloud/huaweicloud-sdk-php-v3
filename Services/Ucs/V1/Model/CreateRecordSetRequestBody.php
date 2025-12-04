@@ -22,7 +22,7 @@ class CreateRecordSetRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位
-    * records  解析记录的值，不同类型解析记录对应的值的规则不同，必须是合法IP信息
+    * records  解析记录的值，不同类型解析记录对应的值的规则不同
     * line  解析线路ID
     * weight  解析记录的权重
     * type  Record Set的类型， 取值范围：A、CNAME
@@ -42,7 +42,7 @@ class CreateRecordSetRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位
-    * records  解析记录的值，不同类型解析记录对应的值的规则不同，必须是合法IP信息
+    * records  解析记录的值，不同类型解析记录对应的值的规则不同
     * line  解析线路ID
     * weight  解析记录的权重
     * type  Record Set的类型， 取值范围：A、CNAME
@@ -83,7 +83,7 @@ class CreateRecordSetRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位
-    * records  解析记录的值，不同类型解析记录对应的值的规则不同，必须是合法IP信息
+    * records  解析记录的值，不同类型解析记录对应的值的规则不同
     * line  解析线路ID
     * weight  解析记录的权重
     * type  Record Set的类型， 取值范围：A、CNAME
@@ -103,7 +103,7 @@ class CreateRecordSetRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位
-    * records  解析记录的值，不同类型解析记录对应的值的规则不同，必须是合法IP信息
+    * records  解析记录的值，不同类型解析记录对应的值的规则不同
     * line  解析线路ID
     * weight  解析记录的权重
     * type  Record Set的类型， 取值范围：A、CNAME
@@ -123,7 +123,7 @@ class CreateRecordSetRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位
-    * records  解析记录的值，不同类型解析记录对应的值的规则不同，必须是合法IP信息
+    * records  解析记录的值，不同类型解析记录对应的值的规则不同
     * line  解析线路ID
     * weight  解析记录的权重
     * type  Record Set的类型， 取值范围：A、CNAME
@@ -292,7 +292,7 @@ class CreateRecordSetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets records
-    *  解析记录的值，不同类型解析记录对应的值的规则不同，必须是合法IP信息
+    *  解析记录的值，不同类型解析记录对应的值的规则不同
     *
     * @return string[]|null
     */
@@ -304,7 +304,7 @@ class CreateRecordSetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets records
     *
-    * @param string[]|null $records 解析记录的值，不同类型解析记录对应的值的规则不同，必须是合法IP信息
+    * @param string[]|null $records 解析记录的值，不同类型解析记录对应的值的规则不同
     *
     * @return $this
     */

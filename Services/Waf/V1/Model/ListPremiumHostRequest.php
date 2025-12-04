@@ -26,7 +26,7 @@ class ListPremiumHostRequest implements ModelInterface, ArrayAccess
     * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。如果需要一次查全部域名，该参数值填-1。
     * hostname  域名
     * policyname  策略名称
-    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -48,7 +48,7 @@ class ListPremiumHostRequest implements ModelInterface, ArrayAccess
     * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。如果需要一次查全部域名，该参数值填-1。
     * hostname  域名
     * policyname  策略名称
-    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListPremiumHostRequest implements ModelInterface, ArrayAccess
     * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。如果需要一次查全部域名，该参数值填-1。
     * hostname  域名
     * policyname  策略名称
-    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -113,7 +113,7 @@ class ListPremiumHostRequest implements ModelInterface, ArrayAccess
     * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。如果需要一次查全部域名，该参数值填-1。
     * hostname  域名
     * policyname  策略名称
-    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -135,7 +135,7 @@ class ListPremiumHostRequest implements ModelInterface, ArrayAccess
     * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。如果需要一次查全部域名，该参数值填-1。
     * hostname  域名
     * policyname  策略名称
-    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -189,7 +189,24 @@ class ListPremiumHostRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const PROTECT_STATUS_MINUS_1 = -1;
+    const PROTECT_STATUS_0 = 0;
+    const PROTECT_STATUS_1 = 1;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getProtectStatusAllowableValues()
+    {
+        return [
+            self::PROTECT_STATUS_MINUS_1,
+            self::PROTECT_STATUS_0,
+            self::PROTECT_STATUS_1,
+        ];
+    }
 
 
     /**
@@ -227,6 +244,14 @@ class ListPremiumHostRequest implements ModelInterface, ArrayAccess
         if ($this->container['contentType'] === null) {
             $invalidProperties[] = "'contentType' can't be null";
         }
+            $allowedValues = $this->getProtectStatusAllowableValues();
+                if (!is_null($this->container['protectStatus']) && !in_array($this->container['protectStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'protectStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -387,7 +412,7 @@ class ListPremiumHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    *  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -399,7 +424,7 @@ class ListPremiumHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param int|null $protectStatus 域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * @param int|null $protectStatus **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测 **默认取值：** 不涉及
     *
     * @return $this
     */

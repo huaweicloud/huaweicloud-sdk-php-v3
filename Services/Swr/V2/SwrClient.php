@@ -1869,6 +1869,12 @@ class SwrClient extends Client
         if ($localVarParams['tag'] !== null) {
             $queryParams['tag'] = $localVarParams['tag'];
         }
+        if ($localVarParams['orderColumn'] !== null) {
+            $queryParams['order_column'] = $localVarParams['orderColumn'];
+        }
+        if ($localVarParams['orderType'] !== null) {
+            $queryParams['order_type'] = $localVarParams['orderType'];
+        }
         if ($localVarParams['withManifest'] !== null) {
             $queryParams['with_manifest'] = $localVarParams['withManifest'];
         }
@@ -6554,6 +6560,77 @@ class SwrClient extends Client
     }
 
     /**
+     * 获取制品扫描的漏洞信息
+     *
+     * 获取制品扫描的漏洞信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listInstanceArtifactVulnerabilities($request)
+    {
+        return $this->listInstanceArtifactVulnerabilitiesWithHttpInfo($request);
+    }
+
+    public function listInstanceArtifactVulnerabilitiesWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/namespaces/{namespace_name}/repositories/{repository_name}/artifacts/{reference}/vulnerabilities';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['namespaceName'] !== null) {
+            $pathParams['namespace_name'] = $localVarParams['namespaceName'];
+        }
+        if ($localVarParams['repositoryName'] !== null) {
+            $pathParams['repository_name'] = $localVarParams['repositoryName'];
+        }
+        if ($localVarParams['reference'] !== null) {
+            $pathParams['reference'] = $localVarParams['reference'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Swr\V2\Model\ListInstanceArtifactVulnerabilitiesResponse',
+            $requestType='\HuaweiCloud\SDK\Swr\V2\Model\ListInstanceArtifactVulnerabilitiesRequest');
+    }
+
+    /**
      * 获取制品版本列表
      *
      * 获取制品版本列表
@@ -8857,6 +8934,9 @@ class SwrClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['withScanOverview'] !== null) {
+            $queryParams['with_scan_overview'] = $localVarParams['withScanOverview'];
+        }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
         }
@@ -9823,6 +9903,77 @@ class SwrClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Swr\V2\Model\ShowSubResourceInstancesCountResponse',
             $requestType='\HuaweiCloud\SDK\Swr\V2\Model\ShowSubResourceInstancesCountRequest');
+    }
+
+    /**
+     * 手动启动制品扫描
+     *
+     * 手动启动制品扫描
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function startManualScanning($request)
+    {
+        return $this->startManualScanningWithHttpInfo($request);
+    }
+
+    public function startManualScanningWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/namespaces/{namespace_name}/repositories/{repository_name}/artifacts/{reference}/scan';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['namespaceName'] !== null) {
+            $pathParams['namespace_name'] = $localVarParams['namespaceName'];
+        }
+        if ($localVarParams['repositoryName'] !== null) {
+            $pathParams['repository_name'] = $localVarParams['repositoryName'];
+        }
+        if ($localVarParams['reference'] !== null) {
+            $pathParams['reference'] = $localVarParams['reference'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Swr\V2\Model\StartManualScanningResponse',
+            $requestType='\HuaweiCloud\SDK\Swr\V2\Model\StartManualScanningRequest');
     }
 
     /**

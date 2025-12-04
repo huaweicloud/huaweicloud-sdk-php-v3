@@ -20,7 +20,7 @@ class UpdateAnticrawlerRuleTypeRequestbody implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * anticrawlerType  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
+    * anticrawlerType  **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UpdateAnticrawlerRuleTypeRequestbody implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * anticrawlerType  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
+    * anticrawlerType  **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UpdateAnticrawlerRuleTypeRequestbody implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * anticrawlerType  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
+    * anticrawlerType  **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateAnticrawlerRuleTypeRequestbody implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * anticrawlerType  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
+    * anticrawlerType  **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UpdateAnticrawlerRuleTypeRequestbody implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * anticrawlerType  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
+    * anticrawlerType  **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
     *
     * @var string[]
     */
@@ -129,7 +129,22 @@ class UpdateAnticrawlerRuleTypeRequestbody implements ModelInterface, ArrayAcces
     {
         return self::$openAPIModelName;
     }
+    const ANTICRAWLER_TYPE_ANTICRAWLER_EXCEPT_URL = 'anticrawler_except_url';
+    const ANTICRAWLER_TYPE_ANTICRAWLER_SPECIFIC_URL = 'anticrawler_specific_url';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAnticrawlerTypeAllowableValues()
+    {
+        return [
+            self::ANTICRAWLER_TYPE_ANTICRAWLER_EXCEPT_URL,
+            self::ANTICRAWLER_TYPE_ANTICRAWLER_SPECIFIC_URL,
+        ];
+    }
 
 
     /**
@@ -161,6 +176,14 @@ class UpdateAnticrawlerRuleTypeRequestbody implements ModelInterface, ArrayAcces
         if ($this->container['anticrawlerType'] === null) {
             $invalidProperties[] = "'anticrawlerType' can't be null";
         }
+            $allowedValues = $this->getAnticrawlerTypeAllowableValues();
+                if (!is_null($this->container['anticrawlerType']) && !in_array($this->container['anticrawlerType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'anticrawlerType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -177,7 +200,7 @@ class UpdateAnticrawlerRuleTypeRequestbody implements ModelInterface, ArrayAcces
 
     /**
     * Gets anticrawlerType
-    *  JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
+    *  **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
     *
     * @return string
     */
@@ -189,7 +212,7 @@ class UpdateAnticrawlerRuleTypeRequestbody implements ModelInterface, ArrayAcces
     /**
     * Sets anticrawlerType
     *
-    * @param string $anticrawlerType JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url
+    * @param string $anticrawlerType **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
     *
     * @return $this
     */

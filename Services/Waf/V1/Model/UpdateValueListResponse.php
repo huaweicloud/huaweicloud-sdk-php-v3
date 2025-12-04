@@ -23,7 +23,7 @@ class UpdateValueListResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  引用表id
     * name  引用表名称
-    * type  引用表类型
+    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
     * description  引用表描述
     * values  引用表的值
     * producer  引用表来源：  - 1:表示来源于用户手动创建  - 2:表示来源于智能访问控制自动创建
@@ -43,7 +43,7 @@ class UpdateValueListResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  引用表id
     * name  引用表名称
-    * type  引用表类型
+    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
     * description  引用表描述
     * values  引用表的值
     * producer  引用表来源：  - 1:表示来源于用户手动创建  - 2:表示来源于智能访问控制自动创建
@@ -84,7 +84,7 @@ class UpdateValueListResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  引用表id
     * name  引用表名称
-    * type  引用表类型
+    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
     * description  引用表描述
     * values  引用表的值
     * producer  引用表来源：  - 1:表示来源于用户手动创建  - 2:表示来源于智能访问控制自动创建
@@ -104,7 +104,7 @@ class UpdateValueListResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  引用表id
     * name  引用表名称
-    * type  引用表类型
+    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
     * description  引用表描述
     * values  引用表的值
     * producer  引用表来源：  - 1:表示来源于用户手动创建  - 2:表示来源于智能访问控制自动创建
@@ -124,7 +124,7 @@ class UpdateValueListResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  引用表id
     * name  引用表名称
-    * type  引用表类型
+    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
     * description  引用表描述
     * values  引用表的值
     * producer  引用表来源：  - 1:表示来源于用户手动创建  - 2:表示来源于智能访问控制自动创建
@@ -180,7 +180,38 @@ class UpdateValueListResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TYPE_URL = 'url';
+    const TYPE_PARAMS = 'params';
+    const TYPE_IP = 'ip';
+    const TYPE_COOKIE = 'cookie';
+    const TYPE_REFERER = 'referer';
+    const TYPE_USER_AGENT = 'user-agent';
+    const TYPE_HEADER = 'header';
+    const TYPE_RESPONSE_CODE = 'response_code';
+    const TYPE_RESPONSE_HEADER = 'response_header';
+    const TYPE_RESPONSE_BODY = 'response_body';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_URL,
+            self::TYPE_PARAMS,
+            self::TYPE_IP,
+            self::TYPE_COOKIE,
+            self::TYPE_REFERER,
+            self::TYPE_USER_AGENT,
+            self::TYPE_HEADER,
+            self::TYPE_RESPONSE_CODE,
+            self::TYPE_RESPONSE_HEADER,
+            self::TYPE_RESPONSE_BODY,
+        ];
+    }
 
 
     /**
@@ -214,6 +245,14 @@ class UpdateValueListResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -278,7 +317,7 @@ class UpdateValueListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  引用表类型
+    *  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -290,7 +329,7 @@ class UpdateValueListResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 引用表类型
+    * @param string|null $type **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
     *
     * @return $this
     */

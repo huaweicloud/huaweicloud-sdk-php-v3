@@ -20,14 +20,14 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  产品类型。当前产品类型有单机和集群。
-    * productId  产品ID。
-    * ecsFlavorId  底层资源类型。
-    * billingCode  账单计费类型。
-    * archTypes  CPU架构。
-    * chargingMode  [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,cmcc)[暂未使用。](tag:hws_ocb,ocb,hcs,fcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm,sbc,hk_sbc,hws_eu)
-    * ios  支持的磁盘IO类型列表。
-    * supportFeatures  当前规格实例支持的功能特性列表。
+    * type  **参数解释**： 产品类型。 **取值范围**： - single    - cluster
+    * productId  **参数解释**： 产品ID。 **取值范围**： 不涉及。
+    * ecsFlavorId  **参数解释**： 底层资源类型。 **取值范围**： 不涉及。
+    * billingCode  **参数解释**： 账单计费类型。 **取值范围**： 不涉及。
+    * archTypes  **参数解释**： CPU架构。
+    * chargingMode  **参数解释**： 计费模式。
+    * ios  **参数解释**： 支持的磁盘IO类型列表。
+    * supportFeatures  **参数解释**： 当前规格实例支持的功能特性列表。
     * properties  properties
     *
     * @var string[]
@@ -46,14 +46,14 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  产品类型。当前产品类型有单机和集群。
-    * productId  产品ID。
-    * ecsFlavorId  底层资源类型。
-    * billingCode  账单计费类型。
-    * archTypes  CPU架构。
-    * chargingMode  [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,cmcc)[暂未使用。](tag:hws_ocb,ocb,hcs,fcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm,sbc,hk_sbc,hws_eu)
-    * ios  支持的磁盘IO类型列表。
-    * supportFeatures  当前规格实例支持的功能特性列表。
+    * type  **参数解释**： 产品类型。 **取值范围**： - single    - cluster
+    * productId  **参数解释**： 产品ID。 **取值范围**： 不涉及。
+    * ecsFlavorId  **参数解释**： 底层资源类型。 **取值范围**： 不涉及。
+    * billingCode  **参数解释**： 账单计费类型。 **取值范围**： 不涉及。
+    * archTypes  **参数解释**： CPU架构。
+    * chargingMode  **参数解释**： 计费模式。
+    * ios  **参数解释**： 支持的磁盘IO类型列表。
+    * supportFeatures  **参数解释**： 当前规格实例支持的功能特性列表。
     * properties  properties
     *
     * @var string[]
@@ -93,14 +93,14 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  产品类型。当前产品类型有单机和集群。
-    * productId  产品ID。
-    * ecsFlavorId  底层资源类型。
-    * billingCode  账单计费类型。
-    * archTypes  CPU架构。
-    * chargingMode  [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,cmcc)[暂未使用。](tag:hws_ocb,ocb,hcs,fcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm,sbc,hk_sbc,hws_eu)
-    * ios  支持的磁盘IO类型列表。
-    * supportFeatures  当前规格实例支持的功能特性列表。
+    * type  **参数解释**： 产品类型。 **取值范围**： - single    - cluster
+    * productId  **参数解释**： 产品ID。 **取值范围**： 不涉及。
+    * ecsFlavorId  **参数解释**： 底层资源类型。 **取值范围**： 不涉及。
+    * billingCode  **参数解释**： 账单计费类型。 **取值范围**： 不涉及。
+    * archTypes  **参数解释**： CPU架构。
+    * chargingMode  **参数解释**： 计费模式。
+    * ios  **参数解释**： 支持的磁盘IO类型列表。
+    * supportFeatures  **参数解释**： 当前规格实例支持的功能特性列表。
     * properties  properties
     *
     * @var string[]
@@ -119,14 +119,14 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  产品类型。当前产品类型有单机和集群。
-    * productId  产品ID。
-    * ecsFlavorId  底层资源类型。
-    * billingCode  账单计费类型。
-    * archTypes  CPU架构。
-    * chargingMode  [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,cmcc)[暂未使用。](tag:hws_ocb,ocb,hcs,fcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm,sbc,hk_sbc,hws_eu)
-    * ios  支持的磁盘IO类型列表。
-    * supportFeatures  当前规格实例支持的功能特性列表。
+    * type  **参数解释**： 产品类型。 **取值范围**： - single    - cluster
+    * productId  **参数解释**： 产品ID。 **取值范围**： 不涉及。
+    * ecsFlavorId  **参数解释**： 底层资源类型。 **取值范围**： 不涉及。
+    * billingCode  **参数解释**： 账单计费类型。 **取值范围**： 不涉及。
+    * archTypes  **参数解释**： CPU架构。
+    * chargingMode  **参数解释**： 计费模式。
+    * ios  **参数解释**： 支持的磁盘IO类型列表。
+    * supportFeatures  **参数解释**： 当前规格实例支持的功能特性列表。
     * properties  properties
     *
     * @var string[]
@@ -145,14 +145,14 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  产品类型。当前产品类型有单机和集群。
-    * productId  产品ID。
-    * ecsFlavorId  底层资源类型。
-    * billingCode  账单计费类型。
-    * archTypes  CPU架构。
-    * chargingMode  [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,cmcc)[暂未使用。](tag:hws_ocb,ocb,hcs,fcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm,sbc,hk_sbc,hws_eu)
-    * ios  支持的磁盘IO类型列表。
-    * supportFeatures  当前规格实例支持的功能特性列表。
+    * type  **参数解释**： 产品类型。 **取值范围**： - single    - cluster
+    * productId  **参数解释**： 产品ID。 **取值范围**： 不涉及。
+    * ecsFlavorId  **参数解释**： 底层资源类型。 **取值范围**： 不涉及。
+    * billingCode  **参数解释**： 账单计费类型。 **取值范围**： 不涉及。
+    * archTypes  **参数解释**： CPU架构。
+    * chargingMode  **参数解释**： 计费模式。
+    * ios  **参数解释**： 支持的磁盘IO类型列表。
+    * supportFeatures  **参数解释**： 当前规格实例支持的功能特性列表。
     * properties  properties
     *
     * @var string[]
@@ -262,7 +262,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  产品类型。当前产品类型有单机和集群。
+    *  **参数解释**： 产品类型。 **取值范围**： - single    - cluster
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 产品类型。当前产品类型有单机和集群。
+    * @param string|null $type **参数解释**： 产品类型。 **取值范围**： - single    - cluster
     *
     * @return $this
     */
@@ -286,7 +286,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
-    *  产品ID。
+    *  **参数解释**： 产品ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -298,7 +298,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets productId
     *
-    * @param string|null $productId 产品ID。
+    * @param string|null $productId **参数解释**： 产品ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets ecsFlavorId
-    *  底层资源类型。
+    *  **参数解释**： 底层资源类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets ecsFlavorId
     *
-    * @param string|null $ecsFlavorId 底层资源类型。
+    * @param string|null $ecsFlavorId **参数解释**： 底层资源类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets billingCode
-    *  账单计费类型。
+    *  **参数解释**： 账单计费类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets billingCode
     *
-    * @param string|null $billingCode 账单计费类型。
+    * @param string|null $billingCode **参数解释**： 账单计费类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets archTypes
-    *  CPU架构。
+    *  **参数解释**： CPU架构。
     *
     * @return string[]|null
     */
@@ -370,7 +370,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets archTypes
     *
-    * @param string[]|null $archTypes CPU架构。
+    * @param string[]|null $archTypes **参数解释**： CPU架构。
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,cmcc)[暂未使用。](tag:hws_ocb,ocb,hcs,fcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm,sbc,hk_sbc,hws_eu)
+    *  **参数解释**： 计费模式。
     *
     * @return string[]|null
     */
@@ -394,7 +394,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param string[]|null $chargingMode [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,cmcc)[暂未使用。](tag:hws_ocb,ocb,hcs,fcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm,sbc,hk_sbc,hws_eu)
+    * @param string[]|null $chargingMode **参数解释**： 计费模式。
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets ios
-    *  支持的磁盘IO类型列表。
+    *  **参数解释**： 支持的磁盘IO类型列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ListEngineIosEntity[]|null
     */
@@ -418,7 +418,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets ios
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ListEngineIosEntity[]|null $ios 支持的磁盘IO类型列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ListEngineIosEntity[]|null $ios **参数解释**： 支持的磁盘IO类型列表。
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportFeatures
-    *  当前规格实例支持的功能特性列表。
+    *  **参数解释**： 当前规格实例支持的功能特性列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ListEngineSupportFeaturesEntity[]|null
     */
@@ -442,7 +442,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets supportFeatures
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ListEngineSupportFeaturesEntity[]|null $supportFeatures 当前规格实例支持的功能特性列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ListEngineSupportFeaturesEntity[]|null $supportFeatures **参数解释**： 当前规格实例支持的功能特性列表。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class ExtendProductInfoEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  实例类型。
+    * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     * productId  产品ID。
     * ecsFlavorId  该产品使用的ECS规格。
     * archTypes  支持的CPU架构类型。
@@ -48,7 +48,7 @@ class ExtendProductInfoEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  实例类型。
+    * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     * productId  产品ID。
     * ecsFlavorId  该产品使用的ECS规格。
     * archTypes  支持的CPU架构类型。
@@ -97,7 +97,7 @@ class ExtendProductInfoEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  实例类型。
+    * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     * productId  产品ID。
     * ecsFlavorId  该产品使用的ECS规格。
     * archTypes  支持的CPU架构类型。
@@ -125,7 +125,7 @@ class ExtendProductInfoEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  实例类型。
+    * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     * productId  产品ID。
     * ecsFlavorId  该产品使用的ECS规格。
     * archTypes  支持的CPU架构类型。
@@ -153,7 +153,7 @@ class ExtendProductInfoEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  实例类型。
+    * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     * productId  产品ID。
     * ecsFlavorId  该产品使用的ECS规格。
     * archTypes  支持的CPU架构类型。
@@ -273,7 +273,7 @@ class ExtendProductInfoEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  实例类型。
+    *  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class ExtendProductInfoEntity implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 实例类型。
+    * @param string|null $type **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     *
     * @return $this
     */

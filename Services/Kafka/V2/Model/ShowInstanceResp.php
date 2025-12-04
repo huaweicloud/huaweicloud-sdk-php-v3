@@ -20,92 +20,92 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  实例名称。
-    * engine  引擎。
-    * engineVersion  版本。
-    * description  实例描述。
-    * specification  实例规格。
-    * storageSpace  消息存储空间，单位：GB。
-    * partitionNum  Kafka实例的分区数量。
-    * usedStorageSpace  已使用的消息存储空间，单位：GB。
-    * dnsEnable  实例是否开启域名访问功能。 - true：开启 - false：未开启
-    * connectAddress  实例连接IP地址。
-    * port  实例连接端口。
-    * status  实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
-    * instanceId  实例ID。
-    * resourceSpecCode  资源规格标识。   [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
-    * chargingMode  [付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc)[付费模式，暂未使用。](tag:hws_ocb,ocb) [付费模式，1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc,hws_eu)
-    * vpcId  VPC ID。
-    * vpcName  VPC的名称。
-    * createdAt  完成创建时间。  格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
-    * subnetName  子网名称。
-    * subnetCidr  子网网段。
-    * userId  用户ID。
-    * userName  用户名。
-    * accessUser  实例访问用户名。
-    * orderId  订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。
-    * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
-    * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。
-    * enablePublicip  实例是否开启公网访问功能。 - true：开启 - false：未开启
-    * managementConnectAddress  Kafka实例的Kafka Manager连接地址。
-    * sslEnable  是否开启安全认证。 - true：开启 - false：未开启
-    * brokerSslEnable  是否开启broker间副本加密传输。 - true：开启 - false：未开启
-    * kafkaSecurityProtocol  Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。  - PLAINTEXT: 既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
-    * saslEnabledMechanisms  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
-    * sslTwoWayEnable  是否开启双向认证。
-    * certReplaced  是否能够证书替换。
-    * publicManagementConnectAddress  公网访问Kafka Manager连接地址。
-    * enterpriseProjectId  企业项目ID。
-    * isLogicalVolume  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
-    * extendTimes  实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
-    * enableAutoTopic  是否打开kafka自动创建Topic功能。   - true：开启   - false：关闭
-    * type  实例类型：集群，cluster。
-    * productId  产品标识。
-    * securityGroupId  安全组ID。
-    * securityGroupName  租户安全组名称。
-    * subnetId  子网ID。
-    * availableZones  实例节点所在的可用区，返回“可用区ID”。
-    * availableZoneNames  实例节点所在的可用区名称，返回“可用区名称”。
-    * totalStorageSpace  总共消息存储空间，单位：GB。
-    * publicConnectAddress  实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。
-    * publicConnectDomainName  实例公网连接域名。当实例开启了公网访问，实例才包含该参数。
-    * storageResourceId  存储资源ID。
-    * storageSpecCode  IO规格。
-    * serviceType  服务类型。
-    * storageType  存储类型。
-    * retentionPolicy  消息老化策略。
-    * kafkaPublicStatus  Kafka公网开启状态。
-    * publicBandwidth  kafka公网访问带宽。
-    * enableLogCollection  是否开启消息收集功能。
-    * newAuthCert  是否开启新证书。
-    * crossVpcInfo  跨VPC访问信息。
-    * ipv6Enable  是否开启ipv6。
-    * ipv6ConnectAddresses  IPv6的连接地址。
-    * connectorEnable  是否开启转储。新规格产品暂不支持开启转储。
-    * connectorNodeNum  connector节点数量。
-    * connectorId  转储任务ID。
-    * restEnable  是否开启Kafka rest功能。
-    * restConnectAddress  Kafka rest连接地址。
-    * publicBoundwidth  kafka公网访问带宽。待删除版本。
-    * messageQueryInstEnable  是否开启消息查询功能。
-    * vpcClientPlain  是否开启VPC明文访问。
-    * supportFeatures  Kafka实例支持的特性功能。
-    * traceEnable  是否开启消息轨迹功能。
-    * agentEnable  是否开启代理。
-    * podConnectAddress  租户侧连接地址。
-    * diskEncrypted  是否开启磁盘加密。
-    * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空。
-    * kafkaPrivateConnectAddress  Kafka实例内网连接地址。
-    * kafkaPrivateConnectDomainName  Kafka实例内网连接域名。
-    * cesVersion  云监控版本。
-    * publicAccessEnabled  区分实例什么时候开启的公网访问  取值范围：   - true：已开启公网访问   - actived：已开启公网访问   - closed：已关闭公网访问   - false：已关闭公网访问
-    * nodeNum  节点数。
+    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * engine  **参数解释**： 引擎。 **取值范围**： kafka
+    * engineVersion  **参数解释**： Kafka的版本。 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax)
+    * description  **参数解释**： 实例描述。 **取值范围**： 不涉及。
+    * specification  **参数解释**： 实例规格。 **取值范围**： 不涉及。
+    * storageSpace  **参数解释**： 消息存储空间，单位：GB。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [- Kafka实例规格为kafka.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs)
+    * partitionNum  **参数解释**： Kafka实例的分区数量。 **取值范围**： 不涉及。
+    * usedStorageSpace  **参数解释**： 已使用的消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * dnsEnable  **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启 - false：未开启
+    * connectAddress  **参数解释**： 实例连接IP地址。 **取值范围**： 不涉及。
+    * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
+    * status  **参数解释**： 实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。 **取值范围**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax)
+    * chargingMode  **参数解释**： 付费模式。 **取值范围**： [- 1表示按需计费。 - 0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc,ax)[付费模式，暂未使用。](tag:hws_ocb,ocb) [- 1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc,hws_eu)
+    * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
+    * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
+    * createdAt  **参数解释**： 完成创建时间。  格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
+    * subnetName  **参数解释**： 子网名称。 **取值范围**： 不涉及。
+    * subnetCidr  **参数解释**： 子网网段。 **取值范围**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * accessUser  **参数解释**： 实例访问用户名。 **取值范围**： 不涉及。
+    * orderId  **参数解释**： 订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。 **取值范围**： 不涉及。
+    * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * enablePublicip  **参数解释**： 实例是否开启公网访问功能。 **取值范围**： - true：开启 - false：未开启
+    * managementConnectAddress  **参数解释**： Kafka实例的Kafka Manager连接地址。 **取值范围**： 不涉及。
+    * sslEnable  **参数解释**： 是否开启安全认证。 **取值范围**： - true：开启 - false：未开启
+    * brokerSslEnable  **参数解释**： 是否开启broker间副本加密传输。 **取值范围**： - true：开启 - false：未开启
+    * kafkaSecurityProtocol  **参数解释**： Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。 **取值范围**： - PLAINTEXT：既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL：采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT：明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
+    * saslEnabledMechanisms  **参数解释**： 开启SASL后使用的认证机制。
+    * sslTwoWayEnable  **参数解释**： 是否开启双向认证。 **取值范围**： - true：开启 - false：未开启
+    * certReplaced  **参数解释**： 是否开启证书替换。 **取值范围**： - true：开启 - false：未开启
+    * publicManagementConnectAddress  **参数解释**： 公网访问Kafka Manager连接地址。 **取值范围**： 不涉及。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
+    * isLogicalVolume  **参数解释**： 实例扩容时用于区分老实例与新实例。 **取值范围**： - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例。
+    * extendTimes  **参数解释**： 实例扩容磁盘次数。 **取值范围**： 不涉及。
+    * enableAutoTopic  **参数解释**： 是否开启自动创建Topic。 **取值范围**： - true：开启 - false：关闭
+    * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
+    * productId  **参数解释**： 产品标识。 **取值范围**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
+    * securityGroupName  **参数解释**： 安全组名称。 **取值范围**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 实例节点所在的可用区，返回“可用区ID”。
+    * availableZoneNames  **参数解释**： 实例节点所在的可用区名称，返回“可用区名称”。
+    * totalStorageSpace  **参数解释**： 总共消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * publicConnectAddress  **参数解释**： 实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。 **取值范围**： 不涉及。
+    * publicConnectDomainName  **参数解释**： 实例公网连接域名。当实例开启了公网访问，实例才包含该参数。 **取值范围**： 不涉及。
+    * storageResourceId  **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
+    * storageSpecCode  **参数解释**： IO规格。 **取值范围**： 不涉及。
+    * serviceType  **参数解释**： 服务类型。 **取值范围**： advanced。
+    * storageType  **参数解释**： 存储类型。 **取值范围**： hec
+    * retentionPolicy  **参数解释**： 消息老化策略。 **取值范围**： - time_base：表示自动删除最老消息。 - produce_reject：表示拒绝消息写入。
+    * kafkaPublicStatus  **参数解释**： Kafka公网开启状态。 **取值范围**： - true：开启公网。 - closed：关闭公网。 - false：未使用公网。 - freezed：公网冻结。 - actived：公网解冻。
+    * publicBandwidth  **参数解释**： kafka公网访问带宽。 **取值范围**： 不涉及。
+    * enableLogCollection  **参数解释**： 是否开启消息收集功能。 **取值范围**： - true：开启 - false：不开启
+    * newAuthCert  **参数解释**： 是否开启新证书。 **取值范围**： - true：开启 - false：不开启
+    * crossVpcInfo  **参数解释**： 跨VPC访问信息。 **取值范围**： 不涉及。
+    * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启 - false：不开启
+    * ipv6ConnectAddresses  **参数解释**： IPv6的连接地址。
+    * connectorEnable  **参数解释**： 是否开启转储。 **取值范围**： - true：开启 - false：不开启
+    * connectorNodeNum  **参数解释**： connector节点数量。 **取值范围**： 2-16。
+    * connectorId  **参数解释**： 转储任务ID。 **取值范围**： 不涉及。
+    * restEnable  **参数解释**： 是否开启Kafka rest功能。 **取值范围**： - true：开启 - false：不开启
+    * restConnectAddress  **参数解释**：  Kafka rest连接地址。 **取值范围**： 不涉及。
+    * publicBoundwidth  **参数解释**： Kafka公网访问带宽。待删除版本。 **取值范围**： 不涉及。
+    * messageQueryInstEnable  **参数解释**： 是否开启消息查询功能。 **取值范围**： - true：开启 - false：不开启
+    * vpcClientPlain  **参数解释**： 是否开启VPC明文访问。 **取值范围**： - true：开启 - false：不开启
+    * supportFeatures  **参数解释**： Kafka实例支持的特性功能。 **取值范围**： 不涉及。
+    * traceEnable  **参数解释**： 是否开启消息轨迹功能。 **取值范围**： - true：开启 - false：不开启
+    * agentEnable  **参数解释**： 是否开启代理。 **取值范围**： - true：开启 - false：不开启
+    * podConnectAddress  **参数解释**： 租户侧连接地址。 **取值范围**： 不涉及。
+    * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启 - false：不开启
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
+    * kafkaPrivateConnectAddress  **参数解释**： Kafka实例内网连接地址。 **取值范围**： 不涉及。
+    * kafkaPrivateConnectDomainName  **参数解释**： Kafka实例内网连接域名。 **取值范围**： 不涉及。
+    * cesVersion  **参数解释**： 云监控版本。 **取值范围**： 不涉及。
+    * publicAccessEnabled  **参数解释**： 区分实例什么时候开启的公网访问 **取值范围**： - true：已开启公网访问 - actived：已开启公网访问 - closed：已关闭公网访问 - false：已关闭公网访问
+    * nodeNum  **参数解释**： 节点数。 **取值范围**： - [1：Kafka单机实例的节点数。](tag:hws,hws_hk,hws_eu,dt,hcs,ax) - 3~50：Kafka集群实例的节点数。
     * portProtocols  portProtocols
-    * enableAcl  是否开启访问控制。
-    * newSpecBillingEnable  是否启用新规格计费。
-    * brokerNum  节点数量。
-    * tags  标签列表。
-    * drEnable  是否为容灾实例。
+    * enableAcl  **参数解释**： 是否开启访问控制。 **取值范围**： - true：开启 - false：不开启
+    * newSpecBillingEnable  **参数解释**： 是否启用新规格计费。 **取值范围**： - true：开启 - false：不开启
+    * brokerNum  **参数解释**： 节点数量。 **取值范围**： 不涉及。
+    * tags  **参数解释**： 标签列表。
+    * drEnable  **参数解释**：  是否为容灾实例。 **取值范围**： - true：是容灾实例。 - false：不是容灾实例。
     *
     * @var string[]
     */
@@ -200,92 +200,92 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  实例名称。
-    * engine  引擎。
-    * engineVersion  版本。
-    * description  实例描述。
-    * specification  实例规格。
-    * storageSpace  消息存储空间，单位：GB。
-    * partitionNum  Kafka实例的分区数量。
-    * usedStorageSpace  已使用的消息存储空间，单位：GB。
-    * dnsEnable  实例是否开启域名访问功能。 - true：开启 - false：未开启
-    * connectAddress  实例连接IP地址。
-    * port  实例连接端口。
-    * status  实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
-    * instanceId  实例ID。
-    * resourceSpecCode  资源规格标识。   [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
-    * chargingMode  [付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc)[付费模式，暂未使用。](tag:hws_ocb,ocb) [付费模式，1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc,hws_eu)
-    * vpcId  VPC ID。
-    * vpcName  VPC的名称。
-    * createdAt  完成创建时间。  格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
-    * subnetName  子网名称。
-    * subnetCidr  子网网段。
-    * userId  用户ID。
-    * userName  用户名。
-    * accessUser  实例访问用户名。
-    * orderId  订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。
-    * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
-    * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。
-    * enablePublicip  实例是否开启公网访问功能。 - true：开启 - false：未开启
-    * managementConnectAddress  Kafka实例的Kafka Manager连接地址。
-    * sslEnable  是否开启安全认证。 - true：开启 - false：未开启
-    * brokerSslEnable  是否开启broker间副本加密传输。 - true：开启 - false：未开启
-    * kafkaSecurityProtocol  Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。  - PLAINTEXT: 既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
-    * saslEnabledMechanisms  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
-    * sslTwoWayEnable  是否开启双向认证。
-    * certReplaced  是否能够证书替换。
-    * publicManagementConnectAddress  公网访问Kafka Manager连接地址。
-    * enterpriseProjectId  企业项目ID。
-    * isLogicalVolume  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
-    * extendTimes  实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
-    * enableAutoTopic  是否打开kafka自动创建Topic功能。   - true：开启   - false：关闭
-    * type  实例类型：集群，cluster。
-    * productId  产品标识。
-    * securityGroupId  安全组ID。
-    * securityGroupName  租户安全组名称。
-    * subnetId  子网ID。
-    * availableZones  实例节点所在的可用区，返回“可用区ID”。
-    * availableZoneNames  实例节点所在的可用区名称，返回“可用区名称”。
-    * totalStorageSpace  总共消息存储空间，单位：GB。
-    * publicConnectAddress  实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。
-    * publicConnectDomainName  实例公网连接域名。当实例开启了公网访问，实例才包含该参数。
-    * storageResourceId  存储资源ID。
-    * storageSpecCode  IO规格。
-    * serviceType  服务类型。
-    * storageType  存储类型。
-    * retentionPolicy  消息老化策略。
-    * kafkaPublicStatus  Kafka公网开启状态。
-    * publicBandwidth  kafka公网访问带宽。
-    * enableLogCollection  是否开启消息收集功能。
-    * newAuthCert  是否开启新证书。
-    * crossVpcInfo  跨VPC访问信息。
-    * ipv6Enable  是否开启ipv6。
-    * ipv6ConnectAddresses  IPv6的连接地址。
-    * connectorEnable  是否开启转储。新规格产品暂不支持开启转储。
-    * connectorNodeNum  connector节点数量。
-    * connectorId  转储任务ID。
-    * restEnable  是否开启Kafka rest功能。
-    * restConnectAddress  Kafka rest连接地址。
-    * publicBoundwidth  kafka公网访问带宽。待删除版本。
-    * messageQueryInstEnable  是否开启消息查询功能。
-    * vpcClientPlain  是否开启VPC明文访问。
-    * supportFeatures  Kafka实例支持的特性功能。
-    * traceEnable  是否开启消息轨迹功能。
-    * agentEnable  是否开启代理。
-    * podConnectAddress  租户侧连接地址。
-    * diskEncrypted  是否开启磁盘加密。
-    * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空。
-    * kafkaPrivateConnectAddress  Kafka实例内网连接地址。
-    * kafkaPrivateConnectDomainName  Kafka实例内网连接域名。
-    * cesVersion  云监控版本。
-    * publicAccessEnabled  区分实例什么时候开启的公网访问  取值范围：   - true：已开启公网访问   - actived：已开启公网访问   - closed：已关闭公网访问   - false：已关闭公网访问
-    * nodeNum  节点数。
+    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * engine  **参数解释**： 引擎。 **取值范围**： kafka
+    * engineVersion  **参数解释**： Kafka的版本。 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax)
+    * description  **参数解释**： 实例描述。 **取值范围**： 不涉及。
+    * specification  **参数解释**： 实例规格。 **取值范围**： 不涉及。
+    * storageSpace  **参数解释**： 消息存储空间，单位：GB。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [- Kafka实例规格为kafka.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs)
+    * partitionNum  **参数解释**： Kafka实例的分区数量。 **取值范围**： 不涉及。
+    * usedStorageSpace  **参数解释**： 已使用的消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * dnsEnable  **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启 - false：未开启
+    * connectAddress  **参数解释**： 实例连接IP地址。 **取值范围**： 不涉及。
+    * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
+    * status  **参数解释**： 实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。 **取值范围**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax)
+    * chargingMode  **参数解释**： 付费模式。 **取值范围**： [- 1表示按需计费。 - 0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc,ax)[付费模式，暂未使用。](tag:hws_ocb,ocb) [- 1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc,hws_eu)
+    * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
+    * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
+    * createdAt  **参数解释**： 完成创建时间。  格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
+    * subnetName  **参数解释**： 子网名称。 **取值范围**： 不涉及。
+    * subnetCidr  **参数解释**： 子网网段。 **取值范围**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * accessUser  **参数解释**： 实例访问用户名。 **取值范围**： 不涉及。
+    * orderId  **参数解释**： 订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。 **取值范围**： 不涉及。
+    * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * enablePublicip  **参数解释**： 实例是否开启公网访问功能。 **取值范围**： - true：开启 - false：未开启
+    * managementConnectAddress  **参数解释**： Kafka实例的Kafka Manager连接地址。 **取值范围**： 不涉及。
+    * sslEnable  **参数解释**： 是否开启安全认证。 **取值范围**： - true：开启 - false：未开启
+    * brokerSslEnable  **参数解释**： 是否开启broker间副本加密传输。 **取值范围**： - true：开启 - false：未开启
+    * kafkaSecurityProtocol  **参数解释**： Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。 **取值范围**： - PLAINTEXT：既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL：采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT：明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
+    * saslEnabledMechanisms  **参数解释**： 开启SASL后使用的认证机制。
+    * sslTwoWayEnable  **参数解释**： 是否开启双向认证。 **取值范围**： - true：开启 - false：未开启
+    * certReplaced  **参数解释**： 是否开启证书替换。 **取值范围**： - true：开启 - false：未开启
+    * publicManagementConnectAddress  **参数解释**： 公网访问Kafka Manager连接地址。 **取值范围**： 不涉及。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
+    * isLogicalVolume  **参数解释**： 实例扩容时用于区分老实例与新实例。 **取值范围**： - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例。
+    * extendTimes  **参数解释**： 实例扩容磁盘次数。 **取值范围**： 不涉及。
+    * enableAutoTopic  **参数解释**： 是否开启自动创建Topic。 **取值范围**： - true：开启 - false：关闭
+    * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
+    * productId  **参数解释**： 产品标识。 **取值范围**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
+    * securityGroupName  **参数解释**： 安全组名称。 **取值范围**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 实例节点所在的可用区，返回“可用区ID”。
+    * availableZoneNames  **参数解释**： 实例节点所在的可用区名称，返回“可用区名称”。
+    * totalStorageSpace  **参数解释**： 总共消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * publicConnectAddress  **参数解释**： 实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。 **取值范围**： 不涉及。
+    * publicConnectDomainName  **参数解释**： 实例公网连接域名。当实例开启了公网访问，实例才包含该参数。 **取值范围**： 不涉及。
+    * storageResourceId  **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
+    * storageSpecCode  **参数解释**： IO规格。 **取值范围**： 不涉及。
+    * serviceType  **参数解释**： 服务类型。 **取值范围**： advanced。
+    * storageType  **参数解释**： 存储类型。 **取值范围**： hec
+    * retentionPolicy  **参数解释**： 消息老化策略。 **取值范围**： - time_base：表示自动删除最老消息。 - produce_reject：表示拒绝消息写入。
+    * kafkaPublicStatus  **参数解释**： Kafka公网开启状态。 **取值范围**： - true：开启公网。 - closed：关闭公网。 - false：未使用公网。 - freezed：公网冻结。 - actived：公网解冻。
+    * publicBandwidth  **参数解释**： kafka公网访问带宽。 **取值范围**： 不涉及。
+    * enableLogCollection  **参数解释**： 是否开启消息收集功能。 **取值范围**： - true：开启 - false：不开启
+    * newAuthCert  **参数解释**： 是否开启新证书。 **取值范围**： - true：开启 - false：不开启
+    * crossVpcInfo  **参数解释**： 跨VPC访问信息。 **取值范围**： 不涉及。
+    * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启 - false：不开启
+    * ipv6ConnectAddresses  **参数解释**： IPv6的连接地址。
+    * connectorEnable  **参数解释**： 是否开启转储。 **取值范围**： - true：开启 - false：不开启
+    * connectorNodeNum  **参数解释**： connector节点数量。 **取值范围**： 2-16。
+    * connectorId  **参数解释**： 转储任务ID。 **取值范围**： 不涉及。
+    * restEnable  **参数解释**： 是否开启Kafka rest功能。 **取值范围**： - true：开启 - false：不开启
+    * restConnectAddress  **参数解释**：  Kafka rest连接地址。 **取值范围**： 不涉及。
+    * publicBoundwidth  **参数解释**： Kafka公网访问带宽。待删除版本。 **取值范围**： 不涉及。
+    * messageQueryInstEnable  **参数解释**： 是否开启消息查询功能。 **取值范围**： - true：开启 - false：不开启
+    * vpcClientPlain  **参数解释**： 是否开启VPC明文访问。 **取值范围**： - true：开启 - false：不开启
+    * supportFeatures  **参数解释**： Kafka实例支持的特性功能。 **取值范围**： 不涉及。
+    * traceEnable  **参数解释**： 是否开启消息轨迹功能。 **取值范围**： - true：开启 - false：不开启
+    * agentEnable  **参数解释**： 是否开启代理。 **取值范围**： - true：开启 - false：不开启
+    * podConnectAddress  **参数解释**： 租户侧连接地址。 **取值范围**： 不涉及。
+    * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启 - false：不开启
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
+    * kafkaPrivateConnectAddress  **参数解释**： Kafka实例内网连接地址。 **取值范围**： 不涉及。
+    * kafkaPrivateConnectDomainName  **参数解释**： Kafka实例内网连接域名。 **取值范围**： 不涉及。
+    * cesVersion  **参数解释**： 云监控版本。 **取值范围**： 不涉及。
+    * publicAccessEnabled  **参数解释**： 区分实例什么时候开启的公网访问 **取值范围**： - true：已开启公网访问 - actived：已开启公网访问 - closed：已关闭公网访问 - false：已关闭公网访问
+    * nodeNum  **参数解释**： 节点数。 **取值范围**： - [1：Kafka单机实例的节点数。](tag:hws,hws_hk,hws_eu,dt,hcs,ax) - 3~50：Kafka集群实例的节点数。
     * portProtocols  portProtocols
-    * enableAcl  是否开启访问控制。
-    * newSpecBillingEnable  是否启用新规格计费。
-    * brokerNum  节点数量。
-    * tags  标签列表。
-    * drEnable  是否为容灾实例。
+    * enableAcl  **参数解释**： 是否开启访问控制。 **取值范围**： - true：开启 - false：不开启
+    * newSpecBillingEnable  **参数解释**： 是否启用新规格计费。 **取值范围**： - true：开启 - false：不开启
+    * brokerNum  **参数解释**： 节点数量。 **取值范围**： 不涉及。
+    * tags  **参数解释**： 标签列表。
+    * drEnable  **参数解释**：  是否为容灾实例。 **取值范围**： - true：是容灾实例。 - false：不是容灾实例。
     *
     * @var string[]
     */
@@ -401,92 +401,92 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  实例名称。
-    * engine  引擎。
-    * engineVersion  版本。
-    * description  实例描述。
-    * specification  实例规格。
-    * storageSpace  消息存储空间，单位：GB。
-    * partitionNum  Kafka实例的分区数量。
-    * usedStorageSpace  已使用的消息存储空间，单位：GB。
-    * dnsEnable  实例是否开启域名访问功能。 - true：开启 - false：未开启
-    * connectAddress  实例连接IP地址。
-    * port  实例连接端口。
-    * status  实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
-    * instanceId  实例ID。
-    * resourceSpecCode  资源规格标识。   [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
-    * chargingMode  [付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc)[付费模式，暂未使用。](tag:hws_ocb,ocb) [付费模式，1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc,hws_eu)
-    * vpcId  VPC ID。
-    * vpcName  VPC的名称。
-    * createdAt  完成创建时间。  格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
-    * subnetName  子网名称。
-    * subnetCidr  子网网段。
-    * userId  用户ID。
-    * userName  用户名。
-    * accessUser  实例访问用户名。
-    * orderId  订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。
-    * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
-    * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。
-    * enablePublicip  实例是否开启公网访问功能。 - true：开启 - false：未开启
-    * managementConnectAddress  Kafka实例的Kafka Manager连接地址。
-    * sslEnable  是否开启安全认证。 - true：开启 - false：未开启
-    * brokerSslEnable  是否开启broker间副本加密传输。 - true：开启 - false：未开启
-    * kafkaSecurityProtocol  Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。  - PLAINTEXT: 既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
-    * saslEnabledMechanisms  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
-    * sslTwoWayEnable  是否开启双向认证。
-    * certReplaced  是否能够证书替换。
-    * publicManagementConnectAddress  公网访问Kafka Manager连接地址。
-    * enterpriseProjectId  企业项目ID。
-    * isLogicalVolume  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
-    * extendTimes  实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
-    * enableAutoTopic  是否打开kafka自动创建Topic功能。   - true：开启   - false：关闭
-    * type  实例类型：集群，cluster。
-    * productId  产品标识。
-    * securityGroupId  安全组ID。
-    * securityGroupName  租户安全组名称。
-    * subnetId  子网ID。
-    * availableZones  实例节点所在的可用区，返回“可用区ID”。
-    * availableZoneNames  实例节点所在的可用区名称，返回“可用区名称”。
-    * totalStorageSpace  总共消息存储空间，单位：GB。
-    * publicConnectAddress  实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。
-    * publicConnectDomainName  实例公网连接域名。当实例开启了公网访问，实例才包含该参数。
-    * storageResourceId  存储资源ID。
-    * storageSpecCode  IO规格。
-    * serviceType  服务类型。
-    * storageType  存储类型。
-    * retentionPolicy  消息老化策略。
-    * kafkaPublicStatus  Kafka公网开启状态。
-    * publicBandwidth  kafka公网访问带宽。
-    * enableLogCollection  是否开启消息收集功能。
-    * newAuthCert  是否开启新证书。
-    * crossVpcInfo  跨VPC访问信息。
-    * ipv6Enable  是否开启ipv6。
-    * ipv6ConnectAddresses  IPv6的连接地址。
-    * connectorEnable  是否开启转储。新规格产品暂不支持开启转储。
-    * connectorNodeNum  connector节点数量。
-    * connectorId  转储任务ID。
-    * restEnable  是否开启Kafka rest功能。
-    * restConnectAddress  Kafka rest连接地址。
-    * publicBoundwidth  kafka公网访问带宽。待删除版本。
-    * messageQueryInstEnable  是否开启消息查询功能。
-    * vpcClientPlain  是否开启VPC明文访问。
-    * supportFeatures  Kafka实例支持的特性功能。
-    * traceEnable  是否开启消息轨迹功能。
-    * agentEnable  是否开启代理。
-    * podConnectAddress  租户侧连接地址。
-    * diskEncrypted  是否开启磁盘加密。
-    * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空。
-    * kafkaPrivateConnectAddress  Kafka实例内网连接地址。
-    * kafkaPrivateConnectDomainName  Kafka实例内网连接域名。
-    * cesVersion  云监控版本。
-    * publicAccessEnabled  区分实例什么时候开启的公网访问  取值范围：   - true：已开启公网访问   - actived：已开启公网访问   - closed：已关闭公网访问   - false：已关闭公网访问
-    * nodeNum  节点数。
+    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * engine  **参数解释**： 引擎。 **取值范围**： kafka
+    * engineVersion  **参数解释**： Kafka的版本。 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax)
+    * description  **参数解释**： 实例描述。 **取值范围**： 不涉及。
+    * specification  **参数解释**： 实例规格。 **取值范围**： 不涉及。
+    * storageSpace  **参数解释**： 消息存储空间，单位：GB。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [- Kafka实例规格为kafka.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs)
+    * partitionNum  **参数解释**： Kafka实例的分区数量。 **取值范围**： 不涉及。
+    * usedStorageSpace  **参数解释**： 已使用的消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * dnsEnable  **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启 - false：未开启
+    * connectAddress  **参数解释**： 实例连接IP地址。 **取值范围**： 不涉及。
+    * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
+    * status  **参数解释**： 实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。 **取值范围**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax)
+    * chargingMode  **参数解释**： 付费模式。 **取值范围**： [- 1表示按需计费。 - 0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc,ax)[付费模式，暂未使用。](tag:hws_ocb,ocb) [- 1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc,hws_eu)
+    * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
+    * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
+    * createdAt  **参数解释**： 完成创建时间。  格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
+    * subnetName  **参数解释**： 子网名称。 **取值范围**： 不涉及。
+    * subnetCidr  **参数解释**： 子网网段。 **取值范围**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * accessUser  **参数解释**： 实例访问用户名。 **取值范围**： 不涉及。
+    * orderId  **参数解释**： 订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。 **取值范围**： 不涉及。
+    * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * enablePublicip  **参数解释**： 实例是否开启公网访问功能。 **取值范围**： - true：开启 - false：未开启
+    * managementConnectAddress  **参数解释**： Kafka实例的Kafka Manager连接地址。 **取值范围**： 不涉及。
+    * sslEnable  **参数解释**： 是否开启安全认证。 **取值范围**： - true：开启 - false：未开启
+    * brokerSslEnable  **参数解释**： 是否开启broker间副本加密传输。 **取值范围**： - true：开启 - false：未开启
+    * kafkaSecurityProtocol  **参数解释**： Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。 **取值范围**： - PLAINTEXT：既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL：采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT：明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
+    * saslEnabledMechanisms  **参数解释**： 开启SASL后使用的认证机制。
+    * sslTwoWayEnable  **参数解释**： 是否开启双向认证。 **取值范围**： - true：开启 - false：未开启
+    * certReplaced  **参数解释**： 是否开启证书替换。 **取值范围**： - true：开启 - false：未开启
+    * publicManagementConnectAddress  **参数解释**： 公网访问Kafka Manager连接地址。 **取值范围**： 不涉及。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
+    * isLogicalVolume  **参数解释**： 实例扩容时用于区分老实例与新实例。 **取值范围**： - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例。
+    * extendTimes  **参数解释**： 实例扩容磁盘次数。 **取值范围**： 不涉及。
+    * enableAutoTopic  **参数解释**： 是否开启自动创建Topic。 **取值范围**： - true：开启 - false：关闭
+    * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
+    * productId  **参数解释**： 产品标识。 **取值范围**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
+    * securityGroupName  **参数解释**： 安全组名称。 **取值范围**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 实例节点所在的可用区，返回“可用区ID”。
+    * availableZoneNames  **参数解释**： 实例节点所在的可用区名称，返回“可用区名称”。
+    * totalStorageSpace  **参数解释**： 总共消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * publicConnectAddress  **参数解释**： 实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。 **取值范围**： 不涉及。
+    * publicConnectDomainName  **参数解释**： 实例公网连接域名。当实例开启了公网访问，实例才包含该参数。 **取值范围**： 不涉及。
+    * storageResourceId  **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
+    * storageSpecCode  **参数解释**： IO规格。 **取值范围**： 不涉及。
+    * serviceType  **参数解释**： 服务类型。 **取值范围**： advanced。
+    * storageType  **参数解释**： 存储类型。 **取值范围**： hec
+    * retentionPolicy  **参数解释**： 消息老化策略。 **取值范围**： - time_base：表示自动删除最老消息。 - produce_reject：表示拒绝消息写入。
+    * kafkaPublicStatus  **参数解释**： Kafka公网开启状态。 **取值范围**： - true：开启公网。 - closed：关闭公网。 - false：未使用公网。 - freezed：公网冻结。 - actived：公网解冻。
+    * publicBandwidth  **参数解释**： kafka公网访问带宽。 **取值范围**： 不涉及。
+    * enableLogCollection  **参数解释**： 是否开启消息收集功能。 **取值范围**： - true：开启 - false：不开启
+    * newAuthCert  **参数解释**： 是否开启新证书。 **取值范围**： - true：开启 - false：不开启
+    * crossVpcInfo  **参数解释**： 跨VPC访问信息。 **取值范围**： 不涉及。
+    * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启 - false：不开启
+    * ipv6ConnectAddresses  **参数解释**： IPv6的连接地址。
+    * connectorEnable  **参数解释**： 是否开启转储。 **取值范围**： - true：开启 - false：不开启
+    * connectorNodeNum  **参数解释**： connector节点数量。 **取值范围**： 2-16。
+    * connectorId  **参数解释**： 转储任务ID。 **取值范围**： 不涉及。
+    * restEnable  **参数解释**： 是否开启Kafka rest功能。 **取值范围**： - true：开启 - false：不开启
+    * restConnectAddress  **参数解释**：  Kafka rest连接地址。 **取值范围**： 不涉及。
+    * publicBoundwidth  **参数解释**： Kafka公网访问带宽。待删除版本。 **取值范围**： 不涉及。
+    * messageQueryInstEnable  **参数解释**： 是否开启消息查询功能。 **取值范围**： - true：开启 - false：不开启
+    * vpcClientPlain  **参数解释**： 是否开启VPC明文访问。 **取值范围**： - true：开启 - false：不开启
+    * supportFeatures  **参数解释**： Kafka实例支持的特性功能。 **取值范围**： 不涉及。
+    * traceEnable  **参数解释**： 是否开启消息轨迹功能。 **取值范围**： - true：开启 - false：不开启
+    * agentEnable  **参数解释**： 是否开启代理。 **取值范围**： - true：开启 - false：不开启
+    * podConnectAddress  **参数解释**： 租户侧连接地址。 **取值范围**： 不涉及。
+    * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启 - false：不开启
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
+    * kafkaPrivateConnectAddress  **参数解释**： Kafka实例内网连接地址。 **取值范围**： 不涉及。
+    * kafkaPrivateConnectDomainName  **参数解释**： Kafka实例内网连接域名。 **取值范围**： 不涉及。
+    * cesVersion  **参数解释**： 云监控版本。 **取值范围**： 不涉及。
+    * publicAccessEnabled  **参数解释**： 区分实例什么时候开启的公网访问 **取值范围**： - true：已开启公网访问 - actived：已开启公网访问 - closed：已关闭公网访问 - false：已关闭公网访问
+    * nodeNum  **参数解释**： 节点数。 **取值范围**： - [1：Kafka单机实例的节点数。](tag:hws,hws_hk,hws_eu,dt,hcs,ax) - 3~50：Kafka集群实例的节点数。
     * portProtocols  portProtocols
-    * enableAcl  是否开启访问控制。
-    * newSpecBillingEnable  是否启用新规格计费。
-    * brokerNum  节点数量。
-    * tags  标签列表。
-    * drEnable  是否为容灾实例。
+    * enableAcl  **参数解释**： 是否开启访问控制。 **取值范围**： - true：开启 - false：不开启
+    * newSpecBillingEnable  **参数解释**： 是否启用新规格计费。 **取值范围**： - true：开启 - false：不开启
+    * brokerNum  **参数解释**： 节点数量。 **取值范围**： 不涉及。
+    * tags  **参数解释**： 标签列表。
+    * drEnable  **参数解释**：  是否为容灾实例。 **取值范围**： - true：是容灾实例。 - false：不是容灾实例。
     *
     * @var string[]
     */
@@ -581,92 +581,92 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  实例名称。
-    * engine  引擎。
-    * engineVersion  版本。
-    * description  实例描述。
-    * specification  实例规格。
-    * storageSpace  消息存储空间，单位：GB。
-    * partitionNum  Kafka实例的分区数量。
-    * usedStorageSpace  已使用的消息存储空间，单位：GB。
-    * dnsEnable  实例是否开启域名访问功能。 - true：开启 - false：未开启
-    * connectAddress  实例连接IP地址。
-    * port  实例连接端口。
-    * status  实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
-    * instanceId  实例ID。
-    * resourceSpecCode  资源规格标识。   [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
-    * chargingMode  [付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc)[付费模式，暂未使用。](tag:hws_ocb,ocb) [付费模式，1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc,hws_eu)
-    * vpcId  VPC ID。
-    * vpcName  VPC的名称。
-    * createdAt  完成创建时间。  格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
-    * subnetName  子网名称。
-    * subnetCidr  子网网段。
-    * userId  用户ID。
-    * userName  用户名。
-    * accessUser  实例访问用户名。
-    * orderId  订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。
-    * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
-    * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。
-    * enablePublicip  实例是否开启公网访问功能。 - true：开启 - false：未开启
-    * managementConnectAddress  Kafka实例的Kafka Manager连接地址。
-    * sslEnable  是否开启安全认证。 - true：开启 - false：未开启
-    * brokerSslEnable  是否开启broker间副本加密传输。 - true：开启 - false：未开启
-    * kafkaSecurityProtocol  Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。  - PLAINTEXT: 既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
-    * saslEnabledMechanisms  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
-    * sslTwoWayEnable  是否开启双向认证。
-    * certReplaced  是否能够证书替换。
-    * publicManagementConnectAddress  公网访问Kafka Manager连接地址。
-    * enterpriseProjectId  企业项目ID。
-    * isLogicalVolume  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
-    * extendTimes  实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
-    * enableAutoTopic  是否打开kafka自动创建Topic功能。   - true：开启   - false：关闭
-    * type  实例类型：集群，cluster。
-    * productId  产品标识。
-    * securityGroupId  安全组ID。
-    * securityGroupName  租户安全组名称。
-    * subnetId  子网ID。
-    * availableZones  实例节点所在的可用区，返回“可用区ID”。
-    * availableZoneNames  实例节点所在的可用区名称，返回“可用区名称”。
-    * totalStorageSpace  总共消息存储空间，单位：GB。
-    * publicConnectAddress  实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。
-    * publicConnectDomainName  实例公网连接域名。当实例开启了公网访问，实例才包含该参数。
-    * storageResourceId  存储资源ID。
-    * storageSpecCode  IO规格。
-    * serviceType  服务类型。
-    * storageType  存储类型。
-    * retentionPolicy  消息老化策略。
-    * kafkaPublicStatus  Kafka公网开启状态。
-    * publicBandwidth  kafka公网访问带宽。
-    * enableLogCollection  是否开启消息收集功能。
-    * newAuthCert  是否开启新证书。
-    * crossVpcInfo  跨VPC访问信息。
-    * ipv6Enable  是否开启ipv6。
-    * ipv6ConnectAddresses  IPv6的连接地址。
-    * connectorEnable  是否开启转储。新规格产品暂不支持开启转储。
-    * connectorNodeNum  connector节点数量。
-    * connectorId  转储任务ID。
-    * restEnable  是否开启Kafka rest功能。
-    * restConnectAddress  Kafka rest连接地址。
-    * publicBoundwidth  kafka公网访问带宽。待删除版本。
-    * messageQueryInstEnable  是否开启消息查询功能。
-    * vpcClientPlain  是否开启VPC明文访问。
-    * supportFeatures  Kafka实例支持的特性功能。
-    * traceEnable  是否开启消息轨迹功能。
-    * agentEnable  是否开启代理。
-    * podConnectAddress  租户侧连接地址。
-    * diskEncrypted  是否开启磁盘加密。
-    * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空。
-    * kafkaPrivateConnectAddress  Kafka实例内网连接地址。
-    * kafkaPrivateConnectDomainName  Kafka实例内网连接域名。
-    * cesVersion  云监控版本。
-    * publicAccessEnabled  区分实例什么时候开启的公网访问  取值范围：   - true：已开启公网访问   - actived：已开启公网访问   - closed：已关闭公网访问   - false：已关闭公网访问
-    * nodeNum  节点数。
+    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * engine  **参数解释**： 引擎。 **取值范围**： kafka
+    * engineVersion  **参数解释**： Kafka的版本。 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax)
+    * description  **参数解释**： 实例描述。 **取值范围**： 不涉及。
+    * specification  **参数解释**： 实例规格。 **取值范围**： 不涉及。
+    * storageSpace  **参数解释**： 消息存储空间，单位：GB。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [- Kafka实例规格为kafka.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs)
+    * partitionNum  **参数解释**： Kafka实例的分区数量。 **取值范围**： 不涉及。
+    * usedStorageSpace  **参数解释**： 已使用的消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * dnsEnable  **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启 - false：未开启
+    * connectAddress  **参数解释**： 实例连接IP地址。 **取值范围**： 不涉及。
+    * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
+    * status  **参数解释**： 实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。 **取值范围**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax)
+    * chargingMode  **参数解释**： 付费模式。 **取值范围**： [- 1表示按需计费。 - 0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc,ax)[付费模式，暂未使用。](tag:hws_ocb,ocb) [- 1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc,hws_eu)
+    * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
+    * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
+    * createdAt  **参数解释**： 完成创建时间。  格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
+    * subnetName  **参数解释**： 子网名称。 **取值范围**： 不涉及。
+    * subnetCidr  **参数解释**： 子网网段。 **取值范围**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * accessUser  **参数解释**： 实例访问用户名。 **取值范围**： 不涉及。
+    * orderId  **参数解释**： 订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。 **取值范围**： 不涉及。
+    * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * enablePublicip  **参数解释**： 实例是否开启公网访问功能。 **取值范围**： - true：开启 - false：未开启
+    * managementConnectAddress  **参数解释**： Kafka实例的Kafka Manager连接地址。 **取值范围**： 不涉及。
+    * sslEnable  **参数解释**： 是否开启安全认证。 **取值范围**： - true：开启 - false：未开启
+    * brokerSslEnable  **参数解释**： 是否开启broker间副本加密传输。 **取值范围**： - true：开启 - false：未开启
+    * kafkaSecurityProtocol  **参数解释**： Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。 **取值范围**： - PLAINTEXT：既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL：采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT：明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
+    * saslEnabledMechanisms  **参数解释**： 开启SASL后使用的认证机制。
+    * sslTwoWayEnable  **参数解释**： 是否开启双向认证。 **取值范围**： - true：开启 - false：未开启
+    * certReplaced  **参数解释**： 是否开启证书替换。 **取值范围**： - true：开启 - false：未开启
+    * publicManagementConnectAddress  **参数解释**： 公网访问Kafka Manager连接地址。 **取值范围**： 不涉及。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
+    * isLogicalVolume  **参数解释**： 实例扩容时用于区分老实例与新实例。 **取值范围**： - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例。
+    * extendTimes  **参数解释**： 实例扩容磁盘次数。 **取值范围**： 不涉及。
+    * enableAutoTopic  **参数解释**： 是否开启自动创建Topic。 **取值范围**： - true：开启 - false：关闭
+    * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
+    * productId  **参数解释**： 产品标识。 **取值范围**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
+    * securityGroupName  **参数解释**： 安全组名称。 **取值范围**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 实例节点所在的可用区，返回“可用区ID”。
+    * availableZoneNames  **参数解释**： 实例节点所在的可用区名称，返回“可用区名称”。
+    * totalStorageSpace  **参数解释**： 总共消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * publicConnectAddress  **参数解释**： 实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。 **取值范围**： 不涉及。
+    * publicConnectDomainName  **参数解释**： 实例公网连接域名。当实例开启了公网访问，实例才包含该参数。 **取值范围**： 不涉及。
+    * storageResourceId  **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
+    * storageSpecCode  **参数解释**： IO规格。 **取值范围**： 不涉及。
+    * serviceType  **参数解释**： 服务类型。 **取值范围**： advanced。
+    * storageType  **参数解释**： 存储类型。 **取值范围**： hec
+    * retentionPolicy  **参数解释**： 消息老化策略。 **取值范围**： - time_base：表示自动删除最老消息。 - produce_reject：表示拒绝消息写入。
+    * kafkaPublicStatus  **参数解释**： Kafka公网开启状态。 **取值范围**： - true：开启公网。 - closed：关闭公网。 - false：未使用公网。 - freezed：公网冻结。 - actived：公网解冻。
+    * publicBandwidth  **参数解释**： kafka公网访问带宽。 **取值范围**： 不涉及。
+    * enableLogCollection  **参数解释**： 是否开启消息收集功能。 **取值范围**： - true：开启 - false：不开启
+    * newAuthCert  **参数解释**： 是否开启新证书。 **取值范围**： - true：开启 - false：不开启
+    * crossVpcInfo  **参数解释**： 跨VPC访问信息。 **取值范围**： 不涉及。
+    * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启 - false：不开启
+    * ipv6ConnectAddresses  **参数解释**： IPv6的连接地址。
+    * connectorEnable  **参数解释**： 是否开启转储。 **取值范围**： - true：开启 - false：不开启
+    * connectorNodeNum  **参数解释**： connector节点数量。 **取值范围**： 2-16。
+    * connectorId  **参数解释**： 转储任务ID。 **取值范围**： 不涉及。
+    * restEnable  **参数解释**： 是否开启Kafka rest功能。 **取值范围**： - true：开启 - false：不开启
+    * restConnectAddress  **参数解释**：  Kafka rest连接地址。 **取值范围**： 不涉及。
+    * publicBoundwidth  **参数解释**： Kafka公网访问带宽。待删除版本。 **取值范围**： 不涉及。
+    * messageQueryInstEnable  **参数解释**： 是否开启消息查询功能。 **取值范围**： - true：开启 - false：不开启
+    * vpcClientPlain  **参数解释**： 是否开启VPC明文访问。 **取值范围**： - true：开启 - false：不开启
+    * supportFeatures  **参数解释**： Kafka实例支持的特性功能。 **取值范围**： 不涉及。
+    * traceEnable  **参数解释**： 是否开启消息轨迹功能。 **取值范围**： - true：开启 - false：不开启
+    * agentEnable  **参数解释**： 是否开启代理。 **取值范围**： - true：开启 - false：不开启
+    * podConnectAddress  **参数解释**： 租户侧连接地址。 **取值范围**： 不涉及。
+    * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启 - false：不开启
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
+    * kafkaPrivateConnectAddress  **参数解释**： Kafka实例内网连接地址。 **取值范围**： 不涉及。
+    * kafkaPrivateConnectDomainName  **参数解释**： Kafka实例内网连接域名。 **取值范围**： 不涉及。
+    * cesVersion  **参数解释**： 云监控版本。 **取值范围**： 不涉及。
+    * publicAccessEnabled  **参数解释**： 区分实例什么时候开启的公网访问 **取值范围**： - true：已开启公网访问 - actived：已开启公网访问 - closed：已关闭公网访问 - false：已关闭公网访问
+    * nodeNum  **参数解释**： 节点数。 **取值范围**： - [1：Kafka单机实例的节点数。](tag:hws,hws_hk,hws_eu,dt,hcs,ax) - 3~50：Kafka集群实例的节点数。
     * portProtocols  portProtocols
-    * enableAcl  是否开启访问控制。
-    * newSpecBillingEnable  是否启用新规格计费。
-    * brokerNum  节点数量。
-    * tags  标签列表。
-    * drEnable  是否为容灾实例。
+    * enableAcl  **参数解释**： 是否开启访问控制。 **取值范围**： - true：开启 - false：不开启
+    * newSpecBillingEnable  **参数解释**： 是否启用新规格计费。 **取值范围**： - true：开启 - false：不开启
+    * brokerNum  **参数解释**： 节点数量。 **取值范围**： 不涉及。
+    * tags  **参数解释**： 标签列表。
+    * drEnable  **参数解释**：  是否为容灾实例。 **取值范围**： - true：是容灾实例。 - false：不是容灾实例。
     *
     * @var string[]
     */
@@ -761,92 +761,92 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  实例名称。
-    * engine  引擎。
-    * engineVersion  版本。
-    * description  实例描述。
-    * specification  实例规格。
-    * storageSpace  消息存储空间，单位：GB。
-    * partitionNum  Kafka实例的分区数量。
-    * usedStorageSpace  已使用的消息存储空间，单位：GB。
-    * dnsEnable  实例是否开启域名访问功能。 - true：开启 - false：未开启
-    * connectAddress  实例连接IP地址。
-    * port  实例连接端口。
-    * status  实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
-    * instanceId  实例ID。
-    * resourceSpecCode  资源规格标识。   [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
-    * chargingMode  [付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc)[付费模式，暂未使用。](tag:hws_ocb,ocb) [付费模式，1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc,hws_eu)
-    * vpcId  VPC ID。
-    * vpcName  VPC的名称。
-    * createdAt  完成创建时间。  格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
-    * subnetName  子网名称。
-    * subnetCidr  子网网段。
-    * userId  用户ID。
-    * userName  用户名。
-    * accessUser  实例访问用户名。
-    * orderId  订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。
-    * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
-    * maintainEnd  维护时间窗结束时间，格式为HH:mm:ss。
-    * enablePublicip  实例是否开启公网访问功能。 - true：开启 - false：未开启
-    * managementConnectAddress  Kafka实例的Kafka Manager连接地址。
-    * sslEnable  是否开启安全认证。 - true：开启 - false：未开启
-    * brokerSslEnable  是否开启broker间副本加密传输。 - true：开启 - false：未开启
-    * kafkaSecurityProtocol  Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。  - PLAINTEXT: 既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
-    * saslEnabledMechanisms  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
-    * sslTwoWayEnable  是否开启双向认证。
-    * certReplaced  是否能够证书替换。
-    * publicManagementConnectAddress  公网访问Kafka Manager连接地址。
-    * enterpriseProjectId  企业项目ID。
-    * isLogicalVolume  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
-    * extendTimes  实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
-    * enableAutoTopic  是否打开kafka自动创建Topic功能。   - true：开启   - false：关闭
-    * type  实例类型：集群，cluster。
-    * productId  产品标识。
-    * securityGroupId  安全组ID。
-    * securityGroupName  租户安全组名称。
-    * subnetId  子网ID。
-    * availableZones  实例节点所在的可用区，返回“可用区ID”。
-    * availableZoneNames  实例节点所在的可用区名称，返回“可用区名称”。
-    * totalStorageSpace  总共消息存储空间，单位：GB。
-    * publicConnectAddress  实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。
-    * publicConnectDomainName  实例公网连接域名。当实例开启了公网访问，实例才包含该参数。
-    * storageResourceId  存储资源ID。
-    * storageSpecCode  IO规格。
-    * serviceType  服务类型。
-    * storageType  存储类型。
-    * retentionPolicy  消息老化策略。
-    * kafkaPublicStatus  Kafka公网开启状态。
-    * publicBandwidth  kafka公网访问带宽。
-    * enableLogCollection  是否开启消息收集功能。
-    * newAuthCert  是否开启新证书。
-    * crossVpcInfo  跨VPC访问信息。
-    * ipv6Enable  是否开启ipv6。
-    * ipv6ConnectAddresses  IPv6的连接地址。
-    * connectorEnable  是否开启转储。新规格产品暂不支持开启转储。
-    * connectorNodeNum  connector节点数量。
-    * connectorId  转储任务ID。
-    * restEnable  是否开启Kafka rest功能。
-    * restConnectAddress  Kafka rest连接地址。
-    * publicBoundwidth  kafka公网访问带宽。待删除版本。
-    * messageQueryInstEnable  是否开启消息查询功能。
-    * vpcClientPlain  是否开启VPC明文访问。
-    * supportFeatures  Kafka实例支持的特性功能。
-    * traceEnable  是否开启消息轨迹功能。
-    * agentEnable  是否开启代理。
-    * podConnectAddress  租户侧连接地址。
-    * diskEncrypted  是否开启磁盘加密。
-    * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空。
-    * kafkaPrivateConnectAddress  Kafka实例内网连接地址。
-    * kafkaPrivateConnectDomainName  Kafka实例内网连接域名。
-    * cesVersion  云监控版本。
-    * publicAccessEnabled  区分实例什么时候开启的公网访问  取值范围：   - true：已开启公网访问   - actived：已开启公网访问   - closed：已关闭公网访问   - false：已关闭公网访问
-    * nodeNum  节点数。
+    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * engine  **参数解释**： 引擎。 **取值范围**： kafka
+    * engineVersion  **参数解释**： Kafka的版本。 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax)
+    * description  **参数解释**： 实例描述。 **取值范围**： 不涉及。
+    * specification  **参数解释**： 实例规格。 **取值范围**： 不涉及。
+    * storageSpace  **参数解释**： 消息存储空间，单位：GB。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [- Kafka实例规格为kafka.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs)
+    * partitionNum  **参数解释**： Kafka实例的分区数量。 **取值范围**： 不涉及。
+    * usedStorageSpace  **参数解释**： 已使用的消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * dnsEnable  **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启 - false：未开启
+    * connectAddress  **参数解释**： 实例连接IP地址。 **取值范围**： 不涉及。
+    * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
+    * status  **参数解释**： 实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。 **取值范围**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax)
+    * chargingMode  **参数解释**： 付费模式。 **取值范围**： [- 1表示按需计费。 - 0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc,ax)[付费模式，暂未使用。](tag:hws_ocb,ocb) [- 1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc,hws_eu)
+    * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
+    * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
+    * createdAt  **参数解释**： 完成创建时间。  格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
+    * subnetName  **参数解释**： 子网名称。 **取值范围**： 不涉及。
+    * subnetCidr  **参数解释**： 子网网段。 **取值范围**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * accessUser  **参数解释**： 实例访问用户名。 **取值范围**： 不涉及。
+    * orderId  **参数解释**： 订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。 **取值范围**： 不涉及。
+    * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * enablePublicip  **参数解释**： 实例是否开启公网访问功能。 **取值范围**： - true：开启 - false：未开启
+    * managementConnectAddress  **参数解释**： Kafka实例的Kafka Manager连接地址。 **取值范围**： 不涉及。
+    * sslEnable  **参数解释**： 是否开启安全认证。 **取值范围**： - true：开启 - false：未开启
+    * brokerSslEnable  **参数解释**： 是否开启broker间副本加密传输。 **取值范围**： - true：开启 - false：未开启
+    * kafkaSecurityProtocol  **参数解释**： Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。 **取值范围**： - PLAINTEXT：既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL：采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT：明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
+    * saslEnabledMechanisms  **参数解释**： 开启SASL后使用的认证机制。
+    * sslTwoWayEnable  **参数解释**： 是否开启双向认证。 **取值范围**： - true：开启 - false：未开启
+    * certReplaced  **参数解释**： 是否开启证书替换。 **取值范围**： - true：开启 - false：未开启
+    * publicManagementConnectAddress  **参数解释**： 公网访问Kafka Manager连接地址。 **取值范围**： 不涉及。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
+    * isLogicalVolume  **参数解释**： 实例扩容时用于区分老实例与新实例。 **取值范围**： - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例。
+    * extendTimes  **参数解释**： 实例扩容磁盘次数。 **取值范围**： 不涉及。
+    * enableAutoTopic  **参数解释**： 是否开启自动创建Topic。 **取值范围**： - true：开启 - false：关闭
+    * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
+    * productId  **参数解释**： 产品标识。 **取值范围**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
+    * securityGroupName  **参数解释**： 安全组名称。 **取值范围**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 实例节点所在的可用区，返回“可用区ID”。
+    * availableZoneNames  **参数解释**： 实例节点所在的可用区名称，返回“可用区名称”。
+    * totalStorageSpace  **参数解释**： 总共消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * publicConnectAddress  **参数解释**： 实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。 **取值范围**： 不涉及。
+    * publicConnectDomainName  **参数解释**： 实例公网连接域名。当实例开启了公网访问，实例才包含该参数。 **取值范围**： 不涉及。
+    * storageResourceId  **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
+    * storageSpecCode  **参数解释**： IO规格。 **取值范围**： 不涉及。
+    * serviceType  **参数解释**： 服务类型。 **取值范围**： advanced。
+    * storageType  **参数解释**： 存储类型。 **取值范围**： hec
+    * retentionPolicy  **参数解释**： 消息老化策略。 **取值范围**： - time_base：表示自动删除最老消息。 - produce_reject：表示拒绝消息写入。
+    * kafkaPublicStatus  **参数解释**： Kafka公网开启状态。 **取值范围**： - true：开启公网。 - closed：关闭公网。 - false：未使用公网。 - freezed：公网冻结。 - actived：公网解冻。
+    * publicBandwidth  **参数解释**： kafka公网访问带宽。 **取值范围**： 不涉及。
+    * enableLogCollection  **参数解释**： 是否开启消息收集功能。 **取值范围**： - true：开启 - false：不开启
+    * newAuthCert  **参数解释**： 是否开启新证书。 **取值范围**： - true：开启 - false：不开启
+    * crossVpcInfo  **参数解释**： 跨VPC访问信息。 **取值范围**： 不涉及。
+    * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启 - false：不开启
+    * ipv6ConnectAddresses  **参数解释**： IPv6的连接地址。
+    * connectorEnable  **参数解释**： 是否开启转储。 **取值范围**： - true：开启 - false：不开启
+    * connectorNodeNum  **参数解释**： connector节点数量。 **取值范围**： 2-16。
+    * connectorId  **参数解释**： 转储任务ID。 **取值范围**： 不涉及。
+    * restEnable  **参数解释**： 是否开启Kafka rest功能。 **取值范围**： - true：开启 - false：不开启
+    * restConnectAddress  **参数解释**：  Kafka rest连接地址。 **取值范围**： 不涉及。
+    * publicBoundwidth  **参数解释**： Kafka公网访问带宽。待删除版本。 **取值范围**： 不涉及。
+    * messageQueryInstEnable  **参数解释**： 是否开启消息查询功能。 **取值范围**： - true：开启 - false：不开启
+    * vpcClientPlain  **参数解释**： 是否开启VPC明文访问。 **取值范围**： - true：开启 - false：不开启
+    * supportFeatures  **参数解释**： Kafka实例支持的特性功能。 **取值范围**： 不涉及。
+    * traceEnable  **参数解释**： 是否开启消息轨迹功能。 **取值范围**： - true：开启 - false：不开启
+    * agentEnable  **参数解释**： 是否开启代理。 **取值范围**： - true：开启 - false：不开启
+    * podConnectAddress  **参数解释**： 租户侧连接地址。 **取值范围**： 不涉及。
+    * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启 - false：不开启
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
+    * kafkaPrivateConnectAddress  **参数解释**： Kafka实例内网连接地址。 **取值范围**： 不涉及。
+    * kafkaPrivateConnectDomainName  **参数解释**： Kafka实例内网连接域名。 **取值范围**： 不涉及。
+    * cesVersion  **参数解释**： 云监控版本。 **取值范围**： 不涉及。
+    * publicAccessEnabled  **参数解释**： 区分实例什么时候开启的公网访问 **取值范围**： - true：已开启公网访问 - actived：已开启公网访问 - closed：已关闭公网访问 - false：已关闭公网访问
+    * nodeNum  **参数解释**： 节点数。 **取值范围**： - [1：Kafka单机实例的节点数。](tag:hws,hws_hk,hws_eu,dt,hcs,ax) - 3~50：Kafka集群实例的节点数。
     * portProtocols  portProtocols
-    * enableAcl  是否开启访问控制。
-    * newSpecBillingEnable  是否启用新规格计费。
-    * brokerNum  节点数量。
-    * tags  标签列表。
-    * drEnable  是否为容灾实例。
+    * enableAcl  **参数解释**： 是否开启访问控制。 **取值范围**： - true：开启 - false：不开启
+    * newSpecBillingEnable  **参数解释**： 是否启用新规格计费。 **取值范围**： - true：开启 - false：不开启
+    * brokerNum  **参数解释**： 节点数量。 **取值范围**： 不涉及。
+    * tags  **参数解释**： 标签列表。
+    * drEnable  **参数解释**：  是否为容灾实例。 **取值范围**： - true：是容灾实例。 - false：不是容灾实例。
     *
     * @var string[]
     */
@@ -1170,7 +1170,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  实例名称。
+    *  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1182,7 +1182,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 实例名称。
+    * @param string|null $name **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1194,7 +1194,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  引擎。
+    *  **参数解释**： 引擎。 **取值范围**： kafka
     *
     * @return string|null
     */
@@ -1206,7 +1206,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string|null $engine 引擎。
+    * @param string|null $engine **参数解释**： 引擎。 **取值范围**： kafka
     *
     * @return $this
     */
@@ -1218,7 +1218,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets engineVersion
-    *  版本。
+    *  **参数解释**： Kafka的版本。 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax)
     *
     * @return string|null
     */
@@ -1230,7 +1230,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets engineVersion
     *
-    * @param string|null $engineVersion 版本。
+    * @param string|null $engineVersion **参数解释**： Kafka的版本。 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax)
     *
     * @return $this
     */
@@ -1242,7 +1242,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  实例描述。
+    *  **参数解释**： 实例描述。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1254,7 +1254,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 实例描述。
+    * @param string|null $description **参数解释**： 实例描述。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1266,7 +1266,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets specification
-    *  实例规格。
+    *  **参数解释**： 实例规格。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1278,7 +1278,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets specification
     *
-    * @param string|null $specification 实例规格。
+    * @param string|null $specification **参数解释**： 实例规格。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1290,7 +1290,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets storageSpace
-    *  消息存储空间，单位：GB。
+    *  **参数解释**： 消息存储空间，单位：GB。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [- Kafka实例规格为kafka.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs)
     *
     * @return int|null
     */
@@ -1302,7 +1302,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets storageSpace
     *
-    * @param int|null $storageSpace 消息存储空间，单位：GB。
+    * @param int|null $storageSpace **参数解释**： 消息存储空间，单位：GB。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [- Kafka实例规格为kafka.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs)
     *
     * @return $this
     */
@@ -1314,7 +1314,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets partitionNum
-    *  Kafka实例的分区数量。
+    *  **参数解释**： Kafka实例的分区数量。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1326,7 +1326,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets partitionNum
     *
-    * @param string|null $partitionNum Kafka实例的分区数量。
+    * @param string|null $partitionNum **参数解释**： Kafka实例的分区数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1338,7 +1338,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedStorageSpace
-    *  已使用的消息存储空间，单位：GB。
+    *  **参数解释**： 已使用的消息存储空间，单位：GB。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1350,7 +1350,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets usedStorageSpace
     *
-    * @param int|null $usedStorageSpace 已使用的消息存储空间，单位：GB。
+    * @param int|null $usedStorageSpace **参数解释**： 已使用的消息存储空间，单位：GB。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1362,7 +1362,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets dnsEnable
-    *  实例是否开启域名访问功能。 - true：开启 - false：未开启
+    *  **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启 - false：未开启
     *
     * @return bool|null
     */
@@ -1374,7 +1374,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets dnsEnable
     *
-    * @param bool|null $dnsEnable 实例是否开启域名访问功能。 - true：开启 - false：未开启
+    * @param bool|null $dnsEnable **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启 - false：未开启
     *
     * @return $this
     */
@@ -1386,7 +1386,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets connectAddress
-    *  实例连接IP地址。
+    *  **参数解释**： 实例连接IP地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1398,7 +1398,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets connectAddress
     *
-    * @param string|null $connectAddress 实例连接IP地址。
+    * @param string|null $connectAddress **参数解释**： 实例连接IP地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1410,7 +1410,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets port
-    *  实例连接端口。
+    *  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1422,7 +1422,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets port
     *
-    * @param int|null $port 实例连接端口。
+    * @param int|null $port **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1434,7 +1434,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
+    *  **参数解释**： 实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1446,7 +1446,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
+    * @param string|null $status **参数解释**： 实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1458,7 +1458,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**： 实例ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1470,7 +1470,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 实例ID。
+    * @param string|null $instanceId **参数解释**： 实例ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1482,7 +1482,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSpecCode
-    *  资源规格标识。   [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
+    *  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax)
     *
     * @return string|null
     */
@@ -1494,7 +1494,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSpecCode
     *
-    * @param string|null $resourceSpecCode 资源规格标识。   [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
+    * @param string|null $resourceSpecCode **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax)
     *
     * @return $this
     */
@@ -1506,7 +1506,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  [付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc)[付费模式，暂未使用。](tag:hws_ocb,ocb) [付费模式，1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc,hws_eu)
+    *  **参数解释**： 付费模式。 **取值范围**： [- 1表示按需计费。 - 0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc,ax)[付费模式，暂未使用。](tag:hws_ocb,ocb) [- 1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc,hws_eu)
     *
     * @return int|null
     */
@@ -1518,7 +1518,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param int|null $chargingMode [付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc)[付费模式，暂未使用。](tag:hws_ocb,ocb) [付费模式，1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc,hws_eu)
+    * @param int|null $chargingMode **参数解释**： 付费模式。 **取值范围**： [- 1表示按需计费。 - 0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc,ax)[付费模式，暂未使用。](tag:hws_ocb,ocb) [- 1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc,hws_eu)
     *
     * @return $this
     */
@@ -1530,7 +1530,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  VPC ID。
+    *  **参数解释**： VPC ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1542,7 +1542,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId VPC ID。
+    * @param string|null $vpcId **参数解释**： VPC ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1554,7 +1554,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcName
-    *  VPC的名称。
+    *  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1566,7 +1566,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets vpcName
     *
-    * @param string|null $vpcName VPC的名称。
+    * @param string|null $vpcName **参数解释**： VPC的名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1578,7 +1578,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  完成创建时间。  格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
+    *  **参数解释**： 完成创建时间。  格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1590,7 +1590,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 完成创建时间。  格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
+    * @param string|null $createdAt **参数解释**： 完成创建时间。  格式为时间戳，指从格林威治时间 1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1602,7 +1602,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetName
-    *  子网名称。
+    *  **参数解释**： 子网名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1614,7 +1614,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets subnetName
     *
-    * @param string|null $subnetName 子网名称。
+    * @param string|null $subnetName **参数解释**： 子网名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1626,7 +1626,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetCidr
-    *  子网网段。
+    *  **参数解释**： 子网网段。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1638,7 +1638,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets subnetCidr
     *
-    * @param string|null $subnetCidr 子网网段。
+    * @param string|null $subnetCidr **参数解释**： 子网网段。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1650,7 +1650,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
-    *  用户ID。
+    *  **参数解释**： 用户ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1662,7 +1662,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param string|null $userId 用户ID。
+    * @param string|null $userId **参数解释**： 用户ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1674,7 +1674,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  用户名。
+    *  **参数解释**： 用户名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1686,7 +1686,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName 用户名。
+    * @param string|null $userName **参数解释**： 用户名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1698,7 +1698,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessUser
-    *  实例访问用户名。
+    *  **参数解释**： 实例访问用户名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1710,7 +1710,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets accessUser
     *
-    * @param string|null $accessUser 实例访问用户名。
+    * @param string|null $accessUser **参数解释**： 实例访问用户名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1722,7 +1722,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。
+    *  **参数解释**： 订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1734,7 +1734,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId 订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。
+    * @param string|null $orderId **参数解释**： 订单ID，只有在包周期计费时才会有order_id值，其他计费方式order_id值为空。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1746,7 +1746,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets maintainBegin
-    *  维护时间窗开始时间，格式为HH:mm:ss。
+    *  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1758,7 +1758,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets maintainBegin
     *
-    * @param string|null $maintainBegin 维护时间窗开始时间，格式为HH:mm:ss。
+    * @param string|null $maintainBegin **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1770,7 +1770,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets maintainEnd
-    *  维护时间窗结束时间，格式为HH:mm:ss。
+    *  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1782,7 +1782,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets maintainEnd
     *
-    * @param string|null $maintainEnd 维护时间窗结束时间，格式为HH:mm:ss。
+    * @param string|null $maintainEnd **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1794,7 +1794,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets enablePublicip
-    *  实例是否开启公网访问功能。 - true：开启 - false：未开启
+    *  **参数解释**： 实例是否开启公网访问功能。 **取值范围**： - true：开启 - false：未开启
     *
     * @return bool|null
     */
@@ -1806,7 +1806,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets enablePublicip
     *
-    * @param bool|null $enablePublicip 实例是否开启公网访问功能。 - true：开启 - false：未开启
+    * @param bool|null $enablePublicip **参数解释**： 实例是否开启公网访问功能。 **取值范围**： - true：开启 - false：未开启
     *
     * @return $this
     */
@@ -1818,7 +1818,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets managementConnectAddress
-    *  Kafka实例的Kafka Manager连接地址。
+    *  **参数解释**： Kafka实例的Kafka Manager连接地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1830,7 +1830,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets managementConnectAddress
     *
-    * @param string|null $managementConnectAddress Kafka实例的Kafka Manager连接地址。
+    * @param string|null $managementConnectAddress **参数解释**： Kafka实例的Kafka Manager连接地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1842,7 +1842,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets sslEnable
-    *  是否开启安全认证。 - true：开启 - false：未开启
+    *  **参数解释**： 是否开启安全认证。 **取值范围**： - true：开启 - false：未开启
     *
     * @return bool|null
     */
@@ -1854,7 +1854,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets sslEnable
     *
-    * @param bool|null $sslEnable 是否开启安全认证。 - true：开启 - false：未开启
+    * @param bool|null $sslEnable **参数解释**： 是否开启安全认证。 **取值范围**： - true：开启 - false：未开启
     *
     * @return $this
     */
@@ -1866,7 +1866,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokerSslEnable
-    *  是否开启broker间副本加密传输。 - true：开启 - false：未开启
+    *  **参数解释**： 是否开启broker间副本加密传输。 **取值范围**： - true：开启 - false：未开启
     *
     * @return bool|null
     */
@@ -1878,7 +1878,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets brokerSslEnable
     *
-    * @param bool|null $brokerSslEnable 是否开启broker间副本加密传输。 - true：开启 - false：未开启
+    * @param bool|null $brokerSslEnable **参数解释**： 是否开启broker间副本加密传输。 **取值范围**： - true：开启 - false：未开启
     *
     * @return $this
     */
@@ -1890,7 +1890,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets kafkaSecurityProtocol
-    *  Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。  - PLAINTEXT: 既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
+    *  **参数解释**： Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。 **取值范围**： - PLAINTEXT：既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL：采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT：明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     *
     * @return string|null
     */
@@ -1902,7 +1902,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets kafkaSecurityProtocol
     *
-    * @param string|null $kafkaSecurityProtocol Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。  - PLAINTEXT: 既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
+    * @param string|null $kafkaSecurityProtocol **参数解释**： Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。 **取值范围**： - PLAINTEXT：既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL：采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT：明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     *
     * @return $this
     */
@@ -1914,7 +1914,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets saslEnabledMechanisms
-    *  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
+    *  **参数解释**： 开启SASL后使用的认证机制。
     *
     * @return string[]|null
     */
@@ -1926,7 +1926,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets saslEnabledMechanisms
     *
-    * @param string[]|null $saslEnabledMechanisms 开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
+    * @param string[]|null $saslEnabledMechanisms **参数解释**： 开启SASL后使用的认证机制。
     *
     * @return $this
     */
@@ -1938,7 +1938,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets sslTwoWayEnable
-    *  是否开启双向认证。
+    *  **参数解释**： 是否开启双向认证。 **取值范围**： - true：开启 - false：未开启
     *
     * @return bool|null
     */
@@ -1950,7 +1950,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets sslTwoWayEnable
     *
-    * @param bool|null $sslTwoWayEnable 是否开启双向认证。
+    * @param bool|null $sslTwoWayEnable **参数解释**： 是否开启双向认证。 **取值范围**： - true：开启 - false：未开启
     *
     * @return $this
     */
@@ -1962,7 +1962,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets certReplaced
-    *  是否能够证书替换。
+    *  **参数解释**： 是否开启证书替换。 **取值范围**： - true：开启 - false：未开启
     *
     * @return bool|null
     */
@@ -1974,7 +1974,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets certReplaced
     *
-    * @param bool|null $certReplaced 是否能够证书替换。
+    * @param bool|null $certReplaced **参数解释**： 是否开启证书替换。 **取值范围**： - true：开启 - false：未开启
     *
     * @return $this
     */
@@ -1986,7 +1986,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicManagementConnectAddress
-    *  公网访问Kafka Manager连接地址。
+    *  **参数解释**： 公网访问Kafka Manager连接地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1998,7 +1998,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets publicManagementConnectAddress
     *
-    * @param string|null $publicManagementConnectAddress 公网访问Kafka Manager连接地址。
+    * @param string|null $publicManagementConnectAddress **参数解释**： 公网访问Kafka Manager连接地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2010,7 +2010,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID。
+    *  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -2022,7 +2022,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID。
+    * @param string|null $enterpriseProjectId **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2034,7 +2034,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets isLogicalVolume
-    *  实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
+    *  **参数解释**： 实例扩容时用于区分老实例与新实例。 **取值范围**： - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例。
     *
     * @return bool|null
     */
@@ -2046,7 +2046,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets isLogicalVolume
     *
-    * @param bool|null $isLogicalVolume 实例扩容时用于区分老实例与新实例。 - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例
+    * @param bool|null $isLogicalVolume **参数解释**： 实例扩容时用于区分老实例与新实例。 **取值范围**： - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：老实例。
     *
     * @return $this
     */
@@ -2058,7 +2058,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendTimes
-    *  实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
+    *  **参数解释**： 实例扩容磁盘次数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -2070,7 +2070,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets extendTimes
     *
-    * @param int|null $extendTimes 实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
+    * @param int|null $extendTimes **参数解释**： 实例扩容磁盘次数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2082,7 +2082,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableAutoTopic
-    *  是否打开kafka自动创建Topic功能。   - true：开启   - false：关闭
+    *  **参数解释**： 是否开启自动创建Topic。 **取值范围**： - true：开启 - false：关闭
     *
     * @return bool|null
     */
@@ -2094,7 +2094,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets enableAutoTopic
     *
-    * @param bool|null $enableAutoTopic 是否打开kafka自动创建Topic功能。   - true：开启   - false：关闭
+    * @param bool|null $enableAutoTopic **参数解释**： 是否开启自动创建Topic。 **取值范围**： - true：开启 - false：关闭
     *
     * @return $this
     */
@@ -2106,7 +2106,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  实例类型：集群，cluster。
+    *  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     *
     * @return string|null
     */
@@ -2118,7 +2118,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 实例类型：集群，cluster。
+    * @param string|null $type **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     *
     * @return $this
     */
@@ -2130,7 +2130,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
-    *  产品标识。
+    *  **参数解释**： 产品标识。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -2142,7 +2142,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets productId
     *
-    * @param string|null $productId 产品标识。
+    * @param string|null $productId **参数解释**： 产品标识。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2154,7 +2154,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
-    *  安全组ID。
+    *  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -2166,7 +2166,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string|null $securityGroupId 安全组ID。
+    * @param string|null $securityGroupId **参数解释**： 安全组ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2178,7 +2178,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupName
-    *  租户安全组名称。
+    *  **参数解释**： 安全组名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -2190,7 +2190,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupName
     *
-    * @param string|null $securityGroupName 租户安全组名称。
+    * @param string|null $securityGroupName **参数解释**： 安全组名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2202,7 +2202,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  子网ID。
+    *  **参数解释**： 子网ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -2214,7 +2214,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string|null $subnetId 子网ID。
+    * @param string|null $subnetId **参数解释**： 子网ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2226,7 +2226,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableZones
-    *  实例节点所在的可用区，返回“可用区ID”。
+    *  **参数解释**： 实例节点所在的可用区，返回“可用区ID”。
     *
     * @return string[]|null
     */
@@ -2238,7 +2238,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets availableZones
     *
-    * @param string[]|null $availableZones 实例节点所在的可用区，返回“可用区ID”。
+    * @param string[]|null $availableZones **参数解释**： 实例节点所在的可用区，返回“可用区ID”。
     *
     * @return $this
     */
@@ -2250,7 +2250,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableZoneNames
-    *  实例节点所在的可用区名称，返回“可用区名称”。
+    *  **参数解释**： 实例节点所在的可用区名称，返回“可用区名称”。
     *
     * @return string[]|null
     */
@@ -2262,7 +2262,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets availableZoneNames
     *
-    * @param string[]|null $availableZoneNames 实例节点所在的可用区名称，返回“可用区名称”。
+    * @param string[]|null $availableZoneNames **参数解释**： 实例节点所在的可用区名称，返回“可用区名称”。
     *
     * @return $this
     */
@@ -2274,7 +2274,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalStorageSpace
-    *  总共消息存储空间，单位：GB。
+    *  **参数解释**： 总共消息存储空间，单位：GB。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -2286,7 +2286,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets totalStorageSpace
     *
-    * @param int|null $totalStorageSpace 总共消息存储空间，单位：GB。
+    * @param int|null $totalStorageSpace **参数解释**： 总共消息存储空间，单位：GB。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2298,7 +2298,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicConnectAddress
-    *  实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。
+    *  **参数解释**： 实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -2310,7 +2310,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets publicConnectAddress
     *
-    * @param string|null $publicConnectAddress 实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。
+    * @param string|null $publicConnectAddress **参数解释**： 实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2322,7 +2322,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicConnectDomainName
-    *  实例公网连接域名。当实例开启了公网访问，实例才包含该参数。
+    *  **参数解释**： 实例公网连接域名。当实例开启了公网访问，实例才包含该参数。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -2334,7 +2334,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets publicConnectDomainName
     *
-    * @param string|null $publicConnectDomainName 实例公网连接域名。当实例开启了公网访问，实例才包含该参数。
+    * @param string|null $publicConnectDomainName **参数解释**： 实例公网连接域名。当实例开启了公网访问，实例才包含该参数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2346,7 +2346,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets storageResourceId
-    *  存储资源ID。
+    *  **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -2358,7 +2358,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets storageResourceId
     *
-    * @param string|null $storageResourceId 存储资源ID。
+    * @param string|null $storageResourceId **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2370,7 +2370,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets storageSpecCode
-    *  IO规格。
+    *  **参数解释**： IO规格。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -2382,7 +2382,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets storageSpecCode
     *
-    * @param string|null $storageSpecCode IO规格。
+    * @param string|null $storageSpecCode **参数解释**： IO规格。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2394,7 +2394,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
-    *  服务类型。
+    *  **参数解释**： 服务类型。 **取值范围**： advanced。
     *
     * @return string|null
     */
@@ -2406,7 +2406,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets serviceType
     *
-    * @param string|null $serviceType 服务类型。
+    * @param string|null $serviceType **参数解释**： 服务类型。 **取值范围**： advanced。
     *
     * @return $this
     */
@@ -2418,7 +2418,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets storageType
-    *  存储类型。
+    *  **参数解释**： 存储类型。 **取值范围**： hec
     *
     * @return string|null
     */
@@ -2430,7 +2430,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets storageType
     *
-    * @param string|null $storageType 存储类型。
+    * @param string|null $storageType **参数解释**： 存储类型。 **取值范围**： hec
     *
     * @return $this
     */
@@ -2442,7 +2442,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets retentionPolicy
-    *  消息老化策略。
+    *  **参数解释**： 消息老化策略。 **取值范围**： - time_base：表示自动删除最老消息。 - produce_reject：表示拒绝消息写入。
     *
     * @return string|null
     */
@@ -2454,7 +2454,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets retentionPolicy
     *
-    * @param string|null $retentionPolicy 消息老化策略。
+    * @param string|null $retentionPolicy **参数解释**： 消息老化策略。 **取值范围**： - time_base：表示自动删除最老消息。 - produce_reject：表示拒绝消息写入。
     *
     * @return $this
     */
@@ -2466,7 +2466,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets kafkaPublicStatus
-    *  Kafka公网开启状态。
+    *  **参数解释**： Kafka公网开启状态。 **取值范围**： - true：开启公网。 - closed：关闭公网。 - false：未使用公网。 - freezed：公网冻结。 - actived：公网解冻。
     *
     * @return string|null
     */
@@ -2478,7 +2478,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets kafkaPublicStatus
     *
-    * @param string|null $kafkaPublicStatus Kafka公网开启状态。
+    * @param string|null $kafkaPublicStatus **参数解释**： Kafka公网开启状态。 **取值范围**： - true：开启公网。 - closed：关闭公网。 - false：未使用公网。 - freezed：公网冻结。 - actived：公网解冻。
     *
     * @return $this
     */
@@ -2490,7 +2490,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicBandwidth
-    *  kafka公网访问带宽。
+    *  **参数解释**： kafka公网访问带宽。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -2502,7 +2502,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets publicBandwidth
     *
-    * @param int|null $publicBandwidth kafka公网访问带宽。
+    * @param int|null $publicBandwidth **参数解释**： kafka公网访问带宽。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2514,7 +2514,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableLogCollection
-    *  是否开启消息收集功能。
+    *  **参数解释**： 是否开启消息收集功能。 **取值范围**： - true：开启 - false：不开启
     *
     * @return bool|null
     */
@@ -2526,7 +2526,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets enableLogCollection
     *
-    * @param bool|null $enableLogCollection 是否开启消息收集功能。
+    * @param bool|null $enableLogCollection **参数解释**： 是否开启消息收集功能。 **取值范围**： - true：开启 - false：不开启
     *
     * @return $this
     */
@@ -2538,7 +2538,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets newAuthCert
-    *  是否开启新证书。
+    *  **参数解释**： 是否开启新证书。 **取值范围**： - true：开启 - false：不开启
     *
     * @return bool|null
     */
@@ -2550,7 +2550,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets newAuthCert
     *
-    * @param bool|null $newAuthCert 是否开启新证书。
+    * @param bool|null $newAuthCert **参数解释**： 是否开启新证书。 **取值范围**： - true：开启 - false：不开启
     *
     * @return $this
     */
@@ -2562,7 +2562,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets crossVpcInfo
-    *  跨VPC访问信息。
+    *  **参数解释**： 跨VPC访问信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -2574,7 +2574,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets crossVpcInfo
     *
-    * @param string|null $crossVpcInfo 跨VPC访问信息。
+    * @param string|null $crossVpcInfo **参数解释**： 跨VPC访问信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2586,7 +2586,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6Enable
-    *  是否开启ipv6。
+    *  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启 - false：不开启
     *
     * @return bool|null
     */
@@ -2598,7 +2598,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6Enable
     *
-    * @param bool|null $ipv6Enable 是否开启ipv6。
+    * @param bool|null $ipv6Enable **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启 - false：不开启
     *
     * @return $this
     */
@@ -2610,7 +2610,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6ConnectAddresses
-    *  IPv6的连接地址。
+    *  **参数解释**： IPv6的连接地址。
     *
     * @return string[]|null
     */
@@ -2622,7 +2622,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6ConnectAddresses
     *
-    * @param string[]|null $ipv6ConnectAddresses IPv6的连接地址。
+    * @param string[]|null $ipv6ConnectAddresses **参数解释**： IPv6的连接地址。
     *
     * @return $this
     */
@@ -2634,7 +2634,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets connectorEnable
-    *  是否开启转储。新规格产品暂不支持开启转储。
+    *  **参数解释**： 是否开启转储。 **取值范围**： - true：开启 - false：不开启
     *
     * @return bool|null
     */
@@ -2646,7 +2646,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets connectorEnable
     *
-    * @param bool|null $connectorEnable 是否开启转储。新规格产品暂不支持开启转储。
+    * @param bool|null $connectorEnable **参数解释**： 是否开启转储。 **取值范围**： - true：开启 - false：不开启
     *
     * @return $this
     */
@@ -2658,7 +2658,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets connectorNodeNum
-    *  connector节点数量。
+    *  **参数解释**： connector节点数量。 **取值范围**： 2-16。
     *
     * @return int|null
     */
@@ -2670,7 +2670,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets connectorNodeNum
     *
-    * @param int|null $connectorNodeNum connector节点数量。
+    * @param int|null $connectorNodeNum **参数解释**： connector节点数量。 **取值范围**： 2-16。
     *
     * @return $this
     */
@@ -2682,7 +2682,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets connectorId
-    *  转储任务ID。
+    *  **参数解释**： 转储任务ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -2694,7 +2694,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets connectorId
     *
-    * @param string|null $connectorId 转储任务ID。
+    * @param string|null $connectorId **参数解释**： 转储任务ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2706,7 +2706,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets restEnable
-    *  是否开启Kafka rest功能。
+    *  **参数解释**： 是否开启Kafka rest功能。 **取值范围**： - true：开启 - false：不开启
     *
     * @return bool|null
     */
@@ -2718,7 +2718,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets restEnable
     *
-    * @param bool|null $restEnable 是否开启Kafka rest功能。
+    * @param bool|null $restEnable **参数解释**： 是否开启Kafka rest功能。 **取值范围**： - true：开启 - false：不开启
     *
     * @return $this
     */
@@ -2730,7 +2730,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets restConnectAddress
-    *  Kafka rest连接地址。
+    *  **参数解释**：  Kafka rest连接地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -2742,7 +2742,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets restConnectAddress
     *
-    * @param string|null $restConnectAddress Kafka rest连接地址。
+    * @param string|null $restConnectAddress **参数解释**：  Kafka rest连接地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2754,7 +2754,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicBoundwidth
-    *  kafka公网访问带宽。待删除版本。
+    *  **参数解释**： Kafka公网访问带宽。待删除版本。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -2766,7 +2766,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets publicBoundwidth
     *
-    * @param int|null $publicBoundwidth kafka公网访问带宽。待删除版本。
+    * @param int|null $publicBoundwidth **参数解释**： Kafka公网访问带宽。待删除版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2778,7 +2778,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageQueryInstEnable
-    *  是否开启消息查询功能。
+    *  **参数解释**： 是否开启消息查询功能。 **取值范围**： - true：开启 - false：不开启
     *
     * @return bool|null
     */
@@ -2790,7 +2790,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets messageQueryInstEnable
     *
-    * @param bool|null $messageQueryInstEnable 是否开启消息查询功能。
+    * @param bool|null $messageQueryInstEnable **参数解释**： 是否开启消息查询功能。 **取值范围**： - true：开启 - false：不开启
     *
     * @return $this
     */
@@ -2802,7 +2802,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcClientPlain
-    *  是否开启VPC明文访问。
+    *  **参数解释**： 是否开启VPC明文访问。 **取值范围**： - true：开启 - false：不开启
     *
     * @return bool|null
     */
@@ -2814,7 +2814,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets vpcClientPlain
     *
-    * @param bool|null $vpcClientPlain 是否开启VPC明文访问。
+    * @param bool|null $vpcClientPlain **参数解释**： 是否开启VPC明文访问。 **取值范围**： - true：开启 - false：不开启
     *
     * @return $this
     */
@@ -2826,7 +2826,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportFeatures
-    *  Kafka实例支持的特性功能。
+    *  **参数解释**： Kafka实例支持的特性功能。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -2838,7 +2838,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets supportFeatures
     *
-    * @param string|null $supportFeatures Kafka实例支持的特性功能。
+    * @param string|null $supportFeatures **参数解释**： Kafka实例支持的特性功能。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2850,7 +2850,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets traceEnable
-    *  是否开启消息轨迹功能。
+    *  **参数解释**： 是否开启消息轨迹功能。 **取值范围**： - true：开启 - false：不开启
     *
     * @return bool|null
     */
@@ -2862,7 +2862,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets traceEnable
     *
-    * @param bool|null $traceEnable 是否开启消息轨迹功能。
+    * @param bool|null $traceEnable **参数解释**： 是否开启消息轨迹功能。 **取值范围**： - true：开启 - false：不开启
     *
     * @return $this
     */
@@ -2874,7 +2874,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentEnable
-    *  是否开启代理。
+    *  **参数解释**： 是否开启代理。 **取值范围**： - true：开启 - false：不开启
     *
     * @return bool|null
     */
@@ -2886,7 +2886,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets agentEnable
     *
-    * @param bool|null $agentEnable 是否开启代理。
+    * @param bool|null $agentEnable **参数解释**： 是否开启代理。 **取值范围**： - true：开启 - false：不开启
     *
     * @return $this
     */
@@ -2898,7 +2898,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets podConnectAddress
-    *  租户侧连接地址。
+    *  **参数解释**： 租户侧连接地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -2910,7 +2910,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets podConnectAddress
     *
-    * @param string|null $podConnectAddress 租户侧连接地址。
+    * @param string|null $podConnectAddress **参数解释**： 租户侧连接地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2922,7 +2922,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets diskEncrypted
-    *  是否开启磁盘加密。
+    *  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启 - false：不开启
     *
     * @return bool|null
     */
@@ -2934,7 +2934,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets diskEncrypted
     *
-    * @param bool|null $diskEncrypted 是否开启磁盘加密。
+    * @param bool|null $diskEncrypted **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启 - false：不开启
     *
     * @return $this
     */
@@ -2946,7 +2946,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets diskEncryptedKey
-    *  磁盘加密key，未开启磁盘加密时为空。
+    *  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -2958,7 +2958,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets diskEncryptedKey
     *
-    * @param string|null $diskEncryptedKey 磁盘加密key，未开启磁盘加密时为空。
+    * @param string|null $diskEncryptedKey **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2970,7 +2970,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets kafkaPrivateConnectAddress
-    *  Kafka实例内网连接地址。
+    *  **参数解释**： Kafka实例内网连接地址。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -2982,7 +2982,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets kafkaPrivateConnectAddress
     *
-    * @param string|null $kafkaPrivateConnectAddress Kafka实例内网连接地址。
+    * @param string|null $kafkaPrivateConnectAddress **参数解释**： Kafka实例内网连接地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2994,7 +2994,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets kafkaPrivateConnectDomainName
-    *  Kafka实例内网连接域名。
+    *  **参数解释**： Kafka实例内网连接域名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -3006,7 +3006,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets kafkaPrivateConnectDomainName
     *
-    * @param string|null $kafkaPrivateConnectDomainName Kafka实例内网连接域名。
+    * @param string|null $kafkaPrivateConnectDomainName **参数解释**： Kafka实例内网连接域名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -3018,7 +3018,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets cesVersion
-    *  云监控版本。
+    *  **参数解释**： 云监控版本。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -3030,7 +3030,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets cesVersion
     *
-    * @param string|null $cesVersion 云监控版本。
+    * @param string|null $cesVersion **参数解释**： 云监控版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -3042,7 +3042,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicAccessEnabled
-    *  区分实例什么时候开启的公网访问  取值范围：   - true：已开启公网访问   - actived：已开启公网访问   - closed：已关闭公网访问   - false：已关闭公网访问
+    *  **参数解释**： 区分实例什么时候开启的公网访问 **取值范围**： - true：已开启公网访问 - actived：已开启公网访问 - closed：已关闭公网访问 - false：已关闭公网访问
     *
     * @return string|null
     */
@@ -3054,7 +3054,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets publicAccessEnabled
     *
-    * @param string|null $publicAccessEnabled 区分实例什么时候开启的公网访问  取值范围：   - true：已开启公网访问   - actived：已开启公网访问   - closed：已关闭公网访问   - false：已关闭公网访问
+    * @param string|null $publicAccessEnabled **参数解释**： 区分实例什么时候开启的公网访问 **取值范围**： - true：已开启公网访问 - actived：已开启公网访问 - closed：已关闭公网访问 - false：已关闭公网访问
     *
     * @return $this
     */
@@ -3066,7 +3066,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeNum
-    *  节点数。
+    *  **参数解释**： 节点数。 **取值范围**： - [1：Kafka单机实例的节点数。](tag:hws,hws_hk,hws_eu,dt,hcs,ax) - 3~50：Kafka集群实例的节点数。
     *
     * @return int|null
     */
@@ -3078,7 +3078,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets nodeNum
     *
-    * @param int|null $nodeNum 节点数。
+    * @param int|null $nodeNum **参数解释**： 节点数。 **取值范围**： - [1：Kafka单机实例的节点数。](tag:hws,hws_hk,hws_eu,dt,hcs,ax) - 3~50：Kafka集群实例的节点数。
     *
     * @return $this
     */
@@ -3114,7 +3114,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableAcl
-    *  是否开启访问控制。
+    *  **参数解释**： 是否开启访问控制。 **取值范围**： - true：开启 - false：不开启
     *
     * @return bool|null
     */
@@ -3126,7 +3126,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets enableAcl
     *
-    * @param bool|null $enableAcl 是否开启访问控制。
+    * @param bool|null $enableAcl **参数解释**： 是否开启访问控制。 **取值范围**： - true：开启 - false：不开启
     *
     * @return $this
     */
@@ -3138,7 +3138,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets newSpecBillingEnable
-    *  是否启用新规格计费。
+    *  **参数解释**： 是否启用新规格计费。 **取值范围**： - true：开启 - false：不开启
     *
     * @return bool|null
     */
@@ -3150,7 +3150,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets newSpecBillingEnable
     *
-    * @param bool|null $newSpecBillingEnable 是否启用新规格计费。
+    * @param bool|null $newSpecBillingEnable **参数解释**： 是否启用新规格计费。 **取值范围**： - true：开启 - false：不开启
     *
     * @return $this
     */
@@ -3162,7 +3162,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokerNum
-    *  节点数量。
+    *  **参数解释**： 节点数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -3174,7 +3174,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets brokerNum
     *
-    * @param int|null $brokerNum 节点数量。
+    * @param int|null $brokerNum **参数解释**： 节点数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -3186,7 +3186,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签列表。
+    *  **参数解释**： 标签列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\TagEntity[]|null
     */
@@ -3198,7 +3198,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\TagEntity[]|null $tags 标签列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\TagEntity[]|null $tags **参数解释**： 标签列表。
     *
     * @return $this
     */
@@ -3210,7 +3210,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets drEnable
-    *  是否为容灾实例。
+    *  **参数解释**：  是否为容灾实例。 **取值范围**： - true：是容灾实例。 - false：不是容灾实例。
     *
     * @return bool|null
     */
@@ -3222,7 +3222,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets drEnable
     *
-    * @param bool|null $drEnable 是否为容灾实例。
+    * @param bool|null $drEnable **参数解释**：  是否为容灾实例。 **取值范围**： - true：是容灾实例。 - false：不是容灾实例。
     *
     * @return $this
     */

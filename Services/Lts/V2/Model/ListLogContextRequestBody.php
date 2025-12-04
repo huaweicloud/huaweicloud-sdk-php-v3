@@ -24,6 +24,7 @@ class ListLogContextRequestBody implements ModelInterface, ArrayAccess
     * time  自定义时间特性时间字段，字段值需要从日志结果中获取，毫秒级时间戳。若已开启云端结构化自定义时间功能，需要使用该字段和line_num字段共同进行上下文查询。
     * backwardsSize  指定起始日志往前（上文）的日志条数，取值范围 [0, 500] ，默认值100
     * forwardsSize  指定起始日志往后（下文）的日志条数，取值范围 [0, 500] ，默认值100
+    * scrollId  分页查询时，若上次查询的返回结果中包含该字段，需要增加该字段参与分页查询。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class ListLogContextRequestBody implements ModelInterface, ArrayAccess
             'lineNum' => 'string',
             'time' => 'string',
             'backwardsSize' => 'int',
-            'forwardsSize' => 'int'
+            'forwardsSize' => 'int',
+            'scrollId' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class ListLogContextRequestBody implements ModelInterface, ArrayAccess
     * time  自定义时间特性时间字段，字段值需要从日志结果中获取，毫秒级时间戳。若已开启云端结构化自定义时间功能，需要使用该字段和line_num字段共同进行上下文查询。
     * backwardsSize  指定起始日志往前（上文）的日志条数，取值范围 [0, 500] ，默认值100
     * forwardsSize  指定起始日志往后（下文）的日志条数，取值范围 [0, 500] ，默认值100
+    * scrollId  分页查询时，若上次查询的返回结果中包含该字段，需要增加该字段参与分页查询。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class ListLogContextRequestBody implements ModelInterface, ArrayAccess
         'lineNum' => null,
         'time' => null,
         'backwardsSize' => 'int32',
-        'forwardsSize' => 'int32'
+        'forwardsSize' => 'int32',
+        'scrollId' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class ListLogContextRequestBody implements ModelInterface, ArrayAccess
     * time  自定义时间特性时间字段，字段值需要从日志结果中获取，毫秒级时间戳。若已开启云端结构化自定义时间功能，需要使用该字段和line_num字段共同进行上下文查询。
     * backwardsSize  指定起始日志往前（上文）的日志条数，取值范围 [0, 500] ，默认值100
     * forwardsSize  指定起始日志往后（下文）的日志条数，取值范围 [0, 500] ，默认值100
+    * scrollId  分页查询时，若上次查询的返回结果中包含该字段，需要增加该字段参与分页查询。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class ListLogContextRequestBody implements ModelInterface, ArrayAccess
             'lineNum' => 'line_num',
             'time' => '__time__',
             'backwardsSize' => 'backwards_size',
-            'forwardsSize' => 'forwards_size'
+            'forwardsSize' => 'forwards_size',
+            'scrollId' => 'scroll_id'
     ];
 
     /**
@@ -93,6 +99,7 @@ class ListLogContextRequestBody implements ModelInterface, ArrayAccess
     * time  自定义时间特性时间字段，字段值需要从日志结果中获取，毫秒级时间戳。若已开启云端结构化自定义时间功能，需要使用该字段和line_num字段共同进行上下文查询。
     * backwardsSize  指定起始日志往前（上文）的日志条数，取值范围 [0, 500] ，默认值100
     * forwardsSize  指定起始日志往后（下文）的日志条数，取值范围 [0, 500] ，默认值100
+    * scrollId  分页查询时，若上次查询的返回结果中包含该字段，需要增加该字段参与分页查询。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class ListLogContextRequestBody implements ModelInterface, ArrayAccess
             'lineNum' => 'setLineNum',
             'time' => 'setTime',
             'backwardsSize' => 'setBackwardsSize',
-            'forwardsSize' => 'setForwardsSize'
+            'forwardsSize' => 'setForwardsSize',
+            'scrollId' => 'setScrollId'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ListLogContextRequestBody implements ModelInterface, ArrayAccess
     * time  自定义时间特性时间字段，字段值需要从日志结果中获取，毫秒级时间戳。若已开启云端结构化自定义时间功能，需要使用该字段和line_num字段共同进行上下文查询。
     * backwardsSize  指定起始日志往前（上文）的日志条数，取值范围 [0, 500] ，默认值100
     * forwardsSize  指定起始日志往后（下文）的日志条数，取值范围 [0, 500] ，默认值100
+    * scrollId  分页查询时，若上次查询的返回结果中包含该字段，需要增加该字段参与分页查询。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class ListLogContextRequestBody implements ModelInterface, ArrayAccess
             'lineNum' => 'getLineNum',
             'time' => 'getTime',
             'backwardsSize' => 'getBackwardsSize',
-            'forwardsSize' => 'getForwardsSize'
+            'forwardsSize' => 'getForwardsSize',
+            'scrollId' => 'getScrollId'
     ];
 
     /**
@@ -181,6 +191,7 @@ class ListLogContextRequestBody implements ModelInterface, ArrayAccess
         $this->container['time'] = isset($data['time']) ? $data['time'] : null;
         $this->container['backwardsSize'] = isset($data['backwardsSize']) ? $data['backwardsSize'] : null;
         $this->container['forwardsSize'] = isset($data['forwardsSize']) ? $data['forwardsSize'] : null;
+        $this->container['scrollId'] = isset($data['scrollId']) ? $data['scrollId'] : null;
     }
 
     /**
@@ -310,6 +321,30 @@ class ListLogContextRequestBody implements ModelInterface, ArrayAccess
     public function setForwardsSize($forwardsSize)
     {
         $this->container['forwardsSize'] = $forwardsSize;
+        return $this;
+    }
+
+    /**
+    * Gets scrollId
+    *  分页查询时，若上次查询的返回结果中包含该字段，需要增加该字段参与分页查询。
+    *
+    * @return string|null
+    */
+    public function getScrollId()
+    {
+        return $this->container['scrollId'];
+    }
+
+    /**
+    * Sets scrollId
+    *
+    * @param string|null $scrollId 分页查询时，若上次查询的返回结果中包含该字段，需要增加该字段参与分页查询。
+    *
+    * @return $this
+    */
+    public function setScrollId($scrollId)
+    {
+        $this->container['scrollId'] = $scrollId;
         return $this;
     }
 

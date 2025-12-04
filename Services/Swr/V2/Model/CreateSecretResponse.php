@@ -23,24 +23,28 @@ class CreateSecretResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * auths  认证信息
     * xSwrDockerlogin  xSwrDockerlogin
+    * xSwrExpireat  xSwrExpireat
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'auths' => 'map[string,\HuaweiCloud\SDK\Swr\V2\Model\AuthInfo]',
-            'xSwrDockerlogin' => 'string'
+            'xSwrDockerlogin' => 'string',
+            'xSwrExpireat' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * auths  认证信息
     * xSwrDockerlogin  xSwrDockerlogin
+    * xSwrExpireat  xSwrExpireat
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'auths' => null,
-        'xSwrDockerlogin' => null
+        'xSwrDockerlogin' => null,
+        'xSwrExpireat' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class CreateSecretResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * auths  认证信息
     * xSwrDockerlogin  xSwrDockerlogin
+    * xSwrExpireat  xSwrExpireat
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'auths' => 'auths',
-            'xSwrDockerlogin' => 'X-Swr-Dockerlogin'
+            'xSwrDockerlogin' => 'X-Swr-Dockerlogin',
+            'xSwrExpireat' => 'X-Swr-Expireat'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * auths  认证信息
     * xSwrDockerlogin  xSwrDockerlogin
+    * xSwrExpireat  xSwrExpireat
     *
     * @var string[]
     */
     protected static $setters = [
             'auths' => 'setAuths',
-            'xSwrDockerlogin' => 'setXSwrDockerlogin'
+            'xSwrDockerlogin' => 'setXSwrDockerlogin',
+            'xSwrExpireat' => 'setXSwrExpireat'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * auths  认证信息
     * xSwrDockerlogin  xSwrDockerlogin
+    * xSwrExpireat  xSwrExpireat
     *
     * @var string[]
     */
     protected static $getters = [
             'auths' => 'getAuths',
-            'xSwrDockerlogin' => 'getXSwrDockerlogin'
+            'xSwrDockerlogin' => 'getXSwrDockerlogin',
+            'xSwrExpireat' => 'getXSwrExpireat'
     ];
 
     /**
@@ -160,6 +170,7 @@ class CreateSecretResponse implements ModelInterface, ArrayAccess
     {
         $this->container['auths'] = isset($data['auths']) ? $data['auths'] : null;
         $this->container['xSwrDockerlogin'] = isset($data['xSwrDockerlogin']) ? $data['xSwrDockerlogin'] : null;
+        $this->container['xSwrExpireat'] = isset($data['xSwrExpireat']) ? $data['xSwrExpireat'] : null;
     }
 
     /**
@@ -229,6 +240,30 @@ class CreateSecretResponse implements ModelInterface, ArrayAccess
     public function setXSwrDockerlogin($xSwrDockerlogin)
     {
         $this->container['xSwrDockerlogin'] = $xSwrDockerlogin;
+        return $this;
+    }
+
+    /**
+    * Gets xSwrExpireat
+    *  xSwrExpireat
+    *
+    * @return string|null
+    */
+    public function getXSwrExpireat()
+    {
+        return $this->container['xSwrExpireat'];
+    }
+
+    /**
+    * Sets xSwrExpireat
+    *
+    * @param string|null $xSwrExpireat xSwrExpireat
+    *
+    * @return $this
+    */
+    public function setXSwrExpireat($xSwrExpireat)
+    {
+        $this->container['xSwrExpireat'] = $xSwrExpireat;
         return $this;
     }
 

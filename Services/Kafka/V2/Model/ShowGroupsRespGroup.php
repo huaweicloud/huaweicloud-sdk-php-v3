@@ -20,12 +20,12 @@ class ShowGroupsRespGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  消费组名称。
-    * state  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
-    * coordinatorId  协调器编号。
-    * members  消费者列表。
-    * groupMessageOffsets  消费进度。
-    * assignmentStrategy  分区分配策略。
+    * groupId  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * state  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * coordinatorId  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
+    * members  **参数解释**： 消费者列表。
+    * groupMessageOffsets  **参数解释**： 消费进度。
+    * assignmentStrategy  **参数解释**： 分区分配策略。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class ShowGroupsRespGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  消费组名称。
-    * state  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
-    * coordinatorId  协调器编号。
-    * members  消费者列表。
-    * groupMessageOffsets  消费进度。
-    * assignmentStrategy  分区分配策略。
+    * groupId  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * state  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * coordinatorId  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
+    * members  **参数解释**： 消费者列表。
+    * groupMessageOffsets  **参数解释**： 消费进度。
+    * assignmentStrategy  **参数解释**： 分区分配策略。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class ShowGroupsRespGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  消费组名称。
-    * state  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
-    * coordinatorId  协调器编号。
-    * members  消费者列表。
-    * groupMessageOffsets  消费进度。
-    * assignmentStrategy  分区分配策略。
+    * groupId  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * state  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * coordinatorId  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
+    * members  **参数解释**： 消费者列表。
+    * groupMessageOffsets  **参数解释**： 消费进度。
+    * assignmentStrategy  **参数解释**： 分区分配策略。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class ShowGroupsRespGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  消费组名称。
-    * state  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
-    * coordinatorId  协调器编号。
-    * members  消费者列表。
-    * groupMessageOffsets  消费进度。
-    * assignmentStrategy  分区分配策略。
+    * groupId  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * state  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * coordinatorId  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
+    * members  **参数解释**： 消费者列表。
+    * groupMessageOffsets  **参数解释**： 消费进度。
+    * assignmentStrategy  **参数解释**： 分区分配策略。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class ShowGroupsRespGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  消费组名称。
-    * state  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
-    * coordinatorId  协调器编号。
-    * members  消费者列表。
-    * groupMessageOffsets  消费进度。
-    * assignmentStrategy  分区分配策略。
+    * groupId  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * state  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * coordinatorId  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
+    * members  **参数解释**： 消费者列表。
+    * groupMessageOffsets  **参数解释**： 消费进度。
+    * assignmentStrategy  **参数解释**： 分区分配策略。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class ShowGroupsRespGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  消费组名称。
+    *  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class ShowGroupsRespGroup implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 消费组名称。
+    * @param string|null $groupId **参数解释**： 消费组名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class ShowGroupsRespGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    *  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class ShowGroupsRespGroup implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state 消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * @param string|null $state **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class ShowGroupsRespGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets coordinatorId
-    *  协调器编号。
+    *  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -289,7 +289,7 @@ class ShowGroupsRespGroup implements ModelInterface, ArrayAccess
     /**
     * Sets coordinatorId
     *
-    * @param int|null $coordinatorId 协调器编号。
+    * @param int|null $coordinatorId **参数解释**： 协调器编号。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class ShowGroupsRespGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets members
-    *  消费者列表。
+    *  **参数解释**： 消费者列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ShowGroupsRespGroupMembers[]|null
     */
@@ -313,7 +313,7 @@ class ShowGroupsRespGroup implements ModelInterface, ArrayAccess
     /**
     * Sets members
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowGroupsRespGroupMembers[]|null $members 消费者列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowGroupsRespGroupMembers[]|null $members **参数解释**： 消费者列表。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class ShowGroupsRespGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupMessageOffsets
-    *  消费进度。
+    *  **参数解释**： 消费进度。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ShowGroupsRespGroupGroupMessageOffsets[]|null
     */
@@ -337,7 +337,7 @@ class ShowGroupsRespGroup implements ModelInterface, ArrayAccess
     /**
     * Sets groupMessageOffsets
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowGroupsRespGroupGroupMessageOffsets[]|null $groupMessageOffsets 消费进度。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowGroupsRespGroupGroupMessageOffsets[]|null $groupMessageOffsets **参数解释**： 消费进度。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class ShowGroupsRespGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets assignmentStrategy
-    *  分区分配策略。
+    *  **参数解释**： 分区分配策略。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -361,7 +361,7 @@ class ShowGroupsRespGroup implements ModelInterface, ArrayAccess
     /**
     * Sets assignmentStrategy
     *
-    * @param string|null $assignmentStrategy 分区分配策略。
+    * @param string|null $assignmentStrategy **参数解释**： 分区分配策略。 **取值范围**： 不涉及。
     *
     * @return $this
     */

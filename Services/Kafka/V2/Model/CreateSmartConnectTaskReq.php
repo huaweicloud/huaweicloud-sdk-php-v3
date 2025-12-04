@@ -24,9 +24,9 @@ class CreateSmartConnectTaskReq implements ModelInterface, ArrayAccess
     * startLater  是否稍后再启动任务。如需要创建任务后立即启动，请填false；如希望稍后在任务列表中手动开启任务，请填true。
     * topics  SmartConnect任务配置的Topic。
     * topicsRegex  SmartConnect任务配置的Topic正则表达式。
-    * sourceType  SmartConnect任务的源端类型。
+    * sourceType  **参数解释**： SmartConnect任务的源端类型。 **约束限制**： 不涉及。 **取值范围**： - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。 - NONE：不配置。 **默认取值**： 不涉及。
     * sourceTask  sourceTask
-    * sinkType  SmartConnect任务的目标端类型。
+    * sinkType  **参数解释**： SmartConnect任务的目标端类型。 **约束限制**： 不涉及。 **取值范围**： - OBS_SINK：转储。 - NONE：不配置。 **默认取值**： 不涉及。
     * sinkTask  sinkTask
     *
     * @var string[]
@@ -48,9 +48,9 @@ class CreateSmartConnectTaskReq implements ModelInterface, ArrayAccess
     * startLater  是否稍后再启动任务。如需要创建任务后立即启动，请填false；如希望稍后在任务列表中手动开启任务，请填true。
     * topics  SmartConnect任务配置的Topic。
     * topicsRegex  SmartConnect任务配置的Topic正则表达式。
-    * sourceType  SmartConnect任务的源端类型。
+    * sourceType  **参数解释**： SmartConnect任务的源端类型。 **约束限制**： 不涉及。 **取值范围**： - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。 - NONE：不配置。 **默认取值**： 不涉及。
     * sourceTask  sourceTask
-    * sinkType  SmartConnect任务的目标端类型。
+    * sinkType  **参数解释**： SmartConnect任务的目标端类型。 **约束限制**： 不涉及。 **取值范围**： - OBS_SINK：转储。 - NONE：不配置。 **默认取值**： 不涉及。
     * sinkTask  sinkTask
     *
     * @var string[]
@@ -93,9 +93,9 @@ class CreateSmartConnectTaskReq implements ModelInterface, ArrayAccess
     * startLater  是否稍后再启动任务。如需要创建任务后立即启动，请填false；如希望稍后在任务列表中手动开启任务，请填true。
     * topics  SmartConnect任务配置的Topic。
     * topicsRegex  SmartConnect任务配置的Topic正则表达式。
-    * sourceType  SmartConnect任务的源端类型。
+    * sourceType  **参数解释**： SmartConnect任务的源端类型。 **约束限制**： 不涉及。 **取值范围**： - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。 - NONE：不配置。 **默认取值**： 不涉及。
     * sourceTask  sourceTask
-    * sinkType  SmartConnect任务的目标端类型。
+    * sinkType  **参数解释**： SmartConnect任务的目标端类型。 **约束限制**： 不涉及。 **取值范围**： - OBS_SINK：转储。 - NONE：不配置。 **默认取值**： 不涉及。
     * sinkTask  sinkTask
     *
     * @var string[]
@@ -117,9 +117,9 @@ class CreateSmartConnectTaskReq implements ModelInterface, ArrayAccess
     * startLater  是否稍后再启动任务。如需要创建任务后立即启动，请填false；如希望稍后在任务列表中手动开启任务，请填true。
     * topics  SmartConnect任务配置的Topic。
     * topicsRegex  SmartConnect任务配置的Topic正则表达式。
-    * sourceType  SmartConnect任务的源端类型。
+    * sourceType  **参数解释**： SmartConnect任务的源端类型。 **约束限制**： 不涉及。 **取值范围**： - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。 - NONE：不配置。 **默认取值**： 不涉及。
     * sourceTask  sourceTask
-    * sinkType  SmartConnect任务的目标端类型。
+    * sinkType  **参数解释**： SmartConnect任务的目标端类型。 **约束限制**： 不涉及。 **取值范围**： - OBS_SINK：转储。 - NONE：不配置。 **默认取值**： 不涉及。
     * sinkTask  sinkTask
     *
     * @var string[]
@@ -141,9 +141,9 @@ class CreateSmartConnectTaskReq implements ModelInterface, ArrayAccess
     * startLater  是否稍后再启动任务。如需要创建任务后立即启动，请填false；如希望稍后在任务列表中手动开启任务，请填true。
     * topics  SmartConnect任务配置的Topic。
     * topicsRegex  SmartConnect任务配置的Topic正则表达式。
-    * sourceType  SmartConnect任务的源端类型。
+    * sourceType  **参数解释**： SmartConnect任务的源端类型。 **约束限制**： 不涉及。 **取值范围**： - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。 - NONE：不配置。 **默认取值**： 不涉及。
     * sourceTask  sourceTask
-    * sinkType  SmartConnect任务的目标端类型。
+    * sinkType  **参数解释**： SmartConnect任务的目标端类型。 **约束限制**： 不涉及。 **取值范围**： - OBS_SINK：转储。 - NONE：不配置。 **默认取值**： 不涉及。
     * sinkTask  sinkTask
     *
     * @var string[]
@@ -393,7 +393,7 @@ class CreateSmartConnectTaskReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceType
-    *  SmartConnect任务的源端类型。
+    *  **参数解释**： SmartConnect任务的源端类型。 **约束限制**： 不涉及。 **取值范围**： - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。 - NONE：不配置。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -405,7 +405,7 @@ class CreateSmartConnectTaskReq implements ModelInterface, ArrayAccess
     /**
     * Sets sourceType
     *
-    * @param string|null $sourceType SmartConnect任务的源端类型。
+    * @param string|null $sourceType **参数解释**： SmartConnect任务的源端类型。 **约束限制**： 不涉及。 **取值范围**： - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。 - NONE：不配置。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -441,7 +441,7 @@ class CreateSmartConnectTaskReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets sinkType
-    *  SmartConnect任务的目标端类型。
+    *  **参数解释**： SmartConnect任务的目标端类型。 **约束限制**： 不涉及。 **取值范围**： - OBS_SINK：转储。 - NONE：不配置。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -453,7 +453,7 @@ class CreateSmartConnectTaskReq implements ModelInterface, ArrayAccess
     /**
     * Sets sinkType
     *
-    * @param string|null $sinkType SmartConnect任务的目标端类型。
+    * @param string|null $sinkType **参数解释**： SmartConnect任务的目标端类型。 **约束限制**： 不涉及。 **取值范围**： - OBS_SINK：转储。 - NONE：不配置。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -169,10 +169,13 @@ class UpdateLtsConfigRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 128)) {
+        if ($this->container['enterpriseProjectId'] === null) {
+            $invalidProperties[] = "'enterpriseProjectId' can't be null";
+        }
+            if ((mb_strlen($this->container['enterpriseProjectId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 128.";
             }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
+            if ((mb_strlen($this->container['enterpriseProjectId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
@@ -193,7 +196,7 @@ class UpdateLtsConfigRequest implements ModelInterface, ArrayAccess
     * Gets enterpriseProjectId
     *  企业项目id
     *
-    * @return string|null
+    * @return string
     */
     public function getEnterpriseProjectId()
     {
@@ -203,7 +206,7 @@ class UpdateLtsConfigRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目id
+    * @param string $enterpriseProjectId 企业项目id
     *
     * @return $this
     */

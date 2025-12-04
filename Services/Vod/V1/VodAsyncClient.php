@@ -2339,6 +2339,86 @@ class VodAsyncClient extends Client
     }
 
     /**
+     * 查询CDN统计信息
+     *
+     * 查询CDN的统计数据，包括流量、峰值带宽、请求总数、请求命中率、流量命中率。查询存在1小时误差。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCdnStatisticsAsync($request)
+    {
+        return $this->listCdnStatisticsAsyncWithHttpInfo($request);
+    }
+    
+    public function listCdnStatisticsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/asset/cdn-statistics';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['statType'] !== null) {
+            $queryParams['stat_type'] = $localVarParams['statType'];
+        }
+        if ($localVarParams['domain'] !== null) {
+            $queryParams['domain'] = $localVarParams['domain'];
+        }
+        if ($localVarParams['interval'] !== null) {
+            $queryParams['interval'] = $localVarParams['interval'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ListCdnStatisticsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ListCdnStatisticsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询域名播放日志
      *
      * 查询指定点播域名某段时间内在CDN的相关日志。

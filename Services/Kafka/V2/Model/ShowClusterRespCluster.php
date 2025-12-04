@@ -20,14 +20,14 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * controller  控制器ID。
-    * brokers  节点列表。
-    * topicsCount  主题数量。
-    * partitionsCount  分区数量。
-    * onlinePartitionsCount  在线分区数量。
-    * replicasCount  副本数量。
-    * isrReplicasCount  ISR（In-Sync Replicas） 副本总数。
-    * consumersCount  消费组数量。
+    * controller  **参数解释**： 控制器ID。 **取值范围**： 不涉及。
+    * brokers  **参数解释**： 节点列表。
+    * topicsCount  **参数解释**： 主题数量。 **取值范围**： 不涉及。
+    * partitionsCount  **参数解释**： 分区数量。 **取值范围**： 不涉及。
+    * onlinePartitionsCount  **参数解释**： 在线分区数量。 **取值范围**： 不涉及。
+    * replicasCount  **参数解释**： 副本数量。 **取值范围**： 不涉及。
+    * isrReplicasCount  **参数解释**： ISR（In-Sync Replicas） 副本总数。 **取值范围**： 不涉及。
+    * consumersCount  **参数解释**： 消费组数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * controller  控制器ID。
-    * brokers  节点列表。
-    * topicsCount  主题数量。
-    * partitionsCount  分区数量。
-    * onlinePartitionsCount  在线分区数量。
-    * replicasCount  副本数量。
-    * isrReplicasCount  ISR（In-Sync Replicas） 副本总数。
-    * consumersCount  消费组数量。
+    * controller  **参数解释**： 控制器ID。 **取值范围**： 不涉及。
+    * brokers  **参数解释**： 节点列表。
+    * topicsCount  **参数解释**： 主题数量。 **取值范围**： 不涉及。
+    * partitionsCount  **参数解释**： 分区数量。 **取值范围**： 不涉及。
+    * onlinePartitionsCount  **参数解释**： 在线分区数量。 **取值范围**： 不涉及。
+    * replicasCount  **参数解释**： 副本数量。 **取值范围**： 不涉及。
+    * isrReplicasCount  **参数解释**： ISR（In-Sync Replicas） 副本总数。 **取值范围**： 不涉及。
+    * consumersCount  **参数解释**： 消费组数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * controller  控制器ID。
-    * brokers  节点列表。
-    * topicsCount  主题数量。
-    * partitionsCount  分区数量。
-    * onlinePartitionsCount  在线分区数量。
-    * replicasCount  副本数量。
-    * isrReplicasCount  ISR（In-Sync Replicas） 副本总数。
-    * consumersCount  消费组数量。
+    * controller  **参数解释**： 控制器ID。 **取值范围**： 不涉及。
+    * brokers  **参数解释**： 节点列表。
+    * topicsCount  **参数解释**： 主题数量。 **取值范围**： 不涉及。
+    * partitionsCount  **参数解释**： 分区数量。 **取值范围**： 不涉及。
+    * onlinePartitionsCount  **参数解释**： 在线分区数量。 **取值范围**： 不涉及。
+    * replicasCount  **参数解释**： 副本数量。 **取值范围**： 不涉及。
+    * isrReplicasCount  **参数解释**： ISR（In-Sync Replicas） 副本总数。 **取值范围**： 不涉及。
+    * consumersCount  **参数解释**： 消费组数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * controller  控制器ID。
-    * brokers  节点列表。
-    * topicsCount  主题数量。
-    * partitionsCount  分区数量。
-    * onlinePartitionsCount  在线分区数量。
-    * replicasCount  副本数量。
-    * isrReplicasCount  ISR（In-Sync Replicas） 副本总数。
-    * consumersCount  消费组数量。
+    * controller  **参数解释**： 控制器ID。 **取值范围**： 不涉及。
+    * brokers  **参数解释**： 节点列表。
+    * topicsCount  **参数解释**： 主题数量。 **取值范围**： 不涉及。
+    * partitionsCount  **参数解释**： 分区数量。 **取值范围**： 不涉及。
+    * onlinePartitionsCount  **参数解释**： 在线分区数量。 **取值范围**： 不涉及。
+    * replicasCount  **参数解释**： 副本数量。 **取值范围**： 不涉及。
+    * isrReplicasCount  **参数解释**： ISR（In-Sync Replicas） 副本总数。 **取值范围**： 不涉及。
+    * consumersCount  **参数解释**： 消费组数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * controller  控制器ID。
-    * brokers  节点列表。
-    * topicsCount  主题数量。
-    * partitionsCount  分区数量。
-    * onlinePartitionsCount  在线分区数量。
-    * replicasCount  副本数量。
-    * isrReplicasCount  ISR（In-Sync Replicas） 副本总数。
-    * consumersCount  消费组数量。
+    * controller  **参数解释**： 控制器ID。 **取值范围**： 不涉及。
+    * brokers  **参数解释**： 节点列表。
+    * topicsCount  **参数解释**： 主题数量。 **取值范围**： 不涉及。
+    * partitionsCount  **参数解释**： 分区数量。 **取值范围**： 不涉及。
+    * onlinePartitionsCount  **参数解释**： 在线分区数量。 **取值范围**： 不涉及。
+    * replicasCount  **参数解释**： 副本数量。 **取值范围**： 不涉及。
+    * isrReplicasCount  **参数解释**： ISR（In-Sync Replicas） 副本总数。 **取值范围**： 不涉及。
+    * consumersCount  **参数解释**： 消费组数量。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -251,7 +251,7 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets controller
-    *  控制器ID。
+    *  **参数解释**： 控制器ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -263,7 +263,7 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
     /**
     * Sets controller
     *
-    * @param string|null $controller 控制器ID。
+    * @param string|null $controller **参数解释**： 控制器ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -275,7 +275,7 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokers
-    *  节点列表。
+    *  **参数解释**： 节点列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ShowClusterRespClusterBrokers[]|null
     */
@@ -287,7 +287,7 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
     /**
     * Sets brokers
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowClusterRespClusterBrokers[]|null $brokers 节点列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowClusterRespClusterBrokers[]|null $brokers **参数解释**： 节点列表。
     *
     * @return $this
     */
@@ -299,7 +299,7 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicsCount
-    *  主题数量。
+    *  **参数解释**： 主题数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -311,7 +311,7 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
     /**
     * Sets topicsCount
     *
-    * @param int|null $topicsCount 主题数量。
+    * @param int|null $topicsCount **参数解释**： 主题数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets partitionsCount
-    *  分区数量。
+    *  **参数解释**： 分区数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -335,7 +335,7 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
     /**
     * Sets partitionsCount
     *
-    * @param int|null $partitionsCount 分区数量。
+    * @param int|null $partitionsCount **参数解释**： 分区数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets onlinePartitionsCount
-    *  在线分区数量。
+    *  **参数解释**： 在线分区数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -359,7 +359,7 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
     /**
     * Sets onlinePartitionsCount
     *
-    * @param int|null $onlinePartitionsCount 在线分区数量。
+    * @param int|null $onlinePartitionsCount **参数解释**： 在线分区数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets replicasCount
-    *  副本数量。
+    *  **参数解释**： 副本数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -383,7 +383,7 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
     /**
     * Sets replicasCount
     *
-    * @param int|null $replicasCount 副本数量。
+    * @param int|null $replicasCount **参数解释**： 副本数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -395,7 +395,7 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets isrReplicasCount
-    *  ISR（In-Sync Replicas） 副本总数。
+    *  **参数解释**： ISR（In-Sync Replicas） 副本总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -407,7 +407,7 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
     /**
     * Sets isrReplicasCount
     *
-    * @param int|null $isrReplicasCount ISR（In-Sync Replicas） 副本总数。
+    * @param int|null $isrReplicasCount **参数解释**： ISR（In-Sync Replicas） 副本总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumersCount
-    *  消费组数量。
+    *  **参数解释**： 消费组数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -431,7 +431,7 @@ class ShowClusterRespCluster implements ModelInterface, ArrayAccess
     /**
     * Sets consumersCount
     *
-    * @param int|null $consumersCount 消费组数量。
+    * @param int|null $consumersCount **参数解释**： 消费组数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -21,21 +21,33 @@ class NamespaceMetadata implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * public  是否公开，可选true、false
+    * autoScan  上传制品时，是否自动触发制品扫描，可选true、false
+    * preventVul  是否开启制品阻断，可选true、false
+    * severity  阻断开启的场景下，如果存在漏洞，并且存在的漏洞严重程度高于此处定义的级别，则无法拉取镜像。可选值为\"none\", \"low\", \"medium\", \"high\", \"critical\"。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'public' => 'string'
+            'public' => 'string',
+            'autoScan' => 'string',
+            'preventVul' => 'string',
+            'severity' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * public  是否公开，可选true、false
+    * autoScan  上传制品时，是否自动触发制品扫描，可选true、false
+    * preventVul  是否开启制品阻断，可选true、false
+    * severity  阻断开启的场景下，如果存在漏洞，并且存在的漏洞严重程度高于此处定义的级别，则无法拉取镜像。可选值为\"none\", \"low\", \"medium\", \"high\", \"critical\"。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'public' => null
+        'public' => null,
+        'autoScan' => null,
+        'preventVul' => null,
+        'severity' => null
     ];
 
     /**
@@ -62,31 +74,49 @@ class NamespaceMetadata implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * public  是否公开，可选true、false
+    * autoScan  上传制品时，是否自动触发制品扫描，可选true、false
+    * preventVul  是否开启制品阻断，可选true、false
+    * severity  阻断开启的场景下，如果存在漏洞，并且存在的漏洞严重程度高于此处定义的级别，则无法拉取镜像。可选值为\"none\", \"low\", \"medium\", \"high\", \"critical\"。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'public' => 'public'
+            'public' => 'public',
+            'autoScan' => 'auto_scan',
+            'preventVul' => 'prevent_vul',
+            'severity' => 'severity'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * public  是否公开，可选true、false
+    * autoScan  上传制品时，是否自动触发制品扫描，可选true、false
+    * preventVul  是否开启制品阻断，可选true、false
+    * severity  阻断开启的场景下，如果存在漏洞，并且存在的漏洞严重程度高于此处定义的级别，则无法拉取镜像。可选值为\"none\", \"low\", \"medium\", \"high\", \"critical\"。
     *
     * @var string[]
     */
     protected static $setters = [
-            'public' => 'setPublic'
+            'public' => 'setPublic',
+            'autoScan' => 'setAutoScan',
+            'preventVul' => 'setPreventVul',
+            'severity' => 'setSeverity'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * public  是否公开，可选true、false
+    * autoScan  上传制品时，是否自动触发制品扫描，可选true、false
+    * preventVul  是否开启制品阻断，可选true、false
+    * severity  阻断开启的场景下，如果存在漏洞，并且存在的漏洞严重程度高于此处定义的级别，则无法拉取镜像。可选值为\"none\", \"low\", \"medium\", \"high\", \"critical\"。
     *
     * @var string[]
     */
     protected static $getters = [
-            'public' => 'getPublic'
+            'public' => 'getPublic',
+            'autoScan' => 'getAutoScan',
+            'preventVul' => 'getPreventVul',
+            'severity' => 'getSeverity'
     ];
 
     /**
@@ -131,6 +161,15 @@ class NamespaceMetadata implements ModelInterface, ArrayAccess
     }
     const MODEL_PUBLIC_TRUE = 'true';
     const MODEL_PUBLIC_FALSE = 'false';
+    const AUTO_SCAN_TRUE = 'true';
+    const AUTO_SCAN_FALSE = 'false';
+    const PREVENT_VUL_TRUE = 'true';
+    const PREVENT_VUL_FALSE = 'false';
+    const SEVERITY_NONE = 'none';
+    const SEVERITY_LOW = 'low';
+    const SEVERITY_MEDIUM = 'medium';
+    const SEVERITY_HIGH = 'high';
+    const SEVERITY_CRITICAL = 'critical';
     
 
     /**
@@ -143,6 +182,48 @@ class NamespaceMetadata implements ModelInterface, ArrayAccess
         return [
             self::MODEL_PUBLIC_TRUE,
             self::MODEL_PUBLIC_FALSE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAutoScanAllowableValues()
+    {
+        return [
+            self::AUTO_SCAN_TRUE,
+            self::AUTO_SCAN_FALSE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPreventVulAllowableValues()
+    {
+        return [
+            self::PREVENT_VUL_TRUE,
+            self::PREVENT_VUL_FALSE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSeverityAllowableValues()
+    {
+        return [
+            self::SEVERITY_NONE,
+            self::SEVERITY_LOW,
+            self::SEVERITY_MEDIUM,
+            self::SEVERITY_HIGH,
+            self::SEVERITY_CRITICAL,
         ];
     }
 
@@ -163,6 +244,9 @@ class NamespaceMetadata implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['public'] = isset($data['public']) ? $data['public'] : null;
+        $this->container['autoScan'] = isset($data['autoScan']) ? $data['autoScan'] : null;
+        $this->container['preventVul'] = isset($data['preventVul']) ? $data['preventVul'] : null;
+        $this->container['severity'] = isset($data['severity']) ? $data['severity'] : null;
     }
 
     /**
@@ -180,6 +264,30 @@ class NamespaceMetadata implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['public']) && !in_array($this->container['public'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'public', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getAutoScanAllowableValues();
+                if (!is_null($this->container['autoScan']) && !in_array($this->container['autoScan'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'autoScan', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getPreventVulAllowableValues();
+                if (!is_null($this->container['preventVul']) && !in_array($this->container['preventVul'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'preventVul', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getSeverityAllowableValues();
+                if (!is_null($this->container['severity']) && !in_array($this->container['severity'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'severity', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -219,6 +327,78 @@ class NamespaceMetadata implements ModelInterface, ArrayAccess
     public function setPublic($public)
     {
         $this->container['public'] = $public;
+        return $this;
+    }
+
+    /**
+    * Gets autoScan
+    *  上传制品时，是否自动触发制品扫描，可选true、false
+    *
+    * @return string|null
+    */
+    public function getAutoScan()
+    {
+        return $this->container['autoScan'];
+    }
+
+    /**
+    * Sets autoScan
+    *
+    * @param string|null $autoScan 上传制品时，是否自动触发制品扫描，可选true、false
+    *
+    * @return $this
+    */
+    public function setAutoScan($autoScan)
+    {
+        $this->container['autoScan'] = $autoScan;
+        return $this;
+    }
+
+    /**
+    * Gets preventVul
+    *  是否开启制品阻断，可选true、false
+    *
+    * @return string|null
+    */
+    public function getPreventVul()
+    {
+        return $this->container['preventVul'];
+    }
+
+    /**
+    * Sets preventVul
+    *
+    * @param string|null $preventVul 是否开启制品阻断，可选true、false
+    *
+    * @return $this
+    */
+    public function setPreventVul($preventVul)
+    {
+        $this->container['preventVul'] = $preventVul;
+        return $this;
+    }
+
+    /**
+    * Gets severity
+    *  阻断开启的场景下，如果存在漏洞，并且存在的漏洞严重程度高于此处定义的级别，则无法拉取镜像。可选值为\"none\", \"low\", \"medium\", \"high\", \"critical\"。
+    *
+    * @return string|null
+    */
+    public function getSeverity()
+    {
+        return $this->container['severity'];
+    }
+
+    /**
+    * Sets severity
+    *
+    * @param string|null $severity 阻断开启的场景下，如果存在漏洞，并且存在的漏洞严重程度高于此处定义的级别，则无法拉取镜像。可选值为\"none\", \"low\", \"medium\", \"high\", \"critical\"。
+    *
+    * @return $this
+    */
+    public function setSeverity($severity)
+    {
+        $this->container['severity'] = $severity;
         return $this;
     }
 

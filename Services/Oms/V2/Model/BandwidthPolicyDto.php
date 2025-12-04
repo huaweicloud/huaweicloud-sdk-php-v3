@@ -20,9 +20,9 @@ class BandwidthPolicyDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * end  流量控制结束时间（包含），格式为“hh:mm”。例如“12:03”表示12时03分。
+    * end  流量控制结束时间，格式为“hh:mm”。例如“12:03”表示12时03分。
     * maxBandwidth  时段内允许的最大流量带宽，单位Byte/s，取值范围为>= 1048576Byte/s（相当于1MB/s）且<=209715200Byte/s（相当于200MB/s）。
-    * start  流量控制开始时间（包含），格式为“hh:mm”。例如“12:03”表示12时03分。
+    * start  流量控制开始时间，格式为“hh:mm”。例如“12:03”表示12时03分。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class BandwidthPolicyDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * end  流量控制结束时间（包含），格式为“hh:mm”。例如“12:03”表示12时03分。
+    * end  流量控制结束时间，格式为“hh:mm”。例如“12:03”表示12时03分。
     * maxBandwidth  时段内允许的最大流量带宽，单位Byte/s，取值范围为>= 1048576Byte/s（相当于1MB/s）且<=209715200Byte/s（相当于200MB/s）。
-    * start  流量控制开始时间（包含），格式为“hh:mm”。例如“12:03”表示12时03分。
+    * start  流量控制开始时间，格式为“hh:mm”。例如“12:03”表示12时03分。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class BandwidthPolicyDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * end  流量控制结束时间（包含），格式为“hh:mm”。例如“12:03”表示12时03分。
+    * end  流量控制结束时间，格式为“hh:mm”。例如“12:03”表示12时03分。
     * maxBandwidth  时段内允许的最大流量带宽，单位Byte/s，取值范围为>= 1048576Byte/s（相当于1MB/s）且<=209715200Byte/s（相当于200MB/s）。
-    * start  流量控制开始时间（包含），格式为“hh:mm”。例如“12:03”表示12时03分。
+    * start  流量控制开始时间，格式为“hh:mm”。例如“12:03”表示12时03分。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class BandwidthPolicyDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * end  流量控制结束时间（包含），格式为“hh:mm”。例如“12:03”表示12时03分。
+    * end  流量控制结束时间，格式为“hh:mm”。例如“12:03”表示12时03分。
     * maxBandwidth  时段内允许的最大流量带宽，单位Byte/s，取值范围为>= 1048576Byte/s（相当于1MB/s）且<=209715200Byte/s（相当于200MB/s）。
-    * start  流量控制开始时间（包含），格式为“hh:mm”。例如“12:03”表示12时03分。
+    * start  流量控制开始时间，格式为“hh:mm”。例如“12:03”表示12时03分。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class BandwidthPolicyDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * end  流量控制结束时间（包含），格式为“hh:mm”。例如“12:03”表示12时03分。
+    * end  流量控制结束时间，格式为“hh:mm”。例如“12:03”表示12时03分。
     * maxBandwidth  时段内允许的最大流量带宽，单位Byte/s，取值范围为>= 1048576Byte/s（相当于1MB/s）且<=209715200Byte/s（相当于200MB/s）。
-    * start  流量控制开始时间（包含），格式为“hh:mm”。例如“12:03”表示12时03分。
+    * start  流量控制开始时间，格式为“hh:mm”。例如“12:03”表示12时03分。
     *
     * @var string[]
     */
@@ -217,7 +217,7 @@ class BandwidthPolicyDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets end
-    *  流量控制结束时间（包含），格式为“hh:mm”。例如“12:03”表示12时03分。
+    *  流量控制结束时间，格式为“hh:mm”。例如“12:03”表示12时03分。
     *
     * @return string
     */
@@ -229,7 +229,7 @@ class BandwidthPolicyDto implements ModelInterface, ArrayAccess
     /**
     * Sets end
     *
-    * @param string $end 流量控制结束时间（包含），格式为“hh:mm”。例如“12:03”表示12时03分。
+    * @param string $end 流量控制结束时间，格式为“hh:mm”。例如“12:03”表示12时03分。
     *
     * @return $this
     */
@@ -265,7 +265,7 @@ class BandwidthPolicyDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets start
-    *  流量控制开始时间（包含），格式为“hh:mm”。例如“12:03”表示12时03分。
+    *  流量控制开始时间，格式为“hh:mm”。例如“12:03”表示12时03分。
     *
     * @return string
     */
@@ -277,7 +277,7 @@ class BandwidthPolicyDto implements ModelInterface, ArrayAccess
     /**
     * Sets start
     *
-    * @param string $start 流量控制开始时间（包含），格式为“hh:mm”。例如“12:03”表示12时03分。
+    * @param string $start 流量控制开始时间，格式为“hh:mm”。例如“12:03”表示12时03分。
     *
     * @return $this
     */

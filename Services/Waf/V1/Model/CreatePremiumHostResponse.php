@@ -23,7 +23,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  域名id
     * hostname  防护域名
-    * protocol  对外协议，客户端（例如浏览器）请求访问网站的协议类型
+    * protocol  **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同事  **默认取值：** 不涉及
     * server  防护域名的源站服务器配置信息
     * proxy  是否使用代理   - true：代表使用代理   - false：代表未使用代理
     * locked  域名冻结状态，0表示未冻结，1表示为冻结，冗余参数
@@ -41,8 +41,8 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * domainid  账号ID,对应华为云控制台用户名->我的凭证->账号ID
     * projectid  项目ID，对应华为云控制台用户名->我的凭证->项目列表->项目ID
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
-    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-    * accessStatus  域名接入状态，0表示未接入，1表示已接入
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * blockPage  blockPage
     * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
@@ -79,7 +79,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  域名id
     * hostname  防护域名
-    * protocol  对外协议，客户端（例如浏览器）请求访问网站的协议类型
+    * protocol  **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同事  **默认取值：** 不涉及
     * server  防护域名的源站服务器配置信息
     * proxy  是否使用代理   - true：代表使用代理   - false：代表未使用代理
     * locked  域名冻结状态，0表示未冻结，1表示为冻结，冗余参数
@@ -97,8 +97,8 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * domainid  账号ID,对应华为云控制台用户名->我的凭证->账号ID
     * projectid  项目ID，对应华为云控制台用户名->我的凭证->项目列表->项目ID
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
-    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-    * accessStatus  域名接入状态，0表示未接入，1表示已接入
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * blockPage  blockPage
     * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
@@ -156,7 +156,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  域名id
     * hostname  防护域名
-    * protocol  对外协议，客户端（例如浏览器）请求访问网站的协议类型
+    * protocol  **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同事  **默认取值：** 不涉及
     * server  防护域名的源站服务器配置信息
     * proxy  是否使用代理   - true：代表使用代理   - false：代表未使用代理
     * locked  域名冻结状态，0表示未冻结，1表示为冻结，冗余参数
@@ -174,8 +174,8 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * domainid  账号ID,对应华为云控制台用户名->我的凭证->账号ID
     * projectid  项目ID，对应华为云控制台用户名->我的凭证->项目列表->项目ID
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
-    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-    * accessStatus  域名接入状态，0表示未接入，1表示已接入
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * blockPage  blockPage
     * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
@@ -212,7 +212,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  域名id
     * hostname  防护域名
-    * protocol  对外协议，客户端（例如浏览器）请求访问网站的协议类型
+    * protocol  **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同事  **默认取值：** 不涉及
     * server  防护域名的源站服务器配置信息
     * proxy  是否使用代理   - true：代表使用代理   - false：代表未使用代理
     * locked  域名冻结状态，0表示未冻结，1表示为冻结，冗余参数
@@ -230,8 +230,8 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * domainid  账号ID,对应华为云控制台用户名->我的凭证->账号ID
     * projectid  项目ID，对应华为云控制台用户名->我的凭证->项目列表->项目ID
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
-    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-    * accessStatus  域名接入状态，0表示未接入，1表示已接入
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * blockPage  blockPage
     * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
@@ -268,7 +268,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  域名id
     * hostname  防护域名
-    * protocol  对外协议，客户端（例如浏览器）请求访问网站的协议类型
+    * protocol  **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同事  **默认取值：** 不涉及
     * server  防护域名的源站服务器配置信息
     * proxy  是否使用代理   - true：代表使用代理   - false：代表未使用代理
     * locked  域名冻结状态，0表示未冻结，1表示为冻结，冗余参数
@@ -286,8 +286,8 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * domainid  账号ID,对应华为云控制台用户名->我的凭证->账号ID
     * projectid  项目ID，对应华为云控制台用户名->我的凭证->项目列表->项目ID
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
-    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-    * accessStatus  域名接入状态，0表示未接入，1表示已接入
+    * protectStatus  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     * blockPage  blockPage
     * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
     *
@@ -559,7 +559,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  对外协议，客户端（例如浏览器）请求访问网站的协议类型
+    *  **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同事  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -571,7 +571,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string|null $protocol 对外协议，客户端（例如浏览器）请求访问网站的协议类型
+    * @param string|null $protocol **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同事  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -991,7 +991,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    *  **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -1003,7 +1003,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param int|null $protectStatus 域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * @param int|null $protectStatus **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -1015,7 +1015,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessStatus
-    *  域名接入状态，0表示未接入，1表示已接入
+    *  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -1027,7 +1027,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets accessStatus
     *
-    * @param int|null $accessStatus 域名接入状态，0表示未接入，1表示已接入
+    * @param int|null $accessStatus **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
     *
     * @return $this
     */

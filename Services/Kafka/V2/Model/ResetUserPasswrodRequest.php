@@ -29,7 +29,7 @@ class ResetUserPasswrodRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'instanceId' => 'string',
             'userName' => 'string',
-            'body' => '\HuaweiCloud\SDK\Kafka\V2\Model\ResetUserPasswrodReq'
+            'body' => '\HuaweiCloud\SDK\Kafka\V2\Model\ResetUserPasswordReq'
     ];
 
     /**
@@ -252,7 +252,7 @@ class ResetUserPasswrodRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Kafka\V2\Model\ResetUserPasswrodReq|null
+    * @return \HuaweiCloud\SDK\Kafka\V2\Model\ResetUserPasswordReq|null
     */
     public function getBody()
     {
@@ -262,7 +262,7 @@ class ResetUserPasswrodRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ResetUserPasswrodReq|null $body body
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ResetUserPasswordReq|null $body body
     *
     * @return $this
     */

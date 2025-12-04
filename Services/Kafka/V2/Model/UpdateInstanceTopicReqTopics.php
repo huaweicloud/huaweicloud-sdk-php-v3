@@ -20,14 +20,14 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  Topic名称，不支持修改。
-    * retentionTime  老化时间，单位小时。
-    * syncReplication  是否同步复制。
-    * syncMessageFlush  是否同步落盘。
-    * newPartitionNumbers  分区数。
-    * newPartitionBrokers  增加分区时指定broker列表
-    * topicOtherConfigs  Topic配置
-    * topicDesc  Topic描述
+    * id  **参数解释**： Topic名称，不支持修改。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * retentionTime  **参数解释**： 老化时间，单位小时。 **约束限制**： 不涉及。 **取值范围**： 0-720。 **默认取值**： 不涉及。
+    * syncReplication  **参数解释**： 是否同步复制。 **约束限制**： 不涉及。 **取值范围**： - true：开启同步复制。 - false：不开启同步复制。 **默认取值**： 不涉及。
+    * syncMessageFlush  **参数解释**： 是否同步落盘。 **约束限制**： 不涉及。 **取值范围**： - true：开启同步落盘。 - false：不开启同步落盘。 **默认取值**： 不涉及。
+    * newPartitionNumbers  **参数解释**： 分区数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * newPartitionBrokers  **参数解释**： 增加分区时指定broker列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topicOtherConfigs  **参数解释**： Topic配置。 **约束限制**： 不涉及。
+    * topicDesc  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  Topic名称，不支持修改。
-    * retentionTime  老化时间，单位小时。
-    * syncReplication  是否同步复制。
-    * syncMessageFlush  是否同步落盘。
-    * newPartitionNumbers  分区数。
-    * newPartitionBrokers  增加分区时指定broker列表
-    * topicOtherConfigs  Topic配置
-    * topicDesc  Topic描述
+    * id  **参数解释**： Topic名称，不支持修改。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * retentionTime  **参数解释**： 老化时间，单位小时。 **约束限制**： 不涉及。 **取值范围**： 0-720。 **默认取值**： 不涉及。
+    * syncReplication  **参数解释**： 是否同步复制。 **约束限制**： 不涉及。 **取值范围**： - true：开启同步复制。 - false：不开启同步复制。 **默认取值**： 不涉及。
+    * syncMessageFlush  **参数解释**： 是否同步落盘。 **约束限制**： 不涉及。 **取值范围**： - true：开启同步落盘。 - false：不开启同步落盘。 **默认取值**： 不涉及。
+    * newPartitionNumbers  **参数解释**： 分区数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * newPartitionBrokers  **参数解释**： 增加分区时指定broker列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topicOtherConfigs  **参数解释**： Topic配置。 **约束限制**： 不涉及。
+    * topicDesc  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  Topic名称，不支持修改。
-    * retentionTime  老化时间，单位小时。
-    * syncReplication  是否同步复制。
-    * syncMessageFlush  是否同步落盘。
-    * newPartitionNumbers  分区数。
-    * newPartitionBrokers  增加分区时指定broker列表
-    * topicOtherConfigs  Topic配置
-    * topicDesc  Topic描述
+    * id  **参数解释**： Topic名称，不支持修改。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * retentionTime  **参数解释**： 老化时间，单位小时。 **约束限制**： 不涉及。 **取值范围**： 0-720。 **默认取值**： 不涉及。
+    * syncReplication  **参数解释**： 是否同步复制。 **约束限制**： 不涉及。 **取值范围**： - true：开启同步复制。 - false：不开启同步复制。 **默认取值**： 不涉及。
+    * syncMessageFlush  **参数解释**： 是否同步落盘。 **约束限制**： 不涉及。 **取值范围**： - true：开启同步落盘。 - false：不开启同步落盘。 **默认取值**： 不涉及。
+    * newPartitionNumbers  **参数解释**： 分区数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * newPartitionBrokers  **参数解释**： 增加分区时指定broker列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topicOtherConfigs  **参数解释**： Topic配置。 **约束限制**： 不涉及。
+    * topicDesc  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  Topic名称，不支持修改。
-    * retentionTime  老化时间，单位小时。
-    * syncReplication  是否同步复制。
-    * syncMessageFlush  是否同步落盘。
-    * newPartitionNumbers  分区数。
-    * newPartitionBrokers  增加分区时指定broker列表
-    * topicOtherConfigs  Topic配置
-    * topicDesc  Topic描述
+    * id  **参数解释**： Topic名称，不支持修改。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * retentionTime  **参数解释**： 老化时间，单位小时。 **约束限制**： 不涉及。 **取值范围**： 0-720。 **默认取值**： 不涉及。
+    * syncReplication  **参数解释**： 是否同步复制。 **约束限制**： 不涉及。 **取值范围**： - true：开启同步复制。 - false：不开启同步复制。 **默认取值**： 不涉及。
+    * syncMessageFlush  **参数解释**： 是否同步落盘。 **约束限制**： 不涉及。 **取值范围**： - true：开启同步落盘。 - false：不开启同步落盘。 **默认取值**： 不涉及。
+    * newPartitionNumbers  **参数解释**： 分区数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * newPartitionBrokers  **参数解释**： 增加分区时指定broker列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topicOtherConfigs  **参数解释**： Topic配置。 **约束限制**： 不涉及。
+    * topicDesc  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  Topic名称，不支持修改。
-    * retentionTime  老化时间，单位小时。
-    * syncReplication  是否同步复制。
-    * syncMessageFlush  是否同步落盘。
-    * newPartitionNumbers  分区数。
-    * newPartitionBrokers  增加分区时指定broker列表
-    * topicOtherConfigs  Topic配置
-    * topicDesc  Topic描述
+    * id  **参数解释**： Topic名称，不支持修改。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * retentionTime  **参数解释**： 老化时间，单位小时。 **约束限制**： 不涉及。 **取值范围**： 0-720。 **默认取值**： 不涉及。
+    * syncReplication  **参数解释**： 是否同步复制。 **约束限制**： 不涉及。 **取值范围**： - true：开启同步复制。 - false：不开启同步复制。 **默认取值**： 不涉及。
+    * syncMessageFlush  **参数解释**： 是否同步落盘。 **约束限制**： 不涉及。 **取值范围**： - true：开启同步落盘。 - false：不开启同步落盘。 **默认取值**： 不涉及。
+    * newPartitionNumbers  **参数解释**： 分区数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * newPartitionBrokers  **参数解释**： 增加分区时指定broker列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topicOtherConfigs  **参数解释**： Topic配置。 **约束限制**： 不涉及。
+    * topicDesc  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -254,7 +254,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  Topic名称，不支持修改。
+    *  **参数解释**： Topic名称，不支持修改。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -266,7 +266,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id Topic名称，不支持修改。
+    * @param string $id **参数解释**： Topic名称，不支持修改。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -278,7 +278,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
 
     /**
     * Gets retentionTime
-    *  老化时间，单位小时。
+    *  **参数解释**： 老化时间，单位小时。 **约束限制**： 不涉及。 **取值范围**： 0-720。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -290,7 +290,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     /**
     * Sets retentionTime
     *
-    * @param int|null $retentionTime 老化时间，单位小时。
+    * @param int|null $retentionTime **参数解释**： 老化时间，单位小时。 **约束限制**： 不涉及。 **取值范围**： 0-720。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -302,7 +302,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
 
     /**
     * Gets syncReplication
-    *  是否同步复制。
+    *  **参数解释**： 是否同步复制。 **约束限制**： 不涉及。 **取值范围**： - true：开启同步复制。 - false：不开启同步复制。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -314,7 +314,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     /**
     * Sets syncReplication
     *
-    * @param bool|null $syncReplication 是否同步复制。
+    * @param bool|null $syncReplication **参数解释**： 是否同步复制。 **约束限制**： 不涉及。 **取值范围**： - true：开启同步复制。 - false：不开启同步复制。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -326,7 +326,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
 
     /**
     * Gets syncMessageFlush
-    *  是否同步落盘。
+    *  **参数解释**： 是否同步落盘。 **约束限制**： 不涉及。 **取值范围**： - true：开启同步落盘。 - false：不开启同步落盘。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -338,7 +338,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     /**
     * Sets syncMessageFlush
     *
-    * @param bool|null $syncMessageFlush 是否同步落盘。
+    * @param bool|null $syncMessageFlush **参数解释**： 是否同步落盘。 **约束限制**： 不涉及。 **取值范围**： - true：开启同步落盘。 - false：不开启同步落盘。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -350,7 +350,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
 
     /**
     * Gets newPartitionNumbers
-    *  分区数。
+    *  **参数解释**： 分区数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -362,7 +362,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     /**
     * Sets newPartitionNumbers
     *
-    * @param int|null $newPartitionNumbers 分区数。
+    * @param int|null $newPartitionNumbers **参数解释**： 分区数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -374,7 +374,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
 
     /**
     * Gets newPartitionBrokers
-    *  增加分区时指定broker列表
+    *  **参数解释**： 增加分区时指定broker列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int[]|null
     */
@@ -386,7 +386,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     /**
     * Sets newPartitionBrokers
     *
-    * @param int[]|null $newPartitionBrokers 增加分区时指定broker列表
+    * @param int[]|null $newPartitionBrokers **参数解释**： 增加分区时指定broker列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -398,7 +398,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicOtherConfigs
-    *  Topic配置
+    *  **参数解释**： Topic配置。 **约束限制**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\UpdateInstanceTopicReqTopicOtherConfigs[]|null
     */
@@ -410,7 +410,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     /**
     * Sets topicOtherConfigs
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\UpdateInstanceTopicReqTopicOtherConfigs[]|null $topicOtherConfigs Topic配置
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\UpdateInstanceTopicReqTopicOtherConfigs[]|null $topicOtherConfigs **参数解释**： Topic配置。 **约束限制**： 不涉及。
     *
     * @return $this
     */
@@ -422,7 +422,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicDesc
-    *  Topic描述
+    *  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -434,7 +434,7 @@ class UpdateInstanceTopicReqTopics implements ModelInterface, ArrayAccess
     /**
     * Sets topicDesc
     *
-    * @param string|null $topicDesc Topic描述
+    * @param string|null $topicDesc **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -23,6 +23,7 @@ class LlmConfigInfo implements ModelInterface, ArrayAccess
     * llmConfigId  大语言模型配置ID。
     * name  大语言模型配置名称。
     * llmUrl  大语言模型地址。
+    * model  model参数
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     *
@@ -32,6 +33,7 @@ class LlmConfigInfo implements ModelInterface, ArrayAccess
             'llmConfigId' => 'string',
             'name' => 'string',
             'llmUrl' => 'string',
+            'model' => 'string',
             'createTime' => 'string',
             'updateTime' => 'string'
     ];
@@ -41,6 +43,7 @@ class LlmConfigInfo implements ModelInterface, ArrayAccess
     * llmConfigId  大语言模型配置ID。
     * name  大语言模型配置名称。
     * llmUrl  大语言模型地址。
+    * model  model参数
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     *
@@ -50,6 +53,7 @@ class LlmConfigInfo implements ModelInterface, ArrayAccess
         'llmConfigId' => null,
         'name' => null,
         'llmUrl' => null,
+        'model' => null,
         'createTime' => null,
         'updateTime' => null
     ];
@@ -80,6 +84,7 @@ class LlmConfigInfo implements ModelInterface, ArrayAccess
     * llmConfigId  大语言模型配置ID。
     * name  大语言模型配置名称。
     * llmUrl  大语言模型地址。
+    * model  model参数
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     *
@@ -89,6 +94,7 @@ class LlmConfigInfo implements ModelInterface, ArrayAccess
             'llmConfigId' => 'llm_config_id',
             'name' => 'name',
             'llmUrl' => 'llm_url',
+            'model' => 'model',
             'createTime' => 'create_time',
             'updateTime' => 'update_time'
     ];
@@ -98,6 +104,7 @@ class LlmConfigInfo implements ModelInterface, ArrayAccess
     * llmConfigId  大语言模型配置ID。
     * name  大语言模型配置名称。
     * llmUrl  大语言模型地址。
+    * model  model参数
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     *
@@ -107,6 +114,7 @@ class LlmConfigInfo implements ModelInterface, ArrayAccess
             'llmConfigId' => 'setLlmConfigId',
             'name' => 'setName',
             'llmUrl' => 'setLlmUrl',
+            'model' => 'setModel',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime'
     ];
@@ -116,6 +124,7 @@ class LlmConfigInfo implements ModelInterface, ArrayAccess
     * llmConfigId  大语言模型配置ID。
     * name  大语言模型配置名称。
     * llmUrl  大语言模型地址。
+    * model  model参数
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     *
@@ -125,6 +134,7 @@ class LlmConfigInfo implements ModelInterface, ArrayAccess
             'llmConfigId' => 'getLlmConfigId',
             'name' => 'getName',
             'llmUrl' => 'getLlmUrl',
+            'model' => 'getModel',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime'
     ];
@@ -190,6 +200,7 @@ class LlmConfigInfo implements ModelInterface, ArrayAccess
         $this->container['llmConfigId'] = isset($data['llmConfigId']) ? $data['llmConfigId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['llmUrl'] = isset($data['llmUrl']) ? $data['llmUrl'] : null;
+        $this->container['model'] = isset($data['model']) ? $data['model'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
     }
@@ -219,6 +230,12 @@ class LlmConfigInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['llmUrl']) && (mb_strlen($this->container['llmUrl']) < 1)) {
                 $invalidProperties[] = "invalid value for 'llmUrl', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['model']) && (mb_strlen($this->container['model']) > 64)) {
+                $invalidProperties[] = "invalid value for 'model', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['model']) && (mb_strlen($this->container['model']) < 0)) {
+                $invalidProperties[] = "invalid value for 'model', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) > 20)) {
                 $invalidProperties[] = "invalid value for 'createTime', the character length must be smaller than or equal to 20.";
@@ -315,6 +332,30 @@ class LlmConfigInfo implements ModelInterface, ArrayAccess
     public function setLlmUrl($llmUrl)
     {
         $this->container['llmUrl'] = $llmUrl;
+        return $this;
+    }
+
+    /**
+    * Gets model
+    *  model参数
+    *
+    * @return string|null
+    */
+    public function getModel()
+    {
+        return $this->container['model'];
+    }
+
+    /**
+    * Sets model
+    *
+    * @param string|null $model model参数
+    *
+    * @return $this
+    */
+    public function setModel($model)
+    {
+        $this->container['model'] = $model;
         return $this;
     }
 

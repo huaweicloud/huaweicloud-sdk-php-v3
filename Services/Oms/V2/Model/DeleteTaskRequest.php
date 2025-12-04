@@ -25,7 +25,7 @@ class DeleteTaskRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'taskId' => 'string'
+            'taskId' => 'int'
     ];
 
     /**
@@ -35,7 +35,7 @@ class DeleteTaskRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'taskId' => null
+        'taskId' => 'int64'
     ];
 
     /**
@@ -161,11 +161,11 @@ class DeleteTaskRequest implements ModelInterface, ArrayAccess
         if ($this->container['taskId'] === null) {
             $invalidProperties[] = "'taskId' can't be null";
         }
-            if ((mb_strlen($this->container['taskId']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'taskId', the character length must be smaller than or equal to 1024.";
+            if (($this->container['taskId'] > 999999999999999)) {
+                $invalidProperties[] = "invalid value for 'taskId', must be smaller than or equal to 999999999999999.";
             }
-            if ((mb_strlen($this->container['taskId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'taskId', the character length must be bigger than or equal to 1.";
+            if (($this->container['taskId'] < 0)) {
+                $invalidProperties[] = "invalid value for 'taskId', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -185,7 +185,7 @@ class DeleteTaskRequest implements ModelInterface, ArrayAccess
     * Gets taskId
     *  迁移任务ID。
     *
-    * @return string
+    * @return int
     */
     public function getTaskId()
     {
@@ -195,7 +195,7 @@ class DeleteTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string $taskId 迁移任务ID。
+    * @param int $taskId 迁移任务ID。
     *
     * @return $this
     */

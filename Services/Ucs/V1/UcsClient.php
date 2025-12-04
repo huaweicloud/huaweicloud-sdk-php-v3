@@ -1063,12 +1063,12 @@ class UcsClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function disableClustergroupPolicy($request)
+    public function disableClusterGroupPolicy($request)
     {
-        return $this->disableClustergroupPolicyWithHttpInfo($request);
+        return $this->disableClusterGroupPolicyWithHttpInfo($request);
     }
 
-    public function disableClustergroupPolicyWithHttpInfo($request)
+    public function disableClusterGroupPolicyWithHttpInfo($request)
     {
         $resourcePath = '/v1/clustergroups/{clustergroupid}/policy';
         $formParams = [];
@@ -1111,8 +1111,8 @@ class UcsClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Ucs\V1\Model\DisableClustergroupPolicyResponse',
-            $requestType='\HuaweiCloud\SDK\Ucs\V1\Model\DisableClustergroupPolicyRequest');
+            $responseType='\HuaweiCloud\SDK\Ucs\V1\Model\DisableClusterGroupPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Ucs\V1\Model\DisableClusterGroupPolicyRequest');
     }
 
     /**
@@ -1252,12 +1252,12 @@ class UcsClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function enableClustergroupPolicy($request)
+    public function enableClusterGroupPolicy($request)
     {
-        return $this->enableClustergroupPolicyWithHttpInfo($request);
+        return $this->enableClusterGroupPolicyWithHttpInfo($request);
     }
 
-    public function enableClustergroupPolicyWithHttpInfo($request)
+    public function enableClusterGroupPolicyWithHttpInfo($request)
     {
         $resourcePath = '/v1/clustergroups/{clustergroupid}/policy';
         $formParams = [];
@@ -1303,8 +1303,8 @@ class UcsClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Ucs\V1\Model\EnableClustergroupPolicyResponse',
-            $requestType='\HuaweiCloud\SDK\Ucs\V1\Model\EnableClustergroupPolicyRequest');
+            $responseType='\HuaweiCloud\SDK\Ucs\V1\Model\EnableClusterGroupPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Ucs\V1\Model\EnableClusterGroupPolicyRequest');
     }
 
     /**
@@ -3853,9 +3853,9 @@ class UcsClient extends Client
     }
 
     /**
-     * 创建集群建策略实例
+     * 创建集群策略实例
      *
-     * 创建集群建策略实例
+     * 创建集群策略实例
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

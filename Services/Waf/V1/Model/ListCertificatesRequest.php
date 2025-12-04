@@ -26,7 +26,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
     * name  证书名称
     * host  是否获取证书关联的域名，默认为false   -true:获取已关联域名的证书   -false:获取未关联域名的证书
-    * expStatus  证书过期状态，0-未过期，1-已过期，2-即将过期（证书将在一个月内过期）
+    * expStatus  **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
     * queryScm  查询结果的证书来源服务是否包括SCM服务，值为true或者false。
     *
     * @var string[]
@@ -50,7 +50,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
     * name  证书名称
     * host  是否获取证书关联的域名，默认为false   -true:获取已关联域名的证书   -false:获取未关联域名的证书
-    * expStatus  证书过期状态，0-未过期，1-已过期，2-即将过期（证书将在一个月内过期）
+    * expStatus  **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
     * queryScm  查询结果的证书来源服务是否包括SCM服务，值为true或者false。
     *
     * @var string[]
@@ -95,7 +95,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
     * name  证书名称
     * host  是否获取证书关联的域名，默认为false   -true:获取已关联域名的证书   -false:获取未关联域名的证书
-    * expStatus  证书过期状态，0-未过期，1-已过期，2-即将过期（证书将在一个月内过期）
+    * expStatus  **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
     * queryScm  查询结果的证书来源服务是否包括SCM服务，值为true或者false。
     *
     * @var string[]
@@ -119,7 +119,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
     * name  证书名称
     * host  是否获取证书关联的域名，默认为false   -true:获取已关联域名的证书   -false:获取未关联域名的证书
-    * expStatus  证书过期状态，0-未过期，1-已过期，2-即将过期（证书将在一个月内过期）
+    * expStatus  **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
     * queryScm  查询结果的证书来源服务是否包括SCM服务，值为true或者false。
     *
     * @var string[]
@@ -143,7 +143,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
     * name  证书名称
     * host  是否获取证书关联的域名，默认为false   -true:获取已关联域名的证书   -false:获取未关联域名的证书
-    * expStatus  证书过期状态，0-未过期，1-已过期，2-即将过期（证书将在一个月内过期）
+    * expStatus  **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
     * queryScm  查询结果的证书来源服务是否包括SCM服务，值为true或者false。
     *
     * @var string[]
@@ -199,7 +199,24 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const EXP_STATUS_0 = 0;
+    const EXP_STATUS_1 = 1;
+    const EXP_STATUS_2 = 2;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getExpStatusAllowableValues()
+    {
+        return [
+            self::EXP_STATUS_0,
+            self::EXP_STATUS_1,
+            self::EXP_STATUS_2,
+        ];
+    }
 
 
     /**
@@ -238,6 +255,14 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
         if ($this->container['contentType'] === null) {
             $invalidProperties[] = "'contentType' can't be null";
         }
+            $allowedValues = $this->getExpStatusAllowableValues();
+                if (!is_null($this->container['expStatus']) && !in_array($this->container['expStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'expStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -398,7 +423,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets expStatus
-    *  证书过期状态，0-未过期，1-已过期，2-即将过期（证书将在一个月内过期）
+    *  **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -410,7 +435,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets expStatus
     *
-    * @param int|null $expStatus 证书过期状态，0-未过期，1-已过期，2-即将过期（证书将在一个月内过期）
+    * @param int|null $expStatus **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
     *
     * @return $this
     */

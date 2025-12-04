@@ -29,7 +29,7 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
     * modulexOptions  智能访问控制防护项相关配置信息，目前该特性还处于公测阶段，只有部分局点支持该特性
     * hosts  与防护策略绑定的防护的域名id数组
     * bindHost  与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
-    * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息
+    * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息，当修改字段为 shiro_rememberMe_enable,deep_decode,check_all_headers 时，需要额外增加一层extend字段嵌套.示例 key为 extend，value为 {\"shiro_rememberMe_enable\":true}
     *
     * @var string[]
     */
@@ -57,7 +57,7 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
     * modulexOptions  智能访问控制防护项相关配置信息，目前该特性还处于公测阶段，只有部分局点支持该特性
     * hosts  与防护策略绑定的防护的域名id数组
     * bindHost  与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
-    * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息
+    * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息，当修改字段为 shiro_rememberMe_enable,deep_decode,check_all_headers 时，需要额外增加一层extend字段嵌套.示例 key为 extend，value为 {\"shiro_rememberMe_enable\":true}
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
     * modulexOptions  智能访问控制防护项相关配置信息，目前该特性还处于公测阶段，只有部分局点支持该特性
     * hosts  与防护策略绑定的防护的域名id数组
     * bindHost  与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
-    * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息
+    * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息，当修改字段为 shiro_rememberMe_enable,deep_decode,check_all_headers 时，需要额外增加一层extend字段嵌套.示例 key为 extend，value为 {\"shiro_rememberMe_enable\":true}
     *
     * @var string[]
     */
@@ -134,7 +134,7 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
     * modulexOptions  智能访问控制防护项相关配置信息，目前该特性还处于公测阶段，只有部分局点支持该特性
     * hosts  与防护策略绑定的防护的域名id数组
     * bindHost  与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
-    * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息
+    * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息，当修改字段为 shiro_rememberMe_enable,deep_decode,check_all_headers 时，需要额外增加一层extend字段嵌套.示例 key为 extend，value为 {\"shiro_rememberMe_enable\":true}
     *
     * @var string[]
     */
@@ -162,7 +162,7 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
     * modulexOptions  智能访问控制防护项相关配置信息，目前该特性还处于公测阶段，只有部分局点支持该特性
     * hosts  与防护策略绑定的防护的域名id数组
     * bindHost  与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
-    * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息
+    * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息，当修改字段为 shiro_rememberMe_enable,deep_decode,check_all_headers 时，需要额外增加一层extend字段嵌套.示例 key为 extend，value为 {\"shiro_rememberMe_enable\":true}
     *
     * @var string[]
     */
@@ -489,7 +489,7 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets extend
-    *  扩展字段，用于存放Web基础防护中一些开关配置等信息
+    *  扩展字段，用于存放Web基础防护中一些开关配置等信息，当修改字段为 shiro_rememberMe_enable,deep_decode,check_all_headers 时，需要额外增加一层extend字段嵌套.示例 key为 extend，value为 {\"shiro_rememberMe_enable\":true}
     *
     * @return map[string,string]|null
     */
@@ -501,7 +501,7 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets extend
     *
-    * @param map[string,string]|null $extend 扩展字段，用于存放Web基础防护中一些开关配置等信息
+    * @param map[string,string]|null $extend 扩展字段，用于存放Web基础防护中一些开关配置等信息，当修改字段为 shiro_rememberMe_enable,deep_decode,check_all_headers 时，需要额外增加一层extend字段嵌套.示例 key为 extend，value为 {\"shiro_rememberMe_enable\":true}
     *
     * @return $this
     */

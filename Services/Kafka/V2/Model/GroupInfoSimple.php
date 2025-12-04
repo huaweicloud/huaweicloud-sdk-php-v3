@@ -20,12 +20,12 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * createdAt  创建时间。
-    * groupId  消费组ID。
-    * state  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
-    * coordinatorId  协调器编号。
-    * groupDesc  消费组描述。
-    * lag  堆积数。
+    * createdAt  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * groupId  **参数解释**： 消费组ID。 **取值范围**： 不涉及。
+    * state  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * coordinatorId  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
+    * groupDesc  **参数解释**： 消费组的描述信息。 **取值范围**： 不涉及。
+    * lag  **参数解释**： 堆积数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * createdAt  创建时间。
-    * groupId  消费组ID。
-    * state  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
-    * coordinatorId  协调器编号。
-    * groupDesc  消费组描述。
-    * lag  堆积数。
+    * createdAt  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * groupId  **参数解释**： 消费组ID。 **取值范围**： 不涉及。
+    * state  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * coordinatorId  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
+    * groupDesc  **参数解释**： 消费组的描述信息。 **取值范围**： 不涉及。
+    * lag  **参数解释**： 堆积数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * createdAt  创建时间。
-    * groupId  消费组ID。
-    * state  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
-    * coordinatorId  协调器编号。
-    * groupDesc  消费组描述。
-    * lag  堆积数。
+    * createdAt  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * groupId  **参数解释**： 消费组ID。 **取值范围**： 不涉及。
+    * state  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * coordinatorId  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
+    * groupDesc  **参数解释**： 消费组的描述信息。 **取值范围**： 不涉及。
+    * lag  **参数解释**： 堆积数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * createdAt  创建时间。
-    * groupId  消费组ID。
-    * state  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
-    * coordinatorId  协调器编号。
-    * groupDesc  消费组描述。
-    * lag  堆积数。
+    * createdAt  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * groupId  **参数解释**： 消费组ID。 **取值范围**： 不涉及。
+    * state  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * coordinatorId  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
+    * groupDesc  **参数解释**： 消费组的描述信息。 **取值范围**： 不涉及。
+    * lag  **参数解释**： 堆积数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * createdAt  创建时间。
-    * groupId  消费组ID。
-    * state  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
-    * coordinatorId  协调器编号。
-    * groupDesc  消费组描述。
-    * lag  堆积数。
+    * createdAt  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * groupId  **参数解释**： 消费组ID。 **取值范围**： 不涉及。
+    * state  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * coordinatorId  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
+    * groupDesc  **参数解释**： 消费组的描述信息。 **取值范围**： 不涉及。
+    * lag  **参数解释**： 堆积数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  创建时间。
+    *  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -241,7 +241,7 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param int|null $createdAt 创建时间。
+    * @param int|null $createdAt **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  消费组ID。
+    *  **参数解释**： 消费组ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 消费组ID。
+    * @param string|null $groupId **参数解释**： 消费组ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    *  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state 消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * @param string|null $state **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
 
     /**
     * Gets coordinatorId
-    *  协调器编号。
+    *  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -313,7 +313,7 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
     /**
     * Sets coordinatorId
     *
-    * @param int|null $coordinatorId 协调器编号。
+    * @param int|null $coordinatorId **参数解释**： 协调器编号。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupDesc
-    *  消费组描述。
+    *  **参数解释**： 消费组的描述信息。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
     /**
     * Sets groupDesc
     *
-    * @param string|null $groupDesc 消费组描述。
+    * @param string|null $groupDesc **参数解释**： 消费组的描述信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
 
     /**
     * Gets lag
-    *  堆积数。
+    *  **参数解释**： 堆积数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -361,7 +361,7 @@ class GroupInfoSimple implements ModelInterface, ArrayAccess
     /**
     * Sets lag
     *
-    * @param int|null $lag 堆积数。
+    * @param int|null $lag **参数解释**： 堆积数。 **取值范围**： 不涉及。
     *
     * @return $this
     */

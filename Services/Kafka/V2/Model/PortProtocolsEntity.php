@@ -20,24 +20,24 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * privatePlainEnable  实例是否支持内网PLAINTEXT访问接入方式。  - true：实例支持内网PLAINTEXT访问方式接入方式。  - false：实例不支持内网PLAINTEXT访问接入方式。
-    * privatePlainAddress  kafka内网PLAINTEXT接入方式连接地址。
-    * privatePlainDomainName  内网明文连接域名
-    * privateSaslSslEnable  实例是否支持内网SASL_SSL访问接入方式。  - true：实例支持内网SASL_SSL访问方式接入方式。  - false：实例不支持内网SASL_SSL访问接入方式。
-    * privateSaslSslAddress  kafka内网SASL_SSL接入方式连接地址。
-    * privateSaslSslDomainName  内网SASL_SSL连接域名
-    * privateSaslPlaintextEnable  实例是否支持内网SASL_PLAINTEXT访问接入方式。  - true，实例支持内网SASL_PLAINTEXT访问方式接入方式。  - false，实例不支持内网SASL_PLAINTEXT访问接入方式。
-    * privateSaslPlaintextAddress  kafka内网SASL_PLAINTEXT接入方式连接地址。
-    * privateSaslPlaintextDomainName  内网SASL_PLAINTEXT连接域名
-    * publicPlainEnable  实例是否支持公网PLAINTEXT访问接入方式。  - true，实例支持公网PLAINTEXT访问方式接入方式。  - false，实例不支持公网PLAINTEXT访问接入方式。
-    * publicPlainAddress  kafka公网PLAINTEXT接入方式连接地址。
-    * publicPlainDomainName  公网明文连接域名
-    * publicSaslSslEnable  实例是否支持公网SASL_SSL访问接入方式。  - true，实例支持内网SASL_SSL访问方式接入方式。  - false，实例不支持公网SASL_SSL访问接入方式。
-    * publicSaslSslAddress  kafka公网SASL_SSL接入方式连接地址。
-    * publicSaslSslDomainName  公网SASL_SSL连接域名
-    * publicSaslPlaintextEnable  实例是否支持公网SASL_PLAINTEXT访问接入方式。  - true，实例支持公网SASL_PLAINTEXT访问方式接入方式。  - false，实例不支持公网SASL_PLAINTEXT访问接入方式。
-    * publicSaslPlaintextAddress  kafka公网SASL_PLAINTEXT接入方式连接地址。
-    * publicSaslPlaintextDomainName  公网SASL_PLAINTEXT连接域名
+    * privatePlainEnable  **参数解释**： 实例是否支持内网PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持内网PLAINTEXT访问方式接入方式。 - false：实例不支持内网PLAINTEXT访问接入方式。
+    * privatePlainAddress  **参数解释**： Kafka内网PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
+    * privatePlainDomainName  **参数解释**： 内网明文连接域名。 **取值范围**： 不涉及
+    * privateSaslSslEnable  **参数解释**： 实例是否支持内网SASL_SSL访问接入方式。 **取值范围**： - true：实例支持内网SASL_SSL访问方式接入方式。 - false：实例不支持内网SASL_SSL访问接入方式。
+    * privateSaslSslAddress  **参数解释**： Kafka内网SASL_SSL接入方式连接地址。 **取值范围**： 不涉及
+    * privateSaslSslDomainName  **参数解释**： 内网SASL_SSL连接域名。 **取值范围**： 不涉及
+    * privateSaslPlaintextEnable  **参数解释**： 实例是否支持内网SASL_PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持内网SASL_PLAINTEXT访问方式接入方式。 - false：实例不支持内网SASL_PLAINTEXT访问接入方式。
+    * privateSaslPlaintextAddress  **参数解释**： Kafka内网SASL_PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
+    * privateSaslPlaintextDomainName  **参数解释**： 内网SASL_PLAINTEXT连接域名。 **取值范围**： 不涉及
+    * publicPlainEnable  **参数解释**： 实例是否支持公网PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持公网PLAINTEXT访问方式接入方式。 - false：实例不支持公网PLAINTEXT访问接入方式。
+    * publicPlainAddress  **参数解释**： Kafka公网PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
+    * publicPlainDomainName  **参数解释**： 公网明文连接域名。 **取值范围**： 不涉及
+    * publicSaslSslEnable  **参数解释**： 实例是否支持公网SASL_SSL访问接入方式。 **取值范围**： - true：实例支持内网SASL_SSL访问方式接入方式。 - false：实例不支持公网SASL_SSL访问接入方式。
+    * publicSaslSslAddress  **参数解释**： Kafka公网SASL_SSL接入方式连接地址。 **取值范围**： 不涉及
+    * publicSaslSslDomainName  **参数解释**： 公网SASL_SSL连接域名。 **取值范围**： 不涉及
+    * publicSaslPlaintextEnable  **参数解释**： 实例是否支持公网SASL_PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持公网SASL_PLAINTEXT访问方式接入方式。 - false：实例不支持公网SASL_PLAINTEXT访问接入方式。
+    * publicSaslPlaintextAddress  **参数解释**： Kafka公网SASL_PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
+    * publicSaslPlaintextDomainName  **参数解释**： 公网SASL_PLAINTEXT连接域名。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -64,24 +64,24 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * privatePlainEnable  实例是否支持内网PLAINTEXT访问接入方式。  - true：实例支持内网PLAINTEXT访问方式接入方式。  - false：实例不支持内网PLAINTEXT访问接入方式。
-    * privatePlainAddress  kafka内网PLAINTEXT接入方式连接地址。
-    * privatePlainDomainName  内网明文连接域名
-    * privateSaslSslEnable  实例是否支持内网SASL_SSL访问接入方式。  - true：实例支持内网SASL_SSL访问方式接入方式。  - false：实例不支持内网SASL_SSL访问接入方式。
-    * privateSaslSslAddress  kafka内网SASL_SSL接入方式连接地址。
-    * privateSaslSslDomainName  内网SASL_SSL连接域名
-    * privateSaslPlaintextEnable  实例是否支持内网SASL_PLAINTEXT访问接入方式。  - true，实例支持内网SASL_PLAINTEXT访问方式接入方式。  - false，实例不支持内网SASL_PLAINTEXT访问接入方式。
-    * privateSaslPlaintextAddress  kafka内网SASL_PLAINTEXT接入方式连接地址。
-    * privateSaslPlaintextDomainName  内网SASL_PLAINTEXT连接域名
-    * publicPlainEnable  实例是否支持公网PLAINTEXT访问接入方式。  - true，实例支持公网PLAINTEXT访问方式接入方式。  - false，实例不支持公网PLAINTEXT访问接入方式。
-    * publicPlainAddress  kafka公网PLAINTEXT接入方式连接地址。
-    * publicPlainDomainName  公网明文连接域名
-    * publicSaslSslEnable  实例是否支持公网SASL_SSL访问接入方式。  - true，实例支持内网SASL_SSL访问方式接入方式。  - false，实例不支持公网SASL_SSL访问接入方式。
-    * publicSaslSslAddress  kafka公网SASL_SSL接入方式连接地址。
-    * publicSaslSslDomainName  公网SASL_SSL连接域名
-    * publicSaslPlaintextEnable  实例是否支持公网SASL_PLAINTEXT访问接入方式。  - true，实例支持公网SASL_PLAINTEXT访问方式接入方式。  - false，实例不支持公网SASL_PLAINTEXT访问接入方式。
-    * publicSaslPlaintextAddress  kafka公网SASL_PLAINTEXT接入方式连接地址。
-    * publicSaslPlaintextDomainName  公网SASL_PLAINTEXT连接域名
+    * privatePlainEnable  **参数解释**： 实例是否支持内网PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持内网PLAINTEXT访问方式接入方式。 - false：实例不支持内网PLAINTEXT访问接入方式。
+    * privatePlainAddress  **参数解释**： Kafka内网PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
+    * privatePlainDomainName  **参数解释**： 内网明文连接域名。 **取值范围**： 不涉及
+    * privateSaslSslEnable  **参数解释**： 实例是否支持内网SASL_SSL访问接入方式。 **取值范围**： - true：实例支持内网SASL_SSL访问方式接入方式。 - false：实例不支持内网SASL_SSL访问接入方式。
+    * privateSaslSslAddress  **参数解释**： Kafka内网SASL_SSL接入方式连接地址。 **取值范围**： 不涉及
+    * privateSaslSslDomainName  **参数解释**： 内网SASL_SSL连接域名。 **取值范围**： 不涉及
+    * privateSaslPlaintextEnable  **参数解释**： 实例是否支持内网SASL_PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持内网SASL_PLAINTEXT访问方式接入方式。 - false：实例不支持内网SASL_PLAINTEXT访问接入方式。
+    * privateSaslPlaintextAddress  **参数解释**： Kafka内网SASL_PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
+    * privateSaslPlaintextDomainName  **参数解释**： 内网SASL_PLAINTEXT连接域名。 **取值范围**： 不涉及
+    * publicPlainEnable  **参数解释**： 实例是否支持公网PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持公网PLAINTEXT访问方式接入方式。 - false：实例不支持公网PLAINTEXT访问接入方式。
+    * publicPlainAddress  **参数解释**： Kafka公网PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
+    * publicPlainDomainName  **参数解释**： 公网明文连接域名。 **取值范围**： 不涉及
+    * publicSaslSslEnable  **参数解释**： 实例是否支持公网SASL_SSL访问接入方式。 **取值范围**： - true：实例支持内网SASL_SSL访问方式接入方式。 - false：实例不支持公网SASL_SSL访问接入方式。
+    * publicSaslSslAddress  **参数解释**： Kafka公网SASL_SSL接入方式连接地址。 **取值范围**： 不涉及
+    * publicSaslSslDomainName  **参数解释**： 公网SASL_SSL连接域名。 **取值范围**： 不涉及
+    * publicSaslPlaintextEnable  **参数解释**： 实例是否支持公网SASL_PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持公网SASL_PLAINTEXT访问方式接入方式。 - false：实例不支持公网SASL_PLAINTEXT访问接入方式。
+    * publicSaslPlaintextAddress  **参数解释**： Kafka公网SASL_PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
+    * publicSaslPlaintextDomainName  **参数解释**： 公网SASL_PLAINTEXT连接域名。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -129,24 +129,24 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * privatePlainEnable  实例是否支持内网PLAINTEXT访问接入方式。  - true：实例支持内网PLAINTEXT访问方式接入方式。  - false：实例不支持内网PLAINTEXT访问接入方式。
-    * privatePlainAddress  kafka内网PLAINTEXT接入方式连接地址。
-    * privatePlainDomainName  内网明文连接域名
-    * privateSaslSslEnable  实例是否支持内网SASL_SSL访问接入方式。  - true：实例支持内网SASL_SSL访问方式接入方式。  - false：实例不支持内网SASL_SSL访问接入方式。
-    * privateSaslSslAddress  kafka内网SASL_SSL接入方式连接地址。
-    * privateSaslSslDomainName  内网SASL_SSL连接域名
-    * privateSaslPlaintextEnable  实例是否支持内网SASL_PLAINTEXT访问接入方式。  - true，实例支持内网SASL_PLAINTEXT访问方式接入方式。  - false，实例不支持内网SASL_PLAINTEXT访问接入方式。
-    * privateSaslPlaintextAddress  kafka内网SASL_PLAINTEXT接入方式连接地址。
-    * privateSaslPlaintextDomainName  内网SASL_PLAINTEXT连接域名
-    * publicPlainEnable  实例是否支持公网PLAINTEXT访问接入方式。  - true，实例支持公网PLAINTEXT访问方式接入方式。  - false，实例不支持公网PLAINTEXT访问接入方式。
-    * publicPlainAddress  kafka公网PLAINTEXT接入方式连接地址。
-    * publicPlainDomainName  公网明文连接域名
-    * publicSaslSslEnable  实例是否支持公网SASL_SSL访问接入方式。  - true，实例支持内网SASL_SSL访问方式接入方式。  - false，实例不支持公网SASL_SSL访问接入方式。
-    * publicSaslSslAddress  kafka公网SASL_SSL接入方式连接地址。
-    * publicSaslSslDomainName  公网SASL_SSL连接域名
-    * publicSaslPlaintextEnable  实例是否支持公网SASL_PLAINTEXT访问接入方式。  - true，实例支持公网SASL_PLAINTEXT访问方式接入方式。  - false，实例不支持公网SASL_PLAINTEXT访问接入方式。
-    * publicSaslPlaintextAddress  kafka公网SASL_PLAINTEXT接入方式连接地址。
-    * publicSaslPlaintextDomainName  公网SASL_PLAINTEXT连接域名
+    * privatePlainEnable  **参数解释**： 实例是否支持内网PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持内网PLAINTEXT访问方式接入方式。 - false：实例不支持内网PLAINTEXT访问接入方式。
+    * privatePlainAddress  **参数解释**： Kafka内网PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
+    * privatePlainDomainName  **参数解释**： 内网明文连接域名。 **取值范围**： 不涉及
+    * privateSaslSslEnable  **参数解释**： 实例是否支持内网SASL_SSL访问接入方式。 **取值范围**： - true：实例支持内网SASL_SSL访问方式接入方式。 - false：实例不支持内网SASL_SSL访问接入方式。
+    * privateSaslSslAddress  **参数解释**： Kafka内网SASL_SSL接入方式连接地址。 **取值范围**： 不涉及
+    * privateSaslSslDomainName  **参数解释**： 内网SASL_SSL连接域名。 **取值范围**： 不涉及
+    * privateSaslPlaintextEnable  **参数解释**： 实例是否支持内网SASL_PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持内网SASL_PLAINTEXT访问方式接入方式。 - false：实例不支持内网SASL_PLAINTEXT访问接入方式。
+    * privateSaslPlaintextAddress  **参数解释**： Kafka内网SASL_PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
+    * privateSaslPlaintextDomainName  **参数解释**： 内网SASL_PLAINTEXT连接域名。 **取值范围**： 不涉及
+    * publicPlainEnable  **参数解释**： 实例是否支持公网PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持公网PLAINTEXT访问方式接入方式。 - false：实例不支持公网PLAINTEXT访问接入方式。
+    * publicPlainAddress  **参数解释**： Kafka公网PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
+    * publicPlainDomainName  **参数解释**： 公网明文连接域名。 **取值范围**： 不涉及
+    * publicSaslSslEnable  **参数解释**： 实例是否支持公网SASL_SSL访问接入方式。 **取值范围**： - true：实例支持内网SASL_SSL访问方式接入方式。 - false：实例不支持公网SASL_SSL访问接入方式。
+    * publicSaslSslAddress  **参数解释**： Kafka公网SASL_SSL接入方式连接地址。 **取值范围**： 不涉及
+    * publicSaslSslDomainName  **参数解释**： 公网SASL_SSL连接域名。 **取值范围**： 不涉及
+    * publicSaslPlaintextEnable  **参数解释**： 实例是否支持公网SASL_PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持公网SASL_PLAINTEXT访问方式接入方式。 - false：实例不支持公网SASL_PLAINTEXT访问接入方式。
+    * publicSaslPlaintextAddress  **参数解释**： Kafka公网SASL_PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
+    * publicSaslPlaintextDomainName  **参数解释**： 公网SASL_PLAINTEXT连接域名。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -173,24 +173,24 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * privatePlainEnable  实例是否支持内网PLAINTEXT访问接入方式。  - true：实例支持内网PLAINTEXT访问方式接入方式。  - false：实例不支持内网PLAINTEXT访问接入方式。
-    * privatePlainAddress  kafka内网PLAINTEXT接入方式连接地址。
-    * privatePlainDomainName  内网明文连接域名
-    * privateSaslSslEnable  实例是否支持内网SASL_SSL访问接入方式。  - true：实例支持内网SASL_SSL访问方式接入方式。  - false：实例不支持内网SASL_SSL访问接入方式。
-    * privateSaslSslAddress  kafka内网SASL_SSL接入方式连接地址。
-    * privateSaslSslDomainName  内网SASL_SSL连接域名
-    * privateSaslPlaintextEnable  实例是否支持内网SASL_PLAINTEXT访问接入方式。  - true，实例支持内网SASL_PLAINTEXT访问方式接入方式。  - false，实例不支持内网SASL_PLAINTEXT访问接入方式。
-    * privateSaslPlaintextAddress  kafka内网SASL_PLAINTEXT接入方式连接地址。
-    * privateSaslPlaintextDomainName  内网SASL_PLAINTEXT连接域名
-    * publicPlainEnable  实例是否支持公网PLAINTEXT访问接入方式。  - true，实例支持公网PLAINTEXT访问方式接入方式。  - false，实例不支持公网PLAINTEXT访问接入方式。
-    * publicPlainAddress  kafka公网PLAINTEXT接入方式连接地址。
-    * publicPlainDomainName  公网明文连接域名
-    * publicSaslSslEnable  实例是否支持公网SASL_SSL访问接入方式。  - true，实例支持内网SASL_SSL访问方式接入方式。  - false，实例不支持公网SASL_SSL访问接入方式。
-    * publicSaslSslAddress  kafka公网SASL_SSL接入方式连接地址。
-    * publicSaslSslDomainName  公网SASL_SSL连接域名
-    * publicSaslPlaintextEnable  实例是否支持公网SASL_PLAINTEXT访问接入方式。  - true，实例支持公网SASL_PLAINTEXT访问方式接入方式。  - false，实例不支持公网SASL_PLAINTEXT访问接入方式。
-    * publicSaslPlaintextAddress  kafka公网SASL_PLAINTEXT接入方式连接地址。
-    * publicSaslPlaintextDomainName  公网SASL_PLAINTEXT连接域名
+    * privatePlainEnable  **参数解释**： 实例是否支持内网PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持内网PLAINTEXT访问方式接入方式。 - false：实例不支持内网PLAINTEXT访问接入方式。
+    * privatePlainAddress  **参数解释**： Kafka内网PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
+    * privatePlainDomainName  **参数解释**： 内网明文连接域名。 **取值范围**： 不涉及
+    * privateSaslSslEnable  **参数解释**： 实例是否支持内网SASL_SSL访问接入方式。 **取值范围**： - true：实例支持内网SASL_SSL访问方式接入方式。 - false：实例不支持内网SASL_SSL访问接入方式。
+    * privateSaslSslAddress  **参数解释**： Kafka内网SASL_SSL接入方式连接地址。 **取值范围**： 不涉及
+    * privateSaslSslDomainName  **参数解释**： 内网SASL_SSL连接域名。 **取值范围**： 不涉及
+    * privateSaslPlaintextEnable  **参数解释**： 实例是否支持内网SASL_PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持内网SASL_PLAINTEXT访问方式接入方式。 - false：实例不支持内网SASL_PLAINTEXT访问接入方式。
+    * privateSaslPlaintextAddress  **参数解释**： Kafka内网SASL_PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
+    * privateSaslPlaintextDomainName  **参数解释**： 内网SASL_PLAINTEXT连接域名。 **取值范围**： 不涉及
+    * publicPlainEnable  **参数解释**： 实例是否支持公网PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持公网PLAINTEXT访问方式接入方式。 - false：实例不支持公网PLAINTEXT访问接入方式。
+    * publicPlainAddress  **参数解释**： Kafka公网PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
+    * publicPlainDomainName  **参数解释**： 公网明文连接域名。 **取值范围**： 不涉及
+    * publicSaslSslEnable  **参数解释**： 实例是否支持公网SASL_SSL访问接入方式。 **取值范围**： - true：实例支持内网SASL_SSL访问方式接入方式。 - false：实例不支持公网SASL_SSL访问接入方式。
+    * publicSaslSslAddress  **参数解释**： Kafka公网SASL_SSL接入方式连接地址。 **取值范围**： 不涉及
+    * publicSaslSslDomainName  **参数解释**： 公网SASL_SSL连接域名。 **取值范围**： 不涉及
+    * publicSaslPlaintextEnable  **参数解释**： 实例是否支持公网SASL_PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持公网SASL_PLAINTEXT访问方式接入方式。 - false：实例不支持公网SASL_PLAINTEXT访问接入方式。
+    * publicSaslPlaintextAddress  **参数解释**： Kafka公网SASL_PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
+    * publicSaslPlaintextDomainName  **参数解释**： 公网SASL_PLAINTEXT连接域名。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -217,24 +217,24 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * privatePlainEnable  实例是否支持内网PLAINTEXT访问接入方式。  - true：实例支持内网PLAINTEXT访问方式接入方式。  - false：实例不支持内网PLAINTEXT访问接入方式。
-    * privatePlainAddress  kafka内网PLAINTEXT接入方式连接地址。
-    * privatePlainDomainName  内网明文连接域名
-    * privateSaslSslEnable  实例是否支持内网SASL_SSL访问接入方式。  - true：实例支持内网SASL_SSL访问方式接入方式。  - false：实例不支持内网SASL_SSL访问接入方式。
-    * privateSaslSslAddress  kafka内网SASL_SSL接入方式连接地址。
-    * privateSaslSslDomainName  内网SASL_SSL连接域名
-    * privateSaslPlaintextEnable  实例是否支持内网SASL_PLAINTEXT访问接入方式。  - true，实例支持内网SASL_PLAINTEXT访问方式接入方式。  - false，实例不支持内网SASL_PLAINTEXT访问接入方式。
-    * privateSaslPlaintextAddress  kafka内网SASL_PLAINTEXT接入方式连接地址。
-    * privateSaslPlaintextDomainName  内网SASL_PLAINTEXT连接域名
-    * publicPlainEnable  实例是否支持公网PLAINTEXT访问接入方式。  - true，实例支持公网PLAINTEXT访问方式接入方式。  - false，实例不支持公网PLAINTEXT访问接入方式。
-    * publicPlainAddress  kafka公网PLAINTEXT接入方式连接地址。
-    * publicPlainDomainName  公网明文连接域名
-    * publicSaslSslEnable  实例是否支持公网SASL_SSL访问接入方式。  - true，实例支持内网SASL_SSL访问方式接入方式。  - false，实例不支持公网SASL_SSL访问接入方式。
-    * publicSaslSslAddress  kafka公网SASL_SSL接入方式连接地址。
-    * publicSaslSslDomainName  公网SASL_SSL连接域名
-    * publicSaslPlaintextEnable  实例是否支持公网SASL_PLAINTEXT访问接入方式。  - true，实例支持公网SASL_PLAINTEXT访问方式接入方式。  - false，实例不支持公网SASL_PLAINTEXT访问接入方式。
-    * publicSaslPlaintextAddress  kafka公网SASL_PLAINTEXT接入方式连接地址。
-    * publicSaslPlaintextDomainName  公网SASL_PLAINTEXT连接域名
+    * privatePlainEnable  **参数解释**： 实例是否支持内网PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持内网PLAINTEXT访问方式接入方式。 - false：实例不支持内网PLAINTEXT访问接入方式。
+    * privatePlainAddress  **参数解释**： Kafka内网PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
+    * privatePlainDomainName  **参数解释**： 内网明文连接域名。 **取值范围**： 不涉及
+    * privateSaslSslEnable  **参数解释**： 实例是否支持内网SASL_SSL访问接入方式。 **取值范围**： - true：实例支持内网SASL_SSL访问方式接入方式。 - false：实例不支持内网SASL_SSL访问接入方式。
+    * privateSaslSslAddress  **参数解释**： Kafka内网SASL_SSL接入方式连接地址。 **取值范围**： 不涉及
+    * privateSaslSslDomainName  **参数解释**： 内网SASL_SSL连接域名。 **取值范围**： 不涉及
+    * privateSaslPlaintextEnable  **参数解释**： 实例是否支持内网SASL_PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持内网SASL_PLAINTEXT访问方式接入方式。 - false：实例不支持内网SASL_PLAINTEXT访问接入方式。
+    * privateSaslPlaintextAddress  **参数解释**： Kafka内网SASL_PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
+    * privateSaslPlaintextDomainName  **参数解释**： 内网SASL_PLAINTEXT连接域名。 **取值范围**： 不涉及
+    * publicPlainEnable  **参数解释**： 实例是否支持公网PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持公网PLAINTEXT访问方式接入方式。 - false：实例不支持公网PLAINTEXT访问接入方式。
+    * publicPlainAddress  **参数解释**： Kafka公网PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
+    * publicPlainDomainName  **参数解释**： 公网明文连接域名。 **取值范围**： 不涉及
+    * publicSaslSslEnable  **参数解释**： 实例是否支持公网SASL_SSL访问接入方式。 **取值范围**： - true：实例支持内网SASL_SSL访问方式接入方式。 - false：实例不支持公网SASL_SSL访问接入方式。
+    * publicSaslSslAddress  **参数解释**： Kafka公网SASL_SSL接入方式连接地址。 **取值范围**： 不涉及
+    * publicSaslSslDomainName  **参数解释**： 公网SASL_SSL连接域名。 **取值范围**： 不涉及
+    * publicSaslPlaintextEnable  **参数解释**： 实例是否支持公网SASL_PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持公网SASL_PLAINTEXT访问方式接入方式。 - false：实例不支持公网SASL_PLAINTEXT访问接入方式。
+    * publicSaslPlaintextAddress  **参数解释**： Kafka公网SASL_PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
+    * publicSaslPlaintextDomainName  **参数解释**： 公网SASL_PLAINTEXT连接域名。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -361,7 +361,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets privatePlainEnable
-    *  实例是否支持内网PLAINTEXT访问接入方式。  - true：实例支持内网PLAINTEXT访问方式接入方式。  - false：实例不支持内网PLAINTEXT访问接入方式。
+    *  **参数解释**： 实例是否支持内网PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持内网PLAINTEXT访问方式接入方式。 - false：实例不支持内网PLAINTEXT访问接入方式。
     *
     * @return bool|null
     */
@@ -373,7 +373,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets privatePlainEnable
     *
-    * @param bool|null $privatePlainEnable 实例是否支持内网PLAINTEXT访问接入方式。  - true：实例支持内网PLAINTEXT访问方式接入方式。  - false：实例不支持内网PLAINTEXT访问接入方式。
+    * @param bool|null $privatePlainEnable **参数解释**： 实例是否支持内网PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持内网PLAINTEXT访问方式接入方式。 - false：实例不支持内网PLAINTEXT访问接入方式。
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets privatePlainAddress
-    *  kafka内网PLAINTEXT接入方式连接地址。
+    *  **参数解释**： Kafka内网PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -397,7 +397,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets privatePlainAddress
     *
-    * @param string|null $privatePlainAddress kafka内网PLAINTEXT接入方式连接地址。
+    * @param string|null $privatePlainAddress **参数解释**： Kafka内网PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -409,7 +409,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets privatePlainDomainName
-    *  内网明文连接域名
+    *  **参数解释**： 内网明文连接域名。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -421,7 +421,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets privatePlainDomainName
     *
-    * @param string|null $privatePlainDomainName 内网明文连接域名
+    * @param string|null $privatePlainDomainName **参数解释**： 内网明文连接域名。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -433,7 +433,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateSaslSslEnable
-    *  实例是否支持内网SASL_SSL访问接入方式。  - true：实例支持内网SASL_SSL访问方式接入方式。  - false：实例不支持内网SASL_SSL访问接入方式。
+    *  **参数解释**： 实例是否支持内网SASL_SSL访问接入方式。 **取值范围**： - true：实例支持内网SASL_SSL访问方式接入方式。 - false：实例不支持内网SASL_SSL访问接入方式。
     *
     * @return bool|null
     */
@@ -445,7 +445,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets privateSaslSslEnable
     *
-    * @param bool|null $privateSaslSslEnable 实例是否支持内网SASL_SSL访问接入方式。  - true：实例支持内网SASL_SSL访问方式接入方式。  - false：实例不支持内网SASL_SSL访问接入方式。
+    * @param bool|null $privateSaslSslEnable **参数解释**： 实例是否支持内网SASL_SSL访问接入方式。 **取值范围**： - true：实例支持内网SASL_SSL访问方式接入方式。 - false：实例不支持内网SASL_SSL访问接入方式。
     *
     * @return $this
     */
@@ -457,7 +457,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateSaslSslAddress
-    *  kafka内网SASL_SSL接入方式连接地址。
+    *  **参数解释**： Kafka内网SASL_SSL接入方式连接地址。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -469,7 +469,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets privateSaslSslAddress
     *
-    * @param string|null $privateSaslSslAddress kafka内网SASL_SSL接入方式连接地址。
+    * @param string|null $privateSaslSslAddress **参数解释**： Kafka内网SASL_SSL接入方式连接地址。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -481,7 +481,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateSaslSslDomainName
-    *  内网SASL_SSL连接域名
+    *  **参数解释**： 内网SASL_SSL连接域名。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -493,7 +493,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets privateSaslSslDomainName
     *
-    * @param string|null $privateSaslSslDomainName 内网SASL_SSL连接域名
+    * @param string|null $privateSaslSslDomainName **参数解释**： 内网SASL_SSL连接域名。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -505,7 +505,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateSaslPlaintextEnable
-    *  实例是否支持内网SASL_PLAINTEXT访问接入方式。  - true，实例支持内网SASL_PLAINTEXT访问方式接入方式。  - false，实例不支持内网SASL_PLAINTEXT访问接入方式。
+    *  **参数解释**： 实例是否支持内网SASL_PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持内网SASL_PLAINTEXT访问方式接入方式。 - false：实例不支持内网SASL_PLAINTEXT访问接入方式。
     *
     * @return bool|null
     */
@@ -517,7 +517,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets privateSaslPlaintextEnable
     *
-    * @param bool|null $privateSaslPlaintextEnable 实例是否支持内网SASL_PLAINTEXT访问接入方式。  - true，实例支持内网SASL_PLAINTEXT访问方式接入方式。  - false，实例不支持内网SASL_PLAINTEXT访问接入方式。
+    * @param bool|null $privateSaslPlaintextEnable **参数解释**： 实例是否支持内网SASL_PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持内网SASL_PLAINTEXT访问方式接入方式。 - false：实例不支持内网SASL_PLAINTEXT访问接入方式。
     *
     * @return $this
     */
@@ -529,7 +529,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateSaslPlaintextAddress
-    *  kafka内网SASL_PLAINTEXT接入方式连接地址。
+    *  **参数解释**： Kafka内网SASL_PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -541,7 +541,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets privateSaslPlaintextAddress
     *
-    * @param string|null $privateSaslPlaintextAddress kafka内网SASL_PLAINTEXT接入方式连接地址。
+    * @param string|null $privateSaslPlaintextAddress **参数解释**： Kafka内网SASL_PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -553,7 +553,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateSaslPlaintextDomainName
-    *  内网SASL_PLAINTEXT连接域名
+    *  **参数解释**： 内网SASL_PLAINTEXT连接域名。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -565,7 +565,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets privateSaslPlaintextDomainName
     *
-    * @param string|null $privateSaslPlaintextDomainName 内网SASL_PLAINTEXT连接域名
+    * @param string|null $privateSaslPlaintextDomainName **参数解释**： 内网SASL_PLAINTEXT连接域名。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -577,7 +577,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicPlainEnable
-    *  实例是否支持公网PLAINTEXT访问接入方式。  - true，实例支持公网PLAINTEXT访问方式接入方式。  - false，实例不支持公网PLAINTEXT访问接入方式。
+    *  **参数解释**： 实例是否支持公网PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持公网PLAINTEXT访问方式接入方式。 - false：实例不支持公网PLAINTEXT访问接入方式。
     *
     * @return bool|null
     */
@@ -589,7 +589,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets publicPlainEnable
     *
-    * @param bool|null $publicPlainEnable 实例是否支持公网PLAINTEXT访问接入方式。  - true，实例支持公网PLAINTEXT访问方式接入方式。  - false，实例不支持公网PLAINTEXT访问接入方式。
+    * @param bool|null $publicPlainEnable **参数解释**： 实例是否支持公网PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持公网PLAINTEXT访问方式接入方式。 - false：实例不支持公网PLAINTEXT访问接入方式。
     *
     * @return $this
     */
@@ -601,7 +601,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicPlainAddress
-    *  kafka公网PLAINTEXT接入方式连接地址。
+    *  **参数解释**： Kafka公网PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -613,7 +613,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets publicPlainAddress
     *
-    * @param string|null $publicPlainAddress kafka公网PLAINTEXT接入方式连接地址。
+    * @param string|null $publicPlainAddress **参数解释**： Kafka公网PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -625,7 +625,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicPlainDomainName
-    *  公网明文连接域名
+    *  **参数解释**： 公网明文连接域名。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -637,7 +637,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets publicPlainDomainName
     *
-    * @param string|null $publicPlainDomainName 公网明文连接域名
+    * @param string|null $publicPlainDomainName **参数解释**： 公网明文连接域名。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -649,7 +649,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicSaslSslEnable
-    *  实例是否支持公网SASL_SSL访问接入方式。  - true，实例支持内网SASL_SSL访问方式接入方式。  - false，实例不支持公网SASL_SSL访问接入方式。
+    *  **参数解释**： 实例是否支持公网SASL_SSL访问接入方式。 **取值范围**： - true：实例支持内网SASL_SSL访问方式接入方式。 - false：实例不支持公网SASL_SSL访问接入方式。
     *
     * @return bool|null
     */
@@ -661,7 +661,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets publicSaslSslEnable
     *
-    * @param bool|null $publicSaslSslEnable 实例是否支持公网SASL_SSL访问接入方式。  - true，实例支持内网SASL_SSL访问方式接入方式。  - false，实例不支持公网SASL_SSL访问接入方式。
+    * @param bool|null $publicSaslSslEnable **参数解释**： 实例是否支持公网SASL_SSL访问接入方式。 **取值范围**： - true：实例支持内网SASL_SSL访问方式接入方式。 - false：实例不支持公网SASL_SSL访问接入方式。
     *
     * @return $this
     */
@@ -673,7 +673,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicSaslSslAddress
-    *  kafka公网SASL_SSL接入方式连接地址。
+    *  **参数解释**： Kafka公网SASL_SSL接入方式连接地址。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -685,7 +685,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets publicSaslSslAddress
     *
-    * @param string|null $publicSaslSslAddress kafka公网SASL_SSL接入方式连接地址。
+    * @param string|null $publicSaslSslAddress **参数解释**： Kafka公网SASL_SSL接入方式连接地址。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -697,7 +697,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicSaslSslDomainName
-    *  公网SASL_SSL连接域名
+    *  **参数解释**： 公网SASL_SSL连接域名。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -709,7 +709,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets publicSaslSslDomainName
     *
-    * @param string|null $publicSaslSslDomainName 公网SASL_SSL连接域名
+    * @param string|null $publicSaslSslDomainName **参数解释**： 公网SASL_SSL连接域名。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -721,7 +721,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicSaslPlaintextEnable
-    *  实例是否支持公网SASL_PLAINTEXT访问接入方式。  - true，实例支持公网SASL_PLAINTEXT访问方式接入方式。  - false，实例不支持公网SASL_PLAINTEXT访问接入方式。
+    *  **参数解释**： 实例是否支持公网SASL_PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持公网SASL_PLAINTEXT访问方式接入方式。 - false：实例不支持公网SASL_PLAINTEXT访问接入方式。
     *
     * @return bool|null
     */
@@ -733,7 +733,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets publicSaslPlaintextEnable
     *
-    * @param bool|null $publicSaslPlaintextEnable 实例是否支持公网SASL_PLAINTEXT访问接入方式。  - true，实例支持公网SASL_PLAINTEXT访问方式接入方式。  - false，实例不支持公网SASL_PLAINTEXT访问接入方式。
+    * @param bool|null $publicSaslPlaintextEnable **参数解释**： 实例是否支持公网SASL_PLAINTEXT访问接入方式。 **取值范围**： - true：实例支持公网SASL_PLAINTEXT访问方式接入方式。 - false：实例不支持公网SASL_PLAINTEXT访问接入方式。
     *
     * @return $this
     */
@@ -745,7 +745,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicSaslPlaintextAddress
-    *  kafka公网SASL_PLAINTEXT接入方式连接地址。
+    *  **参数解释**： Kafka公网SASL_PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -757,7 +757,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets publicSaslPlaintextAddress
     *
-    * @param string|null $publicSaslPlaintextAddress kafka公网SASL_PLAINTEXT接入方式连接地址。
+    * @param string|null $publicSaslPlaintextAddress **参数解释**： Kafka公网SASL_PLAINTEXT接入方式连接地址。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -769,7 +769,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicSaslPlaintextDomainName
-    *  公网SASL_PLAINTEXT连接域名
+    *  **参数解释**： 公网SASL_PLAINTEXT连接域名。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -781,7 +781,7 @@ class PortProtocolsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets publicSaslPlaintextDomainName
     *
-    * @param string|null $publicSaslPlaintextDomainName 公网SASL_PLAINTEXT连接域名
+    * @param string|null $publicSaslPlaintextDomainName **参数解释**： 公网SASL_PLAINTEXT连接域名。 **取值范围**： 不涉及
     *
     * @return $this
     */

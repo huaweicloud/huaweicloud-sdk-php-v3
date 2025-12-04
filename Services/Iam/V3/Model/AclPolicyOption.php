@@ -22,24 +22,28 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * allowAddressNetmasks  允许访问的IP地址或网段。
     * allowIpRanges  允许访问的IP地址区间。
+    * allowVpcEndpoints  允许访问的VPC端点。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'allowAddressNetmasks' => '\HuaweiCloud\SDK\Iam\V3\Model\AllowAddressNetmasksOption[]',
-            'allowIpRanges' => '\HuaweiCloud\SDK\Iam\V3\Model\AllowIpRangesOption[]'
+            'allowIpRanges' => '\HuaweiCloud\SDK\Iam\V3\Model\AllowIpRangesOption[]',
+            'allowVpcEndpoints' => '\HuaweiCloud\SDK\Iam\V3\Model\AllowVpcEndpointsResult[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * allowAddressNetmasks  允许访问的IP地址或网段。
     * allowIpRanges  允许访问的IP地址区间。
+    * allowVpcEndpoints  允许访问的VPC端点。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'allowAddressNetmasks' => null,
-        'allowIpRanges' => null
+        'allowIpRanges' => null,
+        'allowVpcEndpoints' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
     * and the value is the original name
     * allowAddressNetmasks  允许访问的IP地址或网段。
     * allowIpRanges  允许访问的IP地址区间。
+    * allowVpcEndpoints  允许访问的VPC端点。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'allowAddressNetmasks' => 'allow_address_netmasks',
-            'allowIpRanges' => 'allow_ip_ranges'
+            'allowIpRanges' => 'allow_ip_ranges',
+            'allowVpcEndpoints' => 'allow_vpc_endpoints'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * allowAddressNetmasks  允许访问的IP地址或网段。
     * allowIpRanges  允许访问的IP地址区间。
+    * allowVpcEndpoints  允许访问的VPC端点。
     *
     * @var string[]
     */
     protected static $setters = [
             'allowAddressNetmasks' => 'setAllowAddressNetmasks',
-            'allowIpRanges' => 'setAllowIpRanges'
+            'allowIpRanges' => 'setAllowIpRanges',
+            'allowVpcEndpoints' => 'setAllowVpcEndpoints'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * allowAddressNetmasks  允许访问的IP地址或网段。
     * allowIpRanges  允许访问的IP地址区间。
+    * allowVpcEndpoints  允许访问的VPC端点。
     *
     * @var string[]
     */
     protected static $getters = [
             'allowAddressNetmasks' => 'getAllowAddressNetmasks',
-            'allowIpRanges' => 'getAllowIpRanges'
+            'allowIpRanges' => 'getAllowIpRanges',
+            'allowVpcEndpoints' => 'getAllowVpcEndpoints'
     ];
 
     /**
@@ -159,6 +169,7 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
     {
         $this->container['allowAddressNetmasks'] = isset($data['allowAddressNetmasks']) ? $data['allowAddressNetmasks'] : null;
         $this->container['allowIpRanges'] = isset($data['allowIpRanges']) ? $data['allowIpRanges'] : null;
+        $this->container['allowVpcEndpoints'] = isset($data['allowVpcEndpoints']) ? $data['allowVpcEndpoints'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
     public function setAllowIpRanges($allowIpRanges)
     {
         $this->container['allowIpRanges'] = $allowIpRanges;
+        return $this;
+    }
+
+    /**
+    * Gets allowVpcEndpoints
+    *  允许访问的VPC端点。
+    *
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\AllowVpcEndpointsResult[]|null
+    */
+    public function getAllowVpcEndpoints()
+    {
+        return $this->container['allowVpcEndpoints'];
+    }
+
+    /**
+    * Sets allowVpcEndpoints
+    *
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\AllowVpcEndpointsResult[]|null $allowVpcEndpoints 允许访问的VPC端点。
+    *
+    * @return $this
+    */
+    public function setAllowVpcEndpoints($allowVpcEndpoints)
+    {
+        $this->container['allowVpcEndpoints'] = $allowVpcEndpoints;
         return $this;
     }
 

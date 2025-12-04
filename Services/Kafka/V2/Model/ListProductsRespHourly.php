@@ -20,9 +20,9 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  消息引擎的名称，该字段显示为kafka。
-    * version  消息引擎的版本，当前支持1.1.0、2.3.0和2.7。
-    * values  产品规格列表。
+    * name  **参数解释**： 消息引擎的名称，该字段显示为kafka。 **取值范围**： 不涉及。
+    * version  **参数解释**： 消息引擎的版本。 **取值范围**： - 1.1.0。 - 2.3.0。 - 2.7。
+    * values  **参数解释**： 产品规格列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  消息引擎的名称，该字段显示为kafka。
-    * version  消息引擎的版本，当前支持1.1.0、2.3.0和2.7。
-    * values  产品规格列表。
+    * name  **参数解释**： 消息引擎的名称，该字段显示为kafka。 **取值范围**： 不涉及。
+    * version  **参数解释**： 消息引擎的版本。 **取值范围**： - 1.1.0。 - 2.3.0。 - 2.7。
+    * values  **参数解释**： 产品规格列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  消息引擎的名称，该字段显示为kafka。
-    * version  消息引擎的版本，当前支持1.1.0、2.3.0和2.7。
-    * values  产品规格列表。
+    * name  **参数解释**： 消息引擎的名称，该字段显示为kafka。 **取值范围**： 不涉及。
+    * version  **参数解释**： 消息引擎的版本。 **取值范围**： - 1.1.0。 - 2.3.0。 - 2.7。
+    * values  **参数解释**： 产品规格列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  消息引擎的名称，该字段显示为kafka。
-    * version  消息引擎的版本，当前支持1.1.0、2.3.0和2.7。
-    * values  产品规格列表。
+    * name  **参数解释**： 消息引擎的名称，该字段显示为kafka。 **取值范围**： 不涉及。
+    * version  **参数解释**： 消息引擎的版本。 **取值范围**： - 1.1.0。 - 2.3.0。 - 2.7。
+    * values  **参数解释**： 产品规格列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  消息引擎的名称，该字段显示为kafka。
-    * version  消息引擎的版本，当前支持1.1.0、2.3.0和2.7。
-    * values  产品规格列表。
+    * name  **参数解释**： 消息引擎的名称，该字段显示为kafka。 **取值范围**： 不涉及。
+    * version  **参数解释**： 消息引擎的版本。 **取值范围**： - 1.1.0。 - 2.3.0。 - 2.7。
+    * values  **参数解释**： 产品规格列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  消息引擎的名称，该字段显示为kafka。
+    *  **参数解释**： 消息引擎的名称，该字段显示为kafka。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 消息引擎的名称，该字段显示为kafka。
+    * @param string|null $name **参数解释**： 消息引擎的名称，该字段显示为kafka。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  消息引擎的版本，当前支持1.1.0、2.3.0和2.7。
+    *  **参数解释**： 消息引擎的版本。 **取值范围**： - 1.1.0。 - 2.3.0。 - 2.7。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 消息引擎的版本，当前支持1.1.0、2.3.0和2.7。
+    * @param string|null $version **参数解释**： 消息引擎的版本。 **取值范围**： - 1.1.0。 - 2.3.0。 - 2.7。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  产品规格列表。
+    *  **参数解释**： 产品规格列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\ListProductsRespValues[]|null
     */
@@ -256,7 +256,7 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ListProductsRespValues[]|null $values 产品规格列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ListProductsRespValues[]|null $values **参数解释**： 产品规格列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

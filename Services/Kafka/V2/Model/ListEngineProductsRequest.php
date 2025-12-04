@@ -20,8 +20,8 @@ class ListEngineProductsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  消息引擎的类型。
-    * productId  产品ID。
+    * engine  **参数解释**： 消息引擎的类型。 **约束限制**： 不涉及。 **取值范围**： kafka **默认取值**： 不涉及。
+    * productId  **参数解释**： 产品ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ListEngineProductsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  消息引擎的类型。
-    * productId  产品ID。
+    * engine  **参数解释**： 消息引擎的类型。 **约束限制**： 不涉及。 **取值范围**： kafka **默认取值**： 不涉及。
+    * productId  **参数解释**： 产品ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ListEngineProductsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  消息引擎的类型。
-    * productId  产品ID。
+    * engine  **参数解释**： 消息引擎的类型。 **约束限制**： 不涉及。 **取值范围**： kafka **默认取值**： 不涉及。
+    * productId  **参数解释**： 产品ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ListEngineProductsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  消息引擎的类型。
-    * productId  产品ID。
+    * engine  **参数解释**： 消息引擎的类型。 **约束限制**： 不涉及。 **取值范围**： kafka **默认取值**： 不涉及。
+    * productId  **参数解释**： 产品ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ListEngineProductsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  消息引擎的类型。
-    * productId  产品ID。
+    * engine  **参数解释**： 消息引擎的类型。 **约束限制**： 不涉及。 **取值范围**： kafka **默认取值**： 不涉及。
+    * productId  **参数解释**： 产品ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class ListEngineProductsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  消息引擎的类型。
+    *  **参数解释**： 消息引擎的类型。 **约束限制**： 不涉及。 **取值范围**： kafka **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -221,7 +221,7 @@ class ListEngineProductsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string $engine 消息引擎的类型。
+    * @param string $engine **参数解释**： 消息引擎的类型。 **约束限制**： 不涉及。 **取值范围**： kafka **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -233,7 +233,7 @@ class ListEngineProductsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
-    *  产品ID。
+    *  **参数解释**： 产品ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -245,7 +245,7 @@ class ListEngineProductsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets productId
     *
-    * @param string|null $productId 产品ID。
+    * @param string|null $productId **参数解释**： 产品ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

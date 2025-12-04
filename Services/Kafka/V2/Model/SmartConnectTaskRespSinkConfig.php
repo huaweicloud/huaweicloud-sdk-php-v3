@@ -21,7 +21,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * consumerStrategy  **参数解释**： 转储启动偏移量。（仅目标端类型为OBS时会显示） **取值范围**： - latest：获取最新的数据。 - earliest：获取最早的数据。
-    * destinationFileType  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * destinationFileType  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： TEXT。
     * deliverTimeInterval  **参数解释**： 数据转储周期（秒）。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     * obsBucketName  **参数解释**： 转储地址。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     * obsPath  **参数解释**： 转储目录。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
@@ -61,7 +61,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * consumerStrategy  **参数解释**： 转储启动偏移量。（仅目标端类型为OBS时会显示） **取值范围**： - latest：获取最新的数据。 - earliest：获取最早的数据。
-    * destinationFileType  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * destinationFileType  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： TEXT。
     * deliverTimeInterval  **参数解释**： 数据转储周期（秒）。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     * obsBucketName  **参数解释**： 转储地址。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     * obsPath  **参数解释**： 转储目录。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
@@ -122,7 +122,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * consumerStrategy  **参数解释**： 转储启动偏移量。（仅目标端类型为OBS时会显示） **取值范围**： - latest：获取最新的数据。 - earliest：获取最早的数据。
-    * destinationFileType  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * destinationFileType  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： TEXT。
     * deliverTimeInterval  **参数解释**： 数据转储周期（秒）。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     * obsBucketName  **参数解释**： 转储地址。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     * obsPath  **参数解释**： 转储目录。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
@@ -162,7 +162,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * consumerStrategy  **参数解释**： 转储启动偏移量。（仅目标端类型为OBS时会显示） **取值范围**： - latest：获取最新的数据。 - earliest：获取最早的数据。
-    * destinationFileType  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * destinationFileType  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： TEXT。
     * deliverTimeInterval  **参数解释**： 数据转储周期（秒）。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     * obsBucketName  **参数解释**： 转储地址。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     * obsPath  **参数解释**： 转储目录。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
@@ -202,7 +202,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * consumerStrategy  **参数解释**： 转储启动偏移量。（仅目标端类型为OBS时会显示） **取值范围**： - latest：获取最新的数据。 - earliest：获取最早的数据。
-    * destinationFileType  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * destinationFileType  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： TEXT。
     * deliverTimeInterval  **参数解释**： 数据转储周期（秒）。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     * obsBucketName  **参数解释**： 转储地址。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
     * obsPath  **参数解释**： 转储目录。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
@@ -363,7 +363,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets destinationFileType
-    *  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    *  **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： TEXT。
     *
     * @return string|null
     */
@@ -375,7 +375,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     /**
     * Sets destinationFileType
     *
-    * @param string|null $destinationFileType **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+    * @param string|null $destinationFileType **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： TEXT。
     *
     * @return $this
     */

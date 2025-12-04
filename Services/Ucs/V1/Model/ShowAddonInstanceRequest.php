@@ -20,7 +20,7 @@ class ShowAddonInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  插件示例id
+    * id  插件实例id
     * isDatabaseStatus  是否使用数据库存储的插件状态
     * clusterId  集群id
     *
@@ -34,7 +34,7 @@ class ShowAddonInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  插件示例id
+    * id  插件实例id
     * isDatabaseStatus  是否使用数据库存储的插件状态
     * clusterId  集群id
     *
@@ -69,7 +69,7 @@ class ShowAddonInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  插件示例id
+    * id  插件实例id
     * isDatabaseStatus  是否使用数据库存储的插件状态
     * clusterId  集群id
     *
@@ -83,7 +83,7 @@ class ShowAddonInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  插件示例id
+    * id  插件实例id
     * isDatabaseStatus  是否使用数据库存储的插件状态
     * clusterId  集群id
     *
@@ -97,7 +97,7 @@ class ShowAddonInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  插件示例id
+    * id  插件实例id
     * isDatabaseStatus  是否使用数据库存储的插件状态
     * clusterId  集群id
     *
@@ -199,7 +199,7 @@ class ShowAddonInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  插件示例id
+    *  插件实例id
     *
     * @return string
     */
@@ -211,7 +211,7 @@ class ShowAddonInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 插件示例id
+    * @param string $id 插件实例id
     *
     * @return $this
     */

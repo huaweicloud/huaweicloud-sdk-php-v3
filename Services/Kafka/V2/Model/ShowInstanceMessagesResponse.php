@@ -21,9 +21,9 @@ class ShowInstanceMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * messages  消息列表。
-    * total  消息总条数。
-    * size  每页消息条数。
+    * messages  **参数解释**： 消息列表。
+    * total  **参数解释**： 消息总条数。 **取值范围**： 不涉及。
+    * size  **参数解释**： 每页消息条数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ShowInstanceMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * messages  消息列表。
-    * total  消息总条数。
-    * size  每页消息条数。
+    * messages  **参数解释**： 消息列表。
+    * total  **参数解释**： 消息总条数。 **取值范围**： 不涉及。
+    * size  **参数解释**： 每页消息条数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ShowInstanceMessagesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * messages  消息列表。
-    * total  消息总条数。
-    * size  每页消息条数。
+    * messages  **参数解释**： 消息列表。
+    * total  **参数解释**： 消息总条数。 **取值范围**： 不涉及。
+    * size  **参数解释**： 每页消息条数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ShowInstanceMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * messages  消息列表。
-    * total  消息总条数。
-    * size  每页消息条数。
+    * messages  **参数解释**： 消息列表。
+    * total  **参数解释**： 消息总条数。 **取值范围**： 不涉及。
+    * size  **参数解释**： 每页消息条数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ShowInstanceMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * messages  消息列表。
-    * total  消息总条数。
-    * size  每页消息条数。
+    * messages  **参数解释**： 消息列表。
+    * total  **参数解释**： 消息总条数。 **取值范围**： 不涉及。
+    * size  **参数解释**： 每页消息条数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ShowInstanceMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets messages
-    *  消息列表。
+    *  **参数解释**： 消息列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\MessagesEntity[]|null
     */
@@ -209,7 +209,7 @@ class ShowInstanceMessagesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets messages
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\MessagesEntity[]|null $messages 消息列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\MessagesEntity[]|null $messages **参数解释**： 消息列表。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ShowInstanceMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  消息总条数。
+    *  **参数解释**： 消息总条数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class ShowInstanceMessagesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 消息总条数。
+    * @param int|null $total **参数解释**： 消息总条数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ShowInstanceMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  每页消息条数。
+    *  **参数解释**： 每页消息条数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -257,7 +257,7 @@ class ShowInstanceMessagesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 每页消息条数。
+    * @param int|null $size **参数解释**： 每页消息条数。 **取值范围**： 不涉及。
     *
     * @return $this
     */

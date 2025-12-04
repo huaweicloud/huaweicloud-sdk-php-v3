@@ -26,7 +26,7 @@ class StartTaskGroupReq implements ModelInterface, ArrayAccess
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * dstAk  目的端节点AK（最大长度100个字符）。
     * dstSk  目的端节点SK（最大长度100个字符）。
-    * sourceCdnAuthenticationKey  CDN鉴权秘钥。
+    * sourceCdnAuthenticationKey  CDN鉴权密钥。
     *
     * @var string[]
     */
@@ -48,7 +48,7 @@ class StartTaskGroupReq implements ModelInterface, ArrayAccess
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * dstAk  目的端节点AK（最大长度100个字符）。
     * dstSk  目的端节点SK（最大长度100个字符）。
-    * sourceCdnAuthenticationKey  CDN鉴权秘钥。
+    * sourceCdnAuthenticationKey  CDN鉴权密钥。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class StartTaskGroupReq implements ModelInterface, ArrayAccess
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * dstAk  目的端节点AK（最大长度100个字符）。
     * dstSk  目的端节点SK（最大长度100个字符）。
-    * sourceCdnAuthenticationKey  CDN鉴权秘钥。
+    * sourceCdnAuthenticationKey  CDN鉴权密钥。
     *
     * @var string[]
     */
@@ -113,7 +113,7 @@ class StartTaskGroupReq implements ModelInterface, ArrayAccess
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * dstAk  目的端节点AK（最大长度100个字符）。
     * dstSk  目的端节点SK（最大长度100个字符）。
-    * sourceCdnAuthenticationKey  CDN鉴权秘钥。
+    * sourceCdnAuthenticationKey  CDN鉴权密钥。
     *
     * @var string[]
     */
@@ -135,7 +135,7 @@ class StartTaskGroupReq implements ModelInterface, ArrayAccess
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * dstAk  目的端节点AK（最大长度100个字符）。
     * dstSk  目的端节点SK（最大长度100个字符）。
-    * sourceCdnAuthenticationKey  CDN鉴权秘钥。
+    * sourceCdnAuthenticationKey  CDN鉴权密钥。
     *
     * @var string[]
     */
@@ -447,7 +447,7 @@ class StartTaskGroupReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceCdnAuthenticationKey
-    *  CDN鉴权秘钥。
+    *  CDN鉴权密钥。
     *
     * @return string|null
     */
@@ -459,7 +459,7 @@ class StartTaskGroupReq implements ModelInterface, ArrayAccess
     /**
     * Sets sourceCdnAuthenticationKey
     *
-    * @param string|null $sourceCdnAuthenticationKey CDN鉴权秘钥。
+    * @param string|null $sourceCdnAuthenticationKey CDN鉴权密钥。
     *
     * @return $this
     */

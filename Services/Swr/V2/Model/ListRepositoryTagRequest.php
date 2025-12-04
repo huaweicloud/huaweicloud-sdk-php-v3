@@ -25,6 +25,8 @@ class ListRepositoryTagRequest implements ModelInterface, ArrayAccess
     * limit  返回条数,默认返回100条，最多返回1000条数据。
     * marker  Start position of the cursor for querying the next page in pagination query.
     * tag  镜像版本名。
+    * orderColumn  按列排序，可设置为updated_at（按更新时间排序）或者tag（按照镜像版本排序）。注意：order_column和order_type参数需要配套使用。
+    * orderType  排序类型，可设置为desc（降序）、asc（升序）。注意：order_column和order_type参数需要配套使用。
     * withManifest  是否返回镜像的manifest信息
     *
     * @var string[]
@@ -35,6 +37,8 @@ class ListRepositoryTagRequest implements ModelInterface, ArrayAccess
             'limit' => 'int',
             'marker' => 'string',
             'tag' => 'string',
+            'orderColumn' => 'string',
+            'orderType' => 'string',
             'withManifest' => 'bool'
     ];
 
@@ -45,6 +49,8 @@ class ListRepositoryTagRequest implements ModelInterface, ArrayAccess
     * limit  返回条数,默认返回100条，最多返回1000条数据。
     * marker  Start position of the cursor for querying the next page in pagination query.
     * tag  镜像版本名。
+    * orderColumn  按列排序，可设置为updated_at（按更新时间排序）或者tag（按照镜像版本排序）。注意：order_column和order_type参数需要配套使用。
+    * orderType  排序类型，可设置为desc（降序）、asc（升序）。注意：order_column和order_type参数需要配套使用。
     * withManifest  是否返回镜像的manifest信息
     *
     * @var string[]
@@ -55,6 +61,8 @@ class ListRepositoryTagRequest implements ModelInterface, ArrayAccess
         'limit' => null,
         'marker' => null,
         'tag' => null,
+        'orderColumn' => null,
+        'orderType' => null,
         'withManifest' => null
     ];
 
@@ -86,6 +94,8 @@ class ListRepositoryTagRequest implements ModelInterface, ArrayAccess
     * limit  返回条数,默认返回100条，最多返回1000条数据。
     * marker  Start position of the cursor for querying the next page in pagination query.
     * tag  镜像版本名。
+    * orderColumn  按列排序，可设置为updated_at（按更新时间排序）或者tag（按照镜像版本排序）。注意：order_column和order_type参数需要配套使用。
+    * orderType  排序类型，可设置为desc（降序）、asc（升序）。注意：order_column和order_type参数需要配套使用。
     * withManifest  是否返回镜像的manifest信息
     *
     * @var string[]
@@ -96,6 +106,8 @@ class ListRepositoryTagRequest implements ModelInterface, ArrayAccess
             'limit' => 'limit',
             'marker' => 'marker',
             'tag' => 'tag',
+            'orderColumn' => 'order_column',
+            'orderType' => 'order_type',
             'withManifest' => 'with_manifest'
     ];
 
@@ -106,6 +118,8 @@ class ListRepositoryTagRequest implements ModelInterface, ArrayAccess
     * limit  返回条数,默认返回100条，最多返回1000条数据。
     * marker  Start position of the cursor for querying the next page in pagination query.
     * tag  镜像版本名。
+    * orderColumn  按列排序，可设置为updated_at（按更新时间排序）或者tag（按照镜像版本排序）。注意：order_column和order_type参数需要配套使用。
+    * orderType  排序类型，可设置为desc（降序）、asc（升序）。注意：order_column和order_type参数需要配套使用。
     * withManifest  是否返回镜像的manifest信息
     *
     * @var string[]
@@ -116,6 +130,8 @@ class ListRepositoryTagRequest implements ModelInterface, ArrayAccess
             'limit' => 'setLimit',
             'marker' => 'setMarker',
             'tag' => 'setTag',
+            'orderColumn' => 'setOrderColumn',
+            'orderType' => 'setOrderType',
             'withManifest' => 'setWithManifest'
     ];
 
@@ -126,6 +142,8 @@ class ListRepositoryTagRequest implements ModelInterface, ArrayAccess
     * limit  返回条数,默认返回100条，最多返回1000条数据。
     * marker  Start position of the cursor for querying the next page in pagination query.
     * tag  镜像版本名。
+    * orderColumn  按列排序，可设置为updated_at（按更新时间排序）或者tag（按照镜像版本排序）。注意：order_column和order_type参数需要配套使用。
+    * orderType  排序类型，可设置为desc（降序）、asc（升序）。注意：order_column和order_type参数需要配套使用。
     * withManifest  是否返回镜像的manifest信息
     *
     * @var string[]
@@ -136,6 +154,8 @@ class ListRepositoryTagRequest implements ModelInterface, ArrayAccess
             'limit' => 'getLimit',
             'marker' => 'getMarker',
             'tag' => 'getTag',
+            'orderColumn' => 'getOrderColumn',
+            'orderType' => 'getOrderType',
             'withManifest' => 'getWithManifest'
     ];
 
@@ -202,6 +222,8 @@ class ListRepositoryTagRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
+        $this->container['orderColumn'] = isset($data['orderColumn']) ? $data['orderColumn'] : null;
+        $this->container['orderType'] = isset($data['orderType']) ? $data['orderType'] : null;
         $this->container['withManifest'] = isset($data['withManifest']) ? $data['withManifest'] : null;
     }
 
@@ -356,6 +378,54 @@ class ListRepositoryTagRequest implements ModelInterface, ArrayAccess
     public function setTag($tag)
     {
         $this->container['tag'] = $tag;
+        return $this;
+    }
+
+    /**
+    * Gets orderColumn
+    *  按列排序，可设置为updated_at（按更新时间排序）或者tag（按照镜像版本排序）。注意：order_column和order_type参数需要配套使用。
+    *
+    * @return string|null
+    */
+    public function getOrderColumn()
+    {
+        return $this->container['orderColumn'];
+    }
+
+    /**
+    * Sets orderColumn
+    *
+    * @param string|null $orderColumn 按列排序，可设置为updated_at（按更新时间排序）或者tag（按照镜像版本排序）。注意：order_column和order_type参数需要配套使用。
+    *
+    * @return $this
+    */
+    public function setOrderColumn($orderColumn)
+    {
+        $this->container['orderColumn'] = $orderColumn;
+        return $this;
+    }
+
+    /**
+    * Gets orderType
+    *  排序类型，可设置为desc（降序）、asc（升序）。注意：order_column和order_type参数需要配套使用。
+    *
+    * @return string|null
+    */
+    public function getOrderType()
+    {
+        return $this->container['orderType'];
+    }
+
+    /**
+    * Sets orderType
+    *
+    * @param string|null $orderType 排序类型，可设置为desc（降序）、asc（升序）。注意：order_column和order_type参数需要配套使用。
+    *
+    * @return $this
+    */
+    public function setOrderType($orderType)
+    {
+        $this->container['orderType'] = $orderType;
         return $this;
     }
 

@@ -26,7 +26,7 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * dstAk  目的端ak（最大长度100个字符）
     * dstSk  目的端sk（最大长度100个字符）
-    * sourceCdnAuthenticationKey  cdn鉴权秘钥
+    * sourceCdnAuthenticationKey  cdn鉴权密钥
     * migrateFailedObject  失败任务重试方式，标识是否为全量重新迁移，默认false（全量重新迁移）。 值为true时表示只重传失败对象。 值为空或者为false时表示全量重新迁移（默认跳过目的端已迁移对象）。
     *
     * @var string[]
@@ -50,7 +50,7 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * dstAk  目的端ak（最大长度100个字符）
     * dstSk  目的端sk（最大长度100个字符）
-    * sourceCdnAuthenticationKey  cdn鉴权秘钥
+    * sourceCdnAuthenticationKey  cdn鉴权密钥
     * migrateFailedObject  失败任务重试方式，标识是否为全量重新迁移，默认false（全量重新迁移）。 值为true时表示只重传失败对象。 值为空或者为false时表示全量重新迁移（默认跳过目的端已迁移对象）。
     *
     * @var string[]
@@ -95,7 +95,7 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * dstAk  目的端ak（最大长度100个字符）
     * dstSk  目的端sk（最大长度100个字符）
-    * sourceCdnAuthenticationKey  cdn鉴权秘钥
+    * sourceCdnAuthenticationKey  cdn鉴权密钥
     * migrateFailedObject  失败任务重试方式，标识是否为全量重新迁移，默认false（全量重新迁移）。 值为true时表示只重传失败对象。 值为空或者为false时表示全量重新迁移（默认跳过目的端已迁移对象）。
     *
     * @var string[]
@@ -119,7 +119,7 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * dstAk  目的端ak（最大长度100个字符）
     * dstSk  目的端sk（最大长度100个字符）
-    * sourceCdnAuthenticationKey  cdn鉴权秘钥
+    * sourceCdnAuthenticationKey  cdn鉴权密钥
     * migrateFailedObject  失败任务重试方式，标识是否为全量重新迁移，默认false（全量重新迁移）。 值为true时表示只重传失败对象。 值为空或者为false时表示全量重新迁移（默认跳过目的端已迁移对象）。
     *
     * @var string[]
@@ -143,7 +143,7 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * dstAk  目的端ak（最大长度100个字符）
     * dstSk  目的端sk（最大长度100个字符）
-    * sourceCdnAuthenticationKey  cdn鉴权秘钥
+    * sourceCdnAuthenticationKey  cdn鉴权密钥
     * migrateFailedObject  失败任务重试方式，标识是否为全量重新迁移，默认false（全量重新迁移）。 值为true时表示只重传失败对象。 值为空或者为false时表示全量重新迁移（默认跳过目的端已迁移对象）。
     *
     * @var string[]
@@ -452,7 +452,7 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceCdnAuthenticationKey
-    *  cdn鉴权秘钥
+    *  cdn鉴权密钥
     *
     * @return string|null
     */
@@ -464,7 +464,7 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
     /**
     * Sets sourceCdnAuthenticationKey
     *
-    * @param string|null $sourceCdnAuthenticationKey cdn鉴权秘钥
+    * @param string|null $sourceCdnAuthenticationKey cdn鉴权密钥
     *
     * @return $this
     */

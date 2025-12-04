@@ -23,7 +23,7 @@ class UpdatePolicyRuleStatusRequest implements ModelInterface, ArrayAccess
     * contentType  内容类型
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
     * policyId  策略id（策略id从查询防护策略列表接口获取）
-    * ruletype  策略类型
+    * ruletype  **参数解释：** 策略类型 **约束限制：** 不涉及 **取值范围：**  - custom：精准防护   - cc: cc攻击   - whiteblackip: 黑白名单  - geoip: 地理位置  - privacy: 私屏蔽防护  - antitamper: 防篡改规则  - ignore: 全局白名单  **默认取值：** 不涉及
     * ruleId  规则id，根据不同的规则类型（ruletype）调用规则列表接口获取规则id，例如黑白名单（whiteblackip）规则id，您可以通过调用查询黑白名单规则列表（ListWhiteblackipRule）获取规则id
     * body  body
     *
@@ -43,7 +43,7 @@ class UpdatePolicyRuleStatusRequest implements ModelInterface, ArrayAccess
     * contentType  内容类型
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
     * policyId  策略id（策略id从查询防护策略列表接口获取）
-    * ruletype  策略类型
+    * ruletype  **参数解释：** 策略类型 **约束限制：** 不涉及 **取值范围：**  - custom：精准防护   - cc: cc攻击   - whiteblackip: 黑白名单  - geoip: 地理位置  - privacy: 私屏蔽防护  - antitamper: 防篡改规则  - ignore: 全局白名单  **默认取值：** 不涉及
     * ruleId  规则id，根据不同的规则类型（ruletype）调用规则列表接口获取规则id，例如黑白名单（whiteblackip）规则id，您可以通过调用查询黑白名单规则列表（ListWhiteblackipRule）获取规则id
     * body  body
     *
@@ -84,7 +84,7 @@ class UpdatePolicyRuleStatusRequest implements ModelInterface, ArrayAccess
     * contentType  内容类型
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
     * policyId  策略id（策略id从查询防护策略列表接口获取）
-    * ruletype  策略类型
+    * ruletype  **参数解释：** 策略类型 **约束限制：** 不涉及 **取值范围：**  - custom：精准防护   - cc: cc攻击   - whiteblackip: 黑白名单  - geoip: 地理位置  - privacy: 私屏蔽防护  - antitamper: 防篡改规则  - ignore: 全局白名单  **默认取值：** 不涉及
     * ruleId  规则id，根据不同的规则类型（ruletype）调用规则列表接口获取规则id，例如黑白名单（whiteblackip）规则id，您可以通过调用查询黑白名单规则列表（ListWhiteblackipRule）获取规则id
     * body  body
     *
@@ -104,7 +104,7 @@ class UpdatePolicyRuleStatusRequest implements ModelInterface, ArrayAccess
     * contentType  内容类型
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
     * policyId  策略id（策略id从查询防护策略列表接口获取）
-    * ruletype  策略类型
+    * ruletype  **参数解释：** 策略类型 **约束限制：** 不涉及 **取值范围：**  - custom：精准防护   - cc: cc攻击   - whiteblackip: 黑白名单  - geoip: 地理位置  - privacy: 私屏蔽防护  - antitamper: 防篡改规则  - ignore: 全局白名单  **默认取值：** 不涉及
     * ruleId  规则id，根据不同的规则类型（ruletype）调用规则列表接口获取规则id，例如黑白名单（whiteblackip）规则id，您可以通过调用查询黑白名单规则列表（ListWhiteblackipRule）获取规则id
     * body  body
     *
@@ -124,7 +124,7 @@ class UpdatePolicyRuleStatusRequest implements ModelInterface, ArrayAccess
     * contentType  内容类型
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
     * policyId  策略id（策略id从查询防护策略列表接口获取）
-    * ruletype  策略类型
+    * ruletype  **参数解释：** 策略类型 **约束限制：** 不涉及 **取值范围：**  - custom：精准防护   - cc: cc攻击   - whiteblackip: 黑白名单  - geoip: 地理位置  - privacy: 私屏蔽防护  - antitamper: 防篡改规则  - ignore: 全局白名单  **默认取值：** 不涉及
     * ruleId  规则id，根据不同的规则类型（ruletype）调用规则列表接口获取规则id，例如黑白名单（whiteblackip）规则id，您可以通过调用查询黑白名单规则列表（ListWhiteblackipRule）获取规则id
     * body  body
     *
@@ -346,7 +346,7 @@ class UpdatePolicyRuleStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruletype
-    *  策略类型
+    *  **参数解释：** 策略类型 **约束限制：** 不涉及 **取值范围：**  - custom：精准防护   - cc: cc攻击   - whiteblackip: 黑白名单  - geoip: 地理位置  - privacy: 私屏蔽防护  - antitamper: 防篡改规则  - ignore: 全局白名单  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -358,7 +358,7 @@ class UpdatePolicyRuleStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ruletype
     *
-    * @param string $ruletype 策略类型
+    * @param string $ruletype **参数解释：** 策略类型 **约束限制：** 不涉及 **取值范围：**  - custom：精准防护   - cc: cc攻击   - whiteblackip: 黑白名单  - geoip: 地理位置  - privacy: 私屏蔽防护  - antitamper: 防篡改规则  - ignore: 全局白名单  **默认取值：** 不涉及
     *
     * @return $this
     */

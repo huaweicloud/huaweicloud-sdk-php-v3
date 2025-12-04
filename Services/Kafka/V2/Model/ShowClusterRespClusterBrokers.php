@@ -20,13 +20,13 @@ class ShowClusterRespClusterBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * host  节点IP。
-    * port  端口号。
-    * brokerId  节点ID。
-    * isController  是否为contoller节点。
-    * version  服务端版本。
-    * registerTime  broker注册时间，为unix时间戳格式。
-    * isHealth  Kafka实例节点的连通性是否正常。
+    * host  **参数解释**： 节点IP。 **取值范围**： 不涉及。
+    * port  **参数解释**： 端口号。 **取值范围**： 不涉及。
+    * brokerId  **参数解释**： 节点ID。 **取值范围**： 不涉及。
+    * isController  **参数解释**： 是否为controller节点。 **取值范围**： - true：是controller节点。 - false：不是controller节点。
+    * version  **参数解释**： 服务端版本。 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax)
+    * registerTime  **参数解释**： broker注册时间，为unix时间戳格式。 **取值范围**： 不涉及。
+    * isHealth  **参数解释**： Kafka实例节点的连通性是否正常。 **取值范围**： - true：正常。 - false：不正常。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class ShowClusterRespClusterBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * host  节点IP。
-    * port  端口号。
-    * brokerId  节点ID。
-    * isController  是否为contoller节点。
-    * version  服务端版本。
-    * registerTime  broker注册时间，为unix时间戳格式。
-    * isHealth  Kafka实例节点的连通性是否正常。
+    * host  **参数解释**： 节点IP。 **取值范围**： 不涉及。
+    * port  **参数解释**： 端口号。 **取值范围**： 不涉及。
+    * brokerId  **参数解释**： 节点ID。 **取值范围**： 不涉及。
+    * isController  **参数解释**： 是否为controller节点。 **取值范围**： - true：是controller节点。 - false：不是controller节点。
+    * version  **参数解释**： 服务端版本。 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax)
+    * registerTime  **参数解释**： broker注册时间，为unix时间戳格式。 **取值范围**： 不涉及。
+    * isHealth  **参数解释**： Kafka实例节点的连通性是否正常。 **取值范围**： - true：正常。 - false：不正常。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class ShowClusterRespClusterBrokers implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * host  节点IP。
-    * port  端口号。
-    * brokerId  节点ID。
-    * isController  是否为contoller节点。
-    * version  服务端版本。
-    * registerTime  broker注册时间，为unix时间戳格式。
-    * isHealth  Kafka实例节点的连通性是否正常。
+    * host  **参数解释**： 节点IP。 **取值范围**： 不涉及。
+    * port  **参数解释**： 端口号。 **取值范围**： 不涉及。
+    * brokerId  **参数解释**： 节点ID。 **取值范围**： 不涉及。
+    * isController  **参数解释**： 是否为controller节点。 **取值范围**： - true：是controller节点。 - false：不是controller节点。
+    * version  **参数解释**： 服务端版本。 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax)
+    * registerTime  **参数解释**： broker注册时间，为unix时间戳格式。 **取值范围**： 不涉及。
+    * isHealth  **参数解释**： Kafka实例节点的连通性是否正常。 **取值范围**： - true：正常。 - false：不正常。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class ShowClusterRespClusterBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * host  节点IP。
-    * port  端口号。
-    * brokerId  节点ID。
-    * isController  是否为contoller节点。
-    * version  服务端版本。
-    * registerTime  broker注册时间，为unix时间戳格式。
-    * isHealth  Kafka实例节点的连通性是否正常。
+    * host  **参数解释**： 节点IP。 **取值范围**： 不涉及。
+    * port  **参数解释**： 端口号。 **取值范围**： 不涉及。
+    * brokerId  **参数解释**： 节点ID。 **取值范围**： 不涉及。
+    * isController  **参数解释**： 是否为controller节点。 **取值范围**： - true：是controller节点。 - false：不是controller节点。
+    * version  **参数解释**： 服务端版本。 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax)
+    * registerTime  **参数解释**： broker注册时间，为unix时间戳格式。 **取值范围**： 不涉及。
+    * isHealth  **参数解释**： Kafka实例节点的连通性是否正常。 **取值范围**： - true：正常。 - false：不正常。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class ShowClusterRespClusterBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * host  节点IP。
-    * port  端口号。
-    * brokerId  节点ID。
-    * isController  是否为contoller节点。
-    * version  服务端版本。
-    * registerTime  broker注册时间，为unix时间戳格式。
-    * isHealth  Kafka实例节点的连通性是否正常。
+    * host  **参数解释**： 节点IP。 **取值范围**： 不涉及。
+    * port  **参数解释**： 端口号。 **取值范围**： 不涉及。
+    * brokerId  **参数解释**： 节点ID。 **取值范围**： 不涉及。
+    * isController  **参数解释**： 是否为controller节点。 **取值范围**： - true：是controller节点。 - false：不是controller节点。
+    * version  **参数解释**： 服务端版本。 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax)
+    * registerTime  **参数解释**： broker注册时间，为unix时间戳格式。 **取值范围**： 不涉及。
+    * isHealth  **参数解释**： Kafka实例节点的连通性是否正常。 **取值范围**： - true：正常。 - false：不正常。
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class ShowClusterRespClusterBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Gets host
-    *  节点IP。
+    *  **参数解释**： 节点IP。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class ShowClusterRespClusterBrokers implements ModelInterface, ArrayAccess
     /**
     * Sets host
     *
-    * @param string|null $host 节点IP。
+    * @param string|null $host **参数解释**： 节点IP。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class ShowClusterRespClusterBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Gets port
-    *  端口号。
+    *  **参数解释**： 端口号。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -276,7 +276,7 @@ class ShowClusterRespClusterBrokers implements ModelInterface, ArrayAccess
     /**
     * Sets port
     *
-    * @param int|null $port 端口号。
+    * @param int|null $port **参数解释**： 端口号。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class ShowClusterRespClusterBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokerId
-    *  节点ID。
+    *  **参数解释**： 节点ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class ShowClusterRespClusterBrokers implements ModelInterface, ArrayAccess
     /**
     * Sets brokerId
     *
-    * @param string|null $brokerId 节点ID。
+    * @param string|null $brokerId **参数解释**： 节点ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class ShowClusterRespClusterBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Gets isController
-    *  是否为contoller节点。
+    *  **参数解释**： 是否为controller节点。 **取值范围**： - true：是controller节点。 - false：不是controller节点。
     *
     * @return bool|null
     */
@@ -324,7 +324,7 @@ class ShowClusterRespClusterBrokers implements ModelInterface, ArrayAccess
     /**
     * Sets isController
     *
-    * @param bool|null $isController 是否为contoller节点。
+    * @param bool|null $isController **参数解释**： 是否为controller节点。 **取值范围**： - true：是controller节点。 - false：不是controller节点。
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class ShowClusterRespClusterBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  服务端版本。
+    *  **参数解释**： 服务端版本。 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax)
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class ShowClusterRespClusterBrokers implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 服务端版本。
+    * @param string|null $version **参数解释**： 服务端版本。 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax)
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class ShowClusterRespClusterBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Gets registerTime
-    *  broker注册时间，为unix时间戳格式。
+    *  **参数解释**： broker注册时间，为unix时间戳格式。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -372,7 +372,7 @@ class ShowClusterRespClusterBrokers implements ModelInterface, ArrayAccess
     /**
     * Sets registerTime
     *
-    * @param int|null $registerTime broker注册时间，为unix时间戳格式。
+    * @param int|null $registerTime **参数解释**： broker注册时间，为unix时间戳格式。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class ShowClusterRespClusterBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Gets isHealth
-    *  Kafka实例节点的连通性是否正常。
+    *  **参数解释**： Kafka实例节点的连通性是否正常。 **取值范围**： - true：正常。 - false：不正常。
     *
     * @return bool|null
     */
@@ -396,7 +396,7 @@ class ShowClusterRespClusterBrokers implements ModelInterface, ArrayAccess
     /**
     * Sets isHealth
     *
-    * @param bool|null $isHealth Kafka实例节点的连通性是否正常。
+    * @param bool|null $isHealth **参数解释**： Kafka实例节点的连通性是否正常。 **取值范围**： - true：正常。 - false：不正常。
     *
     * @return $this
     */

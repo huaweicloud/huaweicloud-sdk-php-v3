@@ -20,7 +20,7 @@ class ListValueListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * contentType  内容类型
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * page  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
     * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
     * name  引用表名称
@@ -36,7 +36,7 @@ class ListValueListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * contentType  内容类型
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * page  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
     * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
     * name  引用表名称
@@ -73,7 +73,7 @@ class ListValueListRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * contentType  内容类型
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * page  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
     * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
     * name  引用表名称
@@ -89,7 +89,7 @@ class ListValueListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * contentType  内容类型
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * page  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
     * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
     * name  引用表名称
@@ -105,7 +105,7 @@ class ListValueListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * contentType  内容类型
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * page  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
     * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
     * name  引用表名称
@@ -210,7 +210,7 @@ class ListValueListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets contentType
-    *  内容类型
+    *  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     *
     * @return string
     */
@@ -222,7 +222,7 @@ class ListValueListRequest implements ModelInterface, ArrayAccess
     /**
     * Sets contentType
     *
-    * @param string $contentType 内容类型
+    * @param string $contentType **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     *
     * @return $this
     */

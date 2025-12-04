@@ -21,25 +21,21 @@ class DownloadHttpCertResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
     * contentType  contentType
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'string',
             'contentType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
     * contentType  contentType
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null,
         'contentType' => null
     ];
 
@@ -66,37 +62,31 @@ class DownloadHttpCertResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
     * contentType  contentType
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body',
             'contentType' => 'content-type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
     * contentType  contentType
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody',
             'contentType' => 'setContentType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
     * contentType  contentType
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody',
             'contentType' => 'getContentType'
     ];
 
@@ -158,7 +148,6 @@ class DownloadHttpCertResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
         $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
     }
 
@@ -182,30 +171,6 @@ class DownloadHttpCertResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets body
-    *  body
-    *
-    * @return string|null
-    */
-    public function getBody()
-    {
-        return $this->container['body'];
-    }
-
-    /**
-    * Sets body
-    *
-    * @param string|null $body body
-    *
-    * @return $this
-    */
-    public function setBody($body)
-    {
-        $this->container['body'] = $body;
-        return $this;
     }
 
     /**

@@ -23,7 +23,7 @@ class CertificateBody implements ModelInterface, ArrayAccess
     * id  证书id
     * name  证书名
     * expireTime  证书过期时间戳
-    * expStatus  证书过期状态，0-未过期，1-已过期，2-即将过期（一个月内即将过期）
+    * expStatus  **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
     * timestamp  证书上传时间戳
     * bindHost  证书关联的域名信息
     *
@@ -43,7 +43,7 @@ class CertificateBody implements ModelInterface, ArrayAccess
     * id  证书id
     * name  证书名
     * expireTime  证书过期时间戳
-    * expStatus  证书过期状态，0-未过期，1-已过期，2-即将过期（一个月内即将过期）
+    * expStatus  **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
     * timestamp  证书上传时间戳
     * bindHost  证书关联的域名信息
     *
@@ -84,7 +84,7 @@ class CertificateBody implements ModelInterface, ArrayAccess
     * id  证书id
     * name  证书名
     * expireTime  证书过期时间戳
-    * expStatus  证书过期状态，0-未过期，1-已过期，2-即将过期（一个月内即将过期）
+    * expStatus  **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
     * timestamp  证书上传时间戳
     * bindHost  证书关联的域名信息
     *
@@ -104,7 +104,7 @@ class CertificateBody implements ModelInterface, ArrayAccess
     * id  证书id
     * name  证书名
     * expireTime  证书过期时间戳
-    * expStatus  证书过期状态，0-未过期，1-已过期，2-即将过期（一个月内即将过期）
+    * expStatus  **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
     * timestamp  证书上传时间戳
     * bindHost  证书关联的域名信息
     *
@@ -124,7 +124,7 @@ class CertificateBody implements ModelInterface, ArrayAccess
     * id  证书id
     * name  证书名
     * expireTime  证书过期时间戳
-    * expStatus  证书过期状态，0-未过期，1-已过期，2-即将过期（一个月内即将过期）
+    * expStatus  **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
     * timestamp  证书上传时间戳
     * bindHost  证书关联的域名信息
     *
@@ -310,7 +310,7 @@ class CertificateBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets expStatus
-    *  证书过期状态，0-未过期，1-已过期，2-即将过期（一个月内即将过期）
+    *  **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -322,7 +322,7 @@ class CertificateBody implements ModelInterface, ArrayAccess
     /**
     * Sets expStatus
     *
-    * @param int|null $expStatus 证书过期状态，0-未过期，1-已过期，2-即将过期（一个月内即将过期）
+    * @param int|null $expStatus **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
     *
     * @return $this
     */

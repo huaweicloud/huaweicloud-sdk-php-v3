@@ -23,13 +23,15 @@ class CreateLlmConfigReq implements ModelInterface, ArrayAccess
     * name  大语言模型配置名称。
     * llmUrl  大语言模型地址。
     * apiKey  密钥。
+    * model  model参数
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
             'llmUrl' => 'string',
-            'apiKey' => 'string'
+            'apiKey' => 'string',
+            'model' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class CreateLlmConfigReq implements ModelInterface, ArrayAccess
     * name  大语言模型配置名称。
     * llmUrl  大语言模型地址。
     * apiKey  密钥。
+    * model  model参数
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
         'llmUrl' => null,
-        'apiKey' => null
+        'apiKey' => null,
+        'model' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class CreateLlmConfigReq implements ModelInterface, ArrayAccess
     * name  大语言模型配置名称。
     * llmUrl  大语言模型地址。
     * apiKey  密钥。
+    * model  model参数
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
             'llmUrl' => 'llm_url',
-            'apiKey' => 'api_key'
+            'apiKey' => 'api_key',
+            'model' => 'model'
     ];
 
     /**
@@ -86,13 +92,15 @@ class CreateLlmConfigReq implements ModelInterface, ArrayAccess
     * name  大语言模型配置名称。
     * llmUrl  大语言模型地址。
     * apiKey  密钥。
+    * model  model参数
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
             'llmUrl' => 'setLlmUrl',
-            'apiKey' => 'setApiKey'
+            'apiKey' => 'setApiKey',
+            'model' => 'setModel'
     ];
 
     /**
@@ -100,13 +108,15 @@ class CreateLlmConfigReq implements ModelInterface, ArrayAccess
     * name  大语言模型配置名称。
     * llmUrl  大语言模型地址。
     * apiKey  密钥。
+    * model  model参数
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
             'llmUrl' => 'getLlmUrl',
-            'apiKey' => 'getApiKey'
+            'apiKey' => 'getApiKey',
+            'model' => 'getModel'
     ];
 
     /**
@@ -170,6 +180,7 @@ class CreateLlmConfigReq implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['llmUrl'] = isset($data['llmUrl']) ? $data['llmUrl'] : null;
         $this->container['apiKey'] = isset($data['apiKey']) ? $data['apiKey'] : null;
+        $this->container['model'] = isset($data['model']) ? $data['model'] : null;
     }
 
     /**
@@ -206,6 +217,12 @@ class CreateLlmConfigReq implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['apiKey']) < 1)) {
                 $invalidProperties[] = "invalid value for 'apiKey', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['model']) && (mb_strlen($this->container['model']) > 64)) {
+                $invalidProperties[] = "invalid value for 'model', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['model']) && (mb_strlen($this->container['model']) < 0)) {
+                $invalidProperties[] = "invalid value for 'model', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -290,6 +307,30 @@ class CreateLlmConfigReq implements ModelInterface, ArrayAccess
     public function setApiKey($apiKey)
     {
         $this->container['apiKey'] = $apiKey;
+        return $this;
+    }
+
+    /**
+    * Gets model
+    *  model参数
+    *
+    * @return string|null
+    */
+    public function getModel()
+    {
+        return $this->container['model'];
+    }
+
+    /**
+    * Sets model
+    *
+    * @param string|null $model model参数
+    *
+    * @return $this
+    */
+    public function setModel($model)
+    {
+        $this->container['model'] = $model;
         return $this;
     }
 

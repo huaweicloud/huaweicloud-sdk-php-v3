@@ -21,9 +21,9 @@ class ListSyncTaskStatisticRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * syncTaskId  同步任务ID。
-    * dataType  统计数据类型： 多类型查询用‘,’分割； REQUEST：接收同步请求对象数 SUCCESS：同步成功对象数 FAILURE：同步失败对象数 SKIP：同步跳过对象数 SIZE：同步成功对象容量(Byte)
+    * dataType  统计数据类型： 多类型查询用‘,’分隔； REQUEST：接收同步请求对象数 SUCCESS：同步成功对象数 FAILURE：同步失败对象数 SKIP：同步跳过对象数 SIZE：同步成功对象容量(Byte)
     * startTime  查询开始时间
-    * endTime  查询开始时间
+    * endTime  查询结束时间
     *
     * @var string[]
     */
@@ -37,9 +37,9 @@ class ListSyncTaskStatisticRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * syncTaskId  同步任务ID。
-    * dataType  统计数据类型： 多类型查询用‘,’分割； REQUEST：接收同步请求对象数 SUCCESS：同步成功对象数 FAILURE：同步失败对象数 SKIP：同步跳过对象数 SIZE：同步成功对象容量(Byte)
+    * dataType  统计数据类型： 多类型查询用‘,’分隔； REQUEST：接收同步请求对象数 SUCCESS：同步成功对象数 FAILURE：同步失败对象数 SKIP：同步跳过对象数 SIZE：同步成功对象容量(Byte)
     * startTime  查询开始时间
-    * endTime  查询开始时间
+    * endTime  查询结束时间
     *
     * @var string[]
     */
@@ -74,9 +74,9 @@ class ListSyncTaskStatisticRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * syncTaskId  同步任务ID。
-    * dataType  统计数据类型： 多类型查询用‘,’分割； REQUEST：接收同步请求对象数 SUCCESS：同步成功对象数 FAILURE：同步失败对象数 SKIP：同步跳过对象数 SIZE：同步成功对象容量(Byte)
+    * dataType  统计数据类型： 多类型查询用‘,’分隔； REQUEST：接收同步请求对象数 SUCCESS：同步成功对象数 FAILURE：同步失败对象数 SKIP：同步跳过对象数 SIZE：同步成功对象容量(Byte)
     * startTime  查询开始时间
-    * endTime  查询开始时间
+    * endTime  查询结束时间
     *
     * @var string[]
     */
@@ -90,9 +90,9 @@ class ListSyncTaskStatisticRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * syncTaskId  同步任务ID。
-    * dataType  统计数据类型： 多类型查询用‘,’分割； REQUEST：接收同步请求对象数 SUCCESS：同步成功对象数 FAILURE：同步失败对象数 SKIP：同步跳过对象数 SIZE：同步成功对象容量(Byte)
+    * dataType  统计数据类型： 多类型查询用‘,’分隔； REQUEST：接收同步请求对象数 SUCCESS：同步成功对象数 FAILURE：同步失败对象数 SKIP：同步跳过对象数 SIZE：同步成功对象容量(Byte)
     * startTime  查询开始时间
-    * endTime  查询开始时间
+    * endTime  查询结束时间
     *
     * @var string[]
     */
@@ -106,9 +106,9 @@ class ListSyncTaskStatisticRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * syncTaskId  同步任务ID。
-    * dataType  统计数据类型： 多类型查询用‘,’分割； REQUEST：接收同步请求对象数 SUCCESS：同步成功对象数 FAILURE：同步失败对象数 SKIP：同步跳过对象数 SIZE：同步成功对象容量(Byte)
+    * dataType  统计数据类型： 多类型查询用‘,’分隔； REQUEST：接收同步请求对象数 SUCCESS：同步成功对象数 FAILURE：同步失败对象数 SKIP：同步跳过对象数 SIZE：同步成功对象容量(Byte)
     * startTime  查询开始时间
-    * endTime  查询开始时间
+    * endTime  查询结束时间
     *
     * @var string[]
     */
@@ -296,7 +296,7 @@ class ListSyncTaskStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataType
-    *  统计数据类型： 多类型查询用‘,’分割； REQUEST：接收同步请求对象数 SUCCESS：同步成功对象数 FAILURE：同步失败对象数 SKIP：同步跳过对象数 SIZE：同步成功对象容量(Byte)
+    *  统计数据类型： 多类型查询用‘,’分隔； REQUEST：接收同步请求对象数 SUCCESS：同步成功对象数 FAILURE：同步失败对象数 SKIP：同步跳过对象数 SIZE：同步成功对象容量(Byte)
     *
     * @return string
     */
@@ -308,7 +308,7 @@ class ListSyncTaskStatisticRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dataType
     *
-    * @param string $dataType 统计数据类型： 多类型查询用‘,’分割； REQUEST：接收同步请求对象数 SUCCESS：同步成功对象数 FAILURE：同步失败对象数 SKIP：同步跳过对象数 SIZE：同步成功对象容量(Byte)
+    * @param string $dataType 统计数据类型： 多类型查询用‘,’分隔； REQUEST：接收同步请求对象数 SUCCESS：同步成功对象数 FAILURE：同步失败对象数 SKIP：同步跳过对象数 SIZE：同步成功对象容量(Byte)
     *
     * @return $this
     */
@@ -344,7 +344,7 @@ class ListSyncTaskStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  查询开始时间
+    *  查询结束时间
     *
     * @return string
     */
@@ -356,7 +356,7 @@ class ListSyncTaskStatisticRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string $endTime 查询开始时间
+    * @param string $endTime 查询结束时间
     *
     * @return $this
     */

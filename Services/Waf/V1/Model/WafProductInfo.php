@@ -21,7 +21,7 @@ class WafProductInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resourceSpecCode  waf规格   -  professional：标准   - enterprise：专业   - ultimate：企业版
-    * periodType  订购周期类型 month: 月；year: 年
+    * periodType  **参数解释：** 订购周期类型标识，用于指定套餐的订购时间周期单位 **约束限制：** 不涉及 **取值范围：**  - month:月  - year:年 **默认取值：** 不涉及
     * periodNum  订购周期数
     *
     * @var string[]
@@ -35,7 +35,7 @@ class WafProductInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resourceSpecCode  waf规格   -  professional：标准   - enterprise：专业   - ultimate：企业版
-    * periodType  订购周期类型 month: 月；year: 年
+    * periodType  **参数解释：** 订购周期类型标识，用于指定套餐的订购时间周期单位 **约束限制：** 不涉及 **取值范围：**  - month:月  - year:年 **默认取值：** 不涉及
     * periodNum  订购周期数
     *
     * @var string[]
@@ -70,7 +70,7 @@ class WafProductInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resourceSpecCode  waf规格   -  professional：标准   - enterprise：专业   - ultimate：企业版
-    * periodType  订购周期类型 month: 月；year: 年
+    * periodType  **参数解释：** 订购周期类型标识，用于指定套餐的订购时间周期单位 **约束限制：** 不涉及 **取值范围：**  - month:月  - year:年 **默认取值：** 不涉及
     * periodNum  订购周期数
     *
     * @var string[]
@@ -84,7 +84,7 @@ class WafProductInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceSpecCode  waf规格   -  professional：标准   - enterprise：专业   - ultimate：企业版
-    * periodType  订购周期类型 month: 月；year: 年
+    * periodType  **参数解释：** 订购周期类型标识，用于指定套餐的订购时间周期单位 **约束限制：** 不涉及 **取值范围：**  - month:月  - year:年 **默认取值：** 不涉及
     * periodNum  订购周期数
     *
     * @var string[]
@@ -98,7 +98,7 @@ class WafProductInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resourceSpecCode  waf规格   -  professional：标准   - enterprise：专业   - ultimate：企业版
-    * periodType  订购周期类型 month: 月；year: 年
+    * periodType  **参数解释：** 订购周期类型标识，用于指定套餐的订购时间周期单位 **约束限制：** 不涉及 **取值范围：**  - month:月  - year:年 **默认取值：** 不涉及
     * periodNum  订购周期数
     *
     * @var string[]
@@ -149,7 +149,22 @@ class WafProductInfo implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const PERIOD_TYPE_MONTH = 'month';
+    const PERIOD_TYPE_YEAR = 'year';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPeriodTypeAllowableValues()
+    {
+        return [
+            self::PERIOD_TYPE_MONTH,
+            self::PERIOD_TYPE_YEAR,
+        ];
+    }
 
 
     /**
@@ -180,6 +195,14 @@ class WafProductInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getPeriodTypeAllowableValues();
+                if (!is_null($this->container['periodType']) && !in_array($this->container['periodType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'periodType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -220,7 +243,7 @@ class WafProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodType
-    *  订购周期类型 month: 月；year: 年
+    *  **参数解释：** 订购周期类型标识，用于指定套餐的订购时间周期单位 **约束限制：** 不涉及 **取值范围：**  - month:月  - year:年 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -232,7 +255,7 @@ class WafProductInfo implements ModelInterface, ArrayAccess
     /**
     * Sets periodType
     *
-    * @param string|null $periodType 订购周期类型 month: 月；year: 年
+    * @param string|null $periodType **参数解释：** 订购周期类型标识，用于指定套餐的订购时间周期单位 **约束限制：** 不涉及 **取值范围：**  - month:月  - year:年 **默认取值：** 不涉及
     *
     * @return $this
     */

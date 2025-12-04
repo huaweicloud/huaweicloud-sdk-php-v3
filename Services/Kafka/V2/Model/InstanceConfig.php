@@ -23,9 +23,9 @@ class InstanceConfig implements ModelInterface, ArrayAccess
     * name  配置名称。
     * validValues  有效值。
     * defaultValue  默认值。
-    * configType  配置类型：static/dynamic。
+    * configType  **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
     * value  配置当前值。
-    * valueType  值类型。
+    * valueType  **参数解释**： 值类型。 **取值范围**： - string：字符串类型。 - integer：整数类型。 - enum：枚举值类型。
     *
     * @var string[]
     */
@@ -43,9 +43,9 @@ class InstanceConfig implements ModelInterface, ArrayAccess
     * name  配置名称。
     * validValues  有效值。
     * defaultValue  默认值。
-    * configType  配置类型：static/dynamic。
+    * configType  **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
     * value  配置当前值。
-    * valueType  值类型。
+    * valueType  **参数解释**： 值类型。 **取值范围**： - string：字符串类型。 - integer：整数类型。 - enum：枚举值类型。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class InstanceConfig implements ModelInterface, ArrayAccess
     * name  配置名称。
     * validValues  有效值。
     * defaultValue  默认值。
-    * configType  配置类型：static/dynamic。
+    * configType  **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
     * value  配置当前值。
-    * valueType  值类型。
+    * valueType  **参数解释**： 值类型。 **取值范围**： - string：字符串类型。 - integer：整数类型。 - enum：枚举值类型。
     *
     * @var string[]
     */
@@ -104,9 +104,9 @@ class InstanceConfig implements ModelInterface, ArrayAccess
     * name  配置名称。
     * validValues  有效值。
     * defaultValue  默认值。
-    * configType  配置类型：static/dynamic。
+    * configType  **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
     * value  配置当前值。
-    * valueType  值类型。
+    * valueType  **参数解释**： 值类型。 **取值范围**： - string：字符串类型。 - integer：整数类型。 - enum：枚举值类型。
     *
     * @var string[]
     */
@@ -124,9 +124,9 @@ class InstanceConfig implements ModelInterface, ArrayAccess
     * name  配置名称。
     * validValues  有效值。
     * defaultValue  默认值。
-    * configType  配置类型：static/dynamic。
+    * configType  **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
     * value  配置当前值。
-    * valueType  值类型。
+    * valueType  **参数解释**： 值类型。 **取值范围**： - string：字符串类型。 - integer：整数类型。 - enum：枚举值类型。
     *
     * @var string[]
     */
@@ -324,7 +324,7 @@ class InstanceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets configType
-    *  配置类型：static/dynamic。
+    *  **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
     *
     * @return string|null
     */
@@ -336,7 +336,7 @@ class InstanceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets configType
     *
-    * @param string|null $configType 配置类型：static/dynamic。
+    * @param string|null $configType **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
     *
     * @return $this
     */
@@ -372,7 +372,7 @@ class InstanceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets valueType
-    *  值类型。
+    *  **参数解释**： 值类型。 **取值范围**： - string：字符串类型。 - integer：整数类型。 - enum：枚举值类型。
     *
     * @return string|null
     */
@@ -384,7 +384,7 @@ class InstanceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets valueType
     *
-    * @param string|null $valueType 值类型。
+    * @param string|null $valueType **参数解释**： 值类型。 **取值范围**： - string：字符串类型。 - integer：整数类型。 - enum：枚举值类型。
     *
     * @return $this
     */

@@ -33,6 +33,7 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
     * pushTime  最近一次上传时间
     * size  制品大小，单位：Byte
     * tags  制品版本的Tag列表
+    * scanOverview  制品扫描摘要,支持制品扫描报告类型为application/vnd.security.vulnerability.report; version=1.1的制品扫描摘要
     *
     * @var string[]
     */
@@ -48,7 +49,8 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
             'pullTime' => 'string',
             'pushTime' => 'string',
             'size' => 'int',
-            'tags' => '\HuaweiCloud\SDK\Swr\V2\Model\ArtifactTag[]'
+            'tags' => '\HuaweiCloud\SDK\Swr\V2\Model\ArtifactTag[]',
+            'scanOverview' => 'map[string,\HuaweiCloud\SDK\Swr\V2\Model\NativeReportSummary]'
     ];
 
     /**
@@ -65,6 +67,7 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
     * pushTime  最近一次上传时间
     * size  制品大小，单位：Byte
     * tags  制品版本的Tag列表
+    * scanOverview  制品扫描摘要,支持制品扫描报告类型为application/vnd.security.vulnerability.report; version=1.1的制品扫描摘要
     *
     * @var string[]
     */
@@ -80,7 +83,8 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
         'pullTime' => null,
         'pushTime' => null,
         'size' => null,
-        'tags' => null
+        'tags' => null,
+        'scanOverview' => null
     ];
 
     /**
@@ -118,6 +122,7 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
     * pushTime  最近一次上传时间
     * size  制品大小，单位：Byte
     * tags  制品版本的Tag列表
+    * scanOverview  制品扫描摘要,支持制品扫描报告类型为application/vnd.security.vulnerability.report; version=1.1的制品扫描摘要
     *
     * @var string[]
     */
@@ -133,7 +138,8 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
             'pullTime' => 'pull_time',
             'pushTime' => 'push_time',
             'size' => 'size',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'scanOverview' => 'scan_overview'
     ];
 
     /**
@@ -150,6 +156,7 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
     * pushTime  最近一次上传时间
     * size  制品大小，单位：Byte
     * tags  制品版本的Tag列表
+    * scanOverview  制品扫描摘要,支持制品扫描报告类型为application/vnd.security.vulnerability.report; version=1.1的制品扫描摘要
     *
     * @var string[]
     */
@@ -165,7 +172,8 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
             'pullTime' => 'setPullTime',
             'pushTime' => 'setPushTime',
             'size' => 'setSize',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'scanOverview' => 'setScanOverview'
     ];
 
     /**
@@ -182,6 +190,7 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
     * pushTime  最近一次上传时间
     * size  制品大小，单位：Byte
     * tags  制品版本的Tag列表
+    * scanOverview  制品扫描摘要,支持制品扫描报告类型为application/vnd.security.vulnerability.report; version=1.1的制品扫描摘要
     *
     * @var string[]
     */
@@ -197,7 +206,8 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
             'pullTime' => 'getPullTime',
             'pushTime' => 'getPushTime',
             'size' => 'getSize',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'scanOverview' => 'getScanOverview'
     ];
 
     /**
@@ -270,6 +280,7 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
         $this->container['pushTime'] = isset($data['pushTime']) ? $data['pushTime'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['scanOverview'] = isset($data['scanOverview']) ? $data['scanOverview'] : null;
     }
 
     /**
@@ -579,6 +590,30 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets scanOverview
+    *  制品扫描摘要,支持制品扫描报告类型为application/vnd.security.vulnerability.report; version=1.1的制品扫描摘要
+    *
+    * @return map[string,\HuaweiCloud\SDK\Swr\V2\Model\NativeReportSummary]|null
+    */
+    public function getScanOverview()
+    {
+        return $this->container['scanOverview'];
+    }
+
+    /**
+    * Sets scanOverview
+    *
+    * @param map[string,\HuaweiCloud\SDK\Swr\V2\Model\NativeReportSummary]|null $scanOverview 制品扫描摘要,支持制品扫描报告类型为application/vnd.security.vulnerability.report; version=1.1的制品扫描摘要
+    *
+    * @return $this
+    */
+    public function setScanOverview($scanOverview)
+    {
+        $this->container['scanOverview'] = $scanOverview;
         return $this;
     }
 

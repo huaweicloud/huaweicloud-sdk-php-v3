@@ -25,7 +25,7 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
     * defaultValue  **参数解释**： 配置默认值。 **取值范围**： 不涉及
     * configType  **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
     * value  **参数解释**： 配置值。 **取值范围**： 不涉及
-    * valueType  **参数解释**： 配置值类型。 **取值范围**： 不涉及
+    * valueType  **参数解释**： 配置值类型。 **取值范围**： - string：字符串类型。 - integer：整数类型。 - enum：枚举值类型。
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
     * defaultValue  **参数解释**： 配置默认值。 **取值范围**： 不涉及
     * configType  **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
     * value  **参数解释**： 配置值。 **取值范围**： 不涉及
-    * valueType  **参数解释**： 配置值类型。 **取值范围**： 不涉及
+    * valueType  **参数解释**： 配置值类型。 **取值范围**： - string：字符串类型。 - integer：整数类型。 - enum：枚举值类型。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
     * defaultValue  **参数解释**： 配置默认值。 **取值范围**： 不涉及
     * configType  **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
     * value  **参数解释**： 配置值。 **取值范围**： 不涉及
-    * valueType  **参数解释**： 配置值类型。 **取值范围**： 不涉及
+    * valueType  **参数解释**： 配置值类型。 **取值范围**： - string：字符串类型。 - integer：整数类型。 - enum：枚举值类型。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
     * defaultValue  **参数解释**： 配置默认值。 **取值范围**： 不涉及
     * configType  **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
     * value  **参数解释**： 配置值。 **取值范围**： 不涉及
-    * valueType  **参数解释**： 配置值类型。 **取值范围**： 不涉及
+    * valueType  **参数解释**： 配置值类型。 **取值范围**： - string：字符串类型。 - integer：整数类型。 - enum：枚举值类型。
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
     * defaultValue  **参数解释**： 配置默认值。 **取值范围**： 不涉及
     * configType  **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
     * value  **参数解释**： 配置值。 **取值范围**： 不涉及
-    * valueType  **参数解释**： 配置值类型。 **取值范围**： 不涉及
+    * valueType  **参数解释**： 配置值类型。 **取值范围**： - string：字符串类型。 - integer：整数类型。 - enum：枚举值类型。
     *
     * @var string[]
     */
@@ -349,7 +349,7 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
 
     /**
     * Gets valueType
-    *  **参数解释**： 配置值类型。 **取值范围**： 不涉及
+    *  **参数解释**： 配置值类型。 **取值范围**： - string：字符串类型。 - integer：整数类型。 - enum：枚举值类型。
     *
     * @return string|null
     */
@@ -361,7 +361,7 @@ class TopicEntityTopicOtherConfigs implements ModelInterface, ArrayAccess
     /**
     * Sets valueType
     *
-    * @param string|null $valueType **参数解释**： 配置值类型。 **取值范围**： 不涉及
+    * @param string|null $valueType **参数解释**： 配置值类型。 **取值范围**： - string：字符串类型。 - integer：整数类型。 - enum：枚举值类型。
     *
     * @return $this
     */

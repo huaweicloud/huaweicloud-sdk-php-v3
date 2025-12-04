@@ -20,8 +20,8 @@ class Server implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  type
-    * address  address
+    * type  类型
+    * address  地址
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Server implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  type
-    * address  address
+    * type  类型
+    * address  地址
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Server implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  type
-    * address  address
+    * type  类型
+    * address  地址
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Server implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  type
-    * address  address
+    * type  类型
+    * address  地址
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Server implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  type
-    * address  address
+    * type  类型
+    * address  地址
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class Server implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  type
+    *  类型
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class Server implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type type
+    * @param string|null $type 类型
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class Server implements ModelInterface, ArrayAccess
 
     /**
     * Gets address
-    *  address
+    *  地址
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class Server implements ModelInterface, ArrayAccess
     /**
     * Sets address
     *
-    * @param string|null $address address
+    * @param string|null $address 地址
     *
     * @return $this
     */

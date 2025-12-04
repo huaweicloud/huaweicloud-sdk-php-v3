@@ -24,7 +24,7 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     * name  规则名称
     * policyid  策略id
     * description  规则描述
-    * status  规则状态，0：关闭，1：开启
+    * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * conditions  匹配条件列表，匹配条件必须同时满足。
     * action  action
     * actionMode  预留参数，可忽略。
@@ -60,7 +60,7 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     * name  规则名称
     * policyid  策略id
     * description  规则描述
-    * status  规则状态，0：关闭，1：开启
+    * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * conditions  匹配条件列表，匹配条件必须同时满足。
     * action  action
     * actionMode  预留参数，可忽略。
@@ -117,7 +117,7 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     * name  规则名称
     * policyid  策略id
     * description  规则描述
-    * status  规则状态，0：关闭，1：开启
+    * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * conditions  匹配条件列表，匹配条件必须同时满足。
     * action  action
     * actionMode  预留参数，可忽略。
@@ -153,7 +153,7 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     * name  规则名称
     * policyid  策略id
     * description  规则描述
-    * status  规则状态，0：关闭，1：开启
+    * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * conditions  匹配条件列表，匹配条件必须同时满足。
     * action  action
     * actionMode  预留参数，可忽略。
@@ -189,7 +189,7 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     * name  规则名称
     * policyid  策略id
     * description  规则描述
-    * status  规则状态，0：关闭，1：开启
+    * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * conditions  匹配条件列表，匹配条件必须同时满足。
     * action  action
     * actionMode  预留参数，可忽略。
@@ -413,7 +413,7 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  规则状态，0：关闭，1：开启
+    *  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -425,7 +425,7 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 规则状态，0：关闭，1：开启
+    * @param int|null $status **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     *
     * @return $this
     */

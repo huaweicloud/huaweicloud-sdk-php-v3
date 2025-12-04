@@ -25,6 +25,7 @@ class UpdateResourceViewsRequestBody implements ModelInterface, ArrayAccess
     * organizationId  **参数解释：** 组织ID。 **约束限制：** 不涉及。 **取值范围：** 视图归属的组织id。 **默认取值：** 不涉及。
     * viewType  **参数解释：** 视图类型。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * name  **参数解释：** 视图名称。 **约束限制：** 不涉及。 **取值范围：** 用户自定义编辑。 **默认取值：** 不涉及。
+    * domainIds  **参数解释：** 视图包含的租户账号id值组成列表。 **取值范围：** 不涉及。 example:   - id1   - id2
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class UpdateResourceViewsRequestBody implements ModelInterface, ArrayAccess
             'resourceTypes' => 'string[]',
             'organizationId' => 'string',
             'viewType' => 'string',
-            'name' => 'string'
+            'name' => 'string',
+            'domainIds' => 'string[]'
     ];
 
     /**
@@ -43,6 +45,7 @@ class UpdateResourceViewsRequestBody implements ModelInterface, ArrayAccess
     * organizationId  **参数解释：** 组织ID。 **约束限制：** 不涉及。 **取值范围：** 视图归属的组织id。 **默认取值：** 不涉及。
     * viewType  **参数解释：** 视图类型。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * name  **参数解释：** 视图名称。 **约束限制：** 不涉及。 **取值范围：** 用户自定义编辑。 **默认取值：** 不涉及。
+    * domainIds  **参数解释：** 视图包含的租户账号id值组成列表。 **取值范围：** 不涉及。 example:   - id1   - id2
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class UpdateResourceViewsRequestBody implements ModelInterface, ArrayAccess
         'resourceTypes' => null,
         'organizationId' => null,
         'viewType' => null,
-        'name' => null
+        'name' => null,
+        'domainIds' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class UpdateResourceViewsRequestBody implements ModelInterface, ArrayAccess
     * organizationId  **参数解释：** 组织ID。 **约束限制：** 不涉及。 **取值范围：** 视图归属的组织id。 **默认取值：** 不涉及。
     * viewType  **参数解释：** 视图类型。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * name  **参数解释：** 视图名称。 **约束限制：** 不涉及。 **取值范围：** 用户自定义编辑。 **默认取值：** 不涉及。
+    * domainIds  **参数解释：** 视图包含的租户账号id值组成列表。 **取值范围：** 不涉及。 example:   - id1   - id2
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class UpdateResourceViewsRequestBody implements ModelInterface, ArrayAccess
             'resourceTypes' => 'resource_types',
             'organizationId' => 'organization_id',
             'viewType' => 'view_type',
-            'name' => 'name'
+            'name' => 'name',
+            'domainIds' => 'domain_ids'
     ];
 
     /**
@@ -100,6 +106,7 @@ class UpdateResourceViewsRequestBody implements ModelInterface, ArrayAccess
     * organizationId  **参数解释：** 组织ID。 **约束限制：** 不涉及。 **取值范围：** 视图归属的组织id。 **默认取值：** 不涉及。
     * viewType  **参数解释：** 视图类型。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * name  **参数解释：** 视图名称。 **约束限制：** 不涉及。 **取值范围：** 用户自定义编辑。 **默认取值：** 不涉及。
+    * domainIds  **参数解释：** 视图包含的租户账号id值组成列表。 **取值范围：** 不涉及。 example:   - id1   - id2
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class UpdateResourceViewsRequestBody implements ModelInterface, ArrayAccess
             'resourceTypes' => 'setResourceTypes',
             'organizationId' => 'setOrganizationId',
             'viewType' => 'setViewType',
-            'name' => 'setName'
+            'name' => 'setName',
+            'domainIds' => 'setDomainIds'
     ];
 
     /**
@@ -118,6 +126,7 @@ class UpdateResourceViewsRequestBody implements ModelInterface, ArrayAccess
     * organizationId  **参数解释：** 组织ID。 **约束限制：** 不涉及。 **取值范围：** 视图归属的组织id。 **默认取值：** 不涉及。
     * viewType  **参数解释：** 视图类型。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * name  **参数解释：** 视图名称。 **约束限制：** 不涉及。 **取值范围：** 用户自定义编辑。 **默认取值：** 不涉及。
+    * domainIds  **参数解释：** 视图包含的租户账号id值组成列表。 **取值范围：** 不涉及。 example:   - id1   - id2
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class UpdateResourceViewsRequestBody implements ModelInterface, ArrayAccess
             'resourceTypes' => 'getResourceTypes',
             'organizationId' => 'getOrganizationId',
             'viewType' => 'getViewType',
-            'name' => 'getName'
+            'name' => 'getName',
+            'domainIds' => 'getDomainIds'
     ];
 
     /**
@@ -192,6 +202,7 @@ class UpdateResourceViewsRequestBody implements ModelInterface, ArrayAccess
         $this->container['organizationId'] = isset($data['organizationId']) ? $data['organizationId'] : null;
         $this->container['viewType'] = isset($data['viewType']) ? $data['viewType'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['domainIds'] = isset($data['domainIds']) ? $data['domainIds'] : null;
     }
 
     /**
@@ -345,6 +356,30 @@ class UpdateResourceViewsRequestBody implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets domainIds
+    *  **参数解释：** 视图包含的租户账号id值组成列表。 **取值范围：** 不涉及。 example:   - id1   - id2
+    *
+    * @return string[]|null
+    */
+    public function getDomainIds()
+    {
+        return $this->container['domainIds'];
+    }
+
+    /**
+    * Sets domainIds
+    *
+    * @param string[]|null $domainIds **参数解释：** 视图包含的租户账号id值组成列表。 **取值范围：** 不涉及。 example:   - id1   - id2
+    *
+    * @return $this
+    */
+    public function setDomainIds($domainIds)
+    {
+        $this->container['domainIds'] = $domainIds;
         return $this;
     }
 

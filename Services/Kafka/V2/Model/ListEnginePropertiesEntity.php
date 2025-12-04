@@ -20,15 +20,15 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * maxPartitionPerBroker  每个Broker的最大分区数。
-    * maxBroker  Broker的最大个数。
-    * maxStoragePerNode  每个节点的最大存储。单位为GB。
-    * maxConsumerPerBroker  每个Broker的最大消费者数。
-    * minBroker  Broker的最小个数。
-    * maxBandwidthPerBroker  每个Broker的最大带宽。
-    * minStoragePerNode  每个节点的最小存储。单位为GB。
-    * maxTpsPerBroker  每个Broker的最大TPS。
-    * productAlias  product_id的别名。
+    * maxPartitionPerBroker  **参数解释**： 每个Broker的最大分区数。 **取值范围**： 不涉及。
+    * maxBroker  **参数解释**： Broker的最大个数。 **取值范围**： 不涉及。
+    * maxStoragePerNode  **参数解释**： 每个节点的最大存储。单位为GB。 **取值范围**： 不涉及。
+    * maxConsumerPerBroker  **参数解释**： 每个Broker的最大消费者数。 **取值范围**： 不涉及。
+    * minBroker  **参数解释**： Broker的最小个数。 **取值范围**： 不涉及。
+    * maxBandwidthPerBroker  **参数解释**： 每个Broker的最大带宽。 **取值范围**： 不涉及。
+    * minStoragePerNode  **参数解释**： 每个节点的最小存储。单位为GB。 **取值范围**： 不涉及。
+    * maxTpsPerBroker  **参数解释**： 每个Broker的最大TPS。 **取值范围**： 不涉及。
+    * productAlias  **参数解释**： product_id的别名。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * maxPartitionPerBroker  每个Broker的最大分区数。
-    * maxBroker  Broker的最大个数。
-    * maxStoragePerNode  每个节点的最大存储。单位为GB。
-    * maxConsumerPerBroker  每个Broker的最大消费者数。
-    * minBroker  Broker的最小个数。
-    * maxBandwidthPerBroker  每个Broker的最大带宽。
-    * minStoragePerNode  每个节点的最小存储。单位为GB。
-    * maxTpsPerBroker  每个Broker的最大TPS。
-    * productAlias  product_id的别名。
+    * maxPartitionPerBroker  **参数解释**： 每个Broker的最大分区数。 **取值范围**： 不涉及。
+    * maxBroker  **参数解释**： Broker的最大个数。 **取值范围**： 不涉及。
+    * maxStoragePerNode  **参数解释**： 每个节点的最大存储。单位为GB。 **取值范围**： 不涉及。
+    * maxConsumerPerBroker  **参数解释**： 每个Broker的最大消费者数。 **取值范围**： 不涉及。
+    * minBroker  **参数解释**： Broker的最小个数。 **取值范围**： 不涉及。
+    * maxBandwidthPerBroker  **参数解释**： 每个Broker的最大带宽。 **取值范围**： 不涉及。
+    * minStoragePerNode  **参数解释**： 每个节点的最小存储。单位为GB。 **取值范围**： 不涉及。
+    * maxTpsPerBroker  **参数解释**： 每个Broker的最大TPS。 **取值范围**： 不涉及。
+    * productAlias  **参数解释**： product_id的别名。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * maxPartitionPerBroker  每个Broker的最大分区数。
-    * maxBroker  Broker的最大个数。
-    * maxStoragePerNode  每个节点的最大存储。单位为GB。
-    * maxConsumerPerBroker  每个Broker的最大消费者数。
-    * minBroker  Broker的最小个数。
-    * maxBandwidthPerBroker  每个Broker的最大带宽。
-    * minStoragePerNode  每个节点的最小存储。单位为GB。
-    * maxTpsPerBroker  每个Broker的最大TPS。
-    * productAlias  product_id的别名。
+    * maxPartitionPerBroker  **参数解释**： 每个Broker的最大分区数。 **取值范围**： 不涉及。
+    * maxBroker  **参数解释**： Broker的最大个数。 **取值范围**： 不涉及。
+    * maxStoragePerNode  **参数解释**： 每个节点的最大存储。单位为GB。 **取值范围**： 不涉及。
+    * maxConsumerPerBroker  **参数解释**： 每个Broker的最大消费者数。 **取值范围**： 不涉及。
+    * minBroker  **参数解释**： Broker的最小个数。 **取值范围**： 不涉及。
+    * maxBandwidthPerBroker  **参数解释**： 每个Broker的最大带宽。 **取值范围**： 不涉及。
+    * minStoragePerNode  **参数解释**： 每个节点的最小存储。单位为GB。 **取值范围**： 不涉及。
+    * maxTpsPerBroker  **参数解释**： 每个Broker的最大TPS。 **取值范围**： 不涉及。
+    * productAlias  **参数解释**： product_id的别名。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * maxPartitionPerBroker  每个Broker的最大分区数。
-    * maxBroker  Broker的最大个数。
-    * maxStoragePerNode  每个节点的最大存储。单位为GB。
-    * maxConsumerPerBroker  每个Broker的最大消费者数。
-    * minBroker  Broker的最小个数。
-    * maxBandwidthPerBroker  每个Broker的最大带宽。
-    * minStoragePerNode  每个节点的最小存储。单位为GB。
-    * maxTpsPerBroker  每个Broker的最大TPS。
-    * productAlias  product_id的别名。
+    * maxPartitionPerBroker  **参数解释**： 每个Broker的最大分区数。 **取值范围**： 不涉及。
+    * maxBroker  **参数解释**： Broker的最大个数。 **取值范围**： 不涉及。
+    * maxStoragePerNode  **参数解释**： 每个节点的最大存储。单位为GB。 **取值范围**： 不涉及。
+    * maxConsumerPerBroker  **参数解释**： 每个Broker的最大消费者数。 **取值范围**： 不涉及。
+    * minBroker  **参数解释**： Broker的最小个数。 **取值范围**： 不涉及。
+    * maxBandwidthPerBroker  **参数解释**： 每个Broker的最大带宽。 **取值范围**： 不涉及。
+    * minStoragePerNode  **参数解释**： 每个节点的最小存储。单位为GB。 **取值范围**： 不涉及。
+    * maxTpsPerBroker  **参数解释**： 每个Broker的最大TPS。 **取值范围**： 不涉及。
+    * productAlias  **参数解释**： product_id的别名。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * maxPartitionPerBroker  每个Broker的最大分区数。
-    * maxBroker  Broker的最大个数。
-    * maxStoragePerNode  每个节点的最大存储。单位为GB。
-    * maxConsumerPerBroker  每个Broker的最大消费者数。
-    * minBroker  Broker的最小个数。
-    * maxBandwidthPerBroker  每个Broker的最大带宽。
-    * minStoragePerNode  每个节点的最小存储。单位为GB。
-    * maxTpsPerBroker  每个Broker的最大TPS。
-    * productAlias  product_id的别名。
+    * maxPartitionPerBroker  **参数解释**： 每个Broker的最大分区数。 **取值范围**： 不涉及。
+    * maxBroker  **参数解释**： Broker的最大个数。 **取值范围**： 不涉及。
+    * maxStoragePerNode  **参数解释**： 每个节点的最大存储。单位为GB。 **取值范围**： 不涉及。
+    * maxConsumerPerBroker  **参数解释**： 每个Broker的最大消费者数。 **取值范围**： 不涉及。
+    * minBroker  **参数解释**： Broker的最小个数。 **取值范围**： 不涉及。
+    * maxBandwidthPerBroker  **参数解释**： 每个Broker的最大带宽。 **取值范围**： 不涉及。
+    * minStoragePerNode  **参数解释**： 每个节点的最小存储。单位为GB。 **取值范围**： 不涉及。
+    * maxTpsPerBroker  **参数解释**： 每个Broker的最大TPS。 **取值范围**： 不涉及。
+    * productAlias  **参数解释**： product_id的别名。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -262,7 +262,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxPartitionPerBroker
-    *  每个Broker的最大分区数。
+    *  **参数解释**： 每个Broker的最大分区数。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets maxPartitionPerBroker
     *
-    * @param string|null $maxPartitionPerBroker 每个Broker的最大分区数。
+    * @param string|null $maxPartitionPerBroker **参数解释**： 每个Broker的最大分区数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -286,7 +286,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxBroker
-    *  Broker的最大个数。
+    *  **参数解释**： Broker的最大个数。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -298,7 +298,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets maxBroker
     *
-    * @param string|null $maxBroker Broker的最大个数。
+    * @param string|null $maxBroker **参数解释**： Broker的最大个数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxStoragePerNode
-    *  每个节点的最大存储。单位为GB。
+    *  **参数解释**： 每个节点的最大存储。单位为GB。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets maxStoragePerNode
     *
-    * @param string|null $maxStoragePerNode 每个节点的最大存储。单位为GB。
+    * @param string|null $maxStoragePerNode **参数解释**： 每个节点的最大存储。单位为GB。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxConsumerPerBroker
-    *  每个Broker的最大消费者数。
+    *  **参数解释**： 每个Broker的最大消费者数。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets maxConsumerPerBroker
     *
-    * @param string|null $maxConsumerPerBroker 每个Broker的最大消费者数。
+    * @param string|null $maxConsumerPerBroker **参数解释**： 每个Broker的最大消费者数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets minBroker
-    *  Broker的最小个数。
+    *  **参数解释**： Broker的最小个数。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -370,7 +370,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets minBroker
     *
-    * @param string|null $minBroker Broker的最小个数。
+    * @param string|null $minBroker **参数解释**： Broker的最小个数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxBandwidthPerBroker
-    *  每个Broker的最大带宽。
+    *  **参数解释**： 每个Broker的最大带宽。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -394,7 +394,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets maxBandwidthPerBroker
     *
-    * @param string|null $maxBandwidthPerBroker 每个Broker的最大带宽。
+    * @param string|null $maxBandwidthPerBroker **参数解释**： 每个Broker的最大带宽。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets minStoragePerNode
-    *  每个节点的最小存储。单位为GB。
+    *  **参数解释**： 每个节点的最小存储。单位为GB。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -418,7 +418,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets minStoragePerNode
     *
-    * @param string|null $minStoragePerNode 每个节点的最小存储。单位为GB。
+    * @param string|null $minStoragePerNode **参数解释**： 每个节点的最小存储。单位为GB。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxTpsPerBroker
-    *  每个Broker的最大TPS。
+    *  **参数解释**： 每个Broker的最大TPS。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets maxTpsPerBroker
     *
-    * @param string|null $maxTpsPerBroker 每个Broker的最大TPS。
+    * @param string|null $maxTpsPerBroker **参数解释**： 每个Broker的最大TPS。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets productAlias
-    *  product_id的别名。
+    *  **参数解释**： product_id的别名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -466,7 +466,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     /**
     * Sets productAlias
     *
-    * @param string|null $productAlias product_id的别名。
+    * @param string|null $productAlias **参数解释**： product_id的别名。 **取值范围**： 不涉及。
     *
     * @return $this
     */

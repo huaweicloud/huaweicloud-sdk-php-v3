@@ -20,7 +20,7 @@ class StatisticsTimelineItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键值，包括请求总量（ACCESS）、Bot攻击防护（CRAWLER）、攻击总量（ATTACK）、Web基础防护（WEB_ATTACK）、精准防护（PRECISE）、CC攻击防护（CC）
+    * key  **参数解释：** 键值标识，用于区分不同的防护统计类型 **约束限制：** 不涉及 **取值范围：**  - ACCESS:请求总量  - CRAWLER:Bot攻击防护  - ATTACK:攻击总量  - WEB_ATTACK:Web基础防护  - PRECISE:精准防护  - CC:CC攻击防护 **默认取值：** 不涉及
     * timeline  对应键值的时间线统计数据
     *
     * @var string[]
@@ -32,7 +32,7 @@ class StatisticsTimelineItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键值，包括请求总量（ACCESS）、Bot攻击防护（CRAWLER）、攻击总量（ATTACK）、Web基础防护（WEB_ATTACK）、精准防护（PRECISE）、CC攻击防护（CC）
+    * key  **参数解释：** 键值标识，用于区分不同的防护统计类型 **约束限制：** 不涉及 **取值范围：**  - ACCESS:请求总量  - CRAWLER:Bot攻击防护  - ATTACK:攻击总量  - WEB_ATTACK:Web基础防护  - PRECISE:精准防护  - CC:CC攻击防护 **默认取值：** 不涉及
     * timeline  对应键值的时间线统计数据
     *
     * @var string[]
@@ -65,7 +65,7 @@ class StatisticsTimelineItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键值，包括请求总量（ACCESS）、Bot攻击防护（CRAWLER）、攻击总量（ATTACK）、Web基础防护（WEB_ATTACK）、精准防护（PRECISE）、CC攻击防护（CC）
+    * key  **参数解释：** 键值标识，用于区分不同的防护统计类型 **约束限制：** 不涉及 **取值范围：**  - ACCESS:请求总量  - CRAWLER:Bot攻击防护  - ATTACK:攻击总量  - WEB_ATTACK:Web基础防护  - PRECISE:精准防护  - CC:CC攻击防护 **默认取值：** 不涉及
     * timeline  对应键值的时间线统计数据
     *
     * @var string[]
@@ -77,7 +77,7 @@ class StatisticsTimelineItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键值，包括请求总量（ACCESS）、Bot攻击防护（CRAWLER）、攻击总量（ATTACK）、Web基础防护（WEB_ATTACK）、精准防护（PRECISE）、CC攻击防护（CC）
+    * key  **参数解释：** 键值标识，用于区分不同的防护统计类型 **约束限制：** 不涉及 **取值范围：**  - ACCESS:请求总量  - CRAWLER:Bot攻击防护  - ATTACK:攻击总量  - WEB_ATTACK:Web基础防护  - PRECISE:精准防护  - CC:CC攻击防护 **默认取值：** 不涉及
     * timeline  对应键值的时间线统计数据
     *
     * @var string[]
@@ -89,7 +89,7 @@ class StatisticsTimelineItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键值，包括请求总量（ACCESS）、Bot攻击防护（CRAWLER）、攻击总量（ATTACK）、Web基础防护（WEB_ATTACK）、精准防护（PRECISE）、CC攻击防护（CC）
+    * key  **参数解释：** 键值标识，用于区分不同的防护统计类型 **约束限制：** 不涉及 **取值范围：**  - ACCESS:请求总量  - CRAWLER:Bot攻击防护  - ATTACK:攻击总量  - WEB_ATTACK:Web基础防护  - PRECISE:精准防护  - CC:CC攻击防护 **默认取值：** 不涉及
     * timeline  对应键值的时间线统计数据
     *
     * @var string[]
@@ -139,7 +139,30 @@ class StatisticsTimelineItem implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const KEY_ACCESS = 'ACCESS';
+    const KEY_CRAWLER = 'CRAWLER';
+    const KEY_ATTACK = 'ATTACK';
+    const KEY_WEB_ATTACK = 'WEB_ATTACK';
+    const KEY_PRECISE = 'PRECISE';
+    const KEY_CC = 'CC';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getKeyAllowableValues()
+    {
+        return [
+            self::KEY_ACCESS,
+            self::KEY_CRAWLER,
+            self::KEY_ATTACK,
+            self::KEY_WEB_ATTACK,
+            self::KEY_PRECISE,
+            self::KEY_CC,
+        ];
+    }
 
 
     /**
@@ -169,6 +192,14 @@ class StatisticsTimelineItem implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getKeyAllowableValues();
+                if (!is_null($this->container['key']) && !in_array($this->container['key'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'key', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -185,7 +216,7 @@ class StatisticsTimelineItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  键值，包括请求总量（ACCESS）、Bot攻击防护（CRAWLER）、攻击总量（ATTACK）、Web基础防护（WEB_ATTACK）、精准防护（PRECISE）、CC攻击防护（CC）
+    *  **参数解释：** 键值标识，用于区分不同的防护统计类型 **约束限制：** 不涉及 **取值范围：**  - ACCESS:请求总量  - CRAWLER:Bot攻击防护  - ATTACK:攻击总量  - WEB_ATTACK:Web基础防护  - PRECISE:精准防护  - CC:CC攻击防护 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -197,7 +228,7 @@ class StatisticsTimelineItem implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 键值，包括请求总量（ACCESS）、Bot攻击防护（CRAWLER）、攻击总量（ATTACK）、Web基础防护（WEB_ATTACK）、精准防护（PRECISE）、CC攻击防护（CC）
+    * @param string|null $key **参数解释：** 键值标识，用于区分不同的防护统计类型 **约束限制：** 不涉及 **取值范围：**  - ACCESS:请求总量  - CRAWLER:Bot攻击防护  - ATTACK:攻击总量  - WEB_ATTACK:Web基础防护  - PRECISE:精准防护  - CC:CC攻击防护 **默认取值：** 不涉及
     *
     * @return $this
     */

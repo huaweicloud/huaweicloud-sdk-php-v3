@@ -28,6 +28,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     * lineNum  日志单行序列号，第一次查询时不需要此参数，后续分页查询时需要使用，可从上次查询的返回信息中获取。line_num应在start_time 和 end_time 之间。
     * time  若已开启自定义时间功能，需要使用该字段进行分页查询。
     * isDesc  顺序或者倒序查询, 默认为false(顺序查询)
+    * scrollId  **参数解释：** 分页查询时，若上次查询的返回结果中包含该字段，需要增加该字段参与分页查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * searchType  首次查询为 “init”, 分页查询时为 “forwards”或者“backwards”, 默认为首次查询“init”, 与 is_desc 参数配合进行分页查询。
     * limit  表示每次查询的日志条数，不填时默认为50，建议您设置为100。
     * highlight  日志关键词高亮显示，默认为true（高亮显示），false为取消高亮显示。
@@ -46,6 +47,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
             'lineNum' => 'string',
             'time' => 'string',
             'isDesc' => 'bool',
+            'scrollId' => 'string',
             'searchType' => 'string',
             'limit' => 'int',
             'highlight' => 'bool',
@@ -64,6 +66,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     * lineNum  日志单行序列号，第一次查询时不需要此参数，后续分页查询时需要使用，可从上次查询的返回信息中获取。line_num应在start_time 和 end_time 之间。
     * time  若已开启自定义时间功能，需要使用该字段进行分页查询。
     * isDesc  顺序或者倒序查询, 默认为false(顺序查询)
+    * scrollId  **参数解释：** 分页查询时，若上次查询的返回结果中包含该字段，需要增加该字段参与分页查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * searchType  首次查询为 “init”, 分页查询时为 “forwards”或者“backwards”, 默认为首次查询“init”, 与 is_desc 参数配合进行分页查询。
     * limit  表示每次查询的日志条数，不填时默认为50，建议您设置为100。
     * highlight  日志关键词高亮显示，默认为true（高亮显示），false为取消高亮显示。
@@ -82,6 +85,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
         'lineNum' => null,
         'time' => null,
         'isDesc' => null,
+        'scrollId' => null,
         'searchType' => null,
         'limit' => 'int32',
         'highlight' => null,
@@ -121,6 +125,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     * lineNum  日志单行序列号，第一次查询时不需要此参数，后续分页查询时需要使用，可从上次查询的返回信息中获取。line_num应在start_time 和 end_time 之间。
     * time  若已开启自定义时间功能，需要使用该字段进行分页查询。
     * isDesc  顺序或者倒序查询, 默认为false(顺序查询)
+    * scrollId  **参数解释：** 分页查询时，若上次查询的返回结果中包含该字段，需要增加该字段参与分页查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * searchType  首次查询为 “init”, 分页查询时为 “forwards”或者“backwards”, 默认为首次查询“init”, 与 is_desc 参数配合进行分页查询。
     * limit  表示每次查询的日志条数，不填时默认为50，建议您设置为100。
     * highlight  日志关键词高亮显示，默认为true（高亮显示），false为取消高亮显示。
@@ -139,6 +144,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
             'lineNum' => 'line_num',
             'time' => '__time__',
             'isDesc' => 'is_desc',
+            'scrollId' => 'scroll_id',
             'searchType' => 'search_type',
             'limit' => 'limit',
             'highlight' => 'highlight',
@@ -157,6 +163,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     * lineNum  日志单行序列号，第一次查询时不需要此参数，后续分页查询时需要使用，可从上次查询的返回信息中获取。line_num应在start_time 和 end_time 之间。
     * time  若已开启自定义时间功能，需要使用该字段进行分页查询。
     * isDesc  顺序或者倒序查询, 默认为false(顺序查询)
+    * scrollId  **参数解释：** 分页查询时，若上次查询的返回结果中包含该字段，需要增加该字段参与分页查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * searchType  首次查询为 “init”, 分页查询时为 “forwards”或者“backwards”, 默认为首次查询“init”, 与 is_desc 参数配合进行分页查询。
     * limit  表示每次查询的日志条数，不填时默认为50，建议您设置为100。
     * highlight  日志关键词高亮显示，默认为true（高亮显示），false为取消高亮显示。
@@ -175,6 +182,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
             'lineNum' => 'setLineNum',
             'time' => 'setTime',
             'isDesc' => 'setIsDesc',
+            'scrollId' => 'setScrollId',
             'searchType' => 'setSearchType',
             'limit' => 'setLimit',
             'highlight' => 'setHighlight',
@@ -193,6 +201,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     * lineNum  日志单行序列号，第一次查询时不需要此参数，后续分页查询时需要使用，可从上次查询的返回信息中获取。line_num应在start_time 和 end_time 之间。
     * time  若已开启自定义时间功能，需要使用该字段进行分页查询。
     * isDesc  顺序或者倒序查询, 默认为false(顺序查询)
+    * scrollId  **参数解释：** 分页查询时，若上次查询的返回结果中包含该字段，需要增加该字段参与分页查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * searchType  首次查询为 “init”, 分页查询时为 “forwards”或者“backwards”, 默认为首次查询“init”, 与 is_desc 参数配合进行分页查询。
     * limit  表示每次查询的日志条数，不填时默认为50，建议您设置为100。
     * highlight  日志关键词高亮显示，默认为true（高亮显示），false为取消高亮显示。
@@ -211,6 +220,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
             'lineNum' => 'getLineNum',
             'time' => 'getTime',
             'isDesc' => 'getIsDesc',
+            'scrollId' => 'getScrollId',
             'searchType' => 'getSearchType',
             'limit' => 'getLimit',
             'highlight' => 'getHighlight',
@@ -300,6 +310,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
         $this->container['lineNum'] = isset($data['lineNum']) ? $data['lineNum'] : null;
         $this->container['time'] = isset($data['time']) ? $data['time'] : null;
         $this->container['isDesc'] = isset($data['isDesc']) ? $data['isDesc'] : null;
+        $this->container['scrollId'] = isset($data['scrollId']) ? $data['scrollId'] : null;
         $this->container['searchType'] = isset($data['searchType']) ? $data['searchType'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['highlight'] = isset($data['highlight']) ? $data['highlight'] : null;
@@ -557,6 +568,30 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     public function setIsDesc($isDesc)
     {
         $this->container['isDesc'] = $isDesc;
+        return $this;
+    }
+
+    /**
+    * Gets scrollId
+    *  **参数解释：** 分页查询时，若上次查询的返回结果中包含该字段，需要增加该字段参与分页查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getScrollId()
+    {
+        return $this->container['scrollId'];
+    }
+
+    /**
+    * Sets scrollId
+    *
+    * @param string|null $scrollId **参数解释：** 分页查询时，若上次查询的返回结果中包含该字段，需要增加该字段参与分页查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setScrollId($scrollId)
+    {
+        $this->container['scrollId'] = $scrollId;
         return $this;
     }
 

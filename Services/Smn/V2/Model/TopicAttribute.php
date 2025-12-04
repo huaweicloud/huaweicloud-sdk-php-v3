@@ -21,24 +21,32 @@ class TopicAttribute implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * accessPolicy  topic的访问策略
+    * createTime  topic的访问策略创建时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+    * updateTime  topic的访问策略更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
     * introduction  topic的简介
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'accessPolicy' => 'string',
+            'createTime' => 'string',
+            'updateTime' => 'string',
             'introduction' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * accessPolicy  topic的访问策略
+    * createTime  topic的访问策略创建时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+    * updateTime  topic的访问策略更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
     * introduction  topic的简介
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'accessPolicy' => null,
+        'createTime' => null,
+        'updateTime' => null,
         'introduction' => null
     ];
 
@@ -66,36 +74,48 @@ class TopicAttribute implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * accessPolicy  topic的访问策略
+    * createTime  topic的访问策略创建时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+    * updateTime  topic的访问策略更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
     * introduction  topic的简介
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'accessPolicy' => 'access_policy',
+            'createTime' => 'create_time',
+            'updateTime' => 'update_time',
             'introduction' => 'introduction'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * accessPolicy  topic的访问策略
+    * createTime  topic的访问策略创建时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+    * updateTime  topic的访问策略更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
     * introduction  topic的简介
     *
     * @var string[]
     */
     protected static $setters = [
             'accessPolicy' => 'setAccessPolicy',
+            'createTime' => 'setCreateTime',
+            'updateTime' => 'setUpdateTime',
             'introduction' => 'setIntroduction'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * accessPolicy  topic的访问策略
+    * createTime  topic的访问策略创建时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+    * updateTime  topic的访问策略更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
     * introduction  topic的简介
     *
     * @var string[]
     */
     protected static $getters = [
             'accessPolicy' => 'getAccessPolicy',
+            'createTime' => 'getCreateTime',
+            'updateTime' => 'getUpdateTime',
             'introduction' => 'getIntroduction'
     ];
 
@@ -158,6 +178,8 @@ class TopicAttribute implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['accessPolicy'] = isset($data['accessPolicy']) ? $data['accessPolicy'] : null;
+        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['introduction'] = isset($data['introduction']) ? $data['introduction'] : null;
     }
 
@@ -204,6 +226,54 @@ class TopicAttribute implements ModelInterface, ArrayAccess
     public function setAccessPolicy($accessPolicy)
     {
         $this->container['accessPolicy'] = $accessPolicy;
+        return $this;
+    }
+
+    /**
+    * Gets createTime
+    *  topic的访问策略创建时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+    *
+    * @return string|null
+    */
+    public function getCreateTime()
+    {
+        return $this->container['createTime'];
+    }
+
+    /**
+    * Sets createTime
+    *
+    * @param string|null $createTime topic的访问策略创建时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+    *
+    * @return $this
+    */
+    public function setCreateTime($createTime)
+    {
+        $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets updateTime
+    *  topic的访问策略更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+    *
+    * @return string|null
+    */
+    public function getUpdateTime()
+    {
+        return $this->container['updateTime'];
+    }
+
+    /**
+    * Sets updateTime
+    *
+    * @param string|null $updateTime topic的访问策略更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+    *
+    * @return $this
+    */
+    public function setUpdateTime($updateTime)
+    {
+        $this->container['updateTime'] = $updateTime;
         return $this;
     }
 

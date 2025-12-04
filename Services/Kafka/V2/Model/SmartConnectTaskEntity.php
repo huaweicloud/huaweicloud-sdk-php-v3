@@ -28,7 +28,7 @@ class SmartConnectTaskEntity implements ModelInterface, ArrayAccess
     * sinkType  **参数解释**： Smart Connect任务的目标端类型。 **取值范围**： - NONE：不配置。 - OBS_SINK：转储。
     * sinkTask  sinkTask
     * id  **参数解释**： Smart Connect任务的id。 **取值范围**： 不涉及。
-    * status  **参数解释**： Smart Connect任务的状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： Smart Connect任务的状态。 **取值范围**： - PAUSED：暂停。 - RUNNING：运行中。 - WAITING：等待中。 - RESTARTING：重启中。
     * createTime  **参数解释**： Smart Connect任务的创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -56,7 +56,7 @@ class SmartConnectTaskEntity implements ModelInterface, ArrayAccess
     * sinkType  **参数解释**： Smart Connect任务的目标端类型。 **取值范围**： - NONE：不配置。 - OBS_SINK：转储。
     * sinkTask  sinkTask
     * id  **参数解释**： Smart Connect任务的id。 **取值范围**： 不涉及。
-    * status  **参数解释**： Smart Connect任务的状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： Smart Connect任务的状态。 **取值范围**： - PAUSED：暂停。 - RUNNING：运行中。 - WAITING：等待中。 - RESTARTING：重启中。
     * createTime  **参数解释**： Smart Connect任务的创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -105,7 +105,7 @@ class SmartConnectTaskEntity implements ModelInterface, ArrayAccess
     * sinkType  **参数解释**： Smart Connect任务的目标端类型。 **取值范围**： - NONE：不配置。 - OBS_SINK：转储。
     * sinkTask  sinkTask
     * id  **参数解释**： Smart Connect任务的id。 **取值范围**： 不涉及。
-    * status  **参数解释**： Smart Connect任务的状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： Smart Connect任务的状态。 **取值范围**： - PAUSED：暂停。 - RUNNING：运行中。 - WAITING：等待中。 - RESTARTING：重启中。
     * createTime  **参数解释**： Smart Connect任务的创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -133,7 +133,7 @@ class SmartConnectTaskEntity implements ModelInterface, ArrayAccess
     * sinkType  **参数解释**： Smart Connect任务的目标端类型。 **取值范围**： - NONE：不配置。 - OBS_SINK：转储。
     * sinkTask  sinkTask
     * id  **参数解释**： Smart Connect任务的id。 **取值范围**： 不涉及。
-    * status  **参数解释**： Smart Connect任务的状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： Smart Connect任务的状态。 **取值范围**： - PAUSED：暂停。 - RUNNING：运行中。 - WAITING：等待中。 - RESTARTING：重启中。
     * createTime  **参数解释**： Smart Connect任务的创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -161,7 +161,7 @@ class SmartConnectTaskEntity implements ModelInterface, ArrayAccess
     * sinkType  **参数解释**： Smart Connect任务的目标端类型。 **取值范围**： - NONE：不配置。 - OBS_SINK：转储。
     * sinkTask  sinkTask
     * id  **参数解释**： Smart Connect任务的id。 **取值范围**： 不涉及。
-    * status  **参数解释**： Smart Connect任务的状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： Smart Connect任务的状态。 **取值范围**： - PAUSED：暂停。 - RUNNING：运行中。 - WAITING：等待中。 - RESTARTING：重启中。
     * createTime  **参数解释**： Smart Connect任务的创建时间。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -465,7 +465,7 @@ class SmartConnectTaskEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： Smart Connect任务的状态。 **取值范围**： 不涉及。
+    *  **参数解释**： Smart Connect任务的状态。 **取值范围**： - PAUSED：暂停。 - RUNNING：运行中。 - WAITING：等待中。 - RESTARTING：重启中。
     *
     * @return string|null
     */
@@ -477,7 +477,7 @@ class SmartConnectTaskEntity implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： Smart Connect任务的状态。 **取值范围**： 不涉及。
+    * @param string|null $status **参数解释**： Smart Connect任务的状态。 **取值范围**： - PAUSED：暂停。 - RUNNING：运行中。 - WAITING：等待中。 - RESTARTING：重启中。
     *
     * @return $this
     */

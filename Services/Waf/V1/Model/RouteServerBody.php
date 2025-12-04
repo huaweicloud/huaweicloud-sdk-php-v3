@@ -20,7 +20,7 @@ class RouteServerBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * backProtocol  WAF转发客户端请求到防护域名源站服务器的协议
+    * backProtocol  **参数解释：** WAF转发客户端请求到防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
     * address  客户端访问的源站服务器的IP地址
     * port  WAF转发客户端请求到源站服务的业务端口
     *
@@ -34,7 +34,7 @@ class RouteServerBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * backProtocol  WAF转发客户端请求到防护域名源站服务器的协议
+    * backProtocol  **参数解释：** WAF转发客户端请求到防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
     * address  客户端访问的源站服务器的IP地址
     * port  WAF转发客户端请求到源站服务的业务端口
     *
@@ -69,7 +69,7 @@ class RouteServerBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * backProtocol  WAF转发客户端请求到防护域名源站服务器的协议
+    * backProtocol  **参数解释：** WAF转发客户端请求到防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
     * address  客户端访问的源站服务器的IP地址
     * port  WAF转发客户端请求到源站服务的业务端口
     *
@@ -83,7 +83,7 @@ class RouteServerBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * backProtocol  WAF转发客户端请求到防护域名源站服务器的协议
+    * backProtocol  **参数解释：** WAF转发客户端请求到防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
     * address  客户端访问的源站服务器的IP地址
     * port  WAF转发客户端请求到源站服务的业务端口
     *
@@ -97,7 +97,7 @@ class RouteServerBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * backProtocol  WAF转发客户端请求到防护域名源站服务器的协议
+    * backProtocol  **参数解释：** WAF转发客户端请求到防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
     * address  客户端访问的源站服务器的IP地址
     * port  WAF转发客户端请求到源站服务的业务端口
     *
@@ -219,7 +219,7 @@ class RouteServerBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets backProtocol
-    *  WAF转发客户端请求到防护域名源站服务器的协议
+    *  **参数解释：** WAF转发客户端请求到防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -231,7 +231,7 @@ class RouteServerBody implements ModelInterface, ArrayAccess
     /**
     * Sets backProtocol
     *
-    * @param string|null $backProtocol WAF转发客户端请求到防护域名源站服务器的协议
+    * @param string|null $backProtocol **参数解释：** WAF转发客户端请求到防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
     *
     * @return $this
     */

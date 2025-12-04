@@ -20,42 +20,42 @@ class DescribeGroupsRespGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  消费组名称。
-    * state  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
-    * coordinatorId  协调器编号。
-    * members  消费者列表。
-    * groupMessageOffsets  消费进度。
-    * assignmentStrategy  分区分配策略。
+    * state  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * createdAt  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * groupId  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * coordinatorId  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
+    * assignmentStrategy  **参数解释**： 分区分配策略。 **取值范围**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'groupId' => 'string',
             'state' => 'string',
+            'createdAt' => 'object',
+            'groupId' => 'string',
             'coordinatorId' => 'int',
-            'members' => '\HuaweiCloud\SDK\Kafka\V2\Model\DescribeGroupsRespGroupMembers[]',
-            'groupMessageOffsets' => '\HuaweiCloud\SDK\Kafka\V2\Model\ShowGroupsRespGroupGroupMessageOffsets[]',
-            'assignmentStrategy' => 'string'
+            'assignmentStrategy' => 'string',
+            'groupDesc' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  消费组名称。
-    * state  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
-    * coordinatorId  协调器编号。
-    * members  消费者列表。
-    * groupMessageOffsets  消费进度。
-    * assignmentStrategy  分区分配策略。
+    * state  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * createdAt  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * groupId  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * coordinatorId  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
+    * assignmentStrategy  **参数解释**： 分区分配策略。 **取值范围**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'groupId' => null,
         'state' => null,
+        'createdAt' => 'int64',
+        'groupId' => null,
         'coordinatorId' => null,
-        'members' => null,
-        'groupMessageOffsets' => null,
-        'assignmentStrategy' => null
+        'assignmentStrategy' => null,
+        'groupDesc' => null
     ];
 
     /**
@@ -81,62 +81,62 @@ class DescribeGroupsRespGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  消费组名称。
-    * state  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
-    * coordinatorId  协调器编号。
-    * members  消费者列表。
-    * groupMessageOffsets  消费进度。
-    * assignmentStrategy  分区分配策略。
+    * state  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * createdAt  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * groupId  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * coordinatorId  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
+    * assignmentStrategy  **参数解释**： 分区分配策略。 **取值范围**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'groupId' => 'group_id',
             'state' => 'state',
+            'createdAt' => 'createdAt',
+            'groupId' => 'group_id',
             'coordinatorId' => 'coordinator_id',
-            'members' => 'members',
-            'groupMessageOffsets' => 'group_message_offsets',
-            'assignmentStrategy' => 'assignment_strategy'
+            'assignmentStrategy' => 'assignment_strategy',
+            'groupDesc' => 'group_desc'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  消费组名称。
-    * state  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
-    * coordinatorId  协调器编号。
-    * members  消费者列表。
-    * groupMessageOffsets  消费进度。
-    * assignmentStrategy  分区分配策略。
+    * state  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * createdAt  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * groupId  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * coordinatorId  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
+    * assignmentStrategy  **参数解释**： 分区分配策略。 **取值范围**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'groupId' => 'setGroupId',
             'state' => 'setState',
+            'createdAt' => 'setCreatedAt',
+            'groupId' => 'setGroupId',
             'coordinatorId' => 'setCoordinatorId',
-            'members' => 'setMembers',
-            'groupMessageOffsets' => 'setGroupMessageOffsets',
-            'assignmentStrategy' => 'setAssignmentStrategy'
+            'assignmentStrategy' => 'setAssignmentStrategy',
+            'groupDesc' => 'setGroupDesc'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  消费组名称。
-    * state  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
-    * coordinatorId  协调器编号。
-    * members  消费者列表。
-    * groupMessageOffsets  消费进度。
-    * assignmentStrategy  分区分配策略。
+    * state  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * createdAt  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * groupId  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * coordinatorId  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
+    * assignmentStrategy  **参数解释**： 分区分配策略。 **取值范围**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'groupId' => 'getGroupId',
             'state' => 'getState',
+            'createdAt' => 'getCreatedAt',
+            'groupId' => 'getGroupId',
             'coordinatorId' => 'getCoordinatorId',
-            'members' => 'getMembers',
-            'groupMessageOffsets' => 'getGroupMessageOffsets',
-            'assignmentStrategy' => 'getAssignmentStrategy'
+            'assignmentStrategy' => 'getAssignmentStrategy',
+            'groupDesc' => 'getGroupDesc'
     ];
 
     /**
@@ -197,12 +197,12 @@ class DescribeGroupsRespGroup implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['coordinatorId'] = isset($data['coordinatorId']) ? $data['coordinatorId'] : null;
-        $this->container['members'] = isset($data['members']) ? $data['members'] : null;
-        $this->container['groupMessageOffsets'] = isset($data['groupMessageOffsets']) ? $data['groupMessageOffsets'] : null;
         $this->container['assignmentStrategy'] = isset($data['assignmentStrategy']) ? $data['assignmentStrategy'] : null;
+        $this->container['groupDesc'] = isset($data['groupDesc']) ? $data['groupDesc'] : null;
     }
 
     /**
@@ -228,32 +228,8 @@ class DescribeGroupsRespGroup implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets groupId
-    *  消费组名称。
-    *
-    * @return string|null
-    */
-    public function getGroupId()
-    {
-        return $this->container['groupId'];
-    }
-
-    /**
-    * Sets groupId
-    *
-    * @param string|null $groupId 消费组名称。
-    *
-    * @return $this
-    */
-    public function setGroupId($groupId)
-    {
-        $this->container['groupId'] = $groupId;
-        return $this;
-    }
-
-    /**
     * Gets state
-    *  消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    *  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
     *
     * @return string|null
     */
@@ -265,7 +241,7 @@ class DescribeGroupsRespGroup implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state 消费组状态。包含以下状态： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * @param string|null $state **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
     *
     * @return $this
     */
@@ -276,8 +252,56 @@ class DescribeGroupsRespGroup implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets createdAt
+    *  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    *
+    * @return object|null
+    */
+    public function getCreatedAt()
+    {
+        return $this->container['createdAt'];
+    }
+
+    /**
+    * Sets createdAt
+    *
+    * @param object|null $createdAt **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setCreatedAt($createdAt)
+    {
+        $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
+        return $this;
+    }
+
+    /**
     * Gets coordinatorId
-    *  协调器编号。
+    *  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -289,7 +313,7 @@ class DescribeGroupsRespGroup implements ModelInterface, ArrayAccess
     /**
     * Sets coordinatorId
     *
-    * @param int|null $coordinatorId 协调器编号。
+    * @param int|null $coordinatorId **参数解释**： 协调器编号。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -300,56 +324,8 @@ class DescribeGroupsRespGroup implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets members
-    *  消费者列表。
-    *
-    * @return \HuaweiCloud\SDK\Kafka\V2\Model\DescribeGroupsRespGroupMembers[]|null
-    */
-    public function getMembers()
-    {
-        return $this->container['members'];
-    }
-
-    /**
-    * Sets members
-    *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\DescribeGroupsRespGroupMembers[]|null $members 消费者列表。
-    *
-    * @return $this
-    */
-    public function setMembers($members)
-    {
-        $this->container['members'] = $members;
-        return $this;
-    }
-
-    /**
-    * Gets groupMessageOffsets
-    *  消费进度。
-    *
-    * @return \HuaweiCloud\SDK\Kafka\V2\Model\ShowGroupsRespGroupGroupMessageOffsets[]|null
-    */
-    public function getGroupMessageOffsets()
-    {
-        return $this->container['groupMessageOffsets'];
-    }
-
-    /**
-    * Sets groupMessageOffsets
-    *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowGroupsRespGroupGroupMessageOffsets[]|null $groupMessageOffsets 消费进度。
-    *
-    * @return $this
-    */
-    public function setGroupMessageOffsets($groupMessageOffsets)
-    {
-        $this->container['groupMessageOffsets'] = $groupMessageOffsets;
-        return $this;
-    }
-
-    /**
     * Gets assignmentStrategy
-    *  分区分配策略。
+    *  **参数解释**： 分区分配策略。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -361,13 +337,37 @@ class DescribeGroupsRespGroup implements ModelInterface, ArrayAccess
     /**
     * Sets assignmentStrategy
     *
-    * @param string|null $assignmentStrategy 分区分配策略。
+    * @param string|null $assignmentStrategy **参数解释**： 分区分配策略。 **取值范围**： 不涉及。
     *
     * @return $this
     */
     public function setAssignmentStrategy($assignmentStrategy)
     {
         $this->container['assignmentStrategy'] = $assignmentStrategy;
+        return $this;
+    }
+
+    /**
+    * Gets groupDesc
+    *  **参数解释**： 消费组描述。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getGroupDesc()
+    {
+        return $this->container['groupDesc'];
+    }
+
+    /**
+    * Sets groupDesc
+    *
+    * @param string|null $groupDesc **参数解释**： 消费组描述。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setGroupDesc($groupDesc)
+    {
+        $this->container['groupDesc'] = $groupDesc;
         return $this;
     }
 

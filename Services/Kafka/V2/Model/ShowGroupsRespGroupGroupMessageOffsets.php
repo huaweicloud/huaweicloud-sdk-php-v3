@@ -20,11 +20,11 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * partition  分区编号。
-    * lag  剩余可消费消息数，即消息堆积数。
-    * topic  Topic名称。
-    * messageCurrentOffset  当前消费进度。
-    * messageLogEndOffset  最大消息位置（LEO）。
+    * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及。
+    * lag  **参数解释**： 剩余可消费消息数，即消息堆积数。 **取值范围**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * messageCurrentOffset  **参数解释**： 当前消费进度。 **取值范围**： 不涉及。
+    * messageLogEndOffset  **参数解释**： 最大消息位置（LEO）。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * partition  分区编号。
-    * lag  剩余可消费消息数，即消息堆积数。
-    * topic  Topic名称。
-    * messageCurrentOffset  当前消费进度。
-    * messageLogEndOffset  最大消息位置（LEO）。
+    * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及。
+    * lag  **参数解释**： 剩余可消费消息数，即消息堆积数。 **取值范围**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * messageCurrentOffset  **参数解释**： 当前消费进度。 **取值范围**： 不涉及。
+    * messageLogEndOffset  **参数解释**： 最大消息位置（LEO）。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * partition  分区编号。
-    * lag  剩余可消费消息数，即消息堆积数。
-    * topic  Topic名称。
-    * messageCurrentOffset  当前消费进度。
-    * messageLogEndOffset  最大消息位置（LEO）。
+    * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及。
+    * lag  **参数解释**： 剩余可消费消息数，即消息堆积数。 **取值范围**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * messageCurrentOffset  **参数解释**： 当前消费进度。 **取值范围**： 不涉及。
+    * messageLogEndOffset  **参数解释**： 最大消息位置（LEO）。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * partition  分区编号。
-    * lag  剩余可消费消息数，即消息堆积数。
-    * topic  Topic名称。
-    * messageCurrentOffset  当前消费进度。
-    * messageLogEndOffset  最大消息位置（LEO）。
+    * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及。
+    * lag  **参数解释**： 剩余可消费消息数，即消息堆积数。 **取值范围**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * messageCurrentOffset  **参数解释**： 当前消费进度。 **取值范围**： 不涉及。
+    * messageLogEndOffset  **参数解释**： 最大消息位置（LEO）。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * partition  分区编号。
-    * lag  剩余可消费消息数，即消息堆积数。
-    * topic  Topic名称。
-    * messageCurrentOffset  当前消费进度。
-    * messageLogEndOffset  最大消息位置（LEO）。
+    * partition  **参数解释**： 分区编号。 **取值范围**： 不涉及。
+    * lag  **参数解释**： 剩余可消费消息数，即消息堆积数。 **取值范围**： 不涉及。
+    * topic  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * messageCurrentOffset  **参数解释**： 当前消费进度。 **取值范围**： 不涉及。
+    * messageLogEndOffset  **参数解释**： 最大消息位置（LEO）。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
 
     /**
     * Gets partition
-    *  分区编号。
+    *  **参数解释**： 分区编号。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -230,7 +230,7 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
     /**
     * Sets partition
     *
-    * @param int|null $partition 分区编号。
+    * @param int|null $partition **参数解释**： 分区编号。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
 
     /**
     * Gets lag
-    *  剩余可消费消息数，即消息堆积数。
+    *  **参数解释**： 剩余可消费消息数，即消息堆积数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -254,7 +254,7 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
     /**
     * Sets lag
     *
-    * @param int|null $lag 剩余可消费消息数，即消息堆积数。
+    * @param int|null $lag **参数解释**： 剩余可消费消息数，即消息堆积数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
 
     /**
     * Gets topic
-    *  Topic名称。
+    *  **参数解释**： Topic名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
     /**
     * Sets topic
     *
-    * @param string|null $topic Topic名称。
+    * @param string|null $topic **参数解释**： Topic名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
 
     /**
     * Gets messageCurrentOffset
-    *  当前消费进度。
+    *  **参数解释**： 当前消费进度。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -302,7 +302,7 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
     /**
     * Sets messageCurrentOffset
     *
-    * @param int|null $messageCurrentOffset 当前消费进度。
+    * @param int|null $messageCurrentOffset **参数解释**： 当前消费进度。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
 
     /**
     * Gets messageLogEndOffset
-    *  最大消息位置（LEO）。
+    *  **参数解释**： 最大消息位置（LEO）。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -326,7 +326,7 @@ class ShowGroupsRespGroupGroupMessageOffsets implements ModelInterface, ArrayAcc
     /**
     * Sets messageLogEndOffset
     *
-    * @param int|null $messageLogEndOffset 最大消息位置（LEO）。
+    * @param int|null $messageLogEndOffset **参数解释**： 最大消息位置（LEO）。 **取值范围**： 不涉及。
     *
     * @return $this
     */

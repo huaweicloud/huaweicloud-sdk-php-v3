@@ -23,7 +23,7 @@ class ListInstanceConsumerGroupTopicsRequest implements ModelInterface, ArrayAcc
     * engine  引擎。
     * instanceId  实例ID。
     * group  消费组ID。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
     * limit  当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。
     * sortKey  排序规则： - topic：按Topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
     * sortDir  排序方式。 - asc：升序。 - desc：降序，默认方式。
@@ -47,7 +47,7 @@ class ListInstanceConsumerGroupTopicsRequest implements ModelInterface, ArrayAcc
     * engine  引擎。
     * instanceId  实例ID。
     * group  消费组ID。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
     * limit  当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。
     * sortKey  排序规则： - topic：按Topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
     * sortDir  排序方式。 - asc：升序。 - desc：降序，默认方式。
@@ -92,7 +92,7 @@ class ListInstanceConsumerGroupTopicsRequest implements ModelInterface, ArrayAcc
     * engine  引擎。
     * instanceId  实例ID。
     * group  消费组ID。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
     * limit  当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。
     * sortKey  排序规则： - topic：按Topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
     * sortDir  排序方式。 - asc：升序。 - desc：降序，默认方式。
@@ -116,7 +116,7 @@ class ListInstanceConsumerGroupTopicsRequest implements ModelInterface, ArrayAcc
     * engine  引擎。
     * instanceId  实例ID。
     * group  消费组ID。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
     * limit  当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。
     * sortKey  排序规则： - topic：按Topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
     * sortDir  排序方式。 - asc：升序。 - desc：降序，默认方式。
@@ -140,7 +140,7 @@ class ListInstanceConsumerGroupTopicsRequest implements ModelInterface, ArrayAcc
     * engine  引擎。
     * instanceId  实例ID。
     * group  消费组ID。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
     * limit  当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。
     * sortKey  排序规则： - topic：按Topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
     * sortDir  排序方式。 - asc：升序。 - desc：降序，默认方式。
@@ -332,7 +332,7 @@ class ListInstanceConsumerGroupTopicsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets offset
-    *  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    *  偏移量，表示从此偏移量开始查询，offset大于等于0。
     *
     * @return int|null
     */
@@ -344,7 +344,7 @@ class ListInstanceConsumerGroupTopicsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * @param int|null $offset 偏移量，表示从此偏移量开始查询，offset大于等于0。
     *
     * @return $this
     */
