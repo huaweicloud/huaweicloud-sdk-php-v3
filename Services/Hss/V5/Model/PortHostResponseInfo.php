@@ -20,18 +20,18 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * containerId  镜像id
-    * hostId  主机id
-    * hostIp  主机ip
-    * hostName  主机名称
-    * laddr  监听ip
-    * path  进程可执行文件路径
-    * pid  pid
-    * port  端口
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * laddr  **参数解释**: 端口的监听IP地址（0.0.0.0表示监听所有网卡） **取值范围**: 支持IPv4或IPv6格式，IPv4长度7-15位，IPv6长度15-39位
+    * path  **参数解释**: 占用当前端口的进程对应的可执行文件绝对路径 **取值范围**: 字符长度0-512位
+    * pid  **参数解释**: 占用当前端口的进程ID **取值范围**: 非负整数，最小值0（无对应进程时为0）；单位：个
+    * port  **参数解释**: 端口的具体编号 **取值范围**: 1-65535（TCP/UDP标准端口范围）
     * status  状态
-    * type  端口类型：目前包括TCP，UDP两种
-    * containerName  容器名称
-    * agentId  agent id
+    * type  **参数解释**: 端口类型 **取值范围**: 目前包括TCP，UDP两种
+    * containerName  **参数解释**： 容器实例名称，只有容器类型的告警有 **取值范围**： 字符长度1-256位
+    * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -52,18 +52,18 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * containerId  镜像id
-    * hostId  主机id
-    * hostIp  主机ip
-    * hostName  主机名称
-    * laddr  监听ip
-    * path  进程可执行文件路径
-    * pid  pid
-    * port  端口
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * laddr  **参数解释**: 端口的监听IP地址（0.0.0.0表示监听所有网卡） **取值范围**: 支持IPv4或IPv6格式，IPv4长度7-15位，IPv6长度15-39位
+    * path  **参数解释**: 占用当前端口的进程对应的可执行文件绝对路径 **取值范围**: 字符长度0-512位
+    * pid  **参数解释**: 占用当前端口的进程ID **取值范围**: 非负整数，最小值0（无对应进程时为0）；单位：个
+    * port  **参数解释**: 端口的具体编号 **取值范围**: 1-65535（TCP/UDP标准端口范围）
     * status  状态
-    * type  端口类型：目前包括TCP，UDP两种
-    * containerName  容器名称
-    * agentId  agent id
+    * type  **参数解释**: 端口类型 **取值范围**: 目前包括TCP，UDP两种
+    * containerName  **参数解释**： 容器实例名称，只有容器类型的告警有 **取值范围**： 字符长度1-256位
+    * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -105,18 +105,18 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * containerId  镜像id
-    * hostId  主机id
-    * hostIp  主机ip
-    * hostName  主机名称
-    * laddr  监听ip
-    * path  进程可执行文件路径
-    * pid  pid
-    * port  端口
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * laddr  **参数解释**: 端口的监听IP地址（0.0.0.0表示监听所有网卡） **取值范围**: 支持IPv4或IPv6格式，IPv4长度7-15位，IPv6长度15-39位
+    * path  **参数解释**: 占用当前端口的进程对应的可执行文件绝对路径 **取值范围**: 字符长度0-512位
+    * pid  **参数解释**: 占用当前端口的进程ID **取值范围**: 非负整数，最小值0（无对应进程时为0）；单位：个
+    * port  **参数解释**: 端口的具体编号 **取值范围**: 1-65535（TCP/UDP标准端口范围）
     * status  状态
-    * type  端口类型：目前包括TCP，UDP两种
-    * containerName  容器名称
-    * agentId  agent id
+    * type  **参数解释**: 端口类型 **取值范围**: 目前包括TCP，UDP两种
+    * containerName  **参数解释**： 容器实例名称，只有容器类型的告警有 **取值范围**： 字符长度1-256位
+    * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -137,18 +137,18 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * containerId  镜像id
-    * hostId  主机id
-    * hostIp  主机ip
-    * hostName  主机名称
-    * laddr  监听ip
-    * path  进程可执行文件路径
-    * pid  pid
-    * port  端口
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * laddr  **参数解释**: 端口的监听IP地址（0.0.0.0表示监听所有网卡） **取值范围**: 支持IPv4或IPv6格式，IPv4长度7-15位，IPv6长度15-39位
+    * path  **参数解释**: 占用当前端口的进程对应的可执行文件绝对路径 **取值范围**: 字符长度0-512位
+    * pid  **参数解释**: 占用当前端口的进程ID **取值范围**: 非负整数，最小值0（无对应进程时为0）；单位：个
+    * port  **参数解释**: 端口的具体编号 **取值范围**: 1-65535（TCP/UDP标准端口范围）
     * status  状态
-    * type  端口类型：目前包括TCP，UDP两种
-    * containerName  容器名称
-    * agentId  agent id
+    * type  **参数解释**: 端口类型 **取值范围**: 目前包括TCP，UDP两种
+    * containerName  **参数解释**： 容器实例名称，只有容器类型的告警有 **取值范围**： 字符长度1-256位
+    * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -169,18 +169,18 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * containerId  镜像id
-    * hostId  主机id
-    * hostIp  主机ip
-    * hostName  主机名称
-    * laddr  监听ip
-    * path  进程可执行文件路径
-    * pid  pid
-    * port  端口
+    * containerId  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
+    * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * laddr  **参数解释**: 端口的监听IP地址（0.0.0.0表示监听所有网卡） **取值范围**: 支持IPv4或IPv6格式，IPv4长度7-15位，IPv6长度15-39位
+    * path  **参数解释**: 占用当前端口的进程对应的可执行文件绝对路径 **取值范围**: 字符长度0-512位
+    * pid  **参数解释**: 占用当前端口的进程ID **取值范围**: 非负整数，最小值0（无对应进程时为0）；单位：个
+    * port  **参数解释**: 端口的具体编号 **取值范围**: 1-65535（TCP/UDP标准端口范围）
     * status  状态
-    * type  端口类型：目前包括TCP，UDP两种
-    * containerName  容器名称
-    * agentId  agent id
+    * type  **参数解释**: 端口类型 **取值范围**: 目前包括TCP，UDP两种
+    * containerName  **参数解释**： 容器实例名称，只有容器类型的告警有 **取值范围**： 字符长度1-256位
+    * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -279,20 +279,23 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) > 256)) {
-                $invalidProperties[] = "invalid value for 'containerId', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'containerId', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'containerId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 256)) {
-                $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) > 256)) {
-                $invalidProperties[] = "invalid value for 'hostIp', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['hostId']) && !preg_match("/^.*$/", $this->container['hostId'])) {
+                $invalidProperties[] = "invalid value for 'hostId', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) > 128)) {
+                $invalidProperties[] = "invalid value for 'hostIp', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostIp', the character length must be bigger than or equal to 1.";
@@ -302,6 +305,9 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['hostName']) && !preg_match("/^.*$/", $this->container['hostName'])) {
+                $invalidProperties[] = "invalid value for 'hostName', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['laddr']) && (mb_strlen($this->container['laddr']) > 256)) {
                 $invalidProperties[] = "invalid value for 'laddr', the character length must be smaller than or equal to 256.";
@@ -339,17 +345,11 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 1)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'containerName', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['containerName']) && !preg_match("/^.*$/", $this->container['containerName'])) {
+                $invalidProperties[] = "invalid value for 'containerName', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'containerName', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) > 128)) {
-                $invalidProperties[] = "invalid value for 'agentId', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'agentId', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['agentId']) && !preg_match("/^.*$/", $this->container['agentId'])) {
+                $invalidProperties[] = "invalid value for 'agentId', must be conform to the pattern /^.*$/.";
             }
         return $invalidProperties;
     }
@@ -367,7 +367,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerId
-    *  镜像id
+    *  **参数解释**: 容器ID **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -379,7 +379,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets containerId
     *
-    * @param string|null $containerId 镜像id
+    * @param string|null $containerId **参数解释**: 容器ID **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -391,7 +391,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机id
+    *  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     *
     * @return string|null
     */
@@ -403,7 +403,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机id
+    * @param string|null $hostId **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     *
     * @return $this
     */
@@ -415,7 +415,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  主机ip
+    *  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -427,7 +427,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 主机ip
+    * @param string|null $hostIp **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -439,7 +439,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  主机名称
+    *  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -451,7 +451,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 主机名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -463,7 +463,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets laddr
-    *  监听ip
+    *  **参数解释**: 端口的监听IP地址（0.0.0.0表示监听所有网卡） **取值范围**: 支持IPv4或IPv6格式，IPv4长度7-15位，IPv6长度15-39位
     *
     * @return string|null
     */
@@ -475,7 +475,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets laddr
     *
-    * @param string|null $laddr 监听ip
+    * @param string|null $laddr **参数解释**: 端口的监听IP地址（0.0.0.0表示监听所有网卡） **取值范围**: 支持IPv4或IPv6格式，IPv4长度7-15位，IPv6长度15-39位
     *
     * @return $this
     */
@@ -487,7 +487,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets path
-    *  进程可执行文件路径
+    *  **参数解释**: 占用当前端口的进程对应的可执行文件绝对路径 **取值范围**: 字符长度0-512位
     *
     * @return string|null
     */
@@ -499,7 +499,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string|null $path 进程可执行文件路径
+    * @param string|null $path **参数解释**: 占用当前端口的进程对应的可执行文件绝对路径 **取值范围**: 字符长度0-512位
     *
     * @return $this
     */
@@ -511,7 +511,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets pid
-    *  pid
+    *  **参数解释**: 占用当前端口的进程ID **取值范围**: 非负整数，最小值0（无对应进程时为0）；单位：个
     *
     * @return int|null
     */
@@ -523,7 +523,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets pid
     *
-    * @param int|null $pid pid
+    * @param int|null $pid **参数解释**: 占用当前端口的进程ID **取值范围**: 非负整数，最小值0（无对应进程时为0）；单位：个
     *
     * @return $this
     */
@@ -535,7 +535,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets port
-    *  端口
+    *  **参数解释**: 端口的具体编号 **取值范围**: 1-65535（TCP/UDP标准端口范围）
     *
     * @return int|null
     */
@@ -547,7 +547,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets port
     *
-    * @param int|null $port 端口
+    * @param int|null $port **参数解释**: 端口的具体编号 **取值范围**: 1-65535（TCP/UDP标准端口范围）
     *
     * @return $this
     */
@@ -583,7 +583,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  端口类型：目前包括TCP，UDP两种
+    *  **参数解释**: 端口类型 **取值范围**: 目前包括TCP，UDP两种
     *
     * @return string|null
     */
@@ -595,7 +595,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 端口类型：目前包括TCP，UDP两种
+    * @param string|null $type **参数解释**: 端口类型 **取值范围**: 目前包括TCP，UDP两种
     *
     * @return $this
     */
@@ -607,7 +607,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerName
-    *  容器名称
+    *  **参数解释**： 容器实例名称，只有容器类型的告警有 **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -619,7 +619,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets containerName
     *
-    * @param string|null $containerName 容器名称
+    * @param string|null $containerName **参数解释**： 容器实例名称，只有容器类型的告警有 **取值范围**： 字符长度1-256位
     *
     * @return $this
     */
@@ -631,7 +631,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  agent id
+    *  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -643,7 +643,7 @@ class PortHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId agent id
+    * @param string|null $agentId **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return $this
     */

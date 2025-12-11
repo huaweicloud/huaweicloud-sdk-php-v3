@@ -21,7 +21,7 @@ class RdsDbResponseRetList implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  rds数据库id
-    * retStatus  状态 - SUCCESS - FAILED
+    * retStatus  状态 - SUCCESS: 成功 - FAILED： 失败
     * retMessage  描述
     *
     * @var string[]
@@ -35,7 +35,7 @@ class RdsDbResponseRetList implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  rds数据库id
-    * retStatus  状态 - SUCCESS - FAILED
+    * retStatus  状态 - SUCCESS: 成功 - FAILED： 失败
     * retMessage  描述
     *
     * @var string[]
@@ -70,7 +70,7 @@ class RdsDbResponseRetList implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  rds数据库id
-    * retStatus  状态 - SUCCESS - FAILED
+    * retStatus  状态 - SUCCESS: 成功 - FAILED： 失败
     * retMessage  描述
     *
     * @var string[]
@@ -84,7 +84,7 @@ class RdsDbResponseRetList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  rds数据库id
-    * retStatus  状态 - SUCCESS - FAILED
+    * retStatus  状态 - SUCCESS: 成功 - FAILED： 失败
     * retMessage  描述
     *
     * @var string[]
@@ -98,7 +98,7 @@ class RdsDbResponseRetList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  rds数据库id
-    * retStatus  状态 - SUCCESS - FAILED
+    * retStatus  状态 - SUCCESS: 成功 - FAILED： 失败
     * retMessage  描述
     *
     * @var string[]
@@ -229,7 +229,7 @@ class RdsDbResponseRetList implements ModelInterface, ArrayAccess
 
     /**
     * Gets retStatus
-    *  状态 - SUCCESS - FAILED
+    *  状态 - SUCCESS: 成功 - FAILED： 失败
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class RdsDbResponseRetList implements ModelInterface, ArrayAccess
     /**
     * Sets retStatus
     *
-    * @param string $retStatus 状态 - SUCCESS - FAILED
+    * @param string $retStatus 状态 - SUCCESS: 成功 - FAILED： 失败
     *
     * @return $this
     */

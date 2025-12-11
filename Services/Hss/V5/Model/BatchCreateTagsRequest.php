@@ -20,15 +20,13 @@ class BatchCreateTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * contentType  缺省值:application/json; charset=utf-8
-    * resourceType  由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
-    * resourceId  由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
+    * resourceType  **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
+    * resourceId  **参数解释**: 由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 无
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'contentType' => 'string',
             'resourceType' => 'string',
             'resourceId' => 'string',
             'body' => '\HuaweiCloud\SDK\Hss\V5\Model\BatchCreateTagsRequestInfo'
@@ -36,15 +34,13 @@ class BatchCreateTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * contentType  缺省值:application/json; charset=utf-8
-    * resourceType  由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
-    * resourceId  由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
+    * resourceType  **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
+    * resourceId  **参数解释**: 由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 无
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'contentType' => null,
         'resourceType' => null,
         'resourceId' => null,
         'body' => null
@@ -73,15 +69,13 @@ class BatchCreateTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * contentType  缺省值:application/json; charset=utf-8
-    * resourceType  由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
-    * resourceId  由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
+    * resourceType  **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
+    * resourceId  **参数解释**: 由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 无
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'contentType' => 'Content-Type',
             'resourceType' => 'resource_type',
             'resourceId' => 'resource_id',
             'body' => 'body'
@@ -89,15 +83,13 @@ class BatchCreateTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * contentType  缺省值:application/json; charset=utf-8
-    * resourceType  由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
-    * resourceId  由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
+    * resourceType  **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
+    * resourceId  **参数解释**: 由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 无
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'contentType' => 'setContentType',
             'resourceType' => 'setResourceType',
             'resourceId' => 'setResourceId',
             'body' => 'setBody'
@@ -105,15 +97,13 @@ class BatchCreateTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * contentType  缺省值:application/json; charset=utf-8
-    * resourceType  由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
-    * resourceId  由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
+    * resourceType  **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
+    * resourceId  **参数解释**: 由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 无
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'contentType' => 'getContentType',
             'resourceType' => 'getResourceType',
             'resourceId' => 'getResourceId',
             'body' => 'getBody'
@@ -177,7 +167,6 @@ class BatchCreateTagsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
@@ -191,12 +180,6 @@ class BatchCreateTagsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) > 128)) {
-                $invalidProperties[] = "invalid value for 'contentType', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) < 0)) {
-                $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 0.";
-            }
         if ($this->container['resourceType'] === null) {
             $invalidProperties[] = "'resourceType' can't be null";
         }
@@ -212,8 +195,8 @@ class BatchCreateTagsRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['resourceId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 128.";
             }
-            if ((mb_strlen($this->container['resourceId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'resourceId', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['resourceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'resourceId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -230,32 +213,8 @@ class BatchCreateTagsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets contentType
-    *  缺省值:application/json; charset=utf-8
-    *
-    * @return string|null
-    */
-    public function getContentType()
-    {
-        return $this->container['contentType'];
-    }
-
-    /**
-    * Sets contentType
-    *
-    * @param string|null $contentType 缺省值:application/json; charset=utf-8
-    *
-    * @return $this
-    */
-    public function setContentType($contentType)
-    {
-        $this->container['contentType'] = $contentType;
-        return $this;
-    }
-
-    /**
     * Gets resourceType
-    *  由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
+    *  **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
     *
     * @return string
     */
@@ -267,7 +226,7 @@ class BatchCreateTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
+    * @param string $resourceType **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
     *
     * @return $this
     */
@@ -279,7 +238,7 @@ class BatchCreateTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
+    *  **参数解释**: 由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 无
     *
     * @return string
     */
@@ -291,7 +250,7 @@ class BatchCreateTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string $resourceId 由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
+    * @param string $resourceId **参数解释**: 由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 无
     *
     * @return $this
     */

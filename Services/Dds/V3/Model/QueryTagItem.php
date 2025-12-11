@@ -20,8 +20,8 @@ class QueryTagItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  标签键。最大长度36个unicode字符，key不能为空或者空字符串，不能为空格，校验和使用之前先排除前后半角空格。
-    * values  标签值列表。最大长度43个unicode字符，不能为空格，校验和使用之前先排除前后半角空格。如果values为空列表，则表示查询任意value。value之间为或的关系。
+    * key  **参数解释：** 标签键。 **约束限制：** 最大长度36个unicode字符，key不能为空或者空字符串，不能为空格，校验和使用之前先排除前后半角空格。 取值范围： 不涉及。 默认取值： 不涉及。
+    * values  **参数解释：** 标签值列表。 **约束限制：** 最大长度43个unicode字符，不能为空格，校验和使用之前先排除前后半角空格。如果values为空列表，则表示查询任意value。value之间为或的关系。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class QueryTagItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  标签键。最大长度36个unicode字符，key不能为空或者空字符串，不能为空格，校验和使用之前先排除前后半角空格。
-    * values  标签值列表。最大长度43个unicode字符，不能为空格，校验和使用之前先排除前后半角空格。如果values为空列表，则表示查询任意value。value之间为或的关系。
+    * key  **参数解释：** 标签键。 **约束限制：** 最大长度36个unicode字符，key不能为空或者空字符串，不能为空格，校验和使用之前先排除前后半角空格。 取值范围： 不涉及。 默认取值： 不涉及。
+    * values  **参数解释：** 标签值列表。 **约束限制：** 最大长度43个unicode字符，不能为空格，校验和使用之前先排除前后半角空格。如果values为空列表，则表示查询任意value。value之间为或的关系。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class QueryTagItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  标签键。最大长度36个unicode字符，key不能为空或者空字符串，不能为空格，校验和使用之前先排除前后半角空格。
-    * values  标签值列表。最大长度43个unicode字符，不能为空格，校验和使用之前先排除前后半角空格。如果values为空列表，则表示查询任意value。value之间为或的关系。
+    * key  **参数解释：** 标签键。 **约束限制：** 最大长度36个unicode字符，key不能为空或者空字符串，不能为空格，校验和使用之前先排除前后半角空格。 取值范围： 不涉及。 默认取值： 不涉及。
+    * values  **参数解释：** 标签值列表。 **约束限制：** 最大长度43个unicode字符，不能为空格，校验和使用之前先排除前后半角空格。如果values为空列表，则表示查询任意value。value之间为或的关系。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class QueryTagItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  标签键。最大长度36个unicode字符，key不能为空或者空字符串，不能为空格，校验和使用之前先排除前后半角空格。
-    * values  标签值列表。最大长度43个unicode字符，不能为空格，校验和使用之前先排除前后半角空格。如果values为空列表，则表示查询任意value。value之间为或的关系。
+    * key  **参数解释：** 标签键。 **约束限制：** 最大长度36个unicode字符，key不能为空或者空字符串，不能为空格，校验和使用之前先排除前后半角空格。 取值范围： 不涉及。 默认取值： 不涉及。
+    * values  **参数解释：** 标签值列表。 **约束限制：** 最大长度43个unicode字符，不能为空格，校验和使用之前先排除前后半角空格。如果values为空列表，则表示查询任意value。value之间为或的关系。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class QueryTagItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  标签键。最大长度36个unicode字符，key不能为空或者空字符串，不能为空格，校验和使用之前先排除前后半角空格。
-    * values  标签值列表。最大长度43个unicode字符，不能为空格，校验和使用之前先排除前后半角空格。如果values为空列表，则表示查询任意value。value之间为或的关系。
+    * key  **参数解释：** 标签键。 **约束限制：** 最大长度36个unicode字符，key不能为空或者空字符串，不能为空格，校验和使用之前先排除前后半角空格。 取值范围： 不涉及。 默认取值： 不涉及。
+    * values  **参数解释：** 标签值列表。 **约束限制：** 最大长度43个unicode字符，不能为空格，校验和使用之前先排除前后半角空格。如果values为空列表，则表示查询任意value。value之间为或的关系。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class QueryTagItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  标签键。最大长度36个unicode字符，key不能为空或者空字符串，不能为空格，校验和使用之前先排除前后半角空格。
+    *  **参数解释：** 标签键。 **约束限制：** 最大长度36个unicode字符，key不能为空或者空字符串，不能为空格，校验和使用之前先排除前后半角空格。 取值范围： 不涉及。 默认取值： 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class QueryTagItem implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 标签键。最大长度36个unicode字符，key不能为空或者空字符串，不能为空格，校验和使用之前先排除前后半角空格。
+    * @param string $key **参数解释：** 标签键。 **约束限制：** 最大长度36个unicode字符，key不能为空或者空字符串，不能为空格，校验和使用之前先排除前后半角空格。 取值范围： 不涉及。 默认取值： 不涉及。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class QueryTagItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  标签值列表。最大长度43个unicode字符，不能为空格，校验和使用之前先排除前后半角空格。如果values为空列表，则表示查询任意value。value之间为或的关系。
+    *  **参数解释：** 标签值列表。 **约束限制：** 最大长度43个unicode字符，不能为空格，校验和使用之前先排除前后半角空格。如果values为空列表，则表示查询任意value。value之间为或的关系。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string[]
     */
@@ -227,7 +227,7 @@ class QueryTagItem implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param string[] $values 标签值列表。最大长度43个unicode字符，不能为空格，校验和使用之前先排除前后半角空格。如果values为空列表，则表示查询任意value。value之间为或的关系。
+    * @param string[] $values **参数解释：** 标签值列表。 **约束限制：** 最大长度43个unicode字符，不能为空格，校验和使用之前先排除前后半角空格。如果values为空列表，则表示查询任意value。value之间为或的关系。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */

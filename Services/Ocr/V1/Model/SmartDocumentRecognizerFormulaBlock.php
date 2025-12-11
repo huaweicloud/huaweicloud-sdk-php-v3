@@ -22,24 +22,28 @@ class SmartDocumentRecognizerFormulaBlock implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * formula  数学公式识别结果，以latex字符串表示。
     * location  数学公式位置信息，列表形式，分别表示4个顶点的x, y坐标；坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * type  公式类别，取值包含formula、embedded_formula。 formula: 独立公式 embedded_formula: 行内公式
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'formula' => 'string',
-            'location' => 'int[][]'
+            'location' => 'int[][]',
+            'type' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * formula  数学公式识别结果，以latex字符串表示。
     * location  数学公式位置信息，列表形式，分别表示4个顶点的x, y坐标；坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * type  公式类别，取值包含formula、embedded_formula。 formula: 独立公式 embedded_formula: 行内公式
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'formula' => null,
-        'location' => 'int32'
+        'location' => 'int32',
+        'type' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class SmartDocumentRecognizerFormulaBlock implements ModelInterface, ArrayAccess
     * and the value is the original name
     * formula  数学公式识别结果，以latex字符串表示。
     * location  数学公式位置信息，列表形式，分别表示4个顶点的x, y坐标；坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * type  公式类别，取值包含formula、embedded_formula。 formula: 独立公式 embedded_formula: 行内公式
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'formula' => 'formula',
-            'location' => 'location'
+            'location' => 'location',
+            'type' => 'type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * formula  数学公式识别结果，以latex字符串表示。
     * location  数学公式位置信息，列表形式，分别表示4个顶点的x, y坐标；坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * type  公式类别，取值包含formula、embedded_formula。 formula: 独立公式 embedded_formula: 行内公式
     *
     * @var string[]
     */
     protected static $setters = [
             'formula' => 'setFormula',
-            'location' => 'setLocation'
+            'location' => 'setLocation',
+            'type' => 'setType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * formula  数学公式识别结果，以latex字符串表示。
     * location  数学公式位置信息，列表形式，分别表示4个顶点的x, y坐标；坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * type  公式类别，取值包含formula、embedded_formula。 formula: 独立公式 embedded_formula: 行内公式
     *
     * @var string[]
     */
     protected static $getters = [
             'formula' => 'getFormula',
-            'location' => 'getLocation'
+            'location' => 'getLocation',
+            'type' => 'getType'
     ];
 
     /**
@@ -159,6 +169,7 @@ class SmartDocumentRecognizerFormulaBlock implements ModelInterface, ArrayAccess
     {
         $this->container['formula'] = isset($data['formula']) ? $data['formula'] : null;
         $this->container['location'] = isset($data['location']) ? $data['location'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class SmartDocumentRecognizerFormulaBlock implements ModelInterface, ArrayAccess
     public function setLocation($location)
     {
         $this->container['location'] = $location;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  公式类别，取值包含formula、embedded_formula。 formula: 独立公式 embedded_formula: 行内公式
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 公式类别，取值包含formula、embedded_formula。 formula: 独立公式 embedded_formula: 行内公式
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

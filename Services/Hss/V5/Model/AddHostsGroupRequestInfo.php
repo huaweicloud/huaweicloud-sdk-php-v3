@@ -20,8 +20,8 @@ class AddHostsGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupName  服务器组名称
-    * hostIdList  服务器ID列表
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128位
+    * hostIdList  **参数解释**： 服务器ID列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class AddHostsGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupName  服务器组名称
-    * hostIdList  服务器ID列表
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128位
+    * hostIdList  **参数解释**： 服务器ID列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class AddHostsGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupName  服务器组名称
-    * hostIdList  服务器ID列表
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128位
+    * hostIdList  **参数解释**： 服务器ID列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class AddHostsGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupName  服务器组名称
-    * hostIdList  服务器ID列表
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128位
+    * hostIdList  **参数解释**： 服务器ID列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class AddHostsGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupName  服务器组名称
-    * hostIdList  服务器ID列表
+    * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128位
+    * hostIdList  **参数解释**： 服务器ID列表 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -200,7 +200,7 @@ class AddHostsGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  服务器组名称
+    *  **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128位
     *
     * @return string
     */
@@ -212,7 +212,7 @@ class AddHostsGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string $groupName 服务器组名称
+    * @param string $groupName **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -224,7 +224,7 @@ class AddHostsGroupRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIdList
-    *  服务器ID列表
+    *  **参数解释**： 服务器ID列表 **取值范围**: 不涉及
     *
     * @return string[]
     */
@@ -236,7 +236,7 @@ class AddHostsGroupRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIdList
     *
-    * @param string[] $hostIdList 服务器ID列表
+    * @param string[] $hostIdList **参数解释**： 服务器ID列表 **取值范围**: 不涉及
     *
     * @return $this
     */

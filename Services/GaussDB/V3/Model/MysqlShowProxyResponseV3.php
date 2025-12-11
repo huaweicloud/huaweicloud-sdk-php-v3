@@ -23,13 +23,15 @@ class MysqlShowProxyResponseV3 implements ModelInterface, ArrayAccess
     * proxy  proxy
     * masterNode  masterNode
     * readonlyNodes  只读节点信息。
+    * htapNodes  **参数解释**：  HTAP节点信息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'proxy' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlProxyV3',
             'masterNode' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlProxyNodeV3',
-            'readonlyNodes' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlProxyNodeV3[]'
+            'readonlyNodes' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlProxyNodeV3[]',
+            'htapNodes' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlProxyNodeV3[]'
     ];
 
     /**
@@ -37,13 +39,15 @@ class MysqlShowProxyResponseV3 implements ModelInterface, ArrayAccess
     * proxy  proxy
     * masterNode  masterNode
     * readonlyNodes  只读节点信息。
+    * htapNodes  **参数解释**：  HTAP节点信息。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'proxy' => null,
         'masterNode' => null,
-        'readonlyNodes' => null
+        'readonlyNodes' => null,
+        'htapNodes' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class MysqlShowProxyResponseV3 implements ModelInterface, ArrayAccess
     * proxy  proxy
     * masterNode  masterNode
     * readonlyNodes  只读节点信息。
+    * htapNodes  **参数解释**：  HTAP节点信息。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'proxy' => 'proxy',
             'masterNode' => 'master_node',
-            'readonlyNodes' => 'readonly_nodes'
+            'readonlyNodes' => 'readonly_nodes',
+            'htapNodes' => 'htap_nodes'
     ];
 
     /**
@@ -86,13 +92,15 @@ class MysqlShowProxyResponseV3 implements ModelInterface, ArrayAccess
     * proxy  proxy
     * masterNode  masterNode
     * readonlyNodes  只读节点信息。
+    * htapNodes  **参数解释**：  HTAP节点信息。
     *
     * @var string[]
     */
     protected static $setters = [
             'proxy' => 'setProxy',
             'masterNode' => 'setMasterNode',
-            'readonlyNodes' => 'setReadonlyNodes'
+            'readonlyNodes' => 'setReadonlyNodes',
+            'htapNodes' => 'setHtapNodes'
     ];
 
     /**
@@ -100,13 +108,15 @@ class MysqlShowProxyResponseV3 implements ModelInterface, ArrayAccess
     * proxy  proxy
     * masterNode  masterNode
     * readonlyNodes  只读节点信息。
+    * htapNodes  **参数解释**：  HTAP节点信息。
     *
     * @var string[]
     */
     protected static $getters = [
             'proxy' => 'getProxy',
             'masterNode' => 'getMasterNode',
-            'readonlyNodes' => 'getReadonlyNodes'
+            'readonlyNodes' => 'getReadonlyNodes',
+            'htapNodes' => 'getHtapNodes'
     ];
 
     /**
@@ -170,6 +180,7 @@ class MysqlShowProxyResponseV3 implements ModelInterface, ArrayAccess
         $this->container['proxy'] = isset($data['proxy']) ? $data['proxy'] : null;
         $this->container['masterNode'] = isset($data['masterNode']) ? $data['masterNode'] : null;
         $this->container['readonlyNodes'] = isset($data['readonlyNodes']) ? $data['readonlyNodes'] : null;
+        $this->container['htapNodes'] = isset($data['htapNodes']) ? $data['htapNodes'] : null;
     }
 
     /**
@@ -263,6 +274,30 @@ class MysqlShowProxyResponseV3 implements ModelInterface, ArrayAccess
     public function setReadonlyNodes($readonlyNodes)
     {
         $this->container['readonlyNodes'] = $readonlyNodes;
+        return $this;
+    }
+
+    /**
+    * Gets htapNodes
+    *  **参数解释**：  HTAP节点信息。
+    *
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlProxyNodeV3[]|null
+    */
+    public function getHtapNodes()
+    {
+        return $this->container['htapNodes'];
+    }
+
+    /**
+    * Sets htapNodes
+    *
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlProxyNodeV3[]|null $htapNodes **参数解释**：  HTAP节点信息。
+    *
+    * @return $this
+    */
+    public function setHtapNodes($htapNodes)
+    {
+        $this->container['htapNodes'] = $htapNodes;
         return $this;
     }
 

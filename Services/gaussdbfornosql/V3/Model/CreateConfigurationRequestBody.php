@@ -20,10 +20,11 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  参数模板名称。最长64个字符，只允许大写字母、小写字母、数字、和“-_.”特殊字符。
-    * description  参数模板描述。最长256个字符，不支持>!<\"&'=特殊字符。默认为空。
+    * name  **参数解释：** 参数模板名称。 **约束限制：** 最长64个字符，只允许大写字母、小写字母、数字、和“-_.”特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 参数模板描述。 **约束限制：** 最长256个字符，不支持>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 空。
     * datastore  datastore
-    * values  参数值对象，用户基于默认参数模板自定义的参数值。默认不修改参数值。
+    * values  **参数解释：** 参数值对象，用户基于默认参数模板自定义的参数值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 默认不修改参数值。
+    * instanceId  **参数解释：** 实例ID。 **约束限制：** 实例ID可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 若传入此参数，则会基于此实例的参数信息创建参数模板。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -31,15 +32,17 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'datastore' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\CreateConfigurationDatastoreOption',
-            'values' => 'map[string,string]'
+            'values' => 'map[string,string]',
+            'instanceId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  参数模板名称。最长64个字符，只允许大写字母、小写字母、数字、和“-_.”特殊字符。
-    * description  参数模板描述。最长256个字符，不支持>!<\"&'=特殊字符。默认为空。
+    * name  **参数解释：** 参数模板名称。 **约束限制：** 最长64个字符，只允许大写字母、小写字母、数字、和“-_.”特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 参数模板描述。 **约束限制：** 最长256个字符，不支持>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 空。
     * datastore  datastore
-    * values  参数值对象，用户基于默认参数模板自定义的参数值。默认不修改参数值。
+    * values  **参数解释：** 参数值对象，用户基于默认参数模板自定义的参数值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 默认不修改参数值。
+    * instanceId  **参数解释：** 实例ID。 **约束限制：** 实例ID可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 若传入此参数，则会基于此实例的参数信息创建参数模板。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'datastore' => null,
-        'values' => null
+        'values' => null,
+        'instanceId' => null
     ];
 
     /**
@@ -73,10 +77,11 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  参数模板名称。最长64个字符，只允许大写字母、小写字母、数字、和“-_.”特殊字符。
-    * description  参数模板描述。最长256个字符，不支持>!<\"&'=特殊字符。默认为空。
+    * name  **参数解释：** 参数模板名称。 **约束限制：** 最长64个字符，只允许大写字母、小写字母、数字、和“-_.”特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 参数模板描述。 **约束限制：** 最长256个字符，不支持>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 空。
     * datastore  datastore
-    * values  参数值对象，用户基于默认参数模板自定义的参数值。默认不修改参数值。
+    * values  **参数解释：** 参数值对象，用户基于默认参数模板自定义的参数值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 默认不修改参数值。
+    * instanceId  **参数解释：** 实例ID。 **约束限制：** 实例ID可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 若传入此参数，则会基于此实例的参数信息创建参数模板。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -84,15 +89,17 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'datastore' => 'datastore',
-            'values' => 'values'
+            'values' => 'values',
+            'instanceId' => 'instance_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  参数模板名称。最长64个字符，只允许大写字母、小写字母、数字、和“-_.”特殊字符。
-    * description  参数模板描述。最长256个字符，不支持>!<\"&'=特殊字符。默认为空。
+    * name  **参数解释：** 参数模板名称。 **约束限制：** 最长64个字符，只允许大写字母、小写字母、数字、和“-_.”特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 参数模板描述。 **约束限制：** 最长256个字符，不支持>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 空。
     * datastore  datastore
-    * values  参数值对象，用户基于默认参数模板自定义的参数值。默认不修改参数值。
+    * values  **参数解释：** 参数值对象，用户基于默认参数模板自定义的参数值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 默认不修改参数值。
+    * instanceId  **参数解释：** 实例ID。 **约束限制：** 实例ID可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 若传入此参数，则会基于此实例的参数信息创建参数模板。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -100,15 +107,17 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'datastore' => 'setDatastore',
-            'values' => 'setValues'
+            'values' => 'setValues',
+            'instanceId' => 'setInstanceId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  参数模板名称。最长64个字符，只允许大写字母、小写字母、数字、和“-_.”特殊字符。
-    * description  参数模板描述。最长256个字符，不支持>!<\"&'=特殊字符。默认为空。
+    * name  **参数解释：** 参数模板名称。 **约束限制：** 最长64个字符，只允许大写字母、小写字母、数字、和“-_.”特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 参数模板描述。 **约束限制：** 最长256个字符，不支持>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 空。
     * datastore  datastore
-    * values  参数值对象，用户基于默认参数模板自定义的参数值。默认不修改参数值。
+    * values  **参数解释：** 参数值对象，用户基于默认参数模板自定义的参数值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 默认不修改参数值。
+    * instanceId  **参数解释：** 实例ID。 **约束限制：** 实例ID可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 若传入此参数，则会基于此实例的参数信息创建参数模板。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'datastore' => 'getDatastore',
-            'values' => 'getValues'
+            'values' => 'getValues',
+            'instanceId' => 'getInstanceId'
     ];
 
     /**
@@ -181,6 +191,7 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['datastore'] = isset($data['datastore']) ? $data['datastore'] : null;
         $this->container['values'] = isset($data['values']) ? $data['values'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
     }
 
     /**
@@ -193,9 +204,6 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
         $invalidProperties = [];
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
-        }
-        if ($this->container['datastore'] === null) {
-            $invalidProperties[] = "'datastore' can't be null";
         }
         return $invalidProperties;
     }
@@ -213,7 +221,7 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  参数模板名称。最长64个字符，只允许大写字母、小写字母、数字、和“-_.”特殊字符。
+    *  **参数解释：** 参数模板名称。 **约束限制：** 最长64个字符，只允许大写字母、小写字母、数字、和“-_.”特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -225,7 +233,7 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 参数模板名称。最长64个字符，只允许大写字母、小写字母、数字、和“-_.”特殊字符。
+    * @param string $name **参数解释：** 参数模板名称。 **约束限制：** 最长64个字符，只允许大写字母、小写字母、数字、和“-_.”特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -237,7 +245,7 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  参数模板描述。最长256个字符，不支持>!<\"&'=特殊字符。默认为空。
+    *  **参数解释：** 参数模板描述。 **约束限制：** 最长256个字符，不支持>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 空。
     *
     * @return string|null
     */
@@ -249,7 +257,7 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 参数模板描述。最长256个字符，不支持>!<\"&'=特殊字符。默认为空。
+    * @param string|null $description **参数解释：** 参数模板描述。 **约束限制：** 最长256个字符，不支持>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 空。
     *
     * @return $this
     */
@@ -263,7 +271,7 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
     * Gets datastore
     *  datastore
     *
-    * @return \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\CreateConfigurationDatastoreOption
+    * @return \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\CreateConfigurationDatastoreOption|null
     */
     public function getDatastore()
     {
@@ -273,7 +281,7 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets datastore
     *
-    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\CreateConfigurationDatastoreOption $datastore datastore
+    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\CreateConfigurationDatastoreOption|null $datastore datastore
     *
     * @return $this
     */
@@ -285,7 +293,7 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  参数值对象，用户基于默认参数模板自定义的参数值。默认不修改参数值。
+    *  **参数解释：** 参数值对象，用户基于默认参数模板自定义的参数值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 默认不修改参数值。
     *
     * @return map[string,string]|null
     */
@@ -297,13 +305,37 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param map[string,string]|null $values 参数值对象，用户基于默认参数模板自定义的参数值。默认不修改参数值。
+    * @param map[string,string]|null $values **参数解释：** 参数值对象，用户基于默认参数模板自定义的参数值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 默认不修改参数值。
     *
     * @return $this
     */
     public function setValues($values)
     {
         $this->container['values'] = $values;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  **参数解释：** 实例ID。 **约束限制：** 实例ID可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 若传入此参数，则会基于此实例的参数信息创建参数模板。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string|null $instanceId **参数解释：** 实例ID。 **约束限制：** 实例ID可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 若传入此参数，则会基于此实例的参数信息创建参数模板。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
         return $this;
     }
 

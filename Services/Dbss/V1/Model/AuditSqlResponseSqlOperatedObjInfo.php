@@ -21,9 +21,9 @@ class AuditSqlResponseSqlOperatedObjInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * columnName  列名
-    * objectType  操作对象类型
+    * objectType  操作对象类型 - VARIABLE: 变量 - \"\": 空
     * schemaName  schema名称
-    * sqlType  sql类型
+    * sqlType  sql类型 - LOGIN: LOGIN - CREATE_TABLE: CREATE TABLE - CREATE_TABLESPACE: CREATE TABLESPACE - DROP_TABLE: DROP TABLE - DROP_TABLESPACE: DROP TABLESPACE - DELETE: DELETE - INSERT: INSERT - INSERT_SELECT: INSERT SELECT - SELECT: SELECT - SELECT_FOR_UPDATE: SELECT FOR UPDATE - UPDATE: UPDATE - CREATE_USER: CREATE USER - DROP_USER: DROP USER - GRANT: GRANT - OPERATE: OPERATE - ALL: ALL
     * sysName  系统名称
     * tableName  表名
     *
@@ -41,9 +41,9 @@ class AuditSqlResponseSqlOperatedObjInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * columnName  列名
-    * objectType  操作对象类型
+    * objectType  操作对象类型 - VARIABLE: 变量 - \"\": 空
     * schemaName  schema名称
-    * sqlType  sql类型
+    * sqlType  sql类型 - LOGIN: LOGIN - CREATE_TABLE: CREATE TABLE - CREATE_TABLESPACE: CREATE TABLESPACE - DROP_TABLE: DROP TABLE - DROP_TABLESPACE: DROP TABLESPACE - DELETE: DELETE - INSERT: INSERT - INSERT_SELECT: INSERT SELECT - SELECT: SELECT - SELECT_FOR_UPDATE: SELECT FOR UPDATE - UPDATE: UPDATE - CREATE_USER: CREATE USER - DROP_USER: DROP USER - GRANT: GRANT - OPERATE: OPERATE - ALL: ALL
     * sysName  系统名称
     * tableName  表名
     *
@@ -82,9 +82,9 @@ class AuditSqlResponseSqlOperatedObjInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * columnName  列名
-    * objectType  操作对象类型
+    * objectType  操作对象类型 - VARIABLE: 变量 - \"\": 空
     * schemaName  schema名称
-    * sqlType  sql类型
+    * sqlType  sql类型 - LOGIN: LOGIN - CREATE_TABLE: CREATE TABLE - CREATE_TABLESPACE: CREATE TABLESPACE - DROP_TABLE: DROP TABLE - DROP_TABLESPACE: DROP TABLESPACE - DELETE: DELETE - INSERT: INSERT - INSERT_SELECT: INSERT SELECT - SELECT: SELECT - SELECT_FOR_UPDATE: SELECT FOR UPDATE - UPDATE: UPDATE - CREATE_USER: CREATE USER - DROP_USER: DROP USER - GRANT: GRANT - OPERATE: OPERATE - ALL: ALL
     * sysName  系统名称
     * tableName  表名
     *
@@ -102,9 +102,9 @@ class AuditSqlResponseSqlOperatedObjInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * columnName  列名
-    * objectType  操作对象类型
+    * objectType  操作对象类型 - VARIABLE: 变量 - \"\": 空
     * schemaName  schema名称
-    * sqlType  sql类型
+    * sqlType  sql类型 - LOGIN: LOGIN - CREATE_TABLE: CREATE TABLE - CREATE_TABLESPACE: CREATE TABLESPACE - DROP_TABLE: DROP TABLE - DROP_TABLESPACE: DROP TABLESPACE - DELETE: DELETE - INSERT: INSERT - INSERT_SELECT: INSERT SELECT - SELECT: SELECT - SELECT_FOR_UPDATE: SELECT FOR UPDATE - UPDATE: UPDATE - CREATE_USER: CREATE USER - DROP_USER: DROP USER - GRANT: GRANT - OPERATE: OPERATE - ALL: ALL
     * sysName  系统名称
     * tableName  表名
     *
@@ -122,9 +122,9 @@ class AuditSqlResponseSqlOperatedObjInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * columnName  列名
-    * objectType  操作对象类型
+    * objectType  操作对象类型 - VARIABLE: 变量 - \"\": 空
     * schemaName  schema名称
-    * sqlType  sql类型
+    * sqlType  sql类型 - LOGIN: LOGIN - CREATE_TABLE: CREATE TABLE - CREATE_TABLESPACE: CREATE TABLESPACE - DROP_TABLE: DROP TABLE - DROP_TABLESPACE: DROP TABLESPACE - DELETE: DELETE - INSERT: INSERT - INSERT_SELECT: INSERT SELECT - SELECT: SELECT - SELECT_FOR_UPDATE: SELECT FOR UPDATE - UPDATE: UPDATE - CREATE_USER: CREATE USER - DROP_USER: DROP USER - GRANT: GRANT - OPERATE: OPERATE - ALL: ALL
     * sysName  系统名称
     * tableName  表名
     *
@@ -253,7 +253,7 @@ class AuditSqlResponseSqlOperatedObjInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectType
-    *  操作对象类型
+    *  操作对象类型 - VARIABLE: 变量 - \"\": 空
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class AuditSqlResponseSqlOperatedObjInfo implements ModelInterface, ArrayAccess
     /**
     * Sets objectType
     *
-    * @param string|null $objectType 操作对象类型
+    * @param string|null $objectType 操作对象类型 - VARIABLE: 变量 - \"\": 空
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class AuditSqlResponseSqlOperatedObjInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets sqlType
-    *  sql类型
+    *  sql类型 - LOGIN: LOGIN - CREATE_TABLE: CREATE TABLE - CREATE_TABLESPACE: CREATE TABLESPACE - DROP_TABLE: DROP TABLE - DROP_TABLESPACE: DROP TABLESPACE - DELETE: DELETE - INSERT: INSERT - INSERT_SELECT: INSERT SELECT - SELECT: SELECT - SELECT_FOR_UPDATE: SELECT FOR UPDATE - UPDATE: UPDATE - CREATE_USER: CREATE USER - DROP_USER: DROP USER - GRANT: GRANT - OPERATE: OPERATE - ALL: ALL
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class AuditSqlResponseSqlOperatedObjInfo implements ModelInterface, ArrayAccess
     /**
     * Sets sqlType
     *
-    * @param string|null $sqlType sql类型
+    * @param string|null $sqlType sql类型 - LOGIN: LOGIN - CREATE_TABLE: CREATE TABLE - CREATE_TABLESPACE: CREATE TABLESPACE - DROP_TABLE: DROP TABLE - DROP_TABLESPACE: DROP TABLESPACE - DELETE: DELETE - INSERT: INSERT - INSERT_SELECT: INSERT SELECT - SELECT: SELECT - SELECT_FOR_UPDATE: SELECT FOR UPDATE - UPDATE: UPDATE - CREATE_USER: CREATE USER - DROP_USER: DROP USER - GRANT: GRANT - OPERATE: OPERATE - ALL: ALL
     *
     * @return $this
     */

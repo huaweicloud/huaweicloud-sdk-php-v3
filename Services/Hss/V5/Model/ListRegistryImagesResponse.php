@@ -21,8 +21,8 @@ class ListRegistryImagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  **参数解释**: 总数 **取值范围**: 0-2147483547
-    * dataList  仓库镜像列表
+    * totalNum  **参数解释**: 满足查询条件的镜像记录总数量 **取值范围**: 0-2147483547；单位：个
+    * dataList  **参数解释**: 查询到的仓库镜像详细信息列表 **取值范围**: 数组长度0-当前查询的limit值（1-200），数组元素为RegistryImagesInfo对象
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListRegistryImagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  **参数解释**: 总数 **取值范围**: 0-2147483547
-    * dataList  仓库镜像列表
+    * totalNum  **参数解释**: 满足查询条件的镜像记录总数量 **取值范围**: 0-2147483547；单位：个
+    * dataList  **参数解释**: 查询到的仓库镜像详细信息列表 **取值范围**: 数组长度0-当前查询的limit值（1-200），数组元素为RegistryImagesInfo对象
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListRegistryImagesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  **参数解释**: 总数 **取值范围**: 0-2147483547
-    * dataList  仓库镜像列表
+    * totalNum  **参数解释**: 满足查询条件的镜像记录总数量 **取值范围**: 0-2147483547；单位：个
+    * dataList  **参数解释**: 查询到的仓库镜像详细信息列表 **取值范围**: 数组长度0-当前查询的limit值（1-200），数组元素为RegistryImagesInfo对象
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListRegistryImagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  **参数解释**: 总数 **取值范围**: 0-2147483547
-    * dataList  仓库镜像列表
+    * totalNum  **参数解释**: 满足查询条件的镜像记录总数量 **取值范围**: 0-2147483547；单位：个
+    * dataList  **参数解释**: 查询到的仓库镜像详细信息列表 **取值范围**: 数组长度0-当前查询的limit值（1-200），数组元素为RegistryImagesInfo对象
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListRegistryImagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  **参数解释**: 总数 **取值范围**: 0-2147483547
-    * dataList  仓库镜像列表
+    * totalNum  **参数解释**: 满足查询条件的镜像记录总数量 **取值范围**: 0-2147483547；单位：个
+    * dataList  **参数解释**: 查询到的仓库镜像详细信息列表 **取值范围**: 数组长度0-当前查询的limit值（1-200），数组元素为RegistryImagesInfo对象
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ListRegistryImagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  **参数解释**: 总数 **取值范围**: 0-2147483547
+    *  **参数解释**: 满足查询条件的镜像记录总数量 **取值范围**: 0-2147483547；单位：个
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListRegistryImagesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum **参数解释**: 总数 **取值范围**: 0-2147483547
+    * @param int|null $totalNum **参数解释**: 满足查询条件的镜像记录总数量 **取值范围**: 0-2147483547；单位：个
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListRegistryImagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  仓库镜像列表
+    *  **参数解释**: 查询到的仓库镜像详细信息列表 **取值范围**: 数组长度0-当前查询的limit值（1-200），数组元素为RegistryImagesInfo对象
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\RegistryImagesInfo[]|null
     */
@@ -228,7 +228,7 @@ class ListRegistryImagesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\RegistryImagesInfo[]|null $dataList 仓库镜像列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\RegistryImagesInfo[]|null $dataList **参数解释**: 查询到的仓库镜像详细信息列表 **取值范围**: 数组长度0-当前查询的limit值（1-200），数组元素为RegistryImagesInfo对象
     *
     * @return $this
     */

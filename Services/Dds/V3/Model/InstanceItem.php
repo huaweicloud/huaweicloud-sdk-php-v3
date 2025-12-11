@@ -20,9 +20,9 @@ class InstanceItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * instanceName  实例名称
-    * tags  标签列表。如果没有标签，默认为空数组。
+    * instanceId  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * instanceName  **参数解释：** 实例名称 **取值范围：** 不涉及。
+    * tags  **参数解释：** 标签列表。如果没有标签，默认为空数组。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class InstanceItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * instanceName  实例名称
-    * tags  标签列表。如果没有标签，默认为空数组。
+    * instanceId  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * instanceName  **参数解释：** 实例名称 **取值范围：** 不涉及。
+    * tags  **参数解释：** 标签列表。如果没有标签，默认为空数组。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class InstanceItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID。
-    * instanceName  实例名称
-    * tags  标签列表。如果没有标签，默认为空数组。
+    * instanceId  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * instanceName  **参数解释：** 实例名称 **取值范围：** 不涉及。
+    * tags  **参数解释：** 标签列表。如果没有标签，默认为空数组。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class InstanceItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID。
-    * instanceName  实例名称
-    * tags  标签列表。如果没有标签，默认为空数组。
+    * instanceId  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * instanceName  **参数解释：** 实例名称 **取值范围：** 不涉及。
+    * tags  **参数解释：** 标签列表。如果没有标签，默认为空数组。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class InstanceItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID。
-    * instanceName  实例名称
-    * tags  标签列表。如果没有标签，默认为空数组。
+    * instanceId  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * instanceName  **参数解释：** 实例名称 **取值范围：** 不涉及。
+    * tags  **参数解释：** 标签列表。如果没有标签，默认为空数组。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class InstanceItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释：** 实例ID。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class InstanceItem implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string $instanceId **参数解释：** 实例ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class InstanceItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceName
-    *  实例名称
+    *  **参数解释：** 实例名称 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class InstanceItem implements ModelInterface, ArrayAccess
     /**
     * Sets instanceName
     *
-    * @param string $instanceName 实例名称
+    * @param string $instanceName **参数解释：** 实例名称 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class InstanceItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签列表。如果没有标签，默认为空数组。
+    *  **参数解释：** 标签列表。如果没有标签，默认为空数组。 **取值范围：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dds\V3\Model\InstanceItemTagItem[]
     */
@@ -265,7 +265,7 @@ class InstanceItem implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Dds\V3\Model\InstanceItemTagItem[] $tags 标签列表。如果没有标签，默认为空数组。
+    * @param \HuaweiCloud\SDK\Dds\V3\Model\InstanceItemTagItem[] $tags **参数解释：** 标签列表。如果没有标签，默认为空数组。 **取值范围：** 不涉及。
     *
     * @return $this
     */

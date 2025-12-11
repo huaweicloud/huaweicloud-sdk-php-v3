@@ -21,7 +21,7 @@ class AlarmLogResponseNewAlarmLog implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  告警ID
-    * alarmLife  告警状态 - ON - OFF
+    * alarmLife  告警状态 - ON：持续中 - OFF：已关闭
     * sendEmail  是否发送邮件
     * alarmTime  告警发生时间
     * alarmType  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
@@ -47,7 +47,7 @@ class AlarmLogResponseNewAlarmLog implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  告警ID
-    * alarmLife  告警状态 - ON - OFF
+    * alarmLife  告警状态 - ON：持续中 - OFF：已关闭
     * sendEmail  是否发送邮件
     * alarmTime  告警发生时间
     * alarmType  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
@@ -94,7 +94,7 @@ class AlarmLogResponseNewAlarmLog implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  告警ID
-    * alarmLife  告警状态 - ON - OFF
+    * alarmLife  告警状态 - ON：持续中 - OFF：已关闭
     * sendEmail  是否发送邮件
     * alarmTime  告警发生时间
     * alarmType  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
@@ -120,7 +120,7 @@ class AlarmLogResponseNewAlarmLog implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  告警ID
-    * alarmLife  告警状态 - ON - OFF
+    * alarmLife  告警状态 - ON：持续中 - OFF：已关闭
     * sendEmail  是否发送邮件
     * alarmTime  告警发生时间
     * alarmType  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
@@ -146,7 +146,7 @@ class AlarmLogResponseNewAlarmLog implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  告警ID
-    * alarmLife  告警状态 - ON - OFF
+    * alarmLife  告警状态 - ON：持续中 - OFF：已关闭
     * sendEmail  是否发送邮件
     * alarmTime  告警发生时间
     * alarmType  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
@@ -286,7 +286,7 @@ class AlarmLogResponseNewAlarmLog implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmLife
-    *  告警状态 - ON - OFF
+    *  告警状态 - ON：持续中 - OFF：已关闭
     *
     * @return string|null
     */
@@ -298,7 +298,7 @@ class AlarmLogResponseNewAlarmLog implements ModelInterface, ArrayAccess
     /**
     * Sets alarmLife
     *
-    * @param string|null $alarmLife 告警状态 - ON - OFF
+    * @param string|null $alarmLife 告警状态 - ON：持续中 - OFF：已关闭
     *
     * @return $this
     */

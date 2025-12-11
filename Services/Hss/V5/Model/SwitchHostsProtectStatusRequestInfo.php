@@ -20,11 +20,11 @@ class SwitchHostsProtectStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * version  主机开通的版本，包含如下:   - hss.version.null ：无，代表关闭防护。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。
-    * chargingMode  付费模式，当version不为“hss.version.null”时，则需必填该参数   - packet_cycle : 包周期   - on_demand : 按需
-    * resourceId  HSS配额ID，不填该参数时，则随机选择对应版本配额
-    * hostIdList  服务器列表
-    * tags  资源标签列表
+    * version  **参数解释**： 主机开通的版本 **约束限制**: 不涉及 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
+    * chargingMode  **参数解释**： 计费模式 **约束限制**: 不涉及 **取值范围**： - packet_cycle ：包年/包月。 - on_demand ：按需计费。 **默认取值**: 不涉及
+    * resourceId  **参数解释**: 资源ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * hostIdList  **参数解释**： 服务器ID列表 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
+    * tags  **参数解释**： 资源标签列表 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class SwitchHostsProtectStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * version  主机开通的版本，包含如下:   - hss.version.null ：无，代表关闭防护。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。
-    * chargingMode  付费模式，当version不为“hss.version.null”时，则需必填该参数   - packet_cycle : 包周期   - on_demand : 按需
-    * resourceId  HSS配额ID，不填该参数时，则随机选择对应版本配额
-    * hostIdList  服务器列表
-    * tags  资源标签列表
+    * version  **参数解释**： 主机开通的版本 **约束限制**: 不涉及 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
+    * chargingMode  **参数解释**： 计费模式 **约束限制**: 不涉及 **取值范围**： - packet_cycle ：包年/包月。 - on_demand ：按需计费。 **默认取值**: 不涉及
+    * resourceId  **参数解释**: 资源ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * hostIdList  **参数解释**： 服务器ID列表 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
+    * tags  **参数解释**： 资源标签列表 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class SwitchHostsProtectStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * version  主机开通的版本，包含如下:   - hss.version.null ：无，代表关闭防护。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。
-    * chargingMode  付费模式，当version不为“hss.version.null”时，则需必填该参数   - packet_cycle : 包周期   - on_demand : 按需
-    * resourceId  HSS配额ID，不填该参数时，则随机选择对应版本配额
-    * hostIdList  服务器列表
-    * tags  资源标签列表
+    * version  **参数解释**： 主机开通的版本 **约束限制**: 不涉及 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
+    * chargingMode  **参数解释**： 计费模式 **约束限制**: 不涉及 **取值范围**： - packet_cycle ：包年/包月。 - on_demand ：按需计费。 **默认取值**: 不涉及
+    * resourceId  **参数解释**: 资源ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * hostIdList  **参数解释**： 服务器ID列表 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
+    * tags  **参数解释**： 资源标签列表 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class SwitchHostsProtectStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * version  主机开通的版本，包含如下:   - hss.version.null ：无，代表关闭防护。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。
-    * chargingMode  付费模式，当version不为“hss.version.null”时，则需必填该参数   - packet_cycle : 包周期   - on_demand : 按需
-    * resourceId  HSS配额ID，不填该参数时，则随机选择对应版本配额
-    * hostIdList  服务器列表
-    * tags  资源标签列表
+    * version  **参数解释**： 主机开通的版本 **约束限制**: 不涉及 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
+    * chargingMode  **参数解释**： 计费模式 **约束限制**: 不涉及 **取值范围**： - packet_cycle ：包年/包月。 - on_demand ：按需计费。 **默认取值**: 不涉及
+    * resourceId  **参数解释**: 资源ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * hostIdList  **参数解释**： 服务器ID列表 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
+    * tags  **参数解释**： 资源标签列表 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class SwitchHostsProtectStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * version  主机开通的版本，包含如下:   - hss.version.null ：无，代表关闭防护。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。
-    * chargingMode  付费模式，当version不为“hss.version.null”时，则需必填该参数   - packet_cycle : 包周期   - on_demand : 按需
-    * resourceId  HSS配额ID，不填该参数时，则随机选择对应版本配额
-    * hostIdList  服务器列表
-    * tags  资源标签列表
+    * version  **参数解释**： 主机开通的版本 **约束限制**: 不涉及 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
+    * chargingMode  **参数解释**： 计费模式 **约束限制**: 不涉及 **取值范围**： - packet_cycle ：包年/包月。 - on_demand ：按需计费。 **默认取值**: 不涉及
+    * resourceId  **参数解释**: 资源ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * hostIdList  **参数解释**： 服务器ID列表 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
+    * tags  **参数解释**： 资源标签列表 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -242,7 +242,7 @@ class SwitchHostsProtectStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  主机开通的版本，包含如下:   - hss.version.null ：无，代表关闭防护。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。
+    *  **参数解释**： 主机开通的版本 **约束限制**: 不涉及 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
     *
     * @return string
     */
@@ -254,7 +254,7 @@ class SwitchHostsProtectStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string $version 主机开通的版本，包含如下:   - hss.version.null ：无，代表关闭防护。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。
+    * @param string $version **参数解释**： 主机开通的版本 **约束限制**: 不涉及 **取值范围**： 包含如下7种输入。 - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class SwitchHostsProtectStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  付费模式，当version不为“hss.version.null”时，则需必填该参数   - packet_cycle : 包周期   - on_demand : 按需
+    *  **参数解释**： 计费模式 **约束限制**: 不涉及 **取值范围**： - packet_cycle ：包年/包月。 - on_demand ：按需计费。 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class SwitchHostsProtectStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param string|null $chargingMode 付费模式，当version不为“hss.version.null”时，则需必填该参数   - packet_cycle : 包周期   - on_demand : 按需
+    * @param string|null $chargingMode **参数解释**： 计费模式 **约束限制**: 不涉及 **取值范围**： - packet_cycle ：包年/包月。 - on_demand ：按需计费。 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class SwitchHostsProtectStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  HSS配额ID，不填该参数时，则随机选择对应版本配额
+    *  **参数解释**: 资源ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class SwitchHostsProtectStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId HSS配额ID，不填该参数时，则随机选择对应版本配额
+    * @param string|null $resourceId **参数解释**: 资源ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class SwitchHostsProtectStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIdList
-    *  服务器列表
+    *  **参数解释**： 服务器ID列表 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
     *
     * @return string[]
     */
@@ -326,7 +326,7 @@ class SwitchHostsProtectStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostIdList
     *
-    * @param string[] $hostIdList 服务器列表
+    * @param string[] $hostIdList **参数解释**： 服务器ID列表 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -338,7 +338,7 @@ class SwitchHostsProtectStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  资源标签列表
+    *  **参数解释**： 资源标签列表 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\TagInfo[]|null
     */
@@ -350,7 +350,7 @@ class SwitchHostsProtectStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\TagInfo[]|null $tags 资源标签列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\TagInfo[]|null $tags **参数解释**： 资源标签列表 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
     *
     * @return $this
     */

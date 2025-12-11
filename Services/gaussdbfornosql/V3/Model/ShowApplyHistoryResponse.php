@@ -21,21 +21,25 @@ class ShowApplyHistoryResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * histories  参数组模板应用历史列表
+    * totalCount  **参数解释：** 总记录数。 **取值范围：** 不涉及。
+    * histories  **参数解释：** 参数组模板应用历史列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'totalCount' => 'int',
             'histories' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\ApplyHistoryRsp[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * histories  参数组模板应用历史列表
+    * totalCount  **参数解释：** 总记录数。 **取值范围：** 不涉及。
+    * histories  **参数解释：** 参数组模板应用历史列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'totalCount' => 'int32',
         'histories' => null
     ];
 
@@ -62,31 +66,37 @@ class ShowApplyHistoryResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * histories  参数组模板应用历史列表
+    * totalCount  **参数解释：** 总记录数。 **取值范围：** 不涉及。
+    * histories  **参数解释：** 参数组模板应用历史列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'totalCount' => 'total_count',
             'histories' => 'histories'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * histories  参数组模板应用历史列表
+    * totalCount  **参数解释：** 总记录数。 **取值范围：** 不涉及。
+    * histories  **参数解释：** 参数组模板应用历史列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
+            'totalCount' => 'setTotalCount',
             'histories' => 'setHistories'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * histories  参数组模板应用历史列表
+    * totalCount  **参数解释：** 总记录数。 **取值范围：** 不涉及。
+    * histories  **参数解释：** 参数组模板应用历史列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
+            'totalCount' => 'getTotalCount',
             'histories' => 'getHistories'
     ];
 
@@ -148,6 +158,7 @@ class ShowApplyHistoryResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
         $this->container['histories'] = isset($data['histories']) ? $data['histories'] : null;
     }
 
@@ -174,8 +185,32 @@ class ShowApplyHistoryResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets totalCount
+    *  **参数解释：** 总记录数。 **取值范围：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getTotalCount()
+    {
+        return $this->container['totalCount'];
+    }
+
+    /**
+    * Sets totalCount
+    *
+    * @param int|null $totalCount **参数解释：** 总记录数。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setTotalCount($totalCount)
+    {
+        $this->container['totalCount'] = $totalCount;
+        return $this;
+    }
+
+    /**
     * Gets histories
-    *  参数组模板应用历史列表
+    *  **参数解释：** 参数组模板应用历史列表。 **取值范围：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\ApplyHistoryRsp[]|null
     */
@@ -187,7 +222,7 @@ class ShowApplyHistoryResponse implements ModelInterface, ArrayAccess
     /**
     * Sets histories
     *
-    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\ApplyHistoryRsp[]|null $histories 参数组模板应用历史列表
+    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\ApplyHistoryRsp[]|null $histories **参数解释：** 参数组模板应用历史列表。 **取值范围：** 不涉及。
     *
     * @return $this
     */

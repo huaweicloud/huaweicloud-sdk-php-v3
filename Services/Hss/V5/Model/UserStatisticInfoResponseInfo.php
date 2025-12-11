@@ -20,8 +20,8 @@ class UserStatisticInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * userName  账号名称，参考windows文件命名规则，支持字母、数字、下划线，特殊字符!@.-等
-    * num  当前账号的主机数量
+    * userName  **参数解释**: 资产中的账号名称，用于唯一标识账号 **取值范围**: 字符长度1-64位，参考Windows文件命名规则，支持字母、数字、下划线、中文及!@.-等特殊字符，不含中文标点符号
+    * num  **参数解释**: 当前账号关联的资产（主机/容器）数量 **取值范围**: 非负整数，最小值0；单位：台（主机）/个（容器）
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class UserStatisticInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * userName  账号名称，参考windows文件命名规则，支持字母、数字、下划线，特殊字符!@.-等
-    * num  当前账号的主机数量
+    * userName  **参数解释**: 资产中的账号名称，用于唯一标识账号 **取值范围**: 字符长度1-64位，参考Windows文件命名规则，支持字母、数字、下划线、中文及!@.-等特殊字符，不含中文标点符号
+    * num  **参数解释**: 当前账号关联的资产（主机/容器）数量 **取值范围**: 非负整数，最小值0；单位：台（主机）/个（容器）
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class UserStatisticInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * userName  账号名称，参考windows文件命名规则，支持字母、数字、下划线，特殊字符!@.-等
-    * num  当前账号的主机数量
+    * userName  **参数解释**: 资产中的账号名称，用于唯一标识账号 **取值范围**: 字符长度1-64位，参考Windows文件命名规则，支持字母、数字、下划线、中文及!@.-等特殊字符，不含中文标点符号
+    * num  **参数解释**: 当前账号关联的资产（主机/容器）数量 **取值范围**: 非负整数，最小值0；单位：台（主机）/个（容器）
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class UserStatisticInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * userName  账号名称，参考windows文件命名规则，支持字母、数字、下划线，特殊字符!@.-等
-    * num  当前账号的主机数量
+    * userName  **参数解释**: 资产中的账号名称，用于唯一标识账号 **取值范围**: 字符长度1-64位，参考Windows文件命名规则，支持字母、数字、下划线、中文及!@.-等特殊字符，不含中文标点符号
+    * num  **参数解释**: 当前账号关联的资产（主机/容器）数量 **取值范围**: 非负整数，最小值0；单位：台（主机）/个（容器）
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class UserStatisticInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * userName  账号名称，参考windows文件命名规则，支持字母、数字、下划线，特殊字符!@.-等
-    * num  当前账号的主机数量
+    * userName  **参数解释**: 资产中的账号名称，用于唯一标识账号 **取值范围**: 字符长度1-64位，参考Windows文件命名规则，支持字母、数字、下划线、中文及!@.-等特殊字符，不含中文标点符号
+    * num  **参数解释**: 当前账号关联的资产（主机/容器）数量 **取值范围**: 非负整数，最小值0；单位：台（主机）/个（容器）
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class UserStatisticInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  账号名称，参考windows文件命名规则，支持字母、数字、下划线，特殊字符!@.-等
+    *  **参数解释**: 资产中的账号名称，用于唯一标识账号 **取值范围**: 字符长度1-64位，参考Windows文件命名规则，支持字母、数字、下划线、中文及!@.-等特殊字符，不含中文标点符号
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class UserStatisticInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName 账号名称，参考windows文件命名规则，支持字母、数字、下划线，特殊字符!@.-等
+    * @param string|null $userName **参数解释**: 资产中的账号名称，用于唯一标识账号 **取值范围**: 字符长度1-64位，参考Windows文件命名规则，支持字母、数字、下划线、中文及!@.-等特殊字符，不含中文标点符号
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class UserStatisticInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets num
-    *  当前账号的主机数量
+    *  **参数解释**: 当前账号关联的资产（主机/容器）数量 **取值范围**: 非负整数，最小值0；单位：台（主机）/个（容器）
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class UserStatisticInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets num
     *
-    * @param int|null $num 当前账号的主机数量
+    * @param int|null $num **参数解释**: 当前账号关联的资产（主机/容器）数量 **取值范围**: 非负整数，最小值0；单位：台（主机）/个（容器）
     *
     * @return $this
     */

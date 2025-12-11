@@ -22,24 +22,32 @@ class ShowGaussMySqlProxyFlavorsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  语言。
     * instanceId  实例ID。
+    * queryType  查询的场景
+    * proxyId  数据代理的ID, 规格变更场景需要传该参数，过滤掉无法变更的目标规格
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'xLanguage' => 'string',
-            'instanceId' => 'string'
+            'instanceId' => 'string',
+            'queryType' => 'string',
+            'proxyId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  语言。
     * instanceId  实例ID。
+    * queryType  查询的场景
+    * proxyId  数据代理的ID, 规格变更场景需要传该参数，过滤掉无法变更的目标规格
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'xLanguage' => null,
-        'instanceId' => null
+        'instanceId' => null,
+        'queryType' => null,
+        'proxyId' => null
     ];
 
     /**
@@ -67,36 +75,48 @@ class ShowGaussMySqlProxyFlavorsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * xLanguage  语言。
     * instanceId  实例ID。
+    * queryType  查询的场景
+    * proxyId  数据代理的ID, 规格变更场景需要传该参数，过滤掉无法变更的目标规格
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'xLanguage' => 'X-Language',
-            'instanceId' => 'instance_id'
+            'instanceId' => 'instance_id',
+            'queryType' => 'query_type',
+            'proxyId' => 'proxy_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  语言。
     * instanceId  实例ID。
+    * queryType  查询的场景
+    * proxyId  数据代理的ID, 规格变更场景需要传该参数，过滤掉无法变更的目标规格
     *
     * @var string[]
     */
     protected static $setters = [
             'xLanguage' => 'setXLanguage',
-            'instanceId' => 'setInstanceId'
+            'instanceId' => 'setInstanceId',
+            'queryType' => 'setQueryType',
+            'proxyId' => 'setProxyId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  语言。
     * instanceId  实例ID。
+    * queryType  查询的场景
+    * proxyId  数据代理的ID, 规格变更场景需要传该参数，过滤掉无法变更的目标规格
     *
     * @var string[]
     */
     protected static $getters = [
             'xLanguage' => 'getXLanguage',
-            'instanceId' => 'getInstanceId'
+            'instanceId' => 'getInstanceId',
+            'queryType' => 'getQueryType',
+            'proxyId' => 'getProxyId'
     ];
 
     /**
@@ -139,7 +159,22 @@ class ShowGaussMySqlProxyFlavorsRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const QUERY_TYPE_CREATE = 'create';
+    const QUERY_TYPE_SCALE = 'scale';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getQueryTypeAllowableValues()
+    {
+        return [
+            self::QUERY_TYPE_CREATE,
+            self::QUERY_TYPE_SCALE,
+        ];
+    }
 
 
     /**
@@ -159,6 +194,8 @@ class ShowGaussMySqlProxyFlavorsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['queryType'] = isset($data['queryType']) ? $data['queryType'] : null;
+        $this->container['proxyId'] = isset($data['proxyId']) ? $data['proxyId'] : null;
     }
 
     /**
@@ -172,6 +209,17 @@ class ShowGaussMySqlProxyFlavorsRequest implements ModelInterface, ArrayAccess
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
+            $allowedValues = $this->getQueryTypeAllowableValues();
+                if (!is_null($this->container['queryType']) && !in_array($this->container['queryType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'queryType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['proxyId']) && (mb_strlen($this->container['proxyId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'proxyId', the character length must be smaller than or equal to 36.";
+            }
         return $invalidProperties;
     }
 
@@ -231,6 +279,54 @@ class ShowGaussMySqlProxyFlavorsRequest implements ModelInterface, ArrayAccess
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets queryType
+    *  查询的场景
+    *
+    * @return string|null
+    */
+    public function getQueryType()
+    {
+        return $this->container['queryType'];
+    }
+
+    /**
+    * Sets queryType
+    *
+    * @param string|null $queryType 查询的场景
+    *
+    * @return $this
+    */
+    public function setQueryType($queryType)
+    {
+        $this->container['queryType'] = $queryType;
+        return $this;
+    }
+
+    /**
+    * Gets proxyId
+    *  数据代理的ID, 规格变更场景需要传该参数，过滤掉无法变更的目标规格
+    *
+    * @return string|null
+    */
+    public function getProxyId()
+    {
+        return $this->container['proxyId'];
+    }
+
+    /**
+    * Sets proxyId
+    *
+    * @param string|null $proxyId 数据代理的ID, 规格变更场景需要传该参数，过滤掉无法变更的目标规格
+    *
+    * @return $this
+    */
+    public function setProxyId($proxyId)
+    {
+        $this->container['proxyId'] = $proxyId;
         return $this;
     }
 

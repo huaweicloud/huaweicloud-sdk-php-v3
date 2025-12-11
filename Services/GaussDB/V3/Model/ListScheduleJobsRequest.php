@@ -28,6 +28,7 @@ class ListScheduleJobsRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。 说明：创建时返回值为空，数据库实例创建成功后该值不为空。
     * jobId  任务ID。
     * jobName  任务调度类型。
+    * instanceId  实例ID，此参数是实例的唯一标识。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class ListScheduleJobsRequest implements ModelInterface, ArrayAccess
             'startTime' => 'string',
             'endTime' => 'string',
             'jobId' => 'string',
-            'jobName' => 'string'
+            'jobName' => 'string',
+            'instanceId' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class ListScheduleJobsRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。 说明：创建时返回值为空，数据库实例创建成功后该值不为空。
     * jobId  任务ID。
     * jobName  任务调度类型。
+    * instanceId  实例ID，此参数是实例的唯一标识。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class ListScheduleJobsRequest implements ModelInterface, ArrayAccess
         'startTime' => null,
         'endTime' => null,
         'jobId' => null,
-        'jobName' => null
+        'jobName' => null,
+        'instanceId' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class ListScheduleJobsRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。 说明：创建时返回值为空，数据库实例创建成功后该值不为空。
     * jobId  任务ID。
     * jobName  任务调度类型。
+    * instanceId  实例ID，此参数是实例的唯一标识。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class ListScheduleJobsRequest implements ModelInterface, ArrayAccess
             'startTime' => 'start_time',
             'endTime' => 'end_time',
             'jobId' => 'job_id',
-            'jobName' => 'job_name'
+            'jobName' => 'job_name',
+            'instanceId' => 'instance_id'
     ];
 
     /**
@@ -121,6 +127,7 @@ class ListScheduleJobsRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。 说明：创建时返回值为空，数据库实例创建成功后该值不为空。
     * jobId  任务ID。
     * jobName  任务调度类型。
+    * instanceId  实例ID，此参数是实例的唯一标识。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class ListScheduleJobsRequest implements ModelInterface, ArrayAccess
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
             'jobId' => 'setJobId',
-            'jobName' => 'setJobName'
+            'jobName' => 'setJobName',
+            'instanceId' => 'setInstanceId'
     ];
 
     /**
@@ -145,6 +153,7 @@ class ListScheduleJobsRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。 说明：创建时返回值为空，数据库实例创建成功后该值不为空。
     * jobId  任务ID。
     * jobName  任务调度类型。
+    * instanceId  实例ID，此参数是实例的唯一标识。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class ListScheduleJobsRequest implements ModelInterface, ArrayAccess
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
             'jobId' => 'getJobId',
-            'jobName' => 'getJobName'
+            'jobName' => 'getJobName',
+            'instanceId' => 'getInstanceId'
     ];
 
     /**
@@ -225,6 +235,7 @@ class ListScheduleJobsRequest implements ModelInterface, ArrayAccess
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['jobName'] = isset($data['jobName']) ? $data['jobName'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
     }
 
     /**
@@ -438,6 +449,30 @@ class ListScheduleJobsRequest implements ModelInterface, ArrayAccess
     public function setJobName($jobName)
     {
         $this->container['jobName'] = $jobName;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  实例ID，此参数是实例的唯一标识。
+    *
+    * @return string|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string|null $instanceId 实例ID，此参数是实例的唯一标识。
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
         return $this;
     }
 

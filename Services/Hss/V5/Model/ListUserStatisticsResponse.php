@@ -21,8 +21,8 @@ class ListUserStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  账号总数
-    * dataList  账户统计信息列表
+    * totalNum  **参数解释**: 账号总数 **取值范围**: 最小值0，最大值10000000
+    * dataList  **参数解释**: 账号历史变账户统计信息列表动记录列表 **取值范围**: 最小值0，最大值10000
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListUserStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  账号总数
-    * dataList  账户统计信息列表
+    * totalNum  **参数解释**: 账号总数 **取值范围**: 最小值0，最大值10000000
+    * dataList  **参数解释**: 账号历史变账户统计信息列表动记录列表 **取值范围**: 最小值0，最大值10000
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListUserStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  账号总数
-    * dataList  账户统计信息列表
+    * totalNum  **参数解释**: 账号总数 **取值范围**: 最小值0，最大值10000000
+    * dataList  **参数解释**: 账号历史变账户统计信息列表动记录列表 **取值范围**: 最小值0，最大值10000
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListUserStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  账号总数
-    * dataList  账户统计信息列表
+    * totalNum  **参数解释**: 账号总数 **取值范围**: 最小值0，最大值10000000
+    * dataList  **参数解释**: 账号历史变账户统计信息列表动记录列表 **取值范围**: 最小值0，最大值10000
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListUserStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  账号总数
-    * dataList  账户统计信息列表
+    * totalNum  **参数解释**: 账号总数 **取值范围**: 最小值0，最大值10000000
+    * dataList  **参数解释**: 账号历史变账户统计信息列表动记录列表 **取值范围**: 最小值0，最大值10000
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ListUserStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  账号总数
+    *  **参数解释**: 账号总数 **取值范围**: 最小值0，最大值10000000
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListUserStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 账号总数
+    * @param int|null $totalNum **参数解释**: 账号总数 **取值范围**: 最小值0，最大值10000000
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListUserStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  账户统计信息列表
+    *  **参数解释**: 账号历史变账户统计信息列表动记录列表 **取值范围**: 最小值0，最大值10000
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\UserStatisticInfoResponseInfo[]|null
     */
@@ -228,7 +228,7 @@ class ListUserStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\UserStatisticInfoResponseInfo[]|null $dataList 账户统计信息列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\UserStatisticInfoResponseInfo[]|null $dataList **参数解释**: 账号历史变账户统计信息列表动记录列表 **取值范围**: 最小值0，最大值10000
     *
     * @return $this
     */

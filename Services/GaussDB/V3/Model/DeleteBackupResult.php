@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cph\V1\Model;
+namespace HuaweiCloud\SDK\GaussDB\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class Property implements ModelInterface, ArrayAccess
+class DeleteBackupResult implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,34 @@ class Property implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'Property';
+    protected static $openAPIModelName = 'DeleteBackupResult';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * phoneId  云手机id，不超过32个字节。
-    * property  云手机属性列表，为Json格式字符串。
+    * backupId  **参数解释**：  备份ID。  **取值范围**：  不涉及。
+    * errorCode  **参数解释**：  提交任务异常时返回的编码。  **取值范围**：  不涉及。
+    * errorMsg  **参数解释**：  提交任务异常时返回的描述信息。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'phoneId' => 'string',
-            'property' => 'string'
+            'backupId' => 'string',
+            'errorCode' => 'string',
+            'errorMsg' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * phoneId  云手机id，不超过32个字节。
-    * property  云手机属性列表，为Json格式字符串。
+    * backupId  **参数解释**：  备份ID。  **取值范围**：  不涉及。
+    * errorCode  **参数解释**：  提交任务异常时返回的编码。  **取值范围**：  不涉及。
+    * errorMsg  **参数解释**：  提交任务异常时返回的描述信息。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'phoneId' => null,
-        'property' => null
+        'backupId' => null,
+        'errorCode' => null,
+        'errorMsg' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class Property implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * phoneId  云手机id，不超过32个字节。
-    * property  云手机属性列表，为Json格式字符串。
+    * backupId  **参数解释**：  备份ID。  **取值范围**：  不涉及。
+    * errorCode  **参数解释**：  提交任务异常时返回的编码。  **取值范围**：  不涉及。
+    * errorMsg  **参数解释**：  提交任务异常时返回的描述信息。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'phoneId' => 'phone_id',
-            'property' => 'property'
+            'backupId' => 'backup_id',
+            'errorCode' => 'error_code',
+            'errorMsg' => 'error_msg'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * phoneId  云手机id，不超过32个字节。
-    * property  云手机属性列表，为Json格式字符串。
+    * backupId  **参数解释**：  备份ID。  **取值范围**：  不涉及。
+    * errorCode  **参数解释**：  提交任务异常时返回的编码。  **取值范围**：  不涉及。
+    * errorMsg  **参数解释**：  提交任务异常时返回的描述信息。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'phoneId' => 'setPhoneId',
-            'property' => 'setProperty'
+            'backupId' => 'setBackupId',
+            'errorCode' => 'setErrorCode',
+            'errorMsg' => 'setErrorMsg'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * phoneId  云手机id，不超过32个字节。
-    * property  云手机属性列表，为Json格式字符串。
+    * backupId  **参数解释**：  备份ID。  **取值范围**：  不涉及。
+    * errorCode  **参数解释**：  提交任务异常时返回的编码。  **取值范围**：  不涉及。
+    * errorMsg  **参数解释**：  提交任务异常时返回的描述信息。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'phoneId' => 'getPhoneId',
-            'property' => 'getProperty'
+            'backupId' => 'getBackupId',
+            'errorCode' => 'getErrorCode',
+            'errorMsg' => 'getErrorMsg'
     ];
 
     /**
@@ -157,8 +167,9 @@ class Property implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['phoneId'] = isset($data['phoneId']) ? $data['phoneId'] : null;
-        $this->container['property'] = isset($data['property']) ? $data['property'] : null;
+        $this->container['backupId'] = isset($data['backupId']) ? $data['backupId'] : null;
+        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
+        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
     }
 
     /**
@@ -169,24 +180,6 @@ class Property implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['phoneId'] === null) {
-            $invalidProperties[] = "'phoneId' can't be null";
-        }
-            if ((mb_strlen($this->container['phoneId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'phoneId', the character length must be smaller than or equal to 32.";
-            }
-            if ((mb_strlen($this->container['phoneId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'phoneId', the character length must be bigger than or equal to 32.";
-            }
-        if ($this->container['property'] === null) {
-            $invalidProperties[] = "'property' can't be null";
-        }
-            if ((mb_strlen($this->container['property']) > 8096)) {
-                $invalidProperties[] = "invalid value for 'property', the character length must be smaller than or equal to 8096.";
-            }
-            if ((mb_strlen($this->container['property']) < 0)) {
-                $invalidProperties[] = "invalid value for 'property', the character length must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -202,50 +195,74 @@ class Property implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets phoneId
-    *  云手机id，不超过32个字节。
+    * Gets backupId
+    *  **参数解释**：  备份ID。  **取值范围**：  不涉及。
     *
-    * @return string
+    * @return string|null
     */
-    public function getPhoneId()
+    public function getBackupId()
     {
-        return $this->container['phoneId'];
+        return $this->container['backupId'];
     }
 
     /**
-    * Sets phoneId
+    * Sets backupId
     *
-    * @param string $phoneId 云手机id，不超过32个字节。
+    * @param string|null $backupId **参数解释**：  备份ID。  **取值范围**：  不涉及。
     *
     * @return $this
     */
-    public function setPhoneId($phoneId)
+    public function setBackupId($backupId)
     {
-        $this->container['phoneId'] = $phoneId;
+        $this->container['backupId'] = $backupId;
         return $this;
     }
 
     /**
-    * Gets property
-    *  云手机属性列表，为Json格式字符串。
+    * Gets errorCode
+    *  **参数解释**：  提交任务异常时返回的编码。  **取值范围**：  不涉及。
     *
-    * @return string
+    * @return string|null
     */
-    public function getProperty()
+    public function getErrorCode()
     {
-        return $this->container['property'];
+        return $this->container['errorCode'];
     }
 
     /**
-    * Sets property
+    * Sets errorCode
     *
-    * @param string $property 云手机属性列表，为Json格式字符串。
+    * @param string|null $errorCode **参数解释**：  提交任务异常时返回的编码。  **取值范围**：  不涉及。
     *
     * @return $this
     */
-    public function setProperty($property)
+    public function setErrorCode($errorCode)
     {
-        $this->container['property'] = $property;
+        $this->container['errorCode'] = $errorCode;
+        return $this;
+    }
+
+    /**
+    * Gets errorMsg
+    *  **参数解释**：  提交任务异常时返回的描述信息。  **取值范围**：  不涉及。
+    *
+    * @return string|null
+    */
+    public function getErrorMsg()
+    {
+        return $this->container['errorMsg'];
+    }
+
+    /**
+    * Sets errorMsg
+    *
+    * @param string|null $errorMsg **参数解释**：  提交任务异常时返回的描述信息。  **取值范围**：  不涉及。
+    *
+    * @return $this
+    */
+    public function setErrorMsg($errorMsg)
+    {
+        $this->container['errorMsg'] = $errorMsg;
         return $this;
     }
 

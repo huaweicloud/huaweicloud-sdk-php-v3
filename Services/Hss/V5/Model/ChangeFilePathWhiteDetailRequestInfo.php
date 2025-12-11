@@ -20,7 +20,7 @@ class ChangeFilePathWhiteDetailRequestInfo implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * customizedPath  自定义路径，选填，可编辑
+    * customizedPath  **参数解释**: 自定义路径，选填，可编辑 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ChangeFilePathWhiteDetailRequestInfo implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * customizedPath  自定义路径，选填，可编辑
+    * customizedPath  **参数解释**: 自定义路径，选填，可编辑 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ChangeFilePathWhiteDetailRequestInfo implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * customizedPath  自定义路径，选填，可编辑
+    * customizedPath  **参数解释**: 自定义路径，选填，可编辑 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ChangeFilePathWhiteDetailRequestInfo implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * customizedPath  自定义路径，选填，可编辑
+    * customizedPath  **参数解释**: 自定义路径，选填，可编辑 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ChangeFilePathWhiteDetailRequestInfo implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * customizedPath  自定义路径，选填，可编辑
+    * customizedPath  **参数解释**: 自定义路径，选填，可编辑 **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class ChangeFilePathWhiteDetailRequestInfo implements ModelInterface, ArrayAcces
 
     /**
     * Gets customizedPath
-    *  自定义路径，选填，可编辑
+    *  **参数解释**: 自定义路径，选填，可编辑 **取值范围**: 不涉及
     *
     * @return string[]|null
     */
@@ -186,7 +186,7 @@ class ChangeFilePathWhiteDetailRequestInfo implements ModelInterface, ArrayAcces
     /**
     * Sets customizedPath
     *
-    * @param string[]|null $customizedPath 自定义路径，选填，可编辑
+    * @param string[]|null $customizedPath **参数解释**: 自定义路径，选填，可编辑 **取值范围**: 不涉及
     *
     * @return $this
     */

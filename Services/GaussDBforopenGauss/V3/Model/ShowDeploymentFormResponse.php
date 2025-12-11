@@ -25,6 +25,9 @@ class ShowDeploymentFormResponse implements ModelInterface, ArrayAccess
     * solution  解决方案模板名称。
     * shardNum  分片数。
     * replicaNum  副本数。
+    * eachExpandNodes  **参数解释**: 每次扩容的最小节点数。 **取值范围**: 不涉及。
+    * maxShardCount  **参数解释**: 最大分片数。 **取值范围**: 不涉及。
+    * eachShardNum  **参数解释**: 每分片节点数。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -32,7 +35,10 @@ class ShowDeploymentFormResponse implements ModelInterface, ArrayAccess
             'initialNodeNum' => 'int',
             'solution' => 'string',
             'shardNum' => 'int',
-            'replicaNum' => 'int'
+            'replicaNum' => 'int',
+            'eachExpandNodes' => 'int',
+            'maxShardCount' => 'int',
+            'eachShardNum' => 'int'
     ];
 
     /**
@@ -41,6 +47,9 @@ class ShowDeploymentFormResponse implements ModelInterface, ArrayAccess
     * solution  解决方案模板名称。
     * shardNum  分片数。
     * replicaNum  副本数。
+    * eachExpandNodes  **参数解释**: 每次扩容的最小节点数。 **取值范围**: 不涉及。
+    * maxShardCount  **参数解释**: 最大分片数。 **取值范围**: 不涉及。
+    * eachShardNum  **参数解释**: 每分片节点数。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -48,7 +57,10 @@ class ShowDeploymentFormResponse implements ModelInterface, ArrayAccess
         'initialNodeNum' => null,
         'solution' => null,
         'shardNum' => null,
-        'replicaNum' => null
+        'replicaNum' => null,
+        'eachExpandNodes' => null,
+        'maxShardCount' => null,
+        'eachShardNum' => null
     ];
 
     /**
@@ -78,6 +90,9 @@ class ShowDeploymentFormResponse implements ModelInterface, ArrayAccess
     * solution  解决方案模板名称。
     * shardNum  分片数。
     * replicaNum  副本数。
+    * eachExpandNodes  **参数解释**: 每次扩容的最小节点数。 **取值范围**: 不涉及。
+    * maxShardCount  **参数解释**: 最大分片数。 **取值范围**: 不涉及。
+    * eachShardNum  **参数解释**: 每分片节点数。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -85,7 +100,10 @@ class ShowDeploymentFormResponse implements ModelInterface, ArrayAccess
             'initialNodeNum' => 'initial_node_num',
             'solution' => 'solution',
             'shardNum' => 'shard_num',
-            'replicaNum' => 'replica_num'
+            'replicaNum' => 'replica_num',
+            'eachExpandNodes' => 'each_expand_nodes',
+            'maxShardCount' => 'max_shard_count',
+            'eachShardNum' => 'each_shard_num'
     ];
 
     /**
@@ -94,6 +112,9 @@ class ShowDeploymentFormResponse implements ModelInterface, ArrayAccess
     * solution  解决方案模板名称。
     * shardNum  分片数。
     * replicaNum  副本数。
+    * eachExpandNodes  **参数解释**: 每次扩容的最小节点数。 **取值范围**: 不涉及。
+    * maxShardCount  **参数解释**: 最大分片数。 **取值范围**: 不涉及。
+    * eachShardNum  **参数解释**: 每分片节点数。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -101,7 +122,10 @@ class ShowDeploymentFormResponse implements ModelInterface, ArrayAccess
             'initialNodeNum' => 'setInitialNodeNum',
             'solution' => 'setSolution',
             'shardNum' => 'setShardNum',
-            'replicaNum' => 'setReplicaNum'
+            'replicaNum' => 'setReplicaNum',
+            'eachExpandNodes' => 'setEachExpandNodes',
+            'maxShardCount' => 'setMaxShardCount',
+            'eachShardNum' => 'setEachShardNum'
     ];
 
     /**
@@ -110,6 +134,9 @@ class ShowDeploymentFormResponse implements ModelInterface, ArrayAccess
     * solution  解决方案模板名称。
     * shardNum  分片数。
     * replicaNum  副本数。
+    * eachExpandNodes  **参数解释**: 每次扩容的最小节点数。 **取值范围**: 不涉及。
+    * maxShardCount  **参数解释**: 最大分片数。 **取值范围**: 不涉及。
+    * eachShardNum  **参数解释**: 每分片节点数。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -117,7 +144,10 @@ class ShowDeploymentFormResponse implements ModelInterface, ArrayAccess
             'initialNodeNum' => 'getInitialNodeNum',
             'solution' => 'getSolution',
             'shardNum' => 'getShardNum',
-            'replicaNum' => 'getReplicaNum'
+            'replicaNum' => 'getReplicaNum',
+            'eachExpandNodes' => 'getEachExpandNodes',
+            'maxShardCount' => 'getMaxShardCount',
+            'eachShardNum' => 'getEachShardNum'
     ];
 
     /**
@@ -182,6 +212,9 @@ class ShowDeploymentFormResponse implements ModelInterface, ArrayAccess
         $this->container['solution'] = isset($data['solution']) ? $data['solution'] : null;
         $this->container['shardNum'] = isset($data['shardNum']) ? $data['shardNum'] : null;
         $this->container['replicaNum'] = isset($data['replicaNum']) ? $data['replicaNum'] : null;
+        $this->container['eachExpandNodes'] = isset($data['eachExpandNodes']) ? $data['eachExpandNodes'] : null;
+        $this->container['maxShardCount'] = isset($data['maxShardCount']) ? $data['maxShardCount'] : null;
+        $this->container['eachShardNum'] = isset($data['eachShardNum']) ? $data['eachShardNum'] : null;
     }
 
     /**
@@ -299,6 +332,78 @@ class ShowDeploymentFormResponse implements ModelInterface, ArrayAccess
     public function setReplicaNum($replicaNum)
     {
         $this->container['replicaNum'] = $replicaNum;
+        return $this;
+    }
+
+    /**
+    * Gets eachExpandNodes
+    *  **参数解释**: 每次扩容的最小节点数。 **取值范围**: 不涉及。
+    *
+    * @return int|null
+    */
+    public function getEachExpandNodes()
+    {
+        return $this->container['eachExpandNodes'];
+    }
+
+    /**
+    * Sets eachExpandNodes
+    *
+    * @param int|null $eachExpandNodes **参数解释**: 每次扩容的最小节点数。 **取值范围**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setEachExpandNodes($eachExpandNodes)
+    {
+        $this->container['eachExpandNodes'] = $eachExpandNodes;
+        return $this;
+    }
+
+    /**
+    * Gets maxShardCount
+    *  **参数解释**: 最大分片数。 **取值范围**: 不涉及。
+    *
+    * @return int|null
+    */
+    public function getMaxShardCount()
+    {
+        return $this->container['maxShardCount'];
+    }
+
+    /**
+    * Sets maxShardCount
+    *
+    * @param int|null $maxShardCount **参数解释**: 最大分片数。 **取值范围**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setMaxShardCount($maxShardCount)
+    {
+        $this->container['maxShardCount'] = $maxShardCount;
+        return $this;
+    }
+
+    /**
+    * Gets eachShardNum
+    *  **参数解释**: 每分片节点数。 **取值范围**: 不涉及。
+    *
+    * @return int|null
+    */
+    public function getEachShardNum()
+    {
+        return $this->container['eachShardNum'];
+    }
+
+    /**
+    * Sets eachShardNum
+    *
+    * @param int|null $eachShardNum **参数解释**: 每分片节点数。 **取值范围**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setEachShardNum($eachShardNum)
+    {
+        $this->container['eachShardNum'] = $eachShardNum;
         return $this;
     }
 

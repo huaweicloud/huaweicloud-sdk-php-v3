@@ -32,6 +32,7 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableAuthorizationToken  是否支持增强型临时登录指令。设置为true时，前端获取登录指令时可以选择获取增强型登录指令。
     * enableResource  是否支持镜像资源。设置为true时，前端界面显示“镜像资源”页签，可查看镜像中心。
     * enableListV3  是否支持list v3接口
+    * enableImageQuota  是否启用镜像配额
     *
     * @var string[]
     */
@@ -46,7 +47,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enablePipeline' => 'bool',
             'enableAuthorizationToken' => 'bool',
             'enableResource' => 'bool',
-            'enableListV3' => 'bool'
+            'enableListV3' => 'bool',
+            'enableImageQuota' => 'bool'
     ];
 
     /**
@@ -62,6 +64,7 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableAuthorizationToken  是否支持增强型临时登录指令。设置为true时，前端获取登录指令时可以选择获取增强型登录指令。
     * enableResource  是否支持镜像资源。设置为true时，前端界面显示“镜像资源”页签，可查看镜像中心。
     * enableListV3  是否支持list v3接口
+    * enableImageQuota  是否启用镜像配额
     *
     * @var string[]
     */
@@ -76,7 +79,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
         'enablePipeline' => null,
         'enableAuthorizationToken' => null,
         'enableResource' => null,
-        'enableListV3' => null
+        'enableListV3' => null,
+        'enableImageQuota' => null
     ];
 
     /**
@@ -113,6 +117,7 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableAuthorizationToken  是否支持增强型临时登录指令。设置为true时，前端获取登录指令时可以选择获取增强型登录指令。
     * enableResource  是否支持镜像资源。设置为true时，前端界面显示“镜像资源”页签，可查看镜像中心。
     * enableListV3  是否支持list v3接口
+    * enableImageQuota  是否启用镜像配额
     *
     * @var string[]
     */
@@ -127,7 +132,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enablePipeline' => 'enable_pipeline',
             'enableAuthorizationToken' => 'enable_authorization_token',
             'enableResource' => 'enable_resource',
-            'enableListV3' => 'enable_list_v3'
+            'enableListV3' => 'enable_list_v3',
+            'enableImageQuota' => 'enable_image_quota'
     ];
 
     /**
@@ -143,6 +149,7 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableAuthorizationToken  是否支持增强型临时登录指令。设置为true时，前端获取登录指令时可以选择获取增强型登录指令。
     * enableResource  是否支持镜像资源。设置为true时，前端界面显示“镜像资源”页签，可查看镜像中心。
     * enableListV3  是否支持list v3接口
+    * enableImageQuota  是否启用镜像配额
     *
     * @var string[]
     */
@@ -157,7 +164,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enablePipeline' => 'setEnablePipeline',
             'enableAuthorizationToken' => 'setEnableAuthorizationToken',
             'enableResource' => 'setEnableResource',
-            'enableListV3' => 'setEnableListV3'
+            'enableListV3' => 'setEnableListV3',
+            'enableImageQuota' => 'setEnableImageQuota'
     ];
 
     /**
@@ -173,6 +181,7 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableAuthorizationToken  是否支持增强型临时登录指令。设置为true时，前端获取登录指令时可以选择获取增强型登录指令。
     * enableResource  是否支持镜像资源。设置为true时，前端界面显示“镜像资源”页签，可查看镜像中心。
     * enableListV3  是否支持list v3接口
+    * enableImageQuota  是否启用镜像配额
     *
     * @var string[]
     */
@@ -187,7 +196,8 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enablePipeline' => 'getEnablePipeline',
             'enableAuthorizationToken' => 'getEnableAuthorizationToken',
             'enableResource' => 'getEnableResource',
-            'enableListV3' => 'getEnableListV3'
+            'enableListV3' => 'getEnableListV3',
+            'enableImageQuota' => 'getEnableImageQuota'
     ];
 
     /**
@@ -259,6 +269,7 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
         $this->container['enableAuthorizationToken'] = isset($data['enableAuthorizationToken']) ? $data['enableAuthorizationToken'] : null;
         $this->container['enableResource'] = isset($data['enableResource']) ? $data['enableResource'] : null;
         $this->container['enableListV3'] = isset($data['enableListV3']) ? $data['enableListV3'] : null;
+        $this->container['enableImageQuota'] = isset($data['enableImageQuota']) ? $data['enableImageQuota'] : null;
     }
 
     /**
@@ -544,6 +555,30 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     public function setEnableListV3($enableListV3)
     {
         $this->container['enableListV3'] = $enableListV3;
+        return $this;
+    }
+
+    /**
+    * Gets enableImageQuota
+    *  是否启用镜像配额
+    *
+    * @return bool|null
+    */
+    public function getEnableImageQuota()
+    {
+        return $this->container['enableImageQuota'];
+    }
+
+    /**
+    * Sets enableImageQuota
+    *
+    * @param bool|null $enableImageQuota 是否启用镜像配额
+    *
+    * @return $this
+    */
+    public function setEnableImageQuota($enableImageQuota)
+    {
+        $this->container['enableImageQuota'] = $enableImageQuota;
         return $this;
     }
 

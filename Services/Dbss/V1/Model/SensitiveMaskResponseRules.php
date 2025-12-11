@@ -22,10 +22,10 @@ class SensitiveMaskResponseRules implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  规则ID
     * name  规则名称
-    * type  规则类型
+    * type  规则类型 - BUILD_IN：系统内置 - USER_DEFINE：自定义
     * regex  规则正则表达式
     * maskValue  替换值
-    * status  规则状态
+    * status  规则状态 - ON：启用 - OFF：禁用
     * operateTime  操作时间
     *
     * @var string[]
@@ -44,10 +44,10 @@ class SensitiveMaskResponseRules implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  规则ID
     * name  规则名称
-    * type  规则类型
+    * type  规则类型 - BUILD_IN：系统内置 - USER_DEFINE：自定义
     * regex  规则正则表达式
     * maskValue  替换值
-    * status  规则状态
+    * status  规则状态 - ON：启用 - OFF：禁用
     * operateTime  操作时间
     *
     * @var string[]
@@ -87,10 +87,10 @@ class SensitiveMaskResponseRules implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  规则ID
     * name  规则名称
-    * type  规则类型
+    * type  规则类型 - BUILD_IN：系统内置 - USER_DEFINE：自定义
     * regex  规则正则表达式
     * maskValue  替换值
-    * status  规则状态
+    * status  规则状态 - ON：启用 - OFF：禁用
     * operateTime  操作时间
     *
     * @var string[]
@@ -109,10 +109,10 @@ class SensitiveMaskResponseRules implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  规则ID
     * name  规则名称
-    * type  规则类型
+    * type  规则类型 - BUILD_IN：系统内置 - USER_DEFINE：自定义
     * regex  规则正则表达式
     * maskValue  替换值
-    * status  规则状态
+    * status  规则状态 - ON：启用 - OFF：禁用
     * operateTime  操作时间
     *
     * @var string[]
@@ -131,10 +131,10 @@ class SensitiveMaskResponseRules implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  规则ID
     * name  规则名称
-    * type  规则类型
+    * type  规则类型 - BUILD_IN：系统内置 - USER_DEFINE：自定义
     * regex  规则正则表达式
     * maskValue  替换值
-    * status  规则状态
+    * status  规则状态 - ON：启用 - OFF：禁用
     * operateTime  操作时间
     *
     * @var string[]
@@ -288,7 +288,7 @@ class SensitiveMaskResponseRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  规则类型
+    *  规则类型 - BUILD_IN：系统内置 - USER_DEFINE：自定义
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class SensitiveMaskResponseRules implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 规则类型
+    * @param string|null $type 规则类型 - BUILD_IN：系统内置 - USER_DEFINE：自定义
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class SensitiveMaskResponseRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  规则状态
+    *  规则状态 - ON：启用 - OFF：禁用
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class SensitiveMaskResponseRules implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 规则状态
+    * @param string|null $status 规则状态 - ON：启用 - OFF：禁用
     *
     * @return $this
     */

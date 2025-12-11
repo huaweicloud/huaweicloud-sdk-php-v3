@@ -23,24 +23,28 @@ class ShowInstanceMonitorExtendResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * monitorSwitch  实例秒级监控开关。  - true，表示开启。 - false，表示关闭。
     * period  采集周期，仅在monitor_switch为true时返回。  - 1：采集周期为1s。 - 5：采集周期为5s。
+    * allow  **参数解释**：  能否开启秒级监控。  **取值范围**： - true: 可以开启。 - false：不能开启，8vcpu以下规格不允许开启秒级监控。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'monitorSwitch' => 'bool',
-            'period' => 'int'
+            'period' => 'int',
+            'allow' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * monitorSwitch  实例秒级监控开关。  - true，表示开启。 - false，表示关闭。
     * period  采集周期，仅在monitor_switch为true时返回。  - 1：采集周期为1s。 - 5：采集周期为5s。
+    * allow  **参数解释**：  能否开启秒级监控。  **取值范围**： - true: 可以开启。 - false：不能开启，8vcpu以下规格不允许开启秒级监控。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'monitorSwitch' => null,
-        'period' => 'int32'
+        'period' => 'int32',
+        'allow' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ShowInstanceMonitorExtendResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * monitorSwitch  实例秒级监控开关。  - true，表示开启。 - false，表示关闭。
     * period  采集周期，仅在monitor_switch为true时返回。  - 1：采集周期为1s。 - 5：采集周期为5s。
+    * allow  **参数解释**：  能否开启秒级监控。  **取值范围**： - true: 可以开启。 - false：不能开启，8vcpu以下规格不允许开启秒级监控。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'monitorSwitch' => 'monitor_switch',
-            'period' => 'period'
+            'period' => 'period',
+            'allow' => 'allow'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * monitorSwitch  实例秒级监控开关。  - true，表示开启。 - false，表示关闭。
     * period  采集周期，仅在monitor_switch为true时返回。  - 1：采集周期为1s。 - 5：采集周期为5s。
+    * allow  **参数解释**：  能否开启秒级监控。  **取值范围**： - true: 可以开启。 - false：不能开启，8vcpu以下规格不允许开启秒级监控。
     *
     * @var string[]
     */
     protected static $setters = [
             'monitorSwitch' => 'setMonitorSwitch',
-            'period' => 'setPeriod'
+            'period' => 'setPeriod',
+            'allow' => 'setAllow'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * monitorSwitch  实例秒级监控开关。  - true，表示开启。 - false，表示关闭。
     * period  采集周期，仅在monitor_switch为true时返回。  - 1：采集周期为1s。 - 5：采集周期为5s。
+    * allow  **参数解释**：  能否开启秒级监控。  **取值范围**： - true: 可以开启。 - false：不能开启，8vcpu以下规格不允许开启秒级监控。
     *
     * @var string[]
     */
     protected static $getters = [
             'monitorSwitch' => 'getMonitorSwitch',
-            'period' => 'getPeriod'
+            'period' => 'getPeriod',
+            'allow' => 'getAllow'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ShowInstanceMonitorExtendResponse implements ModelInterface, ArrayAccess
     {
         $this->container['monitorSwitch'] = isset($data['monitorSwitch']) ? $data['monitorSwitch'] : null;
         $this->container['period'] = isset($data['period']) ? $data['period'] : null;
+        $this->container['allow'] = isset($data['allow']) ? $data['allow'] : null;
     }
 
     /**
@@ -229,6 +240,30 @@ class ShowInstanceMonitorExtendResponse implements ModelInterface, ArrayAccess
     public function setPeriod($period)
     {
         $this->container['period'] = $period;
+        return $this;
+    }
+
+    /**
+    * Gets allow
+    *  **参数解释**：  能否开启秒级监控。  **取值范围**： - true: 可以开启。 - false：不能开启，8vcpu以下规格不允许开启秒级监控。
+    *
+    * @return bool|null
+    */
+    public function getAllow()
+    {
+        return $this->container['allow'];
+    }
+
+    /**
+    * Sets allow
+    *
+    * @param bool|null $allow **参数解释**：  能否开启秒级监控。  **取值范围**： - true: 可以开启。 - false：不能开启，8vcpu以下规格不允许开启秒级监控。
+    *
+    * @return $this
+    */
+    public function setAllow($allow)
+    {
+        $this->container['allow'] = $allow;
         return $this;
     }
 

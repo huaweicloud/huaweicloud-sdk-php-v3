@@ -21,18 +21,18 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accountNum  **参数解释**： 主机账号数量 **取值范围**： 最小值0，最大值2147483647
-    * portNum  **参数解释**： 开放端口数量 **取值范围**： 最小值0，最大值2147483647
-    * processNum  **参数解释**： 进程数量 **取值范围**： 最小值0，最大值2147483647
-    * appNum  **参数解释**： 软件数量 **取值范围**： 最小值0，最大值2147483647
-    * autoLaunchNum  **参数解释**： 自启动进程数量 **取值范围**： 最小值0，最大值2147483647
-    * webFrameworkNum  **参数解释**： web框架数量 **取值范围**： 最小值0，最大值2147483647
-    * webSiteNum  **参数解释**： Web站点数量 **取值范围**： 最小值0，最大值2147483647
-    * jarPackageNum  **参数解释**： Jar包数量 **取值范围**： 最小值0，最大值2147483647
-    * kernelModuleNum  **参数解释**： 内核模块数量 **取值范围**： 最小值0，最大值2147483647
-    * webServiceNum  **参数解释**： web服务数量 **取值范围**： 最小值0，最大值2147483647
-    * webAppNum  **参数解释**： web应用数量 **取值范围**： 最小值0，最大值2147483647
-    * databaseNum  **参数解释**： 数据库数量 **取值范围**： 最小值0，最大值2147483647
+    * accountNum  **参数解释**： 满足查询条件的资产（主机/容器）下的主机账号总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * portNum  **参数解释**： 满足查询条件的资产（主机/容器）下的开放端口总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * processNum  **参数解释**： 满足查询条件的资产（主机/容器）下的进程总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * appNum  **参数解释**： 满足查询条件的资产（主机/容器）下已安装的软件总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * autoLaunchNum  **参数解释**： 满足查询条件的资产（主机/容器）下的自启动进程总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * webFrameworkNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web框架总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * webSiteNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web站点总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * jarPackageNum  **参数解释**： 满足查询条件的资产（主机/容器）下的JAR包总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * kernelModuleNum  **参数解释**： 满足查询条件的资产（主机/容器）下已加载的内核模块总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * webServiceNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web服务总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * webAppNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web应用总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * databaseNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的数据库总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @var string[]
     */
@@ -53,18 +53,18 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accountNum  **参数解释**： 主机账号数量 **取值范围**： 最小值0，最大值2147483647
-    * portNum  **参数解释**： 开放端口数量 **取值范围**： 最小值0，最大值2147483647
-    * processNum  **参数解释**： 进程数量 **取值范围**： 最小值0，最大值2147483647
-    * appNum  **参数解释**： 软件数量 **取值范围**： 最小值0，最大值2147483647
-    * autoLaunchNum  **参数解释**： 自启动进程数量 **取值范围**： 最小值0，最大值2147483647
-    * webFrameworkNum  **参数解释**： web框架数量 **取值范围**： 最小值0，最大值2147483647
-    * webSiteNum  **参数解释**： Web站点数量 **取值范围**： 最小值0，最大值2147483647
-    * jarPackageNum  **参数解释**： Jar包数量 **取值范围**： 最小值0，最大值2147483647
-    * kernelModuleNum  **参数解释**： 内核模块数量 **取值范围**： 最小值0，最大值2147483647
-    * webServiceNum  **参数解释**： web服务数量 **取值范围**： 最小值0，最大值2147483647
-    * webAppNum  **参数解释**： web应用数量 **取值范围**： 最小值0，最大值2147483647
-    * databaseNum  **参数解释**： 数据库数量 **取值范围**： 最小值0，最大值2147483647
+    * accountNum  **参数解释**： 满足查询条件的资产（主机/容器）下的主机账号总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * portNum  **参数解释**： 满足查询条件的资产（主机/容器）下的开放端口总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * processNum  **参数解释**： 满足查询条件的资产（主机/容器）下的进程总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * appNum  **参数解释**： 满足查询条件的资产（主机/容器）下已安装的软件总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * autoLaunchNum  **参数解释**： 满足查询条件的资产（主机/容器）下的自启动进程总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * webFrameworkNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web框架总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * webSiteNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web站点总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * jarPackageNum  **参数解释**： 满足查询条件的资产（主机/容器）下的JAR包总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * kernelModuleNum  **参数解释**： 满足查询条件的资产（主机/容器）下已加载的内核模块总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * webServiceNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web服务总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * webAppNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web应用总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * databaseNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的数据库总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @var string[]
     */
@@ -106,18 +106,18 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accountNum  **参数解释**： 主机账号数量 **取值范围**： 最小值0，最大值2147483647
-    * portNum  **参数解释**： 开放端口数量 **取值范围**： 最小值0，最大值2147483647
-    * processNum  **参数解释**： 进程数量 **取值范围**： 最小值0，最大值2147483647
-    * appNum  **参数解释**： 软件数量 **取值范围**： 最小值0，最大值2147483647
-    * autoLaunchNum  **参数解释**： 自启动进程数量 **取值范围**： 最小值0，最大值2147483647
-    * webFrameworkNum  **参数解释**： web框架数量 **取值范围**： 最小值0，最大值2147483647
-    * webSiteNum  **参数解释**： Web站点数量 **取值范围**： 最小值0，最大值2147483647
-    * jarPackageNum  **参数解释**： Jar包数量 **取值范围**： 最小值0，最大值2147483647
-    * kernelModuleNum  **参数解释**： 内核模块数量 **取值范围**： 最小值0，最大值2147483647
-    * webServiceNum  **参数解释**： web服务数量 **取值范围**： 最小值0，最大值2147483647
-    * webAppNum  **参数解释**： web应用数量 **取值范围**： 最小值0，最大值2147483647
-    * databaseNum  **参数解释**： 数据库数量 **取值范围**： 最小值0，最大值2147483647
+    * accountNum  **参数解释**： 满足查询条件的资产（主机/容器）下的主机账号总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * portNum  **参数解释**： 满足查询条件的资产（主机/容器）下的开放端口总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * processNum  **参数解释**： 满足查询条件的资产（主机/容器）下的进程总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * appNum  **参数解释**： 满足查询条件的资产（主机/容器）下已安装的软件总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * autoLaunchNum  **参数解释**： 满足查询条件的资产（主机/容器）下的自启动进程总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * webFrameworkNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web框架总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * webSiteNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web站点总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * jarPackageNum  **参数解释**： 满足查询条件的资产（主机/容器）下的JAR包总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * kernelModuleNum  **参数解释**： 满足查询条件的资产（主机/容器）下已加载的内核模块总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * webServiceNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web服务总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * webAppNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web应用总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * databaseNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的数据库总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @var string[]
     */
@@ -138,18 +138,18 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accountNum  **参数解释**： 主机账号数量 **取值范围**： 最小值0，最大值2147483647
-    * portNum  **参数解释**： 开放端口数量 **取值范围**： 最小值0，最大值2147483647
-    * processNum  **参数解释**： 进程数量 **取值范围**： 最小值0，最大值2147483647
-    * appNum  **参数解释**： 软件数量 **取值范围**： 最小值0，最大值2147483647
-    * autoLaunchNum  **参数解释**： 自启动进程数量 **取值范围**： 最小值0，最大值2147483647
-    * webFrameworkNum  **参数解释**： web框架数量 **取值范围**： 最小值0，最大值2147483647
-    * webSiteNum  **参数解释**： Web站点数量 **取值范围**： 最小值0，最大值2147483647
-    * jarPackageNum  **参数解释**： Jar包数量 **取值范围**： 最小值0，最大值2147483647
-    * kernelModuleNum  **参数解释**： 内核模块数量 **取值范围**： 最小值0，最大值2147483647
-    * webServiceNum  **参数解释**： web服务数量 **取值范围**： 最小值0，最大值2147483647
-    * webAppNum  **参数解释**： web应用数量 **取值范围**： 最小值0，最大值2147483647
-    * databaseNum  **参数解释**： 数据库数量 **取值范围**： 最小值0，最大值2147483647
+    * accountNum  **参数解释**： 满足查询条件的资产（主机/容器）下的主机账号总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * portNum  **参数解释**： 满足查询条件的资产（主机/容器）下的开放端口总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * processNum  **参数解释**： 满足查询条件的资产（主机/容器）下的进程总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * appNum  **参数解释**： 满足查询条件的资产（主机/容器）下已安装的软件总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * autoLaunchNum  **参数解释**： 满足查询条件的资产（主机/容器）下的自启动进程总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * webFrameworkNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web框架总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * webSiteNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web站点总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * jarPackageNum  **参数解释**： 满足查询条件的资产（主机/容器）下的JAR包总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * kernelModuleNum  **参数解释**： 满足查询条件的资产（主机/容器）下已加载的内核模块总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * webServiceNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web服务总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * webAppNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web应用总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * databaseNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的数据库总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @var string[]
     */
@@ -170,18 +170,18 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accountNum  **参数解释**： 主机账号数量 **取值范围**： 最小值0，最大值2147483647
-    * portNum  **参数解释**： 开放端口数量 **取值范围**： 最小值0，最大值2147483647
-    * processNum  **参数解释**： 进程数量 **取值范围**： 最小值0，最大值2147483647
-    * appNum  **参数解释**： 软件数量 **取值范围**： 最小值0，最大值2147483647
-    * autoLaunchNum  **参数解释**： 自启动进程数量 **取值范围**： 最小值0，最大值2147483647
-    * webFrameworkNum  **参数解释**： web框架数量 **取值范围**： 最小值0，最大值2147483647
-    * webSiteNum  **参数解释**： Web站点数量 **取值范围**： 最小值0，最大值2147483647
-    * jarPackageNum  **参数解释**： Jar包数量 **取值范围**： 最小值0，最大值2147483647
-    * kernelModuleNum  **参数解释**： 内核模块数量 **取值范围**： 最小值0，最大值2147483647
-    * webServiceNum  **参数解释**： web服务数量 **取值范围**： 最小值0，最大值2147483647
-    * webAppNum  **参数解释**： web应用数量 **取值范围**： 最小值0，最大值2147483647
-    * databaseNum  **参数解释**： 数据库数量 **取值范围**： 最小值0，最大值2147483647
+    * accountNum  **参数解释**： 满足查询条件的资产（主机/容器）下的主机账号总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * portNum  **参数解释**： 满足查询条件的资产（主机/容器）下的开放端口总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * processNum  **参数解释**： 满足查询条件的资产（主机/容器）下的进程总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * appNum  **参数解释**： 满足查询条件的资产（主机/容器）下已安装的软件总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * autoLaunchNum  **参数解释**： 满足查询条件的资产（主机/容器）下的自启动进程总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * webFrameworkNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web框架总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * webSiteNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web站点总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * jarPackageNum  **参数解释**： 满足查询条件的资产（主机/容器）下的JAR包总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * kernelModuleNum  **参数解释**： 满足查询条件的资产（主机/容器）下已加载的内核模块总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * webServiceNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web服务总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * webAppNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web应用总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * databaseNum  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的数据库总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @var string[]
     */
@@ -368,7 +368,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountNum
-    *  **参数解释**： 主机账号数量 **取值范围**： 最小值0，最大值2147483647
+    *  **参数解释**： 满足查询条件的资产（主机/容器）下的主机账号总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return int|null
     */
@@ -380,7 +380,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets accountNum
     *
-    * @param int|null $accountNum **参数解释**： 主机账号数量 **取值范围**： 最小值0，最大值2147483647
+    * @param int|null $accountNum **参数解释**： 满足查询条件的资产（主机/容器）下的主机账号总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return $this
     */
@@ -392,7 +392,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets portNum
-    *  **参数解释**： 开放端口数量 **取值范围**： 最小值0，最大值2147483647
+    *  **参数解释**： 满足查询条件的资产（主机/容器）下的开放端口总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return int|null
     */
@@ -404,7 +404,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets portNum
     *
-    * @param int|null $portNum **参数解释**： 开放端口数量 **取值范围**： 最小值0，最大值2147483647
+    * @param int|null $portNum **参数解释**： 满足查询条件的资产（主机/容器）下的开放端口总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return $this
     */
@@ -416,7 +416,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets processNum
-    *  **参数解释**： 进程数量 **取值范围**： 最小值0，最大值2147483647
+    *  **参数解释**： 满足查询条件的资产（主机/容器）下的进程总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return int|null
     */
@@ -428,7 +428,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets processNum
     *
-    * @param int|null $processNum **参数解释**： 进程数量 **取值范围**： 最小值0，最大值2147483647
+    * @param int|null $processNum **参数解释**： 满足查询条件的资产（主机/容器）下的进程总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return $this
     */
@@ -440,7 +440,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets appNum
-    *  **参数解释**： 软件数量 **取值范围**： 最小值0，最大值2147483647
+    *  **参数解释**： 满足查询条件的资产（主机/容器）下已安装的软件总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return int|null
     */
@@ -452,7 +452,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets appNum
     *
-    * @param int|null $appNum **参数解释**： 软件数量 **取值范围**： 最小值0，最大值2147483647
+    * @param int|null $appNum **参数解释**： 满足查询条件的资产（主机/容器）下已安装的软件总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return $this
     */
@@ -464,7 +464,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoLaunchNum
-    *  **参数解释**： 自启动进程数量 **取值范围**： 最小值0，最大值2147483647
+    *  **参数解释**： 满足查询条件的资产（主机/容器）下的自启动进程总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return int|null
     */
@@ -476,7 +476,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets autoLaunchNum
     *
-    * @param int|null $autoLaunchNum **参数解释**： 自启动进程数量 **取值范围**： 最小值0，最大值2147483647
+    * @param int|null $autoLaunchNum **参数解释**： 满足查询条件的资产（主机/容器）下的自启动进程总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return $this
     */
@@ -488,7 +488,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets webFrameworkNum
-    *  **参数解释**： web框架数量 **取值范围**： 最小值0，最大值2147483647
+    *  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web框架总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return int|null
     */
@@ -500,7 +500,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets webFrameworkNum
     *
-    * @param int|null $webFrameworkNum **参数解释**： web框架数量 **取值范围**： 最小值0，最大值2147483647
+    * @param int|null $webFrameworkNum **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web框架总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return $this
     */
@@ -512,7 +512,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets webSiteNum
-    *  **参数解释**： Web站点数量 **取值范围**： 最小值0，最大值2147483647
+    *  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web站点总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return int|null
     */
@@ -524,7 +524,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets webSiteNum
     *
-    * @param int|null $webSiteNum **参数解释**： Web站点数量 **取值范围**： 最小值0，最大值2147483647
+    * @param int|null $webSiteNum **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web站点总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return $this
     */
@@ -536,7 +536,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jarPackageNum
-    *  **参数解释**： Jar包数量 **取值范围**： 最小值0，最大值2147483647
+    *  **参数解释**： 满足查询条件的资产（主机/容器）下的JAR包总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return int|null
     */
@@ -548,7 +548,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jarPackageNum
     *
-    * @param int|null $jarPackageNum **参数解释**： Jar包数量 **取值范围**： 最小值0，最大值2147483647
+    * @param int|null $jarPackageNum **参数解释**： 满足查询条件的资产（主机/容器）下的JAR包总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return $this
     */
@@ -560,7 +560,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets kernelModuleNum
-    *  **参数解释**： 内核模块数量 **取值范围**： 最小值0，最大值2147483647
+    *  **参数解释**： 满足查询条件的资产（主机/容器）下已加载的内核模块总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return int|null
     */
@@ -572,7 +572,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets kernelModuleNum
     *
-    * @param int|null $kernelModuleNum **参数解释**： 内核模块数量 **取值范围**： 最小值0，最大值2147483647
+    * @param int|null $kernelModuleNum **参数解释**： 满足查询条件的资产（主机/容器）下已加载的内核模块总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return $this
     */
@@ -584,7 +584,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets webServiceNum
-    *  **参数解释**： web服务数量 **取值范围**： 最小值0，最大值2147483647
+    *  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web服务总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return int|null
     */
@@ -596,7 +596,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets webServiceNum
     *
-    * @param int|null $webServiceNum **参数解释**： web服务数量 **取值范围**： 最小值0，最大值2147483647
+    * @param int|null $webServiceNum **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web服务总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return $this
     */
@@ -608,7 +608,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets webAppNum
-    *  **参数解释**： web应用数量 **取值范围**： 最小值0，最大值2147483647
+    *  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web应用总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return int|null
     */
@@ -620,7 +620,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets webAppNum
     *
-    * @param int|null $webAppNum **参数解释**： web应用数量 **取值范围**： 最小值0，最大值2147483647
+    * @param int|null $webAppNum **参数解释**： 满足查询条件的资产（主机/容器）下已部署的Web应用总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return $this
     */
@@ -632,7 +632,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets databaseNum
-    *  **参数解释**： 数据库数量 **取值范围**： 最小值0，最大值2147483647
+    *  **参数解释**： 满足查询条件的资产（主机/容器）下已部署的数据库总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return int|null
     */
@@ -644,7 +644,7 @@ class ShowAssetStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets databaseNum
     *
-    * @param int|null $databaseNum **参数解释**： 数据库数量 **取值范围**： 最小值0，最大值2147483647
+    * @param int|null $databaseNum **参数解释**： 满足查询条件的资产（主机/容器）下已部署的数据库总数量 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class CheckRuleFixValuesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ruleParamId  检查项的参数ID
-    * fixValue  检查项的参数值
+    * ruleParamId  **参数解释**: 检查项的参数ID **约束限制**: 不涉及 **取值范围**: 字符串大小范围1-128 **默认取值**: 不涉及
+    * fixValue  **参数解释**: 修复检查项参数具体值 **约束限制**: 不涉及 **取值范围**: 字符串大小范围0-512 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CheckRuleFixValuesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ruleParamId  检查项的参数ID
-    * fixValue  检查项的参数值
+    * ruleParamId  **参数解释**: 检查项的参数ID **约束限制**: 不涉及 **取值范围**: 字符串大小范围1-128 **默认取值**: 不涉及
+    * fixValue  **参数解释**: 修复检查项参数具体值 **约束限制**: 不涉及 **取值范围**: 字符串大小范围0-512 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CheckRuleFixValuesInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ruleParamId  检查项的参数ID
-    * fixValue  检查项的参数值
+    * ruleParamId  **参数解释**: 检查项的参数ID **约束限制**: 不涉及 **取值范围**: 字符串大小范围1-128 **默认取值**: 不涉及
+    * fixValue  **参数解释**: 修复检查项参数具体值 **约束限制**: 不涉及 **取值范围**: 字符串大小范围0-512 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CheckRuleFixValuesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ruleParamId  检查项的参数ID
-    * fixValue  检查项的参数值
+    * ruleParamId  **参数解释**: 检查项的参数ID **约束限制**: 不涉及 **取值范围**: 字符串大小范围1-128 **默认取值**: 不涉及
+    * fixValue  **参数解释**: 修复检查项参数具体值 **约束限制**: 不涉及 **取值范围**: 字符串大小范围0-512 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CheckRuleFixValuesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ruleParamId  检查项的参数ID
-    * fixValue  检查项的参数值
+    * ruleParamId  **参数解释**: 检查项的参数ID **约束限制**: 不涉及 **取值范围**: 字符串大小范围1-128 **默认取值**: 不涉及
+    * fixValue  **参数解释**: 修复检查项参数具体值 **约束限制**: 不涉及 **取值范围**: 字符串大小范围0-512 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -169,14 +169,14 @@ class CheckRuleFixValuesInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['ruleParamId']) && ($this->container['ruleParamId'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'ruleParamId', must be smaller than or equal to 2147483647.";
+            if (!is_null($this->container['ruleParamId']) && ($this->container['ruleParamId'] > 128)) {
+                $invalidProperties[] = "invalid value for 'ruleParamId', must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['ruleParamId']) && ($this->container['ruleParamId'] < 0)) {
                 $invalidProperties[] = "invalid value for 'ruleParamId', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['fixValue']) && ($this->container['fixValue'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'fixValue', must be smaller than or equal to 2147483647.";
+            if (!is_null($this->container['fixValue']) && ($this->container['fixValue'] > 512)) {
+                $invalidProperties[] = "invalid value for 'fixValue', must be smaller than or equal to 512.";
             }
             if (!is_null($this->container['fixValue']) && ($this->container['fixValue'] < 0)) {
                 $invalidProperties[] = "invalid value for 'fixValue', must be bigger than or equal to 0.";
@@ -197,7 +197,7 @@ class CheckRuleFixValuesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleParamId
-    *  检查项的参数ID
+    *  **参数解释**: 检查项的参数ID **约束限制**: 不涉及 **取值范围**: 字符串大小范围1-128 **默认取值**: 不涉及
     *
     * @return int|null
     */
@@ -209,7 +209,7 @@ class CheckRuleFixValuesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ruleParamId
     *
-    * @param int|null $ruleParamId 检查项的参数ID
+    * @param int|null $ruleParamId **参数解释**: 检查项的参数ID **约束限制**: 不涉及 **取值范围**: 字符串大小范围1-128 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class CheckRuleFixValuesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fixValue
-    *  检查项的参数值
+    *  **参数解释**: 修复检查项参数具体值 **约束限制**: 不涉及 **取值范围**: 字符串大小范围0-512 **默认取值**: 不涉及
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class CheckRuleFixValuesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fixValue
     *
-    * @param int|null $fixValue 检查项的参数值
+    * @param int|null $fixValue **参数解释**: 修复检查项参数具体值 **约束限制**: 不涉及 **取值范围**: 字符串大小范围0-512 **默认取值**: 不涉及
     *
     * @return $this
     */

@@ -20,21 +20,21 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resultId  病毒查杀结果ID
-    * malwareType  病毒类型
-    * malwareName  病毒名称
-    * severity  **参数解释**： 威胁等级 **取值范围**： - Security：安全 - Low：低危 - Medium：中危 - High：高危 - Critical：危急
+    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * malwareType  **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等
+    * malwareName  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
+    * severity  **参数解释**： 威胁等级 **取值范围**： Security（安全）、Low（低危）、Medium（中危）、High（高危）、Critical（致命）
     * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
-    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
-    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     * handleStatus  **参数解释**： 处理状态 **取值范围**： - unhandled：未处理 - handled：已处理
-    * handleMethod  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
-    * notes  备注信息
-    * handleTime  处置时间
-    * userName  用户名
+    * handleMethod  **参数解释**: 处理方式 **取值范围**: 包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
+    * notes  **参数解释** 备注信息 **取值范围** 字符长度0-512位
+    * handleTime  **参数解释**: 处置时间 **取值范围**: 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
+    * userName  **参数解释**: 用户名 **取值范围**: 字符长度1-64位
     *
     * @var string[]
     */
@@ -58,21 +58,21 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resultId  病毒查杀结果ID
-    * malwareType  病毒类型
-    * malwareName  病毒名称
-    * severity  **参数解释**： 威胁等级 **取值范围**： - Security：安全 - Low：低危 - Medium：中危 - High：高危 - Critical：危急
+    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * malwareType  **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等
+    * malwareName  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
+    * severity  **参数解释**： 威胁等级 **取值范围**： Security（安全）、Low（低危）、Medium（中危）、High（高危）、Critical（致命）
     * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
-    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
-    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     * handleStatus  **参数解释**： 处理状态 **取值范围**： - unhandled：未处理 - handled：已处理
-    * handleMethod  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
-    * notes  备注信息
-    * handleTime  处置时间
-    * userName  用户名
+    * handleMethod  **参数解释**: 处理方式 **取值范围**: 包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
+    * notes  **参数解释** 备注信息 **取值范围** 字符长度0-512位
+    * handleTime  **参数解释**: 处置时间 **取值范围**: 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
+    * userName  **参数解释**: 用户名 **取值范围**: 字符长度1-64位
     *
     * @var string[]
     */
@@ -117,21 +117,21 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resultId  病毒查杀结果ID
-    * malwareType  病毒类型
-    * malwareName  病毒名称
-    * severity  **参数解释**： 威胁等级 **取值范围**： - Security：安全 - Low：低危 - Medium：中危 - High：高危 - Critical：危急
+    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * malwareType  **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等
+    * malwareName  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
+    * severity  **参数解释**： 威胁等级 **取值范围**： Security（安全）、Low（低危）、Medium（中危）、High（高危）、Critical（致命）
     * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
-    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
-    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     * handleStatus  **参数解释**： 处理状态 **取值范围**： - unhandled：未处理 - handled：已处理
-    * handleMethod  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
-    * notes  备注信息
-    * handleTime  处置时间
-    * userName  用户名
+    * handleMethod  **参数解释**: 处理方式 **取值范围**: 包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
+    * notes  **参数解释** 备注信息 **取值范围** 字符长度0-512位
+    * handleTime  **参数解释**: 处置时间 **取值范围**: 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
+    * userName  **参数解释**: 用户名 **取值范围**: 字符长度1-64位
     *
     * @var string[]
     */
@@ -155,21 +155,21 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resultId  病毒查杀结果ID
-    * malwareType  病毒类型
-    * malwareName  病毒名称
-    * severity  **参数解释**： 威胁等级 **取值范围**： - Security：安全 - Low：低危 - Medium：中危 - High：高危 - Critical：危急
+    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * malwareType  **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等
+    * malwareName  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
+    * severity  **参数解释**： 威胁等级 **取值范围**： Security（安全）、Low（低危）、Medium（中危）、High（高危）、Critical（致命）
     * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
-    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
-    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     * handleStatus  **参数解释**： 处理状态 **取值范围**： - unhandled：未处理 - handled：已处理
-    * handleMethod  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
-    * notes  备注信息
-    * handleTime  处置时间
-    * userName  用户名
+    * handleMethod  **参数解释**: 处理方式 **取值范围**: 包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
+    * notes  **参数解释** 备注信息 **取值范围** 字符长度0-512位
+    * handleTime  **参数解释**: 处置时间 **取值范围**: 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
+    * userName  **参数解释**: 用户名 **取值范围**: 字符长度1-64位
     *
     * @var string[]
     */
@@ -193,21 +193,21 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resultId  病毒查杀结果ID
-    * malwareType  病毒类型
-    * malwareName  病毒名称
-    * severity  **参数解释**： 威胁等级 **取值范围**： - Security：安全 - Low：低危 - Medium：中危 - High：高危 - Critical：危急
+    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * malwareType  **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等
+    * malwareName  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
+    * severity  **参数解释**： 威胁等级 **取值范围**： Security（安全）、Low（低危）、Medium（中危）、High（高危）、Critical（致命）
     * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
-    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
-    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     * handleStatus  **参数解释**： 处理状态 **取值范围**： - unhandled：未处理 - handled：已处理
-    * handleMethod  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
-    * notes  备注信息
-    * handleTime  处置时间
-    * userName  用户名
+    * handleMethod  **参数解释**: 处理方式 **取值范围**: 包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
+    * notes  **参数解释** 备注信息 **取值范围** 字符长度0-512位
+    * handleTime  **参数解释**: 处置时间 **取值范围**: 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
+    * userName  **参数解释**: 用户名 **取值范围**: 字符长度1-64位
     *
     * @var string[]
     */
@@ -400,7 +400,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
 
     /**
     * Gets resultId
-    *  病毒查杀结果ID
+    *  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
     *
     * @return string|null
     */
@@ -412,7 +412,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     /**
     * Sets resultId
     *
-    * @param string|null $resultId 病毒查杀结果ID
+    * @param string|null $resultId **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
     *
     * @return $this
     */
@@ -424,7 +424,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
 
     /**
     * Gets malwareType
-    *  病毒类型
+    *  **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等
     *
     * @return string|null
     */
@@ -436,7 +436,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     /**
     * Sets malwareType
     *
-    * @param string|null $malwareType 病毒类型
+    * @param string|null $malwareType **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等
     *
     * @return $this
     */
@@ -448,7 +448,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
 
     /**
     * Gets malwareName
-    *  病毒名称
+    *  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
     *
     * @return string|null
     */
@@ -460,7 +460,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     /**
     * Sets malwareName
     *
-    * @param string|null $malwareName 病毒名称
+    * @param string|null $malwareName **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
     *
     * @return $this
     */
@@ -472,7 +472,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  **参数解释**： 威胁等级 **取值范围**： - Security：安全 - Low：低危 - Medium：中危 - High：高危 - Critical：危急
+    *  **参数解释**： 威胁等级 **取值范围**： Security（安全）、Low（低危）、Medium（中危）、High（高危）、Critical（致命）
     *
     * @return string|null
     */
@@ -484,7 +484,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param string|null $severity **参数解释**： 威胁等级 **取值范围**： - Security：安全 - Low：低危 - Medium：中危 - High：高危 - Critical：危急
+    * @param string|null $severity **参数解释**： 威胁等级 **取值范围**： Security（安全）、Low（低危）、Medium（中危）、High（高危）、Critical（致命）
     *
     * @return $this
     */
@@ -568,7 +568,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    *  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     *
     * @return string|null
     */
@@ -580,7 +580,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    * @param string|null $publicIp **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     *
     * @return $this
     */
@@ -616,7 +616,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
 
     /**
     * Gets occurTime
-    *  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    *  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     *
     * @return int|null
     */
@@ -628,7 +628,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     /**
     * Sets occurTime
     *
-    * @param int|null $occurTime **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * @param int|null $occurTime **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     *
     * @return $this
     */
@@ -664,7 +664,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
 
     /**
     * Gets handleMethod
-    *  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
+    *  **参数解释**: 处理方式 **取值范围**: 包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
     *
     * @return string|null
     */
@@ -676,7 +676,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     /**
     * Sets handleMethod
     *
-    * @param string|null $handleMethod 处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
+    * @param string|null $handleMethod **参数解释**: 处理方式 **取值范围**: 包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
     *
     * @return $this
     */
@@ -688,7 +688,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
 
     /**
     * Gets notes
-    *  备注信息
+    *  **参数解释** 备注信息 **取值范围** 字符长度0-512位
     *
     * @return string|null
     */
@@ -700,7 +700,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     /**
     * Sets notes
     *
-    * @param string|null $notes 备注信息
+    * @param string|null $notes **参数解释** 备注信息 **取值范围** 字符长度0-512位
     *
     * @return $this
     */
@@ -712,7 +712,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
 
     /**
     * Gets handleTime
-    *  处置时间
+    *  **参数解释**: 处置时间 **取值范围**: 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
     *
     * @return int|null
     */
@@ -724,7 +724,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     /**
     * Sets handleTime
     *
-    * @param int|null $handleTime 处置时间
+    * @param int|null $handleTime **参数解释**: 处置时间 **取值范围**: 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
     *
     * @return $this
     */
@@ -736,7 +736,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  用户名
+    *  **参数解释**: 用户名 **取值范围**: 字符长度1-64位
     *
     * @return string|null
     */
@@ -748,7 +748,7 @@ class AntiVirusHandleHistory implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName 用户名
+    * @param string|null $userName **参数解释**: 用户名 **取值范围**: 字符长度1-64位
     *
     * @return $this
     */

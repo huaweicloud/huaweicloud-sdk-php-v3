@@ -27,7 +27,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
     * proxy  规格可添加的数据库数量
     * ram  内存
     * vcpus  CPU
-    * azType  可用区类型 - DEDICATED - DEC - EDGE
+    * azType  可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
     *
     * @var string[]
     */
@@ -51,7 +51,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
     * proxy  规格可添加的数据库数量
     * ram  内存
     * vcpus  CPU
-    * azType  可用区类型 - DEDICATED - DEC - EDGE
+    * azType  可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
     *
     * @var string[]
     */
@@ -96,7 +96,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
     * proxy  规格可添加的数据库数量
     * ram  内存
     * vcpus  CPU
-    * azType  可用区类型 - DEDICATED - DEC - EDGE
+    * azType  可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
     *
     * @var string[]
     */
@@ -120,7 +120,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
     * proxy  规格可添加的数据库数量
     * ram  内存
     * vcpus  CPU
-    * azType  可用区类型 - DEDICATED - DEC - EDGE
+    * azType  可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
     *
     * @var string[]
     */
@@ -144,7 +144,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
     * proxy  规格可添加的数据库数量
     * ram  内存
     * vcpus  CPU
-    * azType  可用区类型 - DEDICATED - DEC - EDGE
+    * azType  可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
     *
     * @var string[]
     */
@@ -440,7 +440,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets azType
-    *  可用区类型 - DEDICATED - DEC - EDGE
+    *  可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
     *
     * @return string|null
     */
@@ -452,7 +452,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
     /**
     * Sets azType
     *
-    * @param string|null $azType 可用区类型 - DEDICATED - DEC - EDGE
+    * @param string|null $azType 可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
     *
     * @return $this
     */

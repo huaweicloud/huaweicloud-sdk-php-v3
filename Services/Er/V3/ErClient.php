@@ -98,6 +98,77 @@ class ErClient extends Client
     }
 
     /**
+     * 修改关联的路由策略
+     *
+     * 修改关联的路由策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changeAssociationRoutePolicy($request)
+    {
+        return $this->changeAssociationRoutePolicyWithHttpInfo($request);
+    }
+
+    public function changeAssociationRoutePolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/route-tables/{route_table_id}/associations/{association_id}/change-route-policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['erId'] !== null) {
+            $pathParams['er_id'] = $localVarParams['erId'];
+        }
+        if ($localVarParams['routeTableId'] !== null) {
+            $pathParams['route_table_id'] = $localVarParams['routeTableId'];
+        }
+        if ($localVarParams['associationId'] !== null) {
+            $pathParams['association_id'] = $localVarParams['associationId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Er\V3\Model\ChangeAssociationRoutePolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Er\V3\Model\ChangeAssociationRoutePolicyRequest');
+    }
+
+    /**
      * 删除路由关联
      *
      * 解绑连接和路由表的关联关系。
@@ -1763,6 +1834,77 @@ class ErClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\ListPropagationsResponse',
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\ListPropagationsRequest');
+    }
+
+    /**
+     * 修改路由策略
+     *
+     * 修改路由策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updatePropagationRoutePolicy($request)
+    {
+        return $this->updatePropagationRoutePolicyWithHttpInfo($request);
+    }
+
+    public function updatePropagationRoutePolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/route-tables/{route_table_id}/propagations/{propagation_id}/change-route-policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['erId'] !== null) {
+            $pathParams['er_id'] = $localVarParams['erId'];
+        }
+        if ($localVarParams['routeTableId'] !== null) {
+            $pathParams['route_table_id'] = $localVarParams['routeTableId'];
+        }
+        if ($localVarParams['propagationId'] !== null) {
+            $pathParams['propagation_id'] = $localVarParams['propagationId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Er\V3\Model\UpdatePropagationRoutePolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Er\V3\Model\UpdatePropagationRoutePolicyRequest');
     }
 
     /**

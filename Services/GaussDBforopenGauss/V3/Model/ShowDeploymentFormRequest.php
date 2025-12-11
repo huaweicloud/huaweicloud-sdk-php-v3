@@ -23,13 +23,19 @@ class ShowDeploymentFormRequest implements ModelInterface, ArrayAccess
     * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * solution  解决方案模板名称。
     * instanceId  实例ID。
+    * consistency  **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual **默认取值**: 不涉及。
+    * consistencyProtocol  **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos **默认取值**: 不涉及。
+    * engineVersion  **参数解释**: 引擎版本号。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'xLanguage' => 'string',
             'solution' => 'string',
-            'instanceId' => 'string'
+            'instanceId' => 'string',
+            'consistency' => 'string',
+            'consistencyProtocol' => 'string',
+            'engineVersion' => 'string'
     ];
 
     /**
@@ -37,13 +43,19 @@ class ShowDeploymentFormRequest implements ModelInterface, ArrayAccess
     * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * solution  解决方案模板名称。
     * instanceId  实例ID。
+    * consistency  **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual **默认取值**: 不涉及。
+    * consistencyProtocol  **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos **默认取值**: 不涉及。
+    * engineVersion  **参数解释**: 引擎版本号。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'xLanguage' => null,
         'solution' => null,
-        'instanceId' => null
+        'instanceId' => null,
+        'consistency' => null,
+        'consistencyProtocol' => null,
+        'engineVersion' => null
     ];
 
     /**
@@ -72,13 +84,19 @@ class ShowDeploymentFormRequest implements ModelInterface, ArrayAccess
     * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * solution  解决方案模板名称。
     * instanceId  实例ID。
+    * consistency  **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual **默认取值**: 不涉及。
+    * consistencyProtocol  **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos **默认取值**: 不涉及。
+    * engineVersion  **参数解释**: 引擎版本号。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'xLanguage' => 'X-Language',
             'solution' => 'solution',
-            'instanceId' => 'instance_id'
+            'instanceId' => 'instance_id',
+            'consistency' => 'consistency',
+            'consistencyProtocol' => 'consistency_protocol',
+            'engineVersion' => 'engine_version'
     ];
 
     /**
@@ -86,13 +104,19 @@ class ShowDeploymentFormRequest implements ModelInterface, ArrayAccess
     * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * solution  解决方案模板名称。
     * instanceId  实例ID。
+    * consistency  **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual **默认取值**: 不涉及。
+    * consistencyProtocol  **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos **默认取值**: 不涉及。
+    * engineVersion  **参数解释**: 引擎版本号。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'xLanguage' => 'setXLanguage',
             'solution' => 'setSolution',
-            'instanceId' => 'setInstanceId'
+            'instanceId' => 'setInstanceId',
+            'consistency' => 'setConsistency',
+            'consistencyProtocol' => 'setConsistencyProtocol',
+            'engineVersion' => 'setEngineVersion'
     ];
 
     /**
@@ -100,13 +124,19 @@ class ShowDeploymentFormRequest implements ModelInterface, ArrayAccess
     * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * solution  解决方案模板名称。
     * instanceId  实例ID。
+    * consistency  **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual **默认取值**: 不涉及。
+    * consistencyProtocol  **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos **默认取值**: 不涉及。
+    * engineVersion  **参数解释**: 引擎版本号。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'xLanguage' => 'getXLanguage',
             'solution' => 'getSolution',
-            'instanceId' => 'getInstanceId'
+            'instanceId' => 'getInstanceId',
+            'consistency' => 'getConsistency',
+            'consistencyProtocol' => 'getConsistencyProtocol',
+            'engineVersion' => 'getEngineVersion'
     ];
 
     /**
@@ -185,6 +215,9 @@ class ShowDeploymentFormRequest implements ModelInterface, ArrayAccess
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['solution'] = isset($data['solution']) ? $data['solution'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['consistency'] = isset($data['consistency']) ? $data['consistency'] : null;
+        $this->container['consistencyProtocol'] = isset($data['consistencyProtocol']) ? $data['consistencyProtocol'] : null;
+        $this->container['engineVersion'] = isset($data['engineVersion']) ? $data['engineVersion'] : null;
     }
 
     /**
@@ -286,6 +319,78 @@ class ShowDeploymentFormRequest implements ModelInterface, ArrayAccess
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets consistency
+    *  **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual **默认取值**: 不涉及。
+    *
+    * @return string|null
+    */
+    public function getConsistency()
+    {
+        return $this->container['consistency'];
+    }
+
+    /**
+    * Sets consistency
+    *
+    * @param string|null $consistency **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual **默认取值**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setConsistency($consistency)
+    {
+        $this->container['consistency'] = $consistency;
+        return $this;
+    }
+
+    /**
+    * Gets consistencyProtocol
+    *  **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos **默认取值**: 不涉及。
+    *
+    * @return string|null
+    */
+    public function getConsistencyProtocol()
+    {
+        return $this->container['consistencyProtocol'];
+    }
+
+    /**
+    * Sets consistencyProtocol
+    *
+    * @param string|null $consistencyProtocol **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos **默认取值**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setConsistencyProtocol($consistencyProtocol)
+    {
+        $this->container['consistencyProtocol'] = $consistencyProtocol;
+        return $this;
+    }
+
+    /**
+    * Gets engineVersion
+    *  **参数解释**: 引擎版本号。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    *
+    * @return string|null
+    */
+    public function getEngineVersion()
+    {
+        return $this->container['engineVersion'];
+    }
+
+    /**
+    * Sets engineVersion
+    *
+    * @param string|null $engineVersion **参数解释**: 引擎版本号。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setEngineVersion($engineVersion)
+    {
+        $this->container['engineVersion'] = $engineVersion;
         return $this;
     }
 

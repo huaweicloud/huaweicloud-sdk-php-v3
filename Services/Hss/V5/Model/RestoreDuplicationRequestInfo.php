@@ -22,7 +22,7 @@ class RestoreDuplicationRequestInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * serverId  **参数解释**: 恢复的目标虚拟机ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * powerOn  **参数解释**： 恢复后是否开机, 默认开机。 **约束限制**: 不涉及 **取值范围**: - true：开机 - false: 不开机 **默认取值**: true
-    * mappings  **参数解释**： 恢复的映射关系(整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
+    * mappings  **参数解释**： 恢复的映射关系（整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class RestoreDuplicationRequestInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * serverId  **参数解释**: 恢复的目标虚拟机ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * powerOn  **参数解释**： 恢复后是否开机, 默认开机。 **约束限制**: 不涉及 **取值范围**: - true：开机 - false: 不开机 **默认取值**: true
-    * mappings  **参数解释**： 恢复的映射关系(整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
+    * mappings  **参数解释**： 恢复的映射关系（整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class RestoreDuplicationRequestInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * serverId  **参数解释**: 恢复的目标虚拟机ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * powerOn  **参数解释**： 恢复后是否开机, 默认开机。 **约束限制**: 不涉及 **取值范围**: - true：开机 - false: 不开机 **默认取值**: true
-    * mappings  **参数解释**： 恢复的映射关系(整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
+    * mappings  **参数解释**： 恢复的映射关系（整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class RestoreDuplicationRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * serverId  **参数解释**: 恢复的目标虚拟机ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * powerOn  **参数解释**： 恢复后是否开机, 默认开机。 **约束限制**: 不涉及 **取值范围**: - true：开机 - false: 不开机 **默认取值**: true
-    * mappings  **参数解释**： 恢复的映射关系(整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
+    * mappings  **参数解释**： 恢复的映射关系（整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class RestoreDuplicationRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * serverId  **参数解释**: 恢复的目标虚拟机ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * powerOn  **参数解释**： 恢复后是否开机, 默认开机。 **约束限制**: 不涉及 **取值范围**: - true：开机 - false: 不开机 **默认取值**: true
-    * mappings  **参数解释**： 恢复的映射关系(整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
+    * mappings  **参数解释**： 恢复的映射关系（整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
     *
     * @var string[]
     */
@@ -250,7 +250,7 @@ class RestoreDuplicationRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets mappings
-    *  **参数解释**： 恢复的映射关系(整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
+    *  **参数解释**： 恢复的映射关系（整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\BackupRestoreServerMappingInfo[]|null
     */
@@ -262,7 +262,7 @@ class RestoreDuplicationRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets mappings
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\BackupRestoreServerMappingInfo[]|null $mappings **参数解释**： 恢复的映射关系(整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\BackupRestoreServerMappingInfo[]|null $mappings **参数解释**： 恢复的映射关系（整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
     *
     * @return $this
     */

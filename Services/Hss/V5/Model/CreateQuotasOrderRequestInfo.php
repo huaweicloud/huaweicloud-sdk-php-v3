@@ -20,12 +20,12 @@ class CreateQuotasOrderRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceSpecCode  资源规格   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
-    * periodType  订购周期类型   - 2 : 月   - 3 : 年
-    * periodNum  订购周期数
-    * isAutoRenew  是否支持自动续订，true表示自动续订，false表示不自动续订，默认值为false
-    * isAutoPay  是否支持自动支付，true表示支持，false表示不支持，默认值为false
-    * subscriptionNum  订购数量
+    * resourceSpecCode  **参数解释**： 资源规格 **约束限制**: 不涉及 **取值范围**： - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
+    * periodType  **参数解释**： 订购周期类型 **约束限制**: 不涉及 **取值范围**： - 2 : 月 - 3 : 年 **默认取值**: 不涉及
+    * periodNum  **参数解释**： 订购周期数 **约束限制**: 不涉及 **取值范围**： 整数类型1-1000 **默认取值**: 不涉及
+    * isAutoRenew  **参数解释**： 是否支持自动续订，true表示自动续订，false表示不自动续订 **约束限制**: 不涉及 **取值范围**： true/false **默认取值**: false
+    * isAutoPay  **参数解释**： 是否支持自动支付，true表示支持，false表示不支持 **约束限制**: 不涉及 **取值范围**： true/false **默认取值**: false
+    * subscriptionNum  **参数解释**： 订购数量 **约束限制**: 不涉及 **取值范围**： 整数类型1-500 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class CreateQuotasOrderRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceSpecCode  资源规格   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
-    * periodType  订购周期类型   - 2 : 月   - 3 : 年
-    * periodNum  订购周期数
-    * isAutoRenew  是否支持自动续订，true表示自动续订，false表示不自动续订，默认值为false
-    * isAutoPay  是否支持自动支付，true表示支持，false表示不支持，默认值为false
-    * subscriptionNum  订购数量
+    * resourceSpecCode  **参数解释**： 资源规格 **约束限制**: 不涉及 **取值范围**： - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
+    * periodType  **参数解释**： 订购周期类型 **约束限制**: 不涉及 **取值范围**： - 2 : 月 - 3 : 年 **默认取值**: 不涉及
+    * periodNum  **参数解释**： 订购周期数 **约束限制**: 不涉及 **取值范围**： 整数类型1-1000 **默认取值**: 不涉及
+    * isAutoRenew  **参数解释**： 是否支持自动续订，true表示自动续订，false表示不自动续订 **约束限制**: 不涉及 **取值范围**： true/false **默认取值**: false
+    * isAutoPay  **参数解释**： 是否支持自动支付，true表示支持，false表示不支持 **约束限制**: 不涉及 **取值范围**： true/false **默认取值**: false
+    * subscriptionNum  **参数解释**： 订购数量 **约束限制**: 不涉及 **取值范围**： 整数类型1-500 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class CreateQuotasOrderRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceSpecCode  资源规格   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
-    * periodType  订购周期类型   - 2 : 月   - 3 : 年
-    * periodNum  订购周期数
-    * isAutoRenew  是否支持自动续订，true表示自动续订，false表示不自动续订，默认值为false
-    * isAutoPay  是否支持自动支付，true表示支持，false表示不支持，默认值为false
-    * subscriptionNum  订购数量
+    * resourceSpecCode  **参数解释**： 资源规格 **约束限制**: 不涉及 **取值范围**： - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
+    * periodType  **参数解释**： 订购周期类型 **约束限制**: 不涉及 **取值范围**： - 2 : 月 - 3 : 年 **默认取值**: 不涉及
+    * periodNum  **参数解释**： 订购周期数 **约束限制**: 不涉及 **取值范围**： 整数类型1-1000 **默认取值**: 不涉及
+    * isAutoRenew  **参数解释**： 是否支持自动续订，true表示自动续订，false表示不自动续订 **约束限制**: 不涉及 **取值范围**： true/false **默认取值**: false
+    * isAutoPay  **参数解释**： 是否支持自动支付，true表示支持，false表示不支持 **约束限制**: 不涉及 **取值范围**： true/false **默认取值**: false
+    * subscriptionNum  **参数解释**： 订购数量 **约束限制**: 不涉及 **取值范围**： 整数类型1-500 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class CreateQuotasOrderRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceSpecCode  资源规格   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
-    * periodType  订购周期类型   - 2 : 月   - 3 : 年
-    * periodNum  订购周期数
-    * isAutoRenew  是否支持自动续订，true表示自动续订，false表示不自动续订，默认值为false
-    * isAutoPay  是否支持自动支付，true表示支持，false表示不支持，默认值为false
-    * subscriptionNum  订购数量
+    * resourceSpecCode  **参数解释**： 资源规格 **约束限制**: 不涉及 **取值范围**： - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
+    * periodType  **参数解释**： 订购周期类型 **约束限制**: 不涉及 **取值范围**： - 2 : 月 - 3 : 年 **默认取值**: 不涉及
+    * periodNum  **参数解释**： 订购周期数 **约束限制**: 不涉及 **取值范围**： 整数类型1-1000 **默认取值**: 不涉及
+    * isAutoRenew  **参数解释**： 是否支持自动续订，true表示自动续订，false表示不自动续订 **约束限制**: 不涉及 **取值范围**： true/false **默认取值**: false
+    * isAutoPay  **参数解释**： 是否支持自动支付，true表示支持，false表示不支持 **约束限制**: 不涉及 **取值范围**： true/false **默认取值**: false
+    * subscriptionNum  **参数解释**： 订购数量 **约束限制**: 不涉及 **取值范围**： 整数类型1-500 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class CreateQuotasOrderRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceSpecCode  资源规格   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
-    * periodType  订购周期类型   - 2 : 月   - 3 : 年
-    * periodNum  订购周期数
-    * isAutoRenew  是否支持自动续订，true表示自动续订，false表示不自动续订，默认值为false
-    * isAutoPay  是否支持自动支付，true表示支持，false表示不支持，默认值为false
-    * subscriptionNum  订购数量
+    * resourceSpecCode  **参数解释**： 资源规格 **约束限制**: 不涉及 **取值范围**： - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
+    * periodType  **参数解释**： 订购周期类型 **约束限制**: 不涉及 **取值范围**： - 2 : 月 - 3 : 年 **默认取值**: 不涉及
+    * periodNum  **参数解释**： 订购周期数 **约束限制**: 不涉及 **取值范围**： 整数类型1-1000 **默认取值**: 不涉及
+    * isAutoRenew  **参数解释**： 是否支持自动续订，true表示自动续订，false表示不自动续订 **约束限制**: 不涉及 **取值范围**： true/false **默认取值**: false
+    * isAutoPay  **参数解释**： 是否支持自动支付，true表示支持，false表示不支持 **约束限制**: 不涉及 **取值范围**： true/false **默认取值**: false
+    * subscriptionNum  **参数解释**： 订购数量 **约束限制**: 不涉及 **取值范围**： 整数类型1-500 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -265,7 +265,7 @@ class CreateQuotasOrderRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSpecCode
-    *  资源规格   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
+    *  **参数解释**： 资源规格 **约束限制**: 不涉及 **取值范围**： - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
     *
     * @return string
     */
@@ -277,7 +277,7 @@ class CreateQuotasOrderRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSpecCode
     *
-    * @param string $resourceSpecCode 资源规格   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
+    * @param string $resourceSpecCode **参数解释**： 资源规格 **约束限制**: 不涉及 **取值范围**： - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -289,7 +289,7 @@ class CreateQuotasOrderRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodType
-    *  订购周期类型   - 2 : 月   - 3 : 年
+    *  **参数解释**： 订购周期类型 **约束限制**: 不涉及 **取值范围**： - 2 : 月 - 3 : 年 **默认取值**: 不涉及
     *
     * @return int
     */
@@ -301,7 +301,7 @@ class CreateQuotasOrderRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets periodType
     *
-    * @param int $periodType 订购周期类型   - 2 : 月   - 3 : 年
+    * @param int $periodType **参数解释**： 订购周期类型 **约束限制**: 不涉及 **取值范围**： - 2 : 月 - 3 : 年 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -313,7 +313,7 @@ class CreateQuotasOrderRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodNum
-    *  订购周期数
+    *  **参数解释**： 订购周期数 **约束限制**: 不涉及 **取值范围**： 整数类型1-1000 **默认取值**: 不涉及
     *
     * @return int
     */
@@ -325,7 +325,7 @@ class CreateQuotasOrderRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets periodNum
     *
-    * @param int $periodNum 订购周期数
+    * @param int $periodNum **参数解释**： 订购周期数 **约束限制**: 不涉及 **取值范围**： 整数类型1-1000 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -337,7 +337,7 @@ class CreateQuotasOrderRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoRenew
-    *  是否支持自动续订，true表示自动续订，false表示不自动续订，默认值为false
+    *  **参数解释**： 是否支持自动续订，true表示自动续订，false表示不自动续订 **约束限制**: 不涉及 **取值范围**： true/false **默认取值**: false
     *
     * @return bool|null
     */
@@ -349,7 +349,7 @@ class CreateQuotasOrderRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoRenew
     *
-    * @param bool|null $isAutoRenew 是否支持自动续订，true表示自动续订，false表示不自动续订，默认值为false
+    * @param bool|null $isAutoRenew **参数解释**： 是否支持自动续订，true表示自动续订，false表示不自动续订 **约束限制**: 不涉及 **取值范围**： true/false **默认取值**: false
     *
     * @return $this
     */
@@ -361,7 +361,7 @@ class CreateQuotasOrderRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoPay
-    *  是否支持自动支付，true表示支持，false表示不支持，默认值为false
+    *  **参数解释**： 是否支持自动支付，true表示支持，false表示不支持 **约束限制**: 不涉及 **取值范围**： true/false **默认取值**: false
     *
     * @return bool|null
     */
@@ -373,7 +373,7 @@ class CreateQuotasOrderRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoPay
     *
-    * @param bool|null $isAutoPay 是否支持自动支付，true表示支持，false表示不支持，默认值为false
+    * @param bool|null $isAutoPay **参数解释**： 是否支持自动支付，true表示支持，false表示不支持 **约束限制**: 不涉及 **取值范围**： true/false **默认取值**: false
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class CreateQuotasOrderRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets subscriptionNum
-    *  订购数量
+    *  **参数解释**： 订购数量 **约束限制**: 不涉及 **取值范围**： 整数类型1-500 **默认取值**: 不涉及
     *
     * @return int
     */
@@ -397,7 +397,7 @@ class CreateQuotasOrderRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets subscriptionNum
     *
-    * @param int $subscriptionNum 订购数量
+    * @param int $subscriptionNum **参数解释**： 订购数量 **约束限制**: 不涉及 **取值范围**： 整数类型1-500 **默认取值**: 不涉及
     *
     * @return $this
     */

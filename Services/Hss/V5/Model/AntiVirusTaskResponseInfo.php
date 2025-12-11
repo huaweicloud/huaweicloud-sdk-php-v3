@@ -20,18 +20,18 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskId  任务ID
-    * taskName  任务名称
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
-    * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
-    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
-    * startTime  启动时间，毫秒
-    * taskStatus  任务状态，包含如下2种   - scanning ：扫描中   - finish ：扫描完成
-    * hostNum  关联服务器数
-    * successHostNum  扫描成功服务器数
-    * failHostNum  扫描失败服务器数
-    * cancelHostNum  已取消服务器数
-    * hostInfoList  主机信息
+    * taskId  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    * taskName  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
+    * scanType  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * startType  **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
+    * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
+    * startTime  **参数解释**： 启动时间 **取值范围**： 最小值0，最大值9223372036854775807；时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
+    * taskStatus  **参数解释**: 任务状态 **取值范围**: 包含如下2种   - scanning：扫描中   - finish：扫描完成
+    * hostNum  **参数解释**: 关联服务器数 **取值范围**: 非负整数，最小值0；单位：台
+    * successHostNum  **参数解释**: 扫描成功服务器数 **取值范围**: 非负整数，最小值0；单位：台
+    * failHostNum  **参数解释**: 扫描失败服务器数 **取值范围**: 非负整数，最小值0；单位：台
+    * cancelHostNum  **参数解释**: 已取消服务器数 **取值范围**: 非负整数，最小值0；单位：台
+    * hostInfoList  **参数解释**: 关联的服务器详细信息列表 **取值范围**: 数组个数0-10000
     * rescan  是否需要重新扫描
     * whetherPaidTask  此次扫描任务是否付费
     *
@@ -56,18 +56,18 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskId  任务ID
-    * taskName  任务名称
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
-    * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
-    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
-    * startTime  启动时间，毫秒
-    * taskStatus  任务状态，包含如下2种   - scanning ：扫描中   - finish ：扫描完成
-    * hostNum  关联服务器数
-    * successHostNum  扫描成功服务器数
-    * failHostNum  扫描失败服务器数
-    * cancelHostNum  已取消服务器数
-    * hostInfoList  主机信息
+    * taskId  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    * taskName  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
+    * scanType  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * startType  **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
+    * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
+    * startTime  **参数解释**： 启动时间 **取值范围**： 最小值0，最大值9223372036854775807；时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
+    * taskStatus  **参数解释**: 任务状态 **取值范围**: 包含如下2种   - scanning：扫描中   - finish：扫描完成
+    * hostNum  **参数解释**: 关联服务器数 **取值范围**: 非负整数，最小值0；单位：台
+    * successHostNum  **参数解释**: 扫描成功服务器数 **取值范围**: 非负整数，最小值0；单位：台
+    * failHostNum  **参数解释**: 扫描失败服务器数 **取值范围**: 非负整数，最小值0；单位：台
+    * cancelHostNum  **参数解释**: 已取消服务器数 **取值范围**: 非负整数，最小值0；单位：台
+    * hostInfoList  **参数解释**: 关联的服务器详细信息列表 **取值范围**: 数组个数0-10000
     * rescan  是否需要重新扫描
     * whetherPaidTask  此次扫描任务是否付费
     *
@@ -113,18 +113,18 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskId  任务ID
-    * taskName  任务名称
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
-    * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
-    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
-    * startTime  启动时间，毫秒
-    * taskStatus  任务状态，包含如下2种   - scanning ：扫描中   - finish ：扫描完成
-    * hostNum  关联服务器数
-    * successHostNum  扫描成功服务器数
-    * failHostNum  扫描失败服务器数
-    * cancelHostNum  已取消服务器数
-    * hostInfoList  主机信息
+    * taskId  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    * taskName  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
+    * scanType  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * startType  **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
+    * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
+    * startTime  **参数解释**： 启动时间 **取值范围**： 最小值0，最大值9223372036854775807；时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
+    * taskStatus  **参数解释**: 任务状态 **取值范围**: 包含如下2种   - scanning：扫描中   - finish：扫描完成
+    * hostNum  **参数解释**: 关联服务器数 **取值范围**: 非负整数，最小值0；单位：台
+    * successHostNum  **参数解释**: 扫描成功服务器数 **取值范围**: 非负整数，最小值0；单位：台
+    * failHostNum  **参数解释**: 扫描失败服务器数 **取值范围**: 非负整数，最小值0；单位：台
+    * cancelHostNum  **参数解释**: 已取消服务器数 **取值范围**: 非负整数，最小值0；单位：台
+    * hostInfoList  **参数解释**: 关联的服务器详细信息列表 **取值范围**: 数组个数0-10000
     * rescan  是否需要重新扫描
     * whetherPaidTask  此次扫描任务是否付费
     *
@@ -149,18 +149,18 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskId  任务ID
-    * taskName  任务名称
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
-    * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
-    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
-    * startTime  启动时间，毫秒
-    * taskStatus  任务状态，包含如下2种   - scanning ：扫描中   - finish ：扫描完成
-    * hostNum  关联服务器数
-    * successHostNum  扫描成功服务器数
-    * failHostNum  扫描失败服务器数
-    * cancelHostNum  已取消服务器数
-    * hostInfoList  主机信息
+    * taskId  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    * taskName  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
+    * scanType  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * startType  **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
+    * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
+    * startTime  **参数解释**： 启动时间 **取值范围**： 最小值0，最大值9223372036854775807；时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
+    * taskStatus  **参数解释**: 任务状态 **取值范围**: 包含如下2种   - scanning：扫描中   - finish：扫描完成
+    * hostNum  **参数解释**: 关联服务器数 **取值范围**: 非负整数，最小值0；单位：台
+    * successHostNum  **参数解释**: 扫描成功服务器数 **取值范围**: 非负整数，最小值0；单位：台
+    * failHostNum  **参数解释**: 扫描失败服务器数 **取值范围**: 非负整数，最小值0；单位：台
+    * cancelHostNum  **参数解释**: 已取消服务器数 **取值范围**: 非负整数，最小值0；单位：台
+    * hostInfoList  **参数解释**: 关联的服务器详细信息列表 **取值范围**: 数组个数0-10000
     * rescan  是否需要重新扫描
     * whetherPaidTask  此次扫描任务是否付费
     *
@@ -185,18 +185,18 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskId  任务ID
-    * taskName  任务名称
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
-    * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
-    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
-    * startTime  启动时间，毫秒
-    * taskStatus  任务状态，包含如下2种   - scanning ：扫描中   - finish ：扫描完成
-    * hostNum  关联服务器数
-    * successHostNum  扫描成功服务器数
-    * failHostNum  扫描失败服务器数
-    * cancelHostNum  已取消服务器数
-    * hostInfoList  主机信息
+    * taskId  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    * taskName  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
+    * scanType  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * startType  **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
+    * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
+    * startTime  **参数解释**： 启动时间 **取值范围**： 最小值0，最大值9223372036854775807；时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
+    * taskStatus  **参数解释**: 任务状态 **取值范围**: 包含如下2种   - scanning：扫描中   - finish：扫描完成
+    * hostNum  **参数解释**: 关联服务器数 **取值范围**: 非负整数，最小值0；单位：台
+    * successHostNum  **参数解释**: 扫描成功服务器数 **取值范围**: 非负整数，最小值0；单位：台
+    * failHostNum  **参数解释**: 扫描失败服务器数 **取值范围**: 非负整数，最小值0；单位：台
+    * cancelHostNum  **参数解释**: 已取消服务器数 **取值范围**: 非负整数，最小值0；单位：台
+    * hostInfoList  **参数解释**: 关联的服务器详细信息列表 **取值范围**: 数组个数0-10000
     * rescan  是否需要重新扫描
     * whetherPaidTask  此次扫描任务是否付费
     *
@@ -371,7 +371,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskId
-    *  任务ID
+    *  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
     *
     * @return string|null
     */
@@ -383,7 +383,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string|null $taskId 任务ID
+    * @param string|null $taskId **参数解释**： 任务ID **取值范围**: 字符长度1-64位
     *
     * @return $this
     */
@@ -395,7 +395,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskName
-    *  任务名称
+    *  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
     *
     * @return string|null
     */
@@ -407,7 +407,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets taskName
     *
-    * @param string|null $taskName 任务名称
+    * @param string|null $taskName **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanType
-    *  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    *  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     *
     * @return string|null
     */
@@ -431,7 +431,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanType
     *
-    * @param string|null $scanType 任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * @param string|null $scanType **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     *
     * @return $this
     */
@@ -443,7 +443,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets startType
-    *  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
+    *  **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
     *
     * @return string|null
     */
@@ -455,7 +455,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets startType
     *
-    * @param string|null $startType 启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
+    * @param string|null $startType **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
     *
     * @return $this
     */
@@ -467,7 +467,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    *  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     *
     * @return string|null
     */
@@ -479,7 +479,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    * @param string|null $action **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     *
     * @return $this
     */
@@ -491,7 +491,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  启动时间，毫秒
+    *  **参数解释**： 启动时间 **取值范围**： 最小值0，最大值9223372036854775807；时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
     *
     * @return int|null
     */
@@ -503,7 +503,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int|null $startTime 启动时间，毫秒
+    * @param int|null $startTime **参数解释**： 启动时间 **取值范围**： 最小值0，最大值9223372036854775807；时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
     *
     * @return $this
     */
@@ -515,7 +515,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskStatus
-    *  任务状态，包含如下2种   - scanning ：扫描中   - finish ：扫描完成
+    *  **参数解释**: 任务状态 **取值范围**: 包含如下2种   - scanning：扫描中   - finish：扫描完成
     *
     * @return string|null
     */
@@ -527,7 +527,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets taskStatus
     *
-    * @param string|null $taskStatus 任务状态，包含如下2种   - scanning ：扫描中   - finish ：扫描完成
+    * @param string|null $taskStatus **参数解释**: 任务状态 **取值范围**: 包含如下2种   - scanning：扫描中   - finish：扫描完成
     *
     * @return $this
     */
@@ -539,7 +539,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostNum
-    *  关联服务器数
+    *  **参数解释**: 关联服务器数 **取值范围**: 非负整数，最小值0；单位：台
     *
     * @return int|null
     */
@@ -551,7 +551,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostNum
     *
-    * @param int|null $hostNum 关联服务器数
+    * @param int|null $hostNum **参数解释**: 关联服务器数 **取值范围**: 非负整数，最小值0；单位：台
     *
     * @return $this
     */
@@ -563,7 +563,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets successHostNum
-    *  扫描成功服务器数
+    *  **参数解释**: 扫描成功服务器数 **取值范围**: 非负整数，最小值0；单位：台
     *
     * @return int|null
     */
@@ -575,7 +575,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets successHostNum
     *
-    * @param int|null $successHostNum 扫描成功服务器数
+    * @param int|null $successHostNum **参数解释**: 扫描成功服务器数 **取值范围**: 非负整数，最小值0；单位：台
     *
     * @return $this
     */
@@ -587,7 +587,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets failHostNum
-    *  扫描失败服务器数
+    *  **参数解释**: 扫描失败服务器数 **取值范围**: 非负整数，最小值0；单位：台
     *
     * @return int|null
     */
@@ -599,7 +599,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets failHostNum
     *
-    * @param int|null $failHostNum 扫描失败服务器数
+    * @param int|null $failHostNum **参数解释**: 扫描失败服务器数 **取值范围**: 非负整数，最小值0；单位：台
     *
     * @return $this
     */
@@ -611,7 +611,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets cancelHostNum
-    *  已取消服务器数
+    *  **参数解释**: 已取消服务器数 **取值范围**: 非负整数，最小值0；单位：台
     *
     * @return int|null
     */
@@ -623,7 +623,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cancelHostNum
     *
-    * @param int|null $cancelHostNum 已取消服务器数
+    * @param int|null $cancelHostNum **参数解释**: 已取消服务器数 **取值范围**: 非负整数，最小值0；单位：台
     *
     * @return $this
     */
@@ -635,7 +635,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostInfoList
-    *  主机信息
+    *  **参数解释**: 关联的服务器详细信息列表 **取值范围**: 数组个数0-10000
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\AntiVirusTaskHostResponseInfo[]|null
     */
@@ -647,7 +647,7 @@ class AntiVirusTaskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostInfoList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\AntiVirusTaskHostResponseInfo[]|null $hostInfoList 主机信息
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\AntiVirusTaskHostResponseInfo[]|null $hostInfoList **参数解释**: 关联的服务器详细信息列表 **取值范围**: 数组个数0-10000
     *
     * @return $this
     */

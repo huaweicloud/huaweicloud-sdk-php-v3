@@ -20,8 +20,8 @@ class MultiValueTagInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键。最大长度128个unicode字符。 key不能为空
-    * values  值列表。每个值最大长度255个unicode字符
+    * key  **参数解释**: 标签键。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 不涉及
+    * values  **参数解释**: 标签值列表。 **约束限制**: 不涉及 **取值范围**: 每个值字符长度1-256位。 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class MultiValueTagInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键。最大长度128个unicode字符。 key不能为空
-    * values  值列表。每个值最大长度255个unicode字符
+    * key  **参数解释**: 标签键。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 不涉及
+    * values  **参数解释**: 标签值列表。 **约束限制**: 不涉及 **取值范围**: 每个值字符长度1-256位。 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class MultiValueTagInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键。最大长度128个unicode字符。 key不能为空
-    * values  值列表。每个值最大长度255个unicode字符
+    * key  **参数解释**: 标签键。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 不涉及
+    * values  **参数解释**: 标签值列表。 **约束限制**: 不涉及 **取值范围**: 每个值字符长度1-256位。 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class MultiValueTagInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键。最大长度128个unicode字符。 key不能为空
-    * values  值列表。每个值最大长度255个unicode字符
+    * key  **参数解释**: 标签键。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 不涉及
+    * values  **参数解释**: 标签值列表。 **约束限制**: 不涉及 **取值范围**: 每个值字符长度1-256位。 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class MultiValueTagInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键。最大长度128个unicode字符。 key不能为空
-    * values  值列表。每个值最大长度255个unicode字符
+    * key  **参数解释**: 标签键。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 不涉及
+    * values  **参数解释**: 标签值列表。 **约束限制**: 不涉及 **取值范围**: 每个值字符长度1-256位。 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class MultiValueTagInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  键。最大长度128个unicode字符。 key不能为空
+    *  **参数解释**: 标签键。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -203,7 +203,7 @@ class MultiValueTagInfo implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 键。最大长度128个unicode字符。 key不能为空
+    * @param string|null $key **参数解释**: 标签键。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class MultiValueTagInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  值列表。每个值最大长度255个unicode字符
+    *  **参数解释**: 标签值列表。 **约束限制**: 不涉及 **取值范围**: 每个值字符长度1-256位。 **默认取值**: 不涉及
     *
     * @return string[]|null
     */
@@ -227,7 +227,7 @@ class MultiValueTagInfo implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param string[]|null $values 值列表。每个值最大长度255个unicode字符
+    * @param string[]|null $values **参数解释**: 标签值列表。 **约束限制**: 不涉及 **取值范围**: 每个值字符长度1-256位。 **默认取值**: 不涉及
     *
     * @return $this
     */

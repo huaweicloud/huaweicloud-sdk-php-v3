@@ -27,7 +27,7 @@ class ProductInfoBeanNew implements ModelInterface, ArrayAccess
     * productSpecDesc  产品规格描述
     * resourceName  资源名称
     * resourceSpecCode  资源规格
-    * resourceType  资源类型
+    * resourceType  资源类型: - hws.resource.type.dbss：数据库审计
     *
     * @var string[]
     */
@@ -51,7 +51,7 @@ class ProductInfoBeanNew implements ModelInterface, ArrayAccess
     * productSpecDesc  产品规格描述
     * resourceName  资源名称
     * resourceSpecCode  资源规格
-    * resourceType  资源类型
+    * resourceType  资源类型: - hws.resource.type.dbss：数据库审计
     *
     * @var string[]
     */
@@ -96,7 +96,7 @@ class ProductInfoBeanNew implements ModelInterface, ArrayAccess
     * productSpecDesc  产品规格描述
     * resourceName  资源名称
     * resourceSpecCode  资源规格
-    * resourceType  资源类型
+    * resourceType  资源类型: - hws.resource.type.dbss：数据库审计
     *
     * @var string[]
     */
@@ -120,7 +120,7 @@ class ProductInfoBeanNew implements ModelInterface, ArrayAccess
     * productSpecDesc  产品规格描述
     * resourceName  资源名称
     * resourceSpecCode  资源规格
-    * resourceType  资源类型
+    * resourceType  资源类型: - hws.resource.type.dbss：数据库审计
     *
     * @var string[]
     */
@@ -144,7 +144,7 @@ class ProductInfoBeanNew implements ModelInterface, ArrayAccess
     * productSpecDesc  产品规格描述
     * resourceName  资源名称
     * resourceSpecCode  资源规格
-    * resourceType  资源类型
+    * resourceType  资源类型: - hws.resource.type.dbss：数据库审计
     *
     * @var string[]
     */
@@ -419,7 +419,7 @@ class ProductInfoBeanNew implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  资源类型
+    *  资源类型: - hws.resource.type.dbss：数据库审计
     *
     * @return string|null
     */
@@ -431,7 +431,7 @@ class ProductInfoBeanNew implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string|null $resourceType 资源类型
+    * @param string|null $resourceType 资源类型: - hws.resource.type.dbss：数据库审计
     *
     * @return $this
     */

@@ -20,9 +20,9 @@ class CreateAntiVirusPaidTaskRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskName  任务名称
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
-    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    * taskName  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
+    * scanType  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     * hostIds  病毒查杀主机列表
     * fileTypes  文件类型集合型，包含如下:   - 0 ：全部   - 1 : 可执行   - 2 : 压缩   - 3 : 脚本   - 4 : 文档   - 5 : 图片   - 6 : 音视频
     * scanDir  扫描目录，多个用;分隔
@@ -44,9 +44,9 @@ class CreateAntiVirusPaidTaskRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskName  任务名称
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
-    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    * taskName  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
+    * scanType  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     * hostIds  病毒查杀主机列表
     * fileTypes  文件类型集合型，包含如下:   - 0 ：全部   - 1 : 可执行   - 2 : 压缩   - 3 : 脚本   - 4 : 文档   - 5 : 图片   - 6 : 音视频
     * scanDir  扫描目录，多个用;分隔
@@ -89,9 +89,9 @@ class CreateAntiVirusPaidTaskRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskName  任务名称
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
-    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    * taskName  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
+    * scanType  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     * hostIds  病毒查杀主机列表
     * fileTypes  文件类型集合型，包含如下:   - 0 ：全部   - 1 : 可执行   - 2 : 压缩   - 3 : 脚本   - 4 : 文档   - 5 : 图片   - 6 : 音视频
     * scanDir  扫描目录，多个用;分隔
@@ -113,9 +113,9 @@ class CreateAntiVirusPaidTaskRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskName  任务名称
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
-    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    * taskName  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
+    * scanType  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     * hostIds  病毒查杀主机列表
     * fileTypes  文件类型集合型，包含如下:   - 0 ：全部   - 1 : 可执行   - 2 : 压缩   - 3 : 脚本   - 4 : 文档   - 5 : 图片   - 6 : 音视频
     * scanDir  扫描目录，多个用;分隔
@@ -137,9 +137,9 @@ class CreateAntiVirusPaidTaskRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskName  任务名称
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
-    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    * taskName  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
+    * scanType  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     * hostIds  病毒查杀主机列表
     * fileTypes  文件类型集合型，包含如下:   - 0 ：全部   - 1 : 可执行   - 2 : 压缩   - 3 : 脚本   - 4 : 文档   - 5 : 图片   - 6 : 音视频
     * scanDir  扫描目录，多个用;分隔
@@ -296,7 +296,7 @@ class CreateAntiVirusPaidTaskRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskName
-    *  任务名称
+    *  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
     *
     * @return string
     */
@@ -308,7 +308,7 @@ class CreateAntiVirusPaidTaskRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets taskName
     *
-    * @param string $taskName 任务名称
+    * @param string $taskName **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
     *
     * @return $this
     */
@@ -320,7 +320,7 @@ class CreateAntiVirusPaidTaskRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanType
-    *  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    *  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     *
     * @return string
     */
@@ -332,7 +332,7 @@ class CreateAntiVirusPaidTaskRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanType
     *
-    * @param string $scanType 任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * @param string $scanType **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     *
     * @return $this
     */
@@ -344,7 +344,7 @@ class CreateAntiVirusPaidTaskRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    *  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     *
     * @return string
     */
@@ -356,7 +356,7 @@ class CreateAntiVirusPaidTaskRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string $action 处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    * @param string $action **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     *
     * @return $this
     */

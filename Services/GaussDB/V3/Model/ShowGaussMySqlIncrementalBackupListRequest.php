@@ -26,6 +26,7 @@ class ShowGaussMySqlIncrementalBackupListRequest implements ModelInterface, Arra
     * limit  查询记录数。默认为10，可取范围：10、20、50。
     * beginTime  查询开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  “begin_time”有值时，“end_time”必选。
     * endTime  查询结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”，且大于查询开始时间。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  “end_time”有值时，“begin_time”必选。
+    * displayOffsiteBackup  **参数解释**：  是否展示跨区域增量备份。  **约束限制**：  不涉及。  **取值范围**：  - true：展示同区域和跨区域增量备份。 - false：仅展示同区域增量备份。  **默认取值**：  false。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class ShowGaussMySqlIncrementalBackupListRequest implements ModelInterface, Arra
             'offset' => 'string',
             'limit' => 'string',
             'beginTime' => 'string',
-            'endTime' => 'string'
+            'endTime' => 'string',
+            'displayOffsiteBackup' => 'bool'
     ];
 
     /**
@@ -46,6 +48,7 @@ class ShowGaussMySqlIncrementalBackupListRequest implements ModelInterface, Arra
     * limit  查询记录数。默认为10，可取范围：10、20、50。
     * beginTime  查询开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  “begin_time”有值时，“end_time”必选。
     * endTime  查询结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”，且大于查询开始时间。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  “end_time”有值时，“begin_time”必选。
+    * displayOffsiteBackup  **参数解释**：  是否展示跨区域增量备份。  **约束限制**：  不涉及。  **取值范围**：  - true：展示同区域和跨区域增量备份。 - false：仅展示同区域增量备份。  **默认取值**：  false。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class ShowGaussMySqlIncrementalBackupListRequest implements ModelInterface, Arra
         'offset' => null,
         'limit' => null,
         'beginTime' => null,
-        'endTime' => null
+        'endTime' => null,
+        'displayOffsiteBackup' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class ShowGaussMySqlIncrementalBackupListRequest implements ModelInterface, Arra
     * limit  查询记录数。默认为10，可取范围：10、20、50。
     * beginTime  查询开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  “begin_time”有值时，“end_time”必选。
     * endTime  查询结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”，且大于查询开始时间。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  “end_time”有值时，“begin_time”必选。
+    * displayOffsiteBackup  **参数解释**：  是否展示跨区域增量备份。  **约束限制**：  不涉及。  **取值范围**：  - true：展示同区域和跨区域增量备份。 - false：仅展示同区域增量备份。  **默认取值**：  false。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class ShowGaussMySqlIncrementalBackupListRequest implements ModelInterface, Arra
             'offset' => 'offset',
             'limit' => 'limit',
             'beginTime' => 'begin_time',
-            'endTime' => 'end_time'
+            'endTime' => 'end_time',
+            'displayOffsiteBackup' => 'display_offsite_backup'
     ];
 
     /**
@@ -107,6 +113,7 @@ class ShowGaussMySqlIncrementalBackupListRequest implements ModelInterface, Arra
     * limit  查询记录数。默认为10，可取范围：10、20、50。
     * beginTime  查询开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  “begin_time”有值时，“end_time”必选。
     * endTime  查询结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”，且大于查询开始时间。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  “end_time”有值时，“begin_time”必选。
+    * displayOffsiteBackup  **参数解释**：  是否展示跨区域增量备份。  **约束限制**：  不涉及。  **取值范围**：  - true：展示同区域和跨区域增量备份。 - false：仅展示同区域增量备份。  **默认取值**：  false。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class ShowGaussMySqlIncrementalBackupListRequest implements ModelInterface, Arra
             'offset' => 'setOffset',
             'limit' => 'setLimit',
             'beginTime' => 'setBeginTime',
-            'endTime' => 'setEndTime'
+            'endTime' => 'setEndTime',
+            'displayOffsiteBackup' => 'setDisplayOffsiteBackup'
     ];
 
     /**
@@ -127,6 +135,7 @@ class ShowGaussMySqlIncrementalBackupListRequest implements ModelInterface, Arra
     * limit  查询记录数。默认为10，可取范围：10、20、50。
     * beginTime  查询开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  “begin_time”有值时，“end_time”必选。
     * endTime  查询结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”，且大于查询开始时间。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  “end_time”有值时，“begin_time”必选。
+    * displayOffsiteBackup  **参数解释**：  是否展示跨区域增量备份。  **约束限制**：  不涉及。  **取值范围**：  - true：展示同区域和跨区域增量备份。 - false：仅展示同区域增量备份。  **默认取值**：  false。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class ShowGaussMySqlIncrementalBackupListRequest implements ModelInterface, Arra
             'offset' => 'getOffset',
             'limit' => 'getLimit',
             'beginTime' => 'getBeginTime',
-            'endTime' => 'getEndTime'
+            'endTime' => 'getEndTime',
+            'displayOffsiteBackup' => 'getDisplayOffsiteBackup'
     ];
 
     /**
@@ -203,6 +213,7 @@ class ShowGaussMySqlIncrementalBackupListRequest implements ModelInterface, Arra
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['beginTime'] = isset($data['beginTime']) ? $data['beginTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['displayOffsiteBackup'] = isset($data['displayOffsiteBackup']) ? $data['displayOffsiteBackup'] : null;
     }
 
     /**
@@ -371,6 +382,30 @@ class ShowGaussMySqlIncrementalBackupListRequest implements ModelInterface, Arra
     public function setEndTime($endTime)
     {
         $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets displayOffsiteBackup
+    *  **参数解释**：  是否展示跨区域增量备份。  **约束限制**：  不涉及。  **取值范围**：  - true：展示同区域和跨区域增量备份。 - false：仅展示同区域增量备份。  **默认取值**：  false。
+    *
+    * @return bool|null
+    */
+    public function getDisplayOffsiteBackup()
+    {
+        return $this->container['displayOffsiteBackup'];
+    }
+
+    /**
+    * Sets displayOffsiteBackup
+    *
+    * @param bool|null $displayOffsiteBackup **参数解释**：  是否展示跨区域增量备份。  **约束限制**：  不涉及。  **取值范围**：  - true：展示同区域和跨区域增量备份。 - false：仅展示同区域增量备份。  **默认取值**：  false。
+    *
+    * @return $this
+    */
+    public function setDisplayOffsiteBackup($displayOffsiteBackup)
+    {
+        $this->container['displayOffsiteBackup'] = $displayOffsiteBackup;
         return $this;
     }
 

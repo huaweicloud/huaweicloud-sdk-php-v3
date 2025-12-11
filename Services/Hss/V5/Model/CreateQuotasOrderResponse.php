@@ -21,7 +21,7 @@ class CreateQuotasOrderResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * orderId  订单ID
+    * orderId  **参数解释**： 订单ID **约束限制**: 不涉及 **取值范围**： 字符长度1-256 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateQuotasOrderResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * orderId  订单ID
+    * orderId  **参数解释**： 订单ID **约束限制**: 不涉及 **取值范围**： 字符长度1-256 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateQuotasOrderResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * orderId  订单ID
+    * orderId  **参数解释**： 订单ID **约束限制**: 不涉及 **取值范围**： 字符长度1-256 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateQuotasOrderResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * orderId  订单ID
+    * orderId  **参数解释**： 订单ID **约束限制**: 不涉及 **取值范围**： 字符长度1-256 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateQuotasOrderResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * orderId  订单ID
+    * orderId  **参数解释**： 订单ID **约束限制**: 不涉及 **取值范围**： 字符长度1-256 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -181,7 +181,7 @@ class CreateQuotasOrderResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  订单ID
+    *  **参数解释**： 订单ID **约束限制**: 不涉及 **取值范围**： 字符长度1-256 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -193,7 +193,7 @@ class CreateQuotasOrderResponse implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId 订单ID
+    * @param string|null $orderId **参数解释**： 订单ID **约束限制**: 不涉及 **取值范围**： 字符长度1-256 **默认取值**: 不涉及
     *
     * @return $this
     */

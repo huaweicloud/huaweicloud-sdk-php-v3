@@ -21,12 +21,12 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalMalwareNum  病毒总数
+    * totalMalwareNum  **参数解释**： 病毒总数 **取值范围**： 最小值0，最大值2147483647，单位：个
     * malwareHostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
-    * totalTaskNum  累计扫描任务数
-    * scanningTaskNum  运行中任务数
-    * latestScanTime  启动时间，毫秒
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * totalTaskNum  **参数解释**： 累计扫描任务数 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * scanningTaskNum  **参数解释**： 运行中任务数 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * latestScanTime  **参数解释**： 启动时间 **取值范围**： 最小值0，最大值9223372036854775807；时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
+    * scanType  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     *
     * @var string[]
     */
@@ -41,12 +41,12 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalMalwareNum  病毒总数
+    * totalMalwareNum  **参数解释**： 病毒总数 **取值范围**： 最小值0，最大值2147483647，单位：个
     * malwareHostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
-    * totalTaskNum  累计扫描任务数
-    * scanningTaskNum  运行中任务数
-    * latestScanTime  启动时间，毫秒
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * totalTaskNum  **参数解释**： 累计扫描任务数 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * scanningTaskNum  **参数解释**： 运行中任务数 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * latestScanTime  **参数解释**： 启动时间 **取值范围**： 最小值0，最大值9223372036854775807；时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
+    * scanType  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     *
     * @var string[]
     */
@@ -82,12 +82,12 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalMalwareNum  病毒总数
+    * totalMalwareNum  **参数解释**： 病毒总数 **取值范围**： 最小值0，最大值2147483647，单位：个
     * malwareHostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
-    * totalTaskNum  累计扫描任务数
-    * scanningTaskNum  运行中任务数
-    * latestScanTime  启动时间，毫秒
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * totalTaskNum  **参数解释**： 累计扫描任务数 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * scanningTaskNum  **参数解释**： 运行中任务数 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * latestScanTime  **参数解释**： 启动时间 **取值范围**： 最小值0，最大值9223372036854775807；时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
+    * scanType  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     *
     * @var string[]
     */
@@ -102,12 +102,12 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalMalwareNum  病毒总数
+    * totalMalwareNum  **参数解释**： 病毒总数 **取值范围**： 最小值0，最大值2147483647，单位：个
     * malwareHostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
-    * totalTaskNum  累计扫描任务数
-    * scanningTaskNum  运行中任务数
-    * latestScanTime  启动时间，毫秒
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * totalTaskNum  **参数解释**： 累计扫描任务数 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * scanningTaskNum  **参数解释**： 运行中任务数 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * latestScanTime  **参数解释**： 启动时间 **取值范围**： 最小值0，最大值9223372036854775807；时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
+    * scanType  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     *
     * @var string[]
     */
@@ -122,12 +122,12 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalMalwareNum  病毒总数
+    * totalMalwareNum  **参数解释**： 病毒总数 **取值范围**： 最小值0，最大值2147483647，单位：个
     * malwareHostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
-    * totalTaskNum  累计扫描任务数
-    * scanningTaskNum  运行中任务数
-    * latestScanTime  启动时间，毫秒
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * totalTaskNum  **参数解释**： 累计扫描任务数 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * scanningTaskNum  **参数解释**： 运行中任务数 **取值范围**： 最小值0，最大值2147483647，单位：个
+    * latestScanTime  **参数解释**： 启动时间 **取值范围**： 最小值0，最大值9223372036854775807；时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
+    * scanType  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     *
     * @var string[]
     */
@@ -266,7 +266,7 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalMalwareNum
-    *  病毒总数
+    *  **参数解释**： 病毒总数 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return int|null
     */
@@ -278,7 +278,7 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalMalwareNum
     *
-    * @param int|null $totalMalwareNum 病毒总数
+    * @param int|null $totalMalwareNum **参数解释**： 病毒总数 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalTaskNum
-    *  累计扫描任务数
+    *  **参数解释**： 累计扫描任务数 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return int|null
     */
@@ -326,7 +326,7 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalTaskNum
     *
-    * @param int|null $totalTaskNum 累计扫描任务数
+    * @param int|null $totalTaskNum **参数解释**： 累计扫描任务数 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return $this
     */
@@ -338,7 +338,7 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanningTaskNum
-    *  运行中任务数
+    *  **参数解释**： 运行中任务数 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return int|null
     */
@@ -350,7 +350,7 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets scanningTaskNum
     *
-    * @param int|null $scanningTaskNum 运行中任务数
+    * @param int|null $scanningTaskNum **参数解释**： 运行中任务数 **取值范围**： 最小值0，最大值2147483647，单位：个
     *
     * @return $this
     */
@@ -362,7 +362,7 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets latestScanTime
-    *  启动时间，毫秒
+    *  **参数解释**： 启动时间 **取值范围**： 最小值0，最大值9223372036854775807；时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
     *
     * @return int|null
     */
@@ -374,7 +374,7 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets latestScanTime
     *
-    * @param int|null $latestScanTime 启动时间，毫秒
+    * @param int|null $latestScanTime **参数解释**： 启动时间 **取值范围**： 最小值0，最大值9223372036854775807；时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算）；单位：ms
     *
     * @return $this
     */
@@ -386,7 +386,7 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanType
-    *  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    *  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     *
     * @return string|null
     */
@@ -398,7 +398,7 @@ class ShowAntivirusStatisticResponse implements ModelInterface, ArrayAccess
     /**
     * Sets scanType
     *
-    * @param string|null $scanType 任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * @param string|null $scanType **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     *
     * @return $this
     */

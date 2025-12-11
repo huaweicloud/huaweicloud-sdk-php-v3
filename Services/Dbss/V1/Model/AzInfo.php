@@ -22,7 +22,7 @@ class AzInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * zoneName  可用区名称
     * zoneNumber  可用区编号
-    * azType  可用区类型
+    * azType  可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
     * alias  可用区中文别名
     * aliasUs  可用区英文别名
     *
@@ -40,7 +40,7 @@ class AzInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * zoneName  可用区名称
     * zoneNumber  可用区编号
-    * azType  可用区类型
+    * azType  可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
     * alias  可用区中文别名
     * aliasUs  可用区英文别名
     *
@@ -79,7 +79,7 @@ class AzInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * zoneName  可用区名称
     * zoneNumber  可用区编号
-    * azType  可用区类型
+    * azType  可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
     * alias  可用区中文别名
     * aliasUs  可用区英文别名
     *
@@ -97,7 +97,7 @@ class AzInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * zoneName  可用区名称
     * zoneNumber  可用区编号
-    * azType  可用区类型
+    * azType  可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
     * alias  可用区中文别名
     * aliasUs  可用区英文别名
     *
@@ -115,7 +115,7 @@ class AzInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * zoneName  可用区名称
     * zoneNumber  可用区编号
-    * azType  可用区类型
+    * azType  可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
     * alias  可用区中文别名
     * aliasUs  可用区英文别名
     *
@@ -281,7 +281,7 @@ class AzInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets azType
-    *  可用区类型
+    *  可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
     *
     * @return string
     */
@@ -293,7 +293,7 @@ class AzInfo implements ModelInterface, ArrayAccess
     /**
     * Sets azType
     *
-    * @param string $azType 可用区类型
+    * @param string $azType 可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
     *
     * @return $this
     */

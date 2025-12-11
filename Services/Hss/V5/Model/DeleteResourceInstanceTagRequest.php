@@ -20,9 +20,9 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
-    * resourceId  由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
-    * key  待删除的key
+    * resourceType  **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
+    * resourceId  **参数解释**: 由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 无
+    * key  **参数解释**: 待删除的标签key。 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位。 **默认取值**: 无
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
-    * resourceId  由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
-    * key  待删除的key
+    * resourceType  **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
+    * resourceId  **参数解释**: 由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 无
+    * key  **参数解释**: 待删除的标签key。 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位。 **默认取值**: 无
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
-    * resourceId  由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
-    * key  待删除的key
+    * resourceType  **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
+    * resourceId  **参数解释**: 由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 无
+    * key  **参数解释**: 待删除的标签key。 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位。 **默认取值**: 无
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
-    * resourceId  由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
-    * key  待删除的key
+    * resourceType  **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
+    * resourceId  **参数解释**: 由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 无
+    * key  **参数解释**: 待删除的标签key。 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位。 **默认取值**: 无
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
-    * resourceId  由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
-    * key  待删除的key
+    * resourceType  **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
+    * resourceId  **参数解释**: 由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 无
+    * key  **参数解释**: 待删除的标签key。 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位。 **默认取值**: 无
     *
     * @var string[]
     */
@@ -195,8 +195,8 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['resourceId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 128.";
             }
-            if ((mb_strlen($this->container['resourceId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'resourceId', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['resourceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'resourceId', the character length must be bigger than or equal to 1.";
             }
         if ($this->container['key'] === null) {
             $invalidProperties[] = "'key' can't be null";
@@ -223,7 +223,7 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
+    *  **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
     *
     * @return string
     */
@@ -235,7 +235,7 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss
+    * @param string $resourceType **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
+    *  **参数解释**: 由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 无
     *
     * @return string
     */
@@ -259,7 +259,7 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string $resourceId 由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID
+    * @param string $resourceId **参数解释**: 由标签管理服务定义的资源id，企业主机安全服务调用此接口时资源id为配额ID。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。 **默认取值**: 无
     *
     * @return $this
     */
@@ -271,7 +271,7 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  待删除的key
+    *  **参数解释**: 待删除的标签key。 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位。 **默认取值**: 无
     *
     * @return string
     */
@@ -283,7 +283,7 @@ class DeleteResourceInstanceTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 待删除的key
+    * @param string $key **参数解释**: 待删除的标签key。 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位。 **默认取值**: 无
     *
     * @return $this
     */

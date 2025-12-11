@@ -21,8 +21,8 @@ class ListFileHostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  变更云服务器数量
-    * dataList  变更云服务器信息列表
+    * totalNum  **参数解释**： 变更云服务器数量 **取值范围**： 最小值0，最大值2147483647，单位：台
+    * dataList  **参数解释**： 变更云服务器信息列表 **取值范围**： 最小值0，最大值100000
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListFileHostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  变更云服务器数量
-    * dataList  变更云服务器信息列表
+    * totalNum  **参数解释**： 变更云服务器数量 **取值范围**： 最小值0，最大值2147483647，单位：台
+    * dataList  **参数解释**： 变更云服务器信息列表 **取值范围**： 最小值0，最大值100000
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListFileHostsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  变更云服务器数量
-    * dataList  变更云服务器信息列表
+    * totalNum  **参数解释**： 变更云服务器数量 **取值范围**： 最小值0，最大值2147483647，单位：台
+    * dataList  **参数解释**： 变更云服务器信息列表 **取值范围**： 最小值0，最大值100000
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListFileHostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  变更云服务器数量
-    * dataList  变更云服务器信息列表
+    * totalNum  **参数解释**： 变更云服务器数量 **取值范围**： 最小值0，最大值2147483647，单位：台
+    * dataList  **参数解释**： 变更云服务器信息列表 **取值范围**： 最小值0，最大值100000
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListFileHostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  变更云服务器数量
-    * dataList  变更云服务器信息列表
+    * totalNum  **参数解释**： 变更云服务器数量 **取值范围**： 最小值0，最大值2147483647，单位：台
+    * dataList  **参数解释**： 变更云服务器信息列表 **取值范围**： 最小值0，最大值100000
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ListFileHostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  变更云服务器数量
+    *  **参数解释**： 变更云服务器数量 **取值范围**： 最小值0，最大值2147483647，单位：台
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListFileHostsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 变更云服务器数量
+    * @param int|null $totalNum **参数解释**： 变更云服务器数量 **取值范围**： 最小值0，最大值2147483647，单位：台
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListFileHostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  变更云服务器信息列表
+    *  **参数解释**： 变更云服务器信息列表 **取值范围**： 最小值0，最大值100000
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\FileHostResponseInfo[]|null
     */
@@ -228,7 +228,7 @@ class ListFileHostsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\FileHostResponseInfo[]|null $dataList 变更云服务器信息列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\FileHostResponseInfo[]|null $dataList **参数解释**： 变更云服务器信息列表 **取值范围**： 最小值0，最大值100000
     *
     * @return $this
     */

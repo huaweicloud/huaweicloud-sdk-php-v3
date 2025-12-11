@@ -26,13 +26,13 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     * clientName  客户端名称
     * dbIp  数据库IP
     * dbUser  数据库用户
-    * queryType  查询类型 LOGIN,CREATE_TABLE,CREATE_TABLESPACE,DROP_TABLE, DROP_TABLESPACE,DELETE,INSERT,INSERT_SELECT,SELECT,SELECT_FOR_UPDATE, UPDATE,CREATE_USER,DROP_USER,GRANT,OPERATE ALL
+    * queryType  查询类型 - LOGIN: LOGIN - CREATE_TABLE: CREATE TABLE - CREATE_TABLESPACE: CREATE TABLESPACE - DROP_TABLE: DROP TABLE - DROP_TABLESPACE: DROP TABLESPACE - DELETE: DELETE - INSERT: INSERT - INSERT_SELECT: INSERT SELECT - SELECT: SELECT - SELECT_FOR_UPDATE: SELECT FOR UPDATE - UPDATE: UPDATE - CREATE_USER: CREATE USER - DROP_USER: DROP USER - GRANT: GRANT - OPERATE: OPERATE - ALL: ALL
     * ruleName  规则名称
     * sqlStatement  sql语句
-    * sqlResponse  响应结果 - SUCCESS - FAILED
+    * sqlResponse  响应结果 - SUCCESS：成功 - FAILED：失败
     * page  页码
     * size  条数
-    * timeOrder  时间顺序 - DESC - ASC
+    * timeOrder  时间顺序 - DESC：降序 - ASC：升序
     *
     * @var string[]
     */
@@ -60,13 +60,13 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     * clientName  客户端名称
     * dbIp  数据库IP
     * dbUser  数据库用户
-    * queryType  查询类型 LOGIN,CREATE_TABLE,CREATE_TABLESPACE,DROP_TABLE, DROP_TABLESPACE,DELETE,INSERT,INSERT_SELECT,SELECT,SELECT_FOR_UPDATE, UPDATE,CREATE_USER,DROP_USER,GRANT,OPERATE ALL
+    * queryType  查询类型 - LOGIN: LOGIN - CREATE_TABLE: CREATE TABLE - CREATE_TABLESPACE: CREATE TABLESPACE - DROP_TABLE: DROP TABLE - DROP_TABLESPACE: DROP TABLESPACE - DELETE: DELETE - INSERT: INSERT - INSERT_SELECT: INSERT SELECT - SELECT: SELECT - SELECT_FOR_UPDATE: SELECT FOR UPDATE - UPDATE: UPDATE - CREATE_USER: CREATE USER - DROP_USER: DROP USER - GRANT: GRANT - OPERATE: OPERATE - ALL: ALL
     * ruleName  规则名称
     * sqlStatement  sql语句
-    * sqlResponse  响应结果 - SUCCESS - FAILED
+    * sqlResponse  响应结果 - SUCCESS：成功 - FAILED：失败
     * page  页码
     * size  条数
-    * timeOrder  时间顺序 - DESC - ASC
+    * timeOrder  时间顺序 - DESC：降序 - ASC：升序
     *
     * @var string[]
     */
@@ -115,13 +115,13 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     * clientName  客户端名称
     * dbIp  数据库IP
     * dbUser  数据库用户
-    * queryType  查询类型 LOGIN,CREATE_TABLE,CREATE_TABLESPACE,DROP_TABLE, DROP_TABLESPACE,DELETE,INSERT,INSERT_SELECT,SELECT,SELECT_FOR_UPDATE, UPDATE,CREATE_USER,DROP_USER,GRANT,OPERATE ALL
+    * queryType  查询类型 - LOGIN: LOGIN - CREATE_TABLE: CREATE TABLE - CREATE_TABLESPACE: CREATE TABLESPACE - DROP_TABLE: DROP TABLE - DROP_TABLESPACE: DROP TABLESPACE - DELETE: DELETE - INSERT: INSERT - INSERT_SELECT: INSERT SELECT - SELECT: SELECT - SELECT_FOR_UPDATE: SELECT FOR UPDATE - UPDATE: UPDATE - CREATE_USER: CREATE USER - DROP_USER: DROP USER - GRANT: GRANT - OPERATE: OPERATE - ALL: ALL
     * ruleName  规则名称
     * sqlStatement  sql语句
-    * sqlResponse  响应结果 - SUCCESS - FAILED
+    * sqlResponse  响应结果 - SUCCESS：成功 - FAILED：失败
     * page  页码
     * size  条数
-    * timeOrder  时间顺序 - DESC - ASC
+    * timeOrder  时间顺序 - DESC：降序 - ASC：升序
     *
     * @var string[]
     */
@@ -149,13 +149,13 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     * clientName  客户端名称
     * dbIp  数据库IP
     * dbUser  数据库用户
-    * queryType  查询类型 LOGIN,CREATE_TABLE,CREATE_TABLESPACE,DROP_TABLE, DROP_TABLESPACE,DELETE,INSERT,INSERT_SELECT,SELECT,SELECT_FOR_UPDATE, UPDATE,CREATE_USER,DROP_USER,GRANT,OPERATE ALL
+    * queryType  查询类型 - LOGIN: LOGIN - CREATE_TABLE: CREATE TABLE - CREATE_TABLESPACE: CREATE TABLESPACE - DROP_TABLE: DROP TABLE - DROP_TABLESPACE: DROP TABLESPACE - DELETE: DELETE - INSERT: INSERT - INSERT_SELECT: INSERT SELECT - SELECT: SELECT - SELECT_FOR_UPDATE: SELECT FOR UPDATE - UPDATE: UPDATE - CREATE_USER: CREATE USER - DROP_USER: DROP USER - GRANT: GRANT - OPERATE: OPERATE - ALL: ALL
     * ruleName  规则名称
     * sqlStatement  sql语句
-    * sqlResponse  响应结果 - SUCCESS - FAILED
+    * sqlResponse  响应结果 - SUCCESS：成功 - FAILED：失败
     * page  页码
     * size  条数
-    * timeOrder  时间顺序 - DESC - ASC
+    * timeOrder  时间顺序 - DESC：降序 - ASC：升序
     *
     * @var string[]
     */
@@ -183,13 +183,13 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     * clientName  客户端名称
     * dbIp  数据库IP
     * dbUser  数据库用户
-    * queryType  查询类型 LOGIN,CREATE_TABLE,CREATE_TABLESPACE,DROP_TABLE, DROP_TABLESPACE,DELETE,INSERT,INSERT_SELECT,SELECT,SELECT_FOR_UPDATE, UPDATE,CREATE_USER,DROP_USER,GRANT,OPERATE ALL
+    * queryType  查询类型 - LOGIN: LOGIN - CREATE_TABLE: CREATE TABLE - CREATE_TABLESPACE: CREATE TABLESPACE - DROP_TABLE: DROP TABLE - DROP_TABLESPACE: DROP TABLESPACE - DELETE: DELETE - INSERT: INSERT - INSERT_SELECT: INSERT SELECT - SELECT: SELECT - SELECT_FOR_UPDATE: SELECT FOR UPDATE - UPDATE: UPDATE - CREATE_USER: CREATE USER - DROP_USER: DROP USER - GRANT: GRANT - OPERATE: OPERATE - ALL: ALL
     * ruleName  规则名称
     * sqlStatement  sql语句
-    * sqlResponse  响应结果 - SUCCESS - FAILED
+    * sqlResponse  响应结果 - SUCCESS：成功 - FAILED：失败
     * page  页码
     * size  条数
-    * timeOrder  时间顺序 - DESC - ASC
+    * timeOrder  时间顺序 - DESC：降序 - ASC：升序
     *
     * @var string[]
     */
@@ -462,7 +462,7 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets queryType
-    *  查询类型 LOGIN,CREATE_TABLE,CREATE_TABLESPACE,DROP_TABLE, DROP_TABLESPACE,DELETE,INSERT,INSERT_SELECT,SELECT,SELECT_FOR_UPDATE, UPDATE,CREATE_USER,DROP_USER,GRANT,OPERATE ALL
+    *  查询类型 - LOGIN: LOGIN - CREATE_TABLE: CREATE TABLE - CREATE_TABLESPACE: CREATE TABLESPACE - DROP_TABLE: DROP TABLE - DROP_TABLESPACE: DROP TABLESPACE - DELETE: DELETE - INSERT: INSERT - INSERT_SELECT: INSERT SELECT - SELECT: SELECT - SELECT_FOR_UPDATE: SELECT FOR UPDATE - UPDATE: UPDATE - CREATE_USER: CREATE USER - DROP_USER: DROP USER - GRANT: GRANT - OPERATE: OPERATE - ALL: ALL
     *
     * @return string|null
     */
@@ -474,7 +474,7 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     /**
     * Sets queryType
     *
-    * @param string|null $queryType 查询类型 LOGIN,CREATE_TABLE,CREATE_TABLESPACE,DROP_TABLE, DROP_TABLESPACE,DELETE,INSERT,INSERT_SELECT,SELECT,SELECT_FOR_UPDATE, UPDATE,CREATE_USER,DROP_USER,GRANT,OPERATE ALL
+    * @param string|null $queryType 查询类型 - LOGIN: LOGIN - CREATE_TABLE: CREATE TABLE - CREATE_TABLESPACE: CREATE TABLESPACE - DROP_TABLE: DROP TABLE - DROP_TABLESPACE: DROP TABLESPACE - DELETE: DELETE - INSERT: INSERT - INSERT_SELECT: INSERT SELECT - SELECT: SELECT - SELECT_FOR_UPDATE: SELECT FOR UPDATE - UPDATE: UPDATE - CREATE_USER: CREATE USER - DROP_USER: DROP USER - GRANT: GRANT - OPERATE: OPERATE - ALL: ALL
     *
     * @return $this
     */
@@ -534,7 +534,7 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sqlResponse
-    *  响应结果 - SUCCESS - FAILED
+    *  响应结果 - SUCCESS：成功 - FAILED：失败
     *
     * @return string|null
     */
@@ -546,7 +546,7 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sqlResponse
     *
-    * @param string|null $sqlResponse 响应结果 - SUCCESS - FAILED
+    * @param string|null $sqlResponse 响应结果 - SUCCESS：成功 - FAILED：失败
     *
     * @return $this
     */
@@ -606,7 +606,7 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeOrder
-    *  时间顺序 - DESC - ASC
+    *  时间顺序 - DESC：降序 - ASC：升序
     *
     * @return string
     */
@@ -618,7 +618,7 @@ class AuditSqlRequest implements ModelInterface, ArrayAccess
     /**
     * Sets timeOrder
     *
-    * @param string $timeOrder 时间顺序 - DESC - ASC
+    * @param string $timeOrder 时间顺序 - DESC：降序 - ASC：升序
     *
     * @return $this
     */

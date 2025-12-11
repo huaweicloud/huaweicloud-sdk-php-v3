@@ -22,7 +22,7 @@ class SqlRuleRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * page  当前页
     * size  每页大小
-    * riskLevels  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
+    * riskLevels  风险级别 - HIGH：高 - MEDIUM：中 - LOW：低 - NO_RISK：无风险
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class SqlRuleRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * page  当前页
     * size  每页大小
-    * riskLevels  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
+    * riskLevels  风险级别 - HIGH：高 - MEDIUM：中 - LOW：低 - NO_RISK：无风险
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class SqlRuleRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * page  当前页
     * size  每页大小
-    * riskLevels  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
+    * riskLevels  风险级别 - HIGH：高 - MEDIUM：中 - LOW：低 - NO_RISK：无风险
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class SqlRuleRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * page  当前页
     * size  每页大小
-    * riskLevels  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
+    * riskLevels  风险级别 - HIGH：高 - MEDIUM：中 - LOW：低 - NO_RISK：无风险
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class SqlRuleRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * page  当前页
     * size  每页大小
-    * riskLevels  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
+    * riskLevels  风险级别 - HIGH：高 - MEDIUM：中 - LOW：低 - NO_RISK：无风险
     *
     * @var string[]
     */
@@ -244,7 +244,7 @@ class SqlRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets riskLevels
-    *  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
+    *  风险级别 - HIGH：高 - MEDIUM：中 - LOW：低 - NO_RISK：无风险
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class SqlRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets riskLevels
     *
-    * @param string|null $riskLevels 风险级别 - HIGH - MEDIUM - LOW - NO_RISK
+    * @param string|null $riskLevels 风险级别 - HIGH：高 - MEDIUM：中 - LOW：低 - NO_RISK：无风险
     *
     * @return $this
     */

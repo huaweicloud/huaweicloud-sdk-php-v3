@@ -21,17 +21,17 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
-    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
+    * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
-    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
-    * hostStatus  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
-    * agentStatus  Agent状态，包含如下5种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
+    * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下4种   - ACTIVE：运行中   - SHUTOFF：关机   - BUILDING：创建中   - ERROR：故障
+    * agentStatus  **参数解释**: Agent的运行状态 **取值范围**: 包含如下5种   - installed：已安装   - not_installed：未安装   - online：在线   - offline：离线   - install_failed：安装失败   - installing：安装中
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: 包含如下2种 - closed：未防护 - opened：防护中
     * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
-    * osName  操作系统名称
-    * osVersion  操作系统版本
+    * osName  **参数解释**: 操作系统名称 **取值范围**: 字符长度0-128位
+    * osVersion  **参数解释**: 操作系统版本 **取值范围**: 字符长度0-64位
     *
     * @var string[]
     */
@@ -53,17 +53,17 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
-    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
+    * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
-    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
-    * hostStatus  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
-    * agentStatus  Agent状态，包含如下5种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
+    * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下4种   - ACTIVE：运行中   - SHUTOFF：关机   - BUILDING：创建中   - ERROR：故障
+    * agentStatus  **参数解释**: Agent的运行状态 **取值范围**: 包含如下5种   - installed：已安装   - not_installed：未安装   - online：在线   - offline：离线   - install_failed：安装失败   - installing：安装中
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: 包含如下2种 - closed：未防护 - opened：防护中
     * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
-    * osName  操作系统名称
-    * osVersion  操作系统版本
+    * osName  **参数解释**: 操作系统名称 **取值范围**: 字符长度0-128位
+    * osVersion  **参数解释**: 操作系统版本 **取值范围**: 字符长度0-64位
     *
     * @var string[]
     */
@@ -106,17 +106,17 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
-    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
+    * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
-    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
-    * hostStatus  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
-    * agentStatus  Agent状态，包含如下5种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
+    * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下4种   - ACTIVE：运行中   - SHUTOFF：关机   - BUILDING：创建中   - ERROR：故障
+    * agentStatus  **参数解释**: Agent的运行状态 **取值范围**: 包含如下5种   - installed：已安装   - not_installed：未安装   - online：在线   - offline：离线   - install_failed：安装失败   - installing：安装中
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: 包含如下2种 - closed：未防护 - opened：防护中
     * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
-    * osName  操作系统名称
-    * osVersion  操作系统版本
+    * osName  **参数解释**: 操作系统名称 **取值范围**: 字符长度0-128位
+    * osVersion  **参数解释**: 操作系统版本 **取值范围**: 字符长度0-64位
     *
     * @var string[]
     */
@@ -138,17 +138,17 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
-    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
+    * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
-    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
-    * hostStatus  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
-    * agentStatus  Agent状态，包含如下5种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
+    * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下4种   - ACTIVE：运行中   - SHUTOFF：关机   - BUILDING：创建中   - ERROR：故障
+    * agentStatus  **参数解释**: Agent的运行状态 **取值范围**: 包含如下5种   - installed：已安装   - not_installed：未安装   - online：在线   - offline：离线   - install_failed：安装失败   - installing：安装中
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: 包含如下2种 - closed：未防护 - opened：防护中
     * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
-    * osName  操作系统名称
-    * osVersion  操作系统版本
+    * osName  **参数解释**: 操作系统名称 **取值范围**: 字符长度0-128位
+    * osVersion  **参数解释**: 操作系统版本 **取值范围**: 字符长度0-64位
     *
     * @var string[]
     */
@@ -170,17 +170,17 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
-    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
+    * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
-    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
-    * hostStatus  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
-    * agentStatus  Agent状态，包含如下5种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
-    * protectStatus  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
+    * hostStatus  **参数解释**: 服务器状态 **取值范围**: 包含如下4种   - ACTIVE：运行中   - SHUTOFF：关机   - BUILDING：创建中   - ERROR：故障
+    * agentStatus  **参数解释**: Agent的运行状态 **取值范围**: 包含如下5种   - installed：已安装   - not_installed：未安装   - online：在线   - offline：离线   - install_failed：安装失败   - installing：安装中
+    * protectStatus  **参数解释**: 防护状态 **取值范围**: 包含如下2种 - closed：未防护 - opened：防护中
     * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
-    * osName  操作系统名称
-    * osVersion  操作系统版本
+    * osName  **参数解释**: 操作系统名称 **取值范围**: 字符长度0-128位
+    * osVersion  **参数解释**: 操作系统版本 **取值范围**: 字符长度0-64位
     *
     * @var string[]
     */
@@ -397,7 +397,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+    *  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     *
     * @return string|null
     */
@@ -409,7 +409,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+    * @param string|null $hostId **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     *
     * @return $this
     */
@@ -421,7 +421,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    *  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -433,7 +433,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * @param string|null $agentId **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -469,7 +469,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    *  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     *
     * @return string|null
     */
@@ -481,7 +481,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    * @param string|null $publicIp **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     *
     * @return $this
     */
@@ -493,7 +493,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    *  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     *
     * @return string|null
     */
@@ -505,7 +505,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * @param string|null $osType **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     *
     * @return $this
     */
@@ -517,7 +517,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostStatus
-    *  服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
+    *  **参数解释**: 服务器状态 **取值范围**: 包含如下4种   - ACTIVE：运行中   - SHUTOFF：关机   - BUILDING：创建中   - ERROR：故障
     *
     * @return string|null
     */
@@ -529,7 +529,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostStatus
     *
-    * @param string|null $hostStatus 服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
+    * @param string|null $hostStatus **参数解释**: 服务器状态 **取值范围**: 包含如下4种   - ACTIVE：运行中   - SHUTOFF：关机   - BUILDING：创建中   - ERROR：故障
     *
     * @return $this
     */
@@ -541,7 +541,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentStatus
-    *  Agent状态，包含如下5种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
+    *  **参数解释**: Agent的运行状态 **取值范围**: 包含如下5种   - installed：已安装   - not_installed：未安装   - online：在线   - offline：离线   - install_failed：安装失败   - installing：安装中
     *
     * @return string|null
     */
@@ -553,7 +553,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentStatus
     *
-    * @param string|null $agentStatus Agent状态，包含如下5种。   - installed ：已安装。   - not_installed ：未安装。   - online ：在线。   - offline ：离线。   - install_failed ：安装失败。   - installing ：安装中。
+    * @param string|null $agentStatus **参数解释**: Agent的运行状态 **取值范围**: 包含如下5种   - installed：已安装   - not_installed：未安装   - online：在线   - offline：离线   - install_failed：安装失败   - installing：安装中
     *
     * @return $this
     */
@@ -565,7 +565,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    *  **参数解释**: 防护状态 **取值范围**: 包含如下2种 - closed：未防护 - opened：防护中
     *
     * @return string|null
     */
@@ -577,7 +577,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param string|null $protectStatus 防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
+    * @param string|null $protectStatus **参数解释**: 防护状态 **取值范围**: 包含如下2种 - closed：未防护 - opened：防护中
     *
     * @return $this
     */
@@ -613,7 +613,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osName
-    *  操作系统名称
+    *  **参数解释**: 操作系统名称 **取值范围**: 字符长度0-128位
     *
     * @return string|null
     */
@@ -625,7 +625,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osName
     *
-    * @param string|null $osName 操作系统名称
+    * @param string|null $osName **参数解释**: 操作系统名称 **取值范围**: 字符长度0-128位
     *
     * @return $this
     */
@@ -637,7 +637,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osVersion
-    *  操作系统版本
+    *  **参数解释**: 操作系统版本 **取值范围**: 字符长度0-64位
     *
     * @return string|null
     */
@@ -649,7 +649,7 @@ class ResultResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osVersion
     *
-    * @param string|null $osVersion 操作系统版本
+    * @param string|null $osVersion **参数解释**: 操作系统版本 **取值范围**: 字符长度0-64位
     *
     * @return $this
     */

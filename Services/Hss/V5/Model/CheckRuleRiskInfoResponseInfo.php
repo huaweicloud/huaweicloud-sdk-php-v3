@@ -31,7 +31,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     * status  **参数解释**: 检测项状态 **取值范围**: - safe : 无需处理 - ignored : 已忽略 - unhandled : 未处理 - fixing : 修复中 - fix-failed : 修复失败 - verifying : 验证中
     * enableFix  **参数解释**: 是否支持一键修复 **取值范围**: - 1：支持一键修复 - 0：不支持
     * enableClick  **参数解释**: 该检查项的修复&忽略&验证按钮是否可单击 **取值范围**: - true：按钮可单击 - false：按钮不可单击
-    * notEnableClickDescription  **参数解释** 不可点击的原因 **取值范围**  字符长度0-512位
+    * notEnableClickDescription  **参数解释** 不可点击的原因 **取值范围** 字符长度0-512位
     * ruleParams  **参数解释**: 支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据 **取值范围**: 不涉及
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     * status  **参数解释**: 检测项状态 **取值范围**: - safe : 无需处理 - ignored : 已忽略 - unhandled : 未处理 - fixing : 修复中 - fix-failed : 修复失败 - verifying : 验证中
     * enableFix  **参数解释**: 是否支持一键修复 **取值范围**: - 1：支持一键修复 - 0：不支持
     * enableClick  **参数解释**: 该检查项的修复&忽略&验证按钮是否可单击 **取值范围**: - true：按钮可单击 - false：按钮不可单击
-    * notEnableClickDescription  **参数解释** 不可点击的原因 **取值范围**  字符长度0-512位
+    * notEnableClickDescription  **参数解释** 不可点击的原因 **取值范围** 字符长度0-512位
     * ruleParams  **参数解释**: 支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据 **取值范围**: 不涉及
     *
     * @var string[]
@@ -120,7 +120,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     * status  **参数解释**: 检测项状态 **取值范围**: - safe : 无需处理 - ignored : 已忽略 - unhandled : 未处理 - fixing : 修复中 - fix-failed : 修复失败 - verifying : 验证中
     * enableFix  **参数解释**: 是否支持一键修复 **取值范围**: - 1：支持一键修复 - 0：不支持
     * enableClick  **参数解释**: 该检查项的修复&忽略&验证按钮是否可单击 **取值范围**: - true：按钮可单击 - false：按钮不可单击
-    * notEnableClickDescription  **参数解释** 不可点击的原因 **取值范围**  字符长度0-512位
+    * notEnableClickDescription  **参数解释** 不可点击的原因 **取值范围** 字符长度0-512位
     * ruleParams  **参数解释**: 支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据 **取值范围**: 不涉及
     *
     * @var string[]
@@ -154,7 +154,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     * status  **参数解释**: 检测项状态 **取值范围**: - safe : 无需处理 - ignored : 已忽略 - unhandled : 未处理 - fixing : 修复中 - fix-failed : 修复失败 - verifying : 验证中
     * enableFix  **参数解释**: 是否支持一键修复 **取值范围**: - 1：支持一键修复 - 0：不支持
     * enableClick  **参数解释**: 该检查项的修复&忽略&验证按钮是否可单击 **取值范围**: - true：按钮可单击 - false：按钮不可单击
-    * notEnableClickDescription  **参数解释** 不可点击的原因 **取值范围**  字符长度0-512位
+    * notEnableClickDescription  **参数解释** 不可点击的原因 **取值范围** 字符长度0-512位
     * ruleParams  **参数解释**: 支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据 **取值范围**: 不涉及
     *
     * @var string[]
@@ -188,7 +188,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     * status  **参数解释**: 检测项状态 **取值范围**: - safe : 无需处理 - ignored : 已忽略 - unhandled : 未处理 - fixing : 修复中 - fix-failed : 修复失败 - verifying : 验证中
     * enableFix  **参数解释**: 是否支持一键修复 **取值范围**: - 1：支持一键修复 - 0：不支持
     * enableClick  **参数解释**: 该检查项的修复&忽略&验证按钮是否可单击 **取值范围**: - true：按钮可单击 - false：按钮不可单击
-    * notEnableClickDescription  **参数解释** 不可点击的原因 **取值范围**  字符长度0-512位
+    * notEnableClickDescription  **参数解释** 不可点击的原因 **取值范围** 字符长度0-512位
     * ruleParams  **参数解释**: 支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据 **取值范围**: 不涉及
     *
     * @var string[]
@@ -636,7 +636,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets notEnableClickDescription
-    *  **参数解释** 不可点击的原因 **取值范围**  字符长度0-512位
+    *  **参数解释** 不可点击的原因 **取值范围** 字符长度0-512位
     *
     * @return string|null
     */
@@ -648,7 +648,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets notEnableClickDescription
     *
-    * @param string|null $notEnableClickDescription **参数解释** 不可点击的原因 **取值范围**  字符长度0-512位
+    * @param string|null $notEnableClickDescription **参数解释** 不可点击的原因 **取值范围** 字符长度0-512位
     *
     * @return $this
     */

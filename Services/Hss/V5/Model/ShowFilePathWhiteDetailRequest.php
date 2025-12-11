@@ -22,7 +22,7 @@ class ShowFilePathWhiteDetailRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * filePath  **参数解释**: \"文件路径\" **约束限制**: 不涉及 **取值范围**: 字符长度0-65535位 **默认取值**: 不涉及
+    * filePath  **参数解释**: 文件路径 **约束限制**: 不涉及 **取值范围**: 字符长度0-65535位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ShowFilePathWhiteDetailRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * filePath  **参数解释**: \"文件路径\" **约束限制**: 不涉及 **取值范围**: 字符长度0-65535位 **默认取值**: 不涉及
+    * filePath  **参数解释**: 文件路径 **约束限制**: 不涉及 **取值范围**: 字符长度0-65535位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowFilePathWhiteDetailRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * filePath  **参数解释**: \"文件路径\" **约束限制**: 不涉及 **取值范围**: 字符长度0-65535位 **默认取值**: 不涉及
+    * filePath  **参数解释**: 文件路径 **约束限制**: 不涉及 **取值范围**: 字符长度0-65535位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ShowFilePathWhiteDetailRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * filePath  **参数解释**: \"文件路径\" **约束限制**: 不涉及 **取值范围**: 字符长度0-65535位 **默认取值**: 不涉及
+    * filePath  **参数解释**: 文件路径 **约束限制**: 不涉及 **取值范围**: 字符长度0-65535位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ShowFilePathWhiteDetailRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
-    * filePath  **参数解释**: \"文件路径\" **约束限制**: 不涉及 **取值范围**: 字符长度0-65535位 **默认取值**: 不涉及
+    * filePath  **参数解释**: 文件路径 **约束限制**: 不涉及 **取值范围**: 字符长度0-65535位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -271,7 +271,7 @@ class ShowFilePathWhiteDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets filePath
-    *  **参数解释**: \"文件路径\" **约束限制**: 不涉及 **取值范围**: 字符长度0-65535位 **默认取值**: 不涉及
+    *  **参数解释**: 文件路径 **约束限制**: 不涉及 **取值范围**: 字符长度0-65535位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -283,7 +283,7 @@ class ShowFilePathWhiteDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets filePath
     *
-    * @param string|null $filePath **参数解释**: \"文件路径\" **约束限制**: 不涉及 **取值范围**: 字符长度0-65535位 **默认取值**: 不涉及
+    * @param string|null $filePath **参数解释**: 文件路径 **约束限制**: 不涉及 **取值范围**: 字符长度0-65535位 **默认取值**: 不涉及
     *
     * @return $this
     */

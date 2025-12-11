@@ -21,15 +21,15 @@ class AuditAgentRespoonseAgents implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * agentId  agent ID
-    * agentType  agent 类型
+    * agentType  agent 类型 - DB: 数据库端 - APP: 应用端
     * agentOs  agent OS
     * agentIp  agent安装节点IP
     * memThreshold  内存阈值
     * cpuThreshold  cpu阈值
-    * status  agent状态
+    * status  agent状态 - 1：开启 - 0：关闭
     * agentNic  agent网卡
     * dbName  数据库名称
-    * datacapStatus  数据流量抓取状态
+    * datacapStatus  数据流量抓取状态 - 1：运行中 - 2：休眠中 - 3：已停止 - 4：异常
     * agentUrl  agent安装地址
     * universal  是否CCE场景
     * sha256  sha256值
@@ -55,15 +55,15 @@ class AuditAgentRespoonseAgents implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * agentId  agent ID
-    * agentType  agent 类型
+    * agentType  agent 类型 - DB: 数据库端 - APP: 应用端
     * agentOs  agent OS
     * agentIp  agent安装节点IP
     * memThreshold  内存阈值
     * cpuThreshold  cpu阈值
-    * status  agent状态
+    * status  agent状态 - 1：开启 - 0：关闭
     * agentNic  agent网卡
     * dbName  数据库名称
-    * datacapStatus  数据流量抓取状态
+    * datacapStatus  数据流量抓取状态 - 1：运行中 - 2：休眠中 - 3：已停止 - 4：异常
     * agentUrl  agent安装地址
     * universal  是否CCE场景
     * sha256  sha256值
@@ -110,15 +110,15 @@ class AuditAgentRespoonseAgents implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * agentId  agent ID
-    * agentType  agent 类型
+    * agentType  agent 类型 - DB: 数据库端 - APP: 应用端
     * agentOs  agent OS
     * agentIp  agent安装节点IP
     * memThreshold  内存阈值
     * cpuThreshold  cpu阈值
-    * status  agent状态
+    * status  agent状态 - 1：开启 - 0：关闭
     * agentNic  agent网卡
     * dbName  数据库名称
-    * datacapStatus  数据流量抓取状态
+    * datacapStatus  数据流量抓取状态 - 1：运行中 - 2：休眠中 - 3：已停止 - 4：异常
     * agentUrl  agent安装地址
     * universal  是否CCE场景
     * sha256  sha256值
@@ -144,15 +144,15 @@ class AuditAgentRespoonseAgents implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * agentId  agent ID
-    * agentType  agent 类型
+    * agentType  agent 类型 - DB: 数据库端 - APP: 应用端
     * agentOs  agent OS
     * agentIp  agent安装节点IP
     * memThreshold  内存阈值
     * cpuThreshold  cpu阈值
-    * status  agent状态
+    * status  agent状态 - 1：开启 - 0：关闭
     * agentNic  agent网卡
     * dbName  数据库名称
-    * datacapStatus  数据流量抓取状态
+    * datacapStatus  数据流量抓取状态 - 1：运行中 - 2：休眠中 - 3：已停止 - 4：异常
     * agentUrl  agent安装地址
     * universal  是否CCE场景
     * sha256  sha256值
@@ -178,15 +178,15 @@ class AuditAgentRespoonseAgents implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * agentId  agent ID
-    * agentType  agent 类型
+    * agentType  agent 类型 - DB: 数据库端 - APP: 应用端
     * agentOs  agent OS
     * agentIp  agent安装节点IP
     * memThreshold  内存阈值
     * cpuThreshold  cpu阈值
-    * status  agent状态
+    * status  agent状态 - 1：开启 - 0：关闭
     * agentNic  agent网卡
     * dbName  数据库名称
-    * datacapStatus  数据流量抓取状态
+    * datacapStatus  数据流量抓取状态 - 1：运行中 - 2：休眠中 - 3：已停止 - 4：异常
     * agentUrl  agent安装地址
     * universal  是否CCE场景
     * sha256  sha256值
@@ -342,7 +342,7 @@ class AuditAgentRespoonseAgents implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentType
-    *  agent 类型
+    *  agent 类型 - DB: 数据库端 - APP: 应用端
     *
     * @return string
     */
@@ -354,7 +354,7 @@ class AuditAgentRespoonseAgents implements ModelInterface, ArrayAccess
     /**
     * Sets agentType
     *
-    * @param string $agentType agent 类型
+    * @param string $agentType agent 类型 - DB: 数据库端 - APP: 应用端
     *
     * @return $this
     */
@@ -462,7 +462,7 @@ class AuditAgentRespoonseAgents implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  agent状态
+    *  agent状态 - 1：开启 - 0：关闭
     *
     * @return int|null
     */
@@ -474,7 +474,7 @@ class AuditAgentRespoonseAgents implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status agent状态
+    * @param int|null $status agent状态 - 1：开启 - 0：关闭
     *
     * @return $this
     */
@@ -534,7 +534,7 @@ class AuditAgentRespoonseAgents implements ModelInterface, ArrayAccess
 
     /**
     * Gets datacapStatus
-    *  数据流量抓取状态
+    *  数据流量抓取状态 - 1：运行中 - 2：休眠中 - 3：已停止 - 4：异常
     *
     * @return int|null
     */
@@ -546,7 +546,7 @@ class AuditAgentRespoonseAgents implements ModelInterface, ArrayAccess
     /**
     * Sets datacapStatus
     *
-    * @param int|null $datacapStatus 数据流量抓取状态
+    * @param int|null $datacapStatus 数据流量抓取状态 - 1：运行中 - 2：休眠中 - 3：已停止 - 4：异常
     *
     * @return $this
     */

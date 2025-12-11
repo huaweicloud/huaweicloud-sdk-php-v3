@@ -31,6 +31,10 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * vcpus  Proxy实例规格的CPU数量。
     * ram  Proxy实例规格的内存数量。
     * nodeNum  Proxy节点个数。
+    * type  **参数解释**：  数据库代理读写模式。  **取值范围**：  - readwrite：读写模式 - readonly：只读模式
+    * createdAt  数据库代理创建时间。
+    * updatedAt  数据库代更新时间。
+    * supportApNode  是否支持HTAP节点。
     * mode  Proxy主备模式，取值范围：Cluster。
     * nodes  Proxy节点信息。
     * flavorRef  Proxy规格信息。
@@ -60,6 +64,10 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'vcpus' => 'string',
             'ram' => 'string',
             'nodeNum' => 'int',
+            'type' => 'string',
+            'createdAt' => 'string',
+            'updatedAt' => 'string',
+            'supportApNode' => 'bool',
             'mode' => 'string',
             'nodes' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlProxyNodes[]',
             'flavorRef' => 'string',
@@ -89,6 +97,10 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * vcpus  Proxy实例规格的CPU数量。
     * ram  Proxy实例规格的内存数量。
     * nodeNum  Proxy节点个数。
+    * type  **参数解释**：  数据库代理读写模式。  **取值范围**：  - readwrite：读写模式 - readonly：只读模式
+    * createdAt  数据库代理创建时间。
+    * updatedAt  数据库代更新时间。
+    * supportApNode  是否支持HTAP节点。
     * mode  Proxy主备模式，取值范围：Cluster。
     * nodes  Proxy节点信息。
     * flavorRef  Proxy规格信息。
@@ -118,6 +130,10 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
         'vcpus' => null,
         'ram' => null,
         'nodeNum' => 'int32',
+        'type' => null,
+        'createdAt' => null,
+        'updatedAt' => null,
+        'supportApNode' => null,
         'mode' => null,
         'nodes' => null,
         'flavorRef' => null,
@@ -168,6 +184,10 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * vcpus  Proxy实例规格的CPU数量。
     * ram  Proxy实例规格的内存数量。
     * nodeNum  Proxy节点个数。
+    * type  **参数解释**：  数据库代理读写模式。  **取值范围**：  - readwrite：读写模式 - readonly：只读模式
+    * createdAt  数据库代理创建时间。
+    * updatedAt  数据库代更新时间。
+    * supportApNode  是否支持HTAP节点。
     * mode  Proxy主备模式，取值范围：Cluster。
     * nodes  Proxy节点信息。
     * flavorRef  Proxy规格信息。
@@ -197,6 +217,10 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'vcpus' => 'vcpus',
             'ram' => 'ram',
             'nodeNum' => 'node_num',
+            'type' => 'type',
+            'createdAt' => 'created_at',
+            'updatedAt' => 'updated_at',
+            'supportApNode' => 'support_ap_node',
             'mode' => 'mode',
             'nodes' => 'nodes',
             'flavorRef' => 'flavor_ref',
@@ -226,6 +250,10 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * vcpus  Proxy实例规格的CPU数量。
     * ram  Proxy实例规格的内存数量。
     * nodeNum  Proxy节点个数。
+    * type  **参数解释**：  数据库代理读写模式。  **取值范围**：  - readwrite：读写模式 - readonly：只读模式
+    * createdAt  数据库代理创建时间。
+    * updatedAt  数据库代更新时间。
+    * supportApNode  是否支持HTAP节点。
     * mode  Proxy主备模式，取值范围：Cluster。
     * nodes  Proxy节点信息。
     * flavorRef  Proxy规格信息。
@@ -255,6 +283,10 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'vcpus' => 'setVcpus',
             'ram' => 'setRam',
             'nodeNum' => 'setNodeNum',
+            'type' => 'setType',
+            'createdAt' => 'setCreatedAt',
+            'updatedAt' => 'setUpdatedAt',
+            'supportApNode' => 'setSupportApNode',
             'mode' => 'setMode',
             'nodes' => 'setNodes',
             'flavorRef' => 'setFlavorRef',
@@ -284,6 +316,10 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     * vcpus  Proxy实例规格的CPU数量。
     * ram  Proxy实例规格的内存数量。
     * nodeNum  Proxy节点个数。
+    * type  **参数解释**：  数据库代理读写模式。  **取值范围**：  - readwrite：读写模式 - readonly：只读模式
+    * createdAt  数据库代理创建时间。
+    * updatedAt  数据库代更新时间。
+    * supportApNode  是否支持HTAP节点。
     * mode  Proxy主备模式，取值范围：Cluster。
     * nodes  Proxy节点信息。
     * flavorRef  Proxy规格信息。
@@ -313,6 +349,10 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
             'vcpus' => 'getVcpus',
             'ram' => 'getRam',
             'nodeNum' => 'getNodeNum',
+            'type' => 'getType',
+            'createdAt' => 'getCreatedAt',
+            'updatedAt' => 'getUpdatedAt',
+            'supportApNode' => 'getSupportApNode',
             'mode' => 'getMode',
             'nodes' => 'getNodes',
             'flavorRef' => 'getFlavorRef',
@@ -369,7 +409,22 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TYPE_READWRITE = 'readwrite';
+    const TYPE_READONLY = 'readonly';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_READWRITE,
+            self::TYPE_READONLY,
+        ];
+    }
 
 
     /**
@@ -398,6 +453,10 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
         $this->container['vcpus'] = isset($data['vcpus']) ? $data['vcpus'] : null;
         $this->container['ram'] = isset($data['ram']) ? $data['ram'] : null;
         $this->container['nodeNum'] = isset($data['nodeNum']) ? $data['nodeNum'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
+        $this->container['supportApNode'] = isset($data['supportApNode']) ? $data['supportApNode'] : null;
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
         $this->container['nodes'] = isset($data['nodes']) ? $data['nodes'] : null;
         $this->container['flavorRef'] = isset($data['flavorRef']) ? $data['flavorRef'] : null;
@@ -422,6 +481,14 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -697,6 +764,102 @@ class MysqlProxyV3 implements ModelInterface, ArrayAccess
     public function setNodeNum($nodeNum)
     {
         $this->container['nodeNum'] = $nodeNum;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  **参数解释**：  数据库代理读写模式。  **取值范围**：  - readwrite：读写模式 - readonly：只读模式
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type **参数解释**：  数据库代理读写模式。  **取值范围**：  - readwrite：读写模式 - readonly：只读模式
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets createdAt
+    *  数据库代理创建时间。
+    *
+    * @return string|null
+    */
+    public function getCreatedAt()
+    {
+        return $this->container['createdAt'];
+    }
+
+    /**
+    * Sets createdAt
+    *
+    * @param string|null $createdAt 数据库代理创建时间。
+    *
+    * @return $this
+    */
+    public function setCreatedAt($createdAt)
+    {
+        $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets updatedAt
+    *  数据库代更新时间。
+    *
+    * @return string|null
+    */
+    public function getUpdatedAt()
+    {
+        return $this->container['updatedAt'];
+    }
+
+    /**
+    * Sets updatedAt
+    *
+    * @param string|null $updatedAt 数据库代更新时间。
+    *
+    * @return $this
+    */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->container['updatedAt'] = $updatedAt;
+        return $this;
+    }
+
+    /**
+    * Gets supportApNode
+    *  是否支持HTAP节点。
+    *
+    * @return bool|null
+    */
+    public function getSupportApNode()
+    {
+        return $this->container['supportApNode'];
+    }
+
+    /**
+    * Sets supportApNode
+    *
+    * @param bool|null $supportApNode 是否支持HTAP节点。
+    *
+    * @return $this
+    */
+    public function setSupportApNode($supportApNode)
+    {
+        $this->container['supportApNode'] = $supportApNode;
         return $this;
     }
 

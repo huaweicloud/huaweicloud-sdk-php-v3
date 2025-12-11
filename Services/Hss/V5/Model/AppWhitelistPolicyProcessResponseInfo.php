@@ -29,7 +29,7 @@ class AppWhitelistPolicyProcessResponseInfo implements ModelInterface, ArrayAcce
     * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileSigner  **参数解释**： 文件签名 **取值范围**： 字符长度1-128位
     * processType  **参数解释**： 进程类型 **约束限制**: 不涉及 **取值范围**: - 1：系统程序 - 2：解释类程序 - 3：普通可执行程序
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     * appType  **参数解释**： 应用类型 **约束限制**： 不涉及
     * whitelistCount  **参数解释**: 白名单确认次数 **约束限制**: 不涉及
     * blacklistCount  **参数解释**: 黑名单确认次数 **约束限制**: 不涉及
@@ -67,7 +67,7 @@ class AppWhitelistPolicyProcessResponseInfo implements ModelInterface, ArrayAcce
     * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileSigner  **参数解释**： 文件签名 **取值范围**： 字符长度1-128位
     * processType  **参数解释**： 进程类型 **约束限制**: 不涉及 **取值范围**: - 1：系统程序 - 2：解释类程序 - 3：普通可执行程序
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     * appType  **参数解释**： 应用类型 **约束限制**： 不涉及
     * whitelistCount  **参数解释**: 白名单确认次数 **约束限制**: 不涉及
     * blacklistCount  **参数解释**: 黑名单确认次数 **约束限制**: 不涉及
@@ -126,7 +126,7 @@ class AppWhitelistPolicyProcessResponseInfo implements ModelInterface, ArrayAcce
     * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileSigner  **参数解释**： 文件签名 **取值范围**： 字符长度1-128位
     * processType  **参数解释**： 进程类型 **约束限制**: 不涉及 **取值范围**: - 1：系统程序 - 2：解释类程序 - 3：普通可执行程序
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     * appType  **参数解释**： 应用类型 **约束限制**： 不涉及
     * whitelistCount  **参数解释**: 白名单确认次数 **约束限制**: 不涉及
     * blacklistCount  **参数解释**: 黑名单确认次数 **约束限制**: 不涉及
@@ -164,7 +164,7 @@ class AppWhitelistPolicyProcessResponseInfo implements ModelInterface, ArrayAcce
     * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileSigner  **参数解释**： 文件签名 **取值范围**： 字符长度1-128位
     * processType  **参数解释**： 进程类型 **约束限制**: 不涉及 **取值范围**: - 1：系统程序 - 2：解释类程序 - 3：普通可执行程序
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     * appType  **参数解释**： 应用类型 **约束限制**： 不涉及
     * whitelistCount  **参数解释**: 白名单确认次数 **约束限制**: 不涉及
     * blacklistCount  **参数解释**: 黑名单确认次数 **约束限制**: 不涉及
@@ -202,7 +202,7 @@ class AppWhitelistPolicyProcessResponseInfo implements ModelInterface, ArrayAcce
     * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileSigner  **参数解释**： 文件签名 **取值范围**： 字符长度1-128位
     * processType  **参数解释**： 进程类型 **约束限制**: 不涉及 **取值范围**: - 1：系统程序 - 2：解释类程序 - 3：普通可执行程序
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     * appType  **参数解释**： 应用类型 **约束限制**： 不涉及
     * whitelistCount  **参数解释**: 白名单确认次数 **约束限制**: 不涉及
     * blacklistCount  **参数解释**: 黑名单确认次数 **约束限制**: 不涉及
@@ -610,7 +610,7 @@ class AppWhitelistPolicyProcessResponseInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets osType
-    *  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    *  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     *
     * @return string|null
     */
@@ -622,7 +622,7 @@ class AppWhitelistPolicyProcessResponseInfo implements ModelInterface, ArrayAcce
     /**
     * Sets osType
     *
-    * @param string|null $osType **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * @param string|null $osType **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     *
     * @return $this
     */

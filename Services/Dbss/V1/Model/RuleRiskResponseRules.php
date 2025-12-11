@@ -22,12 +22,12 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  风险规则ID
     * name  风险规则名称
-    * type  风险规则类型
+    * type  风险规则类型 - LOGIN：登录  - OPERATE：操作
     * feature  风险规则特征
     * status  风险规则状态。 - ON: 开启 - OFF: 关闭
     * rank  风险规则优先级。数字越小优先级越高。
-    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
-    * ruleType  规则类型
+    * riskLevel  风险级别 - LOW：低 - MEDIUM：中 - HIGH：高 - NO_RISK：无风险
+    * ruleType  规则类型 - SYSTEM: 系统  - CUSTOMIZE: 自定义
     *
     * @var string[]
     */
@@ -46,12 +46,12 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  风险规则ID
     * name  风险规则名称
-    * type  风险规则类型
+    * type  风险规则类型 - LOGIN：登录  - OPERATE：操作
     * feature  风险规则特征
     * status  风险规则状态。 - ON: 开启 - OFF: 关闭
     * rank  风险规则优先级。数字越小优先级越高。
-    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
-    * ruleType  规则类型
+    * riskLevel  风险级别 - LOW：低 - MEDIUM：中 - HIGH：高 - NO_RISK：无风险
+    * ruleType  规则类型 - SYSTEM: 系统  - CUSTOMIZE: 自定义
     *
     * @var string[]
     */
@@ -91,12 +91,12 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  风险规则ID
     * name  风险规则名称
-    * type  风险规则类型
+    * type  风险规则类型 - LOGIN：登录  - OPERATE：操作
     * feature  风险规则特征
     * status  风险规则状态。 - ON: 开启 - OFF: 关闭
     * rank  风险规则优先级。数字越小优先级越高。
-    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
-    * ruleType  规则类型
+    * riskLevel  风险级别 - LOW：低 - MEDIUM：中 - HIGH：高 - NO_RISK：无风险
+    * ruleType  规则类型 - SYSTEM: 系统  - CUSTOMIZE: 自定义
     *
     * @var string[]
     */
@@ -115,12 +115,12 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  风险规则ID
     * name  风险规则名称
-    * type  风险规则类型
+    * type  风险规则类型 - LOGIN：登录  - OPERATE：操作
     * feature  风险规则特征
     * status  风险规则状态。 - ON: 开启 - OFF: 关闭
     * rank  风险规则优先级。数字越小优先级越高。
-    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
-    * ruleType  规则类型
+    * riskLevel  风险级别 - LOW：低 - MEDIUM：中 - HIGH：高 - NO_RISK：无风险
+    * ruleType  规则类型 - SYSTEM: 系统  - CUSTOMIZE: 自定义
     *
     * @var string[]
     */
@@ -139,12 +139,12 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  风险规则ID
     * name  风险规则名称
-    * type  风险规则类型
+    * type  风险规则类型 - LOGIN：登录  - OPERATE：操作
     * feature  风险规则特征
     * status  风险规则状态。 - ON: 开启 - OFF: 关闭
     * rank  风险规则优先级。数字越小优先级越高。
-    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
-    * ruleType  规则类型
+    * riskLevel  风险级别 - LOW：低 - MEDIUM：中 - HIGH：高 - NO_RISK：无风险
+    * ruleType  规则类型 - SYSTEM: 系统  - CUSTOMIZE: 自定义
     *
     * @var string[]
     */
@@ -311,7 +311,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  风险规则类型
+    *  风险规则类型 - LOGIN：登录  - OPERATE：操作
     *
     * @return string
     */
@@ -323,7 +323,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 风险规则类型
+    * @param string $type 风险规则类型 - LOGIN：登录  - OPERATE：操作
     *
     * @return $this
     */
@@ -407,7 +407,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets riskLevel
-    *  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
+    *  风险级别 - LOW：低 - MEDIUM：中 - HIGH：高 - NO_RISK：无风险
     *
     * @return string|null
     */
@@ -419,7 +419,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     /**
     * Sets riskLevel
     *
-    * @param string|null $riskLevel 风险级别 - LOW - MEDIUM - HIGH - NO_RISK
+    * @param string|null $riskLevel 风险级别 - LOW：低 - MEDIUM：中 - HIGH：高 - NO_RISK：无风险
     *
     * @return $this
     */
@@ -431,7 +431,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleType
-    *  规则类型
+    *  规则类型 - SYSTEM: 系统  - CUSTOMIZE: 自定义
     *
     * @return string|null
     */
@@ -443,7 +443,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     /**
     * Sets ruleType
     *
-    * @param string|null $ruleType 规则类型
+    * @param string|null $ruleType 规则类型 - SYSTEM: 系统  - CUSTOMIZE: 自定义
     *
     * @return $this
     */

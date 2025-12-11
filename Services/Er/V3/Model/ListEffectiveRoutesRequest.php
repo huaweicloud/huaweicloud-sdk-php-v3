@@ -24,7 +24,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的个数。 取值范围：0~2000。
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
-    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
+    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的个数。 取值范围：0~2000。
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
-    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
+    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的个数。 取值范围：0~2000。
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
-    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
+    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的个数。 取值范围：0~2000。
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
-    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
+    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的个数。 取值范围：0~2000。
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
-    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
+    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     *
     * @var string[]
     */
@@ -363,7 +363,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
+    *  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     *
     * @return string[]|null
     */
@@ -375,7 +375,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string[]|null $resourceType - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
+    * @param string[]|null $resourceType - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     *
     * @return $this
     */

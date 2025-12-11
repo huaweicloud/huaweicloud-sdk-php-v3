@@ -25,6 +25,7 @@ class IncrementalBackups implements ModelInterface, ArrayAccess
     * beginTime  备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * endTime  备份结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * size  备份大小，(单位：KB)。
+    * backupType  **参数解释**：  增量备份类型。  **取值范围**：  - Log: 同区域增量备份。 - OffSiteLog：跨区域增量备份。
     * instanceId  实例ID。
     *
     * @var string[]
@@ -35,6 +36,7 @@ class IncrementalBackups implements ModelInterface, ArrayAccess
             'beginTime' => 'string',
             'endTime' => 'string',
             'size' => 'float',
+            'backupType' => 'string',
             'instanceId' => 'string'
     ];
 
@@ -45,6 +47,7 @@ class IncrementalBackups implements ModelInterface, ArrayAccess
     * beginTime  备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * endTime  备份结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * size  备份大小，(单位：KB)。
+    * backupType  **参数解释**：  增量备份类型。  **取值范围**：  - Log: 同区域增量备份。 - OffSiteLog：跨区域增量备份。
     * instanceId  实例ID。
     *
     * @var string[]
@@ -55,6 +58,7 @@ class IncrementalBackups implements ModelInterface, ArrayAccess
         'beginTime' => null,
         'endTime' => null,
         'size' => null,
+        'backupType' => null,
         'instanceId' => null
     ];
 
@@ -86,6 +90,7 @@ class IncrementalBackups implements ModelInterface, ArrayAccess
     * beginTime  备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * endTime  备份结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * size  备份大小，(单位：KB)。
+    * backupType  **参数解释**：  增量备份类型。  **取值范围**：  - Log: 同区域增量备份。 - OffSiteLog：跨区域增量备份。
     * instanceId  实例ID。
     *
     * @var string[]
@@ -96,6 +101,7 @@ class IncrementalBackups implements ModelInterface, ArrayAccess
             'beginTime' => 'begin_time',
             'endTime' => 'end_time',
             'size' => 'size',
+            'backupType' => 'backup_type',
             'instanceId' => 'instance_id'
     ];
 
@@ -106,6 +112,7 @@ class IncrementalBackups implements ModelInterface, ArrayAccess
     * beginTime  备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * endTime  备份结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * size  备份大小，(单位：KB)。
+    * backupType  **参数解释**：  增量备份类型。  **取值范围**：  - Log: 同区域增量备份。 - OffSiteLog：跨区域增量备份。
     * instanceId  实例ID。
     *
     * @var string[]
@@ -116,6 +123,7 @@ class IncrementalBackups implements ModelInterface, ArrayAccess
             'beginTime' => 'setBeginTime',
             'endTime' => 'setEndTime',
             'size' => 'setSize',
+            'backupType' => 'setBackupType',
             'instanceId' => 'setInstanceId'
     ];
 
@@ -126,6 +134,7 @@ class IncrementalBackups implements ModelInterface, ArrayAccess
     * beginTime  备份开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * endTime  备份结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * size  备份大小，(单位：KB)。
+    * backupType  **参数解释**：  增量备份类型。  **取值范围**：  - Log: 同区域增量备份。 - OffSiteLog：跨区域增量备份。
     * instanceId  实例ID。
     *
     * @var string[]
@@ -136,6 +145,7 @@ class IncrementalBackups implements ModelInterface, ArrayAccess
             'beginTime' => 'getBeginTime',
             'endTime' => 'getEndTime',
             'size' => 'getSize',
+            'backupType' => 'getBackupType',
             'instanceId' => 'getInstanceId'
     ];
 
@@ -202,6 +212,7 @@ class IncrementalBackups implements ModelInterface, ArrayAccess
         $this->container['beginTime'] = isset($data['beginTime']) ? $data['beginTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
+        $this->container['backupType'] = isset($data['backupType']) ? $data['backupType'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
     }
 
@@ -344,6 +355,30 @@ class IncrementalBackups implements ModelInterface, ArrayAccess
     public function setSize($size)
     {
         $this->container['size'] = $size;
+        return $this;
+    }
+
+    /**
+    * Gets backupType
+    *  **参数解释**：  增量备份类型。  **取值范围**：  - Log: 同区域增量备份。 - OffSiteLog：跨区域增量备份。
+    *
+    * @return string|null
+    */
+    public function getBackupType()
+    {
+        return $this->container['backupType'];
+    }
+
+    /**
+    * Sets backupType
+    *
+    * @param string|null $backupType **参数解释**：  增量备份类型。  **取值范围**：  - Log: 同区域增量备份。 - OffSiteLog：跨区域增量备份。
+    *
+    * @return $this
+    */
+    public function setBackupType($backupType)
+    {
+        $this->container['backupType'] = $backupType;
         return $this;
     }
 

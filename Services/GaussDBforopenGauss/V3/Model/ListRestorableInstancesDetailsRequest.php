@@ -26,6 +26,10 @@ class ListRestorableInstancesDetailsRequest implements ModelInterface, ArrayAcce
     * restoreTime  恢复点，当备份ID为空时，通过此参数查询实例拓扑信息，过滤实例列表。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * backupRestoreType  **参数解释**: 查备份恢复的粒度。 **约束限制**: 不涉及。 **取值范围**:   - INSTANCE   - DATABASE_TABLE   - DATABASE **默认取值**: INSTANCE
+    * sourceBackupSchema  **参数解释**: 源实例的备份类型。 **约束限制**: 不涉及。 **取值范围**:   - INSTANCE   - DATABASE_TABLE **默认取值**: INSTANCE
+    * targetInstanceId  **参数解释**: 目标实例ID，通过此参数过滤实例列表。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * instanceName  **参数解释**: 目标实例名称，通过此参数过滤实例列表。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -35,7 +39,11 @@ class ListRestorableInstancesDetailsRequest implements ModelInterface, ArrayAcce
             'backupId' => 'string',
             'restoreTime' => 'string',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'backupRestoreType' => 'string',
+            'sourceBackupSchema' => 'string',
+            'targetInstanceId' => 'string',
+            'instanceName' => 'string'
     ];
 
     /**
@@ -46,6 +54,10 @@ class ListRestorableInstancesDetailsRequest implements ModelInterface, ArrayAcce
     * restoreTime  恢复点，当备份ID为空时，通过此参数查询实例拓扑信息，过滤实例列表。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * backupRestoreType  **参数解释**: 查备份恢复的粒度。 **约束限制**: 不涉及。 **取值范围**:   - INSTANCE   - DATABASE_TABLE   - DATABASE **默认取值**: INSTANCE
+    * sourceBackupSchema  **参数解释**: 源实例的备份类型。 **约束限制**: 不涉及。 **取值范围**:   - INSTANCE   - DATABASE_TABLE **默认取值**: INSTANCE
+    * targetInstanceId  **参数解释**: 目标实例ID，通过此参数过滤实例列表。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * instanceName  **参数解释**: 目标实例名称，通过此参数过滤实例列表。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -55,7 +67,11 @@ class ListRestorableInstancesDetailsRequest implements ModelInterface, ArrayAcce
         'backupId' => null,
         'restoreTime' => null,
         'offset' => null,
-        'limit' => null
+        'limit' => null,
+        'backupRestoreType' => null,
+        'sourceBackupSchema' => null,
+        'targetInstanceId' => null,
+        'instanceName' => null
     ];
 
     /**
@@ -87,6 +103,10 @@ class ListRestorableInstancesDetailsRequest implements ModelInterface, ArrayAcce
     * restoreTime  恢复点，当备份ID为空时，通过此参数查询实例拓扑信息，过滤实例列表。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * backupRestoreType  **参数解释**: 查备份恢复的粒度。 **约束限制**: 不涉及。 **取值范围**:   - INSTANCE   - DATABASE_TABLE   - DATABASE **默认取值**: INSTANCE
+    * sourceBackupSchema  **参数解释**: 源实例的备份类型。 **约束限制**: 不涉及。 **取值范围**:   - INSTANCE   - DATABASE_TABLE **默认取值**: INSTANCE
+    * targetInstanceId  **参数解释**: 目标实例ID，通过此参数过滤实例列表。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * instanceName  **参数解释**: 目标实例名称，通过此参数过滤实例列表。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -96,7 +116,11 @@ class ListRestorableInstancesDetailsRequest implements ModelInterface, ArrayAcce
             'backupId' => 'backup_id',
             'restoreTime' => 'restore_time',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'backupRestoreType' => 'backup_restore_type',
+            'sourceBackupSchema' => 'source_backup_schema',
+            'targetInstanceId' => 'target_instance_id',
+            'instanceName' => 'instance_name'
     ];
 
     /**
@@ -107,6 +131,10 @@ class ListRestorableInstancesDetailsRequest implements ModelInterface, ArrayAcce
     * restoreTime  恢复点，当备份ID为空时，通过此参数查询实例拓扑信息，过滤实例列表。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * backupRestoreType  **参数解释**: 查备份恢复的粒度。 **约束限制**: 不涉及。 **取值范围**:   - INSTANCE   - DATABASE_TABLE   - DATABASE **默认取值**: INSTANCE
+    * sourceBackupSchema  **参数解释**: 源实例的备份类型。 **约束限制**: 不涉及。 **取值范围**:   - INSTANCE   - DATABASE_TABLE **默认取值**: INSTANCE
+    * targetInstanceId  **参数解释**: 目标实例ID，通过此参数过滤实例列表。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * instanceName  **参数解释**: 目标实例名称，通过此参数过滤实例列表。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -116,7 +144,11 @@ class ListRestorableInstancesDetailsRequest implements ModelInterface, ArrayAcce
             'backupId' => 'setBackupId',
             'restoreTime' => 'setRestoreTime',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'backupRestoreType' => 'setBackupRestoreType',
+            'sourceBackupSchema' => 'setSourceBackupSchema',
+            'targetInstanceId' => 'setTargetInstanceId',
+            'instanceName' => 'setInstanceName'
     ];
 
     /**
@@ -127,6 +159,10 @@ class ListRestorableInstancesDetailsRequest implements ModelInterface, ArrayAcce
     * restoreTime  恢复点，当备份ID为空时，通过此参数查询实例拓扑信息，过滤实例列表。
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * backupRestoreType  **参数解释**: 查备份恢复的粒度。 **约束限制**: 不涉及。 **取值范围**:   - INSTANCE   - DATABASE_TABLE   - DATABASE **默认取值**: INSTANCE
+    * sourceBackupSchema  **参数解释**: 源实例的备份类型。 **约束限制**: 不涉及。 **取值范围**:   - INSTANCE   - DATABASE_TABLE **默认取值**: INSTANCE
+    * targetInstanceId  **参数解释**: 目标实例ID，通过此参数过滤实例列表。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * instanceName  **参数解释**: 目标实例名称，通过此参数过滤实例列表。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -136,7 +172,11 @@ class ListRestorableInstancesDetailsRequest implements ModelInterface, ArrayAcce
             'backupId' => 'getBackupId',
             'restoreTime' => 'getRestoreTime',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'backupRestoreType' => 'getBackupRestoreType',
+            'sourceBackupSchema' => 'getSourceBackupSchema',
+            'targetInstanceId' => 'getTargetInstanceId',
+            'instanceName' => 'getInstanceName'
     ];
 
     /**
@@ -203,6 +243,10 @@ class ListRestorableInstancesDetailsRequest implements ModelInterface, ArrayAcce
         $this->container['restoreTime'] = isset($data['restoreTime']) ? $data['restoreTime'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['backupRestoreType'] = isset($data['backupRestoreType']) ? $data['backupRestoreType'] : null;
+        $this->container['sourceBackupSchema'] = isset($data['sourceBackupSchema']) ? $data['sourceBackupSchema'] : null;
+        $this->container['targetInstanceId'] = isset($data['targetInstanceId']) ? $data['targetInstanceId'] : null;
+        $this->container['instanceName'] = isset($data['instanceName']) ? $data['instanceName'] : null;
     }
 
     /**
@@ -371,6 +415,102 @@ class ListRestorableInstancesDetailsRequest implements ModelInterface, ArrayAcce
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets backupRestoreType
+    *  **参数解释**: 查备份恢复的粒度。 **约束限制**: 不涉及。 **取值范围**:   - INSTANCE   - DATABASE_TABLE   - DATABASE **默认取值**: INSTANCE
+    *
+    * @return string|null
+    */
+    public function getBackupRestoreType()
+    {
+        return $this->container['backupRestoreType'];
+    }
+
+    /**
+    * Sets backupRestoreType
+    *
+    * @param string|null $backupRestoreType **参数解释**: 查备份恢复的粒度。 **约束限制**: 不涉及。 **取值范围**:   - INSTANCE   - DATABASE_TABLE   - DATABASE **默认取值**: INSTANCE
+    *
+    * @return $this
+    */
+    public function setBackupRestoreType($backupRestoreType)
+    {
+        $this->container['backupRestoreType'] = $backupRestoreType;
+        return $this;
+    }
+
+    /**
+    * Gets sourceBackupSchema
+    *  **参数解释**: 源实例的备份类型。 **约束限制**: 不涉及。 **取值范围**:   - INSTANCE   - DATABASE_TABLE **默认取值**: INSTANCE
+    *
+    * @return string|null
+    */
+    public function getSourceBackupSchema()
+    {
+        return $this->container['sourceBackupSchema'];
+    }
+
+    /**
+    * Sets sourceBackupSchema
+    *
+    * @param string|null $sourceBackupSchema **参数解释**: 源实例的备份类型。 **约束限制**: 不涉及。 **取值范围**:   - INSTANCE   - DATABASE_TABLE **默认取值**: INSTANCE
+    *
+    * @return $this
+    */
+    public function setSourceBackupSchema($sourceBackupSchema)
+    {
+        $this->container['sourceBackupSchema'] = $sourceBackupSchema;
+        return $this;
+    }
+
+    /**
+    * Gets targetInstanceId
+    *  **参数解释**: 目标实例ID，通过此参数过滤实例列表。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    *
+    * @return string|null
+    */
+    public function getTargetInstanceId()
+    {
+        return $this->container['targetInstanceId'];
+    }
+
+    /**
+    * Sets targetInstanceId
+    *
+    * @param string|null $targetInstanceId **参数解释**: 目标实例ID，通过此参数过滤实例列表。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setTargetInstanceId($targetInstanceId)
+    {
+        $this->container['targetInstanceId'] = $targetInstanceId;
+        return $this;
+    }
+
+    /**
+    * Gets instanceName
+    *  **参数解释**: 目标实例名称，通过此参数过滤实例列表。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    *
+    * @return string|null
+    */
+    public function getInstanceName()
+    {
+        return $this->container['instanceName'];
+    }
+
+    /**
+    * Sets instanceName
+    *
+    * @param string|null $instanceName **参数解释**: 目标实例名称，通过此参数过滤实例列表。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setInstanceName($instanceName)
+    {
+        $this->container['instanceName'] = $instanceName;
         return $this;
     }
 

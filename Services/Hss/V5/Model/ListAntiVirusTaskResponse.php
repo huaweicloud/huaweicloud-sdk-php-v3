@@ -22,7 +22,7 @@ class ListAntiVirusTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
-    * dataList  data list
+    * dataList  **参数解释**: 存储查询到的病毒查杀任务详细信息列表 **取值范围**: 最小值0，最大值1000
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class ListAntiVirusTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
-    * dataList  data list
+    * dataList  **参数解释**: 存储查询到的病毒查杀任务详细信息列表 **取值范围**: 最小值0，最大值1000
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class ListAntiVirusTaskResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
-    * dataList  data list
+    * dataList  **参数解释**: 存储查询到的病毒查杀任务详细信息列表 **取值范围**: 最小值0，最大值1000
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class ListAntiVirusTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
-    * dataList  data list
+    * dataList  **参数解释**: 存储查询到的病毒查杀任务详细信息列表 **取值范围**: 最小值0，最大值1000
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListAntiVirusTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
-    * dataList  data list
+    * dataList  **参数解释**: 存储查询到的病毒查杀任务详细信息列表 **取值范围**: 最小值0，最大值1000
     *
     * @var string[]
     */
@@ -216,7 +216,7 @@ class ListAntiVirusTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  data list
+    *  **参数解释**: 存储查询到的病毒查杀任务详细信息列表 **取值范围**: 最小值0，最大值1000
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\AntiVirusTaskResponseInfo[]|null
     */
@@ -228,7 +228,7 @@ class ListAntiVirusTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\AntiVirusTaskResponseInfo[]|null $dataList data list
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\AntiVirusTaskResponseInfo[]|null $dataList **参数解释**: 存储查询到的病毒查杀任务详细信息列表 **取值范围**: 最小值0，最大值1000
     *
     * @return $this
     */

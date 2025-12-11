@@ -33,7 +33,7 @@ class Statistic implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'userName' => 'string',
             'database' => 'string',
-            'queryId' => 'int',
+            'queryId' => 'string',
             'calls' => 'int',
             'query' => 'string',
             'rows' => 'int',
@@ -55,7 +55,7 @@ class Statistic implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'userName' => null,
         'database' => null,
-        'queryId' => 'int64',
+        'queryId' => null,
         'calls' => 'int64',
         'query' => null,
         'rows' => 'int64',
@@ -102,7 +102,7 @@ class Statistic implements ModelInterface, ArrayAccess
             'calls' => 'calls',
             'query' => 'query',
             'rows' => 'rows',
-            'canUse' => 'can_use'
+            'canUse' => 'canUse'
     ];
 
     /**
@@ -290,7 +290,7 @@ class Statistic implements ModelInterface, ArrayAccess
     * Gets queryId
     *  由SQL的语法解析树计算出的内部哈希码。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getQueryId()
     {
@@ -300,7 +300,7 @@ class Statistic implements ModelInterface, ArrayAccess
     /**
     * Sets queryId
     *
-    * @param int|null $queryId 由SQL的语法解析树计算出的内部哈希码。
+    * @param string|null $queryId 由SQL的语法解析树计算出的内部哈希码。
     *
     * @return $this
     */

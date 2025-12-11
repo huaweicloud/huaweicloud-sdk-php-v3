@@ -22,30 +22,30 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * namespace  **参数解释**: 组织名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。  **默认取值**: 不涉及
-    * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度1-128位
-    * imageVersion  **参数解释**: 镜像版本 **取值范围**: 字符长度1-64位
-    * registryName  **参数解释**: 仓库名称 **取值范围**: 字符长度1-128位
+    * imageName  **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * imageVersion  **参数解释**: 镜像版本 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * registryName  **参数解释**: 仓库名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * imageType  **参数解释**: 镜像类型 **约束限制**: 不涉及 **取值范围**: - private_image：SWR私有镜像。 - shared_image：SWR共享镜像。 - instance_image：SWR企业版镜像。 - harbor：Harbor仓库镜像。 - jfrog：Jfrog镜像。  **默认取值**: 不涉及
     * sortKey  **参数解释**: 可排序字段 **约束限制**: 不涉及 **取值范围**: - latest_scan_time：最近扫描时间。  **默认取值**: 不涉及
     * sortDir  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc  : 正序   - desc : 倒序  **默认取值**: 正序排序
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值1-200 **默认取值**: 10
-    * latestVersion  仅关注最新版本镜像
-    * imageSize  **参数解释**: 镜像大小 **约束限制**: 不涉及 **取值范围**: 取值0-2147483547 **默认取值**: 不涉及
+    * latestVersion  **参数解释**: 仅关注最新版本镜像 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: false
+    * imageSize  **参数解释**: 镜像大小 **约束限制**: 取值为非负整数，单位为字节（bytes） **取值范围**: 取值0-2147483547 **默认取值**: 不涉及
     * scanStatus  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**: - unscan：未扫描。 - success：扫描完成。 - scanning：扫描中。 - failed：扫描失败。 - waiting_for_scan：等待扫描。  **默认取值**: 不涉及
-    * startLatestUpdateTime  **参数解释**: 创建时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * endLatestUpdateTime  **参数解释**: 创建时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * startLatestScanTime  **参数解释**: 最近一次扫描完成时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * endLatestScanTime  **参数解释**: 最近一次扫描完成时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * startLatestSyncTime  **参数解释**: 最近一次同步完成时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * endLatestSyncTime  **参数解释**: 最近一次同步完成时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * hasMaliciousFile  是否存在恶意文件
-    * hasUnsafeSetting  是否存在基线检查风险
-    * hasVul  是否存在软件漏洞
-    * risky  有安全风险
-    * instanceId  **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
-    * instanceName  **参数解释**： 企业镜像实例名称，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
-    * isMultarch  是否是多架构镜像
+    * startLatestUpdateTime  **参数解释**: 最后更新时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_update_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * endLatestUpdateTime  **参数解释**: 最后更新时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_update_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * startLatestScanTime  **参数解释**: 最近一次扫描完成时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_scan_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * endLatestScanTime  **参数解释**: 最近一次扫描完成时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_scan_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * startLatestSyncTime  **参数解释**: 最近一次同步完成时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_sync_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * endLatestSyncTime  **参数解释**: 最近一次同步完成时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_sync_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * hasMaliciousFile  **参数解释**: 是否存在恶意文件 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * hasUnsafeSetting  **参数解释**： 是否存在基线检查风险 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
+    * hasVul  **参数解释**： 是否存在软件漏洞 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
+    * risky  **参数解释**: 有安全风险 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * instanceId  **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数，需要到SWR企业版服务中获取 **约束限制**： 仅SWR企业版镜像查询有效 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
+    * instanceName  **参数解释**： 企业仓库实例名称，SWR企业版可以使用该参数，需要到SWR企业版服务中获取 **约束限制**： 仅SWR企业版镜像查询有效 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
+    * isMultarch  **参数解释**: 是否是多架构镜像 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **约束限制**: 不涉及 **取值范围**: - Security：安全。 - Low：低危。 - Medium：中危。 - High：高危。  **默认取值**: 不涉及
     *
     * @var string[]
@@ -84,30 +84,30 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * namespace  **参数解释**: 组织名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。  **默认取值**: 不涉及
-    * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度1-128位
-    * imageVersion  **参数解释**: 镜像版本 **取值范围**: 字符长度1-64位
-    * registryName  **参数解释**: 仓库名称 **取值范围**: 字符长度1-128位
+    * imageName  **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * imageVersion  **参数解释**: 镜像版本 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * registryName  **参数解释**: 仓库名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * imageType  **参数解释**: 镜像类型 **约束限制**: 不涉及 **取值范围**: - private_image：SWR私有镜像。 - shared_image：SWR共享镜像。 - instance_image：SWR企业版镜像。 - harbor：Harbor仓库镜像。 - jfrog：Jfrog镜像。  **默认取值**: 不涉及
     * sortKey  **参数解释**: 可排序字段 **约束限制**: 不涉及 **取值范围**: - latest_scan_time：最近扫描时间。  **默认取值**: 不涉及
     * sortDir  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc  : 正序   - desc : 倒序  **默认取值**: 正序排序
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值1-200 **默认取值**: 10
-    * latestVersion  仅关注最新版本镜像
-    * imageSize  **参数解释**: 镜像大小 **约束限制**: 不涉及 **取值范围**: 取值0-2147483547 **默认取值**: 不涉及
+    * latestVersion  **参数解释**: 仅关注最新版本镜像 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: false
+    * imageSize  **参数解释**: 镜像大小 **约束限制**: 取值为非负整数，单位为字节（bytes） **取值范围**: 取值0-2147483547 **默认取值**: 不涉及
     * scanStatus  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**: - unscan：未扫描。 - success：扫描完成。 - scanning：扫描中。 - failed：扫描失败。 - waiting_for_scan：等待扫描。  **默认取值**: 不涉及
-    * startLatestUpdateTime  **参数解释**: 创建时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * endLatestUpdateTime  **参数解释**: 创建时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * startLatestScanTime  **参数解释**: 最近一次扫描完成时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * endLatestScanTime  **参数解释**: 最近一次扫描完成时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * startLatestSyncTime  **参数解释**: 最近一次同步完成时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * endLatestSyncTime  **参数解释**: 最近一次同步完成时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * hasMaliciousFile  是否存在恶意文件
-    * hasUnsafeSetting  是否存在基线检查风险
-    * hasVul  是否存在软件漏洞
-    * risky  有安全风险
-    * instanceId  **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
-    * instanceName  **参数解释**： 企业镜像实例名称，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
-    * isMultarch  是否是多架构镜像
+    * startLatestUpdateTime  **参数解释**: 最后更新时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_update_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * endLatestUpdateTime  **参数解释**: 最后更新时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_update_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * startLatestScanTime  **参数解释**: 最近一次扫描完成时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_scan_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * endLatestScanTime  **参数解释**: 最近一次扫描完成时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_scan_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * startLatestSyncTime  **参数解释**: 最近一次同步完成时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_sync_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * endLatestSyncTime  **参数解释**: 最近一次同步完成时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_sync_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * hasMaliciousFile  **参数解释**: 是否存在恶意文件 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * hasUnsafeSetting  **参数解释**： 是否存在基线检查风险 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
+    * hasVul  **参数解释**： 是否存在软件漏洞 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
+    * risky  **参数解释**: 有安全风险 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * instanceId  **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数，需要到SWR企业版服务中获取 **约束限制**： 仅SWR企业版镜像查询有效 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
+    * instanceName  **参数解释**： 企业仓库实例名称，SWR企业版可以使用该参数，需要到SWR企业版服务中获取 **约束限制**： 仅SWR企业版镜像查询有效 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
+    * isMultarch  **参数解释**: 是否是多架构镜像 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **约束限制**: 不涉及 **取值范围**: - Security：安全。 - Low：低危。 - Medium：中危。 - High：高危。  **默认取值**: 不涉及
     *
     * @var string[]
@@ -167,30 +167,30 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * namespace  **参数解释**: 组织名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。  **默认取值**: 不涉及
-    * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度1-128位
-    * imageVersion  **参数解释**: 镜像版本 **取值范围**: 字符长度1-64位
-    * registryName  **参数解释**: 仓库名称 **取值范围**: 字符长度1-128位
+    * imageName  **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * imageVersion  **参数解释**: 镜像版本 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * registryName  **参数解释**: 仓库名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * imageType  **参数解释**: 镜像类型 **约束限制**: 不涉及 **取值范围**: - private_image：SWR私有镜像。 - shared_image：SWR共享镜像。 - instance_image：SWR企业版镜像。 - harbor：Harbor仓库镜像。 - jfrog：Jfrog镜像。  **默认取值**: 不涉及
     * sortKey  **参数解释**: 可排序字段 **约束限制**: 不涉及 **取值范围**: - latest_scan_time：最近扫描时间。  **默认取值**: 不涉及
     * sortDir  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc  : 正序   - desc : 倒序  **默认取值**: 正序排序
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值1-200 **默认取值**: 10
-    * latestVersion  仅关注最新版本镜像
-    * imageSize  **参数解释**: 镜像大小 **约束限制**: 不涉及 **取值范围**: 取值0-2147483547 **默认取值**: 不涉及
+    * latestVersion  **参数解释**: 仅关注最新版本镜像 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: false
+    * imageSize  **参数解释**: 镜像大小 **约束限制**: 取值为非负整数，单位为字节（bytes） **取值范围**: 取值0-2147483547 **默认取值**: 不涉及
     * scanStatus  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**: - unscan：未扫描。 - success：扫描完成。 - scanning：扫描中。 - failed：扫描失败。 - waiting_for_scan：等待扫描。  **默认取值**: 不涉及
-    * startLatestUpdateTime  **参数解释**: 创建时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * endLatestUpdateTime  **参数解释**: 创建时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * startLatestScanTime  **参数解释**: 最近一次扫描完成时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * endLatestScanTime  **参数解释**: 最近一次扫描完成时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * startLatestSyncTime  **参数解释**: 最近一次同步完成时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * endLatestSyncTime  **参数解释**: 最近一次同步完成时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * hasMaliciousFile  是否存在恶意文件
-    * hasUnsafeSetting  是否存在基线检查风险
-    * hasVul  是否存在软件漏洞
-    * risky  有安全风险
-    * instanceId  **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
-    * instanceName  **参数解释**： 企业镜像实例名称，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
-    * isMultarch  是否是多架构镜像
+    * startLatestUpdateTime  **参数解释**: 最后更新时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_update_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * endLatestUpdateTime  **参数解释**: 最后更新时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_update_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * startLatestScanTime  **参数解释**: 最近一次扫描完成时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_scan_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * endLatestScanTime  **参数解释**: 最近一次扫描完成时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_scan_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * startLatestSyncTime  **参数解释**: 最近一次同步完成时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_sync_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * endLatestSyncTime  **参数解释**: 最近一次同步完成时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_sync_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * hasMaliciousFile  **参数解释**: 是否存在恶意文件 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * hasUnsafeSetting  **参数解释**： 是否存在基线检查风险 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
+    * hasVul  **参数解释**： 是否存在软件漏洞 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
+    * risky  **参数解释**: 有安全风险 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * instanceId  **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数，需要到SWR企业版服务中获取 **约束限制**： 仅SWR企业版镜像查询有效 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
+    * instanceName  **参数解释**： 企业仓库实例名称，SWR企业版可以使用该参数，需要到SWR企业版服务中获取 **约束限制**： 仅SWR企业版镜像查询有效 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
+    * isMultarch  **参数解释**: 是否是多架构镜像 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **约束限制**: 不涉及 **取值范围**: - Security：安全。 - Low：低危。 - Medium：中危。 - High：高危。  **默认取值**: 不涉及
     *
     * @var string[]
@@ -229,30 +229,30 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * namespace  **参数解释**: 组织名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。  **默认取值**: 不涉及
-    * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度1-128位
-    * imageVersion  **参数解释**: 镜像版本 **取值范围**: 字符长度1-64位
-    * registryName  **参数解释**: 仓库名称 **取值范围**: 字符长度1-128位
+    * imageName  **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * imageVersion  **参数解释**: 镜像版本 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * registryName  **参数解释**: 仓库名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * imageType  **参数解释**: 镜像类型 **约束限制**: 不涉及 **取值范围**: - private_image：SWR私有镜像。 - shared_image：SWR共享镜像。 - instance_image：SWR企业版镜像。 - harbor：Harbor仓库镜像。 - jfrog：Jfrog镜像。  **默认取值**: 不涉及
     * sortKey  **参数解释**: 可排序字段 **约束限制**: 不涉及 **取值范围**: - latest_scan_time：最近扫描时间。  **默认取值**: 不涉及
     * sortDir  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc  : 正序   - desc : 倒序  **默认取值**: 正序排序
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值1-200 **默认取值**: 10
-    * latestVersion  仅关注最新版本镜像
-    * imageSize  **参数解释**: 镜像大小 **约束限制**: 不涉及 **取值范围**: 取值0-2147483547 **默认取值**: 不涉及
+    * latestVersion  **参数解释**: 仅关注最新版本镜像 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: false
+    * imageSize  **参数解释**: 镜像大小 **约束限制**: 取值为非负整数，单位为字节（bytes） **取值范围**: 取值0-2147483547 **默认取值**: 不涉及
     * scanStatus  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**: - unscan：未扫描。 - success：扫描完成。 - scanning：扫描中。 - failed：扫描失败。 - waiting_for_scan：等待扫描。  **默认取值**: 不涉及
-    * startLatestUpdateTime  **参数解释**: 创建时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * endLatestUpdateTime  **参数解释**: 创建时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * startLatestScanTime  **参数解释**: 最近一次扫描完成时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * endLatestScanTime  **参数解释**: 最近一次扫描完成时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * startLatestSyncTime  **参数解释**: 最近一次同步完成时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * endLatestSyncTime  **参数解释**: 最近一次同步完成时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * hasMaliciousFile  是否存在恶意文件
-    * hasUnsafeSetting  是否存在基线检查风险
-    * hasVul  是否存在软件漏洞
-    * risky  有安全风险
-    * instanceId  **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
-    * instanceName  **参数解释**： 企业镜像实例名称，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
-    * isMultarch  是否是多架构镜像
+    * startLatestUpdateTime  **参数解释**: 最后更新时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_update_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * endLatestUpdateTime  **参数解释**: 最后更新时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_update_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * startLatestScanTime  **参数解释**: 最近一次扫描完成时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_scan_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * endLatestScanTime  **参数解释**: 最近一次扫描完成时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_scan_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * startLatestSyncTime  **参数解释**: 最近一次同步完成时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_sync_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * endLatestSyncTime  **参数解释**: 最近一次同步完成时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_sync_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * hasMaliciousFile  **参数解释**: 是否存在恶意文件 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * hasUnsafeSetting  **参数解释**： 是否存在基线检查风险 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
+    * hasVul  **参数解释**： 是否存在软件漏洞 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
+    * risky  **参数解释**: 有安全风险 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * instanceId  **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数，需要到SWR企业版服务中获取 **约束限制**： 仅SWR企业版镜像查询有效 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
+    * instanceName  **参数解释**： 企业仓库实例名称，SWR企业版可以使用该参数，需要到SWR企业版服务中获取 **约束限制**： 仅SWR企业版镜像查询有效 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
+    * isMultarch  **参数解释**: 是否是多架构镜像 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **约束限制**: 不涉及 **取值范围**: - Security：安全。 - Low：低危。 - Medium：中危。 - High：高危。  **默认取值**: 不涉及
     *
     * @var string[]
@@ -291,30 +291,30 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * namespace  **参数解释**: 组织名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。  **默认取值**: 不涉及
-    * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度1-128位
-    * imageVersion  **参数解释**: 镜像版本 **取值范围**: 字符长度1-64位
-    * registryName  **参数解释**: 仓库名称 **取值范围**: 字符长度1-128位
+    * imageName  **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * imageVersion  **参数解释**: 镜像版本 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * registryName  **参数解释**: 仓库名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * imageType  **参数解释**: 镜像类型 **约束限制**: 不涉及 **取值范围**: - private_image：SWR私有镜像。 - shared_image：SWR共享镜像。 - instance_image：SWR企业版镜像。 - harbor：Harbor仓库镜像。 - jfrog：Jfrog镜像。  **默认取值**: 不涉及
     * sortKey  **参数解释**: 可排序字段 **约束限制**: 不涉及 **取值范围**: - latest_scan_time：最近扫描时间。  **默认取值**: 不涉及
     * sortDir  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc  : 正序   - desc : 倒序  **默认取值**: 正序排序
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值1-200 **默认取值**: 10
-    * latestVersion  仅关注最新版本镜像
-    * imageSize  **参数解释**: 镜像大小 **约束限制**: 不涉及 **取值范围**: 取值0-2147483547 **默认取值**: 不涉及
+    * latestVersion  **参数解释**: 仅关注最新版本镜像 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: false
+    * imageSize  **参数解释**: 镜像大小 **约束限制**: 取值为非负整数，单位为字节（bytes） **取值范围**: 取值0-2147483547 **默认取值**: 不涉及
     * scanStatus  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**: - unscan：未扫描。 - success：扫描完成。 - scanning：扫描中。 - failed：扫描失败。 - waiting_for_scan：等待扫描。  **默认取值**: 不涉及
-    * startLatestUpdateTime  **参数解释**: 创建时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * endLatestUpdateTime  **参数解释**: 创建时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * startLatestScanTime  **参数解释**: 最近一次扫描完成时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * endLatestScanTime  **参数解释**: 最近一次扫描完成时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * startLatestSyncTime  **参数解释**: 最近一次同步完成时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * endLatestSyncTime  **参数解释**: 最近一次同步完成时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
-    * hasMaliciousFile  是否存在恶意文件
-    * hasUnsafeSetting  是否存在基线检查风险
-    * hasVul  是否存在软件漏洞
-    * risky  有安全风险
-    * instanceId  **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
-    * instanceName  **参数解释**： 企业镜像实例名称，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
-    * isMultarch  是否是多架构镜像
+    * startLatestUpdateTime  **参数解释**: 最后更新时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_update_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * endLatestUpdateTime  **参数解释**: 最后更新时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_update_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * startLatestScanTime  **参数解释**: 最近一次扫描完成时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_scan_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * endLatestScanTime  **参数解释**: 最近一次扫描完成时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_scan_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * startLatestSyncTime  **参数解释**: 最近一次同步完成时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_sync_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * endLatestSyncTime  **参数解释**: 最近一次同步完成时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_sync_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
+    * hasMaliciousFile  **参数解释**: 是否存在恶意文件 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * hasUnsafeSetting  **参数解释**： 是否存在基线检查风险 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
+    * hasVul  **参数解释**： 是否存在软件漏洞 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
+    * risky  **参数解释**: 有安全风险 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * instanceId  **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数，需要到SWR企业版服务中获取 **约束限制**： 仅SWR企业版镜像查询有效 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
+    * instanceName  **参数解释**： 企业仓库实例名称，SWR企业版可以使用该参数，需要到SWR企业版服务中获取 **约束限制**： 仅SWR企业版镜像查询有效 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
+    * isMultarch  **参数解释**: 是否是多架构镜像 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **约束限制**: 不涉及 **取值范围**: - Security：安全。 - Low：低危。 - Medium：中危。 - High：高危。  **默认取值**: 不涉及
     *
     * @var string[]
@@ -670,7 +670,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageName
-    *  **参数解释**: 镜像名称 **取值范围**: 字符长度1-128位
+    *  **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -682,7 +682,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imageName
     *
-    * @param string|null $imageName **参数解释**: 镜像名称 **取值范围**: 字符长度1-128位
+    * @param string|null $imageName **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -694,7 +694,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageVersion
-    *  **参数解释**: 镜像版本 **取值范围**: 字符长度1-64位
+    *  **参数解释**: 镜像版本 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -706,7 +706,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imageVersion
     *
-    * @param string|null $imageVersion **参数解释**: 镜像版本 **取值范围**: 字符长度1-64位
+    * @param string|null $imageVersion **参数解释**: 镜像版本 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -718,7 +718,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets registryName
-    *  **参数解释**: 仓库名称 **取值范围**: 字符长度1-128位
+    *  **参数解释**: 仓库名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -730,7 +730,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets registryName
     *
-    * @param string|null $registryName **参数解释**: 仓库名称 **取值范围**: 字符长度1-128位
+    * @param string|null $registryName **参数解释**: 仓库名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -862,7 +862,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets latestVersion
-    *  仅关注最新版本镜像
+    *  **参数解释**: 仅关注最新版本镜像 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: false
     *
     * @return bool|null
     */
@@ -874,7 +874,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets latestVersion
     *
-    * @param bool|null $latestVersion 仅关注最新版本镜像
+    * @param bool|null $latestVersion **参数解释**: 仅关注最新版本镜像 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: false
     *
     * @return $this
     */
@@ -886,7 +886,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageSize
-    *  **参数解释**: 镜像大小 **约束限制**: 不涉及 **取值范围**: 取值0-2147483547 **默认取值**: 不涉及
+    *  **参数解释**: 镜像大小 **约束限制**: 取值为非负整数，单位为字节（bytes） **取值范围**: 取值0-2147483547 **默认取值**: 不涉及
     *
     * @return int|null
     */
@@ -898,7 +898,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imageSize
     *
-    * @param int|null $imageSize **参数解释**: 镜像大小 **约束限制**: 不涉及 **取值范围**: 取值0-2147483547 **默认取值**: 不涉及
+    * @param int|null $imageSize **参数解释**: 镜像大小 **约束限制**: 取值为非负整数，单位为字节（bytes） **取值范围**: 取值0-2147483547 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -934,7 +934,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startLatestUpdateTime
-    *  **参数解释**: 创建时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
+    *  **参数解释**: 最后更新时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_update_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
     *
     * @return int|null
     */
@@ -946,7 +946,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startLatestUpdateTime
     *
-    * @param int|null $startLatestUpdateTime **参数解释**: 创建时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
+    * @param int|null $startLatestUpdateTime **参数解释**: 最后更新时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_update_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -958,7 +958,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endLatestUpdateTime
-    *  **参数解释**: 创建时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
+    *  **参数解释**: 最后更新时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_update_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
     *
     * @return int|null
     */
@@ -970,7 +970,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endLatestUpdateTime
     *
-    * @param int|null $endLatestUpdateTime **参数解释**: 创建时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
+    * @param int|null $endLatestUpdateTime **参数解释**: 最后更新时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_update_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -982,7 +982,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startLatestScanTime
-    *  **参数解释**: 最近一次扫描完成时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
+    *  **参数解释**: 最近一次扫描完成时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_scan_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
     *
     * @return int|null
     */
@@ -994,7 +994,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startLatestScanTime
     *
-    * @param int|null $startLatestScanTime **参数解释**: 最近一次扫描完成时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
+    * @param int|null $startLatestScanTime **参数解释**: 最近一次扫描完成时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_scan_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1006,7 +1006,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endLatestScanTime
-    *  **参数解释**: 最近一次扫描完成时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
+    *  **参数解释**: 最近一次扫描完成时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_scan_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
     *
     * @return int|null
     */
@@ -1018,7 +1018,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endLatestScanTime
     *
-    * @param int|null $endLatestScanTime **参数解释**: 最近一次扫描完成时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
+    * @param int|null $endLatestScanTime **参数解释**: 最近一次扫描完成时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_scan_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1030,7 +1030,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startLatestSyncTime
-    *  **参数解释**: 最近一次同步完成时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
+    *  **参数解释**: 最近一次同步完成时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_sync_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
     *
     * @return int|null
     */
@@ -1042,7 +1042,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startLatestSyncTime
     *
-    * @param int|null $startLatestSyncTime **参数解释**: 最近一次同步完成时间开始日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
+    * @param int|null $startLatestSyncTime **参数解释**: 最近一次同步完成时间的查询起始值，时间单位 毫秒（ms） **约束限制**: 需≤end_latest_sync_time，未传end参数时默认查询至当前时间 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1054,7 +1054,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endLatestSyncTime
-    *  **参数解释**: 最近一次同步完成时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
+    *  **参数解释**: 最近一次同步完成时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_sync_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
     *
     * @return int|null
     */
@@ -1066,7 +1066,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endLatestSyncTime
     *
-    * @param int|null $endLatestSyncTime **参数解释**: 最近一次同步完成时间结束日期，时间单位 毫秒（ms） **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 不涉及
+    * @param int|null $endLatestSyncTime **参数解释**: 最近一次同步完成时间的查询结束值，时间单位 毫秒（ms） **约束限制**: 需≥start_latest_sync_time，未传start参数时默认从0开始 **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起） **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1078,7 +1078,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hasMaliciousFile
-    *  是否存在恶意文件
+    *  **参数解释**: 是否存在恶意文件 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     *
     * @return bool|null
     */
@@ -1090,7 +1090,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hasMaliciousFile
     *
-    * @param bool|null $hasMaliciousFile 是否存在恶意文件
+    * @param bool|null $hasMaliciousFile **参数解释**: 是否存在恶意文件 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1102,7 +1102,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hasUnsafeSetting
-    *  是否存在基线检查风险
+    *  **参数解释**： 是否存在基线检查风险 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
     *
     * @return bool|null
     */
@@ -1114,7 +1114,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hasUnsafeSetting
     *
-    * @param bool|null $hasUnsafeSetting 是否存在基线检查风险
+    * @param bool|null $hasUnsafeSetting **参数解释**： 是否存在基线检查风险 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1126,7 +1126,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hasVul
-    *  是否存在软件漏洞
+    *  **参数解释**： 是否存在软件漏洞 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
     *
     * @return bool|null
     */
@@ -1138,7 +1138,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hasVul
     *
-    * @param bool|null $hasVul 是否存在软件漏洞
+    * @param bool|null $hasVul **参数解释**： 是否存在软件漏洞 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1150,7 +1150,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets risky
-    *  有安全风险
+    *  **参数解释**: 有安全风险 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     *
     * @return bool|null
     */
@@ -1162,7 +1162,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets risky
     *
-    * @param bool|null $risky 有安全风险
+    * @param bool|null $risky **参数解释**: 有安全风险 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -1174,7 +1174,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
+    *  **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数，需要到SWR企业版服务中获取 **约束限制**： 仅SWR企业版镜像查询有效 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -1186,7 +1186,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
+    * @param string|null $instanceId **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数，需要到SWR企业版服务中获取 **约束限制**： 仅SWR企业版镜像查询有效 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -1198,7 +1198,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceName
-    *  **参数解释**： 企业镜像实例名称，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
+    *  **参数解释**： 企业仓库实例名称，SWR企业版可以使用该参数，需要到SWR企业版服务中获取 **约束限制**： 仅SWR企业版镜像查询有效 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -1210,7 +1210,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceName
     *
-    * @param string|null $instanceName **参数解释**： 企业镜像实例名称，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
+    * @param string|null $instanceName **参数解释**： 企业仓库实例名称，SWR企业版可以使用该参数，需要到SWR企业版服务中获取 **约束限制**： 仅SWR企业版镜像查询有效 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -1222,7 +1222,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets isMultarch
-    *  是否是多架构镜像
+    *  **参数解释**: 是否是多架构镜像 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     *
     * @return bool|null
     */
@@ -1234,7 +1234,7 @@ class ListRegistryImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isMultarch
     *
-    * @param bool|null $isMultarch 是否是多架构镜像
+    * @param bool|null $isMultarch **参数解释**: 是否是多架构镜像 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
     *
     * @return $this
     */

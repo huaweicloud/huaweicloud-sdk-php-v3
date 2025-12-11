@@ -20,10 +20,10 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
-    * checkRuleId  检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules
-    * standard  基线标准, 类别包含如下：   - cn_standard#等保合规标准   - hw_standard#云安全实践标准
-    * fixValues  用户键入的检查项修复参数数组
+    * checkName  **参数解释**: 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * checkRuleId  **参数解释**: 检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
+    * standard  **参数解释**: 基线标准 **约束限制**: 不涉及 **取值范围**: - cn_standard：等保合规 - hw_standard：云安全实践 - cis_standard：通用安全标准  **默认取值**: 不涉及
+    * fixValues  **参数解释**: 用户键入的检查项修复参数数组 **约束限制**: 不涉及 **取值范围**: 元素个数0-10000 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
-    * checkRuleId  检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules
-    * standard  基线标准, 类别包含如下：   - cn_standard#等保合规标准   - hw_standard#云安全实践标准
-    * fixValues  用户键入的检查项修复参数数组
+    * checkName  **参数解释**: 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * checkRuleId  **参数解释**: 检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
+    * standard  **参数解释**: 基线标准 **约束限制**: 不涉及 **取值范围**: - cn_standard：等保合规 - hw_standard：云安全实践 - cis_standard：通用安全标准  **默认取值**: 不涉及
+    * fixValues  **参数解释**: 用户键入的检查项修复参数数组 **约束限制**: 不涉及 **取值范围**: 元素个数0-10000 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
-    * checkRuleId  检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules
-    * standard  基线标准, 类别包含如下：   - cn_standard#等保合规标准   - hw_standard#云安全实践标准
-    * fixValues  用户键入的检查项修复参数数组
+    * checkName  **参数解释**: 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * checkRuleId  **参数解释**: 检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
+    * standard  **参数解释**: 基线标准 **约束限制**: 不涉及 **取值范围**: - cn_standard：等保合规 - hw_standard：云安全实践 - cis_standard：通用安全标准  **默认取值**: 不涉及
+    * fixValues  **参数解释**: 用户键入的检查项修复参数数组 **约束限制**: 不涉及 **取值范围**: 元素个数0-10000 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
-    * checkRuleId  检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules
-    * standard  基线标准, 类别包含如下：   - cn_standard#等保合规标准   - hw_standard#云安全实践标准
-    * fixValues  用户键入的检查项修复参数数组
+    * checkName  **参数解释**: 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * checkRuleId  **参数解释**: 检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
+    * standard  **参数解释**: 基线标准 **约束限制**: 不涉及 **取值范围**: - cn_standard：等保合规 - hw_standard：云安全实践 - cis_standard：通用安全标准  **默认取值**: 不涉及
+    * fixValues  **参数解释**: 用户键入的检查项修复参数数组 **约束限制**: 不涉及 **取值范围**: 元素个数0-10000 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * checkName  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
-    * checkRuleId  检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules
-    * standard  基线标准, 类别包含如下：   - cn_standard#等保合规标准   - hw_standard#云安全实践标准
-    * fixValues  用户键入的检查项修复参数数组
+    * checkName  **参数解释**: 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * checkRuleId  **参数解释**: 检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
+    * standard  **参数解释**: 基线标准 **约束限制**: 不涉及 **取值范围**: - cn_standard：等保合规 - hw_standard：云安全实践 - cis_standard：通用安全标准  **默认取值**: 不涉及
+    * fixValues  **参数解释**: 用户键入的检查项修复参数数组 **约束限制**: 不涉及 **取值范围**: 元素个数0-10000 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -225,7 +225,7 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkName
-    *  配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    *  **参数解释**: 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -237,7 +237,7 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checkName
     *
-    * @param string|null $checkName 配置检查（基线）的名称，例如SSH、CentOS 7、Windows
+    * @param string|null $checkName **参数解释**: 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -249,7 +249,7 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkRuleId
-    *  检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules
+    *  **参数解释**: 检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -261,7 +261,7 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checkRuleId
     *
-    * @param string|null $checkRuleId 检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules
+    * @param string|null $checkRuleId **参数解释**: 检查项ID，值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -273,7 +273,7 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets standard
-    *  基线标准, 类别包含如下：   - cn_standard#等保合规标准   - hw_standard#云安全实践标准
+    *  **参数解释**: 基线标准 **约束限制**: 不涉及 **取值范围**: - cn_standard：等保合规 - hw_standard：云安全实践 - cis_standard：通用安全标准  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets standard
     *
-    * @param string|null $standard 基线标准, 类别包含如下：   - cn_standard#等保合规标准   - hw_standard#云安全实践标准
+    * @param string|null $standard **参数解释**: 基线标准 **约束限制**: 不涉及 **取值范围**: - cn_standard：等保合规 - hw_standard：云安全实践 - cis_standard：通用安全标准  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -297,7 +297,7 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fixValues
-    *  用户键入的检查项修复参数数组
+    *  **参数解释**: 用户键入的检查项修复参数数组 **约束限制**: 不涉及 **取值范围**: 元素个数0-10000 **默认取值**: 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\CheckRuleFixValuesInfo[]|null
     */
@@ -309,7 +309,7 @@ class CheckRuleKeyInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fixValues
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\CheckRuleFixValuesInfo[]|null $fixValues 用户键入的检查项修复参数数组
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\CheckRuleFixValuesInfo[]|null $fixValues **参数解释**: 用户键入的检查项修复参数数组 **约束限制**: 不涉及 **取值范围**: 元素个数0-10000 **默认取值**: 不涉及
     *
     * @return $this
     */

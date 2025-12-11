@@ -22,24 +22,32 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * startTime  开始时间。
     * endTime  开始时间。
+    * offset  offset
+    * limit  query
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'startTime' => 'float',
-            'endTime' => 'float'
+            'endTime' => 'float',
+            'offset' => 'int',
+            'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * startTime  开始时间。
     * endTime  开始时间。
+    * offset  offset
+    * limit  query
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'startTime' => null,
-        'endTime' => null
+        'endTime' => null,
+        'offset' => 'int32',
+        'limit' => 'int32'
     ];
 
     /**
@@ -67,36 +75,48 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * startTime  开始时间。
     * endTime  开始时间。
+    * offset  offset
+    * limit  query
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'startTime' => 'start_time',
-            'endTime' => 'end_time'
+            'endTime' => 'end_time',
+            'offset' => 'offset',
+            'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * startTime  开始时间。
     * endTime  开始时间。
+    * offset  offset
+    * limit  query
     *
     * @var string[]
     */
     protected static $setters = [
             'startTime' => 'setStartTime',
-            'endTime' => 'setEndTime'
+            'endTime' => 'setEndTime',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * startTime  开始时间。
     * endTime  开始时间。
+    * offset  offset
+    * limit  query
     *
     * @var string[]
     */
     protected static $getters = [
             'startTime' => 'getStartTime',
-            'endTime' => 'getEndTime'
+            'endTime' => 'getEndTime',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -159,6 +179,8 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
     {
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -186,6 +208,15 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
             }
             if (($this->container['endTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'endTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 128)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -246,6 +277,54 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
     public function setEndTime($endTime)
     {
         $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  offset
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset offset
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  query
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit query
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

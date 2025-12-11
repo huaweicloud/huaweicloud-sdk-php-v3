@@ -20,11 +20,11 @@ class AppWhitelistEventDetailResInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * processPid  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
     * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
-    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件的系统属性（如读写权限、隐藏属性、执行权限等） **取值范围**： 字符长度1-256位
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * loginIp  **参数解释**： 登录源IP **取值范围**： 字符长度1-256位
     * loginUserName  **参数解释**： 登录用户名 **取值范围**： 字符长度1-256位
@@ -44,11 +44,11 @@ class AppWhitelistEventDetailResInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * processPid  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
     * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
-    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件的系统属性（如读写权限、隐藏属性、执行权限等） **取值范围**： 字符长度1-256位
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * loginIp  **参数解释**： 登录源IP **取值范围**： 字符长度1-256位
     * loginUserName  **参数解释**： 登录用户名 **取值范围**： 字符长度1-256位
@@ -89,11 +89,11 @@ class AppWhitelistEventDetailResInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * processPid  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
     * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
-    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件的系统属性（如读写权限、隐藏属性、执行权限等） **取值范围**： 字符长度1-256位
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * loginIp  **参数解释**： 登录源IP **取值范围**： 字符长度1-256位
     * loginUserName  **参数解释**： 登录用户名 **取值范围**： 字符长度1-256位
@@ -113,11 +113,11 @@ class AppWhitelistEventDetailResInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * processPid  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
     * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
-    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件的系统属性（如读写权限、隐藏属性、执行权限等） **取值范围**： 字符长度1-256位
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * loginIp  **参数解释**： 登录源IP **取值范围**： 字符长度1-256位
     * loginUserName  **参数解释**： 登录用户名 **取值范围**： 字符长度1-256位
@@ -137,11 +137,11 @@ class AppWhitelistEventDetailResInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * agentId  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * processPid  **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
     * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
-    * fileAttr  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
+    * fileAttr  **参数解释**： 文件的系统属性（如读写权限、隐藏属性、执行权限等） **取值范围**： 字符长度1-256位
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * loginIp  **参数解释**： 登录源IP **取值范围**： 字符长度1-256位
     * loginUserName  **参数解释**： 登录用户名 **取值范围**： 字符长度1-256位
@@ -284,7 +284,7 @@ class AppWhitelistEventDetailResInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    *  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -296,7 +296,7 @@ class AppWhitelistEventDetailResInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * @param string|null $agentId **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -380,7 +380,7 @@ class AppWhitelistEventDetailResInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileAttr
-    *  **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
+    *  **参数解释**： 文件的系统属性（如读写权限、隐藏属性、执行权限等） **取值范围**： 字符长度1-256位
     *
     * @return string|null
     */
@@ -392,7 +392,7 @@ class AppWhitelistEventDetailResInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileAttr
     *
-    * @param string|null $fileAttr **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
+    * @param string|null $fileAttr **参数解释**： 文件的系统属性（如读写权限、隐藏属性、执行权限等） **取值范围**： 字符长度1-256位
     *
     * @return $this
     */

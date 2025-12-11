@@ -20,7 +20,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * checkName  **参数解释** 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **取值范围** 字符长度0-256位
     * baselineName  **参数解释** 基线的名称，例如SSH 应用基线检查、CentOS 7 系统基线检查、Windows 系统基线检查 **取值范围** 字符长度0-256位
@@ -33,12 +33,12 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     * description  **参数解释** 忽略或加白的备注 **取值范围** 字符长度0-1024位
     * hostType  **参数解释** 主机类型，当主机为cce类型时，返回cce **取值范围** - cce
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
-    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
+    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围** - true  : 可验证 - false : 不可验证
     * enableClick  **参数解释** 该检查项的修复&忽略&验证按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * resultType  **参数解释** 检测结果类型 **取值范围** - safe             : 已通过 - unhandled        : 未处理 - ignored          : 已忽略 - fixing           : 修复中 - fix-failed       : 修复失败 - verifying        : 验证中 - add_to_whitelist : 已加白(表示检测失败，但已进行加白)
     * fixFailedReason  **参数解释** 修复失败原因 **取值范围** 字符长度0-256位
-    * clusterId  **参数解释** 集群ID **取值范围**  字符长度0-64位
+    * clusterId  **参数解释** 集群ID **取值范围** 字符长度0-64位
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * checkName  **参数解释** 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **取值范围** 字符长度0-256位
     * baselineName  **参数解释** 基线的名称，例如SSH 应用基线检查、CentOS 7 系统基线检查、Windows 系统基线检查 **取值范围** 字符长度0-256位
@@ -79,12 +79,12 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     * description  **参数解释** 忽略或加白的备注 **取值范围** 字符长度0-1024位
     * hostType  **参数解释** 主机类型，当主机为cce类型时，返回cce **取值范围** - cce
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
-    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
+    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围** - true  : 可验证 - false : 不可验证
     * enableClick  **参数解释** 该检查项的修复&忽略&验证按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * resultType  **参数解释** 检测结果类型 **取值范围** - safe             : 已通过 - unhandled        : 未处理 - ignored          : 已忽略 - fixing           : 修复中 - fix-failed       : 修复失败 - verifying        : 验证中 - add_to_whitelist : 已加白(表示检测失败，但已进行加白)
     * fixFailedReason  **参数解释** 修复失败原因 **取值范围** 字符长度0-256位
-    * clusterId  **参数解释** 集群ID **取值范围**  字符长度0-64位
+    * clusterId  **参数解释** 集群ID **取值范围** 字符长度0-64位
     *
     * @var string[]
     */
@@ -133,7 +133,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * checkName  **参数解释** 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **取值范围** 字符长度0-256位
     * baselineName  **参数解释** 基线的名称，例如SSH 应用基线检查、CentOS 7 系统基线检查、Windows 系统基线检查 **取值范围** 字符长度0-256位
@@ -146,12 +146,12 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     * description  **参数解释** 忽略或加白的备注 **取值范围** 字符长度0-1024位
     * hostType  **参数解释** 主机类型，当主机为cce类型时，返回cce **取值范围** - cce
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
-    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
+    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围** - true  : 可验证 - false : 不可验证
     * enableClick  **参数解释** 该检查项的修复&忽略&验证按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * resultType  **参数解释** 检测结果类型 **取值范围** - safe             : 已通过 - unhandled        : 未处理 - ignored          : 已忽略 - fixing           : 修复中 - fix-failed       : 修复失败 - verifying        : 验证中 - add_to_whitelist : 已加白(表示检测失败，但已进行加白)
     * fixFailedReason  **参数解释** 修复失败原因 **取值范围** 字符长度0-256位
-    * clusterId  **参数解释** 集群ID **取值范围**  字符长度0-64位
+    * clusterId  **参数解释** 集群ID **取值范围** 字符长度0-64位
     *
     * @var string[]
     */
@@ -179,7 +179,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * checkName  **参数解释** 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **取值范围** 字符长度0-256位
     * baselineName  **参数解释** 基线的名称，例如SSH 应用基线检查、CentOS 7 系统基线检查、Windows 系统基线检查 **取值范围** 字符长度0-256位
@@ -192,12 +192,12 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     * description  **参数解释** 忽略或加白的备注 **取值范围** 字符长度0-1024位
     * hostType  **参数解释** 主机类型，当主机为cce类型时，返回cce **取值范围** - cce
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
-    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
+    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围** - true  : 可验证 - false : 不可验证
     * enableClick  **参数解释** 该检查项的修复&忽略&验证按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * resultType  **参数解释** 检测结果类型 **取值范围** - safe             : 已通过 - unhandled        : 未处理 - ignored          : 已忽略 - fixing           : 修复中 - fix-failed       : 修复失败 - verifying        : 验证中 - add_to_whitelist : 已加白(表示检测失败，但已进行加白)
     * fixFailedReason  **参数解释** 修复失败原因 **取值范围** 字符长度0-256位
-    * clusterId  **参数解释** 集群ID **取值范围**  字符长度0-64位
+    * clusterId  **参数解释** 集群ID **取值范围** 字符长度0-64位
     *
     * @var string[]
     */
@@ -225,7 +225,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * checkName  **参数解释** 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **取值范围** 字符长度0-256位
     * baselineName  **参数解释** 基线的名称，例如SSH 应用基线检查、CentOS 7 系统基线检查、Windows 系统基线检查 **取值范围** 字符长度0-256位
@@ -238,12 +238,12 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     * description  **参数解释** 忽略或加白的备注 **取值范围** 字符长度0-1024位
     * hostType  **参数解释** 主机类型，当主机为cce类型时，返回cce **取值范围** - cce
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
-    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
+    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围** - true  : 可验证 - false : 不可验证
     * enableClick  **参数解释** 该检查项的修复&忽略&验证按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * resultType  **参数解释** 检测结果类型 **取值范围** - safe             : 已通过 - unhandled        : 未处理 - ignored          : 已忽略 - fixing           : 修复中 - fix-failed       : 修复失败 - verifying        : 验证中 - add_to_whitelist : 已加白(表示检测失败，但已进行加白)
     * fixFailedReason  **参数解释** 修复失败原因 **取值范围** 字符长度0-256位
-    * clusterId  **参数解释** 集群ID **取值范围**  字符长度0-64位
+    * clusterId  **参数解释** 集群ID **取值范围** 字符长度0-64位
     *
     * @var string[]
     */
@@ -474,7 +474,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+    *  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     *
     * @return string|null
     */
@@ -486,7 +486,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+    * @param string|null $hostId **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     *
     * @return $this
     */
@@ -786,7 +786,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableVerify
-    *  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
+    *  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围** - true  : 可验证 - false : 不可验证
     *
     * @return bool|null
     */
@@ -798,7 +798,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enableVerify
     *
-    * @param bool|null $enableVerify **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
+    * @param bool|null $enableVerify **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围** - true  : 可验证 - false : 不可验证
     *
     * @return $this
     */
@@ -906,7 +906,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  **参数解释** 集群ID **取值范围**  字符长度0-64位
+    *  **参数解释** 集群ID **取值范围** 字符长度0-64位
     *
     * @return string|null
     */
@@ -918,7 +918,7 @@ class SecurityCheckRuleHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId **参数解释** 集群ID **取值范围**  字符长度0-64位
+    * @param string|null $clusterId **参数解释** 集群ID **取值范围** 字符长度0-64位
     *
     * @return $this
     */

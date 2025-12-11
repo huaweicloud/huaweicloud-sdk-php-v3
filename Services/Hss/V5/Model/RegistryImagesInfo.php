@@ -20,33 +20,33 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  **参数解释**: id **取值范围**: 最小值0，最大值9223372036854775807
+    * id  **参数解释**: 镜像记录的唯一标识ID **取值范围**: 最小值0，最大值9223372036854775807
     * namespace  **参数解释**: 组织名称 **取值范围**: 字符长度0-64位
     * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度0-128位
-    * imageId  **参数解释**: 镜像id **取值范围**: 字符长度0-64位
+    * imageId  **参数解释**: 镜像的唯一标识ID **取值范围**: 字符长度0-64位
     * imageDigest  **参数解释**: 镜像digest **取值范围**: 字符长度0-128位
     * imageVersion  **参数解释**: 镜像版本 **取值范围**: 字符长度0-64位
     * imageType  **参数解释**: 镜像类型 **取值范围**: - private_image：SWR私有镜像。 - shared_image：SWR共享镜像。 - instance_image：SWR企业版镜像。 - harbor：Harbor仓库镜像。 - jfrog：Jfrog镜像。
-    * registryId  **参数解释**: 镜像仓id **取值范围**: 字符长度1-64位
+    * registryId  **参数解释**: 镜像所属仓库的唯一标识ID **取值范围**: 字符长度1-64位
     * registryName  **参数解释**: 镜像仓库名称 **取值范围**: 字符长度1-128位
-    * registryType  **参数解释**： 镜像仓库类型 **取值范围**： - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。
+    * registryType  **参数解释**： 镜像仓库类型 **取值范围**： - SwrPrivate：SWR私有。 - SwrShared：SWR共享。 - SwrEnterprise：SWR企业。 - Harbor：Harbor仓库。 - Jfrog：Jfrog仓库。 - Other：其他仓库。
     * latestVersion  是否是最新版本
     * scanStatus  **参数解释**： 扫描状态 **取值范围**： - unscan：未扫描。 - success：扫描完成。 - scanning：正在扫描。 - failed：扫描失败。 - download_failed：下载失败。 - image_oversized：镜像超大。 - waiting_for_scan：等待扫描。
     * scanFailedDesc  **参数解释**： 扫描失败原因描述 **取值范围**： 扫描失败原因code和描述对应关系如下 - unknown_error：未知错误。 - authentication_failed：认证失败。 - download_failed：镜像下载失败。请向技术人员寻求帮助。 - image_over_sized：镜像大小超限，不支持扫描。建议精简镜像。 - get_detail_info_not_found：获取镜像详细信息失败，镜像仓中可能已经不存在此镜像。请重新同步最新镜像。 - image_layer_over_sized：镜像层数超限，不支持扫描。建议精简镜像。 - schema_v1_not_support：Schema V1镜像不支持扫描。建议升级到V2版本。 - access_swr_failed：访问SWR服务出错。请向技术人员寻求帮助。 - swr_authentication_error：缺少SWR授权。请参考镜像授权指导设置权限。 - failed_to_scan_vulnerability：漏洞扫描失败。 - failed_to_scan_file：文件扫描失败。 - failed_to_scan_software：软件扫描失败。 - failed_to_check_sensitive_information：敏感信息核查失败。 - failed_to_check_baseline：基线检查失败。 - failed_to_check_software_compliance：软件合规检查失败。 - failed_to_query_basic_image_information：基础镜像信息查询失败。 - failed_to_check_build_cmd：镜像构建指令扫描失败。 - response_timed_out：响应超时。 - database_error：数据库错误。 - failed_to_send_the_scan_request：发送扫描请求失败。
     * scanFailedCode  **参数解释**： 扫描失败原因code **取值范围**： 扫描失败原因code和描述对应关系如下 - unknown_error：未知错误。 - authentication_failed：认证失败。 - download_failed：镜像下载失败。请向技术人员寻求帮助。 - image_over_sized：镜像大小超限，不支持扫描。建议精简镜像。 - get_detail_info_not_found：获取镜像详细信息失败，镜像仓中可能已经不存在此镜像。请重新同步最新镜像。 - image_layer_over_sized：镜像层数超限，不支持扫描。建议精简镜像。 - schema_v1_not_support：Schema V1镜像不支持扫描。建议升级到V2版本。 - access_swr_failed：访问SWR服务出错。请向技术人员寻求帮助。 - swr_authentication_error：缺少SWR授权。请参考镜像授权指导设置权限。 - failed_to_scan_vulnerability：漏洞扫描失败。 - failed_to_scan_file：文件扫描失败。 - failed_to_scan_software：软件扫描失败。 - failed_to_check_sensitive_information：敏感信息核查失败。 - failed_to_check_baseline：基线检查失败。 - failed_to_check_software_compliance：软件合规检查失败。 - failed_to_query_basic_image_information：基础镜像信息查询失败。 - failed_to_check_build_cmd：镜像构建指令扫描失败。 - response_timed_out：响应超时。 - database_error：数据库错误。 - failed_to_send_the_scan_request：发送扫描请求失败。
-    * imageSize  **参数解释**: 镜像大小 **取值范围**: 取值0-2147483547
-    * latestUpdateTime  **参数解释**: 镜像版本最后更新时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
-    * latestScanTime  **参数解释**: 最近扫描时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
-    * latestSyncTime  **参数解释**: 最近同步时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
-    * vulNum  **参数解释**: 漏洞个数 **取值范围**: 取值0-2147483647
-    * unsafeSettingNum  **参数解释**: 基线扫描未通过数 **取值范围**: 取值0-2147483647
-    * maliciousFileNum  **参数解释**: 恶意文件数 **取值范围**: 取值0-2147483647
+    * imageSize  **参数解释**: 镜像大小 **取值范围**: 取值0-2147483547，单位为字节（bytes）
+    * latestUpdateTime  **参数解释**: 镜像版本最后更新时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
+    * latestScanTime  **参数解释**: 最近扫描时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
+    * latestSyncTime  **参数解释**: 最近同步时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
+    * vulNum  **参数解释**: 镜像扫描出的漏洞总数量 **取值范围**: 取值0-2147483647；单位：个
+    * unsafeSettingNum  **参数解释**: 基线扫描未通过数 **取值范围**: 取值0-2147483647；单位：项
+    * maliciousFileNum  **参数解释**: 镜像扫描出的恶意文件数 **取值范围**: 取值0-2147483647；单位：个
     * domainName  **参数解释**: 拥有者（共享镜像参数） **取值范围**: 字符长度0-128
     * sharedStatus  **参数解释**： 共享镜像状态 **取值范围**： - expired：已过期。 - effective：有效。
     * scannable  是否可扫描
     * isMultipleArch  是否是多架构镜像
-    * instanceName  **参数解释**: 企业版镜像实例名称 **取值范围**: 字符长度0-128
-    * instanceId  **参数解释**: 企业版镜像实例ID **取值范围**: 字符长度0-64
+    * instanceName  **参数解释**: SWR企业版镜像所属仓库实例名称 **取值范围**: 字符长度0-128
+    * instanceId  **参数解释**: SWR企业版镜像所属仓库实例的唯一标识ID **取值范围**: 字符长度0-64
     * instanceUrl  **参数解释**: 企业版镜像实例URL **取值范围**: 字符长度0-256
     * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **取值范围**: - Security：安全。 - Low：低危。 - Medium：中危。 - High：高危。
     * associationImages  多架构关联镜像信息
@@ -88,33 +88,33 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  **参数解释**: id **取值范围**: 最小值0，最大值9223372036854775807
+    * id  **参数解释**: 镜像记录的唯一标识ID **取值范围**: 最小值0，最大值9223372036854775807
     * namespace  **参数解释**: 组织名称 **取值范围**: 字符长度0-64位
     * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度0-128位
-    * imageId  **参数解释**: 镜像id **取值范围**: 字符长度0-64位
+    * imageId  **参数解释**: 镜像的唯一标识ID **取值范围**: 字符长度0-64位
     * imageDigest  **参数解释**: 镜像digest **取值范围**: 字符长度0-128位
     * imageVersion  **参数解释**: 镜像版本 **取值范围**: 字符长度0-64位
     * imageType  **参数解释**: 镜像类型 **取值范围**: - private_image：SWR私有镜像。 - shared_image：SWR共享镜像。 - instance_image：SWR企业版镜像。 - harbor：Harbor仓库镜像。 - jfrog：Jfrog镜像。
-    * registryId  **参数解释**: 镜像仓id **取值范围**: 字符长度1-64位
+    * registryId  **参数解释**: 镜像所属仓库的唯一标识ID **取值范围**: 字符长度1-64位
     * registryName  **参数解释**: 镜像仓库名称 **取值范围**: 字符长度1-128位
-    * registryType  **参数解释**： 镜像仓库类型 **取值范围**： - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。
+    * registryType  **参数解释**： 镜像仓库类型 **取值范围**： - SwrPrivate：SWR私有。 - SwrShared：SWR共享。 - SwrEnterprise：SWR企业。 - Harbor：Harbor仓库。 - Jfrog：Jfrog仓库。 - Other：其他仓库。
     * latestVersion  是否是最新版本
     * scanStatus  **参数解释**： 扫描状态 **取值范围**： - unscan：未扫描。 - success：扫描完成。 - scanning：正在扫描。 - failed：扫描失败。 - download_failed：下载失败。 - image_oversized：镜像超大。 - waiting_for_scan：等待扫描。
     * scanFailedDesc  **参数解释**： 扫描失败原因描述 **取值范围**： 扫描失败原因code和描述对应关系如下 - unknown_error：未知错误。 - authentication_failed：认证失败。 - download_failed：镜像下载失败。请向技术人员寻求帮助。 - image_over_sized：镜像大小超限，不支持扫描。建议精简镜像。 - get_detail_info_not_found：获取镜像详细信息失败，镜像仓中可能已经不存在此镜像。请重新同步最新镜像。 - image_layer_over_sized：镜像层数超限，不支持扫描。建议精简镜像。 - schema_v1_not_support：Schema V1镜像不支持扫描。建议升级到V2版本。 - access_swr_failed：访问SWR服务出错。请向技术人员寻求帮助。 - swr_authentication_error：缺少SWR授权。请参考镜像授权指导设置权限。 - failed_to_scan_vulnerability：漏洞扫描失败。 - failed_to_scan_file：文件扫描失败。 - failed_to_scan_software：软件扫描失败。 - failed_to_check_sensitive_information：敏感信息核查失败。 - failed_to_check_baseline：基线检查失败。 - failed_to_check_software_compliance：软件合规检查失败。 - failed_to_query_basic_image_information：基础镜像信息查询失败。 - failed_to_check_build_cmd：镜像构建指令扫描失败。 - response_timed_out：响应超时。 - database_error：数据库错误。 - failed_to_send_the_scan_request：发送扫描请求失败。
     * scanFailedCode  **参数解释**： 扫描失败原因code **取值范围**： 扫描失败原因code和描述对应关系如下 - unknown_error：未知错误。 - authentication_failed：认证失败。 - download_failed：镜像下载失败。请向技术人员寻求帮助。 - image_over_sized：镜像大小超限，不支持扫描。建议精简镜像。 - get_detail_info_not_found：获取镜像详细信息失败，镜像仓中可能已经不存在此镜像。请重新同步最新镜像。 - image_layer_over_sized：镜像层数超限，不支持扫描。建议精简镜像。 - schema_v1_not_support：Schema V1镜像不支持扫描。建议升级到V2版本。 - access_swr_failed：访问SWR服务出错。请向技术人员寻求帮助。 - swr_authentication_error：缺少SWR授权。请参考镜像授权指导设置权限。 - failed_to_scan_vulnerability：漏洞扫描失败。 - failed_to_scan_file：文件扫描失败。 - failed_to_scan_software：软件扫描失败。 - failed_to_check_sensitive_information：敏感信息核查失败。 - failed_to_check_baseline：基线检查失败。 - failed_to_check_software_compliance：软件合规检查失败。 - failed_to_query_basic_image_information：基础镜像信息查询失败。 - failed_to_check_build_cmd：镜像构建指令扫描失败。 - response_timed_out：响应超时。 - database_error：数据库错误。 - failed_to_send_the_scan_request：发送扫描请求失败。
-    * imageSize  **参数解释**: 镜像大小 **取值范围**: 取值0-2147483547
-    * latestUpdateTime  **参数解释**: 镜像版本最后更新时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
-    * latestScanTime  **参数解释**: 最近扫描时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
-    * latestSyncTime  **参数解释**: 最近同步时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
-    * vulNum  **参数解释**: 漏洞个数 **取值范围**: 取值0-2147483647
-    * unsafeSettingNum  **参数解释**: 基线扫描未通过数 **取值范围**: 取值0-2147483647
-    * maliciousFileNum  **参数解释**: 恶意文件数 **取值范围**: 取值0-2147483647
+    * imageSize  **参数解释**: 镜像大小 **取值范围**: 取值0-2147483547，单位为字节（bytes）
+    * latestUpdateTime  **参数解释**: 镜像版本最后更新时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
+    * latestScanTime  **参数解释**: 最近扫描时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
+    * latestSyncTime  **参数解释**: 最近同步时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
+    * vulNum  **参数解释**: 镜像扫描出的漏洞总数量 **取值范围**: 取值0-2147483647；单位：个
+    * unsafeSettingNum  **参数解释**: 基线扫描未通过数 **取值范围**: 取值0-2147483647；单位：项
+    * maliciousFileNum  **参数解释**: 镜像扫描出的恶意文件数 **取值范围**: 取值0-2147483647；单位：个
     * domainName  **参数解释**: 拥有者（共享镜像参数） **取值范围**: 字符长度0-128
     * sharedStatus  **参数解释**： 共享镜像状态 **取值范围**： - expired：已过期。 - effective：有效。
     * scannable  是否可扫描
     * isMultipleArch  是否是多架构镜像
-    * instanceName  **参数解释**: 企业版镜像实例名称 **取值范围**: 字符长度0-128
-    * instanceId  **参数解释**: 企业版镜像实例ID **取值范围**: 字符长度0-64
+    * instanceName  **参数解释**: SWR企业版镜像所属仓库实例名称 **取值范围**: 字符长度0-128
+    * instanceId  **参数解释**: SWR企业版镜像所属仓库实例的唯一标识ID **取值范围**: 字符长度0-64
     * instanceUrl  **参数解释**: 企业版镜像实例URL **取值范围**: 字符长度0-256
     * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **取值范围**: - Security：安全。 - Low：低危。 - Medium：中危。 - High：高危。
     * associationImages  多架构关联镜像信息
@@ -177,33 +177,33 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  **参数解释**: id **取值范围**: 最小值0，最大值9223372036854775807
+    * id  **参数解释**: 镜像记录的唯一标识ID **取值范围**: 最小值0，最大值9223372036854775807
     * namespace  **参数解释**: 组织名称 **取值范围**: 字符长度0-64位
     * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度0-128位
-    * imageId  **参数解释**: 镜像id **取值范围**: 字符长度0-64位
+    * imageId  **参数解释**: 镜像的唯一标识ID **取值范围**: 字符长度0-64位
     * imageDigest  **参数解释**: 镜像digest **取值范围**: 字符长度0-128位
     * imageVersion  **参数解释**: 镜像版本 **取值范围**: 字符长度0-64位
     * imageType  **参数解释**: 镜像类型 **取值范围**: - private_image：SWR私有镜像。 - shared_image：SWR共享镜像。 - instance_image：SWR企业版镜像。 - harbor：Harbor仓库镜像。 - jfrog：Jfrog镜像。
-    * registryId  **参数解释**: 镜像仓id **取值范围**: 字符长度1-64位
+    * registryId  **参数解释**: 镜像所属仓库的唯一标识ID **取值范围**: 字符长度1-64位
     * registryName  **参数解释**: 镜像仓库名称 **取值范围**: 字符长度1-128位
-    * registryType  **参数解释**： 镜像仓库类型 **取值范围**： - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。
+    * registryType  **参数解释**： 镜像仓库类型 **取值范围**： - SwrPrivate：SWR私有。 - SwrShared：SWR共享。 - SwrEnterprise：SWR企业。 - Harbor：Harbor仓库。 - Jfrog：Jfrog仓库。 - Other：其他仓库。
     * latestVersion  是否是最新版本
     * scanStatus  **参数解释**： 扫描状态 **取值范围**： - unscan：未扫描。 - success：扫描完成。 - scanning：正在扫描。 - failed：扫描失败。 - download_failed：下载失败。 - image_oversized：镜像超大。 - waiting_for_scan：等待扫描。
     * scanFailedDesc  **参数解释**： 扫描失败原因描述 **取值范围**： 扫描失败原因code和描述对应关系如下 - unknown_error：未知错误。 - authentication_failed：认证失败。 - download_failed：镜像下载失败。请向技术人员寻求帮助。 - image_over_sized：镜像大小超限，不支持扫描。建议精简镜像。 - get_detail_info_not_found：获取镜像详细信息失败，镜像仓中可能已经不存在此镜像。请重新同步最新镜像。 - image_layer_over_sized：镜像层数超限，不支持扫描。建议精简镜像。 - schema_v1_not_support：Schema V1镜像不支持扫描。建议升级到V2版本。 - access_swr_failed：访问SWR服务出错。请向技术人员寻求帮助。 - swr_authentication_error：缺少SWR授权。请参考镜像授权指导设置权限。 - failed_to_scan_vulnerability：漏洞扫描失败。 - failed_to_scan_file：文件扫描失败。 - failed_to_scan_software：软件扫描失败。 - failed_to_check_sensitive_information：敏感信息核查失败。 - failed_to_check_baseline：基线检查失败。 - failed_to_check_software_compliance：软件合规检查失败。 - failed_to_query_basic_image_information：基础镜像信息查询失败。 - failed_to_check_build_cmd：镜像构建指令扫描失败。 - response_timed_out：响应超时。 - database_error：数据库错误。 - failed_to_send_the_scan_request：发送扫描请求失败。
     * scanFailedCode  **参数解释**： 扫描失败原因code **取值范围**： 扫描失败原因code和描述对应关系如下 - unknown_error：未知错误。 - authentication_failed：认证失败。 - download_failed：镜像下载失败。请向技术人员寻求帮助。 - image_over_sized：镜像大小超限，不支持扫描。建议精简镜像。 - get_detail_info_not_found：获取镜像详细信息失败，镜像仓中可能已经不存在此镜像。请重新同步最新镜像。 - image_layer_over_sized：镜像层数超限，不支持扫描。建议精简镜像。 - schema_v1_not_support：Schema V1镜像不支持扫描。建议升级到V2版本。 - access_swr_failed：访问SWR服务出错。请向技术人员寻求帮助。 - swr_authentication_error：缺少SWR授权。请参考镜像授权指导设置权限。 - failed_to_scan_vulnerability：漏洞扫描失败。 - failed_to_scan_file：文件扫描失败。 - failed_to_scan_software：软件扫描失败。 - failed_to_check_sensitive_information：敏感信息核查失败。 - failed_to_check_baseline：基线检查失败。 - failed_to_check_software_compliance：软件合规检查失败。 - failed_to_query_basic_image_information：基础镜像信息查询失败。 - failed_to_check_build_cmd：镜像构建指令扫描失败。 - response_timed_out：响应超时。 - database_error：数据库错误。 - failed_to_send_the_scan_request：发送扫描请求失败。
-    * imageSize  **参数解释**: 镜像大小 **取值范围**: 取值0-2147483547
-    * latestUpdateTime  **参数解释**: 镜像版本最后更新时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
-    * latestScanTime  **参数解释**: 最近扫描时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
-    * latestSyncTime  **参数解释**: 最近同步时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
-    * vulNum  **参数解释**: 漏洞个数 **取值范围**: 取值0-2147483647
-    * unsafeSettingNum  **参数解释**: 基线扫描未通过数 **取值范围**: 取值0-2147483647
-    * maliciousFileNum  **参数解释**: 恶意文件数 **取值范围**: 取值0-2147483647
+    * imageSize  **参数解释**: 镜像大小 **取值范围**: 取值0-2147483547，单位为字节（bytes）
+    * latestUpdateTime  **参数解释**: 镜像版本最后更新时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
+    * latestScanTime  **参数解释**: 最近扫描时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
+    * latestSyncTime  **参数解释**: 最近同步时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
+    * vulNum  **参数解释**: 镜像扫描出的漏洞总数量 **取值范围**: 取值0-2147483647；单位：个
+    * unsafeSettingNum  **参数解释**: 基线扫描未通过数 **取值范围**: 取值0-2147483647；单位：项
+    * maliciousFileNum  **参数解释**: 镜像扫描出的恶意文件数 **取值范围**: 取值0-2147483647；单位：个
     * domainName  **参数解释**: 拥有者（共享镜像参数） **取值范围**: 字符长度0-128
     * sharedStatus  **参数解释**： 共享镜像状态 **取值范围**： - expired：已过期。 - effective：有效。
     * scannable  是否可扫描
     * isMultipleArch  是否是多架构镜像
-    * instanceName  **参数解释**: 企业版镜像实例名称 **取值范围**: 字符长度0-128
-    * instanceId  **参数解释**: 企业版镜像实例ID **取值范围**: 字符长度0-64
+    * instanceName  **参数解释**: SWR企业版镜像所属仓库实例名称 **取值范围**: 字符长度0-128
+    * instanceId  **参数解释**: SWR企业版镜像所属仓库实例的唯一标识ID **取值范围**: 字符长度0-64
     * instanceUrl  **参数解释**: 企业版镜像实例URL **取值范围**: 字符长度0-256
     * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **取值范围**: - Security：安全。 - Low：低危。 - Medium：中危。 - High：高危。
     * associationImages  多架构关联镜像信息
@@ -245,33 +245,33 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  **参数解释**: id **取值范围**: 最小值0，最大值9223372036854775807
+    * id  **参数解释**: 镜像记录的唯一标识ID **取值范围**: 最小值0，最大值9223372036854775807
     * namespace  **参数解释**: 组织名称 **取值范围**: 字符长度0-64位
     * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度0-128位
-    * imageId  **参数解释**: 镜像id **取值范围**: 字符长度0-64位
+    * imageId  **参数解释**: 镜像的唯一标识ID **取值范围**: 字符长度0-64位
     * imageDigest  **参数解释**: 镜像digest **取值范围**: 字符长度0-128位
     * imageVersion  **参数解释**: 镜像版本 **取值范围**: 字符长度0-64位
     * imageType  **参数解释**: 镜像类型 **取值范围**: - private_image：SWR私有镜像。 - shared_image：SWR共享镜像。 - instance_image：SWR企业版镜像。 - harbor：Harbor仓库镜像。 - jfrog：Jfrog镜像。
-    * registryId  **参数解释**: 镜像仓id **取值范围**: 字符长度1-64位
+    * registryId  **参数解释**: 镜像所属仓库的唯一标识ID **取值范围**: 字符长度1-64位
     * registryName  **参数解释**: 镜像仓库名称 **取值范围**: 字符长度1-128位
-    * registryType  **参数解释**： 镜像仓库类型 **取值范围**： - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。
+    * registryType  **参数解释**： 镜像仓库类型 **取值范围**： - SwrPrivate：SWR私有。 - SwrShared：SWR共享。 - SwrEnterprise：SWR企业。 - Harbor：Harbor仓库。 - Jfrog：Jfrog仓库。 - Other：其他仓库。
     * latestVersion  是否是最新版本
     * scanStatus  **参数解释**： 扫描状态 **取值范围**： - unscan：未扫描。 - success：扫描完成。 - scanning：正在扫描。 - failed：扫描失败。 - download_failed：下载失败。 - image_oversized：镜像超大。 - waiting_for_scan：等待扫描。
     * scanFailedDesc  **参数解释**： 扫描失败原因描述 **取值范围**： 扫描失败原因code和描述对应关系如下 - unknown_error：未知错误。 - authentication_failed：认证失败。 - download_failed：镜像下载失败。请向技术人员寻求帮助。 - image_over_sized：镜像大小超限，不支持扫描。建议精简镜像。 - get_detail_info_not_found：获取镜像详细信息失败，镜像仓中可能已经不存在此镜像。请重新同步最新镜像。 - image_layer_over_sized：镜像层数超限，不支持扫描。建议精简镜像。 - schema_v1_not_support：Schema V1镜像不支持扫描。建议升级到V2版本。 - access_swr_failed：访问SWR服务出错。请向技术人员寻求帮助。 - swr_authentication_error：缺少SWR授权。请参考镜像授权指导设置权限。 - failed_to_scan_vulnerability：漏洞扫描失败。 - failed_to_scan_file：文件扫描失败。 - failed_to_scan_software：软件扫描失败。 - failed_to_check_sensitive_information：敏感信息核查失败。 - failed_to_check_baseline：基线检查失败。 - failed_to_check_software_compliance：软件合规检查失败。 - failed_to_query_basic_image_information：基础镜像信息查询失败。 - failed_to_check_build_cmd：镜像构建指令扫描失败。 - response_timed_out：响应超时。 - database_error：数据库错误。 - failed_to_send_the_scan_request：发送扫描请求失败。
     * scanFailedCode  **参数解释**： 扫描失败原因code **取值范围**： 扫描失败原因code和描述对应关系如下 - unknown_error：未知错误。 - authentication_failed：认证失败。 - download_failed：镜像下载失败。请向技术人员寻求帮助。 - image_over_sized：镜像大小超限，不支持扫描。建议精简镜像。 - get_detail_info_not_found：获取镜像详细信息失败，镜像仓中可能已经不存在此镜像。请重新同步最新镜像。 - image_layer_over_sized：镜像层数超限，不支持扫描。建议精简镜像。 - schema_v1_not_support：Schema V1镜像不支持扫描。建议升级到V2版本。 - access_swr_failed：访问SWR服务出错。请向技术人员寻求帮助。 - swr_authentication_error：缺少SWR授权。请参考镜像授权指导设置权限。 - failed_to_scan_vulnerability：漏洞扫描失败。 - failed_to_scan_file：文件扫描失败。 - failed_to_scan_software：软件扫描失败。 - failed_to_check_sensitive_information：敏感信息核查失败。 - failed_to_check_baseline：基线检查失败。 - failed_to_check_software_compliance：软件合规检查失败。 - failed_to_query_basic_image_information：基础镜像信息查询失败。 - failed_to_check_build_cmd：镜像构建指令扫描失败。 - response_timed_out：响应超时。 - database_error：数据库错误。 - failed_to_send_the_scan_request：发送扫描请求失败。
-    * imageSize  **参数解释**: 镜像大小 **取值范围**: 取值0-2147483547
-    * latestUpdateTime  **参数解释**: 镜像版本最后更新时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
-    * latestScanTime  **参数解释**: 最近扫描时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
-    * latestSyncTime  **参数解释**: 最近同步时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
-    * vulNum  **参数解释**: 漏洞个数 **取值范围**: 取值0-2147483647
-    * unsafeSettingNum  **参数解释**: 基线扫描未通过数 **取值范围**: 取值0-2147483647
-    * maliciousFileNum  **参数解释**: 恶意文件数 **取值范围**: 取值0-2147483647
+    * imageSize  **参数解释**: 镜像大小 **取值范围**: 取值0-2147483547，单位为字节（bytes）
+    * latestUpdateTime  **参数解释**: 镜像版本最后更新时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
+    * latestScanTime  **参数解释**: 最近扫描时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
+    * latestSyncTime  **参数解释**: 最近同步时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
+    * vulNum  **参数解释**: 镜像扫描出的漏洞总数量 **取值范围**: 取值0-2147483647；单位：个
+    * unsafeSettingNum  **参数解释**: 基线扫描未通过数 **取值范围**: 取值0-2147483647；单位：项
+    * maliciousFileNum  **参数解释**: 镜像扫描出的恶意文件数 **取值范围**: 取值0-2147483647；单位：个
     * domainName  **参数解释**: 拥有者（共享镜像参数） **取值范围**: 字符长度0-128
     * sharedStatus  **参数解释**： 共享镜像状态 **取值范围**： - expired：已过期。 - effective：有效。
     * scannable  是否可扫描
     * isMultipleArch  是否是多架构镜像
-    * instanceName  **参数解释**: 企业版镜像实例名称 **取值范围**: 字符长度0-128
-    * instanceId  **参数解释**: 企业版镜像实例ID **取值范围**: 字符长度0-64
+    * instanceName  **参数解释**: SWR企业版镜像所属仓库实例名称 **取值范围**: 字符长度0-128
+    * instanceId  **参数解释**: SWR企业版镜像所属仓库实例的唯一标识ID **取值范围**: 字符长度0-64
     * instanceUrl  **参数解释**: 企业版镜像实例URL **取值范围**: 字符长度0-256
     * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **取值范围**: - Security：安全。 - Low：低危。 - Medium：中危。 - High：高危。
     * associationImages  多架构关联镜像信息
@@ -313,33 +313,33 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  **参数解释**: id **取值范围**: 最小值0，最大值9223372036854775807
+    * id  **参数解释**: 镜像记录的唯一标识ID **取值范围**: 最小值0，最大值9223372036854775807
     * namespace  **参数解释**: 组织名称 **取值范围**: 字符长度0-64位
     * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度0-128位
-    * imageId  **参数解释**: 镜像id **取值范围**: 字符长度0-64位
+    * imageId  **参数解释**: 镜像的唯一标识ID **取值范围**: 字符长度0-64位
     * imageDigest  **参数解释**: 镜像digest **取值范围**: 字符长度0-128位
     * imageVersion  **参数解释**: 镜像版本 **取值范围**: 字符长度0-64位
     * imageType  **参数解释**: 镜像类型 **取值范围**: - private_image：SWR私有镜像。 - shared_image：SWR共享镜像。 - instance_image：SWR企业版镜像。 - harbor：Harbor仓库镜像。 - jfrog：Jfrog镜像。
-    * registryId  **参数解释**: 镜像仓id **取值范围**: 字符长度1-64位
+    * registryId  **参数解释**: 镜像所属仓库的唯一标识ID **取值范围**: 字符长度1-64位
     * registryName  **参数解释**: 镜像仓库名称 **取值范围**: 字符长度1-128位
-    * registryType  **参数解释**： 镜像仓库类型 **取值范围**： - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。
+    * registryType  **参数解释**： 镜像仓库类型 **取值范围**： - SwrPrivate：SWR私有。 - SwrShared：SWR共享。 - SwrEnterprise：SWR企业。 - Harbor：Harbor仓库。 - Jfrog：Jfrog仓库。 - Other：其他仓库。
     * latestVersion  是否是最新版本
     * scanStatus  **参数解释**： 扫描状态 **取值范围**： - unscan：未扫描。 - success：扫描完成。 - scanning：正在扫描。 - failed：扫描失败。 - download_failed：下载失败。 - image_oversized：镜像超大。 - waiting_for_scan：等待扫描。
     * scanFailedDesc  **参数解释**： 扫描失败原因描述 **取值范围**： 扫描失败原因code和描述对应关系如下 - unknown_error：未知错误。 - authentication_failed：认证失败。 - download_failed：镜像下载失败。请向技术人员寻求帮助。 - image_over_sized：镜像大小超限，不支持扫描。建议精简镜像。 - get_detail_info_not_found：获取镜像详细信息失败，镜像仓中可能已经不存在此镜像。请重新同步最新镜像。 - image_layer_over_sized：镜像层数超限，不支持扫描。建议精简镜像。 - schema_v1_not_support：Schema V1镜像不支持扫描。建议升级到V2版本。 - access_swr_failed：访问SWR服务出错。请向技术人员寻求帮助。 - swr_authentication_error：缺少SWR授权。请参考镜像授权指导设置权限。 - failed_to_scan_vulnerability：漏洞扫描失败。 - failed_to_scan_file：文件扫描失败。 - failed_to_scan_software：软件扫描失败。 - failed_to_check_sensitive_information：敏感信息核查失败。 - failed_to_check_baseline：基线检查失败。 - failed_to_check_software_compliance：软件合规检查失败。 - failed_to_query_basic_image_information：基础镜像信息查询失败。 - failed_to_check_build_cmd：镜像构建指令扫描失败。 - response_timed_out：响应超时。 - database_error：数据库错误。 - failed_to_send_the_scan_request：发送扫描请求失败。
     * scanFailedCode  **参数解释**： 扫描失败原因code **取值范围**： 扫描失败原因code和描述对应关系如下 - unknown_error：未知错误。 - authentication_failed：认证失败。 - download_failed：镜像下载失败。请向技术人员寻求帮助。 - image_over_sized：镜像大小超限，不支持扫描。建议精简镜像。 - get_detail_info_not_found：获取镜像详细信息失败，镜像仓中可能已经不存在此镜像。请重新同步最新镜像。 - image_layer_over_sized：镜像层数超限，不支持扫描。建议精简镜像。 - schema_v1_not_support：Schema V1镜像不支持扫描。建议升级到V2版本。 - access_swr_failed：访问SWR服务出错。请向技术人员寻求帮助。 - swr_authentication_error：缺少SWR授权。请参考镜像授权指导设置权限。 - failed_to_scan_vulnerability：漏洞扫描失败。 - failed_to_scan_file：文件扫描失败。 - failed_to_scan_software：软件扫描失败。 - failed_to_check_sensitive_information：敏感信息核查失败。 - failed_to_check_baseline：基线检查失败。 - failed_to_check_software_compliance：软件合规检查失败。 - failed_to_query_basic_image_information：基础镜像信息查询失败。 - failed_to_check_build_cmd：镜像构建指令扫描失败。 - response_timed_out：响应超时。 - database_error：数据库错误。 - failed_to_send_the_scan_request：发送扫描请求失败。
-    * imageSize  **参数解释**: 镜像大小 **取值范围**: 取值0-2147483547
-    * latestUpdateTime  **参数解释**: 镜像版本最后更新时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
-    * latestScanTime  **参数解释**: 最近扫描时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
-    * latestSyncTime  **参数解释**: 最近同步时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
-    * vulNum  **参数解释**: 漏洞个数 **取值范围**: 取值0-2147483647
-    * unsafeSettingNum  **参数解释**: 基线扫描未通过数 **取值范围**: 取值0-2147483647
-    * maliciousFileNum  **参数解释**: 恶意文件数 **取值范围**: 取值0-2147483647
+    * imageSize  **参数解释**: 镜像大小 **取值范围**: 取值0-2147483547，单位为字节（bytes）
+    * latestUpdateTime  **参数解释**: 镜像版本最后更新时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
+    * latestScanTime  **参数解释**: 最近扫描时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
+    * latestSyncTime  **参数解释**: 最近同步时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
+    * vulNum  **参数解释**: 镜像扫描出的漏洞总数量 **取值范围**: 取值0-2147483647；单位：个
+    * unsafeSettingNum  **参数解释**: 基线扫描未通过数 **取值范围**: 取值0-2147483647；单位：项
+    * maliciousFileNum  **参数解释**: 镜像扫描出的恶意文件数 **取值范围**: 取值0-2147483647；单位：个
     * domainName  **参数解释**: 拥有者（共享镜像参数） **取值范围**: 字符长度0-128
     * sharedStatus  **参数解释**： 共享镜像状态 **取值范围**： - expired：已过期。 - effective：有效。
     * scannable  是否可扫描
     * isMultipleArch  是否是多架构镜像
-    * instanceName  **参数解释**: 企业版镜像实例名称 **取值范围**: 字符长度0-128
-    * instanceId  **参数解释**: 企业版镜像实例ID **取值范围**: 字符长度0-64
+    * instanceName  **参数解释**: SWR企业版镜像所属仓库实例名称 **取值范围**: 字符长度0-128
+    * instanceId  **参数解释**: SWR企业版镜像所属仓库实例的唯一标识ID **取值范围**: 字符长度0-64
     * instanceUrl  **参数解释**: 企业版镜像实例URL **取值范围**: 字符长度0-256
     * severityLevel  **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **取值范围**: - Security：安全。 - Low：低危。 - Medium：中危。 - High：高危。
     * associationImages  多架构关联镜像信息
@@ -649,7 +649,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  **参数解释**: id **取值范围**: 最小值0，最大值9223372036854775807
+    *  **参数解释**: 镜像记录的唯一标识ID **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -661,7 +661,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id **参数解释**: id **取值范围**: 最小值0，最大值9223372036854775807
+    * @param int|null $id **参数解释**: 镜像记录的唯一标识ID **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -721,7 +721,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageId
-    *  **参数解释**: 镜像id **取值范围**: 字符长度0-64位
+    *  **参数解释**: 镜像的唯一标识ID **取值范围**: 字符长度0-64位
     *
     * @return string|null
     */
@@ -733,7 +733,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imageId
     *
-    * @param string|null $imageId **参数解释**: 镜像id **取值范围**: 字符长度0-64位
+    * @param string|null $imageId **参数解释**: 镜像的唯一标识ID **取值范围**: 字符长度0-64位
     *
     * @return $this
     */
@@ -817,7 +817,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets registryId
-    *  **参数解释**: 镜像仓id **取值范围**: 字符长度1-64位
+    *  **参数解释**: 镜像所属仓库的唯一标识ID **取值范围**: 字符长度1-64位
     *
     * @return string|null
     */
@@ -829,7 +829,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets registryId
     *
-    * @param string|null $registryId **参数解释**: 镜像仓id **取值范围**: 字符长度1-64位
+    * @param string|null $registryId **参数解释**: 镜像所属仓库的唯一标识ID **取值范围**: 字符长度1-64位
     *
     * @return $this
     */
@@ -865,7 +865,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets registryType
-    *  **参数解释**： 镜像仓库类型 **取值范围**： - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。
+    *  **参数解释**： 镜像仓库类型 **取值范围**： - SwrPrivate：SWR私有。 - SwrShared：SWR共享。 - SwrEnterprise：SWR企业。 - Harbor：Harbor仓库。 - Jfrog：Jfrog仓库。 - Other：其他仓库。
     *
     * @return string|null
     */
@@ -877,7 +877,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets registryType
     *
-    * @param string|null $registryType **参数解释**： 镜像仓库类型 **取值范围**： - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。
+    * @param string|null $registryType **参数解释**： 镜像仓库类型 **取值范围**： - SwrPrivate：SWR私有。 - SwrShared：SWR共享。 - SwrEnterprise：SWR企业。 - Harbor：Harbor仓库。 - Jfrog：Jfrog仓库。 - Other：其他仓库。
     *
     * @return $this
     */
@@ -985,7 +985,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageSize
-    *  **参数解释**: 镜像大小 **取值范围**: 取值0-2147483547
+    *  **参数解释**: 镜像大小 **取值范围**: 取值0-2147483547，单位为字节（bytes）
     *
     * @return int|null
     */
@@ -997,7 +997,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imageSize
     *
-    * @param int|null $imageSize **参数解释**: 镜像大小 **取值范围**: 取值0-2147483547
+    * @param int|null $imageSize **参数解释**: 镜像大小 **取值范围**: 取值0-2147483547，单位为字节（bytes）
     *
     * @return $this
     */
@@ -1009,7 +1009,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets latestUpdateTime
-    *  **参数解释**: 镜像版本最后更新时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
+    *  **参数解释**: 镜像版本最后更新时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
     *
     * @return int|null
     */
@@ -1021,7 +1021,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets latestUpdateTime
     *
-    * @param int|null $latestUpdateTime **参数解释**: 镜像版本最后更新时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
+    * @param int|null $latestUpdateTime **参数解释**: 镜像版本最后更新时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
     *
     * @return $this
     */
@@ -1033,7 +1033,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets latestScanTime
-    *  **参数解释**: 最近扫描时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
+    *  **参数解释**: 最近扫描时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
     *
     * @return int|null
     */
@@ -1045,7 +1045,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets latestScanTime
     *
-    * @param int|null $latestScanTime **参数解释**: 最近扫描时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
+    * @param int|null $latestScanTime **参数解释**: 最近扫描时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
     *
     * @return $this
     */
@@ -1057,7 +1057,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets latestSyncTime
-    *  **参数解释**: 最近同步时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
+    *  **参数解释**: 最近同步时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
     *
     * @return int|null
     */
@@ -1069,7 +1069,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets latestSyncTime
     *
-    * @param int|null $latestSyncTime **参数解释**: 最近同步时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807
+    * @param int|null $latestSyncTime **参数解释**: 最近同步时间，时间单位 毫秒（ms） **取值范围**: 取值0-9223372036854775807 ms（UTC时区，1970-01-01 00:00:00起）
     *
     * @return $this
     */
@@ -1081,7 +1081,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vulNum
-    *  **参数解释**: 漏洞个数 **取值范围**: 取值0-2147483647
+    *  **参数解释**: 镜像扫描出的漏洞总数量 **取值范围**: 取值0-2147483647；单位：个
     *
     * @return int|null
     */
@@ -1093,7 +1093,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vulNum
     *
-    * @param int|null $vulNum **参数解释**: 漏洞个数 **取值范围**: 取值0-2147483647
+    * @param int|null $vulNum **参数解释**: 镜像扫描出的漏洞总数量 **取值范围**: 取值0-2147483647；单位：个
     *
     * @return $this
     */
@@ -1105,7 +1105,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets unsafeSettingNum
-    *  **参数解释**: 基线扫描未通过数 **取值范围**: 取值0-2147483647
+    *  **参数解释**: 基线扫描未通过数 **取值范围**: 取值0-2147483647；单位：项
     *
     * @return int|null
     */
@@ -1117,7 +1117,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets unsafeSettingNum
     *
-    * @param int|null $unsafeSettingNum **参数解释**: 基线扫描未通过数 **取值范围**: 取值0-2147483647
+    * @param int|null $unsafeSettingNum **参数解释**: 基线扫描未通过数 **取值范围**: 取值0-2147483647；单位：项
     *
     * @return $this
     */
@@ -1129,7 +1129,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets maliciousFileNum
-    *  **参数解释**: 恶意文件数 **取值范围**: 取值0-2147483647
+    *  **参数解释**: 镜像扫描出的恶意文件数 **取值范围**: 取值0-2147483647；单位：个
     *
     * @return int|null
     */
@@ -1141,7 +1141,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets maliciousFileNum
     *
-    * @param int|null $maliciousFileNum **参数解释**: 恶意文件数 **取值范围**: 取值0-2147483647
+    * @param int|null $maliciousFileNum **参数解释**: 镜像扫描出的恶意文件数 **取值范围**: 取值0-2147483647；单位：个
     *
     * @return $this
     */
@@ -1249,7 +1249,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceName
-    *  **参数解释**: 企业版镜像实例名称 **取值范围**: 字符长度0-128
+    *  **参数解释**: SWR企业版镜像所属仓库实例名称 **取值范围**: 字符长度0-128
     *
     * @return string|null
     */
@@ -1261,7 +1261,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets instanceName
     *
-    * @param string|null $instanceName **参数解释**: 企业版镜像实例名称 **取值范围**: 字符长度0-128
+    * @param string|null $instanceName **参数解释**: SWR企业版镜像所属仓库实例名称 **取值范围**: 字符长度0-128
     *
     * @return $this
     */
@@ -1273,7 +1273,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  **参数解释**: 企业版镜像实例ID **取值范围**: 字符长度0-64
+    *  **参数解释**: SWR企业版镜像所属仓库实例的唯一标识ID **取值范围**: 字符长度0-64
     *
     * @return string|null
     */
@@ -1285,7 +1285,7 @@ class RegistryImagesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId **参数解释**: 企业版镜像实例ID **取值范围**: 字符长度0-64
+    * @param string|null $instanceId **参数解释**: SWR企业版镜像所属仓库实例的唯一标识ID **取值范围**: 字符长度0-64
     *
     * @return $this
     */

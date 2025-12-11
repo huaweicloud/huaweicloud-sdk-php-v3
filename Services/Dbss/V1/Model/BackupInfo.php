@@ -25,7 +25,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
     * deleted  标记删除
     * endTime  备份结束时间,yyyy-MM-dd HH:mm:ss
     * fileSize  文件大小
-    * fileSizeUnit  文件大小单位 - Byte - KB - MB - GB
+    * fileSizeUnit  文件大小单位 - Byte：Byte - KB：kb - MB: mb - GB: gb
     * id  备份ID
     * mode  备份方式 - AUTO：自动备份
     * name  备份名称
@@ -61,7 +61,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
     * deleted  标记删除
     * endTime  备份结束时间,yyyy-MM-dd HH:mm:ss
     * fileSize  文件大小
-    * fileSizeUnit  文件大小单位 - Byte - KB - MB - GB
+    * fileSizeUnit  文件大小单位 - Byte：Byte - KB：kb - MB: mb - GB: gb
     * id  备份ID
     * mode  备份方式 - AUTO：自动备份
     * name  备份名称
@@ -118,7 +118,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
     * deleted  标记删除
     * endTime  备份结束时间,yyyy-MM-dd HH:mm:ss
     * fileSize  文件大小
-    * fileSizeUnit  文件大小单位 - Byte - KB - MB - GB
+    * fileSizeUnit  文件大小单位 - Byte：Byte - KB：kb - MB: mb - GB: gb
     * id  备份ID
     * mode  备份方式 - AUTO：自动备份
     * name  备份名称
@@ -154,7 +154,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
     * deleted  标记删除
     * endTime  备份结束时间,yyyy-MM-dd HH:mm:ss
     * fileSize  文件大小
-    * fileSizeUnit  文件大小单位 - Byte - KB - MB - GB
+    * fileSizeUnit  文件大小单位 - Byte：Byte - KB：kb - MB: mb - GB: gb
     * id  备份ID
     * mode  备份方式 - AUTO：自动备份
     * name  备份名称
@@ -190,7 +190,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
     * deleted  标记删除
     * endTime  备份结束时间,yyyy-MM-dd HH:mm:ss
     * fileSize  文件大小
-    * fileSizeUnit  文件大小单位 - Byte - KB - MB - GB
+    * fileSizeUnit  文件大小单位 - Byte：Byte - KB：kb - MB: mb - GB: gb
     * id  备份ID
     * mode  备份方式 - AUTO：自动备份
     * name  备份名称
@@ -437,7 +437,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileSizeUnit
-    *  文件大小单位 - Byte - KB - MB - GB
+    *  文件大小单位 - Byte：Byte - KB：kb - MB: mb - GB: gb
     *
     * @return string|null
     */
@@ -449,7 +449,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileSizeUnit
     *
-    * @param string|null $fileSizeUnit 文件大小单位 - Byte - KB - MB - GB
+    * @param string|null $fileSizeUnit 文件大小单位 - Byte：Byte - KB：kb - MB: mb - GB: gb
     *
     * @return $this
     */

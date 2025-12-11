@@ -20,7 +20,7 @@ class SystemUserWhiteListRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     * systemUserNameList  系统用户名列表
     *
     * @var string[]
@@ -32,7 +32,7 @@ class SystemUserWhiteListRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     * systemUserNameList  系统用户名列表
     *
     * @var string[]
@@ -65,7 +65,7 @@ class SystemUserWhiteListRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     * systemUserNameList  系统用户名列表
     *
     * @var string[]
@@ -77,7 +77,7 @@ class SystemUserWhiteListRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     * systemUserNameList  系统用户名列表
     *
     * @var string[]
@@ -89,7 +89,7 @@ class SystemUserWhiteListRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     * systemUserNameList  系统用户名列表
     *
     * @var string[]
@@ -194,7 +194,7 @@ class SystemUserWhiteListRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+    *  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     *
     * @return string|null
     */
@@ -206,7 +206,7 @@ class SystemUserWhiteListRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+    * @param string|null $hostId **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     *
     * @return $this
     */

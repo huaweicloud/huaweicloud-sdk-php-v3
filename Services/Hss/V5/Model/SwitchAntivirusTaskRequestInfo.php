@@ -20,8 +20,8 @@ class SwitchAntivirusTaskRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskId  任务ID
-    * taskName  任务名称
+    * taskId  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    * taskName  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
     * hostIds  关联主机列表
     *
     * @var string[]
@@ -34,8 +34,8 @@ class SwitchAntivirusTaskRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskId  任务ID
-    * taskName  任务名称
+    * taskId  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    * taskName  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
     * hostIds  关联主机列表
     *
     * @var string[]
@@ -69,8 +69,8 @@ class SwitchAntivirusTaskRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskId  任务ID
-    * taskName  任务名称
+    * taskId  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    * taskName  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
     * hostIds  关联主机列表
     *
     * @var string[]
@@ -83,8 +83,8 @@ class SwitchAntivirusTaskRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskId  任务ID
-    * taskName  任务名称
+    * taskId  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    * taskName  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
     * hostIds  关联主机列表
     *
     * @var string[]
@@ -97,8 +97,8 @@ class SwitchAntivirusTaskRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskId  任务ID
-    * taskName  任务名称
+    * taskId  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    * taskName  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
     * hostIds  关联主机列表
     *
     * @var string[]
@@ -214,7 +214,7 @@ class SwitchAntivirusTaskRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskId
-    *  任务ID
+    *  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
     *
     * @return string
     */
@@ -226,7 +226,7 @@ class SwitchAntivirusTaskRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string $taskId 任务ID
+    * @param string $taskId **参数解释**： 任务ID **取值范围**: 字符长度1-64位
     *
     * @return $this
     */
@@ -238,7 +238,7 @@ class SwitchAntivirusTaskRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskName
-    *  任务名称
+    *  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
     *
     * @return string
     */
@@ -250,7 +250,7 @@ class SwitchAntivirusTaskRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets taskName
     *
-    * @param string $taskName 任务名称
+    * @param string $taskName **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
     *
     * @return $this
     */

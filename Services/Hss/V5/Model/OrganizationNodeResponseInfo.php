@@ -20,12 +20,12 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * parentId  父节点Id
-    * id  节点Id
-    * urn  组织的统一资源名称，格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
-    * name  名称
-    * orgType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - unit：组织单元 - account：账号  **默认取值**: 不涉及
-    * delegated  组织或账号是否已授权。   - true: 已授权（无需授权）。   - false: 未授权。
+    * parentId  **参数解释** 当前组织节点的父节点唯一标识ID，用于标识组织树层级关系（根节点父ID通常为“0”或空）； **取值范围** 字符长度1-64位，符合平台组织节点ID命名规范
+    * id  **参数解释** 组织树节点的唯一标识ID，用于唯一确定某个组织节点； **取值范围** 字符长度1-64位，符合平台组织节点ID命名规范（如UUID或数字组合）
+    * urn  **参数解释** 组织节点的统一资源名称（URN），用于跨服务唯一标识组织资源； **取值范围** 字符长度1-256位，格式为organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx，符合平台URN命名规范
+    * name  **参数解释** 组织节点的名称（可能是组织单元名称或账号名称，与org_type对应）； **取值范围** 字符长度1-64位，支持字母、数字、连字符、下划线及中文，不能以特殊字符开头或结尾
+    * orgType  **参数解释**: 节点（组织单元或账号）的类型； **取值范围**: unit（组织单元）、account（账号）
+    * delegated  **参数解释**: 标识组织节点（组织单元或账号）是否已完成授权； **取值范围**: true（已授权，无需重复授权）、false（未授权，需完成授权后使用）
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * parentId  父节点Id
-    * id  节点Id
-    * urn  组织的统一资源名称，格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
-    * name  名称
-    * orgType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - unit：组织单元 - account：账号  **默认取值**: 不涉及
-    * delegated  组织或账号是否已授权。   - true: 已授权（无需授权）。   - false: 未授权。
+    * parentId  **参数解释** 当前组织节点的父节点唯一标识ID，用于标识组织树层级关系（根节点父ID通常为“0”或空）； **取值范围** 字符长度1-64位，符合平台组织节点ID命名规范
+    * id  **参数解释** 组织树节点的唯一标识ID，用于唯一确定某个组织节点； **取值范围** 字符长度1-64位，符合平台组织节点ID命名规范（如UUID或数字组合）
+    * urn  **参数解释** 组织节点的统一资源名称（URN），用于跨服务唯一标识组织资源； **取值范围** 字符长度1-256位，格式为organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx，符合平台URN命名规范
+    * name  **参数解释** 组织节点的名称（可能是组织单元名称或账号名称，与org_type对应）； **取值范围** 字符长度1-64位，支持字母、数字、连字符、下划线及中文，不能以特殊字符开头或结尾
+    * orgType  **参数解释**: 节点（组织单元或账号）的类型； **取值范围**: unit（组织单元）、account（账号）
+    * delegated  **参数解释**: 标识组织节点（组织单元或账号）是否已完成授权； **取值范围**: true（已授权，无需重复授权）、false（未授权，需完成授权后使用）
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * parentId  父节点Id
-    * id  节点Id
-    * urn  组织的统一资源名称，格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
-    * name  名称
-    * orgType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - unit：组织单元 - account：账号  **默认取值**: 不涉及
-    * delegated  组织或账号是否已授权。   - true: 已授权（无需授权）。   - false: 未授权。
+    * parentId  **参数解释** 当前组织节点的父节点唯一标识ID，用于标识组织树层级关系（根节点父ID通常为“0”或空）； **取值范围** 字符长度1-64位，符合平台组织节点ID命名规范
+    * id  **参数解释** 组织树节点的唯一标识ID，用于唯一确定某个组织节点； **取值范围** 字符长度1-64位，符合平台组织节点ID命名规范（如UUID或数字组合）
+    * urn  **参数解释** 组织节点的统一资源名称（URN），用于跨服务唯一标识组织资源； **取值范围** 字符长度1-256位，格式为organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx，符合平台URN命名规范
+    * name  **参数解释** 组织节点的名称（可能是组织单元名称或账号名称，与org_type对应）； **取值范围** 字符长度1-64位，支持字母、数字、连字符、下划线及中文，不能以特殊字符开头或结尾
+    * orgType  **参数解释**: 节点（组织单元或账号）的类型； **取值范围**: unit（组织单元）、account（账号）
+    * delegated  **参数解释**: 标识组织节点（组织单元或账号）是否已完成授权； **取值范围**: true（已授权，无需重复授权）、false（未授权，需完成授权后使用）
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * parentId  父节点Id
-    * id  节点Id
-    * urn  组织的统一资源名称，格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
-    * name  名称
-    * orgType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - unit：组织单元 - account：账号  **默认取值**: 不涉及
-    * delegated  组织或账号是否已授权。   - true: 已授权（无需授权）。   - false: 未授权。
+    * parentId  **参数解释** 当前组织节点的父节点唯一标识ID，用于标识组织树层级关系（根节点父ID通常为“0”或空）； **取值范围** 字符长度1-64位，符合平台组织节点ID命名规范
+    * id  **参数解释** 组织树节点的唯一标识ID，用于唯一确定某个组织节点； **取值范围** 字符长度1-64位，符合平台组织节点ID命名规范（如UUID或数字组合）
+    * urn  **参数解释** 组织节点的统一资源名称（URN），用于跨服务唯一标识组织资源； **取值范围** 字符长度1-256位，格式为organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx，符合平台URN命名规范
+    * name  **参数解释** 组织节点的名称（可能是组织单元名称或账号名称，与org_type对应）； **取值范围** 字符长度1-64位，支持字母、数字、连字符、下划线及中文，不能以特殊字符开头或结尾
+    * orgType  **参数解释**: 节点（组织单元或账号）的类型； **取值范围**: unit（组织单元）、account（账号）
+    * delegated  **参数解释**: 标识组织节点（组织单元或账号）是否已完成授权； **取值范围**: true（已授权，无需重复授权）、false（未授权，需完成授权后使用）
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * parentId  父节点Id
-    * id  节点Id
-    * urn  组织的统一资源名称，格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
-    * name  名称
-    * orgType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - unit：组织单元 - account：账号  **默认取值**: 不涉及
-    * delegated  组织或账号是否已授权。   - true: 已授权（无需授权）。   - false: 未授权。
+    * parentId  **参数解释** 当前组织节点的父节点唯一标识ID，用于标识组织树层级关系（根节点父ID通常为“0”或空）； **取值范围** 字符长度1-64位，符合平台组织节点ID命名规范
+    * id  **参数解释** 组织树节点的唯一标识ID，用于唯一确定某个组织节点； **取值范围** 字符长度1-64位，符合平台组织节点ID命名规范（如UUID或数字组合）
+    * urn  **参数解释** 组织节点的统一资源名称（URN），用于跨服务唯一标识组织资源； **取值范围** 字符长度1-256位，格式为organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx，符合平台URN命名规范
+    * name  **参数解释** 组织节点的名称（可能是组织单元名称或账号名称，与org_type对应）； **取值范围** 字符长度1-64位，支持字母、数字、连字符、下划线及中文，不能以特殊字符开头或结尾
+    * orgType  **参数解释**: 节点（组织单元或账号）的类型； **取值范围**: unit（组织单元）、account（账号）
+    * delegated  **参数解释**: 标识组织节点（组织单元或账号）是否已完成授权； **取值范围**: true（已授权，无需重复授权）、false（未授权，需完成授权后使用）
     *
     * @var string[]
     */
@@ -274,7 +274,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentId
-    *  父节点Id
+    *  **参数解释** 当前组织节点的父节点唯一标识ID，用于标识组织树层级关系（根节点父ID通常为“0”或空）； **取值范围** 字符长度1-64位，符合平台组织节点ID命名规范
     *
     * @return string|null
     */
@@ -286,7 +286,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets parentId
     *
-    * @param string|null $parentId 父节点Id
+    * @param string|null $parentId **参数解释** 当前组织节点的父节点唯一标识ID，用于标识组织树层级关系（根节点父ID通常为“0”或空）； **取值范围** 字符长度1-64位，符合平台组织节点ID命名规范
     *
     * @return $this
     */
@@ -298,7 +298,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  节点Id
+    *  **参数解释** 组织树节点的唯一标识ID，用于唯一确定某个组织节点； **取值范围** 字符长度1-64位，符合平台组织节点ID命名规范（如UUID或数字组合）
     *
     * @return string|null
     */
@@ -310,7 +310,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 节点Id
+    * @param string|null $id **参数解释** 组织树节点的唯一标识ID，用于唯一确定某个组织节点； **取值范围** 字符长度1-64位，符合平台组织节点ID命名规范（如UUID或数字组合）
     *
     * @return $this
     */
@@ -322,7 +322,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets urn
-    *  组织的统一资源名称，格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
+    *  **参数解释** 组织节点的统一资源名称（URN），用于跨服务唯一标识组织资源； **取值范围** 字符长度1-256位，格式为organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx，符合平台URN命名规范
     *
     * @return string|null
     */
@@ -334,7 +334,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets urn
     *
-    * @param string|null $urn 组织的统一资源名称，格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
+    * @param string|null $urn **参数解释** 组织节点的统一资源名称（URN），用于跨服务唯一标识组织资源； **取值范围** 字符长度1-256位，格式为organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx，符合平台URN命名规范
     *
     * @return $this
     */
@@ -346,7 +346,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称
+    *  **参数解释** 组织节点的名称（可能是组织单元名称或账号名称，与org_type对应）； **取值范围** 字符长度1-64位，支持字母、数字、连字符、下划线及中文，不能以特殊字符开头或结尾
     *
     * @return string|null
     */
@@ -358,7 +358,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 名称
+    * @param string|null $name **参数解释** 组织节点的名称（可能是组织单元名称或账号名称，与org_type对应）； **取值范围** 字符长度1-64位，支持字母、数字、连字符、下划线及中文，不能以特殊字符开头或结尾
     *
     * @return $this
     */
@@ -370,7 +370,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets orgType
-    *  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - unit：组织单元 - account：账号  **默认取值**: 不涉及
+    *  **参数解释**: 节点（组织单元或账号）的类型； **取值范围**: unit（组织单元）、account（账号）
     *
     * @return string|null
     */
@@ -382,7 +382,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets orgType
     *
-    * @param string|null $orgType **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - unit：组织单元 - account：账号  **默认取值**: 不涉及
+    * @param string|null $orgType **参数解释**: 节点（组织单元或账号）的类型； **取值范围**: unit（组织单元）、account（账号）
     *
     * @return $this
     */
@@ -394,7 +394,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets delegated
-    *  组织或账号是否已授权。   - true: 已授权（无需授权）。   - false: 未授权。
+    *  **参数解释**: 标识组织节点（组织单元或账号）是否已完成授权； **取值范围**: true（已授权，无需重复授权）、false（未授权，需完成授权后使用）
     *
     * @return bool|null
     */
@@ -406,7 +406,7 @@ class OrganizationNodeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets delegated
     *
-    * @param bool|null $delegated 组织或账号是否已授权。   - true: 已授权（无需授权）。   - false: 未授权。
+    * @param bool|null $delegated **参数解释**: 标识组织节点（组织单元或账号）是否已完成授权； **取值范围**: true（已授权，无需重复授权）、false（未授权，需完成授权后使用）
     *
     * @return $this
     */

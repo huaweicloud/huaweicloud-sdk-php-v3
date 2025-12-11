@@ -32,7 +32,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
     * description  **参数解释** 忽略或加白的描述 **取值范围** 字符长度0-512位
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
-    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
+    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围** - true  : 可验证 - false : 不可验证
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * fixFailedReason  **参数解释** 修复失败原因 **取值范围** 不涉及
     *
@@ -70,7 +70,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
     * description  **参数解释** 忽略或加白的描述 **取值范围** 字符长度0-512位
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
-    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
+    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围** - true  : 可验证 - false : 不可验证
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * fixFailedReason  **参数解释** 修复失败原因 **取值范围** 不涉及
     *
@@ -129,7 +129,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
     * description  **参数解释** 忽略或加白的描述 **取值范围** 字符长度0-512位
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
-    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
+    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围** - true  : 可验证 - false : 不可验证
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * fixFailedReason  **参数解释** 修复失败原因 **取值范围** 不涉及
     *
@@ -167,7 +167,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
     * description  **参数解释** 忽略或加白的描述 **取值范围** 字符长度0-512位
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
-    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
+    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围** - true  : 可验证 - false : 不可验证
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * fixFailedReason  **参数解释** 修复失败原因 **取值范围** 不涉及
     *
@@ -205,7 +205,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
     * description  **参数解释** 忽略或加白的描述 **取值范围** 字符长度0-512位
     * enableFix  **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
     * enableClick  **参数解释** 该检查项的修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
-    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
+    * enableVerify  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围** - true  : 可验证 - false : 不可验证
     * cancelIgnoreEnableClick  **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
     * fixFailedReason  **参数解释** 修复失败原因 **取值范围** 不涉及
     *
@@ -685,7 +685,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableVerify
-    *  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
+    *  **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围** - true  : 可验证 - false : 不可验证
     *
     * @return bool|null
     */
@@ -697,7 +697,7 @@ class HostCheckRulesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enableVerify
     *
-    * @param bool|null $enableVerify **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
+    * @param bool|null $enableVerify **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围** - true  : 可验证 - false : 不可验证
     *
     * @return $this
     */

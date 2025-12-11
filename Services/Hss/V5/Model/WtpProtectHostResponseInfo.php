@@ -21,14 +21,14 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
-    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * groupId  **参数解释**： 策略组ID **取值范围**： 字符长度36-64位
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
     * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * osBit  **参数解释**： 操作系统位数 **取值范围**： 字符长度1-64位
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     * protectStatus  **参数解释**: 网页防篡改防护状态 **取值范围**: - opening : 开启中。 - opened : 防护中。 - closed : 未防护。 - open_failed : 防护失败。 - partial_protection : 部分防护。 - protection_interruption : 防护中断。 - protection_pause : 防护暂停。
     * chargingMode  **参数解释**： 计费模式 **取值范围**： - packet_cycle ：包年/包月。 - on_demand ：按需计费。
     * resourceId  **参数解释**： 资源ID **取值范围**： 字符长度0-128位
@@ -77,14 +77,14 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
-    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * groupId  **参数解释**： 策略组ID **取值范围**： 字符长度36-64位
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
     * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * osBit  **参数解释**： 操作系统位数 **取值范围**： 字符长度1-64位
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     * protectStatus  **参数解释**: 网页防篡改防护状态 **取值范围**: - opening : 开启中。 - opened : 防护中。 - closed : 未防护。 - open_failed : 防护失败。 - partial_protection : 部分防护。 - protection_interruption : 防护中断。 - protection_pause : 防护暂停。
     * chargingMode  **参数解释**： 计费模式 **取值范围**： - packet_cycle ：包年/包月。 - on_demand ：按需计费。
     * resourceId  **参数解释**： 资源ID **取值范围**： 字符长度0-128位
@@ -154,14 +154,14 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
-    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * groupId  **参数解释**： 策略组ID **取值范围**： 字符长度36-64位
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
     * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * osBit  **参数解释**： 操作系统位数 **取值范围**： 字符长度1-64位
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     * protectStatus  **参数解释**: 网页防篡改防护状态 **取值范围**: - opening : 开启中。 - opened : 防护中。 - closed : 未防护。 - open_failed : 防护失败。 - partial_protection : 部分防护。 - protection_interruption : 防护中断。 - protection_pause : 防护暂停。
     * chargingMode  **参数解释**： 计费模式 **取值范围**： - packet_cycle ：包年/包月。 - on_demand ：按需计费。
     * resourceId  **参数解释**： 资源ID **取值范围**： 字符长度0-128位
@@ -210,14 +210,14 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
-    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * groupId  **参数解释**： 策略组ID **取值范围**： 字符长度36-64位
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
     * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * osBit  **参数解释**： 操作系统位数 **取值范围**： 字符长度1-64位
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     * protectStatus  **参数解释**: 网页防篡改防护状态 **取值范围**: - opening : 开启中。 - opened : 防护中。 - closed : 未防护。 - open_failed : 防护失败。 - partial_protection : 部分防护。 - protection_interruption : 防护中断。 - protection_pause : 防护暂停。
     * chargingMode  **参数解释**： 计费模式 **取值范围**： - packet_cycle ：包年/包月。 - on_demand ：按需计费。
     * resourceId  **参数解释**： 资源ID **取值范围**： 字符长度0-128位
@@ -266,14 +266,14 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
-    * hostId  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
-    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
+    * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
     * groupId  **参数解释**： 策略组ID **取值范围**： 字符长度36-64位
     * groupName  **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
     * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * osBit  **参数解释**： 操作系统位数 **取值范围**： 字符长度1-64位
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     * protectStatus  **参数解释**: 网页防篡改防护状态 **取值范围**: - opening : 开启中。 - opened : 防护中。 - closed : 未防护。 - open_failed : 防护失败。 - partial_protection : 部分防护。 - protection_interruption : 防护中断。 - protection_pause : 防护暂停。
     * chargingMode  **参数解释**： 计费模式 **取值范围**： - packet_cycle ：包年/包月。 - on_demand ：按需计费。
     * resourceId  **参数解释**： 资源ID **取值范围**： 字符长度0-128位
@@ -610,7 +610,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+    *  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     *
     * @return string|null
     */
@@ -622,7 +622,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+    * @param string|null $hostId **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     *
     * @return $this
     */
@@ -634,7 +634,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    *  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     *
     * @return string|null
     */
@@ -646,7 +646,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+    * @param string|null $publicIp **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     *
     * @return $this
     */
@@ -778,7 +778,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    *  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     *
     * @return string|null
     */
@@ -790,7 +790,7 @@ class WtpProtectHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * @param string|null $osType **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     *
     * @return $this
     */

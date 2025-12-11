@@ -22,7 +22,8 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * protectDir  **参数解释**: 防护目录 **取值范围**: 字符长度0-512位
     * excludeChildDir  **参数解释**: 排除子目录 **取值范围**: 字符长度0-512位
-    * exclueFilePath  排除文件路径
+    * excludeFilePath  **参数解释**: 排除文件路径 **取值范围**: 字符长度0-512位
+    * exclueFilePath  **参数解释**: 排除文件路径--字段已废弃，请使用exclude_file_path。 **取值范围**: 字符长度0-512位
     * localBackupDir  **参数解释**: 本地备份路径，仅Linux服务器支持设置本地备份路径。 **取值范围**: 字符长度0-512位
     * protectStatus  **参数解释**: 防护状态 **取值范围**: - closed ：未开启。 - opened ：防护中。 - opening ：开启中。 - closing ：关闭中。 - open_failed ：防护失败。
     * error  **参数解释**: 失败原因，当防护状态为open_failed时存在失败原因 **取值范围**: 字符长度0-512位
@@ -32,6 +33,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'protectDir' => 'string',
             'excludeChildDir' => 'string',
+            'excludeFilePath' => 'string',
             'exclueFilePath' => 'string',
             'localBackupDir' => 'string',
             'protectStatus' => 'string',
@@ -42,7 +44,8 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * protectDir  **参数解释**: 防护目录 **取值范围**: 字符长度0-512位
     * excludeChildDir  **参数解释**: 排除子目录 **取值范围**: 字符长度0-512位
-    * exclueFilePath  排除文件路径
+    * excludeFilePath  **参数解释**: 排除文件路径 **取值范围**: 字符长度0-512位
+    * exclueFilePath  **参数解释**: 排除文件路径--字段已废弃，请使用exclude_file_path。 **取值范围**: 字符长度0-512位
     * localBackupDir  **参数解释**: 本地备份路径，仅Linux服务器支持设置本地备份路径。 **取值范围**: 字符长度0-512位
     * protectStatus  **参数解释**: 防护状态 **取值范围**: - closed ：未开启。 - opened ：防护中。 - opening ：开启中。 - closing ：关闭中。 - open_failed ：防护失败。
     * error  **参数解释**: 失败原因，当防护状态为open_failed时存在失败原因 **取值范围**: 字符长度0-512位
@@ -52,6 +55,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'protectDir' => null,
         'excludeChildDir' => null,
+        'excludeFilePath' => null,
         'exclueFilePath' => null,
         'localBackupDir' => null,
         'protectStatus' => null,
@@ -83,7 +87,8 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * protectDir  **参数解释**: 防护目录 **取值范围**: 字符长度0-512位
     * excludeChildDir  **参数解释**: 排除子目录 **取值范围**: 字符长度0-512位
-    * exclueFilePath  排除文件路径
+    * excludeFilePath  **参数解释**: 排除文件路径 **取值范围**: 字符长度0-512位
+    * exclueFilePath  **参数解释**: 排除文件路径--字段已废弃，请使用exclude_file_path。 **取值范围**: 字符长度0-512位
     * localBackupDir  **参数解释**: 本地备份路径，仅Linux服务器支持设置本地备份路径。 **取值范围**: 字符长度0-512位
     * protectStatus  **参数解释**: 防护状态 **取值范围**: - closed ：未开启。 - opened ：防护中。 - opening ：开启中。 - closing ：关闭中。 - open_failed ：防护失败。
     * error  **参数解释**: 失败原因，当防护状态为open_failed时存在失败原因 **取值范围**: 字符长度0-512位
@@ -93,6 +98,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'protectDir' => 'protect_dir',
             'excludeChildDir' => 'exclude_child_dir',
+            'excludeFilePath' => 'exclude_file_path',
             'exclueFilePath' => 'exclue_file_path',
             'localBackupDir' => 'local_backup_dir',
             'protectStatus' => 'protect_status',
@@ -103,7 +109,8 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * protectDir  **参数解释**: 防护目录 **取值范围**: 字符长度0-512位
     * excludeChildDir  **参数解释**: 排除子目录 **取值范围**: 字符长度0-512位
-    * exclueFilePath  排除文件路径
+    * excludeFilePath  **参数解释**: 排除文件路径 **取值范围**: 字符长度0-512位
+    * exclueFilePath  **参数解释**: 排除文件路径--字段已废弃，请使用exclude_file_path。 **取值范围**: 字符长度0-512位
     * localBackupDir  **参数解释**: 本地备份路径，仅Linux服务器支持设置本地备份路径。 **取值范围**: 字符长度0-512位
     * protectStatus  **参数解释**: 防护状态 **取值范围**: - closed ：未开启。 - opened ：防护中。 - opening ：开启中。 - closing ：关闭中。 - open_failed ：防护失败。
     * error  **参数解释**: 失败原因，当防护状态为open_failed时存在失败原因 **取值范围**: 字符长度0-512位
@@ -113,6 +120,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
             'protectDir' => 'setProtectDir',
             'excludeChildDir' => 'setExcludeChildDir',
+            'excludeFilePath' => 'setExcludeFilePath',
             'exclueFilePath' => 'setExclueFilePath',
             'localBackupDir' => 'setLocalBackupDir',
             'protectStatus' => 'setProtectStatus',
@@ -123,7 +131,8 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * protectDir  **参数解释**: 防护目录 **取值范围**: 字符长度0-512位
     * excludeChildDir  **参数解释**: 排除子目录 **取值范围**: 字符长度0-512位
-    * exclueFilePath  排除文件路径
+    * excludeFilePath  **参数解释**: 排除文件路径 **取值范围**: 字符长度0-512位
+    * exclueFilePath  **参数解释**: 排除文件路径--字段已废弃，请使用exclude_file_path。 **取值范围**: 字符长度0-512位
     * localBackupDir  **参数解释**: 本地备份路径，仅Linux服务器支持设置本地备份路径。 **取值范围**: 字符长度0-512位
     * protectStatus  **参数解释**: 防护状态 **取值范围**: - closed ：未开启。 - opened ：防护中。 - opening ：开启中。 - closing ：关闭中。 - open_failed ：防护失败。
     * error  **参数解释**: 失败原因，当防护状态为open_failed时存在失败原因 **取值范围**: 字符长度0-512位
@@ -133,6 +142,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
             'protectDir' => 'getProtectDir',
             'excludeChildDir' => 'getExcludeChildDir',
+            'excludeFilePath' => 'getExcludeFilePath',
             'exclueFilePath' => 'getExclueFilePath',
             'localBackupDir' => 'getLocalBackupDir',
             'protectStatus' => 'getProtectStatus',
@@ -199,6 +209,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     {
         $this->container['protectDir'] = isset($data['protectDir']) ? $data['protectDir'] : null;
         $this->container['excludeChildDir'] = isset($data['excludeChildDir']) ? $data['excludeChildDir'] : null;
+        $this->container['excludeFilePath'] = isset($data['excludeFilePath']) ? $data['excludeFilePath'] : null;
         $this->container['exclueFilePath'] = isset($data['exclueFilePath']) ? $data['exclueFilePath'] : null;
         $this->container['localBackupDir'] = isset($data['localBackupDir']) ? $data['localBackupDir'] : null;
         $this->container['protectStatus'] = isset($data['protectStatus']) ? $data['protectStatus'] : null;
@@ -224,6 +235,12 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['excludeChildDir']) && (mb_strlen($this->container['excludeChildDir']) < 0)) {
                 $invalidProperties[] = "invalid value for 'excludeChildDir', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['excludeFilePath']) && (mb_strlen($this->container['excludeFilePath']) > 512)) {
+                $invalidProperties[] = "invalid value for 'excludeFilePath', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['excludeFilePath']) && (mb_strlen($this->container['excludeFilePath']) < 0)) {
+                $invalidProperties[] = "invalid value for 'excludeFilePath', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['exclueFilePath']) && (mb_strlen($this->container['exclueFilePath']) > 512)) {
                 $invalidProperties[] = "invalid value for 'exclueFilePath', the character length must be smaller than or equal to 512.";
@@ -312,8 +329,32 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets excludeFilePath
+    *  **参数解释**: 排除文件路径 **取值范围**: 字符长度0-512位
+    *
+    * @return string|null
+    */
+    public function getExcludeFilePath()
+    {
+        return $this->container['excludeFilePath'];
+    }
+
+    /**
+    * Sets excludeFilePath
+    *
+    * @param string|null $excludeFilePath **参数解释**: 排除文件路径 **取值范围**: 字符长度0-512位
+    *
+    * @return $this
+    */
+    public function setExcludeFilePath($excludeFilePath)
+    {
+        $this->container['excludeFilePath'] = $excludeFilePath;
+        return $this;
+    }
+
+    /**
     * Gets exclueFilePath
-    *  排除文件路径
+    *  **参数解释**: 排除文件路径--字段已废弃，请使用exclude_file_path。 **取值范围**: 字符长度0-512位
     *
     * @return string|null
     */
@@ -325,7 +366,7 @@ class WtpProtectHostDirResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets exclueFilePath
     *
-    * @param string|null $exclueFilePath 排除文件路径
+    * @param string|null $exclueFilePath **参数解释**: 排除文件路径--字段已废弃，请使用exclude_file_path。 **取值范围**: 字符长度0-512位
     *
     * @return $this
     */

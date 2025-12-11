@@ -29,7 +29,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
     * securityGroups  云服务器对应安全组信息
     * comment  备注信息
     * region  云服务器所在区域ID
-    * cloudServiceType  服务类型： - hws.service.type.dbss
+    * cloudServiceType  服务类型： - hws.service.type.dbss: 数据库审计
     * chargingMode  计费模式： - 0: 包周期计费 - 1: 按需计费
     * periodType  -订购周期类型 - 0: 天 - 1：周 - 2：月 - 3：年 - 4: 小时 - 5: 绝对时间
     * periodNum  订购周期数
@@ -73,7 +73,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
     * securityGroups  云服务器对应安全组信息
     * comment  备注信息
     * region  云服务器所在区域ID
-    * cloudServiceType  服务类型： - hws.service.type.dbss
+    * cloudServiceType  服务类型： - hws.service.type.dbss: 数据库审计
     * chargingMode  计费模式： - 0: 包周期计费 - 1: 按需计费
     * periodType  -订购周期类型 - 0: 天 - 1：周 - 2：月 - 3：年 - 4: 小时 - 5: 绝对时间
     * periodNum  订购周期数
@@ -138,7 +138,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
     * securityGroups  云服务器对应安全组信息
     * comment  备注信息
     * region  云服务器所在区域ID
-    * cloudServiceType  服务类型： - hws.service.type.dbss
+    * cloudServiceType  服务类型： - hws.service.type.dbss: 数据库审计
     * chargingMode  计费模式： - 0: 包周期计费 - 1: 按需计费
     * periodType  -订购周期类型 - 0: 天 - 1：周 - 2：月 - 3：年 - 4: 小时 - 5: 绝对时间
     * periodNum  订购周期数
@@ -182,7 +182,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
     * securityGroups  云服务器对应安全组信息
     * comment  备注信息
     * region  云服务器所在区域ID
-    * cloudServiceType  服务类型： - hws.service.type.dbss
+    * cloudServiceType  服务类型： - hws.service.type.dbss: 数据库审计
     * chargingMode  计费模式： - 0: 包周期计费 - 1: 按需计费
     * periodType  -订购周期类型 - 0: 天 - 1：周 - 2：月 - 3：年 - 4: 小时 - 5: 绝对时间
     * periodNum  订购周期数
@@ -226,7 +226,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
     * securityGroups  云服务器对应安全组信息
     * comment  备注信息
     * region  云服务器所在区域ID
-    * cloudServiceType  服务类型： - hws.service.type.dbss
+    * cloudServiceType  服务类型： - hws.service.type.dbss: 数据库审计
     * chargingMode  计费模式： - 0: 包周期计费 - 1: 按需计费
     * periodType  -订购周期类型 - 0: 天 - 1：周 - 2：月 - 3：年 - 4: 小时 - 5: 绝对时间
     * periodNum  订购周期数
@@ -619,7 +619,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudServiceType
-    *  服务类型： - hws.service.type.dbss
+    *  服务类型： - hws.service.type.dbss: 数据库审计
     *
     * @return string
     */
@@ -631,7 +631,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
     /**
     * Sets cloudServiceType
     *
-    * @param string $cloudServiceType 服务类型： - hws.service.type.dbss
+    * @param string $cloudServiceType 服务类型： - hws.service.type.dbss: 数据库审计
     *
     * @return $this
     */

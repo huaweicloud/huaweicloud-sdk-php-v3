@@ -24,6 +24,7 @@ class EnvironmentDetail implements ModelInterface, ArrayAccess
     * name  环境名称
     * description  环境描述
     * os  操作系统
+    * projectId  项目ID
     * nickName  用户昵称
     * deployType  部署类型：0表示主机, 1表示kubernetes
     * createdTime  创建时间
@@ -38,6 +39,7 @@ class EnvironmentDetail implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'os' => 'string',
+            'projectId' => 'string',
             'nickName' => 'string',
             'deployType' => 'int',
             'createdTime' => 'string',
@@ -52,6 +54,7 @@ class EnvironmentDetail implements ModelInterface, ArrayAccess
     * name  环境名称
     * description  环境描述
     * os  操作系统
+    * projectId  项目ID
     * nickName  用户昵称
     * deployType  部署类型：0表示主机, 1表示kubernetes
     * createdTime  创建时间
@@ -66,6 +69,7 @@ class EnvironmentDetail implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'os' => null,
+        'projectId' => null,
         'nickName' => null,
         'deployType' => null,
         'createdTime' => null,
@@ -101,6 +105,7 @@ class EnvironmentDetail implements ModelInterface, ArrayAccess
     * name  环境名称
     * description  环境描述
     * os  操作系统
+    * projectId  项目ID
     * nickName  用户昵称
     * deployType  部署类型：0表示主机, 1表示kubernetes
     * createdTime  创建时间
@@ -115,6 +120,7 @@ class EnvironmentDetail implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'os' => 'os',
+            'projectId' => 'project_id',
             'nickName' => 'nick_name',
             'deployType' => 'deploy_type',
             'createdTime' => 'created_time',
@@ -129,6 +135,7 @@ class EnvironmentDetail implements ModelInterface, ArrayAccess
     * name  环境名称
     * description  环境描述
     * os  操作系统
+    * projectId  项目ID
     * nickName  用户昵称
     * deployType  部署类型：0表示主机, 1表示kubernetes
     * createdTime  创建时间
@@ -143,6 +150,7 @@ class EnvironmentDetail implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'os' => 'setOs',
+            'projectId' => 'setProjectId',
             'nickName' => 'setNickName',
             'deployType' => 'setDeployType',
             'createdTime' => 'setCreatedTime',
@@ -157,6 +165,7 @@ class EnvironmentDetail implements ModelInterface, ArrayAccess
     * name  环境名称
     * description  环境描述
     * os  操作系统
+    * projectId  项目ID
     * nickName  用户昵称
     * deployType  部署类型：0表示主机, 1表示kubernetes
     * createdTime  创建时间
@@ -171,6 +180,7 @@ class EnvironmentDetail implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'os' => 'getOs',
+            'projectId' => 'getProjectId',
             'nickName' => 'getNickName',
             'deployType' => 'getDeployType',
             'createdTime' => 'getCreatedTime',
@@ -241,6 +251,7 @@ class EnvironmentDetail implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['os'] = isset($data['os']) ? $data['os'] : null;
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['nickName'] = isset($data['nickName']) ? $data['nickName'] : null;
         $this->container['deployType'] = isset($data['deployType']) ? $data['deployType'] : null;
         $this->container['createdTime'] = isset($data['createdTime']) ? $data['createdTime'] : null;
@@ -364,6 +375,30 @@ class EnvironmentDetail implements ModelInterface, ArrayAccess
     public function setOs($os)
     {
         $this->container['os'] = $os;
+        return $this;
+    }
+
+    /**
+    * Gets projectId
+    *  项目ID
+    *
+    * @return string|null
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string|null $projectId 项目ID
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
         return $this;
     }
 

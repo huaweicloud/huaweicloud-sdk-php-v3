@@ -26,7 +26,7 @@ class RdsDbListResponseDatabases implements ModelInterface, ArrayAccess
     * port  数据库端口
     * ip  数据库IP
     * instanceName  rds实例名称
-    * type  数据库类型 - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - MARIADB - GAUSSDBOPENGAUSS
+    * type  数据库类型 - MYSQL: MySql - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG: DAMENG - TAURUS: TaurusDB - DWS: GaussDB DWS - KINGBASE: KINGBASE - MARIADB: MariaDB - GAUSSDBOPENGAUSS: GaussDB/openGauss
     * version  版本
     * isSupported  是否支持免agent审计
     * enterpriseId  企业项目ID
@@ -54,7 +54,7 @@ class RdsDbListResponseDatabases implements ModelInterface, ArrayAccess
     * port  数据库端口
     * ip  数据库IP
     * instanceName  rds实例名称
-    * type  数据库类型 - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - MARIADB - GAUSSDBOPENGAUSS
+    * type  数据库类型 - MYSQL: MySql - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG: DAMENG - TAURUS: TaurusDB - DWS: GaussDB DWS - KINGBASE: KINGBASE - MARIADB: MariaDB - GAUSSDBOPENGAUSS: GaussDB/openGauss
     * version  版本
     * isSupported  是否支持免agent审计
     * enterpriseId  企业项目ID
@@ -103,7 +103,7 @@ class RdsDbListResponseDatabases implements ModelInterface, ArrayAccess
     * port  数据库端口
     * ip  数据库IP
     * instanceName  rds实例名称
-    * type  数据库类型 - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - MARIADB - GAUSSDBOPENGAUSS
+    * type  数据库类型 - MYSQL: MySql - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG: DAMENG - TAURUS: TaurusDB - DWS: GaussDB DWS - KINGBASE: KINGBASE - MARIADB: MariaDB - GAUSSDBOPENGAUSS: GaussDB/openGauss
     * version  版本
     * isSupported  是否支持免agent审计
     * enterpriseId  企业项目ID
@@ -131,7 +131,7 @@ class RdsDbListResponseDatabases implements ModelInterface, ArrayAccess
     * port  数据库端口
     * ip  数据库IP
     * instanceName  rds实例名称
-    * type  数据库类型 - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - MARIADB - GAUSSDBOPENGAUSS
+    * type  数据库类型 - MYSQL: MySql - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG: DAMENG - TAURUS: TaurusDB - DWS: GaussDB DWS - KINGBASE: KINGBASE - MARIADB: MariaDB - GAUSSDBOPENGAUSS: GaussDB/openGauss
     * version  版本
     * isSupported  是否支持免agent审计
     * enterpriseId  企业项目ID
@@ -159,7 +159,7 @@ class RdsDbListResponseDatabases implements ModelInterface, ArrayAccess
     * port  数据库端口
     * ip  数据库IP
     * instanceName  rds实例名称
-    * type  数据库类型 - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - MARIADB - GAUSSDBOPENGAUSS
+    * type  数据库类型 - MYSQL: MySql - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG: DAMENG - TAURUS: TaurusDB - DWS: GaussDB DWS - KINGBASE: KINGBASE - MARIADB: MariaDB - GAUSSDBOPENGAUSS: GaussDB/openGauss
     * version  版本
     * isSupported  是否支持免agent审计
     * enterpriseId  企业项目ID
@@ -441,7 +441,7 @@ class RdsDbListResponseDatabases implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  数据库类型 - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - MARIADB - GAUSSDBOPENGAUSS
+    *  数据库类型 - MYSQL: MySql - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG: DAMENG - TAURUS: TaurusDB - DWS: GaussDB DWS - KINGBASE: KINGBASE - MARIADB: MariaDB - GAUSSDBOPENGAUSS: GaussDB/openGauss
     *
     * @return string
     */
@@ -453,7 +453,7 @@ class RdsDbListResponseDatabases implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 数据库类型 - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - MARIADB - GAUSSDBOPENGAUSS
+    * @param string $type 数据库类型 - MYSQL: MySql - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG: DAMENG - TAURUS: TaurusDB - DWS: GaussDB DWS - KINGBASE: KINGBASE - MARIADB: MariaDB - GAUSSDBOPENGAUSS: GaussDB/openGauss
     *
     * @return $this
     */

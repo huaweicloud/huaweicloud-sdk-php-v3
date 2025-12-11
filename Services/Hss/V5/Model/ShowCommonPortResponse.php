@@ -23,7 +23,7 @@ class ShowCommonPortResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * port  **参数解释** 端口号 **取值范围** 最小值1，最大值65535
     * type  **参数解释** 端口类型 **取值范围** - TCP：TCP协议 - UDP：UDP协议 - TCP6：TCP6协议 - UDP6：UDP6协议
-    * status  **参数解释** 状态 **取值范围** - normal：正常 - danger：危险 - unknow：未知
+    * status  **参数解释** 状态 **取值范围** - normal：正常 - danger：危险 - unknown：未知
     * description  **参数解释** 中文描述 **取值范围** 字符长度1-256
     * descriptionEn  **参数解释** 英文描述 **取值范围** 字符长度1-256
     *
@@ -41,7 +41,7 @@ class ShowCommonPortResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * port  **参数解释** 端口号 **取值范围** 最小值1，最大值65535
     * type  **参数解释** 端口类型 **取值范围** - TCP：TCP协议 - UDP：UDP协议 - TCP6：TCP6协议 - UDP6：UDP6协议
-    * status  **参数解释** 状态 **取值范围** - normal：正常 - danger：危险 - unknow：未知
+    * status  **参数解释** 状态 **取值范围** - normal：正常 - danger：危险 - unknown：未知
     * description  **参数解释** 中文描述 **取值范围** 字符长度1-256
     * descriptionEn  **参数解释** 英文描述 **取值范围** 字符长度1-256
     *
@@ -80,7 +80,7 @@ class ShowCommonPortResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * port  **参数解释** 端口号 **取值范围** 最小值1，最大值65535
     * type  **参数解释** 端口类型 **取值范围** - TCP：TCP协议 - UDP：UDP协议 - TCP6：TCP6协议 - UDP6：UDP6协议
-    * status  **参数解释** 状态 **取值范围** - normal：正常 - danger：危险 - unknow：未知
+    * status  **参数解释** 状态 **取值范围** - normal：正常 - danger：危险 - unknown：未知
     * description  **参数解释** 中文描述 **取值范围** 字符长度1-256
     * descriptionEn  **参数解释** 英文描述 **取值范围** 字符长度1-256
     *
@@ -98,7 +98,7 @@ class ShowCommonPortResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * port  **参数解释** 端口号 **取值范围** 最小值1，最大值65535
     * type  **参数解释** 端口类型 **取值范围** - TCP：TCP协议 - UDP：UDP协议 - TCP6：TCP6协议 - UDP6：UDP6协议
-    * status  **参数解释** 状态 **取值范围** - normal：正常 - danger：危险 - unknow：未知
+    * status  **参数解释** 状态 **取值范围** - normal：正常 - danger：危险 - unknown：未知
     * description  **参数解释** 中文描述 **取值范围** 字符长度1-256
     * descriptionEn  **参数解释** 英文描述 **取值范围** 字符长度1-256
     *
@@ -116,7 +116,7 @@ class ShowCommonPortResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * port  **参数解释** 端口号 **取值范围** 最小值1，最大值65535
     * type  **参数解释** 端口类型 **取值范围** - TCP：TCP协议 - UDP：UDP协议 - TCP6：TCP6协议 - UDP6：UDP6协议
-    * status  **参数解释** 状态 **取值范围** - normal：正常 - danger：危险 - unknow：未知
+    * status  **参数解释** 状态 **取值范围** - normal：正常 - danger：危险 - unknown：未知
     * description  **参数解释** 中文描述 **取值范围** 字符长度1-256
     * descriptionEn  **参数解释** 英文描述 **取值范围** 字符长度1-256
     *
@@ -297,7 +297,7 @@ class ShowCommonPortResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释** 状态 **取值范围** - normal：正常 - danger：危险 - unknow：未知
+    *  **参数解释** 状态 **取值范围** - normal：正常 - danger：危险 - unknown：未知
     *
     * @return string|null
     */
@@ -309,7 +309,7 @@ class ShowCommonPortResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释** 状态 **取值范围** - normal：正常 - danger：危险 - unknow：未知
+    * @param string|null $status **参数解释** 状态 **取值范围** - normal：正常 - danger：危险 - unknown：未知
     *
     * @return $this
     */

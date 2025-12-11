@@ -21,7 +21,7 @@ class ValidateConfigurationNameResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isExisted  参数组名称是否存在。 - true：参数组名称存在 - false：参数组名称不存在
+    * isExisted  **参数解释：** 参数组名称是否存在。 **取值范围：** - true：参数组名称存在。 - false：参数组名称不存在。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ValidateConfigurationNameResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isExisted  参数组名称是否存在。 - true：参数组名称存在 - false：参数组名称不存在
+    * isExisted  **参数解释：** 参数组名称是否存在。 **取值范围：** - true：参数组名称存在。 - false：参数组名称不存在。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ValidateConfigurationNameResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isExisted  参数组名称是否存在。 - true：参数组名称存在 - false：参数组名称不存在
+    * isExisted  **参数解释：** 参数组名称是否存在。 **取值范围：** - true：参数组名称存在。 - false：参数组名称不存在。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ValidateConfigurationNameResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isExisted  参数组名称是否存在。 - true：参数组名称存在 - false：参数组名称不存在
+    * isExisted  **参数解释：** 参数组名称是否存在。 **取值范围：** - true：参数组名称存在。 - false：参数组名称不存在。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ValidateConfigurationNameResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isExisted  参数组名称是否存在。 - true：参数组名称存在 - false：参数组名称不存在
+    * isExisted  **参数解释：** 参数组名称是否存在。 **取值范围：** - true：参数组名称存在。 - false：参数组名称不存在。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ValidateConfigurationNameResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isExisted
-    *  参数组名称是否存在。 - true：参数组名称存在 - false：参数组名称不存在
+    *  **参数解释：** 参数组名称是否存在。 **取值范围：** - true：参数组名称存在。 - false：参数组名称不存在。
     *
     * @return bool|null
     */
@@ -187,7 +187,7 @@ class ValidateConfigurationNameResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isExisted
     *
-    * @param bool|null $isExisted 参数组名称是否存在。 - true：参数组名称存在 - false：参数组名称不存在
+    * @param bool|null $isExisted **参数解释：** 参数组名称是否存在。 **取值范围：** - true：参数组名称存在。 - false：参数组名称不存在。
     *
     * @return $this
     */

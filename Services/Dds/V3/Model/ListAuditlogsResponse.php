@@ -22,24 +22,28 @@ class ListAuditlogsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * totalRecord  总记录数。
+    * totalSize  当前实例审计日志使用总量，单位：byte。
     * auditLogs  审计日志具体信息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'totalRecord' => 'int',
+            'totalSize' => 'int',
             'auditLogs' => '\HuaweiCloud\SDK\Dds\V3\Model\ListAuditlogsResult[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * totalRecord  总记录数。
+    * totalSize  当前实例审计日志使用总量，单位：byte。
     * auditLogs  审计日志具体信息。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'totalRecord' => null,
+        'totalSize' => 'int64',
         'auditLogs' => null
     ];
 
@@ -67,36 +71,42 @@ class ListAuditlogsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * totalRecord  总记录数。
+    * totalSize  当前实例审计日志使用总量，单位：byte。
     * auditLogs  审计日志具体信息。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'totalRecord' => 'total_record',
+            'totalSize' => 'total_size',
             'auditLogs' => 'audit_logs'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * totalRecord  总记录数。
+    * totalSize  当前实例审计日志使用总量，单位：byte。
     * auditLogs  审计日志具体信息。
     *
     * @var string[]
     */
     protected static $setters = [
             'totalRecord' => 'setTotalRecord',
+            'totalSize' => 'setTotalSize',
             'auditLogs' => 'setAuditLogs'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * totalRecord  总记录数。
+    * totalSize  当前实例审计日志使用总量，单位：byte。
     * auditLogs  审计日志具体信息。
     *
     * @var string[]
     */
     protected static $getters = [
             'totalRecord' => 'getTotalRecord',
+            'totalSize' => 'getTotalSize',
             'auditLogs' => 'getAuditLogs'
     ];
 
@@ -159,6 +169,7 @@ class ListAuditlogsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['totalRecord'] = isset($data['totalRecord']) ? $data['totalRecord'] : null;
+        $this->container['totalSize'] = isset($data['totalSize']) ? $data['totalSize'] : null;
         $this->container['auditLogs'] = isset($data['auditLogs']) ? $data['auditLogs'] : null;
     }
 
@@ -205,6 +216,30 @@ class ListAuditlogsResponse implements ModelInterface, ArrayAccess
     public function setTotalRecord($totalRecord)
     {
         $this->container['totalRecord'] = $totalRecord;
+        return $this;
+    }
+
+    /**
+    * Gets totalSize
+    *  当前实例审计日志使用总量，单位：byte。
+    *
+    * @return int|null
+    */
+    public function getTotalSize()
+    {
+        return $this->container['totalSize'];
+    }
+
+    /**
+    * Sets totalSize
+    *
+    * @param int|null $totalSize 当前实例审计日志使用总量，单位：byte。
+    *
+    * @return $this
+    */
+    public function setTotalSize($totalSize)
+    {
+        $this->container['totalSize'] = $totalSize;
         return $this;
     }
 

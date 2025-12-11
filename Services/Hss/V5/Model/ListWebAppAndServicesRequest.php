@@ -312,13 +312,10 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
             if (!preg_match("/^(host|container)$/", $this->container['category'])) {
                 $invalidProperties[] = "invalid value for 'category', must be conform to the pattern /^(host|container)$/.";
             }
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-            if ((mb_strlen($this->container['name']) > 256)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 256)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 256.";
             }
-            if ((mb_strlen($this->container['name']) < 0)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['catalogue'] === null) {
@@ -477,7 +474,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     * Gets name
     *  **参数解释**: web应用，web服务或数据库名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -487,7 +484,7 @@ class ListWebAppAndServicesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name **参数解释**: web应用，web服务或数据库名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
+    * @param string|null $name **参数解释**: web应用，web服务或数据库名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
     *
     * @return $this
     */

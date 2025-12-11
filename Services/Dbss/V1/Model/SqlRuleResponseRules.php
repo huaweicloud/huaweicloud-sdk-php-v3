@@ -22,9 +22,9 @@ class SqlRuleResponseRules implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  SQL规则ID
     * name  SQL规则名称
-    * status  规则的状态： - ON - OFF
-    * riskLevel  风险级别 - HIGH - MEDIUM - LOW
-    * type  风险类型
+    * status  规则的状态： - ON： 启用 - OFF： 禁用
+    * riskLevel  风险级别 - HIGH： 高 - MEDIUM：中 - LOW：低
+    * type  风险类型 - SYSTEM: 系统  - CUSTOMIZE：自定义
     * rank  优先级。数字越小优先级越高。
     * feature  SQL命令特征
     * regex  正则表达式
@@ -46,9 +46,9 @@ class SqlRuleResponseRules implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  SQL规则ID
     * name  SQL规则名称
-    * status  规则的状态： - ON - OFF
-    * riskLevel  风险级别 - HIGH - MEDIUM - LOW
-    * type  风险类型
+    * status  规则的状态： - ON： 启用 - OFF： 禁用
+    * riskLevel  风险级别 - HIGH： 高 - MEDIUM：中 - LOW：低
+    * type  风险类型 - SYSTEM: 系统  - CUSTOMIZE：自定义
     * rank  优先级。数字越小优先级越高。
     * feature  SQL命令特征
     * regex  正则表达式
@@ -91,9 +91,9 @@ class SqlRuleResponseRules implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  SQL规则ID
     * name  SQL规则名称
-    * status  规则的状态： - ON - OFF
-    * riskLevel  风险级别 - HIGH - MEDIUM - LOW
-    * type  风险类型
+    * status  规则的状态： - ON： 启用 - OFF： 禁用
+    * riskLevel  风险级别 - HIGH： 高 - MEDIUM：中 - LOW：低
+    * type  风险类型 - SYSTEM: 系统  - CUSTOMIZE：自定义
     * rank  优先级。数字越小优先级越高。
     * feature  SQL命令特征
     * regex  正则表达式
@@ -115,9 +115,9 @@ class SqlRuleResponseRules implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  SQL规则ID
     * name  SQL规则名称
-    * status  规则的状态： - ON - OFF
-    * riskLevel  风险级别 - HIGH - MEDIUM - LOW
-    * type  风险类型
+    * status  规则的状态： - ON： 启用 - OFF： 禁用
+    * riskLevel  风险级别 - HIGH： 高 - MEDIUM：中 - LOW：低
+    * type  风险类型 - SYSTEM: 系统  - CUSTOMIZE：自定义
     * rank  优先级。数字越小优先级越高。
     * feature  SQL命令特征
     * regex  正则表达式
@@ -139,9 +139,9 @@ class SqlRuleResponseRules implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  SQL规则ID
     * name  SQL规则名称
-    * status  规则的状态： - ON - OFF
-    * riskLevel  风险级别 - HIGH - MEDIUM - LOW
-    * type  风险类型
+    * status  规则的状态： - ON： 启用 - OFF： 禁用
+    * riskLevel  风险级别 - HIGH： 高 - MEDIUM：中 - LOW：低
+    * type  风险类型 - SYSTEM: 系统  - CUSTOMIZE：自定义
     * rank  优先级。数字越小优先级越高。
     * feature  SQL命令特征
     * regex  正则表达式
@@ -299,7 +299,7 @@ class SqlRuleResponseRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  规则的状态： - ON - OFF
+    *  规则的状态： - ON： 启用 - OFF： 禁用
     *
     * @return string|null
     */
@@ -311,7 +311,7 @@ class SqlRuleResponseRules implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 规则的状态： - ON - OFF
+    * @param string|null $status 规则的状态： - ON： 启用 - OFF： 禁用
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class SqlRuleResponseRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets riskLevel
-    *  风险级别 - HIGH - MEDIUM - LOW
+    *  风险级别 - HIGH： 高 - MEDIUM：中 - LOW：低
     *
     * @return string|null
     */
@@ -335,7 +335,7 @@ class SqlRuleResponseRules implements ModelInterface, ArrayAccess
     /**
     * Sets riskLevel
     *
-    * @param string|null $riskLevel 风险级别 - HIGH - MEDIUM - LOW
+    * @param string|null $riskLevel 风险级别 - HIGH： 高 - MEDIUM：中 - LOW：低
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class SqlRuleResponseRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  风险类型
+    *  风险类型 - SYSTEM: 系统  - CUSTOMIZE：自定义
     *
     * @return string|null
     */
@@ -359,7 +359,7 @@ class SqlRuleResponseRules implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 风险类型
+    * @param string|null $type 风险类型 - SYSTEM: 系统  - CUSTOMIZE：自定义
     *
     * @return $this
     */

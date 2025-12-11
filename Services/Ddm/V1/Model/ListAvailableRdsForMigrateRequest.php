@@ -22,24 +22,32 @@ class ListAvailableRdsForMigrateRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  DDM实例ID
     * dbName  逻辑库名称
+    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0。取值必须为数字，且不能为负数。
+    * limit  分页参数：每页多少条。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'instanceId' => 'string',
-            'dbName' => 'string'
+            'dbName' => 'string',
+            'offset' => 'int',
+            'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  DDM实例ID
     * dbName  逻辑库名称
+    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0。取值必须为数字，且不能为负数。
+    * limit  分页参数：每页多少条。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'instanceId' => null,
-        'dbName' => null
+        'dbName' => null,
+        'offset' => null,
+        'limit' => null
     ];
 
     /**
@@ -67,36 +75,48 @@ class ListAvailableRdsForMigrateRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * instanceId  DDM实例ID
     * dbName  逻辑库名称
+    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0。取值必须为数字，且不能为负数。
+    * limit  分页参数：每页多少条。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'instanceId' => 'instance_id',
-            'dbName' => 'db_name'
+            'dbName' => 'db_name',
+            'offset' => 'offset',
+            'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  DDM实例ID
     * dbName  逻辑库名称
+    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0。取值必须为数字，且不能为负数。
+    * limit  分页参数：每页多少条。
     *
     * @var string[]
     */
     protected static $setters = [
             'instanceId' => 'setInstanceId',
-            'dbName' => 'setDbName'
+            'dbName' => 'setDbName',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  DDM实例ID
     * dbName  逻辑库名称
+    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0。取值必须为数字，且不能为负数。
+    * limit  分页参数：每页多少条。
     *
     * @var string[]
     */
     protected static $getters = [
             'instanceId' => 'getInstanceId',
-            'dbName' => 'getDbName'
+            'dbName' => 'getDbName',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -159,6 +179,8 @@ class ListAvailableRdsForMigrateRequest implements ModelInterface, ArrayAccess
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['dbName'] = isset($data['dbName']) ? $data['dbName'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -186,6 +208,18 @@ class ListAvailableRdsForMigrateRequest implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['dbName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'dbName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 1024)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1024)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -246,6 +280,54 @@ class ListAvailableRdsForMigrateRequest implements ModelInterface, ArrayAccess
     public function setDbName($dbName)
     {
         $this->container['dbName'] = $dbName;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0。取值必须为数字，且不能为负数。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0。取值必须为数字，且不能为负数。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  分页参数：每页多少条。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 分页参数：每页多少条。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

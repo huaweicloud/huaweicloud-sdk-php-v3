@@ -23,13 +23,15 @@ class SmartDocumentRecognizerWordsBlockList implements ModelInterface, ArrayAcce
     * words  文字块识别结果。
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     * confidence  文字块识别结果的置信度。
+    * charList  当入参character_mode为True时返回该字段，表示当前文字块对应的单字符识别列表，输出顺序从左到右，先上后下。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'words' => 'string',
             'location' => 'int[][]',
-            'confidence' => 'float'
+            'confidence' => 'float',
+            'charList' => '\HuaweiCloud\SDK\Ocr\V1\Model\SmartDocumentRecognizerCharList[]'
     ];
 
     /**
@@ -37,13 +39,15 @@ class SmartDocumentRecognizerWordsBlockList implements ModelInterface, ArrayAcce
     * words  文字块识别结果。
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     * confidence  文字块识别结果的置信度。
+    * charList  当入参character_mode为True时返回该字段，表示当前文字块对应的单字符识别列表，输出顺序从左到右，先上后下。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'words' => null,
         'location' => 'int32',
-        'confidence' => 'float'
+        'confidence' => 'float',
+        'charList' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class SmartDocumentRecognizerWordsBlockList implements ModelInterface, ArrayAcce
     * words  文字块识别结果。
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     * confidence  文字块识别结果的置信度。
+    * charList  当入参character_mode为True时返回该字段，表示当前文字块对应的单字符识别列表，输出顺序从左到右，先上后下。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'words' => 'words',
             'location' => 'location',
-            'confidence' => 'confidence'
+            'confidence' => 'confidence',
+            'charList' => 'char_list'
     ];
 
     /**
@@ -86,13 +92,15 @@ class SmartDocumentRecognizerWordsBlockList implements ModelInterface, ArrayAcce
     * words  文字块识别结果。
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     * confidence  文字块识别结果的置信度。
+    * charList  当入参character_mode为True时返回该字段，表示当前文字块对应的单字符识别列表，输出顺序从左到右，先上后下。
     *
     * @var string[]
     */
     protected static $setters = [
             'words' => 'setWords',
             'location' => 'setLocation',
-            'confidence' => 'setConfidence'
+            'confidence' => 'setConfidence',
+            'charList' => 'setCharList'
     ];
 
     /**
@@ -100,13 +108,15 @@ class SmartDocumentRecognizerWordsBlockList implements ModelInterface, ArrayAcce
     * words  文字块识别结果。
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     * confidence  文字块识别结果的置信度。
+    * charList  当入参character_mode为True时返回该字段，表示当前文字块对应的单字符识别列表，输出顺序从左到右，先上后下。
     *
     * @var string[]
     */
     protected static $getters = [
             'words' => 'getWords',
             'location' => 'getLocation',
-            'confidence' => 'getConfidence'
+            'confidence' => 'getConfidence',
+            'charList' => 'getCharList'
     ];
 
     /**
@@ -170,6 +180,7 @@ class SmartDocumentRecognizerWordsBlockList implements ModelInterface, ArrayAcce
         $this->container['words'] = isset($data['words']) ? $data['words'] : null;
         $this->container['location'] = isset($data['location']) ? $data['location'] : null;
         $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
+        $this->container['charList'] = isset($data['charList']) ? $data['charList'] : null;
     }
 
     /**
@@ -263,6 +274,30 @@ class SmartDocumentRecognizerWordsBlockList implements ModelInterface, ArrayAcce
     public function setConfidence($confidence)
     {
         $this->container['confidence'] = $confidence;
+        return $this;
+    }
+
+    /**
+    * Gets charList
+    *  当入参character_mode为True时返回该字段，表示当前文字块对应的单字符识别列表，输出顺序从左到右，先上后下。
+    *
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\SmartDocumentRecognizerCharList[]|null
+    */
+    public function getCharList()
+    {
+        return $this->container['charList'];
+    }
+
+    /**
+    * Sets charList
+    *
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\SmartDocumentRecognizerCharList[]|null $charList 当入参character_mode为True时返回该字段，表示当前文字块对应的单字符识别列表，输出顺序从左到右，先上后下。
+    *
+    * @return $this
+    */
+    public function setCharList($charList)
+    {
+        $this->container['charList'] = $charList;
         return $this;
     }
 

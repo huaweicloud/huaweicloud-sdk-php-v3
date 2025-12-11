@@ -20,8 +20,8 @@ class AssociateImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  **参数解释**: id **取值范围**: 最小值0，最大值9223372036854775807
-    * imageId  **参数解释**: 镜像id **取值范围**: 字符长度0-64位
+    * id  **参数解释**: 多架构关联镜像的记录唯一标识ID **取值范围**: 最小值0，最大值9223372036854775807
+    * imageId  **参数解释**: 多架构关联镜像的唯一标识ID **取值范围**: 字符长度0-64位
     * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度0-128位
     * imageVersion  **参数解释**: 镜像版本 **取值范围**: 字符长度0-64位
     * imageType  **参数解释**: 镜像类型 **取值范围**: - private_image：SWR私有镜像。 - shared_image：SWR共享镜像。 - instance_image：SWR企业版镜像。 - harbor：Harbor仓库镜像。 - jfrog：Jfrog镜像。
@@ -50,8 +50,8 @@ class AssociateImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  **参数解释**: id **取值范围**: 最小值0，最大值9223372036854775807
-    * imageId  **参数解释**: 镜像id **取值范围**: 字符长度0-64位
+    * id  **参数解释**: 多架构关联镜像的记录唯一标识ID **取值范围**: 最小值0，最大值9223372036854775807
+    * imageId  **参数解释**: 多架构关联镜像的唯一标识ID **取值范围**: 字符长度0-64位
     * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度0-128位
     * imageVersion  **参数解释**: 镜像版本 **取值范围**: 字符长度0-64位
     * imageType  **参数解释**: 镜像类型 **取值范围**: - private_image：SWR私有镜像。 - shared_image：SWR共享镜像。 - instance_image：SWR企业版镜像。 - harbor：Harbor仓库镜像。 - jfrog：Jfrog镜像。
@@ -101,8 +101,8 @@ class AssociateImagesInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  **参数解释**: id **取值范围**: 最小值0，最大值9223372036854775807
-    * imageId  **参数解释**: 镜像id **取值范围**: 字符长度0-64位
+    * id  **参数解释**: 多架构关联镜像的记录唯一标识ID **取值范围**: 最小值0，最大值9223372036854775807
+    * imageId  **参数解释**: 多架构关联镜像的唯一标识ID **取值范围**: 字符长度0-64位
     * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度0-128位
     * imageVersion  **参数解释**: 镜像版本 **取值范围**: 字符长度0-64位
     * imageType  **参数解释**: 镜像类型 **取值范围**: - private_image：SWR私有镜像。 - shared_image：SWR共享镜像。 - instance_image：SWR企业版镜像。 - harbor：Harbor仓库镜像。 - jfrog：Jfrog镜像。
@@ -131,8 +131,8 @@ class AssociateImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  **参数解释**: id **取值范围**: 最小值0，最大值9223372036854775807
-    * imageId  **参数解释**: 镜像id **取值范围**: 字符长度0-64位
+    * id  **参数解释**: 多架构关联镜像的记录唯一标识ID **取值范围**: 最小值0，最大值9223372036854775807
+    * imageId  **参数解释**: 多架构关联镜像的唯一标识ID **取值范围**: 字符长度0-64位
     * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度0-128位
     * imageVersion  **参数解释**: 镜像版本 **取值范围**: 字符长度0-64位
     * imageType  **参数解释**: 镜像类型 **取值范围**: - private_image：SWR私有镜像。 - shared_image：SWR共享镜像。 - instance_image：SWR企业版镜像。 - harbor：Harbor仓库镜像。 - jfrog：Jfrog镜像。
@@ -161,8 +161,8 @@ class AssociateImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  **参数解释**: id **取值范围**: 最小值0，最大值9223372036854775807
-    * imageId  **参数解释**: 镜像id **取值范围**: 字符长度0-64位
+    * id  **参数解释**: 多架构关联镜像的记录唯一标识ID **取值范围**: 最小值0，最大值9223372036854775807
+    * imageId  **参数解释**: 多架构关联镜像的唯一标识ID **取值范围**: 字符长度0-64位
     * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度0-128位
     * imageVersion  **参数解释**: 镜像版本 **取值范围**: 字符长度0-64位
     * imageType  **参数解释**: 镜像类型 **取值范围**: - private_image：SWR私有镜像。 - shared_image：SWR共享镜像。 - instance_image：SWR企业版镜像。 - harbor：Harbor仓库镜像。 - jfrog：Jfrog镜像。
@@ -350,7 +350,7 @@ class AssociateImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  **参数解释**: id **取值范围**: 最小值0，最大值9223372036854775807
+    *  **参数解释**: 多架构关联镜像的记录唯一标识ID **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -362,7 +362,7 @@ class AssociateImagesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id **参数解释**: id **取值范围**: 最小值0，最大值9223372036854775807
+    * @param int|null $id **参数解释**: 多架构关联镜像的记录唯一标识ID **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -374,7 +374,7 @@ class AssociateImagesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageId
-    *  **参数解释**: 镜像id **取值范围**: 字符长度0-64位
+    *  **参数解释**: 多架构关联镜像的唯一标识ID **取值范围**: 字符长度0-64位
     *
     * @return string|null
     */
@@ -386,7 +386,7 @@ class AssociateImagesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imageId
     *
-    * @param string|null $imageId **参数解释**: 镜像id **取值范围**: 字符长度0-64位
+    * @param string|null $imageId **参数解释**: 多架构关联镜像的唯一标识ID **取值范围**: 字符长度0-64位
     *
     * @return $this
     */

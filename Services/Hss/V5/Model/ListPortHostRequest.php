@@ -20,14 +20,14 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * hostName  主机名称
-    * hostIp  主机ip
-    * port  端口号
-    * type  端口类型：目前包括TCP，UDP两种
-    * category  类别，默认为host，包含如下： - host：主机 - container：容器
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * port  **参数解释**: 端口号 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值65535（TCP/UDP标准端口范围） **默认取值**: 不涉及
+    * type  **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: TCP、UDP **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -35,23 +35,23 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'hostName' => 'string',
             'hostIp' => 'string',
-            'port' => 'int',
-            'type' => 'string',
             'category' => 'string',
             'limit' => 'int',
-            'offset' => 'int'
+            'offset' => 'int',
+            'port' => 'int',
+            'type' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * hostName  主机名称
-    * hostIp  主机ip
-    * port  端口号
-    * type  端口类型：目前包括TCP，UDP两种
-    * category  类别，默认为host，包含如下： - host：主机 - container：容器
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * port  **参数解释**: 端口号 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值65535（TCP/UDP标准端口范围） **默认取值**: 不涉及
+    * type  **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: TCP、UDP **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -59,11 +59,11 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'hostName' => null,
         'hostIp' => null,
-        'port' => null,
-        'type' => null,
         'category' => null,
         'limit' => 'int32',
-        'offset' => 'int32'
+        'offset' => 'int32',
+        'port' => null,
+        'type' => null
     ];
 
     /**
@@ -89,14 +89,14 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * hostName  主机名称
-    * hostIp  主机ip
-    * port  端口号
-    * type  端口类型：目前包括TCP，UDP两种
-    * category  类别，默认为host，包含如下： - host：主机 - container：容器
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * port  **参数解释**: 端口号 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值65535（TCP/UDP标准端口范围） **默认取值**: 不涉及
+    * type  **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: TCP、UDP **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -104,23 +104,23 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'hostName' => 'host_name',
             'hostIp' => 'host_ip',
-            'port' => 'port',
-            'type' => 'type',
             'category' => 'category',
             'limit' => 'limit',
-            'offset' => 'offset'
+            'offset' => 'offset',
+            'port' => 'port',
+            'type' => 'type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * hostName  主机名称
-    * hostIp  主机ip
-    * port  端口号
-    * type  端口类型：目前包括TCP，UDP两种
-    * category  类别，默认为host，包含如下： - host：主机 - container：容器
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * port  **参数解释**: 端口号 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值65535（TCP/UDP标准端口范围） **默认取值**: 不涉及
+    * type  **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: TCP、UDP **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -128,23 +128,23 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'hostName' => 'setHostName',
             'hostIp' => 'setHostIp',
-            'port' => 'setPort',
-            'type' => 'setType',
             'category' => 'setCategory',
             'limit' => 'setLimit',
-            'offset' => 'setOffset'
+            'offset' => 'setOffset',
+            'port' => 'setPort',
+            'type' => 'setType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * hostName  主机名称
-    * hostIp  主机ip
-    * port  端口号
-    * type  端口类型：目前包括TCP，UDP两种
-    * category  类别，默认为host，包含如下： - host：主机 - container：容器
-    * limit  每页显示数量
-    * offset  偏移量：指定返回记录的开始位置
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostIp  **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * port  **参数解释**: 端口号 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值65535（TCP/UDP标准端口范围） **默认取值**: 不涉及
+    * type  **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: TCP、UDP **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -152,11 +152,11 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'hostName' => 'getHostName',
             'hostIp' => 'getHostIp',
-            'port' => 'getPort',
-            'type' => 'getType',
             'category' => 'getCategory',
             'limit' => 'getLimit',
-            'offset' => 'getOffset'
+            'offset' => 'getOffset',
+            'port' => 'getPort',
+            'type' => 'getType'
     ];
 
     /**
@@ -220,11 +220,11 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
         $this->container['hostIp'] = isset($data['hostIp']) ? $data['hostIp'] : null;
-        $this->container['port'] = isset($data['port']) ? $data['port'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['category'] = isset($data['category']) ? $data['category'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['port'] = isset($data['port']) ? $data['port'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -241,17 +241,50 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^.*$/", $this->container['enterpriseProjectId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^.*$/.";
+            }
             if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 256)) {
                 $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['hostName']) && !preg_match("/^.*$/", $this->container['hostName'])) {
+                $invalidProperties[] = "invalid value for 'hostName', must be conform to the pattern /^.*$/.";
+            }
             if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) > 256)) {
                 $invalidProperties[] = "invalid value for 'hostIp', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['hostIp']) && (mb_strlen($this->container['hostIp']) < 1)) {
                 $invalidProperties[] = "invalid value for 'hostIp', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['hostIp']) && !preg_match("/^.*$/", $this->container['hostIp'])) {
+                $invalidProperties[] = "invalid value for 'hostIp', must be conform to the pattern /^.*$/.";
+            }
+        if ($this->container['category'] === null) {
+            $invalidProperties[] = "'category' can't be null";
+        }
+            if ((mb_strlen($this->container['category']) > 32)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['category']) < 0)) {
+                $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 0.";
+            }
+            if (!preg_match("/^(host|container)$/", $this->container['category'])) {
+                $invalidProperties[] = "invalid value for 'category', must be conform to the pattern /^(host|container)$/.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2000000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2000000.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
         if ($this->container['port'] === null) {
             $invalidProperties[] = "'port' can't be null";
@@ -267,24 +300,6 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 1)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) > 64)) {
-                $invalidProperties[] = "invalid value for 'category', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) < 0)) {
-                $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 10000)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 10000.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
-                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -302,7 +317,7 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    *  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return string|null
     */
@@ -314,7 +329,7 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * @param string|null $enterpriseProjectId **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return $this
     */
@@ -326,7 +341,7 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  主机名称
+    *  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -338,7 +353,7 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 主机名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -350,7 +365,7 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  主机ip
+    *  **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -362,7 +377,7 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 主机ip
+    * @param string|null $hostIp **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -373,58 +388,10 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets port
-    *  端口号
-    *
-    * @return int
-    */
-    public function getPort()
-    {
-        return $this->container['port'];
-    }
-
-    /**
-    * Sets port
-    *
-    * @param int $port 端口号
-    *
-    * @return $this
-    */
-    public function setPort($port)
-    {
-        $this->container['port'] = $port;
-        return $this;
-    }
-
-    /**
-    * Gets type
-    *  端口类型：目前包括TCP，UDP两种
-    *
-    * @return string|null
-    */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-    * Sets type
-    *
-    * @param string|null $type 端口类型：目前包括TCP，UDP两种
-    *
-    * @return $this
-    */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
-        return $this;
-    }
-
-    /**
     * Gets category
-    *  类别，默认为host，包含如下： - host：主机 - container：容器
+    *  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     *
-    * @return string|null
+    * @return string
     */
     public function getCategory()
     {
@@ -434,7 +401,7 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string|null $category 类别，默认为host，包含如下： - host：主机 - container：容器
+    * @param string $category **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     *
     * @return $this
     */
@@ -446,7 +413,7 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示数量
+    *  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return int|null
     */
@@ -458,7 +425,7 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示数量
+    * @param int|null $limit **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return $this
     */
@@ -470,7 +437,7 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置
+    *  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return int|null
     */
@@ -482,13 +449,61 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置
+    * @param int|null $offset **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return $this
     */
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets port
+    *  **参数解释**: 端口号 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值65535（TCP/UDP标准端口范围） **默认取值**: 不涉及
+    *
+    * @return int
+    */
+    public function getPort()
+    {
+        return $this->container['port'];
+    }
+
+    /**
+    * Sets port
+    *
+    * @param int $port **参数解释**: 端口号 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值65535（TCP/UDP标准端口范围） **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setPort($port)
+    {
+        $this->container['port'] = $port;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: TCP、UDP **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: TCP、UDP **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

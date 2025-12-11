@@ -22,12 +22,12 @@ class RdsNoAgentDbRequestDatabases implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  数据库ID
     * dbName  数据库名称
-    * status  数据库状态
+    * status  数据库状态 - ON：启用 - OFF：关闭
     * port  数据库端口
     * ip  数据库IP
     * instanceName  数据库实例名称
     * version  数据库版本
-    * type  数据库类型
+    * type  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - TAURUS: Taurus DB - DWS: GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS： DDS(MongoDB)
     * enterpriseId  企业项目ID
     * enterpriseName  企业项目名称
     *
@@ -50,12 +50,12 @@ class RdsNoAgentDbRequestDatabases implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  数据库ID
     * dbName  数据库名称
-    * status  数据库状态
+    * status  数据库状态 - ON：启用 - OFF：关闭
     * port  数据库端口
     * ip  数据库IP
     * instanceName  数据库实例名称
     * version  数据库版本
-    * type  数据库类型
+    * type  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - TAURUS: Taurus DB - DWS: GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS： DDS(MongoDB)
     * enterpriseId  企业项目ID
     * enterpriseName  企业项目名称
     *
@@ -99,12 +99,12 @@ class RdsNoAgentDbRequestDatabases implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  数据库ID
     * dbName  数据库名称
-    * status  数据库状态
+    * status  数据库状态 - ON：启用 - OFF：关闭
     * port  数据库端口
     * ip  数据库IP
     * instanceName  数据库实例名称
     * version  数据库版本
-    * type  数据库类型
+    * type  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - TAURUS: Taurus DB - DWS: GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS： DDS(MongoDB)
     * enterpriseId  企业项目ID
     * enterpriseName  企业项目名称
     *
@@ -127,12 +127,12 @@ class RdsNoAgentDbRequestDatabases implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  数据库ID
     * dbName  数据库名称
-    * status  数据库状态
+    * status  数据库状态 - ON：启用 - OFF：关闭
     * port  数据库端口
     * ip  数据库IP
     * instanceName  数据库实例名称
     * version  数据库版本
-    * type  数据库类型
+    * type  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - TAURUS: Taurus DB - DWS: GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS： DDS(MongoDB)
     * enterpriseId  企业项目ID
     * enterpriseName  企业项目名称
     *
@@ -155,12 +155,12 @@ class RdsNoAgentDbRequestDatabases implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  数据库ID
     * dbName  数据库名称
-    * status  数据库状态
+    * status  数据库状态 - ON：启用 - OFF：关闭
     * port  数据库端口
     * ip  数据库IP
     * instanceName  数据库实例名称
     * version  数据库版本
-    * type  数据库类型
+    * type  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - TAURUS: Taurus DB - DWS: GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS： DDS(MongoDB)
     * enterpriseId  企业项目ID
     * enterpriseName  企业项目名称
     *
@@ -348,7 +348,7 @@ class RdsNoAgentDbRequestDatabases implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  数据库状态
+    *  数据库状态 - ON：启用 - OFF：关闭
     *
     * @return string
     */
@@ -360,7 +360,7 @@ class RdsNoAgentDbRequestDatabases implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 数据库状态
+    * @param string $status 数据库状态 - ON：启用 - OFF：关闭
     *
     * @return $this
     */
@@ -468,7 +468,7 @@ class RdsNoAgentDbRequestDatabases implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  数据库类型
+    *  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - TAURUS: Taurus DB - DWS: GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS： DDS(MongoDB)
     *
     * @return string
     */
@@ -480,7 +480,7 @@ class RdsNoAgentDbRequestDatabases implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 数据库类型
+    * @param string $type 数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - TAURUS: Taurus DB - DWS: GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS： DDS(MongoDB)
     *
     * @return $this
     */

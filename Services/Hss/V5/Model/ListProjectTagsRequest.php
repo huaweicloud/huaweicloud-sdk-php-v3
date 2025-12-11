@@ -20,7 +20,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  **参数解释**: 资源类别 **约束限制**: 不涉及 **取值范围**: - hss：主机安全服务 **默认取值**: hss
+    * resourceType  **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  **参数解释**: 资源类别 **约束限制**: 不涉及 **取值范围**: - hss：主机安全服务 **默认取值**: hss
+    * resourceType  **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  **参数解释**: 资源类别 **约束限制**: 不涉及 **取值范围**: - hss：主机安全服务 **默认取值**: hss
+    * resourceType  **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  **参数解释**: 资源类别 **约束限制**: 不涉及 **取值范围**: - hss：主机安全服务 **默认取值**: hss
+    * resourceType  **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  **参数解释**: 资源类别 **约束限制**: 不涉及 **取值范围**: - hss：主机安全服务 **默认取值**: hss
+    * resourceType  **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
     *
     * @var string[]
     */
@@ -161,6 +161,12 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
         if ($this->container['resourceType'] === null) {
             $invalidProperties[] = "'resourceType' can't be null";
         }
+            if ((mb_strlen($this->container['resourceType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'resourceType', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['resourceType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'resourceType', the character length must be bigger than or equal to 1.";
+            }
             if (!preg_match("/^hss$/", $this->container['resourceType'])) {
                 $invalidProperties[] = "invalid value for 'resourceType', must be conform to the pattern /^hss$/.";
             }
@@ -180,7 +186,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  **参数解释**: 资源类别 **约束限制**: 不涉及 **取值范围**: - hss：主机安全服务 **默认取值**: hss
+    *  **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
     *
     * @return string
     */
@@ -192,7 +198,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType **参数解释**: 资源类别 **约束限制**: 不涉及 **取值范围**: - hss：主机安全服务 **默认取值**: hss
+    * @param string $resourceType **参数解释**: 由标签管理服务定义的资源类别，企业主机安全服务调用此接口时资源类别为hss。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位。 **默认取值**: hss
     *
     * @return $this
     */

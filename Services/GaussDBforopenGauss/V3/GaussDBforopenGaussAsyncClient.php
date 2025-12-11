@@ -452,6 +452,77 @@ class GaussDBforopenGaussAsyncClient extends Client
     }
 
     /**
+     * 批量删除实例标签
+     *
+     * 批量删除实例标签
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteInstanceTagAsync($request)
+    {
+        return $this->batchDeleteInstanceTagAsyncWithHttpInfo($request);
+    }
+    
+    public function batchDeleteInstanceTagAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BatchDeleteInstanceTagResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BatchDeleteInstanceTagRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 批量设置自动备份策略
      *
      * 批量设置自动备份策略。
@@ -7481,6 +7552,18 @@ class GaussDBforopenGaussAsyncClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
+        if ($localVarParams['backupRestoreType'] !== null) {
+            $queryParams['backup_restore_type'] = $localVarParams['backupRestoreType'];
+        }
+        if ($localVarParams['sourceBackupSchema'] !== null) {
+            $queryParams['source_backup_schema'] = $localVarParams['sourceBackupSchema'];
+        }
+        if ($localVarParams['targetInstanceId'] !== null) {
+            $queryParams['target_instance_id'] = $localVarParams['targetInstanceId'];
+        }
+        if ($localVarParams['instanceName'] !== null) {
+            $queryParams['instance_name'] = $localVarParams['instanceName'];
+        }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];
         }
@@ -10582,6 +10665,15 @@ class GaussDBforopenGaussAsyncClient extends Client
         }
         if ($localVarParams['instanceId'] !== null) {
             $queryParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['consistency'] !== null) {
+            $queryParams['consistency'] = $localVarParams['consistency'];
+        }
+        if ($localVarParams['consistencyProtocol'] !== null) {
+            $queryParams['consistency_protocol'] = $localVarParams['consistencyProtocol'];
+        }
+        if ($localVarParams['engineVersion'] !== null) {
+            $queryParams['engine_version'] = $localVarParams['engineVersion'];
         }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];

@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Hss\V5\Model;
+namespace HuaweiCloud\SDK\GaussDB\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowPorcessTopResponse implements ModelInterface, ArrayAccess
+class SetAutoSqlLimitingResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,30 +17,26 @@ class ShowPorcessTopResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowPorcessTopResponse';
+    protected static $openAPIModelName = 'SetAutoSqlLimitingResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  **参数解释**: TOP5总数 **取值范围**: 取值0-5位
-    * dataList  **参数解释**: TOP5列表
+    * jobId  **参数解释**：  开启自治限流任务ID。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'totalNum' => 'int',
-            'dataList' => '\HuaweiCloud\SDK\Hss\V5\Model\CommonTopResponseInfo[]'
+            'jobId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  **参数解释**: TOP5总数 **取值范围**: 取值0-5位
-    * dataList  **参数解释**: TOP5列表
+    * jobId  **参数解释**：  开启自治限流任务ID。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'totalNum' => 'int32',
-        'dataList' => null
+        'jobId' => null
     ];
 
     /**
@@ -66,38 +62,32 @@ class ShowPorcessTopResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  **参数解释**: TOP5总数 **取值范围**: 取值0-5位
-    * dataList  **参数解释**: TOP5列表
+    * jobId  **参数解释**：  开启自治限流任务ID。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'totalNum' => 'total_num',
-            'dataList' => 'data_list'
+            'jobId' => 'job_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  **参数解释**: TOP5总数 **取值范围**: 取值0-5位
-    * dataList  **参数解释**: TOP5列表
+    * jobId  **参数解释**：  开启自治限流任务ID。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'totalNum' => 'setTotalNum',
-            'dataList' => 'setDataList'
+            'jobId' => 'setJobId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  **参数解释**: TOP5总数 **取值范围**: 取值0-5位
-    * dataList  **参数解释**: TOP5列表
+    * jobId  **参数解释**：  开启自治限流任务ID。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'totalNum' => 'getTotalNum',
-            'dataList' => 'getDataList'
+            'jobId' => 'getJobId'
     ];
 
     /**
@@ -158,8 +148,7 @@ class ShowPorcessTopResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['totalNum'] = isset($data['totalNum']) ? $data['totalNum'] : null;
-        $this->container['dataList'] = isset($data['dataList']) ? $data['dataList'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
     }
 
     /**
@@ -170,12 +159,6 @@ class ShowPorcessTopResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] > 5)) {
-                $invalidProperties[] = "invalid value for 'totalNum', must be smaller than or equal to 5.";
-            }
-            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] < 0)) {
-                $invalidProperties[] = "invalid value for 'totalNum', must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -191,50 +174,26 @@ class ShowPorcessTopResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets totalNum
-    *  **参数解释**: TOP5总数 **取值范围**: 取值0-5位
+    * Gets jobId
+    *  **参数解释**：  开启自治限流任务ID。  **取值范围**：  不涉及。
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getTotalNum()
+    public function getJobId()
     {
-        return $this->container['totalNum'];
+        return $this->container['jobId'];
     }
 
     /**
-    * Sets totalNum
+    * Sets jobId
     *
-    * @param int|null $totalNum **参数解释**: TOP5总数 **取值范围**: 取值0-5位
+    * @param string|null $jobId **参数解释**：  开启自治限流任务ID。  **取值范围**：  不涉及。
     *
     * @return $this
     */
-    public function setTotalNum($totalNum)
+    public function setJobId($jobId)
     {
-        $this->container['totalNum'] = $totalNum;
-        return $this;
-    }
-
-    /**
-    * Gets dataList
-    *  **参数解释**: TOP5列表
-    *
-    * @return \HuaweiCloud\SDK\Hss\V5\Model\CommonTopResponseInfo[]|null
-    */
-    public function getDataList()
-    {
-        return $this->container['dataList'];
-    }
-
-    /**
-    * Sets dataList
-    *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\CommonTopResponseInfo[]|null $dataList **参数解释**: TOP5列表
-    *
-    * @return $this
-    */
-    public function setDataList($dataList)
-    {
-        $this->container['dataList'] = $dataList;
+        $this->container['jobId'] = $jobId;
         return $this;
     }
 

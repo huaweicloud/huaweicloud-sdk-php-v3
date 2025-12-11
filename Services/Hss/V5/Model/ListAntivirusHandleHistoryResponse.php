@@ -22,7 +22,7 @@ class ListAntivirusHandleHistoryResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
-    * dataList  病毒查杀历史处置记录
+    * dataList  **参数解释**: 病毒查杀历史处置记录 **取值范围**: 最小值0，最大值100
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class ListAntivirusHandleHistoryResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
-    * dataList  病毒查杀历史处置记录
+    * dataList  **参数解释**: 病毒查杀历史处置记录 **取值范围**: 最小值0，最大值100
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class ListAntivirusHandleHistoryResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
-    * dataList  病毒查杀历史处置记录
+    * dataList  **参数解释**: 病毒查杀历史处置记录 **取值范围**: 最小值0，最大值100
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class ListAntivirusHandleHistoryResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
-    * dataList  病毒查杀历史处置记录
+    * dataList  **参数解释**: 病毒查杀历史处置记录 **取值范围**: 最小值0，最大值100
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListAntivirusHandleHistoryResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * totalNum  **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
-    * dataList  病毒查杀历史处置记录
+    * dataList  **参数解释**: 病毒查杀历史处置记录 **取值范围**: 最小值0，最大值100
     *
     * @var string[]
     */
@@ -216,7 +216,7 @@ class ListAntivirusHandleHistoryResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  病毒查杀历史处置记录
+    *  **参数解释**: 病毒查杀历史处置记录 **取值范围**: 最小值0，最大值100
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\AntiVirusHandleHistory[]|null
     */
@@ -228,7 +228,7 @@ class ListAntivirusHandleHistoryResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\AntiVirusHandleHistory[]|null $dataList 病毒查杀历史处置记录
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\AntiVirusHandleHistory[]|null $dataList **参数解释**: 病毒查杀历史处置记录 **取值范围**: 最小值0，最大值100
     *
     * @return $this
     */

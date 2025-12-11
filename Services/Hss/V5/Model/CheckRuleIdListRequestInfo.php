@@ -20,7 +20,7 @@ class CheckRuleIdListRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * checkRules  检查项ID列表
+    * checkRules  **参数解释**: 检查项ID列表 **约束限制**: 不涉及 **取值范围**: 元素个数范围0-2147483647 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class CheckRuleIdListRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * checkRules  检查项ID列表
+    * checkRules  **参数解释**: 检查项ID列表 **约束限制**: 不涉及 **取值范围**: 元素个数范围0-2147483647 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class CheckRuleIdListRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * checkRules  检查项ID列表
+    * checkRules  **参数解释**: 检查项ID列表 **约束限制**: 不涉及 **取值范围**: 元素个数范围0-2147483647 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CheckRuleIdListRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * checkRules  检查项ID列表
+    * checkRules  **参数解释**: 检查项ID列表 **约束限制**: 不涉及 **取值范围**: 元素个数范围0-2147483647 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CheckRuleIdListRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * checkRules  检查项ID列表
+    * checkRules  **参数解释**: 检查项ID列表 **约束限制**: 不涉及 **取值范围**: 元素个数范围0-2147483647 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class CheckRuleIdListRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkRules
-    *  检查项ID列表
+    *  **参数解释**: 检查项ID列表 **约束限制**: 不涉及 **取值范围**: 元素个数范围0-2147483647 **默认取值**: 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\CheckRuleKeyInfoRequestInfo[]|null
     */
@@ -186,7 +186,7 @@ class CheckRuleIdListRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checkRules
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\CheckRuleKeyInfoRequestInfo[]|null $checkRules 检查项ID列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\CheckRuleKeyInfoRequestInfo[]|null $checkRules **参数解释**: 检查项ID列表 **约束限制**: 不涉及 **取值范围**: 元素个数范围0-2147483647 **默认取值**: 不涉及
     *
     * @return $this
     */

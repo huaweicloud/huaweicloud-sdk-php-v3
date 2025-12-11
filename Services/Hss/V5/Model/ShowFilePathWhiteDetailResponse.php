@@ -21,8 +21,8 @@ class ShowFilePathWhiteDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * defaultPath  **参数解释**: \"默认路径，不可编辑\" **取值范围**: 最小值0，最大值20000
-    * customizedPath  **参数解释**: \"自定义路径，选填，可编辑\" **取值范围**: 最小值0，最大值20000
+    * defaultPath  **参数解释**: 默认路径，不可编辑 **取值范围**: 最小值0，最大值20000
+    * customizedPath  **参数解释**: 自定义路径，选填，可编辑 **取值范围**: 最小值0，最大值20000
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ShowFilePathWhiteDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * defaultPath  **参数解释**: \"默认路径，不可编辑\" **取值范围**: 最小值0，最大值20000
-    * customizedPath  **参数解释**: \"自定义路径，选填，可编辑\" **取值范围**: 最小值0，最大值20000
+    * defaultPath  **参数解释**: 默认路径，不可编辑 **取值范围**: 最小值0，最大值20000
+    * customizedPath  **参数解释**: 自定义路径，选填，可编辑 **取值范围**: 最小值0，最大值20000
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ShowFilePathWhiteDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * defaultPath  **参数解释**: \"默认路径，不可编辑\" **取值范围**: 最小值0，最大值20000
-    * customizedPath  **参数解释**: \"自定义路径，选填，可编辑\" **取值范围**: 最小值0，最大值20000
+    * defaultPath  **参数解释**: 默认路径，不可编辑 **取值范围**: 最小值0，最大值20000
+    * customizedPath  **参数解释**: 自定义路径，选填，可编辑 **取值范围**: 最小值0，最大值20000
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ShowFilePathWhiteDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * defaultPath  **参数解释**: \"默认路径，不可编辑\" **取值范围**: 最小值0，最大值20000
-    * customizedPath  **参数解释**: \"自定义路径，选填，可编辑\" **取值范围**: 最小值0，最大值20000
+    * defaultPath  **参数解释**: 默认路径，不可编辑 **取值范围**: 最小值0，最大值20000
+    * customizedPath  **参数解释**: 自定义路径，选填，可编辑 **取值范围**: 最小值0，最大值20000
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ShowFilePathWhiteDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * defaultPath  **参数解释**: \"默认路径，不可编辑\" **取值范围**: 最小值0，最大值20000
-    * customizedPath  **参数解释**: \"自定义路径，选填，可编辑\" **取值范围**: 最小值0，最大值20000
+    * defaultPath  **参数解释**: 默认路径，不可编辑 **取值范围**: 最小值0，最大值20000
+    * customizedPath  **参数解释**: 自定义路径，选填，可编辑 **取值范围**: 最小值0，最大值20000
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ShowFilePathWhiteDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultPath
-    *  **参数解释**: \"默认路径，不可编辑\" **取值范围**: 最小值0，最大值20000
+    *  **参数解释**: 默认路径，不可编辑 **取值范围**: 最小值0，最大值20000
     *
     * @return string[]|null
     */
@@ -198,7 +198,7 @@ class ShowFilePathWhiteDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets defaultPath
     *
-    * @param string[]|null $defaultPath **参数解释**: \"默认路径，不可编辑\" **取值范围**: 最小值0，最大值20000
+    * @param string[]|null $defaultPath **参数解释**: 默认路径，不可编辑 **取值范围**: 最小值0，最大值20000
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ShowFilePathWhiteDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets customizedPath
-    *  **参数解释**: \"自定义路径，选填，可编辑\" **取值范围**: 最小值0，最大值20000
+    *  **参数解释**: 自定义路径，选填，可编辑 **取值范围**: 最小值0，最大值20000
     *
     * @return string[]|null
     */
@@ -222,7 +222,7 @@ class ShowFilePathWhiteDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets customizedPath
     *
-    * @param string[]|null $customizedPath **参数解释**: \"自定义路径，选填，可编辑\" **取值范围**: 最小值0，最大值20000
+    * @param string[]|null $customizedPath **参数解释**: 自定义路径，选填，可编辑 **取值范围**: 最小值0，最大值20000
     *
     * @return $this
     */

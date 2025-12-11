@@ -22,6 +22,7 @@ class ShowVulReportDataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * sumary  sumary
+    * summary  summary
     * hosts  主机列表
     * vulnerabilities  漏洞列表
     * reportCreateTime  **参数解释**： 报告生成时间 **取值范围**： 最小值0，最大值9223372036854775807
@@ -32,6 +33,7 @@ class ShowVulReportDataResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'sumary' => '\HuaweiCloud\SDK\Hss\V5\Model\ShowVulReportDataResponseInfoSumary',
+            'summary' => '\HuaweiCloud\SDK\Hss\V5\Model\ShowVulReportDataResponseInfoSummary',
             'hosts' => '\HuaweiCloud\SDK\Hss\V5\Model\ShowVulReportDataResponseInfoHosts[]',
             'vulnerabilities' => '\HuaweiCloud\SDK\Hss\V5\Model\ShowVulReportDataResponseInfoVulnerabilities[]',
             'reportCreateTime' => 'int',
@@ -42,6 +44,7 @@ class ShowVulReportDataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * sumary  sumary
+    * summary  summary
     * hosts  主机列表
     * vulnerabilities  漏洞列表
     * reportCreateTime  **参数解释**： 报告生成时间 **取值范围**： 最小值0，最大值9223372036854775807
@@ -52,6 +55,7 @@ class ShowVulReportDataResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'sumary' => null,
+        'summary' => null,
         'hosts' => null,
         'vulnerabilities' => null,
         'reportCreateTime' => 'int64',
@@ -83,6 +87,7 @@ class ShowVulReportDataResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * sumary  sumary
+    * summary  summary
     * hosts  主机列表
     * vulnerabilities  漏洞列表
     * reportCreateTime  **参数解释**： 报告生成时间 **取值范围**： 最小值0，最大值9223372036854775807
@@ -93,6 +98,7 @@ class ShowVulReportDataResponse implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'sumary' => 'sumary',
+            'summary' => 'summary',
             'hosts' => 'hosts',
             'vulnerabilities' => 'vulnerabilities',
             'reportCreateTime' => 'report_create_time',
@@ -103,6 +109,7 @@ class ShowVulReportDataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * sumary  sumary
+    * summary  summary
     * hosts  主机列表
     * vulnerabilities  漏洞列表
     * reportCreateTime  **参数解释**： 报告生成时间 **取值范围**： 最小值0，最大值9223372036854775807
@@ -113,6 +120,7 @@ class ShowVulReportDataResponse implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'sumary' => 'setSumary',
+            'summary' => 'setSummary',
             'hosts' => 'setHosts',
             'vulnerabilities' => 'setVulnerabilities',
             'reportCreateTime' => 'setReportCreateTime',
@@ -123,6 +131,7 @@ class ShowVulReportDataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * sumary  sumary
+    * summary  summary
     * hosts  主机列表
     * vulnerabilities  漏洞列表
     * reportCreateTime  **参数解释**： 报告生成时间 **取值范围**： 最小值0，最大值9223372036854775807
@@ -133,6 +142,7 @@ class ShowVulReportDataResponse implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'sumary' => 'getSumary',
+            'summary' => 'getSummary',
             'hosts' => 'getHosts',
             'vulnerabilities' => 'getVulnerabilities',
             'reportCreateTime' => 'getReportCreateTime',
@@ -199,6 +209,7 @@ class ShowVulReportDataResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['sumary'] = isset($data['sumary']) ? $data['sumary'] : null;
+        $this->container['summary'] = isset($data['summary']) ? $data['summary'] : null;
         $this->container['hosts'] = isset($data['hosts']) ? $data['hosts'] : null;
         $this->container['vulnerabilities'] = isset($data['vulnerabilities']) ? $data['vulnerabilities'] : null;
         $this->container['reportCreateTime'] = isset($data['reportCreateTime']) ? $data['reportCreateTime'] : null;
@@ -267,6 +278,30 @@ class ShowVulReportDataResponse implements ModelInterface, ArrayAccess
     public function setSumary($sumary)
     {
         $this->container['sumary'] = $sumary;
+        return $this;
+    }
+
+    /**
+    * Gets summary
+    *  summary
+    *
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\ShowVulReportDataResponseInfoSummary|null
+    */
+    public function getSummary()
+    {
+        return $this->container['summary'];
+    }
+
+    /**
+    * Sets summary
+    *
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\ShowVulReportDataResponseInfoSummary|null $summary summary
+    *
+    * @return $this
+    */
+    public function setSummary($summary)
+    {
+        $this->container['summary'] = $summary;
         return $this;
     }
 

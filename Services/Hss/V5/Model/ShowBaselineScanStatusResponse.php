@@ -21,8 +21,8 @@ class ShowBaselineScanStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * scanStatus  扫描状态，包含如下:   - neverscan: 未扫描   - scanning: 扫描中   - scanned: 扫描完成   - failed: 扫描失败
-    * scannedTime  扫描结束时间，单位毫秒
+    * scanStatus  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**: - neverscan: 未扫描 - scanning: 扫描中 - scanned: 扫描完成 - failed: 扫描失败  **默认取值**: 不涉及
+    * scannedTime  **参数解释**: 扫描结束时间，单位毫秒 **约束限制**: 不涉及 **取值范围**: 大小0-4070880000000 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ShowBaselineScanStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * scanStatus  扫描状态，包含如下:   - neverscan: 未扫描   - scanning: 扫描中   - scanned: 扫描完成   - failed: 扫描失败
-    * scannedTime  扫描结束时间，单位毫秒
+    * scanStatus  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**: - neverscan: 未扫描 - scanning: 扫描中 - scanned: 扫描完成 - failed: 扫描失败  **默认取值**: 不涉及
+    * scannedTime  **参数解释**: 扫描结束时间，单位毫秒 **约束限制**: 不涉及 **取值范围**: 大小0-4070880000000 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ShowBaselineScanStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * scanStatus  扫描状态，包含如下:   - neverscan: 未扫描   - scanning: 扫描中   - scanned: 扫描完成   - failed: 扫描失败
-    * scannedTime  扫描结束时间，单位毫秒
+    * scanStatus  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**: - neverscan: 未扫描 - scanning: 扫描中 - scanned: 扫描完成 - failed: 扫描失败  **默认取值**: 不涉及
+    * scannedTime  **参数解释**: 扫描结束时间，单位毫秒 **约束限制**: 不涉及 **取值范围**: 大小0-4070880000000 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ShowBaselineScanStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * scanStatus  扫描状态，包含如下:   - neverscan: 未扫描   - scanning: 扫描中   - scanned: 扫描完成   - failed: 扫描失败
-    * scannedTime  扫描结束时间，单位毫秒
+    * scanStatus  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**: - neverscan: 未扫描 - scanning: 扫描中 - scanned: 扫描完成 - failed: 扫描失败  **默认取值**: 不涉及
+    * scannedTime  **参数解释**: 扫描结束时间，单位毫秒 **约束限制**: 不涉及 **取值范围**: 大小0-4070880000000 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ShowBaselineScanStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * scanStatus  扫描状态，包含如下:   - neverscan: 未扫描   - scanning: 扫描中   - scanned: 扫描完成   - failed: 扫描失败
-    * scannedTime  扫描结束时间，单位毫秒
+    * scanStatus  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**: - neverscan: 未扫描 - scanning: 扫描中 - scanned: 扫描完成 - failed: 扫描失败  **默认取值**: 不涉及
+    * scannedTime  **参数解释**: 扫描结束时间，单位毫秒 **约束限制**: 不涉及 **取值范围**: 大小0-4070880000000 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -176,6 +176,9 @@ class ShowBaselineScanStatusResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['scanStatus']) && (mb_strlen($this->container['scanStatus']) < 0)) {
                 $invalidProperties[] = "invalid value for 'scanStatus', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['scanStatus']) && !preg_match("/^(neverscan|scanning|scanned|scanned)$/", $this->container['scanStatus'])) {
+                $invalidProperties[] = "invalid value for 'scanStatus', must be conform to the pattern /^(neverscan|scanning|scanned|scanned)$/.";
+            }
             if (!is_null($this->container['scannedTime']) && ($this->container['scannedTime'] > 4070880000000)) {
                 $invalidProperties[] = "invalid value for 'scannedTime', must be smaller than or equal to 4070880000000.";
             }
@@ -198,7 +201,7 @@ class ShowBaselineScanStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanStatus
-    *  扫描状态，包含如下:   - neverscan: 未扫描   - scanning: 扫描中   - scanned: 扫描完成   - failed: 扫描失败
+    *  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**: - neverscan: 未扫描 - scanning: 扫描中 - scanned: 扫描完成 - failed: 扫描失败  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -210,7 +213,7 @@ class ShowBaselineScanStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets scanStatus
     *
-    * @param string|null $scanStatus 扫描状态，包含如下:   - neverscan: 未扫描   - scanning: 扫描中   - scanned: 扫描完成   - failed: 扫描失败
+    * @param string|null $scanStatus **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**: - neverscan: 未扫描 - scanning: 扫描中 - scanned: 扫描完成 - failed: 扫描失败  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -222,7 +225,7 @@ class ShowBaselineScanStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets scannedTime
-    *  扫描结束时间，单位毫秒
+    *  **参数解释**: 扫描结束时间，单位毫秒 **约束限制**: 不涉及 **取值范围**: 大小0-4070880000000 **默认取值**: 不涉及
     *
     * @return int|null
     */
@@ -234,7 +237,7 @@ class ShowBaselineScanStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets scannedTime
     *
-    * @param int|null $scannedTime 扫描结束时间，单位毫秒
+    * @param int|null $scannedTime **参数解释**: 扫描结束时间，单位毫秒 **约束限制**: 不涉及 **取值范围**: 大小0-4070880000000 **默认取值**: 不涉及
     *
     * @return $this
     */

@@ -21,8 +21,8 @@ class RunImageSynchronizeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorCode  错误编码
-    * errorDescription  错误描述
+    * errorCode  **参数解释**: 错误编码 **取值范围**: 0（成功）、非0（失败）
+    * errorDescription  **参数解释**: 错误描述 **取值范围**: 字符长度0-512位
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class RunImageSynchronizeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorCode  错误编码
-    * errorDescription  错误描述
+    * errorCode  **参数解释**: 错误编码 **取值范围**: 0（成功）、非0（失败）
+    * errorDescription  **参数解释**: 错误描述 **取值范围**: 字符长度0-512位
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class RunImageSynchronizeResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorCode  错误编码
-    * errorDescription  错误描述
+    * errorCode  **参数解释**: 错误编码 **取值范围**: 0（成功）、非0（失败）
+    * errorDescription  **参数解释**: 错误描述 **取值范围**: 字符长度0-512位
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class RunImageSynchronizeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorCode  错误编码
-    * errorDescription  错误描述
+    * errorCode  **参数解释**: 错误编码 **取值范围**: 0（成功）、非0（失败）
+    * errorDescription  **参数解释**: 错误描述 **取值范围**: 字符长度0-512位
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class RunImageSynchronizeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorCode  错误编码
-    * errorDescription  错误描述
+    * errorCode  **参数解释**: 错误编码 **取值范围**: 0（成功）、非0（失败）
+    * errorDescription  **参数解释**: 错误描述 **取值范围**: 字符长度0-512位
     *
     * @var string[]
     */
@@ -198,7 +198,7 @@ class RunImageSynchronizeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
-    *  错误编码
+    *  **参数解释**: 错误编码 **取值范围**: 0（成功）、非0（失败）
     *
     * @return int|null
     */
@@ -210,7 +210,7 @@ class RunImageSynchronizeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorCode
     *
-    * @param int|null $errorCode 错误编码
+    * @param int|null $errorCode **参数解释**: 错误编码 **取值范围**: 0（成功）、非0（失败）
     *
     * @return $this
     */
@@ -222,7 +222,7 @@ class RunImageSynchronizeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorDescription
-    *  错误描述
+    *  **参数解释**: 错误描述 **取值范围**: 字符长度0-512位
     *
     * @return string|null
     */
@@ -234,7 +234,7 @@ class RunImageSynchronizeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorDescription
     *
-    * @param string|null $errorDescription 错误描述
+    * @param string|null $errorDescription **参数解释**: 错误描述 **取值范围**: 字符长度0-512位
     *
     * @return $this
     */

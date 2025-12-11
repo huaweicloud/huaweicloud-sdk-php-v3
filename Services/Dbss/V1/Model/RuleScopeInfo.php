@@ -23,7 +23,7 @@ class RuleScopeInfo implements ModelInterface, ArrayAccess
     * id  审计范围规则ID
     * name  审计范围名称
     * action  审计范围动作
-    * status  审计范围规则状态
+    * status  审计范围规则状态 - OFF：禁用  - ON: 启用
     * exceptionIps  审计范围例外IP
     * sourceIps  审计范围规则源IP
     * sourcePorts  审计范围源端口
@@ -53,7 +53,7 @@ class RuleScopeInfo implements ModelInterface, ArrayAccess
     * id  审计范围规则ID
     * name  审计范围名称
     * action  审计范围动作
-    * status  审计范围规则状态
+    * status  审计范围规则状态 - OFF：禁用  - ON: 启用
     * exceptionIps  审计范围例外IP
     * sourceIps  审计范围规则源IP
     * sourcePorts  审计范围源端口
@@ -104,7 +104,7 @@ class RuleScopeInfo implements ModelInterface, ArrayAccess
     * id  审计范围规则ID
     * name  审计范围名称
     * action  审计范围动作
-    * status  审计范围规则状态
+    * status  审计范围规则状态 - OFF：禁用  - ON: 启用
     * exceptionIps  审计范围例外IP
     * sourceIps  审计范围规则源IP
     * sourcePorts  审计范围源端口
@@ -134,7 +134,7 @@ class RuleScopeInfo implements ModelInterface, ArrayAccess
     * id  审计范围规则ID
     * name  审计范围名称
     * action  审计范围动作
-    * status  审计范围规则状态
+    * status  审计范围规则状态 - OFF：禁用  - ON: 启用
     * exceptionIps  审计范围例外IP
     * sourceIps  审计范围规则源IP
     * sourcePorts  审计范围源端口
@@ -164,7 +164,7 @@ class RuleScopeInfo implements ModelInterface, ArrayAccess
     * id  审计范围规则ID
     * name  审计范围名称
     * action  审计范围动作
-    * status  审计范围规则状态
+    * status  审计范围规则状态 - OFF：禁用  - ON: 启用
     * exceptionIps  审计范围例外IP
     * sourceIps  审计范围规则源IP
     * sourcePorts  审计范围源端口
@@ -356,7 +356,7 @@ class RuleScopeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  审计范围规则状态
+    *  审计范围规则状态 - OFF：禁用  - ON: 启用
     *
     * @return string|null
     */
@@ -368,7 +368,7 @@ class RuleScopeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 审计范围规则状态
+    * @param string|null $status 审计范围规则状态 - OFF：禁用  - ON: 启用
     *
     * @return $this
     */

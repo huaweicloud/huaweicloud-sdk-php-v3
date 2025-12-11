@@ -21,22 +21,26 @@ class SwitchGaussMySqlConfigurationResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  应用参数模板的任务ID。
+    * jobId  **参数解释**：  应用参数模板的任务ID。  **取值范围**：  不涉及。
+    * paramGroupName  **参数解释**：  参数模板的名称。  **取值范围**：  支持Default-TaurusDB V2.0和用户自定义参数模板，其中Default-TaurusDB V2.0表示TaurusDB系统默认参数模板。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'jobId' => 'string'
+            'jobId' => 'string',
+            'paramGroupName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  应用参数模板的任务ID。
+    * jobId  **参数解释**：  应用参数模板的任务ID。  **取值范围**：  不涉及。
+    * paramGroupName  **参数解释**：  参数模板的名称。  **取值范围**：  支持Default-TaurusDB V2.0和用户自定义参数模板，其中Default-TaurusDB V2.0表示TaurusDB系统默认参数模板。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'jobId' => null
+        'jobId' => null,
+        'paramGroupName' => null
     ];
 
     /**
@@ -62,32 +66,38 @@ class SwitchGaussMySqlConfigurationResponse implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  应用参数模板的任务ID。
+    * jobId  **参数解释**：  应用参数模板的任务ID。  **取值范围**：  不涉及。
+    * paramGroupName  **参数解释**：  参数模板的名称。  **取值范围**：  支持Default-TaurusDB V2.0和用户自定义参数模板，其中Default-TaurusDB V2.0表示TaurusDB系统默认参数模板。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'jobId' => 'job_id'
+            'jobId' => 'job_id',
+            'paramGroupName' => 'param_group_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  应用参数模板的任务ID。
+    * jobId  **参数解释**：  应用参数模板的任务ID。  **取值范围**：  不涉及。
+    * paramGroupName  **参数解释**：  参数模板的名称。  **取值范围**：  支持Default-TaurusDB V2.0和用户自定义参数模板，其中Default-TaurusDB V2.0表示TaurusDB系统默认参数模板。
     *
     * @var string[]
     */
     protected static $setters = [
-            'jobId' => 'setJobId'
+            'jobId' => 'setJobId',
+            'paramGroupName' => 'setParamGroupName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  应用参数模板的任务ID。
+    * jobId  **参数解释**：  应用参数模板的任务ID。  **取值范围**：  不涉及。
+    * paramGroupName  **参数解释**：  参数模板的名称。  **取值范围**：  支持Default-TaurusDB V2.0和用户自定义参数模板，其中Default-TaurusDB V2.0表示TaurusDB系统默认参数模板。
     *
     * @var string[]
     */
     protected static $getters = [
-            'jobId' => 'getJobId'
+            'jobId' => 'getJobId',
+            'paramGroupName' => 'getParamGroupName'
     ];
 
     /**
@@ -149,6 +159,7 @@ class SwitchGaussMySqlConfigurationResponse implements ModelInterface, ArrayAcce
     public function __construct(array $data = null)
     {
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['paramGroupName'] = isset($data['paramGroupName']) ? $data['paramGroupName'] : null;
     }
 
     /**
@@ -175,7 +186,7 @@ class SwitchGaussMySqlConfigurationResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets jobId
-    *  应用参数模板的任务ID。
+    *  **参数解释**：  应用参数模板的任务ID。  **取值范围**：  不涉及。
     *
     * @return string|null
     */
@@ -187,13 +198,37 @@ class SwitchGaussMySqlConfigurationResponse implements ModelInterface, ArrayAcce
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 应用参数模板的任务ID。
+    * @param string|null $jobId **参数解释**：  应用参数模板的任务ID。  **取值范围**：  不涉及。
     *
     * @return $this
     */
     public function setJobId($jobId)
     {
         $this->container['jobId'] = $jobId;
+        return $this;
+    }
+
+    /**
+    * Gets paramGroupName
+    *  **参数解释**：  参数模板的名称。  **取值范围**：  支持Default-TaurusDB V2.0和用户自定义参数模板，其中Default-TaurusDB V2.0表示TaurusDB系统默认参数模板。
+    *
+    * @return string|null
+    */
+    public function getParamGroupName()
+    {
+        return $this->container['paramGroupName'];
+    }
+
+    /**
+    * Sets paramGroupName
+    *
+    * @param string|null $paramGroupName **参数解释**：  参数模板的名称。  **取值范围**：  支持Default-TaurusDB V2.0和用户自定义参数模板，其中Default-TaurusDB V2.0表示TaurusDB系统默认参数模板。
+    *
+    * @return $this
+    */
+    public function setParamGroupName($paramGroupName)
+    {
+        $this->container['paramGroupName'] = $paramGroupName;
         return $this;
     }
 

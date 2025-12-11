@@ -25,7 +25,7 @@ class ListStaticRoutesRequest implements ModelInterface, ArrayAccess
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
     * attachmentId  连接ID
-    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
+    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     * sortKey  按关键字排序，默认按照id排序，可选值:id|name|state
     * sortDir  返回结果按照升序或降序排列，默认为asc,降序为desc
     *
@@ -49,7 +49,7 @@ class ListStaticRoutesRequest implements ModelInterface, ArrayAccess
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
     * attachmentId  连接ID
-    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
+    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     * sortKey  按关键字排序，默认按照id排序，可选值:id|name|state
     * sortDir  返回结果按照升序或降序排列，默认为asc,降序为desc
     *
@@ -94,7 +94,7 @@ class ListStaticRoutesRequest implements ModelInterface, ArrayAccess
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
     * attachmentId  连接ID
-    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
+    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     * sortKey  按关键字排序，默认按照id排序，可选值:id|name|state
     * sortDir  返回结果按照升序或降序排列，默认为asc,降序为desc
     *
@@ -118,7 +118,7 @@ class ListStaticRoutesRequest implements ModelInterface, ArrayAccess
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
     * attachmentId  连接ID
-    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
+    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     * sortKey  按关键字排序，默认按照id排序，可选值:id|name|state
     * sortDir  返回结果按照升序或降序排列，默认为asc,降序为desc
     *
@@ -142,7 +142,7 @@ class ListStaticRoutesRequest implements ModelInterface, ArrayAccess
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
     * attachmentId  连接ID
-    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
+    * resourceType  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     * sortKey  按关键字排序，默认按照id排序，可选值:id|name|state
     * sortDir  返回结果按照升序或降序排列，默认为asc,降序为desc
     *
@@ -435,7 +435,7 @@ class ListStaticRoutesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
+    *  - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     *
     * @return string[]|null
     */
@@ -447,7 +447,7 @@ class ListStaticRoutesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string[]|null $resourceType - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
+    * @param string[]|null $resourceType - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     *
     * @return $this
     */

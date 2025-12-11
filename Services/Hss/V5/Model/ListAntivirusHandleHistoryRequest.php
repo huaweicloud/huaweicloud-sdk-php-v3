@@ -24,18 +24,18 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * malwareName  病毒名称
-    * filePath  文件路径
-    * severityList  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
+    * malwareName  **参数解释**: 病毒名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * filePath  **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
+    * severityList  **参数解释**: 威胁等级 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    * publicIp  **参数解释**: 服务器弹性IP地址。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 无
-    * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产。 - common：一般资产。 - test：测试资产。  **默认取值**： 无
-    * handleMethod  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
-    * userName  用户名
-    * eventType  事件类型
-    * sortDir  排序顺序，若sort_key不为空,设置返回结果按照sort_key升序或降序排序,默认降序排序，包含如下:   - asc : 升序   - desc : 降序
-    * sortKey  排序字段，包含如下:   - handle_time : 处置时间
+    * publicIp  **参数解释**: 服务器弹性IP地址 **约束限制**: 不涉及 **取值范围**: IPv4格式（长度7-15位）、IPv6格式（长度15-39位） **默认取值**: 无
+    * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 无
+    * handleMethod  **参数解释**: 处理方式 **约束限制**: 不涉及 **取值范围**: 处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件 **默认取值**: 不涉及
+    * userName  **参数解释**: 用户名 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * sortDir  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc  : 正序   - desc : 倒序  **默认取值**: 正序排序
+    * eventType  **参数解释**: 事件类型 **约束限制**: 不涉及 **取值范围**: 0（病毒查杀事件）、1（恶意文件处置事件） **默认取值**: 不涉及
+    * sortKey  **参数解释**: 排序字段 **约束限制**: 不涉及 **取值范围**: handle_time（处置时间） **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -53,8 +53,8 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
             'assetValue' => 'string',
             'handleMethod' => 'string',
             'userName' => 'string',
-            'eventType' => 'int',
             'sortDir' => 'string',
+            'eventType' => 'int',
             'sortKey' => 'string'
     ];
 
@@ -64,18 +64,18 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * malwareName  病毒名称
-    * filePath  文件路径
-    * severityList  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
+    * malwareName  **参数解释**: 病毒名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * filePath  **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
+    * severityList  **参数解释**: 威胁等级 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    * publicIp  **参数解释**: 服务器弹性IP地址。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 无
-    * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产。 - common：一般资产。 - test：测试资产。  **默认取值**： 无
-    * handleMethod  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
-    * userName  用户名
-    * eventType  事件类型
-    * sortDir  排序顺序，若sort_key不为空,设置返回结果按照sort_key升序或降序排序,默认降序排序，包含如下:   - asc : 升序   - desc : 降序
-    * sortKey  排序字段，包含如下:   - handle_time : 处置时间
+    * publicIp  **参数解释**: 服务器弹性IP地址 **约束限制**: 不涉及 **取值范围**: IPv4格式（长度7-15位）、IPv6格式（长度15-39位） **默认取值**: 无
+    * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 无
+    * handleMethod  **参数解释**: 处理方式 **约束限制**: 不涉及 **取值范围**: 处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件 **默认取值**: 不涉及
+    * userName  **参数解释**: 用户名 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * sortDir  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc  : 正序   - desc : 倒序  **默认取值**: 正序排序
+    * eventType  **参数解释**: 事件类型 **约束限制**: 不涉及 **取值范围**: 0（病毒查杀事件）、1（恶意文件处置事件） **默认取值**: 不涉及
+    * sortKey  **参数解释**: 排序字段 **约束限制**: 不涉及 **取值范围**: handle_time（处置时间） **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -93,8 +93,8 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
         'assetValue' => null,
         'handleMethod' => null,
         'userName' => null,
-        'eventType' => null,
         'sortDir' => null,
+        'eventType' => null,
         'sortKey' => null
     ];
 
@@ -125,18 +125,18 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * malwareName  病毒名称
-    * filePath  文件路径
-    * severityList  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
+    * malwareName  **参数解释**: 病毒名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * filePath  **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
+    * severityList  **参数解释**: 威胁等级 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    * publicIp  **参数解释**: 服务器弹性IP地址。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 无
-    * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产。 - common：一般资产。 - test：测试资产。  **默认取值**： 无
-    * handleMethod  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
-    * userName  用户名
-    * eventType  事件类型
-    * sortDir  排序顺序，若sort_key不为空,设置返回结果按照sort_key升序或降序排序,默认降序排序，包含如下:   - asc : 升序   - desc : 降序
-    * sortKey  排序字段，包含如下:   - handle_time : 处置时间
+    * publicIp  **参数解释**: 服务器弹性IP地址 **约束限制**: 不涉及 **取值范围**: IPv4格式（长度7-15位）、IPv6格式（长度15-39位） **默认取值**: 无
+    * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 无
+    * handleMethod  **参数解释**: 处理方式 **约束限制**: 不涉及 **取值范围**: 处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件 **默认取值**: 不涉及
+    * userName  **参数解释**: 用户名 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * sortDir  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc  : 正序   - desc : 倒序  **默认取值**: 正序排序
+    * eventType  **参数解释**: 事件类型 **约束限制**: 不涉及 **取值范围**: 0（病毒查杀事件）、1（恶意文件处置事件） **默认取值**: 不涉及
+    * sortKey  **参数解释**: 排序字段 **约束限制**: 不涉及 **取值范围**: handle_time（处置时间） **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -154,8 +154,8 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
             'assetValue' => 'asset_value',
             'handleMethod' => 'handle_method',
             'userName' => 'user_name',
-            'eventType' => 'event_type',
             'sortDir' => 'sort_dir',
+            'eventType' => 'event_type',
             'sortKey' => 'sort_key'
     ];
 
@@ -165,18 +165,18 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * malwareName  病毒名称
-    * filePath  文件路径
-    * severityList  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
+    * malwareName  **参数解释**: 病毒名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * filePath  **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
+    * severityList  **参数解释**: 威胁等级 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    * publicIp  **参数解释**: 服务器弹性IP地址。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 无
-    * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产。 - common：一般资产。 - test：测试资产。  **默认取值**： 无
-    * handleMethod  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
-    * userName  用户名
-    * eventType  事件类型
-    * sortDir  排序顺序，若sort_key不为空,设置返回结果按照sort_key升序或降序排序,默认降序排序，包含如下:   - asc : 升序   - desc : 降序
-    * sortKey  排序字段，包含如下:   - handle_time : 处置时间
+    * publicIp  **参数解释**: 服务器弹性IP地址 **约束限制**: 不涉及 **取值范围**: IPv4格式（长度7-15位）、IPv6格式（长度15-39位） **默认取值**: 无
+    * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 无
+    * handleMethod  **参数解释**: 处理方式 **约束限制**: 不涉及 **取值范围**: 处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件 **默认取值**: 不涉及
+    * userName  **参数解释**: 用户名 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * sortDir  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc  : 正序   - desc : 倒序  **默认取值**: 正序排序
+    * eventType  **参数解释**: 事件类型 **约束限制**: 不涉及 **取值范围**: 0（病毒查杀事件）、1（恶意文件处置事件） **默认取值**: 不涉及
+    * sortKey  **参数解释**: 排序字段 **约束限制**: 不涉及 **取值范围**: handle_time（处置时间） **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -194,8 +194,8 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
             'assetValue' => 'setAssetValue',
             'handleMethod' => 'setHandleMethod',
             'userName' => 'setUserName',
-            'eventType' => 'setEventType',
             'sortDir' => 'setSortDir',
+            'eventType' => 'setEventType',
             'sortKey' => 'setSortKey'
     ];
 
@@ -205,18 +205,18 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * malwareName  病毒名称
-    * filePath  文件路径
-    * severityList  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
+    * malwareName  **参数解释**: 病毒名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * filePath  **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
+    * severityList  **参数解释**: 威胁等级 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    * publicIp  **参数解释**: 服务器弹性IP地址。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 无
-    * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产。 - common：一般资产。 - test：测试资产。  **默认取值**： 无
-    * handleMethod  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
-    * userName  用户名
-    * eventType  事件类型
-    * sortDir  排序顺序，若sort_key不为空,设置返回结果按照sort_key升序或降序排序,默认降序排序，包含如下:   - asc : 升序   - desc : 降序
-    * sortKey  排序字段，包含如下:   - handle_time : 处置时间
+    * publicIp  **参数解释**: 服务器弹性IP地址 **约束限制**: 不涉及 **取值范围**: IPv4格式（长度7-15位）、IPv6格式（长度15-39位） **默认取值**: 无
+    * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 无
+    * handleMethod  **参数解释**: 处理方式 **约束限制**: 不涉及 **取值范围**: 处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件 **默认取值**: 不涉及
+    * userName  **参数解释**: 用户名 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * sortDir  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc  : 正序   - desc : 倒序  **默认取值**: 正序排序
+    * eventType  **参数解释**: 事件类型 **约束限制**: 不涉及 **取值范围**: 0（病毒查杀事件）、1（恶意文件处置事件） **默认取值**: 不涉及
+    * sortKey  **参数解释**: 排序字段 **约束限制**: 不涉及 **取值范围**: handle_time（处置时间） **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -234,8 +234,8 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
             'assetValue' => 'getAssetValue',
             'handleMethod' => 'getHandleMethod',
             'userName' => 'getUserName',
-            'eventType' => 'getEventType',
             'sortDir' => 'getSortDir',
+            'eventType' => 'getEventType',
             'sortKey' => 'getSortKey'
     ];
 
@@ -310,8 +310,8 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
         $this->container['assetValue'] = isset($data['assetValue']) ? $data['assetValue'] : null;
         $this->container['handleMethod'] = isset($data['handleMethod']) ? $data['handleMethod'] : null;
         $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
-        $this->container['eventType'] = isset($data['eventType']) ? $data['eventType'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
+        $this->container['eventType'] = isset($data['eventType']) ? $data['eventType'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
     }
 
@@ -428,17 +428,20 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['userName']) && !preg_match("/^.*$/", $this->container['userName'])) {
                 $invalidProperties[] = "invalid value for 'userName', must be conform to the pattern /^.*$/.";
             }
+            if (!is_null($this->container['sortDir']) && (mb_strlen($this->container['sortDir']) > 32)) {
+                $invalidProperties[] = "invalid value for 'sortDir', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['sortDir']) && (mb_strlen($this->container['sortDir']) < 1)) {
+                $invalidProperties[] = "invalid value for 'sortDir', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['sortDir']) && !preg_match("/^(asc|desc)$/", $this->container['sortDir'])) {
+                $invalidProperties[] = "invalid value for 'sortDir', must be conform to the pattern /^(asc|desc)$/.";
+            }
             if (!is_null($this->container['eventType']) && ($this->container['eventType'] > 6000)) {
                 $invalidProperties[] = "invalid value for 'eventType', must be smaller than or equal to 6000.";
             }
             if (!is_null($this->container['eventType']) && ($this->container['eventType'] < 0)) {
                 $invalidProperties[] = "invalid value for 'eventType', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['sortDir']) && (mb_strlen($this->container['sortDir']) > 4)) {
-                $invalidProperties[] = "invalid value for 'sortDir', the character length must be smaller than or equal to 4.";
-            }
-            if (!is_null($this->container['sortDir']) && (mb_strlen($this->container['sortDir']) < 3)) {
-                $invalidProperties[] = "invalid value for 'sortDir', the character length must be bigger than or equal to 3.";
             }
             if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) > 32)) {
                 $invalidProperties[] = "invalid value for 'sortKey', the character length must be smaller than or equal to 32.";
@@ -558,7 +561,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets malwareName
-    *  病毒名称
+    *  **参数解释**: 病毒名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -570,7 +573,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets malwareName
     *
-    * @param string|null $malwareName 病毒名称
+    * @param string|null $malwareName **参数解释**: 病毒名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -582,7 +585,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets filePath
-    *  文件路径
+    *  **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -594,7 +597,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets filePath
     *
-    * @param string|null $filePath 文件路径
+    * @param string|null $filePath **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -606,7 +609,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets severityList
-    *  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
+    *  **参数解释**: 威胁等级 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
     *
     * @return string[]|null
     */
@@ -618,7 +621,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets severityList
     *
-    * @param string[]|null $severityList 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
+    * @param string[]|null $severityList **参数解释**: 威胁等级 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -678,7 +681,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  **参数解释**: 服务器弹性IP地址。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 无
+    *  **参数解释**: 服务器弹性IP地址 **约束限制**: 不涉及 **取值范围**: IPv4格式（长度7-15位）、IPv6格式（长度15-39位） **默认取值**: 无
     *
     * @return string|null
     */
@@ -690,7 +693,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp **参数解释**: 服务器弹性IP地址。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 无
+    * @param string|null $publicIp **参数解释**: 服务器弹性IP地址 **约束限制**: 不涉及 **取值范围**: IPv4格式（长度7-15位）、IPv6格式（长度15-39位） **默认取值**: 无
     *
     * @return $this
     */
@@ -702,7 +705,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetValue
-    *  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产。 - common：一般资产。 - test：测试资产。  **默认取值**： 无
+    *  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 无
     *
     * @return string|null
     */
@@ -714,7 +717,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets assetValue
     *
-    * @param string|null $assetValue **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产。 - common：一般资产。 - test：测试资产。  **默认取值**： 无
+    * @param string|null $assetValue **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 无
     *
     * @return $this
     */
@@ -726,7 +729,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets handleMethod
-    *  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
+    *  **参数解释**: 处理方式 **约束限制**: 不涉及 **取值范围**: 处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -738,7 +741,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets handleMethod
     *
-    * @param string|null $handleMethod 处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
+    * @param string|null $handleMethod **参数解释**: 处理方式 **约束限制**: 不涉及 **取值范围**: 处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -750,7 +753,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  用户名
+    *  **参数解释**: 用户名 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -762,7 +765,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName 用户名
+    * @param string|null $userName **参数解释**: 用户名 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -773,32 +776,8 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets eventType
-    *  事件类型
-    *
-    * @return int|null
-    */
-    public function getEventType()
-    {
-        return $this->container['eventType'];
-    }
-
-    /**
-    * Sets eventType
-    *
-    * @param int|null $eventType 事件类型
-    *
-    * @return $this
-    */
-    public function setEventType($eventType)
-    {
-        $this->container['eventType'] = $eventType;
-        return $this;
-    }
-
-    /**
     * Gets sortDir
-    *  排序顺序，若sort_key不为空,设置返回结果按照sort_key升序或降序排序,默认降序排序，包含如下:   - asc : 升序   - desc : 降序
+    *  **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc  : 正序   - desc : 倒序  **默认取值**: 正序排序
     *
     * @return string|null
     */
@@ -810,7 +789,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortDir
     *
-    * @param string|null $sortDir 排序顺序，若sort_key不为空,设置返回结果按照sort_key升序或降序排序,默认降序排序，包含如下:   - asc : 升序   - desc : 降序
+    * @param string|null $sortDir **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc  : 正序   - desc : 倒序  **默认取值**: 正序排序
     *
     * @return $this
     */
@@ -821,8 +800,32 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets eventType
+    *  **参数解释**: 事件类型 **约束限制**: 不涉及 **取值范围**: 0（病毒查杀事件）、1（恶意文件处置事件） **默认取值**: 不涉及
+    *
+    * @return int|null
+    */
+    public function getEventType()
+    {
+        return $this->container['eventType'];
+    }
+
+    /**
+    * Sets eventType
+    *
+    * @param int|null $eventType **参数解释**: 事件类型 **约束限制**: 不涉及 **取值范围**: 0（病毒查杀事件）、1（恶意文件处置事件） **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setEventType($eventType)
+    {
+        $this->container['eventType'] = $eventType;
+        return $this;
+    }
+
+    /**
     * Gets sortKey
-    *  排序字段，包含如下:   - handle_time : 处置时间
+    *  **参数解释**: 排序字段 **约束限制**: 不涉及 **取值范围**: handle_time（处置时间） **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -834,7 +837,7 @@ class ListAntivirusHandleHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 排序字段，包含如下:   - handle_time : 处置时间
+    * @param string|null $sortKey **参数解释**: 排序字段 **约束限制**: 不涉及 **取值范围**: handle_time（处置时间） **默认取值**: 不涉及
     *
     * @return $this
     */

@@ -29,7 +29,7 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'allowAddressNetmasks' => '\HuaweiCloud\SDK\Iam\V3\Model\AllowAddressNetmasksOption[]',
             'allowIpRanges' => '\HuaweiCloud\SDK\Iam\V3\Model\AllowIpRangesOption[]',
-            'allowVpcEndpoints' => '\HuaweiCloud\SDK\Iam\V3\Model\AllowVpcEndpointsResult[]'
+            'allowVpcEndpoints' => '\HuaweiCloud\SDK\Iam\V3\Model\AllowVpcEndpointsOption[]'
     ];
 
     /**
@@ -246,7 +246,7 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
     * Gets allowVpcEndpoints
     *  允许访问的VPC端点。
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\AllowVpcEndpointsResult[]|null
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\AllowVpcEndpointsOption[]|null
     */
     public function getAllowVpcEndpoints()
     {
@@ -256,7 +256,7 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets allowVpcEndpoints
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\AllowVpcEndpointsResult[]|null $allowVpcEndpoints 允许访问的VPC端点。
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\AllowVpcEndpointsOption[]|null $allowVpcEndpoints 允许访问的VPC端点。
     *
     * @return $this
     */

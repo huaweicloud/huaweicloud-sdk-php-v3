@@ -29,7 +29,7 @@ class ReportBean implements ModelInterface, ArrayAccess
     * name  报表名称
     * percentum  进度
     * startTime  开始时间
-    * templateType  报表类型 - PDF - ZIP
+    * templateType  报表类型 - PDF: pdf - ZIP: zip
     * type  周期 - AUDIT_REPORT_DAY: 按天 - AUDIT_REPORT_WEEK： 按周 - AUDIT_REPORT_MONTH： 按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
     * url  地址URL
     *
@@ -61,7 +61,7 @@ class ReportBean implements ModelInterface, ArrayAccess
     * name  报表名称
     * percentum  进度
     * startTime  开始时间
-    * templateType  报表类型 - PDF - ZIP
+    * templateType  报表类型 - PDF: pdf - ZIP: zip
     * type  周期 - AUDIT_REPORT_DAY: 按天 - AUDIT_REPORT_WEEK： 按周 - AUDIT_REPORT_MONTH： 按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
     * url  地址URL
     *
@@ -114,7 +114,7 @@ class ReportBean implements ModelInterface, ArrayAccess
     * name  报表名称
     * percentum  进度
     * startTime  开始时间
-    * templateType  报表类型 - PDF - ZIP
+    * templateType  报表类型 - PDF: pdf - ZIP: zip
     * type  周期 - AUDIT_REPORT_DAY: 按天 - AUDIT_REPORT_WEEK： 按周 - AUDIT_REPORT_MONTH： 按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
     * url  地址URL
     *
@@ -146,7 +146,7 @@ class ReportBean implements ModelInterface, ArrayAccess
     * name  报表名称
     * percentum  进度
     * startTime  开始时间
-    * templateType  报表类型 - PDF - ZIP
+    * templateType  报表类型 - PDF: pdf - ZIP: zip
     * type  周期 - AUDIT_REPORT_DAY: 按天 - AUDIT_REPORT_WEEK： 按周 - AUDIT_REPORT_MONTH： 按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
     * url  地址URL
     *
@@ -178,7 +178,7 @@ class ReportBean implements ModelInterface, ArrayAccess
     * name  报表名称
     * percentum  进度
     * startTime  开始时间
-    * templateType  报表类型 - PDF - ZIP
+    * templateType  报表类型 - PDF: pdf - ZIP: zip
     * type  周期 - AUDIT_REPORT_DAY: 按天 - AUDIT_REPORT_WEEK： 按周 - AUDIT_REPORT_MONTH： 按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
     * url  地址URL
     *
@@ -517,7 +517,7 @@ class ReportBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateType
-    *  报表类型 - PDF - ZIP
+    *  报表类型 - PDF: pdf - ZIP: zip
     *
     * @return string|null
     */
@@ -529,7 +529,7 @@ class ReportBean implements ModelInterface, ArrayAccess
     /**
     * Sets templateType
     *
-    * @param string|null $templateType 报表类型 - PDF - ZIP
+    * @param string|null $templateType 报表类型 - PDF: pdf - ZIP: zip
     *
     * @return $this
     */

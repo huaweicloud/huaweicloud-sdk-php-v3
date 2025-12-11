@@ -20,12 +20,12 @@ class FileHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostName  服务器名称
-    * hostId  服务器ID
-    * changeTotalNum  变更总数
-    * changeFileNum  变更文件
-    * changeRegistryNum  变更注册表
-    * latestTime  最后变更时间
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
+    * changeTotalNum  **参数解释**： 文件变更与注册表变更总数量 **取值范围**： 最小值0，最大值2147483647
+    * changeFileNum  **参数解释**： 文件变更总数量 **取值范围**： 最小值0，最大值2147483647
+    * changeRegistryNum  **参数解释**： 注册表变更总数量 **取值范围**： 最小值0，最大值2147483647
+    * latestTime  **参数解释**： 最后一次文件/注册表变更时间 **取值范围**： 非负长整数，时间格式：13位毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class FileHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostName  服务器名称
-    * hostId  服务器ID
-    * changeTotalNum  变更总数
-    * changeFileNum  变更文件
-    * changeRegistryNum  变更注册表
-    * latestTime  最后变更时间
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
+    * changeTotalNum  **参数解释**： 文件变更与注册表变更总数量 **取值范围**： 最小值0，最大值2147483647
+    * changeFileNum  **参数解释**： 文件变更总数量 **取值范围**： 最小值0，最大值2147483647
+    * changeRegistryNum  **参数解释**： 注册表变更总数量 **取值范围**： 最小值0，最大值2147483647
+    * latestTime  **参数解释**： 最后一次文件/注册表变更时间 **取值范围**： 非负长整数，时间格式：13位毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class FileHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostName  服务器名称
-    * hostId  服务器ID
-    * changeTotalNum  变更总数
-    * changeFileNum  变更文件
-    * changeRegistryNum  变更注册表
-    * latestTime  最后变更时间
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
+    * changeTotalNum  **参数解释**： 文件变更与注册表变更总数量 **取值范围**： 最小值0，最大值2147483647
+    * changeFileNum  **参数解释**： 文件变更总数量 **取值范围**： 最小值0，最大值2147483647
+    * changeRegistryNum  **参数解释**： 注册表变更总数量 **取值范围**： 最小值0，最大值2147483647
+    * latestTime  **参数解释**： 最后一次文件/注册表变更时间 **取值范围**： 非负长整数，时间格式：13位毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class FileHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostName  服务器名称
-    * hostId  服务器ID
-    * changeTotalNum  变更总数
-    * changeFileNum  变更文件
-    * changeRegistryNum  变更注册表
-    * latestTime  最后变更时间
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
+    * changeTotalNum  **参数解释**： 文件变更与注册表变更总数量 **取值范围**： 最小值0，最大值2147483647
+    * changeFileNum  **参数解释**： 文件变更总数量 **取值范围**： 最小值0，最大值2147483647
+    * changeRegistryNum  **参数解释**： 注册表变更总数量 **取值范围**： 最小值0，最大值2147483647
+    * latestTime  **参数解释**： 最后一次文件/注册表变更时间 **取值范围**： 非负长整数，时间格式：13位毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class FileHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostName  服务器名称
-    * hostId  服务器ID
-    * changeTotalNum  变更总数
-    * changeFileNum  变更文件
-    * changeRegistryNum  变更注册表
-    * latestTime  最后变更时间
+    * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+    * hostId  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
+    * changeTotalNum  **参数解释**： 文件变更与注册表变更总数量 **取值范围**： 最小值0，最大值2147483647
+    * changeFileNum  **参数解释**： 文件变更总数量 **取值范围**： 最小值0，最大值2147483647
+    * changeRegistryNum  **参数解释**： 注册表变更总数量 **取值范围**： 最小值0，最大值2147483647
+    * latestTime  **参数解释**： 最后一次文件/注册表变更时间 **取值范围**： 非负长整数，时间格式：13位毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     *
     * @var string[]
     */
@@ -213,8 +213,20 @@ class FileHostResponseInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['hostName']) && !preg_match("/^.*$/", $this->container['hostName'])) {
                 $invalidProperties[] = "invalid value for 'hostName', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['hostId']) && !preg_match("/^.*$/", $this->container['hostId'])) {
                 $invalidProperties[] = "invalid value for 'hostId', must be conform to the pattern /^.*$/.";
@@ -259,7 +271,7 @@ class FileHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return string|null
     */
@@ -271,7 +283,7 @@ class FileHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     *
     * @return $this
     */
@@ -283,7 +295,7 @@ class FileHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  服务器ID
+    *  **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     *
     * @return string|null
     */
@@ -295,7 +307,7 @@ class FileHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 服务器ID
+    * @param string|null $hostId **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
     *
     * @return $this
     */
@@ -307,7 +319,7 @@ class FileHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets changeTotalNum
-    *  变更总数
+    *  **参数解释**： 文件变更与注册表变更总数量 **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -319,7 +331,7 @@ class FileHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets changeTotalNum
     *
-    * @param int|null $changeTotalNum 变更总数
+    * @param int|null $changeTotalNum **参数解释**： 文件变更与注册表变更总数量 **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -331,7 +343,7 @@ class FileHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets changeFileNum
-    *  变更文件
+    *  **参数解释**： 文件变更总数量 **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -343,7 +355,7 @@ class FileHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets changeFileNum
     *
-    * @param int|null $changeFileNum 变更文件
+    * @param int|null $changeFileNum **参数解释**： 文件变更总数量 **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -355,7 +367,7 @@ class FileHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets changeRegistryNum
-    *  变更注册表
+    *  **参数解释**： 注册表变更总数量 **取值范围**： 最小值0，最大值2147483647
     *
     * @return int|null
     */
@@ -367,7 +379,7 @@ class FileHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets changeRegistryNum
     *
-    * @param int|null $changeRegistryNum 变更注册表
+    * @param int|null $changeRegistryNum **参数解释**： 注册表变更总数量 **取值范围**： 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -379,7 +391,7 @@ class FileHostResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets latestTime
-    *  最后变更时间
+    *  **参数解释**： 最后一次文件/注册表变更时间 **取值范围**： 非负长整数，时间格式：13位毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     *
     * @return int|null
     */
@@ -391,7 +403,7 @@ class FileHostResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets latestTime
     *
-    * @param int|null $latestTime 最后变更时间
+    * @param int|null $latestTime **参数解释**： 最后一次文件/注册表变更时间 **取值范围**： 非负长整数，时间格式：13位毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     *
     * @return $this
     */

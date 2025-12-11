@@ -37,6 +37,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     * backupLevel  备份级别。
     * recycleBackupId  备份ID。
     * recycleStatus  回收状态。
+    * recycleBakcups  **参数解释**：  实例所有的回收站备份列表。
     *
     * @var string[]
     */
@@ -57,7 +58,8 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
             'enterpriseProjectName' => 'string',
             'backupLevel' => 'string',
             'recycleBackupId' => 'string',
-            'recycleStatus' => 'string'
+            'recycleStatus' => 'string',
+            'recycleBakcups' => '\HuaweiCloud\SDK\GaussDB\V3\Model\RecycleBackupV3[]'
     ];
 
     /**
@@ -79,6 +81,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     * backupLevel  备份级别。
     * recycleBackupId  备份ID。
     * recycleStatus  回收状态。
+    * recycleBakcups  **参数解释**：  实例所有的回收站备份列表。
     *
     * @var string[]
     */
@@ -89,8 +92,8 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
         'engineName' => null,
         'engineVersion' => null,
         'payModel' => null,
-        'createAt' => null,
-        'deletedAt' => null,
+        'createAt' => 'int64',
+        'deletedAt' => 'int64',
         'volumeType' => null,
         'volumeSize' => null,
         'dataVip' => null,
@@ -99,7 +102,8 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
         'enterpriseProjectName' => null,
         'backupLevel' => null,
         'recycleBackupId' => null,
-        'recycleStatus' => null
+        'recycleStatus' => null,
+        'recycleBakcups' => null
     ];
 
     /**
@@ -142,6 +146,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     * backupLevel  备份级别。
     * recycleBackupId  备份ID。
     * recycleStatus  回收状态。
+    * recycleBakcups  **参数解释**：  实例所有的回收站备份列表。
     *
     * @var string[]
     */
@@ -162,7 +167,8 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
             'enterpriseProjectName' => 'enterprise_project_name',
             'backupLevel' => 'backup_level',
             'recycleBackupId' => 'recycle_backup_id',
-            'recycleStatus' => 'recycle_status'
+            'recycleStatus' => 'recycle_status',
+            'recycleBakcups' => 'recycle_bakcups'
     ];
 
     /**
@@ -184,6 +190,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     * backupLevel  备份级别。
     * recycleBackupId  备份ID。
     * recycleStatus  回收状态。
+    * recycleBakcups  **参数解释**：  实例所有的回收站备份列表。
     *
     * @var string[]
     */
@@ -204,7 +211,8 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
             'enterpriseProjectName' => 'setEnterpriseProjectName',
             'backupLevel' => 'setBackupLevel',
             'recycleBackupId' => 'setRecycleBackupId',
-            'recycleStatus' => 'setRecycleStatus'
+            'recycleStatus' => 'setRecycleStatus',
+            'recycleBakcups' => 'setRecycleBakcups'
     ];
 
     /**
@@ -226,6 +234,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     * backupLevel  备份级别。
     * recycleBackupId  备份ID。
     * recycleStatus  回收状态。
+    * recycleBakcups  **参数解释**：  实例所有的回收站备份列表。
     *
     * @var string[]
     */
@@ -246,7 +255,8 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
             'enterpriseProjectName' => 'getEnterpriseProjectName',
             'backupLevel' => 'getBackupLevel',
             'recycleBackupId' => 'getRecycleBackupId',
-            'recycleStatus' => 'getRecycleStatus'
+            'recycleStatus' => 'getRecycleStatus',
+            'recycleBakcups' => 'getRecycleBakcups'
     ];
 
     /**
@@ -324,6 +334,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
         $this->container['backupLevel'] = isset($data['backupLevel']) ? $data['backupLevel'] : null;
         $this->container['recycleBackupId'] = isset($data['recycleBackupId']) ? $data['recycleBackupId'] : null;
         $this->container['recycleStatus'] = isset($data['recycleStatus']) ? $data['recycleStatus'] : null;
+        $this->container['recycleBakcups'] = isset($data['recycleBakcups']) ? $data['recycleBakcups'] : null;
     }
 
     /**
@@ -753,6 +764,30 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     public function setRecycleStatus($recycleStatus)
     {
         $this->container['recycleStatus'] = $recycleStatus;
+        return $this;
+    }
+
+    /**
+    * Gets recycleBakcups
+    *  **参数解释**：  实例所有的回收站备份列表。
+    *
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\RecycleBackupV3[]|null
+    */
+    public function getRecycleBakcups()
+    {
+        return $this->container['recycleBakcups'];
+    }
+
+    /**
+    * Sets recycleBakcups
+    *
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\RecycleBackupV3[]|null $recycleBakcups **参数解释**：  实例所有的回收站备份列表。
+    *
+    * @return $this
+    */
+    public function setRecycleBakcups($recycleBakcups)
+    {
+        $this->container['recycleBakcups'] = $recycleBakcups;
         return $this;
     }
 

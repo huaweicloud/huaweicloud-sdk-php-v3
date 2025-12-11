@@ -23,7 +23,7 @@ class ShowDecoyPortPolicyDetailsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * policyName  策略名称
     * portList  端口与协议
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     * whiteIp  ip白名单
     * hostList  主机列表
     *
@@ -41,7 +41,7 @@ class ShowDecoyPortPolicyDetailsResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * policyName  策略名称
     * portList  端口与协议
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     * whiteIp  ip白名单
     * hostList  主机列表
     *
@@ -80,7 +80,7 @@ class ShowDecoyPortPolicyDetailsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * policyName  策略名称
     * portList  端口与协议
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     * whiteIp  ip白名单
     * hostList  主机列表
     *
@@ -98,7 +98,7 @@ class ShowDecoyPortPolicyDetailsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * policyName  策略名称
     * portList  端口与协议
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     * whiteIp  ip白名单
     * hostList  主机列表
     *
@@ -116,7 +116,7 @@ class ShowDecoyPortPolicyDetailsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * policyName  策略名称
     * portList  端口与协议
-    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     * whiteIp  ip白名单
     * hostList  主机列表
     *
@@ -273,7 +273,7 @@ class ShowDecoyPortPolicyDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    *  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class ShowDecoyPortPolicyDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+    * @param string|null $osType **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     *
     * @return $this
     */

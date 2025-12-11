@@ -20,7 +20,7 @@ class RunImageSynchronizeRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  **参数解释**: 镜像类型 **约束限制**: 必选参数，仅支持指定取值 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class RunImageSynchronizeRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  **参数解释**: 镜像类型 **约束限制**: 必选参数，仅支持指定取值 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class RunImageSynchronizeRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  **参数解释**: 镜像类型 **约束限制**: 必选参数，仅支持指定取值 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class RunImageSynchronizeRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  **参数解释**: 镜像类型 **约束限制**: 必选参数，仅支持指定取值 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class RunImageSynchronizeRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * imageType  **参数解释**: 镜像类型 **约束限制**: 必选参数，仅支持指定取值 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -183,7 +183,7 @@ class RunImageSynchronizeRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageType
-    *  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    *  **参数解释**: 镜像类型 **约束限制**: 必选参数，仅支持指定取值 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 **默认取值**: 不涉及
     *
     * @return string
     */
@@ -195,7 +195,7 @@ class RunImageSynchronizeRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imageType
     *
-    * @param string $imageType 镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+    * @param string $imageType **参数解释**: 镜像类型 **约束限制**: 必选参数，仅支持指定取值 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 **默认取值**: 不涉及
     *
     * @return $this
     */

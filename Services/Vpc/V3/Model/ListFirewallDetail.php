@@ -31,6 +31,7 @@ class ListFirewallDetail implements ModelInterface, ArrayAccess
     * enterpriseProjectId  功能说明：ACL企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     * tags  功能描述：ACL资源标签
     * associations  功能说明：ACL绑定的子网列表
+    * type  参数解释： 网络ACL支持绑定的子网类型。 取值范围： normal：默认值，表示网络ACL支持绑定普通子网。 CloudDCN：表示网络ACL支持绑定CloudDCN子网。
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class ListFirewallDetail implements ModelInterface, ArrayAccess
             'status' => 'string',
             'enterpriseProjectId' => 'string',
             'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]',
-            'associations' => '\HuaweiCloud\SDK\Vpc\V3\Model\FirewallAssociation[]'
+            'associations' => '\HuaweiCloud\SDK\Vpc\V3\Model\FirewallAssociation[]',
+            'type' => 'string'
     ];
 
     /**
@@ -61,6 +63,7 @@ class ListFirewallDetail implements ModelInterface, ArrayAccess
     * enterpriseProjectId  功能说明：ACL企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     * tags  功能描述：ACL资源标签
     * associations  功能说明：ACL绑定的子网列表
+    * type  参数解释： 网络ACL支持绑定的子网类型。 取值范围： normal：默认值，表示网络ACL支持绑定普通子网。 CloudDCN：表示网络ACL支持绑定CloudDCN子网。
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class ListFirewallDetail implements ModelInterface, ArrayAccess
         'status' => null,
         'enterpriseProjectId' => null,
         'tags' => null,
-        'associations' => null
+        'associations' => null,
+        'type' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class ListFirewallDetail implements ModelInterface, ArrayAccess
     * enterpriseProjectId  功能说明：ACL企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     * tags  功能描述：ACL资源标签
     * associations  功能说明：ACL绑定的子网列表
+    * type  参数解释： 网络ACL支持绑定的子网类型。 取值范围： normal：默认值，表示网络ACL支持绑定普通子网。 CloudDCN：表示网络ACL支持绑定CloudDCN子网。
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class ListFirewallDetail implements ModelInterface, ArrayAccess
             'status' => 'status',
             'enterpriseProjectId' => 'enterprise_project_id',
             'tags' => 'tags',
-            'associations' => 'associations'
+            'associations' => 'associations',
+            'type' => 'type'
     ];
 
     /**
@@ -142,6 +148,7 @@ class ListFirewallDetail implements ModelInterface, ArrayAccess
     * enterpriseProjectId  功能说明：ACL企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     * tags  功能描述：ACL资源标签
     * associations  功能说明：ACL绑定的子网列表
+    * type  参数解释： 网络ACL支持绑定的子网类型。 取值范围： normal：默认值，表示网络ACL支持绑定普通子网。 CloudDCN：表示网络ACL支持绑定CloudDCN子网。
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class ListFirewallDetail implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'tags' => 'setTags',
-            'associations' => 'setAssociations'
+            'associations' => 'setAssociations',
+            'type' => 'setType'
     ];
 
     /**
@@ -172,6 +180,7 @@ class ListFirewallDetail implements ModelInterface, ArrayAccess
     * enterpriseProjectId  功能说明：ACL企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     * tags  功能描述：ACL资源标签
     * associations  功能说明：ACL绑定的子网列表
+    * type  参数解释： 网络ACL支持绑定的子网类型。 取值范围： normal：默认值，表示网络ACL支持绑定普通子网。 CloudDCN：表示网络ACL支持绑定CloudDCN子网。
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class ListFirewallDetail implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'tags' => 'getTags',
-            'associations' => 'getAssociations'
+            'associations' => 'getAssociations',
+            'type' => 'getType'
     ];
 
     /**
@@ -258,6 +268,7 @@ class ListFirewallDetail implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['associations'] = isset($data['associations']) ? $data['associations'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -300,6 +311,9 @@ class ListFirewallDetail implements ModelInterface, ArrayAccess
         }
         if ($this->container['associations'] === null) {
             $invalidProperties[] = "'associations' can't be null";
+        }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
         }
         return $invalidProperties;
     }
@@ -576,6 +590,30 @@ class ListFirewallDetail implements ModelInterface, ArrayAccess
     public function setAssociations($associations)
     {
         $this->container['associations'] = $associations;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  参数解释： 网络ACL支持绑定的子网类型。 取值范围： normal：默认值，表示网络ACL支持绑定普通子网。 CloudDCN：表示网络ACL支持绑定CloudDCN子网。
+    *
+    * @return string
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string $type 参数解释： 网络ACL支持绑定的子网类型。 取值范围： normal：默认值，表示网络ACL支持绑定普通子网。 CloudDCN：表示网络ACL支持绑定CloudDCN子网。
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

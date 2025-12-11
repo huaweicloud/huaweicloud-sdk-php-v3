@@ -24,7 +24,7 @@ class AuditAgentRequest implements ModelInterface, ArrayAccess
     * mode  模式 - 0：创建agent - 1：选择已有agent
     * agentId  选择已有agent时必输
     * agentType  agent类型 - APP：应用端 - DB：数据库端
-    * agentOs  agent OS类型: - LINUX64_X86 - LINUX64_ARM - WINDOWS64
+    * agentOs  agent OS类型: - LINUX64_X86：LINUX64_X86 - LINUX64_ARM：LINUX64_ARM - WINDOWS64：WINDOWS64
     * agentIp  agent IP，安装节点类型为应用端时必输。
     * agentNic  agent审计网卡名称
     * cpuThreshold  CPU阈值
@@ -50,7 +50,7 @@ class AuditAgentRequest implements ModelInterface, ArrayAccess
     * mode  模式 - 0：创建agent - 1：选择已有agent
     * agentId  选择已有agent时必输
     * agentType  agent类型 - APP：应用端 - DB：数据库端
-    * agentOs  agent OS类型: - LINUX64_X86 - LINUX64_ARM - WINDOWS64
+    * agentOs  agent OS类型: - LINUX64_X86：LINUX64_X86 - LINUX64_ARM：LINUX64_ARM - WINDOWS64：WINDOWS64
     * agentIp  agent IP，安装节点类型为应用端时必输。
     * agentNic  agent审计网卡名称
     * cpuThreshold  CPU阈值
@@ -97,7 +97,7 @@ class AuditAgentRequest implements ModelInterface, ArrayAccess
     * mode  模式 - 0：创建agent - 1：选择已有agent
     * agentId  选择已有agent时必输
     * agentType  agent类型 - APP：应用端 - DB：数据库端
-    * agentOs  agent OS类型: - LINUX64_X86 - LINUX64_ARM - WINDOWS64
+    * agentOs  agent OS类型: - LINUX64_X86：LINUX64_X86 - LINUX64_ARM：LINUX64_ARM - WINDOWS64：WINDOWS64
     * agentIp  agent IP，安装节点类型为应用端时必输。
     * agentNic  agent审计网卡名称
     * cpuThreshold  CPU阈值
@@ -123,7 +123,7 @@ class AuditAgentRequest implements ModelInterface, ArrayAccess
     * mode  模式 - 0：创建agent - 1：选择已有agent
     * agentId  选择已有agent时必输
     * agentType  agent类型 - APP：应用端 - DB：数据库端
-    * agentOs  agent OS类型: - LINUX64_X86 - LINUX64_ARM - WINDOWS64
+    * agentOs  agent OS类型: - LINUX64_X86：LINUX64_X86 - LINUX64_ARM：LINUX64_ARM - WINDOWS64：WINDOWS64
     * agentIp  agent IP，安装节点类型为应用端时必输。
     * agentNic  agent审计网卡名称
     * cpuThreshold  CPU阈值
@@ -149,7 +149,7 @@ class AuditAgentRequest implements ModelInterface, ArrayAccess
     * mode  模式 - 0：创建agent - 1：选择已有agent
     * agentId  选择已有agent时必输
     * agentType  agent类型 - APP：应用端 - DB：数据库端
-    * agentOs  agent OS类型: - LINUX64_X86 - LINUX64_ARM - WINDOWS64
+    * agentOs  agent OS类型: - LINUX64_X86：LINUX64_X86 - LINUX64_ARM：LINUX64_ARM - WINDOWS64：WINDOWS64
     * agentIp  agent IP，安装节点类型为应用端时必输。
     * agentNic  agent审计网卡名称
     * cpuThreshold  CPU阈值
@@ -395,7 +395,7 @@ class AuditAgentRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentOs
-    *  agent OS类型: - LINUX64_X86 - LINUX64_ARM - WINDOWS64
+    *  agent OS类型: - LINUX64_X86：LINUX64_X86 - LINUX64_ARM：LINUX64_ARM - WINDOWS64：WINDOWS64
     *
     * @return string
     */
@@ -407,7 +407,7 @@ class AuditAgentRequest implements ModelInterface, ArrayAccess
     /**
     * Sets agentOs
     *
-    * @param string $agentOs agent OS类型: - LINUX64_X86 - LINUX64_ARM - WINDOWS64
+    * @param string $agentOs agent OS类型: - LINUX64_X86：LINUX64_X86 - LINUX64_ARM：LINUX64_ARM - WINDOWS64：WINDOWS64
     *
     * @return $this
     */

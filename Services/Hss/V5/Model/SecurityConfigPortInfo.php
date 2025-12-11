@@ -22,7 +22,7 @@ class SecurityConfigPortInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * port  **参数解释**： 端口号 **取值范围**： 0-65535
     * type  **参数解释**： 类型 **取值范围**： 不涉及
-    * status  **参数解释**： 端口危险程度 **取值范围**： - normal：正常端口 - danger：危险端口 - unknow：未知端口
+    * status  **参数解释**： 端口危险程度 **取值范围**： - normal：正常端口 - danger：危险端口 - unknown：未知端口
     * portStatus  **参数解释**： 端口状态 **取值范围**： - 0：未处理 - 1：已忽略 - 2：无需处理
     * portDesc  **参数解释**： 端口描述 **取值范围**： 不涉及
     *
@@ -40,7 +40,7 @@ class SecurityConfigPortInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * port  **参数解释**： 端口号 **取值范围**： 0-65535
     * type  **参数解释**： 类型 **取值范围**： 不涉及
-    * status  **参数解释**： 端口危险程度 **取值范围**： - normal：正常端口 - danger：危险端口 - unknow：未知端口
+    * status  **参数解释**： 端口危险程度 **取值范围**： - normal：正常端口 - danger：危险端口 - unknown：未知端口
     * portStatus  **参数解释**： 端口状态 **取值范围**： - 0：未处理 - 1：已忽略 - 2：无需处理
     * portDesc  **参数解释**： 端口描述 **取值范围**： 不涉及
     *
@@ -79,7 +79,7 @@ class SecurityConfigPortInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * port  **参数解释**： 端口号 **取值范围**： 0-65535
     * type  **参数解释**： 类型 **取值范围**： 不涉及
-    * status  **参数解释**： 端口危险程度 **取值范围**： - normal：正常端口 - danger：危险端口 - unknow：未知端口
+    * status  **参数解释**： 端口危险程度 **取值范围**： - normal：正常端口 - danger：危险端口 - unknown：未知端口
     * portStatus  **参数解释**： 端口状态 **取值范围**： - 0：未处理 - 1：已忽略 - 2：无需处理
     * portDesc  **参数解释**： 端口描述 **取值范围**： 不涉及
     *
@@ -97,7 +97,7 @@ class SecurityConfigPortInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * port  **参数解释**： 端口号 **取值范围**： 0-65535
     * type  **参数解释**： 类型 **取值范围**： 不涉及
-    * status  **参数解释**： 端口危险程度 **取值范围**： - normal：正常端口 - danger：危险端口 - unknow：未知端口
+    * status  **参数解释**： 端口危险程度 **取值范围**： - normal：正常端口 - danger：危险端口 - unknown：未知端口
     * portStatus  **参数解释**： 端口状态 **取值范围**： - 0：未处理 - 1：已忽略 - 2：无需处理
     * portDesc  **参数解释**： 端口描述 **取值范围**： 不涉及
     *
@@ -115,7 +115,7 @@ class SecurityConfigPortInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * port  **参数解释**： 端口号 **取值范围**： 0-65535
     * type  **参数解释**： 类型 **取值范围**： 不涉及
-    * status  **参数解释**： 端口危险程度 **取值范围**： - normal：正常端口 - danger：危险端口 - unknow：未知端口
+    * status  **参数解释**： 端口危险程度 **取值范围**： - normal：正常端口 - danger：危险端口 - unknown：未知端口
     * portStatus  **参数解释**： 端口状态 **取值范围**： - 0：未处理 - 1：已忽略 - 2：无需处理
     * portDesc  **参数解释**： 端口描述 **取值范围**： 不涉及
     *
@@ -272,7 +272,7 @@ class SecurityConfigPortInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 端口危险程度 **取值范围**： - normal：正常端口 - danger：危险端口 - unknow：未知端口
+    *  **参数解释**： 端口危险程度 **取值范围**： - normal：正常端口 - danger：危险端口 - unknown：未知端口
     *
     * @return string|null
     */
@@ -284,7 +284,7 @@ class SecurityConfigPortInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 端口危险程度 **取值范围**： - normal：正常端口 - danger：危险端口 - unknow：未知端口
+    * @param string|null $status **参数解释**： 端口危险程度 **取值范围**： - normal：正常端口 - danger：危险端口 - unknown：未知端口
     *
     * @return $this
     */

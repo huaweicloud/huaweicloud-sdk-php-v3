@@ -27,7 +27,7 @@ class SchedulerConfigBase implements ModelInterface, ArrayAccess
     * mode  调度方式
     * notice  是否通知  - OFF：不通知  - ON：通知
     * startTime  开始时间
-    * status  模板状态
+    * status  模板状态 - ON: 开启 - OFF：关闭
     * topicUrn  主题URN
     *
     * @var string[]
@@ -53,7 +53,7 @@ class SchedulerConfigBase implements ModelInterface, ArrayAccess
     * mode  调度方式
     * notice  是否通知  - OFF：不通知  - ON：通知
     * startTime  开始时间
-    * status  模板状态
+    * status  模板状态 - ON: 开启 - OFF：关闭
     * topicUrn  主题URN
     *
     * @var string[]
@@ -100,7 +100,7 @@ class SchedulerConfigBase implements ModelInterface, ArrayAccess
     * mode  调度方式
     * notice  是否通知  - OFF：不通知  - ON：通知
     * startTime  开始时间
-    * status  模板状态
+    * status  模板状态 - ON: 开启 - OFF：关闭
     * topicUrn  主题URN
     *
     * @var string[]
@@ -126,7 +126,7 @@ class SchedulerConfigBase implements ModelInterface, ArrayAccess
     * mode  调度方式
     * notice  是否通知  - OFF：不通知  - ON：通知
     * startTime  开始时间
-    * status  模板状态
+    * status  模板状态 - ON: 开启 - OFF：关闭
     * topicUrn  主题URN
     *
     * @var string[]
@@ -152,7 +152,7 @@ class SchedulerConfigBase implements ModelInterface, ArrayAccess
     * mode  调度方式
     * notice  是否通知  - OFF：不通知  - ON：通知
     * startTime  开始时间
-    * status  模板状态
+    * status  模板状态 - ON: 开启 - OFF：关闭
     * topicUrn  主题URN
     *
     * @var string[]
@@ -551,7 +551,7 @@ class SchedulerConfigBase implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  模板状态
+    *  模板状态 - ON: 开启 - OFF：关闭
     *
     * @return string|null
     */
@@ -563,7 +563,7 @@ class SchedulerConfigBase implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 模板状态
+    * @param string|null $status 模板状态 - ON: 开启 - OFF：关闭
     *
     * @return $this
     */

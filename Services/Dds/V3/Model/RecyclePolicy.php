@@ -20,8 +20,8 @@ class RecyclePolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enabled  打开回收策略，不可关闭 - true 打开回收策略
-    * retentionPeriodInDays  策略保持时长（1-7天），天数为正整数，不填默认保留7天
+    * enabled  **参数解释：** 打开回收策略。 **约束限制：** 不可关闭。 **取值范围：** true。 **默认取值：** true。
+    * retentionPeriodInDays  **参数解释：** 策略保持时长（1-7天），天数为正整数，不填默认保留7天。 **约束限制：** 正整数。 **取值范围：** 1-7。 **默认取值：** 7。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class RecyclePolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enabled  打开回收策略，不可关闭 - true 打开回收策略
-    * retentionPeriodInDays  策略保持时长（1-7天），天数为正整数，不填默认保留7天
+    * enabled  **参数解释：** 打开回收策略。 **约束限制：** 不可关闭。 **取值范围：** true。 **默认取值：** true。
+    * retentionPeriodInDays  **参数解释：** 策略保持时长（1-7天），天数为正整数，不填默认保留7天。 **约束限制：** 正整数。 **取值范围：** 1-7。 **默认取值：** 7。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class RecyclePolicy implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enabled  打开回收策略，不可关闭 - true 打开回收策略
-    * retentionPeriodInDays  策略保持时长（1-7天），天数为正整数，不填默认保留7天
+    * enabled  **参数解释：** 打开回收策略。 **约束限制：** 不可关闭。 **取值范围：** true。 **默认取值：** true。
+    * retentionPeriodInDays  **参数解释：** 策略保持时长（1-7天），天数为正整数，不填默认保留7天。 **约束限制：** 正整数。 **取值范围：** 1-7。 **默认取值：** 7。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class RecyclePolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enabled  打开回收策略，不可关闭 - true 打开回收策略
-    * retentionPeriodInDays  策略保持时长（1-7天），天数为正整数，不填默认保留7天
+    * enabled  **参数解释：** 打开回收策略。 **约束限制：** 不可关闭。 **取值范围：** true。 **默认取值：** true。
+    * retentionPeriodInDays  **参数解释：** 策略保持时长（1-7天），天数为正整数，不填默认保留7天。 **约束限制：** 正整数。 **取值范围：** 1-7。 **默认取值：** 7。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class RecyclePolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enabled  打开回收策略，不可关闭 - true 打开回收策略
-    * retentionPeriodInDays  策略保持时长（1-7天），天数为正整数，不填默认保留7天
+    * enabled  **参数解释：** 打开回收策略。 **约束限制：** 不可关闭。 **取值范围：** true。 **默认取值：** true。
+    * retentionPeriodInDays  **参数解释：** 策略保持时长（1-7天），天数为正整数，不填默认保留7天。 **约束限制：** 正整数。 **取值范围：** 1-7。 **默认取值：** 7。
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class RecyclePolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  打开回收策略，不可关闭 - true 打开回收策略
+    *  **参数解释：** 打开回收策略。 **约束限制：** 不可关闭。 **取值范围：** true。 **默认取值：** true。
     *
     * @return bool
     */
@@ -200,7 +200,7 @@ class RecyclePolicy implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool $enabled 打开回收策略，不可关闭 - true 打开回收策略
+    * @param bool $enabled **参数解释：** 打开回收策略。 **约束限制：** 不可关闭。 **取值范围：** true。 **默认取值：** true。
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class RecyclePolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets retentionPeriodInDays
-    *  策略保持时长（1-7天），天数为正整数，不填默认保留7天
+    *  **参数解释：** 策略保持时长（1-7天），天数为正整数，不填默认保留7天。 **约束限制：** 正整数。 **取值范围：** 1-7。 **默认取值：** 7。
     *
     * @return int|null
     */
@@ -224,7 +224,7 @@ class RecyclePolicy implements ModelInterface, ArrayAccess
     /**
     * Sets retentionPeriodInDays
     *
-    * @param int|null $retentionPeriodInDays 策略保持时长（1-7天），天数为正整数，不填默认保留7天
+    * @param int|null $retentionPeriodInDays **参数解释：** 策略保持时长（1-7天），天数为正整数，不填默认保留7天。 **约束限制：** 正整数。 **取值范围：** 1-7。 **默认取值：** 7。
     *
     * @return $this
     */

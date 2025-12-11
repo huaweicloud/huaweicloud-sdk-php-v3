@@ -22,8 +22,8 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * time  time
     * userName  操作日志用户名
-    * action  动作名称 - CREATE - DELETE - DOWNLOAD - UPDATE
-    * result  执行结果 - success - fail
+    * action  动作名称 - CREATE：创建 - DELETE：删除 - DOWNLOAD：下载 - UPDATE：更新
+    * result  执行结果 - success：成功 - fail：失败
     * page  页数
     * size  每页条数
     *
@@ -42,8 +42,8 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * time  time
     * userName  操作日志用户名
-    * action  动作名称 - CREATE - DELETE - DOWNLOAD - UPDATE
-    * result  执行结果 - success - fail
+    * action  动作名称 - CREATE：创建 - DELETE：删除 - DOWNLOAD：下载 - UPDATE：更新
+    * result  执行结果 - success：成功 - fail：失败
     * page  页数
     * size  每页条数
     *
@@ -83,8 +83,8 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * time  time
     * userName  操作日志用户名
-    * action  动作名称 - CREATE - DELETE - DOWNLOAD - UPDATE
-    * result  执行结果 - success - fail
+    * action  动作名称 - CREATE：创建 - DELETE：删除 - DOWNLOAD：下载 - UPDATE：更新
+    * result  执行结果 - success：成功 - fail：失败
     * page  页数
     * size  每页条数
     *
@@ -103,8 +103,8 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * time  time
     * userName  操作日志用户名
-    * action  动作名称 - CREATE - DELETE - DOWNLOAD - UPDATE
-    * result  执行结果 - success - fail
+    * action  动作名称 - CREATE：创建 - DELETE：删除 - DOWNLOAD：下载 - UPDATE：更新
+    * result  执行结果 - success：成功 - fail：失败
     * page  页数
     * size  每页条数
     *
@@ -123,8 +123,8 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * time  time
     * userName  操作日志用户名
-    * action  动作名称 - CREATE - DELETE - DOWNLOAD - UPDATE
-    * result  执行结果 - success - fail
+    * action  动作名称 - CREATE：创建 - DELETE：删除 - DOWNLOAD：下载 - UPDATE：更新
+    * result  执行结果 - success：成功 - fail：失败
     * page  页数
     * size  每页条数
     *
@@ -309,7 +309,7 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  动作名称 - CREATE - DELETE - DOWNLOAD - UPDATE
+    *  动作名称 - CREATE：创建 - DELETE：删除 - DOWNLOAD：下载 - UPDATE：更新
     *
     * @return string|null
     */
@@ -321,7 +321,7 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 动作名称 - CREATE - DELETE - DOWNLOAD - UPDATE
+    * @param string|null $action 动作名称 - CREATE：创建 - DELETE：删除 - DOWNLOAD：下载 - UPDATE：更新
     *
     * @return $this
     */
@@ -333,7 +333,7 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  执行结果 - success - fail
+    *  执行结果 - success：成功 - fail：失败
     *
     * @return string|null
     */
@@ -345,7 +345,7 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param string|null $result 执行结果 - success - fail
+    * @param string|null $result 执行结果 - success：成功 - fail：失败
     *
     * @return $this
     */

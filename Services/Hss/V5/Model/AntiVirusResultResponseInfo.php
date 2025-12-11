@@ -20,22 +20,22 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resultId  病毒查杀结果ID
-    * malwareType  病毒类型
-    * malwareName  病毒名称
-    * severity  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
-    * taskId  任务ID
-    * taskName  任务名称
+    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * malwareType  **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等
+    * malwareName  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
+    * severity  **参数解释**: 威胁等级 **取值范围**: 包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
+    * taskId  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    * taskName  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
     * fileInfo  fileInfo
     * resourceInfo  resourceInfo
-    * eventType  事件类型
-    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * eventType  **参数解释**: 病毒查杀结果对应的事件类型标识 **取值范围**: 0-10（具体含义：0=文件病毒事件、1=内存病毒事件...，详见产品错误码/枚举文档）
+    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     * handleStatus  **参数解释**： 处理状态 **取值范围**： - unhandled：未处理 - handled：已处理
-    * handleMethod  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
-    * memo  备注信息
-    * operateAcceptList  支持的处理操作
-    * operateDetailList  操作详情信息列表（页面不展示）
-    * isolateTag  自动隔离查杀标识
+    * handleMethod  **参数解释**: 处理方式 **取值范围**: 包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
+    * memo  **参数解释** 备注信息 **取值范围** 字符长度0-512位
+    * operateAcceptList  **参数解释**: 后续处置操作列表 **取值范围**: 数组元素为处置操作枚举字符串（如“isolate_and_kill”“ignore”等），数组长度0-4（具体支持操作因结果状态而异）
+    * operateDetailList  **参数解释**: 操作详情信息列表（页面不展示） **取值范围**: 数组长度0-100
+    * isolateTag  **参数解释**: 自动隔离查杀标识 **取值范围**: 字符长度1-16位，枚举值为“auto_isolate”（自动隔离）、“manual”（手动操作）、“none”（未隔离）
     *
     * @var string[]
     */
@@ -60,22 +60,22 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resultId  病毒查杀结果ID
-    * malwareType  病毒类型
-    * malwareName  病毒名称
-    * severity  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
-    * taskId  任务ID
-    * taskName  任务名称
+    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * malwareType  **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等
+    * malwareName  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
+    * severity  **参数解释**: 威胁等级 **取值范围**: 包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
+    * taskId  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    * taskName  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
     * fileInfo  fileInfo
     * resourceInfo  resourceInfo
-    * eventType  事件类型
-    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * eventType  **参数解释**: 病毒查杀结果对应的事件类型标识 **取值范围**: 0-10（具体含义：0=文件病毒事件、1=内存病毒事件...，详见产品错误码/枚举文档）
+    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     * handleStatus  **参数解释**： 处理状态 **取值范围**： - unhandled：未处理 - handled：已处理
-    * handleMethod  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
-    * memo  备注信息
-    * operateAcceptList  支持的处理操作
-    * operateDetailList  操作详情信息列表（页面不展示）
-    * isolateTag  自动隔离查杀标识
+    * handleMethod  **参数解释**: 处理方式 **取值范围**: 包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
+    * memo  **参数解释** 备注信息 **取值范围** 字符长度0-512位
+    * operateAcceptList  **参数解释**: 后续处置操作列表 **取值范围**: 数组元素为处置操作枚举字符串（如“isolate_and_kill”“ignore”等），数组长度0-4（具体支持操作因结果状态而异）
+    * operateDetailList  **参数解释**: 操作详情信息列表（页面不展示） **取值范围**: 数组长度0-100
+    * isolateTag  **参数解释**: 自动隔离查杀标识 **取值范围**: 字符长度1-16位，枚举值为“auto_isolate”（自动隔离）、“manual”（手动操作）、“none”（未隔离）
     *
     * @var string[]
     */
@@ -121,22 +121,22 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resultId  病毒查杀结果ID
-    * malwareType  病毒类型
-    * malwareName  病毒名称
-    * severity  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
-    * taskId  任务ID
-    * taskName  任务名称
+    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * malwareType  **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等
+    * malwareName  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
+    * severity  **参数解释**: 威胁等级 **取值范围**: 包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
+    * taskId  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    * taskName  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
     * fileInfo  fileInfo
     * resourceInfo  resourceInfo
-    * eventType  事件类型
-    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * eventType  **参数解释**: 病毒查杀结果对应的事件类型标识 **取值范围**: 0-10（具体含义：0=文件病毒事件、1=内存病毒事件...，详见产品错误码/枚举文档）
+    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     * handleStatus  **参数解释**： 处理状态 **取值范围**： - unhandled：未处理 - handled：已处理
-    * handleMethod  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
-    * memo  备注信息
-    * operateAcceptList  支持的处理操作
-    * operateDetailList  操作详情信息列表（页面不展示）
-    * isolateTag  自动隔离查杀标识
+    * handleMethod  **参数解释**: 处理方式 **取值范围**: 包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
+    * memo  **参数解释** 备注信息 **取值范围** 字符长度0-512位
+    * operateAcceptList  **参数解释**: 后续处置操作列表 **取值范围**: 数组元素为处置操作枚举字符串（如“isolate_and_kill”“ignore”等），数组长度0-4（具体支持操作因结果状态而异）
+    * operateDetailList  **参数解释**: 操作详情信息列表（页面不展示） **取值范围**: 数组长度0-100
+    * isolateTag  **参数解释**: 自动隔离查杀标识 **取值范围**: 字符长度1-16位，枚举值为“auto_isolate”（自动隔离）、“manual”（手动操作）、“none”（未隔离）
     *
     * @var string[]
     */
@@ -161,22 +161,22 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resultId  病毒查杀结果ID
-    * malwareType  病毒类型
-    * malwareName  病毒名称
-    * severity  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
-    * taskId  任务ID
-    * taskName  任务名称
+    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * malwareType  **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等
+    * malwareName  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
+    * severity  **参数解释**: 威胁等级 **取值范围**: 包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
+    * taskId  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    * taskName  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
     * fileInfo  fileInfo
     * resourceInfo  resourceInfo
-    * eventType  事件类型
-    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * eventType  **参数解释**: 病毒查杀结果对应的事件类型标识 **取值范围**: 0-10（具体含义：0=文件病毒事件、1=内存病毒事件...，详见产品错误码/枚举文档）
+    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     * handleStatus  **参数解释**： 处理状态 **取值范围**： - unhandled：未处理 - handled：已处理
-    * handleMethod  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
-    * memo  备注信息
-    * operateAcceptList  支持的处理操作
-    * operateDetailList  操作详情信息列表（页面不展示）
-    * isolateTag  自动隔离查杀标识
+    * handleMethod  **参数解释**: 处理方式 **取值范围**: 包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
+    * memo  **参数解释** 备注信息 **取值范围** 字符长度0-512位
+    * operateAcceptList  **参数解释**: 后续处置操作列表 **取值范围**: 数组元素为处置操作枚举字符串（如“isolate_and_kill”“ignore”等），数组长度0-4（具体支持操作因结果状态而异）
+    * operateDetailList  **参数解释**: 操作详情信息列表（页面不展示） **取值范围**: 数组长度0-100
+    * isolateTag  **参数解释**: 自动隔离查杀标识 **取值范围**: 字符长度1-16位，枚举值为“auto_isolate”（自动隔离）、“manual”（手动操作）、“none”（未隔离）
     *
     * @var string[]
     */
@@ -201,22 +201,22 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resultId  病毒查杀结果ID
-    * malwareType  病毒类型
-    * malwareName  病毒名称
-    * severity  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
-    * taskId  任务ID
-    * taskName  任务名称
+    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * malwareType  **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等
+    * malwareName  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
+    * severity  **参数解释**: 威胁等级 **取值范围**: 包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
+    * taskId  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    * taskName  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
     * fileInfo  fileInfo
     * resourceInfo  resourceInfo
-    * eventType  事件类型
-    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * eventType  **参数解释**: 病毒查杀结果对应的事件类型标识 **取值范围**: 0-10（具体含义：0=文件病毒事件、1=内存病毒事件...，详见产品错误码/枚举文档）
+    * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     * handleStatus  **参数解释**： 处理状态 **取值范围**： - unhandled：未处理 - handled：已处理
-    * handleMethod  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
-    * memo  备注信息
-    * operateAcceptList  支持的处理操作
-    * operateDetailList  操作详情信息列表（页面不展示）
-    * isolateTag  自动隔离查杀标识
+    * handleMethod  **参数解释**: 处理方式 **取值范围**: 包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
+    * memo  **参数解释** 备注信息 **取值范围** 字符长度0-512位
+    * operateAcceptList  **参数解释**: 后续处置操作列表 **取值范围**: 数组元素为处置操作枚举字符串（如“isolate_and_kill”“ignore”等），数组长度0-4（具体支持操作因结果状态而异）
+    * operateDetailList  **参数解释**: 操作详情信息列表（页面不展示） **取值范围**: 数组长度0-100
+    * isolateTag  **参数解释**: 自动隔离查杀标识 **取值范围**: 字符长度1-16位，枚举值为“auto_isolate”（自动隔离）、“manual”（手动操作）、“none”（未隔离）
     *
     * @var string[]
     */
@@ -378,7 +378,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resultId
-    *  病毒查杀结果ID
+    *  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
     *
     * @return string|null
     */
@@ -390,7 +390,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resultId
     *
-    * @param string|null $resultId 病毒查杀结果ID
+    * @param string|null $resultId **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
     *
     * @return $this
     */
@@ -402,7 +402,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets malwareType
-    *  病毒类型
+    *  **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等
     *
     * @return string|null
     */
@@ -414,7 +414,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets malwareType
     *
-    * @param string|null $malwareType 病毒类型
+    * @param string|null $malwareType **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等
     *
     * @return $this
     */
@@ -426,7 +426,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets malwareName
-    *  病毒名称
+    *  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
     *
     * @return string|null
     */
@@ -438,7 +438,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets malwareName
     *
-    * @param string|null $malwareName 病毒名称
+    * @param string|null $malwareName **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
     *
     * @return $this
     */
@@ -450,7 +450,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
+    *  **参数解释**: 威胁等级 **取值范围**: 包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
     *
     * @return string|null
     */
@@ -462,7 +462,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param string|null $severity 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
+    * @param string|null $severity **参数解释**: 威胁等级 **取值范围**: 包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
     *
     * @return $this
     */
@@ -474,7 +474,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskId
-    *  任务ID
+    *  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
     *
     * @return string|null
     */
@@ -486,7 +486,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string|null $taskId 任务ID
+    * @param string|null $taskId **参数解释**： 任务ID **取值范围**: 字符长度1-64位
     *
     * @return $this
     */
@@ -498,7 +498,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskName
-    *  任务名称
+    *  **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
     *
     * @return string|null
     */
@@ -510,7 +510,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets taskName
     *
-    * @param string|null $taskName 任务名称
+    * @param string|null $taskName **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
     *
     * @return $this
     */
@@ -570,7 +570,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventType
-    *  事件类型
+    *  **参数解释**: 病毒查杀结果对应的事件类型标识 **取值范围**: 0-10（具体含义：0=文件病毒事件、1=内存病毒事件...，详见产品错误码/枚举文档）
     *
     * @return int|null
     */
@@ -582,7 +582,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets eventType
     *
-    * @param int|null $eventType 事件类型
+    * @param int|null $eventType **参数解释**: 病毒查杀结果对应的事件类型标识 **取值范围**: 0-10（具体含义：0=文件病毒事件、1=内存病毒事件...，详见产品错误码/枚举文档）
     *
     * @return $this
     */
@@ -594,7 +594,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets occurTime
-    *  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    *  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     *
     * @return int|null
     */
@@ -606,7 +606,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets occurTime
     *
-    * @param int|null $occurTime **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
+    * @param int|null $occurTime **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     *
     * @return $this
     */
@@ -642,7 +642,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets handleMethod
-    *  处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
+    *  **参数解释**: 处理方式 **取值范围**: 包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
     *
     * @return string|null
     */
@@ -654,7 +654,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets handleMethod
     *
-    * @param string|null $handleMethod 处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
+    * @param string|null $handleMethod **参数解释**: 处理方式 **取值范围**: 包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件   - unhandle：取消手动处理   - do_not_ignore：取消忽略   - remove_from_alarm_whitelist：删除告警白名单   - do_not_isolate_or_kill：取消隔离文件
     *
     * @return $this
     */
@@ -666,7 +666,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets memo
-    *  备注信息
+    *  **参数解释** 备注信息 **取值范围** 字符长度0-512位
     *
     * @return string|null
     */
@@ -678,7 +678,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets memo
     *
-    * @param string|null $memo 备注信息
+    * @param string|null $memo **参数解释** 备注信息 **取值范围** 字符长度0-512位
     *
     * @return $this
     */
@@ -690,7 +690,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets operateAcceptList
-    *  支持的处理操作
+    *  **参数解释**: 后续处置操作列表 **取值范围**: 数组元素为处置操作枚举字符串（如“isolate_and_kill”“ignore”等），数组长度0-4（具体支持操作因结果状态而异）
     *
     * @return string[]|null
     */
@@ -702,7 +702,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets operateAcceptList
     *
-    * @param string[]|null $operateAcceptList 支持的处理操作
+    * @param string[]|null $operateAcceptList **参数解释**: 后续处置操作列表 **取值范围**: 数组元素为处置操作枚举字符串（如“isolate_and_kill”“ignore”等），数组长度0-4（具体支持操作因结果状态而异）
     *
     * @return $this
     */
@@ -714,7 +714,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets operateDetailList
-    *  操作详情信息列表（页面不展示）
+    *  **参数解释**: 操作详情信息列表（页面不展示） **取值范围**: 数组长度0-100
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\ResultDetailResponseInfo[]|null
     */
@@ -726,7 +726,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets operateDetailList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\ResultDetailResponseInfo[]|null $operateDetailList 操作详情信息列表（页面不展示）
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\ResultDetailResponseInfo[]|null $operateDetailList **参数解释**: 操作详情信息列表（页面不展示） **取值范围**: 数组长度0-100
     *
     * @return $this
     */
@@ -738,7 +738,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isolateTag
-    *  自动隔离查杀标识
+    *  **参数解释**: 自动隔离查杀标识 **取值范围**: 字符长度1-16位，枚举值为“auto_isolate”（自动隔离）、“manual”（手动操作）、“none”（未隔离）
     *
     * @return string|null
     */
@@ -750,7 +750,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isolateTag
     *
-    * @param string|null $isolateTag 自动隔离查杀标识
+    * @param string|null $isolateTag **参数解释**: 自动隔离查杀标识 **取值范围**: 字符长度1-16位，枚举值为“auto_isolate”（自动隔离）、“manual”（手动操作）、“none”（未隔离）
     *
     * @return $this
     */

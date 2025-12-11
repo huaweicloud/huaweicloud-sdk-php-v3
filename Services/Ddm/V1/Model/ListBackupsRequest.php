@@ -20,20 +20,38 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * instanceId  实例ID。
+    * instanceName  实例名称。
+    * backupName  备份名称。
+    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0。取值必须为数字，且不能为负数。
+    * limit  分页参数：每页多少条。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'instanceId' => 'string',
+            'instanceName' => 'string',
+            'backupName' => 'string',
+            'offset' => 'int',
+            'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * instanceId  实例ID。
+    * instanceName  实例名称。
+    * backupName  备份名称。
+    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0。取值必须为数字，且不能为负数。
+    * limit  分页参数：每页多少条。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'instanceId' => null,
+        'instanceName' => null,
+        'backupName' => null,
+        'offset' => null,
+        'limit' => null
     ];
 
     /**
@@ -59,29 +77,56 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * instanceId  实例ID。
+    * instanceName  实例名称。
+    * backupName  备份名称。
+    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0。取值必须为数字，且不能为负数。
+    * limit  分页参数：每页多少条。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'instanceId' => 'instance_id',
+            'instanceName' => 'instance_name',
+            'backupName' => 'backup_name',
+            'offset' => 'offset',
+            'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * instanceId  实例ID。
+    * instanceName  实例名称。
+    * backupName  备份名称。
+    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0。取值必须为数字，且不能为负数。
+    * limit  分页参数：每页多少条。
     *
     * @var string[]
     */
     protected static $setters = [
+            'instanceId' => 'setInstanceId',
+            'instanceName' => 'setInstanceName',
+            'backupName' => 'setBackupName',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * instanceId  实例ID。
+    * instanceName  实例名称。
+    * backupName  备份名称。
+    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0。取值必须为数字，且不能为负数。
+    * limit  分页参数：每页多少条。
     *
     * @var string[]
     */
     protected static $getters = [
+            'instanceId' => 'getInstanceId',
+            'instanceName' => 'getInstanceName',
+            'backupName' => 'getBackupName',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -142,6 +187,11 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['instanceName'] = isset($data['instanceName']) ? $data['instanceName'] : null;
+        $this->container['backupName'] = isset($data['backupName']) ? $data['backupName'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -152,6 +202,36 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['instanceName']) && (mb_strlen($this->container['instanceName']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'instanceName', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['instanceName']) && (mb_strlen($this->container['instanceName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'instanceName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['backupName']) && (mb_strlen($this->container['backupName']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'backupName', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['backupName']) && (mb_strlen($this->container['backupName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'backupName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 1024)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1024)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -164,6 +244,126 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets instanceId
+    *  实例ID。
+    *
+    * @return string|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string|null $instanceId 实例ID。
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets instanceName
+    *  实例名称。
+    *
+    * @return string|null
+    */
+    public function getInstanceName()
+    {
+        return $this->container['instanceName'];
+    }
+
+    /**
+    * Sets instanceName
+    *
+    * @param string|null $instanceName 实例名称。
+    *
+    * @return $this
+    */
+    public function setInstanceName($instanceName)
+    {
+        $this->container['instanceName'] = $instanceName;
+        return $this;
+    }
+
+    /**
+    * Gets backupName
+    *  备份名称。
+    *
+    * @return string|null
+    */
+    public function getBackupName()
+    {
+        return $this->container['backupName'];
+    }
+
+    /**
+    * Sets backupName
+    *
+    * @param string|null $backupName 备份名称。
+    *
+    * @return $this
+    */
+    public function setBackupName($backupName)
+    {
+        $this->container['backupName'] = $backupName;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0。取值必须为数字，且不能为负数。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0。取值必须为数字，且不能为负数。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  分页参数：每页多少条。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 分页参数：每页多少条。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
     }
 
     /**

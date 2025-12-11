@@ -20,16 +20,16 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  daemonset名称
-    * namespaceName  命名空间名称
-    * clusterId  集群id
-    * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws 亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
-    * clusterName  集群名称
-    * status  状态，包含以下几种 -Running：正常运行 -Failed：存在异常
-    * podsNum  实例个数
-    * imageName  镜像名称
-    * matchLabels  标签
-    * createTime  创建时间
+    * name  **参数解释**: daemonset名称。 **取值范围**: 字符长度0-256位
+    * namespaceName  **参数解释**: 命名空间名称。 **取值范围**: 字符长度0-256位
+    * clusterId  **参数解释**: 集群的唯一标识ID，用于唯一确定DaemonSet所属的集群实例。 **取值范围**: 符合标准UUID格式，字符串长度36位
+    * clusterType  **参数解释**: DaemonSet所属集群的部署类型，用于区分不同云厂商或部署模式的集群。 **取值范围**: k8s（原生集群）、cce（CCE集群）、ali（阿里云集群）、tencent（腾讯云集群）、azure（微软云集群）、aws（亚马逊集群）、self_built_hw（华为云自建集群）、self_built_idc（IDC自建集群）
+    * clusterName  **参数解释**: 集群名称。 **取值范围**: 字符串长度0-256
+    * status  **参数解释**: DaemonSet的运行状态，用于标识当前实例的运行健康度； **取值范围**: Running（正常运行）、Failed（存在异常）
+    * podsNum  **参数解释**: 当前DaemonSet对应的Pod实例总数量； **取值范围**: 非负整数，单位为个，最小值0，无上限（取决于集群资源）
+    * imageName  **参数解释**: DaemonSet实例所使用的容器镜像的完整名称，包含镜像仓库、镜像名及标签； **取值范围**: 符合容器镜像命名规范，字符长度1 - 256位
+    * matchLabels  **参数解释**: 用于匹配Pod的标签集合，K8s通过该标签关联DaemonSet与对应Pod； **取值范围**: 数组元素数量≥0，每个元素的key为标签名称，val为标签值，key和val字符长度均为1 - 63位
+    * createTime  **参数解释**: DaemonSet资源的创建时间； **取值范围**: 以毫秒级时间戳格式返回，取值为非负长整数，对应UTC时间1970 - 01 - 01起的毫秒数
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  daemonset名称
-    * namespaceName  命名空间名称
-    * clusterId  集群id
-    * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws 亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
-    * clusterName  集群名称
-    * status  状态，包含以下几种 -Running：正常运行 -Failed：存在异常
-    * podsNum  实例个数
-    * imageName  镜像名称
-    * matchLabels  标签
-    * createTime  创建时间
+    * name  **参数解释**: daemonset名称。 **取值范围**: 字符长度0-256位
+    * namespaceName  **参数解释**: 命名空间名称。 **取值范围**: 字符长度0-256位
+    * clusterId  **参数解释**: 集群的唯一标识ID，用于唯一确定DaemonSet所属的集群实例。 **取值范围**: 符合标准UUID格式，字符串长度36位
+    * clusterType  **参数解释**: DaemonSet所属集群的部署类型，用于区分不同云厂商或部署模式的集群。 **取值范围**: k8s（原生集群）、cce（CCE集群）、ali（阿里云集群）、tencent（腾讯云集群）、azure（微软云集群）、aws（亚马逊集群）、self_built_hw（华为云自建集群）、self_built_idc（IDC自建集群）
+    * clusterName  **参数解释**: 集群名称。 **取值范围**: 字符串长度0-256
+    * status  **参数解释**: DaemonSet的运行状态，用于标识当前实例的运行健康度； **取值范围**: Running（正常运行）、Failed（存在异常）
+    * podsNum  **参数解释**: 当前DaemonSet对应的Pod实例总数量； **取值范围**: 非负整数，单位为个，最小值0，无上限（取决于集群资源）
+    * imageName  **参数解释**: DaemonSet实例所使用的容器镜像的完整名称，包含镜像仓库、镜像名及标签； **取值范围**: 符合容器镜像命名规范，字符长度1 - 256位
+    * matchLabels  **参数解释**: 用于匹配Pod的标签集合，K8s通过该标签关联DaemonSet与对应Pod； **取值范围**: 数组元素数量≥0，每个元素的key为标签名称，val为标签值，key和val字符长度均为1 - 63位
+    * createTime  **参数解释**: DaemonSet资源的创建时间； **取值范围**: 以毫秒级时间戳格式返回，取值为非负长整数，对应UTC时间1970 - 01 - 01起的毫秒数
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  daemonset名称
-    * namespaceName  命名空间名称
-    * clusterId  集群id
-    * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws 亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
-    * clusterName  集群名称
-    * status  状态，包含以下几种 -Running：正常运行 -Failed：存在异常
-    * podsNum  实例个数
-    * imageName  镜像名称
-    * matchLabels  标签
-    * createTime  创建时间
+    * name  **参数解释**: daemonset名称。 **取值范围**: 字符长度0-256位
+    * namespaceName  **参数解释**: 命名空间名称。 **取值范围**: 字符长度0-256位
+    * clusterId  **参数解释**: 集群的唯一标识ID，用于唯一确定DaemonSet所属的集群实例。 **取值范围**: 符合标准UUID格式，字符串长度36位
+    * clusterType  **参数解释**: DaemonSet所属集群的部署类型，用于区分不同云厂商或部署模式的集群。 **取值范围**: k8s（原生集群）、cce（CCE集群）、ali（阿里云集群）、tencent（腾讯云集群）、azure（微软云集群）、aws（亚马逊集群）、self_built_hw（华为云自建集群）、self_built_idc（IDC自建集群）
+    * clusterName  **参数解释**: 集群名称。 **取值范围**: 字符串长度0-256
+    * status  **参数解释**: DaemonSet的运行状态，用于标识当前实例的运行健康度； **取值范围**: Running（正常运行）、Failed（存在异常）
+    * podsNum  **参数解释**: 当前DaemonSet对应的Pod实例总数量； **取值范围**: 非负整数，单位为个，最小值0，无上限（取决于集群资源）
+    * imageName  **参数解释**: DaemonSet实例所使用的容器镜像的完整名称，包含镜像仓库、镜像名及标签； **取值范围**: 符合容器镜像命名规范，字符长度1 - 256位
+    * matchLabels  **参数解释**: 用于匹配Pod的标签集合，K8s通过该标签关联DaemonSet与对应Pod； **取值范围**: 数组元素数量≥0，每个元素的key为标签名称，val为标签值，key和val字符长度均为1 - 63位
+    * createTime  **参数解释**: DaemonSet资源的创建时间； **取值范围**: 以毫秒级时间戳格式返回，取值为非负长整数，对应UTC时间1970 - 01 - 01起的毫秒数
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  daemonset名称
-    * namespaceName  命名空间名称
-    * clusterId  集群id
-    * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws 亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
-    * clusterName  集群名称
-    * status  状态，包含以下几种 -Running：正常运行 -Failed：存在异常
-    * podsNum  实例个数
-    * imageName  镜像名称
-    * matchLabels  标签
-    * createTime  创建时间
+    * name  **参数解释**: daemonset名称。 **取值范围**: 字符长度0-256位
+    * namespaceName  **参数解释**: 命名空间名称。 **取值范围**: 字符长度0-256位
+    * clusterId  **参数解释**: 集群的唯一标识ID，用于唯一确定DaemonSet所属的集群实例。 **取值范围**: 符合标准UUID格式，字符串长度36位
+    * clusterType  **参数解释**: DaemonSet所属集群的部署类型，用于区分不同云厂商或部署模式的集群。 **取值范围**: k8s（原生集群）、cce（CCE集群）、ali（阿里云集群）、tencent（腾讯云集群）、azure（微软云集群）、aws（亚马逊集群）、self_built_hw（华为云自建集群）、self_built_idc（IDC自建集群）
+    * clusterName  **参数解释**: 集群名称。 **取值范围**: 字符串长度0-256
+    * status  **参数解释**: DaemonSet的运行状态，用于标识当前实例的运行健康度； **取值范围**: Running（正常运行）、Failed（存在异常）
+    * podsNum  **参数解释**: 当前DaemonSet对应的Pod实例总数量； **取值范围**: 非负整数，单位为个，最小值0，无上限（取决于集群资源）
+    * imageName  **参数解释**: DaemonSet实例所使用的容器镜像的完整名称，包含镜像仓库、镜像名及标签； **取值范围**: 符合容器镜像命名规范，字符长度1 - 256位
+    * matchLabels  **参数解释**: 用于匹配Pod的标签集合，K8s通过该标签关联DaemonSet与对应Pod； **取值范围**: 数组元素数量≥0，每个元素的key为标签名称，val为标签值，key和val字符长度均为1 - 63位
+    * createTime  **参数解释**: DaemonSet资源的创建时间； **取值范围**: 以毫秒级时间戳格式返回，取值为非负长整数，对应UTC时间1970 - 01 - 01起的毫秒数
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  daemonset名称
-    * namespaceName  命名空间名称
-    * clusterId  集群id
-    * clusterType  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws 亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
-    * clusterName  集群名称
-    * status  状态，包含以下几种 -Running：正常运行 -Failed：存在异常
-    * podsNum  实例个数
-    * imageName  镜像名称
-    * matchLabels  标签
-    * createTime  创建时间
+    * name  **参数解释**: daemonset名称。 **取值范围**: 字符长度0-256位
+    * namespaceName  **参数解释**: 命名空间名称。 **取值范围**: 字符长度0-256位
+    * clusterId  **参数解释**: 集群的唯一标识ID，用于唯一确定DaemonSet所属的集群实例。 **取值范围**: 符合标准UUID格式，字符串长度36位
+    * clusterType  **参数解释**: DaemonSet所属集群的部署类型，用于区分不同云厂商或部署模式的集群。 **取值范围**: k8s（原生集群）、cce（CCE集群）、ali（阿里云集群）、tencent（腾讯云集群）、azure（微软云集群）、aws（亚马逊集群）、self_built_hw（华为云自建集群）、self_built_idc（IDC自建集群）
+    * clusterName  **参数解释**: 集群名称。 **取值范围**: 字符串长度0-256
+    * status  **参数解释**: DaemonSet的运行状态，用于标识当前实例的运行健康度； **取值范围**: Running（正常运行）、Failed（存在异常）
+    * podsNum  **参数解释**: 当前DaemonSet对应的Pod实例总数量； **取值范围**: 非负整数，单位为个，最小值0，无上限（取决于集群资源）
+    * imageName  **参数解释**: DaemonSet实例所使用的容器镜像的完整名称，包含镜像仓库、镜像名及标签； **取值范围**: 符合容器镜像命名规范，字符长度1 - 256位
+    * matchLabels  **参数解释**: 用于匹配Pod的标签集合，K8s通过该标签关联DaemonSet与对应Pod； **取值范围**: 数组元素数量≥0，每个元素的key为标签名称，val为标签值，key和val字符长度均为1 - 63位
+    * createTime  **参数解释**: DaemonSet资源的创建时间； **取值范围**: 以毫秒级时间戳格式返回，取值为非负长整数，对应UTC时间1970 - 01 - 01起的毫秒数
     *
     * @var string[]
     */
@@ -327,7 +327,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  daemonset名称
+    *  **参数解释**: daemonset名称。 **取值范围**: 字符长度0-256位
     *
     * @return string|null
     */
@@ -339,7 +339,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name daemonset名称
+    * @param string|null $name **参数解释**: daemonset名称。 **取值范围**: 字符长度0-256位
     *
     * @return $this
     */
@@ -351,7 +351,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespaceName
-    *  命名空间名称
+    *  **参数解释**: 命名空间名称。 **取值范围**: 字符长度0-256位
     *
     * @return string|null
     */
@@ -363,7 +363,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets namespaceName
     *
-    * @param string|null $namespaceName 命名空间名称
+    * @param string|null $namespaceName **参数解释**: 命名空间名称。 **取值范围**: 字符长度0-256位
     *
     * @return $this
     */
@@ -375,7 +375,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群id
+    *  **参数解释**: 集群的唯一标识ID，用于唯一确定DaemonSet所属的集群实例。 **取值范围**: 符合标准UUID格式，字符串长度36位
     *
     * @return string|null
     */
@@ -387,7 +387,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群id
+    * @param string|null $clusterId **参数解释**: 集群的唯一标识ID，用于唯一确定DaemonSet所属的集群实例。 **取值范围**: 符合标准UUID格式，字符串长度36位
     *
     * @return $this
     */
@@ -399,7 +399,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterType
-    *  集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws 亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
+    *  **参数解释**: DaemonSet所属集群的部署类型，用于区分不同云厂商或部署模式的集群。 **取值范围**: k8s（原生集群）、cce（CCE集群）、ali（阿里云集群）、tencent（腾讯云集群）、azure（微软云集群）、aws（亚马逊集群）、self_built_hw（华为云自建集群）、self_built_idc（IDC自建集群）
     *
     * @return string|null
     */
@@ -411,7 +411,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterType
     *
-    * @param string|null $clusterType 集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws 亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
+    * @param string|null $clusterType **参数解释**: DaemonSet所属集群的部署类型，用于区分不同云厂商或部署模式的集群。 **取值范围**: k8s（原生集群）、cce（CCE集群）、ali（阿里云集群）、tencent（腾讯云集群）、azure（微软云集群）、aws（亚马逊集群）、self_built_hw（华为云自建集群）、self_built_idc（IDC自建集群）
     *
     * @return $this
     */
@@ -423,7 +423,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterName
-    *  集群名称
+    *  **参数解释**: 集群名称。 **取值范围**: 字符串长度0-256
     *
     * @return string|null
     */
@@ -435,7 +435,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterName
     *
-    * @param string|null $clusterName 集群名称
+    * @param string|null $clusterName **参数解释**: 集群名称。 **取值范围**: 字符串长度0-256
     *
     * @return $this
     */
@@ -447,7 +447,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态，包含以下几种 -Running：正常运行 -Failed：存在异常
+    *  **参数解释**: DaemonSet的运行状态，用于标识当前实例的运行健康度； **取值范围**: Running（正常运行）、Failed（存在异常）
     *
     * @return string|null
     */
@@ -459,7 +459,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态，包含以下几种 -Running：正常运行 -Failed：存在异常
+    * @param string|null $status **参数解释**: DaemonSet的运行状态，用于标识当前实例的运行健康度； **取值范围**: Running（正常运行）、Failed（存在异常）
     *
     * @return $this
     */
@@ -471,7 +471,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets podsNum
-    *  实例个数
+    *  **参数解释**: 当前DaemonSet对应的Pod实例总数量； **取值范围**: 非负整数，单位为个，最小值0，无上限（取决于集群资源）
     *
     * @return int|null
     */
@@ -483,7 +483,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets podsNum
     *
-    * @param int|null $podsNum 实例个数
+    * @param int|null $podsNum **参数解释**: 当前DaemonSet对应的Pod实例总数量； **取值范围**: 非负整数，单位为个，最小值0，无上限（取决于集群资源）
     *
     * @return $this
     */
@@ -495,7 +495,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageName
-    *  镜像名称
+    *  **参数解释**: DaemonSet实例所使用的容器镜像的完整名称，包含镜像仓库、镜像名及标签； **取值范围**: 符合容器镜像命名规范，字符长度1 - 256位
     *
     * @return string|null
     */
@@ -507,7 +507,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imageName
     *
-    * @param string|null $imageName 镜像名称
+    * @param string|null $imageName **参数解释**: DaemonSet实例所使用的容器镜像的完整名称，包含镜像仓库、镜像名及标签； **取值范围**: 符合容器镜像命名规范，字符长度1 - 256位
     *
     * @return $this
     */
@@ -519,7 +519,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets matchLabels
-    *  标签
+    *  **参数解释**: 用于匹配Pod的标签集合，K8s通过该标签关联DaemonSet与对应Pod； **取值范围**: 数组元素数量≥0，每个元素的key为标签名称，val为标签值，key和val字符长度均为1 - 63位
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\LabelInfo[]|null
     */
@@ -531,7 +531,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets matchLabels
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\LabelInfo[]|null $matchLabels 标签
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\LabelInfo[]|null $matchLabels **参数解释**: 用于匹配Pod的标签集合，K8s通过该标签关联DaemonSet与对应Pod； **取值范围**: 数组元素数量≥0，每个元素的key为标签名称，val为标签值，key和val字符长度均为1 - 63位
     *
     * @return $this
     */
@@ -543,7 +543,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  **参数解释**: DaemonSet资源的创建时间； **取值范围**: 以毫秒级时间戳格式返回，取值为非负长整数，对应UTC时间1970 - 01 - 01起的毫秒数
     *
     * @return int|null
     */
@@ -555,7 +555,7 @@ class DaemonSetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 创建时间
+    * @param int|null $createTime **参数解释**: DaemonSet资源的创建时间； **取值范围**: 以毫秒级时间戳格式返回，取值为非负长整数，对应UTC时间1970 - 01 - 01起的毫秒数
     *
     * @return $this
     */

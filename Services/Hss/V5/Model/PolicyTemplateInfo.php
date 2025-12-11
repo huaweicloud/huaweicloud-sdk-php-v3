@@ -24,7 +24,7 @@ class PolicyTemplateInfo implements ModelInterface, ArrayAccess
     * templateName  **参数解释**: 模板名称 **取值范围**: 字符长度1-255
     * templateType  **参数解释**: 模板类型 **取值范围**: 字符长度1-16
     * description  **参数解释**: 描述 **取值范围**: 字符长度0-2048
-    * targetKind  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号份隔连接 **取值范围**: 字符长度1-255
+    * targetKind  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号分隔连接 **取值范围**: 字符长度1-255
     * tag  **参数解释**: 标签 **取值范围**: 字符长度0-2048
     * level  **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
     * constraintTemplate  **参数解释**: 策略模板内容 **取值范围**: 字符长度1-65535
@@ -48,7 +48,7 @@ class PolicyTemplateInfo implements ModelInterface, ArrayAccess
     * templateName  **参数解释**: 模板名称 **取值范围**: 字符长度1-255
     * templateType  **参数解释**: 模板类型 **取值范围**: 字符长度1-16
     * description  **参数解释**: 描述 **取值范围**: 字符长度0-2048
-    * targetKind  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号份隔连接 **取值范围**: 字符长度1-255
+    * targetKind  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号分隔连接 **取值范围**: 字符长度1-255
     * tag  **参数解释**: 标签 **取值范围**: 字符长度0-2048
     * level  **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
     * constraintTemplate  **参数解释**: 策略模板内容 **取值范围**: 字符长度1-65535
@@ -93,7 +93,7 @@ class PolicyTemplateInfo implements ModelInterface, ArrayAccess
     * templateName  **参数解释**: 模板名称 **取值范围**: 字符长度1-255
     * templateType  **参数解释**: 模板类型 **取值范围**: 字符长度1-16
     * description  **参数解释**: 描述 **取值范围**: 字符长度0-2048
-    * targetKind  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号份隔连接 **取值范围**: 字符长度1-255
+    * targetKind  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号分隔连接 **取值范围**: 字符长度1-255
     * tag  **参数解释**: 标签 **取值范围**: 字符长度0-2048
     * level  **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
     * constraintTemplate  **参数解释**: 策略模板内容 **取值范围**: 字符长度1-65535
@@ -117,7 +117,7 @@ class PolicyTemplateInfo implements ModelInterface, ArrayAccess
     * templateName  **参数解释**: 模板名称 **取值范围**: 字符长度1-255
     * templateType  **参数解释**: 模板类型 **取值范围**: 字符长度1-16
     * description  **参数解释**: 描述 **取值范围**: 字符长度0-2048
-    * targetKind  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号份隔连接 **取值范围**: 字符长度1-255
+    * targetKind  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号分隔连接 **取值范围**: 字符长度1-255
     * tag  **参数解释**: 标签 **取值范围**: 字符长度0-2048
     * level  **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
     * constraintTemplate  **参数解释**: 策略模板内容 **取值范围**: 字符长度1-65535
@@ -141,7 +141,7 @@ class PolicyTemplateInfo implements ModelInterface, ArrayAccess
     * templateName  **参数解释**: 模板名称 **取值范围**: 字符长度1-255
     * templateType  **参数解释**: 模板类型 **取值范围**: 字符长度1-16
     * description  **参数解释**: 描述 **取值范围**: 字符长度0-2048
-    * targetKind  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号份隔连接 **取值范围**: 字符长度1-255
+    * targetKind  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号分隔连接 **取值范围**: 字符长度1-255
     * tag  **参数解释**: 标签 **取值范围**: 字符长度0-2048
     * level  **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
     * constraintTemplate  **参数解释**: 策略模板内容 **取值范围**: 字符长度1-65535
@@ -413,7 +413,7 @@ class PolicyTemplateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetKind
-    *  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号份隔连接 **取值范围**: 字符长度1-255
+    *  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号分隔连接 **取值范围**: 字符长度1-255
     *
     * @return string
     */
@@ -425,7 +425,7 @@ class PolicyTemplateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets targetKind
     *
-    * @param string $targetKind **参数解释**: 策略模板应用资源类型，多个资源类型通过分号份隔连接 **取值范围**: 字符长度1-255
+    * @param string $targetKind **参数解释**: 策略模板应用资源类型，多个资源类型通过分号分隔连接 **取值范围**: 字符长度1-255
     *
     * @return $this
     */

@@ -22,7 +22,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * policyId  策略ID
     * policyName  策略名称
-    * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
+    * startType  **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
     * scanPeriod  启动类型，包含如下:   - day ：每天   - week : 每周   - month : 每月
     * scanPeriodDate  扫描周期日期（1-28；扫描周期为week时，1-7代表周日至周六；扫描周期为month时，1-28代表每月1日到28日）
     * scanTime  扫描时间戳，毫秒（仅启动类型为later时有值）
@@ -31,7 +31,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * nextStartTime  下次启动时间，毫秒
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
-    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     * invalidate  失效，包含如下:   - true ：是   - fasle ：否
     * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     * hostInfoList  主机信息
@@ -64,7 +64,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * policyId  策略ID
     * policyName  策略名称
-    * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
+    * startType  **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
     * scanPeriod  启动类型，包含如下:   - day ：每天   - week : 每周   - month : 每月
     * scanPeriodDate  扫描周期日期（1-28；扫描周期为week时，1-7代表周日至周六；扫描周期为month时，1-28代表每月1日到28日）
     * scanTime  扫描时间戳，毫秒（仅启动类型为later时有值）
@@ -73,7 +73,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * nextStartTime  下次启动时间，毫秒
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
-    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     * invalidate  失效，包含如下:   - true ：是   - fasle ：否
     * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     * hostInfoList  主机信息
@@ -127,7 +127,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * policyId  策略ID
     * policyName  策略名称
-    * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
+    * startType  **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
     * scanPeriod  启动类型，包含如下:   - day ：每天   - week : 每周   - month : 每月
     * scanPeriodDate  扫描周期日期（1-28；扫描周期为week时，1-7代表周日至周六；扫描周期为month时，1-28代表每月1日到28日）
     * scanTime  扫描时间戳，毫秒（仅启动类型为later时有值）
@@ -136,7 +136,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * nextStartTime  下次启动时间，毫秒
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
-    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     * invalidate  失效，包含如下:   - true ：是   - fasle ：否
     * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     * hostInfoList  主机信息
@@ -169,7 +169,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * policyId  策略ID
     * policyName  策略名称
-    * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
+    * startType  **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
     * scanPeriod  启动类型，包含如下:   - day ：每天   - week : 每周   - month : 每月
     * scanPeriodDate  扫描周期日期（1-28；扫描周期为week时，1-7代表周日至周六；扫描周期为month时，1-28代表每月1日到28日）
     * scanTime  扫描时间戳，毫秒（仅启动类型为later时有值）
@@ -178,7 +178,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * nextStartTime  下次启动时间，毫秒
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
-    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     * invalidate  失效，包含如下:   - true ：是   - fasle ：否
     * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     * hostInfoList  主机信息
@@ -211,7 +211,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * policyId  策略ID
     * policyName  策略名称
-    * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
+    * startType  **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
     * scanPeriod  启动类型，包含如下:   - day ：每天   - week : 每周   - month : 每月
     * scanPeriodDate  扫描周期日期（1-28；扫描周期为week时，1-7代表周日至周六；扫描周期为month时，1-28代表每月1日到28日）
     * scanTime  扫描时间戳，毫秒（仅启动类型为later时有值）
@@ -220,7 +220,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * nextStartTime  下次启动时间，毫秒
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
-    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     * invalidate  失效，包含如下:   - true ：是   - fasle ：否
     * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     * hostInfoList  主机信息
@@ -467,7 +467,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets startType
-    *  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
+    *  **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
     *
     * @return string|null
     */
@@ -479,7 +479,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets startType
     *
-    * @param string|null $startType 启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
+    * @param string|null $startType **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
     *
     * @return $this
     */
@@ -683,7 +683,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    *  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     *
     * @return string|null
     */
@@ -695,7 +695,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    * @param string|null $action **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     *
     * @return $this
     */

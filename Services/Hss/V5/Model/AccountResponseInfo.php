@@ -20,15 +20,15 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accountName  账号名称
-    * accountId  账号Id
-    * organizationId  组织Id
-    * projectId  项目Id
-    * projectName  项目名称
-    * hostNum  主机数量
-    * vulnerabilityNum  漏洞风险数量
-    * baselineNum  基线检测风险数量
-    * intrusionNum  安全告警风险数量
+    * accountName  **参数解释**: 账号的唯一名称，用于标识账号身份； **取值范围**: 字符长度1-64位，支持字母、数字、连字符、下划线，不能以特殊字符开头或结尾
+    * accountId  **参数解释**: 账号的唯一标识ID，用于唯一确定某个账号； **取值范围**: 字符长度1-64位，符合平台账号ID命名规范（如UUID或数字组合）
+    * organizationId  **参数解释**: 账号所属组织的唯一标识ID； **取值范围**: 字符长度1-64位，符合平台组织ID命名规范
+    * projectId  **参数解释**: 账号所属项目的唯一标识ID； **取值范围**: 字符长度1-64位，符合平台项目ID命名规范；
+    * projectName  **参数解释**: 账号所属项目的名称，用于直观标识项目； **取值范围**: 字符长度1-64位，支持字母、数字、连字符、下划线及中文，无复杂度额外要求
+    * hostNum  **参数解释**: 当前账号下已关联的主机总数量； **取值范围**: 非负整数，最小值0，最大值取决于平台资源配额；单位：台
+    * vulnerabilityNum  **参数解释**: 当前账号下主机存在的漏洞风险总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：个
+    * baselineNum  **参数解释**: 当前账号下主机基线检测未通过的风险总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：个
+    * intrusionNum  **参数解释**: 当前账号下主机发生的安全入侵告警总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：条
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accountName  账号名称
-    * accountId  账号Id
-    * organizationId  组织Id
-    * projectId  项目Id
-    * projectName  项目名称
-    * hostNum  主机数量
-    * vulnerabilityNum  漏洞风险数量
-    * baselineNum  基线检测风险数量
-    * intrusionNum  安全告警风险数量
+    * accountName  **参数解释**: 账号的唯一名称，用于标识账号身份； **取值范围**: 字符长度1-64位，支持字母、数字、连字符、下划线，不能以特殊字符开头或结尾
+    * accountId  **参数解释**: 账号的唯一标识ID，用于唯一确定某个账号； **取值范围**: 字符长度1-64位，符合平台账号ID命名规范（如UUID或数字组合）
+    * organizationId  **参数解释**: 账号所属组织的唯一标识ID； **取值范围**: 字符长度1-64位，符合平台组织ID命名规范
+    * projectId  **参数解释**: 账号所属项目的唯一标识ID； **取值范围**: 字符长度1-64位，符合平台项目ID命名规范；
+    * projectName  **参数解释**: 账号所属项目的名称，用于直观标识项目； **取值范围**: 字符长度1-64位，支持字母、数字、连字符、下划线及中文，无复杂度额外要求
+    * hostNum  **参数解释**: 当前账号下已关联的主机总数量； **取值范围**: 非负整数，最小值0，最大值取决于平台资源配额；单位：台
+    * vulnerabilityNum  **参数解释**: 当前账号下主机存在的漏洞风险总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：个
+    * baselineNum  **参数解释**: 当前账号下主机基线检测未通过的风险总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：个
+    * intrusionNum  **参数解释**: 当前账号下主机发生的安全入侵告警总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：条
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accountName  账号名称
-    * accountId  账号Id
-    * organizationId  组织Id
-    * projectId  项目Id
-    * projectName  项目名称
-    * hostNum  主机数量
-    * vulnerabilityNum  漏洞风险数量
-    * baselineNum  基线检测风险数量
-    * intrusionNum  安全告警风险数量
+    * accountName  **参数解释**: 账号的唯一名称，用于标识账号身份； **取值范围**: 字符长度1-64位，支持字母、数字、连字符、下划线，不能以特殊字符开头或结尾
+    * accountId  **参数解释**: 账号的唯一标识ID，用于唯一确定某个账号； **取值范围**: 字符长度1-64位，符合平台账号ID命名规范（如UUID或数字组合）
+    * organizationId  **参数解释**: 账号所属组织的唯一标识ID； **取值范围**: 字符长度1-64位，符合平台组织ID命名规范
+    * projectId  **参数解释**: 账号所属项目的唯一标识ID； **取值范围**: 字符长度1-64位，符合平台项目ID命名规范；
+    * projectName  **参数解释**: 账号所属项目的名称，用于直观标识项目； **取值范围**: 字符长度1-64位，支持字母、数字、连字符、下划线及中文，无复杂度额外要求
+    * hostNum  **参数解释**: 当前账号下已关联的主机总数量； **取值范围**: 非负整数，最小值0，最大值取决于平台资源配额；单位：台
+    * vulnerabilityNum  **参数解释**: 当前账号下主机存在的漏洞风险总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：个
+    * baselineNum  **参数解释**: 当前账号下主机基线检测未通过的风险总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：个
+    * intrusionNum  **参数解释**: 当前账号下主机发生的安全入侵告警总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：条
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accountName  账号名称
-    * accountId  账号Id
-    * organizationId  组织Id
-    * projectId  项目Id
-    * projectName  项目名称
-    * hostNum  主机数量
-    * vulnerabilityNum  漏洞风险数量
-    * baselineNum  基线检测风险数量
-    * intrusionNum  安全告警风险数量
+    * accountName  **参数解释**: 账号的唯一名称，用于标识账号身份； **取值范围**: 字符长度1-64位，支持字母、数字、连字符、下划线，不能以特殊字符开头或结尾
+    * accountId  **参数解释**: 账号的唯一标识ID，用于唯一确定某个账号； **取值范围**: 字符长度1-64位，符合平台账号ID命名规范（如UUID或数字组合）
+    * organizationId  **参数解释**: 账号所属组织的唯一标识ID； **取值范围**: 字符长度1-64位，符合平台组织ID命名规范
+    * projectId  **参数解释**: 账号所属项目的唯一标识ID； **取值范围**: 字符长度1-64位，符合平台项目ID命名规范；
+    * projectName  **参数解释**: 账号所属项目的名称，用于直观标识项目； **取值范围**: 字符长度1-64位，支持字母、数字、连字符、下划线及中文，无复杂度额外要求
+    * hostNum  **参数解释**: 当前账号下已关联的主机总数量； **取值范围**: 非负整数，最小值0，最大值取决于平台资源配额；单位：台
+    * vulnerabilityNum  **参数解释**: 当前账号下主机存在的漏洞风险总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：个
+    * baselineNum  **参数解释**: 当前账号下主机基线检测未通过的风险总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：个
+    * intrusionNum  **参数解释**: 当前账号下主机发生的安全入侵告警总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：条
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accountName  账号名称
-    * accountId  账号Id
-    * organizationId  组织Id
-    * projectId  项目Id
-    * projectName  项目名称
-    * hostNum  主机数量
-    * vulnerabilityNum  漏洞风险数量
-    * baselineNum  基线检测风险数量
-    * intrusionNum  安全告警风险数量
+    * accountName  **参数解释**: 账号的唯一名称，用于标识账号身份； **取值范围**: 字符长度1-64位，支持字母、数字、连字符、下划线，不能以特殊字符开头或结尾
+    * accountId  **参数解释**: 账号的唯一标识ID，用于唯一确定某个账号； **取值范围**: 字符长度1-64位，符合平台账号ID命名规范（如UUID或数字组合）
+    * organizationId  **参数解释**: 账号所属组织的唯一标识ID； **取值范围**: 字符长度1-64位，符合平台组织ID命名规范
+    * projectId  **参数解释**: 账号所属项目的唯一标识ID； **取值范围**: 字符长度1-64位，符合平台项目ID命名规范；
+    * projectName  **参数解释**: 账号所属项目的名称，用于直观标识项目； **取值范围**: 字符长度1-64位，支持字母、数字、连字符、下划线及中文，无复杂度额外要求
+    * hostNum  **参数解释**: 当前账号下已关联的主机总数量； **取值范围**: 非负整数，最小值0，最大值取决于平台资源配额；单位：台
+    * vulnerabilityNum  **参数解释**: 当前账号下主机存在的漏洞风险总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：个
+    * baselineNum  **参数解释**: 当前账号下主机基线检测未通过的风险总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：个
+    * intrusionNum  **参数解释**: 当前账号下主机发生的安全入侵告警总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：条
     *
     * @var string[]
     */
@@ -331,7 +331,7 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountName
-    *  账号名称
+    *  **参数解释**: 账号的唯一名称，用于标识账号身份； **取值范围**: 字符长度1-64位，支持字母、数字、连字符、下划线，不能以特殊字符开头或结尾
     *
     * @return string|null
     */
@@ -343,7 +343,7 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets accountName
     *
-    * @param string|null $accountName 账号名称
+    * @param string|null $accountName **参数解释**: 账号的唯一名称，用于标识账号身份； **取值范围**: 字符长度1-64位，支持字母、数字、连字符、下划线，不能以特殊字符开头或结尾
     *
     * @return $this
     */
@@ -355,7 +355,7 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountId
-    *  账号Id
+    *  **参数解释**: 账号的唯一标识ID，用于唯一确定某个账号； **取值范围**: 字符长度1-64位，符合平台账号ID命名规范（如UUID或数字组合）
     *
     * @return string|null
     */
@@ -367,7 +367,7 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets accountId
     *
-    * @param string|null $accountId 账号Id
+    * @param string|null $accountId **参数解释**: 账号的唯一标识ID，用于唯一确定某个账号； **取值范围**: 字符长度1-64位，符合平台账号ID命名规范（如UUID或数字组合）
     *
     * @return $this
     */
@@ -379,7 +379,7 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets organizationId
-    *  组织Id
+    *  **参数解释**: 账号所属组织的唯一标识ID； **取值范围**: 字符长度1-64位，符合平台组织ID命名规范
     *
     * @return string|null
     */
@@ -391,7 +391,7 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets organizationId
     *
-    * @param string|null $organizationId 组织Id
+    * @param string|null $organizationId **参数解释**: 账号所属组织的唯一标识ID； **取值范围**: 字符长度1-64位，符合平台组织ID命名规范
     *
     * @return $this
     */
@@ -403,7 +403,7 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目Id
+    *  **参数解释**: 账号所属项目的唯一标识ID； **取值范围**: 字符长度1-64位，符合平台项目ID命名规范；
     *
     * @return string|null
     */
@@ -415,7 +415,7 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目Id
+    * @param string|null $projectId **参数解释**: 账号所属项目的唯一标识ID； **取值范围**: 字符长度1-64位，符合平台项目ID命名规范；
     *
     * @return $this
     */
@@ -427,7 +427,7 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectName
-    *  项目名称
+    *  **参数解释**: 账号所属项目的名称，用于直观标识项目； **取值范围**: 字符长度1-64位，支持字母、数字、连字符、下划线及中文，无复杂度额外要求
     *
     * @return string|null
     */
@@ -439,7 +439,7 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets projectName
     *
-    * @param string|null $projectName 项目名称
+    * @param string|null $projectName **参数解释**: 账号所属项目的名称，用于直观标识项目； **取值范围**: 字符长度1-64位，支持字母、数字、连字符、下划线及中文，无复杂度额外要求
     *
     * @return $this
     */
@@ -451,7 +451,7 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostNum
-    *  主机数量
+    *  **参数解释**: 当前账号下已关联的主机总数量； **取值范围**: 非负整数，最小值0，最大值取决于平台资源配额；单位：台
     *
     * @return int|null
     */
@@ -463,7 +463,7 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostNum
     *
-    * @param int|null $hostNum 主机数量
+    * @param int|null $hostNum **参数解释**: 当前账号下已关联的主机总数量； **取值范围**: 非负整数，最小值0，最大值取决于平台资源配额；单位：台
     *
     * @return $this
     */
@@ -475,7 +475,7 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vulnerabilityNum
-    *  漏洞风险数量
+    *  **参数解释**: 当前账号下主机存在的漏洞风险总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：个
     *
     * @return int|null
     */
@@ -487,7 +487,7 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vulnerabilityNum
     *
-    * @param int|null $vulnerabilityNum 漏洞风险数量
+    * @param int|null $vulnerabilityNum **参数解释**: 当前账号下主机存在的漏洞风险总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：个
     *
     * @return $this
     */
@@ -499,7 +499,7 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets baselineNum
-    *  基线检测风险数量
+    *  **参数解释**: 当前账号下主机基线检测未通过的风险总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：个
     *
     * @return int|null
     */
@@ -511,7 +511,7 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets baselineNum
     *
-    * @param int|null $baselineNum 基线检测风险数量
+    * @param int|null $baselineNum **参数解释**: 当前账号下主机基线检测未通过的风险总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：个
     *
     * @return $this
     */
@@ -523,7 +523,7 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets intrusionNum
-    *  安全告警风险数量
+    *  **参数解释**: 当前账号下主机发生的安全入侵告警总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：条
     *
     * @return int|null
     */
@@ -535,7 +535,7 @@ class AccountResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets intrusionNum
     *
-    * @param int|null $intrusionNum 安全告警风险数量
+    * @param int|null $intrusionNum **参数解释**: 当前账号下主机发生的安全入侵告警总数量； **取值范围**: 非负整数，取值范围0-2147483647；单位：条
     *
     * @return $this
     */

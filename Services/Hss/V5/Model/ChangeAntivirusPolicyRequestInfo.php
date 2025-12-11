@@ -22,8 +22,8 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * policyId  策略ID
     * policyName  策略名称
-    * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * startType  **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
+    * scanType  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     * scanPeriod  启动类型，包含如下:   - day ：每天   - week : 每周   - month : 每月
     * scanPeriodDate  扫描周期日期（1-28；扫描周期为week时，1-7代表周日至周六；扫描周期为month时，1-28代表每月1日到28日）
     * scanTime  扫描时间戳，毫秒（仅启动类型为later时有值）
@@ -33,7 +33,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
     * fileTypes  文件类型集合型，包含如下:   - 0 ：全部   - 1 : 可执行   - 2 : 压缩   - 3 : 脚本   - 4 : 文档   - 5 : 图片   - 6 : 音视频
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
-    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     * whetherPaidTask  此次扫描任务是否消耗按次计费配额
     * hostIds  策略管理主机列表
     *
@@ -62,8 +62,8 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * policyId  策略ID
     * policyName  策略名称
-    * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * startType  **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
+    * scanType  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     * scanPeriod  启动类型，包含如下:   - day ：每天   - week : 每周   - month : 每月
     * scanPeriodDate  扫描周期日期（1-28；扫描周期为week时，1-7代表周日至周六；扫描周期为month时，1-28代表每月1日到28日）
     * scanTime  扫描时间戳，毫秒（仅启动类型为later时有值）
@@ -73,7 +73,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
     * fileTypes  文件类型集合型，包含如下:   - 0 ：全部   - 1 : 可执行   - 2 : 压缩   - 3 : 脚本   - 4 : 文档   - 5 : 图片   - 6 : 音视频
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
-    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     * whetherPaidTask  此次扫描任务是否消耗按次计费配额
     * hostIds  策略管理主机列表
     *
@@ -123,8 +123,8 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * policyId  策略ID
     * policyName  策略名称
-    * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * startType  **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
+    * scanType  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     * scanPeriod  启动类型，包含如下:   - day ：每天   - week : 每周   - month : 每月
     * scanPeriodDate  扫描周期日期（1-28；扫描周期为week时，1-7代表周日至周六；扫描周期为month时，1-28代表每月1日到28日）
     * scanTime  扫描时间戳，毫秒（仅启动类型为later时有值）
@@ -134,7 +134,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
     * fileTypes  文件类型集合型，包含如下:   - 0 ：全部   - 1 : 可执行   - 2 : 压缩   - 3 : 脚本   - 4 : 文档   - 5 : 图片   - 6 : 音视频
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
-    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     * whetherPaidTask  此次扫描任务是否消耗按次计费配额
     * hostIds  策略管理主机列表
     *
@@ -163,8 +163,8 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * policyId  策略ID
     * policyName  策略名称
-    * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * startType  **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
+    * scanType  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     * scanPeriod  启动类型，包含如下:   - day ：每天   - week : 每周   - month : 每月
     * scanPeriodDate  扫描周期日期（1-28；扫描周期为week时，1-7代表周日至周六；扫描周期为month时，1-28代表每月1日到28日）
     * scanTime  扫描时间戳，毫秒（仅启动类型为later时有值）
@@ -174,7 +174,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
     * fileTypes  文件类型集合型，包含如下:   - 0 ：全部   - 1 : 可执行   - 2 : 压缩   - 3 : 脚本   - 4 : 文档   - 5 : 图片   - 6 : 音视频
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
-    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     * whetherPaidTask  此次扫描任务是否消耗按次计费配额
     * hostIds  策略管理主机列表
     *
@@ -203,8 +203,8 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * policyId  策略ID
     * policyName  策略名称
-    * startType  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
-    * scanType  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * startType  **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
+    * scanType  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     * scanPeriod  启动类型，包含如下:   - day ：每天   - week : 每周   - month : 每月
     * scanPeriodDate  扫描周期日期（1-28；扫描周期为week时，1-7代表周日至周六；扫描周期为month时，1-28代表每月1日到28日）
     * scanTime  扫描时间戳，毫秒（仅启动类型为later时有值）
@@ -214,7 +214,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
     * fileTypes  文件类型集合型，包含如下:   - 0 ：全部   - 1 : 可执行   - 2 : 压缩   - 3 : 脚本   - 4 : 文档   - 5 : 图片   - 6 : 音视频
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
-    * action  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     * whetherPaidTask  此次扫描任务是否消耗按次计费配额
     * hostIds  策略管理主机列表
     *
@@ -477,7 +477,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets startType
-    *  启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
+    *  **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
     *
     * @return string
     */
@@ -489,7 +489,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets startType
     *
-    * @param string $startType 启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
+    * @param string $startType **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
     *
     * @return $this
     */
@@ -501,7 +501,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanType
-    *  任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    *  **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     *
     * @return string|null
     */
@@ -513,7 +513,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanType
     *
-    * @param string|null $scanType 任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+    * @param string|null $scanType **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
     *
     * @return $this
     */
@@ -741,7 +741,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    *  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     *
     * @return string
     */
@@ -753,7 +753,7 @@ class ChangeAntivirusPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string $action 处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+    * @param string $action **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
     *
     * @return $this
     */

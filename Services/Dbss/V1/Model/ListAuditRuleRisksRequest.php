@@ -22,7 +22,7 @@ class ListAuditRuleRisksRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     * name  风险名称
-    * riskLevels  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
+    * riskLevels  风险级别 - LOW：低 - MEDIUM：中 - HIGH：高 - NO_RISK：无风险
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ListAuditRuleRisksRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     * name  风险名称
-    * riskLevels  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
+    * riskLevels  风险级别 - LOW：低 - MEDIUM：中 - HIGH：高 - NO_RISK：无风险
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListAuditRuleRisksRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * instanceId  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     * name  风险名称
-    * riskLevels  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
+    * riskLevels  风险级别 - LOW：低 - MEDIUM：中 - HIGH：高 - NO_RISK：无风险
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ListAuditRuleRisksRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     * name  风险名称
-    * riskLevels  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
+    * riskLevels  风险级别 - LOW：低 - MEDIUM：中 - HIGH：高 - NO_RISK：无风险
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ListAuditRuleRisksRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     * name  风险名称
-    * riskLevels  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
+    * riskLevels  风险级别 - LOW：低 - MEDIUM：中 - HIGH：高 - NO_RISK：无风险
     *
     * @var string[]
     */
@@ -280,7 +280,7 @@ class ListAuditRuleRisksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets riskLevels
-    *  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
+    *  风险级别 - LOW：低 - MEDIUM：中 - HIGH：高 - NO_RISK：无风险
     *
     * @return string|null
     */
@@ -292,7 +292,7 @@ class ListAuditRuleRisksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets riskLevels
     *
-    * @param string|null $riskLevels 风险级别 - LOW - MEDIUM - HIGH - NO_RISK
+    * @param string|null $riskLevels 风险级别 - LOW：低 - MEDIUM：中 - HIGH：高 - NO_RISK：无风险
     *
     * @return $this
     */

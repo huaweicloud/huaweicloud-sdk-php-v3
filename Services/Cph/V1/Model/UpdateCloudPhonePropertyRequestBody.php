@@ -25,7 +25,7 @@ class UpdateCloudPhonePropertyRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'phones' => '\HuaweiCloud\SDK\Cph\V1\Model\Property[]'
+            'phones' => '\HuaweiCloud\SDK\Cph\V1\Model\PropertyToUpdate[]'
     ];
 
     /**
@@ -179,7 +179,7 @@ class UpdateCloudPhonePropertyRequestBody implements ModelInterface, ArrayAccess
     * Gets phones
     *  手机列表。
     *
-    * @return \HuaweiCloud\SDK\Cph\V1\Model\Property[]
+    * @return \HuaweiCloud\SDK\Cph\V1\Model\PropertyToUpdate[]
     */
     public function getPhones()
     {
@@ -189,7 +189,7 @@ class UpdateCloudPhonePropertyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets phones
     *
-    * @param \HuaweiCloud\SDK\Cph\V1\Model\Property[] $phones 手机列表。
+    * @param \HuaweiCloud\SDK\Cph\V1\Model\PropertyToUpdate[] $phones 手机列表。
     *
     * @return $this
     */

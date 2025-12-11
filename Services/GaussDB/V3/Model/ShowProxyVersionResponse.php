@@ -24,13 +24,15 @@ class ShowProxyVersionResponse implements ModelInterface, ArrayAccess
     * currentVersion  当前代理版本
     * latestVersion  最新代理版本
     * canUpgrade  是否能升级
+    * risk  risk
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'currentVersion' => 'string',
             'latestVersion' => 'string',
-            'canUpgrade' => 'bool'
+            'canUpgrade' => 'bool',
+            'risk' => '\HuaweiCloud\SDK\GaussDB\V3\Model\ProxyEngineRisk'
     ];
 
     /**
@@ -38,13 +40,15 @@ class ShowProxyVersionResponse implements ModelInterface, ArrayAccess
     * currentVersion  当前代理版本
     * latestVersion  最新代理版本
     * canUpgrade  是否能升级
+    * risk  risk
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'currentVersion' => null,
         'latestVersion' => null,
-        'canUpgrade' => null
+        'canUpgrade' => null,
+        'risk' => null
     ];
 
     /**
@@ -73,13 +77,15 @@ class ShowProxyVersionResponse implements ModelInterface, ArrayAccess
     * currentVersion  当前代理版本
     * latestVersion  最新代理版本
     * canUpgrade  是否能升级
+    * risk  risk
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'currentVersion' => 'current_version',
             'latestVersion' => 'latest_version',
-            'canUpgrade' => 'can_upgrade'
+            'canUpgrade' => 'can_upgrade',
+            'risk' => 'risk'
     ];
 
     /**
@@ -87,13 +93,15 @@ class ShowProxyVersionResponse implements ModelInterface, ArrayAccess
     * currentVersion  当前代理版本
     * latestVersion  最新代理版本
     * canUpgrade  是否能升级
+    * risk  risk
     *
     * @var string[]
     */
     protected static $setters = [
             'currentVersion' => 'setCurrentVersion',
             'latestVersion' => 'setLatestVersion',
-            'canUpgrade' => 'setCanUpgrade'
+            'canUpgrade' => 'setCanUpgrade',
+            'risk' => 'setRisk'
     ];
 
     /**
@@ -101,13 +109,15 @@ class ShowProxyVersionResponse implements ModelInterface, ArrayAccess
     * currentVersion  当前代理版本
     * latestVersion  最新代理版本
     * canUpgrade  是否能升级
+    * risk  risk
     *
     * @var string[]
     */
     protected static $getters = [
             'currentVersion' => 'getCurrentVersion',
             'latestVersion' => 'getLatestVersion',
-            'canUpgrade' => 'getCanUpgrade'
+            'canUpgrade' => 'getCanUpgrade',
+            'risk' => 'getRisk'
     ];
 
     /**
@@ -171,6 +181,7 @@ class ShowProxyVersionResponse implements ModelInterface, ArrayAccess
         $this->container['currentVersion'] = isset($data['currentVersion']) ? $data['currentVersion'] : null;
         $this->container['latestVersion'] = isset($data['latestVersion']) ? $data['latestVersion'] : null;
         $this->container['canUpgrade'] = isset($data['canUpgrade']) ? $data['canUpgrade'] : null;
+        $this->container['risk'] = isset($data['risk']) ? $data['risk'] : null;
     }
 
     /**
@@ -264,6 +275,30 @@ class ShowProxyVersionResponse implements ModelInterface, ArrayAccess
     public function setCanUpgrade($canUpgrade)
     {
         $this->container['canUpgrade'] = $canUpgrade;
+        return $this;
+    }
+
+    /**
+    * Gets risk
+    *  risk
+    *
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\ProxyEngineRisk|null
+    */
+    public function getRisk()
+    {
+        return $this->container['risk'];
+    }
+
+    /**
+    * Sets risk
+    *
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\ProxyEngineRisk|null $risk risk
+    *
+    * @return $this
+    */
+    public function setRisk($risk)
+    {
+        $this->container['risk'] = $risk;
         return $this;
     }
 

@@ -30,9 +30,11 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
     * returnExcel  仅当table为True时有效。是否返回表格转换Microsoft Excel的Base64编码字段。
     * form  是否进行有线表单识别。有线表单指关键信息以有线单元格形式进行呈现，例如户口本、机动车发票等。若是，结果会以\"form_result\"这一关键字返回。
     * formula  是否进行公式识别，识别结果为latex序列。若是，结果会以“formula_result”这一关键字返回。  - 开启公式识别后会降低响应速度。 - 当前仅支持3行以内公式识别，不支持3行以上的多行公式。
+    * imageLayout  是否对文档中的图片进行二次版面分析。若是，结果会在“layout_result”中返回，并带有“image_layout”的关键字。
     * kvMap  需要传入字典的json序列化后字符串，用于对kv_result中的特定key值进行归一化映射。例如，kv_result中包含{\"名称\"：\"小明\"}的键值对，若传入{\"名称\"：\"姓名\"}的kv_map，则返回结果为{“姓名”：“小明”}。  > 参数传入示例： - \"kv_map\":\"{\\\"名称\\\":\\\"姓名\\\"}\"
     * eraseSeal  是否打开印章擦除功能。可选值包括： - true：打开印章擦除功能。 - false：关闭印章擦除功能。  开启后，可提升印章遮挡区域的文字识别精度。
     * pdfPageNumber  指定PDF页码识别。传入该参数时，则识别指定页码的内容。如果不传该参数，则默认识别第1页。
+    * characterMode  是否返回单字符信息。开启后，单字符识别结果将会在“ocr_result”中的“char_list”返回单字符信息。如果不传入该参数，则默认不返回单字符信息。
     *
     * @var string[]
     */
@@ -47,9 +49,11 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
             'returnExcel' => 'bool',
             'form' => 'bool',
             'formula' => 'bool',
+            'imageLayout' => 'bool',
             'kvMap' => 'string',
             'eraseSeal' => 'bool',
-            'pdfPageNumber' => 'int'
+            'pdfPageNumber' => 'int',
+            'characterMode' => 'bool'
     ];
 
     /**
@@ -64,9 +68,11 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
     * returnExcel  仅当table为True时有效。是否返回表格转换Microsoft Excel的Base64编码字段。
     * form  是否进行有线表单识别。有线表单指关键信息以有线单元格形式进行呈现，例如户口本、机动车发票等。若是，结果会以\"form_result\"这一关键字返回。
     * formula  是否进行公式识别，识别结果为latex序列。若是，结果会以“formula_result”这一关键字返回。  - 开启公式识别后会降低响应速度。 - 当前仅支持3行以内公式识别，不支持3行以上的多行公式。
+    * imageLayout  是否对文档中的图片进行二次版面分析。若是，结果会在“layout_result”中返回，并带有“image_layout”的关键字。
     * kvMap  需要传入字典的json序列化后字符串，用于对kv_result中的特定key值进行归一化映射。例如，kv_result中包含{\"名称\"：\"小明\"}的键值对，若传入{\"名称\"：\"姓名\"}的kv_map，则返回结果为{“姓名”：“小明”}。  > 参数传入示例： - \"kv_map\":\"{\\\"名称\\\":\\\"姓名\\\"}\"
     * eraseSeal  是否打开印章擦除功能。可选值包括： - true：打开印章擦除功能。 - false：关闭印章擦除功能。  开启后，可提升印章遮挡区域的文字识别精度。
     * pdfPageNumber  指定PDF页码识别。传入该参数时，则识别指定页码的内容。如果不传该参数，则默认识别第1页。
+    * characterMode  是否返回单字符信息。开启后，单字符识别结果将会在“ocr_result”中的“char_list”返回单字符信息。如果不传入该参数，则默认不返回单字符信息。
     *
     * @var string[]
     */
@@ -81,9 +87,11 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
         'returnExcel' => null,
         'form' => null,
         'formula' => null,
+        'imageLayout' => null,
         'kvMap' => null,
         'eraseSeal' => null,
-        'pdfPageNumber' => 'int32'
+        'pdfPageNumber' => 'int32',
+        'characterMode' => null
     ];
 
     /**
@@ -119,9 +127,11 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
     * returnExcel  仅当table为True时有效。是否返回表格转换Microsoft Excel的Base64编码字段。
     * form  是否进行有线表单识别。有线表单指关键信息以有线单元格形式进行呈现，例如户口本、机动车发票等。若是，结果会以\"form_result\"这一关键字返回。
     * formula  是否进行公式识别，识别结果为latex序列。若是，结果会以“formula_result”这一关键字返回。  - 开启公式识别后会降低响应速度。 - 当前仅支持3行以内公式识别，不支持3行以上的多行公式。
+    * imageLayout  是否对文档中的图片进行二次版面分析。若是，结果会在“layout_result”中返回，并带有“image_layout”的关键字。
     * kvMap  需要传入字典的json序列化后字符串，用于对kv_result中的特定key值进行归一化映射。例如，kv_result中包含{\"名称\"：\"小明\"}的键值对，若传入{\"名称\"：\"姓名\"}的kv_map，则返回结果为{“姓名”：“小明”}。  > 参数传入示例： - \"kv_map\":\"{\\\"名称\\\":\\\"姓名\\\"}\"
     * eraseSeal  是否打开印章擦除功能。可选值包括： - true：打开印章擦除功能。 - false：关闭印章擦除功能。  开启后，可提升印章遮挡区域的文字识别精度。
     * pdfPageNumber  指定PDF页码识别。传入该参数时，则识别指定页码的内容。如果不传该参数，则默认识别第1页。
+    * characterMode  是否返回单字符信息。开启后，单字符识别结果将会在“ocr_result”中的“char_list”返回单字符信息。如果不传入该参数，则默认不返回单字符信息。
     *
     * @var string[]
     */
@@ -136,9 +146,11 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
             'returnExcel' => 'return_excel',
             'form' => 'form',
             'formula' => 'formula',
+            'imageLayout' => 'image_layout',
             'kvMap' => 'kv_map',
             'eraseSeal' => 'erase_seal',
-            'pdfPageNumber' => 'pdf_page_number'
+            'pdfPageNumber' => 'pdf_page_number',
+            'characterMode' => 'character_mode'
     ];
 
     /**
@@ -153,9 +165,11 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
     * returnExcel  仅当table为True时有效。是否返回表格转换Microsoft Excel的Base64编码字段。
     * form  是否进行有线表单识别。有线表单指关键信息以有线单元格形式进行呈现，例如户口本、机动车发票等。若是，结果会以\"form_result\"这一关键字返回。
     * formula  是否进行公式识别，识别结果为latex序列。若是，结果会以“formula_result”这一关键字返回。  - 开启公式识别后会降低响应速度。 - 当前仅支持3行以内公式识别，不支持3行以上的多行公式。
+    * imageLayout  是否对文档中的图片进行二次版面分析。若是，结果会在“layout_result”中返回，并带有“image_layout”的关键字。
     * kvMap  需要传入字典的json序列化后字符串，用于对kv_result中的特定key值进行归一化映射。例如，kv_result中包含{\"名称\"：\"小明\"}的键值对，若传入{\"名称\"：\"姓名\"}的kv_map，则返回结果为{“姓名”：“小明”}。  > 参数传入示例： - \"kv_map\":\"{\\\"名称\\\":\\\"姓名\\\"}\"
     * eraseSeal  是否打开印章擦除功能。可选值包括： - true：打开印章擦除功能。 - false：关闭印章擦除功能。  开启后，可提升印章遮挡区域的文字识别精度。
     * pdfPageNumber  指定PDF页码识别。传入该参数时，则识别指定页码的内容。如果不传该参数，则默认识别第1页。
+    * characterMode  是否返回单字符信息。开启后，单字符识别结果将会在“ocr_result”中的“char_list”返回单字符信息。如果不传入该参数，则默认不返回单字符信息。
     *
     * @var string[]
     */
@@ -170,9 +184,11 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
             'returnExcel' => 'setReturnExcel',
             'form' => 'setForm',
             'formula' => 'setFormula',
+            'imageLayout' => 'setImageLayout',
             'kvMap' => 'setKvMap',
             'eraseSeal' => 'setEraseSeal',
-            'pdfPageNumber' => 'setPdfPageNumber'
+            'pdfPageNumber' => 'setPdfPageNumber',
+            'characterMode' => 'setCharacterMode'
     ];
 
     /**
@@ -187,9 +203,11 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
     * returnExcel  仅当table为True时有效。是否返回表格转换Microsoft Excel的Base64编码字段。
     * form  是否进行有线表单识别。有线表单指关键信息以有线单元格形式进行呈现，例如户口本、机动车发票等。若是，结果会以\"form_result\"这一关键字返回。
     * formula  是否进行公式识别，识别结果为latex序列。若是，结果会以“formula_result”这一关键字返回。  - 开启公式识别后会降低响应速度。 - 当前仅支持3行以内公式识别，不支持3行以上的多行公式。
+    * imageLayout  是否对文档中的图片进行二次版面分析。若是，结果会在“layout_result”中返回，并带有“image_layout”的关键字。
     * kvMap  需要传入字典的json序列化后字符串，用于对kv_result中的特定key值进行归一化映射。例如，kv_result中包含{\"名称\"：\"小明\"}的键值对，若传入{\"名称\"：\"姓名\"}的kv_map，则返回结果为{“姓名”：“小明”}。  > 参数传入示例： - \"kv_map\":\"{\\\"名称\\\":\\\"姓名\\\"}\"
     * eraseSeal  是否打开印章擦除功能。可选值包括： - true：打开印章擦除功能。 - false：关闭印章擦除功能。  开启后，可提升印章遮挡区域的文字识别精度。
     * pdfPageNumber  指定PDF页码识别。传入该参数时，则识别指定页码的内容。如果不传该参数，则默认识别第1页。
+    * characterMode  是否返回单字符信息。开启后，单字符识别结果将会在“ocr_result”中的“char_list”返回单字符信息。如果不传入该参数，则默认不返回单字符信息。
     *
     * @var string[]
     */
@@ -204,9 +222,11 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
             'returnExcel' => 'getReturnExcel',
             'form' => 'getForm',
             'formula' => 'getFormula',
+            'imageLayout' => 'getImageLayout',
             'kvMap' => 'getKvMap',
             'eraseSeal' => 'getEraseSeal',
-            'pdfPageNumber' => 'getPdfPageNumber'
+            'pdfPageNumber' => 'getPdfPageNumber',
+            'characterMode' => 'getCharacterMode'
     ];
 
     /**
@@ -277,9 +297,11 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
         $this->container['returnExcel'] = isset($data['returnExcel']) ? $data['returnExcel'] : null;
         $this->container['form'] = isset($data['form']) ? $data['form'] : null;
         $this->container['formula'] = isset($data['formula']) ? $data['formula'] : null;
+        $this->container['imageLayout'] = isset($data['imageLayout']) ? $data['imageLayout'] : null;
         $this->container['kvMap'] = isset($data['kvMap']) ? $data['kvMap'] : null;
         $this->container['eraseSeal'] = isset($data['eraseSeal']) ? $data['eraseSeal'] : null;
         $this->container['pdfPageNumber'] = isset($data['pdfPageNumber']) ? $data['pdfPageNumber'] : null;
+        $this->container['characterMode'] = isset($data['characterMode']) ? $data['characterMode'] : null;
     }
 
     /**
@@ -545,6 +567,30 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets imageLayout
+    *  是否对文档中的图片进行二次版面分析。若是，结果会在“layout_result”中返回，并带有“image_layout”的关键字。
+    *
+    * @return bool|null
+    */
+    public function getImageLayout()
+    {
+        return $this->container['imageLayout'];
+    }
+
+    /**
+    * Sets imageLayout
+    *
+    * @param bool|null $imageLayout 是否对文档中的图片进行二次版面分析。若是，结果会在“layout_result”中返回，并带有“image_layout”的关键字。
+    *
+    * @return $this
+    */
+    public function setImageLayout($imageLayout)
+    {
+        $this->container['imageLayout'] = $imageLayout;
+        return $this;
+    }
+
+    /**
     * Gets kvMap
     *  需要传入字典的json序列化后字符串，用于对kv_result中的特定key值进行归一化映射。例如，kv_result中包含{\"名称\"：\"小明\"}的键值对，若传入{\"名称\"：\"姓名\"}的kv_map，则返回结果为{“姓名”：“小明”}。  > 参数传入示例： - \"kv_map\":\"{\\\"名称\\\":\\\"姓名\\\"}\"
     *
@@ -613,6 +659,30 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
     public function setPdfPageNumber($pdfPageNumber)
     {
         $this->container['pdfPageNumber'] = $pdfPageNumber;
+        return $this;
+    }
+
+    /**
+    * Gets characterMode
+    *  是否返回单字符信息。开启后，单字符识别结果将会在“ocr_result”中的“char_list”返回单字符信息。如果不传入该参数，则默认不返回单字符信息。
+    *
+    * @return bool|null
+    */
+    public function getCharacterMode()
+    {
+        return $this->container['characterMode'];
+    }
+
+    /**
+    * Sets characterMode
+    *
+    * @param bool|null $characterMode 是否返回单字符信息。开启后，单字符识别结果将会在“ocr_result”中的“char_list”返回单字符信息。如果不传入该参数，则默认不返回单字符信息。
+    *
+    * @return $this
+    */
+    public function setCharacterMode($characterMode)
+    {
+        $this->container['characterMode'] = $characterMode;
         return $this;
     }
 

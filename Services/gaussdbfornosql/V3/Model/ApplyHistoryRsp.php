@@ -20,11 +20,11 @@ class ApplyHistoryRsp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * instanceName  实例名称
-    * appliedAt  生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
-    * applyResult  - SUCCESS：应用成功。 - FAILED:应用失败。
-    * failureReason  失败原因
+    * instanceId  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * instanceName  **参数解释：** 实例名称。 **取值范围：** 不涉及。
+    * appliedAt  **参数解释：** 生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * applyResult  **参数解释：** 应用结果。 **取值范围：** - SUCCESS：应用成功。 - FAILED:应用失败。 - APPLYING: 应用中。
+    * failureReason  **参数解释：** 失败原因。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ApplyHistoryRsp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * instanceName  实例名称
-    * appliedAt  生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
-    * applyResult  - SUCCESS：应用成功。 - FAILED:应用失败。
-    * failureReason  失败原因
+    * instanceId  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * instanceName  **参数解释：** 实例名称。 **取值范围：** 不涉及。
+    * appliedAt  **参数解释：** 生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * applyResult  **参数解释：** 应用结果。 **取值范围：** - SUCCESS：应用成功。 - FAILED:应用失败。 - APPLYING: 应用中。
+    * failureReason  **参数解释：** 失败原因。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ApplyHistoryRsp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID。
-    * instanceName  实例名称
-    * appliedAt  生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
-    * applyResult  - SUCCESS：应用成功。 - FAILED:应用失败。
-    * failureReason  失败原因
+    * instanceId  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * instanceName  **参数解释：** 实例名称。 **取值范围：** 不涉及。
+    * appliedAt  **参数解释：** 生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * applyResult  **参数解释：** 应用结果。 **取值范围：** - SUCCESS：应用成功。 - FAILED:应用失败。 - APPLYING: 应用中。
+    * failureReason  **参数解释：** 失败原因。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ApplyHistoryRsp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID。
-    * instanceName  实例名称
-    * appliedAt  生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
-    * applyResult  - SUCCESS：应用成功。 - FAILED:应用失败。
-    * failureReason  失败原因
+    * instanceId  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * instanceName  **参数解释：** 实例名称。 **取值范围：** 不涉及。
+    * appliedAt  **参数解释：** 生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * applyResult  **参数解释：** 应用结果。 **取值范围：** - SUCCESS：应用成功。 - FAILED:应用失败。 - APPLYING: 应用中。
+    * failureReason  **参数解释：** 失败原因。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ApplyHistoryRsp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID。
-    * instanceName  实例名称
-    * appliedAt  生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
-    * applyResult  - SUCCESS：应用成功。 - FAILED:应用失败。
-    * failureReason  失败原因
+    * instanceId  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * instanceName  **参数解释：** 实例名称。 **取值范围：** 不涉及。
+    * appliedAt  **参数解释：** 生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * applyResult  **参数解释：** 应用结果。 **取值范围：** - SUCCESS：应用成功。 - FAILED:应用失败。 - APPLYING: 应用中。
+    * failureReason  **参数解释：** 失败原因。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -230,7 +230,7 @@ class ApplyHistoryRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释：** 实例ID。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -242,7 +242,7 @@ class ApplyHistoryRsp implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string $instanceId **参数解释：** 实例ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -254,7 +254,7 @@ class ApplyHistoryRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceName
-    *  实例名称
+    *  **参数解释：** 实例名称。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -266,7 +266,7 @@ class ApplyHistoryRsp implements ModelInterface, ArrayAccess
     /**
     * Sets instanceName
     *
-    * @param string $instanceName 实例名称
+    * @param string $instanceName **参数解释：** 实例名称。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -278,7 +278,7 @@ class ApplyHistoryRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets appliedAt
-    *  生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
+    *  **参数解释：** 生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
     *
     * @return \DateTime
     */
@@ -290,7 +290,7 @@ class ApplyHistoryRsp implements ModelInterface, ArrayAccess
     /**
     * Sets appliedAt
     *
-    * @param \DateTime $appliedAt 生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
+    * @param \DateTime $appliedAt **参数解释：** 生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -302,7 +302,7 @@ class ApplyHistoryRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets applyResult
-    *  - SUCCESS：应用成功。 - FAILED:应用失败。
+    *  **参数解释：** 应用结果。 **取值范围：** - SUCCESS：应用成功。 - FAILED:应用失败。 - APPLYING: 应用中。
     *
     * @return string
     */
@@ -314,7 +314,7 @@ class ApplyHistoryRsp implements ModelInterface, ArrayAccess
     /**
     * Sets applyResult
     *
-    * @param string $applyResult - SUCCESS：应用成功。 - FAILED:应用失败。
+    * @param string $applyResult **参数解释：** 应用结果。 **取值范围：** - SUCCESS：应用成功。 - FAILED:应用失败。 - APPLYING: 应用中。
     *
     * @return $this
     */
@@ -326,7 +326,7 @@ class ApplyHistoryRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets failureReason
-    *  失败原因
+    *  **参数解释：** 失败原因。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -338,7 +338,7 @@ class ApplyHistoryRsp implements ModelInterface, ArrayAccess
     /**
     * Sets failureReason
     *
-    * @param string|null $failureReason 失败原因
+    * @param string|null $failureReason **参数解释：** 失败原因。 **取值范围：** 不涉及。
     *
     * @return $this
     */

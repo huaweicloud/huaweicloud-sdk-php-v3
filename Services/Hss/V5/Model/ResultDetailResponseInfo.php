@@ -20,8 +20,8 @@ class ResultDetailResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * keyword  告警事件关键字，仅用于告警白名单
-    * hash  告警事件hash，仅用于告警白名单
+    * keyword  **参数解释**： 告警事件关键字，仅用于告警白名单 **取值范围**： 字符长度0-128位
+    * hash  **参数解释**： 告警事件hash，仅用于告警白名单 **取值范围**： 字符长度64位（SHA256哈希）
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ResultDetailResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * keyword  告警事件关键字，仅用于告警白名单
-    * hash  告警事件hash，仅用于告警白名单
+    * keyword  **参数解释**： 告警事件关键字，仅用于告警白名单 **取值范围**： 字符长度0-128位
+    * hash  **参数解释**： 告警事件hash，仅用于告警白名单 **取值范围**： 字符长度64位（SHA256哈希）
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ResultDetailResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * keyword  告警事件关键字，仅用于告警白名单
-    * hash  告警事件hash，仅用于告警白名单
+    * keyword  **参数解释**： 告警事件关键字，仅用于告警白名单 **取值范围**： 字符长度0-128位
+    * hash  **参数解释**： 告警事件hash，仅用于告警白名单 **取值范围**： 字符长度64位（SHA256哈希）
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ResultDetailResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * keyword  告警事件关键字，仅用于告警白名单
-    * hash  告警事件hash，仅用于告警白名单
+    * keyword  **参数解释**： 告警事件关键字，仅用于告警白名单 **取值范围**： 字符长度0-128位
+    * hash  **参数解释**： 告警事件hash，仅用于告警白名单 **取值范围**： 字符长度64位（SHA256哈希）
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ResultDetailResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * keyword  告警事件关键字，仅用于告警白名单
-    * hash  告警事件hash，仅用于告警白名单
+    * keyword  **参数解释**： 告警事件关键字，仅用于告警白名单 **取值范围**： 字符长度0-128位
+    * hash  **参数解释**： 告警事件hash，仅用于告警白名单 **取值范围**： 字符长度64位（SHA256哈希）
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class ResultDetailResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets keyword
-    *  告警事件关键字，仅用于告警白名单
+    *  **参数解释**： 告警事件关键字，仅用于告警白名单 **取值范围**： 字符长度0-128位
     *
     * @return string|null
     */
@@ -203,7 +203,7 @@ class ResultDetailResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets keyword
     *
-    * @param string|null $keyword 告警事件关键字，仅用于告警白名单
+    * @param string|null $keyword **参数解释**： 告警事件关键字，仅用于告警白名单 **取值范围**： 字符长度0-128位
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class ResultDetailResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hash
-    *  告警事件hash，仅用于告警白名单
+    *  **参数解释**： 告警事件hash，仅用于告警白名单 **取值范围**： 字符长度64位（SHA256哈希）
     *
     * @return string|null
     */
@@ -227,7 +227,7 @@ class ResultDetailResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hash
     *
-    * @param string|null $hash 告警事件hash，仅用于告警白名单
+    * @param string|null $hash **参数解释**： 告警事件hash，仅用于告警白名单 **取值范围**： 字符长度64位（SHA256哈希）
     *
     * @return $this
     */

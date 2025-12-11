@@ -20,8 +20,8 @@ class InstanceItemTagItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  标签键。最大长度36个unicode字符，key不能为空。 字符集：0-9，A-Z，a-z，“_”，“-”，中文。
-    * value  标签值。最大长度43个unicode字符，可以为空字符串。 字符集：0-9，A-Z，a-z，“_”，“.”，“-”，中文。
+    * key  **参数解释：** 标签键。 **取值范围：** 最大长度36个unicode字符，key不能为空。 字符集：0-9，A-Z，a-z，“_”，“-”，中文。
+    * value  **参数解释：** 标签值。 **取值范围：** 最大长度43个unicode字符，可以为空字符串。 字符集：0-9，A-Z，a-z，“_”，“.”，“-”，中文。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class InstanceItemTagItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  标签键。最大长度36个unicode字符，key不能为空。 字符集：0-9，A-Z，a-z，“_”，“-”，中文。
-    * value  标签值。最大长度43个unicode字符，可以为空字符串。 字符集：0-9，A-Z，a-z，“_”，“.”，“-”，中文。
+    * key  **参数解释：** 标签键。 **取值范围：** 最大长度36个unicode字符，key不能为空。 字符集：0-9，A-Z，a-z，“_”，“-”，中文。
+    * value  **参数解释：** 标签值。 **取值范围：** 最大长度43个unicode字符，可以为空字符串。 字符集：0-9，A-Z，a-z，“_”，“.”，“-”，中文。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class InstanceItemTagItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  标签键。最大长度36个unicode字符，key不能为空。 字符集：0-9，A-Z，a-z，“_”，“-”，中文。
-    * value  标签值。最大长度43个unicode字符，可以为空字符串。 字符集：0-9，A-Z，a-z，“_”，“.”，“-”，中文。
+    * key  **参数解释：** 标签键。 **取值范围：** 最大长度36个unicode字符，key不能为空。 字符集：0-9，A-Z，a-z，“_”，“-”，中文。
+    * value  **参数解释：** 标签值。 **取值范围：** 最大长度43个unicode字符，可以为空字符串。 字符集：0-9，A-Z，a-z，“_”，“.”，“-”，中文。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class InstanceItemTagItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  标签键。最大长度36个unicode字符，key不能为空。 字符集：0-9，A-Z，a-z，“_”，“-”，中文。
-    * value  标签值。最大长度43个unicode字符，可以为空字符串。 字符集：0-9，A-Z，a-z，“_”，“.”，“-”，中文。
+    * key  **参数解释：** 标签键。 **取值范围：** 最大长度36个unicode字符，key不能为空。 字符集：0-9，A-Z，a-z，“_”，“-”，中文。
+    * value  **参数解释：** 标签值。 **取值范围：** 最大长度43个unicode字符，可以为空字符串。 字符集：0-9，A-Z，a-z，“_”，“.”，“-”，中文。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class InstanceItemTagItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  标签键。最大长度36个unicode字符，key不能为空。 字符集：0-9，A-Z，a-z，“_”，“-”，中文。
-    * value  标签值。最大长度43个unicode字符，可以为空字符串。 字符集：0-9，A-Z，a-z，“_”，“.”，“-”，中文。
+    * key  **参数解释：** 标签键。 **取值范围：** 最大长度36个unicode字符，key不能为空。 字符集：0-9，A-Z，a-z，“_”，“-”，中文。
+    * value  **参数解释：** 标签值。 **取值范围：** 最大长度43个unicode字符，可以为空字符串。 字符集：0-9，A-Z，a-z，“_”，“.”，“-”，中文。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class InstanceItemTagItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  标签键。最大长度36个unicode字符，key不能为空。 字符集：0-9，A-Z，a-z，“_”，“-”，中文。
+    *  **参数解释：** 标签键。 **取值范围：** 最大长度36个unicode字符，key不能为空。 字符集：0-9，A-Z，a-z，“_”，“-”，中文。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class InstanceItemTagItem implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 标签键。最大长度36个unicode字符，key不能为空。 字符集：0-9，A-Z，a-z，“_”，“-”，中文。
+    * @param string|null $key **参数解释：** 标签键。 **取值范围：** 最大长度36个unicode字符，key不能为空。 字符集：0-9，A-Z，a-z，“_”，“-”，中文。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class InstanceItemTagItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  标签值。最大长度43个unicode字符，可以为空字符串。 字符集：0-9，A-Z，a-z，“_”，“.”，“-”，中文。
+    *  **参数解释：** 标签值。 **取值范围：** 最大长度43个unicode字符，可以为空字符串。 字符集：0-9，A-Z，a-z，“_”，“.”，“-”，中文。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class InstanceItemTagItem implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 标签值。最大长度43个unicode字符，可以为空字符串。 字符集：0-9，A-Z，a-z，“_”，“.”，“-”，中文。
+    * @param string|null $value **参数解释：** 标签值。 **取值范围：** 最大长度43个unicode字符，可以为空字符串。 字符集：0-9，A-Z，a-z，“_”，“.”，“-”，中文。
     *
     * @return $this
     */
