@@ -20,13 +20,13 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * parameterName  参数名称。
-    * oldValue  参数旧值
-    * newValue  参数新值
-    * updateResult  更新结果
-    * applied  - true:已生效 - false:未生效
-    * updatedAt  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
-    * appliedAt  生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
+    * parameterName  **参数解释：** 参数名称。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * oldValue  **参数解释：** 参数旧值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * newValue  **参数解释：** 参数新值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * updateResult  **参数解释：** 更新结果。 **约束限制：** 不涉及。 **取值范围：** - SUCCESS：成功。 - FAILED：失败。 **默认取值：** 不涉及。
+    * applied  **参数解释：** 是否生效。 **约束限制：** 不涉及。 **取值范围：** - true:已生效。 - false:未生效。 **默认取值：** 不涉及。
+    * updatedAt  **参数解释：** 更新时间。 **约束限制：** 不涉及。 **取值范围：** 格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **默认取值：** 不涉及。
+    * appliedAt  **参数解释：** 生效时间。 **约束限制：** 不涉及。 **取值范围：** 格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -35,20 +35,20 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
             'oldValue' => 'string',
             'newValue' => 'string',
             'updateResult' => 'string',
-            'applied' => 'bool',
+            'applied' => 'string',
             'updatedAt' => 'string',
             'appliedAt' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * parameterName  参数名称。
-    * oldValue  参数旧值
-    * newValue  参数新值
-    * updateResult  更新结果
-    * applied  - true:已生效 - false:未生效
-    * updatedAt  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
-    * appliedAt  生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
+    * parameterName  **参数解释：** 参数名称。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * oldValue  **参数解释：** 参数旧值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * newValue  **参数解释：** 参数新值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * updateResult  **参数解释：** 更新结果。 **约束限制：** 不涉及。 **取值范围：** - SUCCESS：成功。 - FAILED：失败。 **默认取值：** 不涉及。
+    * applied  **参数解释：** 是否生效。 **约束限制：** 不涉及。 **取值范围：** - true:已生效。 - false:未生效。 **默认取值：** 不涉及。
+    * updatedAt  **参数解释：** 更新时间。 **约束限制：** 不涉及。 **取值范围：** 格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **默认取值：** 不涉及。
+    * appliedAt  **参数解释：** 生效时间。 **约束限制：** 不涉及。 **取值范围：** 格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * parameterName  参数名称。
-    * oldValue  参数旧值
-    * newValue  参数新值
-    * updateResult  更新结果
-    * applied  - true:已生效 - false:未生效
-    * updatedAt  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
-    * appliedAt  生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
+    * parameterName  **参数解释：** 参数名称。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * oldValue  **参数解释：** 参数旧值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * newValue  **参数解释：** 参数新值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * updateResult  **参数解释：** 更新结果。 **约束限制：** 不涉及。 **取值范围：** - SUCCESS：成功。 - FAILED：失败。 **默认取值：** 不涉及。
+    * applied  **参数解释：** 是否生效。 **约束限制：** 不涉及。 **取值范围：** - true:已生效。 - false:未生效。 **默认取值：** 不涉及。
+    * updatedAt  **参数解释：** 更新时间。 **约束限制：** 不涉及。 **取值范围：** 格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **默认取值：** 不涉及。
+    * appliedAt  **参数解释：** 生效时间。 **约束限制：** 不涉及。 **取值范围：** 格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * parameterName  参数名称。
-    * oldValue  参数旧值
-    * newValue  参数新值
-    * updateResult  更新结果
-    * applied  - true:已生效 - false:未生效
-    * updatedAt  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
-    * appliedAt  生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
+    * parameterName  **参数解释：** 参数名称。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * oldValue  **参数解释：** 参数旧值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * newValue  **参数解释：** 参数新值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * updateResult  **参数解释：** 更新结果。 **约束限制：** 不涉及。 **取值范围：** - SUCCESS：成功。 - FAILED：失败。 **默认取值：** 不涉及。
+    * applied  **参数解释：** 是否生效。 **约束限制：** 不涉及。 **取值范围：** - true:已生效。 - false:未生效。 **默认取值：** 不涉及。
+    * updatedAt  **参数解释：** 更新时间。 **约束限制：** 不涉及。 **取值范围：** 格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **默认取值：** 不涉及。
+    * appliedAt  **参数解释：** 生效时间。 **约束限制：** 不涉及。 **取值范围：** 格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * parameterName  参数名称。
-    * oldValue  参数旧值
-    * newValue  参数新值
-    * updateResult  更新结果
-    * applied  - true:已生效 - false:未生效
-    * updatedAt  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
-    * appliedAt  生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
+    * parameterName  **参数解释：** 参数名称。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * oldValue  **参数解释：** 参数旧值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * newValue  **参数解释：** 参数新值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * updateResult  **参数解释：** 更新结果。 **约束限制：** 不涉及。 **取值范围：** - SUCCESS：成功。 - FAILED：失败。 **默认取值：** 不涉及。
+    * applied  **参数解释：** 是否生效。 **约束限制：** 不涉及。 **取值范围：** - true:已生效。 - false:未生效。 **默认取值：** 不涉及。
+    * updatedAt  **参数解释：** 更新时间。 **约束限制：** 不涉及。 **取值范围：** 格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **默认取值：** 不涉及。
+    * appliedAt  **参数解释：** 生效时间。 **约束限制：** 不涉及。 **取值范围：** 格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -261,7 +261,7 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets parameterName
-    *  参数名称。
+    *  **参数解释：** 参数名称。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -273,7 +273,7 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
     /**
     * Sets parameterName
     *
-    * @param string $parameterName 参数名称。
+    * @param string $parameterName **参数解释：** 参数名称。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -285,7 +285,7 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets oldValue
-    *  参数旧值
+    *  **参数解释：** 参数旧值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -297,7 +297,7 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
     /**
     * Sets oldValue
     *
-    * @param string $oldValue 参数旧值
+    * @param string $oldValue **参数解释：** 参数旧值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -309,7 +309,7 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets newValue
-    *  参数新值
+    *  **参数解释：** 参数新值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -321,7 +321,7 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
     /**
     * Sets newValue
     *
-    * @param string $newValue 参数新值
+    * @param string $newValue **参数解释：** 参数新值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -333,7 +333,7 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateResult
-    *  更新结果
+    *  **参数解释：** 更新结果。 **约束限制：** 不涉及。 **取值范围：** - SUCCESS：成功。 - FAILED：失败。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -345,7 +345,7 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
     /**
     * Sets updateResult
     *
-    * @param string $updateResult 更新结果
+    * @param string $updateResult **参数解释：** 更新结果。 **约束限制：** 不涉及。 **取值范围：** - SUCCESS：成功。 - FAILED：失败。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -357,9 +357,9 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets applied
-    *  - true:已生效 - false:未生效
+    *  **参数解释：** 是否生效。 **约束限制：** 不涉及。 **取值范围：** - true:已生效。 - false:未生效。 **默认取值：** 不涉及。
     *
-    * @return bool
+    * @return string
     */
     public function getApplied()
     {
@@ -369,7 +369,7 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
     /**
     * Sets applied
     *
-    * @param bool $applied - true:已生效 - false:未生效
+    * @param string $applied **参数解释：** 是否生效。 **约束限制：** 不涉及。 **取值范围：** - true:已生效。 - false:未生效。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -381,7 +381,7 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
+    *  **参数解释：** 更新时间。 **约束限制：** 不涉及。 **取值范围：** 格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -393,7 +393,7 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string $updatedAt 更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
+    * @param string $updatedAt **参数解释：** 更新时间。 **约束限制：** 不涉及。 **取值范围：** 格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -405,7 +405,7 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets appliedAt
-    *  生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
+    *  **参数解释：** 生效时间。 **约束限制：** 不涉及。 **取值范围：** 格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -417,7 +417,7 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
     /**
     * Sets appliedAt
     *
-    * @param string $appliedAt 生效时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。  [其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。](tag:hc)  [其中，T指某个时间的开始；Z指时区偏移量。](tag:hk)
+    * @param string $appliedAt **参数解释：** 生效时间。 **约束限制：** 不涉及。 **取值范围：** 格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **默认取值：** 不涉及。
     *
     * @return $this
     */

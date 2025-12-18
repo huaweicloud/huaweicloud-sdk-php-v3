@@ -20,22 +20,26 @@ class ServiceNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * iPv4Cidr  kubernetes clusterIP IPv4 CIDR取值范围。创建集群时若未传参，默认为\"10.247.0.0/16\"。
+    * iPv4Cidr  **参数解释：** kubernetes clusterIP IPv4 CIDR取值范围。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 默认为\"10.247.0.0/16\"。
+    * iPv6Cidr  **参数解释：** kubernetes clusterIP IPv6 CIDR取值范围。 **约束限制：** 仅开启IPV6双栈的Turbo集群支持配置IPv6服务网段。 **取值范围：** 不涉及 **默认取值：** Turbo集群默认为\"fc00::/112\" CCE集群默认为\"fd00:1234::/120\"
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'iPv4Cidr' => 'string'
+            'iPv4Cidr' => 'string',
+            'iPv6Cidr' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * iPv4Cidr  kubernetes clusterIP IPv4 CIDR取值范围。创建集群时若未传参，默认为\"10.247.0.0/16\"。
+    * iPv4Cidr  **参数解释：** kubernetes clusterIP IPv4 CIDR取值范围。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 默认为\"10.247.0.0/16\"。
+    * iPv6Cidr  **参数解释：** kubernetes clusterIP IPv6 CIDR取值范围。 **约束限制：** 仅开启IPV6双栈的Turbo集群支持配置IPv6服务网段。 **取值范围：** 不涉及 **默认取值：** Turbo集群默认为\"fc00::/112\" CCE集群默认为\"fd00:1234::/120\"
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'iPv4Cidr' => null
+        'iPv4Cidr' => null,
+        'iPv6Cidr' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class ServiceNetwork implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * iPv4Cidr  kubernetes clusterIP IPv4 CIDR取值范围。创建集群时若未传参，默认为\"10.247.0.0/16\"。
+    * iPv4Cidr  **参数解释：** kubernetes clusterIP IPv4 CIDR取值范围。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 默认为\"10.247.0.0/16\"。
+    * iPv6Cidr  **参数解释：** kubernetes clusterIP IPv6 CIDR取值范围。 **约束限制：** 仅开启IPV6双栈的Turbo集群支持配置IPv6服务网段。 **取值范围：** 不涉及 **默认取值：** Turbo集群默认为\"fc00::/112\" CCE集群默认为\"fd00:1234::/120\"
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'iPv4Cidr' => 'IPv4CIDR'
+            'iPv4Cidr' => 'IPv4CIDR',
+            'iPv6Cidr' => 'IPv6CIDR'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * iPv4Cidr  kubernetes clusterIP IPv4 CIDR取值范围。创建集群时若未传参，默认为\"10.247.0.0/16\"。
+    * iPv4Cidr  **参数解释：** kubernetes clusterIP IPv4 CIDR取值范围。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 默认为\"10.247.0.0/16\"。
+    * iPv6Cidr  **参数解释：** kubernetes clusterIP IPv6 CIDR取值范围。 **约束限制：** 仅开启IPV6双栈的Turbo集群支持配置IPv6服务网段。 **取值范围：** 不涉及 **默认取值：** Turbo集群默认为\"fc00::/112\" CCE集群默认为\"fd00:1234::/120\"
     *
     * @var string[]
     */
     protected static $setters = [
-            'iPv4Cidr' => 'setIPv4Cidr'
+            'iPv4Cidr' => 'setIPv4Cidr',
+            'iPv6Cidr' => 'setIPv6Cidr'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * iPv4Cidr  kubernetes clusterIP IPv4 CIDR取值范围。创建集群时若未传参，默认为\"10.247.0.0/16\"。
+    * iPv4Cidr  **参数解释：** kubernetes clusterIP IPv4 CIDR取值范围。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 默认为\"10.247.0.0/16\"。
+    * iPv6Cidr  **参数解释：** kubernetes clusterIP IPv6 CIDR取值范围。 **约束限制：** 仅开启IPV6双栈的Turbo集群支持配置IPv6服务网段。 **取值范围：** 不涉及 **默认取值：** Turbo集群默认为\"fc00::/112\" CCE集群默认为\"fd00:1234::/120\"
     *
     * @var string[]
     */
     protected static $getters = [
-            'iPv4Cidr' => 'getIPv4Cidr'
+            'iPv4Cidr' => 'getIPv4Cidr',
+            'iPv6Cidr' => 'getIPv6Cidr'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ServiceNetwork implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['iPv4Cidr'] = isset($data['iPv4Cidr']) ? $data['iPv4Cidr'] : null;
+        $this->container['iPv6Cidr'] = isset($data['iPv6Cidr']) ? $data['iPv6Cidr'] : null;
     }
 
     /**
@@ -174,7 +185,7 @@ class ServiceNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Gets iPv4Cidr
-    *  kubernetes clusterIP IPv4 CIDR取值范围。创建集群时若未传参，默认为\"10.247.0.0/16\"。
+    *  **参数解释：** kubernetes clusterIP IPv4 CIDR取值范围。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 默认为\"10.247.0.0/16\"。
     *
     * @return string|null
     */
@@ -186,13 +197,37 @@ class ServiceNetwork implements ModelInterface, ArrayAccess
     /**
     * Sets iPv4Cidr
     *
-    * @param string|null $iPv4Cidr kubernetes clusterIP IPv4 CIDR取值范围。创建集群时若未传参，默认为\"10.247.0.0/16\"。
+    * @param string|null $iPv4Cidr **参数解释：** kubernetes clusterIP IPv4 CIDR取值范围。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 默认为\"10.247.0.0/16\"。
     *
     * @return $this
     */
     public function setIPv4Cidr($iPv4Cidr)
     {
         $this->container['iPv4Cidr'] = $iPv4Cidr;
+        return $this;
+    }
+
+    /**
+    * Gets iPv6Cidr
+    *  **参数解释：** kubernetes clusterIP IPv6 CIDR取值范围。 **约束限制：** 仅开启IPV6双栈的Turbo集群支持配置IPv6服务网段。 **取值范围：** 不涉及 **默认取值：** Turbo集群默认为\"fc00::/112\" CCE集群默认为\"fd00:1234::/120\"
+    *
+    * @return string|null
+    */
+    public function getIPv6Cidr()
+    {
+        return $this->container['iPv6Cidr'];
+    }
+
+    /**
+    * Sets iPv6Cidr
+    *
+    * @param string|null $iPv6Cidr **参数解释：** kubernetes clusterIP IPv6 CIDR取值范围。 **约束限制：** 仅开启IPV6双栈的Turbo集群支持配置IPv6服务网段。 **取值范围：** 不涉及 **默认取值：** Turbo集群默认为\"fc00::/112\" CCE集群默认为\"fd00:1234::/120\"
+    *
+    * @return $this
+    */
+    public function setIPv6Cidr($iPv6Cidr)
+    {
+        $this->container['iPv6Cidr'] = $iPv6Cidr;
         return $this;
     }
 

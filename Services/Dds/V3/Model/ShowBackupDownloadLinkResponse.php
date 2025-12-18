@@ -23,32 +23,24 @@ class ShowBackupDownloadLinkResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * files  备份文件信息。
     * bucket  OBS桶名。
-    * groupId  组ID。
-    * groupName  组名。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'files' => '\HuaweiCloud\SDK\Dds\V3\Model\GetBackupDownloadLinkResponseBodyFiles[]',
-            'bucket' => 'string',
-            'groupId' => 'string',
-            'groupName' => 'string'
+            'bucket' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * files  备份文件信息。
     * bucket  OBS桶名。
-    * groupId  组ID。
-    * groupName  组名。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'files' => null,
-        'bucket' => null,
-        'groupId' => null,
-        'groupName' => null
+        'bucket' => null
     ];
 
     /**
@@ -76,48 +68,36 @@ class ShowBackupDownloadLinkResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * files  备份文件信息。
     * bucket  OBS桶名。
-    * groupId  组ID。
-    * groupName  组名。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'files' => 'files',
-            'bucket' => 'bucket',
-            'groupId' => 'group_id',
-            'groupName' => 'group_name'
+            'bucket' => 'bucket'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * files  备份文件信息。
     * bucket  OBS桶名。
-    * groupId  组ID。
-    * groupName  组名。
     *
     * @var string[]
     */
     protected static $setters = [
             'files' => 'setFiles',
-            'bucket' => 'setBucket',
-            'groupId' => 'setGroupId',
-            'groupName' => 'setGroupName'
+            'bucket' => 'setBucket'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * files  备份文件信息。
     * bucket  OBS桶名。
-    * groupId  组ID。
-    * groupName  组名。
     *
     * @var string[]
     */
     protected static $getters = [
             'files' => 'getFiles',
-            'bucket' => 'getBucket',
-            'groupId' => 'getGroupId',
-            'groupName' => 'getGroupName'
+            'bucket' => 'getBucket'
     ];
 
     /**
@@ -180,8 +160,6 @@ class ShowBackupDownloadLinkResponse implements ModelInterface, ArrayAccess
     {
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
         $this->container['bucket'] = isset($data['bucket']) ? $data['bucket'] : null;
-        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
-        $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
     }
 
     /**
@@ -251,54 +229,6 @@ class ShowBackupDownloadLinkResponse implements ModelInterface, ArrayAccess
     public function setBucket($bucket)
     {
         $this->container['bucket'] = $bucket;
-        return $this;
-    }
-
-    /**
-    * Gets groupId
-    *  组ID。
-    *
-    * @return string|null
-    */
-    public function getGroupId()
-    {
-        return $this->container['groupId'];
-    }
-
-    /**
-    * Sets groupId
-    *
-    * @param string|null $groupId 组ID。
-    *
-    * @return $this
-    */
-    public function setGroupId($groupId)
-    {
-        $this->container['groupId'] = $groupId;
-        return $this;
-    }
-
-    /**
-    * Gets groupName
-    *  组名。
-    *
-    * @return string|null
-    */
-    public function getGroupName()
-    {
-        return $this->container['groupName'];
-    }
-
-    /**
-    * Sets groupName
-    *
-    * @param string|null $groupName 组名。
-    *
-    * @return $this
-    */
-    public function setGroupName($groupName)
-    {
-        $this->container['groupName'] = $groupName;
         return $this;
     }
 

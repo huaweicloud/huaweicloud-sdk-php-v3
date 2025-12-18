@@ -21,22 +21,26 @@ class ShowModifyHistoryResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * histories  实例参数的修改历史列表
+    * histories  实例参数的修改历史列表。
+    * totalCount  **参数解释：** 参数修改历史记录总条数。 **约束限制：** 默认返回参数历史修改记录总条数。若为参数名搜索，返回符合要求的记录总条数。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'histories' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\ConfigurationHistoryRsp[]'
+            'histories' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\ConfigurationHistoryRsp[]',
+            'totalCount' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * histories  实例参数的修改历史列表
+    * histories  实例参数的修改历史列表。
+    * totalCount  **参数解释：** 参数修改历史记录总条数。 **约束限制：** 默认返回参数历史修改记录总条数。若为参数名搜索，返回符合要求的记录总条数。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'histories' => null
+        'histories' => null,
+        'totalCount' => null
     ];
 
     /**
@@ -62,32 +66,38 @@ class ShowModifyHistoryResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * histories  实例参数的修改历史列表
+    * histories  实例参数的修改历史列表。
+    * totalCount  **参数解释：** 参数修改历史记录总条数。 **约束限制：** 默认返回参数历史修改记录总条数。若为参数名搜索，返回符合要求的记录总条数。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'histories' => 'histories'
+            'histories' => 'histories',
+            'totalCount' => 'total_count'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * histories  实例参数的修改历史列表
+    * histories  实例参数的修改历史列表。
+    * totalCount  **参数解释：** 参数修改历史记录总条数。 **约束限制：** 默认返回参数历史修改记录总条数。若为参数名搜索，返回符合要求的记录总条数。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'histories' => 'setHistories'
+            'histories' => 'setHistories',
+            'totalCount' => 'setTotalCount'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * histories  实例参数的修改历史列表
+    * histories  实例参数的修改历史列表。
+    * totalCount  **参数解释：** 参数修改历史记录总条数。 **约束限制：** 默认返回参数历史修改记录总条数。若为参数名搜索，返回符合要求的记录总条数。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'histories' => 'getHistories'
+            'histories' => 'getHistories',
+            'totalCount' => 'getTotalCount'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ShowModifyHistoryResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['histories'] = isset($data['histories']) ? $data['histories'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
     }
 
     /**
@@ -175,7 +186,7 @@ class ShowModifyHistoryResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets histories
-    *  实例参数的修改历史列表
+    *  实例参数的修改历史列表。
     *
     * @return \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\ConfigurationHistoryRsp[]|null
     */
@@ -187,13 +198,37 @@ class ShowModifyHistoryResponse implements ModelInterface, ArrayAccess
     /**
     * Sets histories
     *
-    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\ConfigurationHistoryRsp[]|null $histories 实例参数的修改历史列表
+    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\ConfigurationHistoryRsp[]|null $histories 实例参数的修改历史列表。
     *
     * @return $this
     */
     public function setHistories($histories)
     {
         $this->container['histories'] = $histories;
+        return $this;
+    }
+
+    /**
+    * Gets totalCount
+    *  **参数解释：** 参数修改历史记录总条数。 **约束限制：** 默认返回参数历史修改记录总条数。若为参数名搜索，返回符合要求的记录总条数。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getTotalCount()
+    {
+        return $this->container['totalCount'];
+    }
+
+    /**
+    * Sets totalCount
+    *
+    * @param int|null $totalCount **参数解释：** 参数修改历史记录总条数。 **约束限制：** 默认返回参数历史修改记录总条数。若为参数名搜索，返回符合要求的记录总条数。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setTotalCount($totalCount)
+    {
+        $this->container['totalCount'] = $totalCount;
         return $this;
     }
 

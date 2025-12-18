@@ -224,6 +224,71 @@ class CceClient extends Client
     }
 
     /**
+     * 批量创建插件检查任务
+     *
+     * 该API用于在指定集群下批量创建插件检查任务。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreateAddonPrecheck($request)
+    {
+        return $this->batchCreateAddonPrecheckWithHttpInfo($request);
+    }
+
+    public function batchCreateAddonPrecheckWithHttpInfo($request)
+    {
+        $resourcePath = '/api/v3/projects/{project_id}/clusters/{cluster_id}/addons/precheck';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\BatchCreateAddonPrecheckResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\BatchCreateAddonPrecheckRequest');
+    }
+
+    /**
      * 批量添加指定集群的资源标签
      *
      * 该API用于批量添加指定集群的资源标签。
@@ -1501,11 +1566,11 @@ class CceClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 []
             );
         }
@@ -2154,6 +2219,68 @@ class CceClient extends Client
     }
 
     /**
+     * 获取集群LongAKSK配置
+     *
+     * 该API用于获取集群longaksk的配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function getClusterLongAkskConfig($request)
+    {
+        return $this->getClusterLongAkskConfigWithHttpInfo($request);
+    }
+
+    public function getClusterLongAkskConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/api/v3/projects/{project_id}/clusters/{cluster_id}/longaksk/config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\GetClusterLongAkskConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\GetClusterLongAkskConfigRequest');
+    }
+
+    /**
      * 获取集群配额
      *
      * 该API用于获取集群配额
@@ -2334,6 +2461,65 @@ class CceClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cce\V3\Model\GetLabelsResponse',
             $requestType='\HuaweiCloud\SDK\Cce\V3\Model\GetLabelsRequest');
+    }
+
+    /**
+     * 获取项目LongAKSK配置
+     *
+     * 该API用于获取项目LongAKSK的配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function getLongAkskConfig($request)
+    {
+        return $this->getLongAkskConfigWithHttpInfo($request);
+    }
+
+    public function getLongAkskConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/api/v3/projects/{project_id}/longaksk/config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\GetLongAkskConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\GetLongAkskConfigRequest');
     }
 
     /**
@@ -3677,6 +3863,75 @@ class CceClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cce\V3\Model\MigrateNodeResponse',
             $requestType='\HuaweiCloud\SDK\Cce\V3\Model\MigrateNodeRequest');
+    }
+
+    /**
+     * 节点迁移到自定义节点池。
+     *
+     * 该API用于将节点迁移到自定义节点池，仅default节点池下节点支持迁移。迁移过程节点无重置无重启，原节点密码将保留。
+     * &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function migrateToNodePool($request)
+    {
+        return $this->migrateToNodePoolWithHttpInfo($request);
+    }
+
+    public function migrateToNodePoolWithHttpInfo($request)
+    {
+        $resourcePath = '/api/v3/projects/{project_id}/clusters/{cluster_id}/nodepools/{nodepool_id}/nodes/migrate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['nodepoolId'] !== null) {
+            $pathParams['nodepool_id'] = $localVarParams['nodepoolId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\MigrateToNodePoolResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\MigrateToNodePoolRequest');
     }
 
     /**
@@ -5733,11 +5988,11 @@ class CceClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'text/plain; charset=utf-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'text/plain; charset=utf-8'],
                 []
             );
         }
@@ -6222,6 +6477,133 @@ class CceClient extends Client
     }
 
     /**
+     * 更新集群LongAKSK配置
+     *
+     * 该API用于更新集群LongAKSK的配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateClusterLongAkskConfig($request)
+    {
+        return $this->updateClusterLongAkskConfigWithHttpInfo($request);
+    }
+
+    public function updateClusterLongAkskConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/api/v3/projects/{project_id}/clusters/{cluster_id}/longaksk/config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\UpdateClusterLongAkskConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\UpdateClusterLongAkskConfigRequest');
+    }
+
+    /**
+     * 更新项目LongAKSK配置
+     *
+     * 该API用于更新项目longaksk的配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateLongAkskConfig($request)
+    {
+        return $this->updateLongAkskConfigWithHttpInfo($request);
+    }
+
+    public function updateLongAkskConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/api/v3/projects/{project_id}/longaksk/config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\UpdateLongAkskConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\UpdateLongAkskConfigRequest');
+    }
+
+    /**
      * 更新指定的节点
      *
      * 该API用于更新指定的节点。
@@ -6645,6 +7027,7 @@ class CceClient extends Client
      * 同步节点池
      *
      * 该API用于同步节点池中已有节点的配置
+     * &gt; 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6683,11 +7066,11 @@ class CceClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                [],
                 ['application/json']
             );
         }
@@ -9153,6 +9536,71 @@ class CceClient extends Client
     }
 
     /**
+     * 查询集群日志配置信息
+     *
+     * 获取集群组件上报的LTS的配置信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAutopilotClusterConfig($request)
+    {
+        return $this->showAutopilotClusterConfigWithHttpInfo($request);
+    }
+
+    public function showAutopilotClusterConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/autopilot/v3/projects/{project_id}/cluster/{cluster_id}/log-configs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotClusterConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotClusterConfigRequest');
+    }
+
+    /**
      * 获取集群访问的地址
      *
      * 该API用于通过集群ID获取集群访问的地址，包括PrivateIP(HA集群返回VIP)与PublicIP
@@ -9275,6 +9723,66 @@ class CceClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotClusterUpgradeInfoResponse',
             $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotClusterUpgradeInfoRequest');
+    }
+
+    /**
+     * 查询特性开关状态
+     *
+     * 该API用于查询特性开关状态
+     * &gt; 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAutopilotFeatureGates($request)
+    {
+        return $this->showAutopilotFeatureGatesWithHttpInfo($request);
+    }
+
+    public function showAutopilotFeatureGatesWithHttpInfo($request)
+    {
+        $resourcePath = '/autopilot/v3.1/feature-gates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotFeatureGatesResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotFeatureGatesRequest');
     }
 
     /**
@@ -10528,6 +11036,189 @@ class CceClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cce\V3\Model\UploadAutopilotChartResponse',
             $requestType='\HuaweiCloud\SDK\Cce\V3\Model\UploadAutopilotChartRequest');
+    }
+
+    /**
+     * 删除Job
+     *
+     * 该API用于删除指定项目下的Job。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteAutopilotJob($request)
+    {
+        return $this->deleteAutopilotJobWithHttpInfo($request);
+    }
+
+    public function deleteAutopilotJobWithHttpInfo($request)
+    {
+        $resourcePath = '/autopilot/v2/projects/{project_id}/jobs/{job_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\DeleteAutopilotJobResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\DeleteAutopilotJobRequest');
+    }
+
+    /**
+     * 获取Job详情
+     *
+     * 该API用于获取指定项目下的Job详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function getAutopilotOneJob($request)
+    {
+        return $this->getAutopilotOneJobWithHttpInfo($request);
+    }
+
+    public function getAutopilotOneJobWithHttpInfo($request)
+    {
+        $resourcePath = '/autopilot/v2/projects/{project_id}/jobs/{job_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\GetAutopilotOneJobResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\GetAutopilotOneJobRequest');
+    }
+
+    /**
+     * 获取Job列表
+     *
+     * 该API用于获取指定项目下的所有jobs。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAutopilotJobs($request)
+    {
+        return $this->listAutopilotJobsWithHttpInfo($request);
+    }
+
+    public function listAutopilotJobsWithHttpInfo($request)
+    {
+        $resourcePath = '/autopilot/v2/projects/{project_id}/jobs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotJobsResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotJobsRequest');
     }
 
     protected function callApi(

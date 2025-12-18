@@ -21,21 +21,25 @@ class InPlaceRollingUpdate implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * userDefinedStep  节点升级步长，取值范围为[1, 40]，建议取值20
+    * scope  **参数解释：** 节点升级批次作用域 **约束限制：** 不涉及 **取值范围：** \"Cluster\"：节点升级批次配置应用到整个集群，整个升级过程不重置升级批次 \"NodePool\"：节点升级批次配置应用到节点池，升级每个节点池都会重置升级批次 **默认取值：** \"Cluster\"
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'userDefinedStep' => 'int'
+            'userDefinedStep' => 'int',
+            'scope' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * userDefinedStep  节点升级步长，取值范围为[1, 40]，建议取值20
+    * scope  **参数解释：** 节点升级批次作用域 **约束限制：** 不涉及 **取值范围：** \"Cluster\"：节点升级批次配置应用到整个集群，整个升级过程不重置升级批次 \"NodePool\"：节点升级批次配置应用到节点池，升级每个节点池都会重置升级批次 **默认取值：** \"Cluster\"
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'userDefinedStep' => null
+        'userDefinedStep' => null,
+        'scope' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class InPlaceRollingUpdate implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * userDefinedStep  节点升级步长，取值范围为[1, 40]，建议取值20
+    * scope  **参数解释：** 节点升级批次作用域 **约束限制：** 不涉及 **取值范围：** \"Cluster\"：节点升级批次配置应用到整个集群，整个升级过程不重置升级批次 \"NodePool\"：节点升级批次配置应用到节点池，升级每个节点池都会重置升级批次 **默认取值：** \"Cluster\"
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'userDefinedStep' => 'userDefinedStep'
+            'userDefinedStep' => 'userDefinedStep',
+            'scope' => 'scope'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * userDefinedStep  节点升级步长，取值范围为[1, 40]，建议取值20
+    * scope  **参数解释：** 节点升级批次作用域 **约束限制：** 不涉及 **取值范围：** \"Cluster\"：节点升级批次配置应用到整个集群，整个升级过程不重置升级批次 \"NodePool\"：节点升级批次配置应用到节点池，升级每个节点池都会重置升级批次 **默认取值：** \"Cluster\"
     *
     * @var string[]
     */
     protected static $setters = [
-            'userDefinedStep' => 'setUserDefinedStep'
+            'userDefinedStep' => 'setUserDefinedStep',
+            'scope' => 'setScope'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * userDefinedStep  节点升级步长，取值范围为[1, 40]，建议取值20
+    * scope  **参数解释：** 节点升级批次作用域 **约束限制：** 不涉及 **取值范围：** \"Cluster\"：节点升级批次配置应用到整个集群，整个升级过程不重置升级批次 \"NodePool\"：节点升级批次配置应用到节点池，升级每个节点池都会重置升级批次 **默认取值：** \"Cluster\"
     *
     * @var string[]
     */
     protected static $getters = [
-            'userDefinedStep' => 'getUserDefinedStep'
+            'userDefinedStep' => 'getUserDefinedStep',
+            'scope' => 'getScope'
     ];
 
     /**
@@ -148,6 +158,7 @@ class InPlaceRollingUpdate implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['userDefinedStep'] = isset($data['userDefinedStep']) ? $data['userDefinedStep'] : null;
+        $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
     }
 
     /**
@@ -193,6 +204,30 @@ class InPlaceRollingUpdate implements ModelInterface, ArrayAccess
     public function setUserDefinedStep($userDefinedStep)
     {
         $this->container['userDefinedStep'] = $userDefinedStep;
+        return $this;
+    }
+
+    /**
+    * Gets scope
+    *  **参数解释：** 节点升级批次作用域 **约束限制：** 不涉及 **取值范围：** \"Cluster\"：节点升级批次配置应用到整个集群，整个升级过程不重置升级批次 \"NodePool\"：节点升级批次配置应用到节点池，升级每个节点池都会重置升级批次 **默认取值：** \"Cluster\"
+    *
+    * @return string|null
+    */
+    public function getScope()
+    {
+        return $this->container['scope'];
+    }
+
+    /**
+    * Sets scope
+    *
+    * @param string|null $scope **参数解释：** 节点升级批次作用域 **约束限制：** 不涉及 **取值范围：** \"Cluster\"：节点升级批次配置应用到整个集群，整个升级过程不重置升级批次 \"NodePool\"：节点升级批次配置应用到节点池，升级每个节点池都会重置升级批次 **默认取值：** \"Cluster\"
+    *
+    * @return $this
+    */
+    public function setScope($scope)
+    {
+        $this->container['scope'] = $scope;
         return $this;
     }
 

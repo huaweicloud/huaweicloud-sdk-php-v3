@@ -20,46 +20,46 @@ class NodePoolUpgradeSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nodePoolId  节点池id。
-    * nodeIDs  nodeIDs
+    * maxUnavailable  **参数解释**： 每批最大同步节点。节点升级时，允许节点不可用的最大数量。节点重置方式进行同步时节点将不可用，请合理设置该参数，尽量避免出现集群节点不可用数量过多导致Pod无法调度的情况。 **约束限制**： 不涉及 **取值范围**： 取值范围[1-20] **默认取值**： 不涉及
     * force  Pod无法驱逐时，是否强制重置。
-    * nodeTemplate  nodeTemplate
-    * maxUnavailable  maxUnavailable
     * retryTimes  retryTimes
     * skippedNodes  skippedNodes
+    * nodeIDs  **参数解释**： 本次操作同步的节点池中选择的节点ID列表，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodePoolId  **参数解释**： 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodeTemplate  nodeTemplate
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'nodePoolId' => 'string',
-            'nodeIDs' => 'string[]',
-            'force' => 'bool',
-            'nodeTemplate' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeTemplate',
             'maxUnavailable' => 'int',
+            'force' => 'bool',
             'retryTimes' => 'int',
-            'skippedNodes' => 'string[]'
+            'skippedNodes' => 'string[]',
+            'nodeIDs' => 'string[]',
+            'nodePoolId' => 'string',
+            'nodeTemplate' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeTemplate'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nodePoolId  节点池id。
-    * nodeIDs  nodeIDs
+    * maxUnavailable  **参数解释**： 每批最大同步节点。节点升级时，允许节点不可用的最大数量。节点重置方式进行同步时节点将不可用，请合理设置该参数，尽量避免出现集群节点不可用数量过多导致Pod无法调度的情况。 **约束限制**： 不涉及 **取值范围**： 取值范围[1-20] **默认取值**： 不涉及
     * force  Pod无法驱逐时，是否强制重置。
-    * nodeTemplate  nodeTemplate
-    * maxUnavailable  maxUnavailable
     * retryTimes  retryTimes
     * skippedNodes  skippedNodes
+    * nodeIDs  **参数解释**： 本次操作同步的节点池中选择的节点ID列表，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodePoolId  **参数解释**： 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodeTemplate  nodeTemplate
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'nodePoolId' => null,
-        'nodeIDs' => null,
-        'force' => null,
-        'nodeTemplate' => null,
         'maxUnavailable' => null,
+        'force' => null,
         'retryTimes' => null,
-        'skippedNodes' => null
+        'skippedNodes' => null,
+        'nodeIDs' => null,
+        'nodePoolId' => null,
+        'nodeTemplate' => null
     ];
 
     /**
@@ -85,68 +85,68 @@ class NodePoolUpgradeSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nodePoolId  节点池id。
-    * nodeIDs  nodeIDs
+    * maxUnavailable  **参数解释**： 每批最大同步节点。节点升级时，允许节点不可用的最大数量。节点重置方式进行同步时节点将不可用，请合理设置该参数，尽量避免出现集群节点不可用数量过多导致Pod无法调度的情况。 **约束限制**： 不涉及 **取值范围**： 取值范围[1-20] **默认取值**： 不涉及
     * force  Pod无法驱逐时，是否强制重置。
-    * nodeTemplate  nodeTemplate
-    * maxUnavailable  maxUnavailable
     * retryTimes  retryTimes
     * skippedNodes  skippedNodes
+    * nodeIDs  **参数解释**： 本次操作同步的节点池中选择的节点ID列表，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodePoolId  **参数解释**： 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodeTemplate  nodeTemplate
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'nodePoolId' => 'nodePoolID',
-            'nodeIDs' => 'nodeIDs',
-            'force' => 'force',
-            'nodeTemplate' => 'nodeTemplate',
             'maxUnavailable' => 'maxUnavailable',
+            'force' => 'force',
             'retryTimes' => 'retryTimes',
-            'skippedNodes' => 'skippedNodes'
+            'skippedNodes' => 'skippedNodes',
+            'nodeIDs' => 'nodeIDs',
+            'nodePoolId' => 'nodePoolID',
+            'nodeTemplate' => 'nodeTemplate'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nodePoolId  节点池id。
-    * nodeIDs  nodeIDs
+    * maxUnavailable  **参数解释**： 每批最大同步节点。节点升级时，允许节点不可用的最大数量。节点重置方式进行同步时节点将不可用，请合理设置该参数，尽量避免出现集群节点不可用数量过多导致Pod无法调度的情况。 **约束限制**： 不涉及 **取值范围**： 取值范围[1-20] **默认取值**： 不涉及
     * force  Pod无法驱逐时，是否强制重置。
-    * nodeTemplate  nodeTemplate
-    * maxUnavailable  maxUnavailable
     * retryTimes  retryTimes
     * skippedNodes  skippedNodes
+    * nodeIDs  **参数解释**： 本次操作同步的节点池中选择的节点ID列表，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodePoolId  **参数解释**： 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodeTemplate  nodeTemplate
     *
     * @var string[]
     */
     protected static $setters = [
-            'nodePoolId' => 'setNodePoolId',
-            'nodeIDs' => 'setNodeIDs',
-            'force' => 'setForce',
-            'nodeTemplate' => 'setNodeTemplate',
             'maxUnavailable' => 'setMaxUnavailable',
+            'force' => 'setForce',
             'retryTimes' => 'setRetryTimes',
-            'skippedNodes' => 'setSkippedNodes'
+            'skippedNodes' => 'setSkippedNodes',
+            'nodeIDs' => 'setNodeIDs',
+            'nodePoolId' => 'setNodePoolId',
+            'nodeTemplate' => 'setNodeTemplate'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nodePoolId  节点池id。
-    * nodeIDs  nodeIDs
+    * maxUnavailable  **参数解释**： 每批最大同步节点。节点升级时，允许节点不可用的最大数量。节点重置方式进行同步时节点将不可用，请合理设置该参数，尽量避免出现集群节点不可用数量过多导致Pod无法调度的情况。 **约束限制**： 不涉及 **取值范围**： 取值范围[1-20] **默认取值**： 不涉及
     * force  Pod无法驱逐时，是否强制重置。
-    * nodeTemplate  nodeTemplate
-    * maxUnavailable  maxUnavailable
     * retryTimes  retryTimes
     * skippedNodes  skippedNodes
+    * nodeIDs  **参数解释**： 本次操作同步的节点池中选择的节点ID列表，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodePoolId  **参数解释**： 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodeTemplate  nodeTemplate
     *
     * @var string[]
     */
     protected static $getters = [
-            'nodePoolId' => 'getNodePoolId',
-            'nodeIDs' => 'getNodeIDs',
-            'force' => 'getForce',
-            'nodeTemplate' => 'getNodeTemplate',
             'maxUnavailable' => 'getMaxUnavailable',
+            'force' => 'getForce',
             'retryTimes' => 'getRetryTimes',
-            'skippedNodes' => 'getSkippedNodes'
+            'skippedNodes' => 'getSkippedNodes',
+            'nodeIDs' => 'getNodeIDs',
+            'nodePoolId' => 'getNodePoolId',
+            'nodeTemplate' => 'getNodeTemplate'
     ];
 
     /**
@@ -207,13 +207,13 @@ class NodePoolUpgradeSpec implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['nodePoolId'] = isset($data['nodePoolId']) ? $data['nodePoolId'] : null;
-        $this->container['nodeIDs'] = isset($data['nodeIDs']) ? $data['nodeIDs'] : null;
-        $this->container['force'] = isset($data['force']) ? $data['force'] : null;
-        $this->container['nodeTemplate'] = isset($data['nodeTemplate']) ? $data['nodeTemplate'] : null;
         $this->container['maxUnavailable'] = isset($data['maxUnavailable']) ? $data['maxUnavailable'] : null;
+        $this->container['force'] = isset($data['force']) ? $data['force'] : null;
         $this->container['retryTimes'] = isset($data['retryTimes']) ? $data['retryTimes'] : null;
         $this->container['skippedNodes'] = isset($data['skippedNodes']) ? $data['skippedNodes'] : null;
+        $this->container['nodeIDs'] = isset($data['nodeIDs']) ? $data['nodeIDs'] : null;
+        $this->container['nodePoolId'] = isset($data['nodePoolId']) ? $data['nodePoolId'] : null;
+        $this->container['nodeTemplate'] = isset($data['nodeTemplate']) ? $data['nodeTemplate'] : null;
     }
 
     /**
@@ -224,6 +224,12 @@ class NodePoolUpgradeSpec implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['maxUnavailable']) && ($this->container['maxUnavailable'] > 20)) {
+                $invalidProperties[] = "invalid value for 'maxUnavailable', must be smaller than or equal to 20.";
+            }
+            if (!is_null($this->container['maxUnavailable']) && ($this->container['maxUnavailable'] < 1)) {
+                $invalidProperties[] = "invalid value for 'maxUnavailable', must be bigger than or equal to 1.";
+            }
         if ($this->container['nodePoolId'] === null) {
             $invalidProperties[] = "'nodePoolId' can't be null";
         }
@@ -242,50 +248,26 @@ class NodePoolUpgradeSpec implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets nodePoolId
-    *  节点池id。
+    * Gets maxUnavailable
+    *  **参数解释**： 每批最大同步节点。节点升级时，允许节点不可用的最大数量。节点重置方式进行同步时节点将不可用，请合理设置该参数，尽量避免出现集群节点不可用数量过多导致Pod无法调度的情况。 **约束限制**： 不涉及 **取值范围**： 取值范围[1-20] **默认取值**： 不涉及
     *
-    * @return string
+    * @return int|null
     */
-    public function getNodePoolId()
+    public function getMaxUnavailable()
     {
-        return $this->container['nodePoolId'];
+        return $this->container['maxUnavailable'];
     }
 
     /**
-    * Sets nodePoolId
+    * Sets maxUnavailable
     *
-    * @param string $nodePoolId 节点池id。
+    * @param int|null $maxUnavailable **参数解释**： 每批最大同步节点。节点升级时，允许节点不可用的最大数量。节点重置方式进行同步时节点将不可用，请合理设置该参数，尽量避免出现集群节点不可用数量过多导致Pod无法调度的情况。 **约束限制**： 不涉及 **取值范围**： 取值范围[1-20] **默认取值**： 不涉及
     *
     * @return $this
     */
-    public function setNodePoolId($nodePoolId)
+    public function setMaxUnavailable($maxUnavailable)
     {
-        $this->container['nodePoolId'] = $nodePoolId;
-        return $this;
-    }
-
-    /**
-    * Gets nodeIDs
-    *  nodeIDs
-    *
-    * @return string[]|null
-    */
-    public function getNodeIDs()
-    {
-        return $this->container['nodeIDs'];
-    }
-
-    /**
-    * Sets nodeIDs
-    *
-    * @param string[]|null $nodeIDs nodeIDs
-    *
-    * @return $this
-    */
-    public function setNodeIDs($nodeIDs)
-    {
-        $this->container['nodeIDs'] = $nodeIDs;
+        $this->container['maxUnavailable'] = $maxUnavailable;
         return $this;
     }
 
@@ -310,54 +292,6 @@ class NodePoolUpgradeSpec implements ModelInterface, ArrayAccess
     public function setForce($force)
     {
         $this->container['force'] = $force;
-        return $this;
-    }
-
-    /**
-    * Gets nodeTemplate
-    *  nodeTemplate
-    *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodeTemplate|null
-    */
-    public function getNodeTemplate()
-    {
-        return $this->container['nodeTemplate'];
-    }
-
-    /**
-    * Sets nodeTemplate
-    *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodeTemplate|null $nodeTemplate nodeTemplate
-    *
-    * @return $this
-    */
-    public function setNodeTemplate($nodeTemplate)
-    {
-        $this->container['nodeTemplate'] = $nodeTemplate;
-        return $this;
-    }
-
-    /**
-    * Gets maxUnavailable
-    *  maxUnavailable
-    *
-    * @return int|null
-    */
-    public function getMaxUnavailable()
-    {
-        return $this->container['maxUnavailable'];
-    }
-
-    /**
-    * Sets maxUnavailable
-    *
-    * @param int|null $maxUnavailable maxUnavailable
-    *
-    * @return $this
-    */
-    public function setMaxUnavailable($maxUnavailable)
-    {
-        $this->container['maxUnavailable'] = $maxUnavailable;
         return $this;
     }
 
@@ -406,6 +340,78 @@ class NodePoolUpgradeSpec implements ModelInterface, ArrayAccess
     public function setSkippedNodes($skippedNodes)
     {
         $this->container['skippedNodes'] = $skippedNodes;
+        return $this;
+    }
+
+    /**
+    * Gets nodeIDs
+    *  **参数解释**： 本次操作同步的节点池中选择的节点ID列表，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *
+    * @return string[]|null
+    */
+    public function getNodeIDs()
+    {
+        return $this->container['nodeIDs'];
+    }
+
+    /**
+    * Sets nodeIDs
+    *
+    * @param string[]|null $nodeIDs **参数解释**： 本次操作同步的节点池中选择的节点ID列表，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setNodeIDs($nodeIDs)
+    {
+        $this->container['nodeIDs'] = $nodeIDs;
+        return $this;
+    }
+
+    /**
+    * Gets nodePoolId
+    *  **参数解释**： 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *
+    * @return string
+    */
+    public function getNodePoolId()
+    {
+        return $this->container['nodePoolId'];
+    }
+
+    /**
+    * Sets nodePoolId
+    *
+    * @param string $nodePoolId **参数解释**： 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setNodePoolId($nodePoolId)
+    {
+        $this->container['nodePoolId'] = $nodePoolId;
+        return $this;
+    }
+
+    /**
+    * Gets nodeTemplate
+    *  nodeTemplate
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodeTemplate|null
+    */
+    public function getNodeTemplate()
+    {
+        return $this->container['nodeTemplate'];
+    }
+
+    /**
+    * Sets nodeTemplate
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodeTemplate|null $nodeTemplate nodeTemplate
+    *
+    * @return $this
+    */
+    public function setNodeTemplate($nodeTemplate)
+    {
+        $this->container['nodeTemplate'] = $nodeTemplate;
         return $this;
     }
 

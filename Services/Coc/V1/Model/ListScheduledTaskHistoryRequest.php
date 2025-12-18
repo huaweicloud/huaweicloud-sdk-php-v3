@@ -371,8 +371,8 @@ class ListScheduledTaskHistoryRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 0)) {
                 $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 1000)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 1000.";
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2147483647.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";

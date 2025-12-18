@@ -1491,6 +1491,24 @@ class BmsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['availabilityZone'] !== null) {
+            $queryParams['availability_zone'] = $localVarParams['availabilityZone'];
+        }
+        if ($localVarParams['flavorId'] !== null) {
+            $queryParams['flavor_id'] = $localVarParams['flavorId'];
+        }
+        if ($localVarParams['decProjectId'] !== null) {
+            $queryParams['dec_project_id'] = $localVarParams['decProjectId'];
+        }
+        if ($localVarParams['checkLimit'] !== null) {
+            $queryParams['check_limit'] = $localVarParams['checkLimit'];
+        }
+        if ($localVarParams['expectation'] !== null) {
+            $queryParams['expectation'] = $localVarParams['expectation'];
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $queryParams['resource_type'] = $localVarParams['resourceType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

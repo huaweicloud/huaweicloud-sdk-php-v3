@@ -213,6 +213,68 @@ class CceClient extends Client
     }
 
     /**
+     * 查询套餐包列表
+     *
+     * 查询套餐包列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPackageProducts($request)
+    {
+        return $this->listPackageProductsWithHttpInfo($request);
+    }
+
+    public function listPackageProductsWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/package-products';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['locale'] !== null) {
+            $queryParams['locale'] = $localVarParams['locale'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V5\Model\ListPackageProductsResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V5\Model\ListPackageProductsRequest');
+    }
+
+    /**
      * 查询镜像缓存详情
      *
      * 查询镜像缓存详情
@@ -272,6 +334,68 @@ class CceClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cce\V5\Model\ShowImageCacheResponse',
             $requestType='\HuaweiCloud\SDK\Cce\V5\Model\ShowImageCacheRequest');
+    }
+
+    /**
+     * 订购套餐包
+     *
+     * 订购套餐包
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function subscribePackageProducts($request)
+    {
+        return $this->subscribePackageProductsWithHttpInfo($request);
+    }
+
+    public function subscribePackageProductsWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/package-products/subscribe';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V5\Model\SubscribePackageProductsResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V5\Model\SubscribePackageProductsRequest');
     }
 
     protected function callApi(

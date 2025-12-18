@@ -23,7 +23,6 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     * stepLength  节点增长步长。
     * maxQueuePerBroker  每个Broker的最大队列。
     * maxConnectionPerBroker  每个Broker的最大连接数。
-    * maxPartitionPerBroker  每个Broker的最大分区数。
     * maxBroker  Broker的最大个数。
     * maxStoragePerNode  每个节点的最大存储。单位为GB。
     * maxConsumerPerBroker  每个Broker的最大消费者数。
@@ -39,7 +38,6 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
             'stepLength' => 'string',
             'maxQueuePerBroker' => 'string',
             'maxConnectionPerBroker' => 'string',
-            'maxPartitionPerBroker' => 'string',
             'maxBroker' => 'string',
             'maxStoragePerNode' => 'string',
             'maxConsumerPerBroker' => 'string',
@@ -55,7 +53,6 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     * stepLength  节点增长步长。
     * maxQueuePerBroker  每个Broker的最大队列。
     * maxConnectionPerBroker  每个Broker的最大连接数。
-    * maxPartitionPerBroker  每个Broker的最大分区数。
     * maxBroker  Broker的最大个数。
     * maxStoragePerNode  每个节点的最大存储。单位为GB。
     * maxConsumerPerBroker  每个Broker的最大消费者数。
@@ -71,7 +68,6 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
         'stepLength' => null,
         'maxQueuePerBroker' => null,
         'maxConnectionPerBroker' => null,
-        'maxPartitionPerBroker' => null,
         'maxBroker' => null,
         'maxStoragePerNode' => null,
         'maxConsumerPerBroker' => null,
@@ -108,7 +104,6 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     * stepLength  节点增长步长。
     * maxQueuePerBroker  每个Broker的最大队列。
     * maxConnectionPerBroker  每个Broker的最大连接数。
-    * maxPartitionPerBroker  每个Broker的最大分区数。
     * maxBroker  Broker的最大个数。
     * maxStoragePerNode  每个节点的最大存储。单位为GB。
     * maxConsumerPerBroker  每个Broker的最大消费者数。
@@ -124,7 +119,6 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
             'stepLength' => 'step_length',
             'maxQueuePerBroker' => 'max_queue_per_broker',
             'maxConnectionPerBroker' => 'max_connection_per_broker',
-            'maxPartitionPerBroker' => 'max_partition_per_broker',
             'maxBroker' => 'max_broker',
             'maxStoragePerNode' => 'max_storage_per_node',
             'maxConsumerPerBroker' => 'max_consumer_per_broker',
@@ -140,7 +134,6 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     * stepLength  节点增长步长。
     * maxQueuePerBroker  每个Broker的最大队列。
     * maxConnectionPerBroker  每个Broker的最大连接数。
-    * maxPartitionPerBroker  每个Broker的最大分区数。
     * maxBroker  Broker的最大个数。
     * maxStoragePerNode  每个节点的最大存储。单位为GB。
     * maxConsumerPerBroker  每个Broker的最大消费者数。
@@ -156,7 +149,6 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
             'stepLength' => 'setStepLength',
             'maxQueuePerBroker' => 'setMaxQueuePerBroker',
             'maxConnectionPerBroker' => 'setMaxConnectionPerBroker',
-            'maxPartitionPerBroker' => 'setMaxPartitionPerBroker',
             'maxBroker' => 'setMaxBroker',
             'maxStoragePerNode' => 'setMaxStoragePerNode',
             'maxConsumerPerBroker' => 'setMaxConsumerPerBroker',
@@ -172,7 +164,6 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     * stepLength  节点增长步长。
     * maxQueuePerBroker  每个Broker的最大队列。
     * maxConnectionPerBroker  每个Broker的最大连接数。
-    * maxPartitionPerBroker  每个Broker的最大分区数。
     * maxBroker  Broker的最大个数。
     * maxStoragePerNode  每个节点的最大存储。单位为GB。
     * maxConsumerPerBroker  每个Broker的最大消费者数。
@@ -188,7 +179,6 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
             'stepLength' => 'getStepLength',
             'maxQueuePerBroker' => 'getMaxQueuePerBroker',
             'maxConnectionPerBroker' => 'getMaxConnectionPerBroker',
-            'maxPartitionPerBroker' => 'getMaxPartitionPerBroker',
             'maxBroker' => 'getMaxBroker',
             'maxStoragePerNode' => 'getMaxStoragePerNode',
             'maxConsumerPerBroker' => 'getMaxConsumerPerBroker',
@@ -260,7 +250,6 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
         $this->container['stepLength'] = isset($data['stepLength']) ? $data['stepLength'] : null;
         $this->container['maxQueuePerBroker'] = isset($data['maxQueuePerBroker']) ? $data['maxQueuePerBroker'] : null;
         $this->container['maxConnectionPerBroker'] = isset($data['maxConnectionPerBroker']) ? $data['maxConnectionPerBroker'] : null;
-        $this->container['maxPartitionPerBroker'] = isset($data['maxPartitionPerBroker']) ? $data['maxPartitionPerBroker'] : null;
         $this->container['maxBroker'] = isset($data['maxBroker']) ? $data['maxBroker'] : null;
         $this->container['maxStoragePerNode'] = isset($data['maxStoragePerNode']) ? $data['maxStoragePerNode'] : null;
         $this->container['maxConsumerPerBroker'] = isset($data['maxConsumerPerBroker']) ? $data['maxConsumerPerBroker'] : null;
@@ -362,30 +351,6 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     public function setMaxConnectionPerBroker($maxConnectionPerBroker)
     {
         $this->container['maxConnectionPerBroker'] = $maxConnectionPerBroker;
-        return $this;
-    }
-
-    /**
-    * Gets maxPartitionPerBroker
-    *  每个Broker的最大分区数。
-    *
-    * @return string|null
-    */
-    public function getMaxPartitionPerBroker()
-    {
-        return $this->container['maxPartitionPerBroker'];
-    }
-
-    /**
-    * Sets maxPartitionPerBroker
-    *
-    * @param string|null $maxPartitionPerBroker 每个Broker的最大分区数。
-    *
-    * @return $this
-    */
-    public function setMaxPartitionPerBroker($maxPartitionPerBroker)
-    {
-        $this->container['maxPartitionPerBroker'] = $maxPartitionPerBroker;
         return $this;
     }
 

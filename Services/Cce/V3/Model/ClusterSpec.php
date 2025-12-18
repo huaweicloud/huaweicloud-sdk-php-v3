@@ -35,6 +35,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * eniNetwork  eniNetwork
     * serviceNetwork  serviceNetwork
     * authentication  authentication
+    * publicAccess  publicAccess
     * billingMode  集群的计费方式。 - 0: 按需计费 [- 1: 包周期](tag:hws,hws_hk)  默认为“按需计费”。
     * masters  **参数解释：** 集群控制节点的高级配置，支持指定控制节点的可用区。 **约束限制：** 该参数未配置时将不返回。
     * kubernetesSvcIpRange  服务网段参数，kubernetes clusterIP取值范围，1.11.7版本及以上支持。创建集群时如若未传参，默认为\"10.247.0.0/16\"。该参数废弃中，推荐使用新字段serviceNetwork，包含IPv4服务网段。
@@ -68,6 +69,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'eniNetwork' => '\HuaweiCloud\SDK\Cce\V3\Model\EniNetwork',
             'serviceNetwork' => '\HuaweiCloud\SDK\Cce\V3\Model\ServiceNetwork',
             'authentication' => '\HuaweiCloud\SDK\Cce\V3\Model\Authentication',
+            'publicAccess' => '\HuaweiCloud\SDK\Cce\V3\Model\PublicAccess',
             'billingMode' => 'int',
             'masters' => '\HuaweiCloud\SDK\Cce\V3\Model\MasterSpec[]',
             'kubernetesSvcIpRange' => 'string',
@@ -101,6 +103,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * eniNetwork  eniNetwork
     * serviceNetwork  serviceNetwork
     * authentication  authentication
+    * publicAccess  publicAccess
     * billingMode  集群的计费方式。 - 0: 按需计费 [- 1: 包周期](tag:hws,hws_hk)  默认为“按需计费”。
     * masters  **参数解释：** 集群控制节点的高级配置，支持指定控制节点的可用区。 **约束限制：** 该参数未配置时将不返回。
     * kubernetesSvcIpRange  服务网段参数，kubernetes clusterIP取值范围，1.11.7版本及以上支持。创建集群时如若未传参，默认为\"10.247.0.0/16\"。该参数废弃中，推荐使用新字段serviceNetwork，包含IPv4服务网段。
@@ -134,6 +137,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
         'eniNetwork' => null,
         'serviceNetwork' => null,
         'authentication' => null,
+        'publicAccess' => null,
         'billingMode' => 'int32',
         'masters' => null,
         'kubernetesSvcIpRange' => null,
@@ -188,6 +192,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * eniNetwork  eniNetwork
     * serviceNetwork  serviceNetwork
     * authentication  authentication
+    * publicAccess  publicAccess
     * billingMode  集群的计费方式。 - 0: 按需计费 [- 1: 包周期](tag:hws,hws_hk)  默认为“按需计费”。
     * masters  **参数解释：** 集群控制节点的高级配置，支持指定控制节点的可用区。 **约束限制：** 该参数未配置时将不返回。
     * kubernetesSvcIpRange  服务网段参数，kubernetes clusterIP取值范围，1.11.7版本及以上支持。创建集群时如若未传参，默认为\"10.247.0.0/16\"。该参数废弃中，推荐使用新字段serviceNetwork，包含IPv4服务网段。
@@ -221,6 +226,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'eniNetwork' => 'eniNetwork',
             'serviceNetwork' => 'serviceNetwork',
             'authentication' => 'authentication',
+            'publicAccess' => 'publicAccess',
             'billingMode' => 'billingMode',
             'masters' => 'masters',
             'kubernetesSvcIpRange' => 'kubernetesSvcIpRange',
@@ -254,6 +260,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * eniNetwork  eniNetwork
     * serviceNetwork  serviceNetwork
     * authentication  authentication
+    * publicAccess  publicAccess
     * billingMode  集群的计费方式。 - 0: 按需计费 [- 1: 包周期](tag:hws,hws_hk)  默认为“按需计费”。
     * masters  **参数解释：** 集群控制节点的高级配置，支持指定控制节点的可用区。 **约束限制：** 该参数未配置时将不返回。
     * kubernetesSvcIpRange  服务网段参数，kubernetes clusterIP取值范围，1.11.7版本及以上支持。创建集群时如若未传参，默认为\"10.247.0.0/16\"。该参数废弃中，推荐使用新字段serviceNetwork，包含IPv4服务网段。
@@ -287,6 +294,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'eniNetwork' => 'setEniNetwork',
             'serviceNetwork' => 'setServiceNetwork',
             'authentication' => 'setAuthentication',
+            'publicAccess' => 'setPublicAccess',
             'billingMode' => 'setBillingMode',
             'masters' => 'setMasters',
             'kubernetesSvcIpRange' => 'setKubernetesSvcIpRange',
@@ -320,6 +328,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * eniNetwork  eniNetwork
     * serviceNetwork  serviceNetwork
     * authentication  authentication
+    * publicAccess  publicAccess
     * billingMode  集群的计费方式。 - 0: 按需计费 [- 1: 包周期](tag:hws,hws_hk)  默认为“按需计费”。
     * masters  **参数解释：** 集群控制节点的高级配置，支持指定控制节点的可用区。 **约束限制：** 该参数未配置时将不返回。
     * kubernetesSvcIpRange  服务网段参数，kubernetes clusterIP取值范围，1.11.7版本及以上支持。创建集群时如若未传参，默认为\"10.247.0.0/16\"。该参数废弃中，推荐使用新字段serviceNetwork，包含IPv4服务网段。
@@ -353,6 +362,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'eniNetwork' => 'getEniNetwork',
             'serviceNetwork' => 'getServiceNetwork',
             'authentication' => 'getAuthentication',
+            'publicAccess' => 'getPublicAccess',
             'billingMode' => 'getBillingMode',
             'masters' => 'getMasters',
             'kubernetesSvcIpRange' => 'getKubernetesSvcIpRange',
@@ -487,6 +497,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
         $this->container['eniNetwork'] = isset($data['eniNetwork']) ? $data['eniNetwork'] : null;
         $this->container['serviceNetwork'] = isset($data['serviceNetwork']) ? $data['serviceNetwork'] : null;
         $this->container['authentication'] = isset($data['authentication']) ? $data['authentication'] : null;
+        $this->container['publicAccess'] = isset($data['publicAccess']) ? $data['publicAccess'] : null;
         $this->container['billingMode'] = isset($data['billingMode']) ? $data['billingMode'] : null;
         $this->container['masters'] = isset($data['masters']) ? $data['masters'] : null;
         $this->container['kubernetesSvcIpRange'] = isset($data['kubernetesSvcIpRange']) ? $data['kubernetesSvcIpRange'] : null;
@@ -927,6 +938,30 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     public function setAuthentication($authentication)
     {
         $this->container['authentication'] = $authentication;
+        return $this;
+    }
+
+    /**
+    * Gets publicAccess
+    *  publicAccess
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\PublicAccess|null
+    */
+    public function getPublicAccess()
+    {
+        return $this->container['publicAccess'];
+    }
+
+    /**
+    * Sets publicAccess
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\PublicAccess|null $publicAccess publicAccess
+    *
+    * @return $this
+    */
+    public function setPublicAccess($publicAccess)
+    {
+        $this->container['publicAccess'] = $publicAccess;
         return $this;
     }
 

@@ -21,26 +21,22 @@ class ShowAvailableResourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * availabilityZone  availabilityZone
-    * flavors  flavors
+    * availableResource  availableResource
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'availabilityZone' => 'string',
-            'flavors' => '\HuaweiCloud\SDK\Bms\V1\Model\FlavorResource[]'
+            'availableResource' => '\HuaweiCloud\SDK\Bms\V1\Model\AvailableResourceResp[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * availabilityZone  availabilityZone
-    * flavors  flavors
+    * availableResource  availableResource
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'availabilityZone' => null,
-        'flavors' => null
+        'availableResource' => null
     ];
 
     /**
@@ -66,38 +62,32 @@ class ShowAvailableResourceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * availabilityZone  availabilityZone
-    * flavors  flavors
+    * availableResource  availableResource
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'availabilityZone' => 'availability_zone',
-            'flavors' => 'flavors'
+            'availableResource' => 'available_resource'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * availabilityZone  availabilityZone
-    * flavors  flavors
+    * availableResource  availableResource
     *
     * @var string[]
     */
     protected static $setters = [
-            'availabilityZone' => 'setAvailabilityZone',
-            'flavors' => 'setFlavors'
+            'availableResource' => 'setAvailableResource'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * availabilityZone  availabilityZone
-    * flavors  flavors
+    * availableResource  availableResource
     *
     * @var string[]
     */
     protected static $getters = [
-            'availabilityZone' => 'getAvailabilityZone',
-            'flavors' => 'getFlavors'
+            'availableResource' => 'getAvailableResource'
     ];
 
     /**
@@ -158,8 +148,7 @@ class ShowAvailableResourceResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
-        $this->container['flavors'] = isset($data['flavors']) ? $data['flavors'] : null;
+        $this->container['availableResource'] = isset($data['availableResource']) ? $data['availableResource'] : null;
     }
 
     /**
@@ -185,50 +174,26 @@ class ShowAvailableResourceResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets availabilityZone
-    *  availabilityZone
+    * Gets availableResource
+    *  availableResource
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Bms\V1\Model\AvailableResourceResp[]|null
     */
-    public function getAvailabilityZone()
+    public function getAvailableResource()
     {
-        return $this->container['availabilityZone'];
+        return $this->container['availableResource'];
     }
 
     /**
-    * Sets availabilityZone
+    * Sets availableResource
     *
-    * @param string|null $availabilityZone availabilityZone
+    * @param \HuaweiCloud\SDK\Bms\V1\Model\AvailableResourceResp[]|null $availableResource availableResource
     *
     * @return $this
     */
-    public function setAvailabilityZone($availabilityZone)
+    public function setAvailableResource($availableResource)
     {
-        $this->container['availabilityZone'] = $availabilityZone;
-        return $this;
-    }
-
-    /**
-    * Gets flavors
-    *  flavors
-    *
-    * @return \HuaweiCloud\SDK\Bms\V1\Model\FlavorResource[]|null
-    */
-    public function getFlavors()
-    {
-        return $this->container['flavors'];
-    }
-
-    /**
-    * Sets flavors
-    *
-    * @param \HuaweiCloud\SDK\Bms\V1\Model\FlavorResource[]|null $flavors flavors
-    *
-    * @return $this
-    */
-    public function setFlavors($flavors)
-    {
-        $this->container['flavors'] = $flavors;
+        $this->container['availableResource'] = $availableResource;
         return $this;
     }
 

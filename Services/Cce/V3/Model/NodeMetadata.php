@@ -25,7 +25,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
     * annotations  **参数解释**： CCE自有节点注解，非Kubernetes原生annotations，格式为key/value键值对。 > Annotations不用于标识和选择对象。Annotations中的元数据可以是small或large，structured或unstructured，并且可以包括标签不允许使用的字符。  **约束限制**： 仅用于查询，不支持请求时传入，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及  示例： ``` \"annotations\": {   \"key1\" : \"value1\",   \"key2\" : \"value2\" } ```
     * creationTimestamp  **参数解释**： 节点创建时间。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * updateTimestamp  **参数解释**： 节点更新时间。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * ownerReference  ownerReference
+    * ownerReferences  ownerReferences
     *
     * @var string[]
     */
@@ -35,7 +35,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
             'annotations' => 'map[string,string]',
             'creationTimestamp' => 'string',
             'updateTimestamp' => 'string',
-            'ownerReference' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeMetadataOwnerReference'
+            'ownerReferences' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeMetadataOwnerReferences'
     ];
 
     /**
@@ -45,7 +45,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
     * annotations  **参数解释**： CCE自有节点注解，非Kubernetes原生annotations，格式为key/value键值对。 > Annotations不用于标识和选择对象。Annotations中的元数据可以是small或large，structured或unstructured，并且可以包括标签不允许使用的字符。  **约束限制**： 仅用于查询，不支持请求时传入，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及  示例： ``` \"annotations\": {   \"key1\" : \"value1\",   \"key2\" : \"value2\" } ```
     * creationTimestamp  **参数解释**： 节点创建时间。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * updateTimestamp  **参数解释**： 节点更新时间。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * ownerReference  ownerReference
+    * ownerReferences  ownerReferences
     *
     * @var string[]
     */
@@ -55,7 +55,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
         'annotations' => null,
         'creationTimestamp' => null,
         'updateTimestamp' => null,
-        'ownerReference' => null
+        'ownerReferences' => null
     ];
 
     /**
@@ -86,7 +86,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
     * annotations  **参数解释**： CCE自有节点注解，非Kubernetes原生annotations，格式为key/value键值对。 > Annotations不用于标识和选择对象。Annotations中的元数据可以是small或large，structured或unstructured，并且可以包括标签不允许使用的字符。  **约束限制**： 仅用于查询，不支持请求时传入，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及  示例： ``` \"annotations\": {   \"key1\" : \"value1\",   \"key2\" : \"value2\" } ```
     * creationTimestamp  **参数解释**： 节点创建时间。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * updateTimestamp  **参数解释**： 节点更新时间。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * ownerReference  ownerReference
+    * ownerReferences  ownerReferences
     *
     * @var string[]
     */
@@ -96,7 +96,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
             'annotations' => 'annotations',
             'creationTimestamp' => 'creationTimestamp',
             'updateTimestamp' => 'updateTimestamp',
-            'ownerReference' => 'ownerReference'
+            'ownerReferences' => 'ownerReferences'
     ];
 
     /**
@@ -106,7 +106,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
     * annotations  **参数解释**： CCE自有节点注解，非Kubernetes原生annotations，格式为key/value键值对。 > Annotations不用于标识和选择对象。Annotations中的元数据可以是small或large，structured或unstructured，并且可以包括标签不允许使用的字符。  **约束限制**： 仅用于查询，不支持请求时传入，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及  示例： ``` \"annotations\": {   \"key1\" : \"value1\",   \"key2\" : \"value2\" } ```
     * creationTimestamp  **参数解释**： 节点创建时间。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * updateTimestamp  **参数解释**： 节点更新时间。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * ownerReference  ownerReference
+    * ownerReferences  ownerReferences
     *
     * @var string[]
     */
@@ -116,7 +116,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
             'annotations' => 'setAnnotations',
             'creationTimestamp' => 'setCreationTimestamp',
             'updateTimestamp' => 'setUpdateTimestamp',
-            'ownerReference' => 'setOwnerReference'
+            'ownerReferences' => 'setOwnerReferences'
     ];
 
     /**
@@ -126,7 +126,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
     * annotations  **参数解释**： CCE自有节点注解，非Kubernetes原生annotations，格式为key/value键值对。 > Annotations不用于标识和选择对象。Annotations中的元数据可以是small或large，structured或unstructured，并且可以包括标签不允许使用的字符。  **约束限制**： 仅用于查询，不支持请求时传入，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及  示例： ``` \"annotations\": {   \"key1\" : \"value1\",   \"key2\" : \"value2\" } ```
     * creationTimestamp  **参数解释**： 节点创建时间。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * updateTimestamp  **参数解释**： 节点更新时间。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * ownerReference  ownerReference
+    * ownerReferences  ownerReferences
     *
     * @var string[]
     */
@@ -136,7 +136,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
             'annotations' => 'getAnnotations',
             'creationTimestamp' => 'getCreationTimestamp',
             'updateTimestamp' => 'getUpdateTimestamp',
-            'ownerReference' => 'getOwnerReference'
+            'ownerReferences' => 'getOwnerReferences'
     ];
 
     /**
@@ -202,7 +202,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
         $this->container['annotations'] = isset($data['annotations']) ? $data['annotations'] : null;
         $this->container['creationTimestamp'] = isset($data['creationTimestamp']) ? $data['creationTimestamp'] : null;
         $this->container['updateTimestamp'] = isset($data['updateTimestamp']) ? $data['updateTimestamp'] : null;
-        $this->container['ownerReference'] = isset($data['ownerReference']) ? $data['ownerReference'] : null;
+        $this->container['ownerReferences'] = isset($data['ownerReferences']) ? $data['ownerReferences'] : null;
     }
 
     /**
@@ -357,26 +357,26 @@ class NodeMetadata implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets ownerReference
-    *  ownerReference
+    * Gets ownerReferences
+    *  ownerReferences
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodeMetadataOwnerReference|null
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodeMetadataOwnerReferences|null
     */
-    public function getOwnerReference()
+    public function getOwnerReferences()
     {
-        return $this->container['ownerReference'];
+        return $this->container['ownerReferences'];
     }
 
     /**
-    * Sets ownerReference
+    * Sets ownerReferences
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodeMetadataOwnerReference|null $ownerReference ownerReference
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodeMetadataOwnerReferences|null $ownerReferences ownerReferences
     *
     * @return $this
     */
-    public function setOwnerReference($ownerReference)
+    public function setOwnerReferences($ownerReferences)
     {
-        $this->container['ownerReference'] = $ownerReference;
+        $this->container['ownerReferences'] = $ownerReferences;
         return $this;
     }
 

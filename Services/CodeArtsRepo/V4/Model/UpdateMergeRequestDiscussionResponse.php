@@ -22,7 +22,7 @@ class UpdateMergeRequestDiscussionResponse implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释：** 评论id(主评论和回复不共用)。
-    * type  **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。
+    * type  **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。 - null: 普通评论。
     * body  **参数解释：** 评论内容。
     * attachment  **参数解释：** 附件(弃用)。
     * author  author
@@ -104,7 +104,7 @@ class UpdateMergeRequestDiscussionResponse implements ModelInterface, ArrayAcces
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释：** 评论id(主评论和回复不共用)。
-    * type  **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。
+    * type  **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。 - null: 普通评论。
     * body  **参数解释：** 评论内容。
     * attachment  **参数解释：** 附件(弃用)。
     * author  author
@@ -207,7 +207,7 @@ class UpdateMergeRequestDiscussionResponse implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  **参数解释：** 评论id(主评论和回复不共用)。
-    * type  **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。
+    * type  **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。 - null: 普通评论。
     * body  **参数解释：** 评论内容。
     * attachment  **参数解释：** 附件(弃用)。
     * author  author
@@ -289,7 +289,7 @@ class UpdateMergeRequestDiscussionResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释：** 评论id(主评论和回复不共用)。
-    * type  **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。
+    * type  **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。 - null: 普通评论。
     * body  **参数解释：** 评论内容。
     * attachment  **参数解释：** 附件(弃用)。
     * author  author
@@ -371,7 +371,7 @@ class UpdateMergeRequestDiscussionResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释：** 评论id(主评论和回复不共用)。
-    * type  **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。
+    * type  **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。 - null: 普通评论。
     * body  **参数解释：** 评论内容。
     * attachment  **参数解释：** 附件(弃用)。
     * author  author
@@ -768,7 +768,7 @@ class UpdateMergeRequestDiscussionResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets type
-    *  **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。
+    *  **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。 - null: 普通评论。
     *
     * @return string|null
     */
@@ -780,7 +780,7 @@ class UpdateMergeRequestDiscussionResponse implements ModelInterface, ArrayAcces
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。
+    * @param string|null $type **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。 - null: 普通评论。
     *
     * @return $this
     */

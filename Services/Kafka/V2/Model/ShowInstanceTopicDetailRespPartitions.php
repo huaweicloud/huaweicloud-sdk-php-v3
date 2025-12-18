@@ -55,9 +55,9 @@ class ShowInstanceTopicDetailRespPartitions implements ModelInterface, ArrayAcce
     protected static $openAPIFormats = [
         'partition' => null,
         'leader' => null,
-        'leo' => null,
-        'hw' => null,
-        'lso' => null,
+        'leo' => 'int64',
+        'hw' => 'int64',
+        'lso' => 'int64',
         'lastUpdateTimestamp' => 'int64',
         'replicas' => null
     ];

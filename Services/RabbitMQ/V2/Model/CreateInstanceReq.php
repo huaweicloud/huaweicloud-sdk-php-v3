@@ -22,6 +22,8 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
+    * diskEncryptedEnable  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * engine  消息引擎：rabbitmq。
     * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35[、AMQP-0-9-1](tag:hws,hws_hk)[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
     * enableAcl  ACL访问控制（仅AMQP版本支持此参数）
@@ -49,6 +51,8 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'name' => 'string',
             'description' => 'string',
+            'diskEncryptedEnable' => 'bool',
+            'diskEncryptedKey' => 'string',
             'engine' => 'string',
             'engineVersion' => 'string',
             'enableAcl' => 'bool',
@@ -76,6 +80,8 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
+    * diskEncryptedEnable  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * engine  消息引擎：rabbitmq。
     * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35[、AMQP-0-9-1](tag:hws,hws_hk)[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
     * enableAcl  ACL访问控制（仅AMQP版本支持此参数）
@@ -103,6 +109,8 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'name' => null,
         'description' => null,
+        'diskEncryptedEnable' => null,
+        'diskEncryptedKey' => null,
         'engine' => null,
         'engineVersion' => null,
         'enableAcl' => null,
@@ -151,6 +159,8 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
+    * diskEncryptedEnable  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * engine  消息引擎：rabbitmq。
     * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35[、AMQP-0-9-1](tag:hws,hws_hk)[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
     * enableAcl  ACL访问控制（仅AMQP版本支持此参数）
@@ -178,6 +188,8 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'name' => 'name',
             'description' => 'description',
+            'diskEncryptedEnable' => 'disk_encrypted_enable',
+            'diskEncryptedKey' => 'disk_encrypted_key',
             'engine' => 'engine',
             'engineVersion' => 'engine_version',
             'enableAcl' => 'enable_acl',
@@ -205,6 +217,8 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
+    * diskEncryptedEnable  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * engine  消息引擎：rabbitmq。
     * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35[、AMQP-0-9-1](tag:hws,hws_hk)[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
     * enableAcl  ACL访问控制（仅AMQP版本支持此参数）
@@ -232,6 +246,8 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     protected static $setters = [
             'name' => 'setName',
             'description' => 'setDescription',
+            'diskEncryptedEnable' => 'setDiskEncryptedEnable',
+            'diskEncryptedKey' => 'setDiskEncryptedKey',
             'engine' => 'setEngine',
             'engineVersion' => 'setEngineVersion',
             'enableAcl' => 'setEnableAcl',
@@ -259,6 +275,8 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
+    * diskEncryptedEnable  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * engine  消息引擎：rabbitmq。
     * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35[、AMQP-0-9-1](tag:hws,hws_hk)[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
     * enableAcl  ACL访问控制（仅AMQP版本支持此参数）
@@ -286,6 +304,8 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     protected static $getters = [
             'name' => 'getName',
             'description' => 'getDescription',
+            'diskEncryptedEnable' => 'getDiskEncryptedEnable',
+            'diskEncryptedKey' => 'getDiskEncryptedKey',
             'engine' => 'getEngine',
             'engineVersion' => 'getEngineVersion',
             'enableAcl' => 'getEnableAcl',
@@ -420,6 +440,8 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['diskEncryptedEnable'] = isset($data['diskEncryptedEnable']) ? $data['diskEncryptedEnable'] : null;
+        $this->container['diskEncryptedKey'] = isset($data['diskEncryptedKey']) ? $data['diskEncryptedKey'] : null;
         $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
         $this->container['engineVersion'] = isset($data['engineVersion']) ? $data['engineVersion'] : null;
         $this->container['enableAcl'] = isset($data['enableAcl']) ? $data['enableAcl'] : null;
@@ -564,6 +586,54 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets diskEncryptedEnable
+    *  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    *
+    * @return bool|null
+    */
+    public function getDiskEncryptedEnable()
+    {
+        return $this->container['diskEncryptedEnable'];
+    }
+
+    /**
+    * Sets diskEncryptedEnable
+    *
+    * @param bool|null $diskEncryptedEnable **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    *
+    * @return $this
+    */
+    public function setDiskEncryptedEnable($diskEncryptedEnable)
+    {
+        $this->container['diskEncryptedEnable'] = $diskEncryptedEnable;
+        return $this;
+    }
+
+    /**
+    * Gets diskEncryptedKey
+    *  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDiskEncryptedKey()
+    {
+        return $this->container['diskEncryptedKey'];
+    }
+
+    /**
+    * Sets diskEncryptedKey
+    *
+    * @param string|null $diskEncryptedKey **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setDiskEncryptedKey($diskEncryptedKey)
+    {
+        $this->container['diskEncryptedKey'] = $diskEncryptedKey;
         return $this;
     }
 

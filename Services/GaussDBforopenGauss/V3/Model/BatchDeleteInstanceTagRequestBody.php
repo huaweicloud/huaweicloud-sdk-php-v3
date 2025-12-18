@@ -20,7 +20,7 @@ class BatchDeleteInstanceTagRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * keys  需要删除的标签列表
+    * keys  **参数解释**: 需要删除的标签列表。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchDeleteInstanceTagRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * keys  需要删除的标签列表
+    * keys  **参数解释**: 需要删除的标签列表。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchDeleteInstanceTagRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * keys  需要删除的标签列表
+    * keys  **参数解释**: 需要删除的标签列表。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchDeleteInstanceTagRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * keys  需要删除的标签列表
+    * keys  **参数解释**: 需要删除的标签列表。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchDeleteInstanceTagRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * keys  需要删除的标签列表
+    * keys  **参数解释**: 需要删除的标签列表。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class BatchDeleteInstanceTagRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets keys
-    *  需要删除的标签列表
+    *  **参数解释**: 需要删除的标签列表。
     *
     * @return string[]|null
     */
@@ -186,7 +186,7 @@ class BatchDeleteInstanceTagRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets keys
     *
-    * @param string[]|null $keys 需要删除的标签列表
+    * @param string[]|null $keys **参数解释**: 需要删除的标签列表。
     *
     * @return $this
     */

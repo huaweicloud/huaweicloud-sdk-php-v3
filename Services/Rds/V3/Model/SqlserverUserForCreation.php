@@ -22,24 +22,28 @@ class SqlserverUserForCreation implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  数据库用户名称。  数据库帐号名称在1到128个字符之间，不能和系统用户名称相同。  系统用户包括：rdsadmin, rdsuser, rdsbackup, rdsmirror。
     * password  数据库帐号密码。  取值范围：非空，密码长度在8到128个字符之间，至少包含大写字母、小写字母、数字、特殊字符三种字符的组合。  建议您输入高强度密码，以提高安全性，防止出现密码被暴力破解等安全风险。
+    * instanceReadonly  是否创建实例级只读账号。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'password' => 'string'
+            'password' => 'string',
+            'instanceReadonly' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  数据库用户名称。  数据库帐号名称在1到128个字符之间，不能和系统用户名称相同。  系统用户包括：rdsadmin, rdsuser, rdsbackup, rdsmirror。
     * password  数据库帐号密码。  取值范围：非空，密码长度在8到128个字符之间，至少包含大写字母、小写字母、数字、特殊字符三种字符的组合。  建议您输入高强度密码，以提高安全性，防止出现密码被暴力破解等安全风险。
+    * instanceReadonly  是否创建实例级只读账号。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
-        'password' => null
+        'password' => null,
+        'instanceReadonly' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class SqlserverUserForCreation implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  数据库用户名称。  数据库帐号名称在1到128个字符之间，不能和系统用户名称相同。  系统用户包括：rdsadmin, rdsuser, rdsbackup, rdsmirror。
     * password  数据库帐号密码。  取值范围：非空，密码长度在8到128个字符之间，至少包含大写字母、小写字母、数字、特殊字符三种字符的组合。  建议您输入高强度密码，以提高安全性，防止出现密码被暴力破解等安全风险。
+    * instanceReadonly  是否创建实例级只读账号。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
-            'password' => 'password'
+            'password' => 'password',
+            'instanceReadonly' => 'instance_readonly'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  数据库用户名称。  数据库帐号名称在1到128个字符之间，不能和系统用户名称相同。  系统用户包括：rdsadmin, rdsuser, rdsbackup, rdsmirror。
     * password  数据库帐号密码。  取值范围：非空，密码长度在8到128个字符之间，至少包含大写字母、小写字母、数字、特殊字符三种字符的组合。  建议您输入高强度密码，以提高安全性，防止出现密码被暴力破解等安全风险。
+    * instanceReadonly  是否创建实例级只读账号。
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
-            'password' => 'setPassword'
+            'password' => 'setPassword',
+            'instanceReadonly' => 'setInstanceReadonly'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  数据库用户名称。  数据库帐号名称在1到128个字符之间，不能和系统用户名称相同。  系统用户包括：rdsadmin, rdsuser, rdsbackup, rdsmirror。
     * password  数据库帐号密码。  取值范围：非空，密码长度在8到128个字符之间，至少包含大写字母、小写字母、数字、特殊字符三种字符的组合。  建议您输入高强度密码，以提高安全性，防止出现密码被暴力破解等安全风险。
+    * instanceReadonly  是否创建实例级只读账号。
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
-            'password' => 'getPassword'
+            'password' => 'getPassword',
+            'instanceReadonly' => 'getInstanceReadonly'
     ];
 
     /**
@@ -159,6 +169,7 @@ class SqlserverUserForCreation implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
+        $this->container['instanceReadonly'] = isset($data['instanceReadonly']) ? $data['instanceReadonly'] : null;
     }
 
     /**
@@ -240,6 +251,30 @@ class SqlserverUserForCreation implements ModelInterface, ArrayAccess
     public function setPassword($password)
     {
         $this->container['password'] = $password;
+        return $this;
+    }
+
+    /**
+    * Gets instanceReadonly
+    *  是否创建实例级只读账号。
+    *
+    * @return bool|null
+    */
+    public function getInstanceReadonly()
+    {
+        return $this->container['instanceReadonly'];
+    }
+
+    /**
+    * Sets instanceReadonly
+    *
+    * @param bool|null $instanceReadonly 是否创建实例级只读账号。
+    *
+    * @return $this
+    */
+    public function setInstanceReadonly($instanceReadonly)
+    {
+        $this->container['instanceReadonly'] = $instanceReadonly;
         return $this;
     }
 

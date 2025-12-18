@@ -8007,9 +8007,9 @@ class GaussDBforNoSQLAsyncClient extends Client
     }
 
     /**
-     * 查询实例参数的修改历史
+     * 查询参数组修改历史。
      *
-     * 查询实例参数的修改历史
+     * 查询指定实例的参数组修改历史记录，支持分页查询，支持参数搜索。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8036,6 +8036,9 @@ class GaussDBforNoSQLAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['parameterName'] !== null) {
+            $queryParams['parameter_name'] = $localVarParams['parameterName'];
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
@@ -9969,6 +9972,74 @@ class GaussDBforNoSQLAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\UpdateInstanceConfigurationsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\UpdateInstanceConfigurationsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改负载均衡地址
+     *
+     * 修改负载均衡地址。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateInstanceLbAsync($request)
+    {
+        return $this->updateInstanceLbAsyncWithHttpInfo($request);
+    }
+    
+    public function updateInstanceLbAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/lb';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\UpdateInstanceLbResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\UpdateInstanceLbRequest',
             $asyncRequest = true);
     }
 

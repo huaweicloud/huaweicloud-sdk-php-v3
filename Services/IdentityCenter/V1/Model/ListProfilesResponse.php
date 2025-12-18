@@ -67,7 +67,7 @@ class ListProfilesResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'applicationProfiles' => 'applicationProfiles'
+            'applicationProfiles' => 'application_profiles'
     ];
 
     /**

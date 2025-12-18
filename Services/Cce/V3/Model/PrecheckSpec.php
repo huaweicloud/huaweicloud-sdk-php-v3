@@ -20,10 +20,10 @@ class PrecheckSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  集群ID
-    * clusterVersion  集群版本
-    * targetVersion  升级目标版本
-    * skippedCheckItemList  跳过检查的项目列表
+    * clusterId  **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及
+    * clusterVersion  **参数解释：** 集群版本，请填写当前集群的补丁版本，可登录控制台在总览页面进行查看 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * targetVersion  **参数解释：** 升级目标版本，如果填写大版本，则自动选择最新补丁版本 **约束限制：** 不涉及 **取值范围：** 高于集群当前版本的可用集群版本
+    * skippedCheckItemList  **参数解释：** 跳过检查的项目列表 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class PrecheckSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  集群ID
-    * clusterVersion  集群版本
-    * targetVersion  升级目标版本
-    * skippedCheckItemList  跳过检查的项目列表
+    * clusterId  **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及
+    * clusterVersion  **参数解释：** 集群版本，请填写当前集群的补丁版本，可登录控制台在总览页面进行查看 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * targetVersion  **参数解释：** 升级目标版本，如果填写大版本，则自动选择最新补丁版本 **约束限制：** 不涉及 **取值范围：** 高于集群当前版本的可用集群版本
+    * skippedCheckItemList  **参数解释：** 跳过检查的项目列表 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class PrecheckSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  集群ID
-    * clusterVersion  集群版本
-    * targetVersion  升级目标版本
-    * skippedCheckItemList  跳过检查的项目列表
+    * clusterId  **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及
+    * clusterVersion  **参数解释：** 集群版本，请填写当前集群的补丁版本，可登录控制台在总览页面进行查看 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * targetVersion  **参数解释：** 升级目标版本，如果填写大版本，则自动选择最新补丁版本 **约束限制：** 不涉及 **取值范围：** 高于集群当前版本的可用集群版本
+    * skippedCheckItemList  **参数解释：** 跳过检查的项目列表 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class PrecheckSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  集群ID
-    * clusterVersion  集群版本
-    * targetVersion  升级目标版本
-    * skippedCheckItemList  跳过检查的项目列表
+    * clusterId  **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及
+    * clusterVersion  **参数解释：** 集群版本，请填写当前集群的补丁版本，可登录控制台在总览页面进行查看 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * targetVersion  **参数解释：** 升级目标版本，如果填写大版本，则自动选择最新补丁版本 **约束限制：** 不涉及 **取值范围：** 高于集群当前版本的可用集群版本
+    * skippedCheckItemList  **参数解释：** 跳过检查的项目列表 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class PrecheckSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  集群ID
-    * clusterVersion  集群版本
-    * targetVersion  升级目标版本
-    * skippedCheckItemList  跳过检查的项目列表
+    * clusterId  **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及
+    * clusterVersion  **参数解释：** 集群版本，请填写当前集群的补丁版本，可登录控制台在总览页面进行查看 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * targetVersion  **参数解释：** 升级目标版本，如果填写大版本，则自动选择最新补丁版本 **约束限制：** 不涉及 **取值范围：** 高于集群当前版本的可用集群版本
+    * skippedCheckItemList  **参数解释：** 跳过检查的项目列表 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class PrecheckSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群ID
+    *  **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class PrecheckSpec implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群ID
+    * @param string|null $clusterId **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class PrecheckSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterVersion
-    *  集群版本
+    *  **参数解释：** 集群版本，请填写当前集群的补丁版本，可登录控制台在总览页面进行查看 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class PrecheckSpec implements ModelInterface, ArrayAccess
     /**
     * Sets clusterVersion
     *
-    * @param string|null $clusterVersion 集群版本
+    * @param string|null $clusterVersion **参数解释：** 集群版本，请填写当前集群的补丁版本，可登录控制台在总览页面进行查看 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class PrecheckSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetVersion
-    *  升级目标版本
+    *  **参数解释：** 升级目标版本，如果填写大版本，则自动选择最新补丁版本 **约束限制：** 不涉及 **取值范围：** 高于集群当前版本的可用集群版本
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class PrecheckSpec implements ModelInterface, ArrayAccess
     /**
     * Sets targetVersion
     *
-    * @param string|null $targetVersion 升级目标版本
+    * @param string|null $targetVersion **参数解释：** 升级目标版本，如果填写大版本，则自动选择最新补丁版本 **约束限制：** 不涉及 **取值范围：** 高于集群当前版本的可用集群版本
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class PrecheckSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets skippedCheckItemList
-    *  跳过检查的项目列表
+    *  **参数解释：** 跳过检查的项目列表 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\SkippedCheckItemList[]|null
     */
@@ -291,7 +291,7 @@ class PrecheckSpec implements ModelInterface, ArrayAccess
     /**
     * Sets skippedCheckItemList
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\SkippedCheckItemList[]|null $skippedCheckItemList 跳过检查的项目列表
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\SkippedCheckItemList[]|null $skippedCheckItemList **参数解释：** 跳过检查的项目列表 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */

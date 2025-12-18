@@ -95,6 +95,74 @@ class VpcepClient extends Client
     }
 
     /**
+     * 添加终端节点服务后端服务资源
+     *
+     * 添加终端节点服务后端服务资源。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addEndpointServiceServerResource($request)
+    {
+        return $this->addEndpointServiceServerResourceWithHttpInfo($request);
+    }
+
+    public function addEndpointServiceServerResourceWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/vpc-endpoint-services/{vpc_endpoint_service_id}/add-server-resources';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['vpcEndpointServiceId'] !== null) {
+            $pathParams['vpc_endpoint_service_id'] = $localVarParams['vpcEndpointServiceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\AddEndpointServiceServerResourceResponse',
+            $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\AddEndpointServiceServerResourceRequest');
+    }
+
+    /**
      * 批量添加或移除终端节点服务的白名单
      *
      * 批量添加或移除当前用户下终端节点服务的白名单。
@@ -1987,6 +2055,74 @@ class VpcepClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\UpgradeEndpointServiceResponse',
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\UpgradeEndpointServiceRequest');
+    }
+
+    /**
+     * 升级终端节点
+     *
+     * 升级终端节点，由基础型升级为专业型。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function upgradeEndpoint($request)
+    {
+        return $this->upgradeEndpointWithHttpInfo($request);
+    }
+
+    public function upgradeEndpointWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/vpc-endpoints/{vpc_endpoint_id}/upgrade';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['vpcEndpointId'] !== null) {
+            $pathParams['vpc_endpoint_id'] = $localVarParams['vpcEndpointId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\UpgradeEndpointResponse',
+            $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\UpgradeEndpointRequest');
     }
 
     /**

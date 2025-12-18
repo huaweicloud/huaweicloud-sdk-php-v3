@@ -5458,6 +5458,12 @@ class EcsClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['count'] !== null) {
+            $queryParams['count'] = $localVarParams['count'];
+        }
+        if ($localVarParams['regionIds'] !== null) {
+            $queryParams['region_ids'] = $localVarParams['regionIds'];
+        }
         if ($localVarParams['flavorId'] !== null) {
             $pathParams['flavor_id'] = $localVarParams['flavorId'];
         }

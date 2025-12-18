@@ -28,7 +28,7 @@ class CreateUserOption implements ModelInterface, ArrayAccess
     * areacode  国家码。必须与手机号同时存在。中国大陆为“0086”。
     * phone  IAM用户手机号，纯数字，长度小于等于32字符。必须与国家码同时存在。
     * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
-    * pwdStatus  IAM用户首次登录是否重置密码，默认需要重置。
+    * pwdStatus  IAM用户首次登录是否重置密码，当password参数不为空时生效，默认需要重置。
     * xuserType  IAM用户在外部系统中的类型。长度小于等于64字符。xuser_type如果存在且不等于TenantIdp时，则需要与同一租户中的xaccount_type、xdomain_type校验，须与xuser_id同时存在。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * xuserId  IAM用户在外部系统中的ID。长度小于等于128字符，须与xuser_type同时存在。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * description  IAM用户描述信息。
@@ -60,7 +60,7 @@ class CreateUserOption implements ModelInterface, ArrayAccess
     * areacode  国家码。必须与手机号同时存在。中国大陆为“0086”。
     * phone  IAM用户手机号，纯数字，长度小于等于32字符。必须与国家码同时存在。
     * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
-    * pwdStatus  IAM用户首次登录是否重置密码，默认需要重置。
+    * pwdStatus  IAM用户首次登录是否重置密码，当password参数不为空时生效，默认需要重置。
     * xuserType  IAM用户在外部系统中的类型。长度小于等于64字符。xuser_type如果存在且不等于TenantIdp时，则需要与同一租户中的xaccount_type、xdomain_type校验，须与xuser_id同时存在。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * xuserId  IAM用户在外部系统中的ID。长度小于等于128字符，须与xuser_type同时存在。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * description  IAM用户描述信息。
@@ -113,7 +113,7 @@ class CreateUserOption implements ModelInterface, ArrayAccess
     * areacode  国家码。必须与手机号同时存在。中国大陆为“0086”。
     * phone  IAM用户手机号，纯数字，长度小于等于32字符。必须与国家码同时存在。
     * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
-    * pwdStatus  IAM用户首次登录是否重置密码，默认需要重置。
+    * pwdStatus  IAM用户首次登录是否重置密码，当password参数不为空时生效，默认需要重置。
     * xuserType  IAM用户在外部系统中的类型。长度小于等于64字符。xuser_type如果存在且不等于TenantIdp时，则需要与同一租户中的xaccount_type、xdomain_type校验，须与xuser_id同时存在。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * xuserId  IAM用户在外部系统中的ID。长度小于等于128字符，须与xuser_type同时存在。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * description  IAM用户描述信息。
@@ -145,7 +145,7 @@ class CreateUserOption implements ModelInterface, ArrayAccess
     * areacode  国家码。必须与手机号同时存在。中国大陆为“0086”。
     * phone  IAM用户手机号，纯数字，长度小于等于32字符。必须与国家码同时存在。
     * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
-    * pwdStatus  IAM用户首次登录是否重置密码，默认需要重置。
+    * pwdStatus  IAM用户首次登录是否重置密码，当password参数不为空时生效，默认需要重置。
     * xuserType  IAM用户在外部系统中的类型。长度小于等于64字符。xuser_type如果存在且不等于TenantIdp时，则需要与同一租户中的xaccount_type、xdomain_type校验，须与xuser_id同时存在。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * xuserId  IAM用户在外部系统中的ID。长度小于等于128字符，须与xuser_type同时存在。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * description  IAM用户描述信息。
@@ -177,7 +177,7 @@ class CreateUserOption implements ModelInterface, ArrayAccess
     * areacode  国家码。必须与手机号同时存在。中国大陆为“0086”。
     * phone  IAM用户手机号，纯数字，长度小于等于32字符。必须与国家码同时存在。
     * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
-    * pwdStatus  IAM用户首次登录是否重置密码，默认需要重置。
+    * pwdStatus  IAM用户首次登录是否重置密码，当password参数不为空时生效，默认需要重置。
     * xuserType  IAM用户在外部系统中的类型。长度小于等于64字符。xuser_type如果存在且不等于TenantIdp时，则需要与同一租户中的xaccount_type、xdomain_type校验，须与xuser_id同时存在。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * xuserId  IAM用户在外部系统中的ID。长度小于等于128字符，须与xuser_type同时存在。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * description  IAM用户描述信息。
@@ -493,7 +493,7 @@ class CreateUserOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwdStatus
-    *  IAM用户首次登录是否重置密码，默认需要重置。
+    *  IAM用户首次登录是否重置密码，当password参数不为空时生效，默认需要重置。
     *
     * @return bool|null
     */
@@ -505,7 +505,7 @@ class CreateUserOption implements ModelInterface, ArrayAccess
     /**
     * Sets pwdStatus
     *
-    * @param bool|null $pwdStatus IAM用户首次登录是否重置密码，默认需要重置。
+    * @param bool|null $pwdStatus IAM用户首次登录是否重置密码，当password参数不为空时生效，默认需要重置。
     *
     * @return $this
     */

@@ -20,30 +20,34 @@ class ShowModifyHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例id
-    * offset  索引位置，偏移量。  从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。  取值必须为数字，不能为负数。
-    * limit  查询个数上限值。   - 取值范围: 1~100。   - 不传该参数时，默认查询前100条信息。
+    * instanceId  **参数解释：** 实例ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * parameterName  **参数解释：** 参数名称，支持模糊查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * offset  **参数解释：** 索引位置，偏移量。 从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。 **约束限制：** 取值必须为数字，不能为负数。 **取值范围：** 非负整数。 **默认取值：** 0
+    * limit  **参数解释：** 查询个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 100。不传该参数时，默认查询前100条信息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'instanceId' => 'string',
-            'offset' => 'int',
-            'limit' => 'int'
+            'parameterName' => 'string',
+            'offset' => 'string',
+            'limit' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例id
-    * offset  索引位置，偏移量。  从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。  取值必须为数字，不能为负数。
-    * limit  查询个数上限值。   - 取值范围: 1~100。   - 不传该参数时，默认查询前100条信息。
+    * instanceId  **参数解释：** 实例ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * parameterName  **参数解释：** 参数名称，支持模糊查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * offset  **参数解释：** 索引位置，偏移量。 从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。 **约束限制：** 取值必须为数字，不能为负数。 **取值范围：** 非负整数。 **默认取值：** 0
+    * limit  **参数解释：** 查询个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 100。不传该参数时，默认查询前100条信息。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'instanceId' => null,
-        'offset' => 'int32',
-        'limit' => 'int32'
+        'parameterName' => null,
+        'offset' => null,
+        'limit' => null
     ];
 
     /**
@@ -69,42 +73,48 @@ class ShowModifyHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例id
-    * offset  索引位置，偏移量。  从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。  取值必须为数字，不能为负数。
-    * limit  查询个数上限值。   - 取值范围: 1~100。   - 不传该参数时，默认查询前100条信息。
+    * instanceId  **参数解释：** 实例ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * parameterName  **参数解释：** 参数名称，支持模糊查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * offset  **参数解释：** 索引位置，偏移量。 从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。 **约束限制：** 取值必须为数字，不能为负数。 **取值范围：** 非负整数。 **默认取值：** 0
+    * limit  **参数解释：** 查询个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 100。不传该参数时，默认查询前100条信息。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'instanceId' => 'instance_id',
+            'parameterName' => 'parameter_name',
             'offset' => 'offset',
             'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例id
-    * offset  索引位置，偏移量。  从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。  取值必须为数字，不能为负数。
-    * limit  查询个数上限值。   - 取值范围: 1~100。   - 不传该参数时，默认查询前100条信息。
+    * instanceId  **参数解释：** 实例ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * parameterName  **参数解释：** 参数名称，支持模糊查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * offset  **参数解释：** 索引位置，偏移量。 从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。 **约束限制：** 取值必须为数字，不能为负数。 **取值范围：** 非负整数。 **默认取值：** 0
+    * limit  **参数解释：** 查询个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 100。不传该参数时，默认查询前100条信息。
     *
     * @var string[]
     */
     protected static $setters = [
             'instanceId' => 'setInstanceId',
+            'parameterName' => 'setParameterName',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例id
-    * offset  索引位置，偏移量。  从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。  取值必须为数字，不能为负数。
-    * limit  查询个数上限值。   - 取值范围: 1~100。   - 不传该参数时，默认查询前100条信息。
+    * instanceId  **参数解释：** 实例ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * parameterName  **参数解释：** 参数名称，支持模糊查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * offset  **参数解释：** 索引位置，偏移量。 从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。 **约束限制：** 取值必须为数字，不能为负数。 **取值范围：** 非负整数。 **默认取值：** 0
+    * limit  **参数解释：** 查询个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 100。不传该参数时，默认查询前100条信息。
     *
     * @var string[]
     */
     protected static $getters = [
             'instanceId' => 'getInstanceId',
+            'parameterName' => 'getParameterName',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
     ];
@@ -168,6 +178,7 @@ class ShowModifyHistoryRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['parameterName'] = isset($data['parameterName']) ? $data['parameterName'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
@@ -199,7 +210,7 @@ class ShowModifyHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例id
+    *  **参数解释：** 实例ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -211,7 +222,7 @@ class ShowModifyHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例id
+    * @param string $instanceId **参数解释：** 实例ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -222,10 +233,34 @@ class ShowModifyHistoryRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets offset
-    *  索引位置，偏移量。  从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。  取值必须为数字，不能为负数。
+    * Gets parameterName
+    *  **参数解释：** 参数名称，支持模糊查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
-    * @return int|null
+    * @return string|null
+    */
+    public function getParameterName()
+    {
+        return $this->container['parameterName'];
+    }
+
+    /**
+    * Sets parameterName
+    *
+    * @param string|null $parameterName **参数解释：** 参数名称，支持模糊查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setParameterName($parameterName)
+    {
+        $this->container['parameterName'] = $parameterName;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  **参数解释：** 索引位置，偏移量。 从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。 **约束限制：** 取值必须为数字，不能为负数。 **取值范围：** 非负整数。 **默认取值：** 0
+    *
+    * @return string|null
     */
     public function getOffset()
     {
@@ -235,7 +270,7 @@ class ShowModifyHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 索引位置，偏移量。  从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。  取值必须为数字，不能为负数。
+    * @param string|null $offset **参数解释：** 索引位置，偏移量。 从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。 **约束限制：** 取值必须为数字，不能为负数。 **取值范围：** 非负整数。 **默认取值：** 0
     *
     * @return $this
     */
@@ -247,9 +282,9 @@ class ShowModifyHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询个数上限值。   - 取值范围: 1~100。   - 不传该参数时，默认查询前100条信息。
+    *  **参数解释：** 查询个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 100。不传该参数时，默认查询前100条信息。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getLimit()
     {
@@ -259,7 +294,7 @@ class ShowModifyHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询个数上限值。   - 取值范围: 1~100。   - 不传该参数时，默认查询前100条信息。
+    * @param string|null $limit **参数解释：** 查询个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 100。不传该参数时，默认查询前100条信息。
     *
     * @return $this
     */

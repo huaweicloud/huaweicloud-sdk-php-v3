@@ -35,6 +35,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     * alphaCcePostInstall  安装后执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
     * alphaCceNodeImageId  **参数解释**： 节点自定义镜像ID，从IMS控制台获取，需要使用自定义镜像时使用此参数。 **约束限制**： 不涉及 [> - 若指定了extendParam中的securityReinforcementType参数为cybersecurity，节点将开启安全等保加固功能，则节点的操作系统类型必须使用HCE2.0。](tag:hws)  **取值范围**： 不涉及 **默认取值**： 不涉及
     * chargingMode  节点的计费模式。已废弃，请使用NodeSpec中的billingMode字段。
+    * marketType  **参数解释**： 创建竞价实例时，需指定该参数的值为“spot”。 **约束限制**： 仅当billingMode=0时此参数生效 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * spotPrice  **参数解释**： 用户愿意为竞价实例每小时支付的最高价格。 **约束限制**： - 仅当billingMode=0且marketType=spot时，该参数设置后生效。 - 当billingMode=0且marketType=spot时，如果不传递spotPrice，默认使用按需购买的价格作为竞价。 - spotPrice需要小于等于按需价格并大于等于云服务器市场价格。  **取值范围**： 不涉及 **默认取值**： 不涉及
     * agencyName  委托的名称。  委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为CCE节点提供访问云服务器的临时凭证。 作为响应参数仅在创建节点传入时返回该字段。
     * kubeReservedMem  节点内存预留，Kubernetes相关组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
     * systemReservedMem  节点内存预留，系统组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
@@ -59,6 +61,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
             'alphaCcePostInstall' => 'string',
             'alphaCceNodeImageId' => 'string',
             'chargingMode' => 'int',
+            'marketType' => 'string',
+            'spotPrice' => 'string',
             'agencyName' => 'string',
             'kubeReservedMem' => 'int',
             'systemReservedMem' => 'int',
@@ -83,6 +87,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     * alphaCcePostInstall  安装后执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
     * alphaCceNodeImageId  **参数解释**： 节点自定义镜像ID，从IMS控制台获取，需要使用自定义镜像时使用此参数。 **约束限制**： 不涉及 [> - 若指定了extendParam中的securityReinforcementType参数为cybersecurity，节点将开启安全等保加固功能，则节点的操作系统类型必须使用HCE2.0。](tag:hws)  **取值范围**： 不涉及 **默认取值**： 不涉及
     * chargingMode  节点的计费模式。已废弃，请使用NodeSpec中的billingMode字段。
+    * marketType  **参数解释**： 创建竞价实例时，需指定该参数的值为“spot”。 **约束限制**： 仅当billingMode=0时此参数生效 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * spotPrice  **参数解释**： 用户愿意为竞价实例每小时支付的最高价格。 **约束限制**： - 仅当billingMode=0且marketType=spot时，该参数设置后生效。 - 当billingMode=0且marketType=spot时，如果不传递spotPrice，默认使用按需购买的价格作为竞价。 - spotPrice需要小于等于按需价格并大于等于云服务器市场价格。  **取值范围**： 不涉及 **默认取值**： 不涉及
     * agencyName  委托的名称。  委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为CCE节点提供访问云服务器的临时凭证。 作为响应参数仅在创建节点传入时返回该字段。
     * kubeReservedMem  节点内存预留，Kubernetes相关组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
     * systemReservedMem  节点内存预留，系统组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
@@ -107,6 +113,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
         'alphaCcePostInstall' => null,
         'alphaCceNodeImageId' => null,
         'chargingMode' => 'int32',
+        'marketType' => null,
+        'spotPrice' => null,
         'agencyName' => null,
         'kubeReservedMem' => 'int32',
         'systemReservedMem' => 'int32',
@@ -152,6 +160,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     * alphaCcePostInstall  安装后执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
     * alphaCceNodeImageId  **参数解释**： 节点自定义镜像ID，从IMS控制台获取，需要使用自定义镜像时使用此参数。 **约束限制**： 不涉及 [> - 若指定了extendParam中的securityReinforcementType参数为cybersecurity，节点将开启安全等保加固功能，则节点的操作系统类型必须使用HCE2.0。](tag:hws)  **取值范围**： 不涉及 **默认取值**： 不涉及
     * chargingMode  节点的计费模式。已废弃，请使用NodeSpec中的billingMode字段。
+    * marketType  **参数解释**： 创建竞价实例时，需指定该参数的值为“spot”。 **约束限制**： 仅当billingMode=0时此参数生效 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * spotPrice  **参数解释**： 用户愿意为竞价实例每小时支付的最高价格。 **约束限制**： - 仅当billingMode=0且marketType=spot时，该参数设置后生效。 - 当billingMode=0且marketType=spot时，如果不传递spotPrice，默认使用按需购买的价格作为竞价。 - spotPrice需要小于等于按需价格并大于等于云服务器市场价格。  **取值范围**： 不涉及 **默认取值**： 不涉及
     * agencyName  委托的名称。  委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为CCE节点提供访问云服务器的临时凭证。 作为响应参数仅在创建节点传入时返回该字段。
     * kubeReservedMem  节点内存预留，Kubernetes相关组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
     * systemReservedMem  节点内存预留，系统组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
@@ -176,6 +186,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
             'alphaCcePostInstall' => 'alpha.cce/postInstall',
             'alphaCceNodeImageId' => 'alpha.cce/NodeImageID',
             'chargingMode' => 'chargingMode',
+            'marketType' => 'marketType',
+            'spotPrice' => 'spotPrice',
             'agencyName' => 'agency_name',
             'kubeReservedMem' => 'kubeReservedMem',
             'systemReservedMem' => 'systemReservedMem',
@@ -200,6 +212,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     * alphaCcePostInstall  安装后执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
     * alphaCceNodeImageId  **参数解释**： 节点自定义镜像ID，从IMS控制台获取，需要使用自定义镜像时使用此参数。 **约束限制**： 不涉及 [> - 若指定了extendParam中的securityReinforcementType参数为cybersecurity，节点将开启安全等保加固功能，则节点的操作系统类型必须使用HCE2.0。](tag:hws)  **取值范围**： 不涉及 **默认取值**： 不涉及
     * chargingMode  节点的计费模式。已废弃，请使用NodeSpec中的billingMode字段。
+    * marketType  **参数解释**： 创建竞价实例时，需指定该参数的值为“spot”。 **约束限制**： 仅当billingMode=0时此参数生效 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * spotPrice  **参数解释**： 用户愿意为竞价实例每小时支付的最高价格。 **约束限制**： - 仅当billingMode=0且marketType=spot时，该参数设置后生效。 - 当billingMode=0且marketType=spot时，如果不传递spotPrice，默认使用按需购买的价格作为竞价。 - spotPrice需要小于等于按需价格并大于等于云服务器市场价格。  **取值范围**： 不涉及 **默认取值**： 不涉及
     * agencyName  委托的名称。  委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为CCE节点提供访问云服务器的临时凭证。 作为响应参数仅在创建节点传入时返回该字段。
     * kubeReservedMem  节点内存预留，Kubernetes相关组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
     * systemReservedMem  节点内存预留，系统组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
@@ -224,6 +238,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
             'alphaCcePostInstall' => 'setAlphaCcePostInstall',
             'alphaCceNodeImageId' => 'setAlphaCceNodeImageId',
             'chargingMode' => 'setChargingMode',
+            'marketType' => 'setMarketType',
+            'spotPrice' => 'setSpotPrice',
             'agencyName' => 'setAgencyName',
             'kubeReservedMem' => 'setKubeReservedMem',
             'systemReservedMem' => 'setSystemReservedMem',
@@ -248,6 +264,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     * alphaCcePostInstall  安装后执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。
     * alphaCceNodeImageId  **参数解释**： 节点自定义镜像ID，从IMS控制台获取，需要使用自定义镜像时使用此参数。 **约束限制**： 不涉及 [> - 若指定了extendParam中的securityReinforcementType参数为cybersecurity，节点将开启安全等保加固功能，则节点的操作系统类型必须使用HCE2.0。](tag:hws)  **取值范围**： 不涉及 **默认取值**： 不涉及
     * chargingMode  节点的计费模式。已废弃，请使用NodeSpec中的billingMode字段。
+    * marketType  **参数解释**： 创建竞价实例时，需指定该参数的值为“spot”。 **约束限制**： 仅当billingMode=0时此参数生效 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * spotPrice  **参数解释**： 用户愿意为竞价实例每小时支付的最高价格。 **约束限制**： - 仅当billingMode=0且marketType=spot时，该参数设置后生效。 - 当billingMode=0且marketType=spot时，如果不传递spotPrice，默认使用按需购买的价格作为竞价。 - spotPrice需要小于等于按需价格并大于等于云服务器市场价格。  **取值范围**： 不涉及 **默认取值**： 不涉及
     * agencyName  委托的名称。  委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为CCE节点提供访问云服务器的临时凭证。 作为响应参数仅在创建节点传入时返回该字段。
     * kubeReservedMem  节点内存预留，Kubernetes相关组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
     * systemReservedMem  节点内存预留，系统组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
@@ -272,6 +290,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
             'alphaCcePostInstall' => 'getAlphaCcePostInstall',
             'alphaCceNodeImageId' => 'getAlphaCceNodeImageId',
             'chargingMode' => 'getChargingMode',
+            'marketType' => 'getMarketType',
+            'spotPrice' => 'getSpotPrice',
             'agencyName' => 'getAgencyName',
             'kubeReservedMem' => 'getKubeReservedMem',
             'systemReservedMem' => 'getSystemReservedMem',
@@ -319,9 +339,22 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const MARKET_TYPE_SPOT = 'spot';
     const SECURITY_REINFORCEMENT_TYPE_NULL = 'null';
     const SECURITY_REINFORCEMENT_TYPE_CYBERSECURITY = 'cybersecurity';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getMarketTypeAllowableValues()
+    {
+        return [
+            self::MARKET_TYPE_SPOT,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -367,6 +400,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
         $this->container['alphaCcePostInstall'] = isset($data['alphaCcePostInstall']) ? $data['alphaCcePostInstall'] : null;
         $this->container['alphaCceNodeImageId'] = isset($data['alphaCceNodeImageId']) ? $data['alphaCceNodeImageId'] : null;
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
+        $this->container['marketType'] = isset($data['marketType']) ? $data['marketType'] : null;
+        $this->container['spotPrice'] = isset($data['spotPrice']) ? $data['spotPrice'] : null;
         $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
         $this->container['kubeReservedMem'] = isset($data['kubeReservedMem']) ? $data['kubeReservedMem'] : null;
         $this->container['systemReservedMem'] = isset($data['systemReservedMem']) ? $data['systemReservedMem'] : null;
@@ -388,6 +423,14 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
             if (!is_null($this->container['dockerBaseSize']) && ($this->container['dockerBaseSize'] < 10)) {
                 $invalidProperties[] = "invalid value for 'dockerBaseSize', must be bigger than or equal to 10.";
             }
+            $allowedValues = $this->getMarketTypeAllowableValues();
+                if (!is_null($this->container['marketType']) && !in_array($this->container['marketType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'marketType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             $allowedValues = $this->getSecurityReinforcementTypeAllowableValues();
                 if (!is_null($this->container['securityReinforcementType']) && !in_array($this->container['securityReinforcementType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -767,6 +810,54 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     public function setChargingMode($chargingMode)
     {
         $this->container['chargingMode'] = $chargingMode;
+        return $this;
+    }
+
+    /**
+    * Gets marketType
+    *  **参数解释**： 创建竞价实例时，需指定该参数的值为“spot”。 **约束限制**： 仅当billingMode=0时此参数生效 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getMarketType()
+    {
+        return $this->container['marketType'];
+    }
+
+    /**
+    * Sets marketType
+    *
+    * @param string|null $marketType **参数解释**： 创建竞价实例时，需指定该参数的值为“spot”。 **约束限制**： 仅当billingMode=0时此参数生效 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setMarketType($marketType)
+    {
+        $this->container['marketType'] = $marketType;
+        return $this;
+    }
+
+    /**
+    * Gets spotPrice
+    *  **参数解释**： 用户愿意为竞价实例每小时支付的最高价格。 **约束限制**： - 仅当billingMode=0且marketType=spot时，该参数设置后生效。 - 当billingMode=0且marketType=spot时，如果不传递spotPrice，默认使用按需购买的价格作为竞价。 - spotPrice需要小于等于按需价格并大于等于云服务器市场价格。  **取值范围**： 不涉及 **默认取值**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getSpotPrice()
+    {
+        return $this->container['spotPrice'];
+    }
+
+    /**
+    * Sets spotPrice
+    *
+    * @param string|null $spotPrice **参数解释**： 用户愿意为竞价实例每小时支付的最高价格。 **约束限制**： - 仅当billingMode=0且marketType=spot时，该参数设置后生效。 - 当billingMode=0且marketType=spot时，如果不传递spotPrice，默认使用按需购买的价格作为竞价。 - spotPrice需要小于等于按需价格并大于等于云服务器市场价格。  **取值范围**： 不涉及 **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setSpotPrice($spotPrice)
+    {
+        $this->container['spotPrice'] = $spotPrice;
         return $this;
     }
 

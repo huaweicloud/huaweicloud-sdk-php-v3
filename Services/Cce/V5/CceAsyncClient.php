@@ -221,6 +221,71 @@ class CceAsyncClient extends Client
     }
 
     /**
+     * 查询套餐包列表
+     *
+     * 查询套餐包列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPackageProductsAsync($request)
+    {
+        return $this->listPackageProductsAsyncWithHttpInfo($request);
+    }
+    
+    public function listPackageProductsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/package-products';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['locale'] !== null) {
+            $queryParams['locale'] = $localVarParams['locale'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V5\Model\ListPackageProductsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V5\Model\ListPackageProductsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询镜像缓存详情
      *
      * 查询镜像缓存详情
@@ -282,6 +347,71 @@ class CceAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Cce\V5\Model\ShowImageCacheResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cce\V5\Model\ShowImageCacheRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 订购套餐包
+     *
+     * 订购套餐包
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function subscribePackageProductsAsync($request)
+    {
+        return $this->subscribePackageProductsAsyncWithHttpInfo($request);
+    }
+    
+    public function subscribePackageProductsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/package-products/subscribe';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V5\Model\SubscribePackageProductsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V5\Model\SubscribePackageProductsRequest',
             $asyncRequest = true);
     }
 

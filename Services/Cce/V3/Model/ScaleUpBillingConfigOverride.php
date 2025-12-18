@@ -20,7 +20,7 @@ class ScaleUpBillingConfigOverride implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * billingMode  节点计费类型，0(按需)，1(包周期)
+    * billingMode  **参数解释**： 节点计费类型 **约束限制**： 选填参数，不填表示使用节点池默认计费配置 **取值范围**： - 0：按需 - 1：包周期 **默认取值**： 不涉及
     * extendParam  extendParam
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ScaleUpBillingConfigOverride implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * billingMode  节点计费类型，0(按需)，1(包周期)
+    * billingMode  **参数解释**： 节点计费类型 **约束限制**： 选填参数，不填表示使用节点池默认计费配置 **取值范围**： - 0：按需 - 1：包周期 **默认取值**： 不涉及
     * extendParam  extendParam
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ScaleUpBillingConfigOverride implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * billingMode  节点计费类型，0(按需)，1(包周期)
+    * billingMode  **参数解释**： 节点计费类型 **约束限制**： 选填参数，不填表示使用节点池默认计费配置 **取值范围**： - 0：按需 - 1：包周期 **默认取值**： 不涉及
     * extendParam  extendParam
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ScaleUpBillingConfigOverride implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * billingMode  节点计费类型，0(按需)，1(包周期)
+    * billingMode  **参数解释**： 节点计费类型 **约束限制**： 选填参数，不填表示使用节点池默认计费配置 **取值范围**： - 0：按需 - 1：包周期 **默认取值**： 不涉及
     * extendParam  extendParam
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ScaleUpBillingConfigOverride implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * billingMode  节点计费类型，0(按需)，1(包周期)
+    * billingMode  **参数解释**： 节点计费类型 **约束限制**： 选填参数，不填表示使用节点池默认计费配置 **取值范围**： - 0：按需 - 1：包周期 **默认取值**： 不涉及
     * extendParam  extendParam
     *
     * @var string[]
@@ -169,9 +169,6 @@ class ScaleUpBillingConfigOverride implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['billingMode'] === null) {
-            $invalidProperties[] = "'billingMode' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -188,9 +185,9 @@ class ScaleUpBillingConfigOverride implements ModelInterface, ArrayAccess
 
     /**
     * Gets billingMode
-    *  节点计费类型，0(按需)，1(包周期)
+    *  **参数解释**： 节点计费类型 **约束限制**： 选填参数，不填表示使用节点池默认计费配置 **取值范围**： - 0：按需 - 1：包周期 **默认取值**： 不涉及
     *
-    * @return int
+    * @return int|null
     */
     public function getBillingMode()
     {
@@ -200,7 +197,7 @@ class ScaleUpBillingConfigOverride implements ModelInterface, ArrayAccess
     /**
     * Sets billingMode
     *
-    * @param int $billingMode 节点计费类型，0(按需)，1(包周期)
+    * @param int|null $billingMode **参数解释**： 节点计费类型 **约束限制**： 选填参数，不填表示使用节点池默认计费配置 **取值范围**： - 0：按需 - 1：包周期 **默认取值**： 不涉及
     *
     * @return $this
     */

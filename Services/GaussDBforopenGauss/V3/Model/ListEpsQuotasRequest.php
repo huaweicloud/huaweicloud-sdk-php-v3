@@ -24,6 +24,7 @@ class ListEpsQuotasRequest implements ModelInterface, ArrayAccess
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
     * enterpriseProjectId  企业项目ID。 - 对于未开通企业多项目服务的用户，不传该参数。 - 对于已开通企业多项目服务的用户，不传该参数时，表示为default企业项目。
+    * enterpriseProjectName  企业项目名称。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class ListEpsQuotasRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'string',
             'offset' => 'int',
             'limit' => 'int',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'enterpriseProjectName' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class ListEpsQuotasRequest implements ModelInterface, ArrayAccess
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
     * enterpriseProjectId  企业项目ID。 - 对于未开通企业多项目服务的用户，不传该参数。 - 对于已开通企业多项目服务的用户，不传该参数时，表示为default企业项目。
+    * enterpriseProjectName  企业项目名称。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class ListEpsQuotasRequest implements ModelInterface, ArrayAccess
         'xLanguage' => null,
         'offset' => null,
         'limit' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'enterpriseProjectName' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class ListEpsQuotasRequest implements ModelInterface, ArrayAccess
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
     * enterpriseProjectId  企业项目ID。 - 对于未开通企业多项目服务的用户，不传该参数。 - 对于已开通企业多项目服务的用户，不传该参数时，表示为default企业项目。
+    * enterpriseProjectName  企业项目名称。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class ListEpsQuotasRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'X-Language',
             'offset' => 'offset',
             'limit' => 'limit',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'enterpriseProjectName' => 'enterprise_project_name'
     ];
 
     /**
@@ -93,6 +99,7 @@ class ListEpsQuotasRequest implements ModelInterface, ArrayAccess
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
     * enterpriseProjectId  企业项目ID。 - 对于未开通企业多项目服务的用户，不传该参数。 - 对于已开通企业多项目服务的用户，不传该参数时，表示为default企业项目。
+    * enterpriseProjectName  企业项目名称。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class ListEpsQuotasRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'setXLanguage',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'enterpriseProjectName' => 'setEnterpriseProjectName'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ListEpsQuotasRequest implements ModelInterface, ArrayAccess
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
     * enterpriseProjectId  企业项目ID。 - 对于未开通企业多项目服务的用户，不传该参数。 - 对于已开通企业多项目服务的用户，不传该参数时，表示为default企业项目。
+    * enterpriseProjectName  企业项目名称。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class ListEpsQuotasRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'getXLanguage',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'enterpriseProjectName' => 'getEnterpriseProjectName'
     ];
 
     /**
@@ -196,6 +206,7 @@ class ListEpsQuotasRequest implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['enterpriseProjectName'] = isset($data['enterpriseProjectName']) ? $data['enterpriseProjectName'] : null;
     }
 
     /**
@@ -321,6 +332,30 @@ class ListEpsQuotasRequest implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectName
+    *  企业项目名称。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectName()
+    {
+        return $this->container['enterpriseProjectName'];
+    }
+
+    /**
+    * Sets enterpriseProjectName
+    *
+    * @param string|null $enterpriseProjectName 企业项目名称。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectName($enterpriseProjectName)
+    {
+        $this->container['enterpriseProjectName'] = $enterpriseProjectName;
         return $this;
     }
 

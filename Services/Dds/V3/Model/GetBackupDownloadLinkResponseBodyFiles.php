@@ -24,6 +24,8 @@ class GetBackupDownloadLinkResponseBodyFiles implements ModelInterface, ArrayAcc
     * size  文件大小，单位为KB。
     * downloadLink  文件下载链接。
     * linkExpiredTime  下载链接过期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始，Z指时区偏移量，例如UTC时间偏移显示为+0000。
+    * groupId  组ID。
+    * groupName  组名。
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class GetBackupDownloadLinkResponseBodyFiles implements ModelInterface, ArrayAcc
             'name' => 'string',
             'size' => 'int',
             'downloadLink' => 'string',
-            'linkExpiredTime' => 'string'
+            'linkExpiredTime' => 'string',
+            'groupId' => 'string',
+            'groupName' => 'string'
     ];
 
     /**
@@ -40,6 +44,8 @@ class GetBackupDownloadLinkResponseBodyFiles implements ModelInterface, ArrayAcc
     * size  文件大小，单位为KB。
     * downloadLink  文件下载链接。
     * linkExpiredTime  下载链接过期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始，Z指时区偏移量，例如UTC时间偏移显示为+0000。
+    * groupId  组ID。
+    * groupName  组名。
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class GetBackupDownloadLinkResponseBodyFiles implements ModelInterface, ArrayAcc
         'name' => null,
         'size' => 'int64',
         'downloadLink' => null,
-        'linkExpiredTime' => null
+        'linkExpiredTime' => null,
+        'groupId' => null,
+        'groupName' => null
     ];
 
     /**
@@ -77,6 +85,8 @@ class GetBackupDownloadLinkResponseBodyFiles implements ModelInterface, ArrayAcc
     * size  文件大小，单位为KB。
     * downloadLink  文件下载链接。
     * linkExpiredTime  下载链接过期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始，Z指时区偏移量，例如UTC时间偏移显示为+0000。
+    * groupId  组ID。
+    * groupName  组名。
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class GetBackupDownloadLinkResponseBodyFiles implements ModelInterface, ArrayAcc
             'name' => 'name',
             'size' => 'size',
             'downloadLink' => 'download_link',
-            'linkExpiredTime' => 'link_expired_time'
+            'linkExpiredTime' => 'link_expired_time',
+            'groupId' => 'group_id',
+            'groupName' => 'group_name'
     ];
 
     /**
@@ -93,6 +105,8 @@ class GetBackupDownloadLinkResponseBodyFiles implements ModelInterface, ArrayAcc
     * size  文件大小，单位为KB。
     * downloadLink  文件下载链接。
     * linkExpiredTime  下载链接过期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始，Z指时区偏移量，例如UTC时间偏移显示为+0000。
+    * groupId  组ID。
+    * groupName  组名。
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class GetBackupDownloadLinkResponseBodyFiles implements ModelInterface, ArrayAcc
             'name' => 'setName',
             'size' => 'setSize',
             'downloadLink' => 'setDownloadLink',
-            'linkExpiredTime' => 'setLinkExpiredTime'
+            'linkExpiredTime' => 'setLinkExpiredTime',
+            'groupId' => 'setGroupId',
+            'groupName' => 'setGroupName'
     ];
 
     /**
@@ -109,6 +125,8 @@ class GetBackupDownloadLinkResponseBodyFiles implements ModelInterface, ArrayAcc
     * size  文件大小，单位为KB。
     * downloadLink  文件下载链接。
     * linkExpiredTime  下载链接过期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始，Z指时区偏移量，例如UTC时间偏移显示为+0000。
+    * groupId  组ID。
+    * groupName  组名。
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class GetBackupDownloadLinkResponseBodyFiles implements ModelInterface, ArrayAcc
             'name' => 'getName',
             'size' => 'getSize',
             'downloadLink' => 'getDownloadLink',
-            'linkExpiredTime' => 'getLinkExpiredTime'
+            'linkExpiredTime' => 'getLinkExpiredTime',
+            'groupId' => 'getGroupId',
+            'groupName' => 'getGroupName'
     ];
 
     /**
@@ -181,6 +201,8 @@ class GetBackupDownloadLinkResponseBodyFiles implements ModelInterface, ArrayAcc
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['downloadLink'] = isset($data['downloadLink']) ? $data['downloadLink'] : null;
         $this->container['linkExpiredTime'] = isset($data['linkExpiredTime']) ? $data['linkExpiredTime'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
+        $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
     }
 
     /**
@@ -310,6 +332,54 @@ class GetBackupDownloadLinkResponseBodyFiles implements ModelInterface, ArrayAcc
     public function setLinkExpiredTime($linkExpiredTime)
     {
         $this->container['linkExpiredTime'] = $linkExpiredTime;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  组ID。
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 组ID。
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
+        return $this;
+    }
+
+    /**
+    * Gets groupName
+    *  组名。
+    *
+    * @return string|null
+    */
+    public function getGroupName()
+    {
+        return $this->container['groupName'];
+    }
+
+    /**
+    * Sets groupName
+    *
+    * @param string|null $groupName 组名。
+    *
+    * @return $this
+    */
+    public function setGroupName($groupName)
+    {
+        $this->container['groupName'] = $groupName;
         return $this;
     }
 

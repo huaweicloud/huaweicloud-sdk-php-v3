@@ -21,22 +21,38 @@ class DeleteAddonInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * kind  API类型，固定值“Addon”，该值不可修改。
+    * apiVersion  API版本，固定值“v3”，该值不可修改。
+    * metadata  metadata
+    * spec  spec
+    * status  status
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'string'
+            'kind' => 'string',
+            'apiVersion' => 'string',
+            'metadata' => '\HuaweiCloud\SDK\Cce\V3\Model\AddonMetadata',
+            'spec' => '\HuaweiCloud\SDK\Cce\V3\Model\InstanceSpec',
+            'status' => '\HuaweiCloud\SDK\Cce\V3\Model\AddonInstanceStatus'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * kind  API类型，固定值“Addon”，该值不可修改。
+    * apiVersion  API版本，固定值“v3”，该值不可修改。
+    * metadata  metadata
+    * spec  spec
+    * status  status
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'kind' => null,
+        'apiVersion' => null,
+        'metadata' => null,
+        'spec' => null,
+        'status' => null
     ];
 
     /**
@@ -62,32 +78,56 @@ class DeleteAddonInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * kind  API类型，固定值“Addon”，该值不可修改。
+    * apiVersion  API版本，固定值“v3”，该值不可修改。
+    * metadata  metadata
+    * spec  spec
+    * status  status
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'kind' => 'kind',
+            'apiVersion' => 'apiVersion',
+            'metadata' => 'metadata',
+            'spec' => 'spec',
+            'status' => 'status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * kind  API类型，固定值“Addon”，该值不可修改。
+    * apiVersion  API版本，固定值“v3”，该值不可修改。
+    * metadata  metadata
+    * spec  spec
+    * status  status
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'kind' => 'setKind',
+            'apiVersion' => 'setApiVersion',
+            'metadata' => 'setMetadata',
+            'spec' => 'setSpec',
+            'status' => 'setStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * kind  API类型，固定值“Addon”，该值不可修改。
+    * apiVersion  API版本，固定值“v3”，该值不可修改。
+    * metadata  metadata
+    * spec  spec
+    * status  status
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'kind' => 'getKind',
+            'apiVersion' => 'getApiVersion',
+            'metadata' => 'getMetadata',
+            'spec' => 'getSpec',
+            'status' => 'getStatus'
     ];
 
     /**
@@ -148,7 +188,11 @@ class DeleteAddonInstanceResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['kind'] = isset($data['kind']) ? $data['kind'] : null;
+        $this->container['apiVersion'] = isset($data['apiVersion']) ? $data['apiVersion'] : null;
+        $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
+        $this->container['spec'] = isset($data['spec']) ? $data['spec'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -174,26 +218,122 @@ class DeleteAddonInstanceResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets kind
+    *  API类型，固定值“Addon”，该值不可修改。
     *
     * @return string|null
     */
-    public function getBody()
+    public function getKind()
     {
-        return $this->container['body'];
+        return $this->container['kind'];
     }
 
     /**
-    * Sets body
+    * Sets kind
     *
-    * @param string|null $body body
+    * @param string|null $kind API类型，固定值“Addon”，该值不可修改。
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setKind($kind)
     {
-        $this->container['body'] = $body;
+        $this->container['kind'] = $kind;
+        return $this;
+    }
+
+    /**
+    * Gets apiVersion
+    *  API版本，固定值“v3”，该值不可修改。
+    *
+    * @return string|null
+    */
+    public function getApiVersion()
+    {
+        return $this->container['apiVersion'];
+    }
+
+    /**
+    * Sets apiVersion
+    *
+    * @param string|null $apiVersion API版本，固定值“v3”，该值不可修改。
+    *
+    * @return $this
+    */
+    public function setApiVersion($apiVersion)
+    {
+        $this->container['apiVersion'] = $apiVersion;
+        return $this;
+    }
+
+    /**
+    * Gets metadata
+    *  metadata
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\AddonMetadata|null
+    */
+    public function getMetadata()
+    {
+        return $this->container['metadata'];
+    }
+
+    /**
+    * Sets metadata
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\AddonMetadata|null $metadata metadata
+    *
+    * @return $this
+    */
+    public function setMetadata($metadata)
+    {
+        $this->container['metadata'] = $metadata;
+        return $this;
+    }
+
+    /**
+    * Gets spec
+    *  spec
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\InstanceSpec|null
+    */
+    public function getSpec()
+    {
+        return $this->container['spec'];
+    }
+
+    /**
+    * Sets spec
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\InstanceSpec|null $spec spec
+    *
+    * @return $this
+    */
+    public function setSpec($spec)
+    {
+        $this->container['spec'] = $spec;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  status
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\AddonInstanceStatus|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\AddonInstanceStatus|null $status status
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

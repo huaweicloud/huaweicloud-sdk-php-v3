@@ -20,26 +20,30 @@ class NoSqlCreateBackupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  手动备份名称。  取值范围：长度为4~64位，必须以字母开头（A~Z或a~z），区分大小写，可以包含字母、数字（0~9）、中划线（-）或者下划线（_），不能包含其他特殊字符。
-    * description  手动备份描述。  取值范围：长度不超过256位，且不能包含>!<\"&'=特殊字符。
+    * name  **参数解释：** 手动备份名称。 **约束限制：** 长度为4~64位，必须以字母开头（A~Z或a~z），区分大小写，可以包含字母、数字（0~9）、中划线（-）或者下划线（_），不能包含其他特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 手动备份描述。 **约束限制：** 长度不超过256位，且不能包含>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * databaseTables  **参数解释：** 备份里的库表信息。 **约束限制：** 该参数仅针对GeminiDB Cassandra。 **取值范围：** - 字段为空，表示创建实例级备份。 - 字段非空，表示创建库表级备份。  **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'description' => 'string'
+            'description' => 'string',
+            'databaseTables' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DatabaseTable[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  手动备份名称。  取值范围：长度为4~64位，必须以字母开头（A~Z或a~z），区分大小写，可以包含字母、数字（0~9）、中划线（-）或者下划线（_），不能包含其他特殊字符。
-    * description  手动备份描述。  取值范围：长度不超过256位，且不能包含>!<\"&'=特殊字符。
+    * name  **参数解释：** 手动备份名称。 **约束限制：** 长度为4~64位，必须以字母开头（A~Z或a~z），区分大小写，可以包含字母、数字（0~9）、中划线（-）或者下划线（_），不能包含其他特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 手动备份描述。 **约束限制：** 长度不超过256位，且不能包含>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * databaseTables  **参数解释：** 备份里的库表信息。 **约束限制：** 该参数仅针对GeminiDB Cassandra。 **取值范围：** - 字段为空，表示创建实例级备份。 - 字段非空，表示创建库表级备份。  **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
-        'description' => null
+        'description' => null,
+        'databaseTables' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class NoSqlCreateBackupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  手动备份名称。  取值范围：长度为4~64位，必须以字母开头（A~Z或a~z），区分大小写，可以包含字母、数字（0~9）、中划线（-）或者下划线（_），不能包含其他特殊字符。
-    * description  手动备份描述。  取值范围：长度不超过256位，且不能包含>!<\"&'=特殊字符。
+    * name  **参数解释：** 手动备份名称。 **约束限制：** 长度为4~64位，必须以字母开头（A~Z或a~z），区分大小写，可以包含字母、数字（0~9）、中划线（-）或者下划线（_），不能包含其他特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 手动备份描述。 **约束限制：** 长度不超过256位，且不能包含>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * databaseTables  **参数解释：** 备份里的库表信息。 **约束限制：** 该参数仅针对GeminiDB Cassandra。 **取值范围：** - 字段为空，表示创建实例级备份。 - 字段非空，表示创建库表级备份。  **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
-            'description' => 'description'
+            'description' => 'description',
+            'databaseTables' => 'database_tables'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  手动备份名称。  取值范围：长度为4~64位，必须以字母开头（A~Z或a~z），区分大小写，可以包含字母、数字（0~9）、中划线（-）或者下划线（_），不能包含其他特殊字符。
-    * description  手动备份描述。  取值范围：长度不超过256位，且不能包含>!<\"&'=特殊字符。
+    * name  **参数解释：** 手动备份名称。 **约束限制：** 长度为4~64位，必须以字母开头（A~Z或a~z），区分大小写，可以包含字母、数字（0~9）、中划线（-）或者下划线（_），不能包含其他特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 手动备份描述。 **约束限制：** 长度不超过256位，且不能包含>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * databaseTables  **参数解释：** 备份里的库表信息。 **约束限制：** 该参数仅针对GeminiDB Cassandra。 **取值范围：** - 字段为空，表示创建实例级备份。 - 字段非空，表示创建库表级备份。  **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'databaseTables' => 'setDatabaseTables'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  手动备份名称。  取值范围：长度为4~64位，必须以字母开头（A~Z或a~z），区分大小写，可以包含字母、数字（0~9）、中划线（-）或者下划线（_），不能包含其他特殊字符。
-    * description  手动备份描述。  取值范围：长度不超过256位，且不能包含>!<\"&'=特殊字符。
+    * name  **参数解释：** 手动备份名称。 **约束限制：** 长度为4~64位，必须以字母开头（A~Z或a~z），区分大小写，可以包含字母、数字（0~9）、中划线（-）或者下划线（_），不能包含其他特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 手动备份描述。 **约束限制：** 长度不超过256位，且不能包含>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * databaseTables  **参数解释：** 备份里的库表信息。 **约束限制：** 该参数仅针对GeminiDB Cassandra。 **取值范围：** - 字段为空，表示创建实例级备份。 - 字段非空，表示创建库表级备份。  **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'databaseTables' => 'getDatabaseTables'
     ];
 
     /**
@@ -159,6 +169,7 @@ class NoSqlCreateBackupRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['databaseTables'] = isset($data['databaseTables']) ? $data['databaseTables'] : null;
     }
 
     /**
@@ -191,7 +202,7 @@ class NoSqlCreateBackupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  手动备份名称。  取值范围：长度为4~64位，必须以字母开头（A~Z或a~z），区分大小写，可以包含字母、数字（0~9）、中划线（-）或者下划线（_），不能包含其他特殊字符。
+    *  **参数解释：** 手动备份名称。 **约束限制：** 长度为4~64位，必须以字母开头（A~Z或a~z），区分大小写，可以包含字母、数字（0~9）、中划线（-）或者下划线（_），不能包含其他特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -203,7 +214,7 @@ class NoSqlCreateBackupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 手动备份名称。  取值范围：长度为4~64位，必须以字母开头（A~Z或a~z），区分大小写，可以包含字母、数字（0~9）、中划线（-）或者下划线（_），不能包含其他特殊字符。
+    * @param string $name **参数解释：** 手动备份名称。 **约束限制：** 长度为4~64位，必须以字母开头（A~Z或a~z），区分大小写，可以包含字母、数字（0~9）、中划线（-）或者下划线（_），不能包含其他特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -215,7 +226,7 @@ class NoSqlCreateBackupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  手动备份描述。  取值范围：长度不超过256位，且不能包含>!<\"&'=特殊字符。
+    *  **参数解释：** 手动备份描述。 **约束限制：** 长度不超过256位，且不能包含>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -227,13 +238,37 @@ class NoSqlCreateBackupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 手动备份描述。  取值范围：长度不超过256位，且不能包含>!<\"&'=特殊字符。
+    * @param string $description **参数解释：** 手动备份描述。 **约束限制：** 长度不超过256位，且不能包含>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets databaseTables
+    *  **参数解释：** 备份里的库表信息。 **约束限制：** 该参数仅针对GeminiDB Cassandra。 **取值范围：** - 字段为空，表示创建实例级备份。 - 字段非空，表示创建库表级备份。  **默认取值：** 不涉及。
+    *
+    * @return \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DatabaseTable[]|null
+    */
+    public function getDatabaseTables()
+    {
+        return $this->container['databaseTables'];
+    }
+
+    /**
+    * Sets databaseTables
+    *
+    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DatabaseTable[]|null $databaseTables **参数解释：** 备份里的库表信息。 **约束限制：** 该参数仅针对GeminiDB Cassandra。 **取值范围：** - 字段为空，表示创建实例级备份。 - 字段非空，表示创建库表级备份。  **默认取值：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setDatabaseTables($databaseTables)
+    {
+        $this->container['databaseTables'] = $databaseTables;
         return $this;
     }
 

@@ -21,20 +21,22 @@ class SetAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * errorResults  **参数解释：** 设置磁盘自动扩容策略失败的实例信息列表。 **取值范围：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'errorResults' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\SetAutoPolicyErrorResults[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * errorResults  **参数解释：** 设置磁盘自动扩容策略失败的实例信息列表。 **取值范围：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'errorResults' => null
     ];
 
     /**
@@ -60,29 +62,32 @@ class SetAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * errorResults  **参数解释：** 设置磁盘自动扩容策略失败的实例信息列表。 **取值范围：** 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'errorResults' => 'error_results'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * errorResults  **参数解释：** 设置磁盘自动扩容策略失败的实例信息列表。 **取值范围：** 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
+            'errorResults' => 'setErrorResults'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * errorResults  **参数解释：** 设置磁盘自动扩容策略失败的实例信息列表。 **取值范围：** 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
+            'errorResults' => 'getErrorResults'
     ];
 
     /**
@@ -143,6 +148,7 @@ class SetAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['errorResults'] = isset($data['errorResults']) ? $data['errorResults'] : null;
     }
 
     /**
@@ -165,6 +171,30 @@ class SetAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets errorResults
+    *  **参数解释：** 设置磁盘自动扩容策略失败的实例信息列表。 **取值范围：** 不涉及
+    *
+    * @return \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\SetAutoPolicyErrorResults[]|null
+    */
+    public function getErrorResults()
+    {
+        return $this->container['errorResults'];
+    }
+
+    /**
+    * Sets errorResults
+    *
+    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\SetAutoPolicyErrorResults[]|null $errorResults **参数解释：** 设置磁盘自动扩容策略失败的实例信息列表。 **取值范围：** 不涉及
+    *
+    * @return $this
+    */
+    public function setErrorResults($errorResults)
+    {
+        $this->container['errorResults'] = $errorResults;
+        return $this;
     }
 
     /**

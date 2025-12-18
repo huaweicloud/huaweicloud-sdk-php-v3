@@ -21,21 +21,29 @@ class ShowFlavorCapacityRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * flavorId  flavorId
+    * count  count
+    * regionIds  regionIds
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'flavorId' => 'string'
+            'flavorId' => 'string',
+            'count' => 'string',
+            'regionIds' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * flavorId  flavorId
+    * count  count
+    * regionIds  regionIds
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'flavorId' => null
+        'flavorId' => null,
+        'count' => null,
+        'regionIds' => null
     ];
 
     /**
@@ -62,31 +70,43 @@ class ShowFlavorCapacityRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * flavorId  flavorId
+    * count  count
+    * regionIds  regionIds
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'flavorId' => 'flavor_id'
+            'flavorId' => 'flavor_id',
+            'count' => 'count',
+            'regionIds' => 'region_ids'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * flavorId  flavorId
+    * count  count
+    * regionIds  regionIds
     *
     * @var string[]
     */
     protected static $setters = [
-            'flavorId' => 'setFlavorId'
+            'flavorId' => 'setFlavorId',
+            'count' => 'setCount',
+            'regionIds' => 'setRegionIds'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * flavorId  flavorId
+    * count  count
+    * regionIds  regionIds
     *
     * @var string[]
     */
     protected static $getters = [
-            'flavorId' => 'getFlavorId'
+            'flavorId' => 'getFlavorId',
+            'count' => 'getCount',
+            'regionIds' => 'getRegionIds'
     ];
 
     /**
@@ -148,6 +168,8 @@ class ShowFlavorCapacityRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['flavorId'] = isset($data['flavorId']) ? $data['flavorId'] : null;
+        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
+        $this->container['regionIds'] = isset($data['regionIds']) ? $data['regionIds'] : null;
     }
 
     /**
@@ -196,6 +218,54 @@ class ShowFlavorCapacityRequest implements ModelInterface, ArrayAccess
     public function setFlavorId($flavorId)
     {
         $this->container['flavorId'] = $flavorId;
+        return $this;
+    }
+
+    /**
+    * Gets count
+    *  count
+    *
+    * @return string|null
+    */
+    public function getCount()
+    {
+        return $this->container['count'];
+    }
+
+    /**
+    * Sets count
+    *
+    * @param string|null $count count
+    *
+    * @return $this
+    */
+    public function setCount($count)
+    {
+        $this->container['count'] = $count;
+        return $this;
+    }
+
+    /**
+    * Gets regionIds
+    *  regionIds
+    *
+    * @return string|null
+    */
+    public function getRegionIds()
+    {
+        return $this->container['regionIds'];
+    }
+
+    /**
+    * Sets regionIds
+    *
+    * @param string|null $regionIds regionIds
+    *
+    * @return $this
+    */
+    public function setRegionIds($regionIds)
+    {
+        $this->container['regionIds'] = $regionIds;
         return $this;
     }
 

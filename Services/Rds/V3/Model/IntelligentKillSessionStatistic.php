@@ -21,7 +21,7 @@ class IntelligentKillSessionStatistic implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * keyword  **参数解释**：  该类统计维度下提取到的限流关键字。  **约束限制**：  不涉及。
-    * rawSql  **参数解释**：  随机选取符合sql限流关键字的用户某条sql样例。  **约束限制**：  不涉及。
+    * rawSqlText  **参数解释**：  随机选取符合sql限流关键字的用户某条sql样例。  **约束限制**：  不涉及。
     * ids  **参数解释**：  符合该统计维度的线程id。  **约束限制**：  不涉及。
     * count  **参数解释**：  符合该统计维度的线程id总数量。  **约束限制**：  不涉及。
     * totalTime  **参数解释**：  符合该统计维度的线程总执行时间。  **约束限制**：  不涉及。
@@ -35,7 +35,7 @@ class IntelligentKillSessionStatistic implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'keyword' => 'string',
-            'rawSql' => 'string',
+            'rawSqlText' => 'string',
             'ids' => 'int[]',
             'count' => 'int',
             'totalTime' => 'double',
@@ -49,7 +49,7 @@ class IntelligentKillSessionStatistic implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * keyword  **参数解释**：  该类统计维度下提取到的限流关键字。  **约束限制**：  不涉及。
-    * rawSql  **参数解释**：  随机选取符合sql限流关键字的用户某条sql样例。  **约束限制**：  不涉及。
+    * rawSqlText  **参数解释**：  随机选取符合sql限流关键字的用户某条sql样例。  **约束限制**：  不涉及。
     * ids  **参数解释**：  符合该统计维度的线程id。  **约束限制**：  不涉及。
     * count  **参数解释**：  符合该统计维度的线程id总数量。  **约束限制**：  不涉及。
     * totalTime  **参数解释**：  符合该统计维度的线程总执行时间。  **约束限制**：  不涉及。
@@ -63,7 +63,7 @@ class IntelligentKillSessionStatistic implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'keyword' => null,
-        'rawSql' => null,
+        'rawSqlText' => null,
         'ids' => 'int64',
         'count' => 'int32',
         'totalTime' => 'double',
@@ -98,7 +98,7 @@ class IntelligentKillSessionStatistic implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * keyword  **参数解释**：  该类统计维度下提取到的限流关键字。  **约束限制**：  不涉及。
-    * rawSql  **参数解释**：  随机选取符合sql限流关键字的用户某条sql样例。  **约束限制**：  不涉及。
+    * rawSqlText  **参数解释**：  随机选取符合sql限流关键字的用户某条sql样例。  **约束限制**：  不涉及。
     * ids  **参数解释**：  符合该统计维度的线程id。  **约束限制**：  不涉及。
     * count  **参数解释**：  符合该统计维度的线程id总数量。  **约束限制**：  不涉及。
     * totalTime  **参数解释**：  符合该统计维度的线程总执行时间。  **约束限制**：  不涉及。
@@ -112,7 +112,7 @@ class IntelligentKillSessionStatistic implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'keyword' => 'keyword',
-            'rawSql' => 'raw_sql',
+            'rawSqlText' => 'raw_sql_text',
             'ids' => 'ids',
             'count' => 'count',
             'totalTime' => 'total_time',
@@ -126,7 +126,7 @@ class IntelligentKillSessionStatistic implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * keyword  **参数解释**：  该类统计维度下提取到的限流关键字。  **约束限制**：  不涉及。
-    * rawSql  **参数解释**：  随机选取符合sql限流关键字的用户某条sql样例。  **约束限制**：  不涉及。
+    * rawSqlText  **参数解释**：  随机选取符合sql限流关键字的用户某条sql样例。  **约束限制**：  不涉及。
     * ids  **参数解释**：  符合该统计维度的线程id。  **约束限制**：  不涉及。
     * count  **参数解释**：  符合该统计维度的线程id总数量。  **约束限制**：  不涉及。
     * totalTime  **参数解释**：  符合该统计维度的线程总执行时间。  **约束限制**：  不涉及。
@@ -140,7 +140,7 @@ class IntelligentKillSessionStatistic implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'keyword' => 'setKeyword',
-            'rawSql' => 'setRawSql',
+            'rawSqlText' => 'setRawSqlText',
             'ids' => 'setIds',
             'count' => 'setCount',
             'totalTime' => 'setTotalTime',
@@ -154,7 +154,7 @@ class IntelligentKillSessionStatistic implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * keyword  **参数解释**：  该类统计维度下提取到的限流关键字。  **约束限制**：  不涉及。
-    * rawSql  **参数解释**：  随机选取符合sql限流关键字的用户某条sql样例。  **约束限制**：  不涉及。
+    * rawSqlText  **参数解释**：  随机选取符合sql限流关键字的用户某条sql样例。  **约束限制**：  不涉及。
     * ids  **参数解释**：  符合该统计维度的线程id。  **约束限制**：  不涉及。
     * count  **参数解释**：  符合该统计维度的线程id总数量。  **约束限制**：  不涉及。
     * totalTime  **参数解释**：  符合该统计维度的线程总执行时间。  **约束限制**：  不涉及。
@@ -168,7 +168,7 @@ class IntelligentKillSessionStatistic implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'keyword' => 'getKeyword',
-            'rawSql' => 'getRawSql',
+            'rawSqlText' => 'getRawSqlText',
             'ids' => 'getIds',
             'count' => 'getCount',
             'totalTime' => 'getTotalTime',
@@ -238,7 +238,7 @@ class IntelligentKillSessionStatistic implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['keyword'] = isset($data['keyword']) ? $data['keyword'] : null;
-        $this->container['rawSql'] = isset($data['rawSql']) ? $data['rawSql'] : null;
+        $this->container['rawSqlText'] = isset($data['rawSqlText']) ? $data['rawSqlText'] : null;
         $this->container['ids'] = isset($data['ids']) ? $data['ids'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['totalTime'] = isset($data['totalTime']) ? $data['totalTime'] : null;
@@ -263,11 +263,11 @@ class IntelligentKillSessionStatistic implements ModelInterface, ArrayAccess
             if (!is_null($this->container['keyword']) && (mb_strlen($this->container['keyword']) < 0)) {
                 $invalidProperties[] = "invalid value for 'keyword', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['rawSql']) && (mb_strlen($this->container['rawSql']) > 1000000)) {
-                $invalidProperties[] = "invalid value for 'rawSql', the character length must be smaller than or equal to 1000000.";
+            if (!is_null($this->container['rawSqlText']) && (mb_strlen($this->container['rawSqlText']) > 1000000)) {
+                $invalidProperties[] = "invalid value for 'rawSqlText', the character length must be smaller than or equal to 1000000.";
             }
-            if (!is_null($this->container['rawSql']) && (mb_strlen($this->container['rawSql']) < 0)) {
-                $invalidProperties[] = "invalid value for 'rawSql', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['rawSqlText']) && (mb_strlen($this->container['rawSqlText']) < 0)) {
+                $invalidProperties[] = "invalid value for 'rawSqlText', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['count']) && ($this->container['count'] > 1000)) {
                 $invalidProperties[] = "invalid value for 'count', must be smaller than or equal to 1000.";
@@ -350,26 +350,26 @@ class IntelligentKillSessionStatistic implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets rawSql
+    * Gets rawSqlText
     *  **参数解释**：  随机选取符合sql限流关键字的用户某条sql样例。  **约束限制**：  不涉及。
     *
     * @return string|null
     */
-    public function getRawSql()
+    public function getRawSqlText()
     {
-        return $this->container['rawSql'];
+        return $this->container['rawSqlText'];
     }
 
     /**
-    * Sets rawSql
+    * Sets rawSqlText
     *
-    * @param string|null $rawSql **参数解释**：  随机选取符合sql限流关键字的用户某条sql样例。  **约束限制**：  不涉及。
+    * @param string|null $rawSqlText **参数解释**：  随机选取符合sql限流关键字的用户某条sql样例。  **约束限制**：  不涉及。
     *
     * @return $this
     */
-    public function setRawSql($rawSql)
+    public function setRawSqlText($rawSqlText)
     {
-        $this->container['rawSql'] = $rawSql;
+        $this->container['rawSqlText'] = $rawSqlText;
         return $this;
     }
 
