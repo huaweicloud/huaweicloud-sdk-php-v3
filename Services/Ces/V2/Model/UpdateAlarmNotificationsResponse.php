@@ -24,8 +24,11 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     * notificationEnabled  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
     * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。
     * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。
-    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
-    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。如 00:00    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。如 08:00   **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **取值范围**： 长度为[1,16]个字符。
+    * notificationManner  **参数解释**： 告警的通知方式 **取值范围**： - NOTIFICATION_GROUP: 通知组 - TOPIC_SUBSCRIPTION: 主题订阅 - NOTIFICATION_POLICY：通知策略
+    * notificationPolicyIds  **参数解释**： 关联的通知策略ID列表
     *
     * @var string[]
     */
@@ -34,7 +37,10 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
             'alarmNotifications' => '\HuaweiCloud\SDK\Ces\V2\Model\NotificationResp[]',
             'okNotifications' => '\HuaweiCloud\SDK\Ces\V2\Model\NotificationResp[]',
             'notificationBeginTime' => 'string',
-            'notificationEndTime' => 'string'
+            'notificationEndTime' => 'string',
+            'effectiveTimezone' => 'string',
+            'notificationManner' => 'string',
+            'notificationPolicyIds' => 'string[]'
     ];
 
     /**
@@ -42,8 +48,11 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     * notificationEnabled  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
     * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。
     * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。
-    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
-    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。如 00:00    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。如 08:00   **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **取值范围**： 长度为[1,16]个字符。
+    * notificationManner  **参数解释**： 告警的通知方式 **取值范围**： - NOTIFICATION_GROUP: 通知组 - TOPIC_SUBSCRIPTION: 主题订阅 - NOTIFICATION_POLICY：通知策略
+    * notificationPolicyIds  **参数解释**： 关联的通知策略ID列表
     *
     * @var string[]
     */
@@ -52,7 +61,10 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
         'alarmNotifications' => null,
         'okNotifications' => null,
         'notificationBeginTime' => null,
-        'notificationEndTime' => null
+        'notificationEndTime' => null,
+        'effectiveTimezone' => null,
+        'notificationManner' => null,
+        'notificationPolicyIds' => null
     ];
 
     /**
@@ -81,8 +93,11 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     * notificationEnabled  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
     * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。
     * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。
-    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
-    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。如 00:00    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。如 08:00   **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **取值范围**： 长度为[1,16]个字符。
+    * notificationManner  **参数解释**： 告警的通知方式 **取值范围**： - NOTIFICATION_GROUP: 通知组 - TOPIC_SUBSCRIPTION: 主题订阅 - NOTIFICATION_POLICY：通知策略
+    * notificationPolicyIds  **参数解释**： 关联的通知策略ID列表
     *
     * @var string[]
     */
@@ -91,7 +106,10 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
             'alarmNotifications' => 'alarm_notifications',
             'okNotifications' => 'ok_notifications',
             'notificationBeginTime' => 'notification_begin_time',
-            'notificationEndTime' => 'notification_end_time'
+            'notificationEndTime' => 'notification_end_time',
+            'effectiveTimezone' => 'effective_timezone',
+            'notificationManner' => 'notification_manner',
+            'notificationPolicyIds' => 'notification_policy_ids'
     ];
 
     /**
@@ -99,8 +117,11 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     * notificationEnabled  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
     * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。
     * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。
-    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
-    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。如 00:00    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。如 08:00   **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **取值范围**： 长度为[1,16]个字符。
+    * notificationManner  **参数解释**： 告警的通知方式 **取值范围**： - NOTIFICATION_GROUP: 通知组 - TOPIC_SUBSCRIPTION: 主题订阅 - NOTIFICATION_POLICY：通知策略
+    * notificationPolicyIds  **参数解释**： 关联的通知策略ID列表
     *
     * @var string[]
     */
@@ -109,7 +130,10 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
             'alarmNotifications' => 'setAlarmNotifications',
             'okNotifications' => 'setOkNotifications',
             'notificationBeginTime' => 'setNotificationBeginTime',
-            'notificationEndTime' => 'setNotificationEndTime'
+            'notificationEndTime' => 'setNotificationEndTime',
+            'effectiveTimezone' => 'setEffectiveTimezone',
+            'notificationManner' => 'setNotificationManner',
+            'notificationPolicyIds' => 'setNotificationPolicyIds'
     ];
 
     /**
@@ -117,8 +141,11 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     * notificationEnabled  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
     * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。
     * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。
-    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
-    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。如 00:00    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。如 08:00   **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **取值范围**： 长度为[1,16]个字符。
+    * notificationManner  **参数解释**： 告警的通知方式 **取值范围**： - NOTIFICATION_GROUP: 通知组 - TOPIC_SUBSCRIPTION: 主题订阅 - NOTIFICATION_POLICY：通知策略
+    * notificationPolicyIds  **参数解释**： 关联的通知策略ID列表
     *
     * @var string[]
     */
@@ -127,7 +154,10 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
             'alarmNotifications' => 'getAlarmNotifications',
             'okNotifications' => 'getOkNotifications',
             'notificationBeginTime' => 'getNotificationBeginTime',
-            'notificationEndTime' => 'getNotificationEndTime'
+            'notificationEndTime' => 'getNotificationEndTime',
+            'effectiveTimezone' => 'getEffectiveTimezone',
+            'notificationManner' => 'getNotificationManner',
+            'notificationPolicyIds' => 'getNotificationPolicyIds'
     ];
 
     /**
@@ -170,7 +200,24 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const NOTIFICATION_MANNER_NOTIFICATION_GROUP = 'NOTIFICATION_GROUP';
+    const NOTIFICATION_MANNER_TOPIC_SUBSCRIPTION = 'TOPIC_SUBSCRIPTION';
+    const NOTIFICATION_MANNER_NOTIFICATION_POLICY = 'NOTIFICATION_POLICY';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getNotificationMannerAllowableValues()
+    {
+        return [
+            self::NOTIFICATION_MANNER_NOTIFICATION_GROUP,
+            self::NOTIFICATION_MANNER_TOPIC_SUBSCRIPTION,
+            self::NOTIFICATION_MANNER_NOTIFICATION_POLICY,
+        ];
+    }
 
 
     /**
@@ -193,6 +240,9 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
         $this->container['okNotifications'] = isset($data['okNotifications']) ? $data['okNotifications'] : null;
         $this->container['notificationBeginTime'] = isset($data['notificationBeginTime']) ? $data['notificationBeginTime'] : null;
         $this->container['notificationEndTime'] = isset($data['notificationEndTime']) ? $data['notificationEndTime'] : null;
+        $this->container['effectiveTimezone'] = isset($data['effectiveTimezone']) ? $data['effectiveTimezone'] : null;
+        $this->container['notificationManner'] = isset($data['notificationManner']) ? $data['notificationManner'] : null;
+        $this->container['notificationPolicyIds'] = isset($data['notificationPolicyIds']) ? $data['notificationPolicyIds'] : null;
     }
 
     /**
@@ -220,6 +270,29 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['notificationEndTime']) && !preg_match("/^([01][0-9]|2[0-3]):([0-5][0-9])$/", $this->container['notificationEndTime'])) {
                 $invalidProperties[] = "invalid value for 'notificationEndTime', must be conform to the pattern /^([01][0-9]|2[0-3]):([0-5][0-9])$/.";
+            }
+            if (!is_null($this->container['effectiveTimezone']) && (mb_strlen($this->container['effectiveTimezone']) > 16)) {
+                $invalidProperties[] = "invalid value for 'effectiveTimezone', the character length must be smaller than or equal to 16.";
+            }
+            if (!is_null($this->container['effectiveTimezone']) && (mb_strlen($this->container['effectiveTimezone']) < 1)) {
+                $invalidProperties[] = "invalid value for 'effectiveTimezone', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['effectiveTimezone']) && !preg_match("/^(GMT[+-](0|0[1-9]|1[0-2]):00)$/", $this->container['effectiveTimezone'])) {
+                $invalidProperties[] = "invalid value for 'effectiveTimezone', must be conform to the pattern /^(GMT[+-](0|0[1-9]|1[0-2]):00)$/.";
+            }
+            $allowedValues = $this->getNotificationMannerAllowableValues();
+                if (!is_null($this->container['notificationManner']) && !in_array($this->container['notificationManner'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'notificationManner', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['notificationManner']) && (mb_strlen($this->container['notificationManner']) > 64)) {
+                $invalidProperties[] = "invalid value for 'notificationManner', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['notificationManner']) && (mb_strlen($this->container['notificationManner']) < 0)) {
+                $invalidProperties[] = "invalid value for 'notificationManner', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -309,7 +382,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationBeginTime
-    *  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    *  **参数解释**： 告警通知开启时间。如 00:00    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
     * @return string|null
     */
@@ -321,7 +394,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets notificationBeginTime
     *
-    * @param string|null $notificationBeginTime **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * @param string|null $notificationBeginTime **参数解释**： 告警通知开启时间。如 00:00    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
     * @return $this
     */
@@ -333,7 +406,7 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationEndTime
-    *  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    *  **参数解释**： 告警通知关闭时间。如 08:00   **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
     * @return string|null
     */
@@ -345,13 +418,85 @@ class UpdateAlarmNotificationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets notificationEndTime
     *
-    * @param string|null $notificationEndTime **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * @param string|null $notificationEndTime **参数解释**： 告警通知关闭时间。如 08:00   **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
     * @return $this
     */
     public function setNotificationEndTime($notificationEndTime)
     {
         $this->container['notificationEndTime'] = $notificationEndTime;
+        return $this;
+    }
+
+    /**
+    * Gets effectiveTimezone
+    *  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **取值范围**： 长度为[1,16]个字符。
+    *
+    * @return string|null
+    */
+    public function getEffectiveTimezone()
+    {
+        return $this->container['effectiveTimezone'];
+    }
+
+    /**
+    * Sets effectiveTimezone
+    *
+    * @param string|null $effectiveTimezone **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **取值范围**： 长度为[1,16]个字符。
+    *
+    * @return $this
+    */
+    public function setEffectiveTimezone($effectiveTimezone)
+    {
+        $this->container['effectiveTimezone'] = $effectiveTimezone;
+        return $this;
+    }
+
+    /**
+    * Gets notificationManner
+    *  **参数解释**： 告警的通知方式 **取值范围**： - NOTIFICATION_GROUP: 通知组 - TOPIC_SUBSCRIPTION: 主题订阅 - NOTIFICATION_POLICY：通知策略
+    *
+    * @return string|null
+    */
+    public function getNotificationManner()
+    {
+        return $this->container['notificationManner'];
+    }
+
+    /**
+    * Sets notificationManner
+    *
+    * @param string|null $notificationManner **参数解释**： 告警的通知方式 **取值范围**： - NOTIFICATION_GROUP: 通知组 - TOPIC_SUBSCRIPTION: 主题订阅 - NOTIFICATION_POLICY：通知策略
+    *
+    * @return $this
+    */
+    public function setNotificationManner($notificationManner)
+    {
+        $this->container['notificationManner'] = $notificationManner;
+        return $this;
+    }
+
+    /**
+    * Gets notificationPolicyIds
+    *  **参数解释**： 关联的通知策略ID列表
+    *
+    * @return string[]|null
+    */
+    public function getNotificationPolicyIds()
+    {
+        return $this->container['notificationPolicyIds'];
+    }
+
+    /**
+    * Sets notificationPolicyIds
+    *
+    * @param string[]|null $notificationPolicyIds **参数解释**： 关联的通知策略ID列表
+    *
+    * @return $this
+    */
+    public function setNotificationPolicyIds($notificationPolicyIds)
+    {
+        $this->container['notificationPolicyIds'] = $notificationPolicyIds;
         return $this;
     }
 

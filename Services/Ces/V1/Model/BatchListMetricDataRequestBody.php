@@ -21,7 +21,7 @@ class BatchListMetricDataRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * metrics  指标数据。数组长度最大500
-    * period  指标监控数据的聚合粒度，取值范围：1，300，1200，3600，14400，86400；1为监控资源的实时数据；300为聚合5分钟粒度数据，表示5分钟一个数据点；1200为聚合20分钟粒度数据，表示20分钟一个数据点；3600为聚合1小时粒度数据，表示1小时一个数据点；14400为聚合4小时粒度数据，表示4小时一个数据点；86400为聚合1天粒度数据，表示1天一个数据点；聚合解释可查看：“[聚合含义](https://support.huaweicloud.com/ces_faq/ces_faq_0009.html)”。
+    * period  period
     * filter  filter
     * from  from
     * to  to
@@ -30,7 +30,7 @@ class BatchListMetricDataRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'metrics' => '\HuaweiCloud\SDK\Ces\V1\Model\MetricInfo[]',
-            'period' => 'string',
+            'period' => '\HuaweiCloud\SDK\Ces\V1\Model\BatchPeriod',
             'filter' => '\HuaweiCloud\SDK\Ces\V1\Model\Filter',
             'from' => 'int',
             'to' => 'int'
@@ -39,7 +39,7 @@ class BatchListMetricDataRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * metrics  指标数据。数组长度最大500
-    * period  指标监控数据的聚合粒度，取值范围：1，300，1200，3600，14400，86400；1为监控资源的实时数据；300为聚合5分钟粒度数据，表示5分钟一个数据点；1200为聚合20分钟粒度数据，表示20分钟一个数据点；3600为聚合1小时粒度数据，表示1小时一个数据点；14400为聚合4小时粒度数据，表示4小时一个数据点；86400为聚合1天粒度数据，表示1天一个数据点；聚合解释可查看：“[聚合含义](https://support.huaweicloud.com/ces_faq/ces_faq_0009.html)”。
+    * period  period
     * filter  filter
     * from  from
     * to  to
@@ -78,7 +78,7 @@ class BatchListMetricDataRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * metrics  指标数据。数组长度最大500
-    * period  指标监控数据的聚合粒度，取值范围：1，300，1200，3600，14400，86400；1为监控资源的实时数据；300为聚合5分钟粒度数据，表示5分钟一个数据点；1200为聚合20分钟粒度数据，表示20分钟一个数据点；3600为聚合1小时粒度数据，表示1小时一个数据点；14400为聚合4小时粒度数据，表示4小时一个数据点；86400为聚合1天粒度数据，表示1天一个数据点；聚合解释可查看：“[聚合含义](https://support.huaweicloud.com/ces_faq/ces_faq_0009.html)”。
+    * period  period
     * filter  filter
     * from  from
     * to  to
@@ -96,7 +96,7 @@ class BatchListMetricDataRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * metrics  指标数据。数组长度最大500
-    * period  指标监控数据的聚合粒度，取值范围：1，300，1200，3600，14400，86400；1为监控资源的实时数据；300为聚合5分钟粒度数据，表示5分钟一个数据点；1200为聚合20分钟粒度数据，表示20分钟一个数据点；3600为聚合1小时粒度数据，表示1小时一个数据点；14400为聚合4小时粒度数据，表示4小时一个数据点；86400为聚合1天粒度数据，表示1天一个数据点；聚合解释可查看：“[聚合含义](https://support.huaweicloud.com/ces_faq/ces_faq_0009.html)”。
+    * period  period
     * filter  filter
     * from  from
     * to  to
@@ -114,7 +114,7 @@ class BatchListMetricDataRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * metrics  指标数据。数组长度最大500
-    * period  指标监控数据的聚合粒度，取值范围：1，300，1200，3600，14400，86400；1为监控资源的实时数据；300为聚合5分钟粒度数据，表示5分钟一个数据点；1200为聚合20分钟粒度数据，表示20分钟一个数据点；3600为聚合1小时粒度数据，表示1小时一个数据点；14400为聚合4小时粒度数据，表示4小时一个数据点；86400为聚合1天粒度数据，表示1天一个数据点；聚合解释可查看：“[聚合含义](https://support.huaweicloud.com/ces_faq/ces_faq_0009.html)”。
+    * period  period
     * filter  filter
     * from  from
     * to  to
@@ -169,32 +169,7 @@ class BatchListMetricDataRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const PERIOD__1 = '1';
-    const PERIOD__60 = '60';
-    const PERIOD__300 = '300';
-    const PERIOD__1200 = '1200';
-    const PERIOD__3600 = '3600';
-    const PERIOD__14400 = '14400';
-    const PERIOD__86400 = '86400';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getPeriodAllowableValues()
-    {
-        return [
-            self::PERIOD__1,
-            self::PERIOD__60,
-            self::PERIOD__300,
-            self::PERIOD__1200,
-            self::PERIOD__3600,
-            self::PERIOD__14400,
-            self::PERIOD__86400,
-        ];
-    }
 
 
     /**
@@ -233,14 +208,6 @@ class BatchListMetricDataRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['period'] === null) {
             $invalidProperties[] = "'period' can't be null";
         }
-            $allowedValues = $this->getPeriodAllowableValues();
-                if (!is_null($this->container['period']) && !in_array($this->container['period'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'period', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         if ($this->container['filter'] === null) {
             $invalidProperties[] = "'filter' can't be null";
         }
@@ -302,9 +269,9 @@ class BatchListMetricDataRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets period
-    *  指标监控数据的聚合粒度，取值范围：1，300，1200，3600，14400，86400；1为监控资源的实时数据；300为聚合5分钟粒度数据，表示5分钟一个数据点；1200为聚合20分钟粒度数据，表示20分钟一个数据点；3600为聚合1小时粒度数据，表示1小时一个数据点；14400为聚合4小时粒度数据，表示4小时一个数据点；86400为聚合1天粒度数据，表示1天一个数据点；聚合解释可查看：“[聚合含义](https://support.huaweicloud.com/ces_faq/ces_faq_0009.html)”。
+    *  period
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\BatchPeriod
     */
     public function getPeriod()
     {
@@ -314,7 +281,7 @@ class BatchListMetricDataRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets period
     *
-    * @param string $period 指标监控数据的聚合粒度，取值范围：1，300，1200，3600，14400，86400；1为监控资源的实时数据；300为聚合5分钟粒度数据，表示5分钟一个数据点；1200为聚合20分钟粒度数据，表示20分钟一个数据点；3600为聚合1小时粒度数据，表示1小时一个数据点；14400为聚合4小时粒度数据，表示4小时一个数据点；86400为聚合1天粒度数据，表示1天一个数据点；聚合解释可查看：“[聚合含义](https://support.huaweicloud.com/ces_faq/ces_faq_0009.html)”。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\BatchPeriod $period period
     *
     * @return $this
     */

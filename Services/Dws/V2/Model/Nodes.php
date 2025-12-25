@@ -21,7 +21,7 @@ class Nodes implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释**： 集群实例ID。 **取值范围**： 不涉及。
-    * status  **参数解释**： 集群实例状态。 **取值范围**： 100：创建中 199：空闲 200：可用 300：不可用 303：创建失败 304：删除中 305：删除失败 400：已删除
+    * status  **参数解释**： 集群实例状态。 **取值范围**： - 100：创建中 - 199：空闲 - 200：可用 - 300：不可用 - 303：创建失败 - 304：删除中 - 305：删除失败 - 400：已删除
     * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class Nodes implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释**： 集群实例ID。 **取值范围**： 不涉及。
-    * status  **参数解释**： 集群实例状态。 **取值范围**： 100：创建中 199：空闲 200：可用 300：不可用 303：创建失败 304：删除中 305：删除失败 400：已删除
+    * status  **参数解释**： 集群实例状态。 **取值范围**： - 100：创建中 - 199：空闲 - 200：可用 - 300：不可用 - 303：创建失败 - 304：删除中 - 305：删除失败 - 400：已删除
     * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class Nodes implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  **参数解释**： 集群实例ID。 **取值范围**： 不涉及。
-    * status  **参数解释**： 集群实例状态。 **取值范围**： 100：创建中 199：空闲 200：可用 300：不可用 303：创建失败 304：删除中 305：删除失败 400：已删除
+    * status  **参数解释**： 集群实例状态。 **取值范围**： - 100：创建中 - 199：空闲 - 200：可用 - 300：不可用 - 303：创建失败 - 304：删除中 - 305：删除失败 - 400：已删除
     * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class Nodes implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释**： 集群实例ID。 **取值范围**： 不涉及。
-    * status  **参数解释**： 集群实例状态。 **取值范围**： 100：创建中 199：空闲 200：可用 300：不可用 303：创建失败 304：删除中 305：删除失败 400：已删除
+    * status  **参数解释**： 集群实例状态。 **取值范围**： - 100：创建中 - 199：空闲 - 200：可用 - 300：不可用 - 303：创建失败 - 304：删除中 - 305：删除失败 - 400：已删除
     * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class Nodes implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释**： 集群实例ID。 **取值范围**： 不涉及。
-    * status  **参数解释**： 集群实例状态。 **取值范围**： 100：创建中 199：空闲 200：可用 300：不可用 303：创建失败 304：删除中 305：删除失败 400：已删除
+    * status  **参数解释**： 集群实例状态。 **取值范围**： - 100：创建中 - 199：空闲 - 200：可用 - 300：不可用 - 303：创建失败 - 304：删除中 - 305：删除失败 - 400：已删除
     * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -226,7 +226,7 @@ class Nodes implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 集群实例状态。 **取值范围**： 100：创建中 199：空闲 200：可用 300：不可用 303：创建失败 304：删除中 305：删除失败 400：已删除
+    *  **参数解释**： 集群实例状态。 **取值范围**： - 100：创建中 - 199：空闲 - 200：可用 - 300：不可用 - 303：创建失败 - 304：删除中 - 305：删除失败 - 400：已删除
     *
     * @return string
     */
@@ -238,7 +238,7 @@ class Nodes implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status **参数解释**： 集群实例状态。 **取值范围**： 100：创建中 199：空闲 200：可用 300：不可用 303：创建失败 304：删除中 305：删除失败 400：已删除
+    * @param string $status **参数解释**： 集群实例状态。 **取值范围**： - 100：创建中 - 199：空闲 - 200：可用 - 300：不可用 - 303：创建失败 - 304：删除中 - 305：删除失败 - 400：已删除
     *
     * @return $this
     */

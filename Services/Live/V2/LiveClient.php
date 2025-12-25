@@ -1513,6 +1513,9 @@ class LiveClient extends Client
         if ($localVarParams['stream'] !== null) {
             $queryParams['stream'] = $localVarParams['stream'];
         }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
         if ($localVarParams['startTime'] !== null) {
             $queryParams['start_time'] = $localVarParams['startTime'];
         }

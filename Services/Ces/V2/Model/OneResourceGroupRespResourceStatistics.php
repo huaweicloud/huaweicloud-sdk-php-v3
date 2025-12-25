@@ -20,10 +20,10 @@ class OneResourceGroupRespResourceStatistics implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * unhealthy  告警中的资源数
-    * total  资源总数
-    * eventUnhealthy  已触发的资源数
-    * namespaces  资源类型数
+    * unhealthy  **参数解释** 该资源分组中当前处在告警状态的资源个数。  **取值范围** 在[0,9999999]区间内。
+    * total  **参数解释** 该资源分组中资源的总个数。  **取值范围** 在[0,9999999]区间内。
+    * eventUnhealthy  **参数解释** 该资源分组中已触发的资源个数。  **取值范围** 在[0,9999999]区间内。
+    * namespaces  **参数解释** 该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。 **取值范围** 在[0,9999999]区间内。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class OneResourceGroupRespResourceStatistics implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * unhealthy  告警中的资源数
-    * total  资源总数
-    * eventUnhealthy  已触发的资源数
-    * namespaces  资源类型数
+    * unhealthy  **参数解释** 该资源分组中当前处在告警状态的资源个数。  **取值范围** 在[0,9999999]区间内。
+    * total  **参数解释** 该资源分组中资源的总个数。  **取值范围** 在[0,9999999]区间内。
+    * eventUnhealthy  **参数解释** 该资源分组中已触发的资源个数。  **取值范围** 在[0,9999999]区间内。
+    * namespaces  **参数解释** 该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。 **取值范围** 在[0,9999999]区间内。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class OneResourceGroupRespResourceStatistics implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * unhealthy  告警中的资源数
-    * total  资源总数
-    * eventUnhealthy  已触发的资源数
-    * namespaces  资源类型数
+    * unhealthy  **参数解释** 该资源分组中当前处在告警状态的资源个数。  **取值范围** 在[0,9999999]区间内。
+    * total  **参数解释** 该资源分组中资源的总个数。  **取值范围** 在[0,9999999]区间内。
+    * eventUnhealthy  **参数解释** 该资源分组中已触发的资源个数。  **取值范围** 在[0,9999999]区间内。
+    * namespaces  **参数解释** 该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。 **取值范围** 在[0,9999999]区间内。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class OneResourceGroupRespResourceStatistics implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * unhealthy  告警中的资源数
-    * total  资源总数
-    * eventUnhealthy  已触发的资源数
-    * namespaces  资源类型数
+    * unhealthy  **参数解释** 该资源分组中当前处在告警状态的资源个数。  **取值范围** 在[0,9999999]区间内。
+    * total  **参数解释** 该资源分组中资源的总个数。  **取值范围** 在[0,9999999]区间内。
+    * eventUnhealthy  **参数解释** 该资源分组中已触发的资源个数。  **取值范围** 在[0,9999999]区间内。
+    * namespaces  **参数解释** 该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。 **取值范围** 在[0,9999999]区间内。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class OneResourceGroupRespResourceStatistics implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * unhealthy  告警中的资源数
-    * total  资源总数
-    * eventUnhealthy  已触发的资源数
-    * namespaces  资源类型数
+    * unhealthy  **参数解释** 该资源分组中当前处在告警状态的资源个数。  **取值范围** 在[0,9999999]区间内。
+    * total  **参数解释** 该资源分组中资源的总个数。  **取值范围** 在[0,9999999]区间内。
+    * eventUnhealthy  **参数解释** 该资源分组中已触发的资源个数。  **取值范围** 在[0,9999999]区间内。
+    * namespaces  **参数解释** 该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。 **取值范围** 在[0,9999999]区间内。
     *
     * @var string[]
     */
@@ -231,7 +231,7 @@ class OneResourceGroupRespResourceStatistics implements ModelInterface, ArrayAcc
 
     /**
     * Gets unhealthy
-    *  告警中的资源数
+    *  **参数解释** 该资源分组中当前处在告警状态的资源个数。  **取值范围** 在[0,9999999]区间内。
     *
     * @return int|null
     */
@@ -243,7 +243,7 @@ class OneResourceGroupRespResourceStatistics implements ModelInterface, ArrayAcc
     /**
     * Sets unhealthy
     *
-    * @param int|null $unhealthy 告警中的资源数
+    * @param int|null $unhealthy **参数解释** 该资源分组中当前处在告警状态的资源个数。  **取值范围** 在[0,9999999]区间内。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class OneResourceGroupRespResourceStatistics implements ModelInterface, ArrayAcc
 
     /**
     * Gets total
-    *  资源总数
+    *  **参数解释** 该资源分组中资源的总个数。  **取值范围** 在[0,9999999]区间内。
     *
     * @return int|null
     */
@@ -267,7 +267,7 @@ class OneResourceGroupRespResourceStatistics implements ModelInterface, ArrayAcc
     /**
     * Sets total
     *
-    * @param int|null $total 资源总数
+    * @param int|null $total **参数解释** 该资源分组中资源的总个数。  **取值范围** 在[0,9999999]区间内。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class OneResourceGroupRespResourceStatistics implements ModelInterface, ArrayAcc
 
     /**
     * Gets eventUnhealthy
-    *  已触发的资源数
+    *  **参数解释** 该资源分组中已触发的资源个数。  **取值范围** 在[0,9999999]区间内。
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class OneResourceGroupRespResourceStatistics implements ModelInterface, ArrayAcc
     /**
     * Sets eventUnhealthy
     *
-    * @param int|null $eventUnhealthy 已触发的资源数
+    * @param int|null $eventUnhealthy **参数解释** 该资源分组中已触发的资源个数。  **取值范围** 在[0,9999999]区间内。
     *
     * @return $this
     */
@@ -303,7 +303,7 @@ class OneResourceGroupRespResourceStatistics implements ModelInterface, ArrayAcc
 
     /**
     * Gets namespaces
-    *  资源类型数
+    *  **参数解释** 该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。 **取值范围** 在[0,9999999]区间内。
     *
     * @return int|null
     */
@@ -315,7 +315,7 @@ class OneResourceGroupRespResourceStatistics implements ModelInterface, ArrayAcc
     /**
     * Sets namespaces
     *
-    * @param int|null $namespaces 资源类型数
+    * @param int|null $namespaces **参数解释** 该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。 **取值范围** 在[0,9999999]区间内。
     *
     * @return $this
     */

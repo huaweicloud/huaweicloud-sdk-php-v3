@@ -20,7 +20,7 @@ class DimensionResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  **参数解释**： 资源维度，如：弹性云服务器，则维度为instance_id。各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。 **取值范围**： 以字母开头，只能包含字母、数字、“_”、“-”。
+    * name  **参数解释**： 资源维度名称，如：弹性云服务器，则维度为instance_id。各服务资源的资源维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。 **取值范围**： 以字母开头，只能包含字母、数字、“_”、“-”。长度为[1,32]个字符。
     * value  **参数解释**： 资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **取值范围**： 长度为[1,256]个字符。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class DimensionResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  **参数解释**： 资源维度，如：弹性云服务器，则维度为instance_id。各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。 **取值范围**： 以字母开头，只能包含字母、数字、“_”、“-”。
+    * name  **参数解释**： 资源维度名称，如：弹性云服务器，则维度为instance_id。各服务资源的资源维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。 **取值范围**： 以字母开头，只能包含字母、数字、“_”、“-”。长度为[1,32]个字符。
     * value  **参数解释**： 资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **取值范围**： 长度为[1,256]个字符。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class DimensionResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  **参数解释**： 资源维度，如：弹性云服务器，则维度为instance_id。各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。 **取值范围**： 以字母开头，只能包含字母、数字、“_”、“-”。
+    * name  **参数解释**： 资源维度名称，如：弹性云服务器，则维度为instance_id。各服务资源的资源维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。 **取值范围**： 以字母开头，只能包含字母、数字、“_”、“-”。长度为[1,32]个字符。
     * value  **参数解释**： 资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **取值范围**： 长度为[1,256]个字符。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class DimensionResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  **参数解释**： 资源维度，如：弹性云服务器，则维度为instance_id。各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。 **取值范围**： 以字母开头，只能包含字母、数字、“_”、“-”。
+    * name  **参数解释**： 资源维度名称，如：弹性云服务器，则维度为instance_id。各服务资源的资源维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。 **取值范围**： 以字母开头，只能包含字母、数字、“_”、“-”。长度为[1,32]个字符。
     * value  **参数解释**： 资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **取值范围**： 长度为[1,256]个字符。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class DimensionResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  **参数解释**： 资源维度，如：弹性云服务器，则维度为instance_id。各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。 **取值范围**： 以字母开头，只能包含字母、数字、“_”、“-”。
+    * name  **参数解释**： 资源维度名称，如：弹性云服务器，则维度为instance_id。各服务资源的资源维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。 **取值范围**： 以字母开头，只能包含字母、数字、“_”、“-”。长度为[1,32]个字符。
     * value  **参数解释**： 资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **取值范围**： 长度为[1,256]个字符。
     *
     * @var string[]
@@ -203,7 +203,7 @@ class DimensionResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  **参数解释**： 资源维度，如：弹性云服务器，则维度为instance_id。各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。 **取值范围**： 以字母开头，只能包含字母、数字、“_”、“-”。
+    *  **参数解释**： 资源维度名称，如：弹性云服务器，则维度为instance_id。各服务资源的资源维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。 **取值范围**： 以字母开头，只能包含字母、数字、“_”、“-”。长度为[1,32]个字符。
     *
     * @return string|null
     */
@@ -215,7 +215,7 @@ class DimensionResp implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name **参数解释**： 资源维度，如：弹性云服务器，则维度为instance_id。各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。 **取值范围**： 以字母开头，只能包含字母、数字、“_”、“-”。
+    * @param string|null $name **参数解释**： 资源维度名称，如：弹性云服务器，则维度为instance_id。各服务资源的资源维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。 **取值范围**： 以字母开头，只能包含字母、数字、“_”、“-”。长度为[1,32]个字符。
     *
     * @return $this
     */

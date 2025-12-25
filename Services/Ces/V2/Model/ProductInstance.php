@@ -20,7 +20,7 @@ class ProductInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * firstDimensionName  **参数解释** 资源首层维度，如：弹性云服务器，则维度为instance_id **约束限制** 不涉及 **取值范围** 资源维度，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，维度的最大长度为32。 **默认取值** 不涉及
+    * firstDimensionName  **参数解释** 资源首层维度，如：弹性云服务器，则维度为instance_id **约束限制** 不涉及 **取值范围** 资源维度名称，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，维度的最大长度为32。 **默认取值** 不涉及
     * firstDimensionValue  **参数解释** 资源首层维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制** 不涉及 **取值范围** 长度为[1,256]个字符。 **默认取值** 不涉及
     * resourceName  **参数解释** 资源名称 **约束限制** 不涉及 **取值范围** 长度[1,128]个字符 **默认取值** 不涉及
     *
@@ -34,7 +34,7 @@ class ProductInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * firstDimensionName  **参数解释** 资源首层维度，如：弹性云服务器，则维度为instance_id **约束限制** 不涉及 **取值范围** 资源维度，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，维度的最大长度为32。 **默认取值** 不涉及
+    * firstDimensionName  **参数解释** 资源首层维度，如：弹性云服务器，则维度为instance_id **约束限制** 不涉及 **取值范围** 资源维度名称，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，维度的最大长度为32。 **默认取值** 不涉及
     * firstDimensionValue  **参数解释** 资源首层维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制** 不涉及 **取值范围** 长度为[1,256]个字符。 **默认取值** 不涉及
     * resourceName  **参数解释** 资源名称 **约束限制** 不涉及 **取值范围** 长度[1,128]个字符 **默认取值** 不涉及
     *
@@ -69,7 +69,7 @@ class ProductInstance implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * firstDimensionName  **参数解释** 资源首层维度，如：弹性云服务器，则维度为instance_id **约束限制** 不涉及 **取值范围** 资源维度，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，维度的最大长度为32。 **默认取值** 不涉及
+    * firstDimensionName  **参数解释** 资源首层维度，如：弹性云服务器，则维度为instance_id **约束限制** 不涉及 **取值范围** 资源维度名称，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，维度的最大长度为32。 **默认取值** 不涉及
     * firstDimensionValue  **参数解释** 资源首层维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制** 不涉及 **取值范围** 长度为[1,256]个字符。 **默认取值** 不涉及
     * resourceName  **参数解释** 资源名称 **约束限制** 不涉及 **取值范围** 长度[1,128]个字符 **默认取值** 不涉及
     *
@@ -83,7 +83,7 @@ class ProductInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * firstDimensionName  **参数解释** 资源首层维度，如：弹性云服务器，则维度为instance_id **约束限制** 不涉及 **取值范围** 资源维度，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，维度的最大长度为32。 **默认取值** 不涉及
+    * firstDimensionName  **参数解释** 资源首层维度，如：弹性云服务器，则维度为instance_id **约束限制** 不涉及 **取值范围** 资源维度名称，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，维度的最大长度为32。 **默认取值** 不涉及
     * firstDimensionValue  **参数解释** 资源首层维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制** 不涉及 **取值范围** 长度为[1,256]个字符。 **默认取值** 不涉及
     * resourceName  **参数解释** 资源名称 **约束限制** 不涉及 **取值范围** 长度[1,128]个字符 **默认取值** 不涉及
     *
@@ -97,7 +97,7 @@ class ProductInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * firstDimensionName  **参数解释** 资源首层维度，如：弹性云服务器，则维度为instance_id **约束限制** 不涉及 **取值范围** 资源维度，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，维度的最大长度为32。 **默认取值** 不涉及
+    * firstDimensionName  **参数解释** 资源首层维度，如：弹性云服务器，则维度为instance_id **约束限制** 不涉及 **取值范围** 资源维度名称，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，维度的最大长度为32。 **默认取值** 不涉及
     * firstDimensionValue  **参数解释** 资源首层维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制** 不涉及 **取值范围** 长度为[1,256]个字符。 **默认取值** 不涉及
     * resourceName  **参数解释** 资源名称 **约束限制** 不涉及 **取值范围** 长度[1,128]个字符 **默认取值** 不涉及
     *
@@ -223,7 +223,7 @@ class ProductInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets firstDimensionName
-    *  **参数解释** 资源首层维度，如：弹性云服务器，则维度为instance_id **约束限制** 不涉及 **取值范围** 资源维度，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，维度的最大长度为32。 **默认取值** 不涉及
+    *  **参数解释** 资源首层维度，如：弹性云服务器，则维度为instance_id **约束限制** 不涉及 **取值范围** 资源维度名称，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，维度的最大长度为32。 **默认取值** 不涉及
     *
     * @return string
     */
@@ -235,7 +235,7 @@ class ProductInstance implements ModelInterface, ArrayAccess
     /**
     * Sets firstDimensionName
     *
-    * @param string $firstDimensionName **参数解释** 资源首层维度，如：弹性云服务器，则维度为instance_id **约束限制** 不涉及 **取值范围** 资源维度，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，维度的最大长度为32。 **默认取值** 不涉及
+    * @param string $firstDimensionName **参数解释** 资源首层维度，如：弹性云服务器，则维度为instance_id **约束限制** 不涉及 **取值范围** 资源维度名称，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，维度的最大长度为32。 **默认取值** 不涉及
     *
     * @return $this
     */

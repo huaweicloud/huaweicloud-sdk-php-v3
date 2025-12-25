@@ -447,9 +447,6 @@ class NodeSpec implements ModelInterface, ArrayAccess
         if ($this->container['rootVolume'] === null) {
             $invalidProperties[] = "'rootVolume' can't be null";
         }
-        if ($this->container['dataVolumes'] === null) {
-            $invalidProperties[] = "'dataVolumes' can't be null";
-        }
             $allowedValues = $this->getBillingModeAllowableValues();
                 if (!is_null($this->container['billingMode']) && !in_array($this->container['billingMode'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -599,7 +596,7 @@ class NodeSpec implements ModelInterface, ArrayAccess
     * Gets dataVolumes
     *  节点的数据盘参数（目前已支持通过控制台为CCE节点添加第二块数据盘）。 如果数据盘正供容器运行时和Kubelet组件使用，则不可被卸载，否则将导致节点不可用。 针对专属云节点，参数解释与rootVolume一致
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\Volume[]
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\Volume[]|null
     */
     public function getDataVolumes()
     {
@@ -609,7 +606,7 @@ class NodeSpec implements ModelInterface, ArrayAccess
     /**
     * Sets dataVolumes
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\Volume[] $dataVolumes 节点的数据盘参数（目前已支持通过控制台为CCE节点添加第二块数据盘）。 如果数据盘正供容器运行时和Kubelet组件使用，则不可被卸载，否则将导致节点不可用。 针对专属云节点，参数解释与rootVolume一致
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\Volume[]|null $dataVolumes 节点的数据盘参数（目前已支持通过控制台为CCE节点添加第二块数据盘）。 如果数据盘正供容器运行时和Kubelet组件使用，则不可被卸载，否则将导致节点不可用。 针对专属云节点，参数解释与rootVolume一致
     *
     * @return $this
     */

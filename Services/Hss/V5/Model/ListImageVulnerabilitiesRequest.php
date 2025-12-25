@@ -20,29 +20,28 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示数量
-    * imageId  镜像id
-    * instanceId  企业仓库实例ID，swr共享版无需使用该参数
-    * namespace  组织名称
-    * imageName  镜像名称
-    * tagName  镜像版本
-    * repairNecessity  危险程度，包含如下3种。   - immediate_repair ：高危。   - delay_repair ：中危。   - not_needed_repair ：低危。
-    * vulId  漏洞ID（支持模糊查询）
-    * appName  软件名
-    * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -app_vul : 应用漏洞
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * imageType  **参数解释**: 镜像类型 **约束限制**: 不涉及 **取值范围**: - private_image：私有镜像仓库 - shared_image：共享镜像仓库 - instance_image：企业镜像 - cicd：cicd镜像 - harbor：Harbor仓库镜像 - jfrog：Jfrog仓库镜像  **默认取值**: 不涉及
+    * imageId  **参数解释**: 镜像id **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * instanceId  **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
+    * namespace  **参数解释**： 组织名称 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
+    * imageName  **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
+    * tagName  **参数解释**: 镜像版本名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
+    * repairNecessity  **参数解释**: 危险程度 **约束限制**: 不涉及 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危  **默认取值**: 不涉及
+    * vulId  **参数解释**: 漏洞ID（支持模糊查询） **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
+    * appName  **参数解释**: 软件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
+    * type  **参数解释**: 漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - app_vul：应用漏洞  **默认取值**: 不涉及
+    * handleStatus  **参数解释**: 处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled：未处理 - handled：已处理  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'region' => 'string',
             'enterpriseProjectId' => 'string',
-            'imageType' => 'string',
             'offset' => 'int',
             'limit' => 'int',
+            'imageType' => 'string',
             'imageId' => 'string',
             'instanceId' => 'string',
             'namespace' => 'string',
@@ -51,34 +50,34 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
             'repairNecessity' => 'string',
             'vulId' => 'string',
             'appName' => 'string',
-            'type' => 'string'
+            'type' => 'string',
+            'handleStatus' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示数量
-    * imageId  镜像id
-    * instanceId  企业仓库实例ID，swr共享版无需使用该参数
-    * namespace  组织名称
-    * imageName  镜像名称
-    * tagName  镜像版本
-    * repairNecessity  危险程度，包含如下3种。   - immediate_repair ：高危。   - delay_repair ：中危。   - not_needed_repair ：低危。
-    * vulId  漏洞ID（支持模糊查询）
-    * appName  软件名
-    * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -app_vul : 应用漏洞
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * imageType  **参数解释**: 镜像类型 **约束限制**: 不涉及 **取值范围**: - private_image：私有镜像仓库 - shared_image：共享镜像仓库 - instance_image：企业镜像 - cicd：cicd镜像 - harbor：Harbor仓库镜像 - jfrog：Jfrog仓库镜像  **默认取值**: 不涉及
+    * imageId  **参数解释**: 镜像id **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * instanceId  **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
+    * namespace  **参数解释**： 组织名称 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
+    * imageName  **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
+    * tagName  **参数解释**: 镜像版本名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
+    * repairNecessity  **参数解释**: 危险程度 **约束限制**: 不涉及 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危  **默认取值**: 不涉及
+    * vulId  **参数解释**: 漏洞ID（支持模糊查询） **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
+    * appName  **参数解释**: 软件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
+    * type  **参数解释**: 漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - app_vul：应用漏洞  **默认取值**: 不涉及
+    * handleStatus  **参数解释**: 处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled：未处理 - handled：已处理  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'region' => null,
         'enterpriseProjectId' => null,
-        'imageType' => null,
         'offset' => 'int32',
         'limit' => 'int32',
+        'imageType' => null,
         'imageId' => null,
         'instanceId' => null,
         'namespace' => null,
@@ -87,7 +86,8 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
         'repairNecessity' => null,
         'vulId' => null,
         'appName' => null,
-        'type' => null
+        'type' => null,
+        'handleStatus' => null
     ];
 
     /**
@@ -113,29 +113,28 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示数量
-    * imageId  镜像id
-    * instanceId  企业仓库实例ID，swr共享版无需使用该参数
-    * namespace  组织名称
-    * imageName  镜像名称
-    * tagName  镜像版本
-    * repairNecessity  危险程度，包含如下3种。   - immediate_repair ：高危。   - delay_repair ：中危。   - not_needed_repair ：低危。
-    * vulId  漏洞ID（支持模糊查询）
-    * appName  软件名
-    * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -app_vul : 应用漏洞
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * imageType  **参数解释**: 镜像类型 **约束限制**: 不涉及 **取值范围**: - private_image：私有镜像仓库 - shared_image：共享镜像仓库 - instance_image：企业镜像 - cicd：cicd镜像 - harbor：Harbor仓库镜像 - jfrog：Jfrog仓库镜像  **默认取值**: 不涉及
+    * imageId  **参数解释**: 镜像id **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * instanceId  **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
+    * namespace  **参数解释**： 组织名称 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
+    * imageName  **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
+    * tagName  **参数解释**: 镜像版本名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
+    * repairNecessity  **参数解释**: 危险程度 **约束限制**: 不涉及 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危  **默认取值**: 不涉及
+    * vulId  **参数解释**: 漏洞ID（支持模糊查询） **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
+    * appName  **参数解释**: 软件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
+    * type  **参数解释**: 漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - app_vul：应用漏洞  **默认取值**: 不涉及
+    * handleStatus  **参数解释**: 处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled：未处理 - handled：已处理  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'region' => 'region',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'imageType' => 'image_type',
             'offset' => 'offset',
             'limit' => 'limit',
+            'imageType' => 'image_type',
             'imageId' => 'image_id',
             'instanceId' => 'instance_id',
             'namespace' => 'namespace',
@@ -144,34 +143,34 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
             'repairNecessity' => 'repair_necessity',
             'vulId' => 'vul_id',
             'appName' => 'app_name',
-            'type' => 'type'
+            'type' => 'type',
+            'handleStatus' => 'handle_status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示数量
-    * imageId  镜像id
-    * instanceId  企业仓库实例ID，swr共享版无需使用该参数
-    * namespace  组织名称
-    * imageName  镜像名称
-    * tagName  镜像版本
-    * repairNecessity  危险程度，包含如下3种。   - immediate_repair ：高危。   - delay_repair ：中危。   - not_needed_repair ：低危。
-    * vulId  漏洞ID（支持模糊查询）
-    * appName  软件名
-    * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -app_vul : 应用漏洞
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * imageType  **参数解释**: 镜像类型 **约束限制**: 不涉及 **取值范围**: - private_image：私有镜像仓库 - shared_image：共享镜像仓库 - instance_image：企业镜像 - cicd：cicd镜像 - harbor：Harbor仓库镜像 - jfrog：Jfrog仓库镜像  **默认取值**: 不涉及
+    * imageId  **参数解释**: 镜像id **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * instanceId  **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
+    * namespace  **参数解释**： 组织名称 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
+    * imageName  **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
+    * tagName  **参数解释**: 镜像版本名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
+    * repairNecessity  **参数解释**: 危险程度 **约束限制**: 不涉及 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危  **默认取值**: 不涉及
+    * vulId  **参数解释**: 漏洞ID（支持模糊查询） **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
+    * appName  **参数解释**: 软件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
+    * type  **参数解释**: 漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - app_vul：应用漏洞  **默认取值**: 不涉及
+    * handleStatus  **参数解释**: 处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled：未处理 - handled：已处理  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
-            'region' => 'setRegion',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'imageType' => 'setImageType',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
+            'imageType' => 'setImageType',
             'imageId' => 'setImageId',
             'instanceId' => 'setInstanceId',
             'namespace' => 'setNamespace',
@@ -180,34 +179,34 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
             'repairNecessity' => 'setRepairNecessity',
             'vulId' => 'setVulId',
             'appName' => 'setAppName',
-            'type' => 'setType'
+            'type' => 'setType',
+            'handleStatus' => 'setHandleStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * region  Region ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示数量
-    * imageId  镜像id
-    * instanceId  企业仓库实例ID，swr共享版无需使用该参数
-    * namespace  组织名称
-    * imageName  镜像名称
-    * tagName  镜像版本
-    * repairNecessity  危险程度，包含如下3种。   - immediate_repair ：高危。   - delay_repair ：中危。   - not_needed_repair ：低危。
-    * vulId  漏洞ID（支持模糊查询）
-    * appName  软件名
-    * type  漏洞类型，包含如下：   -linux_vul : linux漏洞   -app_vul : 应用漏洞
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * imageType  **参数解释**: 镜像类型 **约束限制**: 不涉及 **取值范围**: - private_image：私有镜像仓库 - shared_image：共享镜像仓库 - instance_image：企业镜像 - cicd：cicd镜像 - harbor：Harbor仓库镜像 - jfrog：Jfrog仓库镜像  **默认取值**: 不涉及
+    * imageId  **参数解释**: 镜像id **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+    * instanceId  **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
+    * namespace  **参数解释**： 组织名称 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
+    * imageName  **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
+    * tagName  **参数解释**: 镜像版本名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
+    * repairNecessity  **参数解释**: 危险程度 **约束限制**: 不涉及 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危  **默认取值**: 不涉及
+    * vulId  **参数解释**: 漏洞ID（支持模糊查询） **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
+    * appName  **参数解释**: 软件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
+    * type  **参数解释**: 漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - app_vul：应用漏洞  **默认取值**: 不涉及
+    * handleStatus  **参数解释**: 处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled：未处理 - handled：已处理  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
-            'region' => 'getRegion',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'imageType' => 'getImageType',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
+            'imageType' => 'getImageType',
             'imageId' => 'getImageId',
             'instanceId' => 'getInstanceId',
             'namespace' => 'getNamespace',
@@ -216,7 +215,8 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
             'repairNecessity' => 'getRepairNecessity',
             'vulId' => 'getVulId',
             'appName' => 'getAppName',
-            'type' => 'getType'
+            'type' => 'getType',
+            'handleStatus' => 'getHandleStatus'
     ];
 
     /**
@@ -277,11 +277,10 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
-        $this->container['imageType'] = isset($data['imageType']) ? $data['imageType'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['imageType'] = isset($data['imageType']) ? $data['imageType'] : null;
         $this->container['imageId'] = isset($data['imageId']) ? $data['imageId'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
@@ -291,6 +290,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
         $this->container['vulId'] = isset($data['vulId']) ? $data['vulId'] : null;
         $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['handleStatus'] = isset($data['handleStatus']) ? $data['handleStatus'] : null;
     }
 
     /**
@@ -301,15 +301,6 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) > 128)) {
-                $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) < 0)) {
-                $invalidProperties[] = "invalid value for 'region', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['region']) && !preg_match("/^.*$/", $this->container['region'])) {
-                $invalidProperties[] = "invalid value for 'region', must be conform to the pattern /^.*$/.";
-            }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 256)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 256.";
             }
@@ -318,15 +309,6 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^.*$/", $this->container['enterpriseProjectId'])) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^.*$/.";
-            }
-        if ($this->container['imageType'] === null) {
-            $invalidProperties[] = "'imageType' can't be null";
-        }
-            if ((mb_strlen($this->container['imageType']) > 32)) {
-                $invalidProperties[] = "invalid value for 'imageType', the character length must be smaller than or equal to 32.";
-            }
-            if ((mb_strlen($this->container['imageType']) < 1)) {
-                $invalidProperties[] = "invalid value for 'imageType', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] > 2000000)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2000000.";
@@ -339,6 +321,15 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
+            }
+        if ($this->container['imageType'] === null) {
+            $invalidProperties[] = "'imageType' can't be null";
+        }
+            if ((mb_strlen($this->container['imageType']) > 32)) {
+                $invalidProperties[] = "invalid value for 'imageType', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['imageType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'imageType', the character length must be bigger than or equal to 1.";
             }
         if ($this->container['imageId'] === null) {
             $invalidProperties[] = "'imageId' can't be null";
@@ -388,8 +379,11 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['repairNecessity']) && (mb_strlen($this->container['repairNecessity']) < 0)) {
                 $invalidProperties[] = "invalid value for 'repairNecessity', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['vulId']) && (mb_strlen($this->container['vulId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'vulId', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['repairNecessity']) && !preg_match("/^(immediate_repair|delay_repair|not_needed_repair)$/", $this->container['repairNecessity'])) {
+                $invalidProperties[] = "invalid value for 'repairNecessity', must be conform to the pattern /^(immediate_repair|delay_repair|not_needed_repair)$/.";
+            }
+            if (!is_null($this->container['vulId']) && (mb_strlen($this->container['vulId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'vulId', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['vulId']) && (mb_strlen($this->container['vulId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'vulId', the character length must be bigger than or equal to 0.";
@@ -406,6 +400,18 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 0)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['type']) && !preg_match("/^(linux_vul|app_vul)$/", $this->container['type'])) {
+                $invalidProperties[] = "invalid value for 'type', must be conform to the pattern /^(linux_vul|app_vul)$/.";
+            }
+            if (!is_null($this->container['handleStatus']) && (mb_strlen($this->container['handleStatus']) > 32)) {
+                $invalidProperties[] = "invalid value for 'handleStatus', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['handleStatus']) && (mb_strlen($this->container['handleStatus']) < 1)) {
+                $invalidProperties[] = "invalid value for 'handleStatus', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['handleStatus']) && !preg_match("/^(unhandled|handled)$/", $this->container['handleStatus'])) {
+                $invalidProperties[] = "invalid value for 'handleStatus', must be conform to the pattern /^(unhandled|handled)$/.";
+            }
         return $invalidProperties;
     }
 
@@ -421,32 +427,8 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets region
-    *  Region ID
-    *
-    * @return string|null
-    */
-    public function getRegion()
-    {
-        return $this->container['region'];
-    }
-
-    /**
-    * Sets region
-    *
-    * @param string|null $region Region ID
-    *
-    * @return $this
-    */
-    public function setRegion($region)
-    {
-        $this->container['region'] = $region;
-        return $this;
-    }
-
-    /**
     * Gets enterpriseProjectId
-    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    *  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return string|null
     */
@@ -458,7 +440,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * @param string|null $enterpriseProjectId **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return $this
     */
@@ -469,32 +451,8 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets imageType
-    *  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
-    *
-    * @return string
-    */
-    public function getImageType()
-    {
-        return $this->container['imageType'];
-    }
-
-    /**
-    * Sets imageType
-    *
-    * @param string $imageType 镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
-    *
-    * @return $this
-    */
-    public function setImageType($imageType)
-    {
-        $this->container['imageType'] = $imageType;
-        return $this;
-    }
-
-    /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置
+    *  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return int|null
     */
@@ -506,7 +464,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置
+    * @param int|null $offset **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return $this
     */
@@ -518,7 +476,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示数量
+    *  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return int|null
     */
@@ -530,7 +488,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示数量
+    * @param int|null $limit **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return $this
     */
@@ -541,8 +499,32 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets imageType
+    *  **参数解释**: 镜像类型 **约束限制**: 不涉及 **取值范围**: - private_image：私有镜像仓库 - shared_image：共享镜像仓库 - instance_image：企业镜像 - cicd：cicd镜像 - harbor：Harbor仓库镜像 - jfrog：Jfrog仓库镜像  **默认取值**: 不涉及
+    *
+    * @return string
+    */
+    public function getImageType()
+    {
+        return $this->container['imageType'];
+    }
+
+    /**
+    * Sets imageType
+    *
+    * @param string $imageType **参数解释**: 镜像类型 **约束限制**: 不涉及 **取值范围**: - private_image：私有镜像仓库 - shared_image：共享镜像仓库 - instance_image：企业镜像 - cicd：cicd镜像 - harbor：Harbor仓库镜像 - jfrog：Jfrog仓库镜像  **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setImageType($imageType)
+    {
+        $this->container['imageType'] = $imageType;
+        return $this;
+    }
+
+    /**
     * Gets imageId
-    *  镜像id
+    *  **参数解释**: 镜像id **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     *
     * @return string
     */
@@ -554,7 +536,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imageId
     *
-    * @param string $imageId 镜像id
+    * @param string $imageId **参数解释**: 镜像id **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -566,7 +548,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  企业仓库实例ID，swr共享版无需使用该参数
+    *  **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -578,7 +560,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 企业仓库实例ID，swr共享版无需使用该参数
+    * @param string|null $instanceId **参数解释**： 企业仓库实例ID，SWR企业版可以使用该参数 **约束限制**： 不涉及 **取值范围**： 字符长度0-128位 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -590,7 +572,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  组织名称
+    *  **参数解释**： 组织名称 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -602,7 +584,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string $namespace 组织名称
+    * @param string $namespace **参数解释**： 组织名称 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -614,7 +596,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageName
-    *  镜像名称
+    *  **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
     *
     * @return string
     */
@@ -626,7 +608,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imageName
     *
-    * @param string $imageName 镜像名称
+    * @param string $imageName **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -638,7 +620,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tagName
-    *  镜像版本
+    *  **参数解释**: 镜像版本名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
     *
     * @return string
     */
@@ -650,7 +632,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tagName
     *
-    * @param string $tagName 镜像版本
+    * @param string $tagName **参数解释**: 镜像版本名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -662,7 +644,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets repairNecessity
-    *  危险程度，包含如下3种。   - immediate_repair ：高危。   - delay_repair ：中危。   - not_needed_repair ：低危。
+    *  **参数解释**: 危险程度 **约束限制**: 不涉及 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -674,7 +656,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets repairNecessity
     *
-    * @param string|null $repairNecessity 危险程度，包含如下3种。   - immediate_repair ：高危。   - delay_repair ：中危。   - not_needed_repair ：低危。
+    * @param string|null $repairNecessity **参数解释**: 危险程度 **约束限制**: 不涉及 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -686,7 +668,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets vulId
-    *  漏洞ID（支持模糊查询）
+    *  **参数解释**: 漏洞ID（支持模糊查询） **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -698,7 +680,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets vulId
     *
-    * @param string|null $vulId 漏洞ID（支持模糊查询）
+    * @param string|null $vulId **参数解释**: 漏洞ID（支持模糊查询） **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -710,7 +692,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets appName
-    *  软件名
+    *  **参数解释**: 软件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -722,7 +704,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets appName
     *
-    * @param string|null $appName 软件名
+    * @param string|null $appName **参数解释**: 软件名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -734,7 +716,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  漏洞类型，包含如下：   -linux_vul : linux漏洞   -app_vul : 应用漏洞
+    *  **参数解释**: 漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - app_vul：应用漏洞  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -746,13 +728,37 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 漏洞类型，包含如下：   -linux_vul : linux漏洞   -app_vul : 应用漏洞
+    * @param string|null $type **参数解释**: 漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - app_vul：应用漏洞  **默认取值**: 不涉及
     *
     * @return $this
     */
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets handleStatus
+    *  **参数解释**: 处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled：未处理 - handled：已处理  **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getHandleStatus()
+    {
+        return $this->container['handleStatus'];
+    }
+
+    /**
+    * Sets handleStatus
+    *
+    * @param string|null $handleStatus **参数解释**: 处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled：未处理 - handled：已处理  **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setHandleStatus($handleStatus)
+    {
+        $this->container['handleStatus'] = $handleStatus;
         return $this;
     }
 

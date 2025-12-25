@@ -21,7 +21,7 @@ class RoleAuthority implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * role  **参数解释**： 角色名称。 **取值范围**： 不涉及。
-    * rightList  **参数解释**： 权限列表。 **取值范围**： 不涉及。
+    * rightList  **参数解释**： 权限列表。 **取值范围**： - SELECT：查找 - UPDATE：更新。 - DELETE：删除。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class RoleAuthority implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * role  **参数解释**： 角色名称。 **取值范围**： 不涉及。
-    * rightList  **参数解释**： 权限列表。 **取值范围**： 不涉及。
+    * rightList  **参数解释**： 权限列表。 **取值范围**： - SELECT：查找 - UPDATE：更新。 - DELETE：删除。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class RoleAuthority implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * role  **参数解释**： 角色名称。 **取值范围**： 不涉及。
-    * rightList  **参数解释**： 权限列表。 **取值范围**： 不涉及。
+    * rightList  **参数解释**： 权限列表。 **取值范围**： - SELECT：查找 - UPDATE：更新。 - DELETE：删除。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class RoleAuthority implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * role  **参数解释**： 角色名称。 **取值范围**： 不涉及。
-    * rightList  **参数解释**： 权限列表。 **取值范围**： 不涉及。
+    * rightList  **参数解释**： 权限列表。 **取值范围**： - SELECT：查找 - UPDATE：更新。 - DELETE：删除。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class RoleAuthority implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * role  **参数解释**： 角色名称。 **取值范围**： 不涉及。
-    * rightList  **参数解释**： 权限列表。 **取值范围**： 不涉及。
+    * rightList  **参数解释**： 权限列表。 **取值范围**： - SELECT：查找 - UPDATE：更新。 - DELETE：删除。
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class RoleAuthority implements ModelInterface, ArrayAccess
 
     /**
     * Gets rightList
-    *  **参数解释**： 权限列表。 **取值范围**： 不涉及。
+    *  **参数解释**： 权限列表。 **取值范围**： - SELECT：查找 - UPDATE：更新。 - DELETE：删除。
     *
     * @return string[]|null
     */
@@ -221,7 +221,7 @@ class RoleAuthority implements ModelInterface, ArrayAccess
     /**
     * Sets rightList
     *
-    * @param string[]|null $rightList **参数解释**： 权限列表。 **取值范围**： 不涉及。
+    * @param string[]|null $rightList **参数解释**： 权限列表。 **取值范围**： - SELECT：查找 - UPDATE：更新。 - DELETE：删除。
     *
     * @return $this
     */

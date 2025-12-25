@@ -20,29 +20,29 @@ class ChangeVulStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * contentType  缺省值:application/json; charset=utf-8
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * contentType  **参数解释**: 请求参数类型 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: application/json; charset=utf-8
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'contentType' => 'string',
             'enterpriseProjectId' => 'string',
+            'contentType' => 'string',
             'body' => '\HuaweiCloud\SDK\Hss\V5\Model\ChangeVulStatusRequestInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * contentType  缺省值:application/json; charset=utf-8
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * contentType  **参数解释**: 请求参数类型 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: application/json; charset=utf-8
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'contentType' => null,
         'enterpriseProjectId' => null,
+        'contentType' => null,
         'body' => null
     ];
 
@@ -69,43 +69,43 @@ class ChangeVulStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * contentType  缺省值:application/json; charset=utf-8
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * contentType  **参数解释**: 请求参数类型 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: application/json; charset=utf-8
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'contentType' => 'Content-Type',
             'enterpriseProjectId' => 'enterprise_project_id',
+            'contentType' => 'Content-Type',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * contentType  缺省值:application/json; charset=utf-8
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * contentType  **参数解释**: 请求参数类型 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: application/json; charset=utf-8
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'contentType' => 'setContentType',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'contentType' => 'setContentType',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * contentType  缺省值:application/json; charset=utf-8
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * contentType  **参数解释**: 请求参数类型 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: application/json; charset=utf-8
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'contentType' => 'getContentType',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'contentType' => 'getContentType',
             'body' => 'getBody'
     ];
 
@@ -167,8 +167,8 @@ class ChangeVulStatusRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -180,17 +180,20 @@ class ChangeVulStatusRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^.*$/", $this->container['enterpriseProjectId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^.*$/.";
+            }
             if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) > 128)) {
                 $invalidProperties[] = "invalid value for 'contentType', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 128)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -207,32 +210,8 @@ class ChangeVulStatusRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets contentType
-    *  缺省值:application/json; charset=utf-8
-    *
-    * @return string|null
-    */
-    public function getContentType()
-    {
-        return $this->container['contentType'];
-    }
-
-    /**
-    * Sets contentType
-    *
-    * @param string|null $contentType 缺省值:application/json; charset=utf-8
-    *
-    * @return $this
-    */
-    public function setContentType($contentType)
-    {
-        $this->container['contentType'] = $contentType;
-        return $this;
-    }
-
-    /**
     * Gets enterpriseProjectId
-    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    *  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return string|null
     */
@@ -244,13 +223,37 @@ class ChangeVulStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * @param string|null $enterpriseProjectId **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return $this
     */
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets contentType
+    *  **参数解释**: 请求参数类型 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: application/json; charset=utf-8
+    *
+    * @return string|null
+    */
+    public function getContentType()
+    {
+        return $this->container['contentType'];
+    }
+
+    /**
+    * Sets contentType
+    *
+    * @param string|null $contentType **参数解释**: 请求参数类型 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: application/json; charset=utf-8
+    *
+    * @return $this
+    */
+    public function setContentType($contentType)
+    {
+        $this->container['contentType'] = $contentType;
         return $this;
     }
 

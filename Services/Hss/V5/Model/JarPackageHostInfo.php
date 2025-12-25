@@ -24,10 +24,10 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     * hostId  **参数解释** 主机id **取值范围**: 字符长度0-128位
     * hostName  **参数解释** 服务器名称 **取值范围**: 字符长度0-256位
     * hostIp  **参数解释** 服务器ip **取值范围**: 字符长度0-128位
-    * fileName  **参数解释** 中间件包名称 **取值范围**: 字符长度0-256位
+    * fileName  **参数解释** 文件名称 **取值范围**: 字符长度0-256位
     * name  **参数解释** 中间件包名称(不带后缀) **取值范围**: 字符长度0-256位\"
     * catalogue  **参数解释** 中间件包类型 **取值范围**: 字符长度0-32位
-    * fileType  **参数解释** 中间件包后缀 **取值范围**: 字符长度0-32位
+    * fileType  **参数解释** 文件类型 **取值范围**: 字符长度0-32位
     * version  **参数解释** 中间件包版本 **取值范围**: 字符长度0-64位
     * path  **参数解释** 中间件包路径 **取值范围**: 字符长度0-512位
     * hash  **参数解释** 中间件包hash **取值范围**: 字符长度0-512位
@@ -76,10 +76,10 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     * hostId  **参数解释** 主机id **取值范围**: 字符长度0-128位
     * hostName  **参数解释** 服务器名称 **取值范围**: 字符长度0-256位
     * hostIp  **参数解释** 服务器ip **取值范围**: 字符长度0-128位
-    * fileName  **参数解释** 中间件包名称 **取值范围**: 字符长度0-256位
+    * fileName  **参数解释** 文件名称 **取值范围**: 字符长度0-256位
     * name  **参数解释** 中间件包名称(不带后缀) **取值范围**: 字符长度0-256位\"
     * catalogue  **参数解释** 中间件包类型 **取值范围**: 字符长度0-32位
-    * fileType  **参数解释** 中间件包后缀 **取值范围**: 字符长度0-32位
+    * fileType  **参数解释** 文件类型 **取值范围**: 字符长度0-32位
     * version  **参数解释** 中间件包版本 **取值范围**: 字符长度0-64位
     * path  **参数解释** 中间件包路径 **取值范围**: 字符长度0-512位
     * hash  **参数解释** 中间件包hash **取值范围**: 字符长度0-512位
@@ -149,10 +149,10 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     * hostId  **参数解释** 主机id **取值范围**: 字符长度0-128位
     * hostName  **参数解释** 服务器名称 **取值范围**: 字符长度0-256位
     * hostIp  **参数解释** 服务器ip **取值范围**: 字符长度0-128位
-    * fileName  **参数解释** 中间件包名称 **取值范围**: 字符长度0-256位
+    * fileName  **参数解释** 文件名称 **取值范围**: 字符长度0-256位
     * name  **参数解释** 中间件包名称(不带后缀) **取值范围**: 字符长度0-256位\"
     * catalogue  **参数解释** 中间件包类型 **取值范围**: 字符长度0-32位
-    * fileType  **参数解释** 中间件包后缀 **取值范围**: 字符长度0-32位
+    * fileType  **参数解释** 文件类型 **取值范围**: 字符长度0-32位
     * version  **参数解释** 中间件包版本 **取值范围**: 字符长度0-64位
     * path  **参数解释** 中间件包路径 **取值范围**: 字符长度0-512位
     * hash  **参数解释** 中间件包hash **取值范围**: 字符长度0-512位
@@ -201,10 +201,10 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     * hostId  **参数解释** 主机id **取值范围**: 字符长度0-128位
     * hostName  **参数解释** 服务器名称 **取值范围**: 字符长度0-256位
     * hostIp  **参数解释** 服务器ip **取值范围**: 字符长度0-128位
-    * fileName  **参数解释** 中间件包名称 **取值范围**: 字符长度0-256位
+    * fileName  **参数解释** 文件名称 **取值范围**: 字符长度0-256位
     * name  **参数解释** 中间件包名称(不带后缀) **取值范围**: 字符长度0-256位\"
     * catalogue  **参数解释** 中间件包类型 **取值范围**: 字符长度0-32位
-    * fileType  **参数解释** 中间件包后缀 **取值范围**: 字符长度0-32位
+    * fileType  **参数解释** 文件类型 **取值范围**: 字符长度0-32位
     * version  **参数解释** 中间件包版本 **取值范围**: 字符长度0-64位
     * path  **参数解释** 中间件包路径 **取值范围**: 字符长度0-512位
     * hash  **参数解释** 中间件包hash **取值范围**: 字符长度0-512位
@@ -253,10 +253,10 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     * hostId  **参数解释** 主机id **取值范围**: 字符长度0-128位
     * hostName  **参数解释** 服务器名称 **取值范围**: 字符长度0-256位
     * hostIp  **参数解释** 服务器ip **取值范围**: 字符长度0-128位
-    * fileName  **参数解释** 中间件包名称 **取值范围**: 字符长度0-256位
+    * fileName  **参数解释** 文件名称 **取值范围**: 字符长度0-256位
     * name  **参数解释** 中间件包名称(不带后缀) **取值范围**: 字符长度0-256位\"
     * catalogue  **参数解释** 中间件包类型 **取值范围**: 字符长度0-32位
-    * fileType  **参数解释** 中间件包后缀 **取值范围**: 字符长度0-32位
+    * fileType  **参数解释** 文件类型 **取值范围**: 字符长度0-32位
     * version  **参数解释** 中间件包版本 **取值范围**: 字符长度0-64位
     * path  **参数解释** 中间件包路径 **取值范围**: 字符长度0-512位
     * hash  **参数解释** 中间件包hash **取值范围**: 字符长度0-512位
@@ -633,7 +633,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileName
-    *  **参数解释** 中间件包名称 **取值范围**: 字符长度0-256位
+    *  **参数解释** 文件名称 **取值范围**: 字符长度0-256位
     *
     * @return string|null
     */
@@ -645,7 +645,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileName
     *
-    * @param string|null $fileName **参数解释** 中间件包名称 **取值范围**: 字符长度0-256位
+    * @param string|null $fileName **参数解释** 文件名称 **取值范围**: 字符长度0-256位
     *
     * @return $this
     */
@@ -705,7 +705,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileType
-    *  **参数解释** 中间件包后缀 **取值范围**: 字符长度0-32位
+    *  **参数解释** 文件类型 **取值范围**: 字符长度0-32位
     *
     * @return string|null
     */
@@ -717,7 +717,7 @@ class JarPackageHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileType
     *
-    * @param string|null $fileType **参数解释** 中间件包后缀 **取值范围**: 字符长度0-32位
+    * @param string|null $fileType **参数解释** 文件类型 **取值范围**: 字符长度0-32位
     *
     * @return $this
     */

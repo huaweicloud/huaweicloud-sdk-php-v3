@@ -25,9 +25,9 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
     * displayName  **参数解释**： 事件配置显示名称。 **取值范围**： 不涉及。
     * description  **参数解释**： 事件配置描述。 **取值范围**： 不涉及。
     * subject  **参数解释**： 事件主题。 **取值范围**： 不涉及。
-    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。
     * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
-    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -51,9 +51,9 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
     * displayName  **参数解释**： 事件配置显示名称。 **取值范围**： 不涉及。
     * description  **参数解释**： 事件配置描述。 **取值范围**： 不涉及。
     * subject  **参数解释**： 事件主题。 **取值范围**： 不涉及。
-    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。
     * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
-    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -98,9 +98,9 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
     * displayName  **参数解释**： 事件配置显示名称。 **取值范围**： 不涉及。
     * description  **参数解释**： 事件配置描述。 **取值范围**： 不涉及。
     * subject  **参数解释**： 事件主题。 **取值范围**： 不涉及。
-    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。
     * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
-    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -124,9 +124,9 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
     * displayName  **参数解释**： 事件配置显示名称。 **取值范围**： 不涉及。
     * description  **参数解释**： 事件配置描述。 **取值范围**： 不涉及。
     * subject  **参数解释**： 事件主题。 **取值范围**： 不涉及。
-    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。
     * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
-    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -150,9 +150,9 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
     * displayName  **参数解释**： 事件配置显示名称。 **取值范围**： 不涉及。
     * description  **参数解释**： 事件配置描述。 **取值范围**： 不涉及。
     * subject  **参数解释**： 事件主题。 **取值范围**： 不涉及。
-    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。
     * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
-    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -382,7 +382,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    *  **参数解释**： 事件类别。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。
     *
     * @return string|null
     */
@@ -394,7 +394,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string|null $category **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * @param string|null $category **参数解释**： 事件类别。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceType
-    *  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class EventSpecResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sourceType
     *
-    * @param string|null $sourceType **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * @param string|null $sourceType **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     *
     * @return $this
     */

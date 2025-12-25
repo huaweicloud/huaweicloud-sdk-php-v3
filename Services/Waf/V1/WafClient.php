@@ -1863,9 +1863,9 @@ class WafClient extends Client
     }
 
     /**
-     * 根据Id查询机房IP情报防护规则
+     * 根据Id查询威胁情报访问控制规则
      *
-     * 根据Id查询机房IP情报防护规则
+     * 根据Id查询威胁情报访问控制规则
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3442,9 +3442,9 @@ class WafClient extends Client
     }
 
     /**
-     * 创建机房IP情报规则
+     * 创建威胁情报访问控制规则
      *
-     * 创建IP情报规则
+     * 创建威胁情报访问控制规则
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5036,9 +5036,9 @@ class WafClient extends Client
     }
 
     /**
-     * 删除机房IP情报防护规则
+     * 删除威胁情报访问控制规则
      *
-     * 删除IP情报防护规则
+     * 删除威胁情报访问控制规则
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12692,9 +12692,9 @@ class WafClient extends Client
     }
 
     /**
-     * 更新机房IP情报防护规则
+     * 更新威胁情报访问控制规则
      *
-     * 更新IP情报防护规则
+     * 更新威胁情报访问控制规则
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

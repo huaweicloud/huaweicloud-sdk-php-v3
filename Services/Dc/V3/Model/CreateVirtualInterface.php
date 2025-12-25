@@ -555,10 +555,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['vgwId'] === null) {
-            $invalidProperties[] = "'vgwId' can't be null";
-        }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['vgwId'])) {
+            if (!is_null($this->container['vgwId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['vgwId'])) {
                 $invalidProperties[] = "invalid value for 'vgwId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
             if (!is_null($this->container['gatewayId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['gatewayId'])) {
@@ -581,9 +578,6 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
             if (!is_null($this->container['bgpAsn']) && ($this->container['bgpAsn'] < 1)) {
                 $invalidProperties[] = "invalid value for 'bgpAsn', must be bigger than or equal to 1.";
             }
-        if ($this->container['remoteEpGroup'] === null) {
-            $invalidProperties[] = "'remoteEpGroup' can't be null";
-        }
             if (!is_null($this->container['lagId']) && (mb_strlen($this->container['lagId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'lagId', the character length must be smaller than or equal to 36.";
             }
@@ -932,7 +926,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     * Gets vgwId
     *  虚拟接口连接的虚拟网关的ID
     *
-    * @return string
+    * @return string|null
     */
     public function getVgwId()
     {
@@ -942,7 +936,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     /**
     * Sets vgwId
     *
-    * @param string $vgwId 虚拟接口连接的虚拟网关的ID
+    * @param string|null $vgwId 虚拟接口连接的虚拟网关的ID
     *
     * @return $this
     */
@@ -1052,7 +1046,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     * Gets remoteEpGroup
     *  远端子网列表，记录租户侧的cidrs
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getRemoteEpGroup()
     {
@@ -1062,7 +1056,7 @@ class CreateVirtualInterface implements ModelInterface, ArrayAccess
     /**
     * Sets remoteEpGroup
     *
-    * @param string[] $remoteEpGroup 远端子网列表，记录租户侧的cidrs
+    * @param string[]|null $remoteEpGroup 远端子网列表，记录租户侧的cidrs
     *
     * @return $this
     */

@@ -20,9 +20,9 @@ class ListAssociationAlarmsResponseAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarmId  告警规则ID
-    * name  告警规则名称
-    * description  告警规则描述
+    * alarmId  **参数解释**： 告警模板的ID。  **取值范围**：    以al开头，后跟22位由字母或数字组成的字符串。长度为24个字符。
+    * name  **参数解释**： 告警规则名称。     **取值范围**： 只能为字母、数字、汉字、-或_，长度为[1,128]个字符
+    * description  **参数解释**： 告警规则描述。     **取值范围**： 长度为[0,256]个字符。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ListAssociationAlarmsResponseAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarmId  告警规则ID
-    * name  告警规则名称
-    * description  告警规则描述
+    * alarmId  **参数解释**： 告警模板的ID。  **取值范围**：    以al开头，后跟22位由字母或数字组成的字符串。长度为24个字符。
+    * name  **参数解释**： 告警规则名称。     **取值范围**： 只能为字母、数字、汉字、-或_，长度为[1,128]个字符
+    * description  **参数解释**： 告警规则描述。     **取值范围**： 长度为[0,256]个字符。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ListAssociationAlarmsResponseAlarms implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarmId  告警规则ID
-    * name  告警规则名称
-    * description  告警规则描述
+    * alarmId  **参数解释**： 告警模板的ID。  **取值范围**：    以al开头，后跟22位由字母或数字组成的字符串。长度为24个字符。
+    * name  **参数解释**： 告警规则名称。     **取值范围**： 只能为字母、数字、汉字、-或_，长度为[1,128]个字符
+    * description  **参数解释**： 告警规则描述。     **取值范围**： 长度为[0,256]个字符。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ListAssociationAlarmsResponseAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarmId  告警规则ID
-    * name  告警规则名称
-    * description  告警规则描述
+    * alarmId  **参数解释**： 告警模板的ID。  **取值范围**：    以al开头，后跟22位由字母或数字组成的字符串。长度为24个字符。
+    * name  **参数解释**： 告警规则名称。     **取值范围**： 只能为字母、数字、汉字、-或_，长度为[1,128]个字符
+    * description  **参数解释**： 告警规则描述。     **取值范围**： 长度为[0,256]个字符。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ListAssociationAlarmsResponseAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarmId  告警规则ID
-    * name  告警规则名称
-    * description  告警规则描述
+    * alarmId  **参数解释**： 告警模板的ID。  **取值范围**：    以al开头，后跟22位由字母或数字组成的字符串。长度为24个字符。
+    * name  **参数解释**： 告警规则名称。     **取值范围**： 只能为字母、数字、汉字、-或_，长度为[1,128]个字符
+    * description  **参数解释**： 告警规则描述。     **取值范围**： 长度为[0,256]个字符。
     *
     * @var string[]
     */
@@ -223,7 +223,7 @@ class ListAssociationAlarmsResponseAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmId
-    *  告警规则ID
+    *  **参数解释**： 告警模板的ID。  **取值范围**：    以al开头，后跟22位由字母或数字组成的字符串。长度为24个字符。
     *
     * @return string
     */
@@ -235,7 +235,7 @@ class ListAssociationAlarmsResponseAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets alarmId
     *
-    * @param string $alarmId 告警规则ID
+    * @param string $alarmId **参数解释**： 告警模板的ID。  **取值范围**：    以al开头，后跟22位由字母或数字组成的字符串。长度为24个字符。
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class ListAssociationAlarmsResponseAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  告警规则名称
+    *  **参数解释**： 告警规则名称。     **取值范围**： 只能为字母、数字、汉字、-或_，长度为[1,128]个字符
     *
     * @return string
     */
@@ -259,7 +259,7 @@ class ListAssociationAlarmsResponseAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 告警规则名称
+    * @param string $name **参数解释**： 告警规则名称。     **取值范围**： 只能为字母、数字、汉字、-或_，长度为[1,128]个字符
     *
     * @return $this
     */
@@ -271,7 +271,7 @@ class ListAssociationAlarmsResponseAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  告警规则描述
+    *  **参数解释**： 告警规则描述。     **取值范围**： 长度为[0,256]个字符。
     *
     * @return string
     */
@@ -283,7 +283,7 @@ class ListAssociationAlarmsResponseAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 告警规则描述
+    * @param string $description **参数解释**： 告警规则描述。     **取值范围**： 长度为[0,256]个字符。
     *
     * @return $this
     */

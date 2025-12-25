@@ -25,7 +25,7 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
     * id  **参数解释**： 任务ID。 **取值范围**： 不涉及。
     * type  **参数解释**： 类型。 **取值范围**： create：创建 delete：删除
     * strategy  **参数解释**： 周期信息。Cron表达式：如\"0 0 0 ? * 3\"。 **取值范围**： 不涉及。
-    * status  **参数解释**： 任务状态。 **取值范围**： running|waiting|deleted|finished|disabled|failed。
+    * status  **参数解释**： 任务状态。 **取值范围**： - running：运行中。 - waiting：等待中。 - deleted：已删除。 - finished：已完成。 - disabled：已禁用。 - failed：失败。
     * preFireTime  **参数解释**： 上一次触发时间。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -47,7 +47,7 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
     * id  **参数解释**： 任务ID。 **取值范围**： 不涉及。
     * type  **参数解释**： 类型。 **取值范围**： create：创建 delete：删除
     * strategy  **参数解释**： 周期信息。Cron表达式：如\"0 0 0 ? * 3\"。 **取值范围**： 不涉及。
-    * status  **参数解释**： 任务状态。 **取值范围**： running|waiting|deleted|finished|disabled|failed。
+    * status  **参数解释**： 任务状态。 **取值范围**： - running：运行中。 - waiting：等待中。 - deleted：已删除。 - finished：已完成。 - disabled：已禁用。 - failed：失败。
     * preFireTime  **参数解释**： 上一次触发时间。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -90,7 +90,7 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
     * id  **参数解释**： 任务ID。 **取值范围**： 不涉及。
     * type  **参数解释**： 类型。 **取值范围**： create：创建 delete：删除
     * strategy  **参数解释**： 周期信息。Cron表达式：如\"0 0 0 ? * 3\"。 **取值范围**： 不涉及。
-    * status  **参数解释**： 任务状态。 **取值范围**： running|waiting|deleted|finished|disabled|failed。
+    * status  **参数解释**： 任务状态。 **取值范围**： - running：运行中。 - waiting：等待中。 - deleted：已删除。 - finished：已完成。 - disabled：已禁用。 - failed：失败。
     * preFireTime  **参数解释**： 上一次触发时间。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -112,7 +112,7 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
     * id  **参数解释**： 任务ID。 **取值范围**： 不涉及。
     * type  **参数解释**： 类型。 **取值范围**： create：创建 delete：删除
     * strategy  **参数解释**： 周期信息。Cron表达式：如\"0 0 0 ? * 3\"。 **取值范围**： 不涉及。
-    * status  **参数解释**： 任务状态。 **取值范围**： running|waiting|deleted|finished|disabled|failed。
+    * status  **参数解释**： 任务状态。 **取值范围**： - running：运行中。 - waiting：等待中。 - deleted：已删除。 - finished：已完成。 - disabled：已禁用。 - failed：失败。
     * preFireTime  **参数解释**： 上一次触发时间。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -134,7 +134,7 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
     * id  **参数解释**： 任务ID。 **取值范围**： 不涉及。
     * type  **参数解释**： 类型。 **取值范围**： create：创建 delete：删除
     * strategy  **参数解释**： 周期信息。Cron表达式：如\"0 0 0 ? * 3\"。 **取值范围**： 不涉及。
-    * status  **参数解释**： 任务状态。 **取值范围**： running|waiting|deleted|finished|disabled|failed。
+    * status  **参数解释**： 任务状态。 **取值范围**： - running：运行中。 - waiting：等待中。 - deleted：已删除。 - finished：已完成。 - disabled：已禁用。 - failed：失败。
     * preFireTime  **参数解释**： 上一次触发时间。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -360,7 +360,7 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 任务状态。 **取值范围**： running|waiting|deleted|finished|disabled|failed。
+    *  **参数解释**： 任务状态。 **取值范围**： - running：运行中。 - waiting：等待中。 - deleted：已删除。 - finished：已完成。 - disabled：已禁用。 - failed：失败。
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class LogicalClusterPlanActions implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 任务状态。 **取值范围**： running|waiting|deleted|finished|disabled|failed。
+    * @param string|null $status **参数解释**： 任务状态。 **取值范围**： - running：运行中。 - waiting：等待中。 - deleted：已删除。 - finished：已完成。 - disabled：已禁用。 - failed：失败。
     *
     * @return $this
     */

@@ -21,9 +21,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * configurationStatus  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * configurationStatus  **参数解释**： 配置状态。 **取值范围**： - In-Sync：应用完成。 - Applying：应用中。 - Pending-Reboot：待重启生效。 - Sync-Failure：修改失败。
     * paramsGroupId  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
-    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： - dws-cn：cn节点。 - dws：dn节点。 - cms：cms节点。 - gtm：gtm节点。 - vw：vw节点。
     * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
     * role  **参数解释**： 角色。 **取值范围**： 不涉及。
     * internalSubnetId  **参数解释**： 内部子网ID。 **取值范围**： 不涉及。
@@ -35,7 +35,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     * created  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * updated  **参数解释**： 更新时间。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - BUILD：创建中 - ACTIVE：可用 - FAILED：不可用 - DELETED：已删除 - REBOOTING：重启中 - ERROR：创建失败 - SHUTDOWN：关机
     * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
     * links  **参数解释**： 链接信息。 **取值范围**： 不涉及。
     * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
@@ -89,9 +89,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * configurationStatus  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * configurationStatus  **参数解释**： 配置状态。 **取值范围**： - In-Sync：应用完成。 - Applying：应用中。 - Pending-Reboot：待重启生效。 - Sync-Failure：修改失败。
     * paramsGroupId  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
-    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： - dws-cn：cn节点。 - dws：dn节点。 - cms：cms节点。 - gtm：gtm节点。 - vw：vw节点。
     * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
     * role  **参数解释**： 角色。 **取值范围**： 不涉及。
     * internalSubnetId  **参数解释**： 内部子网ID。 **取值范围**： 不涉及。
@@ -103,7 +103,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     * created  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * updated  **参数解释**： 更新时间。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - BUILD：创建中 - ACTIVE：可用 - FAILED：不可用 - DELETED：已删除 - REBOOTING：重启中 - ERROR：创建失败 - SHUTDOWN：关机
     * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
     * links  **参数解释**： 链接信息。 **取值范围**： 不涉及。
     * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
@@ -178,9 +178,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * configurationStatus  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * configurationStatus  **参数解释**： 配置状态。 **取值范围**： - In-Sync：应用完成。 - Applying：应用中。 - Pending-Reboot：待重启生效。 - Sync-Failure：修改失败。
     * paramsGroupId  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
-    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： - dws-cn：cn节点。 - dws：dn节点。 - cms：cms节点。 - gtm：gtm节点。 - vw：vw节点。
     * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
     * role  **参数解释**： 角色。 **取值范围**： 不涉及。
     * internalSubnetId  **参数解释**： 内部子网ID。 **取值范围**： 不涉及。
@@ -192,7 +192,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     * created  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * updated  **参数解释**： 更新时间。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - BUILD：创建中 - ACTIVE：可用 - FAILED：不可用 - DELETED：已删除 - REBOOTING：重启中 - ERROR：创建失败 - SHUTDOWN：关机
     * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
     * links  **参数解释**： 链接信息。 **取值范围**： 不涉及。
     * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
@@ -246,9 +246,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * configurationStatus  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * configurationStatus  **参数解释**： 配置状态。 **取值范围**： - In-Sync：应用完成。 - Applying：应用中。 - Pending-Reboot：待重启生效。 - Sync-Failure：修改失败。
     * paramsGroupId  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
-    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： - dws-cn：cn节点。 - dws：dn节点。 - cms：cms节点。 - gtm：gtm节点。 - vw：vw节点。
     * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
     * role  **参数解释**： 角色。 **取值范围**： 不涉及。
     * internalSubnetId  **参数解释**： 内部子网ID。 **取值范围**： 不涉及。
@@ -260,7 +260,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     * created  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * updated  **参数解释**： 更新时间。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - BUILD：创建中 - ACTIVE：可用 - FAILED：不可用 - DELETED：已删除 - REBOOTING：重启中 - ERROR：创建失败 - SHUTDOWN：关机
     * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
     * links  **参数解释**： 链接信息。 **取值范围**： 不涉及。
     * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
@@ -314,9 +314,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * configurationStatus  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * configurationStatus  **参数解释**： 配置状态。 **取值范围**： - In-Sync：应用完成。 - Applying：应用中。 - Pending-Reboot：待重启生效。 - Sync-Failure：修改失败。
     * paramsGroupId  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
-    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 类型。 **取值范围**： - dws-cn：cn节点。 - dws：dn节点。 - cms：cms节点。 - gtm：gtm节点。 - vw：vw节点。
     * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
     * role  **参数解释**： 角色。 **取值范围**： 不涉及。
     * internalSubnetId  **参数解释**： 内部子网ID。 **取值范围**： 不涉及。
@@ -328,7 +328,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     * created  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * updated  **参数解释**： 更新时间。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - BUILD：创建中 - ACTIVE：可用 - FAILED：不可用 - DELETED：已删除 - REBOOTING：重启中 - ERROR：创建失败 - SHUTDOWN：关机
     * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
     * links  **参数解释**： 链接信息。 **取值范围**： 不涉及。
     * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
@@ -494,7 +494,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets configurationStatus
-    *  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 配置状态。 **取值范围**： - In-Sync：应用完成。 - Applying：应用中。 - Pending-Reboot：待重启生效。 - Sync-Failure：修改失败。
     *
     * @return string|null
     */
@@ -506,7 +506,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets configurationStatus
     *
-    * @param string|null $configurationStatus **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * @param string|null $configurationStatus **参数解释**： 配置状态。 **取值范围**： - In-Sync：应用完成。 - Applying：应用中。 - Pending-Reboot：待重启生效。 - Sync-Failure：修改失败。
     *
     * @return $this
     */
@@ -542,7 +542,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**： 类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 类型。 **取值范围**： - dws-cn：cn节点。 - dws：dn节点。 - cms：cms节点。 - gtm：gtm节点。 - vw：vw节点。
     *
     * @return string|null
     */
@@ -554,7 +554,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释**： 类型。 **取值范围**： 不涉及。
+    * @param string|null $type **参数解释**： 类型。 **取值范围**： - dws-cn：cn节点。 - dws：dn节点。 - cms：cms节点。 - gtm：gtm节点。 - vw：vw节点。
     *
     * @return $this
     */
@@ -830,7 +830,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 状态。 **取值范围**： - BUILD：创建中 - ACTIVE：可用 - FAILED：不可用 - DELETED：已删除 - REBOOTING：重启中 - ERROR：创建失败 - SHUTDOWN：关机
     *
     * @return string|null
     */
@@ -842,7 +842,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 状态。 **取值范围**： 不涉及。
+    * @param string|null $status **参数解释**： 状态。 **取值范围**： - BUILD：创建中 - ACTIVE：可用 - FAILED：不可用 - DELETED：已删除 - REBOOTING：重启中 - ERROR：创建失败 - SHUTDOWN：关机
     *
     * @return $this
     */

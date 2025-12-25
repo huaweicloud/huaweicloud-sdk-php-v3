@@ -21,7 +21,7 @@ class BatchCreateResourcesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * succeedCount  成功添加的资源数目
+    * succeedCount  **参数解释**： 成功添加的资源数目。     **取值范围**： 取值范围为0-1000。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class BatchCreateResourcesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * succeedCount  成功添加的资源数目
+    * succeedCount  **参数解释**： 成功添加的资源数目。     **取值范围**： 取值范围为0-1000。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class BatchCreateResourcesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * succeedCount  成功添加的资源数目
+    * succeedCount  **参数解释**： 成功添加的资源数目。     **取值范围**： 取值范围为0-1000。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class BatchCreateResourcesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * succeedCount  成功添加的资源数目
+    * succeedCount  **参数解释**： 成功添加的资源数目。     **取值范围**： 取值范围为0-1000。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class BatchCreateResourcesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * succeedCount  成功添加的资源数目
+    * succeedCount  **参数解释**： 成功添加的资源数目。     **取值范围**： 取值范围为0-1000。
     *
     * @var string[]
     */
@@ -181,7 +181,7 @@ class BatchCreateResourcesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets succeedCount
-    *  成功添加的资源数目
+    *  **参数解释**： 成功添加的资源数目。     **取值范围**： 取值范围为0-1000。
     *
     * @return int|null
     */
@@ -193,7 +193,7 @@ class BatchCreateResourcesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets succeedCount
     *
-    * @param int|null $succeedCount 成功添加的资源数目
+    * @param int|null $succeedCount **参数解释**： 成功添加的资源数目。     **取值范围**： 取值范围为0-1000。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class DataPointInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * time  **参数解释**： 计算出该条告警记录的资源监控数据上报的UTC时间。 **取值范围**： 字符串长度在 1 到 64 之间。
-    * value  **参数解释**： 计算出该条告警记录的资源监控数据在该时间点的监控数值，如：7.019。 **取值范围**： 整数，最小值为0，最大值为1.7976931348623157e+308。
+    * value  **参数解释**： 计算出该条告警记录的资源监控数据在该时间点的监控数值，如：7.019 **取值范围**： 整数，最小值为-1.7976931348623157e+108，最大值为1.7976931348623157e+108
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class DataPointInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * time  **参数解释**： 计算出该条告警记录的资源监控数据上报的UTC时间。 **取值范围**： 字符串长度在 1 到 64 之间。
-    * value  **参数解释**： 计算出该条告警记录的资源监控数据在该时间点的监控数值，如：7.019。 **取值范围**： 整数，最小值为0，最大值为1.7976931348623157e+308。
+    * value  **参数解释**： 计算出该条告警记录的资源监控数据在该时间点的监控数值，如：7.019 **取值范围**： 整数，最小值为-1.7976931348623157e+108，最大值为1.7976931348623157e+108
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class DataPointInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * time  **参数解释**： 计算出该条告警记录的资源监控数据上报的UTC时间。 **取值范围**： 字符串长度在 1 到 64 之间。
-    * value  **参数解释**： 计算出该条告警记录的资源监控数据在该时间点的监控数值，如：7.019。 **取值范围**： 整数，最小值为0，最大值为1.7976931348623157e+308。
+    * value  **参数解释**： 计算出该条告警记录的资源监控数据在该时间点的监控数值，如：7.019 **取值范围**： 整数，最小值为-1.7976931348623157e+108，最大值为1.7976931348623157e+108
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class DataPointInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * time  **参数解释**： 计算出该条告警记录的资源监控数据上报的UTC时间。 **取值范围**： 字符串长度在 1 到 64 之间。
-    * value  **参数解释**： 计算出该条告警记录的资源监控数据在该时间点的监控数值，如：7.019。 **取值范围**： 整数，最小值为0，最大值为1.7976931348623157e+308。
+    * value  **参数解释**： 计算出该条告警记录的资源监控数据在该时间点的监控数值，如：7.019 **取值范围**： 整数，最小值为-1.7976931348623157e+108，最大值为1.7976931348623157e+108
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class DataPointInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * time  **参数解释**： 计算出该条告警记录的资源监控数据上报的UTC时间。 **取值范围**： 字符串长度在 1 到 64 之间。
-    * value  **参数解释**： 计算出该条告警记录的资源监控数据在该时间点的监控数值，如：7.019。 **取值范围**： 整数，最小值为0，最大值为1.7976931348623157e+308。
+    * value  **参数解释**： 计算出该条告警记录的资源监控数据在该时间点的监控数值，如：7.019 **取值范围**： 整数，最小值为-1.7976931348623157e+108，最大值为1.7976931348623157e+108
     *
     * @var string[]
     */
@@ -178,8 +178,8 @@ class DataPointInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['value']) && ($this->container['value'] > 1.7976931348623157E+308)) {
                 $invalidProperties[] = "invalid value for 'value', must be smaller than or equal to 1.7976931348623157E+308.";
             }
-            if (!is_null($this->container['value']) && ($this->container['value'] < 0)) {
-                $invalidProperties[] = "invalid value for 'value', must be bigger than or equal to 0.";
+            if (!is_null($this->container['value']) && ($this->container['value'] < -1.7976931348623156E+108)) {
+                $invalidProperties[] = "invalid value for 'value', must be bigger than or equal to -1.7976931348623156E+108.";
             }
         return $invalidProperties;
     }
@@ -221,7 +221,7 @@ class DataPointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  **参数解释**： 计算出该条告警记录的资源监控数据在该时间点的监控数值，如：7.019。 **取值范围**： 整数，最小值为0，最大值为1.7976931348623157e+308。
+    *  **参数解释**： 计算出该条告警记录的资源监控数据在该时间点的监控数值，如：7.019 **取值范围**： 整数，最小值为-1.7976931348623157e+108，最大值为1.7976931348623157e+108
     *
     * @return double|null
     */
@@ -233,7 +233,7 @@ class DataPointInfo implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param double|null $value **参数解释**： 计算出该条告警记录的资源监控数据在该时间点的监控数值，如：7.019。 **取值范围**： 整数，最小值为0，最大值为1.7976931348623157e+308。
+    * @param double|null $value **参数解释**： 计算出该条告警记录的资源监控数据在该时间点的监控数值，如：7.019 **取值范围**： 整数，最小值为-1.7976931348623157e+108，最大值为1.7976931348623157e+108
     *
     * @return $this
     */

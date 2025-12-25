@@ -20,7 +20,7 @@ class Instance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * productName  **参数解释** 云产品名称 **约束限制** 不涉及 **取值范围** 长度为[1,16]个字符 **默认取值** 不涉及
+    * productName  **参数解释** 云产品名称 **约束限制** 不涉及 **取值范围** 长度为[0,128]个字符 **默认取值** 不涉及
     * logicalOperator  **参数解释** 逻辑运算符 **约束限制** 不涉及 **取值范围** - ALL: 所有条件匹配成功 - ANY: 任意条件匹配成功 **默认取值** 不涉及
     * instanceNames  **参数解释** 资源名称匹配参数数组 **约束限制** 不超过10个名称
     *
@@ -34,7 +34,7 @@ class Instance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * productName  **参数解释** 云产品名称 **约束限制** 不涉及 **取值范围** 长度为[1,16]个字符 **默认取值** 不涉及
+    * productName  **参数解释** 云产品名称 **约束限制** 不涉及 **取值范围** 长度为[0,128]个字符 **默认取值** 不涉及
     * logicalOperator  **参数解释** 逻辑运算符 **约束限制** 不涉及 **取值范围** - ALL: 所有条件匹配成功 - ANY: 任意条件匹配成功 **默认取值** 不涉及
     * instanceNames  **参数解释** 资源名称匹配参数数组 **约束限制** 不超过10个名称
     *
@@ -69,7 +69,7 @@ class Instance implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * productName  **参数解释** 云产品名称 **约束限制** 不涉及 **取值范围** 长度为[1,16]个字符 **默认取值** 不涉及
+    * productName  **参数解释** 云产品名称 **约束限制** 不涉及 **取值范围** 长度为[0,128]个字符 **默认取值** 不涉及
     * logicalOperator  **参数解释** 逻辑运算符 **约束限制** 不涉及 **取值范围** - ALL: 所有条件匹配成功 - ANY: 任意条件匹配成功 **默认取值** 不涉及
     * instanceNames  **参数解释** 资源名称匹配参数数组 **约束限制** 不超过10个名称
     *
@@ -83,7 +83,7 @@ class Instance implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * productName  **参数解释** 云产品名称 **约束限制** 不涉及 **取值范围** 长度为[1,16]个字符 **默认取值** 不涉及
+    * productName  **参数解释** 云产品名称 **约束限制** 不涉及 **取值范围** 长度为[0,128]个字符 **默认取值** 不涉及
     * logicalOperator  **参数解释** 逻辑运算符 **约束限制** 不涉及 **取值范围** - ALL: 所有条件匹配成功 - ANY: 任意条件匹配成功 **默认取值** 不涉及
     * instanceNames  **参数解释** 资源名称匹配参数数组 **约束限制** 不超过10个名称
     *
@@ -97,7 +97,7 @@ class Instance implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * productName  **参数解释** 云产品名称 **约束限制** 不涉及 **取值范围** 长度为[1,16]个字符 **默认取值** 不涉及
+    * productName  **参数解释** 云产品名称 **约束限制** 不涉及 **取值范围** 长度为[0,128]个字符 **默认取值** 不涉及
     * logicalOperator  **参数解释** 逻辑运算符 **约束限制** 不涉及 **取值范围** - ALL: 所有条件匹配成功 - ANY: 任意条件匹配成功 **默认取值** 不涉及
     * instanceNames  **参数解释** 资源名称匹配参数数组 **约束限制** 不超过10个名称
     *
@@ -198,11 +198,11 @@ class Instance implements ModelInterface, ArrayAccess
         if ($this->container['productName'] === null) {
             $invalidProperties[] = "'productName' can't be null";
         }
-            if ((mb_strlen($this->container['productName']) > 16)) {
-                $invalidProperties[] = "invalid value for 'productName', the character length must be smaller than or equal to 16.";
+            if ((mb_strlen($this->container['productName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'productName', the character length must be smaller than or equal to 128.";
             }
-            if ((mb_strlen($this->container['productName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'productName', the character length must be bigger than or equal to 1.";
+            if ((mb_strlen($this->container['productName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'productName', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['logicalOperator'] === null) {
             $invalidProperties[] = "'logicalOperator' can't be null";
@@ -234,7 +234,7 @@ class Instance implements ModelInterface, ArrayAccess
 
     /**
     * Gets productName
-    *  **参数解释** 云产品名称 **约束限制** 不涉及 **取值范围** 长度为[1,16]个字符 **默认取值** 不涉及
+    *  **参数解释** 云产品名称 **约束限制** 不涉及 **取值范围** 长度为[0,128]个字符 **默认取值** 不涉及
     *
     * @return string
     */
@@ -246,7 +246,7 @@ class Instance implements ModelInterface, ArrayAccess
     /**
     * Sets productName
     *
-    * @param string $productName **参数解释** 云产品名称 **约束限制** 不涉及 **取值范围** 长度为[1,16]个字符 **默认取值** 不涉及
+    * @param string $productName **参数解释** 云产品名称 **约束限制** 不涉及 **取值范围** 长度为[0,128]个字符 **默认取值** 不涉及
     *
     * @return $this
     */

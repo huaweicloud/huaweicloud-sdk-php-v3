@@ -79,7 +79,7 @@ class RepositoryTag implements ModelInterface, ArrayAccess
         'manifestMediaType' => null,
         'pullTime' => null,
         'pushTime' => null,
-        'size' => null
+        'size' => 'int64'
     ];
 
     /**

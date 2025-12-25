@@ -23,6 +23,7 @@ class ListSingleStreamBitrateRequest implements ModelInterface, ArrayAccess
     * domain  推流域名。
     * app  App名。
     * stream  流名。
+    * type  数据类型，取值如下：  - VIDEO ：视频码率  - AUDIO ：音频码率   不填写默认查询视频码率的数据。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询最近1小时数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
@@ -32,6 +33,7 @@ class ListSingleStreamBitrateRequest implements ModelInterface, ArrayAccess
             'domain' => 'string',
             'app' => 'string',
             'stream' => 'string',
+            'type' => 'string',
             'startTime' => 'string',
             'endTime' => 'string'
     ];
@@ -41,6 +43,7 @@ class ListSingleStreamBitrateRequest implements ModelInterface, ArrayAccess
     * domain  推流域名。
     * app  App名。
     * stream  流名。
+    * type  数据类型，取值如下：  - VIDEO ：视频码率  - AUDIO ：音频码率   不填写默认查询视频码率的数据。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询最近1小时数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
@@ -50,6 +53,7 @@ class ListSingleStreamBitrateRequest implements ModelInterface, ArrayAccess
         'domain' => null,
         'app' => null,
         'stream' => null,
+        'type' => null,
         'startTime' => null,
         'endTime' => null
     ];
@@ -80,6 +84,7 @@ class ListSingleStreamBitrateRequest implements ModelInterface, ArrayAccess
     * domain  推流域名。
     * app  App名。
     * stream  流名。
+    * type  数据类型，取值如下：  - VIDEO ：视频码率  - AUDIO ：音频码率   不填写默认查询视频码率的数据。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询最近1小时数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
@@ -89,6 +94,7 @@ class ListSingleStreamBitrateRequest implements ModelInterface, ArrayAccess
             'domain' => 'domain',
             'app' => 'app',
             'stream' => 'stream',
+            'type' => 'type',
             'startTime' => 'start_time',
             'endTime' => 'end_time'
     ];
@@ -98,6 +104,7 @@ class ListSingleStreamBitrateRequest implements ModelInterface, ArrayAccess
     * domain  推流域名。
     * app  App名。
     * stream  流名。
+    * type  数据类型，取值如下：  - VIDEO ：视频码率  - AUDIO ：音频码率   不填写默认查询视频码率的数据。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询最近1小时数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
@@ -107,6 +114,7 @@ class ListSingleStreamBitrateRequest implements ModelInterface, ArrayAccess
             'domain' => 'setDomain',
             'app' => 'setApp',
             'stream' => 'setStream',
+            'type' => 'setType',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime'
     ];
@@ -116,6 +124,7 @@ class ListSingleStreamBitrateRequest implements ModelInterface, ArrayAccess
     * domain  推流域名。
     * app  App名。
     * stream  流名。
+    * type  数据类型，取值如下：  - VIDEO ：视频码率  - AUDIO ：音频码率   不填写默认查询视频码率的数据。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询最近1小时数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
@@ -125,6 +134,7 @@ class ListSingleStreamBitrateRequest implements ModelInterface, ArrayAccess
             'domain' => 'getDomain',
             'app' => 'getApp',
             'stream' => 'getStream',
+            'type' => 'getType',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime'
     ];
@@ -169,7 +179,22 @@ class ListSingleStreamBitrateRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TYPE_VIDEO = 'VIDEO';
+    const TYPE_AUDIO = 'AUDIO';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_VIDEO,
+            self::TYPE_AUDIO,
+        ];
+    }
 
 
     /**
@@ -190,6 +215,7 @@ class ListSingleStreamBitrateRequest implements ModelInterface, ArrayAccess
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
         $this->container['app'] = isset($data['app']) ? $data['app'] : null;
         $this->container['stream'] = isset($data['stream']) ? $data['stream'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
     }
@@ -228,6 +254,20 @@ class ListSingleStreamBitrateRequest implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['stream']) < 1)) {
                 $invalidProperties[] = "invalid value for 'stream', the character length must be bigger than or equal to 1.";
+            }
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) > 10)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 1)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['startTime']) && (mb_strlen($this->container['startTime']) > 64)) {
                 $invalidProperties[] = "invalid value for 'startTime', the character length must be smaller than or equal to 64.";
@@ -324,6 +364,30 @@ class ListSingleStreamBitrateRequest implements ModelInterface, ArrayAccess
     public function setStream($stream)
     {
         $this->container['stream'] = $stream;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  数据类型，取值如下：  - VIDEO ：视频码率  - AUDIO ：音频码率   不填写默认查询视频码率的数据。
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 数据类型，取值如下：  - VIDEO ：视频码率  - AUDIO ：音频码率   不填写默认查询视频码率的数据。
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

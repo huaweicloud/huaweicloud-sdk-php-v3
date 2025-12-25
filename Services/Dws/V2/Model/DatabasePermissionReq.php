@@ -20,7 +20,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  **参数解释**： 对象类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP、ROLE。
+    * type  **参数解释**： 对象类型。 **取值范围**： - DATABASE：数据库。 - SCHEMA：模式。 - TABLE：表。 - VIEW：视图。 - COLUMN：列。 - FUNCTION：函数。 - SEQUENCE：序列。 - NODEGROUP：节点组。 - ROLE：角色。
     * isGrant  **参数解释**： 是否授权操作。 **取值范围**： 不涉及。
     * grantList  **参数解释**： 授权列表。is_grant为true时必填。 **取值范围**： 不涉及。
     * revokeList  **参数解释**： 撤销权限列表。is_grant为false时必填。 **取值范围**： 不涉及。
@@ -50,7 +50,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  **参数解释**： 对象类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP、ROLE。
+    * type  **参数解释**： 对象类型。 **取值范围**： - DATABASE：数据库。 - SCHEMA：模式。 - TABLE：表。 - VIEW：视图。 - COLUMN：列。 - FUNCTION：函数。 - SEQUENCE：序列。 - NODEGROUP：节点组。 - ROLE：角色。
     * isGrant  **参数解释**： 是否授权操作。 **取值范围**： 不涉及。
     * grantList  **参数解释**： 授权列表。is_grant为true时必填。 **取值范围**： 不涉及。
     * revokeList  **参数解释**： 撤销权限列表。is_grant为false时必填。 **取值范围**： 不涉及。
@@ -101,7 +101,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  **参数解释**： 对象类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP、ROLE。
+    * type  **参数解释**： 对象类型。 **取值范围**： - DATABASE：数据库。 - SCHEMA：模式。 - TABLE：表。 - VIEW：视图。 - COLUMN：列。 - FUNCTION：函数。 - SEQUENCE：序列。 - NODEGROUP：节点组。 - ROLE：角色。
     * isGrant  **参数解释**： 是否授权操作。 **取值范围**： 不涉及。
     * grantList  **参数解释**： 授权列表。is_grant为true时必填。 **取值范围**： 不涉及。
     * revokeList  **参数解释**： 撤销权限列表。is_grant为false时必填。 **取值范围**： 不涉及。
@@ -131,7 +131,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  **参数解释**： 对象类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP、ROLE。
+    * type  **参数解释**： 对象类型。 **取值范围**： - DATABASE：数据库。 - SCHEMA：模式。 - TABLE：表。 - VIEW：视图。 - COLUMN：列。 - FUNCTION：函数。 - SEQUENCE：序列。 - NODEGROUP：节点组。 - ROLE：角色。
     * isGrant  **参数解释**： 是否授权操作。 **取值范围**： 不涉及。
     * grantList  **参数解释**： 授权列表。is_grant为true时必填。 **取值范围**： 不涉及。
     * revokeList  **参数解释**： 撤销权限列表。is_grant为false时必填。 **取值范围**： 不涉及。
@@ -161,7 +161,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  **参数解释**： 对象类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP、ROLE。
+    * type  **参数解释**： 对象类型。 **取值范围**： - DATABASE：数据库。 - SCHEMA：模式。 - TABLE：表。 - VIEW：视图。 - COLUMN：列。 - FUNCTION：函数。 - SEQUENCE：序列。 - NODEGROUP：节点组。 - ROLE：角色。
     * isGrant  **参数解释**： 是否授权操作。 **取值范围**： 不涉及。
     * grantList  **参数解释**： 授权列表。is_grant为true时必填。 **取值范围**： 不涉及。
     * revokeList  **参数解释**： 撤销权限列表。is_grant为false时必填。 **取值范围**： 不涉及。
@@ -299,7 +299,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**： 对象类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP、ROLE。
+    *  **参数解释**： 对象类型。 **取值范围**： - DATABASE：数据库。 - SCHEMA：模式。 - TABLE：表。 - VIEW：视图。 - COLUMN：列。 - FUNCTION：函数。 - SEQUENCE：序列。 - NODEGROUP：节点组。 - ROLE：角色。
     *
     * @return string
     */
@@ -311,7 +311,7 @@ class DatabasePermissionReq implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type **参数解释**： 对象类型。 **取值范围**： DATABASE、SCHEMA、TABLE、VIEW、COLUMN、FUNCTION、SEQUENCE、NODEGROUP、ROLE。
+    * @param string $type **参数解释**： 对象类型。 **取值范围**： - DATABASE：数据库。 - SCHEMA：模式。 - TABLE：表。 - VIEW：视图。 - COLUMN：列。 - FUNCTION：函数。 - SEQUENCE：序列。 - NODEGROUP：节点组。 - ROLE：角色。
     *
     * @return $this
     */

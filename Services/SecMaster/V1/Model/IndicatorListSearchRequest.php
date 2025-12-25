@@ -1,0 +1,555 @@
+<?php
+
+namespace HuaweiCloud\SDK\SecMaster\V1\Model;
+
+use \ArrayAccess;
+use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
+use HuaweiCloud\SDK\Core\Utils\ModelInterface;
+use HuaweiCloud\SDK\Core\SdkResponse;
+
+class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
+{
+    const DISCRIMINATOR = null;
+
+    /**
+    * The original name of the model.
+    *
+    * @var string
+    */
+    protected static $openAPIModelName = 'IndicatorListSearchRequest';
+
+    /**
+    * Array of property to type mappings. Used for (de)serialization
+    * ids  威胁情报ID列表
+    * dataclassId  数据类ID
+    * condition  condition
+    * offset  分页查询参数。用于指定查询结果的起始位置，从0开始。
+    * limit  分页查询参数，用于指定一次查询最多的结果数，从1开始。
+    * sortBy  排序字段
+    * fromDate  查询起始时间，例如：2024-01-20T00:00:00.000Z+0800
+    * toDate  查询截止时间，例如：2024-01-26T23:59:59.999Z+0800
+    *
+    * @var string[]
+    */
+    protected static $openAPITypes = [
+            'ids' => 'string[]',
+            'dataclassId' => 'string',
+            'condition' => '\HuaweiCloud\SDK\SecMaster\V1\Model\DataobjectSearchCondition',
+            'offset' => 'int',
+            'limit' => 'int',
+            'sortBy' => 'string',
+            'fromDate' => 'string',
+            'toDate' => 'string'
+    ];
+
+    /**
+    * Array of property to format mappings. Used for (de)serialization
+    * ids  威胁情报ID列表
+    * dataclassId  数据类ID
+    * condition  condition
+    * offset  分页查询参数。用于指定查询结果的起始位置，从0开始。
+    * limit  分页查询参数，用于指定一次查询最多的结果数，从1开始。
+    * sortBy  排序字段
+    * fromDate  查询起始时间，例如：2024-01-20T00:00:00.000Z+0800
+    * toDate  查询截止时间，例如：2024-01-26T23:59:59.999Z+0800
+    *
+    * @var string[]
+    */
+    protected static $openAPIFormats = [
+        'ids' => null,
+        'dataclassId' => null,
+        'condition' => null,
+        'offset' => 'int32',
+        'limit' => 'int32',
+        'sortBy' => null,
+        'fromDate' => null,
+        'toDate' => null
+    ];
+
+    /**
+    * Array of property to type mappings. Used for (de)serialization
+    *
+    * @return array
+    */
+    public static function openAPITypes()
+    {
+        return self::$openAPITypes;
+    }
+
+    /**
+    * Array of property to format mappings. Used for (de)serialization
+    *
+    * @return array
+    */
+    public static function openAPIFormats()
+    {
+        return self::$openAPIFormats;
+    }
+
+    /**
+    * Array of attributes where the key is the local name,
+    * and the value is the original name
+    * ids  威胁情报ID列表
+    * dataclassId  数据类ID
+    * condition  condition
+    * offset  分页查询参数。用于指定查询结果的起始位置，从0开始。
+    * limit  分页查询参数，用于指定一次查询最多的结果数，从1开始。
+    * sortBy  排序字段
+    * fromDate  查询起始时间，例如：2024-01-20T00:00:00.000Z+0800
+    * toDate  查询截止时间，例如：2024-01-26T23:59:59.999Z+0800
+    *
+    * @var string[]
+    */
+    protected static $attributeMap = [
+            'ids' => 'ids',
+            'dataclassId' => 'dataclass_id',
+            'condition' => 'condition',
+            'offset' => 'offset',
+            'limit' => 'limit',
+            'sortBy' => 'sort_by',
+            'fromDate' => 'from_date',
+            'toDate' => 'to_date'
+    ];
+
+    /**
+    * Array of attributes to setter functions (for deserialization of responses)
+    * ids  威胁情报ID列表
+    * dataclassId  数据类ID
+    * condition  condition
+    * offset  分页查询参数。用于指定查询结果的起始位置，从0开始。
+    * limit  分页查询参数，用于指定一次查询最多的结果数，从1开始。
+    * sortBy  排序字段
+    * fromDate  查询起始时间，例如：2024-01-20T00:00:00.000Z+0800
+    * toDate  查询截止时间，例如：2024-01-26T23:59:59.999Z+0800
+    *
+    * @var string[]
+    */
+    protected static $setters = [
+            'ids' => 'setIds',
+            'dataclassId' => 'setDataclassId',
+            'condition' => 'setCondition',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit',
+            'sortBy' => 'setSortBy',
+            'fromDate' => 'setFromDate',
+            'toDate' => 'setToDate'
+    ];
+
+    /**
+    * Array of attributes to getter functions (for serialization of requests)
+    * ids  威胁情报ID列表
+    * dataclassId  数据类ID
+    * condition  condition
+    * offset  分页查询参数。用于指定查询结果的起始位置，从0开始。
+    * limit  分页查询参数，用于指定一次查询最多的结果数，从1开始。
+    * sortBy  排序字段
+    * fromDate  查询起始时间，例如：2024-01-20T00:00:00.000Z+0800
+    * toDate  查询截止时间，例如：2024-01-26T23:59:59.999Z+0800
+    *
+    * @var string[]
+    */
+    protected static $getters = [
+            'ids' => 'getIds',
+            'dataclassId' => 'getDataclassId',
+            'condition' => 'getCondition',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit',
+            'sortBy' => 'getSortBy',
+            'fromDate' => 'getFromDate',
+            'toDate' => 'getToDate'
+    ];
+
+    /**
+    * Array of attributes where the key is the local name,
+    * and the value is the original name
+    *
+    * @return array
+    */
+    public static function attributeMap()
+    {
+        return self::$attributeMap;
+    }
+
+    /**
+    * Array of attributes to setter functions (for deserialization of responses)
+    *
+    * @return array
+    */
+    public static function setters()
+    {
+        return self::$setters;
+    }
+
+    /**
+    * Array of attributes to getter functions (for serialization of requests)
+    *
+    * @return array
+    */
+    public static function getters()
+    {
+        return self::$getters;
+    }
+
+    /**
+    * The original name of the model.
+    *
+    * @return string
+    */
+    public function getModelName()
+    {
+        return self::$openAPIModelName;
+    }
+    
+
+
+    /**
+    * Associative array for storing property values
+    *
+    * @var mixed[]
+    */
+    protected $container = [];
+
+    /**
+    * Constructor
+    *
+    * @param mixed[] $data Associated array of property values
+    *                      initializing the model
+    */
+    public function __construct(array $data = null)
+    {
+        $this->container['ids'] = isset($data['ids']) ? $data['ids'] : null;
+        $this->container['dataclassId'] = isset($data['dataclassId']) ? $data['dataclassId'] : null;
+        $this->container['condition'] = isset($data['condition']) ? $data['condition'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['sortBy'] = isset($data['sortBy']) ? $data['sortBy'] : null;
+        $this->container['fromDate'] = isset($data['fromDate']) ? $data['fromDate'] : null;
+        $this->container['toDate'] = isset($data['toDate']) ? $data['toDate'] : null;
+    }
+
+    /**
+    * Show all the invalid properties with reasons.
+    *
+    * @return array invalid properties with reasons
+    */
+    public function listInvalidProperties()
+    {
+        $invalidProperties = [];
+            if (!is_null($this->container['dataclassId']) && (mb_strlen($this->container['dataclassId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'dataclassId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['dataclassId']) && (mb_strlen($this->container['dataclassId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'dataclassId', the character length must be bigger than or equal to 32.";
+            }
+        if ($this->container['condition'] === null) {
+            $invalidProperties[] = "'condition' can't be null";
+        }
+        if ($this->container['offset'] === null) {
+            $invalidProperties[] = "'offset' can't be null";
+        }
+            if (($this->container['offset'] > 9998)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 9998.";
+            }
+            if (($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+        if ($this->container['limit'] === null) {
+            $invalidProperties[] = "'limit' can't be null";
+        }
+            if (($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            }
+            if (($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['sortBy']) && (mb_strlen($this->container['sortBy']) > 64)) {
+                $invalidProperties[] = "invalid value for 'sortBy', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['sortBy']) && (mb_strlen($this->container['sortBy']) < 1)) {
+                $invalidProperties[] = "invalid value for 'sortBy', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['fromDate']) && (mb_strlen($this->container['fromDate']) > 64)) {
+                $invalidProperties[] = "invalid value for 'fromDate', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['fromDate']) && (mb_strlen($this->container['fromDate']) < 0)) {
+                $invalidProperties[] = "invalid value for 'fromDate', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['toDate']) && (mb_strlen($this->container['toDate']) > 64)) {
+                $invalidProperties[] = "invalid value for 'toDate', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['toDate']) && (mb_strlen($this->container['toDate']) < 0)) {
+                $invalidProperties[] = "invalid value for 'toDate', the character length must be bigger than or equal to 0.";
+            }
+        return $invalidProperties;
+    }
+
+    /**
+    * Validate all the properties in the model
+    * return true if all passed
+    *
+    * @return bool True if all properties are valid
+    */
+    public function valid()
+    {
+        return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets ids
+    *  威胁情报ID列表
+    *
+    * @return string[]|null
+    */
+    public function getIds()
+    {
+        return $this->container['ids'];
+    }
+
+    /**
+    * Sets ids
+    *
+    * @param string[]|null $ids 威胁情报ID列表
+    *
+    * @return $this
+    */
+    public function setIds($ids)
+    {
+        $this->container['ids'] = $ids;
+        return $this;
+    }
+
+    /**
+    * Gets dataclassId
+    *  数据类ID
+    *
+    * @return string|null
+    */
+    public function getDataclassId()
+    {
+        return $this->container['dataclassId'];
+    }
+
+    /**
+    * Sets dataclassId
+    *
+    * @param string|null $dataclassId 数据类ID
+    *
+    * @return $this
+    */
+    public function setDataclassId($dataclassId)
+    {
+        $this->container['dataclassId'] = $dataclassId;
+        return $this;
+    }
+
+    /**
+    * Gets condition
+    *  condition
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\DataobjectSearchCondition
+    */
+    public function getCondition()
+    {
+        return $this->container['condition'];
+    }
+
+    /**
+    * Sets condition
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\DataobjectSearchCondition $condition condition
+    *
+    * @return $this
+    */
+    public function setCondition($condition)
+    {
+        $this->container['condition'] = $condition;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  分页查询参数。用于指定查询结果的起始位置，从0开始。
+    *
+    * @return int
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int $offset 分页查询参数。用于指定查询结果的起始位置，从0开始。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  分页查询参数，用于指定一次查询最多的结果数，从1开始。
+    *
+    * @return int
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int $limit 分页查询参数，用于指定一次查询最多的结果数，从1开始。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets sortBy
+    *  排序字段
+    *
+    * @return string|null
+    */
+    public function getSortBy()
+    {
+        return $this->container['sortBy'];
+    }
+
+    /**
+    * Sets sortBy
+    *
+    * @param string|null $sortBy 排序字段
+    *
+    * @return $this
+    */
+    public function setSortBy($sortBy)
+    {
+        $this->container['sortBy'] = $sortBy;
+        return $this;
+    }
+
+    /**
+    * Gets fromDate
+    *  查询起始时间，例如：2024-01-20T00:00:00.000Z+0800
+    *
+    * @return string|null
+    */
+    public function getFromDate()
+    {
+        return $this->container['fromDate'];
+    }
+
+    /**
+    * Sets fromDate
+    *
+    * @param string|null $fromDate 查询起始时间，例如：2024-01-20T00:00:00.000Z+0800
+    *
+    * @return $this
+    */
+    public function setFromDate($fromDate)
+    {
+        $this->container['fromDate'] = $fromDate;
+        return $this;
+    }
+
+    /**
+    * Gets toDate
+    *  查询截止时间，例如：2024-01-26T23:59:59.999Z+0800
+    *
+    * @return string|null
+    */
+    public function getToDate()
+    {
+        return $this->container['toDate'];
+    }
+
+    /**
+    * Sets toDate
+    *
+    * @param string|null $toDate 查询截止时间，例如：2024-01-26T23:59:59.999Z+0800
+    *
+    * @return $this
+    */
+    public function setToDate($toDate)
+    {
+        $this->container['toDate'] = $toDate;
+        return $this;
+    }
+
+    /**
+    * Returns true if offset exists. False otherwise.
+    *
+    * @param integer $offset Offset
+    *
+    * @return boolean
+    */
+    public function offsetExists($offset)
+    {
+        return isset($this->container[$offset]);
+    }
+
+    /**
+    * Gets offset.
+    *
+    * @param integer $offset Offset
+    *
+    * @return mixed
+    */
+    public function offsetGet($offset)
+    {
+        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+    }
+
+    /**
+    * Sets value based on offset.
+    *
+    * @param integer $offset Offset
+    * @param mixed   $value  Value to be set
+    *
+    * @return void
+    */
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
+                $this->container[] = $value;
+            } else {
+                $this->container[$offset] = $value;
+        }
+    }
+
+    /**
+    * Unsets offset.
+    *
+    * @param integer $offset Offset
+    *
+    * @return void
+    */
+    public function offsetUnset($offset)
+    {
+        unset($this->container[$offset]);
+    }
+
+    /**
+    * Gets the string presentation of the object
+    *
+    * @return string
+    */
+    public function __toString()
+    {
+        return json_encode(
+            ObjectSerializer::sanitizeForSerialization($this),
+            JSON_PRETTY_PRINT
+        );
+    }
+}
+

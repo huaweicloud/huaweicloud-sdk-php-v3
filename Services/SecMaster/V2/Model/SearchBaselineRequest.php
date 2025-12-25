@@ -20,33 +20,33 @@ class SearchBaselineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workspaceId  工作空间id
-    * xLanguage  语言，参考值：zh-CN、en-US
-    * contentType  内容类型
+    * contentType  **参数解释：** 内容类型 - application/json;charset=UTF-8    普通API请求的类型  **约束限制：** 不涉及 **取值范围：** - application/json;charset=UTF-8  **默认取值：** 不涉及
+    * workspaceId  **参数解释：** 工作空间id。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * xLanguage  **参数解释：** 语言，参考值：zh-cn、en-us **约束限制：** 不涉及 **取值范围：** zh-cn：中文环境 en-us：英文环境 **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'contentType' => 'string',
             'workspaceId' => 'string',
             'xLanguage' => 'string',
-            'contentType' => 'string',
             'body' => '\HuaweiCloud\SDK\SecMaster\V2\Model\BaselineSearchRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workspaceId  工作空间id
-    * xLanguage  语言，参考值：zh-CN、en-US
-    * contentType  内容类型
+    * contentType  **参数解释：** 内容类型 - application/json;charset=UTF-8    普通API请求的类型  **约束限制：** 不涉及 **取值范围：** - application/json;charset=UTF-8  **默认取值：** 不涉及
+    * workspaceId  **参数解释：** 工作空间id。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * xLanguage  **参数解释：** 语言，参考值：zh-cn、en-us **约束限制：** 不涉及 **取值范围：** zh-cn：中文环境 en-us：英文环境 **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'contentType' => null,
         'workspaceId' => null,
         'xLanguage' => null,
-        'contentType' => null,
         'body' => null
     ];
 
@@ -73,49 +73,49 @@ class SearchBaselineRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workspaceId  工作空间id
-    * xLanguage  语言，参考值：zh-CN、en-US
-    * contentType  内容类型
+    * contentType  **参数解释：** 内容类型 - application/json;charset=UTF-8    普通API请求的类型  **约束限制：** 不涉及 **取值范围：** - application/json;charset=UTF-8  **默认取值：** 不涉及
+    * workspaceId  **参数解释：** 工作空间id。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * xLanguage  **参数解释：** 语言，参考值：zh-cn、en-us **约束限制：** 不涉及 **取值范围：** zh-cn：中文环境 en-us：英文环境 **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'contentType' => 'content-type',
             'workspaceId' => 'workspace_id',
             'xLanguage' => 'X-Language',
-            'contentType' => 'content-type',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workspaceId  工作空间id
-    * xLanguage  语言，参考值：zh-CN、en-US
-    * contentType  内容类型
+    * contentType  **参数解释：** 内容类型 - application/json;charset=UTF-8    普通API请求的类型  **约束限制：** 不涉及 **取值范围：** - application/json;charset=UTF-8  **默认取值：** 不涉及
+    * workspaceId  **参数解释：** 工作空间id。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * xLanguage  **参数解释：** 语言，参考值：zh-cn、en-us **约束限制：** 不涉及 **取值范围：** zh-cn：中文环境 en-us：英文环境 **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
+            'contentType' => 'setContentType',
             'workspaceId' => 'setWorkspaceId',
             'xLanguage' => 'setXLanguage',
-            'contentType' => 'setContentType',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workspaceId  工作空间id
-    * xLanguage  语言，参考值：zh-CN、en-US
-    * contentType  内容类型
+    * contentType  **参数解释：** 内容类型 - application/json;charset=UTF-8    普通API请求的类型  **约束限制：** 不涉及 **取值范围：** - application/json;charset=UTF-8  **默认取值：** 不涉及
+    * workspaceId  **参数解释：** 工作空间id。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * xLanguage  **参数解释：** 语言，参考值：zh-cn、en-us **约束限制：** 不涉及 **取值范围：** zh-cn：中文环境 en-us：英文环境 **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
+            'contentType' => 'getContentType',
             'workspaceId' => 'getWorkspaceId',
             'xLanguage' => 'getXLanguage',
-            'contentType' => 'getContentType',
             'body' => 'getBody'
     ];
 
@@ -177,9 +177,9 @@ class SearchBaselineRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['workspaceId'] = isset($data['workspaceId']) ? $data['workspaceId'] : null;
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
-        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -191,6 +191,15 @@ class SearchBaselineRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['contentType'] === null) {
+            $invalidProperties[] = "'contentType' can't be null";
+        }
+            if ((mb_strlen($this->container['contentType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'contentType', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['contentType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 0.";
+            }
         if ($this->container['workspaceId'] === null) {
             $invalidProperties[] = "'workspaceId' can't be null";
         }
@@ -209,15 +218,6 @@ class SearchBaselineRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['xLanguage']) < 2)) {
                 $invalidProperties[] = "invalid value for 'xLanguage', the character length must be bigger than or equal to 2.";
             }
-        if ($this->container['contentType'] === null) {
-            $invalidProperties[] = "'contentType' can't be null";
-        }
-            if ((mb_strlen($this->container['contentType']) > 64)) {
-                $invalidProperties[] = "invalid value for 'contentType', the character length must be smaller than or equal to 64.";
-            }
-            if ((mb_strlen($this->container['contentType']) < 0)) {
-                $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -233,56 +233,8 @@ class SearchBaselineRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets workspaceId
-    *  工作空间id
-    *
-    * @return string
-    */
-    public function getWorkspaceId()
-    {
-        return $this->container['workspaceId'];
-    }
-
-    /**
-    * Sets workspaceId
-    *
-    * @param string $workspaceId 工作空间id
-    *
-    * @return $this
-    */
-    public function setWorkspaceId($workspaceId)
-    {
-        $this->container['workspaceId'] = $workspaceId;
-        return $this;
-    }
-
-    /**
-    * Gets xLanguage
-    *  语言，参考值：zh-CN、en-US
-    *
-    * @return string
-    */
-    public function getXLanguage()
-    {
-        return $this->container['xLanguage'];
-    }
-
-    /**
-    * Sets xLanguage
-    *
-    * @param string $xLanguage 语言，参考值：zh-CN、en-US
-    *
-    * @return $this
-    */
-    public function setXLanguage($xLanguage)
-    {
-        $this->container['xLanguage'] = $xLanguage;
-        return $this;
-    }
-
-    /**
     * Gets contentType
-    *  内容类型
+    *  **参数解释：** 内容类型 - application/json;charset=UTF-8    普通API请求的类型  **约束限制：** 不涉及 **取值范围：** - application/json;charset=UTF-8  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -294,13 +246,61 @@ class SearchBaselineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets contentType
     *
-    * @param string $contentType 内容类型
+    * @param string $contentType **参数解释：** 内容类型 - application/json;charset=UTF-8    普通API请求的类型  **约束限制：** 不涉及 **取值范围：** - application/json;charset=UTF-8  **默认取值：** 不涉及
     *
     * @return $this
     */
     public function setContentType($contentType)
     {
         $this->container['contentType'] = $contentType;
+        return $this;
+    }
+
+    /**
+    * Gets workspaceId
+    *  **参数解释：** 工作空间id。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string
+    */
+    public function getWorkspaceId()
+    {
+        return $this->container['workspaceId'];
+    }
+
+    /**
+    * Sets workspaceId
+    *
+    * @param string $workspaceId **参数解释：** 工作空间id。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setWorkspaceId($workspaceId)
+    {
+        $this->container['workspaceId'] = $workspaceId;
+        return $this;
+    }
+
+    /**
+    * Gets xLanguage
+    *  **参数解释：** 语言，参考值：zh-cn、en-us **约束限制：** 不涉及 **取值范围：** zh-cn：中文环境 en-us：英文环境 **默认取值：** 不涉及
+    *
+    * @return string
+    */
+    public function getXLanguage()
+    {
+        return $this->container['xLanguage'];
+    }
+
+    /**
+    * Sets xLanguage
+    *
+    * @param string $xLanguage **参数解释：** 语言，参考值：zh-cn、en-us **约束限制：** 不涉及 **取值范围：** zh-cn：中文环境 en-us：英文环境 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setXLanguage($xLanguage)
+    {
+        $this->container['xLanguage'] = $xLanguage;
         return $this;
     }
 

@@ -21,7 +21,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  **参数解释**： 名称。 **取值范围**： 不涉及。
-    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。
     * primaryClusterId  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
     * standbyClusterId  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
     * drSyncPeriod  **参数解释**： 同步周期。 **取值范围**： 不涉及。
@@ -57,7 +57,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  **参数解释**： 名称。 **取值范围**： 不涉及。
-    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。
     * primaryClusterId  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
     * standbyClusterId  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
     * drSyncPeriod  **参数解释**： 同步周期。 **取值范围**： 不涉及。
@@ -114,7 +114,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  **参数解释**： 名称。 **取值范围**： 不涉及。
-    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。
     * primaryClusterId  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
     * standbyClusterId  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
     * drSyncPeriod  **参数解释**： 同步周期。 **取值范围**： 不涉及。
@@ -150,7 +150,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  **参数解释**： 名称。 **取值范围**： 不涉及。
-    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。
     * primaryClusterId  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
     * standbyClusterId  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
     * drSyncPeriod  **参数解释**： 同步周期。 **取值范围**： 不涉及。
@@ -186,7 +186,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  **参数解释**： 名称。 **取值范围**： 不涉及。
-    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。
     * primaryClusterId  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
     * standbyClusterId  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
     * drSyncPeriod  **参数解释**： 同步周期。 **取值范围**： 不涉及。
@@ -356,7 +356,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets drType
-    *  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 容灾类型。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。
     *
     * @return string
     */
@@ -368,7 +368,7 @@ class CreateDisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets drType
     *
-    * @param string $drType **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * @param string $drType **参数解释**： 容灾类型。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。
     *
     * @return $this
     */

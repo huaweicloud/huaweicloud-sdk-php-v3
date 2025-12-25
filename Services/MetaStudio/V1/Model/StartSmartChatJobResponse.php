@@ -32,7 +32,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
     * chatAccessAddress  智能交互接入地址。
     * chatAccessRestAddress  智能交互Rest接口接入地址。
     * isTransparent  是否透明背景
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -66,7 +66,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
     * chatAccessAddress  智能交互接入地址。
     * chatAccessRestAddress  智能交互Rest接口接入地址。
     * isTransparent  是否透明背景
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -121,7 +121,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
     * chatAccessAddress  智能交互接入地址。
     * chatAccessRestAddress  智能交互Rest接口接入地址。
     * isTransparent  是否透明背景
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -155,7 +155,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
     * chatAccessAddress  智能交互接入地址。
     * chatAccessRestAddress  智能交互Rest接口接入地址。
     * isTransparent  是否透明背景
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -189,7 +189,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
     * chatAccessAddress  智能交互接入地址。
     * chatAccessRestAddress  智能交互Rest接口接入地址。
     * isTransparent  是否透明背景
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -259,6 +259,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
     const DEFAULT_LANGUAGE_POR = 'por';
     const DEFAULT_LANGUAGE_ARABIC = 'Arabic';
     const DEFAULT_LANGUAGE_THAI = 'Thai';
+    const DEFAULT_LANGUAGE_FR = 'fr';
     
 
     /**
@@ -289,6 +290,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
             self::DEFAULT_LANGUAGE_POR,
             self::DEFAULT_LANGUAGE_ARABIC,
             self::DEFAULT_LANGUAGE_THAI,
+            self::DEFAULT_LANGUAGE_FR,
         ];
     }
 
@@ -657,7 +659,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultLanguage
-    *  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    *  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     *
     * @return string|null
     */
@@ -669,7 +671,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets defaultLanguage
     *
-    * @param string|null $defaultLanguage 默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * @param string|null $defaultLanguage 默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     *
     * @return $this
     */

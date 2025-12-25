@@ -29,7 +29,7 @@ class CreateAlarmSubResponse implements ModelInterface, ArrayAccess
     * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
-    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     * language  **参数解释**： 语言。 **取值范围**： 不涉及。
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
@@ -59,7 +59,7 @@ class CreateAlarmSubResponse implements ModelInterface, ArrayAccess
     * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
-    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     * language  **参数解释**： 语言。 **取值范围**： 不涉及。
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
@@ -110,7 +110,7 @@ class CreateAlarmSubResponse implements ModelInterface, ArrayAccess
     * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
-    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     * language  **参数解释**： 语言。 **取值范围**： 不涉及。
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
@@ -140,7 +140,7 @@ class CreateAlarmSubResponse implements ModelInterface, ArrayAccess
     * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
-    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     * language  **参数解释**： 语言。 **取值范围**： 不涉及。
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
@@ -170,7 +170,7 @@ class CreateAlarmSubResponse implements ModelInterface, ArrayAccess
     * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
-    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     * language  **参数解释**： 语言。 **取值范围**： 不涉及。
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
@@ -477,7 +477,7 @@ class CreateAlarmSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationTargetType
-    *  **参数解释**： 消息主题类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     *
     * @return string|null
     */
@@ -489,7 +489,7 @@ class CreateAlarmSubResponse implements ModelInterface, ArrayAccess
     /**
     * Sets notificationTargetType
     *
-    * @param string|null $notificationTargetType **参数解释**： 消息主题类型。 **取值范围**： 不涉及。
+    * @param string|null $notificationTargetType **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     *
     * @return $this
     */

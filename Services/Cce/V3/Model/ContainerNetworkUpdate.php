@@ -21,21 +21,25 @@ class ContainerNetworkUpdate implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * cidrs  容器网络网段列表。1.21及新版本集群，当集群网络类型为vpc-router时，支持增量添加容器网段，最多配置20个。  此参数在集群更新后不可更改，请谨慎选择。
+    * containercidrs  **参数解释：** 容器网络网段列表。当集群网络类型为vpc-router时，支持添加或删除容器网段。支持的集群版本如下： - v1.28.15-r60及以上版本 - v1.29.15-r20及以上版本 - v1.30.14-r20及以上版本 - v1.31.10-r20及以上版本 - v1.32.6-r20及以上版本 - v1.33.5-r10及以上版本  支持修改集群容器网段的顺序，顺序在前的容器网段优先被使用。 **约束限制：** - 最多支持配置20个子网。 - 填写为空时，该字段不生效。  **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'cidrs' => '\HuaweiCloud\SDK\Cce\V3\Model\ContainerCIDR[]'
+            'cidrs' => '\HuaweiCloud\SDK\Cce\V3\Model\ContainerCIDR[]',
+            'containercidrs' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * cidrs  容器网络网段列表。1.21及新版本集群，当集群网络类型为vpc-router时，支持增量添加容器网段，最多配置20个。  此参数在集群更新后不可更改，请谨慎选择。
+    * containercidrs  **参数解释：** 容器网络网段列表。当集群网络类型为vpc-router时，支持添加或删除容器网段。支持的集群版本如下： - v1.28.15-r60及以上版本 - v1.29.15-r20及以上版本 - v1.30.14-r20及以上版本 - v1.31.10-r20及以上版本 - v1.32.6-r20及以上版本 - v1.33.5-r10及以上版本  支持修改集群容器网段的顺序，顺序在前的容器网段优先被使用。 **约束限制：** - 最多支持配置20个子网。 - 填写为空时，该字段不生效。  **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'cidrs' => null
+        'cidrs' => null,
+        'containercidrs' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ContainerNetworkUpdate implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * cidrs  容器网络网段列表。1.21及新版本集群，当集群网络类型为vpc-router时，支持增量添加容器网段，最多配置20个。  此参数在集群更新后不可更改，请谨慎选择。
+    * containercidrs  **参数解释：** 容器网络网段列表。当集群网络类型为vpc-router时，支持添加或删除容器网段。支持的集群版本如下： - v1.28.15-r60及以上版本 - v1.29.15-r20及以上版本 - v1.30.14-r20及以上版本 - v1.31.10-r20及以上版本 - v1.32.6-r20及以上版本 - v1.33.5-r10及以上版本  支持修改集群容器网段的顺序，顺序在前的容器网段优先被使用。 **约束限制：** - 最多支持配置20个子网。 - 填写为空时，该字段不生效。  **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'cidrs' => 'cidrs'
+            'cidrs' => 'cidrs',
+            'containercidrs' => 'containercidrs'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * cidrs  容器网络网段列表。1.21及新版本集群，当集群网络类型为vpc-router时，支持增量添加容器网段，最多配置20个。  此参数在集群更新后不可更改，请谨慎选择。
+    * containercidrs  **参数解释：** 容器网络网段列表。当集群网络类型为vpc-router时，支持添加或删除容器网段。支持的集群版本如下： - v1.28.15-r60及以上版本 - v1.29.15-r20及以上版本 - v1.30.14-r20及以上版本 - v1.31.10-r20及以上版本 - v1.32.6-r20及以上版本 - v1.33.5-r10及以上版本  支持修改集群容器网段的顺序，顺序在前的容器网段优先被使用。 **约束限制：** - 最多支持配置20个子网。 - 填写为空时，该字段不生效。  **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
-            'cidrs' => 'setCidrs'
+            'cidrs' => 'setCidrs',
+            'containercidrs' => 'setContainercidrs'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * cidrs  容器网络网段列表。1.21及新版本集群，当集群网络类型为vpc-router时，支持增量添加容器网段，最多配置20个。  此参数在集群更新后不可更改，请谨慎选择。
+    * containercidrs  **参数解释：** 容器网络网段列表。当集群网络类型为vpc-router时，支持添加或删除容器网段。支持的集群版本如下： - v1.28.15-r60及以上版本 - v1.29.15-r20及以上版本 - v1.30.14-r20及以上版本 - v1.31.10-r20及以上版本 - v1.32.6-r20及以上版本 - v1.33.5-r10及以上版本  支持修改集群容器网段的顺序，顺序在前的容器网段优先被使用。 **约束限制：** - 最多支持配置20个子网。 - 填写为空时，该字段不生效。  **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
-            'cidrs' => 'getCidrs'
+            'cidrs' => 'getCidrs',
+            'containercidrs' => 'getContainercidrs'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ContainerNetworkUpdate implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['cidrs'] = isset($data['cidrs']) ? $data['cidrs'] : null;
+        $this->container['containercidrs'] = isset($data['containercidrs']) ? $data['containercidrs'] : null;
     }
 
     /**
@@ -193,6 +204,30 @@ class ContainerNetworkUpdate implements ModelInterface, ArrayAccess
     public function setCidrs($cidrs)
     {
         $this->container['cidrs'] = $cidrs;
+        return $this;
+    }
+
+    /**
+    * Gets containercidrs
+    *  **参数解释：** 容器网络网段列表。当集群网络类型为vpc-router时，支持添加或删除容器网段。支持的集群版本如下： - v1.28.15-r60及以上版本 - v1.29.15-r20及以上版本 - v1.30.14-r20及以上版本 - v1.31.10-r20及以上版本 - v1.32.6-r20及以上版本 - v1.33.5-r10及以上版本  支持修改集群容器网段的顺序，顺序在前的容器网段优先被使用。 **约束限制：** - 最多支持配置20个子网。 - 填写为空时，该字段不生效。  **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string[]|null
+    */
+    public function getContainercidrs()
+    {
+        return $this->container['containercidrs'];
+    }
+
+    /**
+    * Sets containercidrs
+    *
+    * @param string[]|null $containercidrs **参数解释：** 容器网络网段列表。当集群网络类型为vpc-router时，支持添加或删除容器网段。支持的集群版本如下： - v1.28.15-r60及以上版本 - v1.29.15-r20及以上版本 - v1.30.14-r20及以上版本 - v1.31.10-r20及以上版本 - v1.32.6-r20及以上版本 - v1.33.5-r10及以上版本  支持修改集群容器网段的顺序，顺序在前的容器网段优先被使用。 **约束限制：** - 最多支持配置20个子网。 - 填写为空时，该字段不生效。  **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setContainercidrs($containercidrs)
+    {
+        $this->container['containercidrs'] = $containercidrs;
         return $this;
     }
 

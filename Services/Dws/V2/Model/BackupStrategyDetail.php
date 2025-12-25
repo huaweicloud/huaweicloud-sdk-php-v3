@@ -23,7 +23,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
     * policyId  **参数解释**： 策略ID。 **取值范围**： 不涉及。
     * policyName  **参数解释**： 策略名称。 **取值范围**： 不涉及。
     * backupStrategy  **参数解释**： 执行策略，一般为crontab表达式。 **取值范围**： 不涉及。
-    * backupType  **参数解释**： 备份类型。 **取值范围**： 不涉及。
+    * backupType  **参数解释**： 备份类型。 **取值范围**： - full: 全量。 - increment: 增量。
     * backupLevel  **参数解释**： 备份级别。 **取值范围**： 不涉及。
     * nextFireTime  **参数解释**： 下次触发时间（预估，与其它任务冲突时不执行）。 **取值范围**： 不涉及。
     * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
@@ -53,7 +53,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
     * policyId  **参数解释**： 策略ID。 **取值范围**： 不涉及。
     * policyName  **参数解释**： 策略名称。 **取值范围**： 不涉及。
     * backupStrategy  **参数解释**： 执行策略，一般为crontab表达式。 **取值范围**： 不涉及。
-    * backupType  **参数解释**： 备份类型。 **取值范围**： 不涉及。
+    * backupType  **参数解释**： 备份类型。 **取值范围**： - full: 全量。 - increment: 增量。
     * backupLevel  **参数解释**： 备份级别。 **取值范围**： 不涉及。
     * nextFireTime  **参数解释**： 下次触发时间（预估，与其它任务冲突时不执行）。 **取值范围**： 不涉及。
     * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
@@ -104,7 +104,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
     * policyId  **参数解释**： 策略ID。 **取值范围**： 不涉及。
     * policyName  **参数解释**： 策略名称。 **取值范围**： 不涉及。
     * backupStrategy  **参数解释**： 执行策略，一般为crontab表达式。 **取值范围**： 不涉及。
-    * backupType  **参数解释**： 备份类型。 **取值范围**： 不涉及。
+    * backupType  **参数解释**： 备份类型。 **取值范围**： - full: 全量。 - increment: 增量。
     * backupLevel  **参数解释**： 备份级别。 **取值范围**： 不涉及。
     * nextFireTime  **参数解释**： 下次触发时间（预估，与其它任务冲突时不执行）。 **取值范围**： 不涉及。
     * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
@@ -134,7 +134,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
     * policyId  **参数解释**： 策略ID。 **取值范围**： 不涉及。
     * policyName  **参数解释**： 策略名称。 **取值范围**： 不涉及。
     * backupStrategy  **参数解释**： 执行策略，一般为crontab表达式。 **取值范围**： 不涉及。
-    * backupType  **参数解释**： 备份类型。 **取值范围**： 不涉及。
+    * backupType  **参数解释**： 备份类型。 **取值范围**： - full: 全量。 - increment: 增量。
     * backupLevel  **参数解释**： 备份级别。 **取值范围**： 不涉及。
     * nextFireTime  **参数解释**： 下次触发时间（预估，与其它任务冲突时不执行）。 **取值范围**： 不涉及。
     * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
@@ -164,7 +164,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
     * policyId  **参数解释**： 策略ID。 **取值范围**： 不涉及。
     * policyName  **参数解释**： 策略名称。 **取值范围**： 不涉及。
     * backupStrategy  **参数解释**： 执行策略，一般为crontab表达式。 **取值范围**： 不涉及。
-    * backupType  **参数解释**： 备份类型。 **取值范围**： 不涉及。
+    * backupType  **参数解释**： 备份类型。 **取值范围**： - full: 全量。 - increment: 增量。
     * backupLevel  **参数解释**： 备份级别。 **取值范围**： 不涉及。
     * nextFireTime  **参数解释**： 下次触发时间（预估，与其它任务冲突时不执行）。 **取值范围**： 不涉及。
     * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
@@ -356,7 +356,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupType
-    *  **参数解释**： 备份类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 备份类型。 **取值范围**： - full: 全量。 - increment: 增量。
     *
     * @return string|null
     */
@@ -368,7 +368,7 @@ class BackupStrategyDetail implements ModelInterface, ArrayAccess
     /**
     * Sets backupType
     *
-    * @param string|null $backupType **参数解释**： 备份类型。 **取值范围**： 不涉及。
+    * @param string|null $backupType **参数解释**： 备份类型。 **取值范围**： - full: 全量。 - increment: 增量。
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class MetricDataPointDimensions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  **参数解释**： 指标维度值 **取值范围**： 最小长度1，最大长度32
-    * value  **参数解释**： 指标维度值 **取值范围**： 最小长度1，最大长度256
+    * name  **参数解释**： 资源维度名称 **取值范围**： 最小长度1，最大长度32
+    * value  **参数解释**： 资源维度值 **取值范围**： 最小长度1，最大长度256
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class MetricDataPointDimensions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  **参数解释**： 指标维度值 **取值范围**： 最小长度1，最大长度32
-    * value  **参数解释**： 指标维度值 **取值范围**： 最小长度1，最大长度256
+    * name  **参数解释**： 资源维度名称 **取值范围**： 最小长度1，最大长度32
+    * value  **参数解释**： 资源维度值 **取值范围**： 最小长度1，最大长度256
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class MetricDataPointDimensions implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  **参数解释**： 指标维度值 **取值范围**： 最小长度1，最大长度32
-    * value  **参数解释**： 指标维度值 **取值范围**： 最小长度1，最大长度256
+    * name  **参数解释**： 资源维度名称 **取值范围**： 最小长度1，最大长度32
+    * value  **参数解释**： 资源维度值 **取值范围**： 最小长度1，最大长度256
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class MetricDataPointDimensions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  **参数解释**： 指标维度值 **取值范围**： 最小长度1，最大长度32
-    * value  **参数解释**： 指标维度值 **取值范围**： 最小长度1，最大长度256
+    * name  **参数解释**： 资源维度名称 **取值范围**： 最小长度1，最大长度32
+    * value  **参数解释**： 资源维度值 **取值范围**： 最小长度1，最大长度256
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class MetricDataPointDimensions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  **参数解释**： 指标维度值 **取值范围**： 最小长度1，最大长度32
-    * value  **参数解释**： 指标维度值 **取值范围**： 最小长度1，最大长度256
+    * name  **参数解释**： 资源维度名称 **取值范围**： 最小长度1，最大长度32
+    * value  **参数解释**： 资源维度值 **取值范围**： 最小长度1，最大长度256
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class MetricDataPointDimensions implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  **参数解释**： 指标维度值 **取值范围**： 最小长度1，最大长度32
+    *  **参数解释**： 资源维度名称 **取值范围**： 最小长度1，最大长度32
     *
     * @return string
     */
@@ -221,7 +221,7 @@ class MetricDataPointDimensions implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name **参数解释**： 指标维度值 **取值范围**： 最小长度1，最大长度32
+    * @param string $name **参数解释**： 资源维度名称 **取值范围**： 最小长度1，最大长度32
     *
     * @return $this
     */
@@ -233,7 +233,7 @@ class MetricDataPointDimensions implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  **参数解释**： 指标维度值 **取值范围**： 最小长度1，最大长度256
+    *  **参数解释**： 资源维度值 **取值范围**： 最小长度1，最大长度256
     *
     * @return string
     */
@@ -245,7 +245,7 @@ class MetricDataPointDimensions implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value **参数解释**： 指标维度值 **取值范围**： 最小长度1，最大长度256
+    * @param string $value **参数解释**： 资源维度值 **取值范围**： 最小长度1，最大长度256
     *
     * @return $this
     */

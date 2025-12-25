@@ -21,8 +21,8 @@ class ListNotificationMasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * notificationMasks  通知屏蔽列表
-    * count  通知屏蔽列表总数
+    * notificationMasks  **参数解释**： 通知屏蔽列表
+    * count  **参数解释**： 通知屏蔽列表总数 **取值范围**： [0,99999]
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListNotificationMasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * notificationMasks  通知屏蔽列表
-    * count  通知屏蔽列表总数
+    * notificationMasks  **参数解释**： 通知屏蔽列表
+    * count  **参数解释**： 通知屏蔽列表总数 **取值范围**： [0,99999]
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListNotificationMasksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * notificationMasks  通知屏蔽列表
-    * count  通知屏蔽列表总数
+    * notificationMasks  **参数解释**： 通知屏蔽列表
+    * count  **参数解释**： 通知屏蔽列表总数 **取值范围**： [0,99999]
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListNotificationMasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * notificationMasks  通知屏蔽列表
-    * count  通知屏蔽列表总数
+    * notificationMasks  **参数解释**： 通知屏蔽列表
+    * count  **参数解释**： 通知屏蔽列表总数 **取值范围**： [0,99999]
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListNotificationMasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * notificationMasks  通知屏蔽列表
-    * count  通知屏蔽列表总数
+    * notificationMasks  **参数解释**： 通知屏蔽列表
+    * count  **参数解释**： 通知屏蔽列表总数 **取值范围**： [0,99999]
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ListNotificationMasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationMasks
-    *  通知屏蔽列表
+    *  **参数解释**： 通知屏蔽列表
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\ListNotificationMaskRespNotificationMasks[]|null
     */
@@ -204,7 +204,7 @@ class ListNotificationMasksResponse implements ModelInterface, ArrayAccess
     /**
     * Sets notificationMasks
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ListNotificationMaskRespNotificationMasks[]|null $notificationMasks 通知屏蔽列表
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ListNotificationMaskRespNotificationMasks[]|null $notificationMasks **参数解释**： 通知屏蔽列表
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListNotificationMasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  通知屏蔽列表总数
+    *  **参数解释**： 通知屏蔽列表总数 **取值范围**： [0,99999]
     *
     * @return int|null
     */
@@ -228,7 +228,7 @@ class ListNotificationMasksResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 通知屏蔽列表总数
+    * @param int|null $count **参数解释**： 通知屏蔽列表总数 **取值范围**： [0,99999]
     *
     * @return $this
     */

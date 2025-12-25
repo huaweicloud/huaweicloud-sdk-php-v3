@@ -23,10 +23,10 @@ class BaselineSearchRequestBody implements ModelInterface, ArrayAccess
     * limit  分页大小
     * offset  偏移量，表示查询该偏移量后面的记录
     * sortBy  排序关键字
-    * order  降序或升序, DESC|ESC
+    * order  降序或升序, DESC|ASC
     * fromDate  起始时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * toDate  截止时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
-    * condition  搜索条件表达式
+    * condition  condition
     *
     * @var string[]
     */
@@ -37,7 +37,7 @@ class BaselineSearchRequestBody implements ModelInterface, ArrayAccess
             'order' => 'string',
             'fromDate' => 'string',
             'toDate' => 'string',
-            'condition' => 'object'
+            'condition' => '\HuaweiCloud\SDK\SecMaster\V2\Model\BaselineSearchRequestBodyCondition'
     ];
 
     /**
@@ -45,16 +45,16 @@ class BaselineSearchRequestBody implements ModelInterface, ArrayAccess
     * limit  分页大小
     * offset  偏移量，表示查询该偏移量后面的记录
     * sortBy  排序关键字
-    * order  降序或升序, DESC|ESC
+    * order  降序或升序, DESC|ASC
     * fromDate  起始时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * toDate  截止时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
-    * condition  搜索条件表达式
+    * condition  condition
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'limit' => 'int32',
-        'offset' => 'int32',
+        'limit' => null,
+        'offset' => null,
         'sortBy' => null,
         'order' => null,
         'fromDate' => null,
@@ -88,10 +88,10 @@ class BaselineSearchRequestBody implements ModelInterface, ArrayAccess
     * limit  分页大小
     * offset  偏移量，表示查询该偏移量后面的记录
     * sortBy  排序关键字
-    * order  降序或升序, DESC|ESC
+    * order  降序或升序, DESC|ASC
     * fromDate  起始时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * toDate  截止时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
-    * condition  搜索条件表达式
+    * condition  condition
     *
     * @var string[]
     */
@@ -110,10 +110,10 @@ class BaselineSearchRequestBody implements ModelInterface, ArrayAccess
     * limit  分页大小
     * offset  偏移量，表示查询该偏移量后面的记录
     * sortBy  排序关键字
-    * order  降序或升序, DESC|ESC
+    * order  降序或升序, DESC|ASC
     * fromDate  起始时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * toDate  截止时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
-    * condition  搜索条件表达式
+    * condition  condition
     *
     * @var string[]
     */
@@ -132,10 +132,10 @@ class BaselineSearchRequestBody implements ModelInterface, ArrayAccess
     * limit  分页大小
     * offset  偏移量，表示查询该偏移量后面的记录
     * sortBy  排序关键字
-    * order  降序或升序, DESC|ESC
+    * order  降序或升序, DESC|ASC
     * fromDate  起始时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * toDate  截止时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
-    * condition  搜索条件表达式
+    * condition  condition
     *
     * @var string[]
     */
@@ -230,8 +230,8 @@ class BaselineSearchRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 1000)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 1000.";
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 10000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 10000.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
@@ -348,7 +348,7 @@ class BaselineSearchRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets order
-    *  降序或升序, DESC|ESC
+    *  降序或升序, DESC|ASC
     *
     * @return string|null
     */
@@ -360,7 +360,7 @@ class BaselineSearchRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets order
     *
-    * @param string|null $order 降序或升序, DESC|ESC
+    * @param string|null $order 降序或升序, DESC|ASC
     *
     * @return $this
     */
@@ -420,9 +420,9 @@ class BaselineSearchRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets condition
-    *  搜索条件表达式
+    *  condition
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\BaselineSearchRequestBodyCondition|null
     */
     public function getCondition()
     {
@@ -432,7 +432,7 @@ class BaselineSearchRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets condition
     *
-    * @param object|null $condition 搜索条件表达式
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\BaselineSearchRequestBodyCondition|null $condition condition
     *
     * @return $this
     */

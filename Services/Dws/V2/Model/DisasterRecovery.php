@@ -21,17 +21,17 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - creating，容灾创建中。 - create_failed，容灾创建失败。 - unstart，容灾未启动。 - starting，容灾启动中。 - start_failed，容灾启动失败。 - running，容灾运行中。 - stopping，容灾停止中。 - stop_failed，容灾停止失败。 - switchovering，灾备切换中。 - abnormal，容灾异常。 - deleting，容灾删除中。 - deleted，容灾已删除。
     * name  **参数解释**： 名称。 **取值范围**： 不涉及。
-    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。
     * primaryClusterId  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
     * primaryClusterName  **参数解释**： 主集群名称。 **取值范围**： 不涉及。
     * standbyClusterId  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
     * standbyClusterName  **参数解释**： 备集群名称。 **取值范围**： 不涉及。
     * primaryClusterRole  **参数解释**： 主集群角色。 **取值范围**： 不涉及。
     * standbyClusterRole  **参数解释**： 备集群角色。 **取值范围**： 不涉及。
-    * primaryClusterStatus  **参数解释**： 主集群状态。 **取值范围**： 不涉及。
-    * standbyClusterStatus  **参数解释**： 备集群状态。 **取值范围**： 不涉及。
+    * primaryClusterStatus  **参数解释**： 主集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
+    * standbyClusterStatus  **参数解释**： 备集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
     * primaryClusterRegion  **参数解释**： 主集群region。 **取值范围**： 不涉及。
     * standbyClusterRegion  **参数解释**： 备集群region。 **取值范围**： 不涉及。
     * primaryClusterProjectId  **参数解释**： 主集群项目ID。 **取值范围**： 不涉及。
@@ -67,17 +67,17 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - creating，容灾创建中。 - create_failed，容灾创建失败。 - unstart，容灾未启动。 - starting，容灾启动中。 - start_failed，容灾启动失败。 - running，容灾运行中。 - stopping，容灾停止中。 - stop_failed，容灾停止失败。 - switchovering，灾备切换中。 - abnormal，容灾异常。 - deleting，容灾删除中。 - deleted，容灾已删除。
     * name  **参数解释**： 名称。 **取值范围**： 不涉及。
-    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。
     * primaryClusterId  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
     * primaryClusterName  **参数解释**： 主集群名称。 **取值范围**： 不涉及。
     * standbyClusterId  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
     * standbyClusterName  **参数解释**： 备集群名称。 **取值范围**： 不涉及。
     * primaryClusterRole  **参数解释**： 主集群角色。 **取值范围**： 不涉及。
     * standbyClusterRole  **参数解释**： 备集群角色。 **取值范围**： 不涉及。
-    * primaryClusterStatus  **参数解释**： 主集群状态。 **取值范围**： 不涉及。
-    * standbyClusterStatus  **参数解释**： 备集群状态。 **取值范围**： 不涉及。
+    * primaryClusterStatus  **参数解释**： 主集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
+    * standbyClusterStatus  **参数解释**： 备集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
     * primaryClusterRegion  **参数解释**： 主集群region。 **取值范围**： 不涉及。
     * standbyClusterRegion  **参数解释**： 备集群region。 **取值范围**： 不涉及。
     * primaryClusterProjectId  **参数解释**： 主集群项目ID。 **取值范围**： 不涉及。
@@ -134,17 +134,17 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - creating，容灾创建中。 - create_failed，容灾创建失败。 - unstart，容灾未启动。 - starting，容灾启动中。 - start_failed，容灾启动失败。 - running，容灾运行中。 - stopping，容灾停止中。 - stop_failed，容灾停止失败。 - switchovering，灾备切换中。 - abnormal，容灾异常。 - deleting，容灾删除中。 - deleted，容灾已删除。
     * name  **参数解释**： 名称。 **取值范围**： 不涉及。
-    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。
     * primaryClusterId  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
     * primaryClusterName  **参数解释**： 主集群名称。 **取值范围**： 不涉及。
     * standbyClusterId  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
     * standbyClusterName  **参数解释**： 备集群名称。 **取值范围**： 不涉及。
     * primaryClusterRole  **参数解释**： 主集群角色。 **取值范围**： 不涉及。
     * standbyClusterRole  **参数解释**： 备集群角色。 **取值范围**： 不涉及。
-    * primaryClusterStatus  **参数解释**： 主集群状态。 **取值范围**： 不涉及。
-    * standbyClusterStatus  **参数解释**： 备集群状态。 **取值范围**： 不涉及。
+    * primaryClusterStatus  **参数解释**： 主集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
+    * standbyClusterStatus  **参数解释**： 备集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
     * primaryClusterRegion  **参数解释**： 主集群region。 **取值范围**： 不涉及。
     * standbyClusterRegion  **参数解释**： 备集群region。 **取值范围**： 不涉及。
     * primaryClusterProjectId  **参数解释**： 主集群项目ID。 **取值范围**： 不涉及。
@@ -180,17 +180,17 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - creating，容灾创建中。 - create_failed，容灾创建失败。 - unstart，容灾未启动。 - starting，容灾启动中。 - start_failed，容灾启动失败。 - running，容灾运行中。 - stopping，容灾停止中。 - stop_failed，容灾停止失败。 - switchovering，灾备切换中。 - abnormal，容灾异常。 - deleting，容灾删除中。 - deleted，容灾已删除。
     * name  **参数解释**： 名称。 **取值范围**： 不涉及。
-    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。
     * primaryClusterId  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
     * primaryClusterName  **参数解释**： 主集群名称。 **取值范围**： 不涉及。
     * standbyClusterId  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
     * standbyClusterName  **参数解释**： 备集群名称。 **取值范围**： 不涉及。
     * primaryClusterRole  **参数解释**： 主集群角色。 **取值范围**： 不涉及。
     * standbyClusterRole  **参数解释**： 备集群角色。 **取值范围**： 不涉及。
-    * primaryClusterStatus  **参数解释**： 主集群状态。 **取值范围**： 不涉及。
-    * standbyClusterStatus  **参数解释**： 备集群状态。 **取值范围**： 不涉及。
+    * primaryClusterStatus  **参数解释**： 主集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
+    * standbyClusterStatus  **参数解释**： 备集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
     * primaryClusterRegion  **参数解释**： 主集群region。 **取值范围**： 不涉及。
     * standbyClusterRegion  **参数解释**： 备集群region。 **取值范围**： 不涉及。
     * primaryClusterProjectId  **参数解释**： 主集群项目ID。 **取值范围**： 不涉及。
@@ -226,17 +226,17 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释**： 容灾ID。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - creating，容灾创建中。 - create_failed，容灾创建失败。 - unstart，容灾未启动。 - starting，容灾启动中。 - start_failed，容灾启动失败。 - running，容灾运行中。 - stopping，容灾停止中。 - stop_failed，容灾停止失败。 - switchovering，灾备切换中。 - abnormal，容灾异常。 - deleting，容灾删除中。 - deleted，容灾已删除。
     * name  **参数解释**： 名称。 **取值范围**： 不涉及。
-    * drType  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。
     * primaryClusterId  **参数解释**： 主集群ID。 **取值范围**： 不涉及。
     * primaryClusterName  **参数解释**： 主集群名称。 **取值范围**： 不涉及。
     * standbyClusterId  **参数解释**： 备集群ID。 **取值范围**： 不涉及。
     * standbyClusterName  **参数解释**： 备集群名称。 **取值范围**： 不涉及。
     * primaryClusterRole  **参数解释**： 主集群角色。 **取值范围**： 不涉及。
     * standbyClusterRole  **参数解释**： 备集群角色。 **取值范围**： 不涉及。
-    * primaryClusterStatus  **参数解释**： 主集群状态。 **取值范围**： 不涉及。
-    * standbyClusterStatus  **参数解释**： 备集群状态。 **取值范围**： 不涉及。
+    * primaryClusterStatus  **参数解释**： 主集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
+    * standbyClusterStatus  **参数解释**： 备集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
     * primaryClusterRegion  **参数解释**： 主集群region。 **取值范围**： 不涉及。
     * standbyClusterRegion  **参数解释**： 备集群region。 **取值范围**： 不涉及。
     * primaryClusterProjectId  **参数解释**： 主集群项目ID。 **取值范围**： 不涉及。
@@ -396,7 +396,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 状态。 **取值范围**： - creating，容灾创建中。 - create_failed，容灾创建失败。 - unstart，容灾未启动。 - starting，容灾启动中。 - start_failed，容灾启动失败。 - running，容灾运行中。 - stopping，容灾停止中。 - stop_failed，容灾停止失败。 - switchovering，灾备切换中。 - abnormal，容灾异常。 - deleting，容灾删除中。 - deleted，容灾已删除。
     *
     * @return string|null
     */
@@ -408,7 +408,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 状态。 **取值范围**： 不涉及。
+    * @param string|null $status **参数解释**： 状态。 **取值范围**： - creating，容灾创建中。 - create_failed，容灾创建失败。 - unstart，容灾未启动。 - starting，容灾启动中。 - start_failed，容灾启动失败。 - running，容灾运行中。 - stopping，容灾停止中。 - stop_failed，容灾停止失败。 - switchovering，灾备切换中。 - abnormal，容灾异常。 - deleting，容灾删除中。 - deleted，容灾已删除。
     *
     * @return $this
     */
@@ -444,7 +444,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets drType
-    *  **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 容灾类型。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。
     *
     * @return string|null
     */
@@ -456,7 +456,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets drType
     *
-    * @param string|null $drType **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+    * @param string|null $drType **参数解释**： 容灾类型。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。
     *
     * @return $this
     */
@@ -612,7 +612,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets primaryClusterStatus
-    *  **参数解释**： 主集群状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 主集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
     *
     * @return string|null
     */
@@ -624,7 +624,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets primaryClusterStatus
     *
-    * @param string|null $primaryClusterStatus **参数解释**： 主集群状态。 **取值范围**： 不涉及。
+    * @param string|null $primaryClusterStatus **参数解释**： 主集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
     *
     * @return $this
     */
@@ -636,7 +636,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
 
     /**
     * Gets standbyClusterStatus
-    *  **参数解释**： 备集群状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 备集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
     *
     * @return string|null
     */
@@ -648,7 +648,7 @@ class DisasterRecovery implements ModelInterface, ArrayAccess
     /**
     * Sets standbyClusterStatus
     *
-    * @param string|null $standbyClusterStatus **参数解释**： 备集群状态。 **取值范围**： 不涉及。
+    * @param string|null $standbyClusterStatus **参数解释**： 备集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
     *
     * @return $this
     */

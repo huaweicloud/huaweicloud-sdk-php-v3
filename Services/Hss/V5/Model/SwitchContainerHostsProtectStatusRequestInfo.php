@@ -249,16 +249,13 @@ class SwitchContainerHostsProtectStatusRequestInfo implements ModelInterface, Ar
             if (!preg_match("/^packet_cycle|on_demand$/", $this->container['chargingMode'])) {
                 $invalidProperties[] = "invalid value for 'chargingMode', must be conform to the pattern /^packet_cycle|on_demand$/.";
             }
-        if ($this->container['resourceId'] === null) {
-            $invalidProperties[] = "'resourceId' can't be null";
-        }
-            if ((mb_strlen($this->container['resourceId']) > 128)) {
+            if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 128.";
             }
-            if ((mb_strlen($this->container['resourceId']) < 0)) {
+            if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be bigger than or equal to 0.";
             }
-            if (!preg_match("/^.*$/", $this->container['resourceId'])) {
+            if (!is_null($this->container['resourceId']) && !preg_match("/^.*$/", $this->container['resourceId'])) {
                 $invalidProperties[] = "invalid value for 'resourceId', must be conform to the pattern /^.*$/.";
             }
         if ($this->container['hostIdList'] === null) {
@@ -330,7 +327,7 @@ class SwitchContainerHostsProtectStatusRequestInfo implements ModelInterface, Ar
     * Gets resourceId
     *  资源实例ID
     *
-    * @return string
+    * @return string|null
     */
     public function getResourceId()
     {
@@ -340,7 +337,7 @@ class SwitchContainerHostsProtectStatusRequestInfo implements ModelInterface, Ar
     /**
     * Sets resourceId
     *
-    * @param string $resourceId 资源实例ID
+    * @param string|null $resourceId 资源实例ID
     *
     * @return $this
     */

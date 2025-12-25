@@ -29,7 +29,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
     * resourceId  **参数解释**： 告警源ID。 **取值范围**： 不涉及。
     * resourceIdName  **参数解释**： 告警源名称。 **取值范围**： 不涉及。
     * alarmGenerateDate  **参数解释**： 告警日期。 **取值范围**： 不涉及。
-    * alarmStatus  **参数解释**： 告警状态。 **取值范围**： 不涉及。
+    * alarmStatus  **参数解释**： 告警状态。 **取值范围**： - 0：未恢复。 - 1：已恢复。
     *
     * @var string[]
     */
@@ -57,7 +57,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
     * resourceId  **参数解释**： 告警源ID。 **取值范围**： 不涉及。
     * resourceIdName  **参数解释**： 告警源名称。 **取值范围**： 不涉及。
     * alarmGenerateDate  **参数解释**： 告警日期。 **取值范围**： 不涉及。
-    * alarmStatus  **参数解释**： 告警状态。 **取值范围**： 不涉及。
+    * alarmStatus  **参数解释**： 告警状态。 **取值范围**： - 0：未恢复。 - 1：已恢复。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
     * resourceId  **参数解释**： 告警源ID。 **取值范围**： 不涉及。
     * resourceIdName  **参数解释**： 告警源名称。 **取值范围**： 不涉及。
     * alarmGenerateDate  **参数解释**： 告警日期。 **取值范围**： 不涉及。
-    * alarmStatus  **参数解释**： 告警状态。 **取值范围**： 不涉及。
+    * alarmStatus  **参数解释**： 告警状态。 **取值范围**： - 0：未恢复。 - 1：已恢复。
     *
     * @var string[]
     */
@@ -134,7 +134,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
     * resourceId  **参数解释**： 告警源ID。 **取值范围**： 不涉及。
     * resourceIdName  **参数解释**： 告警源名称。 **取值范围**： 不涉及。
     * alarmGenerateDate  **参数解释**： 告警日期。 **取值范围**： 不涉及。
-    * alarmStatus  **参数解释**： 告警状态。 **取值范围**： 不涉及。
+    * alarmStatus  **参数解释**： 告警状态。 **取值范围**： - 0：未恢复。 - 1：已恢复。
     *
     * @var string[]
     */
@@ -162,7 +162,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
     * resourceId  **参数解释**： 告警源ID。 **取值范围**： 不涉及。
     * resourceIdName  **参数解释**： 告警源名称。 **取值范围**： 不涉及。
     * alarmGenerateDate  **参数解释**： 告警日期。 **取值范围**： 不涉及。
-    * alarmStatus  **参数解释**： 告警状态。 **取值范围**： 不涉及。
+    * alarmStatus  **参数解释**： 告警状态。 **取值范围**： - 0：未恢复。 - 1：已恢复。
     *
     * @var string[]
     */
@@ -489,7 +489,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmStatus
-    *  **参数解释**： 告警状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 告警状态。 **取值范围**： - 0：未恢复。 - 1：已恢复。
     *
     * @return string|null
     */
@@ -501,7 +501,7 @@ class AlarmDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarmStatus
     *
-    * @param string|null $alarmStatus **参数解释**： 告警状态。 **取值范围**： 不涉及。
+    * @param string|null $alarmStatus **参数解释**： 告警状态。 **取值范围**： - 0：未恢复。 - 1：已恢复。
     *
     * @return $this
     */

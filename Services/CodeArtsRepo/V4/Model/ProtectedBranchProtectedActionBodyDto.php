@@ -31,7 +31,7 @@ class ProtectedBranchProtectedActionBodyDto implements ModelInterface, ArrayAcce
     */
     protected static $openAPITypes = [
             'enable' => 'bool',
-            'userIds' => 'object[]',
+            'userIds' => 'int[]',
             'userTeamIds' => 'int[]',
             'relatedRoleIds' => 'string[]',
             'action' => 'string',
@@ -278,7 +278,7 @@ class ProtectedBranchProtectedActionBodyDto implements ModelInterface, ArrayAcce
     * Gets userIds
     *  **参数解释：** 用户ID列表。 **约束限制：** 不涉及。 **取值范围：** Integer **默认取值：** 不涉及。
     *
-    * @return object[]|null
+    * @return int[]|null
     */
     public function getUserIds()
     {
@@ -288,7 +288,7 @@ class ProtectedBranchProtectedActionBodyDto implements ModelInterface, ArrayAcce
     /**
     * Sets userIds
     *
-    * @param object[]|null $userIds **参数解释：** 用户ID列表。 **约束限制：** 不涉及。 **取值范围：** Integer **默认取值：** 不涉及。
+    * @param int[]|null $userIds **参数解释：** 用户ID列表。 **约束限制：** 不涉及。 **取值范围：** Integer **默认取值：** 不涉及。
     *
     * @return $this
     */

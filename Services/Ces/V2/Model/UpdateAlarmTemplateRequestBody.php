@@ -21,7 +21,7 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * templateName  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
-    * templateType  自定义告警模板类型 0：指标 2： 事件
+    * templateType  templateType
     * templateDescription  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
     * policies  告警模板策略列表
     *
@@ -29,15 +29,15 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'templateName' => 'string',
-            'templateType' => 'int',
+            'templateType' => '\HuaweiCloud\SDK\Ces\V2\Model\TemplateTypeUpdate',
             'templateDescription' => 'string',
-            'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\Policies[]'
+            'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\UpdateAlarmTemplatePolicies[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * templateName  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
-    * templateType  自定义告警模板类型 0：指标 2： 事件
+    * templateType  templateType
     * templateDescription  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
     * policies  告警模板策略列表
     *
@@ -45,7 +45,7 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'templateName' => null,
-        'templateType' => 'int32',
+        'templateType' => null,
         'templateDescription' => null,
         'policies' => null
     ];
@@ -74,7 +74,7 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * templateName  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
-    * templateType  自定义告警模板类型 0：指标 2： 事件
+    * templateType  templateType
     * templateDescription  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
     * policies  告警模板策略列表
     *
@@ -90,7 +90,7 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * templateName  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
-    * templateType  自定义告警模板类型 0：指标 2： 事件
+    * templateType  templateType
     * templateDescription  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
     * policies  告警模板策略列表
     *
@@ -106,7 +106,7 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * templateName  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
-    * templateType  自定义告警模板类型 0：指标 2： 事件
+    * templateType  templateType
     * templateDescription  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
     * policies  告警模板策略列表
     *
@@ -159,22 +159,7 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const TEMPLATE_TYPE_0 = 0;
-    const TEMPLATE_TYPE_2 = 2;
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getTemplateTypeAllowableValues()
-    {
-        return [
-            self::TEMPLATE_TYPE_0,
-            self::TEMPLATE_TYPE_2,
-        ];
-    }
 
 
     /**
@@ -209,23 +194,9 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['templateName'] === null) {
             $invalidProperties[] = "'templateName' can't be null";
         }
-            if ((mb_strlen($this->container['templateName']) > 128)) {
-                $invalidProperties[] = "invalid value for 'templateName', the character length must be smaller than or equal to 128.";
-            }
-            if ((mb_strlen($this->container['templateName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'templateName', the character length must be bigger than or equal to 1.";
-            }
             if (!preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\(|\\)|\\.|\\s){1,128}$/", $this->container['templateName'])) {
                 $invalidProperties[] = "invalid value for 'templateName', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\(|\\)|\\.|\\s){1,128}$/.";
             }
-            $allowedValues = $this->getTemplateTypeAllowableValues();
-                if (!is_null($this->container['templateType']) && !in_array($this->container['templateType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'templateType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
             if (!is_null($this->container['templateDescription']) && (mb_strlen($this->container['templateDescription']) > 256)) {
                 $invalidProperties[] = "invalid value for 'templateDescription', the character length must be smaller than or equal to 256.";
             }
@@ -278,9 +249,9 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateType
-    *  自定义告警模板类型 0：指标 2： 事件
+    *  templateType
     *
-    * @return int|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\TemplateTypeUpdate|null
     */
     public function getTemplateType()
     {
@@ -290,7 +261,7 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets templateType
     *
-    * @param int|null $templateType 自定义告警模板类型 0：指标 2： 事件
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\TemplateTypeUpdate|null $templateType templateType
     *
     * @return $this
     */
@@ -328,7 +299,7 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     * Gets policies
     *  告警模板策略列表
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\Policies[]
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\UpdateAlarmTemplatePolicies[]
     */
     public function getPolicies()
     {
@@ -338,7 +309,7 @@ class UpdateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets policies
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Policies[] $policies 告警模板策略列表
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\UpdateAlarmTemplatePolicies[] $policies 告警模板策略列表
     *
     * @return $this
     */

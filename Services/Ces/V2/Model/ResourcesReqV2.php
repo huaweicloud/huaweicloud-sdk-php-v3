@@ -20,7 +20,7 @@ class ResourcesReqV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resources  资源信息
+    * resources  **参数解释**： 资源信息列表。 **约束限制**： 包含的资源信息最多为1000个，最少为0个。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ResourcesReqV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resources  资源信息
+    * resources  **参数解释**： 资源信息列表。 **约束限制**： 包含的资源信息最多为1000个，最少为0个。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ResourcesReqV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resources  资源信息
+    * resources  **参数解释**： 资源信息列表。 **约束限制**： 包含的资源信息最多为1000个，最少为0个。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ResourcesReqV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resources  资源信息
+    * resources  **参数解释**： 资源信息列表。 **约束限制**： 包含的资源信息最多为1000个，最少为0个。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ResourcesReqV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resources  资源信息
+    * resources  **参数解释**： 资源信息列表。 **约束限制**： 包含的资源信息最多为1000个，最少为0个。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ResourcesReqV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets resources
-    *  资源信息
+    *  **参数解释**： 资源信息列表。 **约束限制**： 包含的资源信息最多为1000个，最少为0个。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\Dimension[][]
     */
@@ -189,7 +189,7 @@ class ResourcesReqV2 implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Dimension[][] $resources 资源信息
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Dimension[][] $resources **参数解释**： 资源信息列表。 **约束限制**： 包含的资源信息最多为1000个，最少为0个。
     *
     * @return $this
     */

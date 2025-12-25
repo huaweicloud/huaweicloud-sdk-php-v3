@@ -35,7 +35,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
     * recentEvent  **参数解释**： 事件数。仅记录用户操作且对集群产生影响的事件，部分按钮开闭类操作不记入集群事件数。 **取值范围**： 不涉及。
     * availabilityZone  **参数解释**： 可用区。 **取值范围**： 不涉及。
     * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
-    * nodeType  **参数解释**： 集群规格ID。 **取值范围**： 不涉及。
+    * nodeType  **参数解释**： 集群规格名称。 **取值范围**： 集群规格详情请参见[数据仓库规格](dws_01_00018.html)。
     * vpcId  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
     * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
     * publicIp  publicIp
@@ -93,7 +93,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
     * recentEvent  **参数解释**： 事件数。仅记录用户操作且对集群产生影响的事件，部分按钮开闭类操作不记入集群事件数。 **取值范围**： 不涉及。
     * availabilityZone  **参数解释**： 可用区。 **取值范围**： 不涉及。
     * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
-    * nodeType  **参数解释**： 集群规格ID。 **取值范围**： 不涉及。
+    * nodeType  **参数解释**： 集群规格名称。 **取值范围**： 集群规格详情请参见[数据仓库规格](dws_01_00018.html)。
     * vpcId  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
     * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
     * publicIp  publicIp
@@ -172,7 +172,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
     * recentEvent  **参数解释**： 事件数。仅记录用户操作且对集群产生影响的事件，部分按钮开闭类操作不记入集群事件数。 **取值范围**： 不涉及。
     * availabilityZone  **参数解释**： 可用区。 **取值范围**： 不涉及。
     * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
-    * nodeType  **参数解释**： 集群规格ID。 **取值范围**： 不涉及。
+    * nodeType  **参数解释**： 集群规格名称。 **取值范围**： 集群规格详情请参见[数据仓库规格](dws_01_00018.html)。
     * vpcId  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
     * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
     * publicIp  publicIp
@@ -230,7 +230,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
     * recentEvent  **参数解释**： 事件数。仅记录用户操作且对集群产生影响的事件，部分按钮开闭类操作不记入集群事件数。 **取值范围**： 不涉及。
     * availabilityZone  **参数解释**： 可用区。 **取值范围**： 不涉及。
     * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
-    * nodeType  **参数解释**： 集群规格ID。 **取值范围**： 不涉及。
+    * nodeType  **参数解释**： 集群规格名称。 **取值范围**： 集群规格详情请参见[数据仓库规格](dws_01_00018.html)。
     * vpcId  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
     * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
     * publicIp  publicIp
@@ -288,7 +288,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
     * recentEvent  **参数解释**： 事件数。仅记录用户操作且对集群产生影响的事件，部分按钮开闭类操作不记入集群事件数。 **取值范围**： 不涉及。
     * availabilityZone  **参数解释**： 可用区。 **取值范围**： 不涉及。
     * enterpriseProjectId  **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
-    * nodeType  **参数解释**： 集群规格ID。 **取值范围**： 不涉及。
+    * nodeType  **参数解释**： 集群规格名称。 **取值范围**： 集群规格详情请参见[数据仓库规格](dws_01_00018.html)。
     * vpcId  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
     * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
     * publicIp  publicIp
@@ -870,7 +870,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeType
-    *  **参数解释**： 集群规格ID。 **取值范围**： 不涉及。
+    *  **参数解释**： 集群规格名称。 **取值范围**： 集群规格详情请参见[数据仓库规格](dws_01_00018.html)。
     *
     * @return string
     */
@@ -882,7 +882,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nodeType
     *
-    * @param string $nodeType **参数解释**： 集群规格ID。 **取值范围**： 不涉及。
+    * @param string $nodeType **参数解释**： 集群规格名称。 **取值范围**： 集群规格详情请参见[数据仓库规格](dws_01_00018.html)。
     *
     * @return $this
     */

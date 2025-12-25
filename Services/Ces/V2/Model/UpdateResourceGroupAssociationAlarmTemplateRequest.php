@@ -20,7 +20,7 @@ class UpdateResourceGroupAssociationAlarmTemplateRequest implements ModelInterfa
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
+    * groupId  **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UpdateResourceGroupAssociationAlarmTemplateRequest implements ModelInterfa
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
+    * groupId  **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateResourceGroupAssociationAlarmTemplateRequest implements ModelInterfa
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
+    * groupId  **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateResourceGroupAssociationAlarmTemplateRequest implements ModelInterfa
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
+    * groupId  **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateResourceGroupAssociationAlarmTemplateRequest implements ModelInterfa
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
+    * groupId  **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
     * body  body
     *
     * @var string[]
@@ -197,7 +197,7 @@ class UpdateResourceGroupAssociationAlarmTemplateRequest implements ModelInterfa
 
     /**
     * Gets groupId
-    *  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
+    *  **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
     *
     * @return string
     */
@@ -209,7 +209,7 @@ class UpdateResourceGroupAssociationAlarmTemplateRequest implements ModelInterfa
     /**
     * Sets groupId
     *
-    * @param string $groupId 资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
+    * @param string $groupId **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
     *
     * @return $this
     */

@@ -20,10 +20,10 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     * templateName  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
     * templateType  templateType
-    * createTime  告警模板的创建时间
+    * createTime  **参数解释**： 告警模板的创建时间 **取值范围**： 不涉及。
     * templateDescription  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
     *
     * @var string[]
@@ -38,10 +38,10 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     * templateName  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
     * templateType  templateType
-    * createTime  告警模板的创建时间
+    * createTime  **参数解释**： 告警模板的创建时间 **取值范围**： 不涉及。
     * templateDescription  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
     *
     * @var string[]
@@ -77,10 +77,10 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     * templateName  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
     * templateType  templateType
-    * createTime  告警模板的创建时间
+    * createTime  **参数解释**： 告警模板的创建时间 **取值范围**： 不涉及。
     * templateDescription  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
     *
     * @var string[]
@@ -95,10 +95,10 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     * templateName  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
     * templateType  templateType
-    * createTime  告警模板的创建时间
+    * createTime  **参数解释**： 告警模板的创建时间 **取值范围**： 不涉及。
     * templateDescription  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
     *
     * @var string[]
@@ -113,10 +113,10 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     * templateName  **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
     * templateType  templateType
-    * createTime  告警模板的创建时间
+    * createTime  **参数解释**： 告警模板的创建时间 **取值范围**： 不涉及。
     * templateDescription  **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
     *
     * @var string[]
@@ -217,12 +217,6 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
         if ($this->container['templateName'] === null) {
             $invalidProperties[] = "'templateName' can't be null";
         }
-            if ((mb_strlen($this->container['templateName']) > 128)) {
-                $invalidProperties[] = "invalid value for 'templateName', the character length must be smaller than or equal to 128.";
-            }
-            if ((mb_strlen($this->container['templateName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'templateName', the character length must be bigger than or equal to 1.";
-            }
             if (!preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\(|\\)|\\.|\\s){1,128}$/", $this->container['templateName'])) {
                 $invalidProperties[] = "invalid value for 'templateName', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\(|\\)|\\.|\\s){1,128}$/.";
             }
@@ -257,7 +251,7 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateId
-    *  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    *  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -269,7 +263,7 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
     /**
     * Sets templateId
     *
-    * @param string $templateId 告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    * @param string $templateId **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -329,7 +323,7 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  告警模板的创建时间
+    *  **参数解释**： 告警模板的创建时间 **取值范围**： 不涉及。
     *
     * @return \DateTime
     */
@@ -341,7 +335,7 @@ class AlarmTemplates implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime $createTime 告警模板的创建时间
+    * @param \DateTime $createTime **参数解释**： 告警模板的创建时间 **取值范围**： 不涉及。
     *
     * @return $this
     */

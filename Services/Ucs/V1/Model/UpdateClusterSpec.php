@@ -22,28 +22,24 @@ class UpdateClusterSpec implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * country  集群所在国家信息
     * city  集群所在城市信息
-    * workerConfig  workerConfig
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'country' => 'string',
-            'city' => 'string',
-            'workerConfig' => '\HuaweiCloud\SDK\Ucs\V1\Model\WorkerConfig'
+            'city' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * country  集群所在国家信息
     * city  集群所在城市信息
-    * workerConfig  workerConfig
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'country' => null,
-        'city' => null,
-        'workerConfig' => null
+        'city' => null
     ];
 
     /**
@@ -71,42 +67,36 @@ class UpdateClusterSpec implements ModelInterface, ArrayAccess
     * and the value is the original name
     * country  集群所在国家信息
     * city  集群所在城市信息
-    * workerConfig  workerConfig
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'country' => 'country',
-            'city' => 'city',
-            'workerConfig' => 'workerConfig'
+            'city' => 'city'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * country  集群所在国家信息
     * city  集群所在城市信息
-    * workerConfig  workerConfig
     *
     * @var string[]
     */
     protected static $setters = [
             'country' => 'setCountry',
-            'city' => 'setCity',
-            'workerConfig' => 'setWorkerConfig'
+            'city' => 'setCity'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * country  集群所在国家信息
     * city  集群所在城市信息
-    * workerConfig  workerConfig
     *
     * @var string[]
     */
     protected static $getters = [
             'country' => 'getCountry',
-            'city' => 'getCity',
-            'workerConfig' => 'getWorkerConfig'
+            'city' => 'getCity'
     ];
 
     /**
@@ -169,7 +159,6 @@ class UpdateClusterSpec implements ModelInterface, ArrayAccess
     {
         $this->container['country'] = isset($data['country']) ? $data['country'] : null;
         $this->container['city'] = isset($data['city']) ? $data['city'] : null;
-        $this->container['workerConfig'] = isset($data['workerConfig']) ? $data['workerConfig'] : null;
     }
 
     /**
@@ -239,30 +228,6 @@ class UpdateClusterSpec implements ModelInterface, ArrayAccess
     public function setCity($city)
     {
         $this->container['city'] = $city;
-        return $this;
-    }
-
-    /**
-    * Gets workerConfig
-    *  workerConfig
-    *
-    * @return \HuaweiCloud\SDK\Ucs\V1\Model\WorkerConfig|null
-    */
-    public function getWorkerConfig()
-    {
-        return $this->container['workerConfig'];
-    }
-
-    /**
-    * Sets workerConfig
-    *
-    * @param \HuaweiCloud\SDK\Ucs\V1\Model\WorkerConfig|null $workerConfig workerConfig
-    *
-    * @return $this
-    */
-    public function setWorkerConfig($workerConfig)
-    {
-        $this->container['workerConfig'] = $workerConfig;
         return $this;
     }
 

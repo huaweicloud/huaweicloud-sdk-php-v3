@@ -20,15 +20,15 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarmName  告警名称，只能包含0-9/a-z/A-Z/_/-或汉字。
-    * alarmDescription  告警描述，长度0-256。
+    * alarmName  **参数解释**： 告警规则名称 **约束限制**： 不涉及 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1, 128]个字符 **默认取值**： 不涉及
+    * alarmDescription  **参数解释**： 告警描述。 **约束限制**： 不涉及。 **取值范围**： 长度[0,256]个字符。 **默认取值**： 不涉及。
     * condition  condition
-    * alarmActionEnabled  是否启用该条告警触发的动作，默认为true。注：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。
-    * alarmLevel  告警级别，默认为2，级别为1、2、3、4。分别对应紧急、重要、次要、提示。
-    * alarmType  告警类型，支持的枚举类型：EVENT.SYS：针对系统事件的告警规则；EVENT.CUSTOM：针对自定义事件的告警规则；RESOURCE_GROUP：针对资源分组的告警规则。
-    * alarmActions  告警触发的动作。 结构样例如下： { \"type\": \"notification\",\"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } type取值： notification：通知。 autoscaling：弹性伸缩。
-    * insufficientdataActions  数据不足触发的动作（该参数已废弃，建议无需配置）。
-    * okActions  告警恢复触发的动作
+    * alarmActionEnabled  **参数解释**： 是否开启告警通知 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。 **取值范围**： 只能为true、false - true: 开启告警通知 - false：关闭告警通知 **默认取值**: false。
+    * alarmLevel  **参数解释**： 告警级别 **约束限制**： 不涉及 **取值范围**： 级别为1、2、3、4。 - 1：紧急 - 2：重要 - 3：次要 - 4：提示 **默认取值**: 2
+    * alarmType  **参数解释**： 告警类型。 **约束限制**： 不涉及 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对指定资源的告警规则。 **默认取值**： 不涉及。
+    * alarmActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。结构样例如下： { \"type\": \"notification\",\"notificationList\":[\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } **约束限制**： 最多包含10个告警触发时的通知对象信息。
+    * insufficientdataActions  **参数解释**： 数据不足触发告警时，通知组/主题订阅的信息。（该参数已废弃，建议无需配置） **约束限制**： 最多包含10个告警动作。
+    * okActions  **参数解释**： 告警恢复时，通知组/主题订阅的信息。结构样例如下： { \"type\": \"notification\",\"notificationList\":[\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] }  **约束限制**： 最多包含10个告警触发时的通知对象信息。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarmName  告警名称，只能包含0-9/a-z/A-Z/_/-或汉字。
-    * alarmDescription  告警描述，长度0-256。
+    * alarmName  **参数解释**： 告警规则名称 **约束限制**： 不涉及 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1, 128]个字符 **默认取值**： 不涉及
+    * alarmDescription  **参数解释**： 告警描述。 **约束限制**： 不涉及。 **取值范围**： 长度[0,256]个字符。 **默认取值**： 不涉及。
     * condition  condition
-    * alarmActionEnabled  是否启用该条告警触发的动作，默认为true。注：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。
-    * alarmLevel  告警级别，默认为2，级别为1、2、3、4。分别对应紧急、重要、次要、提示。
-    * alarmType  告警类型，支持的枚举类型：EVENT.SYS：针对系统事件的告警规则；EVENT.CUSTOM：针对自定义事件的告警规则；RESOURCE_GROUP：针对资源分组的告警规则。
-    * alarmActions  告警触发的动作。 结构样例如下： { \"type\": \"notification\",\"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } type取值： notification：通知。 autoscaling：弹性伸缩。
-    * insufficientdataActions  数据不足触发的动作（该参数已废弃，建议无需配置）。
-    * okActions  告警恢复触发的动作
+    * alarmActionEnabled  **参数解释**： 是否开启告警通知 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。 **取值范围**： 只能为true、false - true: 开启告警通知 - false：关闭告警通知 **默认取值**: false。
+    * alarmLevel  **参数解释**： 告警级别 **约束限制**： 不涉及 **取值范围**： 级别为1、2、3、4。 - 1：紧急 - 2：重要 - 3：次要 - 4：提示 **默认取值**: 2
+    * alarmType  **参数解释**： 告警类型。 **约束限制**： 不涉及 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对指定资源的告警规则。 **默认取值**： 不涉及。
+    * alarmActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。结构样例如下： { \"type\": \"notification\",\"notificationList\":[\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } **约束限制**： 最多包含10个告警触发时的通知对象信息。
+    * insufficientdataActions  **参数解释**： 数据不足触发告警时，通知组/主题订阅的信息。（该参数已废弃，建议无需配置） **约束限制**： 最多包含10个告警动作。
+    * okActions  **参数解释**： 告警恢复时，通知组/主题订阅的信息。结构样例如下： { \"type\": \"notification\",\"notificationList\":[\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] }  **约束限制**： 最多包含10个告警触发时的通知对象信息。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarmName  告警名称，只能包含0-9/a-z/A-Z/_/-或汉字。
-    * alarmDescription  告警描述，长度0-256。
+    * alarmName  **参数解释**： 告警规则名称 **约束限制**： 不涉及 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1, 128]个字符 **默认取值**： 不涉及
+    * alarmDescription  **参数解释**： 告警描述。 **约束限制**： 不涉及。 **取值范围**： 长度[0,256]个字符。 **默认取值**： 不涉及。
     * condition  condition
-    * alarmActionEnabled  是否启用该条告警触发的动作，默认为true。注：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。
-    * alarmLevel  告警级别，默认为2，级别为1、2、3、4。分别对应紧急、重要、次要、提示。
-    * alarmType  告警类型，支持的枚举类型：EVENT.SYS：针对系统事件的告警规则；EVENT.CUSTOM：针对自定义事件的告警规则；RESOURCE_GROUP：针对资源分组的告警规则。
-    * alarmActions  告警触发的动作。 结构样例如下： { \"type\": \"notification\",\"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } type取值： notification：通知。 autoscaling：弹性伸缩。
-    * insufficientdataActions  数据不足触发的动作（该参数已废弃，建议无需配置）。
-    * okActions  告警恢复触发的动作
+    * alarmActionEnabled  **参数解释**： 是否开启告警通知 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。 **取值范围**： 只能为true、false - true: 开启告警通知 - false：关闭告警通知 **默认取值**: false。
+    * alarmLevel  **参数解释**： 告警级别 **约束限制**： 不涉及 **取值范围**： 级别为1、2、3、4。 - 1：紧急 - 2：重要 - 3：次要 - 4：提示 **默认取值**: 2
+    * alarmType  **参数解释**： 告警类型。 **约束限制**： 不涉及 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对指定资源的告警规则。 **默认取值**： 不涉及。
+    * alarmActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。结构样例如下： { \"type\": \"notification\",\"notificationList\":[\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } **约束限制**： 最多包含10个告警触发时的通知对象信息。
+    * insufficientdataActions  **参数解释**： 数据不足触发告警时，通知组/主题订阅的信息。（该参数已废弃，建议无需配置） **约束限制**： 最多包含10个告警动作。
+    * okActions  **参数解释**： 告警恢复时，通知组/主题订阅的信息。结构样例如下： { \"type\": \"notification\",\"notificationList\":[\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] }  **约束限制**： 最多包含10个告警触发时的通知对象信息。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarmName  告警名称，只能包含0-9/a-z/A-Z/_/-或汉字。
-    * alarmDescription  告警描述，长度0-256。
+    * alarmName  **参数解释**： 告警规则名称 **约束限制**： 不涉及 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1, 128]个字符 **默认取值**： 不涉及
+    * alarmDescription  **参数解释**： 告警描述。 **约束限制**： 不涉及。 **取值范围**： 长度[0,256]个字符。 **默认取值**： 不涉及。
     * condition  condition
-    * alarmActionEnabled  是否启用该条告警触发的动作，默认为true。注：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。
-    * alarmLevel  告警级别，默认为2，级别为1、2、3、4。分别对应紧急、重要、次要、提示。
-    * alarmType  告警类型，支持的枚举类型：EVENT.SYS：针对系统事件的告警规则；EVENT.CUSTOM：针对自定义事件的告警规则；RESOURCE_GROUP：针对资源分组的告警规则。
-    * alarmActions  告警触发的动作。 结构样例如下： { \"type\": \"notification\",\"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } type取值： notification：通知。 autoscaling：弹性伸缩。
-    * insufficientdataActions  数据不足触发的动作（该参数已废弃，建议无需配置）。
-    * okActions  告警恢复触发的动作
+    * alarmActionEnabled  **参数解释**： 是否开启告警通知 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。 **取值范围**： 只能为true、false - true: 开启告警通知 - false：关闭告警通知 **默认取值**: false。
+    * alarmLevel  **参数解释**： 告警级别 **约束限制**： 不涉及 **取值范围**： 级别为1、2、3、4。 - 1：紧急 - 2：重要 - 3：次要 - 4：提示 **默认取值**: 2
+    * alarmType  **参数解释**： 告警类型。 **约束限制**： 不涉及 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对指定资源的告警规则。 **默认取值**： 不涉及。
+    * alarmActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。结构样例如下： { \"type\": \"notification\",\"notificationList\":[\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } **约束限制**： 最多包含10个告警触发时的通知对象信息。
+    * insufficientdataActions  **参数解释**： 数据不足触发告警时，通知组/主题订阅的信息。（该参数已废弃，建议无需配置） **约束限制**： 最多包含10个告警动作。
+    * okActions  **参数解释**： 告警恢复时，通知组/主题订阅的信息。结构样例如下： { \"type\": \"notification\",\"notificationList\":[\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] }  **约束限制**： 最多包含10个告警触发时的通知对象信息。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarmName  告警名称，只能包含0-9/a-z/A-Z/_/-或汉字。
-    * alarmDescription  告警描述，长度0-256。
+    * alarmName  **参数解释**： 告警规则名称 **约束限制**： 不涉及 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1, 128]个字符 **默认取值**： 不涉及
+    * alarmDescription  **参数解释**： 告警描述。 **约束限制**： 不涉及。 **取值范围**： 长度[0,256]个字符。 **默认取值**： 不涉及。
     * condition  condition
-    * alarmActionEnabled  是否启用该条告警触发的动作，默认为true。注：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。
-    * alarmLevel  告警级别，默认为2，级别为1、2、3、4。分别对应紧急、重要、次要、提示。
-    * alarmType  告警类型，支持的枚举类型：EVENT.SYS：针对系统事件的告警规则；EVENT.CUSTOM：针对自定义事件的告警规则；RESOURCE_GROUP：针对资源分组的告警规则。
-    * alarmActions  告警触发的动作。 结构样例如下： { \"type\": \"notification\",\"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } type取值： notification：通知。 autoscaling：弹性伸缩。
-    * insufficientdataActions  数据不足触发的动作（该参数已废弃，建议无需配置）。
-    * okActions  告警恢复触发的动作
+    * alarmActionEnabled  **参数解释**： 是否开启告警通知 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。 **取值范围**： 只能为true、false - true: 开启告警通知 - false：关闭告警通知 **默认取值**: false。
+    * alarmLevel  **参数解释**： 告警级别 **约束限制**： 不涉及 **取值范围**： 级别为1、2、3、4。 - 1：紧急 - 2：重要 - 3：次要 - 4：提示 **默认取值**: 2
+    * alarmType  **参数解释**： 告警类型。 **约束限制**： 不涉及 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对指定资源的告警规则。 **默认取值**： 不涉及。
+    * alarmActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。结构样例如下： { \"type\": \"notification\",\"notificationList\":[\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } **约束限制**： 最多包含10个告警触发时的通知对象信息。
+    * insufficientdataActions  **参数解释**： 数据不足触发告警时，通知组/主题订阅的信息。（该参数已废弃，建议无需配置） **约束限制**： 最多包含10个告警动作。
+    * okActions  **参数解释**： 告警恢复时，通知组/主题订阅的信息。结构样例如下： { \"type\": \"notification\",\"notificationList\":[\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] }  **约束限制**： 最多包含10个告警触发时的通知对象信息。
     *
     * @var string[]
     */
@@ -212,6 +212,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
     const ALARM_TYPE_EVENT_SYS = 'EVENT.SYS';
     const ALARM_TYPE_EVENT_CUSTOM = 'EVENT.CUSTOM';
     const ALARM_TYPE_RESOURCE_GROUP = 'RESOURCE_GROUP';
+    const ALARM_TYPE_MULTI_INSTANCE = 'MULTI_INSTANCE';
     
 
     /**
@@ -225,6 +226,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
             self::ALARM_TYPE_EVENT_SYS,
             self::ALARM_TYPE_EVENT_CUSTOM,
             self::ALARM_TYPE_RESOURCE_GROUP,
+            self::ALARM_TYPE_MULTI_INSTANCE,
         ];
     }
 
@@ -275,9 +277,6 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['alarmDescription']) && (mb_strlen($this->container['alarmDescription']) > 256)) {
                 $invalidProperties[] = "invalid value for 'alarmDescription', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['alarmDescription']) && (mb_strlen($this->container['alarmDescription']) < 0)) {
-                $invalidProperties[] = "invalid value for 'alarmDescription', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['alarmLevel']) && ($this->container['alarmLevel'] > 4)) {
                 $invalidProperties[] = "invalid value for 'alarmLevel', must be smaller than or equal to 4.";
             }
@@ -308,7 +307,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmName
-    *  告警名称，只能包含0-9/a-z/A-Z/_/-或汉字。
+    *  **参数解释**： 告警规则名称 **约束限制**： 不涉及 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1, 128]个字符 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -320,7 +319,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmName
     *
-    * @param string|null $alarmName 告警名称，只能包含0-9/a-z/A-Z/_/-或汉字。
+    * @param string|null $alarmName **参数解释**： 告警规则名称 **约束限制**： 不涉及 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1, 128]个字符 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -332,7 +331,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmDescription
-    *  告警描述，长度0-256。
+    *  **参数解释**： 告警描述。 **约束限制**： 不涉及。 **取值范围**： 长度[0,256]个字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -344,7 +343,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmDescription
     *
-    * @param string|null $alarmDescription 告警描述，长度0-256。
+    * @param string|null $alarmDescription **参数解释**： 告警描述。 **约束限制**： 不涉及。 **取值范围**： 长度[0,256]个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -380,7 +379,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmActionEnabled
-    *  是否启用该条告警触发的动作，默认为true。注：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。
+    *  **参数解释**： 是否开启告警通知 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。 **取值范围**： 只能为true、false - true: 开启告警通知 - false：关闭告警通知 **默认取值**: false。
     *
     * @return bool|null
     */
@@ -392,7 +391,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmActionEnabled
     *
-    * @param bool|null $alarmActionEnabled 是否启用该条告警触发的动作，默认为true。注：若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。
+    * @param bool|null $alarmActionEnabled **参数解释**： 是否开启告警通知 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，notificationList值保持一致。 **取值范围**： 只能为true、false - true: 开启告警通知 - false：关闭告警通知 **默认取值**: false。
     *
     * @return $this
     */
@@ -404,7 +403,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmLevel
-    *  告警级别，默认为2，级别为1、2、3、4。分别对应紧急、重要、次要、提示。
+    *  **参数解释**： 告警级别 **约束限制**： 不涉及 **取值范围**： 级别为1、2、3、4。 - 1：紧急 - 2：重要 - 3：次要 - 4：提示 **默认取值**: 2
     *
     * @return int|null
     */
@@ -416,7 +415,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmLevel
     *
-    * @param int|null $alarmLevel 告警级别，默认为2，级别为1、2、3、4。分别对应紧急、重要、次要、提示。
+    * @param int|null $alarmLevel **参数解释**： 告警级别 **约束限制**： 不涉及 **取值范围**： 级别为1、2、3、4。 - 1：紧急 - 2：重要 - 3：次要 - 4：提示 **默认取值**: 2
     *
     * @return $this
     */
@@ -428,7 +427,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmType
-    *  告警类型，支持的枚举类型：EVENT.SYS：针对系统事件的告警规则；EVENT.CUSTOM：针对自定义事件的告警规则；RESOURCE_GROUP：针对资源分组的告警规则。
+    *  **参数解释**： 告警类型。 **约束限制**： 不涉及 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对指定资源的告警规则。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -440,7 +439,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmType
     *
-    * @param string|null $alarmType 告警类型，支持的枚举类型：EVENT.SYS：针对系统事件的告警规则；EVENT.CUSTOM：针对自定义事件的告警规则；RESOURCE_GROUP：针对资源分组的告警规则。
+    * @param string|null $alarmType **参数解释**： 告警类型。 **约束限制**： 不涉及 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对指定资源的告警规则。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -452,7 +451,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmActions
-    *  告警触发的动作。 结构样例如下： { \"type\": \"notification\",\"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } type取值： notification：通知。 autoscaling：弹性伸缩。
+    *  **参数解释**： 告警触发时，通知组/主题订阅的信息。结构样例如下： { \"type\": \"notification\",\"notificationList\":[\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } **约束限制**： 最多包含10个告警触发时的通知对象信息。
     *
     * @return \HuaweiCloud\SDK\Ces\V1\Model\Notification[][]|null
     */
@@ -464,7 +463,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmActions
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\Notification[][]|null $alarmActions 告警触发的动作。 结构样例如下： { \"type\": \"notification\",\"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } type取值： notification：通知。 autoscaling：弹性伸缩。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\Notification[][]|null $alarmActions **参数解释**： 告警触发时，通知组/主题订阅的信息。结构样例如下： { \"type\": \"notification\",\"notificationList\":[\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } **约束限制**： 最多包含10个告警触发时的通知对象信息。
     *
     * @return $this
     */
@@ -476,7 +475,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets insufficientdataActions
-    *  数据不足触发的动作（该参数已废弃，建议无需配置）。
+    *  **参数解释**： 数据不足触发告警时，通知组/主题订阅的信息。（该参数已废弃，建议无需配置） **约束限制**： 最多包含10个告警动作。
     *
     * @return \HuaweiCloud\SDK\Ces\V1\Model\Notification[][]|null
     */
@@ -488,7 +487,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets insufficientdataActions
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\Notification[][]|null $insufficientdataActions 数据不足触发的动作（该参数已废弃，建议无需配置）。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\Notification[][]|null $insufficientdataActions **参数解释**： 数据不足触发告警时，通知组/主题订阅的信息。（该参数已废弃，建议无需配置） **约束限制**： 最多包含10个告警动作。
     *
     * @return $this
     */
@@ -500,7 +499,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets okActions
-    *  告警恢复触发的动作
+    *  **参数解释**： 告警恢复时，通知组/主题订阅的信息。结构样例如下： { \"type\": \"notification\",\"notificationList\":[\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] }  **约束限制**： 最多包含10个告警触发时的通知对象信息。
     *
     * @return \HuaweiCloud\SDK\Ces\V1\Model\Notification[][]|null
     */
@@ -512,7 +511,7 @@ class UpdateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets okActions
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\Notification[][]|null $okActions 告警恢复触发的动作
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\Notification[][]|null $okActions **参数解释**： 告警恢复时，通知组/主题订阅的信息。结构样例如下： { \"type\": \"notification\",\"notificationList\":[\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] }  **约束限制**： 最多包含10个告警触发时的通知对象信息。
     *
     * @return $this
     */

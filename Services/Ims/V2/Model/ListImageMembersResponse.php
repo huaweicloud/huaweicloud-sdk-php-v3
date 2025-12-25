@@ -23,24 +23,28 @@ class ListImageMembersResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * members  成员信息
     * schema  视图信息
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'members' => '\HuaweiCloud\SDK\Ims\V2\Model\ImageMember[]',
-            'schema' => 'string'
+            'schema' => 'string',
+            'pageInfo' => '\HuaweiCloud\SDK\Ims\V2\Model\GlancePageInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * members  成员信息
     * schema  视图信息
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'members' => null,
-        'schema' => null
+        'schema' => null,
+        'pageInfo' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ListImageMembersResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * members  成员信息
     * schema  视图信息
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'members' => 'members',
-            'schema' => 'schema'
+            'schema' => 'schema',
+            'pageInfo' => 'page_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * members  成员信息
     * schema  视图信息
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $setters = [
             'members' => 'setMembers',
-            'schema' => 'setSchema'
+            'schema' => 'setSchema',
+            'pageInfo' => 'setPageInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * members  成员信息
     * schema  视图信息
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $getters = [
             'members' => 'getMembers',
-            'schema' => 'getSchema'
+            'schema' => 'getSchema',
+            'pageInfo' => 'getPageInfo'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ListImageMembersResponse implements ModelInterface, ArrayAccess
     {
         $this->container['members'] = isset($data['members']) ? $data['members'] : null;
         $this->container['schema'] = isset($data['schema']) ? $data['schema'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
     /**
@@ -229,6 +240,30 @@ class ListImageMembersResponse implements ModelInterface, ArrayAccess
     public function setSchema($schema)
     {
         $this->container['schema'] = $schema;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Ims\V2\Model\GlancePageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Ims\V2\Model\GlancePageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

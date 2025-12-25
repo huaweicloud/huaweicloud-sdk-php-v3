@@ -25,7 +25,7 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
     * alarmLevel  **参数解释**： 告警级别。 **取值范围**： 不涉及。
     * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
-    * notificationTargetType  **参数解释**： 消息主题类型，支持SMN。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
     * alarmLevel  **参数解释**： 告警级别。 **取值范围**： 不涉及。
     * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
-    * notificationTargetType  **参数解释**： 消息主题类型，支持SMN。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
     * alarmLevel  **参数解释**： 告警级别。 **取值范围**： 不涉及。
     * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
-    * notificationTargetType  **参数解释**： 消息主题类型，支持SMN。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
     * alarmLevel  **参数解释**： 告警级别。 **取值范围**： 不涉及。
     * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
-    * notificationTargetType  **参数解释**： 消息主题类型，支持SMN。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
     * alarmLevel  **参数解释**： 告警级别。 **取值范围**： 不涉及。
     * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
-    * notificationTargetType  **参数解释**： 消息主题类型，支持SMN。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     *
     * @var string[]
     */
@@ -361,7 +361,7 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationTargetType
-    *  **参数解释**： 消息主题类型，支持SMN。 **取值范围**： 不涉及。
+    *  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     *
     * @return string
     */
@@ -373,7 +373,7 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets notificationTargetType
     *
-    * @param string $notificationTargetType **参数解释**： 消息主题类型，支持SMN。 **取值范围**： 不涉及。
+    * @param string $notificationTargetType **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     *
     * @return $this
     */

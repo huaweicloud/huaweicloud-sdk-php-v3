@@ -25,7 +25,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     * clusterAz  **参数解释**： 容灾集群所在可用区。 **取值范围**： 不涉及。
     * role  **参数解释**： 容灾集群角色。 **取值范围**： 不涉及。
     * region  **参数解释**： 容灾集群所在region。 **取值范围**： 不涉及。
-    * status  **参数解释**： 容灾集群状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 容灾集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
     * progress  **参数解释**： 容灾进度。 **取值范围**： 不涉及。
     * lastSuccessTime  **参数解释**： 上一次容灾时间。 **取值范围**： 不涉及。
     * obsBucketName  **参数解释**： OBS桶名称。 **取值范围**： 不涉及。
@@ -59,7 +59,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     * clusterAz  **参数解释**： 容灾集群所在可用区。 **取值范围**： 不涉及。
     * role  **参数解释**： 容灾集群角色。 **取值范围**： 不涉及。
     * region  **参数解释**： 容灾集群所在region。 **取值范围**： 不涉及。
-    * status  **参数解释**： 容灾集群状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 容灾集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
     * progress  **参数解释**： 容灾进度。 **取值范围**： 不涉及。
     * lastSuccessTime  **参数解释**： 上一次容灾时间。 **取值范围**： 不涉及。
     * obsBucketName  **参数解释**： OBS桶名称。 **取值范围**： 不涉及。
@@ -114,7 +114,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     * clusterAz  **参数解释**： 容灾集群所在可用区。 **取值范围**： 不涉及。
     * role  **参数解释**： 容灾集群角色。 **取值范围**： 不涉及。
     * region  **参数解释**： 容灾集群所在region。 **取值范围**： 不涉及。
-    * status  **参数解释**： 容灾集群状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 容灾集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
     * progress  **参数解释**： 容灾进度。 **取值范围**： 不涉及。
     * lastSuccessTime  **参数解释**： 上一次容灾时间。 **取值范围**： 不涉及。
     * obsBucketName  **参数解释**： OBS桶名称。 **取值范围**： 不涉及。
@@ -148,7 +148,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     * clusterAz  **参数解释**： 容灾集群所在可用区。 **取值范围**： 不涉及。
     * role  **参数解释**： 容灾集群角色。 **取值范围**： 不涉及。
     * region  **参数解释**： 容灾集群所在region。 **取值范围**： 不涉及。
-    * status  **参数解释**： 容灾集群状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 容灾集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
     * progress  **参数解释**： 容灾进度。 **取值范围**： 不涉及。
     * lastSuccessTime  **参数解释**： 上一次容灾时间。 **取值范围**： 不涉及。
     * obsBucketName  **参数解释**： OBS桶名称。 **取值范围**： 不涉及。
@@ -182,7 +182,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     * clusterAz  **参数解释**： 容灾集群所在可用区。 **取值范围**： 不涉及。
     * role  **参数解释**： 容灾集群角色。 **取值范围**： 不涉及。
     * region  **参数解释**： 容灾集群所在region。 **取值范围**： 不涉及。
-    * status  **参数解释**： 容灾集群状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 容灾集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
     * progress  **参数解释**： 容灾进度。 **取值范围**： 不涉及。
     * lastSuccessTime  **参数解释**： 上一次容灾时间。 **取值范围**： 不涉及。
     * obsBucketName  **参数解释**： OBS桶名称。 **取值范围**： 不涉及。
@@ -426,7 +426,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 容灾集群状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 容灾集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
     *
     * @return string|null
     */
@@ -438,7 +438,7 @@ class DisasterRecoveryCluster implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 容灾集群状态。 **取值范围**： 不涉及。
+    * @param string|null $status **参数解释**： 容灾集群状态。 **取值范围**： - backuping，备份运行中。 - restoring，恢复运行中。 - stopped，集群已停止。 - waiting，容灾运行中。 - abnormal，容灾异常。 - drDeleted，容灾已删除。
     *
     * @return $this
     */

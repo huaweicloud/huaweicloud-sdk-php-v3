@@ -20,9 +20,9 @@ class TemplateItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * metricName  告警模板添加的监控指标，如弹性云服务器可添加的监控指标为cpu_util等；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * metricName  **参数解释** 告警模板添加的监控指标，如弹性云服务器可添加的监控指标为cpu_util等；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制**： 不涉及 **取值范围**： 字符串长度在 1 到 64 之间。 **默认取值**： 不涉及
     * condition  condition
-    * alarmLevel  设置告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
+    * alarmLevel  **参数解释**： 告警级别。     **约束限制**： 不涉及。 **取值范围**： 只能为1、2、3、4。 - 1为紧急 - 2为重要 - 3为次要 - 4为提示           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class TemplateItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * metricName  告警模板添加的监控指标，如弹性云服务器可添加的监控指标为cpu_util等；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * metricName  **参数解释** 告警模板添加的监控指标，如弹性云服务器可添加的监控指标为cpu_util等；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制**： 不涉及 **取值范围**： 字符串长度在 1 到 64 之间。 **默认取值**： 不涉及
     * condition  condition
-    * alarmLevel  设置告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
+    * alarmLevel  **参数解释**： 告警级别。     **约束限制**： 不涉及。 **取值范围**： 只能为1、2、3、4。 - 1为紧急 - 2为重要 - 3为次要 - 4为提示           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class TemplateItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * metricName  告警模板添加的监控指标，如弹性云服务器可添加的监控指标为cpu_util等；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * metricName  **参数解释** 告警模板添加的监控指标，如弹性云服务器可添加的监控指标为cpu_util等；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制**： 不涉及 **取值范围**： 字符串长度在 1 到 64 之间。 **默认取值**： 不涉及
     * condition  condition
-    * alarmLevel  设置告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
+    * alarmLevel  **参数解释**： 告警级别。     **约束限制**： 不涉及。 **取值范围**： 只能为1、2、3、4。 - 1为紧急 - 2为重要 - 3为次要 - 4为提示           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class TemplateItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * metricName  告警模板添加的监控指标，如弹性云服务器可添加的监控指标为cpu_util等；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * metricName  **参数解释** 告警模板添加的监控指标，如弹性云服务器可添加的监控指标为cpu_util等；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制**： 不涉及 **取值范围**： 字符串长度在 1 到 64 之间。 **默认取值**： 不涉及
     * condition  condition
-    * alarmLevel  设置告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
+    * alarmLevel  **参数解释**： 告警级别。     **约束限制**： 不涉及。 **取值范围**： 只能为1、2、3、4。 - 1为紧急 - 2为重要 - 3为次要 - 4为提示           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class TemplateItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * metricName  告警模板添加的监控指标，如弹性云服务器可添加的监控指标为cpu_util等；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * metricName  **参数解释** 告警模板添加的监控指标，如弹性云服务器可添加的监控指标为cpu_util等；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制**： 不涉及 **取值范围**： 字符串长度在 1 到 64 之间。 **默认取值**： 不涉及
     * condition  condition
-    * alarmLevel  设置告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
+    * alarmLevel  **参数解释**： 告警级别。     **约束限制**： 不涉及。 **取值范围**： 只能为1、2、3、4。 - 1为紧急 - 2为重要 - 3为次要 - 4为提示           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -186,6 +186,12 @@ class TemplateItem implements ModelInterface, ArrayAccess
         if ($this->container['condition'] === null) {
             $invalidProperties[] = "'condition' can't be null";
         }
+            if (!is_null($this->container['alarmLevel']) && ($this->container['alarmLevel'] > 4)) {
+                $invalidProperties[] = "invalid value for 'alarmLevel', must be smaller than or equal to 4.";
+            }
+            if (!is_null($this->container['alarmLevel']) && ($this->container['alarmLevel'] < 1)) {
+                $invalidProperties[] = "invalid value for 'alarmLevel', must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -202,7 +208,7 @@ class TemplateItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricName
-    *  告警模板添加的监控指标，如弹性云服务器可添加的监控指标为cpu_util等；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    *  **参数解释** 告警模板添加的监控指标，如弹性云服务器可添加的监控指标为cpu_util等；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制**： 不涉及 **取值范围**： 字符串长度在 1 到 64 之间。 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -214,7 +220,7 @@ class TemplateItem implements ModelInterface, ArrayAccess
     /**
     * Sets metricName
     *
-    * @param string $metricName 告警模板添加的监控指标，如弹性云服务器可添加的监控指标为cpu_util等；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+    * @param string $metricName **参数解释** 告警模板添加的监控指标，如弹性云服务器可添加的监控指标为cpu_util等；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制**： 不涉及 **取值范围**： 字符串长度在 1 到 64 之间。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -250,7 +256,7 @@ class TemplateItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmLevel
-    *  设置告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
+    *  **参数解释**： 告警级别。     **约束限制**： 不涉及。 **取值范围**： 只能为1、2、3、4。 - 1为紧急 - 2为重要 - 3为次要 - 4为提示           **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -262,7 +268,7 @@ class TemplateItem implements ModelInterface, ArrayAccess
     /**
     * Sets alarmLevel
     *
-    * @param int|null $alarmLevel 设置告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
+    * @param int|null $alarmLevel **参数解释**： 告警级别。     **约束限制**： 不涉及。 **取值范围**： 只能为1、2、3、4。 - 1为紧急 - 2为重要 - 3为次要 - 4为提示           **默认取值**： 不涉及。
     *
     * @return $this
     */

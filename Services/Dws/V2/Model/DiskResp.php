@@ -24,7 +24,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
     * hostName  **参数解释**： 主机名称。 **取值范围**： 不涉及。
     * diskName  **参数解释**： 磁盘名称。 **取值范围**： 不涉及。
-    * diskType  **参数解释**： 磁盘类型(系统盘、数据盘、日志盘)。 **取值范围**： 不涉及。
+    * diskType  **参数解释**： 磁盘类型。 **取值范围**： - system:：系统盘。 - data：数据盘。 - log：日志盘。
     * total  **参数解释**： 磁盘总容量(GB)。 **取值范围**： 不涉及。
     * used  **参数解释**： 磁盘已使用容量(GB)。 **取值范围**： 不涉及。
     * available  **参数解释**： 磁盘可用容量(GB)。 **取值范围**： 不涉及。
@@ -60,7 +60,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
     * hostName  **参数解释**： 主机名称。 **取值范围**： 不涉及。
     * diskName  **参数解释**： 磁盘名称。 **取值范围**： 不涉及。
-    * diskType  **参数解释**： 磁盘类型(系统盘、数据盘、日志盘)。 **取值范围**： 不涉及。
+    * diskType  **参数解释**： 磁盘类型。 **取值范围**： - system:：系统盘。 - data：数据盘。 - log：日志盘。
     * total  **参数解释**： 磁盘总容量(GB)。 **取值范围**： 不涉及。
     * used  **参数解释**： 磁盘已使用容量(GB)。 **取值范围**： 不涉及。
     * available  **参数解释**： 磁盘可用容量(GB)。 **取值范围**： 不涉及。
@@ -117,7 +117,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
     * hostName  **参数解释**： 主机名称。 **取值范围**： 不涉及。
     * diskName  **参数解释**： 磁盘名称。 **取值范围**： 不涉及。
-    * diskType  **参数解释**： 磁盘类型(系统盘、数据盘、日志盘)。 **取值范围**： 不涉及。
+    * diskType  **参数解释**： 磁盘类型。 **取值范围**： - system:：系统盘。 - data：数据盘。 - log：日志盘。
     * total  **参数解释**： 磁盘总容量(GB)。 **取值范围**： 不涉及。
     * used  **参数解释**： 磁盘已使用容量(GB)。 **取值范围**： 不涉及。
     * available  **参数解释**： 磁盘可用容量(GB)。 **取值范围**： 不涉及。
@@ -153,7 +153,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
     * hostName  **参数解释**： 主机名称。 **取值范围**： 不涉及。
     * diskName  **参数解释**： 磁盘名称。 **取值范围**： 不涉及。
-    * diskType  **参数解释**： 磁盘类型(系统盘、数据盘、日志盘)。 **取值范围**： 不涉及。
+    * diskType  **参数解释**： 磁盘类型。 **取值范围**： - system:：系统盘。 - data：数据盘。 - log：日志盘。
     * total  **参数解释**： 磁盘总容量(GB)。 **取值范围**： 不涉及。
     * used  **参数解释**： 磁盘已使用容量(GB)。 **取值范围**： 不涉及。
     * available  **参数解释**： 磁盘可用容量(GB)。 **取值范围**： 不涉及。
@@ -189,7 +189,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
     * hostName  **参数解释**： 主机名称。 **取值范围**： 不涉及。
     * diskName  **参数解释**： 磁盘名称。 **取值范围**： 不涉及。
-    * diskType  **参数解释**： 磁盘类型(系统盘、数据盘、日志盘)。 **取值范围**： 不涉及。
+    * diskType  **参数解释**： 磁盘类型。 **取值范围**： - system:：系统盘。 - data：数据盘。 - log：日志盘。
     * total  **参数解释**： 磁盘总容量(GB)。 **取值范围**： 不涉及。
     * used  **参数解释**： 磁盘已使用容量(GB)。 **取值范围**： 不涉及。
     * available  **参数解释**： 磁盘可用容量(GB)。 **取值范围**： 不涉及。
@@ -413,7 +413,7 @@ class DiskResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets diskType
-    *  **参数解释**： 磁盘类型(系统盘、数据盘、日志盘)。 **取值范围**： 不涉及。
+    *  **参数解释**： 磁盘类型。 **取值范围**： - system:：系统盘。 - data：数据盘。 - log：日志盘。
     *
     * @return string|null
     */
@@ -425,7 +425,7 @@ class DiskResp implements ModelInterface, ArrayAccess
     /**
     * Sets diskType
     *
-    * @param string|null $diskType **参数解释**： 磁盘类型(系统盘、数据盘、日志盘)。 **取值范围**： 不涉及。
+    * @param string|null $diskType **参数解释**： 磁盘类型。 **取值范围**： - system:：系统盘。 - data：数据盘。 - log：日志盘。
     *
     * @return $this
     */

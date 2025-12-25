@@ -20,8 +20,8 @@ class AssociationAlarmTemplate implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * templateId  告警模板ID
-    * templateName  告警模板名称
+    * templateId  **参数解释** 告警模板ID。 **取值范围** 以at开头，后跟字母、数字，长度在[2,64]区间内。
+    * templateName  **参数解释** 告警模板名称。 **取值范围** 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度在[1,128]区间内。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class AssociationAlarmTemplate implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * templateId  告警模板ID
-    * templateName  告警模板名称
+    * templateId  **参数解释** 告警模板ID。 **取值范围** 以at开头，后跟字母、数字，长度在[2,64]区间内。
+    * templateName  **参数解释** 告警模板名称。 **取值范围** 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度在[1,128]区间内。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class AssociationAlarmTemplate implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * templateId  告警模板ID
-    * templateName  告警模板名称
+    * templateId  **参数解释** 告警模板ID。 **取值范围** 以at开头，后跟字母、数字，长度在[2,64]区间内。
+    * templateName  **参数解释** 告警模板名称。 **取值范围** 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度在[1,128]区间内。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class AssociationAlarmTemplate implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * templateId  告警模板ID
-    * templateName  告警模板名称
+    * templateId  **参数解释** 告警模板ID。 **取值范围** 以at开头，后跟字母、数字，长度在[2,64]区间内。
+    * templateName  **参数解释** 告警模板名称。 **取值范围** 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度在[1,128]区间内。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class AssociationAlarmTemplate implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * templateId  告警模板ID
-    * templateName  告警模板名称
+    * templateId  **参数解释** 告警模板ID。 **取值范围** 以at开头，后跟字母、数字，长度在[2,64]区间内。
+    * templateName  **参数解释** 告警模板名称。 **取值范围** 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度在[1,128]区间内。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class AssociationAlarmTemplate implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateId
-    *  告警模板ID
+    *  **参数解释** 告警模板ID。 **取值范围** 以at开头，后跟字母、数字，长度在[2,64]区间内。
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class AssociationAlarmTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets templateId
     *
-    * @param string|null $templateId 告警模板ID
+    * @param string|null $templateId **参数解释** 告警模板ID。 **取值范围** 以at开头，后跟字母、数字，长度在[2,64]区间内。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class AssociationAlarmTemplate implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateName
-    *  告警模板名称
+    *  **参数解释** 告警模板名称。 **取值范围** 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度在[1,128]区间内。
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class AssociationAlarmTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets templateName
     *
-    * @param string|null $templateName 告警模板名称
+    * @param string|null $templateName **参数解释** 告警模板名称。 **取值范围** 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度在[1,128]区间内。
     *
     * @return $this
     */

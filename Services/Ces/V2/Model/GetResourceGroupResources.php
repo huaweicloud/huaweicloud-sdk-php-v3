@@ -20,12 +20,12 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * status  **参数解释** 按事件告警状态信息进行过滤。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
     * dimensions  资源的维度信息
-    * tags  资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"
-    * enterpriseProjectId  企业项目ID
-    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
-    * resourceName  资源名称
+    * tags  **参数解释** 资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"。 **取值范围** 枚举值。 字符串长度[0, 10240]
+    * enterpriseProjectId  **参数解释** 企业项目ID。 **取值范围** 由数字、字母和-组成，字符串长度范围[1,128]
+    * eventStatus  **参数解释** 按事件告警状态信息进行过滤。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
+    * resourceName  **参数解释** 资源名称 **取值范围** 长度[0,128]个字符
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * status  **参数解释** 按事件告警状态信息进行过滤。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
     * dimensions  资源的维度信息
-    * tags  资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"
-    * enterpriseProjectId  企业项目ID
-    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
-    * resourceName  资源名称
+    * tags  **参数解释** 资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"。 **取值范围** 枚举值。 字符串长度[0, 10240]
+    * enterpriseProjectId  **参数解释** 企业项目ID。 **取值范围** 由数字、字母和-组成，字符串长度范围[1,128]
+    * eventStatus  **参数解释** 按事件告警状态信息进行过滤。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
+    * resourceName  **参数解释** 资源名称 **取值范围** 长度[0,128]个字符
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * status  **参数解释** 按事件告警状态信息进行过滤。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
     * dimensions  资源的维度信息
-    * tags  资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"
-    * enterpriseProjectId  企业项目ID
-    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
-    * resourceName  资源名称
+    * tags  **参数解释** 资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"。 **取值范围** 枚举值。 字符串长度[0, 10240]
+    * enterpriseProjectId  **参数解释** 企业项目ID。 **取值范围** 由数字、字母和-组成，字符串长度范围[1,128]
+    * eventStatus  **参数解释** 按事件告警状态信息进行过滤。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
+    * resourceName  **参数解释** 资源名称 **取值范围** 长度[0,128]个字符
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * status  **参数解释** 按事件告警状态信息进行过滤。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
     * dimensions  资源的维度信息
-    * tags  资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"
-    * enterpriseProjectId  企业项目ID
-    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
-    * resourceName  资源名称
+    * tags  **参数解释** 资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"。 **取值范围** 枚举值。 字符串长度[0, 10240]
+    * enterpriseProjectId  **参数解释** 企业项目ID。 **取值范围** 由数字、字母和-组成，字符串长度范围[1,128]
+    * eventStatus  **参数解释** 按事件告警状态信息进行过滤。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
+    * resourceName  **参数解释** 资源名称 **取值范围** 长度[0,128]个字符
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * status  **参数解释** 按事件告警状态信息进行过滤。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
     * dimensions  资源的维度信息
-    * tags  资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"
-    * enterpriseProjectId  企业项目ID
-    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
-    * resourceName  资源名称
+    * tags  **参数解释** 资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"。 **取值范围** 枚举值。 字符串长度[0, 10240]
+    * enterpriseProjectId  **参数解释** 企业项目ID。 **取值范围** 由数字、字母和-组成，字符串长度范围[1,128]
+    * eventStatus  **参数解释** 按事件告警状态信息进行过滤。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
+    * resourceName  **参数解释** 资源名称 **取值范围** 长度[0,128]个字符
     *
     * @var string[]
     */
@@ -303,7 +303,7 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    *  **参数解释** 按事件告警状态信息进行过滤。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
     *
     * @return string
     */
@@ -315,7 +315,7 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * @param string $status **参数解释** 按事件告警状态信息进行过滤。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
     *
     * @return $this
     */
@@ -351,7 +351,7 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"
+    *  **参数解释** 资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"。 **取值范围** 枚举值。 字符串长度[0, 10240]
     *
     * @return string|null
     */
@@ -363,7 +363,7 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string|null $tags 资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"
+    * @param string|null $tags **参数解释** 资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"。 **取值范围** 枚举值。 字符串长度[0, 10240]
     *
     * @return $this
     */
@@ -375,7 +375,7 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID
+    *  **参数解释** 企业项目ID。 **取值范围** 由数字、字母和-组成，字符串长度范围[1,128]
     *
     * @return string|null
     */
@@ -387,7 +387,7 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID
+    * @param string|null $enterpriseProjectId **参数解释** 企业项目ID。 **取值范围** 由数字、字母和-组成，字符串长度范围[1,128]
     *
     * @return $this
     */
@@ -399,7 +399,7 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventStatus
-    *  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    *  **参数解释** 按事件告警状态信息进行过滤。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
     *
     * @return string|null
     */
@@ -411,7 +411,7 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
     /**
     * Sets eventStatus
     *
-    * @param string|null $eventStatus 事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * @param string|null $eventStatus **参数解释** 按事件告警状态信息进行过滤。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
     *
     * @return $this
     */
@@ -423,7 +423,7 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceName
-    *  资源名称
+    *  **参数解释** 资源名称 **取值范围** 长度[0,128]个字符
     *
     * @return string|null
     */
@@ -435,7 +435,7 @@ class GetResourceGroupResources implements ModelInterface, ArrayAccess
     /**
     * Sets resourceName
     *
-    * @param string|null $resourceName 资源名称
+    * @param string|null $resourceName **参数解释** 资源名称 **取值范围** 长度[0,128]个字符
     *
     * @return $this
     */

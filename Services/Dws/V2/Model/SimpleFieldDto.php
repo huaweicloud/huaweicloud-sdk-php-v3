@@ -21,7 +21,7 @@ class SimpleFieldDto implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * columnName  **参数解释**： 指标表对应字段名称。 **取值范围**： 不涉及。
-    * columnType  **参数解释**： 指标表对应字段类型。 **取值范围**： 不涉及。
+    * columnType  **参数解释**： 指标表对应字段类型。 **取值范围**： - bigint：大范围的整数，别名为INT8。 - int：常用的整数，别名为INT4。 - varchar：变长字符串。 - text：变长字符串。 - numeric：任意精度型。 - double precision：双精度浮点数，不精准。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class SimpleFieldDto implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * columnName  **参数解释**： 指标表对应字段名称。 **取值范围**： 不涉及。
-    * columnType  **参数解释**： 指标表对应字段类型。 **取值范围**： 不涉及。
+    * columnType  **参数解释**： 指标表对应字段类型。 **取值范围**： - bigint：大范围的整数，别名为INT8。 - int：常用的整数，别名为INT4。 - varchar：变长字符串。 - text：变长字符串。 - numeric：任意精度型。 - double precision：双精度浮点数，不精准。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class SimpleFieldDto implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * columnName  **参数解释**： 指标表对应字段名称。 **取值范围**： 不涉及。
-    * columnType  **参数解释**： 指标表对应字段类型。 **取值范围**： 不涉及。
+    * columnType  **参数解释**： 指标表对应字段类型。 **取值范围**： - bigint：大范围的整数，别名为INT8。 - int：常用的整数，别名为INT4。 - varchar：变长字符串。 - text：变长字符串。 - numeric：任意精度型。 - double precision：双精度浮点数，不精准。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class SimpleFieldDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * columnName  **参数解释**： 指标表对应字段名称。 **取值范围**： 不涉及。
-    * columnType  **参数解释**： 指标表对应字段类型。 **取值范围**： 不涉及。
+    * columnType  **参数解释**： 指标表对应字段类型。 **取值范围**： - bigint：大范围的整数，别名为INT8。 - int：常用的整数，别名为INT4。 - varchar：变长字符串。 - text：变长字符串。 - numeric：任意精度型。 - double precision：双精度浮点数，不精准。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class SimpleFieldDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * columnName  **参数解释**： 指标表对应字段名称。 **取值范围**： 不涉及。
-    * columnType  **参数解释**： 指标表对应字段类型。 **取值范围**： 不涉及。
+    * columnType  **参数解释**： 指标表对应字段类型。 **取值范围**： - bigint：大范围的整数，别名为INT8。 - int：常用的整数，别名为INT4。 - varchar：变长字符串。 - text：变长字符串。 - numeric：任意精度型。 - double precision：双精度浮点数，不精准。
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class SimpleFieldDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets columnType
-    *  **参数解释**： 指标表对应字段类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 指标表对应字段类型。 **取值范围**： - bigint：大范围的整数，别名为INT8。 - int：常用的整数，别名为INT4。 - varchar：变长字符串。 - text：变长字符串。 - numeric：任意精度型。 - double precision：双精度浮点数，不精准。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class SimpleFieldDto implements ModelInterface, ArrayAccess
     /**
     * Sets columnType
     *
-    * @param string|null $columnType **参数解释**： 指标表对应字段类型。 **取值范围**： 不涉及。
+    * @param string|null $columnType **参数解释**： 指标表对应字段类型。 **取值范围**： - bigint：大范围的整数，别名为INT8。 - int：常用的整数，别名为INT4。 - varchar：变长字符串。 - text：变长字符串。 - numeric：任意精度型。 - double precision：双精度浮点数，不精准。
     *
     * @return $this
     */

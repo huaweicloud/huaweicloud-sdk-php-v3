@@ -20,7 +20,7 @@ class ForwardingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * eip  **参数说明**：NAT网关绑定的EIP
+    * eip  **参数说明**：NAT网关绑定的EIP。
     * enableSnat  **参数说明**：是否启用SNAT配置。 **取值范围**： - true: SNAT配置已启用 - false: SNAT配置未启用
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ForwardingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * eip  **参数说明**：NAT网关绑定的EIP
+    * eip  **参数说明**：NAT网关绑定的EIP。
     * enableSnat  **参数说明**：是否启用SNAT配置。 **取值范围**： - true: SNAT配置已启用 - false: SNAT配置未启用
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ForwardingInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * eip  **参数说明**：NAT网关绑定的EIP
+    * eip  **参数说明**：NAT网关绑定的EIP。
     * enableSnat  **参数说明**：是否启用SNAT配置。 **取值范围**： - true: SNAT配置已启用 - false: SNAT配置未启用
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ForwardingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * eip  **参数说明**：NAT网关绑定的EIP
+    * eip  **参数说明**：NAT网关绑定的EIP。
     * enableSnat  **参数说明**：是否启用SNAT配置。 **取值范围**： - true: SNAT配置已启用 - false: SNAT配置未启用
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ForwardingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * eip  **参数说明**：NAT网关绑定的EIP
+    * eip  **参数说明**：NAT网关绑定的EIP。
     * enableSnat  **参数说明**：是否启用SNAT配置。 **取值范围**： - true: SNAT配置已启用 - false: SNAT配置未启用
     *
     * @var string[]
@@ -191,7 +191,7 @@ class ForwardingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets eip
-    *  **参数说明**：NAT网关绑定的EIP
+    *  **参数说明**：NAT网关绑定的EIP。
     *
     * @return string|null
     */
@@ -203,7 +203,7 @@ class ForwardingInfo implements ModelInterface, ArrayAccess
     /**
     * Sets eip
     *
-    * @param string|null $eip **参数说明**：NAT网关绑定的EIP
+    * @param string|null $eip **参数说明**：NAT网关绑定的EIP。
     *
     * @return $this
     */

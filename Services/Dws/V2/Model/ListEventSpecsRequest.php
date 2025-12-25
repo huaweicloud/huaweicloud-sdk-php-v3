@@ -21,9 +21,9 @@ class ListEventSpecsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * specName  **参数解释**： 事件配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * category  **参数解释**： 事件类别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * category  **参数解释**： 事件类别。 **约束限制**： 不涉及。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。 **默认取值**： 不涉及。
     * severity  **参数解释**： 事件级别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * sourceType  **参数解释**： 事件源类别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sourceType  **参数解释**： 事件源类别。 **约束限制**： 不涉及。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。 **默认取值**： 不涉及。
     * tag  **参数解释**： 事件标签。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * offset  **参数解释**： 分页偏移量，从0开始，页数减1。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0
     * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 1000
@@ -43,9 +43,9 @@ class ListEventSpecsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * specName  **参数解释**： 事件配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * category  **参数解释**： 事件类别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * category  **参数解释**： 事件类别。 **约束限制**： 不涉及。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。 **默认取值**： 不涉及。
     * severity  **参数解释**： 事件级别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * sourceType  **参数解释**： 事件源类别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sourceType  **参数解释**： 事件源类别。 **约束限制**： 不涉及。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。 **默认取值**： 不涉及。
     * tag  **参数解释**： 事件标签。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * offset  **参数解释**： 分页偏移量，从0开始，页数减1。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0
     * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 1000
@@ -86,9 +86,9 @@ class ListEventSpecsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * specName  **参数解释**： 事件配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * category  **参数解释**： 事件类别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * category  **参数解释**： 事件类别。 **约束限制**： 不涉及。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。 **默认取值**： 不涉及。
     * severity  **参数解释**： 事件级别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * sourceType  **参数解释**： 事件源类别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sourceType  **参数解释**： 事件源类别。 **约束限制**： 不涉及。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。 **默认取值**： 不涉及。
     * tag  **参数解释**： 事件标签。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * offset  **参数解释**： 分页偏移量，从0开始，页数减1。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0
     * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 1000
@@ -108,9 +108,9 @@ class ListEventSpecsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * specName  **参数解释**： 事件配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * category  **参数解释**： 事件类别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * category  **参数解释**： 事件类别。 **约束限制**： 不涉及。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。 **默认取值**： 不涉及。
     * severity  **参数解释**： 事件级别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * sourceType  **参数解释**： 事件源类别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sourceType  **参数解释**： 事件源类别。 **约束限制**： 不涉及。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。 **默认取值**： 不涉及。
     * tag  **参数解释**： 事件标签。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * offset  **参数解释**： 分页偏移量，从0开始，页数减1。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0
     * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 1000
@@ -130,9 +130,9 @@ class ListEventSpecsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * specName  **参数解释**： 事件配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * category  **参数解释**： 事件类别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * category  **参数解释**： 事件类别。 **约束限制**： 不涉及。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。 **默认取值**： 不涉及。
     * severity  **参数解释**： 事件级别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * sourceType  **参数解释**： 事件源类别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sourceType  **参数解释**： 事件源类别。 **约束限制**： 不涉及。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。 **默认取值**： 不涉及。
     * tag  **参数解释**： 事件标签。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * offset  **参数解释**： 分页偏移量，从0开始，页数减1。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0
     * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 1000
@@ -264,7 +264,7 @@ class ListEventSpecsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  **参数解释**： 事件类别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *  **参数解释**： 事件类别。 **约束限制**： 不涉及。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class ListEventSpecsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string|null $category **参数解释**： 事件类别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string|null $category **参数解释**： 事件类别。 **约束限制**： 不涉及。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class ListEventSpecsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceType
-    *  **参数解释**： 事件源类别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *  **参数解释**： 事件源类别。 **约束限制**： 不涉及。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -324,7 +324,7 @@ class ListEventSpecsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sourceType
     *
-    * @param string|null $sourceType **参数解释**： 事件源类别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string|null $sourceType **参数解释**： 事件源类别。 **约束限制**： 不涉及。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class CreateAlarmTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
+    * templateId  **参数解释**： 告警模板的ID。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。
     * overwriteResult  overwriteResult
     *
     * @var string[]
@@ -33,7 +33,7 @@ class CreateAlarmTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
+    * templateId  **参数解释**： 告警模板的ID。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。
     * overwriteResult  overwriteResult
     *
     * @var string[]
@@ -66,7 +66,7 @@ class CreateAlarmTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
+    * templateId  **参数解释**： 告警模板的ID。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。
     * overwriteResult  overwriteResult
     *
     * @var string[]
@@ -78,7 +78,7 @@ class CreateAlarmTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
+    * templateId  **参数解释**： 告警模板的ID。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。
     * overwriteResult  overwriteResult
     *
     * @var string[]
@@ -90,7 +90,7 @@ class CreateAlarmTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
+    * templateId  **参数解释**： 告警模板的ID。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。
     * overwriteResult  overwriteResult
     *
     * @var string[]
@@ -195,7 +195,7 @@ class CreateAlarmTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateId
-    *  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
+    *  **参数解释**： 告警模板的ID。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。
     *
     * @return string|null
     */
@@ -207,7 +207,7 @@ class CreateAlarmTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets templateId
     *
-    * @param string|null $templateId **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
+    * @param string|null $templateId **参数解释**： 告警模板的ID。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。
     *
     * @return $this
     */

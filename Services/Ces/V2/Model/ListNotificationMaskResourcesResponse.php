@@ -21,20 +21,20 @@ class ListNotificationMaskResourcesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resources  通知屏蔽资源列表
-    * count  资源总数
+    * resources  **参数解释**： 通知屏蔽资源列表
+    * count  **参数解释**： 资源总数 **取值范围**： [0,100]
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resources' => '\HuaweiCloud\SDK\Ces\V2\Model\Resource[]',
+            'resources' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceResp[]',
             'count' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resources  通知屏蔽资源列表
-    * count  资源总数
+    * resources  **参数解释**： 通知屏蔽资源列表
+    * count  **参数解释**： 资源总数 **取值范围**： [0,100]
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListNotificationMaskResourcesResponse implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resources  通知屏蔽资源列表
-    * count  资源总数
+    * resources  **参数解释**： 通知屏蔽资源列表
+    * count  **参数解释**： 资源总数 **取值范围**： [0,100]
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListNotificationMaskResourcesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resources  通知屏蔽资源列表
-    * count  资源总数
+    * resources  **参数解释**： 通知屏蔽资源列表
+    * count  **参数解释**： 资源总数 **取值范围**： [0,100]
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListNotificationMaskResourcesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resources  通知屏蔽资源列表
-    * count  资源总数
+    * resources  **参数解释**： 通知屏蔽资源列表
+    * count  **参数解释**： 资源总数 **取值范围**： [0,100]
     *
     * @var string[]
     */
@@ -192,9 +192,9 @@ class ListNotificationMaskResourcesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets resources
-    *  通知屏蔽资源列表
+    *  **参数解释**： 通知屏蔽资源列表
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\Resource[]|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourceResp[]|null
     */
     public function getResources()
     {
@@ -204,7 +204,7 @@ class ListNotificationMaskResourcesResponse implements ModelInterface, ArrayAcce
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Resource[]|null $resources 通知屏蔽资源列表
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourceResp[]|null $resources **参数解释**： 通知屏蔽资源列表
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListNotificationMaskResourcesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets count
-    *  资源总数
+    *  **参数解释**： 资源总数 **取值范围**： [0,100]
     *
     * @return int|null
     */
@@ -228,7 +228,7 @@ class ListNotificationMaskResourcesResponse implements ModelInterface, ArrayAcce
     /**
     * Sets count
     *
-    * @param int|null $count 资源总数
+    * @param int|null $count **参数解释**： 资源总数 **取值范围**： [0,100]
     *
     * @return $this
     */

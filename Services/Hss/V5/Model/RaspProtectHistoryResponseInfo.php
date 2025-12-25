@@ -20,27 +20,27 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostName  主机名称
-    * privateIp  主机私有IP
-    * alarmTime  告警时间(ms)
-    * eventName  告警名称
-    * severity  告警级别
-    * reqSrcIp  源IP
-    * appStack  应用程序调用堆栈信息
-    * attackInputName  攻击附属字段
-    * attackInputValue  攻击负载内容
-    * queryString  查询字符串
-    * reqHeaders  web请求头信息
-    * reqMethod  WEB请求方法
-    * reqParams  WEB请求参数
-    * reqPath  WEB请求路径
-    * reqProtocol  WEB请求协议
-    * reqUrl  WEB请求URL地址
-    * attackTag  攻击标识
-    * chkProbe  探针标识
-    * chkRule  检测规则标识
-    * chkRuleDesc  规则描述
-    * existBug  应用是否存在bug
+    * hostName  **参数解释** 应用防护事件所属云服务器的名称，用于标识事件来源主机 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，符合华为云ECS命名规范
+    * privateIp  **参数解释** 应用防护事件所属云服务器的私有IP地址，用于定位事件来源主机的网络位置 **取值范围** 符合IPv4格式的字符串（如192.168.0.97），支持多个私有IP用逗号分隔
+    * alarmTime  **参数解释** 应用防护事件的发生时间，以Unix时间戳（毫秒级）表示 **时间格式** 可转换为YYYY-MM-DD HH:MM:SS格式（如1736414463000对应2024-12-10 10:41:03） **取值范围** Unix时间戳（毫秒级），取值0-为当前系统时间戳
+    * eventName  **参数解释** 应用防护事件的具体名称，标识事件对应的攻击类型（如ExpressionInject表示表达式注入攻击） **取值范围** 字符长度1-128位，支持英文、数字、下划线，为系统预定义的攻击类型标识
+    * severity  **参数解释** 应用防护事件的告警级别，用于筛选指定严重程度的事件 **约束限制** 取值必须在指定范围内，否则返回空结果 **取值范围** - Security：信息级 - Low：低危 - Medium：中危 - High：高危 - Critical：紧急 **默认取值** 无
+    * reqSrcIp  **参数解释** 发起攻击的源IP地址，可能是公网IP或内网IP，用于定位攻击来源 **取值范围** 符合IPv4或IPv6格式的字符串，支持单个IP或IP段（如127.0.0.1、2001:db8::1）
+    * appStack  **参数解释** 应用防护事件发生时的应用程序调用堆栈信息，用于定位漏洞触发点 **取值范围** 字符长度0-4096位，支持英文、数字、符号等堆栈信息常见字符，为空表示无堆栈数据
+    * attackInputName  **参数解释** 攻击请求中的附属字段名称（如请求头字段、表单字段等），用于标识攻击载荷的传入字段 **取值范围** 字符长度0-256位，支持英文、数字、符号等HTTP请求字段常见字符，为空表示无相关字段
+    * attackInputValue  **参数解释** 攻击请求中包含的恶意载荷数据（如注入脚本、恶意命令等），用于分析攻击手段 **取值范围** 字符长度0-2048位，支持各类字符（含特殊字符），为空表示无恶意载荷
+    * queryString  **参数解释** 攻击请求的URL查询字符串部分（即?后的参数），用于分析攻击请求的参数传递方式 **取值范围** 字符长度0-1024位，支持URL编码后的字符，为空表示无查询字符串
+    * reqHeaders  **参数解释** 攻击请求的HTTP请求头信息，以JSON格式存储，包含User-Agent、Host等字段 **取值范围** 字符长度0-4096位，为JSON格式字符串，字段名和值支持常见HTTP头字符，为空表示无请求头信息
+    * reqMethod  **参数解释** 攻击请求使用的HTTP方法（如GET、POST），用于分析攻击的请求类型 **取值范围** 字符长度3-10位，支持标准HTTP方法（GET、POST、PUT、DELETE等），区分大小写
+    * reqParams  **参数解释** 攻击请求的请求体参数（如POST请求的表单数据），用于分析攻击的参数传递内容 **取值范围** 字符长度0-2048位，支持表单编码或JSON格式字符，为空表示无请求体参数
+    * reqPath  **参数解释** 攻击请求的URL路径部分（不含查询字符串），用于定位攻击的目标接口 **取值范围** 字符长度0-512位，支持URL路径字符（如/、字母、数字、短横线、下划线），为空表示根路径
+    * reqProtocol  **参数解释** 攻击请求使用的HTTP协议版本（如HTTP/1.1），用于分析攻击的协议环境 **取值范围** 字符长度5-10位，支持HTTP/1.0、HTTP/1.1、HTTP/2等标准协议版本
+    * reqUrl  **参数解释** 攻击请求的完整URL地址（含协议、主机、路径、查询字符串），用于完整还原攻击请求 **取值范围** 字符长度0-1024位，符合URL格式规范，为空表示无完整URL信息
+    * attackTag  **参数解释** 应用防护事件的攻击类型标识，与请求参数的攻击标识对应（格式为小写下划线） **取值范围** - Attack Success：攻击成功 - Attack Attempt：攻击尝试 - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性
+    * chkProbe  **参数解释**: 检测到该攻击事件的RASP探针标识，用于定位探针类型和检测模块 **取值范围**: 字符长度1-128位，支持英文、数字、点号、短横线、下划线，为系统预定义的探针标识
+    * chkRule  **参数解释** 触发该防护事件的检测规则唯一标识，用于关联具体的防护规则配置 **取值范围** 字符长度1-64位，支持英文、数字、下划线，为系统预定义的规则标识（如ExpressionInject）
+    * chkRuleDesc  **参数解释** 触发该防护事件的检测规则详细描述，说明规则的检测逻辑和目的 **取值范围** 字符长度0-512位，支持中文、英文、数字、常用标点符号，为空表示无规则描述
+    * existBug  **参数解释** 标识该防护事件是否因应用存在漏洞导致（yes表示存在漏洞，no表示不存在） **取值范围** - yes：存在漏洞 - no：不存在漏洞 - unknown：未知
     *
     * @var string[]
     */
@@ -70,27 +70,27 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostName  主机名称
-    * privateIp  主机私有IP
-    * alarmTime  告警时间(ms)
-    * eventName  告警名称
-    * severity  告警级别
-    * reqSrcIp  源IP
-    * appStack  应用程序调用堆栈信息
-    * attackInputName  攻击附属字段
-    * attackInputValue  攻击负载内容
-    * queryString  查询字符串
-    * reqHeaders  web请求头信息
-    * reqMethod  WEB请求方法
-    * reqParams  WEB请求参数
-    * reqPath  WEB请求路径
-    * reqProtocol  WEB请求协议
-    * reqUrl  WEB请求URL地址
-    * attackTag  攻击标识
-    * chkProbe  探针标识
-    * chkRule  检测规则标识
-    * chkRuleDesc  规则描述
-    * existBug  应用是否存在bug
+    * hostName  **参数解释** 应用防护事件所属云服务器的名称，用于标识事件来源主机 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，符合华为云ECS命名规范
+    * privateIp  **参数解释** 应用防护事件所属云服务器的私有IP地址，用于定位事件来源主机的网络位置 **取值范围** 符合IPv4格式的字符串（如192.168.0.97），支持多个私有IP用逗号分隔
+    * alarmTime  **参数解释** 应用防护事件的发生时间，以Unix时间戳（毫秒级）表示 **时间格式** 可转换为YYYY-MM-DD HH:MM:SS格式（如1736414463000对应2024-12-10 10:41:03） **取值范围** Unix时间戳（毫秒级），取值0-为当前系统时间戳
+    * eventName  **参数解释** 应用防护事件的具体名称，标识事件对应的攻击类型（如ExpressionInject表示表达式注入攻击） **取值范围** 字符长度1-128位，支持英文、数字、下划线，为系统预定义的攻击类型标识
+    * severity  **参数解释** 应用防护事件的告警级别，用于筛选指定严重程度的事件 **约束限制** 取值必须在指定范围内，否则返回空结果 **取值范围** - Security：信息级 - Low：低危 - Medium：中危 - High：高危 - Critical：紧急 **默认取值** 无
+    * reqSrcIp  **参数解释** 发起攻击的源IP地址，可能是公网IP或内网IP，用于定位攻击来源 **取值范围** 符合IPv4或IPv6格式的字符串，支持单个IP或IP段（如127.0.0.1、2001:db8::1）
+    * appStack  **参数解释** 应用防护事件发生时的应用程序调用堆栈信息，用于定位漏洞触发点 **取值范围** 字符长度0-4096位，支持英文、数字、符号等堆栈信息常见字符，为空表示无堆栈数据
+    * attackInputName  **参数解释** 攻击请求中的附属字段名称（如请求头字段、表单字段等），用于标识攻击载荷的传入字段 **取值范围** 字符长度0-256位，支持英文、数字、符号等HTTP请求字段常见字符，为空表示无相关字段
+    * attackInputValue  **参数解释** 攻击请求中包含的恶意载荷数据（如注入脚本、恶意命令等），用于分析攻击手段 **取值范围** 字符长度0-2048位，支持各类字符（含特殊字符），为空表示无恶意载荷
+    * queryString  **参数解释** 攻击请求的URL查询字符串部分（即?后的参数），用于分析攻击请求的参数传递方式 **取值范围** 字符长度0-1024位，支持URL编码后的字符，为空表示无查询字符串
+    * reqHeaders  **参数解释** 攻击请求的HTTP请求头信息，以JSON格式存储，包含User-Agent、Host等字段 **取值范围** 字符长度0-4096位，为JSON格式字符串，字段名和值支持常见HTTP头字符，为空表示无请求头信息
+    * reqMethod  **参数解释** 攻击请求使用的HTTP方法（如GET、POST），用于分析攻击的请求类型 **取值范围** 字符长度3-10位，支持标准HTTP方法（GET、POST、PUT、DELETE等），区分大小写
+    * reqParams  **参数解释** 攻击请求的请求体参数（如POST请求的表单数据），用于分析攻击的参数传递内容 **取值范围** 字符长度0-2048位，支持表单编码或JSON格式字符，为空表示无请求体参数
+    * reqPath  **参数解释** 攻击请求的URL路径部分（不含查询字符串），用于定位攻击的目标接口 **取值范围** 字符长度0-512位，支持URL路径字符（如/、字母、数字、短横线、下划线），为空表示根路径
+    * reqProtocol  **参数解释** 攻击请求使用的HTTP协议版本（如HTTP/1.1），用于分析攻击的协议环境 **取值范围** 字符长度5-10位，支持HTTP/1.0、HTTP/1.1、HTTP/2等标准协议版本
+    * reqUrl  **参数解释** 攻击请求的完整URL地址（含协议、主机、路径、查询字符串），用于完整还原攻击请求 **取值范围** 字符长度0-1024位，符合URL格式规范，为空表示无完整URL信息
+    * attackTag  **参数解释** 应用防护事件的攻击类型标识，与请求参数的攻击标识对应（格式为小写下划线） **取值范围** - Attack Success：攻击成功 - Attack Attempt：攻击尝试 - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性
+    * chkProbe  **参数解释**: 检测到该攻击事件的RASP探针标识，用于定位探针类型和检测模块 **取值范围**: 字符长度1-128位，支持英文、数字、点号、短横线、下划线，为系统预定义的探针标识
+    * chkRule  **参数解释** 触发该防护事件的检测规则唯一标识，用于关联具体的防护规则配置 **取值范围** 字符长度1-64位，支持英文、数字、下划线，为系统预定义的规则标识（如ExpressionInject）
+    * chkRuleDesc  **参数解释** 触发该防护事件的检测规则详细描述，说明规则的检测逻辑和目的 **取值范围** 字符长度0-512位，支持中文、英文、数字、常用标点符号，为空表示无规则描述
+    * existBug  **参数解释** 标识该防护事件是否因应用存在漏洞导致（yes表示存在漏洞，no表示不存在） **取值范围** - yes：存在漏洞 - no：不存在漏洞 - unknown：未知
     *
     * @var string[]
     */
@@ -141,27 +141,27 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostName  主机名称
-    * privateIp  主机私有IP
-    * alarmTime  告警时间(ms)
-    * eventName  告警名称
-    * severity  告警级别
-    * reqSrcIp  源IP
-    * appStack  应用程序调用堆栈信息
-    * attackInputName  攻击附属字段
-    * attackInputValue  攻击负载内容
-    * queryString  查询字符串
-    * reqHeaders  web请求头信息
-    * reqMethod  WEB请求方法
-    * reqParams  WEB请求参数
-    * reqPath  WEB请求路径
-    * reqProtocol  WEB请求协议
-    * reqUrl  WEB请求URL地址
-    * attackTag  攻击标识
-    * chkProbe  探针标识
-    * chkRule  检测规则标识
-    * chkRuleDesc  规则描述
-    * existBug  应用是否存在bug
+    * hostName  **参数解释** 应用防护事件所属云服务器的名称，用于标识事件来源主机 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，符合华为云ECS命名规范
+    * privateIp  **参数解释** 应用防护事件所属云服务器的私有IP地址，用于定位事件来源主机的网络位置 **取值范围** 符合IPv4格式的字符串（如192.168.0.97），支持多个私有IP用逗号分隔
+    * alarmTime  **参数解释** 应用防护事件的发生时间，以Unix时间戳（毫秒级）表示 **时间格式** 可转换为YYYY-MM-DD HH:MM:SS格式（如1736414463000对应2024-12-10 10:41:03） **取值范围** Unix时间戳（毫秒级），取值0-为当前系统时间戳
+    * eventName  **参数解释** 应用防护事件的具体名称，标识事件对应的攻击类型（如ExpressionInject表示表达式注入攻击） **取值范围** 字符长度1-128位，支持英文、数字、下划线，为系统预定义的攻击类型标识
+    * severity  **参数解释** 应用防护事件的告警级别，用于筛选指定严重程度的事件 **约束限制** 取值必须在指定范围内，否则返回空结果 **取值范围** - Security：信息级 - Low：低危 - Medium：中危 - High：高危 - Critical：紧急 **默认取值** 无
+    * reqSrcIp  **参数解释** 发起攻击的源IP地址，可能是公网IP或内网IP，用于定位攻击来源 **取值范围** 符合IPv4或IPv6格式的字符串，支持单个IP或IP段（如127.0.0.1、2001:db8::1）
+    * appStack  **参数解释** 应用防护事件发生时的应用程序调用堆栈信息，用于定位漏洞触发点 **取值范围** 字符长度0-4096位，支持英文、数字、符号等堆栈信息常见字符，为空表示无堆栈数据
+    * attackInputName  **参数解释** 攻击请求中的附属字段名称（如请求头字段、表单字段等），用于标识攻击载荷的传入字段 **取值范围** 字符长度0-256位，支持英文、数字、符号等HTTP请求字段常见字符，为空表示无相关字段
+    * attackInputValue  **参数解释** 攻击请求中包含的恶意载荷数据（如注入脚本、恶意命令等），用于分析攻击手段 **取值范围** 字符长度0-2048位，支持各类字符（含特殊字符），为空表示无恶意载荷
+    * queryString  **参数解释** 攻击请求的URL查询字符串部分（即?后的参数），用于分析攻击请求的参数传递方式 **取值范围** 字符长度0-1024位，支持URL编码后的字符，为空表示无查询字符串
+    * reqHeaders  **参数解释** 攻击请求的HTTP请求头信息，以JSON格式存储，包含User-Agent、Host等字段 **取值范围** 字符长度0-4096位，为JSON格式字符串，字段名和值支持常见HTTP头字符，为空表示无请求头信息
+    * reqMethod  **参数解释** 攻击请求使用的HTTP方法（如GET、POST），用于分析攻击的请求类型 **取值范围** 字符长度3-10位，支持标准HTTP方法（GET、POST、PUT、DELETE等），区分大小写
+    * reqParams  **参数解释** 攻击请求的请求体参数（如POST请求的表单数据），用于分析攻击的参数传递内容 **取值范围** 字符长度0-2048位，支持表单编码或JSON格式字符，为空表示无请求体参数
+    * reqPath  **参数解释** 攻击请求的URL路径部分（不含查询字符串），用于定位攻击的目标接口 **取值范围** 字符长度0-512位，支持URL路径字符（如/、字母、数字、短横线、下划线），为空表示根路径
+    * reqProtocol  **参数解释** 攻击请求使用的HTTP协议版本（如HTTP/1.1），用于分析攻击的协议环境 **取值范围** 字符长度5-10位，支持HTTP/1.0、HTTP/1.1、HTTP/2等标准协议版本
+    * reqUrl  **参数解释** 攻击请求的完整URL地址（含协议、主机、路径、查询字符串），用于完整还原攻击请求 **取值范围** 字符长度0-1024位，符合URL格式规范，为空表示无完整URL信息
+    * attackTag  **参数解释** 应用防护事件的攻击类型标识，与请求参数的攻击标识对应（格式为小写下划线） **取值范围** - Attack Success：攻击成功 - Attack Attempt：攻击尝试 - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性
+    * chkProbe  **参数解释**: 检测到该攻击事件的RASP探针标识，用于定位探针类型和检测模块 **取值范围**: 字符长度1-128位，支持英文、数字、点号、短横线、下划线，为系统预定义的探针标识
+    * chkRule  **参数解释** 触发该防护事件的检测规则唯一标识，用于关联具体的防护规则配置 **取值范围** 字符长度1-64位，支持英文、数字、下划线，为系统预定义的规则标识（如ExpressionInject）
+    * chkRuleDesc  **参数解释** 触发该防护事件的检测规则详细描述，说明规则的检测逻辑和目的 **取值范围** 字符长度0-512位，支持中文、英文、数字、常用标点符号，为空表示无规则描述
+    * existBug  **参数解释** 标识该防护事件是否因应用存在漏洞导致（yes表示存在漏洞，no表示不存在） **取值范围** - yes：存在漏洞 - no：不存在漏洞 - unknown：未知
     *
     * @var string[]
     */
@@ -191,27 +191,27 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostName  主机名称
-    * privateIp  主机私有IP
-    * alarmTime  告警时间(ms)
-    * eventName  告警名称
-    * severity  告警级别
-    * reqSrcIp  源IP
-    * appStack  应用程序调用堆栈信息
-    * attackInputName  攻击附属字段
-    * attackInputValue  攻击负载内容
-    * queryString  查询字符串
-    * reqHeaders  web请求头信息
-    * reqMethod  WEB请求方法
-    * reqParams  WEB请求参数
-    * reqPath  WEB请求路径
-    * reqProtocol  WEB请求协议
-    * reqUrl  WEB请求URL地址
-    * attackTag  攻击标识
-    * chkProbe  探针标识
-    * chkRule  检测规则标识
-    * chkRuleDesc  规则描述
-    * existBug  应用是否存在bug
+    * hostName  **参数解释** 应用防护事件所属云服务器的名称，用于标识事件来源主机 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，符合华为云ECS命名规范
+    * privateIp  **参数解释** 应用防护事件所属云服务器的私有IP地址，用于定位事件来源主机的网络位置 **取值范围** 符合IPv4格式的字符串（如192.168.0.97），支持多个私有IP用逗号分隔
+    * alarmTime  **参数解释** 应用防护事件的发生时间，以Unix时间戳（毫秒级）表示 **时间格式** 可转换为YYYY-MM-DD HH:MM:SS格式（如1736414463000对应2024-12-10 10:41:03） **取值范围** Unix时间戳（毫秒级），取值0-为当前系统时间戳
+    * eventName  **参数解释** 应用防护事件的具体名称，标识事件对应的攻击类型（如ExpressionInject表示表达式注入攻击） **取值范围** 字符长度1-128位，支持英文、数字、下划线，为系统预定义的攻击类型标识
+    * severity  **参数解释** 应用防护事件的告警级别，用于筛选指定严重程度的事件 **约束限制** 取值必须在指定范围内，否则返回空结果 **取值范围** - Security：信息级 - Low：低危 - Medium：中危 - High：高危 - Critical：紧急 **默认取值** 无
+    * reqSrcIp  **参数解释** 发起攻击的源IP地址，可能是公网IP或内网IP，用于定位攻击来源 **取值范围** 符合IPv4或IPv6格式的字符串，支持单个IP或IP段（如127.0.0.1、2001:db8::1）
+    * appStack  **参数解释** 应用防护事件发生时的应用程序调用堆栈信息，用于定位漏洞触发点 **取值范围** 字符长度0-4096位，支持英文、数字、符号等堆栈信息常见字符，为空表示无堆栈数据
+    * attackInputName  **参数解释** 攻击请求中的附属字段名称（如请求头字段、表单字段等），用于标识攻击载荷的传入字段 **取值范围** 字符长度0-256位，支持英文、数字、符号等HTTP请求字段常见字符，为空表示无相关字段
+    * attackInputValue  **参数解释** 攻击请求中包含的恶意载荷数据（如注入脚本、恶意命令等），用于分析攻击手段 **取值范围** 字符长度0-2048位，支持各类字符（含特殊字符），为空表示无恶意载荷
+    * queryString  **参数解释** 攻击请求的URL查询字符串部分（即?后的参数），用于分析攻击请求的参数传递方式 **取值范围** 字符长度0-1024位，支持URL编码后的字符，为空表示无查询字符串
+    * reqHeaders  **参数解释** 攻击请求的HTTP请求头信息，以JSON格式存储，包含User-Agent、Host等字段 **取值范围** 字符长度0-4096位，为JSON格式字符串，字段名和值支持常见HTTP头字符，为空表示无请求头信息
+    * reqMethod  **参数解释** 攻击请求使用的HTTP方法（如GET、POST），用于分析攻击的请求类型 **取值范围** 字符长度3-10位，支持标准HTTP方法（GET、POST、PUT、DELETE等），区分大小写
+    * reqParams  **参数解释** 攻击请求的请求体参数（如POST请求的表单数据），用于分析攻击的参数传递内容 **取值范围** 字符长度0-2048位，支持表单编码或JSON格式字符，为空表示无请求体参数
+    * reqPath  **参数解释** 攻击请求的URL路径部分（不含查询字符串），用于定位攻击的目标接口 **取值范围** 字符长度0-512位，支持URL路径字符（如/、字母、数字、短横线、下划线），为空表示根路径
+    * reqProtocol  **参数解释** 攻击请求使用的HTTP协议版本（如HTTP/1.1），用于分析攻击的协议环境 **取值范围** 字符长度5-10位，支持HTTP/1.0、HTTP/1.1、HTTP/2等标准协议版本
+    * reqUrl  **参数解释** 攻击请求的完整URL地址（含协议、主机、路径、查询字符串），用于完整还原攻击请求 **取值范围** 字符长度0-1024位，符合URL格式规范，为空表示无完整URL信息
+    * attackTag  **参数解释** 应用防护事件的攻击类型标识，与请求参数的攻击标识对应（格式为小写下划线） **取值范围** - Attack Success：攻击成功 - Attack Attempt：攻击尝试 - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性
+    * chkProbe  **参数解释**: 检测到该攻击事件的RASP探针标识，用于定位探针类型和检测模块 **取值范围**: 字符长度1-128位，支持英文、数字、点号、短横线、下划线，为系统预定义的探针标识
+    * chkRule  **参数解释** 触发该防护事件的检测规则唯一标识，用于关联具体的防护规则配置 **取值范围** 字符长度1-64位，支持英文、数字、下划线，为系统预定义的规则标识（如ExpressionInject）
+    * chkRuleDesc  **参数解释** 触发该防护事件的检测规则详细描述，说明规则的检测逻辑和目的 **取值范围** 字符长度0-512位，支持中文、英文、数字、常用标点符号，为空表示无规则描述
+    * existBug  **参数解释** 标识该防护事件是否因应用存在漏洞导致（yes表示存在漏洞，no表示不存在） **取值范围** - yes：存在漏洞 - no：不存在漏洞 - unknown：未知
     *
     * @var string[]
     */
@@ -241,27 +241,27 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostName  主机名称
-    * privateIp  主机私有IP
-    * alarmTime  告警时间(ms)
-    * eventName  告警名称
-    * severity  告警级别
-    * reqSrcIp  源IP
-    * appStack  应用程序调用堆栈信息
-    * attackInputName  攻击附属字段
-    * attackInputValue  攻击负载内容
-    * queryString  查询字符串
-    * reqHeaders  web请求头信息
-    * reqMethod  WEB请求方法
-    * reqParams  WEB请求参数
-    * reqPath  WEB请求路径
-    * reqProtocol  WEB请求协议
-    * reqUrl  WEB请求URL地址
-    * attackTag  攻击标识
-    * chkProbe  探针标识
-    * chkRule  检测规则标识
-    * chkRuleDesc  规则描述
-    * existBug  应用是否存在bug
+    * hostName  **参数解释** 应用防护事件所属云服务器的名称，用于标识事件来源主机 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，符合华为云ECS命名规范
+    * privateIp  **参数解释** 应用防护事件所属云服务器的私有IP地址，用于定位事件来源主机的网络位置 **取值范围** 符合IPv4格式的字符串（如192.168.0.97），支持多个私有IP用逗号分隔
+    * alarmTime  **参数解释** 应用防护事件的发生时间，以Unix时间戳（毫秒级）表示 **时间格式** 可转换为YYYY-MM-DD HH:MM:SS格式（如1736414463000对应2024-12-10 10:41:03） **取值范围** Unix时间戳（毫秒级），取值0-为当前系统时间戳
+    * eventName  **参数解释** 应用防护事件的具体名称，标识事件对应的攻击类型（如ExpressionInject表示表达式注入攻击） **取值范围** 字符长度1-128位，支持英文、数字、下划线，为系统预定义的攻击类型标识
+    * severity  **参数解释** 应用防护事件的告警级别，用于筛选指定严重程度的事件 **约束限制** 取值必须在指定范围内，否则返回空结果 **取值范围** - Security：信息级 - Low：低危 - Medium：中危 - High：高危 - Critical：紧急 **默认取值** 无
+    * reqSrcIp  **参数解释** 发起攻击的源IP地址，可能是公网IP或内网IP，用于定位攻击来源 **取值范围** 符合IPv4或IPv6格式的字符串，支持单个IP或IP段（如127.0.0.1、2001:db8::1）
+    * appStack  **参数解释** 应用防护事件发生时的应用程序调用堆栈信息，用于定位漏洞触发点 **取值范围** 字符长度0-4096位，支持英文、数字、符号等堆栈信息常见字符，为空表示无堆栈数据
+    * attackInputName  **参数解释** 攻击请求中的附属字段名称（如请求头字段、表单字段等），用于标识攻击载荷的传入字段 **取值范围** 字符长度0-256位，支持英文、数字、符号等HTTP请求字段常见字符，为空表示无相关字段
+    * attackInputValue  **参数解释** 攻击请求中包含的恶意载荷数据（如注入脚本、恶意命令等），用于分析攻击手段 **取值范围** 字符长度0-2048位，支持各类字符（含特殊字符），为空表示无恶意载荷
+    * queryString  **参数解释** 攻击请求的URL查询字符串部分（即?后的参数），用于分析攻击请求的参数传递方式 **取值范围** 字符长度0-1024位，支持URL编码后的字符，为空表示无查询字符串
+    * reqHeaders  **参数解释** 攻击请求的HTTP请求头信息，以JSON格式存储，包含User-Agent、Host等字段 **取值范围** 字符长度0-4096位，为JSON格式字符串，字段名和值支持常见HTTP头字符，为空表示无请求头信息
+    * reqMethod  **参数解释** 攻击请求使用的HTTP方法（如GET、POST），用于分析攻击的请求类型 **取值范围** 字符长度3-10位，支持标准HTTP方法（GET、POST、PUT、DELETE等），区分大小写
+    * reqParams  **参数解释** 攻击请求的请求体参数（如POST请求的表单数据），用于分析攻击的参数传递内容 **取值范围** 字符长度0-2048位，支持表单编码或JSON格式字符，为空表示无请求体参数
+    * reqPath  **参数解释** 攻击请求的URL路径部分（不含查询字符串），用于定位攻击的目标接口 **取值范围** 字符长度0-512位，支持URL路径字符（如/、字母、数字、短横线、下划线），为空表示根路径
+    * reqProtocol  **参数解释** 攻击请求使用的HTTP协议版本（如HTTP/1.1），用于分析攻击的协议环境 **取值范围** 字符长度5-10位，支持HTTP/1.0、HTTP/1.1、HTTP/2等标准协议版本
+    * reqUrl  **参数解释** 攻击请求的完整URL地址（含协议、主机、路径、查询字符串），用于完整还原攻击请求 **取值范围** 字符长度0-1024位，符合URL格式规范，为空表示无完整URL信息
+    * attackTag  **参数解释** 应用防护事件的攻击类型标识，与请求参数的攻击标识对应（格式为小写下划线） **取值范围** - Attack Success：攻击成功 - Attack Attempt：攻击尝试 - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性
+    * chkProbe  **参数解释**: 检测到该攻击事件的RASP探针标识，用于定位探针类型和检测模块 **取值范围**: 字符长度1-128位，支持英文、数字、点号、短横线、下划线，为系统预定义的探针标识
+    * chkRule  **参数解释** 触发该防护事件的检测规则唯一标识，用于关联具体的防护规则配置 **取值范围** 字符长度1-64位，支持英文、数字、下划线，为系统预定义的规则标识（如ExpressionInject）
+    * chkRuleDesc  **参数解释** 触发该防护事件的检测规则详细描述，说明规则的检测逻辑和目的 **取值范围** 字符长度0-512位，支持中文、英文、数字、常用标点符号，为空表示无规则描述
+    * existBug  **参数解释** 标识该防护事件是否因应用存在漏洞导致（yes表示存在漏洞，no表示不存在） **取值范围** - yes：存在漏洞 - no：不存在漏洞 - unknown：未知
     *
     * @var string[]
     */
@@ -520,7 +520,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  主机名称
+    *  **参数解释** 应用防护事件所属云服务器的名称，用于标识事件来源主机 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，符合华为云ECS命名规范
     *
     * @return string|null
     */
@@ -532,7 +532,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 主机名称
+    * @param string|null $hostName **参数解释** 应用防护事件所属云服务器的名称，用于标识事件来源主机 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，符合华为云ECS命名规范
     *
     * @return $this
     */
@@ -544,7 +544,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  主机私有IP
+    *  **参数解释** 应用防护事件所属云服务器的私有IP地址，用于定位事件来源主机的网络位置 **取值范围** 符合IPv4格式的字符串（如192.168.0.97），支持多个私有IP用逗号分隔
     *
     * @return string|null
     */
@@ -556,7 +556,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string|null $privateIp 主机私有IP
+    * @param string|null $privateIp **参数解释** 应用防护事件所属云服务器的私有IP地址，用于定位事件来源主机的网络位置 **取值范围** 符合IPv4格式的字符串（如192.168.0.97），支持多个私有IP用逗号分隔
     *
     * @return $this
     */
@@ -568,7 +568,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmTime
-    *  告警时间(ms)
+    *  **参数解释** 应用防护事件的发生时间，以Unix时间戳（毫秒级）表示 **时间格式** 可转换为YYYY-MM-DD HH:MM:SS格式（如1736414463000对应2024-12-10 10:41:03） **取值范围** Unix时间戳（毫秒级），取值0-为当前系统时间戳
     *
     * @return int|null
     */
@@ -580,7 +580,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets alarmTime
     *
-    * @param int|null $alarmTime 告警时间(ms)
+    * @param int|null $alarmTime **参数解释** 应用防护事件的发生时间，以Unix时间戳（毫秒级）表示 **时间格式** 可转换为YYYY-MM-DD HH:MM:SS格式（如1736414463000对应2024-12-10 10:41:03） **取值范围** Unix时间戳（毫秒级），取值0-为当前系统时间戳
     *
     * @return $this
     */
@@ -592,7 +592,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventName
-    *  告警名称
+    *  **参数解释** 应用防护事件的具体名称，标识事件对应的攻击类型（如ExpressionInject表示表达式注入攻击） **取值范围** 字符长度1-128位，支持英文、数字、下划线，为系统预定义的攻击类型标识
     *
     * @return string|null
     */
@@ -604,7 +604,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets eventName
     *
-    * @param string|null $eventName 告警名称
+    * @param string|null $eventName **参数解释** 应用防护事件的具体名称，标识事件对应的攻击类型（如ExpressionInject表示表达式注入攻击） **取值范围** 字符长度1-128位，支持英文、数字、下划线，为系统预定义的攻击类型标识
     *
     * @return $this
     */
@@ -616,7 +616,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  告警级别
+    *  **参数解释** 应用防护事件的告警级别，用于筛选指定严重程度的事件 **约束限制** 取值必须在指定范围内，否则返回空结果 **取值范围** - Security：信息级 - Low：低危 - Medium：中危 - High：高危 - Critical：紧急 **默认取值** 无
     *
     * @return string|null
     */
@@ -628,7 +628,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param string|null $severity 告警级别
+    * @param string|null $severity **参数解释** 应用防护事件的告警级别，用于筛选指定严重程度的事件 **约束限制** 取值必须在指定范围内，否则返回空结果 **取值范围** - Security：信息级 - Low：低危 - Medium：中危 - High：高危 - Critical：紧急 **默认取值** 无
     *
     * @return $this
     */
@@ -640,7 +640,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets reqSrcIp
-    *  源IP
+    *  **参数解释** 发起攻击的源IP地址，可能是公网IP或内网IP，用于定位攻击来源 **取值范围** 符合IPv4或IPv6格式的字符串，支持单个IP或IP段（如127.0.0.1、2001:db8::1）
     *
     * @return string|null
     */
@@ -652,7 +652,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets reqSrcIp
     *
-    * @param string|null $reqSrcIp 源IP
+    * @param string|null $reqSrcIp **参数解释** 发起攻击的源IP地址，可能是公网IP或内网IP，用于定位攻击来源 **取值范围** 符合IPv4或IPv6格式的字符串，支持单个IP或IP段（如127.0.0.1、2001:db8::1）
     *
     * @return $this
     */
@@ -664,7 +664,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets appStack
-    *  应用程序调用堆栈信息
+    *  **参数解释** 应用防护事件发生时的应用程序调用堆栈信息，用于定位漏洞触发点 **取值范围** 字符长度0-4096位，支持英文、数字、符号等堆栈信息常见字符，为空表示无堆栈数据
     *
     * @return string|null
     */
@@ -676,7 +676,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets appStack
     *
-    * @param string|null $appStack 应用程序调用堆栈信息
+    * @param string|null $appStack **参数解释** 应用防护事件发生时的应用程序调用堆栈信息，用于定位漏洞触发点 **取值范围** 字符长度0-4096位，支持英文、数字、符号等堆栈信息常见字符，为空表示无堆栈数据
     *
     * @return $this
     */
@@ -688,7 +688,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets attackInputName
-    *  攻击附属字段
+    *  **参数解释** 攻击请求中的附属字段名称（如请求头字段、表单字段等），用于标识攻击载荷的传入字段 **取值范围** 字符长度0-256位，支持英文、数字、符号等HTTP请求字段常见字符，为空表示无相关字段
     *
     * @return string|null
     */
@@ -700,7 +700,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets attackInputName
     *
-    * @param string|null $attackInputName 攻击附属字段
+    * @param string|null $attackInputName **参数解释** 攻击请求中的附属字段名称（如请求头字段、表单字段等），用于标识攻击载荷的传入字段 **取值范围** 字符长度0-256位，支持英文、数字、符号等HTTP请求字段常见字符，为空表示无相关字段
     *
     * @return $this
     */
@@ -712,7 +712,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets attackInputValue
-    *  攻击负载内容
+    *  **参数解释** 攻击请求中包含的恶意载荷数据（如注入脚本、恶意命令等），用于分析攻击手段 **取值范围** 字符长度0-2048位，支持各类字符（含特殊字符），为空表示无恶意载荷
     *
     * @return string|null
     */
@@ -724,7 +724,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets attackInputValue
     *
-    * @param string|null $attackInputValue 攻击负载内容
+    * @param string|null $attackInputValue **参数解释** 攻击请求中包含的恶意载荷数据（如注入脚本、恶意命令等），用于分析攻击手段 **取值范围** 字符长度0-2048位，支持各类字符（含特殊字符），为空表示无恶意载荷
     *
     * @return $this
     */
@@ -736,7 +736,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets queryString
-    *  查询字符串
+    *  **参数解释** 攻击请求的URL查询字符串部分（即?后的参数），用于分析攻击请求的参数传递方式 **取值范围** 字符长度0-1024位，支持URL编码后的字符，为空表示无查询字符串
     *
     * @return string|null
     */
@@ -748,7 +748,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets queryString
     *
-    * @param string|null $queryString 查询字符串
+    * @param string|null $queryString **参数解释** 攻击请求的URL查询字符串部分（即?后的参数），用于分析攻击请求的参数传递方式 **取值范围** 字符长度0-1024位，支持URL编码后的字符，为空表示无查询字符串
     *
     * @return $this
     */
@@ -760,7 +760,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets reqHeaders
-    *  web请求头信息
+    *  **参数解释** 攻击请求的HTTP请求头信息，以JSON格式存储，包含User-Agent、Host等字段 **取值范围** 字符长度0-4096位，为JSON格式字符串，字段名和值支持常见HTTP头字符，为空表示无请求头信息
     *
     * @return string|null
     */
@@ -772,7 +772,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets reqHeaders
     *
-    * @param string|null $reqHeaders web请求头信息
+    * @param string|null $reqHeaders **参数解释** 攻击请求的HTTP请求头信息，以JSON格式存储，包含User-Agent、Host等字段 **取值范围** 字符长度0-4096位，为JSON格式字符串，字段名和值支持常见HTTP头字符，为空表示无请求头信息
     *
     * @return $this
     */
@@ -784,7 +784,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets reqMethod
-    *  WEB请求方法
+    *  **参数解释** 攻击请求使用的HTTP方法（如GET、POST），用于分析攻击的请求类型 **取值范围** 字符长度3-10位，支持标准HTTP方法（GET、POST、PUT、DELETE等），区分大小写
     *
     * @return string|null
     */
@@ -796,7 +796,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets reqMethod
     *
-    * @param string|null $reqMethod WEB请求方法
+    * @param string|null $reqMethod **参数解释** 攻击请求使用的HTTP方法（如GET、POST），用于分析攻击的请求类型 **取值范围** 字符长度3-10位，支持标准HTTP方法（GET、POST、PUT、DELETE等），区分大小写
     *
     * @return $this
     */
@@ -808,7 +808,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets reqParams
-    *  WEB请求参数
+    *  **参数解释** 攻击请求的请求体参数（如POST请求的表单数据），用于分析攻击的参数传递内容 **取值范围** 字符长度0-2048位，支持表单编码或JSON格式字符，为空表示无请求体参数
     *
     * @return string|null
     */
@@ -820,7 +820,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets reqParams
     *
-    * @param string|null $reqParams WEB请求参数
+    * @param string|null $reqParams **参数解释** 攻击请求的请求体参数（如POST请求的表单数据），用于分析攻击的参数传递内容 **取值范围** 字符长度0-2048位，支持表单编码或JSON格式字符，为空表示无请求体参数
     *
     * @return $this
     */
@@ -832,7 +832,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets reqPath
-    *  WEB请求路径
+    *  **参数解释** 攻击请求的URL路径部分（不含查询字符串），用于定位攻击的目标接口 **取值范围** 字符长度0-512位，支持URL路径字符（如/、字母、数字、短横线、下划线），为空表示根路径
     *
     * @return string|null
     */
@@ -844,7 +844,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets reqPath
     *
-    * @param string|null $reqPath WEB请求路径
+    * @param string|null $reqPath **参数解释** 攻击请求的URL路径部分（不含查询字符串），用于定位攻击的目标接口 **取值范围** 字符长度0-512位，支持URL路径字符（如/、字母、数字、短横线、下划线），为空表示根路径
     *
     * @return $this
     */
@@ -856,7 +856,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets reqProtocol
-    *  WEB请求协议
+    *  **参数解释** 攻击请求使用的HTTP协议版本（如HTTP/1.1），用于分析攻击的协议环境 **取值范围** 字符长度5-10位，支持HTTP/1.0、HTTP/1.1、HTTP/2等标准协议版本
     *
     * @return string|null
     */
@@ -868,7 +868,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets reqProtocol
     *
-    * @param string|null $reqProtocol WEB请求协议
+    * @param string|null $reqProtocol **参数解释** 攻击请求使用的HTTP协议版本（如HTTP/1.1），用于分析攻击的协议环境 **取值范围** 字符长度5-10位，支持HTTP/1.0、HTTP/1.1、HTTP/2等标准协议版本
     *
     * @return $this
     */
@@ -880,7 +880,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets reqUrl
-    *  WEB请求URL地址
+    *  **参数解释** 攻击请求的完整URL地址（含协议、主机、路径、查询字符串），用于完整还原攻击请求 **取值范围** 字符长度0-1024位，符合URL格式规范，为空表示无完整URL信息
     *
     * @return string|null
     */
@@ -892,7 +892,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets reqUrl
     *
-    * @param string|null $reqUrl WEB请求URL地址
+    * @param string|null $reqUrl **参数解释** 攻击请求的完整URL地址（含协议、主机、路径、查询字符串），用于完整还原攻击请求 **取值范围** 字符长度0-1024位，符合URL格式规范，为空表示无完整URL信息
     *
     * @return $this
     */
@@ -904,7 +904,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets attackTag
-    *  攻击标识
+    *  **参数解释** 应用防护事件的攻击类型标识，与请求参数的攻击标识对应（格式为小写下划线） **取值范围** - Attack Success：攻击成功 - Attack Attempt：攻击尝试 - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性
     *
     * @return string|null
     */
@@ -916,7 +916,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets attackTag
     *
-    * @param string|null $attackTag 攻击标识
+    * @param string|null $attackTag **参数解释** 应用防护事件的攻击类型标识，与请求参数的攻击标识对应（格式为小写下划线） **取值范围** - Attack Success：攻击成功 - Attack Attempt：攻击尝试 - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性
     *
     * @return $this
     */
@@ -928,7 +928,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets chkProbe
-    *  探针标识
+    *  **参数解释**: 检测到该攻击事件的RASP探针标识，用于定位探针类型和检测模块 **取值范围**: 字符长度1-128位，支持英文、数字、点号、短横线、下划线，为系统预定义的探针标识
     *
     * @return string|null
     */
@@ -940,7 +940,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets chkProbe
     *
-    * @param string|null $chkProbe 探针标识
+    * @param string|null $chkProbe **参数解释**: 检测到该攻击事件的RASP探针标识，用于定位探针类型和检测模块 **取值范围**: 字符长度1-128位，支持英文、数字、点号、短横线、下划线，为系统预定义的探针标识
     *
     * @return $this
     */
@@ -952,7 +952,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets chkRule
-    *  检测规则标识
+    *  **参数解释** 触发该防护事件的检测规则唯一标识，用于关联具体的防护规则配置 **取值范围** 字符长度1-64位，支持英文、数字、下划线，为系统预定义的规则标识（如ExpressionInject）
     *
     * @return string|null
     */
@@ -964,7 +964,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets chkRule
     *
-    * @param string|null $chkRule 检测规则标识
+    * @param string|null $chkRule **参数解释** 触发该防护事件的检测规则唯一标识，用于关联具体的防护规则配置 **取值范围** 字符长度1-64位，支持英文、数字、下划线，为系统预定义的规则标识（如ExpressionInject）
     *
     * @return $this
     */
@@ -976,7 +976,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets chkRuleDesc
-    *  规则描述
+    *  **参数解释** 触发该防护事件的检测规则详细描述，说明规则的检测逻辑和目的 **取值范围** 字符长度0-512位，支持中文、英文、数字、常用标点符号，为空表示无规则描述
     *
     * @return string|null
     */
@@ -988,7 +988,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets chkRuleDesc
     *
-    * @param string|null $chkRuleDesc 规则描述
+    * @param string|null $chkRuleDesc **参数解释** 触发该防护事件的检测规则详细描述，说明规则的检测逻辑和目的 **取值范围** 字符长度0-512位，支持中文、英文、数字、常用标点符号，为空表示无规则描述
     *
     * @return $this
     */
@@ -1000,7 +1000,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets existBug
-    *  应用是否存在bug
+    *  **参数解释** 标识该防护事件是否因应用存在漏洞导致（yes表示存在漏洞，no表示不存在） **取值范围** - yes：存在漏洞 - no：不存在漏洞 - unknown：未知
     *
     * @return string|null
     */
@@ -1012,7 +1012,7 @@ class RaspProtectHistoryResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets existBug
     *
-    * @param string|null $existBug 应用是否存在bug
+    * @param string|null $existBug **参数解释** 标识该防护事件是否因应用存在漏洞导致（yes表示存在漏洞，no表示不存在） **取值范围** - yes：存在漏洞 - no：不存在漏洞 - unknown：未知
     *
     * @return $this
     */

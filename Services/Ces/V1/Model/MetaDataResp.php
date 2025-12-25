@@ -22,7 +22,7 @@ class MetaDataResp implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * count  **参数解释**： 当前返回结果条数。 **取值范围**: 0 - 2147483647
     * total  **参数解释**： 结果总条数。 **取值范围**： 0 - 2147483647
-    * marker  **参数解释**： 下一个开始的标记，用于分页。如本次查询10条数据，第十条为alarm_id为1441967036681YkazZ0deN，下次start配置为al1441967036681YkazZ0deN可从该alarm_id开始查询。 **取值范围**： 1 - 9999
+    * marker  **参数解释**： 下一个开始的标记，用于分页。如本次查询10条数据，第十条alarm_id为al1441967036681YkazZ0deN，下次start配置为al1441967036681YkazZ0deN可从该alarm_id开始查询。 **取值范围**： 1 - 9999
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class MetaDataResp implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * count  **参数解释**： 当前返回结果条数。 **取值范围**: 0 - 2147483647
     * total  **参数解释**： 结果总条数。 **取值范围**： 0 - 2147483647
-    * marker  **参数解释**： 下一个开始的标记，用于分页。如本次查询10条数据，第十条为alarm_id为1441967036681YkazZ0deN，下次start配置为al1441967036681YkazZ0deN可从该alarm_id开始查询。 **取值范围**： 1 - 9999
+    * marker  **参数解释**： 下一个开始的标记，用于分页。如本次查询10条数据，第十条alarm_id为al1441967036681YkazZ0deN，下次start配置为al1441967036681YkazZ0deN可从该alarm_id开始查询。 **取值范围**： 1 - 9999
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class MetaDataResp implements ModelInterface, ArrayAccess
     * and the value is the original name
     * count  **参数解释**： 当前返回结果条数。 **取值范围**: 0 - 2147483647
     * total  **参数解释**： 结果总条数。 **取值范围**： 0 - 2147483647
-    * marker  **参数解释**： 下一个开始的标记，用于分页。如本次查询10条数据，第十条为alarm_id为1441967036681YkazZ0deN，下次start配置为al1441967036681YkazZ0deN可从该alarm_id开始查询。 **取值范围**： 1 - 9999
+    * marker  **参数解释**： 下一个开始的标记，用于分页。如本次查询10条数据，第十条alarm_id为al1441967036681YkazZ0deN，下次start配置为al1441967036681YkazZ0deN可从该alarm_id开始查询。 **取值范围**： 1 - 9999
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class MetaDataResp implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * count  **参数解释**： 当前返回结果条数。 **取值范围**: 0 - 2147483647
     * total  **参数解释**： 结果总条数。 **取值范围**： 0 - 2147483647
-    * marker  **参数解释**： 下一个开始的标记，用于分页。如本次查询10条数据，第十条为alarm_id为1441967036681YkazZ0deN，下次start配置为al1441967036681YkazZ0deN可从该alarm_id开始查询。 **取值范围**： 1 - 9999
+    * marker  **参数解释**： 下一个开始的标记，用于分页。如本次查询10条数据，第十条alarm_id为al1441967036681YkazZ0deN，下次start配置为al1441967036681YkazZ0deN可从该alarm_id开始查询。 **取值范围**： 1 - 9999
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class MetaDataResp implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * count  **参数解释**： 当前返回结果条数。 **取值范围**: 0 - 2147483647
     * total  **参数解释**： 结果总条数。 **取值范围**： 0 - 2147483647
-    * marker  **参数解释**： 下一个开始的标记，用于分页。如本次查询10条数据，第十条为alarm_id为1441967036681YkazZ0deN，下次start配置为al1441967036681YkazZ0deN可从该alarm_id开始查询。 **取值范围**： 1 - 9999
+    * marker  **参数解释**： 下一个开始的标记，用于分页。如本次查询10条数据，第十条alarm_id为al1441967036681YkazZ0deN，下次start配置为al1441967036681YkazZ0deN可从该alarm_id开始查询。 **取值范围**： 1 - 9999
     *
     * @var string[]
     */
@@ -262,7 +262,7 @@ class MetaDataResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
-    *  **参数解释**： 下一个开始的标记，用于分页。如本次查询10条数据，第十条为alarm_id为1441967036681YkazZ0deN，下次start配置为al1441967036681YkazZ0deN可从该alarm_id开始查询。 **取值范围**： 1 - 9999
+    *  **参数解释**： 下一个开始的标记，用于分页。如本次查询10条数据，第十条alarm_id为al1441967036681YkazZ0deN，下次start配置为al1441967036681YkazZ0deN可从该alarm_id开始查询。 **取值范围**： 1 - 9999
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class MetaDataResp implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker **参数解释**： 下一个开始的标记，用于分页。如本次查询10条数据，第十条为alarm_id为1441967036681YkazZ0deN，下次start配置为al1441967036681YkazZ0deN可从该alarm_id开始查询。 **取值范围**： 1 - 9999
+    * @param string|null $marker **参数解释**： 下一个开始的标记，用于分页。如本次查询10条数据，第十条alarm_id为al1441967036681YkazZ0deN，下次start配置为al1441967036681YkazZ0deN可从该alarm_id开始查询。 **取值范围**： 1 - 9999
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class ListResourceGroupsServicesResourcesResponse implements ModelInterface, Arr
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  资源总数
+    * count  **参数解释** 资源总数。 **取值范围** 0-10000
     * resources  资源分组资源列表
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ListResourceGroupsServicesResourcesResponse implements ModelInterface, Arr
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  资源总数
+    * count  **参数解释** 资源总数。 **取值范围** 0-10000
     * resources  资源分组资源列表
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListResourceGroupsServicesResourcesResponse implements ModelInterface, Arr
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  资源总数
+    * count  **参数解释** 资源总数。 **取值范围** 0-10000
     * resources  资源分组资源列表
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListResourceGroupsServicesResourcesResponse implements ModelInterface, Arr
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  资源总数
+    * count  **参数解释** 资源总数。 **取值范围** 0-10000
     * resources  资源分组资源列表
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListResourceGroupsServicesResourcesResponse implements ModelInterface, Arr
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  资源总数
+    * count  **参数解释** 资源总数。 **取值范围** 0-10000
     * resources  资源分组资源列表
     *
     * @var string[]
@@ -192,7 +192,7 @@ class ListResourceGroupsServicesResourcesResponse implements ModelInterface, Arr
 
     /**
     * Gets count
-    *  资源总数
+    *  **参数解释** 资源总数。 **取值范围** 0-10000
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListResourceGroupsServicesResourcesResponse implements ModelInterface, Arr
     /**
     * Sets count
     *
-    * @param int|null $count 资源总数
+    * @param int|null $count **参数解释** 资源总数。 **取值范围** 0-10000
     *
     * @return $this
     */

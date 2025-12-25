@@ -35,7 +35,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     * validUntil  **参数解释**： 角色过期时间。 **取值范围**： 不涉及。
     * lock  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
     * desc  **参数解释**： 描述。 **取值范围**： 不涉及。
-    * userType  **参数解释**： 用户类型。 **取值范围**： 不涉及。
+    * userType  **参数解释**： 用户类型。 **取值范围**： - COMMON：公共。
     * logicalCluster  **参数解释**： description: 所属逻辑集群。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -75,7 +75,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     * validUntil  **参数解释**： 角色过期时间。 **取值范围**： 不涉及。
     * lock  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
     * desc  **参数解释**： 描述。 **取值范围**： 不涉及。
-    * userType  **参数解释**： 用户类型。 **取值范围**： 不涉及。
+    * userType  **参数解释**： 用户类型。 **取值范围**： - COMMON：公共。
     * logicalCluster  **参数解释**： description: 所属逻辑集群。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -136,7 +136,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     * validUntil  **参数解释**： 角色过期时间。 **取值范围**： 不涉及。
     * lock  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
     * desc  **参数解释**： 描述。 **取值范围**： 不涉及。
-    * userType  **参数解释**： 用户类型。 **取值范围**： 不涉及。
+    * userType  **参数解释**： 用户类型。 **取值范围**： - COMMON：公共。
     * logicalCluster  **参数解释**： description: 所属逻辑集群。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -176,7 +176,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     * validUntil  **参数解释**： 角色过期时间。 **取值范围**： 不涉及。
     * lock  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
     * desc  **参数解释**： 描述。 **取值范围**： 不涉及。
-    * userType  **参数解释**： 用户类型。 **取值范围**： 不涉及。
+    * userType  **参数解释**： 用户类型。 **取值范围**： - COMMON：公共。
     * logicalCluster  **参数解释**： description: 所属逻辑集群。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -216,7 +216,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     * validUntil  **参数解释**： 角色过期时间。 **取值范围**： 不涉及。
     * lock  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
     * desc  **参数解释**： 描述。 **取值范围**： 不涉及。
-    * userType  **参数解释**： 用户类型。 **取值范围**： 不涉及。
+    * userType  **参数解释**： 用户类型。 **取值范围**： - COMMON：公共。
     * logicalCluster  **参数解释**： description: 所属逻辑集群。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -676,7 +676,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets userType
-    *  **参数解释**： 用户类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 用户类型。 **取值范围**： - COMMON：公共。
     *
     * @return string|null
     */
@@ -688,7 +688,7 @@ class ShowDatabaseUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets userType
     *
-    * @param string|null $userType **参数解释**： 用户类型。 **取值范围**： 不涉及。
+    * @param string|null $userType **参数解释**： 用户类型。 **取值范围**： - COMMON：公共。
     *
     * @return $this
     */

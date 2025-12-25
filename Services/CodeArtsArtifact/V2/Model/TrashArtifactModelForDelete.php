@@ -21,7 +21,7 @@ class TrashArtifactModelForDelete implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  仓库id
-    * fomat  仓库类型
+    * format  仓库类型
     * uri  URI
     * status  状态
     * includePattern  路径白名单
@@ -30,7 +30,7 @@ class TrashArtifactModelForDelete implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'id' => 'string',
-            'fomat' => 'string',
+            'format' => 'string',
             'uri' => 'string',
             'status' => 'string',
             'includePattern' => 'string'
@@ -39,7 +39,7 @@ class TrashArtifactModelForDelete implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  仓库id
-    * fomat  仓库类型
+    * format  仓库类型
     * uri  URI
     * status  状态
     * includePattern  路径白名单
@@ -48,7 +48,7 @@ class TrashArtifactModelForDelete implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'id' => null,
-        'fomat' => null,
+        'format' => null,
         'uri' => null,
         'status' => null,
         'includePattern' => null
@@ -78,7 +78,7 @@ class TrashArtifactModelForDelete implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  仓库id
-    * fomat  仓库类型
+    * format  仓库类型
     * uri  URI
     * status  状态
     * includePattern  路径白名单
@@ -87,7 +87,7 @@ class TrashArtifactModelForDelete implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'id' => 'id',
-            'fomat' => 'fomat',
+            'format' => 'format',
             'uri' => 'uri',
             'status' => 'status',
             'includePattern' => 'include_pattern'
@@ -96,7 +96,7 @@ class TrashArtifactModelForDelete implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  仓库id
-    * fomat  仓库类型
+    * format  仓库类型
     * uri  URI
     * status  状态
     * includePattern  路径白名单
@@ -105,7 +105,7 @@ class TrashArtifactModelForDelete implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'id' => 'setId',
-            'fomat' => 'setFomat',
+            'format' => 'setFormat',
             'uri' => 'setUri',
             'status' => 'setStatus',
             'includePattern' => 'setIncludePattern'
@@ -114,7 +114,7 @@ class TrashArtifactModelForDelete implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  仓库id
-    * fomat  仓库类型
+    * format  仓库类型
     * uri  URI
     * status  状态
     * includePattern  路径白名单
@@ -123,7 +123,7 @@ class TrashArtifactModelForDelete implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'id' => 'getId',
-            'fomat' => 'getFomat',
+            'format' => 'getFormat',
             'uri' => 'getUri',
             'status' => 'getStatus',
             'includePattern' => 'getIncludePattern'
@@ -188,7 +188,7 @@ class TrashArtifactModelForDelete implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['fomat'] = isset($data['fomat']) ? $data['fomat'] : null;
+        $this->container['format'] = isset($data['format']) ? $data['format'] : null;
         $this->container['uri'] = isset($data['uri']) ? $data['uri'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['includePattern'] = isset($data['includePattern']) ? $data['includePattern'] : null;
@@ -205,8 +205,8 @@ class TrashArtifactModelForDelete implements ModelInterface, ArrayAccess
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['fomat'] === null) {
-            $invalidProperties[] = "'fomat' can't be null";
+        if ($this->container['format'] === null) {
+            $invalidProperties[] = "'format' can't be null";
         }
         if ($this->container['uri'] === null) {
             $invalidProperties[] = "'uri' can't be null";
@@ -253,26 +253,26 @@ class TrashArtifactModelForDelete implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets fomat
+    * Gets format
     *  仓库类型
     *
     * @return string
     */
-    public function getFomat()
+    public function getFormat()
     {
-        return $this->container['fomat'];
+        return $this->container['format'];
     }
 
     /**
-    * Sets fomat
+    * Sets format
     *
-    * @param string $fomat 仓库类型
+    * @param string $format 仓库类型
     *
     * @return $this
     */
-    public function setFomat($fomat)
+    public function setFormat($format)
     {
-        $this->container['fomat'] = $fomat;
+        $this->container['format'] = $format;
         return $this;
     }
 

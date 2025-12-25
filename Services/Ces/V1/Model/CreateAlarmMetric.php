@@ -30,7 +30,7 @@ class CreateAlarmMetric implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'namespace' => 'string',
             'metricName' => 'string',
-            'dimensions' => '\HuaweiCloud\SDK\Ces\V1\Model\Dimension[]',
+            'dimensions' => '\HuaweiCloud\SDK\Ces\V1\Model\CreateMetricDimension[]',
             'resourceGroupId' => 'string'
     ];
 
@@ -290,7 +290,7 @@ class CreateAlarmMetric implements ModelInterface, ArrayAccess
     * Gets dimensions
     *  **参数解释**： 指标维度。 **约束限制**： 目前最大可添加4个维度。如果不使用resource_group_id，则dimensions值必填。
     *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\Dimension[]|null
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\CreateMetricDimension[]|null
     */
     public function getDimensions()
     {
@@ -300,7 +300,7 @@ class CreateAlarmMetric implements ModelInterface, ArrayAccess
     /**
     * Sets dimensions
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\Dimension[]|null $dimensions **参数解释**： 指标维度。 **约束限制**： 目前最大可添加4个维度。如果不使用resource_group_id，则dimensions值必填。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\CreateMetricDimension[]|null $dimensions **参数解释**： 指标维度。 **约束限制**： 目前最大可添加4个维度。如果不使用resource_group_id，则dimensions值必填。
     *
     * @return $this
     */

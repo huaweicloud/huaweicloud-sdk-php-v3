@@ -21,15 +21,16 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * templateIds  告警模板编号列表，当ID列表为空时，将删除该资源分组已关联的告警模板所创建的告警规则
-    * notificationEnabled  **参数解释**： 是否开启告警通知。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
+    * notificationEnabled  **参数解释**： 是否开启告警通知。说明：若notification_enabled为true，对应的alarm_notifications、ok_notifications至少有一个不能为空。    **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
     * alarmNotifications  告警触发通知列表
     * okNotifications  告警恢复通知列表
-    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
-    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。如 00:00    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。如 08:00  **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
     * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
-    * enterpriseProjectId  **参数解释**： 企业项目ID。     **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”。           **默认取值**： 不涉及。
-    * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    * enterpriseProjectId  **参数解释**： 企业项目ID。     **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”。0 代表默认企业项目ID         **默认取值**： 不涉及。
+    * notificationManner  **参数解释**： 通知方式。 **约束限制**： 不涉及。 **取值范围**： 枚举值。取值为NOTIFICATION_GROUP、TOPIC_SUBSCRIPTION、NOTIFICATION_POLICY - NOTIFICATION_GROUP: 通知组 - TOPIC_SUBSCRIPTION: 主题订阅 - NOTIFICATION_POLICY: 通知策略 **默认取值**： 不涉及。
     * notificationPolicyIds  关联的通知策略ID列表
+    * noticeTypeNotificationTemplateList  告警通知模板列表
     *
     * @var string[]
     */
@@ -43,21 +44,23 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
             'effectiveTimezone' => 'string',
             'enterpriseProjectId' => 'string',
             'notificationManner' => 'string',
-            'notificationPolicyIds' => 'string[]'
+            'notificationPolicyIds' => 'string[]',
+            'noticeTypeNotificationTemplateList' => '\HuaweiCloud\SDK\Ces\V2\Model\NoticeTypeNotificationTemplateList[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * templateIds  告警模板编号列表，当ID列表为空时，将删除该资源分组已关联的告警模板所创建的告警规则
-    * notificationEnabled  **参数解释**： 是否开启告警通知。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
+    * notificationEnabled  **参数解释**： 是否开启告警通知。说明：若notification_enabled为true，对应的alarm_notifications、ok_notifications至少有一个不能为空。    **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
     * alarmNotifications  告警触发通知列表
     * okNotifications  告警恢复通知列表
-    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
-    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。如 00:00    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。如 08:00  **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
     * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
-    * enterpriseProjectId  **参数解释**： 企业项目ID。     **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”。           **默认取值**： 不涉及。
-    * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    * enterpriseProjectId  **参数解释**： 企业项目ID。     **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”。0 代表默认企业项目ID         **默认取值**： 不涉及。
+    * notificationManner  **参数解释**： 通知方式。 **约束限制**： 不涉及。 **取值范围**： 枚举值。取值为NOTIFICATION_GROUP、TOPIC_SUBSCRIPTION、NOTIFICATION_POLICY - NOTIFICATION_GROUP: 通知组 - TOPIC_SUBSCRIPTION: 主题订阅 - NOTIFICATION_POLICY: 通知策略 **默认取值**： 不涉及。
     * notificationPolicyIds  关联的通知策略ID列表
+    * noticeTypeNotificationTemplateList  告警通知模板列表
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
         'effectiveTimezone' => null,
         'enterpriseProjectId' => null,
         'notificationManner' => null,
-        'notificationPolicyIds' => null
+        'notificationPolicyIds' => null,
+        'noticeTypeNotificationTemplateList' => null
     ];
 
     /**
@@ -98,15 +102,16 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * templateIds  告警模板编号列表，当ID列表为空时，将删除该资源分组已关联的告警模板所创建的告警规则
-    * notificationEnabled  **参数解释**： 是否开启告警通知。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
+    * notificationEnabled  **参数解释**： 是否开启告警通知。说明：若notification_enabled为true，对应的alarm_notifications、ok_notifications至少有一个不能为空。    **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
     * alarmNotifications  告警触发通知列表
     * okNotifications  告警恢复通知列表
-    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
-    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。如 00:00    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。如 08:00  **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
     * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
-    * enterpriseProjectId  **参数解释**： 企业项目ID。     **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”。           **默认取值**： 不涉及。
-    * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    * enterpriseProjectId  **参数解释**： 企业项目ID。     **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”。0 代表默认企业项目ID         **默认取值**： 不涉及。
+    * notificationManner  **参数解释**： 通知方式。 **约束限制**： 不涉及。 **取值范围**： 枚举值。取值为NOTIFICATION_GROUP、TOPIC_SUBSCRIPTION、NOTIFICATION_POLICY - NOTIFICATION_GROUP: 通知组 - TOPIC_SUBSCRIPTION: 主题订阅 - NOTIFICATION_POLICY: 通知策略 **默认取值**： 不涉及。
     * notificationPolicyIds  关联的通知策略ID列表
+    * noticeTypeNotificationTemplateList  告警通知模板列表
     *
     * @var string[]
     */
@@ -120,21 +125,23 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
             'effectiveTimezone' => 'effective_timezone',
             'enterpriseProjectId' => 'enterprise_project_id',
             'notificationManner' => 'notification_manner',
-            'notificationPolicyIds' => 'notification_policy_ids'
+            'notificationPolicyIds' => 'notification_policy_ids',
+            'noticeTypeNotificationTemplateList' => 'notice_type_notification_template_list'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * templateIds  告警模板编号列表，当ID列表为空时，将删除该资源分组已关联的告警模板所创建的告警规则
-    * notificationEnabled  **参数解释**： 是否开启告警通知。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
+    * notificationEnabled  **参数解释**： 是否开启告警通知。说明：若notification_enabled为true，对应的alarm_notifications、ok_notifications至少有一个不能为空。    **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
     * alarmNotifications  告警触发通知列表
     * okNotifications  告警恢复通知列表
-    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
-    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。如 00:00    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。如 08:00  **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
     * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
-    * enterpriseProjectId  **参数解释**： 企业项目ID。     **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”。           **默认取值**： 不涉及。
-    * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    * enterpriseProjectId  **参数解释**： 企业项目ID。     **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”。0 代表默认企业项目ID         **默认取值**： 不涉及。
+    * notificationManner  **参数解释**： 通知方式。 **约束限制**： 不涉及。 **取值范围**： 枚举值。取值为NOTIFICATION_GROUP、TOPIC_SUBSCRIPTION、NOTIFICATION_POLICY - NOTIFICATION_GROUP: 通知组 - TOPIC_SUBSCRIPTION: 主题订阅 - NOTIFICATION_POLICY: 通知策略 **默认取值**： 不涉及。
     * notificationPolicyIds  关联的通知策略ID列表
+    * noticeTypeNotificationTemplateList  告警通知模板列表
     *
     * @var string[]
     */
@@ -148,21 +155,23 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
             'effectiveTimezone' => 'setEffectiveTimezone',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'notificationManner' => 'setNotificationManner',
-            'notificationPolicyIds' => 'setNotificationPolicyIds'
+            'notificationPolicyIds' => 'setNotificationPolicyIds',
+            'noticeTypeNotificationTemplateList' => 'setNoticeTypeNotificationTemplateList'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * templateIds  告警模板编号列表，当ID列表为空时，将删除该资源分组已关联的告警模板所创建的告警规则
-    * notificationEnabled  **参数解释**： 是否开启告警通知。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
+    * notificationEnabled  **参数解释**： 是否开启告警通知。说明：若notification_enabled为true，对应的alarm_notifications、ok_notifications至少有一个不能为空。    **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
     * alarmNotifications  告警触发通知列表
     * okNotifications  告警恢复通知列表
-    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
-    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。如 00:00    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。如 08:00  **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
     * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
-    * enterpriseProjectId  **参数解释**： 企业项目ID。     **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”。           **默认取值**： 不涉及。
-    * notificationManner  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    * enterpriseProjectId  **参数解释**： 企业项目ID。     **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”。0 代表默认企业项目ID         **默认取值**： 不涉及。
+    * notificationManner  **参数解释**： 通知方式。 **约束限制**： 不涉及。 **取值范围**： 枚举值。取值为NOTIFICATION_GROUP、TOPIC_SUBSCRIPTION、NOTIFICATION_POLICY - NOTIFICATION_GROUP: 通知组 - TOPIC_SUBSCRIPTION: 主题订阅 - NOTIFICATION_POLICY: 通知策略 **默认取值**： 不涉及。
     * notificationPolicyIds  关联的通知策略ID列表
+    * noticeTypeNotificationTemplateList  告警通知模板列表
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
             'effectiveTimezone' => 'getEffectiveTimezone',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'notificationManner' => 'getNotificationManner',
-            'notificationPolicyIds' => 'getNotificationPolicyIds'
+            'notificationPolicyIds' => 'getNotificationPolicyIds',
+            'noticeTypeNotificationTemplateList' => 'getNoticeTypeNotificationTemplateList'
     ];
 
     /**
@@ -264,6 +274,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['notificationManner'] = isset($data['notificationManner']) ? $data['notificationManner'] : null;
         $this->container['notificationPolicyIds'] = isset($data['notificationPolicyIds']) ? $data['notificationPolicyIds'] : null;
+        $this->container['noticeTypeNotificationTemplateList'] = isset($data['noticeTypeNotificationTemplateList']) ? $data['noticeTypeNotificationTemplateList'] : null;
     }
 
     /**
@@ -358,7 +369,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationEnabled
-    *  **参数解释**： 是否开启告警通知。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
+    *  **参数解释**： 是否开启告警通知。说明：若notification_enabled为true，对应的alarm_notifications、ok_notifications至少有一个不能为空。    **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
     *
     * @return bool
     */
@@ -370,7 +381,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     /**
     * Sets notificationEnabled
     *
-    * @param bool $notificationEnabled **参数解释**： 是否开启告警通知。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
+    * @param bool $notificationEnabled **参数解释**： 是否开启告警通知。说明：若notification_enabled为true，对应的alarm_notifications、ok_notifications至少有一个不能为空。    **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
     *
     * @return $this
     */
@@ -430,7 +441,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationBeginTime
-    *  **参数解释**： 告警通知开启时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    *  **参数解释**： 告警通知开启时间。如 00:00    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -442,7 +453,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     /**
     * Sets notificationBeginTime
     *
-    * @param string|null $notificationBeginTime **参数解释**： 告警通知开启时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * @param string|null $notificationBeginTime **参数解释**： 告警通知开启时间。如 00:00    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -454,7 +465,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationEndTime
-    *  **参数解释**： 告警通知关闭时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    *  **参数解释**： 告警通知关闭时间。如 08:00  **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -466,7 +477,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     /**
     * Sets notificationEndTime
     *
-    * @param string|null $notificationEndTime **参数解释**： 告警通知关闭时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+    * @param string|null $notificationEndTime **参数解释**： 告警通知关闭时间。如 08:00  **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -502,7 +513,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  **参数解释**： 企业项目ID。     **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”。           **默认取值**： 不涉及。
+    *  **参数解释**： 企业项目ID。     **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”。0 代表默认企业项目ID         **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -514,7 +525,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId **参数解释**： 企业项目ID。     **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”。           **默认取值**： 不涉及。
+    * @param string|null $enterpriseProjectId **参数解释**： 企业项目ID。     **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”。0 代表默认企业项目ID         **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -526,7 +537,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationManner
-    *  NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    *  **参数解释**： 通知方式。 **约束限制**： 不涉及。 **取值范围**： 枚举值。取值为NOTIFICATION_GROUP、TOPIC_SUBSCRIPTION、NOTIFICATION_POLICY - NOTIFICATION_GROUP: 通知组 - TOPIC_SUBSCRIPTION: 主题订阅 - NOTIFICATION_POLICY: 通知策略 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -538,7 +549,7 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     /**
     * Sets notificationManner
     *
-    * @param string|null $notificationManner NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+    * @param string|null $notificationManner **参数解释**： 通知方式。 **约束限制**： 不涉及。 **取值范围**： 枚举值。取值为NOTIFICATION_GROUP、TOPIC_SUBSCRIPTION、NOTIFICATION_POLICY - NOTIFICATION_GROUP: 通知组 - TOPIC_SUBSCRIPTION: 主题订阅 - NOTIFICATION_POLICY: 通知策略 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -569,6 +580,30 @@ class AsyncAssociateRGAndTemplatesReq implements ModelInterface, ArrayAccess
     public function setNotificationPolicyIds($notificationPolicyIds)
     {
         $this->container['notificationPolicyIds'] = $notificationPolicyIds;
+        return $this;
+    }
+
+    /**
+    * Gets noticeTypeNotificationTemplateList
+    *  告警通知模板列表
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\NoticeTypeNotificationTemplateList[]|null
+    */
+    public function getNoticeTypeNotificationTemplateList()
+    {
+        return $this->container['noticeTypeNotificationTemplateList'];
+    }
+
+    /**
+    * Sets noticeTypeNotificationTemplateList
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\NoticeTypeNotificationTemplateList[]|null $noticeTypeNotificationTemplateList 告警通知模板列表
+    *
+    * @return $this
+    */
+    public function setNoticeTypeNotificationTemplateList($noticeTypeNotificationTemplateList)
+    {
+        $this->container['noticeTypeNotificationTemplateList'] = $noticeTypeNotificationTemplateList;
         return $this;
     }
 

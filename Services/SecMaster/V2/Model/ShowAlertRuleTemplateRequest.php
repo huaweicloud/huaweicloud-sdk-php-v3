@@ -20,8 +20,8 @@ class ShowAlertRuleTemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workspaceId  工作空间 ID。Workspace ID.
-    * templateId  告警规则模板 ID。Alert rule template ID.
+    * workspaceId  工作空间ID
+    * templateId  告警规则模板Id
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ShowAlertRuleTemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workspaceId  工作空间 ID。Workspace ID.
-    * templateId  告警规则模板 ID。Alert rule template ID.
+    * workspaceId  工作空间ID
+    * templateId  告警规则模板Id
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ShowAlertRuleTemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workspaceId  工作空间 ID。Workspace ID.
-    * templateId  告警规则模板 ID。Alert rule template ID.
+    * workspaceId  工作空间ID
+    * templateId  告警规则模板Id
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ShowAlertRuleTemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workspaceId  工作空间 ID。Workspace ID.
-    * templateId  告警规则模板 ID。Alert rule template ID.
+    * workspaceId  工作空间ID
+    * templateId  告警规则模板Id
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ShowAlertRuleTemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workspaceId  工作空间 ID。Workspace ID.
-    * templateId  告警规则模板 ID。Alert rule template ID.
+    * workspaceId  工作空间ID
+    * templateId  告警规则模板Id
     *
     * @var string[]
     */
@@ -175,8 +175,8 @@ class ShowAlertRuleTemplateRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['workspaceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'workspaceId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['workspaceId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'workspaceId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['workspaceId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'workspaceId', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['templateId'] === null) {
             $invalidProperties[] = "'templateId' can't be null";
@@ -203,7 +203,7 @@ class ShowAlertRuleTemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspaceId
-    *  工作空间 ID。Workspace ID.
+    *  工作空间ID
     *
     * @return string
     */
@@ -215,7 +215,7 @@ class ShowAlertRuleTemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets workspaceId
     *
-    * @param string $workspaceId 工作空间 ID。Workspace ID.
+    * @param string $workspaceId 工作空间ID
     *
     * @return $this
     */
@@ -227,7 +227,7 @@ class ShowAlertRuleTemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateId
-    *  告警规则模板 ID。Alert rule template ID.
+    *  告警规则模板Id
     *
     * @return string
     */
@@ -239,7 +239,7 @@ class ShowAlertRuleTemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets templateId
     *
-    * @param string $templateId 告警规则模板 ID。Alert rule template ID.
+    * @param string $templateId 告警规则模板Id
     *
     * @return $this
     */

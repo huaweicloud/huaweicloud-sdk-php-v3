@@ -23,7 +23,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     * logicalClusterId  **参数解释**： 逻辑集群ID。 **取值范围**： 不涉及。
     * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
     * clusterRings  **参数解释**： 逻辑集群主机信息。 **取值范围**： 不涉及。
-    * status  **参数解释**： 逻辑集群状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 逻辑集群状态。 **取值范围**： - Failed：失败。 - Normal: 正常。 - Unavailable：不可用。 - Redistributing：重分布中。 - Redistribute_failed：重分布失败。 - Deleted：已删除。
     * firstLogicalCluster  **参数解释**： 是否为第一个逻辑集群。历史版本中第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图。 **取值范围**： 不涉及。
     * actionInfo  actionInfo
     * editEnable  **参数解释**： 是否允许编辑。 **取值范围**： 不涉及。
@@ -32,7 +32,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     * addToElastic  **参数解释**： 是否允许弹性伸缩。 **取值范围**： 不涉及。
     * mode  **参数解释**： 逻辑集群模式。 **取值范围**： 不涉及。
     * waitingForKilling  **参数解释**： 作业等待时间。 **取值范围**： 不涉及。
-    * clusterType  **参数解释**： 集群类型。 **取值范围**： 不涉及。
+    * clusterType  **参数解释**： 逻辑集群类型。 **取值范围**： - createFromPlan：计划弹性。 - createFromElastic：自动弹性。
     *
     * @var string[]
     */
@@ -57,7 +57,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     * logicalClusterId  **参数解释**： 逻辑集群ID。 **取值范围**： 不涉及。
     * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
     * clusterRings  **参数解释**： 逻辑集群主机信息。 **取值范围**： 不涉及。
-    * status  **参数解释**： 逻辑集群状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 逻辑集群状态。 **取值范围**： - Failed：失败。 - Normal: 正常。 - Unavailable：不可用。 - Redistributing：重分布中。 - Redistribute_failed：重分布失败。 - Deleted：已删除。
     * firstLogicalCluster  **参数解释**： 是否为第一个逻辑集群。历史版本中第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图。 **取值范围**： 不涉及。
     * actionInfo  actionInfo
     * editEnable  **参数解释**： 是否允许编辑。 **取值范围**： 不涉及。
@@ -66,7 +66,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     * addToElastic  **参数解释**： 是否允许弹性伸缩。 **取值范围**： 不涉及。
     * mode  **参数解释**： 逻辑集群模式。 **取值范围**： 不涉及。
     * waitingForKilling  **参数解释**： 作业等待时间。 **取值范围**： 不涉及。
-    * clusterType  **参数解释**： 集群类型。 **取值范围**： 不涉及。
+    * clusterType  **参数解释**： 逻辑集群类型。 **取值范围**： - createFromPlan：计划弹性。 - createFromElastic：自动弹性。
     *
     * @var string[]
     */
@@ -112,7 +112,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     * logicalClusterId  **参数解释**： 逻辑集群ID。 **取值范围**： 不涉及。
     * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
     * clusterRings  **参数解释**： 逻辑集群主机信息。 **取值范围**： 不涉及。
-    * status  **参数解释**： 逻辑集群状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 逻辑集群状态。 **取值范围**： - Failed：失败。 - Normal: 正常。 - Unavailable：不可用。 - Redistributing：重分布中。 - Redistribute_failed：重分布失败。 - Deleted：已删除。
     * firstLogicalCluster  **参数解释**： 是否为第一个逻辑集群。历史版本中第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图。 **取值范围**： 不涉及。
     * actionInfo  actionInfo
     * editEnable  **参数解释**： 是否允许编辑。 **取值范围**： 不涉及。
@@ -121,7 +121,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     * addToElastic  **参数解释**： 是否允许弹性伸缩。 **取值范围**： 不涉及。
     * mode  **参数解释**： 逻辑集群模式。 **取值范围**： 不涉及。
     * waitingForKilling  **参数解释**： 作业等待时间。 **取值范围**： 不涉及。
-    * clusterType  **参数解释**： 集群类型。 **取值范围**： 不涉及。
+    * clusterType  **参数解释**： 逻辑集群类型。 **取值范围**： - createFromPlan：计划弹性。 - createFromElastic：自动弹性。
     *
     * @var string[]
     */
@@ -146,7 +146,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     * logicalClusterId  **参数解释**： 逻辑集群ID。 **取值范围**： 不涉及。
     * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
     * clusterRings  **参数解释**： 逻辑集群主机信息。 **取值范围**： 不涉及。
-    * status  **参数解释**： 逻辑集群状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 逻辑集群状态。 **取值范围**： - Failed：失败。 - Normal: 正常。 - Unavailable：不可用。 - Redistributing：重分布中。 - Redistribute_failed：重分布失败。 - Deleted：已删除。
     * firstLogicalCluster  **参数解释**： 是否为第一个逻辑集群。历史版本中第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图。 **取值范围**： 不涉及。
     * actionInfo  actionInfo
     * editEnable  **参数解释**： 是否允许编辑。 **取值范围**： 不涉及。
@@ -155,7 +155,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     * addToElastic  **参数解释**： 是否允许弹性伸缩。 **取值范围**： 不涉及。
     * mode  **参数解释**： 逻辑集群模式。 **取值范围**： 不涉及。
     * waitingForKilling  **参数解释**： 作业等待时间。 **取值范围**： 不涉及。
-    * clusterType  **参数解释**： 集群类型。 **取值范围**： 不涉及。
+    * clusterType  **参数解释**： 逻辑集群类型。 **取值范围**： - createFromPlan：计划弹性。 - createFromElastic：自动弹性。
     *
     * @var string[]
     */
@@ -180,7 +180,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     * logicalClusterId  **参数解释**： 逻辑集群ID。 **取值范围**： 不涉及。
     * logicalClusterName  **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
     * clusterRings  **参数解释**： 逻辑集群主机信息。 **取值范围**： 不涉及。
-    * status  **参数解释**： 逻辑集群状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 逻辑集群状态。 **取值范围**： - Failed：失败。 - Normal: 正常。 - Unavailable：不可用。 - Redistributing：重分布中。 - Redistribute_failed：重分布失败。 - Deleted：已删除。
     * firstLogicalCluster  **参数解释**： 是否为第一个逻辑集群。历史版本中第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图。 **取值范围**： 不涉及。
     * actionInfo  actionInfo
     * editEnable  **参数解释**： 是否允许编辑。 **取值范围**： 不涉及。
@@ -189,7 +189,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     * addToElastic  **参数解释**： 是否允许弹性伸缩。 **取值范围**： 不涉及。
     * mode  **参数解释**： 逻辑集群模式。 **取值范围**： 不涉及。
     * waitingForKilling  **参数解释**： 作业等待时间。 **取值范围**： 不涉及。
-    * clusterType  **参数解释**： 集群类型。 **取值范围**： 不涉及。
+    * clusterType  **参数解释**： 逻辑集群类型。 **取值范围**： - createFromPlan：计划弹性。 - createFromElastic：自动弹性。
     *
     * @var string[]
     */
@@ -378,7 +378,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 逻辑集群状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 逻辑集群状态。 **取值范围**： - Failed：失败。 - Normal: 正常。 - Unavailable：不可用。 - Redistributing：重分布中。 - Redistribute_failed：重分布失败。 - Deleted：已删除。
     *
     * @return string|null
     */
@@ -390,7 +390,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 逻辑集群状态。 **取值范围**： 不涉及。
+    * @param string|null $status **参数解释**： 逻辑集群状态。 **取值范围**： - Failed：失败。 - Normal: 正常。 - Unavailable：不可用。 - Redistributing：重分布中。 - Redistribute_failed：重分布失败。 - Deleted：已删除。
     *
     * @return $this
     */
@@ -594,7 +594,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterType
-    *  **参数解释**： 集群类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 逻辑集群类型。 **取值范围**： - createFromPlan：计划弹性。 - createFromElastic：自动弹性。
     *
     * @return string|null
     */
@@ -606,7 +606,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterType
     *
-    * @param string|null $clusterType **参数解释**： 集群类型。 **取值范围**： 不涉及。
+    * @param string|null $clusterType **参数解释**： 逻辑集群类型。 **取值范围**： - createFromPlan：计划弹性。 - createFromElastic：自动弹性。
     *
     * @return $this
     */

@@ -28,7 +28,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
     * internalMgntIp  **参数解释**： 内部管理IP。 **取值范围**： 不涉及。
     * eip  **参数解释**： 公网IP信息。 **取值范围**： 不涉及。
     * elb  **参数解释**： elb地址。 **取值范围**： 不涉及。
-    * status  **参数解释**： 实例状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 节点状态。 **取值范围**： - 100：创建中 - 200：可用 - 300：不可用 - 400：已删除 - 303：创建失败
     * azCode  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -56,7 +56,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
     * internalMgntIp  **参数解释**： 内部管理IP。 **取值范围**： 不涉及。
     * eip  **参数解释**： 公网IP信息。 **取值范围**： 不涉及。
     * elb  **参数解释**： elb地址。 **取值范围**： 不涉及。
-    * status  **参数解释**： 实例状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 节点状态。 **取值范围**： - 100：创建中 - 200：可用 - 300：不可用 - 400：已删除 - 303：创建失败
     * azCode  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -105,7 +105,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
     * internalMgntIp  **参数解释**： 内部管理IP。 **取值范围**： 不涉及。
     * eip  **参数解释**： 公网IP信息。 **取值范围**： 不涉及。
     * elb  **参数解释**： elb地址。 **取值范围**： 不涉及。
-    * status  **参数解释**： 实例状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 节点状态。 **取值范围**： - 100：创建中 - 200：可用 - 300：不可用 - 400：已删除 - 303：创建失败
     * azCode  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -133,7 +133,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
     * internalMgntIp  **参数解释**： 内部管理IP。 **取值范围**： 不涉及。
     * eip  **参数解释**： 公网IP信息。 **取值范围**： 不涉及。
     * elb  **参数解释**： elb地址。 **取值范围**： 不涉及。
-    * status  **参数解释**： 实例状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 节点状态。 **取值范围**： - 100：创建中 - 200：可用 - 300：不可用 - 400：已删除 - 303：创建失败
     * azCode  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -161,7 +161,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
     * internalMgntIp  **参数解释**： 内部管理IP。 **取值范围**： 不涉及。
     * eip  **参数解释**： 公网IP信息。 **取值范围**： 不涉及。
     * elb  **参数解释**： elb地址。 **取值范围**： 不涉及。
-    * status  **参数解释**： 实例状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 节点状态。 **取值范围**： - 100：创建中 - 200：可用 - 300：不可用 - 400：已删除 - 303：创建失败
     * azCode  **参数解释**： 可用区编码。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -465,7 +465,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 实例状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 节点状态。 **取值范围**： - 100：创建中 - 200：可用 - 300：不可用 - 400：已删除 - 303：创建失败
     *
     * @return string|null
     */
@@ -477,7 +477,7 @@ class TopoInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 实例状态。 **取值范围**： 不涉及。
+    * @param string|null $status **参数解释**： 节点状态。 **取值范围**： - 100：创建中 - 200：可用 - 300：不可用 - 400：已删除 - 303：创建失败
     *
     * @return $this
     */

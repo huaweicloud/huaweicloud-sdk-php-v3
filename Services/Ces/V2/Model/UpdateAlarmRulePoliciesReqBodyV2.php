@@ -20,7 +20,7 @@ class UpdateAlarmRulePoliciesReqBodyV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * policies  **参数解释**： 策略信息。 **约束限制**： 策略信息数量最多为50个。
+    * policies  **参数解释**： 策略信息。 **约束限制**： 包含的策略信息数量最多为50个，最少为1个。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UpdateAlarmRulePoliciesReqBodyV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * policies  **参数解释**： 策略信息。 **约束限制**： 策略信息数量最多为50个。
+    * policies  **参数解释**： 策略信息。 **约束限制**： 包含的策略信息数量最多为50个，最少为1个。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UpdateAlarmRulePoliciesReqBodyV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * policies  **参数解释**： 策略信息。 **约束限制**： 策略信息数量最多为50个。
+    * policies  **参数解释**： 策略信息。 **约束限制**： 包含的策略信息数量最多为50个，最少为1个。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateAlarmRulePoliciesReqBodyV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * policies  **参数解释**： 策略信息。 **约束限制**： 策略信息数量最多为50个。
+    * policies  **参数解释**： 策略信息。 **约束限制**： 包含的策略信息数量最多为50个，最少为1个。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UpdateAlarmRulePoliciesReqBodyV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * policies  **参数解释**： 策略信息。 **约束限制**： 策略信息数量最多为50个。
+    * policies  **参数解释**： 策略信息。 **约束限制**： 包含的策略信息数量最多为50个，最少为1个。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class UpdateAlarmRulePoliciesReqBodyV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets policies
-    *  **参数解释**： 策略信息。 **约束限制**： 策略信息数量最多为50个。
+    *  **参数解释**： 策略信息。 **约束限制**： 包含的策略信息数量最多为50个，最少为1个。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\UpdatePolicyReq[]
     */
@@ -189,7 +189,7 @@ class UpdateAlarmRulePoliciesReqBodyV2 implements ModelInterface, ArrayAccess
     /**
     * Sets policies
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\UpdatePolicyReq[] $policies **参数解释**： 策略信息。 **约束限制**： 策略信息数量最多为50个。
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\UpdatePolicyReq[] $policies **参数解释**： 策略信息。 **约束限制**： 包含的策略信息数量最多为50个，最少为1个。
     *
     * @return $this
     */

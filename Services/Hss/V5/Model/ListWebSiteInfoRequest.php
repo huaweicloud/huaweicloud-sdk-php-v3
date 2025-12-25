@@ -224,6 +224,12 @@ class ListWebSiteInfoRequest implements ModelInterface, ArrayAccess
             if (!preg_match("/^(host|container)$/", $this->container['category'])) {
                 $invalidProperties[] = "invalid value for 'category', must be conform to the pattern /^(host|container)$/.";
             }
+            if (!is_null($this->container['domain']) && (mb_strlen($this->container['domain']) > 256)) {
+                $invalidProperties[] = "invalid value for 'domain', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['domain']) && (mb_strlen($this->container['domain']) < 1)) {
+                $invalidProperties[] = "invalid value for 'domain', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 

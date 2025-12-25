@@ -26,8 +26,8 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     * primaryClusterDnNum  **参数解释**： 主集群DN数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * standbyRegion  **参数解释**： 备集群所在局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * standbyProjectId  **参数解释**： 备集群项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * drType  **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * datastoreType  **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。 **默认取值**： 不涉及。
+    * datastoreType  **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： - dws，dws存算一体。 - dws3.0，dws存算分离。 - hybrid，dws实时数仓。 **默认取值**： 不涉及。
     * datastoreVersion  **参数解释**： 数仓版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -52,8 +52,8 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     * primaryClusterDnNum  **参数解释**： 主集群DN数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * standbyRegion  **参数解释**： 备集群所在局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * standbyProjectId  **参数解释**： 备集群项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * drType  **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * datastoreType  **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。 **默认取值**： 不涉及。
+    * datastoreType  **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： - dws，dws存算一体。 - dws3.0，dws存算分离。 - hybrid，dws实时数仓。 **默认取值**： 不涉及。
     * datastoreVersion  **参数解释**： 数仓版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -99,8 +99,8 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     * primaryClusterDnNum  **参数解释**： 主集群DN数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * standbyRegion  **参数解释**： 备集群所在局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * standbyProjectId  **参数解释**： 备集群项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * drType  **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * datastoreType  **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。 **默认取值**： 不涉及。
+    * datastoreType  **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： - dws，dws存算一体。 - dws3.0，dws存算分离。 - hybrid，dws实时数仓。 **默认取值**： 不涉及。
     * datastoreVersion  **参数解释**： 数仓版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -125,8 +125,8 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     * primaryClusterDnNum  **参数解释**： 主集群DN数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * standbyRegion  **参数解释**： 备集群所在局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * standbyProjectId  **参数解释**： 备集群项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * drType  **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * datastoreType  **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。 **默认取值**： 不涉及。
+    * datastoreType  **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： - dws，dws存算一体。 - dws3.0，dws存算分离。 - hybrid，dws实时数仓。 **默认取值**： 不涉及。
     * datastoreVersion  **参数解释**： 数仓版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -151,8 +151,8 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     * primaryClusterDnNum  **参数解释**： 主集群DN数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * standbyRegion  **参数解释**： 备集群所在局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * standbyProjectId  **参数解释**： 备集群项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * drType  **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * datastoreType  **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * drType  **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。 **默认取值**： 不涉及。
+    * datastoreType  **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： - dws，dws存算一体。 - dws3.0，dws存算分离。 - hybrid，dws实时数仓。 **默认取值**： 不涉及。
     * datastoreVersion  **参数解释**： 数仓版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -412,7 +412,7 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets drType
-    *  **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *  **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -424,7 +424,7 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     /**
     * Sets drType
     *
-    * @param string|null $drType **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string|null $drType **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -436,7 +436,7 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets datastoreType
-    *  **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *  **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： - dws，dws存算一体。 - dws3.0，dws存算分离。 - hybrid，dws实时数仓。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -448,7 +448,7 @@ class ListAvailableDisasterClustersRequest implements ModelInterface, ArrayAcces
     /**
     * Sets datastoreType
     *
-    * @param string|null $datastoreType **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string|null $datastoreType **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： - dws，dws存算一体。 - dws3.0，dws存算分离。 - hybrid，dws实时数仓。 **默认取值**： 不涉及。
     *
     * @return $this
     */

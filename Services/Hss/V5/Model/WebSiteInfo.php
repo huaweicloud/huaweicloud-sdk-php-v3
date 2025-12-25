@@ -356,6 +356,84 @@ class WebSiteInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['domain']) && (mb_strlen($this->container['domain']) > 256)) {
+                $invalidProperties[] = "invalid value for 'domain', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['domain']) && (mb_strlen($this->container['domain']) < 1)) {
+                $invalidProperties[] = "invalid value for 'domain', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['appName']) && (mb_strlen($this->container['appName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'appName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['appName']) && (mb_strlen($this->container['appName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'appName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['path']) && (mb_strlen($this->container['path']) > 512)) {
+                $invalidProperties[] = "invalid value for 'path', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['path']) && (mb_strlen($this->container['path']) < 1)) {
+                $invalidProperties[] = "invalid value for 'path', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['bindAddr']) && (mb_strlen($this->container['bindAddr']) > 512)) {
+                $invalidProperties[] = "invalid value for 'bindAddr', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['bindAddr']) && (mb_strlen($this->container['bindAddr']) < 1)) {
+                $invalidProperties[] = "invalid value for 'bindAddr', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['urlPath']) && (mb_strlen($this->container['urlPath']) > 128)) {
+                $invalidProperties[] = "invalid value for 'urlPath', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['urlPath']) && (mb_strlen($this->container['urlPath']) < 1)) {
+                $invalidProperties[] = "invalid value for 'urlPath', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['mode']) && (mb_strlen($this->container['mode']) > 32)) {
+                $invalidProperties[] = "invalid value for 'mode', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['mode']) && (mb_strlen($this->container['mode']) < 1)) {
+                $invalidProperties[] = "invalid value for 'mode', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['procPath']) && (mb_strlen($this->container['procPath']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'procPath', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['procPath']) && (mb_strlen($this->container['procPath']) < 1)) {
+                $invalidProperties[] = "invalid value for 'procPath', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['certIssuer']) && (mb_strlen($this->container['certIssuer']) > 256)) {
+                $invalidProperties[] = "invalid value for 'certIssuer', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['certIssuer']) && (mb_strlen($this->container['certIssuer']) < 0)) {
+                $invalidProperties[] = "invalid value for 'certIssuer', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['certUser']) && (mb_strlen($this->container['certUser']) > 256)) {
+                $invalidProperties[] = "invalid value for 'certUser', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['certUser']) && (mb_strlen($this->container['certUser']) < 0)) {
+                $invalidProperties[] = "invalid value for 'certUser', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['certIssueTime']) && (mb_strlen($this->container['certIssueTime']) > 32)) {
+                $invalidProperties[] = "invalid value for 'certIssueTime', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['certIssueTime']) && (mb_strlen($this->container['certIssueTime']) < 0)) {
+                $invalidProperties[] = "invalid value for 'certIssueTime', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['certExpiredTime']) && (mb_strlen($this->container['certExpiredTime']) > 32)) {
+                $invalidProperties[] = "invalid value for 'certExpiredTime', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['certExpiredTime']) && (mb_strlen($this->container['certExpiredTime']) < 0)) {
+                $invalidProperties[] = "invalid value for 'certExpiredTime', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'containerId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['containerId']) && (mb_strlen($this->container['containerId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'containerId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'containerName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['containerName']) && (mb_strlen($this->container['containerName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'containerName', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 

@@ -20,15 +20,15 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vulId  漏洞id
-    * repairNecessity  修复紧急度，包含如下3种。   - immediate_repair ：高危。   - delay_repair ：中危。   - not_needed_repair ：低危。
-    * description  漏洞描述
-    * position  漏洞所在镜像层
-    * appName  漏洞的软件名称
-    * appPath  应用软件的路径（只有应用漏洞有该字段）
-    * version  软件版本
-    * solution  解决方案
-    * url  补丁地址
+    * vulId  **参数解释**: 漏洞ID **取值范围**: 字符长度0-128
+    * repairNecessity  **参数解释**: 危险程度 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危
+    * description  **参数解释**: 漏洞描述 **取值范围** : 字符长度0-128
+    * position  **参数解释**: 漏洞所在镜像层 **取值范围** : 字符长度0-128
+    * appName  **参数解释**: 漏洞的软件名称 **取值范围** : 字符长度0-128
+    * appPath  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围** : 字符长度1-512
+    * version  **参数解释**: 软件版本 **取值范围** : 字符长度0-128
+    * solution  **参数解释**: 解决方案 **取值范围** : 字符长度0-256
+    * url  **参数解释**: 补丁地址 **取值范围** : 字符长度0-128
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vulId  漏洞id
-    * repairNecessity  修复紧急度，包含如下3种。   - immediate_repair ：高危。   - delay_repair ：中危。   - not_needed_repair ：低危。
-    * description  漏洞描述
-    * position  漏洞所在镜像层
-    * appName  漏洞的软件名称
-    * appPath  应用软件的路径（只有应用漏洞有该字段）
-    * version  软件版本
-    * solution  解决方案
-    * url  补丁地址
+    * vulId  **参数解释**: 漏洞ID **取值范围**: 字符长度0-128
+    * repairNecessity  **参数解释**: 危险程度 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危
+    * description  **参数解释**: 漏洞描述 **取值范围** : 字符长度0-128
+    * position  **参数解释**: 漏洞所在镜像层 **取值范围** : 字符长度0-128
+    * appName  **参数解释**: 漏洞的软件名称 **取值范围** : 字符长度0-128
+    * appPath  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围** : 字符长度1-512
+    * version  **参数解释**: 软件版本 **取值范围** : 字符长度0-128
+    * solution  **参数解释**: 解决方案 **取值范围** : 字符长度0-256
+    * url  **参数解释**: 补丁地址 **取值范围** : 字符长度0-128
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vulId  漏洞id
-    * repairNecessity  修复紧急度，包含如下3种。   - immediate_repair ：高危。   - delay_repair ：中危。   - not_needed_repair ：低危。
-    * description  漏洞描述
-    * position  漏洞所在镜像层
-    * appName  漏洞的软件名称
-    * appPath  应用软件的路径（只有应用漏洞有该字段）
-    * version  软件版本
-    * solution  解决方案
-    * url  补丁地址
+    * vulId  **参数解释**: 漏洞ID **取值范围**: 字符长度0-128
+    * repairNecessity  **参数解释**: 危险程度 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危
+    * description  **参数解释**: 漏洞描述 **取值范围** : 字符长度0-128
+    * position  **参数解释**: 漏洞所在镜像层 **取值范围** : 字符长度0-128
+    * appName  **参数解释**: 漏洞的软件名称 **取值范围** : 字符长度0-128
+    * appPath  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围** : 字符长度1-512
+    * version  **参数解释**: 软件版本 **取值范围** : 字符长度0-128
+    * solution  **参数解释**: 解决方案 **取值范围** : 字符长度0-256
+    * url  **参数解释**: 补丁地址 **取值范围** : 字符长度0-128
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vulId  漏洞id
-    * repairNecessity  修复紧急度，包含如下3种。   - immediate_repair ：高危。   - delay_repair ：中危。   - not_needed_repair ：低危。
-    * description  漏洞描述
-    * position  漏洞所在镜像层
-    * appName  漏洞的软件名称
-    * appPath  应用软件的路径（只有应用漏洞有该字段）
-    * version  软件版本
-    * solution  解决方案
-    * url  补丁地址
+    * vulId  **参数解释**: 漏洞ID **取值范围**: 字符长度0-128
+    * repairNecessity  **参数解释**: 危险程度 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危
+    * description  **参数解释**: 漏洞描述 **取值范围** : 字符长度0-128
+    * position  **参数解释**: 漏洞所在镜像层 **取值范围** : 字符长度0-128
+    * appName  **参数解释**: 漏洞的软件名称 **取值范围** : 字符长度0-128
+    * appPath  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围** : 字符长度1-512
+    * version  **参数解释**: 软件版本 **取值范围** : 字符长度0-128
+    * solution  **参数解释**: 解决方案 **取值范围** : 字符长度0-256
+    * url  **参数解释**: 补丁地址 **取值范围** : 字符长度0-128
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vulId  漏洞id
-    * repairNecessity  修复紧急度，包含如下3种。   - immediate_repair ：高危。   - delay_repair ：中危。   - not_needed_repair ：低危。
-    * description  漏洞描述
-    * position  漏洞所在镜像层
-    * appName  漏洞的软件名称
-    * appPath  应用软件的路径（只有应用漏洞有该字段）
-    * version  软件版本
-    * solution  解决方案
-    * url  补丁地址
+    * vulId  **参数解释**: 漏洞ID **取值范围**: 字符长度0-128
+    * repairNecessity  **参数解释**: 危险程度 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危
+    * description  **参数解释**: 漏洞描述 **取值范围** : 字符长度0-128
+    * position  **参数解释**: 漏洞所在镜像层 **取值范围** : 字符长度0-128
+    * appName  **参数解释**: 漏洞的软件名称 **取值范围** : 字符长度0-128
+    * appPath  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围** : 字符长度1-512
+    * version  **参数解释**: 软件版本 **取值范围** : 字符长度0-128
+    * solution  **参数解释**: 解决方案 **取值范围** : 字符长度0-256
+    * url  **参数解释**: 补丁地址 **取值范围** : 字符长度0-128
     *
     * @var string[]
     */
@@ -316,7 +316,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vulId
-    *  漏洞id
+    *  **参数解释**: 漏洞ID **取值范围**: 字符长度0-128
     *
     * @return string|null
     */
@@ -328,7 +328,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vulId
     *
-    * @param string|null $vulId 漏洞id
+    * @param string|null $vulId **参数解释**: 漏洞ID **取值范围**: 字符长度0-128
     *
     * @return $this
     */
@@ -340,7 +340,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets repairNecessity
-    *  修复紧急度，包含如下3种。   - immediate_repair ：高危。   - delay_repair ：中危。   - not_needed_repair ：低危。
+    *  **参数解释**: 危险程度 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危
     *
     * @return string|null
     */
@@ -352,7 +352,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets repairNecessity
     *
-    * @param string|null $repairNecessity 修复紧急度，包含如下3种。   - immediate_repair ：高危。   - delay_repair ：中危。   - not_needed_repair ：低危。
+    * @param string|null $repairNecessity **参数解释**: 危险程度 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危
     *
     * @return $this
     */
@@ -364,7 +364,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  漏洞描述
+    *  **参数解释**: 漏洞描述 **取值范围** : 字符长度0-128
     *
     * @return string|null
     */
@@ -376,7 +376,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 漏洞描述
+    * @param string|null $description **参数解释**: 漏洞描述 **取值范围** : 字符长度0-128
     *
     * @return $this
     */
@@ -388,7 +388,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets position
-    *  漏洞所在镜像层
+    *  **参数解释**: 漏洞所在镜像层 **取值范围** : 字符长度0-128
     *
     * @return string|null
     */
@@ -400,7 +400,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets position
     *
-    * @param string|null $position 漏洞所在镜像层
+    * @param string|null $position **参数解释**: 漏洞所在镜像层 **取值范围** : 字符长度0-128
     *
     * @return $this
     */
@@ -412,7 +412,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets appName
-    *  漏洞的软件名称
+    *  **参数解释**: 漏洞的软件名称 **取值范围** : 字符长度0-128
     *
     * @return string|null
     */
@@ -424,7 +424,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets appName
     *
-    * @param string|null $appName 漏洞的软件名称
+    * @param string|null $appName **参数解释**: 漏洞的软件名称 **取值范围** : 字符长度0-128
     *
     * @return $this
     */
@@ -436,7 +436,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets appPath
-    *  应用软件的路径（只有应用漏洞有该字段）
+    *  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围** : 字符长度1-512
     *
     * @return string|null
     */
@@ -448,7 +448,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets appPath
     *
-    * @param string|null $appPath 应用软件的路径（只有应用漏洞有该字段）
+    * @param string|null $appPath **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围** : 字符长度1-512
     *
     * @return $this
     */
@@ -460,7 +460,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  软件版本
+    *  **参数解释**: 软件版本 **取值范围** : 字符长度0-128
     *
     * @return string|null
     */
@@ -472,7 +472,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 软件版本
+    * @param string|null $version **参数解释**: 软件版本 **取值范围** : 字符长度0-128
     *
     * @return $this
     */
@@ -484,7 +484,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets solution
-    *  解决方案
+    *  **参数解释**: 解决方案 **取值范围** : 字符长度0-256
     *
     * @return string|null
     */
@@ -496,7 +496,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets solution
     *
-    * @param string|null $solution 解决方案
+    * @param string|null $solution **参数解释**: 解决方案 **取值范围** : 字符长度0-256
     *
     * @return $this
     */
@@ -508,7 +508,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets url
-    *  补丁地址
+    *  **参数解释**: 补丁地址 **取值范围** : 字符长度0-128
     *
     * @return string|null
     */
@@ -520,7 +520,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets url
     *
-    * @param string|null $url 补丁地址
+    * @param string|null $url **参数解释**: 补丁地址 **取值范围** : 字符长度0-128
     *
     * @return $this
     */

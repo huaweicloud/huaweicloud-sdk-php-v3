@@ -20,15 +20,15 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupName  资源分组的名称，如：ResourceGroup-Test01。
-    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual/空值（手动添加）
-    * relationIds  企业项目ID列表
-    * groupId  资源分组的ID，如：rg1603786526428bWbVmk4rP。
-    * createTime  资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * groupName  **参数解释** 资源分组名称。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。
+    * type  **参数解释** 资源添加/匹配方式。 **取值范围** 取值只能为EPS（匹配企业项目），TAG（匹配标签），NAME（匹配实例名称），COMB（组合匹配），Manual/空值（手动添加）。
+    * relationIds  **参数解释** 企业项目ID列表。
+    * groupId  **参数解释**： 资源分组ID。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。
+    * createTime  **参数解释** 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。 **取值范围** 在[0,9223372036854775807]区间内
     * instanceStatistics  instanceStatistics
     * status  status
-    * enterpriseProjectId  创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
-    * resources  一组或者多个资源信息，默认为空。
+    * enterpriseProjectId  **参数解释** 资源分组归属企业项目ID。 **取值范围** 由数字、字母和-组成，或者为0（默认企业项目ID）。
+    * resources  **参数解释** 一组或者多个资源信息，默认为空。
     *
     * @var string[]
     */
@@ -39,22 +39,22 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
             'groupId' => 'string',
             'createTime' => 'int',
             'instanceStatistics' => '\HuaweiCloud\SDK\Ces\V1\Model\InstanceStatistics',
-            'status' => '\HuaweiCloud\SDK\Ces\V1\Model\StatusSchema',
+            'status' => '\HuaweiCloud\SDK\Ces\V1\Model\StatusSchemaResp',
             'enterpriseProjectId' => 'string',
             'resources' => '\HuaweiCloud\SDK\Ces\V1\Model\Resource[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupName  资源分组的名称，如：ResourceGroup-Test01。
-    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual/空值（手动添加）
-    * relationIds  企业项目ID列表
-    * groupId  资源分组的ID，如：rg1603786526428bWbVmk4rP。
-    * createTime  资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * groupName  **参数解释** 资源分组名称。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。
+    * type  **参数解释** 资源添加/匹配方式。 **取值范围** 取值只能为EPS（匹配企业项目），TAG（匹配标签），NAME（匹配实例名称），COMB（组合匹配），Manual/空值（手动添加）。
+    * relationIds  **参数解释** 企业项目ID列表。
+    * groupId  **参数解释**： 资源分组ID。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。
+    * createTime  **参数解释** 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。 **取值范围** 在[0,9223372036854775807]区间内
     * instanceStatistics  instanceStatistics
     * status  status
-    * enterpriseProjectId  创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
-    * resources  一组或者多个资源信息，默认为空。
+    * enterpriseProjectId  **参数解释** 资源分组归属企业项目ID。 **取值范围** 由数字、字母和-组成，或者为0（默认企业项目ID）。
+    * resources  **参数解释** 一组或者多个资源信息，默认为空。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupName  资源分组的名称，如：ResourceGroup-Test01。
-    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual/空值（手动添加）
-    * relationIds  企业项目ID列表
-    * groupId  资源分组的ID，如：rg1603786526428bWbVmk4rP。
-    * createTime  资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * groupName  **参数解释** 资源分组名称。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。
+    * type  **参数解释** 资源添加/匹配方式。 **取值范围** 取值只能为EPS（匹配企业项目），TAG（匹配标签），NAME（匹配实例名称），COMB（组合匹配），Manual/空值（手动添加）。
+    * relationIds  **参数解释** 企业项目ID列表。
+    * groupId  **参数解释**： 资源分组ID。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。
+    * createTime  **参数解释** 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。 **取值范围** 在[0,9223372036854775807]区间内
     * instanceStatistics  instanceStatistics
     * status  status
-    * enterpriseProjectId  创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
-    * resources  一组或者多个资源信息，默认为空。
+    * enterpriseProjectId  **参数解释** 资源分组归属企业项目ID。 **取值范围** 由数字、字母和-组成，或者为0（默认企业项目ID）。
+    * resources  **参数解释** 一组或者多个资源信息，默认为空。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupName  资源分组的名称，如：ResourceGroup-Test01。
-    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual/空值（手动添加）
-    * relationIds  企业项目ID列表
-    * groupId  资源分组的ID，如：rg1603786526428bWbVmk4rP。
-    * createTime  资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * groupName  **参数解释** 资源分组名称。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。
+    * type  **参数解释** 资源添加/匹配方式。 **取值范围** 取值只能为EPS（匹配企业项目），TAG（匹配标签），NAME（匹配实例名称），COMB（组合匹配），Manual/空值（手动添加）。
+    * relationIds  **参数解释** 企业项目ID列表。
+    * groupId  **参数解释**： 资源分组ID。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。
+    * createTime  **参数解释** 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。 **取值范围** 在[0,9223372036854775807]区间内
     * instanceStatistics  instanceStatistics
     * status  status
-    * enterpriseProjectId  创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
-    * resources  一组或者多个资源信息，默认为空。
+    * enterpriseProjectId  **参数解释** 资源分组归属企业项目ID。 **取值范围** 由数字、字母和-组成，或者为0（默认企业项目ID）。
+    * resources  **参数解释** 一组或者多个资源信息，默认为空。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupName  资源分组的名称，如：ResourceGroup-Test01。
-    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual/空值（手动添加）
-    * relationIds  企业项目ID列表
-    * groupId  资源分组的ID，如：rg1603786526428bWbVmk4rP。
-    * createTime  资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * groupName  **参数解释** 资源分组名称。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。
+    * type  **参数解释** 资源添加/匹配方式。 **取值范围** 取值只能为EPS（匹配企业项目），TAG（匹配标签），NAME（匹配实例名称），COMB（组合匹配），Manual/空值（手动添加）。
+    * relationIds  **参数解释** 企业项目ID列表。
+    * groupId  **参数解释**： 资源分组ID。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。
+    * createTime  **参数解释** 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。 **取值范围** 在[0,9223372036854775807]区间内
     * instanceStatistics  instanceStatistics
     * status  status
-    * enterpriseProjectId  创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
-    * resources  一组或者多个资源信息，默认为空。
+    * enterpriseProjectId  **参数解释** 资源分组归属企业项目ID。 **取值范围** 由数字、字母和-组成，或者为0（默认企业项目ID）。
+    * resources  **参数解释** 一组或者多个资源信息，默认为空。
     *
     * @var string[]
     */
@@ -289,7 +289,7 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  资源分组的名称，如：ResourceGroup-Test01。
+    *  **参数解释** 资源分组名称。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。
     *
     * @return string|null
     */
@@ -301,7 +301,7 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName 资源分组的名称，如：ResourceGroup-Test01。
+    * @param string|null $groupName **参数解释** 资源分组名称。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。
     *
     * @return $this
     */
@@ -313,7 +313,7 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual/空值（手动添加）
+    *  **参数解释** 资源添加/匹配方式。 **取值范围** 取值只能为EPS（匹配企业项目），TAG（匹配标签），NAME（匹配实例名称），COMB（组合匹配），Manual/空值（手动添加）。
     *
     * @return string|null
     */
@@ -325,7 +325,7 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual/空值（手动添加）
+    * @param string|null $type **参数解释** 资源添加/匹配方式。 **取值范围** 取值只能为EPS（匹配企业项目），TAG（匹配标签），NAME（匹配实例名称），COMB（组合匹配），Manual/空值（手动添加）。
     *
     * @return $this
     */
@@ -337,7 +337,7 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets relationIds
-    *  企业项目ID列表
+    *  **参数解释** 企业项目ID列表。
     *
     * @return string[]|null
     */
@@ -349,7 +349,7 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets relationIds
     *
-    * @param string[]|null $relationIds 企业项目ID列表
+    * @param string[]|null $relationIds **参数解释** 企业项目ID列表。
     *
     * @return $this
     */
@@ -361,7 +361,7 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  资源分组的ID，如：rg1603786526428bWbVmk4rP。
+    *  **参数解释**： 资源分组ID。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。
     *
     * @return string|null
     */
@@ -373,7 +373,7 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 资源分组的ID，如：rg1603786526428bWbVmk4rP。
+    * @param string|null $groupId **参数解释**： 资源分组ID。  **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    *  **参数解释** 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。 **取值范围** 在[0,9223372036854775807]区间内
     *
     * @return int|null
     */
@@ -397,7 +397,7 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * @param int|null $createTime **参数解释** 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。 **取值范围** 在[0,9223372036854775807]区间内
     *
     * @return $this
     */
@@ -435,7 +435,7 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
     * Gets status
     *  status
     *
-    * @return \HuaweiCloud\SDK\Ces\V1\Model\StatusSchema|null
+    * @return \HuaweiCloud\SDK\Ces\V1\Model\StatusSchemaResp|null
     */
     public function getStatus()
     {
@@ -445,7 +445,7 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\StatusSchema|null $status status
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\StatusSchemaResp|null $status status
     *
     * @return $this
     */
@@ -457,7 +457,7 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
+    *  **参数解释** 资源分组归属企业项目ID。 **取值范围** 由数字、字母和-组成，或者为0（默认企业项目ID）。
     *
     * @return string|null
     */
@@ -469,7 +469,7 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
+    * @param string|null $enterpriseProjectId **参数解释** 资源分组归属企业项目ID。 **取值范围** 由数字、字母和-组成，或者为0（默认企业项目ID）。
     *
     * @return $this
     */
@@ -481,7 +481,7 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resources
-    *  一组或者多个资源信息，默认为空。
+    *  **参数解释** 一组或者多个资源信息，默认为空。
     *
     * @return \HuaweiCloud\SDK\Ces\V1\Model\Resource[]|null
     */
@@ -493,7 +493,7 @@ class ResourceGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\Resource[]|null $resources 一组或者多个资源信息，默认为空。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\Resource[]|null $resources **参数解释** 一组或者多个资源信息，默认为空。
     *
     * @return $this
     */

@@ -22,6 +22,7 @@ class ShowTtsAuditionFileResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * isFileComplete  试听文件是否已生成完成。该标记为false时，应该每隔5秒再次调用本接口获取试听文件。当存在该参数时，将会返回以下message和files两个字段信息
+    * code  返回码。
     * message  异常信息。
     * files  试听文件列表。
     *
@@ -29,6 +30,7 @@ class ShowTtsAuditionFileResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'isFileComplete' => 'bool',
+            'code' => 'string',
             'message' => 'string',
             'files' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AuditionFile[]'
     ];
@@ -36,6 +38,7 @@ class ShowTtsAuditionFileResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * isFileComplete  试听文件是否已生成完成。该标记为false时，应该每隔5秒再次调用本接口获取试听文件。当存在该参数时，将会返回以下message和files两个字段信息
+    * code  返回码。
     * message  异常信息。
     * files  试听文件列表。
     *
@@ -43,6 +46,7 @@ class ShowTtsAuditionFileResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'isFileComplete' => null,
+        'code' => null,
         'message' => null,
         'files' => null
     ];
@@ -71,6 +75,7 @@ class ShowTtsAuditionFileResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * isFileComplete  试听文件是否已生成完成。该标记为false时，应该每隔5秒再次调用本接口获取试听文件。当存在该参数时，将会返回以下message和files两个字段信息
+    * code  返回码。
     * message  异常信息。
     * files  试听文件列表。
     *
@@ -78,6 +83,7 @@ class ShowTtsAuditionFileResponse implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'isFileComplete' => 'is_file_complete',
+            'code' => 'code',
             'message' => 'message',
             'files' => 'files'
     ];
@@ -85,6 +91,7 @@ class ShowTtsAuditionFileResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * isFileComplete  试听文件是否已生成完成。该标记为false时，应该每隔5秒再次调用本接口获取试听文件。当存在该参数时，将会返回以下message和files两个字段信息
+    * code  返回码。
     * message  异常信息。
     * files  试听文件列表。
     *
@@ -92,6 +99,7 @@ class ShowTtsAuditionFileResponse implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'isFileComplete' => 'setIsFileComplete',
+            'code' => 'setCode',
             'message' => 'setMessage',
             'files' => 'setFiles'
     ];
@@ -99,6 +107,7 @@ class ShowTtsAuditionFileResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * isFileComplete  试听文件是否已生成完成。该标记为false时，应该每隔5秒再次调用本接口获取试听文件。当存在该参数时，将会返回以下message和files两个字段信息
+    * code  返回码。
     * message  异常信息。
     * files  试听文件列表。
     *
@@ -106,6 +115,7 @@ class ShowTtsAuditionFileResponse implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'isFileComplete' => 'getIsFileComplete',
+            'code' => 'getCode',
             'message' => 'getMessage',
             'files' => 'getFiles'
     ];
@@ -169,6 +179,7 @@ class ShowTtsAuditionFileResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['isFileComplete'] = isset($data['isFileComplete']) ? $data['isFileComplete'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
     }
@@ -181,6 +192,12 @@ class ShowTtsAuditionFileResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['code']) && (mb_strlen($this->container['code']) > 32)) {
+                $invalidProperties[] = "invalid value for 'code', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['code']) && (mb_strlen($this->container['code']) < 1)) {
+                $invalidProperties[] = "invalid value for 'code', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['message']) && (mb_strlen($this->container['message']) > 10240)) {
                 $invalidProperties[] = "invalid value for 'message', the character length must be smaller than or equal to 10240.";
             }
@@ -222,6 +239,30 @@ class ShowTtsAuditionFileResponse implements ModelInterface, ArrayAccess
     public function setIsFileComplete($isFileComplete)
     {
         $this->container['isFileComplete'] = $isFileComplete;
+        return $this;
+    }
+
+    /**
+    * Gets code
+    *  返回码。
+    *
+    * @return string|null
+    */
+    public function getCode()
+    {
+        return $this->container['code'];
+    }
+
+    /**
+    * Sets code
+    *
+    * @param string|null $code 返回码。
+    *
+    * @return $this
+    */
+    public function setCode($code)
+    {
+        $this->container['code'] = $code;
         return $this;
     }
 

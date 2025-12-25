@@ -2306,6 +2306,9 @@ class BssintlAsyncClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
+        if ($localVarParams['serviceTypeName'] !== null) {
+            $queryParams['service_type_name'] = $localVarParams['serviceTypeName'];
+        }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];
         }

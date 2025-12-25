@@ -20,11 +20,11 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupName  资源分组的名称；长度为1-128，只能包含0-9/a-z/A-Z/_/-或汉字；如：ResourceGroup-Test01。
-    * groupId  资源分组的ID，长度为1-128，只能包含0-9/a-z/A-Z；如：rg16063743652226ew93e64p。
-    * status  资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未配置告警规则
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    * groupName  **参数解释** 资源分组名称。 **约束限制** 不涉及。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。 **默认取值** 不涉及。
+    * groupId  **参数解释** 资源分组ID。 **约束限制** 不涉及。 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字。 **默认取值** 不涉及。
+    * status  **参数解释** 资源分组健康状态。 **约束限制** 不涉及。 **取值范围** - health: 表示健康 - unhealth: 表示不健康 - no_alarm_rule: 表示未配置告警规则 **默认取值** 不涉及。
+    * start  **参数解释** 分页起始值。 **约束限制** 不涉及。 **取值范围** 在[0,9999999]区间内。 **默认取值** 0
+    * limit  **参数解释** 单次查询的条数限制。 **约束限制** 不涉及。 **取值范围** 在[1,100]区间内。 **默认取值** 100
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupName  资源分组的名称；长度为1-128，只能包含0-9/a-z/A-Z/_/-或汉字；如：ResourceGroup-Test01。
-    * groupId  资源分组的ID，长度为1-128，只能包含0-9/a-z/A-Z；如：rg16063743652226ew93e64p。
-    * status  资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未配置告警规则
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    * groupName  **参数解释** 资源分组名称。 **约束限制** 不涉及。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。 **默认取值** 不涉及。
+    * groupId  **参数解释** 资源分组ID。 **约束限制** 不涉及。 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字。 **默认取值** 不涉及。
+    * status  **参数解释** 资源分组健康状态。 **约束限制** 不涉及。 **取值范围** - health: 表示健康 - unhealth: 表示不健康 - no_alarm_rule: 表示未配置告警规则 **默认取值** 不涉及。
+    * start  **参数解释** 分页起始值。 **约束限制** 不涉及。 **取值范围** 在[0,9999999]区间内。 **默认取值** 0
+    * limit  **参数解释** 单次查询的条数限制。 **约束限制** 不涉及。 **取值范围** 在[1,100]区间内。 **默认取值** 100
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupName  资源分组的名称；长度为1-128，只能包含0-9/a-z/A-Z/_/-或汉字；如：ResourceGroup-Test01。
-    * groupId  资源分组的ID，长度为1-128，只能包含0-9/a-z/A-Z；如：rg16063743652226ew93e64p。
-    * status  资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未配置告警规则
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    * groupName  **参数解释** 资源分组名称。 **约束限制** 不涉及。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。 **默认取值** 不涉及。
+    * groupId  **参数解释** 资源分组ID。 **约束限制** 不涉及。 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字。 **默认取值** 不涉及。
+    * status  **参数解释** 资源分组健康状态。 **约束限制** 不涉及。 **取值范围** - health: 表示健康 - unhealth: 表示不健康 - no_alarm_rule: 表示未配置告警规则 **默认取值** 不涉及。
+    * start  **参数解释** 分页起始值。 **约束限制** 不涉及。 **取值范围** 在[0,9999999]区间内。 **默认取值** 0
+    * limit  **参数解释** 单次查询的条数限制。 **约束限制** 不涉及。 **取值范围** 在[1,100]区间内。 **默认取值** 100
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupName  资源分组的名称；长度为1-128，只能包含0-9/a-z/A-Z/_/-或汉字；如：ResourceGroup-Test01。
-    * groupId  资源分组的ID，长度为1-128，只能包含0-9/a-z/A-Z；如：rg16063743652226ew93e64p。
-    * status  资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未配置告警规则
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    * groupName  **参数解释** 资源分组名称。 **约束限制** 不涉及。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。 **默认取值** 不涉及。
+    * groupId  **参数解释** 资源分组ID。 **约束限制** 不涉及。 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字。 **默认取值** 不涉及。
+    * status  **参数解释** 资源分组健康状态。 **约束限制** 不涉及。 **取值范围** - health: 表示健康 - unhealth: 表示不健康 - no_alarm_rule: 表示未配置告警规则 **默认取值** 不涉及。
+    * start  **参数解释** 分页起始值。 **约束限制** 不涉及。 **取值范围** 在[0,9999999]区间内。 **默认取值** 0
+    * limit  **参数解释** 单次查询的条数限制。 **约束限制** 不涉及。 **取值范围** 在[1,100]区间内。 **默认取值** 100
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupName  资源分组的名称；长度为1-128，只能包含0-9/a-z/A-Z/_/-或汉字；如：ResourceGroup-Test01。
-    * groupId  资源分组的ID，长度为1-128，只能包含0-9/a-z/A-Z；如：rg16063743652226ew93e64p。
-    * status  资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未配置告警规则
-    * start  分页起始值，类型为integer，默认值为0。
-    * limit  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    * groupName  **参数解释** 资源分组名称。 **约束限制** 不涉及。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。 **默认取值** 不涉及。
+    * groupId  **参数解释** 资源分组ID。 **约束限制** 不涉及。 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字。 **默认取值** 不涉及。
+    * status  **参数解释** 资源分组健康状态。 **约束限制** 不涉及。 **取值范围** - health: 表示健康 - unhealth: 表示不健康 - no_alarm_rule: 表示未配置告警规则 **默认取值** 不涉及。
+    * start  **参数解释** 分页起始值。 **约束限制** 不涉及。 **取值范围** 在[0,9999999]区间内。 **默认取值** 0
+    * limit  **参数解释** 单次查询的条数限制。 **约束限制** 不涉及。 **取值范围** 在[1,100]区间内。 **默认取值** 100
     *
     * @var string[]
     */
@@ -219,14 +219,8 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) > 128)) {
-                $invalidProperties[] = "invalid value for 'groupName', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'groupName', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['groupName']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['groupName'])) {
-                $invalidProperties[] = "invalid value for 'groupName', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
+            if (!is_null($this->container['groupName']) && !preg_match("/^([一-鿿]|[a-z]|[A-Z]|[0-9]|_|-){1,128}$/", $this->container['groupName'])) {
+                $invalidProperties[] = "invalid value for 'groupName', must be conform to the pattern /^([一-鿿]|[a-z]|[A-Z]|[0-9]|_|-){1,128}$/.";
             }
             if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 128.";
@@ -273,7 +267,7 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  资源分组的名称；长度为1-128，只能包含0-9/a-z/A-Z/_/-或汉字；如：ResourceGroup-Test01。
+    *  **参数解释** 资源分组名称。 **约束限制** 不涉及。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。 **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -285,7 +279,7 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName 资源分组的名称；长度为1-128，只能包含0-9/a-z/A-Z/_/-或汉字；如：ResourceGroup-Test01。
+    * @param string|null $groupName **参数解释** 资源分组名称。 **约束限制** 不涉及。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -297,7 +291,7 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  资源分组的ID，长度为1-128，只能包含0-9/a-z/A-Z；如：rg16063743652226ew93e64p。
+    *  **参数解释** 资源分组ID。 **约束限制** 不涉及。 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字。 **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -309,7 +303,7 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 资源分组的ID，长度为1-128，只能包含0-9/a-z/A-Z；如：rg16063743652226ew93e64p。
+    * @param string|null $groupId **参数解释** 资源分组ID。 **约束限制** 不涉及。 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -321,7 +315,7 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未配置告警规则
+    *  **参数解释** 资源分组健康状态。 **约束限制** 不涉及。 **取值范围** - health: 表示健康 - unhealth: 表示不健康 - no_alarm_rule: 表示未配置告警规则 **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -333,7 +327,7 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未配置告警规则
+    * @param string|null $status **参数解释** 资源分组健康状态。 **约束限制** 不涉及。 **取值范围** - health: 表示健康 - unhealth: 表示不健康 - no_alarm_rule: 表示未配置告警规则 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -345,7 +339,7 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets start
-    *  分页起始值，类型为integer，默认值为0。
+    *  **参数解释** 分页起始值。 **约束限制** 不涉及。 **取值范围** 在[0,9999999]区间内。 **默认取值** 0
     *
     * @return int|null
     */
@@ -357,7 +351,7 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets start
     *
-    * @param int|null $start 分页起始值，类型为integer，默认值为0。
+    * @param int|null $start **参数解释** 分页起始值。 **约束限制** 不涉及。 **取值范围** 在[0,9999999]区间内。 **默认取值** 0
     *
     * @return $this
     */
@@ -369,7 +363,7 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    *  **参数解释** 单次查询的条数限制。 **约束限制** 不涉及。 **取值范围** 在[1,100]区间内。 **默认取值** 100
     *
     * @return int|null
     */
@@ -381,7 +375,7 @@ class ListResourceGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+    * @param int|null $limit **参数解释** 单次查询的条数限制。 **约束限制** 不涉及。 **取值范围** 在[1,100]区间内。 **默认取值** 100
     *
     * @return $this
     */

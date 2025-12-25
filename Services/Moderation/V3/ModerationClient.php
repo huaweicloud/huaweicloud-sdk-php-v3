@@ -154,68 +154,6 @@ class ModerationClient extends Client
     }
 
     /**
-     * 关闭音频流内容审核作业
-     *
-     * 关闭音频流内容审核作业
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function runCloseAudioStreamModerationJob($request)
-    {
-        return $this->runCloseAudioStreamModerationJobWithHttpInfo($request);
-    }
-
-    public function runCloseAudioStreamModerationJobWithHttpInfo($request)
-    {
-        $resourcePath = '/v3/{project_id}/moderation/audio-stream/jobs/stop/{job_id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['jobId'] !== null) {
-            $pathParams['job_id'] = $localVarParams['jobId'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Moderation\V3\Model\RunCloseAudioStreamModerationJobResponse',
-            $requestType='\HuaweiCloud\SDK\Moderation\V3\Model\RunCloseAudioStreamModerationJobRequest');
-    }
-
-    /**
      * 创建音频内容审核作业
      *
      * 分析并识别用户上传的音频内容是否有敏感内容（如色情、政治等），并将识别结果返回给用户
@@ -275,68 +213,6 @@ class ModerationClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Moderation\V3\Model\RunCreateAudioModerationJobResponse',
             $requestType='\HuaweiCloud\SDK\Moderation\V3\Model\RunCreateAudioModerationJobRequest');
-    }
-
-    /**
-     * 创建音频流内容审核作业
-     *
-     * 创建音频流内容审核作业，创建成功会将作业ID返回给用户
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function runCreateAudioStreamModerationJob($request)
-    {
-        return $this->runCreateAudioStreamModerationJobWithHttpInfo($request);
-    }
-
-    public function runCreateAudioStreamModerationJobWithHttpInfo($request)
-    {
-        $resourcePath = '/v3/{project_id}/moderation/audio-stream/jobs';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Moderation\V3\Model\RunCreateAudioStreamModerationJobResponse',
-            $requestType='\HuaweiCloud\SDK\Moderation\V3\Model\RunCreateAudioStreamModerationJobRequest');
     }
 
     /**

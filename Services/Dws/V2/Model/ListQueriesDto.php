@@ -70,7 +70,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     * maxPeakIops  **参数解释**： 语句在所有dn上的每秒最大io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
     * minPeakIops  **参数解释**： 语句在所有dn上的每秒最小io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
     * queryPlan  **参数解释**： 查询计划。 **取值范围**： 不涉及。
-    * queryStatus  **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： active、idle、idle in transaction、idle in transaction(aborted)、fastpath function call、disabled。
+    * queryStatus  **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： - active：后台正在执行一个查询。 - idle：后台正在等待一个新的客户端命令。 - idle in transaction：后台在事务中，但是目前无法执行查询。 - idle in transaction (aborted)：这个状态除说明事务中有某个语句导致了错误外，类似于idle in transaction - fastpath function call：后台正在执行一个fast-path函数。 - disabled：如果后台禁用track_activities，则报告这个状态。
     * wlmStatus  **参数解释**： 当前查询语句在资源池上的运行状态。 **取值范围**： pending：待生效。 running：运行中。 finished：结束。 aborted：终止。 active：正常。 unknown：未知。
     * wlmAttrib  **参数解释**： 语句的属性。 **取值范围**： ordinary：普通。 simple：简单。 complicated：复杂。 internal：内部。
     * systemQuery  **参数解释**： 是否系统查询。 **取值范围**： 不涉及。
@@ -198,7 +198,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     * maxPeakIops  **参数解释**： 语句在所有dn上的每秒最大io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
     * minPeakIops  **参数解释**： 语句在所有dn上的每秒最小io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
     * queryPlan  **参数解释**： 查询计划。 **取值范围**： 不涉及。
-    * queryStatus  **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： active、idle、idle in transaction、idle in transaction(aborted)、fastpath function call、disabled。
+    * queryStatus  **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： - active：后台正在执行一个查询。 - idle：后台正在等待一个新的客户端命令。 - idle in transaction：后台在事务中，但是目前无法执行查询。 - idle in transaction (aborted)：这个状态除说明事务中有某个语句导致了错误外，类似于idle in transaction - fastpath function call：后台正在执行一个fast-path函数。 - disabled：如果后台禁用track_activities，则报告这个状态。
     * wlmStatus  **参数解释**： 当前查询语句在资源池上的运行状态。 **取值范围**： pending：待生效。 running：运行中。 finished：结束。 aborted：终止。 active：正常。 unknown：未知。
     * wlmAttrib  **参数解释**： 语句的属性。 **取值范围**： ordinary：普通。 simple：简单。 complicated：复杂。 internal：内部。
     * systemQuery  **参数解释**： 是否系统查询。 **取值范围**： 不涉及。
@@ -347,7 +347,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     * maxPeakIops  **参数解释**： 语句在所有dn上的每秒最大io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
     * minPeakIops  **参数解释**： 语句在所有dn上的每秒最小io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
     * queryPlan  **参数解释**： 查询计划。 **取值范围**： 不涉及。
-    * queryStatus  **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： active、idle、idle in transaction、idle in transaction(aborted)、fastpath function call、disabled。
+    * queryStatus  **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： - active：后台正在执行一个查询。 - idle：后台正在等待一个新的客户端命令。 - idle in transaction：后台在事务中，但是目前无法执行查询。 - idle in transaction (aborted)：这个状态除说明事务中有某个语句导致了错误外，类似于idle in transaction - fastpath function call：后台正在执行一个fast-path函数。 - disabled：如果后台禁用track_activities，则报告这个状态。
     * wlmStatus  **参数解释**： 当前查询语句在资源池上的运行状态。 **取值范围**： pending：待生效。 running：运行中。 finished：结束。 aborted：终止。 active：正常。 unknown：未知。
     * wlmAttrib  **参数解释**： 语句的属性。 **取值范围**： ordinary：普通。 simple：简单。 complicated：复杂。 internal：内部。
     * systemQuery  **参数解释**： 是否系统查询。 **取值范围**： 不涉及。
@@ -475,7 +475,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     * maxPeakIops  **参数解释**： 语句在所有dn上的每秒最大io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
     * minPeakIops  **参数解释**： 语句在所有dn上的每秒最小io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
     * queryPlan  **参数解释**： 查询计划。 **取值范围**： 不涉及。
-    * queryStatus  **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： active、idle、idle in transaction、idle in transaction(aborted)、fastpath function call、disabled。
+    * queryStatus  **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： - active：后台正在执行一个查询。 - idle：后台正在等待一个新的客户端命令。 - idle in transaction：后台在事务中，但是目前无法执行查询。 - idle in transaction (aborted)：这个状态除说明事务中有某个语句导致了错误外，类似于idle in transaction - fastpath function call：后台正在执行一个fast-path函数。 - disabled：如果后台禁用track_activities，则报告这个状态。
     * wlmStatus  **参数解释**： 当前查询语句在资源池上的运行状态。 **取值范围**： pending：待生效。 running：运行中。 finished：结束。 aborted：终止。 active：正常。 unknown：未知。
     * wlmAttrib  **参数解释**： 语句的属性。 **取值范围**： ordinary：普通。 simple：简单。 complicated：复杂。 internal：内部。
     * systemQuery  **参数解释**： 是否系统查询。 **取值范围**： 不涉及。
@@ -603,7 +603,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     * maxPeakIops  **参数解释**： 语句在所有dn上的每秒最大io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
     * minPeakIops  **参数解释**： 语句在所有dn上的每秒最小io峰值（列存单位是次/s，行存单位是万次/s）。 **取值范围**： 不涉及。
     * queryPlan  **参数解释**： 查询计划。 **取值范围**： 不涉及。
-    * queryStatus  **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： active、idle、idle in transaction、idle in transaction(aborted)、fastpath function call、disabled。
+    * queryStatus  **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： - active：后台正在执行一个查询。 - idle：后台正在等待一个新的客户端命令。 - idle in transaction：后台在事务中，但是目前无法执行查询。 - idle in transaction (aborted)：这个状态除说明事务中有某个语句导致了错误外，类似于idle in transaction - fastpath function call：后台正在执行一个fast-path函数。 - disabled：如果后台禁用track_activities，则报告这个状态。
     * wlmStatus  **参数解释**： 当前查询语句在资源池上的运行状态。 **取值范围**： pending：待生效。 running：运行中。 finished：结束。 aborted：终止。 active：正常。 unknown：未知。
     * wlmAttrib  **参数解释**： 语句的属性。 **取值范围**： ordinary：普通。 simple：简单。 complicated：复杂。 internal：内部。
     * systemQuery  **参数解释**： 是否系统查询。 **取值范围**： 不涉及。
@@ -2023,7 +2023,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets queryStatus
-    *  **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： active、idle、idle in transaction、idle in transaction(aborted)、fastpath function call、disabled。
+    *  **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： - active：后台正在执行一个查询。 - idle：后台正在等待一个新的客户端命令。 - idle in transaction：后台在事务中，但是目前无法执行查询。 - idle in transaction (aborted)：这个状态除说明事务中有某个语句导致了错误外，类似于idle in transaction - fastpath function call：后台正在执行一个fast-path函数。 - disabled：如果后台禁用track_activities，则报告这个状态。
     *
     * @return string|null
     */
@@ -2035,7 +2035,7 @@ class ListQueriesDto implements ModelInterface, ArrayAccess
     /**
     * Sets queryStatus
     *
-    * @param string|null $queryStatus **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： active、idle、idle in transaction、idle in transaction(aborted)、fastpath function call、disabled。
+    * @param string|null $queryStatus **参数解释**： 当前查询语句的实时运行状态。 **取值范围**： - active：后台正在执行一个查询。 - idle：后台正在等待一个新的客户端命令。 - idle in transaction：后台在事务中，但是目前无法执行查询。 - idle in transaction (aborted)：这个状态除说明事务中有某个语句导致了错误外，类似于idle in transaction - fastpath function call：后台正在执行一个fast-path函数。 - disabled：如果后台禁用track_activities，则报告这个状态。
     *
     * @return $this
     */

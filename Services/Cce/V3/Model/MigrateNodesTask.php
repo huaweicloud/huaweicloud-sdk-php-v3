@@ -23,15 +23,13 @@ class MigrateNodesTask implements ModelInterface, ArrayAccess
     * apiVersion  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
     * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： MigrateNodesTask
     * spec  spec
-    * status  status
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'apiVersion' => 'string',
             'kind' => 'string',
-            'spec' => '\HuaweiCloud\SDK\Cce\V3\Model\MigrateNodesSpec',
-            'status' => '\HuaweiCloud\SDK\Cce\V3\Model\TaskStatus'
+            'spec' => '\HuaweiCloud\SDK\Cce\V3\Model\MigrateNodesSpec'
     ];
 
     /**
@@ -39,15 +37,13 @@ class MigrateNodesTask implements ModelInterface, ArrayAccess
     * apiVersion  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
     * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： MigrateNodesTask
     * spec  spec
-    * status  status
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'apiVersion' => null,
         'kind' => null,
-        'spec' => null,
-        'status' => null
+        'spec' => null
     ];
 
     /**
@@ -76,15 +72,13 @@ class MigrateNodesTask implements ModelInterface, ArrayAccess
     * apiVersion  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
     * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： MigrateNodesTask
     * spec  spec
-    * status  status
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'apiVersion' => 'apiVersion',
             'kind' => 'kind',
-            'spec' => 'spec',
-            'status' => 'status'
+            'spec' => 'spec'
     ];
 
     /**
@@ -92,15 +86,13 @@ class MigrateNodesTask implements ModelInterface, ArrayAccess
     * apiVersion  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
     * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： MigrateNodesTask
     * spec  spec
-    * status  status
     *
     * @var string[]
     */
     protected static $setters = [
             'apiVersion' => 'setApiVersion',
             'kind' => 'setKind',
-            'spec' => 'setSpec',
-            'status' => 'setStatus'
+            'spec' => 'setSpec'
     ];
 
     /**
@@ -108,15 +100,13 @@ class MigrateNodesTask implements ModelInterface, ArrayAccess
     * apiVersion  **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
     * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： MigrateNodesTask
     * spec  spec
-    * status  status
     *
     * @var string[]
     */
     protected static $getters = [
             'apiVersion' => 'getApiVersion',
             'kind' => 'getKind',
-            'spec' => 'getSpec',
-            'status' => 'getStatus'
+            'spec' => 'getSpec'
     ];
 
     /**
@@ -180,7 +170,6 @@ class MigrateNodesTask implements ModelInterface, ArrayAccess
         $this->container['apiVersion'] = isset($data['apiVersion']) ? $data['apiVersion'] : null;
         $this->container['kind'] = isset($data['kind']) ? $data['kind'] : null;
         $this->container['spec'] = isset($data['spec']) ? $data['spec'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -277,30 +266,6 @@ class MigrateNodesTask implements ModelInterface, ArrayAccess
     public function setSpec($spec)
     {
         $this->container['spec'] = $spec;
-        return $this;
-    }
-
-    /**
-    * Gets status
-    *  status
-    *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\TaskStatus|null
-    */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-    * Sets status
-    *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\TaskStatus|null $status status
-    *
-    * @return $this
-    */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
         return $this;
     }
 

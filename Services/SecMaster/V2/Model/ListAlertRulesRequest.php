@@ -20,16 +20,14 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workspaceId  工作空间 ID。Workspace ID.
-    * offset  偏移量。Offset.
-    * limit  条数。Limit.
-    * sortKey  排序字段。Sort key
-    * sortDir  排序顺序，顺序、逆序。Sort direction, asc, desc。
-    * pipeId  数据管道 ID。Pipe ID.
-    * ruleName  告警规则名称。Alert rule name.
-    * ruleId  告警规则 ID。Alert rule ID.
-    * status  启用状态，启用、停用。Status, enabled, disabled.
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+    * workspaceId  工作空间ID
+    * offset  **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * limit  **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
+    * sortKey  按照属性排序。
+    * sortDir  排序顺序，支持 `ASC` 或 `DESC`。
+    * outputTableId  输出表 ID
+    * alertRuleName  告警规则名称
+    * alertRuleId  告警规则 ID
     *
     * @var string[]
     */
@@ -39,25 +37,21 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
             'limit' => 'int',
             'sortKey' => 'string',
             'sortDir' => 'string',
-            'pipeId' => 'string',
-            'ruleName' => 'string',
-            'ruleId' => 'string',
-            'status' => 'string[]',
-            'severity' => 'string[]'
+            'outputTableId' => 'string',
+            'alertRuleName' => 'string',
+            'alertRuleId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workspaceId  工作空间 ID。Workspace ID.
-    * offset  偏移量。Offset.
-    * limit  条数。Limit.
-    * sortKey  排序字段。Sort key
-    * sortDir  排序顺序，顺序、逆序。Sort direction, asc, desc。
-    * pipeId  数据管道 ID。Pipe ID.
-    * ruleName  告警规则名称。Alert rule name.
-    * ruleId  告警规则 ID。Alert rule ID.
-    * status  启用状态，启用、停用。Status, enabled, disabled.
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+    * workspaceId  工作空间ID
+    * offset  **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * limit  **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
+    * sortKey  按照属性排序。
+    * sortDir  排序顺序，支持 `ASC` 或 `DESC`。
+    * outputTableId  输出表 ID
+    * alertRuleName  告警规则名称
+    * alertRuleId  告警规则 ID
     *
     * @var string[]
     */
@@ -67,11 +61,9 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
         'limit' => 'int64',
         'sortKey' => null,
         'sortDir' => null,
-        'pipeId' => null,
-        'ruleName' => null,
-        'ruleId' => null,
-        'status' => null,
-        'severity' => null
+        'outputTableId' => null,
+        'alertRuleName' => null,
+        'alertRuleId' => null
     ];
 
     /**
@@ -97,16 +89,14 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workspaceId  工作空间 ID。Workspace ID.
-    * offset  偏移量。Offset.
-    * limit  条数。Limit.
-    * sortKey  排序字段。Sort key
-    * sortDir  排序顺序，顺序、逆序。Sort direction, asc, desc。
-    * pipeId  数据管道 ID。Pipe ID.
-    * ruleName  告警规则名称。Alert rule name.
-    * ruleId  告警规则 ID。Alert rule ID.
-    * status  启用状态，启用、停用。Status, enabled, disabled.
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+    * workspaceId  工作空间ID
+    * offset  **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * limit  **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
+    * sortKey  按照属性排序。
+    * sortDir  排序顺序，支持 `ASC` 或 `DESC`。
+    * outputTableId  输出表 ID
+    * alertRuleName  告警规则名称
+    * alertRuleId  告警规则 ID
     *
     * @var string[]
     */
@@ -116,25 +106,21 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
             'limit' => 'limit',
             'sortKey' => 'sort_key',
             'sortDir' => 'sort_dir',
-            'pipeId' => 'pipe_id',
-            'ruleName' => 'rule_name',
-            'ruleId' => 'rule_id',
-            'status' => 'status',
-            'severity' => 'severity'
+            'outputTableId' => 'output_table_id',
+            'alertRuleName' => 'alert_rule_name',
+            'alertRuleId' => 'alert_rule_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workspaceId  工作空间 ID。Workspace ID.
-    * offset  偏移量。Offset.
-    * limit  条数。Limit.
-    * sortKey  排序字段。Sort key
-    * sortDir  排序顺序，顺序、逆序。Sort direction, asc, desc。
-    * pipeId  数据管道 ID。Pipe ID.
-    * ruleName  告警规则名称。Alert rule name.
-    * ruleId  告警规则 ID。Alert rule ID.
-    * status  启用状态，启用、停用。Status, enabled, disabled.
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+    * workspaceId  工作空间ID
+    * offset  **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * limit  **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
+    * sortKey  按照属性排序。
+    * sortDir  排序顺序，支持 `ASC` 或 `DESC`。
+    * outputTableId  输出表 ID
+    * alertRuleName  告警规则名称
+    * alertRuleId  告警规则 ID
     *
     * @var string[]
     */
@@ -144,25 +130,21 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
             'limit' => 'setLimit',
             'sortKey' => 'setSortKey',
             'sortDir' => 'setSortDir',
-            'pipeId' => 'setPipeId',
-            'ruleName' => 'setRuleName',
-            'ruleId' => 'setRuleId',
-            'status' => 'setStatus',
-            'severity' => 'setSeverity'
+            'outputTableId' => 'setOutputTableId',
+            'alertRuleName' => 'setAlertRuleName',
+            'alertRuleId' => 'setAlertRuleId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workspaceId  工作空间 ID。Workspace ID.
-    * offset  偏移量。Offset.
-    * limit  条数。Limit.
-    * sortKey  排序字段。Sort key
-    * sortDir  排序顺序，顺序、逆序。Sort direction, asc, desc。
-    * pipeId  数据管道 ID。Pipe ID.
-    * ruleName  告警规则名称。Alert rule name.
-    * ruleId  告警规则 ID。Alert rule ID.
-    * status  启用状态，启用、停用。Status, enabled, disabled.
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+    * workspaceId  工作空间ID
+    * offset  **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * limit  **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
+    * sortKey  按照属性排序。
+    * sortDir  排序顺序，支持 `ASC` 或 `DESC`。
+    * outputTableId  输出表 ID
+    * alertRuleName  告警规则名称
+    * alertRuleId  告警规则 ID
     *
     * @var string[]
     */
@@ -172,11 +154,9 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
             'limit' => 'getLimit',
             'sortKey' => 'getSortKey',
             'sortDir' => 'getSortDir',
-            'pipeId' => 'getPipeId',
-            'ruleName' => 'getRuleName',
-            'ruleId' => 'getRuleId',
-            'status' => 'getStatus',
-            'severity' => 'getSeverity'
+            'outputTableId' => 'getOutputTableId',
+            'alertRuleName' => 'getAlertRuleName',
+            'alertRuleId' => 'getAlertRuleId'
     ];
 
     /**
@@ -219,58 +199,7 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const SORT_DIR_ASC = 'asc';
-    const SORT_DIR_DESC = 'desc';
-    const STATUS_ENABLED = 'ENABLED';
-    const STATUS_DISABLED = 'DISABLED';
-    const SEVERITY_TIPS = 'TIPS';
-    const SEVERITY_LOW = 'LOW';
-    const SEVERITY_MEDIUM = 'MEDIUM';
-    const SEVERITY_HIGH = 'HIGH';
-    const SEVERITY_FATAL = 'FATAL';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getSortDirAllowableValues()
-    {
-        return [
-            self::SORT_DIR_ASC,
-            self::SORT_DIR_DESC,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_ENABLED,
-            self::STATUS_DISABLED,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getSeverityAllowableValues()
-    {
-        return [
-            self::SEVERITY_TIPS,
-            self::SEVERITY_LOW,
-            self::SEVERITY_MEDIUM,
-            self::SEVERITY_HIGH,
-            self::SEVERITY_FATAL,
-        ];
-    }
 
 
     /**
@@ -293,11 +222,9 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
-        $this->container['pipeId'] = isset($data['pipeId']) ? $data['pipeId'] : null;
-        $this->container['ruleName'] = isset($data['ruleName']) ? $data['ruleName'] : null;
-        $this->container['ruleId'] = isset($data['ruleId']) ? $data['ruleId'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['severity'] = isset($data['severity']) ? $data['severity'] : null;
+        $this->container['outputTableId'] = isset($data['outputTableId']) ? $data['outputTableId'] : null;
+        $this->container['alertRuleName'] = isset($data['alertRuleName']) ? $data['alertRuleName'] : null;
+        $this->container['alertRuleId'] = isset($data['alertRuleId']) ? $data['alertRuleId'] : null;
     }
 
     /**
@@ -314,58 +241,50 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['workspaceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'workspaceId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['workspaceId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'workspaceId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['workspaceId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'workspaceId', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['offset'] === null) {
-            $invalidProperties[] = "'offset' can't be null";
-        }
-            if (($this->container['offset'] > 9223372036854775807)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 9223372036854775807.";
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 9223372036854775800)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 9223372036854775800.";
             }
-            if (($this->container['offset'] < 0)) {
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
-        if ($this->container['limit'] === null) {
-            $invalidProperties[] = "'limit' can't be null";
-        }
-            if (($this->container['limit'] > 50)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 50.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
             }
-            if (($this->container['limit'] < 10)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) > 256)) {
-                $invalidProperties[] = "invalid value for 'sortKey', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) > 64)) {
+                $invalidProperties[] = "invalid value for 'sortKey', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) < 1)) {
                 $invalidProperties[] = "invalid value for 'sortKey', the character length must be bigger than or equal to 1.";
             }
-            $allowedValues = $this->getSortDirAllowableValues();
-                if (!is_null($this->container['sortDir']) && !in_array($this->container['sortDir'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'sortDir', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if (!is_null($this->container['sortDir']) && (mb_strlen($this->container['sortDir']) > 64)) {
+                $invalidProperties[] = "invalid value for 'sortDir', the character length must be smaller than or equal to 64.";
             }
-
-            if (!is_null($this->container['pipeId']) && (mb_strlen($this->container['pipeId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'pipeId', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['sortDir']) && (mb_strlen($this->container['sortDir']) < 1)) {
+                $invalidProperties[] = "invalid value for 'sortDir', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['pipeId']) && (mb_strlen($this->container['pipeId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'pipeId', the character length must be bigger than or equal to 36.";
+            if (!is_null($this->container['outputTableId']) && (mb_strlen($this->container['outputTableId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'outputTableId', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['ruleName']) && (mb_strlen($this->container['ruleName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'ruleName', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['outputTableId']) && (mb_strlen($this->container['outputTableId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'outputTableId', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['ruleName']) && (mb_strlen($this->container['ruleName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'ruleName', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['alertRuleName']) && (mb_strlen($this->container['alertRuleName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'alertRuleName', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['ruleId']) && (mb_strlen($this->container['ruleId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'ruleId', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['alertRuleName']) && (mb_strlen($this->container['alertRuleName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'alertRuleName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['ruleId']) && (mb_strlen($this->container['ruleId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'ruleId', the character length must be bigger than or equal to 36.";
+            if (!is_null($this->container['alertRuleId']) && (mb_strlen($this->container['alertRuleId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'alertRuleId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['alertRuleId']) && (mb_strlen($this->container['alertRuleId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'alertRuleId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -383,7 +302,7 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspaceId
-    *  工作空间 ID。Workspace ID.
+    *  工作空间ID
     *
     * @return string
     */
@@ -395,7 +314,7 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets workspaceId
     *
-    * @param string $workspaceId 工作空间 ID。Workspace ID.
+    * @param string $workspaceId 工作空间ID
     *
     * @return $this
     */
@@ -407,9 +326,9 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量。Offset.
+    *  **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
-    * @return int
+    * @return int|null
     */
     public function getOffset()
     {
@@ -419,7 +338,7 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int $offset 偏移量。Offset.
+    * @param int|null $offset **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -431,9 +350,9 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  条数。Limit.
+    *  **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
     *
-    * @return int
+    * @return int|null
     */
     public function getLimit()
     {
@@ -443,7 +362,7 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int $limit 条数。Limit.
+    * @param int|null $limit **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -455,7 +374,7 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
-    *  排序字段。Sort key
+    *  按照属性排序。
     *
     * @return string|null
     */
@@ -467,7 +386,7 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 排序字段。Sort key
+    * @param string|null $sortKey 按照属性排序。
     *
     * @return $this
     */
@@ -479,7 +398,7 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortDir
-    *  排序顺序，顺序、逆序。Sort direction, asc, desc。
+    *  排序顺序，支持 `ASC` 或 `DESC`。
     *
     * @return string|null
     */
@@ -491,7 +410,7 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortDir
     *
-    * @param string|null $sortDir 排序顺序，顺序、逆序。Sort direction, asc, desc。
+    * @param string|null $sortDir 排序顺序，支持 `ASC` 或 `DESC`。
     *
     * @return $this
     */
@@ -502,122 +421,74 @@ class ListAlertRulesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets pipeId
-    *  数据管道 ID。Pipe ID.
+    * Gets outputTableId
+    *  输出表 ID
     *
     * @return string|null
     */
-    public function getPipeId()
+    public function getOutputTableId()
     {
-        return $this->container['pipeId'];
+        return $this->container['outputTableId'];
     }
 
     /**
-    * Sets pipeId
+    * Sets outputTableId
     *
-    * @param string|null $pipeId 数据管道 ID。Pipe ID.
+    * @param string|null $outputTableId 输出表 ID
     *
     * @return $this
     */
-    public function setPipeId($pipeId)
+    public function setOutputTableId($outputTableId)
     {
-        $this->container['pipeId'] = $pipeId;
+        $this->container['outputTableId'] = $outputTableId;
         return $this;
     }
 
     /**
-    * Gets ruleName
-    *  告警规则名称。Alert rule name.
+    * Gets alertRuleName
+    *  告警规则名称
     *
     * @return string|null
     */
-    public function getRuleName()
+    public function getAlertRuleName()
     {
-        return $this->container['ruleName'];
+        return $this->container['alertRuleName'];
     }
 
     /**
-    * Sets ruleName
+    * Sets alertRuleName
     *
-    * @param string|null $ruleName 告警规则名称。Alert rule name.
+    * @param string|null $alertRuleName 告警规则名称
     *
     * @return $this
     */
-    public function setRuleName($ruleName)
+    public function setAlertRuleName($alertRuleName)
     {
-        $this->container['ruleName'] = $ruleName;
+        $this->container['alertRuleName'] = $alertRuleName;
         return $this;
     }
 
     /**
-    * Gets ruleId
-    *  告警规则 ID。Alert rule ID.
+    * Gets alertRuleId
+    *  告警规则 ID
     *
     * @return string|null
     */
-    public function getRuleId()
+    public function getAlertRuleId()
     {
-        return $this->container['ruleId'];
+        return $this->container['alertRuleId'];
     }
 
     /**
-    * Sets ruleId
+    * Sets alertRuleId
     *
-    * @param string|null $ruleId 告警规则 ID。Alert rule ID.
+    * @param string|null $alertRuleId 告警规则 ID
     *
     * @return $this
     */
-    public function setRuleId($ruleId)
+    public function setAlertRuleId($alertRuleId)
     {
-        $this->container['ruleId'] = $ruleId;
-        return $this;
-    }
-
-    /**
-    * Gets status
-    *  启用状态，启用、停用。Status, enabled, disabled.
-    *
-    * @return string[]|null
-    */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-    * Sets status
-    *
-    * @param string[]|null $status 启用状态，启用、停用。Status, enabled, disabled.
-    *
-    * @return $this
-    */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
-        return $this;
-    }
-
-    /**
-    * Gets severity
-    *  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    *
-    * @return string[]|null
-    */
-    public function getSeverity()
-    {
-        return $this->container['severity'];
-    }
-
-    /**
-    * Sets severity
-    *
-    * @param string[]|null $severity 严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    *
-    * @return $this
-    */
-    public function setSeverity($severity)
-    {
-        $this->container['severity'] = $severity;
+        $this->container['alertRuleId'] = $alertRuleId;
         return $this;
     }
 

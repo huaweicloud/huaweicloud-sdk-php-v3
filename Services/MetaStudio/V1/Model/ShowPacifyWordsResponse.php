@@ -253,8 +253,8 @@ class ShowPacifyWordsResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['pacifyWordsId']) && (mb_strlen($this->container['pacifyWordsId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'pacifyWordsId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['pacifyWords']) && (mb_strlen($this->container['pacifyWords']) > 64)) {
-                $invalidProperties[] = "invalid value for 'pacifyWords', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['pacifyWords']) && (mb_strlen($this->container['pacifyWords']) > 512)) {
+                $invalidProperties[] = "invalid value for 'pacifyWords', the character length must be smaller than or equal to 512.";
             }
             if (!is_null($this->container['pacifyWords']) && (mb_strlen($this->container['pacifyWords']) < 1)) {
                 $invalidProperties[] = "invalid value for 'pacifyWords', the character length must be bigger than or equal to 1.";

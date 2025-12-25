@@ -20,7 +20,7 @@ class FlavorVolumeNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： 不涉及。
+    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： - SATA：普通IO。 - SAS：高IO。 - SSD：超高IO。 - ESSD：极速型SSD。 - GPSSD：通用型SSD。
     * volumeNum  **参数解释**： 节点使用的磁盘数量。 **取值范围**： 不涉及。
     * capacity  **参数解释**： 节点去除副本后的有效容量。 **取值范围**： 不涉及。
     * volumeSize  **参数解释**： 节点存的单盘容量。 **取值范围**： 不涉及。
@@ -36,7 +36,7 @@ class FlavorVolumeNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： 不涉及。
+    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： - SATA：普通IO。 - SAS：高IO。 - SSD：超高IO。 - ESSD：极速型SSD。 - GPSSD：通用型SSD。
     * volumeNum  **参数解释**： 节点使用的磁盘数量。 **取值范围**： 不涉及。
     * capacity  **参数解释**： 节点去除副本后的有效容量。 **取值范围**： 不涉及。
     * volumeSize  **参数解释**： 节点存的单盘容量。 **取值范围**： 不涉及。
@@ -73,7 +73,7 @@ class FlavorVolumeNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： 不涉及。
+    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： - SATA：普通IO。 - SAS：高IO。 - SSD：超高IO。 - ESSD：极速型SSD。 - GPSSD：通用型SSD。
     * volumeNum  **参数解释**： 节点使用的磁盘数量。 **取值范围**： 不涉及。
     * capacity  **参数解释**： 节点去除副本后的有效容量。 **取值范围**： 不涉及。
     * volumeSize  **参数解释**： 节点存的单盘容量。 **取值范围**： 不涉及。
@@ -89,7 +89,7 @@ class FlavorVolumeNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： 不涉及。
+    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： - SATA：普通IO。 - SAS：高IO。 - SSD：超高IO。 - ESSD：极速型SSD。 - GPSSD：通用型SSD。
     * volumeNum  **参数解释**： 节点使用的磁盘数量。 **取值范围**： 不涉及。
     * capacity  **参数解释**： 节点去除副本后的有效容量。 **取值范围**： 不涉及。
     * volumeSize  **参数解释**： 节点存的单盘容量。 **取值范围**： 不涉及。
@@ -105,7 +105,7 @@ class FlavorVolumeNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： 不涉及。
+    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： - SATA：普通IO。 - SAS：高IO。 - SSD：超高IO。 - ESSD：极速型SSD。 - GPSSD：通用型SSD。
     * volumeNum  **参数解释**： 节点使用的磁盘数量。 **取值范围**： 不涉及。
     * capacity  **参数解释**： 节点去除副本后的有效容量。 **取值范围**： 不涉及。
     * volumeSize  **参数解释**： 节点存的单盘容量。 **取值范围**： 不涉及。
@@ -219,7 +219,7 @@ class FlavorVolumeNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeType
-    *  **参数解释**： 节点使用存储类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 节点使用存储类型。 **取值范围**： - SATA：普通IO。 - SAS：高IO。 - SSD：超高IO。 - ESSD：极速型SSD。 - GPSSD：通用型SSD。
     *
     * @return string
     */
@@ -231,7 +231,7 @@ class FlavorVolumeNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets volumeType
     *
-    * @param string $volumeType **参数解释**： 节点使用存储类型。 **取值范围**： 不涉及。
+    * @param string $volumeType **参数解释**： 节点使用存储类型。 **取值范围**： - SATA：普通IO。 - SAS：高IO。 - SSD：超高IO。 - ESSD：极速型SSD。 - GPSSD：通用型SSD。
     *
     * @return $this
     */

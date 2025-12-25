@@ -20,37 +20,37 @@ class ListVulScanTaskHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskId  任务ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * limit  每页显示个数
-    * offset  偏移量：指定返回记录的开始位置
-    * scanStatus  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * taskId  **参数解释**: 漏洞扫描任务id **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * scanStatus  **参数解释**: 漏洞扫描任务的状态 **约束限制**: 不涉及 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'taskId' => 'string',
             'enterpriseProjectId' => 'string',
             'limit' => 'int',
             'offset' => 'int',
+            'taskId' => 'string',
             'scanStatus' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskId  任务ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * limit  每页显示个数
-    * offset  偏移量：指定返回记录的开始位置
-    * scanStatus  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * taskId  **参数解释**: 漏洞扫描任务id **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * scanStatus  **参数解释**: 漏洞扫描任务的状态 **约束限制**: 不涉及 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'taskId' => null,
         'enterpriseProjectId' => null,
         'limit' => 'int32',
         'offset' => 'int32',
+        'taskId' => null,
         'scanStatus' => null
     ];
 
@@ -77,55 +77,55 @@ class ListVulScanTaskHostRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskId  任务ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * limit  每页显示个数
-    * offset  偏移量：指定返回记录的开始位置
-    * scanStatus  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * taskId  **参数解释**: 漏洞扫描任务id **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * scanStatus  **参数解释**: 漏洞扫描任务的状态 **约束限制**: 不涉及 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'taskId' => 'task_id',
             'enterpriseProjectId' => 'enterprise_project_id',
             'limit' => 'limit',
             'offset' => 'offset',
+            'taskId' => 'task_id',
             'scanStatus' => 'scan_status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskId  任务ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * limit  每页显示个数
-    * offset  偏移量：指定返回记录的开始位置
-    * scanStatus  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * taskId  **参数解释**: 漏洞扫描任务id **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * scanStatus  **参数解释**: 漏洞扫描任务的状态 **约束限制**: 不涉及 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
-            'taskId' => 'setTaskId',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
+            'taskId' => 'setTaskId',
             'scanStatus' => 'setScanStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskId  任务ID
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * limit  每页显示个数
-    * offset  偏移量：指定返回记录的开始位置
-    * scanStatus  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * taskId  **参数解释**: 漏洞扫描任务id **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * scanStatus  **参数解释**: 漏洞扫描任务的状态 **约束限制**: 不涉及 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败  **默认取值**: 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
-            'taskId' => 'getTaskId',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
+            'taskId' => 'getTaskId',
             'scanStatus' => 'getScanStatus'
     ];
 
@@ -187,10 +187,10 @@ class ListVulScanTaskHostRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
         $this->container['scanStatus'] = isset($data['scanStatus']) ? $data['scanStatus'] : null;
     }
 
@@ -202,6 +202,27 @@ class ListVulScanTaskHostRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^.*$/", $this->container['enterpriseProjectId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2000000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2000000.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
         if ($this->container['taskId'] === null) {
             $invalidProperties[] = "'taskId' can't be null";
         }
@@ -210,24 +231,6 @@ class ListVulScanTaskHostRequest implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['taskId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'taskId', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 256)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2000000)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2000000.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
-                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['scanStatus']) && (mb_strlen($this->container['scanStatus']) > 32)) {
                 $invalidProperties[] = "invalid value for 'scanStatus', the character length must be smaller than or equal to 32.";
@@ -250,32 +253,8 @@ class ListVulScanTaskHostRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets taskId
-    *  任务ID
-    *
-    * @return string
-    */
-    public function getTaskId()
-    {
-        return $this->container['taskId'];
-    }
-
-    /**
-    * Sets taskId
-    *
-    * @param string $taskId 任务ID
-    *
-    * @return $this
-    */
-    public function setTaskId($taskId)
-    {
-        $this->container['taskId'] = $taskId;
-        return $this;
-    }
-
-    /**
     * Gets enterpriseProjectId
-    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    *  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return string|null
     */
@@ -287,7 +266,7 @@ class ListVulScanTaskHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * @param string|null $enterpriseProjectId **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return $this
     */
@@ -299,7 +278,7 @@ class ListVulScanTaskHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示个数
+    *  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return int|null
     */
@@ -311,7 +290,7 @@ class ListVulScanTaskHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示个数
+    * @param int|null $limit **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return $this
     */
@@ -323,7 +302,7 @@ class ListVulScanTaskHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置
+    *  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return int|null
     */
@@ -335,7 +314,7 @@ class ListVulScanTaskHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置
+    * @param int|null $offset **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return $this
     */
@@ -346,8 +325,32 @@ class ListVulScanTaskHostRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets taskId
+    *  **参数解释**: 漏洞扫描任务id **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    *
+    * @return string
+    */
+    public function getTaskId()
+    {
+        return $this->container['taskId'];
+    }
+
+    /**
+    * Sets taskId
+    *
+    * @param string $taskId **参数解释**: 漏洞扫描任务id **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setTaskId($taskId)
+    {
+        $this->container['taskId'] = $taskId;
+        return $this;
+    }
+
+    /**
     * Gets scanStatus
-    *  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
+    *  **参数解释**: 漏洞扫描任务的状态 **约束限制**: 不涉及 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -359,7 +362,7 @@ class ListVulScanTaskHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets scanStatus
     *
-    * @param string|null $scanStatus 主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
+    * @param string|null $scanStatus **参数解释**: 漏洞扫描任务的状态 **约束限制**: 不涉及 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败  **默认取值**: 不涉及
     *
     * @return $this
     */

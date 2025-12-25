@@ -21,7 +21,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * itemId  **参数解释**： 升级项目ID。 **取值范围**： 不涉及。
-    * status  **参数解释**： 升级状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 升级状态。 **取值范围**： - Waiting：待升级。 - Update_Running：升级中。 - Update_Success：升级成功。 - Update_Failure：升级失败。 - Rollback_Running：回滚中。 - Rollback_Failure：回滚失败。 - Commit_Running：提交中。 - Commit_Failure：提交失败。 - Completed：升级完成。 - Disable：不支持升级。 - Install_Running：热补丁安装中。 - Uninstall_Failure：热补丁卸载重。 - Commit_HotPatch_Failure：热补丁提交失败。
     * recordType  **参数解释**： 升级类型。 **取值范围**： 不涉及。
     * fromVersion  **参数解释**： 升级前版本。 **取值范围**： 不涉及。
     * toVersion  **参数解释**： 目标版本。 **取值范围**： 不涉及。
@@ -47,7 +47,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * itemId  **参数解释**： 升级项目ID。 **取值范围**： 不涉及。
-    * status  **参数解释**： 升级状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 升级状态。 **取值范围**： - Waiting：待升级。 - Update_Running：升级中。 - Update_Success：升级成功。 - Update_Failure：升级失败。 - Rollback_Running：回滚中。 - Rollback_Failure：回滚失败。 - Commit_Running：提交中。 - Commit_Failure：提交失败。 - Completed：升级完成。 - Disable：不支持升级。 - Install_Running：热补丁安装中。 - Uninstall_Failure：热补丁卸载重。 - Commit_HotPatch_Failure：热补丁提交失败。
     * recordType  **参数解释**： 升级类型。 **取值范围**： 不涉及。
     * fromVersion  **参数解释**： 升级前版本。 **取值范围**： 不涉及。
     * toVersion  **参数解释**： 目标版本。 **取值范围**： 不涉及。
@@ -94,7 +94,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * itemId  **参数解释**： 升级项目ID。 **取值范围**： 不涉及。
-    * status  **参数解释**： 升级状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 升级状态。 **取值范围**： - Waiting：待升级。 - Update_Running：升级中。 - Update_Success：升级成功。 - Update_Failure：升级失败。 - Rollback_Running：回滚中。 - Rollback_Failure：回滚失败。 - Commit_Running：提交中。 - Commit_Failure：提交失败。 - Completed：升级完成。 - Disable：不支持升级。 - Install_Running：热补丁安装中。 - Uninstall_Failure：热补丁卸载重。 - Commit_HotPatch_Failure：热补丁提交失败。
     * recordType  **参数解释**： 升级类型。 **取值范围**： 不涉及。
     * fromVersion  **参数解释**： 升级前版本。 **取值范围**： 不涉及。
     * toVersion  **参数解释**： 目标版本。 **取值范围**： 不涉及。
@@ -120,7 +120,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * itemId  **参数解释**： 升级项目ID。 **取值范围**： 不涉及。
-    * status  **参数解释**： 升级状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 升级状态。 **取值范围**： - Waiting：待升级。 - Update_Running：升级中。 - Update_Success：升级成功。 - Update_Failure：升级失败。 - Rollback_Running：回滚中。 - Rollback_Failure：回滚失败。 - Commit_Running：提交中。 - Commit_Failure：提交失败。 - Completed：升级完成。 - Disable：不支持升级。 - Install_Running：热补丁安装中。 - Uninstall_Failure：热补丁卸载重。 - Commit_HotPatch_Failure：热补丁提交失败。
     * recordType  **参数解释**： 升级类型。 **取值范围**： 不涉及。
     * fromVersion  **参数解释**： 升级前版本。 **取值范围**： 不涉及。
     * toVersion  **参数解释**： 目标版本。 **取值范围**： 不涉及。
@@ -146,7 +146,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * itemId  **参数解释**： 升级项目ID。 **取值范围**： 不涉及。
-    * status  **参数解释**： 升级状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 升级状态。 **取值范围**： - Waiting：待升级。 - Update_Running：升级中。 - Update_Success：升级成功。 - Update_Failure：升级失败。 - Rollback_Running：回滚中。 - Rollback_Failure：回滚失败。 - Commit_Running：提交中。 - Commit_Failure：提交失败。 - Completed：升级完成。 - Disable：不支持升级。 - Install_Running：热补丁安装中。 - Uninstall_Failure：热补丁卸载重。 - Commit_HotPatch_Failure：热补丁提交失败。
     * recordType  **参数解释**： 升级类型。 **取值范围**： 不涉及。
     * fromVersion  **参数解释**： 升级前版本。 **取值范围**： 不涉及。
     * toVersion  **参数解释**： 目标版本。 **取值范围**： 不涉及。
@@ -286,7 +286,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 升级状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 升级状态。 **取值范围**： - Waiting：待升级。 - Update_Running：升级中。 - Update_Success：升级成功。 - Update_Failure：升级失败。 - Rollback_Running：回滚中。 - Rollback_Failure：回滚失败。 - Commit_Running：提交中。 - Commit_Failure：提交失败。 - Completed：升级完成。 - Disable：不支持升级。 - Install_Running：热补丁安装中。 - Uninstall_Failure：热补丁卸载重。 - Commit_HotPatch_Failure：热补丁提交失败。
     *
     * @return string|null
     */
@@ -298,7 +298,7 @@ class ClusterUpdateRecordResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 升级状态。 **取值范围**： 不涉及。
+    * @param string|null $status **参数解释**： 升级状态。 **取值范围**： - Waiting：待升级。 - Update_Running：升级中。 - Update_Success：升级成功。 - Update_Failure：升级失败。 - Rollback_Running：回滚中。 - Rollback_Failure：回滚失败。 - Commit_Running：提交中。 - Commit_Failure：提交失败。 - Completed：升级完成。 - Disable：不支持升级。 - Install_Running：热补丁安装中。 - Uninstall_Failure：热补丁卸载重。 - Commit_HotPatch_Failure：热补丁提交失败。
     *
     * @return $this
     */

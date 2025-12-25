@@ -21,30 +21,26 @@ class ListAlertRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  总数量。Total count.
-    * records  告警模型。Alert rules.
-    * xRequestId  xRequestId
+    * count  数量
+    * records  模型记录
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'count' => 'int',
-            'records' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertRule[]',
-            'xRequestId' => 'string'
+            'records' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertRuleItem[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  总数量。Total count.
-    * records  告警模型。Alert rules.
-    * xRequestId  xRequestId
+    * count  数量
+    * records  模型记录
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'count' => 'int64',
-        'records' => null,
-        'xRequestId' => null
+        'records' => null
     ];
 
     /**
@@ -70,44 +66,38 @@ class ListAlertRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  总数量。Total count.
-    * records  告警模型。Alert rules.
-    * xRequestId  xRequestId
+    * count  数量
+    * records  模型记录
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'count' => 'count',
-            'records' => 'records',
-            'xRequestId' => 'X-request-id'
+            'records' => 'records'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  总数量。Total count.
-    * records  告警模型。Alert rules.
-    * xRequestId  xRequestId
+    * count  数量
+    * records  模型记录
     *
     * @var string[]
     */
     protected static $setters = [
             'count' => 'setCount',
-            'records' => 'setRecords',
-            'xRequestId' => 'setXRequestId'
+            'records' => 'setRecords'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  总数量。Total count.
-    * records  告警模型。Alert rules.
-    * xRequestId  xRequestId
+    * count  数量
+    * records  模型记录
     *
     * @var string[]
     */
     protected static $getters = [
             'count' => 'getCount',
-            'records' => 'getRecords',
-            'xRequestId' => 'getXRequestId'
+            'records' => 'getRecords'
     ];
 
     /**
@@ -170,7 +160,6 @@ class ListAlertRulesResponse implements ModelInterface, ArrayAccess
     {
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['records'] = isset($data['records']) ? $data['records'] : null;
-        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -181,8 +170,8 @@ class ListAlertRulesResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['count']) && ($this->container['count'] > 9223372036854775807)) {
-                $invalidProperties[] = "invalid value for 'count', must be smaller than or equal to 9223372036854775807.";
+            if (!is_null($this->container['count']) && ($this->container['count'] > 500)) {
+                $invalidProperties[] = "invalid value for 'count', must be smaller than or equal to 500.";
             }
             if (!is_null($this->container['count']) && ($this->container['count'] < 0)) {
                 $invalidProperties[] = "invalid value for 'count', must be bigger than or equal to 0.";
@@ -203,7 +192,7 @@ class ListAlertRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  总数量。Total count.
+    *  数量
     *
     * @return int|null
     */
@@ -215,7 +204,7 @@ class ListAlertRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 总数量。Total count.
+    * @param int|null $count 数量
     *
     * @return $this
     */
@@ -227,9 +216,9 @@ class ListAlertRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets records
-    *  告警模型。Alert rules.
+    *  模型记录
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRule[]|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRuleItem[]|null
     */
     public function getRecords()
     {
@@ -239,37 +228,13 @@ class ListAlertRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets records
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRule[]|null $records 告警模型。Alert rules.
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRuleItem[]|null $records 模型记录
     *
     * @return $this
     */
     public function setRecords($records)
     {
         $this->container['records'] = $records;
-        return $this;
-    }
-
-    /**
-    * Gets xRequestId
-    *  xRequestId
-    *
-    * @return string|null
-    */
-    public function getXRequestId()
-    {
-        return $this->container['xRequestId'];
-    }
-
-    /**
-    * Sets xRequestId
-    *
-    * @param string|null $xRequestId xRequestId
-    *
-    * @return $this
-    */
-    public function setXRequestId($xRequestId)
-    {
-        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

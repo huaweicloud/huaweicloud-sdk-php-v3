@@ -22,14 +22,14 @@ class IdentitySourceSyncRecordVo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释**： 记录ID。 **取值范围**： 不涉及。
     * identitySourceId  **参数解释**： 身份源ID。 **取值范围**： 不涉及。
-    * identitySourceType  **参数解释**： 身份源类型。 **取值范围**： 不涉及。
+    * identitySourceType  **参数解释**： 身份源类型。 **取值范围**： - ldap：目录服务数据源。 - oneaccess：聚合型数据源
     * startTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
     * addCount  **参数解释**： 添加记录数。 **取值范围**： 大于等于0。
     * updateCount  **参数解释**： 更新记录数。 **取值范围**： 大于等于0。
     * deleteCount  **参数解释**： 删除记录数。 **取值范围**： 大于等于0。
     * failedCount  **参数解释**： 失败记录数。 **取值范围**： 大于等于0。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - RUNNING：运行中。 - FINISHED：已完成。 - FAILED：失败。
     * failReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -52,14 +52,14 @@ class IdentitySourceSyncRecordVo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释**： 记录ID。 **取值范围**： 不涉及。
     * identitySourceId  **参数解释**： 身份源ID。 **取值范围**： 不涉及。
-    * identitySourceType  **参数解释**： 身份源类型。 **取值范围**： 不涉及。
+    * identitySourceType  **参数解释**： 身份源类型。 **取值范围**： - ldap：目录服务数据源。 - oneaccess：聚合型数据源
     * startTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
     * addCount  **参数解释**： 添加记录数。 **取值范围**： 大于等于0。
     * updateCount  **参数解释**： 更新记录数。 **取值范围**： 大于等于0。
     * deleteCount  **参数解释**： 删除记录数。 **取值范围**： 大于等于0。
     * failedCount  **参数解释**： 失败记录数。 **取值范围**： 大于等于0。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - RUNNING：运行中。 - FINISHED：已完成。 - FAILED：失败。
     * failReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -103,14 +103,14 @@ class IdentitySourceSyncRecordVo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  **参数解释**： 记录ID。 **取值范围**： 不涉及。
     * identitySourceId  **参数解释**： 身份源ID。 **取值范围**： 不涉及。
-    * identitySourceType  **参数解释**： 身份源类型。 **取值范围**： 不涉及。
+    * identitySourceType  **参数解释**： 身份源类型。 **取值范围**： - ldap：目录服务数据源。 - oneaccess：聚合型数据源
     * startTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
     * addCount  **参数解释**： 添加记录数。 **取值范围**： 大于等于0。
     * updateCount  **参数解释**： 更新记录数。 **取值范围**： 大于等于0。
     * deleteCount  **参数解释**： 删除记录数。 **取值范围**： 大于等于0。
     * failedCount  **参数解释**： 失败记录数。 **取值范围**： 大于等于0。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - RUNNING：运行中。 - FINISHED：已完成。 - FAILED：失败。
     * failReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -133,14 +133,14 @@ class IdentitySourceSyncRecordVo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释**： 记录ID。 **取值范围**： 不涉及。
     * identitySourceId  **参数解释**： 身份源ID。 **取值范围**： 不涉及。
-    * identitySourceType  **参数解释**： 身份源类型。 **取值范围**： 不涉及。
+    * identitySourceType  **参数解释**： 身份源类型。 **取值范围**： - ldap：目录服务数据源。 - oneaccess：聚合型数据源
     * startTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
     * addCount  **参数解释**： 添加记录数。 **取值范围**： 大于等于0。
     * updateCount  **参数解释**： 更新记录数。 **取值范围**： 大于等于0。
     * deleteCount  **参数解释**： 删除记录数。 **取值范围**： 大于等于0。
     * failedCount  **参数解释**： 失败记录数。 **取值范围**： 大于等于0。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - RUNNING：运行中。 - FINISHED：已完成。 - FAILED：失败。
     * failReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -163,14 +163,14 @@ class IdentitySourceSyncRecordVo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释**： 记录ID。 **取值范围**： 不涉及。
     * identitySourceId  **参数解释**： 身份源ID。 **取值范围**： 不涉及。
-    * identitySourceType  **参数解释**： 身份源类型。 **取值范围**： 不涉及。
+    * identitySourceType  **参数解释**： 身份源类型。 **取值范围**： - ldap：目录服务数据源。 - oneaccess：聚合型数据源
     * startTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
     * addCount  **参数解释**： 添加记录数。 **取值范围**： 大于等于0。
     * updateCount  **参数解释**： 更新记录数。 **取值范围**： 大于等于0。
     * deleteCount  **参数解释**： 删除记录数。 **取值范围**： 大于等于0。
     * failedCount  **参数解释**： 失败记录数。 **取值范围**： 大于等于0。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - RUNNING：运行中。 - FINISHED：已完成。 - FAILED：失败。
     * failReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -332,7 +332,7 @@ class IdentitySourceSyncRecordVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets identitySourceType
-    *  **参数解释**： 身份源类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 身份源类型。 **取值范围**： - ldap：目录服务数据源。 - oneaccess：聚合型数据源
     *
     * @return string|null
     */
@@ -344,7 +344,7 @@ class IdentitySourceSyncRecordVo implements ModelInterface, ArrayAccess
     /**
     * Sets identitySourceType
     *
-    * @param string|null $identitySourceType **参数解释**： 身份源类型。 **取值范围**： 不涉及。
+    * @param string|null $identitySourceType **参数解释**： 身份源类型。 **取值范围**： - ldap：目录服务数据源。 - oneaccess：聚合型数据源
     *
     * @return $this
     */
@@ -500,7 +500,7 @@ class IdentitySourceSyncRecordVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 状态。 **取值范围**： - RUNNING：运行中。 - FINISHED：已完成。 - FAILED：失败。
     *
     * @return string|null
     */
@@ -512,7 +512,7 @@ class IdentitySourceSyncRecordVo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 状态。 **取值范围**： 不涉及。
+    * @param string|null $status **参数解释**： 状态。 **取值范围**： - RUNNING：运行中。 - FINISHED：已完成。 - FAILED：失败。
     *
     * @return $this
     */

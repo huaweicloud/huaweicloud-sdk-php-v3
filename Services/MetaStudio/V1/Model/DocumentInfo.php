@@ -27,7 +27,7 @@ class DocumentInfo implements ModelInterface, ArrayAccess
     * fileType  文档类型。
     * splitType  分段类型 * 1: 自动分段 * 2: 手动分段
     * chunkSize  分段长度。
-    * chunkType  分段策略，多个策略之间用逗号分割。 > title:标题分割；separator:分隔符分割
+    * chunkType  分段策略，如果添加多个策略用逗号隔开。 取值示例： - title：用标题把一段话分割为多个段落。 - separator：用分隔符把一段话分割为多个段落。
     * separators  分隔符
     * createTime  文档创建时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  文档更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -59,7 +59,7 @@ class DocumentInfo implements ModelInterface, ArrayAccess
     * fileType  文档类型。
     * splitType  分段类型 * 1: 自动分段 * 2: 手动分段
     * chunkSize  分段长度。
-    * chunkType  分段策略，多个策略之间用逗号分割。 > title:标题分割；separator:分隔符分割
+    * chunkType  分段策略，如果添加多个策略用逗号隔开。 取值示例： - title：用标题把一段话分割为多个段落。 - separator：用分隔符把一段话分割为多个段落。
     * separators  分隔符
     * createTime  文档创建时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  文档更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -112,7 +112,7 @@ class DocumentInfo implements ModelInterface, ArrayAccess
     * fileType  文档类型。
     * splitType  分段类型 * 1: 自动分段 * 2: 手动分段
     * chunkSize  分段长度。
-    * chunkType  分段策略，多个策略之间用逗号分割。 > title:标题分割；separator:分隔符分割
+    * chunkType  分段策略，如果添加多个策略用逗号隔开。 取值示例： - title：用标题把一段话分割为多个段落。 - separator：用分隔符把一段话分割为多个段落。
     * separators  分隔符
     * createTime  文档创建时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  文档更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -144,7 +144,7 @@ class DocumentInfo implements ModelInterface, ArrayAccess
     * fileType  文档类型。
     * splitType  分段类型 * 1: 自动分段 * 2: 手动分段
     * chunkSize  分段长度。
-    * chunkType  分段策略，多个策略之间用逗号分割。 > title:标题分割；separator:分隔符分割
+    * chunkType  分段策略，如果添加多个策略用逗号隔开。 取值示例： - title：用标题把一段话分割为多个段落。 - separator：用分隔符把一段话分割为多个段落。
     * separators  分隔符
     * createTime  文档创建时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  文档更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -176,7 +176,7 @@ class DocumentInfo implements ModelInterface, ArrayAccess
     * fileType  文档类型。
     * splitType  分段类型 * 1: 自动分段 * 2: 手动分段
     * chunkSize  分段长度。
-    * chunkType  分段策略，多个策略之间用逗号分割。 > title:标题分割；separator:分隔符分割
+    * chunkType  分段策略，如果添加多个策略用逗号隔开。 取值示例： - title：用标题把一段话分割为多个段落。 - separator：用分隔符把一段话分割为多个段落。
     * separators  分隔符
     * createTime  文档创建时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  文档更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -523,7 +523,7 @@ class DocumentInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets chunkType
-    *  分段策略，多个策略之间用逗号分割。 > title:标题分割；separator:分隔符分割
+    *  分段策略，如果添加多个策略用逗号隔开。 取值示例： - title：用标题把一段话分割为多个段落。 - separator：用分隔符把一段话分割为多个段落。
     *
     * @return string|null
     */
@@ -535,7 +535,7 @@ class DocumentInfo implements ModelInterface, ArrayAccess
     /**
     * Sets chunkType
     *
-    * @param string|null $chunkType 分段策略，多个策略之间用逗号分割。 > title:标题分割；separator:分隔符分割
+    * @param string|null $chunkType 分段策略，如果添加多个策略用逗号隔开。 取值示例： - title：用标题把一段话分割为多个段落。 - separator：用分隔符把一段话分割为多个段落。
     *
     * @return $this
     */

@@ -20,10 +20,11 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  参数模板名称。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
-    * description  参数模板描述。 取值范围：长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。默认为空
-    * parameterValues  参数名和参数值映射关系。用户可以基于默认参数模板的参数，自定义的参数值。
+    * name  **参数解释：** 参数模板名称。 **约束限制：** 长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 参数模板描述。 **约束限制：** 长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
+    * parameterValues  **参数解释：** 参数名和参数值映射关系。用户可以基于默认参数模板的参数，自定义的参数值。 **约束限制：** 当未传入entity_id参数时，此参数必选。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * datastore  datastore
+    * entityId  **参数解释：** 实例ID或组ID或节点ID。可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 若传入此参数，则会基于此实例、组或节点的参数信息创建参数模板，将会忽略parameter_values和datastore传参。 **约束限制：** 不涉及。 **取值范围：** 当实例类型是集群，取值为shard组或config组的组ID、mongos节点的节点ID、只读节点的节点ID。 当实例类型是副本集，传值为实例ID或只读节点的节点ID。 当实例类型是单节点，传值为实例ID。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -31,15 +32,17 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'parameterValues' => 'map[string,string]',
-            'datastore' => '\HuaweiCloud\SDK\Dds\V3\Model\DatastoreResult'
+            'datastore' => '\HuaweiCloud\SDK\Dds\V3\Model\DatastoreResult',
+            'entityId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  参数模板名称。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
-    * description  参数模板描述。 取值范围：长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。默认为空
-    * parameterValues  参数名和参数值映射关系。用户可以基于默认参数模板的参数，自定义的参数值。
+    * name  **参数解释：** 参数模板名称。 **约束限制：** 长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 参数模板描述。 **约束限制：** 长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
+    * parameterValues  **参数解释：** 参数名和参数值映射关系。用户可以基于默认参数模板的参数，自定义的参数值。 **约束限制：** 当未传入entity_id参数时，此参数必选。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * datastore  datastore
+    * entityId  **参数解释：** 实例ID或组ID或节点ID。可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 若传入此参数，则会基于此实例、组或节点的参数信息创建参数模板，将会忽略parameter_values和datastore传参。 **约束限制：** 不涉及。 **取值范围：** 当实例类型是集群，取值为shard组或config组的组ID、mongos节点的节点ID、只读节点的节点ID。 当实例类型是副本集，传值为实例ID或只读节点的节点ID。 当实例类型是单节点，传值为实例ID。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'parameterValues' => null,
-        'datastore' => null
+        'datastore' => null,
+        'entityId' => null
     ];
 
     /**
@@ -73,10 +77,11 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  参数模板名称。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
-    * description  参数模板描述。 取值范围：长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。默认为空
-    * parameterValues  参数名和参数值映射关系。用户可以基于默认参数模板的参数，自定义的参数值。
+    * name  **参数解释：** 参数模板名称。 **约束限制：** 长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 参数模板描述。 **约束限制：** 长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
+    * parameterValues  **参数解释：** 参数名和参数值映射关系。用户可以基于默认参数模板的参数，自定义的参数值。 **约束限制：** 当未传入entity_id参数时，此参数必选。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * datastore  datastore
+    * entityId  **参数解释：** 实例ID或组ID或节点ID。可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 若传入此参数，则会基于此实例、组或节点的参数信息创建参数模板，将会忽略parameter_values和datastore传参。 **约束限制：** 不涉及。 **取值范围：** 当实例类型是集群，取值为shard组或config组的组ID、mongos节点的节点ID、只读节点的节点ID。 当实例类型是副本集，传值为实例ID或只读节点的节点ID。 当实例类型是单节点，传值为实例ID。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -84,15 +89,17 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'parameterValues' => 'parameter_values',
-            'datastore' => 'datastore'
+            'datastore' => 'datastore',
+            'entityId' => 'entity_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  参数模板名称。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
-    * description  参数模板描述。 取值范围：长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。默认为空
-    * parameterValues  参数名和参数值映射关系。用户可以基于默认参数模板的参数，自定义的参数值。
+    * name  **参数解释：** 参数模板名称。 **约束限制：** 长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 参数模板描述。 **约束限制：** 长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
+    * parameterValues  **参数解释：** 参数名和参数值映射关系。用户可以基于默认参数模板的参数，自定义的参数值。 **约束限制：** 当未传入entity_id参数时，此参数必选。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * datastore  datastore
+    * entityId  **参数解释：** 实例ID或组ID或节点ID。可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 若传入此参数，则会基于此实例、组或节点的参数信息创建参数模板，将会忽略parameter_values和datastore传参。 **约束限制：** 不涉及。 **取值范围：** 当实例类型是集群，取值为shard组或config组的组ID、mongos节点的节点ID、只读节点的节点ID。 当实例类型是副本集，传值为实例ID或只读节点的节点ID。 当实例类型是单节点，传值为实例ID。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -100,15 +107,17 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'parameterValues' => 'setParameterValues',
-            'datastore' => 'setDatastore'
+            'datastore' => 'setDatastore',
+            'entityId' => 'setEntityId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  参数模板名称。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
-    * description  参数模板描述。 取值范围：长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。默认为空
-    * parameterValues  参数名和参数值映射关系。用户可以基于默认参数模板的参数，自定义的参数值。
+    * name  **参数解释：** 参数模板名称。 **约束限制：** 长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 参数模板描述。 **约束限制：** 长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
+    * parameterValues  **参数解释：** 参数名和参数值映射关系。用户可以基于默认参数模板的参数，自定义的参数值。 **约束限制：** 当未传入entity_id参数时，此参数必选。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * datastore  datastore
+    * entityId  **参数解释：** 实例ID或组ID或节点ID。可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 若传入此参数，则会基于此实例、组或节点的参数信息创建参数模板，将会忽略parameter_values和datastore传参。 **约束限制：** 不涉及。 **取值范围：** 当实例类型是集群，取值为shard组或config组的组ID、mongos节点的节点ID、只读节点的节点ID。 当实例类型是副本集，传值为实例ID或只读节点的节点ID。 当实例类型是单节点，传值为实例ID。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'parameterValues' => 'getParameterValues',
-            'datastore' => 'getDatastore'
+            'datastore' => 'getDatastore',
+            'entityId' => 'getEntityId'
     ];
 
     /**
@@ -181,6 +191,7 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['parameterValues'] = isset($data['parameterValues']) ? $data['parameterValues'] : null;
         $this->container['datastore'] = isset($data['datastore']) ? $data['datastore'] : null;
+        $this->container['entityId'] = isset($data['entityId']) ? $data['entityId'] : null;
     }
 
     /**
@@ -193,15 +204,6 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
         $invalidProperties = [];
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
-        }
-        if ($this->container['description'] === null) {
-            $invalidProperties[] = "'description' can't be null";
-        }
-        if ($this->container['parameterValues'] === null) {
-            $invalidProperties[] = "'parameterValues' can't be null";
-        }
-        if ($this->container['datastore'] === null) {
-            $invalidProperties[] = "'datastore' can't be null";
         }
         return $invalidProperties;
     }
@@ -219,7 +221,7 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  参数模板名称。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
+    *  **参数解释：** 参数模板名称。 **约束限制：** 长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -231,7 +233,7 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 参数模板名称。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
+    * @param string $name **参数解释：** 参数模板名称。 **约束限制：** 长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -243,9 +245,9 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  参数模板描述。 取值范围：长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。默认为空
+    *  **参数解释：** 参数模板描述。 **约束限制：** 长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
     *
-    * @return string
+    * @return string|null
     */
     public function getDescription()
     {
@@ -255,7 +257,7 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 参数模板描述。 取值范围：长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。默认为空
+    * @param string|null $description **参数解释：** 参数模板描述。 **约束限制：** 长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
     *
     * @return $this
     */
@@ -267,9 +269,9 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets parameterValues
-    *  参数名和参数值映射关系。用户可以基于默认参数模板的参数，自定义的参数值。
+    *  **参数解释：** 参数名和参数值映射关系。用户可以基于默认参数模板的参数，自定义的参数值。 **约束限制：** 当未传入entity_id参数时，此参数必选。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
-    * @return map[string,string]
+    * @return map[string,string]|null
     */
     public function getParameterValues()
     {
@@ -279,7 +281,7 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets parameterValues
     *
-    * @param map[string,string] $parameterValues 参数名和参数值映射关系。用户可以基于默认参数模板的参数，自定义的参数值。
+    * @param map[string,string]|null $parameterValues **参数解释：** 参数名和参数值映射关系。用户可以基于默认参数模板的参数，自定义的参数值。 **约束限制：** 当未传入entity_id参数时，此参数必选。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -293,7 +295,7 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
     * Gets datastore
     *  datastore
     *
-    * @return \HuaweiCloud\SDK\Dds\V3\Model\DatastoreResult
+    * @return \HuaweiCloud\SDK\Dds\V3\Model\DatastoreResult|null
     */
     public function getDatastore()
     {
@@ -303,13 +305,37 @@ class CreateConfigurationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets datastore
     *
-    * @param \HuaweiCloud\SDK\Dds\V3\Model\DatastoreResult $datastore datastore
+    * @param \HuaweiCloud\SDK\Dds\V3\Model\DatastoreResult|null $datastore datastore
     *
     * @return $this
     */
     public function setDatastore($datastore)
     {
         $this->container['datastore'] = $datastore;
+        return $this;
+    }
+
+    /**
+    * Gets entityId
+    *  **参数解释：** 实例ID或组ID或节点ID。可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 若传入此参数，则会基于此实例、组或节点的参数信息创建参数模板，将会忽略parameter_values和datastore传参。 **约束限制：** 不涉及。 **取值范围：** 当实例类型是集群，取值为shard组或config组的组ID、mongos节点的节点ID、只读节点的节点ID。 当实例类型是副本集，传值为实例ID或只读节点的节点ID。 当实例类型是单节点，传值为实例ID。 **默认取值：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getEntityId()
+    {
+        return $this->container['entityId'];
+    }
+
+    /**
+    * Sets entityId
+    *
+    * @param string|null $entityId **参数解释：** 实例ID或组ID或节点ID。可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 若传入此参数，则会基于此实例、组或节点的参数信息创建参数模板，将会忽略parameter_values和datastore传参。 **约束限制：** 不涉及。 **取值范围：** 当实例类型是集群，取值为shard组或config组的组ID、mongos节点的节点ID、只读节点的节点ID。 当实例类型是副本集，传值为实例ID或只读节点的节点ID。 当实例类型是单节点，传值为实例ID。 **默认取值：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setEntityId($entityId)
+    {
+        $this->container['entityId'] = $entityId;
         return $this;
     }
 

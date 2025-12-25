@@ -20,8 +20,8 @@ class ConditionResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * comparisonOperator  **参数解释**： 告警阈值的比较条件。 **取值范围**： 只能是>、=、<、>=、<=、!=。
-    * count  **参数解释**： 触发告警的连续发生次数。 **取值范围**： 取值范围[1, 5]。告警类型为事件告警时，取值范围为[1, 100]。
+    * comparisonOperator  **参数解释**： 阈值符号。     **取值范围**： 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动。
+    * count  **参数解释**： 触发告警的连续发生次数。 **取值范围**： 整数，取值范围[1, 5]。
     * filter  filter
     * period  period
     * unit  **参数解释**： 数据的单位。 **取值范围**： 长度为[0,32]个字符。
@@ -42,8 +42,8 @@ class ConditionResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * comparisonOperator  **参数解释**： 告警阈值的比较条件。 **取值范围**： 只能是>、=、<、>=、<=、!=。
-    * count  **参数解释**： 触发告警的连续发生次数。 **取值范围**： 取值范围[1, 5]。告警类型为事件告警时，取值范围为[1, 100]。
+    * comparisonOperator  **参数解释**： 阈值符号。     **取值范围**： 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动。
+    * count  **参数解释**： 触发告警的连续发生次数。 **取值范围**： 整数，取值范围[1, 5]。
     * filter  filter
     * period  period
     * unit  **参数解释**： 数据的单位。 **取值范围**： 长度为[0,32]个字符。
@@ -85,8 +85,8 @@ class ConditionResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * comparisonOperator  **参数解释**： 告警阈值的比较条件。 **取值范围**： 只能是>、=、<、>=、<=、!=。
-    * count  **参数解释**： 触发告警的连续发生次数。 **取值范围**： 取值范围[1, 5]。告警类型为事件告警时，取值范围为[1, 100]。
+    * comparisonOperator  **参数解释**： 阈值符号。     **取值范围**： 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动。
+    * count  **参数解释**： 触发告警的连续发生次数。 **取值范围**： 整数，取值范围[1, 5]。
     * filter  filter
     * period  period
     * unit  **参数解释**： 数据的单位。 **取值范围**： 长度为[0,32]个字符。
@@ -107,8 +107,8 @@ class ConditionResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * comparisonOperator  **参数解释**： 告警阈值的比较条件。 **取值范围**： 只能是>、=、<、>=、<=、!=。
-    * count  **参数解释**： 触发告警的连续发生次数。 **取值范围**： 取值范围[1, 5]。告警类型为事件告警时，取值范围为[1, 100]。
+    * comparisonOperator  **参数解释**： 阈值符号。     **取值范围**： 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动。
+    * count  **参数解释**： 触发告警的连续发生次数。 **取值范围**： 整数，取值范围[1, 5]。
     * filter  filter
     * period  period
     * unit  **参数解释**： 数据的单位。 **取值范围**： 长度为[0,32]个字符。
@@ -129,8 +129,8 @@ class ConditionResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * comparisonOperator  **参数解释**： 告警阈值的比较条件。 **取值范围**： 只能是>、=、<、>=、<=、!=。
-    * count  **参数解释**： 触发告警的连续发生次数。 **取值范围**： 取值范围[1, 5]。告警类型为事件告警时，取值范围为[1, 100]。
+    * comparisonOperator  **参数解释**： 阈值符号。     **取值范围**： 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动。
+    * count  **参数解释**： 触发告警的连续发生次数。 **取值范围**： 整数，取值范围[1, 5]。
     * filter  filter
     * period  period
     * unit  **参数解释**： 数据的单位。 **取值范围**： 长度为[0,32]个字符。
@@ -224,8 +224,8 @@ class ConditionResp implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['comparisonOperator']) && !preg_match("/^(>|=|<|>=|<=|!=)$/", $this->container['comparisonOperator'])) {
-                $invalidProperties[] = "invalid value for 'comparisonOperator', must be conform to the pattern /^(>|=|<|>=|<=|!=)$/.";
+            if (!is_null($this->container['comparisonOperator']) && !preg_match("/^(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)$/", $this->container['comparisonOperator'])) {
+                $invalidProperties[] = "invalid value for 'comparisonOperator', must be conform to the pattern /^(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)$/.";
             }
             if (!is_null($this->container['count']) && ($this->container['count'] > 100)) {
                 $invalidProperties[] = "invalid value for 'count', must be smaller than or equal to 100.";
@@ -261,7 +261,7 @@ class ConditionResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets comparisonOperator
-    *  **参数解释**： 告警阈值的比较条件。 **取值范围**： 只能是>、=、<、>=、<=、!=。
+    *  **参数解释**： 阈值符号。     **取值范围**： 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动。
     *
     * @return string|null
     */
@@ -273,7 +273,7 @@ class ConditionResp implements ModelInterface, ArrayAccess
     /**
     * Sets comparisonOperator
     *
-    * @param string|null $comparisonOperator **参数解释**： 告警阈值的比较条件。 **取值范围**： 只能是>、=、<、>=、<=、!=。
+    * @param string|null $comparisonOperator **参数解释**： 阈值符号。     **取值范围**： 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动。
     *
     * @return $this
     */
@@ -285,7 +285,7 @@ class ConditionResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  **参数解释**： 触发告警的连续发生次数。 **取值范围**： 取值范围[1, 5]。告警类型为事件告警时，取值范围为[1, 100]。
+    *  **参数解释**： 触发告警的连续发生次数。 **取值范围**： 整数，取值范围[1, 5]。
     *
     * @return int|null
     */
@@ -297,7 +297,7 @@ class ConditionResp implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count **参数解释**： 触发告警的连续发生次数。 **取值范围**： 取值范围[1, 5]。告警类型为事件告警时，取值范围为[1, 100]。
+    * @param int|null $count **参数解释**： 触发告警的连续发生次数。 **取值范围**： 整数，取值范围[1, 5]。
     *
     * @return $this
     */

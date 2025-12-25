@@ -20,7 +20,7 @@ class CompatibleInstanceVolumeResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 磁盘类型。 **取值范围**： - SATA：普通IO - SAS：高IO - SSD：超高IO - ESSD：极速型SSD - GPSSD：通用型SSD
     * used  **参数解释**： 已使用空间。 **取值范围**： 不涉及。
     * size  **参数解释**： 总大小。 **取值范围**： 不涉及。
     *
@@ -34,7 +34,7 @@ class CompatibleInstanceVolumeResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 磁盘类型。 **取值范围**： - SATA：普通IO - SAS：高IO - SSD：超高IO - ESSD：极速型SSD - GPSSD：通用型SSD
     * used  **参数解释**： 已使用空间。 **取值范围**： 不涉及。
     * size  **参数解释**： 总大小。 **取值范围**： 不涉及。
     *
@@ -69,7 +69,7 @@ class CompatibleInstanceVolumeResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 磁盘类型。 **取值范围**： - SATA：普通IO - SAS：高IO - SSD：超高IO - ESSD：极速型SSD - GPSSD：通用型SSD
     * used  **参数解释**： 已使用空间。 **取值范围**： 不涉及。
     * size  **参数解释**： 总大小。 **取值范围**： 不涉及。
     *
@@ -83,7 +83,7 @@ class CompatibleInstanceVolumeResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 磁盘类型。 **取值范围**： - SATA：普通IO - SAS：高IO - SSD：超高IO - ESSD：极速型SSD - GPSSD：通用型SSD
     * used  **参数解释**： 已使用空间。 **取值范围**： 不涉及。
     * size  **参数解释**： 总大小。 **取值范围**： 不涉及。
     *
@@ -97,7 +97,7 @@ class CompatibleInstanceVolumeResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 磁盘类型。 **取值范围**： - SATA：普通IO - SAS：高IO - SSD：超高IO - ESSD：极速型SSD - GPSSD：通用型SSD
     * used  **参数解释**： 已使用空间。 **取值范围**： 不涉及。
     * size  **参数解释**： 总大小。 **取值范围**： 不涉及。
     *
@@ -196,7 +196,7 @@ class CompatibleInstanceVolumeResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**： 类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 磁盘类型。 **取值范围**： - SATA：普通IO - SAS：高IO - SSD：超高IO - ESSD：极速型SSD - GPSSD：通用型SSD
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class CompatibleInstanceVolumeResp implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释**： 类型。 **取值范围**： 不涉及。
+    * @param string|null $type **参数解释**： 磁盘类型。 **取值范围**： - SATA：普通IO - SAS：高IO - SSD：超高IO - ESSD：极速型SSD - GPSSD：通用型SSD
     *
     * @return $this
     */

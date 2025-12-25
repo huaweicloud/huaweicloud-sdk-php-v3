@@ -27,7 +27,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     * finished  **参数解释**： 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     * size  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
     * status  **参数解释**： 快照状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
-    * type  **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 快照创建类型。 **取值范围**： - AUTO: 自动。 - MANUAL: 手动。
     * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     * datastore  datastore
     * clusterName  **参数解释**： 集群名称。 **取值范围**： 不涉及。
@@ -99,7 +99,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     * finished  **参数解释**： 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     * size  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
     * status  **参数解释**： 快照状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
-    * type  **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 快照创建类型。 **取值范围**： - AUTO: 自动。 - MANUAL: 手动。
     * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     * datastore  datastore
     * clusterName  **参数解释**： 集群名称。 **取值范围**： 不涉及。
@@ -192,7 +192,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     * finished  **参数解释**： 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     * size  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
     * status  **参数解释**： 快照状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
-    * type  **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 快照创建类型。 **取值范围**： - AUTO: 自动。 - MANUAL: 手动。
     * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     * datastore  datastore
     * clusterName  **参数解释**： 集群名称。 **取值范围**： 不涉及。
@@ -264,7 +264,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     * finished  **参数解释**： 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     * size  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
     * status  **参数解释**： 快照状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
-    * type  **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 快照创建类型。 **取值范围**： - AUTO: 自动。 - MANUAL: 手动。
     * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     * datastore  datastore
     * clusterName  **参数解释**： 集群名称。 **取值范围**： 不涉及。
@@ -336,7 +336,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     * finished  **参数解释**： 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     * size  **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
     * status  **参数解释**： 快照状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
-    * type  **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 快照创建类型。 **取值范围**： - AUTO: 自动。 - MANUAL: 手动。
     * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     * datastore  datastore
     * clusterName  **参数解释**： 集群名称。 **取值范围**： 不涉及。
@@ -756,7 +756,7 @@ class Snapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 快照创建类型。 **取值范围**： - AUTO: 自动。 - MANUAL: 手动。
     *
     * @return string
     */
@@ -768,7 +768,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+    * @param string $type **参数解释**： 快照创建类型。 **取值范围**： - AUTO: 自动。 - MANUAL: 手动。
     *
     * @return $this
     */

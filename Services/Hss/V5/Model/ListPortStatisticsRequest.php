@@ -28,7 +28,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     * port  **参数解释**: 端口号，该字段用来进行精确匹配 **约束限制**: 与port_string同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
     * portString  **参数解释**: 端口字符串，该字段用来进行模糊匹配 **约束限制**: 与port同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
     * type  **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: - UDP - UDP6 - TCP - TCP6  **默认取值**: 不涉及
-    * status  **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口  **默认取值**: 不涉及
+    * status  **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknown: 无已知危险的端口  **默认取值**: 不涉及
     * sortKey  **参数解释**: 排序的key值，目前支持按照端口号port排序 **约束限制**: 不涉及 **取值范围**: - port: 端口号  **默认取值**: 不涉及
     *
     * @var string[]
@@ -56,7 +56,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     * port  **参数解释**: 端口号，该字段用来进行精确匹配 **约束限制**: 与port_string同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
     * portString  **参数解释**: 端口字符串，该字段用来进行模糊匹配 **约束限制**: 与port同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
     * type  **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: - UDP - UDP6 - TCP - TCP6  **默认取值**: 不涉及
-    * status  **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口  **默认取值**: 不涉及
+    * status  **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknown: 无已知危险的端口  **默认取值**: 不涉及
     * sortKey  **参数解释**: 排序的key值，目前支持按照端口号port排序 **约束限制**: 不涉及 **取值范围**: - port: 端口号  **默认取值**: 不涉及
     *
     * @var string[]
@@ -105,7 +105,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     * port  **参数解释**: 端口号，该字段用来进行精确匹配 **约束限制**: 与port_string同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
     * portString  **参数解释**: 端口字符串，该字段用来进行模糊匹配 **约束限制**: 与port同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
     * type  **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: - UDP - UDP6 - TCP - TCP6  **默认取值**: 不涉及
-    * status  **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口  **默认取值**: 不涉及
+    * status  **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknown: 无已知危险的端口  **默认取值**: 不涉及
     * sortKey  **参数解释**: 排序的key值，目前支持按照端口号port排序 **约束限制**: 不涉及 **取值范围**: - port: 端口号  **默认取值**: 不涉及
     *
     * @var string[]
@@ -133,7 +133,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     * port  **参数解释**: 端口号，该字段用来进行精确匹配 **约束限制**: 与port_string同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
     * portString  **参数解释**: 端口字符串，该字段用来进行模糊匹配 **约束限制**: 与port同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
     * type  **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: - UDP - UDP6 - TCP - TCP6  **默认取值**: 不涉及
-    * status  **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口  **默认取值**: 不涉及
+    * status  **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknown: 无已知危险的端口  **默认取值**: 不涉及
     * sortKey  **参数解释**: 排序的key值，目前支持按照端口号port排序 **约束限制**: 不涉及 **取值范围**: - port: 端口号  **默认取值**: 不涉及
     *
     * @var string[]
@@ -161,7 +161,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     * port  **参数解释**: 端口号，该字段用来进行精确匹配 **约束限制**: 与port_string同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
     * portString  **参数解释**: 端口字符串，该字段用来进行模糊匹配 **约束限制**: 与port同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
     * type  **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: - UDP - UDP6 - TCP - TCP6  **默认取值**: 不涉及
-    * status  **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口  **默认取值**: 不涉及
+    * status  **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknown: 无已知危险的端口  **默认取值**: 不涉及
     * sortKey  **参数解释**: 排序的key值，目前支持按照端口号port排序 **约束限制**: 不涉及 **取值范围**: - port: 端口号  **默认取值**: 不涉及
     *
     * @var string[]
@@ -323,8 +323,8 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 0)) {
                 $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['status']) && !preg_match("/^(danger|normal|unknow)$/", $this->container['status'])) {
-                $invalidProperties[] = "invalid value for 'status', must be conform to the pattern /^(danger|normal|unknow)$/.";
+            if (!is_null($this->container['status']) && !preg_match("/^(danger|normal|unknown)$/", $this->container['status'])) {
+                $invalidProperties[] = "invalid value for 'status', must be conform to the pattern /^(danger|normal|unknown)$/.";
             }
             if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) > 128)) {
                 $invalidProperties[] = "invalid value for 'sortKey', the character length must be smaller than or equal to 128.";
@@ -543,7 +543,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口  **默认取值**: 不涉及
+    *  **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknown: 无已知危险的端口  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -555,7 +555,7 @@ class ListPortStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口  **默认取值**: 不涉及
+    * @param string|null $status **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknown: 无已知危险的端口  **默认取值**: 不涉及
     *
     * @return $this
     */

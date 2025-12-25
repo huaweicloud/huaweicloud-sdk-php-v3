@@ -2725,6 +2725,24 @@ class DdsClient extends Client
         if ($localVarParams['mode'] !== null) {
             $queryParams['mode'] = $localVarParams['mode'];
         }
+        if ($localVarParams['orderField'] !== null) {
+            $queryParams['order_field'] = $localVarParams['orderField'];
+        }
+        if ($localVarParams['orderRule'] !== null) {
+            $queryParams['order_rule'] = $localVarParams['orderRule'];
+        }
+        if ($localVarParams['backupStatus'] !== null) {
+            $queryParams['backup_status'] = $localVarParams['backupStatus'];
+        }
+        if ($localVarParams['backupName'] !== null) {
+            $queryParams['backup_name'] = $localVarParams['backupName'];
+        }
+        if ($localVarParams['backupDescription'] !== null) {
+            $queryParams['backup_description'] = $localVarParams['backupDescription'];
+        }
+        if ($localVarParams['instanceName'] !== null) {
+            $queryParams['instance_name'] = $localVarParams['instanceName'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']

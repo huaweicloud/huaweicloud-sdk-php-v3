@@ -21,7 +21,7 @@ class BatchDeleteAlarmTemplatesRequestBody implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * templateIds  需要批量删除的告警模板的ID列表。未关联告警规则的模板可以批量删除多个；已关联告警规则的告警模板，单次只允许删除一个，若同时删除多个已关联告警规则的告警模板，将返回异常
-    * deleteAssociateAlarm  如果告警模板关联了告警规则，是否级联删除告警规则，true代表级联删除，false代表只删除告警模板
+    * deleteAssociateAlarm  **参数解释**： 如果告警模板关联了告警规则，是否级联删除告警规则。     **约束限制**： 不涉及。 **取值范围**： true代表级联删除，false代表只删除告警模板。           **默认取值**： false。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class BatchDeleteAlarmTemplatesRequestBody implements ModelInterface, ArrayAcces
     /**
     * Array of property to format mappings. Used for (de)serialization
     * templateIds  需要批量删除的告警模板的ID列表。未关联告警规则的模板可以批量删除多个；已关联告警规则的告警模板，单次只允许删除一个，若同时删除多个已关联告警规则的告警模板，将返回异常
-    * deleteAssociateAlarm  如果告警模板关联了告警规则，是否级联删除告警规则，true代表级联删除，false代表只删除告警模板
+    * deleteAssociateAlarm  **参数解释**： 如果告警模板关联了告警规则，是否级联删除告警规则。     **约束限制**： 不涉及。 **取值范围**： true代表级联删除，false代表只删除告警模板。           **默认取值**： false。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class BatchDeleteAlarmTemplatesRequestBody implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * templateIds  需要批量删除的告警模板的ID列表。未关联告警规则的模板可以批量删除多个；已关联告警规则的告警模板，单次只允许删除一个，若同时删除多个已关联告警规则的告警模板，将返回异常
-    * deleteAssociateAlarm  如果告警模板关联了告警规则，是否级联删除告警规则，true代表级联删除，false代表只删除告警模板
+    * deleteAssociateAlarm  **参数解释**： 如果告警模板关联了告警规则，是否级联删除告警规则。     **约束限制**： 不涉及。 **取值范围**： true代表级联删除，false代表只删除告警模板。           **默认取值**： false。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class BatchDeleteAlarmTemplatesRequestBody implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * templateIds  需要批量删除的告警模板的ID列表。未关联告警规则的模板可以批量删除多个；已关联告警规则的告警模板，单次只允许删除一个，若同时删除多个已关联告警规则的告警模板，将返回异常
-    * deleteAssociateAlarm  如果告警模板关联了告警规则，是否级联删除告警规则，true代表级联删除，false代表只删除告警模板
+    * deleteAssociateAlarm  **参数解释**： 如果告警模板关联了告警规则，是否级联删除告警规则。     **约束限制**： 不涉及。 **取值范围**： true代表级联删除，false代表只删除告警模板。           **默认取值**： false。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class BatchDeleteAlarmTemplatesRequestBody implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * templateIds  需要批量删除的告警模板的ID列表。未关联告警规则的模板可以批量删除多个；已关联告警规则的告警模板，单次只允许删除一个，若同时删除多个已关联告警规则的告警模板，将返回异常
-    * deleteAssociateAlarm  如果告警模板关联了告警规则，是否级联删除告警规则，true代表级联删除，false代表只删除告警模板
+    * deleteAssociateAlarm  **参数解释**： 如果告警模板关联了告警规则，是否级联删除告警规则。     **约束限制**： 不涉及。 **取值范围**： true代表级联删除，false代表只删除告警模板。           **默认取值**： false。
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class BatchDeleteAlarmTemplatesRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets deleteAssociateAlarm
-    *  如果告警模板关联了告警规则，是否级联删除告警规则，true代表级联删除，false代表只删除告警模板
+    *  **参数解释**： 如果告警模板关联了告警规则，是否级联删除告警规则。     **约束限制**： 不涉及。 **取值范围**： true代表级联删除，false代表只删除告警模板。           **默认取值**： false。
     *
     * @return bool
     */
@@ -227,7 +227,7 @@ class BatchDeleteAlarmTemplatesRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets deleteAssociateAlarm
     *
-    * @param bool $deleteAssociateAlarm 如果告警模板关联了告警规则，是否级联删除告警规则，true代表级联删除，false代表只删除告警模板
+    * @param bool $deleteAssociateAlarm **参数解释**： 如果告警模板关联了告警规则，是否级联删除告警规则。     **约束限制**： 不涉及。 **取值范围**： true代表级联删除，false代表只删除告警模板。           **默认取值**： false。
     *
     * @return $this
     */

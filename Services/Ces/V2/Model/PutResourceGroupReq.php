@@ -20,12 +20,12 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupName  资源分组名称，只能为字母、数字、汉字、-、_，最大长度为128
-    * tags  标签动态匹配时的关联标签,type为TAG时该字段不为空
-    * enterpriseProjectIdAndTags  资源匹配规则为组合匹配时传入的参数
-    * extendRelationIds  智能添加时企业项目匹配传入参数
-    * instances  实例名称匹配参数
-    * productNames  修改资源层级为云产品时的云产品的取值，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。
+    * groupName  **参数解释** 资源分组名称。 **约束限制** 不涉及。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。 **默认取值** 不涉及。
+    * tags  **参数解释** 标签动态匹配时的关联标签。 **约束限制** type为TAG时必传，不超过50个标签。
+    * enterpriseProjectIdAndTags  **参数解释** 资源匹配规则为组合匹配时传入的参数，已废弃。 **约束限制** type为COMB时传入，不超过50个条件。
+    * extendRelationIds  **参数解释** 匹配企业项目时关联的企业项目ID。 **约束限制** type为EPS时必传，不超过50个企业项目。
+    * instances  **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
+    * productNames  **参数解释** 资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
     * combRelation  combRelation
     *
     * @var string[]
@@ -42,12 +42,12 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupName  资源分组名称，只能为字母、数字、汉字、-、_，最大长度为128
-    * tags  标签动态匹配时的关联标签,type为TAG时该字段不为空
-    * enterpriseProjectIdAndTags  资源匹配规则为组合匹配时传入的参数
-    * extendRelationIds  智能添加时企业项目匹配传入参数
-    * instances  实例名称匹配参数
-    * productNames  修改资源层级为云产品时的云产品的取值，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。
+    * groupName  **参数解释** 资源分组名称。 **约束限制** 不涉及。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。 **默认取值** 不涉及。
+    * tags  **参数解释** 标签动态匹配时的关联标签。 **约束限制** type为TAG时必传，不超过50个标签。
+    * enterpriseProjectIdAndTags  **参数解释** 资源匹配规则为组合匹配时传入的参数，已废弃。 **约束限制** type为COMB时传入，不超过50个条件。
+    * extendRelationIds  **参数解释** 匹配企业项目时关联的企业项目ID。 **约束限制** type为EPS时必传，不超过50个企业项目。
+    * instances  **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
+    * productNames  **参数解释** 资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
     * combRelation  combRelation
     *
     * @var string[]
@@ -85,12 +85,12 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupName  资源分组名称，只能为字母、数字、汉字、-、_，最大长度为128
-    * tags  标签动态匹配时的关联标签,type为TAG时该字段不为空
-    * enterpriseProjectIdAndTags  资源匹配规则为组合匹配时传入的参数
-    * extendRelationIds  智能添加时企业项目匹配传入参数
-    * instances  实例名称匹配参数
-    * productNames  修改资源层级为云产品时的云产品的取值，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。
+    * groupName  **参数解释** 资源分组名称。 **约束限制** 不涉及。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。 **默认取值** 不涉及。
+    * tags  **参数解释** 标签动态匹配时的关联标签。 **约束限制** type为TAG时必传，不超过50个标签。
+    * enterpriseProjectIdAndTags  **参数解释** 资源匹配规则为组合匹配时传入的参数，已废弃。 **约束限制** type为COMB时传入，不超过50个条件。
+    * extendRelationIds  **参数解释** 匹配企业项目时关联的企业项目ID。 **约束限制** type为EPS时必传，不超过50个企业项目。
+    * instances  **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
+    * productNames  **参数解释** 资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
     * combRelation  combRelation
     *
     * @var string[]
@@ -107,12 +107,12 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupName  资源分组名称，只能为字母、数字、汉字、-、_，最大长度为128
-    * tags  标签动态匹配时的关联标签,type为TAG时该字段不为空
-    * enterpriseProjectIdAndTags  资源匹配规则为组合匹配时传入的参数
-    * extendRelationIds  智能添加时企业项目匹配传入参数
-    * instances  实例名称匹配参数
-    * productNames  修改资源层级为云产品时的云产品的取值，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。
+    * groupName  **参数解释** 资源分组名称。 **约束限制** 不涉及。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。 **默认取值** 不涉及。
+    * tags  **参数解释** 标签动态匹配时的关联标签。 **约束限制** type为TAG时必传，不超过50个标签。
+    * enterpriseProjectIdAndTags  **参数解释** 资源匹配规则为组合匹配时传入的参数，已废弃。 **约束限制** type为COMB时传入，不超过50个条件。
+    * extendRelationIds  **参数解释** 匹配企业项目时关联的企业项目ID。 **约束限制** type为EPS时必传，不超过50个企业项目。
+    * instances  **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
+    * productNames  **参数解释** 资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
     * combRelation  combRelation
     *
     * @var string[]
@@ -129,12 +129,12 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupName  资源分组名称，只能为字母、数字、汉字、-、_，最大长度为128
-    * tags  标签动态匹配时的关联标签,type为TAG时该字段不为空
-    * enterpriseProjectIdAndTags  资源匹配规则为组合匹配时传入的参数
-    * extendRelationIds  智能添加时企业项目匹配传入参数
-    * instances  实例名称匹配参数
-    * productNames  修改资源层级为云产品时的云产品的取值，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。
+    * groupName  **参数解释** 资源分组名称。 **约束限制** 不涉及。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。 **默认取值** 不涉及。
+    * tags  **参数解释** 标签动态匹配时的关联标签。 **约束限制** type为TAG时必传，不超过50个标签。
+    * enterpriseProjectIdAndTags  **参数解释** 资源匹配规则为组合匹配时传入的参数，已废弃。 **约束限制** type为COMB时传入，不超过50个条件。
+    * extendRelationIds  **参数解释** 匹配企业项目时关联的企业项目ID。 **约束限制** type为EPS时必传，不超过50个企业项目。
+    * instances  **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
+    * productNames  **参数解释** 资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
     * combRelation  combRelation
     *
     * @var string[]
@@ -233,6 +233,9 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['groupName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'groupName', the character length must be bigger than or equal to 1.";
             }
+            if (!preg_match("/^([一-鿿]|[a-z]|[A-Z]|[0-9]|_|-){1,128}$/", $this->container['groupName'])) {
+                $invalidProperties[] = "invalid value for 'groupName', must be conform to the pattern /^([一-鿿]|[a-z]|[A-Z]|[0-9]|_|-){1,128}$/.";
+            }
             if (!is_null($this->container['productNames']) && (mb_strlen($this->container['productNames']) > 10240)) {
                 $invalidProperties[] = "invalid value for 'productNames', the character length must be smaller than or equal to 10240.";
             }
@@ -255,7 +258,7 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  资源分组名称，只能为字母、数字、汉字、-、_，最大长度为128
+    *  **参数解释** 资源分组名称。 **约束限制** 不涉及。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。 **默认取值** 不涉及。
     *
     * @return string
     */
@@ -267,7 +270,7 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string $groupName 资源分组名称，只能为字母、数字、汉字、-、_，最大长度为128
+    * @param string $groupName **参数解释** 资源分组名称。 **约束限制** 不涉及。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -279,7 +282,7 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签动态匹配时的关联标签,type为TAG时该字段不为空
+    *  **参数解释** 标签动态匹配时的关联标签。 **约束限制** type为TAG时必传，不超过50个标签。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourceGroupTagRelation[]|null
     */
@@ -291,7 +294,7 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourceGroupTagRelation[]|null $tags 标签动态匹配时的关联标签,type为TAG时该字段不为空
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourceGroupTagRelation[]|null $tags **参数解释** 标签动态匹配时的关联标签。 **约束限制** type为TAG时必传，不超过50个标签。
     *
     * @return $this
     */
@@ -303,7 +306,7 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectIdAndTags
-    *  资源匹配规则为组合匹配时传入的参数
+    *  **参数解释** 资源匹配规则为组合匹配时传入的参数，已废弃。 **约束限制** type为COMB时传入，不超过50个条件。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\EnterpriseProjectIdAndTags[]|null
     */
@@ -315,7 +318,7 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectIdAndTags
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\EnterpriseProjectIdAndTags[]|null $enterpriseProjectIdAndTags 资源匹配规则为组合匹配时传入的参数
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\EnterpriseProjectIdAndTags[]|null $enterpriseProjectIdAndTags **参数解释** 资源匹配规则为组合匹配时传入的参数，已废弃。 **约束限制** type为COMB时传入，不超过50个条件。
     *
     * @return $this
     */
@@ -327,7 +330,7 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendRelationIds
-    *  智能添加时企业项目匹配传入参数
+    *  **参数解释** 匹配企业项目时关联的企业项目ID。 **约束限制** type为EPS时必传，不超过50个企业项目。
     *
     * @return string[]|null
     */
@@ -339,7 +342,7 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
     /**
     * Sets extendRelationIds
     *
-    * @param string[]|null $extendRelationIds 智能添加时企业项目匹配传入参数
+    * @param string[]|null $extendRelationIds **参数解释** 匹配企业项目时关联的企业项目ID。 **约束限制** type为EPS时必传，不超过50个企业项目。
     *
     * @return $this
     */
@@ -351,7 +354,7 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets instances
-    *  实例名称匹配参数
+    *  **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\Instance[]|null
     */
@@ -363,7 +366,7 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
     /**
     * Sets instances
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Instance[]|null $instances 实例名称匹配参数
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Instance[]|null $instances **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
     *
     * @return $this
     */
@@ -375,7 +378,7 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets productNames
-    *  修改资源层级为云产品时的云产品的取值，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。
+    *  **参数解释** 资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -387,7 +390,7 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
     /**
     * Sets productNames
     *
-    * @param string|null $productNames 修改资源层级为云产品时的云产品的取值，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。
+    * @param string|null $productNames **参数解释** 资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
     *
     * @return $this
     */

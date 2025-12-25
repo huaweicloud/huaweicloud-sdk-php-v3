@@ -20,26 +20,26 @@ class ShowAlertRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workspaceId  工作空间 ID。Workspace ID.
-    * ruleId  告警规则 ID。Alert rule ID.
+    * workspaceId  工作空间ID
+    * alertRuleId  告警规则 ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'workspaceId' => 'string',
-            'ruleId' => 'string'
+            'alertRuleId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workspaceId  工作空间 ID。Workspace ID.
-    * ruleId  告警规则 ID。Alert rule ID.
+    * workspaceId  工作空间ID
+    * alertRuleId  告警规则 ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'workspaceId' => null,
-        'ruleId' => null
+        'alertRuleId' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class ShowAlertRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workspaceId  工作空间 ID。Workspace ID.
-    * ruleId  告警规则 ID。Alert rule ID.
+    * workspaceId  工作空间ID
+    * alertRuleId  告警规则 ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'workspaceId' => 'workspace_id',
-            'ruleId' => 'rule_id'
+            'alertRuleId' => 'alert_rule_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workspaceId  工作空间 ID。Workspace ID.
-    * ruleId  告警规则 ID。Alert rule ID.
+    * workspaceId  工作空间ID
+    * alertRuleId  告警规则 ID
     *
     * @var string[]
     */
     protected static $setters = [
             'workspaceId' => 'setWorkspaceId',
-            'ruleId' => 'setRuleId'
+            'alertRuleId' => 'setAlertRuleId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workspaceId  工作空间 ID。Workspace ID.
-    * ruleId  告警规则 ID。Alert rule ID.
+    * workspaceId  工作空间ID
+    * alertRuleId  告警规则 ID
     *
     * @var string[]
     */
     protected static $getters = [
             'workspaceId' => 'getWorkspaceId',
-            'ruleId' => 'getRuleId'
+            'alertRuleId' => 'getAlertRuleId'
     ];
 
     /**
@@ -158,7 +158,7 @@ class ShowAlertRuleRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['workspaceId'] = isset($data['workspaceId']) ? $data['workspaceId'] : null;
-        $this->container['ruleId'] = isset($data['ruleId']) ? $data['ruleId'] : null;
+        $this->container['alertRuleId'] = isset($data['alertRuleId']) ? $data['alertRuleId'] : null;
     }
 
     /**
@@ -175,17 +175,17 @@ class ShowAlertRuleRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['workspaceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'workspaceId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['workspaceId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'workspaceId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['workspaceId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'workspaceId', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['ruleId'] === null) {
-            $invalidProperties[] = "'ruleId' can't be null";
+        if ($this->container['alertRuleId'] === null) {
+            $invalidProperties[] = "'alertRuleId' can't be null";
         }
-            if ((mb_strlen($this->container['ruleId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'ruleId', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['alertRuleId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'alertRuleId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['ruleId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'ruleId', the character length must be bigger than or equal to 36.";
+            if ((mb_strlen($this->container['alertRuleId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'alertRuleId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -203,7 +203,7 @@ class ShowAlertRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspaceId
-    *  工作空间 ID。Workspace ID.
+    *  工作空间ID
     *
     * @return string
     */
@@ -215,7 +215,7 @@ class ShowAlertRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets workspaceId
     *
-    * @param string $workspaceId 工作空间 ID。Workspace ID.
+    * @param string $workspaceId 工作空间ID
     *
     * @return $this
     */
@@ -226,26 +226,26 @@ class ShowAlertRuleRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets ruleId
-    *  告警规则 ID。Alert rule ID.
+    * Gets alertRuleId
+    *  告警规则 ID
     *
     * @return string
     */
-    public function getRuleId()
+    public function getAlertRuleId()
     {
-        return $this->container['ruleId'];
+        return $this->container['alertRuleId'];
     }
 
     /**
-    * Sets ruleId
+    * Sets alertRuleId
     *
-    * @param string $ruleId 告警规则 ID。Alert rule ID.
+    * @param string $alertRuleId 告警规则 ID
     *
     * @return $this
     */
-    public function setRuleId($ruleId)
+    public function setAlertRuleId($alertRuleId)
     {
-        $this->container['ruleId'] = $ruleId;
+        $this->container['alertRuleId'] = $alertRuleId;
         return $this;
     }
 

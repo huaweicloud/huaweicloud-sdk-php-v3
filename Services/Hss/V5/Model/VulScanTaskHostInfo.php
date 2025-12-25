@@ -20,14 +20,14 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  主机ID
-    * hostName  主机名称
-    * publicIp  弹性公网IP地址
-    * privateIp  私有IP地址
-    * assetValue  资产重要性，包含如下:   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * scanStatus  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
-    * failedReasons  扫描失败的原因列表
-    * vulScanDetails  该主机的扫描详情信息
+    * hostId  **参数解释**: 主机ID **取值范围**: 字符长度1-128位
+    * hostName  **参数解释**: 主机名称 **取值范围**: 字符长度0-128位
+    * publicIp  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128位
+    * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128位
+    * assetValue  **参数解释**: 主机的资产重要性 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产
+    * scanStatus  **参数解释**: 主机的扫描状态 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败
+    * failedReasons  **参数解释**: 漏洞扫描失败的原因列表（即将废弃，建议使用“vul_scan_details”字段） **取值范围**: 最小值0，最大值2147483647
+    * vulScanDetails  **参数解释**: 该主机的扫描详情信息列表 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  主机ID
-    * hostName  主机名称
-    * publicIp  弹性公网IP地址
-    * privateIp  私有IP地址
-    * assetValue  资产重要性，包含如下:   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * scanStatus  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
-    * failedReasons  扫描失败的原因列表
-    * vulScanDetails  该主机的扫描详情信息
+    * hostId  **参数解释**: 主机ID **取值范围**: 字符长度1-128位
+    * hostName  **参数解释**: 主机名称 **取值范围**: 字符长度0-128位
+    * publicIp  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128位
+    * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128位
+    * assetValue  **参数解释**: 主机的资产重要性 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产
+    * scanStatus  **参数解释**: 主机的扫描状态 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败
+    * failedReasons  **参数解释**: 漏洞扫描失败的原因列表（即将废弃，建议使用“vul_scan_details”字段） **取值范围**: 最小值0，最大值2147483647
+    * vulScanDetails  **参数解释**: 该主机的扫描详情信息列表 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  主机ID
-    * hostName  主机名称
-    * publicIp  弹性公网IP地址
-    * privateIp  私有IP地址
-    * assetValue  资产重要性，包含如下:   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * scanStatus  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
-    * failedReasons  扫描失败的原因列表
-    * vulScanDetails  该主机的扫描详情信息
+    * hostId  **参数解释**: 主机ID **取值范围**: 字符长度1-128位
+    * hostName  **参数解释**: 主机名称 **取值范围**: 字符长度0-128位
+    * publicIp  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128位
+    * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128位
+    * assetValue  **参数解释**: 主机的资产重要性 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产
+    * scanStatus  **参数解释**: 主机的扫描状态 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败
+    * failedReasons  **参数解释**: 漏洞扫描失败的原因列表（即将废弃，建议使用“vul_scan_details”字段） **取值范围**: 最小值0，最大值2147483647
+    * vulScanDetails  **参数解释**: 该主机的扫描详情信息列表 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  主机ID
-    * hostName  主机名称
-    * publicIp  弹性公网IP地址
-    * privateIp  私有IP地址
-    * assetValue  资产重要性，包含如下:   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * scanStatus  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
-    * failedReasons  扫描失败的原因列表
-    * vulScanDetails  该主机的扫描详情信息
+    * hostId  **参数解释**: 主机ID **取值范围**: 字符长度1-128位
+    * hostName  **参数解释**: 主机名称 **取值范围**: 字符长度0-128位
+    * publicIp  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128位
+    * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128位
+    * assetValue  **参数解释**: 主机的资产重要性 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产
+    * scanStatus  **参数解释**: 主机的扫描状态 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败
+    * failedReasons  **参数解释**: 漏洞扫描失败的原因列表（即将废弃，建议使用“vul_scan_details”字段） **取值范围**: 最小值0，最大值2147483647
+    * vulScanDetails  **参数解释**: 该主机的扫描详情信息列表 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  主机ID
-    * hostName  主机名称
-    * publicIp  弹性公网IP地址
-    * privateIp  私有IP地址
-    * assetValue  资产重要性，包含如下:   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * scanStatus  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
-    * failedReasons  扫描失败的原因列表
-    * vulScanDetails  该主机的扫描详情信息
+    * hostId  **参数解释**: 主机ID **取值范围**: 字符长度1-128位
+    * hostName  **参数解释**: 主机名称 **取值范围**: 字符长度0-128位
+    * publicIp  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128位
+    * privateIp  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128位
+    * assetValue  **参数解释**: 主机的资产重要性 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产
+    * scanStatus  **参数解释**: 主机的扫描状态 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败
+    * failedReasons  **参数解释**: 漏洞扫描失败的原因列表（即将废弃，建议使用“vul_scan_details”字段） **取值范围**: 最小值0，最大值2147483647
+    * vulScanDetails  **参数解释**: 该主机的扫描详情信息列表 **取值范围**: 最小值0，最大值2147483647
     *
     * @var string[]
     */
@@ -287,7 +287,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机ID
+    *  **参数解释**: 主机ID **取值范围**: 字符长度1-128位
     *
     * @return string|null
     */
@@ -299,7 +299,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机ID
+    * @param string|null $hostId **参数解释**: 主机ID **取值范围**: 字符长度1-128位
     *
     * @return $this
     */
@@ -311,7 +311,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  主机名称
+    *  **参数解释**: 主机名称 **取值范围**: 字符长度0-128位
     *
     * @return string|null
     */
@@ -323,7 +323,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 主机名称
+    * @param string|null $hostName **参数解释**: 主机名称 **取值范围**: 字符长度0-128位
     *
     * @return $this
     */
@@ -335,7 +335,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  弹性公网IP地址
+    *  **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128位
     *
     * @return string|null
     */
@@ -347,7 +347,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp 弹性公网IP地址
+    * @param string|null $publicIp **参数解释**: 弹性公网IP地址 **取值范围**: 字符长度0-128位
     *
     * @return $this
     */
@@ -359,7 +359,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIp
-    *  私有IP地址
+    *  **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128位
     *
     * @return string|null
     */
@@ -371,7 +371,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets privateIp
     *
-    * @param string|null $privateIp 私有IP地址
+    * @param string|null $privateIp **参数解释**: 私有IP地址 **取值范围**: 字符长度0-128位
     *
     * @return $this
     */
@@ -383,7 +383,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetValue
-    *  资产重要性，包含如下:   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    *  **参数解释**: 主机的资产重要性 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产
     *
     * @return string|null
     */
@@ -395,7 +395,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets assetValue
     *
-    * @param string|null $assetValue 资产重要性，包含如下:   - important ：重要资产   - common ：一般资产   - test ：测试资产
+    * @param string|null $assetValue **参数解释**: 主机的资产重要性 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产
     *
     * @return $this
     */
@@ -407,7 +407,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanStatus
-    *  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
+    *  **参数解释**: 主机的扫描状态 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败
     *
     * @return string|null
     */
@@ -419,7 +419,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanStatus
     *
-    * @param string|null $scanStatus 主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
+    * @param string|null $scanStatus **参数解释**: 主机的扫描状态 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败
     *
     * @return $this
     */
@@ -431,7 +431,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets failedReasons
-    *  扫描失败的原因列表
+    *  **参数解释**: 漏洞扫描失败的原因列表（即将废弃，建议使用“vul_scan_details”字段） **取值范围**: 最小值0，最大值2147483647
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\VulScanTaskHostInfoFailedReasons[]|null
     */
@@ -443,7 +443,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets failedReasons
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\VulScanTaskHostInfoFailedReasons[]|null $failedReasons 扫描失败的原因列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\VulScanTaskHostInfoFailedReasons[]|null $failedReasons **参数解释**: 漏洞扫描失败的原因列表（即将废弃，建议使用“vul_scan_details”字段） **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */
@@ -455,7 +455,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vulScanDetails
-    *  该主机的扫描详情信息
+    *  **参数解释**: 该主机的扫描详情信息列表 **取值范围**: 最小值0，最大值2147483647
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\VulScanTaskHostInfoVulScanDetails[]|null
     */
@@ -467,7 +467,7 @@ class VulScanTaskHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vulScanDetails
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\VulScanTaskHostInfoVulScanDetails[]|null $vulScanDetails 该主机的扫描详情信息
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\VulScanTaskHostInfoVulScanDetails[]|null $vulScanDetails **参数解释**: 该主机的扫描详情信息列表 **取值范围**: 最小值0，最大值2147483647
     *
     * @return $this
     */

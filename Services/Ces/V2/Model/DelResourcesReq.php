@@ -20,8 +20,8 @@ class DelResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resources  当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息
-    * productResources  当资源添加方式为手动创建、资源层级为云产品时，删除资源分组中的资源只需传递删除的资源信息
+    * resources  **参数解释** 当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息 **约束限制** 包含的资源对象个数为1到1000
+    * productResources  **参数解释** 当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息 **约束限制** 包含的资源个数为1到50个
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DelResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resources  当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息
-    * productResources  当资源添加方式为手动创建、资源层级为云产品时，删除资源分组中的资源只需传递删除的资源信息
+    * resources  **参数解释** 当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息 **约束限制** 包含的资源对象个数为1到1000
+    * productResources  **参数解释** 当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息 **约束限制** 包含的资源个数为1到50个
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DelResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resources  当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息
-    * productResources  当资源添加方式为手动创建、资源层级为云产品时，删除资源分组中的资源只需传递删除的资源信息
+    * resources  **参数解释** 当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息 **约束限制** 包含的资源对象个数为1到1000
+    * productResources  **参数解释** 当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息 **约束限制** 包含的资源个数为1到50个
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DelResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resources  当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息
-    * productResources  当资源添加方式为手动创建、资源层级为云产品时，删除资源分组中的资源只需传递删除的资源信息
+    * resources  **参数解释** 当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息 **约束限制** 包含的资源对象个数为1到1000
+    * productResources  **参数解释** 当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息 **约束限制** 包含的资源个数为1到50个
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DelResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resources  当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息
-    * productResources  当资源添加方式为手动创建、资源层级为云产品时，删除资源分组中的资源只需传递删除的资源信息
+    * resources  **参数解释** 当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息 **约束限制** 包含的资源对象个数为1到1000
+    * productResources  **参数解释** 当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息 **约束限制** 包含的资源个数为1到50个
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class DelResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets resources
-    *  当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息
+    *  **参数解释** 当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息 **约束限制** 包含的资源对象个数为1到1000
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\Resource[]|null
     */
@@ -197,7 +197,7 @@ class DelResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Resource[]|null $resources 当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Resource[]|null $resources **参数解释** 当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息 **约束限制** 包含的资源对象个数为1到1000
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class DelResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets productResources
-    *  当资源添加方式为手动创建、资源层级为云产品时，删除资源分组中的资源只需传递删除的资源信息
+    *  **参数解释** 当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息 **约束限制** 包含的资源个数为1到50个
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\ProductResource[]|null
     */
@@ -221,7 +221,7 @@ class DelResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets productResources
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ProductResource[]|null $productResources 当资源添加方式为手动创建、资源层级为云产品时，删除资源分组中的资源只需传递删除的资源信息
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ProductResource[]|null $productResources **参数解释** 当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息 **约束限制** 包含的资源个数为1到50个
     *
     * @return $this
     */

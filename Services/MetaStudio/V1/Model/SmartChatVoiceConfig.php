@@ -25,7 +25,7 @@ class SmartChatVoiceConfig implements ModelInterface, ArrayAccess
     * pitch  音高。默认值100，最小值50，最大值200。
     * volume  音量。默认值140，最小值90，最大值240。
     * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
-    * language  语言类型。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * language  语言类型。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     * languageDesc  语言描述。
     *
     * @var string[]
@@ -47,7 +47,7 @@ class SmartChatVoiceConfig implements ModelInterface, ArrayAccess
     * pitch  音高。默认值100，最小值50，最大值200。
     * volume  音量。默认值140，最小值90，最大值240。
     * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
-    * language  语言类型。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * language  语言类型。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     * languageDesc  语言描述。
     *
     * @var string[]
@@ -90,7 +90,7 @@ class SmartChatVoiceConfig implements ModelInterface, ArrayAccess
     * pitch  音高。默认值100，最小值50，最大值200。
     * volume  音量。默认值140，最小值90，最大值240。
     * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
-    * language  语言类型。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * language  语言类型。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     * languageDesc  语言描述。
     *
     * @var string[]
@@ -112,7 +112,7 @@ class SmartChatVoiceConfig implements ModelInterface, ArrayAccess
     * pitch  音高。默认值100，最小值50，最大值200。
     * volume  音量。默认值140，最小值90，最大值240。
     * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
-    * language  语言类型。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * language  语言类型。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     * languageDesc  语言描述。
     *
     * @var string[]
@@ -134,7 +134,7 @@ class SmartChatVoiceConfig implements ModelInterface, ArrayAccess
     * pitch  音高。默认值100，最小值50，最大值200。
     * volume  音量。默认值140，最小值90，最大值240。
     * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
-    * language  语言类型。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * language  语言类型。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     * languageDesc  语言描述。
     *
     * @var string[]
@@ -195,6 +195,7 @@ class SmartChatVoiceConfig implements ModelInterface, ArrayAccess
     const LANGUAGE_POR = 'por';
     const LANGUAGE_ARABIC = 'Arabic';
     const LANGUAGE_THAI = 'Thai';
+    const LANGUAGE_FR = 'fr';
     
 
     /**
@@ -211,6 +212,7 @@ class SmartChatVoiceConfig implements ModelInterface, ArrayAccess
             self::LANGUAGE_POR,
             self::LANGUAGE_ARABIC,
             self::LANGUAGE_THAI,
+            self::LANGUAGE_FR,
         ];
     }
 
@@ -427,7 +429,7 @@ class SmartChatVoiceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  语言类型。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    *  语言类型。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     *
     * @return string|null
     */
@@ -439,7 +441,7 @@ class SmartChatVoiceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 语言类型。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * @param string|null $language 语言类型。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     *
     * @return $this
     */

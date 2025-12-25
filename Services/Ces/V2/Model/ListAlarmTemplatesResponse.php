@@ -22,7 +22,7 @@ class ListAlarmTemplatesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * alarmTemplates  告警模板列表
-    * count  告警模板记录总数
+    * count  **参数解释**： 告警模板记录总数。 **取值范围**： 字符串长度在 10 到 9999999 之间。
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class ListAlarmTemplatesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * alarmTemplates  告警模板列表
-    * count  告警模板记录总数
+    * count  **参数解释**： 告警模板记录总数。 **取值范围**： 字符串长度在 10 到 9999999 之间。
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class ListAlarmTemplatesResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * alarmTemplates  告警模板列表
-    * count  告警模板记录总数
+    * count  **参数解释**： 告警模板记录总数。 **取值范围**： 字符串长度在 10 到 9999999 之间。
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class ListAlarmTemplatesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * alarmTemplates  告警模板列表
-    * count  告警模板记录总数
+    * count  **参数解释**： 告警模板记录总数。 **取值范围**： 字符串长度在 10 到 9999999 之间。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListAlarmTemplatesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * alarmTemplates  告警模板列表
-    * count  告警模板记录总数
+    * count  **参数解释**： 告警模板记录总数。 **取值范围**： 字符串长度在 10 到 9999999 之间。
     *
     * @var string[]
     */
@@ -216,7 +216,7 @@ class ListAlarmTemplatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  告警模板记录总数
+    *  **参数解释**： 告警模板记录总数。 **取值范围**： 字符串长度在 10 到 9999999 之间。
     *
     * @return int|null
     */
@@ -228,7 +228,7 @@ class ListAlarmTemplatesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 告警模板记录总数
+    * @param int|null $count **参数解释**： 告警模板记录总数。 **取值范围**： 字符串长度在 10 到 9999999 之间。
     *
     * @return $this
     */

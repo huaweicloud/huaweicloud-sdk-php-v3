@@ -22,24 +22,28 @@ class CreateResourceGroup implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值** 不涉及
     * dimensions  **参数解释** 资源的维度信息 **约束限制** 不超过4个维度
+    * relationId  **参数解释** 关联id **约束限制** 不涉及 **取值范围** 由数字、字母,_和-组成长度[1,128] **默认取值** 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'namespace' => 'string',
-            'dimensions' => '\HuaweiCloud\SDK\Ces\V1\Model\MetricsDimension[]'
+            'dimensions' => '\HuaweiCloud\SDK\Ces\V1\Model\MetricsDimension[]',
+            'relationId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值** 不涉及
     * dimensions  **参数解释** 资源的维度信息 **约束限制** 不超过4个维度
+    * relationId  **参数解释** 关联id **约束限制** 不涉及 **取值范围** 由数字、字母,_和-组成长度[1,128] **默认取值** 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'namespace' => null,
-        'dimensions' => null
+        'dimensions' => null,
+        'relationId' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class CreateResourceGroup implements ModelInterface, ArrayAccess
     * and the value is the original name
     * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值** 不涉及
     * dimensions  **参数解释** 资源的维度信息 **约束限制** 不超过4个维度
+    * relationId  **参数解释** 关联id **约束限制** 不涉及 **取值范围** 由数字、字母,_和-组成长度[1,128] **默认取值** 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'namespace' => 'namespace',
-            'dimensions' => 'dimensions'
+            'dimensions' => 'dimensions',
+            'relationId' => 'relation_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值** 不涉及
     * dimensions  **参数解释** 资源的维度信息 **约束限制** 不超过4个维度
+    * relationId  **参数解释** 关联id **约束限制** 不涉及 **取值范围** 由数字、字母,_和-组成长度[1,128] **默认取值** 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
             'namespace' => 'setNamespace',
-            'dimensions' => 'setDimensions'
+            'dimensions' => 'setDimensions',
+            'relationId' => 'setRelationId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值** 不涉及
     * dimensions  **参数解释** 资源的维度信息 **约束限制** 不超过4个维度
+    * relationId  **参数解释** 关联id **约束限制** 不涉及 **取值范围** 由数字、字母,_和-组成长度[1,128] **默认取值** 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
             'namespace' => 'getNamespace',
-            'dimensions' => 'getDimensions'
+            'dimensions' => 'getDimensions',
+            'relationId' => 'getRelationId'
     ];
 
     /**
@@ -159,6 +169,7 @@ class CreateResourceGroup implements ModelInterface, ArrayAccess
     {
         $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
         $this->container['dimensions'] = isset($data['dimensions']) ? $data['dimensions'] : null;
+        $this->container['relationId'] = isset($data['relationId']) ? $data['relationId'] : null;
     }
 
     /**
@@ -184,6 +195,15 @@ class CreateResourceGroup implements ModelInterface, ArrayAccess
         if ($this->container['dimensions'] === null) {
             $invalidProperties[] = "'dimensions' can't be null";
         }
+            if (!is_null($this->container['relationId']) && (mb_strlen($this->container['relationId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'relationId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['relationId']) && (mb_strlen($this->container['relationId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'relationId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['relationId']) && !preg_match("/^([a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['relationId'])) {
+                $invalidProperties[] = "invalid value for 'relationId', must be conform to the pattern /^([a-z]|[A-Z]|[0-9]|_|-)+$/.";
+            }
         return $invalidProperties;
     }
 
@@ -243,6 +263,30 @@ class CreateResourceGroup implements ModelInterface, ArrayAccess
     public function setDimensions($dimensions)
     {
         $this->container['dimensions'] = $dimensions;
+        return $this;
+    }
+
+    /**
+    * Gets relationId
+    *  **参数解释** 关联id **约束限制** 不涉及 **取值范围** 由数字、字母,_和-组成长度[1,128] **默认取值** 不涉及
+    *
+    * @return string|null
+    */
+    public function getRelationId()
+    {
+        return $this->container['relationId'];
+    }
+
+    /**
+    * Sets relationId
+    *
+    * @param string|null $relationId **参数解释** 关联id **约束限制** 不涉及 **取值范围** 由数字、字母,_和-组成长度[1,128] **默认取值** 不涉及
+    *
+    * @return $this
+    */
+    public function setRelationId($relationId)
+    {
+        $this->container['relationId'] = $relationId;
         return $this;
     }
 

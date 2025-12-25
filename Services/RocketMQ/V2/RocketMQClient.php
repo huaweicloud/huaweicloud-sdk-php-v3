@@ -222,6 +222,71 @@ class RocketMQClient extends Client
     }
 
     /**
+     * 批量删除元数据迁移任务
+     *
+     * 批量删除元数据迁移任务。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteRocketMqMigrationTask($request)
+    {
+        return $this->batchDeleteRocketMqMigrationTaskWithHttpInfo($request);
+    }
+
+    public function batchDeleteRocketMqMigrationTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/metadata/batch-delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RocketMQ\V2\Model\BatchDeleteRocketMqMigrationTaskResponse',
+            $requestType='\HuaweiCloud\SDK\RocketMQ\V2\Model\BatchDeleteRocketMqMigrationTaskRequest');
+    }
+
+    /**
      * 批量修改消费组
      *
      * 批量修改消费组。
@@ -878,71 +943,6 @@ class RocketMQClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\RocketMQ\V2\Model\DeleteInstanceResponse',
             $requestType='\HuaweiCloud\SDK\RocketMQ\V2\Model\DeleteInstanceRequest');
-    }
-
-    /**
-     * 删除元数据迁移任务
-     *
-     * 删除元数据迁移任务。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function deleteRocketMqMigrationTask($request)
-    {
-        return $this->deleteRocketMqMigrationTaskWithHttpInfo($request);
-    }
-
-    public function deleteRocketMqMigrationTaskWithHttpInfo($request)
-    {
-        $resourcePath = '/v2/{project_id}/instances/{instance_id}/metadata';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['instanceId'] !== null) {
-            $pathParams['instance_id'] = $localVarParams['instanceId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='DELETE',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\RocketMQ\V2\Model\DeleteRocketMqMigrationTaskResponse',
-            $requestType='\HuaweiCloud\SDK\RocketMQ\V2\Model\DeleteRocketMqMigrationTaskRequest');
     }
 
     /**

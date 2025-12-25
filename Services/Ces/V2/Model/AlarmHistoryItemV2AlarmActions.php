@@ -20,7 +20,7 @@ class AlarmHistoryItemV2AlarmActions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  **参数解释**： 通知类型。 **取值范围**： 枚举值。notification为通知组或者主题订阅，contact为云账号联系人，contactGroup为（已废弃）通知组。autoscaling为AS通知，只在AS中使用，不推荐客户使用。groupwatch、ecsRecovery及iecAction，已废弃，不推荐使用。
+    * type  **参数解释**： 通知类型。 **取值范围**： 枚举值。 - notification：通知组或主题订阅。 - contact：云账号联系人。 - contactGroup：（已废弃）通知组。 - autoscaling：AS通知，只在AS中使用。 - groupwatch：已废弃，不推荐使用。 - ecsRecovery：已废弃，不推荐使用。 - iecAction：已废弃，不推荐使用。
     * notificationList  **参数解释**： 告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class AlarmHistoryItemV2AlarmActions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  **参数解释**： 通知类型。 **取值范围**： 枚举值。notification为通知组或者主题订阅，contact为云账号联系人，contactGroup为（已废弃）通知组。autoscaling为AS通知，只在AS中使用，不推荐客户使用。groupwatch、ecsRecovery及iecAction，已废弃，不推荐使用。
+    * type  **参数解释**： 通知类型。 **取值范围**： 枚举值。 - notification：通知组或主题订阅。 - contact：云账号联系人。 - contactGroup：（已废弃）通知组。 - autoscaling：AS通知，只在AS中使用。 - groupwatch：已废弃，不推荐使用。 - ecsRecovery：已废弃，不推荐使用。 - iecAction：已废弃，不推荐使用。
     * notificationList  **参数解释**： 告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class AlarmHistoryItemV2AlarmActions implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  **参数解释**： 通知类型。 **取值范围**： 枚举值。notification为通知组或者主题订阅，contact为云账号联系人，contactGroup为（已废弃）通知组。autoscaling为AS通知，只在AS中使用，不推荐客户使用。groupwatch、ecsRecovery及iecAction，已废弃，不推荐使用。
+    * type  **参数解释**： 通知类型。 **取值范围**： 枚举值。 - notification：通知组或主题订阅。 - contact：云账号联系人。 - contactGroup：（已废弃）通知组。 - autoscaling：AS通知，只在AS中使用。 - groupwatch：已废弃，不推荐使用。 - ecsRecovery：已废弃，不推荐使用。 - iecAction：已废弃，不推荐使用。
     * notificationList  **参数解释**： 告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class AlarmHistoryItemV2AlarmActions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  **参数解释**： 通知类型。 **取值范围**： 枚举值。notification为通知组或者主题订阅，contact为云账号联系人，contactGroup为（已废弃）通知组。autoscaling为AS通知，只在AS中使用，不推荐客户使用。groupwatch、ecsRecovery及iecAction，已废弃，不推荐使用。
+    * type  **参数解释**： 通知类型。 **取值范围**： 枚举值。 - notification：通知组或主题订阅。 - contact：云账号联系人。 - contactGroup：（已废弃）通知组。 - autoscaling：AS通知，只在AS中使用。 - groupwatch：已废弃，不推荐使用。 - ecsRecovery：已废弃，不推荐使用。 - iecAction：已废弃，不推荐使用。
     * notificationList  **参数解释**： 告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class AlarmHistoryItemV2AlarmActions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  **参数解释**： 通知类型。 **取值范围**： 枚举值。notification为通知组或者主题订阅，contact为云账号联系人，contactGroup为（已废弃）通知组。autoscaling为AS通知，只在AS中使用，不推荐客户使用。groupwatch、ecsRecovery及iecAction，已废弃，不推荐使用。
+    * type  **参数解释**： 通知类型。 **取值范围**： 枚举值。 - notification：通知组或主题订阅。 - contact：云账号联系人。 - contactGroup：（已废弃）通知组。 - autoscaling：AS通知，只在AS中使用。 - groupwatch：已废弃，不推荐使用。 - ecsRecovery：已废弃，不推荐使用。 - iecAction：已废弃，不推荐使用。
     * notificationList  **参数解释**： 告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。
     *
     * @var string[]
@@ -218,7 +218,7 @@ class AlarmHistoryItemV2AlarmActions implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**： 通知类型。 **取值范围**： 枚举值。notification为通知组或者主题订阅，contact为云账号联系人，contactGroup为（已废弃）通知组。autoscaling为AS通知，只在AS中使用，不推荐客户使用。groupwatch、ecsRecovery及iecAction，已废弃，不推荐使用。
+    *  **参数解释**： 通知类型。 **取值范围**： 枚举值。 - notification：通知组或主题订阅。 - contact：云账号联系人。 - contactGroup：（已废弃）通知组。 - autoscaling：AS通知，只在AS中使用。 - groupwatch：已废弃，不推荐使用。 - ecsRecovery：已废弃，不推荐使用。 - iecAction：已废弃，不推荐使用。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class AlarmHistoryItemV2AlarmActions implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释**： 通知类型。 **取值范围**： 枚举值。notification为通知组或者主题订阅，contact为云账号联系人，contactGroup为（已废弃）通知组。autoscaling为AS通知，只在AS中使用，不推荐客户使用。groupwatch、ecsRecovery及iecAction，已废弃，不推荐使用。
+    * @param string|null $type **参数解释**： 通知类型。 **取值范围**： 枚举值。 - notification：通知组或主题订阅。 - contact：云账号联系人。 - contactGroup：（已废弃）通知组。 - autoscaling：AS通知，只在AS中使用。 - groupwatch：已废弃，不推荐使用。 - ecsRecovery：已废弃，不推荐使用。 - iecAction：已废弃，不推荐使用。
     *
     * @return $this
     */

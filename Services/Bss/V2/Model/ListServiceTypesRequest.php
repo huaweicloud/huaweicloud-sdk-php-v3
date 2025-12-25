@@ -23,13 +23,15 @@ class ListServiceTypesRequest implements ModelInterface, ArrayAccess
     * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
     * limit  每次查询的数量，默认值为10。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * serviceTypeName  |参数名称：云服务类型的名称| |参数的约束及描述：该参数非必填，范围限制：1-128，支持模糊查询。仅支持前缀匹配、后缀匹配、中间匹配。|
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'xLanguage' => 'string',
             'limit' => 'int',
-            'offset' => 'int'
+            'offset' => 'int',
+            'serviceTypeName' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class ListServiceTypesRequest implements ModelInterface, ArrayAccess
     * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
     * limit  每次查询的数量，默认值为10。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * serviceTypeName  |参数名称：云服务类型的名称| |参数的约束及描述：该参数非必填，范围限制：1-128，支持模糊查询。仅支持前缀匹配、后缀匹配、中间匹配。|
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'xLanguage' => null,
         'limit' => 'int32',
-        'offset' => 'int32'
+        'offset' => 'int32',
+        'serviceTypeName' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class ListServiceTypesRequest implements ModelInterface, ArrayAccess
     * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
     * limit  每次查询的数量，默认值为10。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * serviceTypeName  |参数名称：云服务类型的名称| |参数的约束及描述：该参数非必填，范围限制：1-128，支持模糊查询。仅支持前缀匹配、后缀匹配、中间匹配。|
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'xLanguage' => 'X-Language',
             'limit' => 'limit',
-            'offset' => 'offset'
+            'offset' => 'offset',
+            'serviceTypeName' => 'service_type_name'
     ];
 
     /**
@@ -86,13 +92,15 @@ class ListServiceTypesRequest implements ModelInterface, ArrayAccess
     * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
     * limit  每次查询的数量，默认值为10。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * serviceTypeName  |参数名称：云服务类型的名称| |参数的约束及描述：该参数非必填，范围限制：1-128，支持模糊查询。仅支持前缀匹配、后缀匹配、中间匹配。|
     *
     * @var string[]
     */
     protected static $setters = [
             'xLanguage' => 'setXLanguage',
             'limit' => 'setLimit',
-            'offset' => 'setOffset'
+            'offset' => 'setOffset',
+            'serviceTypeName' => 'setServiceTypeName'
     ];
 
     /**
@@ -100,13 +108,15 @@ class ListServiceTypesRequest implements ModelInterface, ArrayAccess
     * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
     * limit  每次查询的数量，默认值为10。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * serviceTypeName  |参数名称：云服务类型的名称| |参数的约束及描述：该参数非必填，范围限制：1-128，支持模糊查询。仅支持前缀匹配、后缀匹配、中间匹配。|
     *
     * @var string[]
     */
     protected static $getters = [
             'xLanguage' => 'getXLanguage',
             'limit' => 'getLimit',
-            'offset' => 'getOffset'
+            'offset' => 'getOffset',
+            'serviceTypeName' => 'getServiceTypeName'
     ];
 
     /**
@@ -170,6 +180,7 @@ class ListServiceTypesRequest implements ModelInterface, ArrayAccess
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['serviceTypeName'] = isset($data['serviceTypeName']) ? $data['serviceTypeName'] : null;
     }
 
     /**
@@ -191,6 +202,12 @@ class ListServiceTypesRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['serviceTypeName']) && (mb_strlen($this->container['serviceTypeName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'serviceTypeName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['serviceTypeName']) && (mb_strlen($this->container['serviceTypeName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'serviceTypeName', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -275,6 +292,30 @@ class ListServiceTypesRequest implements ModelInterface, ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypeName
+    *  |参数名称：云服务类型的名称| |参数的约束及描述：该参数非必填，范围限制：1-128，支持模糊查询。仅支持前缀匹配、后缀匹配、中间匹配。|
+    *
+    * @return string|null
+    */
+    public function getServiceTypeName()
+    {
+        return $this->container['serviceTypeName'];
+    }
+
+    /**
+    * Sets serviceTypeName
+    *
+    * @param string|null $serviceTypeName |参数名称：云服务类型的名称| |参数的约束及描述：该参数非必填，范围限制：1-128，支持模糊查询。仅支持前缀匹配、后缀匹配、中间匹配。|
+    *
+    * @return $this
+    */
+    public function setServiceTypeName($serviceTypeName)
+    {
+        $this->container['serviceTypeName'] = $serviceTypeName;
         return $this;
     }
 

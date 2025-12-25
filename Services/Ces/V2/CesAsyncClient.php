@@ -2712,6 +2712,9 @@ class CesAsyncClient extends Client
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
         }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2774,14 +2777,14 @@ class CesAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['dimName'] !== null) {
-            $queryParams['dim_name'] = $localVarParams['dimName'];
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
+        if ($localVarParams['dimName'] !== null) {
+            $queryParams['dim_name'] = $localVarParams['dimName'];
         }
         if ($localVarParams['status'] !== null) {
             $queryParams['status'] = $localVarParams['status'];
@@ -3311,7 +3314,8 @@ class CesAsyncClient extends Client
     /**
      * 修改告警通知屏蔽规则
      *
-     * 修改告警通知屏蔽规则
+     * 修改告警通知屏蔽规则。
+     * 不能修改通过告警规则屏蔽的告警通知，只能修改通过资源屏蔽、策略屏蔽、事件屏蔽创建的告警屏蔽。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

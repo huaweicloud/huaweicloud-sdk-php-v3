@@ -20,7 +20,7 @@ class PublicIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * publicBindType  **参数解释**： 弹性IP绑定类型。 **约束限制**： 不涉及。 **取值范围**： auto_assign：自动绑定。 not_use：暂未使用。 bind_existing ：使用已有。 **默认取值**： null
+    * publicBindType  **参数解释**： 弹性IP绑定类型。 **约束限制**： 不涉及。 **取值范围**： - auto_assign：自动绑定。 - not_use：暂未使用。 - bind_existing ：使用已有。  **默认取值**： null
     * eipId  **参数解释**： 弹性公网IP的id。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     * ipType  **参数解释**： 弹性公网IP的类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     * eipAddress  **参数解释**： 弹性公网IP的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
@@ -42,7 +42,7 @@ class PublicIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * publicBindType  **参数解释**： 弹性IP绑定类型。 **约束限制**： 不涉及。 **取值范围**： auto_assign：自动绑定。 not_use：暂未使用。 bind_existing ：使用已有。 **默认取值**： null
+    * publicBindType  **参数解释**： 弹性IP绑定类型。 **约束限制**： 不涉及。 **取值范围**： - auto_assign：自动绑定。 - not_use：暂未使用。 - bind_existing ：使用已有。  **默认取值**： null
     * eipId  **参数解释**： 弹性公网IP的id。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     * ipType  **参数解释**： 弹性公网IP的类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     * eipAddress  **参数解释**： 弹性公网IP的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
@@ -85,7 +85,7 @@ class PublicIp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * publicBindType  **参数解释**： 弹性IP绑定类型。 **约束限制**： 不涉及。 **取值范围**： auto_assign：自动绑定。 not_use：暂未使用。 bind_existing ：使用已有。 **默认取值**： null
+    * publicBindType  **参数解释**： 弹性IP绑定类型。 **约束限制**： 不涉及。 **取值范围**： - auto_assign：自动绑定。 - not_use：暂未使用。 - bind_existing ：使用已有。  **默认取值**： null
     * eipId  **参数解释**： 弹性公网IP的id。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     * ipType  **参数解释**： 弹性公网IP的类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     * eipAddress  **参数解释**： 弹性公网IP的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
@@ -107,7 +107,7 @@ class PublicIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * publicBindType  **参数解释**： 弹性IP绑定类型。 **约束限制**： 不涉及。 **取值范围**： auto_assign：自动绑定。 not_use：暂未使用。 bind_existing ：使用已有。 **默认取值**： null
+    * publicBindType  **参数解释**： 弹性IP绑定类型。 **约束限制**： 不涉及。 **取值范围**： - auto_assign：自动绑定。 - not_use：暂未使用。 - bind_existing ：使用已有。  **默认取值**： null
     * eipId  **参数解释**： 弹性公网IP的id。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     * ipType  **参数解释**： 弹性公网IP的类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     * eipAddress  **参数解释**： 弹性公网IP的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
@@ -129,7 +129,7 @@ class PublicIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * publicBindType  **参数解释**： 弹性IP绑定类型。 **约束限制**： 不涉及。 **取值范围**： auto_assign：自动绑定。 not_use：暂未使用。 bind_existing ：使用已有。 **默认取值**： null
+    * publicBindType  **参数解释**： 弹性IP绑定类型。 **约束限制**： 不涉及。 **取值范围**： - auto_assign：自动绑定。 - not_use：暂未使用。 - bind_existing ：使用已有。  **默认取值**： null
     * eipId  **参数解释**： 弹性公网IP的id。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     * ipType  **参数解释**： 弹性公网IP的类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
     * eipAddress  **参数解释**： 弹性公网IP的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： null
@@ -240,7 +240,7 @@ class PublicIp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicBindType
-    *  **参数解释**： 弹性IP绑定类型。 **约束限制**： 不涉及。 **取值范围**： auto_assign：自动绑定。 not_use：暂未使用。 bind_existing ：使用已有。 **默认取值**： null
+    *  **参数解释**： 弹性IP绑定类型。 **约束限制**： 不涉及。 **取值范围**： - auto_assign：自动绑定。 - not_use：暂未使用。 - bind_existing ：使用已有。  **默认取值**： null
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class PublicIp implements ModelInterface, ArrayAccess
     /**
     * Sets publicBindType
     *
-    * @param string|null $publicBindType **参数解释**： 弹性IP绑定类型。 **约束限制**： 不涉及。 **取值范围**： auto_assign：自动绑定。 not_use：暂未使用。 bind_existing ：使用已有。 **默认取值**： null
+    * @param string|null $publicBindType **参数解释**： 弹性IP绑定类型。 **约束限制**： 不涉及。 **取值范围**： - auto_assign：自动绑定。 - not_use：暂未使用。 - bind_existing ：使用已有。  **默认取值**： null
     *
     * @return $this
     */

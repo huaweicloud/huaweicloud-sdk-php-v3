@@ -54,7 +54,7 @@ class BuildHistory implements ModelInterface, ArrayAccess
         'createdBy' => null,
         'emptyLayer' => null,
         'mediaType' => null,
-        'size' => null,
+        'size' => 'int64',
         'digest' => null
     ];
 

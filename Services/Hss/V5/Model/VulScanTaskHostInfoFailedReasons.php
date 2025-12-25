@@ -20,8 +20,8 @@ class VulScanTaskHostInfoFailedReasons implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vulType  扫描失败的漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞   -urgent_vul : 应急漏洞
-    * failedReason  扫描失败的原因
+    * vulType  **参数解释**: 扫描失败的漏洞类型 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞
+    * failedReason  **参数解释**: 扫描失败的原因 **取值范围**: 字符长度0-128位
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class VulScanTaskHostInfoFailedReasons implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vulType  扫描失败的漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞   -urgent_vul : 应急漏洞
-    * failedReason  扫描失败的原因
+    * vulType  **参数解释**: 扫描失败的漏洞类型 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞
+    * failedReason  **参数解释**: 扫描失败的原因 **取值范围**: 字符长度0-128位
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class VulScanTaskHostInfoFailedReasons implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vulType  扫描失败的漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞   -urgent_vul : 应急漏洞
-    * failedReason  扫描失败的原因
+    * vulType  **参数解释**: 扫描失败的漏洞类型 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞
+    * failedReason  **参数解释**: 扫描失败的原因 **取值范围**: 字符长度0-128位
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class VulScanTaskHostInfoFailedReasons implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vulType  扫描失败的漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞   -urgent_vul : 应急漏洞
-    * failedReason  扫描失败的原因
+    * vulType  **参数解释**: 扫描失败的漏洞类型 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞
+    * failedReason  **参数解释**: 扫描失败的原因 **取值范围**: 字符长度0-128位
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class VulScanTaskHostInfoFailedReasons implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vulType  扫描失败的漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞   -urgent_vul : 应急漏洞
-    * failedReason  扫描失败的原因
+    * vulType  **参数解释**: 扫描失败的漏洞类型 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞
+    * failedReason  **参数解释**: 扫描失败的原因 **取值范围**: 字符长度0-128位
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class VulScanTaskHostInfoFailedReasons implements ModelInterface, ArrayAccess
 
     /**
     * Gets vulType
-    *  扫描失败的漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞   -urgent_vul : 应急漏洞
+    *  **参数解释**: 扫描失败的漏洞类型 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class VulScanTaskHostInfoFailedReasons implements ModelInterface, ArrayAccess
     /**
     * Sets vulType
     *
-    * @param string|null $vulType 扫描失败的漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞   -urgent_vul : 应急漏洞
+    * @param string|null $vulType **参数解释**: 扫描失败的漏洞类型 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class VulScanTaskHostInfoFailedReasons implements ModelInterface, ArrayAccess
 
     /**
     * Gets failedReason
-    *  扫描失败的原因
+    *  **参数解释**: 扫描失败的原因 **取值范围**: 字符长度0-128位
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class VulScanTaskHostInfoFailedReasons implements ModelInterface, ArrayAccess
     /**
     * Sets failedReason
     *
-    * @param string|null $failedReason 扫描失败的原因
+    * @param string|null $failedReason **参数解释**: 扫描失败的原因 **取值范围**: 字符长度0-128位
     *
     * @return $this
     */

@@ -26,8 +26,8 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * started  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     * finished  **参数解释**： 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     * size  **参数解释**： 快照大小，单位GB。 **取值范围**： 不涉及。
-    * status  **参数解释**： 快照状态： **取值范围**： CREATING：创建中。 AVAILABLE：可用。 UNAVAILABLE：不可用。 FROZEN：普通冻结。 POLICE_FROZEN：公安冻结。
-    * type  **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+    * status  **参数解释**： 快照状态： **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN：普通冻结。 - POLICE_FROZEN：公安冻结。
+    * type  **参数解释**： 快照创建类型。 **取值范围**： - AUTO: 自动。 - MANUAL: 手动。
     * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     * datastore  datastore
     * clusterName  **参数解释**： 快照对应的集群名称。 **取值范围**： 不涉及。
@@ -48,7 +48,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * backupLevel  **参数解释**： 备份级别。 **取值范围**： cluster：集群级快照； schema：schema级快照； table：表级快照；
     * fineGrainedBackupDetail  fineGrainedBackupDetail
     * guestAgentVersion  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
-    * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
+    * clusterStatus  **参数解释**： 集群状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - RESTORING：恢复中。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     * clusterTaskStatus  **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
     * supportFineGrainedCrossVersionRestore  **参数解释**： 是否支持细粒度跨版本恢复。 **取值范围**： 不涉及。
     * supportFineGrainedAsymmetricRestore  **参数解释**： 是否支持细粒度异构恢复。 **取值范围**： 不涉及。
@@ -98,8 +98,8 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * started  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     * finished  **参数解释**： 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     * size  **参数解释**： 快照大小，单位GB。 **取值范围**： 不涉及。
-    * status  **参数解释**： 快照状态： **取值范围**： CREATING：创建中。 AVAILABLE：可用。 UNAVAILABLE：不可用。 FROZEN：普通冻结。 POLICE_FROZEN：公安冻结。
-    * type  **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+    * status  **参数解释**： 快照状态： **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN：普通冻结。 - POLICE_FROZEN：公安冻结。
+    * type  **参数解释**： 快照创建类型。 **取值范围**： - AUTO: 自动。 - MANUAL: 手动。
     * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     * datastore  datastore
     * clusterName  **参数解释**： 快照对应的集群名称。 **取值范围**： 不涉及。
@@ -120,7 +120,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * backupLevel  **参数解释**： 备份级别。 **取值范围**： cluster：集群级快照； schema：schema级快照； table：表级快照；
     * fineGrainedBackupDetail  fineGrainedBackupDetail
     * guestAgentVersion  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
-    * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
+    * clusterStatus  **参数解释**： 集群状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - RESTORING：恢复中。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     * clusterTaskStatus  **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
     * supportFineGrainedCrossVersionRestore  **参数解释**： 是否支持细粒度跨版本恢复。 **取值范围**： 不涉及。
     * supportFineGrainedAsymmetricRestore  **参数解释**： 是否支持细粒度异构恢复。 **取值范围**： 不涉及。
@@ -191,8 +191,8 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * started  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     * finished  **参数解释**： 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     * size  **参数解释**： 快照大小，单位GB。 **取值范围**： 不涉及。
-    * status  **参数解释**： 快照状态： **取值范围**： CREATING：创建中。 AVAILABLE：可用。 UNAVAILABLE：不可用。 FROZEN：普通冻结。 POLICE_FROZEN：公安冻结。
-    * type  **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+    * status  **参数解释**： 快照状态： **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN：普通冻结。 - POLICE_FROZEN：公安冻结。
+    * type  **参数解释**： 快照创建类型。 **取值范围**： - AUTO: 自动。 - MANUAL: 手动。
     * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     * datastore  datastore
     * clusterName  **参数解释**： 快照对应的集群名称。 **取值范围**： 不涉及。
@@ -213,7 +213,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * backupLevel  **参数解释**： 备份级别。 **取值范围**： cluster：集群级快照； schema：schema级快照； table：表级快照；
     * fineGrainedBackupDetail  fineGrainedBackupDetail
     * guestAgentVersion  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
-    * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
+    * clusterStatus  **参数解释**： 集群状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - RESTORING：恢复中。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     * clusterTaskStatus  **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
     * supportFineGrainedCrossVersionRestore  **参数解释**： 是否支持细粒度跨版本恢复。 **取值范围**： 不涉及。
     * supportFineGrainedAsymmetricRestore  **参数解释**： 是否支持细粒度异构恢复。 **取值范围**： 不涉及。
@@ -263,8 +263,8 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * started  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     * finished  **参数解释**： 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     * size  **参数解释**： 快照大小，单位GB。 **取值范围**： 不涉及。
-    * status  **参数解释**： 快照状态： **取值范围**： CREATING：创建中。 AVAILABLE：可用。 UNAVAILABLE：不可用。 FROZEN：普通冻结。 POLICE_FROZEN：公安冻结。
-    * type  **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+    * status  **参数解释**： 快照状态： **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN：普通冻结。 - POLICE_FROZEN：公安冻结。
+    * type  **参数解释**： 快照创建类型。 **取值范围**： - AUTO: 自动。 - MANUAL: 手动。
     * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     * datastore  datastore
     * clusterName  **参数解释**： 快照对应的集群名称。 **取值范围**： 不涉及。
@@ -285,7 +285,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * backupLevel  **参数解释**： 备份级别。 **取值范围**： cluster：集群级快照； schema：schema级快照； table：表级快照；
     * fineGrainedBackupDetail  fineGrainedBackupDetail
     * guestAgentVersion  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
-    * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
+    * clusterStatus  **参数解释**： 集群状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - RESTORING：恢复中。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     * clusterTaskStatus  **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
     * supportFineGrainedCrossVersionRestore  **参数解释**： 是否支持细粒度跨版本恢复。 **取值范围**： 不涉及。
     * supportFineGrainedAsymmetricRestore  **参数解释**： 是否支持细粒度异构恢复。 **取值范围**： 不涉及。
@@ -335,8 +335,8 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * started  **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     * finished  **参数解释**： 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
     * size  **参数解释**： 快照大小，单位GB。 **取值范围**： 不涉及。
-    * status  **参数解释**： 快照状态： **取值范围**： CREATING：创建中。 AVAILABLE：可用。 UNAVAILABLE：不可用。 FROZEN：普通冻结。 POLICE_FROZEN：公安冻结。
-    * type  **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+    * status  **参数解释**： 快照状态： **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN：普通冻结。 - POLICE_FROZEN：公安冻结。
+    * type  **参数解释**： 快照创建类型。 **取值范围**： - AUTO: 自动。 - MANUAL: 手动。
     * clusterId  **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
     * datastore  datastore
     * clusterName  **参数解释**： 快照对应的集群名称。 **取值范围**： 不涉及。
@@ -357,7 +357,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * backupLevel  **参数解释**： 备份级别。 **取值范围**： cluster：集群级快照； schema：schema级快照； table：表级快照；
     * fineGrainedBackupDetail  fineGrainedBackupDetail
     * guestAgentVersion  **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
-    * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
+    * clusterStatus  **参数解释**： 集群状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - RESTORING：恢复中。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     * clusterTaskStatus  **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
     * supportFineGrainedCrossVersionRestore  **参数解释**： 是否支持细粒度跨版本恢复。 **取值范围**： 不涉及。
     * supportFineGrainedAsymmetricRestore  **参数解释**： 是否支持细粒度异构恢复。 **取值范围**： 不涉及。
@@ -686,7 +686,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 快照状态： **取值范围**： CREATING：创建中。 AVAILABLE：可用。 UNAVAILABLE：不可用。 FROZEN：普通冻结。 POLICE_FROZEN：公安冻结。
+    *  **参数解释**： 快照状态： **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN：普通冻结。 - POLICE_FROZEN：公安冻结。
     *
     * @return string
     */
@@ -698,7 +698,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status **参数解释**： 快照状态： **取值范围**： CREATING：创建中。 AVAILABLE：可用。 UNAVAILABLE：不可用。 FROZEN：普通冻结。 POLICE_FROZEN：公安冻结。
+    * @param string $status **参数解释**： 快照状态： **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN：普通冻结。 - POLICE_FROZEN：公安冻结。
     *
     * @return $this
     */
@@ -710,7 +710,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 快照创建类型。 **取值范围**： - AUTO: 自动。 - MANUAL: 手动。
     *
     * @return string
     */
@@ -722,7 +722,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+    * @param string $type **参数解释**： 快照创建类型。 **取值范围**： - AUTO: 自动。 - MANUAL: 手动。
     *
     * @return $this
     */
@@ -1214,7 +1214,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterStatus
-    *  **参数解释**： 集群状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 集群状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - RESTORING：恢复中。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     *
     * @return string|null
     */
@@ -1226,7 +1226,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     /**
     * Sets clusterStatus
     *
-    * @param string|null $clusterStatus **参数解释**： 集群状态。 **取值范围**： 不涉及。
+    * @param string|null $clusterStatus **参数解释**： 集群状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - RESTORING：恢复中。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     *
     * @return $this
     */

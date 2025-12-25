@@ -20,30 +20,30 @@ class ListAlarmTemplateAssociationAlarmsRequest implements ModelInterface, Array
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
-    * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
-    * limit  查询结果条数的限制值，取值范围为[1,100]，默认值为100
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
+    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'templateId' => 'string',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'templateId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
-    * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
-    * limit  查询结果条数的限制值，取值范围为[1,100]，默认值为100
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
+    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'templateId' => null,
-        'offset' => 'int32',
-        'limit' => 'int32'
+        'offset' => null,
+        'limit' => null,
+        'templateId' => null
     ];
 
     /**
@@ -69,44 +69,44 @@ class ListAlarmTemplateAssociationAlarmsRequest implements ModelInterface, Array
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
-    * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
-    * limit  查询结果条数的限制值，取值范围为[1,100]，默认值为100
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
+    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'templateId' => 'template_id',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'templateId' => 'template_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
-    * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
-    * limit  查询结果条数的限制值，取值范围为[1,100]，默认值为100
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
+    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'templateId' => 'setTemplateId',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'templateId' => 'setTemplateId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
-    * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
-    * limit  查询结果条数的限制值，取值范围为[1,100]，默认值为100
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
+    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'templateId' => 'getTemplateId',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'templateId' => 'getTemplateId'
     ];
 
     /**
@@ -167,9 +167,9 @@ class ListAlarmTemplateAssociationAlarmsRequest implements ModelInterface, Array
     */
     public function __construct(array $data = null)
     {
-        $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
     }
 
     /**
@@ -180,15 +180,6 @@ class ListAlarmTemplateAssociationAlarmsRequest implements ModelInterface, Array
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['templateId'] === null) {
-            $invalidProperties[] = "'templateId' can't be null";
-        }
-            if ((mb_strlen($this->container['templateId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'templateId', the character length must be smaller than or equal to 64.";
-            }
-            if ((mb_strlen($this->container['templateId']) < 2)) {
-                $invalidProperties[] = "invalid value for 'templateId', the character length must be bigger than or equal to 2.";
-            }
             if (!is_null($this->container['offset']) && ($this->container['offset'] > 10000)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 10000.";
             }
@@ -200,6 +191,18 @@ class ListAlarmTemplateAssociationAlarmsRequest implements ModelInterface, Array
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
+        if ($this->container['templateId'] === null) {
+            $invalidProperties[] = "'templateId' can't be null";
+        }
+            if ((mb_strlen($this->container['templateId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'templateId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['templateId']) < 2)) {
+                $invalidProperties[] = "invalid value for 'templateId', the character length must be bigger than or equal to 2.";
+            }
+            if (!preg_match("/^at([0-9A-Za-z])+$/", $this->container['templateId'])) {
+                $invalidProperties[] = "invalid value for 'templateId', must be conform to the pattern /^at([0-9A-Za-z])+$/.";
             }
         return $invalidProperties;
     }
@@ -216,32 +219,8 @@ class ListAlarmTemplateAssociationAlarmsRequest implements ModelInterface, Array
     }
 
     /**
-    * Gets templateId
-    *  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
-    *
-    * @return string
-    */
-    public function getTemplateId()
-    {
-        return $this->container['templateId'];
-    }
-
-    /**
-    * Sets templateId
-    *
-    * @param string $templateId 告警模板的ID，以at开头，后跟字母、数字，长度最长为64
-    *
-    * @return $this
-    */
-    public function setTemplateId($templateId)
-    {
-        $this->container['templateId'] = $templateId;
-        return $this;
-    }
-
-    /**
     * Gets offset
-    *  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
+    *  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
     *
     * @return int|null
     */
@@ -253,7 +232,7 @@ class ListAlarmTemplateAssociationAlarmsRequest implements ModelInterface, Array
     /**
     * Sets offset
     *
-    * @param int|null $offset 分页查询时查询的起始位置，表示从第几条数据开始，默认为0
+    * @param int|null $offset **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
     *
     * @return $this
     */
@@ -265,7 +244,7 @@ class ListAlarmTemplateAssociationAlarmsRequest implements ModelInterface, Array
 
     /**
     * Gets limit
-    *  查询结果条数的限制值，取值范围为[1,100]，默认值为100
+    *  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
     *
     * @return int|null
     */
@@ -277,13 +256,37 @@ class ListAlarmTemplateAssociationAlarmsRequest implements ModelInterface, Array
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询结果条数的限制值，取值范围为[1,100]，默认值为100
+    * @param int|null $limit **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
     *
     * @return $this
     */
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets templateId
+    *  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
+    *
+    * @return string
+    */
+    public function getTemplateId()
+    {
+        return $this->container['templateId'];
+    }
+
+    /**
+    * Sets templateId
+    *
+    * @param string $templateId **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setTemplateId($templateId)
+    {
+        $this->container['templateId'] = $templateId;
         return $this;
     }
 

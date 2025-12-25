@@ -6,7 +6,7 @@ use InvalidArgumentException;
 
 class SisRegion {
 
-    public static $REGION = array("https://sis-ext.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://sis-ext.cn-east-3.myhuaweicloud.com"=>"cn-east-3",);
+    public static $REGION = array("https://sis-ext.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://sis-ext.cn-east-3.myhuaweicloud.com"=>"cn-east-3","https://sis-ext.ap-southeast-3.myhuaweicloud.com"=>"ap-southeast-3","https://sis-ext.me-east-1.myhuaweicloud.com"=>"me-east-1",);
 
     public static function valueOf($regionId)
     {

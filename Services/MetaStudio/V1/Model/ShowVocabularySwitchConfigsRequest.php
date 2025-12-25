@@ -27,7 +27,7 @@ class ShowVocabularySwitchConfigsRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  查询偏移量,若超过最大数量，则返回最后一页
     * limit  查询数量
-    * key  类型 租户级自定义读法全局开关:vocabulary
+    * key  类型。 * 租户级自定义读法全局开关，示例vocabulary。
     *
     * @var string[]
     */
@@ -51,7 +51,7 @@ class ShowVocabularySwitchConfigsRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  查询偏移量,若超过最大数量，则返回最后一页
     * limit  查询数量
-    * key  类型 租户级自定义读法全局开关:vocabulary
+    * key  类型。 * 租户级自定义读法全局开关，示例vocabulary。
     *
     * @var string[]
     */
@@ -96,7 +96,7 @@ class ShowVocabularySwitchConfigsRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  查询偏移量,若超过最大数量，则返回最后一页
     * limit  查询数量
-    * key  类型 租户级自定义读法全局开关:vocabulary
+    * key  类型。 * 租户级自定义读法全局开关，示例vocabulary。
     *
     * @var string[]
     */
@@ -120,7 +120,7 @@ class ShowVocabularySwitchConfigsRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  查询偏移量,若超过最大数量，则返回最后一页
     * limit  查询数量
-    * key  类型 租户级自定义读法全局开关:vocabulary
+    * key  类型。 * 租户级自定义读法全局开关，示例vocabulary。
     *
     * @var string[]
     */
@@ -144,7 +144,7 @@ class ShowVocabularySwitchConfigsRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  查询偏移量,若超过最大数量，则返回最后一页
     * limit  查询数量
-    * key  类型 租户级自定义读法全局开关:vocabulary
+    * key  类型。 * 租户级自定义读法全局开关，示例vocabulary。
     *
     * @var string[]
     */
@@ -467,7 +467,7 @@ class ShowVocabularySwitchConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  类型 租户级自定义读法全局开关:vocabulary
+    *  类型。 * 租户级自定义读法全局开关，示例vocabulary。
     *
     * @return string|null
     */
@@ -479,7 +479,7 @@ class ShowVocabularySwitchConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 类型 租户级自定义读法全局开关:vocabulary
+    * @param string|null $key 类型。 * 租户级自定义读法全局开关，示例vocabulary。
     *
     * @return $this
     */

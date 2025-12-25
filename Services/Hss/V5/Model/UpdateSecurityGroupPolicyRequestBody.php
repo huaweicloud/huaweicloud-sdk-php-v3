@@ -20,9 +20,9 @@ class UpdateSecurityGroupPolicyRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * policyId  安全策略ID
-    * policyName  策略名称
-    * securityGroups  安全组列表
+    * policyId  **参数解释** 安全组策略的唯一标识，用于指定待更新的目标安全组策略 **约束限制** 需确保该策略已存在于指定集群和命名空间下，否则返回策略不存在错误 **取值范围** 字符长度1-64位，支持UUID格式（32位十六进制字符，含4个短横线分隔） **默认取值** 无
+    * policyName  **参数解释** 安全组策略的名称，用于标识策略用途，更新时可修改该名称 **约束限制** 名称不能包含特殊字符（如@、#、$等），且同一命名空间下策略名称建议唯一 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线（-）、下划线（_） **默认取值** 无，不修改策略名称
+    * securityGroups  **参数解释** 待关联到安全组策略的安全组集合，更新后策略将仅应用于该列表中的安全组 **约束限制** 数组不能为空（至少包含1个安全组），且安全组需已存在于当前项目/企业项目下 **取值范围** 数组长度1-20个元素，每个元素需符合SecurityGroup对象结构 **默认取值** 无
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class UpdateSecurityGroupPolicyRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * policyId  安全策略ID
-    * policyName  策略名称
-    * securityGroups  安全组列表
+    * policyId  **参数解释** 安全组策略的唯一标识，用于指定待更新的目标安全组策略 **约束限制** 需确保该策略已存在于指定集群和命名空间下，否则返回策略不存在错误 **取值范围** 字符长度1-64位，支持UUID格式（32位十六进制字符，含4个短横线分隔） **默认取值** 无
+    * policyName  **参数解释** 安全组策略的名称，用于标识策略用途，更新时可修改该名称 **约束限制** 名称不能包含特殊字符（如@、#、$等），且同一命名空间下策略名称建议唯一 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线（-）、下划线（_） **默认取值** 无，不修改策略名称
+    * securityGroups  **参数解释** 待关联到安全组策略的安全组集合，更新后策略将仅应用于该列表中的安全组 **约束限制** 数组不能为空（至少包含1个安全组），且安全组需已存在于当前项目/企业项目下 **取值范围** 数组长度1-20个元素，每个元素需符合SecurityGroup对象结构 **默认取值** 无
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class UpdateSecurityGroupPolicyRequestBody implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * policyId  安全策略ID
-    * policyName  策略名称
-    * securityGroups  安全组列表
+    * policyId  **参数解释** 安全组策略的唯一标识，用于指定待更新的目标安全组策略 **约束限制** 需确保该策略已存在于指定集群和命名空间下，否则返回策略不存在错误 **取值范围** 字符长度1-64位，支持UUID格式（32位十六进制字符，含4个短横线分隔） **默认取值** 无
+    * policyName  **参数解释** 安全组策略的名称，用于标识策略用途，更新时可修改该名称 **约束限制** 名称不能包含特殊字符（如@、#、$等），且同一命名空间下策略名称建议唯一 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线（-）、下划线（_） **默认取值** 无，不修改策略名称
+    * securityGroups  **参数解释** 待关联到安全组策略的安全组集合，更新后策略将仅应用于该列表中的安全组 **约束限制** 数组不能为空（至少包含1个安全组），且安全组需已存在于当前项目/企业项目下 **取值范围** 数组长度1-20个元素，每个元素需符合SecurityGroup对象结构 **默认取值** 无
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class UpdateSecurityGroupPolicyRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * policyId  安全策略ID
-    * policyName  策略名称
-    * securityGroups  安全组列表
+    * policyId  **参数解释** 安全组策略的唯一标识，用于指定待更新的目标安全组策略 **约束限制** 需确保该策略已存在于指定集群和命名空间下，否则返回策略不存在错误 **取值范围** 字符长度1-64位，支持UUID格式（32位十六进制字符，含4个短横线分隔） **默认取值** 无
+    * policyName  **参数解释** 安全组策略的名称，用于标识策略用途，更新时可修改该名称 **约束限制** 名称不能包含特殊字符（如@、#、$等），且同一命名空间下策略名称建议唯一 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线（-）、下划线（_） **默认取值** 无，不修改策略名称
+    * securityGroups  **参数解释** 待关联到安全组策略的安全组集合，更新后策略将仅应用于该列表中的安全组 **约束限制** 数组不能为空（至少包含1个安全组），且安全组需已存在于当前项目/企业项目下 **取值范围** 数组长度1-20个元素，每个元素需符合SecurityGroup对象结构 **默认取值** 无
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class UpdateSecurityGroupPolicyRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * policyId  安全策略ID
-    * policyName  策略名称
-    * securityGroups  安全组列表
+    * policyId  **参数解释** 安全组策略的唯一标识，用于指定待更新的目标安全组策略 **约束限制** 需确保该策略已存在于指定集群和命名空间下，否则返回策略不存在错误 **取值范围** 字符长度1-64位，支持UUID格式（32位十六进制字符，含4个短横线分隔） **默认取值** 无
+    * policyName  **参数解释** 安全组策略的名称，用于标识策略用途，更新时可修改该名称 **约束限制** 名称不能包含特殊字符（如@、#、$等），且同一命名空间下策略名称建议唯一 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线（-）、下划线（_） **默认取值** 无，不修改策略名称
+    * securityGroups  **参数解释** 待关联到安全组策略的安全组集合，更新后策略将仅应用于该列表中的安全组 **约束限制** 数组不能为空（至少包含1个安全组），且安全组需已存在于当前项目/企业项目下 **取值范围** 数组长度1-20个元素，每个元素需符合SecurityGroup对象结构 **默认取值** 无
     *
     * @var string[]
     */
@@ -214,7 +214,7 @@ class UpdateSecurityGroupPolicyRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets policyId
-    *  安全策略ID
+    *  **参数解释** 安全组策略的唯一标识，用于指定待更新的目标安全组策略 **约束限制** 需确保该策略已存在于指定集群和命名空间下，否则返回策略不存在错误 **取值范围** 字符长度1-64位，支持UUID格式（32位十六进制字符，含4个短横线分隔） **默认取值** 无
     *
     * @return string
     */
@@ -226,7 +226,7 @@ class UpdateSecurityGroupPolicyRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets policyId
     *
-    * @param string $policyId 安全策略ID
+    * @param string $policyId **参数解释** 安全组策略的唯一标识，用于指定待更新的目标安全组策略 **约束限制** 需确保该策略已存在于指定集群和命名空间下，否则返回策略不存在错误 **取值范围** 字符长度1-64位，支持UUID格式（32位十六进制字符，含4个短横线分隔） **默认取值** 无
     *
     * @return $this
     */
@@ -238,7 +238,7 @@ class UpdateSecurityGroupPolicyRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets policyName
-    *  策略名称
+    *  **参数解释** 安全组策略的名称，用于标识策略用途，更新时可修改该名称 **约束限制** 名称不能包含特殊字符（如@、#、$等），且同一命名空间下策略名称建议唯一 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线（-）、下划线（_） **默认取值** 无，不修改策略名称
     *
     * @return string|null
     */
@@ -250,7 +250,7 @@ class UpdateSecurityGroupPolicyRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets policyName
     *
-    * @param string|null $policyName 策略名称
+    * @param string|null $policyName **参数解释** 安全组策略的名称，用于标识策略用途，更新时可修改该名称 **约束限制** 名称不能包含特殊字符（如@、#、$等），且同一命名空间下策略名称建议唯一 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线（-）、下划线（_） **默认取值** 无，不修改策略名称
     *
     * @return $this
     */
@@ -262,7 +262,7 @@ class UpdateSecurityGroupPolicyRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets securityGroups
-    *  安全组列表
+    *  **参数解释** 待关联到安全组策略的安全组集合，更新后策略将仅应用于该列表中的安全组 **约束限制** 数组不能为空（至少包含1个安全组），且安全组需已存在于当前项目/企业项目下 **取值范围** 数组长度1-20个元素，每个元素需符合SecurityGroup对象结构 **默认取值** 无
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\SecurityGroup[]
     */
@@ -274,7 +274,7 @@ class UpdateSecurityGroupPolicyRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets securityGroups
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\SecurityGroup[] $securityGroups 安全组列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\SecurityGroup[] $securityGroups **参数解释** 待关联到安全组策略的安全组集合，更新后策略将仅应用于该列表中的安全组 **约束限制** 数组不能为空（至少包含1个安全组），且安全组需已存在于当前项目/企业项目下 **取值范围** 数组长度1-20个元素，每个元素需符合SecurityGroup对象结构 **默认取值** 无
     *
     * @return $this
     */

@@ -21,21 +21,25 @@ class BatchDeleteOneClickAlarmsRequestBody implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * oneClickAlarmIds  **参数解释**： 需要批量删除的一键告警ID列表。 **约束限制**： 一键告警ID数量最多为100个，至少1个。
+    * actionType  **参数解释**： 操作类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。取值为disable - disable: 关闭一键告警 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'oneClickAlarmIds' => 'string[]'
+            'oneClickAlarmIds' => 'string[]',
+            'actionType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * oneClickAlarmIds  **参数解释**： 需要批量删除的一键告警ID列表。 **约束限制**： 一键告警ID数量最多为100个，至少1个。
+    * actionType  **参数解释**： 操作类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。取值为disable - disable: 关闭一键告警 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'oneClickAlarmIds' => null
+        'oneClickAlarmIds' => null,
+        'actionType' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class BatchDeleteOneClickAlarmsRequestBody implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * oneClickAlarmIds  **参数解释**： 需要批量删除的一键告警ID列表。 **约束限制**： 一键告警ID数量最多为100个，至少1个。
+    * actionType  **参数解释**： 操作类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。取值为disable - disable: 关闭一键告警 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'oneClickAlarmIds' => 'one_click_alarm_ids'
+            'oneClickAlarmIds' => 'one_click_alarm_ids',
+            'actionType' => 'action_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * oneClickAlarmIds  **参数解释**： 需要批量删除的一键告警ID列表。 **约束限制**： 一键告警ID数量最多为100个，至少1个。
+    * actionType  **参数解释**： 操作类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。取值为disable - disable: 关闭一键告警 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'oneClickAlarmIds' => 'setOneClickAlarmIds'
+            'oneClickAlarmIds' => 'setOneClickAlarmIds',
+            'actionType' => 'setActionType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * oneClickAlarmIds  **参数解释**： 需要批量删除的一键告警ID列表。 **约束限制**： 一键告警ID数量最多为100个，至少1个。
+    * actionType  **参数解释**： 操作类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。取值为disable - disable: 关闭一键告警 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'oneClickAlarmIds' => 'getOneClickAlarmIds'
+            'oneClickAlarmIds' => 'getOneClickAlarmIds',
+            'actionType' => 'getActionType'
     ];
 
     /**
@@ -148,6 +158,7 @@ class BatchDeleteOneClickAlarmsRequestBody implements ModelInterface, ArrayAcces
     public function __construct(array $data = null)
     {
         $this->container['oneClickAlarmIds'] = isset($data['oneClickAlarmIds']) ? $data['oneClickAlarmIds'] : null;
+        $this->container['actionType'] = isset($data['actionType']) ? $data['actionType'] : null;
     }
 
     /**
@@ -161,6 +172,12 @@ class BatchDeleteOneClickAlarmsRequestBody implements ModelInterface, ArrayAcces
         if ($this->container['oneClickAlarmIds'] === null) {
             $invalidProperties[] = "'oneClickAlarmIds' can't be null";
         }
+            if (!is_null($this->container['actionType']) && (mb_strlen($this->container['actionType']) > 10)) {
+                $invalidProperties[] = "invalid value for 'actionType', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['actionType']) && !preg_match("/^(disable)$/", $this->container['actionType'])) {
+                $invalidProperties[] = "invalid value for 'actionType', must be conform to the pattern /^(disable)$/.";
+            }
         return $invalidProperties;
     }
 
@@ -196,6 +213,30 @@ class BatchDeleteOneClickAlarmsRequestBody implements ModelInterface, ArrayAcces
     public function setOneClickAlarmIds($oneClickAlarmIds)
     {
         $this->container['oneClickAlarmIds'] = $oneClickAlarmIds;
+        return $this;
+    }
+
+    /**
+    * Gets actionType
+    *  **参数解释**： 操作类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。取值为disable - disable: 关闭一键告警 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getActionType()
+    {
+        return $this->container['actionType'];
+    }
+
+    /**
+    * Sets actionType
+    *
+    * @param string|null $actionType **参数解释**： 操作类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。取值为disable - disable: 关闭一键告警 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setActionType($actionType)
+    {
+        $this->container['actionType'] = $actionType;
         return $this;
     }
 

@@ -24,7 +24,7 @@ class ListDataSourceResponse implements ModelInterface, ArrayAccess
     * dataSources  **参数解释**： 数据源列表。 **取值范围**： 不涉及。
     * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * type  **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -42,7 +42,7 @@ class ListDataSourceResponse implements ModelInterface, ArrayAccess
     * dataSources  **参数解释**： 数据源列表。 **取值范围**： 不涉及。
     * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * type  **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -81,7 +81,7 @@ class ListDataSourceResponse implements ModelInterface, ArrayAccess
     * dataSources  **参数解释**： 数据源列表。 **取值范围**： 不涉及。
     * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * type  **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -99,7 +99,7 @@ class ListDataSourceResponse implements ModelInterface, ArrayAccess
     * dataSources  **参数解释**： 数据源列表。 **取值范围**： 不涉及。
     * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * type  **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -117,7 +117,7 @@ class ListDataSourceResponse implements ModelInterface, ArrayAccess
     * dataSources  **参数解释**： 数据源列表。 **取值范围**： 不涉及。
     * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
-    * type  **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     * count  **参数解释**： 总数。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -291,7 +291,7 @@ class ListDataSourceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     *
     * @return string|null
     */
@@ -303,7 +303,7 @@ class ListDataSourceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+    * @param string|null $type **参数解释**： 数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     *
     * @return $this
     */

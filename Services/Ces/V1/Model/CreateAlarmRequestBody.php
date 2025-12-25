@@ -25,13 +25,13 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     * metric  metric
     * condition  condition
     * alarmEnabled  **参数解释**： 是否启用该条告警。 **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true：开启告警。 - false：不开启告警。 **默认取值**： true
-    * alarmActionEnabled  **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
+    * alarmActionEnabled  **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 不填默认为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
     * alarmLevel  **参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 只能为1、2、3、4。分别对应紧急、重要、次要、提示。 **默认取值**： 2
-    * alarmType  **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对多实例的告警规则。 **默认取值**： 不涉及。
-    * alarmActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
-    * insufficientdataActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
-    * okActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
-    * enterpriseProjectId  **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[9.5-获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
+    * alarmType  **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对指定资源的告警规则。 **默认取值**： 不涉及。
+    * alarmActions  **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * insufficientdataActions  **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * okActions  **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
     * alarmActionBeginTime  **参数解释**： 告警通知开启时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
     * alarmActionEndTime  **参数解释**： 告警通知关闭时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
     *
@@ -61,13 +61,13 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     * metric  metric
     * condition  condition
     * alarmEnabled  **参数解释**： 是否启用该条告警。 **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true：开启告警。 - false：不开启告警。 **默认取值**： true
-    * alarmActionEnabled  **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
+    * alarmActionEnabled  **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 不填默认为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
     * alarmLevel  **参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 只能为1、2、3、4。分别对应紧急、重要、次要、提示。 **默认取值**： 2
-    * alarmType  **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对多实例的告警规则。 **默认取值**： 不涉及。
-    * alarmActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
-    * insufficientdataActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
-    * okActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
-    * enterpriseProjectId  **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[9.5-获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
+    * alarmType  **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对指定资源的告警规则。 **默认取值**： 不涉及。
+    * alarmActions  **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * insufficientdataActions  **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * okActions  **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
     * alarmActionBeginTime  **参数解释**： 告警通知开启时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
     * alarmActionEndTime  **参数解释**： 告警通知关闭时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
     *
@@ -118,13 +118,13 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     * metric  metric
     * condition  condition
     * alarmEnabled  **参数解释**： 是否启用该条告警。 **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true：开启告警。 - false：不开启告警。 **默认取值**： true
-    * alarmActionEnabled  **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
+    * alarmActionEnabled  **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 不填默认为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
     * alarmLevel  **参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 只能为1、2、3、4。分别对应紧急、重要、次要、提示。 **默认取值**： 2
-    * alarmType  **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对多实例的告警规则。 **默认取值**： 不涉及。
-    * alarmActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
-    * insufficientdataActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
-    * okActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
-    * enterpriseProjectId  **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[9.5-获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
+    * alarmType  **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对指定资源的告警规则。 **默认取值**： 不涉及。
+    * alarmActions  **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * insufficientdataActions  **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * okActions  **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
     * alarmActionBeginTime  **参数解释**： 告警通知开启时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
     * alarmActionEndTime  **参数解释**： 告警通知关闭时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
     *
@@ -154,13 +154,13 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     * metric  metric
     * condition  condition
     * alarmEnabled  **参数解释**： 是否启用该条告警。 **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true：开启告警。 - false：不开启告警。 **默认取值**： true
-    * alarmActionEnabled  **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
+    * alarmActionEnabled  **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 不填默认为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
     * alarmLevel  **参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 只能为1、2、3、4。分别对应紧急、重要、次要、提示。 **默认取值**： 2
-    * alarmType  **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对多实例的告警规则。 **默认取值**： 不涉及。
-    * alarmActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
-    * insufficientdataActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
-    * okActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
-    * enterpriseProjectId  **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[9.5-获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
+    * alarmType  **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对指定资源的告警规则。 **默认取值**： 不涉及。
+    * alarmActions  **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * insufficientdataActions  **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * okActions  **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
     * alarmActionBeginTime  **参数解释**： 告警通知开启时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
     * alarmActionEndTime  **参数解释**： 告警通知关闭时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
     *
@@ -190,13 +190,13 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     * metric  metric
     * condition  condition
     * alarmEnabled  **参数解释**： 是否启用该条告警。 **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true：开启告警。 - false：不开启告警。 **默认取值**： true
-    * alarmActionEnabled  **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
+    * alarmActionEnabled  **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 不填默认为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
     * alarmLevel  **参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 只能为1、2、3、4。分别对应紧急、重要、次要、提示。 **默认取值**： 2
-    * alarmType  **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对多实例的告警规则。 **默认取值**： 不涉及。
-    * alarmActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
-    * insufficientdataActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
-    * okActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
-    * enterpriseProjectId  **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[9.5-获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
+    * alarmType  **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对指定资源的告警规则。 **默认取值**： 不涉及。
+    * alarmActions  **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * insufficientdataActions  **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * okActions  **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
     * alarmActionBeginTime  **参数解释**： 告警通知开启时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
     * alarmActionEndTime  **参数解释**： 告警通知关闭时间。 **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。 **默认取值**： 不涉及。
     *
@@ -488,7 +488,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmActionEnabled
-    *  **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
+    *  **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 不填默认为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
     *
     * @return bool|null
     */
@@ -500,7 +500,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmActionEnabled
     *
-    * @param bool|null $alarmActionEnabled **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 若alarm_action_enabled为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
+    * @param bool|null $alarmActionEnabled **参数解释**： 该条告警触发时，是否启用告警通知。 **约束限制**： 不填默认为true，对应的alarm_actions、ok_actions至少有一个不能为空。若alarm_actions、ok_actions同时存在时，alarm_actions和ok_actions中的notification_list值保持一致。 **取值范围**： 布尔值。 - true：开启告警通知。 - false：不开启告警通知。 **默认取值**： true
     *
     * @return $this
     */
@@ -536,7 +536,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmType
-    *  **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对多实例的告警规则。 **默认取值**： 不涉及。
+    *  **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对指定资源的告警规则。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -548,7 +548,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmType
     *
-    * @param string|null $alarmType **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对多实例的告警规则。 **默认取值**： 不涉及。
+    * @param string|null $alarmType **参数解释**： 告警类型。 **约束限制**： 针对事件类型的告警时，告警类型为EVENT.SYS（系统事件）或EVENT.CUSTOM（自定义事件）。 针对资源分组的告警时，告警类型为RESOURCE_GROUP。 针对指定资源的告警时，告警类型为MULTI_INSTANCE。 **取值范围**： - EVENT.SYS：针对系统事件的告警规则。 - EVENT.CUSTOM：针对自定义事件的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE： 针对指定资源的告警规则。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -560,7 +560,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmActions
-    *  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    *  **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
     *
     * @return \HuaweiCloud\SDK\Ces\V1\Model\Notification[]|null
     */
@@ -572,7 +572,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmActions
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\Notification[]|null $alarmActions **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\Notification[]|null $alarmActions **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
     *
     * @return $this
     */
@@ -584,7 +584,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets insufficientdataActions
-    *  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    *  **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
     *
     * @return \HuaweiCloud\SDK\Ces\V1\Model\Notification[]|null
     */
@@ -596,7 +596,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets insufficientdataActions
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\Notification[]|null $insufficientdataActions **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\Notification[]|null $insufficientdataActions **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
     *
     * @return $this
     */
@@ -608,7 +608,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets okActions
-    *  **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    *  **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
     *
     * @return \HuaweiCloud\SDK\Ces\V1\Model\Notification[]|null
     */
@@ -620,7 +620,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets okActions
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\Notification[]|null $okActions **参数解释**： 告警触发时，通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\Notification[]|null $okActions **参数解释**： 通知组/主题订阅的信息。 **约束限制**： 最多包含20个动作。
     *
     * @return $this
     */
@@ -632,7 +632,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[9.5-获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
+    *  **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
     *
     * @return string|null
     */
@@ -644,7 +644,7 @@ class CreateAlarmRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[9.5-获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
+    * @param string|null $enterpriseProjectId **参数解释**： 企业项目ID。如何查询企业项目ID，请参考“[获取企业项目ID](ces_03_0061.xml)”。 **约束限制**： 不涉及。 **取值范围**： 长度为0或者32个字符。 **默认取值**： 0，表示默认的企业项目default。
     *
     * @return $this
     */

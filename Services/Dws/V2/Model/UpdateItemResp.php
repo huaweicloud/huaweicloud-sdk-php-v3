@@ -23,7 +23,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
     * id  **参数解释**： 升级项ID。 **取值范围**： 不涉及。
     * from  **参数解释**： 起始版本。 **取值范围**： 不涉及。
     * to  **参数解释**： 目标版本。 **取值范围**： 不涉及。
-    * status  **参数解释**： 升级路径状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 升级路径状态。 **取值范围**： - Waiting：待升级。 - Update_Running：升级中。 - Update_Success：升级成功。 - Update_Failure：升级失败。 - Rollback_Running：回滚中。 - Rollback_Failure：回滚失败。 - Commit_Running：提交中。 - Commit_Failure：提交失败。 - Completed：升级完成。 - Disable：不支持升级。 - Install_Running：热补丁安装中。 - Uninstall_Failure：热补丁卸载重。 - Commit_HotPatch_Failure：热补丁提交失败。
     * process  **参数解释**： 升级进度。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 起始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
@@ -49,7 +49,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
     * id  **参数解释**： 升级项ID。 **取值范围**： 不涉及。
     * from  **参数解释**： 起始版本。 **取值范围**： 不涉及。
     * to  **参数解释**： 目标版本。 **取值范围**： 不涉及。
-    * status  **参数解释**： 升级路径状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 升级路径状态。 **取值范围**： - Waiting：待升级。 - Update_Running：升级中。 - Update_Success：升级成功。 - Update_Failure：升级失败。 - Rollback_Running：回滚中。 - Rollback_Failure：回滚失败。 - Commit_Running：提交中。 - Commit_Failure：提交失败。 - Completed：升级完成。 - Disable：不支持升级。 - Install_Running：热补丁安装中。 - Uninstall_Failure：热补丁卸载重。 - Commit_HotPatch_Failure：热补丁提交失败。
     * process  **参数解释**： 升级进度。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 起始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
@@ -96,7 +96,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
     * id  **参数解释**： 升级项ID。 **取值范围**： 不涉及。
     * from  **参数解释**： 起始版本。 **取值范围**： 不涉及。
     * to  **参数解释**： 目标版本。 **取值范围**： 不涉及。
-    * status  **参数解释**： 升级路径状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 升级路径状态。 **取值范围**： - Waiting：待升级。 - Update_Running：升级中。 - Update_Success：升级成功。 - Update_Failure：升级失败。 - Rollback_Running：回滚中。 - Rollback_Failure：回滚失败。 - Commit_Running：提交中。 - Commit_Failure：提交失败。 - Completed：升级完成。 - Disable：不支持升级。 - Install_Running：热补丁安装中。 - Uninstall_Failure：热补丁卸载重。 - Commit_HotPatch_Failure：热补丁提交失败。
     * process  **参数解释**： 升级进度。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 起始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
@@ -122,7 +122,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
     * id  **参数解释**： 升级项ID。 **取值范围**： 不涉及。
     * from  **参数解释**： 起始版本。 **取值范围**： 不涉及。
     * to  **参数解释**： 目标版本。 **取值范围**： 不涉及。
-    * status  **参数解释**： 升级路径状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 升级路径状态。 **取值范围**： - Waiting：待升级。 - Update_Running：升级中。 - Update_Success：升级成功。 - Update_Failure：升级失败。 - Rollback_Running：回滚中。 - Rollback_Failure：回滚失败。 - Commit_Running：提交中。 - Commit_Failure：提交失败。 - Completed：升级完成。 - Disable：不支持升级。 - Install_Running：热补丁安装中。 - Uninstall_Failure：热补丁卸载重。 - Commit_HotPatch_Failure：热补丁提交失败。
     * process  **参数解释**： 升级进度。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 起始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
@@ -148,7 +148,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
     * id  **参数解释**： 升级项ID。 **取值范围**： 不涉及。
     * from  **参数解释**： 起始版本。 **取值范围**： 不涉及。
     * to  **参数解释**： 目标版本。 **取值范围**： 不涉及。
-    * status  **参数解释**： 升级路径状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 升级路径状态。 **取值范围**： - Waiting：待升级。 - Update_Running：升级中。 - Update_Success：升级成功。 - Update_Failure：升级失败。 - Rollback_Running：回滚中。 - Rollback_Failure：回滚失败。 - Commit_Running：提交中。 - Commit_Failure：提交失败。 - Completed：升级完成。 - Disable：不支持升级。 - Install_Running：热补丁安装中。 - Uninstall_Failure：热补丁卸载重。 - Commit_HotPatch_Failure：热补丁提交失败。
     * process  **参数解释**： 升级进度。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 起始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
@@ -334,7 +334,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 升级路径状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 升级路径状态。 **取值范围**： - Waiting：待升级。 - Update_Running：升级中。 - Update_Success：升级成功。 - Update_Failure：升级失败。 - Rollback_Running：回滚中。 - Rollback_Failure：回滚失败。 - Commit_Running：提交中。 - Commit_Failure：提交失败。 - Completed：升级完成。 - Disable：不支持升级。 - Install_Running：热补丁安装中。 - Uninstall_Failure：热补丁卸载重。 - Commit_HotPatch_Failure：热补丁提交失败。
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class UpdateItemResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 升级路径状态。 **取值范围**： 不涉及。
+    * @param string|null $status **参数解释**： 升级路径状态。 **取值范围**： - Waiting：待升级。 - Update_Running：升级中。 - Update_Success：升级成功。 - Update_Failure：升级失败。 - Rollback_Running：回滚中。 - Rollback_Failure：回滚失败。 - Commit_Running：提交中。 - Commit_Failure：提交失败。 - Completed：升级完成。 - Disable：不支持升级。 - Install_Running：热补丁安装中。 - Uninstall_Failure：热补丁卸载重。 - Commit_HotPatch_Failure：热补丁提交失败。
     *
     * @return $this
     */

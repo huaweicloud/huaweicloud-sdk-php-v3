@@ -20,27 +20,27 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
-    * service  服务类别，如SYS.ECS
-    * dimName  资源维度信息，多个维度按字母序使用逗号分隔
-    * limit  分页查询时每页的条目数，取值[1,100]，默认值为100
-    * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
-    * status  按状态信息进行过滤，取值只能为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未设置告警规则的资源）
-    * dimValue  资源维度值，不支持模糊匹配，但是多维度资源可以只指定一个维度值
-    * tag  资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\"
-    * extendRelationId  企业项目ID
-    * productName  资源分组的云产品，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
-    * resourceName  资源名称
-    * eventStatus  按事件告警状态信息进行过滤，取值只能为health（已设置事件告警规则且无事件告警触发的资源）、unhealthy（已设置事件告警规则且有事件告警触发的资源）、no_alarm_rule（未设置事件告警规则的资源）
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 大小为1-100。 **默认取值**： 不涉及。
+    * groupId  **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
+    * service  **参数解释** 服务类别，如SYS.ECS **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度在 [3,32]个字符之间 **默认取值** 不涉及
+    * dimName  **参数解释**： 资源维度。 **约束限制**： 不涉及。 **取值范围**： 多维度用\",\"分割，只能包含0-9、a-z、A-Z、_、-、#、/、(、），每个维度的最大长度为32。字符串总长度最小为1，最大为131。 **默认取值**： 不涉及。
+    * status  **参数解释** 告警规则按状态信息进行过滤。 **约束限制**： 不涉及。 **取值范围** 枚举值。 - health: 已设置告警规则且无告警触发的资源 - unhealthy: 已设置告警规则且有告警触发的资源 - no_alarm_rule: 未设置告警规则的资源 **默认取值**： 不涉及。
+    * dimValue  **参数描述**： 资源维度值，不支持模糊匹配，但是多维度资源可以只指定一个维度值 **约束限制**： 不涉及。  **取值范围**： 字符串长度范围[1,1027] **默认取值**： 不涉及。
+    * tag  **参数描述**： 资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\" **约束限制**： 不涉及。  **取值范围**： 字符串长度范围[0,500] **默认取值**： 不涉及。
+    * extendRelationId  **参数解释** 企业项目ID。 **约束限制** 不涉及。 **取值范围** 由数字、字母和-组成，字符串长度范围[1,128] **默认取值** 不涉及。
+    * productName  **参数解释**： 资源所属的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。        **默认取值**： 不涉及。
+    * resourceName  **参数解释** 资源名称 **约束限制** 不涉及 **取值范围** 长度[1,128]个字符 **默认取值** 不涉及
+    * eventStatus  **参数解释** 按事件告警状态信息进行过滤。 **约束限制**： 不涉及。 **取值范围** 枚举值。 - health: 已设置事件告警规则且无事件告警触发的资源 - unhealthy: 已设置事件告警规则且有事件告警触发的资源 - no_alarm_rule: 未设置事件告警规则的资源 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'offset' => 'int',
+            'limit' => 'string',
             'groupId' => 'string',
             'service' => 'string',
             'dimName' => 'string',
-            'limit' => 'string',
-            'offset' => 'int',
             'status' => 'string',
             'dimValue' => 'string',
             'tag' => 'string',
@@ -52,27 +52,27 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
-    * service  服务类别，如SYS.ECS
-    * dimName  资源维度信息，多个维度按字母序使用逗号分隔
-    * limit  分页查询时每页的条目数，取值[1,100]，默认值为100
-    * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
-    * status  按状态信息进行过滤，取值只能为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未设置告警规则的资源）
-    * dimValue  资源维度值，不支持模糊匹配，但是多维度资源可以只指定一个维度值
-    * tag  资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\"
-    * extendRelationId  企业项目ID
-    * productName  资源分组的云产品，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
-    * resourceName  资源名称
-    * eventStatus  按事件告警状态信息进行过滤，取值只能为health（已设置事件告警规则且无事件告警触发的资源）、unhealthy（已设置事件告警规则且有事件告警触发的资源）、no_alarm_rule（未设置事件告警规则的资源）
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 大小为1-100。 **默认取值**： 不涉及。
+    * groupId  **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
+    * service  **参数解释** 服务类别，如SYS.ECS **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度在 [3,32]个字符之间 **默认取值** 不涉及
+    * dimName  **参数解释**： 资源维度。 **约束限制**： 不涉及。 **取值范围**： 多维度用\",\"分割，只能包含0-9、a-z、A-Z、_、-、#、/、(、），每个维度的最大长度为32。字符串总长度最小为1，最大为131。 **默认取值**： 不涉及。
+    * status  **参数解释** 告警规则按状态信息进行过滤。 **约束限制**： 不涉及。 **取值范围** 枚举值。 - health: 已设置告警规则且无告警触发的资源 - unhealthy: 已设置告警规则且有告警触发的资源 - no_alarm_rule: 未设置告警规则的资源 **默认取值**： 不涉及。
+    * dimValue  **参数描述**： 资源维度值，不支持模糊匹配，但是多维度资源可以只指定一个维度值 **约束限制**： 不涉及。  **取值范围**： 字符串长度范围[1,1027] **默认取值**： 不涉及。
+    * tag  **参数描述**： 资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\" **约束限制**： 不涉及。  **取值范围**： 字符串长度范围[0,500] **默认取值**： 不涉及。
+    * extendRelationId  **参数解释** 企业项目ID。 **约束限制** 不涉及。 **取值范围** 由数字、字母和-组成，字符串长度范围[1,128] **默认取值** 不涉及。
+    * productName  **参数解释**： 资源所属的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。        **默认取值**： 不涉及。
+    * resourceName  **参数解释** 资源名称 **约束限制** 不涉及 **取值范围** 长度[1,128]个字符 **默认取值** 不涉及
+    * eventStatus  **参数解释** 按事件告警状态信息进行过滤。 **约束限制**： 不涉及。 **取值范围** 枚举值。 - health: 已设置事件告警规则且无事件告警触发的资源 - unhealthy: 已设置事件告警规则且有事件告警触发的资源 - no_alarm_rule: 未设置事件告警规则的资源 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'offset' => null,
+        'limit' => null,
         'groupId' => null,
         'service' => null,
         'dimName' => null,
-        'limit' => null,
-        'offset' => 'int32',
         'status' => null,
         'dimValue' => null,
         'tag' => null,
@@ -105,27 +105,27 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
-    * service  服务类别，如SYS.ECS
-    * dimName  资源维度信息，多个维度按字母序使用逗号分隔
-    * limit  分页查询时每页的条目数，取值[1,100]，默认值为100
-    * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
-    * status  按状态信息进行过滤，取值只能为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未设置告警规则的资源）
-    * dimValue  资源维度值，不支持模糊匹配，但是多维度资源可以只指定一个维度值
-    * tag  资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\"
-    * extendRelationId  企业项目ID
-    * productName  资源分组的云产品，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
-    * resourceName  资源名称
-    * eventStatus  按事件告警状态信息进行过滤，取值只能为health（已设置事件告警规则且无事件告警触发的资源）、unhealthy（已设置事件告警规则且有事件告警触发的资源）、no_alarm_rule（未设置事件告警规则的资源）
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 大小为1-100。 **默认取值**： 不涉及。
+    * groupId  **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
+    * service  **参数解释** 服务类别，如SYS.ECS **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度在 [3,32]个字符之间 **默认取值** 不涉及
+    * dimName  **参数解释**： 资源维度。 **约束限制**： 不涉及。 **取值范围**： 多维度用\",\"分割，只能包含0-9、a-z、A-Z、_、-、#、/、(、），每个维度的最大长度为32。字符串总长度最小为1，最大为131。 **默认取值**： 不涉及。
+    * status  **参数解释** 告警规则按状态信息进行过滤。 **约束限制**： 不涉及。 **取值范围** 枚举值。 - health: 已设置告警规则且无告警触发的资源 - unhealthy: 已设置告警规则且有告警触发的资源 - no_alarm_rule: 未设置告警规则的资源 **默认取值**： 不涉及。
+    * dimValue  **参数描述**： 资源维度值，不支持模糊匹配，但是多维度资源可以只指定一个维度值 **约束限制**： 不涉及。  **取值范围**： 字符串长度范围[1,1027] **默认取值**： 不涉及。
+    * tag  **参数描述**： 资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\" **约束限制**： 不涉及。  **取值范围**： 字符串长度范围[0,500] **默认取值**： 不涉及。
+    * extendRelationId  **参数解释** 企业项目ID。 **约束限制** 不涉及。 **取值范围** 由数字、字母和-组成，字符串长度范围[1,128] **默认取值** 不涉及。
+    * productName  **参数解释**： 资源所属的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。        **默认取值**： 不涉及。
+    * resourceName  **参数解释** 资源名称 **约束限制** 不涉及 **取值范围** 长度[1,128]个字符 **默认取值** 不涉及
+    * eventStatus  **参数解释** 按事件告警状态信息进行过滤。 **约束限制**： 不涉及。 **取值范围** 枚举值。 - health: 已设置事件告警规则且无事件告警触发的资源 - unhealthy: 已设置事件告警规则且有事件告警触发的资源 - no_alarm_rule: 未设置事件告警规则的资源 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'offset' => 'offset',
+            'limit' => 'limit',
             'groupId' => 'group_id',
             'service' => 'service',
             'dimName' => 'dim_name',
-            'limit' => 'limit',
-            'offset' => 'offset',
             'status' => 'status',
             'dimValue' => 'dim_value',
             'tag' => 'tag',
@@ -137,27 +137,27 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
-    * service  服务类别，如SYS.ECS
-    * dimName  资源维度信息，多个维度按字母序使用逗号分隔
-    * limit  分页查询时每页的条目数，取值[1,100]，默认值为100
-    * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
-    * status  按状态信息进行过滤，取值只能为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未设置告警规则的资源）
-    * dimValue  资源维度值，不支持模糊匹配，但是多维度资源可以只指定一个维度值
-    * tag  资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\"
-    * extendRelationId  企业项目ID
-    * productName  资源分组的云产品，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
-    * resourceName  资源名称
-    * eventStatus  按事件告警状态信息进行过滤，取值只能为health（已设置事件告警规则且无事件告警触发的资源）、unhealthy（已设置事件告警规则且有事件告警触发的资源）、no_alarm_rule（未设置事件告警规则的资源）
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 大小为1-100。 **默认取值**： 不涉及。
+    * groupId  **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
+    * service  **参数解释** 服务类别，如SYS.ECS **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度在 [3,32]个字符之间 **默认取值** 不涉及
+    * dimName  **参数解释**： 资源维度。 **约束限制**： 不涉及。 **取值范围**： 多维度用\",\"分割，只能包含0-9、a-z、A-Z、_、-、#、/、(、），每个维度的最大长度为32。字符串总长度最小为1，最大为131。 **默认取值**： 不涉及。
+    * status  **参数解释** 告警规则按状态信息进行过滤。 **约束限制**： 不涉及。 **取值范围** 枚举值。 - health: 已设置告警规则且无告警触发的资源 - unhealthy: 已设置告警规则且有告警触发的资源 - no_alarm_rule: 未设置告警规则的资源 **默认取值**： 不涉及。
+    * dimValue  **参数描述**： 资源维度值，不支持模糊匹配，但是多维度资源可以只指定一个维度值 **约束限制**： 不涉及。  **取值范围**： 字符串长度范围[1,1027] **默认取值**： 不涉及。
+    * tag  **参数描述**： 资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\" **约束限制**： 不涉及。  **取值范围**： 字符串长度范围[0,500] **默认取值**： 不涉及。
+    * extendRelationId  **参数解释** 企业项目ID。 **约束限制** 不涉及。 **取值范围** 由数字、字母和-组成，字符串长度范围[1,128] **默认取值** 不涉及。
+    * productName  **参数解释**： 资源所属的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。        **默认取值**： 不涉及。
+    * resourceName  **参数解释** 资源名称 **约束限制** 不涉及 **取值范围** 长度[1,128]个字符 **默认取值** 不涉及
+    * eventStatus  **参数解释** 按事件告警状态信息进行过滤。 **约束限制**： 不涉及。 **取值范围** 枚举值。 - health: 已设置事件告警规则且无事件告警触发的资源 - unhealthy: 已设置事件告警规则且有事件告警触发的资源 - no_alarm_rule: 未设置事件告警规则的资源 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
+            'offset' => 'setOffset',
+            'limit' => 'setLimit',
             'groupId' => 'setGroupId',
             'service' => 'setService',
             'dimName' => 'setDimName',
-            'limit' => 'setLimit',
-            'offset' => 'setOffset',
             'status' => 'setStatus',
             'dimValue' => 'setDimValue',
             'tag' => 'setTag',
@@ -169,27 +169,27 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
-    * service  服务类别，如SYS.ECS
-    * dimName  资源维度信息，多个维度按字母序使用逗号分隔
-    * limit  分页查询时每页的条目数，取值[1,100]，默认值为100
-    * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
-    * status  按状态信息进行过滤，取值只能为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未设置告警规则的资源）
-    * dimValue  资源维度值，不支持模糊匹配，但是多维度资源可以只指定一个维度值
-    * tag  资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\"
-    * extendRelationId  企业项目ID
-    * productName  资源分组的云产品，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
-    * resourceName  资源名称
-    * eventStatus  按事件告警状态信息进行过滤，取值只能为health（已设置事件告警规则且无事件告警触发的资源）、unhealthy（已设置事件告警规则且有事件告警触发的资源）、no_alarm_rule（未设置事件告警规则的资源）
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 大小为1-100。 **默认取值**： 不涉及。
+    * groupId  **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
+    * service  **参数解释** 服务类别，如SYS.ECS **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度在 [3,32]个字符之间 **默认取值** 不涉及
+    * dimName  **参数解释**： 资源维度。 **约束限制**： 不涉及。 **取值范围**： 多维度用\",\"分割，只能包含0-9、a-z、A-Z、_、-、#、/、(、），每个维度的最大长度为32。字符串总长度最小为1，最大为131。 **默认取值**： 不涉及。
+    * status  **参数解释** 告警规则按状态信息进行过滤。 **约束限制**： 不涉及。 **取值范围** 枚举值。 - health: 已设置告警规则且无告警触发的资源 - unhealthy: 已设置告警规则且有告警触发的资源 - no_alarm_rule: 未设置告警规则的资源 **默认取值**： 不涉及。
+    * dimValue  **参数描述**： 资源维度值，不支持模糊匹配，但是多维度资源可以只指定一个维度值 **约束限制**： 不涉及。  **取值范围**： 字符串长度范围[1,1027] **默认取值**： 不涉及。
+    * tag  **参数描述**： 资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\" **约束限制**： 不涉及。  **取值范围**： 字符串长度范围[0,500] **默认取值**： 不涉及。
+    * extendRelationId  **参数解释** 企业项目ID。 **约束限制** 不涉及。 **取值范围** 由数字、字母和-组成，字符串长度范围[1,128] **默认取值** 不涉及。
+    * productName  **参数解释**： 资源所属的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。        **默认取值**： 不涉及。
+    * resourceName  **参数解释** 资源名称 **约束限制** 不涉及 **取值范围** 长度[1,128]个字符 **默认取值** 不涉及
+    * eventStatus  **参数解释** 按事件告警状态信息进行过滤。 **约束限制**： 不涉及。 **取值范围** 枚举值。 - health: 已设置事件告警规则且无事件告警触发的资源 - unhealthy: 已设置事件告警规则且有事件告警触发的资源 - no_alarm_rule: 未设置事件告警规则的资源 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
+            'offset' => 'getOffset',
+            'limit' => 'getLimit',
             'groupId' => 'getGroupId',
             'service' => 'getService',
             'dimName' => 'getDimName',
-            'limit' => 'getLimit',
-            'offset' => 'getOffset',
             'status' => 'getStatus',
             'dimValue' => 'getDimValue',
             'tag' => 'getTag',
@@ -291,11 +291,11 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     */
     public function __construct(array $data = null)
     {
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['service'] = isset($data['service']) ? $data['service'] : null;
         $this->container['dimName'] = isset($data['dimName']) ? $data['dimName'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['dimValue'] = isset($data['dimValue']) ? $data['dimValue'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
@@ -313,6 +313,18 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 10000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 10000.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) > 100)) {
+                $invalidProperties[] = "invalid value for 'limit', the character length must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', the character length must be bigger than or equal to 1.";
+            }
         if ($this->container['groupId'] === null) {
             $invalidProperties[] = "'groupId' can't be null";
         }
@@ -331,23 +343,17 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
             if ((mb_strlen($this->container['service']) < 3)) {
                 $invalidProperties[] = "invalid value for 'service', the character length must be bigger than or equal to 3.";
             }
+            if (!preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/", $this->container['service'])) {
+                $invalidProperties[] = "invalid value for 'service', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*\\.([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_)*$/.";
+            }
             if (!is_null($this->container['dimName']) && (mb_strlen($this->container['dimName']) > 131)) {
                 $invalidProperties[] = "invalid value for 'dimName', the character length must be smaller than or equal to 131.";
             }
             if (!is_null($this->container['dimName']) && (mb_strlen($this->container['dimName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'dimName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) > 100)) {
-                $invalidProperties[] = "invalid value for 'limit', the character length must be smaller than or equal to 100.";
-            }
-            if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) < 1)) {
-                $invalidProperties[] = "invalid value for 'limit', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 10000)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 10000.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
-                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            if (!is_null($this->container['dimName']) && !preg_match("/^([a-z]|[A-Z]|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\/|#|\\(|\\)){0,31}(,([a-z]|[A-Z]|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\/|#|\\(|\\)){0,31}){0,3}$/", $this->container['dimName'])) {
+                $invalidProperties[] = "invalid value for 'dimName', must be conform to the pattern /^([a-z]|[A-Z]|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\/|#|\\(|\\)){0,31}(,([a-z]|[A-Z]|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\/|#|\\(|\\)){0,31}){0,3}$/.";
             }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
@@ -363,6 +369,9 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
             if (!is_null($this->container['dimValue']) && (mb_strlen($this->container['dimValue']) < 1)) {
                 $invalidProperties[] = "invalid value for 'dimValue', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['dimValue']) && !preg_match("/^([a-z]|[A-Z]|[0-9]|\\*|_|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\\.|\/|#|\\(|\\))*$/", $this->container['dimValue'])) {
+                $invalidProperties[] = "invalid value for 'dimValue', must be conform to the pattern /^([a-z]|[A-Z]|[0-9]|\\*|_|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\\.|\/|#|\\(|\\))*$/.";
+            }
             if (!is_null($this->container['tag']) && (mb_strlen($this->container['tag']) > 500)) {
                 $invalidProperties[] = "invalid value for 'tag', the character length must be smaller than or equal to 500.";
             }
@@ -375,17 +384,23 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
             if (!is_null($this->container['extendRelationId']) && (mb_strlen($this->container['extendRelationId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'extendRelationId', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['extendRelationId']) && !preg_match("/^([a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['extendRelationId'])) {
+                $invalidProperties[] = "invalid value for 'extendRelationId', must be conform to the pattern /^([a-z]|[A-Z]|[0-9]|_|-)+$/.";
+            }
             if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'productName', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'productName', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['productName']) && !preg_match("/^(([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-|\\.){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-|\\.){0,31}){0,3}|)$/", $this->container['productName'])) {
+                $invalidProperties[] = "invalid value for 'productName', must be conform to the pattern /^(([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-|\\.){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-|\\.){0,31}){0,3}|)$/.";
+            }
             if (!is_null($this->container['resourceName']) && (mb_strlen($this->container['resourceName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'resourceName', the character length must be smaller than or equal to 128.";
             }
-            if (!is_null($this->container['resourceName']) && (mb_strlen($this->container['resourceName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'resourceName', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['resourceName']) && (mb_strlen($this->container['resourceName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'resourceName', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['resourceName']) && !preg_match("/^$|^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\\\.|)+$/", $this->container['resourceName'])) {
                 $invalidProperties[] = "invalid value for 'resourceName', must be conform to the pattern /^$|^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\\\.|)+$/.";
@@ -413,104 +428,8 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     }
 
     /**
-    * Gets groupId
-    *  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
-    *
-    * @return string
-    */
-    public function getGroupId()
-    {
-        return $this->container['groupId'];
-    }
-
-    /**
-    * Sets groupId
-    *
-    * @param string $groupId 资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
-    *
-    * @return $this
-    */
-    public function setGroupId($groupId)
-    {
-        $this->container['groupId'] = $groupId;
-        return $this;
-    }
-
-    /**
-    * Gets service
-    *  服务类别，如SYS.ECS
-    *
-    * @return string
-    */
-    public function getService()
-    {
-        return $this->container['service'];
-    }
-
-    /**
-    * Sets service
-    *
-    * @param string $service 服务类别，如SYS.ECS
-    *
-    * @return $this
-    */
-    public function setService($service)
-    {
-        $this->container['service'] = $service;
-        return $this;
-    }
-
-    /**
-    * Gets dimName
-    *  资源维度信息，多个维度按字母序使用逗号分隔
-    *
-    * @return string|null
-    */
-    public function getDimName()
-    {
-        return $this->container['dimName'];
-    }
-
-    /**
-    * Sets dimName
-    *
-    * @param string|null $dimName 资源维度信息，多个维度按字母序使用逗号分隔
-    *
-    * @return $this
-    */
-    public function setDimName($dimName)
-    {
-        $this->container['dimName'] = $dimName;
-        return $this;
-    }
-
-    /**
-    * Gets limit
-    *  分页查询时每页的条目数，取值[1,100]，默认值为100
-    *
-    * @return string|null
-    */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-    * Sets limit
-    *
-    * @param string|null $limit 分页查询时每页的条目数，取值[1,100]，默认值为100
-    *
-    * @return $this
-    */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
-        return $this;
-    }
-
-    /**
     * Gets offset
-    *  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
+    *  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
     *
     * @return int|null
     */
@@ -522,7 +441,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     /**
     * Sets offset
     *
-    * @param int|null $offset 分页查询时查询的起始位置，表示从第几条数据开始，默认为0
+    * @param int|null $offset **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
     *
     * @return $this
     */
@@ -533,8 +452,104 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     }
 
     /**
+    * Gets limit
+    *  **参数解释**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 大小为1-100。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param string|null $limit **参数解释**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 大小为1-100。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
+    *
+    * @return string
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string $groupId **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
+        return $this;
+    }
+
+    /**
+    * Gets service
+    *  **参数解释** 服务类别，如SYS.ECS **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度在 [3,32]个字符之间 **默认取值** 不涉及
+    *
+    * @return string
+    */
+    public function getService()
+    {
+        return $this->container['service'];
+    }
+
+    /**
+    * Sets service
+    *
+    * @param string $service **参数解释** 服务类别，如SYS.ECS **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度在 [3,32]个字符之间 **默认取值** 不涉及
+    *
+    * @return $this
+    */
+    public function setService($service)
+    {
+        $this->container['service'] = $service;
+        return $this;
+    }
+
+    /**
+    * Gets dimName
+    *  **参数解释**： 资源维度。 **约束限制**： 不涉及。 **取值范围**： 多维度用\",\"分割，只能包含0-9、a-z、A-Z、_、-、#、/、(、），每个维度的最大长度为32。字符串总长度最小为1，最大为131。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDimName()
+    {
+        return $this->container['dimName'];
+    }
+
+    /**
+    * Sets dimName
+    *
+    * @param string|null $dimName **参数解释**： 资源维度。 **约束限制**： 不涉及。 **取值范围**： 多维度用\",\"分割，只能包含0-9、a-z、A-Z、_、-、#、/、(、），每个维度的最大长度为32。字符串总长度最小为1，最大为131。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setDimName($dimName)
+    {
+        $this->container['dimName'] = $dimName;
+        return $this;
+    }
+
+    /**
     * Gets status
-    *  按状态信息进行过滤，取值只能为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未设置告警规则的资源）
+    *  **参数解释** 告警规则按状态信息进行过滤。 **约束限制**： 不涉及。 **取值范围** 枚举值。 - health: 已设置告警规则且无告警触发的资源 - unhealthy: 已设置告警规则且有告警触发的资源 - no_alarm_rule: 未设置告警规则的资源 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -546,7 +561,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     /**
     * Sets status
     *
-    * @param string|null $status 按状态信息进行过滤，取值只能为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未设置告警规则的资源）
+    * @param string|null $status **参数解释** 告警规则按状态信息进行过滤。 **约束限制**： 不涉及。 **取值范围** 枚举值。 - health: 已设置告警规则且无告警触发的资源 - unhealthy: 已设置告警规则且有告警触发的资源 - no_alarm_rule: 未设置告警规则的资源 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -558,7 +573,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
 
     /**
     * Gets dimValue
-    *  资源维度值，不支持模糊匹配，但是多维度资源可以只指定一个维度值
+    *  **参数描述**： 资源维度值，不支持模糊匹配，但是多维度资源可以只指定一个维度值 **约束限制**： 不涉及。  **取值范围**： 字符串长度范围[1,1027] **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -570,7 +585,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     /**
     * Sets dimValue
     *
-    * @param string|null $dimValue 资源维度值，不支持模糊匹配，但是多维度资源可以只指定一个维度值
+    * @param string|null $dimValue **参数描述**： 资源维度值，不支持模糊匹配，但是多维度资源可以只指定一个维度值 **约束限制**： 不涉及。  **取值范围**： 字符串长度范围[1,1027] **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -582,7 +597,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
 
     /**
     * Gets tag
-    *  资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\"
+    *  **参数描述**： 资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\" **约束限制**： 不涉及。  **取值范围**： 字符串长度范围[0,500] **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -594,7 +609,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     /**
     * Sets tag
     *
-    * @param string|null $tag 资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\"
+    * @param string|null $tag **参数描述**： 资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\" **约束限制**： 不涉及。  **取值范围**： 字符串长度范围[0,500] **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -606,7 +621,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
 
     /**
     * Gets extendRelationId
-    *  企业项目ID
+    *  **参数解释** 企业项目ID。 **约束限制** 不涉及。 **取值范围** 由数字、字母和-组成，字符串长度范围[1,128] **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -618,7 +633,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     /**
     * Sets extendRelationId
     *
-    * @param string|null $extendRelationId 企业项目ID
+    * @param string|null $extendRelationId **参数解释** 企业项目ID。 **约束限制** 不涉及。 **取值范围** 由数字、字母和-组成，字符串长度范围[1,128] **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -630,7 +645,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
 
     /**
     * Gets productName
-    *  资源分组的云产品，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    *  **参数解释**： 资源所属的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。        **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -642,7 +657,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     /**
     * Sets productName
     *
-    * @param string|null $productName 资源分组的云产品，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * @param string|null $productName **参数解释**： 资源所属的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。        **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -654,7 +669,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
 
     /**
     * Gets resourceName
-    *  资源名称
+    *  **参数解释** 资源名称 **约束限制** 不涉及 **取值范围** 长度[1,128]个字符 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -666,7 +681,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     /**
     * Sets resourceName
     *
-    * @param string|null $resourceName 资源名称
+    * @param string|null $resourceName **参数解释** 资源名称 **约束限制** 不涉及 **取值范围** 长度[1,128]个字符 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -678,7 +693,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
 
     /**
     * Gets eventStatus
-    *  按事件告警状态信息进行过滤，取值只能为health（已设置事件告警规则且无事件告警触发的资源）、unhealthy（已设置事件告警规则且有事件告警触发的资源）、no_alarm_rule（未设置事件告警规则的资源）
+    *  **参数解释** 按事件告警状态信息进行过滤。 **约束限制**： 不涉及。 **取值范围** 枚举值。 - health: 已设置事件告警规则且无事件告警触发的资源 - unhealthy: 已设置事件告警规则且有事件告警触发的资源 - no_alarm_rule: 未设置事件告警规则的资源 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -690,7 +705,7 @@ class ListResourceGroupsServicesResourcesRequest implements ModelInterface, Arra
     /**
     * Sets eventStatus
     *
-    * @param string|null $eventStatus 按事件告警状态信息进行过滤，取值只能为health（已设置事件告警规则且无事件告警触发的资源）、unhealthy（已设置事件告警规则且有事件告警触发的资源）、no_alarm_rule（未设置事件告警规则的资源）
+    * @param string|null $eventStatus **参数解释** 按事件告警状态信息进行过滤。 **约束限制**： 不涉及。 **取值范围** 枚举值。 - health: 已设置事件告警规则且无事件告警触发的资源 - unhealthy: 已设置事件告警规则且有事件告警触发的资源 - no_alarm_rule: 未设置事件告警规则的资源 **默认取值**： 不涉及。
     *
     * @return $this
     */

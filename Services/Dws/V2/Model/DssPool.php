@@ -22,11 +22,11 @@ class DssPool implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释**： 专属分布式存储池名称。 **取值范围**： 不涉及。
     * name  **参数解释**： 专属分布式存储池ID。 **取值范围**： 不涉及。
-    * type  **参数解释**： 专属分布式存储池的存储类型。 - SSD：超高IO专属分布式存储池。 **取值范围**： 不涉及。
+    * type  **参数解释**： 专属分布式存储池的存储类型。 **取值范围**： - SSD：超高IO专属分布式存储池。
     * projectId  **参数解释**： 项目ID。获取方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * availabilityZone  **参数解释**： 专属分布式存储池所属可用区。 **取值范围**： 不涉及。
     * capacity  **参数解释**： 申请的专属分布式存储容量，单位TB。 **取值范围**： 不涉及。
-    * status  **参数解释**： 专属分布式存储池的状态。 **取值范围**： available：专属分布式存储池处于可用状态。 deploying：专属分布式存储池处于正在部署的过程中，不可使用。 extending：专属分布式存储池处于正在扩容的过程中，可使用。
+    * status  **参数解释**： 专属分布式存储池的状态。 **取值范围**： - available：专属分布式存储池处于可用状态。 - deploying：专属分布式存储池处于正在部署的过程中，不可使用。 - extending：专属分布式存储池处于正在扩容的过程中，可使用。
     * createdAt  **参数解释**： 专属分布式存储池的创建时间。 **取值范围**： 时间格式：UTC YYYY-MM-DDTHH:MM:SS
     *
     * @var string[]
@@ -46,11 +46,11 @@ class DssPool implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释**： 专属分布式存储池名称。 **取值范围**： 不涉及。
     * name  **参数解释**： 专属分布式存储池ID。 **取值范围**： 不涉及。
-    * type  **参数解释**： 专属分布式存储池的存储类型。 - SSD：超高IO专属分布式存储池。 **取值范围**： 不涉及。
+    * type  **参数解释**： 专属分布式存储池的存储类型。 **取值范围**： - SSD：超高IO专属分布式存储池。
     * projectId  **参数解释**： 项目ID。获取方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * availabilityZone  **参数解释**： 专属分布式存储池所属可用区。 **取值范围**： 不涉及。
     * capacity  **参数解释**： 申请的专属分布式存储容量，单位TB。 **取值范围**： 不涉及。
-    * status  **参数解释**： 专属分布式存储池的状态。 **取值范围**： available：专属分布式存储池处于可用状态。 deploying：专属分布式存储池处于正在部署的过程中，不可使用。 extending：专属分布式存储池处于正在扩容的过程中，可使用。
+    * status  **参数解释**： 专属分布式存储池的状态。 **取值范围**： - available：专属分布式存储池处于可用状态。 - deploying：专属分布式存储池处于正在部署的过程中，不可使用。 - extending：专属分布式存储池处于正在扩容的过程中，可使用。
     * createdAt  **参数解释**： 专属分布式存储池的创建时间。 **取值范围**： 时间格式：UTC YYYY-MM-DDTHH:MM:SS
     *
     * @var string[]
@@ -91,11 +91,11 @@ class DssPool implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  **参数解释**： 专属分布式存储池名称。 **取值范围**： 不涉及。
     * name  **参数解释**： 专属分布式存储池ID。 **取值范围**： 不涉及。
-    * type  **参数解释**： 专属分布式存储池的存储类型。 - SSD：超高IO专属分布式存储池。 **取值范围**： 不涉及。
+    * type  **参数解释**： 专属分布式存储池的存储类型。 **取值范围**： - SSD：超高IO专属分布式存储池。
     * projectId  **参数解释**： 项目ID。获取方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * availabilityZone  **参数解释**： 专属分布式存储池所属可用区。 **取值范围**： 不涉及。
     * capacity  **参数解释**： 申请的专属分布式存储容量，单位TB。 **取值范围**： 不涉及。
-    * status  **参数解释**： 专属分布式存储池的状态。 **取值范围**： available：专属分布式存储池处于可用状态。 deploying：专属分布式存储池处于正在部署的过程中，不可使用。 extending：专属分布式存储池处于正在扩容的过程中，可使用。
+    * status  **参数解释**： 专属分布式存储池的状态。 **取值范围**： - available：专属分布式存储池处于可用状态。 - deploying：专属分布式存储池处于正在部署的过程中，不可使用。 - extending：专属分布式存储池处于正在扩容的过程中，可使用。
     * createdAt  **参数解释**： 专属分布式存储池的创建时间。 **取值范围**： 时间格式：UTC YYYY-MM-DDTHH:MM:SS
     *
     * @var string[]
@@ -115,11 +115,11 @@ class DssPool implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释**： 专属分布式存储池名称。 **取值范围**： 不涉及。
     * name  **参数解释**： 专属分布式存储池ID。 **取值范围**： 不涉及。
-    * type  **参数解释**： 专属分布式存储池的存储类型。 - SSD：超高IO专属分布式存储池。 **取值范围**： 不涉及。
+    * type  **参数解释**： 专属分布式存储池的存储类型。 **取值范围**： - SSD：超高IO专属分布式存储池。
     * projectId  **参数解释**： 项目ID。获取方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * availabilityZone  **参数解释**： 专属分布式存储池所属可用区。 **取值范围**： 不涉及。
     * capacity  **参数解释**： 申请的专属分布式存储容量，单位TB。 **取值范围**： 不涉及。
-    * status  **参数解释**： 专属分布式存储池的状态。 **取值范围**： available：专属分布式存储池处于可用状态。 deploying：专属分布式存储池处于正在部署的过程中，不可使用。 extending：专属分布式存储池处于正在扩容的过程中，可使用。
+    * status  **参数解释**： 专属分布式存储池的状态。 **取值范围**： - available：专属分布式存储池处于可用状态。 - deploying：专属分布式存储池处于正在部署的过程中，不可使用。 - extending：专属分布式存储池处于正在扩容的过程中，可使用。
     * createdAt  **参数解释**： 专属分布式存储池的创建时间。 **取值范围**： 时间格式：UTC YYYY-MM-DDTHH:MM:SS
     *
     * @var string[]
@@ -139,11 +139,11 @@ class DssPool implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释**： 专属分布式存储池名称。 **取值范围**： 不涉及。
     * name  **参数解释**： 专属分布式存储池ID。 **取值范围**： 不涉及。
-    * type  **参数解释**： 专属分布式存储池的存储类型。 - SSD：超高IO专属分布式存储池。 **取值范围**： 不涉及。
+    * type  **参数解释**： 专属分布式存储池的存储类型。 **取值范围**： - SSD：超高IO专属分布式存储池。
     * projectId  **参数解释**： 项目ID。获取方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * availabilityZone  **参数解释**： 专属分布式存储池所属可用区。 **取值范围**： 不涉及。
     * capacity  **参数解释**： 申请的专属分布式存储容量，单位TB。 **取值范围**： 不涉及。
-    * status  **参数解释**： 专属分布式存储池的状态。 **取值范围**： available：专属分布式存储池处于可用状态。 deploying：专属分布式存储池处于正在部署的过程中，不可使用。 extending：专属分布式存储池处于正在扩容的过程中，可使用。
+    * status  **参数解释**： 专属分布式存储池的状态。 **取值范围**： - available：专属分布式存储池处于可用状态。 - deploying：专属分布式存储池处于正在部署的过程中，不可使用。 - extending：专属分布式存储池处于正在扩容的过程中，可使用。
     * createdAt  **参数解释**： 专属分布式存储池的创建时间。 **取值范围**： 时间格式：UTC YYYY-MM-DDTHH:MM:SS
     *
     * @var string[]
@@ -323,7 +323,7 @@ class DssPool implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**： 专属分布式存储池的存储类型。 - SSD：超高IO专属分布式存储池。 **取值范围**： 不涉及。
+    *  **参数解释**： 专属分布式存储池的存储类型。 **取值范围**： - SSD：超高IO专属分布式存储池。
     *
     * @return string
     */
@@ -335,7 +335,7 @@ class DssPool implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type **参数解释**： 专属分布式存储池的存储类型。 - SSD：超高IO专属分布式存储池。 **取值范围**： 不涉及。
+    * @param string $type **参数解释**： 专属分布式存储池的存储类型。 **取值范围**： - SSD：超高IO专属分布式存储池。
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class DssPool implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 专属分布式存储池的状态。 **取值范围**： available：专属分布式存储池处于可用状态。 deploying：专属分布式存储池处于正在部署的过程中，不可使用。 extending：专属分布式存储池处于正在扩容的过程中，可使用。
+    *  **参数解释**： 专属分布式存储池的状态。 **取值范围**： - available：专属分布式存储池处于可用状态。 - deploying：专属分布式存储池处于正在部署的过程中，不可使用。 - extending：专属分布式存储池处于正在扩容的过程中，可使用。
     *
     * @return string
     */
@@ -431,7 +431,7 @@ class DssPool implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status **参数解释**： 专属分布式存储池的状态。 **取值范围**： available：专属分布式存储池处于可用状态。 deploying：专属分布式存储池处于正在部署的过程中，不可使用。 extending：专属分布式存储池处于正在扩容的过程中，可使用。
+    * @param string $status **参数解释**： 专属分布式存储池的状态。 **取值范围**： - available：专属分布式存储池处于可用状态。 - deploying：专属分布式存储池处于正在部署的过程中，不可使用。 - extending：专属分布式存储池处于正在扩容的过程中，可使用。
     *
     * @return $this
     */

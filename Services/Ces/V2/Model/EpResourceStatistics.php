@@ -20,11 +20,11 @@ class EpResourceStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * extendRelationId  企业项目ID
-    * unhealthy  告警中的资源数
-    * total  资源总数
-    * eventUnhealthy  已触发的资源数
-    * namespaces  资源类型数
+    * extendRelationId  **参数解释** 企业项目ID。 **取值范围** 长度[0,64]个字符.
+    * unhealthy  **参数解释** 告警中的资源数。 **取值范围** 0-9999999
+    * total  **参数解释** 资源总数。 **取值范围** 0-9999999
+    * eventUnhealthy  **参数解释** 已触发的资源数。 **取值范围** 0-9999999
+    * namespaces  **参数解释** 资源类型数。 **取值范围** 0-9999999
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class EpResourceStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * extendRelationId  企业项目ID
-    * unhealthy  告警中的资源数
-    * total  资源总数
-    * eventUnhealthy  已触发的资源数
-    * namespaces  资源类型数
+    * extendRelationId  **参数解释** 企业项目ID。 **取值范围** 长度[0,64]个字符.
+    * unhealthy  **参数解释** 告警中的资源数。 **取值范围** 0-9999999
+    * total  **参数解释** 资源总数。 **取值范围** 0-9999999
+    * eventUnhealthy  **参数解释** 已触发的资源数。 **取值范围** 0-9999999
+    * namespaces  **参数解释** 资源类型数。 **取值范围** 0-9999999
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class EpResourceStatistics implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * extendRelationId  企业项目ID
-    * unhealthy  告警中的资源数
-    * total  资源总数
-    * eventUnhealthy  已触发的资源数
-    * namespaces  资源类型数
+    * extendRelationId  **参数解释** 企业项目ID。 **取值范围** 长度[0,64]个字符.
+    * unhealthy  **参数解释** 告警中的资源数。 **取值范围** 0-9999999
+    * total  **参数解释** 资源总数。 **取值范围** 0-9999999
+    * eventUnhealthy  **参数解释** 已触发的资源数。 **取值范围** 0-9999999
+    * namespaces  **参数解释** 资源类型数。 **取值范围** 0-9999999
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class EpResourceStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * extendRelationId  企业项目ID
-    * unhealthy  告警中的资源数
-    * total  资源总数
-    * eventUnhealthy  已触发的资源数
-    * namespaces  资源类型数
+    * extendRelationId  **参数解释** 企业项目ID。 **取值范围** 长度[0,64]个字符.
+    * unhealthy  **参数解释** 告警中的资源数。 **取值范围** 0-9999999
+    * total  **参数解释** 资源总数。 **取值范围** 0-9999999
+    * eventUnhealthy  **参数解释** 已触发的资源数。 **取值范围** 0-9999999
+    * namespaces  **参数解释** 资源类型数。 **取值范围** 0-9999999
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class EpResourceStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * extendRelationId  企业项目ID
-    * unhealthy  告警中的资源数
-    * total  资源总数
-    * eventUnhealthy  已触发的资源数
-    * namespaces  资源类型数
+    * extendRelationId  **参数解释** 企业项目ID。 **取值范围** 长度[0,64]个字符.
+    * unhealthy  **参数解释** 告警中的资源数。 **取值范围** 0-9999999
+    * total  **参数解释** 资源总数。 **取值范围** 0-9999999
+    * eventUnhealthy  **参数解释** 已触发的资源数。 **取值范围** 0-9999999
+    * namespaces  **参数解释** 资源类型数。 **取值范围** 0-9999999
     *
     * @var string[]
     */
@@ -208,6 +208,9 @@ class EpResourceStatistics implements ModelInterface, ArrayAccess
             if (!is_null($this->container['extendRelationId']) && (mb_strlen($this->container['extendRelationId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'extendRelationId', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['extendRelationId']) && !preg_match("/^([a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['extendRelationId'])) {
+                $invalidProperties[] = "invalid value for 'extendRelationId', must be conform to the pattern /^([a-z]|[A-Z]|[0-9]|_|-)+$/.";
+            }
             if (!is_null($this->container['unhealthy']) && ($this->container['unhealthy'] > 9999999)) {
                 $invalidProperties[] = "invalid value for 'unhealthy', must be smaller than or equal to 9999999.";
             }
@@ -248,7 +251,7 @@ class EpResourceStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendRelationId
-    *  企业项目ID
+    *  **参数解释** 企业项目ID。 **取值范围** 长度[0,64]个字符.
     *
     * @return string|null
     */
@@ -260,7 +263,7 @@ class EpResourceStatistics implements ModelInterface, ArrayAccess
     /**
     * Sets extendRelationId
     *
-    * @param string|null $extendRelationId 企业项目ID
+    * @param string|null $extendRelationId **参数解释** 企业项目ID。 **取值范围** 长度[0,64]个字符.
     *
     * @return $this
     */
@@ -272,7 +275,7 @@ class EpResourceStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Gets unhealthy
-    *  告警中的资源数
+    *  **参数解释** 告警中的资源数。 **取值范围** 0-9999999
     *
     * @return int|null
     */
@@ -284,7 +287,7 @@ class EpResourceStatistics implements ModelInterface, ArrayAccess
     /**
     * Sets unhealthy
     *
-    * @param int|null $unhealthy 告警中的资源数
+    * @param int|null $unhealthy **参数解释** 告警中的资源数。 **取值范围** 0-9999999
     *
     * @return $this
     */
@@ -296,7 +299,7 @@ class EpResourceStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  资源总数
+    *  **参数解释** 资源总数。 **取值范围** 0-9999999
     *
     * @return int|null
     */
@@ -308,7 +311,7 @@ class EpResourceStatistics implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 资源总数
+    * @param int|null $total **参数解释** 资源总数。 **取值范围** 0-9999999
     *
     * @return $this
     */
@@ -320,7 +323,7 @@ class EpResourceStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventUnhealthy
-    *  已触发的资源数
+    *  **参数解释** 已触发的资源数。 **取值范围** 0-9999999
     *
     * @return int|null
     */
@@ -332,7 +335,7 @@ class EpResourceStatistics implements ModelInterface, ArrayAccess
     /**
     * Sets eventUnhealthy
     *
-    * @param int|null $eventUnhealthy 已触发的资源数
+    * @param int|null $eventUnhealthy **参数解释** 已触发的资源数。 **取值范围** 0-9999999
     *
     * @return $this
     */
@@ -344,7 +347,7 @@ class EpResourceStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespaces
-    *  资源类型数
+    *  **参数解释** 资源类型数。 **取值范围** 0-9999999
     *
     * @return int|null
     */
@@ -356,7 +359,7 @@ class EpResourceStatistics implements ModelInterface, ArrayAccess
     /**
     * Sets namespaces
     *
-    * @param int|null $namespaces 资源类型数
+    * @param int|null $namespaces **参数解释** 资源类型数。 **取值范围** 0-9999999
     *
     * @return $this
     */

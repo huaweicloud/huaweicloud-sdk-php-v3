@@ -20,13 +20,15 @@ class VifExtendAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * haType  虚拟接口的可用性检测类型
-    * haMode  检测的具体的配置模式
+    * haType  虚拟接口的可用性检测类型。取值范围： - nqa：网络质量分析 - bfd：双向转发检测
+    * haMode  虚拟接口可用性检测的配置模式。取值范围： - auto_single：自动单跳bfd - auto_multi：自动多跳bfd - static_single：静态单跳bfd - static_multi：静态多跳bfd - enhance_nqa：增强型nqa
     * detectMultiplier  检测的重试次数
-    * minRxInterval  检测的接收时长间隔
-    * minTxInterval  检测的发送时长间隔
+    * minRxInterval  检测的接收时长间隔，单位为毫秒。   - 当ha_type为nqa时，实际生效的时间间隔为按秒为单位将输入的数值向上取整，例如输入1500毫秒，实际时间间隔为2秒；   - 当ha_type为bfd时，实际生效的时间间隔为按毫秒为单位的输入数值。最小值为200毫秒，最大值为1000毫秒。
+    * minTxInterval  检测的发送时长间隔，单位为毫秒。   - 当ha_type为nqa时，实际生效的时间间隔为按秒为单位将输入的数值向上取整，例如输入1500毫秒，实际时间间隔为2秒；   - 当ha_type为bfd时，实际生效的时间间隔为按毫秒为单位的输入数值。最小值为200毫秒，最大值为1000毫秒。
     * remoteDisclaim  检测的远端的标识，用于静态BFD
     * localDisclaim  检测的本端的标识，用于静态BFD
+    * ipv6RemoteDisclaim  检测的远端的标识，用于静态ipv6 BFD
+    * ipv6LocalDisclaim  检测的本端的标识，用于静态ipv6 BFD
     *
     * @var string[]
     */
@@ -37,18 +39,22 @@ class VifExtendAttribute implements ModelInterface, ArrayAccess
             'minRxInterval' => 'int',
             'minTxInterval' => 'int',
             'remoteDisclaim' => 'int',
-            'localDisclaim' => 'int'
+            'localDisclaim' => 'int',
+            'ipv6RemoteDisclaim' => 'int',
+            'ipv6LocalDisclaim' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * haType  虚拟接口的可用性检测类型
-    * haMode  检测的具体的配置模式
+    * haType  虚拟接口的可用性检测类型。取值范围： - nqa：网络质量分析 - bfd：双向转发检测
+    * haMode  虚拟接口可用性检测的配置模式。取值范围： - auto_single：自动单跳bfd - auto_multi：自动多跳bfd - static_single：静态单跳bfd - static_multi：静态多跳bfd - enhance_nqa：增强型nqa
     * detectMultiplier  检测的重试次数
-    * minRxInterval  检测的接收时长间隔
-    * minTxInterval  检测的发送时长间隔
+    * minRxInterval  检测的接收时长间隔，单位为毫秒。   - 当ha_type为nqa时，实际生效的时间间隔为按秒为单位将输入的数值向上取整，例如输入1500毫秒，实际时间间隔为2秒；   - 当ha_type为bfd时，实际生效的时间间隔为按毫秒为单位的输入数值。最小值为200毫秒，最大值为1000毫秒。
+    * minTxInterval  检测的发送时长间隔，单位为毫秒。   - 当ha_type为nqa时，实际生效的时间间隔为按秒为单位将输入的数值向上取整，例如输入1500毫秒，实际时间间隔为2秒；   - 当ha_type为bfd时，实际生效的时间间隔为按毫秒为单位的输入数值。最小值为200毫秒，最大值为1000毫秒。
     * remoteDisclaim  检测的远端的标识，用于静态BFD
     * localDisclaim  检测的本端的标识，用于静态BFD
+    * ipv6RemoteDisclaim  检测的远端的标识，用于静态ipv6 BFD
+    * ipv6LocalDisclaim  检测的本端的标识，用于静态ipv6 BFD
     *
     * @var string[]
     */
@@ -59,7 +65,9 @@ class VifExtendAttribute implements ModelInterface, ArrayAccess
         'minRxInterval' => 'int32',
         'minTxInterval' => 'int32',
         'remoteDisclaim' => 'int32',
-        'localDisclaim' => 'int32'
+        'localDisclaim' => 'int32',
+        'ipv6RemoteDisclaim' => 'int32',
+        'ipv6LocalDisclaim' => 'int32'
     ];
 
     /**
@@ -85,13 +93,15 @@ class VifExtendAttribute implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * haType  虚拟接口的可用性检测类型
-    * haMode  检测的具体的配置模式
+    * haType  虚拟接口的可用性检测类型。取值范围： - nqa：网络质量分析 - bfd：双向转发检测
+    * haMode  虚拟接口可用性检测的配置模式。取值范围： - auto_single：自动单跳bfd - auto_multi：自动多跳bfd - static_single：静态单跳bfd - static_multi：静态多跳bfd - enhance_nqa：增强型nqa
     * detectMultiplier  检测的重试次数
-    * minRxInterval  检测的接收时长间隔
-    * minTxInterval  检测的发送时长间隔
+    * minRxInterval  检测的接收时长间隔，单位为毫秒。   - 当ha_type为nqa时，实际生效的时间间隔为按秒为单位将输入的数值向上取整，例如输入1500毫秒，实际时间间隔为2秒；   - 当ha_type为bfd时，实际生效的时间间隔为按毫秒为单位的输入数值。最小值为200毫秒，最大值为1000毫秒。
+    * minTxInterval  检测的发送时长间隔，单位为毫秒。   - 当ha_type为nqa时，实际生效的时间间隔为按秒为单位将输入的数值向上取整，例如输入1500毫秒，实际时间间隔为2秒；   - 当ha_type为bfd时，实际生效的时间间隔为按毫秒为单位的输入数值。最小值为200毫秒，最大值为1000毫秒。
     * remoteDisclaim  检测的远端的标识，用于静态BFD
     * localDisclaim  检测的本端的标识，用于静态BFD
+    * ipv6RemoteDisclaim  检测的远端的标识，用于静态ipv6 BFD
+    * ipv6LocalDisclaim  检测的本端的标识，用于静态ipv6 BFD
     *
     * @var string[]
     */
@@ -102,18 +112,22 @@ class VifExtendAttribute implements ModelInterface, ArrayAccess
             'minRxInterval' => 'min_rx_interval',
             'minTxInterval' => 'min_tx_interval',
             'remoteDisclaim' => 'remote_disclaim',
-            'localDisclaim' => 'local_disclaim'
+            'localDisclaim' => 'local_disclaim',
+            'ipv6RemoteDisclaim' => 'ipv6_remote_disclaim',
+            'ipv6LocalDisclaim' => 'ipv6_local_disclaim'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * haType  虚拟接口的可用性检测类型
-    * haMode  检测的具体的配置模式
+    * haType  虚拟接口的可用性检测类型。取值范围： - nqa：网络质量分析 - bfd：双向转发检测
+    * haMode  虚拟接口可用性检测的配置模式。取值范围： - auto_single：自动单跳bfd - auto_multi：自动多跳bfd - static_single：静态单跳bfd - static_multi：静态多跳bfd - enhance_nqa：增强型nqa
     * detectMultiplier  检测的重试次数
-    * minRxInterval  检测的接收时长间隔
-    * minTxInterval  检测的发送时长间隔
+    * minRxInterval  检测的接收时长间隔，单位为毫秒。   - 当ha_type为nqa时，实际生效的时间间隔为按秒为单位将输入的数值向上取整，例如输入1500毫秒，实际时间间隔为2秒；   - 当ha_type为bfd时，实际生效的时间间隔为按毫秒为单位的输入数值。最小值为200毫秒，最大值为1000毫秒。
+    * minTxInterval  检测的发送时长间隔，单位为毫秒。   - 当ha_type为nqa时，实际生效的时间间隔为按秒为单位将输入的数值向上取整，例如输入1500毫秒，实际时间间隔为2秒；   - 当ha_type为bfd时，实际生效的时间间隔为按毫秒为单位的输入数值。最小值为200毫秒，最大值为1000毫秒。
     * remoteDisclaim  检测的远端的标识，用于静态BFD
     * localDisclaim  检测的本端的标识，用于静态BFD
+    * ipv6RemoteDisclaim  检测的远端的标识，用于静态ipv6 BFD
+    * ipv6LocalDisclaim  检测的本端的标识，用于静态ipv6 BFD
     *
     * @var string[]
     */
@@ -124,18 +138,22 @@ class VifExtendAttribute implements ModelInterface, ArrayAccess
             'minRxInterval' => 'setMinRxInterval',
             'minTxInterval' => 'setMinTxInterval',
             'remoteDisclaim' => 'setRemoteDisclaim',
-            'localDisclaim' => 'setLocalDisclaim'
+            'localDisclaim' => 'setLocalDisclaim',
+            'ipv6RemoteDisclaim' => 'setIpv6RemoteDisclaim',
+            'ipv6LocalDisclaim' => 'setIpv6LocalDisclaim'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * haType  虚拟接口的可用性检测类型
-    * haMode  检测的具体的配置模式
+    * haType  虚拟接口的可用性检测类型。取值范围： - nqa：网络质量分析 - bfd：双向转发检测
+    * haMode  虚拟接口可用性检测的配置模式。取值范围： - auto_single：自动单跳bfd - auto_multi：自动多跳bfd - static_single：静态单跳bfd - static_multi：静态多跳bfd - enhance_nqa：增强型nqa
     * detectMultiplier  检测的重试次数
-    * minRxInterval  检测的接收时长间隔
-    * minTxInterval  检测的发送时长间隔
+    * minRxInterval  检测的接收时长间隔，单位为毫秒。   - 当ha_type为nqa时，实际生效的时间间隔为按秒为单位将输入的数值向上取整，例如输入1500毫秒，实际时间间隔为2秒；   - 当ha_type为bfd时，实际生效的时间间隔为按毫秒为单位的输入数值。最小值为200毫秒，最大值为1000毫秒。
+    * minTxInterval  检测的发送时长间隔，单位为毫秒。   - 当ha_type为nqa时，实际生效的时间间隔为按秒为单位将输入的数值向上取整，例如输入1500毫秒，实际时间间隔为2秒；   - 当ha_type为bfd时，实际生效的时间间隔为按毫秒为单位的输入数值。最小值为200毫秒，最大值为1000毫秒。
     * remoteDisclaim  检测的远端的标识，用于静态BFD
     * localDisclaim  检测的本端的标识，用于静态BFD
+    * ipv6RemoteDisclaim  检测的远端的标识，用于静态ipv6 BFD
+    * ipv6LocalDisclaim  检测的本端的标识，用于静态ipv6 BFD
     *
     * @var string[]
     */
@@ -146,7 +164,9 @@ class VifExtendAttribute implements ModelInterface, ArrayAccess
             'minRxInterval' => 'getMinRxInterval',
             'minTxInterval' => 'getMinTxInterval',
             'remoteDisclaim' => 'getRemoteDisclaim',
-            'localDisclaim' => 'getLocalDisclaim'
+            'localDisclaim' => 'getLocalDisclaim',
+            'ipv6RemoteDisclaim' => 'getIpv6RemoteDisclaim',
+            'ipv6LocalDisclaim' => 'getIpv6LocalDisclaim'
     ];
 
     /**
@@ -250,6 +270,8 @@ class VifExtendAttribute implements ModelInterface, ArrayAccess
         $this->container['minTxInterval'] = isset($data['minTxInterval']) ? $data['minTxInterval'] : null;
         $this->container['remoteDisclaim'] = isset($data['remoteDisclaim']) ? $data['remoteDisclaim'] : null;
         $this->container['localDisclaim'] = isset($data['localDisclaim']) ? $data['localDisclaim'] : null;
+        $this->container['ipv6RemoteDisclaim'] = isset($data['ipv6RemoteDisclaim']) ? $data['ipv6RemoteDisclaim'] : null;
+        $this->container['ipv6LocalDisclaim'] = isset($data['ipv6LocalDisclaim']) ? $data['ipv6LocalDisclaim'] : null;
     }
 
     /**
@@ -276,6 +298,48 @@ class VifExtendAttribute implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['detectMultiplier']) && ($this->container['detectMultiplier'] > 20)) {
+                $invalidProperties[] = "invalid value for 'detectMultiplier', must be smaller than or equal to 20.";
+            }
+            if (!is_null($this->container['detectMultiplier']) && ($this->container['detectMultiplier'] < 3)) {
+                $invalidProperties[] = "invalid value for 'detectMultiplier', must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['minRxInterval']) && ($this->container['minRxInterval'] > 5000)) {
+                $invalidProperties[] = "invalid value for 'minRxInterval', must be smaller than or equal to 5000.";
+            }
+            if (!is_null($this->container['minRxInterval']) && ($this->container['minRxInterval'] < 200)) {
+                $invalidProperties[] = "invalid value for 'minRxInterval', must be bigger than or equal to 200.";
+            }
+            if (!is_null($this->container['minTxInterval']) && ($this->container['minTxInterval'] > 5000)) {
+                $invalidProperties[] = "invalid value for 'minTxInterval', must be smaller than or equal to 5000.";
+            }
+            if (!is_null($this->container['minTxInterval']) && ($this->container['minTxInterval'] < 200)) {
+                $invalidProperties[] = "invalid value for 'minTxInterval', must be bigger than or equal to 200.";
+            }
+            if (!is_null($this->container['remoteDisclaim']) && ($this->container['remoteDisclaim'] > 16384)) {
+                $invalidProperties[] = "invalid value for 'remoteDisclaim', must be smaller than or equal to 16384.";
+            }
+            if (!is_null($this->container['remoteDisclaim']) && ($this->container['remoteDisclaim'] < 1)) {
+                $invalidProperties[] = "invalid value for 'remoteDisclaim', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['localDisclaim']) && ($this->container['localDisclaim'] > 16384)) {
+                $invalidProperties[] = "invalid value for 'localDisclaim', must be smaller than or equal to 16384.";
+            }
+            if (!is_null($this->container['localDisclaim']) && ($this->container['localDisclaim'] < 1)) {
+                $invalidProperties[] = "invalid value for 'localDisclaim', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['ipv6RemoteDisclaim']) && ($this->container['ipv6RemoteDisclaim'] > 16384)) {
+                $invalidProperties[] = "invalid value for 'ipv6RemoteDisclaim', must be smaller than or equal to 16384.";
+            }
+            if (!is_null($this->container['ipv6RemoteDisclaim']) && ($this->container['ipv6RemoteDisclaim'] < 1)) {
+                $invalidProperties[] = "invalid value for 'ipv6RemoteDisclaim', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['ipv6LocalDisclaim']) && ($this->container['ipv6LocalDisclaim'] > 16384)) {
+                $invalidProperties[] = "invalid value for 'ipv6LocalDisclaim', must be smaller than or equal to 16384.";
+            }
+            if (!is_null($this->container['ipv6LocalDisclaim']) && ($this->container['ipv6LocalDisclaim'] < 1)) {
+                $invalidProperties[] = "invalid value for 'ipv6LocalDisclaim', must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -292,7 +356,7 @@ class VifExtendAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Gets haType
-    *  虚拟接口的可用性检测类型
+    *  虚拟接口的可用性检测类型。取值范围： - nqa：网络质量分析 - bfd：双向转发检测
     *
     * @return string|null
     */
@@ -304,7 +368,7 @@ class VifExtendAttribute implements ModelInterface, ArrayAccess
     /**
     * Sets haType
     *
-    * @param string|null $haType 虚拟接口的可用性检测类型
+    * @param string|null $haType 虚拟接口的可用性检测类型。取值范围： - nqa：网络质量分析 - bfd：双向转发检测
     *
     * @return $this
     */
@@ -316,7 +380,7 @@ class VifExtendAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Gets haMode
-    *  检测的具体的配置模式
+    *  虚拟接口可用性检测的配置模式。取值范围： - auto_single：自动单跳bfd - auto_multi：自动多跳bfd - static_single：静态单跳bfd - static_multi：静态多跳bfd - enhance_nqa：增强型nqa
     *
     * @return string|null
     */
@@ -328,7 +392,7 @@ class VifExtendAttribute implements ModelInterface, ArrayAccess
     /**
     * Sets haMode
     *
-    * @param string|null $haMode 检测的具体的配置模式
+    * @param string|null $haMode 虚拟接口可用性检测的配置模式。取值范围： - auto_single：自动单跳bfd - auto_multi：自动多跳bfd - static_single：静态单跳bfd - static_multi：静态多跳bfd - enhance_nqa：增强型nqa
     *
     * @return $this
     */
@@ -364,7 +428,7 @@ class VifExtendAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Gets minRxInterval
-    *  检测的接收时长间隔
+    *  检测的接收时长间隔，单位为毫秒。   - 当ha_type为nqa时，实际生效的时间间隔为按秒为单位将输入的数值向上取整，例如输入1500毫秒，实际时间间隔为2秒；   - 当ha_type为bfd时，实际生效的时间间隔为按毫秒为单位的输入数值。最小值为200毫秒，最大值为1000毫秒。
     *
     * @return int|null
     */
@@ -376,7 +440,7 @@ class VifExtendAttribute implements ModelInterface, ArrayAccess
     /**
     * Sets minRxInterval
     *
-    * @param int|null $minRxInterval 检测的接收时长间隔
+    * @param int|null $minRxInterval 检测的接收时长间隔，单位为毫秒。   - 当ha_type为nqa时，实际生效的时间间隔为按秒为单位将输入的数值向上取整，例如输入1500毫秒，实际时间间隔为2秒；   - 当ha_type为bfd时，实际生效的时间间隔为按毫秒为单位的输入数值。最小值为200毫秒，最大值为1000毫秒。
     *
     * @return $this
     */
@@ -388,7 +452,7 @@ class VifExtendAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Gets minTxInterval
-    *  检测的发送时长间隔
+    *  检测的发送时长间隔，单位为毫秒。   - 当ha_type为nqa时，实际生效的时间间隔为按秒为单位将输入的数值向上取整，例如输入1500毫秒，实际时间间隔为2秒；   - 当ha_type为bfd时，实际生效的时间间隔为按毫秒为单位的输入数值。最小值为200毫秒，最大值为1000毫秒。
     *
     * @return int|null
     */
@@ -400,7 +464,7 @@ class VifExtendAttribute implements ModelInterface, ArrayAccess
     /**
     * Sets minTxInterval
     *
-    * @param int|null $minTxInterval 检测的发送时长间隔
+    * @param int|null $minTxInterval 检测的发送时长间隔，单位为毫秒。   - 当ha_type为nqa时，实际生效的时间间隔为按秒为单位将输入的数值向上取整，例如输入1500毫秒，实际时间间隔为2秒；   - 当ha_type为bfd时，实际生效的时间间隔为按毫秒为单位的输入数值。最小值为200毫秒，最大值为1000毫秒。
     *
     * @return $this
     */
@@ -455,6 +519,54 @@ class VifExtendAttribute implements ModelInterface, ArrayAccess
     public function setLocalDisclaim($localDisclaim)
     {
         $this->container['localDisclaim'] = $localDisclaim;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6RemoteDisclaim
+    *  检测的远端的标识，用于静态ipv6 BFD
+    *
+    * @return int|null
+    */
+    public function getIpv6RemoteDisclaim()
+    {
+        return $this->container['ipv6RemoteDisclaim'];
+    }
+
+    /**
+    * Sets ipv6RemoteDisclaim
+    *
+    * @param int|null $ipv6RemoteDisclaim 检测的远端的标识，用于静态ipv6 BFD
+    *
+    * @return $this
+    */
+    public function setIpv6RemoteDisclaim($ipv6RemoteDisclaim)
+    {
+        $this->container['ipv6RemoteDisclaim'] = $ipv6RemoteDisclaim;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6LocalDisclaim
+    *  检测的本端的标识，用于静态ipv6 BFD
+    *
+    * @return int|null
+    */
+    public function getIpv6LocalDisclaim()
+    {
+        return $this->container['ipv6LocalDisclaim'];
+    }
+
+    /**
+    * Sets ipv6LocalDisclaim
+    *
+    * @param int|null $ipv6LocalDisclaim 检测的本端的标识，用于静态ipv6 BFD
+    *
+    * @return $this
+    */
+    public function setIpv6LocalDisclaim($ipv6LocalDisclaim)
+    {
+        $this->container['ipv6LocalDisclaim'] = $ipv6LocalDisclaim;
         return $this;
     }
 

@@ -22,7 +22,7 @@ class PublicIpInfoResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释**： 公网IP的ID。 **取值范围**： 不涉及。
     * address  **参数解释**： 公网IP。 **取值范围**： 合法的公网IPV4地址。
-    * status  **参数解释**： 公网IP状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 公网IP状态。 **取值范围**： - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     * instanceId  **参数解释**： 绑定的DWS集群的节点ID。 **取值范围**： 不涉及。
     * instanceName  **参数解释**： 绑定的DWS集群的节点名称。 **取值范围**： 不涉及。
     * bandwidthSize  **参数解释**： 公网IP带宽信息。 **取值范围**： 不涉及。
@@ -42,7 +42,7 @@ class PublicIpInfoResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释**： 公网IP的ID。 **取值范围**： 不涉及。
     * address  **参数解释**： 公网IP。 **取值范围**： 合法的公网IPV4地址。
-    * status  **参数解释**： 公网IP状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 公网IP状态。 **取值范围**： - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     * instanceId  **参数解释**： 绑定的DWS集群的节点ID。 **取值范围**： 不涉及。
     * instanceName  **参数解释**： 绑定的DWS集群的节点名称。 **取值范围**： 不涉及。
     * bandwidthSize  **参数解释**： 公网IP带宽信息。 **取值范围**： 不涉及。
@@ -83,7 +83,7 @@ class PublicIpInfoResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  **参数解释**： 公网IP的ID。 **取值范围**： 不涉及。
     * address  **参数解释**： 公网IP。 **取值范围**： 合法的公网IPV4地址。
-    * status  **参数解释**： 公网IP状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 公网IP状态。 **取值范围**： - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     * instanceId  **参数解释**： 绑定的DWS集群的节点ID。 **取值范围**： 不涉及。
     * instanceName  **参数解释**： 绑定的DWS集群的节点名称。 **取值范围**： 不涉及。
     * bandwidthSize  **参数解释**： 公网IP带宽信息。 **取值范围**： 不涉及。
@@ -103,7 +103,7 @@ class PublicIpInfoResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释**： 公网IP的ID。 **取值范围**： 不涉及。
     * address  **参数解释**： 公网IP。 **取值范围**： 合法的公网IPV4地址。
-    * status  **参数解释**： 公网IP状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 公网IP状态。 **取值范围**： - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     * instanceId  **参数解释**： 绑定的DWS集群的节点ID。 **取值范围**： 不涉及。
     * instanceName  **参数解释**： 绑定的DWS集群的节点名称。 **取值范围**： 不涉及。
     * bandwidthSize  **参数解释**： 公网IP带宽信息。 **取值范围**： 不涉及。
@@ -123,7 +123,7 @@ class PublicIpInfoResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释**： 公网IP的ID。 **取值范围**： 不涉及。
     * address  **参数解释**： 公网IP。 **取值范围**： 合法的公网IPV4地址。
-    * status  **参数解释**： 公网IP状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 公网IP状态。 **取值范围**： - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     * instanceId  **参数解释**： 绑定的DWS集群的节点ID。 **取值范围**： 不涉及。
     * instanceName  **参数解释**： 绑定的DWS集群的节点名称。 **取值范围**： 不涉及。
     * bandwidthSize  **参数解释**： 公网IP带宽信息。 **取值范围**： 不涉及。
@@ -277,7 +277,7 @@ class PublicIpInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 公网IP状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 公网IP状态。 **取值范围**： - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class PublicIpInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 公网IP状态。 **取值范围**： 不涉及。
+    * @param string|null $status **参数解释**： 公网IP状态。 **取值范围**： - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     *
     * @return $this
     */

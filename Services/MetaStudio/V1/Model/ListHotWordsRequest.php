@@ -28,7 +28,7 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * robotId  应用ID。
     * region  sis服务所在区域
-    * language  智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * language  智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     * hotWordsType  * SIS:SIS热词 * MOBVOI:奇妙问ASR热词
     *
     * @var string[]
@@ -56,7 +56,7 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * robotId  应用ID。
     * region  sis服务所在区域
-    * language  智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * language  智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     * hotWordsType  * SIS:SIS热词 * MOBVOI:奇妙问ASR热词
     *
     * @var string[]
@@ -105,7 +105,7 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * robotId  应用ID。
     * region  sis服务所在区域
-    * language  智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * language  智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     * hotWordsType  * SIS:SIS热词 * MOBVOI:奇妙问ASR热词
     *
     * @var string[]
@@ -133,7 +133,7 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * robotId  应用ID。
     * region  sis服务所在区域
-    * language  智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * language  智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     * hotWordsType  * SIS:SIS热词 * MOBVOI:奇妙问ASR热词
     *
     * @var string[]
@@ -161,7 +161,7 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * robotId  应用ID。
     * region  sis服务所在区域
-    * language  智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * language  智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     * hotWordsType  * SIS:SIS热词 * MOBVOI:奇妙问ASR热词
     *
     * @var string[]
@@ -227,6 +227,7 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     const LANGUAGE_POR = 'por';
     const LANGUAGE_ARABIC = 'Arabic';
     const LANGUAGE_THAI = 'Thai';
+    const LANGUAGE_FR = 'fr';
     const HOT_WORDS_TYPE_SIS = 'SIS';
     const HOT_WORDS_TYPE_MOBVOI = 'MOBVOI';
     
@@ -247,6 +248,7 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
             self::LANGUAGE_POR,
             self::LANGUAGE_ARABIC,
             self::LANGUAGE_THAI,
+            self::LANGUAGE_FR,
         ];
     }
 
@@ -574,7 +576,7 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    *  智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     *
     * @return string|null
     */
@@ -586,7 +588,7 @@ class ListHotWordsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * @param string|null $language 智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     *
     * @return $this
     */

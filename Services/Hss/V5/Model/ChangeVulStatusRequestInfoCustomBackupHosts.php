@@ -20,9 +20,9 @@ class ChangeVulStatusRequestInfoCustomBackupHosts implements ModelInterface, Arr
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  主机id
-    * vaultId  存储库id
-    * backupName  备份名称
+    * hostId  **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * vaultId  **参数解释**: 存储库id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * backupName  **参数解释**: 备份名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ChangeVulStatusRequestInfoCustomBackupHosts implements ModelInterface, Arr
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  主机id
-    * vaultId  存储库id
-    * backupName  备份名称
+    * hostId  **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * vaultId  **参数解释**: 存储库id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * backupName  **参数解释**: 备份名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ChangeVulStatusRequestInfoCustomBackupHosts implements ModelInterface, Arr
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  主机id
-    * vaultId  存储库id
-    * backupName  备份名称
+    * hostId  **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * vaultId  **参数解释**: 存储库id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * backupName  **参数解释**: 备份名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ChangeVulStatusRequestInfoCustomBackupHosts implements ModelInterface, Arr
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  主机id
-    * vaultId  存储库id
-    * backupName  备份名称
+    * hostId  **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * vaultId  **参数解释**: 存储库id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * backupName  **参数解释**: 备份名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ChangeVulStatusRequestInfoCustomBackupHosts implements ModelInterface, Arr
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  主机id
-    * vaultId  存储库id
-    * backupName  备份名称
+    * hostId  **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * vaultId  **参数解释**: 存储库id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * backupName  **参数解释**: 备份名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -214,7 +214,7 @@ class ChangeVulStatusRequestInfoCustomBackupHosts implements ModelInterface, Arr
 
     /**
     * Gets hostId
-    *  主机id
+    *  **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -226,7 +226,7 @@ class ChangeVulStatusRequestInfoCustomBackupHosts implements ModelInterface, Arr
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机id
+    * @param string|null $hostId **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -238,7 +238,7 @@ class ChangeVulStatusRequestInfoCustomBackupHosts implements ModelInterface, Arr
 
     /**
     * Gets vaultId
-    *  存储库id
+    *  **参数解释**: 存储库id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -250,7 +250,7 @@ class ChangeVulStatusRequestInfoCustomBackupHosts implements ModelInterface, Arr
     /**
     * Sets vaultId
     *
-    * @param string|null $vaultId 存储库id
+    * @param string|null $vaultId **参数解释**: 存储库id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -262,7 +262,7 @@ class ChangeVulStatusRequestInfoCustomBackupHosts implements ModelInterface, Arr
 
     /**
     * Gets backupName
-    *  备份名称
+    *  **参数解释**: 备份名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class ChangeVulStatusRequestInfoCustomBackupHosts implements ModelInterface, Arr
     /**
     * Sets backupName
     *
-    * @param string|null $backupName 备份名称
+    * @param string|null $backupName **参数解释**: 备份名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     *
     * @return $this
     */

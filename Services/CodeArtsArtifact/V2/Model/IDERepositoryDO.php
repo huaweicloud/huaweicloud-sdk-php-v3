@@ -20,15 +20,15 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * repositoryName  仓库名称
-    * format  仓库类型
-    * description  仓库描述
-    * release  release仓库名称
-    * snapshot  snapshot仓库名称
-    * includesPattern  路径
-    * shareRight  共享权限级别
-    * projectId  项目ID
-    * type  仓库类别，本地仓或聚合仓
+    * repositoryName  **参数解释**: 仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * format  **参数解释**: 制品类型。 **约束限制**: 不涉及。 **取值范围**: maven2。 **默认取值**: 无。
+    * description  **参数解释**: 仓库描述。 **约束限制**: 最大长度200。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * release  **参数解释**: release仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * snapshot  **参数解释**: snapshot仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * includesPattern  **参数解释**: 路径包含规则。 **约束限制**: 最大长度512。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * shareRight  **参数解释**: 共享权限级别。 **约束限制**: 不涉及。 **取值范围**: PROJECT。 **默认取值**: 无。
+    * projectId  **参数解释**: 项目ID，可以从调用API处获取，也可以从控制台获取。获取方式请参考[获取项目ID](CloudArtifact_api_0015.xml)。 **约束限制**: 只能由英文字母、数字组成，且长度为32个字符。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * type  **参数解释**: 仓库类型。 **约束限制**: 不涉及。 **取值范围**: hosted：本地仓库。 **默认取值**: 无。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * repositoryName  仓库名称
-    * format  仓库类型
-    * description  仓库描述
-    * release  release仓库名称
-    * snapshot  snapshot仓库名称
-    * includesPattern  路径
-    * shareRight  共享权限级别
-    * projectId  项目ID
-    * type  仓库类别，本地仓或聚合仓
+    * repositoryName  **参数解释**: 仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * format  **参数解释**: 制品类型。 **约束限制**: 不涉及。 **取值范围**: maven2。 **默认取值**: 无。
+    * description  **参数解释**: 仓库描述。 **约束限制**: 最大长度200。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * release  **参数解释**: release仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * snapshot  **参数解释**: snapshot仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * includesPattern  **参数解释**: 路径包含规则。 **约束限制**: 最大长度512。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * shareRight  **参数解释**: 共享权限级别。 **约束限制**: 不涉及。 **取值范围**: PROJECT。 **默认取值**: 无。
+    * projectId  **参数解释**: 项目ID，可以从调用API处获取，也可以从控制台获取。获取方式请参考[获取项目ID](CloudArtifact_api_0015.xml)。 **约束限制**: 只能由英文字母、数字组成，且长度为32个字符。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * type  **参数解释**: 仓库类型。 **约束限制**: 不涉及。 **取值范围**: hosted：本地仓库。 **默认取值**: 无。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * repositoryName  仓库名称
-    * format  仓库类型
-    * description  仓库描述
-    * release  release仓库名称
-    * snapshot  snapshot仓库名称
-    * includesPattern  路径
-    * shareRight  共享权限级别
-    * projectId  项目ID
-    * type  仓库类别，本地仓或聚合仓
+    * repositoryName  **参数解释**: 仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * format  **参数解释**: 制品类型。 **约束限制**: 不涉及。 **取值范围**: maven2。 **默认取值**: 无。
+    * description  **参数解释**: 仓库描述。 **约束限制**: 最大长度200。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * release  **参数解释**: release仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * snapshot  **参数解释**: snapshot仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * includesPattern  **参数解释**: 路径包含规则。 **约束限制**: 最大长度512。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * shareRight  **参数解释**: 共享权限级别。 **约束限制**: 不涉及。 **取值范围**: PROJECT。 **默认取值**: 无。
+    * projectId  **参数解释**: 项目ID，可以从调用API处获取，也可以从控制台获取。获取方式请参考[获取项目ID](CloudArtifact_api_0015.xml)。 **约束限制**: 只能由英文字母、数字组成，且长度为32个字符。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * type  **参数解释**: 仓库类型。 **约束限制**: 不涉及。 **取值范围**: hosted：本地仓库。 **默认取值**: 无。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * repositoryName  仓库名称
-    * format  仓库类型
-    * description  仓库描述
-    * release  release仓库名称
-    * snapshot  snapshot仓库名称
-    * includesPattern  路径
-    * shareRight  共享权限级别
-    * projectId  项目ID
-    * type  仓库类别，本地仓或聚合仓
+    * repositoryName  **参数解释**: 仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * format  **参数解释**: 制品类型。 **约束限制**: 不涉及。 **取值范围**: maven2。 **默认取值**: 无。
+    * description  **参数解释**: 仓库描述。 **约束限制**: 最大长度200。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * release  **参数解释**: release仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * snapshot  **参数解释**: snapshot仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * includesPattern  **参数解释**: 路径包含规则。 **约束限制**: 最大长度512。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * shareRight  **参数解释**: 共享权限级别。 **约束限制**: 不涉及。 **取值范围**: PROJECT。 **默认取值**: 无。
+    * projectId  **参数解释**: 项目ID，可以从调用API处获取，也可以从控制台获取。获取方式请参考[获取项目ID](CloudArtifact_api_0015.xml)。 **约束限制**: 只能由英文字母、数字组成，且长度为32个字符。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * type  **参数解释**: 仓库类型。 **约束限制**: 不涉及。 **取值范围**: hosted：本地仓库。 **默认取值**: 无。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * repositoryName  仓库名称
-    * format  仓库类型
-    * description  仓库描述
-    * release  release仓库名称
-    * snapshot  snapshot仓库名称
-    * includesPattern  路径
-    * shareRight  共享权限级别
-    * projectId  项目ID
-    * type  仓库类别，本地仓或聚合仓
+    * repositoryName  **参数解释**: 仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * format  **参数解释**: 制品类型。 **约束限制**: 不涉及。 **取值范围**: maven2。 **默认取值**: 无。
+    * description  **参数解释**: 仓库描述。 **约束限制**: 最大长度200。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * release  **参数解释**: release仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * snapshot  **参数解释**: snapshot仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * includesPattern  **参数解释**: 路径包含规则。 **约束限制**: 最大长度512。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * shareRight  **参数解释**: 共享权限级别。 **约束限制**: 不涉及。 **取值范围**: PROJECT。 **默认取值**: 无。
+    * projectId  **参数解释**: 项目ID，可以从调用API处获取，也可以从控制台获取。获取方式请参考[获取项目ID](CloudArtifact_api_0015.xml)。 **约束限制**: 只能由英文字母、数字组成，且长度为32个字符。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * type  **参数解释**: 仓库类型。 **约束限制**: 不涉及。 **取值范围**: hosted：本地仓库。 **默认取值**: 无。
     *
     * @var string[]
     */
@@ -246,6 +246,24 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['repositoryName'] === null) {
+            $invalidProperties[] = "'repositoryName' can't be null";
+        }
+        if ($this->container['format'] === null) {
+            $invalidProperties[] = "'format' can't be null";
+        }
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
+            }
+            if (!is_null($this->container['projectId']) && !preg_match("/^[a-z0-9]{32,32}$/", $this->container['projectId'])) {
+                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /^[a-z0-9]{32,32}$/.";
+            }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -262,9 +280,9 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
 
     /**
     * Gets repositoryName
-    *  仓库名称
+    *  **参数解释**: 仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
-    * @return string|null
+    * @return string
     */
     public function getRepositoryName()
     {
@@ -274,7 +292,7 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
     /**
     * Sets repositoryName
     *
-    * @param string|null $repositoryName 仓库名称
+    * @param string $repositoryName **参数解释**: 仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return $this
     */
@@ -286,9 +304,9 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
 
     /**
     * Gets format
-    *  仓库类型
+    *  **参数解释**: 制品类型。 **约束限制**: 不涉及。 **取值范围**: maven2。 **默认取值**: 无。
     *
-    * @return string|null
+    * @return string
     */
     public function getFormat()
     {
@@ -298,7 +316,7 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
     /**
     * Sets format
     *
-    * @param string|null $format 仓库类型
+    * @param string $format **参数解释**: 制品类型。 **约束限制**: 不涉及。 **取值范围**: maven2。 **默认取值**: 无。
     *
     * @return $this
     */
@@ -310,7 +328,7 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  仓库描述
+    *  **参数解释**: 仓库描述。 **约束限制**: 最大长度200。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return string|null
     */
@@ -322,7 +340,7 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 仓库描述
+    * @param string|null $description **参数解释**: 仓库描述。 **约束限制**: 最大长度200。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return $this
     */
@@ -334,7 +352,7 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
 
     /**
     * Gets release
-    *  release仓库名称
+    *  **参数解释**: release仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return string|null
     */
@@ -346,7 +364,7 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
     /**
     * Sets release
     *
-    * @param string|null $release release仓库名称
+    * @param string|null $release **参数解释**: release仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return $this
     */
@@ -358,7 +376,7 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
 
     /**
     * Gets snapshot
-    *  snapshot仓库名称
+    *  **参数解释**: snapshot仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return string|null
     */
@@ -370,7 +388,7 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
     /**
     * Sets snapshot
     *
-    * @param string|null $snapshot snapshot仓库名称
+    * @param string|null $snapshot **参数解释**: snapshot仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return $this
     */
@@ -382,7 +400,7 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
 
     /**
     * Gets includesPattern
-    *  路径
+    *  **参数解释**: 路径包含规则。 **约束限制**: 最大长度512。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return string|null
     */
@@ -394,7 +412,7 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
     /**
     * Sets includesPattern
     *
-    * @param string|null $includesPattern 路径
+    * @param string|null $includesPattern **参数解释**: 路径包含规则。 **约束限制**: 最大长度512。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return $this
     */
@@ -406,7 +424,7 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
 
     /**
     * Gets shareRight
-    *  共享权限级别
+    *  **参数解释**: 共享权限级别。 **约束限制**: 不涉及。 **取值范围**: PROJECT。 **默认取值**: 无。
     *
     * @return string|null
     */
@@ -418,7 +436,7 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
     /**
     * Sets shareRight
     *
-    * @param string|null $shareRight 共享权限级别
+    * @param string|null $shareRight **参数解释**: 共享权限级别。 **约束限制**: 不涉及。 **取值范围**: PROJECT。 **默认取值**: 无。
     *
     * @return $this
     */
@@ -430,7 +448,7 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  **参数解释**: 项目ID，可以从调用API处获取，也可以从控制台获取。获取方式请参考[获取项目ID](CloudArtifact_api_0015.xml)。 **约束限制**: 只能由英文字母、数字组成，且长度为32个字符。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return string|null
     */
@@ -442,7 +460,7 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID
+    * @param string|null $projectId **参数解释**: 项目ID，可以从调用API处获取，也可以从控制台获取。获取方式请参考[获取项目ID](CloudArtifact_api_0015.xml)。 **约束限制**: 只能由英文字母、数字组成，且长度为32个字符。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return $this
     */
@@ -454,9 +472,9 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  仓库类别，本地仓或聚合仓
+    *  **参数解释**: 仓库类型。 **约束限制**: 不涉及。 **取值范围**: hosted：本地仓库。 **默认取值**: 无。
     *
-    * @return string|null
+    * @return string
     */
     public function getType()
     {
@@ -466,7 +484,7 @@ class IDERepositoryDO implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 仓库类别，本地仓或聚合仓
+    * @param string $type **参数解释**: 仓库类型。 **约束限制**: 不涉及。 **取值范围**: hosted：本地仓库。 **默认取值**: 无。
     *
     * @return $this
     */

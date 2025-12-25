@@ -20,8 +20,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  **参数解释**： 标签名。 **约束限制**： 不涉及。 **取值范围**： 最大长度128个unicode字符。           **默认取值**： 不涉及。
-    * value  **参数解释**： 标签值。 **约束限制**： 不涉及。 **取值范围**： 最大长度255个unicode字符。           **默认取值**： 不涉及。
+    * key  **参数解释**： 标签名。 **约束限制**： 不涉及。 **取值范围**： 长度[1,128]个unicode字符。           **默认取值**： 不涉及。
+    * value  **参数解释**： 标签值。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,255]个unicode字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  **参数解释**： 标签名。 **约束限制**： 不涉及。 **取值范围**： 最大长度128个unicode字符。           **默认取值**： 不涉及。
-    * value  **参数解释**： 标签值。 **约束限制**： 不涉及。 **取值范围**： 最大长度255个unicode字符。           **默认取值**： 不涉及。
+    * key  **参数解释**： 标签名。 **约束限制**： 不涉及。 **取值范围**： 长度[1,128]个unicode字符。           **默认取值**： 不涉及。
+    * value  **参数解释**： 标签值。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,255]个unicode字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  **参数解释**： 标签名。 **约束限制**： 不涉及。 **取值范围**： 最大长度128个unicode字符。           **默认取值**： 不涉及。
-    * value  **参数解释**： 标签值。 **约束限制**： 不涉及。 **取值范围**： 最大长度255个unicode字符。           **默认取值**： 不涉及。
+    * key  **参数解释**： 标签名。 **约束限制**： 不涉及。 **取值范围**： 长度[1,128]个unicode字符。           **默认取值**： 不涉及。
+    * value  **参数解释**： 标签值。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,255]个unicode字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  **参数解释**： 标签名。 **约束限制**： 不涉及。 **取值范围**： 最大长度128个unicode字符。           **默认取值**： 不涉及。
-    * value  **参数解释**： 标签值。 **约束限制**： 不涉及。 **取值范围**： 最大长度255个unicode字符。           **默认取值**： 不涉及。
+    * key  **参数解释**： 标签名。 **约束限制**： 不涉及。 **取值范围**： 长度[1,128]个unicode字符。           **默认取值**： 不涉及。
+    * value  **参数解释**： 标签值。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,255]个unicode字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  **参数解释**： 标签名。 **约束限制**： 不涉及。 **取值范围**： 最大长度128个unicode字符。           **默认取值**： 不涉及。
-    * value  **参数解释**： 标签值。 **约束限制**： 不涉及。 **取值范围**： 最大长度255个unicode字符。           **默认取值**： 不涉及。
+    * key  **参数解释**： 标签名。 **约束限制**： 不涉及。 **取值范围**： 长度[1,128]个unicode字符。           **默认取值**： 不涉及。
+    * value  **参数解释**： 标签值。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,255]个unicode字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  **参数解释**： 标签名。 **约束限制**： 不涉及。 **取值范围**： 最大长度128个unicode字符。           **默认取值**： 不涉及。
+    *  **参数解释**： 标签名。 **约束限制**： 不涉及。 **取值范围**： 长度[1,128]个unicode字符。           **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -221,7 +221,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key **参数解释**： 标签名。 **约束限制**： 不涉及。 **取值范围**： 最大长度128个unicode字符。           **默认取值**： 不涉及。
+    * @param string $key **参数解释**： 标签名。 **约束限制**： 不涉及。 **取值范围**： 长度[1,128]个unicode字符。           **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -233,7 +233,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  **参数解释**： 标签值。 **约束限制**： 不涉及。 **取值范围**： 最大长度255个unicode字符。           **默认取值**： 不涉及。
+    *  **参数解释**： 标签值。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,255]个unicode字符。           **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -245,7 +245,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value **参数解释**： 标签值。 **约束限制**： 不涉及。 **取值范围**： 最大长度255个unicode字符。           **默认取值**： 不涉及。
+    * @param string $value **参数解释**： 标签值。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,255]个unicode字符。           **默认取值**： 不涉及。
     *
     * @return $this
     */

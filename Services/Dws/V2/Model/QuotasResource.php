@@ -20,7 +20,7 @@ class QuotasResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  **参数解释**： 项目资源类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 项目资源类型。 **取值范围**： - rds：节点类型 - cpu：cpu类型 - mem：内存类型 - diskNum：磁盘数量类型 - diskGB：磁盘大小类型
     * used  **参数解释**： 已使用的资源数量。 **取值范围**： 不涉及。
     * quota  **参数解释**： 项目资源配额。 **取值范围**： 不涉及。
     * unit  **参数解释**： 资源计量单位。 **取值范围**： 不涉及。
@@ -36,7 +36,7 @@ class QuotasResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  **参数解释**： 项目资源类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 项目资源类型。 **取值范围**： - rds：节点类型 - cpu：cpu类型 - mem：内存类型 - diskNum：磁盘数量类型 - diskGB：磁盘大小类型
     * used  **参数解释**： 已使用的资源数量。 **取值范围**： 不涉及。
     * quota  **参数解释**： 项目资源配额。 **取值范围**： 不涉及。
     * unit  **参数解释**： 资源计量单位。 **取值范围**： 不涉及。
@@ -73,7 +73,7 @@ class QuotasResource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  **参数解释**： 项目资源类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 项目资源类型。 **取值范围**： - rds：节点类型 - cpu：cpu类型 - mem：内存类型 - diskNum：磁盘数量类型 - diskGB：磁盘大小类型
     * used  **参数解释**： 已使用的资源数量。 **取值范围**： 不涉及。
     * quota  **参数解释**： 项目资源配额。 **取值范围**： 不涉及。
     * unit  **参数解释**： 资源计量单位。 **取值范围**： 不涉及。
@@ -89,7 +89,7 @@ class QuotasResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  **参数解释**： 项目资源类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 项目资源类型。 **取值范围**： - rds：节点类型 - cpu：cpu类型 - mem：内存类型 - diskNum：磁盘数量类型 - diskGB：磁盘大小类型
     * used  **参数解释**： 已使用的资源数量。 **取值范围**： 不涉及。
     * quota  **参数解释**： 项目资源配额。 **取值范围**： 不涉及。
     * unit  **参数解释**： 资源计量单位。 **取值范围**： 不涉及。
@@ -105,7 +105,7 @@ class QuotasResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  **参数解释**： 项目资源类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 项目资源类型。 **取值范围**： - rds：节点类型 - cpu：cpu类型 - mem：内存类型 - diskNum：磁盘数量类型 - diskGB：磁盘大小类型
     * used  **参数解释**： 已使用的资源数量。 **取值范围**： 不涉及。
     * quota  **参数解释**： 项目资源配额。 **取值范围**： 不涉及。
     * unit  **参数解释**： 资源计量单位。 **取值范围**： 不涉及。
@@ -219,7 +219,7 @@ class QuotasResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**： 项目资源类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 项目资源类型。 **取值范围**： - rds：节点类型 - cpu：cpu类型 - mem：内存类型 - diskNum：磁盘数量类型 - diskGB：磁盘大小类型
     *
     * @return string
     */
@@ -231,7 +231,7 @@ class QuotasResource implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type **参数解释**： 项目资源类型。 **取值范围**： 不涉及。
+    * @param string $type **参数解释**： 项目资源类型。 **取值范围**： - rds：节点类型 - cpu：cpu类型 - mem：内存类型 - diskNum：磁盘数量类型 - diskGB：磁盘大小类型
     *
     * @return $this
     */

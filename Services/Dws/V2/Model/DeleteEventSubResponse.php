@@ -23,9 +23,9 @@ class DeleteEventSubResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释**： 订阅ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 订阅名称。 **取值范围**： 不涉及。
-    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
-    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。
     * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
     * tag  **参数解释**： 事件标签。 **取值范围**： 不涉及。
     * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
@@ -33,7 +33,7 @@ class DeleteEventSubResponse implements ModelInterface, ArrayAccess
     * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     * notificationTarget  **参数解释**： 消息通知主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息通知主题名称。 **取值范围**： 不涉及。
-    * notificationTargetType  **参数解释**： 消息通知类型。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     * language  **参数解释**： 语言。 **取值范围**： 不涉及。
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
@@ -61,9 +61,9 @@ class DeleteEventSubResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释**： 订阅ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 订阅名称。 **取值范围**： 不涉及。
-    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
-    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。
     * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
     * tag  **参数解释**： 事件标签。 **取值范围**： 不涉及。
     * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
@@ -71,7 +71,7 @@ class DeleteEventSubResponse implements ModelInterface, ArrayAccess
     * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     * notificationTarget  **参数解释**： 消息通知主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息通知主题名称。 **取值范围**： 不涉及。
-    * notificationTargetType  **参数解释**： 消息通知类型。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     * language  **参数解释**： 语言。 **取值范围**： 不涉及。
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
@@ -120,9 +120,9 @@ class DeleteEventSubResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  **参数解释**： 订阅ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 订阅名称。 **取值范围**： 不涉及。
-    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
-    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。
     * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
     * tag  **参数解释**： 事件标签。 **取值范围**： 不涉及。
     * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
@@ -130,7 +130,7 @@ class DeleteEventSubResponse implements ModelInterface, ArrayAccess
     * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     * notificationTarget  **参数解释**： 消息通知主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息通知主题名称。 **取值范围**： 不涉及。
-    * notificationTargetType  **参数解释**： 消息通知类型。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     * language  **参数解释**： 语言。 **取值范围**： 不涉及。
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
@@ -158,9 +158,9 @@ class DeleteEventSubResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释**： 订阅ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 订阅名称。 **取值范围**： 不涉及。
-    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
-    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。
     * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
     * tag  **参数解释**： 事件标签。 **取值范围**： 不涉及。
     * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
@@ -168,7 +168,7 @@ class DeleteEventSubResponse implements ModelInterface, ArrayAccess
     * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     * notificationTarget  **参数解释**： 消息通知主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息通知主题名称。 **取值范围**： 不涉及。
-    * notificationTargetType  **参数解释**： 消息通知类型。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     * language  **参数解释**： 语言。 **取值范围**： 不涉及。
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
@@ -196,9 +196,9 @@ class DeleteEventSubResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释**： 订阅ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 订阅名称。 **取值范围**： 不涉及。
-    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
-    * category  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * category  **参数解释**： 事件类别。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。
     * severity  **参数解释**： 事件级别。 **取值范围**： 不涉及。
     * tag  **参数解释**： 事件标签。 **取值范围**： 不涉及。
     * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
@@ -206,7 +206,7 @@ class DeleteEventSubResponse implements ModelInterface, ArrayAccess
     * nameSpace  **参数解释**： 所属服务。 **取值范围**： 不涉及。
     * notificationTarget  **参数解释**： 消息通知主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息通知主题名称。 **取值范围**： 不涉及。
-    * notificationTargetType  **参数解释**： 消息通知类型。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     * language  **参数解释**： 语言。 **取值范围**： 不涉及。
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
@@ -377,7 +377,7 @@ class DeleteEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceType
-    *  **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     *
     * @return string|null
     */
@@ -389,7 +389,7 @@ class DeleteEventSubResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sourceType
     *
-    * @param string|null $sourceType **参数解释**： 事件源类型。 **取值范围**： 不涉及。
+    * @param string|null $sourceType **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     *
     * @return $this
     */
@@ -425,7 +425,7 @@ class DeleteEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    *  **参数解释**： 事件类别。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。
     *
     * @return string|null
     */
@@ -437,7 +437,7 @@ class DeleteEventSubResponse implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string|null $category **参数解释**： 事件类别。 **取值范围**： 不涉及。
+    * @param string|null $category **参数解释**： 事件类别。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。
     *
     * @return $this
     */
@@ -617,7 +617,7 @@ class DeleteEventSubResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationTargetType
-    *  **参数解释**： 消息通知类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     *
     * @return string|null
     */
@@ -629,7 +629,7 @@ class DeleteEventSubResponse implements ModelInterface, ArrayAccess
     /**
     * Sets notificationTargetType
     *
-    * @param string|null $notificationTargetType **参数解释**： 消息通知类型。 **取值范围**： 不涉及。
+    * @param string|null $notificationTargetType **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     *
     * @return $this
     */

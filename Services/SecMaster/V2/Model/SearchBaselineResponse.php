@@ -36,7 +36,7 @@ class SearchBaselineResponse implements ModelInterface, ArrayAccess
             'size' => 'int',
             'page' => 'int',
             'success' => 'bool',
-            'data' => 'string[]'
+            'data' => 'object[]'
     ];
 
     /**
@@ -52,9 +52,9 @@ class SearchBaselineResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'code' => null,
-        'total' => 'int32',
-        'size' => 'int32',
-        'page' => 'int32',
+        'total' => null,
+        'size' => null,
+        'page' => null,
         'success' => null,
         'data' => null
     ];
@@ -376,7 +376,7 @@ class SearchBaselineResponse implements ModelInterface, ArrayAccess
     * Gets data
     *  查询结果列表
     *
-    * @return string[]|null
+    * @return object[]|null
     */
     public function getData()
     {
@@ -386,7 +386,7 @@ class SearchBaselineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param string[]|null $data 查询结果列表
+    * @param object[]|null $data 查询结果列表
     *
     * @return $this
     */

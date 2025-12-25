@@ -26,7 +26,7 @@ class AddCicdConfigurationResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'cicdId' => 'object'
+            'cicdId' => 'string'
     ];
 
     /**
@@ -159,6 +159,12 @@ class AddCicdConfigurationResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['cicdId']) && (mb_strlen($this->container['cicdId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'cicdId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['cicdId']) && (mb_strlen($this->container['cicdId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'cicdId', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -177,7 +183,7 @@ class AddCicdConfigurationResponse implements ModelInterface, ArrayAccess
     * Gets cicdId
     *  **参数解释**： cicd标识 **取值范围**： 字符长度1-128位
     *
-    * @return object|null
+    * @return string|null
     */
     public function getCicdId()
     {
@@ -187,7 +193,7 @@ class AddCicdConfigurationResponse implements ModelInterface, ArrayAccess
     /**
     * Sets cicdId
     *
-    * @param object|null $cicdId **参数解释**： cicd标识 **取值范围**： 字符长度1-128位
+    * @param string|null $cicdId **参数解释**： cicd标识 **取值范围**： 字符长度1-128位
     *
     * @return $this
     */

@@ -20,14 +20,14 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * operateType  操作类型，包含如下几种： - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
-    * remark  备注
-    * selectType  选择全部漏洞类型 - all_vul : 选择全部漏洞 - all_host : 选择全部主机漏洞
-    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    * dataList  漏洞列表
-    * hostDataList  主机维度漏洞列表
-    * backupInfoId  本次漏洞处理的备份信息id，若不传该参数，则不进行备份
-    * customBackupHosts  自定义备份主机使用的存储库及备份名称；不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称
+    * operateType  **参数解释**: 对漏洞进行的处置操作类型 **约束限制**: 不涉及 **取值范围**: - ignore：忽略 - not_ignore：取消忽略 - immediate_repair：修复 - manual_repair：人工修复 - verify：验证 - add_to_whitelist：加入白名单  **默认取值**: 不涉及
+    * remark  **参数解释**: 本次处置操作的备注信息 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
+    * selectType  **参数解释**: 处置全部漏洞的类型 **约束限制**: 只有需要对全部漏洞进行处置时需要该参数 **取值范围**: - all_vul：按照指定漏洞类型处置全部漏洞 - all_host：处置全部主机的漏洞  **默认取值**: 不涉及
+    * type  **参数解释**: 漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：漏洞类型-linux漏洞 - windows_vul：漏洞类型-windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞  **默认取值**: linux_vul
+    * dataList  **参数解释**: 通过漏洞维度指定需要处置的漏洞信息 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值500 **默认取值**: 不涉及
+    * hostDataList  **参数解释**: 通过主机维度指定需要处置的漏洞信息 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值500 **默认取值**: 不涉及
+    * backupInfoId  **参数解释**: 本次漏洞处置对应的备份信息id，若不传该参数，则不进行备份 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * customBackupHosts  **参数解释**: 自定义备份主机使用的存储库及备份名称列表。不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称 **约束限制**: 只有backup_info_id有值时该参数才会生效 **取值范围**: 最小值1，最大值50 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * operateType  操作类型，包含如下几种： - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
-    * remark  备注
-    * selectType  选择全部漏洞类型 - all_vul : 选择全部漏洞 - all_host : 选择全部主机漏洞
-    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    * dataList  漏洞列表
-    * hostDataList  主机维度漏洞列表
-    * backupInfoId  本次漏洞处理的备份信息id，若不传该参数，则不进行备份
-    * customBackupHosts  自定义备份主机使用的存储库及备份名称；不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称
+    * operateType  **参数解释**: 对漏洞进行的处置操作类型 **约束限制**: 不涉及 **取值范围**: - ignore：忽略 - not_ignore：取消忽略 - immediate_repair：修复 - manual_repair：人工修复 - verify：验证 - add_to_whitelist：加入白名单  **默认取值**: 不涉及
+    * remark  **参数解释**: 本次处置操作的备注信息 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
+    * selectType  **参数解释**: 处置全部漏洞的类型 **约束限制**: 只有需要对全部漏洞进行处置时需要该参数 **取值范围**: - all_vul：按照指定漏洞类型处置全部漏洞 - all_host：处置全部主机的漏洞  **默认取值**: 不涉及
+    * type  **参数解释**: 漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：漏洞类型-linux漏洞 - windows_vul：漏洞类型-windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞  **默认取值**: linux_vul
+    * dataList  **参数解释**: 通过漏洞维度指定需要处置的漏洞信息 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值500 **默认取值**: 不涉及
+    * hostDataList  **参数解释**: 通过主机维度指定需要处置的漏洞信息 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值500 **默认取值**: 不涉及
+    * backupInfoId  **参数解释**: 本次漏洞处置对应的备份信息id，若不传该参数，则不进行备份 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * customBackupHosts  **参数解释**: 自定义备份主机使用的存储库及备份名称列表。不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称 **约束限制**: 只有backup_info_id有值时该参数才会生效 **取值范围**: 最小值1，最大值50 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * operateType  操作类型，包含如下几种： - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
-    * remark  备注
-    * selectType  选择全部漏洞类型 - all_vul : 选择全部漏洞 - all_host : 选择全部主机漏洞
-    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    * dataList  漏洞列表
-    * hostDataList  主机维度漏洞列表
-    * backupInfoId  本次漏洞处理的备份信息id，若不传该参数，则不进行备份
-    * customBackupHosts  自定义备份主机使用的存储库及备份名称；不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称
+    * operateType  **参数解释**: 对漏洞进行的处置操作类型 **约束限制**: 不涉及 **取值范围**: - ignore：忽略 - not_ignore：取消忽略 - immediate_repair：修复 - manual_repair：人工修复 - verify：验证 - add_to_whitelist：加入白名单  **默认取值**: 不涉及
+    * remark  **参数解释**: 本次处置操作的备注信息 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
+    * selectType  **参数解释**: 处置全部漏洞的类型 **约束限制**: 只有需要对全部漏洞进行处置时需要该参数 **取值范围**: - all_vul：按照指定漏洞类型处置全部漏洞 - all_host：处置全部主机的漏洞  **默认取值**: 不涉及
+    * type  **参数解释**: 漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：漏洞类型-linux漏洞 - windows_vul：漏洞类型-windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞  **默认取值**: linux_vul
+    * dataList  **参数解释**: 通过漏洞维度指定需要处置的漏洞信息 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值500 **默认取值**: 不涉及
+    * hostDataList  **参数解释**: 通过主机维度指定需要处置的漏洞信息 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值500 **默认取值**: 不涉及
+    * backupInfoId  **参数解释**: 本次漏洞处置对应的备份信息id，若不传该参数，则不进行备份 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * customBackupHosts  **参数解释**: 自定义备份主机使用的存储库及备份名称列表。不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称 **约束限制**: 只有backup_info_id有值时该参数才会生效 **取值范围**: 最小值1，最大值50 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * operateType  操作类型，包含如下几种： - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
-    * remark  备注
-    * selectType  选择全部漏洞类型 - all_vul : 选择全部漏洞 - all_host : 选择全部主机漏洞
-    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    * dataList  漏洞列表
-    * hostDataList  主机维度漏洞列表
-    * backupInfoId  本次漏洞处理的备份信息id，若不传该参数，则不进行备份
-    * customBackupHosts  自定义备份主机使用的存储库及备份名称；不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称
+    * operateType  **参数解释**: 对漏洞进行的处置操作类型 **约束限制**: 不涉及 **取值范围**: - ignore：忽略 - not_ignore：取消忽略 - immediate_repair：修复 - manual_repair：人工修复 - verify：验证 - add_to_whitelist：加入白名单  **默认取值**: 不涉及
+    * remark  **参数解释**: 本次处置操作的备注信息 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
+    * selectType  **参数解释**: 处置全部漏洞的类型 **约束限制**: 只有需要对全部漏洞进行处置时需要该参数 **取值范围**: - all_vul：按照指定漏洞类型处置全部漏洞 - all_host：处置全部主机的漏洞  **默认取值**: 不涉及
+    * type  **参数解释**: 漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：漏洞类型-linux漏洞 - windows_vul：漏洞类型-windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞  **默认取值**: linux_vul
+    * dataList  **参数解释**: 通过漏洞维度指定需要处置的漏洞信息 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值500 **默认取值**: 不涉及
+    * hostDataList  **参数解释**: 通过主机维度指定需要处置的漏洞信息 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值500 **默认取值**: 不涉及
+    * backupInfoId  **参数解释**: 本次漏洞处置对应的备份信息id，若不传该参数，则不进行备份 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * customBackupHosts  **参数解释**: 自定义备份主机使用的存储库及备份名称列表。不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称 **约束限制**: 只有backup_info_id有值时该参数才会生效 **取值范围**: 最小值1，最大值50 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * operateType  操作类型，包含如下几种： - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
-    * remark  备注
-    * selectType  选择全部漏洞类型 - all_vul : 选择全部漏洞 - all_host : 选择全部主机漏洞
-    * type  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
-    * dataList  漏洞列表
-    * hostDataList  主机维度漏洞列表
-    * backupInfoId  本次漏洞处理的备份信息id，若不传该参数，则不进行备份
-    * customBackupHosts  自定义备份主机使用的存储库及备份名称；不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称
+    * operateType  **参数解释**: 对漏洞进行的处置操作类型 **约束限制**: 不涉及 **取值范围**: - ignore：忽略 - not_ignore：取消忽略 - immediate_repair：修复 - manual_repair：人工修复 - verify：验证 - add_to_whitelist：加入白名单  **默认取值**: 不涉及
+    * remark  **参数解释**: 本次处置操作的备注信息 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
+    * selectType  **参数解释**: 处置全部漏洞的类型 **约束限制**: 只有需要对全部漏洞进行处置时需要该参数 **取值范围**: - all_vul：按照指定漏洞类型处置全部漏洞 - all_host：处置全部主机的漏洞  **默认取值**: 不涉及
+    * type  **参数解释**: 漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：漏洞类型-linux漏洞 - windows_vul：漏洞类型-windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞  **默认取值**: linux_vul
+    * dataList  **参数解释**: 通过漏洞维度指定需要处置的漏洞信息 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值500 **默认取值**: 不涉及
+    * hostDataList  **参数解释**: 通过主机维度指定需要处置的漏洞信息 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值500 **默认取值**: 不涉及
+    * backupInfoId  **参数解释**: 本次漏洞处置对应的备份信息id，若不传该参数，则不进行备份 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * customBackupHosts  **参数解释**: 自定义备份主机使用的存储库及备份名称列表。不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称 **约束限制**: 只有backup_info_id有值时该参数才会生效 **取值范围**: 最小值1，最大值50 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -284,7 +284,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets operateType
-    *  操作类型，包含如下几种： - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
+    *  **参数解释**: 对漏洞进行的处置操作类型 **约束限制**: 不涉及 **取值范围**: - ignore：忽略 - not_ignore：取消忽略 - immediate_repair：修复 - manual_repair：人工修复 - verify：验证 - add_to_whitelist：加入白名单  **默认取值**: 不涉及
     *
     * @return string
     */
@@ -296,7 +296,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets operateType
     *
-    * @param string $operateType 操作类型，包含如下几种： - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
+    * @param string $operateType **参数解释**: 对漏洞进行的处置操作类型 **约束限制**: 不涉及 **取值范围**: - ignore：忽略 - not_ignore：取消忽略 - immediate_repair：修复 - manual_repair：人工修复 - verify：验证 - add_to_whitelist：加入白名单  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -308,7 +308,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets remark
-    *  备注
+    *  **参数解释**: 本次处置操作的备注信息 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -320,7 +320,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets remark
     *
-    * @param string|null $remark 备注
+    * @param string|null $remark **参数解释**: 本次处置操作的备注信息 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets selectType
-    *  选择全部漏洞类型 - all_vul : 选择全部漏洞 - all_host : 选择全部主机漏洞
+    *  **参数解释**: 处置全部漏洞的类型 **约束限制**: 只有需要对全部漏洞进行处置时需要该参数 **取值范围**: - all_vul：按照指定漏洞类型处置全部漏洞 - all_host：处置全部主机的漏洞  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -344,7 +344,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets selectType
     *
-    * @param string|null $selectType 选择全部漏洞类型 - all_vul : 选择全部漏洞 - all_host : 选择全部主机漏洞
+    * @param string|null $selectType **参数解释**: 处置全部漏洞的类型 **约束限制**: 只有需要对全部漏洞进行处置时需要该参数 **取值范围**: - all_vul：按照指定漏洞类型处置全部漏洞 - all_host：处置全部主机的漏洞  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -356,7 +356,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
+    *  **参数解释**: 漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：漏洞类型-linux漏洞 - windows_vul：漏洞类型-windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞  **默认取值**: linux_vul
     *
     * @return string|null
     */
@@ -368,7 +368,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 漏洞类型，默认为linux_vul，包括如下：   - linux_vul : 漏洞类型-linux漏洞   - windows_vul : 漏洞类型-windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
+    * @param string|null $type **参数解释**: 漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：漏洞类型-linux漏洞 - windows_vul：漏洞类型-windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞  **默认取值**: linux_vul
     *
     * @return $this
     */
@@ -380,7 +380,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  漏洞列表
+    *  **参数解释**: 通过漏洞维度指定需要处置的漏洞信息 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值500 **默认取值**: 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\VulOperateInfo[]|null
     */
@@ -392,7 +392,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\VulOperateInfo[]|null $dataList 漏洞列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\VulOperateInfo[]|null $dataList **参数解释**: 通过漏洞维度指定需要处置的漏洞信息 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值500 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -404,7 +404,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostDataList
-    *  主机维度漏洞列表
+    *  **参数解释**: 通过主机维度指定需要处置的漏洞信息 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值500 **默认取值**: 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\HostVulOperateInfo[]|null
     */
@@ -416,7 +416,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostDataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\HostVulOperateInfo[]|null $hostDataList 主机维度漏洞列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\HostVulOperateInfo[]|null $hostDataList **参数解释**: 通过主机维度指定需要处置的漏洞信息 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值500 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -428,7 +428,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupInfoId
-    *  本次漏洞处理的备份信息id，若不传该参数，则不进行备份
+    *  **参数解释**: 本次漏洞处置对应的备份信息id，若不传该参数，则不进行备份 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -440,7 +440,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets backupInfoId
     *
-    * @param string|null $backupInfoId 本次漏洞处理的备份信息id，若不传该参数，则不进行备份
+    * @param string|null $backupInfoId **参数解释**: 本次漏洞处置对应的备份信息id，若不传该参数，则不进行备份 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -452,7 +452,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets customBackupHosts
-    *  自定义备份主机使用的存储库及备份名称；不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称
+    *  **参数解释**: 自定义备份主机使用的存储库及备份名称列表。不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称 **约束限制**: 只有backup_info_id有值时该参数才会生效 **取值范围**: 最小值1，最大值50 **默认取值**: 不涉及
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\ChangeVulStatusRequestInfoCustomBackupHosts[]|null
     */
@@ -464,7 +464,7 @@ class ChangeVulStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets customBackupHosts
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\ChangeVulStatusRequestInfoCustomBackupHosts[]|null $customBackupHosts 自定义备份主机使用的存储库及备份名称；不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\ChangeVulStatusRequestInfoCustomBackupHosts[]|null $customBackupHosts **参数解释**: 自定义备份主机使用的存储库及备份名称列表。不在该列表中的主机备份时系统会自动选取剩余空间最大的存储库，并自动生成备份名称 **约束限制**: 只有backup_info_id有值时该参数才会生效 **取值范围**: 最小值1，最大值50 **默认取值**: 不涉及
     *
     * @return $this
     */

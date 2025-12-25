@@ -20,8 +20,8 @@ class AdditionalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceId  **参数解释**： 该条告警记录对应的资源ID；如：22d98f6c-16d2-4c2d-b424-50e79d82838f。 **取值范围**： 字符串长度最大为128。
-    * resourceName  **参数解释**： 该条告警记录对应的资源名称；如：ECS-Test01。 **取值范围**： 字符串长度最大为128。
+    * resourceId  **参数解释**： 该条告警记录对应的资源ID；如：22d98f6c-16d2-4c2d-b424-50e79d82838f。 **取值范围**： 长度为[0,128]个字符。
+    * resourceName  **参数解释**： 该条告警记录对应的资源名称；如：ECS-Test01。 **取值范围**： 长度为[0,128]个字符。
     * eventId  **参数解释**： 该条告警记录对应的事件监控ID，资源所产生的事件；如：ev16031292300990kKN8p17J。 **取值范围**： 字符串长度为24。
     *
     * @var string[]
@@ -34,8 +34,8 @@ class AdditionalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceId  **参数解释**： 该条告警记录对应的资源ID；如：22d98f6c-16d2-4c2d-b424-50e79d82838f。 **取值范围**： 字符串长度最大为128。
-    * resourceName  **参数解释**： 该条告警记录对应的资源名称；如：ECS-Test01。 **取值范围**： 字符串长度最大为128。
+    * resourceId  **参数解释**： 该条告警记录对应的资源ID；如：22d98f6c-16d2-4c2d-b424-50e79d82838f。 **取值范围**： 长度为[0,128]个字符。
+    * resourceName  **参数解释**： 该条告警记录对应的资源名称；如：ECS-Test01。 **取值范围**： 长度为[0,128]个字符。
     * eventId  **参数解释**： 该条告警记录对应的事件监控ID，资源所产生的事件；如：ev16031292300990kKN8p17J。 **取值范围**： 字符串长度为24。
     *
     * @var string[]
@@ -69,8 +69,8 @@ class AdditionalInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceId  **参数解释**： 该条告警记录对应的资源ID；如：22d98f6c-16d2-4c2d-b424-50e79d82838f。 **取值范围**： 字符串长度最大为128。
-    * resourceName  **参数解释**： 该条告警记录对应的资源名称；如：ECS-Test01。 **取值范围**： 字符串长度最大为128。
+    * resourceId  **参数解释**： 该条告警记录对应的资源ID；如：22d98f6c-16d2-4c2d-b424-50e79d82838f。 **取值范围**： 长度为[0,128]个字符。
+    * resourceName  **参数解释**： 该条告警记录对应的资源名称；如：ECS-Test01。 **取值范围**： 长度为[0,128]个字符。
     * eventId  **参数解释**： 该条告警记录对应的事件监控ID，资源所产生的事件；如：ev16031292300990kKN8p17J。 **取值范围**： 字符串长度为24。
     *
     * @var string[]
@@ -83,8 +83,8 @@ class AdditionalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceId  **参数解释**： 该条告警记录对应的资源ID；如：22d98f6c-16d2-4c2d-b424-50e79d82838f。 **取值范围**： 字符串长度最大为128。
-    * resourceName  **参数解释**： 该条告警记录对应的资源名称；如：ECS-Test01。 **取值范围**： 字符串长度最大为128。
+    * resourceId  **参数解释**： 该条告警记录对应的资源ID；如：22d98f6c-16d2-4c2d-b424-50e79d82838f。 **取值范围**： 长度为[0,128]个字符。
+    * resourceName  **参数解释**： 该条告警记录对应的资源名称；如：ECS-Test01。 **取值范围**： 长度为[0,128]个字符。
     * eventId  **参数解释**： 该条告警记录对应的事件监控ID，资源所产生的事件；如：ev16031292300990kKN8p17J。 **取值范围**： 字符串长度为24。
     *
     * @var string[]
@@ -97,8 +97,8 @@ class AdditionalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceId  **参数解释**： 该条告警记录对应的资源ID；如：22d98f6c-16d2-4c2d-b424-50e79d82838f。 **取值范围**： 字符串长度最大为128。
-    * resourceName  **参数解释**： 该条告警记录对应的资源名称；如：ECS-Test01。 **取值范围**： 字符串长度最大为128。
+    * resourceId  **参数解释**： 该条告警记录对应的资源ID；如：22d98f6c-16d2-4c2d-b424-50e79d82838f。 **取值范围**： 长度为[0,128]个字符。
+    * resourceName  **参数解释**： 该条告警记录对应的资源名称；如：ECS-Test01。 **取值范围**： 长度为[0,128]个字符。
     * eventId  **参数解释**： 该条告警记录对应的事件监控ID，资源所产生的事件；如：ev16031292300990kKN8p17J。 **取值范围**： 字符串长度为24。
     *
     * @var string[]
@@ -214,7 +214,7 @@ class AdditionalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  **参数解释**： 该条告警记录对应的资源ID；如：22d98f6c-16d2-4c2d-b424-50e79d82838f。 **取值范围**： 字符串长度最大为128。
+    *  **参数解释**： 该条告警记录对应的资源ID；如：22d98f6c-16d2-4c2d-b424-50e79d82838f。 **取值范围**： 长度为[0,128]个字符。
     *
     * @return string|null
     */
@@ -226,7 +226,7 @@ class AdditionalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId **参数解释**： 该条告警记录对应的资源ID；如：22d98f6c-16d2-4c2d-b424-50e79d82838f。 **取值范围**： 字符串长度最大为128。
+    * @param string|null $resourceId **参数解释**： 该条告警记录对应的资源ID；如：22d98f6c-16d2-4c2d-b424-50e79d82838f。 **取值范围**： 长度为[0,128]个字符。
     *
     * @return $this
     */
@@ -238,7 +238,7 @@ class AdditionalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceName
-    *  **参数解释**： 该条告警记录对应的资源名称；如：ECS-Test01。 **取值范围**： 字符串长度最大为128。
+    *  **参数解释**： 该条告警记录对应的资源名称；如：ECS-Test01。 **取值范围**： 长度为[0,128]个字符。
     *
     * @return string|null
     */
@@ -250,7 +250,7 @@ class AdditionalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resourceName
     *
-    * @param string|null $resourceName **参数解释**： 该条告警记录对应的资源名称；如：ECS-Test01。 **取值范围**： 字符串长度最大为128。
+    * @param string|null $resourceName **参数解释**： 该条告警记录对应的资源名称；如：ECS-Test01。 **取值范围**： 长度为[0,128]个字符。
     *
     * @return $this
     */

@@ -21,9 +21,9 @@ class ListArtifactoryComponentResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  结果状态
-    * traceId  请求id
-    * result  请求返回结果，接口不同，返回不同
+    * status  **参数解释**： 请求成功或失败状态。 **取值范围**： - success：请求成功。 - error：请求失败。
+    * traceId  **参数解释**： 请求ID，当前请求唯一标识。 **取值范围**： 数字及中划线（-）组成的字符串。
+    * result  **参数解释**:  文件详情。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ListArtifactoryComponentResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  结果状态
-    * traceId  请求id
-    * result  请求返回结果，接口不同，返回不同
+    * status  **参数解释**： 请求成功或失败状态。 **取值范围**： - success：请求成功。 - error：请求失败。
+    * traceId  **参数解释**： 请求ID，当前请求唯一标识。 **取值范围**： 数字及中划线（-）组成的字符串。
+    * result  **参数解释**:  文件详情。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ListArtifactoryComponentResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  结果状态
-    * traceId  请求id
-    * result  请求返回结果，接口不同，返回不同
+    * status  **参数解释**： 请求成功或失败状态。 **取值范围**： - success：请求成功。 - error：请求失败。
+    * traceId  **参数解释**： 请求ID，当前请求唯一标识。 **取值范围**： 数字及中划线（-）组成的字符串。
+    * result  **参数解释**:  文件详情。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListArtifactoryComponentResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  结果状态
-    * traceId  请求id
-    * result  请求返回结果，接口不同，返回不同
+    * status  **参数解释**： 请求成功或失败状态。 **取值范围**： - success：请求成功。 - error：请求失败。
+    * traceId  **参数解释**： 请求ID，当前请求唯一标识。 **取值范围**： 数字及中划线（-）组成的字符串。
+    * result  **参数解释**:  文件详情。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ListArtifactoryComponentResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  结果状态
-    * traceId  请求id
-    * result  请求返回结果，接口不同，返回不同
+    * status  **参数解释**： 请求成功或失败状态。 **取值范围**： - success：请求成功。 - error：请求失败。
+    * traceId  **参数解释**： 请求ID，当前请求唯一标识。 **取值范围**： 数字及中划线（-）组成的字符串。
+    * result  **参数解释**:  文件详情。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -150,7 +150,22 @@ class ListArtifactoryComponentResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_SUCCESS = 'success';
+    const STATUS_ERROR = 'error';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_SUCCESS,
+            self::STATUS_ERROR,
+        ];
+    }
 
 
     /**
@@ -181,6 +196,14 @@ class ListArtifactoryComponentResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -197,7 +220,7 @@ class ListArtifactoryComponentResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  结果状态
+    *  **参数解释**： 请求成功或失败状态。 **取值范围**： - success：请求成功。 - error：请求失败。
     *
     * @return string|null
     */
@@ -209,7 +232,7 @@ class ListArtifactoryComponentResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 结果状态
+    * @param string|null $status **参数解释**： 请求成功或失败状态。 **取值范围**： - success：请求成功。 - error：请求失败。
     *
     * @return $this
     */
@@ -221,7 +244,7 @@ class ListArtifactoryComponentResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets traceId
-    *  请求id
+    *  **参数解释**： 请求ID，当前请求唯一标识。 **取值范围**： 数字及中划线（-）组成的字符串。
     *
     * @return string|null
     */
@@ -233,7 +256,7 @@ class ListArtifactoryComponentResponse implements ModelInterface, ArrayAccess
     /**
     * Sets traceId
     *
-    * @param string|null $traceId 请求id
+    * @param string|null $traceId **参数解释**： 请求ID，当前请求唯一标识。 **取值范围**： 数字及中划线（-）组成的字符串。
     *
     * @return $this
     */
@@ -245,7 +268,7 @@ class ListArtifactoryComponentResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  请求返回结果，接口不同，返回不同
+    *  **参数解释**:  文件详情。 **取值范围**: 不涉及。
     *
     * @return object|null
     */
@@ -257,7 +280,7 @@ class ListArtifactoryComponentResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param object|null $result 请求返回结果，接口不同，返回不同
+    * @param object|null $result **参数解释**:  文件详情。 **取值范围**: 不涉及。
     *
     * @return $this
     */

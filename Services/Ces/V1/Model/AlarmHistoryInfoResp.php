@@ -29,13 +29,13 @@ class AlarmHistoryInfoResp implements ModelInterface, ArrayAccess
     * alarmType  **参数解释**： 告警规则类型 **取值范围**： 枚举值: - ALL_INSTANCE：全部资源指标告警 - RESOURCE_GROUP：资源分组指标告警 - MULTI_INSTANCE：指定资源指标告警 - EVENT.SYS：系统事件告警 - EVENT.CUSTOM：自定义事件告警 - DNSHealthCheck：健康检查告警
     * alarmEnabled  **参数解释**： 告警规则是否被启用 **取值范围**： 值为true或者false - true：开启 - false：关闭
     * alarmActionEnabled  **参数解释**： 是否发送通知 **取值范围**： 值为true或者false - true：发送通知 - false：不发送通知
-    * alarmActions  **参数解释**： 告警触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值：notification：通知。autoscaling：弹性伸缩。notificationList：告警状态发生变化时，被通知对象的列表。
-    * okActions  **参数解释**： 告警恢复触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：notification：通知。notificationList：告警状态发生变化时，被通知对象的列表。
-    * insufficientdataActions  **参数解释**： 数据不足触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：数据不足触发告警通知类型，取值为notification。notificationList：数据不足触发告警通知时，被通知对象的ID列表。
+    * alarmActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
+    * okActions  **参数解释**： 告警恢复时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
+    * insufficientdataActions  **参数解释**： 数据不足时触发告警时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
     * updateTime  **参数解释**： 告警状态变更的时间，UNIX时间戳，单位毫秒，如：1603131199000 **取值范围**： 不涉及
     * enterpriseProjectId  **参数解释**： 企业项目ID **取值范围**： 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID），all_granted_eps（代表所有企业项目ID）
     * triggerTime  **参数解释**： 计算出该条告警历史的时间，UNIX时间戳，单位毫秒，如：1603131199469 **取值范围**： 不涉及
-    * alarmStatus  **参数解释**： 告警历史的状态 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效
+    * alarmStatus  **参数解释**： 告警规则的状态 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效
     * datapoints  **参数解释**： 计算出该条告警历史的资源监控数据的一组数据上报时间和监控数值
     * additionalInfo  additionalInfo
     * notificationManner  **参数解释** 通知方式 **取值范围**： 枚举值： - NOTIFICATION_POLICY：通知策略 - NOTIFICATION_GROUP：通知组 - TOPIC_SUBSCRIPTION：主题订阅
@@ -75,13 +75,13 @@ class AlarmHistoryInfoResp implements ModelInterface, ArrayAccess
     * alarmType  **参数解释**： 告警规则类型 **取值范围**： 枚举值: - ALL_INSTANCE：全部资源指标告警 - RESOURCE_GROUP：资源分组指标告警 - MULTI_INSTANCE：指定资源指标告警 - EVENT.SYS：系统事件告警 - EVENT.CUSTOM：自定义事件告警 - DNSHealthCheck：健康检查告警
     * alarmEnabled  **参数解释**： 告警规则是否被启用 **取值范围**： 值为true或者false - true：开启 - false：关闭
     * alarmActionEnabled  **参数解释**： 是否发送通知 **取值范围**： 值为true或者false - true：发送通知 - false：不发送通知
-    * alarmActions  **参数解释**： 告警触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值：notification：通知。autoscaling：弹性伸缩。notificationList：告警状态发生变化时，被通知对象的列表。
-    * okActions  **参数解释**： 告警恢复触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：notification：通知。notificationList：告警状态发生变化时，被通知对象的列表。
-    * insufficientdataActions  **参数解释**： 数据不足触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：数据不足触发告警通知类型，取值为notification。notificationList：数据不足触发告警通知时，被通知对象的ID列表。
+    * alarmActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
+    * okActions  **参数解释**： 告警恢复时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
+    * insufficientdataActions  **参数解释**： 数据不足时触发告警时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
     * updateTime  **参数解释**： 告警状态变更的时间，UNIX时间戳，单位毫秒，如：1603131199000 **取值范围**： 不涉及
     * enterpriseProjectId  **参数解释**： 企业项目ID **取值范围**： 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID），all_granted_eps（代表所有企业项目ID）
     * triggerTime  **参数解释**： 计算出该条告警历史的时间，UNIX时间戳，单位毫秒，如：1603131199469 **取值范围**： 不涉及
-    * alarmStatus  **参数解释**： 告警历史的状态 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效
+    * alarmStatus  **参数解释**： 告警规则的状态 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效
     * datapoints  **参数解释**： 计算出该条告警历史的资源监控数据的一组数据上报时间和监控数值
     * additionalInfo  additionalInfo
     * notificationManner  **参数解释** 通知方式 **取值范围**： 枚举值： - NOTIFICATION_POLICY：通知策略 - NOTIFICATION_GROUP：通知组 - TOPIC_SUBSCRIPTION：主题订阅
@@ -142,13 +142,13 @@ class AlarmHistoryInfoResp implements ModelInterface, ArrayAccess
     * alarmType  **参数解释**： 告警规则类型 **取值范围**： 枚举值: - ALL_INSTANCE：全部资源指标告警 - RESOURCE_GROUP：资源分组指标告警 - MULTI_INSTANCE：指定资源指标告警 - EVENT.SYS：系统事件告警 - EVENT.CUSTOM：自定义事件告警 - DNSHealthCheck：健康检查告警
     * alarmEnabled  **参数解释**： 告警规则是否被启用 **取值范围**： 值为true或者false - true：开启 - false：关闭
     * alarmActionEnabled  **参数解释**： 是否发送通知 **取值范围**： 值为true或者false - true：发送通知 - false：不发送通知
-    * alarmActions  **参数解释**： 告警触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值：notification：通知。autoscaling：弹性伸缩。notificationList：告警状态发生变化时，被通知对象的列表。
-    * okActions  **参数解释**： 告警恢复触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：notification：通知。notificationList：告警状态发生变化时，被通知对象的列表。
-    * insufficientdataActions  **参数解释**： 数据不足触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：数据不足触发告警通知类型，取值为notification。notificationList：数据不足触发告警通知时，被通知对象的ID列表。
+    * alarmActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
+    * okActions  **参数解释**： 告警恢复时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
+    * insufficientdataActions  **参数解释**： 数据不足时触发告警时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
     * updateTime  **参数解释**： 告警状态变更的时间，UNIX时间戳，单位毫秒，如：1603131199000 **取值范围**： 不涉及
     * enterpriseProjectId  **参数解释**： 企业项目ID **取值范围**： 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID），all_granted_eps（代表所有企业项目ID）
     * triggerTime  **参数解释**： 计算出该条告警历史的时间，UNIX时间戳，单位毫秒，如：1603131199469 **取值范围**： 不涉及
-    * alarmStatus  **参数解释**： 告警历史的状态 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效
+    * alarmStatus  **参数解释**： 告警规则的状态 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效
     * datapoints  **参数解释**： 计算出该条告警历史的资源监控数据的一组数据上报时间和监控数值
     * additionalInfo  additionalInfo
     * notificationManner  **参数解释** 通知方式 **取值范围**： 枚举值： - NOTIFICATION_POLICY：通知策略 - NOTIFICATION_GROUP：通知组 - TOPIC_SUBSCRIPTION：主题订阅
@@ -188,13 +188,13 @@ class AlarmHistoryInfoResp implements ModelInterface, ArrayAccess
     * alarmType  **参数解释**： 告警规则类型 **取值范围**： 枚举值: - ALL_INSTANCE：全部资源指标告警 - RESOURCE_GROUP：资源分组指标告警 - MULTI_INSTANCE：指定资源指标告警 - EVENT.SYS：系统事件告警 - EVENT.CUSTOM：自定义事件告警 - DNSHealthCheck：健康检查告警
     * alarmEnabled  **参数解释**： 告警规则是否被启用 **取值范围**： 值为true或者false - true：开启 - false：关闭
     * alarmActionEnabled  **参数解释**： 是否发送通知 **取值范围**： 值为true或者false - true：发送通知 - false：不发送通知
-    * alarmActions  **参数解释**： 告警触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值：notification：通知。autoscaling：弹性伸缩。notificationList：告警状态发生变化时，被通知对象的列表。
-    * okActions  **参数解释**： 告警恢复触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：notification：通知。notificationList：告警状态发生变化时，被通知对象的列表。
-    * insufficientdataActions  **参数解释**： 数据不足触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：数据不足触发告警通知类型，取值为notification。notificationList：数据不足触发告警通知时，被通知对象的ID列表。
+    * alarmActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
+    * okActions  **参数解释**： 告警恢复时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
+    * insufficientdataActions  **参数解释**： 数据不足时触发告警时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
     * updateTime  **参数解释**： 告警状态变更的时间，UNIX时间戳，单位毫秒，如：1603131199000 **取值范围**： 不涉及
     * enterpriseProjectId  **参数解释**： 企业项目ID **取值范围**： 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID），all_granted_eps（代表所有企业项目ID）
     * triggerTime  **参数解释**： 计算出该条告警历史的时间，UNIX时间戳，单位毫秒，如：1603131199469 **取值范围**： 不涉及
-    * alarmStatus  **参数解释**： 告警历史的状态 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效
+    * alarmStatus  **参数解释**： 告警规则的状态 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效
     * datapoints  **参数解释**： 计算出该条告警历史的资源监控数据的一组数据上报时间和监控数值
     * additionalInfo  additionalInfo
     * notificationManner  **参数解释** 通知方式 **取值范围**： 枚举值： - NOTIFICATION_POLICY：通知策略 - NOTIFICATION_GROUP：通知组 - TOPIC_SUBSCRIPTION：主题订阅
@@ -234,13 +234,13 @@ class AlarmHistoryInfoResp implements ModelInterface, ArrayAccess
     * alarmType  **参数解释**： 告警规则类型 **取值范围**： 枚举值: - ALL_INSTANCE：全部资源指标告警 - RESOURCE_GROUP：资源分组指标告警 - MULTI_INSTANCE：指定资源指标告警 - EVENT.SYS：系统事件告警 - EVENT.CUSTOM：自定义事件告警 - DNSHealthCheck：健康检查告警
     * alarmEnabled  **参数解释**： 告警规则是否被启用 **取值范围**： 值为true或者false - true：开启 - false：关闭
     * alarmActionEnabled  **参数解释**： 是否发送通知 **取值范围**： 值为true或者false - true：发送通知 - false：不发送通知
-    * alarmActions  **参数解释**： 告警触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值：notification：通知。autoscaling：弹性伸缩。notificationList：告警状态发生变化时，被通知对象的列表。
-    * okActions  **参数解释**： 告警恢复触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：notification：通知。notificationList：告警状态发生变化时，被通知对象的列表。
-    * insufficientdataActions  **参数解释**： 数据不足触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：数据不足触发告警通知类型，取值为notification。notificationList：数据不足触发告警通知时，被通知对象的ID列表。
+    * alarmActions  **参数解释**： 告警触发时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
+    * okActions  **参数解释**： 告警恢复时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
+    * insufficientdataActions  **参数解释**： 数据不足时触发告警时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
     * updateTime  **参数解释**： 告警状态变更的时间，UNIX时间戳，单位毫秒，如：1603131199000 **取值范围**： 不涉及
     * enterpriseProjectId  **参数解释**： 企业项目ID **取值范围**： 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID），all_granted_eps（代表所有企业项目ID）
     * triggerTime  **参数解释**： 计算出该条告警历史的时间，UNIX时间戳，单位毫秒，如：1603131199469 **取值范围**： 不涉及
-    * alarmStatus  **参数解释**： 告警历史的状态 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效
+    * alarmStatus  **参数解释**： 告警规则的状态 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效
     * datapoints  **参数解释**： 计算出该条告警历史的资源监控数据的一组数据上报时间和监控数值
     * additionalInfo  additionalInfo
     * notificationManner  **参数解释** 通知方式 **取值范围**： 枚举值： - NOTIFICATION_POLICY：通知策略 - NOTIFICATION_GROUP：通知组 - TOPIC_SUBSCRIPTION：主题订阅
@@ -613,7 +613,7 @@ class AlarmHistoryInfoResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmActions
-    *  **参数解释**： 告警触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值：notification：通知。autoscaling：弹性伸缩。notificationList：告警状态发生变化时，被通知对象的列表。
+    *  **参数解释**： 告警触发时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
     *
     * @return \HuaweiCloud\SDK\Ces\V1\Model\NotificationResp[][]|null
     */
@@ -625,7 +625,7 @@ class AlarmHistoryInfoResp implements ModelInterface, ArrayAccess
     /**
     * Sets alarmActions
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\NotificationResp[][]|null $alarmActions **参数解释**： 告警触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }  type取值：notification：通知。autoscaling：弹性伸缩。notificationList：告警状态发生变化时，被通知对象的列表。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\NotificationResp[][]|null $alarmActions **参数解释**： 告警触发时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
     *
     * @return $this
     */
@@ -637,7 +637,7 @@ class AlarmHistoryInfoResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets okActions
-    *  **参数解释**： 告警恢复触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：notification：通知。notificationList：告警状态发生变化时，被通知对象的列表。
+    *  **参数解释**： 告警恢复时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
     *
     * @return \HuaweiCloud\SDK\Ces\V1\Model\NotificationResp[][]|null
     */
@@ -649,7 +649,7 @@ class AlarmHistoryInfoResp implements ModelInterface, ArrayAccess
     /**
     * Sets okActions
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\NotificationResp[][]|null $okActions **参数解释**： 告警恢复触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：notification：通知。notificationList：告警状态发生变化时，被通知对象的列表。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\NotificationResp[][]|null $okActions **参数解释**： 告警恢复时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
     *
     * @return $this
     */
@@ -661,7 +661,7 @@ class AlarmHistoryInfoResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets insufficientdataActions
-    *  **参数解释**： 数据不足触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：数据不足触发告警通知类型，取值为notification。notificationList：数据不足触发告警通知时，被通知对象的ID列表。
+    *  **参数解释**： 数据不足时触发告警时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
     *
     * @return \HuaweiCloud\SDK\Ces\V1\Model\NotificationResp[][]|null
     */
@@ -673,7 +673,7 @@ class AlarmHistoryInfoResp implements ModelInterface, ArrayAccess
     /**
     * Sets insufficientdataActions
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\NotificationResp[][]|null $insufficientdataActions **参数解释**： 数据不足触发的动作。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：数据不足触发告警通知类型，取值为notification。notificationList：数据不足触发告警通知时，被通知对象的ID列表。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\NotificationResp[][]|null $insufficientdataActions **参数解释**： 数据不足时触发告警时，通知组/主题订阅的信息。结构如下：{  \"type\": \"notification\", \"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  }
     *
     * @return $this
     */
@@ -757,7 +757,7 @@ class AlarmHistoryInfoResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmStatus
-    *  **参数解释**： 告警历史的状态 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效
+    *  **参数解释**： 告警规则的状态 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效
     *
     * @return string|null
     */
@@ -769,7 +769,7 @@ class AlarmHistoryInfoResp implements ModelInterface, ArrayAccess
     /**
     * Sets alarmStatus
     *
-    * @param string|null $alarmStatus **参数解释**： 告警历史的状态 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效
+    * @param string|null $alarmStatus **参数解释**： 告警规则的状态 **取值范围**： 枚举值： - ok：正常 - alarm：告警 - insufficient_data：数据不足 - invalid：已失效
     *
     * @return $this
     */

@@ -21,13 +21,13 @@ class ShowVulStaticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * needUrgentRepair  需紧急修复的漏洞数
-    * unrepair  未完成修复的漏洞数
-    * existedVulHosts  存在漏洞的服务器数
-    * todayHandle  今日处理漏洞数
-    * allHandle  累计处理漏洞数
-    * supported  已支持漏洞数
-    * vulLibraryUpdateTime  漏洞库更新时间
+    * needUrgentRepair  **参数解释**: 需紧急修复的漏洞数 **取值范围**: 取值0-2147483647
+    * unrepair  **参数解释**: 未完成修复的漏洞数 **取值范围**: 取值0-2147483647
+    * existedVulHosts  **参数解释**: 存在漏洞的服务器数 **取值范围**: 取值0-2147483647
+    * todayHandle  **参数解释**: 今日处理漏洞数 **取值范围**: 取值0-2147483647
+    * allHandle  **参数解释**: 累计处理漏洞数 **取值范围**: 取值0-2147483647
+    * supported  **参数解释**: 已支持漏洞数 **取值范围**: 取值0-2147483647
+    * vulLibraryUpdateTime  **参数解释**: 漏洞库更新时间（时间戳，单位为毫秒） **取值范围**: 取值0-9223372036854775807
     *
     * @var string[]
     */
@@ -43,13 +43,13 @@ class ShowVulStaticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * needUrgentRepair  需紧急修复的漏洞数
-    * unrepair  未完成修复的漏洞数
-    * existedVulHosts  存在漏洞的服务器数
-    * todayHandle  今日处理漏洞数
-    * allHandle  累计处理漏洞数
-    * supported  已支持漏洞数
-    * vulLibraryUpdateTime  漏洞库更新时间
+    * needUrgentRepair  **参数解释**: 需紧急修复的漏洞数 **取值范围**: 取值0-2147483647
+    * unrepair  **参数解释**: 未完成修复的漏洞数 **取值范围**: 取值0-2147483647
+    * existedVulHosts  **参数解释**: 存在漏洞的服务器数 **取值范围**: 取值0-2147483647
+    * todayHandle  **参数解释**: 今日处理漏洞数 **取值范围**: 取值0-2147483647
+    * allHandle  **参数解释**: 累计处理漏洞数 **取值范围**: 取值0-2147483647
+    * supported  **参数解释**: 已支持漏洞数 **取值范围**: 取值0-2147483647
+    * vulLibraryUpdateTime  **参数解释**: 漏洞库更新时间（时间戳，单位为毫秒） **取值范围**: 取值0-9223372036854775807
     *
     * @var string[]
     */
@@ -86,13 +86,13 @@ class ShowVulStaticsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * needUrgentRepair  需紧急修复的漏洞数
-    * unrepair  未完成修复的漏洞数
-    * existedVulHosts  存在漏洞的服务器数
-    * todayHandle  今日处理漏洞数
-    * allHandle  累计处理漏洞数
-    * supported  已支持漏洞数
-    * vulLibraryUpdateTime  漏洞库更新时间
+    * needUrgentRepair  **参数解释**: 需紧急修复的漏洞数 **取值范围**: 取值0-2147483647
+    * unrepair  **参数解释**: 未完成修复的漏洞数 **取值范围**: 取值0-2147483647
+    * existedVulHosts  **参数解释**: 存在漏洞的服务器数 **取值范围**: 取值0-2147483647
+    * todayHandle  **参数解释**: 今日处理漏洞数 **取值范围**: 取值0-2147483647
+    * allHandle  **参数解释**: 累计处理漏洞数 **取值范围**: 取值0-2147483647
+    * supported  **参数解释**: 已支持漏洞数 **取值范围**: 取值0-2147483647
+    * vulLibraryUpdateTime  **参数解释**: 漏洞库更新时间（时间戳，单位为毫秒） **取值范围**: 取值0-9223372036854775807
     *
     * @var string[]
     */
@@ -108,13 +108,13 @@ class ShowVulStaticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * needUrgentRepair  需紧急修复的漏洞数
-    * unrepair  未完成修复的漏洞数
-    * existedVulHosts  存在漏洞的服务器数
-    * todayHandle  今日处理漏洞数
-    * allHandle  累计处理漏洞数
-    * supported  已支持漏洞数
-    * vulLibraryUpdateTime  漏洞库更新时间
+    * needUrgentRepair  **参数解释**: 需紧急修复的漏洞数 **取值范围**: 取值0-2147483647
+    * unrepair  **参数解释**: 未完成修复的漏洞数 **取值范围**: 取值0-2147483647
+    * existedVulHosts  **参数解释**: 存在漏洞的服务器数 **取值范围**: 取值0-2147483647
+    * todayHandle  **参数解释**: 今日处理漏洞数 **取值范围**: 取值0-2147483647
+    * allHandle  **参数解释**: 累计处理漏洞数 **取值范围**: 取值0-2147483647
+    * supported  **参数解释**: 已支持漏洞数 **取值范围**: 取值0-2147483647
+    * vulLibraryUpdateTime  **参数解释**: 漏洞库更新时间（时间戳，单位为毫秒） **取值范围**: 取值0-9223372036854775807
     *
     * @var string[]
     */
@@ -130,13 +130,13 @@ class ShowVulStaticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * needUrgentRepair  需紧急修复的漏洞数
-    * unrepair  未完成修复的漏洞数
-    * existedVulHosts  存在漏洞的服务器数
-    * todayHandle  今日处理漏洞数
-    * allHandle  累计处理漏洞数
-    * supported  已支持漏洞数
-    * vulLibraryUpdateTime  漏洞库更新时间
+    * needUrgentRepair  **参数解释**: 需紧急修复的漏洞数 **取值范围**: 取值0-2147483647
+    * unrepair  **参数解释**: 未完成修复的漏洞数 **取值范围**: 取值0-2147483647
+    * existedVulHosts  **参数解释**: 存在漏洞的服务器数 **取值范围**: 取值0-2147483647
+    * todayHandle  **参数解释**: 今日处理漏洞数 **取值范围**: 取值0-2147483647
+    * allHandle  **参数解释**: 累计处理漏洞数 **取值范围**: 取值0-2147483647
+    * supported  **参数解释**: 已支持漏洞数 **取值范围**: 取值0-2147483647
+    * vulLibraryUpdateTime  **参数解释**: 漏洞库更新时间（时间戳，单位为毫秒） **取值范围**: 取值0-9223372036854775807
     *
     * @var string[]
     */
@@ -283,7 +283,7 @@ class ShowVulStaticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets needUrgentRepair
-    *  需紧急修复的漏洞数
+    *  **参数解释**: 需紧急修复的漏洞数 **取值范围**: 取值0-2147483647
     *
     * @return int|null
     */
@@ -295,7 +295,7 @@ class ShowVulStaticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets needUrgentRepair
     *
-    * @param int|null $needUrgentRepair 需紧急修复的漏洞数
+    * @param int|null $needUrgentRepair **参数解释**: 需紧急修复的漏洞数 **取值范围**: 取值0-2147483647
     *
     * @return $this
     */
@@ -307,7 +307,7 @@ class ShowVulStaticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets unrepair
-    *  未完成修复的漏洞数
+    *  **参数解释**: 未完成修复的漏洞数 **取值范围**: 取值0-2147483647
     *
     * @return int|null
     */
@@ -319,7 +319,7 @@ class ShowVulStaticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets unrepair
     *
-    * @param int|null $unrepair 未完成修复的漏洞数
+    * @param int|null $unrepair **参数解释**: 未完成修复的漏洞数 **取值范围**: 取值0-2147483647
     *
     * @return $this
     */
@@ -331,7 +331,7 @@ class ShowVulStaticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets existedVulHosts
-    *  存在漏洞的服务器数
+    *  **参数解释**: 存在漏洞的服务器数 **取值范围**: 取值0-2147483647
     *
     * @return int|null
     */
@@ -343,7 +343,7 @@ class ShowVulStaticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets existedVulHosts
     *
-    * @param int|null $existedVulHosts 存在漏洞的服务器数
+    * @param int|null $existedVulHosts **参数解释**: 存在漏洞的服务器数 **取值范围**: 取值0-2147483647
     *
     * @return $this
     */
@@ -355,7 +355,7 @@ class ShowVulStaticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets todayHandle
-    *  今日处理漏洞数
+    *  **参数解释**: 今日处理漏洞数 **取值范围**: 取值0-2147483647
     *
     * @return int|null
     */
@@ -367,7 +367,7 @@ class ShowVulStaticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets todayHandle
     *
-    * @param int|null $todayHandle 今日处理漏洞数
+    * @param int|null $todayHandle **参数解释**: 今日处理漏洞数 **取值范围**: 取值0-2147483647
     *
     * @return $this
     */
@@ -379,7 +379,7 @@ class ShowVulStaticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets allHandle
-    *  累计处理漏洞数
+    *  **参数解释**: 累计处理漏洞数 **取值范围**: 取值0-2147483647
     *
     * @return int|null
     */
@@ -391,7 +391,7 @@ class ShowVulStaticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets allHandle
     *
-    * @param int|null $allHandle 累计处理漏洞数
+    * @param int|null $allHandle **参数解释**: 累计处理漏洞数 **取值范围**: 取值0-2147483647
     *
     * @return $this
     */
@@ -403,7 +403,7 @@ class ShowVulStaticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets supported
-    *  已支持漏洞数
+    *  **参数解释**: 已支持漏洞数 **取值范围**: 取值0-2147483647
     *
     * @return int|null
     */
@@ -415,7 +415,7 @@ class ShowVulStaticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets supported
     *
-    * @param int|null $supported 已支持漏洞数
+    * @param int|null $supported **参数解释**: 已支持漏洞数 **取值范围**: 取值0-2147483647
     *
     * @return $this
     */
@@ -427,7 +427,7 @@ class ShowVulStaticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets vulLibraryUpdateTime
-    *  漏洞库更新时间
+    *  **参数解释**: 漏洞库更新时间（时间戳，单位为毫秒） **取值范围**: 取值0-9223372036854775807
     *
     * @return int|null
     */
@@ -439,7 +439,7 @@ class ShowVulStaticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets vulLibraryUpdateTime
     *
-    * @param int|null $vulLibraryUpdateTime 漏洞库更新时间
+    * @param int|null $vulLibraryUpdateTime **参数解释**: 漏洞库更新时间（时间戳，单位为毫秒） **取值范围**: 取值0-9223372036854775807
     *
     * @return $this
     */

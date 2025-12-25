@@ -20,13 +20,13 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
-    * limit  查询结果条数的限制值，取值范围为[1,100]，默认值为100
-    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
-    * dimName  资源维度，必须以字母开头，多维度用\",\"分隔，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
-    * templateType  模板类型(system代表默认指标模板，custom代表自定义指标模板，system_event代表默认事件模板，custom_event代表自定义事件模板，system_custom_event代表全部事件模板),不传返回全部指标模板
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
+    * namespace  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值**： 不涉及。
+    * dimName  **参数解释**： 资源维度名称。 **约束限制**： 不涉及。 **取值范围**： 多维度用\",\"分割，只能包含0-9、a-z、A-Z、_、-、#、/、(、），每个维度的最大长度为32。字符串总长度最小为1，最大为131。 **默认取值**： 不涉及。
+    * templateType  **参数解释**： 模板类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - system：默认指标模板。 - custom： 自定义指标模板。    - system_event： 默认事件模板。 - custom_event： 自定义事件模板。    - system_custom_event： 全部事件模板。     **默认取值**： 不传返回全部指标模板。
     * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]，支持模糊匹配
-    * productName  （已废弃）支持按照产品名称粒度进行查询告警模板，产品名称一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * productName  **参数解释**： 产品层级跨维规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。          **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -42,19 +42,19 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
-    * limit  查询结果条数的限制值，取值范围为[1,100]，默认值为100
-    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
-    * dimName  资源维度，必须以字母开头，多维度用\",\"分隔，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
-    * templateType  模板类型(system代表默认指标模板，custom代表自定义指标模板，system_event代表默认事件模板，custom_event代表自定义事件模板，system_custom_event代表全部事件模板),不传返回全部指标模板
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
+    * namespace  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值**： 不涉及。
+    * dimName  **参数解释**： 资源维度名称。 **约束限制**： 不涉及。 **取值范围**： 多维度用\",\"分割，只能包含0-9、a-z、A-Z、_、-、#、/、(、），每个维度的最大长度为32。字符串总长度最小为1，最大为131。 **默认取值**： 不涉及。
+    * templateType  **参数解释**： 模板类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - system：默认指标模板。 - custom： 自定义指标模板。    - system_event： 默认事件模板。 - custom_event： 自定义事件模板。    - system_custom_event： 全部事件模板。     **默认取值**： 不传返回全部指标模板。
     * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]，支持模糊匹配
-    * productName  （已废弃）支持按照产品名称粒度进行查询告警模板，产品名称一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * productName  **参数解释**： 产品层级跨维规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。          **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'offset' => 'int32',
-        'limit' => 'int32',
+        'offset' => null,
+        'limit' => null,
         'namespace' => null,
         'dimName' => null,
         'templateType' => null,
@@ -85,13 +85,13 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
-    * limit  查询结果条数的限制值，取值范围为[1,100]，默认值为100
-    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
-    * dimName  资源维度，必须以字母开头，多维度用\",\"分隔，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
-    * templateType  模板类型(system代表默认指标模板，custom代表自定义指标模板，system_event代表默认事件模板，custom_event代表自定义事件模板，system_custom_event代表全部事件模板),不传返回全部指标模板
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
+    * namespace  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值**： 不涉及。
+    * dimName  **参数解释**： 资源维度名称。 **约束限制**： 不涉及。 **取值范围**： 多维度用\",\"分割，只能包含0-9、a-z、A-Z、_、-、#、/、(、），每个维度的最大长度为32。字符串总长度最小为1，最大为131。 **默认取值**： 不涉及。
+    * templateType  **参数解释**： 模板类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - system：默认指标模板。 - custom： 自定义指标模板。    - system_event： 默认事件模板。 - custom_event： 自定义事件模板。    - system_custom_event： 全部事件模板。     **默认取值**： 不传返回全部指标模板。
     * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]，支持模糊匹配
-    * productName  （已废弃）支持按照产品名称粒度进行查询告警模板，产品名称一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * productName  **参数解释**： 产品层级跨维规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。          **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
-    * limit  查询结果条数的限制值，取值范围为[1,100]，默认值为100
-    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
-    * dimName  资源维度，必须以字母开头，多维度用\",\"分隔，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
-    * templateType  模板类型(system代表默认指标模板，custom代表自定义指标模板，system_event代表默认事件模板，custom_event代表自定义事件模板，system_custom_event代表全部事件模板),不传返回全部指标模板
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
+    * namespace  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值**： 不涉及。
+    * dimName  **参数解释**： 资源维度名称。 **约束限制**： 不涉及。 **取值范围**： 多维度用\",\"分割，只能包含0-9、a-z、A-Z、_、-、#、/、(、），每个维度的最大长度为32。字符串总长度最小为1，最大为131。 **默认取值**： 不涉及。
+    * templateType  **参数解释**： 模板类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - system：默认指标模板。 - custom： 自定义指标模板。    - system_event： 默认事件模板。 - custom_event： 自定义事件模板。    - system_custom_event： 全部事件模板。     **默认取值**： 不传返回全部指标模板。
     * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]，支持模糊匹配
-    * productName  （已废弃）支持按照产品名称粒度进行查询告警模板，产品名称一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * productName  **参数解释**： 产品层级跨维规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。          **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * offset  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
-    * limit  查询结果条数的限制值，取值范围为[1,100]，默认值为100
-    * namespace  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
-    * dimName  资源维度，必须以字母开头，多维度用\",\"分隔，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
-    * templateType  模板类型(system代表默认指标模板，custom代表自定义指标模板，system_event代表默认事件模板，custom_event代表自定义事件模板，system_custom_event代表全部事件模板),不传返回全部指标模板
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
+    * namespace  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值**： 不涉及。
+    * dimName  **参数解释**： 资源维度名称。 **约束限制**： 不涉及。 **取值范围**： 多维度用\",\"分割，只能包含0-9、a-z、A-Z、_、-、#、/、(、），每个维度的最大长度为32。字符串总长度最小为1，最大为131。 **默认取值**： 不涉及。
+    * templateType  **参数解释**： 模板类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - system：默认指标模板。 - custom： 自定义指标模板。    - system_event： 默认事件模板。 - custom_event： 自定义事件模板。    - system_custom_event： 全部事件模板。     **默认取值**： 不传返回全部指标模板。
     * templateName  告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]，支持模糊匹配
-    * productName  （已废弃）支持按照产品名称粒度进行查询告警模板，产品名称一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * productName  **参数解释**： 产品层级跨维规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。          **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -272,8 +272,8 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['dimName']) && (mb_strlen($this->container['dimName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'dimName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['dimName']) && !preg_match("/^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}){0,3}$/", $this->container['dimName'])) {
-                $invalidProperties[] = "invalid value for 'dimName', must be conform to the pattern /^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-){0,31}){0,3}$/.";
+            if (!is_null($this->container['dimName']) && !preg_match("/^([a-z]|[A-Z]|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\/|#|\\(|\\)){0,31}(,([a-z]|[A-Z]|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\/|#|\\(|\\)){0,31}){0,3}$/", $this->container['dimName'])) {
+                $invalidProperties[] = "invalid value for 'dimName', must be conform to the pattern /^([a-z]|[A-Z]|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\/|#|\\(|\\)){0,31}(,([a-z]|[A-Z]|\/|#|\\(|\\)){1}([a-z]|[A-Z]|[0-9]|_|-|\/|#|\\(|\\)){0,31}){0,3}$/.";
             }
             $allowedValues = $this->getTemplateTypeAllowableValues();
                 if (!is_null($this->container['templateType']) && !in_array($this->container['templateType'], $allowedValues, true)) {
@@ -286,11 +286,8 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['templateName']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\(|\\)|\\.|\\s){1,128}$/", $this->container['templateName'])) {
                 $invalidProperties[] = "invalid value for 'templateName', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\(|\\)|\\.|\\s){1,128}$/.";
             }
-            if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) > 128)) {
-                $invalidProperties[] = "invalid value for 'productName', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'productName', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['productName']) && !preg_match("/^(([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-|\\.){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-|\\.){0,31}){0,3}|)$/", $this->container['productName'])) {
+                $invalidProperties[] = "invalid value for 'productName', must be conform to the pattern /^(([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-|\\.){0,31}(,([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|_|-|\\.){0,31}){0,3}|)$/.";
             }
         return $invalidProperties;
     }
@@ -308,7 +305,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  分页查询时查询的起始位置，表示从第几条数据开始，默认为0
+    *  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
     *
     * @return int|null
     */
@@ -320,7 +317,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 分页查询时查询的起始位置，表示从第几条数据开始，默认为0
+    * @param int|null $offset **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
     *
     * @return $this
     */
@@ -332,7 +329,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询结果条数的限制值，取值范围为[1,100]，默认值为100
+    *  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
     *
     * @return int|null
     */
@@ -344,7 +341,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询结果条数的限制值，取值范围为[1,100]，默认值为100
+    * @param int|null $limit **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
     *
     * @return $this
     */
@@ -356,7 +353,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    *  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -368,7 +365,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+    * @param string|null $namespace **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -380,7 +377,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimName
-    *  资源维度，必须以字母开头，多维度用\",\"分隔，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
+    *  **参数解释**： 资源维度名称。 **约束限制**： 不涉及。 **取值范围**： 多维度用\",\"分割，只能包含0-9、a-z、A-Z、_、-、#、/、(、），每个维度的最大长度为32。字符串总长度最小为1，最大为131。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -392,7 +389,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dimName
     *
-    * @param string|null $dimName 资源维度，必须以字母开头，多维度用\",\"分隔，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
+    * @param string|null $dimName **参数解释**： 资源维度名称。 **约束限制**： 不涉及。 **取值范围**： 多维度用\",\"分割，只能包含0-9、a-z、A-Z、_、-、#、/、(、），每个维度的最大长度为32。字符串总长度最小为1，最大为131。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -404,7 +401,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateType
-    *  模板类型(system代表默认指标模板，custom代表自定义指标模板，system_event代表默认事件模板，custom_event代表自定义事件模板，system_custom_event代表全部事件模板),不传返回全部指标模板
+    *  **参数解释**： 模板类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - system：默认指标模板。 - custom： 自定义指标模板。    - system_event： 默认事件模板。 - custom_event： 自定义事件模板。    - system_custom_event： 全部事件模板。     **默认取值**： 不传返回全部指标模板。
     *
     * @return string|null
     */
@@ -416,7 +413,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets templateType
     *
-    * @param string|null $templateType 模板类型(system代表默认指标模板，custom代表自定义指标模板，system_event代表默认事件模板，custom_event代表自定义事件模板，system_custom_event代表全部事件模板),不传返回全部指标模板
+    * @param string|null $templateType **参数解释**： 模板类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - system：默认指标模板。 - custom： 自定义指标模板。    - system_event： 默认事件模板。 - custom_event： 自定义事件模板。    - system_custom_event： 全部事件模板。     **默认取值**： 不传返回全部指标模板。
     *
     * @return $this
     */
@@ -452,7 +449,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets productName
-    *  （已废弃）支持按照产品名称粒度进行查询告警模板，产品名称一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    *  **参数解释**： 产品层级跨维规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。          **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -464,7 +461,7 @@ class ListAlarmTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets productName
     *
-    * @param string|null $productName （已废弃）支持按照产品名称粒度进行查询告警模板，产品名称一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+    * @param string|null $productName **参数解释**： 产品层级跨维规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。          **默认取值**： 不涉及。
     *
     * @return $this
     */

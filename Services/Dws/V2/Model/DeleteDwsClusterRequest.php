@@ -22,7 +22,7 @@ class DeleteDwsClusterRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     * keepLastManualBackup  **参数解释**： 集群需要保留的快照数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
-    * releaseEipType  **参数解释**： 集群是否释放弹性公网IP，默认是NO_RELEASE，不释放绑定的弹性公网IP。 **约束限制**： 不涉及。 **取值范围**： NO_RELEASE：不释放绑定的弹性公网IP； RELEASE_BINDING：释放绑定的弹性公网IP； **默认取值**： NO_RELEASE
+    * releaseEipType  **参数解释**： 集群是否释放弹性公网IP，默认是NO_RELEASE，不释放绑定的弹性公网IP。 **约束限制**： 不涉及。 **取值范围**： - NO_RELEASE：不释放绑定的弹性公网IP； - RELEASE_BINDING：释放绑定的弹性公网IP；  **默认取值**： NO_RELEASE
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class DeleteDwsClusterRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     * keepLastManualBackup  **参数解释**： 集群需要保留的快照数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
-    * releaseEipType  **参数解释**： 集群是否释放弹性公网IP，默认是NO_RELEASE，不释放绑定的弹性公网IP。 **约束限制**： 不涉及。 **取值范围**： NO_RELEASE：不释放绑定的弹性公网IP； RELEASE_BINDING：释放绑定的弹性公网IP； **默认取值**： NO_RELEASE
+    * releaseEipType  **参数解释**： 集群是否释放弹性公网IP，默认是NO_RELEASE，不释放绑定的弹性公网IP。 **约束限制**： 不涉及。 **取值范围**： - NO_RELEASE：不释放绑定的弹性公网IP； - RELEASE_BINDING：释放绑定的弹性公网IP；  **默认取值**： NO_RELEASE
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteDwsClusterRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * clusterId  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     * keepLastManualBackup  **参数解释**： 集群需要保留的快照数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
-    * releaseEipType  **参数解释**： 集群是否释放弹性公网IP，默认是NO_RELEASE，不释放绑定的弹性公网IP。 **约束限制**： 不涉及。 **取值范围**： NO_RELEASE：不释放绑定的弹性公网IP； RELEASE_BINDING：释放绑定的弹性公网IP； **默认取值**： NO_RELEASE
+    * releaseEipType  **参数解释**： 集群是否释放弹性公网IP，默认是NO_RELEASE，不释放绑定的弹性公网IP。 **约束限制**： 不涉及。 **取值范围**： - NO_RELEASE：不释放绑定的弹性公网IP； - RELEASE_BINDING：释放绑定的弹性公网IP；  **默认取值**： NO_RELEASE
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class DeleteDwsClusterRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     * keepLastManualBackup  **参数解释**： 集群需要保留的快照数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
-    * releaseEipType  **参数解释**： 集群是否释放弹性公网IP，默认是NO_RELEASE，不释放绑定的弹性公网IP。 **约束限制**： 不涉及。 **取值范围**： NO_RELEASE：不释放绑定的弹性公网IP； RELEASE_BINDING：释放绑定的弹性公网IP； **默认取值**： NO_RELEASE
+    * releaseEipType  **参数解释**： 集群是否释放弹性公网IP，默认是NO_RELEASE，不释放绑定的弹性公网IP。 **约束限制**： 不涉及。 **取值范围**： - NO_RELEASE：不释放绑定的弹性公网IP； - RELEASE_BINDING：释放绑定的弹性公网IP；  **默认取值**： NO_RELEASE
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class DeleteDwsClusterRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
     * keepLastManualBackup  **参数解释**： 集群需要保留的快照数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
-    * releaseEipType  **参数解释**： 集群是否释放弹性公网IP，默认是NO_RELEASE，不释放绑定的弹性公网IP。 **约束限制**： 不涉及。 **取值范围**： NO_RELEASE：不释放绑定的弹性公网IP； RELEASE_BINDING：释放绑定的弹性公网IP； **默认取值**： NO_RELEASE
+    * releaseEipType  **参数解释**： 集群是否释放弹性公网IP，默认是NO_RELEASE，不释放绑定的弹性公网IP。 **约束限制**： 不涉及。 **取值范围**： - NO_RELEASE：不释放绑定的弹性公网IP； - RELEASE_BINDING：释放绑定的弹性公网IP；  **默认取值**： NO_RELEASE
     *
     * @var string[]
     */
@@ -247,7 +247,7 @@ class DeleteDwsClusterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets releaseEipType
-    *  **参数解释**： 集群是否释放弹性公网IP，默认是NO_RELEASE，不释放绑定的弹性公网IP。 **约束限制**： 不涉及。 **取值范围**： NO_RELEASE：不释放绑定的弹性公网IP； RELEASE_BINDING：释放绑定的弹性公网IP； **默认取值**： NO_RELEASE
+    *  **参数解释**： 集群是否释放弹性公网IP，默认是NO_RELEASE，不释放绑定的弹性公网IP。 **约束限制**： 不涉及。 **取值范围**： - NO_RELEASE：不释放绑定的弹性公网IP； - RELEASE_BINDING：释放绑定的弹性公网IP；  **默认取值**： NO_RELEASE
     *
     * @return string|null
     */
@@ -259,7 +259,7 @@ class DeleteDwsClusterRequest implements ModelInterface, ArrayAccess
     /**
     * Sets releaseEipType
     *
-    * @param string|null $releaseEipType **参数解释**： 集群是否释放弹性公网IP，默认是NO_RELEASE，不释放绑定的弹性公网IP。 **约束限制**： 不涉及。 **取值范围**： NO_RELEASE：不释放绑定的弹性公网IP； RELEASE_BINDING：释放绑定的弹性公网IP； **默认取值**： NO_RELEASE
+    * @param string|null $releaseEipType **参数解释**： 集群是否释放弹性公网IP，默认是NO_RELEASE，不释放绑定的弹性公网IP。 **约束限制**： 不涉及。 **取值范围**： - NO_RELEASE：不释放绑定的弹性公网IP； - RELEASE_BINDING：释放绑定的弹性公网IP；  **默认取值**： NO_RELEASE
     *
     * @return $this
     */

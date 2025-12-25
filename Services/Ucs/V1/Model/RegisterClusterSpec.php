@@ -29,7 +29,6 @@ class RegisterClusterSpec implements ModelInterface, ArrayAccess
     * region  地域信息。仅在CCE导入集群注册时使用。可通过[获取未注册到UCS的CCE集群](ListManagedClusters.xml)接口的region字段获取。
     * projectId  项目ID信息。仅在CCE导入集群注册时使用。可通过[获取未注册到UCS的CCE集群](ListManagedClusters.xml)接口的projectID字段获取。
     * manageType  集群管理类型信息。 取值如下： - grouped：在舰队中纳管的集群 - discrete：未加入舰队的集群
-    * network  network
     *
     * @var string[]
     */
@@ -42,8 +41,7 @@ class RegisterClusterSpec implements ModelInterface, ArrayAccess
             'city' => 'string',
             'region' => 'string',
             'projectId' => 'string',
-            'manageType' => 'string',
-            'network' => '\HuaweiCloud\SDK\Ucs\V1\Model\NetworkConfig'
+            'manageType' => 'string'
     ];
 
     /**
@@ -57,7 +55,6 @@ class RegisterClusterSpec implements ModelInterface, ArrayAccess
     * region  地域信息。仅在CCE导入集群注册时使用。可通过[获取未注册到UCS的CCE集群](ListManagedClusters.xml)接口的region字段获取。
     * projectId  项目ID信息。仅在CCE导入集群注册时使用。可通过[获取未注册到UCS的CCE集群](ListManagedClusters.xml)接口的projectID字段获取。
     * manageType  集群管理类型信息。 取值如下： - grouped：在舰队中纳管的集群 - discrete：未加入舰队的集群
-    * network  network
     *
     * @var string[]
     */
@@ -70,8 +67,7 @@ class RegisterClusterSpec implements ModelInterface, ArrayAccess
         'city' => null,
         'region' => null,
         'projectId' => null,
-        'manageType' => null,
-        'network' => null
+        'manageType' => null
     ];
 
     /**
@@ -106,7 +102,6 @@ class RegisterClusterSpec implements ModelInterface, ArrayAccess
     * region  地域信息。仅在CCE导入集群注册时使用。可通过[获取未注册到UCS的CCE集群](ListManagedClusters.xml)接口的region字段获取。
     * projectId  项目ID信息。仅在CCE导入集群注册时使用。可通过[获取未注册到UCS的CCE集群](ListManagedClusters.xml)接口的projectID字段获取。
     * manageType  集群管理类型信息。 取值如下： - grouped：在舰队中纳管的集群 - discrete：未加入舰队的集群
-    * network  network
     *
     * @var string[]
     */
@@ -119,8 +114,7 @@ class RegisterClusterSpec implements ModelInterface, ArrayAccess
             'city' => 'city',
             'region' => 'region',
             'projectId' => 'projectID',
-            'manageType' => 'manageType',
-            'network' => 'network'
+            'manageType' => 'manageType'
     ];
 
     /**
@@ -134,7 +128,6 @@ class RegisterClusterSpec implements ModelInterface, ArrayAccess
     * region  地域信息。仅在CCE导入集群注册时使用。可通过[获取未注册到UCS的CCE集群](ListManagedClusters.xml)接口的region字段获取。
     * projectId  项目ID信息。仅在CCE导入集群注册时使用。可通过[获取未注册到UCS的CCE集群](ListManagedClusters.xml)接口的projectID字段获取。
     * manageType  集群管理类型信息。 取值如下： - grouped：在舰队中纳管的集群 - discrete：未加入舰队的集群
-    * network  network
     *
     * @var string[]
     */
@@ -147,8 +140,7 @@ class RegisterClusterSpec implements ModelInterface, ArrayAccess
             'city' => 'setCity',
             'region' => 'setRegion',
             'projectId' => 'setProjectId',
-            'manageType' => 'setManageType',
-            'network' => 'setNetwork'
+            'manageType' => 'setManageType'
     ];
 
     /**
@@ -162,7 +154,6 @@ class RegisterClusterSpec implements ModelInterface, ArrayAccess
     * region  地域信息。仅在CCE导入集群注册时使用。可通过[获取未注册到UCS的CCE集群](ListManagedClusters.xml)接口的region字段获取。
     * projectId  项目ID信息。仅在CCE导入集群注册时使用。可通过[获取未注册到UCS的CCE集群](ListManagedClusters.xml)接口的projectID字段获取。
     * manageType  集群管理类型信息。 取值如下： - grouped：在舰队中纳管的集群 - discrete：未加入舰队的集群
-    * network  network
     *
     * @var string[]
     */
@@ -175,8 +166,7 @@ class RegisterClusterSpec implements ModelInterface, ArrayAccess
             'city' => 'getCity',
             'region' => 'getRegion',
             'projectId' => 'getProjectId',
-            'manageType' => 'getManageType',
-            'network' => 'getNetwork'
+            'manageType' => 'getManageType'
     ];
 
     /**
@@ -246,7 +236,6 @@ class RegisterClusterSpec implements ModelInterface, ArrayAccess
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['manageType'] = isset($data['manageType']) ? $data['manageType'] : null;
-        $this->container['network'] = isset($data['network']) ? $data['network'] : null;
     }
 
     /**
@@ -502,30 +491,6 @@ class RegisterClusterSpec implements ModelInterface, ArrayAccess
     public function setManageType($manageType)
     {
         $this->container['manageType'] = $manageType;
-        return $this;
-    }
-
-    /**
-    * Gets network
-    *  network
-    *
-    * @return \HuaweiCloud\SDK\Ucs\V1\Model\NetworkConfig|null
-    */
-    public function getNetwork()
-    {
-        return $this->container['network'];
-    }
-
-    /**
-    * Sets network
-    *
-    * @param \HuaweiCloud\SDK\Ucs\V1\Model\NetworkConfig|null $network network
-    *
-    * @return $this
-    */
-    public function setNetwork($network)
-    {
-        $this->container['network'] = $network;
         return $this;
     }
 

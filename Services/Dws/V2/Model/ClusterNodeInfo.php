@@ -22,8 +22,8 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
-    * status  **参数解释**： 节点状态。 **取值范围**： 不涉及。
-    * subStatus  **参数解释**： 节点子状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 节点状态。 **取值范围**： - 100：创建中。 - 199：空闲。 - 200：正常。 - 300：不可用。 - 303：创建失败。 - 304：删除中。 - 400：已删除。 - 800：冻结。 - 900：关机。
+    * subStatus  **参数解释**： 节点子状态。 **取值范围**： - 110：ECS已就绪。 - 120：软件已部署。 - 130：节点已正常。 - 140：节点已监控。
     * spec  **参数解释**： 节点规格。 **取值范围**： 不涉及。
     * instCreateType  **参数解释**： 实例创建类型。 **取值范围**： - INST：已使用 - NODE：空闲节点
     * aliasName  **参数解释**： 节点别名。 **取值范围**： 不涉及。
@@ -46,8 +46,8 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
-    * status  **参数解释**： 节点状态。 **取值范围**： 不涉及。
-    * subStatus  **参数解释**： 节点子状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 节点状态。 **取值范围**： - 100：创建中。 - 199：空闲。 - 200：正常。 - 300：不可用。 - 303：创建失败。 - 304：删除中。 - 400：已删除。 - 800：冻结。 - 900：关机。
+    * subStatus  **参数解释**： 节点子状态。 **取值范围**： - 110：ECS已就绪。 - 120：软件已部署。 - 130：节点已正常。 - 140：节点已监控。
     * spec  **参数解释**： 节点规格。 **取值范围**： 不涉及。
     * instCreateType  **参数解释**： 实例创建类型。 **取值范围**： - INST：已使用 - NODE：空闲节点
     * aliasName  **参数解释**： 节点别名。 **取值范围**： 不涉及。
@@ -91,8 +91,8 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
-    * status  **参数解释**： 节点状态。 **取值范围**： 不涉及。
-    * subStatus  **参数解释**： 节点子状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 节点状态。 **取值范围**： - 100：创建中。 - 199：空闲。 - 200：正常。 - 300：不可用。 - 303：创建失败。 - 304：删除中。 - 400：已删除。 - 800：冻结。 - 900：关机。
+    * subStatus  **参数解释**： 节点子状态。 **取值范围**： - 110：ECS已就绪。 - 120：软件已部署。 - 130：节点已正常。 - 140：节点已监控。
     * spec  **参数解释**： 节点规格。 **取值范围**： 不涉及。
     * instCreateType  **参数解释**： 实例创建类型。 **取值范围**： - INST：已使用 - NODE：空闲节点
     * aliasName  **参数解释**： 节点别名。 **取值范围**： 不涉及。
@@ -115,8 +115,8 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
-    * status  **参数解释**： 节点状态。 **取值范围**： 不涉及。
-    * subStatus  **参数解释**： 节点子状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 节点状态。 **取值范围**： - 100：创建中。 - 199：空闲。 - 200：正常。 - 300：不可用。 - 303：创建失败。 - 304：删除中。 - 400：已删除。 - 800：冻结。 - 900：关机。
+    * subStatus  **参数解释**： 节点子状态。 **取值范围**： - 110：ECS已就绪。 - 120：软件已部署。 - 130：节点已正常。 - 140：节点已监控。
     * spec  **参数解释**： 节点规格。 **取值范围**： 不涉及。
     * instCreateType  **参数解释**： 实例创建类型。 **取值范围**： - INST：已使用 - NODE：空闲节点
     * aliasName  **参数解释**： 节点别名。 **取值范围**： 不涉及。
@@ -139,8 +139,8 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
-    * status  **参数解释**： 节点状态。 **取值范围**： 不涉及。
-    * subStatus  **参数解释**： 节点子状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 节点状态。 **取值范围**： - 100：创建中。 - 199：空闲。 - 200：正常。 - 300：不可用。 - 303：创建失败。 - 304：删除中。 - 400：已删除。 - 800：冻结。 - 900：关机。
+    * subStatus  **参数解释**： 节点子状态。 **取值范围**： - 110：ECS已就绪。 - 120：软件已部署。 - 130：节点已正常。 - 140：节点已监控。
     * spec  **参数解释**： 节点规格。 **取值范围**： 不涉及。
     * instCreateType  **参数解释**： 实例创建类型。 **取值范围**： - INST：已使用 - NODE：空闲节点
     * aliasName  **参数解释**： 节点别名。 **取值范围**： 不涉及。
@@ -299,7 +299,7 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 节点状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 节点状态。 **取值范围**： - 100：创建中。 - 199：空闲。 - 200：正常。 - 300：不可用。 - 303：创建失败。 - 304：删除中。 - 400：已删除。 - 800：冻结。 - 900：关机。
     *
     * @return string|null
     */
@@ -311,7 +311,7 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 节点状态。 **取值范围**： 不涉及。
+    * @param string|null $status **参数解释**： 节点状态。 **取值范围**： - 100：创建中。 - 199：空闲。 - 200：正常。 - 300：不可用。 - 303：创建失败。 - 304：删除中。 - 400：已删除。 - 800：冻结。 - 900：关机。
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets subStatus
-    *  **参数解释**： 节点子状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 节点子状态。 **取值范围**： - 110：ECS已就绪。 - 120：软件已部署。 - 130：节点已正常。 - 140：节点已监控。
     *
     * @return string|null
     */
@@ -335,7 +335,7 @@ class ClusterNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets subStatus
     *
-    * @param string|null $subStatus **参数解释**： 节点子状态。 **取值范围**： 不涉及。
+    * @param string|null $subStatus **参数解释**： 节点子状态。 **取值范围**： - 110：ECS已就绪。 - 120：软件已部署。 - 130：节点已正常。 - 140：节点已监控。
     *
     * @return $this
     */

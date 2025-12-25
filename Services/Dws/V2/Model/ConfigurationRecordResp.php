@@ -24,7 +24,7 @@ class ConfigurationRecordResp implements ModelInterface, ArrayAccess
     * operator  **参数解释**： 操作名称。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - Applying：应用中； - In-Sync：已同步； - Pending-Reboot：待重启；
     * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -44,7 +44,7 @@ class ConfigurationRecordResp implements ModelInterface, ArrayAccess
     * operator  **参数解释**： 操作名称。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - Applying：应用中； - In-Sync：已同步； - Pending-Reboot：待重启；
     * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -85,7 +85,7 @@ class ConfigurationRecordResp implements ModelInterface, ArrayAccess
     * operator  **参数解释**： 操作名称。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - Applying：应用中； - In-Sync：已同步； - Pending-Reboot：待重启；
     * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -105,7 +105,7 @@ class ConfigurationRecordResp implements ModelInterface, ArrayAccess
     * operator  **参数解释**： 操作名称。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - Applying：应用中； - In-Sync：已同步； - Pending-Reboot：待重启；
     * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -125,7 +125,7 @@ class ConfigurationRecordResp implements ModelInterface, ArrayAccess
     * operator  **参数解释**： 操作名称。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - Applying：应用中； - In-Sync：已同步； - Pending-Reboot：待重启；
     * failedReason  **参数解释**： 失败原因。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -325,7 +325,7 @@ class ConfigurationRecordResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 状态。 **取值范围**： - Applying：应用中； - In-Sync：已同步； - Pending-Reboot：待重启；
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class ConfigurationRecordResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 状态。 **取值范围**： 不涉及。
+    * @param string|null $status **参数解释**： 状态。 **取值范围**： - Applying：应用中； - In-Sync：已同步； - Pending-Reboot：待重启；
     *
     * @return $this
     */

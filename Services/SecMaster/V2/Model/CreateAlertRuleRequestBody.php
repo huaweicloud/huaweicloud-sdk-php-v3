@@ -20,94 +20,74 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pipeId  数据管道 ID。Pipe ID.
-    * ruleName  告警规则名称。Alert rule name.
-    * description  描述。Description.
-    * query  查询语句。Query.
-    * queryType  查询语法，SQL。Query type. SQL.
-    * status  启用状态，启用、停用。Status, enabled, disabled.
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    * customProperties  自定义扩展信息。Custom properties.
-    * alertType  告警类型。Alert type.
-    * eventGrouping  告警分组。Event grouping.
-    * suspression  告警抑制。Suspression.
-    * simulation  模拟告警。Simulation.
-    * schedule  schedule
-    * triggers  告警触发规则。Alert triggers.
-    * pipeName  管道名称
-    * alertName  告警名称
-    * alertDescription  告警描述
-    * alertRemediation  修复建议
-    * accumulatedTimes  执行次数
+    * alertRuleName  Alert rule name 告警规则名称
+    * description  Alert rule description 告警规则描述
+    * directory  directory 目录分组
+    * script  Job Script 作业脚本
+    * status  status
+    * jobMode  jobMode
+    * jobModeSetting  jobModeSetting
+    * environment  environment
+    * jobOutputSetting  jobOutputSetting
+    * outputTableId  UUID
+    * outputTableName  表名
+    * cuQuotaAmount  数量
+    * outputTableIds  输出表id列表
+    * outputTableNames  输出表名称列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'pipeId' => 'string',
-            'ruleName' => 'string',
+            'alertRuleName' => 'string',
             'description' => 'string',
-            'query' => 'string',
-            'queryType' => 'string',
-            'status' => 'string',
-            'severity' => 'string',
-            'customProperties' => 'map[string,string]',
-            'alertType' => 'map[string,string]',
-            'eventGrouping' => 'bool',
-            'suspression' => 'bool',
-            'simulation' => 'bool',
-            'schedule' => '\HuaweiCloud\SDK\SecMaster\V2\Model\Schedule',
-            'triggers' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertRuleTrigger[]',
-            'pipeName' => 'string',
-            'alertName' => 'string',
-            'alertDescription' => 'string',
-            'alertRemediation' => 'string',
-            'accumulatedTimes' => 'int'
+            'directory' => 'string',
+            'script' => 'string',
+            'status' => '\HuaweiCloud\SDK\SecMaster\V2\Model\JobStatus',
+            'jobMode' => '\HuaweiCloud\SDK\SecMaster\V2\Model\IsapJobMode',
+            'jobModeSetting' => '\HuaweiCloud\SDK\SecMaster\V2\Model\IsapJobModeSettingDto',
+            'environment' => '\HuaweiCloud\SDK\SecMaster\V2\Model\JobEnvironment',
+            'jobOutputSetting' => '\HuaweiCloud\SDK\SecMaster\V2\Model\IsapJobOutputSetting',
+            'outputTableId' => 'string',
+            'outputTableName' => 'string',
+            'cuQuotaAmount' => 'float',
+            'outputTableIds' => 'string[]',
+            'outputTableNames' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pipeId  数据管道 ID。Pipe ID.
-    * ruleName  告警规则名称。Alert rule name.
-    * description  描述。Description.
-    * query  查询语句。Query.
-    * queryType  查询语法，SQL。Query type. SQL.
-    * status  启用状态，启用、停用。Status, enabled, disabled.
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    * customProperties  自定义扩展信息。Custom properties.
-    * alertType  告警类型。Alert type.
-    * eventGrouping  告警分组。Event grouping.
-    * suspression  告警抑制。Suspression.
-    * simulation  模拟告警。Simulation.
-    * schedule  schedule
-    * triggers  告警触发规则。Alert triggers.
-    * pipeName  管道名称
-    * alertName  告警名称
-    * alertDescription  告警描述
-    * alertRemediation  修复建议
-    * accumulatedTimes  执行次数
+    * alertRuleName  Alert rule name 告警规则名称
+    * description  Alert rule description 告警规则描述
+    * directory  directory 目录分组
+    * script  Job Script 作业脚本
+    * status  status
+    * jobMode  jobMode
+    * jobModeSetting  jobModeSetting
+    * environment  environment
+    * jobOutputSetting  jobOutputSetting
+    * outputTableId  UUID
+    * outputTableName  表名
+    * cuQuotaAmount  数量
+    * outputTableIds  输出表id列表
+    * outputTableNames  输出表名称列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'pipeId' => null,
-        'ruleName' => null,
+        'alertRuleName' => null,
         'description' => null,
-        'query' => null,
-        'queryType' => null,
+        'directory' => null,
+        'script' => null,
         'status' => null,
-        'severity' => null,
-        'customProperties' => null,
-        'alertType' => null,
-        'eventGrouping' => null,
-        'suspression' => null,
-        'simulation' => null,
-        'schedule' => null,
-        'triggers' => null,
-        'pipeName' => null,
-        'alertName' => null,
-        'alertDescription' => null,
-        'alertRemediation' => null,
-        'accumulatedTimes' => 'int32'
+        'jobMode' => null,
+        'jobModeSetting' => null,
+        'environment' => null,
+        'jobOutputSetting' => null,
+        'outputTableId' => null,
+        'outputTableName' => null,
+        'cuQuotaAmount' => 'float',
+        'outputTableIds' => null,
+        'outputTableNames' => null
     ];
 
     /**
@@ -133,140 +113,110 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pipeId  数据管道 ID。Pipe ID.
-    * ruleName  告警规则名称。Alert rule name.
-    * description  描述。Description.
-    * query  查询语句。Query.
-    * queryType  查询语法，SQL。Query type. SQL.
-    * status  启用状态，启用、停用。Status, enabled, disabled.
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    * customProperties  自定义扩展信息。Custom properties.
-    * alertType  告警类型。Alert type.
-    * eventGrouping  告警分组。Event grouping.
-    * suspression  告警抑制。Suspression.
-    * simulation  模拟告警。Simulation.
-    * schedule  schedule
-    * triggers  告警触发规则。Alert triggers.
-    * pipeName  管道名称
-    * alertName  告警名称
-    * alertDescription  告警描述
-    * alertRemediation  修复建议
-    * accumulatedTimes  执行次数
+    * alertRuleName  Alert rule name 告警规则名称
+    * description  Alert rule description 告警规则描述
+    * directory  directory 目录分组
+    * script  Job Script 作业脚本
+    * status  status
+    * jobMode  jobMode
+    * jobModeSetting  jobModeSetting
+    * environment  environment
+    * jobOutputSetting  jobOutputSetting
+    * outputTableId  UUID
+    * outputTableName  表名
+    * cuQuotaAmount  数量
+    * outputTableIds  输出表id列表
+    * outputTableNames  输出表名称列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'pipeId' => 'pipe_id',
-            'ruleName' => 'rule_name',
+            'alertRuleName' => 'alert_rule_name',
             'description' => 'description',
-            'query' => 'query',
-            'queryType' => 'query_type',
+            'directory' => 'directory',
+            'script' => 'script',
             'status' => 'status',
-            'severity' => 'severity',
-            'customProperties' => 'custom_properties',
-            'alertType' => 'alert_type',
-            'eventGrouping' => 'event_grouping',
-            'suspression' => 'suspression',
-            'simulation' => 'simulation',
-            'schedule' => 'schedule',
-            'triggers' => 'triggers',
-            'pipeName' => 'pipe_name',
-            'alertName' => 'alert_name',
-            'alertDescription' => 'alert_description',
-            'alertRemediation' => 'alert_remediation',
-            'accumulatedTimes' => 'accumulated_times'
+            'jobMode' => 'job_mode',
+            'jobModeSetting' => 'job_mode_setting',
+            'environment' => 'environment',
+            'jobOutputSetting' => 'job_output_setting',
+            'outputTableId' => 'output_table_id',
+            'outputTableName' => 'output_table_name',
+            'cuQuotaAmount' => 'cu_quota_amount',
+            'outputTableIds' => 'output_table_ids',
+            'outputTableNames' => 'output_table_names'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pipeId  数据管道 ID。Pipe ID.
-    * ruleName  告警规则名称。Alert rule name.
-    * description  描述。Description.
-    * query  查询语句。Query.
-    * queryType  查询语法，SQL。Query type. SQL.
-    * status  启用状态，启用、停用。Status, enabled, disabled.
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    * customProperties  自定义扩展信息。Custom properties.
-    * alertType  告警类型。Alert type.
-    * eventGrouping  告警分组。Event grouping.
-    * suspression  告警抑制。Suspression.
-    * simulation  模拟告警。Simulation.
-    * schedule  schedule
-    * triggers  告警触发规则。Alert triggers.
-    * pipeName  管道名称
-    * alertName  告警名称
-    * alertDescription  告警描述
-    * alertRemediation  修复建议
-    * accumulatedTimes  执行次数
+    * alertRuleName  Alert rule name 告警规则名称
+    * description  Alert rule description 告警规则描述
+    * directory  directory 目录分组
+    * script  Job Script 作业脚本
+    * status  status
+    * jobMode  jobMode
+    * jobModeSetting  jobModeSetting
+    * environment  environment
+    * jobOutputSetting  jobOutputSetting
+    * outputTableId  UUID
+    * outputTableName  表名
+    * cuQuotaAmount  数量
+    * outputTableIds  输出表id列表
+    * outputTableNames  输出表名称列表
     *
     * @var string[]
     */
     protected static $setters = [
-            'pipeId' => 'setPipeId',
-            'ruleName' => 'setRuleName',
+            'alertRuleName' => 'setAlertRuleName',
             'description' => 'setDescription',
-            'query' => 'setQuery',
-            'queryType' => 'setQueryType',
+            'directory' => 'setDirectory',
+            'script' => 'setScript',
             'status' => 'setStatus',
-            'severity' => 'setSeverity',
-            'customProperties' => 'setCustomProperties',
-            'alertType' => 'setAlertType',
-            'eventGrouping' => 'setEventGrouping',
-            'suspression' => 'setSuspression',
-            'simulation' => 'setSimulation',
-            'schedule' => 'setSchedule',
-            'triggers' => 'setTriggers',
-            'pipeName' => 'setPipeName',
-            'alertName' => 'setAlertName',
-            'alertDescription' => 'setAlertDescription',
-            'alertRemediation' => 'setAlertRemediation',
-            'accumulatedTimes' => 'setAccumulatedTimes'
+            'jobMode' => 'setJobMode',
+            'jobModeSetting' => 'setJobModeSetting',
+            'environment' => 'setEnvironment',
+            'jobOutputSetting' => 'setJobOutputSetting',
+            'outputTableId' => 'setOutputTableId',
+            'outputTableName' => 'setOutputTableName',
+            'cuQuotaAmount' => 'setCuQuotaAmount',
+            'outputTableIds' => 'setOutputTableIds',
+            'outputTableNames' => 'setOutputTableNames'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pipeId  数据管道 ID。Pipe ID.
-    * ruleName  告警规则名称。Alert rule name.
-    * description  描述。Description.
-    * query  查询语句。Query.
-    * queryType  查询语法，SQL。Query type. SQL.
-    * status  启用状态，启用、停用。Status, enabled, disabled.
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    * customProperties  自定义扩展信息。Custom properties.
-    * alertType  告警类型。Alert type.
-    * eventGrouping  告警分组。Event grouping.
-    * suspression  告警抑制。Suspression.
-    * simulation  模拟告警。Simulation.
-    * schedule  schedule
-    * triggers  告警触发规则。Alert triggers.
-    * pipeName  管道名称
-    * alertName  告警名称
-    * alertDescription  告警描述
-    * alertRemediation  修复建议
-    * accumulatedTimes  执行次数
+    * alertRuleName  Alert rule name 告警规则名称
+    * description  Alert rule description 告警规则描述
+    * directory  directory 目录分组
+    * script  Job Script 作业脚本
+    * status  status
+    * jobMode  jobMode
+    * jobModeSetting  jobModeSetting
+    * environment  environment
+    * jobOutputSetting  jobOutputSetting
+    * outputTableId  UUID
+    * outputTableName  表名
+    * cuQuotaAmount  数量
+    * outputTableIds  输出表id列表
+    * outputTableNames  输出表名称列表
     *
     * @var string[]
     */
     protected static $getters = [
-            'pipeId' => 'getPipeId',
-            'ruleName' => 'getRuleName',
+            'alertRuleName' => 'getAlertRuleName',
             'description' => 'getDescription',
-            'query' => 'getQuery',
-            'queryType' => 'getQueryType',
+            'directory' => 'getDirectory',
+            'script' => 'getScript',
             'status' => 'getStatus',
-            'severity' => 'getSeverity',
-            'customProperties' => 'getCustomProperties',
-            'alertType' => 'getAlertType',
-            'eventGrouping' => 'getEventGrouping',
-            'suspression' => 'getSuspression',
-            'simulation' => 'getSimulation',
-            'schedule' => 'getSchedule',
-            'triggers' => 'getTriggers',
-            'pipeName' => 'getPipeName',
-            'alertName' => 'getAlertName',
-            'alertDescription' => 'getAlertDescription',
-            'alertRemediation' => 'getAlertRemediation',
-            'accumulatedTimes' => 'getAccumulatedTimes'
+            'jobMode' => 'getJobMode',
+            'jobModeSetting' => 'getJobModeSetting',
+            'environment' => 'getEnvironment',
+            'jobOutputSetting' => 'getJobOutputSetting',
+            'outputTableId' => 'getOutputTableId',
+            'outputTableName' => 'getOutputTableName',
+            'cuQuotaAmount' => 'getCuQuotaAmount',
+            'outputTableIds' => 'getOutputTableIds',
+            'outputTableNames' => 'getOutputTableNames'
     ];
 
     /**
@@ -309,56 +259,7 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const QUERY_TYPE_SQL = 'SQL';
-    const STATUS_ENABLED = 'ENABLED';
-    const STATUS_DISABLED = 'DISABLED';
-    const SEVERITY_TIPS = 'TIPS';
-    const SEVERITY_LOW = 'LOW';
-    const SEVERITY_MEDIUM = 'MEDIUM';
-    const SEVERITY_HIGH = 'HIGH';
-    const SEVERITY_FATAL = 'FATAL';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getQueryTypeAllowableValues()
-    {
-        return [
-            self::QUERY_TYPE_SQL,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_ENABLED,
-            self::STATUS_DISABLED,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getSeverityAllowableValues()
-    {
-        return [
-            self::SEVERITY_TIPS,
-            self::SEVERITY_LOW,
-            self::SEVERITY_MEDIUM,
-            self::SEVERITY_HIGH,
-            self::SEVERITY_FATAL,
-        ];
-    }
 
 
     /**
@@ -376,25 +277,20 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['pipeId'] = isset($data['pipeId']) ? $data['pipeId'] : null;
-        $this->container['ruleName'] = isset($data['ruleName']) ? $data['ruleName'] : null;
+        $this->container['alertRuleName'] = isset($data['alertRuleName']) ? $data['alertRuleName'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['query'] = isset($data['query']) ? $data['query'] : null;
-        $this->container['queryType'] = isset($data['queryType']) ? $data['queryType'] : null;
+        $this->container['directory'] = isset($data['directory']) ? $data['directory'] : null;
+        $this->container['script'] = isset($data['script']) ? $data['script'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['severity'] = isset($data['severity']) ? $data['severity'] : null;
-        $this->container['customProperties'] = isset($data['customProperties']) ? $data['customProperties'] : null;
-        $this->container['alertType'] = isset($data['alertType']) ? $data['alertType'] : null;
-        $this->container['eventGrouping'] = isset($data['eventGrouping']) ? $data['eventGrouping'] : null;
-        $this->container['suspression'] = isset($data['suspression']) ? $data['suspression'] : null;
-        $this->container['simulation'] = isset($data['simulation']) ? $data['simulation'] : null;
-        $this->container['schedule'] = isset($data['schedule']) ? $data['schedule'] : null;
-        $this->container['triggers'] = isset($data['triggers']) ? $data['triggers'] : null;
-        $this->container['pipeName'] = isset($data['pipeName']) ? $data['pipeName'] : null;
-        $this->container['alertName'] = isset($data['alertName']) ? $data['alertName'] : null;
-        $this->container['alertDescription'] = isset($data['alertDescription']) ? $data['alertDescription'] : null;
-        $this->container['alertRemediation'] = isset($data['alertRemediation']) ? $data['alertRemediation'] : null;
-        $this->container['accumulatedTimes'] = isset($data['accumulatedTimes']) ? $data['accumulatedTimes'] : null;
+        $this->container['jobMode'] = isset($data['jobMode']) ? $data['jobMode'] : null;
+        $this->container['jobModeSetting'] = isset($data['jobModeSetting']) ? $data['jobModeSetting'] : null;
+        $this->container['environment'] = isset($data['environment']) ? $data['environment'] : null;
+        $this->container['jobOutputSetting'] = isset($data['jobOutputSetting']) ? $data['jobOutputSetting'] : null;
+        $this->container['outputTableId'] = isset($data['outputTableId']) ? $data['outputTableId'] : null;
+        $this->container['outputTableName'] = isset($data['outputTableName']) ? $data['outputTableName'] : null;
+        $this->container['cuQuotaAmount'] = isset($data['cuQuotaAmount']) ? $data['cuQuotaAmount'] : null;
+        $this->container['outputTableIds'] = isset($data['outputTableIds']) ? $data['outputTableIds'] : null;
+        $this->container['outputTableNames'] = isset($data['outputTableNames']) ? $data['outputTableNames'] : null;
     }
 
     /**
@@ -405,123 +301,75 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['pipeId'] === null) {
-            $invalidProperties[] = "'pipeId' can't be null";
+        if ($this->container['alertRuleName'] === null) {
+            $invalidProperties[] = "'alertRuleName' can't be null";
         }
-            if ((mb_strlen($this->container['pipeId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'pipeId', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['alertRuleName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'alertRuleName', the character length must be smaller than or equal to 256.";
             }
-            if ((mb_strlen($this->container['pipeId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'pipeId', the character length must be bigger than or equal to 36.";
+            if ((mb_strlen($this->container['alertRuleName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'alertRuleName', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['ruleName'] === null) {
-            $invalidProperties[] = "'ruleName' can't be null";
+        if ($this->container['description'] === null) {
+            $invalidProperties[] = "'description' can't be null";
         }
-            if ((mb_strlen($this->container['ruleName']) > 255)) {
-                $invalidProperties[] = "invalid value for 'ruleName', the character length must be smaller than or equal to 255.";
-            }
-            if ((mb_strlen($this->container['ruleName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'ruleName', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 1024)) {
+            if ((mb_strlen($this->container['description']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 1024.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+            if ((mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['query'] === null) {
-            $invalidProperties[] = "'query' can't be null";
+            if (!is_null($this->container['directory']) && (mb_strlen($this->container['directory']) > 256)) {
+                $invalidProperties[] = "invalid value for 'directory', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['directory']) && (mb_strlen($this->container['directory']) < 1)) {
+                $invalidProperties[] = "invalid value for 'directory', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['script']) && (mb_strlen($this->container['script']) > 10240)) {
+                $invalidProperties[] = "invalid value for 'script', the character length must be smaller than or equal to 10240.";
+            }
+            if (!is_null($this->container['script']) && (mb_strlen($this->container['script']) < 1)) {
+                $invalidProperties[] = "invalid value for 'script', the character length must be bigger than or equal to 1.";
+            }
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
         }
-            if ((mb_strlen($this->container['query']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'query', the character length must be smaller than or equal to 1024.";
-            }
-            if ((mb_strlen($this->container['query']) < 1)) {
-                $invalidProperties[] = "invalid value for 'query', the character length must be bigger than or equal to 1.";
-            }
-            $allowedValues = $this->getQueryTypeAllowableValues();
-                if (!is_null($this->container['queryType']) && !in_array($this->container['queryType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'queryType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if (!is_null($this->container['queryType']) && (mb_strlen($this->container['queryType']) > 255)) {
-                $invalidProperties[] = "invalid value for 'queryType', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['queryType']) && (mb_strlen($this->container['queryType']) < 1)) {
-                $invalidProperties[] = "invalid value for 'queryType', the character length must be bigger than or equal to 1.";
-            }
-            $allowedValues = $this->getStatusAllowableValues();
-                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'status', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) > 255)) {
-                $invalidProperties[] = "invalid value for 'status', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 1)) {
-                $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 1.";
-            }
-            $allowedValues = $this->getSeverityAllowableValues();
-                if (!is_null($this->container['severity']) && !in_array($this->container['severity'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'severity', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) > 255)) {
-                $invalidProperties[] = "invalid value for 'severity', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) < 1)) {
-                $invalidProperties[] = "invalid value for 'severity', the character length must be bigger than or equal to 1.";
-            }
-        if ($this->container['schedule'] === null) {
-            $invalidProperties[] = "'schedule' can't be null";
+        if ($this->container['jobMode'] === null) {
+            $invalidProperties[] = "'jobMode' can't be null";
         }
-        if ($this->container['triggers'] === null) {
-            $invalidProperties[] = "'triggers' can't be null";
+        if ($this->container['environment'] === null) {
+            $invalidProperties[] = "'environment' can't be null";
         }
-        if ($this->container['pipeName'] === null) {
-            $invalidProperties[] = "'pipeName' can't be null";
+        if ($this->container['outputTableId'] === null) {
+            $invalidProperties[] = "'outputTableId' can't be null";
         }
-            if ((mb_strlen($this->container['pipeName']) > 63)) {
-                $invalidProperties[] = "invalid value for 'pipeName', the character length must be smaller than or equal to 63.";
+            if ((mb_strlen($this->container['outputTableId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'outputTableId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['pipeName']) < 5)) {
-                $invalidProperties[] = "invalid value for 'pipeName', the character length must be bigger than or equal to 5.";
+            if ((mb_strlen($this->container['outputTableId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'outputTableId', the character length must be bigger than or equal to 36.";
             }
-        if ($this->container['alertName'] === null) {
-            $invalidProperties[] = "'alertName' can't be null";
+            if (!is_null($this->container['outputTableName']) && (mb_strlen($this->container['outputTableName']) > 1000)) {
+                $invalidProperties[] = "invalid value for 'outputTableName', the character length must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['outputTableName']) && (mb_strlen($this->container['outputTableName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'outputTableName', the character length must be bigger than or equal to 0.";
+            }
+        if ($this->container['cuQuotaAmount'] === null) {
+            $invalidProperties[] = "'cuQuotaAmount' can't be null";
         }
-            if ((mb_strlen($this->container['alertName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'alertName', the character length must be smaller than or equal to 256.";
+            if (($this->container['cuQuotaAmount'] > 999999999999)) {
+                $invalidProperties[] = "invalid value for 'cuQuotaAmount', must be smaller than or equal to 999999999999.";
             }
-            if ((mb_strlen($this->container['alertName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'alertName', the character length must be bigger than or equal to 0.";
+            if (($this->container['cuQuotaAmount'] < 0)) {
+                $invalidProperties[] = "invalid value for 'cuQuotaAmount', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['alertDescription']) && (mb_strlen($this->container['alertDescription']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'alertDescription', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['alertDescription']) && (mb_strlen($this->container['alertDescription']) < 0)) {
-                $invalidProperties[] = "invalid value for 'alertDescription', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['alertRemediation']) && (mb_strlen($this->container['alertRemediation']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'alertRemediation', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['alertRemediation']) && (mb_strlen($this->container['alertRemediation']) < 0)) {
-                $invalidProperties[] = "invalid value for 'alertRemediation', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['accumulatedTimes']) && ($this->container['accumulatedTimes'] > 65535)) {
-                $invalidProperties[] = "invalid value for 'accumulatedTimes', must be smaller than or equal to 65535.";
-            }
-            if (!is_null($this->container['accumulatedTimes']) && ($this->container['accumulatedTimes'] < 0)) {
-                $invalidProperties[] = "invalid value for 'accumulatedTimes', must be bigger than or equal to 0.";
-            }
+        if ($this->container['outputTableIds'] === null) {
+            $invalidProperties[] = "'outputTableIds' can't be null";
+        }
+        if ($this->container['outputTableNames'] === null) {
+            $invalidProperties[] = "'outputTableNames' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -537,58 +385,34 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets pipeId
-    *  数据管道 ID。Pipe ID.
+    * Gets alertRuleName
+    *  Alert rule name 告警规则名称
     *
     * @return string
     */
-    public function getPipeId()
+    public function getAlertRuleName()
     {
-        return $this->container['pipeId'];
+        return $this->container['alertRuleName'];
     }
 
     /**
-    * Sets pipeId
+    * Sets alertRuleName
     *
-    * @param string $pipeId 数据管道 ID。Pipe ID.
+    * @param string $alertRuleName Alert rule name 告警规则名称
     *
     * @return $this
     */
-    public function setPipeId($pipeId)
+    public function setAlertRuleName($alertRuleName)
     {
-        $this->container['pipeId'] = $pipeId;
-        return $this;
-    }
-
-    /**
-    * Gets ruleName
-    *  告警规则名称。Alert rule name.
-    *
-    * @return string
-    */
-    public function getRuleName()
-    {
-        return $this->container['ruleName'];
-    }
-
-    /**
-    * Sets ruleName
-    *
-    * @param string $ruleName 告警规则名称。Alert rule name.
-    *
-    * @return $this
-    */
-    public function setRuleName($ruleName)
-    {
-        $this->container['ruleName'] = $ruleName;
+        $this->container['alertRuleName'] = $alertRuleName;
         return $this;
     }
 
     /**
     * Gets description
-    *  描述。Description.
+    *  Alert rule description 告警规则描述
     *
-    * @return string|null
+    * @return string
     */
     public function getDescription()
     {
@@ -598,7 +422,7 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述。Description.
+    * @param string $description Alert rule description 告警规则描述
     *
     * @return $this
     */
@@ -609,58 +433,58 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets query
-    *  查询语句。Query.
+    * Gets directory
+    *  directory 目录分组
     *
-    * @return string
+    * @return string|null
     */
-    public function getQuery()
+    public function getDirectory()
     {
-        return $this->container['query'];
+        return $this->container['directory'];
     }
 
     /**
-    * Sets query
+    * Sets directory
     *
-    * @param string $query 查询语句。Query.
+    * @param string|null $directory directory 目录分组
     *
     * @return $this
     */
-    public function setQuery($query)
+    public function setDirectory($directory)
     {
-        $this->container['query'] = $query;
+        $this->container['directory'] = $directory;
         return $this;
     }
 
     /**
-    * Gets queryType
-    *  查询语法，SQL。Query type. SQL.
+    * Gets script
+    *  Job Script 作业脚本
     *
     * @return string|null
     */
-    public function getQueryType()
+    public function getScript()
     {
-        return $this->container['queryType'];
+        return $this->container['script'];
     }
 
     /**
-    * Sets queryType
+    * Sets script
     *
-    * @param string|null $queryType 查询语法，SQL。Query type. SQL.
+    * @param string|null $script Job Script 作业脚本
     *
     * @return $this
     */
-    public function setQueryType($queryType)
+    public function setScript($script)
     {
-        $this->container['queryType'] = $queryType;
+        $this->container['script'] = $script;
         return $this;
     }
 
     /**
     * Gets status
-    *  启用状态，启用、停用。Status, enabled, disabled.
+    *  status
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\JobStatus
     */
     public function getStatus()
     {
@@ -670,7 +494,7 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 启用状态，启用、停用。Status, enabled, disabled.
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\JobStatus $status status
     *
     * @return $this
     */
@@ -681,314 +505,218 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets severity
-    *  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+    * Gets jobMode
+    *  jobMode
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\IsapJobMode
     */
-    public function getSeverity()
+    public function getJobMode()
     {
-        return $this->container['severity'];
+        return $this->container['jobMode'];
     }
 
     /**
-    * Sets severity
+    * Sets jobMode
     *
-    * @param string|null $severity 严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\IsapJobMode $jobMode jobMode
     *
     * @return $this
     */
-    public function setSeverity($severity)
+    public function setJobMode($jobMode)
     {
-        $this->container['severity'] = $severity;
+        $this->container['jobMode'] = $jobMode;
         return $this;
     }
 
     /**
-    * Gets customProperties
-    *  自定义扩展信息。Custom properties.
+    * Gets jobModeSetting
+    *  jobModeSetting
     *
-    * @return map[string,string]|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\IsapJobModeSettingDto|null
     */
-    public function getCustomProperties()
+    public function getJobModeSetting()
     {
-        return $this->container['customProperties'];
+        return $this->container['jobModeSetting'];
     }
 
     /**
-    * Sets customProperties
+    * Sets jobModeSetting
     *
-    * @param map[string,string]|null $customProperties 自定义扩展信息。Custom properties.
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\IsapJobModeSettingDto|null $jobModeSetting jobModeSetting
     *
     * @return $this
     */
-    public function setCustomProperties($customProperties)
+    public function setJobModeSetting($jobModeSetting)
     {
-        $this->container['customProperties'] = $customProperties;
+        $this->container['jobModeSetting'] = $jobModeSetting;
         return $this;
     }
 
     /**
-    * Gets alertType
-    *  告警类型。Alert type.
+    * Gets environment
+    *  environment
     *
-    * @return map[string,string]|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\JobEnvironment
     */
-    public function getAlertType()
+    public function getEnvironment()
     {
-        return $this->container['alertType'];
+        return $this->container['environment'];
     }
 
     /**
-    * Sets alertType
+    * Sets environment
     *
-    * @param map[string,string]|null $alertType 告警类型。Alert type.
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\JobEnvironment $environment environment
     *
     * @return $this
     */
-    public function setAlertType($alertType)
+    public function setEnvironment($environment)
     {
-        $this->container['alertType'] = $alertType;
+        $this->container['environment'] = $environment;
         return $this;
     }
 
     /**
-    * Gets eventGrouping
-    *  告警分组。Event grouping.
+    * Gets jobOutputSetting
+    *  jobOutputSetting
     *
-    * @return bool|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\IsapJobOutputSetting|null
     */
-    public function getEventGrouping()
+    public function getJobOutputSetting()
     {
-        return $this->container['eventGrouping'];
+        return $this->container['jobOutputSetting'];
     }
 
     /**
-    * Sets eventGrouping
+    * Sets jobOutputSetting
     *
-    * @param bool|null $eventGrouping 告警分组。Event grouping.
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\IsapJobOutputSetting|null $jobOutputSetting jobOutputSetting
     *
     * @return $this
     */
-    public function setEventGrouping($eventGrouping)
+    public function setJobOutputSetting($jobOutputSetting)
     {
-        $this->container['eventGrouping'] = $eventGrouping;
+        $this->container['jobOutputSetting'] = $jobOutputSetting;
         return $this;
     }
 
     /**
-    * Gets suspression
-    *  告警抑制。Suspression.
-    *
-    * @return bool|null
-    */
-    public function getSuspression()
-    {
-        return $this->container['suspression'];
-    }
-
-    /**
-    * Sets suspression
-    *
-    * @param bool|null $suspression 告警抑制。Suspression.
-    *
-    * @return $this
-    */
-    public function setSuspression($suspression)
-    {
-        $this->container['suspression'] = $suspression;
-        return $this;
-    }
-
-    /**
-    * Gets simulation
-    *  模拟告警。Simulation.
-    *
-    * @return bool|null
-    */
-    public function getSimulation()
-    {
-        return $this->container['simulation'];
-    }
-
-    /**
-    * Sets simulation
-    *
-    * @param bool|null $simulation 模拟告警。Simulation.
-    *
-    * @return $this
-    */
-    public function setSimulation($simulation)
-    {
-        $this->container['simulation'] = $simulation;
-        return $this;
-    }
-
-    /**
-    * Gets schedule
-    *  schedule
-    *
-    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\Schedule
-    */
-    public function getSchedule()
-    {
-        return $this->container['schedule'];
-    }
-
-    /**
-    * Sets schedule
-    *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\Schedule $schedule schedule
-    *
-    * @return $this
-    */
-    public function setSchedule($schedule)
-    {
-        $this->container['schedule'] = $schedule;
-        return $this;
-    }
-
-    /**
-    * Gets triggers
-    *  告警触发规则。Alert triggers.
-    *
-    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRuleTrigger[]
-    */
-    public function getTriggers()
-    {
-        return $this->container['triggers'];
-    }
-
-    /**
-    * Sets triggers
-    *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRuleTrigger[] $triggers 告警触发规则。Alert triggers.
-    *
-    * @return $this
-    */
-    public function setTriggers($triggers)
-    {
-        $this->container['triggers'] = $triggers;
-        return $this;
-    }
-
-    /**
-    * Gets pipeName
-    *  管道名称
+    * Gets outputTableId
+    *  UUID
     *
     * @return string
     */
-    public function getPipeName()
+    public function getOutputTableId()
     {
-        return $this->container['pipeName'];
+        return $this->container['outputTableId'];
     }
 
     /**
-    * Sets pipeName
+    * Sets outputTableId
     *
-    * @param string $pipeName 管道名称
+    * @param string $outputTableId UUID
     *
     * @return $this
     */
-    public function setPipeName($pipeName)
+    public function setOutputTableId($outputTableId)
     {
-        $this->container['pipeName'] = $pipeName;
+        $this->container['outputTableId'] = $outputTableId;
         return $this;
     }
 
     /**
-    * Gets alertName
-    *  告警名称
-    *
-    * @return string
-    */
-    public function getAlertName()
-    {
-        return $this->container['alertName'];
-    }
-
-    /**
-    * Sets alertName
-    *
-    * @param string $alertName 告警名称
-    *
-    * @return $this
-    */
-    public function setAlertName($alertName)
-    {
-        $this->container['alertName'] = $alertName;
-        return $this;
-    }
-
-    /**
-    * Gets alertDescription
-    *  告警描述
+    * Gets outputTableName
+    *  表名
     *
     * @return string|null
     */
-    public function getAlertDescription()
+    public function getOutputTableName()
     {
-        return $this->container['alertDescription'];
+        return $this->container['outputTableName'];
     }
 
     /**
-    * Sets alertDescription
+    * Sets outputTableName
     *
-    * @param string|null $alertDescription 告警描述
+    * @param string|null $outputTableName 表名
     *
     * @return $this
     */
-    public function setAlertDescription($alertDescription)
+    public function setOutputTableName($outputTableName)
     {
-        $this->container['alertDescription'] = $alertDescription;
+        $this->container['outputTableName'] = $outputTableName;
         return $this;
     }
 
     /**
-    * Gets alertRemediation
-    *  修复建议
+    * Gets cuQuotaAmount
+    *  数量
     *
-    * @return string|null
+    * @return float
     */
-    public function getAlertRemediation()
+    public function getCuQuotaAmount()
     {
-        return $this->container['alertRemediation'];
+        return $this->container['cuQuotaAmount'];
     }
 
     /**
-    * Sets alertRemediation
+    * Sets cuQuotaAmount
     *
-    * @param string|null $alertRemediation 修复建议
+    * @param float $cuQuotaAmount 数量
     *
     * @return $this
     */
-    public function setAlertRemediation($alertRemediation)
+    public function setCuQuotaAmount($cuQuotaAmount)
     {
-        $this->container['alertRemediation'] = $alertRemediation;
+        $this->container['cuQuotaAmount'] = $cuQuotaAmount;
         return $this;
     }
 
     /**
-    * Gets accumulatedTimes
-    *  执行次数
+    * Gets outputTableIds
+    *  输出表id列表
     *
-    * @return int|null
+    * @return string[]
     */
-    public function getAccumulatedTimes()
+    public function getOutputTableIds()
     {
-        return $this->container['accumulatedTimes'];
+        return $this->container['outputTableIds'];
     }
 
     /**
-    * Sets accumulatedTimes
+    * Sets outputTableIds
     *
-    * @param int|null $accumulatedTimes 执行次数
+    * @param string[] $outputTableIds 输出表id列表
     *
     * @return $this
     */
-    public function setAccumulatedTimes($accumulatedTimes)
+    public function setOutputTableIds($outputTableIds)
     {
-        $this->container['accumulatedTimes'] = $accumulatedTimes;
+        $this->container['outputTableIds'] = $outputTableIds;
+        return $this;
+    }
+
+    /**
+    * Gets outputTableNames
+    *  输出表名称列表
+    *
+    * @return string[]
+    */
+    public function getOutputTableNames()
+    {
+        return $this->container['outputTableNames'];
+    }
+
+    /**
+    * Sets outputTableNames
+    *
+    * @param string[] $outputTableNames 输出表名称列表
+    *
+    * @return $this
+    */
+    public function setOutputTableNames($outputTableNames)
+    {
+        $this->container['outputTableNames'] = $outputTableNames;
         return $this;
     }
 

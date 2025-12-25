@@ -35,7 +35,7 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
             'oldValue' => 'string',
             'newValue' => 'string',
             'updateResult' => 'string',
-            'applied' => 'string',
+            'applied' => 'bool',
             'updatedAt' => 'string',
             'appliedAt' => 'string'
     ];
@@ -359,7 +359,7 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
     * Gets applied
     *  **参数解释：** 是否生效。 **约束限制：** 不涉及。 **取值范围：** - true:已生效。 - false:未生效。 **默认取值：** 不涉及。
     *
-    * @return string
+    * @return bool
     */
     public function getApplied()
     {
@@ -369,7 +369,7 @@ class ConfigurationHistoryRsp implements ModelInterface, ArrayAccess
     /**
     * Sets applied
     *
-    * @param string $applied **参数解释：** 是否生效。 **约束限制：** 不涉及。 **取值范围：** - true:已生效。 - false:未生效。 **默认取值：** 不涉及。
+    * @param bool $applied **参数解释：** 是否生效。 **约束限制：** 不涉及。 **取值范围：** - true:已生效。 - false:未生效。 **默认取值：** 不涉及。
     *
     * @return $this
     */

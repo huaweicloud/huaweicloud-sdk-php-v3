@@ -22,24 +22,36 @@ class BusinessCardImageConfig implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * humanImage  人物照片，需要Base64编码。
     * logoImage  Logo图片，需要Base64编码。
+    * idCardImage1  身份证国徽面照片，需要Base64编码。
+    * idCardImage2  身份证人像面照片，需要Base64编码。
+    * authorizeUseHumanImage  授权使用照片
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'humanImage' => 'string',
-            'logoImage' => 'string'
+            'logoImage' => 'string',
+            'idCardImage1' => 'string',
+            'idCardImage2' => 'string',
+            'authorizeUseHumanImage' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * humanImage  人物照片，需要Base64编码。
     * logoImage  Logo图片，需要Base64编码。
+    * idCardImage1  身份证国徽面照片，需要Base64编码。
+    * idCardImage2  身份证人像面照片，需要Base64编码。
+    * authorizeUseHumanImage  授权使用照片
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'humanImage' => null,
-        'logoImage' => null
+        'logoImage' => null,
+        'idCardImage1' => null,
+        'idCardImage2' => null,
+        'authorizeUseHumanImage' => null
     ];
 
     /**
@@ -67,36 +79,54 @@ class BusinessCardImageConfig implements ModelInterface, ArrayAccess
     * and the value is the original name
     * humanImage  人物照片，需要Base64编码。
     * logoImage  Logo图片，需要Base64编码。
+    * idCardImage1  身份证国徽面照片，需要Base64编码。
+    * idCardImage2  身份证人像面照片，需要Base64编码。
+    * authorizeUseHumanImage  授权使用照片
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'humanImage' => 'human_image',
-            'logoImage' => 'logo_image'
+            'logoImage' => 'logo_image',
+            'idCardImage1' => 'id_card_image1',
+            'idCardImage2' => 'id_card_image2',
+            'authorizeUseHumanImage' => 'authorize_use_human_image'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * humanImage  人物照片，需要Base64编码。
     * logoImage  Logo图片，需要Base64编码。
+    * idCardImage1  身份证国徽面照片，需要Base64编码。
+    * idCardImage2  身份证人像面照片，需要Base64编码。
+    * authorizeUseHumanImage  授权使用照片
     *
     * @var string[]
     */
     protected static $setters = [
             'humanImage' => 'setHumanImage',
-            'logoImage' => 'setLogoImage'
+            'logoImage' => 'setLogoImage',
+            'idCardImage1' => 'setIdCardImage1',
+            'idCardImage2' => 'setIdCardImage2',
+            'authorizeUseHumanImage' => 'setAuthorizeUseHumanImage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * humanImage  人物照片，需要Base64编码。
     * logoImage  Logo图片，需要Base64编码。
+    * idCardImage1  身份证国徽面照片，需要Base64编码。
+    * idCardImage2  身份证人像面照片，需要Base64编码。
+    * authorizeUseHumanImage  授权使用照片
     *
     * @var string[]
     */
     protected static $getters = [
             'humanImage' => 'getHumanImage',
-            'logoImage' => 'getLogoImage'
+            'logoImage' => 'getLogoImage',
+            'idCardImage1' => 'getIdCardImage1',
+            'idCardImage2' => 'getIdCardImage2',
+            'authorizeUseHumanImage' => 'getAuthorizeUseHumanImage'
     ];
 
     /**
@@ -159,6 +189,9 @@ class BusinessCardImageConfig implements ModelInterface, ArrayAccess
     {
         $this->container['humanImage'] = isset($data['humanImage']) ? $data['humanImage'] : null;
         $this->container['logoImage'] = isset($data['logoImage']) ? $data['logoImage'] : null;
+        $this->container['idCardImage1'] = isset($data['idCardImage1']) ? $data['idCardImage1'] : null;
+        $this->container['idCardImage2'] = isset($data['idCardImage2']) ? $data['idCardImage2'] : null;
+        $this->container['authorizeUseHumanImage'] = isset($data['authorizeUseHumanImage']) ? $data['authorizeUseHumanImage'] : null;
     }
 
     /**
@@ -183,6 +216,18 @@ class BusinessCardImageConfig implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['logoImage']) && (mb_strlen($this->container['logoImage']) < 0)) {
                 $invalidProperties[] = "invalid value for 'logoImage', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['idCardImage1']) && (mb_strlen($this->container['idCardImage1']) > 31457280)) {
+                $invalidProperties[] = "invalid value for 'idCardImage1', the character length must be smaller than or equal to 31457280.";
+            }
+            if (!is_null($this->container['idCardImage1']) && (mb_strlen($this->container['idCardImage1']) < 1)) {
+                $invalidProperties[] = "invalid value for 'idCardImage1', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['idCardImage2']) && (mb_strlen($this->container['idCardImage2']) > 31457280)) {
+                $invalidProperties[] = "invalid value for 'idCardImage2', the character length must be smaller than or equal to 31457280.";
+            }
+            if (!is_null($this->container['idCardImage2']) && (mb_strlen($this->container['idCardImage2']) < 1)) {
+                $invalidProperties[] = "invalid value for 'idCardImage2', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -243,6 +288,78 @@ class BusinessCardImageConfig implements ModelInterface, ArrayAccess
     public function setLogoImage($logoImage)
     {
         $this->container['logoImage'] = $logoImage;
+        return $this;
+    }
+
+    /**
+    * Gets idCardImage1
+    *  身份证国徽面照片，需要Base64编码。
+    *
+    * @return string|null
+    */
+    public function getIdCardImage1()
+    {
+        return $this->container['idCardImage1'];
+    }
+
+    /**
+    * Sets idCardImage1
+    *
+    * @param string|null $idCardImage1 身份证国徽面照片，需要Base64编码。
+    *
+    * @return $this
+    */
+    public function setIdCardImage1($idCardImage1)
+    {
+        $this->container['idCardImage1'] = $idCardImage1;
+        return $this;
+    }
+
+    /**
+    * Gets idCardImage2
+    *  身份证人像面照片，需要Base64编码。
+    *
+    * @return string|null
+    */
+    public function getIdCardImage2()
+    {
+        return $this->container['idCardImage2'];
+    }
+
+    /**
+    * Sets idCardImage2
+    *
+    * @param string|null $idCardImage2 身份证人像面照片，需要Base64编码。
+    *
+    * @return $this
+    */
+    public function setIdCardImage2($idCardImage2)
+    {
+        $this->container['idCardImage2'] = $idCardImage2;
+        return $this;
+    }
+
+    /**
+    * Gets authorizeUseHumanImage
+    *  授权使用照片
+    *
+    * @return bool|null
+    */
+    public function getAuthorizeUseHumanImage()
+    {
+        return $this->container['authorizeUseHumanImage'];
+    }
+
+    /**
+    * Sets authorizeUseHumanImage
+    *
+    * @param bool|null $authorizeUseHumanImage 授权使用照片
+    *
+    * @return $this
+    */
+    public function setAuthorizeUseHumanImage($authorizeUseHumanImage)
+    {
+        $this->container['authorizeUseHumanImage'] = $authorizeUseHumanImage;
         return $this;
     }
 

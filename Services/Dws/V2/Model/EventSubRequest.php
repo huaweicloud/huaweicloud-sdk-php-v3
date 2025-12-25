@@ -21,7 +21,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  **参数解释**： 事件订阅名称。 **取值范围**： 不涉及。
-    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 支持cluster，backup，disaster-recovery。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
     * category  **参数解释**： 事件类别。 **取值范围**： 支持management、monitor、security、system alarm。
     * severity  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning。
@@ -29,7 +29,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
     * notificationTarget  **参数解释**： 消息通知地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
-    * notificationTargetType  **参数解释**： 消息通知类型只支持SMN。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -51,7 +51,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  **参数解释**： 事件订阅名称。 **取值范围**： 不涉及。
-    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 支持cluster，backup，disaster-recovery。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
     * category  **参数解释**： 事件类别。 **取值范围**： 支持management、monitor、security、system alarm。
     * severity  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning。
@@ -59,7 +59,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
     * notificationTarget  **参数解释**： 消息通知地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
-    * notificationTargetType  **参数解释**： 消息通知类型只支持SMN。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -102,7 +102,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  **参数解释**： 事件订阅名称。 **取值范围**： 不涉及。
-    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 支持cluster，backup，disaster-recovery。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
     * category  **参数解释**： 事件类别。 **取值范围**： 支持management、monitor、security、system alarm。
     * severity  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning。
@@ -110,7 +110,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
     * notificationTarget  **参数解释**： 消息通知地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
-    * notificationTargetType  **参数解释**： 消息通知类型只支持SMN。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -132,7 +132,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  **参数解释**： 事件订阅名称。 **取值范围**： 不涉及。
-    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 支持cluster，backup，disaster-recovery。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
     * category  **参数解释**： 事件类别。 **取值范围**： 支持management、monitor、security、system alarm。
     * severity  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning。
@@ -140,7 +140,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
     * notificationTarget  **参数解释**： 消息通知地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
-    * notificationTargetType  **参数解释**： 消息通知类型只支持SMN。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -162,7 +162,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  **参数解释**： 事件订阅名称。 **取值范围**： 不涉及。
-    * sourceType  **参数解释**： 事件源类型。 **取值范围**： 支持cluster，backup，disaster-recovery。
+    * sourceType  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
     * category  **参数解释**： 事件类别。 **取值范围**： 支持management、monitor、security、system alarm。
     * severity  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning。
@@ -170,7 +170,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
     * notificationTarget  **参数解释**： 消息通知地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
-    * notificationTargetType  **参数解释**： 消息通知类型只支持SMN。 **取值范围**： 不涉及。
+    * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -320,7 +320,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceType
-    *  **参数解释**： 事件源类型。 **取值范围**： 支持cluster，backup，disaster-recovery。
+    *  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     *
     * @return string|null
     */
@@ -332,7 +332,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sourceType
     *
-    * @param string|null $sourceType **参数解释**： 事件源类型。 **取值范围**： 支持cluster，backup，disaster-recovery。
+    * @param string|null $sourceType **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     *
     * @return $this
     */
@@ -512,7 +512,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationTargetType
-    *  **参数解释**： 消息通知类型只支持SMN。 **取值范围**： 不涉及。
+    *  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     *
     * @return string
     */
@@ -524,7 +524,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     /**
     * Sets notificationTargetType
     *
-    * @param string $notificationTargetType **参数解释**： 消息通知类型只支持SMN。 **取值范围**： 不涉及。
+    * @param string $notificationTargetType **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     *
     * @return $this
     */

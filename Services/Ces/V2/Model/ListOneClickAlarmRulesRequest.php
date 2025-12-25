@@ -20,7 +20,7 @@ class ListOneClickAlarmRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * oneClickAlarmId  一键告警ID
+    * oneClickAlarmId  **参数解释** 一键告警ID **约束限制** 不涉及 **取值范围** 长度为1到64字符，只能包含字母数字 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ListOneClickAlarmRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * oneClickAlarmId  一键告警ID
+    * oneClickAlarmId  **参数解释** 一键告警ID **约束限制** 不涉及 **取值范围** 长度为1到64字符，只能包含字母数字 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ListOneClickAlarmRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * oneClickAlarmId  一键告警ID
+    * oneClickAlarmId  **参数解释** 一键告警ID **约束限制** 不涉及 **取值范围** 长度为1到64字符，只能包含字母数字 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListOneClickAlarmRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * oneClickAlarmId  一键告警ID
+    * oneClickAlarmId  **参数解释** 一键告警ID **约束限制** 不涉及 **取值范围** 长度为1到64字符，只能包含字母数字 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListOneClickAlarmRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * oneClickAlarmId  一键告警ID
+    * oneClickAlarmId  **参数解释** 一键告警ID **约束限制** 不涉及 **取值范围** 长度为1到64字符，只能包含字母数字 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -167,6 +167,9 @@ class ListOneClickAlarmRulesRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['oneClickAlarmId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'oneClickAlarmId', the character length must be bigger than or equal to 1.";
             }
+            if (!preg_match("/^([a-z]|[A-Z]|[0-9]){1,64}$/", $this->container['oneClickAlarmId'])) {
+                $invalidProperties[] = "invalid value for 'oneClickAlarmId', must be conform to the pattern /^([a-z]|[A-Z]|[0-9]){1,64}$/.";
+            }
         return $invalidProperties;
     }
 
@@ -183,7 +186,7 @@ class ListOneClickAlarmRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets oneClickAlarmId
-    *  一键告警ID
+    *  **参数解释** 一键告警ID **约束限制** 不涉及 **取值范围** 长度为1到64字符，只能包含字母数字 **默认取值** 不涉及
     *
     * @return string
     */
@@ -195,7 +198,7 @@ class ListOneClickAlarmRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets oneClickAlarmId
     *
-    * @param string $oneClickAlarmId 一键告警ID
+    * @param string $oneClickAlarmId **参数解释** 一键告警ID **约束限制** 不涉及 **取值范围** 长度为1到64字符，只能包含字母数字 **默认取值** 不涉及
     *
     * @return $this
     */

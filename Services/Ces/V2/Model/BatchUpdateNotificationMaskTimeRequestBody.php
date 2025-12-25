@@ -20,7 +20,7 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * notificationMaskIds  关联编号
+    * notificationMaskIds  **参数解释**： 告警屏蔽ID列表 **约束限制**： 包含的告警屏蔽ID数量为[1,100]个。
     * maskType  maskType
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
@@ -42,7 +42,7 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * notificationMaskIds  关联编号
+    * notificationMaskIds  **参数解释**： 告警屏蔽ID列表 **约束限制**： 包含的告警屏蔽ID数量为[1,100]个。
     * maskType  maskType
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
@@ -85,7 +85,7 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * notificationMaskIds  关联编号
+    * notificationMaskIds  **参数解释**： 告警屏蔽ID列表 **约束限制**： 包含的告警屏蔽ID数量为[1,100]个。
     * maskType  maskType
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
@@ -107,7 +107,7 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * notificationMaskIds  关联编号
+    * notificationMaskIds  **参数解释**： 告警屏蔽ID列表 **约束限制**： 包含的告警屏蔽ID数量为[1,100]个。
     * maskType  maskType
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
@@ -129,7 +129,7 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * notificationMaskIds  关联编号
+    * notificationMaskIds  **参数解释**： 告警屏蔽ID列表 **约束限制**： 包含的告警屏蔽ID数量为[1,100]个。
     * maskType  maskType
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
@@ -267,7 +267,7 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
 
     /**
     * Gets notificationMaskIds
-    *  关联编号
+    *  **参数解释**： 告警屏蔽ID列表 **约束限制**： 包含的告警屏蔽ID数量为[1,100]个。
     *
     * @return string[]
     */
@@ -279,7 +279,7 @@ class BatchUpdateNotificationMaskTimeRequestBody implements ModelInterface, Arra
     /**
     * Sets notificationMaskIds
     *
-    * @param string[] $notificationMaskIds 关联编号
+    * @param string[] $notificationMaskIds **参数解释**： 告警屏蔽ID列表 **约束限制**： 包含的告警屏蔽ID数量为[1,100]个。
     *
     * @return $this
     */

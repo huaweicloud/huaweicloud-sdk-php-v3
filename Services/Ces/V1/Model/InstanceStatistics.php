@@ -20,9 +20,9 @@ class InstanceStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * unhealth  该资源分组中当前处在告警状态的资源个数。
-    * total  该资源分组中资源的总个数。
-    * typeStatistics  该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。
+    * unhealth  **参数解释**： 该资源分组中当前处在告警状态的资源个数。  **取值范围**： 在[0,2147483647]区间内。
+    * total  **参数解释**： 该资源分组中资源的总个数。  **取值范围**： 在[0,2147483647]区间内。
+    * typeStatistics  **参数解释**： 该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。 **取值范围**： 在[0,2147483647]区间内。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class InstanceStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * unhealth  该资源分组中当前处在告警状态的资源个数。
-    * total  该资源分组中资源的总个数。
-    * typeStatistics  该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。
+    * unhealth  **参数解释**： 该资源分组中当前处在告警状态的资源个数。  **取值范围**： 在[0,2147483647]区间内。
+    * total  **参数解释**： 该资源分组中资源的总个数。  **取值范围**： 在[0,2147483647]区间内。
+    * typeStatistics  **参数解释**： 该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。 **取值范围**： 在[0,2147483647]区间内。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class InstanceStatistics implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * unhealth  该资源分组中当前处在告警状态的资源个数。
-    * total  该资源分组中资源的总个数。
-    * typeStatistics  该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。
+    * unhealth  **参数解释**： 该资源分组中当前处在告警状态的资源个数。  **取值范围**： 在[0,2147483647]区间内。
+    * total  **参数解释**： 该资源分组中资源的总个数。  **取值范围**： 在[0,2147483647]区间内。
+    * typeStatistics  **参数解释**： 该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。 **取值范围**： 在[0,2147483647]区间内。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class InstanceStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * unhealth  该资源分组中当前处在告警状态的资源个数。
-    * total  该资源分组中资源的总个数。
-    * typeStatistics  该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。
+    * unhealth  **参数解释**： 该资源分组中当前处在告警状态的资源个数。  **取值范围**： 在[0,2147483647]区间内。
+    * total  **参数解释**： 该资源分组中资源的总个数。  **取值范围**： 在[0,2147483647]区间内。
+    * typeStatistics  **参数解释**： 该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。 **取值范围**： 在[0,2147483647]区间内。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class InstanceStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * unhealth  该资源分组中当前处在告警状态的资源个数。
-    * total  该资源分组中资源的总个数。
-    * typeStatistics  该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。
+    * unhealth  **参数解释**： 该资源分组中当前处在告警状态的资源个数。  **取值范围**： 在[0,2147483647]区间内。
+    * total  **参数解释**： 该资源分组中资源的总个数。  **取值范围**： 在[0,2147483647]区间内。
+    * typeStatistics  **参数解释**： 该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。 **取值范围**： 在[0,2147483647]区间内。
     *
     * @var string[]
     */
@@ -214,7 +214,7 @@ class InstanceStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Gets unhealth
-    *  该资源分组中当前处在告警状态的资源个数。
+    *  **参数解释**： 该资源分组中当前处在告警状态的资源个数。  **取值范围**： 在[0,2147483647]区间内。
     *
     * @return int|null
     */
@@ -226,7 +226,7 @@ class InstanceStatistics implements ModelInterface, ArrayAccess
     /**
     * Sets unhealth
     *
-    * @param int|null $unhealth 该资源分组中当前处在告警状态的资源个数。
+    * @param int|null $unhealth **参数解释**： 该资源分组中当前处在告警状态的资源个数。  **取值范围**： 在[0,2147483647]区间内。
     *
     * @return $this
     */
@@ -238,7 +238,7 @@ class InstanceStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  该资源分组中资源的总个数。
+    *  **参数解释**： 该资源分组中资源的总个数。  **取值范围**： 在[0,2147483647]区间内。
     *
     * @return int|null
     */
@@ -250,7 +250,7 @@ class InstanceStatistics implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 该资源分组中资源的总个数。
+    * @param int|null $total **参数解释**： 该资源分组中资源的总个数。  **取值范围**： 在[0,2147483647]区间内。
     *
     * @return $this
     */
@@ -262,7 +262,7 @@ class InstanceStatistics implements ModelInterface, ArrayAccess
 
     /**
     * Gets typeStatistics
-    *  该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。
+    *  **参数解释**： 该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。 **取值范围**： 在[0,2147483647]区间内。
     *
     * @return int|null
     */
@@ -274,7 +274,7 @@ class InstanceStatistics implements ModelInterface, ArrayAccess
     /**
     * Sets typeStatistics
     *
-    * @param int|null $typeStatistics 该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。
+    * @param int|null $typeStatistics **参数解释**： 该资源分组中选择的资源类型个数，如资源分组添加了弹性云服务、弹性公网IP和带宽则值为2。 **取值范围**： 在[0,2147483647]区间内。
     *
     * @return $this
     */

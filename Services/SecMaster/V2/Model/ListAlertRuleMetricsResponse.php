@@ -21,30 +21,30 @@ class ListAlertRuleMetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * category  指标类型，分组数量。Metric category. GROUP_COUNT.
-    * metric  指标值。Metric value.
-    * xRequestId  xRequestId
+    * cuUsage  cuUsage
+    * alertSeverities  alertSeverities
+    * metricsStatus  metricsStatus
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'category' => 'string',
-            'metric' => 'map[string,float]',
-            'xRequestId' => 'string'
+            'cuUsage' => '\HuaweiCloud\SDK\SecMaster\V2\Model\CuUsage',
+            'alertSeverities' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertSeverities',
+            'metricsStatus' => '\HuaweiCloud\SDK\SecMaster\V2\Model\MetricsStatus'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * category  指标类型，分组数量。Metric category. GROUP_COUNT.
-    * metric  指标值。Metric value.
-    * xRequestId  xRequestId
+    * cuUsage  cuUsage
+    * alertSeverities  alertSeverities
+    * metricsStatus  metricsStatus
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'category' => null,
-        'metric' => null,
-        'xRequestId' => null
+        'cuUsage' => null,
+        'alertSeverities' => null,
+        'metricsStatus' => null
     ];
 
     /**
@@ -70,44 +70,44 @@ class ListAlertRuleMetricsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * category  指标类型，分组数量。Metric category. GROUP_COUNT.
-    * metric  指标值。Metric value.
-    * xRequestId  xRequestId
+    * cuUsage  cuUsage
+    * alertSeverities  alertSeverities
+    * metricsStatus  metricsStatus
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'category' => 'category',
-            'metric' => 'metric',
-            'xRequestId' => 'X-request-id'
+            'cuUsage' => 'cu_usage',
+            'alertSeverities' => 'alert_severities',
+            'metricsStatus' => 'metrics_status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * category  指标类型，分组数量。Metric category. GROUP_COUNT.
-    * metric  指标值。Metric value.
-    * xRequestId  xRequestId
+    * cuUsage  cuUsage
+    * alertSeverities  alertSeverities
+    * metricsStatus  metricsStatus
     *
     * @var string[]
     */
     protected static $setters = [
-            'category' => 'setCategory',
-            'metric' => 'setMetric',
-            'xRequestId' => 'setXRequestId'
+            'cuUsage' => 'setCuUsage',
+            'alertSeverities' => 'setAlertSeverities',
+            'metricsStatus' => 'setMetricsStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * category  指标类型，分组数量。Metric category. GROUP_COUNT.
-    * metric  指标值。Metric value.
-    * xRequestId  xRequestId
+    * cuUsage  cuUsage
+    * alertSeverities  alertSeverities
+    * metricsStatus  metricsStatus
     *
     * @var string[]
     */
     protected static $getters = [
-            'category' => 'getCategory',
-            'metric' => 'getMetric',
-            'xRequestId' => 'getXRequestId'
+            'cuUsage' => 'getCuUsage',
+            'alertSeverities' => 'getAlertSeverities',
+            'metricsStatus' => 'getMetricsStatus'
     ];
 
     /**
@@ -150,20 +150,7 @@ class ListAlertRuleMetricsResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const CATEGORY_GROUP_COUNT = 'GROUP_COUNT';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getCategoryAllowableValues()
-    {
-        return [
-            self::CATEGORY_GROUP_COUNT,
-        ];
-    }
 
 
     /**
@@ -181,9 +168,9 @@ class ListAlertRuleMetricsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
-        $this->container['metric'] = isset($data['metric']) ? $data['metric'] : null;
-        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
+        $this->container['cuUsage'] = isset($data['cuUsage']) ? $data['cuUsage'] : null;
+        $this->container['alertSeverities'] = isset($data['alertSeverities']) ? $data['alertSeverities'] : null;
+        $this->container['metricsStatus'] = isset($data['metricsStatus']) ? $data['metricsStatus'] : null;
     }
 
     /**
@@ -194,14 +181,6 @@ class ListAlertRuleMetricsResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getCategoryAllowableValues();
-                if (!is_null($this->container['category']) && !in_array($this->container['category'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'category', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -217,74 +196,74 @@ class ListAlertRuleMetricsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets category
-    *  指标类型，分组数量。Metric category. GROUP_COUNT.
+    * Gets cuUsage
+    *  cuUsage
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\CuUsage|null
     */
-    public function getCategory()
+    public function getCuUsage()
     {
-        return $this->container['category'];
+        return $this->container['cuUsage'];
     }
 
     /**
-    * Sets category
+    * Sets cuUsage
     *
-    * @param string|null $category 指标类型，分组数量。Metric category. GROUP_COUNT.
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\CuUsage|null $cuUsage cuUsage
     *
     * @return $this
     */
-    public function setCategory($category)
+    public function setCuUsage($cuUsage)
     {
-        $this->container['category'] = $category;
+        $this->container['cuUsage'] = $cuUsage;
         return $this;
     }
 
     /**
-    * Gets metric
-    *  指标值。Metric value.
+    * Gets alertSeverities
+    *  alertSeverities
     *
-    * @return map[string,float]|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertSeverities|null
     */
-    public function getMetric()
+    public function getAlertSeverities()
     {
-        return $this->container['metric'];
+        return $this->container['alertSeverities'];
     }
 
     /**
-    * Sets metric
+    * Sets alertSeverities
     *
-    * @param map[string,float]|null $metric 指标值。Metric value.
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertSeverities|null $alertSeverities alertSeverities
     *
     * @return $this
     */
-    public function setMetric($metric)
+    public function setAlertSeverities($alertSeverities)
     {
-        $this->container['metric'] = $metric;
+        $this->container['alertSeverities'] = $alertSeverities;
         return $this;
     }
 
     /**
-    * Gets xRequestId
-    *  xRequestId
+    * Gets metricsStatus
+    *  metricsStatus
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\MetricsStatus|null
     */
-    public function getXRequestId()
+    public function getMetricsStatus()
     {
-        return $this->container['xRequestId'];
+        return $this->container['metricsStatus'];
     }
 
     /**
-    * Sets xRequestId
+    * Sets metricsStatus
     *
-    * @param string|null $xRequestId xRequestId
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\MetricsStatus|null $metricsStatus metricsStatus
     *
     * @return $this
     */
-    public function setXRequestId($xRequestId)
+    public function setMetricsStatus($metricsStatus)
     {
-        $this->container['xRequestId'] = $xRequestId;
+        $this->container['metricsStatus'] = $metricsStatus;
         return $this;
     }
 

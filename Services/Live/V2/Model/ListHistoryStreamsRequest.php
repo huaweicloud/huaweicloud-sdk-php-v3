@@ -20,7 +20,7 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domain  推流域名。
+    * domain  推流域名列表，最多支持查询100个域名，多个域名以逗号分隔。  若查询多个域名，则返回的是多个域名合并数据。
     * app  应用名称。
     * stream  流名称。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天。  若参数为空，默认查询1天数据。
@@ -31,7 +31,7 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'domain' => 'string',
+            'domain' => 'string[]',
             'app' => 'string',
             'stream' => 'string',
             'startTime' => 'string',
@@ -42,7 +42,7 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domain  推流域名。
+    * domain  推流域名列表，最多支持查询100个域名，多个域名以逗号分隔。  若查询多个域名，则返回的是多个域名合并数据。
     * app  应用名称。
     * stream  流名称。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天。  若参数为空，默认查询1天数据。
@@ -85,7 +85,7 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domain  推流域名。
+    * domain  推流域名列表，最多支持查询100个域名，多个域名以逗号分隔。  若查询多个域名，则返回的是多个域名合并数据。
     * app  应用名称。
     * stream  流名称。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天。  若参数为空，默认查询1天数据。
@@ -107,7 +107,7 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domain  推流域名。
+    * domain  推流域名列表，最多支持查询100个域名，多个域名以逗号分隔。  若查询多个域名，则返回的是多个域名合并数据。
     * app  应用名称。
     * stream  流名称。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天。  若参数为空，默认查询1天数据。
@@ -129,7 +129,7 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domain  推流域名。
+    * domain  推流域名列表，最多支持查询100个域名，多个域名以逗号分隔。  若查询多个域名，则返回的是多个域名合并数据。
     * app  应用名称。
     * stream  流名称。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天。  若参数为空，默认查询1天数据。
@@ -227,12 +227,6 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
         if ($this->container['domain'] === null) {
             $invalidProperties[] = "'domain' can't be null";
         }
-            if ((mb_strlen($this->container['domain']) > 64)) {
-                $invalidProperties[] = "invalid value for 'domain', the character length must be smaller than or equal to 64.";
-            }
-            if ((mb_strlen($this->container['domain']) < 1)) {
-                $invalidProperties[] = "invalid value for 'domain', the character length must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['app']) && (mb_strlen($this->container['app']) > 128)) {
                 $invalidProperties[] = "invalid value for 'app', the character length must be smaller than or equal to 128.";
             }
@@ -285,9 +279,9 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets domain
-    *  推流域名。
+    *  推流域名列表，最多支持查询100个域名，多个域名以逗号分隔。  若查询多个域名，则返回的是多个域名合并数据。
     *
-    * @return string
+    * @return string[]
     */
     public function getDomain()
     {
@@ -297,7 +291,7 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets domain
     *
-    * @param string $domain 推流域名。
+    * @param string[] $domain 推流域名列表，最多支持查询100个域名，多个域名以逗号分隔。  若查询多个域名，则返回的是多个域名合并数据。
     *
     * @return $this
     */

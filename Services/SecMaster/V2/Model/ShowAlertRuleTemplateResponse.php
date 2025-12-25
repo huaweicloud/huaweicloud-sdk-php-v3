@@ -21,70 +21,98 @@ class ShowAlertRuleTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * templateId  告警规则模板 ID。Alert rule template ID.
-    * updateTime  更新时间。Update time.
-    * templateName  告警规则模板名称。Alert rule template name.
-    * dataSource  数据源。Data source.
-    * version  版本。Version
-    * query  查询语句。Query.
-    * queryType  查询语法，SQL。Query type. SQL.
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    * customProperties  自定义扩展信息。Custom properties.
-    * eventGrouping  告警分组。Event grouping.
-    * schedule  schedule
-    * triggers  告警触发规则。Alert triggers.
-    * xRequestId  xRequestId
+    * accumulatedTimes  累计次数
+    * createBy  UUID
+    * createTime  毫秒时间戳
+    * cuQuotaAmount  数量
+    * description  告警规则模板描述
+    * environment  environment
+    * jobMode  jobMode
+    * jobModeSetting  jobModeSetting
+    * jobOutputSetting  jobOutputSetting
+    * processError  processError
+    * processStatus  processStatus
+    * queryType  queryType
+    * script  Script 脚本
+    * status  status
+    * tableName  表名称
+    * templateId  UUID
+    * templateName  模板名称
+    * triggers  触发器数组
+    * updateBy  UUID
+    * updateTime  毫秒时间戳
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'accumulatedTimes' => 'int',
+            'createBy' => 'string',
+            'createTime' => 'int',
+            'cuQuotaAmount' => 'float',
+            'description' => 'string',
+            'environment' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertRuleEnvironment',
+            'jobMode' => '\HuaweiCloud\SDK\SecMaster\V2\Model\IsapJobMode',
+            'jobModeSetting' => '\HuaweiCloud\SDK\SecMaster\V2\Model\IsapJobModeSettingVo',
+            'jobOutputSetting' => '\HuaweiCloud\SDK\SecMaster\V2\Model\IsapJobOutputSetting',
+            'processError' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ProcessError',
+            'processStatus' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ProcessStatus',
+            'queryType' => '\HuaweiCloud\SDK\SecMaster\V2\Model\QueryType',
+            'script' => 'string',
+            'status' => '\HuaweiCloud\SDK\SecMaster\V2\Model\Status',
+            'tableName' => 'string',
             'templateId' => 'string',
-            'updateTime' => 'int',
             'templateName' => 'string',
-            'dataSource' => 'string',
-            'version' => 'string',
-            'query' => 'string',
-            'queryType' => 'string',
-            'severity' => 'string',
-            'customProperties' => 'map[string,string]',
-            'eventGrouping' => 'bool',
-            'schedule' => '\HuaweiCloud\SDK\SecMaster\V2\Model\Schedule',
-            'triggers' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertRuleTrigger[]',
-            'xRequestId' => 'string'
+            'triggers' => '\HuaweiCloud\SDK\SecMaster\V2\Model\Trigger[]',
+            'updateBy' => 'string',
+            'updateTime' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * templateId  告警规则模板 ID。Alert rule template ID.
-    * updateTime  更新时间。Update time.
-    * templateName  告警规则模板名称。Alert rule template name.
-    * dataSource  数据源。Data source.
-    * version  版本。Version
-    * query  查询语句。Query.
-    * queryType  查询语法，SQL。Query type. SQL.
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    * customProperties  自定义扩展信息。Custom properties.
-    * eventGrouping  告警分组。Event grouping.
-    * schedule  schedule
-    * triggers  告警触发规则。Alert triggers.
-    * xRequestId  xRequestId
+    * accumulatedTimes  累计次数
+    * createBy  UUID
+    * createTime  毫秒时间戳
+    * cuQuotaAmount  数量
+    * description  告警规则模板描述
+    * environment  environment
+    * jobMode  jobMode
+    * jobModeSetting  jobModeSetting
+    * jobOutputSetting  jobOutputSetting
+    * processError  processError
+    * processStatus  processStatus
+    * queryType  queryType
+    * script  Script 脚本
+    * status  status
+    * tableName  表名称
+    * templateId  UUID
+    * templateName  模板名称
+    * triggers  触发器数组
+    * updateBy  UUID
+    * updateTime  毫秒时间戳
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'templateId' => null,
-        'updateTime' => 'int64',
-        'templateName' => null,
-        'dataSource' => null,
-        'version' => null,
-        'query' => null,
+        'accumulatedTimes' => 'int32',
+        'createBy' => null,
+        'createTime' => 'int64',
+        'cuQuotaAmount' => null,
+        'description' => null,
+        'environment' => null,
+        'jobMode' => null,
+        'jobModeSetting' => null,
+        'jobOutputSetting' => null,
+        'processError' => null,
+        'processStatus' => null,
         'queryType' => null,
-        'severity' => null,
-        'customProperties' => null,
-        'eventGrouping' => null,
-        'schedule' => null,
+        'script' => null,
+        'status' => null,
+        'tableName' => null,
+        'templateId' => null,
+        'templateName' => null,
         'triggers' => null,
-        'xRequestId' => null
+        'updateBy' => null,
+        'updateTime' => 'int64'
     ];
 
     /**
@@ -110,104 +138,146 @@ class ShowAlertRuleTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * templateId  告警规则模板 ID。Alert rule template ID.
-    * updateTime  更新时间。Update time.
-    * templateName  告警规则模板名称。Alert rule template name.
-    * dataSource  数据源。Data source.
-    * version  版本。Version
-    * query  查询语句。Query.
-    * queryType  查询语法，SQL。Query type. SQL.
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    * customProperties  自定义扩展信息。Custom properties.
-    * eventGrouping  告警分组。Event grouping.
-    * schedule  schedule
-    * triggers  告警触发规则。Alert triggers.
-    * xRequestId  xRequestId
+    * accumulatedTimes  累计次数
+    * createBy  UUID
+    * createTime  毫秒时间戳
+    * cuQuotaAmount  数量
+    * description  告警规则模板描述
+    * environment  environment
+    * jobMode  jobMode
+    * jobModeSetting  jobModeSetting
+    * jobOutputSetting  jobOutputSetting
+    * processError  processError
+    * processStatus  processStatus
+    * queryType  queryType
+    * script  Script 脚本
+    * status  status
+    * tableName  表名称
+    * templateId  UUID
+    * templateName  模板名称
+    * triggers  触发器数组
+    * updateBy  UUID
+    * updateTime  毫秒时间戳
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'templateId' => 'template_id',
-            'updateTime' => 'update_time',
-            'templateName' => 'template_name',
-            'dataSource' => 'data_source',
-            'version' => 'version',
-            'query' => 'query',
+            'accumulatedTimes' => 'accumulated_times',
+            'createBy' => 'create_by',
+            'createTime' => 'create_time',
+            'cuQuotaAmount' => 'cu_quota_amount',
+            'description' => 'description',
+            'environment' => 'environment',
+            'jobMode' => 'job_mode',
+            'jobModeSetting' => 'job_mode_setting',
+            'jobOutputSetting' => 'job_output_setting',
+            'processError' => 'process_error',
+            'processStatus' => 'process_status',
             'queryType' => 'query_type',
-            'severity' => 'severity',
-            'customProperties' => 'custom_properties',
-            'eventGrouping' => 'event_grouping',
-            'schedule' => 'schedule',
+            'script' => 'script',
+            'status' => 'status',
+            'tableName' => 'table_name',
+            'templateId' => 'template_id',
+            'templateName' => 'template_name',
             'triggers' => 'triggers',
-            'xRequestId' => 'X-request-id'
+            'updateBy' => 'update_by',
+            'updateTime' => 'update_time'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * templateId  告警规则模板 ID。Alert rule template ID.
-    * updateTime  更新时间。Update time.
-    * templateName  告警规则模板名称。Alert rule template name.
-    * dataSource  数据源。Data source.
-    * version  版本。Version
-    * query  查询语句。Query.
-    * queryType  查询语法，SQL。Query type. SQL.
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    * customProperties  自定义扩展信息。Custom properties.
-    * eventGrouping  告警分组。Event grouping.
-    * schedule  schedule
-    * triggers  告警触发规则。Alert triggers.
-    * xRequestId  xRequestId
+    * accumulatedTimes  累计次数
+    * createBy  UUID
+    * createTime  毫秒时间戳
+    * cuQuotaAmount  数量
+    * description  告警规则模板描述
+    * environment  environment
+    * jobMode  jobMode
+    * jobModeSetting  jobModeSetting
+    * jobOutputSetting  jobOutputSetting
+    * processError  processError
+    * processStatus  processStatus
+    * queryType  queryType
+    * script  Script 脚本
+    * status  status
+    * tableName  表名称
+    * templateId  UUID
+    * templateName  模板名称
+    * triggers  触发器数组
+    * updateBy  UUID
+    * updateTime  毫秒时间戳
     *
     * @var string[]
     */
     protected static $setters = [
-            'templateId' => 'setTemplateId',
-            'updateTime' => 'setUpdateTime',
-            'templateName' => 'setTemplateName',
-            'dataSource' => 'setDataSource',
-            'version' => 'setVersion',
-            'query' => 'setQuery',
+            'accumulatedTimes' => 'setAccumulatedTimes',
+            'createBy' => 'setCreateBy',
+            'createTime' => 'setCreateTime',
+            'cuQuotaAmount' => 'setCuQuotaAmount',
+            'description' => 'setDescription',
+            'environment' => 'setEnvironment',
+            'jobMode' => 'setJobMode',
+            'jobModeSetting' => 'setJobModeSetting',
+            'jobOutputSetting' => 'setJobOutputSetting',
+            'processError' => 'setProcessError',
+            'processStatus' => 'setProcessStatus',
             'queryType' => 'setQueryType',
-            'severity' => 'setSeverity',
-            'customProperties' => 'setCustomProperties',
-            'eventGrouping' => 'setEventGrouping',
-            'schedule' => 'setSchedule',
+            'script' => 'setScript',
+            'status' => 'setStatus',
+            'tableName' => 'setTableName',
+            'templateId' => 'setTemplateId',
+            'templateName' => 'setTemplateName',
             'triggers' => 'setTriggers',
-            'xRequestId' => 'setXRequestId'
+            'updateBy' => 'setUpdateBy',
+            'updateTime' => 'setUpdateTime'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * templateId  告警规则模板 ID。Alert rule template ID.
-    * updateTime  更新时间。Update time.
-    * templateName  告警规则模板名称。Alert rule template name.
-    * dataSource  数据源。Data source.
-    * version  版本。Version
-    * query  查询语句。Query.
-    * queryType  查询语法，SQL。Query type. SQL.
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    * customProperties  自定义扩展信息。Custom properties.
-    * eventGrouping  告警分组。Event grouping.
-    * schedule  schedule
-    * triggers  告警触发规则。Alert triggers.
-    * xRequestId  xRequestId
+    * accumulatedTimes  累计次数
+    * createBy  UUID
+    * createTime  毫秒时间戳
+    * cuQuotaAmount  数量
+    * description  告警规则模板描述
+    * environment  environment
+    * jobMode  jobMode
+    * jobModeSetting  jobModeSetting
+    * jobOutputSetting  jobOutputSetting
+    * processError  processError
+    * processStatus  processStatus
+    * queryType  queryType
+    * script  Script 脚本
+    * status  status
+    * tableName  表名称
+    * templateId  UUID
+    * templateName  模板名称
+    * triggers  触发器数组
+    * updateBy  UUID
+    * updateTime  毫秒时间戳
     *
     * @var string[]
     */
     protected static $getters = [
-            'templateId' => 'getTemplateId',
-            'updateTime' => 'getUpdateTime',
-            'templateName' => 'getTemplateName',
-            'dataSource' => 'getDataSource',
-            'version' => 'getVersion',
-            'query' => 'getQuery',
+            'accumulatedTimes' => 'getAccumulatedTimes',
+            'createBy' => 'getCreateBy',
+            'createTime' => 'getCreateTime',
+            'cuQuotaAmount' => 'getCuQuotaAmount',
+            'description' => 'getDescription',
+            'environment' => 'getEnvironment',
+            'jobMode' => 'getJobMode',
+            'jobModeSetting' => 'getJobModeSetting',
+            'jobOutputSetting' => 'getJobOutputSetting',
+            'processError' => 'getProcessError',
+            'processStatus' => 'getProcessStatus',
             'queryType' => 'getQueryType',
-            'severity' => 'getSeverity',
-            'customProperties' => 'getCustomProperties',
-            'eventGrouping' => 'getEventGrouping',
-            'schedule' => 'getSchedule',
+            'script' => 'getScript',
+            'status' => 'getStatus',
+            'tableName' => 'getTableName',
+            'templateId' => 'getTemplateId',
+            'templateName' => 'getTemplateName',
             'triggers' => 'getTriggers',
-            'xRequestId' => 'getXRequestId'
+            'updateBy' => 'getUpdateBy',
+            'updateTime' => 'getUpdateTime'
     ];
 
     /**
@@ -250,41 +320,7 @@ class ShowAlertRuleTemplateResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const QUERY_TYPE_SQL = 'SQL';
-    const SEVERITY_TIPS = 'TIPS';
-    const SEVERITY_LOW = 'LOW';
-    const SEVERITY_MEDIUM = 'MEDIUM';
-    const SEVERITY_HIGH = 'HIGH';
-    const SEVERITY_FATAL = 'FATAL';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getQueryTypeAllowableValues()
-    {
-        return [
-            self::QUERY_TYPE_SQL,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getSeverityAllowableValues()
-    {
-        return [
-            self::SEVERITY_TIPS,
-            self::SEVERITY_LOW,
-            self::SEVERITY_MEDIUM,
-            self::SEVERITY_HIGH,
-            self::SEVERITY_FATAL,
-        ];
-    }
 
 
     /**
@@ -302,19 +338,26 @@ class ShowAlertRuleTemplateResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
-        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
-        $this->container['templateName'] = isset($data['templateName']) ? $data['templateName'] : null;
-        $this->container['dataSource'] = isset($data['dataSource']) ? $data['dataSource'] : null;
-        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
-        $this->container['query'] = isset($data['query']) ? $data['query'] : null;
+        $this->container['accumulatedTimes'] = isset($data['accumulatedTimes']) ? $data['accumulatedTimes'] : null;
+        $this->container['createBy'] = isset($data['createBy']) ? $data['createBy'] : null;
+        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['cuQuotaAmount'] = isset($data['cuQuotaAmount']) ? $data['cuQuotaAmount'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['environment'] = isset($data['environment']) ? $data['environment'] : null;
+        $this->container['jobMode'] = isset($data['jobMode']) ? $data['jobMode'] : null;
+        $this->container['jobModeSetting'] = isset($data['jobModeSetting']) ? $data['jobModeSetting'] : null;
+        $this->container['jobOutputSetting'] = isset($data['jobOutputSetting']) ? $data['jobOutputSetting'] : null;
+        $this->container['processError'] = isset($data['processError']) ? $data['processError'] : null;
+        $this->container['processStatus'] = isset($data['processStatus']) ? $data['processStatus'] : null;
         $this->container['queryType'] = isset($data['queryType']) ? $data['queryType'] : null;
-        $this->container['severity'] = isset($data['severity']) ? $data['severity'] : null;
-        $this->container['customProperties'] = isset($data['customProperties']) ? $data['customProperties'] : null;
-        $this->container['eventGrouping'] = isset($data['eventGrouping']) ? $data['eventGrouping'] : null;
-        $this->container['schedule'] = isset($data['schedule']) ? $data['schedule'] : null;
+        $this->container['script'] = isset($data['script']) ? $data['script'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['tableName'] = isset($data['tableName']) ? $data['tableName'] : null;
+        $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
+        $this->container['templateName'] = isset($data['templateName']) ? $data['templateName'] : null;
         $this->container['triggers'] = isset($data['triggers']) ? $data['triggers'] : null;
-        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
+        $this->container['updateBy'] = isset($data['updateBy']) ? $data['updateBy'] : null;
+        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
     }
 
     /**
@@ -325,69 +368,74 @@ class ShowAlertRuleTemplateResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['accumulatedTimes']) && ($this->container['accumulatedTimes'] > 500)) {
+                $invalidProperties[] = "invalid value for 'accumulatedTimes', must be smaller than or equal to 500.";
+            }
+            if (!is_null($this->container['accumulatedTimes']) && ($this->container['accumulatedTimes'] < 0)) {
+                $invalidProperties[] = "invalid value for 'accumulatedTimes', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['createBy']) && (mb_strlen($this->container['createBy']) > 36)) {
+                $invalidProperties[] = "invalid value for 'createBy', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['createBy']) && (mb_strlen($this->container['createBy']) < 36)) {
+                $invalidProperties[] = "invalid value for 'createBy', the character length must be bigger than or equal to 36.";
+            }
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] > 2366841600000)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 2366841600000.";
+            }
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['cuQuotaAmount']) && ($this->container['cuQuotaAmount'] > 5E+2)) {
+                $invalidProperties[] = "invalid value for 'cuQuotaAmount', must be smaller than or equal to 5E+2.";
+            }
+            if (!is_null($this->container['cuQuotaAmount']) && ($this->container['cuQuotaAmount'] < 0.1)) {
+                $invalidProperties[] = "invalid value for 'cuQuotaAmount', must be bigger than or equal to 0.1.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 1)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['script']) && (mb_strlen($this->container['script']) > 10240)) {
+                $invalidProperties[] = "invalid value for 'script', the character length must be smaller than or equal to 10240.";
+            }
+            if (!is_null($this->container['script']) && (mb_strlen($this->container['script']) < 1)) {
+                $invalidProperties[] = "invalid value for 'script', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['tableName']) && (mb_strlen($this->container['tableName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'tableName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['tableName']) && (mb_strlen($this->container['tableName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'tableName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['tableName']) && !preg_match("/^(?!_)[a-zA-Z][a-zA-Z0-9_]*(?<!_)$/", $this->container['tableName'])) {
+                $invalidProperties[] = "invalid value for 'tableName', must be conform to the pattern /^(?!_)[a-zA-Z][a-zA-Z0-9_]*(?<!_)$/.";
+            }
             if (!is_null($this->container['templateId']) && (mb_strlen($this->container['templateId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'templateId', the character length must be smaller than or equal to 36.";
             }
             if (!is_null($this->container['templateId']) && (mb_strlen($this->container['templateId']) < 36)) {
                 $invalidProperties[] = "invalid value for 'templateId', the character length must be bigger than or equal to 36.";
             }
-            if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] > 9223372036854775807)) {
-                $invalidProperties[] = "invalid value for 'updateTime', must be smaller than or equal to 9223372036854775807.";
-            }
-            if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] < 0)) {
-                $invalidProperties[] = "invalid value for 'updateTime', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['templateName']) && (mb_strlen($this->container['templateName']) > 255)) {
-                $invalidProperties[] = "invalid value for 'templateName', the character length must be smaller than or equal to 255.";
+            if (!is_null($this->container['templateName']) && (mb_strlen($this->container['templateName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'templateName', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['templateName']) && (mb_strlen($this->container['templateName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'templateName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['dataSource']) && (mb_strlen($this->container['dataSource']) > 255)) {
-                $invalidProperties[] = "invalid value for 'dataSource', the character length must be smaller than or equal to 255.";
+            if (!is_null($this->container['updateBy']) && (mb_strlen($this->container['updateBy']) > 36)) {
+                $invalidProperties[] = "invalid value for 'updateBy', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['dataSource']) && (mb_strlen($this->container['dataSource']) < 1)) {
-                $invalidProperties[] = "invalid value for 'dataSource', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['updateBy']) && (mb_strlen($this->container['updateBy']) < 36)) {
+                $invalidProperties[] = "invalid value for 'updateBy', the character length must be bigger than or equal to 36.";
             }
-            if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) > 255)) {
-                $invalidProperties[] = "invalid value for 'version', the character length must be smaller than or equal to 255.";
+            if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] > 2366841600000)) {
+                $invalidProperties[] = "invalid value for 'updateTime', must be smaller than or equal to 2366841600000.";
             }
-            if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) < 1)) {
-                $invalidProperties[] = "invalid value for 'version', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['query']) && (mb_strlen($this->container['query']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'query', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['query']) && (mb_strlen($this->container['query']) < 1)) {
-                $invalidProperties[] = "invalid value for 'query', the character length must be bigger than or equal to 1.";
-            }
-            $allowedValues = $this->getQueryTypeAllowableValues();
-                if (!is_null($this->container['queryType']) && !in_array($this->container['queryType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'queryType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if (!is_null($this->container['queryType']) && (mb_strlen($this->container['queryType']) > 255)) {
-                $invalidProperties[] = "invalid value for 'queryType', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['queryType']) && (mb_strlen($this->container['queryType']) < 1)) {
-                $invalidProperties[] = "invalid value for 'queryType', the character length must be bigger than or equal to 1.";
-            }
-            $allowedValues = $this->getSeverityAllowableValues();
-                if (!is_null($this->container['severity']) && !in_array($this->container['severity'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'severity', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) > 255)) {
-                $invalidProperties[] = "invalid value for 'severity', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) < 1)) {
-                $invalidProperties[] = "invalid value for 'severity', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'updateTime', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -404,8 +452,368 @@ class ShowAlertRuleTemplateResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets accumulatedTimes
+    *  累计次数
+    *
+    * @return int|null
+    */
+    public function getAccumulatedTimes()
+    {
+        return $this->container['accumulatedTimes'];
+    }
+
+    /**
+    * Sets accumulatedTimes
+    *
+    * @param int|null $accumulatedTimes 累计次数
+    *
+    * @return $this
+    */
+    public function setAccumulatedTimes($accumulatedTimes)
+    {
+        $this->container['accumulatedTimes'] = $accumulatedTimes;
+        return $this;
+    }
+
+    /**
+    * Gets createBy
+    *  UUID
+    *
+    * @return string|null
+    */
+    public function getCreateBy()
+    {
+        return $this->container['createBy'];
+    }
+
+    /**
+    * Sets createBy
+    *
+    * @param string|null $createBy UUID
+    *
+    * @return $this
+    */
+    public function setCreateBy($createBy)
+    {
+        $this->container['createBy'] = $createBy;
+        return $this;
+    }
+
+    /**
+    * Gets createTime
+    *  毫秒时间戳
+    *
+    * @return int|null
+    */
+    public function getCreateTime()
+    {
+        return $this->container['createTime'];
+    }
+
+    /**
+    * Sets createTime
+    *
+    * @param int|null $createTime 毫秒时间戳
+    *
+    * @return $this
+    */
+    public function setCreateTime($createTime)
+    {
+        $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets cuQuotaAmount
+    *  数量
+    *
+    * @return float|null
+    */
+    public function getCuQuotaAmount()
+    {
+        return $this->container['cuQuotaAmount'];
+    }
+
+    /**
+    * Sets cuQuotaAmount
+    *
+    * @param float|null $cuQuotaAmount 数量
+    *
+    * @return $this
+    */
+    public function setCuQuotaAmount($cuQuotaAmount)
+    {
+        $this->container['cuQuotaAmount'] = $cuQuotaAmount;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  告警规则模板描述
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 告警规则模板描述
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets environment
+    *  environment
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRuleEnvironment|null
+    */
+    public function getEnvironment()
+    {
+        return $this->container['environment'];
+    }
+
+    /**
+    * Sets environment
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRuleEnvironment|null $environment environment
+    *
+    * @return $this
+    */
+    public function setEnvironment($environment)
+    {
+        $this->container['environment'] = $environment;
+        return $this;
+    }
+
+    /**
+    * Gets jobMode
+    *  jobMode
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\IsapJobMode|null
+    */
+    public function getJobMode()
+    {
+        return $this->container['jobMode'];
+    }
+
+    /**
+    * Sets jobMode
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\IsapJobMode|null $jobMode jobMode
+    *
+    * @return $this
+    */
+    public function setJobMode($jobMode)
+    {
+        $this->container['jobMode'] = $jobMode;
+        return $this;
+    }
+
+    /**
+    * Gets jobModeSetting
+    *  jobModeSetting
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\IsapJobModeSettingVo|null
+    */
+    public function getJobModeSetting()
+    {
+        return $this->container['jobModeSetting'];
+    }
+
+    /**
+    * Sets jobModeSetting
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\IsapJobModeSettingVo|null $jobModeSetting jobModeSetting
+    *
+    * @return $this
+    */
+    public function setJobModeSetting($jobModeSetting)
+    {
+        $this->container['jobModeSetting'] = $jobModeSetting;
+        return $this;
+    }
+
+    /**
+    * Gets jobOutputSetting
+    *  jobOutputSetting
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\IsapJobOutputSetting|null
+    */
+    public function getJobOutputSetting()
+    {
+        return $this->container['jobOutputSetting'];
+    }
+
+    /**
+    * Sets jobOutputSetting
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\IsapJobOutputSetting|null $jobOutputSetting jobOutputSetting
+    *
+    * @return $this
+    */
+    public function setJobOutputSetting($jobOutputSetting)
+    {
+        $this->container['jobOutputSetting'] = $jobOutputSetting;
+        return $this;
+    }
+
+    /**
+    * Gets processError
+    *  processError
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\ProcessError|null
+    */
+    public function getProcessError()
+    {
+        return $this->container['processError'];
+    }
+
+    /**
+    * Sets processError
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\ProcessError|null $processError processError
+    *
+    * @return $this
+    */
+    public function setProcessError($processError)
+    {
+        $this->container['processError'] = $processError;
+        return $this;
+    }
+
+    /**
+    * Gets processStatus
+    *  processStatus
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\ProcessStatus|null
+    */
+    public function getProcessStatus()
+    {
+        return $this->container['processStatus'];
+    }
+
+    /**
+    * Sets processStatus
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\ProcessStatus|null $processStatus processStatus
+    *
+    * @return $this
+    */
+    public function setProcessStatus($processStatus)
+    {
+        $this->container['processStatus'] = $processStatus;
+        return $this;
+    }
+
+    /**
+    * Gets queryType
+    *  queryType
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\QueryType|null
+    */
+    public function getQueryType()
+    {
+        return $this->container['queryType'];
+    }
+
+    /**
+    * Sets queryType
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\QueryType|null $queryType queryType
+    *
+    * @return $this
+    */
+    public function setQueryType($queryType)
+    {
+        $this->container['queryType'] = $queryType;
+        return $this;
+    }
+
+    /**
+    * Gets script
+    *  Script 脚本
+    *
+    * @return string|null
+    */
+    public function getScript()
+    {
+        return $this->container['script'];
+    }
+
+    /**
+    * Sets script
+    *
+    * @param string|null $script Script 脚本
+    *
+    * @return $this
+    */
+    public function setScript($script)
+    {
+        $this->container['script'] = $script;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  status
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\Status|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\Status|null $status status
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets tableName
+    *  表名称
+    *
+    * @return string|null
+    */
+    public function getTableName()
+    {
+        return $this->container['tableName'];
+    }
+
+    /**
+    * Sets tableName
+    *
+    * @param string|null $tableName 表名称
+    *
+    * @return $this
+    */
+    public function setTableName($tableName)
+    {
+        $this->container['tableName'] = $tableName;
+        return $this;
+    }
+
+    /**
     * Gets templateId
-    *  告警规则模板 ID。Alert rule template ID.
+    *  UUID
     *
     * @return string|null
     */
@@ -417,7 +825,7 @@ class ShowAlertRuleTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets templateId
     *
-    * @param string|null $templateId 告警规则模板 ID。Alert rule template ID.
+    * @param string|null $templateId UUID
     *
     * @return $this
     */
@@ -428,32 +836,8 @@ class ShowAlertRuleTemplateResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets updateTime
-    *  更新时间。Update time.
-    *
-    * @return int|null
-    */
-    public function getUpdateTime()
-    {
-        return $this->container['updateTime'];
-    }
-
-    /**
-    * Sets updateTime
-    *
-    * @param int|null $updateTime 更新时间。Update time.
-    *
-    * @return $this
-    */
-    public function setUpdateTime($updateTime)
-    {
-        $this->container['updateTime'] = $updateTime;
-        return $this;
-    }
-
-    /**
     * Gets templateName
-    *  告警规则模板名称。Alert rule template name.
+    *  模板名称
     *
     * @return string|null
     */
@@ -465,7 +849,7 @@ class ShowAlertRuleTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets templateName
     *
-    * @param string|null $templateName 告警规则模板名称。Alert rule template name.
+    * @param string|null $templateName 模板名称
     *
     * @return $this
     */
@@ -476,202 +860,10 @@ class ShowAlertRuleTemplateResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets dataSource
-    *  数据源。Data source.
-    *
-    * @return string|null
-    */
-    public function getDataSource()
-    {
-        return $this->container['dataSource'];
-    }
-
-    /**
-    * Sets dataSource
-    *
-    * @param string|null $dataSource 数据源。Data source.
-    *
-    * @return $this
-    */
-    public function setDataSource($dataSource)
-    {
-        $this->container['dataSource'] = $dataSource;
-        return $this;
-    }
-
-    /**
-    * Gets version
-    *  版本。Version
-    *
-    * @return string|null
-    */
-    public function getVersion()
-    {
-        return $this->container['version'];
-    }
-
-    /**
-    * Sets version
-    *
-    * @param string|null $version 版本。Version
-    *
-    * @return $this
-    */
-    public function setVersion($version)
-    {
-        $this->container['version'] = $version;
-        return $this;
-    }
-
-    /**
-    * Gets query
-    *  查询语句。Query.
-    *
-    * @return string|null
-    */
-    public function getQuery()
-    {
-        return $this->container['query'];
-    }
-
-    /**
-    * Sets query
-    *
-    * @param string|null $query 查询语句。Query.
-    *
-    * @return $this
-    */
-    public function setQuery($query)
-    {
-        $this->container['query'] = $query;
-        return $this;
-    }
-
-    /**
-    * Gets queryType
-    *  查询语法，SQL。Query type. SQL.
-    *
-    * @return string|null
-    */
-    public function getQueryType()
-    {
-        return $this->container['queryType'];
-    }
-
-    /**
-    * Sets queryType
-    *
-    * @param string|null $queryType 查询语法，SQL。Query type. SQL.
-    *
-    * @return $this
-    */
-    public function setQueryType($queryType)
-    {
-        $this->container['queryType'] = $queryType;
-        return $this;
-    }
-
-    /**
-    * Gets severity
-    *  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    *
-    * @return string|null
-    */
-    public function getSeverity()
-    {
-        return $this->container['severity'];
-    }
-
-    /**
-    * Sets severity
-    *
-    * @param string|null $severity 严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    *
-    * @return $this
-    */
-    public function setSeverity($severity)
-    {
-        $this->container['severity'] = $severity;
-        return $this;
-    }
-
-    /**
-    * Gets customProperties
-    *  自定义扩展信息。Custom properties.
-    *
-    * @return map[string,string]|null
-    */
-    public function getCustomProperties()
-    {
-        return $this->container['customProperties'];
-    }
-
-    /**
-    * Sets customProperties
-    *
-    * @param map[string,string]|null $customProperties 自定义扩展信息。Custom properties.
-    *
-    * @return $this
-    */
-    public function setCustomProperties($customProperties)
-    {
-        $this->container['customProperties'] = $customProperties;
-        return $this;
-    }
-
-    /**
-    * Gets eventGrouping
-    *  告警分组。Event grouping.
-    *
-    * @return bool|null
-    */
-    public function getEventGrouping()
-    {
-        return $this->container['eventGrouping'];
-    }
-
-    /**
-    * Sets eventGrouping
-    *
-    * @param bool|null $eventGrouping 告警分组。Event grouping.
-    *
-    * @return $this
-    */
-    public function setEventGrouping($eventGrouping)
-    {
-        $this->container['eventGrouping'] = $eventGrouping;
-        return $this;
-    }
-
-    /**
-    * Gets schedule
-    *  schedule
-    *
-    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\Schedule|null
-    */
-    public function getSchedule()
-    {
-        return $this->container['schedule'];
-    }
-
-    /**
-    * Sets schedule
-    *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\Schedule|null $schedule schedule
-    *
-    * @return $this
-    */
-    public function setSchedule($schedule)
-    {
-        $this->container['schedule'] = $schedule;
-        return $this;
-    }
-
-    /**
     * Gets triggers
-    *  告警触发规则。Alert triggers.
+    *  触发器数组
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRuleTrigger[]|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\Trigger[]|null
     */
     public function getTriggers()
     {
@@ -681,7 +873,7 @@ class ShowAlertRuleTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets triggers
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRuleTrigger[]|null $triggers 告警触发规则。Alert triggers.
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\Trigger[]|null $triggers 触发器数组
     *
     * @return $this
     */
@@ -692,26 +884,50 @@ class ShowAlertRuleTemplateResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets xRequestId
-    *  xRequestId
+    * Gets updateBy
+    *  UUID
     *
     * @return string|null
     */
-    public function getXRequestId()
+    public function getUpdateBy()
     {
-        return $this->container['xRequestId'];
+        return $this->container['updateBy'];
     }
 
     /**
-    * Sets xRequestId
+    * Sets updateBy
     *
-    * @param string|null $xRequestId xRequestId
+    * @param string|null $updateBy UUID
     *
     * @return $this
     */
-    public function setXRequestId($xRequestId)
+    public function setUpdateBy($updateBy)
     {
-        $this->container['xRequestId'] = $xRequestId;
+        $this->container['updateBy'] = $updateBy;
+        return $this;
+    }
+
+    /**
+    * Gets updateTime
+    *  毫秒时间戳
+    *
+    * @return int|null
+    */
+    public function getUpdateTime()
+    {
+        return $this->container['updateTime'];
+    }
+
+    /**
+    * Sets updateTime
+    *
+    * @param int|null $updateTime 毫秒时间戳
+    *
+    * @return $this
+    */
+    public function setUpdateTime($updateTime)
+    {
+        $this->container['updateTime'] = $updateTime;
         return $this;
     }
 

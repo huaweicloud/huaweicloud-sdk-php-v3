@@ -27,8 +27,8 @@ class ShowVulAffectedStaticsResponse implements ModelInterface, ArrayAccess
     * containerNum  **参数解释**: 影响容器数量 **取值范围**: 最小值0，最大值2147483647
     * dataList  **参数解释**: 按漏洞类型的统计值，当select_type为all_host或空时，有该字段
     * totalVulNum  **参数解释**: 影响的总漏洞条数(主机+漏洞 以此维度计算) **取值范围**: 最小值0，最大值2147483647
-    * extendTips  extendTips
-    * extendTextTips  extendTextTips
+    * extendTips  **参数解释**: 提示
+    * extendTextTips  **参数解释**: 漏洞修复提示 **取值范围**: 最小值1，最大值500
     * disabledOperateTypes  disabledOperateTypes
     * cceVulNum  **参数解释**: CCE漏洞数量 **取值范围**: 最小值0，最大值2147483647
     * basicHostNum  **参数解释**: 基础版主机数量 **取值范围**: 最小值0，最大值2147483647
@@ -59,8 +59,8 @@ class ShowVulAffectedStaticsResponse implements ModelInterface, ArrayAccess
     * containerNum  **参数解释**: 影响容器数量 **取值范围**: 最小值0，最大值2147483647
     * dataList  **参数解释**: 按漏洞类型的统计值，当select_type为all_host或空时，有该字段
     * totalVulNum  **参数解释**: 影响的总漏洞条数(主机+漏洞 以此维度计算) **取值范围**: 最小值0，最大值2147483647
-    * extendTips  extendTips
-    * extendTextTips  extendTextTips
+    * extendTips  **参数解释**: 提示
+    * extendTextTips  **参数解释**: 漏洞修复提示 **取值范围**: 最小值1，最大值500
     * disabledOperateTypes  disabledOperateTypes
     * cceVulNum  **参数解释**: CCE漏洞数量 **取值范围**: 最小值0，最大值2147483647
     * basicHostNum  **参数解释**: 基础版主机数量 **取值范围**: 最小值0，最大值2147483647
@@ -112,8 +112,8 @@ class ShowVulAffectedStaticsResponse implements ModelInterface, ArrayAccess
     * containerNum  **参数解释**: 影响容器数量 **取值范围**: 最小值0，最大值2147483647
     * dataList  **参数解释**: 按漏洞类型的统计值，当select_type为all_host或空时，有该字段
     * totalVulNum  **参数解释**: 影响的总漏洞条数(主机+漏洞 以此维度计算) **取值范围**: 最小值0，最大值2147483647
-    * extendTips  extendTips
-    * extendTextTips  extendTextTips
+    * extendTips  **参数解释**: 提示
+    * extendTextTips  **参数解释**: 漏洞修复提示 **取值范围**: 最小值1，最大值500
     * disabledOperateTypes  disabledOperateTypes
     * cceVulNum  **参数解释**: CCE漏洞数量 **取值范围**: 最小值0，最大值2147483647
     * basicHostNum  **参数解释**: 基础版主机数量 **取值范围**: 最小值0，最大值2147483647
@@ -144,8 +144,8 @@ class ShowVulAffectedStaticsResponse implements ModelInterface, ArrayAccess
     * containerNum  **参数解释**: 影响容器数量 **取值范围**: 最小值0，最大值2147483647
     * dataList  **参数解释**: 按漏洞类型的统计值，当select_type为all_host或空时，有该字段
     * totalVulNum  **参数解释**: 影响的总漏洞条数(主机+漏洞 以此维度计算) **取值范围**: 最小值0，最大值2147483647
-    * extendTips  extendTips
-    * extendTextTips  extendTextTips
+    * extendTips  **参数解释**: 提示
+    * extendTextTips  **参数解释**: 漏洞修复提示 **取值范围**: 最小值1，最大值500
     * disabledOperateTypes  disabledOperateTypes
     * cceVulNum  **参数解释**: CCE漏洞数量 **取值范围**: 最小值0，最大值2147483647
     * basicHostNum  **参数解释**: 基础版主机数量 **取值范围**: 最小值0，最大值2147483647
@@ -176,8 +176,8 @@ class ShowVulAffectedStaticsResponse implements ModelInterface, ArrayAccess
     * containerNum  **参数解释**: 影响容器数量 **取值范围**: 最小值0，最大值2147483647
     * dataList  **参数解释**: 按漏洞类型的统计值，当select_type为all_host或空时，有该字段
     * totalVulNum  **参数解释**: 影响的总漏洞条数(主机+漏洞 以此维度计算) **取值范围**: 最小值0，最大值2147483647
-    * extendTips  extendTips
-    * extendTextTips  extendTextTips
+    * extendTips  **参数解释**: 提示
+    * extendTextTips  **参数解释**: 漏洞修复提示 **取值范围**: 最小值1，最大值500
     * disabledOperateTypes  disabledOperateTypes
     * cceVulNum  **参数解释**: CCE漏洞数量 **取值范围**: 最小值0，最大值2147483647
     * basicHostNum  **参数解释**: 基础版主机数量 **取值范围**: 最小值0，最大值2147483647
@@ -482,7 +482,7 @@ class ShowVulAffectedStaticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendTips
-    *  extendTips
+    *  **参数解释**: 提示
     *
     * @return string[]|null
     */
@@ -494,7 +494,7 @@ class ShowVulAffectedStaticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets extendTips
     *
-    * @param string[]|null $extendTips extendTips
+    * @param string[]|null $extendTips **参数解释**: 提示
     *
     * @return $this
     */
@@ -506,7 +506,7 @@ class ShowVulAffectedStaticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendTextTips
-    *  extendTextTips
+    *  **参数解释**: 漏洞修复提示 **取值范围**: 最小值1，最大值500
     *
     * @return string[]|null
     */
@@ -518,7 +518,7 @@ class ShowVulAffectedStaticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets extendTextTips
     *
-    * @param string[]|null $extendTextTips extendTextTips
+    * @param string[]|null $extendTextTips **参数解释**: 漏洞修复提示 **取值范围**: 最小值1，最大值500
     *
     * @return $this
     */

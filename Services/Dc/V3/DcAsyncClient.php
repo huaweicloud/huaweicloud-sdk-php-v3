@@ -2811,6 +2811,284 @@ class DcAsyncClient extends Client
     }
 
     /**
+     * 创建虚拟接口对等体连通性探测实例
+     *
+     * 当您想对虚拟接口对等体的远端网关的连通性进行探测时，可以通过调用此接口创建一个虚拟接口对等体连通性探测实例来实现。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createVifPeerDetectionAsync($request)
+    {
+        return $this->createVifPeerDetectionAsyncWithHttpInfo($request);
+    }
+    
+    public function createVifPeerDetectionAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/dcaas/vif-peer-detections';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=utf-8'],
+                ['application/json; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\CreateVifPeerDetectionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\CreateVifPeerDetectionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除虚拟接口对等体连通性探测实例
+     *
+     * 当您想不再保留虚拟接口对等体连通性探测实例时，您可以通过调用此接口将其删除。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteVifPeerDetectionAsync($request)
+    {
+        return $this->deleteVifPeerDetectionAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteVifPeerDetectionAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/dcaas/vif-peer-detections/{vif_peer_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vifPeerId'] !== null) {
+            $pathParams['vif_peer_id'] = $localVarParams['vifPeerId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\DeleteVifPeerDetectionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\DeleteVifPeerDetectionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询虚拟接口对等体连通性探测实例列表
+     *
+     * 当您的对虚拟接口对等体发起连通性探测后，您可以通过此接口查询多次探测的信息，包括ID、探测开始时间、探测结束时间、探测状态、丢包率等。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVifPeerDetectionsAsync($request)
+    {
+        return $this->listVifPeerDetectionsAsyncWithHttpInfo($request);
+    }
+    
+    public function listVifPeerDetectionsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/dcaas/vif-peer-detections';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['pageReverse'] !== null) {
+            $queryParams['page_reverse'] = $localVarParams['pageReverse'];
+        }
+        if ($localVarParams['vifPeerId'] !== null) {
+            $pathParams['vif_peer_id'] = $localVarParams['vifPeerId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\ListVifPeerDetectionsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\ListVifPeerDetectionsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询虚拟接口对等体连通性探测实例
+     *
+     * 当您的对虚拟接口对等体发起连通性探测后，您可以通过此接口查询单次探测的信息，包括ID、探测开始时间、探测结束时间、探测状态、丢包率等。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showVifPeerDetectionAsync($request)
+    {
+        return $this->showVifPeerDetectionAsyncWithHttpInfo($request);
+    }
+    
+    public function showVifPeerDetectionAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/dcaas/vif-peer-detections/{vif_peer_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vifPeerId'] !== null) {
+            $pathParams['vif_peer_id'] = $localVarParams['vifPeerId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\ShowVifPeerDetectionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\ShowVifPeerDetectionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建虚拟网关
      *
      * 创建虚拟网关
@@ -3724,6 +4002,74 @@ class DcAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dc\V3\Model\SwitchoverTestResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dc\V3\Model\SwitchoverTestRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改虚拟接口可靠性检测的扩展参数
+     *
+     * 虚拟接口有bfd与nqa两种可靠性检测方式，您可以通过调用此接口修改可靠性检测的参数，例如检测报文最小发送间隔、检测报文最大发送间隔、检测周期等信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateExtendAttributeAsync($request)
+    {
+        return $this->updateExtendAttributeAsyncWithHttpInfo($request);
+    }
+    
+    public function updateExtendAttributeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/dcaas/virtual-interfaces/{virtual_interface_id}/extend-attributes';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['virtualInterfaceId'] !== null) {
+            $pathParams['virtual_interface_id'] = $localVarParams['virtualInterfaceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json; charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dc\V3\Model\UpdateExtendAttributeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dc\V3\Model\UpdateExtendAttributeRequest',
             $asyncRequest = true);
     }
 

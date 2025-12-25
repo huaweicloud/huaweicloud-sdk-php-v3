@@ -82,7 +82,7 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
         'manifestMediaType' => null,
         'pullTime' => null,
         'pushTime' => null,
-        'size' => null,
+        'size' => 'int64',
         'tags' => null,
         'scanOverview' => null
     ];

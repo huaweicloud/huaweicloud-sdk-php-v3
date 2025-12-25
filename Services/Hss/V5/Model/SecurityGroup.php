@@ -20,9 +20,9 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * securityGroupId  安全组ID
-    * securityGroupName  安全组名称
-    * securityGroupDescription  安全组描述
+    * securityGroupId  **参数解释** 云原生网络模型中安全组的唯一标识，用于关联具体安全组到策略 **约束限制** 安全组需与集群处于同一VPC网络，否则关联失败 **取值范围** 字符长度1-64位，支持字母、数字、短横线（-）、下划线（_） **默认取值** 无
+    * securityGroupName  **参数解释** 安全组的名称，用于辅助标识安全组，仅作展示用途 **约束限制** 若传入该参数，需与security_group_id对应的安全组名称一致，否则可能导致展示异常（不影响功能） **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线（-）、下划线（_） **默认取值** 无，默认使用安全组ID对应的系统名称
+    * securityGroupDescription  **参数解释** 安全组的描述信息，用于记录安全组的用途、权限范围等备注 **约束限制** 描述内容不能包含HTML标签等特殊字符 **取值范围** 字符长度0-256位，支持中文、英文、数字、常用标点符号及空格 **默认取值** 无，不修改安全组描述（若原有描述为空则保持为空）
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * securityGroupId  安全组ID
-    * securityGroupName  安全组名称
-    * securityGroupDescription  安全组描述
+    * securityGroupId  **参数解释** 云原生网络模型中安全组的唯一标识，用于关联具体安全组到策略 **约束限制** 安全组需与集群处于同一VPC网络，否则关联失败 **取值范围** 字符长度1-64位，支持字母、数字、短横线（-）、下划线（_） **默认取值** 无
+    * securityGroupName  **参数解释** 安全组的名称，用于辅助标识安全组，仅作展示用途 **约束限制** 若传入该参数，需与security_group_id对应的安全组名称一致，否则可能导致展示异常（不影响功能） **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线（-）、下划线（_） **默认取值** 无，默认使用安全组ID对应的系统名称
+    * securityGroupDescription  **参数解释** 安全组的描述信息，用于记录安全组的用途、权限范围等备注 **约束限制** 描述内容不能包含HTML标签等特殊字符 **取值范围** 字符长度0-256位，支持中文、英文、数字、常用标点符号及空格 **默认取值** 无，不修改安全组描述（若原有描述为空则保持为空）
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class SecurityGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * securityGroupId  安全组ID
-    * securityGroupName  安全组名称
-    * securityGroupDescription  安全组描述
+    * securityGroupId  **参数解释** 云原生网络模型中安全组的唯一标识，用于关联具体安全组到策略 **约束限制** 安全组需与集群处于同一VPC网络，否则关联失败 **取值范围** 字符长度1-64位，支持字母、数字、短横线（-）、下划线（_） **默认取值** 无
+    * securityGroupName  **参数解释** 安全组的名称，用于辅助标识安全组，仅作展示用途 **约束限制** 若传入该参数，需与security_group_id对应的安全组名称一致，否则可能导致展示异常（不影响功能） **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线（-）、下划线（_） **默认取值** 无，默认使用安全组ID对应的系统名称
+    * securityGroupDescription  **参数解释** 安全组的描述信息，用于记录安全组的用途、权限范围等备注 **约束限制** 描述内容不能包含HTML标签等特殊字符 **取值范围** 字符长度0-256位，支持中文、英文、数字、常用标点符号及空格 **默认取值** 无，不修改安全组描述（若原有描述为空则保持为空）
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * securityGroupId  安全组ID
-    * securityGroupName  安全组名称
-    * securityGroupDescription  安全组描述
+    * securityGroupId  **参数解释** 云原生网络模型中安全组的唯一标识，用于关联具体安全组到策略 **约束限制** 安全组需与集群处于同一VPC网络，否则关联失败 **取值范围** 字符长度1-64位，支持字母、数字、短横线（-）、下划线（_） **默认取值** 无
+    * securityGroupName  **参数解释** 安全组的名称，用于辅助标识安全组，仅作展示用途 **约束限制** 若传入该参数，需与security_group_id对应的安全组名称一致，否则可能导致展示异常（不影响功能） **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线（-）、下划线（_） **默认取值** 无，默认使用安全组ID对应的系统名称
+    * securityGroupDescription  **参数解释** 安全组的描述信息，用于记录安全组的用途、权限范围等备注 **约束限制** 描述内容不能包含HTML标签等特殊字符 **取值范围** 字符长度0-256位，支持中文、英文、数字、常用标点符号及空格 **默认取值** 无，不修改安全组描述（若原有描述为空则保持为空）
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * securityGroupId  安全组ID
-    * securityGroupName  安全组名称
-    * securityGroupDescription  安全组描述
+    * securityGroupId  **参数解释** 云原生网络模型中安全组的唯一标识，用于关联具体安全组到策略 **约束限制** 安全组需与集群处于同一VPC网络，否则关联失败 **取值范围** 字符长度1-64位，支持字母、数字、短横线（-）、下划线（_） **默认取值** 无
+    * securityGroupName  **参数解释** 安全组的名称，用于辅助标识安全组，仅作展示用途 **约束限制** 若传入该参数，需与security_group_id对应的安全组名称一致，否则可能导致展示异常（不影响功能） **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线（-）、下划线（_） **默认取值** 无，默认使用安全组ID对应的系统名称
+    * securityGroupDescription  **参数解释** 安全组的描述信息，用于记录安全组的用途、权限范围等备注 **约束限制** 描述内容不能包含HTML标签等特殊字符 **取值范围** 字符长度0-256位，支持中文、英文、数字、常用标点符号及空格 **默认取值** 无，不修改安全组描述（若原有描述为空则保持为空）
     *
     * @var string[]
     */
@@ -217,7 +217,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
-    *  安全组ID
+    *  **参数解释** 云原生网络模型中安全组的唯一标识，用于关联具体安全组到策略 **约束限制** 安全组需与集群处于同一VPC网络，否则关联失败 **取值范围** 字符长度1-64位，支持字母、数字、短横线（-）、下划线（_） **默认取值** 无
     *
     * @return string
     */
@@ -229,7 +229,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string $securityGroupId 安全组ID
+    * @param string $securityGroupId **参数解释** 云原生网络模型中安全组的唯一标识，用于关联具体安全组到策略 **约束限制** 安全组需与集群处于同一VPC网络，否则关联失败 **取值范围** 字符长度1-64位，支持字母、数字、短横线（-）、下划线（_） **默认取值** 无
     *
     * @return $this
     */
@@ -241,7 +241,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupName
-    *  安全组名称
+    *  **参数解释** 安全组的名称，用于辅助标识安全组，仅作展示用途 **约束限制** 若传入该参数，需与security_group_id对应的安全组名称一致，否则可能导致展示异常（不影响功能） **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线（-）、下划线（_） **默认取值** 无，默认使用安全组ID对应的系统名称
     *
     * @return string|null
     */
@@ -253,7 +253,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupName
     *
-    * @param string|null $securityGroupName 安全组名称
+    * @param string|null $securityGroupName **参数解释** 安全组的名称，用于辅助标识安全组，仅作展示用途 **约束限制** 若传入该参数，需与security_group_id对应的安全组名称一致，否则可能导致展示异常（不影响功能） **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线（-）、下划线（_） **默认取值** 无，默认使用安全组ID对应的系统名称
     *
     * @return $this
     */
@@ -265,7 +265,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupDescription
-    *  安全组描述
+    *  **参数解释** 安全组的描述信息，用于记录安全组的用途、权限范围等备注 **约束限制** 描述内容不能包含HTML标签等特殊字符 **取值范围** 字符长度0-256位，支持中文、英文、数字、常用标点符号及空格 **默认取值** 无，不修改安全组描述（若原有描述为空则保持为空）
     *
     * @return string|null
     */
@@ -277,7 +277,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupDescription
     *
-    * @param string|null $securityGroupDescription 安全组描述
+    * @param string|null $securityGroupDescription **参数解释** 安全组的描述信息，用于记录安全组的用途、权限范围等备注 **约束限制** 描述内容不能包含HTML标签等特殊字符 **取值范围** 字符长度0-256位，支持中文、英文、数字、常用标点符号及空格 **默认取值** 无，不修改安全组描述（若原有描述为空则保持为空）
     *
     * @return $this
     */

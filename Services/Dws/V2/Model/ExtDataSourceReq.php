@@ -21,7 +21,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * dataSourceId  **参数解释**： 外部数据源ID。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
-    * type  **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     * dataSourceName  **参数解释**： 外部数据源名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，1到64个字符。
     * userName  **参数解释**： 用户名。数据源类型为OBS时，传对应OBS委托名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，3到20个字符。
     * userPwd  **参数解释**： 密码。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
@@ -45,7 +45,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * dataSourceId  **参数解释**： 外部数据源ID。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
-    * type  **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     * dataSourceName  **参数解释**： 外部数据源名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，1到64个字符。
     * userName  **参数解释**： 用户名。数据源类型为OBS时，传对应OBS委托名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，3到20个字符。
     * userPwd  **参数解释**： 密码。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
@@ -90,7 +90,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * dataSourceId  **参数解释**： 外部数据源ID。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
-    * type  **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     * dataSourceName  **参数解释**： 外部数据源名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，1到64个字符。
     * userName  **参数解释**： 用户名。数据源类型为OBS时，传对应OBS委托名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，3到20个字符。
     * userPwd  **参数解释**： 密码。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
@@ -114,7 +114,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * dataSourceId  **参数解释**： 外部数据源ID。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
-    * type  **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     * dataSourceName  **参数解释**： 外部数据源名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，1到64个字符。
     * userName  **参数解释**： 用户名。数据源类型为OBS时，传对应OBS委托名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，3到20个字符。
     * userPwd  **参数解释**： 密码。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
@@ -138,7 +138,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * dataSourceId  **参数解释**： 外部数据源ID。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
-    * type  **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     * dataSourceName  **参数解释**： 外部数据源名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，1到64个字符。
     * userName  **参数解释**： 用户名。数据源类型为OBS时，传对应OBS委托名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，3到20个字符。
     * userPwd  **参数解释**： 密码。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
@@ -284,7 +284,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     *
     * @return string
     */
@@ -296,7 +296,7 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+    * @param string $type **参数解释**： 数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     *
     * @return $this
     */

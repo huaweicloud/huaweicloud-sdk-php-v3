@@ -20,7 +20,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  **参数解释**： 计划状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 计划状态。 **取值范围**： - 0：表示计划未执行 - 1：表示计划执行中
     * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * planId  **参数解释**： 计划ID。 **取值范围**： 不涉及。
@@ -44,7 +44,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  **参数解释**： 计划状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 计划状态。 **取值范围**： - 0：表示计划未执行 - 1：表示计划执行中
     * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * planId  **参数解释**： 计划ID。 **取值范围**： 不涉及。
@@ -89,7 +89,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  **参数解释**： 计划状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 计划状态。 **取值范围**： - 0：表示计划未执行 - 1：表示计划执行中
     * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * planId  **参数解释**： 计划ID。 **取值范围**： 不涉及。
@@ -113,7 +113,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  **参数解释**： 计划状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 计划状态。 **取值范围**： - 0：表示计划未执行 - 1：表示计划执行中
     * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * planId  **参数解释**： 计划ID。 **取值范围**： 不涉及。
@@ -137,7 +137,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  **参数解释**： 计划状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 计划状态。 **取值范围**： - 0：表示计划未执行 - 1：表示计划执行中
     * projectId  **参数解释**： 项目ID。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 36位UUID。
     * planId  **参数解释**： 计划ID。 **取值范围**： 不涉及。
@@ -263,7 +263,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 计划状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 计划状态。 **取值范围**： - 0：表示计划未执行 - 1：表示计划执行中
     *
     * @return int|null
     */
@@ -275,7 +275,7 @@ class WorkloadPlanInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status **参数解释**： 计划状态。 **取值范围**： 不涉及。
+    * @param int|null $status **参数解释**： 计划状态。 **取值范围**： - 0：表示计划未执行 - 1：表示计划执行中
     *
     * @return $this
     */

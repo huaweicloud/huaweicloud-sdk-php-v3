@@ -21,8 +21,8 @@ class ListResourceGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  资源分组总数
-    * resourceGroups  资源分组列表
+    * count  **参数解释** 资源分组总数。 **取值范围** 在[0,1000]区间内。
+    * resourceGroups  **参数解释** 资源分组列表。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListResourceGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  资源分组总数
-    * resourceGroups  资源分组列表
+    * count  **参数解释** 资源分组总数。 **取值范围** 在[0,1000]区间内。
+    * resourceGroups  **参数解释** 资源分组列表。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListResourceGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  资源分组总数
-    * resourceGroups  资源分组列表
+    * count  **参数解释** 资源分组总数。 **取值范围** 在[0,1000]区间内。
+    * resourceGroups  **参数解释** 资源分组列表。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListResourceGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  资源分组总数
-    * resourceGroups  资源分组列表
+    * count  **参数解释** 资源分组总数。 **取值范围** 在[0,1000]区间内。
+    * resourceGroups  **参数解释** 资源分组列表。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListResourceGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  资源分组总数
-    * resourceGroups  资源分组列表
+    * count  **参数解释** 资源分组总数。 **取值范围** 在[0,1000]区间内。
+    * resourceGroups  **参数解释** 资源分组列表。
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ListResourceGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  资源分组总数
+    *  **参数解释** 资源分组总数。 **取值范围** 在[0,1000]区间内。
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListResourceGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 资源分组总数
+    * @param int|null $count **参数解释** 资源分组总数。 **取值范围** 在[0,1000]区间内。
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListResourceGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceGroups
-    *  资源分组列表
+    *  **参数解释** 资源分组列表。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\OneResourceGroupResp[]|null
     */
@@ -228,7 +228,7 @@ class ListResourceGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resourceGroups
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\OneResourceGroupResp[]|null $resourceGroups 资源分组列表
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\OneResourceGroupResp[]|null $resourceGroups **参数解释** 资源分组列表。
     *
     * @return $this
     */

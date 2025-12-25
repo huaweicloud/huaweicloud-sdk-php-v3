@@ -20,7 +20,7 @@ class ActionSubItemVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - SUCCESS：成功。 - RUNNING：运行中。 - WAITING：等待中。 - FAILED：失败。 - ROLLBACK_RUNNING：回滚运行中。 - ROLLBACK_SUCCESS：回滚成功。 - ROLLBACK_FAIL：回滚失败。
     * detail  **参数解释**： 扩展信息。 **取值范围**： 不涉及。
     * subItemName  **参数解释**： 子项名称，根据请求header中的x-language字段返回对应的中/英文名称。 **取值范围**： 不涉及。
     * beginTime  **参数解释**： 开始时间。 **取值范围**： 时间格式，或null值。
@@ -40,7 +40,7 @@ class ActionSubItemVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - SUCCESS：成功。 - RUNNING：运行中。 - WAITING：等待中。 - FAILED：失败。 - ROLLBACK_RUNNING：回滚运行中。 - ROLLBACK_SUCCESS：回滚成功。 - ROLLBACK_FAIL：回滚失败。
     * detail  **参数解释**： 扩展信息。 **取值范围**： 不涉及。
     * subItemName  **参数解释**： 子项名称，根据请求header中的x-language字段返回对应的中/英文名称。 **取值范围**： 不涉及。
     * beginTime  **参数解释**： 开始时间。 **取值范围**： 时间格式，或null值。
@@ -81,7 +81,7 @@ class ActionSubItemVo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - SUCCESS：成功。 - RUNNING：运行中。 - WAITING：等待中。 - FAILED：失败。 - ROLLBACK_RUNNING：回滚运行中。 - ROLLBACK_SUCCESS：回滚成功。 - ROLLBACK_FAIL：回滚失败。
     * detail  **参数解释**： 扩展信息。 **取值范围**： 不涉及。
     * subItemName  **参数解释**： 子项名称，根据请求header中的x-language字段返回对应的中/英文名称。 **取值范围**： 不涉及。
     * beginTime  **参数解释**： 开始时间。 **取值范围**： 时间格式，或null值。
@@ -101,7 +101,7 @@ class ActionSubItemVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - SUCCESS：成功。 - RUNNING：运行中。 - WAITING：等待中。 - FAILED：失败。 - ROLLBACK_RUNNING：回滚运行中。 - ROLLBACK_SUCCESS：回滚成功。 - ROLLBACK_FAIL：回滚失败。
     * detail  **参数解释**： 扩展信息。 **取值范围**： 不涉及。
     * subItemName  **参数解释**： 子项名称，根据请求header中的x-language字段返回对应的中/英文名称。 **取值范围**： 不涉及。
     * beginTime  **参数解释**： 开始时间。 **取值范围**： 时间格式，或null值。
@@ -121,7 +121,7 @@ class ActionSubItemVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - SUCCESS：成功。 - RUNNING：运行中。 - WAITING：等待中。 - FAILED：失败。 - ROLLBACK_RUNNING：回滚运行中。 - ROLLBACK_SUCCESS：回滚成功。 - ROLLBACK_FAIL：回滚失败。
     * detail  **参数解释**： 扩展信息。 **取值范围**： 不涉及。
     * subItemName  **参数解释**： 子项名称，根据请求header中的x-language字段返回对应的中/英文名称。 **取值范围**： 不涉及。
     * beginTime  **参数解释**： 开始时间。 **取值范围**： 时间格式，或null值。
@@ -229,7 +229,7 @@ class ActionSubItemVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 状态。 **取值范围**： - SUCCESS：成功。 - RUNNING：运行中。 - WAITING：等待中。 - FAILED：失败。 - ROLLBACK_RUNNING：回滚运行中。 - ROLLBACK_SUCCESS：回滚成功。 - ROLLBACK_FAIL：回滚失败。
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class ActionSubItemVo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 状态。 **取值范围**： 不涉及。
+    * @param string|null $status **参数解释**： 状态。 **取值范围**： - SUCCESS：成功。 - RUNNING：运行中。 - WAITING：等待中。 - FAILED：失败。 - ROLLBACK_RUNNING：回滚运行中。 - ROLLBACK_SUCCESS：回滚成功。 - ROLLBACK_FAIL：回滚失败。
     *
     * @return $this
     */

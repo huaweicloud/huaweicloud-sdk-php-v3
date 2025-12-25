@@ -20,26 +20,26 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * notificationMaskId  屏蔽规则ID
+    * notificationMaskId  **参数解释**： 屏蔽规则ID **约束限制**： 不涉及 **取值范围**： 以nm开头，后跟[0,62]位字母或数字。 **默认取值**： 不涉及
     * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationType  relationType
-    * relationId  **参数解释**： 关联ID       **约束限制**： 不涉及。 **取值范围**： 取值为告警规则ID、告警策略ID。只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
+    * relationId  **参数解释**： 关联ID，为告警规则ID或者告警策略ID **约束限制**： 不涉及。 **取值范围**： 只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * resourceType  resourceType
-    * metricNames  关联指标名称，relation_type为RESOURCE时存在该字段
-    * productMetrics  按云产品维度屏蔽时的指标信息
-    * resourceLevel  dimension: 子维度,product: 云产品
-    * productName  资源为云产品时的云产品名称
-    * resources  关联资源类型，relation_type为RESOURCE时存在该字段,只需要查询出资源的namespace+维度名即可
+    * metricNames  **参数解释**： 关联指标名称列表，relation_type为RESOURCE时存在该字段
+    * productMetrics  **参数解释**： 按云产品维度屏蔽时的指标信息
+    * resourceLevel  **参数解释**： 资源层级。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度
+    * productName  **参数解释**： 资源为云产品时的云产品名称 **取值范围**： 长度为[0,128]个字符。
+    * resources  **参数解释**： 关联资源类型，relation_type为RESOURCE时存在该字段,只需要查询出资源的namespace+维度名即可
     * maskStatus  maskStatus
     * maskType  maskType
-    * createTime  告警屏蔽的创建时间，UNIX时间戳，单位毫秒。
-    * updateTime  告警屏蔽的更新时间，UNIX时间戳，单位毫秒。
+    * createTime  **参数解释**： 告警屏蔽的创建时间，UNIX时间戳，单位毫秒。 **约束限制**： 不涉及。 **取值范围**: 不涉及。 **默认取值**： 不涉及。
+    * updateTime  **参数解释**： 告警屏蔽的更新时间，UNIX时间戳，单位毫秒。 **约束限制**： 不涉及。 **取值范围**: 不涉及。 **默认取值**： 不涉及。
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     * endDate  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * endTime  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
-    * policies  告警策略列表。
+    * policies  **参数解释**： 告警策略列表。
     *
     * @var string[]
     */
@@ -50,10 +50,10 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
             'relationId' => 'string',
             'resourceType' => '\HuaweiCloud\SDK\Ces\V2\Model\MaskResourceType',
             'metricNames' => 'string[]',
-            'productMetrics' => '\HuaweiCloud\SDK\Ces\V2\Model\ProductMetric[]',
+            'productMetrics' => '\HuaweiCloud\SDK\Ces\V2\Model\ProductMetricResp[]',
             'resourceLevel' => 'string',
             'productName' => 'string',
-            'resources' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceCategory[]',
+            'resources' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceCategoryResp[]',
             'maskStatus' => '\HuaweiCloud\SDK\Ces\V2\Model\MaskStatus',
             'maskType' => '\HuaweiCloud\SDK\Ces\V2\Model\MaskType',
             'createTime' => 'int',
@@ -68,26 +68,26 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * notificationMaskId  屏蔽规则ID
+    * notificationMaskId  **参数解释**： 屏蔽规则ID **约束限制**： 不涉及 **取值范围**： 以nm开头，后跟[0,62]位字母或数字。 **默认取值**： 不涉及
     * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationType  relationType
-    * relationId  **参数解释**： 关联ID       **约束限制**： 不涉及。 **取值范围**： 取值为告警规则ID、告警策略ID。只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
+    * relationId  **参数解释**： 关联ID，为告警规则ID或者告警策略ID **约束限制**： 不涉及。 **取值范围**： 只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * resourceType  resourceType
-    * metricNames  关联指标名称，relation_type为RESOURCE时存在该字段
-    * productMetrics  按云产品维度屏蔽时的指标信息
-    * resourceLevel  dimension: 子维度,product: 云产品
-    * productName  资源为云产品时的云产品名称
-    * resources  关联资源类型，relation_type为RESOURCE时存在该字段,只需要查询出资源的namespace+维度名即可
+    * metricNames  **参数解释**： 关联指标名称列表，relation_type为RESOURCE时存在该字段
+    * productMetrics  **参数解释**： 按云产品维度屏蔽时的指标信息
+    * resourceLevel  **参数解释**： 资源层级。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度
+    * productName  **参数解释**： 资源为云产品时的云产品名称 **取值范围**： 长度为[0,128]个字符。
+    * resources  **参数解释**： 关联资源类型，relation_type为RESOURCE时存在该字段,只需要查询出资源的namespace+维度名即可
     * maskStatus  maskStatus
     * maskType  maskType
-    * createTime  告警屏蔽的创建时间，UNIX时间戳，单位毫秒。
-    * updateTime  告警屏蔽的更新时间，UNIX时间戳，单位毫秒。
+    * createTime  **参数解释**： 告警屏蔽的创建时间，UNIX时间戳，单位毫秒。 **约束限制**： 不涉及。 **取值范围**: 不涉及。 **默认取值**： 不涉及。
+    * updateTime  **参数解释**： 告警屏蔽的更新时间，UNIX时间戳，单位毫秒。 **约束限制**： 不涉及。 **取值范围**: 不涉及。 **默认取值**： 不涉及。
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     * endDate  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * endTime  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
-    * policies  告警策略列表。
+    * policies  **参数解释**： 告警策略列表。
     *
     * @var string[]
     */
@@ -137,26 +137,26 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * notificationMaskId  屏蔽规则ID
+    * notificationMaskId  **参数解释**： 屏蔽规则ID **约束限制**： 不涉及 **取值范围**： 以nm开头，后跟[0,62]位字母或数字。 **默认取值**： 不涉及
     * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationType  relationType
-    * relationId  **参数解释**： 关联ID       **约束限制**： 不涉及。 **取值范围**： 取值为告警规则ID、告警策略ID。只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
+    * relationId  **参数解释**： 关联ID，为告警规则ID或者告警策略ID **约束限制**： 不涉及。 **取值范围**： 只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * resourceType  resourceType
-    * metricNames  关联指标名称，relation_type为RESOURCE时存在该字段
-    * productMetrics  按云产品维度屏蔽时的指标信息
-    * resourceLevel  dimension: 子维度,product: 云产品
-    * productName  资源为云产品时的云产品名称
-    * resources  关联资源类型，relation_type为RESOURCE时存在该字段,只需要查询出资源的namespace+维度名即可
+    * metricNames  **参数解释**： 关联指标名称列表，relation_type为RESOURCE时存在该字段
+    * productMetrics  **参数解释**： 按云产品维度屏蔽时的指标信息
+    * resourceLevel  **参数解释**： 资源层级。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度
+    * productName  **参数解释**： 资源为云产品时的云产品名称 **取值范围**： 长度为[0,128]个字符。
+    * resources  **参数解释**： 关联资源类型，relation_type为RESOURCE时存在该字段,只需要查询出资源的namespace+维度名即可
     * maskStatus  maskStatus
     * maskType  maskType
-    * createTime  告警屏蔽的创建时间，UNIX时间戳，单位毫秒。
-    * updateTime  告警屏蔽的更新时间，UNIX时间戳，单位毫秒。
+    * createTime  **参数解释**： 告警屏蔽的创建时间，UNIX时间戳，单位毫秒。 **约束限制**： 不涉及。 **取值范围**: 不涉及。 **默认取值**： 不涉及。
+    * updateTime  **参数解释**： 告警屏蔽的更新时间，UNIX时间戳，单位毫秒。 **约束限制**： 不涉及。 **取值范围**: 不涉及。 **默认取值**： 不涉及。
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     * endDate  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * endTime  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
-    * policies  告警策略列表。
+    * policies  **参数解释**： 告警策略列表。
     *
     * @var string[]
     */
@@ -185,26 +185,26 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * notificationMaskId  屏蔽规则ID
+    * notificationMaskId  **参数解释**： 屏蔽规则ID **约束限制**： 不涉及 **取值范围**： 以nm开头，后跟[0,62]位字母或数字。 **默认取值**： 不涉及
     * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationType  relationType
-    * relationId  **参数解释**： 关联ID       **约束限制**： 不涉及。 **取值范围**： 取值为告警规则ID、告警策略ID。只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
+    * relationId  **参数解释**： 关联ID，为告警规则ID或者告警策略ID **约束限制**： 不涉及。 **取值范围**： 只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * resourceType  resourceType
-    * metricNames  关联指标名称，relation_type为RESOURCE时存在该字段
-    * productMetrics  按云产品维度屏蔽时的指标信息
-    * resourceLevel  dimension: 子维度,product: 云产品
-    * productName  资源为云产品时的云产品名称
-    * resources  关联资源类型，relation_type为RESOURCE时存在该字段,只需要查询出资源的namespace+维度名即可
+    * metricNames  **参数解释**： 关联指标名称列表，relation_type为RESOURCE时存在该字段
+    * productMetrics  **参数解释**： 按云产品维度屏蔽时的指标信息
+    * resourceLevel  **参数解释**： 资源层级。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度
+    * productName  **参数解释**： 资源为云产品时的云产品名称 **取值范围**： 长度为[0,128]个字符。
+    * resources  **参数解释**： 关联资源类型，relation_type为RESOURCE时存在该字段,只需要查询出资源的namespace+维度名即可
     * maskStatus  maskStatus
     * maskType  maskType
-    * createTime  告警屏蔽的创建时间，UNIX时间戳，单位毫秒。
-    * updateTime  告警屏蔽的更新时间，UNIX时间戳，单位毫秒。
+    * createTime  **参数解释**： 告警屏蔽的创建时间，UNIX时间戳，单位毫秒。 **约束限制**： 不涉及。 **取值范围**: 不涉及。 **默认取值**： 不涉及。
+    * updateTime  **参数解释**： 告警屏蔽的更新时间，UNIX时间戳，单位毫秒。 **约束限制**： 不涉及。 **取值范围**: 不涉及。 **默认取值**： 不涉及。
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     * endDate  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * endTime  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
-    * policies  告警策略列表。
+    * policies  **参数解释**： 告警策略列表。
     *
     * @var string[]
     */
@@ -233,26 +233,26 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * notificationMaskId  屏蔽规则ID
+    * notificationMaskId  **参数解释**： 屏蔽规则ID **约束限制**： 不涉及 **取值范围**： 以nm开头，后跟[0,62]位字母或数字。 **默认取值**： 不涉及
     * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationType  relationType
-    * relationId  **参数解释**： 关联ID       **约束限制**： 不涉及。 **取值范围**： 取值为告警规则ID、告警策略ID。只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
+    * relationId  **参数解释**： 关联ID，为告警规则ID或者告警策略ID **约束限制**： 不涉及。 **取值范围**： 只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * resourceType  resourceType
-    * metricNames  关联指标名称，relation_type为RESOURCE时存在该字段
-    * productMetrics  按云产品维度屏蔽时的指标信息
-    * resourceLevel  dimension: 子维度,product: 云产品
-    * productName  资源为云产品时的云产品名称
-    * resources  关联资源类型，relation_type为RESOURCE时存在该字段,只需要查询出资源的namespace+维度名即可
+    * metricNames  **参数解释**： 关联指标名称列表，relation_type为RESOURCE时存在该字段
+    * productMetrics  **参数解释**： 按云产品维度屏蔽时的指标信息
+    * resourceLevel  **参数解释**： 资源层级。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度
+    * productName  **参数解释**： 资源为云产品时的云产品名称 **取值范围**： 长度为[0,128]个字符。
+    * resources  **参数解释**： 关联资源类型，relation_type为RESOURCE时存在该字段,只需要查询出资源的namespace+维度名即可
     * maskStatus  maskStatus
     * maskType  maskType
-    * createTime  告警屏蔽的创建时间，UNIX时间戳，单位毫秒。
-    * updateTime  告警屏蔽的更新时间，UNIX时间戳，单位毫秒。
+    * createTime  **参数解释**： 告警屏蔽的创建时间，UNIX时间戳，单位毫秒。 **约束限制**： 不涉及。 **取值范围**: 不涉及。 **默认取值**： 不涉及。
+    * updateTime  **参数解释**： 告警屏蔽的更新时间，UNIX时间戳，单位毫秒。 **约束限制**： 不涉及。 **取值范围**: 不涉及。 **默认取值**： 不涉及。
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     * endDate  **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * endTime  **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
     * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
-    * policies  告警策略列表。
+    * policies  **参数解释**： 告警策略列表。
     *
     * @var string[]
     */
@@ -472,7 +472,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Gets notificationMaskId
-    *  屏蔽规则ID
+    *  **参数解释**： 屏蔽规则ID **约束限制**： 不涉及 **取值范围**： 以nm开头，后跟[0,62]位字母或数字。 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -484,7 +484,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Sets notificationMaskId
     *
-    * @param string $notificationMaskId 屏蔽规则ID
+    * @param string $notificationMaskId **参数解释**： 屏蔽规则ID **约束限制**： 不涉及 **取值范围**： 以nm开头，后跟[0,62]位字母或数字。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -544,7 +544,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Gets relationId
-    *  **参数解释**： 关联ID       **约束限制**： 不涉及。 **取值范围**： 取值为告警规则ID、告警策略ID。只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
+    *  **参数解释**： 关联ID，为告警规则ID或者告警策略ID **约束限制**： 不涉及。 **取值范围**： 只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -556,7 +556,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Sets relationId
     *
-    * @param string|null $relationId **参数解释**： 关联ID       **约束限制**： 不涉及。 **取值范围**： 取值为告警规则ID、告警策略ID。只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
+    * @param string|null $relationId **参数解释**： 关联ID，为告警规则ID或者告警策略ID **约束限制**： 不涉及。 **取值范围**： 只能包含字母、数字、“-”，长度为[1,64]个字符。      **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -592,7 +592,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Gets metricNames
-    *  关联指标名称，relation_type为RESOURCE时存在该字段
+    *  **参数解释**： 关联指标名称列表，relation_type为RESOURCE时存在该字段
     *
     * @return string[]|null
     */
@@ -604,7 +604,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Sets metricNames
     *
-    * @param string[]|null $metricNames 关联指标名称，relation_type为RESOURCE时存在该字段
+    * @param string[]|null $metricNames **参数解释**： 关联指标名称列表，relation_type为RESOURCE时存在该字段
     *
     * @return $this
     */
@@ -616,9 +616,9 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Gets productMetrics
-    *  按云产品维度屏蔽时的指标信息
+    *  **参数解释**： 按云产品维度屏蔽时的指标信息
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\ProductMetric[]|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\ProductMetricResp[]|null
     */
     public function getProductMetrics()
     {
@@ -628,7 +628,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Sets productMetrics
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ProductMetric[]|null $productMetrics 按云产品维度屏蔽时的指标信息
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ProductMetricResp[]|null $productMetrics **参数解释**： 按云产品维度屏蔽时的指标信息
     *
     * @return $this
     */
@@ -640,7 +640,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Gets resourceLevel
-    *  dimension: 子维度,product: 云产品
+    *  **参数解释**： 资源层级。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度
     *
     * @return string|null
     */
@@ -652,7 +652,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Sets resourceLevel
     *
-    * @param string|null $resourceLevel dimension: 子维度,product: 云产品
+    * @param string|null $resourceLevel **参数解释**： 资源层级。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度
     *
     * @return $this
     */
@@ -664,7 +664,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Gets productName
-    *  资源为云产品时的云产品名称
+    *  **参数解释**： 资源为云产品时的云产品名称 **取值范围**： 长度为[0,128]个字符。
     *
     * @return string|null
     */
@@ -676,7 +676,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Sets productName
     *
-    * @param string|null $productName 资源为云产品时的云产品名称
+    * @param string|null $productName **参数解释**： 资源为云产品时的云产品名称 **取值范围**： 长度为[0,128]个字符。
     *
     * @return $this
     */
@@ -688,9 +688,9 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Gets resources
-    *  关联资源类型，relation_type为RESOURCE时存在该字段,只需要查询出资源的namespace+维度名即可
+    *  **参数解释**： 关联资源类型，relation_type为RESOURCE时存在该字段,只需要查询出资源的namespace+维度名即可
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourceCategory[]|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourceCategoryResp[]|null
     */
     public function getResources()
     {
@@ -700,7 +700,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourceCategory[]|null $resources 关联资源类型，relation_type为RESOURCE时存在该字段,只需要查询出资源的namespace+维度名即可
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourceCategoryResp[]|null $resources **参数解释**： 关联资源类型，relation_type为RESOURCE时存在该字段,只需要查询出资源的namespace+维度名即可
     *
     * @return $this
     */
@@ -760,7 +760,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Gets createTime
-    *  告警屏蔽的创建时间，UNIX时间戳，单位毫秒。
+    *  **参数解释**： 告警屏蔽的创建时间，UNIX时间戳，单位毫秒。 **约束限制**： 不涉及。 **取值范围**: 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -772,7 +772,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 告警屏蔽的创建时间，UNIX时间戳，单位毫秒。
+    * @param int|null $createTime **参数解释**： 告警屏蔽的创建时间，UNIX时间戳，单位毫秒。 **约束限制**： 不涉及。 **取值范围**: 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -784,7 +784,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Gets updateTime
-    *  告警屏蔽的更新时间，UNIX时间戳，单位毫秒。
+    *  **参数解释**： 告警屏蔽的更新时间，UNIX时间戳，单位毫秒。 **约束限制**： 不涉及。 **取值范围**: 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -796,7 +796,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Sets updateTime
     *
-    * @param int|null $updateTime 告警屏蔽的更新时间，UNIX时间戳，单位毫秒。
+    * @param int|null $updateTime **参数解释**： 告警屏蔽的更新时间，UNIX时间戳，单位毫秒。 **约束限制**： 不涉及。 **取值范围**: 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -928,7 +928,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
 
     /**
     * Gets policies
-    *  告警策略列表。
+    *  **参数解释**： 告警策略列表。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\PoliciesInListResp[]|null
     */
@@ -940,7 +940,7 @@ class ListNotificationMaskRespNotificationMasks implements ModelInterface, Array
     /**
     * Sets policies
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\PoliciesInListResp[]|null $policies 告警策略列表。
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\PoliciesInListResp[]|null $policies **参数解释**： 告警策略列表。
     *
     * @return $this
     */

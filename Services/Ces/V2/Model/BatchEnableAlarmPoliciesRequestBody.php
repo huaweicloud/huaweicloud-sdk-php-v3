@@ -20,26 +20,34 @@ class BatchEnableAlarmPoliciesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarmPolicyIds  需要批量启停的告警规则策略的ID列表
-    * enabled  是否启用告警策略。true:开启，false：关闭。
+    * alarmPolicyIds  **参数解释** 需要批量启停的告警规则策略的ID列表 **约束限制** 包含的告警规则策略ID个数为1到100
+    * enabled  **参数解释** 是否启用告警策略 **约束限制** 不涉及 **取值范围** - true:开启 - false:关闭 **默认取值** true
+    * retainWhenAllDisabled  **参数解释** 一键告警中的规则全部被停用时是否保留规则信息 **约束限制** 不涉及 **取值范围** - true:保留规则信息 - false:不保留规则信息 **默认取值** false
+    * actionType  **参数解释** 当传此参数时，将会批量停用一键告警规则 **约束限制** 不涉及 **取值范围** - disable: 表示将会批量停用一键告警规则 **默认取值** 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'alarmPolicyIds' => 'string[]',
-            'enabled' => 'bool'
+            'enabled' => 'bool',
+            'retainWhenAllDisabled' => 'bool',
+            'actionType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarmPolicyIds  需要批量启停的告警规则策略的ID列表
-    * enabled  是否启用告警策略。true:开启，false：关闭。
+    * alarmPolicyIds  **参数解释** 需要批量启停的告警规则策略的ID列表 **约束限制** 包含的告警规则策略ID个数为1到100
+    * enabled  **参数解释** 是否启用告警策略 **约束限制** 不涉及 **取值范围** - true:开启 - false:关闭 **默认取值** true
+    * retainWhenAllDisabled  **参数解释** 一键告警中的规则全部被停用时是否保留规则信息 **约束限制** 不涉及 **取值范围** - true:保留规则信息 - false:不保留规则信息 **默认取值** false
+    * actionType  **参数解释** 当传此参数时，将会批量停用一键告警规则 **约束限制** 不涉及 **取值范围** - disable: 表示将会批量停用一键告警规则 **默认取值** 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'alarmPolicyIds' => null,
-        'enabled' => null
+        'enabled' => null,
+        'retainWhenAllDisabled' => null,
+        'actionType' => null
     ];
 
     /**
@@ -65,38 +73,50 @@ class BatchEnableAlarmPoliciesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarmPolicyIds  需要批量启停的告警规则策略的ID列表
-    * enabled  是否启用告警策略。true:开启，false：关闭。
+    * alarmPolicyIds  **参数解释** 需要批量启停的告警规则策略的ID列表 **约束限制** 包含的告警规则策略ID个数为1到100
+    * enabled  **参数解释** 是否启用告警策略 **约束限制** 不涉及 **取值范围** - true:开启 - false:关闭 **默认取值** true
+    * retainWhenAllDisabled  **参数解释** 一键告警中的规则全部被停用时是否保留规则信息 **约束限制** 不涉及 **取值范围** - true:保留规则信息 - false:不保留规则信息 **默认取值** false
+    * actionType  **参数解释** 当传此参数时，将会批量停用一键告警规则 **约束限制** 不涉及 **取值范围** - disable: 表示将会批量停用一键告警规则 **默认取值** 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'alarmPolicyIds' => 'alarm_policy_ids',
-            'enabled' => 'enabled'
+            'enabled' => 'enabled',
+            'retainWhenAllDisabled' => 'retain_when_all_disabled',
+            'actionType' => 'action_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarmPolicyIds  需要批量启停的告警规则策略的ID列表
-    * enabled  是否启用告警策略。true:开启，false：关闭。
+    * alarmPolicyIds  **参数解释** 需要批量启停的告警规则策略的ID列表 **约束限制** 包含的告警规则策略ID个数为1到100
+    * enabled  **参数解释** 是否启用告警策略 **约束限制** 不涉及 **取值范围** - true:开启 - false:关闭 **默认取值** true
+    * retainWhenAllDisabled  **参数解释** 一键告警中的规则全部被停用时是否保留规则信息 **约束限制** 不涉及 **取值范围** - true:保留规则信息 - false:不保留规则信息 **默认取值** false
+    * actionType  **参数解释** 当传此参数时，将会批量停用一键告警规则 **约束限制** 不涉及 **取值范围** - disable: 表示将会批量停用一键告警规则 **默认取值** 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
             'alarmPolicyIds' => 'setAlarmPolicyIds',
-            'enabled' => 'setEnabled'
+            'enabled' => 'setEnabled',
+            'retainWhenAllDisabled' => 'setRetainWhenAllDisabled',
+            'actionType' => 'setActionType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarmPolicyIds  需要批量启停的告警规则策略的ID列表
-    * enabled  是否启用告警策略。true:开启，false：关闭。
+    * alarmPolicyIds  **参数解释** 需要批量启停的告警规则策略的ID列表 **约束限制** 包含的告警规则策略ID个数为1到100
+    * enabled  **参数解释** 是否启用告警策略 **约束限制** 不涉及 **取值范围** - true:开启 - false:关闭 **默认取值** true
+    * retainWhenAllDisabled  **参数解释** 一键告警中的规则全部被停用时是否保留规则信息 **约束限制** 不涉及 **取值范围** - true:保留规则信息 - false:不保留规则信息 **默认取值** false
+    * actionType  **参数解释** 当传此参数时，将会批量停用一键告警规则 **约束限制** 不涉及 **取值范围** - disable: 表示将会批量停用一键告警规则 **默认取值** 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
             'alarmPolicyIds' => 'getAlarmPolicyIds',
-            'enabled' => 'getEnabled'
+            'enabled' => 'getEnabled',
+            'retainWhenAllDisabled' => 'getRetainWhenAllDisabled',
+            'actionType' => 'getActionType'
     ];
 
     /**
@@ -159,6 +179,8 @@ class BatchEnableAlarmPoliciesRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['alarmPolicyIds'] = isset($data['alarmPolicyIds']) ? $data['alarmPolicyIds'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
+        $this->container['retainWhenAllDisabled'] = isset($data['retainWhenAllDisabled']) ? $data['retainWhenAllDisabled'] : null;
+        $this->container['actionType'] = isset($data['actionType']) ? $data['actionType'] : null;
     }
 
     /**
@@ -175,6 +197,12 @@ class BatchEnableAlarmPoliciesRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['enabled'] === null) {
             $invalidProperties[] = "'enabled' can't be null";
         }
+            if (!is_null($this->container['actionType']) && (mb_strlen($this->container['actionType']) > 10)) {
+                $invalidProperties[] = "invalid value for 'actionType', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['actionType']) && !preg_match("/^(disable)$/", $this->container['actionType'])) {
+                $invalidProperties[] = "invalid value for 'actionType', must be conform to the pattern /^(disable)$/.";
+            }
         return $invalidProperties;
     }
 
@@ -191,7 +219,7 @@ class BatchEnableAlarmPoliciesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmPolicyIds
-    *  需要批量启停的告警规则策略的ID列表
+    *  **参数解释** 需要批量启停的告警规则策略的ID列表 **约束限制** 包含的告警规则策略ID个数为1到100
     *
     * @return string[]
     */
@@ -203,7 +231,7 @@ class BatchEnableAlarmPoliciesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alarmPolicyIds
     *
-    * @param string[] $alarmPolicyIds 需要批量启停的告警规则策略的ID列表
+    * @param string[] $alarmPolicyIds **参数解释** 需要批量启停的告警规则策略的ID列表 **约束限制** 包含的告警规则策略ID个数为1到100
     *
     * @return $this
     */
@@ -215,7 +243,7 @@ class BatchEnableAlarmPoliciesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  是否启用告警策略。true:开启，false：关闭。
+    *  **参数解释** 是否启用告警策略 **约束限制** 不涉及 **取值范围** - true:开启 - false:关闭 **默认取值** true
     *
     * @return bool
     */
@@ -227,13 +255,61 @@ class BatchEnableAlarmPoliciesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool $enabled 是否启用告警策略。true:开启，false：关闭。
+    * @param bool $enabled **参数解释** 是否启用告警策略 **约束限制** 不涉及 **取值范围** - true:开启 - false:关闭 **默认取值** true
     *
     * @return $this
     */
     public function setEnabled($enabled)
     {
         $this->container['enabled'] = $enabled;
+        return $this;
+    }
+
+    /**
+    * Gets retainWhenAllDisabled
+    *  **参数解释** 一键告警中的规则全部被停用时是否保留规则信息 **约束限制** 不涉及 **取值范围** - true:保留规则信息 - false:不保留规则信息 **默认取值** false
+    *
+    * @return bool|null
+    */
+    public function getRetainWhenAllDisabled()
+    {
+        return $this->container['retainWhenAllDisabled'];
+    }
+
+    /**
+    * Sets retainWhenAllDisabled
+    *
+    * @param bool|null $retainWhenAllDisabled **参数解释** 一键告警中的规则全部被停用时是否保留规则信息 **约束限制** 不涉及 **取值范围** - true:保留规则信息 - false:不保留规则信息 **默认取值** false
+    *
+    * @return $this
+    */
+    public function setRetainWhenAllDisabled($retainWhenAllDisabled)
+    {
+        $this->container['retainWhenAllDisabled'] = $retainWhenAllDisabled;
+        return $this;
+    }
+
+    /**
+    * Gets actionType
+    *  **参数解释** 当传此参数时，将会批量停用一键告警规则 **约束限制** 不涉及 **取值范围** - disable: 表示将会批量停用一键告警规则 **默认取值** 不涉及
+    *
+    * @return string|null
+    */
+    public function getActionType()
+    {
+        return $this->container['actionType'];
+    }
+
+    /**
+    * Sets actionType
+    *
+    * @param string|null $actionType **参数解释** 当传此参数时，将会批量停用一键告警规则 **约束限制** 不涉及 **取值范围** - disable: 表示将会批量停用一键告警规则 **默认取值** 不涉及
+    *
+    * @return $this
+    */
+    public function setActionType($actionType)
+    {
+        $this->container['actionType'] = $actionType;
         return $this;
     }
 

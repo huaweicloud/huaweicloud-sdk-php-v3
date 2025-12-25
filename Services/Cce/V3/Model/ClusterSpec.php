@@ -43,7 +43,6 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * kubeProxyMode  服务转发模式，支持以下两种实现：  - iptables：社区传统的kube-proxy模式，完全以iptables规则的方式来实现service负载均衡。该方式最主要的问题是在服务多的时候产生太多的iptables规则，非增量式更新会引入一定的时延，大规模情况下有明显的性能问题。 - ipvs：主导开发并在社区获得广泛支持的kube-proxy模式，采用增量式更新，吞吐更高，速度更快，并可以保证service更新期间连接保持不断开，适用于大规模场景。  > 默认使用iptables转发模式。
     * az  **参数解释：** 可用区（废弃中）。 [CCE支持的可用区请参考[地区和终端节点](https://console.huaweicloud.com/apiexplorer/#/endpoint/CCE)。](tag:hws)  [CCE支持的可用区请参考[地区和终端节点](https://console-intl.huaweicloud.com/apiexplorer/#/endpoint/CCE)。](tag:hws_hk) **约束限制：** 仅查询接口返回该字段。
     * extendParam  extendParam
-    * supportIstio  支持Istio
     * enableMasterVolumeEncryption  集群控制节点系统盘、数据盘加密。默认使用AES_256加密算法。CCE、Turbo集群1.25及以上版本开始支持。集群创建后不支持修改。开启后存在一定的磁盘读写性能损耗。
     * enableDistMgt  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
     * deletionProtection  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
@@ -77,7 +76,6 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'kubeProxyMode' => 'string',
             'az' => 'string',
             'extendParam' => '\HuaweiCloud\SDK\Cce\V3\Model\ClusterExtendParam',
-            'supportIstio' => 'bool',
             'enableMasterVolumeEncryption' => 'bool',
             'enableDistMgt' => 'bool',
             'deletionProtection' => 'bool',
@@ -111,7 +109,6 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * kubeProxyMode  服务转发模式，支持以下两种实现：  - iptables：社区传统的kube-proxy模式，完全以iptables规则的方式来实现service负载均衡。该方式最主要的问题是在服务多的时候产生太多的iptables规则，非增量式更新会引入一定的时延，大规模情况下有明显的性能问题。 - ipvs：主导开发并在社区获得广泛支持的kube-proxy模式，采用增量式更新，吞吐更高，速度更快，并可以保证service更新期间连接保持不断开，适用于大规模场景。  > 默认使用iptables转发模式。
     * az  **参数解释：** 可用区（废弃中）。 [CCE支持的可用区请参考[地区和终端节点](https://console.huaweicloud.com/apiexplorer/#/endpoint/CCE)。](tag:hws)  [CCE支持的可用区请参考[地区和终端节点](https://console-intl.huaweicloud.com/apiexplorer/#/endpoint/CCE)。](tag:hws_hk) **约束限制：** 仅查询接口返回该字段。
     * extendParam  extendParam
-    * supportIstio  支持Istio
     * enableMasterVolumeEncryption  集群控制节点系统盘、数据盘加密。默认使用AES_256加密算法。CCE、Turbo集群1.25及以上版本开始支持。集群创建后不支持修改。开启后存在一定的磁盘读写性能损耗。
     * enableDistMgt  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
     * deletionProtection  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
@@ -145,7 +142,6 @@ class ClusterSpec implements ModelInterface, ArrayAccess
         'kubeProxyMode' => null,
         'az' => null,
         'extendParam' => null,
-        'supportIstio' => null,
         'enableMasterVolumeEncryption' => null,
         'enableDistMgt' => null,
         'deletionProtection' => null,
@@ -200,7 +196,6 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * kubeProxyMode  服务转发模式，支持以下两种实现：  - iptables：社区传统的kube-proxy模式，完全以iptables规则的方式来实现service负载均衡。该方式最主要的问题是在服务多的时候产生太多的iptables规则，非增量式更新会引入一定的时延，大规模情况下有明显的性能问题。 - ipvs：主导开发并在社区获得广泛支持的kube-proxy模式，采用增量式更新，吞吐更高，速度更快，并可以保证service更新期间连接保持不断开，适用于大规模场景。  > 默认使用iptables转发模式。
     * az  **参数解释：** 可用区（废弃中）。 [CCE支持的可用区请参考[地区和终端节点](https://console.huaweicloud.com/apiexplorer/#/endpoint/CCE)。](tag:hws)  [CCE支持的可用区请参考[地区和终端节点](https://console-intl.huaweicloud.com/apiexplorer/#/endpoint/CCE)。](tag:hws_hk) **约束限制：** 仅查询接口返回该字段。
     * extendParam  extendParam
-    * supportIstio  支持Istio
     * enableMasterVolumeEncryption  集群控制节点系统盘、数据盘加密。默认使用AES_256加密算法。CCE、Turbo集群1.25及以上版本开始支持。集群创建后不支持修改。开启后存在一定的磁盘读写性能损耗。
     * enableDistMgt  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
     * deletionProtection  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
@@ -234,7 +229,6 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'kubeProxyMode' => 'kubeProxyMode',
             'az' => 'az',
             'extendParam' => 'extendParam',
-            'supportIstio' => 'supportIstio',
             'enableMasterVolumeEncryption' => 'enableMasterVolumeEncryption',
             'enableDistMgt' => 'enableDistMgt',
             'deletionProtection' => 'deletionProtection',
@@ -268,7 +262,6 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * kubeProxyMode  服务转发模式，支持以下两种实现：  - iptables：社区传统的kube-proxy模式，完全以iptables规则的方式来实现service负载均衡。该方式最主要的问题是在服务多的时候产生太多的iptables规则，非增量式更新会引入一定的时延，大规模情况下有明显的性能问题。 - ipvs：主导开发并在社区获得广泛支持的kube-proxy模式，采用增量式更新，吞吐更高，速度更快，并可以保证service更新期间连接保持不断开，适用于大规模场景。  > 默认使用iptables转发模式。
     * az  **参数解释：** 可用区（废弃中）。 [CCE支持的可用区请参考[地区和终端节点](https://console.huaweicloud.com/apiexplorer/#/endpoint/CCE)。](tag:hws)  [CCE支持的可用区请参考[地区和终端节点](https://console-intl.huaweicloud.com/apiexplorer/#/endpoint/CCE)。](tag:hws_hk) **约束限制：** 仅查询接口返回该字段。
     * extendParam  extendParam
-    * supportIstio  支持Istio
     * enableMasterVolumeEncryption  集群控制节点系统盘、数据盘加密。默认使用AES_256加密算法。CCE、Turbo集群1.25及以上版本开始支持。集群创建后不支持修改。开启后存在一定的磁盘读写性能损耗。
     * enableDistMgt  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
     * deletionProtection  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
@@ -302,7 +295,6 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'kubeProxyMode' => 'setKubeProxyMode',
             'az' => 'setAz',
             'extendParam' => 'setExtendParam',
-            'supportIstio' => 'setSupportIstio',
             'enableMasterVolumeEncryption' => 'setEnableMasterVolumeEncryption',
             'enableDistMgt' => 'setEnableDistMgt',
             'deletionProtection' => 'setDeletionProtection',
@@ -336,7 +328,6 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * kubeProxyMode  服务转发模式，支持以下两种实现：  - iptables：社区传统的kube-proxy模式，完全以iptables规则的方式来实现service负载均衡。该方式最主要的问题是在服务多的时候产生太多的iptables规则，非增量式更新会引入一定的时延，大规模情况下有明显的性能问题。 - ipvs：主导开发并在社区获得广泛支持的kube-proxy模式，采用增量式更新，吞吐更高，速度更快，并可以保证service更新期间连接保持不断开，适用于大规模场景。  > 默认使用iptables转发模式。
     * az  **参数解释：** 可用区（废弃中）。 [CCE支持的可用区请参考[地区和终端节点](https://console.huaweicloud.com/apiexplorer/#/endpoint/CCE)。](tag:hws)  [CCE支持的可用区请参考[地区和终端节点](https://console-intl.huaweicloud.com/apiexplorer/#/endpoint/CCE)。](tag:hws_hk) **约束限制：** 仅查询接口返回该字段。
     * extendParam  extendParam
-    * supportIstio  支持Istio
     * enableMasterVolumeEncryption  集群控制节点系统盘、数据盘加密。默认使用AES_256加密算法。CCE、Turbo集群1.25及以上版本开始支持。集群创建后不支持修改。开启后存在一定的磁盘读写性能损耗。
     * enableDistMgt  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
     * deletionProtection  集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
@@ -370,7 +361,6 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'kubeProxyMode' => 'getKubeProxyMode',
             'az' => 'getAz',
             'extendParam' => 'getExtendParam',
-            'supportIstio' => 'getSupportIstio',
             'enableMasterVolumeEncryption' => 'getEnableMasterVolumeEncryption',
             'enableDistMgt' => 'getEnableDistMgt',
             'deletionProtection' => 'getDeletionProtection',
@@ -505,7 +495,6 @@ class ClusterSpec implements ModelInterface, ArrayAccess
         $this->container['kubeProxyMode'] = isset($data['kubeProxyMode']) ? $data['kubeProxyMode'] : null;
         $this->container['az'] = isset($data['az']) ? $data['az'] : null;
         $this->container['extendParam'] = isset($data['extendParam']) ? $data['extendParam'] : null;
-        $this->container['supportIstio'] = isset($data['supportIstio']) ? $data['supportIstio'] : null;
         $this->container['enableMasterVolumeEncryption'] = isset($data['enableMasterVolumeEncryption']) ? $data['enableMasterVolumeEncryption'] : null;
         $this->container['enableDistMgt'] = isset($data['enableDistMgt']) ? $data['enableDistMgt'] : null;
         $this->container['deletionProtection'] = isset($data['deletionProtection']) ? $data['deletionProtection'] : null;
@@ -1130,30 +1119,6 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     public function setExtendParam($extendParam)
     {
         $this->container['extendParam'] = $extendParam;
-        return $this;
-    }
-
-    /**
-    * Gets supportIstio
-    *  支持Istio
-    *
-    * @return bool|null
-    */
-    public function getSupportIstio()
-    {
-        return $this->container['supportIstio'];
-    }
-
-    /**
-    * Sets supportIstio
-    *
-    * @param bool|null $supportIstio 支持Istio
-    *
-    * @return $this
-    */
-    public function setSupportIstio($supportIstio)
-    {
-        $this->container['supportIstio'] = $supportIstio;
         return $this;
     }
 

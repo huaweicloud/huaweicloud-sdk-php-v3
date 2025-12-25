@@ -21,7 +21,7 @@ class CreateAlarmTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * templateId  自定义告警模板创建成功返回的ID，如：at1603252280799wLRyGLxnz。
+    * templateId  **参数解释** 自定义告警模板创建成功返回的ID **约束限制**： 不涉及 **取值范围**： 以at开头，后跟字母、数字，长度最长为64，如：at1603252280799wLRyGLxnz。 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateAlarmTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * templateId  自定义告警模板创建成功返回的ID，如：at1603252280799wLRyGLxnz。
+    * templateId  **参数解释** 自定义告警模板创建成功返回的ID **约束限制**： 不涉及 **取值范围**： 以at开头，后跟字母、数字，长度最长为64，如：at1603252280799wLRyGLxnz。 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateAlarmTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * templateId  自定义告警模板创建成功返回的ID，如：at1603252280799wLRyGLxnz。
+    * templateId  **参数解释** 自定义告警模板创建成功返回的ID **约束限制**： 不涉及 **取值范围**： 以at开头，后跟字母、数字，长度最长为64，如：at1603252280799wLRyGLxnz。 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateAlarmTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * templateId  自定义告警模板创建成功返回的ID，如：at1603252280799wLRyGLxnz。
+    * templateId  **参数解释** 自定义告警模板创建成功返回的ID **约束限制**： 不涉及 **取值范围**： 以at开头，后跟字母、数字，长度最长为64，如：at1603252280799wLRyGLxnz。 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateAlarmTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * templateId  自定义告警模板创建成功返回的ID，如：at1603252280799wLRyGLxnz。
+    * templateId  **参数解释** 自定义告警模板创建成功返回的ID **约束限制**： 不涉及 **取值范围**： 以at开头，后跟字母、数字，长度最长为64，如：at1603252280799wLRyGLxnz。 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -184,7 +184,7 @@ class CreateAlarmTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateId
-    *  自定义告警模板创建成功返回的ID，如：at1603252280799wLRyGLxnz。
+    *  **参数解释** 自定义告警模板创建成功返回的ID **约束限制**： 不涉及 **取值范围**： 以at开头，后跟字母、数字，长度最长为64，如：at1603252280799wLRyGLxnz。 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -196,7 +196,7 @@ class CreateAlarmTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets templateId
     *
-    * @param string|null $templateId 自定义告警模板创建成功返回的ID，如：at1603252280799wLRyGLxnz。
+    * @param string|null $templateId **参数解释** 自定义告警模板创建成功返回的ID **约束限制**： 不涉及 **取值范围**： 以at开头，后跟字母、数字，长度最长为64，如：at1603252280799wLRyGLxnz。 **默认取值**： 不涉及
     *
     * @return $this
     */

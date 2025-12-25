@@ -29,8 +29,8 @@ class PublicEndpointResponse implements ModelInterface, ArrayAccess
     * domainNameSuffix  **参数解释**： 公网域名后缀信息。 **取值范围**： 不涉及。
     * zoneName  **参数解释**： 公网域名后缀信息。 **取值范围**： 不涉及。
     * domainNameTtl  **参数解释**： 公网域名TTL。 **取值范围**： 不涉及。
-    * domainNameStatus  **参数解释**： 公网域名状态。 **取值范围**： 不涉及。
-    * ipStatus  **参数解释**： 公网IP状态。 **取值范围**： 不涉及。
+    * domainNameStatus  **参数解释**： 公网域名状态。 **取值范围**： - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
+    * ipStatus  **参数解释**： 公网IP状态。 **取值范围**： - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     *
     * @var string[]
     */
@@ -59,8 +59,8 @@ class PublicEndpointResponse implements ModelInterface, ArrayAccess
     * domainNameSuffix  **参数解释**： 公网域名后缀信息。 **取值范围**： 不涉及。
     * zoneName  **参数解释**： 公网域名后缀信息。 **取值范围**： 不涉及。
     * domainNameTtl  **参数解释**： 公网域名TTL。 **取值范围**： 不涉及。
-    * domainNameStatus  **参数解释**： 公网域名状态。 **取值范围**： 不涉及。
-    * ipStatus  **参数解释**： 公网IP状态。 **取值范围**： 不涉及。
+    * domainNameStatus  **参数解释**： 公网域名状态。 **取值范围**： - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
+    * ipStatus  **参数解释**： 公网IP状态。 **取值范围**： - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     *
     * @var string[]
     */
@@ -110,8 +110,8 @@ class PublicEndpointResponse implements ModelInterface, ArrayAccess
     * domainNameSuffix  **参数解释**： 公网域名后缀信息。 **取值范围**： 不涉及。
     * zoneName  **参数解释**： 公网域名后缀信息。 **取值范围**： 不涉及。
     * domainNameTtl  **参数解释**： 公网域名TTL。 **取值范围**： 不涉及。
-    * domainNameStatus  **参数解释**： 公网域名状态。 **取值范围**： 不涉及。
-    * ipStatus  **参数解释**： 公网IP状态。 **取值范围**： 不涉及。
+    * domainNameStatus  **参数解释**： 公网域名状态。 **取值范围**： - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
+    * ipStatus  **参数解释**： 公网IP状态。 **取值范围**： - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     *
     * @var string[]
     */
@@ -140,8 +140,8 @@ class PublicEndpointResponse implements ModelInterface, ArrayAccess
     * domainNameSuffix  **参数解释**： 公网域名后缀信息。 **取值范围**： 不涉及。
     * zoneName  **参数解释**： 公网域名后缀信息。 **取值范围**： 不涉及。
     * domainNameTtl  **参数解释**： 公网域名TTL。 **取值范围**： 不涉及。
-    * domainNameStatus  **参数解释**： 公网域名状态。 **取值范围**： 不涉及。
-    * ipStatus  **参数解释**： 公网IP状态。 **取值范围**： 不涉及。
+    * domainNameStatus  **参数解释**： 公网域名状态。 **取值范围**： - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
+    * ipStatus  **参数解释**： 公网IP状态。 **取值范围**： - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     *
     * @var string[]
     */
@@ -170,8 +170,8 @@ class PublicEndpointResponse implements ModelInterface, ArrayAccess
     * domainNameSuffix  **参数解释**： 公网域名后缀信息。 **取值范围**： 不涉及。
     * zoneName  **参数解释**： 公网域名后缀信息。 **取值范围**： 不涉及。
     * domainNameTtl  **参数解释**： 公网域名TTL。 **取值范围**： 不涉及。
-    * domainNameStatus  **参数解释**： 公网域名状态。 **取值范围**： 不涉及。
-    * ipStatus  **参数解释**： 公网IP状态。 **取值范围**： 不涉及。
+    * domainNameStatus  **参数解释**： 公网域名状态。 **取值范围**： - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
+    * ipStatus  **参数解释**： 公网IP状态。 **取值范围**： - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     *
     * @var string[]
     */
@@ -500,7 +500,7 @@ class PublicEndpointResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainNameStatus
-    *  **参数解释**： 公网域名状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 公网域名状态。 **取值范围**： - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
     *
     * @return string|null
     */
@@ -512,7 +512,7 @@ class PublicEndpointResponse implements ModelInterface, ArrayAccess
     /**
     * Sets domainNameStatus
     *
-    * @param string|null $domainNameStatus **参数解释**： 公网域名状态。 **取值范围**： 不涉及。
+    * @param string|null $domainNameStatus **参数解释**： 公网域名状态。 **取值范围**： - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - PENDING_DISABLE：暂停中 - DISABLE：暂停 - ERROR：失败
     *
     * @return $this
     */
@@ -524,7 +524,7 @@ class PublicEndpointResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipStatus
-    *  **参数解释**： 公网IP状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 公网IP状态。 **取值范围**： - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     *
     * @return string|null
     */
@@ -536,7 +536,7 @@ class PublicEndpointResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ipStatus
     *
-    * @param string|null $ipStatus **参数解释**： 公网IP状态。 **取值范围**： 不涉及。
+    * @param string|null $ipStatus **参数解释**： 公网IP状态。 **取值范围**： - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     *
     * @return $this
     */

@@ -22,7 +22,7 @@ class ScheduleConf implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * scheduleStart  **参数解释**： 调度开始时间。 **取值范围**： 不涉及。
     * scheduleEnd  **参数解释**： 调度结束时间。 **取值范围**： 不涉及。
-    * scheduleType  **参数解释**： 调度类型。 **取值范围**： 不涉及。
+    * scheduleType  **参数解释**： 调度类型。 **取值范围**： - timeRange：时间范围。
     * scheduleDate  **参数解释**： 调度日期。 **取值范围**： 不涉及。
     * scheduleTime  **参数解释**： 调度时间列表。 **取值范围**： 不涉及。
     *
@@ -40,7 +40,7 @@ class ScheduleConf implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * scheduleStart  **参数解释**： 调度开始时间。 **取值范围**： 不涉及。
     * scheduleEnd  **参数解释**： 调度结束时间。 **取值范围**： 不涉及。
-    * scheduleType  **参数解释**： 调度类型。 **取值范围**： 不涉及。
+    * scheduleType  **参数解释**： 调度类型。 **取值范围**： - timeRange：时间范围。
     * scheduleDate  **参数解释**： 调度日期。 **取值范围**： 不涉及。
     * scheduleTime  **参数解释**： 调度时间列表。 **取值范围**： 不涉及。
     *
@@ -79,7 +79,7 @@ class ScheduleConf implements ModelInterface, ArrayAccess
     * and the value is the original name
     * scheduleStart  **参数解释**： 调度开始时间。 **取值范围**： 不涉及。
     * scheduleEnd  **参数解释**： 调度结束时间。 **取值范围**： 不涉及。
-    * scheduleType  **参数解释**： 调度类型。 **取值范围**： 不涉及。
+    * scheduleType  **参数解释**： 调度类型。 **取值范围**： - timeRange：时间范围。
     * scheduleDate  **参数解释**： 调度日期。 **取值范围**： 不涉及。
     * scheduleTime  **参数解释**： 调度时间列表。 **取值范围**： 不涉及。
     *
@@ -97,7 +97,7 @@ class ScheduleConf implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * scheduleStart  **参数解释**： 调度开始时间。 **取值范围**： 不涉及。
     * scheduleEnd  **参数解释**： 调度结束时间。 **取值范围**： 不涉及。
-    * scheduleType  **参数解释**： 调度类型。 **取值范围**： 不涉及。
+    * scheduleType  **参数解释**： 调度类型。 **取值范围**： - timeRange：时间范围。
     * scheduleDate  **参数解释**： 调度日期。 **取值范围**： 不涉及。
     * scheduleTime  **参数解释**： 调度时间列表。 **取值范围**： 不涉及。
     *
@@ -115,7 +115,7 @@ class ScheduleConf implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * scheduleStart  **参数解释**： 调度开始时间。 **取值范围**： 不涉及。
     * scheduleEnd  **参数解释**： 调度结束时间。 **取值范围**： 不涉及。
-    * scheduleType  **参数解释**： 调度类型。 **取值范围**： 不涉及。
+    * scheduleType  **参数解释**： 调度类型。 **取值范围**： - timeRange：时间范围。
     * scheduleDate  **参数解释**： 调度日期。 **取值范围**： 不涉及。
     * scheduleTime  **参数解释**： 调度时间列表。 **取值范围**： 不涉及。
     *
@@ -266,7 +266,7 @@ class ScheduleConf implements ModelInterface, ArrayAccess
 
     /**
     * Gets scheduleType
-    *  **参数解释**： 调度类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 调度类型。 **取值范围**： - timeRange：时间范围。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class ScheduleConf implements ModelInterface, ArrayAccess
     /**
     * Sets scheduleType
     *
-    * @param string|null $scheduleType **参数解释**： 调度类型。 **取值范围**： 不涉及。
+    * @param string|null $scheduleType **参数解释**： 调度类型。 **取值范围**： - timeRange：时间范围。
     *
     * @return $this
     */

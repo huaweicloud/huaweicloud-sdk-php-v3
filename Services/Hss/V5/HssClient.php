@@ -29,7 +29,7 @@ class HssClient extends Client
     /**
      * 新建cce集成防护配置
      *
-     * 新建cce集成防护配置
+     * 新建cce集成防护配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -97,7 +97,7 @@ class HssClient extends Client
     /**
      * 添加登录白名单
      *
-     * 添加登录白名单
+     * 添加登录白名单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -162,7 +162,7 @@ class HssClient extends Client
     /**
      * 添加防护策略
      *
-     * 添加防护策略：创建防护策略，包含策略名称、相关规则开启状态、防护动作以及检测规则配置
+     * 添加防护策略：创建防护策略，包含策略名称、相关规则开启状态、防护动作以及检测规则配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -233,7 +233,7 @@ class HssClient extends Client
     /**
      * 添加系统用户白名单
      *
-     * 添加系统用户白名单
+     * 添加系统用户白名单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -298,7 +298,7 @@ class HssClient extends Client
     /**
      * 批量添加账号
      *
-     * 批量添加账号
+     * 批量添加账号。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -369,7 +369,7 @@ class HssClient extends Client
     /**
      * 全量处理告警事件
      *
-     * 全量处理告警事件
+     * 全量处理告警事件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -437,7 +437,7 @@ class HssClient extends Client
     /**
      * 批量创建标签
      *
-     * 批量创建标签
+     * 批量创建标签。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -505,7 +505,7 @@ class HssClient extends Client
     /**
      * 批量删除标签
      *
-     * 批量删除标签
+     * 批量删除标签。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -573,7 +573,7 @@ class HssClient extends Client
     /**
      * 修改开放端口状态
      *
-     * 修改开放端口状态
+     * 修改开放端口状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -641,7 +641,7 @@ class HssClient extends Client
     /**
      * 解除已拦截IP
      *
-     * 解除已拦截IP
+     * 解除已拦截IP。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -709,7 +709,7 @@ class HssClient extends Client
     /**
      * 修改告警状态
      *
-     * 修改告警状态
+     * 修改告警状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -774,7 +774,7 @@ class HssClient extends Client
     /**
      * 修改集群防护策略
      *
-     * 修改集群防护策略
+     * 修改集群防护策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -839,7 +839,7 @@ class HssClient extends Client
     /**
      * 管理容器生命周期
      *
-     * 管理容器生命周期
+     * 管理容器生命周期。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -910,7 +910,7 @@ class HssClient extends Client
     /**
      * 处理告警事件
      *
-     * 处理告警事件
+     * 处理告警事件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -984,7 +984,7 @@ class HssClient extends Client
     /**
      * 恢复已隔离文件
      *
-     * 恢复已隔离文件
+     * 恢复已隔离文件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1052,7 +1052,7 @@ class HssClient extends Client
     /**
      * 开启或关闭恶意软件云查样本收集配置
      *
-     * 开启或关闭恶意软件云查样本收集配置
+     * 开启或关闭恶意软件云查样本收集配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1117,7 +1117,7 @@ class HssClient extends Client
     /**
      * 新建集群防护策略
      *
-     * 新建集群防护策略
+     * 新建集群防护策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1182,7 +1182,7 @@ class HssClient extends Client
     /**
      * 同步集群信息
      *
-     * 同步集群信息
+     * 同步集群信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1244,7 +1244,7 @@ class HssClient extends Client
     /**
      * 容器集群网络添加配置策略
      *
-     * 容器集群网络添加配置策略
+     * 容器集群网络添加配置策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1312,7 +1312,7 @@ class HssClient extends Client
     /**
      * 新增动态端口蜜罐策略
      *
-     * 新增动态端口蜜罐策略
+     * 新增动态端口蜜罐策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1377,7 +1377,7 @@ class HssClient extends Client
     /**
      * 创建全局资产扫描任务
      *
-     * 创建全局资产扫描任务
+     * 创建全局资产扫描任务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1445,7 +1445,7 @@ class HssClient extends Client
     /**
      * 创建安全组策略
      *
-     * 创建安全组策略(云原生网络模型)
+     * 创建安全组策略(云原生网络模型)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1516,7 +1516,7 @@ class HssClient extends Client
     /**
      * 删除账号
      *
-     * 删除账号
+     * 删除账号。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1587,7 +1587,7 @@ class HssClient extends Client
     /**
      * 删除集群防护策略
      *
-     * 删除集群防护策略
+     * 删除集群防护策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1652,7 +1652,7 @@ class HssClient extends Client
     /**
      * 容器集群网络删除配置策略
      *
-     * 容器集群网络删除配置策略
+     * 容器集群网络删除配置策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1720,7 +1720,7 @@ class HssClient extends Client
     /**
      * 关闭主机动态端口蜜罐策略
      *
-     * 关闭主机动态端口蜜罐策略
+     * 关闭主机动态端口蜜罐策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1788,7 +1788,7 @@ class HssClient extends Client
     /**
      * 删除动态端口蜜罐策略
      *
-     * 删除动态端口蜜罐策略
+     * 删除动态端口蜜罐策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1853,7 +1853,7 @@ class HssClient extends Client
     /**
      * 删除已隔离文件
      *
-     * 删除已隔离文件
+     * 删除已隔离文件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1918,7 +1918,7 @@ class HssClient extends Client
     /**
      * 删除防护策略
      *
-     * 删除防护策略：删除策略，已经在使用的防护策略不能删除
+     * 删除防护策略：删除策略，已经在使用的防护策略不能删除。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1983,7 +1983,7 @@ class HssClient extends Client
     /**
      * 删除资源标签
      *
-     * 删除单个资源下的标签
+     * 删除单个资源下的标签。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2051,7 +2051,7 @@ class HssClient extends Client
     /**
      * 删除安全组策略
      *
-     * 删除安全组策略(云原生网络模型)
+     * 删除安全组策略(云原生网络模型)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2119,7 +2119,7 @@ class HssClient extends Client
     /**
      * 导出资产指纹信息
      *
-     * 导出资产指纹信息
+     * 导出资产指纹信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2190,7 +2190,7 @@ class HssClient extends Client
     /**
      * 下载告警源文件
      *
-     * 下载告警源文件
+     * 下载告警源文件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2255,7 +2255,7 @@ class HssClient extends Client
     /**
      * 开启可信服务
      *
-     * 开启可信服务
+     * 开启可信服务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2317,7 +2317,7 @@ class HssClient extends Client
     /**
      * 创建容器导出任务
      *
-     * 创建容器导出任务
+     * 创建容器导出任务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2385,7 +2385,7 @@ class HssClient extends Client
     /**
      * 导出漏洞请求
      *
-     * 导出入侵事件请求
+     * 导出入侵事件请求。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2531,7 +2531,7 @@ class HssClient extends Client
     /**
      * 查询多账号列表
      *
-     * 查询多账号列表
+     * 查询多账号列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2605,7 +2605,7 @@ class HssClient extends Client
     /**
      * 查询agent安装脚本
      *
-     * 查询agent安装脚本
+     * 查询agent安装脚本。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2688,7 +2688,7 @@ class HssClient extends Client
     /**
      * 查询告警白名单列表
      *
-     * 查询告警白名单列表
+     * 查询告警白名单列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2765,7 +2765,7 @@ class HssClient extends Client
     /**
      * 获取软件信息的历史变动记录
      *
-     * 获取软件信息的历史变动记录
+     * 获取软件信息的历史变动记录。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2860,7 +2860,7 @@ class HssClient extends Client
     /**
      * 查询软件列表
      *
-     * 查询软件列表，支持通过软件名称查询对应的服务器数
+     * 查询软件列表，支持通过软件名称查询对应的服务器数。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2934,7 +2934,7 @@ class HssClient extends Client
     /**
      * 查询软件的服务器列表
      *
-     * 查询软件的服务器列表
+     * 查询软件的服务器列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3026,7 +3026,7 @@ class HssClient extends Client
     /**
      * 获取自启动项的历史变动记录
      *
-     * 获取自启动项的历史变动记录
+     * 获取自启动项的历史变动记录。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3124,7 +3124,7 @@ class HssClient extends Client
     /**
      * 查询自启动项信息
      *
-     * 查询自启动信息，支持通过传入自启动名称查询启动类型和服务器数
+     * 查询自启动信息，支持通过传入自启动名称查询启动类型和服务器数。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3201,7 +3201,7 @@ class HssClient extends Client
     /**
      * 查询自启动项的服务列表
      *
-     * 查询自启动项的服务列表
+     * 查询自启动项的服务列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3287,7 +3287,7 @@ class HssClient extends Client
     /**
      * 查询已拦截IP列表
      *
-     * 查询已拦截IP列表
+     * 查询已拦截IP列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3370,7 +3370,7 @@ class HssClient extends Client
     /**
      * 获取集群配置
      *
-     * 获取集群配置
+     * 获取集群配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3438,7 +3438,7 @@ class HssClient extends Client
     /**
      * 批量获取容器集群风险信息
      *
-     * 批量获取容器集群风险信息
+     * 批量获取容器集群风险信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3503,7 +3503,7 @@ class HssClient extends Client
     /**
      * 查询检测规则列表
      *
-     * 查询检测规则列表：查询默认检测规则信息，包含14种检测规则，默认都不开启
+     * 查询检测规则列表：查询默认检测规则信息，包含14种检测规则，默认都不开启。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3568,7 +3568,7 @@ class HssClient extends Client
     /**
      * 查询k8s集群审计日志列表
      *
-     * 查询k8s集群审计日志列表
+     * 查询k8s集群审计日志列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3663,7 +3663,7 @@ class HssClient extends Client
     /**
      * 查询k8s集群事件列表
      *
-     * 查询k8s集群事件列表
+     * 查询k8s集群事件列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3764,7 +3764,7 @@ class HssClient extends Client
     /**
      * 获取所有集群中告警事件
      *
-     * 获取所有集群中告警事件
+     * 获取所有集群中告警事件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3835,7 +3835,7 @@ class HssClient extends Client
     /**
      * 集群防护概览
      *
-     * 集群防护概览
+     * 集群防护概览。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3897,7 +3897,7 @@ class HssClient extends Client
     /**
      * 查询集群组件防护策略模板列表
      *
-     * 查询集群防护策略模板列表
+     * 查询集群防护策略模板列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3980,7 +3980,7 @@ class HssClient extends Client
     /**
      * 获取集群防护默认策略列表
      *
-     * 获取集群防护默认策略列表
+     * 获取集群防护默认策略列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4048,7 +4048,7 @@ class HssClient extends Client
     /**
      * 查询集群防护信息
      *
-     * 查询集群防护信息
+     * 查询集群防护信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4116,7 +4116,7 @@ class HssClient extends Client
     /**
      * 获取集群所有防护项
      *
-     * 获取集群所有防护项
+     * 获取集群所有防护项。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4178,7 +4178,7 @@ class HssClient extends Client
     /**
      * 获取集群防护策略列表
      *
-     * 获取集群防护策略列表
+     * 获取集群防护策略列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4249,7 +4249,7 @@ class HssClient extends Client
     /**
      * 查看指定策略的详情
      *
-     * 查看指定策略的详情
+     * 查看指定策略的详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4314,7 +4314,7 @@ class HssClient extends Client
     /**
      * 获取部分提示信息
      *
-     * 获取部分提示信息
+     * 获取部分提示信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4382,7 +4382,7 @@ class HssClient extends Client
     /**
      * 查询容器内运行的命令列表
      *
-     * 查询容器内运行的命令列表
+     * 查询容器内运行的命令列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4483,7 +4483,7 @@ class HssClient extends Client
     /**
      * 查询容器日志列表
      *
-     * 查询容器日志列表
+     * 查询容器日志列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4590,7 +4590,7 @@ class HssClient extends Client
     /**
      * 查询容器防护的集群信息
      *
-     * 查询容器防护的集群信息
+     * 查询容器防护的集群信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4658,7 +4658,7 @@ class HssClient extends Client
     /**
      * 查询容器集群VPC网络的节点列表
      *
-     * 查询容器集群网络的节点列表
+     * 查询容器集群网络的节点列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4735,7 +4735,7 @@ class HssClient extends Client
     /**
      * 查询容器集群网络的策略列表
      *
-     * 查询容器集群网络的策略列表
+     * 查询容器集群网络的策略列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4812,7 +4812,7 @@ class HssClient extends Client
     /**
      * 查询容器节点列表
      *
-     * 查询容器节点列表
+     * 查询容器节点列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4895,7 +4895,7 @@ class HssClient extends Client
     /**
      * 查询容器基本信息列表
      *
-     * 查询容器基本信息列表
+     * 查询容器基本信息列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4975,7 +4975,7 @@ class HssClient extends Client
     /**
      * 查看支持配置动态端口蜜罐的主机列表
      *
-     * 查看支持配置动态端口蜜罐的主机列表
+     * 查看支持配置动态端口蜜罐的主机列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5055,7 +5055,7 @@ class HssClient extends Client
     /**
      * 查看动态端口蜜罐策略
      *
-     * 查看动态端口蜜罐策略
+     * 查看动态端口蜜罐策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5123,7 +5123,7 @@ class HssClient extends Client
     /**
      * 查询插件列表
      *
-     * 查询插件列表
+     * 查询插件列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5260,7 +5260,7 @@ class HssClient extends Client
     /**
      * 下载导出文件
      *
-     * 下载导出文件
+     * 下载导出文件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5328,7 +5328,7 @@ class HssClient extends Client
     /**
      * 查询ATT&amp;CK攻击阶段统计列表
      *
-     * 查询ATT&amp;CK攻击阶段统计列表
+     * 查询ATT&amp;CK攻击阶段统计列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5438,7 +5438,7 @@ class HssClient extends Client
     /**
      * 查询具体事件的调查取证信息
      *
-     * 查询具体事件的调查取证信息
+     * 查询具体事件的调查取证信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5512,7 +5512,7 @@ class HssClient extends Client
     /**
      * 查询事件支持的处理类型
      *
-     * 查询事件支持的处理类型
+     * 查询事件支持的处理类型。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5580,7 +5580,7 @@ class HssClient extends Client
     /**
      * 查询TOP5事件类型统计列表--接口已废弃
      *
-     * 查询TOP5事件类型统计列表--接口已废弃
+     * 查询TOP5事件类型统计列表--接口已废弃。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5678,7 +5678,7 @@ class HssClient extends Client
     /**
      * 查询事件类型统计列表
      *
-     * 查询事件类型统计列表
+     * 查询事件类型统计列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5794,7 +5794,7 @@ class HssClient extends Client
     /**
      * 查询资产全局扫描任务状态
      *
-     * 查询资产全局扫描任务状态
+     * 查询资产全局扫描任务状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5859,7 +5859,7 @@ class HssClient extends Client
     /**
      * 查询已隔离文件列表
      *
-     * 查询已隔离文件列表
+     * 查询已隔离文件列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5960,7 +5960,7 @@ class HssClient extends Client
     /**
      * 查询指定中间件的服务器列表
      *
-     * 查询指定中间件的服务器列表，通过传入中间件名称参数，返回对应的中间件服务器列表
+     * 查询指定中间件的服务器列表，通过传入中间件名称参数，返回对应的中间件服务器列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6043,7 +6043,7 @@ class HssClient extends Client
     /**
      * 查询指定主机的中间件信息
      *
-     * 查询指定主机的中间件信息
+     * 查询指定主机的中间件信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6114,7 +6114,7 @@ class HssClient extends Client
     /**
      * 查询中间件列表
      *
-     * 查询中间件列表，支持通过中间件名称查询对应的服务器数
+     * 查询中间件列表，支持通过中间件名称查询对应的服务器数。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6145,17 +6145,17 @@ class HssClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
-        if ($localVarParams['fileName'] !== null) {
-            $queryParams['file_name'] = $localVarParams['fileName'];
-        }
-        if ($localVarParams['category'] !== null) {
-            $queryParams['category'] = $localVarParams['category'];
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
+        if ($localVarParams['category'] !== null) {
+            $queryParams['category'] = $localVarParams['category'];
+        }
+        if ($localVarParams['fileName'] !== null) {
+            $queryParams['file_name'] = $localVarParams['fileName'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6188,7 +6188,7 @@ class HssClient extends Client
     /**
      * 查询cronjobs基本信息列表
      *
-     * 查询cronjobs基本信息列表
+     * 查询cronjobs基本信息列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6265,7 +6265,7 @@ class HssClient extends Client
     /**
      * 查询daemonsets基本信息列表
      *
-     * 查询daemonsets基本信息列表
+     * 查询daemonsets基本信息列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6342,7 +6342,7 @@ class HssClient extends Client
     /**
      * 查询deployment基本信息列表
      *
-     * 查询deployment基本信息列表
+     * 查询deployment基本信息列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6419,7 +6419,7 @@ class HssClient extends Client
     /**
      * 查询jobs基本信息列表
      *
-     * 查询jobs基本信息列表
+     * 查询jobs基本信息列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6496,7 +6496,7 @@ class HssClient extends Client
     /**
      * 查询pod基本信息列表
      *
-     * 查询pod基本信息列表
+     * 查询pod基本信息列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6573,7 +6573,7 @@ class HssClient extends Client
     /**
      * 查询statefulset基本信息列表
      *
-     * 查询statefulset基本信息列表
+     * 查询statefulset基本信息列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6650,7 +6650,7 @@ class HssClient extends Client
     /**
      * 查询指定内核模块的服务器列表
      *
-     * 查询指定内核模块的服务器列表
+     * 查询指定内核模块的服务器列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6730,7 +6730,7 @@ class HssClient extends Client
     /**
      * 查询指定主机的内核模块信息
      *
-     * 查询指定主机的内核模块信息
+     * 查询指定主机的内核模块信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6798,7 +6798,7 @@ class HssClient extends Client
     /**
      * 查询内核模块的统计信息
      *
-     * 查询内核模块的服务器数
+     * 查询内核模块的服务器数。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6869,7 +6869,7 @@ class HssClient extends Client
     /**
      * 查询容器Kubernetes集群列表
      *
-     * 查询容器Kubernetes集群列表
+     * 查询容器Kubernetes集群列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6946,7 +6946,7 @@ class HssClient extends Client
     /**
      * 查询容器Kubernetes端点列表
      *
-     * 查询容器Kubernetes端点列表
+     * 查询容器Kubernetes端点列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7023,7 +7023,7 @@ class HssClient extends Client
     /**
      * 查询容器Kubernetes服务列表
      *
-     * 查询容器Kubernetes服务列表
+     * 查询容器Kubernetes服务列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7100,7 +7100,7 @@ class HssClient extends Client
     /**
      * 查询登录白名单列表
      *
-     * 查询登录白名单列表
+     * 查询登录白名单列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7177,7 +7177,7 @@ class HssClient extends Client
     /**
      * 查询恶意软件云查样本收集配置开关状态
      *
-     * 查询恶意软件云查样本收集配置开关状态
+     * 查询恶意软件云查样本收集配置开关状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7239,7 +7239,7 @@ class HssClient extends Client
     /**
      * 获取集群下的namespace
      *
-     * 获取集群下的namespace
+     * 获取集群下的namespace。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7304,7 +7304,7 @@ class HssClient extends Client
     /**
      * 查询账号组织
      *
-     * 查询账号组织
+     * 查询账号组织。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7375,7 +7375,7 @@ class HssClient extends Client
     /**
      * 获取docker插件安装脚本
      *
-     * 获取docker插件安装脚本
+     * 获取docker插件安装脚本。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7449,7 +7449,7 @@ class HssClient extends Client
     /**
      * 查询指定开放端口的服务器列表
      *
-     * 查询具备该端口的主机/容器的服务器列表
+     * 查询具备该端口的主机/容器的服务器列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7532,7 +7532,7 @@ class HssClient extends Client
     /**
      * 查询开放端口统计信息
      *
-     * 查询开放端口列表，支持通过传入端口或协议类型查询服务器数
+     * 查询开放端口列表，支持通过传入端口或协议类型查询服务器数。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7621,7 +7621,7 @@ class HssClient extends Client
     /**
      * 查询单服务器的开放端口列表
      *
-     * 查询单服务器的开放端口列表
+     * 查询单服务器的开放端口列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7710,7 +7710,7 @@ class HssClient extends Client
     /**
      * 查询进程统计信息
      *
-     * 查询进程列表，通过传入进程路径参数查询对应的服务器数
+     * 查询进程列表，通过传入进程路径参数查询对应的服务器数。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7784,7 +7784,7 @@ class HssClient extends Client
     /**
      * 查询指定进程的服务器列表
      *
-     * 具备该进程的主机/容器的服务器列表
+     * 具备该进程的主机/容器的服务器列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7864,7 +7864,7 @@ class HssClient extends Client
     /**
      * 查询租户当前项目下所有用过的标签
      *
-     * 查询租户当前项目下所有用过的标签
+     * 查询租户当前项目下所有用过的标签。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7926,7 +7926,7 @@ class HssClient extends Client
     /**
      * 查询防护服务器列表
      *
-     * 查询防护服务器列表：查询防护服务器相关数据，包含服务器名称、ip地址、操作系统、服务器组名称、防护策略、防护状态、微服务防护状态、RASP防护状态、RASP攻击数量信息
+     * 查询防护服务器列表：查询防护服务器相关数据，包含服务器名称、ip地址、操作系统、服务器组名称、防护策略、防护状态、微服务防护状态、RASP防护状态、RASP攻击数量信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8009,7 +8009,7 @@ class HssClient extends Client
     /**
      * 查询导出任务信息
      *
-     * 查询导出任务信息
+     * 查询导出任务信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8077,7 +8077,7 @@ class HssClient extends Client
     /**
      * 查询应用防护事件列表
      *
-     * 查询应用防护事件列表：展示防护事件相关信息，包含告警级别、服务器名称、告警名称、告警时间、攻击源ip、攻击源url数据
+     * 查询应用防护事件列表：展示防护事件相关信息，包含告警级别、服务器名称、告警名称、告警时间、攻击源ip、攻击源url数据。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8108,6 +8108,12 @@ class HssClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
         if ($localVarParams['hostId'] !== null) {
             $queryParams['host_id'] = $localVarParams['hostId'];
         }
@@ -8116,12 +8122,6 @@ class HssClient extends Client
         }
         if ($localVarParams['endTime'] !== null) {
             $queryParams['end_time'] = $localVarParams['endTime'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['appType'] !== null) {
             $queryParams['app_type'] = $localVarParams['appType'];
@@ -8166,7 +8166,7 @@ class HssClient extends Client
     /**
      * 查询防护策略列表
      *
-     * 查询防护策略列表：查询创建的防护策略信息，包含防护策略名称、检测规则、关联服务器数量
+     * 查询防护策略列表：查询创建的防护策略信息，包含防护策略名称、检测规则、关联服务器数量。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8243,7 +8243,7 @@ class HssClient extends Client
     /**
      * 查询单个资源的资源标签
      *
-     * 查询单个资源的资源标签
+     * 查询单个资源的资源标签。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8308,7 +8308,7 @@ class HssClient extends Client
     /**
      * 查询某告警事件的相同告警列表
      *
-     * 查询某告警事件的相同告警列表
+     * 查询某告警事件的相同告警列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8388,7 +8388,7 @@ class HssClient extends Client
     /**
      * 查入侵事件列表
      *
-     * 查入侵事件列表
+     * 查入侵事件列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8519,7 +8519,7 @@ class HssClient extends Client
     /**
      * 查询云原生网络模式2.0的集群已配置的安全组策略
      *
-     * 查询云原生网络模式2.0的集群已配置的安全组策略
+     * 查询云原生网络模式2.0的集群已配置的安全组策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8590,7 +8590,7 @@ class HssClient extends Client
     /**
      * 查询企业项目下所有的安全组列表
      *
-     * 查询企业项目下所有的安全组列表
+     * 查询企业项目下所有的安全组列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8652,7 +8652,7 @@ class HssClient extends Client
     /**
      * 查询某告警事件关联的已处理的相似告警
      *
-     * 查询某告警事件关联的已处理的相似告警
+     * 查询某告警事件关联的已处理的相似告警。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8723,7 +8723,7 @@ class HssClient extends Client
     /**
      * 查询系统用户白名单列表
      *
-     * 查询系统用户白名单列表
+     * 查询系统用户白名单列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8806,7 +8806,7 @@ class HssClient extends Client
     /**
      * 获取可信服务状态
      *
-     * 获取可信服务状态
+     * 获取可信服务状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8868,7 +8868,7 @@ class HssClient extends Client
     /**
      * 获取账户变动历史信息
      *
-     * 获取账户变动历史记录信息
+     * 获取账户变动历史记录信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8960,7 +8960,7 @@ class HssClient extends Client
     /**
      * 查询账号信息列表
      *
-     * 查询账号信息列表，支持通过传入账号名称参数查询对应的服务器数
+     * 查询账号信息列表，支持通过传入账号名称参数查询对应的服务器数。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9034,7 +9034,7 @@ class HssClient extends Client
     /**
      * 查询账号的服务器列表
      *
-     * 查询账号的服务器列表
+     * 查询账号的服务器列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9129,7 +9129,7 @@ class HssClient extends Client
     /**
      * 查询Web服务、Web应用、数据库的统计信息
      *
-     * 查询Web服务、Web应用、数据库的服务器数
+     * 查询Web服务、Web应用、数据库的服务器数。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9206,7 +9206,7 @@ class HssClient extends Client
     /**
      * 查询指定Web服务、Web应用、数据库的服务器列表
      *
-     * 查询指定Web服务、Web应用、数据库的服务器列表
+     * 查询指定Web服务、Web应用、数据库的服务器列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9301,7 +9301,7 @@ class HssClient extends Client
     /**
      * 查询指定Web框架的服务器列表
      *
-     * 查询指定Web框架的服务器列表
+     * 查询指定Web框架的服务器列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9384,7 +9384,7 @@ class HssClient extends Client
     /**
      * 查询指定主机的Web框架信息
      *
-     * 查询指定主机的Web框架信息
+     * 查询指定主机的Web框架信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9455,7 +9455,7 @@ class HssClient extends Client
     /**
      * 查询Web框架的统计信息
      *
-     * 查询Web框架的服务器数
+     * 查询Web框架的服务器数。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9529,7 +9529,7 @@ class HssClient extends Client
     /**
      * 查询指定Web站点的服务器列表
      *
-     * 查询指定Web站点的服务器列表
+     * 查询指定Web站点的服务器列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9612,7 +9612,7 @@ class HssClient extends Client
     /**
      * 查询指定主机的Web站点信息
      *
-     * 查询指定主机的Web站点信息
+     * 查询指定主机的Web站点信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9683,7 +9683,7 @@ class HssClient extends Client
     /**
      * 查询Web站点的统计信息
      *
-     * 查询Web站点的服务器数
+     * 查询Web站点的服务器数。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9757,7 +9757,7 @@ class HssClient extends Client
     /**
      * 查询集群下某一命名空间下的工作负载
      *
-     * 查询集群下某一命名空间下的工作负载
+     * 查询集群下某一命名空间下的工作负载。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9828,7 +9828,7 @@ class HssClient extends Client
     /**
      * 编辑动态端口蜜罐策略
      *
-     * 编辑动态端口蜜罐策略
+     * 编辑动态端口蜜罐策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9896,7 +9896,7 @@ class HssClient extends Client
     /**
      * 删除告警白名单
      *
-     * 删除告警白名单
+     * 删除告警白名单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9961,7 +9961,7 @@ class HssClient extends Client
     /**
      * 删除登录白名单
      *
-     * 删除登录白名单
+     * 删除登录白名单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10026,7 +10026,7 @@ class HssClient extends Client
     /**
      * 删除系统用户白名单
      *
-     * 删除系统用户白名单
+     * 删除系统用户白名单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10091,7 +10091,7 @@ class HssClient extends Client
     /**
      * 采集单主机资产指纹
      *
-     * 采集单主机资产指纹
+     * 采集单主机资产指纹。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10159,7 +10159,7 @@ class HssClient extends Client
     /**
      * 设置提示信息配置
      *
-     * 设置提示信息配置
+     * 设置提示信息配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10224,7 +10224,7 @@ class HssClient extends Client
     /**
      * 资产管理-概览-账户Top
      *
-     * 资产管理-概览-账户Top
+     * 资产管理-概览-账户Top。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10286,7 +10286,7 @@ class HssClient extends Client
     /**
      * 资产管理-概览-资产状态-主机Agent状态
      *
-     * 资产管理-概览-资产状态-主机Agent状态
+     * 资产管理-概览-资产状态-主机Agent状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10348,7 +10348,7 @@ class HssClient extends Client
     /**
      * 查询应用防护开启状态
      *
-     * 查询应用防护开启状态：查询单台服务器的应用防护功能开启状态
+     * 查询应用防护开启状态：查询单台服务器的应用防护功能开启状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10416,7 +10416,7 @@ class HssClient extends Client
     /**
      * 统计资产信息数量
      *
-     * 资产统计信息，账号、端口、进程等
+     * 资产统计信息，账号、端口、进程等。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10484,7 +10484,7 @@ class HssClient extends Client
     /**
      * 资产管理-概览-自启动项Top
      *
-     * 资产管理-概览-自启动项Top
+     * 资产管理-概览-自启动项Top。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10546,7 +10546,7 @@ class HssClient extends Client
     /**
      * 查询集群资产统计数量
      *
-     * 查询集群资产统计数量
+     * 查询集群资产统计数量。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10608,7 +10608,7 @@ class HssClient extends Client
     /**
      * 查询集群组件防护策略模板
      *
-     * 查询集群防护策略模板
+     * 查询集群防护策略模板。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10741,7 +10741,7 @@ class HssClient extends Client
     /**
      * 查询容器集群网络的网络信息
      *
-     * 查询容器集群网络的网络信息
+     * 查询容器集群网络的网络信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10806,7 +10806,7 @@ class HssClient extends Client
     /**
      * 查询容器节点防护总览数据
      *
-     * 查询容器节点防护总览数据
+     * 查询容器节点防护总览数据。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10868,7 +10868,7 @@ class HssClient extends Client
     /**
      * 资产管理-概览-资产状态-容器节点防护状态
      *
-     * 资产管理-概览-资产状态-容器节点防护状态
+     * 资产管理-概览-资产状态-容器节点防护状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10930,7 +10930,7 @@ class HssClient extends Client
     /**
      * 查看默认为新增主机开启防护开关
      *
-     * 查看默认为新增主机开启防护开关
+     * 查看默认为新增主机开启防护开关。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10992,7 +10992,7 @@ class HssClient extends Client
     /**
      * 查看开启防护主机列表
      *
-     * 查看开启防护主机列表
+     * 查看开启防护主机列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11072,7 +11072,7 @@ class HssClient extends Client
     /**
      * 查看动态端口蜜罐策略详情
      *
-     * 查看动态端口蜜罐策略详情
+     * 查看动态端口蜜罐策略详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11143,7 +11143,7 @@ class HssClient extends Client
     /**
      * 查询攻击标识分布统计列表
      *
-     * 查询攻击标识分布统计列表
+     * 查询攻击标识分布统计列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11256,7 +11256,7 @@ class HssClient extends Client
     /**
      * 查询威胁等级统计列表
      *
-     * 查询威胁等级统计列表
+     * 查询威胁等级统计列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11375,7 +11375,7 @@ class HssClient extends Client
     /**
      * 查询导出任务信息
      *
-     * 查询导出任务信息
+     * 查询导出任务信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11440,7 +11440,7 @@ class HssClient extends Client
     /**
      * 查询单主机资产指纹采集状态
      *
-     * 查询单主机资产指纹采集状态
+     * 查询单主机资产指纹采集状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11508,7 +11508,7 @@ class HssClient extends Client
     /**
      * 资产管理-概览-资产状态-Agent状态
      *
-     * 资产管理-概览-资产状态-Agent状态
+     * 资产管理-概览-资产状态-Agent状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11570,7 +11570,7 @@ class HssClient extends Client
     /**
      * 资产管理-概览-jar包Top
      *
-     * 资产管理-概览-jar包Top
+     * 资产管理-概览-jar包Top。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11632,7 +11632,7 @@ class HssClient extends Client
     /**
      * 查询容器详细信息
      *
-     * 查询容器详细信息
+     * 查询容器详细信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11697,7 +11697,7 @@ class HssClient extends Client
     /**
      * 查询pod详细信息
      *
-     * 查询pod详细信息
+     * 查询pod详细信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11762,7 +11762,7 @@ class HssClient extends Client
     /**
      * 资产管理-概览-内核模块Top
      *
-     * 资产管理-概览-内核模块Top
+     * 资产管理-概览-内核模块Top。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11824,7 +11824,7 @@ class HssClient extends Client
     /**
      * 查询容器Kubernetes端点详情
      *
-     * 查询容器Kubernetes端点详情
+     * 查询容器Kubernetes端点详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11889,7 +11889,7 @@ class HssClient extends Client
     /**
      * 查询容器Kubernetes服务详情
      *
-     * 查询容器Kubernetes服务详情
+     * 查询容器Kubernetes服务详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11954,7 +11954,7 @@ class HssClient extends Client
     /**
      * 查询导出任务信息
      *
-     * 查询导出任务信息
+     * 查询导出任务信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12022,7 +12022,7 @@ class HssClient extends Client
     /**
      * 获取提示信息配置
      *
-     * 获取提示信息配置
+     * 获取提示信息配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12084,7 +12084,7 @@ class HssClient extends Client
     /**
      * 集群网络策略总览
      *
-     * 集群网络策略总览
+     * 集群网络策略总览。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12146,7 +12146,7 @@ class HssClient extends Client
     /**
      * 资产管理-概览-资产状态-操作系统统计信息
      *
-     * 资产管理-概览-资产状态-操作系统统计信息
+     * 资产管理-概览-资产状态-操作系统统计信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12208,7 +12208,7 @@ class HssClient extends Client
     /**
      * 获取页面通知信息
      *
-     * 获取页面通知信息
+     * 获取页面通知信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12273,7 +12273,7 @@ class HssClient extends Client
     /**
      * 资产管理-概览-端口Top
      *
-     * 资产管理-概览-端口Top
+     * 资产管理-概览-端口Top。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12335,7 +12335,7 @@ class HssClient extends Client
     /**
      * 资产管理-概览-进程Top
      *
-     * 资产管理-概览-进程Top
+     * 资产管理-概览-进程Top。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12397,7 +12397,7 @@ class HssClient extends Client
     /**
      * 资产管理-概览-资产状态-防护配额统计信息
      *
-     * 资产管理-概览-资产状态-防护配额统计信息
+     * 资产管理-概览-资产状态-防护配额统计信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12459,7 +12459,7 @@ class HssClient extends Client
     /**
      * 查询防护策略详情
      *
-     * 查询防护策略详情：查询防护策略配置的相关检测规则信息，包含14种检测规则
+     * 查询防护策略详情：查询防护策略配置的相关检测规则信息，包含14种检测规则。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12524,7 +12524,7 @@ class HssClient extends Client
     /**
      * 防护数据统计
      *
-     * 防护数据统计：统计已添加防护服务器的数量以及近七天微服务RASP攻击数量
+     * 防护数据统计：统计已添加防护服务器的数量以及近七天微服务RASP攻击数量。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12586,7 +12586,7 @@ class HssClient extends Client
     /**
      * 查询防护服务器java应用详情
      *
-     * 查询防护服务器java应用详情：查询防护服务器的java应用状态列表
+     * 查询防护服务器java应用详情：查询防护服务器的java应用状态列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12663,7 +12663,7 @@ class HssClient extends Client
     /**
      * 资产管理-概览-软件Top
      *
-     * 资产管理-概览-软件Top
+     * 资产管理-概览-软件Top。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12725,7 +12725,7 @@ class HssClient extends Client
     /**
      * 资产管理-概览-WebAppAndServiceTop
      *
-     * 资产管理-概览-Web应用TOP5/Web服务TOP5
+     * 资产管理-概览-Web应用TOP5/Web服务TOP5。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12790,7 +12790,7 @@ class HssClient extends Client
     /**
      * 资产管理-概览-Web框架Top
      *
-     * 资产管理-概览-Web框架Top
+     * 资产管理-概览-Web框架Top。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12852,7 +12852,7 @@ class HssClient extends Client
     /**
      * 资产管理-概览-Web站点Top
      *
-     * 资产管理-概览-Web站点Top
+     * 资产管理-概览-Web站点Top。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12914,7 +12914,7 @@ class HssClient extends Client
     /**
      * 操作集群防护模式
      *
-     * 操作集群防护模式
+     * 操作集群防护模式。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12979,7 +12979,7 @@ class HssClient extends Client
     /**
      * 切换防护状态
      *
-     * 切换防护状态
+     * 切换防护状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13044,7 +13044,7 @@ class HssClient extends Client
     /**
      * 修改默认为新增主机开启防护开关
      *
-     * 修改默认为新增主机开启防护开关
+     * 修改默认为新增主机开启防护开关。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13115,7 +13115,7 @@ class HssClient extends Client
     /**
      * 切换主机动态端口蜜罐策略
      *
-     * 切换主机动态端口蜜罐策略
+     * 切换主机动态端口蜜罐策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13183,7 +13183,7 @@ class HssClient extends Client
     /**
      * 启用动态端口蜜罐策略
      *
-     * 启用动态端口蜜罐策略
+     * 启用动态端口蜜罐策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13254,7 +13254,7 @@ class HssClient extends Client
     /**
      * 开启/关闭应用防护，更新防护端口
      *
-     * 开启/关闭应用防护，选择开启的防护策略，选择需要防护的服务器，下发防护策略，可传入端口号更新防护端口，关闭防护则清空策略
+     * 开启/关闭应用防护，选择开启的防护策略，选择需要防护的服务器，下发防护策略，可传入端口号更新防护端口，关闭防护则清空策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13319,7 +13319,7 @@ class HssClient extends Client
     /**
      * 同步容器集群最新数据
      *
-     * 同步容器集群最新数据
+     * 同步容器集群最新数据。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13381,7 +13381,7 @@ class HssClient extends Client
     /**
      * 同步集群防护事件
      *
-     * 同步集群防护事件
+     * 同步集群防护事件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13446,7 +13446,7 @@ class HssClient extends Client
     /**
      * 同步集群下网络节点最新数据
      *
-     * 同步集群下容器网络策略最新数据
+     * 同步集群下容器网络策略最新数据。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13511,7 +13511,7 @@ class HssClient extends Client
     /**
      * 同步集群下容器网络策略最新数据
      *
-     * 同步集群下容器网络策略最新数据
+     * 同步集群下容器网络策略最新数据。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13576,7 +13576,7 @@ class HssClient extends Client
     /**
      * 同步集群下安全组策略最新数据
      *
-     * 同步集群下安全组策略最新数据
+     * 同步集群下安全组策略最新数据。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13641,7 +13641,7 @@ class HssClient extends Client
     /**
      * 容器集群网络更新配置策略
      *
-     * 容器集群网络更新配置策略
+     * 容器集群网络更新配置策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13709,7 +13709,7 @@ class HssClient extends Client
     /**
      * 修改防护策略
      *
-     * 修改防护策略：修改防护策略内容，包含策略名称、相关规则开启状态、防护动作以及检测规则配置，同时给使用该策略的服务器下发新的策略
+     * 修改防护策略：修改防护策略内容，包含策略名称、相关规则开启状态、防护动作以及检测规则配置，同时给使用该策略的服务器下发新的策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13780,7 +13780,7 @@ class HssClient extends Client
     /**
      * 更新安全组策略
      *
-     * 更新安全组策略(云原生网络模型)
+     * 更新安全组策略(云原生网络模型)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13851,7 +13851,7 @@ class HssClient extends Client
     /**
      * 修改系统用户白名单
      *
-     * 修改系统用户白名单
+     * 修改系统用户白名单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13916,7 +13916,7 @@ class HssClient extends Client
     /**
      * 校验当前账号是否是管理员账号（包含组织管理员和委托管理员）
      *
-     * 校验当前账号是否是管理员账号（包含组织管理员和委托管理员）
+     * 校验当前账号是否是管理员账号（包含组织管理员和委托管理员）。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13981,7 +13981,7 @@ class HssClient extends Client
     /**
      * 修改“病毒查杀按次计费”开关状态
      *
-     * 修改“病毒查杀按次计费”开关状态
+     * 修改“病毒查杀按次计费”开关状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14046,7 +14046,7 @@ class HssClient extends Client
     /**
      * 编辑自定义查杀策略
      *
-     * 编辑自定义查杀策略
+     * 编辑自定义查杀策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14111,7 +14111,7 @@ class HssClient extends Client
     /**
      * 创建付费病毒扫描任务
      *
-     * 创建付费病毒扫描任务
+     * 创建付费病毒扫描任务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14179,7 +14179,7 @@ class HssClient extends Client
     /**
      * 创建自定义查杀策略
      *
-     * 创建自定义查杀策略
+     * 创建自定义查杀策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14244,7 +14244,7 @@ class HssClient extends Client
     /**
      * 创建病毒扫描任务
      *
-     * 创建病毒扫描任务
+     * 创建病毒扫描任务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14312,7 +14312,7 @@ class HssClient extends Client
     /**
      * 删除自定义查杀策略
      *
-     * 删除自定义查杀策略
+     * 删除自定义查杀策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14377,7 +14377,7 @@ class HssClient extends Client
     /**
      * 导出病毒扫描结果列表
      *
-     * 导出病毒扫描结果列表
+     * 导出病毒扫描结果列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14484,7 +14484,7 @@ class HssClient extends Client
     /**
      * 处置病毒扫描结果
      *
-     * 处置病毒扫描结果
+     * 处置病毒扫描结果。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14549,7 +14549,7 @@ class HssClient extends Client
     /**
      * 查询病毒查杀可选服务器列表
      *
-     * 查询病毒查杀可选服务器列表
+     * 查询病毒查杀可选服务器列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14644,7 +14644,7 @@ class HssClient extends Client
     /**
      * 查询付费病毒查杀服务器列表
      *
-     * 查询付费病毒查杀服务器列表
+     * 查询付费病毒查杀服务器列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14733,7 +14733,7 @@ class HssClient extends Client
     /**
      * 查询自定义查杀策略列表
      *
-     * 查询自定义查杀策略列表
+     * 查询自定义查杀策略列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14804,7 +14804,7 @@ class HssClient extends Client
     /**
      * 查询病毒扫描结果列表
      *
-     * 查询病毒扫描结果列表
+     * 查询病毒扫描结果列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14905,7 +14905,7 @@ class HssClient extends Client
     /**
      * 查看病毒扫描任务列表
      *
-     * 查看病毒扫描任务列表
+     * 查看病毒扫描任务列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -15003,7 +15003,7 @@ class HssClient extends Client
     /**
      * 查询病毒查杀免费扫描次数
      *
-     * 查询病毒查杀免费扫描次数
+     * 查询病毒查杀免费扫描次数。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -15065,7 +15065,7 @@ class HssClient extends Client
     /**
      * 查询“病毒查杀按次计费”开关状态
      *
-     * 查询“病毒查杀按次计费”开关状态
+     * 查询“病毒查杀按次计费”开关状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -15127,7 +15127,7 @@ class HssClient extends Client
     /**
      * 查询病毒查杀统计信息
      *
-     * 查询病毒查杀统计信息
+     * 查询病毒查杀统计信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -15189,7 +15189,7 @@ class HssClient extends Client
     /**
      * 取消扫描任务
      *
-     * 取消扫描任务
+     * 取消扫描任务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -15254,7 +15254,7 @@ class HssClient extends Client
     /**
      * 白名单策略添加主机
      *
-     * 白名单策略添加主机
+     * 白名单策略添加主机。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -15322,7 +15322,7 @@ class HssClient extends Client
     /**
      * 新增进程白名单策略进程
      *
-     * 新增进程白名单策略进程
+     * 新增进程白名单策略进程。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -15393,7 +15393,7 @@ class HssClient extends Client
     /**
      * 修改白名单策略
      *
-     * 修改白名单策略
+     * 修改白名单策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -15458,7 +15458,7 @@ class HssClient extends Client
     /**
      * 标记进程白名单策略识别进程
      *
-     * 标记进程白名单策略识别进程
+     * 标记进程白名单策略识别进程。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -15526,7 +15526,7 @@ class HssClient extends Client
     /**
      * 创建白名单策略
      *
-     * 创建白名单策略
+     * 创建白名单策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -15591,7 +15591,7 @@ class HssClient extends Client
     /**
      * 删除白名单策略
      *
-     * 删除白名单策略
+     * 删除白名单策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -15656,7 +15656,7 @@ class HssClient extends Client
     /**
      * 白名单策略删除主机
      *
-     * 白名单策略删除主机
+     * 白名单策略删除主机。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -15724,7 +15724,7 @@ class HssClient extends Client
     /**
      * 查询进程白名单可疑进程
      *
-     * 查询进程白名单可疑进程
+     * 查询进程白名单可疑进程。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -15810,7 +15810,7 @@ class HssClient extends Client
     /**
      * 查询进程白名单可选服务器列表
      *
-     * 查询进程白名单可选服务器列表
+     * 查询进程白名单可选服务器列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -15899,7 +15899,7 @@ class HssClient extends Client
     /**
      * 查询进程白名单策略列表
      *
-     * 查询进程白名单策略列表
+     * 查询进程白名单策略列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -15979,7 +15979,7 @@ class HssClient extends Client
     /**
      * 查询进程白名单策略关联主机列表
      *
-     * 查询进程白名单策略关联主机列表
+     * 查询进程白名单策略关联主机列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -16074,7 +16074,7 @@ class HssClient extends Client
     /**
      * 查询进程白名单策略识别进程
      *
-     * 查询进程白名单策略识别进程
+     * 查询进程白名单策略识别进程。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -16169,7 +16169,7 @@ class HssClient extends Client
     /**
      * 查询进程白名单策略进程扩展列表
      *
-     * 查询进程白名单策略进程扩展列表
+     * 查询进程白名单策略进程扩展列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -16237,7 +16237,7 @@ class HssClient extends Client
     /**
      * 统计agent版本不匹配主机数量
      *
-     * 统计agent版本不匹配主机数量
+     * 统计agent版本不匹配主机数量。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -16299,7 +16299,7 @@ class HssClient extends Client
     /**
      * 查询进程白名单策略详情
      *
-     * 查询进程白名单策略详情
+     * 查询进程白名单策略详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -16364,7 +16364,7 @@ class HssClient extends Client
     /**
      * 应用白名单策略
      *
-     * 应用白名单策略
+     * 应用白名单策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -16429,7 +16429,7 @@ class HssClient extends Client
     /**
      * 操作白名单策略学习状态
      *
-     * 操作白名单策略学习状态
+     * 操作白名单策略学习状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -16497,7 +16497,7 @@ class HssClient extends Client
     /**
      * 新增基线白名单
      *
-     * 新增基线白名单
+     * 新增基线白名单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -16562,7 +16562,7 @@ class HssClient extends Client
     /**
      * 新建配置检测策略信息
      *
-     * 新建配置检测策略信息
+     * 新建配置检测策略信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -16627,7 +16627,7 @@ class HssClient extends Client
     /**
      * 修改基线白名单
      *
-     * 修改基线白名单
+     * 修改基线白名单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -16692,7 +16692,7 @@ class HssClient extends Client
     /**
      * 对未通过的配置检查项进行忽略/取消忽略/修复/验证操作
      *
-     * 对未通过的配置检查项进行忽略/取消忽略/修复/验证操作
+     * 对未通过的配置检查项进行忽略/取消忽略/修复/验证操作。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -16766,7 +16766,7 @@ class HssClient extends Client
     /**
      * 对口令复杂度检测未通过的主机进行忽略/取消忽略
      *
-     * 对口令复杂度检测未通过的主机进行忽略/取消忽略
+     * 对口令复杂度检测未通过的主机进行忽略/取消忽略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -16834,7 +16834,7 @@ class HssClient extends Client
     /**
      * 复制配置检测策略信息
      *
-     * 复制配置检测策略信息
+     * 复制配置检测策略信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -16899,7 +16899,7 @@ class HssClient extends Client
     /**
      * 删除基线白名单
      *
-     * 删除基线白名单
+     * 删除基线白名单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -16964,7 +16964,7 @@ class HssClient extends Client
     /**
      * 删除指定配置检测策略信息
      *
-     * 删除指定配置检测策略信息
+     * 删除指定配置检测策略信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -17029,7 +17029,7 @@ class HssClient extends Client
     /**
      * 从后端导出基线检测报告，生成Excel文件
      *
-     * 从后端导出基线检测报告，生成Excel文件
+     * 从后端导出基线检测报告，生成Excel文件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -17094,7 +17094,7 @@ class HssClient extends Client
     /**
      * 按查询结果导出配置检测报告
      *
-     * 按查询结果导出配置检测报告，生成Excel文件
+     * 按查询结果导出配置检测报告，生成Excel文件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -17174,7 +17174,7 @@ class HssClient extends Client
     /**
      * 查询指定策略组的检查项列表
      *
-     * 查询指定策略组的检查项列表
+     * 查询指定策略组的检查项列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -17269,7 +17269,7 @@ class HssClient extends Client
     /**
      * 查询基线白名单列表
      *
-     * 查询基线白名单列表
+     * 查询基线白名单列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -17352,7 +17352,7 @@ class HssClient extends Client
     /**
      * 查询配置检查项影响到的服务器列表
      *
-     * 查询配置检查项影响到的服务器列表
+     * 查询配置检查项影响到的服务器列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -17450,7 +17450,7 @@ class HssClient extends Client
     /**
      * 查询基线检查执行操作时影响的范围
      *
-     * 查询基线检查执行操作时影响的范围
+     * 查询基线检查执行操作时影响的范围。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -17521,7 +17521,7 @@ class HssClient extends Client
     /**
      * 查看主机对应的检查项
      *
-     * 查询配置检查项影响到的服务器列表
+     * 查询配置检查项影响到的服务器列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -17613,7 +17613,7 @@ class HssClient extends Client
     /**
      * 查询口令复杂度策略检测报告
      *
-     * 查询口令复杂度策略检测报告
+     * 查询口令复杂度策略检测报告。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -17693,7 +17693,7 @@ class HssClient extends Client
     /**
      * 查询指定安全配置项的检查项列表
      *
-     * 查询指定安全配置项的检查项列表
+     * 查询指定安全配置项的检查项列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -17779,7 +17779,7 @@ class HssClient extends Client
     /**
      * 查询指定安全配置项的受影响服务器列表
      *
-     * 查询指定安全配置项的受影响服务器列表
+     * 查询指定安全配置项的受影响服务器列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -17859,7 +17859,7 @@ class HssClient extends Client
     /**
      * 查询租户的服务器安全配置检测结果列表
      *
-     * 查询租户的服务器安全配置检测结果列表
+     * 查询租户的服务器安全配置检测结果列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -17940,9 +17940,9 @@ class HssClient extends Client
     }
 
     /**
-     * 查询配置检测策略组列表
+     * 查询配置检测策略组列表10
      *
-     * 查询配置检测策略组列表
+     * 查询配置检测策略组列表10。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18010,7 +18010,7 @@ class HssClient extends Client
     /**
      * 查询弱口令检测结果列表
      *
-     * 查询弱口令检测结果列表
+     * 查询弱口令检测结果列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18090,7 +18090,7 @@ class HssClient extends Client
     /**
      * 手动检测：对策略中选择的主机，进行配置检测和弱口令检测
      *
-     * 手动检测：对策略中选择的主机，进行配置检测和弱口令检测
+     * 手动检测：对策略中选择的主机，进行配置检测和弱口令检测。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18155,7 +18155,7 @@ class HssClient extends Client
     /**
      * 查询基线检测策略的基线目录信息
      *
-     * 查询基线检测策略的基线目录信息
+     * 查询基线检测策略的基线目录信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18226,7 +18226,7 @@ class HssClient extends Client
     /**
      * 查询基线检查的统计数据信息
      *
-     * 查询基线检查的统计数据信息，用来展示基线检查页面的统计数据和图表数据，包括最近检测时间、检测主机数、检测基线数、主机配置检查项数、主机配置基线通过率、主机配置风险top5、主机弱口令检测统计、主机弱口令风险top5等
+     * 查询基线检查的统计数据信息，用来展示基线检查页面的统计数据和图表数据，包括最近检测时间、检测主机数、检测基线数、主机配置检查项数、主机配置基线通过率、主机配置风险top5、主机弱口令检测统计、主机弱口令风险top5等。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18291,7 +18291,7 @@ class HssClient extends Client
     /**
      * 查询基线扫描手动检测结果
      *
-     * 查询基线扫描手动检测结果
+     * 查询基线扫描手动检测结果。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18324,11 +18324,11 @@ class HssClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'appcation/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'appcation/json'],
+                ['application/json'],
                 []
             );
         }
@@ -18353,7 +18353,7 @@ class HssClient extends Client
     /**
      * 查询基线检查的统计数据信息，包括弱口令，口令复杂度，配置检测
      *
-     * 查询基线检查的风险数统计信息，包括弱口令，口令复杂度，配置检测
+     * 查询基线检查的风险数统计信息，包括弱口令，口令复杂度，配置检测。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18421,7 +18421,7 @@ class HssClient extends Client
     /**
      * 查询单个基线白名单
      *
-     * 查询单个基线白名单
+     * 查询单个基线白名单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18486,7 +18486,7 @@ class HssClient extends Client
     /**
      * 查询配置检查项检测报告
      *
-     * 查询配置检查项检测报告
+     * 查询配置检查项检测报告。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18563,7 +18563,7 @@ class HssClient extends Client
     /**
      * 查询检查项修复失败原因
      *
-     * 查询检查项修复失败原因
+     * 查询检查项修复失败原因。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18637,7 +18637,7 @@ class HssClient extends Client
     /**
      * 查询配置检测策略的默认基线信息
      *
-     * 查询配置检测策略的默认基线信息
+     * 查询配置检测策略的默认基线信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18702,7 +18702,7 @@ class HssClient extends Client
     /**
      * 查询基线的详细检查项
      *
-     * 查询基线的详细检查项
+     * 查询基线的详细检查项。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18797,7 +18797,7 @@ class HssClient extends Client
     /**
      * 查询指定安全配置项的检查结果
      *
-     * 查询指定安全配置项的检查结果
+     * 查询指定安全配置项的检查结果。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18874,7 +18874,7 @@ class HssClient extends Client
     /**
      * 修改指定配置检测策略信息
      *
-     * 修改指定配置检测策略信息
+     * 修改指定配置检测策略信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18942,7 +18942,7 @@ class HssClient extends Client
     /**
      * 导出集群环境安全相关信息
      *
-     * 导出集群环境安全相关信息
+     * 导出集群环境安全相关信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -19013,7 +19013,7 @@ class HssClient extends Client
     /**
      * 查询集群风险影响的集群资源列表
      *
-     * 查询集群风险影响的集群资源列表
+     * 查询集群风险影响的集群资源列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -19096,7 +19096,7 @@ class HssClient extends Client
     /**
      * 查询集群风险列表
      *
-     * 查询集群风险列表
+     * 查询集群风险列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -19185,7 +19185,7 @@ class HssClient extends Client
     /**
      * 查询集群扫描统计数据
      *
-     * 查询集群扫描统计数据
+     * 查询集群扫描统计数据。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -19247,7 +19247,7 @@ class HssClient extends Client
     /**
      * 查询项目配置
      *
-     * 查询项目配置
+     * 查询项目配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -19312,7 +19312,7 @@ class HssClient extends Client
     /**
      * 修改项目配置
      *
-     * 修改项目配置
+     * 修改项目配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -19377,7 +19377,7 @@ class HssClient extends Client
     /**
      * 保存用户访问记录
      *
-     * 保存用户访问记录
+     * 保存用户访问记录。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -19442,7 +19442,7 @@ class HssClient extends Client
     /**
      * 上传安全报告logo
      *
-     * 上传安全报告logo
+     * 上传安全报告logo。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -19512,7 +19512,7 @@ class HssClient extends Client
     /**
      * 新增cicd配置
      *
-     * 新增cicd配置
+     * 新增cicd配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -19577,7 +19577,7 @@ class HssClient extends Client
     /**
      * 新增镜像仓库
      *
-     * 新增镜像仓库
+     * 新增镜像仓库。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -19642,7 +19642,7 @@ class HssClient extends Client
     /**
      * 批量卸载集群daemonset
      *
-     * 批量卸载集群daemonset
+     * 批量卸载集群daemonset。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -19707,7 +19707,7 @@ class HssClient extends Client
     /**
      * 批量删除镜像仓接入信息
      *
-     * 批量删除镜像仓接入信息
+     * 批量删除镜像仓接入信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -19772,7 +19772,7 @@ class HssClient extends Client
     /**
      * 批量升级集群daemonset
      *
-     * 批量升级集群daemonset
+     * 批量升级集群daemonset。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -19837,7 +19837,7 @@ class HssClient extends Client
     /**
      * 创建集群daemonset
      *
-     * 创建集群daemonset
+     * 创建集群daemonset。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -19905,7 +19905,7 @@ class HssClient extends Client
     /**
      * 生成cicd接入配置命令
      *
-     * 生成cicd接入配置命令
+     * 生成cicd接入配置命令。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -19970,7 +19970,7 @@ class HssClient extends Client
     /**
      * 创建多云集群
      *
-     * 创建多云集群
+     * 创建多云集群。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -20035,7 +20035,7 @@ class HssClient extends Client
     /**
      * 删除集群daemonset
      *
-     * 删除集群daemonset
+     * 删除集群daemonset。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -20106,7 +20106,7 @@ class HssClient extends Client
     /**
      * 删除CI/CD配置
      *
-     * 删除CI/CD配置
+     * 删除CI/CD配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -20171,7 +20171,7 @@ class HssClient extends Client
     /**
      * 删除镜像仓接入信息
      *
-     * 删除镜像仓接入信息
+     * 删除镜像仓接入信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -20301,7 +20301,7 @@ class HssClient extends Client
     /**
      * 获取集群节点标签
      *
-     * 获取集群节点标签
+     * 获取集群节点标签。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -20375,7 +20375,7 @@ class HssClient extends Client
     /**
      * 获取集群daemonset列表
      *
-     * 获取集群daemonset列表
+     * 获取集群daemonset列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -20455,7 +20455,7 @@ class HssClient extends Client
     /**
      * 获取镜像同步任务关联的镜像仓的信息
      *
-     * 获取镜像同步任务关联的镜像仓的信息
+     * 获取镜像同步任务关联的镜像仓的信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -20535,7 +20535,7 @@ class HssClient extends Client
     /**
      * 获取集群节点标签
      *
-     * 获取集群节点标签
+     * 获取集群节点标签。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -20609,7 +20609,7 @@ class HssClient extends Client
     /**
      * 查询cicd配置列表
      *
-     * 查询cicd配置列表
+     * 查询cicd配置列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -20683,7 +20683,7 @@ class HssClient extends Client
     /**
      * 查询cicd镜像列表
      *
-     * 查询cicd镜像列表
+     * 查询cicd镜像列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -20811,7 +20811,7 @@ class HssClient extends Client
     /**
      * 查询多云集群
      *
-     * 查询多云集群
+     * 查询多云集群。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -20882,7 +20882,7 @@ class HssClient extends Client
     /**
      * 获取镜像仓列表
      *
-     * 获取镜像仓列表
+     * 获取镜像仓列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -20965,7 +20965,7 @@ class HssClient extends Client
     /**
      * 查询镜像仓统计数据
      *
-     * 查询镜像仓统计数据
+     * 查询镜像仓统计数据。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -21030,7 +21030,7 @@ class HssClient extends Client
     /**
      * 修改CI/CD配置
      *
-     * 修改CI/CD配置
+     * 修改CI/CD配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -21098,7 +21098,7 @@ class HssClient extends Client
     /**
      * 解析多云集群的配置文件
      *
-     * 解析多云集群的配置文件
+     * 解析多云集群的配置文件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -21163,7 +21163,7 @@ class HssClient extends Client
     /**
      * 删除多云集群
      *
-     * 删除多云集群
+     * 删除多云集群。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -21228,7 +21228,7 @@ class HssClient extends Client
     /**
      * 集群公网接入方式网络配置信息
      *
-     * 集群公网接入方式网络配置信息
+     * 集群公网接入方式网络配置信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -21290,7 +21290,7 @@ class HssClient extends Client
     /**
      * 获取部署模板
      *
-     * 获取部署模板，在安装Daemonset的时候提供选择
+     * 获取部署模板，在安装Daemonset的时候提供选择。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -21352,7 +21352,7 @@ class HssClient extends Client
     /**
      * 获取集群daemonset信息
      *
-     * 获取集群daemonset信息
+     * 获取集群daemonset信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -21417,7 +21417,7 @@ class HssClient extends Client
     /**
      * 查询CI/CD配置信息
      *
-     * 查询CI/CD配置信息
+     * 查询CI/CD配置信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -21482,7 +21482,7 @@ class HssClient extends Client
     /**
      * 获取扫描组件镜像上传指令
      *
-     * 获取镜像上传指令，上传的镜像是“镜像仓接入功能”和“镜像仓扫描功能”需要的组件
+     * 获取镜像上传指令，上传的镜像是“镜像仓接入功能”和“镜像仓扫描功能”需要的组件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -21553,7 +21553,7 @@ class HssClient extends Client
     /**
      * 获取多云集群的账号权限
      *
-     * 获取多云集群的账号权限
+     * 获取多云集群的账号权限。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -21624,7 +21624,7 @@ class HssClient extends Client
     /**
      * 获取多云集群的上传镜像指令
      *
-     * 获取多云集群的上传镜像指令
+     * 获取多云集群的上传镜像指令。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -21698,7 +21698,7 @@ class HssClient extends Client
     /**
      * 获取多云集群的代理安装脚本
      *
-     * 获取多云集群的代理安装脚本
+     * 获取多云集群的代理安装脚本。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -21763,7 +21763,7 @@ class HssClient extends Client
     /**
      * 同步多云集群的接入状态
      *
-     * 同步多云集群的接入状态
+     * 同步多云集群的接入状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -21828,7 +21828,7 @@ class HssClient extends Client
     /**
      * 更新集群daemonset
      *
-     * 更新集群daemonset
+     * 更新集群daemonset。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -21899,7 +21899,7 @@ class HssClient extends Client
     /**
      * 更新多云集群
      *
-     * 更新多云集群
+     * 更新多云集群。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -21967,7 +21967,7 @@ class HssClient extends Client
     /**
      * 编辑镜像仓接入信息
      *
-     * 编辑镜像仓接入信息
+     * 编辑镜像仓接入信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -22035,7 +22035,7 @@ class HssClient extends Client
     /**
      * 变更文件列表
      *
-     * 变更文件列表
+     * 变更文件列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -22127,7 +22127,7 @@ class HssClient extends Client
     /**
      * 某个服务器变更文件信息
      *
-     * 某个服务器变更文件信息
+     * 某个服务器变更文件信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -22219,7 +22219,7 @@ class HssClient extends Client
     /**
      * 云服务器变更列表
      *
-     * 云服务器变更列表
+     * 云服务器变更列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -22296,7 +22296,7 @@ class HssClient extends Client
     /**
      * 获取服务器文件统计信息
      *
-     * 获取服务器文件统计信息
+     * 获取服务器文件统计信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -22364,7 +22364,7 @@ class HssClient extends Client
     /**
      * 创建服务器组
      *
-     * 创建服务器组
+     * 创建服务器组。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -22435,7 +22435,7 @@ class HssClient extends Client
     /**
      * 关联资产重要性
      *
-     * 关联资产重要性
+     * 关联资产重要性。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -22500,7 +22500,7 @@ class HssClient extends Client
     /**
      * 分配到组
      *
-     * 分配到组
+     * 分配到组。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -22565,7 +22565,7 @@ class HssClient extends Client
     /**
      * 开启或关闭“自动绑定配额”配置开关
      *
-     * 开启或关闭“自动绑定配额”配置开关
+     * 开启或关闭“自动绑定配额”配置开关。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -22630,7 +22630,7 @@ class HssClient extends Client
     /**
      * 忽略/取消忽略主机
      *
-     * 忽略/取消忽略主机
+     * 忽略/取消忽略主机。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -22695,7 +22695,7 @@ class HssClient extends Client
     /**
      * 编辑服务器组
      *
-     * 编辑服务器组
+     * 编辑服务器组。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -22766,7 +22766,7 @@ class HssClient extends Client
     /**
      * 创建VPC终端节点的创建
      *
-     * 创建VPC终端节点的创建
+     * 创建VPC终端节点的创建。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -22828,7 +22828,7 @@ class HssClient extends Client
     /**
      * 删除服务器组
      *
-     * 删除服务器组
+     * 删除服务器组。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -22896,7 +22896,7 @@ class HssClient extends Client
     /**
      * 查询“自动绑定配额”配置开关状态
      *
-     * 查询“自动绑定配额”配置开关状态
+     * 查询“自动绑定配额”配置开关状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -22958,7 +22958,7 @@ class HssClient extends Client
     /**
      * 查询服务器组列表
      *
-     * 查询服务器组列表
+     * 查询服务器组列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -23032,7 +23032,7 @@ class HssClient extends Client
     /**
      * 查询云服务器列表
      *
-     * 查询云服务器列表
+     * 查询云服务器列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -23211,7 +23211,7 @@ class HssClient extends Client
     /**
      * ECS风险状况
      *
-     * ECS风险状况
+     * ECS风险状况。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -23247,11 +23247,11 @@ class HssClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 []
             );
         }
@@ -23276,7 +23276,7 @@ class HssClient extends Client
     /**
      * 查询主机策略列表
      *
-     * 查询主机策略列表
+     * 查询主机策略列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -23347,7 +23347,7 @@ class HssClient extends Client
     /**
      * 下发手动检测
      *
-     * 下发手动检测
+     * 下发手动检测。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -23415,7 +23415,7 @@ class HssClient extends Client
     /**
      * 查询每个主机的终端节点的创建状态
      *
-     * 查询每个主机的终端节点的创建状态
+     * 查询每个主机的终端节点的创建状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -23477,7 +23477,7 @@ class HssClient extends Client
     /**
      * 统计服务器数据
      *
-     * 统计服务器数据
+     * 统计服务器数据。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -23513,11 +23513,11 @@ class HssClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 []
             );
         }
@@ -23542,7 +23542,7 @@ class HssClient extends Client
     /**
      * 查询手动检测状态
      *
-     * 查询手动检测状态
+     * 查询手动检测状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -23610,7 +23610,7 @@ class HssClient extends Client
     /**
      * 修改防火墙授权状态
      *
-     * 修改防火墙授权状态
+     * 修改防火墙授权状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -23675,7 +23675,7 @@ class HssClient extends Client
     /**
      * 切换防护状态
      *
-     * 切换防护状态
+     * 切换防护状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -23743,7 +23743,7 @@ class HssClient extends Client
     /**
      * 卸载Agent
      *
-     * 卸载Agent
+     * 卸载Agent。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -23808,7 +23808,7 @@ class HssClient extends Client
     /**
      * 升级Agent
      *
-     * 升级Agent
+     * 升级Agent。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -23873,7 +23873,7 @@ class HssClient extends Client
     /**
      * 获取iac文件风险路径列表
      *
-     * 获取iac文件风险路径列表
+     * 获取iac文件风险路径列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -23956,7 +23956,7 @@ class HssClient extends Client
     /**
      * 获取iac文件风险列表
      *
-     * 获取iac文件风险列表
+     * 获取iac文件风险列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -24036,7 +24036,7 @@ class HssClient extends Client
     /**
      * 获取iac文件列表
      *
-     * 获取iac文件列表
+     * 获取iac文件列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -24125,7 +24125,7 @@ class HssClient extends Client
     /**
      * 新增镜像白名单
      *
-     * 新增镜像白名单，目前仅支持漏洞白名单
+     * 新增镜像白名单，目前仅支持漏洞白名单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -24196,7 +24196,7 @@ class HssClient extends Client
     /**
      * 镜像仓库基线检查批量导出（支持全量导出）
      *
-     * 镜像仓库基线检查批量导出（支持全量导出）,若导出镜像类型为cicd类型的数据，需要传参image_type为cicd
+     * 镜像仓库基线检查批量导出（支持全量导出）,若导出镜像类型为cicd类型的数据，需要传参image_type为cicd。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -24267,7 +24267,7 @@ class HssClient extends Client
     /**
      * 本地镜像漏洞批量导出（支持全量导出）
      *
-     * 本地镜像漏洞批量导出（支持全量导出）
+     * 本地镜像漏洞批量导出（支持全量导出）。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -24338,7 +24338,7 @@ class HssClient extends Client
     /**
      * 本地镜像扫描
      *
-     * 本地镜像扫描
+     * 本地镜像扫描。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -24406,7 +24406,7 @@ class HssClient extends Client
     /**
      * 镜像仓库镜像批量扫描--接口已废弃
      *
-     * 镜像仓库镜像批量扫描--接口已废弃
+     * 镜像仓库镜像批量扫描--接口已废弃。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -24474,7 +24474,7 @@ class HssClient extends Client
     /**
      * 修改镜像的自定义弱口令
      *
-     * 修改镜像的自定义弱口令
+     * 修改镜像的自定义弱口令。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -24539,7 +24539,7 @@ class HssClient extends Client
     /**
      * 修改镜像的敏感信息文件路径白名单--接口已废弃
      *
-     * 修改镜像的敏感信息文件路径白名单--接口已废弃
+     * 修改镜像的敏感信息文件路径白名单--接口已废弃。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -24607,7 +24607,7 @@ class HssClient extends Client
     /**
      * 修改镜像的敏感信息文件路径白名单
      *
-     * 修改镜像的敏感信息文件路径白名单
+     * 修改镜像的敏感信息文件路径白名单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -24675,7 +24675,7 @@ class HssClient extends Client
     /**
      * 修改镜像白名单配置信息
      *
-     * 修改镜像白名单配置信息
+     * 修改镜像白名单配置信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -24749,7 +24749,7 @@ class HssClient extends Client
     /**
      * 敏感信息操作处理
      *
-     * 敏感信息操作处理
+     * 敏感信息操作处理。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -24817,7 +24817,7 @@ class HssClient extends Client
     /**
      * 删除镜像白名单
      *
-     * 删除镜像白名单
+     * 删除镜像白名单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -24888,7 +24888,7 @@ class HssClient extends Client
     /**
      * 处置镜像漏洞
      *
-     * 处置镜像漏洞
+     * 处置镜像漏洞。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -24953,7 +24953,7 @@ class HssClient extends Client
     /**
      * 查询配置检查项影响到的资源列表
      *
-     * 查询配置检查项影响到的资源列表
+     * 查询配置检查项影响到的资源列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -25010,11 +25010,11 @@ class HssClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 []
             );
         }
@@ -25039,7 +25039,7 @@ class HssClient extends Client
     /**
      * 查询基线检查的配置检查信息
      *
-     * 查询基线检查的配置检查信息
+     * 查询基线检查的配置检查信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -25131,7 +25131,7 @@ class HssClient extends Client
     /**
      * 查询容器镜像操作日志
      *
-     * 查询容器镜像操作日志
+     * 查询容器镜像操作日志。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -25220,7 +25220,7 @@ class HssClient extends Client
     /**
      * 查询容器镜像列表
      *
-     * 查询容器镜像列表
+     * 查询容器镜像列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -25291,7 +25291,7 @@ class HssClient extends Client
     /**
      * 获取镜像软件信息
      *
-     * 获取镜像软件信息
+     * 获取镜像软件信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -25371,7 +25371,7 @@ class HssClient extends Client
     /**
      * 获取镜像文件信息
      *
-     * 获取镜像文件信息
+     * 获取镜像文件信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -25448,7 +25448,7 @@ class HssClient extends Client
     /**
      * 查询租户恶意文件列表
      *
-     * 查询租户恶意文件列表
+     * 查询租户恶意文件列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -25496,11 +25496,11 @@ class HssClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 []
             );
         }
@@ -25525,7 +25525,7 @@ class HssClient extends Client
     /**
      * 租户的漏洞信息
      *
-     * 租户的漏洞信息
+     * 租户的漏洞信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -25605,7 +25605,7 @@ class HssClient extends Client
     /**
      * 查询镜像软件列表
      *
-     * 查询镜像软件列表，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填
+     * 查询镜像软件列表，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -25780,7 +25780,7 @@ class HssClient extends Client
     /**
      * 获取镜像构建指令风险信息
      *
-     * 获取镜像构建指令风险信息
+     * 获取镜像构建指令风险信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -25863,7 +25863,7 @@ class HssClient extends Client
     /**
      * 查询镜像构建指令影响到的镜像列表
      *
-     * 查询镜像构建指令影响到的镜像列表
+     * 查询镜像构建指令影响到的镜像列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -25940,7 +25940,7 @@ class HssClient extends Client
     /**
      * 查询镜像文件列表
      *
-     * 查询镜像文件列表，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填
+     * 查询镜像文件列表，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -26026,7 +26026,7 @@ class HssClient extends Client
     /**
      * 查询镜像漏洞处置操作影响的漏洞列表
      *
-     * 查询镜像漏洞处置操作影响的漏洞列表
+     * 查询镜像漏洞处置操作影响的漏洞列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -26103,7 +26103,7 @@ class HssClient extends Client
     /**
      * 本地镜像列表查询
      *
-     * 本地镜像列表查询
+     * 本地镜像列表查询。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -26228,7 +26228,7 @@ class HssClient extends Client
     /**
      * 查询镜像恶意文件列表
      *
-     * 查询镜像恶意文件列表，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填
+     * 查询镜像恶意文件列表，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -26406,7 +26406,7 @@ class HssClient extends Client
     /**
      * 查询镜像口令复杂度策略检测报告
      *
-     * 查询镜像口令复杂度策略检测报告，若镜像类型为cicd镜像，则需传参镜像类型和镜像id唯一确定一条cicd镜像信息；若镜像类型为其他镜像仓类型，需要传参镜像类型、组织名称、镜像名称、镜像版本名称唯一确定一条其他镜像信息
+     * 查询镜像口令复杂度策略检测报告，若镜像类型为cicd镜像，则需传参镜像类型和镜像id唯一确定一条cicd镜像信息；若镜像类型为其他镜像仓类型，需要传参镜像类型、组织名称、镜像名称、镜像版本名称唯一确定一条其他镜像信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -26492,7 +26492,7 @@ class HssClient extends Client
     /**
      * 查询镜像指定安全配置项的检查项列表
      *
-     * 查询镜像指定安全配置项的检查项列表
+     * 查询镜像指定安全配置项的检查项列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -26660,9 +26660,6 @@ class HssClient extends Client
         if ($localVarParams['instanceId'] !== null) {
             $queryParams['instance_id'] = $localVarParams['instanceId'];
         }
-        if ($localVarParams['region'] !== null) {
-            $headerParams[$arr['region']] = $localVarParams['region'];
-        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
@@ -26789,7 +26786,7 @@ class HssClient extends Client
     /**
      * 查询镜像的敏感信息
      *
-     * 查询镜像的敏感信息
+     * 查询镜像的敏感信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -26863,7 +26860,7 @@ class HssClient extends Client
     /**
      * 查询镜像的漏洞信息
      *
-     * 查询镜像的漏洞信息
+     * 查询镜像的漏洞信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -26894,14 +26891,14 @@ class HssClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
-        if ($localVarParams['imageType'] !== null) {
-            $queryParams['image_type'] = $localVarParams['imageType'];
-        }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['imageType'] !== null) {
+            $queryParams['image_type'] = $localVarParams['imageType'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $queryParams['instance_id'] = $localVarParams['instanceId'];
@@ -26927,8 +26924,8 @@ class HssClient extends Client
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
         }
-        if ($localVarParams['region'] !== null) {
-            $headerParams[$arr['region']] = $localVarParams['region'];
+        if ($localVarParams['handleStatus'] !== null) {
+            $queryParams['handle_status'] = $localVarParams['handleStatus'];
         }
         if ($localVarParams['imageId'] !== null) {
             $pathParams['image_id'] = $localVarParams['imageId'];
@@ -26964,7 +26961,7 @@ class HssClient extends Client
     /**
      * 查镜像询弱口令检测结果列表
      *
-     * 查询镜像弱口令检测结果列表，若镜像类型为cicd镜像，则需传参镜像类型和镜像id唯一确定一条cicd镜像信息；若镜像类型为其他镜像仓类型，需要传参镜像类型、组织名称、镜像名称、镜像版本名称唯一确定一条其他镜像信息
+     * 查询镜像弱口令检测结果列表，若镜像类型为cicd镜像，则需传参镜像类型和镜像id唯一确定一条cicd镜像信息；若镜像类型为其他镜像仓类型，需要传参镜像类型、组织名称、镜像名称、镜像版本名称唯一确定一条其他镜像信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -27056,7 +27053,7 @@ class HssClient extends Client
     /**
      * 查询镜像白名单列表
      *
-     * 查询镜像白名单列表，目前仅支持漏洞白名单
+     * 查询镜像白名单列表，目前仅支持漏洞白名单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -27136,7 +27133,7 @@ class HssClient extends Client
     /**
      * 查询本地镜像的软件信息
      *
-     * 查询本地镜像的软件信息
+     * 查询本地镜像的软件信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -27210,7 +27207,7 @@ class HssClient extends Client
     /**
      * 查询本地镜像的容器信息
      *
-     * 查询本地镜像的容器信息
+     * 查询本地镜像的容器信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -27267,11 +27264,11 @@ class HssClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 []
             );
         }
@@ -27296,7 +27293,7 @@ class HssClient extends Client
     /**
      * 查询本地镜像的主机信息
      *
-     * 查询本地镜像的主机信息
+     * 查询本地镜像的主机信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -27353,11 +27350,11 @@ class HssClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 []
             );
         }
@@ -27382,7 +27379,7 @@ class HssClient extends Client
     /**
      * 查询swr镜像仓库镜像列表-接口已废弃，不再推荐使用
      *
-     * 查询swr镜像仓库镜像列表,如果需要从swr同步最新镜像，需要先调用“从swr同步镜像”接口
+     * 查询swr镜像仓库镜像列表,如果需要从swr同步最新镜像，需要先调用“从swr同步镜像”接口。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -27501,7 +27498,7 @@ class HssClient extends Client
     /**
      * 查看受漏洞影响镜像的软件信息
      *
-     * 查看受漏洞影响镜像的软件信息
+     * 查看受漏洞影响镜像的软件信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -27581,7 +27578,7 @@ class HssClient extends Client
     /**
      * 查看受漏洞影响镜像的关联容器信息
      *
-     * 查看受漏洞影响镜像的关联容器信息
+     * 查看受漏洞影响镜像的关联容器信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -27664,7 +27661,7 @@ class HssClient extends Client
     /**
      * 查看受漏洞影响的镜像列表
      *
-     * 查看受漏洞影响的镜像列表
+     * 查看受漏洞影响的镜像列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -27765,7 +27762,7 @@ class HssClient extends Client
     /**
      * 漏洞影响的镜像信息
      *
-     * 查询单个漏洞影响的镜像仓库中的镜像信息
+     * 查询单个漏洞影响的镜像仓库中的镜像信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -27851,7 +27848,7 @@ class HssClient extends Client
     /**
      * 漏洞对应cve信息
      *
-     * 漏洞对应cve信息
+     * 漏洞对应cve信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -27925,7 +27922,7 @@ class HssClient extends Client
     /**
      * 从SWR服务同步镜像列表--接口已废弃
      *
-     * 从SWR服务同步镜像列表--接口已废弃
+     * 从SWR服务同步镜像列表--接口已废弃。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -27993,7 +27990,7 @@ class HssClient extends Client
     /**
      * 查询镜像的自定义弱口令
      *
-     * 查询镜像的自定义弱口令
+     * 查询镜像的自定义弱口令。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -28058,7 +28055,7 @@ class HssClient extends Client
     /**
      * 查询镜像的敏感信息文件路径白名单--接口已废弃
      *
-     * 查询镜像的敏感信息文件路径白名单--接口已废弃
+     * 查询镜像的敏感信息文件路径白名单--接口已废弃。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -28126,7 +28123,7 @@ class HssClient extends Client
     /**
      * 查询镜像的敏感信息文件路径白名单
      *
-     * 查询镜像的敏感信息文件路径白名单
+     * 查询镜像的敏感信息文件路径白名单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -28194,7 +28191,7 @@ class HssClient extends Client
     /**
      * 容器资产-镜像统计
      *
-     * 容器资产-镜像统计
+     * 容器资产-镜像统计。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -28256,7 +28253,7 @@ class HssClient extends Client
     /**
      * 查询基线检查的统计数据信息
      *
-     * 查询基线检查的统计数据信息，包括弱口令，口令复杂度，配置检测，若查询单个cicd镜像的统计数据，需要传参image_type和image_id；若要查询单个仓库镜像的统计数据，需要传参image_type、组织名称、镜像名称和镜像版本名称
+     * 查询基线检查的统计数据信息，包括弱口令，口令复杂度，配置检测，若查询单个cicd镜像的统计数据，需要传参image_type和image_id；若要查询单个仓库镜像的统计数据，需要传参image_type、组织名称、镜像名称和镜像版本名称。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -28339,7 +28336,7 @@ class HssClient extends Client
     /**
      * 查询镜像配置检查项检测报告
      *
-     * 查询镜像配置检查项检测报告
+     * 查询镜像配置检查项检测报告。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -28405,11 +28402,11 @@ class HssClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'appcation/json']
+                ['application/json', 'appLIcation/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'appcation/json'],
+                ['application/json', 'appLIcation/json'],
                 []
             );
         }
@@ -28434,7 +28431,7 @@ class HssClient extends Client
     /**
      * 查询镜像文件统计信息
      *
-     * 查询镜像文件统计信息，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填
+     * 查询镜像文件统计信息，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -28485,11 +28482,11 @@ class HssClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 []
             );
         }
@@ -28514,7 +28511,7 @@ class HssClient extends Client
     /**
      * 镜像安全报告导出统计
      *
-     * 镜像安全报告导出统计
+     * 镜像安全报告导出统计。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -28585,7 +28582,7 @@ class HssClient extends Client
     /**
      * 查询镜像白名单详情
      *
-     * 查询镜像白名单详情，需要分页查询白名单关联的镜像列表
+     * 查询镜像白名单详情，需要分页查询白名单关联的镜像列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -28662,7 +28659,7 @@ class HssClient extends Client
     /**
      * 创建扫描任务
      *
-     * 创建扫描任务
+     * 创建扫描任务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -28733,7 +28730,7 @@ class HssClient extends Client
     /**
      * 获取扫描策略
      *
-     * 获取扫描策略
+     * 获取扫描策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -28801,7 +28798,7 @@ class HssClient extends Client
     /**
      * 获取扫描任务列表
      *
-     * 获取扫描任务列表
+     * 获取扫描任务列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -28896,7 +28893,7 @@ class HssClient extends Client
     /**
      * 修改周期扫描策略
      *
-     * 修改周期扫描策略
+     * 修改周期扫描策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -28964,7 +28961,7 @@ class HssClient extends Client
     /**
      * 查询镜像按次扫描统计数据
      *
-     * 查询镜像按次扫描统计数据
+     * 查询镜像按次扫描统计数据。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -29026,7 +29023,7 @@ class HssClient extends Client
     /**
      * 终止仓库镜像扫描任务
      *
-     * 终止仓库镜像扫描任务
+     * 终止仓库镜像扫描任务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -29094,7 +29091,7 @@ class HssClient extends Client
     /**
      * 修改用户的月度运营弹框状态
      *
-     * 修改用户的月度运营弹框状态
+     * 修改用户的月度运营弹框状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -29153,7 +29150,7 @@ class HssClient extends Client
     /**
      * 月度运营总结报告导出
      *
-     * 月度运营总结报告导出
+     * 月度运营总结报告导出。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -29218,7 +29215,7 @@ class HssClient extends Client
     /**
      * 查询月度运营报告列表
      *
-     * 查询月度运营报告列表
+     * 查询月度运营报告列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -29283,7 +29280,7 @@ class HssClient extends Client
     /**
      * 查询安全风险列表
      *
-     * 查询安全风险列表
+     * 查询安全风险列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -29345,7 +29342,7 @@ class HssClient extends Client
     /**
      * 查询agent统计数量
      *
-     * 查询待升级agent数，在线/离线agent数量
+     * 查询待升级agent数，在线/离线agent数量。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -29410,7 +29407,7 @@ class HssClient extends Client
     /**
      * 热点资讯
      *
-     * 返回标题，更新时间，资讯级别
+     * 返回标题，更新时间，资讯级别。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -29469,7 +29466,7 @@ class HssClient extends Client
     /**
      * 查询用户的月度运营弹框状态
      *
-     * 查询用户的月度运营弹框状态
+     * 查询用户的月度运营弹框状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -29528,7 +29525,7 @@ class HssClient extends Client
     /**
      * 查询某月月度运营报告的详细信息
      *
-     * 查询某月月度运营报告的详细信息
+     * 查询某月月度运营报告的详细信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -29590,7 +29587,7 @@ class HssClient extends Client
     /**
      * 查询守护天数，病毒库更新时间，漏洞库更新时间，各模块累计次数
      *
-     * 查询守护天数，病毒库更新时间，漏洞库更新时间，各模块累计次数
+     * 查询守护天数，病毒库更新时间，漏洞库更新时间，各模块累计次数。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -29652,7 +29649,7 @@ class HssClient extends Client
     /**
      * 查询风险评分结果
      *
-     * 查询风险评分结果
+     * 查询风险评分结果。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -29714,7 +29711,7 @@ class HssClient extends Client
     /**
      * 查询月度运营报告福利区公共信息
      *
-     * 查询月度运营报告福利区公共信息
+     * 查询月度运营报告福利区公共信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -29776,7 +29773,7 @@ class HssClient extends Client
     /**
      * 查询插件详情
      *
-     * 查询插件详情
+     * 查询插件详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -29859,7 +29856,7 @@ class HssClient extends Client
     /**
      * 查询插件应用列表
      *
-     * 查询插件应用列表
+     * 查询插件应用列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -29957,7 +29954,7 @@ class HssClient extends Client
     /**
      * 查询插件列表
      *
-     * 查询插件列表
+     * 查询插件列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -30031,7 +30028,7 @@ class HssClient extends Client
     /**
      * 启动插件
      *
-     * 启动插件
+     * 启动插件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -30096,7 +30093,7 @@ class HssClient extends Client
     /**
      * 停止插件
      *
-     * 停止插件
+     * 停止插件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -30161,7 +30158,7 @@ class HssClient extends Client
     /**
      * 复制策略组
      *
-     * 复制策略组，选择已有的旗舰版或容器版策略组，复制生成新的策略组
+     * 复制策略组，选择已有的旗舰版或容器版策略组，复制生成新的策略组。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -30226,7 +30223,7 @@ class HssClient extends Client
     /**
      * 部署策略组
      *
-     * 为已经开启旗舰版或容器版防护的服务器部署策略组
+     * 为已经开启旗舰版或容器版防护的服务器部署策略组。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -30294,7 +30291,7 @@ class HssClient extends Client
     /**
      * 修改策略组相关内容
      *
-     * 修改策略组相关内容，如防护模式
+     * 修改策略组相关内容，如防护模式。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -30359,7 +30356,7 @@ class HssClient extends Client
     /**
      * 删除策略组
      *
-     * 删除策略组，支持删除非默认并且未关联服务器的策略组
+     * 删除策略组，支持删除非默认并且未关联服务器的策略组。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -30424,7 +30421,7 @@ class HssClient extends Client
     /**
      * 查询策略组列表
      *
-     * 查询策略组列表
+     * 查询策略组列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -30501,7 +30498,7 @@ class HssClient extends Client
     /**
      * 解绑配额
      *
-     * 解绑配额
+     * 解绑配额。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -30569,7 +30566,7 @@ class HssClient extends Client
     /**
      * HSS服务创建订单订购配额
      *
-     * HSS服务创建订单订购配额，只支持包周期计费模式
+     * HSS服务创建订单订购配额，只支持包周期计费模式。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -30705,7 +30702,7 @@ class HssClient extends Client
     /**
      * 查询配额详情
      *
-     * 查询配额详情
+     * 查询配额详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -30797,7 +30794,7 @@ class HssClient extends Client
     /**
      * 批量查询配额ID信息
      *
-     * 批量查询配额ID信息
+     * 批量查询配额ID信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -30865,7 +30862,7 @@ class HssClient extends Client
     /**
      * 查询产商品信息
      *
-     * 查询产商品信息
+     * 查询产商品信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -30933,7 +30930,7 @@ class HssClient extends Client
     /**
      * 查询配额信息
      *
-     * 查询配额信息
+     * 查询配额信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -31001,7 +30998,7 @@ class HssClient extends Client
     /**
      * 查询客户使用的最高版本
      *
-     * 查询客户使用的最高版本
+     * 查询客户使用的最高版本。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -31066,7 +31063,7 @@ class HssClient extends Client
     /**
      * 添加防护策略
      *
-     * 添加防护策略
+     * 添加防护策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -31134,7 +31131,7 @@ class HssClient extends Client
     /**
      * 存储库绑定备份策略
      *
-     * 存储库绑定备份策略
+     * 存储库绑定备份策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -31202,7 +31199,7 @@ class HssClient extends Client
     /**
      * 切换勒索防护策略
      *
-     * 切换勒索防护策略
+     * 切换勒索防护策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -31267,7 +31264,7 @@ class HssClient extends Client
     /**
      * 批量开启勒索病毒防护2.0
      *
-     * 批量开启勒索病毒防护，若开启备份防护，请保证该region有cbr云备份服务
+     * 批量开启勒索病毒防护，若开启备份防护，请保证该region有cbr云备份服务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -31332,7 +31329,7 @@ class HssClient extends Client
     /**
      * 删除备份副本
      *
-     * 删除备份副本
+     * 删除备份副本。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -31397,7 +31394,7 @@ class HssClient extends Client
     /**
      * 删除防护策略
      *
-     * 删除防护策略
+     * 删除防护策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -31462,7 +31459,7 @@ class HssClient extends Client
     /**
      * 查询备份列表
      *
-     * 查询备份列表
+     * 查询备份列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -31545,7 +31542,7 @@ class HssClient extends Client
     /**
      * 查询备份策略列表
      *
-     * 查询备份策略列表
+     * 查询备份策略列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -31690,7 +31687,7 @@ class HssClient extends Client
     /**
      * 查询备份恢复任务列表
      *
-     * 查询备份恢复任务列表
+     * 查询备份恢复任务列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -31767,7 +31764,7 @@ class HssClient extends Client
     /**
      * 查询勒索病毒的防护策略列表
      *
-     * 查询勒索病毒的防护策略列表
+     * 查询勒索病毒的防护策略列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -31847,7 +31844,7 @@ class HssClient extends Client
     /**
      * 查询勒索防护服务器列表
      *
-     * 查询勒索防护服务器列表，与云备份服务配合使用。因此使用勒索相关接口之前确保该局点有云备份服务
+     * 查询勒索防护服务器列表，与云备份服务配合使用。因此使用勒索相关接口之前确保该局点有云备份服务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -31933,7 +31930,7 @@ class HssClient extends Client
     /**
      * 查询勒索防护服务器列表2.0
      *
-     * 查询勒索防护服务器列表，与云备份服务配合使用。因此使用勒索相关接口之前确保该局点有云备份服务
+     * 查询勒索防护服务器列表，与云备份服务配合使用。因此使用勒索相关接口之前确保该局点有云备份服务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -32043,7 +32040,7 @@ class HssClient extends Client
     /**
      * 备份恢复
      *
-     * 备份恢复
+     * 备份恢复。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -32114,7 +32111,7 @@ class HssClient extends Client
     /**
      * 查询指定备份信息
      *
-     * 查询指定备份信息
+     * 查询指定备份信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -32182,7 +32179,7 @@ class HssClient extends Client
     /**
      * 查询HSS存储库绑定的备份策略信息
      *
-     * 查询HSS存储库绑定的备份策略信息，确保已经购买了勒索防护存储库，可以从cbr云备份服务进行验证，确保已经存在HSS_projectid命名的存储库已经购买
+     * 查询HSS存储库绑定的备份策略信息，确保已经购买了勒索防护存储库，可以从cbr云备份服务进行验证，确保已经存在HSS_projectid命名的存储库已经购买。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -32247,7 +32244,7 @@ class HssClient extends Client
     /**
      * 查询单个备份策略信息
      *
-     * 查询单个备份策略信息
+     * 查询单个备份策略信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -32312,7 +32309,7 @@ class HssClient extends Client
     /**
      * 开启勒索病毒防护
      *
-     * 开启勒索病毒防护，请保证该region有cbr云备份服务，勒索服务与云备份服务有关联关系
+     * 开启勒索病毒防护，请保证该region有cbr云备份服务，勒索服务与云备份服务有关联关系。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -32380,7 +32377,7 @@ class HssClient extends Client
     /**
      * 关闭勒索病毒防护
      *
-     * 关闭勒索病毒防护
+     * 关闭勒索病毒防护。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -32448,7 +32445,7 @@ class HssClient extends Client
     /**
      * 修改存储库绑定的备份策略
      *
-     * 修改存储库绑定的备份策略
+     * 修改存储库绑定的备份策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -32516,7 +32513,7 @@ class HssClient extends Client
     /**
      * 修改勒索防护策略
      *
-     * 修改勒索防护策略
+     * 修改勒索防护策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -32584,7 +32581,7 @@ class HssClient extends Client
     /**
      * 创建同步镜像任务
      *
-     * 创建同步镜像任务
+     * 创建同步镜像任务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -32652,7 +32649,7 @@ class HssClient extends Client
     /**
      * 查询仓库镜像列表
      *
-     * 查询仓库镜像列表
+     * 查询仓库镜像列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -32792,7 +32789,7 @@ class HssClient extends Client
     /**
      * 发送安全报告
      *
-     * 发送安全报告
+     * 发送安全报告。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -32857,7 +32854,7 @@ class HssClient extends Client
     /**
      * 查询病毒扫描历史处置记录列表
      *
-     * 查询病毒扫描历史处置记录列表
+     * 查询病毒扫描历史处置记录列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -32964,7 +32961,7 @@ class HssClient extends Client
     /**
      * 查询告警事件历史处置记录列表
      *
-     * 查询告警事件历史处置记录列表
+     * 查询告警事件历史处置记录列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -33071,7 +33068,7 @@ class HssClient extends Client
     /**
      * 查询集群的安全体检报告列表
      *
-     * 查询集群的安全体检报告列表
+     * 查询集群的安全体检报告列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -33151,7 +33148,7 @@ class HssClient extends Client
     /**
      * 查询漏洞历史处置记录列表
      *
-     * 查询漏洞历史处置记录列表
+     * 查询漏洞历史处置记录列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -33255,7 +33252,7 @@ class HssClient extends Client
     /**
      * 查询手动体检状态和进度
      *
-     * 查询手动体检状态和进度
+     * 查询手动体检状态和进度。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -33317,7 +33314,7 @@ class HssClient extends Client
     /**
      * 查询集群的安全体检报告信息
      *
-     * 查询集群的安全体检报告信息
+     * 查询集群的安全体检报告信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -33385,7 +33382,7 @@ class HssClient extends Client
     /**
      * 查询安全体检定时配置信息
      *
-     * 查询安全体检定时配置信息
+     * 查询安全体检定时配置信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -33447,7 +33444,7 @@ class HssClient extends Client
     /**
      * 查询指定服务器的安全体检报告
      *
-     * 查询指定服务器的安全体检报告
+     * 查询指定服务器的安全体检报告。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -33515,7 +33512,7 @@ class HssClient extends Client
     /**
      * 启动手动体检
      *
-     * 启动手动体检
+     * 启动手动体检。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -33580,7 +33577,7 @@ class HssClient extends Client
     /**
      * 取消手动体检
      *
-     * 取消手动体检
+     * 取消手动体检。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -33642,7 +33639,7 @@ class HssClient extends Client
     /**
      * 修改安全体检定时配置信息
      *
-     * 修改安全体检定时配置信息
+     * 修改安全体检定时配置信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -33707,7 +33704,7 @@ class HssClient extends Client
     /**
      * 查询Serverless资产列表
      *
-     * 查询Serverless资产列表
+     * 查询Serverless资产列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -33778,7 +33775,7 @@ class HssClient extends Client
     /**
      * 查询Serverless资产详细信息
      *
-     * 查询Serverless资产详细信息
+     * 查询Serverless资产详细信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -33846,7 +33843,7 @@ class HssClient extends Client
     /**
      * 开启或关闭“Agent自动升级”配置开关
      *
-     * 开启或关闭“Agent自动升级”配置开关
+     * 开启或关闭“Agent自动升级”配置开关。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -33911,7 +33908,7 @@ class HssClient extends Client
     /**
      * 修改指定策略的总开关，将该策略的所有主机都打开或者关闭此策略
      *
-     * 修改指定策略的总开关，将该策略的所有主机都打开或者关闭此策略
+     * 修改指定策略的总开关，将该策略的所有主机都打开或者关闭此策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -33976,7 +33973,7 @@ class HssClient extends Client
     /**
      * 修改配置开关状态
      *
-     * 修改配置开关状态
+     * 修改配置开关状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -34044,7 +34041,7 @@ class HssClient extends Client
     /**
      * 查询“Agent自动升级”配置开关状态
      *
-     * 查询“Agent自动升级”配置开关状态
+     * 查询“Agent自动升级”配置开关状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -34106,7 +34103,7 @@ class HssClient extends Client
     /**
      * 查询agent版本信息列表
      *
-     * 查询agent版本信息列表
+     * 查询agent版本信息列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -34171,7 +34168,7 @@ class HssClient extends Client
     /**
      * 查询告警配置
      *
-     * 查询告警配置
+     * 查询告警配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -34233,7 +34230,7 @@ class HssClient extends Client
     /**
      * 查询程序自动隔离查杀状态
      *
-     * 查询程序自动隔离查杀状态
+     * 查询程序自动隔离查杀状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -34295,7 +34292,7 @@ class HssClient extends Client
     /**
      * 获取字典列表
      *
-     * 获取字典列表
+     * 获取字典列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -34369,7 +34366,7 @@ class HssClient extends Client
     /**
      * 查询常用登录IP信息
      *
-     * 查询常用登录IP信息
+     * 查询常用登录IP信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -34434,7 +34431,7 @@ class HssClient extends Client
     /**
      * 查询常用登录地信息
      *
-     * 查询常用登录地信息
+     * 查询常用登录地信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -34499,7 +34496,7 @@ class HssClient extends Client
     /**
      * 查询SSH登录IP白名单列表
      *
-     * 查询SSH登录IP白名单列表
+     * 查询SSH登录IP白名单列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -34564,7 +34561,7 @@ class HssClient extends Client
     /**
      * 查询系统配置内容列表
      *
-     * 查询系统配置内容列表
+     * 查询系统配置内容列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -34635,7 +34632,7 @@ class HssClient extends Client
     /**
      * 查询双因子主机列表
      *
-     * 查询双因子主机列表
+     * 查询双因子主机列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -34709,7 +34706,7 @@ class HssClient extends Client
     /**
      * 添加、编辑或删除常用登录IP地址
      *
-     * 添加、编辑或删除常用登录IP地址
+     * 添加、编辑或删除常用登录IP地址。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -34774,7 +34771,7 @@ class HssClient extends Client
     /**
      * 添加、编辑或删除常用登录地
      *
-     * 添加、编辑或删除常用登录地
+     * 添加、编辑或删除常用登录地。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -34839,7 +34836,7 @@ class HssClient extends Client
     /**
      * 添加、删除、编辑、启用或禁用登录IP白名单
      *
-     * 添加、删除、编辑、启用或禁用登录IP白名单
+     * 添加、删除、编辑、启用或禁用登录IP白名单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -34904,7 +34901,7 @@ class HssClient extends Client
     /**
      * 设置双因子登录配置
      *
-     * 设置双因子登录配置
+     * 设置双因子登录配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -34969,7 +34966,7 @@ class HssClient extends Client
     /**
      * 查询指定策略的总开关
      *
-     * 查询指定策略的总开关
+     * 查询指定策略的总开关。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -35034,7 +35031,7 @@ class HssClient extends Client
     /**
      * 下载脚本文件
      *
-     * 下载脚本文件
+     * 下载脚本文件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -35099,7 +35096,7 @@ class HssClient extends Client
     /**
      * 获取配置开关状态
      *
-     * 获取配置开关状态
+     * 获取配置开关状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -35135,11 +35132,11 @@ class HssClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 []
             );
         }
@@ -35164,7 +35161,7 @@ class HssClient extends Client
     /**
      * 开启或关闭程序自动隔离查杀
      *
-     * 开启或关闭程序自动隔离查杀
+     * 开启或关闭程序自动隔离查杀。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -35229,7 +35226,7 @@ class HssClient extends Client
     /**
      * 设置告警配置
      *
-     * 设置告警配置
+     * 设置告警配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -35297,7 +35294,7 @@ class HssClient extends Client
     /**
      * 创建任务
      *
-     * 创建任务
+     * 创建任务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -35362,7 +35359,7 @@ class HssClient extends Client
     /**
      * 查询当前任务关联的资源列表
      *
-     * 查询当前任务关联的资源列表
+     * 查询当前任务关联的资源列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -35436,7 +35433,7 @@ class HssClient extends Client
     /**
      * 查询任务列表
      *
-     * 查询任务列表
+     * 查询任务列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -35507,7 +35504,7 @@ class HssClient extends Client
     /**
      * 重新运行任务
      *
-     * 重新运行任务
+     * 重新运行任务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -35575,7 +35572,7 @@ class HssClient extends Client
     /**
      * 查询任务统计数据
      *
-     * 查询任务统计数据
+     * 查询任务统计数据。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -35640,7 +35637,7 @@ class HssClient extends Client
     /**
      * 添加漏洞白名单
      *
-     * 添加漏洞白名单
+     * 添加漏洞白名单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -35705,7 +35702,7 @@ class HssClient extends Client
     /**
      * 修改漏洞扫描策略
      *
-     * 修改漏洞扫描策略
+     * 修改漏洞扫描策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -35770,7 +35767,7 @@ class HssClient extends Client
     /**
      * 修改漏洞的状态
      *
-     * 修改漏洞的状态
+     * 修改漏洞的状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -35838,7 +35835,7 @@ class HssClient extends Client
     /**
      * 修改漏洞白名单
      *
-     * 修改漏洞白名单
+     * 修改漏洞白名单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -35906,7 +35903,7 @@ class HssClient extends Client
     /**
      * 创建漏洞扫描任务
      *
-     * 创建漏洞扫描任务
+     * 创建漏洞扫描任务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -35971,7 +35968,7 @@ class HssClient extends Client
     /**
      * 删除漏洞白名单
      *
-     * 删除漏洞白名单
+     * 删除漏洞白名单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -36036,7 +36033,7 @@ class HssClient extends Client
     /**
      * 创建历史处理的漏洞导出任务
      *
-     * 创建历史处理的漏洞导出任务
+     * 创建历史处理的漏洞导出任务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -36101,7 +36098,7 @@ class HssClient extends Client
     /**
      * 创建漏洞处置历史记录的导出任务
      *
-     * 创建漏洞处置历史记录的导出任务
+     * 创建漏洞处置历史记录的导出任务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -36166,7 +36163,7 @@ class HssClient extends Client
     /**
      * 导出漏洞及漏洞影响的主机的相关信息
      *
-     * 导出漏洞及漏洞影响的主机的相关信息
+     * 导出漏洞及漏洞影响的主机的相关信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -36276,7 +36273,7 @@ class HssClient extends Client
     /**
      * 查看镜像漏洞的历史处置记录
      *
-     * 查看镜像漏洞的历史处置记录
+     * 查看镜像漏洞的历史处置记录。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -36374,7 +36371,7 @@ class HssClient extends Client
     /**
      * 查看所有类型镜像的漏洞
      *
-     * 查看所有类型镜像的漏洞
+     * 查看所有类型镜像的漏洞。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -36472,7 +36469,7 @@ class HssClient extends Client
     /**
      * 处理的漏洞
      *
-     * 查询今日处理漏洞/累计处理漏洞
+     * 查询今日处理漏洞/累计处理漏洞。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -36570,7 +36567,7 @@ class HssClient extends Client
     /**
      * 查询单台服务器漏洞信息
      *
-     * 查询单台服务器漏洞信息
+     * 查询单台服务器漏洞信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -36671,7 +36668,7 @@ class HssClient extends Client
     /**
      * 查询应急漏洞列表
      *
-     * 查询应急漏洞列表
+     * 查询应急漏洞列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -36760,7 +36757,7 @@ class HssClient extends Client
     /**
      * 查询单个漏洞影响的容器app信息
      *
-     * 查询单个漏洞影响的容器app信息
+     * 查询单个漏洞影响的容器app信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -36837,7 +36834,7 @@ class HssClient extends Client
     /**
      * 查询单个漏洞影响的容器信息
      *
-     * 查询单个漏洞影响的容器信息
+     * 查询单个漏洞影响的容器信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -36932,7 +36929,7 @@ class HssClient extends Client
     /**
      * 查询受影响服务器详情-软件列表
      *
-     * 查询受影响服务器详情-软件列表
+     * 查询受影响服务器详情-软件列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -37015,7 +37012,7 @@ class HssClient extends Client
     /**
      * 查询可回滚的备份列表
      *
-     * 查询可回滚的备份列表
+     * 查询可回滚的备份列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -37089,7 +37086,7 @@ class HssClient extends Client
     /**
      * 查询主机视图下的主机漏洞信息
      *
-     * 查询主机视图下的主机漏洞信息
+     * 查询主机视图下的主机漏洞信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -37184,7 +37181,7 @@ class HssClient extends Client
     /**
      * 查询受影响服务器详情-进程列表
      *
-     * 查询受影响服务器详情-进程列表
+     * 查询受影响服务器详情-进程列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -37264,7 +37261,7 @@ class HssClient extends Client
     /**
      * 查询处理对应的主机存储库的列表
      *
-     * 查询处理对应的主机存储库的列表
+     * 查询处理对应的主机存储库的列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -37335,7 +37332,7 @@ class HssClient extends Client
     /**
      * 主机-漏洞平铺漏洞列表
      *
-     * 查询紧急修复/未完成修复漏洞列表
+     * 查询紧急修复/未完成修复漏洞列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -37439,7 +37436,7 @@ class HssClient extends Client
     /**
      * 查询单个漏洞影响的云服务器信息
      *
-     * 查询单个漏洞影响的云服务器信息
+     * 查询单个漏洞影响的云服务器信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -37558,7 +37555,7 @@ class HssClient extends Client
     /**
      * 查询漏洞修复命令列表
      *
-     * 查询漏洞修复命令列表
+     * 查询漏洞修复命令列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -37638,7 +37635,7 @@ class HssClient extends Client
     /**
      * 查询漏洞修复失败信息
      *
-     * 查询漏洞修复失败信息
+     * 查询漏洞修复失败信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -37706,7 +37703,7 @@ class HssClient extends Client
     /**
      * 查询漏洞扫描任务列表
      *
-     * 查询漏洞扫描任务列表
+     * 查询漏洞扫描任务列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -37786,7 +37783,7 @@ class HssClient extends Client
     /**
      * 查询漏洞扫描任务对应的主机列表
      *
-     * 查询漏洞扫描任务对应的主机列表
+     * 查询漏洞扫描任务对应的主机列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -37860,7 +37857,7 @@ class HssClient extends Client
     /**
      * 查询漏洞白名单列表
      *
-     * 查询漏洞白名单列表
+     * 查询漏洞白名单列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -37934,7 +37931,7 @@ class HssClient extends Client
     /**
      * 查询添加白名单时的漏洞选项
      *
-     * 查询添加白名单时的漏洞选项
+     * 查询添加白名单时的漏洞选项。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -38014,7 +38011,7 @@ class HssClient extends Client
     /**
      * 查询漏洞列表
      *
-     * 查询漏洞列表
+     * 查询漏洞列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -38112,7 +38109,7 @@ class HssClient extends Client
     /**
      * 记录用户查看漏洞任务管理页面的最后时间
      *
-     * 记录用户查看漏洞任务管理页面的最后时间
+     * 记录用户查看漏洞任务管理页面的最后时间。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -38177,7 +38174,7 @@ class HssClient extends Client
     /**
      * 重新扫描之前漏洞扫描任务中的主机
      *
-     * 重新扫描之前漏洞扫描任务中的主机
+     * 重新扫描之前漏洞扫描任务中的主机。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -38245,7 +38242,7 @@ class HssClient extends Client
     /**
      * 用备份进行回滚
      *
-     * 用备份进行回滚
+     * 用备份进行回滚。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -38310,7 +38307,7 @@ class HssClient extends Client
     /**
      * 查询webcms漏洞基本信息
      *
-     * 查询webcms漏洞基本信息
+     * 查询webcms漏洞基本信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -38387,7 +38384,7 @@ class HssClient extends Client
     /**
      * 查询linux漏洞基本信息
      *
-     * 查询linux漏洞基本信息
+     * 查询linux漏洞基本信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -38464,7 +38461,7 @@ class HssClient extends Client
     /**
      * 统计受影响服务器和漏洞数量
      *
-     * 统计受影响服务器和漏洞数量
+     * 统计受影响服务器和漏洞数量。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -38550,7 +38547,7 @@ class HssClient extends Client
     /**
      * 查询漏洞处理对应主机的备份相关统计信息
      *
-     * 查询漏洞处理对应主机的备份相关统计信息
+     * 查询漏洞处理对应主机的备份相关统计信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -38615,7 +38612,7 @@ class HssClient extends Client
     /**
      * 漏洞管理-主机视图-主机列表-导出报告
      *
-     * 在主机视图中导出漏洞报告详细报告pdf格式
+     * 在主机视图中导出漏洞报告详细报告pdf格式。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -38680,7 +38677,7 @@ class HssClient extends Client
     /**
      * 查询漏洞扫描策略
      *
-     * 查询漏洞扫描策略
+     * 查询漏洞扫描策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -38742,7 +38739,7 @@ class HssClient extends Client
     /**
      * 查询漏洞扫描的预估时间
      *
-     * 查询漏洞扫描的预估时间
+     * 查询漏洞扫描的预估时间。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -38807,7 +38804,7 @@ class HssClient extends Client
     /**
      * 查询漏洞管理统计数据
      *
-     * 查询漏洞管理统计数据
+     * 查询漏洞管理统计数据。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -38869,7 +38866,7 @@ class HssClient extends Client
     /**
      * 获取漏洞任务的未读数量
      *
-     * 获取漏洞任务的未读数量
+     * 获取漏洞任务的未读数量。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -38902,11 +38899,11 @@ class HssClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 []
             );
         }
@@ -38931,7 +38928,7 @@ class HssClient extends Client
     /**
      * 查询漏洞白名单详情
      *
-     * 查询漏洞白名单详情
+     * 查询漏洞白名单详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -38996,7 +38993,7 @@ class HssClient extends Client
     /**
      * 查询windows漏洞基本信息
      *
-     * 查询windows漏洞基本信息
+     * 查询windows漏洞基本信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -39073,7 +39070,7 @@ class HssClient extends Client
     /**
      * 批量开启网页防篡改防护
      *
-     * 批量开启网页防篡改防护
+     * 批量开启网页防篡改防护。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -39138,7 +39135,7 @@ class HssClient extends Client
     /**
      * 创建网页防篡改防护配置
      *
-     * 创建网页防篡改防护配置
+     * 创建网页防篡改防护配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -39203,7 +39200,7 @@ class HssClient extends Client
     /**
      * 删除远端备份服务器
      *
-     * 删除远端备份服务器
+     * 删除远端备份服务器。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -39268,7 +39265,7 @@ class HssClient extends Client
     /**
      * 删除网页防篡改防护配置
      *
-     * 删除网页防篡改防护配置
+     * 删除网页防篡改防护配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -39333,7 +39330,7 @@ class HssClient extends Client
     /**
      * 导出网页防篡改防护目录列表
      *
-     * 导出网页防篡改防护目录列表
+     * 导出网页防篡改防护目录列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -39398,7 +39395,7 @@ class HssClient extends Client
     /**
      * 查询远端备份服务器列表
      *
-     * 查询远端备份服务器列表
+     * 查询远端备份服务器列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -39469,7 +39466,7 @@ class HssClient extends Client
     /**
      * 查询静态网页防篡改防护事件
      *
-     * 查询静态网页防篡改防护事件
+     * 查询静态网页防篡改防护事件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -39561,7 +39558,7 @@ class HssClient extends Client
     /**
      * 查询动态网页防篡改防护事件
      *
-     * 查询动态网页防篡改防护事件
+     * 查询动态网页防篡改防护事件。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -39644,7 +39641,7 @@ class HssClient extends Client
     /**
      * 查询网页防篡改事件列表
      *
-     * 查询网页防篡改事件列表
+     * 查询网页防篡改事件列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -39760,7 +39757,7 @@ class HssClient extends Client
     /**
      * 查询可开启网页防篡改的服务器列表
      *
-     * 查询可开启网页防篡改的服务器列表
+     * 查询可开启网页防篡改的服务器列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -39849,7 +39846,7 @@ class HssClient extends Client
     /**
      * 查询容器网页版防篡改镜像选项列表
      *
-     * 查询容器网页版防篡改镜像选项列表
+     * 查询容器网页版防篡改镜像选项列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -39932,7 +39929,7 @@ class HssClient extends Client
     /**
      * 查询容器网页防篡改防护统计数据
      *
-     * 查询容器网页防篡改防护统计数据
+     * 查询容器网页防篡改防护统计数据。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -40000,7 +39997,7 @@ class HssClient extends Client
     /**
      * 查询网页防篡改防护配置列表
      *
-     * 查询网页防篡改防护配置列表
+     * 查询网页防篡改防护配置列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -40104,7 +40101,7 @@ class HssClient extends Client
     /**
      * 查询防护配置关联的容器信息列表
      *
-     * 查询防护配置关联的容器信息列表
+     * 查询防护配置关联的容器信息列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -40193,7 +40190,7 @@ class HssClient extends Client
     /**
      * 查询防护配置关联的容器的防护目录列表
      *
-     * 查询防护配置关联的容器的防护目录列表
+     * 查询防护配置关联的容器的防护目录列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -40276,7 +40273,7 @@ class HssClient extends Client
     /**
      * 查询网页防篡改防护列表
      *
-     * 查询网页防篡改防护列表
+     * 查询网页防篡改防护列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -40380,7 +40377,7 @@ class HssClient extends Client
     /**
      * 暂停或恢复网页防篡改的防护目录
      *
-     * 暂停或恢复网页防篡改的防护目录
+     * 暂停或恢复网页防篡改的防护目录。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -40448,7 +40445,7 @@ class HssClient extends Client
     /**
      * 开启关闭动态网页防篡改防护
      *
-     * 开启关闭动态网页防篡改防护
+     * 开启关闭动态网页防篡改防护。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -40516,7 +40513,7 @@ class HssClient extends Client
     /**
      * 开启或关闭远端备份
      *
-     * 为已开启网页防篡改的服务器，开启或关闭远端备份功能，仅限Linux服务器
+     * 为已开启网页防篡改的服务器，开启或关闭远端备份功能，仅限Linux服务器。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -40584,7 +40581,7 @@ class HssClient extends Client
     /**
      * 开启关闭网页防篡改防护
      *
-     * 开启关闭网页防篡改防护
+     * 开启关闭网页防篡改防护。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -40652,7 +40649,7 @@ class HssClient extends Client
     /**
      * 查询远端备份服务器信息
      *
-     * 查询远端备份服务器信息：查询远端备份服务器的相关信息，包含服务器名称、地址、端口号、备份路径、运行状态信息
+     * 查询远端备份服务器信息：查询远端备份服务器的相关信息，包含服务器名称、地址、端口号、备份路径、运行状态信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -40717,7 +40714,7 @@ class HssClient extends Client
     /**
      * 查看网页防篡改策略信息
      *
-     * 查看网页防篡改策略信息
+     * 查看网页防篡改策略信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -40782,7 +40779,7 @@ class HssClient extends Client
     /**
      * 查询动态网页防篡改的Tomcat bin目录
      *
-     * 查询动态网页防篡改的Tomcat bin目录
+     * 查询动态网页防篡改的Tomcat bin目录。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -40847,7 +40844,7 @@ class HssClient extends Client
     /**
      * 防护数据统计
      *
-     * 防护数据统计：统计防护服务器数、防护目录数、近七天的已防御篡改攻击数
+     * 防护数据统计：统计防护服务器数、防护目录数、近七天的已防御篡改攻击数。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -40909,7 +40906,7 @@ class HssClient extends Client
     /**
      * 开启/关闭容器网页防篡改防护配置
      *
-     * 开启/关闭容器网页防篡改防护配置
+     * 开启/关闭容器网页防篡改防护配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -40974,7 +40971,7 @@ class HssClient extends Client
     /**
      * 添加或修改远端备份服务器
      *
-     * 添加或修改远端备份服务器
+     * 添加或修改远端备份服务器。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -41039,7 +41036,7 @@ class HssClient extends Client
     /**
      * 编辑网页防篡改策略信息
      *
-     * 编辑网页防篡改策略信息
+     * 编辑网页防篡改策略信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -41107,7 +41104,7 @@ class HssClient extends Client
     /**
      * 修改网页防篡改防护配置
      *
-     * 修改网页防篡改防护配置
+     * 修改网页防篡改防护配置。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -41172,7 +41169,7 @@ class HssClient extends Client
     /**
      * 修改动态网页防篡改的Tomcat bin目录
      *
-     * 修改动态网页防篡改的Tomcat bin目录
+     * 修改动态网页防篡改的Tomcat bin目录。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

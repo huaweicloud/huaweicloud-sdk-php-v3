@@ -21,23 +21,23 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * alarmId  **参数解释**： 告警规则id。如 al123232232341232132 **取值范围**： 以al开头，后跟22个数字或字母。长度为24个字符。
-    * name  **参数解释**： 告警名称。     **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1，128]个字符。
+    * name  **参数解释**： 告警规则名称。     **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1，128]个字符。
     * description  **参数解释**： 告警描述。     **取值范围**： 长度为[0,256]个字符。
     * namespace  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名名称](ces_03_0059.xml)”。    **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度为[0,32]个字符。
     * policies  **参数解释**： 告警策略 **取值范围**： 最多包含100个策略。
-    * resources  **参数解释**： 资源列表，关联资源需要使用查询告警规则资源接口获取。 **取值范围**： 最多支持3000个资源。
+    * resources  **参数解释**： 资源列表，关联资源需要使用查询“[告警规则资源接口](.xml)”获取。 **取值范围**： 最多支持3000个资源。
     * type  type
     * enabled  **参数解释**： 是否开启告警规则。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。
     * notificationEnabled  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
     * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。
     * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。
-    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
-    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。如 00:00    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。如 08:00   **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **取值范围**： 长度为[1,16]个字符。
-    * enterpriseProjectId  **参数解释**： 企业项目ID。     **取值范围**： 只能包含小写字母、数字、“-”。
-    * alarmTemplateId  **参数解释**： 告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化。     **取值范围**： 以at开头，只包含字母、数字，长度为[2,64]个字符。
-    * productName  **参数解释**： 产品层级跨维规则需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **取值范围**: 长度为[0,128]个字符。
-    * resourceLevel  **参数解释**： 产品层级跨维规则需要指明为产品层级规则，resource_level取值为product即为云产品类型，不填或者取值为dimension则为子维度类型。 **取值范围**: 枚举值。 - product：云产品。 - dimension：子维度。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。     **取值范围**： 只能包含小写字母、数字、“-”。0 代表默认企业项目ID
+    * alarmTemplateId  **参数解释**： 告警规则关联告警模板ID     **取值范围**： 以at开头，只包含字母、数字，长度为[2,64]个字符。
+    * productName  **参数解释**： 当资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **取值范围**: 长度为[0,128]个字符。
+    * resourceLevel  **参数解释**： 资源层级。 **取值范围**: 枚举值。 - product：云产品。 - dimension：子维度。
     * tags  **参数解释**： 租户标签列表 **取值范围**: 最多支持20个标签。
     *
     * @var string[]
@@ -47,7 +47,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'namespace' => 'string',
-            'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\Policy[]',
+            'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\PolicyResp[]',
             'resources' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourcesInListResp[]',
             'type' => '\HuaweiCloud\SDK\Ces\V2\Model\AlarmTypeResp',
             'enabled' => 'bool',
@@ -61,29 +61,29 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
             'alarmTemplateId' => 'string',
             'productName' => 'string',
             'resourceLevel' => 'string',
-            'tags' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceTag[]'
+            'tags' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceTagResp[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * alarmId  **参数解释**： 告警规则id。如 al123232232341232132 **取值范围**： 以al开头，后跟22个数字或字母。长度为24个字符。
-    * name  **参数解释**： 告警名称。     **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1，128]个字符。
+    * name  **参数解释**： 告警规则名称。     **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1，128]个字符。
     * description  **参数解释**： 告警描述。     **取值范围**： 长度为[0,256]个字符。
     * namespace  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名名称](ces_03_0059.xml)”。    **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度为[0,32]个字符。
     * policies  **参数解释**： 告警策略 **取值范围**： 最多包含100个策略。
-    * resources  **参数解释**： 资源列表，关联资源需要使用查询告警规则资源接口获取。 **取值范围**： 最多支持3000个资源。
+    * resources  **参数解释**： 资源列表，关联资源需要使用查询“[告警规则资源接口](.xml)”获取。 **取值范围**： 最多支持3000个资源。
     * type  type
     * enabled  **参数解释**： 是否开启告警规则。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。
     * notificationEnabled  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
     * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。
     * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。
-    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
-    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。如 00:00    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。如 08:00   **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **取值范围**： 长度为[1,16]个字符。
-    * enterpriseProjectId  **参数解释**： 企业项目ID。     **取值范围**： 只能包含小写字母、数字、“-”。
-    * alarmTemplateId  **参数解释**： 告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化。     **取值范围**： 以at开头，只包含字母、数字，长度为[2,64]个字符。
-    * productName  **参数解释**： 产品层级跨维规则需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **取值范围**: 长度为[0,128]个字符。
-    * resourceLevel  **参数解释**： 产品层级跨维规则需要指明为产品层级规则，resource_level取值为product即为云产品类型，不填或者取值为dimension则为子维度类型。 **取值范围**: 枚举值。 - product：云产品。 - dimension：子维度。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。     **取值范围**： 只能包含小写字母、数字、“-”。0 代表默认企业项目ID
+    * alarmTemplateId  **参数解释**： 告警规则关联告警模板ID     **取值范围**： 以at开头，只包含字母、数字，长度为[2,64]个字符。
+    * productName  **参数解释**： 当资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **取值范围**: 长度为[0,128]个字符。
+    * resourceLevel  **参数解释**： 资源层级。 **取值范围**: 枚举值。 - product：云产品。 - dimension：子维度。
     * tags  **参数解释**： 租户标签列表 **取值范围**: 最多支持20个标签。
     *
     * @var string[]
@@ -134,23 +134,23 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * alarmId  **参数解释**： 告警规则id。如 al123232232341232132 **取值范围**： 以al开头，后跟22个数字或字母。长度为24个字符。
-    * name  **参数解释**： 告警名称。     **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1，128]个字符。
+    * name  **参数解释**： 告警规则名称。     **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1，128]个字符。
     * description  **参数解释**： 告警描述。     **取值范围**： 长度为[0,256]个字符。
     * namespace  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名名称](ces_03_0059.xml)”。    **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度为[0,32]个字符。
     * policies  **参数解释**： 告警策略 **取值范围**： 最多包含100个策略。
-    * resources  **参数解释**： 资源列表，关联资源需要使用查询告警规则资源接口获取。 **取值范围**： 最多支持3000个资源。
+    * resources  **参数解释**： 资源列表，关联资源需要使用查询“[告警规则资源接口](.xml)”获取。 **取值范围**： 最多支持3000个资源。
     * type  type
     * enabled  **参数解释**： 是否开启告警规则。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。
     * notificationEnabled  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
     * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。
     * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。
-    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
-    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。如 00:00    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。如 08:00   **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **取值范围**： 长度为[1,16]个字符。
-    * enterpriseProjectId  **参数解释**： 企业项目ID。     **取值范围**： 只能包含小写字母、数字、“-”。
-    * alarmTemplateId  **参数解释**： 告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化。     **取值范围**： 以at开头，只包含字母、数字，长度为[2,64]个字符。
-    * productName  **参数解释**： 产品层级跨维规则需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **取值范围**: 长度为[0,128]个字符。
-    * resourceLevel  **参数解释**： 产品层级跨维规则需要指明为产品层级规则，resource_level取值为product即为云产品类型，不填或者取值为dimension则为子维度类型。 **取值范围**: 枚举值。 - product：云产品。 - dimension：子维度。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。     **取值范围**： 只能包含小写字母、数字、“-”。0 代表默认企业项目ID
+    * alarmTemplateId  **参数解释**： 告警规则关联告警模板ID     **取值范围**： 以at开头，只包含字母、数字，长度为[2,64]个字符。
+    * productName  **参数解释**： 当资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **取值范围**: 长度为[0,128]个字符。
+    * resourceLevel  **参数解释**： 资源层级。 **取值范围**: 枚举值。 - product：云产品。 - dimension：子维度。
     * tags  **参数解释**： 租户标签列表 **取值范围**: 最多支持20个标签。
     *
     * @var string[]
@@ -180,23 +180,23 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * alarmId  **参数解释**： 告警规则id。如 al123232232341232132 **取值范围**： 以al开头，后跟22个数字或字母。长度为24个字符。
-    * name  **参数解释**： 告警名称。     **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1，128]个字符。
+    * name  **参数解释**： 告警规则名称。     **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1，128]个字符。
     * description  **参数解释**： 告警描述。     **取值范围**： 长度为[0,256]个字符。
     * namespace  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名名称](ces_03_0059.xml)”。    **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度为[0,32]个字符。
     * policies  **参数解释**： 告警策略 **取值范围**： 最多包含100个策略。
-    * resources  **参数解释**： 资源列表，关联资源需要使用查询告警规则资源接口获取。 **取值范围**： 最多支持3000个资源。
+    * resources  **参数解释**： 资源列表，关联资源需要使用查询“[告警规则资源接口](.xml)”获取。 **取值范围**： 最多支持3000个资源。
     * type  type
     * enabled  **参数解释**： 是否开启告警规则。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。
     * notificationEnabled  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
     * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。
     * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。
-    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
-    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。如 00:00    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。如 08:00   **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **取值范围**： 长度为[1,16]个字符。
-    * enterpriseProjectId  **参数解释**： 企业项目ID。     **取值范围**： 只能包含小写字母、数字、“-”。
-    * alarmTemplateId  **参数解释**： 告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化。     **取值范围**： 以at开头，只包含字母、数字，长度为[2,64]个字符。
-    * productName  **参数解释**： 产品层级跨维规则需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **取值范围**: 长度为[0,128]个字符。
-    * resourceLevel  **参数解释**： 产品层级跨维规则需要指明为产品层级规则，resource_level取值为product即为云产品类型，不填或者取值为dimension则为子维度类型。 **取值范围**: 枚举值。 - product：云产品。 - dimension：子维度。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。     **取值范围**： 只能包含小写字母、数字、“-”。0 代表默认企业项目ID
+    * alarmTemplateId  **参数解释**： 告警规则关联告警模板ID     **取值范围**： 以at开头，只包含字母、数字，长度为[2,64]个字符。
+    * productName  **参数解释**： 当资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **取值范围**: 长度为[0,128]个字符。
+    * resourceLevel  **参数解释**： 资源层级。 **取值范围**: 枚举值。 - product：云产品。 - dimension：子维度。
     * tags  **参数解释**： 租户标签列表 **取值范围**: 最多支持20个标签。
     *
     * @var string[]
@@ -226,23 +226,23 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * alarmId  **参数解释**： 告警规则id。如 al123232232341232132 **取值范围**： 以al开头，后跟22个数字或字母。长度为24个字符。
-    * name  **参数解释**： 告警名称。     **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1，128]个字符。
+    * name  **参数解释**： 告警规则名称。     **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1，128]个字符。
     * description  **参数解释**： 告警描述。     **取值范围**： 长度为[0,256]个字符。
     * namespace  **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名名称](ces_03_0059.xml)”。    **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度为[0,32]个字符。
     * policies  **参数解释**： 告警策略 **取值范围**： 最多包含100个策略。
-    * resources  **参数解释**： 资源列表，关联资源需要使用查询告警规则资源接口获取。 **取值范围**： 最多支持3000个资源。
+    * resources  **参数解释**： 资源列表，关联资源需要使用查询“[告警规则资源接口](.xml)”获取。 **取值范围**： 最多支持3000个资源。
     * type  type
     * enabled  **参数解释**： 是否开启告警规则。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。
     * notificationEnabled  **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
     * alarmNotifications  **参数解释**： 触发告警时，通知组/主题订阅的信息。
     * okNotifications  **参数解释**： 告警恢复时，通知组/主题订阅的信息。
-    * notificationBeginTime  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
-    * notificationEndTime  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationBeginTime  **参数解释**： 告警通知开启时间。如 00:00    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * notificationEndTime  **参数解释**： 告警通知关闭时间。如 08:00   **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     * effectiveTimezone  **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **取值范围**： 长度为[1,16]个字符。
-    * enterpriseProjectId  **参数解释**： 企业项目ID。     **取值范围**： 只能包含小写字母、数字、“-”。
-    * alarmTemplateId  **参数解释**： 告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化。     **取值范围**： 以at开头，只包含字母、数字，长度为[2,64]个字符。
-    * productName  **参数解释**： 产品层级跨维规则需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **取值范围**: 长度为[0,128]个字符。
-    * resourceLevel  **参数解释**： 产品层级跨维规则需要指明为产品层级规则，resource_level取值为product即为云产品类型，不填或者取值为dimension则为子维度类型。 **取值范围**: 枚举值。 - product：云产品。 - dimension：子维度。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。     **取值范围**： 只能包含小写字母、数字、“-”。0 代表默认企业项目ID
+    * alarmTemplateId  **参数解释**： 告警规则关联告警模板ID     **取值范围**： 以at开头，只包含字母、数字，长度为[2,64]个字符。
+    * productName  **参数解释**： 当资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **取值范围**: 长度为[0,128]个字符。
+    * resourceLevel  **参数解释**： 资源层级。 **取值范围**: 枚举值。 - product：云产品。 - dimension：子维度。
     * tags  **参数解释**： 租户标签列表 **取值范围**: 最多支持20个标签。
     *
     * @var string[]
@@ -488,7 +488,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  **参数解释**： 告警名称。     **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1，128]个字符。
+    *  **参数解释**： 告警规则名称。     **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1，128]个字符。
     *
     * @return string|null
     */
@@ -500,7 +500,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name **参数解释**： 告警名称。     **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1，128]个字符。
+    * @param string|null $name **参数解释**： 告警规则名称。     **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1，128]个字符。
     *
     * @return $this
     */
@@ -562,7 +562,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
     * Gets policies
     *  **参数解释**： 告警策略 **取值范围**： 最多包含100个策略。
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\Policy[]|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\PolicyResp[]|null
     */
     public function getPolicies()
     {
@@ -572,7 +572,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets policies
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Policy[]|null $policies **参数解释**： 告警策略 **取值范围**： 最多包含100个策略。
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\PolicyResp[]|null $policies **参数解释**： 告警策略 **取值范围**： 最多包含100个策略。
     *
     * @return $this
     */
@@ -584,7 +584,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets resources
-    *  **参数解释**： 资源列表，关联资源需要使用查询告警规则资源接口获取。 **取值范围**： 最多支持3000个资源。
+    *  **参数解释**： 资源列表，关联资源需要使用查询“[告警规则资源接口](.xml)”获取。 **取值范围**： 最多支持3000个资源。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourcesInListResp[]|null
     */
@@ -596,7 +596,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourcesInListResp[]|null $resources **参数解释**： 资源列表，关联资源需要使用查询告警规则资源接口获取。 **取值范围**： 最多支持3000个资源。
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourcesInListResp[]|null $resources **参数解释**： 资源列表，关联资源需要使用查询“[告警规则资源接口](.xml)”获取。 **取值范围**： 最多支持3000个资源。
     *
     * @return $this
     */
@@ -728,7 +728,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationBeginTime
-    *  **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    *  **参数解释**： 告警通知开启时间。如 00:00    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
     * @return string|null
     */
@@ -740,7 +740,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets notificationBeginTime
     *
-    * @param string|null $notificationBeginTime **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * @param string|null $notificationBeginTime **参数解释**： 告警通知开启时间。如 00:00    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
     * @return $this
     */
@@ -752,7 +752,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets notificationEndTime
-    *  **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    *  **参数解释**： 告警通知关闭时间。如 08:00   **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
     * @return string|null
     */
@@ -764,7 +764,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets notificationEndTime
     *
-    * @param string|null $notificationEndTime **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+    * @param string|null $notificationEndTime **参数解释**： 告警通知关闭时间。如 08:00   **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
     *
     * @return $this
     */
@@ -800,7 +800,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  **参数解释**： 企业项目ID。     **取值范围**： 只能包含小写字母、数字、“-”。
+    *  **参数解释**： 企业项目ID。     **取值范围**： 只能包含小写字母、数字、“-”。0 代表默认企业项目ID
     *
     * @return string|null
     */
@@ -812,7 +812,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId **参数解释**： 企业项目ID。     **取值范围**： 只能包含小写字母、数字、“-”。
+    * @param string|null $enterpriseProjectId **参数解释**： 企业项目ID。     **取值范围**： 只能包含小写字母、数字、“-”。0 代表默认企业项目ID
     *
     * @return $this
     */
@@ -824,7 +824,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmTemplateId
-    *  **参数解释**： 告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化。     **取值范围**： 以at开头，只包含字母、数字，长度为[2,64]个字符。
+    *  **参数解释**： 告警规则关联告警模板ID     **取值范围**： 以at开头，只包含字母、数字，长度为[2,64]个字符。
     *
     * @return string|null
     */
@@ -836,7 +836,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets alarmTemplateId
     *
-    * @param string|null $alarmTemplateId **参数解释**： 告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化。     **取值范围**： 以at开头，只包含字母、数字，长度为[2,64]个字符。
+    * @param string|null $alarmTemplateId **参数解释**： 告警规则关联告警模板ID     **取值范围**： 以at开头，只包含字母、数字，长度为[2,64]个字符。
     *
     * @return $this
     */
@@ -848,7 +848,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets productName
-    *  **参数解释**： 产品层级跨维规则需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **取值范围**: 长度为[0,128]个字符。
+    *  **参数解释**： 当资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **取值范围**: 长度为[0,128]个字符。
     *
     * @return string|null
     */
@@ -860,7 +860,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets productName
     *
-    * @param string|null $productName **参数解释**： 产品层级跨维规则需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **取值范围**: 长度为[0,128]个字符。
+    * @param string|null $productName **参数解释**： 当资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **取值范围**: 长度为[0,128]个字符。
     *
     * @return $this
     */
@@ -872,7 +872,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceLevel
-    *  **参数解释**： 产品层级跨维规则需要指明为产品层级规则，resource_level取值为product即为云产品类型，不填或者取值为dimension则为子维度类型。 **取值范围**: 枚举值。 - product：云产品。 - dimension：子维度。
+    *  **参数解释**： 资源层级。 **取值范围**: 枚举值。 - product：云产品。 - dimension：子维度。
     *
     * @return string|null
     */
@@ -884,7 +884,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets resourceLevel
     *
-    * @param string|null $resourceLevel **参数解释**： 产品层级跨维规则需要指明为产品层级规则，resource_level取值为product即为云产品类型，不填或者取值为dimension则为子维度类型。 **取值范围**: 枚举值。 - product：云产品。 - dimension：子维度。
+    * @param string|null $resourceLevel **参数解释**： 资源层级。 **取值范围**: 枚举值。 - product：云产品。 - dimension：子维度。
     *
     * @return $this
     */
@@ -898,7 +898,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
     * Gets tags
     *  **参数解释**： 租户标签列表 **取值范围**: 最多支持20个标签。
     *
-    * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourceTag[]|null
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourceTagResp[]|null
     */
     public function getTags()
     {
@@ -908,7 +908,7 @@ class ListAlarmRespBodyAlarms implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourceTag[]|null $tags **参数解释**： 租户标签列表 **取值范围**: 最多支持20个标签。
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourceTagResp[]|null $tags **参数解释**： 租户标签列表 **取值范围**: 最多支持20个标签。
     *
     * @return $this
     */

@@ -43,6 +43,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
     * hostnameConfig  hostnameConfig
     * serverEnterpriseProjectId  **参数解释**： 服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 **约束限制**： 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 **取值范围**： 不涉及 **默认取值**： 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
     * partition  **参数解释**： 表示节点所属分区。分区可以选择中心云[或者[边缘小站](https://support.huaweicloud.com/usermanual-cloudpond/ies_02_0401.html)。](tag:hws)[或者[边缘小站](https://support.huaweicloud.com/intl/zh-cn/usermanual-cloudpond/ies_02_0401.html)。](tag:hws_hk) **约束限制**： 仅开启了对分布式云支持的Turbo集群支持指定该字段。 **取值范围**： - center: 中心云 - 边缘小站的可用区ID  **默认取值**： 不涉及
+    * configurationsOverride  **参数解释：** 覆盖节点默认组件配置。  [当前支持的可配置组件及其参数详见[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0652.htmll)。](tag:hws) [当前支持的可配置组件及其参数详见[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0652.html)。](tag:hws_hk) **约束限制：** 若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。
     * nodeNameTemplate  nodeNameTemplate
     *
     * @var string[]
@@ -71,6 +72,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
             'hostnameConfig' => '\HuaweiCloud\SDK\Cce\V3\Model\HostnameConfig',
             'serverEnterpriseProjectId' => 'string',
             'partition' => 'string',
+            'configurationsOverride' => '\HuaweiCloud\SDK\Cce\V3\Model\PackageConfiguration[]',
             'nodeNameTemplate' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeSpecNodeNameTemplate'
     ];
 
@@ -99,6 +101,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
     * hostnameConfig  hostnameConfig
     * serverEnterpriseProjectId  **参数解释**： 服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 **约束限制**： 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 **取值范围**： 不涉及 **默认取值**： 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
     * partition  **参数解释**： 表示节点所属分区。分区可以选择中心云[或者[边缘小站](https://support.huaweicloud.com/usermanual-cloudpond/ies_02_0401.html)。](tag:hws)[或者[边缘小站](https://support.huaweicloud.com/intl/zh-cn/usermanual-cloudpond/ies_02_0401.html)。](tag:hws_hk) **约束限制**： 仅开启了对分布式云支持的Turbo集群支持指定该字段。 **取值范围**： - center: 中心云 - 边缘小站的可用区ID  **默认取值**： 不涉及
+    * configurationsOverride  **参数解释：** 覆盖节点默认组件配置。  [当前支持的可配置组件及其参数详见[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0652.htmll)。](tag:hws) [当前支持的可配置组件及其参数详见[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0652.html)。](tag:hws_hk) **约束限制：** 若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。
     * nodeNameTemplate  nodeNameTemplate
     *
     * @var string[]
@@ -127,6 +130,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
         'hostnameConfig' => null,
         'serverEnterpriseProjectId' => null,
         'partition' => null,
+        'configurationsOverride' => null,
         'nodeNameTemplate' => null
     ];
 
@@ -176,6 +180,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
     * hostnameConfig  hostnameConfig
     * serverEnterpriseProjectId  **参数解释**： 服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 **约束限制**： 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 **取值范围**： 不涉及 **默认取值**： 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
     * partition  **参数解释**： 表示节点所属分区。分区可以选择中心云[或者[边缘小站](https://support.huaweicloud.com/usermanual-cloudpond/ies_02_0401.html)。](tag:hws)[或者[边缘小站](https://support.huaweicloud.com/intl/zh-cn/usermanual-cloudpond/ies_02_0401.html)。](tag:hws_hk) **约束限制**： 仅开启了对分布式云支持的Turbo集群支持指定该字段。 **取值范围**： - center: 中心云 - 边缘小站的可用区ID  **默认取值**： 不涉及
+    * configurationsOverride  **参数解释：** 覆盖节点默认组件配置。  [当前支持的可配置组件及其参数详见[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0652.htmll)。](tag:hws) [当前支持的可配置组件及其参数详见[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0652.html)。](tag:hws_hk) **约束限制：** 若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。
     * nodeNameTemplate  nodeNameTemplate
     *
     * @var string[]
@@ -204,6 +209,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
             'hostnameConfig' => 'hostnameConfig',
             'serverEnterpriseProjectId' => 'serverEnterpriseProjectID',
             'partition' => 'partition',
+            'configurationsOverride' => 'configurationsOverride',
             'nodeNameTemplate' => 'nodeNameTemplate'
     ];
 
@@ -232,6 +238,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
     * hostnameConfig  hostnameConfig
     * serverEnterpriseProjectId  **参数解释**： 服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 **约束限制**： 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 **取值范围**： 不涉及 **默认取值**： 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
     * partition  **参数解释**： 表示节点所属分区。分区可以选择中心云[或者[边缘小站](https://support.huaweicloud.com/usermanual-cloudpond/ies_02_0401.html)。](tag:hws)[或者[边缘小站](https://support.huaweicloud.com/intl/zh-cn/usermanual-cloudpond/ies_02_0401.html)。](tag:hws_hk) **约束限制**： 仅开启了对分布式云支持的Turbo集群支持指定该字段。 **取值范围**： - center: 中心云 - 边缘小站的可用区ID  **默认取值**： 不涉及
+    * configurationsOverride  **参数解释：** 覆盖节点默认组件配置。  [当前支持的可配置组件及其参数详见[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0652.htmll)。](tag:hws) [当前支持的可配置组件及其参数详见[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0652.html)。](tag:hws_hk) **约束限制：** 若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。
     * nodeNameTemplate  nodeNameTemplate
     *
     * @var string[]
@@ -260,6 +267,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
             'hostnameConfig' => 'setHostnameConfig',
             'serverEnterpriseProjectId' => 'setServerEnterpriseProjectId',
             'partition' => 'setPartition',
+            'configurationsOverride' => 'setConfigurationsOverride',
             'nodeNameTemplate' => 'setNodeNameTemplate'
     ];
 
@@ -288,6 +296,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
     * hostnameConfig  hostnameConfig
     * serverEnterpriseProjectId  **参数解释**： 服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 **约束限制**： 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 **取值范围**： 不涉及 **默认取值**： 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
     * partition  **参数解释**： 表示节点所属分区。分区可以选择中心云[或者[边缘小站](https://support.huaweicloud.com/usermanual-cloudpond/ies_02_0401.html)。](tag:hws)[或者[边缘小站](https://support.huaweicloud.com/intl/zh-cn/usermanual-cloudpond/ies_02_0401.html)。](tag:hws_hk) **约束限制**： 仅开启了对分布式云支持的Turbo集群支持指定该字段。 **取值范围**： - center: 中心云 - 边缘小站的可用区ID  **默认取值**： 不涉及
+    * configurationsOverride  **参数解释：** 覆盖节点默认组件配置。  [当前支持的可配置组件及其参数详见[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0652.htmll)。](tag:hws) [当前支持的可配置组件及其参数详见[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0652.html)。](tag:hws_hk) **约束限制：** 若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。
     * nodeNameTemplate  nodeNameTemplate
     *
     * @var string[]
@@ -316,6 +325,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
             'hostnameConfig' => 'getHostnameConfig',
             'serverEnterpriseProjectId' => 'getServerEnterpriseProjectId',
             'partition' => 'getPartition',
+            'configurationsOverride' => 'getConfigurationsOverride',
             'nodeNameTemplate' => 'getNodeNameTemplate'
     ];
 
@@ -415,6 +425,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
         $this->container['hostnameConfig'] = isset($data['hostnameConfig']) ? $data['hostnameConfig'] : null;
         $this->container['serverEnterpriseProjectId'] = isset($data['serverEnterpriseProjectId']) ? $data['serverEnterpriseProjectId'] : null;
         $this->container['partition'] = isset($data['partition']) ? $data['partition'] : null;
+        $this->container['configurationsOverride'] = isset($data['configurationsOverride']) ? $data['configurationsOverride'] : null;
         $this->container['nodeNameTemplate'] = isset($data['nodeNameTemplate']) ? $data['nodeNameTemplate'] : null;
     }
 
@@ -1012,6 +1023,30 @@ class NodeTemplate implements ModelInterface, ArrayAccess
     public function setPartition($partition)
     {
         $this->container['partition'] = $partition;
+        return $this;
+    }
+
+    /**
+    * Gets configurationsOverride
+    *  **参数解释：** 覆盖节点默认组件配置。  [当前支持的可配置组件及其参数详见[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0652.htmll)。](tag:hws) [当前支持的可配置组件及其参数详见[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0652.html)。](tag:hws_hk) **约束限制：** 若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\PackageConfiguration[]|null
+    */
+    public function getConfigurationsOverride()
+    {
+        return $this->container['configurationsOverride'];
+    }
+
+    /**
+    * Sets configurationsOverride
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\PackageConfiguration[]|null $configurationsOverride **参数解释：** 覆盖节点默认组件配置。  [当前支持的可配置组件及其参数详见[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0652.htmll)。](tag:hws) [当前支持的可配置组件及其参数详见[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0652.html)。](tag:hws_hk) **约束限制：** 若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。
+    *
+    * @return $this
+    */
+    public function setConfigurationsOverride($configurationsOverride)
+    {
+        $this->container['configurationsOverride'] = $configurationsOverride;
         return $this;
     }
 

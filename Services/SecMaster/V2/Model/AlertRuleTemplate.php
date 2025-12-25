@@ -20,66 +20,122 @@ class AlertRuleTemplate implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * templateId  告警规则模板 ID。Alert rule template ID.
-    * updateTime  更新时间。Update time.
-    * templateName  告警规则模板名称。Alert rule template name.
-    * dataSource  数据源。Data source.
-    * version  版本。Version
-    * query  查询语句。Query.
-    * queryType  查询语法，SQL。Query type. SQL.
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    * customProperties  自定义扩展信息。Custom properties.
-    * eventGrouping  告警分组。Event grouping.
+    * accumulatedTimes  累计次数
+    * alertDescription  告警描述
+    * alertName  告警名称
+    * alertRemediation  告警修复
+    * alertType  Map<String,String>
+    * createBy  Iam用户ID
+    * createTime  毫秒时间戳
+    * customProperties  Map<String,String>
+    * description  告警规则模板描述
+    * eventGrouping  告警组
+    * jobMode  jobMode
+    * processStatus  processStatus
+    * query  查询语句
+    * queryType  queryType
     * schedule  schedule
-    * triggers  告警触发规则。Alert triggers.
+    * severity  severity
+    * simulation  是否仿真
+    * status  status
+    * suppresion  告警抑制
+    * tableName  表名称
+    * templateId  UUID
+    * templateName  模板名称
+    * triggers  触发器数组
+    * updateBy  Iam用户ID
+    * updateTime  毫秒时间戳
+    * updateTimeByUser  毫秒时间戳
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'templateId' => 'string',
-            'updateTime' => 'int',
-            'templateName' => 'string',
-            'dataSource' => 'string',
-            'version' => 'string',
-            'query' => 'string',
-            'queryType' => 'string',
-            'severity' => 'string',
+            'accumulatedTimes' => 'int',
+            'alertDescription' => 'string',
+            'alertName' => 'string',
+            'alertRemediation' => 'string',
+            'alertType' => 'map[string,string]',
+            'createBy' => 'string',
+            'createTime' => 'int',
             'customProperties' => 'map[string,string]',
+            'description' => 'string',
             'eventGrouping' => 'bool',
-            'schedule' => '\HuaweiCloud\SDK\SecMaster\V2\Model\Schedule',
-            'triggers' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertRuleTrigger[]'
+            'jobMode' => '\HuaweiCloud\SDK\SecMaster\V2\Model\JobMode',
+            'processStatus' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ProcessStatus',
+            'query' => 'string',
+            'queryType' => '\HuaweiCloud\SDK\SecMaster\V2\Model\QueryType',
+            'schedule' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertRuleSchedule',
+            'severity' => '\HuaweiCloud\SDK\SecMaster\V2\Model\Serverity',
+            'simulation' => 'bool',
+            'status' => '\HuaweiCloud\SDK\SecMaster\V2\Model\Status',
+            'suppresion' => 'bool',
+            'tableName' => 'string',
+            'templateId' => 'string',
+            'templateName' => 'string',
+            'triggers' => '\HuaweiCloud\SDK\SecMaster\V2\Model\Trigger[]',
+            'updateBy' => 'string',
+            'updateTime' => 'int',
+            'updateTimeByUser' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * templateId  告警规则模板 ID。Alert rule template ID.
-    * updateTime  更新时间。Update time.
-    * templateName  告警规则模板名称。Alert rule template name.
-    * dataSource  数据源。Data source.
-    * version  版本。Version
-    * query  查询语句。Query.
-    * queryType  查询语法，SQL。Query type. SQL.
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    * customProperties  自定义扩展信息。Custom properties.
-    * eventGrouping  告警分组。Event grouping.
+    * accumulatedTimes  累计次数
+    * alertDescription  告警描述
+    * alertName  告警名称
+    * alertRemediation  告警修复
+    * alertType  Map<String,String>
+    * createBy  Iam用户ID
+    * createTime  毫秒时间戳
+    * customProperties  Map<String,String>
+    * description  告警规则模板描述
+    * eventGrouping  告警组
+    * jobMode  jobMode
+    * processStatus  processStatus
+    * query  查询语句
+    * queryType  queryType
     * schedule  schedule
-    * triggers  告警触发规则。Alert triggers.
+    * severity  severity
+    * simulation  是否仿真
+    * status  status
+    * suppresion  告警抑制
+    * tableName  表名称
+    * templateId  UUID
+    * templateName  模板名称
+    * triggers  触发器数组
+    * updateBy  Iam用户ID
+    * updateTime  毫秒时间戳
+    * updateTimeByUser  毫秒时间戳
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'templateId' => null,
-        'updateTime' => 'int64',
-        'templateName' => null,
-        'dataSource' => null,
-        'version' => null,
+        'accumulatedTimes' => 'int32',
+        'alertDescription' => null,
+        'alertName' => null,
+        'alertRemediation' => null,
+        'alertType' => null,
+        'createBy' => null,
+        'createTime' => 'int64',
+        'customProperties' => null,
+        'description' => null,
+        'eventGrouping' => null,
+        'jobMode' => null,
+        'processStatus' => null,
         'query' => null,
         'queryType' => null,
-        'severity' => null,
-        'customProperties' => null,
-        'eventGrouping' => null,
         'schedule' => null,
-        'triggers' => null
+        'severity' => null,
+        'simulation' => null,
+        'status' => null,
+        'suppresion' => null,
+        'tableName' => null,
+        'templateId' => null,
+        'templateName' => null,
+        'triggers' => null,
+        'updateBy' => null,
+        'updateTime' => 'int64',
+        'updateTimeByUser' => 'int64'
     ];
 
     /**
@@ -105,98 +161,182 @@ class AlertRuleTemplate implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * templateId  告警规则模板 ID。Alert rule template ID.
-    * updateTime  更新时间。Update time.
-    * templateName  告警规则模板名称。Alert rule template name.
-    * dataSource  数据源。Data source.
-    * version  版本。Version
-    * query  查询语句。Query.
-    * queryType  查询语法，SQL。Query type. SQL.
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    * customProperties  自定义扩展信息。Custom properties.
-    * eventGrouping  告警分组。Event grouping.
+    * accumulatedTimes  累计次数
+    * alertDescription  告警描述
+    * alertName  告警名称
+    * alertRemediation  告警修复
+    * alertType  Map<String,String>
+    * createBy  Iam用户ID
+    * createTime  毫秒时间戳
+    * customProperties  Map<String,String>
+    * description  告警规则模板描述
+    * eventGrouping  告警组
+    * jobMode  jobMode
+    * processStatus  processStatus
+    * query  查询语句
+    * queryType  queryType
     * schedule  schedule
-    * triggers  告警触发规则。Alert triggers.
+    * severity  severity
+    * simulation  是否仿真
+    * status  status
+    * suppresion  告警抑制
+    * tableName  表名称
+    * templateId  UUID
+    * templateName  模板名称
+    * triggers  触发器数组
+    * updateBy  Iam用户ID
+    * updateTime  毫秒时间戳
+    * updateTimeByUser  毫秒时间戳
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'templateId' => 'template_id',
-            'updateTime' => 'update_time',
-            'templateName' => 'template_name',
-            'dataSource' => 'data_source',
-            'version' => 'version',
+            'accumulatedTimes' => 'accumulated_times',
+            'alertDescription' => 'alert_description',
+            'alertName' => 'alert_name',
+            'alertRemediation' => 'alert_remediation',
+            'alertType' => 'alert_type',
+            'createBy' => 'create_by',
+            'createTime' => 'create_time',
+            'customProperties' => 'custom_properties',
+            'description' => 'description',
+            'eventGrouping' => 'event_grouping',
+            'jobMode' => 'job_mode',
+            'processStatus' => 'process_status',
             'query' => 'query',
             'queryType' => 'query_type',
-            'severity' => 'severity',
-            'customProperties' => 'custom_properties',
-            'eventGrouping' => 'event_grouping',
             'schedule' => 'schedule',
-            'triggers' => 'triggers'
+            'severity' => 'severity',
+            'simulation' => 'simulation',
+            'status' => 'status',
+            'suppresion' => 'suppresion',
+            'tableName' => 'table_name',
+            'templateId' => 'template_id',
+            'templateName' => 'template_name',
+            'triggers' => 'triggers',
+            'updateBy' => 'update_by',
+            'updateTime' => 'update_time',
+            'updateTimeByUser' => 'update_time_by_user'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * templateId  告警规则模板 ID。Alert rule template ID.
-    * updateTime  更新时间。Update time.
-    * templateName  告警规则模板名称。Alert rule template name.
-    * dataSource  数据源。Data source.
-    * version  版本。Version
-    * query  查询语句。Query.
-    * queryType  查询语法，SQL。Query type. SQL.
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    * customProperties  自定义扩展信息。Custom properties.
-    * eventGrouping  告警分组。Event grouping.
+    * accumulatedTimes  累计次数
+    * alertDescription  告警描述
+    * alertName  告警名称
+    * alertRemediation  告警修复
+    * alertType  Map<String,String>
+    * createBy  Iam用户ID
+    * createTime  毫秒时间戳
+    * customProperties  Map<String,String>
+    * description  告警规则模板描述
+    * eventGrouping  告警组
+    * jobMode  jobMode
+    * processStatus  processStatus
+    * query  查询语句
+    * queryType  queryType
     * schedule  schedule
-    * triggers  告警触发规则。Alert triggers.
+    * severity  severity
+    * simulation  是否仿真
+    * status  status
+    * suppresion  告警抑制
+    * tableName  表名称
+    * templateId  UUID
+    * templateName  模板名称
+    * triggers  触发器数组
+    * updateBy  Iam用户ID
+    * updateTime  毫秒时间戳
+    * updateTimeByUser  毫秒时间戳
     *
     * @var string[]
     */
     protected static $setters = [
-            'templateId' => 'setTemplateId',
-            'updateTime' => 'setUpdateTime',
-            'templateName' => 'setTemplateName',
-            'dataSource' => 'setDataSource',
-            'version' => 'setVersion',
+            'accumulatedTimes' => 'setAccumulatedTimes',
+            'alertDescription' => 'setAlertDescription',
+            'alertName' => 'setAlertName',
+            'alertRemediation' => 'setAlertRemediation',
+            'alertType' => 'setAlertType',
+            'createBy' => 'setCreateBy',
+            'createTime' => 'setCreateTime',
+            'customProperties' => 'setCustomProperties',
+            'description' => 'setDescription',
+            'eventGrouping' => 'setEventGrouping',
+            'jobMode' => 'setJobMode',
+            'processStatus' => 'setProcessStatus',
             'query' => 'setQuery',
             'queryType' => 'setQueryType',
-            'severity' => 'setSeverity',
-            'customProperties' => 'setCustomProperties',
-            'eventGrouping' => 'setEventGrouping',
             'schedule' => 'setSchedule',
-            'triggers' => 'setTriggers'
+            'severity' => 'setSeverity',
+            'simulation' => 'setSimulation',
+            'status' => 'setStatus',
+            'suppresion' => 'setSuppresion',
+            'tableName' => 'setTableName',
+            'templateId' => 'setTemplateId',
+            'templateName' => 'setTemplateName',
+            'triggers' => 'setTriggers',
+            'updateBy' => 'setUpdateBy',
+            'updateTime' => 'setUpdateTime',
+            'updateTimeByUser' => 'setUpdateTimeByUser'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * templateId  告警规则模板 ID。Alert rule template ID.
-    * updateTime  更新时间。Update time.
-    * templateName  告警规则模板名称。Alert rule template name.
-    * dataSource  数据源。Data source.
-    * version  版本。Version
-    * query  查询语句。Query.
-    * queryType  查询语法，SQL。Query type. SQL.
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    * customProperties  自定义扩展信息。Custom properties.
-    * eventGrouping  告警分组。Event grouping.
+    * accumulatedTimes  累计次数
+    * alertDescription  告警描述
+    * alertName  告警名称
+    * alertRemediation  告警修复
+    * alertType  Map<String,String>
+    * createBy  Iam用户ID
+    * createTime  毫秒时间戳
+    * customProperties  Map<String,String>
+    * description  告警规则模板描述
+    * eventGrouping  告警组
+    * jobMode  jobMode
+    * processStatus  processStatus
+    * query  查询语句
+    * queryType  queryType
     * schedule  schedule
-    * triggers  告警触发规则。Alert triggers.
+    * severity  severity
+    * simulation  是否仿真
+    * status  status
+    * suppresion  告警抑制
+    * tableName  表名称
+    * templateId  UUID
+    * templateName  模板名称
+    * triggers  触发器数组
+    * updateBy  Iam用户ID
+    * updateTime  毫秒时间戳
+    * updateTimeByUser  毫秒时间戳
     *
     * @var string[]
     */
     protected static $getters = [
-            'templateId' => 'getTemplateId',
-            'updateTime' => 'getUpdateTime',
-            'templateName' => 'getTemplateName',
-            'dataSource' => 'getDataSource',
-            'version' => 'getVersion',
+            'accumulatedTimes' => 'getAccumulatedTimes',
+            'alertDescription' => 'getAlertDescription',
+            'alertName' => 'getAlertName',
+            'alertRemediation' => 'getAlertRemediation',
+            'alertType' => 'getAlertType',
+            'createBy' => 'getCreateBy',
+            'createTime' => 'getCreateTime',
+            'customProperties' => 'getCustomProperties',
+            'description' => 'getDescription',
+            'eventGrouping' => 'getEventGrouping',
+            'jobMode' => 'getJobMode',
+            'processStatus' => 'getProcessStatus',
             'query' => 'getQuery',
             'queryType' => 'getQueryType',
-            'severity' => 'getSeverity',
-            'customProperties' => 'getCustomProperties',
-            'eventGrouping' => 'getEventGrouping',
             'schedule' => 'getSchedule',
-            'triggers' => 'getTriggers'
+            'severity' => 'getSeverity',
+            'simulation' => 'getSimulation',
+            'status' => 'getStatus',
+            'suppresion' => 'getSuppresion',
+            'tableName' => 'getTableName',
+            'templateId' => 'getTemplateId',
+            'templateName' => 'getTemplateName',
+            'triggers' => 'getTriggers',
+            'updateBy' => 'getUpdateBy',
+            'updateTime' => 'getUpdateTime',
+            'updateTimeByUser' => 'getUpdateTimeByUser'
     ];
 
     /**
@@ -239,41 +379,7 @@ class AlertRuleTemplate implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const QUERY_TYPE_SQL = 'SQL';
-    const SEVERITY_TIPS = 'TIPS';
-    const SEVERITY_LOW = 'LOW';
-    const SEVERITY_MEDIUM = 'MEDIUM';
-    const SEVERITY_HIGH = 'HIGH';
-    const SEVERITY_FATAL = 'FATAL';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getQueryTypeAllowableValues()
-    {
-        return [
-            self::QUERY_TYPE_SQL,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getSeverityAllowableValues()
-    {
-        return [
-            self::SEVERITY_TIPS,
-            self::SEVERITY_LOW,
-            self::SEVERITY_MEDIUM,
-            self::SEVERITY_HIGH,
-            self::SEVERITY_FATAL,
-        ];
-    }
 
 
     /**
@@ -291,18 +397,32 @@ class AlertRuleTemplate implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
-        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
-        $this->container['templateName'] = isset($data['templateName']) ? $data['templateName'] : null;
-        $this->container['dataSource'] = isset($data['dataSource']) ? $data['dataSource'] : null;
-        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
+        $this->container['accumulatedTimes'] = isset($data['accumulatedTimes']) ? $data['accumulatedTimes'] : null;
+        $this->container['alertDescription'] = isset($data['alertDescription']) ? $data['alertDescription'] : null;
+        $this->container['alertName'] = isset($data['alertName']) ? $data['alertName'] : null;
+        $this->container['alertRemediation'] = isset($data['alertRemediation']) ? $data['alertRemediation'] : null;
+        $this->container['alertType'] = isset($data['alertType']) ? $data['alertType'] : null;
+        $this->container['createBy'] = isset($data['createBy']) ? $data['createBy'] : null;
+        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['customProperties'] = isset($data['customProperties']) ? $data['customProperties'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['eventGrouping'] = isset($data['eventGrouping']) ? $data['eventGrouping'] : null;
+        $this->container['jobMode'] = isset($data['jobMode']) ? $data['jobMode'] : null;
+        $this->container['processStatus'] = isset($data['processStatus']) ? $data['processStatus'] : null;
         $this->container['query'] = isset($data['query']) ? $data['query'] : null;
         $this->container['queryType'] = isset($data['queryType']) ? $data['queryType'] : null;
-        $this->container['severity'] = isset($data['severity']) ? $data['severity'] : null;
-        $this->container['customProperties'] = isset($data['customProperties']) ? $data['customProperties'] : null;
-        $this->container['eventGrouping'] = isset($data['eventGrouping']) ? $data['eventGrouping'] : null;
         $this->container['schedule'] = isset($data['schedule']) ? $data['schedule'] : null;
+        $this->container['severity'] = isset($data['severity']) ? $data['severity'] : null;
+        $this->container['simulation'] = isset($data['simulation']) ? $data['simulation'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['suppresion'] = isset($data['suppresion']) ? $data['suppresion'] : null;
+        $this->container['tableName'] = isset($data['tableName']) ? $data['tableName'] : null;
+        $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
+        $this->container['templateName'] = isset($data['templateName']) ? $data['templateName'] : null;
         $this->container['triggers'] = isset($data['triggers']) ? $data['triggers'] : null;
+        $this->container['updateBy'] = isset($data['updateBy']) ? $data['updateBy'] : null;
+        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
+        $this->container['updateTimeByUser'] = isset($data['updateTimeByUser']) ? $data['updateTimeByUser'] : null;
     }
 
     /**
@@ -313,87 +433,92 @@ class AlertRuleTemplate implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['templateId'] === null) {
-            $invalidProperties[] = "'templateId' can't be null";
-        }
-            if ((mb_strlen($this->container['templateId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'templateId', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['accumulatedTimes']) && ($this->container['accumulatedTimes'] > 500)) {
+                $invalidProperties[] = "invalid value for 'accumulatedTimes', must be smaller than or equal to 500.";
             }
-            if ((mb_strlen($this->container['templateId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'templateId', the character length must be bigger than or equal to 36.";
+            if (!is_null($this->container['accumulatedTimes']) && ($this->container['accumulatedTimes'] < 0)) {
+                $invalidProperties[] = "invalid value for 'accumulatedTimes', must be bigger than or equal to 0.";
             }
-        if ($this->container['updateTime'] === null) {
-            $invalidProperties[] = "'updateTime' can't be null";
-        }
-            if (($this->container['updateTime'] > 9223372036854775807)) {
-                $invalidProperties[] = "invalid value for 'updateTime', must be smaller than or equal to 9223372036854775807.";
+            if (!is_null($this->container['alertDescription']) && (mb_strlen($this->container['alertDescription']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'alertDescription', the character length must be smaller than or equal to 1024.";
             }
-            if (($this->container['updateTime'] < 0)) {
-                $invalidProperties[] = "invalid value for 'updateTime', must be bigger than or equal to 0.";
+            if (!is_null($this->container['alertDescription']) && (mb_strlen($this->container['alertDescription']) < 0)) {
+                $invalidProperties[] = "invalid value for 'alertDescription', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['templateName'] === null) {
-            $invalidProperties[] = "'templateName' can't be null";
-        }
-            if ((mb_strlen($this->container['templateName']) > 255)) {
-                $invalidProperties[] = "invalid value for 'templateName', the character length must be smaller than or equal to 255.";
+            if (!is_null($this->container['alertName']) && (mb_strlen($this->container['alertName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'alertName', the character length must be smaller than or equal to 256.";
             }
-            if ((mb_strlen($this->container['templateName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'templateName', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['alertName']) && (mb_strlen($this->container['alertName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'alertName', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['dataSource'] === null) {
-            $invalidProperties[] = "'dataSource' can't be null";
-        }
-            if ((mb_strlen($this->container['dataSource']) > 255)) {
-                $invalidProperties[] = "invalid value for 'dataSource', the character length must be smaller than or equal to 255.";
+            if (!is_null($this->container['alertRemediation']) && (mb_strlen($this->container['alertRemediation']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'alertRemediation', the character length must be smaller than or equal to 1024.";
             }
-            if ((mb_strlen($this->container['dataSource']) < 1)) {
-                $invalidProperties[] = "invalid value for 'dataSource', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['alertRemediation']) && (mb_strlen($this->container['alertRemediation']) < 0)) {
+                $invalidProperties[] = "invalid value for 'alertRemediation', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['version'] === null) {
-            $invalidProperties[] = "'version' can't be null";
-        }
-            if ((mb_strlen($this->container['version']) > 255)) {
-                $invalidProperties[] = "invalid value for 'version', the character length must be smaller than or equal to 255.";
+            if (!is_null($this->container['createBy']) && (mb_strlen($this->container['createBy']) > 32)) {
+                $invalidProperties[] = "invalid value for 'createBy', the character length must be smaller than or equal to 32.";
             }
-            if ((mb_strlen($this->container['version']) < 1)) {
-                $invalidProperties[] = "invalid value for 'version', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['createBy']) && (mb_strlen($this->container['createBy']) < 32)) {
+                $invalidProperties[] = "invalid value for 'createBy', the character length must be bigger than or equal to 32.";
             }
-            if (!is_null($this->container['query']) && (mb_strlen($this->container['query']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'query', the character length must be smaller than or equal to 1024.";
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] > 2366841600000)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 2366841600000.";
+            }
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 1)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['query']) && (mb_strlen($this->container['query']) > 65535)) {
+                $invalidProperties[] = "invalid value for 'query', the character length must be smaller than or equal to 65535.";
             }
             if (!is_null($this->container['query']) && (mb_strlen($this->container['query']) < 1)) {
                 $invalidProperties[] = "invalid value for 'query', the character length must be bigger than or equal to 1.";
             }
-            $allowedValues = $this->getQueryTypeAllowableValues();
-                if (!is_null($this->container['queryType']) && !in_array($this->container['queryType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'queryType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if (!is_null($this->container['tableName']) && (mb_strlen($this->container['tableName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'tableName', the character length must be smaller than or equal to 64.";
             }
-
-            if (!is_null($this->container['queryType']) && (mb_strlen($this->container['queryType']) > 255)) {
-                $invalidProperties[] = "invalid value for 'queryType', the character length must be smaller than or equal to 255.";
+            if (!is_null($this->container['tableName']) && (mb_strlen($this->container['tableName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'tableName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['queryType']) && (mb_strlen($this->container['queryType']) < 1)) {
-                $invalidProperties[] = "invalid value for 'queryType', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['tableName']) && !preg_match("/^(?!_)[a-zA-Z][a-zA-Z0-9_]*(?<!_)$/", $this->container['tableName'])) {
+                $invalidProperties[] = "invalid value for 'tableName', must be conform to the pattern /^(?!_)[a-zA-Z][a-zA-Z0-9_]*(?<!_)$/.";
             }
-        if ($this->container['severity'] === null) {
-            $invalidProperties[] = "'severity' can't be null";
-        }
-            $allowedValues = $this->getSeverityAllowableValues();
-                if (!is_null($this->container['severity']) && !in_array($this->container['severity'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'severity', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if (!is_null($this->container['templateId']) && (mb_strlen($this->container['templateId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'templateId', the character length must be smaller than or equal to 36.";
             }
-
-            if ((mb_strlen($this->container['severity']) > 255)) {
-                $invalidProperties[] = "invalid value for 'severity', the character length must be smaller than or equal to 255.";
+            if (!is_null($this->container['templateId']) && (mb_strlen($this->container['templateId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'templateId', the character length must be bigger than or equal to 36.";
             }
-            if ((mb_strlen($this->container['severity']) < 1)) {
-                $invalidProperties[] = "invalid value for 'severity', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['templateName']) && (mb_strlen($this->container['templateName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'templateName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['templateName']) && (mb_strlen($this->container['templateName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'templateName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['updateBy']) && (mb_strlen($this->container['updateBy']) > 32)) {
+                $invalidProperties[] = "invalid value for 'updateBy', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['updateBy']) && (mb_strlen($this->container['updateBy']) < 32)) {
+                $invalidProperties[] = "invalid value for 'updateBy', the character length must be bigger than or equal to 32.";
+            }
+            if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] > 2366841600000)) {
+                $invalidProperties[] = "invalid value for 'updateTime', must be smaller than or equal to 2366841600000.";
+            }
+            if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'updateTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['updateTimeByUser']) && ($this->container['updateTimeByUser'] > 2366841600000)) {
+                $invalidProperties[] = "invalid value for 'updateTimeByUser', must be smaller than or equal to 2366841600000.";
+            }
+            if (!is_null($this->container['updateTimeByUser']) && ($this->container['updateTimeByUser'] < 0)) {
+                $invalidProperties[] = "invalid value for 'updateTimeByUser', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -410,200 +535,176 @@ class AlertRuleTemplate implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets templateId
-    *  告警规则模板 ID。Alert rule template ID.
+    * Gets accumulatedTimes
+    *  累计次数
     *
-    * @return string
+    * @return int|null
     */
-    public function getTemplateId()
+    public function getAccumulatedTimes()
     {
-        return $this->container['templateId'];
+        return $this->container['accumulatedTimes'];
     }
 
     /**
-    * Sets templateId
+    * Sets accumulatedTimes
     *
-    * @param string $templateId 告警规则模板 ID。Alert rule template ID.
+    * @param int|null $accumulatedTimes 累计次数
     *
     * @return $this
     */
-    public function setTemplateId($templateId)
+    public function setAccumulatedTimes($accumulatedTimes)
     {
-        $this->container['templateId'] = $templateId;
+        $this->container['accumulatedTimes'] = $accumulatedTimes;
         return $this;
     }
 
     /**
-    * Gets updateTime
-    *  更新时间。Update time.
-    *
-    * @return int
-    */
-    public function getUpdateTime()
-    {
-        return $this->container['updateTime'];
-    }
-
-    /**
-    * Sets updateTime
-    *
-    * @param int $updateTime 更新时间。Update time.
-    *
-    * @return $this
-    */
-    public function setUpdateTime($updateTime)
-    {
-        $this->container['updateTime'] = $updateTime;
-        return $this;
-    }
-
-    /**
-    * Gets templateName
-    *  告警规则模板名称。Alert rule template name.
-    *
-    * @return string
-    */
-    public function getTemplateName()
-    {
-        return $this->container['templateName'];
-    }
-
-    /**
-    * Sets templateName
-    *
-    * @param string $templateName 告警规则模板名称。Alert rule template name.
-    *
-    * @return $this
-    */
-    public function setTemplateName($templateName)
-    {
-        $this->container['templateName'] = $templateName;
-        return $this;
-    }
-
-    /**
-    * Gets dataSource
-    *  数据源。Data source.
-    *
-    * @return string
-    */
-    public function getDataSource()
-    {
-        return $this->container['dataSource'];
-    }
-
-    /**
-    * Sets dataSource
-    *
-    * @param string $dataSource 数据源。Data source.
-    *
-    * @return $this
-    */
-    public function setDataSource($dataSource)
-    {
-        $this->container['dataSource'] = $dataSource;
-        return $this;
-    }
-
-    /**
-    * Gets version
-    *  版本。Version
-    *
-    * @return string
-    */
-    public function getVersion()
-    {
-        return $this->container['version'];
-    }
-
-    /**
-    * Sets version
-    *
-    * @param string $version 版本。Version
-    *
-    * @return $this
-    */
-    public function setVersion($version)
-    {
-        $this->container['version'] = $version;
-        return $this;
-    }
-
-    /**
-    * Gets query
-    *  查询语句。Query.
+    * Gets alertDescription
+    *  告警描述
     *
     * @return string|null
     */
-    public function getQuery()
+    public function getAlertDescription()
     {
-        return $this->container['query'];
+        return $this->container['alertDescription'];
     }
 
     /**
-    * Sets query
+    * Sets alertDescription
     *
-    * @param string|null $query 查询语句。Query.
+    * @param string|null $alertDescription 告警描述
     *
     * @return $this
     */
-    public function setQuery($query)
+    public function setAlertDescription($alertDescription)
     {
-        $this->container['query'] = $query;
+        $this->container['alertDescription'] = $alertDescription;
         return $this;
     }
 
     /**
-    * Gets queryType
-    *  查询语法，SQL。Query type. SQL.
+    * Gets alertName
+    *  告警名称
     *
     * @return string|null
     */
-    public function getQueryType()
+    public function getAlertName()
     {
-        return $this->container['queryType'];
+        return $this->container['alertName'];
     }
 
     /**
-    * Sets queryType
+    * Sets alertName
     *
-    * @param string|null $queryType 查询语法，SQL。Query type. SQL.
+    * @param string|null $alertName 告警名称
     *
     * @return $this
     */
-    public function setQueryType($queryType)
+    public function setAlertName($alertName)
     {
-        $this->container['queryType'] = $queryType;
+        $this->container['alertName'] = $alertName;
         return $this;
     }
 
     /**
-    * Gets severity
-    *  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+    * Gets alertRemediation
+    *  告警修复
     *
-    * @return string
+    * @return string|null
     */
-    public function getSeverity()
+    public function getAlertRemediation()
     {
-        return $this->container['severity'];
+        return $this->container['alertRemediation'];
     }
 
     /**
-    * Sets severity
+    * Sets alertRemediation
     *
-    * @param string $severity 严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+    * @param string|null $alertRemediation 告警修复
     *
     * @return $this
     */
-    public function setSeverity($severity)
+    public function setAlertRemediation($alertRemediation)
     {
-        $this->container['severity'] = $severity;
+        $this->container['alertRemediation'] = $alertRemediation;
+        return $this;
+    }
+
+    /**
+    * Gets alertType
+    *  Map<String,String>
+    *
+    * @return map[string,string]|null
+    */
+    public function getAlertType()
+    {
+        return $this->container['alertType'];
+    }
+
+    /**
+    * Sets alertType
+    *
+    * @param map[string,string]|null $alertType Map<String,String>
+    *
+    * @return $this
+    */
+    public function setAlertType($alertType)
+    {
+        $this->container['alertType'] = $alertType;
+        return $this;
+    }
+
+    /**
+    * Gets createBy
+    *  Iam用户ID
+    *
+    * @return string|null
+    */
+    public function getCreateBy()
+    {
+        return $this->container['createBy'];
+    }
+
+    /**
+    * Sets createBy
+    *
+    * @param string|null $createBy Iam用户ID
+    *
+    * @return $this
+    */
+    public function setCreateBy($createBy)
+    {
+        $this->container['createBy'] = $createBy;
+        return $this;
+    }
+
+    /**
+    * Gets createTime
+    *  毫秒时间戳
+    *
+    * @return int|null
+    */
+    public function getCreateTime()
+    {
+        return $this->container['createTime'];
+    }
+
+    /**
+    * Sets createTime
+    *
+    * @param int|null $createTime 毫秒时间戳
+    *
+    * @return $this
+    */
+    public function setCreateTime($createTime)
+    {
+        $this->container['createTime'] = $createTime;
         return $this;
     }
 
     /**
     * Gets customProperties
-    *  自定义扩展信息。Custom properties.
+    *  Map<String,String>
     *
     * @return map[string,string]|null
     */
@@ -615,7 +716,7 @@ class AlertRuleTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets customProperties
     *
-    * @param map[string,string]|null $customProperties 自定义扩展信息。Custom properties.
+    * @param map[string,string]|null $customProperties Map<String,String>
     *
     * @return $this
     */
@@ -626,8 +727,32 @@ class AlertRuleTemplate implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets description
+    *  告警规则模板描述
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 告警规则模板描述
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
     * Gets eventGrouping
-    *  告警分组。Event grouping.
+    *  告警组
     *
     * @return bool|null
     */
@@ -639,7 +764,7 @@ class AlertRuleTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets eventGrouping
     *
-    * @param bool|null $eventGrouping 告警分组。Event grouping.
+    * @param bool|null $eventGrouping 告警组
     *
     * @return $this
     */
@@ -650,10 +775,106 @@ class AlertRuleTemplate implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets jobMode
+    *  jobMode
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\JobMode|null
+    */
+    public function getJobMode()
+    {
+        return $this->container['jobMode'];
+    }
+
+    /**
+    * Sets jobMode
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\JobMode|null $jobMode jobMode
+    *
+    * @return $this
+    */
+    public function setJobMode($jobMode)
+    {
+        $this->container['jobMode'] = $jobMode;
+        return $this;
+    }
+
+    /**
+    * Gets processStatus
+    *  processStatus
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\ProcessStatus|null
+    */
+    public function getProcessStatus()
+    {
+        return $this->container['processStatus'];
+    }
+
+    /**
+    * Sets processStatus
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\ProcessStatus|null $processStatus processStatus
+    *
+    * @return $this
+    */
+    public function setProcessStatus($processStatus)
+    {
+        $this->container['processStatus'] = $processStatus;
+        return $this;
+    }
+
+    /**
+    * Gets query
+    *  查询语句
+    *
+    * @return string|null
+    */
+    public function getQuery()
+    {
+        return $this->container['query'];
+    }
+
+    /**
+    * Sets query
+    *
+    * @param string|null $query 查询语句
+    *
+    * @return $this
+    */
+    public function setQuery($query)
+    {
+        $this->container['query'] = $query;
+        return $this;
+    }
+
+    /**
+    * Gets queryType
+    *  queryType
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\QueryType|null
+    */
+    public function getQueryType()
+    {
+        return $this->container['queryType'];
+    }
+
+    /**
+    * Sets queryType
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\QueryType|null $queryType queryType
+    *
+    * @return $this
+    */
+    public function setQueryType($queryType)
+    {
+        $this->container['queryType'] = $queryType;
+        return $this;
+    }
+
+    /**
     * Gets schedule
     *  schedule
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\Schedule|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRuleSchedule|null
     */
     public function getSchedule()
     {
@@ -663,7 +884,7 @@ class AlertRuleTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets schedule
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\Schedule|null $schedule schedule
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRuleSchedule|null $schedule schedule
     *
     * @return $this
     */
@@ -674,10 +895,178 @@ class AlertRuleTemplate implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets triggers
-    *  告警触发规则。Alert triggers.
+    * Gets severity
+    *  severity
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRuleTrigger[]|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\Serverity|null
+    */
+    public function getSeverity()
+    {
+        return $this->container['severity'];
+    }
+
+    /**
+    * Sets severity
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\Serverity|null $severity severity
+    *
+    * @return $this
+    */
+    public function setSeverity($severity)
+    {
+        $this->container['severity'] = $severity;
+        return $this;
+    }
+
+    /**
+    * Gets simulation
+    *  是否仿真
+    *
+    * @return bool|null
+    */
+    public function getSimulation()
+    {
+        return $this->container['simulation'];
+    }
+
+    /**
+    * Sets simulation
+    *
+    * @param bool|null $simulation 是否仿真
+    *
+    * @return $this
+    */
+    public function setSimulation($simulation)
+    {
+        $this->container['simulation'] = $simulation;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  status
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\Status|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\Status|null $status status
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets suppresion
+    *  告警抑制
+    *
+    * @return bool|null
+    */
+    public function getSuppresion()
+    {
+        return $this->container['suppresion'];
+    }
+
+    /**
+    * Sets suppresion
+    *
+    * @param bool|null $suppresion 告警抑制
+    *
+    * @return $this
+    */
+    public function setSuppresion($suppresion)
+    {
+        $this->container['suppresion'] = $suppresion;
+        return $this;
+    }
+
+    /**
+    * Gets tableName
+    *  表名称
+    *
+    * @return string|null
+    */
+    public function getTableName()
+    {
+        return $this->container['tableName'];
+    }
+
+    /**
+    * Sets tableName
+    *
+    * @param string|null $tableName 表名称
+    *
+    * @return $this
+    */
+    public function setTableName($tableName)
+    {
+        $this->container['tableName'] = $tableName;
+        return $this;
+    }
+
+    /**
+    * Gets templateId
+    *  UUID
+    *
+    * @return string|null
+    */
+    public function getTemplateId()
+    {
+        return $this->container['templateId'];
+    }
+
+    /**
+    * Sets templateId
+    *
+    * @param string|null $templateId UUID
+    *
+    * @return $this
+    */
+    public function setTemplateId($templateId)
+    {
+        $this->container['templateId'] = $templateId;
+        return $this;
+    }
+
+    /**
+    * Gets templateName
+    *  模板名称
+    *
+    * @return string|null
+    */
+    public function getTemplateName()
+    {
+        return $this->container['templateName'];
+    }
+
+    /**
+    * Sets templateName
+    *
+    * @param string|null $templateName 模板名称
+    *
+    * @return $this
+    */
+    public function setTemplateName($templateName)
+    {
+        $this->container['templateName'] = $templateName;
+        return $this;
+    }
+
+    /**
+    * Gets triggers
+    *  触发器数组
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\Trigger[]|null
     */
     public function getTriggers()
     {
@@ -687,13 +1076,85 @@ class AlertRuleTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets triggers
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRuleTrigger[]|null $triggers 告警触发规则。Alert triggers.
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\Trigger[]|null $triggers 触发器数组
     *
     * @return $this
     */
     public function setTriggers($triggers)
     {
         $this->container['triggers'] = $triggers;
+        return $this;
+    }
+
+    /**
+    * Gets updateBy
+    *  Iam用户ID
+    *
+    * @return string|null
+    */
+    public function getUpdateBy()
+    {
+        return $this->container['updateBy'];
+    }
+
+    /**
+    * Sets updateBy
+    *
+    * @param string|null $updateBy Iam用户ID
+    *
+    * @return $this
+    */
+    public function setUpdateBy($updateBy)
+    {
+        $this->container['updateBy'] = $updateBy;
+        return $this;
+    }
+
+    /**
+    * Gets updateTime
+    *  毫秒时间戳
+    *
+    * @return int|null
+    */
+    public function getUpdateTime()
+    {
+        return $this->container['updateTime'];
+    }
+
+    /**
+    * Sets updateTime
+    *
+    * @param int|null $updateTime 毫秒时间戳
+    *
+    * @return $this
+    */
+    public function setUpdateTime($updateTime)
+    {
+        $this->container['updateTime'] = $updateTime;
+        return $this;
+    }
+
+    /**
+    * Gets updateTimeByUser
+    *  毫秒时间戳
+    *
+    * @return int|null
+    */
+    public function getUpdateTimeByUser()
+    {
+        return $this->container['updateTimeByUser'];
+    }
+
+    /**
+    * Sets updateTimeByUser
+    *
+    * @param int|null $updateTimeByUser 毫秒时间戳
+    *
+    * @return $this
+    */
+    public function setUpdateTimeByUser($updateTimeByUser)
+    {
+        $this->container['updateTimeByUser'] = $updateTimeByUser;
         return $this;
     }
 

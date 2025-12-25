@@ -20,8 +20,8 @@ class MetricDimensionResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  **参数解释**： 指标维度名称。 **取值范围**： 以字母开头，长度为[1,32]个字符。
-    * value  **参数解释**： 指标维度值。 **取值范围**： 长度为[0,256]个字符。
+    * name  **参数解释**： 资源维度名称。 **取值范围**： 以字母开头，长度为[1,32]个字符。
+    * value  **参数解释**： 资源维度值。 **取值范围**： 长度为[0,256]个字符。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class MetricDimensionResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  **参数解释**： 指标维度名称。 **取值范围**： 以字母开头，长度为[1,32]个字符。
-    * value  **参数解释**： 指标维度值。 **取值范围**： 长度为[0,256]个字符。
+    * name  **参数解释**： 资源维度名称。 **取值范围**： 以字母开头，长度为[1,32]个字符。
+    * value  **参数解释**： 资源维度值。 **取值范围**： 长度为[0,256]个字符。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class MetricDimensionResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  **参数解释**： 指标维度名称。 **取值范围**： 以字母开头，长度为[1,32]个字符。
-    * value  **参数解释**： 指标维度值。 **取值范围**： 长度为[0,256]个字符。
+    * name  **参数解释**： 资源维度名称。 **取值范围**： 以字母开头，长度为[1,32]个字符。
+    * value  **参数解释**： 资源维度值。 **取值范围**： 长度为[0,256]个字符。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class MetricDimensionResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  **参数解释**： 指标维度名称。 **取值范围**： 以字母开头，长度为[1,32]个字符。
-    * value  **参数解释**： 指标维度值。 **取值范围**： 长度为[0,256]个字符。
+    * name  **参数解释**： 资源维度名称。 **取值范围**： 以字母开头，长度为[1,32]个字符。
+    * value  **参数解释**： 资源维度值。 **取值范围**： 长度为[0,256]个字符。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class MetricDimensionResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  **参数解释**： 指标维度名称。 **取值范围**： 以字母开头，长度为[1,32]个字符。
-    * value  **参数解释**： 指标维度值。 **取值范围**： 长度为[0,256]个字符。
+    * name  **参数解释**： 资源维度名称。 **取值范围**： 以字母开头，长度为[1,32]个字符。
+    * value  **参数解释**： 资源维度值。 **取值范围**： 长度为[0,256]个字符。
     *
     * @var string[]
     */
@@ -203,7 +203,7 @@ class MetricDimensionResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  **参数解释**： 指标维度名称。 **取值范围**： 以字母开头，长度为[1,32]个字符。
+    *  **参数解释**： 资源维度名称。 **取值范围**： 以字母开头，长度为[1,32]个字符。
     *
     * @return string|null
     */
@@ -215,7 +215,7 @@ class MetricDimensionResp implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name **参数解释**： 指标维度名称。 **取值范围**： 以字母开头，长度为[1,32]个字符。
+    * @param string|null $name **参数解释**： 资源维度名称。 **取值范围**： 以字母开头，长度为[1,32]个字符。
     *
     * @return $this
     */
@@ -227,7 +227,7 @@ class MetricDimensionResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  **参数解释**： 指标维度值。 **取值范围**： 长度为[0,256]个字符。
+    *  **参数解释**： 资源维度值。 **取值范围**： 长度为[0,256]个字符。
     *
     * @return string|null
     */
@@ -239,7 +239,7 @@ class MetricDimensionResp implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value **参数解释**： 指标维度值。 **取值范围**： 长度为[0,256]个字符。
+    * @param string|null $value **参数解释**： 资源维度值。 **取值范围**： 长度为[0,256]个字符。
     *
     * @return $this
     */

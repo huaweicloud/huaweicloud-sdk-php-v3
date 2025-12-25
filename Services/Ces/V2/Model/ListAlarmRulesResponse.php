@@ -21,7 +21,7 @@ class ListAlarmRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarms  **参数解释**： 告警规则列表。 **取值范围**： 长度为[1,100]个字符。
+    * alarms  **参数解释**： 告警规则列表。 **取值范围**： 最多包含100个告警规则信息。
     * count  **参数解释**： 告警规则总数。 **取值范围**： [0,10000]
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ListAlarmRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarms  **参数解释**： 告警规则列表。 **取值范围**： 长度为[1,100]个字符。
+    * alarms  **参数解释**： 告警规则列表。 **取值范围**： 最多包含100个告警规则信息。
     * count  **参数解释**： 告警规则总数。 **取值范围**： [0,10000]
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListAlarmRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarms  **参数解释**： 告警规则列表。 **取值范围**： 长度为[1,100]个字符。
+    * alarms  **参数解释**： 告警规则列表。 **取值范围**： 最多包含100个告警规则信息。
     * count  **参数解释**： 告警规则总数。 **取值范围**： [0,10000]
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListAlarmRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarms  **参数解释**： 告警规则列表。 **取值范围**： 长度为[1,100]个字符。
+    * alarms  **参数解释**： 告警规则列表。 **取值范围**： 最多包含100个告警规则信息。
     * count  **参数解释**： 告警规则总数。 **取值范围**： [0,10000]
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListAlarmRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarms  **参数解释**： 告警规则列表。 **取值范围**： 长度为[1,100]个字符。
+    * alarms  **参数解释**： 告警规则列表。 **取值范围**： 最多包含100个告警规则信息。
     * count  **参数解释**： 告警规则总数。 **取值范围**： [0,10000]
     *
     * @var string[]
@@ -192,7 +192,7 @@ class ListAlarmRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarms
-    *  **参数解释**： 告警规则列表。 **取值范围**： 长度为[1,100]个字符。
+    *  **参数解释**： 告警规则列表。 **取值范围**： 最多包含100个告警规则信息。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\ListAlarmRespBodyAlarms[]|null
     */
@@ -204,7 +204,7 @@ class ListAlarmRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets alarms
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ListAlarmRespBodyAlarms[]|null $alarms **参数解释**： 告警规则列表。 **取值范围**： 长度为[1,100]个字符。
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ListAlarmRespBodyAlarms[]|null $alarms **参数解释**： 告警规则列表。 **取值范围**： 最多包含100个告警规则信息。
     *
     * @return $this
     */

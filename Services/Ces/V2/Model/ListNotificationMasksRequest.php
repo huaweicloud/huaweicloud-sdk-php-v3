@@ -20,10 +20,10 @@ class ListNotificationMasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * offset  分页偏移量
-    * limit  分页大小
-    * sortKey  排序关键字，与sort_dir同时使用。 目前只支持create_time与update_time create_time表示按创建时间排序，update_time表示按修改时间排序
-    * sortDir  排序顺序，与sort_key同时使用。DESC表示降序排序；ASC表示升序排序；
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
+    * sortKey  **参数解释**： 排序关键字，与sort_dir同时使用。 **约束限制**： 目前只支持create_time与update_time **取值范围**： - create_time：按创建时间排序 - update_time：按修改时间排序 **默认取值**： 不涉及。
+    * sortDir  **参数解释**： 排序顺序，与sort_key同时使用。 **约束限制**： 不涉及。 **取值范围**： - DESC：降序排序。 - ASC：升序排序。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -38,10 +38,10 @@ class ListNotificationMasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * offset  分页偏移量
-    * limit  分页大小
-    * sortKey  排序关键字，与sort_dir同时使用。 目前只支持create_time与update_time create_time表示按创建时间排序，update_time表示按修改时间排序
-    * sortDir  排序顺序，与sort_key同时使用。DESC表示降序排序；ASC表示升序排序；
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
+    * sortKey  **参数解释**： 排序关键字，与sort_dir同时使用。 **约束限制**： 目前只支持create_time与update_time **取值范围**： - create_time：按创建时间排序 - update_time：按修改时间排序 **默认取值**： 不涉及。
+    * sortDir  **参数解释**： 排序顺序，与sort_key同时使用。 **约束限制**： 不涉及。 **取值范围**： - DESC：降序排序。 - ASC：升序排序。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -77,10 +77,10 @@ class ListNotificationMasksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * offset  分页偏移量
-    * limit  分页大小
-    * sortKey  排序关键字，与sort_dir同时使用。 目前只支持create_time与update_time create_time表示按创建时间排序，update_time表示按修改时间排序
-    * sortDir  排序顺序，与sort_key同时使用。DESC表示降序排序；ASC表示升序排序；
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
+    * sortKey  **参数解释**： 排序关键字，与sort_dir同时使用。 **约束限制**： 目前只支持create_time与update_time **取值范围**： - create_time：按创建时间排序 - update_time：按修改时间排序 **默认取值**： 不涉及。
+    * sortDir  **参数解释**： 排序顺序，与sort_key同时使用。 **约束限制**： 不涉及。 **取值范围**： - DESC：降序排序。 - ASC：升序排序。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -95,10 +95,10 @@ class ListNotificationMasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * offset  分页偏移量
-    * limit  分页大小
-    * sortKey  排序关键字，与sort_dir同时使用。 目前只支持create_time与update_time create_time表示按创建时间排序，update_time表示按修改时间排序
-    * sortDir  排序顺序，与sort_key同时使用。DESC表示降序排序；ASC表示升序排序；
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
+    * sortKey  **参数解释**： 排序关键字，与sort_dir同时使用。 **约束限制**： 目前只支持create_time与update_time **取值范围**： - create_time：按创建时间排序 - update_time：按修改时间排序 **默认取值**： 不涉及。
+    * sortDir  **参数解释**： 排序顺序，与sort_key同时使用。 **约束限制**： 不涉及。 **取值范围**： - DESC：降序排序。 - ASC：升序排序。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -113,10 +113,10 @@ class ListNotificationMasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * offset  分页偏移量
-    * limit  分页大小
-    * sortKey  排序关键字，与sort_dir同时使用。 目前只支持create_time与update_time create_time表示按创建时间排序，update_time表示按修改时间排序
-    * sortDir  排序顺序，与sort_key同时使用。DESC表示降序排序；ASC表示升序排序；
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
+    * sortKey  **参数解释**： 排序关键字，与sort_dir同时使用。 **约束限制**： 目前只支持create_time与update_time **取值范围**： - create_time：按创建时间排序 - update_time：按修改时间排序 **默认取值**： 不涉及。
+    * sortDir  **参数解释**： 排序顺序，与sort_key同时使用。 **约束限制**： 不涉及。 **取值范围**： - DESC：降序排序。 - ASC：升序排序。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -276,7 +276,7 @@ class ListNotificationMasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  分页偏移量
+    *  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
     *
     * @return int|null
     */
@@ -288,7 +288,7 @@ class ListNotificationMasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 分页偏移量
+    * @param int|null $offset **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
     *
     * @return $this
     */
@@ -300,7 +300,7 @@ class ListNotificationMasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  分页大小
+    *  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
     *
     * @return int|null
     */
@@ -312,7 +312,7 @@ class ListNotificationMasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 分页大小
+    * @param int|null $limit **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
     *
     * @return $this
     */
@@ -324,7 +324,7 @@ class ListNotificationMasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
-    *  排序关键字，与sort_dir同时使用。 目前只支持create_time与update_time create_time表示按创建时间排序，update_time表示按修改时间排序
+    *  **参数解释**： 排序关键字，与sort_dir同时使用。 **约束限制**： 目前只支持create_time与update_time **取值范围**： - create_time：按创建时间排序 - update_time：按修改时间排序 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -336,7 +336,7 @@ class ListNotificationMasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 排序关键字，与sort_dir同时使用。 目前只支持create_time与update_time create_time表示按创建时间排序，update_time表示按修改时间排序
+    * @param string|null $sortKey **参数解释**： 排序关键字，与sort_dir同时使用。 **约束限制**： 目前只支持create_time与update_time **取值范围**： - create_time：按创建时间排序 - update_time：按修改时间排序 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -348,7 +348,7 @@ class ListNotificationMasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortDir
-    *  排序顺序，与sort_key同时使用。DESC表示降序排序；ASC表示升序排序；
+    *  **参数解释**： 排序顺序，与sort_key同时使用。 **约束限制**： 不涉及。 **取值范围**： - DESC：降序排序。 - ASC：升序排序。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -360,7 +360,7 @@ class ListNotificationMasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortDir
     *
-    * @param string|null $sortDir 排序顺序，与sort_key同时使用。DESC表示降序排序；ASC表示升序排序；
+    * @param string|null $sortDir **参数解释**： 排序顺序，与sort_key同时使用。 **约束限制**： 不涉及。 **取值范围**： - DESC：降序排序。 - ASC：升序排序。 **默认取值**： 不涉及。
     *
     * @return $this
     */

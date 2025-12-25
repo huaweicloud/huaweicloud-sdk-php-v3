@@ -30,8 +30,8 @@ class ShowModifyHistoryRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'instanceId' => 'string',
             'parameterName' => 'string',
-            'offset' => 'string',
-            'limit' => 'string'
+            'offset' => 'int',
+            'limit' => 'int'
     ];
 
     /**
@@ -260,7 +260,7 @@ class ShowModifyHistoryRequest implements ModelInterface, ArrayAccess
     * Gets offset
     *  **参数解释：** 索引位置，偏移量。 从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。 **约束限制：** 取值必须为数字，不能为负数。 **取值范围：** 非负整数。 **默认取值：** 0
     *
-    * @return string|null
+    * @return int|null
     */
     public function getOffset()
     {
@@ -270,7 +270,7 @@ class ShowModifyHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param string|null $offset **参数解释：** 索引位置，偏移量。 从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。 **约束限制：** 取值必须为数字，不能为负数。 **取值范围：** 非负整数。 **默认取值：** 0
+    * @param int|null $offset **参数解释：** 索引位置，偏移量。 从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。 **约束限制：** 取值必须为数字，不能为负数。 **取值范围：** 非负整数。 **默认取值：** 0
     *
     * @return $this
     */
@@ -284,7 +284,7 @@ class ShowModifyHistoryRequest implements ModelInterface, ArrayAccess
     * Gets limit
     *  **参数解释：** 查询个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 100。不传该参数时，默认查询前100条信息。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getLimit()
     {
@@ -294,7 +294,7 @@ class ShowModifyHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit **参数解释：** 查询个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 100。不传该参数时，默认查询前100条信息。
+    * @param int|null $limit **参数解释：** 查询个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 100。不传该参数时，默认查询前100条信息。
     *
     * @return $this
     */

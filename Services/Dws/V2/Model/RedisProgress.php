@@ -32,7 +32,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
     * initialed  **参数解释**： 是否完成初始化。 **取值范围**： 不涉及。
     * failCount  **参数解释**： 失败次数。 **取值范围**： 不涉及。
     * redistributing  **参数解释**： cm_ctl查询的重分布结果。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - PREPARE：准备。 - RUNNING：运行中。 - WAITING：等待中。 - PAUSE：已暂停。 - PAUSING：暂停中。 - SUCCESS：成功。 - FAIL：失败。
     * pauseByUser  **参数解释**： 是否用户暂停。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -68,7 +68,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
     * initialed  **参数解释**： 是否完成初始化。 **取值范围**： 不涉及。
     * failCount  **参数解释**： 失败次数。 **取值范围**： 不涉及。
     * redistributing  **参数解释**： cm_ctl查询的重分布结果。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - PREPARE：准备。 - RUNNING：运行中。 - WAITING：等待中。 - PAUSE：已暂停。 - PAUSING：暂停中。 - SUCCESS：成功。 - FAIL：失败。
     * pauseByUser  **参数解释**： 是否用户暂停。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -125,7 +125,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
     * initialed  **参数解释**： 是否完成初始化。 **取值范围**： 不涉及。
     * failCount  **参数解释**： 失败次数。 **取值范围**： 不涉及。
     * redistributing  **参数解释**： cm_ctl查询的重分布结果。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - PREPARE：准备。 - RUNNING：运行中。 - WAITING：等待中。 - PAUSE：已暂停。 - PAUSING：暂停中。 - SUCCESS：成功。 - FAIL：失败。
     * pauseByUser  **参数解释**： 是否用户暂停。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -161,7 +161,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
     * initialed  **参数解释**： 是否完成初始化。 **取值范围**： 不涉及。
     * failCount  **参数解释**： 失败次数。 **取值范围**： 不涉及。
     * redistributing  **参数解释**： cm_ctl查询的重分布结果。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - PREPARE：准备。 - RUNNING：运行中。 - WAITING：等待中。 - PAUSE：已暂停。 - PAUSING：暂停中。 - SUCCESS：成功。 - FAIL：失败。
     * pauseByUser  **参数解释**： 是否用户暂停。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -197,7 +197,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
     * initialed  **参数解释**： 是否完成初始化。 **取值范围**： 不涉及。
     * failCount  **参数解释**： 失败次数。 **取值范围**： 不涉及。
     * redistributing  **参数解释**： cm_ctl查询的重分布结果。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： - PREPARE：准备。 - RUNNING：运行中。 - WAITING：等待中。 - PAUSE：已暂停。 - PAUSING：暂停中。 - SUCCESS：成功。 - FAIL：失败。
     * pauseByUser  **参数解释**： 是否用户暂停。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -605,7 +605,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 状态。 **取值范围**： - PREPARE：准备。 - RUNNING：运行中。 - WAITING：等待中。 - PAUSE：已暂停。 - PAUSING：暂停中。 - SUCCESS：成功。 - FAIL：失败。
     *
     * @return string|null
     */
@@ -617,7 +617,7 @@ class RedisProgress implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 状态。 **取值范围**： 不涉及。
+    * @param string|null $status **参数解释**： 状态。 **取值范围**： - PREPARE：准备。 - RUNNING：运行中。 - WAITING：等待中。 - PAUSE：已暂停。 - PAUSING：暂停中。 - SUCCESS：成功。 - FAIL：失败。
     *
     * @return $this
     */

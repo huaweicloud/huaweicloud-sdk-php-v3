@@ -21,21 +21,29 @@ class GlanceListImageMembersRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * imageId  镜像id
+    * limit  查询镜像成员列表时每页的数量。
+    * marker  分页标识，用于查询下一页内容。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'imageId' => 'string'
+            'imageId' => 'string',
+            'limit' => 'int',
+            'marker' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * imageId  镜像id
+    * limit  查询镜像成员列表时每页的数量。
+    * marker  分页标识，用于查询下一页内容。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'imageId' => null
+        'imageId' => null,
+        'limit' => 'int32',
+        'marker' => null
     ];
 
     /**
@@ -62,31 +70,43 @@ class GlanceListImageMembersRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * imageId  镜像id
+    * limit  查询镜像成员列表时每页的数量。
+    * marker  分页标识，用于查询下一页内容。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'imageId' => 'image_id'
+            'imageId' => 'image_id',
+            'limit' => 'limit',
+            'marker' => 'marker'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * imageId  镜像id
+    * limit  查询镜像成员列表时每页的数量。
+    * marker  分页标识，用于查询下一页内容。
     *
     * @var string[]
     */
     protected static $setters = [
-            'imageId' => 'setImageId'
+            'imageId' => 'setImageId',
+            'limit' => 'setLimit',
+            'marker' => 'setMarker'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * imageId  镜像id
+    * limit  查询镜像成员列表时每页的数量。
+    * marker  分页标识，用于查询下一页内容。
     *
     * @var string[]
     */
     protected static $getters = [
-            'imageId' => 'getImageId'
+            'imageId' => 'getImageId',
+            'limit' => 'getLimit',
+            'marker' => 'getMarker'
     ];
 
     /**
@@ -148,6 +168,8 @@ class GlanceListImageMembersRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['imageId'] = isset($data['imageId']) ? $data['imageId'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -196,6 +218,54 @@ class GlanceListImageMembersRequest implements ModelInterface, ArrayAccess
     public function setImageId($imageId)
     {
         $this->container['imageId'] = $imageId;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  查询镜像成员列表时每页的数量。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 查询镜像成员列表时每页的数量。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  分页标识，用于查询下一页内容。
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 分页标识，用于查询下一页内容。
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
         return $this;
     }
 

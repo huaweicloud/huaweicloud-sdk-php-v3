@@ -22,6 +22,8 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * state  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)。当存在该字段时，会返回以下文件的下载链接。
+    * code  返回码。
+    * message  异常信息。
     * audioFileUrl  音频文件下载链接，有效期为1个小时。
     * audioInfoFileUrl  音频信息文件下载链接，有效期为1个小时。
     * audioSrtFileUrl  字幕文件下载链接，有效期为1个小时。
@@ -31,6 +33,8 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'state' => 'string',
+            'code' => 'string',
+            'message' => 'string',
             'audioFileUrl' => 'string',
             'audioInfoFileUrl' => 'string',
             'audioSrtFileUrl' => 'string',
@@ -40,6 +44,8 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * state  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)。当存在该字段时，会返回以下文件的下载链接。
+    * code  返回码。
+    * message  异常信息。
     * audioFileUrl  音频文件下载链接，有效期为1个小时。
     * audioInfoFileUrl  音频信息文件下载链接，有效期为1个小时。
     * audioSrtFileUrl  字幕文件下载链接，有效期为1个小时。
@@ -49,6 +55,8 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'state' => null,
+        'code' => null,
+        'message' => null,
         'audioFileUrl' => null,
         'audioInfoFileUrl' => null,
         'audioSrtFileUrl' => null,
@@ -79,6 +87,8 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * state  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)。当存在该字段时，会返回以下文件的下载链接。
+    * code  返回码。
+    * message  异常信息。
     * audioFileUrl  音频文件下载链接，有效期为1个小时。
     * audioInfoFileUrl  音频信息文件下载链接，有效期为1个小时。
     * audioSrtFileUrl  字幕文件下载链接，有效期为1个小时。
@@ -88,6 +98,8 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'state' => 'state',
+            'code' => 'code',
+            'message' => 'message',
             'audioFileUrl' => 'audio_file_url',
             'audioInfoFileUrl' => 'audio_info_file_url',
             'audioSrtFileUrl' => 'audio_srt_file_url',
@@ -97,6 +109,8 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * state  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)。当存在该字段时，会返回以下文件的下载链接。
+    * code  返回码。
+    * message  异常信息。
     * audioFileUrl  音频文件下载链接，有效期为1个小时。
     * audioInfoFileUrl  音频信息文件下载链接，有效期为1个小时。
     * audioSrtFileUrl  字幕文件下载链接，有效期为1个小时。
@@ -106,6 +120,8 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'state' => 'setState',
+            'code' => 'setCode',
+            'message' => 'setMessage',
             'audioFileUrl' => 'setAudioFileUrl',
             'audioInfoFileUrl' => 'setAudioInfoFileUrl',
             'audioSrtFileUrl' => 'setAudioSrtFileUrl',
@@ -115,6 +131,8 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * state  音频文件是否已生成完成。该标记为PROCESSING时，应该每隔3秒再次调用本接口获取音频文件(WAITING 等待中,PROCESSING 处理中,SUCCEED 成功,FAILED 失败)。当存在该字段时，会返回以下文件的下载链接。
+    * code  返回码。
+    * message  异常信息。
     * audioFileUrl  音频文件下载链接，有效期为1个小时。
     * audioInfoFileUrl  音频信息文件下载链接，有效期为1个小时。
     * audioSrtFileUrl  字幕文件下载链接，有效期为1个小时。
@@ -124,6 +142,8 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'state' => 'getState',
+            'code' => 'getCode',
+            'message' => 'getMessage',
             'audioFileUrl' => 'getAudioFileUrl',
             'audioInfoFileUrl' => 'getAudioInfoFileUrl',
             'audioSrtFileUrl' => 'getAudioSrtFileUrl',
@@ -189,6 +209,8 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['audioFileUrl'] = isset($data['audioFileUrl']) ? $data['audioFileUrl'] : null;
         $this->container['audioInfoFileUrl'] = isset($data['audioInfoFileUrl']) ? $data['audioInfoFileUrl'] : null;
         $this->container['audioSrtFileUrl'] = isset($data['audioSrtFileUrl']) ? $data['audioSrtFileUrl'] : null;
@@ -208,6 +230,18 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) < 1)) {
                 $invalidProperties[] = "invalid value for 'state', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['code']) && (mb_strlen($this->container['code']) > 32)) {
+                $invalidProperties[] = "invalid value for 'code', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['code']) && (mb_strlen($this->container['code']) < 1)) {
+                $invalidProperties[] = "invalid value for 'code', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['message']) && (mb_strlen($this->container['message']) > 10240)) {
+                $invalidProperties[] = "invalid value for 'message', the character length must be smaller than or equal to 10240.";
+            }
+            if (!is_null($this->container['message']) && (mb_strlen($this->container['message']) < 1)) {
+                $invalidProperties[] = "invalid value for 'message', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['audioFileUrl']) && (mb_strlen($this->container['audioFileUrl']) > 2048)) {
                 $invalidProperties[] = "invalid value for 'audioFileUrl', the character length must be smaller than or equal to 2048.";
@@ -268,6 +302,54 @@ class ShowAsyncTtsJobResponse implements ModelInterface, ArrayAccess
     public function setState($state)
     {
         $this->container['state'] = $state;
+        return $this;
+    }
+
+    /**
+    * Gets code
+    *  返回码。
+    *
+    * @return string|null
+    */
+    public function getCode()
+    {
+        return $this->container['code'];
+    }
+
+    /**
+    * Sets code
+    *
+    * @param string|null $code 返回码。
+    *
+    * @return $this
+    */
+    public function setCode($code)
+    {
+        $this->container['code'] = $code;
+        return $this;
+    }
+
+    /**
+    * Gets message
+    *  异常信息。
+    *
+    * @return string|null
+    */
+    public function getMessage()
+    {
+        return $this->container['message'];
+    }
+
+    /**
+    * Sets message
+    *
+    * @param string|null $message 异常信息。
+    *
+    * @return $this
+    */
+    public function setMessage($message)
+    {
+        $this->container['message'] = $message;
         return $this;
     }
 

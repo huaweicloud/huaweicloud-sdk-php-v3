@@ -20,10 +20,10 @@ class VulScanTaskHostInfoScanVulList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vulId  漏洞id
-    * vulName  漏洞名称
-    * status  该漏洞的扫描状态，包含如下：   - scanning : 扫描中   - success : 扫描成功   - failed : 扫描失败
-    * failedReason  该漏洞扫描失败的原因，只有扫描失败的漏洞有该字段
+    * vulId  **参数解释**: 漏洞id **取值范围**: 字符长度0-256位
+    * vulName  **参数解释**: 漏洞名称 **取值范围**: 字符长度0-1024位
+    * status  **参数解释**: 该漏洞的扫描状态 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败
+    * failedReason  **参数解释**: 该漏洞扫描失败的原因，只有扫描失败的漏洞有该字段 **取值范围**: 字符长度0-1024位
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class VulScanTaskHostInfoScanVulList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vulId  漏洞id
-    * vulName  漏洞名称
-    * status  该漏洞的扫描状态，包含如下：   - scanning : 扫描中   - success : 扫描成功   - failed : 扫描失败
-    * failedReason  该漏洞扫描失败的原因，只有扫描失败的漏洞有该字段
+    * vulId  **参数解释**: 漏洞id **取值范围**: 字符长度0-256位
+    * vulName  **参数解释**: 漏洞名称 **取值范围**: 字符长度0-1024位
+    * status  **参数解释**: 该漏洞的扫描状态 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败
+    * failedReason  **参数解释**: 该漏洞扫描失败的原因，只有扫描失败的漏洞有该字段 **取值范围**: 字符长度0-1024位
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class VulScanTaskHostInfoScanVulList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vulId  漏洞id
-    * vulName  漏洞名称
-    * status  该漏洞的扫描状态，包含如下：   - scanning : 扫描中   - success : 扫描成功   - failed : 扫描失败
-    * failedReason  该漏洞扫描失败的原因，只有扫描失败的漏洞有该字段
+    * vulId  **参数解释**: 漏洞id **取值范围**: 字符长度0-256位
+    * vulName  **参数解释**: 漏洞名称 **取值范围**: 字符长度0-1024位
+    * status  **参数解释**: 该漏洞的扫描状态 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败
+    * failedReason  **参数解释**: 该漏洞扫描失败的原因，只有扫描失败的漏洞有该字段 **取值范围**: 字符长度0-1024位
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class VulScanTaskHostInfoScanVulList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vulId  漏洞id
-    * vulName  漏洞名称
-    * status  该漏洞的扫描状态，包含如下：   - scanning : 扫描中   - success : 扫描成功   - failed : 扫描失败
-    * failedReason  该漏洞扫描失败的原因，只有扫描失败的漏洞有该字段
+    * vulId  **参数解释**: 漏洞id **取值范围**: 字符长度0-256位
+    * vulName  **参数解释**: 漏洞名称 **取值范围**: 字符长度0-1024位
+    * status  **参数解释**: 该漏洞的扫描状态 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败
+    * failedReason  **参数解释**: 该漏洞扫描失败的原因，只有扫描失败的漏洞有该字段 **取值范围**: 字符长度0-1024位
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class VulScanTaskHostInfoScanVulList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vulId  漏洞id
-    * vulName  漏洞名称
-    * status  该漏洞的扫描状态，包含如下：   - scanning : 扫描中   - success : 扫描成功   - failed : 扫描失败
-    * failedReason  该漏洞扫描失败的原因，只有扫描失败的漏洞有该字段
+    * vulId  **参数解释**: 漏洞id **取值范围**: 字符长度0-256位
+    * vulName  **参数解释**: 漏洞名称 **取值范围**: 字符长度0-1024位
+    * status  **参数解释**: 该漏洞的扫描状态 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败
+    * failedReason  **参数解释**: 该漏洞扫描失败的原因，只有扫描失败的漏洞有该字段 **取值范围**: 字符长度0-1024位
     *
     * @var string[]
     */
@@ -231,7 +231,7 @@ class VulScanTaskHostInfoScanVulList implements ModelInterface, ArrayAccess
 
     /**
     * Gets vulId
-    *  漏洞id
+    *  **参数解释**: 漏洞id **取值范围**: 字符长度0-256位
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class VulScanTaskHostInfoScanVulList implements ModelInterface, ArrayAccess
     /**
     * Sets vulId
     *
-    * @param string|null $vulId 漏洞id
+    * @param string|null $vulId **参数解释**: 漏洞id **取值范围**: 字符长度0-256位
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class VulScanTaskHostInfoScanVulList implements ModelInterface, ArrayAccess
 
     /**
     * Gets vulName
-    *  漏洞名称
+    *  **参数解释**: 漏洞名称 **取值范围**: 字符长度0-1024位
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class VulScanTaskHostInfoScanVulList implements ModelInterface, ArrayAccess
     /**
     * Sets vulName
     *
-    * @param string|null $vulName 漏洞名称
+    * @param string|null $vulName **参数解释**: 漏洞名称 **取值范围**: 字符长度0-1024位
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class VulScanTaskHostInfoScanVulList implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  该漏洞的扫描状态，包含如下：   - scanning : 扫描中   - success : 扫描成功   - failed : 扫描失败
+    *  **参数解释**: 该漏洞的扫描状态 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class VulScanTaskHostInfoScanVulList implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 该漏洞的扫描状态，包含如下：   - scanning : 扫描中   - success : 扫描成功   - failed : 扫描失败
+    * @param string|null $status **参数解释**: 该漏洞的扫描状态 **取值范围**: - scanning：扫描中 - success：扫描成功 - failed：扫描失败
     *
     * @return $this
     */
@@ -303,7 +303,7 @@ class VulScanTaskHostInfoScanVulList implements ModelInterface, ArrayAccess
 
     /**
     * Gets failedReason
-    *  该漏洞扫描失败的原因，只有扫描失败的漏洞有该字段
+    *  **参数解释**: 该漏洞扫描失败的原因，只有扫描失败的漏洞有该字段 **取值范围**: 字符长度0-1024位
     *
     * @return string|null
     */
@@ -315,7 +315,7 @@ class VulScanTaskHostInfoScanVulList implements ModelInterface, ArrayAccess
     /**
     * Sets failedReason
     *
-    * @param string|null $failedReason 该漏洞扫描失败的原因，只有扫描失败的漏洞有该字段
+    * @param string|null $failedReason **参数解释**: 该漏洞扫描失败的原因，只有扫描失败的漏洞有该字段 **取值范围**: 字符长度0-1024位
     *
     * @return $this
     */

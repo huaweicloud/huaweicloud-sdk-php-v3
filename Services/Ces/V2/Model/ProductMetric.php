@@ -20,7 +20,7 @@ class ProductMetric implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dimensionName  **参数解释**： 按云产品维度屏蔽时的指标维度信息。    **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符，有多个时用\",\"连接。    **默认取值**： 不涉及。
+    * dimensionName  **参数解释**： 按云产品维度屏蔽时的资源维度信息。    **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符，有多个时用\",\"连接。    **默认取值**： 不涉及。
     * metricName  **参数解释**： 资源的监控指标名称，各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 必须以字母开头，只能包含0-9/a-z/A-Z/_/-。字符长度最短为1，最大为96。如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率。         **默认取值**： 不涉及。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ProductMetric implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dimensionName  **参数解释**： 按云产品维度屏蔽时的指标维度信息。    **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符，有多个时用\",\"连接。    **默认取值**： 不涉及。
+    * dimensionName  **参数解释**： 按云产品维度屏蔽时的资源维度信息。    **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符，有多个时用\",\"连接。    **默认取值**： 不涉及。
     * metricName  **参数解释**： 资源的监控指标名称，各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 必须以字母开头，只能包含0-9/a-z/A-Z/_/-。字符长度最短为1，最大为96。如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率。         **默认取值**： 不涉及。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ProductMetric implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dimensionName  **参数解释**： 按云产品维度屏蔽时的指标维度信息。    **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符，有多个时用\",\"连接。    **默认取值**： 不涉及。
+    * dimensionName  **参数解释**： 按云产品维度屏蔽时的资源维度信息。    **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符，有多个时用\",\"连接。    **默认取值**： 不涉及。
     * metricName  **参数解释**： 资源的监控指标名称，各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 必须以字母开头，只能包含0-9/a-z/A-Z/_/-。字符长度最短为1，最大为96。如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率。         **默认取值**： 不涉及。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ProductMetric implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dimensionName  **参数解释**： 按云产品维度屏蔽时的指标维度信息。    **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符，有多个时用\",\"连接。    **默认取值**： 不涉及。
+    * dimensionName  **参数解释**： 按云产品维度屏蔽时的资源维度信息。    **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符，有多个时用\",\"连接。    **默认取值**： 不涉及。
     * metricName  **参数解释**： 资源的监控指标名称，各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 必须以字母开头，只能包含0-9/a-z/A-Z/_/-。字符长度最短为1，最大为96。如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率。         **默认取值**： 不涉及。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ProductMetric implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dimensionName  **参数解释**： 按云产品维度屏蔽时的指标维度信息。    **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符，有多个时用\",\"连接。    **默认取值**： 不涉及。
+    * dimensionName  **参数解释**： 按云产品维度屏蔽时的资源维度信息。    **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符，有多个时用\",\"连接。    **默认取值**： 不涉及。
     * metricName  **参数解释**： 资源的监控指标名称，各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 必须以字母开头，只能包含0-9/a-z/A-Z/_/-。字符长度最短为1，最大为96。如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率。         **默认取值**： 不涉及。
     *
     * @var string[]
@@ -206,7 +206,7 @@ class ProductMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensionName
-    *  **参数解释**： 按云产品维度屏蔽时的指标维度信息。    **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符，有多个时用\",\"连接。    **默认取值**： 不涉及。
+    *  **参数解释**： 按云产品维度屏蔽时的资源维度信息。    **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符，有多个时用\",\"连接。    **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -218,7 +218,7 @@ class ProductMetric implements ModelInterface, ArrayAccess
     /**
     * Sets dimensionName
     *
-    * @param string $dimensionName **参数解释**： 按云产品维度屏蔽时的指标维度信息。    **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符，有多个时用\",\"连接。    **默认取值**： 不涉及。
+    * @param string $dimensionName **参数解释**： 按云产品维度屏蔽时的资源维度信息。    **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符，有多个时用\",\"连接。    **默认取值**： 不涉及。
     *
     * @return $this
     */

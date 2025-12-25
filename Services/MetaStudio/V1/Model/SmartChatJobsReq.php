@@ -20,7 +20,7 @@ class SmartChatJobsReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * extendParam  扩展参数，按照Json格式携带。 * city：所在城市 * client_id：客户端ID
+    * extendParam  扩展参数，按照Json格式携带。 * city：所在城市 * client_id：客户端ID * extra_json_param：自定义参数
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class SmartChatJobsReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * extendParam  扩展参数，按照Json格式携带。 * city：所在城市 * client_id：客户端ID
+    * extendParam  扩展参数，按照Json格式携带。 * city：所在城市 * client_id：客户端ID * extra_json_param：自定义参数
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class SmartChatJobsReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * extendParam  扩展参数，按照Json格式携带。 * city：所在城市 * client_id：客户端ID
+    * extendParam  扩展参数，按照Json格式携带。 * city：所在城市 * client_id：客户端ID * extra_json_param：自定义参数
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class SmartChatJobsReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * extendParam  扩展参数，按照Json格式携带。 * city：所在城市 * client_id：客户端ID
+    * extendParam  扩展参数，按照Json格式携带。 * city：所在城市 * client_id：客户端ID * extra_json_param：自定义参数
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class SmartChatJobsReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * extendParam  扩展参数，按照Json格式携带。 * city：所在城市 * client_id：客户端ID
+    * extendParam  扩展参数，按照Json格式携带。 * city：所在城市 * client_id：客户端ID * extra_json_param：自定义参数
     *
     * @var string[]
     */
@@ -180,7 +180,7 @@ class SmartChatJobsReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendParam
-    *  扩展参数，按照Json格式携带。 * city：所在城市 * client_id：客户端ID
+    *  扩展参数，按照Json格式携带。 * city：所在城市 * client_id：客户端ID * extra_json_param：自定义参数
     *
     * @return string|null
     */
@@ -192,7 +192,7 @@ class SmartChatJobsReq implements ModelInterface, ArrayAccess
     /**
     * Sets extendParam
     *
-    * @param string|null $extendParam 扩展参数，按照Json格式携带。 * city：所在城市 * client_id：客户端ID
+    * @param string|null $extendParam 扩展参数，按照Json格式携带。 * city：所在城市 * client_id：客户端ID * extra_json_param：自定义参数
     *
     * @return $this
     */

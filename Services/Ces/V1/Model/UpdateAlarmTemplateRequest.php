@@ -20,7 +20,7 @@ class UpdateAlarmTemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * templateId  需要更新的自定义告警模板ID。
+    * templateId  **参数解释**： 需要更新的自定义告警模板ID，如：at1603330892378wkDm77y6B **约束限制**： 不涉及 **取值范围**： 以at开头，后跟字母、数字，长度最长为64 **默认取值**： 不涉及
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UpdateAlarmTemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * templateId  需要更新的自定义告警模板ID。
+    * templateId  **参数解释**： 需要更新的自定义告警模板ID，如：at1603330892378wkDm77y6B **约束限制**： 不涉及 **取值范围**： 以at开头，后跟字母、数字，长度最长为64 **默认取值**： 不涉及
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateAlarmTemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * templateId  需要更新的自定义告警模板ID。
+    * templateId  **参数解释**： 需要更新的自定义告警模板ID，如：at1603330892378wkDm77y6B **约束限制**： 不涉及 **取值范围**： 以at开头，后跟字母、数字，长度最长为64 **默认取值**： 不涉及
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateAlarmTemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * templateId  需要更新的自定义告警模板ID。
+    * templateId  **参数解释**： 需要更新的自定义告警模板ID，如：at1603330892378wkDm77y6B **约束限制**： 不涉及 **取值范围**： 以at开头，后跟字母、数字，长度最长为64 **默认取值**： 不涉及
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateAlarmTemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * templateId  需要更新的自定义告警模板ID。
+    * templateId  **参数解释**： 需要更新的自定义告警模板ID，如：at1603330892378wkDm77y6B **约束限制**： 不涉及 **取值范围**： 以at开头，后跟字母、数字，长度最长为64 **默认取值**： 不涉及
     * body  body
     *
     * @var string[]
@@ -191,7 +191,7 @@ class UpdateAlarmTemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateId
-    *  需要更新的自定义告警模板ID。
+    *  **参数解释**： 需要更新的自定义告警模板ID，如：at1603330892378wkDm77y6B **约束限制**： 不涉及 **取值范围**： 以at开头，后跟字母、数字，长度最长为64 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class UpdateAlarmTemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets templateId
     *
-    * @param string $templateId 需要更新的自定义告警模板ID。
+    * @param string $templateId **参数解释**： 需要更新的自定义告警模板ID，如：at1603330892378wkDm77y6B **约束限制**： 不涉及 **取值范围**： 以at开头，后跟字母、数字，长度最长为64 **默认取值**： 不涉及
     *
     * @return $this
     */

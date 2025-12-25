@@ -20,42 +20,50 @@ class ListAlertRuleTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workspaceId  工作空间 ID。Workspace ID.
-    * offset  偏移量。Offset.
-    * limit  条数。Limit.
-    * sortKey  排序字段。Sort key
-    * sortDir  排序顺序，顺序、逆序。Sort direction, asc, desc。
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+    * workspaceId  工作空间ID
+    * templateName  模板名称
+    * status  **参数解释**: 状态 - ENABLED 启用 - DISABLED 禁用  **约束限制** 不涉及 **取值范围**: - ENABLED - DISABLED  **默认值** 不涉及
+    * severity  **参数解释**: 告警等级 - TIPS 提示 - LOW 低危 - MEDIUM 中危 - HIGH 高危 - FATAL 致命  **约束限制** 不涉及 **取值范围**: - TIPS - LOW - MEDIUM - HIGH - FATAL  **默认值** 不涉及
+    * offset  **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * limit  **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
+    * sortKey  按照属性排序。
+    * sortDir  排序顺序，支持 `ASC` 或 `DESC`。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'workspaceId' => 'string',
+            'templateName' => 'string',
+            'status' => 'string',
+            'severity' => 'string',
             'offset' => 'int',
             'limit' => 'int',
             'sortKey' => 'string',
-            'sortDir' => 'string',
-            'severity' => 'string[]'
+            'sortDir' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workspaceId  工作空间 ID。Workspace ID.
-    * offset  偏移量。Offset.
-    * limit  条数。Limit.
-    * sortKey  排序字段。Sort key
-    * sortDir  排序顺序，顺序、逆序。Sort direction, asc, desc。
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+    * workspaceId  工作空间ID
+    * templateName  模板名称
+    * status  **参数解释**: 状态 - ENABLED 启用 - DISABLED 禁用  **约束限制** 不涉及 **取值范围**: - ENABLED - DISABLED  **默认值** 不涉及
+    * severity  **参数解释**: 告警等级 - TIPS 提示 - LOW 低危 - MEDIUM 中危 - HIGH 高危 - FATAL 致命  **约束限制** 不涉及 **取值范围**: - TIPS - LOW - MEDIUM - HIGH - FATAL  **默认值** 不涉及
+    * offset  **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * limit  **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
+    * sortKey  按照属性排序。
+    * sortDir  排序顺序，支持 `ASC` 或 `DESC`。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'workspaceId' => null,
+        'templateName' => null,
+        'status' => null,
+        'severity' => null,
         'offset' => 'int64',
         'limit' => 'int64',
         'sortKey' => null,
-        'sortDir' => null,
-        'severity' => null
+        'sortDir' => null
     ];
 
     /**
@@ -81,62 +89,74 @@ class ListAlertRuleTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workspaceId  工作空间 ID。Workspace ID.
-    * offset  偏移量。Offset.
-    * limit  条数。Limit.
-    * sortKey  排序字段。Sort key
-    * sortDir  排序顺序，顺序、逆序。Sort direction, asc, desc。
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+    * workspaceId  工作空间ID
+    * templateName  模板名称
+    * status  **参数解释**: 状态 - ENABLED 启用 - DISABLED 禁用  **约束限制** 不涉及 **取值范围**: - ENABLED - DISABLED  **默认值** 不涉及
+    * severity  **参数解释**: 告警等级 - TIPS 提示 - LOW 低危 - MEDIUM 中危 - HIGH 高危 - FATAL 致命  **约束限制** 不涉及 **取值范围**: - TIPS - LOW - MEDIUM - HIGH - FATAL  **默认值** 不涉及
+    * offset  **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * limit  **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
+    * sortKey  按照属性排序。
+    * sortDir  排序顺序，支持 `ASC` 或 `DESC`。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'workspaceId' => 'workspace_id',
+            'templateName' => 'template_name',
+            'status' => 'status',
+            'severity' => 'severity',
             'offset' => 'offset',
             'limit' => 'limit',
             'sortKey' => 'sort_key',
-            'sortDir' => 'sort_dir',
-            'severity' => 'severity'
+            'sortDir' => 'sort_dir'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workspaceId  工作空间 ID。Workspace ID.
-    * offset  偏移量。Offset.
-    * limit  条数。Limit.
-    * sortKey  排序字段。Sort key
-    * sortDir  排序顺序，顺序、逆序。Sort direction, asc, desc。
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+    * workspaceId  工作空间ID
+    * templateName  模板名称
+    * status  **参数解释**: 状态 - ENABLED 启用 - DISABLED 禁用  **约束限制** 不涉及 **取值范围**: - ENABLED - DISABLED  **默认值** 不涉及
+    * severity  **参数解释**: 告警等级 - TIPS 提示 - LOW 低危 - MEDIUM 中危 - HIGH 高危 - FATAL 致命  **约束限制** 不涉及 **取值范围**: - TIPS - LOW - MEDIUM - HIGH - FATAL  **默认值** 不涉及
+    * offset  **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * limit  **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
+    * sortKey  按照属性排序。
+    * sortDir  排序顺序，支持 `ASC` 或 `DESC`。
     *
     * @var string[]
     */
     protected static $setters = [
             'workspaceId' => 'setWorkspaceId',
+            'templateName' => 'setTemplateName',
+            'status' => 'setStatus',
+            'severity' => 'setSeverity',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
             'sortKey' => 'setSortKey',
-            'sortDir' => 'setSortDir',
-            'severity' => 'setSeverity'
+            'sortDir' => 'setSortDir'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workspaceId  工作空间 ID。Workspace ID.
-    * offset  偏移量。Offset.
-    * limit  条数。Limit.
-    * sortKey  排序字段。Sort key
-    * sortDir  排序顺序，顺序、逆序。Sort direction, asc, desc。
-    * severity  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+    * workspaceId  工作空间ID
+    * templateName  模板名称
+    * status  **参数解释**: 状态 - ENABLED 启用 - DISABLED 禁用  **约束限制** 不涉及 **取值范围**: - ENABLED - DISABLED  **默认值** 不涉及
+    * severity  **参数解释**: 告警等级 - TIPS 提示 - LOW 低危 - MEDIUM 中危 - HIGH 高危 - FATAL 致命  **约束限制** 不涉及 **取值范围**: - TIPS - LOW - MEDIUM - HIGH - FATAL  **默认值** 不涉及
+    * offset  **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * limit  **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
+    * sortKey  按照属性排序。
+    * sortDir  排序顺序，支持 `ASC` 或 `DESC`。
     *
     * @var string[]
     */
     protected static $getters = [
             'workspaceId' => 'getWorkspaceId',
+            'templateName' => 'getTemplateName',
+            'status' => 'getStatus',
+            'severity' => 'getSeverity',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
             'sortKey' => 'getSortKey',
-            'sortDir' => 'getSortDir',
-            'severity' => 'getSeverity'
+            'sortDir' => 'getSortDir'
     ];
 
     /**
@@ -179,8 +199,8 @@ class ListAlertRuleTemplatesRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const SORT_DIR_ASC = 'asc';
-    const SORT_DIR_DESC = 'desc';
+    const STATUS_ENABLED = 'ENABLED';
+    const STATUS_DISABLED = 'DISABLED';
     const SEVERITY_TIPS = 'TIPS';
     const SEVERITY_LOW = 'LOW';
     const SEVERITY_MEDIUM = 'MEDIUM';
@@ -193,11 +213,11 @@ class ListAlertRuleTemplatesRequest implements ModelInterface, ArrayAccess
     *
     * @return string[]
     */
-    public function getSortDirAllowableValues()
+    public function getStatusAllowableValues()
     {
         return [
-            self::SORT_DIR_ASC,
-            self::SORT_DIR_DESC,
+            self::STATUS_ENABLED,
+            self::STATUS_DISABLED,
         ];
     }
 
@@ -234,11 +254,13 @@ class ListAlertRuleTemplatesRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['workspaceId'] = isset($data['workspaceId']) ? $data['workspaceId'] : null;
+        $this->container['templateName'] = isset($data['templateName']) ? $data['templateName'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['severity'] = isset($data['severity']) ? $data['severity'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
-        $this->container['severity'] = isset($data['severity']) ? $data['severity'] : null;
     }
 
     /**
@@ -255,41 +277,55 @@ class ListAlertRuleTemplatesRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['workspaceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'workspaceId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['workspaceId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'workspaceId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['workspaceId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'workspaceId', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['offset'] === null) {
-            $invalidProperties[] = "'offset' can't be null";
-        }
-            if (($this->container['offset'] > 9223372036854775807)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 9223372036854775807.";
+            if (!is_null($this->container['templateName']) && (mb_strlen($this->container['templateName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'templateName', the character length must be smaller than or equal to 256.";
             }
-            if (($this->container['offset'] < 0)) {
-                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            if (!is_null($this->container['templateName']) && (mb_strlen($this->container['templateName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'templateName', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['limit'] === null) {
-            $invalidProperties[] = "'limit' can't be null";
-        }
-            if (($this->container['limit'] > 50)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 50.";
-            }
-            if (($this->container['limit'] < 10)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
-            }
-            if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) > 256)) {
-                $invalidProperties[] = "invalid value for 'sortKey', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) < 1)) {
-                $invalidProperties[] = "invalid value for 'sortKey', the character length must be bigger than or equal to 1.";
-            }
-            $allowedValues = $this->getSortDirAllowableValues();
-                if (!is_null($this->container['sortDir']) && !in_array($this->container['sortDir'], $allowedValues, true)) {
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
-                "invalid value for 'sortDir', must be one of '%s'",
+                "invalid value for 'status', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
 
+            $allowedValues = $this->getSeverityAllowableValues();
+                if (!is_null($this->container['severity']) && !in_array($this->container['severity'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'severity', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 9223372036854775800)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 9223372036854775800.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) > 64)) {
+                $invalidProperties[] = "invalid value for 'sortKey', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) < 1)) {
+                $invalidProperties[] = "invalid value for 'sortKey', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['sortDir']) && (mb_strlen($this->container['sortDir']) > 64)) {
+                $invalidProperties[] = "invalid value for 'sortDir', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['sortDir']) && (mb_strlen($this->container['sortDir']) < 1)) {
+                $invalidProperties[] = "invalid value for 'sortDir', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -306,7 +342,7 @@ class ListAlertRuleTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspaceId
-    *  工作空间 ID。Workspace ID.
+    *  工作空间ID
     *
     * @return string
     */
@@ -318,7 +354,7 @@ class ListAlertRuleTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets workspaceId
     *
-    * @param string $workspaceId 工作空间 ID。Workspace ID.
+    * @param string $workspaceId 工作空间ID
     *
     * @return $this
     */
@@ -329,10 +365,82 @@ class ListAlertRuleTemplatesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets offset
-    *  偏移量。Offset.
+    * Gets templateName
+    *  模板名称
     *
-    * @return int
+    * @return string|null
+    */
+    public function getTemplateName()
+    {
+        return $this->container['templateName'];
+    }
+
+    /**
+    * Sets templateName
+    *
+    * @param string|null $templateName 模板名称
+    *
+    * @return $this
+    */
+    public function setTemplateName($templateName)
+    {
+        $this->container['templateName'] = $templateName;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  **参数解释**: 状态 - ENABLED 启用 - DISABLED 禁用  **约束限制** 不涉及 **取值范围**: - ENABLED - DISABLED  **默认值** 不涉及
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status **参数解释**: 状态 - ENABLED 启用 - DISABLED 禁用  **约束限制** 不涉及 **取值范围**: - ENABLED - DISABLED  **默认值** 不涉及
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets severity
+    *  **参数解释**: 告警等级 - TIPS 提示 - LOW 低危 - MEDIUM 中危 - HIGH 高危 - FATAL 致命  **约束限制** 不涉及 **取值范围**: - TIPS - LOW - MEDIUM - HIGH - FATAL  **默认值** 不涉及
+    *
+    * @return string|null
+    */
+    public function getSeverity()
+    {
+        return $this->container['severity'];
+    }
+
+    /**
+    * Sets severity
+    *
+    * @param string|null $severity **参数解释**: 告警等级 - TIPS 提示 - LOW 低危 - MEDIUM 中危 - HIGH 高危 - FATAL 致命  **约束限制** 不涉及 **取值范围**: - TIPS - LOW - MEDIUM - HIGH - FATAL  **默认值** 不涉及
+    *
+    * @return $this
+    */
+    public function setSeverity($severity)
+    {
+        $this->container['severity'] = $severity;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return int|null
     */
     public function getOffset()
     {
@@ -342,7 +450,7 @@ class ListAlertRuleTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int $offset 偏移量。Offset.
+    * @param int|null $offset **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -354,9 +462,9 @@ class ListAlertRuleTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  条数。Limit.
+    *  **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
     *
-    * @return int
+    * @return int|null
     */
     public function getLimit()
     {
@@ -366,7 +474,7 @@ class ListAlertRuleTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int $limit 条数。Limit.
+    * @param int|null $limit **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -378,7 +486,7 @@ class ListAlertRuleTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
-    *  排序字段。Sort key
+    *  按照属性排序。
     *
     * @return string|null
     */
@@ -390,7 +498,7 @@ class ListAlertRuleTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 排序字段。Sort key
+    * @param string|null $sortKey 按照属性排序。
     *
     * @return $this
     */
@@ -402,7 +510,7 @@ class ListAlertRuleTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortDir
-    *  排序顺序，顺序、逆序。Sort direction, asc, desc。
+    *  排序顺序，支持 `ASC` 或 `DESC`。
     *
     * @return string|null
     */
@@ -414,37 +522,13 @@ class ListAlertRuleTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortDir
     *
-    * @param string|null $sortDir 排序顺序，顺序、逆序。Sort direction, asc, desc。
+    * @param string|null $sortDir 排序顺序，支持 `ASC` 或 `DESC`。
     *
     * @return $this
     */
     public function setSortDir($sortDir)
     {
         $this->container['sortDir'] = $sortDir;
-        return $this;
-    }
-
-    /**
-    * Gets severity
-    *  严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    *
-    * @return string[]|null
-    */
-    public function getSeverity()
-    {
-        return $this->container['severity'];
-    }
-
-    /**
-    * Sets severity
-    *
-    * @param string[]|null $severity 严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-    *
-    * @return $this
-    */
-    public function setSeverity($severity)
-    {
-        $this->container['severity'] = $severity;
         return $this;
     }
 

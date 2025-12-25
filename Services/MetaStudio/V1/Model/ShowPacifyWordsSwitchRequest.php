@@ -25,7 +25,7 @@ class ShowPacifyWordsSwitchRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * robotId  应用ID。
-    * language  智能交互语言 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * language  智能交互语言 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class ShowPacifyWordsSwitchRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * robotId  应用ID。
-    * language  智能交互语言 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * language  智能交互语言 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ShowPacifyWordsSwitchRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * robotId  应用ID。
-    * language  智能交互语言 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * language  智能交互语言 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class ShowPacifyWordsSwitchRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * robotId  应用ID。
-    * language  智能交互语言 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * language  智能交互语言 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class ShowPacifyWordsSwitchRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * robotId  应用ID。
-    * language  智能交互语言 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * language  智能交互语言 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     *
     * @var string[]
     */
@@ -185,6 +185,7 @@ class ShowPacifyWordsSwitchRequest implements ModelInterface, ArrayAccess
     const LANGUAGE_POR = 'por';
     const LANGUAGE_ARABIC = 'Arabic';
     const LANGUAGE_THAI = 'Thai';
+    const LANGUAGE_FR = 'fr';
     
 
     /**
@@ -201,6 +202,7 @@ class ShowPacifyWordsSwitchRequest implements ModelInterface, ArrayAccess
             self::LANGUAGE_POR,
             self::LANGUAGE_ARABIC,
             self::LANGUAGE_THAI,
+            self::LANGUAGE_FR,
         ];
     }
 
@@ -416,7 +418,7 @@ class ShowPacifyWordsSwitchRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  智能交互语言 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    *  智能交互语言 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     *
     * @return string
     */
@@ -428,7 +430,7 @@ class ShowPacifyWordsSwitchRequest implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string $language 智能交互语言 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * @param string $language 智能交互语言 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     *
     * @return $this
     */

@@ -4439,6 +4439,9 @@ class BssAsyncClient extends Client
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
         }
+        if ($localVarParams['serviceTypeName'] !== null) {
+            $queryParams['service_type_name'] = $localVarParams['serviceTypeName'];
+        }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];
         }

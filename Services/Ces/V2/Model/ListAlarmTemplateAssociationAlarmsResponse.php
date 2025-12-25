@@ -22,7 +22,7 @@ class ListAlarmTemplateAssociationAlarmsResponse implements ModelInterface, Arra
     /**
     * Array of property to type mappings. Used for (de)serialization
     * alarms  告警规则列表
-    * count  告警规则列表总数
+    * count  **参数解释**： 告警规则列表总数。     **取值范围**： 取值范围为0-1000.
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class ListAlarmTemplateAssociationAlarmsResponse implements ModelInterface, Arra
     /**
     * Array of property to format mappings. Used for (de)serialization
     * alarms  告警规则列表
-    * count  告警规则列表总数
+    * count  **参数解释**： 告警规则列表总数。     **取值范围**： 取值范围为0-1000.
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class ListAlarmTemplateAssociationAlarmsResponse implements ModelInterface, Arra
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * alarms  告警规则列表
-    * count  告警规则列表总数
+    * count  **参数解释**： 告警规则列表总数。     **取值范围**： 取值范围为0-1000.
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class ListAlarmTemplateAssociationAlarmsResponse implements ModelInterface, Arra
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * alarms  告警规则列表
-    * count  告警规则列表总数
+    * count  **参数解释**： 告警规则列表总数。     **取值范围**： 取值范围为0-1000.
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListAlarmTemplateAssociationAlarmsResponse implements ModelInterface, Arra
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * alarms  告警规则列表
-    * count  告警规则列表总数
+    * count  **参数解释**： 告警规则列表总数。     **取值范围**： 取值范围为0-1000.
     *
     * @var string[]
     */
@@ -216,7 +216,7 @@ class ListAlarmTemplateAssociationAlarmsResponse implements ModelInterface, Arra
 
     /**
     * Gets count
-    *  告警规则列表总数
+    *  **参数解释**： 告警规则列表总数。     **取值范围**： 取值范围为0-1000.
     *
     * @return int|null
     */
@@ -228,7 +228,7 @@ class ListAlarmTemplateAssociationAlarmsResponse implements ModelInterface, Arra
     /**
     * Sets count
     *
-    * @param int|null $count 告警规则列表总数
+    * @param int|null $count **参数解释**： 告警规则列表总数。     **取值范围**： 取值范围为0-1000.
     *
     * @return $this
     */

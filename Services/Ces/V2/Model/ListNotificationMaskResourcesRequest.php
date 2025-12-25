@@ -21,8 +21,8 @@ class ListNotificationMaskResourcesRequest implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * notificationMaskId  **参数解释**： 屏蔽规则ID。    **约束限制**： 不涉及。 **取值范围**： 只能包含字母、数字，长度为[1,64]个字符。           **默认取值**： 不涉及。
-    * offset  分页偏移量
-    * limit  分页大小
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class ListNotificationMaskResourcesRequest implements ModelInterface, ArrayAcces
     /**
     * Array of property to format mappings. Used for (de)serialization
     * notificationMaskId  **参数解释**： 屏蔽规则ID。    **约束限制**： 不涉及。 **取值范围**： 只能包含字母、数字，长度为[1,64]个字符。           **默认取值**： 不涉及。
-    * offset  分页偏移量
-    * limit  分页大小
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class ListNotificationMaskResourcesRequest implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * notificationMaskId  **参数解释**： 屏蔽规则ID。    **约束限制**： 不涉及。 **取值范围**： 只能包含字母、数字，长度为[1,64]个字符。           **默认取值**： 不涉及。
-    * offset  分页偏移量
-    * limit  分页大小
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class ListNotificationMaskResourcesRequest implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * notificationMaskId  **参数解释**： 屏蔽规则ID。    **约束限制**： 不涉及。 **取值范围**： 只能包含字母、数字，长度为[1,64]个字符。           **默认取值**： 不涉及。
-    * offset  分页偏移量
-    * limit  分页大小
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class ListNotificationMaskResourcesRequest implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * notificationMaskId  **参数解释**： 屏蔽规则ID。    **约束限制**： 不涉及。 **取值范围**： 只能包含字母、数字，长度为[1,64]个字符。           **默认取值**： 不涉及。
-    * offset  分页偏移量
-    * limit  分页大小
+    * offset  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
+    * limit  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
     *
     * @var string[]
     */
@@ -244,7 +244,7 @@ class ListNotificationMaskResourcesRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets offset
-    *  分页偏移量
+    *  **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
     *
     * @return int|null
     */
@@ -256,7 +256,7 @@ class ListNotificationMaskResourcesRequest implements ModelInterface, ArrayAcces
     /**
     * Sets offset
     *
-    * @param int|null $offset 分页偏移量
+    * @param int|null $offset **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
     *
     * @return $this
     */
@@ -268,7 +268,7 @@ class ListNotificationMaskResourcesRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets limit
-    *  分页大小
+    *  **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
     *
     * @return int|null
     */
@@ -280,7 +280,7 @@ class ListNotificationMaskResourcesRequest implements ModelInterface, ArrayAcces
     /**
     * Sets limit
     *
-    * @param int|null $limit 分页大小
+    * @param int|null $limit **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
     *
     * @return $this
     */

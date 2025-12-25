@@ -21,74 +21,82 @@ class CreatePipeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainId  用户domainId
-    * projectId  项目id
-    * dataspaceId  数据空间id
-    * dataspaceName  数据空间名称
-    * pipeId  管道id
+    * projectId  项目ID
+    * workspaceId  UUID
+    * pipeId  UUID
     * pipeName  管道名称
-    * pipeType  管道类型（system-defined，系统预定义)、1（user-defined，用户自定义)
-    * description  描述信息
-    * storagePeriod  索引存储天数
-    * shards  索引分片数量
-    * createBy  创建者
-    * createTime  创建时间
-    * updateBy  更新者
-    * updateTime  更新时间
+    * pipeAlias  管道别名
+    * category  category
+    * directory  directory 目录分组
+    * description  管道描述
+    * processStatus  processStatus
+    * processError  processError
+    * ownerType  ownerType
+    * resources  管道资源
+    * schema  schema
+    * createTime  毫秒时间戳
+    * updateTime  毫秒时间戳
+    * deleteTime  毫秒时间戳
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'domainId' => 'string',
             'projectId' => 'string',
-            'dataspaceId' => 'string',
-            'dataspaceName' => 'string',
+            'workspaceId' => 'string',
             'pipeId' => 'string',
             'pipeName' => 'string',
-            'pipeType' => 'string',
+            'pipeAlias' => 'string',
+            'category' => '\HuaweiCloud\SDK\SecMaster\V2\Model\PipeCategory',
+            'directory' => 'string',
             'description' => 'string',
-            'storagePeriod' => 'int',
-            'shards' => 'int',
-            'createBy' => 'string',
+            'processStatus' => '\HuaweiCloud\SDK\SecMaster\V2\Model\PipeProcessStatus',
+            'processError' => '\HuaweiCloud\SDK\SecMaster\V2\Model\PipeProcessError',
+            'ownerType' => '\HuaweiCloud\SDK\SecMaster\V2\Model\PipeOwnerType',
+            'resources' => '\HuaweiCloud\SDK\SecMaster\V2\Model\PipeResource[]',
+            'schema' => '\HuaweiCloud\SDK\SecMaster\V2\Model\PipeSchema',
             'createTime' => 'int',
-            'updateBy' => 'string',
-            'updateTime' => 'int'
+            'updateTime' => 'int',
+            'deleteTime' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainId  用户domainId
-    * projectId  项目id
-    * dataspaceId  数据空间id
-    * dataspaceName  数据空间名称
-    * pipeId  管道id
+    * projectId  项目ID
+    * workspaceId  UUID
+    * pipeId  UUID
     * pipeName  管道名称
-    * pipeType  管道类型（system-defined，系统预定义)、1（user-defined，用户自定义)
-    * description  描述信息
-    * storagePeriod  索引存储天数
-    * shards  索引分片数量
-    * createBy  创建者
-    * createTime  创建时间
-    * updateBy  更新者
-    * updateTime  更新时间
+    * pipeAlias  管道别名
+    * category  category
+    * directory  directory 目录分组
+    * description  管道描述
+    * processStatus  processStatus
+    * processError  processError
+    * ownerType  ownerType
+    * resources  管道资源
+    * schema  schema
+    * createTime  毫秒时间戳
+    * updateTime  毫秒时间戳
+    * deleteTime  毫秒时间戳
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'domainId' => null,
         'projectId' => null,
-        'dataspaceId' => null,
-        'dataspaceName' => null,
+        'workspaceId' => null,
         'pipeId' => null,
         'pipeName' => null,
-        'pipeType' => null,
+        'pipeAlias' => null,
+        'category' => null,
+        'directory' => null,
         'description' => null,
-        'storagePeriod' => 'int32',
-        'shards' => 'int32',
-        'createBy' => null,
-        'createTime' => 'int32',
-        'updateBy' => null,
-        'updateTime' => 'int32'
+        'processStatus' => null,
+        'processError' => null,
+        'ownerType' => null,
+        'resources' => null,
+        'schema' => null,
+        'createTime' => 'int64',
+        'updateTime' => 'int64',
+        'deleteTime' => 'int64'
     ];
 
     /**
@@ -114,110 +122,122 @@ class CreatePipeResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainId  用户domainId
-    * projectId  项目id
-    * dataspaceId  数据空间id
-    * dataspaceName  数据空间名称
-    * pipeId  管道id
+    * projectId  项目ID
+    * workspaceId  UUID
+    * pipeId  UUID
     * pipeName  管道名称
-    * pipeType  管道类型（system-defined，系统预定义)、1（user-defined，用户自定义)
-    * description  描述信息
-    * storagePeriod  索引存储天数
-    * shards  索引分片数量
-    * createBy  创建者
-    * createTime  创建时间
-    * updateBy  更新者
-    * updateTime  更新时间
+    * pipeAlias  管道别名
+    * category  category
+    * directory  directory 目录分组
+    * description  管道描述
+    * processStatus  processStatus
+    * processError  processError
+    * ownerType  ownerType
+    * resources  管道资源
+    * schema  schema
+    * createTime  毫秒时间戳
+    * updateTime  毫秒时间戳
+    * deleteTime  毫秒时间戳
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'domainId' => 'domain_id',
             'projectId' => 'project_id',
-            'dataspaceId' => 'dataspace_id',
-            'dataspaceName' => 'dataspace_name',
+            'workspaceId' => 'workspace_id',
             'pipeId' => 'pipe_id',
             'pipeName' => 'pipe_name',
-            'pipeType' => 'pipe_type',
+            'pipeAlias' => 'pipe_alias',
+            'category' => 'category',
+            'directory' => 'directory',
             'description' => 'description',
-            'storagePeriod' => 'storage_period',
-            'shards' => 'shards',
-            'createBy' => 'create_by',
+            'processStatus' => 'process_status',
+            'processError' => 'process_error',
+            'ownerType' => 'owner_type',
+            'resources' => 'resources',
+            'schema' => 'schema',
             'createTime' => 'create_time',
-            'updateBy' => 'update_by',
-            'updateTime' => 'update_time'
+            'updateTime' => 'update_time',
+            'deleteTime' => 'delete_time'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainId  用户domainId
-    * projectId  项目id
-    * dataspaceId  数据空间id
-    * dataspaceName  数据空间名称
-    * pipeId  管道id
+    * projectId  项目ID
+    * workspaceId  UUID
+    * pipeId  UUID
     * pipeName  管道名称
-    * pipeType  管道类型（system-defined，系统预定义)、1（user-defined，用户自定义)
-    * description  描述信息
-    * storagePeriod  索引存储天数
-    * shards  索引分片数量
-    * createBy  创建者
-    * createTime  创建时间
-    * updateBy  更新者
-    * updateTime  更新时间
+    * pipeAlias  管道别名
+    * category  category
+    * directory  directory 目录分组
+    * description  管道描述
+    * processStatus  processStatus
+    * processError  processError
+    * ownerType  ownerType
+    * resources  管道资源
+    * schema  schema
+    * createTime  毫秒时间戳
+    * updateTime  毫秒时间戳
+    * deleteTime  毫秒时间戳
     *
     * @var string[]
     */
     protected static $setters = [
-            'domainId' => 'setDomainId',
             'projectId' => 'setProjectId',
-            'dataspaceId' => 'setDataspaceId',
-            'dataspaceName' => 'setDataspaceName',
+            'workspaceId' => 'setWorkspaceId',
             'pipeId' => 'setPipeId',
             'pipeName' => 'setPipeName',
-            'pipeType' => 'setPipeType',
+            'pipeAlias' => 'setPipeAlias',
+            'category' => 'setCategory',
+            'directory' => 'setDirectory',
             'description' => 'setDescription',
-            'storagePeriod' => 'setStoragePeriod',
-            'shards' => 'setShards',
-            'createBy' => 'setCreateBy',
+            'processStatus' => 'setProcessStatus',
+            'processError' => 'setProcessError',
+            'ownerType' => 'setOwnerType',
+            'resources' => 'setResources',
+            'schema' => 'setSchema',
             'createTime' => 'setCreateTime',
-            'updateBy' => 'setUpdateBy',
-            'updateTime' => 'setUpdateTime'
+            'updateTime' => 'setUpdateTime',
+            'deleteTime' => 'setDeleteTime'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainId  用户domainId
-    * projectId  项目id
-    * dataspaceId  数据空间id
-    * dataspaceName  数据空间名称
-    * pipeId  管道id
+    * projectId  项目ID
+    * workspaceId  UUID
+    * pipeId  UUID
     * pipeName  管道名称
-    * pipeType  管道类型（system-defined，系统预定义)、1（user-defined，用户自定义)
-    * description  描述信息
-    * storagePeriod  索引存储天数
-    * shards  索引分片数量
-    * createBy  创建者
-    * createTime  创建时间
-    * updateBy  更新者
-    * updateTime  更新时间
+    * pipeAlias  管道别名
+    * category  category
+    * directory  directory 目录分组
+    * description  管道描述
+    * processStatus  processStatus
+    * processError  processError
+    * ownerType  ownerType
+    * resources  管道资源
+    * schema  schema
+    * createTime  毫秒时间戳
+    * updateTime  毫秒时间戳
+    * deleteTime  毫秒时间戳
     *
     * @var string[]
     */
     protected static $getters = [
-            'domainId' => 'getDomainId',
             'projectId' => 'getProjectId',
-            'dataspaceId' => 'getDataspaceId',
-            'dataspaceName' => 'getDataspaceName',
+            'workspaceId' => 'getWorkspaceId',
             'pipeId' => 'getPipeId',
             'pipeName' => 'getPipeName',
-            'pipeType' => 'getPipeType',
+            'pipeAlias' => 'getPipeAlias',
+            'category' => 'getCategory',
+            'directory' => 'getDirectory',
             'description' => 'getDescription',
-            'storagePeriod' => 'getStoragePeriod',
-            'shards' => 'getShards',
-            'createBy' => 'getCreateBy',
+            'processStatus' => 'getProcessStatus',
+            'processError' => 'getProcessError',
+            'ownerType' => 'getOwnerType',
+            'resources' => 'getResources',
+            'schema' => 'getSchema',
             'createTime' => 'getCreateTime',
-            'updateBy' => 'getUpdateBy',
-            'updateTime' => 'getUpdateTime'
+            'updateTime' => 'getUpdateTime',
+            'deleteTime' => 'getDeleteTime'
     ];
 
     /**
@@ -278,20 +298,22 @@ class CreatePipeResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
-        $this->container['dataspaceId'] = isset($data['dataspaceId']) ? $data['dataspaceId'] : null;
-        $this->container['dataspaceName'] = isset($data['dataspaceName']) ? $data['dataspaceName'] : null;
+        $this->container['workspaceId'] = isset($data['workspaceId']) ? $data['workspaceId'] : null;
         $this->container['pipeId'] = isset($data['pipeId']) ? $data['pipeId'] : null;
         $this->container['pipeName'] = isset($data['pipeName']) ? $data['pipeName'] : null;
-        $this->container['pipeType'] = isset($data['pipeType']) ? $data['pipeType'] : null;
+        $this->container['pipeAlias'] = isset($data['pipeAlias']) ? $data['pipeAlias'] : null;
+        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
+        $this->container['directory'] = isset($data['directory']) ? $data['directory'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['storagePeriod'] = isset($data['storagePeriod']) ? $data['storagePeriod'] : null;
-        $this->container['shards'] = isset($data['shards']) ? $data['shards'] : null;
-        $this->container['createBy'] = isset($data['createBy']) ? $data['createBy'] : null;
+        $this->container['processStatus'] = isset($data['processStatus']) ? $data['processStatus'] : null;
+        $this->container['processError'] = isset($data['processError']) ? $data['processError'] : null;
+        $this->container['ownerType'] = isset($data['ownerType']) ? $data['ownerType'] : null;
+        $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
+        $this->container['schema'] = isset($data['schema']) ? $data['schema'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
-        $this->container['updateBy'] = isset($data['updateBy']) ? $data['updateBy'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
+        $this->container['deleteTime'] = isset($data['deleteTime']) ? $data['deleteTime'] : null;
     }
 
     /**
@@ -302,89 +324,65 @@ class CreatePipeResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'domainId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 32.";
-            }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
             }
             if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 32)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
             }
-            if (!is_null($this->container['dataspaceId']) && (mb_strlen($this->container['dataspaceId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'dataspaceId', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['workspaceId']) && (mb_strlen($this->container['workspaceId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'workspaceId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['dataspaceId']) && (mb_strlen($this->container['dataspaceId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'dataspaceId', the character length must be bigger than or equal to 32.";
-            }
-            if (!is_null($this->container['dataspaceName']) && (mb_strlen($this->container['dataspaceName']) > 36)) {
-                $invalidProperties[] = "invalid value for 'dataspaceName', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['dataspaceName']) && (mb_strlen($this->container['dataspaceName']) < 32)) {
-                $invalidProperties[] = "invalid value for 'dataspaceName', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['workspaceId']) && (mb_strlen($this->container['workspaceId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'workspaceId', the character length must be bigger than or equal to 36.";
             }
             if (!is_null($this->container['pipeId']) && (mb_strlen($this->container['pipeId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'pipeId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['pipeId']) && (mb_strlen($this->container['pipeId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'pipeId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['pipeId']) && (mb_strlen($this->container['pipeId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'pipeId', the character length must be bigger than or equal to 36.";
             }
-            if (!is_null($this->container['pipeName']) && (mb_strlen($this->container['pipeName']) > 36)) {
-                $invalidProperties[] = "invalid value for 'pipeName', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['pipeName']) && (mb_strlen($this->container['pipeName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'pipeName', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['pipeName']) && (mb_strlen($this->container['pipeName']) < 32)) {
-                $invalidProperties[] = "invalid value for 'pipeName', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['pipeName']) && (mb_strlen($this->container['pipeName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'pipeName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['pipeType']) && (mb_strlen($this->container['pipeType']) > 128)) {
-                $invalidProperties[] = "invalid value for 'pipeType', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['pipeAlias']) && (mb_strlen($this->container['pipeAlias']) > 256)) {
+                $invalidProperties[] = "invalid value for 'pipeAlias', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['pipeType']) && (mb_strlen($this->container['pipeType']) < 5)) {
-                $invalidProperties[] = "invalid value for 'pipeType', the character length must be bigger than or equal to 5.";
+            if (!is_null($this->container['pipeAlias']) && (mb_strlen($this->container['pipeAlias']) < 1)) {
+                $invalidProperties[] = "invalid value for 'pipeAlias', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 128)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['directory']) && (mb_strlen($this->container['directory']) > 256)) {
+                $invalidProperties[] = "invalid value for 'directory', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 5)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 5.";
+            if (!is_null($this->container['directory']) && (mb_strlen($this->container['directory']) < 1)) {
+                $invalidProperties[] = "invalid value for 'directory', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['storagePeriod']) && ($this->container['storagePeriod'] > 100000)) {
-                $invalidProperties[] = "invalid value for 'storagePeriod', must be smaller than or equal to 100000.";
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 1024.";
             }
-            if (!is_null($this->container['storagePeriod']) && ($this->container['storagePeriod'] < 1)) {
-                $invalidProperties[] = "invalid value for 'storagePeriod', must be bigger than or equal to 1.";
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 1)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['shards']) && ($this->container['shards'] > 128)) {
-                $invalidProperties[] = "invalid value for 'shards', must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['shards']) && ($this->container['shards'] < 1)) {
-                $invalidProperties[] = "invalid value for 'shards', must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['createBy']) && (mb_strlen($this->container['createBy']) > 128)) {
-                $invalidProperties[] = "invalid value for 'createBy', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['createBy']) && (mb_strlen($this->container['createBy']) < 5)) {
-                $invalidProperties[] = "invalid value for 'createBy', the character length must be bigger than or equal to 5.";
-            }
-            if (!is_null($this->container['createTime']) && ($this->container['createTime'] > 1010000000)) {
-                $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 1010000000.";
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] > 2366841600000)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 2366841600000.";
             }
             if (!is_null($this->container['createTime']) && ($this->container['createTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'createTime', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['updateBy']) && (mb_strlen($this->container['updateBy']) > 128)) {
-                $invalidProperties[] = "invalid value for 'updateBy', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['updateBy']) && (mb_strlen($this->container['updateBy']) < 5)) {
-                $invalidProperties[] = "invalid value for 'updateBy', the character length must be bigger than or equal to 5.";
-            }
-            if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] > 10000000000)) {
-                $invalidProperties[] = "invalid value for 'updateTime', must be smaller than or equal to 10000000000.";
+            if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] > 2366841600000)) {
+                $invalidProperties[] = "invalid value for 'updateTime', must be smaller than or equal to 2366841600000.";
             }
             if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'updateTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['deleteTime']) && ($this->container['deleteTime'] > 2366841600000)) {
+                $invalidProperties[] = "invalid value for 'deleteTime', must be smaller than or equal to 2366841600000.";
+            }
+            if (!is_null($this->container['deleteTime']) && ($this->container['deleteTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'deleteTime', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -401,32 +399,8 @@ class CreatePipeResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets domainId
-    *  用户domainId
-    *
-    * @return string|null
-    */
-    public function getDomainId()
-    {
-        return $this->container['domainId'];
-    }
-
-    /**
-    * Sets domainId
-    *
-    * @param string|null $domainId 用户domainId
-    *
-    * @return $this
-    */
-    public function setDomainId($domainId)
-    {
-        $this->container['domainId'] = $domainId;
-        return $this;
-    }
-
-    /**
     * Gets projectId
-    *  项目id
+    *  项目ID
     *
     * @return string|null
     */
@@ -438,7 +412,7 @@ class CreatePipeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目id
+    * @param string|null $projectId 项目ID
     *
     * @return $this
     */
@@ -449,56 +423,32 @@ class CreatePipeResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets dataspaceId
-    *  数据空间id
+    * Gets workspaceId
+    *  UUID
     *
     * @return string|null
     */
-    public function getDataspaceId()
+    public function getWorkspaceId()
     {
-        return $this->container['dataspaceId'];
+        return $this->container['workspaceId'];
     }
 
     /**
-    * Sets dataspaceId
+    * Sets workspaceId
     *
-    * @param string|null $dataspaceId 数据空间id
+    * @param string|null $workspaceId UUID
     *
     * @return $this
     */
-    public function setDataspaceId($dataspaceId)
+    public function setWorkspaceId($workspaceId)
     {
-        $this->container['dataspaceId'] = $dataspaceId;
-        return $this;
-    }
-
-    /**
-    * Gets dataspaceName
-    *  数据空间名称
-    *
-    * @return string|null
-    */
-    public function getDataspaceName()
-    {
-        return $this->container['dataspaceName'];
-    }
-
-    /**
-    * Sets dataspaceName
-    *
-    * @param string|null $dataspaceName 数据空间名称
-    *
-    * @return $this
-    */
-    public function setDataspaceName($dataspaceName)
-    {
-        $this->container['dataspaceName'] = $dataspaceName;
+        $this->container['workspaceId'] = $workspaceId;
         return $this;
     }
 
     /**
     * Gets pipeId
-    *  管道id
+    *  UUID
     *
     * @return string|null
     */
@@ -510,7 +460,7 @@ class CreatePipeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets pipeId
     *
-    * @param string|null $pipeId 管道id
+    * @param string|null $pipeId UUID
     *
     * @return $this
     */
@@ -545,32 +495,80 @@ class CreatePipeResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets pipeType
-    *  管道类型（system-defined，系统预定义)、1（user-defined，用户自定义)
+    * Gets pipeAlias
+    *  管道别名
     *
     * @return string|null
     */
-    public function getPipeType()
+    public function getPipeAlias()
     {
-        return $this->container['pipeType'];
+        return $this->container['pipeAlias'];
     }
 
     /**
-    * Sets pipeType
+    * Sets pipeAlias
     *
-    * @param string|null $pipeType 管道类型（system-defined，系统预定义)、1（user-defined，用户自定义)
+    * @param string|null $pipeAlias 管道别名
     *
     * @return $this
     */
-    public function setPipeType($pipeType)
+    public function setPipeAlias($pipeAlias)
     {
-        $this->container['pipeType'] = $pipeType;
+        $this->container['pipeAlias'] = $pipeAlias;
+        return $this;
+    }
+
+    /**
+    * Gets category
+    *  category
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\PipeCategory|null
+    */
+    public function getCategory()
+    {
+        return $this->container['category'];
+    }
+
+    /**
+    * Sets category
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\PipeCategory|null $category category
+    *
+    * @return $this
+    */
+    public function setCategory($category)
+    {
+        $this->container['category'] = $category;
+        return $this;
+    }
+
+    /**
+    * Gets directory
+    *  directory 目录分组
+    *
+    * @return string|null
+    */
+    public function getDirectory()
+    {
+        return $this->container['directory'];
+    }
+
+    /**
+    * Sets directory
+    *
+    * @param string|null $directory directory 目录分组
+    *
+    * @return $this
+    */
+    public function setDirectory($directory)
+    {
+        $this->container['directory'] = $directory;
         return $this;
     }
 
     /**
     * Gets description
-    *  描述信息
+    *  管道描述
     *
     * @return string|null
     */
@@ -582,7 +580,7 @@ class CreatePipeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述信息
+    * @param string|null $description 管道描述
     *
     * @return $this
     */
@@ -593,80 +591,128 @@ class CreatePipeResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets storagePeriod
-    *  索引存储天数
+    * Gets processStatus
+    *  processStatus
     *
-    * @return int|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\PipeProcessStatus|null
     */
-    public function getStoragePeriod()
+    public function getProcessStatus()
     {
-        return $this->container['storagePeriod'];
+        return $this->container['processStatus'];
     }
 
     /**
-    * Sets storagePeriod
+    * Sets processStatus
     *
-    * @param int|null $storagePeriod 索引存储天数
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\PipeProcessStatus|null $processStatus processStatus
     *
     * @return $this
     */
-    public function setStoragePeriod($storagePeriod)
+    public function setProcessStatus($processStatus)
     {
-        $this->container['storagePeriod'] = $storagePeriod;
+        $this->container['processStatus'] = $processStatus;
         return $this;
     }
 
     /**
-    * Gets shards
-    *  索引分片数量
+    * Gets processError
+    *  processError
     *
-    * @return int|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\PipeProcessError|null
     */
-    public function getShards()
+    public function getProcessError()
     {
-        return $this->container['shards'];
+        return $this->container['processError'];
     }
 
     /**
-    * Sets shards
+    * Sets processError
     *
-    * @param int|null $shards 索引分片数量
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\PipeProcessError|null $processError processError
     *
     * @return $this
     */
-    public function setShards($shards)
+    public function setProcessError($processError)
     {
-        $this->container['shards'] = $shards;
+        $this->container['processError'] = $processError;
         return $this;
     }
 
     /**
-    * Gets createBy
-    *  创建者
+    * Gets ownerType
+    *  ownerType
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\PipeOwnerType|null
     */
-    public function getCreateBy()
+    public function getOwnerType()
     {
-        return $this->container['createBy'];
+        return $this->container['ownerType'];
     }
 
     /**
-    * Sets createBy
+    * Sets ownerType
     *
-    * @param string|null $createBy 创建者
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\PipeOwnerType|null $ownerType ownerType
     *
     * @return $this
     */
-    public function setCreateBy($createBy)
+    public function setOwnerType($ownerType)
     {
-        $this->container['createBy'] = $createBy;
+        $this->container['ownerType'] = $ownerType;
+        return $this;
+    }
+
+    /**
+    * Gets resources
+    *  管道资源
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\PipeResource[]|null
+    */
+    public function getResources()
+    {
+        return $this->container['resources'];
+    }
+
+    /**
+    * Sets resources
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\PipeResource[]|null $resources 管道资源
+    *
+    * @return $this
+    */
+    public function setResources($resources)
+    {
+        $this->container['resources'] = $resources;
+        return $this;
+    }
+
+    /**
+    * Gets schema
+    *  schema
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\PipeSchema|null
+    */
+    public function getSchema()
+    {
+        return $this->container['schema'];
+    }
+
+    /**
+    * Sets schema
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\PipeSchema|null $schema schema
+    *
+    * @return $this
+    */
+    public function setSchema($schema)
+    {
+        $this->container['schema'] = $schema;
         return $this;
     }
 
     /**
     * Gets createTime
-    *  创建时间
+    *  毫秒时间戳
     *
     * @return int|null
     */
@@ -678,7 +724,7 @@ class CreatePipeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 创建时间
+    * @param int|null $createTime 毫秒时间戳
     *
     * @return $this
     */
@@ -689,32 +735,8 @@ class CreatePipeResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets updateBy
-    *  更新者
-    *
-    * @return string|null
-    */
-    public function getUpdateBy()
-    {
-        return $this->container['updateBy'];
-    }
-
-    /**
-    * Sets updateBy
-    *
-    * @param string|null $updateBy 更新者
-    *
-    * @return $this
-    */
-    public function setUpdateBy($updateBy)
-    {
-        $this->container['updateBy'] = $updateBy;
-        return $this;
-    }
-
-    /**
     * Gets updateTime
-    *  更新时间
+    *  毫秒时间戳
     *
     * @return int|null
     */
@@ -726,13 +748,37 @@ class CreatePipeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int|null $updateTime 更新时间
+    * @param int|null $updateTime 毫秒时间戳
     *
     * @return $this
     */
     public function setUpdateTime($updateTime)
     {
         $this->container['updateTime'] = $updateTime;
+        return $this;
+    }
+
+    /**
+    * Gets deleteTime
+    *  毫秒时间戳
+    *
+    * @return int|null
+    */
+    public function getDeleteTime()
+    {
+        return $this->container['deleteTime'];
+    }
+
+    /**
+    * Sets deleteTime
+    *
+    * @param int|null $deleteTime 毫秒时间戳
+    *
+    * @return $this
+    */
+    public function setDeleteTime($deleteTime)
+    {
+        $this->container['deleteTime'] = $deleteTime;
         return $this;
     }
 

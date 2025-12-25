@@ -35,7 +35,7 @@ class IDERepoSearchDO implements ModelInterface, ArrayAccess
             'pageNo' => 'int',
             'pageSize' => 'int',
             'projectId' => 'string',
-            'inProject' => 'string'
+            'inProject' => 'bool'
     ];
 
     /**
@@ -354,7 +354,7 @@ class IDERepoSearchDO implements ModelInterface, ArrayAccess
     * Gets inProject
     *  是否在项目中
     *
-    * @return string|null
+    * @return bool|null
     */
     public function getInProject()
     {
@@ -364,7 +364,7 @@ class IDERepoSearchDO implements ModelInterface, ArrayAccess
     /**
     * Sets inProject
     *
-    * @param string|null $inProject 是否在项目中
+    * @param bool|null $inProject 是否在项目中
     *
     * @return $this
     */

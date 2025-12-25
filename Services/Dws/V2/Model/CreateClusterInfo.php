@@ -20,8 +20,8 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nodeType  **参数解释**： 节点规格ID，需要通过查询规格接口获取，对应的是接口响应的id字段。 **约束限制**： 不涉及。 **取值范围**： 必须是查询规格信息接口返回的规格ID。 **默认取值**： 不涉及。
-    * numberOfNode  **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
+    * nodeType  **参数解释**： 节点规格名称 **取值范围**： 集群规格详情请参见[数据仓库规格](dws_01_00018.html)。
+    * numberOfNode  **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256。 **默认取值**： 不涉及。
     * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是虚拟私有云ID下的某个子网。 **默认取值**： 不涉及。
     * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 参数非空时必须是有效的安全组ID。参数为空时将自动创建安全组。 **默认取值**： null
     * vpcId  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是有效的虚拟私有云ID。 **默认取值**： 不涉及。
@@ -56,8 +56,8 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nodeType  **参数解释**： 节点规格ID，需要通过查询规格接口获取，对应的是接口响应的id字段。 **约束限制**： 不涉及。 **取值范围**： 必须是查询规格信息接口返回的规格ID。 **默认取值**： 不涉及。
-    * numberOfNode  **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
+    * nodeType  **参数解释**： 节点规格名称 **取值范围**： 集群规格详情请参见[数据仓库规格](dws_01_00018.html)。
+    * numberOfNode  **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256。 **默认取值**： 不涉及。
     * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是虚拟私有云ID下的某个子网。 **默认取值**： 不涉及。
     * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 参数非空时必须是有效的安全组ID。参数为空时将自动创建安全组。 **默认取值**： null
     * vpcId  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是有效的虚拟私有云ID。 **默认取值**： 不涉及。
@@ -113,8 +113,8 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nodeType  **参数解释**： 节点规格ID，需要通过查询规格接口获取，对应的是接口响应的id字段。 **约束限制**： 不涉及。 **取值范围**： 必须是查询规格信息接口返回的规格ID。 **默认取值**： 不涉及。
-    * numberOfNode  **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
+    * nodeType  **参数解释**： 节点规格名称 **取值范围**： 集群规格详情请参见[数据仓库规格](dws_01_00018.html)。
+    * numberOfNode  **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256。 **默认取值**： 不涉及。
     * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是虚拟私有云ID下的某个子网。 **默认取值**： 不涉及。
     * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 参数非空时必须是有效的安全组ID。参数为空时将自动创建安全组。 **默认取值**： null
     * vpcId  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是有效的虚拟私有云ID。 **默认取值**： 不涉及。
@@ -149,8 +149,8 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nodeType  **参数解释**： 节点规格ID，需要通过查询规格接口获取，对应的是接口响应的id字段。 **约束限制**： 不涉及。 **取值范围**： 必须是查询规格信息接口返回的规格ID。 **默认取值**： 不涉及。
-    * numberOfNode  **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
+    * nodeType  **参数解释**： 节点规格名称 **取值范围**： 集群规格详情请参见[数据仓库规格](dws_01_00018.html)。
+    * numberOfNode  **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256。 **默认取值**： 不涉及。
     * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是虚拟私有云ID下的某个子网。 **默认取值**： 不涉及。
     * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 参数非空时必须是有效的安全组ID。参数为空时将自动创建安全组。 **默认取值**： null
     * vpcId  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是有效的虚拟私有云ID。 **默认取值**： 不涉及。
@@ -185,8 +185,8 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nodeType  **参数解释**： 节点规格ID，需要通过查询规格接口获取，对应的是接口响应的id字段。 **约束限制**： 不涉及。 **取值范围**： 必须是查询规格信息接口返回的规格ID。 **默认取值**： 不涉及。
-    * numberOfNode  **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
+    * nodeType  **参数解释**： 节点规格名称 **取值范围**： 集群规格详情请参见[数据仓库规格](dws_01_00018.html)。
+    * numberOfNode  **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256。 **默认取值**： 不涉及。
     * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是虚拟私有云ID下的某个子网。 **默认取值**： 不涉及。
     * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 参数非空时必须是有效的安全组ID。参数为空时将自动创建安全组。 **默认取值**： null
     * vpcId  **参数解释**： 指定虚拟私有云ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 必须是有效的虚拟私有云ID。 **默认取值**： 不涉及。
@@ -365,7 +365,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeType
-    *  **参数解释**： 节点规格ID，需要通过查询规格接口获取，对应的是接口响应的id字段。 **约束限制**： 不涉及。 **取值范围**： 必须是查询规格信息接口返回的规格ID。 **默认取值**： 不涉及。
+    *  **参数解释**： 节点规格名称 **取值范围**： 集群规格详情请参见[数据仓库规格](dws_01_00018.html)。
     *
     * @return string
     */
@@ -377,7 +377,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nodeType
     *
-    * @param string $nodeType **参数解释**： 节点规格ID，需要通过查询规格接口获取，对应的是接口响应的id字段。 **约束限制**： 不涉及。 **取值范围**： 必须是查询规格信息接口返回的规格ID。 **默认取值**： 不涉及。
+    * @param string $nodeType **参数解释**： 节点规格名称 **取值范围**： 集群规格详情请参见[数据仓库规格](dws_01_00018.html)。
     *
     * @return $this
     */
@@ -389,7 +389,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets numberOfNode
-    *  **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
+    *  **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256。 **默认取值**： 不涉及。
     *
     * @return int
     */
@@ -401,7 +401,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets numberOfNode
     *
-    * @param int $numberOfNode **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256，实时数仓（单机模式）取值为1。 **默认取值**： 不涉及。
+    * @param int $numberOfNode **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256。 **默认取值**： 不涉及。
     *
     * @return $this
     */

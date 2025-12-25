@@ -21,8 +21,8 @@ class BatchUpdateNotificationMasksResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * relationIds  创建成功的关联ID列表
-    * notificationMaskId  屏蔽规则ID
+    * relationIds  **参数解释**： 创建成功的关联ID列表
+    * notificationMaskId  **参数解释**： 屏蔽规则ID **取值范围**： 以nm开头，后跟[0,62]位字母或数字。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class BatchUpdateNotificationMasksResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * relationIds  创建成功的关联ID列表
-    * notificationMaskId  屏蔽规则ID
+    * relationIds  **参数解释**： 创建成功的关联ID列表
+    * notificationMaskId  **参数解释**： 屏蔽规则ID **取值范围**： 以nm开头，后跟[0,62]位字母或数字。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class BatchUpdateNotificationMasksResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * relationIds  创建成功的关联ID列表
-    * notificationMaskId  屏蔽规则ID
+    * relationIds  **参数解释**： 创建成功的关联ID列表
+    * notificationMaskId  **参数解释**： 屏蔽规则ID **取值范围**： 以nm开头，后跟[0,62]位字母或数字。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class BatchUpdateNotificationMasksResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * relationIds  创建成功的关联ID列表
-    * notificationMaskId  屏蔽规则ID
+    * relationIds  **参数解释**： 创建成功的关联ID列表
+    * notificationMaskId  **参数解释**： 屏蔽规则ID **取值范围**： 以nm开头，后跟[0,62]位字母或数字。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class BatchUpdateNotificationMasksResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * relationIds  创建成功的关联ID列表
-    * notificationMaskId  屏蔽规则ID
+    * relationIds  **参数解释**： 创建成功的关联ID列表
+    * notificationMaskId  **参数解释**： 屏蔽规则ID **取值范围**： 以nm开头，后跟[0,62]位字母或数字。
     *
     * @var string[]
     */
@@ -195,7 +195,7 @@ class BatchUpdateNotificationMasksResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets relationIds
-    *  创建成功的关联ID列表
+    *  **参数解释**： 创建成功的关联ID列表
     *
     * @return string[]|null
     */
@@ -207,7 +207,7 @@ class BatchUpdateNotificationMasksResponse implements ModelInterface, ArrayAcces
     /**
     * Sets relationIds
     *
-    * @param string[]|null $relationIds 创建成功的关联ID列表
+    * @param string[]|null $relationIds **参数解释**： 创建成功的关联ID列表
     *
     * @return $this
     */
@@ -219,7 +219,7 @@ class BatchUpdateNotificationMasksResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets notificationMaskId
-    *  屏蔽规则ID
+    *  **参数解释**： 屏蔽规则ID **取值范围**： 以nm开头，后跟[0,62]位字母或数字。
     *
     * @return string|null
     */
@@ -231,7 +231,7 @@ class BatchUpdateNotificationMasksResponse implements ModelInterface, ArrayAcces
     /**
     * Sets notificationMaskId
     *
-    * @param string|null $notificationMaskId 屏蔽规则ID
+    * @param string|null $notificationMaskId **参数解释**： 屏蔽规则ID **取值范围**： 以nm开头，后跟[0,62]位字母或数字。
     *
     * @return $this
     */

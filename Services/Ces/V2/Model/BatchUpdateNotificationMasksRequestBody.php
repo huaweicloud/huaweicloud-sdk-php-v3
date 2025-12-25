@@ -22,12 +22,12 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     * Array of property to type mappings. Used for (de)serialization
     * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationType  relationType
-    * relationIds  关联编号，relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略ID；
-    * resources  关联资源，relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的资源信息；
-    * metricNames  关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
-    * productMetrics  按云产品维度屏蔽时的指标信息
-    * resourceLevel  dimension: 子维度,product: 云产品
-    * productName  资源为云产品时的云产品名称
+    * relationIds  **参数解释**： 关联ID列表。        **约束限制**： relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION时填屏蔽的告警策略ID。包含的关联ID数量为[1,100]
+    * resources  **参数解释**： 必填。关联的资源列表   **约束限制**： relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION 时填屏蔽的资源信息。包含的资源数量为[1,100]
+    * metricNames  **参数解释**： 关联的指标名称 **约束限制**： relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽。包含的指标数量为[0,50]
+    * productMetrics  **参数解释**： 按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
+    * resourceLevel  **参数解释**： 资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
+    * productName  **参数解释**： 资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     * maskType  maskType
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
@@ -58,12 +58,12 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     * Array of property to format mappings. Used for (de)serialization
     * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationType  relationType
-    * relationIds  关联编号，relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略ID；
-    * resources  关联资源，relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的资源信息；
-    * metricNames  关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
-    * productMetrics  按云产品维度屏蔽时的指标信息
-    * resourceLevel  dimension: 子维度,product: 云产品
-    * productName  资源为云产品时的云产品名称
+    * relationIds  **参数解释**： 关联ID列表。        **约束限制**： relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION时填屏蔽的告警策略ID。包含的关联ID数量为[1,100]
+    * resources  **参数解释**： 必填。关联的资源列表   **约束限制**： relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION 时填屏蔽的资源信息。包含的资源数量为[1,100]
+    * metricNames  **参数解释**： 关联的指标名称 **约束限制**： relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽。包含的指标数量为[0,50]
+    * productMetrics  **参数解释**： 按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
+    * resourceLevel  **参数解释**： 资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
+    * productName  **参数解释**： 资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     * maskType  maskType
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
@@ -115,12 +115,12 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     * and the value is the original name
     * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationType  relationType
-    * relationIds  关联编号，relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略ID；
-    * resources  关联资源，relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的资源信息；
-    * metricNames  关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
-    * productMetrics  按云产品维度屏蔽时的指标信息
-    * resourceLevel  dimension: 子维度,product: 云产品
-    * productName  资源为云产品时的云产品名称
+    * relationIds  **参数解释**： 关联ID列表。        **约束限制**： relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION时填屏蔽的告警策略ID。包含的关联ID数量为[1,100]
+    * resources  **参数解释**： 必填。关联的资源列表   **约束限制**： relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION 时填屏蔽的资源信息。包含的资源数量为[1,100]
+    * metricNames  **参数解释**： 关联的指标名称 **约束限制**： relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽。包含的指标数量为[0,50]
+    * productMetrics  **参数解释**： 按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
+    * resourceLevel  **参数解释**： 资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
+    * productName  **参数解释**： 资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     * maskType  maskType
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
@@ -151,12 +151,12 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     * Array of attributes to setter functions (for deserialization of responses)
     * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationType  relationType
-    * relationIds  关联编号，relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略ID；
-    * resources  关联资源，relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的资源信息；
-    * metricNames  关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
-    * productMetrics  按云产品维度屏蔽时的指标信息
-    * resourceLevel  dimension: 子维度,product: 云产品
-    * productName  资源为云产品时的云产品名称
+    * relationIds  **参数解释**： 关联ID列表。        **约束限制**： relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION时填屏蔽的告警策略ID。包含的关联ID数量为[1,100]
+    * resources  **参数解释**： 必填。关联的资源列表   **约束限制**： relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION 时填屏蔽的资源信息。包含的资源数量为[1,100]
+    * metricNames  **参数解释**： 关联的指标名称 **约束限制**： relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽。包含的指标数量为[0,50]
+    * productMetrics  **参数解释**： 按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
+    * resourceLevel  **参数解释**： 资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
+    * productName  **参数解释**： 资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     * maskType  maskType
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
@@ -187,12 +187,12 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     * Array of attributes to getter functions (for serialization of requests)
     * maskName  **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
     * relationType  relationType
-    * relationIds  关联编号，relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略ID；
-    * resources  关联资源，relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的资源信息；
-    * metricNames  关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
-    * productMetrics  按云产品维度屏蔽时的指标信息
-    * resourceLevel  dimension: 子维度,product: 云产品
-    * productName  资源为云产品时的云产品名称
+    * relationIds  **参数解释**： 关联ID列表。        **约束限制**： relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION时填屏蔽的告警策略ID。包含的关联ID数量为[1,100]
+    * resources  **参数解释**： 必填。关联的资源列表   **约束限制**： relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION 时填屏蔽的资源信息。包含的资源数量为[1,100]
+    * metricNames  **参数解释**： 关联的指标名称 **约束限制**： relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽。包含的指标数量为[0,50]
+    * productMetrics  **参数解释**： 按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
+    * resourceLevel  **参数解释**： 资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
+    * productName  **参数解释**： 资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     * maskType  maskType
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
@@ -433,7 +433,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets relationIds
-    *  关联编号，relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略ID；
+    *  **参数解释**： 关联ID列表。        **约束限制**： relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION时填屏蔽的告警策略ID。包含的关联ID数量为[1,100]
     *
     * @return string[]
     */
@@ -445,7 +445,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets relationIds
     *
-    * @param string[] $relationIds 关联编号，relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的告警策略ID；
+    * @param string[] $relationIds **参数解释**： 关联ID列表。        **约束限制**： relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION时填屏蔽的告警策略ID。包含的关联ID数量为[1,100]
     *
     * @return $this
     */
@@ -457,7 +457,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets resources
-    *  关联资源，relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的资源信息；
+    *  **参数解释**： 必填。关联的资源列表   **约束限制**： relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION 时填屏蔽的资源信息。包含的资源数量为[1,100]
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\Resource[]|null
     */
@@ -469,7 +469,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Resource[]|null $resources 关联资源，relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的资源信息；
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Resource[]|null $resources **参数解释**： 必填。关联的资源列表   **约束限制**： relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION 时填屏蔽的资源信息。包含的资源数量为[1,100]
     *
     * @return $this
     */
@@ -481,7 +481,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets metricNames
-    *  关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
+    *  **参数解释**： 关联的指标名称 **约束限制**： relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽。包含的指标数量为[0,50]
     *
     * @return string[]|null
     */
@@ -493,7 +493,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets metricNames
     *
-    * @param string[]|null $metricNames 关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
+    * @param string[]|null $metricNames **参数解释**： 关联的指标名称 **约束限制**： relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽。包含的指标数量为[0,50]
     *
     * @return $this
     */
@@ -505,7 +505,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets productMetrics
-    *  按云产品维度屏蔽时的指标信息
+    *  **参数解释**： 按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\ProductMetric[]|null
     */
@@ -517,7 +517,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets productMetrics
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ProductMetric[]|null $productMetrics 按云产品维度屏蔽时的指标信息
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ProductMetric[]|null $productMetrics **参数解释**： 按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
     *
     * @return $this
     */
@@ -529,7 +529,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets resourceLevel
-    *  dimension: 子维度,product: 云产品
+    *  **参数解释**： 资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -541,7 +541,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets resourceLevel
     *
-    * @param string|null $resourceLevel dimension: 子维度,product: 云产品
+    * @param string|null $resourceLevel **参数解释**： 资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -553,7 +553,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets productName
-    *  资源为云产品时的云产品名称
+    *  **参数解释**： 资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -565,7 +565,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets productName
     *
-    * @param string|null $productName 资源为云产品时的云产品名称
+    * @param string|null $productName **参数解释**： 资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */

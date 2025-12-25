@@ -20,16 +20,17 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * repoName  仓库名称
-    * format  仓库格式
-    * description  仓库描述
-    * repositoryIds  仓库id列表
-    * includesPattern  路径白名单
-    * deploymentPolicy  仓库属性-覆盖策略
-    * autoCleanSnapshot  自动清理快照
-    * snapshotAliveDays  快照保存时间长度
-    * maxUniqueSnapshots  最大不同快照个数
-    * allowAnonymous  是否允许匿名
+    * repoName  **参数解释**: 仓库名称。 **约束限制**: 长度1-20。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * format  **参数解释**: 制品类型。 **约束限制**: 不涉及。 **取值范围**: docker|npm|go|pypi|rpm|composer|debian|conan|nuget|docker2|cocoapods|ohpm|generic。 **默认取值**: 无。
+    * description  **参数解释**: 仓库描述。 **约束限制**: 最大长度200。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * repositoryIds  **参数解释**: 仓库id列表。仓库id，格式为{region}_{domainId}_{format}_{sequence}。可以从私有依赖库首页->仓库概览->仓库地址 url 中获取，最后两个\"/\"中间的字符串即为仓库id。 **约束限制**: 根据仓库id格式中region, domainId需要为有效值，format有效值为:npm|go|pypi|rpm|composer|maven|debian|conan|nuget|docker2|cocoapods|ohpm, sequence取值根据套餐不同有不同上限值。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * includesPattern  **参数解释**: 路径包含规则。 **约束限制**: 最大长度512。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * deploymentPolicy  **参数解释**: 覆盖策略。 **约束限制**: 不涉及。 **取值范围**: allowRedeploy：允许覆盖 disableRedeploy：禁止覆盖 readOnly：只读。 **默认取值**: 无。
+    * autoCleanSnapshot  **参数解释**: 自动清理快照。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * snapshotAliveDays  **参数解释**: 快照保存时间长度。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * maxUniqueSnapshots  **参数解释**: 最大不同快照个数。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * allowAnonymous  **参数解释**: 是否允许匿名。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * projectId  **参数解释**: 项目ID，可以从调用API处获取，也可以从控制台获取。获取方式请参考[获取项目ID](CloudArtifact_api_0015.xml)。 **约束限制**: 只能由英文字母、数字组成，且长度为32个字符。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @var string[]
     */
@@ -43,21 +44,23 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
             'autoCleanSnapshot' => 'bool',
             'snapshotAliveDays' => 'string',
             'maxUniqueSnapshots' => 'string',
-            'allowAnonymous' => 'bool'
+            'allowAnonymous' => 'bool',
+            'projectId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * repoName  仓库名称
-    * format  仓库格式
-    * description  仓库描述
-    * repositoryIds  仓库id列表
-    * includesPattern  路径白名单
-    * deploymentPolicy  仓库属性-覆盖策略
-    * autoCleanSnapshot  自动清理快照
-    * snapshotAliveDays  快照保存时间长度
-    * maxUniqueSnapshots  最大不同快照个数
-    * allowAnonymous  是否允许匿名
+    * repoName  **参数解释**: 仓库名称。 **约束限制**: 长度1-20。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * format  **参数解释**: 制品类型。 **约束限制**: 不涉及。 **取值范围**: docker|npm|go|pypi|rpm|composer|debian|conan|nuget|docker2|cocoapods|ohpm|generic。 **默认取值**: 无。
+    * description  **参数解释**: 仓库描述。 **约束限制**: 最大长度200。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * repositoryIds  **参数解释**: 仓库id列表。仓库id，格式为{region}_{domainId}_{format}_{sequence}。可以从私有依赖库首页->仓库概览->仓库地址 url 中获取，最后两个\"/\"中间的字符串即为仓库id。 **约束限制**: 根据仓库id格式中region, domainId需要为有效值，format有效值为:npm|go|pypi|rpm|composer|maven|debian|conan|nuget|docker2|cocoapods|ohpm, sequence取值根据套餐不同有不同上限值。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * includesPattern  **参数解释**: 路径包含规则。 **约束限制**: 最大长度512。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * deploymentPolicy  **参数解释**: 覆盖策略。 **约束限制**: 不涉及。 **取值范围**: allowRedeploy：允许覆盖 disableRedeploy：禁止覆盖 readOnly：只读。 **默认取值**: 无。
+    * autoCleanSnapshot  **参数解释**: 自动清理快照。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * snapshotAliveDays  **参数解释**: 快照保存时间长度。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * maxUniqueSnapshots  **参数解释**: 最大不同快照个数。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * allowAnonymous  **参数解释**: 是否允许匿名。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * projectId  **参数解释**: 项目ID，可以从调用API处获取，也可以从控制台获取。获取方式请参考[获取项目ID](CloudArtifact_api_0015.xml)。 **约束限制**: 只能由英文字母、数字组成，且长度为32个字符。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
         'autoCleanSnapshot' => null,
         'snapshotAliveDays' => null,
         'maxUniqueSnapshots' => null,
-        'allowAnonymous' => null
+        'allowAnonymous' => null,
+        'projectId' => null
     ];
 
     /**
@@ -97,16 +101,17 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * repoName  仓库名称
-    * format  仓库格式
-    * description  仓库描述
-    * repositoryIds  仓库id列表
-    * includesPattern  路径白名单
-    * deploymentPolicy  仓库属性-覆盖策略
-    * autoCleanSnapshot  自动清理快照
-    * snapshotAliveDays  快照保存时间长度
-    * maxUniqueSnapshots  最大不同快照个数
-    * allowAnonymous  是否允许匿名
+    * repoName  **参数解释**: 仓库名称。 **约束限制**: 长度1-20。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * format  **参数解释**: 制品类型。 **约束限制**: 不涉及。 **取值范围**: docker|npm|go|pypi|rpm|composer|debian|conan|nuget|docker2|cocoapods|ohpm|generic。 **默认取值**: 无。
+    * description  **参数解释**: 仓库描述。 **约束限制**: 最大长度200。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * repositoryIds  **参数解释**: 仓库id列表。仓库id，格式为{region}_{domainId}_{format}_{sequence}。可以从私有依赖库首页->仓库概览->仓库地址 url 中获取，最后两个\"/\"中间的字符串即为仓库id。 **约束限制**: 根据仓库id格式中region, domainId需要为有效值，format有效值为:npm|go|pypi|rpm|composer|maven|debian|conan|nuget|docker2|cocoapods|ohpm, sequence取值根据套餐不同有不同上限值。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * includesPattern  **参数解释**: 路径包含规则。 **约束限制**: 最大长度512。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * deploymentPolicy  **参数解释**: 覆盖策略。 **约束限制**: 不涉及。 **取值范围**: allowRedeploy：允许覆盖 disableRedeploy：禁止覆盖 readOnly：只读。 **默认取值**: 无。
+    * autoCleanSnapshot  **参数解释**: 自动清理快照。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * snapshotAliveDays  **参数解释**: 快照保存时间长度。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * maxUniqueSnapshots  **参数解释**: 最大不同快照个数。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * allowAnonymous  **参数解释**: 是否允许匿名。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * projectId  **参数解释**: 项目ID，可以从调用API处获取，也可以从控制台获取。获取方式请参考[获取项目ID](CloudArtifact_api_0015.xml)。 **约束限制**: 只能由英文字母、数字组成，且长度为32个字符。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @var string[]
     */
@@ -120,21 +125,23 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
             'autoCleanSnapshot' => 'auto_clean_snapshot',
             'snapshotAliveDays' => 'snapshot_alive_days',
             'maxUniqueSnapshots' => 'max_unique_snapshots',
-            'allowAnonymous' => 'allow_anonymous'
+            'allowAnonymous' => 'allow_anonymous',
+            'projectId' => 'project_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * repoName  仓库名称
-    * format  仓库格式
-    * description  仓库描述
-    * repositoryIds  仓库id列表
-    * includesPattern  路径白名单
-    * deploymentPolicy  仓库属性-覆盖策略
-    * autoCleanSnapshot  自动清理快照
-    * snapshotAliveDays  快照保存时间长度
-    * maxUniqueSnapshots  最大不同快照个数
-    * allowAnonymous  是否允许匿名
+    * repoName  **参数解释**: 仓库名称。 **约束限制**: 长度1-20。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * format  **参数解释**: 制品类型。 **约束限制**: 不涉及。 **取值范围**: docker|npm|go|pypi|rpm|composer|debian|conan|nuget|docker2|cocoapods|ohpm|generic。 **默认取值**: 无。
+    * description  **参数解释**: 仓库描述。 **约束限制**: 最大长度200。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * repositoryIds  **参数解释**: 仓库id列表。仓库id，格式为{region}_{domainId}_{format}_{sequence}。可以从私有依赖库首页->仓库概览->仓库地址 url 中获取，最后两个\"/\"中间的字符串即为仓库id。 **约束限制**: 根据仓库id格式中region, domainId需要为有效值，format有效值为:npm|go|pypi|rpm|composer|maven|debian|conan|nuget|docker2|cocoapods|ohpm, sequence取值根据套餐不同有不同上限值。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * includesPattern  **参数解释**: 路径包含规则。 **约束限制**: 最大长度512。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * deploymentPolicy  **参数解释**: 覆盖策略。 **约束限制**: 不涉及。 **取值范围**: allowRedeploy：允许覆盖 disableRedeploy：禁止覆盖 readOnly：只读。 **默认取值**: 无。
+    * autoCleanSnapshot  **参数解释**: 自动清理快照。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * snapshotAliveDays  **参数解释**: 快照保存时间长度。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * maxUniqueSnapshots  **参数解释**: 最大不同快照个数。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * allowAnonymous  **参数解释**: 是否允许匿名。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * projectId  **参数解释**: 项目ID，可以从调用API处获取，也可以从控制台获取。获取方式请参考[获取项目ID](CloudArtifact_api_0015.xml)。 **约束限制**: 只能由英文字母、数字组成，且长度为32个字符。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @var string[]
     */
@@ -148,21 +155,23 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
             'autoCleanSnapshot' => 'setAutoCleanSnapshot',
             'snapshotAliveDays' => 'setSnapshotAliveDays',
             'maxUniqueSnapshots' => 'setMaxUniqueSnapshots',
-            'allowAnonymous' => 'setAllowAnonymous'
+            'allowAnonymous' => 'setAllowAnonymous',
+            'projectId' => 'setProjectId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * repoName  仓库名称
-    * format  仓库格式
-    * description  仓库描述
-    * repositoryIds  仓库id列表
-    * includesPattern  路径白名单
-    * deploymentPolicy  仓库属性-覆盖策略
-    * autoCleanSnapshot  自动清理快照
-    * snapshotAliveDays  快照保存时间长度
-    * maxUniqueSnapshots  最大不同快照个数
-    * allowAnonymous  是否允许匿名
+    * repoName  **参数解释**: 仓库名称。 **约束限制**: 长度1-20。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * format  **参数解释**: 制品类型。 **约束限制**: 不涉及。 **取值范围**: docker|npm|go|pypi|rpm|composer|debian|conan|nuget|docker2|cocoapods|ohpm|generic。 **默认取值**: 无。
+    * description  **参数解释**: 仓库描述。 **约束限制**: 最大长度200。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * repositoryIds  **参数解释**: 仓库id列表。仓库id，格式为{region}_{domainId}_{format}_{sequence}。可以从私有依赖库首页->仓库概览->仓库地址 url 中获取，最后两个\"/\"中间的字符串即为仓库id。 **约束限制**: 根据仓库id格式中region, domainId需要为有效值，format有效值为:npm|go|pypi|rpm|composer|maven|debian|conan|nuget|docker2|cocoapods|ohpm, sequence取值根据套餐不同有不同上限值。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * includesPattern  **参数解释**: 路径包含规则。 **约束限制**: 最大长度512。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * deploymentPolicy  **参数解释**: 覆盖策略。 **约束限制**: 不涉及。 **取值范围**: allowRedeploy：允许覆盖 disableRedeploy：禁止覆盖 readOnly：只读。 **默认取值**: 无。
+    * autoCleanSnapshot  **参数解释**: 自动清理快照。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * snapshotAliveDays  **参数解释**: 快照保存时间长度。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * maxUniqueSnapshots  **参数解释**: 最大不同快照个数。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
+    * allowAnonymous  **参数解释**: 是否允许匿名。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * projectId  **参数解释**: 项目ID，可以从调用API处获取，也可以从控制台获取。获取方式请参考[获取项目ID](CloudArtifact_api_0015.xml)。 **约束限制**: 只能由英文字母、数字组成，且长度为32个字符。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
             'autoCleanSnapshot' => 'getAutoCleanSnapshot',
             'snapshotAliveDays' => 'getSnapshotAliveDays',
             'maxUniqueSnapshots' => 'getMaxUniqueSnapshots',
-            'allowAnonymous' => 'getAllowAnonymous'
+            'allowAnonymous' => 'getAllowAnonymous',
+            'projectId' => 'getProjectId'
     ];
 
     /**
@@ -247,6 +257,7 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
         $this->container['snapshotAliveDays'] = isset($data['snapshotAliveDays']) ? $data['snapshotAliveDays'] : null;
         $this->container['maxUniqueSnapshots'] = isset($data['maxUniqueSnapshots']) ? $data['maxUniqueSnapshots'] : null;
         $this->container['allowAnonymous'] = isset($data['allowAnonymous']) ? $data['allowAnonymous'] : null;
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
     }
 
     /**
@@ -266,6 +277,18 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
         if ($this->container['repositoryIds'] === null) {
             $invalidProperties[] = "'repositoryIds' can't be null";
         }
+        if ($this->container['includesPattern'] === null) {
+            $invalidProperties[] = "'includesPattern' can't be null";
+        }
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
+            }
+            if (!is_null($this->container['projectId']) && !preg_match("/^[a-z0-9]{32,32}$/", $this->container['projectId'])) {
+                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /^[a-z0-9]{32,32}$/.";
+            }
         return $invalidProperties;
     }
 
@@ -282,7 +305,7 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
 
     /**
     * Gets repoName
-    *  仓库名称
+    *  **参数解释**: 仓库名称。 **约束限制**: 长度1-20。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return string
     */
@@ -294,7 +317,7 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
     /**
     * Sets repoName
     *
-    * @param string $repoName 仓库名称
+    * @param string $repoName **参数解释**: 仓库名称。 **约束限制**: 长度1-20。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return $this
     */
@@ -306,7 +329,7 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
 
     /**
     * Gets format
-    *  仓库格式
+    *  **参数解释**: 制品类型。 **约束限制**: 不涉及。 **取值范围**: docker|npm|go|pypi|rpm|composer|debian|conan|nuget|docker2|cocoapods|ohpm|generic。 **默认取值**: 无。
     *
     * @return string
     */
@@ -318,7 +341,7 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
     /**
     * Sets format
     *
-    * @param string $format 仓库格式
+    * @param string $format **参数解释**: 制品类型。 **约束限制**: 不涉及。 **取值范围**: docker|npm|go|pypi|rpm|composer|debian|conan|nuget|docker2|cocoapods|ohpm|generic。 **默认取值**: 无。
     *
     * @return $this
     */
@@ -330,7 +353,7 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  仓库描述
+    *  **参数解释**: 仓库描述。 **约束限制**: 最大长度200。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return string|null
     */
@@ -342,7 +365,7 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 仓库描述
+    * @param string|null $description **参数解释**: 仓库描述。 **约束限制**: 最大长度200。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return $this
     */
@@ -354,7 +377,7 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
 
     /**
     * Gets repositoryIds
-    *  仓库id列表
+    *  **参数解释**: 仓库id列表。仓库id，格式为{region}_{domainId}_{format}_{sequence}。可以从私有依赖库首页->仓库概览->仓库地址 url 中获取，最后两个\"/\"中间的字符串即为仓库id。 **约束限制**: 根据仓库id格式中region, domainId需要为有效值，format有效值为:npm|go|pypi|rpm|composer|maven|debian|conan|nuget|docker2|cocoapods|ohpm, sequence取值根据套餐不同有不同上限值。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return string[]
     */
@@ -366,7 +389,7 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
     /**
     * Sets repositoryIds
     *
-    * @param string[] $repositoryIds 仓库id列表
+    * @param string[] $repositoryIds **参数解释**: 仓库id列表。仓库id，格式为{region}_{domainId}_{format}_{sequence}。可以从私有依赖库首页->仓库概览->仓库地址 url 中获取，最后两个\"/\"中间的字符串即为仓库id。 **约束限制**: 根据仓库id格式中region, domainId需要为有效值，format有效值为:npm|go|pypi|rpm|composer|maven|debian|conan|nuget|docker2|cocoapods|ohpm, sequence取值根据套餐不同有不同上限值。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return $this
     */
@@ -378,9 +401,9 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
 
     /**
     * Gets includesPattern
-    *  路径白名单
+    *  **参数解释**: 路径包含规则。 **约束限制**: 最大长度512。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
-    * @return string|null
+    * @return string
     */
     public function getIncludesPattern()
     {
@@ -390,7 +413,7 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
     /**
     * Sets includesPattern
     *
-    * @param string|null $includesPattern 路径白名单
+    * @param string $includesPattern **参数解释**: 路径包含规则。 **约束限制**: 最大长度512。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return $this
     */
@@ -402,7 +425,7 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
 
     /**
     * Gets deploymentPolicy
-    *  仓库属性-覆盖策略
+    *  **参数解释**: 覆盖策略。 **约束限制**: 不涉及。 **取值范围**: allowRedeploy：允许覆盖 disableRedeploy：禁止覆盖 readOnly：只读。 **默认取值**: 无。
     *
     * @return string|null
     */
@@ -414,7 +437,7 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
     /**
     * Sets deploymentPolicy
     *
-    * @param string|null $deploymentPolicy 仓库属性-覆盖策略
+    * @param string|null $deploymentPolicy **参数解释**: 覆盖策略。 **约束限制**: 不涉及。 **取值范围**: allowRedeploy：允许覆盖 disableRedeploy：禁止覆盖 readOnly：只读。 **默认取值**: 无。
     *
     * @return $this
     */
@@ -426,7 +449,7 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoCleanSnapshot
-    *  自动清理快照
+    *  **参数解释**: 自动清理快照。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return bool|null
     */
@@ -438,7 +461,7 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
     /**
     * Sets autoCleanSnapshot
     *
-    * @param bool|null $autoCleanSnapshot 自动清理快照
+    * @param bool|null $autoCleanSnapshot **参数解释**: 自动清理快照。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return $this
     */
@@ -450,7 +473,7 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
 
     /**
     * Gets snapshotAliveDays
-    *  快照保存时间长度
+    *  **参数解释**: 快照保存时间长度。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return string|null
     */
@@ -462,7 +485,7 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
     /**
     * Sets snapshotAliveDays
     *
-    * @param string|null $snapshotAliveDays 快照保存时间长度
+    * @param string|null $snapshotAliveDays **参数解释**: 快照保存时间长度。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return $this
     */
@@ -474,7 +497,7 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxUniqueSnapshots
-    *  最大不同快照个数
+    *  **参数解释**: 最大不同快照个数。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return string|null
     */
@@ -486,7 +509,7 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
     /**
     * Sets maxUniqueSnapshots
     *
-    * @param string|null $maxUniqueSnapshots 最大不同快照个数
+    * @param string|null $maxUniqueSnapshots **参数解释**: 最大不同快照个数。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 无。
     *
     * @return $this
     */
@@ -498,7 +521,7 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
 
     /**
     * Gets allowAnonymous
-    *  是否允许匿名
+    *  **参数解释**: 是否允许匿名。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return bool|null
     */
@@ -510,13 +533,37 @@ class UpdateNotMavenRepoDO implements ModelInterface, ArrayAccess
     /**
     * Sets allowAnonymous
     *
-    * @param bool|null $allowAnonymous 是否允许匿名
+    * @param bool|null $allowAnonymous **参数解释**: 是否允许匿名。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */
     public function setAllowAnonymous($allowAnonymous)
     {
         $this->container['allowAnonymous'] = $allowAnonymous;
+        return $this;
+    }
+
+    /**
+    * Gets projectId
+    *  **参数解释**: 项目ID，可以从调用API处获取，也可以从控制台获取。获取方式请参考[获取项目ID](CloudArtifact_api_0015.xml)。 **约束限制**: 只能由英文字母、数字组成，且长度为32个字符。 **取值范围**: 不涉及。 **默认取值**: 无。
+    *
+    * @return string|null
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string|null $projectId **参数解释**: 项目ID，可以从调用API处获取，也可以从控制台获取。获取方式请参考[获取项目ID](CloudArtifact_api_0015.xml)。 **约束限制**: 只能由英文字母、数字组成，且长度为32个字符。 **取值范围**: 不涉及。 **默认取值**: 无。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
         return $this;
     }
 

@@ -161,8 +161,8 @@ class UpdatePacifyWordsReq implements ModelInterface, ArrayAccess
         if ($this->container['pacifyWords'] === null) {
             $invalidProperties[] = "'pacifyWords' can't be null";
         }
-            if ((mb_strlen($this->container['pacifyWords']) > 64)) {
-                $invalidProperties[] = "invalid value for 'pacifyWords', the character length must be smaller than or equal to 64.";
+            if ((mb_strlen($this->container['pacifyWords']) > 512)) {
+                $invalidProperties[] = "invalid value for 'pacifyWords', the character length must be smaller than or equal to 512.";
             }
             if ((mb_strlen($this->container['pacifyWords']) < 1)) {
                 $invalidProperties[] = "invalid value for 'pacifyWords', the character length must be bigger than or equal to 1.";

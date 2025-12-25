@@ -21,7 +21,7 @@ class ListResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceGroups  一个或者多个资源分组信息。
+    * resourceGroups  **参数解释**： 一个或者多个资源分组信息。
     * metaData  metaData
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ListResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceGroups  一个或者多个资源分组信息。
+    * resourceGroups  **参数解释**： 一个或者多个资源分组信息。
     * metaData  metaData
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListResourceGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceGroups  一个或者多个资源分组信息。
+    * resourceGroups  **参数解释**： 一个或者多个资源分组信息。
     * metaData  metaData
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceGroups  一个或者多个资源分组信息。
+    * resourceGroups  **参数解释**： 一个或者多个资源分组信息。
     * metaData  metaData
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceGroups  一个或者多个资源分组信息。
+    * resourceGroups  **参数解释**： 一个或者多个资源分组信息。
     * metaData  metaData
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ListResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceGroups
-    *  一个或者多个资源分组信息。
+    *  **参数解释**： 一个或者多个资源分组信息。
     *
     * @return \HuaweiCloud\SDK\Ces\V1\Model\ResourceGroupInfo[]|null
     */
@@ -198,7 +198,7 @@ class ListResourceGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resourceGroups
     *
-    * @param \HuaweiCloud\SDK\Ces\V1\Model\ResourceGroupInfo[]|null $resourceGroups 一个或者多个资源分组信息。
+    * @param \HuaweiCloud\SDK\Ces\V1\Model\ResourceGroupInfo[]|null $resourceGroups **参数解释**： 一个或者多个资源分组信息。
     *
     * @return $this
     */

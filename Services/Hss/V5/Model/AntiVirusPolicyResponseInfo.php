@@ -32,7 +32,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
     * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
-    * invalidate  失效，包含如下:   - true ：是   - fasle ：否
+    * invalidate  失效，包含如下:   - true ：是   - false ：否
     * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     * hostInfoList  主机信息
     * whetherPaidTask  此次扫描任务是否付费
@@ -74,7 +74,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
     * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
-    * invalidate  失效，包含如下:   - true ：是   - fasle ：否
+    * invalidate  失效，包含如下:   - true ：是   - false ：否
     * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     * hostInfoList  主机信息
     * whetherPaidTask  此次扫描任务是否付费
@@ -137,7 +137,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
     * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
-    * invalidate  失效，包含如下:   - true ：是   - fasle ：否
+    * invalidate  失效，包含如下:   - true ：是   - false ：否
     * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     * hostInfoList  主机信息
     * whetherPaidTask  此次扫描任务是否付费
@@ -179,7 +179,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
     * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
-    * invalidate  失效，包含如下:   - true ：是   - fasle ：否
+    * invalidate  失效，包含如下:   - true ：是   - false ：否
     * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     * hostInfoList  主机信息
     * whetherPaidTask  此次扫描任务是否付费
@@ -221,7 +221,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     * scanDir  扫描目录，多个用;分隔
     * ignoreDir  排除目录，多个用;分隔
     * action  **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
-    * invalidate  失效，包含如下:   - true ：是   - fasle ：否
+    * invalidate  失效，包含如下:   - true ：是   - false ：否
     * hostNum  **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
     * hostInfoList  主机信息
     * whetherPaidTask  此次扫描任务是否付费
@@ -707,7 +707,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets invalidate
-    *  失效，包含如下:   - true ：是   - fasle ：否
+    *  失效，包含如下:   - true ：是   - false ：否
     *
     * @return bool|null
     */
@@ -719,7 +719,7 @@ class AntiVirusPolicyResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets invalidate
     *
-    * @param bool|null $invalidate 失效，包含如下:   - true ：是   - fasle ：否
+    * @param bool|null $invalidate 失效，包含如下:   - true ：是   - false ：否
     *
     * @return $this
     */

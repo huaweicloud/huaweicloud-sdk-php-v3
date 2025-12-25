@@ -1,0 +1,362 @@
+<?php
+
+namespace HuaweiCloud\SDK\SecMaster\V1\Model;
+
+use \ArrayAccess;
+use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
+use HuaweiCloud\SDK\Core\Utils\ModelInterface;
+use HuaweiCloud\SDK\Core\SdkResponse;
+
+class ShowDataobjectRequest implements ModelInterface, ArrayAccess
+{
+    const DISCRIMINATOR = null;
+
+    /**
+    * The original name of the model.
+    *
+    * @var string
+    */
+    protected static $openAPIModelName = 'ShowDataobjectRequest';
+
+    /**
+    * Array of property to type mappings. Used for (de)serialization
+    * workspaceId  **参数解释：** 工作空间id。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * dataclassName  关联主体数据对象所属数据类名称，小写复数，如告警为alerts，事件为incidents
+    * dataObjectId  关联主体数据对象的id
+    *
+    * @var string[]
+    */
+    protected static $openAPITypes = [
+            'workspaceId' => 'string',
+            'dataclassName' => 'string',
+            'dataObjectId' => 'string'
+    ];
+
+    /**
+    * Array of property to format mappings. Used for (de)serialization
+    * workspaceId  **参数解释：** 工作空间id。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * dataclassName  关联主体数据对象所属数据类名称，小写复数，如告警为alerts，事件为incidents
+    * dataObjectId  关联主体数据对象的id
+    *
+    * @var string[]
+    */
+    protected static $openAPIFormats = [
+        'workspaceId' => null,
+        'dataclassName' => null,
+        'dataObjectId' => null
+    ];
+
+    /**
+    * Array of property to type mappings. Used for (de)serialization
+    *
+    * @return array
+    */
+    public static function openAPITypes()
+    {
+        return self::$openAPITypes;
+    }
+
+    /**
+    * Array of property to format mappings. Used for (de)serialization
+    *
+    * @return array
+    */
+    public static function openAPIFormats()
+    {
+        return self::$openAPIFormats;
+    }
+
+    /**
+    * Array of attributes where the key is the local name,
+    * and the value is the original name
+    * workspaceId  **参数解释：** 工作空间id。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * dataclassName  关联主体数据对象所属数据类名称，小写复数，如告警为alerts，事件为incidents
+    * dataObjectId  关联主体数据对象的id
+    *
+    * @var string[]
+    */
+    protected static $attributeMap = [
+            'workspaceId' => 'workspace_id',
+            'dataclassName' => 'dataclass_name',
+            'dataObjectId' => 'data_object_id'
+    ];
+
+    /**
+    * Array of attributes to setter functions (for deserialization of responses)
+    * workspaceId  **参数解释：** 工作空间id。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * dataclassName  关联主体数据对象所属数据类名称，小写复数，如告警为alerts，事件为incidents
+    * dataObjectId  关联主体数据对象的id
+    *
+    * @var string[]
+    */
+    protected static $setters = [
+            'workspaceId' => 'setWorkspaceId',
+            'dataclassName' => 'setDataclassName',
+            'dataObjectId' => 'setDataObjectId'
+    ];
+
+    /**
+    * Array of attributes to getter functions (for serialization of requests)
+    * workspaceId  **参数解释：** 工作空间id。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * dataclassName  关联主体数据对象所属数据类名称，小写复数，如告警为alerts，事件为incidents
+    * dataObjectId  关联主体数据对象的id
+    *
+    * @var string[]
+    */
+    protected static $getters = [
+            'workspaceId' => 'getWorkspaceId',
+            'dataclassName' => 'getDataclassName',
+            'dataObjectId' => 'getDataObjectId'
+    ];
+
+    /**
+    * Array of attributes where the key is the local name,
+    * and the value is the original name
+    *
+    * @return array
+    */
+    public static function attributeMap()
+    {
+        return self::$attributeMap;
+    }
+
+    /**
+    * Array of attributes to setter functions (for deserialization of responses)
+    *
+    * @return array
+    */
+    public static function setters()
+    {
+        return self::$setters;
+    }
+
+    /**
+    * Array of attributes to getter functions (for serialization of requests)
+    *
+    * @return array
+    */
+    public static function getters()
+    {
+        return self::$getters;
+    }
+
+    /**
+    * The original name of the model.
+    *
+    * @return string
+    */
+    public function getModelName()
+    {
+        return self::$openAPIModelName;
+    }
+    
+
+
+    /**
+    * Associative array for storing property values
+    *
+    * @var mixed[]
+    */
+    protected $container = [];
+
+    /**
+    * Constructor
+    *
+    * @param mixed[] $data Associated array of property values
+    *                      initializing the model
+    */
+    public function __construct(array $data = null)
+    {
+        $this->container['workspaceId'] = isset($data['workspaceId']) ? $data['workspaceId'] : null;
+        $this->container['dataclassName'] = isset($data['dataclassName']) ? $data['dataclassName'] : null;
+        $this->container['dataObjectId'] = isset($data['dataObjectId']) ? $data['dataObjectId'] : null;
+    }
+
+    /**
+    * Show all the invalid properties with reasons.
+    *
+    * @return array invalid properties with reasons
+    */
+    public function listInvalidProperties()
+    {
+        $invalidProperties = [];
+        if ($this->container['workspaceId'] === null) {
+            $invalidProperties[] = "'workspaceId' can't be null";
+        }
+            if ((mb_strlen($this->container['workspaceId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'workspaceId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['workspaceId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'workspaceId', the character length must be bigger than or equal to 32.";
+            }
+        if ($this->container['dataclassName'] === null) {
+            $invalidProperties[] = "'dataclassName' can't be null";
+        }
+            if ((mb_strlen($this->container['dataclassName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'dataclassName', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['dataclassName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'dataclassName', the character length must be bigger than or equal to 1.";
+            }
+        if ($this->container['dataObjectId'] === null) {
+            $invalidProperties[] = "'dataObjectId' can't be null";
+        }
+            if ((mb_strlen($this->container['dataObjectId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'dataObjectId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['dataObjectId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'dataObjectId', the character length must be bigger than or equal to 32.";
+            }
+        return $invalidProperties;
+    }
+
+    /**
+    * Validate all the properties in the model
+    * return true if all passed
+    *
+    * @return bool True if all properties are valid
+    */
+    public function valid()
+    {
+        return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets workspaceId
+    *  **参数解释：** 工作空间id。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string
+    */
+    public function getWorkspaceId()
+    {
+        return $this->container['workspaceId'];
+    }
+
+    /**
+    * Sets workspaceId
+    *
+    * @param string $workspaceId **参数解释：** 工作空间id。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setWorkspaceId($workspaceId)
+    {
+        $this->container['workspaceId'] = $workspaceId;
+        return $this;
+    }
+
+    /**
+    * Gets dataclassName
+    *  关联主体数据对象所属数据类名称，小写复数，如告警为alerts，事件为incidents
+    *
+    * @return string
+    */
+    public function getDataclassName()
+    {
+        return $this->container['dataclassName'];
+    }
+
+    /**
+    * Sets dataclassName
+    *
+    * @param string $dataclassName 关联主体数据对象所属数据类名称，小写复数，如告警为alerts，事件为incidents
+    *
+    * @return $this
+    */
+    public function setDataclassName($dataclassName)
+    {
+        $this->container['dataclassName'] = $dataclassName;
+        return $this;
+    }
+
+    /**
+    * Gets dataObjectId
+    *  关联主体数据对象的id
+    *
+    * @return string
+    */
+    public function getDataObjectId()
+    {
+        return $this->container['dataObjectId'];
+    }
+
+    /**
+    * Sets dataObjectId
+    *
+    * @param string $dataObjectId 关联主体数据对象的id
+    *
+    * @return $this
+    */
+    public function setDataObjectId($dataObjectId)
+    {
+        $this->container['dataObjectId'] = $dataObjectId;
+        return $this;
+    }
+
+    /**
+    * Returns true if offset exists. False otherwise.
+    *
+    * @param integer $offset Offset
+    *
+    * @return boolean
+    */
+    public function offsetExists($offset)
+    {
+        return isset($this->container[$offset]);
+    }
+
+    /**
+    * Gets offset.
+    *
+    * @param integer $offset Offset
+    *
+    * @return mixed
+    */
+    public function offsetGet($offset)
+    {
+        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+    }
+
+    /**
+    * Sets value based on offset.
+    *
+    * @param integer $offset Offset
+    * @param mixed   $value  Value to be set
+    *
+    * @return void
+    */
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
+                $this->container[] = $value;
+            } else {
+                $this->container[$offset] = $value;
+        }
+    }
+
+    /**
+    * Unsets offset.
+    *
+    * @param integer $offset Offset
+    *
+    * @return void
+    */
+    public function offsetUnset($offset)
+    {
+        unset($this->container[$offset]);
+    }
+
+    /**
+    * Gets the string presentation of the object
+    *
+    * @return string
+    */
+    public function __toString()
+    {
+        return json_encode(
+            ObjectSerializer::sanitizeForSerialization($this),
+            JSON_PRETTY_PRINT
+        );
+    }
+}
+

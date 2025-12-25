@@ -21,8 +21,8 @@ class ListRaspEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  total number
-    * dataList  data list
+    * totalNum  **参数解释** 符合所有筛选条件的应用防护事件总数，用于分页计算总页数 **取值范围** 取值0-9223372036854775807
+    * dataList  **参数解释** 包含查询到的应用防护事件详细信息，每个元素对应一个防护事件的完整数据 **取值范围** 数组长度0-limit（每页显示个数），元素结构符合RaspProtectHistoryResponseInfo定义，数组为空表示无匹配结果
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListRaspEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  total number
-    * dataList  data list
+    * totalNum  **参数解释** 符合所有筛选条件的应用防护事件总数，用于分页计算总页数 **取值范围** 取值0-9223372036854775807
+    * dataList  **参数解释** 包含查询到的应用防护事件详细信息，每个元素对应一个防护事件的完整数据 **取值范围** 数组长度0-limit（每页显示个数），元素结构符合RaspProtectHistoryResponseInfo定义，数组为空表示无匹配结果
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListRaspEventsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  total number
-    * dataList  data list
+    * totalNum  **参数解释** 符合所有筛选条件的应用防护事件总数，用于分页计算总页数 **取值范围** 取值0-9223372036854775807
+    * dataList  **参数解释** 包含查询到的应用防护事件详细信息，每个元素对应一个防护事件的完整数据 **取值范围** 数组长度0-limit（每页显示个数），元素结构符合RaspProtectHistoryResponseInfo定义，数组为空表示无匹配结果
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListRaspEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  total number
-    * dataList  data list
+    * totalNum  **参数解释** 符合所有筛选条件的应用防护事件总数，用于分页计算总页数 **取值范围** 取值0-9223372036854775807
+    * dataList  **参数解释** 包含查询到的应用防护事件详细信息，每个元素对应一个防护事件的完整数据 **取值范围** 数组长度0-limit（每页显示个数），元素结构符合RaspProtectHistoryResponseInfo定义，数组为空表示无匹配结果
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListRaspEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  total number
-    * dataList  data list
+    * totalNum  **参数解释** 符合所有筛选条件的应用防护事件总数，用于分页计算总页数 **取值范围** 取值0-9223372036854775807
+    * dataList  **参数解释** 包含查询到的应用防护事件详细信息，每个元素对应一个防护事件的完整数据 **取值范围** 数组长度0-limit（每页显示个数），元素结构符合RaspProtectHistoryResponseInfo定义，数组为空表示无匹配结果
     *
     * @var string[]
     */
@@ -170,8 +170,8 @@ class ListRaspEventsResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] > 2097152)) {
-                $invalidProperties[] = "invalid value for 'totalNum', must be smaller than or equal to 2097152.";
+            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'totalNum', must be smaller than or equal to 9223372036854775807.";
             }
             if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] < 0)) {
                 $invalidProperties[] = "invalid value for 'totalNum', must be bigger than or equal to 0.";
@@ -192,7 +192,7 @@ class ListRaspEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  total number
+    *  **参数解释** 符合所有筛选条件的应用防护事件总数，用于分页计算总页数 **取值范围** 取值0-9223372036854775807
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListRaspEventsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum total number
+    * @param int|null $totalNum **参数解释** 符合所有筛选条件的应用防护事件总数，用于分页计算总页数 **取值范围** 取值0-9223372036854775807
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListRaspEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  data list
+    *  **参数解释** 包含查询到的应用防护事件详细信息，每个元素对应一个防护事件的完整数据 **取值范围** 数组长度0-limit（每页显示个数），元素结构符合RaspProtectHistoryResponseInfo定义，数组为空表示无匹配结果
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\RaspProtectHistoryResponseInfo[]|null
     */
@@ -228,7 +228,7 @@ class ListRaspEventsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\RaspProtectHistoryResponseInfo[]|null $dataList data list
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\RaspProtectHistoryResponseInfo[]|null $dataList **参数解释** 包含查询到的应用防护事件详细信息，每个元素对应一个防护事件的完整数据 **取值范围** 数组长度0-limit（每页显示个数），元素结构符合RaspProtectHistoryResponseInfo定义，数组为空表示无匹配结果
     *
     * @return $this
     */

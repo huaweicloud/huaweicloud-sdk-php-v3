@@ -29,6 +29,9 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
     * callbackConfig  callbackConfig
+    * idCardImage1  身份证国徽面照片，需要Base64编码。
+    * idCardImage2  身份证人像面照片，需要Base64编码。
+    * authorizeUseHumanImage  授权使用照片
     *
     * @var string[]
     */
@@ -41,7 +44,10 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
             'outputAssetConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\OutputAssetConfig',
             'backgroundMusicConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundMusicConfig',
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
-            'callbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CallBackConfig'
+            'callbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CallBackConfig',
+            'idCardImage1' => 'string',
+            'idCardImage2' => 'string',
+            'authorizeUseHumanImage' => 'bool'
     ];
 
     /**
@@ -55,6 +61,9 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
     * callbackConfig  callbackConfig
+    * idCardImage1  身份证国徽面照片，需要Base64编码。
+    * idCardImage2  身份证人像面照片，需要Base64编码。
+    * authorizeUseHumanImage  授权使用照片
     *
     * @var string[]
     */
@@ -67,7 +76,10 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
         'outputAssetConfig' => null,
         'backgroundMusicConfig' => null,
         'reviewConfig' => null,
-        'callbackConfig' => null
+        'callbackConfig' => null,
+        'idCardImage1' => null,
+        'idCardImage2' => null,
+        'authorizeUseHumanImage' => null
     ];
 
     /**
@@ -102,6 +114,9 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
     * callbackConfig  callbackConfig
+    * idCardImage1  身份证国徽面照片，需要Base64编码。
+    * idCardImage2  身份证人像面照片，需要Base64编码。
+    * authorizeUseHumanImage  授权使用照片
     *
     * @var string[]
     */
@@ -114,7 +129,10 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
             'outputAssetConfig' => 'output_asset_config',
             'backgroundMusicConfig' => 'background_music_config',
             'reviewConfig' => 'review_config',
-            'callbackConfig' => 'callback_config'
+            'callbackConfig' => 'callback_config',
+            'idCardImage1' => 'id_card_image1',
+            'idCardImage2' => 'id_card_image2',
+            'authorizeUseHumanImage' => 'authorize_use_human_image'
     ];
 
     /**
@@ -128,6 +146,9 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
     * callbackConfig  callbackConfig
+    * idCardImage1  身份证国徽面照片，需要Base64编码。
+    * idCardImage2  身份证人像面照片，需要Base64编码。
+    * authorizeUseHumanImage  授权使用照片
     *
     * @var string[]
     */
@@ -140,7 +161,10 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
             'outputAssetConfig' => 'setOutputAssetConfig',
             'backgroundMusicConfig' => 'setBackgroundMusicConfig',
             'reviewConfig' => 'setReviewConfig',
-            'callbackConfig' => 'setCallbackConfig'
+            'callbackConfig' => 'setCallbackConfig',
+            'idCardImage1' => 'setIdCardImage1',
+            'idCardImage2' => 'setIdCardImage2',
+            'authorizeUseHumanImage' => 'setAuthorizeUseHumanImage'
     ];
 
     /**
@@ -154,6 +178,9 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
     * callbackConfig  callbackConfig
+    * idCardImage1  身份证国徽面照片，需要Base64编码。
+    * idCardImage2  身份证人像面照片，需要Base64编码。
+    * authorizeUseHumanImage  授权使用照片
     *
     * @var string[]
     */
@@ -166,7 +193,10 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
             'outputAssetConfig' => 'getOutputAssetConfig',
             'backgroundMusicConfig' => 'getBackgroundMusicConfig',
             'reviewConfig' => 'getReviewConfig',
-            'callbackConfig' => 'getCallbackConfig'
+            'callbackConfig' => 'getCallbackConfig',
+            'idCardImage1' => 'getIdCardImage1',
+            'idCardImage2' => 'getIdCardImage2',
+            'authorizeUseHumanImage' => 'getAuthorizeUseHumanImage'
     ];
 
     /**
@@ -236,6 +266,9 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
         $this->container['backgroundMusicConfig'] = isset($data['backgroundMusicConfig']) ? $data['backgroundMusicConfig'] : null;
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
         $this->container['callbackConfig'] = isset($data['callbackConfig']) ? $data['callbackConfig'] : null;
+        $this->container['idCardImage1'] = isset($data['idCardImage1']) ? $data['idCardImage1'] : null;
+        $this->container['idCardImage2'] = isset($data['idCardImage2']) ? $data['idCardImage2'] : null;
+        $this->container['authorizeUseHumanImage'] = isset($data['authorizeUseHumanImage']) ? $data['authorizeUseHumanImage'] : null;
     }
 
     /**
@@ -267,6 +300,18 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
         if ($this->container['outputAssetConfig'] === null) {
             $invalidProperties[] = "'outputAssetConfig' can't be null";
         }
+            if (!is_null($this->container['idCardImage1']) && (mb_strlen($this->container['idCardImage1']) > 31457280)) {
+                $invalidProperties[] = "invalid value for 'idCardImage1', the character length must be smaller than or equal to 31457280.";
+            }
+            if (!is_null($this->container['idCardImage1']) && (mb_strlen($this->container['idCardImage1']) < 1)) {
+                $invalidProperties[] = "invalid value for 'idCardImage1', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['idCardImage2']) && (mb_strlen($this->container['idCardImage2']) > 31457280)) {
+                $invalidProperties[] = "invalid value for 'idCardImage2', the character length must be smaller than or equal to 31457280.";
+            }
+            if (!is_null($this->container['idCardImage2']) && (mb_strlen($this->container['idCardImage2']) < 1)) {
+                $invalidProperties[] = "invalid value for 'idCardImage2', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -494,6 +539,78 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     public function setCallbackConfig($callbackConfig)
     {
         $this->container['callbackConfig'] = $callbackConfig;
+        return $this;
+    }
+
+    /**
+    * Gets idCardImage1
+    *  身份证国徽面照片，需要Base64编码。
+    *
+    * @return string|null
+    */
+    public function getIdCardImage1()
+    {
+        return $this->container['idCardImage1'];
+    }
+
+    /**
+    * Sets idCardImage1
+    *
+    * @param string|null $idCardImage1 身份证国徽面照片，需要Base64编码。
+    *
+    * @return $this
+    */
+    public function setIdCardImage1($idCardImage1)
+    {
+        $this->container['idCardImage1'] = $idCardImage1;
+        return $this;
+    }
+
+    /**
+    * Gets idCardImage2
+    *  身份证人像面照片，需要Base64编码。
+    *
+    * @return string|null
+    */
+    public function getIdCardImage2()
+    {
+        return $this->container['idCardImage2'];
+    }
+
+    /**
+    * Sets idCardImage2
+    *
+    * @param string|null $idCardImage2 身份证人像面照片，需要Base64编码。
+    *
+    * @return $this
+    */
+    public function setIdCardImage2($idCardImage2)
+    {
+        $this->container['idCardImage2'] = $idCardImage2;
+        return $this;
+    }
+
+    /**
+    * Gets authorizeUseHumanImage
+    *  授权使用照片
+    *
+    * @return bool|null
+    */
+    public function getAuthorizeUseHumanImage()
+    {
+        return $this->container['authorizeUseHumanImage'];
+    }
+
+    /**
+    * Sets authorizeUseHumanImage
+    *
+    * @param bool|null $authorizeUseHumanImage 授权使用照片
+    *
+    * @return $this
+    */
+    public function setAuthorizeUseHumanImage($authorizeUseHumanImage)
+    {
+        $this->container['authorizeUseHumanImage'] = $authorizeUseHumanImage;
         return $this;
     }
 

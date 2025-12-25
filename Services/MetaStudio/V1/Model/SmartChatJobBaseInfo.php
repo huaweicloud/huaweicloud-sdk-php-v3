@@ -33,7 +33,7 @@ class SmartChatJobBaseInfo implements ModelInterface, ArrayAccess
     * voiceConfigList  语音配置参数列表。
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * isTransparent  是否透明背景
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     * clientId  clientId
     * isPoolMode  是否是资源池模式
     * jobFinishReason  对话结束原因 * NORMAL：正常结束 * MUTE_TIMEOUT：静音超时
@@ -75,7 +75,7 @@ class SmartChatJobBaseInfo implements ModelInterface, ArrayAccess
     * voiceConfigList  语音配置参数列表。
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * isTransparent  是否透明背景
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     * clientId  clientId
     * isPoolMode  是否是资源池模式
     * jobFinishReason  对话结束原因 * NORMAL：正常结束 * MUTE_TIMEOUT：静音超时
@@ -138,7 +138,7 @@ class SmartChatJobBaseInfo implements ModelInterface, ArrayAccess
     * voiceConfigList  语音配置参数列表。
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * isTransparent  是否透明背景
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     * clientId  clientId
     * isPoolMode  是否是资源池模式
     * jobFinishReason  对话结束原因 * NORMAL：正常结束 * MUTE_TIMEOUT：静音超时
@@ -180,7 +180,7 @@ class SmartChatJobBaseInfo implements ModelInterface, ArrayAccess
     * voiceConfigList  语音配置参数列表。
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * isTransparent  是否透明背景
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     * clientId  clientId
     * isPoolMode  是否是资源池模式
     * jobFinishReason  对话结束原因 * NORMAL：正常结束 * MUTE_TIMEOUT：静音超时
@@ -222,7 +222,7 @@ class SmartChatJobBaseInfo implements ModelInterface, ArrayAccess
     * voiceConfigList  语音配置参数列表。
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * isTransparent  是否透明背景
-    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * defaultLanguage  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     * clientId  clientId
     * isPoolMode  是否是资源池模式
     * jobFinishReason  对话结束原因 * NORMAL：正常结束 * MUTE_TIMEOUT：静音超时
@@ -306,6 +306,7 @@ class SmartChatJobBaseInfo implements ModelInterface, ArrayAccess
     const DEFAULT_LANGUAGE_POR = 'por';
     const DEFAULT_LANGUAGE_ARABIC = 'Arabic';
     const DEFAULT_LANGUAGE_THAI = 'Thai';
+    const DEFAULT_LANGUAGE_FR = 'fr';
     const JOB_FINISH_REASON_NORMAL = 'NORMAL';
     const JOB_FINISH_REASON_MUTE_TIMEOUT = 'MUTE_TIMEOUT';
     
@@ -357,6 +358,7 @@ class SmartChatJobBaseInfo implements ModelInterface, ArrayAccess
             self::DEFAULT_LANGUAGE_POR,
             self::DEFAULT_LANGUAGE_ARABIC,
             self::DEFAULT_LANGUAGE_THAI,
+            self::DEFAULT_LANGUAGE_FR,
         ];
     }
 
@@ -830,7 +832,7 @@ class SmartChatJobBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultLanguage
-    *  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    *  默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     *
     * @return string|null
     */
@@ -842,7 +844,7 @@ class SmartChatJobBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets defaultLanguage
     *
-    * @param string|null $defaultLanguage 默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+    * @param string|null $defaultLanguage 默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
     *
     * @return $this
     */

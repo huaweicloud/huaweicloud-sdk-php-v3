@@ -20,8 +20,8 @@ class ResourcesInListResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceGroupId  **参数解释**： 资源分组ID，监控范围为资源分组时存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
-    * resourceGroupName  **参数解释**： 资源分组名称，监控范围为资源分组时存在该值。 **取值范围**： 长度为[1,128]个字符。
+    * resourceGroupId  **参数解释**： 资源分组ID，监控范围为资源分组时，存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
+    * resourceGroupName  **参数解释**： 资源分组名称，监控范围为资源分组时，存在该值。 **取值范围**： 长度为[1,128]个字符。
     * dimensions  **参数解释**： 维度信息。
     *
     * @var string[]
@@ -34,8 +34,8 @@ class ResourcesInListResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceGroupId  **参数解释**： 资源分组ID，监控范围为资源分组时存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
-    * resourceGroupName  **参数解释**： 资源分组名称，监控范围为资源分组时存在该值。 **取值范围**： 长度为[1,128]个字符。
+    * resourceGroupId  **参数解释**： 资源分组ID，监控范围为资源分组时，存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
+    * resourceGroupName  **参数解释**： 资源分组名称，监控范围为资源分组时，存在该值。 **取值范围**： 长度为[1,128]个字符。
     * dimensions  **参数解释**： 维度信息。
     *
     * @var string[]
@@ -69,8 +69,8 @@ class ResourcesInListResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceGroupId  **参数解释**： 资源分组ID，监控范围为资源分组时存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
-    * resourceGroupName  **参数解释**： 资源分组名称，监控范围为资源分组时存在该值。 **取值范围**： 长度为[1,128]个字符。
+    * resourceGroupId  **参数解释**： 资源分组ID，监控范围为资源分组时，存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
+    * resourceGroupName  **参数解释**： 资源分组名称，监控范围为资源分组时，存在该值。 **取值范围**： 长度为[1,128]个字符。
     * dimensions  **参数解释**： 维度信息。
     *
     * @var string[]
@@ -83,8 +83,8 @@ class ResourcesInListResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceGroupId  **参数解释**： 资源分组ID，监控范围为资源分组时存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
-    * resourceGroupName  **参数解释**： 资源分组名称，监控范围为资源分组时存在该值。 **取值范围**： 长度为[1,128]个字符。
+    * resourceGroupId  **参数解释**： 资源分组ID，监控范围为资源分组时，存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
+    * resourceGroupName  **参数解释**： 资源分组名称，监控范围为资源分组时，存在该值。 **取值范围**： 长度为[1,128]个字符。
     * dimensions  **参数解释**： 维度信息。
     *
     * @var string[]
@@ -97,8 +97,8 @@ class ResourcesInListResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceGroupId  **参数解释**： 资源分组ID，监控范围为资源分组时存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
-    * resourceGroupName  **参数解释**： 资源分组名称，监控范围为资源分组时存在该值。 **取值范围**： 长度为[1,128]个字符。
+    * resourceGroupId  **参数解释**： 资源分组ID，监控范围为资源分组时，存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
+    * resourceGroupName  **参数解释**： 资源分组名称，监控范围为资源分组时，存在该值。 **取值范围**： 长度为[1,128]个字符。
     * dimensions  **参数解释**： 维度信息。
     *
     * @var string[]
@@ -205,7 +205,7 @@ class ResourcesInListResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceGroupId
-    *  **参数解释**： 资源分组ID，监控范围为资源分组时存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
+    *  **参数解释**： 资源分组ID，监控范围为资源分组时，存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
     *
     * @return string|null
     */
@@ -217,7 +217,7 @@ class ResourcesInListResp implements ModelInterface, ArrayAccess
     /**
     * Sets resourceGroupId
     *
-    * @param string|null $resourceGroupId **参数解释**： 资源分组ID，监控范围为资源分组时存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
+    * @param string|null $resourceGroupId **参数解释**： 资源分组ID，监控范围为资源分组时，存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class ResourcesInListResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceGroupName
-    *  **参数解释**： 资源分组名称，监控范围为资源分组时存在该值。 **取值范围**： 长度为[1,128]个字符。
+    *  **参数解释**： 资源分组名称，监控范围为资源分组时，存在该值。 **取值范围**： 长度为[1,128]个字符。
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class ResourcesInListResp implements ModelInterface, ArrayAccess
     /**
     * Sets resourceGroupName
     *
-    * @param string|null $resourceGroupName **参数解释**： 资源分组名称，监控范围为资源分组时存在该值。 **取值范围**： 长度为[1,128]个字符。
+    * @param string|null $resourceGroupName **参数解释**： 资源分组名称，监控范围为资源分组时，存在该值。 **取值范围**： 长度为[1,128]个字符。
     *
     * @return $this
     */

@@ -219,7 +219,28 @@ class TenantRepositoryDto implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_0 = 0;
+    const STATUS_3 = 3;
+    const STATUS_4 = 4;
+    const STATUS_5 = 5;
+    const STATUS_7 = 7;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_0,
+            self::STATUS_3,
+            self::STATUS_4,
+            self::STATUS_5,
+            self::STATUS_7,
+        ];
+    }
 
 
     /**
@@ -262,6 +283,32 @@ class TenantRepositoryDto implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['owner']) && (mb_strlen($this->container['owner']) < 1)) {
                 $invalidProperties[] = "invalid value for 'owner', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['capacity']) && ($this->container['capacity'] > 30720)) {
+                $invalidProperties[] = "invalid value for 'capacity', must be smaller than or equal to 30720.";
+            }
+            if (!is_null($this->container['capacity']) && ($this->container['capacity'] < 0)) {
+                $invalidProperties[] = "invalid value for 'capacity', must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['memberNumber']) && ($this->container['memberNumber'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'memberNumber', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['memberNumber']) && ($this->container['memberNumber'] < 1)) {
+                $invalidProperties[] = "invalid value for 'memberNumber', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['repositoryId']) && ($this->container['repositoryId'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'repositoryId', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['repositoryId']) && ($this->container['repositoryId'] < 1)) {
+                $invalidProperties[] = "invalid value for 'repositoryId', must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['repositoryName']) && (mb_strlen($this->container['repositoryName']) > 200)) {
                 $invalidProperties[] = "invalid value for 'repositoryName', the character length must be smaller than or equal to 200.";

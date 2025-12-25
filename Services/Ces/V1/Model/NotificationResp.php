@@ -20,7 +20,7 @@ class NotificationResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  **参数解释**： 告警通知类型。 **取值范围**： 取值如下： notification：SMN通知； autoscaling：AS通知。
+    * type  **参数解释**： 告警通知类型。 **取值范围**： - notification：通知组或主题订阅。 - autoscaling：AS通知，仅在AS使用。
     * notificationList  **参数解释**： 告警状态发生变化时，被通知对象的列表。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class NotificationResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  **参数解释**： 告警通知类型。 **取值范围**： 取值如下： notification：SMN通知； autoscaling：AS通知。
+    * type  **参数解释**： 告警通知类型。 **取值范围**： - notification：通知组或主题订阅。 - autoscaling：AS通知，仅在AS使用。
     * notificationList  **参数解释**： 告警状态发生变化时，被通知对象的列表。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class NotificationResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  **参数解释**： 告警通知类型。 **取值范围**： 取值如下： notification：SMN通知； autoscaling：AS通知。
+    * type  **参数解释**： 告警通知类型。 **取值范围**： - notification：通知组或主题订阅。 - autoscaling：AS通知，仅在AS使用。
     * notificationList  **参数解释**： 告警状态发生变化时，被通知对象的列表。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class NotificationResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  **参数解释**： 告警通知类型。 **取值范围**： 取值如下： notification：SMN通知； autoscaling：AS通知。
+    * type  **参数解释**： 告警通知类型。 **取值范围**： - notification：通知组或主题订阅。 - autoscaling：AS通知，仅在AS使用。
     * notificationList  **参数解释**： 告警状态发生变化时，被通知对象的列表。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class NotificationResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  **参数解释**： 告警通知类型。 **取值范围**： 取值如下： notification：SMN通知； autoscaling：AS通知。
+    * type  **参数解释**： 告警通知类型。 **取值范围**： - notification：通知组或主题订阅。 - autoscaling：AS通知，仅在AS使用。
     * notificationList  **参数解释**： 告警状态发生变化时，被通知对象的列表。
     *
     * @var string[]
@@ -188,7 +188,7 @@ class NotificationResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**： 告警通知类型。 **取值范围**： 取值如下： notification：SMN通知； autoscaling：AS通知。
+    *  **参数解释**： 告警通知类型。 **取值范围**： - notification：通知组或主题订阅。 - autoscaling：AS通知，仅在AS使用。
     *
     * @return string|null
     */
@@ -200,7 +200,7 @@ class NotificationResp implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释**： 告警通知类型。 **取值范围**： 取值如下： notification：SMN通知； autoscaling：AS通知。
+    * @param string|null $type **参数解释**： 告警通知类型。 **取值范围**： - notification：通知组或主题订阅。 - autoscaling：AS通知，仅在AS使用。
     *
     * @return $this
     */

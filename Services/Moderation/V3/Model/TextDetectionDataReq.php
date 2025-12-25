@@ -20,7 +20,7 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * text  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过10000个字符时，只检测前10000个字符。
+    * text  待检测文本，编码格式为“utf-8”，限定10000个字符以内，文本长度超过10000个字符时，只检测前10000个字符。
     * language  支持检测的文本语言
     *
     * @var string[]
@@ -32,7 +32,7 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * text  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过10000个字符时，只检测前10000个字符。
+    * text  待检测文本，编码格式为“utf-8”，限定10000个字符以内，文本长度超过10000个字符时，只检测前10000个字符。
     * language  支持检测的文本语言
     *
     * @var string[]
@@ -65,7 +65,7 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * text  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过10000个字符时，只检测前10000个字符。
+    * text  待检测文本，编码格式为“utf-8”，限定10000个字符以内，文本长度超过10000个字符时，只检测前10000个字符。
     * language  支持检测的文本语言
     *
     * @var string[]
@@ -77,7 +77,7 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * text  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过10000个字符时，只检测前10000个字符。
+    * text  待检测文本，编码格式为“utf-8”，限定10000个字符以内，文本长度超过10000个字符时，只检测前10000个字符。
     * language  支持检测的文本语言
     *
     * @var string[]
@@ -89,7 +89,7 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * text  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过10000个字符时，只检测前10000个字符。
+    * text  待检测文本，编码格式为“utf-8”，限定10000个字符以内，文本长度超过10000个字符时，只检测前10000个字符。
     * language  支持检测的文本语言
     *
     * @var string[]
@@ -215,7 +215,7 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets text
-    *  待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过10000个字符时，只检测前10000个字符。
+    *  待检测文本，编码格式为“utf-8”，限定10000个字符以内，文本长度超过10000个字符时，只检测前10000个字符。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class TextDetectionDataReq implements ModelInterface, ArrayAccess
     /**
     * Sets text
     *
-    * @param string $text 待检测文本，编码格式为“utf-8”，限定2000个字符以内，文本长度超过10000个字符时，只检测前10000个字符。
+    * @param string $text 待检测文本，编码格式为“utf-8”，限定10000个字符以内，文本长度超过10000个字符时，只检测前10000个字符。
     *
     * @return $this
     */

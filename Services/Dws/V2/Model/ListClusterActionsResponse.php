@@ -23,7 +23,7 @@ class ListClusterActionsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释**： 任务详情响应体。 **取值范围**： 随机生成的UUID。
     * actionName  **参数解释**： 任务名称，同入参字段。 **取值范围**： 不涉及。
-    * status  **参数解释**： 任务状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 任务状态。 **取值范围**： - SUCCESS：成功。 - RUNNING：运行中。 - WAITING：等待中。 - FAILED：失败。 - ROLLBACK_RUNNING：回滚运行中。 - ROLLBACK_SUCCESS：回滚成功。 - ROLLBACK_FAIL：回滚失败。
     * clusterName  **参数解释**： 集群名称。 **取值范围**： 不涉及。
     * submitTime  **参数解释**： 任务提交时间。 **取值范围**： 不涉及。
     * items  **参数解释**： 任务详情子项。 **取值范围**： 不涉及。
@@ -43,7 +43,7 @@ class ListClusterActionsResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释**： 任务详情响应体。 **取值范围**： 随机生成的UUID。
     * actionName  **参数解释**： 任务名称，同入参字段。 **取值范围**： 不涉及。
-    * status  **参数解释**： 任务状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 任务状态。 **取值范围**： - SUCCESS：成功。 - RUNNING：运行中。 - WAITING：等待中。 - FAILED：失败。 - ROLLBACK_RUNNING：回滚运行中。 - ROLLBACK_SUCCESS：回滚成功。 - ROLLBACK_FAIL：回滚失败。
     * clusterName  **参数解释**： 集群名称。 **取值范围**： 不涉及。
     * submitTime  **参数解释**： 任务提交时间。 **取值范围**： 不涉及。
     * items  **参数解释**： 任务详情子项。 **取值范围**： 不涉及。
@@ -84,7 +84,7 @@ class ListClusterActionsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  **参数解释**： 任务详情响应体。 **取值范围**： 随机生成的UUID。
     * actionName  **参数解释**： 任务名称，同入参字段。 **取值范围**： 不涉及。
-    * status  **参数解释**： 任务状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 任务状态。 **取值范围**： - SUCCESS：成功。 - RUNNING：运行中。 - WAITING：等待中。 - FAILED：失败。 - ROLLBACK_RUNNING：回滚运行中。 - ROLLBACK_SUCCESS：回滚成功。 - ROLLBACK_FAIL：回滚失败。
     * clusterName  **参数解释**： 集群名称。 **取值范围**： 不涉及。
     * submitTime  **参数解释**： 任务提交时间。 **取值范围**： 不涉及。
     * items  **参数解释**： 任务详情子项。 **取值范围**： 不涉及。
@@ -104,7 +104,7 @@ class ListClusterActionsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释**： 任务详情响应体。 **取值范围**： 随机生成的UUID。
     * actionName  **参数解释**： 任务名称，同入参字段。 **取值范围**： 不涉及。
-    * status  **参数解释**： 任务状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 任务状态。 **取值范围**： - SUCCESS：成功。 - RUNNING：运行中。 - WAITING：等待中。 - FAILED：失败。 - ROLLBACK_RUNNING：回滚运行中。 - ROLLBACK_SUCCESS：回滚成功。 - ROLLBACK_FAIL：回滚失败。
     * clusterName  **参数解释**： 集群名称。 **取值范围**： 不涉及。
     * submitTime  **参数解释**： 任务提交时间。 **取值范围**： 不涉及。
     * items  **参数解释**： 任务详情子项。 **取值范围**： 不涉及。
@@ -124,7 +124,7 @@ class ListClusterActionsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释**： 任务详情响应体。 **取值范围**： 随机生成的UUID。
     * actionName  **参数解释**： 任务名称，同入参字段。 **取值范围**： 不涉及。
-    * status  **参数解释**： 任务状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 任务状态。 **取值范围**： - SUCCESS：成功。 - RUNNING：运行中。 - WAITING：等待中。 - FAILED：失败。 - ROLLBACK_RUNNING：回滚运行中。 - ROLLBACK_SUCCESS：回滚成功。 - ROLLBACK_FAIL：回滚失败。
     * clusterName  **参数解释**： 集群名称。 **取值范围**： 不涉及。
     * submitTime  **参数解释**： 任务提交时间。 **取值范围**： 不涉及。
     * items  **参数解释**： 任务详情子项。 **取值范围**： 不涉及。
@@ -278,7 +278,7 @@ class ListClusterActionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 任务状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 任务状态。 **取值范围**： - SUCCESS：成功。 - RUNNING：运行中。 - WAITING：等待中。 - FAILED：失败。 - ROLLBACK_RUNNING：回滚运行中。 - ROLLBACK_SUCCESS：回滚成功。 - ROLLBACK_FAIL：回滚失败。
     *
     * @return string|null
     */
@@ -290,7 +290,7 @@ class ListClusterActionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 任务状态。 **取值范围**： 不涉及。
+    * @param string|null $status **参数解释**： 任务状态。 **取值范围**： - SUCCESS：成功。 - RUNNING：运行中。 - WAITING：等待中。 - FAILED：失败。 - ROLLBACK_RUNNING：回滚运行中。 - ROLLBACK_SUCCESS：回滚成功。 - ROLLBACK_FAIL：回滚失败。
     *
     * @return $this
     */

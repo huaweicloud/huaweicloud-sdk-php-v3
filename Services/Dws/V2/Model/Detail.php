@@ -20,9 +20,9 @@ class Detail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  **参数解释**： 属性类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 属性类型。 **取值范围**： - vCPU：CPU核心数。 - SATA：普通IO。 - SAS：高IO。 - SSD：超高IO。 - ESSD：极速型SSD。 - GPSSD：通用型SSD。 - LOCAL_DISK：本地盘。 - mem：内存大小。
     * value  **参数解释**： 属性值。 **取值范围**： 不涉及。
-    * unit  **参数解释**： 属性单位。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 属性单位。 **取值范围**： 当type为SATA、SAS、SSD、ESSD时，表示磁盘单位GB
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class Detail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  **参数解释**： 属性类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 属性类型。 **取值范围**： - vCPU：CPU核心数。 - SATA：普通IO。 - SAS：高IO。 - SSD：超高IO。 - ESSD：极速型SSD。 - GPSSD：通用型SSD。 - LOCAL_DISK：本地盘。 - mem：内存大小。
     * value  **参数解释**： 属性值。 **取值范围**： 不涉及。
-    * unit  **参数解释**： 属性单位。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 属性单位。 **取值范围**： 当type为SATA、SAS、SSD、ESSD时，表示磁盘单位GB
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class Detail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  **参数解释**： 属性类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 属性类型。 **取值范围**： - vCPU：CPU核心数。 - SATA：普通IO。 - SAS：高IO。 - SSD：超高IO。 - ESSD：极速型SSD。 - GPSSD：通用型SSD。 - LOCAL_DISK：本地盘。 - mem：内存大小。
     * value  **参数解释**： 属性值。 **取值范围**： 不涉及。
-    * unit  **参数解释**： 属性单位。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 属性单位。 **取值范围**： 当type为SATA、SAS、SSD、ESSD时，表示磁盘单位GB
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class Detail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  **参数解释**： 属性类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 属性类型。 **取值范围**： - vCPU：CPU核心数。 - SATA：普通IO。 - SAS：高IO。 - SSD：超高IO。 - ESSD：极速型SSD。 - GPSSD：通用型SSD。 - LOCAL_DISK：本地盘。 - mem：内存大小。
     * value  **参数解释**： 属性值。 **取值范围**： 不涉及。
-    * unit  **参数解释**： 属性单位。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 属性单位。 **取值范围**： 当type为SATA、SAS、SSD、ESSD时，表示磁盘单位GB
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class Detail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  **参数解释**： 属性类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 属性类型。 **取值范围**： - vCPU：CPU核心数。 - SATA：普通IO。 - SAS：高IO。 - SSD：超高IO。 - ESSD：极速型SSD。 - GPSSD：通用型SSD。 - LOCAL_DISK：本地盘。 - mem：内存大小。
     * value  **参数解释**： 属性值。 **取值范围**： 不涉及。
-    * unit  **参数解释**： 属性单位。 **取值范围**： 不涉及。
+    * unit  **参数解释**： 属性单位。 **取值范围**： 当type为SATA、SAS、SSD、ESSD时，表示磁盘单位GB
     *
     * @var string[]
     */
@@ -199,7 +199,7 @@ class Detail implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**： 属性类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 属性类型。 **取值范围**： - vCPU：CPU核心数。 - SATA：普通IO。 - SAS：高IO。 - SSD：超高IO。 - ESSD：极速型SSD。 - GPSSD：通用型SSD。 - LOCAL_DISK：本地盘。 - mem：内存大小。
     *
     * @return string|null
     */
@@ -211,7 +211,7 @@ class Detail implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释**： 属性类型。 **取值范围**： 不涉及。
+    * @param string|null $type **参数解释**： 属性类型。 **取值范围**： - vCPU：CPU核心数。 - SATA：普通IO。 - SAS：高IO。 - SSD：超高IO。 - ESSD：极速型SSD。 - GPSSD：通用型SSD。 - LOCAL_DISK：本地盘。 - mem：内存大小。
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class Detail implements ModelInterface, ArrayAccess
 
     /**
     * Gets unit
-    *  **参数解释**： 属性单位。 **取值范围**： 不涉及。
+    *  **参数解释**： 属性单位。 **取值范围**： 当type为SATA、SAS、SSD、ESSD时，表示磁盘单位GB
     *
     * @return string|null
     */
@@ -259,7 +259,7 @@ class Detail implements ModelInterface, ArrayAccess
     /**
     * Sets unit
     *
-    * @param string|null $unit **参数解释**： 属性单位。 **取值范围**： 不涉及。
+    * @param string|null $unit **参数解释**： 属性单位。 **取值范围**： 当type为SATA、SAS、SSD、ESSD时，表示磁盘单位GB
     *
     * @return $this
     */

@@ -20,16 +20,18 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupName  资源分组的名称
-    * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
-    * createTime  资源分组的创建时间
-    * enterpriseProjectId  资源分组归属企业项目ID
-    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
-    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
-    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * groupName  **参数解释** 资源分组的名称。 **取值范围** 只能为字母、数字、汉字、-或_，长度为[1,128]个字符。
+    * groupId  **参数解释** 资源分组ID。 **取值范围** 以rg开头，后跟22位由字母或数字组成的字符串。
+    * createTime  **参数解释** 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * updateTime  **参数解释** 资源分组的修改时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * enterpriseProjectId  **参数解释** 资源分组归属企业项目ID。 **取值范围** 只能包含小写字母、数字或-，长度为36个字符。或者为0，代表默认企业项目ID。
+    * type  **参数解释** 资源分组添加资源方式。 **取值范围** - EPS: 表示匹配企业项目 - TAG: 表示匹配标签 - Manual: 表示手动添加 - COMB: 表示组合匹配 - NAME: 表示匹配实例名称
+    * status  **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
+    * eventStatus  **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
     * resourceStatistics  resourceStatistics
-    * relatedEpIds  当资源匹配规则为匹配企业项目时，指定的企业项目列表
-    * associationAlarmTemplates  关联的告警模板列表
+    * relatedEpIds  **参数解释** 当资源匹配规则为匹配企业项目时，指定的企业项目列表。
+    * associationAlarmTemplates  **参数解释** 关联的告警模板列表。
+    * resourceLevel  **参数解释** 资源层级，资源生效范围。 **取值范围** - product: 云产品 - dimension: 子维度
     *
     * @var string[]
     */
@@ -37,27 +39,31 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
             'groupName' => 'string',
             'groupId' => 'string',
             'createTime' => '\DateTime',
+            'updateTime' => '\DateTime',
             'enterpriseProjectId' => 'string',
             'type' => 'string',
             'status' => 'string',
             'eventStatus' => 'string',
             'resourceStatistics' => '\HuaweiCloud\SDK\Ces\V2\Model\OneResourceGroupRespResourceStatistics',
             'relatedEpIds' => 'string[]',
-            'associationAlarmTemplates' => '\HuaweiCloud\SDK\Ces\V2\Model\AssociationAlarmTemplate[]'
+            'associationAlarmTemplates' => '\HuaweiCloud\SDK\Ces\V2\Model\AssociationAlarmTemplate[]',
+            'resourceLevel' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupName  资源分组的名称
-    * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
-    * createTime  资源分组的创建时间
-    * enterpriseProjectId  资源分组归属企业项目ID
-    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
-    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
-    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * groupName  **参数解释** 资源分组的名称。 **取值范围** 只能为字母、数字、汉字、-或_，长度为[1,128]个字符。
+    * groupId  **参数解释** 资源分组ID。 **取值范围** 以rg开头，后跟22位由字母或数字组成的字符串。
+    * createTime  **参数解释** 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * updateTime  **参数解释** 资源分组的修改时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * enterpriseProjectId  **参数解释** 资源分组归属企业项目ID。 **取值范围** 只能包含小写字母、数字或-，长度为36个字符。或者为0，代表默认企业项目ID。
+    * type  **参数解释** 资源分组添加资源方式。 **取值范围** - EPS: 表示匹配企业项目 - TAG: 表示匹配标签 - Manual: 表示手动添加 - COMB: 表示组合匹配 - NAME: 表示匹配实例名称
+    * status  **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
+    * eventStatus  **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
     * resourceStatistics  resourceStatistics
-    * relatedEpIds  当资源匹配规则为匹配企业项目时，指定的企业项目列表
-    * associationAlarmTemplates  关联的告警模板列表
+    * relatedEpIds  **参数解释** 当资源匹配规则为匹配企业项目时，指定的企业项目列表。
+    * associationAlarmTemplates  **参数解释** 关联的告警模板列表。
+    * resourceLevel  **参数解释** 资源层级，资源生效范围。 **取值范围** - product: 云产品 - dimension: 子维度
     *
     * @var string[]
     */
@@ -65,13 +71,15 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
         'groupName' => null,
         'groupId' => null,
         'createTime' => 'date-time',
+        'updateTime' => 'date-time',
         'enterpriseProjectId' => null,
         'type' => null,
         'status' => null,
         'eventStatus' => null,
         'resourceStatistics' => null,
         'relatedEpIds' => null,
-        'associationAlarmTemplates' => null
+        'associationAlarmTemplates' => null,
+        'resourceLevel' => null
     ];
 
     /**
@@ -97,16 +105,18 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupName  资源分组的名称
-    * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
-    * createTime  资源分组的创建时间
-    * enterpriseProjectId  资源分组归属企业项目ID
-    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
-    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
-    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * groupName  **参数解释** 资源分组的名称。 **取值范围** 只能为字母、数字、汉字、-或_，长度为[1,128]个字符。
+    * groupId  **参数解释** 资源分组ID。 **取值范围** 以rg开头，后跟22位由字母或数字组成的字符串。
+    * createTime  **参数解释** 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * updateTime  **参数解释** 资源分组的修改时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * enterpriseProjectId  **参数解释** 资源分组归属企业项目ID。 **取值范围** 只能包含小写字母、数字或-，长度为36个字符。或者为0，代表默认企业项目ID。
+    * type  **参数解释** 资源分组添加资源方式。 **取值范围** - EPS: 表示匹配企业项目 - TAG: 表示匹配标签 - Manual: 表示手动添加 - COMB: 表示组合匹配 - NAME: 表示匹配实例名称
+    * status  **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
+    * eventStatus  **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
     * resourceStatistics  resourceStatistics
-    * relatedEpIds  当资源匹配规则为匹配企业项目时，指定的企业项目列表
-    * associationAlarmTemplates  关联的告警模板列表
+    * relatedEpIds  **参数解释** 当资源匹配规则为匹配企业项目时，指定的企业项目列表。
+    * associationAlarmTemplates  **参数解释** 关联的告警模板列表。
+    * resourceLevel  **参数解释** 资源层级，资源生效范围。 **取值范围** - product: 云产品 - dimension: 子维度
     *
     * @var string[]
     */
@@ -114,27 +124,31 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
             'groupName' => 'group_name',
             'groupId' => 'group_id',
             'createTime' => 'create_time',
+            'updateTime' => 'update_time',
             'enterpriseProjectId' => 'enterprise_project_id',
             'type' => 'type',
             'status' => 'status',
             'eventStatus' => 'event_status',
             'resourceStatistics' => 'resource_statistics',
             'relatedEpIds' => 'related_ep_ids',
-            'associationAlarmTemplates' => 'association_alarm_templates'
+            'associationAlarmTemplates' => 'association_alarm_templates',
+            'resourceLevel' => 'resource_level'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupName  资源分组的名称
-    * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
-    * createTime  资源分组的创建时间
-    * enterpriseProjectId  资源分组归属企业项目ID
-    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
-    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
-    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * groupName  **参数解释** 资源分组的名称。 **取值范围** 只能为字母、数字、汉字、-或_，长度为[1,128]个字符。
+    * groupId  **参数解释** 资源分组ID。 **取值范围** 以rg开头，后跟22位由字母或数字组成的字符串。
+    * createTime  **参数解释** 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * updateTime  **参数解释** 资源分组的修改时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * enterpriseProjectId  **参数解释** 资源分组归属企业项目ID。 **取值范围** 只能包含小写字母、数字或-，长度为36个字符。或者为0，代表默认企业项目ID。
+    * type  **参数解释** 资源分组添加资源方式。 **取值范围** - EPS: 表示匹配企业项目 - TAG: 表示匹配标签 - Manual: 表示手动添加 - COMB: 表示组合匹配 - NAME: 表示匹配实例名称
+    * status  **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
+    * eventStatus  **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
     * resourceStatistics  resourceStatistics
-    * relatedEpIds  当资源匹配规则为匹配企业项目时，指定的企业项目列表
-    * associationAlarmTemplates  关联的告警模板列表
+    * relatedEpIds  **参数解释** 当资源匹配规则为匹配企业项目时，指定的企业项目列表。
+    * associationAlarmTemplates  **参数解释** 关联的告警模板列表。
+    * resourceLevel  **参数解释** 资源层级，资源生效范围。 **取值范围** - product: 云产品 - dimension: 子维度
     *
     * @var string[]
     */
@@ -142,27 +156,31 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
             'groupName' => 'setGroupName',
             'groupId' => 'setGroupId',
             'createTime' => 'setCreateTime',
+            'updateTime' => 'setUpdateTime',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'type' => 'setType',
             'status' => 'setStatus',
             'eventStatus' => 'setEventStatus',
             'resourceStatistics' => 'setResourceStatistics',
             'relatedEpIds' => 'setRelatedEpIds',
-            'associationAlarmTemplates' => 'setAssociationAlarmTemplates'
+            'associationAlarmTemplates' => 'setAssociationAlarmTemplates',
+            'resourceLevel' => 'setResourceLevel'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupName  资源分组的名称
-    * groupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
-    * createTime  资源分组的创建时间
-    * enterpriseProjectId  资源分组归属企业项目ID
-    * type  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
-    * status  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
-    * eventStatus  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * groupName  **参数解释** 资源分组的名称。 **取值范围** 只能为字母、数字、汉字、-或_，长度为[1,128]个字符。
+    * groupId  **参数解释** 资源分组ID。 **取值范围** 以rg开头，后跟22位由字母或数字组成的字符串。
+    * createTime  **参数解释** 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * updateTime  **参数解释** 资源分组的修改时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    * enterpriseProjectId  **参数解释** 资源分组归属企业项目ID。 **取值范围** 只能包含小写字母、数字或-，长度为36个字符。或者为0，代表默认企业项目ID。
+    * type  **参数解释** 资源分组添加资源方式。 **取值范围** - EPS: 表示匹配企业项目 - TAG: 表示匹配标签 - Manual: 表示手动添加 - COMB: 表示组合匹配 - NAME: 表示匹配实例名称
+    * status  **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
+    * eventStatus  **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
     * resourceStatistics  resourceStatistics
-    * relatedEpIds  当资源匹配规则为匹配企业项目时，指定的企业项目列表
-    * associationAlarmTemplates  关联的告警模板列表
+    * relatedEpIds  **参数解释** 当资源匹配规则为匹配企业项目时，指定的企业项目列表。
+    * associationAlarmTemplates  **参数解释** 关联的告警模板列表。
+    * resourceLevel  **参数解释** 资源层级，资源生效范围。 **取值范围** - product: 云产品 - dimension: 子维度
     *
     * @var string[]
     */
@@ -170,13 +188,15 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
             'groupName' => 'getGroupName',
             'groupId' => 'getGroupId',
             'createTime' => 'getCreateTime',
+            'updateTime' => 'getUpdateTime',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'type' => 'getType',
             'status' => 'getStatus',
             'eventStatus' => 'getEventStatus',
             'resourceStatistics' => 'getResourceStatistics',
             'relatedEpIds' => 'getRelatedEpIds',
-            'associationAlarmTemplates' => 'getAssociationAlarmTemplates'
+            'associationAlarmTemplates' => 'getAssociationAlarmTemplates',
+            'resourceLevel' => 'getResourceLevel'
     ];
 
     /**
@@ -221,15 +241,17 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     }
     const TYPE_EPS = 'EPS';
     const TYPE_TAG = 'TAG';
-    const TYPE_NAME = 'NAME';
-    const TYPE_COMB = 'COMB';
     const TYPE_MANUAL = 'Manual';
+    const TYPE_COMB = 'COMB';
+    const TYPE_NAME = 'NAME';
     const STATUS_HEALTH = 'health';
     const STATUS_UNHEALTHY = 'unhealthy';
     const STATUS_NO_ALARM_RULE = 'no_alarm_rule';
     const EVENT_STATUS_HEALTH = 'health';
     const EVENT_STATUS_UNHEALTHY = 'unhealthy';
     const EVENT_STATUS_NO_ALARM_RULE = 'no_alarm_rule';
+    const RESOURCE_LEVEL_PRODUCT = 'product';
+    const RESOURCE_LEVEL_DIMENSION = 'dimension';
     
 
     /**
@@ -242,9 +264,9 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
         return [
             self::TYPE_EPS,
             self::TYPE_TAG,
-            self::TYPE_NAME,
-            self::TYPE_COMB,
             self::TYPE_MANUAL,
+            self::TYPE_COMB,
+            self::TYPE_NAME,
         ];
     }
 
@@ -276,6 +298,19 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getResourceLevelAllowableValues()
+    {
+        return [
+            self::RESOURCE_LEVEL_PRODUCT,
+            self::RESOURCE_LEVEL_DIMENSION,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -295,6 +330,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -302,6 +338,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
         $this->container['resourceStatistics'] = isset($data['resourceStatistics']) ? $data['resourceStatistics'] : null;
         $this->container['relatedEpIds'] = isset($data['relatedEpIds']) ? $data['relatedEpIds'] : null;
         $this->container['associationAlarmTemplates'] = isset($data['associationAlarmTemplates']) ? $data['associationAlarmTemplates'] : null;
+        $this->container['resourceLevel'] = isset($data['resourceLevel']) ? $data['resourceLevel'] : null;
     }
 
     /**
@@ -315,8 +352,8 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
         if ($this->container['groupName'] === null) {
             $invalidProperties[] = "'groupName' can't be null";
         }
-            if (!preg_match("/^((([a-z]|[0-9]){8}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){12})|0)$/", $this->container['groupName'])) {
-                $invalidProperties[] = "invalid value for 'groupName', must be conform to the pattern /^((([a-z]|[0-9]){8}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){12})|0)$/.";
+            if (!preg_match("/^([一-鿿]|[a-z]|[A-Z]|[0-9]|_|-){1,128}$/", $this->container['groupName'])) {
+                $invalidProperties[] = "invalid value for 'groupName', must be conform to the pattern /^([一-鿿]|[a-z]|[A-Z]|[0-9]|_|-){1,128}$/.";
             }
         if ($this->container['groupId'] === null) {
             $invalidProperties[] = "'groupId' can't be null";
@@ -329,6 +366,9 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
             }
         if ($this->container['createTime'] === null) {
             $invalidProperties[] = "'createTime' can't be null";
+        }
+        if ($this->container['updateTime'] === null) {
+            $invalidProperties[] = "'updateTime' can't be null";
         }
         if ($this->container['enterpriseProjectId'] === null) {
             $invalidProperties[] = "'enterpriseProjectId' can't be null";
@@ -363,6 +403,14 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
                 );
             }
 
+            $allowedValues = $this->getResourceLevelAllowableValues();
+                if (!is_null($this->container['resourceLevel']) && !in_array($this->container['resourceLevel'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'resourceLevel', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -379,7 +427,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  资源分组的名称
+    *  **参数解释** 资源分组的名称。 **取值范围** 只能为字母、数字、汉字、-或_，长度为[1,128]个字符。
     *
     * @return string
     */
@@ -391,7 +439,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string $groupName 资源分组的名称
+    * @param string $groupName **参数解释** 资源分组的名称。 **取值范围** 只能为字母、数字、汉字、-或_，长度为[1,128]个字符。
     *
     * @return $this
     */
@@ -403,7 +451,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
+    *  **参数解释** 资源分组ID。 **取值范围** 以rg开头，后跟22位由字母或数字组成的字符串。
     *
     * @return string
     */
@@ -415,7 +463,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string $groupId 资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
+    * @param string $groupId **参数解释** 资源分组ID。 **取值范围** 以rg开头，后跟22位由字母或数字组成的字符串。
     *
     * @return $this
     */
@@ -427,7 +475,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  资源分组的创建时间
+    *  **参数解释** 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
     *
     * @return \DateTime
     */
@@ -439,7 +487,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime $createTime 资源分组的创建时间
+    * @param \DateTime $createTime **参数解释** 资源分组的创建时间，UNIX时间戳，单位毫秒；如：1603819753000。
     *
     * @return $this
     */
@@ -450,8 +498,32 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets updateTime
+    *  **参数解释** 资源分组的修改时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    *
+    * @return \DateTime
+    */
+    public function getUpdateTime()
+    {
+        return $this->container['updateTime'];
+    }
+
+    /**
+    * Sets updateTime
+    *
+    * @param \DateTime $updateTime **参数解释** 资源分组的修改时间，UNIX时间戳，单位毫秒；如：1603819753000。
+    *
+    * @return $this
+    */
+    public function setUpdateTime($updateTime)
+    {
+        $this->container['updateTime'] = $updateTime;
+        return $this;
+    }
+
+    /**
     * Gets enterpriseProjectId
-    *  资源分组归属企业项目ID
+    *  **参数解释** 资源分组归属企业项目ID。 **取值范围** 只能包含小写字母、数字或-，长度为36个字符。或者为0，代表默认企业项目ID。
     *
     * @return string
     */
@@ -463,7 +535,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string $enterpriseProjectId 资源分组归属企业项目ID
+    * @param string $enterpriseProjectId **参数解释** 资源分组归属企业项目ID。 **取值范围** 只能包含小写字母、数字或-，长度为36个字符。或者为0，代表默认企业项目ID。
     *
     * @return $this
     */
@@ -475,7 +547,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
+    *  **参数解释** 资源分组添加资源方式。 **取值范围** - EPS: 表示匹配企业项目 - TAG: 表示匹配标签 - Manual: 表示手动添加 - COMB: 表示组合匹配 - NAME: 表示匹配实例名称
     *
     * @return string
     */
@@ -487,7 +559,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
+    * @param string $type **参数解释** 资源分组添加资源方式。 **取值范围** - EPS: 表示匹配企业项目 - TAG: 表示匹配标签 - Manual: 表示手动添加 - COMB: 表示组合匹配 - NAME: 表示匹配实例名称
     *
     * @return $this
     */
@@ -499,7 +571,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    *  **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
     *
     * @return string|null
     */
@@ -511,7 +583,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * @param string|null $status **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
     *
     * @return $this
     */
@@ -523,7 +595,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventStatus
-    *  事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    *  **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
     *
     * @return string|null
     */
@@ -535,7 +607,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     /**
     * Sets eventStatus
     *
-    * @param string|null $eventStatus 事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+    * @param string|null $eventStatus **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
     *
     * @return $this
     */
@@ -571,7 +643,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets relatedEpIds
-    *  当资源匹配规则为匹配企业项目时，指定的企业项目列表
+    *  **参数解释** 当资源匹配规则为匹配企业项目时，指定的企业项目列表。
     *
     * @return string[]|null
     */
@@ -583,7 +655,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     /**
     * Sets relatedEpIds
     *
-    * @param string[]|null $relatedEpIds 当资源匹配规则为匹配企业项目时，指定的企业项目列表
+    * @param string[]|null $relatedEpIds **参数解释** 当资源匹配规则为匹配企业项目时，指定的企业项目列表。
     *
     * @return $this
     */
@@ -595,7 +667,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets associationAlarmTemplates
-    *  关联的告警模板列表
+    *  **参数解释** 关联的告警模板列表。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\AssociationAlarmTemplate[]|null
     */
@@ -607,13 +679,37 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     /**
     * Sets associationAlarmTemplates
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\AssociationAlarmTemplate[]|null $associationAlarmTemplates 关联的告警模板列表
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\AssociationAlarmTemplate[]|null $associationAlarmTemplates **参数解释** 关联的告警模板列表。
     *
     * @return $this
     */
     public function setAssociationAlarmTemplates($associationAlarmTemplates)
     {
         $this->container['associationAlarmTemplates'] = $associationAlarmTemplates;
+        return $this;
+    }
+
+    /**
+    * Gets resourceLevel
+    *  **参数解释** 资源层级，资源生效范围。 **取值范围** - product: 云产品 - dimension: 子维度
+    *
+    * @return string|null
+    */
+    public function getResourceLevel()
+    {
+        return $this->container['resourceLevel'];
+    }
+
+    /**
+    * Sets resourceLevel
+    *
+    * @param string|null $resourceLevel **参数解释** 资源层级，资源生效范围。 **取值范围** - product: 云产品 - dimension: 子维度
+    *
+    * @return $this
+    */
+    public function setResourceLevel($resourceLevel)
+    {
+        $this->container['resourceLevel'] = $resourceLevel;
         return $this;
     }
 

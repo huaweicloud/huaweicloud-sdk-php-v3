@@ -29,7 +29,7 @@ class ShowTtsJobRequest implements ModelInterface, ArrayAccess
     * createSince  过滤创建时间>=输入时间的记录。
     * createUntil  过滤创建时间<=输入时间的记录。
     * jobId  任务ID。
-    * jobType  任务类型。 * AUDITION:试听任务 * ASYNC_JOB：异步任务 * WEBSOCKET：websocket接口合成任务
+    * jobType  任务类型。 * AUDITION：试听任务 * ASYNC_JOB：异步任务 * WEBSOCKET：websocket接口合成任务
     * ttsServiceEnum  tts版本。 * TTS_LLM: 530大模型（V7版本） * TTS_LLM_VC：530大模型VC版本（V7版本） * TTS_LAB：lab小模型（V5版本） * TTS_LAB_GPU：lab小模型GPU版本（V5版本） * GPU_CLONE：V4模型 * TTS_LLM_VQ：VQ模型（V10版本）
     * businessType  业务类型。
     *
@@ -61,7 +61,7 @@ class ShowTtsJobRequest implements ModelInterface, ArrayAccess
     * createSince  过滤创建时间>=输入时间的记录。
     * createUntil  过滤创建时间<=输入时间的记录。
     * jobId  任务ID。
-    * jobType  任务类型。 * AUDITION:试听任务 * ASYNC_JOB：异步任务 * WEBSOCKET：websocket接口合成任务
+    * jobType  任务类型。 * AUDITION：试听任务 * ASYNC_JOB：异步任务 * WEBSOCKET：websocket接口合成任务
     * ttsServiceEnum  tts版本。 * TTS_LLM: 530大模型（V7版本） * TTS_LLM_VC：530大模型VC版本（V7版本） * TTS_LAB：lab小模型（V5版本） * TTS_LAB_GPU：lab小模型GPU版本（V5版本） * GPU_CLONE：V4模型 * TTS_LLM_VQ：VQ模型（V10版本）
     * businessType  业务类型。
     *
@@ -114,7 +114,7 @@ class ShowTtsJobRequest implements ModelInterface, ArrayAccess
     * createSince  过滤创建时间>=输入时间的记录。
     * createUntil  过滤创建时间<=输入时间的记录。
     * jobId  任务ID。
-    * jobType  任务类型。 * AUDITION:试听任务 * ASYNC_JOB：异步任务 * WEBSOCKET：websocket接口合成任务
+    * jobType  任务类型。 * AUDITION：试听任务 * ASYNC_JOB：异步任务 * WEBSOCKET：websocket接口合成任务
     * ttsServiceEnum  tts版本。 * TTS_LLM: 530大模型（V7版本） * TTS_LLM_VC：530大模型VC版本（V7版本） * TTS_LAB：lab小模型（V5版本） * TTS_LAB_GPU：lab小模型GPU版本（V5版本） * GPU_CLONE：V4模型 * TTS_LLM_VQ：VQ模型（V10版本）
     * businessType  业务类型。
     *
@@ -146,7 +146,7 @@ class ShowTtsJobRequest implements ModelInterface, ArrayAccess
     * createSince  过滤创建时间>=输入时间的记录。
     * createUntil  过滤创建时间<=输入时间的记录。
     * jobId  任务ID。
-    * jobType  任务类型。 * AUDITION:试听任务 * ASYNC_JOB：异步任务 * WEBSOCKET：websocket接口合成任务
+    * jobType  任务类型。 * AUDITION：试听任务 * ASYNC_JOB：异步任务 * WEBSOCKET：websocket接口合成任务
     * ttsServiceEnum  tts版本。 * TTS_LLM: 530大模型（V7版本） * TTS_LLM_VC：530大模型VC版本（V7版本） * TTS_LAB：lab小模型（V5版本） * TTS_LAB_GPU：lab小模型GPU版本（V5版本） * GPU_CLONE：V4模型 * TTS_LLM_VQ：VQ模型（V10版本）
     * businessType  业务类型。
     *
@@ -178,7 +178,7 @@ class ShowTtsJobRequest implements ModelInterface, ArrayAccess
     * createSince  过滤创建时间>=输入时间的记录。
     * createUntil  过滤创建时间<=输入时间的记录。
     * jobId  任务ID。
-    * jobType  任务类型。 * AUDITION:试听任务 * ASYNC_JOB：异步任务 * WEBSOCKET：websocket接口合成任务
+    * jobType  任务类型。 * AUDITION：试听任务 * ASYNC_JOB：异步任务 * WEBSOCKET：websocket接口合成任务
     * ttsServiceEnum  tts版本。 * TTS_LLM: 530大模型（V7版本） * TTS_LLM_VC：530大模型VC版本（V7版本） * TTS_LAB：lab小模型（V5版本） * TTS_LAB_GPU：lab小模型GPU版本（V5版本） * GPU_CLONE：V4模型 * TTS_LLM_VQ：VQ模型（V10版本）
     * businessType  业务类型。
     *
@@ -583,7 +583,7 @@ class ShowTtsJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobType
-    *  任务类型。 * AUDITION:试听任务 * ASYNC_JOB：异步任务 * WEBSOCKET：websocket接口合成任务
+    *  任务类型。 * AUDITION：试听任务 * ASYNC_JOB：异步任务 * WEBSOCKET：websocket接口合成任务
     *
     * @return string|null
     */
@@ -595,7 +595,7 @@ class ShowTtsJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets jobType
     *
-    * @param string|null $jobType 任务类型。 * AUDITION:试听任务 * ASYNC_JOB：异步任务 * WEBSOCKET：websocket接口合成任务
+    * @param string|null $jobType 任务类型。 * AUDITION：试听任务 * ASYNC_JOB：异步任务 * WEBSOCKET：websocket接口合成任务
     *
     * @return $this
     */

@@ -22,12 +22,12 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 数据源名称。 **取值范围**： 不涉及。
-    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 外部数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     * connectInfo  **参数解释**： 数据库。 **取值范围**： 不涉及。
     * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
     * version  **参数解释**： 版本。 **取值范围**： 不涉及。
-    * configureStatus  **参数解释**： 配置状态。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * configureStatus  **参数解释**： 配置状态。 **取值范围**： - 100: CREATING，创建中。 - 200: ACTIVE，已可用。 - 300: FAILED，已失败。 - 400: DELETED，已删除。 - 401: DELETING，删除中。 - 500: UPDATING，更新中。 - 600: PENDING_REBOOT，待重启。
+    * status  **参数解释**： 状态。 **取值范围**： - 100: CREATING, 创建中。 - 200: AVAILABLE, 可用。 - 300: FAILED, 失败。 - 303: CREATE_FAILED, 创建失败。 - 400: DELETED, 已删除。 - 304: DELETING, 删除中。 - 302: DELETE_FAILED, 删除失败。 - 800: FROZEN, 冻结。 - 801: POLICE_FROZEN, 警方冻结。 - 910: STOPPING, 停止中。 - 900: STOPPED, 已停止。 - 920: STARTING, 启动中。
     * dataSourceId  **参数解释**： 外部数据源ID。 **取值范围**： 不涉及。
     * created  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * updated  **参数解释**： 更新时间。 **取值范围**： 不涉及。
@@ -60,12 +60,12 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 数据源名称。 **取值范围**： 不涉及。
-    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 外部数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     * connectInfo  **参数解释**： 数据库。 **取值范围**： 不涉及。
     * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
     * version  **参数解释**： 版本。 **取值范围**： 不涉及。
-    * configureStatus  **参数解释**： 配置状态。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * configureStatus  **参数解释**： 配置状态。 **取值范围**： - 100: CREATING，创建中。 - 200: ACTIVE，已可用。 - 300: FAILED，已失败。 - 400: DELETED，已删除。 - 401: DELETING，删除中。 - 500: UPDATING，更新中。 - 600: PENDING_REBOOT，待重启。
+    * status  **参数解释**： 状态。 **取值范围**： - 100: CREATING, 创建中。 - 200: AVAILABLE, 可用。 - 300: FAILED, 失败。 - 303: CREATE_FAILED, 创建失败。 - 400: DELETED, 已删除。 - 304: DELETING, 删除中。 - 302: DELETE_FAILED, 删除失败。 - 800: FROZEN, 冻结。 - 801: POLICE_FROZEN, 警方冻结。 - 910: STOPPING, 停止中。 - 900: STOPPED, 已停止。 - 920: STARTING, 启动中。
     * dataSourceId  **参数解释**： 外部数据源ID。 **取值范围**： 不涉及。
     * created  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * updated  **参数解释**： 更新时间。 **取值范围**： 不涉及。
@@ -119,12 +119,12 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 数据源名称。 **取值范围**： 不涉及。
-    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 外部数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     * connectInfo  **参数解释**： 数据库。 **取值范围**： 不涉及。
     * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
     * version  **参数解释**： 版本。 **取值范围**： 不涉及。
-    * configureStatus  **参数解释**： 配置状态。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * configureStatus  **参数解释**： 配置状态。 **取值范围**： - 100: CREATING，创建中。 - 200: ACTIVE，已可用。 - 300: FAILED，已失败。 - 400: DELETED，已删除。 - 401: DELETING，删除中。 - 500: UPDATING，更新中。 - 600: PENDING_REBOOT，待重启。
+    * status  **参数解释**： 状态。 **取值范围**： - 100: CREATING, 创建中。 - 200: AVAILABLE, 可用。 - 300: FAILED, 失败。 - 303: CREATE_FAILED, 创建失败。 - 400: DELETED, 已删除。 - 304: DELETING, 删除中。 - 302: DELETE_FAILED, 删除失败。 - 800: FROZEN, 冻结。 - 801: POLICE_FROZEN, 警方冻结。 - 910: STOPPING, 停止中。 - 900: STOPPED, 已停止。 - 920: STARTING, 启动中。
     * dataSourceId  **参数解释**： 外部数据源ID。 **取值范围**： 不涉及。
     * created  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * updated  **参数解释**： 更新时间。 **取值范围**： 不涉及。
@@ -157,12 +157,12 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 数据源名称。 **取值范围**： 不涉及。
-    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 外部数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     * connectInfo  **参数解释**： 数据库。 **取值范围**： 不涉及。
     * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
     * version  **参数解释**： 版本。 **取值范围**： 不涉及。
-    * configureStatus  **参数解释**： 配置状态。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * configureStatus  **参数解释**： 配置状态。 **取值范围**： - 100: CREATING，创建中。 - 200: ACTIVE，已可用。 - 300: FAILED，已失败。 - 400: DELETED，已删除。 - 401: DELETING，删除中。 - 500: UPDATING，更新中。 - 600: PENDING_REBOOT，待重启。
+    * status  **参数解释**： 状态。 **取值范围**： - 100: CREATING, 创建中。 - 200: AVAILABLE, 可用。 - 300: FAILED, 失败。 - 303: CREATE_FAILED, 创建失败。 - 400: DELETED, 已删除。 - 304: DELETING, 删除中。 - 302: DELETE_FAILED, 删除失败。 - 800: FROZEN, 冻结。 - 801: POLICE_FROZEN, 警方冻结。 - 910: STOPPING, 停止中。 - 900: STOPPED, 已停止。 - 920: STARTING, 启动中。
     * dataSourceId  **参数解释**： 外部数据源ID。 **取值范围**： 不涉及。
     * created  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * updated  **参数解释**： 更新时间。 **取值范围**： 不涉及。
@@ -195,12 +195,12 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释**： 数据源ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 数据源名称。 **取值范围**： 不涉及。
-    * type  **参数解释**： 类型。 **取值范围**： 不涉及。
+    * type  **参数解释**： 外部数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     * connectInfo  **参数解释**： 数据库。 **取值范围**： 不涉及。
     * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
     * version  **参数解释**： 版本。 **取值范围**： 不涉及。
-    * configureStatus  **参数解释**： 配置状态。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
+    * configureStatus  **参数解释**： 配置状态。 **取值范围**： - 100: CREATING，创建中。 - 200: ACTIVE，已可用。 - 300: FAILED，已失败。 - 400: DELETED，已删除。 - 401: DELETING，删除中。 - 500: UPDATING，更新中。 - 600: PENDING_REBOOT，待重启。
+    * status  **参数解释**： 状态。 **取值范围**： - 100: CREATING, 创建中。 - 200: AVAILABLE, 可用。 - 300: FAILED, 失败。 - 303: CREATE_FAILED, 创建失败。 - 400: DELETED, 已删除。 - 304: DELETING, 删除中。 - 302: DELETE_FAILED, 删除失败。 - 800: FROZEN, 冻结。 - 801: POLICE_FROZEN, 警方冻结。 - 910: STOPPING, 停止中。 - 900: STOPPED, 已停止。 - 920: STARTING, 启动中。
     * dataSourceId  **参数解释**： 外部数据源ID。 **取值范围**： 不涉及。
     * created  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * updated  **参数解释**： 更新时间。 **取值范围**： 不涉及。
@@ -376,7 +376,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**： 类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 外部数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     *
     * @return string|null
     */
@@ -388,7 +388,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释**： 类型。 **取值范围**： 不涉及。
+    * @param string|null $type **参数解释**： 外部数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
     *
     * @return $this
     */
@@ -472,7 +472,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets configureStatus
-    *  **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 配置状态。 **取值范围**： - 100: CREATING，创建中。 - 200: ACTIVE，已可用。 - 300: FAILED，已失败。 - 400: DELETED，已删除。 - 401: DELETING，删除中。 - 500: UPDATING，更新中。 - 600: PENDING_REBOOT，待重启。
     *
     * @return string|null
     */
@@ -484,7 +484,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets configureStatus
     *
-    * @param string|null $configureStatus **参数解释**： 配置状态。 **取值范围**： 不涉及。
+    * @param string|null $configureStatus **参数解释**： 配置状态。 **取值范围**： - 100: CREATING，创建中。 - 200: ACTIVE，已可用。 - 300: FAILED，已失败。 - 400: DELETED，已删除。 - 401: DELETING，删除中。 - 500: UPDATING，更新中。 - 600: PENDING_REBOOT，待重启。
     *
     * @return $this
     */
@@ -496,7 +496,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 状态。 **取值范围**： - 100: CREATING, 创建中。 - 200: AVAILABLE, 可用。 - 300: FAILED, 失败。 - 303: CREATE_FAILED, 创建失败。 - 400: DELETED, 已删除。 - 304: DELETING, 删除中。 - 302: DELETE_FAILED, 删除失败。 - 800: FROZEN, 冻结。 - 801: POLICE_FROZEN, 警方冻结。 - 910: STOPPING, 停止中。 - 900: STOPPED, 已停止。 - 920: STARTING, 启动中。
     *
     * @return string|null
     */
@@ -508,7 +508,7 @@ class ExtDataSource implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 状态。 **取值范围**： 不涉及。
+    * @param string|null $status **参数解释**： 状态。 **取值范围**： - 100: CREATING, 创建中。 - 200: AVAILABLE, 可用。 - 300: FAILED, 失败。 - 303: CREATE_FAILED, 创建失败。 - 400: DELETED, 已删除。 - 304: DELETING, 删除中。 - 302: DELETE_FAILED, 删除失败。 - 800: FROZEN, 冻结。 - 801: POLICE_FROZEN, 警方冻结。 - 910: STOPPING, 停止中。 - 900: STOPPED, 已停止。 - 920: STARTING, 启动中。
     *
     * @return $this
     */

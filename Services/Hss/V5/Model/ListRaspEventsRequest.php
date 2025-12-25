@@ -21,25 +21,25 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * hostId  Host Id
-    * startTime  查询时间段的起始时间，毫秒级时间戳(ms)
-    * endTime  查询时间段的终止时间，毫秒级时间戳(ms)
-    * limit  默认10
-    * offset  默认0
-    * appType  应用类型，包含如下1种。   - java ：java类型应用防护。
-    * severity  告警级别 |- 告警级别，包含如下1种。 - 0 ：Info级别告警 - 1 ：Low级别告警 - 2 ：Medium级别告警 - 3 ：High级别告警 - 4 ：Critical级别告警
-    * attackTag  攻击标识 |- 攻击标识，包含如下6种。 - Attack Success：攻击成功 - Attack Attempt：攻击尝试  - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性
-    * protectStatus  防护状态，包含如下2种。   - closed ：未开启。   - opened ：防护中。
+    * startTime  **参数解释**: 应用防护事件的查询起始时间（Unix时间戳），与end_time配合筛选指定时间段内的事件 **时间格式** Unix时间戳（精确到毫秒，如1736414463000表示2024-12-10 10:41:03） **约束限制**: 需小于end_time，否则返回空结果；时间戳需为有效时间（1970-01-01 00:00:00至今） **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
+    * endTime  **参数解释**: 查询时间段的终止时间，毫秒级时间戳(ms) **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
+    * appType  **参数解释** 应用防护的应用类型，用于筛选指定类型应用的防护事件 **约束限制** 当前仅支持java类型，传其他值返回空结果，区分大小写 **取值范围** - java：Java语言开发的应用防护事件 **默认取值** 无（查询所有支持的应用类型事件）
+    * severity  **参数解释** 应用防护事件的告警级别，用于筛选指定严重程度的事件 **约束限制** 取值必须在指定范围内，否则返回空结果 **取值范围** - Security：信息级 - Low：低危 - Medium：中危 - High：高危 - Critical：紧急 **默认取值** 无
+    * attackTag  **参数解释** 应用防护事件的攻击类型标识，用于筛选指定攻击类型的事件 **约束限制** 取值区分大小写，必须与指定格式一致，否则返回空结果 **取值范围** - Attack Success：攻击成功 - Attack Attempt：攻击尝试 - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性 **默认取值** 无
+    * protectStatus  **参数解释** 应用防护的启用状态，用于筛选指定防护状态下的事件 **约束限制** 取值区分大小写，必须在指定范围内，否则返回空结果 **取值范围** - closed：未开启防护 - opened：已开启防护 **默认取值** 无（查询所有防护状态的事件）
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'enterpriseProjectId' => 'string',
+            'offset' => 'int',
+            'limit' => 'int',
             'hostId' => 'string',
             'startTime' => 'int',
             'endTime' => 'int',
-            'limit' => 'int',
-            'offset' => 'int',
             'appType' => 'string',
             'severity' => 'string',
             'attackTag' => 'string',
@@ -49,25 +49,25 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * hostId  Host Id
-    * startTime  查询时间段的起始时间，毫秒级时间戳(ms)
-    * endTime  查询时间段的终止时间，毫秒级时间戳(ms)
-    * limit  默认10
-    * offset  默认0
-    * appType  应用类型，包含如下1种。   - java ：java类型应用防护。
-    * severity  告警级别 |- 告警级别，包含如下1种。 - 0 ：Info级别告警 - 1 ：Low级别告警 - 2 ：Medium级别告警 - 3 ：High级别告警 - 4 ：Critical级别告警
-    * attackTag  攻击标识 |- 攻击标识，包含如下6种。 - Attack Success：攻击成功 - Attack Attempt：攻击尝试  - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性
-    * protectStatus  防护状态，包含如下2种。   - closed ：未开启。   - opened ：防护中。
+    * startTime  **参数解释**: 应用防护事件的查询起始时间（Unix时间戳），与end_time配合筛选指定时间段内的事件 **时间格式** Unix时间戳（精确到毫秒，如1736414463000表示2024-12-10 10:41:03） **约束限制**: 需小于end_time，否则返回空结果；时间戳需为有效时间（1970-01-01 00:00:00至今） **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
+    * endTime  **参数解释**: 查询时间段的终止时间，毫秒级时间戳(ms) **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
+    * appType  **参数解释** 应用防护的应用类型，用于筛选指定类型应用的防护事件 **约束限制** 当前仅支持java类型，传其他值返回空结果，区分大小写 **取值范围** - java：Java语言开发的应用防护事件 **默认取值** 无（查询所有支持的应用类型事件）
+    * severity  **参数解释** 应用防护事件的告警级别，用于筛选指定严重程度的事件 **约束限制** 取值必须在指定范围内，否则返回空结果 **取值范围** - Security：信息级 - Low：低危 - Medium：中危 - High：高危 - Critical：紧急 **默认取值** 无
+    * attackTag  **参数解释** 应用防护事件的攻击类型标识，用于筛选指定攻击类型的事件 **约束限制** 取值区分大小写，必须与指定格式一致，否则返回空结果 **取值范围** - Attack Success：攻击成功 - Attack Attempt：攻击尝试 - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性 **默认取值** 无
+    * protectStatus  **参数解释** 应用防护的启用状态，用于筛选指定防护状态下的事件 **约束限制** 取值区分大小写，必须在指定范围内，否则返回空结果 **取值范围** - closed：未开启防护 - opened：已开启防护 **默认取值** 无（查询所有防护状态的事件）
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'enterpriseProjectId' => null,
+        'offset' => 'int32',
+        'limit' => 'int32',
         'hostId' => null,
         'startTime' => 'int64',
         'endTime' => 'int64',
-        'limit' => 'int32',
-        'offset' => 'int32',
         'appType' => null,
         'severity' => null,
         'attackTag' => null,
@@ -98,25 +98,25 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * hostId  Host Id
-    * startTime  查询时间段的起始时间，毫秒级时间戳(ms)
-    * endTime  查询时间段的终止时间，毫秒级时间戳(ms)
-    * limit  默认10
-    * offset  默认0
-    * appType  应用类型，包含如下1种。   - java ：java类型应用防护。
-    * severity  告警级别 |- 告警级别，包含如下1种。 - 0 ：Info级别告警 - 1 ：Low级别告警 - 2 ：Medium级别告警 - 3 ：High级别告警 - 4 ：Critical级别告警
-    * attackTag  攻击标识 |- 攻击标识，包含如下6种。 - Attack Success：攻击成功 - Attack Attempt：攻击尝试  - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性
-    * protectStatus  防护状态，包含如下2种。   - closed ：未开启。   - opened ：防护中。
+    * startTime  **参数解释**: 应用防护事件的查询起始时间（Unix时间戳），与end_time配合筛选指定时间段内的事件 **时间格式** Unix时间戳（精确到毫秒，如1736414463000表示2024-12-10 10:41:03） **约束限制**: 需小于end_time，否则返回空结果；时间戳需为有效时间（1970-01-01 00:00:00至今） **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
+    * endTime  **参数解释**: 查询时间段的终止时间，毫秒级时间戳(ms) **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
+    * appType  **参数解释** 应用防护的应用类型，用于筛选指定类型应用的防护事件 **约束限制** 当前仅支持java类型，传其他值返回空结果，区分大小写 **取值范围** - java：Java语言开发的应用防护事件 **默认取值** 无（查询所有支持的应用类型事件）
+    * severity  **参数解释** 应用防护事件的告警级别，用于筛选指定严重程度的事件 **约束限制** 取值必须在指定范围内，否则返回空结果 **取值范围** - Security：信息级 - Low：低危 - Medium：中危 - High：高危 - Critical：紧急 **默认取值** 无
+    * attackTag  **参数解释** 应用防护事件的攻击类型标识，用于筛选指定攻击类型的事件 **约束限制** 取值区分大小写，必须与指定格式一致，否则返回空结果 **取值范围** - Attack Success：攻击成功 - Attack Attempt：攻击尝试 - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性 **默认取值** 无
+    * protectStatus  **参数解释** 应用防护的启用状态，用于筛选指定防护状态下的事件 **约束限制** 取值区分大小写，必须在指定范围内，否则返回空结果 **取值范围** - closed：未开启防护 - opened：已开启防护 **默认取值** 无（查询所有防护状态的事件）
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'enterpriseProjectId' => 'enterprise_project_id',
+            'offset' => 'offset',
+            'limit' => 'limit',
             'hostId' => 'host_id',
             'startTime' => 'start_time',
             'endTime' => 'end_time',
-            'limit' => 'limit',
-            'offset' => 'offset',
             'appType' => 'app_type',
             'severity' => 'severity',
             'attackTag' => 'attack_tag',
@@ -126,25 +126,25 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * hostId  Host Id
-    * startTime  查询时间段的起始时间，毫秒级时间戳(ms)
-    * endTime  查询时间段的终止时间，毫秒级时间戳(ms)
-    * limit  默认10
-    * offset  默认0
-    * appType  应用类型，包含如下1种。   - java ：java类型应用防护。
-    * severity  告警级别 |- 告警级别，包含如下1种。 - 0 ：Info级别告警 - 1 ：Low级别告警 - 2 ：Medium级别告警 - 3 ：High级别告警 - 4 ：Critical级别告警
-    * attackTag  攻击标识 |- 攻击标识，包含如下6种。 - Attack Success：攻击成功 - Attack Attempt：攻击尝试  - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性
-    * protectStatus  防护状态，包含如下2种。   - closed ：未开启。   - opened ：防护中。
+    * startTime  **参数解释**: 应用防护事件的查询起始时间（Unix时间戳），与end_time配合筛选指定时间段内的事件 **时间格式** Unix时间戳（精确到毫秒，如1736414463000表示2024-12-10 10:41:03） **约束限制**: 需小于end_time，否则返回空结果；时间戳需为有效时间（1970-01-01 00:00:00至今） **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
+    * endTime  **参数解释**: 查询时间段的终止时间，毫秒级时间戳(ms) **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
+    * appType  **参数解释** 应用防护的应用类型，用于筛选指定类型应用的防护事件 **约束限制** 当前仅支持java类型，传其他值返回空结果，区分大小写 **取值范围** - java：Java语言开发的应用防护事件 **默认取值** 无（查询所有支持的应用类型事件）
+    * severity  **参数解释** 应用防护事件的告警级别，用于筛选指定严重程度的事件 **约束限制** 取值必须在指定范围内，否则返回空结果 **取值范围** - Security：信息级 - Low：低危 - Medium：中危 - High：高危 - Critical：紧急 **默认取值** 无
+    * attackTag  **参数解释** 应用防护事件的攻击类型标识，用于筛选指定攻击类型的事件 **约束限制** 取值区分大小写，必须与指定格式一致，否则返回空结果 **取值范围** - Attack Success：攻击成功 - Attack Attempt：攻击尝试 - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性 **默认取值** 无
+    * protectStatus  **参数解释** 应用防护的启用状态，用于筛选指定防护状态下的事件 **约束限制** 取值区分大小写，必须在指定范围内，否则返回空结果 **取值范围** - closed：未开启防护 - opened：已开启防护 **默认取值** 无（查询所有防护状态的事件）
     *
     * @var string[]
     */
     protected static $setters = [
             'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit',
             'hostId' => 'setHostId',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
-            'limit' => 'setLimit',
-            'offset' => 'setOffset',
             'appType' => 'setAppType',
             'severity' => 'setSeverity',
             'attackTag' => 'setAttackTag',
@@ -154,25 +154,25 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * hostId  Host Id
-    * startTime  查询时间段的起始时间，毫秒级时间戳(ms)
-    * endTime  查询时间段的终止时间，毫秒级时间戳(ms)
-    * limit  默认10
-    * offset  默认0
-    * appType  应用类型，包含如下1种。   - java ：java类型应用防护。
-    * severity  告警级别 |- 告警级别，包含如下1种。 - 0 ：Info级别告警 - 1 ：Low级别告警 - 2 ：Medium级别告警 - 3 ：High级别告警 - 4 ：Critical级别告警
-    * attackTag  攻击标识 |- 攻击标识，包含如下6种。 - Attack Success：攻击成功 - Attack Attempt：攻击尝试  - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性
-    * protectStatus  防护状态，包含如下2种。   - closed ：未开启。   - opened ：防护中。
+    * startTime  **参数解释**: 应用防护事件的查询起始时间（Unix时间戳），与end_time配合筛选指定时间段内的事件 **时间格式** Unix时间戳（精确到毫秒，如1736414463000表示2024-12-10 10:41:03） **约束限制**: 需小于end_time，否则返回空结果；时间戳需为有效时间（1970-01-01 00:00:00至今） **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
+    * endTime  **参数解释**: 查询时间段的终止时间，毫秒级时间戳(ms) **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
+    * appType  **参数解释** 应用防护的应用类型，用于筛选指定类型应用的防护事件 **约束限制** 当前仅支持java类型，传其他值返回空结果，区分大小写 **取值范围** - java：Java语言开发的应用防护事件 **默认取值** 无（查询所有支持的应用类型事件）
+    * severity  **参数解释** 应用防护事件的告警级别，用于筛选指定严重程度的事件 **约束限制** 取值必须在指定范围内，否则返回空结果 **取值范围** - Security：信息级 - Low：低危 - Medium：中危 - High：高危 - Critical：紧急 **默认取值** 无
+    * attackTag  **参数解释** 应用防护事件的攻击类型标识，用于筛选指定攻击类型的事件 **约束限制** 取值区分大小写，必须与指定格式一致，否则返回空结果 **取值范围** - Attack Success：攻击成功 - Attack Attempt：攻击尝试 - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性 **默认取值** 无
+    * protectStatus  **参数解释** 应用防护的启用状态，用于筛选指定防护状态下的事件 **约束限制** 取值区分大小写，必须在指定范围内，否则返回空结果 **取值范围** - closed：未开启防护 - opened：已开启防护 **默认取值** 无（查询所有防护状态的事件）
     *
     * @var string[]
     */
     protected static $getters = [
             'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit',
             'hostId' => 'getHostId',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
-            'limit' => 'getLimit',
-            'offset' => 'getOffset',
             'appType' => 'getAppType',
             'severity' => 'getSeverity',
             'attackTag' => 'getAttackTag',
@@ -219,35 +219,7 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const APP_TYPE_JAVA = 'java';
-    const PROTECT_STATUS_CLOSED = 'closed';
-    const PROTECT_STATUS_OPENED = 'opened';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getAppTypeAllowableValues()
-    {
-        return [
-            self::APP_TYPE_JAVA,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getProtectStatusAllowableValues()
-    {
-        return [
-            self::PROTECT_STATUS_CLOSED,
-            self::PROTECT_STATUS_OPENED,
-        ];
-    }
 
 
     /**
@@ -266,11 +238,11 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['appType'] = isset($data['appType']) ? $data['appType'] : null;
         $this->container['severity'] = isset($data['severity']) ? $data['severity'] : null;
         $this->container['attackTag'] = isset($data['attackTag']) ? $data['attackTag'] : null;
@@ -293,6 +265,18 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^.*$/", $this->container['enterpriseProjectId'])) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2000000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2000000.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
             }
         if ($this->container['hostId'] === null) {
             $invalidProperties[] = "'hostId' can't be null";
@@ -321,37 +305,23 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
             if (($this->container['endTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'endTime', must be bigger than or equal to 0.";
             }
-        if ($this->container['limit'] === null) {
-            $invalidProperties[] = "'limit' can't be null";
-        }
-            if (($this->container['limit'] > 1000)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            if (!is_null($this->container['appType']) && (mb_strlen($this->container['appType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'appType', the character length must be smaller than or equal to 64.";
             }
-            if (($this->container['limit'] < 0)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            if (!is_null($this->container['appType']) && (mb_strlen($this->container['appType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'appType', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['offset'] === null) {
-            $invalidProperties[] = "'offset' can't be null";
-        }
-            if (($this->container['offset'] > 100000)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 100000.";
+            if (!is_null($this->container['appType']) && !preg_match("/^(java)$/", $this->container['appType'])) {
+                $invalidProperties[] = "invalid value for 'appType', must be conform to the pattern /^(java)$/.";
             }
-            if (($this->container['offset'] < 0)) {
-                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
-            }
-            $allowedValues = $this->getAppTypeAllowableValues();
-                if (!is_null($this->container['appType']) && !in_array($this->container['appType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'appType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
             if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) > 64)) {
                 $invalidProperties[] = "invalid value for 'severity', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) < 1)) {
                 $invalidProperties[] = "invalid value for 'severity', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['severity']) && !preg_match("/^(Security|Low|Medium|High|Critical)$/", $this->container['severity'])) {
+                $invalidProperties[] = "invalid value for 'severity', must be conform to the pattern /^(Security|Low|Medium|High|Critical)$/.";
             }
             if (!is_null($this->container['attackTag']) && (mb_strlen($this->container['attackTag']) > 64)) {
                 $invalidProperties[] = "invalid value for 'attackTag', the character length must be smaller than or equal to 64.";
@@ -359,14 +329,18 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['attackTag']) && (mb_strlen($this->container['attackTag']) < 1)) {
                 $invalidProperties[] = "invalid value for 'attackTag', the character length must be bigger than or equal to 1.";
             }
-            $allowedValues = $this->getProtectStatusAllowableValues();
-                if (!is_null($this->container['protectStatus']) && !in_array($this->container['protectStatus'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'protectStatus', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if (!is_null($this->container['attackTag']) && !preg_match("/^(Attack Success|Attack Attempt|Attack Blocked|Abnormal Behavior|Collapsible Host|System Vulnerability)$/", $this->container['attackTag'])) {
+                $invalidProperties[] = "invalid value for 'attackTag', must be conform to the pattern /^(Attack Success|Attack Attempt|Attack Blocked|Abnormal Behavior|Collapsible Host|System Vulnerability)$/.";
             }
-
+            if (!is_null($this->container['protectStatus']) && (mb_strlen($this->container['protectStatus']) > 64)) {
+                $invalidProperties[] = "invalid value for 'protectStatus', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['protectStatus']) && (mb_strlen($this->container['protectStatus']) < 1)) {
+                $invalidProperties[] = "invalid value for 'protectStatus', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['protectStatus']) && !preg_match("/^(closed|opened)$/", $this->container['protectStatus'])) {
+                $invalidProperties[] = "invalid value for 'protectStatus', must be conform to the pattern /^(closed|opened)$/.";
+            }
         return $invalidProperties;
     }
 
@@ -406,6 +380,54 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets offset
+    *  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
     * Gets hostId
     *  Host Id
     *
@@ -431,7 +453,7 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  查询时间段的起始时间，毫秒级时间戳(ms)
+    *  **参数解释**: 应用防护事件的查询起始时间（Unix时间戳），与end_time配合筛选指定时间段内的事件 **时间格式** Unix时间戳（精确到毫秒，如1736414463000表示2024-12-10 10:41:03） **约束限制**: 需小于end_time，否则返回空结果；时间戳需为有效时间（1970-01-01 00:00:00至今） **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
     *
     * @return int
     */
@@ -443,7 +465,7 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int $startTime 查询时间段的起始时间，毫秒级时间戳(ms)
+    * @param int $startTime **参数解释**: 应用防护事件的查询起始时间（Unix时间戳），与end_time配合筛选指定时间段内的事件 **时间格式** Unix时间戳（精确到毫秒，如1736414463000表示2024-12-10 10:41:03） **约束限制**: 需小于end_time，否则返回空结果；时间戳需为有效时间（1970-01-01 00:00:00至今） **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
     *
     * @return $this
     */
@@ -455,7 +477,7 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  查询时间段的终止时间，毫秒级时间戳(ms)
+    *  **参数解释**: 查询时间段的终止时间，毫秒级时间戳(ms) **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
     *
     * @return int
     */
@@ -467,7 +489,7 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param int $endTime 查询时间段的终止时间，毫秒级时间戳(ms)
+    * @param int $endTime **参数解释**: 查询时间段的终止时间，毫秒级时间戳(ms) **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
     *
     * @return $this
     */
@@ -478,56 +500,8 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets limit
-    *  默认10
-    *
-    * @return int
-    */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-    * Sets limit
-    *
-    * @param int $limit 默认10
-    *
-    * @return $this
-    */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
-        return $this;
-    }
-
-    /**
-    * Gets offset
-    *  默认0
-    *
-    * @return int
-    */
-    public function getOffset()
-    {
-        return $this->container['offset'];
-    }
-
-    /**
-    * Sets offset
-    *
-    * @param int $offset 默认0
-    *
-    * @return $this
-    */
-    public function setOffset($offset)
-    {
-        $this->container['offset'] = $offset;
-        return $this;
-    }
-
-    /**
     * Gets appType
-    *  应用类型，包含如下1种。   - java ：java类型应用防护。
+    *  **参数解释** 应用防护的应用类型，用于筛选指定类型应用的防护事件 **约束限制** 当前仅支持java类型，传其他值返回空结果，区分大小写 **取值范围** - java：Java语言开发的应用防护事件 **默认取值** 无（查询所有支持的应用类型事件）
     *
     * @return string|null
     */
@@ -539,7 +513,7 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets appType
     *
-    * @param string|null $appType 应用类型，包含如下1种。   - java ：java类型应用防护。
+    * @param string|null $appType **参数解释** 应用防护的应用类型，用于筛选指定类型应用的防护事件 **约束限制** 当前仅支持java类型，传其他值返回空结果，区分大小写 **取值范围** - java：Java语言开发的应用防护事件 **默认取值** 无（查询所有支持的应用类型事件）
     *
     * @return $this
     */
@@ -551,7 +525,7 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  告警级别 |- 告警级别，包含如下1种。 - 0 ：Info级别告警 - 1 ：Low级别告警 - 2 ：Medium级别告警 - 3 ：High级别告警 - 4 ：Critical级别告警
+    *  **参数解释** 应用防护事件的告警级别，用于筛选指定严重程度的事件 **约束限制** 取值必须在指定范围内，否则返回空结果 **取值范围** - Security：信息级 - Low：低危 - Medium：中危 - High：高危 - Critical：紧急 **默认取值** 无
     *
     * @return string|null
     */
@@ -563,7 +537,7 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param string|null $severity 告警级别 |- 告警级别，包含如下1种。 - 0 ：Info级别告警 - 1 ：Low级别告警 - 2 ：Medium级别告警 - 3 ：High级别告警 - 4 ：Critical级别告警
+    * @param string|null $severity **参数解释** 应用防护事件的告警级别，用于筛选指定严重程度的事件 **约束限制** 取值必须在指定范围内，否则返回空结果 **取值范围** - Security：信息级 - Low：低危 - Medium：中危 - High：高危 - Critical：紧急 **默认取值** 无
     *
     * @return $this
     */
@@ -575,7 +549,7 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets attackTag
-    *  攻击标识 |- 攻击标识，包含如下6种。 - Attack Success：攻击成功 - Attack Attempt：攻击尝试  - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性
+    *  **参数解释** 应用防护事件的攻击类型标识，用于筛选指定攻击类型的事件 **约束限制** 取值区分大小写，必须与指定格式一致，否则返回空结果 **取值范围** - Attack Success：攻击成功 - Attack Attempt：攻击尝试 - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性 **默认取值** 无
     *
     * @return string|null
     */
@@ -587,7 +561,7 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets attackTag
     *
-    * @param string|null $attackTag 攻击标识 |- 攻击标识，包含如下6种。 - Attack Success：攻击成功 - Attack Attempt：攻击尝试  - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性
+    * @param string|null $attackTag **参数解释** 应用防护事件的攻击类型标识，用于筛选指定攻击类型的事件 **约束限制** 取值区分大小写，必须与指定格式一致，否则返回空结果 **取值范围** - Attack Success：攻击成功 - Attack Attempt：攻击尝试 - Attack Blocked：攻击被阻断 - Abnormal Behavior：异常行为 - Collapsible Host：主机失陷 - System Vulnerability：系统脆弱性 **默认取值** 无
     *
     * @return $this
     */
@@ -599,7 +573,7 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  防护状态，包含如下2种。   - closed ：未开启。   - opened ：防护中。
+    *  **参数解释** 应用防护的启用状态，用于筛选指定防护状态下的事件 **约束限制** 取值区分大小写，必须在指定范围内，否则返回空结果 **取值范围** - closed：未开启防护 - opened：已开启防护 **默认取值** 无（查询所有防护状态的事件）
     *
     * @return string|null
     */
@@ -611,7 +585,7 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param string|null $protectStatus 防护状态，包含如下2种。   - closed ：未开启。   - opened ：防护中。
+    * @param string|null $protectStatus **参数解释** 应用防护的启用状态，用于筛选指定防护状态下的事件 **约束限制** 取值区分大小写，必须在指定范围内，否则返回空结果 **取值范围** - closed：未开启防护 - opened：已开启防护 **默认取值** 无（查询所有防护状态的事件）
     *
     * @return $this
     */

@@ -269,8 +269,8 @@ class CreateHostedDirectConnect implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['resourceTenantId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'resourceTenantId', the character length must be bigger than or equal to 0.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['resourceTenantId'])) {
-                $invalidProperties[] = "invalid value for 'resourceTenantId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
+            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['resourceTenantId'])) {
+                $invalidProperties[] = "invalid value for 'resourceTenantId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
             }
             if (!is_null($this->container['peerLocation']) && (mb_strlen($this->container['peerLocation']) > 255)) {
                 $invalidProperties[] = "invalid value for 'peerLocation', the character length must be smaller than or equal to 255.";

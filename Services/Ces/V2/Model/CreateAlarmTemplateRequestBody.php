@@ -220,12 +220,6 @@ class CreateAlarmTemplateRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['templateName'] === null) {
             $invalidProperties[] = "'templateName' can't be null";
         }
-            if ((mb_strlen($this->container['templateName']) > 128)) {
-                $invalidProperties[] = "invalid value for 'templateName', the character length must be smaller than or equal to 128.";
-            }
-            if ((mb_strlen($this->container['templateName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'templateName', the character length must be bigger than or equal to 1.";
-            }
             if (!preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\(|\\)|\\.|\\s){1,128}$/", $this->container['templateName'])) {
                 $invalidProperties[] = "invalid value for 'templateName', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-|\\(|\\)|\\.|\\s){1,128}$/.";
             }

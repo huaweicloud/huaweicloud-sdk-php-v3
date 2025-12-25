@@ -158,6 +158,9 @@ class ClusterJoinGroupRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['clusterGroupId'] === null) {
+            $invalidProperties[] = "'clusterGroupId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class ClusterJoinGroupRequestBody implements ModelInterface, ArrayAccess
     * Gets clusterGroupId
     *  集群加入目标容器舰队的id
     *
-    * @return string|null
+    * @return string
     */
     public function getClusterGroupId()
     {
@@ -186,7 +189,7 @@ class ClusterJoinGroupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets clusterGroupId
     *
-    * @param string|null $clusterGroupId 集群加入目标容器舰队的id
+    * @param string $clusterGroupId 集群加入目标容器舰队的id
     *
     * @return $this
     */

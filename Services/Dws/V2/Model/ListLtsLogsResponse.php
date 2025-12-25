@@ -21,7 +21,7 @@ class ListLtsLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accessStatus  **参数解释**： 日志开启状态。 **取值范围**： 不涉及。
+    * accessStatus  **参数解释**： 日志开启状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。 - DELETE：集群已删除。
     * ltsAccessList  **参数解释**： LTS日志列表。 **取值范围**： 不涉及。
     * count  **参数解释**： 总数量。 **取值范围**： 大于等于0。
     *
@@ -35,7 +35,7 @@ class ListLtsLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accessStatus  **参数解释**： 日志开启状态。 **取值范围**： 不涉及。
+    * accessStatus  **参数解释**： 日志开启状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。 - DELETE：集群已删除。
     * ltsAccessList  **参数解释**： LTS日志列表。 **取值范围**： 不涉及。
     * count  **参数解释**： 总数量。 **取值范围**： 大于等于0。
     *
@@ -70,7 +70,7 @@ class ListLtsLogsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accessStatus  **参数解释**： 日志开启状态。 **取值范围**： 不涉及。
+    * accessStatus  **参数解释**： 日志开启状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。 - DELETE：集群已删除。
     * ltsAccessList  **参数解释**： LTS日志列表。 **取值范围**： 不涉及。
     * count  **参数解释**： 总数量。 **取值范围**： 大于等于0。
     *
@@ -84,7 +84,7 @@ class ListLtsLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accessStatus  **参数解释**： 日志开启状态。 **取值范围**： 不涉及。
+    * accessStatus  **参数解释**： 日志开启状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。 - DELETE：集群已删除。
     * ltsAccessList  **参数解释**： LTS日志列表。 **取值范围**： 不涉及。
     * count  **参数解释**： 总数量。 **取值范围**： 大于等于0。
     *
@@ -98,7 +98,7 @@ class ListLtsLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accessStatus  **参数解释**： 日志开启状态。 **取值范围**： 不涉及。
+    * accessStatus  **参数解释**： 日志开启状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。 - DELETE：集群已删除。
     * ltsAccessList  **参数解释**： LTS日志列表。 **取值范围**： 不涉及。
     * count  **参数解释**： 总数量。 **取值范围**： 大于等于0。
     *
@@ -197,7 +197,7 @@ class ListLtsLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessStatus
-    *  **参数解释**： 日志开启状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 日志开启状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。 - DELETE：集群已删除。
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class ListLtsLogsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets accessStatus
     *
-    * @param string|null $accessStatus **参数解释**： 日志开启状态。 **取值范围**： 不涉及。
+    * @param string|null $accessStatus **参数解释**： 日志开启状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。 - DELETE：集群已删除。
     *
     * @return $this
     */

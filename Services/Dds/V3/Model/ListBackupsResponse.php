@@ -21,8 +21,8 @@ class ListBackupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * backups  备份列表。
-    * totalCount  总记录数。
+    * backups  **参数解释：** 备份列表。 **取值范围：** 不涉及。
+    * totalCount  **参数解释：** 总记录数。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListBackupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * backups  备份列表。
-    * totalCount  总记录数。
+    * backups  **参数解释：** 备份列表。 **取值范围：** 不涉及。
+    * totalCount  **参数解释：** 总记录数。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListBackupsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * backups  备份列表。
-    * totalCount  总记录数。
+    * backups  **参数解释：** 备份列表。 **取值范围：** 不涉及。
+    * totalCount  **参数解释：** 总记录数。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListBackupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * backups  备份列表。
-    * totalCount  总记录数。
+    * backups  **参数解释：** 备份列表。 **取值范围：** 不涉及。
+    * totalCount  **参数解释：** 总记录数。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListBackupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * backups  备份列表。
-    * totalCount  总记录数。
+    * backups  **参数解释：** 备份列表。 **取值范围：** 不涉及。
+    * totalCount  **参数解释：** 总记录数。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListBackupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets backups
-    *  备份列表。
+    *  **参数解释：** 备份列表。 **取值范围：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dds\V3\Model\BackupForList[]|null
     */
@@ -198,7 +198,7 @@ class ListBackupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets backups
     *
-    * @param \HuaweiCloud\SDK\Dds\V3\Model\BackupForList[]|null $backups 备份列表。
+    * @param \HuaweiCloud\SDK\Dds\V3\Model\BackupForList[]|null $backups **参数解释：** 备份列表。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListBackupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCount
-    *  总记录数。
+    *  **参数解释：** 总记录数。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListBackupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount 总记录数。
+    * @param int|null $totalCount **参数解释：** 总记录数。 **取值范围：** 不涉及。
     *
     * @return $this
     */

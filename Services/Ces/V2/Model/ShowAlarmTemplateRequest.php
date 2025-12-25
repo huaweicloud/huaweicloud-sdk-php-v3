@@ -20,7 +20,7 @@ class ShowAlarmTemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ShowAlarmTemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ShowAlarmTemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowAlarmTemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowAlarmTemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * templateId  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    * templateId  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -167,6 +167,9 @@ class ShowAlarmTemplateRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['templateId']) < 2)) {
                 $invalidProperties[] = "invalid value for 'templateId', the character length must be bigger than or equal to 2.";
             }
+            if (!preg_match("/^at([0-9A-Za-z])+$/", $this->container['templateId'])) {
+                $invalidProperties[] = "invalid value for 'templateId', must be conform to the pattern /^at([0-9A-Za-z])+$/.";
+            }
         return $invalidProperties;
     }
 
@@ -183,7 +186,7 @@ class ShowAlarmTemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateId
-    *  告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    *  **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -195,7 +198,7 @@ class ShowAlarmTemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets templateId
     *
-    * @param string $templateId 告警模板的ID，以at开头，后跟字母、数字，长度最长为64
+    * @param string $templateId **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
     *
     * @return $this
     */

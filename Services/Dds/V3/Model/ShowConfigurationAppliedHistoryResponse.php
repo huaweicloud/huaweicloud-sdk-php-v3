@@ -21,22 +21,26 @@ class ShowConfigurationAppliedHistoryResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * histories  参数模板应用历史列表
+    * histories  参数模板应用历史列表。
+    * totalCount  总记录数。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'histories' => '\HuaweiCloud\SDK\Dds\V3\Model\ApplyHistoryInfo[]'
+            'histories' => '\HuaweiCloud\SDK\Dds\V3\Model\ApplyHistoryInfo[]',
+            'totalCount' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * histories  参数模板应用历史列表
+    * histories  参数模板应用历史列表。
+    * totalCount  总记录数。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'histories' => null
+        'histories' => null,
+        'totalCount' => null
     ];
 
     /**
@@ -62,32 +66,38 @@ class ShowConfigurationAppliedHistoryResponse implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * histories  参数模板应用历史列表
+    * histories  参数模板应用历史列表。
+    * totalCount  总记录数。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'histories' => 'histories'
+            'histories' => 'histories',
+            'totalCount' => 'total_count'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * histories  参数模板应用历史列表
+    * histories  参数模板应用历史列表。
+    * totalCount  总记录数。
     *
     * @var string[]
     */
     protected static $setters = [
-            'histories' => 'setHistories'
+            'histories' => 'setHistories',
+            'totalCount' => 'setTotalCount'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * histories  参数模板应用历史列表
+    * histories  参数模板应用历史列表。
+    * totalCount  总记录数。
     *
     * @var string[]
     */
     protected static $getters = [
-            'histories' => 'getHistories'
+            'histories' => 'getHistories',
+            'totalCount' => 'getTotalCount'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ShowConfigurationAppliedHistoryResponse implements ModelInterface, ArrayAc
     public function __construct(array $data = null)
     {
         $this->container['histories'] = isset($data['histories']) ? $data['histories'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
     }
 
     /**
@@ -175,7 +186,7 @@ class ShowConfigurationAppliedHistoryResponse implements ModelInterface, ArrayAc
 
     /**
     * Gets histories
-    *  参数模板应用历史列表
+    *  参数模板应用历史列表。
     *
     * @return \HuaweiCloud\SDK\Dds\V3\Model\ApplyHistoryInfo[]|null
     */
@@ -187,13 +198,37 @@ class ShowConfigurationAppliedHistoryResponse implements ModelInterface, ArrayAc
     /**
     * Sets histories
     *
-    * @param \HuaweiCloud\SDK\Dds\V3\Model\ApplyHistoryInfo[]|null $histories 参数模板应用历史列表
+    * @param \HuaweiCloud\SDK\Dds\V3\Model\ApplyHistoryInfo[]|null $histories 参数模板应用历史列表。
     *
     * @return $this
     */
     public function setHistories($histories)
     {
         $this->container['histories'] = $histories;
+        return $this;
+    }
+
+    /**
+    * Gets totalCount
+    *  总记录数。
+    *
+    * @return int|null
+    */
+    public function getTotalCount()
+    {
+        return $this->container['totalCount'];
+    }
+
+    /**
+    * Sets totalCount
+    *
+    * @param int|null $totalCount 总记录数。
+    *
+    * @return $this
+    */
+    public function setTotalCount($totalCount)
+    {
+        $this->container['totalCount'] = $totalCount;
         return $this;
     }
 

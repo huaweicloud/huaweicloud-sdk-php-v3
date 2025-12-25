@@ -24,7 +24,7 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： PREPARE|RUNNING|WAITING|PAUSE|PAUSING|SUCCESS|FAIL。
+    * status  **参数解释**： 状态。 **取值范围**： - PREPARE：准备。 - RUNNING：运行中。 - WAITING：等待中。 - PAUSE：已暂停。 - PAUSING：暂停中。 - SUCCESS：成功。 - FAIL：失败。
     * redisConf  redisConf
     * redisProgress  redisProgress
     * redisTableDetail  redisTableDetail
@@ -48,7 +48,7 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： PREPARE|RUNNING|WAITING|PAUSE|PAUSING|SUCCESS|FAIL。
+    * status  **参数解释**： 状态。 **取值范围**： - PREPARE：准备。 - RUNNING：运行中。 - WAITING：等待中。 - PAUSE：已暂停。 - PAUSING：暂停中。 - SUCCESS：成功。 - FAIL：失败。
     * redisConf  redisConf
     * redisProgress  redisProgress
     * redisTableDetail  redisTableDetail
@@ -93,7 +93,7 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： PREPARE|RUNNING|WAITING|PAUSE|PAUSING|SUCCESS|FAIL。
+    * status  **参数解释**： 状态。 **取值范围**： - PREPARE：准备。 - RUNNING：运行中。 - WAITING：等待中。 - PAUSE：已暂停。 - PAUSING：暂停中。 - SUCCESS：成功。 - FAIL：失败。
     * redisConf  redisConf
     * redisProgress  redisProgress
     * redisTableDetail  redisTableDetail
@@ -117,7 +117,7 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： PREPARE|RUNNING|WAITING|PAUSE|PAUSING|SUCCESS|FAIL。
+    * status  **参数解释**： 状态。 **取值范围**： - PREPARE：准备。 - RUNNING：运行中。 - WAITING：等待中。 - PAUSE：已暂停。 - PAUSING：暂停中。 - SUCCESS：成功。 - FAIL：失败。
     * redisConf  redisConf
     * redisProgress  redisProgress
     * redisTableDetail  redisTableDetail
@@ -141,7 +141,7 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： PREPARE|RUNNING|WAITING|PAUSE|PAUSING|SUCCESS|FAIL。
+    * status  **参数解释**： 状态。 **取值范围**： - PREPARE：准备。 - RUNNING：运行中。 - WAITING：等待中。 - PAUSE：已暂停。 - PAUSING：暂停中。 - SUCCESS：成功。 - FAIL：失败。
     * redisConf  redisConf
     * redisProgress  redisProgress
     * redisTableDetail  redisTableDetail
@@ -347,7 +347,7 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 状态。 **取值范围**： PREPARE|RUNNING|WAITING|PAUSE|PAUSING|SUCCESS|FAIL。
+    *  **参数解释**： 状态。 **取值范围**： - PREPARE：准备。 - RUNNING：运行中。 - WAITING：等待中。 - PAUSE：已暂停。 - PAUSING：暂停中。 - SUCCESS：成功。 - FAIL：失败。
     *
     * @return string|null
     */
@@ -359,7 +359,7 @@ class RdsRedisInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 状态。 **取值范围**： PREPARE|RUNNING|WAITING|PAUSE|PAUSING|SUCCESS|FAIL。
+    * @param string|null $status **参数解释**： 状态。 **取值范围**： - PREPARE：准备。 - RUNNING：运行中。 - WAITING：等待中。 - PAUSE：已暂停。 - PAUSING：暂停中。 - SUCCESS：成功。 - FAIL：失败。
     *
     * @return $this
     */

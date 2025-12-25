@@ -25,8 +25,8 @@ class WebCmsVulDetailInfo implements ModelInterface, ArrayAccess
     * nameZh  **参数解释**: 中文名称 **取值范围**: 字符长度0-128
     * nameEn  **参数解释**: 英文名称 **取值范围**: 字符长度0-128
     * publicTime  **参数解释**: 披露时间 **取值范围**: 最小值0，最大值2^63-1
-    * vulLabelZh  **参数解释**: 漏洞标签中文名称 **取值范围**: 字符长度0-64
-    * vulLabelEn  **参数解释**: 漏洞标签英文名称 **取值范围**: 字符长度0-64
+    * vulLabelZh  **参数解释**: 漏洞标签中文名称（已废弃，后续删除） **取值范围**: 字符长度0-64
+    * vulLabelEn  **参数解释**: 漏洞标签英文名称（已废弃，后续删除） **取值范围**: 字符长度0-64
     * repairNecessity  **参数解释**: 修复必要性 **取值范围**: - 1：高 - 2：中 - 3：低
     * severityLevel  **参数解释**: 修复必要性 **取值范围**: - Low：低危 - Medium：中危 - High：高危 - Critical：紧急
     * descriptionZh  **参数解释**: cve漏洞中文描述 **取值范围**: 字符长度0-1024
@@ -107,8 +107,8 @@ class WebCmsVulDetailInfo implements ModelInterface, ArrayAccess
     * nameZh  **参数解释**: 中文名称 **取值范围**: 字符长度0-128
     * nameEn  **参数解释**: 英文名称 **取值范围**: 字符长度0-128
     * publicTime  **参数解释**: 披露时间 **取值范围**: 最小值0，最大值2^63-1
-    * vulLabelZh  **参数解释**: 漏洞标签中文名称 **取值范围**: 字符长度0-64
-    * vulLabelEn  **参数解释**: 漏洞标签英文名称 **取值范围**: 字符长度0-64
+    * vulLabelZh  **参数解释**: 漏洞标签中文名称（已废弃，后续删除） **取值范围**: 字符长度0-64
+    * vulLabelEn  **参数解释**: 漏洞标签英文名称（已废弃，后续删除） **取值范围**: 字符长度0-64
     * repairNecessity  **参数解释**: 修复必要性 **取值范围**: - 1：高 - 2：中 - 3：低
     * severityLevel  **参数解释**: 修复必要性 **取值范围**: - Low：低危 - Medium：中危 - High：高危 - Critical：紧急
     * descriptionZh  **参数解释**: cve漏洞中文描述 **取值范围**: 字符长度0-1024
@@ -210,8 +210,8 @@ class WebCmsVulDetailInfo implements ModelInterface, ArrayAccess
     * nameZh  **参数解释**: 中文名称 **取值范围**: 字符长度0-128
     * nameEn  **参数解释**: 英文名称 **取值范围**: 字符长度0-128
     * publicTime  **参数解释**: 披露时间 **取值范围**: 最小值0，最大值2^63-1
-    * vulLabelZh  **参数解释**: 漏洞标签中文名称 **取值范围**: 字符长度0-64
-    * vulLabelEn  **参数解释**: 漏洞标签英文名称 **取值范围**: 字符长度0-64
+    * vulLabelZh  **参数解释**: 漏洞标签中文名称（已废弃，后续删除） **取值范围**: 字符长度0-64
+    * vulLabelEn  **参数解释**: 漏洞标签英文名称（已废弃，后续删除） **取值范围**: 字符长度0-64
     * repairNecessity  **参数解释**: 修复必要性 **取值范围**: - 1：高 - 2：中 - 3：低
     * severityLevel  **参数解释**: 修复必要性 **取值范围**: - Low：低危 - Medium：中危 - High：高危 - Critical：紧急
     * descriptionZh  **参数解释**: cve漏洞中文描述 **取值范围**: 字符长度0-1024
@@ -292,8 +292,8 @@ class WebCmsVulDetailInfo implements ModelInterface, ArrayAccess
     * nameZh  **参数解释**: 中文名称 **取值范围**: 字符长度0-128
     * nameEn  **参数解释**: 英文名称 **取值范围**: 字符长度0-128
     * publicTime  **参数解释**: 披露时间 **取值范围**: 最小值0，最大值2^63-1
-    * vulLabelZh  **参数解释**: 漏洞标签中文名称 **取值范围**: 字符长度0-64
-    * vulLabelEn  **参数解释**: 漏洞标签英文名称 **取值范围**: 字符长度0-64
+    * vulLabelZh  **参数解释**: 漏洞标签中文名称（已废弃，后续删除） **取值范围**: 字符长度0-64
+    * vulLabelEn  **参数解释**: 漏洞标签英文名称（已废弃，后续删除） **取值范围**: 字符长度0-64
     * repairNecessity  **参数解释**: 修复必要性 **取值范围**: - 1：高 - 2：中 - 3：低
     * severityLevel  **参数解释**: 修复必要性 **取值范围**: - Low：低危 - Medium：中危 - High：高危 - Critical：紧急
     * descriptionZh  **参数解释**: cve漏洞中文描述 **取值范围**: 字符长度0-1024
@@ -374,8 +374,8 @@ class WebCmsVulDetailInfo implements ModelInterface, ArrayAccess
     * nameZh  **参数解释**: 中文名称 **取值范围**: 字符长度0-128
     * nameEn  **参数解释**: 英文名称 **取值范围**: 字符长度0-128
     * publicTime  **参数解释**: 披露时间 **取值范围**: 最小值0，最大值2^63-1
-    * vulLabelZh  **参数解释**: 漏洞标签中文名称 **取值范围**: 字符长度0-64
-    * vulLabelEn  **参数解释**: 漏洞标签英文名称 **取值范围**: 字符长度0-64
+    * vulLabelZh  **参数解释**: 漏洞标签中文名称（已废弃，后续删除） **取值范围**: 字符长度0-64
+    * vulLabelEn  **参数解释**: 漏洞标签英文名称（已废弃，后续删除） **取值范围**: 字符长度0-64
     * repairNecessity  **参数解释**: 修复必要性 **取值范围**: - 1：高 - 2：中 - 3：低
     * severityLevel  **参数解释**: 修复必要性 **取值范围**: - Low：低危 - Medium：中危 - High：高危 - Critical：紧急
     * descriptionZh  **参数解释**: cve漏洞中文描述 **取值范围**: 字符长度0-1024
@@ -888,7 +888,7 @@ class WebCmsVulDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vulLabelZh
-    *  **参数解释**: 漏洞标签中文名称 **取值范围**: 字符长度0-64
+    *  **参数解释**: 漏洞标签中文名称（已废弃，后续删除） **取值范围**: 字符长度0-64
     *
     * @return string|null
     */
@@ -900,7 +900,7 @@ class WebCmsVulDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vulLabelZh
     *
-    * @param string|null $vulLabelZh **参数解释**: 漏洞标签中文名称 **取值范围**: 字符长度0-64
+    * @param string|null $vulLabelZh **参数解释**: 漏洞标签中文名称（已废弃，后续删除） **取值范围**: 字符长度0-64
     *
     * @return $this
     */
@@ -912,7 +912,7 @@ class WebCmsVulDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vulLabelEn
-    *  **参数解释**: 漏洞标签英文名称 **取值范围**: 字符长度0-64
+    *  **参数解释**: 漏洞标签英文名称（已废弃，后续删除） **取值范围**: 字符长度0-64
     *
     * @return string|null
     */
@@ -924,7 +924,7 @@ class WebCmsVulDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vulLabelEn
     *
-    * @param string|null $vulLabelEn **参数解释**: 漏洞标签英文名称 **取值范围**: 字符长度0-64
+    * @param string|null $vulLabelEn **参数解释**: 漏洞标签英文名称（已废弃，后续删除） **取值范围**: 字符长度0-64
     *
     * @return $this
     */

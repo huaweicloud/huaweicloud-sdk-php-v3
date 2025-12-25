@@ -25,7 +25,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
     * jobName  **参数解释**： 任务名称。 **取值范围**： 不涉及。
     * beginTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
-    * status  **参数解释**： 任务当前状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 任务当前状态。 **取值范围**： - INIT：初始化。 - WAITING：等待中。 - RUNNING：运行中。 - DELAY_SCHEDULED：延迟调度。 - FAIL：失败。 - SUCCESS：成功。 - STOP：停止。
     * failedCode  **参数解释**： 任务失败错误码。 **取值范围**： 不涉及。
     * failedDetail  **参数解释**： 任务失败错误详情。 **取值范围**： 不涉及。
     * progress  **参数解释**： 任务进度。 **取值范围**： 不涉及。
@@ -49,7 +49,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
     * jobName  **参数解释**： 任务名称。 **取值范围**： 不涉及。
     * beginTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
-    * status  **参数解释**： 任务当前状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 任务当前状态。 **取值范围**： - INIT：初始化。 - WAITING：等待中。 - RUNNING：运行中。 - DELAY_SCHEDULED：延迟调度。 - FAIL：失败。 - SUCCESS：成功。 - STOP：停止。
     * failedCode  **参数解释**： 任务失败错误码。 **取值范围**： 不涉及。
     * failedDetail  **参数解释**： 任务失败错误详情。 **取值范围**： 不涉及。
     * progress  **参数解释**： 任务进度。 **取值范围**： 不涉及。
@@ -94,7 +94,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
     * jobName  **参数解释**： 任务名称。 **取值范围**： 不涉及。
     * beginTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
-    * status  **参数解释**： 任务当前状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 任务当前状态。 **取值范围**： - INIT：初始化。 - WAITING：等待中。 - RUNNING：运行中。 - DELAY_SCHEDULED：延迟调度。 - FAIL：失败。 - SUCCESS：成功。 - STOP：停止。
     * failedCode  **参数解释**： 任务失败错误码。 **取值范围**： 不涉及。
     * failedDetail  **参数解释**： 任务失败错误详情。 **取值范围**： 不涉及。
     * progress  **参数解释**： 任务进度。 **取值范围**： 不涉及。
@@ -118,7 +118,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
     * jobName  **参数解释**： 任务名称。 **取值范围**： 不涉及。
     * beginTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
-    * status  **参数解释**： 任务当前状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 任务当前状态。 **取值范围**： - INIT：初始化。 - WAITING：等待中。 - RUNNING：运行中。 - DELAY_SCHEDULED：延迟调度。 - FAIL：失败。 - SUCCESS：成功。 - STOP：停止。
     * failedCode  **参数解释**： 任务失败错误码。 **取值范围**： 不涉及。
     * failedDetail  **参数解释**： 任务失败错误详情。 **取值范围**： 不涉及。
     * progress  **参数解释**： 任务进度。 **取值范围**： 不涉及。
@@ -142,7 +142,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
     * jobName  **参数解释**： 任务名称。 **取值范围**： 不涉及。
     * beginTime  **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
-    * status  **参数解释**： 任务当前状态。 **取值范围**： 不涉及。
+    * status  **参数解释**： 任务当前状态。 **取值范围**： - INIT：初始化。 - WAITING：等待中。 - RUNNING：运行中。 - DELAY_SCHEDULED：延迟调度。 - FAIL：失败。 - SUCCESS：成功。 - STOP：停止。
     * failedCode  **参数解释**： 任务失败错误码。 **取值范围**： 不涉及。
     * failedDetail  **参数解释**： 任务失败错误详情。 **取值范围**： 不涉及。
     * progress  **参数解释**： 任务进度。 **取值范围**： 不涉及。
@@ -348,7 +348,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 任务当前状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 任务当前状态。 **取值范围**： - INIT：初始化。 - WAITING：等待中。 - RUNNING：运行中。 - DELAY_SCHEDULED：延迟调度。 - FAIL：失败。 - SUCCESS：成功。 - STOP：停止。
     *
     * @return string|null
     */
@@ -360,7 +360,7 @@ class ListJobDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 任务当前状态。 **取值范围**： 不涉及。
+    * @param string|null $status **参数解释**： 任务当前状态。 **取值范围**： - INIT：初始化。 - WAITING：等待中。 - RUNNING：运行中。 - DELAY_SCHEDULED：延迟调度。 - FAIL：失败。 - SUCCESS：成功。 - STOP：停止。
     *
     * @return $this
     */
