@@ -174,7 +174,7 @@ class ListSmartChatRoomsRequest implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'limit' => 'getLimit',
             'roomName' => 'getRoomName',
-            'modelName' => 'getModelName',
+            'modelName' => 'getModelNamenew',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime'
     ];
@@ -505,7 +505,7 @@ class ListSmartChatRoomsRequest implements ModelInterface, ArrayAccess
     *
     * @return string|null
     */
-    public function getModelName()
+    public function getModelNamenew()
     {
         return $this->container['modelName'];
     }
