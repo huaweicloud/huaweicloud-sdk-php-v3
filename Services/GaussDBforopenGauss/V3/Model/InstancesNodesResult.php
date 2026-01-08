@@ -22,6 +22,7 @@ class InstancesNodesResult implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
+    * role  **参数解释**： 节点角色。 **取值范围**： - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
     * componentIds  **参数解释**： 组件ID列表。
     *
     * @var string[]
@@ -29,6 +30,7 @@ class InstancesNodesResult implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'name' => 'string',
+            'role' => 'string',
             'componentIds' => 'string[]'
     ];
 
@@ -36,6 +38,7 @@ class InstancesNodesResult implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
+    * role  **参数解释**： 节点角色。 **取值范围**： - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
     * componentIds  **参数解释**： 组件ID列表。
     *
     * @var string[]
@@ -43,6 +46,7 @@ class InstancesNodesResult implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
+        'role' => null,
         'componentIds' => null
     ];
 
@@ -71,6 +75,7 @@ class InstancesNodesResult implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
+    * role  **参数解释**： 节点角色。 **取值范围**： - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
     * componentIds  **参数解释**： 组件ID列表。
     *
     * @var string[]
@@ -78,6 +83,7 @@ class InstancesNodesResult implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'id' => 'id',
             'name' => 'name',
+            'role' => 'role',
             'componentIds' => 'component_ids'
     ];
 
@@ -85,6 +91,7 @@ class InstancesNodesResult implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
+    * role  **参数解释**： 节点角色。 **取值范围**： - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
     * componentIds  **参数解释**： 组件ID列表。
     *
     * @var string[]
@@ -92,6 +99,7 @@ class InstancesNodesResult implements ModelInterface, ArrayAccess
     protected static $setters = [
             'id' => 'setId',
             'name' => 'setName',
+            'role' => 'setRole',
             'componentIds' => 'setComponentIds'
     ];
 
@@ -99,6 +107,7 @@ class InstancesNodesResult implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释**： 节点ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 节点名称。 **取值范围**： 不涉及。
+    * role  **参数解释**： 节点角色。 **取值范围**： - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
     * componentIds  **参数解释**： 组件ID列表。
     *
     * @var string[]
@@ -106,6 +115,7 @@ class InstancesNodesResult implements ModelInterface, ArrayAccess
     protected static $getters = [
             'id' => 'getId',
             'name' => 'getName',
+            'role' => 'getRole',
             'componentIds' => 'getComponentIds'
     ];
 
@@ -169,6 +179,7 @@ class InstancesNodesResult implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['role'] = isset($data['role']) ? $data['role'] : null;
         $this->container['componentIds'] = isset($data['componentIds']) ? $data['componentIds'] : null;
     }
 
@@ -239,6 +250,30 @@ class InstancesNodesResult implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets role
+    *  **参数解释**： 节点角色。 **取值范围**： - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
+    *
+    * @return string|null
+    */
+    public function getRole()
+    {
+        return $this->container['role'];
+    }
+
+    /**
+    * Sets role
+    *
+    * @param string|null $role **参数解释**： 节点角色。 **取值范围**： - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
+    *
+    * @return $this
+    */
+    public function setRole($role)
+    {
+        $this->container['role'] = $role;
         return $this;
     }
 

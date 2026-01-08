@@ -22,19 +22,19 @@ class ListWaitEventResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * total  **参数解释**: 等待事件的总数量。 **取值范围**: 不涉及。
-    * rows  rows
+    * rows  **参数解释**: 数据库实例的等待事件列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'total' => 'int',
-            'rows' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\WaitEventResult'
+            'rows' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\WaitEventResult[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * total  **参数解释**: 等待事件的总数量。 **取值范围**: 不涉及。
-    * rows  rows
+    * rows  **参数解释**: 数据库实例的等待事件列表。
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class ListWaitEventResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * total  **参数解释**: 等待事件的总数量。 **取值范围**: 不涉及。
-    * rows  rows
+    * rows  **参数解释**: 数据库实例的等待事件列表。
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class ListWaitEventResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * total  **参数解释**: 等待事件的总数量。 **取值范围**: 不涉及。
-    * rows  rows
+    * rows  **参数解释**: 数据库实例的等待事件列表。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListWaitEventResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * total  **参数解释**: 等待事件的总数量。 **取值范围**: 不涉及。
-    * rows  rows
+    * rows  **参数解释**: 数据库实例的等待事件列表。
     *
     * @var string[]
     */
@@ -210,9 +210,9 @@ class ListWaitEventResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets rows
-    *  rows
+    *  **参数解释**: 数据库实例的等待事件列表。
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\WaitEventResult|null
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\WaitEventResult[]|null
     */
     public function getRows()
     {
@@ -222,7 +222,7 @@ class ListWaitEventResponse implements ModelInterface, ArrayAccess
     /**
     * Sets rows
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\WaitEventResult|null $rows rows
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\WaitEventResult[]|null $rows **参数解释**: 数据库实例的等待事件列表。
     *
     * @return $this
     */

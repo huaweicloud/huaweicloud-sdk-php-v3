@@ -21,7 +21,7 @@ class DeleteDashboardsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dashboards  批量删除监控看板返回结果
+    * dashboards  **参数解释** 批量删除监控看板返回结果
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class DeleteDashboardsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dashboards  批量删除监控看板返回结果
+    * dashboards  **参数解释** 批量删除监控看板返回结果
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class DeleteDashboardsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dashboards  批量删除监控看板返回结果
+    * dashboards  **参数解释** 批量删除监控看板返回结果
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class DeleteDashboardsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dashboards  批量删除监控看板返回结果
+    * dashboards  **参数解释** 批量删除监控看板返回结果
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class DeleteDashboardsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dashboards  批量删除监控看板返回结果
+    * dashboards  **参数解释** 批量删除监控看板返回结果
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class DeleteDashboardsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboards
-    *  批量删除监控看板返回结果
+    *  **参数解释** 批量删除监控看板返回结果
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\BatchDeleteDashboardRespInfo[]|null
     */
@@ -187,7 +187,7 @@ class DeleteDashboardsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dashboards
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\BatchDeleteDashboardRespInfo[]|null $dashboards 批量删除监控看板返回结果
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\BatchDeleteDashboardRespInfo[]|null $dashboards **参数解释** 批量删除监控看板返回结果
     *
     * @return $this
     */

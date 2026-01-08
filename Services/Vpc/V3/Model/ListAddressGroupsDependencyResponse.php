@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\SecMaster\V1\Model;
+namespace HuaweiCloud\SDK\Vpc\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateGenericActionResponse implements ModelInterface, ArrayAccess
+class ListAddressGroupsDependencyResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,24 +17,34 @@ class CreateGenericActionResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateGenericActionResponse';
+    protected static $openAPIModelName = 'ListAddressGroupsDependencyResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * requestId  **参数解释**： 请求ID。 **取值范围**： 不涉及。
+    * addressGroups  **参数解释**： 查询地址组的关联资源的响应体。 **取值范围**： 不涉及。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'requestId' => 'string',
+            'addressGroups' => '\HuaweiCloud\SDK\Vpc\V3\Model\AddressGroupDependency[]',
+            'pageInfo' => '\HuaweiCloud\SDK\Vpc\V3\Model\PageInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * requestId  **参数解释**： 请求ID。 **取值范围**： 不涉及。
+    * addressGroups  **参数解释**： 查询地址组的关联资源的响应体。 **取值范围**： 不涉及。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'requestId' => null,
+        'addressGroups' => null,
+        'pageInfo' => null
     ];
 
     /**
@@ -60,29 +70,44 @@ class CreateGenericActionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * requestId  **参数解释**： 请求ID。 **取值范围**： 不涉及。
+    * addressGroups  **参数解释**： 查询地址组的关联资源的响应体。 **取值范围**： 不涉及。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'requestId' => 'request_id',
+            'addressGroups' => 'address_groups',
+            'pageInfo' => 'page_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * requestId  **参数解释**： 请求ID。 **取值范围**： 不涉及。
+    * addressGroups  **参数解释**： 查询地址组的关联资源的响应体。 **取值范围**： 不涉及。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $setters = [
+            'requestId' => 'setRequestId',
+            'addressGroups' => 'setAddressGroups',
+            'pageInfo' => 'setPageInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * requestId  **参数解释**： 请求ID。 **取值范围**： 不涉及。
+    * addressGroups  **参数解释**： 查询地址组的关联资源的响应体。 **取值范围**： 不涉及。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $getters = [
+            'requestId' => 'getRequestId',
+            'addressGroups' => 'getAddressGroups',
+            'pageInfo' => 'getPageInfo'
     ];
 
     /**
@@ -143,6 +168,9 @@ class CreateGenericActionResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['addressGroups'] = isset($data['addressGroups']) ? $data['addressGroups'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
     /**
@@ -165,6 +193,78 @@ class CreateGenericActionResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets requestId
+    *  **参数解释**： 请求ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getRequestId()
+    {
+        return $this->container['requestId'];
+    }
+
+    /**
+    * Sets requestId
+    *
+    * @param string|null $requestId **参数解释**： 请求ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setRequestId($requestId)
+    {
+        $this->container['requestId'] = $requestId;
+        return $this;
+    }
+
+    /**
+    * Gets addressGroups
+    *  **参数解释**： 查询地址组的关联资源的响应体。 **取值范围**： 不涉及。
+    *
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\AddressGroupDependency[]|null
+    */
+    public function getAddressGroups()
+    {
+        return $this->container['addressGroups'];
+    }
+
+    /**
+    * Sets addressGroups
+    *
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\AddressGroupDependency[]|null $addressGroups **参数解释**： 查询地址组的关联资源的响应体。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setAddressGroups($addressGroups)
+    {
+        $this->container['addressGroups'] = $addressGroups;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\PageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\PageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
+        return $this;
     }
 
     /**

@@ -1762,6 +1762,9 @@ class CesAsyncClient extends Client
         if ($localVarParams['orderBy'] !== null) {
             $queryParams['order_by'] = $localVarParams['orderBy'];
         }
+        if ($localVarParams['maskStatus'] !== null) {
+            $queryParams['mask_status'] = $localVarParams['maskStatus'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

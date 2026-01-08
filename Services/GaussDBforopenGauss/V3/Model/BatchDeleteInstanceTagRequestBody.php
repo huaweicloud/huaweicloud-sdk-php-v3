@@ -158,6 +158,9 @@ class BatchDeleteInstanceTagRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['keys'] === null) {
+            $invalidProperties[] = "'keys' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class BatchDeleteInstanceTagRequestBody implements ModelInterface, ArrayAccess
     * Gets keys
     *  **参数解释**: 需要删除的标签列表。
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getKeys()
     {
@@ -186,7 +189,7 @@ class BatchDeleteInstanceTagRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets keys
     *
-    * @param string[]|null $keys **参数解释**: 需要删除的标签列表。
+    * @param string[] $keys **参数解释**: 需要删除的标签列表。
     *
     * @return $this
     */

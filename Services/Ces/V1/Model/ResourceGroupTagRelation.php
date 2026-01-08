@@ -212,8 +212,8 @@ class ResourceGroupTagRelation implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['key']) < 1)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['key'])) {
-                $invalidProperties[] = "invalid value for 'key', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
+            if (!preg_match("/^([一-鿿]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['key'])) {
+                $invalidProperties[] = "invalid value for 'key', must be conform to the pattern /^([一-鿿]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
             }
             $allowedValues = $this->getOperatorAllowableValues();
                 if (!is_null($this->container['operator']) && !in_array($this->container['operator'], $allowedValues, true)) {
@@ -229,8 +229,8 @@ class ResourceGroupTagRelation implements ModelInterface, ArrayAccess
             if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) < 0)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['value']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|\\.|_|-)*$/", $this->container['value'])) {
-                $invalidProperties[] = "invalid value for 'value', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|\\.|_|-)*$/.";
+            if (!is_null($this->container['value']) && !preg_match("/^([一-鿿]|[a-z]|[A-Z]|[0-9]|\\.|_|-)*$/", $this->container['value'])) {
+                $invalidProperties[] = "invalid value for 'value', must be conform to the pattern /^([一-鿿]|[a-z]|[A-Z]|[0-9]|\\.|_|-)*$/.";
             }
         return $invalidProperties;
     }

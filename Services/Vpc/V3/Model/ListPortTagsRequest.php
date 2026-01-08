@@ -20,7 +20,7 @@ class ListPortTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目ID
+    * projectId  项目ID。
     * limit  功能说明：查询记录数 取值范围：1-1000 约束：默认为1000
     * offset  功能说明：索引位置， 从第一条数据偏移offset条数据后开始查询 约束：默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数
     *
@@ -34,7 +34,7 @@ class ListPortTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目ID
+    * projectId  项目ID。
     * limit  功能说明：查询记录数 取值范围：1-1000 约束：默认为1000
     * offset  功能说明：索引位置， 从第一条数据偏移offset条数据后开始查询 约束：默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数
     *
@@ -69,7 +69,7 @@ class ListPortTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目ID
+    * projectId  项目ID。
     * limit  功能说明：查询记录数 取值范围：1-1000 约束：默认为1000
     * offset  功能说明：索引位置， 从第一条数据偏移offset条数据后开始查询 约束：默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数
     *
@@ -83,7 +83,7 @@ class ListPortTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目ID
+    * projectId  项目ID。
     * limit  功能说明：查询记录数 取值范围：1-1000 约束：默认为1000
     * offset  功能说明：索引位置， 从第一条数据偏移offset条数据后开始查询 约束：默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数
     *
@@ -97,7 +97,7 @@ class ListPortTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目ID
+    * projectId  项目ID。
     * limit  功能说明：查询记录数 取值范围：1-1000 约束：默认为1000
     * offset  功能说明：索引位置， 从第一条数据偏移offset条数据后开始查询 约束：默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数
     *
@@ -208,7 +208,7 @@ class ListPortTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  项目ID。
     *
     * @return string
     */
@@ -220,7 +220,7 @@ class ListPortTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID
+    * @param string $projectId 项目ID。
     *
     * @return $this
     */

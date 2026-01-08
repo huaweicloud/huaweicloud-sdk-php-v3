@@ -22,25 +22,25 @@ class ListTransactionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * total  **参数解释**: 查到的事务数量。 **取值范围**: 不涉及。
-    * rowsInfo  **参数解释**: 事务信息列表。
+    * rows  **参数解释**: 事务信息列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'total' => 'int',
-            'rowsInfo' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListTransactionResponseBodyRowsInfo[]'
+            'rows' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListTransactionResponseBodyRows[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * total  **参数解释**: 查到的事务数量。 **取值范围**: 不涉及。
-    * rowsInfo  **参数解释**: 事务信息列表。
+    * rows  **参数解释**: 事务信息列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'total' => 'int32',
-        'rowsInfo' => null
+        'rows' => null
     ];
 
     /**
@@ -67,37 +67,37 @@ class ListTransactionResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * total  **参数解释**: 查到的事务数量。 **取值范围**: 不涉及。
-    * rowsInfo  **参数解释**: 事务信息列表。
+    * rows  **参数解释**: 事务信息列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'total' => 'total',
-            'rowsInfo' => 'rows_info'
+            'rows' => 'rows'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * total  **参数解释**: 查到的事务数量。 **取值范围**: 不涉及。
-    * rowsInfo  **参数解释**: 事务信息列表。
+    * rows  **参数解释**: 事务信息列表。
     *
     * @var string[]
     */
     protected static $setters = [
             'total' => 'setTotal',
-            'rowsInfo' => 'setRowsInfo'
+            'rows' => 'setRows'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * total  **参数解释**: 查到的事务数量。 **取值范围**: 不涉及。
-    * rowsInfo  **参数解释**: 事务信息列表。
+    * rows  **参数解释**: 事务信息列表。
     *
     * @var string[]
     */
     protected static $getters = [
             'total' => 'getTotal',
-            'rowsInfo' => 'getRowsInfo'
+            'rows' => 'getRows'
     ];
 
     /**
@@ -159,7 +159,7 @@ class ListTransactionResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
-        $this->container['rowsInfo'] = isset($data['rowsInfo']) ? $data['rowsInfo'] : null;
+        $this->container['rows'] = isset($data['rows']) ? $data['rows'] : null;
     }
 
     /**
@@ -209,26 +209,26 @@ class ListTransactionResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets rowsInfo
+    * Gets rows
     *  **参数解释**: 事务信息列表。
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListTransactionResponseBodyRowsInfo[]|null
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListTransactionResponseBodyRows[]|null
     */
-    public function getRowsInfo()
+    public function getRows()
     {
-        return $this->container['rowsInfo'];
+        return $this->container['rows'];
     }
 
     /**
-    * Sets rowsInfo
+    * Sets rows
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListTransactionResponseBodyRowsInfo[]|null $rowsInfo **参数解释**: 事务信息列表。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListTransactionResponseBodyRows[]|null $rows **参数解释**: 事务信息列表。
     *
     * @return $this
     */
-    public function setRowsInfo($rowsInfo)
+    public function setRows($rows)
     {
-        $this->container['rowsInfo'] = $rowsInfo;
+        $this->container['rows'] = $rows;
         return $this;
     }
 

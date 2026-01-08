@@ -49,6 +49,7 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     * systemReservedStorage  **参数解释**： 节点临时存储空间预留，系统组件预留值。目的是为OS系统守护进程（如 sshd、udev 等）预留临时存储。单位为Gi。 **约束限制**： kubeReservedStorage，systemReservedStorage之和小于容器组件所使用硬盘空间的50%。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * initNodePassword  **参数解释**： 节点密码，仅作为响应参数时，固定展示星号，节点池场景响应返回中无该参数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。[详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。](tag:hws) 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： - 空值：表示不开启等保加固 - cybersecurity：表示开启等保加固  **默认取值**： 不涉及
+    * serverMetadataHttpTokens  **参数解释**： 是否要求携带token，默认optional。 **约束限制**： 不涉及 **取值范围**： - optional：不要求携带token。 - required：要求必须携带token，即IMDS服务禁用v1版本，启用v2版本。  **默认取值**： optional
     *
     * @var string[]
     */
@@ -81,7 +82,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
             'kubeReservedStorage' => 'int',
             'systemReservedStorage' => 'int',
             'initNodePassword' => 'string',
-            'securityReinforcementType' => 'string'
+            'securityReinforcementType' => 'string',
+            'serverMetadataHttpTokens' => 'string'
     ];
 
     /**
@@ -115,6 +117,7 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     * systemReservedStorage  **参数解释**： 节点临时存储空间预留，系统组件预留值。目的是为OS系统守护进程（如 sshd、udev 等）预留临时存储。单位为Gi。 **约束限制**： kubeReservedStorage，systemReservedStorage之和小于容器组件所使用硬盘空间的50%。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * initNodePassword  **参数解释**： 节点密码，仅作为响应参数时，固定展示星号，节点池场景响应返回中无该参数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。[详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。](tag:hws) 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： - 空值：表示不开启等保加固 - cybersecurity：表示开启等保加固  **默认取值**： 不涉及
+    * serverMetadataHttpTokens  **参数解释**： 是否要求携带token，默认optional。 **约束限制**： 不涉及 **取值范围**： - optional：不要求携带token。 - required：要求必须携带token，即IMDS服务禁用v1版本，启用v2版本。  **默认取值**： optional
     *
     * @var string[]
     */
@@ -147,7 +150,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
         'kubeReservedStorage' => 'int32',
         'systemReservedStorage' => 'int32',
         'initNodePassword' => null,
-        'securityReinforcementType' => null
+        'securityReinforcementType' => null,
+        'serverMetadataHttpTokens' => null
     ];
 
     /**
@@ -202,6 +206,7 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     * systemReservedStorage  **参数解释**： 节点临时存储空间预留，系统组件预留值。目的是为OS系统守护进程（如 sshd、udev 等）预留临时存储。单位为Gi。 **约束限制**： kubeReservedStorage，systemReservedStorage之和小于容器组件所使用硬盘空间的50%。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * initNodePassword  **参数解释**： 节点密码，仅作为响应参数时，固定展示星号，节点池场景响应返回中无该参数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。[详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。](tag:hws) 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： - 空值：表示不开启等保加固 - cybersecurity：表示开启等保加固  **默认取值**： 不涉及
+    * serverMetadataHttpTokens  **参数解释**： 是否要求携带token，默认optional。 **约束限制**： 不涉及 **取值范围**： - optional：不要求携带token。 - required：要求必须携带token，即IMDS服务禁用v1版本，启用v2版本。  **默认取值**： optional
     *
     * @var string[]
     */
@@ -234,7 +239,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
             'kubeReservedStorage' => 'kubeReservedStorage',
             'systemReservedStorage' => 'systemReservedStorage',
             'initNodePassword' => 'init-node-password',
-            'securityReinforcementType' => 'securityReinforcementType'
+            'securityReinforcementType' => 'securityReinforcementType',
+            'serverMetadataHttpTokens' => 'serverMetadataHttpTokens'
     ];
 
     /**
@@ -268,6 +274,7 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     * systemReservedStorage  **参数解释**： 节点临时存储空间预留，系统组件预留值。目的是为OS系统守护进程（如 sshd、udev 等）预留临时存储。单位为Gi。 **约束限制**： kubeReservedStorage，systemReservedStorage之和小于容器组件所使用硬盘空间的50%。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * initNodePassword  **参数解释**： 节点密码，仅作为响应参数时，固定展示星号，节点池场景响应返回中无该参数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。[详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。](tag:hws) 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： - 空值：表示不开启等保加固 - cybersecurity：表示开启等保加固  **默认取值**： 不涉及
+    * serverMetadataHttpTokens  **参数解释**： 是否要求携带token，默认optional。 **约束限制**： 不涉及 **取值范围**： - optional：不要求携带token。 - required：要求必须携带token，即IMDS服务禁用v1版本，启用v2版本。  **默认取值**： optional
     *
     * @var string[]
     */
@@ -300,7 +307,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
             'kubeReservedStorage' => 'setKubeReservedStorage',
             'systemReservedStorage' => 'setSystemReservedStorage',
             'initNodePassword' => 'setInitNodePassword',
-            'securityReinforcementType' => 'setSecurityReinforcementType'
+            'securityReinforcementType' => 'setSecurityReinforcementType',
+            'serverMetadataHttpTokens' => 'setServerMetadataHttpTokens'
     ];
 
     /**
@@ -334,6 +342,7 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     * systemReservedStorage  **参数解释**： 节点临时存储空间预留，系统组件预留值。目的是为OS系统守护进程（如 sshd、udev 等）预留临时存储。单位为Gi。 **约束限制**： kubeReservedStorage，systemReservedStorage之和小于容器组件所使用硬盘空间的50%。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * initNodePassword  **参数解释**： 节点密码，仅作为响应参数时，固定展示星号，节点池场景响应返回中无该参数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * securityReinforcementType  **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。[详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。](tag:hws) 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： - 空值：表示不开启等保加固 - cybersecurity：表示开启等保加固  **默认取值**： 不涉及
+    * serverMetadataHttpTokens  **参数解释**： 是否要求携带token，默认optional。 **约束限制**： 不涉及 **取值范围**： - optional：不要求携带token。 - required：要求必须携带token，即IMDS服务禁用v1版本，启用v2版本。  **默认取值**： optional
     *
     * @var string[]
     */
@@ -366,7 +375,8 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
             'kubeReservedStorage' => 'getKubeReservedStorage',
             'systemReservedStorage' => 'getSystemReservedStorage',
             'initNodePassword' => 'getInitNodePassword',
-            'securityReinforcementType' => 'getSecurityReinforcementType'
+            'securityReinforcementType' => 'getSecurityReinforcementType',
+            'serverMetadataHttpTokens' => 'getServerMetadataHttpTokens'
     ];
 
     /**
@@ -484,6 +494,7 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
         $this->container['systemReservedStorage'] = isset($data['systemReservedStorage']) ? $data['systemReservedStorage'] : null;
         $this->container['initNodePassword'] = isset($data['initNodePassword']) ? $data['initNodePassword'] : null;
         $this->container['securityReinforcementType'] = isset($data['securityReinforcementType']) ? $data['securityReinforcementType'] : null;
+        $this->container['serverMetadataHttpTokens'] = isset($data['serverMetadataHttpTokens']) ? $data['serverMetadataHttpTokens'] : null;
     }
 
     /**
@@ -1229,6 +1240,30 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     public function setSecurityReinforcementType($securityReinforcementType)
     {
         $this->container['securityReinforcementType'] = $securityReinforcementType;
+        return $this;
+    }
+
+    /**
+    * Gets serverMetadataHttpTokens
+    *  **参数解释**： 是否要求携带token，默认optional。 **约束限制**： 不涉及 **取值范围**： - optional：不要求携带token。 - required：要求必须携带token，即IMDS服务禁用v1版本，启用v2版本。  **默认取值**： optional
+    *
+    * @return string|null
+    */
+    public function getServerMetadataHttpTokens()
+    {
+        return $this->container['serverMetadataHttpTokens'];
+    }
+
+    /**
+    * Sets serverMetadataHttpTokens
+    *
+    * @param string|null $serverMetadataHttpTokens **参数解释**： 是否要求携带token，默认optional。 **约束限制**： 不涉及 **取值范围**： - optional：不要求携带token。 - required：要求必须携带token，即IMDS服务禁用v1版本，启用v2版本。  **默认取值**： optional
+    *
+    * @return $this
+    */
+    public function setServerMetadataHttpTokens($serverMetadataHttpTokens)
+    {
+        $this->container['serverMetadataHttpTokens'] = $serverMetadataHttpTokens;
         return $this;
     }
 

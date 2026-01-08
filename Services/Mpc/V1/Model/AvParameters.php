@@ -23,13 +23,17 @@ class AvParameters implements ModelInterface, ArrayAccess
     * video  video
     * audio  audio
     * common  common
+    * output  output
+    * outputFilename  输出文件名
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'video' => '\HuaweiCloud\SDK\Mpc\V1\Model\VideoParameters',
             'audio' => '\HuaweiCloud\SDK\Mpc\V1\Model\Audio',
-            'common' => '\HuaweiCloud\SDK\Mpc\V1\Model\Common'
+            'common' => '\HuaweiCloud\SDK\Mpc\V1\Model\Common',
+            'output' => '\HuaweiCloud\SDK\Mpc\V1\Model\ObsObjInfo',
+            'outputFilename' => 'string'
     ];
 
     /**
@@ -37,13 +41,17 @@ class AvParameters implements ModelInterface, ArrayAccess
     * video  video
     * audio  audio
     * common  common
+    * output  output
+    * outputFilename  输出文件名
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'video' => null,
         'audio' => null,
-        'common' => null
+        'common' => null,
+        'output' => null,
+        'outputFilename' => null
     ];
 
     /**
@@ -72,13 +80,17 @@ class AvParameters implements ModelInterface, ArrayAccess
     * video  video
     * audio  audio
     * common  common
+    * output  output
+    * outputFilename  输出文件名
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'video' => 'video',
             'audio' => 'audio',
-            'common' => 'common'
+            'common' => 'common',
+            'output' => 'output',
+            'outputFilename' => 'output_filename'
     ];
 
     /**
@@ -86,13 +98,17 @@ class AvParameters implements ModelInterface, ArrayAccess
     * video  video
     * audio  audio
     * common  common
+    * output  output
+    * outputFilename  输出文件名
     *
     * @var string[]
     */
     protected static $setters = [
             'video' => 'setVideo',
             'audio' => 'setAudio',
-            'common' => 'setCommon'
+            'common' => 'setCommon',
+            'output' => 'setOutput',
+            'outputFilename' => 'setOutputFilename'
     ];
 
     /**
@@ -100,13 +116,17 @@ class AvParameters implements ModelInterface, ArrayAccess
     * video  video
     * audio  audio
     * common  common
+    * output  output
+    * outputFilename  输出文件名
     *
     * @var string[]
     */
     protected static $getters = [
             'video' => 'getVideo',
             'audio' => 'getAudio',
-            'common' => 'getCommon'
+            'common' => 'getCommon',
+            'output' => 'getOutput',
+            'outputFilename' => 'getOutputFilename'
     ];
 
     /**
@@ -170,6 +190,8 @@ class AvParameters implements ModelInterface, ArrayAccess
         $this->container['video'] = isset($data['video']) ? $data['video'] : null;
         $this->container['audio'] = isset($data['audio']) ? $data['audio'] : null;
         $this->container['common'] = isset($data['common']) ? $data['common'] : null;
+        $this->container['output'] = isset($data['output']) ? $data['output'] : null;
+        $this->container['outputFilename'] = isset($data['outputFilename']) ? $data['outputFilename'] : null;
     }
 
     /**
@@ -183,6 +205,12 @@ class AvParameters implements ModelInterface, ArrayAccess
         if ($this->container['common'] === null) {
             $invalidProperties[] = "'common' can't be null";
         }
+            if (!is_null($this->container['outputFilename']) && (mb_strlen($this->container['outputFilename']) > 180)) {
+                $invalidProperties[] = "invalid value for 'outputFilename', the character length must be smaller than or equal to 180.";
+            }
+            if (!is_null($this->container['outputFilename']) && (mb_strlen($this->container['outputFilename']) < 0)) {
+                $invalidProperties[] = "invalid value for 'outputFilename', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -266,6 +294,54 @@ class AvParameters implements ModelInterface, ArrayAccess
     public function setCommon($common)
     {
         $this->container['common'] = $common;
+        return $this;
+    }
+
+    /**
+    * Gets output
+    *  output
+    *
+    * @return \HuaweiCloud\SDK\Mpc\V1\Model\ObsObjInfo|null
+    */
+    public function getOutput()
+    {
+        return $this->container['output'];
+    }
+
+    /**
+    * Sets output
+    *
+    * @param \HuaweiCloud\SDK\Mpc\V1\Model\ObsObjInfo|null $output output
+    *
+    * @return $this
+    */
+    public function setOutput($output)
+    {
+        $this->container['output'] = $output;
+        return $this;
+    }
+
+    /**
+    * Gets outputFilename
+    *  输出文件名
+    *
+    * @return string|null
+    */
+    public function getOutputFilename()
+    {
+        return $this->container['outputFilename'];
+    }
+
+    /**
+    * Sets outputFilename
+    *
+    * @param string|null $outputFilename 输出文件名
+    *
+    * @return $this
+    */
+    public function setOutputFilename($outputFilename)
+    {
+        $this->container['outputFilename'] = $outputFilename;
         return $this;
     }
 

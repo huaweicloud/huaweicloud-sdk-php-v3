@@ -29,7 +29,7 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
     * encPrivateKey  **参数解释**：服务器SM双证书的私钥。  **约束限制**：仅当type为server_sm时，才支持传入。  **取值范围**：PEM编码格式，最大长度8192个字符。  **默认取值**：不涉及
     * scmCertificateId  **参数解释**：云证书与管理服务（CCM）中的证书ID。  **约束限制**：仅记录证书ID，不验证其是否真实存在云证书与管理服务中。并且需要将云证书与管理服务中对应证书的内容手动设置到当前接口相应字段中（可能涉及字段certificate、private_key、enc_certificate和enc_private_key）  **取值范围**：不涉及  **默认取值**：不涉及
     * source  **参数解释**：标记当前证书来源。  **约束限制**：无  **取值范围**： - scm：表示关联云证书与管理服务（CCM）中的证书。 - 空值：表示自有证书。  **默认取值**：不涉及
-    * protectionStatus  **参数解释**：修改保护状态   **约束限制**：不涉及   **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护   **默认取值**：不涉及
+    * protectionStatus  **参数解释**：修改保护状态  **约束限制**：不涉及   **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护   **默认取值**：不涉及
     * protectionReason  **参数解释**：设置修改保护的原因   **约束限制**：仅当protection_status为consoleProtection时有效   **取值范围**：不涉及   **默认取值**：空
     *
     * @var string[]
@@ -59,7 +59,7 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
     * encPrivateKey  **参数解释**：服务器SM双证书的私钥。  **约束限制**：仅当type为server_sm时，才支持传入。  **取值范围**：PEM编码格式，最大长度8192个字符。  **默认取值**：不涉及
     * scmCertificateId  **参数解释**：云证书与管理服务（CCM）中的证书ID。  **约束限制**：仅记录证书ID，不验证其是否真实存在云证书与管理服务中。并且需要将云证书与管理服务中对应证书的内容手动设置到当前接口相应字段中（可能涉及字段certificate、private_key、enc_certificate和enc_private_key）  **取值范围**：不涉及  **默认取值**：不涉及
     * source  **参数解释**：标记当前证书来源。  **约束限制**：无  **取值范围**： - scm：表示关联云证书与管理服务（CCM）中的证书。 - 空值：表示自有证书。  **默认取值**：不涉及
-    * protectionStatus  **参数解释**：修改保护状态   **约束限制**：不涉及   **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护   **默认取值**：不涉及
+    * protectionStatus  **参数解释**：修改保护状态  **约束限制**：不涉及   **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护   **默认取值**：不涉及
     * protectionReason  **参数解释**：设置修改保护的原因   **约束限制**：仅当protection_status为consoleProtection时有效   **取值范围**：不涉及   **默认取值**：空
     *
     * @var string[]
@@ -110,7 +110,7 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
     * encPrivateKey  **参数解释**：服务器SM双证书的私钥。  **约束限制**：仅当type为server_sm时，才支持传入。  **取值范围**：PEM编码格式，最大长度8192个字符。  **默认取值**：不涉及
     * scmCertificateId  **参数解释**：云证书与管理服务（CCM）中的证书ID。  **约束限制**：仅记录证书ID，不验证其是否真实存在云证书与管理服务中。并且需要将云证书与管理服务中对应证书的内容手动设置到当前接口相应字段中（可能涉及字段certificate、private_key、enc_certificate和enc_private_key）  **取值范围**：不涉及  **默认取值**：不涉及
     * source  **参数解释**：标记当前证书来源。  **约束限制**：无  **取值范围**： - scm：表示关联云证书与管理服务（CCM）中的证书。 - 空值：表示自有证书。  **默认取值**：不涉及
-    * protectionStatus  **参数解释**：修改保护状态   **约束限制**：不涉及   **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护   **默认取值**：不涉及
+    * protectionStatus  **参数解释**：修改保护状态  **约束限制**：不涉及   **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护   **默认取值**：不涉及
     * protectionReason  **参数解释**：设置修改保护的原因   **约束限制**：仅当protection_status为consoleProtection时有效   **取值范围**：不涉及   **默认取值**：空
     *
     * @var string[]
@@ -140,7 +140,7 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
     * encPrivateKey  **参数解释**：服务器SM双证书的私钥。  **约束限制**：仅当type为server_sm时，才支持传入。  **取值范围**：PEM编码格式，最大长度8192个字符。  **默认取值**：不涉及
     * scmCertificateId  **参数解释**：云证书与管理服务（CCM）中的证书ID。  **约束限制**：仅记录证书ID，不验证其是否真实存在云证书与管理服务中。并且需要将云证书与管理服务中对应证书的内容手动设置到当前接口相应字段中（可能涉及字段certificate、private_key、enc_certificate和enc_private_key）  **取值范围**：不涉及  **默认取值**：不涉及
     * source  **参数解释**：标记当前证书来源。  **约束限制**：无  **取值范围**： - scm：表示关联云证书与管理服务（CCM）中的证书。 - 空值：表示自有证书。  **默认取值**：不涉及
-    * protectionStatus  **参数解释**：修改保护状态   **约束限制**：不涉及   **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护   **默认取值**：不涉及
+    * protectionStatus  **参数解释**：修改保护状态  **约束限制**：不涉及   **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护   **默认取值**：不涉及
     * protectionReason  **参数解释**：设置修改保护的原因   **约束限制**：仅当protection_status为consoleProtection时有效   **取值范围**：不涉及   **默认取值**：空
     *
     * @var string[]
@@ -170,7 +170,7 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
     * encPrivateKey  **参数解释**：服务器SM双证书的私钥。  **约束限制**：仅当type为server_sm时，才支持传入。  **取值范围**：PEM编码格式，最大长度8192个字符。  **默认取值**：不涉及
     * scmCertificateId  **参数解释**：云证书与管理服务（CCM）中的证书ID。  **约束限制**：仅记录证书ID，不验证其是否真实存在云证书与管理服务中。并且需要将云证书与管理服务中对应证书的内容手动设置到当前接口相应字段中（可能涉及字段certificate、private_key、enc_certificate和enc_private_key）  **取值范围**：不涉及  **默认取值**：不涉及
     * source  **参数解释**：标记当前证书来源。  **约束限制**：无  **取值范围**： - scm：表示关联云证书与管理服务（CCM）中的证书。 - 空值：表示自有证书。  **默认取值**：不涉及
-    * protectionStatus  **参数解释**：修改保护状态   **约束限制**：不涉及   **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护   **默认取值**：不涉及
+    * protectionStatus  **参数解释**：修改保护状态  **约束限制**：不涉及   **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护   **默认取值**：不涉及
     * protectionReason  **参数解释**：设置修改保护的原因   **约束限制**：仅当protection_status为consoleProtection时有效   **取值范围**：不涉及   **默认取值**：空
     *
     * @var string[]
@@ -541,7 +541,7 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectionStatus
-    *  **参数解释**：修改保护状态   **约束限制**：不涉及   **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护   **默认取值**：不涉及
+    *  **参数解释**：修改保护状态  **约束限制**：不涉及   **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护   **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -553,7 +553,7 @@ class UpdateCertificateOption implements ModelInterface, ArrayAccess
     /**
     * Sets protectionStatus
     *
-    * @param string|null $protectionStatus **参数解释**：修改保护状态   **约束限制**：不涉及   **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护   **默认取值**：不涉及
+    * @param string|null $protectionStatus **参数解释**：修改保护状态  **约束限制**：不涉及   **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护   **默认取值**：不涉及
     *
     * @return $this
     */

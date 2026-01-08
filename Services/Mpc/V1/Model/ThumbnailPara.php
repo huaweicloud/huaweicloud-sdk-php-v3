@@ -21,6 +21,8 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * type  采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。 - \"DOTS_MS\"：同步截图指定时间点毫秒值。  默认值：\"TIME\"
+    * amount  黑点比例大于等于此值认为是黑帧。
+    * threshold  像素值小于此值认为是黑点。
     * time  采样截图的时间间隔值。  默认值：12。  单位：秒
     * startTime  采样类型为“TIME”模式的开始时间，和“time”配合使用。  默认值：0。  单位：秒。
     * duration  采样类型为“TIME”模式的持续时间，和“time”、“start_time”配合使用，表示从视频文件的第“start_time”开始，持续时间为“duration”，每间隔“time”生成一张截图。 取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值： ToEND。  单位：秒。 > “duration”必须大于等0，若设置为0，则截图持续时间从“start_time”到视频结束。
@@ -36,6 +38,8 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'type' => 'string',
+            'amount' => 'int',
+            'threshold' => 'int',
             'time' => 'int',
             'startTime' => 'int',
             'duration' => 'int',
@@ -51,6 +55,8 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。 - \"DOTS_MS\"：同步截图指定时间点毫秒值。  默认值：\"TIME\"
+    * amount  黑点比例大于等于此值认为是黑帧。
+    * threshold  像素值小于此值认为是黑点。
     * time  采样截图的时间间隔值。  默认值：12。  单位：秒
     * startTime  采样类型为“TIME”模式的开始时间，和“time”配合使用。  默认值：0。  单位：秒。
     * duration  采样类型为“TIME”模式的持续时间，和“time”、“start_time”配合使用，表示从视频文件的第“start_time”开始，持续时间为“duration”，每间隔“time”生成一张截图。 取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值： ToEND。  单位：秒。 > “duration”必须大于等0，若设置为0，则截图持续时间从“start_time”到视频结束。
@@ -66,6 +72,8 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'type' => null,
+        'amount' => 'int32',
+        'threshold' => 'int32',
         'time' => 'int32',
         'startTime' => 'int32',
         'duration' => 'int32',
@@ -102,6 +110,8 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * type  采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。 - \"DOTS_MS\"：同步截图指定时间点毫秒值。  默认值：\"TIME\"
+    * amount  黑点比例大于等于此值认为是黑帧。
+    * threshold  像素值小于此值认为是黑点。
     * time  采样截图的时间间隔值。  默认值：12。  单位：秒
     * startTime  采样类型为“TIME”模式的开始时间，和“time”配合使用。  默认值：0。  单位：秒。
     * duration  采样类型为“TIME”模式的持续时间，和“time”、“start_time”配合使用，表示从视频文件的第“start_time”开始，持续时间为“duration”，每间隔“time”生成一张截图。 取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值： ToEND。  单位：秒。 > “duration”必须大于等0，若设置为0，则截图持续时间从“start_time”到视频结束。
@@ -117,6 +127,8 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'type' => 'type',
+            'amount' => 'amount',
+            'threshold' => 'threshold',
             'time' => 'time',
             'startTime' => 'start_time',
             'duration' => 'duration',
@@ -132,6 +144,8 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。 - \"DOTS_MS\"：同步截图指定时间点毫秒值。  默认值：\"TIME\"
+    * amount  黑点比例大于等于此值认为是黑帧。
+    * threshold  像素值小于此值认为是黑点。
     * time  采样截图的时间间隔值。  默认值：12。  单位：秒
     * startTime  采样类型为“TIME”模式的开始时间，和“time”配合使用。  默认值：0。  单位：秒。
     * duration  采样类型为“TIME”模式的持续时间，和“time”、“start_time”配合使用，表示从视频文件的第“start_time”开始，持续时间为“duration”，每间隔“time”生成一张截图。 取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值： ToEND。  单位：秒。 > “duration”必须大于等0，若设置为0，则截图持续时间从“start_time”到视频结束。
@@ -147,6 +161,8 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'type' => 'setType',
+            'amount' => 'setAmount',
+            'threshold' => 'setThreshold',
             'time' => 'setTime',
             'startTime' => 'setStartTime',
             'duration' => 'setDuration',
@@ -162,6 +178,8 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。 - \"DOTS_MS\"：同步截图指定时间点毫秒值。  默认值：\"TIME\"
+    * amount  黑点比例大于等于此值认为是黑帧。
+    * threshold  像素值小于此值认为是黑点。
     * time  采样截图的时间间隔值。  默认值：12。  单位：秒
     * startTime  采样类型为“TIME”模式的开始时间，和“time”配合使用。  默认值：0。  单位：秒。
     * duration  采样类型为“TIME”模式的持续时间，和“time”、“start_time”配合使用，表示从视频文件的第“start_time”开始，持续时间为“duration”，每间隔“time”生成一张截图。 取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值： ToEND。  单位：秒。 > “duration”必须大于等0，若设置为0，则截图持续时间从“start_time”到视频结束。
@@ -177,6 +195,8 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'type' => 'getType',
+            'amount' => 'getAmount',
+            'threshold' => 'getThreshold',
             'time' => 'getTime',
             'startTime' => 'getStartTime',
             'duration' => 'getDuration',
@@ -265,6 +285,8 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
+        $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : null;
         $this->container['time'] = isset($data['time']) ? $data['time'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
@@ -293,6 +315,18 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['amount']) && ($this->container['amount'] > 100)) {
+                $invalidProperties[] = "invalid value for 'amount', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['amount']) && ($this->container['amount'] < 1)) {
+                $invalidProperties[] = "invalid value for 'amount', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['threshold']) && ($this->container['threshold'] > 255)) {
+                $invalidProperties[] = "invalid value for 'threshold', must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['threshold']) && ($this->container['threshold'] < 0)) {
+                $invalidProperties[] = "invalid value for 'threshold', must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['time']) && ($this->container['time'] > 100)) {
                 $invalidProperties[] = "invalid value for 'time', must be smaller than or equal to 100.";
             }
@@ -376,6 +410,54 @@ class ThumbnailPara implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets amount
+    *  黑点比例大于等于此值认为是黑帧。
+    *
+    * @return int|null
+    */
+    public function getAmount()
+    {
+        return $this->container['amount'];
+    }
+
+    /**
+    * Sets amount
+    *
+    * @param int|null $amount 黑点比例大于等于此值认为是黑帧。
+    *
+    * @return $this
+    */
+    public function setAmount($amount)
+    {
+        $this->container['amount'] = $amount;
+        return $this;
+    }
+
+    /**
+    * Gets threshold
+    *  像素值小于此值认为是黑点。
+    *
+    * @return int|null
+    */
+    public function getThreshold()
+    {
+        return $this->container['threshold'];
+    }
+
+    /**
+    * Sets threshold
+    *
+    * @param int|null $threshold 像素值小于此值认为是黑点。
+    *
+    * @return $this
+    */
+    public function setThreshold($threshold)
+    {
+        $this->container['threshold'] = $threshold;
         return $this;
     }
 

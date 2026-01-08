@@ -20,20 +20,20 @@ class ModifyHbaConfRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * beforeConf  **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
-    * afterConf  **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
+    * beforeConf  beforeConf
+    * afterConf  afterConf
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'beforeConf' => 'object',
-            'afterConf' => 'object'
+            'beforeConf' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BeforeHbaConfOption',
+            'afterConf' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\AfterHbaConfOption'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * beforeConf  **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
-    * afterConf  **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
+    * beforeConf  beforeConf
+    * afterConf  afterConf
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ModifyHbaConfRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * beforeConf  **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
-    * afterConf  **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
+    * beforeConf  beforeConf
+    * afterConf  afterConf
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ModifyHbaConfRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * beforeConf  **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
-    * afterConf  **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
+    * beforeConf  beforeConf
+    * afterConf  afterConf
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ModifyHbaConfRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * beforeConf  **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
-    * afterConf  **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
+    * beforeConf  beforeConf
+    * afterConf  afterConf
     *
     * @var string[]
     */
@@ -191,9 +191,9 @@ class ModifyHbaConfRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets beforeConf
-    *  **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
+    *  beforeConf
     *
-    * @return object
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BeforeHbaConfOption
     */
     public function getBeforeConf()
     {
@@ -203,7 +203,7 @@ class ModifyHbaConfRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets beforeConf
     *
-    * @param object $beforeConf **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BeforeHbaConfOption $beforeConf beforeConf
     *
     * @return $this
     */
@@ -215,9 +215,9 @@ class ModifyHbaConfRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets afterConf
-    *  **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
+    *  afterConf
     *
-    * @return object
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\AfterHbaConfOption
     */
     public function getAfterConf()
     {
@@ -227,7 +227,7 @@ class ModifyHbaConfRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets afterConf
     *
-    * @param object $afterConf **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\AfterHbaConfOption $afterConf afterConf
     *
     * @return $this
     */

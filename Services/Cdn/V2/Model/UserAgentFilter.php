@@ -21,7 +21,7 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * type  UA黑白名单类型 off：关闭UA黑白名单; black：UA黑名单; white：UA白名单;
-    * value  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符，多条规则用“,”分割。
+    * value  配置UA黑白名单，当type=off时，非必传。最多配置50条规则，单条规则不超过100个字符，多条规则用“,”分割。
     * includeEmpty  是否包含空User-Agent，true:包含，false：不包含。空User-Agent是指没有User-Agent字段或者该字段的值为空。如果黑名单且该字段值为true，则表示空User-Agent不允许访问，如果是白名单且该字段值为true，则表示空User-Agent允许访问。设置User-Agent黑名单时，默认值为false，设置User-Agent白名单时，默认值为true。
     * uaList  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符,同时配置value和ua_list时，ua_list生效。
     *
@@ -37,7 +37,7 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  UA黑白名单类型 off：关闭UA黑白名单; black：UA黑名单; white：UA白名单;
-    * value  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符，多条规则用“,”分割。
+    * value  配置UA黑白名单，当type=off时，非必传。最多配置50条规则，单条规则不超过100个字符，多条规则用“,”分割。
     * includeEmpty  是否包含空User-Agent，true:包含，false：不包含。空User-Agent是指没有User-Agent字段或者该字段的值为空。如果黑名单且该字段值为true，则表示空User-Agent不允许访问，如果是白名单且该字段值为true，则表示空User-Agent允许访问。设置User-Agent黑名单时，默认值为false，设置User-Agent白名单时，默认值为true。
     * uaList  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符,同时配置value和ua_list时，ua_list生效。
     *
@@ -74,7 +74,7 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * type  UA黑白名单类型 off：关闭UA黑白名单; black：UA黑名单; white：UA白名单;
-    * value  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符，多条规则用“,”分割。
+    * value  配置UA黑白名单，当type=off时，非必传。最多配置50条规则，单条规则不超过100个字符，多条规则用“,”分割。
     * includeEmpty  是否包含空User-Agent，true:包含，false：不包含。空User-Agent是指没有User-Agent字段或者该字段的值为空。如果黑名单且该字段值为true，则表示空User-Agent不允许访问，如果是白名单且该字段值为true，则表示空User-Agent允许访问。设置User-Agent黑名单时，默认值为false，设置User-Agent白名单时，默认值为true。
     * uaList  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符,同时配置value和ua_list时，ua_list生效。
     *
@@ -90,7 +90,7 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  UA黑白名单类型 off：关闭UA黑白名单; black：UA黑名单; white：UA白名单;
-    * value  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符，多条规则用“,”分割。
+    * value  配置UA黑白名单，当type=off时，非必传。最多配置50条规则，单条规则不超过100个字符，多条规则用“,”分割。
     * includeEmpty  是否包含空User-Agent，true:包含，false：不包含。空User-Agent是指没有User-Agent字段或者该字段的值为空。如果黑名单且该字段值为true，则表示空User-Agent不允许访问，如果是白名单且该字段值为true，则表示空User-Agent允许访问。设置User-Agent黑名单时，默认值为false，设置User-Agent白名单时，默认值为true。
     * uaList  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符,同时配置value和ua_list时，ua_list生效。
     *
@@ -106,7 +106,7 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  UA黑白名单类型 off：关闭UA黑白名单; black：UA黑名单; white：UA白名单;
-    * value  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符，多条规则用“,”分割。
+    * value  配置UA黑白名单，当type=off时，非必传。最多配置50条规则，单条规则不超过100个字符，多条规则用“,”分割。
     * includeEmpty  是否包含空User-Agent，true:包含，false：不包含。空User-Agent是指没有User-Agent字段或者该字段的值为空。如果黑名单且该字段值为true，则表示空User-Agent不允许访问，如果是白名单且该字段值为true，则表示空User-Agent允许访问。设置User-Agent黑名单时，默认值为false，设置User-Agent白名单时，默认值为true。
     * uaList  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符,同时配置value和ua_list时，ua_list生效。
     *
@@ -234,7 +234,7 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符，多条规则用“,”分割。
+    *  配置UA黑白名单，当type=off时，非必传。最多配置50条规则，单条规则不超过100个字符，多条规则用“,”分割。
     *
     * @return string|null
     */
@@ -246,7 +246,7 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符，多条规则用“,”分割。
+    * @param string|null $value 配置UA黑白名单，当type=off时，非必传。最多配置50条规则，单条规则不超过100个字符，多条规则用“,”分割。
     *
     * @return $this
     */

@@ -25,6 +25,7 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
     * apiVersion  API版本，固定值“v3”，该值不可修改。
     * metadata  metadata
     * spec  spec
+    * status  status
     *
     * @var string[]
     */
@@ -32,7 +33,8 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
             'kind' => 'string',
             'apiVersion' => 'string',
             'metadata' => '\HuaweiCloud\SDK\Cce\V3\Model\ClusterMetadata',
-            'spec' => '\HuaweiCloud\SDK\Cce\V3\Model\ClusterSpec'
+            'spec' => '\HuaweiCloud\SDK\Cce\V3\Model\ClusterSpec',
+            'status' => '\HuaweiCloud\SDK\Cce\V3\Model\ClusterStatus'
     ];
 
     /**
@@ -41,6 +43,7 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
     * apiVersion  API版本，固定值“v3”，该值不可修改。
     * metadata  metadata
     * spec  spec
+    * status  status
     *
     * @var string[]
     */
@@ -48,7 +51,8 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
         'kind' => null,
         'apiVersion' => null,
         'metadata' => null,
-        'spec' => null
+        'spec' => null,
+        'status' => null
     ];
 
     /**
@@ -78,6 +82,7 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
     * apiVersion  API版本，固定值“v3”，该值不可修改。
     * metadata  metadata
     * spec  spec
+    * status  status
     *
     * @var string[]
     */
@@ -85,7 +90,8 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
             'kind' => 'kind',
             'apiVersion' => 'apiVersion',
             'metadata' => 'metadata',
-            'spec' => 'spec'
+            'spec' => 'spec',
+            'status' => 'status'
     ];
 
     /**
@@ -94,6 +100,7 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
     * apiVersion  API版本，固定值“v3”，该值不可修改。
     * metadata  metadata
     * spec  spec
+    * status  status
     *
     * @var string[]
     */
@@ -101,7 +108,8 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
             'kind' => 'setKind',
             'apiVersion' => 'setApiVersion',
             'metadata' => 'setMetadata',
-            'spec' => 'setSpec'
+            'spec' => 'setSpec',
+            'status' => 'setStatus'
     ];
 
     /**
@@ -110,6 +118,7 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
     * apiVersion  API版本，固定值“v3”，该值不可修改。
     * metadata  metadata
     * spec  spec
+    * status  status
     *
     * @var string[]
     */
@@ -117,7 +126,8 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
             'kind' => 'getKind',
             'apiVersion' => 'getApiVersion',
             'metadata' => 'getMetadata',
-            'spec' => 'getSpec'
+            'spec' => 'getSpec',
+            'status' => 'getStatus'
     ];
 
     /**
@@ -182,6 +192,7 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
         $this->container['apiVersion'] = isset($data['apiVersion']) ? $data['apiVersion'] : null;
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
         $this->container['spec'] = isset($data['spec']) ? $data['spec'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -299,6 +310,30 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
     public function setSpec($spec)
     {
         $this->container['spec'] = $spec;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  status
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\ClusterStatus|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\ClusterStatus|null $status status
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

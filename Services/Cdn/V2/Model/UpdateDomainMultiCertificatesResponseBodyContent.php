@@ -28,7 +28,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     * http2  http2.0（0：关闭；1：开启）
     * certName  证书名称。
     * certificate  证书内容。
-    * certificateType  证书类型（0为自有证书 ， 1为托管证书）。
+    * certificateType  证书类型。取值意义： - 0：自有证书 - 2：SCM证书
     * expirationTime  证书过期时间。
     *
     * @var string[]
@@ -56,7 +56,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     * http2  http2.0（0：关闭；1：开启）
     * certName  证书名称。
     * certificate  证书内容。
-    * certificateType  证书类型（0为自有证书 ， 1为托管证书）。
+    * certificateType  证书类型。取值意义： - 0：自有证书 - 2：SCM证书
     * expirationTime  证书过期时间。
     *
     * @var string[]
@@ -105,7 +105,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     * http2  http2.0（0：关闭；1：开启）
     * certName  证书名称。
     * certificate  证书内容。
-    * certificateType  证书类型（0为自有证书 ， 1为托管证书）。
+    * certificateType  证书类型。取值意义： - 0：自有证书 - 2：SCM证书
     * expirationTime  证书过期时间。
     *
     * @var string[]
@@ -133,7 +133,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     * http2  http2.0（0：关闭；1：开启）
     * certName  证书名称。
     * certificate  证书内容。
-    * certificateType  证书类型（0为自有证书 ， 1为托管证书）。
+    * certificateType  证书类型。取值意义： - 0：自有证书 - 2：SCM证书
     * expirationTime  证书过期时间。
     *
     * @var string[]
@@ -161,7 +161,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     * http2  http2.0（0：关闭；1：开启）
     * certName  证书名称。
     * certificate  证书内容。
-    * certificateType  证书类型（0为自有证书 ， 1为托管证书）。
+    * certificateType  证书类型。取值意义： - 0：自有证书 - 2：SCM证书
     * expirationTime  证书过期时间。
     *
     * @var string[]
@@ -468,7 +468,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
 
     /**
     * Gets certificateType
-    *  证书类型（0为自有证书 ， 1为托管证书）。
+    *  证书类型。取值意义： - 0：自有证书 - 2：SCM证书
     *
     * @return int|null
     */
@@ -480,7 +480,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     /**
     * Sets certificateType
     *
-    * @param int|null $certificateType 证书类型（0为自有证书 ， 1为托管证书）。
+    * @param int|null $certificateType 证书类型。取值意义： - 0：自有证书 - 2：SCM证书
     *
     * @return $this
     */

@@ -169,12 +169,6 @@ class DatabaseVersionResult implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['softwareVersion'] === null) {
-            $invalidProperties[] = "'softwareVersion' can't be null";
-        }
-        if ($this->container['hotfixes'] === null) {
-            $invalidProperties[] = "'hotfixes' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -193,7 +187,7 @@ class DatabaseVersionResult implements ModelInterface, ArrayAccess
     * Gets softwareVersion
     *  **参数解释**： 数据库三位引擎版本。 **取值范围**： 不涉及。
     *
-    * @return string
+    * @return string|null
     */
     public function getSoftwareVersion()
     {
@@ -203,7 +197,7 @@ class DatabaseVersionResult implements ModelInterface, ArrayAccess
     /**
     * Sets softwareVersion
     *
-    * @param string $softwareVersion **参数解释**： 数据库三位引擎版本。 **取值范围**： 不涉及。
+    * @param string|null $softwareVersion **参数解释**： 数据库三位引擎版本。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -217,7 +211,7 @@ class DatabaseVersionResult implements ModelInterface, ArrayAccess
     * Gets hotfixes
     *  **参数解释**： 数据库三位引擎版本对应的热补丁信息。 **取值范围**： 不涉及。
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DbHotfixInfoResult[]
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DbHotfixInfoResult[]|null
     */
     public function getHotfixes()
     {
@@ -227,7 +221,7 @@ class DatabaseVersionResult implements ModelInterface, ArrayAccess
     /**
     * Sets hotfixes
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DbHotfixInfoResult[] $hotfixes **参数解释**： 数据库三位引擎版本对应的热补丁信息。 **取值范围**： 不涉及。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\DbHotfixInfoResult[]|null $hotfixes **参数解释**： 数据库三位引擎版本对应的热补丁信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

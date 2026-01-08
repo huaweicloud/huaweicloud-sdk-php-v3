@@ -28,6 +28,7 @@ class ShowEventItemDetailResp implements ModelInterface, ArrayAccess
     * eventLevel  **参数解释**： 事件级别。 **取值范围**： 枚举类型：Critical, Major, Minor, Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示
     * eventUser  **参数解释**： 事件用户。 **取值范围**： 下划线、横线、斜杠、@ 符号或点号组成，长度为[0,64]个字符。
     * eventType  **参数解释**： 事件类型。 **取值范围**： 枚举类型：EVENT.SYS，EVENT.CUSTOM - EVENT.SYS: 系统事件。 - EVENT.CUSTOM: 自定义事件。
+    * subEventType  **参数解释**： 事件子类。 **取值范围**： 枚举类型。 当事件类型为系统事件时，参数值为SUB_EVENT.OPS或SUB_EVENT.PLAN。 当事件类型为自定义事件时，参数值为SUB_EVENT.CUSTOM。 - SUB_EVENT.OPS：运维事件。 - SUB_EVENT.PLAN：计划事件。 - SUB_EVENT.CUSTOM：自定义事件。
     * dimensions  **参数解释**： 事件的维度，根据维度描述资源信息。 用于指定资源、资源分组的事件告警场景中，支持按维度配置告警规则。 **取值范围**： 目前最大支持4个维度
     *
     * @var string[]
@@ -41,6 +42,7 @@ class ShowEventItemDetailResp implements ModelInterface, ArrayAccess
             'eventLevel' => 'string',
             'eventUser' => 'string',
             'eventType' => 'string',
+            'subEventType' => 'string',
             'dimensions' => '\HuaweiCloud\SDK\Ces\V1\Model\MetricsDimensionResp[]'
     ];
 
@@ -54,6 +56,7 @@ class ShowEventItemDetailResp implements ModelInterface, ArrayAccess
     * eventLevel  **参数解释**： 事件级别。 **取值范围**： 枚举类型：Critical, Major, Minor, Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示
     * eventUser  **参数解释**： 事件用户。 **取值范围**： 下划线、横线、斜杠、@ 符号或点号组成，长度为[0,64]个字符。
     * eventType  **参数解释**： 事件类型。 **取值范围**： 枚举类型：EVENT.SYS，EVENT.CUSTOM - EVENT.SYS: 系统事件。 - EVENT.CUSTOM: 自定义事件。
+    * subEventType  **参数解释**： 事件子类。 **取值范围**： 枚举类型。 当事件类型为系统事件时，参数值为SUB_EVENT.OPS或SUB_EVENT.PLAN。 当事件类型为自定义事件时，参数值为SUB_EVENT.CUSTOM。 - SUB_EVENT.OPS：运维事件。 - SUB_EVENT.PLAN：计划事件。 - SUB_EVENT.CUSTOM：自定义事件。
     * dimensions  **参数解释**： 事件的维度，根据维度描述资源信息。 用于指定资源、资源分组的事件告警场景中，支持按维度配置告警规则。 **取值范围**： 目前最大支持4个维度
     *
     * @var string[]
@@ -67,6 +70,7 @@ class ShowEventItemDetailResp implements ModelInterface, ArrayAccess
         'eventLevel' => null,
         'eventUser' => null,
         'eventType' => null,
+        'subEventType' => null,
         'dimensions' => null
     ];
 
@@ -101,6 +105,7 @@ class ShowEventItemDetailResp implements ModelInterface, ArrayAccess
     * eventLevel  **参数解释**： 事件级别。 **取值范围**： 枚举类型：Critical, Major, Minor, Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示
     * eventUser  **参数解释**： 事件用户。 **取值范围**： 下划线、横线、斜杠、@ 符号或点号组成，长度为[0,64]个字符。
     * eventType  **参数解释**： 事件类型。 **取值范围**： 枚举类型：EVENT.SYS，EVENT.CUSTOM - EVENT.SYS: 系统事件。 - EVENT.CUSTOM: 自定义事件。
+    * subEventType  **参数解释**： 事件子类。 **取值范围**： 枚举类型。 当事件类型为系统事件时，参数值为SUB_EVENT.OPS或SUB_EVENT.PLAN。 当事件类型为自定义事件时，参数值为SUB_EVENT.CUSTOM。 - SUB_EVENT.OPS：运维事件。 - SUB_EVENT.PLAN：计划事件。 - SUB_EVENT.CUSTOM：自定义事件。
     * dimensions  **参数解释**： 事件的维度，根据维度描述资源信息。 用于指定资源、资源分组的事件告警场景中，支持按维度配置告警规则。 **取值范围**： 目前最大支持4个维度
     *
     * @var string[]
@@ -114,6 +119,7 @@ class ShowEventItemDetailResp implements ModelInterface, ArrayAccess
             'eventLevel' => 'event_level',
             'eventUser' => 'event_user',
             'eventType' => 'event_type',
+            'subEventType' => 'sub_event_type',
             'dimensions' => 'dimensions'
     ];
 
@@ -127,6 +133,7 @@ class ShowEventItemDetailResp implements ModelInterface, ArrayAccess
     * eventLevel  **参数解释**： 事件级别。 **取值范围**： 枚举类型：Critical, Major, Minor, Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示
     * eventUser  **参数解释**： 事件用户。 **取值范围**： 下划线、横线、斜杠、@ 符号或点号组成，长度为[0,64]个字符。
     * eventType  **参数解释**： 事件类型。 **取值范围**： 枚举类型：EVENT.SYS，EVENT.CUSTOM - EVENT.SYS: 系统事件。 - EVENT.CUSTOM: 自定义事件。
+    * subEventType  **参数解释**： 事件子类。 **取值范围**： 枚举类型。 当事件类型为系统事件时，参数值为SUB_EVENT.OPS或SUB_EVENT.PLAN。 当事件类型为自定义事件时，参数值为SUB_EVENT.CUSTOM。 - SUB_EVENT.OPS：运维事件。 - SUB_EVENT.PLAN：计划事件。 - SUB_EVENT.CUSTOM：自定义事件。
     * dimensions  **参数解释**： 事件的维度，根据维度描述资源信息。 用于指定资源、资源分组的事件告警场景中，支持按维度配置告警规则。 **取值范围**： 目前最大支持4个维度
     *
     * @var string[]
@@ -140,6 +147,7 @@ class ShowEventItemDetailResp implements ModelInterface, ArrayAccess
             'eventLevel' => 'setEventLevel',
             'eventUser' => 'setEventUser',
             'eventType' => 'setEventType',
+            'subEventType' => 'setSubEventType',
             'dimensions' => 'setDimensions'
     ];
 
@@ -153,6 +161,7 @@ class ShowEventItemDetailResp implements ModelInterface, ArrayAccess
     * eventLevel  **参数解释**： 事件级别。 **取值范围**： 枚举类型：Critical, Major, Minor, Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示
     * eventUser  **参数解释**： 事件用户。 **取值范围**： 下划线、横线、斜杠、@ 符号或点号组成，长度为[0,64]个字符。
     * eventType  **参数解释**： 事件类型。 **取值范围**： 枚举类型：EVENT.SYS，EVENT.CUSTOM - EVENT.SYS: 系统事件。 - EVENT.CUSTOM: 自定义事件。
+    * subEventType  **参数解释**： 事件子类。 **取值范围**： 枚举类型。 当事件类型为系统事件时，参数值为SUB_EVENT.OPS或SUB_EVENT.PLAN。 当事件类型为自定义事件时，参数值为SUB_EVENT.CUSTOM。 - SUB_EVENT.OPS：运维事件。 - SUB_EVENT.PLAN：计划事件。 - SUB_EVENT.CUSTOM：自定义事件。
     * dimensions  **参数解释**： 事件的维度，根据维度描述资源信息。 用于指定资源、资源分组的事件告警场景中，支持按维度配置告警规则。 **取值范围**： 目前最大支持4个维度
     *
     * @var string[]
@@ -166,6 +175,7 @@ class ShowEventItemDetailResp implements ModelInterface, ArrayAccess
             'eventLevel' => 'getEventLevel',
             'eventUser' => 'getEventUser',
             'eventType' => 'getEventType',
+            'subEventType' => 'getSubEventType',
             'dimensions' => 'getDimensions'
     ];
 
@@ -216,6 +226,9 @@ class ShowEventItemDetailResp implements ModelInterface, ArrayAccess
     const EVENT_LEVEL_MAJOR = 'Major';
     const EVENT_LEVEL_MINOR = 'Minor';
     const EVENT_LEVEL_INFO = 'Info';
+    const SUB_EVENT_TYPE_SUB_EVENT_OPS = 'SUB_EVENT.OPS';
+    const SUB_EVENT_TYPE_SUB_EVENT_PLAN = 'SUB_EVENT.PLAN';
+    const SUB_EVENT_TYPE_SUB_EVENT_CUSTOM = 'SUB_EVENT.CUSTOM';
     
 
     /**
@@ -247,6 +260,20 @@ class ShowEventItemDetailResp implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSubEventTypeAllowableValues()
+    {
+        return [
+            self::SUB_EVENT_TYPE_SUB_EVENT_OPS,
+            self::SUB_EVENT_TYPE_SUB_EVENT_PLAN,
+            self::SUB_EVENT_TYPE_SUB_EVENT_CUSTOM,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -271,6 +298,7 @@ class ShowEventItemDetailResp implements ModelInterface, ArrayAccess
         $this->container['eventLevel'] = isset($data['eventLevel']) ? $data['eventLevel'] : null;
         $this->container['eventUser'] = isset($data['eventUser']) ? $data['eventUser'] : null;
         $this->container['eventType'] = isset($data['eventType']) ? $data['eventType'] : null;
+        $this->container['subEventType'] = isset($data['subEventType']) ? $data['subEventType'] : null;
         $this->container['dimensions'] = isset($data['dimensions']) ? $data['dimensions'] : null;
     }
 
@@ -337,6 +365,14 @@ class ShowEventItemDetailResp implements ModelInterface, ArrayAccess
             if (!is_null($this->container['eventType']) && (mb_strlen($this->container['eventType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'eventType', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getSubEventTypeAllowableValues();
+                if (!is_null($this->container['subEventType']) && !in_array($this->container['subEventType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'subEventType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -540,6 +576,30 @@ class ShowEventItemDetailResp implements ModelInterface, ArrayAccess
     public function setEventType($eventType)
     {
         $this->container['eventType'] = $eventType;
+        return $this;
+    }
+
+    /**
+    * Gets subEventType
+    *  **参数解释**： 事件子类。 **取值范围**： 枚举类型。 当事件类型为系统事件时，参数值为SUB_EVENT.OPS或SUB_EVENT.PLAN。 当事件类型为自定义事件时，参数值为SUB_EVENT.CUSTOM。 - SUB_EVENT.OPS：运维事件。 - SUB_EVENT.PLAN：计划事件。 - SUB_EVENT.CUSTOM：自定义事件。
+    *
+    * @return string|null
+    */
+    public function getSubEventType()
+    {
+        return $this->container['subEventType'];
+    }
+
+    /**
+    * Sets subEventType
+    *
+    * @param string|null $subEventType **参数解释**： 事件子类。 **取值范围**： 枚举类型。 当事件类型为系统事件时，参数值为SUB_EVENT.OPS或SUB_EVENT.PLAN。 当事件类型为自定义事件时，参数值为SUB_EVENT.CUSTOM。 - SUB_EVENT.OPS：运维事件。 - SUB_EVENT.PLAN：计划事件。 - SUB_EVENT.CUSTOM：自定义事件。
+    *
+    * @return $this
+    */
+    public function setSubEventType($subEventType)
+    {
+        $this->container['subEventType'] = $subEventType;
         return $this;
     }
 

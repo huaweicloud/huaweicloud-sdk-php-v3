@@ -2241,6 +2241,162 @@ class VodClient extends Client
     }
 
     /**
+     * 查询媒资任务信息
+     *
+     * ## 典型场景 ##
+     * 查询媒资任务信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAssetTaskInfo($request)
+    {
+        return $this->listAssetTaskInfoWithHttpInfo($request);
+    }
+
+    public function listAssetTaskInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/asset/tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['assetId'] !== null) {
+            $queryParams['asset_id'] = $localVarParams['assetId'];
+        }
+        if ($localVarParams['createTimeAfter'] !== null) {
+            $queryParams['create_time_after'] = $localVarParams['createTimeAfter'];
+        }
+        if ($localVarParams['createTimeBefore'] !== null) {
+            $queryParams['create_time_before'] = $localVarParams['createTimeBefore'];
+        }
+        if ($localVarParams['endTimeAfter'] !== null) {
+            $queryParams['end_time_after'] = $localVarParams['endTimeAfter'];
+        }
+        if ($localVarParams['endTimeBefore'] !== null) {
+            $queryParams['end_time_before'] = $localVarParams['endTimeBefore'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ListAssetTaskInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ListAssetTaskInfoRequest');
+    }
+
+    /**
+     * 查询指定分类信息
+     *
+     * ## 典型场景 ##
+     * 查询指定分类信息，及其子分类（即下一级分类）的列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCategoryInfo($request)
+    {
+        return $this->listCategoryInfoWithHttpInfo($request);
+    }
+
+    public function listCategoryInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/asset/categories';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ListCategoryInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ListCategoryInfoRequest');
+    }
+
+    /**
      * 查询CDN统计信息
      *
      * 查询CDN的统计数据，包括流量、峰值带宽、请求总数、请求命中率、流量命中率。查询存在1小时误差。

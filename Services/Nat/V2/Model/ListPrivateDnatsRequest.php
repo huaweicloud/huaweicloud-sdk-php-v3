@@ -29,12 +29,11 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     * gatewayId  私网NAT网关实例的ID。
     * transitIpId  中转IP的ID。
     * networkInterfaceId  计算实例、ELBV2、ELBV3、VIP等资源的端口ID。
-    * type  DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELBv2的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
+    * type  DNAT规则后端的类型。 取值： - COMPUTE：后端为计算实例。 - VIP：后端为VIP的实例。 - ELB：后端为ELBv2的实例。 - ELBv3：后端为ELBv3的实例。 - CUSTOMIZE：后端为自定义IP。
     * privateIpAddress  后端资源（计算实例、ELBV2、ELBV3、VIP等）的私网IP地址。
     * protocol  DNAT规则协议类型， 目前支持TCP/tcp/Tcp/tCp/tcP/TCp/tCP/TcP、 UDP/udp/Udp/uDp/udP/UDp/uDP/UdP、 ANY/any/Any/aNy/anY/ANy/aNY/AnY。 分别对应协议号6、17、0。
     * internalServicePort  后端实例的端口号（计算实例、ELBV2、ELBV3、VIP等)。
     * transitServicePort  中转IP的端口号。
-    * transitIpAddress  中转IP的地址。
     *
     * @var string[]
     */
@@ -52,8 +51,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
             'privateIpAddress' => 'string[]',
             'protocol' => 'string[]',
             'internalServicePort' => 'string[]',
-            'transitServicePort' => 'string[]',
-            'transitIpAddress' => 'string[]'
+            'transitServicePort' => 'string[]'
     ];
 
     /**
@@ -67,12 +65,11 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     * gatewayId  私网NAT网关实例的ID。
     * transitIpId  中转IP的ID。
     * networkInterfaceId  计算实例、ELBV2、ELBV3、VIP等资源的端口ID。
-    * type  DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELBv2的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
+    * type  DNAT规则后端的类型。 取值： - COMPUTE：后端为计算实例。 - VIP：后端为VIP的实例。 - ELB：后端为ELBv2的实例。 - ELBv3：后端为ELBv3的实例。 - CUSTOMIZE：后端为自定义IP。
     * privateIpAddress  后端资源（计算实例、ELBV2、ELBV3、VIP等）的私网IP地址。
     * protocol  DNAT规则协议类型， 目前支持TCP/tcp/Tcp/tCp/tcP/TCp/tCP/TcP、 UDP/udp/Udp/uDp/udP/UDp/uDP/UdP、 ANY/any/Any/aNy/anY/ANy/aNY/AnY。 分别对应协议号6、17、0。
     * internalServicePort  后端实例的端口号（计算实例、ELBV2、ELBV3、VIP等)。
     * transitServicePort  中转IP的端口号。
-    * transitIpAddress  中转IP的地址。
     *
     * @var string[]
     */
@@ -90,8 +87,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
         'privateIpAddress' => null,
         'protocol' => null,
         'internalServicePort' => null,
-        'transitServicePort' => null,
-        'transitIpAddress' => null
+        'transitServicePort' => null
     ];
 
     /**
@@ -126,12 +122,11 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     * gatewayId  私网NAT网关实例的ID。
     * transitIpId  中转IP的ID。
     * networkInterfaceId  计算实例、ELBV2、ELBV3、VIP等资源的端口ID。
-    * type  DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELBv2的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
+    * type  DNAT规则后端的类型。 取值： - COMPUTE：后端为计算实例。 - VIP：后端为VIP的实例。 - ELB：后端为ELBv2的实例。 - ELBv3：后端为ELBv3的实例。 - CUSTOMIZE：后端为自定义IP。
     * privateIpAddress  后端资源（计算实例、ELBV2、ELBV3、VIP等）的私网IP地址。
     * protocol  DNAT规则协议类型， 目前支持TCP/tcp/Tcp/tCp/tcP/TCp/tCP/TcP、 UDP/udp/Udp/uDp/udP/UDp/uDP/UdP、 ANY/any/Any/aNy/anY/ANy/aNY/AnY。 分别对应协议号6、17、0。
     * internalServicePort  后端实例的端口号（计算实例、ELBV2、ELBV3、VIP等)。
     * transitServicePort  中转IP的端口号。
-    * transitIpAddress  中转IP的地址。
     *
     * @var string[]
     */
@@ -149,8 +144,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
             'privateIpAddress' => 'private_ip_address',
             'protocol' => 'protocol',
             'internalServicePort' => 'internal_service_port',
-            'transitServicePort' => 'transit_service_port',
-            'transitIpAddress' => 'transit_ip_address'
+            'transitServicePort' => 'transit_service_port'
     ];
 
     /**
@@ -164,12 +158,11 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     * gatewayId  私网NAT网关实例的ID。
     * transitIpId  中转IP的ID。
     * networkInterfaceId  计算实例、ELBV2、ELBV3、VIP等资源的端口ID。
-    * type  DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELBv2的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
+    * type  DNAT规则后端的类型。 取值： - COMPUTE：后端为计算实例。 - VIP：后端为VIP的实例。 - ELB：后端为ELBv2的实例。 - ELBv3：后端为ELBv3的实例。 - CUSTOMIZE：后端为自定义IP。
     * privateIpAddress  后端资源（计算实例、ELBV2、ELBV3、VIP等）的私网IP地址。
     * protocol  DNAT规则协议类型， 目前支持TCP/tcp/Tcp/tCp/tcP/TCp/tCP/TcP、 UDP/udp/Udp/uDp/udP/UDp/uDP/UdP、 ANY/any/Any/aNy/anY/ANy/aNY/AnY。 分别对应协议号6、17、0。
     * internalServicePort  后端实例的端口号（计算实例、ELBV2、ELBV3、VIP等)。
     * transitServicePort  中转IP的端口号。
-    * transitIpAddress  中转IP的地址。
     *
     * @var string[]
     */
@@ -187,8 +180,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
             'privateIpAddress' => 'setPrivateIpAddress',
             'protocol' => 'setProtocol',
             'internalServicePort' => 'setInternalServicePort',
-            'transitServicePort' => 'setTransitServicePort',
-            'transitIpAddress' => 'setTransitIpAddress'
+            'transitServicePort' => 'setTransitServicePort'
     ];
 
     /**
@@ -202,12 +194,11 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     * gatewayId  私网NAT网关实例的ID。
     * transitIpId  中转IP的ID。
     * networkInterfaceId  计算实例、ELBV2、ELBV3、VIP等资源的端口ID。
-    * type  DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELBv2的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
+    * type  DNAT规则后端的类型。 取值： - COMPUTE：后端为计算实例。 - VIP：后端为VIP的实例。 - ELB：后端为ELBv2的实例。 - ELBv3：后端为ELBv3的实例。 - CUSTOMIZE：后端为自定义IP。
     * privateIpAddress  后端资源（计算实例、ELBV2、ELBV3、VIP等）的私网IP地址。
     * protocol  DNAT规则协议类型， 目前支持TCP/tcp/Tcp/tCp/tcP/TCp/tCP/TcP、 UDP/udp/Udp/uDp/udP/UDp/uDP/UdP、 ANY/any/Any/aNy/anY/ANy/aNY/AnY。 分别对应协议号6、17、0。
     * internalServicePort  后端实例的端口号（计算实例、ELBV2、ELBV3、VIP等)。
     * transitServicePort  中转IP的端口号。
-    * transitIpAddress  中转IP的地址。
     *
     * @var string[]
     */
@@ -225,8 +216,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
             'privateIpAddress' => 'getPrivateIpAddress',
             'protocol' => 'getProtocol',
             'internalServicePort' => 'getInternalServicePort',
-            'transitServicePort' => 'getTransitServicePort',
-            'transitIpAddress' => 'getTransitIpAddress'
+            'transitServicePort' => 'getTransitServicePort'
     ];
 
     /**
@@ -301,7 +291,6 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['internalServicePort'] = isset($data['internalServicePort']) ? $data['internalServicePort'] : null;
         $this->container['transitServicePort'] = isset($data['transitServicePort']) ? $data['transitServicePort'] : null;
-        $this->container['transitIpAddress'] = isset($data['transitIpAddress']) ? $data['transitIpAddress'] : null;
     }
 
     /**
@@ -556,7 +545,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELBv2的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
+    *  DNAT规则后端的类型。 取值： - COMPUTE：后端为计算实例。 - VIP：后端为VIP的实例。 - ELB：后端为ELBv2的实例。 - ELBv3：后端为ELBv3的实例。 - CUSTOMIZE：后端为自定义IP。
     *
     * @return string[]|null
     */
@@ -568,7 +557,7 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string[]|null $type DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELBv2的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
+    * @param string[]|null $type DNAT规则后端的类型。 取值： - COMPUTE：后端为计算实例。 - VIP：后端为VIP的实例。 - ELB：后端为ELBv2的实例。 - ELBv3：后端为ELBv3的实例。 - CUSTOMIZE：后端为自定义IP。
     *
     * @return $this
     */
@@ -671,30 +660,6 @@ class ListPrivateDnatsRequest implements ModelInterface, ArrayAccess
     public function setTransitServicePort($transitServicePort)
     {
         $this->container['transitServicePort'] = $transitServicePort;
-        return $this;
-    }
-
-    /**
-    * Gets transitIpAddress
-    *  中转IP的地址。
-    *
-    * @return string[]|null
-    */
-    public function getTransitIpAddress()
-    {
-        return $this->container['transitIpAddress'];
-    }
-
-    /**
-    * Sets transitIpAddress
-    *
-    * @param string[]|null $transitIpAddress 中转IP的地址。
-    *
-    * @return $this
-    */
-    public function setTransitIpAddress($transitIpAddress)
-    {
-        $this->container['transitIpAddress'] = $transitIpAddress;
         return $this;
     }
 

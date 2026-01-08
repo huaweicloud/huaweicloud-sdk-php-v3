@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListTransactionResponseBodyRowsInfo implements ModelInterface, ArrayAccess
+class ListTransactionResponseBodyRows implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,7 +16,7 @@ class ListTransactionResponseBodyRowsInfo implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListTransactionResponseBody_rows_info';
+    protected static $openAPIModelName = 'ListTransactionResponseBody_rows';
 
     /**
     * Array of property to type mappings. Used for (de)serialization

@@ -31,7 +31,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
     * tunnelPeerAddress  对端隧道口地址
     * enableNqa  开启NQA检测
     * enableHub  开启分支互联
-    * enableHealthCheck  开启健康检查
     * policyRules  策略模式的策略规则组
     * ikepolicy  ikepolicy
     * ipsecpolicy  ipsecpolicy
@@ -57,7 +56,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
             'tunnelPeerAddress' => 'string',
             'enableNqa' => 'bool',
             'enableHub' => 'bool',
-            'enableHealthCheck' => 'bool',
             'policyRules' => '\HuaweiCloud\SDK\Vpn\V5\Model\PolicyRule[]',
             'ikepolicy' => '\HuaweiCloud\SDK\Vpn\V5\Model\IkePolicy',
             'ipsecpolicy' => '\HuaweiCloud\SDK\Vpn\V5\Model\IpsecPolicy',
@@ -83,7 +81,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
     * tunnelPeerAddress  对端隧道口地址
     * enableNqa  开启NQA检测
     * enableHub  开启分支互联
-    * enableHealthCheck  开启健康检查
     * policyRules  策略模式的策略规则组
     * ikepolicy  ikepolicy
     * ipsecpolicy  ipsecpolicy
@@ -109,7 +106,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
         'tunnelPeerAddress' => null,
         'enableNqa' => null,
         'enableHub' => null,
-        'enableHealthCheck' => null,
         'policyRules' => null,
         'ikepolicy' => null,
         'ipsecpolicy' => null,
@@ -156,7 +152,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
     * tunnelPeerAddress  对端隧道口地址
     * enableNqa  开启NQA检测
     * enableHub  开启分支互联
-    * enableHealthCheck  开启健康检查
     * policyRules  策略模式的策略规则组
     * ikepolicy  ikepolicy
     * ipsecpolicy  ipsecpolicy
@@ -182,7 +177,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
             'tunnelPeerAddress' => 'tunnel_peer_address',
             'enableNqa' => 'enable_nqa',
             'enableHub' => 'enable_hub',
-            'enableHealthCheck' => 'enable_health_check',
             'policyRules' => 'policy_rules',
             'ikepolicy' => 'ikepolicy',
             'ipsecpolicy' => 'ipsecpolicy',
@@ -208,7 +202,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
     * tunnelPeerAddress  对端隧道口地址
     * enableNqa  开启NQA检测
     * enableHub  开启分支互联
-    * enableHealthCheck  开启健康检查
     * policyRules  策略模式的策略规则组
     * ikepolicy  ikepolicy
     * ipsecpolicy  ipsecpolicy
@@ -234,7 +227,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
             'tunnelPeerAddress' => 'setTunnelPeerAddress',
             'enableNqa' => 'setEnableNqa',
             'enableHub' => 'setEnableHub',
-            'enableHealthCheck' => 'setEnableHealthCheck',
             'policyRules' => 'setPolicyRules',
             'ikepolicy' => 'setIkepolicy',
             'ipsecpolicy' => 'setIpsecpolicy',
@@ -260,7 +252,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
     * tunnelPeerAddress  对端隧道口地址
     * enableNqa  开启NQA检测
     * enableHub  开启分支互联
-    * enableHealthCheck  开启健康检查
     * policyRules  策略模式的策略规则组
     * ikepolicy  ikepolicy
     * ipsecpolicy  ipsecpolicy
@@ -286,7 +277,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
             'tunnelPeerAddress' => 'getTunnelPeerAddress',
             'enableNqa' => 'getEnableNqa',
             'enableHub' => 'getEnableHub',
-            'enableHealthCheck' => 'getEnableHealthCheck',
             'policyRules' => 'getPolicyRules',
             'ikepolicy' => 'getIkepolicy',
             'ipsecpolicy' => 'getIpsecpolicy',
@@ -385,7 +375,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
         $this->container['tunnelPeerAddress'] = isset($data['tunnelPeerAddress']) ? $data['tunnelPeerAddress'] : null;
         $this->container['enableNqa'] = isset($data['enableNqa']) ? $data['enableNqa'] : null;
         $this->container['enableHub'] = isset($data['enableHub']) ? $data['enableHub'] : null;
-        $this->container['enableHealthCheck'] = isset($data['enableHealthCheck']) ? $data['enableHealthCheck'] : null;
         $this->container['policyRules'] = isset($data['policyRules']) ? $data['policyRules'] : null;
         $this->container['ikepolicy'] = isset($data['ikepolicy']) ? $data['ikepolicy'] : null;
         $this->container['ipsecpolicy'] = isset($data['ipsecpolicy']) ? $data['ipsecpolicy'] : null;
@@ -713,30 +702,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
     public function setEnableHub($enableHub)
     {
         $this->container['enableHub'] = $enableHub;
-        return $this;
-    }
-
-    /**
-    * Gets enableHealthCheck
-    *  开启健康检查
-    *
-    * @return bool|null
-    */
-    public function getEnableHealthCheck()
-    {
-        return $this->container['enableHealthCheck'];
-    }
-
-    /**
-    * Sets enableHealthCheck
-    *
-    * @param bool|null $enableHealthCheck 开启健康检查
-    *
-    * @return $this
-    */
-    public function setEnableHealthCheck($enableHealthCheck)
-    {
-        $this->container['enableHealthCheck'] = $enableHealthCheck;
         return $this;
     }
 

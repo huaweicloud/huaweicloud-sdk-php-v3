@@ -21,21 +21,41 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * startTime  查询起始时间戳。
+    * endTime  查询结束时间戳
+    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
+    * action  **参数解释：** 规则行为 **约束限制：** 不涉及
+    * interval  查询时间间隔，单位：秒
     * result  按指定的分组方式组织的数据
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'startTime' => 'int',
+            'endTime' => 'int',
+            'statType' => 'string',
+            'action' => 'string',
+            'interval' => 'int',
             'result' => 'map[string,object]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * startTime  查询起始时间戳。
+    * endTime  查询结束时间戳
+    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
+    * action  **参数解释：** 规则行为 **约束限制：** 不涉及
+    * interval  查询时间间隔，单位：秒
     * result  按指定的分组方式组织的数据
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'startTime' => 'int64',
+        'endTime' => 'int64',
+        'statType' => null,
+        'action' => null,
+        'interval' => 'int64',
         'result' => null
     ];
 
@@ -62,31 +82,61 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * startTime  查询起始时间戳。
+    * endTime  查询结束时间戳
+    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
+    * action  **参数解释：** 规则行为 **约束限制：** 不涉及
+    * interval  查询时间间隔，单位：秒
     * result  按指定的分组方式组织的数据
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'startTime' => 'start_time',
+            'endTime' => 'end_time',
+            'statType' => 'stat_type',
+            'action' => 'action',
+            'interval' => 'interval',
             'result' => 'result'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * startTime  查询起始时间戳。
+    * endTime  查询结束时间戳
+    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
+    * action  **参数解释：** 规则行为 **约束限制：** 不涉及
+    * interval  查询时间间隔，单位：秒
     * result  按指定的分组方式组织的数据
     *
     * @var string[]
     */
     protected static $setters = [
+            'startTime' => 'setStartTime',
+            'endTime' => 'setEndTime',
+            'statType' => 'setStatType',
+            'action' => 'setAction',
+            'interval' => 'setInterval',
             'result' => 'setResult'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * startTime  查询起始时间戳。
+    * endTime  查询结束时间戳
+    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
+    * action  **参数解释：** 规则行为 **约束限制：** 不涉及
+    * interval  查询时间间隔，单位：秒
     * result  按指定的分组方式组织的数据
     *
     * @var string[]
     */
     protected static $getters = [
+            'startTime' => 'getStartTime',
+            'endTime' => 'getEndTime',
+            'statType' => 'getStatType',
+            'action' => 'getAction',
+            'interval' => 'getInterval',
             'result' => 'getResult'
     ];
 
@@ -148,6 +198,11 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
+        $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['statType'] = isset($data['statType']) ? $data['statType'] : null;
+        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
+        $this->container['interval'] = isset($data['interval']) ? $data['interval'] : null;
         $this->container['result'] = isset($data['result']) ? $data['result'] : null;
     }
 
@@ -171,6 +226,126 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets startTime
+    *  查询起始时间戳。
+    *
+    * @return int|null
+    */
+    public function getStartTime()
+    {
+        return $this->container['startTime'];
+    }
+
+    /**
+    * Sets startTime
+    *
+    * @param int|null $startTime 查询起始时间戳。
+    *
+    * @return $this
+    */
+    public function setStartTime($startTime)
+    {
+        $this->container['startTime'] = $startTime;
+        return $this;
+    }
+
+    /**
+    * Gets endTime
+    *  查询结束时间戳
+    *
+    * @return int|null
+    */
+    public function getEndTime()
+    {
+        return $this->container['endTime'];
+    }
+
+    /**
+    * Sets endTime
+    *
+    * @param int|null $endTime 查询结束时间戳
+    *
+    * @return $this
+    */
+    public function setEndTime($endTime)
+    {
+        $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets statType
+    *  参数类型支持：flux(流量)，req_num(请求总数)。
+    *
+    * @return string|null
+    */
+    public function getStatType()
+    {
+        return $this->container['statType'];
+    }
+
+    /**
+    * Sets statType
+    *
+    * @param string|null $statType 参数类型支持：flux(流量)，req_num(请求总数)。
+    *
+    * @return $this
+    */
+    public function setStatType($statType)
+    {
+        $this->container['statType'] = $statType;
+        return $this;
+    }
+
+    /**
+    * Gets action
+    *  **参数解释：** 规则行为 **约束限制：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getAction()
+    {
+        return $this->container['action'];
+    }
+
+    /**
+    * Sets action
+    *
+    * @param string|null $action **参数解释：** 规则行为 **约束限制：** 不涉及
+    *
+    * @return $this
+    */
+    public function setAction($action)
+    {
+        $this->container['action'] = $action;
+        return $this;
+    }
+
+    /**
+    * Gets interval
+    *  查询时间间隔，单位：秒
+    *
+    * @return int|null
+    */
+    public function getInterval()
+    {
+        return $this->container['interval'];
+    }
+
+    /**
+    * Sets interval
+    *
+    * @param int|null $interval 查询时间间隔，单位：秒
+    *
+    * @return $this
+    */
+    public function setInterval($interval)
+    {
+        $this->container['interval'] = $interval;
+        return $this;
     }
 
     /**

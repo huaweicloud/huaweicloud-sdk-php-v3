@@ -34,7 +34,7 @@ class StartJobSubmission implements ModelInterface, ArrayAccess
     * isStopingIncrement  是否停止增量迁移
     * isExecuteAuto  是否定时执行作业
     * lastUpdateDate  作业最后更新时间
-    * lastUdpateUser  最后更新作业状态的用户
+    * lastUpdateUser  最后更新作业状态的用户
     * isDeleteJob  作业执行完成后是否删除
     *
     * @var string[]
@@ -54,7 +54,7 @@ class StartJobSubmission implements ModelInterface, ArrayAccess
             'isStopingIncrement' => 'string',
             'isExecuteAuto' => 'bool',
             'lastUpdateDate' => 'int',
-            'lastUdpateUser' => 'string',
+            'lastUpdateUser' => 'string',
             'isDeleteJob' => 'bool'
     ];
 
@@ -74,7 +74,7 @@ class StartJobSubmission implements ModelInterface, ArrayAccess
     * isStopingIncrement  是否停止增量迁移
     * isExecuteAuto  是否定时执行作业
     * lastUpdateDate  作业最后更新时间
-    * lastUdpateUser  最后更新作业状态的用户
+    * lastUpdateUser  最后更新作业状态的用户
     * isDeleteJob  作业执行完成后是否删除
     *
     * @var string[]
@@ -94,7 +94,7 @@ class StartJobSubmission implements ModelInterface, ArrayAccess
         'isStopingIncrement' => null,
         'isExecuteAuto' => null,
         'lastUpdateDate' => 'int64',
-        'lastUdpateUser' => null,
+        'lastUpdateUser' => null,
         'isDeleteJob' => null
     ];
 
@@ -135,7 +135,7 @@ class StartJobSubmission implements ModelInterface, ArrayAccess
     * isStopingIncrement  是否停止增量迁移
     * isExecuteAuto  是否定时执行作业
     * lastUpdateDate  作业最后更新时间
-    * lastUdpateUser  最后更新作业状态的用户
+    * lastUpdateUser  最后更新作业状态的用户
     * isDeleteJob  作业执行完成后是否删除
     *
     * @var string[]
@@ -155,7 +155,7 @@ class StartJobSubmission implements ModelInterface, ArrayAccess
             'isStopingIncrement' => 'isStopingIncrement',
             'isExecuteAuto' => 'is-execute-auto',
             'lastUpdateDate' => 'last-update-date',
-            'lastUdpateUser' => 'last-udpate-user',
+            'lastUpdateUser' => 'last-update-user',
             'isDeleteJob' => 'isDeleteJob'
     ];
 
@@ -175,7 +175,7 @@ class StartJobSubmission implements ModelInterface, ArrayAccess
     * isStopingIncrement  是否停止增量迁移
     * isExecuteAuto  是否定时执行作业
     * lastUpdateDate  作业最后更新时间
-    * lastUdpateUser  最后更新作业状态的用户
+    * lastUpdateUser  最后更新作业状态的用户
     * isDeleteJob  作业执行完成后是否删除
     *
     * @var string[]
@@ -195,7 +195,7 @@ class StartJobSubmission implements ModelInterface, ArrayAccess
             'isStopingIncrement' => 'setIsStopingIncrement',
             'isExecuteAuto' => 'setIsExecuteAuto',
             'lastUpdateDate' => 'setLastUpdateDate',
-            'lastUdpateUser' => 'setLastUdpateUser',
+            'lastUpdateUser' => 'setLastUpdateUser',
             'isDeleteJob' => 'setIsDeleteJob'
     ];
 
@@ -215,7 +215,7 @@ class StartJobSubmission implements ModelInterface, ArrayAccess
     * isStopingIncrement  是否停止增量迁移
     * isExecuteAuto  是否定时执行作业
     * lastUpdateDate  作业最后更新时间
-    * lastUdpateUser  最后更新作业状态的用户
+    * lastUpdateUser  最后更新作业状态的用户
     * isDeleteJob  作业执行完成后是否删除
     *
     * @var string[]
@@ -235,7 +235,7 @@ class StartJobSubmission implements ModelInterface, ArrayAccess
             'isStopingIncrement' => 'getIsStopingIncrement',
             'isExecuteAuto' => 'getIsExecuteAuto',
             'lastUpdateDate' => 'getLastUpdateDate',
-            'lastUdpateUser' => 'getLastUdpateUser',
+            'lastUpdateUser' => 'getLastUpdateUser',
             'isDeleteJob' => 'getIsDeleteJob'
     ];
 
@@ -311,7 +311,7 @@ class StartJobSubmission implements ModelInterface, ArrayAccess
         $this->container['isStopingIncrement'] = isset($data['isStopingIncrement']) ? $data['isStopingIncrement'] : null;
         $this->container['isExecuteAuto'] = isset($data['isExecuteAuto']) ? $data['isExecuteAuto'] : null;
         $this->container['lastUpdateDate'] = isset($data['lastUpdateDate']) ? $data['lastUpdateDate'] : null;
-        $this->container['lastUdpateUser'] = isset($data['lastUdpateUser']) ? $data['lastUdpateUser'] : null;
+        $this->container['lastUpdateUser'] = isset($data['lastUpdateUser']) ? $data['lastUpdateUser'] : null;
         $this->container['isDeleteJob'] = isset($data['isDeleteJob']) ? $data['isDeleteJob'] : null;
     }
 
@@ -689,26 +689,26 @@ class StartJobSubmission implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets lastUdpateUser
+    * Gets lastUpdateUser
     *  最后更新作业状态的用户
     *
     * @return string|null
     */
-    public function getLastUdpateUser()
+    public function getLastUpdateUser()
     {
-        return $this->container['lastUdpateUser'];
+        return $this->container['lastUpdateUser'];
     }
 
     /**
-    * Sets lastUdpateUser
+    * Sets lastUpdateUser
     *
-    * @param string|null $lastUdpateUser 最后更新作业状态的用户
+    * @param string|null $lastUpdateUser 最后更新作业状态的用户
     *
     * @return $this
     */
-    public function setLastUdpateUser($lastUdpateUser)
+    public function setLastUpdateUser($lastUpdateUser)
     {
-        $this->container['lastUdpateUser'] = $lastUdpateUser;
+        $this->container['lastUpdateUser'] = $lastUpdateUser;
         return $this;
     }
 

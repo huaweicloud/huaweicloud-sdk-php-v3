@@ -423,6 +423,7 @@ class CesAsyncClient extends Client
      * 删除告警规则
      *
      * 删除一条告警规则。
+     * 告警规则V1接口只支持配置单资源单策略规则，建议使用[批量删除告警规则](BatchDeleteAlarmRules.xml)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1587,7 +1588,7 @@ class CesAsyncClient extends Client
      * 修改告警规则
      *
      * 修改告警规则。
-     * 告警规则V1接口只支持配置单资源单策略规则，建议使用批量增加告警规则资源、批量删除告警规则资源和修改告警规则策略(全量修改)与前端功能配套使用。
+     * 告警规则V1接口只支持配置单资源单策略规则，建议使用[批量增加告警规则资源](AddAlarmRuleResources.xml)、[批量删除告警规则资源](DeleteAlarmRuleResources.xml)和[修改告警规则策略(全量修改)](UpdateAlarmRulePolicies.xml)与前端功能配套使用。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1656,6 +1657,7 @@ class CesAsyncClient extends Client
      * 启停告警规则
      *
      * 启动或停止一条告警规则。
+     * 告警规则V1接口只支持配置单资源单策略规则，建议使用[批量启停告警规则](BatchEnableAlarmRules.xml)与前端功能配套使用。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

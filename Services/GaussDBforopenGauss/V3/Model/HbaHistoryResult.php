@@ -20,6 +20,7 @@ class HbaHistoryResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  **参数解释**: 客户端接入认证修改记录的ID。 **取值范围**: 不涉及。
     * status  **参数解释**: 修改结果。 **取值范围**:  - success：已生效。  - failed：未生效。  - etting：设置中。
     * time  **参数解释**: 修改时间。 **取值范围**: 不涉及。
     * failReason  **参数解释**: 修改失败原因。 **取值范围**: 不涉及。
@@ -29,6 +30,7 @@ class HbaHistoryResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'id' => 'string',
             'status' => 'string',
             'time' => '\DateTime',
             'failReason' => 'string',
@@ -38,6 +40,7 @@ class HbaHistoryResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  **参数解释**: 客户端接入认证修改记录的ID。 **取值范围**: 不涉及。
     * status  **参数解释**: 修改结果。 **取值范围**:  - success：已生效。  - failed：未生效。  - etting：设置中。
     * time  **参数解释**: 修改时间。 **取值范围**: 不涉及。
     * failReason  **参数解释**: 修改失败原因。 **取值范围**: 不涉及。
@@ -47,6 +50,7 @@ class HbaHistoryResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'id' => null,
         'status' => null,
         'time' => 'date-time',
         'failReason' => null,
@@ -77,6 +81,7 @@ class HbaHistoryResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  **参数解释**: 客户端接入认证修改记录的ID。 **取值范围**: 不涉及。
     * status  **参数解释**: 修改结果。 **取值范围**:  - success：已生效。  - failed：未生效。  - etting：设置中。
     * time  **参数解释**: 修改时间。 **取值范围**: 不涉及。
     * failReason  **参数解释**: 修改失败原因。 **取值范围**: 不涉及。
@@ -86,6 +91,7 @@ class HbaHistoryResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'id' => 'id',
             'status' => 'status',
             'time' => 'time',
             'failReason' => 'fail_reason',
@@ -95,6 +101,7 @@ class HbaHistoryResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  **参数解释**: 客户端接入认证修改记录的ID。 **取值范围**: 不涉及。
     * status  **参数解释**: 修改结果。 **取值范围**:  - success：已生效。  - failed：未生效。  - etting：设置中。
     * time  **参数解释**: 修改时间。 **取值范围**: 不涉及。
     * failReason  **参数解释**: 修改失败原因。 **取值范围**: 不涉及。
@@ -104,6 +111,7 @@ class HbaHistoryResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'id' => 'setId',
             'status' => 'setStatus',
             'time' => 'setTime',
             'failReason' => 'setFailReason',
@@ -113,6 +121,7 @@ class HbaHistoryResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  **参数解释**: 客户端接入认证修改记录的ID。 **取值范围**: 不涉及。
     * status  **参数解释**: 修改结果。 **取值范围**:  - success：已生效。  - failed：未生效。  - etting：设置中。
     * time  **参数解释**: 修改时间。 **取值范围**: 不涉及。
     * failReason  **参数解释**: 修改失败原因。 **取值范围**: 不涉及。
@@ -122,6 +131,7 @@ class HbaHistoryResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'id' => 'getId',
             'status' => 'getStatus',
             'time' => 'getTime',
             'failReason' => 'getFailReason',
@@ -187,6 +197,7 @@ class HbaHistoryResult implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['time'] = isset($data['time']) ? $data['time'] : null;
         $this->container['failReason'] = isset($data['failReason']) ? $data['failReason'] : null;
@@ -214,6 +225,30 @@ class HbaHistoryResult implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets id
+    *  **参数解释**: 客户端接入认证修改记录的ID。 **取值范围**: 不涉及。
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id **参数解释**: 客户端接入认证修改记录的ID。 **取值范围**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+        return $this;
     }
 
     /**

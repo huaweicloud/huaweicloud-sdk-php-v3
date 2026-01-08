@@ -24,6 +24,7 @@ class MetaData implements ModelInterface, ArrayAccess
     * durationMs  视频时长，带小数位显示。单位：秒。
     * duration  视频时长。单位：秒。
     * format  文件封装格式。
+    * md5  视频的 md5 值。
     * bitrate  总码率。单位：bit/秒
     * video  视频流元数据。
     * audio  音频流元数据。
@@ -35,6 +36,7 @@ class MetaData implements ModelInterface, ArrayAccess
             'durationMs' => 'double',
             'duration' => 'int',
             'format' => 'string',
+            'md5' => 'string',
             'bitrate' => 'int',
             'video' => '\HuaweiCloud\SDK\Mpc\V1\Model\VideoInfo[]',
             'audio' => '\HuaweiCloud\SDK\Mpc\V1\Model\AudioInfo[]'
@@ -46,6 +48,7 @@ class MetaData implements ModelInterface, ArrayAccess
     * durationMs  视频时长，带小数位显示。单位：秒。
     * duration  视频时长。单位：秒。
     * format  文件封装格式。
+    * md5  视频的 md5 值。
     * bitrate  总码率。单位：bit/秒
     * video  视频流元数据。
     * audio  音频流元数据。
@@ -57,6 +60,7 @@ class MetaData implements ModelInterface, ArrayAccess
         'durationMs' => 'double',
         'duration' => 'int64',
         'format' => null,
+        'md5' => null,
         'bitrate' => 'int64',
         'video' => null,
         'audio' => null
@@ -89,6 +93,7 @@ class MetaData implements ModelInterface, ArrayAccess
     * durationMs  视频时长，带小数位显示。单位：秒。
     * duration  视频时长。单位：秒。
     * format  文件封装格式。
+    * md5  视频的 md5 值。
     * bitrate  总码率。单位：bit/秒
     * video  视频流元数据。
     * audio  音频流元数据。
@@ -100,6 +105,7 @@ class MetaData implements ModelInterface, ArrayAccess
             'durationMs' => 'duration_ms',
             'duration' => 'duration',
             'format' => 'format',
+            'md5' => 'md5',
             'bitrate' => 'bitrate',
             'video' => 'video',
             'audio' => 'audio'
@@ -111,6 +117,7 @@ class MetaData implements ModelInterface, ArrayAccess
     * durationMs  视频时长，带小数位显示。单位：秒。
     * duration  视频时长。单位：秒。
     * format  文件封装格式。
+    * md5  视频的 md5 值。
     * bitrate  总码率。单位：bit/秒
     * video  视频流元数据。
     * audio  音频流元数据。
@@ -122,6 +129,7 @@ class MetaData implements ModelInterface, ArrayAccess
             'durationMs' => 'setDurationMs',
             'duration' => 'setDuration',
             'format' => 'setFormat',
+            'md5' => 'setMd5',
             'bitrate' => 'setBitrate',
             'video' => 'setVideo',
             'audio' => 'setAudio'
@@ -133,6 +141,7 @@ class MetaData implements ModelInterface, ArrayAccess
     * durationMs  视频时长，带小数位显示。单位：秒。
     * duration  视频时长。单位：秒。
     * format  文件封装格式。
+    * md5  视频的 md5 值。
     * bitrate  总码率。单位：bit/秒
     * video  视频流元数据。
     * audio  音频流元数据。
@@ -144,6 +153,7 @@ class MetaData implements ModelInterface, ArrayAccess
             'durationMs' => 'getDurationMs',
             'duration' => 'getDuration',
             'format' => 'getFormat',
+            'md5' => 'getMd5',
             'bitrate' => 'getBitrate',
             'video' => 'getVideo',
             'audio' => 'getAudio'
@@ -211,6 +221,7 @@ class MetaData implements ModelInterface, ArrayAccess
         $this->container['durationMs'] = isset($data['durationMs']) ? $data['durationMs'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
         $this->container['format'] = isset($data['format']) ? $data['format'] : null;
+        $this->container['md5'] = isset($data['md5']) ? $data['md5'] : null;
         $this->container['bitrate'] = isset($data['bitrate']) ? $data['bitrate'] : null;
         $this->container['video'] = isset($data['video']) ? $data['video'] : null;
         $this->container['audio'] = isset($data['audio']) ? $data['audio'] : null;
@@ -247,6 +258,12 @@ class MetaData implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['format']) && (mb_strlen($this->container['format']) < 0)) {
                 $invalidProperties[] = "invalid value for 'format', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['md5']) && (mb_strlen($this->container['md5']) > 64)) {
+                $invalidProperties[] = "invalid value for 'md5', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['md5']) && (mb_strlen($this->container['md5']) < 0)) {
+                $invalidProperties[] = "invalid value for 'md5', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['bitrate']) && ($this->container['bitrate'] > 9223372036854775807)) {
                 $invalidProperties[] = "invalid value for 'bitrate', must be smaller than or equal to 9223372036854775807.";
@@ -361,6 +378,30 @@ class MetaData implements ModelInterface, ArrayAccess
     public function setFormat($format)
     {
         $this->container['format'] = $format;
+        return $this;
+    }
+
+    /**
+    * Gets md5
+    *  视频的 md5 值。
+    *
+    * @return string|null
+    */
+    public function getMd5()
+    {
+        return $this->container['md5'];
+    }
+
+    /**
+    * Sets md5
+    *
+    * @param string|null $md5 视频的 md5 值。
+    *
+    * @return $this
+    */
+    public function setMd5($md5)
+    {
+        $this->container['md5'] = $md5;
         return $this;
     }
 

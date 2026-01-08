@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListTransactionRequestBodyTransactionQueryOption implements ModelInterface, ArrayAccess
+class ListTransactionRequestBodyTransactionQueryInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,7 +16,7 @@ class ListTransactionRequestBodyTransactionQueryOption implements ModelInterface
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListTransactionRequestBody_transaction_query_option';
+    protected static $openAPIModelName = 'ListTransactionRequestBody_transaction_query_info';
 
     /**
     * Array of property to type mappings. Used for (de)serialization

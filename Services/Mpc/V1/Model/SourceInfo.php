@@ -25,6 +25,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
     * format  片源格式
     * size  片源大小
     * manifestName  独立mpd索引文件名
+    * md5  视频的 md5 值。
     * videoInfo  videoInfo
     * audioInfo  音频信息
     *
@@ -36,6 +37,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
             'format' => 'string',
             'size' => 'int',
             'manifestName' => 'string',
+            'md5' => 'string',
             'videoInfo' => '\HuaweiCloud\SDK\Mpc\V1\Model\VideoInfo',
             'audioInfo' => '\HuaweiCloud\SDK\Mpc\V1\Model\AudioInfo[]'
     ];
@@ -47,6 +49,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
     * format  片源格式
     * size  片源大小
     * manifestName  独立mpd索引文件名
+    * md5  视频的 md5 值。
     * videoInfo  videoInfo
     * audioInfo  音频信息
     *
@@ -58,6 +61,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
         'format' => null,
         'size' => 'int64',
         'manifestName' => null,
+        'md5' => null,
         'videoInfo' => null,
         'audioInfo' => null
     ];
@@ -90,6 +94,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
     * format  片源格式
     * size  片源大小
     * manifestName  独立mpd索引文件名
+    * md5  视频的 md5 值。
     * videoInfo  videoInfo
     * audioInfo  音频信息
     *
@@ -101,6 +106,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
             'format' => 'format',
             'size' => 'size',
             'manifestName' => 'manifest_name',
+            'md5' => 'md5',
             'videoInfo' => 'video_info',
             'audioInfo' => 'audio_info'
     ];
@@ -112,6 +118,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
     * format  片源格式
     * size  片源大小
     * manifestName  独立mpd索引文件名
+    * md5  视频的 md5 值。
     * videoInfo  videoInfo
     * audioInfo  音频信息
     *
@@ -123,6 +130,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
             'format' => 'setFormat',
             'size' => 'setSize',
             'manifestName' => 'setManifestName',
+            'md5' => 'setMd5',
             'videoInfo' => 'setVideoInfo',
             'audioInfo' => 'setAudioInfo'
     ];
@@ -134,6 +142,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
     * format  片源格式
     * size  片源大小
     * manifestName  独立mpd索引文件名
+    * md5  视频的 md5 值。
     * videoInfo  videoInfo
     * audioInfo  音频信息
     *
@@ -145,6 +154,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
             'format' => 'getFormat',
             'size' => 'getSize',
             'manifestName' => 'getManifestName',
+            'md5' => 'getMd5',
             'videoInfo' => 'getVideoInfo',
             'audioInfo' => 'getAudioInfo'
     ];
@@ -212,6 +222,7 @@ class SourceInfo implements ModelInterface, ArrayAccess
         $this->container['format'] = isset($data['format']) ? $data['format'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['manifestName'] = isset($data['manifestName']) ? $data['manifestName'] : null;
+        $this->container['md5'] = isset($data['md5']) ? $data['md5'] : null;
         $this->container['videoInfo'] = isset($data['videoInfo']) ? $data['videoInfo'] : null;
         $this->container['audioInfo'] = isset($data['audioInfo']) ? $data['audioInfo'] : null;
     }
@@ -253,6 +264,12 @@ class SourceInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['manifestName']) && (mb_strlen($this->container['manifestName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'manifestName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['md5']) && (mb_strlen($this->container['md5']) > 64)) {
+                $invalidProperties[] = "invalid value for 'md5', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['md5']) && (mb_strlen($this->container['md5']) < 0)) {
+                $invalidProperties[] = "invalid value for 'md5', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -385,6 +402,30 @@ class SourceInfo implements ModelInterface, ArrayAccess
     public function setManifestName($manifestName)
     {
         $this->container['manifestName'] = $manifestName;
+        return $this;
+    }
+
+    /**
+    * Gets md5
+    *  视频的 md5 值。
+    *
+    * @return string|null
+    */
+    public function getMd5()
+    {
+        return $this->container['md5'];
+    }
+
+    /**
+    * Sets md5
+    *
+    * @param string|null $md5 视频的 md5 值。
+    *
+    * @return $this
+    */
+    public function setMd5($md5)
+    {
+        $this->container['md5'] = $md5;
         return $this;
     }
 

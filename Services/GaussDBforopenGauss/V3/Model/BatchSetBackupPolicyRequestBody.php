@@ -27,7 +27,7 @@ class BatchSetBackupPolicyRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'instanceIds' => 'string[]',
-            'backupPolicy' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BackupPolicyInfo'
+            'backupPolicy' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BatchSetBackupPolicyOption'
     ];
 
     /**
@@ -217,7 +217,7 @@ class BatchSetBackupPolicyRequestBody implements ModelInterface, ArrayAccess
     * Gets backupPolicy
     *  backupPolicy
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BackupPolicyInfo
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BatchSetBackupPolicyOption
     */
     public function getBackupPolicy()
     {
@@ -227,7 +227,7 @@ class BatchSetBackupPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets backupPolicy
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BackupPolicyInfo $backupPolicy backupPolicy
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BatchSetBackupPolicyOption $backupPolicy backupPolicy
     *
     * @return $this
     */

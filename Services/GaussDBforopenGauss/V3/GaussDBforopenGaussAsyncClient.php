@@ -3280,11 +3280,11 @@ class GaussDBforopenGaussAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8']
+                ['application/json;charset=UTF-8', 'text/csv']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8', 'text/csv'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -9708,11 +9708,11 @@ class GaussDBforopenGaussAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -15193,7 +15193,7 @@ class GaussDBforopenGaussAsyncClient extends Client
     }
 
     /**
-     * 查询asp采集结果
+     * 查询ASP采集结果
      *
      * 查询ASP采集结果。
      * 

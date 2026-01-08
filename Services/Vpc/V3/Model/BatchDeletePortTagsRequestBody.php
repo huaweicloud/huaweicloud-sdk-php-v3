@@ -20,7 +20,7 @@ class BatchDeletePortTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tags  标签列表
+    * tags  标签列表 约束：最大支持20组标签键值对
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchDeletePortTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tags  标签列表
+    * tags  标签列表 约束：最大支持20组标签键值对
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchDeletePortTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tags  标签列表
+    * tags  标签列表 约束：最大支持20组标签键值对
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchDeletePortTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tags  标签列表
+    * tags  标签列表 约束：最大支持20组标签键值对
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchDeletePortTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tags  标签列表
+    * tags  标签列表 约束：最大支持20组标签键值对
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class BatchDeletePortTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签列表
+    *  标签列表 约束：最大支持20组标签键值对
     *
     * @return \HuaweiCloud\SDK\Vpc\V3\Model\DeleteResourceTagRequestBody[]
     */
@@ -189,7 +189,7 @@ class BatchDeletePortTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Vpc\V3\Model\DeleteResourceTagRequestBody[] $tags 标签列表
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\DeleteResourceTagRequestBody[] $tags 标签列表 约束：最大支持20组标签键值对
     *
     * @return $this
     */

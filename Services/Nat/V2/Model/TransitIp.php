@@ -30,7 +30,7 @@ class TransitIp implements ModelInterface, ArrayAccess
     * tags  标签列表。
     * gatewayId  中转IP绑定的私网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建中转IP时，关联的企业项目ID。
-    * status  私网NAT中转IP的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    * status  私网NAT中转IP的状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     *
     * @var string[]
     */
@@ -60,7 +60,7 @@ class TransitIp implements ModelInterface, ArrayAccess
     * tags  标签列表。
     * gatewayId  中转IP绑定的私网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建中转IP时，关联的企业项目ID。
-    * status  私网NAT中转IP的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    * status  私网NAT中转IP的状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     *
     * @var string[]
     */
@@ -111,7 +111,7 @@ class TransitIp implements ModelInterface, ArrayAccess
     * tags  标签列表。
     * gatewayId  中转IP绑定的私网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建中转IP时，关联的企业项目ID。
-    * status  私网NAT中转IP的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    * status  私网NAT中转IP的状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     *
     * @var string[]
     */
@@ -141,7 +141,7 @@ class TransitIp implements ModelInterface, ArrayAccess
     * tags  标签列表。
     * gatewayId  中转IP绑定的私网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建中转IP时，关联的企业项目ID。
-    * status  私网NAT中转IP的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    * status  私网NAT中转IP的状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     *
     * @var string[]
     */
@@ -171,7 +171,7 @@ class TransitIp implements ModelInterface, ArrayAccess
     * tags  标签列表。
     * gatewayId  中转IP绑定的私网NAT网关实例的ID。
     * enterpriseProjectId  企业项目ID。创建中转IP时，关联的企业项目ID。
-    * status  私网NAT中转IP的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    * status  私网NAT中转IP的状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     *
     * @var string[]
     */
@@ -615,7 +615,7 @@ class TransitIp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  私网NAT中转IP的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    *  私网NAT中转IP的状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     *
     * @return string|null
     */
@@ -627,7 +627,7 @@ class TransitIp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 私网NAT中转IP的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    * @param string|null $status 私网NAT中转IP的状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     *
     * @return $this
     */

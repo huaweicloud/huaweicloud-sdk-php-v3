@@ -1,0 +1,344 @@
+<?php
+
+namespace HuaweiCloud\SDK\Vpc\V3\Model;
+
+use \ArrayAccess;
+use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
+use HuaweiCloud\SDK\Core\Utils\ModelInterface;
+use HuaweiCloud\SDK\Core\SdkResponse;
+
+class SubnetExtraDhcpOpt implements ModelInterface, ArrayAccess
+{
+    const DISCRIMINATOR = null;
+
+    /**
+    * The original name of the model.
+    *
+    * @var string
+    */
+    protected static $openAPIModelName = 'SubnetExtraDhcpOpt';
+
+    /**
+    * Array of property to type mappings. Used for (de)serialization
+    * optName  **参数解释**： 子网配置的NTP地址、DNS域名或租约到期时间的名称。 **取值范围**： - 42：表示子网ntp地址。 - 15：表示DNS配置的域名，用于向DNS服务器获取IP地址。 - 51：表示IPv4子网租约到期时间。 - 651：表示IPv6子网租约到期时间。
+    * optValue  **参数解释**： 子网配置的NTP地址、DNS域名或租约到期时间。 **取值范围**： - opt_name配置为“42”，则表示是子网ntp地址，目前只支持IPv4地址，每个IP地址以逗号隔开，IP地址个数不能超过4个，不能存在相同地址。 - opt_name配置为“15”，则该值表示是DNS配置的域名，用于向DNS服务器获取IP地址。域名只能由字母，数字，中划线组成，中划线不能在开头或末尾。域名可以包含多个字符串，单个字符串不超过63个字符，字符串间以点分隔。域名长度不超过254个字符。 - opt_name配置为“51”，则该值表示是IPv4子网租约到期时间，取值格式有两种，取-1，表示无限租约；数字+h，数字范围是1~175200，比如5h，默认值为87600h。 - opt_name配置为“651”，则该值表示是IPv6子网租约到期时间，取值格式有两种，取-1，表示无限租约；数字+h，数字范围是1~175200，比如5h，默认值为2h。
+    * ipVersion  **参数解释**： 子网的IP版本。 **取值范围**： - 4：默认值，IPv4。 - 6：IPv6，只有opt_name是“651”时，ip_version为6。
+    *
+    * @var string[]
+    */
+    protected static $openAPITypes = [
+            'optName' => 'string',
+            'optValue' => 'string',
+            'ipVersion' => 'int'
+    ];
+
+    /**
+    * Array of property to format mappings. Used for (de)serialization
+    * optName  **参数解释**： 子网配置的NTP地址、DNS域名或租约到期时间的名称。 **取值范围**： - 42：表示子网ntp地址。 - 15：表示DNS配置的域名，用于向DNS服务器获取IP地址。 - 51：表示IPv4子网租约到期时间。 - 651：表示IPv6子网租约到期时间。
+    * optValue  **参数解释**： 子网配置的NTP地址、DNS域名或租约到期时间。 **取值范围**： - opt_name配置为“42”，则表示是子网ntp地址，目前只支持IPv4地址，每个IP地址以逗号隔开，IP地址个数不能超过4个，不能存在相同地址。 - opt_name配置为“15”，则该值表示是DNS配置的域名，用于向DNS服务器获取IP地址。域名只能由字母，数字，中划线组成，中划线不能在开头或末尾。域名可以包含多个字符串，单个字符串不超过63个字符，字符串间以点分隔。域名长度不超过254个字符。 - opt_name配置为“51”，则该值表示是IPv4子网租约到期时间，取值格式有两种，取-1，表示无限租约；数字+h，数字范围是1~175200，比如5h，默认值为87600h。 - opt_name配置为“651”，则该值表示是IPv6子网租约到期时间，取值格式有两种，取-1，表示无限租约；数字+h，数字范围是1~175200，比如5h，默认值为2h。
+    * ipVersion  **参数解释**： 子网的IP版本。 **取值范围**： - 4：默认值，IPv4。 - 6：IPv6，只有opt_name是“651”时，ip_version为6。
+    *
+    * @var string[]
+    */
+    protected static $openAPIFormats = [
+        'optName' => null,
+        'optValue' => null,
+        'ipVersion' => 'int32'
+    ];
+
+    /**
+    * Array of property to type mappings. Used for (de)serialization
+    *
+    * @return array
+    */
+    public static function openAPITypes()
+    {
+        return self::$openAPITypes;
+    }
+
+    /**
+    * Array of property to format mappings. Used for (de)serialization
+    *
+    * @return array
+    */
+    public static function openAPIFormats()
+    {
+        return self::$openAPIFormats;
+    }
+
+    /**
+    * Array of attributes where the key is the local name,
+    * and the value is the original name
+    * optName  **参数解释**： 子网配置的NTP地址、DNS域名或租约到期时间的名称。 **取值范围**： - 42：表示子网ntp地址。 - 15：表示DNS配置的域名，用于向DNS服务器获取IP地址。 - 51：表示IPv4子网租约到期时间。 - 651：表示IPv6子网租约到期时间。
+    * optValue  **参数解释**： 子网配置的NTP地址、DNS域名或租约到期时间。 **取值范围**： - opt_name配置为“42”，则表示是子网ntp地址，目前只支持IPv4地址，每个IP地址以逗号隔开，IP地址个数不能超过4个，不能存在相同地址。 - opt_name配置为“15”，则该值表示是DNS配置的域名，用于向DNS服务器获取IP地址。域名只能由字母，数字，中划线组成，中划线不能在开头或末尾。域名可以包含多个字符串，单个字符串不超过63个字符，字符串间以点分隔。域名长度不超过254个字符。 - opt_name配置为“51”，则该值表示是IPv4子网租约到期时间，取值格式有两种，取-1，表示无限租约；数字+h，数字范围是1~175200，比如5h，默认值为87600h。 - opt_name配置为“651”，则该值表示是IPv6子网租约到期时间，取值格式有两种，取-1，表示无限租约；数字+h，数字范围是1~175200，比如5h，默认值为2h。
+    * ipVersion  **参数解释**： 子网的IP版本。 **取值范围**： - 4：默认值，IPv4。 - 6：IPv6，只有opt_name是“651”时，ip_version为6。
+    *
+    * @var string[]
+    */
+    protected static $attributeMap = [
+            'optName' => 'opt_name',
+            'optValue' => 'opt_value',
+            'ipVersion' => 'ip_version'
+    ];
+
+    /**
+    * Array of attributes to setter functions (for deserialization of responses)
+    * optName  **参数解释**： 子网配置的NTP地址、DNS域名或租约到期时间的名称。 **取值范围**： - 42：表示子网ntp地址。 - 15：表示DNS配置的域名，用于向DNS服务器获取IP地址。 - 51：表示IPv4子网租约到期时间。 - 651：表示IPv6子网租约到期时间。
+    * optValue  **参数解释**： 子网配置的NTP地址、DNS域名或租约到期时间。 **取值范围**： - opt_name配置为“42”，则表示是子网ntp地址，目前只支持IPv4地址，每个IP地址以逗号隔开，IP地址个数不能超过4个，不能存在相同地址。 - opt_name配置为“15”，则该值表示是DNS配置的域名，用于向DNS服务器获取IP地址。域名只能由字母，数字，中划线组成，中划线不能在开头或末尾。域名可以包含多个字符串，单个字符串不超过63个字符，字符串间以点分隔。域名长度不超过254个字符。 - opt_name配置为“51”，则该值表示是IPv4子网租约到期时间，取值格式有两种，取-1，表示无限租约；数字+h，数字范围是1~175200，比如5h，默认值为87600h。 - opt_name配置为“651”，则该值表示是IPv6子网租约到期时间，取值格式有两种，取-1，表示无限租约；数字+h，数字范围是1~175200，比如5h，默认值为2h。
+    * ipVersion  **参数解释**： 子网的IP版本。 **取值范围**： - 4：默认值，IPv4。 - 6：IPv6，只有opt_name是“651”时，ip_version为6。
+    *
+    * @var string[]
+    */
+    protected static $setters = [
+            'optName' => 'setOptName',
+            'optValue' => 'setOptValue',
+            'ipVersion' => 'setIpVersion'
+    ];
+
+    /**
+    * Array of attributes to getter functions (for serialization of requests)
+    * optName  **参数解释**： 子网配置的NTP地址、DNS域名或租约到期时间的名称。 **取值范围**： - 42：表示子网ntp地址。 - 15：表示DNS配置的域名，用于向DNS服务器获取IP地址。 - 51：表示IPv4子网租约到期时间。 - 651：表示IPv6子网租约到期时间。
+    * optValue  **参数解释**： 子网配置的NTP地址、DNS域名或租约到期时间。 **取值范围**： - opt_name配置为“42”，则表示是子网ntp地址，目前只支持IPv4地址，每个IP地址以逗号隔开，IP地址个数不能超过4个，不能存在相同地址。 - opt_name配置为“15”，则该值表示是DNS配置的域名，用于向DNS服务器获取IP地址。域名只能由字母，数字，中划线组成，中划线不能在开头或末尾。域名可以包含多个字符串，单个字符串不超过63个字符，字符串间以点分隔。域名长度不超过254个字符。 - opt_name配置为“51”，则该值表示是IPv4子网租约到期时间，取值格式有两种，取-1，表示无限租约；数字+h，数字范围是1~175200，比如5h，默认值为87600h。 - opt_name配置为“651”，则该值表示是IPv6子网租约到期时间，取值格式有两种，取-1，表示无限租约；数字+h，数字范围是1~175200，比如5h，默认值为2h。
+    * ipVersion  **参数解释**： 子网的IP版本。 **取值范围**： - 4：默认值，IPv4。 - 6：IPv6，只有opt_name是“651”时，ip_version为6。
+    *
+    * @var string[]
+    */
+    protected static $getters = [
+            'optName' => 'getOptName',
+            'optValue' => 'getOptValue',
+            'ipVersion' => 'getIpVersion'
+    ];
+
+    /**
+    * Array of attributes where the key is the local name,
+    * and the value is the original name
+    *
+    * @return array
+    */
+    public static function attributeMap()
+    {
+        return self::$attributeMap;
+    }
+
+    /**
+    * Array of attributes to setter functions (for deserialization of responses)
+    *
+    * @return array
+    */
+    public static function setters()
+    {
+        return self::$setters;
+    }
+
+    /**
+    * Array of attributes to getter functions (for serialization of requests)
+    *
+    * @return array
+    */
+    public static function getters()
+    {
+        return self::$getters;
+    }
+
+    /**
+    * The original name of the model.
+    *
+    * @return string
+    */
+    public function getModelName()
+    {
+        return self::$openAPIModelName;
+    }
+    
+
+
+    /**
+    * Associative array for storing property values
+    *
+    * @var mixed[]
+    */
+    protected $container = [];
+
+    /**
+    * Constructor
+    *
+    * @param mixed[] $data Associated array of property values
+    *                      initializing the model
+    */
+    public function __construct(array $data = null)
+    {
+        $this->container['optName'] = isset($data['optName']) ? $data['optName'] : null;
+        $this->container['optValue'] = isset($data['optValue']) ? $data['optValue'] : null;
+        $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
+    }
+
+    /**
+    * Show all the invalid properties with reasons.
+    *
+    * @return array invalid properties with reasons
+    */
+    public function listInvalidProperties()
+    {
+        $invalidProperties = [];
+        if ($this->container['optName'] === null) {
+            $invalidProperties[] = "'optName' can't be null";
+        }
+        if ($this->container['optValue'] === null) {
+            $invalidProperties[] = "'optValue' can't be null";
+        }
+        if ($this->container['ipVersion'] === null) {
+            $invalidProperties[] = "'ipVersion' can't be null";
+        }
+        return $invalidProperties;
+    }
+
+    /**
+    * Validate all the properties in the model
+    * return true if all passed
+    *
+    * @return bool True if all properties are valid
+    */
+    public function valid()
+    {
+        return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets optName
+    *  **参数解释**： 子网配置的NTP地址、DNS域名或租约到期时间的名称。 **取值范围**： - 42：表示子网ntp地址。 - 15：表示DNS配置的域名，用于向DNS服务器获取IP地址。 - 51：表示IPv4子网租约到期时间。 - 651：表示IPv6子网租约到期时间。
+    *
+    * @return string
+    */
+    public function getOptName()
+    {
+        return $this->container['optName'];
+    }
+
+    /**
+    * Sets optName
+    *
+    * @param string $optName **参数解释**： 子网配置的NTP地址、DNS域名或租约到期时间的名称。 **取值范围**： - 42：表示子网ntp地址。 - 15：表示DNS配置的域名，用于向DNS服务器获取IP地址。 - 51：表示IPv4子网租约到期时间。 - 651：表示IPv6子网租约到期时间。
+    *
+    * @return $this
+    */
+    public function setOptName($optName)
+    {
+        $this->container['optName'] = $optName;
+        return $this;
+    }
+
+    /**
+    * Gets optValue
+    *  **参数解释**： 子网配置的NTP地址、DNS域名或租约到期时间。 **取值范围**： - opt_name配置为“42”，则表示是子网ntp地址，目前只支持IPv4地址，每个IP地址以逗号隔开，IP地址个数不能超过4个，不能存在相同地址。 - opt_name配置为“15”，则该值表示是DNS配置的域名，用于向DNS服务器获取IP地址。域名只能由字母，数字，中划线组成，中划线不能在开头或末尾。域名可以包含多个字符串，单个字符串不超过63个字符，字符串间以点分隔。域名长度不超过254个字符。 - opt_name配置为“51”，则该值表示是IPv4子网租约到期时间，取值格式有两种，取-1，表示无限租约；数字+h，数字范围是1~175200，比如5h，默认值为87600h。 - opt_name配置为“651”，则该值表示是IPv6子网租约到期时间，取值格式有两种，取-1，表示无限租约；数字+h，数字范围是1~175200，比如5h，默认值为2h。
+    *
+    * @return string
+    */
+    public function getOptValue()
+    {
+        return $this->container['optValue'];
+    }
+
+    /**
+    * Sets optValue
+    *
+    * @param string $optValue **参数解释**： 子网配置的NTP地址、DNS域名或租约到期时间。 **取值范围**： - opt_name配置为“42”，则表示是子网ntp地址，目前只支持IPv4地址，每个IP地址以逗号隔开，IP地址个数不能超过4个，不能存在相同地址。 - opt_name配置为“15”，则该值表示是DNS配置的域名，用于向DNS服务器获取IP地址。域名只能由字母，数字，中划线组成，中划线不能在开头或末尾。域名可以包含多个字符串，单个字符串不超过63个字符，字符串间以点分隔。域名长度不超过254个字符。 - opt_name配置为“51”，则该值表示是IPv4子网租约到期时间，取值格式有两种，取-1，表示无限租约；数字+h，数字范围是1~175200，比如5h，默认值为87600h。 - opt_name配置为“651”，则该值表示是IPv6子网租约到期时间，取值格式有两种，取-1，表示无限租约；数字+h，数字范围是1~175200，比如5h，默认值为2h。
+    *
+    * @return $this
+    */
+    public function setOptValue($optValue)
+    {
+        $this->container['optValue'] = $optValue;
+        return $this;
+    }
+
+    /**
+    * Gets ipVersion
+    *  **参数解释**： 子网的IP版本。 **取值范围**： - 4：默认值，IPv4。 - 6：IPv6，只有opt_name是“651”时，ip_version为6。
+    *
+    * @return int
+    */
+    public function getIpVersion()
+    {
+        return $this->container['ipVersion'];
+    }
+
+    /**
+    * Sets ipVersion
+    *
+    * @param int $ipVersion **参数解释**： 子网的IP版本。 **取值范围**： - 4：默认值，IPv4。 - 6：IPv6，只有opt_name是“651”时，ip_version为6。
+    *
+    * @return $this
+    */
+    public function setIpVersion($ipVersion)
+    {
+        $this->container['ipVersion'] = $ipVersion;
+        return $this;
+    }
+
+    /**
+    * Returns true if offset exists. False otherwise.
+    *
+    * @param integer $offset Offset
+    *
+    * @return boolean
+    */
+    public function offsetExists($offset)
+    {
+        return isset($this->container[$offset]);
+    }
+
+    /**
+    * Gets offset.
+    *
+    * @param integer $offset Offset
+    *
+    * @return mixed
+    */
+    public function offsetGet($offset)
+    {
+        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+    }
+
+    /**
+    * Sets value based on offset.
+    *
+    * @param integer $offset Offset
+    * @param mixed   $value  Value to be set
+    *
+    * @return void
+    */
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
+                $this->container[] = $value;
+            } else {
+                $this->container[$offset] = $value;
+        }
+    }
+
+    /**
+    * Unsets offset.
+    *
+    * @param integer $offset Offset
+    *
+    * @return void
+    */
+    public function offsetUnset($offset)
+    {
+        unset($this->container[$offset]);
+    }
+
+    /**
+    * Gets the string presentation of the object
+    *
+    * @return string
+    */
+    public function __toString()
+    {
+        return json_encode(
+            ObjectSerializer::sanitizeForSerialization($this),
+            JSON_PRETTY_PRINT
+        );
+    }
+}
+

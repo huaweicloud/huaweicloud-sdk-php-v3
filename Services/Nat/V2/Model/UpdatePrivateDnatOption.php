@@ -22,7 +22,6 @@ class UpdatePrivateDnatOption implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * transitIpId  中转IP的ID。
-    * transitIpAddress  中转IP的地址。
     * networkInterfaceId  网络接口ID，支持计算、ELB、VIP等实例的网络接口。
     * privateIpAddress  后端实例的私网IP地址。
     * protocol  协议类型。 目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
@@ -34,7 +33,6 @@ class UpdatePrivateDnatOption implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'description' => 'string',
             'transitIpId' => 'string',
-            'transitIpAddress' => 'string',
             'networkInterfaceId' => 'string',
             'privateIpAddress' => 'string',
             'protocol' => 'string',
@@ -46,7 +44,6 @@ class UpdatePrivateDnatOption implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * transitIpId  中转IP的ID。
-    * transitIpAddress  中转IP的地址。
     * networkInterfaceId  网络接口ID，支持计算、ELB、VIP等实例的网络接口。
     * privateIpAddress  后端实例的私网IP地址。
     * protocol  协议类型。 目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
@@ -58,7 +55,6 @@ class UpdatePrivateDnatOption implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'description' => null,
         'transitIpId' => null,
-        'transitIpAddress' => null,
         'networkInterfaceId' => null,
         'privateIpAddress' => null,
         'protocol' => null,
@@ -91,7 +87,6 @@ class UpdatePrivateDnatOption implements ModelInterface, ArrayAccess
     * and the value is the original name
     * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * transitIpId  中转IP的ID。
-    * transitIpAddress  中转IP的地址。
     * networkInterfaceId  网络接口ID，支持计算、ELB、VIP等实例的网络接口。
     * privateIpAddress  后端实例的私网IP地址。
     * protocol  协议类型。 目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
@@ -103,7 +98,6 @@ class UpdatePrivateDnatOption implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'description' => 'description',
             'transitIpId' => 'transit_ip_id',
-            'transitIpAddress' => 'transit_ip_address',
             'networkInterfaceId' => 'network_interface_id',
             'privateIpAddress' => 'private_ip_address',
             'protocol' => 'protocol',
@@ -115,7 +109,6 @@ class UpdatePrivateDnatOption implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * transitIpId  中转IP的ID。
-    * transitIpAddress  中转IP的地址。
     * networkInterfaceId  网络接口ID，支持计算、ELB、VIP等实例的网络接口。
     * privateIpAddress  后端实例的私网IP地址。
     * protocol  协议类型。 目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
@@ -127,7 +120,6 @@ class UpdatePrivateDnatOption implements ModelInterface, ArrayAccess
     protected static $setters = [
             'description' => 'setDescription',
             'transitIpId' => 'setTransitIpId',
-            'transitIpAddress' => 'setTransitIpAddress',
             'networkInterfaceId' => 'setNetworkInterfaceId',
             'privateIpAddress' => 'setPrivateIpAddress',
             'protocol' => 'setProtocol',
@@ -139,7 +131,6 @@ class UpdatePrivateDnatOption implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * description  DNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
     * transitIpId  中转IP的ID。
-    * transitIpAddress  中转IP的地址。
     * networkInterfaceId  网络接口ID，支持计算、ELB、VIP等实例的网络接口。
     * privateIpAddress  后端实例的私网IP地址。
     * protocol  协议类型。 目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
@@ -151,7 +142,6 @@ class UpdatePrivateDnatOption implements ModelInterface, ArrayAccess
     protected static $getters = [
             'description' => 'getDescription',
             'transitIpId' => 'getTransitIpId',
-            'transitIpAddress' => 'getTransitIpAddress',
             'networkInterfaceId' => 'getNetworkInterfaceId',
             'privateIpAddress' => 'getPrivateIpAddress',
             'protocol' => 'getProtocol',
@@ -236,7 +226,6 @@ class UpdatePrivateDnatOption implements ModelInterface, ArrayAccess
     {
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['transitIpId'] = isset($data['transitIpId']) ? $data['transitIpId'] : null;
-        $this->container['transitIpAddress'] = isset($data['transitIpAddress']) ? $data['transitIpAddress'] : null;
         $this->container['networkInterfaceId'] = isset($data['networkInterfaceId']) ? $data['networkInterfaceId'] : null;
         $this->container['privateIpAddress'] = isset($data['privateIpAddress']) ? $data['privateIpAddress'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
@@ -263,12 +252,6 @@ class UpdatePrivateDnatOption implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['transitIpId']) && (mb_strlen($this->container['transitIpId']) < 36)) {
                 $invalidProperties[] = "invalid value for 'transitIpId', the character length must be bigger than or equal to 36.";
-            }
-            if (!is_null($this->container['transitIpAddress']) && (mb_strlen($this->container['transitIpAddress']) > 15)) {
-                $invalidProperties[] = "invalid value for 'transitIpAddress', the character length must be smaller than or equal to 15.";
-            }
-            if (!is_null($this->container['transitIpAddress']) && (mb_strlen($this->container['transitIpAddress']) < 7)) {
-                $invalidProperties[] = "invalid value for 'transitIpAddress', the character length must be bigger than or equal to 7.";
             }
             if (!is_null($this->container['networkInterfaceId']) && (mb_strlen($this->container['networkInterfaceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'networkInterfaceId', the character length must be smaller than or equal to 36.";
@@ -367,30 +350,6 @@ class UpdatePrivateDnatOption implements ModelInterface, ArrayAccess
     public function setTransitIpId($transitIpId)
     {
         $this->container['transitIpId'] = $transitIpId;
-        return $this;
-    }
-
-    /**
-    * Gets transitIpAddress
-    *  中转IP的地址。
-    *
-    * @return string|null
-    */
-    public function getTransitIpAddress()
-    {
-        return $this->container['transitIpAddress'];
-    }
-
-    /**
-    * Sets transitIpAddress
-    *
-    * @param string|null $transitIpAddress 中转IP的地址。
-    *
-    * @return $this
-    */
-    public function setTransitIpAddress($transitIpAddress)
-    {
-        $this->container['transitIpAddress'] = $transitIpAddress;
         return $this;
     }
 

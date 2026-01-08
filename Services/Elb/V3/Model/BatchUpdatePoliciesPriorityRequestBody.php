@@ -20,7 +20,7 @@ class BatchUpdatePoliciesPriorityRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * l7policies  l7policies
+    * l7policies  **参数解释**：批量更新转发策略优先级的请求参数。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchUpdatePoliciesPriorityRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * l7policies  l7policies
+    * l7policies  **参数解释**：批量更新转发策略优先级的请求参数。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchUpdatePoliciesPriorityRequestBody implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * l7policies  l7policies
+    * l7policies  **参数解释**：批量更新转发策略优先级的请求参数。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchUpdatePoliciesPriorityRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * l7policies  l7policies
+    * l7policies  **参数解释**：批量更新转发策略优先级的请求参数。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchUpdatePoliciesPriorityRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * l7policies  l7policies
+    * l7policies  **参数解释**：批量更新转发策略优先级的请求参数。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class BatchUpdatePoliciesPriorityRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Gets l7policies
-    *  l7policies
+    *  **参数解释**：批量更新转发策略优先级的请求参数。  **约束限制**：不涉及
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\BatchUpdatePriorityRequestBody[]|null
     */
@@ -186,7 +186,7 @@ class BatchUpdatePoliciesPriorityRequestBody implements ModelInterface, ArrayAcc
     /**
     * Sets l7policies
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\BatchUpdatePriorityRequestBody[]|null $l7policies l7policies
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\BatchUpdatePriorityRequestBody[]|null $l7policies **参数解释**：批量更新转发策略优先级的请求参数。  **约束限制**：不涉及
     *
     * @return $this
     */

@@ -29,7 +29,7 @@ class TransitSubnet implements ModelInterface, ArrayAccess
     * virsubnetId  中转子网的子网ID
     * cidr  中转子网的子网网段
     * type  中转子网类型。取值范围：VPC
-    * status  中转子网状态。 取值范围： ACTIVE： 当前资源状态正常。 INACTIVE： 不可用。
+    * status  中转子网状态。 取值范围： - ACTIVE： 当前资源状态正常。 - INACTIVE： 不可用。
     * ipCount  当前中转子网下已分配的中转子网IP数量。
     * createdAt  中转子网创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  中转子网更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
@@ -65,7 +65,7 @@ class TransitSubnet implements ModelInterface, ArrayAccess
     * virsubnetId  中转子网的子网ID
     * cidr  中转子网的子网网段
     * type  中转子网类型。取值范围：VPC
-    * status  中转子网状态。 取值范围： ACTIVE： 当前资源状态正常。 INACTIVE： 不可用。
+    * status  中转子网状态。 取值范围： - ACTIVE： 当前资源状态正常。 - INACTIVE： 不可用。
     * ipCount  当前中转子网下已分配的中转子网IP数量。
     * createdAt  中转子网创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  中转子网更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
@@ -122,7 +122,7 @@ class TransitSubnet implements ModelInterface, ArrayAccess
     * virsubnetId  中转子网的子网ID
     * cidr  中转子网的子网网段
     * type  中转子网类型。取值范围：VPC
-    * status  中转子网状态。 取值范围： ACTIVE： 当前资源状态正常。 INACTIVE： 不可用。
+    * status  中转子网状态。 取值范围： - ACTIVE： 当前资源状态正常。 - INACTIVE： 不可用。
     * ipCount  当前中转子网下已分配的中转子网IP数量。
     * createdAt  中转子网创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  中转子网更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
@@ -158,7 +158,7 @@ class TransitSubnet implements ModelInterface, ArrayAccess
     * virsubnetId  中转子网的子网ID
     * cidr  中转子网的子网网段
     * type  中转子网类型。取值范围：VPC
-    * status  中转子网状态。 取值范围： ACTIVE： 当前资源状态正常。 INACTIVE： 不可用。
+    * status  中转子网状态。 取值范围： - ACTIVE： 当前资源状态正常。 - INACTIVE： 不可用。
     * ipCount  当前中转子网下已分配的中转子网IP数量。
     * createdAt  中转子网创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  中转子网更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
@@ -194,7 +194,7 @@ class TransitSubnet implements ModelInterface, ArrayAccess
     * virsubnetId  中转子网的子网ID
     * cidr  中转子网的子网网段
     * type  中转子网类型。取值范围：VPC
-    * status  中转子网状态。 取值范围： ACTIVE： 当前资源状态正常。 INACTIVE： 不可用。
+    * status  中转子网状态。 取值范围： - ACTIVE： 当前资源状态正常。 - INACTIVE： 不可用。
     * ipCount  当前中转子网下已分配的中转子网IP数量。
     * createdAt  中转子网创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  中转子网更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
@@ -673,7 +673,7 @@ class TransitSubnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  中转子网状态。 取值范围： ACTIVE： 当前资源状态正常。 INACTIVE： 不可用。
+    *  中转子网状态。 取值范围： - ACTIVE： 当前资源状态正常。 - INACTIVE： 不可用。
     *
     * @return string
     */
@@ -685,7 +685,7 @@ class TransitSubnet implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 中转子网状态。 取值范围： ACTIVE： 当前资源状态正常。 INACTIVE： 不可用。
+    * @param string $status 中转子网状态。 取值范围： - ACTIVE： 当前资源状态正常。 - INACTIVE： 不可用。
     *
     * @return $this
     */

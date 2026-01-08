@@ -20,7 +20,7 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     * domainId  IAM用户所属账号ID。
     * lastProjectId  IAM用户退出系统前，在控制台最后访问的项目ID。
     * name  IAM用户名。
@@ -50,7 +50,7 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     * domainId  IAM用户所属账号ID。
     * lastProjectId  IAM用户退出系统前，在控制台最后访问的项目ID。
     * name  IAM用户名。
@@ -101,7 +101,7 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     * domainId  IAM用户所属账号ID。
     * lastProjectId  IAM用户退出系统前，在控制台最后访问的项目ID。
     * name  IAM用户名。
@@ -131,7 +131,7 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     * domainId  IAM用户所属账号ID。
     * lastProjectId  IAM用户退出系统前，在控制台最后访问的项目ID。
     * name  IAM用户名。
@@ -161,7 +161,7 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     * domainId  IAM用户所属账号ID。
     * lastProjectId  IAM用户退出系统前，在控制台最后访问的项目ID。
     * name  IAM用户名。
@@ -302,7 +302,7 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwdStatus
-    *  IAM用户密码状态。true：需要修改密码，false：正常。
+    *  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     *
     * @return bool|null
     */
@@ -314,7 +314,7 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
     /**
     * Sets pwdStatus
     *
-    * @param bool|null $pwdStatus IAM用户密码状态。true：需要修改密码，false：正常。
+    * @param bool|null $pwdStatus IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     *
     * @return $this
     */

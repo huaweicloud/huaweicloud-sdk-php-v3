@@ -21,7 +21,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dnsVerifyType  DNS解析类型。
+    * dnsVerifyType  DNS解析类型。取值意义： - TXT：TXT记录
     * dnsVerifyName  DNS解析主机记录名称。
     * fileVerifyUrl  文件校验URL地址。
     * domainName  加速域名。
@@ -47,7 +47,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dnsVerifyType  DNS解析类型。
+    * dnsVerifyType  DNS解析类型。取值意义： - TXT：TXT记录
     * dnsVerifyName  DNS解析主机记录名称。
     * fileVerifyUrl  文件校验URL地址。
     * domainName  加速域名。
@@ -94,7 +94,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dnsVerifyType  DNS解析类型。
+    * dnsVerifyType  DNS解析类型。取值意义： - TXT：TXT记录
     * dnsVerifyName  DNS解析主机记录名称。
     * fileVerifyUrl  文件校验URL地址。
     * domainName  加速域名。
@@ -120,7 +120,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dnsVerifyType  DNS解析类型。
+    * dnsVerifyType  DNS解析类型。取值意义： - TXT：TXT记录
     * dnsVerifyName  DNS解析主机记录名称。
     * fileVerifyUrl  文件校验URL地址。
     * domainName  加速域名。
@@ -146,7 +146,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dnsVerifyType  DNS解析类型。
+    * dnsVerifyType  DNS解析类型。取值意义： - TXT：TXT记录
     * dnsVerifyName  DNS解析主机记录名称。
     * fileVerifyUrl  文件校验URL地址。
     * domainName  加速域名。
@@ -263,7 +263,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dnsVerifyType
-    *  DNS解析类型。
+    *  DNS解析类型。取值意义： - TXT：TXT记录
     *
     * @return string|null
     */
@@ -275,7 +275,7 @@ class ShowVerifyDomainOwnerInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dnsVerifyType
     *
-    * @param string|null $dnsVerifyType DNS解析类型。
+    * @param string|null $dnsVerifyType DNS解析类型。取值意义： - TXT：TXT记录
     *
     * @return $this
     */

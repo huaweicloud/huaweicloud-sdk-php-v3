@@ -246,6 +246,12 @@ class ListSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['offset'] === null) {
+            $invalidProperties[] = "'offset' can't be null";
+        }
+        if ($this->container['limit'] === null) {
+            $invalidProperties[] = "'limit' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -384,7 +390,7 @@ class ListSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
     * Gets offset
     *  **参数解释**: 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。 **约束限制**: 不涉及。 **取值范围**: 0 - 10000 **默认取值**: 0（偏移0条数据，表示从第一条数据开始查询）。
     *
-    * @return int|null
+    * @return int
     */
     public function getOffset()
     {
@@ -394,7 +400,7 @@ class ListSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset **参数解释**: 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。 **约束限制**: 不涉及。 **取值范围**: 0 - 10000 **默认取值**: 0（偏移0条数据，表示从第一条数据开始查询）。
+    * @param int $offset **参数解释**: 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。 **约束限制**: 不涉及。 **取值范围**: 0 - 10000 **默认取值**: 0（偏移0条数据，表示从第一条数据开始查询）。
     *
     * @return $this
     */
@@ -408,7 +414,7 @@ class ListSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
     * Gets limit
     *  **参数解释**: 查询记录数。 **约束限制**: 不涉及。 **取值范围**: 不能为负数，最小值为1，最大值为100。 **默认取值**: 10
     *
-    * @return int|null
+    * @return int
     */
     public function getLimit()
     {
@@ -418,7 +424,7 @@ class ListSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit **参数解释**: 查询记录数。 **约束限制**: 不涉及。 **取值范围**: 不能为负数，最小值为1，最大值为100。 **默认取值**: 10
+    * @param int $limit **参数解释**: 查询记录数。 **约束限制**: 不涉及。 **取值范围**: 不能为负数，最小值为1，最大值为100。 **默认取值**: 10
     *
     * @return $this
     */

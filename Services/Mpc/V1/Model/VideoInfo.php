@@ -26,6 +26,9 @@ class VideoInfo implements ModelInterface, ArrayAccess
     * bitrateBps  视频码率，单位: bit/s
     * frameRate  帧率。    取值范围：0或[5,60]，0表示自适应。    单位：帧每秒。    > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
     * codec  视频编码格式
+    * duration  视频流时长，单位：秒
+    * durationMs  视频流时长，单位：毫秒
+    * rotate  视频拍摄时的选择角度，单位：度。
     *
     * @var string[]
     */
@@ -35,7 +38,10 @@ class VideoInfo implements ModelInterface, ArrayAccess
             'bitrate' => 'int',
             'bitrateBps' => 'int',
             'frameRate' => 'int',
-            'codec' => 'string'
+            'codec' => 'string',
+            'duration' => 'string',
+            'durationMs' => 'string',
+            'rotate' => 'float'
     ];
 
     /**
@@ -46,6 +52,9 @@ class VideoInfo implements ModelInterface, ArrayAccess
     * bitrateBps  视频码率，单位: bit/s
     * frameRate  帧率。    取值范围：0或[5,60]，0表示自适应。    单位：帧每秒。    > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
     * codec  视频编码格式
+    * duration  视频流时长，单位：秒
+    * durationMs  视频流时长，单位：毫秒
+    * rotate  视频拍摄时的选择角度，单位：度。
     *
     * @var string[]
     */
@@ -55,7 +64,10 @@ class VideoInfo implements ModelInterface, ArrayAccess
         'bitrate' => null,
         'bitrateBps' => 'int64',
         'frameRate' => null,
-        'codec' => null
+        'codec' => null,
+        'duration' => null,
+        'durationMs' => null,
+        'rotate' => 'float'
     ];
 
     /**
@@ -87,6 +99,9 @@ class VideoInfo implements ModelInterface, ArrayAccess
     * bitrateBps  视频码率，单位: bit/s
     * frameRate  帧率。    取值范围：0或[5,60]，0表示自适应。    单位：帧每秒。    > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
     * codec  视频编码格式
+    * duration  视频流时长，单位：秒
+    * durationMs  视频流时长，单位：毫秒
+    * rotate  视频拍摄时的选择角度，单位：度。
     *
     * @var string[]
     */
@@ -96,7 +111,10 @@ class VideoInfo implements ModelInterface, ArrayAccess
             'bitrate' => 'bitrate',
             'bitrateBps' => 'bitrate_bps',
             'frameRate' => 'frame_rate',
-            'codec' => 'codec'
+            'codec' => 'codec',
+            'duration' => 'duration',
+            'durationMs' => 'duration_ms',
+            'rotate' => 'rotate'
     ];
 
     /**
@@ -107,6 +125,9 @@ class VideoInfo implements ModelInterface, ArrayAccess
     * bitrateBps  视频码率，单位: bit/s
     * frameRate  帧率。    取值范围：0或[5,60]，0表示自适应。    单位：帧每秒。    > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
     * codec  视频编码格式
+    * duration  视频流时长，单位：秒
+    * durationMs  视频流时长，单位：毫秒
+    * rotate  视频拍摄时的选择角度，单位：度。
     *
     * @var string[]
     */
@@ -116,7 +137,10 @@ class VideoInfo implements ModelInterface, ArrayAccess
             'bitrate' => 'setBitrate',
             'bitrateBps' => 'setBitrateBps',
             'frameRate' => 'setFrameRate',
-            'codec' => 'setCodec'
+            'codec' => 'setCodec',
+            'duration' => 'setDuration',
+            'durationMs' => 'setDurationMs',
+            'rotate' => 'setRotate'
     ];
 
     /**
@@ -127,6 +151,9 @@ class VideoInfo implements ModelInterface, ArrayAccess
     * bitrateBps  视频码率，单位: bit/s
     * frameRate  帧率。    取值范围：0或[5,60]，0表示自适应。    单位：帧每秒。    > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
     * codec  视频编码格式
+    * duration  视频流时长，单位：秒
+    * durationMs  视频流时长，单位：毫秒
+    * rotate  视频拍摄时的选择角度，单位：度。
     *
     * @var string[]
     */
@@ -136,7 +163,10 @@ class VideoInfo implements ModelInterface, ArrayAccess
             'bitrate' => 'getBitrate',
             'bitrateBps' => 'getBitrateBps',
             'frameRate' => 'getFrameRate',
-            'codec' => 'getCodec'
+            'codec' => 'getCodec',
+            'duration' => 'getDuration',
+            'durationMs' => 'getDurationMs',
+            'rotate' => 'getRotate'
     ];
 
     /**
@@ -203,6 +233,9 @@ class VideoInfo implements ModelInterface, ArrayAccess
         $this->container['bitrateBps'] = isset($data['bitrateBps']) ? $data['bitrateBps'] : null;
         $this->container['frameRate'] = isset($data['frameRate']) ? $data['frameRate'] : null;
         $this->container['codec'] = isset($data['codec']) ? $data['codec'] : null;
+        $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
+        $this->container['durationMs'] = isset($data['durationMs']) ? $data['durationMs'] : null;
+        $this->container['rotate'] = isset($data['rotate']) ? $data['rotate'] : null;
     }
 
     /**
@@ -248,6 +281,24 @@ class VideoInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['codec']) && (mb_strlen($this->container['codec']) < 0)) {
                 $invalidProperties[] = "invalid value for 'codec', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['duration']) && (mb_strlen($this->container['duration']) > 128)) {
+                $invalidProperties[] = "invalid value for 'duration', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['duration']) && (mb_strlen($this->container['duration']) < 0)) {
+                $invalidProperties[] = "invalid value for 'duration', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['durationMs']) && (mb_strlen($this->container['durationMs']) > 128)) {
+                $invalidProperties[] = "invalid value for 'durationMs', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['durationMs']) && (mb_strlen($this->container['durationMs']) < 0)) {
+                $invalidProperties[] = "invalid value for 'durationMs', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['rotate']) && ($this->container['rotate'] > 3.6E+2)) {
+                $invalidProperties[] = "invalid value for 'rotate', must be smaller than or equal to 3.6E+2.";
+            }
+            if (!is_null($this->container['rotate']) && ($this->container['rotate'] < 0)) {
+                $invalidProperties[] = "invalid value for 'rotate', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -404,6 +455,78 @@ class VideoInfo implements ModelInterface, ArrayAccess
     public function setCodec($codec)
     {
         $this->container['codec'] = $codec;
+        return $this;
+    }
+
+    /**
+    * Gets duration
+    *  视频流时长，单位：秒
+    *
+    * @return string|null
+    */
+    public function getDuration()
+    {
+        return $this->container['duration'];
+    }
+
+    /**
+    * Sets duration
+    *
+    * @param string|null $duration 视频流时长，单位：秒
+    *
+    * @return $this
+    */
+    public function setDuration($duration)
+    {
+        $this->container['duration'] = $duration;
+        return $this;
+    }
+
+    /**
+    * Gets durationMs
+    *  视频流时长，单位：毫秒
+    *
+    * @return string|null
+    */
+    public function getDurationMs()
+    {
+        return $this->container['durationMs'];
+    }
+
+    /**
+    * Sets durationMs
+    *
+    * @param string|null $durationMs 视频流时长，单位：毫秒
+    *
+    * @return $this
+    */
+    public function setDurationMs($durationMs)
+    {
+        $this->container['durationMs'] = $durationMs;
+        return $this;
+    }
+
+    /**
+    * Gets rotate
+    *  视频拍摄时的选择角度，单位：度。
+    *
+    * @return float|null
+    */
+    public function getRotate()
+    {
+        return $this->container['rotate'];
+    }
+
+    /**
+    * Sets rotate
+    *
+    * @param float|null $rotate 视频拍摄时的选择角度，单位：度。
+    *
+    * @return $this
+    */
+    public function setRotate($rotate)
+    {
+        $this->container['rotate'] = $rotate;
         return $this;
     }
 

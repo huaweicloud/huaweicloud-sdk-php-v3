@@ -33,7 +33,7 @@ class HealthMonitor implements ModelInterface, ArrayAccess
     * pools  **参数解释**：健康检查所在的后端服务器组ID列表。实际只会有一个后端服务器组ID。  **取值范围**：不涉及
     * projectId  **参数解释**：健康检查所在的项目ID。  **取值范围**：不涉及
     * timeout  **参数解释**：一次健康检查请求的超时时间。  **取值范围**：不涉及
-    * type  **参数解释**： 健康检查请求协议。  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS和GRPC。
+    * type  **参数解释**： 健康检查请求协议。  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS、GRPC[和GRPCS](tag:not_open)。
     * urlPath  **参数解释**：健康检查请求的请求路径。以\"/\"开头，默认为\"/\"。  **取值范围**：支持使用字母、数字和短划线（-）、正斜线（/）、半角句号（.）、百分号（%）、半角问号（?）、井号（#）和and（&）以及扩展字符集_;~!()*[]@$^:',+
     * createdAt  **参数解释**：创建时间。  **取值范围**：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,srg,fcs,dt,hk_tm)
     * updatedAt  **参数解释**： 更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,srg,fcs,dt,hk_tm)
@@ -75,7 +75,7 @@ class HealthMonitor implements ModelInterface, ArrayAccess
     * pools  **参数解释**：健康检查所在的后端服务器组ID列表。实际只会有一个后端服务器组ID。  **取值范围**：不涉及
     * projectId  **参数解释**：健康检查所在的项目ID。  **取值范围**：不涉及
     * timeout  **参数解释**：一次健康检查请求的超时时间。  **取值范围**：不涉及
-    * type  **参数解释**： 健康检查请求协议。  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS和GRPC。
+    * type  **参数解释**： 健康检查请求协议。  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS、GRPC[和GRPCS](tag:not_open)。
     * urlPath  **参数解释**：健康检查请求的请求路径。以\"/\"开头，默认为\"/\"。  **取值范围**：支持使用字母、数字和短划线（-）、正斜线（/）、半角句号（.）、百分号（%）、半角问号（?）、井号（#）和and（&）以及扩展字符集_;~!()*[]@$^:',+
     * createdAt  **参数解释**：创建时间。  **取值范围**：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,srg,fcs,dt,hk_tm)
     * updatedAt  **参数解释**： 更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,srg,fcs,dt,hk_tm)
@@ -138,7 +138,7 @@ class HealthMonitor implements ModelInterface, ArrayAccess
     * pools  **参数解释**：健康检查所在的后端服务器组ID列表。实际只会有一个后端服务器组ID。  **取值范围**：不涉及
     * projectId  **参数解释**：健康检查所在的项目ID。  **取值范围**：不涉及
     * timeout  **参数解释**：一次健康检查请求的超时时间。  **取值范围**：不涉及
-    * type  **参数解释**： 健康检查请求协议。  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS和GRPC。
+    * type  **参数解释**： 健康检查请求协议。  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS、GRPC[和GRPCS](tag:not_open)。
     * urlPath  **参数解释**：健康检查请求的请求路径。以\"/\"开头，默认为\"/\"。  **取值范围**：支持使用字母、数字和短划线（-）、正斜线（/）、半角句号（.）、百分号（%）、半角问号（?）、井号（#）和and（&）以及扩展字符集_;~!()*[]@$^:',+
     * createdAt  **参数解释**：创建时间。  **取值范围**：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,srg,fcs,dt,hk_tm)
     * updatedAt  **参数解释**： 更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,srg,fcs,dt,hk_tm)
@@ -180,7 +180,7 @@ class HealthMonitor implements ModelInterface, ArrayAccess
     * pools  **参数解释**：健康检查所在的后端服务器组ID列表。实际只会有一个后端服务器组ID。  **取值范围**：不涉及
     * projectId  **参数解释**：健康检查所在的项目ID。  **取值范围**：不涉及
     * timeout  **参数解释**：一次健康检查请求的超时时间。  **取值范围**：不涉及
-    * type  **参数解释**： 健康检查请求协议。  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS和GRPC。
+    * type  **参数解释**： 健康检查请求协议。  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS、GRPC[和GRPCS](tag:not_open)。
     * urlPath  **参数解释**：健康检查请求的请求路径。以\"/\"开头，默认为\"/\"。  **取值范围**：支持使用字母、数字和短划线（-）、正斜线（/）、半角句号（.）、百分号（%）、半角问号（?）、井号（#）和and（&）以及扩展字符集_;~!()*[]@$^:',+
     * createdAt  **参数解释**：创建时间。  **取值范围**：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,srg,fcs,dt,hk_tm)
     * updatedAt  **参数解释**： 更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,srg,fcs,dt,hk_tm)
@@ -222,7 +222,7 @@ class HealthMonitor implements ModelInterface, ArrayAccess
     * pools  **参数解释**：健康检查所在的后端服务器组ID列表。实际只会有一个后端服务器组ID。  **取值范围**：不涉及
     * projectId  **参数解释**：健康检查所在的项目ID。  **取值范围**：不涉及
     * timeout  **参数解释**：一次健康检查请求的超时时间。  **取值范围**：不涉及
-    * type  **参数解释**： 健康检查请求协议。  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS和GRPC。
+    * type  **参数解释**： 健康检查请求协议。  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS、GRPC[和GRPCS](tag:not_open)。
     * urlPath  **参数解释**：健康检查请求的请求路径。以\"/\"开头，默认为\"/\"。  **取值范围**：支持使用字母、数字和短划线（-）、正斜线（/）、半角句号（.）、百分号（%）、半角问号（?）、井号（#）和and（&）以及扩展字符集_;~!()*[]@$^:',+
     * createdAt  **参数解释**：创建时间。  **取值范围**：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,srg,fcs,dt,hk_tm)
     * updatedAt  **参数解释**： 更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,srg,fcs,dt,hk_tm)
@@ -737,7 +737,7 @@ class HealthMonitor implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**： 健康检查请求协议。  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS和GRPC。
+    *  **参数解释**： 健康检查请求协议。  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS、GRPC[和GRPCS](tag:not_open)。
     *
     * @return string
     */
@@ -749,7 +749,7 @@ class HealthMonitor implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type **参数解释**： 健康检查请求协议。  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS和GRPC。
+    * @param string $type **参数解释**： 健康检查请求协议。  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS、GRPC[和GRPCS](tag:not_open)。
     *
     * @return $this
     */

@@ -31,6 +31,7 @@ class BackupForList implements ModelInterface, ArrayAccess
     * size  备份大小，单位为KB。
     * datastore  datastore
     * associatedWithDdm  是否已被DDM实例关联。
+    * minDataVolumeCapacityForRestore  该备份源文件大小，用于该备份文件恢复到新实例时需要的最小磁盘空间大小。
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class BackupForList implements ModelInterface, ArrayAccess
             'type' => 'string',
             'size' => 'int',
             'datastore' => '\HuaweiCloud\SDK\Rds\V3\Model\BackupDatastore',
-            'associatedWithDdm' => 'bool'
+            'associatedWithDdm' => 'bool',
+            'minDataVolumeCapacityForRestore' => 'int'
     ];
 
     /**
@@ -61,6 +63,7 @@ class BackupForList implements ModelInterface, ArrayAccess
     * size  备份大小，单位为KB。
     * datastore  datastore
     * associatedWithDdm  是否已被DDM实例关联。
+    * minDataVolumeCapacityForRestore  该备份源文件大小，用于该备份文件恢复到新实例时需要的最小磁盘空间大小。
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class BackupForList implements ModelInterface, ArrayAccess
         'type' => null,
         'size' => 'int64',
         'datastore' => null,
-        'associatedWithDdm' => null
+        'associatedWithDdm' => null,
+        'minDataVolumeCapacityForRestore' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class BackupForList implements ModelInterface, ArrayAccess
     * size  备份大小，单位为KB。
     * datastore  datastore
     * associatedWithDdm  是否已被DDM实例关联。
+    * minDataVolumeCapacityForRestore  该备份源文件大小，用于该备份文件恢复到新实例时需要的最小磁盘空间大小。
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class BackupForList implements ModelInterface, ArrayAccess
             'type' => 'type',
             'size' => 'size',
             'datastore' => 'datastore',
-            'associatedWithDdm' => 'associated_with_ddm'
+            'associatedWithDdm' => 'associated_with_ddm',
+            'minDataVolumeCapacityForRestore' => 'min_data_volume_capacity_for_restore'
     ];
 
     /**
@@ -142,6 +148,7 @@ class BackupForList implements ModelInterface, ArrayAccess
     * size  备份大小，单位为KB。
     * datastore  datastore
     * associatedWithDdm  是否已被DDM实例关联。
+    * minDataVolumeCapacityForRestore  该备份源文件大小，用于该备份文件恢复到新实例时需要的最小磁盘空间大小。
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class BackupForList implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'size' => 'setSize',
             'datastore' => 'setDatastore',
-            'associatedWithDdm' => 'setAssociatedWithDdm'
+            'associatedWithDdm' => 'setAssociatedWithDdm',
+            'minDataVolumeCapacityForRestore' => 'setMinDataVolumeCapacityForRestore'
     ];
 
     /**
@@ -172,6 +180,7 @@ class BackupForList implements ModelInterface, ArrayAccess
     * size  备份大小，单位为KB。
     * datastore  datastore
     * associatedWithDdm  是否已被DDM实例关联。
+    * minDataVolumeCapacityForRestore  该备份源文件大小，用于该备份文件恢复到新实例时需要的最小磁盘空间大小。
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class BackupForList implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'size' => 'getSize',
             'datastore' => 'getDatastore',
-            'associatedWithDdm' => 'getAssociatedWithDdm'
+            'associatedWithDdm' => 'getAssociatedWithDdm',
+            'minDataVolumeCapacityForRestore' => 'getMinDataVolumeCapacityForRestore'
     ];
 
     /**
@@ -296,6 +306,7 @@ class BackupForList implements ModelInterface, ArrayAccess
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['datastore'] = isset($data['datastore']) ? $data['datastore'] : null;
         $this->container['associatedWithDdm'] = isset($data['associatedWithDdm']) ? $data['associatedWithDdm'] : null;
+        $this->container['minDataVolumeCapacityForRestore'] = isset($data['minDataVolumeCapacityForRestore']) ? $data['minDataVolumeCapacityForRestore'] : null;
     }
 
     /**
@@ -624,6 +635,30 @@ class BackupForList implements ModelInterface, ArrayAccess
     public function setAssociatedWithDdm($associatedWithDdm)
     {
         $this->container['associatedWithDdm'] = $associatedWithDdm;
+        return $this;
+    }
+
+    /**
+    * Gets minDataVolumeCapacityForRestore
+    *  该备份源文件大小，用于该备份文件恢复到新实例时需要的最小磁盘空间大小。
+    *
+    * @return int|null
+    */
+    public function getMinDataVolumeCapacityForRestore()
+    {
+        return $this->container['minDataVolumeCapacityForRestore'];
+    }
+
+    /**
+    * Sets minDataVolumeCapacityForRestore
+    *
+    * @param int|null $minDataVolumeCapacityForRestore 该备份源文件大小，用于该备份文件恢复到新实例时需要的最小磁盘空间大小。
+    *
+    * @return $this
+    */
+    public function setMinDataVolumeCapacityForRestore($minDataVolumeCapacityForRestore)
+    {
+        $this->container['minDataVolumeCapacityForRestore'] = $minDataVolumeCapacityForRestore;
         return $this;
     }
 

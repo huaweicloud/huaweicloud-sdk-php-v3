@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BackupPolicyInfo implements ModelInterface, ArrayAccess
+class BackupPolicyInfoOption implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,7 +16,7 @@ class BackupPolicyInfo implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BackupPolicyInfo';
+    protected static $openAPIModelName = 'BackupPolicyInfoOption';
 
     /**
     * Array of property to type mappings. Used for (de)serialization

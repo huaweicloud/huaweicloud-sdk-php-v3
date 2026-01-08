@@ -33,8 +33,8 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     * combRelation  combRelation
     * relatedEpIds  当资源匹配规则为匹配企业项目时，指定的企业项目列表
     * enterpriseProjectIdAndTags  匹配企业项目或匹配标签参数
-    * status  **参数解释** 指标告警状态。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
-    * eventStatus  **参数解释** 事件告警状态。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
+    * status  **参数解释** 指标告警状态。 **取值范围** 枚举值。 - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
+    * eventStatus  **参数解释** 事件告警状态。 **取值范围** 枚举值。 - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
     * resourceStatistics  resourceStatistics
     * resourceLevel  **参数解释** 资源等级。 **取值范围** 枚举值。 - product: 云产品 - dimension: 子维度
     * productNames  **参数解释** 创建资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。 **取值范围** 长度[0,10240]个字符
@@ -79,8 +79,8 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     * combRelation  combRelation
     * relatedEpIds  当资源匹配规则为匹配企业项目时，指定的企业项目列表
     * enterpriseProjectIdAndTags  匹配企业项目或匹配标签参数
-    * status  **参数解释** 指标告警状态。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
-    * eventStatus  **参数解释** 事件告警状态。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
+    * status  **参数解释** 指标告警状态。 **取值范围** 枚举值。 - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
+    * eventStatus  **参数解释** 事件告警状态。 **取值范围** 枚举值。 - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
     * resourceStatistics  resourceStatistics
     * resourceLevel  **参数解释** 资源等级。 **取值范围** 枚举值。 - product: 云产品 - dimension: 子维度
     * productNames  **参数解释** 创建资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。 **取值范围** 长度[0,10240]个字符
@@ -146,8 +146,8 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     * combRelation  combRelation
     * relatedEpIds  当资源匹配规则为匹配企业项目时，指定的企业项目列表
     * enterpriseProjectIdAndTags  匹配企业项目或匹配标签参数
-    * status  **参数解释** 指标告警状态。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
-    * eventStatus  **参数解释** 事件告警状态。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
+    * status  **参数解释** 指标告警状态。 **取值范围** 枚举值。 - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
+    * eventStatus  **参数解释** 事件告警状态。 **取值范围** 枚举值。 - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
     * resourceStatistics  resourceStatistics
     * resourceLevel  **参数解释** 资源等级。 **取值范围** 枚举值。 - product: 云产品 - dimension: 子维度
     * productNames  **参数解释** 创建资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。 **取值范围** 长度[0,10240]个字符
@@ -192,8 +192,8 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     * combRelation  combRelation
     * relatedEpIds  当资源匹配规则为匹配企业项目时，指定的企业项目列表
     * enterpriseProjectIdAndTags  匹配企业项目或匹配标签参数
-    * status  **参数解释** 指标告警状态。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
-    * eventStatus  **参数解释** 事件告警状态。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
+    * status  **参数解释** 指标告警状态。 **取值范围** 枚举值。 - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
+    * eventStatus  **参数解释** 事件告警状态。 **取值范围** 枚举值。 - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
     * resourceStatistics  resourceStatistics
     * resourceLevel  **参数解释** 资源等级。 **取值范围** 枚举值。 - product: 云产品 - dimension: 子维度
     * productNames  **参数解释** 创建资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。 **取值范围** 长度[0,10240]个字符
@@ -238,8 +238,8 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     * combRelation  combRelation
     * relatedEpIds  当资源匹配规则为匹配企业项目时，指定的企业项目列表
     * enterpriseProjectIdAndTags  匹配企业项目或匹配标签参数
-    * status  **参数解释** 指标告警状态。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
-    * eventStatus  **参数解释** 事件告警状态。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
+    * status  **参数解释** 指标告警状态。 **取值范围** 枚举值。 - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
+    * eventStatus  **参数解释** 事件告警状态。 **取值范围** 枚举值。 - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
     * resourceStatistics  resourceStatistics
     * resourceLevel  **参数解释** 资源等级。 **取值范围** 枚举值。 - product: 云产品 - dimension: 子维度
     * productNames  **参数解释** 创建资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。 **取值范围** 长度[0,10240]个字符
@@ -790,7 +790,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释** 指标告警状态。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
+    *  **参数解释** 指标告警状态。 **取值范围** 枚举值。 - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
     *
     * @return string|null
     */
@@ -802,7 +802,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释** 指标告警状态。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
+    * @param string|null $status **参数解释** 指标告警状态。 **取值范围** 枚举值。 - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
     *
     * @return $this
     */
@@ -814,7 +814,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventStatus
-    *  **参数解释** 事件告警状态。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
+    *  **参数解释** 事件告警状态。 **取值范围** 枚举值。 - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
     *
     * @return string|null
     */
@@ -826,7 +826,7 @@ class ShowResourceGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets eventStatus
     *
-    * @param string|null $eventStatus **参数解释** 事件告警状态。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
+    * @param string|null $eventStatus **参数解释** 事件告警状态。 **取值范围** 枚举值。 - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
     *
     * @return $this
     */

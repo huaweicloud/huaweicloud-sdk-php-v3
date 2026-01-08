@@ -29,14 +29,14 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     * cname  加速域名对应的CNAME。
     * sources  源站信息。
     * domainOriginHost  domainOriginHost
-    * httpsStatus  是否开启HTTPS加速。
+    * httpsStatus  是否开启HTTPS加速。取值意义： - 0：未开启 - 1：开启
     * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
-    * rangeStatus  range状态，off：关闭，on：开启。
-    * followStatus  follow302状态，off：关闭，on：开启。
-    * originStatus  是否暂停源站回源（off代表关闭 on代表开启）。
+    * rangeStatus  range状态。取值意义： - on：开启 - off：关闭
+    * followStatus  follow302状态。取值意义： - on：开启 - off：关闭
+    * originStatus  是否暂停源站回。取值意义： - on：开启 - off：关闭
     * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
     *
     * @var string[]
@@ -73,14 +73,14 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     * cname  加速域名对应的CNAME。
     * sources  源站信息。
     * domainOriginHost  domainOriginHost
-    * httpsStatus  是否开启HTTPS加速。
+    * httpsStatus  是否开启HTTPS加速。取值意义： - 0：未开启 - 1：开启
     * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
-    * rangeStatus  range状态，off：关闭，on：开启。
-    * followStatus  follow302状态，off：关闭，on：开启。
-    * originStatus  是否暂停源站回源（off代表关闭 on代表开启）。
+    * rangeStatus  range状态。取值意义： - on：开启 - off：关闭
+    * followStatus  follow302状态。取值意义： - on：开启 - off：关闭
+    * originStatus  是否暂停源站回。取值意义： - on：开启 - off：关闭
     * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
     *
     * @var string[]
@@ -138,14 +138,14 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     * cname  加速域名对应的CNAME。
     * sources  源站信息。
     * domainOriginHost  domainOriginHost
-    * httpsStatus  是否开启HTTPS加速。
+    * httpsStatus  是否开启HTTPS加速。取值意义： - 0：未开启 - 1：开启
     * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
-    * rangeStatus  range状态，off：关闭，on：开启。
-    * followStatus  follow302状态，off：关闭，on：开启。
-    * originStatus  是否暂停源站回源（off代表关闭 on代表开启）。
+    * rangeStatus  range状态。取值意义： - on：开启 - off：关闭
+    * followStatus  follow302状态。取值意义： - on：开启 - off：关闭
+    * originStatus  是否暂停源站回。取值意义： - on：开启 - off：关闭
     * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
     *
     * @var string[]
@@ -182,14 +182,14 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     * cname  加速域名对应的CNAME。
     * sources  源站信息。
     * domainOriginHost  domainOriginHost
-    * httpsStatus  是否开启HTTPS加速。
+    * httpsStatus  是否开启HTTPS加速。取值意义： - 0：未开启 - 1：开启
     * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
-    * rangeStatus  range状态，off：关闭，on：开启。
-    * followStatus  follow302状态，off：关闭，on：开启。
-    * originStatus  是否暂停源站回源（off代表关闭 on代表开启）。
+    * rangeStatus  range状态。取值意义： - on：开启 - off：关闭
+    * followStatus  follow302状态。取值意义： - on：开启 - off：关闭
+    * originStatus  是否暂停源站回。取值意义： - on：开启 - off：关闭
     * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
     *
     * @var string[]
@@ -226,14 +226,14 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     * cname  加速域名对应的CNAME。
     * sources  源站信息。
     * domainOriginHost  domainOriginHost
-    * httpsStatus  是否开启HTTPS加速。
+    * httpsStatus  是否开启HTTPS加速。取值意义： - 0：未开启 - 1：开启
     * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
-    * rangeStatus  range状态，off：关闭，on：开启。
-    * followStatus  follow302状态，off：关闭，on：开启。
-    * originStatus  是否暂停源站回源（off代表关闭 on代表开启）。
+    * rangeStatus  range状态。取值意义： - on：开启 - off：关闭
+    * followStatus  follow302状态。取值意义： - on：开启 - off：关闭
+    * originStatus  是否暂停源站回。取值意义： - on：开启 - off：关闭
     * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
     *
     * @var string[]
@@ -577,7 +577,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets httpsStatus
-    *  是否开启HTTPS加速。
+    *  是否开启HTTPS加速。取值意义： - 0：未开启 - 1：开启
     *
     * @return int|null
     */
@@ -589,7 +589,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     /**
     * Sets httpsStatus
     *
-    * @param int|null $httpsStatus 是否开启HTTPS加速。
+    * @param int|null $httpsStatus 是否开启HTTPS加速。取值意义： - 0：未开启 - 1：开启
     *
     * @return $this
     */
@@ -697,7 +697,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets rangeStatus
-    *  range状态，off：关闭，on：开启。
+    *  range状态。取值意义： - on：开启 - off：关闭
     *
     * @return string|null
     */
@@ -709,7 +709,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     /**
     * Sets rangeStatus
     *
-    * @param string|null $rangeStatus range状态，off：关闭，on：开启。
+    * @param string|null $rangeStatus range状态。取值意义： - on：开启 - off：关闭
     *
     * @return $this
     */
@@ -721,7 +721,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets followStatus
-    *  follow302状态，off：关闭，on：开启。
+    *  follow302状态。取值意义： - on：开启 - off：关闭
     *
     * @return string|null
     */
@@ -733,7 +733,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     /**
     * Sets followStatus
     *
-    * @param string|null $followStatus follow302状态，off：关闭，on：开启。
+    * @param string|null $followStatus follow302状态。取值意义： - on：开启 - off：关闭
     *
     * @return $this
     */
@@ -745,7 +745,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets originStatus
-    *  是否暂停源站回源（off代表关闭 on代表开启）。
+    *  是否暂停源站回。取值意义： - on：开启 - off：关闭
     *
     * @return string|null
     */
@@ -757,7 +757,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     /**
     * Sets originStatus
     *
-    * @param string|null $originStatus 是否暂停源站回源（off代表关闭 on代表开启）。
+    * @param string|null $originStatus 是否暂停源站回。取值意义： - on：开启 - off：关闭
     *
     * @return $this
     */

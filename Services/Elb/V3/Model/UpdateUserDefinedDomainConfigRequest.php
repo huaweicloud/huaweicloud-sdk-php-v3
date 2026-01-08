@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\SecMaster\V1\Model;
+namespace HuaweiCloud\SDK\Elb\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateGenericActionRequest implements ModelInterface, ArrayAccess
+class UpdateUserDefinedDomainConfigRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,29 +16,29 @@ class CreateGenericActionRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateGenericActionRequest';
+    protected static $openAPIModelName = 'UpdateUserDefinedDomainConfigRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * contentType  application/json;charset=UTF-8
+    * loadbalancerId  负载均衡器ID。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'contentType' => 'string',
-            'body' => '\HuaweiCloud\SDK\SecMaster\V1\Model\GenericActionRequestBody'
+            'loadbalancerId' => 'string',
+            'body' => '\HuaweiCloud\SDK\Elb\V3\Model\UpdateUserDefinedDomainConfigRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * contentType  application/json;charset=UTF-8
+    * loadbalancerId  负载均衡器ID。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'contentType' => null,
+        'loadbalancerId' => null,
         'body' => null
     ];
 
@@ -65,37 +65,37 @@ class CreateGenericActionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * contentType  application/json;charset=UTF-8
+    * loadbalancerId  负载均衡器ID。
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'contentType' => 'content-type',
+            'loadbalancerId' => 'loadbalancer_id',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * contentType  application/json;charset=UTF-8
+    * loadbalancerId  负载均衡器ID。
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'contentType' => 'setContentType',
+            'loadbalancerId' => 'setLoadbalancerId',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * contentType  application/json;charset=UTF-8
+    * loadbalancerId  负载均衡器ID。
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'contentType' => 'getContentType',
+            'loadbalancerId' => 'getLoadbalancerId',
             'body' => 'getBody'
     ];
 
@@ -157,7 +157,7 @@ class CreateGenericActionRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
+        $this->container['loadbalancerId'] = isset($data['loadbalancerId']) ? $data['loadbalancerId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -169,15 +169,9 @@ class CreateGenericActionRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['contentType'] === null) {
-            $invalidProperties[] = "'contentType' can't be null";
+        if ($this->container['loadbalancerId'] === null) {
+            $invalidProperties[] = "'loadbalancerId' can't be null";
         }
-            if ((mb_strlen($this->container['contentType']) > 64)) {
-                $invalidProperties[] = "invalid value for 'contentType', the character length must be smaller than or equal to 64.";
-            }
-            if ((mb_strlen($this->container['contentType']) < 1)) {
-                $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -193,26 +187,26 @@ class CreateGenericActionRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets contentType
-    *  application/json;charset=UTF-8
+    * Gets loadbalancerId
+    *  负载均衡器ID。
     *
     * @return string
     */
-    public function getContentType()
+    public function getLoadbalancerId()
     {
-        return $this->container['contentType'];
+        return $this->container['loadbalancerId'];
     }
 
     /**
-    * Sets contentType
+    * Sets loadbalancerId
     *
-    * @param string $contentType application/json;charset=UTF-8
+    * @param string $loadbalancerId 负载均衡器ID。
     *
     * @return $this
     */
-    public function setContentType($contentType)
+    public function setLoadbalancerId($loadbalancerId)
     {
-        $this->container['contentType'] = $contentType;
+        $this->container['loadbalancerId'] = $loadbalancerId;
         return $this;
     }
 
@@ -220,7 +214,7 @@ class CreateGenericActionRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\GenericActionRequestBody|null
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\UpdateUserDefinedDomainConfigRequestBody|null
     */
     public function getBody()
     {
@@ -230,7 +224,7 @@ class CreateGenericActionRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\GenericActionRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\UpdateUserDefinedDomainConfigRequestBody|null $body body
     *
     * @return $this
     */

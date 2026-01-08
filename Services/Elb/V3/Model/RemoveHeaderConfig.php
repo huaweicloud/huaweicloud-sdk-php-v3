@@ -20,7 +20,7 @@ class RemoveHeaderConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  **参数解释**：被移除的请求头的参数名。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
+    * key  **参数解释**：被移除的请求头、响应头的参数名。  **约束限制**：不能移除以下请求头参数： connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-elb-ip、x-forwarded-port、x-forwarded-elb-id、x-forwarded-elb-vip、x-real-ip、x-forwarded-proto、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class RemoveHeaderConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  **参数解释**：被移除的请求头的参数名。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
+    * key  **参数解释**：被移除的请求头、响应头的参数名。  **约束限制**：不能移除以下请求头参数： connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-elb-ip、x-forwarded-port、x-forwarded-elb-id、x-forwarded-elb-vip、x-real-ip、x-forwarded-proto、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class RemoveHeaderConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  **参数解释**：被移除的请求头的参数名。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
+    * key  **参数解释**：被移除的请求头、响应头的参数名。  **约束限制**：不能移除以下请求头参数： connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-elb-ip、x-forwarded-port、x-forwarded-elb-id、x-forwarded-elb-vip、x-real-ip、x-forwarded-proto、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class RemoveHeaderConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  **参数解释**：被移除的请求头的参数名。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
+    * key  **参数解释**：被移除的请求头、响应头的参数名。  **约束限制**：不能移除以下请求头参数： connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-elb-ip、x-forwarded-port、x-forwarded-elb-id、x-forwarded-elb-vip、x-real-ip、x-forwarded-proto、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class RemoveHeaderConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  **参数解释**：被移除的请求头的参数名。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
+    * key  **参数解释**：被移除的请求头、响应头的参数名。  **约束限制**：不能移除以下请求头参数： connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-elb-ip、x-forwarded-port、x-forwarded-elb-id、x-forwarded-elb-vip、x-real-ip、x-forwarded-proto、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class RemoveHeaderConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  **参数解释**：被移除的请求头的参数名。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
+    *  **参数解释**：被移除的请求头、响应头的参数名。  **约束限制**：不能移除以下请求头参数： connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-elb-ip、x-forwarded-port、x-forwarded-elb-id、x-forwarded-elb-vip、x-real-ip、x-forwarded-proto、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class RemoveHeaderConfig implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key **参数解释**：被移除的请求头的参数名。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
+    * @param string $key **参数解释**：被移除的请求头、响应头的参数名。  **约束限制**：不能移除以下请求头参数： connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-elb-ip、x-forwarded-port、x-forwarded-elb-id、x-forwarded-elb-vip、x-real-ip、x-forwarded-proto、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
     *
     * @return $this
     */

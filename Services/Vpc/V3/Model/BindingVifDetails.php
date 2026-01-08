@@ -20,9 +20,9 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * primaryInterface  参数解释：表示该网卡是否为云服务器的主网卡。取值范围：true，主网卡；false，非主网卡。
-    * portFilter  参数解释：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。取值范围：true，提供端口过滤特性；false，未提供端口过滤特性。
-    * ovsHybridPlug  参数解释：是否为ovs/bridge混合模式。取值范围：true，ovs/bridge混合模式；false，非ovs/bridge混合模式。
+    * primaryInterface  **参数解释**： 表示该网卡是否为云服务器的主网卡。 **取值范围**： - true：该网卡是云服务器的主网卡。 - false：该网卡不是云服务器的主网卡。
+    * portFilter  **参数解释**： 表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。 **取值范围**： - true：提供端口过滤特性。 - false：未提供端口过滤特性。
+    * ovsHybridPlug  **参数解释**： 是否为ovs/bridge混合模式。 **取值范围**： - true：ovs/bridge混合模式。 - false：非ovs/bridge混合模式。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * primaryInterface  参数解释：表示该网卡是否为云服务器的主网卡。取值范围：true，主网卡；false，非主网卡。
-    * portFilter  参数解释：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。取值范围：true，提供端口过滤特性；false，未提供端口过滤特性。
-    * ovsHybridPlug  参数解释：是否为ovs/bridge混合模式。取值范围：true，ovs/bridge混合模式；false，非ovs/bridge混合模式。
+    * primaryInterface  **参数解释**： 表示该网卡是否为云服务器的主网卡。 **取值范围**： - true：该网卡是云服务器的主网卡。 - false：该网卡不是云服务器的主网卡。
+    * portFilter  **参数解释**： 表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。 **取值范围**： - true：提供端口过滤特性。 - false：未提供端口过滤特性。
+    * ovsHybridPlug  **参数解释**： 是否为ovs/bridge混合模式。 **取值范围**： - true：ovs/bridge混合模式。 - false：非ovs/bridge混合模式。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * primaryInterface  参数解释：表示该网卡是否为云服务器的主网卡。取值范围：true，主网卡；false，非主网卡。
-    * portFilter  参数解释：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。取值范围：true，提供端口过滤特性；false，未提供端口过滤特性。
-    * ovsHybridPlug  参数解释：是否为ovs/bridge混合模式。取值范围：true，ovs/bridge混合模式；false，非ovs/bridge混合模式。
+    * primaryInterface  **参数解释**： 表示该网卡是否为云服务器的主网卡。 **取值范围**： - true：该网卡是云服务器的主网卡。 - false：该网卡不是云服务器的主网卡。
+    * portFilter  **参数解释**： 表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。 **取值范围**： - true：提供端口过滤特性。 - false：未提供端口过滤特性。
+    * ovsHybridPlug  **参数解释**： 是否为ovs/bridge混合模式。 **取值范围**： - true：ovs/bridge混合模式。 - false：非ovs/bridge混合模式。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * primaryInterface  参数解释：表示该网卡是否为云服务器的主网卡。取值范围：true，主网卡；false，非主网卡。
-    * portFilter  参数解释：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。取值范围：true，提供端口过滤特性；false，未提供端口过滤特性。
-    * ovsHybridPlug  参数解释：是否为ovs/bridge混合模式。取值范围：true，ovs/bridge混合模式；false，非ovs/bridge混合模式。
+    * primaryInterface  **参数解释**： 表示该网卡是否为云服务器的主网卡。 **取值范围**： - true：该网卡是云服务器的主网卡。 - false：该网卡不是云服务器的主网卡。
+    * portFilter  **参数解释**： 表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。 **取值范围**： - true：提供端口过滤特性。 - false：未提供端口过滤特性。
+    * ovsHybridPlug  **参数解释**： 是否为ovs/bridge混合模式。 **取值范围**： - true：ovs/bridge混合模式。 - false：非ovs/bridge混合模式。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * primaryInterface  参数解释：表示该网卡是否为云服务器的主网卡。取值范围：true，主网卡；false，非主网卡。
-    * portFilter  参数解释：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。取值范围：true，提供端口过滤特性；false，未提供端口过滤特性。
-    * ovsHybridPlug  参数解释：是否为ovs/bridge混合模式。取值范围：true，ovs/bridge混合模式；false，非ovs/bridge混合模式。
+    * primaryInterface  **参数解释**： 表示该网卡是否为云服务器的主网卡。 **取值范围**： - true：该网卡是云服务器的主网卡。 - false：该网卡不是云服务器的主网卡。
+    * portFilter  **参数解释**： 表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。 **取值范围**： - true：提供端口过滤特性。 - false：未提供端口过滤特性。
+    * ovsHybridPlug  **参数解释**： 是否为ovs/bridge混合模式。 **取值范围**： - true：ovs/bridge混合模式。 - false：非ovs/bridge混合模式。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets primaryInterface
-    *  参数解释：表示该网卡是否为云服务器的主网卡。取值范围：true，主网卡；false，非主网卡。
+    *  **参数解释**： 表示该网卡是否为云服务器的主网卡。 **取值范围**： - true：该网卡是云服务器的主网卡。 - false：该网卡不是云服务器的主网卡。
     *
     * @return bool|null
     */
@@ -208,7 +208,7 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
     /**
     * Sets primaryInterface
     *
-    * @param bool|null $primaryInterface 参数解释：表示该网卡是否为云服务器的主网卡。取值范围：true，主网卡；false，非主网卡。
+    * @param bool|null $primaryInterface **参数解释**： 表示该网卡是否为云服务器的主网卡。 **取值范围**： - true：该网卡是云服务器的主网卡。 - false：该网卡不是云服务器的主网卡。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets portFilter
-    *  参数解释：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。取值范围：true，提供端口过滤特性；false，未提供端口过滤特性。
+    *  **参数解释**： 表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。 **取值范围**： - true：提供端口过滤特性。 - false：未提供端口过滤特性。
     *
     * @return bool|null
     */
@@ -232,7 +232,7 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
     /**
     * Sets portFilter
     *
-    * @param bool|null $portFilter 参数解释：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。取值范围：true，提供端口过滤特性；false，未提供端口过滤特性。
+    * @param bool|null $portFilter **参数解释**： 表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。 **取值范围**： - true：提供端口过滤特性。 - false：未提供端口过滤特性。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets ovsHybridPlug
-    *  参数解释：是否为ovs/bridge混合模式。取值范围：true，ovs/bridge混合模式；false，非ovs/bridge混合模式。
+    *  **参数解释**： 是否为ovs/bridge混合模式。 **取值范围**： - true：ovs/bridge混合模式。 - false：非ovs/bridge混合模式。
     *
     * @return bool|null
     */
@@ -256,7 +256,7 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
     /**
     * Sets ovsHybridPlug
     *
-    * @param bool|null $ovsHybridPlug 参数解释：是否为ovs/bridge混合模式。取值范围：true，ovs/bridge混合模式；false，非ovs/bridge混合模式。
+    * @param bool|null $ovsHybridPlug **参数解释**： 是否为ovs/bridge混合模式。 **取值范围**： - true：ovs/bridge混合模式。 - false：非ovs/bridge混合模式。
     *
     * @return $this
     */

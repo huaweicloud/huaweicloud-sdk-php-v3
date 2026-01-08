@@ -27,16 +27,16 @@ class Domains implements ModelInterface, ArrayAccess
     * cname  加速域名对应的CNAME。
     * sources  源站配置。
     * domainOriginHost  domainOriginHost
-    * httpsStatus  是否开启HTTPS加速。
+    * httpsStatus  是否开启HTTPS加速。取值意义： - 0：未开启 - 1：开启
     * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
     * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
     * serviceArea  华为云CDN提供的加速服务范围，包含：mainland_china中国大陆、outside_mainland_china中国大陆境外、global全球。
-    * rangeStatus  Range回源状态。
-    * followStatus  回源跟随状态。
-    * originStatus  是否暂停源站回源（off代表关闭 on代表开启）。
+    * rangeStatus  Range回源状态。取值意义： - on：开启 - off：关闭
+    * followStatus  回源跟随状态。取值意义： - on：开启 - off：关闭
+    * originStatus  是否暂停源站回源。取值意义： - on：开启 - off：关闭
     * bannedReason  域名禁用原因。
     * lockedReason  域名锁定原因。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
@@ -77,16 +77,16 @@ class Domains implements ModelInterface, ArrayAccess
     * cname  加速域名对应的CNAME。
     * sources  源站配置。
     * domainOriginHost  domainOriginHost
-    * httpsStatus  是否开启HTTPS加速。
+    * httpsStatus  是否开启HTTPS加速。取值意义： - 0：未开启 - 1：开启
     * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
     * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
     * serviceArea  华为云CDN提供的加速服务范围，包含：mainland_china中国大陆、outside_mainland_china中国大陆境外、global全球。
-    * rangeStatus  Range回源状态。
-    * followStatus  回源跟随状态。
-    * originStatus  是否暂停源站回源（off代表关闭 on代表开启）。
+    * rangeStatus  Range回源状态。取值意义： - on：开启 - off：关闭
+    * followStatus  回源跟随状态。取值意义： - on：开启 - off：关闭
+    * originStatus  是否暂停源站回源。取值意义： - on：开启 - off：关闭
     * bannedReason  域名禁用原因。
     * lockedReason  域名锁定原因。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
@@ -148,16 +148,16 @@ class Domains implements ModelInterface, ArrayAccess
     * cname  加速域名对应的CNAME。
     * sources  源站配置。
     * domainOriginHost  domainOriginHost
-    * httpsStatus  是否开启HTTPS加速。
+    * httpsStatus  是否开启HTTPS加速。取值意义： - 0：未开启 - 1：开启
     * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
     * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
     * serviceArea  华为云CDN提供的加速服务范围，包含：mainland_china中国大陆、outside_mainland_china中国大陆境外、global全球。
-    * rangeStatus  Range回源状态。
-    * followStatus  回源跟随状态。
-    * originStatus  是否暂停源站回源（off代表关闭 on代表开启）。
+    * rangeStatus  Range回源状态。取值意义： - on：开启 - off：关闭
+    * followStatus  回源跟随状态。取值意义： - on：开启 - off：关闭
+    * originStatus  是否暂停源站回源。取值意义： - on：开启 - off：关闭
     * bannedReason  域名禁用原因。
     * lockedReason  域名锁定原因。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
@@ -198,16 +198,16 @@ class Domains implements ModelInterface, ArrayAccess
     * cname  加速域名对应的CNAME。
     * sources  源站配置。
     * domainOriginHost  domainOriginHost
-    * httpsStatus  是否开启HTTPS加速。
+    * httpsStatus  是否开启HTTPS加速。取值意义： - 0：未开启 - 1：开启
     * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
     * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
     * serviceArea  华为云CDN提供的加速服务范围，包含：mainland_china中国大陆、outside_mainland_china中国大陆境外、global全球。
-    * rangeStatus  Range回源状态。
-    * followStatus  回源跟随状态。
-    * originStatus  是否暂停源站回源（off代表关闭 on代表开启）。
+    * rangeStatus  Range回源状态。取值意义： - on：开启 - off：关闭
+    * followStatus  回源跟随状态。取值意义： - on：开启 - off：关闭
+    * originStatus  是否暂停源站回源。取值意义： - on：开启 - off：关闭
     * bannedReason  域名禁用原因。
     * lockedReason  域名锁定原因。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
@@ -248,16 +248,16 @@ class Domains implements ModelInterface, ArrayAccess
     * cname  加速域名对应的CNAME。
     * sources  源站配置。
     * domainOriginHost  domainOriginHost
-    * httpsStatus  是否开启HTTPS加速。
+    * httpsStatus  是否开启HTTPS加速。取值意义： - 0：未开启 - 1：开启
     * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
     * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
     * serviceArea  华为云CDN提供的加速服务范围，包含：mainland_china中国大陆、outside_mainland_china中国大陆境外、global全球。
-    * rangeStatus  Range回源状态。
-    * followStatus  回源跟随状态。
-    * originStatus  是否暂停源站回源（off代表关闭 on代表开启）。
+    * rangeStatus  Range回源状态。取值意义： - on：开启 - off：关闭
+    * followStatus  回源跟随状态。取值意义： - on：开启 - off：关闭
+    * originStatus  是否暂停源站回源。取值意义： - on：开启 - off：关闭
     * bannedReason  域名禁用原因。
     * lockedReason  域名锁定原因。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
@@ -587,7 +587,7 @@ class Domains implements ModelInterface, ArrayAccess
 
     /**
     * Gets httpsStatus
-    *  是否开启HTTPS加速。
+    *  是否开启HTTPS加速。取值意义： - 0：未开启 - 1：开启
     *
     * @return int|null
     */
@@ -599,7 +599,7 @@ class Domains implements ModelInterface, ArrayAccess
     /**
     * Sets httpsStatus
     *
-    * @param int|null $httpsStatus 是否开启HTTPS加速。
+    * @param int|null $httpsStatus 是否开启HTTPS加速。取值意义： - 0：未开启 - 1：开启
     *
     * @return $this
     */
@@ -755,7 +755,7 @@ class Domains implements ModelInterface, ArrayAccess
 
     /**
     * Gets rangeStatus
-    *  Range回源状态。
+    *  Range回源状态。取值意义： - on：开启 - off：关闭
     *
     * @return string|null
     */
@@ -767,7 +767,7 @@ class Domains implements ModelInterface, ArrayAccess
     /**
     * Sets rangeStatus
     *
-    * @param string|null $rangeStatus Range回源状态。
+    * @param string|null $rangeStatus Range回源状态。取值意义： - on：开启 - off：关闭
     *
     * @return $this
     */
@@ -779,7 +779,7 @@ class Domains implements ModelInterface, ArrayAccess
 
     /**
     * Gets followStatus
-    *  回源跟随状态。
+    *  回源跟随状态。取值意义： - on：开启 - off：关闭
     *
     * @return string|null
     */
@@ -791,7 +791,7 @@ class Domains implements ModelInterface, ArrayAccess
     /**
     * Sets followStatus
     *
-    * @param string|null $followStatus 回源跟随状态。
+    * @param string|null $followStatus 回源跟随状态。取值意义： - on：开启 - off：关闭
     *
     * @return $this
     */
@@ -803,7 +803,7 @@ class Domains implements ModelInterface, ArrayAccess
 
     /**
     * Gets originStatus
-    *  是否暂停源站回源（off代表关闭 on代表开启）。
+    *  是否暂停源站回源。取值意义： - on：开启 - off：关闭
     *
     * @return string|null
     */
@@ -815,7 +815,7 @@ class Domains implements ModelInterface, ArrayAccess
     /**
     * Sets originStatus
     *
-    * @param string|null $originStatus 是否暂停源站回源（off代表关闭 on代表开启）。
+    * @param string|null $originStatus 是否暂停源站回源。取值意义： - on：开启 - off：关闭
     *
     * @return $this
     */

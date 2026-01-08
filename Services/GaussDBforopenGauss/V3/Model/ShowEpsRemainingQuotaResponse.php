@@ -21,28 +21,28 @@ class ShowEpsRemainingQuotaResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * epsQuotaRemaining  **参数解释**: 剩余企业项目配额组。
+    * epsRemainingQuotas  **参数解释**: 剩余企业项目配额组。
     * jobId  **参数解释**: 任务ID。 **取值范围**: 不涉及。
     * totalCount  **参数解释**: 返回的企业项目个数。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'epsQuotaRemaining' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\EpsRemainingQuotaResult[]',
+            'epsRemainingQuotas' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\EpsRemainingQuotaResult[]',
             'jobId' => 'string',
             'totalCount' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * epsQuotaRemaining  **参数解释**: 剩余企业项目配额组。
+    * epsRemainingQuotas  **参数解释**: 剩余企业项目配额组。
     * jobId  **参数解释**: 任务ID。 **取值范围**: 不涉及。
     * totalCount  **参数解释**: 返回的企业项目个数。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'epsQuotaRemaining' => null,
+        'epsRemainingQuotas' => null,
         'jobId' => null,
         'totalCount' => null
     ];
@@ -70,42 +70,42 @@ class ShowEpsRemainingQuotaResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * epsQuotaRemaining  **参数解释**: 剩余企业项目配额组。
+    * epsRemainingQuotas  **参数解释**: 剩余企业项目配额组。
     * jobId  **参数解释**: 任务ID。 **取值范围**: 不涉及。
     * totalCount  **参数解释**: 返回的企业项目个数。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'epsQuotaRemaining' => 'eps_quota_remaining',
+            'epsRemainingQuotas' => 'eps_remaining_quotas',
             'jobId' => 'job_id',
             'totalCount' => 'total_count'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * epsQuotaRemaining  **参数解释**: 剩余企业项目配额组。
+    * epsRemainingQuotas  **参数解释**: 剩余企业项目配额组。
     * jobId  **参数解释**: 任务ID。 **取值范围**: 不涉及。
     * totalCount  **参数解释**: 返回的企业项目个数。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'epsQuotaRemaining' => 'setEpsQuotaRemaining',
+            'epsRemainingQuotas' => 'setEpsRemainingQuotas',
             'jobId' => 'setJobId',
             'totalCount' => 'setTotalCount'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * epsQuotaRemaining  **参数解释**: 剩余企业项目配额组。
+    * epsRemainingQuotas  **参数解释**: 剩余企业项目配额组。
     * jobId  **参数解释**: 任务ID。 **取值范围**: 不涉及。
     * totalCount  **参数解释**: 返回的企业项目个数。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'epsQuotaRemaining' => 'getEpsQuotaRemaining',
+            'epsRemainingQuotas' => 'getEpsRemainingQuotas',
             'jobId' => 'getJobId',
             'totalCount' => 'getTotalCount'
     ];
@@ -168,7 +168,7 @@ class ShowEpsRemainingQuotaResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['epsQuotaRemaining'] = isset($data['epsQuotaRemaining']) ? $data['epsQuotaRemaining'] : null;
+        $this->container['epsRemainingQuotas'] = isset($data['epsRemainingQuotas']) ? $data['epsRemainingQuotas'] : null;
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
     }
@@ -196,26 +196,26 @@ class ShowEpsRemainingQuotaResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets epsQuotaRemaining
+    * Gets epsRemainingQuotas
     *  **参数解释**: 剩余企业项目配额组。
     *
     * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\EpsRemainingQuotaResult[]|null
     */
-    public function getEpsQuotaRemaining()
+    public function getEpsRemainingQuotas()
     {
-        return $this->container['epsQuotaRemaining'];
+        return $this->container['epsRemainingQuotas'];
     }
 
     /**
-    * Sets epsQuotaRemaining
+    * Sets epsRemainingQuotas
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\EpsRemainingQuotaResult[]|null $epsQuotaRemaining **参数解释**: 剩余企业项目配额组。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\EpsRemainingQuotaResult[]|null $epsRemainingQuotas **参数解释**: 剩余企业项目配额组。
     *
     * @return $this
     */
-    public function setEpsQuotaRemaining($epsQuotaRemaining)
+    public function setEpsRemainingQuotas($epsRemainingQuotas)
     {
-        $this->container['epsQuotaRemaining'] = $epsQuotaRemaining;
+        $this->container['epsRemainingQuotas'] = $epsRemainingQuotas;
         return $this;
     }
 

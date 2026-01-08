@@ -20,7 +20,7 @@ class BatchUpdateWidgetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  待修改的监控视图列表
+    * body  **参数解释** 待修改的监控视图列表 **约束限制** 包含的监控视图对象个数为[1,50]
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchUpdateWidgetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  待修改的监控视图列表
+    * body  **参数解释** 待修改的监控视图列表 **约束限制** 包含的监控视图对象个数为[1,50]
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchUpdateWidgetsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  待修改的监控视图列表
+    * body  **参数解释** 待修改的监控视图列表 **约束限制** 包含的监控视图对象个数为[1,50]
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchUpdateWidgetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  待修改的监控视图列表
+    * body  **参数解释** 待修改的监控视图列表 **约束限制** 包含的监控视图对象个数为[1,50]
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchUpdateWidgetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  待修改的监控视图列表
+    * body  **参数解释** 待修改的监控视图列表 **约束限制** 包含的监控视图对象个数为[1,50]
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class BatchUpdateWidgetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
-    *  待修改的监控视图列表
+    *  **参数解释** 待修改的监控视图列表 **约束限制** 包含的监控视图对象个数为[1,50]
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfo[]|null
     */
@@ -186,7 +186,7 @@ class BatchUpdateWidgetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfo[]|null $body 待修改的监控视图列表
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\UpdateWidgetInfo[]|null $body **参数解释** 待修改的监控视图列表 **约束限制** 包含的监控视图对象个数为[1,50]
     *
     * @return $this
     */

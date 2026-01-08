@@ -26,8 +26,8 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
     * id  私网NAT网关实例的ID。
     * name  私网NAT网关实例的名字。
     * description  私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
-    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    * spec  私网NAT网关实例的规格。 取值为： - Small：小型 - Medium：中型 - Large：大型 - Extra-large：超大型 - Extra-xlarge：企业型
+    * status  私网NAT网关实例的状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     * vpcId  私网NAT网关实例所属VPC的ID。
     * virsubnetId  私网NAT网关实例所属子网的ID。
     * enterpriseProjectId  企业项目ID。创建私网NAT网关实例时，关联的企业项目ID。
@@ -56,8 +56,8 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
     * id  私网NAT网关实例的ID。
     * name  私网NAT网关实例的名字。
     * description  私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
-    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    * spec  私网NAT网关实例的规格。 取值为： - Small：小型 - Medium：中型 - Large：大型 - Extra-large：超大型 - Extra-xlarge：企业型
+    * status  私网NAT网关实例的状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     * vpcId  私网NAT网关实例所属VPC的ID。
     * virsubnetId  私网NAT网关实例所属子网的ID。
     * enterpriseProjectId  企业项目ID。创建私网NAT网关实例时，关联的企业项目ID。
@@ -107,8 +107,8 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
     * id  私网NAT网关实例的ID。
     * name  私网NAT网关实例的名字。
     * description  私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
-    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    * spec  私网NAT网关实例的规格。 取值为： - Small：小型 - Medium：中型 - Large：大型 - Extra-large：超大型 - Extra-xlarge：企业型
+    * status  私网NAT网关实例的状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     * vpcId  私网NAT网关实例所属VPC的ID。
     * virsubnetId  私网NAT网关实例所属子网的ID。
     * enterpriseProjectId  企业项目ID。创建私网NAT网关实例时，关联的企业项目ID。
@@ -137,8 +137,8 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
     * id  私网NAT网关实例的ID。
     * name  私网NAT网关实例的名字。
     * description  私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
-    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    * spec  私网NAT网关实例的规格。 取值为： - Small：小型 - Medium：中型 - Large：大型 - Extra-large：超大型 - Extra-xlarge：企业型
+    * status  私网NAT网关实例的状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     * vpcId  私网NAT网关实例所属VPC的ID。
     * virsubnetId  私网NAT网关实例所属子网的ID。
     * enterpriseProjectId  企业项目ID。创建私网NAT网关实例时，关联的企业项目ID。
@@ -167,8 +167,8 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
     * id  私网NAT网关实例的ID。
     * name  私网NAT网关实例的名字。
     * description  私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
-    * spec  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
-    * status  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    * spec  私网NAT网关实例的规格。 取值为： - Small：小型 - Medium：中型 - Large：大型 - Extra-large：超大型 - Extra-xlarge：企业型
+    * status  私网NAT网关实例的状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     * vpcId  私网NAT网关实例所属VPC的ID。
     * virsubnetId  私网NAT网关实例所属子网的ID。
     * enterpriseProjectId  企业项目ID。创建私网NAT网关实例时，关联的企业项目ID。
@@ -478,7 +478,7 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets spec
-    *  私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
+    *  私网NAT网关实例的规格。 取值为： - Small：小型 - Medium：中型 - Large：大型 - Extra-large：超大型 - Extra-xlarge：企业型
     *
     * @return string[]|null
     */
@@ -490,7 +490,7 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets spec
     *
-    * @param string[]|null $spec 私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
+    * @param string[]|null $spec 私网NAT网关实例的规格。 取值为： - Small：小型 - Medium：中型 - Large：大型 - Extra-large：超大型 - Extra-xlarge：企业型
     *
     * @return $this
     */
@@ -502,7 +502,7 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    *  私网NAT网关实例的状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     *
     * @return string[]|null
     */
@@ -514,7 +514,7 @@ class ListPrivateNatsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status 私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    * @param string[]|null $status 私网NAT网关实例的状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     *
     * @return $this
     */

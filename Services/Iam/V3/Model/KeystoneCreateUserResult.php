@@ -23,7 +23,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
     * domainId  IAM用户所属账号ID。
     * name  IAM用户名。
     * description  IAM用户描述信息。
-    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常；如果密码未设置，此字段可能不返回。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     * passwordExpiresAt  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
     * links  links
     * id  IAM用户ID。
@@ -47,7 +47,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
     * domainId  IAM用户所属账号ID。
     * name  IAM用户名。
     * description  IAM用户描述信息。
-    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常；如果密码未设置，此字段可能不返回。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     * passwordExpiresAt  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
     * links  links
     * id  IAM用户ID。
@@ -92,7 +92,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
     * domainId  IAM用户所属账号ID。
     * name  IAM用户名。
     * description  IAM用户描述信息。
-    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常；如果密码未设置，此字段可能不返回。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     * passwordExpiresAt  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
     * links  links
     * id  IAM用户ID。
@@ -116,7 +116,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
     * domainId  IAM用户所属账号ID。
     * name  IAM用户名。
     * description  IAM用户描述信息。
-    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常；如果密码未设置，此字段可能不返回。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     * passwordExpiresAt  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
     * links  links
     * id  IAM用户ID。
@@ -140,7 +140,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
     * domainId  IAM用户所属账号ID。
     * name  IAM用户名。
     * description  IAM用户描述信息。
-    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常；如果密码未设置，此字段可能不返回。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     * passwordExpiresAt  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
     * links  links
     * id  IAM用户ID。
@@ -341,7 +341,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwdStatus
-    *  IAM用户密码状态。true：需要修改密码，false：正常；如果密码未设置，此字段可能不返回。
+    *  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     *
     * @return bool|null
     */
@@ -353,7 +353,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
     /**
     * Sets pwdStatus
     *
-    * @param bool|null $pwdStatus IAM用户密码状态。true：需要修改密码，false：正常；如果密码未设置，此字段可能不返回。
+    * @param bool|null $pwdStatus IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     *
     * @return $this
     */

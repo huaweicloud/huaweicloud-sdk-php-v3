@@ -21,22 +21,22 @@ class ShowRedistributionParametersResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * redistributionParameters  **参数解释**: 参数列表信息。
+    * expansionParameters  **参数解释**: 参数列表信息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'redistributionParameters' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\RedistributionParameterResult[]'
+            'expansionParameters' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\RedistributionParameterResult[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * redistributionParameters  **参数解释**: 参数列表信息。
+    * expansionParameters  **参数解释**: 参数列表信息。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'redistributionParameters' => null
+        'expansionParameters' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class ShowRedistributionParametersResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * redistributionParameters  **参数解释**: 参数列表信息。
+    * expansionParameters  **参数解释**: 参数列表信息。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'redistributionParameters' => 'redistribution_parameters'
+            'expansionParameters' => 'expansion_parameters'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * redistributionParameters  **参数解释**: 参数列表信息。
+    * expansionParameters  **参数解释**: 参数列表信息。
     *
     * @var string[]
     */
     protected static $setters = [
-            'redistributionParameters' => 'setRedistributionParameters'
+            'expansionParameters' => 'setExpansionParameters'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * redistributionParameters  **参数解释**: 参数列表信息。
+    * expansionParameters  **参数解释**: 参数列表信息。
     *
     * @var string[]
     */
     protected static $getters = [
-            'redistributionParameters' => 'getRedistributionParameters'
+            'expansionParameters' => 'getExpansionParameters'
     ];
 
     /**
@@ -148,7 +148,7 @@ class ShowRedistributionParametersResponse implements ModelInterface, ArrayAcces
     */
     public function __construct(array $data = null)
     {
-        $this->container['redistributionParameters'] = isset($data['redistributionParameters']) ? $data['redistributionParameters'] : null;
+        $this->container['expansionParameters'] = isset($data['expansionParameters']) ? $data['expansionParameters'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class ShowRedistributionParametersResponse implements ModelInterface, ArrayAcces
     }
 
     /**
-    * Gets redistributionParameters
+    * Gets expansionParameters
     *  **参数解释**: 参数列表信息。
     *
     * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\RedistributionParameterResult[]|null
     */
-    public function getRedistributionParameters()
+    public function getExpansionParameters()
     {
-        return $this->container['redistributionParameters'];
+        return $this->container['expansionParameters'];
     }
 
     /**
-    * Sets redistributionParameters
+    * Sets expansionParameters
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\RedistributionParameterResult[]|null $redistributionParameters **参数解释**: 参数列表信息。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\RedistributionParameterResult[]|null $expansionParameters **参数解释**: 参数列表信息。
     *
     * @return $this
     */
-    public function setRedistributionParameters($redistributionParameters)
+    public function setExpansionParameters($expansionParameters)
     {
-        $this->container['redistributionParameters'] = $redistributionParameters;
+        $this->container['expansionParameters'] = $expansionParameters;
         return $this;
     }
 

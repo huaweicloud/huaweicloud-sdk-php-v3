@@ -20,11 +20,11 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
+    * adminStateUp  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
     * floatingIpAddress  弹性公网的IP地址。
     * globalEipAddress  全域弹性公网的IP地址。
-    * status  DNAT规则的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 EIP_FREEZED: EIP冻结 INACTIVE: 不可用
+    * status  DNAT规则的状态。 取值为:  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     * floatingIpId  弹性公网IP的id。
     * globalEipId  全域弹性公网IP的id。
     * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
@@ -62,11 +62,11 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
+    * adminStateUp  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
     * floatingIpAddress  弹性公网的IP地址。
     * globalEipAddress  全域弹性公网的IP地址。
-    * status  DNAT规则的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 EIP_FREEZED: EIP冻结 INACTIVE: 不可用
+    * status  DNAT规则的状态。 取值为:  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     * floatingIpId  弹性公网IP的id。
     * globalEipId  全域弹性公网IP的id。
     * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
@@ -125,11 +125,11 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
+    * adminStateUp  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
     * floatingIpAddress  弹性公网的IP地址。
     * globalEipAddress  全域弹性公网的IP地址。
-    * status  DNAT规则的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 EIP_FREEZED: EIP冻结 INACTIVE: 不可用
+    * status  DNAT规则的状态。 取值为:  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     * floatingIpId  弹性公网IP的id。
     * globalEipId  全域弹性公网IP的id。
     * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
@@ -167,11 +167,11 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
+    * adminStateUp  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
     * floatingIpAddress  弹性公网的IP地址。
     * globalEipAddress  全域弹性公网的IP地址。
-    * status  DNAT规则的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 EIP_FREEZED: EIP冻结 INACTIVE: 不可用
+    * status  DNAT规则的状态。 取值为:  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     * floatingIpId  弹性公网IP的id。
     * globalEipId  全域弹性公网IP的id。
     * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
@@ -209,11 +209,11 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
+    * adminStateUp  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
     * floatingIpAddress  弹性公网的IP地址。
     * globalEipAddress  全域弹性公网的IP地址。
-    * status  DNAT规则的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 EIP_FREEZED: EIP冻结 INACTIVE: 不可用
+    * status  DNAT规则的状态。 取值为:  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     * floatingIpId  弹性公网IP的id。
     * globalEipId  全域弹性公网IP的id。
     * internalServicePort  虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
@@ -433,7 +433,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets adminStateUp
-    *  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
+    *  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     *
     * @return bool|null
     */
@@ -445,7 +445,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets adminStateUp
     *
-    * @param bool|null $adminStateUp 解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
+    * @param bool|null $adminStateUp 解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     *
     * @return $this
     */
@@ -529,7 +529,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  DNAT规则的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 EIP_FREEZED: EIP冻结 INACTIVE: 不可用
+    *  DNAT规则的状态。 取值为:  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     *
     * @return string[]|null
     */
@@ -541,7 +541,7 @@ class ListNatGatewayDnatRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status DNAT规则的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 EIP_FREEZED: EIP冻结 INACTIVE: 不可用
+    * @param string[]|null $status DNAT规则的状态。 取值为:  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     *
     * @return $this
     */

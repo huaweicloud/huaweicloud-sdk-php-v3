@@ -20,9 +20,9 @@ class UpdateDashboardRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dashboardName  自定义监控看板名称
-    * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
-    * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
+    * dashboardName  **参数解释** 自定义监控看板名称 **约束限制** 不涉及 **取值范围** 字符串包含中文字符，字母，数字，下划线（_），横线（-）长度为[1,128]个字符 **默认取值** 不涉及
+    * isFavorite  **参数解释** 监控看板是否标记收藏 **约束限制** 不涉及 **取值范围** - true 收藏 - false 未收藏 **默认取值** 不涉及
+    * rowWidgetNum  **参数解释** 监控视图展示模式 **约束限制** 不涉及 **取值范围** - 0 自定义坐标 - 1 每行一个 - 2 每行两个 - 3 每行三个 - 4 每行四个 **默认取值** 不涉及
     * extendInfo  extendInfo
     *
     * @var string[]
@@ -36,9 +36,9 @@ class UpdateDashboardRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dashboardName  自定义监控看板名称
-    * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
-    * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
+    * dashboardName  **参数解释** 自定义监控看板名称 **约束限制** 不涉及 **取值范围** 字符串包含中文字符，字母，数字，下划线（_），横线（-）长度为[1,128]个字符 **默认取值** 不涉及
+    * isFavorite  **参数解释** 监控看板是否标记收藏 **约束限制** 不涉及 **取值范围** - true 收藏 - false 未收藏 **默认取值** 不涉及
+    * rowWidgetNum  **参数解释** 监控视图展示模式 **约束限制** 不涉及 **取值范围** - 0 自定义坐标 - 1 每行一个 - 2 每行两个 - 3 每行三个 - 4 每行四个 **默认取值** 不涉及
     * extendInfo  extendInfo
     *
     * @var string[]
@@ -73,9 +73,9 @@ class UpdateDashboardRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dashboardName  自定义监控看板名称
-    * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
-    * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
+    * dashboardName  **参数解释** 自定义监控看板名称 **约束限制** 不涉及 **取值范围** 字符串包含中文字符，字母，数字，下划线（_），横线（-）长度为[1,128]个字符 **默认取值** 不涉及
+    * isFavorite  **参数解释** 监控看板是否标记收藏 **约束限制** 不涉及 **取值范围** - true 收藏 - false 未收藏 **默认取值** 不涉及
+    * rowWidgetNum  **参数解释** 监控视图展示模式 **约束限制** 不涉及 **取值范围** - 0 自定义坐标 - 1 每行一个 - 2 每行两个 - 3 每行三个 - 4 每行四个 **默认取值** 不涉及
     * extendInfo  extendInfo
     *
     * @var string[]
@@ -89,9 +89,9 @@ class UpdateDashboardRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dashboardName  自定义监控看板名称
-    * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
-    * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
+    * dashboardName  **参数解释** 自定义监控看板名称 **约束限制** 不涉及 **取值范围** 字符串包含中文字符，字母，数字，下划线（_），横线（-）长度为[1,128]个字符 **默认取值** 不涉及
+    * isFavorite  **参数解释** 监控看板是否标记收藏 **约束限制** 不涉及 **取值范围** - true 收藏 - false 未收藏 **默认取值** 不涉及
+    * rowWidgetNum  **参数解释** 监控视图展示模式 **约束限制** 不涉及 **取值范围** - 0 自定义坐标 - 1 每行一个 - 2 每行两个 - 3 每行三个 - 4 每行四个 **默认取值** 不涉及
     * extendInfo  extendInfo
     *
     * @var string[]
@@ -105,9 +105,9 @@ class UpdateDashboardRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dashboardName  自定义监控看板名称
-    * isFavorite  监控看板是否标记收藏, true: 收藏, false: 未收藏
-    * rowWidgetNum  监控视图展示模式，0表示自定义坐标，1代表每行一个
+    * dashboardName  **参数解释** 自定义监控看板名称 **约束限制** 不涉及 **取值范围** 字符串包含中文字符，字母，数字，下划线（_），横线（-）长度为[1,128]个字符 **默认取值** 不涉及
+    * isFavorite  **参数解释** 监控看板是否标记收藏 **约束限制** 不涉及 **取值范围** - true 收藏 - false 未收藏 **默认取值** 不涉及
+    * rowWidgetNum  **参数解释** 监控视图展示模式 **约束限制** 不涉及 **取值范围** - 0 自定义坐标 - 1 每行一个 - 2 每行两个 - 3 每行三个 - 4 每行四个 **默认取值** 不涉及
     * extendInfo  extendInfo
     *
     * @var string[]
@@ -225,7 +225,7 @@ class UpdateDashboardRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardName
-    *  自定义监控看板名称
+    *  **参数解释** 自定义监控看板名称 **约束限制** 不涉及 **取值范围** 字符串包含中文字符，字母，数字，下划线（_），横线（-）长度为[1,128]个字符 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -237,7 +237,7 @@ class UpdateDashboardRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardName
     *
-    * @param string|null $dashboardName 自定义监控看板名称
+    * @param string|null $dashboardName **参数解释** 自定义监控看板名称 **约束限制** 不涉及 **取值范围** 字符串包含中文字符，字母，数字，下划线（_），横线（-）长度为[1,128]个字符 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -249,7 +249,7 @@ class UpdateDashboardRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets isFavorite
-    *  监控看板是否标记收藏, true: 收藏, false: 未收藏
+    *  **参数解释** 监控看板是否标记收藏 **约束限制** 不涉及 **取值范围** - true 收藏 - false 未收藏 **默认取值** 不涉及
     *
     * @return bool|null
     */
@@ -261,7 +261,7 @@ class UpdateDashboardRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets isFavorite
     *
-    * @param bool|null $isFavorite 监控看板是否标记收藏, true: 收藏, false: 未收藏
+    * @param bool|null $isFavorite **参数解释** 监控看板是否标记收藏 **约束限制** 不涉及 **取值范围** - true 收藏 - false 未收藏 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -273,7 +273,7 @@ class UpdateDashboardRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets rowWidgetNum
-    *  监控视图展示模式，0表示自定义坐标，1代表每行一个
+    *  **参数解释** 监控视图展示模式 **约束限制** 不涉及 **取值范围** - 0 自定义坐标 - 1 每行一个 - 2 每行两个 - 3 每行三个 - 4 每行四个 **默认取值** 不涉及
     *
     * @return int
     */
@@ -285,7 +285,7 @@ class UpdateDashboardRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets rowWidgetNum
     *
-    * @param int $rowWidgetNum 监控视图展示模式，0表示自定义坐标，1代表每行一个
+    * @param int $rowWidgetNum **参数解释** 监控视图展示模式 **约束限制** 不涉及 **取值范围** - 0 自定义坐标 - 1 每行一个 - 2 每行两个 - 3 每行三个 - 4 每行四个 **默认取值** 不涉及
     *
     * @return $this
     */

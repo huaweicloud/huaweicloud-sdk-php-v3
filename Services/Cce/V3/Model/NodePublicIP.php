@@ -23,13 +23,17 @@ class NodePublicIP implements ModelInterface, ArrayAccess
     * ids  **参数解释**： 已有的弹性IP的ID列表。数量不得大于待创建节点数 > 若已配置ids参数，则无需配置count和eip参数 **约束限制**： 该参数仅给节点使用
     * count  **参数解释**： 要动态创建的弹性IP个数。 > count参数与eip参数必须同时配置。 **约束限制**： 该参数仅给节点使用
     * eip  eip
+    * iptype  **参数解释**： 表示节点所属分区。分区可以选择中心云[或者[边缘小站](https://support.huaweicloud.com/usermanual-cloudpond/ies_02_0401.html)。](tag:hws)[或者[边缘小站](https://support.huaweicloud.com/intl/zh-cn/usermanual-cloudpond/ies_02_0401.html)。](tag:hws_hk) 仅开启了对分布式云支持的Turbo集群支持指定该字段。 弹性IP类型，取值请参见申请EIP接口中publicip.type说明。 [链接请参见[申请EIP](https://support.huaweicloud.com/api-eip/eip_api_0001.html)](tag:hws) [链接请参见[申请EIP](https://support.huaweicloud.com/intl/zh-cn/api-eip/eip_api_0001.html)](tag:hws_hk) **约束限制**： 该参数仅给节点池使用
+    * bandwidth  bandwidth
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'ids' => 'string[]',
             'count' => 'int',
-            'eip' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeEIPSpec'
+            'eip' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeEIPSpec',
+            'iptype' => 'string',
+            'bandwidth' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeBandwidth'
     ];
 
     /**
@@ -37,13 +41,17 @@ class NodePublicIP implements ModelInterface, ArrayAccess
     * ids  **参数解释**： 已有的弹性IP的ID列表。数量不得大于待创建节点数 > 若已配置ids参数，则无需配置count和eip参数 **约束限制**： 该参数仅给节点使用
     * count  **参数解释**： 要动态创建的弹性IP个数。 > count参数与eip参数必须同时配置。 **约束限制**： 该参数仅给节点使用
     * eip  eip
+    * iptype  **参数解释**： 表示节点所属分区。分区可以选择中心云[或者[边缘小站](https://support.huaweicloud.com/usermanual-cloudpond/ies_02_0401.html)。](tag:hws)[或者[边缘小站](https://support.huaweicloud.com/intl/zh-cn/usermanual-cloudpond/ies_02_0401.html)。](tag:hws_hk) 仅开启了对分布式云支持的Turbo集群支持指定该字段。 弹性IP类型，取值请参见申请EIP接口中publicip.type说明。 [链接请参见[申请EIP](https://support.huaweicloud.com/api-eip/eip_api_0001.html)](tag:hws) [链接请参见[申请EIP](https://support.huaweicloud.com/intl/zh-cn/api-eip/eip_api_0001.html)](tag:hws_hk) **约束限制**： 该参数仅给节点池使用
+    * bandwidth  bandwidth
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'ids' => null,
         'count' => 'int32',
-        'eip' => null
+        'eip' => null,
+        'iptype' => null,
+        'bandwidth' => null
     ];
 
     /**
@@ -72,13 +80,17 @@ class NodePublicIP implements ModelInterface, ArrayAccess
     * ids  **参数解释**： 已有的弹性IP的ID列表。数量不得大于待创建节点数 > 若已配置ids参数，则无需配置count和eip参数 **约束限制**： 该参数仅给节点使用
     * count  **参数解释**： 要动态创建的弹性IP个数。 > count参数与eip参数必须同时配置。 **约束限制**： 该参数仅给节点使用
     * eip  eip
+    * iptype  **参数解释**： 表示节点所属分区。分区可以选择中心云[或者[边缘小站](https://support.huaweicloud.com/usermanual-cloudpond/ies_02_0401.html)。](tag:hws)[或者[边缘小站](https://support.huaweicloud.com/intl/zh-cn/usermanual-cloudpond/ies_02_0401.html)。](tag:hws_hk) 仅开启了对分布式云支持的Turbo集群支持指定该字段。 弹性IP类型，取值请参见申请EIP接口中publicip.type说明。 [链接请参见[申请EIP](https://support.huaweicloud.com/api-eip/eip_api_0001.html)](tag:hws) [链接请参见[申请EIP](https://support.huaweicloud.com/intl/zh-cn/api-eip/eip_api_0001.html)](tag:hws_hk) **约束限制**： 该参数仅给节点池使用
+    * bandwidth  bandwidth
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'ids' => 'ids',
             'count' => 'count',
-            'eip' => 'eip'
+            'eip' => 'eip',
+            'iptype' => 'iptype',
+            'bandwidth' => 'bandwidth'
     ];
 
     /**
@@ -86,13 +98,17 @@ class NodePublicIP implements ModelInterface, ArrayAccess
     * ids  **参数解释**： 已有的弹性IP的ID列表。数量不得大于待创建节点数 > 若已配置ids参数，则无需配置count和eip参数 **约束限制**： 该参数仅给节点使用
     * count  **参数解释**： 要动态创建的弹性IP个数。 > count参数与eip参数必须同时配置。 **约束限制**： 该参数仅给节点使用
     * eip  eip
+    * iptype  **参数解释**： 表示节点所属分区。分区可以选择中心云[或者[边缘小站](https://support.huaweicloud.com/usermanual-cloudpond/ies_02_0401.html)。](tag:hws)[或者[边缘小站](https://support.huaweicloud.com/intl/zh-cn/usermanual-cloudpond/ies_02_0401.html)。](tag:hws_hk) 仅开启了对分布式云支持的Turbo集群支持指定该字段。 弹性IP类型，取值请参见申请EIP接口中publicip.type说明。 [链接请参见[申请EIP](https://support.huaweicloud.com/api-eip/eip_api_0001.html)](tag:hws) [链接请参见[申请EIP](https://support.huaweicloud.com/intl/zh-cn/api-eip/eip_api_0001.html)](tag:hws_hk) **约束限制**： 该参数仅给节点池使用
+    * bandwidth  bandwidth
     *
     * @var string[]
     */
     protected static $setters = [
             'ids' => 'setIds',
             'count' => 'setCount',
-            'eip' => 'setEip'
+            'eip' => 'setEip',
+            'iptype' => 'setIptype',
+            'bandwidth' => 'setBandwidth'
     ];
 
     /**
@@ -100,13 +116,17 @@ class NodePublicIP implements ModelInterface, ArrayAccess
     * ids  **参数解释**： 已有的弹性IP的ID列表。数量不得大于待创建节点数 > 若已配置ids参数，则无需配置count和eip参数 **约束限制**： 该参数仅给节点使用
     * count  **参数解释**： 要动态创建的弹性IP个数。 > count参数与eip参数必须同时配置。 **约束限制**： 该参数仅给节点使用
     * eip  eip
+    * iptype  **参数解释**： 表示节点所属分区。分区可以选择中心云[或者[边缘小站](https://support.huaweicloud.com/usermanual-cloudpond/ies_02_0401.html)。](tag:hws)[或者[边缘小站](https://support.huaweicloud.com/intl/zh-cn/usermanual-cloudpond/ies_02_0401.html)。](tag:hws_hk) 仅开启了对分布式云支持的Turbo集群支持指定该字段。 弹性IP类型，取值请参见申请EIP接口中publicip.type说明。 [链接请参见[申请EIP](https://support.huaweicloud.com/api-eip/eip_api_0001.html)](tag:hws) [链接请参见[申请EIP](https://support.huaweicloud.com/intl/zh-cn/api-eip/eip_api_0001.html)](tag:hws_hk) **约束限制**： 该参数仅给节点池使用
+    * bandwidth  bandwidth
     *
     * @var string[]
     */
     protected static $getters = [
             'ids' => 'getIds',
             'count' => 'getCount',
-            'eip' => 'getEip'
+            'eip' => 'getEip',
+            'iptype' => 'getIptype',
+            'bandwidth' => 'getBandwidth'
     ];
 
     /**
@@ -170,6 +190,8 @@ class NodePublicIP implements ModelInterface, ArrayAccess
         $this->container['ids'] = isset($data['ids']) ? $data['ids'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['eip'] = isset($data['eip']) ? $data['eip'] : null;
+        $this->container['iptype'] = isset($data['iptype']) ? $data['iptype'] : null;
+        $this->container['bandwidth'] = isset($data['bandwidth']) ? $data['bandwidth'] : null;
     }
 
     /**
@@ -263,6 +285,54 @@ class NodePublicIP implements ModelInterface, ArrayAccess
     public function setEip($eip)
     {
         $this->container['eip'] = $eip;
+        return $this;
+    }
+
+    /**
+    * Gets iptype
+    *  **参数解释**： 表示节点所属分区。分区可以选择中心云[或者[边缘小站](https://support.huaweicloud.com/usermanual-cloudpond/ies_02_0401.html)。](tag:hws)[或者[边缘小站](https://support.huaweicloud.com/intl/zh-cn/usermanual-cloudpond/ies_02_0401.html)。](tag:hws_hk) 仅开启了对分布式云支持的Turbo集群支持指定该字段。 弹性IP类型，取值请参见申请EIP接口中publicip.type说明。 [链接请参见[申请EIP](https://support.huaweicloud.com/api-eip/eip_api_0001.html)](tag:hws) [链接请参见[申请EIP](https://support.huaweicloud.com/intl/zh-cn/api-eip/eip_api_0001.html)](tag:hws_hk) **约束限制**： 该参数仅给节点池使用
+    *
+    * @return string|null
+    */
+    public function getIptype()
+    {
+        return $this->container['iptype'];
+    }
+
+    /**
+    * Sets iptype
+    *
+    * @param string|null $iptype **参数解释**： 表示节点所属分区。分区可以选择中心云[或者[边缘小站](https://support.huaweicloud.com/usermanual-cloudpond/ies_02_0401.html)。](tag:hws)[或者[边缘小站](https://support.huaweicloud.com/intl/zh-cn/usermanual-cloudpond/ies_02_0401.html)。](tag:hws_hk) 仅开启了对分布式云支持的Turbo集群支持指定该字段。 弹性IP类型，取值请参见申请EIP接口中publicip.type说明。 [链接请参见[申请EIP](https://support.huaweicloud.com/api-eip/eip_api_0001.html)](tag:hws) [链接请参见[申请EIP](https://support.huaweicloud.com/intl/zh-cn/api-eip/eip_api_0001.html)](tag:hws_hk) **约束限制**： 该参数仅给节点池使用
+    *
+    * @return $this
+    */
+    public function setIptype($iptype)
+    {
+        $this->container['iptype'] = $iptype;
+        return $this;
+    }
+
+    /**
+    * Gets bandwidth
+    *  bandwidth
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodeBandwidth|null
+    */
+    public function getBandwidth()
+    {
+        return $this->container['bandwidth'];
+    }
+
+    /**
+    * Sets bandwidth
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodeBandwidth|null $bandwidth bandwidth
+    *
+    * @return $this
+    */
+    public function setBandwidth($bandwidth)
+    {
+        $this->container['bandwidth'] = $bandwidth;
         return $this;
     }
 

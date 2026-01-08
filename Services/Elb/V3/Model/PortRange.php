@@ -20,8 +20,8 @@ class PortRange implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * startPort  **参数解释**：起始端口。  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值：不涉及
-    * endPort  **参数解释**：结束端口，需大于等于起始端口  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值：不涉及
+    * startPort  **参数解释**：起始端口。  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值**：不涉及
+    * endPort  **参数解释**：结束端口。  **约束限制**：大于等于起始端口。  **取值范围**：1-65535  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class PortRange implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * startPort  **参数解释**：起始端口。  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值：不涉及
-    * endPort  **参数解释**：结束端口，需大于等于起始端口  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值：不涉及
+    * startPort  **参数解释**：起始端口。  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值**：不涉及
+    * endPort  **参数解释**：结束端口。  **约束限制**：大于等于起始端口。  **取值范围**：1-65535  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class PortRange implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * startPort  **参数解释**：起始端口。  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值：不涉及
-    * endPort  **参数解释**：结束端口，需大于等于起始端口  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值：不涉及
+    * startPort  **参数解释**：起始端口。  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值**：不涉及
+    * endPort  **参数解释**：结束端口。  **约束限制**：大于等于起始端口。  **取值范围**：1-65535  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class PortRange implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * startPort  **参数解释**：起始端口。  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值：不涉及
-    * endPort  **参数解释**：结束端口，需大于等于起始端口  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值：不涉及
+    * startPort  **参数解释**：起始端口。  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值**：不涉及
+    * endPort  **参数解释**：结束端口。  **约束限制**：大于等于起始端口。  **取值范围**：1-65535  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class PortRange implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * startPort  **参数解释**：起始端口。  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值：不涉及
-    * endPort  **参数解释**：结束端口，需大于等于起始端口  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值：不涉及
+    * startPort  **参数解释**：起始端口。  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值**：不涉及
+    * endPort  **参数解释**：结束端口。  **约束限制**：大于等于起始端口。  **取值范围**：1-65535  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class PortRange implements ModelInterface, ArrayAccess
 
     /**
     * Gets startPort
-    *  **参数解释**：起始端口。  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值：不涉及
+    *  **参数解释**：起始端口。  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值**：不涉及
     *
     * @return int|null
     */
@@ -209,7 +209,7 @@ class PortRange implements ModelInterface, ArrayAccess
     /**
     * Sets startPort
     *
-    * @param int|null $startPort **参数解释**：起始端口。  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值：不涉及
+    * @param int|null $startPort **参数解释**：起始端口。  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class PortRange implements ModelInterface, ArrayAccess
 
     /**
     * Gets endPort
-    *  **参数解释**：结束端口，需大于等于起始端口  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值：不涉及
+    *  **参数解释**：结束端口。  **约束限制**：大于等于起始端口。  **取值范围**：1-65535  **默认取值**：不涉及
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class PortRange implements ModelInterface, ArrayAccess
     /**
     * Sets endPort
     *
-    * @param int|null $endPort **参数解释**：结束端口，需大于等于起始端口  **约束限制**：不涉及  **取值范围**：1-65535  **默认取值：不涉及
+    * @param int|null $endPort **参数解释**：结束端口。  **约束限制**：大于等于起始端口。  **取值范围**：1-65535  **默认取值**：不涉及
     *
     * @return $this
     */

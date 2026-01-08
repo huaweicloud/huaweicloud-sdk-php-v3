@@ -25,7 +25,7 @@ class KeystoneUpdateUserOption implements ModelInterface, ArrayAccess
     * password  IAM用户密码。 - 系统默认密码最小长度为6位字符，在6-32位之间支持用户自定义密码长度。 - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。 - 不能包含手机号和邮箱。 - 必须满足账户设置中密码策略的要求。 - 新密码不能与当前密码相同。
     * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
     * description  IAM用户新描述信息。
-    * pwdStatus  IAM用户密码状态。true:需要修改密码,false:正常。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class KeystoneUpdateUserOption implements ModelInterface, ArrayAccess
     * password  IAM用户密码。 - 系统默认密码最小长度为6位字符，在6-32位之间支持用户自定义密码长度。 - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。 - 不能包含手机号和邮箱。 - 必须满足账户设置中密码策略的要求。 - 新密码不能与当前密码相同。
     * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
     * description  IAM用户新描述信息。
-    * pwdStatus  IAM用户密码状态。true:需要修改密码,false:正常。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class KeystoneUpdateUserOption implements ModelInterface, ArrayAccess
     * password  IAM用户密码。 - 系统默认密码最小长度为6位字符，在6-32位之间支持用户自定义密码长度。 - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。 - 不能包含手机号和邮箱。 - 必须满足账户设置中密码策略的要求。 - 新密码不能与当前密码相同。
     * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
     * description  IAM用户新描述信息。
-    * pwdStatus  IAM用户密码状态。true:需要修改密码,false:正常。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class KeystoneUpdateUserOption implements ModelInterface, ArrayAccess
     * password  IAM用户密码。 - 系统默认密码最小长度为6位字符，在6-32位之间支持用户自定义密码长度。 - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。 - 不能包含手机号和邮箱。 - 必须满足账户设置中密码策略的要求。 - 新密码不能与当前密码相同。
     * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
     * description  IAM用户新描述信息。
-    * pwdStatus  IAM用户密码状态。true:需要修改密码,false:正常。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class KeystoneUpdateUserOption implements ModelInterface, ArrayAccess
     * password  IAM用户密码。 - 系统默认密码最小长度为6位字符，在6-32位之间支持用户自定义密码长度。 - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。 - 不能包含手机号和邮箱。 - 必须满足账户设置中密码策略的要求。 - 新密码不能与当前密码相同。
     * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
     * description  IAM用户新描述信息。
-    * pwdStatus  IAM用户密码状态。true:需要修改密码,false:正常。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     *
     * @var string[]
     */
@@ -349,7 +349,7 @@ class KeystoneUpdateUserOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwdStatus
-    *  IAM用户密码状态。true:需要修改密码,false:正常。
+    *  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     *
     * @return bool|null
     */
@@ -361,7 +361,7 @@ class KeystoneUpdateUserOption implements ModelInterface, ArrayAccess
     /**
     * Sets pwdStatus
     *
-    * @param bool|null $pwdStatus IAM用户密码状态。true:需要修改密码,false:正常。
+    * @param bool|null $pwdStatus IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     *
     * @return $this
     */

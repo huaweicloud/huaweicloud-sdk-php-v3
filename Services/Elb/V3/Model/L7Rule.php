@@ -25,7 +25,7 @@ class L7Rule implements ModelInterface, ArrayAccess
     * key  **参数解释**：匹配内容的键值。  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:hcso_dt)
     * projectId  **参数解释**：转发规则所在的项目ID。  **取值范围**：不涉及
     * type  **参数解释**：转发规则类别。  **取值范围**： - HOST_NAME：匹配域名。 - PATH：匹配请求路径。 - METHOD：匹配请求方法。 - HEADER：匹配请求头。 - QUERY_STRING：匹配请求查询参数。 - SOURCE_IP：匹配请求源IP地址。 - COOKIE: 匹配cookie信息。
-    * value  **参数解释**：匹配内容的值。  **取值范围**： - 当type为HOST_NAME时，字符串只能包含英文字母、数字、-.*，必须以字母、数字或*开头。若域名中包含*，则*只能出现在开头且必须以*.开始。当*开头时表示通配0~任一个字符。 - 当type为PATH时，当转发规则的compare_type为STARTS_WITH、EQUAL_TO时，字符串只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以/开头。 - 当type为METHOD、SOURCE_IP、HEADER, QUERY_STRING时，该字段无意义，使用conditions来指定key，value。
+    * value  **参数解释**：匹配内容的值。  **取值范围**： - 当type为HOST_NAME时，字符串只能包含英文字母、数字、-.*，必须以字母、数字或*开头。若域名中包含*，则*只能出现在开头且必须以*.开始。当*开头时表示通配0~任一个字符。 - 当type为PATH时，当转发规则的compare_type为STARTS_WITH、EQUAL_TO时，字符串只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以/开头。 - 当type为METHOD、SOURCE_IP、HEADER、QUERY_STRING时，该字段无意义，使用conditions来指定key，value。
     * provisioningStatus  **参数解释**：provisioning状态。该字段无效，默认为ACTIVE。  **取值范围**：ACTIVE、PENDING_CREATE 或者ERROR。
     * invert  **参数解释**：是否反向匹配。  **取值范围**：不涉及
     * id  **参数解释**：规则ID。  **取值范围**：不涉及
@@ -57,7 +57,7 @@ class L7Rule implements ModelInterface, ArrayAccess
     * key  **参数解释**：匹配内容的键值。  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:hcso_dt)
     * projectId  **参数解释**：转发规则所在的项目ID。  **取值范围**：不涉及
     * type  **参数解释**：转发规则类别。  **取值范围**： - HOST_NAME：匹配域名。 - PATH：匹配请求路径。 - METHOD：匹配请求方法。 - HEADER：匹配请求头。 - QUERY_STRING：匹配请求查询参数。 - SOURCE_IP：匹配请求源IP地址。 - COOKIE: 匹配cookie信息。
-    * value  **参数解释**：匹配内容的值。  **取值范围**： - 当type为HOST_NAME时，字符串只能包含英文字母、数字、-.*，必须以字母、数字或*开头。若域名中包含*，则*只能出现在开头且必须以*.开始。当*开头时表示通配0~任一个字符。 - 当type为PATH时，当转发规则的compare_type为STARTS_WITH、EQUAL_TO时，字符串只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以/开头。 - 当type为METHOD、SOURCE_IP、HEADER, QUERY_STRING时，该字段无意义，使用conditions来指定key，value。
+    * value  **参数解释**：匹配内容的值。  **取值范围**： - 当type为HOST_NAME时，字符串只能包含英文字母、数字、-.*，必须以字母、数字或*开头。若域名中包含*，则*只能出现在开头且必须以*.开始。当*开头时表示通配0~任一个字符。 - 当type为PATH时，当转发规则的compare_type为STARTS_WITH、EQUAL_TO时，字符串只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以/开头。 - 当type为METHOD、SOURCE_IP、HEADER、QUERY_STRING时，该字段无意义，使用conditions来指定key，value。
     * provisioningStatus  **参数解释**：provisioning状态。该字段无效，默认为ACTIVE。  **取值范围**：ACTIVE、PENDING_CREATE 或者ERROR。
     * invert  **参数解释**：是否反向匹配。  **取值范围**：不涉及
     * id  **参数解释**：规则ID。  **取值范围**：不涉及
@@ -110,7 +110,7 @@ class L7Rule implements ModelInterface, ArrayAccess
     * key  **参数解释**：匹配内容的键值。  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:hcso_dt)
     * projectId  **参数解释**：转发规则所在的项目ID。  **取值范围**：不涉及
     * type  **参数解释**：转发规则类别。  **取值范围**： - HOST_NAME：匹配域名。 - PATH：匹配请求路径。 - METHOD：匹配请求方法。 - HEADER：匹配请求头。 - QUERY_STRING：匹配请求查询参数。 - SOURCE_IP：匹配请求源IP地址。 - COOKIE: 匹配cookie信息。
-    * value  **参数解释**：匹配内容的值。  **取值范围**： - 当type为HOST_NAME时，字符串只能包含英文字母、数字、-.*，必须以字母、数字或*开头。若域名中包含*，则*只能出现在开头且必须以*.开始。当*开头时表示通配0~任一个字符。 - 当type为PATH时，当转发规则的compare_type为STARTS_WITH、EQUAL_TO时，字符串只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以/开头。 - 当type为METHOD、SOURCE_IP、HEADER, QUERY_STRING时，该字段无意义，使用conditions来指定key，value。
+    * value  **参数解释**：匹配内容的值。  **取值范围**： - 当type为HOST_NAME时，字符串只能包含英文字母、数字、-.*，必须以字母、数字或*开头。若域名中包含*，则*只能出现在开头且必须以*.开始。当*开头时表示通配0~任一个字符。 - 当type为PATH时，当转发规则的compare_type为STARTS_WITH、EQUAL_TO时，字符串只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以/开头。 - 当type为METHOD、SOURCE_IP、HEADER、QUERY_STRING时，该字段无意义，使用conditions来指定key，value。
     * provisioningStatus  **参数解释**：provisioning状态。该字段无效，默认为ACTIVE。  **取值范围**：ACTIVE、PENDING_CREATE 或者ERROR。
     * invert  **参数解释**：是否反向匹配。  **取值范围**：不涉及
     * id  **参数解释**：规则ID。  **取值范围**：不涉及
@@ -142,7 +142,7 @@ class L7Rule implements ModelInterface, ArrayAccess
     * key  **参数解释**：匹配内容的键值。  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:hcso_dt)
     * projectId  **参数解释**：转发规则所在的项目ID。  **取值范围**：不涉及
     * type  **参数解释**：转发规则类别。  **取值范围**： - HOST_NAME：匹配域名。 - PATH：匹配请求路径。 - METHOD：匹配请求方法。 - HEADER：匹配请求头。 - QUERY_STRING：匹配请求查询参数。 - SOURCE_IP：匹配请求源IP地址。 - COOKIE: 匹配cookie信息。
-    * value  **参数解释**：匹配内容的值。  **取值范围**： - 当type为HOST_NAME时，字符串只能包含英文字母、数字、-.*，必须以字母、数字或*开头。若域名中包含*，则*只能出现在开头且必须以*.开始。当*开头时表示通配0~任一个字符。 - 当type为PATH时，当转发规则的compare_type为STARTS_WITH、EQUAL_TO时，字符串只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以/开头。 - 当type为METHOD、SOURCE_IP、HEADER, QUERY_STRING时，该字段无意义，使用conditions来指定key，value。
+    * value  **参数解释**：匹配内容的值。  **取值范围**： - 当type为HOST_NAME时，字符串只能包含英文字母、数字、-.*，必须以字母、数字或*开头。若域名中包含*，则*只能出现在开头且必须以*.开始。当*开头时表示通配0~任一个字符。 - 当type为PATH时，当转发规则的compare_type为STARTS_WITH、EQUAL_TO时，字符串只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以/开头。 - 当type为METHOD、SOURCE_IP、HEADER、QUERY_STRING时，该字段无意义，使用conditions来指定key，value。
     * provisioningStatus  **参数解释**：provisioning状态。该字段无效，默认为ACTIVE。  **取值范围**：ACTIVE、PENDING_CREATE 或者ERROR。
     * invert  **参数解释**：是否反向匹配。  **取值范围**：不涉及
     * id  **参数解释**：规则ID。  **取值范围**：不涉及
@@ -174,7 +174,7 @@ class L7Rule implements ModelInterface, ArrayAccess
     * key  **参数解释**：匹配内容的键值。  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:hcso_dt)
     * projectId  **参数解释**：转发规则所在的项目ID。  **取值范围**：不涉及
     * type  **参数解释**：转发规则类别。  **取值范围**： - HOST_NAME：匹配域名。 - PATH：匹配请求路径。 - METHOD：匹配请求方法。 - HEADER：匹配请求头。 - QUERY_STRING：匹配请求查询参数。 - SOURCE_IP：匹配请求源IP地址。 - COOKIE: 匹配cookie信息。
-    * value  **参数解释**：匹配内容的值。  **取值范围**： - 当type为HOST_NAME时，字符串只能包含英文字母、数字、-.*，必须以字母、数字或*开头。若域名中包含*，则*只能出现在开头且必须以*.开始。当*开头时表示通配0~任一个字符。 - 当type为PATH时，当转发规则的compare_type为STARTS_WITH、EQUAL_TO时，字符串只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以/开头。 - 当type为METHOD、SOURCE_IP、HEADER, QUERY_STRING时，该字段无意义，使用conditions来指定key，value。
+    * value  **参数解释**：匹配内容的值。  **取值范围**： - 当type为HOST_NAME时，字符串只能包含英文字母、数字、-.*，必须以字母、数字或*开头。若域名中包含*，则*只能出现在开头且必须以*.开始。当*开头时表示通配0~任一个字符。 - 当type为PATH时，当转发规则的compare_type为STARTS_WITH、EQUAL_TO时，字符串只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以/开头。 - 当type为METHOD、SOURCE_IP、HEADER、QUERY_STRING时，该字段无意义，使用conditions来指定key，value。
     * provisioningStatus  **参数解释**：provisioning状态。该字段无效，默认为ACTIVE。  **取值范围**：ACTIVE、PENDING_CREATE 或者ERROR。
     * invert  **参数解释**：是否反向匹配。  **取值范围**：不涉及
     * id  **参数解释**：规则ID。  **取值范围**：不涉及
@@ -488,7 +488,7 @@ class L7Rule implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  **参数解释**：匹配内容的值。  **取值范围**： - 当type为HOST_NAME时，字符串只能包含英文字母、数字、-.*，必须以字母、数字或*开头。若域名中包含*，则*只能出现在开头且必须以*.开始。当*开头时表示通配0~任一个字符。 - 当type为PATH时，当转发规则的compare_type为STARTS_WITH、EQUAL_TO时，字符串只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以/开头。 - 当type为METHOD、SOURCE_IP、HEADER, QUERY_STRING时，该字段无意义，使用conditions来指定key，value。
+    *  **参数解释**：匹配内容的值。  **取值范围**： - 当type为HOST_NAME时，字符串只能包含英文字母、数字、-.*，必须以字母、数字或*开头。若域名中包含*，则*只能出现在开头且必须以*.开始。当*开头时表示通配0~任一个字符。 - 当type为PATH时，当转发规则的compare_type为STARTS_WITH、EQUAL_TO时，字符串只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以/开头。 - 当type为METHOD、SOURCE_IP、HEADER、QUERY_STRING时，该字段无意义，使用conditions来指定key，value。
     *
     * @return string
     */
@@ -500,7 +500,7 @@ class L7Rule implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value **参数解释**：匹配内容的值。  **取值范围**： - 当type为HOST_NAME时，字符串只能包含英文字母、数字、-.*，必须以字母、数字或*开头。若域名中包含*，则*只能出现在开头且必须以*.开始。当*开头时表示通配0~任一个字符。 - 当type为PATH时，当转发规则的compare_type为STARTS_WITH、EQUAL_TO时，字符串只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以/开头。 - 当type为METHOD、SOURCE_IP、HEADER, QUERY_STRING时，该字段无意义，使用conditions来指定key，value。
+    * @param string $value **参数解释**：匹配内容的值。  **取值范围**： - 当type为HOST_NAME时，字符串只能包含英文字母、数字、-.*，必须以字母、数字或*开头。若域名中包含*，则*只能出现在开头且必须以*.开始。当*开头时表示通配0~任一个字符。 - 当type为PATH时，当转发规则的compare_type为STARTS_WITH、EQUAL_TO时，字符串只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以/开头。 - 当type为METHOD、SOURCE_IP、HEADER、QUERY_STRING时，该字段无意义，使用conditions来指定key，value。
     *
     * @return $this
     */

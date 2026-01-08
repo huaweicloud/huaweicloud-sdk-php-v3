@@ -56,6 +56,8 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     * operatorConfig  参数解释: 各算子并行度参数，以json的形式展示各算子id和并行度 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     * staticEstimatorConfig  参数解释: 静态流图资源预估参数，以json的形式展示 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     * realCuNumber  参数解释: 实际使用的CU数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 0
+    * resourceConfig  resourceConfig
+    * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
     *
     * @var string[]
     */
@@ -95,7 +97,9 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
             'flinkVersion' => 'string',
             'operatorConfig' => 'string',
             'staticEstimatorConfig' => 'string',
-            'realCuNumber' => 'int'
+            'realCuNumber' => 'int',
+            'resourceConfig' => '\HuaweiCloud\SDK\Dli\V1\Model\ResourceConfig',
+            'resourceConfigVersion' => 'string'
     ];
 
     /**
@@ -136,6 +140,8 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     * operatorConfig  参数解释: 各算子并行度参数，以json的形式展示各算子id和并行度 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     * staticEstimatorConfig  参数解释: 静态流图资源预估参数，以json的形式展示 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     * realCuNumber  参数解释: 实际使用的CU数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 0
+    * resourceConfig  resourceConfig
+    * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
     *
     * @var string[]
     */
@@ -175,7 +181,9 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
         'flinkVersion' => null,
         'operatorConfig' => null,
         'staticEstimatorConfig' => null,
-        'realCuNumber' => 'int32'
+        'realCuNumber' => 'int32',
+        'resourceConfig' => null,
+        'resourceConfigVersion' => null
     ];
 
     /**
@@ -237,6 +245,8 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     * operatorConfig  参数解释: 各算子并行度参数，以json的形式展示各算子id和并行度 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     * staticEstimatorConfig  参数解释: 静态流图资源预估参数，以json的形式展示 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     * realCuNumber  参数解释: 实际使用的CU数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 0
+    * resourceConfig  resourceConfig
+    * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
     *
     * @var string[]
     */
@@ -276,7 +286,9 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
             'flinkVersion' => 'flink_version',
             'operatorConfig' => 'operator_config',
             'staticEstimatorConfig' => 'static_estimator_config',
-            'realCuNumber' => 'real_cu_number'
+            'realCuNumber' => 'real_cu_number',
+            'resourceConfig' => 'resource_config',
+            'resourceConfigVersion' => 'resource_config_version'
     ];
 
     /**
@@ -317,6 +329,8 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     * operatorConfig  参数解释: 各算子并行度参数，以json的形式展示各算子id和并行度 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     * staticEstimatorConfig  参数解释: 静态流图资源预估参数，以json的形式展示 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     * realCuNumber  参数解释: 实际使用的CU数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 0
+    * resourceConfig  resourceConfig
+    * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
     *
     * @var string[]
     */
@@ -356,7 +370,9 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
             'flinkVersion' => 'setFlinkVersion',
             'operatorConfig' => 'setOperatorConfig',
             'staticEstimatorConfig' => 'setStaticEstimatorConfig',
-            'realCuNumber' => 'setRealCuNumber'
+            'realCuNumber' => 'setRealCuNumber',
+            'resourceConfig' => 'setResourceConfig',
+            'resourceConfigVersion' => 'setResourceConfigVersion'
     ];
 
     /**
@@ -397,6 +413,8 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     * operatorConfig  参数解释: 各算子并行度参数，以json的形式展示各算子id和并行度 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     * staticEstimatorConfig  参数解释: 静态流图资源预估参数，以json的形式展示 示例: '{\"operator_list\":[{\"id\":\"0a448493b4782967b150582570326227\",\"parallelism\":1},{\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"parallelism\":1},{\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"parallelism\":1},{\"id\":\"ddb598ad156ed281023ba4eebbe487e3\",\"parallelism\":1},{\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"parallelism\":1}]}' 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
     * realCuNumber  参数解释: 实际使用的CU数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 0
+    * resourceConfig  resourceConfig
+    * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
     *
     * @var string[]
     */
@@ -436,7 +454,9 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
             'flinkVersion' => 'getFlinkVersion',
             'operatorConfig' => 'getOperatorConfig',
             'staticEstimatorConfig' => 'getStaticEstimatorConfig',
-            'realCuNumber' => 'getRealCuNumber'
+            'realCuNumber' => 'getRealCuNumber',
+            'resourceConfig' => 'getResourceConfig',
+            'resourceConfigVersion' => 'getResourceConfigVersion'
     ];
 
     /**
@@ -548,6 +568,8 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
         $this->container['operatorConfig'] = isset($data['operatorConfig']) ? $data['operatorConfig'] : null;
         $this->container['staticEstimatorConfig'] = isset($data['staticEstimatorConfig']) ? $data['staticEstimatorConfig'] : null;
         $this->container['realCuNumber'] = isset($data['realCuNumber']) ? $data['realCuNumber'] : null;
+        $this->container['resourceConfig'] = isset($data['resourceConfig']) ? $data['resourceConfig'] : null;
+        $this->container['resourceConfigVersion'] = isset($data['resourceConfigVersion']) ? $data['resourceConfigVersion'] : null;
     }
 
     /**
@@ -1453,6 +1475,54 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     public function setRealCuNumber($realCuNumber)
     {
         $this->container['realCuNumber'] = $realCuNumber;
+        return $this;
+    }
+
+    /**
+    * Gets resourceConfig
+    *  resourceConfig
+    *
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\ResourceConfig|null
+    */
+    public function getResourceConfig()
+    {
+        return $this->container['resourceConfig'];
+    }
+
+    /**
+    * Sets resourceConfig
+    *
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\ResourceConfig|null $resourceConfig resourceConfig
+    *
+    * @return $this
+    */
+    public function setResourceConfig($resourceConfig)
+    {
+        $this->container['resourceConfig'] = $resourceConfig;
+        return $this;
+    }
+
+    /**
+    * Gets resourceConfigVersion
+    *  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
+    *
+    * @return string|null
+    */
+    public function getResourceConfigVersion()
+    {
+        return $this->container['resourceConfigVersion'];
+    }
+
+    /**
+    * Sets resourceConfigVersion
+    *
+    * @param string|null $resourceConfigVersion 资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
+    *
+    * @return $this
+    */
+    public function setResourceConfigVersion($resourceConfigVersion)
+    {
+        $this->container['resourceConfigVersion'] = $resourceConfigVersion;
         return $this;
     }
 

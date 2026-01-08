@@ -20,14 +20,14 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  视图分区id
-    * widgetId  视图id
-    * metrics  指标列表
-    * title  监控视图标题
-    * threshold  监控视图指标的阈值
-    * thresholdEnabled  阈值是否展示，true:展示，false:不展示
-    * view  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
-    * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
+    * groupId  **参数解释** 视图分区id **约束限制** 不涉及 **取值范围** 字符串必须以dg开头，后跟22个字母和数字，总长度为24个字符或者为default，default代表不分组 **默认取值** 不涉及
+    * widgetId  **参数解释** 视图id **约束限制** 不涉及 **取值范围** 字符串必须以wg开头，后跟22个字母和数字，总长度为24个字符 **默认取值** 不涉及
+    * metrics  **参数解释** 指标列表 **约束限制** 包含的指标对象个数为[1,200]
+    * title  **参数解释** 监控视图标题 **约束限制** 不涉及 **取值范围** 字符串可以包含中文字符，字母，数字，下划线（_），横线（-），冒号（:），分号（;），左圆括号（(），右圆括号（)），句号（.），波浪线（~）， 中文左括号（（），中文右括号（））长度为[1,128]个字符 **默认取值** 不涉及
+    * threshold  **参数解释** 监控视图指标的阈值 **约束限制** 不涉及 **取值范围** 阈值为[0,1.7976931348623157e+308] **默认取值** 不涉及
+    * thresholdEnabled  **参数解释** 阈值是否展示 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
+    * view  **参数解释** 监控视图图表类型 **约束限制** 不涉及 **取值范围** 枚举值： - bar 条形图 - line 折线图 - bar_chart 柱状图 - table 表格 - circular_bar 环形柱状图 - area_chart 面积图 **默认取值** 不涉及
+    * metricDisplayMode  **参数解释** 指标展示类型 **约束限制** 不涉及 **取值范围** 枚举值： - single 单指标展示 - multiple 多指标展示 **默认取值** 不涉及
     * properties  properties
     * location  location
     * unit  **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
@@ -50,14 +50,14 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  视图分区id
-    * widgetId  视图id
-    * metrics  指标列表
-    * title  监控视图标题
-    * threshold  监控视图指标的阈值
-    * thresholdEnabled  阈值是否展示，true:展示，false:不展示
-    * view  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
-    * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
+    * groupId  **参数解释** 视图分区id **约束限制** 不涉及 **取值范围** 字符串必须以dg开头，后跟22个字母和数字，总长度为24个字符或者为default，default代表不分组 **默认取值** 不涉及
+    * widgetId  **参数解释** 视图id **约束限制** 不涉及 **取值范围** 字符串必须以wg开头，后跟22个字母和数字，总长度为24个字符 **默认取值** 不涉及
+    * metrics  **参数解释** 指标列表 **约束限制** 包含的指标对象个数为[1,200]
+    * title  **参数解释** 监控视图标题 **约束限制** 不涉及 **取值范围** 字符串可以包含中文字符，字母，数字，下划线（_），横线（-），冒号（:），分号（;），左圆括号（(），右圆括号（)），句号（.），波浪线（~）， 中文左括号（（），中文右括号（））长度为[1,128]个字符 **默认取值** 不涉及
+    * threshold  **参数解释** 监控视图指标的阈值 **约束限制** 不涉及 **取值范围** 阈值为[0,1.7976931348623157e+308] **默认取值** 不涉及
+    * thresholdEnabled  **参数解释** 阈值是否展示 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
+    * view  **参数解释** 监控视图图表类型 **约束限制** 不涉及 **取值范围** 枚举值： - bar 条形图 - line 折线图 - bar_chart 柱状图 - table 表格 - circular_bar 环形柱状图 - area_chart 面积图 **默认取值** 不涉及
+    * metricDisplayMode  **参数解释** 指标展示类型 **约束限制** 不涉及 **取值范围** 枚举值： - single 单指标展示 - multiple 多指标展示 **默认取值** 不涉及
     * properties  properties
     * location  location
     * unit  **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
@@ -101,14 +101,14 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  视图分区id
-    * widgetId  视图id
-    * metrics  指标列表
-    * title  监控视图标题
-    * threshold  监控视图指标的阈值
-    * thresholdEnabled  阈值是否展示，true:展示，false:不展示
-    * view  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
-    * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
+    * groupId  **参数解释** 视图分区id **约束限制** 不涉及 **取值范围** 字符串必须以dg开头，后跟22个字母和数字，总长度为24个字符或者为default，default代表不分组 **默认取值** 不涉及
+    * widgetId  **参数解释** 视图id **约束限制** 不涉及 **取值范围** 字符串必须以wg开头，后跟22个字母和数字，总长度为24个字符 **默认取值** 不涉及
+    * metrics  **参数解释** 指标列表 **约束限制** 包含的指标对象个数为[1,200]
+    * title  **参数解释** 监控视图标题 **约束限制** 不涉及 **取值范围** 字符串可以包含中文字符，字母，数字，下划线（_），横线（-），冒号（:），分号（;），左圆括号（(），右圆括号（)），句号（.），波浪线（~）， 中文左括号（（），中文右括号（））长度为[1,128]个字符 **默认取值** 不涉及
+    * threshold  **参数解释** 监控视图指标的阈值 **约束限制** 不涉及 **取值范围** 阈值为[0,1.7976931348623157e+308] **默认取值** 不涉及
+    * thresholdEnabled  **参数解释** 阈值是否展示 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
+    * view  **参数解释** 监控视图图表类型 **约束限制** 不涉及 **取值范围** 枚举值： - bar 条形图 - line 折线图 - bar_chart 柱状图 - table 表格 - circular_bar 环形柱状图 - area_chart 面积图 **默认取值** 不涉及
+    * metricDisplayMode  **参数解释** 指标展示类型 **约束限制** 不涉及 **取值范围** 枚举值： - single 单指标展示 - multiple 多指标展示 **默认取值** 不涉及
     * properties  properties
     * location  location
     * unit  **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
@@ -131,14 +131,14 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  视图分区id
-    * widgetId  视图id
-    * metrics  指标列表
-    * title  监控视图标题
-    * threshold  监控视图指标的阈值
-    * thresholdEnabled  阈值是否展示，true:展示，false:不展示
-    * view  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
-    * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
+    * groupId  **参数解释** 视图分区id **约束限制** 不涉及 **取值范围** 字符串必须以dg开头，后跟22个字母和数字，总长度为24个字符或者为default，default代表不分组 **默认取值** 不涉及
+    * widgetId  **参数解释** 视图id **约束限制** 不涉及 **取值范围** 字符串必须以wg开头，后跟22个字母和数字，总长度为24个字符 **默认取值** 不涉及
+    * metrics  **参数解释** 指标列表 **约束限制** 包含的指标对象个数为[1,200]
+    * title  **参数解释** 监控视图标题 **约束限制** 不涉及 **取值范围** 字符串可以包含中文字符，字母，数字，下划线（_），横线（-），冒号（:），分号（;），左圆括号（(），右圆括号（)），句号（.），波浪线（~）， 中文左括号（（），中文右括号（））长度为[1,128]个字符 **默认取值** 不涉及
+    * threshold  **参数解释** 监控视图指标的阈值 **约束限制** 不涉及 **取值范围** 阈值为[0,1.7976931348623157e+308] **默认取值** 不涉及
+    * thresholdEnabled  **参数解释** 阈值是否展示 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
+    * view  **参数解释** 监控视图图表类型 **约束限制** 不涉及 **取值范围** 枚举值： - bar 条形图 - line 折线图 - bar_chart 柱状图 - table 表格 - circular_bar 环形柱状图 - area_chart 面积图 **默认取值** 不涉及
+    * metricDisplayMode  **参数解释** 指标展示类型 **约束限制** 不涉及 **取值范围** 枚举值： - single 单指标展示 - multiple 多指标展示 **默认取值** 不涉及
     * properties  properties
     * location  location
     * unit  **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
@@ -161,14 +161,14 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  视图分区id
-    * widgetId  视图id
-    * metrics  指标列表
-    * title  监控视图标题
-    * threshold  监控视图指标的阈值
-    * thresholdEnabled  阈值是否展示，true:展示，false:不展示
-    * view  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
-    * metricDisplayMode  指标展示类型，single 单指标展示，multiple 多指标展示
+    * groupId  **参数解释** 视图分区id **约束限制** 不涉及 **取值范围** 字符串必须以dg开头，后跟22个字母和数字，总长度为24个字符或者为default，default代表不分组 **默认取值** 不涉及
+    * widgetId  **参数解释** 视图id **约束限制** 不涉及 **取值范围** 字符串必须以wg开头，后跟22个字母和数字，总长度为24个字符 **默认取值** 不涉及
+    * metrics  **参数解释** 指标列表 **约束限制** 包含的指标对象个数为[1,200]
+    * title  **参数解释** 监控视图标题 **约束限制** 不涉及 **取值范围** 字符串可以包含中文字符，字母，数字，下划线（_），横线（-），冒号（:），分号（;），左圆括号（(），右圆括号（)），句号（.），波浪线（~）， 中文左括号（（），中文右括号（））长度为[1,128]个字符 **默认取值** 不涉及
+    * threshold  **参数解释** 监控视图指标的阈值 **约束限制** 不涉及 **取值范围** 阈值为[0,1.7976931348623157e+308] **默认取值** 不涉及
+    * thresholdEnabled  **参数解释** 阈值是否展示 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
+    * view  **参数解释** 监控视图图表类型 **约束限制** 不涉及 **取值范围** 枚举值： - bar 条形图 - line 折线图 - bar_chart 柱状图 - table 表格 - circular_bar 环形柱状图 - area_chart 面积图 **默认取值** 不涉及
+    * metricDisplayMode  **参数解释** 指标展示类型 **约束限制** 不涉及 **取值范围** 枚举值： - single 单指标展示 - multiple 多指标展示 **默认取值** 不涉及
     * properties  properties
     * location  location
     * unit  **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
@@ -368,7 +368,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  视图分区id
+    *  **参数解释** 视图分区id **约束限制** 不涉及 **取值范围** 字符串必须以dg开头，后跟22个字母和数字，总长度为24个字符或者为default，default代表不分组 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -380,7 +380,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 视图分区id
+    * @param string|null $groupId **参数解释** 视图分区id **约束限制** 不涉及 **取值范围** 字符串必须以dg开头，后跟22个字母和数字，总长度为24个字符或者为default，default代表不分组 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -392,7 +392,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets widgetId
-    *  视图id
+    *  **参数解释** 视图id **约束限制** 不涉及 **取值范围** 字符串必须以wg开头，后跟22个字母和数字，总长度为24个字符 **默认取值** 不涉及
     *
     * @return string
     */
@@ -404,7 +404,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets widgetId
     *
-    * @param string $widgetId 视图id
+    * @param string $widgetId **参数解释** 视图id **约束限制** 不涉及 **取值范围** 字符串必须以wg开头，后跟22个字母和数字，总长度为24个字符 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -416,7 +416,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets metrics
-    *  指标列表
+    *  **参数解释** 指标列表 **约束限制** 包含的指标对象个数为[1,200]
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\WidgetMetric[]|null
     */
@@ -428,7 +428,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets metrics
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\WidgetMetric[]|null $metrics 指标列表
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\WidgetMetric[]|null $metrics **参数解释** 指标列表 **约束限制** 包含的指标对象个数为[1,200]
     *
     * @return $this
     */
@@ -440,7 +440,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets title
-    *  监控视图标题
+    *  **参数解释** 监控视图标题 **约束限制** 不涉及 **取值范围** 字符串可以包含中文字符，字母，数字，下划线（_），横线（-），冒号（:），分号（;），左圆括号（(），右圆括号（)），句号（.），波浪线（~）， 中文左括号（（），中文右括号（））长度为[1,128]个字符 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -452,7 +452,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets title
     *
-    * @param string|null $title 监控视图标题
+    * @param string|null $title **参数解释** 监控视图标题 **约束限制** 不涉及 **取值范围** 字符串可以包含中文字符，字母，数字，下划线（_），横线（-），冒号（:），分号（;），左圆括号（(），右圆括号（)），句号（.），波浪线（~）， 中文左括号（（），中文右括号（））长度为[1,128]个字符 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -464,7 +464,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets threshold
-    *  监控视图指标的阈值
+    *  **参数解释** 监控视图指标的阈值 **约束限制** 不涉及 **取值范围** 阈值为[0,1.7976931348623157e+308] **默认取值** 不涉及
     *
     * @return double|null
     */
@@ -476,7 +476,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets threshold
     *
-    * @param double|null $threshold 监控视图指标的阈值
+    * @param double|null $threshold **参数解释** 监控视图指标的阈值 **约束限制** 不涉及 **取值范围** 阈值为[0,1.7976931348623157e+308] **默认取值** 不涉及
     *
     * @return $this
     */
@@ -488,7 +488,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets thresholdEnabled
-    *  阈值是否展示，true:展示，false:不展示
+    *  **参数解释** 阈值是否展示 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
     *
     * @return bool|null
     */
@@ -500,7 +500,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets thresholdEnabled
     *
-    * @param bool|null $thresholdEnabled 阈值是否展示，true:展示，false:不展示
+    * @param bool|null $thresholdEnabled **参数解释** 阈值是否展示 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -512,7 +512,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets view
-    *  监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
+    *  **参数解释** 监控视图图表类型 **约束限制** 不涉及 **取值范围** 枚举值： - bar 条形图 - line 折线图 - bar_chart 柱状图 - table 表格 - circular_bar 环形柱状图 - area_chart 面积图 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -524,7 +524,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets view
     *
-    * @param string|null $view 监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
+    * @param string|null $view **参数解释** 监控视图图表类型 **约束限制** 不涉及 **取值范围** 枚举值： - bar 条形图 - line 折线图 - bar_chart 柱状图 - table 表格 - circular_bar 环形柱状图 - area_chart 面积图 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -536,7 +536,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricDisplayMode
-    *  指标展示类型，single 单指标展示，multiple 多指标展示
+    *  **参数解释** 指标展示类型 **约束限制** 不涉及 **取值范围** 枚举值： - single 单指标展示 - multiple 多指标展示 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -548,7 +548,7 @@ class UpdateWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets metricDisplayMode
     *
-    * @param string|null $metricDisplayMode 指标展示类型，single 单指标展示，multiple 多指标展示
+    * @param string|null $metricDisplayMode **参数解释** 指标展示类型 **约束限制** 不涉及 **取值范围** 枚举值： - single 单指标展示 - multiple 多指标展示 **默认取值** 不涉及
     *
     * @return $this
     */

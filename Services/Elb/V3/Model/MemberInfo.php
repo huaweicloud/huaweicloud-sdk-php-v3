@@ -39,7 +39,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     * loadbalancers  **参数解释**：后端服务器关联的负载均衡器ID列表。  不支持该字段，请勿使用。
     * createdAt  **参数解释**：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * updatedAt  **参数解释**：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
-    * memberType  **参数解释**：后端服务器的类型。  **取值范围**：不涉及 - ip：跨VPC的member。 - instance：关联到ECS的member。
+    * memberType  **参数解释**：后端服务器的类型。  **取值范围**：不涉及 - ip：IP类型的member。 - instance：关联到ECS的member。
     * instanceId  **参数解释**：member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）。  **取值范围**：不涉及
     * reason  reason
     *
@@ -91,7 +91,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     * loadbalancers  **参数解释**：后端服务器关联的负载均衡器ID列表。  不支持该字段，请勿使用。
     * createdAt  **参数解释**：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * updatedAt  **参数解释**：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
-    * memberType  **参数解释**：后端服务器的类型。  **取值范围**：不涉及 - ip：跨VPC的member。 - instance：关联到ECS的member。
+    * memberType  **参数解释**：后端服务器的类型。  **取值范围**：不涉及 - ip：IP类型的member。 - instance：关联到ECS的member。
     * instanceId  **参数解释**：member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）。  **取值范围**：不涉及
     * reason  reason
     *
@@ -164,7 +164,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     * loadbalancers  **参数解释**：后端服务器关联的负载均衡器ID列表。  不支持该字段，请勿使用。
     * createdAt  **参数解释**：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * updatedAt  **参数解释**：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
-    * memberType  **参数解释**：后端服务器的类型。  **取值范围**：不涉及 - ip：跨VPC的member。 - instance：关联到ECS的member。
+    * memberType  **参数解释**：后端服务器的类型。  **取值范围**：不涉及 - ip：IP类型的member。 - instance：关联到ECS的member。
     * instanceId  **参数解释**：member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）。  **取值范围**：不涉及
     * reason  reason
     *
@@ -216,7 +216,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     * loadbalancers  **参数解释**：后端服务器关联的负载均衡器ID列表。  不支持该字段，请勿使用。
     * createdAt  **参数解释**：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * updatedAt  **参数解释**：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
-    * memberType  **参数解释**：后端服务器的类型。  **取值范围**：不涉及 - ip：跨VPC的member。 - instance：关联到ECS的member。
+    * memberType  **参数解释**：后端服务器的类型。  **取值范围**：不涉及 - ip：IP类型的member。 - instance：关联到ECS的member。
     * instanceId  **参数解释**：member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）。  **取值范围**：不涉及
     * reason  reason
     *
@@ -268,7 +268,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     * loadbalancers  **参数解释**：后端服务器关联的负载均衡器ID列表。  不支持该字段，请勿使用。
     * createdAt  **参数解释**：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * updatedAt  **参数解释**：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
-    * memberType  **参数解释**：后端服务器的类型。  **取值范围**：不涉及 - ip：跨VPC的member。 - instance：关联到ECS的member。
+    * memberType  **参数解释**：后端服务器的类型。  **取值范围**：不涉及 - ip：IP类型的member。 - instance：关联到ECS的member。
     * instanceId  **参数解释**：member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）。  **取值范围**：不涉及
     * reason  reason
     *
@@ -906,7 +906,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets memberType
-    *  **参数解释**：后端服务器的类型。  **取值范围**：不涉及 - ip：跨VPC的member。 - instance：关联到ECS的member。
+    *  **参数解释**：后端服务器的类型。  **取值范围**：不涉及 - ip：IP类型的member。 - instance：关联到ECS的member。
     *
     * @return string|null
     */
@@ -918,7 +918,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     /**
     * Sets memberType
     *
-    * @param string|null $memberType **参数解释**：后端服务器的类型。  **取值范围**：不涉及 - ip：跨VPC的member。 - instance：关联到ECS的member。
+    * @param string|null $memberType **参数解释**：后端服务器的类型。  **取值范围**：不涉及 - ip：IP类型的member。 - instance：关联到ECS的member。
     *
     * @return $this
     */

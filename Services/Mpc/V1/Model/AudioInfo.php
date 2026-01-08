@@ -25,6 +25,8 @@ class AudioInfo implements ModelInterface, ArrayAccess
     * channels  音频信道
     * bitrate  音频码率，单位: kbit/s
     * bitrateBps  音频码率，单位: bit/s
+    * duration  音频流时长，单位：秒
+    * durationMs  音频流时长，单位：毫秒
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class AudioInfo implements ModelInterface, ArrayAccess
             'sample' => 'int',
             'channels' => 'int',
             'bitrate' => 'int',
-            'bitrateBps' => 'int'
+            'bitrateBps' => 'int',
+            'duration' => 'string',
+            'durationMs' => 'string'
     ];
 
     /**
@@ -43,6 +47,8 @@ class AudioInfo implements ModelInterface, ArrayAccess
     * channels  音频信道
     * bitrate  音频码率，单位: kbit/s
     * bitrateBps  音频码率，单位: bit/s
+    * duration  音频流时长，单位：秒
+    * durationMs  音频流时长，单位：毫秒
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class AudioInfo implements ModelInterface, ArrayAccess
         'sample' => null,
         'channels' => null,
         'bitrate' => null,
-        'bitrateBps' => 'int64'
+        'bitrateBps' => 'int64',
+        'duration' => null,
+        'durationMs' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class AudioInfo implements ModelInterface, ArrayAccess
     * channels  音频信道
     * bitrate  音频码率，单位: kbit/s
     * bitrateBps  音频码率，单位: bit/s
+    * duration  音频流时长，单位：秒
+    * durationMs  音频流时长，单位：毫秒
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class AudioInfo implements ModelInterface, ArrayAccess
             'sample' => 'sample',
             'channels' => 'channels',
             'bitrate' => 'bitrate',
-            'bitrateBps' => 'bitrate_bps'
+            'bitrateBps' => 'bitrate_bps',
+            'duration' => 'duration',
+            'durationMs' => 'duration_ms'
     ];
 
     /**
@@ -100,6 +112,8 @@ class AudioInfo implements ModelInterface, ArrayAccess
     * channels  音频信道
     * bitrate  音频码率，单位: kbit/s
     * bitrateBps  音频码率，单位: bit/s
+    * duration  音频流时长，单位：秒
+    * durationMs  音频流时长，单位：毫秒
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class AudioInfo implements ModelInterface, ArrayAccess
             'sample' => 'setSample',
             'channels' => 'setChannels',
             'bitrate' => 'setBitrate',
-            'bitrateBps' => 'setBitrateBps'
+            'bitrateBps' => 'setBitrateBps',
+            'duration' => 'setDuration',
+            'durationMs' => 'setDurationMs'
     ];
 
     /**
@@ -118,6 +134,8 @@ class AudioInfo implements ModelInterface, ArrayAccess
     * channels  音频信道
     * bitrate  音频码率，单位: kbit/s
     * bitrateBps  音频码率，单位: bit/s
+    * duration  音频流时长，单位：秒
+    * durationMs  音频流时长，单位：毫秒
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class AudioInfo implements ModelInterface, ArrayAccess
             'sample' => 'getSample',
             'channels' => 'getChannels',
             'bitrate' => 'getBitrate',
-            'bitrateBps' => 'getBitrateBps'
+            'bitrateBps' => 'getBitrateBps',
+            'duration' => 'getDuration',
+            'durationMs' => 'getDurationMs'
     ];
 
     /**
@@ -192,6 +212,8 @@ class AudioInfo implements ModelInterface, ArrayAccess
         $this->container['channels'] = isset($data['channels']) ? $data['channels'] : null;
         $this->container['bitrate'] = isset($data['bitrate']) ? $data['bitrate'] : null;
         $this->container['bitrateBps'] = isset($data['bitrateBps']) ? $data['bitrateBps'] : null;
+        $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
+        $this->container['durationMs'] = isset($data['durationMs']) ? $data['durationMs'] : null;
     }
 
     /**
@@ -231,6 +253,18 @@ class AudioInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['bitrateBps']) && ($this->container['bitrateBps'] < 0)) {
                 $invalidProperties[] = "invalid value for 'bitrateBps', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['duration']) && (mb_strlen($this->container['duration']) > 128)) {
+                $invalidProperties[] = "invalid value for 'duration', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['duration']) && (mb_strlen($this->container['duration']) < 0)) {
+                $invalidProperties[] = "invalid value for 'duration', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['durationMs']) && (mb_strlen($this->container['durationMs']) > 128)) {
+                $invalidProperties[] = "invalid value for 'durationMs', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['durationMs']) && (mb_strlen($this->container['durationMs']) < 0)) {
+                $invalidProperties[] = "invalid value for 'durationMs', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -363,6 +397,54 @@ class AudioInfo implements ModelInterface, ArrayAccess
     public function setBitrateBps($bitrateBps)
     {
         $this->container['bitrateBps'] = $bitrateBps;
+        return $this;
+    }
+
+    /**
+    * Gets duration
+    *  音频流时长，单位：秒
+    *
+    * @return string|null
+    */
+    public function getDuration()
+    {
+        return $this->container['duration'];
+    }
+
+    /**
+    * Sets duration
+    *
+    * @param string|null $duration 音频流时长，单位：秒
+    *
+    * @return $this
+    */
+    public function setDuration($duration)
+    {
+        $this->container['duration'] = $duration;
+        return $this;
+    }
+
+    /**
+    * Gets durationMs
+    *  音频流时长，单位：毫秒
+    *
+    * @return string|null
+    */
+    public function getDurationMs()
+    {
+        return $this->container['durationMs'];
+    }
+
+    /**
+    * Sets durationMs
+    *
+    * @param string|null $durationMs 音频流时长，单位：毫秒
+    *
+    * @return $this
+    */
+    public function setDurationMs($durationMs)
+    {
+        $this->container['durationMs'] = $durationMs;
         return $this;
     }
 

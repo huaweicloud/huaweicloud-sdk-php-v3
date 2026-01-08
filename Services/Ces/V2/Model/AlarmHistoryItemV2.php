@@ -20,7 +20,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * recordId  **参数解释**： 告警记录ID。 **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。
+    * recordId  **参数解释**： 告警流水号。优化告警流水号生成规则，由 ah1655717086704DEnBrJ999 更改为 ah251222T092004SAD2yARym **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。
     * alarmId  **参数解释**： 告警规则ID。 **取值范围**： 以al开头，后跟22位的字母或数字。
     * name  **参数解释**： 告警名称。 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度为[1,128]个字符。
     * status  **参数解释**： 告警规则状态 **取值范围**： 枚举值。 - ok：正常 - alarm：告警 - invalid：已失效 - insufficient_data: 数据不足 - ok_manual: 手动恢复
@@ -66,7 +66,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * recordId  **参数解释**： 告警记录ID。 **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。
+    * recordId  **参数解释**： 告警流水号。优化告警流水号生成规则，由 ah1655717086704DEnBrJ999 更改为 ah251222T092004SAD2yARym **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。
     * alarmId  **参数解释**： 告警规则ID。 **取值范围**： 以al开头，后跟22位的字母或数字。
     * name  **参数解释**： 告警名称。 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度为[1,128]个字符。
     * status  **参数解释**： 告警规则状态 **取值范围**： 枚举值。 - ok：正常 - alarm：告警 - invalid：已失效 - insufficient_data: 数据不足 - ok_manual: 手动恢复
@@ -133,7 +133,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * recordId  **参数解释**： 告警记录ID。 **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。
+    * recordId  **参数解释**： 告警流水号。优化告警流水号生成规则，由 ah1655717086704DEnBrJ999 更改为 ah251222T092004SAD2yARym **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。
     * alarmId  **参数解释**： 告警规则ID。 **取值范围**： 以al开头，后跟22位的字母或数字。
     * name  **参数解释**： 告警名称。 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度为[1,128]个字符。
     * status  **参数解释**： 告警规则状态 **取值范围**： 枚举值。 - ok：正常 - alarm：告警 - invalid：已失效 - insufficient_data: 数据不足 - ok_manual: 手动恢复
@@ -179,7 +179,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * recordId  **参数解释**： 告警记录ID。 **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。
+    * recordId  **参数解释**： 告警流水号。优化告警流水号生成规则，由 ah1655717086704DEnBrJ999 更改为 ah251222T092004SAD2yARym **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。
     * alarmId  **参数解释**： 告警规则ID。 **取值范围**： 以al开头，后跟22位的字母或数字。
     * name  **参数解释**： 告警名称。 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度为[1,128]个字符。
     * status  **参数解释**： 告警规则状态 **取值范围**： 枚举值。 - ok：正常 - alarm：告警 - invalid：已失效 - insufficient_data: 数据不足 - ok_manual: 手动恢复
@@ -225,7 +225,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * recordId  **参数解释**： 告警记录ID。 **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。
+    * recordId  **参数解释**： 告警流水号。优化告警流水号生成规则，由 ah1655717086704DEnBrJ999 更改为 ah251222T092004SAD2yARym **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。
     * alarmId  **参数解释**： 告警规则ID。 **取值范围**： 以al开头，后跟22位的字母或数字。
     * name  **参数解释**： 告警名称。 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度为[1,128]个字符。
     * status  **参数解释**： 告警规则状态 **取值范围**： 枚举值。 - ok：正常 - alarm：告警 - invalid：已失效 - insufficient_data: 数据不足 - ok_manual: 手动恢复
@@ -518,7 +518,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordId
-    *  **参数解释**： 告警记录ID。 **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。
+    *  **参数解释**： 告警流水号。优化告警流水号生成规则，由 ah1655717086704DEnBrJ999 更改为 ah251222T092004SAD2yARym **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。
     *
     * @return string|null
     */
@@ -530,7 +530,7 @@ class AlarmHistoryItemV2 implements ModelInterface, ArrayAccess
     /**
     * Sets recordId
     *
-    * @param string|null $recordId **参数解释**： 告警记录ID。 **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。
+    * @param string|null $recordId **参数解释**： 告警流水号。优化告警流水号生成规则，由 ah1655717086704DEnBrJ999 更改为 ah251222T092004SAD2yARym **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
-    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     * xuserId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * xuserType  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * description  IAM用户的新描述信息。
@@ -65,7 +65,7 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
-    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     * xuserId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * xuserType  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * description  IAM用户的新描述信息。
@@ -130,7 +130,7 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
-    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     * xuserId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * xuserType  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * description  IAM用户的新描述信息。
@@ -174,7 +174,7 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
-    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     * xuserId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * xuserType  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * description  IAM用户的新描述信息。
@@ -218,7 +218,7 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
-    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     * xuserId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * xuserType  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * description  IAM用户的新描述信息。
@@ -400,7 +400,7 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwdStatus
-    *  IAM用户密码状态。true：需要修改密码，false：正常。
+    *  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     *
     * @return bool|null
     */
@@ -412,7 +412,7 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
     /**
     * Sets pwdStatus
     *
-    * @param bool|null $pwdStatus IAM用户密码状态。true：需要修改密码，false：正常。
+    * @param bool|null $pwdStatus IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     *
     * @return $this
     */

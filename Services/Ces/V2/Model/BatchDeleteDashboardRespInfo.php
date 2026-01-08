@@ -20,9 +20,9 @@ class BatchDeleteDashboardRespInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dashboardId  **参数描述**： 监控看板id **约束限制** 不涉及 **取值范围** 以db开头，包含22个字母和数字，长度为24个字符 **默认取值** 不涉及
-    * retStatus  处理结果, successful: 成功, error: 失败
-    * errorMsg  错误信息
+    * dashboardId  **参数解释**： 监控看板id **约束限制** 不涉及 **取值范围** 以db开头，包含22个字母和数字，长度为24个字符 **默认取值** 不涉及
+    * retStatus  **参数解释** 处理结果 **取值范围** 枚举值： - successful 成功 - error 失败
+    * errorMsg  **参数解释** 错误信息 **取值范围** 信息长度为[0,128]个字符
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class BatchDeleteDashboardRespInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dashboardId  **参数描述**： 监控看板id **约束限制** 不涉及 **取值范围** 以db开头，包含22个字母和数字，长度为24个字符 **默认取值** 不涉及
-    * retStatus  处理结果, successful: 成功, error: 失败
-    * errorMsg  错误信息
+    * dashboardId  **参数解释**： 监控看板id **约束限制** 不涉及 **取值范围** 以db开头，包含22个字母和数字，长度为24个字符 **默认取值** 不涉及
+    * retStatus  **参数解释** 处理结果 **取值范围** 枚举值： - successful 成功 - error 失败
+    * errorMsg  **参数解释** 错误信息 **取值范围** 信息长度为[0,128]个字符
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class BatchDeleteDashboardRespInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dashboardId  **参数描述**： 监控看板id **约束限制** 不涉及 **取值范围** 以db开头，包含22个字母和数字，长度为24个字符 **默认取值** 不涉及
-    * retStatus  处理结果, successful: 成功, error: 失败
-    * errorMsg  错误信息
+    * dashboardId  **参数解释**： 监控看板id **约束限制** 不涉及 **取值范围** 以db开头，包含22个字母和数字，长度为24个字符 **默认取值** 不涉及
+    * retStatus  **参数解释** 处理结果 **取值范围** 枚举值： - successful 成功 - error 失败
+    * errorMsg  **参数解释** 错误信息 **取值范围** 信息长度为[0,128]个字符
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class BatchDeleteDashboardRespInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dashboardId  **参数描述**： 监控看板id **约束限制** 不涉及 **取值范围** 以db开头，包含22个字母和数字，长度为24个字符 **默认取值** 不涉及
-    * retStatus  处理结果, successful: 成功, error: 失败
-    * errorMsg  错误信息
+    * dashboardId  **参数解释**： 监控看板id **约束限制** 不涉及 **取值范围** 以db开头，包含22个字母和数字，长度为24个字符 **默认取值** 不涉及
+    * retStatus  **参数解释** 处理结果 **取值范围** 枚举值： - successful 成功 - error 失败
+    * errorMsg  **参数解释** 错误信息 **取值范围** 信息长度为[0,128]个字符
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class BatchDeleteDashboardRespInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dashboardId  **参数描述**： 监控看板id **约束限制** 不涉及 **取值范围** 以db开头，包含22个字母和数字，长度为24个字符 **默认取值** 不涉及
-    * retStatus  处理结果, successful: 成功, error: 失败
-    * errorMsg  错误信息
+    * dashboardId  **参数解释**： 监控看板id **约束限制** 不涉及 **取值范围** 以db开头，包含22个字母和数字，长度为24个字符 **默认取值** 不涉及
+    * retStatus  **参数解释** 处理结果 **取值范围** 枚举值： - successful 成功 - error 失败
+    * errorMsg  **参数解释** 错误信息 **取值范围** 信息长度为[0,128]个字符
     *
     * @var string[]
     */
@@ -228,7 +228,7 @@ class BatchDeleteDashboardRespInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardId
-    *  **参数描述**： 监控看板id **约束限制** 不涉及 **取值范围** 以db开头，包含22个字母和数字，长度为24个字符 **默认取值** 不涉及
+    *  **参数解释**： 监控看板id **约束限制** 不涉及 **取值范围** 以db开头，包含22个字母和数字，长度为24个字符 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -240,7 +240,7 @@ class BatchDeleteDashboardRespInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardId
     *
-    * @param string|null $dashboardId **参数描述**： 监控看板id **约束限制** 不涉及 **取值范围** 以db开头，包含22个字母和数字，长度为24个字符 **默认取值** 不涉及
+    * @param string|null $dashboardId **参数解释**： 监控看板id **约束限制** 不涉及 **取值范围** 以db开头，包含22个字母和数字，长度为24个字符 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -252,7 +252,7 @@ class BatchDeleteDashboardRespInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets retStatus
-    *  处理结果, successful: 成功, error: 失败
+    *  **参数解释** 处理结果 **取值范围** 枚举值： - successful 成功 - error 失败
     *
     * @return string|null
     */
@@ -264,7 +264,7 @@ class BatchDeleteDashboardRespInfo implements ModelInterface, ArrayAccess
     /**
     * Sets retStatus
     *
-    * @param string|null $retStatus 处理结果, successful: 成功, error: 失败
+    * @param string|null $retStatus **参数解释** 处理结果 **取值范围** 枚举值： - successful 成功 - error 失败
     *
     * @return $this
     */
@@ -276,7 +276,7 @@ class BatchDeleteDashboardRespInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorMsg
-    *  错误信息
+    *  **参数解释** 错误信息 **取值范围** 信息长度为[0,128]个字符
     *
     * @return string|null
     */
@@ -288,7 +288,7 @@ class BatchDeleteDashboardRespInfo implements ModelInterface, ArrayAccess
     /**
     * Sets errorMsg
     *
-    * @param string|null $errorMsg 错误信息
+    * @param string|null $errorMsg **参数解释** 错误信息 **取值范围** 信息长度为[0,128]个字符
     *
     * @return $this
     */

@@ -169,14 +169,14 @@ class Tag implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) > 36)) {
-                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) > 128)) {
+                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) < 1)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 43)) {
-                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 43.";
+            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 255)) {
+                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 255.";
             }
             if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) < 0)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 0.";

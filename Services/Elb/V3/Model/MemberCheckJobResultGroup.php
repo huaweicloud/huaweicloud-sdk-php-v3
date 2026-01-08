@@ -21,7 +21,7 @@ class MemberCheckJobResultGroup implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * checkResult  **参数解释**：检查结果，true表示检查通过，false为检查不通过。  **取值范围**：不涉及
-    * checkItems  checkItems
+    * checkItems  **参数解释**：分组检查项汇总。
     * checkStatus  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
     *
     * @var string[]
@@ -35,7 +35,7 @@ class MemberCheckJobResultGroup implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * checkResult  **参数解释**：检查结果，true表示检查通过，false为检查不通过。  **取值范围**：不涉及
-    * checkItems  checkItems
+    * checkItems  **参数解释**：分组检查项汇总。
     * checkStatus  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
     *
     * @var string[]
@@ -70,7 +70,7 @@ class MemberCheckJobResultGroup implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * checkResult  **参数解释**：检查结果，true表示检查通过，false为检查不通过。  **取值范围**：不涉及
-    * checkItems  checkItems
+    * checkItems  **参数解释**：分组检查项汇总。
     * checkStatus  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
     *
     * @var string[]
@@ -84,7 +84,7 @@ class MemberCheckJobResultGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * checkResult  **参数解释**：检查结果，true表示检查通过，false为检查不通过。  **取值范围**：不涉及
-    * checkItems  checkItems
+    * checkItems  **参数解释**：分组检查项汇总。
     * checkStatus  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
     *
     * @var string[]
@@ -98,7 +98,7 @@ class MemberCheckJobResultGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * checkResult  **参数解释**：检查结果，true表示检查通过，false为检查不通过。  **取值范围**：不涉及
-    * checkItems  checkItems
+    * checkItems  **参数解释**：分组检查项汇总。
     * checkStatus  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
     *
     * @var string[]
@@ -220,7 +220,7 @@ class MemberCheckJobResultGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkItems
-    *  checkItems
+    *  **参数解释**：分组检查项汇总。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\MemberCheckJobResultItem[]|null
     */
@@ -232,7 +232,7 @@ class MemberCheckJobResultGroup implements ModelInterface, ArrayAccess
     /**
     * Sets checkItems
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\MemberCheckJobResultItem[]|null $checkItems checkItems
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\MemberCheckJobResultItem[]|null $checkItems **参数解释**：分组检查项汇总。
     *
     * @return $this
     */

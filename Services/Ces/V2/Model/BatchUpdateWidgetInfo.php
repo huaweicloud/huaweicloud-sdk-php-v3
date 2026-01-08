@@ -20,9 +20,9 @@ class BatchUpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * widgetId  视图id
-    * retStatus  修改结果；成功: successful, 失败: error
-    * errorMsg  如果失败则返回失败信息
+    * widgetId  **参数解释** 视图id **取值范围** 字符串必须以wg开头，后跟22个字母和数字，总长度为24个字符
+    * retStatus  **参数解释** 修改结果 **取值范围** 枚举值： - successful 成功 - error 失败
+    * errorMsg  **参数解释** 如果失败则返回失败信息 **取值范围** 长度为[1,2048]个字符
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class BatchUpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * widgetId  视图id
-    * retStatus  修改结果；成功: successful, 失败: error
-    * errorMsg  如果失败则返回失败信息
+    * widgetId  **参数解释** 视图id **取值范围** 字符串必须以wg开头，后跟22个字母和数字，总长度为24个字符
+    * retStatus  **参数解释** 修改结果 **取值范围** 枚举值： - successful 成功 - error 失败
+    * errorMsg  **参数解释** 如果失败则返回失败信息 **取值范围** 长度为[1,2048]个字符
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class BatchUpdateWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * widgetId  视图id
-    * retStatus  修改结果；成功: successful, 失败: error
-    * errorMsg  如果失败则返回失败信息
+    * widgetId  **参数解释** 视图id **取值范围** 字符串必须以wg开头，后跟22个字母和数字，总长度为24个字符
+    * retStatus  **参数解释** 修改结果 **取值范围** 枚举值： - successful 成功 - error 失败
+    * errorMsg  **参数解释** 如果失败则返回失败信息 **取值范围** 长度为[1,2048]个字符
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class BatchUpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * widgetId  视图id
-    * retStatus  修改结果；成功: successful, 失败: error
-    * errorMsg  如果失败则返回失败信息
+    * widgetId  **参数解释** 视图id **取值范围** 字符串必须以wg开头，后跟22个字母和数字，总长度为24个字符
+    * retStatus  **参数解释** 修改结果 **取值范围** 枚举值： - successful 成功 - error 失败
+    * errorMsg  **参数解释** 如果失败则返回失败信息 **取值范围** 长度为[1,2048]个字符
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class BatchUpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * widgetId  视图id
-    * retStatus  修改结果；成功: successful, 失败: error
-    * errorMsg  如果失败则返回失败信息
+    * widgetId  **参数解释** 视图id **取值范围** 字符串必须以wg开头，后跟22个字母和数字，总长度为24个字符
+    * retStatus  **参数解释** 修改结果 **取值范围** 枚举值： - successful 成功 - error 失败
+    * errorMsg  **参数解释** 如果失败则返回失败信息 **取值范围** 长度为[1,2048]个字符
     *
     * @var string[]
     */
@@ -228,7 +228,7 @@ class BatchUpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets widgetId
-    *  视图id
+    *  **参数解释** 视图id **取值范围** 字符串必须以wg开头，后跟22个字母和数字，总长度为24个字符
     *
     * @return string|null
     */
@@ -240,7 +240,7 @@ class BatchUpdateWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets widgetId
     *
-    * @param string|null $widgetId 视图id
+    * @param string|null $widgetId **参数解释** 视图id **取值范围** 字符串必须以wg开头，后跟22个字母和数字，总长度为24个字符
     *
     * @return $this
     */
@@ -252,7 +252,7 @@ class BatchUpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets retStatus
-    *  修改结果；成功: successful, 失败: error
+    *  **参数解释** 修改结果 **取值范围** 枚举值： - successful 成功 - error 失败
     *
     * @return string|null
     */
@@ -264,7 +264,7 @@ class BatchUpdateWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets retStatus
     *
-    * @param string|null $retStatus 修改结果；成功: successful, 失败: error
+    * @param string|null $retStatus **参数解释** 修改结果 **取值范围** 枚举值： - successful 成功 - error 失败
     *
     * @return $this
     */
@@ -276,7 +276,7 @@ class BatchUpdateWidgetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorMsg
-    *  如果失败则返回失败信息
+    *  **参数解释** 如果失败则返回失败信息 **取值范围** 长度为[1,2048]个字符
     *
     * @return string|null
     */
@@ -288,7 +288,7 @@ class BatchUpdateWidgetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets errorMsg
     *
-    * @param string|null $errorMsg 如果失败则返回失败信息
+    * @param string|null $errorMsg **参数解释** 如果失败则返回失败信息 **取值范围** 长度为[1,2048]个字符
     *
     * @return $this
     */

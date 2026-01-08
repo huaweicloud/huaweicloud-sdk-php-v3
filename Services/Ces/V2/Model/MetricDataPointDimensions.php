@@ -22,24 +22,28 @@ class MetricDataPointDimensions implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  **参数解释**： 资源维度名称 **取值范围**： 最小长度1，最大长度32
     * value  **参数解释**： 资源维度值 **取值范围**： 最小长度1，最大长度256
+    * originValue  **参数解释**： 实际维度信息。 **取值范围**： 字符串长度在 1 到 1024 之间。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'value' => 'string'
+            'value' => 'string',
+            'originValue' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  **参数解释**： 资源维度名称 **取值范围**： 最小长度1，最大长度32
     * value  **参数解释**： 资源维度值 **取值范围**： 最小长度1，最大长度256
+    * originValue  **参数解释**： 实际维度信息。 **取值范围**： 字符串长度在 1 到 1024 之间。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
-        'value' => null
+        'value' => null,
+        'originValue' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class MetricDataPointDimensions implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  **参数解释**： 资源维度名称 **取值范围**： 最小长度1，最大长度32
     * value  **参数解释**： 资源维度值 **取值范围**： 最小长度1，最大长度256
+    * originValue  **参数解释**： 实际维度信息。 **取值范围**： 字符串长度在 1 到 1024 之间。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
-            'value' => 'value'
+            'value' => 'value',
+            'originValue' => 'origin_value'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  **参数解释**： 资源维度名称 **取值范围**： 最小长度1，最大长度32
     * value  **参数解释**： 资源维度值 **取值范围**： 最小长度1，最大长度256
+    * originValue  **参数解释**： 实际维度信息。 **取值范围**： 字符串长度在 1 到 1024 之间。
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
-            'value' => 'setValue'
+            'value' => 'setValue',
+            'originValue' => 'setOriginValue'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  **参数解释**： 资源维度名称 **取值范围**： 最小长度1，最大长度32
     * value  **参数解释**： 资源维度值 **取值范围**： 最小长度1，最大长度256
+    * originValue  **参数解释**： 实际维度信息。 **取值范围**： 字符串长度在 1 到 1024 之间。
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
-            'value' => 'getValue'
+            'value' => 'getValue',
+            'originValue' => 'getOriginValue'
     ];
 
     /**
@@ -159,6 +169,7 @@ class MetricDataPointDimensions implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['originValue'] = isset($data['originValue']) ? $data['originValue'] : null;
     }
 
     /**
@@ -192,6 +203,12 @@ class MetricDataPointDimensions implements ModelInterface, ArrayAccess
             }
             if (!preg_match("/^([a-z]|[A-Z]|[0-9]|_){1}([a-z]|[A-Z]|[0-9]|_|-|\\\\.)*$/", $this->container['value'])) {
                 $invalidProperties[] = "invalid value for 'value', must be conform to the pattern /^([a-z]|[A-Z]|[0-9]|_){1}([a-z]|[A-Z]|[0-9]|_|-|\\\\.)*$/.";
+            }
+            if (!is_null($this->container['originValue']) && (mb_strlen($this->container['originValue']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'originValue', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['originValue']) && (mb_strlen($this->container['originValue']) < 1)) {
+                $invalidProperties[] = "invalid value for 'originValue', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -252,6 +269,30 @@ class MetricDataPointDimensions implements ModelInterface, ArrayAccess
     public function setValue($value)
     {
         $this->container['value'] = $value;
+        return $this;
+    }
+
+    /**
+    * Gets originValue
+    *  **参数解释**： 实际维度信息。 **取值范围**： 字符串长度在 1 到 1024 之间。
+    *
+    * @return string|null
+    */
+    public function getOriginValue()
+    {
+        return $this->container['originValue'];
+    }
+
+    /**
+    * Sets originValue
+    *
+    * @param string|null $originValue **参数解释**： 实际维度信息。 **取值范围**： 字符串长度在 1 到 1024 之间。
+    *
+    * @return $this
+    */
+    public function setOriginValue($originValue)
+    {
+        $this->container['originValue'] = $originValue;
         return $this;
     }
 

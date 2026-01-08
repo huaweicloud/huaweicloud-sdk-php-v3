@@ -25,6 +25,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     * hlsStorageType  hls的音视频流存储方式。  - composite：存储在同一个文件中。 - separate：存储在不同的文件中
     * rotate  视频顺时针旋转角度。  - 0：表示不旋转 - 1：表示顺时针旋转90度 - 2：表示顺时针旋转180度 - 3：表示顺时针旋转270度
     * adaptation  长短边自适应控制字段： - SHORT：表示短边自适应 - LONG：表示长边自适应 - NONE：表示不自适应
+    * fillType  adaptation为NONE时生效： - stretch：拉伸，对每一帧进行拉伸，填满整个画面 - black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。 - white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。 - gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。
     * upsample  是否开启上采样，如支持从480P的片源转为720P，可取值为:  - 0：表示上采样关闭， - 1：表示上采样开启.
     * hlsSegmentType  HLS切片类型。  取值如下所示： - mpegts：ts切片 - fmp4：fmp4切片  不设置默认为ts切片。
     *
@@ -36,6 +37,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
             'hlsStorageType' => 'string',
             'rotate' => 'int',
             'adaptation' => 'string',
+            'fillType' => 'string',
             'upsample' => 'int',
             'hlsSegmentType' => 'string'
     ];
@@ -47,6 +49,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     * hlsStorageType  hls的音视频流存储方式。  - composite：存储在同一个文件中。 - separate：存储在不同的文件中
     * rotate  视频顺时针旋转角度。  - 0：表示不旋转 - 1：表示顺时针旋转90度 - 2：表示顺时针旋转180度 - 3：表示顺时针旋转270度
     * adaptation  长短边自适应控制字段： - SHORT：表示短边自适应 - LONG：表示长边自适应 - NONE：表示不自适应
+    * fillType  adaptation为NONE时生效： - stretch：拉伸，对每一帧进行拉伸，填满整个画面 - black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。 - white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。 - gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。
     * upsample  是否开启上采样，如支持从480P的片源转为720P，可取值为:  - 0：表示上采样关闭， - 1：表示上采样开启.
     * hlsSegmentType  HLS切片类型。  取值如下所示： - mpegts：ts切片 - fmp4：fmp4切片  不设置默认为ts切片。
     *
@@ -58,6 +61,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
         'hlsStorageType' => null,
         'rotate' => 'int32',
         'adaptation' => null,
+        'fillType' => null,
         'upsample' => 'int32',
         'hlsSegmentType' => null
     ];
@@ -90,6 +94,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     * hlsStorageType  hls的音视频流存储方式。  - composite：存储在同一个文件中。 - separate：存储在不同的文件中
     * rotate  视频顺时针旋转角度。  - 0：表示不旋转 - 1：表示顺时针旋转90度 - 2：表示顺时针旋转180度 - 3：表示顺时针旋转270度
     * adaptation  长短边自适应控制字段： - SHORT：表示短边自适应 - LONG：表示长边自适应 - NONE：表示不自适应
+    * fillType  adaptation为NONE时生效： - stretch：拉伸，对每一帧进行拉伸，填满整个画面 - black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。 - white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。 - gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。
     * upsample  是否开启上采样，如支持从480P的片源转为720P，可取值为:  - 0：表示上采样关闭， - 1：表示上采样开启.
     * hlsSegmentType  HLS切片类型。  取值如下所示： - mpegts：ts切片 - fmp4：fmp4切片  不设置默认为ts切片。
     *
@@ -101,6 +106,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
             'hlsStorageType' => 'hls_storage_type',
             'rotate' => 'rotate',
             'adaptation' => 'adaptation',
+            'fillType' => 'fill_type',
             'upsample' => 'upsample',
             'hlsSegmentType' => 'hls_segment_type'
     ];
@@ -112,6 +118,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     * hlsStorageType  hls的音视频流存储方式。  - composite：存储在同一个文件中。 - separate：存储在不同的文件中
     * rotate  视频顺时针旋转角度。  - 0：表示不旋转 - 1：表示顺时针旋转90度 - 2：表示顺时针旋转180度 - 3：表示顺时针旋转270度
     * adaptation  长短边自适应控制字段： - SHORT：表示短边自适应 - LONG：表示长边自适应 - NONE：表示不自适应
+    * fillType  adaptation为NONE时生效： - stretch：拉伸，对每一帧进行拉伸，填满整个画面 - black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。 - white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。 - gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。
     * upsample  是否开启上采样，如支持从480P的片源转为720P，可取值为:  - 0：表示上采样关闭， - 1：表示上采样开启.
     * hlsSegmentType  HLS切片类型。  取值如下所示： - mpegts：ts切片 - fmp4：fmp4切片  不设置默认为ts切片。
     *
@@ -123,6 +130,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
             'hlsStorageType' => 'setHlsStorageType',
             'rotate' => 'setRotate',
             'adaptation' => 'setAdaptation',
+            'fillType' => 'setFillType',
             'upsample' => 'setUpsample',
             'hlsSegmentType' => 'setHlsSegmentType'
     ];
@@ -134,6 +142,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     * hlsStorageType  hls的音视频流存储方式。  - composite：存储在同一个文件中。 - separate：存储在不同的文件中
     * rotate  视频顺时针旋转角度。  - 0：表示不旋转 - 1：表示顺时针旋转90度 - 2：表示顺时针旋转180度 - 3：表示顺时针旋转270度
     * adaptation  长短边自适应控制字段： - SHORT：表示短边自适应 - LONG：表示长边自适应 - NONE：表示不自适应
+    * fillType  adaptation为NONE时生效： - stretch：拉伸，对每一帧进行拉伸，填满整个画面 - black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。 - white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。 - gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。
     * upsample  是否开启上采样，如支持从480P的片源转为720P，可取值为:  - 0：表示上采样关闭， - 1：表示上采样开启.
     * hlsSegmentType  HLS切片类型。  取值如下所示： - mpegts：ts切片 - fmp4：fmp4切片  不设置默认为ts切片。
     *
@@ -145,6 +154,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
             'hlsStorageType' => 'getHlsStorageType',
             'rotate' => 'getRotate',
             'adaptation' => 'getAdaptation',
+            'fillType' => 'getFillType',
             'upsample' => 'getUpsample',
             'hlsSegmentType' => 'getHlsSegmentType'
     ];
@@ -259,6 +269,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
         $this->container['hlsStorageType'] = isset($data['hlsStorageType']) ? $data['hlsStorageType'] : null;
         $this->container['rotate'] = isset($data['rotate']) ? $data['rotate'] : null;
         $this->container['adaptation'] = isset($data['adaptation']) ? $data['adaptation'] : null;
+        $this->container['fillType'] = isset($data['fillType']) ? $data['fillType'] : null;
         $this->container['upsample'] = isset($data['upsample']) ? $data['upsample'] : null;
         $this->container['hlsSegmentType'] = isset($data['hlsSegmentType']) ? $data['hlsSegmentType'] : null;
     }
@@ -316,6 +327,12 @@ class VideoProcess implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['adaptation']) && (mb_strlen($this->container['adaptation']) < 0)) {
                 $invalidProperties[] = "invalid value for 'adaptation', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['fillType']) && (mb_strlen($this->container['fillType']) > 16)) {
+                $invalidProperties[] = "invalid value for 'fillType', the character length must be smaller than or equal to 16.";
+            }
+            if (!is_null($this->container['fillType']) && (mb_strlen($this->container['fillType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'fillType', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['upsample']) && ($this->container['upsample'] > 1)) {
                 $invalidProperties[] = "invalid value for 'upsample', must be smaller than or equal to 1.";
@@ -468,6 +485,30 @@ class VideoProcess implements ModelInterface, ArrayAccess
     public function setAdaptation($adaptation)
     {
         $this->container['adaptation'] = $adaptation;
+        return $this;
+    }
+
+    /**
+    * Gets fillType
+    *  adaptation为NONE时生效： - stretch：拉伸，对每一帧进行拉伸，填满整个画面 - black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。 - white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。 - gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。
+    *
+    * @return string|null
+    */
+    public function getFillType()
+    {
+        return $this->container['fillType'];
+    }
+
+    /**
+    * Sets fillType
+    *
+    * @param string|null $fillType adaptation为NONE时生效： - stretch：拉伸，对每一帧进行拉伸，填满整个画面 - black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。 - white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。 - gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。
+    *
+    * @return $this
+    */
+    public function setFillType($fillType)
+    {
+        $this->container['fillType'] = $fillType;
         return $this;
     }
 

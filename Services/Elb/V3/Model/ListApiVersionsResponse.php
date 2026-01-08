@@ -21,7 +21,7 @@ class ListApiVersionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * versions  versions
+    * versions  **参数解释**：可用API版本列表。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListApiVersionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * versions  versions
+    * versions  **参数解释**：可用API版本列表。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListApiVersionsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * versions  versions
+    * versions  **参数解释**：可用API版本列表。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListApiVersionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * versions  versions
+    * versions  **参数解释**：可用API版本列表。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListApiVersionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * versions  versions
+    * versions  **参数解释**：可用API版本列表。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListApiVersionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets versions
-    *  versions
+    *  **参数解释**：可用API版本列表。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\ApiVersionInfo[]|null
     */
@@ -187,7 +187,7 @@ class ListApiVersionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets versions
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\ApiVersionInfo[]|null $versions versions
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\ApiVersionInfo[]|null $versions **参数解释**：可用API版本列表。
     *
     * @return $this
     */

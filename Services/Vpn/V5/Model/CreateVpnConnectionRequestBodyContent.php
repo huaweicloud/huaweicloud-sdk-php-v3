@@ -30,7 +30,6 @@ class CreateVpnConnectionRequestBodyContent implements ModelInterface, ArrayAcce
     * tunnelPeerAddress  对端隧道口地址
     * enableNqa  开启NQA检测
     * enableHub  开启分支互联
-    * enableHealthCheck  开启健康检查
     * psk  预共享密钥，只能包含大写字母、小写字母、数字和特殊字符(~!@#$%^()-_+={ },./:;)且至少包含四种字符的三种
     * policyRules  策略模式的策略规则组
     * ikepolicy  ikepolicy
@@ -53,7 +52,6 @@ class CreateVpnConnectionRequestBodyContent implements ModelInterface, ArrayAcce
             'tunnelPeerAddress' => 'string',
             'enableNqa' => 'bool',
             'enableHub' => 'bool',
-            'enableHealthCheck' => 'bool',
             'psk' => 'string',
             'policyRules' => '\HuaweiCloud\SDK\Vpn\V5\Model\PolicyRule[]',
             'ikepolicy' => '\HuaweiCloud\SDK\Vpn\V5\Model\IkePolicy',
@@ -76,7 +74,6 @@ class CreateVpnConnectionRequestBodyContent implements ModelInterface, ArrayAcce
     * tunnelPeerAddress  对端隧道口地址
     * enableNqa  开启NQA检测
     * enableHub  开启分支互联
-    * enableHealthCheck  开启健康检查
     * psk  预共享密钥，只能包含大写字母、小写字母、数字和特殊字符(~!@#$%^()-_+={ },./:;)且至少包含四种字符的三种
     * policyRules  策略模式的策略规则组
     * ikepolicy  ikepolicy
@@ -99,7 +96,6 @@ class CreateVpnConnectionRequestBodyContent implements ModelInterface, ArrayAcce
         'tunnelPeerAddress' => null,
         'enableNqa' => null,
         'enableHub' => null,
-        'enableHealthCheck' => null,
         'psk' => null,
         'policyRules' => null,
         'ikepolicy' => null,
@@ -143,7 +139,6 @@ class CreateVpnConnectionRequestBodyContent implements ModelInterface, ArrayAcce
     * tunnelPeerAddress  对端隧道口地址
     * enableNqa  开启NQA检测
     * enableHub  开启分支互联
-    * enableHealthCheck  开启健康检查
     * psk  预共享密钥，只能包含大写字母、小写字母、数字和特殊字符(~!@#$%^()-_+={ },./:;)且至少包含四种字符的三种
     * policyRules  策略模式的策略规则组
     * ikepolicy  ikepolicy
@@ -166,7 +161,6 @@ class CreateVpnConnectionRequestBodyContent implements ModelInterface, ArrayAcce
             'tunnelPeerAddress' => 'tunnel_peer_address',
             'enableNqa' => 'enable_nqa',
             'enableHub' => 'enable_hub',
-            'enableHealthCheck' => 'enable_health_check',
             'psk' => 'psk',
             'policyRules' => 'policy_rules',
             'ikepolicy' => 'ikepolicy',
@@ -189,7 +183,6 @@ class CreateVpnConnectionRequestBodyContent implements ModelInterface, ArrayAcce
     * tunnelPeerAddress  对端隧道口地址
     * enableNqa  开启NQA检测
     * enableHub  开启分支互联
-    * enableHealthCheck  开启健康检查
     * psk  预共享密钥，只能包含大写字母、小写字母、数字和特殊字符(~!@#$%^()-_+={ },./:;)且至少包含四种字符的三种
     * policyRules  策略模式的策略规则组
     * ikepolicy  ikepolicy
@@ -212,7 +205,6 @@ class CreateVpnConnectionRequestBodyContent implements ModelInterface, ArrayAcce
             'tunnelPeerAddress' => 'setTunnelPeerAddress',
             'enableNqa' => 'setEnableNqa',
             'enableHub' => 'setEnableHub',
-            'enableHealthCheck' => 'setEnableHealthCheck',
             'psk' => 'setPsk',
             'policyRules' => 'setPolicyRules',
             'ikepolicy' => 'setIkepolicy',
@@ -235,7 +227,6 @@ class CreateVpnConnectionRequestBodyContent implements ModelInterface, ArrayAcce
     * tunnelPeerAddress  对端隧道口地址
     * enableNqa  开启NQA检测
     * enableHub  开启分支互联
-    * enableHealthCheck  开启健康检查
     * psk  预共享密钥，只能包含大写字母、小写字母、数字和特殊字符(~!@#$%^()-_+={ },./:;)且至少包含四种字符的三种
     * policyRules  策略模式的策略规则组
     * ikepolicy  ikepolicy
@@ -258,7 +249,6 @@ class CreateVpnConnectionRequestBodyContent implements ModelInterface, ArrayAcce
             'tunnelPeerAddress' => 'getTunnelPeerAddress',
             'enableNqa' => 'getEnableNqa',
             'enableHub' => 'getEnableHub',
-            'enableHealthCheck' => 'getEnableHealthCheck',
             'psk' => 'getPsk',
             'policyRules' => 'getPolicyRules',
             'ikepolicy' => 'getIkepolicy',
@@ -369,7 +359,6 @@ class CreateVpnConnectionRequestBodyContent implements ModelInterface, ArrayAcce
         $this->container['tunnelPeerAddress'] = isset($data['tunnelPeerAddress']) ? $data['tunnelPeerAddress'] : null;
         $this->container['enableNqa'] = isset($data['enableNqa']) ? $data['enableNqa'] : null;
         $this->container['enableHub'] = isset($data['enableHub']) ? $data['enableHub'] : null;
-        $this->container['enableHealthCheck'] = isset($data['enableHealthCheck']) ? $data['enableHealthCheck'] : null;
         $this->container['psk'] = isset($data['psk']) ? $data['psk'] : null;
         $this->container['policyRules'] = isset($data['policyRules']) ? $data['policyRules'] : null;
         $this->container['ikepolicy'] = isset($data['ikepolicy']) ? $data['ikepolicy'] : null;
@@ -685,30 +674,6 @@ class CreateVpnConnectionRequestBodyContent implements ModelInterface, ArrayAcce
     public function setEnableHub($enableHub)
     {
         $this->container['enableHub'] = $enableHub;
-        return $this;
-    }
-
-    /**
-    * Gets enableHealthCheck
-    *  开启健康检查
-    *
-    * @return bool|null
-    */
-    public function getEnableHealthCheck()
-    {
-        return $this->container['enableHealthCheck'];
-    }
-
-    /**
-    * Sets enableHealthCheck
-    *
-    * @param bool|null $enableHealthCheck 开启健康检查
-    *
-    * @return $this
-    */
-    public function setEnableHealthCheck($enableHealthCheck)
-    {
-        $this->container['enableHealthCheck'] = $enableHealthCheck;
         return $this;
     }
 

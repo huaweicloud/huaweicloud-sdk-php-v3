@@ -27,6 +27,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
     * listeners  **参数解释**：关联的监听器。
     * protocols  **参数解释**：自定义安全策略的TLS协议列表。  **取值范围**：不涉及
     * ciphers  **参数解释**：自定义安全策略的加密套件列表。  **取值范围**：不涉及
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     * createdAt  **参数解释**：创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     * updatedAt  **参数解释**：更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
@@ -40,6 +41,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
             'listeners' => '\HuaweiCloud\SDK\Elb\V3\Model\ListenerRef[]',
             'protocols' => 'string[]',
             'ciphers' => 'string[]',
+            'enterpriseProjectId' => 'string',
             'createdAt' => 'string',
             'updatedAt' => 'string'
     ];
@@ -53,6 +55,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
     * listeners  **参数解释**：关联的监听器。
     * protocols  **参数解释**：自定义安全策略的TLS协议列表。  **取值范围**：不涉及
     * ciphers  **参数解释**：自定义安全策略的加密套件列表。  **取值范围**：不涉及
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     * createdAt  **参数解释**：创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     * updatedAt  **参数解释**：更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
@@ -66,6 +69,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
         'listeners' => null,
         'protocols' => null,
         'ciphers' => null,
+        'enterpriseProjectId' => null,
         'createdAt' => null,
         'updatedAt' => null
     ];
@@ -100,6 +104,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
     * listeners  **参数解释**：关联的监听器。
     * protocols  **参数解释**：自定义安全策略的TLS协议列表。  **取值范围**：不涉及
     * ciphers  **参数解释**：自定义安全策略的加密套件列表。  **取值范围**：不涉及
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     * createdAt  **参数解释**：创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     * updatedAt  **参数解释**：更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
@@ -113,6 +118,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
             'listeners' => 'listeners',
             'protocols' => 'protocols',
             'ciphers' => 'ciphers',
+            'enterpriseProjectId' => 'enterprise_project_id',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at'
     ];
@@ -126,6 +132,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
     * listeners  **参数解释**：关联的监听器。
     * protocols  **参数解释**：自定义安全策略的TLS协议列表。  **取值范围**：不涉及
     * ciphers  **参数解释**：自定义安全策略的加密套件列表。  **取值范围**：不涉及
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     * createdAt  **参数解释**：创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     * updatedAt  **参数解释**：更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
@@ -139,6 +146,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
             'listeners' => 'setListeners',
             'protocols' => 'setProtocols',
             'ciphers' => 'setCiphers',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt'
     ];
@@ -152,6 +160,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
     * listeners  **参数解释**：关联的监听器。
     * protocols  **参数解释**：自定义安全策略的TLS协议列表。  **取值范围**：不涉及
     * ciphers  **参数解释**：自定义安全策略的加密套件列表。  **取值范围**：不涉及
+    * enterpriseProjectId  **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
     * createdAt  **参数解释**：创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     * updatedAt  **参数解释**：更新时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
@@ -165,6 +174,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
             'listeners' => 'getListeners',
             'protocols' => 'getProtocols',
             'ciphers' => 'getCiphers',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt'
     ];
@@ -234,6 +244,7 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
         $this->container['listeners'] = isset($data['listeners']) ? $data['listeners'] : null;
         $this->container['protocols'] = isset($data['protocols']) ? $data['protocols'] : null;
         $this->container['ciphers'] = isset($data['ciphers']) ? $data['ciphers'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
     }
@@ -452,6 +463,30 @@ class SecurityPolicy implements ModelInterface, ArrayAccess
     public function setCiphers($ciphers)
     {
         $this->container['ciphers'] = $ciphers;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

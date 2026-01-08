@@ -172,7 +172,6 @@ class VpcAsyncClient extends Client
      *
      * 为指定的端口批量添加标签。
      * 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
-     * 该接口在华南-深圳上线。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -384,7 +383,6 @@ class VpcAsyncClient extends Client
      *
      * 为指定的端口资源实例批量删除标签。
      * 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
-     * 该接口在华南-深圳上线。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -456,7 +454,6 @@ class VpcAsyncClient extends Client
      * 查询端口资源实例数量
      *
      * 使用标签过滤查询端口实例数量。
-     * 该接口在华南-深圳上线。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -524,9 +521,8 @@ class VpcAsyncClient extends Client
     /**
      * 添加端口资源标签
      *
-     * 给指定端口资源实例增加标签信息
+     * 给指定端口资源实例增加标签信息。
      * 此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
-     * 该接口在华南-深圳上线。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1073,9 +1069,8 @@ class VpcAsyncClient extends Client
     /**
      * 删除端口资源标签
      *
-     * 删除指定端口的标签信息
+     * 删除指定端口的标签信息。
      * 该接口为幂等接口：删除的key不存在报404，key不能为空或者空字符串。
-     * 该接口在华南-深圳上线。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1623,7 +1618,6 @@ class VpcAsyncClient extends Client
      * 查询端口项目标签
      *
      * 查询租户在指定Project中实例类型的所有资源标签集合。
-     * 该接口在华南-深圳上线。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1692,10 +1686,125 @@ class VpcAsyncClient extends Client
     }
 
     /**
+     * 查询端口列表
+     *
+     * 当您的端口创建成功后，您可以通过调用该接口查询所有端口信息，包括端口ID、IP地址、所属云服务实例等。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPortsAsync($request)
+    {
+        return $this->listPortsAsyncWithHttpInfo($request);
+    }
+    
+    public function listPortsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/ports';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['adminStateUp'] !== null) {
+            $queryParams['admin_state_up'] = $localVarParams['adminStateUp'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['virsubnetId'] !== null) {
+            $queryParams['virsubnet_id'] = $localVarParams['virsubnetId'];
+        }
+        if ($localVarParams['deviceId'] !== null) {
+            $queryParams['device_id'] = $localVarParams['deviceId'];
+        }
+        if ($localVarParams['macAddress'] !== null) {
+            $queryParams['mac_address'] = $localVarParams['macAddress'];
+        }
+        if ($localVarParams['deviceOwner'] !== null) {
+            $queryParams['device_owner'] = $localVarParams['deviceOwner'];
+        }
+        if ($localVarParams['deviceOwnerPrefixlike'] !== null) {
+            $queryParams['device_owner_prefixlike'] = $localVarParams['deviceOwnerPrefixlike'];
+        }
+        if ($localVarParams['description'] !== null) {
+            $queryParams['description'] = $localVarParams['description'];
+        }
+        if ($localVarParams['bindinghostId'] !== null) {
+            $queryParams['bindinghost_id'] = $localVarParams['bindinghostId'];
+        }
+        if ($localVarParams['privateIps'] !== null) {
+            $queryParams['private_ips'] = $localVarParams['privateIps'];
+        }
+        if ($localVarParams['securityGroups'] !== null) {
+            $queryParams['security_groups'] = $localVarParams['securityGroups'];
+        }
+        if ($localVarParams['vpcId'] !== null) {
+            $queryParams['vpc_id'] = $localVarParams['vpcId'];
+        }
+        if ($localVarParams['allowedAddressPairs'] !== null) {
+            $queryParams['allowed_address_pairs'] = $localVarParams['allowedAddressPairs'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $queryParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['instanceType'] !== null) {
+            $queryParams['instance_type'] = $localVarParams['instanceType'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListPortsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListPortsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询端口资源实例列表
      *
      * 使用标签过滤查询端口。
-     * 该接口在华南-深圳上线。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2441,6 +2550,98 @@ class VpcAsyncClient extends Client
     }
 
     /**
+     * 查询虚拟子网列表
+     *
+     * 当您的子网创建成功后，您可以通过调用该接口查询所有子网信息，包括子网的名称、ID等。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVirsubnetsAsync($request)
+    {
+        return $this->listVirsubnetsAsyncWithHttpInfo($request);
+    }
+    
+    public function listVirsubnetsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/vpc/virsubnets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['vpcId'] !== null) {
+            $queryParams['vpc_id'] = $localVarParams['vpcId'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['scope'] !== null) {
+            $queryParams['scope'] = $localVarParams['scope'];
+        }
+        if ($localVarParams['zoneId'] !== null) {
+            $queryParams['zone_id'] = $localVarParams['zoneId'];
+        }
+        if ($localVarParams['description'] !== null) {
+            $queryParams['description'] = $localVarParams['description'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListVirsubnetsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListVirsubnetsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 迁移辅助弹性网卡
      *
      * 批量迁移辅助弹性网卡
@@ -2651,10 +2852,77 @@ class VpcAsyncClient extends Client
     }
 
     /**
+     * 查询端口详情
+     *
+     * 当您的端口创建成功后，您可以通过调用该接口查询单个端口的详细信息，包括端口ID、IP地址、所属云服务实例等。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showPortAsync($request)
+    {
+        return $this->showPortAsyncWithHttpInfo($request);
+    }
+    
+    public function showPortAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/ports/{port_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['portId'] !== null) {
+            $pathParams['port_id'] = $localVarParams['portId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowPortResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowPortRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询端口资源标签
      *
      * 查询指定端口的标签信息。
-     * 该接口在华南-深圳上线。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2716,6 +2984,71 @@ class VpcAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowPortTagsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowPortTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询配额
+     *
+     * 您可以通过此接口查询VPC服务相关资源的配额，包括安全组配额、安全组规则配额等。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showQuotaAsync($request)
+    {
+        return $this->showQuotaAsyncWithHttpInfo($request);
+    }
+    
+    public function showQuotaAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/vpc/quotas';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowQuotaResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowQuotaRequest',
             $asyncRequest = true);
     }
 
@@ -3189,6 +3522,74 @@ class VpcAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowTrafficMirrorSessionResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowTrafficMirrorSessionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询虚拟子网详情
+     *
+     * 当您的子网创建成功后，您可以通过调用该接口查询单个子网的详细信息，包括子网的名称、ID、状态等。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showVirsubnetAsync($request)
+    {
+        return $this->showVirsubnetAsyncWithHttpInfo($request);
+    }
+    
+    public function showVirsubnetAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/vpc/virsubnets/{virsubnet_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['virsubnetId'] !== null) {
+            $pathParams['virsubnet_id'] = $localVarParams['virsubnetId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowVirsubnetResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowVirsubnetRequest',
             $asyncRequest = true);
     }
 
@@ -6166,6 +6567,77 @@ class VpcAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListAddressGroupResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListAddressGroupRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询IP地址组的关联资源
+     *
+     * 当您的IP地址组被网络ACL和安全组资源关联时，您可以通过调用该接口查询IP地址组关联的网络ACL或安全组的资源ID和名称。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAddressGroupsDependencyAsync($request)
+    {
+        return $this->listAddressGroupsDependencyAsyncWithHttpInfo($request);
+    }
+    
+    public function listAddressGroupsDependencyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/vpc/list-address-groups-dependency';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListAddressGroupsDependencyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListAddressGroupsDependencyRequest',
             $asyncRequest = true);
     }
 

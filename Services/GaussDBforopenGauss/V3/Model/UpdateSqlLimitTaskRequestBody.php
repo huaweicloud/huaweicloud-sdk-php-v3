@@ -246,9 +246,6 @@ class UpdateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['parallelSize'] === null) {
-            $invalidProperties[] = "'parallelSize' can't be null";
-        }
         if ($this->container['taskName'] === null) {
             $invalidProperties[] = "'taskName' can't be null";
         }
@@ -345,7 +342,7 @@ class UpdateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
     * Gets parallelSize
     *  **参数解释**: 并发数。 **约束限制**: 不涉及。 **取值范围**: 大于等于零的整数。 **默认取值**: 不涉及。
     *
-    * @return int
+    * @return int|null
     */
     public function getParallelSize()
     {
@@ -355,7 +352,7 @@ class UpdateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets parallelSize
     *
-    * @param int $parallelSize **参数解释**: 并发数。 **约束限制**: 不涉及。 **取值范围**: 大于等于零的整数。 **默认取值**: 不涉及。
+    * @param int|null $parallelSize **参数解释**: 并发数。 **约束限制**: 不涉及。 **取值范围**: 大于等于零的整数。 **默认取值**: 不涉及。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class BatchCopyResultVo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * reason  失败原因,成功时没有该字段
-    * status  批量操作结果。
+    * status  批量操作结果。取值意义： - success：成功 - fail：失败
     * domainName  域名。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class BatchCopyResultVo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * reason  失败原因,成功时没有该字段
-    * status  批量操作结果。
+    * status  批量操作结果。取值意义： - success：成功 - fail：失败
     * domainName  域名。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class BatchCopyResultVo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * reason  失败原因,成功时没有该字段
-    * status  批量操作结果。
+    * status  批量操作结果。取值意义： - success：成功 - fail：失败
     * domainName  域名。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class BatchCopyResultVo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * reason  失败原因,成功时没有该字段
-    * status  批量操作结果。
+    * status  批量操作结果。取值意义： - success：成功 - fail：失败
     * domainName  域名。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class BatchCopyResultVo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * reason  失败原因,成功时没有该字段
-    * status  批量操作结果。
+    * status  批量操作结果。取值意义： - success：成功 - fail：失败
     * domainName  域名。
     *
     * @var string[]
@@ -255,7 +255,7 @@ class BatchCopyResultVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  批量操作结果。
+    *  批量操作结果。取值意义： - success：成功 - fail：失败
     *
     * @return string
     */
@@ -267,7 +267,7 @@ class BatchCopyResultVo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 批量操作结果。
+    * @param string $status 批量操作结果。取值意义： - success：成功 - fail：失败
     *
     * @return $this
     */

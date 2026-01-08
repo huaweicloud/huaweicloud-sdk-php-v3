@@ -21,7 +21,7 @@ class DeletePortTagRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * portId  功能说明：端口唯一标识 取值范围：合法UUID 约束：ID对应的端口必须存在
-    * projectId  项目ID
+    * projectId  项目ID。
     * tagKey  功能说明：标签键
     *
     * @var string[]
@@ -35,7 +35,7 @@ class DeletePortTagRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * portId  功能说明：端口唯一标识 取值范围：合法UUID 约束：ID对应的端口必须存在
-    * projectId  项目ID
+    * projectId  项目ID。
     * tagKey  功能说明：标签键
     *
     * @var string[]
@@ -70,7 +70,7 @@ class DeletePortTagRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * portId  功能说明：端口唯一标识 取值范围：合法UUID 约束：ID对应的端口必须存在
-    * projectId  项目ID
+    * projectId  项目ID。
     * tagKey  功能说明：标签键
     *
     * @var string[]
@@ -84,7 +84,7 @@ class DeletePortTagRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * portId  功能说明：端口唯一标识 取值范围：合法UUID 约束：ID对应的端口必须存在
-    * projectId  项目ID
+    * projectId  项目ID。
     * tagKey  功能说明：标签键
     *
     * @var string[]
@@ -98,7 +98,7 @@ class DeletePortTagRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * portId  功能说明：端口唯一标识 取值范围：合法UUID 约束：ID对应的端口必须存在
-    * projectId  项目ID
+    * projectId  项目ID。
     * tagKey  功能说明：标签键
     *
     * @var string[]
@@ -235,7 +235,7 @@ class DeletePortTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  项目ID。
     *
     * @return string
     */
@@ -247,7 +247,7 @@ class DeletePortTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID
+    * @param string $projectId 项目ID。
     *
     * @return $this
     */

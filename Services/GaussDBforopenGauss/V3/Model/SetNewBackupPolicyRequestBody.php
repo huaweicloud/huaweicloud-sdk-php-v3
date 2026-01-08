@@ -25,7 +25,7 @@ class SetNewBackupPolicyRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'backupPolicy' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BackupPolicyInfo'
+            'backupPolicy' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BackupPolicyInfoOption'
     ];
 
     /**
@@ -179,7 +179,7 @@ class SetNewBackupPolicyRequestBody implements ModelInterface, ArrayAccess
     * Gets backupPolicy
     *  backupPolicy
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BackupPolicyInfo
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BackupPolicyInfoOption
     */
     public function getBackupPolicy()
     {
@@ -189,7 +189,7 @@ class SetNewBackupPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets backupPolicy
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BackupPolicyInfo $backupPolicy backupPolicy
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BackupPolicyInfoOption $backupPolicy backupPolicy
     *
     * @return $this
     */

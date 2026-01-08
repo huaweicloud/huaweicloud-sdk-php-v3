@@ -32,7 +32,7 @@ class ListHealthMonitorsRequest implements ModelInterface, ArrayAccess
     * adminStateUp  **参数解释**：健康检查的管理状态。  **约束限制**：不涉及  **取值范围**： - true：表示开启健康检查。 - false表示关闭健康检查。  **默认取值**：不涉及
     * maxRetriesDown  **参数解释**：健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。 支持多值查询，查询条件格式：******max_retries_down=xxx&max_retries_down=xxx******。  **约束限制**：不涉及  **取值范围**：1-10  **默认取值**：不涉及
     * timeout  **参数解释**：一次健康检查请求的超时时间。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
-    * type  **参数解释**：健康检查请求协议。 支持多值查询，查询条件格式：*****type=xxx&type=xxx*****。  **约束限制**：不涉及  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS和GRPC。  **默认取值**：不涉及
+    * type  **参数解释**：健康检查请求协议。 支持多值查询，查询条件格式：*****type=xxx&type=xxx*****。  **约束限制**：不涉及  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS、GRPC[和GRPCS](tag:not_open)。  **默认取值**：不涉及
     * expectedCodes  **参数解释**：期望响应状态码。 支持多值查询，查询条件格式：****expected_codes=xxx&expected_codes=xxx****。  **约束限制**：不涉及  **取值范围**： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  **默认取值**：不涉及
     * urlPath  **参数解释**：健康检查测试member健康时发送的http请求路径。 支持多值查询，查询条件格式：***url_path=xxx&url_path=xxx***。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * httpMethod  **参数解释**：HTTP请求方法。 支持多值查询，查询条件格式：**http_method=xxx&http_method=xxx**。  **约束限制**：不涉及  **取值范围**：GET、HEAD、POST  **默认取值**：不涉及
@@ -74,7 +74,7 @@ class ListHealthMonitorsRequest implements ModelInterface, ArrayAccess
     * adminStateUp  **参数解释**：健康检查的管理状态。  **约束限制**：不涉及  **取值范围**： - true：表示开启健康检查。 - false表示关闭健康检查。  **默认取值**：不涉及
     * maxRetriesDown  **参数解释**：健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。 支持多值查询，查询条件格式：******max_retries_down=xxx&max_retries_down=xxx******。  **约束限制**：不涉及  **取值范围**：1-10  **默认取值**：不涉及
     * timeout  **参数解释**：一次健康检查请求的超时时间。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
-    * type  **参数解释**：健康检查请求协议。 支持多值查询，查询条件格式：*****type=xxx&type=xxx*****。  **约束限制**：不涉及  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS和GRPC。  **默认取值**：不涉及
+    * type  **参数解释**：健康检查请求协议。 支持多值查询，查询条件格式：*****type=xxx&type=xxx*****。  **约束限制**：不涉及  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS、GRPC[和GRPCS](tag:not_open)。  **默认取值**：不涉及
     * expectedCodes  **参数解释**：期望响应状态码。 支持多值查询，查询条件格式：****expected_codes=xxx&expected_codes=xxx****。  **约束限制**：不涉及  **取值范围**： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  **默认取值**：不涉及
     * urlPath  **参数解释**：健康检查测试member健康时发送的http请求路径。 支持多值查询，查询条件格式：***url_path=xxx&url_path=xxx***。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * httpMethod  **参数解释**：HTTP请求方法。 支持多值查询，查询条件格式：**http_method=xxx&http_method=xxx**。  **约束限制**：不涉及  **取值范围**：GET、HEAD、POST  **默认取值**：不涉及
@@ -137,7 +137,7 @@ class ListHealthMonitorsRequest implements ModelInterface, ArrayAccess
     * adminStateUp  **参数解释**：健康检查的管理状态。  **约束限制**：不涉及  **取值范围**： - true：表示开启健康检查。 - false表示关闭健康检查。  **默认取值**：不涉及
     * maxRetriesDown  **参数解释**：健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。 支持多值查询，查询条件格式：******max_retries_down=xxx&max_retries_down=xxx******。  **约束限制**：不涉及  **取值范围**：1-10  **默认取值**：不涉及
     * timeout  **参数解释**：一次健康检查请求的超时时间。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
-    * type  **参数解释**：健康检查请求协议。 支持多值查询，查询条件格式：*****type=xxx&type=xxx*****。  **约束限制**：不涉及  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS和GRPC。  **默认取值**：不涉及
+    * type  **参数解释**：健康检查请求协议。 支持多值查询，查询条件格式：*****type=xxx&type=xxx*****。  **约束限制**：不涉及  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS、GRPC[和GRPCS](tag:not_open)。  **默认取值**：不涉及
     * expectedCodes  **参数解释**：期望响应状态码。 支持多值查询，查询条件格式：****expected_codes=xxx&expected_codes=xxx****。  **约束限制**：不涉及  **取值范围**： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  **默认取值**：不涉及
     * urlPath  **参数解释**：健康检查测试member健康时发送的http请求路径。 支持多值查询，查询条件格式：***url_path=xxx&url_path=xxx***。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * httpMethod  **参数解释**：HTTP请求方法。 支持多值查询，查询条件格式：**http_method=xxx&http_method=xxx**。  **约束限制**：不涉及  **取值范围**：GET、HEAD、POST  **默认取值**：不涉及
@@ -179,7 +179,7 @@ class ListHealthMonitorsRequest implements ModelInterface, ArrayAccess
     * adminStateUp  **参数解释**：健康检查的管理状态。  **约束限制**：不涉及  **取值范围**： - true：表示开启健康检查。 - false表示关闭健康检查。  **默认取值**：不涉及
     * maxRetriesDown  **参数解释**：健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。 支持多值查询，查询条件格式：******max_retries_down=xxx&max_retries_down=xxx******。  **约束限制**：不涉及  **取值范围**：1-10  **默认取值**：不涉及
     * timeout  **参数解释**：一次健康检查请求的超时时间。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
-    * type  **参数解释**：健康检查请求协议。 支持多值查询，查询条件格式：*****type=xxx&type=xxx*****。  **约束限制**：不涉及  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS和GRPC。  **默认取值**：不涉及
+    * type  **参数解释**：健康检查请求协议。 支持多值查询，查询条件格式：*****type=xxx&type=xxx*****。  **约束限制**：不涉及  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS、GRPC[和GRPCS](tag:not_open)。  **默认取值**：不涉及
     * expectedCodes  **参数解释**：期望响应状态码。 支持多值查询，查询条件格式：****expected_codes=xxx&expected_codes=xxx****。  **约束限制**：不涉及  **取值范围**： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  **默认取值**：不涉及
     * urlPath  **参数解释**：健康检查测试member健康时发送的http请求路径。 支持多值查询，查询条件格式：***url_path=xxx&url_path=xxx***。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * httpMethod  **参数解释**：HTTP请求方法。 支持多值查询，查询条件格式：**http_method=xxx&http_method=xxx**。  **约束限制**：不涉及  **取值范围**：GET、HEAD、POST  **默认取值**：不涉及
@@ -221,7 +221,7 @@ class ListHealthMonitorsRequest implements ModelInterface, ArrayAccess
     * adminStateUp  **参数解释**：健康检查的管理状态。  **约束限制**：不涉及  **取值范围**： - true：表示开启健康检查。 - false表示关闭健康检查。  **默认取值**：不涉及
     * maxRetriesDown  **参数解释**：健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。 支持多值查询，查询条件格式：******max_retries_down=xxx&max_retries_down=xxx******。  **约束限制**：不涉及  **取值范围**：1-10  **默认取值**：不涉及
     * timeout  **参数解释**：一次健康检查请求的超时时间。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
-    * type  **参数解释**：健康检查请求协议。 支持多值查询，查询条件格式：*****type=xxx&type=xxx*****。  **约束限制**：不涉及  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS和GRPC。  **默认取值**：不涉及
+    * type  **参数解释**：健康检查请求协议。 支持多值查询，查询条件格式：*****type=xxx&type=xxx*****。  **约束限制**：不涉及  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS、GRPC[和GRPCS](tag:not_open)。  **默认取值**：不涉及
     * expectedCodes  **参数解释**：期望响应状态码。 支持多值查询，查询条件格式：****expected_codes=xxx&expected_codes=xxx****。  **约束限制**：不涉及  **取值范围**： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  **默认取值**：不涉及
     * urlPath  **参数解释**：健康检查测试member健康时发送的http请求路径。 支持多值查询，查询条件格式：***url_path=xxx&url_path=xxx***。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * httpMethod  **参数解释**：HTTP请求方法。 支持多值查询，查询条件格式：**http_method=xxx&http_method=xxx**。  **约束限制**：不涉及  **取值范围**：GET、HEAD、POST  **默认取值**：不涉及
@@ -644,7 +644,7 @@ class ListHealthMonitorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**：健康检查请求协议。 支持多值查询，查询条件格式：*****type=xxx&type=xxx*****。  **约束限制**：不涉及  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS和GRPC。  **默认取值**：不涉及
+    *  **参数解释**：健康检查请求协议。 支持多值查询，查询条件格式：*****type=xxx&type=xxx*****。  **约束限制**：不涉及  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS、GRPC[和GRPCS](tag:not_open)。  **默认取值**：不涉及
     *
     * @return string[]|null
     */
@@ -656,7 +656,7 @@ class ListHealthMonitorsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string[]|null $type **参数解释**：健康检查请求协议。 支持多值查询，查询条件格式：*****type=xxx&type=xxx*****。  **约束限制**：不涉及  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS和GRPC。  **默认取值**：不涉及
+    * @param string[]|null $type **参数解释**：健康检查请求协议。 支持多值查询，查询条件格式：*****type=xxx&type=xxx*****。  **约束限制**：不涉及  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS、GRPC[和GRPCS](tag:not_open)。  **默认取值**：不涉及
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class ListDashboardInfosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dashboards  **参数描述**： 监控看板列表
+    * dashboards  **参数解释**： 监控看板列表
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListDashboardInfosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dashboards  **参数描述**： 监控看板列表
+    * dashboards  **参数解释**： 监控看板列表
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListDashboardInfosResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dashboards  **参数描述**： 监控看板列表
+    * dashboards  **参数解释**： 监控看板列表
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListDashboardInfosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dashboards  **参数描述**： 监控看板列表
+    * dashboards  **参数解释**： 监控看板列表
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListDashboardInfosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dashboards  **参数描述**： 监控看板列表
+    * dashboards  **参数解释**： 监控看板列表
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListDashboardInfosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboards
-    *  **参数描述**： 监控看板列表
+    *  **参数解释**： 监控看板列表
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\DashBoardInfo[]|null
     */
@@ -187,7 +187,7 @@ class ListDashboardInfosResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dashboards
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\DashBoardInfo[]|null $dashboards **参数描述**： 监控看板列表
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\DashBoardInfo[]|null $dashboards **参数解释**： 监控看板列表
     *
     * @return $this
     */

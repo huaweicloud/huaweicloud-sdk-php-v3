@@ -47,7 +47,7 @@ class ListSqlLimitTaskResponseResult implements ModelInterface, ArrayAccess
             'databases' => 'string',
             'keyWords' => 'string',
             'status' => 'string',
-            'instanceId' => 'object',
+            'instanceId' => 'string',
             'ruleName' => 'string',
             'parallelSize' => 'int',
             'startTime' => 'string',
@@ -522,7 +522,7 @@ class ListSqlLimitTaskResponseResult implements ModelInterface, ArrayAccess
     * Gets instanceId
     *  **参数解释**: 实例ID。 **取值范围**: 不涉及。
     *
-    * @return object|null
+    * @return string|null
     */
     public function getInstanceId()
     {
@@ -532,7 +532,7 @@ class ListSqlLimitTaskResponseResult implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param object|null $instanceId **参数解释**: 实例ID。 **取值范围**: 不涉及。
+    * @param string|null $instanceId **参数解释**: 实例ID。 **取值范围**: 不涉及。
     *
     * @return $this
     */

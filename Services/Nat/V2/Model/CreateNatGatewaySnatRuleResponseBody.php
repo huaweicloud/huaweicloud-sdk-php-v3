@@ -24,13 +24,13 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
     * tenantId  项目的ID。
     * natGatewayId  公网NAT网关实例的ID。
     * cidr  cidr，可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc 子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
-    * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    * sourceType  资源类型。 取值范围： - 0：VPC侧，可以指定network_id 或者cidr - 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
     * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * status  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
+    * status  SNAT规则的状态。 取值为：  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * networkId  规则使用的网络id。与cidr参数二选一。
-    * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
+    * adminStateUp  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
     * globalEipId  全域弹性公网IP的id。
     * globalEipAddress  全域弹性公网IP的地址。
@@ -60,13 +60,13 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
     * tenantId  项目的ID。
     * natGatewayId  公网NAT网关实例的ID。
     * cidr  cidr，可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc 子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
-    * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    * sourceType  资源类型。 取值范围： - 0：VPC侧，可以指定network_id 或者cidr - 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
     * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * status  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
+    * status  SNAT规则的状态。 取值为：  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * networkId  规则使用的网络id。与cidr参数二选一。
-    * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
+    * adminStateUp  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
     * globalEipId  全域弹性公网IP的id。
     * globalEipAddress  全域弹性公网IP的地址。
@@ -117,13 +117,13 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
     * tenantId  项目的ID。
     * natGatewayId  公网NAT网关实例的ID。
     * cidr  cidr，可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc 子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
-    * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    * sourceType  资源类型。 取值范围： - 0：VPC侧，可以指定network_id 或者cidr - 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
     * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * status  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
+    * status  SNAT规则的状态。 取值为：  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * networkId  规则使用的网络id。与cidr参数二选一。
-    * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
+    * adminStateUp  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
     * globalEipId  全域弹性公网IP的id。
     * globalEipAddress  全域弹性公网IP的地址。
@@ -153,13 +153,13 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
     * tenantId  项目的ID。
     * natGatewayId  公网NAT网关实例的ID。
     * cidr  cidr，可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc 子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
-    * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    * sourceType  资源类型。 取值范围： - 0：VPC侧，可以指定network_id 或者cidr - 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
     * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * status  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
+    * status  SNAT规则的状态。 取值为：  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * networkId  规则使用的网络id。与cidr参数二选一。
-    * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
+    * adminStateUp  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
     * globalEipId  全域弹性公网IP的id。
     * globalEipAddress  全域弹性公网IP的地址。
@@ -189,13 +189,13 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
     * tenantId  项目的ID。
     * natGatewayId  公网NAT网关实例的ID。
     * cidr  cidr，可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc 子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
-    * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    * sourceType  资源类型。 取值范围： - 0：VPC侧，可以指定network_id 或者cidr - 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     * floatingIpId  功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
     * description  SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
-    * status  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
+    * status  SNAT规则的状态。 取值为：  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * networkId  规则使用的网络id。与cidr参数二选一。
-    * adminStateUp  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
+    * adminStateUp  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
     * globalEipId  全域弹性公网IP的id。
     * globalEipAddress  全域弹性公网IP的地址。
@@ -534,7 +534,7 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets sourceType
-    *  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    *  资源类型。 取值范围： - 0：VPC侧，可以指定network_id 或者cidr - 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     *
     * @return int
     */
@@ -546,7 +546,7 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
     /**
     * Sets sourceType
     *
-    * @param int $sourceType 0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    * @param int $sourceType 资源类型。 取值范围： - 0：VPC侧，可以指定network_id 或者cidr - 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     *
     * @return $this
     */
@@ -606,7 +606,7 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets status
-    *  SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
+    *  SNAT规则的状态。 取值为：  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     *
     * @return string
     */
@@ -618,7 +618,7 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
     /**
     * Sets status
     *
-    * @param string $status SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
+    * @param string $status SNAT规则的状态。 取值为：  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     *
     * @return $this
     */
@@ -678,7 +678,7 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets adminStateUp
-    *  解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
+    *  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     *
     * @return bool
     */
@@ -690,7 +690,7 @@ class CreateNatGatewaySnatRuleResponseBody implements ModelInterface, ArrayAcces
     /**
     * Sets adminStateUp
     *
-    * @param bool $adminStateUp 解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
+    * @param bool $adminStateUp 解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     *
     * @return $this
     */

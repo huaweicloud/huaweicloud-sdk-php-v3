@@ -20,10 +20,10 @@ class UpdateWidgetInfoLocation implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * top  监控视图的上坐标
-    * left  监控视图的左坐标
-    * width  监控视图图表宽度
-    * height  监控视图图表高度
+    * top  **参数解释** 监控视图的上坐标 **约束限制** 不涉及 **取值范围** 坐标的取值范围[0,2147483647] **默认取值** 不涉及
+    * left  **参数解释** 监控视图的左坐标 **约束限制** 不涉及 **取值范围** 坐标的取值范围[0,9] **默认取值** 不涉及
+    * width  **参数解释** 监控视图图表宽度 **约束限制** 不涉及 **取值范围** 宽度的取值范围[3,12] **默认取值** 不涉及
+    * height  **参数解释** 监控视图图表高度 **约束限制** 不涉及 **取值范围** 高度的取值范围[3,2147483647] **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class UpdateWidgetInfoLocation implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * top  监控视图的上坐标
-    * left  监控视图的左坐标
-    * width  监控视图图表宽度
-    * height  监控视图图表高度
+    * top  **参数解释** 监控视图的上坐标 **约束限制** 不涉及 **取值范围** 坐标的取值范围[0,2147483647] **默认取值** 不涉及
+    * left  **参数解释** 监控视图的左坐标 **约束限制** 不涉及 **取值范围** 坐标的取值范围[0,9] **默认取值** 不涉及
+    * width  **参数解释** 监控视图图表宽度 **约束限制** 不涉及 **取值范围** 宽度的取值范围[3,12] **默认取值** 不涉及
+    * height  **参数解释** 监控视图图表高度 **约束限制** 不涉及 **取值范围** 高度的取值范围[3,2147483647] **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class UpdateWidgetInfoLocation implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * top  监控视图的上坐标
-    * left  监控视图的左坐标
-    * width  监控视图图表宽度
-    * height  监控视图图表高度
+    * top  **参数解释** 监控视图的上坐标 **约束限制** 不涉及 **取值范围** 坐标的取值范围[0,2147483647] **默认取值** 不涉及
+    * left  **参数解释** 监控视图的左坐标 **约束限制** 不涉及 **取值范围** 坐标的取值范围[0,9] **默认取值** 不涉及
+    * width  **参数解释** 监控视图图表宽度 **约束限制** 不涉及 **取值范围** 宽度的取值范围[3,12] **默认取值** 不涉及
+    * height  **参数解释** 监控视图图表高度 **约束限制** 不涉及 **取值范围** 高度的取值范围[3,2147483647] **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class UpdateWidgetInfoLocation implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * top  监控视图的上坐标
-    * left  监控视图的左坐标
-    * width  监控视图图表宽度
-    * height  监控视图图表高度
+    * top  **参数解释** 监控视图的上坐标 **约束限制** 不涉及 **取值范围** 坐标的取值范围[0,2147483647] **默认取值** 不涉及
+    * left  **参数解释** 监控视图的左坐标 **约束限制** 不涉及 **取值范围** 坐标的取值范围[0,9] **默认取值** 不涉及
+    * width  **参数解释** 监控视图图表宽度 **约束限制** 不涉及 **取值范围** 宽度的取值范围[3,12] **默认取值** 不涉及
+    * height  **参数解释** 监控视图图表高度 **约束限制** 不涉及 **取值范围** 高度的取值范围[3,2147483647] **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class UpdateWidgetInfoLocation implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * top  监控视图的上坐标
-    * left  监控视图的左坐标
-    * width  监控视图图表宽度
-    * height  监控视图图表高度
+    * top  **参数解释** 监控视图的上坐标 **约束限制** 不涉及 **取值范围** 坐标的取值范围[0,2147483647] **默认取值** 不涉及
+    * left  **参数解释** 监控视图的左坐标 **约束限制** 不涉及 **取值范围** 坐标的取值范围[0,9] **默认取值** 不涉及
+    * width  **参数解释** 监控视图图表宽度 **约束限制** 不涉及 **取值范围** 宽度的取值范围[3,12] **默认取值** 不涉及
+    * height  **参数解释** 监控视图图表高度 **约束限制** 不涉及 **取值范围** 高度的取值范围[3,2147483647] **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -243,7 +243,7 @@ class UpdateWidgetInfoLocation implements ModelInterface, ArrayAccess
 
     /**
     * Gets top
-    *  监控视图的上坐标
+    *  **参数解释** 监控视图的上坐标 **约束限制** 不涉及 **取值范围** 坐标的取值范围[0,2147483647] **默认取值** 不涉及
     *
     * @return int
     */
@@ -255,7 +255,7 @@ class UpdateWidgetInfoLocation implements ModelInterface, ArrayAccess
     /**
     * Sets top
     *
-    * @param int $top 监控视图的上坐标
+    * @param int $top **参数解释** 监控视图的上坐标 **约束限制** 不涉及 **取值范围** 坐标的取值范围[0,2147483647] **默认取值** 不涉及
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class UpdateWidgetInfoLocation implements ModelInterface, ArrayAccess
 
     /**
     * Gets left
-    *  监控视图的左坐标
+    *  **参数解释** 监控视图的左坐标 **约束限制** 不涉及 **取值范围** 坐标的取值范围[0,9] **默认取值** 不涉及
     *
     * @return int
     */
@@ -279,7 +279,7 @@ class UpdateWidgetInfoLocation implements ModelInterface, ArrayAccess
     /**
     * Sets left
     *
-    * @param int $left 监控视图的左坐标
+    * @param int $left **参数解释** 监控视图的左坐标 **约束限制** 不涉及 **取值范围** 坐标的取值范围[0,9] **默认取值** 不涉及
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class UpdateWidgetInfoLocation implements ModelInterface, ArrayAccess
 
     /**
     * Gets width
-    *  监控视图图表宽度
+    *  **参数解释** 监控视图图表宽度 **约束限制** 不涉及 **取值范围** 宽度的取值范围[3,12] **默认取值** 不涉及
     *
     * @return int
     */
@@ -303,7 +303,7 @@ class UpdateWidgetInfoLocation implements ModelInterface, ArrayAccess
     /**
     * Sets width
     *
-    * @param int $width 监控视图图表宽度
+    * @param int $width **参数解释** 监控视图图表宽度 **约束限制** 不涉及 **取值范围** 宽度的取值范围[3,12] **默认取值** 不涉及
     *
     * @return $this
     */
@@ -315,7 +315,7 @@ class UpdateWidgetInfoLocation implements ModelInterface, ArrayAccess
 
     /**
     * Gets height
-    *  监控视图图表高度
+    *  **参数解释** 监控视图图表高度 **约束限制** 不涉及 **取值范围** 高度的取值范围[3,2147483647] **默认取值** 不涉及
     *
     * @return int
     */
@@ -327,7 +327,7 @@ class UpdateWidgetInfoLocation implements ModelInterface, ArrayAccess
     /**
     * Sets height
     *
-    * @param int $height 监控视图图表高度
+    * @param int $height **参数解释** 监控视图图表高度 **约束限制** 不涉及 **取值范围** 高度的取值范围[3,2147483647] **默认取值** 不涉及
     *
     * @return $this
     */

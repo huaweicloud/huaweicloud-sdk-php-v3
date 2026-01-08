@@ -21,7 +21,7 @@ class ListDashboardWidgetsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * dashboardId  **参数解释**: 监控看板id **约束限制**: 不涉及。 **取值范围**: 以db开头，包含22个字母和数字，长度为24个字符 **默认取值**: 不涉及。
-    * groupId  视图所在的分组id
+    * groupId  **参数解释**: 视图所在的分组id **约束限制**: 不涉及。 **取值范围**: 字符串必须以dg开头，后跟22个字母和数字，总长度为24个字符或者为default，default代表不分组 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ListDashboardWidgetsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * dashboardId  **参数解释**: 监控看板id **约束限制**: 不涉及。 **取值范围**: 以db开头，包含22个字母和数字，长度为24个字符 **默认取值**: 不涉及。
-    * groupId  视图所在的分组id
+    * groupId  **参数解释**: 视图所在的分组id **约束限制**: 不涉及。 **取值范围**: 字符串必须以dg开头，后跟22个字母和数字，总长度为24个字符或者为default，default代表不分组 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ListDashboardWidgetsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * dashboardId  **参数解释**: 监控看板id **约束限制**: 不涉及。 **取值范围**: 以db开头，包含22个字母和数字，长度为24个字符 **默认取值**: 不涉及。
-    * groupId  视图所在的分组id
+    * groupId  **参数解释**: 视图所在的分组id **约束限制**: 不涉及。 **取值范围**: 字符串必须以dg开头，后跟22个字母和数字，总长度为24个字符或者为default，default代表不分组 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ListDashboardWidgetsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * dashboardId  **参数解释**: 监控看板id **约束限制**: 不涉及。 **取值范围**: 以db开头，包含22个字母和数字，长度为24个字符 **默认取值**: 不涉及。
-    * groupId  视图所在的分组id
+    * groupId  **参数解释**: 视图所在的分组id **约束限制**: 不涉及。 **取值范围**: 字符串必须以dg开头，后跟22个字母和数字，总长度为24个字符或者为default，default代表不分组 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ListDashboardWidgetsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * dashboardId  **参数解释**: 监控看板id **约束限制**: 不涉及。 **取值范围**: 以db开头，包含22个字母和数字，长度为24个字符 **默认取值**: 不涉及。
-    * groupId  视图所在的分组id
+    * groupId  **参数解释**: 视图所在的分组id **约束限制**: 不涉及。 **取值范围**: 字符串必须以dg开头，后跟22个字母和数字，总长度为24个字符或者为default，default代表不分组 **默认取值**: 不涉及。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class ListDashboardWidgetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  视图所在的分组id
+    *  **参数解释**: 视图所在的分组id **约束限制**: 不涉及。 **取值范围**: 字符串必须以dg开头，后跟22个字母和数字，总长度为24个字符或者为default，default代表不分组 **默认取值**: 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class ListDashboardWidgetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 视图所在的分组id
+    * @param string|null $groupId **参数解释**: 视图所在的分组id **约束限制**: 不涉及。 **取值范围**: 字符串必须以dg开头，后跟22个字母和数字，总长度为24个字符或者为default，default代表不分组 **默认取值**: 不涉及。
     *
     * @return $this
     */

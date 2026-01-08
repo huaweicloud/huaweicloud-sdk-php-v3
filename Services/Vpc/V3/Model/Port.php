@@ -20,42 +20,42 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * adminStateUp  1、功能描述：管理状态 2、取值范围：true/false 3、约束：N/A 4、默认值：true 5、权限：N/A
-    * bindinghostId  1、功能描述：主机ID 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
-    * bindingprofile  1、功能描述：提供用户设置自定义信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * adminStateUp  **参数解释**： 端口的管理状态。 **取值范围**： true，false，默认值true。
+    * bindinghostId  **参数解释**： 端口所在的主机ID。 **取值范围**： 不涉及。
+    * bindingprofile  **参数解释**： 端口的用户自定义信息。 **取值范围**： 不涉及。
     * bindingvifDetails  bindingvifDetails
-    * bindingvifType  1、功能描述：端口的接口类型 (ovs/hw_veb等)(扩展属性) 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
-    * bindingvnicType  1、功能描述：绑定的vNIC类型normal: 软交换direct: SRIOV硬直通（不支持） 2、取值范围：normal或者direct 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * createdAt  1、功能说明：创建时间 2、取值范围：格式 \"UTC时间 格式: yyyy-MM-ddTHH:mm:ss\"  3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * updatedAt  1、功能说明：创建时间 2、取值范围：格式 \"UTC时间 格式: yyyy-MM-ddTHH:mm:ss\"  3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * description  1、功能说明：端口描述 2、取值范围：0-255个字符，不能包含“<”和“>” 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * deviceId  1、功能描述：端口所属设备ID 2、取值范围：标准UUID 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
-    * deviceOwner  1、功能描述：设备所属（DHCP/Router/ lb/Nova） 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * ecsFlavor  1、功能描述：标识这个端口所属虚拟机的flavor 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * id  1、功能描述：端口唯一标识 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * instanceId  1、功能描述：端口所属实例ID，例如RDS实例ID 2、取值范围：N/A 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
-    * instanceType  1、功能描述：端口所属实例类型，例如“RDS” 2、取值范围：N/A 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
-    * macAddress  1、功能描述：MAC地址 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * name  1、功能描述：端口名称 2、取值范围：默认为空，最大长度不超过255 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * portSecurityEnabled  1、功能描述：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 2、取值范围：true/false 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * privateIps  1、功能描述：port的私有IP地址 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * projectId  1、功能描述：项目ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * securityGroups  1、功能描述：安全组 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * status  1、功能描述：端口状态 2、取值范围：ACTIVE，BUILD，DOWN 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * tenantId  1、功能描述：租户ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * virsubnetId  1、功能描述：所属网络ID 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * vpcId  1、功能描述：VPC的ID 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * vpcTenantId  1、功能描述：VPC_租户ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * vtepIp  1、功能描述：本地IP 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * enableEfi  1、功能描述：是否使能efi，使能则表示端口支持vRoCE能力 2、取值范围：true or false 3、约束：N/A 4、默认值：false 5、权限：N/A
-    * scope  1、功能描述：作用域 2、取值范围：center，表示作用域为中心；{azId}，表示作用域为具体的可用区 3、约束：N/A 4、默认值：center 5、权限：N/A
-    * zoneId  1、功能描述：端口所属的可用分区 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * bindingmigrationInfo  1、功能描述：迁移目的节点信息，包括目的节点的binding:vif_details和binding:vif_type 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * extraDhcpOpts  功能说明：DHCP的扩展属性
-    * positionType  1、功能描述：边缘场景位置类型 2、取值范围：N/A 3、约束：N/A 4、默认值：center 5、权限：N/A
-    * instanceInfo  1、功能描述：端口绑定实例信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * tags  参数解释： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。 取值范围： 不涉及。
-    * allowedAddressPairs  1、功能描述：IP/Mac对列表 2、取值范围：N/A 3、约束： - IP地址不允许为 “0.0.0.0/0” - 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 - 如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。 - 被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。 4、默认值：N/A 5、权限：N/A
+    * bindingvifType  **参数解释**： 端口绑定的虚拟接口类型 (ovs/hw_veb等)，扩展属性。 **取值范围**： - ovs：表示使用 Open vSwitch（OVS）作为虚拟交换机 - bridge：表示使用 Linux 内核桥接（bridge）实现虚拟网络 - hw_veb：表示硬件虚拟以太网桥（Hardware Virtual Ethernet Bridge），通常用于支持 SR-IOV 的硬件网卡 - vhostuser：表示使用 vhost-user 协议（基于 Unix 域套接字）与外部虚拟交换机通信 - distributed：表示用于分布式虚拟交换机 - binding_failed：表示端口绑定失败 - unbound：表示该端口未绑定到任何网络后端
+    * bindingvnicType  **参数解释**： 绑定的vNIC类型。 **取值范围**： - normal: 软交换。 - direct: SRIOV硬直通（不支持）。 - baremetal：用于裸金属服务器。
+    * createdAt  **参数解释**： 端口的创建时间。 **取值范围**： UTC时间，格式: yyyy-MM-ddTHH:mm:ss。
+    * updatedAt  **参数解释**： 端口的最近一次更新的时间。 **取值范围**： UTC时间，格式: yyyy-MM-ddTHH:mm:ss。
+    * description  **参数解释**： 端口的描述信息。 **取值范围**： 0-255个字符，不能包含“<”和“>”。
+    * deviceId  **参数解释**： 端口所属的设备ID。 **取值范围**： 带“-”的标准UUID格式。
+    * deviceOwner  **参数解释**： 端口所属的设备名称。 **取值范围**： - network:dhcp, 表示DHCP服务 - network:router_interface_distributed, 表示子网网关地址 - compute:xxx, 表示云服务器网卡私有IP地址，其中XXX对应具体的可用区名称，例如compute:aa-bb-cc表示私有IP地址被可用区aa-bb-cc内的云服务器使用 - neutron:VIP_PORT, 表示虚拟IP地址 - neutron:LOADBALANCERV2, 表示共享型ELB - neutron:LOADBALANCERV3, 表示独享型ELB - network:endpoint_interface, 表示VPC终端节点 - network:nat_gateway, 表示NAT网关 - network:ucmp, 表示UCMP端口，为企业路由器服务所用
+    * ecsFlavor  **参数解释**： 标识此端口所属云服务器的flavor。 **取值范围**： 不涉及。
+    * id  **参数解释**： 端口的资源ID。 **取值范围**： 带“-”的标准UUID格式。
+    * instanceId  **参数解释**： 端口所属的云服务实例ID，例如RDS实例ID。 **取值范围**： 不涉及。
+    * instanceType  **参数解释**： 端口所属的云服务实例类型，例如“RDS”。 **取值范围**： 不涉及。
+    * macAddress  **参数解释**： 端口的MAC地址。 **取值范围**： 不涉及
+    * name  **参数解释**： 端口的名称。 **取值范围**： 默认为空，最大长度不超过255。
+    * portSecurityEnabled  **参数解释**： 端口的安全使能标记，如果不使能，则安全组和DHCP防欺骗不生效。 **取值范围**： - true：使能端口安全。 - false：未使能端口安全。
+    * privateIps  **参数解释**： 端口的私有IP地址。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 端口所属的项目ID。 **取值范围**： 不涉及。
+    * securityGroups  **参数解释**： 端口绑定的安全组列表。 **取值范围**： 不涉及。
+    * status  **参数解释**： 端口的状态。 **取值范围**： - ACTIVE：端口处于活动状态，可以正常进行网络通信。 - BUILD：端口正在创建或配置中。 - DOWN：端口处于非活动状态，不能进行网络通信。Hana 硬直通虚拟机端口状态总为DOWN。
+    * tenantId  **参数解释**： 端口所属的租户ID。 **取值范围**： 不涉及。
+    * virsubnetId  **参数解释**： 端口所在的虚拟子网ID。 **取值范围**： 带“-”的标准UUID格式。
+    * vpcId  **参数解释**： 端口所在的VPC的ID。 **取值范围**： 带“-”的标准UUID格式。
+    * vpcTenantId  **参数解释**： 端口所在的VPC的租户ID。 **取值范围**： 不涉及。
+    * vtepIp  **参数解释**： 端口的VTEP IP地址，即虚拟隧道端点的 IP 地址。 **取值范围**： 不涉及。
+    * enableEfi  **参数解释**： 是否使能efi，使能则表示端口支持vRoCE能力。 **取值范围**： - true：使能efi。 - false：未使能efi。
+    * scope  **参数解释**： 端口所在子网的作用域（边缘云场景）。 **取值范围**： - center：表示作用域为中心。 - {publicBorderGroup}：表示作用域为具体的公网边界组。公网边界组限制子网的可用区范围，可关联多个边缘可用区。
+    * zoneId  **参数解释**： 端口所属的可用分区的ID。 **取值范围**： 不涉及。
+    * bindingmigrationInfo  **参数解释**： 端口迁移的目的节点信息，包括目的节点的binding:vif_details和binding:vif_type。 **取值范围**： 不涉及。
+    * extraDhcpOpts  **参数解释**： DHCP的扩展属性。 **取值范围**： 不涉及。
+    * positionType  **参数解释**： 边缘场景端口的位置类型。 **取值范围**： 默认值center。
+    * instanceInfo  **参数解释**： 端口绑定的实例信息。 **取值范围**： 不涉及。
+    * tags  **参数解释**： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。详情请参见Tag对象。 **取值范围**： 不涉及。
+    * allowedAddressPairs  **参数解释**： 端口的IP/Mac对列表。 **取值范围**： - IP地址不允许为 “0.0.0.0/0”。 - 如果allowed_address_pairs配置地址池较大的IP网段（掩码小于24位），建议为该端口配置一个单独的安全组。 - 如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。 - 被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。
     *
     * @var string[]
     */
@@ -91,51 +91,51 @@ class Port implements ModelInterface, ArrayAccess
             'scope' => 'string',
             'zoneId' => 'string',
             'bindingmigrationInfo' => 'object',
-            'extraDhcpOpts' => '\HuaweiCloud\SDK\Vpc\V3\Model\ExtraDhcpOpt[]',
+            'extraDhcpOpts' => '\HuaweiCloud\SDK\Vpc\V3\Model\PortExtraDhcpOpt[]',
             'positionType' => 'string',
             'instanceInfo' => 'object',
-            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]',
+            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResponseTag[]',
             'allowedAddressPairs' => '\HuaweiCloud\SDK\Vpc\V3\Model\AllowedAddressPair[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * adminStateUp  1、功能描述：管理状态 2、取值范围：true/false 3、约束：N/A 4、默认值：true 5、权限：N/A
-    * bindinghostId  1、功能描述：主机ID 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
-    * bindingprofile  1、功能描述：提供用户设置自定义信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * adminStateUp  **参数解释**： 端口的管理状态。 **取值范围**： true，false，默认值true。
+    * bindinghostId  **参数解释**： 端口所在的主机ID。 **取值范围**： 不涉及。
+    * bindingprofile  **参数解释**： 端口的用户自定义信息。 **取值范围**： 不涉及。
     * bindingvifDetails  bindingvifDetails
-    * bindingvifType  1、功能描述：端口的接口类型 (ovs/hw_veb等)(扩展属性) 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
-    * bindingvnicType  1、功能描述：绑定的vNIC类型normal: 软交换direct: SRIOV硬直通（不支持） 2、取值范围：normal或者direct 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * createdAt  1、功能说明：创建时间 2、取值范围：格式 \"UTC时间 格式: yyyy-MM-ddTHH:mm:ss\"  3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * updatedAt  1、功能说明：创建时间 2、取值范围：格式 \"UTC时间 格式: yyyy-MM-ddTHH:mm:ss\"  3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * description  1、功能说明：端口描述 2、取值范围：0-255个字符，不能包含“<”和“>” 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * deviceId  1、功能描述：端口所属设备ID 2、取值范围：标准UUID 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
-    * deviceOwner  1、功能描述：设备所属（DHCP/Router/ lb/Nova） 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * ecsFlavor  1、功能描述：标识这个端口所属虚拟机的flavor 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * id  1、功能描述：端口唯一标识 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * instanceId  1、功能描述：端口所属实例ID，例如RDS实例ID 2、取值范围：N/A 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
-    * instanceType  1、功能描述：端口所属实例类型，例如“RDS” 2、取值范围：N/A 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
-    * macAddress  1、功能描述：MAC地址 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * name  1、功能描述：端口名称 2、取值范围：默认为空，最大长度不超过255 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * portSecurityEnabled  1、功能描述：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 2、取值范围：true/false 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * privateIps  1、功能描述：port的私有IP地址 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * projectId  1、功能描述：项目ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * securityGroups  1、功能描述：安全组 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * status  1、功能描述：端口状态 2、取值范围：ACTIVE，BUILD，DOWN 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * tenantId  1、功能描述：租户ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * virsubnetId  1、功能描述：所属网络ID 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * vpcId  1、功能描述：VPC的ID 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * vpcTenantId  1、功能描述：VPC_租户ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * vtepIp  1、功能描述：本地IP 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * enableEfi  1、功能描述：是否使能efi，使能则表示端口支持vRoCE能力 2、取值范围：true or false 3、约束：N/A 4、默认值：false 5、权限：N/A
-    * scope  1、功能描述：作用域 2、取值范围：center，表示作用域为中心；{azId}，表示作用域为具体的可用区 3、约束：N/A 4、默认值：center 5、权限：N/A
-    * zoneId  1、功能描述：端口所属的可用分区 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * bindingmigrationInfo  1、功能描述：迁移目的节点信息，包括目的节点的binding:vif_details和binding:vif_type 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * extraDhcpOpts  功能说明：DHCP的扩展属性
-    * positionType  1、功能描述：边缘场景位置类型 2、取值范围：N/A 3、约束：N/A 4、默认值：center 5、权限：N/A
-    * instanceInfo  1、功能描述：端口绑定实例信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * tags  参数解释： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。 取值范围： 不涉及。
-    * allowedAddressPairs  1、功能描述：IP/Mac对列表 2、取值范围：N/A 3、约束： - IP地址不允许为 “0.0.0.0/0” - 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 - 如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。 - 被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。 4、默认值：N/A 5、权限：N/A
+    * bindingvifType  **参数解释**： 端口绑定的虚拟接口类型 (ovs/hw_veb等)，扩展属性。 **取值范围**： - ovs：表示使用 Open vSwitch（OVS）作为虚拟交换机 - bridge：表示使用 Linux 内核桥接（bridge）实现虚拟网络 - hw_veb：表示硬件虚拟以太网桥（Hardware Virtual Ethernet Bridge），通常用于支持 SR-IOV 的硬件网卡 - vhostuser：表示使用 vhost-user 协议（基于 Unix 域套接字）与外部虚拟交换机通信 - distributed：表示用于分布式虚拟交换机 - binding_failed：表示端口绑定失败 - unbound：表示该端口未绑定到任何网络后端
+    * bindingvnicType  **参数解释**： 绑定的vNIC类型。 **取值范围**： - normal: 软交换。 - direct: SRIOV硬直通（不支持）。 - baremetal：用于裸金属服务器。
+    * createdAt  **参数解释**： 端口的创建时间。 **取值范围**： UTC时间，格式: yyyy-MM-ddTHH:mm:ss。
+    * updatedAt  **参数解释**： 端口的最近一次更新的时间。 **取值范围**： UTC时间，格式: yyyy-MM-ddTHH:mm:ss。
+    * description  **参数解释**： 端口的描述信息。 **取值范围**： 0-255个字符，不能包含“<”和“>”。
+    * deviceId  **参数解释**： 端口所属的设备ID。 **取值范围**： 带“-”的标准UUID格式。
+    * deviceOwner  **参数解释**： 端口所属的设备名称。 **取值范围**： - network:dhcp, 表示DHCP服务 - network:router_interface_distributed, 表示子网网关地址 - compute:xxx, 表示云服务器网卡私有IP地址，其中XXX对应具体的可用区名称，例如compute:aa-bb-cc表示私有IP地址被可用区aa-bb-cc内的云服务器使用 - neutron:VIP_PORT, 表示虚拟IP地址 - neutron:LOADBALANCERV2, 表示共享型ELB - neutron:LOADBALANCERV3, 表示独享型ELB - network:endpoint_interface, 表示VPC终端节点 - network:nat_gateway, 表示NAT网关 - network:ucmp, 表示UCMP端口，为企业路由器服务所用
+    * ecsFlavor  **参数解释**： 标识此端口所属云服务器的flavor。 **取值范围**： 不涉及。
+    * id  **参数解释**： 端口的资源ID。 **取值范围**： 带“-”的标准UUID格式。
+    * instanceId  **参数解释**： 端口所属的云服务实例ID，例如RDS实例ID。 **取值范围**： 不涉及。
+    * instanceType  **参数解释**： 端口所属的云服务实例类型，例如“RDS”。 **取值范围**： 不涉及。
+    * macAddress  **参数解释**： 端口的MAC地址。 **取值范围**： 不涉及
+    * name  **参数解释**： 端口的名称。 **取值范围**： 默认为空，最大长度不超过255。
+    * portSecurityEnabled  **参数解释**： 端口的安全使能标记，如果不使能，则安全组和DHCP防欺骗不生效。 **取值范围**： - true：使能端口安全。 - false：未使能端口安全。
+    * privateIps  **参数解释**： 端口的私有IP地址。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 端口所属的项目ID。 **取值范围**： 不涉及。
+    * securityGroups  **参数解释**： 端口绑定的安全组列表。 **取值范围**： 不涉及。
+    * status  **参数解释**： 端口的状态。 **取值范围**： - ACTIVE：端口处于活动状态，可以正常进行网络通信。 - BUILD：端口正在创建或配置中。 - DOWN：端口处于非活动状态，不能进行网络通信。Hana 硬直通虚拟机端口状态总为DOWN。
+    * tenantId  **参数解释**： 端口所属的租户ID。 **取值范围**： 不涉及。
+    * virsubnetId  **参数解释**： 端口所在的虚拟子网ID。 **取值范围**： 带“-”的标准UUID格式。
+    * vpcId  **参数解释**： 端口所在的VPC的ID。 **取值范围**： 带“-”的标准UUID格式。
+    * vpcTenantId  **参数解释**： 端口所在的VPC的租户ID。 **取值范围**： 不涉及。
+    * vtepIp  **参数解释**： 端口的VTEP IP地址，即虚拟隧道端点的 IP 地址。 **取值范围**： 不涉及。
+    * enableEfi  **参数解释**： 是否使能efi，使能则表示端口支持vRoCE能力。 **取值范围**： - true：使能efi。 - false：未使能efi。
+    * scope  **参数解释**： 端口所在子网的作用域（边缘云场景）。 **取值范围**： - center：表示作用域为中心。 - {publicBorderGroup}：表示作用域为具体的公网边界组。公网边界组限制子网的可用区范围，可关联多个边缘可用区。
+    * zoneId  **参数解释**： 端口所属的可用分区的ID。 **取值范围**： 不涉及。
+    * bindingmigrationInfo  **参数解释**： 端口迁移的目的节点信息，包括目的节点的binding:vif_details和binding:vif_type。 **取值范围**： 不涉及。
+    * extraDhcpOpts  **参数解释**： DHCP的扩展属性。 **取值范围**： 不涉及。
+    * positionType  **参数解释**： 边缘场景端口的位置类型。 **取值范围**： 默认值center。
+    * instanceInfo  **参数解释**： 端口绑定的实例信息。 **取值范围**： 不涉及。
+    * tags  **参数解释**： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。详情请参见Tag对象。 **取值范围**： 不涉及。
+    * allowedAddressPairs  **参数解释**： 端口的IP/Mac对列表。 **取值范围**： - IP地址不允许为 “0.0.0.0/0”。 - 如果allowed_address_pairs配置地址池较大的IP网段（掩码小于24位），建议为该端口配置一个单独的安全组。 - 如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。 - 被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。
     *
     * @var string[]
     */
@@ -201,42 +201,42 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * adminStateUp  1、功能描述：管理状态 2、取值范围：true/false 3、约束：N/A 4、默认值：true 5、权限：N/A
-    * bindinghostId  1、功能描述：主机ID 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
-    * bindingprofile  1、功能描述：提供用户设置自定义信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * adminStateUp  **参数解释**： 端口的管理状态。 **取值范围**： true，false，默认值true。
+    * bindinghostId  **参数解释**： 端口所在的主机ID。 **取值范围**： 不涉及。
+    * bindingprofile  **参数解释**： 端口的用户自定义信息。 **取值范围**： 不涉及。
     * bindingvifDetails  bindingvifDetails
-    * bindingvifType  1、功能描述：端口的接口类型 (ovs/hw_veb等)(扩展属性) 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
-    * bindingvnicType  1、功能描述：绑定的vNIC类型normal: 软交换direct: SRIOV硬直通（不支持） 2、取值范围：normal或者direct 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * createdAt  1、功能说明：创建时间 2、取值范围：格式 \"UTC时间 格式: yyyy-MM-ddTHH:mm:ss\"  3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * updatedAt  1、功能说明：创建时间 2、取值范围：格式 \"UTC时间 格式: yyyy-MM-ddTHH:mm:ss\"  3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * description  1、功能说明：端口描述 2、取值范围：0-255个字符，不能包含“<”和“>” 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * deviceId  1、功能描述：端口所属设备ID 2、取值范围：标准UUID 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
-    * deviceOwner  1、功能描述：设备所属（DHCP/Router/ lb/Nova） 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * ecsFlavor  1、功能描述：标识这个端口所属虚拟机的flavor 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * id  1、功能描述：端口唯一标识 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * instanceId  1、功能描述：端口所属实例ID，例如RDS实例ID 2、取值范围：N/A 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
-    * instanceType  1、功能描述：端口所属实例类型，例如“RDS” 2、取值范围：N/A 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
-    * macAddress  1、功能描述：MAC地址 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * name  1、功能描述：端口名称 2、取值范围：默认为空，最大长度不超过255 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * portSecurityEnabled  1、功能描述：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 2、取值范围：true/false 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * privateIps  1、功能描述：port的私有IP地址 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * projectId  1、功能描述：项目ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * securityGroups  1、功能描述：安全组 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * status  1、功能描述：端口状态 2、取值范围：ACTIVE，BUILD，DOWN 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * tenantId  1、功能描述：租户ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * virsubnetId  1、功能描述：所属网络ID 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * vpcId  1、功能描述：VPC的ID 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * vpcTenantId  1、功能描述：VPC_租户ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * vtepIp  1、功能描述：本地IP 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * enableEfi  1、功能描述：是否使能efi，使能则表示端口支持vRoCE能力 2、取值范围：true or false 3、约束：N/A 4、默认值：false 5、权限：N/A
-    * scope  1、功能描述：作用域 2、取值范围：center，表示作用域为中心；{azId}，表示作用域为具体的可用区 3、约束：N/A 4、默认值：center 5、权限：N/A
-    * zoneId  1、功能描述：端口所属的可用分区 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * bindingmigrationInfo  1、功能描述：迁移目的节点信息，包括目的节点的binding:vif_details和binding:vif_type 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * extraDhcpOpts  功能说明：DHCP的扩展属性
-    * positionType  1、功能描述：边缘场景位置类型 2、取值范围：N/A 3、约束：N/A 4、默认值：center 5、权限：N/A
-    * instanceInfo  1、功能描述：端口绑定实例信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * tags  参数解释： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。 取值范围： 不涉及。
-    * allowedAddressPairs  1、功能描述：IP/Mac对列表 2、取值范围：N/A 3、约束： - IP地址不允许为 “0.0.0.0/0” - 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 - 如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。 - 被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。 4、默认值：N/A 5、权限：N/A
+    * bindingvifType  **参数解释**： 端口绑定的虚拟接口类型 (ovs/hw_veb等)，扩展属性。 **取值范围**： - ovs：表示使用 Open vSwitch（OVS）作为虚拟交换机 - bridge：表示使用 Linux 内核桥接（bridge）实现虚拟网络 - hw_veb：表示硬件虚拟以太网桥（Hardware Virtual Ethernet Bridge），通常用于支持 SR-IOV 的硬件网卡 - vhostuser：表示使用 vhost-user 协议（基于 Unix 域套接字）与外部虚拟交换机通信 - distributed：表示用于分布式虚拟交换机 - binding_failed：表示端口绑定失败 - unbound：表示该端口未绑定到任何网络后端
+    * bindingvnicType  **参数解释**： 绑定的vNIC类型。 **取值范围**： - normal: 软交换。 - direct: SRIOV硬直通（不支持）。 - baremetal：用于裸金属服务器。
+    * createdAt  **参数解释**： 端口的创建时间。 **取值范围**： UTC时间，格式: yyyy-MM-ddTHH:mm:ss。
+    * updatedAt  **参数解释**： 端口的最近一次更新的时间。 **取值范围**： UTC时间，格式: yyyy-MM-ddTHH:mm:ss。
+    * description  **参数解释**： 端口的描述信息。 **取值范围**： 0-255个字符，不能包含“<”和“>”。
+    * deviceId  **参数解释**： 端口所属的设备ID。 **取值范围**： 带“-”的标准UUID格式。
+    * deviceOwner  **参数解释**： 端口所属的设备名称。 **取值范围**： - network:dhcp, 表示DHCP服务 - network:router_interface_distributed, 表示子网网关地址 - compute:xxx, 表示云服务器网卡私有IP地址，其中XXX对应具体的可用区名称，例如compute:aa-bb-cc表示私有IP地址被可用区aa-bb-cc内的云服务器使用 - neutron:VIP_PORT, 表示虚拟IP地址 - neutron:LOADBALANCERV2, 表示共享型ELB - neutron:LOADBALANCERV3, 表示独享型ELB - network:endpoint_interface, 表示VPC终端节点 - network:nat_gateway, 表示NAT网关 - network:ucmp, 表示UCMP端口，为企业路由器服务所用
+    * ecsFlavor  **参数解释**： 标识此端口所属云服务器的flavor。 **取值范围**： 不涉及。
+    * id  **参数解释**： 端口的资源ID。 **取值范围**： 带“-”的标准UUID格式。
+    * instanceId  **参数解释**： 端口所属的云服务实例ID，例如RDS实例ID。 **取值范围**： 不涉及。
+    * instanceType  **参数解释**： 端口所属的云服务实例类型，例如“RDS”。 **取值范围**： 不涉及。
+    * macAddress  **参数解释**： 端口的MAC地址。 **取值范围**： 不涉及
+    * name  **参数解释**： 端口的名称。 **取值范围**： 默认为空，最大长度不超过255。
+    * portSecurityEnabled  **参数解释**： 端口的安全使能标记，如果不使能，则安全组和DHCP防欺骗不生效。 **取值范围**： - true：使能端口安全。 - false：未使能端口安全。
+    * privateIps  **参数解释**： 端口的私有IP地址。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 端口所属的项目ID。 **取值范围**： 不涉及。
+    * securityGroups  **参数解释**： 端口绑定的安全组列表。 **取值范围**： 不涉及。
+    * status  **参数解释**： 端口的状态。 **取值范围**： - ACTIVE：端口处于活动状态，可以正常进行网络通信。 - BUILD：端口正在创建或配置中。 - DOWN：端口处于非活动状态，不能进行网络通信。Hana 硬直通虚拟机端口状态总为DOWN。
+    * tenantId  **参数解释**： 端口所属的租户ID。 **取值范围**： 不涉及。
+    * virsubnetId  **参数解释**： 端口所在的虚拟子网ID。 **取值范围**： 带“-”的标准UUID格式。
+    * vpcId  **参数解释**： 端口所在的VPC的ID。 **取值范围**： 带“-”的标准UUID格式。
+    * vpcTenantId  **参数解释**： 端口所在的VPC的租户ID。 **取值范围**： 不涉及。
+    * vtepIp  **参数解释**： 端口的VTEP IP地址，即虚拟隧道端点的 IP 地址。 **取值范围**： 不涉及。
+    * enableEfi  **参数解释**： 是否使能efi，使能则表示端口支持vRoCE能力。 **取值范围**： - true：使能efi。 - false：未使能efi。
+    * scope  **参数解释**： 端口所在子网的作用域（边缘云场景）。 **取值范围**： - center：表示作用域为中心。 - {publicBorderGroup}：表示作用域为具体的公网边界组。公网边界组限制子网的可用区范围，可关联多个边缘可用区。
+    * zoneId  **参数解释**： 端口所属的可用分区的ID。 **取值范围**： 不涉及。
+    * bindingmigrationInfo  **参数解释**： 端口迁移的目的节点信息，包括目的节点的binding:vif_details和binding:vif_type。 **取值范围**： 不涉及。
+    * extraDhcpOpts  **参数解释**： DHCP的扩展属性。 **取值范围**： 不涉及。
+    * positionType  **参数解释**： 边缘场景端口的位置类型。 **取值范围**： 默认值center。
+    * instanceInfo  **参数解释**： 端口绑定的实例信息。 **取值范围**： 不涉及。
+    * tags  **参数解释**： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。详情请参见Tag对象。 **取值范围**： 不涉及。
+    * allowedAddressPairs  **参数解释**： 端口的IP/Mac对列表。 **取值范围**： - IP地址不允许为 “0.0.0.0/0”。 - 如果allowed_address_pairs配置地址池较大的IP网段（掩码小于24位），建议为该端口配置一个单独的安全组。 - 如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。 - 被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。
     *
     * @var string[]
     */
@@ -281,42 +281,42 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * adminStateUp  1、功能描述：管理状态 2、取值范围：true/false 3、约束：N/A 4、默认值：true 5、权限：N/A
-    * bindinghostId  1、功能描述：主机ID 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
-    * bindingprofile  1、功能描述：提供用户设置自定义信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * adminStateUp  **参数解释**： 端口的管理状态。 **取值范围**： true，false，默认值true。
+    * bindinghostId  **参数解释**： 端口所在的主机ID。 **取值范围**： 不涉及。
+    * bindingprofile  **参数解释**： 端口的用户自定义信息。 **取值范围**： 不涉及。
     * bindingvifDetails  bindingvifDetails
-    * bindingvifType  1、功能描述：端口的接口类型 (ovs/hw_veb等)(扩展属性) 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
-    * bindingvnicType  1、功能描述：绑定的vNIC类型normal: 软交换direct: SRIOV硬直通（不支持） 2、取值范围：normal或者direct 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * createdAt  1、功能说明：创建时间 2、取值范围：格式 \"UTC时间 格式: yyyy-MM-ddTHH:mm:ss\"  3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * updatedAt  1、功能说明：创建时间 2、取值范围：格式 \"UTC时间 格式: yyyy-MM-ddTHH:mm:ss\"  3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * description  1、功能说明：端口描述 2、取值范围：0-255个字符，不能包含“<”和“>” 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * deviceId  1、功能描述：端口所属设备ID 2、取值范围：标准UUID 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
-    * deviceOwner  1、功能描述：设备所属（DHCP/Router/ lb/Nova） 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * ecsFlavor  1、功能描述：标识这个端口所属虚拟机的flavor 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * id  1、功能描述：端口唯一标识 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * instanceId  1、功能描述：端口所属实例ID，例如RDS实例ID 2、取值范围：N/A 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
-    * instanceType  1、功能描述：端口所属实例类型，例如“RDS” 2、取值范围：N/A 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
-    * macAddress  1、功能描述：MAC地址 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * name  1、功能描述：端口名称 2、取值范围：默认为空，最大长度不超过255 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * portSecurityEnabled  1、功能描述：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 2、取值范围：true/false 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * privateIps  1、功能描述：port的私有IP地址 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * projectId  1、功能描述：项目ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * securityGroups  1、功能描述：安全组 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * status  1、功能描述：端口状态 2、取值范围：ACTIVE，BUILD，DOWN 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * tenantId  1、功能描述：租户ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * virsubnetId  1、功能描述：所属网络ID 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * vpcId  1、功能描述：VPC的ID 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * vpcTenantId  1、功能描述：VPC_租户ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * vtepIp  1、功能描述：本地IP 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * enableEfi  1、功能描述：是否使能efi，使能则表示端口支持vRoCE能力 2、取值范围：true or false 3、约束：N/A 4、默认值：false 5、权限：N/A
-    * scope  1、功能描述：作用域 2、取值范围：center，表示作用域为中心；{azId}，表示作用域为具体的可用区 3、约束：N/A 4、默认值：center 5、权限：N/A
-    * zoneId  1、功能描述：端口所属的可用分区 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * bindingmigrationInfo  1、功能描述：迁移目的节点信息，包括目的节点的binding:vif_details和binding:vif_type 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * extraDhcpOpts  功能说明：DHCP的扩展属性
-    * positionType  1、功能描述：边缘场景位置类型 2、取值范围：N/A 3、约束：N/A 4、默认值：center 5、权限：N/A
-    * instanceInfo  1、功能描述：端口绑定实例信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * tags  参数解释： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。 取值范围： 不涉及。
-    * allowedAddressPairs  1、功能描述：IP/Mac对列表 2、取值范围：N/A 3、约束： - IP地址不允许为 “0.0.0.0/0” - 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 - 如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。 - 被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。 4、默认值：N/A 5、权限：N/A
+    * bindingvifType  **参数解释**： 端口绑定的虚拟接口类型 (ovs/hw_veb等)，扩展属性。 **取值范围**： - ovs：表示使用 Open vSwitch（OVS）作为虚拟交换机 - bridge：表示使用 Linux 内核桥接（bridge）实现虚拟网络 - hw_veb：表示硬件虚拟以太网桥（Hardware Virtual Ethernet Bridge），通常用于支持 SR-IOV 的硬件网卡 - vhostuser：表示使用 vhost-user 协议（基于 Unix 域套接字）与外部虚拟交换机通信 - distributed：表示用于分布式虚拟交换机 - binding_failed：表示端口绑定失败 - unbound：表示该端口未绑定到任何网络后端
+    * bindingvnicType  **参数解释**： 绑定的vNIC类型。 **取值范围**： - normal: 软交换。 - direct: SRIOV硬直通（不支持）。 - baremetal：用于裸金属服务器。
+    * createdAt  **参数解释**： 端口的创建时间。 **取值范围**： UTC时间，格式: yyyy-MM-ddTHH:mm:ss。
+    * updatedAt  **参数解释**： 端口的最近一次更新的时间。 **取值范围**： UTC时间，格式: yyyy-MM-ddTHH:mm:ss。
+    * description  **参数解释**： 端口的描述信息。 **取值范围**： 0-255个字符，不能包含“<”和“>”。
+    * deviceId  **参数解释**： 端口所属的设备ID。 **取值范围**： 带“-”的标准UUID格式。
+    * deviceOwner  **参数解释**： 端口所属的设备名称。 **取值范围**： - network:dhcp, 表示DHCP服务 - network:router_interface_distributed, 表示子网网关地址 - compute:xxx, 表示云服务器网卡私有IP地址，其中XXX对应具体的可用区名称，例如compute:aa-bb-cc表示私有IP地址被可用区aa-bb-cc内的云服务器使用 - neutron:VIP_PORT, 表示虚拟IP地址 - neutron:LOADBALANCERV2, 表示共享型ELB - neutron:LOADBALANCERV3, 表示独享型ELB - network:endpoint_interface, 表示VPC终端节点 - network:nat_gateway, 表示NAT网关 - network:ucmp, 表示UCMP端口，为企业路由器服务所用
+    * ecsFlavor  **参数解释**： 标识此端口所属云服务器的flavor。 **取值范围**： 不涉及。
+    * id  **参数解释**： 端口的资源ID。 **取值范围**： 带“-”的标准UUID格式。
+    * instanceId  **参数解释**： 端口所属的云服务实例ID，例如RDS实例ID。 **取值范围**： 不涉及。
+    * instanceType  **参数解释**： 端口所属的云服务实例类型，例如“RDS”。 **取值范围**： 不涉及。
+    * macAddress  **参数解释**： 端口的MAC地址。 **取值范围**： 不涉及
+    * name  **参数解释**： 端口的名称。 **取值范围**： 默认为空，最大长度不超过255。
+    * portSecurityEnabled  **参数解释**： 端口的安全使能标记，如果不使能，则安全组和DHCP防欺骗不生效。 **取值范围**： - true：使能端口安全。 - false：未使能端口安全。
+    * privateIps  **参数解释**： 端口的私有IP地址。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 端口所属的项目ID。 **取值范围**： 不涉及。
+    * securityGroups  **参数解释**： 端口绑定的安全组列表。 **取值范围**： 不涉及。
+    * status  **参数解释**： 端口的状态。 **取值范围**： - ACTIVE：端口处于活动状态，可以正常进行网络通信。 - BUILD：端口正在创建或配置中。 - DOWN：端口处于非活动状态，不能进行网络通信。Hana 硬直通虚拟机端口状态总为DOWN。
+    * tenantId  **参数解释**： 端口所属的租户ID。 **取值范围**： 不涉及。
+    * virsubnetId  **参数解释**： 端口所在的虚拟子网ID。 **取值范围**： 带“-”的标准UUID格式。
+    * vpcId  **参数解释**： 端口所在的VPC的ID。 **取值范围**： 带“-”的标准UUID格式。
+    * vpcTenantId  **参数解释**： 端口所在的VPC的租户ID。 **取值范围**： 不涉及。
+    * vtepIp  **参数解释**： 端口的VTEP IP地址，即虚拟隧道端点的 IP 地址。 **取值范围**： 不涉及。
+    * enableEfi  **参数解释**： 是否使能efi，使能则表示端口支持vRoCE能力。 **取值范围**： - true：使能efi。 - false：未使能efi。
+    * scope  **参数解释**： 端口所在子网的作用域（边缘云场景）。 **取值范围**： - center：表示作用域为中心。 - {publicBorderGroup}：表示作用域为具体的公网边界组。公网边界组限制子网的可用区范围，可关联多个边缘可用区。
+    * zoneId  **参数解释**： 端口所属的可用分区的ID。 **取值范围**： 不涉及。
+    * bindingmigrationInfo  **参数解释**： 端口迁移的目的节点信息，包括目的节点的binding:vif_details和binding:vif_type。 **取值范围**： 不涉及。
+    * extraDhcpOpts  **参数解释**： DHCP的扩展属性。 **取值范围**： 不涉及。
+    * positionType  **参数解释**： 边缘场景端口的位置类型。 **取值范围**： 默认值center。
+    * instanceInfo  **参数解释**： 端口绑定的实例信息。 **取值范围**： 不涉及。
+    * tags  **参数解释**： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。详情请参见Tag对象。 **取值范围**： 不涉及。
+    * allowedAddressPairs  **参数解释**： 端口的IP/Mac对列表。 **取值范围**： - IP地址不允许为 “0.0.0.0/0”。 - 如果allowed_address_pairs配置地址池较大的IP网段（掩码小于24位），建议为该端口配置一个单独的安全组。 - 如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。 - 被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。
     *
     * @var string[]
     */
@@ -361,42 +361,42 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * adminStateUp  1、功能描述：管理状态 2、取值范围：true/false 3、约束：N/A 4、默认值：true 5、权限：N/A
-    * bindinghostId  1、功能描述：主机ID 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
-    * bindingprofile  1、功能描述：提供用户设置自定义信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * adminStateUp  **参数解释**： 端口的管理状态。 **取值范围**： true，false，默认值true。
+    * bindinghostId  **参数解释**： 端口所在的主机ID。 **取值范围**： 不涉及。
+    * bindingprofile  **参数解释**： 端口的用户自定义信息。 **取值范围**： 不涉及。
     * bindingvifDetails  bindingvifDetails
-    * bindingvifType  1、功能描述：端口的接口类型 (ovs/hw_veb等)(扩展属性) 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
-    * bindingvnicType  1、功能描述：绑定的vNIC类型normal: 软交换direct: SRIOV硬直通（不支持） 2、取值范围：normal或者direct 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * createdAt  1、功能说明：创建时间 2、取值范围：格式 \"UTC时间 格式: yyyy-MM-ddTHH:mm:ss\"  3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * updatedAt  1、功能说明：创建时间 2、取值范围：格式 \"UTC时间 格式: yyyy-MM-ddTHH:mm:ss\"  3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * description  1、功能说明：端口描述 2、取值范围：0-255个字符，不能包含“<”和“>” 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * deviceId  1、功能描述：端口所属设备ID 2、取值范围：标准UUID 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
-    * deviceOwner  1、功能描述：设备所属（DHCP/Router/ lb/Nova） 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * ecsFlavor  1、功能描述：标识这个端口所属虚拟机的flavor 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * id  1、功能描述：端口唯一标识 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * instanceId  1、功能描述：端口所属实例ID，例如RDS实例ID 2、取值范围：N/A 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
-    * instanceType  1、功能描述：端口所属实例类型，例如“RDS” 2、取值范围：N/A 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
-    * macAddress  1、功能描述：MAC地址 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * name  1、功能描述：端口名称 2、取值范围：默认为空，最大长度不超过255 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * portSecurityEnabled  1、功能描述：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 2、取值范围：true/false 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * privateIps  1、功能描述：port的私有IP地址 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * projectId  1、功能描述：项目ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * securityGroups  1、功能描述：安全组 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * status  1、功能描述：端口状态 2、取值范围：ACTIVE，BUILD，DOWN 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * tenantId  1、功能描述：租户ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * virsubnetId  1、功能描述：所属网络ID 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * vpcId  1、功能描述：VPC的ID 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * vpcTenantId  1、功能描述：VPC_租户ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * vtepIp  1、功能描述：本地IP 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * enableEfi  1、功能描述：是否使能efi，使能则表示端口支持vRoCE能力 2、取值范围：true or false 3、约束：N/A 4、默认值：false 5、权限：N/A
-    * scope  1、功能描述：作用域 2、取值范围：center，表示作用域为中心；{azId}，表示作用域为具体的可用区 3、约束：N/A 4、默认值：center 5、权限：N/A
-    * zoneId  1、功能描述：端口所属的可用分区 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * bindingmigrationInfo  1、功能描述：迁移目的节点信息，包括目的节点的binding:vif_details和binding:vif_type 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * extraDhcpOpts  功能说明：DHCP的扩展属性
-    * positionType  1、功能描述：边缘场景位置类型 2、取值范围：N/A 3、约束：N/A 4、默认值：center 5、权限：N/A
-    * instanceInfo  1、功能描述：端口绑定实例信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * tags  参数解释： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。 取值范围： 不涉及。
-    * allowedAddressPairs  1、功能描述：IP/Mac对列表 2、取值范围：N/A 3、约束： - IP地址不允许为 “0.0.0.0/0” - 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 - 如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。 - 被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。 4、默认值：N/A 5、权限：N/A
+    * bindingvifType  **参数解释**： 端口绑定的虚拟接口类型 (ovs/hw_veb等)，扩展属性。 **取值范围**： - ovs：表示使用 Open vSwitch（OVS）作为虚拟交换机 - bridge：表示使用 Linux 内核桥接（bridge）实现虚拟网络 - hw_veb：表示硬件虚拟以太网桥（Hardware Virtual Ethernet Bridge），通常用于支持 SR-IOV 的硬件网卡 - vhostuser：表示使用 vhost-user 协议（基于 Unix 域套接字）与外部虚拟交换机通信 - distributed：表示用于分布式虚拟交换机 - binding_failed：表示端口绑定失败 - unbound：表示该端口未绑定到任何网络后端
+    * bindingvnicType  **参数解释**： 绑定的vNIC类型。 **取值范围**： - normal: 软交换。 - direct: SRIOV硬直通（不支持）。 - baremetal：用于裸金属服务器。
+    * createdAt  **参数解释**： 端口的创建时间。 **取值范围**： UTC时间，格式: yyyy-MM-ddTHH:mm:ss。
+    * updatedAt  **参数解释**： 端口的最近一次更新的时间。 **取值范围**： UTC时间，格式: yyyy-MM-ddTHH:mm:ss。
+    * description  **参数解释**： 端口的描述信息。 **取值范围**： 0-255个字符，不能包含“<”和“>”。
+    * deviceId  **参数解释**： 端口所属的设备ID。 **取值范围**： 带“-”的标准UUID格式。
+    * deviceOwner  **参数解释**： 端口所属的设备名称。 **取值范围**： - network:dhcp, 表示DHCP服务 - network:router_interface_distributed, 表示子网网关地址 - compute:xxx, 表示云服务器网卡私有IP地址，其中XXX对应具体的可用区名称，例如compute:aa-bb-cc表示私有IP地址被可用区aa-bb-cc内的云服务器使用 - neutron:VIP_PORT, 表示虚拟IP地址 - neutron:LOADBALANCERV2, 表示共享型ELB - neutron:LOADBALANCERV3, 表示独享型ELB - network:endpoint_interface, 表示VPC终端节点 - network:nat_gateway, 表示NAT网关 - network:ucmp, 表示UCMP端口，为企业路由器服务所用
+    * ecsFlavor  **参数解释**： 标识此端口所属云服务器的flavor。 **取值范围**： 不涉及。
+    * id  **参数解释**： 端口的资源ID。 **取值范围**： 带“-”的标准UUID格式。
+    * instanceId  **参数解释**： 端口所属的云服务实例ID，例如RDS实例ID。 **取值范围**： 不涉及。
+    * instanceType  **参数解释**： 端口所属的云服务实例类型，例如“RDS”。 **取值范围**： 不涉及。
+    * macAddress  **参数解释**： 端口的MAC地址。 **取值范围**： 不涉及
+    * name  **参数解释**： 端口的名称。 **取值范围**： 默认为空，最大长度不超过255。
+    * portSecurityEnabled  **参数解释**： 端口的安全使能标记，如果不使能，则安全组和DHCP防欺骗不生效。 **取值范围**： - true：使能端口安全。 - false：未使能端口安全。
+    * privateIps  **参数解释**： 端口的私有IP地址。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 端口所属的项目ID。 **取值范围**： 不涉及。
+    * securityGroups  **参数解释**： 端口绑定的安全组列表。 **取值范围**： 不涉及。
+    * status  **参数解释**： 端口的状态。 **取值范围**： - ACTIVE：端口处于活动状态，可以正常进行网络通信。 - BUILD：端口正在创建或配置中。 - DOWN：端口处于非活动状态，不能进行网络通信。Hana 硬直通虚拟机端口状态总为DOWN。
+    * tenantId  **参数解释**： 端口所属的租户ID。 **取值范围**： 不涉及。
+    * virsubnetId  **参数解释**： 端口所在的虚拟子网ID。 **取值范围**： 带“-”的标准UUID格式。
+    * vpcId  **参数解释**： 端口所在的VPC的ID。 **取值范围**： 带“-”的标准UUID格式。
+    * vpcTenantId  **参数解释**： 端口所在的VPC的租户ID。 **取值范围**： 不涉及。
+    * vtepIp  **参数解释**： 端口的VTEP IP地址，即虚拟隧道端点的 IP 地址。 **取值范围**： 不涉及。
+    * enableEfi  **参数解释**： 是否使能efi，使能则表示端口支持vRoCE能力。 **取值范围**： - true：使能efi。 - false：未使能efi。
+    * scope  **参数解释**： 端口所在子网的作用域（边缘云场景）。 **取值范围**： - center：表示作用域为中心。 - {publicBorderGroup}：表示作用域为具体的公网边界组。公网边界组限制子网的可用区范围，可关联多个边缘可用区。
+    * zoneId  **参数解释**： 端口所属的可用分区的ID。 **取值范围**： 不涉及。
+    * bindingmigrationInfo  **参数解释**： 端口迁移的目的节点信息，包括目的节点的binding:vif_details和binding:vif_type。 **取值范围**： 不涉及。
+    * extraDhcpOpts  **参数解释**： DHCP的扩展属性。 **取值范围**： 不涉及。
+    * positionType  **参数解释**： 边缘场景端口的位置类型。 **取值范围**： 默认值center。
+    * instanceInfo  **参数解释**： 端口绑定的实例信息。 **取值范围**： 不涉及。
+    * tags  **参数解释**： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。详情请参见Tag对象。 **取值范围**： 不涉及。
+    * allowedAddressPairs  **参数解释**： 端口的IP/Mac对列表。 **取值范围**： - IP地址不允许为 “0.0.0.0/0”。 - 如果allowed_address_pairs配置地址池较大的IP网段（掩码小于24位），建议为该端口配置一个单独的安全组。 - 如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。 - 被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。
     *
     * @var string[]
     */
@@ -667,7 +667,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets adminStateUp
-    *  1、功能描述：管理状态 2、取值范围：true/false 3、约束：N/A 4、默认值：true 5、权限：N/A
+    *  **参数解释**： 端口的管理状态。 **取值范围**： true，false，默认值true。
     *
     * @return bool
     */
@@ -679,7 +679,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets adminStateUp
     *
-    * @param bool $adminStateUp 1、功能描述：管理状态 2、取值范围：true/false 3、约束：N/A 4、默认值：true 5、权限：N/A
+    * @param bool $adminStateUp **参数解释**： 端口的管理状态。 **取值范围**： true，false，默认值true。
     *
     * @return $this
     */
@@ -691,7 +691,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets bindinghostId
-    *  1、功能描述：主机ID 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口所在的主机ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -703,7 +703,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets bindinghostId
     *
-    * @param string $bindinghostId 1、功能描述：主机ID 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
+    * @param string $bindinghostId **参数解释**： 端口所在的主机ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -715,7 +715,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets bindingprofile
-    *  1、功能描述：提供用户设置自定义信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口的用户自定义信息。 **取值范围**： 不涉及。
     *
     * @return object
     */
@@ -727,7 +727,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets bindingprofile
     *
-    * @param object $bindingprofile 1、功能描述：提供用户设置自定义信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param object $bindingprofile **参数解释**： 端口的用户自定义信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -763,7 +763,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets bindingvifType
-    *  1、功能描述：端口的接口类型 (ovs/hw_veb等)(扩展属性) 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口绑定的虚拟接口类型 (ovs/hw_veb等)，扩展属性。 **取值范围**： - ovs：表示使用 Open vSwitch（OVS）作为虚拟交换机 - bridge：表示使用 Linux 内核桥接（bridge）实现虚拟网络 - hw_veb：表示硬件虚拟以太网桥（Hardware Virtual Ethernet Bridge），通常用于支持 SR-IOV 的硬件网卡 - vhostuser：表示使用 vhost-user 协议（基于 Unix 域套接字）与外部虚拟交换机通信 - distributed：表示用于分布式虚拟交换机 - binding_failed：表示端口绑定失败 - unbound：表示该端口未绑定到任何网络后端
     *
     * @return string
     */
@@ -775,7 +775,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets bindingvifType
     *
-    * @param string $bindingvifType 1、功能描述：端口的接口类型 (ovs/hw_veb等)(扩展属性) 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
+    * @param string $bindingvifType **参数解释**： 端口绑定的虚拟接口类型 (ovs/hw_veb等)，扩展属性。 **取值范围**： - ovs：表示使用 Open vSwitch（OVS）作为虚拟交换机 - bridge：表示使用 Linux 内核桥接（bridge）实现虚拟网络 - hw_veb：表示硬件虚拟以太网桥（Hardware Virtual Ethernet Bridge），通常用于支持 SR-IOV 的硬件网卡 - vhostuser：表示使用 vhost-user 协议（基于 Unix 域套接字）与外部虚拟交换机通信 - distributed：表示用于分布式虚拟交换机 - binding_failed：表示端口绑定失败 - unbound：表示该端口未绑定到任何网络后端
     *
     * @return $this
     */
@@ -787,7 +787,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets bindingvnicType
-    *  1、功能描述：绑定的vNIC类型normal: 软交换direct: SRIOV硬直通（不支持） 2、取值范围：normal或者direct 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 绑定的vNIC类型。 **取值范围**： - normal: 软交换。 - direct: SRIOV硬直通（不支持）。 - baremetal：用于裸金属服务器。
     *
     * @return string
     */
@@ -799,7 +799,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets bindingvnicType
     *
-    * @param string $bindingvnicType 1、功能描述：绑定的vNIC类型normal: 软交换direct: SRIOV硬直通（不支持） 2、取值范围：normal或者direct 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param string $bindingvnicType **参数解释**： 绑定的vNIC类型。 **取值范围**： - normal: 软交换。 - direct: SRIOV硬直通（不支持）。 - baremetal：用于裸金属服务器。
     *
     * @return $this
     */
@@ -811,7 +811,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  1、功能说明：创建时间 2、取值范围：格式 \"UTC时间 格式: yyyy-MM-ddTHH:mm:ss\"  3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口的创建时间。 **取值范围**： UTC时间，格式: yyyy-MM-ddTHH:mm:ss。
     *
     * @return \DateTime
     */
@@ -823,7 +823,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param \DateTime $createdAt 1、功能说明：创建时间 2、取值范围：格式 \"UTC时间 格式: yyyy-MM-ddTHH:mm:ss\"  3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param \DateTime $createdAt **参数解释**： 端口的创建时间。 **取值范围**： UTC时间，格式: yyyy-MM-ddTHH:mm:ss。
     *
     * @return $this
     */
@@ -835,7 +835,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  1、功能说明：创建时间 2、取值范围：格式 \"UTC时间 格式: yyyy-MM-ddTHH:mm:ss\"  3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口的最近一次更新的时间。 **取值范围**： UTC时间，格式: yyyy-MM-ddTHH:mm:ss。
     *
     * @return \DateTime
     */
@@ -847,7 +847,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param \DateTime $updatedAt 1、功能说明：创建时间 2、取值范围：格式 \"UTC时间 格式: yyyy-MM-ddTHH:mm:ss\"  3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param \DateTime $updatedAt **参数解释**： 端口的最近一次更新的时间。 **取值范围**： UTC时间，格式: yyyy-MM-ddTHH:mm:ss。
     *
     * @return $this
     */
@@ -859,7 +859,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  1、功能说明：端口描述 2、取值范围：0-255个字符，不能包含“<”和“>” 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口的描述信息。 **取值范围**： 0-255个字符，不能包含“<”和“>”。
     *
     * @return string
     */
@@ -871,7 +871,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 1、功能说明：端口描述 2、取值范围：0-255个字符，不能包含“<”和“>” 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param string $description **参数解释**： 端口的描述信息。 **取值范围**： 0-255个字符，不能包含“<”和“>”。
     *
     * @return $this
     */
@@ -883,7 +883,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceId
-    *  1、功能描述：端口所属设备ID 2、取值范围：标准UUID 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口所属的设备ID。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @return string
     */
@@ -895,7 +895,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets deviceId
     *
-    * @param string $deviceId 1、功能描述：端口所属设备ID 2、取值范围：标准UUID 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
+    * @param string $deviceId **参数解释**： 端口所属的设备ID。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @return $this
     */
@@ -907,7 +907,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceOwner
-    *  1、功能描述：设备所属（DHCP/Router/ lb/Nova） 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口所属的设备名称。 **取值范围**： - network:dhcp, 表示DHCP服务 - network:router_interface_distributed, 表示子网网关地址 - compute:xxx, 表示云服务器网卡私有IP地址，其中XXX对应具体的可用区名称，例如compute:aa-bb-cc表示私有IP地址被可用区aa-bb-cc内的云服务器使用 - neutron:VIP_PORT, 表示虚拟IP地址 - neutron:LOADBALANCERV2, 表示共享型ELB - neutron:LOADBALANCERV3, 表示独享型ELB - network:endpoint_interface, 表示VPC终端节点 - network:nat_gateway, 表示NAT网关 - network:ucmp, 表示UCMP端口，为企业路由器服务所用
     *
     * @return string
     */
@@ -919,7 +919,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets deviceOwner
     *
-    * @param string $deviceOwner 1、功能描述：设备所属（DHCP/Router/ lb/Nova） 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param string $deviceOwner **参数解释**： 端口所属的设备名称。 **取值范围**： - network:dhcp, 表示DHCP服务 - network:router_interface_distributed, 表示子网网关地址 - compute:xxx, 表示云服务器网卡私有IP地址，其中XXX对应具体的可用区名称，例如compute:aa-bb-cc表示私有IP地址被可用区aa-bb-cc内的云服务器使用 - neutron:VIP_PORT, 表示虚拟IP地址 - neutron:LOADBALANCERV2, 表示共享型ELB - neutron:LOADBALANCERV3, 表示独享型ELB - network:endpoint_interface, 表示VPC终端节点 - network:nat_gateway, 表示NAT网关 - network:ucmp, 表示UCMP端口，为企业路由器服务所用
     *
     * @return $this
     */
@@ -931,7 +931,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets ecsFlavor
-    *  1、功能描述：标识这个端口所属虚拟机的flavor 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 标识此端口所属云服务器的flavor。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -943,7 +943,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets ecsFlavor
     *
-    * @param string $ecsFlavor 1、功能描述：标识这个端口所属虚拟机的flavor 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param string $ecsFlavor **参数解释**： 标识此端口所属云服务器的flavor。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -955,7 +955,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  1、功能描述：端口唯一标识 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口的资源ID。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @return string
     */
@@ -967,7 +967,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 1、功能描述：端口唯一标识 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param string $id **参数解释**： 端口的资源ID。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @return $this
     */
@@ -979,7 +979,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  1、功能描述：端口所属实例ID，例如RDS实例ID 2、取值范围：N/A 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口所属的云服务实例ID，例如RDS实例ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -991,7 +991,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 1、功能描述：端口所属实例ID，例如RDS实例ID 2、取值范围：N/A 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
+    * @param string $instanceId **参数解释**： 端口所属的云服务实例ID，例如RDS实例ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1003,7 +1003,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceType
-    *  1、功能描述：端口所属实例类型，例如“RDS” 2、取值范围：N/A 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口所属的云服务实例类型，例如“RDS”。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -1015,7 +1015,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets instanceType
     *
-    * @param string $instanceType 1、功能描述：端口所属实例类型，例如“RDS” 2、取值范围：N/A 3、约束：不支持设置和更新，由系统自动维护 4、默认值：N/A 5、权限：N/A
+    * @param string $instanceType **参数解释**： 端口所属的云服务实例类型，例如“RDS”。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1027,7 +1027,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets macAddress
-    *  1、功能描述：MAC地址 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口的MAC地址。 **取值范围**： 不涉及
     *
     * @return string
     */
@@ -1039,7 +1039,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets macAddress
     *
-    * @param string $macAddress 1、功能描述：MAC地址 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param string $macAddress **参数解释**： 端口的MAC地址。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -1051,7 +1051,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  1、功能描述：端口名称 2、取值范围：默认为空，最大长度不超过255 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口的名称。 **取值范围**： 默认为空，最大长度不超过255。
     *
     * @return string
     */
@@ -1063,7 +1063,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 1、功能描述：端口名称 2、取值范围：默认为空，最大长度不超过255 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param string $name **参数解释**： 端口的名称。 **取值范围**： 默认为空，最大长度不超过255。
     *
     * @return $this
     */
@@ -1075,7 +1075,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets portSecurityEnabled
-    *  1、功能描述：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 2、取值范围：true/false 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口的安全使能标记，如果不使能，则安全组和DHCP防欺骗不生效。 **取值范围**： - true：使能端口安全。 - false：未使能端口安全。
     *
     * @return bool
     */
@@ -1087,7 +1087,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets portSecurityEnabled
     *
-    * @param bool $portSecurityEnabled 1、功能描述：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 2、取值范围：true/false 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param bool $portSecurityEnabled **参数解释**： 端口的安全使能标记，如果不使能，则安全组和DHCP防欺骗不生效。 **取值范围**： - true：使能端口安全。 - false：未使能端口安全。
     *
     * @return $this
     */
@@ -1099,7 +1099,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIps
-    *  1、功能描述：port的私有IP地址 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口的私有IP地址。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Vpc\V3\Model\PrivateIpInfo[]
     */
@@ -1111,7 +1111,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets privateIps
     *
-    * @param \HuaweiCloud\SDK\Vpc\V3\Model\PrivateIpInfo[] $privateIps 1、功能描述：port的私有IP地址 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\PrivateIpInfo[] $privateIps **参数解释**： 端口的私有IP地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1123,7 +1123,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  1、功能描述：项目ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口所属的项目ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -1135,7 +1135,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 1、功能描述：项目ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param string $projectId **参数解释**： 端口所属的项目ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1147,7 +1147,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroups
-    *  1、功能描述：安全组 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口绑定的安全组列表。 **取值范围**： 不涉及。
     *
     * @return string[]
     */
@@ -1159,7 +1159,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroups
     *
-    * @param string[] $securityGroups 1、功能描述：安全组 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param string[] $securityGroups **参数解释**： 端口绑定的安全组列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1171,7 +1171,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  1、功能描述：端口状态 2、取值范围：ACTIVE，BUILD，DOWN 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口的状态。 **取值范围**： - ACTIVE：端口处于活动状态，可以正常进行网络通信。 - BUILD：端口正在创建或配置中。 - DOWN：端口处于非活动状态，不能进行网络通信。Hana 硬直通虚拟机端口状态总为DOWN。
     *
     * @return string
     */
@@ -1183,7 +1183,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 1、功能描述：端口状态 2、取值范围：ACTIVE，BUILD，DOWN 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param string $status **参数解释**： 端口的状态。 **取值范围**： - ACTIVE：端口处于活动状态，可以正常进行网络通信。 - BUILD：端口正在创建或配置中。 - DOWN：端口处于非活动状态，不能进行网络通信。Hana 硬直通虚拟机端口状态总为DOWN。
     *
     * @return $this
     */
@@ -1195,7 +1195,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
-    *  1、功能描述：租户ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口所属的租户ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -1207,7 +1207,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets tenantId
     *
-    * @param string $tenantId 1、功能描述：租户ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param string $tenantId **参数解释**： 端口所属的租户ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1219,7 +1219,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets virsubnetId
-    *  1、功能描述：所属网络ID 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口所在的虚拟子网ID。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @return string
     */
@@ -1231,7 +1231,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets virsubnetId
     *
-    * @param string $virsubnetId 1、功能描述：所属网络ID 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param string $virsubnetId **参数解释**： 端口所在的虚拟子网ID。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @return $this
     */
@@ -1243,7 +1243,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  1、功能描述：VPC的ID 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口所在的VPC的ID。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @return string
     */
@@ -1255,7 +1255,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string $vpcId 1、功能描述：VPC的ID 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param string $vpcId **参数解释**： 端口所在的VPC的ID。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @return $this
     */
@@ -1267,7 +1267,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcTenantId
-    *  1、功能描述：VPC_租户ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口所在的VPC的租户ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -1279,7 +1279,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets vpcTenantId
     *
-    * @param string $vpcTenantId 1、功能描述：VPC_租户ID 2、取值范围：UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param string $vpcTenantId **参数解释**： 端口所在的VPC的租户ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1291,7 +1291,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets vtepIp
-    *  1、功能描述：本地IP 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口的VTEP IP地址，即虚拟隧道端点的 IP 地址。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -1303,7 +1303,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets vtepIp
     *
-    * @param string $vtepIp 1、功能描述：本地IP 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param string $vtepIp **参数解释**： 端口的VTEP IP地址，即虚拟隧道端点的 IP 地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1315,7 +1315,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableEfi
-    *  1、功能描述：是否使能efi，使能则表示端口支持vRoCE能力 2、取值范围：true or false 3、约束：N/A 4、默认值：false 5、权限：N/A
+    *  **参数解释**： 是否使能efi，使能则表示端口支持vRoCE能力。 **取值范围**： - true：使能efi。 - false：未使能efi。
     *
     * @return bool
     */
@@ -1327,7 +1327,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets enableEfi
     *
-    * @param bool $enableEfi 1、功能描述：是否使能efi，使能则表示端口支持vRoCE能力 2、取值范围：true or false 3、约束：N/A 4、默认值：false 5、权限：N/A
+    * @param bool $enableEfi **参数解释**： 是否使能efi，使能则表示端口支持vRoCE能力。 **取值范围**： - true：使能efi。 - false：未使能efi。
     *
     * @return $this
     */
@@ -1339,7 +1339,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets scope
-    *  1、功能描述：作用域 2、取值范围：center，表示作用域为中心；{azId}，表示作用域为具体的可用区 3、约束：N/A 4、默认值：center 5、权限：N/A
+    *  **参数解释**： 端口所在子网的作用域（边缘云场景）。 **取值范围**： - center：表示作用域为中心。 - {publicBorderGroup}：表示作用域为具体的公网边界组。公网边界组限制子网的可用区范围，可关联多个边缘可用区。
     *
     * @return string
     */
@@ -1351,7 +1351,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets scope
     *
-    * @param string $scope 1、功能描述：作用域 2、取值范围：center，表示作用域为中心；{azId}，表示作用域为具体的可用区 3、约束：N/A 4、默认值：center 5、权限：N/A
+    * @param string $scope **参数解释**： 端口所在子网的作用域（边缘云场景）。 **取值范围**： - center：表示作用域为中心。 - {publicBorderGroup}：表示作用域为具体的公网边界组。公网边界组限制子网的可用区范围，可关联多个边缘可用区。
     *
     * @return $this
     */
@@ -1363,7 +1363,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneId
-    *  1、功能描述：端口所属的可用分区 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口所属的可用分区的ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -1375,7 +1375,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets zoneId
     *
-    * @param string $zoneId 1、功能描述：端口所属的可用分区 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param string $zoneId **参数解释**： 端口所属的可用分区的ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1387,7 +1387,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets bindingmigrationInfo
-    *  1、功能描述：迁移目的节点信息，包括目的节点的binding:vif_details和binding:vif_type 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口迁移的目的节点信息，包括目的节点的binding:vif_details和binding:vif_type。 **取值范围**： 不涉及。
     *
     * @return object
     */
@@ -1399,7 +1399,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets bindingmigrationInfo
     *
-    * @param object $bindingmigrationInfo 1、功能描述：迁移目的节点信息，包括目的节点的binding:vif_details和binding:vif_type 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param object $bindingmigrationInfo **参数解释**： 端口迁移的目的节点信息，包括目的节点的binding:vif_details和binding:vif_type。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1411,9 +1411,9 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets extraDhcpOpts
-    *  功能说明：DHCP的扩展属性
+    *  **参数解释**： DHCP的扩展属性。 **取值范围**： 不涉及。
     *
-    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ExtraDhcpOpt[]
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\PortExtraDhcpOpt[]
     */
     public function getExtraDhcpOpts()
     {
@@ -1423,7 +1423,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets extraDhcpOpts
     *
-    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ExtraDhcpOpt[] $extraDhcpOpts 功能说明：DHCP的扩展属性
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\PortExtraDhcpOpt[] $extraDhcpOpts **参数解释**： DHCP的扩展属性。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1435,7 +1435,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets positionType
-    *  1、功能描述：边缘场景位置类型 2、取值范围：N/A 3、约束：N/A 4、默认值：center 5、权限：N/A
+    *  **参数解释**： 边缘场景端口的位置类型。 **取值范围**： 默认值center。
     *
     * @return string
     */
@@ -1447,7 +1447,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets positionType
     *
-    * @param string $positionType 1、功能描述：边缘场景位置类型 2、取值范围：N/A 3、约束：N/A 4、默认值：center 5、权限：N/A
+    * @param string $positionType **参数解释**： 边缘场景端口的位置类型。 **取值范围**： 默认值center。
     *
     * @return $this
     */
@@ -1459,7 +1459,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceInfo
-    *  1、功能描述：端口绑定实例信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口绑定的实例信息。 **取值范围**： 不涉及。
     *
     * @return object
     */
@@ -1471,7 +1471,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets instanceInfo
     *
-    * @param object $instanceInfo 1、功能描述：端口绑定实例信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param object $instanceInfo **参数解释**： 端口绑定的实例信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1483,9 +1483,9 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  参数解释： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。 取值范围： 不涉及。
+    *  **参数解释**： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。详情请参见Tag对象。 **取值范围**： 不涉及。
     *
-    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ResponseTag[]
     */
     public function getTags()
     {
@@ -1495,7 +1495,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[] $tags 参数解释： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。 取值范围： 不涉及。
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ResponseTag[] $tags **参数解释**： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。详情请参见Tag对象。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1507,7 +1507,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets allowedAddressPairs
-    *  1、功能描述：IP/Mac对列表 2、取值范围：N/A 3、约束： - IP地址不允许为 “0.0.0.0/0” - 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 - 如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。 - 被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。 4、默认值：N/A 5、权限：N/A
+    *  **参数解释**： 端口的IP/Mac对列表。 **取值范围**： - IP地址不允许为 “0.0.0.0/0”。 - 如果allowed_address_pairs配置地址池较大的IP网段（掩码小于24位），建议为该端口配置一个单独的安全组。 - 如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。 - 被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。
     *
     * @return \HuaweiCloud\SDK\Vpc\V3\Model\AllowedAddressPair[]
     */
@@ -1519,7 +1519,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets allowedAddressPairs
     *
-    * @param \HuaweiCloud\SDK\Vpc\V3\Model\AllowedAddressPair[] $allowedAddressPairs 1、功能描述：IP/Mac对列表 2、取值范围：N/A 3、约束： - IP地址不允许为 “0.0.0.0/0” - 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 - 如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。 - 被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。 4、默认值：N/A 5、权限：N/A
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\AllowedAddressPair[] $allowedAddressPairs **参数解释**： 端口的IP/Mac对列表。 **取值范围**： - IP地址不允许为 “0.0.0.0/0”。 - 如果allowed_address_pairs配置地址池较大的IP网段（掩码小于24位），建议为该端口配置一个单独的安全组。 - 如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。 - 被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。
     *
     * @return $this
     */

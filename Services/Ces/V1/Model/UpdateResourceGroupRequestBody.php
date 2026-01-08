@@ -211,8 +211,8 @@ class UpdateResourceGroupRequestBody implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['groupName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'groupName', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['groupName'])) {
-                $invalidProperties[] = "invalid value for 'groupName', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
+            if (!preg_match("/^([一-鿿]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['groupName'])) {
+                $invalidProperties[] = "invalid value for 'groupName', must be conform to the pattern /^([一-鿿]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
             }
             if (!is_null($this->container['type']) && !preg_match("/^(EPS|TAG)$/", $this->container['type'])) {
                 $invalidProperties[] = "invalid value for 'type', must be conform to the pattern /^(EPS|TAG)$/.";

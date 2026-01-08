@@ -35,6 +35,7 @@ class InstanceConfig implements ModelInterface, ArrayAccess
     * dedicatedHostId  专属主机的ID。 说明：该字段仅在tenancy为dedicated时生效；如果指定该字段，云服务器将被创建到指定的专属主机上；如果不指定该字段，此时系统会将云服务器创建在符合规格的专属主机中剩余内存最大的那一台上，以使各专属主机尽量均衡负载。
     * multiFlavorPriorityPolicy  使用伸缩配置创建云主机的时候，多规格使用的优先级策略。PICK_FIRST（默认）：选择优先，虚拟机扩容时规格的选择按照flavorRef列表的顺序进行优先级排序。COST_FIRST：成本优化，虚拟机扩容时规格的选择按照价格最优原则进行优先级排序。
     * marketType  云服务器的计费模式，可以选择竞价计费或按需计费，取值如下：按需计费：不指定该字段。竞价计费：spot
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class InstanceConfig implements ModelInterface, ArrayAccess
             'tenancy' => 'string',
             'dedicatedHostId' => 'string',
             'multiFlavorPriorityPolicy' => 'string',
-            'marketType' => 'string'
+            'marketType' => 'string',
+            'cpuOptions' => '\HuaweiCloud\SDK\_As\V1\Model\CpuOptions'
     ];
 
     /**
@@ -73,6 +75,7 @@ class InstanceConfig implements ModelInterface, ArrayAccess
     * dedicatedHostId  专属主机的ID。 说明：该字段仅在tenancy为dedicated时生效；如果指定该字段，云服务器将被创建到指定的专属主机上；如果不指定该字段，此时系统会将云服务器创建在符合规格的专属主机中剩余内存最大的那一台上，以使各专属主机尽量均衡负载。
     * multiFlavorPriorityPolicy  使用伸缩配置创建云主机的时候，多规格使用的优先级策略。PICK_FIRST（默认）：选择优先，虚拟机扩容时规格的选择按照flavorRef列表的顺序进行优先级排序。COST_FIRST：成本优化，虚拟机扩容时规格的选择按照价格最优原则进行优先级排序。
     * marketType  云服务器的计费模式，可以选择竞价计费或按需计费，取值如下：按需计费：不指定该字段。竞价计费：spot
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class InstanceConfig implements ModelInterface, ArrayAccess
         'tenancy' => null,
         'dedicatedHostId' => null,
         'multiFlavorPriorityPolicy' => null,
-        'marketType' => null
+        'marketType' => null,
+        'cpuOptions' => null
     ];
 
     /**
@@ -132,6 +136,7 @@ class InstanceConfig implements ModelInterface, ArrayAccess
     * dedicatedHostId  专属主机的ID。 说明：该字段仅在tenancy为dedicated时生效；如果指定该字段，云服务器将被创建到指定的专属主机上；如果不指定该字段，此时系统会将云服务器创建在符合规格的专属主机中剩余内存最大的那一台上，以使各专属主机尽量均衡负载。
     * multiFlavorPriorityPolicy  使用伸缩配置创建云主机的时候，多规格使用的优先级策略。PICK_FIRST（默认）：选择优先，虚拟机扩容时规格的选择按照flavorRef列表的顺序进行优先级排序。COST_FIRST：成本优化，虚拟机扩容时规格的选择按照价格最优原则进行优先级排序。
     * marketType  云服务器的计费模式，可以选择竞价计费或按需计费，取值如下：按需计费：不指定该字段。竞价计费：spot
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class InstanceConfig implements ModelInterface, ArrayAccess
             'tenancy' => 'tenancy',
             'dedicatedHostId' => 'dedicated_host_id',
             'multiFlavorPriorityPolicy' => 'multi_flavor_priority_policy',
-            'marketType' => 'market_type'
+            'marketType' => 'market_type',
+            'cpuOptions' => 'cpu_options'
     ];
 
     /**
@@ -170,6 +176,7 @@ class InstanceConfig implements ModelInterface, ArrayAccess
     * dedicatedHostId  专属主机的ID。 说明：该字段仅在tenancy为dedicated时生效；如果指定该字段，云服务器将被创建到指定的专属主机上；如果不指定该字段，此时系统会将云服务器创建在符合规格的专属主机中剩余内存最大的那一台上，以使各专属主机尽量均衡负载。
     * multiFlavorPriorityPolicy  使用伸缩配置创建云主机的时候，多规格使用的优先级策略。PICK_FIRST（默认）：选择优先，虚拟机扩容时规格的选择按照flavorRef列表的顺序进行优先级排序。COST_FIRST：成本优化，虚拟机扩容时规格的选择按照价格最优原则进行优先级排序。
     * marketType  云服务器的计费模式，可以选择竞价计费或按需计费，取值如下：按需计费：不指定该字段。竞价计费：spot
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class InstanceConfig implements ModelInterface, ArrayAccess
             'tenancy' => 'setTenancy',
             'dedicatedHostId' => 'setDedicatedHostId',
             'multiFlavorPriorityPolicy' => 'setMultiFlavorPriorityPolicy',
-            'marketType' => 'setMarketType'
+            'marketType' => 'setMarketType',
+            'cpuOptions' => 'setCpuOptions'
     ];
 
     /**
@@ -208,6 +216,7 @@ class InstanceConfig implements ModelInterface, ArrayAccess
     * dedicatedHostId  专属主机的ID。 说明：该字段仅在tenancy为dedicated时生效；如果指定该字段，云服务器将被创建到指定的专属主机上；如果不指定该字段，此时系统会将云服务器创建在符合规格的专属主机中剩余内存最大的那一台上，以使各专属主机尽量均衡负载。
     * multiFlavorPriorityPolicy  使用伸缩配置创建云主机的时候，多规格使用的优先级策略。PICK_FIRST（默认）：选择优先，虚拟机扩容时规格的选择按照flavorRef列表的顺序进行优先级排序。COST_FIRST：成本优化，虚拟机扩容时规格的选择按照价格最优原则进行优先级排序。
     * marketType  云服务器的计费模式，可以选择竞价计费或按需计费，取值如下：按需计费：不指定该字段。竞价计费：spot
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class InstanceConfig implements ModelInterface, ArrayAccess
             'tenancy' => 'getTenancy',
             'dedicatedHostId' => 'getDedicatedHostId',
             'multiFlavorPriorityPolicy' => 'getMultiFlavorPriorityPolicy',
-            'marketType' => 'getMarketType'
+            'marketType' => 'getMarketType',
+            'cpuOptions' => 'getCpuOptions'
     ];
 
     /**
@@ -343,6 +353,7 @@ class InstanceConfig implements ModelInterface, ArrayAccess
         $this->container['dedicatedHostId'] = isset($data['dedicatedHostId']) ? $data['dedicatedHostId'] : null;
         $this->container['multiFlavorPriorityPolicy'] = isset($data['multiFlavorPriorityPolicy']) ? $data['multiFlavorPriorityPolicy'] : null;
         $this->container['marketType'] = isset($data['marketType']) ? $data['marketType'] : null;
+        $this->container['cpuOptions'] = isset($data['cpuOptions']) ? $data['cpuOptions'] : null;
     }
 
     /**
@@ -772,6 +783,30 @@ class InstanceConfig implements ModelInterface, ArrayAccess
     public function setMarketType($marketType)
     {
         $this->container['marketType'] = $marketType;
+        return $this;
+    }
+
+    /**
+    * Gets cpuOptions
+    *  cpuOptions
+    *
+    * @return \HuaweiCloud\SDK\_As\V1\Model\CpuOptions|null
+    */
+    public function getCpuOptions()
+    {
+        return $this->container['cpuOptions'];
+    }
+
+    /**
+    * Sets cpuOptions
+    *
+    * @param \HuaweiCloud\SDK\_As\V1\Model\CpuOptions|null $cpuOptions cpuOptions
+    *
+    * @return $this
+    */
+    public function setCpuOptions($cpuOptions)
+    {
+        $this->container['cpuOptions'] = $cpuOptions;
         return $this;
     }
 

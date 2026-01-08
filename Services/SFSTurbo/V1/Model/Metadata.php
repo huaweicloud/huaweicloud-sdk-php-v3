@@ -25,6 +25,8 @@ class Metadata implements ModelInterface, ArrayAccess
     * dedicatedStorageId  创专属文件系统，要指定一个专属分布式存储的ID。
     * expandType  扩展类型；当文件系统正在创建时，该字段不返回。  - 创建增强型、20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统时，该参数必填。  - 创建增强型的文件系统，包括标准型-增强版和性能型-增强版，需要填写\"bandwidth\"。  - 创建20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB文件系统，需要填写\"hpc\"。  - 创建HPC缓存型，需要填写\"hpc_cache\"。
     * hpcBw  文件系统的带宽规格。  创建20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统时，该参数必填。  20MB/s/TiB，填写\"20M\"。 40MB/s/TiB，填写\"40M\"。 125MB/s/TiB，填写\"125M\"。 250MB/s/TiB，填写\"250M\"。 500MB/s/TiB，填写\"500M\"。 1000MB/s/TiB，填写\"1000M\"。 HPC缓存型，填写\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"或\"48G\"。
+    * autoCreateSecurityGroupRules  是否自动创建安全组规则。\"true\"表示自动创建安全组规则，\"false\"表示不自动创建安全组规则。默认值是\"true\"。
+    * vaultId  存储库ID。
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class Metadata implements ModelInterface, ArrayAccess
             'dedicatedFlavor' => 'string',
             'dedicatedStorageId' => 'string',
             'expandType' => 'string',
-            'hpcBw' => 'string'
+            'hpcBw' => 'string',
+            'autoCreateSecurityGroupRules' => 'string',
+            'vaultId' => 'string'
     ];
 
     /**
@@ -43,6 +47,8 @@ class Metadata implements ModelInterface, ArrayAccess
     * dedicatedStorageId  创专属文件系统，要指定一个专属分布式存储的ID。
     * expandType  扩展类型；当文件系统正在创建时，该字段不返回。  - 创建增强型、20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统时，该参数必填。  - 创建增强型的文件系统，包括标准型-增强版和性能型-增强版，需要填写\"bandwidth\"。  - 创建20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB文件系统，需要填写\"hpc\"。  - 创建HPC缓存型，需要填写\"hpc_cache\"。
     * hpcBw  文件系统的带宽规格。  创建20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统时，该参数必填。  20MB/s/TiB，填写\"20M\"。 40MB/s/TiB，填写\"40M\"。 125MB/s/TiB，填写\"125M\"。 250MB/s/TiB，填写\"250M\"。 500MB/s/TiB，填写\"500M\"。 1000MB/s/TiB，填写\"1000M\"。 HPC缓存型，填写\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"或\"48G\"。
+    * autoCreateSecurityGroupRules  是否自动创建安全组规则。\"true\"表示自动创建安全组规则，\"false\"表示不自动创建安全组规则。默认值是\"true\"。
+    * vaultId  存储库ID。
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class Metadata implements ModelInterface, ArrayAccess
         'dedicatedFlavor' => null,
         'dedicatedStorageId' => null,
         'expandType' => null,
-        'hpcBw' => null
+        'hpcBw' => null,
+        'autoCreateSecurityGroupRules' => null,
+        'vaultId' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class Metadata implements ModelInterface, ArrayAccess
     * dedicatedStorageId  创专属文件系统，要指定一个专属分布式存储的ID。
     * expandType  扩展类型；当文件系统正在创建时，该字段不返回。  - 创建增强型、20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统时，该参数必填。  - 创建增强型的文件系统，包括标准型-增强版和性能型-增强版，需要填写\"bandwidth\"。  - 创建20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB文件系统，需要填写\"hpc\"。  - 创建HPC缓存型，需要填写\"hpc_cache\"。
     * hpcBw  文件系统的带宽规格。  创建20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统时，该参数必填。  20MB/s/TiB，填写\"20M\"。 40MB/s/TiB，填写\"40M\"。 125MB/s/TiB，填写\"125M\"。 250MB/s/TiB，填写\"250M\"。 500MB/s/TiB，填写\"500M\"。 1000MB/s/TiB，填写\"1000M\"。 HPC缓存型，填写\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"或\"48G\"。
+    * autoCreateSecurityGroupRules  是否自动创建安全组规则。\"true\"表示自动创建安全组规则，\"false\"表示不自动创建安全组规则。默认值是\"true\"。
+    * vaultId  存储库ID。
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class Metadata implements ModelInterface, ArrayAccess
             'dedicatedFlavor' => 'dedicated_flavor',
             'dedicatedStorageId' => 'dedicated_storage_id',
             'expandType' => 'expand_type',
-            'hpcBw' => 'hpc_bw'
+            'hpcBw' => 'hpc_bw',
+            'autoCreateSecurityGroupRules' => 'auto_create_security_group_rules',
+            'vaultId' => 'vault_id'
     ];
 
     /**
@@ -100,6 +112,8 @@ class Metadata implements ModelInterface, ArrayAccess
     * dedicatedStorageId  创专属文件系统，要指定一个专属分布式存储的ID。
     * expandType  扩展类型；当文件系统正在创建时，该字段不返回。  - 创建增强型、20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统时，该参数必填。  - 创建增强型的文件系统，包括标准型-增强版和性能型-增强版，需要填写\"bandwidth\"。  - 创建20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB文件系统，需要填写\"hpc\"。  - 创建HPC缓存型，需要填写\"hpc_cache\"。
     * hpcBw  文件系统的带宽规格。  创建20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统时，该参数必填。  20MB/s/TiB，填写\"20M\"。 40MB/s/TiB，填写\"40M\"。 125MB/s/TiB，填写\"125M\"。 250MB/s/TiB，填写\"250M\"。 500MB/s/TiB，填写\"500M\"。 1000MB/s/TiB，填写\"1000M\"。 HPC缓存型，填写\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"或\"48G\"。
+    * autoCreateSecurityGroupRules  是否自动创建安全组规则。\"true\"表示自动创建安全组规则，\"false\"表示不自动创建安全组规则。默认值是\"true\"。
+    * vaultId  存储库ID。
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class Metadata implements ModelInterface, ArrayAccess
             'dedicatedFlavor' => 'setDedicatedFlavor',
             'dedicatedStorageId' => 'setDedicatedStorageId',
             'expandType' => 'setExpandType',
-            'hpcBw' => 'setHpcBw'
+            'hpcBw' => 'setHpcBw',
+            'autoCreateSecurityGroupRules' => 'setAutoCreateSecurityGroupRules',
+            'vaultId' => 'setVaultId'
     ];
 
     /**
@@ -118,6 +134,8 @@ class Metadata implements ModelInterface, ArrayAccess
     * dedicatedStorageId  创专属文件系统，要指定一个专属分布式存储的ID。
     * expandType  扩展类型；当文件系统正在创建时，该字段不返回。  - 创建增强型、20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统时，该参数必填。  - 创建增强型的文件系统，包括标准型-增强版和性能型-增强版，需要填写\"bandwidth\"。  - 创建20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB文件系统，需要填写\"hpc\"。  - 创建HPC缓存型，需要填写\"hpc_cache\"。
     * hpcBw  文件系统的带宽规格。  创建20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统时，该参数必填。  20MB/s/TiB，填写\"20M\"。 40MB/s/TiB，填写\"40M\"。 125MB/s/TiB，填写\"125M\"。 250MB/s/TiB，填写\"250M\"。 500MB/s/TiB，填写\"500M\"。 1000MB/s/TiB，填写\"1000M\"。 HPC缓存型，填写\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"或\"48G\"。
+    * autoCreateSecurityGroupRules  是否自动创建安全组规则。\"true\"表示自动创建安全组规则，\"false\"表示不自动创建安全组规则。默认值是\"true\"。
+    * vaultId  存储库ID。
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class Metadata implements ModelInterface, ArrayAccess
             'dedicatedFlavor' => 'getDedicatedFlavor',
             'dedicatedStorageId' => 'getDedicatedStorageId',
             'expandType' => 'getExpandType',
-            'hpcBw' => 'getHpcBw'
+            'hpcBw' => 'getHpcBw',
+            'autoCreateSecurityGroupRules' => 'getAutoCreateSecurityGroupRules',
+            'vaultId' => 'getVaultId'
     ];
 
     /**
@@ -169,7 +189,22 @@ class Metadata implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const AUTO_CREATE_SECURITY_GROUP_RULES_TRUE = 'true';
+    const AUTO_CREATE_SECURITY_GROUP_RULES_FALSE = 'false';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAutoCreateSecurityGroupRulesAllowableValues()
+    {
+        return [
+            self::AUTO_CREATE_SECURITY_GROUP_RULES_TRUE,
+            self::AUTO_CREATE_SECURITY_GROUP_RULES_FALSE,
+        ];
+    }
 
 
     /**
@@ -192,6 +227,8 @@ class Metadata implements ModelInterface, ArrayAccess
         $this->container['dedicatedStorageId'] = isset($data['dedicatedStorageId']) ? $data['dedicatedStorageId'] : null;
         $this->container['expandType'] = isset($data['expandType']) ? $data['expandType'] : null;
         $this->container['hpcBw'] = isset($data['hpcBw']) ? $data['hpcBw'] : null;
+        $this->container['autoCreateSecurityGroupRules'] = isset($data['autoCreateSecurityGroupRules']) ? $data['autoCreateSecurityGroupRules'] : null;
+        $this->container['vaultId'] = isset($data['vaultId']) ? $data['vaultId'] : null;
     }
 
     /**
@@ -202,6 +239,14 @@ class Metadata implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getAutoCreateSecurityGroupRulesAllowableValues();
+                if (!is_null($this->container['autoCreateSecurityGroupRules']) && !in_array($this->container['autoCreateSecurityGroupRules'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'autoCreateSecurityGroupRules', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -333,6 +378,54 @@ class Metadata implements ModelInterface, ArrayAccess
     public function setHpcBw($hpcBw)
     {
         $this->container['hpcBw'] = $hpcBw;
+        return $this;
+    }
+
+    /**
+    * Gets autoCreateSecurityGroupRules
+    *  是否自动创建安全组规则。\"true\"表示自动创建安全组规则，\"false\"表示不自动创建安全组规则。默认值是\"true\"。
+    *
+    * @return string|null
+    */
+    public function getAutoCreateSecurityGroupRules()
+    {
+        return $this->container['autoCreateSecurityGroupRules'];
+    }
+
+    /**
+    * Sets autoCreateSecurityGroupRules
+    *
+    * @param string|null $autoCreateSecurityGroupRules 是否自动创建安全组规则。\"true\"表示自动创建安全组规则，\"false\"表示不自动创建安全组规则。默认值是\"true\"。
+    *
+    * @return $this
+    */
+    public function setAutoCreateSecurityGroupRules($autoCreateSecurityGroupRules)
+    {
+        $this->container['autoCreateSecurityGroupRules'] = $autoCreateSecurityGroupRules;
+        return $this;
+    }
+
+    /**
+    * Gets vaultId
+    *  存储库ID。
+    *
+    * @return string|null
+    */
+    public function getVaultId()
+    {
+        return $this->container['vaultId'];
+    }
+
+    /**
+    * Sets vaultId
+    *
+    * @param string|null $vaultId 存储库ID。
+    *
+    * @return $this
+    */
+    public function setVaultId($vaultId)
+    {
+        $this->container['vaultId'] = $vaultId;
         return $this;
     }
 

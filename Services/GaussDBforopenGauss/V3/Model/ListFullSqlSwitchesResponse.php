@@ -22,28 +22,28 @@ class ListFullSqlSwitchesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * totalCount  **参数解释**: 总记录数量。 **取值范围**: 不涉及。
-    * fullSqlSwitchs  **参数解释**: 开关记录列表。
+    * fullSqlSwitches  **参数解释**: 开关记录列表。
     * allowedSqlTypes  **参数解释**: 可选择的SQL采集类别清单列表。供开启全量SQL时做配置下发参考。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'totalCount' => 'int',
-            'fullSqlSwitchs' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\FullSqlSwitchResult[]',
+            'fullSqlSwitches' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\FullSqlSwitchResult[]',
             'allowedSqlTypes' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\SqlTypeRangeConfigResult[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * totalCount  **参数解释**: 总记录数量。 **取值范围**: 不涉及。
-    * fullSqlSwitchs  **参数解释**: 开关记录列表。
+    * fullSqlSwitches  **参数解释**: 开关记录列表。
     * allowedSqlTypes  **参数解释**: 可选择的SQL采集类别清单列表。供开启全量SQL时做配置下发参考。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'totalCount' => 'int64',
-        'fullSqlSwitchs' => null,
+        'fullSqlSwitches' => null,
         'allowedSqlTypes' => null
     ];
 
@@ -71,42 +71,42 @@ class ListFullSqlSwitchesResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * totalCount  **参数解释**: 总记录数量。 **取值范围**: 不涉及。
-    * fullSqlSwitchs  **参数解释**: 开关记录列表。
+    * fullSqlSwitches  **参数解释**: 开关记录列表。
     * allowedSqlTypes  **参数解释**: 可选择的SQL采集类别清单列表。供开启全量SQL时做配置下发参考。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'totalCount' => 'total_count',
-            'fullSqlSwitchs' => 'full_sql_switchs',
+            'fullSqlSwitches' => 'full_sql_switches',
             'allowedSqlTypes' => 'allowed_sql_types'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * totalCount  **参数解释**: 总记录数量。 **取值范围**: 不涉及。
-    * fullSqlSwitchs  **参数解释**: 开关记录列表。
+    * fullSqlSwitches  **参数解释**: 开关记录列表。
     * allowedSqlTypes  **参数解释**: 可选择的SQL采集类别清单列表。供开启全量SQL时做配置下发参考。
     *
     * @var string[]
     */
     protected static $setters = [
             'totalCount' => 'setTotalCount',
-            'fullSqlSwitchs' => 'setFullSqlSwitchs',
+            'fullSqlSwitches' => 'setFullSqlSwitches',
             'allowedSqlTypes' => 'setAllowedSqlTypes'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * totalCount  **参数解释**: 总记录数量。 **取值范围**: 不涉及。
-    * fullSqlSwitchs  **参数解释**: 开关记录列表。
+    * fullSqlSwitches  **参数解释**: 开关记录列表。
     * allowedSqlTypes  **参数解释**: 可选择的SQL采集类别清单列表。供开启全量SQL时做配置下发参考。
     *
     * @var string[]
     */
     protected static $getters = [
             'totalCount' => 'getTotalCount',
-            'fullSqlSwitchs' => 'getFullSqlSwitchs',
+            'fullSqlSwitches' => 'getFullSqlSwitches',
             'allowedSqlTypes' => 'getAllowedSqlTypes'
     ];
 
@@ -169,7 +169,7 @@ class ListFullSqlSwitchesResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
-        $this->container['fullSqlSwitchs'] = isset($data['fullSqlSwitchs']) ? $data['fullSqlSwitchs'] : null;
+        $this->container['fullSqlSwitches'] = isset($data['fullSqlSwitches']) ? $data['fullSqlSwitches'] : null;
         $this->container['allowedSqlTypes'] = isset($data['allowedSqlTypes']) ? $data['allowedSqlTypes'] : null;
     }
 
@@ -220,26 +220,26 @@ class ListFullSqlSwitchesResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets fullSqlSwitchs
+    * Gets fullSqlSwitches
     *  **参数解释**: 开关记录列表。
     *
     * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\FullSqlSwitchResult[]|null
     */
-    public function getFullSqlSwitchs()
+    public function getFullSqlSwitches()
     {
-        return $this->container['fullSqlSwitchs'];
+        return $this->container['fullSqlSwitches'];
     }
 
     /**
-    * Sets fullSqlSwitchs
+    * Sets fullSqlSwitches
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\FullSqlSwitchResult[]|null $fullSqlSwitchs **参数解释**: 开关记录列表。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\FullSqlSwitchResult[]|null $fullSqlSwitches **参数解释**: 开关记录列表。
     *
     * @return $this
     */
-    public function setFullSqlSwitchs($fullSqlSwitchs)
+    public function setFullSqlSwitches($fullSqlSwitches)
     {
-        $this->container['fullSqlSwitchs'] = $fullSqlSwitchs;
+        $this->container['fullSqlSwitches'] = $fullSqlSwitches;
         return $this;
     }
 

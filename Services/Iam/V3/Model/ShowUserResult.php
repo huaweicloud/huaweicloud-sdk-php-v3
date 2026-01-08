@@ -30,7 +30,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     * areacode  IAM用户手机号的国家码。
     * email  IAM用户邮箱。
     * phone  IAM用户手机号。
-    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     * updateTime  IAM用户更新时间。
     * createTime  IAM用户创建时间。
     * lastLoginTime  IAM用户最后登录时间。
@@ -80,7 +80,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     * areacode  IAM用户手机号的国家码。
     * email  IAM用户邮箱。
     * phone  IAM用户手机号。
-    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     * updateTime  IAM用户更新时间。
     * createTime  IAM用户创建时间。
     * lastLoginTime  IAM用户最后登录时间。
@@ -151,7 +151,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     * areacode  IAM用户手机号的国家码。
     * email  IAM用户邮箱。
     * phone  IAM用户手机号。
-    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     * updateTime  IAM用户更新时间。
     * createTime  IAM用户创建时间。
     * lastLoginTime  IAM用户最后登录时间。
@@ -201,7 +201,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     * areacode  IAM用户手机号的国家码。
     * email  IAM用户邮箱。
     * phone  IAM用户手机号。
-    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     * updateTime  IAM用户更新时间。
     * createTime  IAM用户创建时间。
     * lastLoginTime  IAM用户最后登录时间。
@@ -251,7 +251,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     * areacode  IAM用户手机号的国家码。
     * email  IAM用户邮箱。
     * phone  IAM用户手机号。
-    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     * updateTime  IAM用户更新时间。
     * createTime  IAM用户创建时间。
     * lastLoginTime  IAM用户最后登录时间。
@@ -658,7 +658,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwdStatus
-    *  IAM用户密码状态。true：需要修改密码，false：正常。
+    *  IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     *
     * @return bool|null
     */
@@ -670,7 +670,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     /**
     * Sets pwdStatus
     *
-    * @param bool|null $pwdStatus IAM用户密码状态。true：需要修改密码，false：正常。
+    * @param bool|null $pwdStatus IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
     *
     * @return $this
     */

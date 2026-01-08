@@ -37,6 +37,8 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     * thumbnailOutput  thumbnailOutput
     * thumbnailOutputname  截图压缩包名。
     * picInfo  截图文件信息。
+    * thumbnailsInfo  截图文件信息。
+    * imageSpriteInfo  雪碧图信息，数组，最多支持20个成员。
     * avParameters  转码参数。  若同时设置“trans_template_id”和此参数，则优先使用此参数进行转码。
     * additionalManifests  主索引定制参数。
     * metadata  输出文件的metadata信息
@@ -61,6 +63,8 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
             'thumbnailOutput' => '\HuaweiCloud\SDK\Mpc\V1\Model\ObsObjInfo',
             'thumbnailOutputname' => 'string',
             'picInfo' => '\HuaweiCloud\SDK\Mpc\V1\Model\PicInfo[]',
+            'thumbnailsInfo' => '\HuaweiCloud\SDK\Mpc\V1\Model\ThumbnailsInfo[]',
+            'imageSpriteInfo' => '\HuaweiCloud\SDK\Mpc\V1\Model\ImageSpriteInfo[]',
             'avParameters' => '\HuaweiCloud\SDK\Mpc\V1\Model\AvParameters[]',
             'additionalManifests' => '\HuaweiCloud\SDK\Mpc\V1\Model\AdditionalManifests[]',
             'metadata' => '\HuaweiCloud\SDK\Mpc\V1\Model\FileMetaData[]'
@@ -85,6 +89,8 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     * thumbnailOutput  thumbnailOutput
     * thumbnailOutputname  截图压缩包名。
     * picInfo  截图文件信息。
+    * thumbnailsInfo  截图文件信息。
+    * imageSpriteInfo  雪碧图信息，数组，最多支持20个成员。
     * avParameters  转码参数。  若同时设置“trans_template_id”和此参数，则优先使用此参数进行转码。
     * additionalManifests  主索引定制参数。
     * metadata  输出文件的metadata信息
@@ -109,6 +115,8 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
         'thumbnailOutput' => null,
         'thumbnailOutputname' => null,
         'picInfo' => null,
+        'thumbnailsInfo' => null,
+        'imageSpriteInfo' => null,
         'avParameters' => null,
         'additionalManifests' => null,
         'metadata' => null
@@ -154,6 +162,8 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     * thumbnailOutput  thumbnailOutput
     * thumbnailOutputname  截图压缩包名。
     * picInfo  截图文件信息。
+    * thumbnailsInfo  截图文件信息。
+    * imageSpriteInfo  雪碧图信息，数组，最多支持20个成员。
     * avParameters  转码参数。  若同时设置“trans_template_id”和此参数，则优先使用此参数进行转码。
     * additionalManifests  主索引定制参数。
     * metadata  输出文件的metadata信息
@@ -178,6 +188,8 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
             'thumbnailOutput' => 'thumbnail_output',
             'thumbnailOutputname' => 'thumbnail_outputname',
             'picInfo' => 'pic_info',
+            'thumbnailsInfo' => 'thumbnails_info',
+            'imageSpriteInfo' => 'image_sprite_info',
             'avParameters' => 'av_parameters',
             'additionalManifests' => 'additional_manifests',
             'metadata' => 'metadata'
@@ -202,6 +214,8 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     * thumbnailOutput  thumbnailOutput
     * thumbnailOutputname  截图压缩包名。
     * picInfo  截图文件信息。
+    * thumbnailsInfo  截图文件信息。
+    * imageSpriteInfo  雪碧图信息，数组，最多支持20个成员。
     * avParameters  转码参数。  若同时设置“trans_template_id”和此参数，则优先使用此参数进行转码。
     * additionalManifests  主索引定制参数。
     * metadata  输出文件的metadata信息
@@ -226,6 +240,8 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
             'thumbnailOutput' => 'setThumbnailOutput',
             'thumbnailOutputname' => 'setThumbnailOutputname',
             'picInfo' => 'setPicInfo',
+            'thumbnailsInfo' => 'setThumbnailsInfo',
+            'imageSpriteInfo' => 'setImageSpriteInfo',
             'avParameters' => 'setAvParameters',
             'additionalManifests' => 'setAdditionalManifests',
             'metadata' => 'setMetadata'
@@ -250,6 +266,8 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     * thumbnailOutput  thumbnailOutput
     * thumbnailOutputname  截图压缩包名。
     * picInfo  截图文件信息。
+    * thumbnailsInfo  截图文件信息。
+    * imageSpriteInfo  雪碧图信息，数组，最多支持20个成员。
     * avParameters  转码参数。  若同时设置“trans_template_id”和此参数，则优先使用此参数进行转码。
     * additionalManifests  主索引定制参数。
     * metadata  输出文件的metadata信息
@@ -274,6 +292,8 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
             'thumbnailOutput' => 'getThumbnailOutput',
             'thumbnailOutputname' => 'getThumbnailOutputname',
             'picInfo' => 'getPicInfo',
+            'thumbnailsInfo' => 'getThumbnailsInfo',
+            'imageSpriteInfo' => 'getImageSpriteInfo',
             'avParameters' => 'getAvParameters',
             'additionalManifests' => 'getAdditionalManifests',
             'metadata' => 'getMetadata'
@@ -379,6 +399,8 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
         $this->container['thumbnailOutput'] = isset($data['thumbnailOutput']) ? $data['thumbnailOutput'] : null;
         $this->container['thumbnailOutputname'] = isset($data['thumbnailOutputname']) ? $data['thumbnailOutputname'] : null;
         $this->container['picInfo'] = isset($data['picInfo']) ? $data['picInfo'] : null;
+        $this->container['thumbnailsInfo'] = isset($data['thumbnailsInfo']) ? $data['thumbnailsInfo'] : null;
+        $this->container['imageSpriteInfo'] = isset($data['imageSpriteInfo']) ? $data['imageSpriteInfo'] : null;
         $this->container['avParameters'] = isset($data['avParameters']) ? $data['avParameters'] : null;
         $this->container['additionalManifests'] = isset($data['additionalManifests']) ? $data['additionalManifests'] : null;
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
@@ -879,6 +901,54 @@ class QueryTranscodingsTaskResponse implements ModelInterface, ArrayAccess
     public function setPicInfo($picInfo)
     {
         $this->container['picInfo'] = $picInfo;
+        return $this;
+    }
+
+    /**
+    * Gets thumbnailsInfo
+    *  截图文件信息。
+    *
+    * @return \HuaweiCloud\SDK\Mpc\V1\Model\ThumbnailsInfo[]|null
+    */
+    public function getThumbnailsInfo()
+    {
+        return $this->container['thumbnailsInfo'];
+    }
+
+    /**
+    * Sets thumbnailsInfo
+    *
+    * @param \HuaweiCloud\SDK\Mpc\V1\Model\ThumbnailsInfo[]|null $thumbnailsInfo 截图文件信息。
+    *
+    * @return $this
+    */
+    public function setThumbnailsInfo($thumbnailsInfo)
+    {
+        $this->container['thumbnailsInfo'] = $thumbnailsInfo;
+        return $this;
+    }
+
+    /**
+    * Gets imageSpriteInfo
+    *  雪碧图信息，数组，最多支持20个成员。
+    *
+    * @return \HuaweiCloud\SDK\Mpc\V1\Model\ImageSpriteInfo[]|null
+    */
+    public function getImageSpriteInfo()
+    {
+        return $this->container['imageSpriteInfo'];
+    }
+
+    /**
+    * Sets imageSpriteInfo
+    *
+    * @param \HuaweiCloud\SDK\Mpc\V1\Model\ImageSpriteInfo[]|null $imageSpriteInfo 雪碧图信息，数组，最多支持20个成员。
+    *
+    * @return $this
+    */
+    public function setImageSpriteInfo($imageSpriteInfo)
+    {
+        $this->container['imageSpriteInfo'] = $imageSpriteInfo;
         return $this;
     }
 

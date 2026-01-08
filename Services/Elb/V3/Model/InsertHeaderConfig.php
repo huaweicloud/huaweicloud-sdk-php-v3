@@ -20,9 +20,9 @@ class InsertHeaderConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  **参数解释**：请求头参数名。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
-    * valueType  **参数解释**：请求头参数类别。  **取值范围**：USER_DEFINED,REFERENCE_HEADER,SYSTEM_DEFINED。
-    * value  **参数解释**：请求头参数的值。  **取值范围**：1-128个字符，支持ascii码值32<=ch<=127范围内可打印字符，*和英文问号?。不能以空格开头或结尾。
+    * key  **参数解释**：请求头、响应头参数名。  **约束限制**：不能是以下字符： connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-elb-ip、x-forwarded-port、x-forwarded-elb-id、x-forwarded-elb-vip、x-real-ip、x-forwarded-proto、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
+    * valueType  **参数解释**：请求头、响应头参数类别。  **取值范围**：USER_DEFINED,REFERENCE_HEADER,SYSTEM_DEFINED。
+    * value  **参数解释**：请求头、响应头参数的值。  **取值范围**：1-128个字符，支持ascii码值32<=ch<=127范围内可打印字符，*和英文问号?。不能以空格开头或结尾，不允许设置值为：connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、transparent、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、 x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-port、x-real-ip、x-forwarded-proto、x-forwarded-elb-ip、 x-forwarded-elb-id、x-forwarded-elb-vip、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class InsertHeaderConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  **参数解释**：请求头参数名。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
-    * valueType  **参数解释**：请求头参数类别。  **取值范围**：USER_DEFINED,REFERENCE_HEADER,SYSTEM_DEFINED。
-    * value  **参数解释**：请求头参数的值。  **取值范围**：1-128个字符，支持ascii码值32<=ch<=127范围内可打印字符，*和英文问号?。不能以空格开头或结尾。
+    * key  **参数解释**：请求头、响应头参数名。  **约束限制**：不能是以下字符： connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-elb-ip、x-forwarded-port、x-forwarded-elb-id、x-forwarded-elb-vip、x-real-ip、x-forwarded-proto、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
+    * valueType  **参数解释**：请求头、响应头参数类别。  **取值范围**：USER_DEFINED,REFERENCE_HEADER,SYSTEM_DEFINED。
+    * value  **参数解释**：请求头、响应头参数的值。  **取值范围**：1-128个字符，支持ascii码值32<=ch<=127范围内可打印字符，*和英文问号?。不能以空格开头或结尾，不允许设置值为：connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、transparent、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、 x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-port、x-real-ip、x-forwarded-proto、x-forwarded-elb-ip、 x-forwarded-elb-id、x-forwarded-elb-vip、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class InsertHeaderConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  **参数解释**：请求头参数名。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
-    * valueType  **参数解释**：请求头参数类别。  **取值范围**：USER_DEFINED,REFERENCE_HEADER,SYSTEM_DEFINED。
-    * value  **参数解释**：请求头参数的值。  **取值范围**：1-128个字符，支持ascii码值32<=ch<=127范围内可打印字符，*和英文问号?。不能以空格开头或结尾。
+    * key  **参数解释**：请求头、响应头参数名。  **约束限制**：不能是以下字符： connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-elb-ip、x-forwarded-port、x-forwarded-elb-id、x-forwarded-elb-vip、x-real-ip、x-forwarded-proto、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
+    * valueType  **参数解释**：请求头、响应头参数类别。  **取值范围**：USER_DEFINED,REFERENCE_HEADER,SYSTEM_DEFINED。
+    * value  **参数解释**：请求头、响应头参数的值。  **取值范围**：1-128个字符，支持ascii码值32<=ch<=127范围内可打印字符，*和英文问号?。不能以空格开头或结尾，不允许设置值为：connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、transparent、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、 x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-port、x-real-ip、x-forwarded-proto、x-forwarded-elb-ip、 x-forwarded-elb-id、x-forwarded-elb-vip、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class InsertHeaderConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  **参数解释**：请求头参数名。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
-    * valueType  **参数解释**：请求头参数类别。  **取值范围**：USER_DEFINED,REFERENCE_HEADER,SYSTEM_DEFINED。
-    * value  **参数解释**：请求头参数的值。  **取值范围**：1-128个字符，支持ascii码值32<=ch<=127范围内可打印字符，*和英文问号?。不能以空格开头或结尾。
+    * key  **参数解释**：请求头、响应头参数名。  **约束限制**：不能是以下字符： connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-elb-ip、x-forwarded-port、x-forwarded-elb-id、x-forwarded-elb-vip、x-real-ip、x-forwarded-proto、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
+    * valueType  **参数解释**：请求头、响应头参数类别。  **取值范围**：USER_DEFINED,REFERENCE_HEADER,SYSTEM_DEFINED。
+    * value  **参数解释**：请求头、响应头参数的值。  **取值范围**：1-128个字符，支持ascii码值32<=ch<=127范围内可打印字符，*和英文问号?。不能以空格开头或结尾，不允许设置值为：connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、transparent、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、 x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-port、x-real-ip、x-forwarded-proto、x-forwarded-elb-ip、 x-forwarded-elb-id、x-forwarded-elb-vip、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class InsertHeaderConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  **参数解释**：请求头参数名。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
-    * valueType  **参数解释**：请求头参数类别。  **取值范围**：USER_DEFINED,REFERENCE_HEADER,SYSTEM_DEFINED。
-    * value  **参数解释**：请求头参数的值。  **取值范围**：1-128个字符，支持ascii码值32<=ch<=127范围内可打印字符，*和英文问号?。不能以空格开头或结尾。
+    * key  **参数解释**：请求头、响应头参数名。  **约束限制**：不能是以下字符： connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-elb-ip、x-forwarded-port、x-forwarded-elb-id、x-forwarded-elb-vip、x-real-ip、x-forwarded-proto、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
+    * valueType  **参数解释**：请求头、响应头参数类别。  **取值范围**：USER_DEFINED,REFERENCE_HEADER,SYSTEM_DEFINED。
+    * value  **参数解释**：请求头、响应头参数的值。  **取值范围**：1-128个字符，支持ascii码值32<=ch<=127范围内可打印字符，*和英文问号?。不能以空格开头或结尾，不允许设置值为：connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、transparent、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、 x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-port、x-real-ip、x-forwarded-proto、x-forwarded-elb-ip、 x-forwarded-elb-id、x-forwarded-elb-vip、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out。
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class InsertHeaderConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  **参数解释**：请求头参数名。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
+    *  **参数解释**：请求头、响应头参数名。  **约束限制**：不能是以下字符： connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-elb-ip、x-forwarded-port、x-forwarded-elb-id、x-forwarded-elb-vip、x-real-ip、x-forwarded-proto、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class InsertHeaderConfig implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key **参数解释**：请求头参数名。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
+    * @param string $key **参数解释**：请求头、响应头参数名。  **约束限制**：不能是以下字符： connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-elb-ip、x-forwarded-port、x-forwarded-elb-id、x-forwarded-elb-vip、x-real-ip、x-forwarded-proto、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out。  **取值范围**：1-40个字符，字母a-z（不区分大小写）、数字，短划线-和下划线_。
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class InsertHeaderConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets valueType
-    *  **参数解释**：请求头参数类别。  **取值范围**：USER_DEFINED,REFERENCE_HEADER,SYSTEM_DEFINED。
+    *  **参数解释**：请求头、响应头参数类别。  **取值范围**：USER_DEFINED,REFERENCE_HEADER,SYSTEM_DEFINED。
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class InsertHeaderConfig implements ModelInterface, ArrayAccess
     /**
     * Sets valueType
     *
-    * @param string $valueType **参数解释**：请求头参数类别。  **取值范围**：USER_DEFINED,REFERENCE_HEADER,SYSTEM_DEFINED。
+    * @param string $valueType **参数解释**：请求头、响应头参数类别。  **取值范围**：USER_DEFINED,REFERENCE_HEADER,SYSTEM_DEFINED。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class InsertHeaderConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  **参数解释**：请求头参数的值。  **取值范围**：1-128个字符，支持ascii码值32<=ch<=127范围内可打印字符，*和英文问号?。不能以空格开头或结尾。
+    *  **参数解释**：请求头、响应头参数的值。  **取值范围**：1-128个字符，支持ascii码值32<=ch<=127范围内可打印字符，*和英文问号?。不能以空格开头或结尾，不允许设置值为：connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、transparent、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、 x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-port、x-real-ip、x-forwarded-proto、x-forwarded-elb-ip、 x-forwarded-elb-id、x-forwarded-elb-vip、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out。
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class InsertHeaderConfig implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value **参数解释**：请求头参数的值。  **取值范围**：1-128个字符，支持ascii码值32<=ch<=127范围内可打印字符，*和英文问号?。不能以空格开头或结尾。
+    * @param string $value **参数解释**：请求头、响应头参数的值。  **取值范围**：1-128个字符，支持ascii码值32<=ch<=127范围内可打印字符，*和英文问号?。不能以空格开头或结尾，不允许设置值为：connection、upgrade、content-length、transfer-encoding、keep-alive、te、host、cookie、remoteip、authority、transparent、x-forwarded-host、x-forwarded-for、x-forwarded-for-port、x-forwarded-tls-certificate-id、 x-forwarded-tls-protocol、x-forwarded-tls-cipher、x-forwarded-port、x-real-ip、x-forwarded-proto、x-forwarded-elb-ip、 x-forwarded-elb-id、x-forwarded-elb-vip、x-nuwa-trace-ne-in、x-nuwa-trace-ne-out。
     *
     * @return $this
     */

@@ -2164,6 +2164,83 @@ class CloudtestAsyncClient extends Client
     }
 
     /**
+     * 下载图片
+     *
+     * 下载图片
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function downloadStepImageNewAsync($request)
+    {
+        return $this->downloadStepImageNewAsyncWithHttpInfo($request);
+    }
+    
+    public function downloadStepImageNewAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v4/{project_id}/image/{parent}/{sub}/{file_name}/{file_type}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['parent'] !== null) {
+            $pathParams['parent'] = $localVarParams['parent'];
+        }
+        if ($localVarParams['sub'] !== null) {
+            $pathParams['sub'] = $localVarParams['sub'];
+        }
+        if ($localVarParams['fileName'] !== null) {
+            $pathParams['file_name'] = $localVarParams['fileName'];
+        }
+        if ($localVarParams['fileType'] !== null) {
+            $pathParams['file_type'] = $localVarParams['fileType'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/octet-stream']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/octet-stream'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cloudtest\V1\Model\DownloadStepImageNewResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cloudtest\V1\Model\DownloadStepImageNewRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询告警统计数据
      *
      * 查询告警统计数据

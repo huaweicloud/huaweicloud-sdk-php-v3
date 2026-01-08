@@ -30,7 +30,7 @@ class PrivateSnat implements ModelInterface, ArrayAccess
     * createdAt  SNAT规则的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  SNAT规则的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * enterpriseProjectId  企业项目id
-    * status  私网NAT的SNAT规则状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    * status  私网NAT的SNAT规则状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     *
     * @var string[]
     */
@@ -60,7 +60,7 @@ class PrivateSnat implements ModelInterface, ArrayAccess
     * createdAt  SNAT规则的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  SNAT规则的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * enterpriseProjectId  企业项目id
-    * status  私网NAT的SNAT规则状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    * status  私网NAT的SNAT规则状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     *
     * @var string[]
     */
@@ -111,7 +111,7 @@ class PrivateSnat implements ModelInterface, ArrayAccess
     * createdAt  SNAT规则的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  SNAT规则的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * enterpriseProjectId  企业项目id
-    * status  私网NAT的SNAT规则状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    * status  私网NAT的SNAT规则状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     *
     * @var string[]
     */
@@ -141,7 +141,7 @@ class PrivateSnat implements ModelInterface, ArrayAccess
     * createdAt  SNAT规则的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  SNAT规则的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * enterpriseProjectId  企业项目id
-    * status  私网NAT的SNAT规则状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    * status  私网NAT的SNAT规则状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     *
     * @var string[]
     */
@@ -171,7 +171,7 @@ class PrivateSnat implements ModelInterface, ArrayAccess
     * createdAt  SNAT规则的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * updatedAt  SNAT规则的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
     * enterpriseProjectId  企业项目id
-    * status  私网NAT的SNAT规则状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    * status  私网NAT的SNAT规则状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     *
     * @var string[]
     */
@@ -591,7 +591,7 @@ class PrivateSnat implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  私网NAT的SNAT规则状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    *  私网NAT的SNAT规则状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     *
     * @return string|null
     */
@@ -603,7 +603,7 @@ class PrivateSnat implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 私网NAT的SNAT规则状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+    * @param string|null $status 私网NAT的SNAT规则状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
     *
     * @return $this
     */

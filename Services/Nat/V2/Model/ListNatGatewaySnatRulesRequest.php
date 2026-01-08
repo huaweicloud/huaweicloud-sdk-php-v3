@@ -20,7 +20,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
+    * adminStateUp  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     * cidr  可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
     * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
@@ -32,8 +32,8 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * natGatewayId  公网NAT网关实例的ID。
     * networkId  规则使用的网络id。与cidr参数二选一。
-    * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
-    * status  SNAT规则的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 EIP_FREEZED: EIP冻结 INACTIVE: 不可用
+    * sourceType  资源类型。 取值范围： - 0：VPC侧，可以指定network_id 或者cidr - 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    * status  SNAT规则的状态。 取值为:  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
     *
     * @var string[]
@@ -58,7 +58,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
+    * adminStateUp  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     * cidr  可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
     * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
@@ -70,8 +70,8 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * natGatewayId  公网NAT网关实例的ID。
     * networkId  规则使用的网络id。与cidr参数二选一。
-    * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
-    * status  SNAT规则的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 EIP_FREEZED: EIP冻结 INACTIVE: 不可用
+    * sourceType  资源类型。 取值范围： - 0：VPC侧，可以指定network_id 或者cidr - 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    * status  SNAT规则的状态。 取值为:  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
     *
     * @var string[]
@@ -117,7 +117,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
+    * adminStateUp  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     * cidr  可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
     * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
@@ -129,8 +129,8 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * natGatewayId  公网NAT网关实例的ID。
     * networkId  规则使用的网络id。与cidr参数二选一。
-    * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
-    * status  SNAT规则的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 EIP_FREEZED: EIP冻结 INACTIVE: 不可用
+    * sourceType  资源类型。 取值范围： - 0：VPC侧，可以指定network_id 或者cidr - 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    * status  SNAT规则的状态。 取值为:  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
     *
     * @var string[]
@@ -155,7 +155,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
+    * adminStateUp  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     * cidr  可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
     * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
@@ -167,8 +167,8 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * natGatewayId  公网NAT网关实例的ID。
     * networkId  规则使用的网络id。与cidr参数二选一。
-    * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
-    * status  SNAT规则的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 EIP_FREEZED: EIP冻结 INACTIVE: 不可用
+    * sourceType  资源类型。 取值范围： - 0：VPC侧，可以指定network_id 或者cidr - 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    * status  SNAT规则的状态。 取值为:  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
     *
     * @var string[]
@@ -193,7 +193,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * adminStateUp  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
+    * adminStateUp  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     * cidr  可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
     * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
     * floatingIpAddress  功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
@@ -205,8 +205,8 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     * createdAt  SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
     * natGatewayId  公网NAT网关实例的ID。
     * networkId  规则使用的网络id。与cidr参数二选一。
-    * sourceType  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
-    * status  SNAT规则的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 EIP_FREEZED: EIP冻结 INACTIVE: 不可用
+    * sourceType  资源类型。 取值范围： - 0：VPC侧，可以指定network_id 或者cidr - 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    * status  SNAT规则的状态。 取值为:  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     * marker  分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。
     *
     * @var string[]
@@ -401,7 +401,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets adminStateUp
-    *  解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
+    *  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     *
     * @return bool|null
     */
@@ -413,7 +413,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets adminStateUp
     *
-    * @param bool|null $adminStateUp 解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
+    * @param bool|null $adminStateUp 解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     *
     * @return $this
     */
@@ -689,7 +689,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceType
-    *  0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    *  资源类型。 取值范围： - 0：VPC侧，可以指定network_id 或者cidr - 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     *
     * @return int|null
     */
@@ -701,7 +701,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sourceType
     *
-    * @param int|null $sourceType 0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+    * @param int|null $sourceType 资源类型。 取值范围： - 0：VPC侧，可以指定network_id 或者cidr - 1：专线侧，只能指定cidr 不输入默认为0（VPC）
     *
     * @return $this
     */
@@ -713,7 +713,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  SNAT规则的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 EIP_FREEZED: EIP冻结 INACTIVE: 不可用
+    *  SNAT规则的状态。 取值为:  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     *
     * @return string|null
     */
@@ -725,7 +725,7 @@ class ListNatGatewaySnatRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status SNAT规则的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 EIP_FREEZED: EIP冻结 INACTIVE: 不可用
+    * @param string|null $status SNAT规则的状态。 取值为:  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     *
     * @return $this
     */

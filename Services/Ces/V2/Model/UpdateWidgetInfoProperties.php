@@ -20,16 +20,16 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * filter  聚合类型，目前只有TopN这一种类型，折线图不支持该参数
-    * topN  Top值前N个;折线图时表示随机展示的时序数据条数
-    * order  排序字段，asc正序，desc倒序，折线图不支持该参数
-    * description  监控视图的描述信息
-    * lastWeekCompareEnable  是否展示同比（上周同一时间）数据，true:展示，false:不展示
-    * yesterdayCompareEnable  是否展示环比（昨天同一时间）数据，true:展示，false:不展示
-    * legendLocation  图例位置标记，hide表示隐藏图例，right表示图例放在监控视图右侧，bottom表示图例放在监控视图底部，表格不支持该参数
-    * legendValues  当前时序数据需要在图例中展示的统计值名称列表，表格不支持该参数，条形图和柱状图仅支持选择当前值
-    * thresholds  监控视图的阈值辅助线配置
-    * isAllCompareEnable  同比环比总开关是否生效;true:生效；false:不生效
+    * filter  **参数解释** 聚合类型 **约束限制** 折线图不支持该参数 **取值范围** 枚举值： - topN topN类型 **默认取值** 不涉及
+    * topN  **参数解释** Top值前N个 **约束限制** 折线图时表示随机展示的时序数据条数 **取值范围** Top值为[1,2147483647] **默认取值** 不涉及
+    * order  **参数解释** 排序字段 **约束限制** 折线图不支持该参数 **取值范围** 枚举值： - asc 正序 - desc 倒序 **默认取值** 不涉及
+    * description  **参数解释** 监控视图的描述信息 **约束限制** 不涉及 **取值范围** 信息长度为[0,200]个字符 **默认取值** 不涉及
+    * lastWeekCompareEnable  **参数解释** 是否展示同比（上周同一时间）数据 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
+    * yesterdayCompareEnable  **参数解释** 是否展示环比（昨天同一时间）数据 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
+    * legendLocation  **参数解释** 图例位置标记 **约束限制** 表格不支持该参数 **取值范围** 枚举值： - hide 隐藏图例 - right 图例放在监控视图右侧 - bottom 图例放在监控视图底部 **默认取值** 不涉及
+    * legendValues  **参数解释** 当前时序数据需要在图例中展示的统计值名称列表 **约束限制** 表格不支持该参数，条形图和柱状图仅支持选择当前值 包含的名称对象个数为[0,5]
+    * thresholds  **参数解释**   监控视图的阈值辅助线配置   **约束限制**   包含的配置对象个数为[0,6]
+    * isAllCompareEnable  **参数解释** 同比环比总开关是否生效 **约束限制** 不涉及 **取值范围** - true 生效 - false 不生效 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * filter  聚合类型，目前只有TopN这一种类型，折线图不支持该参数
-    * topN  Top值前N个;折线图时表示随机展示的时序数据条数
-    * order  排序字段，asc正序，desc倒序，折线图不支持该参数
-    * description  监控视图的描述信息
-    * lastWeekCompareEnable  是否展示同比（上周同一时间）数据，true:展示，false:不展示
-    * yesterdayCompareEnable  是否展示环比（昨天同一时间）数据，true:展示，false:不展示
-    * legendLocation  图例位置标记，hide表示隐藏图例，right表示图例放在监控视图右侧，bottom表示图例放在监控视图底部，表格不支持该参数
-    * legendValues  当前时序数据需要在图例中展示的统计值名称列表，表格不支持该参数，条形图和柱状图仅支持选择当前值
-    * thresholds  监控视图的阈值辅助线配置
-    * isAllCompareEnable  同比环比总开关是否生效;true:生效；false:不生效
+    * filter  **参数解释** 聚合类型 **约束限制** 折线图不支持该参数 **取值范围** 枚举值： - topN topN类型 **默认取值** 不涉及
+    * topN  **参数解释** Top值前N个 **约束限制** 折线图时表示随机展示的时序数据条数 **取值范围** Top值为[1,2147483647] **默认取值** 不涉及
+    * order  **参数解释** 排序字段 **约束限制** 折线图不支持该参数 **取值范围** 枚举值： - asc 正序 - desc 倒序 **默认取值** 不涉及
+    * description  **参数解释** 监控视图的描述信息 **约束限制** 不涉及 **取值范围** 信息长度为[0,200]个字符 **默认取值** 不涉及
+    * lastWeekCompareEnable  **参数解释** 是否展示同比（上周同一时间）数据 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
+    * yesterdayCompareEnable  **参数解释** 是否展示环比（昨天同一时间）数据 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
+    * legendLocation  **参数解释** 图例位置标记 **约束限制** 表格不支持该参数 **取值范围** 枚举值： - hide 隐藏图例 - right 图例放在监控视图右侧 - bottom 图例放在监控视图底部 **默认取值** 不涉及
+    * legendValues  **参数解释** 当前时序数据需要在图例中展示的统计值名称列表 **约束限制** 表格不支持该参数，条形图和柱状图仅支持选择当前值 包含的名称对象个数为[0,5]
+    * thresholds  **参数解释**   监控视图的阈值辅助线配置   **约束限制**   包含的配置对象个数为[0,6]
+    * isAllCompareEnable  **参数解释** 同比环比总开关是否生效 **约束限制** 不涉及 **取值范围** - true 生效 - false 不生效 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * filter  聚合类型，目前只有TopN这一种类型，折线图不支持该参数
-    * topN  Top值前N个;折线图时表示随机展示的时序数据条数
-    * order  排序字段，asc正序，desc倒序，折线图不支持该参数
-    * description  监控视图的描述信息
-    * lastWeekCompareEnable  是否展示同比（上周同一时间）数据，true:展示，false:不展示
-    * yesterdayCompareEnable  是否展示环比（昨天同一时间）数据，true:展示，false:不展示
-    * legendLocation  图例位置标记，hide表示隐藏图例，right表示图例放在监控视图右侧，bottom表示图例放在监控视图底部，表格不支持该参数
-    * legendValues  当前时序数据需要在图例中展示的统计值名称列表，表格不支持该参数，条形图和柱状图仅支持选择当前值
-    * thresholds  监控视图的阈值辅助线配置
-    * isAllCompareEnable  同比环比总开关是否生效;true:生效；false:不生效
+    * filter  **参数解释** 聚合类型 **约束限制** 折线图不支持该参数 **取值范围** 枚举值： - topN topN类型 **默认取值** 不涉及
+    * topN  **参数解释** Top值前N个 **约束限制** 折线图时表示随机展示的时序数据条数 **取值范围** Top值为[1,2147483647] **默认取值** 不涉及
+    * order  **参数解释** 排序字段 **约束限制** 折线图不支持该参数 **取值范围** 枚举值： - asc 正序 - desc 倒序 **默认取值** 不涉及
+    * description  **参数解释** 监控视图的描述信息 **约束限制** 不涉及 **取值范围** 信息长度为[0,200]个字符 **默认取值** 不涉及
+    * lastWeekCompareEnable  **参数解释** 是否展示同比（上周同一时间）数据 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
+    * yesterdayCompareEnable  **参数解释** 是否展示环比（昨天同一时间）数据 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
+    * legendLocation  **参数解释** 图例位置标记 **约束限制** 表格不支持该参数 **取值范围** 枚举值： - hide 隐藏图例 - right 图例放在监控视图右侧 - bottom 图例放在监控视图底部 **默认取值** 不涉及
+    * legendValues  **参数解释** 当前时序数据需要在图例中展示的统计值名称列表 **约束限制** 表格不支持该参数，条形图和柱状图仅支持选择当前值 包含的名称对象个数为[0,5]
+    * thresholds  **参数解释**   监控视图的阈值辅助线配置   **约束限制**   包含的配置对象个数为[0,6]
+    * isAllCompareEnable  **参数解释** 同比环比总开关是否生效 **约束限制** 不涉及 **取值范围** - true 生效 - false 不生效 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * filter  聚合类型，目前只有TopN这一种类型，折线图不支持该参数
-    * topN  Top值前N个;折线图时表示随机展示的时序数据条数
-    * order  排序字段，asc正序，desc倒序，折线图不支持该参数
-    * description  监控视图的描述信息
-    * lastWeekCompareEnable  是否展示同比（上周同一时间）数据，true:展示，false:不展示
-    * yesterdayCompareEnable  是否展示环比（昨天同一时间）数据，true:展示，false:不展示
-    * legendLocation  图例位置标记，hide表示隐藏图例，right表示图例放在监控视图右侧，bottom表示图例放在监控视图底部，表格不支持该参数
-    * legendValues  当前时序数据需要在图例中展示的统计值名称列表，表格不支持该参数，条形图和柱状图仅支持选择当前值
-    * thresholds  监控视图的阈值辅助线配置
-    * isAllCompareEnable  同比环比总开关是否生效;true:生效；false:不生效
+    * filter  **参数解释** 聚合类型 **约束限制** 折线图不支持该参数 **取值范围** 枚举值： - topN topN类型 **默认取值** 不涉及
+    * topN  **参数解释** Top值前N个 **约束限制** 折线图时表示随机展示的时序数据条数 **取值范围** Top值为[1,2147483647] **默认取值** 不涉及
+    * order  **参数解释** 排序字段 **约束限制** 折线图不支持该参数 **取值范围** 枚举值： - asc 正序 - desc 倒序 **默认取值** 不涉及
+    * description  **参数解释** 监控视图的描述信息 **约束限制** 不涉及 **取值范围** 信息长度为[0,200]个字符 **默认取值** 不涉及
+    * lastWeekCompareEnable  **参数解释** 是否展示同比（上周同一时间）数据 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
+    * yesterdayCompareEnable  **参数解释** 是否展示环比（昨天同一时间）数据 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
+    * legendLocation  **参数解释** 图例位置标记 **约束限制** 表格不支持该参数 **取值范围** 枚举值： - hide 隐藏图例 - right 图例放在监控视图右侧 - bottom 图例放在监控视图底部 **默认取值** 不涉及
+    * legendValues  **参数解释** 当前时序数据需要在图例中展示的统计值名称列表 **约束限制** 表格不支持该参数，条形图和柱状图仅支持选择当前值 包含的名称对象个数为[0,5]
+    * thresholds  **参数解释**   监控视图的阈值辅助线配置   **约束限制**   包含的配置对象个数为[0,6]
+    * isAllCompareEnable  **参数解释** 同比环比总开关是否生效 **约束限制** 不涉及 **取值范围** - true 生效 - false 不生效 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * filter  聚合类型，目前只有TopN这一种类型，折线图不支持该参数
-    * topN  Top值前N个;折线图时表示随机展示的时序数据条数
-    * order  排序字段，asc正序，desc倒序，折线图不支持该参数
-    * description  监控视图的描述信息
-    * lastWeekCompareEnable  是否展示同比（上周同一时间）数据，true:展示，false:不展示
-    * yesterdayCompareEnable  是否展示环比（昨天同一时间）数据，true:展示，false:不展示
-    * legendLocation  图例位置标记，hide表示隐藏图例，right表示图例放在监控视图右侧，bottom表示图例放在监控视图底部，表格不支持该参数
-    * legendValues  当前时序数据需要在图例中展示的统计值名称列表，表格不支持该参数，条形图和柱状图仅支持选择当前值
-    * thresholds  监控视图的阈值辅助线配置
-    * isAllCompareEnable  同比环比总开关是否生效;true:生效；false:不生效
+    * filter  **参数解释** 聚合类型 **约束限制** 折线图不支持该参数 **取值范围** 枚举值： - topN topN类型 **默认取值** 不涉及
+    * topN  **参数解释** Top值前N个 **约束限制** 折线图时表示随机展示的时序数据条数 **取值范围** Top值为[1,2147483647] **默认取值** 不涉及
+    * order  **参数解释** 排序字段 **约束限制** 折线图不支持该参数 **取值范围** 枚举值： - asc 正序 - desc 倒序 **默认取值** 不涉及
+    * description  **参数解释** 监控视图的描述信息 **约束限制** 不涉及 **取值范围** 信息长度为[0,200]个字符 **默认取值** 不涉及
+    * lastWeekCompareEnable  **参数解释** 是否展示同比（上周同一时间）数据 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
+    * yesterdayCompareEnable  **参数解释** 是否展示环比（昨天同一时间）数据 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
+    * legendLocation  **参数解释** 图例位置标记 **约束限制** 表格不支持该参数 **取值范围** 枚举值： - hide 隐藏图例 - right 图例放在监控视图右侧 - bottom 图例放在监控视图底部 **默认取值** 不涉及
+    * legendValues  **参数解释** 当前时序数据需要在图例中展示的统计值名称列表 **约束限制** 表格不支持该参数，条形图和柱状图仅支持选择当前值 包含的名称对象个数为[0,5]
+    * thresholds  **参数解释**   监控视图的阈值辅助线配置   **约束限制**   包含的配置对象个数为[0,6]
+    * isAllCompareEnable  **参数解释** 同比环比总开关是否生效 **约束限制** 不涉及 **取值范围** - true 生效 - false 不生效 **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -375,7 +375,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
 
     /**
     * Gets filter
-    *  聚合类型，目前只有TopN这一种类型，折线图不支持该参数
+    *  **参数解释** 聚合类型 **约束限制** 折线图不支持该参数 **取值范围** 枚举值： - topN topN类型 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -387,7 +387,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
     /**
     * Sets filter
     *
-    * @param string|null $filter 聚合类型，目前只有TopN这一种类型，折线图不支持该参数
+    * @param string|null $filter **参数解释** 聚合类型 **约束限制** 折线图不支持该参数 **取值范围** 枚举值： - topN topN类型 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -399,7 +399,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
 
     /**
     * Gets topN
-    *  Top值前N个;折线图时表示随机展示的时序数据条数
+    *  **参数解释** Top值前N个 **约束限制** 折线图时表示随机展示的时序数据条数 **取值范围** Top值为[1,2147483647] **默认取值** 不涉及
     *
     * @return int|null
     */
@@ -411,7 +411,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
     /**
     * Sets topN
     *
-    * @param int|null $topN Top值前N个;折线图时表示随机展示的时序数据条数
+    * @param int|null $topN **参数解释** Top值前N个 **约束限制** 折线图时表示随机展示的时序数据条数 **取值范围** Top值为[1,2147483647] **默认取值** 不涉及
     *
     * @return $this
     */
@@ -423,7 +423,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
 
     /**
     * Gets order
-    *  排序字段，asc正序，desc倒序，折线图不支持该参数
+    *  **参数解释** 排序字段 **约束限制** 折线图不支持该参数 **取值范围** 枚举值： - asc 正序 - desc 倒序 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -435,7 +435,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
     /**
     * Sets order
     *
-    * @param string|null $order 排序字段，asc正序，desc倒序，折线图不支持该参数
+    * @param string|null $order **参数解释** 排序字段 **约束限制** 折线图不支持该参数 **取值范围** 枚举值： - asc 正序 - desc 倒序 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -447,7 +447,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  监控视图的描述信息
+    *  **参数解释** 监控视图的描述信息 **约束限制** 不涉及 **取值范围** 信息长度为[0,200]个字符 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -459,7 +459,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 监控视图的描述信息
+    * @param string|null $description **参数解释** 监控视图的描述信息 **约束限制** 不涉及 **取值范围** 信息长度为[0,200]个字符 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -471,7 +471,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastWeekCompareEnable
-    *  是否展示同比（上周同一时间）数据，true:展示，false:不展示
+    *  **参数解释** 是否展示同比（上周同一时间）数据 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
     *
     * @return bool|null
     */
@@ -483,7 +483,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
     /**
     * Sets lastWeekCompareEnable
     *
-    * @param bool|null $lastWeekCompareEnable 是否展示同比（上周同一时间）数据，true:展示，false:不展示
+    * @param bool|null $lastWeekCompareEnable **参数解释** 是否展示同比（上周同一时间）数据 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -495,7 +495,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
 
     /**
     * Gets yesterdayCompareEnable
-    *  是否展示环比（昨天同一时间）数据，true:展示，false:不展示
+    *  **参数解释** 是否展示环比（昨天同一时间）数据 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
     *
     * @return bool|null
     */
@@ -507,7 +507,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
     /**
     * Sets yesterdayCompareEnable
     *
-    * @param bool|null $yesterdayCompareEnable 是否展示环比（昨天同一时间）数据，true:展示，false:不展示
+    * @param bool|null $yesterdayCompareEnable **参数解释** 是否展示环比（昨天同一时间）数据 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -519,7 +519,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
 
     /**
     * Gets legendLocation
-    *  图例位置标记，hide表示隐藏图例，right表示图例放在监控视图右侧，bottom表示图例放在监控视图底部，表格不支持该参数
+    *  **参数解释** 图例位置标记 **约束限制** 表格不支持该参数 **取值范围** 枚举值： - hide 隐藏图例 - right 图例放在监控视图右侧 - bottom 图例放在监控视图底部 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -531,7 +531,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
     /**
     * Sets legendLocation
     *
-    * @param string|null $legendLocation 图例位置标记，hide表示隐藏图例，right表示图例放在监控视图右侧，bottom表示图例放在监控视图底部，表格不支持该参数
+    * @param string|null $legendLocation **参数解释** 图例位置标记 **约束限制** 表格不支持该参数 **取值范围** 枚举值： - hide 隐藏图例 - right 图例放在监控视图右侧 - bottom 图例放在监控视图底部 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -543,7 +543,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
 
     /**
     * Gets legendValues
-    *  当前时序数据需要在图例中展示的统计值名称列表，表格不支持该参数，条形图和柱状图仅支持选择当前值
+    *  **参数解释** 当前时序数据需要在图例中展示的统计值名称列表 **约束限制** 表格不支持该参数，条形图和柱状图仅支持选择当前值 包含的名称对象个数为[0,5]
     *
     * @return string[]|null
     */
@@ -555,7 +555,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
     /**
     * Sets legendValues
     *
-    * @param string[]|null $legendValues 当前时序数据需要在图例中展示的统计值名称列表，表格不支持该参数，条形图和柱状图仅支持选择当前值
+    * @param string[]|null $legendValues **参数解释** 当前时序数据需要在图例中展示的统计值名称列表 **约束限制** 表格不支持该参数，条形图和柱状图仅支持选择当前值 包含的名称对象个数为[0,5]
     *
     * @return $this
     */
@@ -567,7 +567,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
 
     /**
     * Gets thresholds
-    *  监控视图的阈值辅助线配置
+    *  **参数解释**   监控视图的阈值辅助线配置   **约束限制**   包含的配置对象个数为[0,6]
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\ThresholdInfo[]|null
     */
@@ -579,7 +579,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
     /**
     * Sets thresholds
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ThresholdInfo[]|null $thresholds 监控视图的阈值辅助线配置
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ThresholdInfo[]|null $thresholds **参数解释**   监控视图的阈值辅助线配置   **约束限制**   包含的配置对象个数为[0,6]
     *
     * @return $this
     */
@@ -591,7 +591,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAllCompareEnable
-    *  同比环比总开关是否生效;true:生效；false:不生效
+    *  **参数解释** 同比环比总开关是否生效 **约束限制** 不涉及 **取值范围** - true 生效 - false 不生效 **默认取值** 不涉及
     *
     * @return bool|null
     */
@@ -603,7 +603,7 @@ class UpdateWidgetInfoProperties implements ModelInterface, ArrayAccess
     /**
     * Sets isAllCompareEnable
     *
-    * @param bool|null $isAllCompareEnable 同比环比总开关是否生效;true:生效；false:不生效
+    * @param bool|null $isAllCompareEnable **参数解释** 同比环比总开关是否生效 **约束限制** 不涉及 **取值范围** - true 生效 - false 不生效 **默认取值** 不涉及
     *
     * @return $this
     */

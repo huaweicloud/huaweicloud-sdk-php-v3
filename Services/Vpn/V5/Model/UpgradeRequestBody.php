@@ -175,6 +175,9 @@ class UpgradeRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['action'] === null) {
+            $invalidProperties[] = "'action' can't be null";
+        }
             $allowedValues = $this->getActionAllowableValues();
                 if (!is_null($this->container['action']) && !in_array($this->container['action'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -201,7 +204,7 @@ class UpgradeRequestBody implements ModelInterface, ArrayAccess
     * Gets action
     *  升级操作，可选值start、finish、rollback
     *
-    * @return string|null
+    * @return string
     */
     public function getAction()
     {
@@ -211,7 +214,7 @@ class UpgradeRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 升级操作，可选值start、finish、rollback
+    * @param string $action 升级操作，可选值start、finish、rollback
     *
     * @return $this
     */

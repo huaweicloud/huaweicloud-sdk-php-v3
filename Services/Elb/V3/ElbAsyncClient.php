@@ -240,6 +240,201 @@ class ElbAsyncClient extends Client
     }
 
     /**
+     * 批量删除证书
+     *
+     * 批量删除证书。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteCertificatesAsync($request)
+    {
+        return $this->batchDeleteCertificatesAsyncWithHttpInfo($request);
+    }
+    
+    public function batchDeleteCertificatesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/certificates/batch-delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\BatchDeleteCertificatesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\BatchDeleteCertificatesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量删监听器
+     *
+     * 批量删除监听器。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteListenersAsync($request)
+    {
+        return $this->batchDeleteListenersAsyncWithHttpInfo($request);
+    }
+    
+    public function batchDeleteListenersAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/listeners/batch-delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\BatchDeleteListenersResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\BatchDeleteListenersRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量删除负载均衡器
+     *
+     * 批量删除负载均衡器。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteLoadbalancersAsync($request)
+    {
+        return $this->batchDeleteLoadbalancersAsyncWithHttpInfo($request);
+    }
+    
+    public function batchDeleteLoadbalancersAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/loadbalancers/batch-delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\BatchDeleteLoadbalancersResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\BatchDeleteLoadbalancersRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 批量删除后端服务器
      *
      * 在指定pool下批量删除后端服务器。一次最多添加200个。
@@ -304,6 +499,207 @@ class ElbAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Elb\V3\Model\BatchDeleteMembersResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Elb\V3\Model\BatchDeleteMembersRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量删除后端服务器组
+     *
+     * 批量删除后端服务器组。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeletePoolsAsync($request)
+    {
+        return $this->batchDeletePoolsAsyncWithHttpInfo($request);
+    }
+    
+    public function batchDeletePoolsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/pools/batch-delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\BatchDeletePoolsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\BatchDeletePoolsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量将IP地址从LB实例域名解析中移除
+     *
+     * 批量将IP地址从LB实例域名解析中移除。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDisableDomainIPsAsync($request)
+    {
+        return $this->batchDisableDomainIPsAsyncWithHttpInfo($request);
+    }
+    
+    public function batchDisableDomainIPsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/loadbalancers/{loadbalancer_id}/dns/ips/batch-disable';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['loadbalancerId'] !== null) {
+            $pathParams['loadbalancer_id'] = $localVarParams['loadbalancerId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\BatchDisableDomainIPsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\BatchDisableDomainIPsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量将IP地址加入LB实例域名解析中
+     *
+     * 批量将IP地址加入LB实例域名解析中。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchEnableDomainIPsAsync($request)
+    {
+        return $this->batchEnableDomainIPsAsyncWithHttpInfo($request);
+    }
+    
+    public function batchEnableDomainIPsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/loadbalancers/{loadbalancer_id}/dns/ips/batch-enable';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['loadbalancerId'] !== null) {
+            $pathParams['loadbalancer_id'] = $localVarParams['loadbalancerId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\BatchEnableDomainIPsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\BatchEnableDomainIPsRequest',
             $asyncRequest = true);
     }
 
@@ -510,6 +906,74 @@ class ElbAsyncClient extends Client
     }
 
     /**
+     * 变更监听器标签列表
+     *
+     * 批量添加或删除指定监听器器标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changeListenerTagsAsync($request)
+    {
+        return $this->changeListenerTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function changeListenerTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/listeners/{listener_id}/tags/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['listenerId'] !== null) {
+            $pathParams['listener_id'] = $localVarParams['listenerId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ChangeListenerTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ChangeListenerTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 变更负载均衡器计费模式
      *
      * 负载均衡器计费模式变更，当前支持的计费模式变更为：
@@ -574,6 +1038,149 @@ class ElbAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ChangeLoadbalancerChargeModeResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ChangeLoadbalancerChargeModeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 变更负载均衡器标签列表
+     *
+     * 批量添加或删除指定负载均衡器标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changeLoadbalancerTagsAsync($request)
+    {
+        return $this->changeLoadbalancerTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function changeLoadbalancerTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/loadbalancers/{loadbalancer_id}/tags/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['loadbalancerId'] !== null) {
+            $pathParams['loadbalancer_id'] = $localVarParams['loadbalancerId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ChangeLoadbalancerTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ChangeLoadbalancerTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 复制已有监听器
+     *
+     * 复制已有的监听器到同VPC内的负载均衡器。
+     * - 仅支持同VPC实例间使用监听器复制功能。
+     * - 不支持网关型LB下监听器进行复制，也不支持复制到网关型LB下。
+     * - 仅同类型实例之间可以使用监听器复制功能。
+     * - 对复制的源监听器有如下限制：后端服务器总数不能超过1000；转发策略总数不能超过100。
+     * - 源监听器所在负载均衡器和目的监听器所在负载均衡器不能处于冻结、迁移状态。
+     * - 源监听器中若配置quic_config，复制后为null。
+     * - 七层转发策略配置为重定向到监听器，该转发策略不会进行复制。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function cloneListenerAsync($request)
+    {
+        return $this->cloneListenerAsyncWithHttpInfo($request);
+    }
+    
+    public function cloneListenerAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/listeners/{listener_id}/clone';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['listenerId'] !== null) {
+            $pathParams['listener_id'] = $localVarParams['listenerId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\CloneListenerResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\CloneListenerRequest',
             $asyncRequest = true);
     }
 
@@ -1053,11 +1660,12 @@ class ElbAsyncClient extends Client
      * - 若要创建网络型负载均衡器，则需要传入l4_flavor_id（网络型规格ID）；若要创建应用型负载均衡器，则需要传入l7_flavor_id（应用型规格ID）；若要创建网络型+应用型负载均衡器，则需要传入l4_flavor_id和l7_flavor_id。
      * [- 若要创建包周期负载均衡器，则需要传入prepaid_options，否则创建按需计费负载均衡器。](tag:hws)
      * - 按需计费分为固定规格计费和弹性规格计费，根据创建时所选规格的类型决定计费方式。具体规格说明见创建LB请求参数l4_flavor_id和l7_flavor_id。
-     * [- 若要创建gateway类型的负载均衡器，则需要：
+     * - 若要创建gateway类型的负载均衡器，则需要：
      * - 指定loadbalancer_type&#x3D;\&quot;gateway\&quot;，且不支持指定vip_address，ipv6_vip_address。
      * - vip_subnet_cidr_id和ipv6_subnet_cidr_id两者不能都为空，如果两者都传入，则必须属于同一子网。
      * - 不支持创建公网gateway类型LB。
-     * - 如果要指定规格，则从请求参数gw_flavor_id传入。](tag:hws_eu)
+     * - 不支持传入autoscaling字段，不支持l4_flavor_id和l7_flavor_id。
+     * - 必须要指定网关型规格，通过参数gw_flavor_id传入。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2048,8 +2656,11 @@ class ElbAsyncClient extends Client
      *
      * 删除负载均衡器且级联删除其下子资源（删除负载均衡器及其绑定的监听器、后端服务器组、后端服务器等一系列资源）。
      * - 若LB关联了EIP，则只解绑EIP，不会删除EIP。
+     * - 若LB已开启了误删保护开关，则级联删除失败。
+     * - 若LB下任意一个后端服务器组开启了误删保护开关，则级联删除失败。
+     * - 修改保护开关开启不影响级联删除，仍能正常删除。
      * [- 若已开启多挂特性，且关联了多个LB，则只做解绑；否则删除。
-     * - 若是共享型LB下的后端服务器组，无论是否多挂都只删除，不解绑。](tag:hc,hk)
+     * - 若是共享型LB下的后端服务器组，无论是否多挂都只删除，不解绑。](tag:hws,hws_hk)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2570,6 +3181,104 @@ class ElbAsyncClient extends Client
     }
 
     /**
+     * 查询转发规则列表
+     *
+     * 查询当前项目下的转发规则列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAllL7RulesAsync($request)
+    {
+        return $this->listAllL7RulesAsyncWithHttpInfo($request);
+    }
+    
+    public function listAllL7RulesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/l7policies/rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['pageReverse'] !== null) {
+            $queryParams['page_reverse'] = $localVarParams['pageReverse'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['compareType'] !== null) {
+            $queryParams['compare_type'] = $localVarParams['compareType'];
+        }
+        if ($localVarParams['provisioningStatus'] !== null) {
+            $queryParams['provisioning_status'] = $localVarParams['provisioningStatus'];
+        }
+        if ($localVarParams['invert'] !== null) {
+            $queryParams['invert'] = $localVarParams['invert'];
+        }
+        if ($localVarParams['adminStateUp'] !== null) {
+            $queryParams['admin_state_up'] = $localVarParams['adminStateUp'];
+        }
+        if ($localVarParams['value'] !== null) {
+            $queryParams['value'] = $localVarParams['value'];
+        }
+        if ($localVarParams['key'] !== null) {
+            $queryParams['key'] = $localVarParams['key'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ListAllL7RulesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ListAllL7RulesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 后端服务器全局列表
      *
      * 查询当前项目下的后端服务器列表。
@@ -2861,6 +3570,72 @@ class ElbAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ListCertificatesResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ListCertificatesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询负载均衡器ip的域名配置信息
+     *
+     * 查询负载均衡器ip的域名配置信息，即负载均衡器的ip是否加入了域名解析。
+     * 注意：当负载均衡器的公网域名和私网域名都没有打开时，该接口返回空列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDomainIPsAsync($request)
+    {
+        return $this->listDomainIPsAsyncWithHttpInfo($request);
+    }
+    
+    public function listDomainIPsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/loadbalancers/{loadbalancer_id}/dns/ips';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['loadbalancerId'] !== null) {
+            $pathParams['loadbalancer_id'] = $localVarParams['loadbalancerId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ListDomainIPsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ListDomainIPsRequest',
             $asyncRequest = true);
     }
 
@@ -3441,6 +4216,68 @@ class ElbAsyncClient extends Client
     }
 
     /**
+     * 查询所有监听器的标签列表
+     *
+     * 查询指定项目下所有监听器的标签列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listListenerTagsAsync($request)
+    {
+        return $this->listListenerTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function listListenerTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/listeners/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ListListenerTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ListListenerTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询监听器列表
      *
      * 查询监听器列表。
@@ -3830,6 +4667,68 @@ class ElbAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ListLoadbalancerFeatureResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ListLoadbalancerFeatureRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询所有负载均衡器的标签列表
+     *
+     * 查询指定项目下所有负载均衡器的标签列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listLoadbalancerTagsAsync($request)
+    {
+        return $this->listLoadbalancerTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function listLoadbalancerTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/loadbalancers/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ListLoadbalancerTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ListLoadbalancerTagsRequest',
             $asyncRequest = true);
     }
 
@@ -5259,6 +6158,71 @@ class ElbAsyncClient extends Client
     }
 
     /**
+     * 查询监听器的标签
+     *
+     * 查询指定监听器的所有标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showListenerTagsAsync($request)
+    {
+        return $this->showListenerTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function showListenerTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/listeners/{listener_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['listenerId'] !== null) {
+            $pathParams['listener_id'] = $localVarParams['listenerId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ShowListenerTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ShowListenerTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询负载均衡器详情
      *
      * 查询负载均衡器详情。
@@ -5324,9 +6288,9 @@ class ElbAsyncClient extends Client
     }
 
     /**
-     * 查询负载均衡器占用的下联面子网端口列表
+     * 查询负载均衡内部转发用的IP
      *
-     * 查询负载均衡器占用的下联面子网端口和IP地址信息。
+     * 查询负载均衡内部转发用的IP。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5468,6 +6432,154 @@ class ElbAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ShowLoadBalancerStatusResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ShowLoadBalancerStatusRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询负载均衡器拓扑
+     *
+     * 查询负载均衡拓扑，将负载均衡器及其包含的监听器、后端服务器组以拓扑的形式展示。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showLoadBalancerTopologyAsync($request)
+    {
+        return $this->showLoadBalancerTopologyAsyncWithHttpInfo($request);
+    }
+    
+    public function showLoadBalancerTopologyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/loadbalancers/{loadbalancer_id}/topology';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['listenerId'] !== null) {
+            $queryParams['listener_id'] = $localVarParams['listenerId'];
+        }
+        if ($localVarParams['poolId'] !== null) {
+            $queryParams['pool_id'] = $localVarParams['poolId'];
+        }
+        if ($localVarParams['listenerName'] !== null) {
+            $queryParams['listener_name'] = $localVarParams['listenerName'];
+        }
+        if ($localVarParams['listenerProtocol'] !== null) {
+            $queryParams['listener_protocol'] = $localVarParams['listenerProtocol'];
+        }
+        if ($localVarParams['listenerProtocolPort'] !== null) {
+            $queryParams['listener_protocol_port'] = $localVarParams['listenerProtocolPort'];
+        }
+        if ($localVarParams['poolName'] !== null) {
+            $queryParams['pool_name'] = $localVarParams['poolName'];
+        }
+        if ($localVarParams['loadbalancerId'] !== null) {
+            $pathParams['loadbalancer_id'] = $localVarParams['loadbalancerId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ShowLoadBalancerTopologyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ShowLoadBalancerTopologyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询负载均衡器的标签
+     *
+     * 查询指定负载均衡器的所有标签
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showLoadbalancerTagsAsync($request)
+    {
+        return $this->showLoadbalancerTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function showLoadbalancerTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/loadbalancers/{loadbalancer_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['loadbalancerId'] !== null) {
+            $pathParams['loadbalancer_id'] = $localVarParams['loadbalancerId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\ShowLoadbalancerTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\ShowLoadbalancerTagsRequest',
             $asyncRequest = true);
     }
 
@@ -6802,6 +7914,142 @@ class ElbAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Elb\V3\Model\UpdateSecurityPolicyResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Elb\V3\Model\UpdateSecurityPolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 配置负载均衡器系统默认域名化
+     *
+     * 配置负载均衡器系统默认域名化。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSystemDefaultDomainConfigAsync($request)
+    {
+        return $this->updateSystemDefaultDomainConfigAsyncWithHttpInfo($request);
+    }
+    
+    public function updateSystemDefaultDomainConfigAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/loadbalancers/{loadbalancer_id}/dns/system-default-config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['loadbalancerId'] !== null) {
+            $pathParams['loadbalancer_id'] = $localVarParams['loadbalancerId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\UpdateSystemDefaultDomainConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\UpdateSystemDefaultDomainConfigRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 配置负载均衡器用户自定义域名化
+     *
+     * 配置负载均衡器用户自定义域名化。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateUserDefinedDomainConfigAsync($request)
+    {
+        return $this->updateUserDefinedDomainConfigAsyncWithHttpInfo($request);
+    }
+    
+    public function updateUserDefinedDomainConfigAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/elb/loadbalancers/{loadbalancer_id}/dns/user-defined-config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['loadbalancerId'] !== null) {
+            $pathParams['loadbalancer_id'] = $localVarParams['loadbalancerId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Elb\V3\Model\UpdateUserDefinedDomainConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Elb\V3\Model\UpdateUserDefinedDomainConfigRequest',
             $asyncRequest = true);
     }
 

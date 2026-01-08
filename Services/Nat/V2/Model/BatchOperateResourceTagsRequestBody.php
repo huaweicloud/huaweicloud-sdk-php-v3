@@ -20,7 +20,7 @@ class BatchOperateResourceTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  功能说明：操作标识。 取值范围： create（创建） delete（删除）
+    * action  功能说明：操作标识。 取值范围： - create：创建 - delete：删除
     * tags  标签列表。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class BatchOperateResourceTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  功能说明：操作标识。 取值范围： create（创建） delete（删除）
+    * action  功能说明：操作标识。 取值范围： - create：创建 - delete：删除
     * tags  标签列表。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class BatchOperateResourceTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  功能说明：操作标识。 取值范围： create（创建） delete（删除）
+    * action  功能说明：操作标识。 取值范围： - create：创建 - delete：删除
     * tags  标签列表。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class BatchOperateResourceTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  功能说明：操作标识。 取值范围： create（创建） delete（删除）
+    * action  功能说明：操作标识。 取值范围： - create：创建 - delete：删除
     * tags  标签列表。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class BatchOperateResourceTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  功能说明：操作标识。 取值范围： create（创建） delete（删除）
+    * action  功能说明：操作标识。 取值范围： - create：创建 - delete：删除
     * tags  标签列表。
     *
     * @var string[]
@@ -214,7 +214,7 @@ class BatchOperateResourceTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  功能说明：操作标识。 取值范围： create（创建） delete（删除）
+    *  功能说明：操作标识。 取值范围： - create：创建 - delete：删除
     *
     * @return string
     */
@@ -226,7 +226,7 @@ class BatchOperateResourceTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string $action 功能说明：操作标识。 取值范围： create（创建） delete（删除）
+    * @param string $action 功能说明：操作标识。 取值范围： - create：创建 - delete：删除
     *
     * @return $this
     */

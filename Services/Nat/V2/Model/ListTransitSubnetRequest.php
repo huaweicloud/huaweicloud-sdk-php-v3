@@ -26,7 +26,7 @@ class ListTransitSubnetRequest implements ModelInterface, ArrayAccess
     * virsubnetProjectId  中转子网的子网所属项目的ID
     * vpcId  中转子网的子网所属的VPC的ID
     * virsubnetId  中转子网的子网ID
-    * status  中转子网状态。 取值范围： ACTIVE： 当前资源状态正常。 INACTIVE： 不可用。
+    * status  中转子网状态。 取值范围： - ACTIVE： 当前资源状态正常。 - INACTIVE： 不可用。
     * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取
     * pageReverse  是否查询前一页
@@ -54,7 +54,7 @@ class ListTransitSubnetRequest implements ModelInterface, ArrayAccess
     * virsubnetProjectId  中转子网的子网所属项目的ID
     * vpcId  中转子网的子网所属的VPC的ID
     * virsubnetId  中转子网的子网ID
-    * status  中转子网状态。 取值范围： ACTIVE： 当前资源状态正常。 INACTIVE： 不可用。
+    * status  中转子网状态。 取值范围： - ACTIVE： 当前资源状态正常。 - INACTIVE： 不可用。
     * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取
     * pageReverse  是否查询前一页
@@ -103,7 +103,7 @@ class ListTransitSubnetRequest implements ModelInterface, ArrayAccess
     * virsubnetProjectId  中转子网的子网所属项目的ID
     * vpcId  中转子网的子网所属的VPC的ID
     * virsubnetId  中转子网的子网ID
-    * status  中转子网状态。 取值范围： ACTIVE： 当前资源状态正常。 INACTIVE： 不可用。
+    * status  中转子网状态。 取值范围： - ACTIVE： 当前资源状态正常。 - INACTIVE： 不可用。
     * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取
     * pageReverse  是否查询前一页
@@ -131,7 +131,7 @@ class ListTransitSubnetRequest implements ModelInterface, ArrayAccess
     * virsubnetProjectId  中转子网的子网所属项目的ID
     * vpcId  中转子网的子网所属的VPC的ID
     * virsubnetId  中转子网的子网ID
-    * status  中转子网状态。 取值范围： ACTIVE： 当前资源状态正常。 INACTIVE： 不可用。
+    * status  中转子网状态。 取值范围： - ACTIVE： 当前资源状态正常。 - INACTIVE： 不可用。
     * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取
     * pageReverse  是否查询前一页
@@ -159,7 +159,7 @@ class ListTransitSubnetRequest implements ModelInterface, ArrayAccess
     * virsubnetProjectId  中转子网的子网所属项目的ID
     * vpcId  中转子网的子网所属的VPC的ID
     * virsubnetId  中转子网的子网ID
-    * status  中转子网状态。 取值范围： ACTIVE： 当前资源状态正常。 INACTIVE： 不可用。
+    * status  中转子网状态。 取值范围： - ACTIVE： 当前资源状态正常。 - INACTIVE： 不可用。
     * limit  功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000
     * marker  功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取
     * pageReverse  是否查询前一页
@@ -429,7 +429,7 @@ class ListTransitSubnetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  中转子网状态。 取值范围： ACTIVE： 当前资源状态正常。 INACTIVE： 不可用。
+    *  中转子网状态。 取值范围： - ACTIVE： 当前资源状态正常。 - INACTIVE： 不可用。
     *
     * @return string[]|null
     */
@@ -441,7 +441,7 @@ class ListTransitSubnetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string[]|null $status 中转子网状态。 取值范围： ACTIVE： 当前资源状态正常。 INACTIVE： 不可用。
+    * @param string[]|null $status 中转子网状态。 取值范围： - ACTIVE： 当前资源状态正常。 - INACTIVE： 不可用。
     *
     * @return $this
     */

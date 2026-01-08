@@ -206,6 +206,12 @@ class MultiQueryConditionOption implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['condition'] === null) {
+            $invalidProperties[] = "'condition' can't be null";
+        }
             $allowedValues = $this->getConditionAllowableValues();
                 if (!is_null($this->container['condition']) && !in_array($this->container['condition'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -214,6 +220,9 @@ class MultiQueryConditionOption implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['values'] === null) {
+            $invalidProperties[] = "'values' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -232,7 +241,7 @@ class MultiQueryConditionOption implements ModelInterface, ArrayAccess
     * Gets name
     *  **参数解释**： 查询字段名称。 **约束限制**： 只支持字符串\"query\"。 **取值范围**： 由英文字母（大小写）、数字或下划线组成，长度为 1 至 128 个字符。 **默认取值**： 不涉及。
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -242,7 +251,7 @@ class MultiQueryConditionOption implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name **参数解释**： 查询字段名称。 **约束限制**： 只支持字符串\"query\"。 **取值范围**： 由英文字母（大小写）、数字或下划线组成，长度为 1 至 128 个字符。 **默认取值**： 不涉及。
+    * @param string $name **参数解释**： 查询字段名称。 **约束限制**： 只支持字符串\"query\"。 **取值范围**： 由英文字母（大小写）、数字或下划线组成，长度为 1 至 128 个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -256,7 +265,7 @@ class MultiQueryConditionOption implements ModelInterface, ArrayAccess
     * Gets condition
     *  **参数解释**: 组合条件类型。 **约束限制**: 不涉及。 **取值范围**: 仅限字符串：\"AND\"、\"OR\"。 **默认取值**: 不涉及。
     *
-    * @return string|null
+    * @return string
     */
     public function getCondition()
     {
@@ -266,7 +275,7 @@ class MultiQueryConditionOption implements ModelInterface, ArrayAccess
     /**
     * Sets condition
     *
-    * @param string|null $condition **参数解释**: 组合条件类型。 **约束限制**: 不涉及。 **取值范围**: 仅限字符串：\"AND\"、\"OR\"。 **默认取值**: 不涉及。
+    * @param string $condition **参数解释**: 组合条件类型。 **约束限制**: 不涉及。 **取值范围**: 仅限字符串：\"AND\"、\"OR\"。 **默认取值**: 不涉及。
     *
     * @return $this
     */
@@ -304,7 +313,7 @@ class MultiQueryConditionOption implements ModelInterface, ArrayAccess
     * Gets values
     *  **参数解释**: 多个过滤检索条件内容集合。由 1 至 5 个字符串组成的列表。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getValues()
     {
@@ -314,7 +323,7 @@ class MultiQueryConditionOption implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param string[]|null $values **参数解释**: 多个过滤检索条件内容集合。由 1 至 5 个字符串组成的列表。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * @param string[] $values **参数解释**: 多个过滤检索条件内容集合。由 1 至 5 个字符串组成的列表。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */

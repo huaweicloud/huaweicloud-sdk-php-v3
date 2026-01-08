@@ -31,7 +31,7 @@ class ListLoadBalancersRequest implements ModelInterface, ArrayAccess
     * provisioningStatus  **参数解释**：负载均衡器的配置状态。 支持多值查询，查询条件格式： *provisioning_status=xxx&provisioning_status=xxx*。  **约束限制**：不涉及  **取值范围**： - ACTIVE：使用中。 - PENDING_DELETE：删除中。  **默认取值**：不涉及
     * operatingStatus  **参数解释**：负载均衡器的操作状态。 支持多值查询，查询条件格式： *operating_status=xxx&operating_status=xxx*。  **约束限制**：不涉及  **取值范围**： - ONLINE：正常运行。 - FROZEN：已冻结。  **默认取值**：不涉及
     * guaranteed  **参数解释**：是否独享型LB。  **约束限制**：不涉及  **取值范围**： - false：共享型 - true：独享型  **默认取值**：不涉及
-    * vpcId  **参数解释**：负载均衡器所在的VPC ID。 支持多值查询，查询条件格式： *vpc_id=xxx&vpc_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * vpcId  **参数解释**：负载均衡器所在的VPC ID。 支持多值查询，查询条件格式：*vpc_id=xxx&vpc_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * vipPortId  **参数解释**：负载均衡器的IPv4对应的port ID。 支持多值查询，查询条件格式： *vip_port_id=xxx&vip_port_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * vipAddress  **参数解释**：负载均衡器的IPv4私网IP地址。 支持多值查询，查询条件格式： *vip_address=xxx&vip_address=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * vipSubnetCidrId  **参数解释**：负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。 支持多值查询，查询条件格式： *vip_subnet_cidr_id=xxx&vip_subnet_cidr_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
@@ -113,7 +113,7 @@ class ListLoadBalancersRequest implements ModelInterface, ArrayAccess
     * provisioningStatus  **参数解释**：负载均衡器的配置状态。 支持多值查询，查询条件格式： *provisioning_status=xxx&provisioning_status=xxx*。  **约束限制**：不涉及  **取值范围**： - ACTIVE：使用中。 - PENDING_DELETE：删除中。  **默认取值**：不涉及
     * operatingStatus  **参数解释**：负载均衡器的操作状态。 支持多值查询，查询条件格式： *operating_status=xxx&operating_status=xxx*。  **约束限制**：不涉及  **取值范围**： - ONLINE：正常运行。 - FROZEN：已冻结。  **默认取值**：不涉及
     * guaranteed  **参数解释**：是否独享型LB。  **约束限制**：不涉及  **取值范围**： - false：共享型 - true：独享型  **默认取值**：不涉及
-    * vpcId  **参数解释**：负载均衡器所在的VPC ID。 支持多值查询，查询条件格式： *vpc_id=xxx&vpc_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * vpcId  **参数解释**：负载均衡器所在的VPC ID。 支持多值查询，查询条件格式：*vpc_id=xxx&vpc_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * vipPortId  **参数解释**：负载均衡器的IPv4对应的port ID。 支持多值查询，查询条件格式： *vip_port_id=xxx&vip_port_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * vipAddress  **参数解释**：负载均衡器的IPv4私网IP地址。 支持多值查询，查询条件格式： *vip_address=xxx&vip_address=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * vipSubnetCidrId  **参数解释**：负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。 支持多值查询，查询条件格式： *vip_subnet_cidr_id=xxx&vip_subnet_cidr_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
@@ -216,7 +216,7 @@ class ListLoadBalancersRequest implements ModelInterface, ArrayAccess
     * provisioningStatus  **参数解释**：负载均衡器的配置状态。 支持多值查询，查询条件格式： *provisioning_status=xxx&provisioning_status=xxx*。  **约束限制**：不涉及  **取值范围**： - ACTIVE：使用中。 - PENDING_DELETE：删除中。  **默认取值**：不涉及
     * operatingStatus  **参数解释**：负载均衡器的操作状态。 支持多值查询，查询条件格式： *operating_status=xxx&operating_status=xxx*。  **约束限制**：不涉及  **取值范围**： - ONLINE：正常运行。 - FROZEN：已冻结。  **默认取值**：不涉及
     * guaranteed  **参数解释**：是否独享型LB。  **约束限制**：不涉及  **取值范围**： - false：共享型 - true：独享型  **默认取值**：不涉及
-    * vpcId  **参数解释**：负载均衡器所在的VPC ID。 支持多值查询，查询条件格式： *vpc_id=xxx&vpc_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * vpcId  **参数解释**：负载均衡器所在的VPC ID。 支持多值查询，查询条件格式：*vpc_id=xxx&vpc_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * vipPortId  **参数解释**：负载均衡器的IPv4对应的port ID。 支持多值查询，查询条件格式： *vip_port_id=xxx&vip_port_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * vipAddress  **参数解释**：负载均衡器的IPv4私网IP地址。 支持多值查询，查询条件格式： *vip_address=xxx&vip_address=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * vipSubnetCidrId  **参数解释**：负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。 支持多值查询，查询条件格式： *vip_subnet_cidr_id=xxx&vip_subnet_cidr_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
@@ -298,7 +298,7 @@ class ListLoadBalancersRequest implements ModelInterface, ArrayAccess
     * provisioningStatus  **参数解释**：负载均衡器的配置状态。 支持多值查询，查询条件格式： *provisioning_status=xxx&provisioning_status=xxx*。  **约束限制**：不涉及  **取值范围**： - ACTIVE：使用中。 - PENDING_DELETE：删除中。  **默认取值**：不涉及
     * operatingStatus  **参数解释**：负载均衡器的操作状态。 支持多值查询，查询条件格式： *operating_status=xxx&operating_status=xxx*。  **约束限制**：不涉及  **取值范围**： - ONLINE：正常运行。 - FROZEN：已冻结。  **默认取值**：不涉及
     * guaranteed  **参数解释**：是否独享型LB。  **约束限制**：不涉及  **取值范围**： - false：共享型 - true：独享型  **默认取值**：不涉及
-    * vpcId  **参数解释**：负载均衡器所在的VPC ID。 支持多值查询，查询条件格式： *vpc_id=xxx&vpc_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * vpcId  **参数解释**：负载均衡器所在的VPC ID。 支持多值查询，查询条件格式：*vpc_id=xxx&vpc_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * vipPortId  **参数解释**：负载均衡器的IPv4对应的port ID。 支持多值查询，查询条件格式： *vip_port_id=xxx&vip_port_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * vipAddress  **参数解释**：负载均衡器的IPv4私网IP地址。 支持多值查询，查询条件格式： *vip_address=xxx&vip_address=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * vipSubnetCidrId  **参数解释**：负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。 支持多值查询，查询条件格式： *vip_subnet_cidr_id=xxx&vip_subnet_cidr_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
@@ -380,7 +380,7 @@ class ListLoadBalancersRequest implements ModelInterface, ArrayAccess
     * provisioningStatus  **参数解释**：负载均衡器的配置状态。 支持多值查询，查询条件格式： *provisioning_status=xxx&provisioning_status=xxx*。  **约束限制**：不涉及  **取值范围**： - ACTIVE：使用中。 - PENDING_DELETE：删除中。  **默认取值**：不涉及
     * operatingStatus  **参数解释**：负载均衡器的操作状态。 支持多值查询，查询条件格式： *operating_status=xxx&operating_status=xxx*。  **约束限制**：不涉及  **取值范围**： - ONLINE：正常运行。 - FROZEN：已冻结。  **默认取值**：不涉及
     * guaranteed  **参数解释**：是否独享型LB。  **约束限制**：不涉及  **取值范围**： - false：共享型 - true：独享型  **默认取值**：不涉及
-    * vpcId  **参数解释**：负载均衡器所在的VPC ID。 支持多值查询，查询条件格式： *vpc_id=xxx&vpc_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * vpcId  **参数解释**：负载均衡器所在的VPC ID。 支持多值查询，查询条件格式：*vpc_id=xxx&vpc_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * vipPortId  **参数解释**：负载均衡器的IPv4对应的port ID。 支持多值查询，查询条件格式： *vip_port_id=xxx&vip_port_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * vipAddress  **参数解释**：负载均衡器的IPv4私网IP地址。 支持多值查询，查询条件格式： *vip_address=xxx&vip_address=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * vipSubnetCidrId  **参数解释**：负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。 支持多值查询，查询条件格式： *vip_subnet_cidr_id=xxx&vip_subnet_cidr_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
@@ -840,7 +840,7 @@ class ListLoadBalancersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  **参数解释**：负载均衡器所在的VPC ID。 支持多值查询，查询条件格式： *vpc_id=xxx&vpc_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    *  **参数解释**：负载均衡器所在的VPC ID。 支持多值查询，查询条件格式：*vpc_id=xxx&vpc_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string[]|null
     */
@@ -852,7 +852,7 @@ class ListLoadBalancersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string[]|null $vpcId **参数解释**：负载均衡器所在的VPC ID。 支持多值查询，查询条件格式： *vpc_id=xxx&vpc_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * @param string[]|null $vpcId **参数解释**：负载均衡器所在的VPC ID。 支持多值查询，查询条件格式：*vpc_id=xxx&vpc_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */

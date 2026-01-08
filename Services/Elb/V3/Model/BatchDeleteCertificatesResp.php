@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\SecMaster\V1\Model;
+namespace HuaweiCloud\SDK\Elb\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class GenericActionRequestBody implements ModelInterface, ArrayAccess
+class BatchDeleteCertificatesResp implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,34 @@ class GenericActionRequestBody implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'GenericActionRequestBody';
+    protected static $openAPIModelName = 'BatchDeleteCertificatesResp';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  表示具体行为的类型。命名为“t_行为名称”。例如 \"t_dialog_feedback\" 。
-    * workspaceId  workspace ID
-    * parameter  具体行为的数据内容，其结构由'action'字段决定。 - 回答质量人工反馈action: t_dialog_feedback, 参考DialogFeedbackData结构
+    * id  证书ID。
+    * retStatus  对应id的证书删除后的结果，not found表示证书不存在，successful表示删除成功
+    * retCode  错误码，删除失败时返回此字段
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'type' => 'string',
-            'workspaceId' => 'string',
-            'parameter' => 'object'
+            'id' => 'string',
+            'retStatus' => 'string',
+            'retCode' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  表示具体行为的类型。命名为“t_行为名称”。例如 \"t_dialog_feedback\" 。
-    * workspaceId  workspace ID
-    * parameter  具体行为的数据内容，其结构由'action'字段决定。 - 回答质量人工反馈action: t_dialog_feedback, 参考DialogFeedbackData结构
+    * id  证书ID。
+    * retStatus  对应id的证书删除后的结果，not found表示证书不存在，successful表示删除成功
+    * retCode  错误码，删除失败时返回此字段
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'type' => null,
-        'workspaceId' => null,
-        'parameter' => null
+        'id' => null,
+        'retStatus' => null,
+        'retCode' => null
     ];
 
     /**
@@ -69,44 +69,44 @@ class GenericActionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  表示具体行为的类型。命名为“t_行为名称”。例如 \"t_dialog_feedback\" 。
-    * workspaceId  workspace ID
-    * parameter  具体行为的数据内容，其结构由'action'字段决定。 - 回答质量人工反馈action: t_dialog_feedback, 参考DialogFeedbackData结构
+    * id  证书ID。
+    * retStatus  对应id的证书删除后的结果，not found表示证书不存在，successful表示删除成功
+    * retCode  错误码，删除失败时返回此字段
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'type' => 'type',
-            'workspaceId' => 'workspace_id',
-            'parameter' => 'parameter'
+            'id' => 'id',
+            'retStatus' => 'ret_status',
+            'retCode' => 'ret_code'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  表示具体行为的类型。命名为“t_行为名称”。例如 \"t_dialog_feedback\" 。
-    * workspaceId  workspace ID
-    * parameter  具体行为的数据内容，其结构由'action'字段决定。 - 回答质量人工反馈action: t_dialog_feedback, 参考DialogFeedbackData结构
+    * id  证书ID。
+    * retStatus  对应id的证书删除后的结果，not found表示证书不存在，successful表示删除成功
+    * retCode  错误码，删除失败时返回此字段
     *
     * @var string[]
     */
     protected static $setters = [
-            'type' => 'setType',
-            'workspaceId' => 'setWorkspaceId',
-            'parameter' => 'setParameter'
+            'id' => 'setId',
+            'retStatus' => 'setRetStatus',
+            'retCode' => 'setRetCode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  表示具体行为的类型。命名为“t_行为名称”。例如 \"t_dialog_feedback\" 。
-    * workspaceId  workspace ID
-    * parameter  具体行为的数据内容，其结构由'action'字段决定。 - 回答质量人工反馈action: t_dialog_feedback, 参考DialogFeedbackData结构
+    * id  证书ID。
+    * retStatus  对应id的证书删除后的结果，not found表示证书不存在，successful表示删除成功
+    * retCode  错误码，删除失败时返回此字段
     *
     * @var string[]
     */
     protected static $getters = [
-            'type' => 'getType',
-            'workspaceId' => 'getWorkspaceId',
-            'parameter' => 'getParameter'
+            'id' => 'getId',
+            'retStatus' => 'getRetStatus',
+            'retCode' => 'getRetCode'
     ];
 
     /**
@@ -167,9 +167,9 @@ class GenericActionRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['workspaceId'] = isset($data['workspaceId']) ? $data['workspaceId'] : null;
-        $this->container['parameter'] = isset($data['parameter']) ? $data['parameter'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['retStatus'] = isset($data['retStatus']) ? $data['retStatus'] : null;
+        $this->container['retCode'] = isset($data['retCode']) ? $data['retCode'] : null;
     }
 
     /**
@@ -180,23 +180,11 @@ class GenericActionRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
         }
-            if ((mb_strlen($this->container['type']) > 64)) {
-                $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 64.";
-            }
-            if ((mb_strlen($this->container['type']) < 1)) {
-                $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['workspaceId']) && (mb_strlen($this->container['workspaceId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'workspaceId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['workspaceId']) && (mb_strlen($this->container['workspaceId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'workspaceId', the character length must be bigger than or equal to 0.";
-            }
-        if ($this->container['parameter'] === null) {
-            $invalidProperties[] = "'parameter' can't be null";
+        if ($this->container['retStatus'] === null) {
+            $invalidProperties[] = "'retStatus' can't be null";
         }
         return $invalidProperties;
     }
@@ -213,74 +201,74 @@ class GenericActionRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets type
-    *  表示具体行为的类型。命名为“t_行为名称”。例如 \"t_dialog_feedback\" 。
+    * Gets id
+    *  证书ID。
     *
     * @return string
     */
-    public function getType()
+    public function getId()
     {
-        return $this->container['type'];
+        return $this->container['id'];
     }
 
     /**
-    * Sets type
+    * Sets id
     *
-    * @param string $type 表示具体行为的类型。命名为“t_行为名称”。例如 \"t_dialog_feedback\" 。
+    * @param string $id 证书ID。
     *
     * @return $this
     */
-    public function setType($type)
+    public function setId($id)
     {
-        $this->container['type'] = $type;
+        $this->container['id'] = $id;
         return $this;
     }
 
     /**
-    * Gets workspaceId
-    *  workspace ID
+    * Gets retStatus
+    *  对应id的证书删除后的结果，not found表示证书不存在，successful表示删除成功
+    *
+    * @return string
+    */
+    public function getRetStatus()
+    {
+        return $this->container['retStatus'];
+    }
+
+    /**
+    * Sets retStatus
+    *
+    * @param string $retStatus 对应id的证书删除后的结果，not found表示证书不存在，successful表示删除成功
+    *
+    * @return $this
+    */
+    public function setRetStatus($retStatus)
+    {
+        $this->container['retStatus'] = $retStatus;
+        return $this;
+    }
+
+    /**
+    * Gets retCode
+    *  错误码，删除失败时返回此字段
     *
     * @return string|null
     */
-    public function getWorkspaceId()
+    public function getRetCode()
     {
-        return $this->container['workspaceId'];
+        return $this->container['retCode'];
     }
 
     /**
-    * Sets workspaceId
+    * Sets retCode
     *
-    * @param string|null $workspaceId workspace ID
+    * @param string|null $retCode 错误码，删除失败时返回此字段
     *
     * @return $this
     */
-    public function setWorkspaceId($workspaceId)
+    public function setRetCode($retCode)
     {
-        $this->container['workspaceId'] = $workspaceId;
-        return $this;
-    }
-
-    /**
-    * Gets parameter
-    *  具体行为的数据内容，其结构由'action'字段决定。 - 回答质量人工反馈action: t_dialog_feedback, 参考DialogFeedbackData结构
-    *
-    * @return object
-    */
-    public function getParameter()
-    {
-        return $this->container['parameter'];
-    }
-
-    /**
-    * Sets parameter
-    *
-    * @param object $parameter 具体行为的数据内容，其结构由'action'字段决定。 - 回答质量人工反馈action: t_dialog_feedback, 参考DialogFeedbackData结构
-    *
-    * @return $this
-    */
-    public function setParameter($parameter)
-    {
-        $this->container['parameter'] = $parameter;
+        $this->container['retCode'] = $retCode;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class TopPathSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * path  path值。
-    * value  对应查询类型的值。（流量单位：Byte）
+    * path  top100 path访问路径
+    * value  top100path访问次数
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class TopPathSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * path  path值。
-    * value  对应查询类型的值。（流量单位：Byte）
+    * path  top100 path访问路径
+    * value  top100path访问次数
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class TopPathSummary implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * path  path值。
-    * value  对应查询类型的值。（流量单位：Byte）
+    * path  top100 path访问路径
+    * value  top100path访问次数
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class TopPathSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * path  path值。
-    * value  对应查询类型的值。（流量单位：Byte）
+    * path  top100 path访问路径
+    * value  top100path访问次数
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class TopPathSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * path  path值。
-    * value  对应查询类型的值。（流量单位：Byte）
+    * path  top100 path访问路径
+    * value  top100path访问次数
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class TopPathSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets path
-    *  path值。
+    *  top100 path访问路径
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class TopPathSummary implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string|null $path path值。
+    * @param string|null $path top100 path访问路径
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class TopPathSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  对应查询类型的值。（流量单位：Byte）
+    *  top100path访问次数
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class TopPathSummary implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param int|null $value 对应查询类型的值。（流量单位：Byte）
+    * @param int|null $value top100path访问次数
     *
     * @return $this
     */

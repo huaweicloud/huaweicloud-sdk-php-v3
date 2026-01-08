@@ -21,20 +21,22 @@ class UpgradeNodePoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * jobid  Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'jobid' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * jobid  Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'jobid' => 'uuid'
     ];
 
     /**
@@ -60,29 +62,32 @@ class UpgradeNodePoolResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * jobid  Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'jobid' => 'jobid'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * jobid  Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
     *
     * @var string[]
     */
     protected static $setters = [
+            'jobid' => 'setJobid'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * jobid  Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
     *
     * @var string[]
     */
     protected static $getters = [
+            'jobid' => 'getJobid'
     ];
 
     /**
@@ -143,6 +148,7 @@ class UpgradeNodePoolResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['jobid'] = isset($data['jobid']) ? $data['jobid'] : null;
     }
 
     /**
@@ -165,6 +171,30 @@ class UpgradeNodePoolResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets jobid
+    *  Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
+    *
+    * @return string|null
+    */
+    public function getJobid()
+    {
+        return $this->container['jobid'];
+    }
+
+    /**
+    * Sets jobid
+    *
+    * @param string|null $jobid Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
+    *
+    * @return $this
+    */
+    public function setJobid($jobid)
+    {
+        $this->container['jobid'] = $jobid;
+        return $this;
     }
 
     /**

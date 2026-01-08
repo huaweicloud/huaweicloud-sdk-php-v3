@@ -21,7 +21,7 @@ class ListNatGatewaySpecsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * specs  可创建的NAT网关实例列表  取值范围：  “1”：小型，SNAT最大连接数10000  “2”：中型，SNAT最大连接数50000  “3”：大型，SNAT最大连接数200000  “4”：超大型，SNAT最大连接数1000000  “5”：企业型，SNAT最大连接数10000000
+    * specs  可创建的NAT网关实例列表 取值范围： - 1：小型，SNAT最大连接数10000 - 2：中型，SNAT最大连接数50000 - 3：大型，SNAT最大连接数200000 - 4：超大型，SNAT最大连接数1000000 - 5：企业型，SNAT最大连接数10000000
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListNatGatewaySpecsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * specs  可创建的NAT网关实例列表  取值范围：  “1”：小型，SNAT最大连接数10000  “2”：中型，SNAT最大连接数50000  “3”：大型，SNAT最大连接数200000  “4”：超大型，SNAT最大连接数1000000  “5”：企业型，SNAT最大连接数10000000
+    * specs  可创建的NAT网关实例列表 取值范围： - 1：小型，SNAT最大连接数10000 - 2：中型，SNAT最大连接数50000 - 3：大型，SNAT最大连接数200000 - 4：超大型，SNAT最大连接数1000000 - 5：企业型，SNAT最大连接数10000000
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListNatGatewaySpecsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * specs  可创建的NAT网关实例列表  取值范围：  “1”：小型，SNAT最大连接数10000  “2”：中型，SNAT最大连接数50000  “3”：大型，SNAT最大连接数200000  “4”：超大型，SNAT最大连接数1000000  “5”：企业型，SNAT最大连接数10000000
+    * specs  可创建的NAT网关实例列表 取值范围： - 1：小型，SNAT最大连接数10000 - 2：中型，SNAT最大连接数50000 - 3：大型，SNAT最大连接数200000 - 4：超大型，SNAT最大连接数1000000 - 5：企业型，SNAT最大连接数10000000
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListNatGatewaySpecsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * specs  可创建的NAT网关实例列表  取值范围：  “1”：小型，SNAT最大连接数10000  “2”：中型，SNAT最大连接数50000  “3”：大型，SNAT最大连接数200000  “4”：超大型，SNAT最大连接数1000000  “5”：企业型，SNAT最大连接数10000000
+    * specs  可创建的NAT网关实例列表 取值范围： - 1：小型，SNAT最大连接数10000 - 2：中型，SNAT最大连接数50000 - 3：大型，SNAT最大连接数200000 - 4：超大型，SNAT最大连接数1000000 - 5：企业型，SNAT最大连接数10000000
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListNatGatewaySpecsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * specs  可创建的NAT网关实例列表  取值范围：  “1”：小型，SNAT最大连接数10000  “2”：中型，SNAT最大连接数50000  “3”：大型，SNAT最大连接数200000  “4”：超大型，SNAT最大连接数1000000  “5”：企业型，SNAT最大连接数10000000
+    * specs  可创建的NAT网关实例列表 取值范围： - 1：小型，SNAT最大连接数10000 - 2：中型，SNAT最大连接数50000 - 3：大型，SNAT最大连接数200000 - 4：超大型，SNAT最大连接数1000000 - 5：企业型，SNAT最大连接数10000000
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class ListNatGatewaySpecsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets specs
-    *  可创建的NAT网关实例列表  取值范围：  “1”：小型，SNAT最大连接数10000  “2”：中型，SNAT最大连接数50000  “3”：大型，SNAT最大连接数200000  “4”：超大型，SNAT最大连接数1000000  “5”：企业型，SNAT最大连接数10000000
+    *  可创建的NAT网关实例列表 取值范围： - 1：小型，SNAT最大连接数10000 - 2：中型，SNAT最大连接数50000 - 3：大型，SNAT最大连接数200000 - 4：超大型，SNAT最大连接数1000000 - 5：企业型，SNAT最大连接数10000000
     *
     * @return string[]|null
     */
@@ -208,7 +208,7 @@ class ListNatGatewaySpecsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets specs
     *
-    * @param string[]|null $specs 可创建的NAT网关实例列表  取值范围：  “1”：小型，SNAT最大连接数10000  “2”：中型，SNAT最大连接数50000  “3”：大型，SNAT最大连接数200000  “4”：超大型，SNAT最大连接数1000000  “5”：企业型，SNAT最大连接数10000000
+    * @param string[]|null $specs 可创建的NAT网关实例列表 取值范围： - 1：小型，SNAT最大连接数10000 - 2：中型，SNAT最大连接数50000 - 3：大型，SNAT最大连接数200000 - 4：超大型，SNAT最大连接数1000000 - 5：企业型，SNAT最大连接数10000000
     *
     * @return $this
     */

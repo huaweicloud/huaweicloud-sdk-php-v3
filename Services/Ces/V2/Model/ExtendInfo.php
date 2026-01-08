@@ -20,17 +20,17 @@ class ExtendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * filter  表示指标聚合方式，average表示平均值，min表示最小值，max表示最大值，sum表示求合
-    * period  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}''
-    * displayTime  展示时间，0表示使用自定义时间展示， 5分钟，15分钟，30分钟，1小时，2小时，3小时，12小时，24小时，7天，30天
-    * refreshTime  刷新时间 0秒表示不刷新,10秒，1分钟，5分钟，20分钟
-    * from  开始时间
-    * to  结束时间
-    * screenColor  监控大屏背景颜色
-    * enableScreenAutoPlay  监控大屏是否自动切换
-    * timeInterval  监控大屏自动切换时间间隔，10000代表10s，30000代表30s，60000代表1min
-    * enableLegend  是否开启图例
-    * fullScreenWidgetNum  大屏展示视图数量, 可以取的值必须与console页面可选值保持一致
+    * filter  **参数解释** 表示指标聚合方式 **约束限制** 不涉及 **取值范围** 枚举值： - average 平均值 - min 最小值 - max 最大值 - sum 求和值 **默认取值** 不涉及
+    * period  **参数解释** 表示指标聚合周期 **约束限制** 不涉及 **取值范围** - 1 原始值 - 60 一分钟 - 300 5分钟 - 1200 20分钟 - 3600 1小时 - 14400 4小时 - 86400 1天 **默认取值** 不涉及
+    * displayTime  **参数解释** 展示时间 **约束限制** 不涉及 **取值范围** 枚举值： - 0 自定义时间 - 5 5分钟 - 15 15分钟 - 30 30分钟 - 60 1小时 - 120 2小时 - 180 3小时 - 720 12小时 - 1440 24小时 - 10080 7天 - 43200 30天 **默认取值** 不涉及
+    * refreshTime  **参数解释** 刷新时间 **约束限制** 不涉及 **取值范围** 枚举值： - 0 不刷新 - 10 10秒 - 60 1分钟 - 300 5分钟 - 1200 20分钟 **默认取值** 不涉及
+    * from  **参数解释** 开始时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
+    * to  **参数解释** 结束时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
+    * screenColor  **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度为[1,100]个字符 **默认取值** 不涉及
+    * enableScreenAutoPlay  **参数解释** 监控大屏是否自动切换 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
+    * timeInterval  **参数解释**  监控大屏自动切换时间间隔  **约束限制**  不涉及  **取值范围**  枚举值：  - 10000 10秒  - 30000 30秒  - 60000 1分钟  **默认取值**  不涉及
+    * enableLegend  **参数解释** 是否开启图例 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
+    * fullScreenWidgetNum  **参数解释** 大屏展示视图数量 **约束限制** 可以取的值必须与console页面可选值保持一致 **取值范围** 视图数量为[0,65535] **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class ExtendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * filter  表示指标聚合方式，average表示平均值，min表示最小值，max表示最大值，sum表示求合
-    * period  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}''
-    * displayTime  展示时间，0表示使用自定义时间展示， 5分钟，15分钟，30分钟，1小时，2小时，3小时，12小时，24小时，7天，30天
-    * refreshTime  刷新时间 0秒表示不刷新,10秒，1分钟，5分钟，20分钟
-    * from  开始时间
-    * to  结束时间
-    * screenColor  监控大屏背景颜色
-    * enableScreenAutoPlay  监控大屏是否自动切换
-    * timeInterval  监控大屏自动切换时间间隔，10000代表10s，30000代表30s，60000代表1min
-    * enableLegend  是否开启图例
-    * fullScreenWidgetNum  大屏展示视图数量, 可以取的值必须与console页面可选值保持一致
+    * filter  **参数解释** 表示指标聚合方式 **约束限制** 不涉及 **取值范围** 枚举值： - average 平均值 - min 最小值 - max 最大值 - sum 求和值 **默认取值** 不涉及
+    * period  **参数解释** 表示指标聚合周期 **约束限制** 不涉及 **取值范围** - 1 原始值 - 60 一分钟 - 300 5分钟 - 1200 20分钟 - 3600 1小时 - 14400 4小时 - 86400 1天 **默认取值** 不涉及
+    * displayTime  **参数解释** 展示时间 **约束限制** 不涉及 **取值范围** 枚举值： - 0 自定义时间 - 5 5分钟 - 15 15分钟 - 30 30分钟 - 60 1小时 - 120 2小时 - 180 3小时 - 720 12小时 - 1440 24小时 - 10080 7天 - 43200 30天 **默认取值** 不涉及
+    * refreshTime  **参数解释** 刷新时间 **约束限制** 不涉及 **取值范围** 枚举值： - 0 不刷新 - 10 10秒 - 60 1分钟 - 300 5分钟 - 1200 20分钟 **默认取值** 不涉及
+    * from  **参数解释** 开始时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
+    * to  **参数解释** 结束时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
+    * screenColor  **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度为[1,100]个字符 **默认取值** 不涉及
+    * enableScreenAutoPlay  **参数解释** 监控大屏是否自动切换 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
+    * timeInterval  **参数解释**  监控大屏自动切换时间间隔  **约束限制**  不涉及  **取值范围**  枚举值：  - 10000 10秒  - 30000 30秒  - 60000 1分钟  **默认取值**  不涉及
+    * enableLegend  **参数解释** 是否开启图例 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
+    * fullScreenWidgetNum  **参数解释** 大屏展示视图数量 **约束限制** 可以取的值必须与console页面可选值保持一致 **取值范围** 视图数量为[0,65535] **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * filter  表示指标聚合方式，average表示平均值，min表示最小值，max表示最大值，sum表示求合
-    * period  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}''
-    * displayTime  展示时间，0表示使用自定义时间展示， 5分钟，15分钟，30分钟，1小时，2小时，3小时，12小时，24小时，7天，30天
-    * refreshTime  刷新时间 0秒表示不刷新,10秒，1分钟，5分钟，20分钟
-    * from  开始时间
-    * to  结束时间
-    * screenColor  监控大屏背景颜色
-    * enableScreenAutoPlay  监控大屏是否自动切换
-    * timeInterval  监控大屏自动切换时间间隔，10000代表10s，30000代表30s，60000代表1min
-    * enableLegend  是否开启图例
-    * fullScreenWidgetNum  大屏展示视图数量, 可以取的值必须与console页面可选值保持一致
+    * filter  **参数解释** 表示指标聚合方式 **约束限制** 不涉及 **取值范围** 枚举值： - average 平均值 - min 最小值 - max 最大值 - sum 求和值 **默认取值** 不涉及
+    * period  **参数解释** 表示指标聚合周期 **约束限制** 不涉及 **取值范围** - 1 原始值 - 60 一分钟 - 300 5分钟 - 1200 20分钟 - 3600 1小时 - 14400 4小时 - 86400 1天 **默认取值** 不涉及
+    * displayTime  **参数解释** 展示时间 **约束限制** 不涉及 **取值范围** 枚举值： - 0 自定义时间 - 5 5分钟 - 15 15分钟 - 30 30分钟 - 60 1小时 - 120 2小时 - 180 3小时 - 720 12小时 - 1440 24小时 - 10080 7天 - 43200 30天 **默认取值** 不涉及
+    * refreshTime  **参数解释** 刷新时间 **约束限制** 不涉及 **取值范围** 枚举值： - 0 不刷新 - 10 10秒 - 60 1分钟 - 300 5分钟 - 1200 20分钟 **默认取值** 不涉及
+    * from  **参数解释** 开始时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
+    * to  **参数解释** 结束时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
+    * screenColor  **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度为[1,100]个字符 **默认取值** 不涉及
+    * enableScreenAutoPlay  **参数解释** 监控大屏是否自动切换 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
+    * timeInterval  **参数解释**  监控大屏自动切换时间间隔  **约束限制**  不涉及  **取值范围**  枚举值：  - 10000 10秒  - 30000 30秒  - 60000 1分钟  **默认取值**  不涉及
+    * enableLegend  **参数解释** 是否开启图例 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
+    * fullScreenWidgetNum  **参数解释** 大屏展示视图数量 **约束限制** 可以取的值必须与console页面可选值保持一致 **取值范围** 视图数量为[0,65535] **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class ExtendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * filter  表示指标聚合方式，average表示平均值，min表示最小值，max表示最大值，sum表示求合
-    * period  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}''
-    * displayTime  展示时间，0表示使用自定义时间展示， 5分钟，15分钟，30分钟，1小时，2小时，3小时，12小时，24小时，7天，30天
-    * refreshTime  刷新时间 0秒表示不刷新,10秒，1分钟，5分钟，20分钟
-    * from  开始时间
-    * to  结束时间
-    * screenColor  监控大屏背景颜色
-    * enableScreenAutoPlay  监控大屏是否自动切换
-    * timeInterval  监控大屏自动切换时间间隔，10000代表10s，30000代表30s，60000代表1min
-    * enableLegend  是否开启图例
-    * fullScreenWidgetNum  大屏展示视图数量, 可以取的值必须与console页面可选值保持一致
+    * filter  **参数解释** 表示指标聚合方式 **约束限制** 不涉及 **取值范围** 枚举值： - average 平均值 - min 最小值 - max 最大值 - sum 求和值 **默认取值** 不涉及
+    * period  **参数解释** 表示指标聚合周期 **约束限制** 不涉及 **取值范围** - 1 原始值 - 60 一分钟 - 300 5分钟 - 1200 20分钟 - 3600 1小时 - 14400 4小时 - 86400 1天 **默认取值** 不涉及
+    * displayTime  **参数解释** 展示时间 **约束限制** 不涉及 **取值范围** 枚举值： - 0 自定义时间 - 5 5分钟 - 15 15分钟 - 30 30分钟 - 60 1小时 - 120 2小时 - 180 3小时 - 720 12小时 - 1440 24小时 - 10080 7天 - 43200 30天 **默认取值** 不涉及
+    * refreshTime  **参数解释** 刷新时间 **约束限制** 不涉及 **取值范围** 枚举值： - 0 不刷新 - 10 10秒 - 60 1分钟 - 300 5分钟 - 1200 20分钟 **默认取值** 不涉及
+    * from  **参数解释** 开始时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
+    * to  **参数解释** 结束时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
+    * screenColor  **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度为[1,100]个字符 **默认取值** 不涉及
+    * enableScreenAutoPlay  **参数解释** 监控大屏是否自动切换 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
+    * timeInterval  **参数解释**  监控大屏自动切换时间间隔  **约束限制**  不涉及  **取值范围**  枚举值：  - 10000 10秒  - 30000 30秒  - 60000 1分钟  **默认取值**  不涉及
+    * enableLegend  **参数解释** 是否开启图例 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
+    * fullScreenWidgetNum  **参数解释** 大屏展示视图数量 **约束限制** 可以取的值必须与console页面可选值保持一致 **取值范围** 视图数量为[0,65535] **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class ExtendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * filter  表示指标聚合方式，average表示平均值，min表示最小值，max表示最大值，sum表示求合
-    * period  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}''
-    * displayTime  展示时间，0表示使用自定义时间展示， 5分钟，15分钟，30分钟，1小时，2小时，3小时，12小时，24小时，7天，30天
-    * refreshTime  刷新时间 0秒表示不刷新,10秒，1分钟，5分钟，20分钟
-    * from  开始时间
-    * to  结束时间
-    * screenColor  监控大屏背景颜色
-    * enableScreenAutoPlay  监控大屏是否自动切换
-    * timeInterval  监控大屏自动切换时间间隔，10000代表10s，30000代表30s，60000代表1min
-    * enableLegend  是否开启图例
-    * fullScreenWidgetNum  大屏展示视图数量, 可以取的值必须与console页面可选值保持一致
+    * filter  **参数解释** 表示指标聚合方式 **约束限制** 不涉及 **取值范围** 枚举值： - average 平均值 - min 最小值 - max 最大值 - sum 求和值 **默认取值** 不涉及
+    * period  **参数解释** 表示指标聚合周期 **约束限制** 不涉及 **取值范围** - 1 原始值 - 60 一分钟 - 300 5分钟 - 1200 20分钟 - 3600 1小时 - 14400 4小时 - 86400 1天 **默认取值** 不涉及
+    * displayTime  **参数解释** 展示时间 **约束限制** 不涉及 **取值范围** 枚举值： - 0 自定义时间 - 5 5分钟 - 15 15分钟 - 30 30分钟 - 60 1小时 - 120 2小时 - 180 3小时 - 720 12小时 - 1440 24小时 - 10080 7天 - 43200 30天 **默认取值** 不涉及
+    * refreshTime  **参数解释** 刷新时间 **约束限制** 不涉及 **取值范围** 枚举值： - 0 不刷新 - 10 10秒 - 60 1分钟 - 300 5分钟 - 1200 20分钟 **默认取值** 不涉及
+    * from  **参数解释** 开始时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
+    * to  **参数解释** 结束时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
+    * screenColor  **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度为[1,100]个字符 **默认取值** 不涉及
+    * enableScreenAutoPlay  **参数解释** 监控大屏是否自动切换 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
+    * timeInterval  **参数解释**  监控大屏自动切换时间间隔  **约束限制**  不涉及  **取值范围**  枚举值：  - 10000 10秒  - 30000 30秒  - 60000 1分钟  **默认取值**  不涉及
+    * enableLegend  **参数解释** 是否开启图例 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
+    * fullScreenWidgetNum  **参数解释** 大屏展示视图数量 **约束限制** 可以取的值必须与console页面可选值保持一致 **取值范围** 视图数量为[0,65535] **默认取值** 不涉及
     *
     * @var string[]
     */
@@ -439,7 +439,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets filter
-    *  表示指标聚合方式，average表示平均值，min表示最小值，max表示最大值，sum表示求合
+    *  **参数解释** 表示指标聚合方式 **约束限制** 不涉及 **取值范围** 枚举值： - average 平均值 - min 最小值 - max 最大值 - sum 求和值 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -451,7 +451,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Sets filter
     *
-    * @param string|null $filter 表示指标聚合方式，average表示平均值，min表示最小值，max表示最大值，sum表示求合
+    * @param string|null $filter **参数解释** 表示指标聚合方式 **约束限制** 不涉及 **取值范围** 枚举值： - average 平均值 - min 最小值 - max 最大值 - sum 求和值 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -463,7 +463,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets period
-    *  '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}''
+    *  **参数解释** 表示指标聚合周期 **约束限制** 不涉及 **取值范围** - 1 原始值 - 60 一分钟 - 300 5分钟 - 1200 20分钟 - 3600 1小时 - 14400 4小时 - 86400 1天 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -475,7 +475,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Sets period
     *
-    * @param string|null $period '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}''
+    * @param string|null $period **参数解释** 表示指标聚合周期 **约束限制** 不涉及 **取值范围** - 1 原始值 - 60 一分钟 - 300 5分钟 - 1200 20分钟 - 3600 1小时 - 14400 4小时 - 86400 1天 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -487,7 +487,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayTime
-    *  展示时间，0表示使用自定义时间展示， 5分钟，15分钟，30分钟，1小时，2小时，3小时，12小时，24小时，7天，30天
+    *  **参数解释** 展示时间 **约束限制** 不涉及 **取值范围** 枚举值： - 0 自定义时间 - 5 5分钟 - 15 15分钟 - 30 30分钟 - 60 1小时 - 120 2小时 - 180 3小时 - 720 12小时 - 1440 24小时 - 10080 7天 - 43200 30天 **默认取值** 不涉及
     *
     * @return int|null
     */
@@ -499,7 +499,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Sets displayTime
     *
-    * @param int|null $displayTime 展示时间，0表示使用自定义时间展示， 5分钟，15分钟，30分钟，1小时，2小时，3小时，12小时，24小时，7天，30天
+    * @param int|null $displayTime **参数解释** 展示时间 **约束限制** 不涉及 **取值范围** 枚举值： - 0 自定义时间 - 5 5分钟 - 15 15分钟 - 30 30分钟 - 60 1小时 - 120 2小时 - 180 3小时 - 720 12小时 - 1440 24小时 - 10080 7天 - 43200 30天 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -511,7 +511,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets refreshTime
-    *  刷新时间 0秒表示不刷新,10秒，1分钟，5分钟，20分钟
+    *  **参数解释** 刷新时间 **约束限制** 不涉及 **取值范围** 枚举值： - 0 不刷新 - 10 10秒 - 60 1分钟 - 300 5分钟 - 1200 20分钟 **默认取值** 不涉及
     *
     * @return int|null
     */
@@ -523,7 +523,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Sets refreshTime
     *
-    * @param int|null $refreshTime 刷新时间 0秒表示不刷新,10秒，1分钟，5分钟，20分钟
+    * @param int|null $refreshTime **参数解释** 刷新时间 **约束限制** 不涉及 **取值范围** 枚举值： - 0 不刷新 - 10 10秒 - 60 1分钟 - 300 5分钟 - 1200 20分钟 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -535,7 +535,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets from
-    *  开始时间
+    *  **参数解释** 开始时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
     *
     * @return int|null
     */
@@ -547,7 +547,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Sets from
     *
-    * @param int|null $from 开始时间
+    * @param int|null $from **参数解释** 开始时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
     *
     * @return $this
     */
@@ -559,7 +559,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets to
-    *  结束时间
+    *  **参数解释** 结束时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
     *
     * @return int|null
     */
@@ -571,7 +571,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Sets to
     *
-    * @param int|null $to 结束时间
+    * @param int|null $to **参数解释** 结束时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
     *
     * @return $this
     */
@@ -583,7 +583,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets screenColor
-    *  监控大屏背景颜色
+    *  **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度为[1,100]个字符 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -595,7 +595,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Sets screenColor
     *
-    * @param string|null $screenColor 监控大屏背景颜色
+    * @param string|null $screenColor **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度为[1,100]个字符 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -607,7 +607,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableScreenAutoPlay
-    *  监控大屏是否自动切换
+    *  **参数解释** 监控大屏是否自动切换 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
     *
     * @return bool|null
     */
@@ -619,7 +619,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enableScreenAutoPlay
     *
-    * @param bool|null $enableScreenAutoPlay 监控大屏是否自动切换
+    * @param bool|null $enableScreenAutoPlay **参数解释** 监控大屏是否自动切换 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -631,7 +631,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeInterval
-    *  监控大屏自动切换时间间隔，10000代表10s，30000代表30s，60000代表1min
+    *  **参数解释**  监控大屏自动切换时间间隔  **约束限制**  不涉及  **取值范围**  枚举值：  - 10000 10秒  - 30000 30秒  - 60000 1分钟  **默认取值**  不涉及
     *
     * @return int|null
     */
@@ -643,7 +643,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Sets timeInterval
     *
-    * @param int|null $timeInterval 监控大屏自动切换时间间隔，10000代表10s，30000代表30s，60000代表1min
+    * @param int|null $timeInterval **参数解释**  监控大屏自动切换时间间隔  **约束限制**  不涉及  **取值范围**  枚举值：  - 10000 10秒  - 30000 30秒  - 60000 1分钟  **默认取值**  不涉及
     *
     * @return $this
     */
@@ -655,7 +655,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableLegend
-    *  是否开启图例
+    *  **参数解释** 是否开启图例 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
     *
     * @return bool|null
     */
@@ -667,7 +667,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enableLegend
     *
-    * @param bool|null $enableLegend 是否开启图例
+    * @param bool|null $enableLegend **参数解释** 是否开启图例 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -679,7 +679,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fullScreenWidgetNum
-    *  大屏展示视图数量, 可以取的值必须与console页面可选值保持一致
+    *  **参数解释** 大屏展示视图数量 **约束限制** 可以取的值必须与console页面可选值保持一致 **取值范围** 视图数量为[0,65535] **默认取值** 不涉及
     *
     * @return int|null
     */
@@ -691,7 +691,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fullScreenWidgetNum
     *
-    * @param int|null $fullScreenWidgetNum 大屏展示视图数量, 可以取的值必须与console页面可选值保持一致
+    * @param int|null $fullScreenWidgetNum **参数解释** 大屏展示视图数量 **约束限制** 可以取的值必须与console页面可选值保持一致 **取值范围** 视图数量为[0,65535] **默认取值** 不涉及
     *
     * @return $this
     */

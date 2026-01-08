@@ -25,6 +25,7 @@ class CreateCondition implements ModelInterface, ArrayAccess
     * logicOperation  匹配逻辑，匹配逻辑根据字段类型变化，字段类型为ip时，匹配逻辑支持（equal：等于，not_equal：不等于），字段类型为url、header、params、cookie时，匹配逻辑支持（equal：等于，not_equal：不等于，contain：包含，not_contain：不包含，prefix：前缀为，not_prefix：前缀不为，suffix：后缀为，not_suffix：后缀不为，regular_match：正则匹配，regular_not_match：正则不匹配）
     * checkAllIndexesLogic  使用自定义子字段、字段类型为url或ip时不需要传check_all_indexes_logic参数，其它情况下（1：检查所有子字段，2：检查任意子字段）
     * index  字段类型为ip且子字段为客户端ip时，不需要传index参数；子字段类型为X-Forwarded-For时，值为x-forwarded-for；字段类型为params、header、cookie并且子字段为自定义时，index的值为自定义子字段
+    * valueListId  引用表id。当logic_operation参数以any或者all结尾时，需要传该参数。此外，引用表类型要与category类型保持一致。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class CreateCondition implements ModelInterface, ArrayAccess
             'contents' => 'string[]',
             'logicOperation' => 'string',
             'checkAllIndexesLogic' => 'int',
-            'index' => 'string'
+            'index' => 'string',
+            'valueListId' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class CreateCondition implements ModelInterface, ArrayAccess
     * logicOperation  匹配逻辑，匹配逻辑根据字段类型变化，字段类型为ip时，匹配逻辑支持（equal：等于，not_equal：不等于），字段类型为url、header、params、cookie时，匹配逻辑支持（equal：等于，not_equal：不等于，contain：包含，not_contain：不包含，prefix：前缀为，not_prefix：前缀不为，suffix：后缀为，not_suffix：后缀不为，regular_match：正则匹配，regular_not_match：正则不匹配）
     * checkAllIndexesLogic  使用自定义子字段、字段类型为url或ip时不需要传check_all_indexes_logic参数，其它情况下（1：检查所有子字段，2：检查任意子字段）
     * index  字段类型为ip且子字段为客户端ip时，不需要传index参数；子字段类型为X-Forwarded-For时，值为x-forwarded-for；字段类型为params、header、cookie并且子字段为自定义时，index的值为自定义子字段
+    * valueListId  引用表id。当logic_operation参数以any或者all结尾时，需要传该参数。此外，引用表类型要与category类型保持一致。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class CreateCondition implements ModelInterface, ArrayAccess
         'contents' => null,
         'logicOperation' => null,
         'checkAllIndexesLogic' => null,
-        'index' => null
+        'index' => null,
+        'valueListId' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class CreateCondition implements ModelInterface, ArrayAccess
     * logicOperation  匹配逻辑，匹配逻辑根据字段类型变化，字段类型为ip时，匹配逻辑支持（equal：等于，not_equal：不等于），字段类型为url、header、params、cookie时，匹配逻辑支持（equal：等于，not_equal：不等于，contain：包含，not_contain：不包含，prefix：前缀为，not_prefix：前缀不为，suffix：后缀为，not_suffix：后缀不为，regular_match：正则匹配，regular_not_match：正则不匹配）
     * checkAllIndexesLogic  使用自定义子字段、字段类型为url或ip时不需要传check_all_indexes_logic参数，其它情况下（1：检查所有子字段，2：检查任意子字段）
     * index  字段类型为ip且子字段为客户端ip时，不需要传index参数；子字段类型为X-Forwarded-For时，值为x-forwarded-for；字段类型为params、header、cookie并且子字段为自定义时，index的值为自定义子字段
+    * valueListId  引用表id。当logic_operation参数以any或者all结尾时，需要传该参数。此外，引用表类型要与category类型保持一致。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class CreateCondition implements ModelInterface, ArrayAccess
             'contents' => 'contents',
             'logicOperation' => 'logic_operation',
             'checkAllIndexesLogic' => 'check_all_indexes_logic',
-            'index' => 'index'
+            'index' => 'index',
+            'valueListId' => 'value_list_id'
     ];
 
     /**
@@ -100,6 +106,7 @@ class CreateCondition implements ModelInterface, ArrayAccess
     * logicOperation  匹配逻辑，匹配逻辑根据字段类型变化，字段类型为ip时，匹配逻辑支持（equal：等于，not_equal：不等于），字段类型为url、header、params、cookie时，匹配逻辑支持（equal：等于，not_equal：不等于，contain：包含，not_contain：不包含，prefix：前缀为，not_prefix：前缀不为，suffix：后缀为，not_suffix：后缀不为，regular_match：正则匹配，regular_not_match：正则不匹配）
     * checkAllIndexesLogic  使用自定义子字段、字段类型为url或ip时不需要传check_all_indexes_logic参数，其它情况下（1：检查所有子字段，2：检查任意子字段）
     * index  字段类型为ip且子字段为客户端ip时，不需要传index参数；子字段类型为X-Forwarded-For时，值为x-forwarded-for；字段类型为params、header、cookie并且子字段为自定义时，index的值为自定义子字段
+    * valueListId  引用表id。当logic_operation参数以any或者all结尾时，需要传该参数。此外，引用表类型要与category类型保持一致。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class CreateCondition implements ModelInterface, ArrayAccess
             'contents' => 'setContents',
             'logicOperation' => 'setLogicOperation',
             'checkAllIndexesLogic' => 'setCheckAllIndexesLogic',
-            'index' => 'setIndex'
+            'index' => 'setIndex',
+            'valueListId' => 'setValueListId'
     ];
 
     /**
@@ -118,6 +126,7 @@ class CreateCondition implements ModelInterface, ArrayAccess
     * logicOperation  匹配逻辑，匹配逻辑根据字段类型变化，字段类型为ip时，匹配逻辑支持（equal：等于，not_equal：不等于），字段类型为url、header、params、cookie时，匹配逻辑支持（equal：等于，not_equal：不等于，contain：包含，not_contain：不包含，prefix：前缀为，not_prefix：前缀不为，suffix：后缀为，not_suffix：后缀不为，regular_match：正则匹配，regular_not_match：正则不匹配）
     * checkAllIndexesLogic  使用自定义子字段、字段类型为url或ip时不需要传check_all_indexes_logic参数，其它情况下（1：检查所有子字段，2：检查任意子字段）
     * index  字段类型为ip且子字段为客户端ip时，不需要传index参数；子字段类型为X-Forwarded-For时，值为x-forwarded-for；字段类型为params、header、cookie并且子字段为自定义时，index的值为自定义子字段
+    * valueListId  引用表id。当logic_operation参数以any或者all结尾时，需要传该参数。此外，引用表类型要与category类型保持一致。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class CreateCondition implements ModelInterface, ArrayAccess
             'contents' => 'getContents',
             'logicOperation' => 'getLogicOperation',
             'checkAllIndexesLogic' => 'getCheckAllIndexesLogic',
-            'index' => 'getIndex'
+            'index' => 'getIndex',
+            'valueListId' => 'getValueListId'
     ];
 
     /**
@@ -192,6 +202,7 @@ class CreateCondition implements ModelInterface, ArrayAccess
         $this->container['logicOperation'] = isset($data['logicOperation']) ? $data['logicOperation'] : null;
         $this->container['checkAllIndexesLogic'] = isset($data['checkAllIndexesLogic']) ? $data['checkAllIndexesLogic'] : null;
         $this->container['index'] = isset($data['index']) ? $data['index'] : null;
+        $this->container['valueListId'] = isset($data['valueListId']) ? $data['valueListId'] : null;
     }
 
     /**
@@ -342,6 +353,30 @@ class CreateCondition implements ModelInterface, ArrayAccess
     public function setIndex($index)
     {
         $this->container['index'] = $index;
+        return $this;
+    }
+
+    /**
+    * Gets valueListId
+    *  引用表id。当logic_operation参数以any或者all结尾时，需要传该参数。此外，引用表类型要与category类型保持一致。
+    *
+    * @return string|null
+    */
+    public function getValueListId()
+    {
+        return $this->container['valueListId'];
+    }
+
+    /**
+    * Sets valueListId
+    *
+    * @param string|null $valueListId 引用表id。当logic_operation参数以any或者all结尾时，需要传该参数。此外，引用表类型要与category类型保持一致。
+    *
+    * @return $this
+    */
+    public function setValueListId($valueListId)
+    {
+        $this->container['valueListId'] = $valueListId;
         return $this;
     }
 

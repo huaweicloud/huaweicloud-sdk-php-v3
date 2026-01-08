@@ -20,6 +20,8 @@ class SlowSQLInfoResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * dbName  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
+    * schemaName  **参数解释**: SCHEMA名称。 **取值范围**: 不涉及。
     * sql  **参数解释**: 变量替换后的完整SQL。当sql_text不返回变量值时，sql返回空字符串。 **取值范围**: 不涉及。
     * sqlId  **参数解释**: SQL ID。 **取值范围**: 不涉及。
     * userName  **参数解释**: 用户名称。 **取值范围**: 不涉及。
@@ -39,6 +41,8 @@ class SlowSQLInfoResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'dbName' => 'string',
+            'schemaName' => 'string',
             'sql' => 'string',
             'sqlId' => 'string',
             'userName' => 'string',
@@ -58,6 +62,8 @@ class SlowSQLInfoResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * dbName  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
+    * schemaName  **参数解释**: SCHEMA名称。 **取值范围**: 不涉及。
     * sql  **参数解释**: 变量替换后的完整SQL。当sql_text不返回变量值时，sql返回空字符串。 **取值范围**: 不涉及。
     * sqlId  **参数解释**: SQL ID。 **取值范围**: 不涉及。
     * userName  **参数解释**: 用户名称。 **取值范围**: 不涉及。
@@ -77,6 +83,8 @@ class SlowSQLInfoResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'dbName' => null,
+        'schemaName' => null,
         'sql' => null,
         'sqlId' => null,
         'userName' => null,
@@ -117,6 +125,8 @@ class SlowSQLInfoResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * dbName  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
+    * schemaName  **参数解释**: SCHEMA名称。 **取值范围**: 不涉及。
     * sql  **参数解释**: 变量替换后的完整SQL。当sql_text不返回变量值时，sql返回空字符串。 **取值范围**: 不涉及。
     * sqlId  **参数解释**: SQL ID。 **取值范围**: 不涉及。
     * userName  **参数解释**: 用户名称。 **取值范围**: 不涉及。
@@ -136,6 +146,8 @@ class SlowSQLInfoResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'dbName' => 'db_name',
+            'schemaName' => 'schema_name',
             'sql' => 'sql',
             'sqlId' => 'sql_id',
             'userName' => 'user_name',
@@ -155,6 +167,8 @@ class SlowSQLInfoResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * dbName  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
+    * schemaName  **参数解释**: SCHEMA名称。 **取值范围**: 不涉及。
     * sql  **参数解释**: 变量替换后的完整SQL。当sql_text不返回变量值时，sql返回空字符串。 **取值范围**: 不涉及。
     * sqlId  **参数解释**: SQL ID。 **取值范围**: 不涉及。
     * userName  **参数解释**: 用户名称。 **取值范围**: 不涉及。
@@ -174,6 +188,8 @@ class SlowSQLInfoResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'dbName' => 'setDbName',
+            'schemaName' => 'setSchemaName',
             'sql' => 'setSql',
             'sqlId' => 'setSqlId',
             'userName' => 'setUserName',
@@ -193,6 +209,8 @@ class SlowSQLInfoResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * dbName  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
+    * schemaName  **参数解释**: SCHEMA名称。 **取值范围**: 不涉及。
     * sql  **参数解释**: 变量替换后的完整SQL。当sql_text不返回变量值时，sql返回空字符串。 **取值范围**: 不涉及。
     * sqlId  **参数解释**: SQL ID。 **取值范围**: 不涉及。
     * userName  **参数解释**: 用户名称。 **取值范围**: 不涉及。
@@ -212,6 +230,8 @@ class SlowSQLInfoResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'dbName' => 'getDbName',
+            'schemaName' => 'getSchemaName',
             'sql' => 'getSql',
             'sqlId' => 'getSqlId',
             'userName' => 'getUserName',
@@ -287,6 +307,8 @@ class SlowSQLInfoResult implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['dbName'] = isset($data['dbName']) ? $data['dbName'] : null;
+        $this->container['schemaName'] = isset($data['schemaName']) ? $data['schemaName'] : null;
         $this->container['sql'] = isset($data['sql']) ? $data['sql'] : null;
         $this->container['sqlId'] = isset($data['sqlId']) ? $data['sqlId'] : null;
         $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
@@ -324,6 +346,54 @@ class SlowSQLInfoResult implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets dbName
+    *  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDbName()
+    {
+        return $this->container['dbName'];
+    }
+
+    /**
+    * Sets dbName
+    *
+    * @param string|null $dbName **参数解释**: 数据库名称。 **取值范围**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setDbName($dbName)
+    {
+        $this->container['dbName'] = $dbName;
+        return $this;
+    }
+
+    /**
+    * Gets schemaName
+    *  **参数解释**: SCHEMA名称。 **取值范围**: 不涉及。
+    *
+    * @return string|null
+    */
+    public function getSchemaName()
+    {
+        return $this->container['schemaName'];
+    }
+
+    /**
+    * Sets schemaName
+    *
+    * @param string|null $schemaName **参数解释**: SCHEMA名称。 **取值范围**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setSchemaName($schemaName)
+    {
+        $this->container['schemaName'] = $schemaName;
+        return $this;
     }
 
     /**

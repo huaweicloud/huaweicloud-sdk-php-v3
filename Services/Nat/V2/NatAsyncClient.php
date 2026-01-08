@@ -1299,9 +1299,6 @@ class NatAsyncClient extends Client
         if ($localVarParams['transitServicePort'] !== null) {
             $queryParams['transit_service_port'] = $localVarParams['transitServicePort'];
         }
-        if ($localVarParams['transitIpAddress'] !== null) {
-            $queryParams['transit_ip_address'] = $localVarParams['transitIpAddress'];
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2008,7 +2005,7 @@ class NatAsyncClient extends Client
      *
      * - 为指定公网NAT网关实例批量添加或删除标签。
      * - 标签管理服务需要使用该接口批量管理实例的标签。
-     * - 一个资源上最多有10个标签。
+     * - 一个资源上最多有20个标签。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2211,7 +2208,7 @@ class NatAsyncClient extends Client
     /**
      * 添加公网NAT网关资源标签
      *
-     * - 添加公网NAT网关资源标签。一个资源上最多有10个标签。
+     * - 添加公网NAT网关资源标签。一个资源上最多有20个标签。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

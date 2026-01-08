@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Vpc\V3\Model;
+namespace HuaweiCloud\SDK\Elb\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ExtraDhcpOpt implements ModelInterface, ArrayAccess
+class ChangeListenerTagsRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,30 @@ class ExtraDhcpOpt implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ExtraDhcpOpt';
+    protected static $openAPIModelName = 'ChangeListenerTagsRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * optName  Option名称。
-    * optValue  Option值。
+    * listenerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'optName' => 'string',
-            'optValue' => 'string'
+            'listenerId' => 'string',
+            'body' => '\HuaweiCloud\SDK\Elb\V3\Model\ChangeListenerTagsRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * optName  Option名称。
-    * optValue  Option值。
+    * listenerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'optName' => null,
-        'optValue' => null
+        'listenerId' => null,
+        'body' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class ExtraDhcpOpt implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * optName  Option名称。
-    * optValue  Option值。
+    * listenerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'optName' => 'opt_name',
-            'optValue' => 'opt_value'
+            'listenerId' => 'listener_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * optName  Option名称。
-    * optValue  Option值。
+    * listenerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'optName' => 'setOptName',
-            'optValue' => 'setOptValue'
+            'listenerId' => 'setListenerId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * optName  Option名称。
-    * optValue  Option值。
+    * listenerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'optName' => 'getOptName',
-            'optValue' => 'getOptValue'
+            'listenerId' => 'getListenerId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -157,8 +157,8 @@ class ExtraDhcpOpt implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['optName'] = isset($data['optName']) ? $data['optName'] : null;
-        $this->container['optValue'] = isset($data['optValue']) ? $data['optValue'] : null;
+        $this->container['listenerId'] = isset($data['listenerId']) ? $data['listenerId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -169,6 +169,9 @@ class ExtraDhcpOpt implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['listenerId'] === null) {
+            $invalidProperties[] = "'listenerId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -184,50 +187,50 @@ class ExtraDhcpOpt implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets optName
-    *  Option名称。
+    * Gets listenerId
+    *  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
-    * @return string|null
+    * @return string
     */
-    public function getOptName()
+    public function getListenerId()
     {
-        return $this->container['optName'];
+        return $this->container['listenerId'];
     }
 
     /**
-    * Sets optName
+    * Sets listenerId
     *
-    * @param string|null $optName Option名称。
+    * @param string $listenerId **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
-    public function setOptName($optName)
+    public function setListenerId($listenerId)
     {
-        $this->container['optName'] = $optName;
+        $this->container['listenerId'] = $listenerId;
         return $this;
     }
 
     /**
-    * Gets optValue
-    *  Option值。
+    * Gets body
+    *  body
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\ChangeListenerTagsRequestBody|null
     */
-    public function getOptValue()
+    public function getBody()
     {
-        return $this->container['optValue'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets optValue
+    * Sets body
     *
-    * @param string|null $optValue Option值。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\ChangeListenerTagsRequestBody|null $body body
     *
     * @return $this
     */
-    public function setOptValue($optValue)
+    public function setBody($body)
     {
-        $this->container['optValue'] = $optValue;
+        $this->container['body'] = $body;
         return $this;
     }
 

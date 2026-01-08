@@ -20,7 +20,7 @@ class Member implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  **参数解释**：后端服务器ID。  **取值范围**：不涉及 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * id  **参数解释**：后端服务器ID。 **取值范围**：不涉及 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     * availabilityZone  **参数解释**：后端服务器所在的可用区。  **取值范围**：不涉及
     * name  **参数解释**：后端服务器名称。  **取值范围**：不涉及  注意：该名称并非ECS名称。
     * projectId  **参数解释**：后端服务器所在的项目ID。  **取值范围**：不涉及
@@ -35,7 +35,7 @@ class Member implements ModelInterface, ArrayAccess
     * reason  reason
     * createdAt  **参数解释**：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * updatedAt  **参数解释**：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
-    * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：跨VPC的member。 - instance：关联到ECS的member。
+    * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
     * instanceId  **参数解释**：member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）  **取值范围**：不涉及
     *
     * @var string[]
@@ -62,7 +62,7 @@ class Member implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  **参数解释**：后端服务器ID。  **取值范围**：不涉及 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * id  **参数解释**：后端服务器ID。 **取值范围**：不涉及 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     * availabilityZone  **参数解释**：后端服务器所在的可用区。  **取值范围**：不涉及
     * name  **参数解释**：后端服务器名称。  **取值范围**：不涉及  注意：该名称并非ECS名称。
     * projectId  **参数解释**：后端服务器所在的项目ID。  **取值范围**：不涉及
@@ -77,7 +77,7 @@ class Member implements ModelInterface, ArrayAccess
     * reason  reason
     * createdAt  **参数解释**：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * updatedAt  **参数解释**：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
-    * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：跨VPC的member。 - instance：关联到ECS的member。
+    * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
     * instanceId  **参数解释**：member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）  **取值范围**：不涉及
     *
     * @var string[]
@@ -125,7 +125,7 @@ class Member implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  **参数解释**：后端服务器ID。  **取值范围**：不涉及 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * id  **参数解释**：后端服务器ID。 **取值范围**：不涉及 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     * availabilityZone  **参数解释**：后端服务器所在的可用区。  **取值范围**：不涉及
     * name  **参数解释**：后端服务器名称。  **取值范围**：不涉及  注意：该名称并非ECS名称。
     * projectId  **参数解释**：后端服务器所在的项目ID。  **取值范围**：不涉及
@@ -140,7 +140,7 @@ class Member implements ModelInterface, ArrayAccess
     * reason  reason
     * createdAt  **参数解释**：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * updatedAt  **参数解释**：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
-    * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：跨VPC的member。 - instance：关联到ECS的member。
+    * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
     * instanceId  **参数解释**：member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）  **取值范围**：不涉及
     *
     * @var string[]
@@ -167,7 +167,7 @@ class Member implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  **参数解释**：后端服务器ID。  **取值范围**：不涉及 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * id  **参数解释**：后端服务器ID。 **取值范围**：不涉及 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     * availabilityZone  **参数解释**：后端服务器所在的可用区。  **取值范围**：不涉及
     * name  **参数解释**：后端服务器名称。  **取值范围**：不涉及  注意：该名称并非ECS名称。
     * projectId  **参数解释**：后端服务器所在的项目ID。  **取值范围**：不涉及
@@ -182,7 +182,7 @@ class Member implements ModelInterface, ArrayAccess
     * reason  reason
     * createdAt  **参数解释**：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * updatedAt  **参数解释**：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
-    * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：跨VPC的member。 - instance：关联到ECS的member。
+    * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
     * instanceId  **参数解释**：member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）  **取值范围**：不涉及
     *
     * @var string[]
@@ -209,7 +209,7 @@ class Member implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  **参数解释**：后端服务器ID。  **取值范围**：不涉及 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * id  **参数解释**：后端服务器ID。 **取值范围**：不涉及 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     * availabilityZone  **参数解释**：后端服务器所在的可用区。  **取值范围**：不涉及
     * name  **参数解释**：后端服务器名称。  **取值范围**：不涉及  注意：该名称并非ECS名称。
     * projectId  **参数解释**：后端服务器所在的项目ID。  **取值范围**：不涉及
@@ -224,7 +224,7 @@ class Member implements ModelInterface, ArrayAccess
     * reason  reason
     * createdAt  **参数解释**：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
     * updatedAt  **参数解释**：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
-    * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：跨VPC的member。 - instance：关联到ECS的member。
+    * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
     * instanceId  **参数解释**：member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）  **取值范围**：不涉及
     *
     * @var string[]
@@ -395,7 +395,7 @@ class Member implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  **参数解释**：后端服务器ID。  **取值范围**：不涉及 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    *  **参数解释**：后端服务器ID。 **取值范围**：不涉及 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     *
     * @return string
     */
@@ -407,7 +407,7 @@ class Member implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id **参数解释**：后端服务器ID。  **取值范围**：不涉及 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
+    * @param string $id **参数解释**：后端服务器ID。 **取值范围**：不涉及 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     *
     * @return $this
     */
@@ -755,7 +755,7 @@ class Member implements ModelInterface, ArrayAccess
 
     /**
     * Gets memberType
-    *  **参数解释**：后端服务器的类型。  **取值范围**： - ip：跨VPC的member。 - instance：关联到ECS的member。
+    *  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
     *
     * @return string|null
     */
@@ -767,7 +767,7 @@ class Member implements ModelInterface, ArrayAccess
     /**
     * Sets memberType
     *
-    * @param string|null $memberType **参数解释**：后端服务器的类型。  **取值范围**： - ip：跨VPC的member。 - instance：关联到ECS的member。
+    * @param string|null $memberType **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
     *
     * @return $this
     */

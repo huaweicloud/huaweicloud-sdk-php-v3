@@ -20,7 +20,7 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * periodType  订购周期类型，当前支持包月和包年: month: 包月 year: 包年
+    * periodType  订购周期类型，当前支持包月和包年: - month: 包月 - year: 包年
     * periodNum  订购周期数，取值会随运营策略变化。 period_type为month时，为[1,9]， period_type为year时，为[1,3]
     * isAutoRenew  是否自动续订； true：自动续订 false：不自动续订
     * isAutoPay  下单订购后，是否自动从客户的账户中支付; true：自动支付 false：不自动支付。
@@ -36,7 +36,7 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * periodType  订购周期类型，当前支持包月和包年: month: 包月 year: 包年
+    * periodType  订购周期类型，当前支持包月和包年: - month: 包月 - year: 包年
     * periodNum  订购周期数，取值会随运营策略变化。 period_type为month时，为[1,9]， period_type为year时，为[1,3]
     * isAutoRenew  是否自动续订； true：自动续订 false：不自动续订
     * isAutoPay  下单订购后，是否自动从客户的账户中支付; true：自动支付 false：不自动支付。
@@ -73,7 +73,7 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * periodType  订购周期类型，当前支持包月和包年: month: 包月 year: 包年
+    * periodType  订购周期类型，当前支持包月和包年: - month: 包月 - year: 包年
     * periodNum  订购周期数，取值会随运营策略变化。 period_type为month时，为[1,9]， period_type为year时，为[1,3]
     * isAutoRenew  是否自动续订； true：自动续订 false：不自动续订
     * isAutoPay  下单订购后，是否自动从客户的账户中支付; true：自动支付 false：不自动支付。
@@ -89,7 +89,7 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * periodType  订购周期类型，当前支持包月和包年: month: 包月 year: 包年
+    * periodType  订购周期类型，当前支持包月和包年: - month: 包月 - year: 包年
     * periodNum  订购周期数，取值会随运营策略变化。 period_type为month时，为[1,9]， period_type为year时，为[1,3]
     * isAutoRenew  是否自动续订； true：自动续订 false：不自动续订
     * isAutoPay  下单订购后，是否自动从客户的账户中支付; true：自动支付 false：不自动支付。
@@ -105,7 +105,7 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * periodType  订购周期类型，当前支持包月和包年: month: 包月 year: 包年
+    * periodType  订购周期类型，当前支持包月和包年: - month: 包月 - year: 包年
     * periodNum  订购周期数，取值会随运营策略变化。 period_type为month时，为[1,9]， period_type为year时，为[1,3]
     * isAutoRenew  是否自动续订； true：自动续订 false：不自动续订
     * isAutoPay  下单订购后，是否自动从客户的账户中支付; true：自动支付 false：不自动支付。
@@ -242,7 +242,7 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodType
-    *  订购周期类型，当前支持包月和包年: month: 包月 year: 包年
+    *  订购周期类型，当前支持包月和包年: - month: 包月 - year: 包年
     *
     * @return string
     */
@@ -254,7 +254,7 @@ class PrepaidOptions implements ModelInterface, ArrayAccess
     /**
     * Sets periodType
     *
-    * @param string $periodType 订购周期类型，当前支持包月和包年: month: 包月 year: 包年
+    * @param string $periodType 订购周期类型，当前支持包月和包年: - month: 包月 - year: 包年
     *
     * @return $this
     */

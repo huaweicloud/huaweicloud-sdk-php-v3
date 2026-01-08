@@ -25,6 +25,8 @@ class ImageWatermarkSetting implements ModelInterface, ArrayAccess
     * referpos  水印的位置。  取值如下： - TopRight：右上角。 - TopLeft：左上角。 - BottomRight：右下角。 - BottomLeft：左下角。
     * timelineStart  水印开始时间，与“timeline_duration”配合使用。  取值范围：数字。  单位：秒。
     * timelineDuration  水印持续时间，与“timeline_start”配合使用。  取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值：ToEND。
+    * randomTimeMin  轮转间隔时间最小值，单位：秒
+    * randomTimeMax  轮转间隔时间最大值，单位：秒
     * overlayInput  对应拼接列表中第几个片段打水印，从0开始，\"0表示第1个，“1”表示第二个，不带或填\"ALL\"表示所有拼接片源打水印。
     * input  input
     * base  水印叠加母体  取值如下： - input ：水印叠加在输入片源上，转码输出后实际大小按图像等比例缩放 - output ：水印叠加在转码输出文件上。
@@ -37,6 +39,8 @@ class ImageWatermarkSetting implements ModelInterface, ArrayAccess
             'referpos' => 'string',
             'timelineStart' => 'string',
             'timelineDuration' => 'string',
+            'randomTimeMin' => 'string',
+            'randomTimeMax' => 'string',
             'overlayInput' => 'string',
             'input' => '\HuaweiCloud\SDK\Mpc\V1\Model\ObsObjInfo',
             'base' => 'string'
@@ -49,6 +53,8 @@ class ImageWatermarkSetting implements ModelInterface, ArrayAccess
     * referpos  水印的位置。  取值如下： - TopRight：右上角。 - TopLeft：左上角。 - BottomRight：右下角。 - BottomLeft：左下角。
     * timelineStart  水印开始时间，与“timeline_duration”配合使用。  取值范围：数字。  单位：秒。
     * timelineDuration  水印持续时间，与“timeline_start”配合使用。  取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值：ToEND。
+    * randomTimeMin  轮转间隔时间最小值，单位：秒
+    * randomTimeMax  轮转间隔时间最大值，单位：秒
     * overlayInput  对应拼接列表中第几个片段打水印，从0开始，\"0表示第1个，“1”表示第二个，不带或填\"ALL\"表示所有拼接片源打水印。
     * input  input
     * base  水印叠加母体  取值如下： - input ：水印叠加在输入片源上，转码输出后实际大小按图像等比例缩放 - output ：水印叠加在转码输出文件上。
@@ -61,6 +67,8 @@ class ImageWatermarkSetting implements ModelInterface, ArrayAccess
         'referpos' => null,
         'timelineStart' => null,
         'timelineDuration' => null,
+        'randomTimeMin' => null,
+        'randomTimeMax' => null,
         'overlayInput' => null,
         'input' => null,
         'base' => null
@@ -94,6 +102,8 @@ class ImageWatermarkSetting implements ModelInterface, ArrayAccess
     * referpos  水印的位置。  取值如下： - TopRight：右上角。 - TopLeft：左上角。 - BottomRight：右下角。 - BottomLeft：左下角。
     * timelineStart  水印开始时间，与“timeline_duration”配合使用。  取值范围：数字。  单位：秒。
     * timelineDuration  水印持续时间，与“timeline_start”配合使用。  取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值：ToEND。
+    * randomTimeMin  轮转间隔时间最小值，单位：秒
+    * randomTimeMax  轮转间隔时间最大值，单位：秒
     * overlayInput  对应拼接列表中第几个片段打水印，从0开始，\"0表示第1个，“1”表示第二个，不带或填\"ALL\"表示所有拼接片源打水印。
     * input  input
     * base  水印叠加母体  取值如下： - input ：水印叠加在输入片源上，转码输出后实际大小按图像等比例缩放 - output ：水印叠加在转码输出文件上。
@@ -106,6 +116,8 @@ class ImageWatermarkSetting implements ModelInterface, ArrayAccess
             'referpos' => 'referpos',
             'timelineStart' => 'timeline_start',
             'timelineDuration' => 'timeline_duration',
+            'randomTimeMin' => 'random_time_min',
+            'randomTimeMax' => 'random_time_max',
             'overlayInput' => 'overlay_input',
             'input' => 'input',
             'base' => 'base'
@@ -118,6 +130,8 @@ class ImageWatermarkSetting implements ModelInterface, ArrayAccess
     * referpos  水印的位置。  取值如下： - TopRight：右上角。 - TopLeft：左上角。 - BottomRight：右下角。 - BottomLeft：左下角。
     * timelineStart  水印开始时间，与“timeline_duration”配合使用。  取值范围：数字。  单位：秒。
     * timelineDuration  水印持续时间，与“timeline_start”配合使用。  取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值：ToEND。
+    * randomTimeMin  轮转间隔时间最小值，单位：秒
+    * randomTimeMax  轮转间隔时间最大值，单位：秒
     * overlayInput  对应拼接列表中第几个片段打水印，从0开始，\"0表示第1个，“1”表示第二个，不带或填\"ALL\"表示所有拼接片源打水印。
     * input  input
     * base  水印叠加母体  取值如下： - input ：水印叠加在输入片源上，转码输出后实际大小按图像等比例缩放 - output ：水印叠加在转码输出文件上。
@@ -130,6 +144,8 @@ class ImageWatermarkSetting implements ModelInterface, ArrayAccess
             'referpos' => 'setReferpos',
             'timelineStart' => 'setTimelineStart',
             'timelineDuration' => 'setTimelineDuration',
+            'randomTimeMin' => 'setRandomTimeMin',
+            'randomTimeMax' => 'setRandomTimeMax',
             'overlayInput' => 'setOverlayInput',
             'input' => 'setInput',
             'base' => 'setBase'
@@ -142,6 +158,8 @@ class ImageWatermarkSetting implements ModelInterface, ArrayAccess
     * referpos  水印的位置。  取值如下： - TopRight：右上角。 - TopLeft：左上角。 - BottomRight：右下角。 - BottomLeft：左下角。
     * timelineStart  水印开始时间，与“timeline_duration”配合使用。  取值范围：数字。  单位：秒。
     * timelineDuration  水印持续时间，与“timeline_start”配合使用。  取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值：ToEND。
+    * randomTimeMin  轮转间隔时间最小值，单位：秒
+    * randomTimeMax  轮转间隔时间最大值，单位：秒
     * overlayInput  对应拼接列表中第几个片段打水印，从0开始，\"0表示第1个，“1”表示第二个，不带或填\"ALL\"表示所有拼接片源打水印。
     * input  input
     * base  水印叠加母体  取值如下： - input ：水印叠加在输入片源上，转码输出后实际大小按图像等比例缩放 - output ：水印叠加在转码输出文件上。
@@ -154,6 +172,8 @@ class ImageWatermarkSetting implements ModelInterface, ArrayAccess
             'referpos' => 'getReferpos',
             'timelineStart' => 'getTimelineStart',
             'timelineDuration' => 'getTimelineDuration',
+            'randomTimeMin' => 'getRandomTimeMin',
+            'randomTimeMax' => 'getRandomTimeMax',
             'overlayInput' => 'getOverlayInput',
             'input' => 'getInput',
             'base' => 'getBase'
@@ -237,6 +257,8 @@ class ImageWatermarkSetting implements ModelInterface, ArrayAccess
         $this->container['referpos'] = isset($data['referpos']) ? $data['referpos'] : null;
         $this->container['timelineStart'] = isset($data['timelineStart']) ? $data['timelineStart'] : null;
         $this->container['timelineDuration'] = isset($data['timelineDuration']) ? $data['timelineDuration'] : null;
+        $this->container['randomTimeMin'] = isset($data['randomTimeMin']) ? $data['randomTimeMin'] : null;
+        $this->container['randomTimeMax'] = isset($data['randomTimeMax']) ? $data['randomTimeMax'] : null;
         $this->container['overlayInput'] = isset($data['overlayInput']) ? $data['overlayInput'] : null;
         $this->container['input'] = isset($data['input']) ? $data['input'] : null;
         $this->container['base'] = isset($data['base']) ? $data['base'] : null;
@@ -279,6 +301,18 @@ class ImageWatermarkSetting implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['timelineDuration']) && (mb_strlen($this->container['timelineDuration']) < 0)) {
                 $invalidProperties[] = "invalid value for 'timelineDuration', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['randomTimeMin']) && (mb_strlen($this->container['randomTimeMin']) > 16)) {
+                $invalidProperties[] = "invalid value for 'randomTimeMin', the character length must be smaller than or equal to 16.";
+            }
+            if (!is_null($this->container['randomTimeMin']) && (mb_strlen($this->container['randomTimeMin']) < 0)) {
+                $invalidProperties[] = "invalid value for 'randomTimeMin', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['randomTimeMax']) && (mb_strlen($this->container['randomTimeMax']) > 16)) {
+                $invalidProperties[] = "invalid value for 'randomTimeMax', the character length must be smaller than or equal to 16.";
+            }
+            if (!is_null($this->container['randomTimeMax']) && (mb_strlen($this->container['randomTimeMax']) < 0)) {
+                $invalidProperties[] = "invalid value for 'randomTimeMax', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['overlayInput']) && (mb_strlen($this->container['overlayInput']) > 32)) {
                 $invalidProperties[] = "invalid value for 'overlayInput', the character length must be smaller than or equal to 32.";
@@ -431,6 +465,54 @@ class ImageWatermarkSetting implements ModelInterface, ArrayAccess
     public function setTimelineDuration($timelineDuration)
     {
         $this->container['timelineDuration'] = $timelineDuration;
+        return $this;
+    }
+
+    /**
+    * Gets randomTimeMin
+    *  轮转间隔时间最小值，单位：秒
+    *
+    * @return string|null
+    */
+    public function getRandomTimeMin()
+    {
+        return $this->container['randomTimeMin'];
+    }
+
+    /**
+    * Sets randomTimeMin
+    *
+    * @param string|null $randomTimeMin 轮转间隔时间最小值，单位：秒
+    *
+    * @return $this
+    */
+    public function setRandomTimeMin($randomTimeMin)
+    {
+        $this->container['randomTimeMin'] = $randomTimeMin;
+        return $this;
+    }
+
+    /**
+    * Gets randomTimeMax
+    *  轮转间隔时间最大值，单位：秒
+    *
+    * @return string|null
+    */
+    public function getRandomTimeMax()
+    {
+        return $this->container['randomTimeMax'];
+    }
+
+    /**
+    * Sets randomTimeMax
+    *
+    * @param string|null $randomTimeMax 轮转间隔时间最大值，单位：秒
+    *
+    * @return $this
+    */
+    public function setRandomTimeMax($randomTimeMax)
+    {
+        $this->container['randomTimeMax'] = $randomTimeMax;
         return $this;
     }
 

@@ -26,8 +26,8 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     * updateTime  **参数解释** 资源分组的修改时间，UNIX时间戳，单位毫秒；如：1603819753000。
     * enterpriseProjectId  **参数解释** 资源分组归属企业项目ID。 **取值范围** 只能包含小写字母、数字或-，长度为36个字符。或者为0，代表默认企业项目ID。
     * type  **参数解释** 资源分组添加资源方式。 **取值范围** - EPS: 表示匹配企业项目 - TAG: 表示匹配标签 - Manual: 表示手动添加 - COMB: 表示组合匹配 - NAME: 表示匹配实例名称
-    * status  **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
-    * eventStatus  **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
+    * status  **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
+    * eventStatus  **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
     * resourceStatistics  resourceStatistics
     * relatedEpIds  **参数解释** 当资源匹配规则为匹配企业项目时，指定的企业项目列表。
     * associationAlarmTemplates  **参数解释** 关联的告警模板列表。
@@ -58,8 +58,8 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     * updateTime  **参数解释** 资源分组的修改时间，UNIX时间戳，单位毫秒；如：1603819753000。
     * enterpriseProjectId  **参数解释** 资源分组归属企业项目ID。 **取值范围** 只能包含小写字母、数字或-，长度为36个字符。或者为0，代表默认企业项目ID。
     * type  **参数解释** 资源分组添加资源方式。 **取值范围** - EPS: 表示匹配企业项目 - TAG: 表示匹配标签 - Manual: 表示手动添加 - COMB: 表示组合匹配 - NAME: 表示匹配实例名称
-    * status  **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
-    * eventStatus  **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
+    * status  **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
+    * eventStatus  **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
     * resourceStatistics  resourceStatistics
     * relatedEpIds  **参数解释** 当资源匹配规则为匹配企业项目时，指定的企业项目列表。
     * associationAlarmTemplates  **参数解释** 关联的告警模板列表。
@@ -111,8 +111,8 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     * updateTime  **参数解释** 资源分组的修改时间，UNIX时间戳，单位毫秒；如：1603819753000。
     * enterpriseProjectId  **参数解释** 资源分组归属企业项目ID。 **取值范围** 只能包含小写字母、数字或-，长度为36个字符。或者为0，代表默认企业项目ID。
     * type  **参数解释** 资源分组添加资源方式。 **取值范围** - EPS: 表示匹配企业项目 - TAG: 表示匹配标签 - Manual: 表示手动添加 - COMB: 表示组合匹配 - NAME: 表示匹配实例名称
-    * status  **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
-    * eventStatus  **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
+    * status  **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
+    * eventStatus  **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
     * resourceStatistics  resourceStatistics
     * relatedEpIds  **参数解释** 当资源匹配规则为匹配企业项目时，指定的企业项目列表。
     * associationAlarmTemplates  **参数解释** 关联的告警模板列表。
@@ -143,8 +143,8 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     * updateTime  **参数解释** 资源分组的修改时间，UNIX时间戳，单位毫秒；如：1603819753000。
     * enterpriseProjectId  **参数解释** 资源分组归属企业项目ID。 **取值范围** 只能包含小写字母、数字或-，长度为36个字符。或者为0，代表默认企业项目ID。
     * type  **参数解释** 资源分组添加资源方式。 **取值范围** - EPS: 表示匹配企业项目 - TAG: 表示匹配标签 - Manual: 表示手动添加 - COMB: 表示组合匹配 - NAME: 表示匹配实例名称
-    * status  **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
-    * eventStatus  **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
+    * status  **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
+    * eventStatus  **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
     * resourceStatistics  resourceStatistics
     * relatedEpIds  **参数解释** 当资源匹配规则为匹配企业项目时，指定的企业项目列表。
     * associationAlarmTemplates  **参数解释** 关联的告警模板列表。
@@ -175,8 +175,8 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     * updateTime  **参数解释** 资源分组的修改时间，UNIX时间戳，单位毫秒；如：1603819753000。
     * enterpriseProjectId  **参数解释** 资源分组归属企业项目ID。 **取值范围** 只能包含小写字母、数字或-，长度为36个字符。或者为0，代表默认企业项目ID。
     * type  **参数解释** 资源分组添加资源方式。 **取值范围** - EPS: 表示匹配企业项目 - TAG: 表示匹配标签 - Manual: 表示手动添加 - COMB: 表示组合匹配 - NAME: 表示匹配实例名称
-    * status  **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
-    * eventStatus  **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
+    * status  **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
+    * eventStatus  **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
     * resourceStatistics  resourceStatistics
     * relatedEpIds  **参数解释** 当资源匹配规则为匹配企业项目时，指定的企业项目列表。
     * associationAlarmTemplates  **参数解释** 关联的告警模板列表。
@@ -571,7 +571,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
+    *  **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
     *
     * @return string|null
     */
@@ -583,7 +583,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
+    * @param string|null $status **参数解释** 资源分组指标告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
     *
     * @return $this
     */
@@ -595,7 +595,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventStatus
-    *  **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
+    *  **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
     *
     * @return string|null
     */
@@ -607,7 +607,7 @@ class OneResourceGroupResp implements ModelInterface, ArrayAccess
     /**
     * Sets eventStatus
     *
-    * @param string|null $eventStatus **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未配置告警规则
+    * @param string|null $eventStatus **参数解释** 资源分组事件告警状态。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
     *
     * @return $this
     */

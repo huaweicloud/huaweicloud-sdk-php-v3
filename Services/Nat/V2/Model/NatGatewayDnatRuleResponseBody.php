@@ -30,8 +30,8 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
     * floatingIpId  弹性公网IP的id。
     * floatingIpAddress  弹性公网IP的IP地址。
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
-    * status  DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
-    * adminStateUp  解冻/冻结状态。 取值范围： − “true”： 解冻 − “false”： 冻结
+    * status  DNAT规则的状态。 取值为： - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
+    * adminStateUp  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
     * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
@@ -74,8 +74,8 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
     * floatingIpId  弹性公网IP的id。
     * floatingIpAddress  弹性公网IP的IP地址。
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
-    * status  DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
-    * adminStateUp  解冻/冻结状态。 取值范围： − “true”： 解冻 − “false”： 冻结
+    * status  DNAT规则的状态。 取值为： - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
+    * adminStateUp  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
     * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
@@ -139,8 +139,8 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
     * floatingIpId  弹性公网IP的id。
     * floatingIpAddress  弹性公网IP的IP地址。
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
-    * status  DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
-    * adminStateUp  解冻/冻结状态。 取值范围： − “true”： 解冻 − “false”： 冻结
+    * status  DNAT规则的状态。 取值为： - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
+    * adminStateUp  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
     * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
@@ -183,8 +183,8 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
     * floatingIpId  弹性公网IP的id。
     * floatingIpAddress  弹性公网IP的IP地址。
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
-    * status  DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
-    * adminStateUp  解冻/冻结状态。 取值范围： − “true”： 解冻 − “false”： 冻结
+    * status  DNAT规则的状态。 取值为： - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
+    * adminStateUp  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
     * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
@@ -227,8 +227,8 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
     * floatingIpId  弹性公网IP的id。
     * floatingIpAddress  弹性公网IP的IP地址。
     * externalServicePort  Floatingip对外提供服务的端口号。 取值范围：0~65535。
-    * status  DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
-    * adminStateUp  解冻/冻结状态。 取值范围： − “true”： 解冻 − “false”： 冻结
+    * status  DNAT规则的状态。 取值为： - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
+    * adminStateUp  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     * internalServicePortRange  虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
     * externalServicePortRange  Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围
     * protocol  协议类型，目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
@@ -777,7 +777,7 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
+    *  DNAT规则的状态。 取值为： - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     *
     * @return string
     */
@@ -789,7 +789,7 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
+    * @param string $status DNAT规则的状态。 取值为： - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
     *
     * @return $this
     */
@@ -801,7 +801,7 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets adminStateUp
-    *  解冻/冻结状态。 取值范围： − “true”： 解冻 − “false”： 冻结
+    *  解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     *
     * @return bool
     */
@@ -813,7 +813,7 @@ class NatGatewayDnatRuleResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets adminStateUp
     *
-    * @param bool $adminStateUp 解冻/冻结状态。 取值范围： − “true”： 解冻 − “false”： 冻结
+    * @param bool $adminStateUp 解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
     *
     * @return $this
     */

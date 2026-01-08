@@ -25,6 +25,8 @@ class TextWatermark implements ModelInterface, ArrayAccess
     * referpos  水印的位置。  取值如下： - TopRight：右上角。 - TopLeft：左上角。 - BottomRight：右下角。 - BottomLeft：左下角。
     * timelineStart  水印开始时间，与“timeline_duration”配合使用。  取值范围：数字。  单位：秒。
     * timelineDuration  水印持续时间，与“timeline_start”配合使用。  取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值：ToEND。
+    * randomTimeMin  轮转间隔时间最小值，单位：秒
+    * randomTimeMax  轮转间隔时间最大值，单位：秒
     * fontName  字体，当前支持fzyouh
     * fontSize  字体大小。  取值范围：[4, 120]
     * fontColor  字体颜色。 目前颜色支持 black，blue，white，green，red，yellow，brown，gold，pink，orange，purple。
@@ -38,6 +40,8 @@ class TextWatermark implements ModelInterface, ArrayAccess
             'referpos' => 'string',
             'timelineStart' => 'string',
             'timelineDuration' => 'string',
+            'randomTimeMin' => 'string',
+            'randomTimeMax' => 'string',
             'fontName' => 'string',
             'fontSize' => 'int',
             'fontColor' => 'string',
@@ -51,6 +55,8 @@ class TextWatermark implements ModelInterface, ArrayAccess
     * referpos  水印的位置。  取值如下： - TopRight：右上角。 - TopLeft：左上角。 - BottomRight：右下角。 - BottomLeft：左下角。
     * timelineStart  水印开始时间，与“timeline_duration”配合使用。  取值范围：数字。  单位：秒。
     * timelineDuration  水印持续时间，与“timeline_start”配合使用。  取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值：ToEND。
+    * randomTimeMin  轮转间隔时间最小值，单位：秒
+    * randomTimeMax  轮转间隔时间最大值，单位：秒
     * fontName  字体，当前支持fzyouh
     * fontSize  字体大小。  取值范围：[4, 120]
     * fontColor  字体颜色。 目前颜色支持 black，blue，white，green，red，yellow，brown，gold，pink，orange，purple。
@@ -64,6 +70,8 @@ class TextWatermark implements ModelInterface, ArrayAccess
         'referpos' => null,
         'timelineStart' => null,
         'timelineDuration' => null,
+        'randomTimeMin' => null,
+        'randomTimeMax' => null,
         'fontName' => null,
         'fontSize' => 'int32',
         'fontColor' => null,
@@ -98,6 +106,8 @@ class TextWatermark implements ModelInterface, ArrayAccess
     * referpos  水印的位置。  取值如下： - TopRight：右上角。 - TopLeft：左上角。 - BottomRight：右下角。 - BottomLeft：左下角。
     * timelineStart  水印开始时间，与“timeline_duration”配合使用。  取值范围：数字。  单位：秒。
     * timelineDuration  水印持续时间，与“timeline_start”配合使用。  取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值：ToEND。
+    * randomTimeMin  轮转间隔时间最小值，单位：秒
+    * randomTimeMax  轮转间隔时间最大值，单位：秒
     * fontName  字体，当前支持fzyouh
     * fontSize  字体大小。  取值范围：[4, 120]
     * fontColor  字体颜色。 目前颜色支持 black，blue，white，green，red，yellow，brown，gold，pink，orange，purple。
@@ -111,6 +121,8 @@ class TextWatermark implements ModelInterface, ArrayAccess
             'referpos' => 'referpos',
             'timelineStart' => 'timeline_start',
             'timelineDuration' => 'timeline_duration',
+            'randomTimeMin' => 'random_time_min',
+            'randomTimeMax' => 'random_time_max',
             'fontName' => 'font_name',
             'fontSize' => 'font_size',
             'fontColor' => 'font_color',
@@ -124,6 +136,8 @@ class TextWatermark implements ModelInterface, ArrayAccess
     * referpos  水印的位置。  取值如下： - TopRight：右上角。 - TopLeft：左上角。 - BottomRight：右下角。 - BottomLeft：左下角。
     * timelineStart  水印开始时间，与“timeline_duration”配合使用。  取值范围：数字。  单位：秒。
     * timelineDuration  水印持续时间，与“timeline_start”配合使用。  取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值：ToEND。
+    * randomTimeMin  轮转间隔时间最小值，单位：秒
+    * randomTimeMax  轮转间隔时间最大值，单位：秒
     * fontName  字体，当前支持fzyouh
     * fontSize  字体大小。  取值范围：[4, 120]
     * fontColor  字体颜色。 目前颜色支持 black，blue，white，green，red，yellow，brown，gold，pink，orange，purple。
@@ -137,6 +151,8 @@ class TextWatermark implements ModelInterface, ArrayAccess
             'referpos' => 'setReferpos',
             'timelineStart' => 'setTimelineStart',
             'timelineDuration' => 'setTimelineDuration',
+            'randomTimeMin' => 'setRandomTimeMin',
+            'randomTimeMax' => 'setRandomTimeMax',
             'fontName' => 'setFontName',
             'fontSize' => 'setFontSize',
             'fontColor' => 'setFontColor',
@@ -150,6 +166,8 @@ class TextWatermark implements ModelInterface, ArrayAccess
     * referpos  水印的位置。  取值如下： - TopRight：右上角。 - TopLeft：左上角。 - BottomRight：右下角。 - BottomLeft：左下角。
     * timelineStart  水印开始时间，与“timeline_duration”配合使用。  取值范围：数字。  单位：秒。
     * timelineDuration  水印持续时间，与“timeline_start”配合使用。  取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值：ToEND。
+    * randomTimeMin  轮转间隔时间最小值，单位：秒
+    * randomTimeMax  轮转间隔时间最大值，单位：秒
     * fontName  字体，当前支持fzyouh
     * fontSize  字体大小。  取值范围：[4, 120]
     * fontColor  字体颜色。 目前颜色支持 black，blue，white，green，red，yellow，brown，gold，pink，orange，purple。
@@ -163,6 +181,8 @@ class TextWatermark implements ModelInterface, ArrayAccess
             'referpos' => 'getReferpos',
             'timelineStart' => 'getTimelineStart',
             'timelineDuration' => 'getTimelineDuration',
+            'randomTimeMin' => 'getRandomTimeMin',
+            'randomTimeMax' => 'getRandomTimeMax',
             'fontName' => 'getFontName',
             'fontSize' => 'getFontSize',
             'fontColor' => 'getFontColor',
@@ -247,6 +267,8 @@ class TextWatermark implements ModelInterface, ArrayAccess
         $this->container['referpos'] = isset($data['referpos']) ? $data['referpos'] : null;
         $this->container['timelineStart'] = isset($data['timelineStart']) ? $data['timelineStart'] : null;
         $this->container['timelineDuration'] = isset($data['timelineDuration']) ? $data['timelineDuration'] : null;
+        $this->container['randomTimeMin'] = isset($data['randomTimeMin']) ? $data['randomTimeMin'] : null;
+        $this->container['randomTimeMax'] = isset($data['randomTimeMax']) ? $data['randomTimeMax'] : null;
         $this->container['fontName'] = isset($data['fontName']) ? $data['fontName'] : null;
         $this->container['fontSize'] = isset($data['fontSize']) ? $data['fontSize'] : null;
         $this->container['fontColor'] = isset($data['fontColor']) ? $data['fontColor'] : null;
@@ -290,6 +312,18 @@ class TextWatermark implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['timelineDuration']) && (mb_strlen($this->container['timelineDuration']) < 0)) {
                 $invalidProperties[] = "invalid value for 'timelineDuration', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['randomTimeMin']) && (mb_strlen($this->container['randomTimeMin']) > 16)) {
+                $invalidProperties[] = "invalid value for 'randomTimeMin', the character length must be smaller than or equal to 16.";
+            }
+            if (!is_null($this->container['randomTimeMin']) && (mb_strlen($this->container['randomTimeMin']) < 0)) {
+                $invalidProperties[] = "invalid value for 'randomTimeMin', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['randomTimeMax']) && (mb_strlen($this->container['randomTimeMax']) > 16)) {
+                $invalidProperties[] = "invalid value for 'randomTimeMax', the character length must be smaller than or equal to 16.";
+            }
+            if (!is_null($this->container['randomTimeMax']) && (mb_strlen($this->container['randomTimeMax']) < 0)) {
+                $invalidProperties[] = "invalid value for 'randomTimeMax', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['fontName']) && (mb_strlen($this->container['fontName']) > 64)) {
                 $invalidProperties[] = "invalid value for 'fontName', the character length must be smaller than or equal to 64.";
@@ -454,6 +488,54 @@ class TextWatermark implements ModelInterface, ArrayAccess
     public function setTimelineDuration($timelineDuration)
     {
         $this->container['timelineDuration'] = $timelineDuration;
+        return $this;
+    }
+
+    /**
+    * Gets randomTimeMin
+    *  轮转间隔时间最小值，单位：秒
+    *
+    * @return string|null
+    */
+    public function getRandomTimeMin()
+    {
+        return $this->container['randomTimeMin'];
+    }
+
+    /**
+    * Sets randomTimeMin
+    *
+    * @param string|null $randomTimeMin 轮转间隔时间最小值，单位：秒
+    *
+    * @return $this
+    */
+    public function setRandomTimeMin($randomTimeMin)
+    {
+        $this->container['randomTimeMin'] = $randomTimeMin;
+        return $this;
+    }
+
+    /**
+    * Gets randomTimeMax
+    *  轮转间隔时间最大值，单位：秒
+    *
+    * @return string|null
+    */
+    public function getRandomTimeMax()
+    {
+        return $this->container['randomTimeMax'];
+    }
+
+    /**
+    * Sets randomTimeMax
+    *
+    * @param string|null $randomTimeMax 轮转间隔时间最大值，单位：秒
+    *
+    * @return $this
+    */
+    public function setRandomTimeMax($randomTimeMax)
+    {
+        $this->container['randomTimeMax'] = $randomTimeMax;
         return $this;
     }
 

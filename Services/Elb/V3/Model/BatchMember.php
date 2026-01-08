@@ -31,8 +31,8 @@ class BatchMember implements ModelInterface, ArrayAccess
     * operatingStatus  **参数解释**：后端服务器的健康状态。  **取值范围**： - NO_MONITOR：后端服务器所在的服务器组没有开启健康检查。 - INITIAL：初始化中，表示负载均衡实例配置了健康检查，但查不到数据。 - ONLINE：后端服务器正常。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。 - UNKNOWN：未关联LB实例的pool下的member，或者创建后从未关联ECS的云服务器类型member，状态置为UNKNOWN。
     * reason  reason
     * status  **参数解释**：后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
-    * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：跨VPC的member。 - instance：关联到ECS的member。
-    * instanceId  **参数解释**：member关联的实例ID，空表示跨VPC场景的member。  **取值范围**：不涉及
+    * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
+    * instanceId  **参数解释**：member关联的实例ID，空表示IP类型场景的member。  **取值范围**：不涉及
     * portId  **参数解释**：IP地址对应的VPC port ID  **取值范围**：不涉及
     * retStatus  **参数解释**：当前后端服务器创建结果状态。  **取值范围**： - successful：添加成功。 - existed：member已存在。
     * createdAt  **参数解释**：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
@@ -73,8 +73,8 @@ class BatchMember implements ModelInterface, ArrayAccess
     * operatingStatus  **参数解释**：后端服务器的健康状态。  **取值范围**： - NO_MONITOR：后端服务器所在的服务器组没有开启健康检查。 - INITIAL：初始化中，表示负载均衡实例配置了健康检查，但查不到数据。 - ONLINE：后端服务器正常。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。 - UNKNOWN：未关联LB实例的pool下的member，或者创建后从未关联ECS的云服务器类型member，状态置为UNKNOWN。
     * reason  reason
     * status  **参数解释**：后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
-    * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：跨VPC的member。 - instance：关联到ECS的member。
-    * instanceId  **参数解释**：member关联的实例ID，空表示跨VPC场景的member。  **取值范围**：不涉及
+    * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
+    * instanceId  **参数解释**：member关联的实例ID，空表示IP类型场景的member。  **取值范围**：不涉及
     * portId  **参数解释**：IP地址对应的VPC port ID  **取值范围**：不涉及
     * retStatus  **参数解释**：当前后端服务器创建结果状态。  **取值范围**： - successful：添加成功。 - existed：member已存在。
     * createdAt  **参数解释**：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
@@ -136,8 +136,8 @@ class BatchMember implements ModelInterface, ArrayAccess
     * operatingStatus  **参数解释**：后端服务器的健康状态。  **取值范围**： - NO_MONITOR：后端服务器所在的服务器组没有开启健康检查。 - INITIAL：初始化中，表示负载均衡实例配置了健康检查，但查不到数据。 - ONLINE：后端服务器正常。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。 - UNKNOWN：未关联LB实例的pool下的member，或者创建后从未关联ECS的云服务器类型member，状态置为UNKNOWN。
     * reason  reason
     * status  **参数解释**：后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
-    * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：跨VPC的member。 - instance：关联到ECS的member。
-    * instanceId  **参数解释**：member关联的实例ID，空表示跨VPC场景的member。  **取值范围**：不涉及
+    * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
+    * instanceId  **参数解释**：member关联的实例ID，空表示IP类型场景的member。  **取值范围**：不涉及
     * portId  **参数解释**：IP地址对应的VPC port ID  **取值范围**：不涉及
     * retStatus  **参数解释**：当前后端服务器创建结果状态。  **取值范围**： - successful：添加成功。 - existed：member已存在。
     * createdAt  **参数解释**：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
@@ -178,8 +178,8 @@ class BatchMember implements ModelInterface, ArrayAccess
     * operatingStatus  **参数解释**：后端服务器的健康状态。  **取值范围**： - NO_MONITOR：后端服务器所在的服务器组没有开启健康检查。 - INITIAL：初始化中，表示负载均衡实例配置了健康检查，但查不到数据。 - ONLINE：后端服务器正常。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。 - UNKNOWN：未关联LB实例的pool下的member，或者创建后从未关联ECS的云服务器类型member，状态置为UNKNOWN。
     * reason  reason
     * status  **参数解释**：后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
-    * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：跨VPC的member。 - instance：关联到ECS的member。
-    * instanceId  **参数解释**：member关联的实例ID，空表示跨VPC场景的member。  **取值范围**：不涉及
+    * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
+    * instanceId  **参数解释**：member关联的实例ID，空表示IP类型场景的member。  **取值范围**：不涉及
     * portId  **参数解释**：IP地址对应的VPC port ID  **取值范围**：不涉及
     * retStatus  **参数解释**：当前后端服务器创建结果状态。  **取值范围**： - successful：添加成功。 - existed：member已存在。
     * createdAt  **参数解释**：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
@@ -220,8 +220,8 @@ class BatchMember implements ModelInterface, ArrayAccess
     * operatingStatus  **参数解释**：后端服务器的健康状态。  **取值范围**： - NO_MONITOR：后端服务器所在的服务器组没有开启健康检查。 - INITIAL：初始化中，表示负载均衡实例配置了健康检查，但查不到数据。 - ONLINE：后端服务器正常。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。 - UNKNOWN：未关联LB实例的pool下的member，或者创建后从未关联ECS的云服务器类型member，状态置为UNKNOWN。
     * reason  reason
     * status  **参数解释**：后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
-    * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：跨VPC的member。 - instance：关联到ECS的member。
-    * instanceId  **参数解释**：member关联的实例ID，空表示跨VPC场景的member。  **取值范围**：不涉及
+    * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
+    * instanceId  **参数解释**：member关联的实例ID，空表示IP类型场景的member。  **取值范围**：不涉及
     * portId  **参数解释**：IP地址对应的VPC port ID  **取值范围**：不涉及
     * retStatus  **参数解释**：当前后端服务器创建结果状态。  **取值范围**： - successful：添加成功。 - existed：member已存在。
     * createdAt  **参数解释**：创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
@@ -656,7 +656,7 @@ class BatchMember implements ModelInterface, ArrayAccess
 
     /**
     * Gets memberType
-    *  **参数解释**：后端服务器的类型。  **取值范围**： - ip：跨VPC的member。 - instance：关联到ECS的member。
+    *  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
     *
     * @return string|null
     */
@@ -668,7 +668,7 @@ class BatchMember implements ModelInterface, ArrayAccess
     /**
     * Sets memberType
     *
-    * @param string|null $memberType **参数解释**：后端服务器的类型。  **取值范围**： - ip：跨VPC的member。 - instance：关联到ECS的member。
+    * @param string|null $memberType **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
     *
     * @return $this
     */
@@ -680,7 +680,7 @@ class BatchMember implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  **参数解释**：member关联的实例ID，空表示跨VPC场景的member。  **取值范围**：不涉及
+    *  **参数解释**：member关联的实例ID，空表示IP类型场景的member。  **取值范围**：不涉及
     *
     * @return string|null
     */
@@ -692,7 +692,7 @@ class BatchMember implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId **参数解释**：member关联的实例ID，空表示跨VPC场景的member。  **取值范围**：不涉及
+    * @param string|null $instanceId **参数解释**：member关联的实例ID，空表示IP类型场景的member。  **取值范围**：不涉及
     *
     * @return $this
     */

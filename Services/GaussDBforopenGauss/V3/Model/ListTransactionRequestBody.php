@@ -24,7 +24,7 @@ class ListTransactionRequestBody implements ModelInterface, ArrayAccess
     * componentId  **参数解释**: 组件ID，仅支持非日志类型的CN或DN节点。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * limit  **参数解释**: 查询结果的事务最大个数。 **约束限制**: 不涉及。 **取值范围**: [1，100]。 **默认取值**: 默认为10。
     * offset  **参数解释**: 查询结果的事务起始页码。 **约束限制**: 不涉及。 **取值范围**: [0，2^31-1]。 **默认取值**: 默认为0（偏移0条数据，表示从第一条数据开始查询）。
-    * transactionQueryOption  transactionQueryOption
+    * transactionQueryInfo  transactionQueryInfo
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ListTransactionRequestBody implements ModelInterface, ArrayAccess
             'componentId' => 'string',
             'limit' => 'int',
             'offset' => 'int',
-            'transactionQueryOption' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListTransactionRequestBodyTransactionQueryOption'
+            'transactionQueryInfo' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListTransactionRequestBodyTransactionQueryInfo'
     ];
 
     /**
@@ -42,7 +42,7 @@ class ListTransactionRequestBody implements ModelInterface, ArrayAccess
     * componentId  **参数解释**: 组件ID，仅支持非日志类型的CN或DN节点。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * limit  **参数解释**: 查询结果的事务最大个数。 **约束限制**: 不涉及。 **取值范围**: [1，100]。 **默认取值**: 默认为10。
     * offset  **参数解释**: 查询结果的事务起始页码。 **约束限制**: 不涉及。 **取值范围**: [0，2^31-1]。 **默认取值**: 默认为0（偏移0条数据，表示从第一条数据开始查询）。
-    * transactionQueryOption  transactionQueryOption
+    * transactionQueryInfo  transactionQueryInfo
     *
     * @var string[]
     */
@@ -51,7 +51,7 @@ class ListTransactionRequestBody implements ModelInterface, ArrayAccess
         'componentId' => null,
         'limit' => 'int32',
         'offset' => 'int32',
-        'transactionQueryOption' => null
+        'transactionQueryInfo' => null
     ];
 
     /**
@@ -81,7 +81,7 @@ class ListTransactionRequestBody implements ModelInterface, ArrayAccess
     * componentId  **参数解释**: 组件ID，仅支持非日志类型的CN或DN节点。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * limit  **参数解释**: 查询结果的事务最大个数。 **约束限制**: 不涉及。 **取值范围**: [1，100]。 **默认取值**: 默认为10。
     * offset  **参数解释**: 查询结果的事务起始页码。 **约束限制**: 不涉及。 **取值范围**: [0，2^31-1]。 **默认取值**: 默认为0（偏移0条数据，表示从第一条数据开始查询）。
-    * transactionQueryOption  transactionQueryOption
+    * transactionQueryInfo  transactionQueryInfo
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ListTransactionRequestBody implements ModelInterface, ArrayAccess
             'componentId' => 'component_id',
             'limit' => 'limit',
             'offset' => 'offset',
-            'transactionQueryOption' => 'transaction_query_option'
+            'transactionQueryInfo' => 'transaction_query_info'
     ];
 
     /**
@@ -99,7 +99,7 @@ class ListTransactionRequestBody implements ModelInterface, ArrayAccess
     * componentId  **参数解释**: 组件ID，仅支持非日志类型的CN或DN节点。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * limit  **参数解释**: 查询结果的事务最大个数。 **约束限制**: 不涉及。 **取值范围**: [1，100]。 **默认取值**: 默认为10。
     * offset  **参数解释**: 查询结果的事务起始页码。 **约束限制**: 不涉及。 **取值范围**: [0，2^31-1]。 **默认取值**: 默认为0（偏移0条数据，表示从第一条数据开始查询）。
-    * transactionQueryOption  transactionQueryOption
+    * transactionQueryInfo  transactionQueryInfo
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class ListTransactionRequestBody implements ModelInterface, ArrayAccess
             'componentId' => 'setComponentId',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
-            'transactionQueryOption' => 'setTransactionQueryOption'
+            'transactionQueryInfo' => 'setTransactionQueryInfo'
     ];
 
     /**
@@ -117,7 +117,7 @@ class ListTransactionRequestBody implements ModelInterface, ArrayAccess
     * componentId  **参数解释**: 组件ID，仅支持非日志类型的CN或DN节点。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     * limit  **参数解释**: 查询结果的事务最大个数。 **约束限制**: 不涉及。 **取值范围**: [1，100]。 **默认取值**: 默认为10。
     * offset  **参数解释**: 查询结果的事务起始页码。 **约束限制**: 不涉及。 **取值范围**: [0，2^31-1]。 **默认取值**: 默认为0（偏移0条数据，表示从第一条数据开始查询）。
-    * transactionQueryOption  transactionQueryOption
+    * transactionQueryInfo  transactionQueryInfo
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class ListTransactionRequestBody implements ModelInterface, ArrayAccess
             'componentId' => 'getComponentId',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
-            'transactionQueryOption' => 'getTransactionQueryOption'
+            'transactionQueryInfo' => 'getTransactionQueryInfo'
     ];
 
     /**
@@ -191,7 +191,7 @@ class ListTransactionRequestBody implements ModelInterface, ArrayAccess
         $this->container['componentId'] = isset($data['componentId']) ? $data['componentId'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['transactionQueryOption'] = isset($data['transactionQueryOption']) ? $data['transactionQueryOption'] : null;
+        $this->container['transactionQueryInfo'] = isset($data['transactionQueryInfo']) ? $data['transactionQueryInfo'] : null;
     }
 
     /**
@@ -319,26 +319,26 @@ class ListTransactionRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets transactionQueryOption
-    *  transactionQueryOption
+    * Gets transactionQueryInfo
+    *  transactionQueryInfo
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListTransactionRequestBodyTransactionQueryOption|null
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListTransactionRequestBodyTransactionQueryInfo|null
     */
-    public function getTransactionQueryOption()
+    public function getTransactionQueryInfo()
     {
-        return $this->container['transactionQueryOption'];
+        return $this->container['transactionQueryInfo'];
     }
 
     /**
-    * Sets transactionQueryOption
+    * Sets transactionQueryInfo
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListTransactionRequestBodyTransactionQueryOption|null $transactionQueryOption transactionQueryOption
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListTransactionRequestBodyTransactionQueryInfo|null $transactionQueryInfo transactionQueryInfo
     *
     * @return $this
     */
-    public function setTransactionQueryOption($transactionQueryOption)
+    public function setTransactionQueryInfo($transactionQueryInfo)
     {
-        $this->container['transactionQueryOption'] = $transactionQueryOption;
+        $this->container['transactionQueryInfo'] = $transactionQueryInfo;
         return $this;
     }
 
