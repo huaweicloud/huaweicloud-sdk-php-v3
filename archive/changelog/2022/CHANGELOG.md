@@ -1,0 +1,1811 @@
+# 3.1.19 2022-12-29
+
+### HuaweiCloud SDK CFW
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameters `fw_instance_id`, `enterprise_project_id` to the interface `ListDnsServers`
+  - Add the request parameters `fw_instance_id`, `enterprise_project_id` to the interface `UpdateDnsServers`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `ListVpcProtects`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `ListRuleHitCount`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `DeleteAclRuleCount`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `ChangeIpsSwitchUsingPost`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `ListIpsSwitchStatusUsingGet`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `ListEastWestFirewall`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `ChangeEwProtectStatus`
+  - Add the request parameter `enterprise_project_id` to the interface `ListFlowLogs`
+  - Add the request parameter `enterprise_project_id` to the interface `ListAccessControlLogs`
+  - Add the request parameter `enterprise_project_id` to the interface `ListAttackLogs`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `AddRuleAclUsingPost`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `DeleteRuleAclUsingDelete`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `UpdateRuleAclUsingPut`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `ListRuleAclsUsingGet`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `ListRuleAclUsingPut`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `AddBlackWhiteListUsingPost`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `DeleteBlackWhiteListUsingDelete`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `UpdateBlackWhiteListUsingPut`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `ListBlackWhiteListsUsingGet`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `ChangeIpsProtectModeUsingPost`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `ListIpsProtectModeUsingPost`
+  - Changes of the interface `ListFirewallUsingGet`:
+    - Add the request parameters `enterprise_project_id`, `fw_instance_id`
+    - Add the response parameters `fw_instance_name`, `enterprise_project_id`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `AddServiceSetUsingPost`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `DeleteServiceSetUsingDelete`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `ListServiceSetDetails`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `UpdateServiceSetUsingPut`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `AddServiceItemsUsingPost`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `ListServiceItemsDetails`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `DeleteServiceItemUsingDelete`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `ListParseDomainDetails`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `CountEips`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `ChangeProtectEip`
+  - Changes of the interface `ListEipResources`:
+    - Add the request parameters `fw_instance_id`, `fw_key_word`, `eps_id`
+    - Add the response parameters `fw_instance_name`, `fw_instance_id`, `fw_enterprise_project_id`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `DeleteAddressItemUsingDelete`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `AddAddressItemsUsingPost`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `ListAddressItemsUsingGet`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `AddAddressSetInfoUsingPost`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `ListAddressSetListUsingGet`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `DeleteAddressSetInfoUsingDelete`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `ListAddressSetDetailUsingGet`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `UpdateAddressSetInfoUsingPut`
+  - Add the request parameters `enterprise_project_id`, `fw_instance_id` to the interface `ListServiceSet`
+
+### HuaweiCloud SDK DCS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Modify the type `int32` -> `int64` of the response parameter `size` of the interface `CreateBigkeyScanTask`
+  - Modify the type `int32` -> `int64` of the response parameter `size` of the interface `ShowBigkeyScanTaskDetails`
+  - Modify the type `int32` -> `int64` of the response parameter `size` of the interface `CreateHotkeyScanTask`
+  - Modify the type `int32` -> `int64` of the response parameter `size` of the interface `ShowHotkeyTaskDetails`
+
+### HuaweiCloud SDK DNS
+
+- _Features_
+  - Support the interfaces `AssociateResolveRuleRouter`, `DisassociateResolveRuleRouter`
+- _Bug Fix_
+  - None
+- _Change_
+  - Remove the response parameter `total_count` from the interface `ListPublicZones`
+  - Remove the response parameter `total_count` from the interface `ListPrivateZones`
+  - Remove the response parameter `total_count` from the interface `ListRecordSetsByZone`
+  - Remove the response parameter `total_count` from the interface `ListRecordSets`
+  - Remove the response parameter `total_count` from the interface `BatchDeleteRecordSetWithLine`
+  - Remove the response parameter `total_count` from the interface `BatchUpdateRecordSetWithLine`
+  - Remove the response parameter `total_count` from the interface `ListRecordSetsWithLine`
+  - Remove the response parameter `total_count` from the interface `CreateRecordSetWithBatchLines`
+  - Remove the response parameter `total_count` from the interface `ShowRecordSetByZone`
+  - Remove the response parameter `total_count` from the interface `ListPtrRecords`
+  - Remove the response parameter `total_count` from the interface `ListCustomLine`
+
+### HuaweiCloud SDK EIP
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `extendParam` to the interface `ChangeBandwidthToPeriod`
+  - Add the request parameter `extendParam` to the interface `ChangePublicipToPeriod`
+  - Changes of the interface `ListBandwidthPkg`:
+    - Add the response parameter `tenantId`
+    - Remove the response parameter `tenant_id`
+  - The request parameter `associate_instance_type`, `associate_instance_id` changed to required of the interface `UpdateAssociatePublicip`
+  - The request parameter `associate_instance_type`, `associate_instance_id` changed to required of the interface `AssociatePublicips`
+
+### HuaweiCloud SDK IMS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameters `sub_jobs_result`, `sub_jobs_list` to the interface `ShowJob`
+  - Add the response parameters `sub_jobs_result`, `sub_jobs_list` to the interface `ShowJobProgress`
+
+### HuaweiCloud SDK VOD
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - The request parameter `name` changed to not required of the interface `UpdateTranscodeTemplate`
+  - Changes of the interface `UpdateTemplateGroupCollection`:
+    - The request parameter `collection_id` changed to required
+    - The request parameter `name`, `template_group_list` changed to not required
+
+### HuaweiCloud SDK VPC
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameters `tenant_id`, `created_at`, `updated_at` to the interface `ListVpcs`
+  - Add the response parameters `tenant_id`, `created_at`, `updated_at` to the interface `CreateVpc`
+  - Add the response parameters `tenant_id`, `created_at`, `updated_at` to the interface `ShowVpc`
+  - Add the response parameters `tenant_id`, `created_at`, `updated_at` to the interface `UpdateVpc`
+  - Add the response parameters `tenant_id`, `created_at`, `updated_at` to the interface `ListSubnets`
+  - Add the response parameters `tenant_id`, `created_at`, `updated_at` to the interface `CreateSubnet`
+  - Add the response parameters `tenant_id`, `created_at`, `updated_at` to the interface `ShowSubnet`
+  - Add the response parameters `created_at`, `updated_at` to the interface `ListRouteTables`
+  - Add the response parameters `created_at`, `updated_at` to the interface `CreateRouteTable`
+  - Add the response parameters `created_at`, `updated_at` to the interface `ShowRouteTable`
+  - Add the response parameters `created_at`, `updated_at` to the interface `UpdateRouteTable`
+  - Add the response parameters `created_at`, `updated_at` to the interface `AssociateRouteTable`
+  - Add the response parameters `created_at`, `updated_at` to the interface `DisassociateRouteTable`
+
+# 3.1.18 2022-12-26
+
+### HuaweiCloud SDK Live
+
+- _Features_
+  - Support the interface `UpdateDomainIp6Switch`
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `ShowDomain`:
+    - Add the request parameter `enterprise_project_id`
+    - Add the response parameters `enterprise_project_id`, `is_ipv6`
+  - Changes of the interface `UpdateDomain`:
+    - Add the request parameter `enterprise_project_id`
+    - Add the response parameter `enterprise_project_id`
+  - Add the request parameter `enterprise_project_id` to the interface `CreateDomain`
+
+### HuaweiCloud SDK VOD
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - The request parameter `group_id`, `name`, `bitrate`, `frame_rate`, `video_codec`, `format`, `hls_interval` changed to required of the interface `UpdateTranscodeTemplate`
+  - The response parameter `bitrate`, `frame_rate`, `video_codec`, `format`, `hls_interval` changed to required of the interface `ListTranscodeTemplate`
+  - The request parameter `name`, `bitrate`, `frame_rate`, `video_codec`, `format`, `hls_interval` changed to required of the interface `CreateTranscodeTemplate`
+  - The request parameter `name`, `template_group_list` changed to required of the interface `UpdateTemplateGroupCollection`
+  - The request parameter `name`, `template_group_list` changed to required of the interface `CreateTemplateGroupCollection`
+
+# 3.1.17 2022-12-22
+
+### HuaweiCloud SDK IMS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `vault_id` to the interface `CopyImageCrossRegion`
+
+### HuaweiCloud SDK IoTDA
+
+- _Features_
+  - Support the interface `SearchDevices`
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `device_side` to the interface `CreateRule`
+  - Add the response parameter `device_side` to the interface `ListRules`
+  - Add the response parameter `device_side` to the interface `ShowRule`
+  - Changes of the interface `UpdateRule`:
+    - Add the request parameter `device_side`
+    - Add the response parameter `device_side`
+
+# 3.1.16 2022-12-19
+
+### HuaweiCloud SDK ECS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `server_id` to the interface `ListServersDetails`
+
+### HuaweiCloud SDK EIP
+
+- _Features_
+  - Support the interfaces `ShowResourcesJobDetail`, `ChangeBandwidthToPeriod`, `ChangePublicipToPeriod`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK Live
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `key` to the interface `CreateRecordCallbackConfig`
+  - Changes of the interface `UpdateRecordCallbackConfig`:
+    - Add the request parameter `key`
+    - Add the response parameters `id`, `publish_domain`, `app`, `notify_callback_url`, `notify_event_subscription`, `sign_type`, `create_time`, `update_time`
+
+# 3.1.15 2022-12-15
+
+### HuaweiCloud SDK ECS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `server_id` to the interface `ListServersDetails`
+
+### HuaweiCloud SDK EIP
+
+- _Features_
+  - Support the interfaces `ShowResourcesJobDetail`, `ChangeBandwidthToPeriod`, `ChangePublicipToPeriod`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK Live
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `key` to the interface `CreateRecordCallbackConfig`
+  - Changes of the interface `UpdateRecordCallbackConfig`:
+    - Add the request parameter `key`
+    - Add the response parameters `id`, `publish_domain`, `app`, `notify_callback_url`, `notify_event_subscription`, `sign_type`, `create_time`, `update_time`
+
+# 3.1.14 2022-12-08
+
+### HuaweiCloud SDK AOS
+
+- _Features_
+  - Support the interfaces `GetExecutionPlan`, `DeleteExecutionPlan`, `DescribeExecutionPlan`, `GetStackMetadata`
+- _Bug Fix_
+  - None
+- _Change_
+  - Remove the request parameter `executor` from the interface `ListExecutionPlans`
+  - Remove the request parameter `executor` from the interface `CreateExecutionPlan`
+  - Remove the request parameter `executor` from the interface `ApplyExecutionPlan`
+  - Changes of the interface `ListStackEvents`:
+    - Remove the request parameters `limit`, `marker`, `executor`
+    - Remove the response parameter `next_marker`
+  - Remove the request parameter `executor` from the interface `ListStacks`
+  - Remove the request parameter `executor` from the interface `CreateStack`
+  - Remove the request parameter `executor` from the interface `GetStackTemplate`
+  - Changes of the interface `ListStackResources`:
+    - Remove the request parameter `executor`
+    - Remove the response parameters `create_time`, `update_time`
+  - Changes of the interface `ListStackOutputs`:
+    - Remove the request parameters `executor`, `limit`, `marker`
+    - Remove the response parameter `next_marker`
+  - Remove the request parameter `executor` from the interface `DeployStack`
+  - Remove the request parameter `executor` from the interface `DeleteStack`
+
+### HuaweiCloud SDK CFW
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `ListIpsSwitchStatusUsingGet`:
+    - Add the response parameters `id`, `virtual_patches_status`
+    - Remove the response parameters `object_id`, `virtual_patches_stauts`
+  - The request parameter `ips_type` changed to required of the interface `ChangeIpsSwitchUsingPost`
+  - Remove the response parameters `fw_instance_id`, `resource_id`, `name`, `ha_type`, `charge_mode`, `service_type`, `engine_type`, `flavor`, `protect_objects`, `status`, `description`, `is_old_firewall_instance`, `support_ipv6`, `feature_toggle` from the interface `ListFirewallUsingGet`
+
+### HuaweiCloud SDK EIP
+
+- _Features_
+  - Support the following interfaces：
+    - `ListBandwidthPkg`
+    - `CountPublicIp`
+    - `ShowPublicIpType`
+    - `CountPublicIpInstance`
+    - `BatchCreatePublicips`
+    - `BatchDeletePublicIp`
+    - `BatchDisassociatePublicips`
+    - `CountEipAvailableResources`
+- _Bug Fix_
+  - None
+- _Change_
+  - Remove the enum values `` from the request parameter `associate_instance_type` from the interface `AssociatePublicips`
+  - Remove the enum values `` from the request parameter `associate_instance_type` from the interface `UpdateAssociatePublicip`
+
+### HuaweiCloud SDK TMS
+
+- _Features_
+  - Support the following interfaces：
+    - `ListResource`
+    - `CreateResourceTag`
+    - `DeleteResourceTag`
+    - `ListTagKeys`
+    - `ListTagValues`
+    - `ShowResourceTag`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+# 3.1.13 2022-12-01
+
+### HuaweiCloud SDK BSS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `formula` to the interface `ListCustomerselfResourceRecords`
+
+### HuaweiCloud SDK BSSINTL
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `formula` to the interface `ListCustomerselfResourceRecords`
+
+### HuaweiCloud SDK CFW
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `ListIpsSwitchStatusUsingGet`:
+    - Add the response parameter `data`
+    - Remove the response parameters `object_id`, `basic_defense_status`, `virtual_patches_stauts`
+  - Changes of the interface `ListEastWestFirewall`:
+    - Add the response parameter `protect_infos`
+    - Remove the response parameter `protected_infos`
+  - The request parameter `fw_instance_id` changed to not required of the interface `ListAttackLogs`
+  - Add the request parameter `type` to the interface `UpdateRuleAclUsingPut`
+  - Add the request parameters `list_type`, `object_id` to the interface `UpdateBlackWhiteListUsingPut`
+  - Changes of the interface `ListFirewallUsingGet`:
+    - Add the response parameter `data`
+    - Remove the response parameters `fw_instance_id`, `resource_id`, `name`, `ha_type`, `charge_mode`, `service_type`, `engine_type`, `flavor`, `protect_objects`, `status`, `description`, `is_old_firewall_instance`, `support_ipv6`, `feature_toggle`
+  - Changes of the interface `ListServiceSetDetails`:
+    - Add the response parameter `data`
+    - Remove the response parameters `id`, `name`, `description`
+  - Changes of the interface `CountEips`:
+    - Add the response parameter `data`
+    - Remove the response parameters `object_id`, `eip_total`, `eip_protected`
+  - Changes of the interface `ListEipResources`:
+    - Add the response parameter `data`
+    - Remove the response parameters `id`, `public_ip`, `status`, `public_ipv6`, `enterprise_project_id`, `device_id`, `device_name`, `device_owner`, `associate_instance_type`
+  - Add the request parameter `address_type` to the interface `UpdateAddressSetInfoUsingPut`
+
+# 3.1.12 2022-11-30
+
+### HuaweiCloud SDK EIP
+
+- _Features_
+  - Support the interfaces `DisassociatePublicips`, `AssociatePublicips`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+# 3.1.11 2022-11-24
+
+### HuaweiCloud SDK AS
+
+- _Features_
+  - Support the service `Auto Scaling`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK CFW
+
+- _Features_
+  - Support the service `Cloud Firewall`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK AOS
+
+- _Features_
+  - Support the interfaces `ListStackEvents`, `ListStackResources`, `DeleteStack`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK BSS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameters `sub_service_type_code`, `sub_service_type_name`, `sub_resource_type_code`, `sub_resource_type_name`, `sub_resource_id`, `sub_resource_name` to the interface `ListSubCustomerBillDetail`
+
+### HuaweiCloud SDK CSE
+
+- _Features_
+  - Support the interfaces `UpgradeEngine`, `RetryEngine`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK DNS
+
+- _Features_
+  - Support the following interfaces：
+    - `SetPrivateZoneProxyPattern`
+    - `AssociateHealthCheck`
+    - `DisassociateHealthCheck`
+    - `CreateRetrieval`
+    - `ShowRetrieval`
+    - `CreateRetrievalVerification`
+    - `ShowRetrievalVerification`
+    - `CreateEndpoint`
+    - `ShowEndpoint`
+    - `ListEndpoints`
+    - `UpdateEndpoint`
+    - `DeleteEndpoint`
+    - `AssociateEndpointIpaddress`
+    - `ListEndpointIpaddresses`
+    - `DisassociateEndpointIpaddress`
+    - `ListEndpointVpcs`
+    - `CreateResolveRule`
+    - `ShowResoleRule`
+    - `ListResoleRules`
+    - `UpdateResolveRule`
+    - `DeleteResolveRule`
+    - `CreateLineGroup`
+    - `ListLineGroups`
+    - `ShowLineGroup`
+    - `UpdateLineGroups`
+    - `DeleteLineGroup`
+    - `BatchDeleteZones`
+    - `BatchDeletePtrRecords`
+    - `BatchSetZonesStatus`
+    - `BatchSetRecordSetsStatus`
+    - `BatchDeleteRecordSets`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `test_interval` to the interface `RecognizeHealthCode`
+
+### HuaweiCloud SDK WAF
+
+- _Features_
+  - Support the interfaces `CreatePrepaidCloudWaf`, `ChangePrepaidCloudWaf`, `ShowSubscriptionInfo`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+# 3.1.10 2022-11-17
+
+### HuaweiCloud SDK AOS
+
+- _Features_
+  - Support the `Application Orchestration Service`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK CSE
+
+- _Features_
+  - Support the service `Cloud Service Engine`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK SMN
+
+- _Features_
+  - Support the service `Simple Message Notification`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK BSS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - The request parameter `sub_customer_association_type` changed to required of the interface `CreateSubEnterpriseAccount`
+
+### HuaweiCloud SDK DCS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Modify the type `integer` -> `int32` of the request parameter `new_capacity` of the interface `ResizeInstance`
+
+### HuaweiCloud SDK ECS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Modify the type `string` -> `enum` of the request parameter `monitorMetrics` of the interface `RegisterServerMonitor`
+
+### HuaweiCloud SDK EIP
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the enum values `VPN` to the request parameter `associate_instance_type` to the interface `DisassociatePublicips`
+  - Add the enum values `VPN` to the request parameter `associate_instance_type` to the interface `AssociatePublicips`
+
+### HuaweiCloud SDK EPS
+
+- _Features_
+  - Support the interface `ListProviders`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK IoTDA
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `ttl` to the interface `CreateMessage`
+  - Add the request parameters `Sp-Auth-Token`, `Stage-Auth-Token` to the interface `ListCertificates`
+  - Changes of the interface `AddCertificate`:
+    - Add the request parameters `Sp-Auth-Token`, `Stage-Auth-Token`, `addCertificateRequestBody`
+    - Remove the request parameter `AddCertificateRequestBody`
+  - Add the request parameters `Sp-Auth-Token`, `Stage-Auth-Token` to the interface `DeleteCertificate`
+  - Changes of the interface `CheckCertificate`:
+    - Add the request parameters `Sp-Auth-Token`, `Stage-Auth-Token`, `checkCertificateRequestBody`
+    - Remove the request parameter `CheckCertificateRequestBody`
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeGeneralTable`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeVatInvoice`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeInvoiceVerification`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeGeneralText`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeWebImage`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeHealthCode`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeQuotaInvoice`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeIdCard`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeHandwriting`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeVehicleLicense`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeTransportationLicense`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeTaxiInvoice`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeAutoClassification`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeTollInvoice`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeMvsInvoice`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeLicensePlate`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeFlightItinerary`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeBusinessLicense`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeDriverLicense`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeBusinessCard`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeTrainTicket`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeVin`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizePassport`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeBankcard`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeInsurancePolicy`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeFinancialStatement`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeQualificationCertificate`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeThailandIdcard`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeMyanmarIdcard`
+  - Changes of the interface `RecognizeMyanmarDriverLicense`:
+    - Add the request parameter `Enterprise-Project-Id`
+    - Add the response parameters `birth`, `birth`
+    - Remove the response parameters `Birth`, `Birth`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeChileIdCard`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeThailandLicensePlate`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeWaybillElectronic`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizePcrTestRecord`
+  - Changes of the interface `RecognizeIdDocument`:
+    - Add the request parameter `Enterprise-Project-Id`
+    - Modify the type `object` -> `object` of the response parameter `result`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeHkIdCard`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeCambodianIdCard`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeExitEntryPermit`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeMainlandTravelPermit`
+  - Add the request parameter `Enterprise-Project-Id` to the interface `RecognizeMacaoIdCard`
+
+### HuaweiCloud SDK TMS
+
+- _Features_
+  - Support the interface `ListProviders`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK VPC
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `CreateSubnet`:
+    - Add the enum values `addresstime` to the request parameter `opt_name`
+    - Add the enum values `addresstime` to the response parameter `opt_name`
+  - Add the enum values `addresstime` to the response parameter `opt_name` to the interface `ListSubnets`
+  - Add the enum values `addresstime` to the response parameter `opt_name` to the interface `ShowSubnet`
+  - Add the enum values `addresstime` to the request parameter `opt_name` to the interface `UpdateSubnet`
+
+# 3.1.9 2022-11-14
+
+### HuaweiCloud SDK Live
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Remove the request parameter `specify_project` from the interface `ListStreamForbidden`
+  - Remove the request parameter `specify_project` from the interface `DeleteStreamForbidden`
+  - Remove the request parameter `specify_project` from the interface `UpdateStreamForbidden`
+  - Remove the request parameter `specify_project` from the interface `CreateStreamForbidden`
+  - Remove the enum values `global` from the response parameter `service_area` from the interface `ShowDomain`
+  - Remove the enum values `global` from the response parameter `service_area` from the interface `UpdateDomain`
+  - Remove the enum values `global` from the request parameter `service_area` from the interface `CreateDomain`
+  - Remove the request parameter `specify_project` from the interface `DeleteDomainMapping`
+  - Remove the request parameter `specify_project` from the interface `CreateDomainMapping`
+
+### HuaweiCloud SDK VPCEP
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Modify the type `string` -> `array` of the response parameter `Action` of the interface `ListEndpoints`
+  - Modify the type `string` -> `array` of the response parameter `Action` of the interface `DeleteEndpointPolicy`
+  - Changes of the interface `UpdateEndpointPolicy`:
+    - Modify the type `string` -> `array` of the request parameter `Action`
+    - Modify the type `string` -> `array` of the response parameter `Action`
+
+### HuaweiCloud SDK WAF
+
+- _Features_
+  - Support the interfaces `MigrateCompositeHosts`, `ShowSourceIp`, `ListNoticeConfigs`, `UpdateAlertNoticeConfig`
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `instance_name` to the interface `ListInstance`
+  - Add the response parameters `enabled`, `ltsAttackStreamID` to the interface `ShowLtsInfoConfig`
+  - Changes of the interface `UpdateLtsInfoConfig`:
+    - Add the request parameters `enabled`, `ltsAttackStreamID`
+    - Add the response parameters `enabled`, `ltsAttackStreamID`
+    - The request parameter `enabale` changed to not required
+  - Add the response parameter `description` to the interface `ShowIpGroup`
+
+# 3.1.8 2022-11-03
+
+### HuaweiCloud SDK GA
+
+- _Features_
+  - Support the service `Global accelerator`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK ECS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - The request parameter `destination_type` changed to not required of the interface `NovaCreateServers`
+
+### HuaweiCloud SDK EPS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `region_id` to the interface `MigrateResource`
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `RecognizeGeneralText`:
+    - Add the request parameter `character_mode`
+    - Add the response parameters `confidence`, `char_list`
+  - Changes of the interface `RecognizeThailandIdcard`:
+    - Add the request parameter `return_text_location`
+    - Add the response parameter `text_location`
+
+### HuaweiCloud SDK WAF
+
+- _Features_
+  - Support the following interfaces：
+    - `ListInstance`
+    - `CreateInstance`
+    - `ShowInstance`
+    - `RenameInstance`
+    - `DeleteInstance`
+    - `ShowLtsInfoConfig`
+    - `UpdateLtsInfoConfig`
+    - `ListIpGroup`
+    - `CreateIpGroup`
+    - `ShowIpGroup`
+    - `UpdateIpGroup`
+    - `DeleteIpGroup`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+# 3.1.7 2022-11-02
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `ShowUrlTaskInfo`:
+    - Modify the type `int32` -> `int64` of the response parameter `modify_time`
+    - Modify the type `int32` -> `int64` of the response parameter `create_time`
+
+### HuaweiCloud SDK ECS
+
+- _Features_
+  - Support the interfaces `UpdateServerBlockDevice`, `RegisterServerMonitor`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+# 3.1.6 2022-10-27
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Modify the type `int32` -> `int64` of the response parameter `id` of the interface `ShowUrlTaskInfo`
+
+### HuaweiCloud SDK ECS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameters `X-Client-Token`, `batch_create_in_multi_az` to the interface `CreateServers`
+  - Add the request parameter `X-Client-Token` to the interface `CreatePostPaidServers`
+
+### HuaweiCloud SDK IMS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the enum values `market` to the request parameter `__imagetype` to the interface `ListTags`
+  - Changes of the interface `GlanceListImages`:
+    - Add the enum values `market` to the request parameter `__imagetype`
+    - Add the enum values `market` to the response parameter `__imagetype`
+  - Add the enum values `market` to the response parameter `__imagetype` to the interface `GlanceShowImage`
+  - Add the enum values `market` to the response parameter `__imagetype` to the interface `GlanceUpdateImage`
+
+### HuaweiCloud SDK IoTDA
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `properties` to the interface `CreateMessage`
+  - Add the response parameter `properties` to the interface `ListDeviceMessages`
+  - Add the response parameter `properties` to the interface `ShowDeviceMessage`
+
+### HuaweiCloud SDK Moderation
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Modify the type `float` -> `integer` of the request parameter `frame_interval` of the interface `RunCreateVideoModerationJob`
+  - Modify the type `float` -> `integer` of the response parameters `start_time`, `end_time` of the interface `RunQueryAudioModerationJob`
+  - Changes of the interface `RunQueryVideoModerationJob`:
+    - Modify the type `integer` -> `float` of the response parameter `time`
+    - Modify the type `integer` -> `float` of the response parameters `start_time`, `end_time`
+
+# 3.1.5 2022-09-28
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `domain_id` to the interface `ListDomains`
+  - Changes of the interface `CreateDomain`:
+    - Add the request parameter `domain_id`
+    - Add the response parameter `domain_id`
+  - Add the response parameter `domain_id` to the interface `ShowDomainDetail`
+  - Add the response parameter `domain_id` to the interface `DeleteDomain`
+  - Add the response parameter `domain_id` to the interface `EnableDomain`
+  - Add the response parameter `domain_id` to the interface `DisableDomain`
+  - Changes of the interface `UpdateDomainOrigin`:
+    - Add the request parameter `domain_id`
+    - Add the response parameter `domain_id`
+  - Add the response parameters `origin_range_status`, `user_agent_filter`, `origin_request_url_rewrite`, `error_code_redirect_rules` to the interface `ShowDomainFullConfig`
+  - Add the request parameters `origin_range_status`, `user_agent_filter`, `origin_request_url_rewrite`, `error_code_redirect_rules` to the interface `UpdateDomainFullConfig`
+
+### HuaweiCloud SDK Live
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - The response parameter `width`, `height` changed to not required of the interface `ShowTranscodingsTemplate`
+  - Changes of the interface `UpdateTranscodingsTemplate`:
+    - Add the request parameter `trans_type`
+    - The request parameter `width`, `height` changed to not required
+  - Changes of the interface `CreateTranscodingsTemplate`:
+    - Add the request parameter `trans_type`
+    - The request parameter `width`, `height` changed to not required
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameters `type`, `idcard_number`, `phone_number`, `province`, `city`, `vaccination_status`, `pcr_test_result`, `pcr_test_organization`, `pcr_test_time`, `pcr_sampling_time`, `reached_city` to the interface `RecognizeHealthCode`
+
+### HuaweiCloud SDK VPCEP
+
+- _Features_
+  - Support the following interfaces：
+    - `UpdateEndpointServiceName`
+    - `UpdateEndpointConnectionsDesc`
+    - `BatchAddEndpointServicePermissions`
+    - `BatchRemoveEndpointServicePermissions`
+    - `UpdateEndpointServicePermissionDesc`
+    - `UpdateEndpointPolicy`
+    - `DeleteEndpointPolicy`
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `CreateEndpointService`:
+    - Add the request parameter `description`
+    - Add the response parameter `description`
+  - Changes of the interface `ListEndpointService`:
+    - Add the request parameter `public_border_group`
+    - Add the response parameters `description`, `public_border_group`
+    - Modify the type `string` -> `enum` of the response parameter `service_type`
+    - Modify the type `enum` -> `string` of the response parameter `server_type`
+  - Changes of the interface `UpdateEndpointService`:
+    - Add the request parameter `description`
+    - Add the response parameter `description`
+  - Changes of the interface `ListServiceDetails`:
+    - Add the response parameter `description`
+    - Modify the type `string` -> `enum` of the response parameter `service_type`
+  - Remove the response parameters `id`, `marker_id`, `created_at`, `updated_at`, `domain_id`, `status` from the interface `ListServiceConnections`
+  - Add the response parameter `description` to the interface `AcceptOrRejectEndpoint`
+  - Remove the response parameters `id`, `permission`, `created_at` from the interface `ListServicePermissionsDetails`
+  - Changes of the interface `CreateEndpoint`:
+    - Add the request parameter `description`
+    - Add the response parameters `specification_name`, `description`, `policy_statement`, `enable_status`
+  - Changes of the interface `ListEndpoints`:
+    - Add the request parameter `public_border_group`
+    - Add the response parameters `description`, `policy_statement`, `endpoint_pool_id`, `public_border_group`
+  - Add the response parameters `description`, `policy_statement` to the interface `ListEndpointInfoDetails`
+  - Remove the response parameters `status`, `id`, `updated`, `version`, `min_version`, `links` from the interface `ListVersionDetails`
+  - Remove the response parameters `status`, `id`, `updated`, `version`, `min_version`, `links` from the interface `ListSpecifiedVersionDetails`
+  - Changes of the interface `ListResourceInstances`:
+    - Add the request parameters `sys_tags`, `without_any_tag`
+    - Remove the request parameters `key`, `value`, `key`, `value`, `key`, `value`, `key`, `value`
+
+# 3.1.4 2022-09-26
+
+### HuaweiCloud SDK Moderation
+
+- _Features_
+  - None
+- _Bug Fix_
+  - Fix the problem that the response parameters' type of the interface `CheckImageModeration` is incorrect
+- _Change_
+  - None
+
+# 3.1.3 2022-09-22
+
+### HuaweiCloud SDK EIP
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `port_id` to the interface `CreatePublicip`
+  - Add the request parameter `port_id` to the interface `CreatePrePaidPublicip`
+
+### HuaweiCloud SDK IoTDA
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `error_info` to the interface `ListDeviceMessages`
+  - Add the response parameter `error_info` to the interface `ShowDeviceMessage`
+
+### HuaweiCloud SDK Moderation
+
+- _Features_
+  - Support the interface `CheckImageModeration`
+- _Bug Fix_
+  - None
+- _Change_
+  - The request parameter `url`, `categories` changed to required of the interface `RunCreateAudioModerationJob`
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `RecognizeIdCard`:
+    - Add the request parameter `detect_copy`
+    - Add the response parameter `detect_copy_result`
+
+### HuaweiCloud SDK SMS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Remove the response parameter `disks` from the interface `ListTemplates`
+  - Remove the response parameter `disks` from the interface `ShowTemplate`
+  - Remove the request parameter `disks` from the interface `UpdateMigproject`
+  - Remove the response parameter `disks` from the interface `ShowMigproject`
+
+### HuaweiCloud SDK VOD
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameters `pack_type`, `pack_type` to the interface `PublishAssets`
+  - Add the response parameters `pack_type`, `pack_type` to the interface `UnpublishAssets`
+  - Add the response parameters `pack_type`, `pack_type` to the interface `ShowAssetMeta`
+  - Add the response parameters `pack_type`, `pack_type` to the interface `ShowAssetDetail`
+  - Add the response parameters `pack_type`, `pack_type` to the interface `ShowTakeOverTaskDetails`
+  - Add the response parameters `pack_type`, `pack_type` to the interface `ShowTakeOverAssetDetails`
+
+# 3.1.2 2022-09-15
+
+### HuaweiCloud SDK BSS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameters `root_resource_id`, `parent_resource_id`, `trade_id`, `product_spec_desc` to the interface `ListCustomerselfResourceRecordDetails`
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - Support the interfaces `ShowTags`, `CreateTags`, `BatchDeleteTags`
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `ShowUrlTaskInfo`:
+    - Add the response parameter `result`
+    - Remove the response parameter `results`
+  - Add the response parameter `error_code_cache` to the interface `ShowDomainFullConfig`
+  - Add the request parameter `error_code_cache` to the interface `UpdateDomainFullConfig`
+
+### HuaweiCloud SDK EVS
+
+- _Features_
+  - Support the following interfaces：
+    - `ShowVersion`
+    - `ListVersions`
+    - `CinderShowVolumeTransfer`
+    - `CinderDeleteVolumeTransfer`
+    - `CinderListVolumeTransfers`
+    - `CinderCreateVolumeTransfer`
+    - `CinderAcceptVolumeTransfer`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+# 3.1.1 2022-09-08
+
+### HuaweiCloud SDK BSS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameters `root_resource_id`, `parent_resource_id`, `trade_id`, `product_spec_desc` to the interface `ListCustomerselfResourceRecordDetails`
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - Support the interfaces `ShowTags`, `CreateTags`, `BatchDeleteTags`
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `ShowUrlTaskInfo`:
+    - Add the response parameter `result`
+    - Remove the response parameter `results`
+  - Add the response parameter `error_code_cache` to the interface `ShowDomainFullConfig`
+  - Add the request parameter `error_code_cache` to the interface `UpdateDomainFullConfig`
+
+### HuaweiCloud SDK EVS
+
+- _Features_
+  - Support the following interfaces：
+    - `ShowVersion`
+    - `ListVersions`
+    - `CinderShowVolumeTransfer`
+    - `CinderDeleteVolumeTransfer`
+    - `CinderListVolumeTransfers`
+    - `CinderCreateVolumeTransfer`
+    - `CinderAcceptVolumeTransfer`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+# 3.0.61 2022-09-01
+
+### HuaweiCloud SDK BSSINTL
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `indirect_partner_id` to the interface `ListCustomerOrders`
+  - Add the request parameter `indirect_partner_id` to the interface `ShowCustomerOrderDetails`
+  - Add the request parameter `indirect_partner_id` to the interface `ListCustomerOnDemandResources`
+
+### HuaweiCloud SDK IAM
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `UpdateDomainProtectPolicy`:
+    - Add the request parameters `allow_user`, `mobile`, `admin_check`, `email`, `scene`
+    - Remove the response parameter `operation_protection`
+  - Remove the response parameter `operation_protection` from the interface `ShowDomainProtectPolicy`
+  - The request parameter `maximum_consecutive_identical_chars`, `minimum_password_age`, `minimum_password_length`, `number_of_recent_passwords_disallowed`, `password_not_username_or_invert`, `password_validity_period`, `password_char_combination` changed to not required of the interface `UpdateDomainPasswordPolicy`
+  - The request parameter `account_validity_period`, `custom_info_for_login`, `lockout_duration`, `login_failed_times`, `period_with_login_failures`, `session_timeout`, `show_recent_login_info` changed to not required of the interface `UpdateDomainLoginPolicy`
+  - Add the enum values `mapping` to the request parameter `type` to the interface `ShowDomainQuota`
+
+# 3.0.60 2022-08-29
+
+### HuaweiCloud SDK ECS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `batch_create_in_multi_az` to the interface `CreatePostPaidServers`
+
+### HuaweiCloud SDK IMS
+
+- _Features_
+  - Support the interface `ShowJobProgress`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+# 3.0.59-rc 2022-08-25
+
+### HuaweiCloud SDK Core
+
+- _Features_
+  - None
+- _Bug Fix_
+  - Fix the problem that some error codes could not be parsed
+- _Change_
+  - None
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `RecognizeWebImage`:
+    - Add the request parameter `detect_font`
+    - Add the response parameters `font_list`, `font_scores`
+
+### HuaweiCloud SDK VOD
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Modify the type `int32` -> `int64` of the request parameter `size` of the interface `CheckMd5Duplication`
+
+# 3.0.58-rc 2022-08-22
+
+### HuaweiCloud SDK Live
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Modify the type `uri` -> `string` of the request parameter `object` of the interface `CreateRecordIndex`
+
+# 3.0.57-rc 2022-08-18
+
+### HuaweiCloud SDK BSSINTL
+
+- _Features_
+  - Support the interfaces `ListIndirectPartners`, `ListCosts`
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `indirect_partner_id` to the interface `ListSubCustomers`
+  - Add the request parameter `indirect_partner_id` to the interface `CreateSubCustomer`
+  - Add the request parameter `indirect_partner_id` to the interface `ShowSubCustomerBudget`
+  - Add the request parameter `indirect_partner_id` to the interface `UpdateSubCustomerBudget`
+  - Add the request parameter `indirect_partner_id` to the interface `FreezeSubCustomers`
+  - Add the request parameter `indirect_partner_id` to the interface `UnfreezeSubCustomers`
+
+### HuaweiCloud SDK ECS
+
+- _Features_
+  - Support the interface `ListServersByTag`
+- _Bug Fix_
+  - None
+- _Change_
+  - The request parameter `destination_type` changed to required of the interface `NovaCreateServers`
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `RecognizeIdCard`:
+    - Add the request parameter `detect_reproduce`
+    - Add the response parameter `detect_reproduce_result`
+
+### HuaweiCloud SDK VOD
+
+- _Features_
+  - Support the following interfaces：
+    - `ListTranscodeTemplate`
+    - `UpdateTranscodeTemplate`
+    - `CreateTranscodeTemplate`
+    - `DeleteTranscodeTemplate`
+    - `ListTemplateGroupCollection`
+    - `UpdateTemplateGroupCollection`
+    - `CreateTemplateGroupCollection`
+    - `DeleteTemplateGroupCollection`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+# 3.0.56-rc 2022-08-11
+
+### HuaweiCloud SDK BSS
+
+- _Features_
+  - Support the interface `ListCosts`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - Support the interface `ShowUrlTaskInfo`
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `ipv6_accelerate` to the interface `ShowDomainFullConfig`
+  - Add the request parameter `ipv6_accelerate` to the interface `UpdateDomainFullConfig`
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - Support the interface `RecognizeMacaoIdCard`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+# 3.0.55-rc 2022-08-02
+
+### HuaweiCloud SDK Live
+
+- _Features_
+  - Support the interface `CreateRecordIndex`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+# 3.0.54-rc 2022-07-21
+
+### HuaweiCloud SDK VPC
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `security_group_rules_links` to the interface `NeutronListSecurityGroupRules`
+
+# 3.0.53-rc 2022-07-14
+
+### HuaweiCloud SDK BSS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameters `effective_tag_pairs`, `cost_unit_pairs` to the interface `ListCustomerBillsMonthlyBreakDown`
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `tls_version` to the interface `UpdateDomainFullConfig`
+  - Add the response parameter `tls_version` to the interface `ShowDomainFullConfig`
+
+### HuaweiCloud SDK EIP
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Modify the type `date-time` -> `string` of the response parameter `create_time` of the interface `ListPublicips`
+  - Modify the type `date-time` -> `string` of the response parameter `create_time` of the interface `ShowPublicip`
+
+### HuaweiCloud SDK VPC
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameters `port_filter`, `ovs_hybrid_plug` to the interface `ListPorts`
+  - Add the response parameters `port_filter`, `ovs_hybrid_plug` to the interface `UpdatePort`
+  - Add the response parameters `port_filter`, `ovs_hybrid_plug` to the interface `ShowPort`
+  - Add the response parameter `remote_address_group_id` to the interface `CreateSecurityGroup`
+  - Add the response parameter `remote_address_group_id` to the interface `ListSecurityGroups`
+  - Add the response parameter `remote_address_group_id` to the interface `ShowSecurityGroup`
+  - Add the response parameter `remote_address_group_id` to the interface `ListSecurityGroupRules`
+  - Add the response parameter `remote_address_group_id` to the interface `ShowSecurityGroupRule`
+  - Add the response parameter `remote_address_group_id` to the interface `NeutronListSecurityGroups`
+  - Add the response parameter `remote_address_group_id` to the interface `NeutronUpdateSecurityGroup`
+  - Add the response parameter `remote_address_group_id` to the interface `NeutronShowSecurityGroup`
+  - Add the response parameter `remote_address_group_id` to the interface `NeutronListSecurityGroupRules`
+  - Add the response parameter `remote_address_group_id` to the interface `NeutronShowSecurityGroupRule`
+
+# 3.0.52-rc 2022-07-07
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `title` to the interface `RecognizeVatInvoice`
+
+# 3.0.51-rc 2022-06-30
+
+### HuaweiCloud SDK DNS
+
+- _Features_
+  - Support `Domain Name Service`.
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK BSS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - The request parameter `mobile_phone` changed to required of the interface `SendVerificationMessageCode`
+
+### HuaweiCloud SDK BSSINTL
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - The request parameter `email` changed to required of the interface `SendVerificationMessageCode`
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `cache_url_parameter_filter` to the interface `ShowDomainFullConfig`
+  - Add the request parameter `cache_url_parameter_filter` to the interface `UpdateDomainFullConfig`
+
+### HuaweiCloud SDK DNS
+
+- _Features_
+  - Support the interfaces `CreateRecordSetWithBatchLines`, `BatchUpdateRecordSetWithLine`, `BatchDeleteRecordSetWithLine`
+- _Bug Fix_
+  - None
+- _Change_
+  - The request parameter `records` changed to not required of the interface `CreateRecordSetWithLine`
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - Support the interfaces `RecognizeHkIdCard`, `RecognizeCambodianIdCard`, `RecognizeExitEntryPermit`, `RecognizeMainlandTravelPermit`
+- _Bug Fix_
+  - None
+- _Change_
+  - Modify the type `int32` -> `float` of the response parameter `direction` of the interface `RecognizeGeneralText`
+
+# 3.0.50-rc 2022-06-19
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - Support the interface `RecognizeIdDocument`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+# 3.0.49-rc 2022-06-02
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameters `words_block_count`, `words_block_list` to the interface `RecognizeHealthCode`
+  - Modify the type `float` -> `object` of the response parameter `confidence` of the interface `RecognizePcrTestRecord`
+
+# 3.0.48-rc 2022-05-26
+
+### HuaweiCloud SDK ECS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameters `volume_type`, `hw:passthrough` to the interface `AttachServerVolume`
+
+# 3.0.47-rc 2022-05-19
+
+### HuaweiCloud SDK ECS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `dry_run` to the interface `ResizeServer`
+  - Add the request parameter `dry_run` to the interface `ResizePostPaidServer`
+  - Add the request parameter `dry_run` to the interface `AttachServerVolume`
+
+### HuaweiCloud SDK VOD
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the enum values `M3U8` to the request parameter `video_type` to the interface `UploadMetaDataByUrl`
+  - Add the response parameter `sign_url` to the interface `PublishAssets`
+  - Add the response parameter `sign_url` to the interface `UnpublishAssets`
+  - Add the response parameter `sign_url` to the interface `ShowAssetMeta`
+  - Add the response parameter `sign_url` to the interface `ShowAssetDetail`
+  - Add the response parameter `sign_url` to the interface `ShowTakeOverTaskDetails`
+  - Add the response parameter `sign_url` to the interface `ShowTakeOverAssetDetails`
+
+### HuaweiCloud SDK VPC
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the enum values `neutron:VIP_PORT`, Remove the enum values `network:VIP_PORT` from the response parameter `device_owner` to the interface `ListPorts`
+  - Add the enum values `neutron:VIP_PORT`, Remove the enum values `network:VIP_PORT` from the response parameter `device_owner` to the interface `UpdatePort`
+  - Add the enum values `neutron:VIP_PORT`, Remove the enum values `network:VIP_PORT` from the response parameter `device_owner` to the interface `ShowPort`
+
+# 3.0.46-rc 2022-05-12
+
+### HuaweiCloud SDK FRS
+
+- _Features_
+  - Support the following interfaces:
+    - `DetectLiveByUrlIntl`
+    - `DetectLiveByFileIntl`
+    - `DetectLiveByBase64Intl`
+    - `DetectFaceByFileIntl`
+    - `DetectFaceByUrlIntl`
+    - `DetectFaceByBase64Intl`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK IAM
+
+- _Features_
+  - Support the interface `ShowDomainRoleAssignments`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - Support the interface `RecognizeHealthCode`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+# 3.0.45-rc 2022-04-28
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - None
+- _Bug Fix_
+  - Fix the problem that the response body's type of the interface `RecognizeMyanmarDriverLicense` is incorrect.
+- _Change_
+  - None
+
+# 3.0.44-rc 2022-04-21
+
+### HuaweiCloud SDK BSS
+
+- _Features_
+  - Support the interface `ListConsumeSubCustomers`
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameters `sub_service_type_code`, `sub_service_type_name`, `sub_resource_type_code`, `sub_resource_type_name`, `sub_resource_id`, `sub_resource_name` to the interface `ListCustomerBillsMonthlyBreakDown`
+
+# 3.0.43-rc 2022-04-14
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameters `sources`, `origin_protocol`, `force_redirect`, `compress` to the interface `UpdateDomainFullConfig`
+  - Changes of the interface `ShowDomainFullConfig`:
+    - Add the response parameters `sources`, `origin_protocol`, `force_redirect`, `compress`
+    - Modify the type `string` -> `int32` of the response parameter `certificate_source`
+
+### HuaweiCloud SDK ECS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `ip_eq` to the interface `ListServersDetails`
+
+# 3.0.42-rc 2022-04-07
+
+### HuaweiCloud SDK BSS
+
+- _Features_
+  - Support the interface `ListStoredValueCards`
+- _Bug Fix_
+  - None
+- _Change_
+  - Remove the interfaces `ListSubCustomerDiscounts`, `BatchSetSubCustomerDiscount`
+  - Add the response parameters `resource_type_name`, `service_type_name` to the interface `ShowRefundOrderDetails`
+  - Add the response parameter `service_type_name` to the interface `ListCustomerOrders`
+  - Add the response parameters `service_type_name`, `service_type_name` to the interface `ShowCustomerOrderDetails`
+  - Add the response parameters `resource_type_name`, `service_type_name` to the interface `ListPayPerUseCustomerResources`
+  - Add the response parameters `service_type_name`, `resource_type_name` to the interface `ListCustomerOnDemandResources`
+  - Add the response parameters `cloud_service_type_name`, `resource_type_name` to the interface `ListSubcustomerMonthlyBills`
+  - Add the response parameters `cloud_service_type_name`, `resource_type_name`, `period_type` to the interface `ListCustomerselfResourceRecordDetails`
+  - Add the response parameters `cloud_service_type_name`, `resource_type_name` to the interface `ListCustomerselfResourceRecords`
+  - Add the response parameters `service_type_name`, `resource_type_name` to the interface `ShowCustomerMonthlySum`
+  - Changes of the interface `ListCustomerBillsFeeRecords`:
+    - Add the request parameters `bill_date_begin`, `bill_date_end`
+    - Add the response parameters `service_type_name`, `resource_type_name`
+  - Add the response parameters `resource_type_name`, `service_type_name` to the interface `ListUsageTypes`
+  - Add the response parameters `service_type_name`, `resource_type_name` to the interface `ListSubCustomerBillDetail`
+  - Add the response parameters `service_type_name`, `resource_type_name` to the interface `ListCustomerBillsMonthlyBreakDown`
+  - Add the response parameter `service_type_name` to the interface `ListFreeResourceInfos`
+  - Add the response parameter `service_type_name` to the interface `ListIncentiveDiscountPolicies`
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - Support the interface `RecognizeWaybillElectronic`
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `print_code` to the interface `RecognizeVatInvoice`
+  - Changes of the interface `RecognizeVehicleLicense`:
+    - Add the request parameter `return_text_location`
+    - Add the response parameter `text_location`
+  - Changes of the interface `RecognizeTaxiInvoice`:
+    - Add the request parameter `return_text_location`
+    - Add the response parameter `text_location`
+  - Add the response parameters `type`, `accumulated_scores`, `status`, `generation_date`, `current_time` to the interface `RecognizeDriverLicense`
+  - Changes of the interface `RecognizeTrainTicket`:
+    - Add the request parameter `return_text_location`
+    - Add the response parameter `text_location`
+  - Changes of the interface `RecognizeBankcard`:
+    - Add the request parameter `return_text_location`
+    - Add the response parameter `text_location`
+
+# 3.0.41-rc 2022-03-25
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - Support the interfaces(v2):
+    - `ShowDomainLocationStats`
+    - `ShowDomainStats`
+    - `ShowTopUrl`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK IMS
+
+- _Features_
+  - Support the interfaces `ListVersions`, `ShowVersion`
+- _Bug Fix_
+  - None
+- _Change_
+  - The request parameter `os_type` changed to not required of the interface `CreateDataImage`
+
+### HuaweiCloud SDK IoTDA
+
+- _Features_
+  - Support the interface `ResetFingerprint`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `RecognizeVatInvoice`:
+    - Add the request parameter `return_text_location`
+    - Add the response parameter `text_location`
+  - Changes of the interface `RecognizeIdCard`:
+    - Add the request parameter `return_text_location`
+    - Add the response parameter `text_location`
+  - Changes of the interface `RecognizeDriverLicense`:
+    - Add the request parameter `return_text_location`
+    - Add the response parameter `text_location`
+
+# 3.0.40-rc 2022-03-10
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Remove the request parameter `X-Auth-Token` from the interface `ShowTopUrl`
+  - Remove the request parameter `X-Auth-Token` from the interface `ShowDomainLocationStats`
+  - Remove the request parameter `X-Auth-Token` from the interface `ShowDomainItemDetails`
+  - Remove the request parameter `X-Auth-Token` from the interface `ShowDomainStats`
+  - Remove the request parameter `X-Auth-Token` from the interface `ShowDomainItemLocationDetails`
+
+# 3.0.39-rc 2022-03-07
+
+### HuaweiCloud SDK EIP
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Modify the type of the request parameter `ip_version` of the interface `CreatePrePaidPublicip`: `integer` -> `enum`
+
+# 3.0.38-rc 2022-02-25
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+    - Support `Content Delivery Network` service.
+- _Bug Fix_
+    - None
+- _Change_
+    - None
+
+### HuaweiCloud SDK Live
+
+- _Features_
+  - Support the interface `ListSingleStreamDetail`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK VOD
+
+- _Features_
+  - Support the interface `ListDomainLogs`
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `delete_type` to the interface `DeleteAssets`
+
+### HuaweiCloud SDK VPC
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `subnetpool_id` to the interface `NeutronListSubnets`
+
+# 3.0.37-rc 2022-02-10
+
+### HuaweiCloud SDK Live
+
+- _Features_
+  - Support the interfaces `ListTranscodeTaskCount`, `ListAreaDetail`
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `publish_domain` to the interface `ListRecordData`
+  - Remove the request parameter `plan_record_time` from the interface `CreateRecordRule`
+  - Remove the response parameter `plan_record_time` from the interface `ListRecordRules`
+  - Remove the response parameter `plan_record_time` from the interface `ShowRecordRule`
+  - Changes of the interface `UpdateRecordRule`:
+    - Remove the request parameter `plan_record_time`
+    - Remove the response parameter `plan_record_time`
+  - Remove the request parameter `on_demand_callback_url` from the interface `CreateRecordCallbackConfig`
+  - Remove the response parameter `on_demand_callback_url` from the interface `ListRecordCallbackConfigs`
+  - Remove the response parameter `on_demand_callback_url` from the interface `ShowRecordCallbackConfig`
+  - Remove the request parameter `on_demand_callback_url` from the interface `UpdateRecordCallbackConfig`
+
+# 3.0.36-rc 2022-01-25
+
+### HuaweiCloud SDK IAM
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `session_user_id` to the interface `CreateLoginToken`
+
+# 3.0.35-beta 2022-01-10
+
+### HuaweiCloud SDK ECS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `delete_on_termination` to the interface `CreateServers`
+
+### HuaweiCloud SDK FunctionGraph
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `UpdateFunctionConfig`:
+    - Add the request parameter `is_stateful_function`
+    - Add the response parameter `is_stateful_function`
+
+### HuaweiCloud SDK IMS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - The response parameter `active_at` changed to not required of the interface `GlanceListImages`
+  - The response parameter `active_at` changed to not required of the interface `GlanceShowImage`
+  - The response parameter `active_at` changed to not required of the interface `GlanceUpdateImage`
+
