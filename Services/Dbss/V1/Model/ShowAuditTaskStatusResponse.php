@@ -22,7 +22,7 @@ class ShowAuditTaskStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * beginTime  开始时间
-    * busiType  业务类型  - audit: 审计  - risk: 风险
+    * busiType  业务类型  - audit：审计  - risk：风险
     * completedNum  已统计实例数
     * endTime  结束时间
     * id  Task任务ID
@@ -52,7 +52,7 @@ class ShowAuditTaskStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * beginTime  开始时间
-    * busiType  业务类型  - audit: 审计  - risk: 风险
+    * busiType  业务类型  - audit：审计  - risk：风险
     * completedNum  已统计实例数
     * endTime  结束时间
     * id  Task任务ID
@@ -103,7 +103,7 @@ class ShowAuditTaskStatusResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * beginTime  开始时间
-    * busiType  业务类型  - audit: 审计  - risk: 风险
+    * busiType  业务类型  - audit：审计  - risk：风险
     * completedNum  已统计实例数
     * endTime  结束时间
     * id  Task任务ID
@@ -133,7 +133,7 @@ class ShowAuditTaskStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * beginTime  开始时间
-    * busiType  业务类型  - audit: 审计  - risk: 风险
+    * busiType  业务类型  - audit：审计  - risk：风险
     * completedNum  已统计实例数
     * endTime  结束时间
     * id  Task任务ID
@@ -163,7 +163,7 @@ class ShowAuditTaskStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * beginTime  开始时间
-    * busiType  业务类型  - audit: 审计  - risk: 风险
+    * busiType  业务类型  - audit：审计  - risk：风险
     * completedNum  已统计实例数
     * endTime  结束时间
     * id  Task任务ID
@@ -309,7 +309,7 @@ class ShowAuditTaskStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets busiType
-    *  业务类型  - audit: 审计  - risk: 风险
+    *  业务类型  - audit：审计  - risk：风险
     *
     * @return string|null
     */
@@ -321,7 +321,7 @@ class ShowAuditTaskStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets busiType
     *
-    * @param string|null $busiType 业务类型  - audit: 审计  - risk: 风险
+    * @param string|null $busiType 业务类型  - audit：审计  - risk：风险
     *
     * @return $this
     */

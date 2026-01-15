@@ -22,7 +22,7 @@ class DatabaseObjectInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  type为database时，为库名；type为table或者view时，字段值参考示例
     * parentId  type为table或view时需要填写，为库名
-    * type  类型。
+    * type  类型。 table：表名，function：函数，database：SCHEMA，procedure：存储过程
     * name  数据库对象名称，库名、表名、视图名
     * aliasName  别名，映射的新名称
     *
@@ -40,7 +40,7 @@ class DatabaseObjectInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  type为database时，为库名；type为table或者view时，字段值参考示例
     * parentId  type为table或view时需要填写，为库名
-    * type  类型。
+    * type  类型。 table：表名，function：函数，database：SCHEMA，procedure：存储过程
     * name  数据库对象名称，库名、表名、视图名
     * aliasName  别名，映射的新名称
     *
@@ -79,7 +79,7 @@ class DatabaseObjectInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  type为database时，为库名；type为table或者view时，字段值参考示例
     * parentId  type为table或view时需要填写，为库名
-    * type  类型。
+    * type  类型。 table：表名，function：函数，database：SCHEMA，procedure：存储过程
     * name  数据库对象名称，库名、表名、视图名
     * aliasName  别名，映射的新名称
     *
@@ -97,7 +97,7 @@ class DatabaseObjectInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  type为database时，为库名；type为table或者view时，字段值参考示例
     * parentId  type为table或view时需要填写，为库名
-    * type  类型。
+    * type  类型。 table：表名，function：函数，database：SCHEMA，procedure：存储过程
     * name  数据库对象名称，库名、表名、视图名
     * aliasName  别名，映射的新名称
     *
@@ -115,7 +115,7 @@ class DatabaseObjectInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  type为database时，为库名；type为table或者view时，字段值参考示例
     * parentId  type为table或view时需要填写，为库名
-    * type  类型。
+    * type  类型。 table：表名，function：函数，database：SCHEMA，procedure：存储过程
     * name  数据库对象名称，库名、表名、视图名
     * aliasName  别名，映射的新名称
     *
@@ -266,7 +266,7 @@ class DatabaseObjectInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型。
+    *  类型。 table：表名，function：函数，database：SCHEMA，procedure：存储过程
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class DatabaseObjectInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 类型。
+    * @param string|null $type 类型。 table：表名，function：函数，database：SCHEMA，procedure：存储过程
     *
     * @return $this
     */

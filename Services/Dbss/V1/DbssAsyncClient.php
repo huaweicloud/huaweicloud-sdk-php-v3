@@ -570,9 +570,9 @@ class DbssAsyncClient extends Client
     }
 
     /**
-     * 绑定数据库加密实例的eip
+     * 绑定数据库加密实例的EIP
      *
-     * 绑定数据库加密实例的eip
+     * 绑定数据库加密实例的EIP
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -638,9 +638,9 @@ class DbssAsyncClient extends Client
     }
 
     /**
-     * 绑定数据库运维实例的eip
+     * 绑定数据库运维实例的EIP
      *
-     * 绑定数据库运维实例的eip
+     * 绑定数据库运维实例的EIP
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1589,7 +1589,7 @@ class DbssAsyncClient extends Client
     /**
      * 按包周期方式购买数据库加密实例
      *
-     * 按需方式购买数据库加密实例
+     * 按包周期方式购买数据库加密实例
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4324,6 +4324,12 @@ class DbssAsyncClient extends Client
         }
         if ($localVarParams['supportDbClassifyRule'] !== null) {
             $queryParams['support_db_classify_rule'] = $localVarParams['supportDbClassifyRule'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
@@ -8814,9 +8820,9 @@ class DbssAsyncClient extends Client
     }
 
     /**
-     * 解绑数据库加密实例的eip
+     * 解绑数据库加密实例的EIP
      *
-     * 解绑数据库加密实例的eip
+     * 解绑数据库加密实例的EIP
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8879,9 +8885,9 @@ class DbssAsyncClient extends Client
     }
 
     /**
-     * 解绑数据库运维实例的eip
+     * 解绑数据库运维实例的EIP
      *
-     * 解绑数据库运维实例的eip
+     * 解绑数据库运维实例的EIP
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

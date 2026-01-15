@@ -24,7 +24,7 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * connectionString  连接字符串，用于微软云Blob鉴权
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
-    * appId  当源端为腾讯云时，需要填写此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * region  源端桶所处的区域，task_type为非URL_LIST时，本参数为必选。
     * objectKey  任务类型为前缀迁移任务时，表示待迁移前缀。 整桶迁移时，此参数设置为[\"\"]。
     * bucket  源端所在桶
@@ -52,7 +52,7 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * connectionString  连接字符串，用于微软云Blob鉴权
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
-    * appId  当源端为腾讯云时，需要填写此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * region  源端桶所处的区域，task_type为非URL_LIST时，本参数为必选。
     * objectKey  任务类型为前缀迁移任务时，表示待迁移前缀。 整桶迁移时，此参数设置为[\"\"]。
     * bucket  源端所在桶
@@ -101,7 +101,7 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * connectionString  连接字符串，用于微软云Blob鉴权
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
-    * appId  当源端为腾讯云时，需要填写此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * region  源端桶所处的区域，task_type为非URL_LIST时，本参数为必选。
     * objectKey  任务类型为前缀迁移任务时，表示待迁移前缀。 整桶迁移时，此参数设置为[\"\"]。
     * bucket  源端所在桶
@@ -129,7 +129,7 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * connectionString  连接字符串，用于微软云Blob鉴权
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
-    * appId  当源端为腾讯云时，需要填写此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * region  源端桶所处的区域，task_type为非URL_LIST时，本参数为必选。
     * objectKey  任务类型为前缀迁移任务时，表示待迁移前缀。 整桶迁移时，此参数设置为[\"\"]。
     * bucket  源端所在桶
@@ -157,7 +157,7 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * connectionString  连接字符串，用于微软云Blob鉴权
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
-    * appId  当源端为腾讯云时，需要填写此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * region  源端桶所处的区域，task_type为非URL_LIST时，本参数为必选。
     * objectKey  任务类型为前缀迁移任务时，表示待迁移前缀。 整桶迁移时，此参数设置为[\"\"]。
     * bucket  源端所在桶
@@ -435,7 +435,7 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
-    *  当源端为腾讯云时，需要填写此参数。
+    *  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     *
     * @return string|null
     */
@@ -447,7 +447,7 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
     /**
     * Sets appId
     *
-    * @param string|null $appId 当源端为腾讯云时，需要填写此参数。
+    * @param string|null $appId 腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     *
     * @return $this
     */

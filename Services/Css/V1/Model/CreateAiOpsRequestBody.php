@@ -20,13 +20,17 @@ class CreateAiOpsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  检测任务名称。
-    * description  检测任务描述。
+    * checkType  **参数解释**： 检测类型 **约束限制**： 不涉及 **取值范围**： - full_detection  全量检测项 - unavailability_detection 集群不可用检测项 - partial_detection 全量检测项中选取其中部分检测项进行检测，具体检测项需要设置check_items  **默认取值**： 不涉及
+    * checkItems  **参数解释**： 全量检测项中选取其中部分检测项进行检测，输入检测项列表。 **约束限制**： 当check_type为partial_detection时有效 **取值范围**： 通过智能运维ShowAiOpsDetector获取最新支持的检测项，输入检测项id字符串列表 **默认取值**： 不涉及
+    * name  **参数解释**： 检测报告名称，支持自定义检测名。 **约束限制**： 不涉及 **取值范围**： 4～64个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。 **默认取值**： 不涉及
+    * description  **参数解释**： 检测报告描述，支持自定义检测描述 **约束限制**： 不涉及 **取值范围**： 0~255个字符 **默认取值**： 不涉及
     * alarm  alarm
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'checkType' => 'string',
+            'checkItems' => 'string[]',
             'name' => 'string',
             'description' => 'string',
             'alarm' => '\HuaweiCloud\SDK\Css\V1\Model\CreateAiOpsRequestBodyAlarm'
@@ -34,13 +38,17 @@ class CreateAiOpsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  检测任务名称。
-    * description  检测任务描述。
+    * checkType  **参数解释**： 检测类型 **约束限制**： 不涉及 **取值范围**： - full_detection  全量检测项 - unavailability_detection 集群不可用检测项 - partial_detection 全量检测项中选取其中部分检测项进行检测，具体检测项需要设置check_items  **默认取值**： 不涉及
+    * checkItems  **参数解释**： 全量检测项中选取其中部分检测项进行检测，输入检测项列表。 **约束限制**： 当check_type为partial_detection时有效 **取值范围**： 通过智能运维ShowAiOpsDetector获取最新支持的检测项，输入检测项id字符串列表 **默认取值**： 不涉及
+    * name  **参数解释**： 检测报告名称，支持自定义检测名。 **约束限制**： 不涉及 **取值范围**： 4～64个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。 **默认取值**： 不涉及
+    * description  **参数解释**： 检测报告描述，支持自定义检测描述 **约束限制**： 不涉及 **取值范围**： 0~255个字符 **默认取值**： 不涉及
     * alarm  alarm
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'checkType' => null,
+        'checkItems' => null,
         'name' => null,
         'description' => null,
         'alarm' => null
@@ -69,13 +77,17 @@ class CreateAiOpsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  检测任务名称。
-    * description  检测任务描述。
+    * checkType  **参数解释**： 检测类型 **约束限制**： 不涉及 **取值范围**： - full_detection  全量检测项 - unavailability_detection 集群不可用检测项 - partial_detection 全量检测项中选取其中部分检测项进行检测，具体检测项需要设置check_items  **默认取值**： 不涉及
+    * checkItems  **参数解释**： 全量检测项中选取其中部分检测项进行检测，输入检测项列表。 **约束限制**： 当check_type为partial_detection时有效 **取值范围**： 通过智能运维ShowAiOpsDetector获取最新支持的检测项，输入检测项id字符串列表 **默认取值**： 不涉及
+    * name  **参数解释**： 检测报告名称，支持自定义检测名。 **约束限制**： 不涉及 **取值范围**： 4～64个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。 **默认取值**： 不涉及
+    * description  **参数解释**： 检测报告描述，支持自定义检测描述 **约束限制**： 不涉及 **取值范围**： 0~255个字符 **默认取值**： 不涉及
     * alarm  alarm
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'checkType' => 'check_type',
+            'checkItems' => 'check_items',
             'name' => 'name',
             'description' => 'description',
             'alarm' => 'alarm'
@@ -83,13 +95,17 @@ class CreateAiOpsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  检测任务名称。
-    * description  检测任务描述。
+    * checkType  **参数解释**： 检测类型 **约束限制**： 不涉及 **取值范围**： - full_detection  全量检测项 - unavailability_detection 集群不可用检测项 - partial_detection 全量检测项中选取其中部分检测项进行检测，具体检测项需要设置check_items  **默认取值**： 不涉及
+    * checkItems  **参数解释**： 全量检测项中选取其中部分检测项进行检测，输入检测项列表。 **约束限制**： 当check_type为partial_detection时有效 **取值范围**： 通过智能运维ShowAiOpsDetector获取最新支持的检测项，输入检测项id字符串列表 **默认取值**： 不涉及
+    * name  **参数解释**： 检测报告名称，支持自定义检测名。 **约束限制**： 不涉及 **取值范围**： 4～64个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。 **默认取值**： 不涉及
+    * description  **参数解释**： 检测报告描述，支持自定义检测描述 **约束限制**： 不涉及 **取值范围**： 0~255个字符 **默认取值**： 不涉及
     * alarm  alarm
     *
     * @var string[]
     */
     protected static $setters = [
+            'checkType' => 'setCheckType',
+            'checkItems' => 'setCheckItems',
             'name' => 'setName',
             'description' => 'setDescription',
             'alarm' => 'setAlarm'
@@ -97,13 +113,17 @@ class CreateAiOpsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  检测任务名称。
-    * description  检测任务描述。
+    * checkType  **参数解释**： 检测类型 **约束限制**： 不涉及 **取值范围**： - full_detection  全量检测项 - unavailability_detection 集群不可用检测项 - partial_detection 全量检测项中选取其中部分检测项进行检测，具体检测项需要设置check_items  **默认取值**： 不涉及
+    * checkItems  **参数解释**： 全量检测项中选取其中部分检测项进行检测，输入检测项列表。 **约束限制**： 当check_type为partial_detection时有效 **取值范围**： 通过智能运维ShowAiOpsDetector获取最新支持的检测项，输入检测项id字符串列表 **默认取值**： 不涉及
+    * name  **参数解释**： 检测报告名称，支持自定义检测名。 **约束限制**： 不涉及 **取值范围**： 4～64个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。 **默认取值**： 不涉及
+    * description  **参数解释**： 检测报告描述，支持自定义检测描述 **约束限制**： 不涉及 **取值范围**： 0~255个字符 **默认取值**： 不涉及
     * alarm  alarm
     *
     * @var string[]
     */
     protected static $getters = [
+            'checkType' => 'getCheckType',
+            'checkItems' => 'getCheckItems',
             'name' => 'getName',
             'description' => 'getDescription',
             'alarm' => 'getAlarm'
@@ -167,6 +187,8 @@ class CreateAiOpsRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['checkType'] = isset($data['checkType']) ? $data['checkType'] : null;
+        $this->container['checkItems'] = isset($data['checkItems']) ? $data['checkItems'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['alarm'] = isset($data['alarm']) ? $data['alarm'] : null;
@@ -180,9 +202,6 @@ class CreateAiOpsRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -198,10 +217,58 @@ class CreateAiOpsRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets name
-    *  检测任务名称。
+    * Gets checkType
+    *  **参数解释**： 检测类型 **约束限制**： 不涉及 **取值范围**： - full_detection  全量检测项 - unavailability_detection 集群不可用检测项 - partial_detection 全量检测项中选取其中部分检测项进行检测，具体检测项需要设置check_items  **默认取值**： 不涉及
     *
-    * @return string
+    * @return string|null
+    */
+    public function getCheckType()
+    {
+        return $this->container['checkType'];
+    }
+
+    /**
+    * Sets checkType
+    *
+    * @param string|null $checkType **参数解释**： 检测类型 **约束限制**： 不涉及 **取值范围**： - full_detection  全量检测项 - unavailability_detection 集群不可用检测项 - partial_detection 全量检测项中选取其中部分检测项进行检测，具体检测项需要设置check_items  **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setCheckType($checkType)
+    {
+        $this->container['checkType'] = $checkType;
+        return $this;
+    }
+
+    /**
+    * Gets checkItems
+    *  **参数解释**： 全量检测项中选取其中部分检测项进行检测，输入检测项列表。 **约束限制**： 当check_type为partial_detection时有效 **取值范围**： 通过智能运维ShowAiOpsDetector获取最新支持的检测项，输入检测项id字符串列表 **默认取值**： 不涉及
+    *
+    * @return string[]|null
+    */
+    public function getCheckItems()
+    {
+        return $this->container['checkItems'];
+    }
+
+    /**
+    * Sets checkItems
+    *
+    * @param string[]|null $checkItems **参数解释**： 全量检测项中选取其中部分检测项进行检测，输入检测项列表。 **约束限制**： 当check_type为partial_detection时有效 **取值范围**： 通过智能运维ShowAiOpsDetector获取最新支持的检测项，输入检测项id字符串列表 **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setCheckItems($checkItems)
+    {
+        $this->container['checkItems'] = $checkItems;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  **参数解释**： 检测报告名称，支持自定义检测名。 **约束限制**： 不涉及 **取值范围**： 4～64个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。 **默认取值**： 不涉及
+    *
+    * @return string|null
     */
     public function getName()
     {
@@ -211,7 +278,7 @@ class CreateAiOpsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 检测任务名称。
+    * @param string|null $name **参数解释**： 检测报告名称，支持自定义检测名。 **约束限制**： 不涉及 **取值范围**： 4～64个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -223,7 +290,7 @@ class CreateAiOpsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  检测任务描述。
+    *  **参数解释**： 检测报告描述，支持自定义检测描述 **约束限制**： 不涉及 **取值范围**： 0~255个字符 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -235,7 +302,7 @@ class CreateAiOpsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 检测任务描述。
+    * @param string|null $description **参数解释**： 检测报告描述，支持自定义检测描述 **约束限制**： 不涉及 **取值范围**： 0~255个字符 **默认取值**： 不涉及
     *
     * @return $this
     */

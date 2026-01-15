@@ -48,13 +48,14 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * taskVersion  任务版本。
     * connectionManagement  connectionManagement
     * publicIpList  指定公网IP的信息
-    * bindPublicIpState  是否成功绑定公网IP
+    * bindPublicIpState  是否成功绑定公网IP 取值：SUCCESS，FAILED
     * children  多任务时，存在子任务绑定失败时，返回子任务的信息
     * isWritable  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
     * diagnoses  一键诊断结果。
     * repairProgressInfo  repairProgressInfo
     * repairDetailInfo  repairDetailInfo
-    * repairExportStatus  修复SQL导出状态。
+    * repairExportStatus  修复SQL导出状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
+    * jobKernelDirection  灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
     *
     * @var string[]
     */
@@ -93,7 +94,8 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'diagnoses' => '\HuaweiCloud\SDK\Drs\V5\Model\QueryDiagnosisResult[]',
             'repairProgressInfo' => '\HuaweiCloud\SDK\Drs\V5\Model\JobDetailRespRepairProgressInfo',
             'repairDetailInfo' => '\HuaweiCloud\SDK\Drs\V5\Model\QueryRepairDetailResp',
-            'repairExportStatus' => 'string'
+            'repairExportStatus' => 'string',
+            'jobKernelDirection' => 'string'
     ];
 
     /**
@@ -126,13 +128,14 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * taskVersion  任务版本。
     * connectionManagement  connectionManagement
     * publicIpList  指定公网IP的信息
-    * bindPublicIpState  是否成功绑定公网IP
+    * bindPublicIpState  是否成功绑定公网IP 取值：SUCCESS，FAILED
     * children  多任务时，存在子任务绑定失败时，返回子任务的信息
     * isWritable  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
     * diagnoses  一键诊断结果。
     * repairProgressInfo  repairProgressInfo
     * repairDetailInfo  repairDetailInfo
-    * repairExportStatus  修复SQL导出状态。
+    * repairExportStatus  修复SQL导出状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
+    * jobKernelDirection  灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
     *
     * @var string[]
     */
@@ -171,7 +174,8 @@ class JobDetailResp implements ModelInterface, ArrayAccess
         'diagnoses' => null,
         'repairProgressInfo' => null,
         'repairDetailInfo' => null,
-        'repairExportStatus' => null
+        'repairExportStatus' => null,
+        'jobKernelDirection' => null
     ];
 
     /**
@@ -225,13 +229,14 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * taskVersion  任务版本。
     * connectionManagement  connectionManagement
     * publicIpList  指定公网IP的信息
-    * bindPublicIpState  是否成功绑定公网IP
+    * bindPublicIpState  是否成功绑定公网IP 取值：SUCCESS，FAILED
     * children  多任务时，存在子任务绑定失败时，返回子任务的信息
     * isWritable  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
     * diagnoses  一键诊断结果。
     * repairProgressInfo  repairProgressInfo
     * repairDetailInfo  repairDetailInfo
-    * repairExportStatus  修复SQL导出状态。
+    * repairExportStatus  修复SQL导出状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
+    * jobKernelDirection  灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
     *
     * @var string[]
     */
@@ -270,7 +275,8 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'diagnoses' => 'diagnoses',
             'repairProgressInfo' => 'repair_progress_info',
             'repairDetailInfo' => 'repair_detail_info',
-            'repairExportStatus' => 'repair_export_status'
+            'repairExportStatus' => 'repair_export_status',
+            'jobKernelDirection' => 'job_kernel_direction'
     ];
 
     /**
@@ -303,13 +309,14 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * taskVersion  任务版本。
     * connectionManagement  connectionManagement
     * publicIpList  指定公网IP的信息
-    * bindPublicIpState  是否成功绑定公网IP
+    * bindPublicIpState  是否成功绑定公网IP 取值：SUCCESS，FAILED
     * children  多任务时，存在子任务绑定失败时，返回子任务的信息
     * isWritable  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
     * diagnoses  一键诊断结果。
     * repairProgressInfo  repairProgressInfo
     * repairDetailInfo  repairDetailInfo
-    * repairExportStatus  修复SQL导出状态。
+    * repairExportStatus  修复SQL导出状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
+    * jobKernelDirection  灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
     *
     * @var string[]
     */
@@ -348,7 +355,8 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'diagnoses' => 'setDiagnoses',
             'repairProgressInfo' => 'setRepairProgressInfo',
             'repairDetailInfo' => 'setRepairDetailInfo',
-            'repairExportStatus' => 'setRepairExportStatus'
+            'repairExportStatus' => 'setRepairExportStatus',
+            'jobKernelDirection' => 'setJobKernelDirection'
     ];
 
     /**
@@ -381,13 +389,14 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * taskVersion  任务版本。
     * connectionManagement  connectionManagement
     * publicIpList  指定公网IP的信息
-    * bindPublicIpState  是否成功绑定公网IP
+    * bindPublicIpState  是否成功绑定公网IP 取值：SUCCESS，FAILED
     * children  多任务时，存在子任务绑定失败时，返回子任务的信息
     * isWritable  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
     * diagnoses  一键诊断结果。
     * repairProgressInfo  repairProgressInfo
     * repairDetailInfo  repairDetailInfo
-    * repairExportStatus  修复SQL导出状态。
+    * repairExportStatus  修复SQL导出状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
+    * jobKernelDirection  灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
     *
     * @var string[]
     */
@@ -426,7 +435,8 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'diagnoses' => 'getDiagnoses',
             'repairProgressInfo' => 'getRepairProgressInfo',
             'repairDetailInfo' => 'getRepairDetailInfo',
-            'repairExportStatus' => 'getRepairExportStatus'
+            'repairExportStatus' => 'getRepairExportStatus',
+            'jobKernelDirection' => 'getJobKernelDirection'
     ];
 
     /**
@@ -500,6 +510,8 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     const STATUS_NODE_UPGRADE_FAILED = 'NODE_UPGRADE_FAILED';
     const IS_WRITABLE_PENDING = 'pending';
     const IS_WRITABLE_SUCCESS = 'success';
+    const JOB_KERNEL_DIRECTION_UP = 'up';
+    const JOB_KERNEL_DIRECTION_DOWN = 'down';
     
 
     /**
@@ -555,6 +567,19 @@ class JobDetailResp implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getJobKernelDirectionAllowableValues()
+    {
+        return [
+            self::JOB_KERNEL_DIRECTION_UP,
+            self::JOB_KERNEL_DIRECTION_DOWN,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -606,6 +631,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
         $this->container['repairProgressInfo'] = isset($data['repairProgressInfo']) ? $data['repairProgressInfo'] : null;
         $this->container['repairDetailInfo'] = isset($data['repairDetailInfo']) ? $data['repairDetailInfo'] : null;
         $this->container['repairExportStatus'] = isset($data['repairExportStatus']) ? $data['repairExportStatus'] : null;
+        $this->container['jobKernelDirection'] = isset($data['jobKernelDirection']) ? $data['jobKernelDirection'] : null;
     }
 
     /**
@@ -628,6 +654,14 @@ class JobDetailResp implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['isWritable']) && !in_array($this->container['isWritable'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'isWritable', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getJobKernelDirectionAllowableValues();
+                if (!is_null($this->container['jobKernelDirection']) && !in_array($this->container['jobKernelDirection'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'jobKernelDirection', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -1320,7 +1354,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets bindPublicIpState
-    *  是否成功绑定公网IP
+    *  是否成功绑定公网IP 取值：SUCCESS，FAILED
     *
     * @return string|null
     */
@@ -1332,7 +1366,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets bindPublicIpState
     *
-    * @param string|null $bindPublicIpState 是否成功绑定公网IP
+    * @param string|null $bindPublicIpState 是否成功绑定公网IP 取值：SUCCESS，FAILED
     *
     * @return $this
     */
@@ -1464,7 +1498,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets repairExportStatus
-    *  修复SQL导出状态。
+    *  修复SQL导出状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
     *
     * @return string|null
     */
@@ -1476,13 +1510,37 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets repairExportStatus
     *
-    * @param string|null $repairExportStatus 修复SQL导出状态。
+    * @param string|null $repairExportStatus 修复SQL导出状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
     *
     * @return $this
     */
     public function setRepairExportStatus($repairExportStatus)
     {
         $this->container['repairExportStatus'] = $repairExportStatus;
+        return $this;
+    }
+
+    /**
+    * Gets jobKernelDirection
+    *  灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
+    *
+    * @return string|null
+    */
+    public function getJobKernelDirection()
+    {
+        return $this->container['jobKernelDirection'];
+    }
+
+    /**
+    * Sets jobKernelDirection
+    *
+    * @param string|null $jobKernelDirection 灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
+    *
+    * @return $this
+    */
+    public function setJobKernelDirection($jobKernelDirection)
+    {
+        $this->container['jobKernelDirection'] = $jobKernelDirection;
         return $this;
     }
 

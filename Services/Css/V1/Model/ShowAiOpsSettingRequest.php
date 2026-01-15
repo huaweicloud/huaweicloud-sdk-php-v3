@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dbss\V1\Model;
+namespace HuaweiCloud\SDK\Css\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UnSupportAuditInfoResponse implements ModelInterface, ArrayAccess
+class ShowAiOpsSettingRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class UnSupportAuditInfoResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UnSupportAuditInfoResponse';
+    protected static $openAPIModelName = 'ShowAiOpsSettingRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * auditInfos  审计信息
-    * supportVersion  支持的版本
+    * clusterId  **参数解释**： 指定查询的集群ID。获取方法请参见[获取集群ID](css_03_0101.xml)。 **约束限制**： 不涉及 **取值范围**： 集群ID。 **默认取值**： 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'auditInfos' => '\HuaweiCloud\SDK\Dbss\V1\Model\UnSupportAuditInfo[]',
-            'supportVersion' => 'string'
+            'clusterId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * auditInfos  审计信息
-    * supportVersion  支持的版本
+    * clusterId  **参数解释**： 指定查询的集群ID。获取方法请参见[获取集群ID](css_03_0101.xml)。 **约束限制**： 不涉及 **取值范围**： 集群ID。 **默认取值**： 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'auditInfos' => null,
-        'supportVersion' => null
+        'clusterId' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class UnSupportAuditInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * auditInfos  审计信息
-    * supportVersion  支持的版本
+    * clusterId  **参数解释**： 指定查询的集群ID。获取方法请参见[获取集群ID](css_03_0101.xml)。 **约束限制**： 不涉及 **取值范围**： 集群ID。 **默认取值**： 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'auditInfos' => 'audit_infos',
-            'supportVersion' => 'support_version'
+            'clusterId' => 'cluster_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * auditInfos  审计信息
-    * supportVersion  支持的版本
+    * clusterId  **参数解释**： 指定查询的集群ID。获取方法请参见[获取集群ID](css_03_0101.xml)。 **约束限制**： 不涉及 **取值范围**： 集群ID。 **默认取值**： 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
-            'auditInfos' => 'setAuditInfos',
-            'supportVersion' => 'setSupportVersion'
+            'clusterId' => 'setClusterId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * auditInfos  审计信息
-    * supportVersion  支持的版本
+    * clusterId  **参数解释**： 指定查询的集群ID。获取方法请参见[获取集群ID](css_03_0101.xml)。 **约束限制**： 不涉及 **取值范围**： 集群ID。 **默认取值**： 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
-            'auditInfos' => 'getAuditInfos',
-            'supportVersion' => 'getSupportVersion'
+            'clusterId' => 'getClusterId'
     ];
 
     /**
@@ -157,8 +147,7 @@ class UnSupportAuditInfoResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['auditInfos'] = isset($data['auditInfos']) ? $data['auditInfos'] : null;
-        $this->container['supportVersion'] = isset($data['supportVersion']) ? $data['supportVersion'] : null;
+        $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
     }
 
     /**
@@ -169,6 +158,9 @@ class UnSupportAuditInfoResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['clusterId'] === null) {
+            $invalidProperties[] = "'clusterId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -184,50 +176,26 @@ class UnSupportAuditInfoResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets auditInfos
-    *  审计信息
+    * Gets clusterId
+    *  **参数解释**： 指定查询的集群ID。获取方法请参见[获取集群ID](css_03_0101.xml)。 **约束限制**： 不涉及 **取值范围**： 集群ID。 **默认取值**： 不涉及
     *
-    * @return \HuaweiCloud\SDK\Dbss\V1\Model\UnSupportAuditInfo[]|null
+    * @return string
     */
-    public function getAuditInfos()
+    public function getClusterId()
     {
-        return $this->container['auditInfos'];
+        return $this->container['clusterId'];
     }
 
     /**
-    * Sets auditInfos
+    * Sets clusterId
     *
-    * @param \HuaweiCloud\SDK\Dbss\V1\Model\UnSupportAuditInfo[]|null $auditInfos 审计信息
+    * @param string $clusterId **参数解释**： 指定查询的集群ID。获取方法请参见[获取集群ID](css_03_0101.xml)。 **约束限制**： 不涉及 **取值范围**： 集群ID。 **默认取值**： 不涉及
     *
     * @return $this
     */
-    public function setAuditInfos($auditInfos)
+    public function setClusterId($clusterId)
     {
-        $this->container['auditInfos'] = $auditInfos;
-        return $this;
-    }
-
-    /**
-    * Gets supportVersion
-    *  支持的版本
-    *
-    * @return string|null
-    */
-    public function getSupportVersion()
-    {
-        return $this->container['supportVersion'];
-    }
-
-    /**
-    * Sets supportVersion
-    *
-    * @param string|null $supportVersion 支持的版本
-    *
-    * @return $this
-    */
-    public function setSupportVersion($supportVersion)
-    {
-        $this->container['supportVersion'] = $supportVersion;
+        $this->container['clusterId'] = $clusterId;
         return $this;
     }
 

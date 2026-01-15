@@ -20,7 +20,7 @@ class QueryCompareJobProgressRespFullInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * progress  全量数据对比进度，单位为%。
+    * progress  增量数据对比进度，单位为%。
     * srcSpeed  全量数据对比速率。
     * recheckEntities  差异待复查行数。
     *
@@ -34,7 +34,7 @@ class QueryCompareJobProgressRespFullInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * progress  全量数据对比进度，单位为%。
+    * progress  增量数据对比进度，单位为%。
     * srcSpeed  全量数据对比速率。
     * recheckEntities  差异待复查行数。
     *
@@ -69,7 +69,7 @@ class QueryCompareJobProgressRespFullInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * progress  全量数据对比进度，单位为%。
+    * progress  增量数据对比进度，单位为%。
     * srcSpeed  全量数据对比速率。
     * recheckEntities  差异待复查行数。
     *
@@ -83,7 +83,7 @@ class QueryCompareJobProgressRespFullInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * progress  全量数据对比进度，单位为%。
+    * progress  增量数据对比进度，单位为%。
     * srcSpeed  全量数据对比速率。
     * recheckEntities  差异待复查行数。
     *
@@ -97,7 +97,7 @@ class QueryCompareJobProgressRespFullInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * progress  全量数据对比进度，单位为%。
+    * progress  增量数据对比进度，单位为%。
     * srcSpeed  全量数据对比速率。
     * recheckEntities  差异待复查行数。
     *
@@ -211,7 +211,7 @@ class QueryCompareJobProgressRespFullInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets progress
-    *  全量数据对比进度，单位为%。
+    *  增量数据对比进度，单位为%。
     *
     * @return float|null
     */
@@ -223,7 +223,7 @@ class QueryCompareJobProgressRespFullInfo implements ModelInterface, ArrayAccess
     /**
     * Sets progress
     *
-    * @param float|null $progress 全量数据对比进度，单位为%。
+    * @param float|null $progress 增量数据对比进度，单位为%。
     *
     * @return $this
     */

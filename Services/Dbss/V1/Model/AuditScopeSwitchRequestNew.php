@@ -21,7 +21,7 @@ class AuditScopeSwitchRequestNew implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * ids  审计范围ID列表
-    * status  状态  - OFF： 关闭  - ON： 启用
+    * status  状态  - OFF：关闭  - ON：启用
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class AuditScopeSwitchRequestNew implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * ids  审计范围ID列表
-    * status  状态  - OFF： 关闭  - ON： 启用
+    * status  状态  - OFF：关闭  - ON：启用
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class AuditScopeSwitchRequestNew implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * ids  审计范围ID列表
-    * status  状态  - OFF： 关闭  - ON： 启用
+    * status  状态  - OFF：关闭  - ON：启用
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class AuditScopeSwitchRequestNew implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * ids  审计范围ID列表
-    * status  状态  - OFF： 关闭  - ON： 启用
+    * status  状态  - OFF：关闭  - ON：启用
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class AuditScopeSwitchRequestNew implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * ids  审计范围ID列表
-    * status  状态  - OFF： 关闭  - ON： 启用
+    * status  状态  - OFF：关闭  - ON：启用
     *
     * @var string[]
     */
@@ -238,7 +238,7 @@ class AuditScopeSwitchRequestNew implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态  - OFF： 关闭  - ON： 启用
+    *  状态  - OFF：关闭  - ON：启用
     *
     * @return string
     */
@@ -250,7 +250,7 @@ class AuditScopeSwitchRequestNew implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 状态  - OFF： 关闭  - ON： 启用
+    * @param string $status 状态  - OFF：关闭  - ON：启用
     *
     * @return $this
     */

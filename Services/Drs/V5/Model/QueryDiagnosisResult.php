@@ -21,7 +21,7 @@ class QueryDiagnosisResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * score  得分。
-    * status  状态。
+    * status  状态。 INIT：初始化，RUNNING：诊断中，SUCCESS：诊断完成，FAILED：诊断失败
     * progress  进度。
     * errorMsg  失败原因。
     * startTime  开始时间。
@@ -55,7 +55,7 @@ class QueryDiagnosisResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * score  得分。
-    * status  状态。
+    * status  状态。 INIT：初始化，RUNNING：诊断中，SUCCESS：诊断完成，FAILED：诊断失败
     * progress  进度。
     * errorMsg  失败原因。
     * startTime  开始时间。
@@ -110,7 +110,7 @@ class QueryDiagnosisResult implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * score  得分。
-    * status  状态。
+    * status  状态。 INIT：初始化，RUNNING：诊断中，SUCCESS：诊断完成，FAILED：诊断失败
     * progress  进度。
     * errorMsg  失败原因。
     * startTime  开始时间。
@@ -144,7 +144,7 @@ class QueryDiagnosisResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * score  得分。
-    * status  状态。
+    * status  状态。 INIT：初始化，RUNNING：诊断中，SUCCESS：诊断完成，FAILED：诊断失败
     * progress  进度。
     * errorMsg  失败原因。
     * startTime  开始时间。
@@ -178,7 +178,7 @@ class QueryDiagnosisResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * score  得分。
-    * status  状态。
+    * status  状态。 INIT：初始化，RUNNING：诊断中，SUCCESS：诊断完成，FAILED：诊断失败
     * progress  进度。
     * errorMsg  失败原因。
     * startTime  开始时间。
@@ -330,7 +330,7 @@ class QueryDiagnosisResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态。
+    *  状态。 INIT：初始化，RUNNING：诊断中，SUCCESS：诊断完成，FAILED：诊断失败
     *
     * @return string|null
     */
@@ -342,7 +342,7 @@ class QueryDiagnosisResult implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态。
+    * @param string|null $status 状态。 INIT：初始化，RUNNING：诊断中，SUCCESS：诊断完成，FAILED：诊断失败
     *
     * @return $this
     */

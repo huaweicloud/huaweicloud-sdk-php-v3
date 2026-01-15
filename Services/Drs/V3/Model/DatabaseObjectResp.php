@@ -21,7 +21,7 @@ class DatabaseObjectResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务ID
-    * status  选择对象任务成功标志
+    * status  选择对象任务成功标志：true，false
     * errorCode  错误码
     * errorMsg  错误信息
     *
@@ -37,7 +37,7 @@ class DatabaseObjectResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务ID
-    * status  选择对象任务成功标志
+    * status  选择对象任务成功标志：true，false
     * errorCode  错误码
     * errorMsg  错误信息
     *
@@ -74,7 +74,7 @@ class DatabaseObjectResp implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobId  任务ID
-    * status  选择对象任务成功标志
+    * status  选择对象任务成功标志：true，false
     * errorCode  错误码
     * errorMsg  错误信息
     *
@@ -90,7 +90,7 @@ class DatabaseObjectResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务ID
-    * status  选择对象任务成功标志
+    * status  选择对象任务成功标志：true，false
     * errorCode  错误码
     * errorMsg  错误信息
     *
@@ -106,7 +106,7 @@ class DatabaseObjectResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务ID
-    * status  选择对象任务成功标志
+    * status  选择对象任务成功标志：true，false
     * errorCode  错误码
     * errorMsg  错误信息
     *
@@ -231,7 +231,7 @@ class DatabaseObjectResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  选择对象任务成功标志
+    *  选择对象任务成功标志：true，false
     *
     * @return bool|null
     */
@@ -243,7 +243,7 @@ class DatabaseObjectResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param bool|null $status 选择对象任务成功标志
+    * @param bool|null $status 选择对象任务成功标志：true，false
     *
     * @return $this
     */

@@ -3006,6 +3006,68 @@ class DnsClient extends Client
     }
 
     /**
+     * 批量查询DNS解析量统计相关的资源
+     *
+     * 批量查询DNS解析量统计相关的资源。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listInstances($request)
+    {
+        return $this->listInstancesWithHttpInfo($request);
+    }
+
+    public function listInstancesWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/batch-query-instances';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListInstancesResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListInstancesRequest');
+    }
+
+    /**
      * 查询线路分组列表
      *
      * 查询线路分组列表。该接口部分区域未上线，如需使用请提交工单申请开通。

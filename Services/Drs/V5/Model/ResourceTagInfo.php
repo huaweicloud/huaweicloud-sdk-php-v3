@@ -20,8 +20,8 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  标签键。
-    * value  标签值。
+    * key  标签键。例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
+    * value  标签值。例如键值对{“aaa”:\"bbb\"}的value为\"bbb\"
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  标签键。
-    * value  标签值。
+    * key  标签键。例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
+    * value  标签值。例如键值对{“aaa”:\"bbb\"}的value为\"bbb\"
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  标签键。
-    * value  标签值。
+    * key  标签键。例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
+    * value  标签值。例如键值对{“aaa”:\"bbb\"}的value为\"bbb\"
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  标签键。
-    * value  标签值。
+    * key  标签键。例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
+    * value  标签值。例如键值对{“aaa”:\"bbb\"}的value为\"bbb\"
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  标签键。
-    * value  标签值。
+    * key  标签键。例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
+    * value  标签值。例如键值对{“aaa”:\"bbb\"}的value为\"bbb\"
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  标签键。
+    *  标签键。例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 标签键。
+    * @param string|null $key 标签键。例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  标签值。
+    *  标签值。例如键值对{“aaa”:\"bbb\"}的value为\"bbb\"
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class ResourceTagInfo implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 标签值。
+    * @param string|null $value 标签值。例如键值对{“aaa”:\"bbb\"}的value为\"bbb\"
     *
     * @return $this
     */

@@ -20,30 +20,34 @@ class ListAiOpsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  指定待查询的集群ID。
-    * limit  分页参数，列表当前分页的数量限制。
-    * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
+    * clusterId  **参数解释**： 指定查询的集群ID。获取方法请参见[获取集群ID](css_03_0101.xml)。 **约束限制**： 不涉及 **取值范围**： 集群ID。 **默认取值**： 不涉及
+    * limit  **参数解释**： 分页参数，列表当前分页的数量限制。默认值为10，即一次查询10个任务信息。 **约束限制**： 不涉及 **取值范围**： 1-1000 **默认取值**： 10
+    * offset  **参数解释**： 偏移量，表示从偏移量后面的计数开始查询。 **约束限制**： 不涉及 **取值范围**： 0-1000 **默认取值**： 0
+    * report  **参数解释**： 获取当前最新一份报告或历史报告 **约束限制**： 不涉及 **取值范围**： - current   仅获取当前最新一次检测报告 - history   仅获取当前历史检测报告  **默认取值**： 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'clusterId' => 'string',
             'limit' => 'int',
-            'offset' => 'int'
+            'offset' => 'int',
+            'report' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  指定待查询的集群ID。
-    * limit  分页参数，列表当前分页的数量限制。
-    * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
+    * clusterId  **参数解释**： 指定查询的集群ID。获取方法请参见[获取集群ID](css_03_0101.xml)。 **约束限制**： 不涉及 **取值范围**： 集群ID。 **默认取值**： 不涉及
+    * limit  **参数解释**： 分页参数，列表当前分页的数量限制。默认值为10，即一次查询10个任务信息。 **约束限制**： 不涉及 **取值范围**： 1-1000 **默认取值**： 10
+    * offset  **参数解释**： 偏移量，表示从偏移量后面的计数开始查询。 **约束限制**： 不涉及 **取值范围**： 0-1000 **默认取值**： 0
+    * report  **参数解释**： 获取当前最新一份报告或历史报告 **约束限制**： 不涉及 **取值范围**： - current   仅获取当前最新一次检测报告 - history   仅获取当前历史检测报告  **默认取值**： 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'clusterId' => null,
         'limit' => null,
-        'offset' => null
+        'offset' => null,
+        'report' => null
     ];
 
     /**
@@ -69,44 +73,50 @@ class ListAiOpsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  指定待查询的集群ID。
-    * limit  分页参数，列表当前分页的数量限制。
-    * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
+    * clusterId  **参数解释**： 指定查询的集群ID。获取方法请参见[获取集群ID](css_03_0101.xml)。 **约束限制**： 不涉及 **取值范围**： 集群ID。 **默认取值**： 不涉及
+    * limit  **参数解释**： 分页参数，列表当前分页的数量限制。默认值为10，即一次查询10个任务信息。 **约束限制**： 不涉及 **取值范围**： 1-1000 **默认取值**： 10
+    * offset  **参数解释**： 偏移量，表示从偏移量后面的计数开始查询。 **约束限制**： 不涉及 **取值范围**： 0-1000 **默认取值**： 0
+    * report  **参数解释**： 获取当前最新一份报告或历史报告 **约束限制**： 不涉及 **取值范围**： - current   仅获取当前最新一次检测报告 - history   仅获取当前历史检测报告  **默认取值**： 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'clusterId' => 'cluster_id',
             'limit' => 'limit',
-            'offset' => 'offset'
+            'offset' => 'offset',
+            'report' => 'report'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  指定待查询的集群ID。
-    * limit  分页参数，列表当前分页的数量限制。
-    * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
+    * clusterId  **参数解释**： 指定查询的集群ID。获取方法请参见[获取集群ID](css_03_0101.xml)。 **约束限制**： 不涉及 **取值范围**： 集群ID。 **默认取值**： 不涉及
+    * limit  **参数解释**： 分页参数，列表当前分页的数量限制。默认值为10，即一次查询10个任务信息。 **约束限制**： 不涉及 **取值范围**： 1-1000 **默认取值**： 10
+    * offset  **参数解释**： 偏移量，表示从偏移量后面的计数开始查询。 **约束限制**： 不涉及 **取值范围**： 0-1000 **默认取值**： 0
+    * report  **参数解释**： 获取当前最新一份报告或历史报告 **约束限制**： 不涉及 **取值范围**： - current   仅获取当前最新一次检测报告 - history   仅获取当前历史检测报告  **默认取值**： 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
             'clusterId' => 'setClusterId',
             'limit' => 'setLimit',
-            'offset' => 'setOffset'
+            'offset' => 'setOffset',
+            'report' => 'setReport'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  指定待查询的集群ID。
-    * limit  分页参数，列表当前分页的数量限制。
-    * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
+    * clusterId  **参数解释**： 指定查询的集群ID。获取方法请参见[获取集群ID](css_03_0101.xml)。 **约束限制**： 不涉及 **取值范围**： 集群ID。 **默认取值**： 不涉及
+    * limit  **参数解释**： 分页参数，列表当前分页的数量限制。默认值为10，即一次查询10个任务信息。 **约束限制**： 不涉及 **取值范围**： 1-1000 **默认取值**： 10
+    * offset  **参数解释**： 偏移量，表示从偏移量后面的计数开始查询。 **约束限制**： 不涉及 **取值范围**： 0-1000 **默认取值**： 0
+    * report  **参数解释**： 获取当前最新一份报告或历史报告 **约束限制**： 不涉及 **取值范围**： - current   仅获取当前最新一次检测报告 - history   仅获取当前历史检测报告  **默认取值**： 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
             'clusterId' => 'getClusterId',
             'limit' => 'getLimit',
-            'offset' => 'getOffset'
+            'offset' => 'getOffset',
+            'report' => 'getReport'
     ];
 
     /**
@@ -170,6 +180,7 @@ class ListAiOpsRequest implements ModelInterface, ArrayAccess
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['report'] = isset($data['report']) ? $data['report'] : null;
     }
 
     /**
@@ -199,7 +210,7 @@ class ListAiOpsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  指定待查询的集群ID。
+    *  **参数解释**： 指定查询的集群ID。获取方法请参见[获取集群ID](css_03_0101.xml)。 **约束限制**： 不涉及 **取值范围**： 集群ID。 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -211,7 +222,7 @@ class ListAiOpsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string $clusterId 指定待查询的集群ID。
+    * @param string $clusterId **参数解释**： 指定查询的集群ID。获取方法请参见[获取集群ID](css_03_0101.xml)。 **约束限制**： 不涉及 **取值范围**： 集群ID。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -223,7 +234,7 @@ class ListAiOpsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  分页参数，列表当前分页的数量限制。
+    *  **参数解释**： 分页参数，列表当前分页的数量限制。默认值为10，即一次查询10个任务信息。 **约束限制**： 不涉及 **取值范围**： 1-1000 **默认取值**： 10
     *
     * @return int|null
     */
@@ -235,7 +246,7 @@ class ListAiOpsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 分页参数，列表当前分页的数量限制。
+    * @param int|null $limit **参数解释**： 分页参数，列表当前分页的数量限制。默认值为10，即一次查询10个任务信息。 **约束限制**： 不涉及 **取值范围**： 1-1000 **默认取值**： 10
     *
     * @return $this
     */
@@ -247,7 +258,7 @@ class ListAiOpsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
+    *  **参数解释**： 偏移量，表示从偏移量后面的计数开始查询。 **约束限制**： 不涉及 **取值范围**： 0-1000 **默认取值**： 0
     *
     * @return int|null
     */
@@ -259,13 +270,37 @@ class ListAiOpsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
+    * @param int|null $offset **参数解释**： 偏移量，表示从偏移量后面的计数开始查询。 **约束限制**： 不涉及 **取值范围**： 0-1000 **默认取值**： 0
     *
     * @return $this
     */
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets report
+    *  **参数解释**： 获取当前最新一份报告或历史报告 **约束限制**： 不涉及 **取值范围**： - current   仅获取当前最新一次检测报告 - history   仅获取当前历史检测报告  **默认取值**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getReport()
+    {
+        return $this->container['report'];
+    }
+
+    /**
+    * Sets report
+    *
+    * @param string|null $report **参数解释**： 获取当前最新一份报告或历史报告 **约束限制**： 不涉及 **取值范围**： - current   仅获取当前最新一次检测报告 - history   仅获取当前历史检测报告  **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setReport($report)
+    {
+        $this->container['report'] = $report;
         return $this;
     }
 

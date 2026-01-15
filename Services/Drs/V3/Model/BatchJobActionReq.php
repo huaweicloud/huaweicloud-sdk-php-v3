@@ -22,7 +22,7 @@ class BatchJobActionReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * action  需要执行的特定操作。
     * jobId  任务ID（集群模式 取父任务的任务ID）。
-    * property  操作对应的参数（API参考文档-批量测试连接-集群模式-property字段数据结构说明）[字段说明参考](https://support.huaweicloud.com/api-drs/drs_03_0106.html)
+    * property  操作对应的参数（API参考文档-批量测试连接-集群模式-property字段数据结构说明）[字段说明参考](https://support.huaweicloud.com/api-drs/drs_03_0106.html dbtype参数取值：mysql, taurusha, sqlserver, postgresql, ddm, mongodb, awsdocumentdb, hwmongodb, hwpostgresql, oracle, taurus, gaussdb, kafka, mrsKafka, cassandra, dynamo, dws, gaussdbv5, gaussdbv5ha, gaussmongodb, multigaussdbv5, dmq, gaussdbt, gaussdbtha, gaussdb300, elasticsearch, db2, tidb, redis, gaussredis, rediscluster, mariadb, oceanbase, informix, gaussdbv1, gausscassandra, geminidynamo, dds, tauruslite, star-rocks, gaussdbformysqllite, taurus-postgresql, thl, opengauss, ddmforgaussdb, gaussdbmultimaster
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class BatchJobActionReq implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * action  需要执行的特定操作。
     * jobId  任务ID（集群模式 取父任务的任务ID）。
-    * property  操作对应的参数（API参考文档-批量测试连接-集群模式-property字段数据结构说明）[字段说明参考](https://support.huaweicloud.com/api-drs/drs_03_0106.html)
+    * property  操作对应的参数（API参考文档-批量测试连接-集群模式-property字段数据结构说明）[字段说明参考](https://support.huaweicloud.com/api-drs/drs_03_0106.html dbtype参数取值：mysql, taurusha, sqlserver, postgresql, ddm, mongodb, awsdocumentdb, hwmongodb, hwpostgresql, oracle, taurus, gaussdb, kafka, mrsKafka, cassandra, dynamo, dws, gaussdbv5, gaussdbv5ha, gaussmongodb, multigaussdbv5, dmq, gaussdbt, gaussdbtha, gaussdb300, elasticsearch, db2, tidb, redis, gaussredis, rediscluster, mariadb, oceanbase, informix, gaussdbv1, gausscassandra, geminidynamo, dds, tauruslite, star-rocks, gaussdbformysqllite, taurus-postgresql, thl, opengauss, ddmforgaussdb, gaussdbmultimaster
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchJobActionReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * action  需要执行的特定操作。
     * jobId  任务ID（集群模式 取父任务的任务ID）。
-    * property  操作对应的参数（API参考文档-批量测试连接-集群模式-property字段数据结构说明）[字段说明参考](https://support.huaweicloud.com/api-drs/drs_03_0106.html)
+    * property  操作对应的参数（API参考文档-批量测试连接-集群模式-property字段数据结构说明）[字段说明参考](https://support.huaweicloud.com/api-drs/drs_03_0106.html dbtype参数取值：mysql, taurusha, sqlserver, postgresql, ddm, mongodb, awsdocumentdb, hwmongodb, hwpostgresql, oracle, taurus, gaussdb, kafka, mrsKafka, cassandra, dynamo, dws, gaussdbv5, gaussdbv5ha, gaussmongodb, multigaussdbv5, dmq, gaussdbt, gaussdbtha, gaussdb300, elasticsearch, db2, tidb, redis, gaussredis, rediscluster, mariadb, oceanbase, informix, gaussdbv1, gausscassandra, geminidynamo, dds, tauruslite, star-rocks, gaussdbformysqllite, taurus-postgresql, thl, opengauss, ddmforgaussdb, gaussdbmultimaster
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class BatchJobActionReq implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * action  需要执行的特定操作。
     * jobId  任务ID（集群模式 取父任务的任务ID）。
-    * property  操作对应的参数（API参考文档-批量测试连接-集群模式-property字段数据结构说明）[字段说明参考](https://support.huaweicloud.com/api-drs/drs_03_0106.html)
+    * property  操作对应的参数（API参考文档-批量测试连接-集群模式-property字段数据结构说明）[字段说明参考](https://support.huaweicloud.com/api-drs/drs_03_0106.html dbtype参数取值：mysql, taurusha, sqlserver, postgresql, ddm, mongodb, awsdocumentdb, hwmongodb, hwpostgresql, oracle, taurus, gaussdb, kafka, mrsKafka, cassandra, dynamo, dws, gaussdbv5, gaussdbv5ha, gaussmongodb, multigaussdbv5, dmq, gaussdbt, gaussdbtha, gaussdb300, elasticsearch, db2, tidb, redis, gaussredis, rediscluster, mariadb, oceanbase, informix, gaussdbv1, gausscassandra, geminidynamo, dds, tauruslite, star-rocks, gaussdbformysqllite, taurus-postgresql, thl, opengauss, ddmforgaussdb, gaussdbmultimaster
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class BatchJobActionReq implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * action  需要执行的特定操作。
     * jobId  任务ID（集群模式 取父任务的任务ID）。
-    * property  操作对应的参数（API参考文档-批量测试连接-集群模式-property字段数据结构说明）[字段说明参考](https://support.huaweicloud.com/api-drs/drs_03_0106.html)
+    * property  操作对应的参数（API参考文档-批量测试连接-集群模式-property字段数据结构说明）[字段说明参考](https://support.huaweicloud.com/api-drs/drs_03_0106.html dbtype参数取值：mysql, taurusha, sqlserver, postgresql, ddm, mongodb, awsdocumentdb, hwmongodb, hwpostgresql, oracle, taurus, gaussdb, kafka, mrsKafka, cassandra, dynamo, dws, gaussdbv5, gaussdbv5ha, gaussmongodb, multigaussdbv5, dmq, gaussdbt, gaussdbtha, gaussdb300, elasticsearch, db2, tidb, redis, gaussredis, rediscluster, mariadb, oceanbase, informix, gaussdbv1, gausscassandra, geminidynamo, dds, tauruslite, star-rocks, gaussdbformysqllite, taurus-postgresql, thl, opengauss, ddmforgaussdb, gaussdbmultimaster
     *
     * @var string[]
     */
@@ -274,7 +274,7 @@ class BatchJobActionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets property
-    *  操作对应的参数（API参考文档-批量测试连接-集群模式-property字段数据结构说明）[字段说明参考](https://support.huaweicloud.com/api-drs/drs_03_0106.html)
+    *  操作对应的参数（API参考文档-批量测试连接-集群模式-property字段数据结构说明）[字段说明参考](https://support.huaweicloud.com/api-drs/drs_03_0106.html dbtype参数取值：mysql, taurusha, sqlserver, postgresql, ddm, mongodb, awsdocumentdb, hwmongodb, hwpostgresql, oracle, taurus, gaussdb, kafka, mrsKafka, cassandra, dynamo, dws, gaussdbv5, gaussdbv5ha, gaussmongodb, multigaussdbv5, dmq, gaussdbt, gaussdbtha, gaussdb300, elasticsearch, db2, tidb, redis, gaussredis, rediscluster, mariadb, oceanbase, informix, gaussdbv1, gausscassandra, geminidynamo, dds, tauruslite, star-rocks, gaussdbformysqllite, taurus-postgresql, thl, opengauss, ddmforgaussdb, gaussdbmultimaster
     *
     * @return string
     */
@@ -286,7 +286,7 @@ class BatchJobActionReq implements ModelInterface, ArrayAccess
     /**
     * Sets property
     *
-    * @param string $property 操作对应的参数（API参考文档-批量测试连接-集群模式-property字段数据结构说明）[字段说明参考](https://support.huaweicloud.com/api-drs/drs_03_0106.html)
+    * @param string $property 操作对应的参数（API参考文档-批量测试连接-集群模式-property字段数据结构说明）[字段说明参考](https://support.huaweicloud.com/api-drs/drs_03_0106.html dbtype参数取值：mysql, taurusha, sqlserver, postgresql, ddm, mongodb, awsdocumentdb, hwmongodb, hwpostgresql, oracle, taurus, gaussdb, kafka, mrsKafka, cassandra, dynamo, dws, gaussdbv5, gaussdbv5ha, gaussmongodb, multigaussdbv5, dmq, gaussdbt, gaussdbtha, gaussdb300, elasticsearch, db2, tidb, redis, gaussredis, rediscluster, mariadb, oceanbase, informix, gaussdbv1, gausscassandra, geminidynamo, dds, tauruslite, star-rocks, gaussdbformysqllite, taurus-postgresql, thl, opengauss, ddmforgaussdb, gaussdbmultimaster
     *
     * @return $this
     */

@@ -236,6 +236,9 @@ class BatchUpdateIgnoreRuleRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['rule'] === null) {
             $invalidProperties[] = "'rule' can't be null";
         }
+        if ($this->container['policyRuleIds'] === null) {
+            $invalidProperties[] = "'policyRuleIds' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -398,7 +401,7 @@ class BatchUpdateIgnoreRuleRequestBody implements ModelInterface, ArrayAccess
     * Gets policyRuleIds
     *  **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
-    * @return \HuaweiCloud\SDK\Waf\V1\Model\PolicyRuleIdRequestBodyPolicyRuleIds[]|null
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\PolicyRuleIdRequestBodyPolicyRuleIds[]
     */
     public function getPolicyRuleIds()
     {
@@ -408,7 +411,7 @@ class BatchUpdateIgnoreRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets policyRuleIds
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\PolicyRuleIdRequestBodyPolicyRuleIds[]|null $policyRuleIds **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\PolicyRuleIdRequestBodyPolicyRuleIds[] $policyRuleIds **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

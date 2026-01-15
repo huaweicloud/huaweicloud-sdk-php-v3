@@ -24,7 +24,7 @@ class Actions implements ModelInterface, ArrayAccess
     * originRequestHeader  **参数解释：** CDN节点回源时，改写用户回源请求URL的HTTP头部信息 **约束限制：** - 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息 - 如果域名在后台配置了特殊请求头，需要将对应的请求头一并传入
     * httpResponseHeader  **参数解释：** 配置节点响应给客户端的头部信息，配置响应消息后，用户请求加速域名下的资源时，CDN返回给用户的消息中将包含该域名配置的响应头信息 **约束限制：** - 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息 - 如果域名在后台配置了特殊请求头，需要将对应的请求头一并传入
     * accessControl  accessControl
-    * requestLimitRules  requestLimitRules
+    * requestLimitRule  requestLimitRule
     * originRequestUrlRewrite  originRequestUrlRewrite
     * cacheRule  cacheRule
     * requestUrlRewrite  requestUrlRewrite
@@ -38,12 +38,12 @@ class Actions implements ModelInterface, ArrayAccess
             'originRequestHeader' => '\HuaweiCloud\SDK\Cdn\V2\Model\OriginRequestHeader[]',
             'httpResponseHeader' => '\HuaweiCloud\SDK\Cdn\V2\Model\HttpResponseHeader[]',
             'accessControl' => '\HuaweiCloud\SDK\Cdn\V2\Model\AccessControl',
-            'requestLimitRules' => '\HuaweiCloud\SDK\Cdn\V2\Model\RequestLimitRulesEngine',
+            'requestLimitRule' => '\HuaweiCloud\SDK\Cdn\V2\Model\RequestLimitRulesEngine',
             'originRequestUrlRewrite' => '\HuaweiCloud\SDK\Cdn\V2\Model\OriginRequestUrlRewriteEngine',
             'cacheRule' => '\HuaweiCloud\SDK\Cdn\V2\Model\CacheRulesEngine',
             'requestUrlRewrite' => '\HuaweiCloud\SDK\Cdn\V2\Model\RequestUrlRewriteEngine',
             'browserCacheRule' => '\HuaweiCloud\SDK\Cdn\V2\Model\BrowserCacheRulesEngine',
-            'errorCodeCache' => '\HuaweiCloud\SDK\Cdn\V2\Model\ErrorCodeCacheEngine'
+            'errorCodeCache' => '\HuaweiCloud\SDK\Cdn\V2\Model\ErrorCodeCacheEngine[]'
     ];
 
     /**
@@ -52,7 +52,7 @@ class Actions implements ModelInterface, ArrayAccess
     * originRequestHeader  **参数解释：** CDN节点回源时，改写用户回源请求URL的HTTP头部信息 **约束限制：** - 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息 - 如果域名在后台配置了特殊请求头，需要将对应的请求头一并传入
     * httpResponseHeader  **参数解释：** 配置节点响应给客户端的头部信息，配置响应消息后，用户请求加速域名下的资源时，CDN返回给用户的消息中将包含该域名配置的响应头信息 **约束限制：** - 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息 - 如果域名在后台配置了特殊请求头，需要将对应的请求头一并传入
     * accessControl  accessControl
-    * requestLimitRules  requestLimitRules
+    * requestLimitRule  requestLimitRule
     * originRequestUrlRewrite  originRequestUrlRewrite
     * cacheRule  cacheRule
     * requestUrlRewrite  requestUrlRewrite
@@ -66,7 +66,7 @@ class Actions implements ModelInterface, ArrayAccess
         'originRequestHeader' => null,
         'httpResponseHeader' => null,
         'accessControl' => null,
-        'requestLimitRules' => null,
+        'requestLimitRule' => null,
         'originRequestUrlRewrite' => null,
         'cacheRule' => null,
         'requestUrlRewrite' => null,
@@ -101,7 +101,7 @@ class Actions implements ModelInterface, ArrayAccess
     * originRequestHeader  **参数解释：** CDN节点回源时，改写用户回源请求URL的HTTP头部信息 **约束限制：** - 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息 - 如果域名在后台配置了特殊请求头，需要将对应的请求头一并传入
     * httpResponseHeader  **参数解释：** 配置节点响应给客户端的头部信息，配置响应消息后，用户请求加速域名下的资源时，CDN返回给用户的消息中将包含该域名配置的响应头信息 **约束限制：** - 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息 - 如果域名在后台配置了特殊请求头，需要将对应的请求头一并传入
     * accessControl  accessControl
-    * requestLimitRules  requestLimitRules
+    * requestLimitRule  requestLimitRule
     * originRequestUrlRewrite  originRequestUrlRewrite
     * cacheRule  cacheRule
     * requestUrlRewrite  requestUrlRewrite
@@ -115,7 +115,7 @@ class Actions implements ModelInterface, ArrayAccess
             'originRequestHeader' => 'origin_request_header',
             'httpResponseHeader' => 'http_response_header',
             'accessControl' => 'access_control',
-            'requestLimitRules' => 'request_limit_rules',
+            'requestLimitRule' => 'request_limit_rule',
             'originRequestUrlRewrite' => 'origin_request_url_rewrite',
             'cacheRule' => 'cache_rule',
             'requestUrlRewrite' => 'request_url_rewrite',
@@ -129,7 +129,7 @@ class Actions implements ModelInterface, ArrayAccess
     * originRequestHeader  **参数解释：** CDN节点回源时，改写用户回源请求URL的HTTP头部信息 **约束限制：** - 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息 - 如果域名在后台配置了特殊请求头，需要将对应的请求头一并传入
     * httpResponseHeader  **参数解释：** 配置节点响应给客户端的头部信息，配置响应消息后，用户请求加速域名下的资源时，CDN返回给用户的消息中将包含该域名配置的响应头信息 **约束限制：** - 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息 - 如果域名在后台配置了特殊请求头，需要将对应的请求头一并传入
     * accessControl  accessControl
-    * requestLimitRules  requestLimitRules
+    * requestLimitRule  requestLimitRule
     * originRequestUrlRewrite  originRequestUrlRewrite
     * cacheRule  cacheRule
     * requestUrlRewrite  requestUrlRewrite
@@ -143,7 +143,7 @@ class Actions implements ModelInterface, ArrayAccess
             'originRequestHeader' => 'setOriginRequestHeader',
             'httpResponseHeader' => 'setHttpResponseHeader',
             'accessControl' => 'setAccessControl',
-            'requestLimitRules' => 'setRequestLimitRules',
+            'requestLimitRule' => 'setRequestLimitRule',
             'originRequestUrlRewrite' => 'setOriginRequestUrlRewrite',
             'cacheRule' => 'setCacheRule',
             'requestUrlRewrite' => 'setRequestUrlRewrite',
@@ -157,7 +157,7 @@ class Actions implements ModelInterface, ArrayAccess
     * originRequestHeader  **参数解释：** CDN节点回源时，改写用户回源请求URL的HTTP头部信息 **约束限制：** - 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息 - 如果域名在后台配置了特殊请求头，需要将对应的请求头一并传入
     * httpResponseHeader  **参数解释：** 配置节点响应给客户端的头部信息，配置响应消息后，用户请求加速域名下的资源时，CDN返回给用户的消息中将包含该域名配置的响应头信息 **约束限制：** - 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息 - 如果域名在后台配置了特殊请求头，需要将对应的请求头一并传入
     * accessControl  accessControl
-    * requestLimitRules  requestLimitRules
+    * requestLimitRule  requestLimitRule
     * originRequestUrlRewrite  originRequestUrlRewrite
     * cacheRule  cacheRule
     * requestUrlRewrite  requestUrlRewrite
@@ -171,7 +171,7 @@ class Actions implements ModelInterface, ArrayAccess
             'originRequestHeader' => 'getOriginRequestHeader',
             'httpResponseHeader' => 'getHttpResponseHeader',
             'accessControl' => 'getAccessControl',
-            'requestLimitRules' => 'getRequestLimitRules',
+            'requestLimitRule' => 'getRequestLimitRule',
             'originRequestUrlRewrite' => 'getOriginRequestUrlRewrite',
             'cacheRule' => 'getCacheRule',
             'requestUrlRewrite' => 'getRequestUrlRewrite',
@@ -241,7 +241,7 @@ class Actions implements ModelInterface, ArrayAccess
         $this->container['originRequestHeader'] = isset($data['originRequestHeader']) ? $data['originRequestHeader'] : null;
         $this->container['httpResponseHeader'] = isset($data['httpResponseHeader']) ? $data['httpResponseHeader'] : null;
         $this->container['accessControl'] = isset($data['accessControl']) ? $data['accessControl'] : null;
-        $this->container['requestLimitRules'] = isset($data['requestLimitRules']) ? $data['requestLimitRules'] : null;
+        $this->container['requestLimitRule'] = isset($data['requestLimitRule']) ? $data['requestLimitRule'] : null;
         $this->container['originRequestUrlRewrite'] = isset($data['originRequestUrlRewrite']) ? $data['originRequestUrlRewrite'] : null;
         $this->container['cacheRule'] = isset($data['cacheRule']) ? $data['cacheRule'] : null;
         $this->container['requestUrlRewrite'] = isset($data['requestUrlRewrite']) ? $data['requestUrlRewrite'] : null;
@@ -368,26 +368,26 @@ class Actions implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets requestLimitRules
-    *  requestLimitRules
+    * Gets requestLimitRule
+    *  requestLimitRule
     *
     * @return \HuaweiCloud\SDK\Cdn\V2\Model\RequestLimitRulesEngine|null
     */
-    public function getRequestLimitRules()
+    public function getRequestLimitRule()
     {
-        return $this->container['requestLimitRules'];
+        return $this->container['requestLimitRule'];
     }
 
     /**
-    * Sets requestLimitRules
+    * Sets requestLimitRule
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\RequestLimitRulesEngine|null $requestLimitRules requestLimitRules
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\RequestLimitRulesEngine|null $requestLimitRule requestLimitRule
     *
     * @return $this
     */
-    public function setRequestLimitRules($requestLimitRules)
+    public function setRequestLimitRule($requestLimitRule)
     {
-        $this->container['requestLimitRules'] = $requestLimitRules;
+        $this->container['requestLimitRule'] = $requestLimitRule;
         return $this;
     }
 
@@ -491,7 +491,7 @@ class Actions implements ModelInterface, ArrayAccess
     * Gets errorCodeCache
     *  errorCodeCache
     *
-    * @return \HuaweiCloud\SDK\Cdn\V2\Model\ErrorCodeCacheEngine|null
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\ErrorCodeCacheEngine[]|null
     */
     public function getErrorCodeCache()
     {
@@ -501,7 +501,7 @@ class Actions implements ModelInterface, ArrayAccess
     /**
     * Sets errorCodeCache
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\ErrorCodeCacheEngine|null $errorCodeCache errorCodeCache
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\ErrorCodeCacheEngine[]|null $errorCodeCache errorCodeCache
     *
     * @return $this
     */

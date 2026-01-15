@@ -21,12 +21,12 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  对比任务ID。
-    * type  对比类型。
+    * type  对比类型。 object：对象对比，lines：行对比，contents：内容对比
     * startTime  开始时间。
     * endTime  结束时间。
     * status  对比任务的状态。取值： - RUNNING：运行中。 - WAITING_FOR_RUNNING：等待启动中。 - SUCCESSFUL：完成。 - FAILED：失败。 - CANCELLED：已取消。 - TIMEOUT_INTERRUPT：超时中断。 - FULL_DOING：全量校验中。 - INCRE_DOING：增量校验中。
-    * computeType  对比计算资源。
-    * exportStatus  导出比对结果状态。
+    * computeType  对比计算资源。 取值：db，drs
+    * exportStatus  导出比对结果状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
     * reportRemainSeconds  导出比对结果有效期剩余时间。
     * compareJobTag  对比任务的标签。
     * options  对比任务选项。
@@ -53,12 +53,12 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  对比任务ID。
-    * type  对比类型。
+    * type  对比类型。 object：对象对比，lines：行对比，contents：内容对比
     * startTime  开始时间。
     * endTime  结束时间。
     * status  对比任务的状态。取值： - RUNNING：运行中。 - WAITING_FOR_RUNNING：等待启动中。 - SUCCESSFUL：完成。 - FAILED：失败。 - CANCELLED：已取消。 - TIMEOUT_INTERRUPT：超时中断。 - FULL_DOING：全量校验中。 - INCRE_DOING：增量校验中。
-    * computeType  对比计算资源。
-    * exportStatus  导出比对结果状态。
+    * computeType  对比计算资源。 取值：db，drs
+    * exportStatus  导出比对结果状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
     * reportRemainSeconds  导出比对结果有效期剩余时间。
     * compareJobTag  对比任务的标签。
     * options  对比任务选项。
@@ -106,12 +106,12 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  对比任务ID。
-    * type  对比类型。
+    * type  对比类型。 object：对象对比，lines：行对比，contents：内容对比
     * startTime  开始时间。
     * endTime  结束时间。
     * status  对比任务的状态。取值： - RUNNING：运行中。 - WAITING_FOR_RUNNING：等待启动中。 - SUCCESSFUL：完成。 - FAILED：失败。 - CANCELLED：已取消。 - TIMEOUT_INTERRUPT：超时中断。 - FULL_DOING：全量校验中。 - INCRE_DOING：增量校验中。
-    * computeType  对比计算资源。
-    * exportStatus  导出比对结果状态。
+    * computeType  对比计算资源。 取值：db，drs
+    * exportStatus  导出比对结果状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
     * reportRemainSeconds  导出比对结果有效期剩余时间。
     * compareJobTag  对比任务的标签。
     * options  对比任务选项。
@@ -138,12 +138,12 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  对比任务ID。
-    * type  对比类型。
+    * type  对比类型。 object：对象对比，lines：行对比，contents：内容对比
     * startTime  开始时间。
     * endTime  结束时间。
     * status  对比任务的状态。取值： - RUNNING：运行中。 - WAITING_FOR_RUNNING：等待启动中。 - SUCCESSFUL：完成。 - FAILED：失败。 - CANCELLED：已取消。 - TIMEOUT_INTERRUPT：超时中断。 - FULL_DOING：全量校验中。 - INCRE_DOING：增量校验中。
-    * computeType  对比计算资源。
-    * exportStatus  导出比对结果状态。
+    * computeType  对比计算资源。 取值：db，drs
+    * exportStatus  导出比对结果状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
     * reportRemainSeconds  导出比对结果有效期剩余时间。
     * compareJobTag  对比任务的标签。
     * options  对比任务选项。
@@ -170,12 +170,12 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  对比任务ID。
-    * type  对比类型。
+    * type  对比类型。 object：对象对比，lines：行对比，contents：内容对比
     * startTime  开始时间。
     * endTime  结束时间。
     * status  对比任务的状态。取值： - RUNNING：运行中。 - WAITING_FOR_RUNNING：等待启动中。 - SUCCESSFUL：完成。 - FAILED：失败。 - CANCELLED：已取消。 - TIMEOUT_INTERRUPT：超时中断。 - FULL_DOING：全量校验中。 - INCRE_DOING：增量校验中。
-    * computeType  对比计算资源。
-    * exportStatus  导出比对结果状态。
+    * computeType  对比计算资源。 取值：db，drs
+    * exportStatus  导出比对结果状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
     * reportRemainSeconds  导出比对结果有效期剩余时间。
     * compareJobTag  对比任务的标签。
     * options  对比任务选项。
@@ -360,7 +360,7 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  对比类型。
+    *  对比类型。 object：对象对比，lines：行对比，contents：内容对比
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 对比类型。
+    * @param string|null $type 对比类型。 object：对象对比，lines：行对比，contents：内容对比
     *
     * @return $this
     */
@@ -456,7 +456,7 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets computeType
-    *  对比计算资源。
+    *  对比计算资源。 取值：db，drs
     *
     * @return string|null
     */
@@ -468,7 +468,7 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets computeType
     *
-    * @param string|null $computeType 对比计算资源。
+    * @param string|null $computeType 对比计算资源。 取值：db，drs
     *
     * @return $this
     */
@@ -480,7 +480,7 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets exportStatus
-    *  导出比对结果状态。
+    *  导出比对结果状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
     *
     * @return string|null
     */
@@ -492,7 +492,7 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets exportStatus
     *
-    * @param string|null $exportStatus 导出比对结果状态。
+    * @param string|null $exportStatus 导出比对结果状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
     *
     * @return $this
     */

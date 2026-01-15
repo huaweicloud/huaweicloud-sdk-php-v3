@@ -39,7 +39,7 @@ class ShowAuditStatisticsResponse implements ModelInterface, ArrayAccess
             'mediumRiskTotal' => 'int',
             'projectId' => 'string',
             'ruleRiskStatistics' => '\HuaweiCloud\SDK\Dbss\V1\Model\RuleRiskStatisticsDto[]',
-            'unsupportedAuditInfos' => '\HuaweiCloud\SDK\Dbss\V1\Model\UnSupportAuditInfoResponse',
+            'unsupportedAuditInfos' => '\HuaweiCloud\SDK\Dbss\V1\Model\UnsupportedAuditInfoResponse',
             'updateTime' => 'int'
     ];
 
@@ -398,7 +398,7 @@ class ShowAuditStatisticsResponse implements ModelInterface, ArrayAccess
     * Gets unsupportedAuditInfos
     *  unsupportedAuditInfos
     *
-    * @return \HuaweiCloud\SDK\Dbss\V1\Model\UnSupportAuditInfoResponse|null
+    * @return \HuaweiCloud\SDK\Dbss\V1\Model\UnsupportedAuditInfoResponse|null
     */
     public function getUnsupportedAuditInfos()
     {
@@ -408,7 +408,7 @@ class ShowAuditStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets unsupportedAuditInfos
     *
-    * @param \HuaweiCloud\SDK\Dbss\V1\Model\UnSupportAuditInfoResponse|null $unsupportedAuditInfos unsupportedAuditInfos
+    * @param \HuaweiCloud\SDK\Dbss\V1\Model\UnsupportedAuditInfoResponse|null $unsupportedAuditInfos unsupportedAuditInfos
     *
     * @return $this
     */

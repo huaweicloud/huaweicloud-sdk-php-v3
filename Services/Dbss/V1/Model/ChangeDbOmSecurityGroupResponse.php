@@ -21,7 +21,7 @@ class ChangeDbOmSecurityGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * code  - 0: 正常 - 非0: 异常
+    * code  - 0：正常 - 非0：异常
     * description  备注
     * orderId  订单号
     * taskId  任务ID
@@ -37,7 +37,7 @@ class ChangeDbOmSecurityGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * code  - 0: 正常 - 非0: 异常
+    * code  - 0：正常 - 非0：异常
     * description  备注
     * orderId  订单号
     * taskId  任务ID
@@ -74,7 +74,7 @@ class ChangeDbOmSecurityGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * code  - 0: 正常 - 非0: 异常
+    * code  - 0：正常 - 非0：异常
     * description  备注
     * orderId  订单号
     * taskId  任务ID
@@ -90,7 +90,7 @@ class ChangeDbOmSecurityGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * code  - 0: 正常 - 非0: 异常
+    * code  - 0：正常 - 非0：异常
     * description  备注
     * orderId  订单号
     * taskId  任务ID
@@ -106,7 +106,7 @@ class ChangeDbOmSecurityGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * code  - 0: 正常 - 非0: 异常
+    * code  - 0：正常 - 非0：异常
     * description  备注
     * orderId  订单号
     * taskId  任务ID
@@ -208,7 +208,7 @@ class ChangeDbOmSecurityGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
-    *  - 0: 正常 - 非0: 异常
+    *  - 0：正常 - 非0：异常
     *
     * @return int|null
     */
@@ -220,7 +220,7 @@ class ChangeDbOmSecurityGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets code
     *
-    * @param int|null $code - 0: 正常 - 非0: 异常
+    * @param int|null $code - 0：正常 - 非0：异常
     *
     * @return $this
     */

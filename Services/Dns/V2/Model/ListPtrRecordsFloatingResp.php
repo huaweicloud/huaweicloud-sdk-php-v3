@@ -25,7 +25,7 @@ class ListPtrRecordsFloatingResp implements ModelInterface, ArrayAccess
     * description  对反向解析记录的描述。
     * ttl  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * address  弹性公网IP的IP地址。
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败
     * action  对该资源的当前操作。  取值范围：CREATE，UPDATE，DELETE，NONE。 CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
     * links  links
     * tags  **参数解释：** 资源标签。 **取值范围：** 不涉及。
@@ -53,7 +53,7 @@ class ListPtrRecordsFloatingResp implements ModelInterface, ArrayAccess
     * description  对反向解析记录的描述。
     * ttl  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * address  弹性公网IP的IP地址。
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败
     * action  对该资源的当前操作。  取值范围：CREATE，UPDATE，DELETE，NONE。 CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
     * links  links
     * tags  **参数解释：** 资源标签。 **取值范围：** 不涉及。
@@ -102,7 +102,7 @@ class ListPtrRecordsFloatingResp implements ModelInterface, ArrayAccess
     * description  对反向解析记录的描述。
     * ttl  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * address  弹性公网IP的IP地址。
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败
     * action  对该资源的当前操作。  取值范围：CREATE，UPDATE，DELETE，NONE。 CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
     * links  links
     * tags  **参数解释：** 资源标签。 **取值范围：** 不涉及。
@@ -130,7 +130,7 @@ class ListPtrRecordsFloatingResp implements ModelInterface, ArrayAccess
     * description  对反向解析记录的描述。
     * ttl  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * address  弹性公网IP的IP地址。
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败
     * action  对该资源的当前操作。  取值范围：CREATE，UPDATE，DELETE，NONE。 CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
     * links  links
     * tags  **参数解释：** 资源标签。 **取值范围：** 不涉及。
@@ -158,7 +158,7 @@ class ListPtrRecordsFloatingResp implements ModelInterface, ArrayAccess
     * description  对反向解析记录的描述。
     * ttl  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * address  弹性公网IP的IP地址。
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败
     * action  对该资源的当前操作。  取值范围：CREATE，UPDATE，DELETE，NONE。 CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
     * links  links
     * tags  **参数解释：** 资源标签。 **取值范围：** 不涉及。
@@ -393,7 +393,7 @@ class ListPtrRecordsFloatingResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源状态。
+    *  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败
     *
     * @return string|null
     */
@@ -405,7 +405,7 @@ class ListPtrRecordsFloatingResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源状态。
+    * @param string|null $status **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败
     *
     * @return $this
     */

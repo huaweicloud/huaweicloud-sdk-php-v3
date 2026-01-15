@@ -27,7 +27,7 @@ class ChargeOrderDbssNew implements ModelInterface, ArrayAccess
     * cloudServiceType  服务类型
     * comment  备注信息
     * compositeProductId  组合套餐
-    * deployMode  实例部署方式，默认为云上 - CLOUD： 云上 - OUTSIDE：云外
+    * deployMode  实例部署方式，默认为云上 - CLOUD：云上 - OUTSIDE：云外
     * discountId  折扣ID
     * enterpriseProjectId  企业项目ID
     * flavorRef  ECS规格ID
@@ -89,7 +89,7 @@ class ChargeOrderDbssNew implements ModelInterface, ArrayAccess
     * cloudServiceType  服务类型
     * comment  备注信息
     * compositeProductId  组合套餐
-    * deployMode  实例部署方式，默认为云上 - CLOUD： 云上 - OUTSIDE：云外
+    * deployMode  实例部署方式，默认为云上 - CLOUD：云上 - OUTSIDE：云外
     * discountId  折扣ID
     * enterpriseProjectId  企业项目ID
     * flavorRef  ECS规格ID
@@ -172,7 +172,7 @@ class ChargeOrderDbssNew implements ModelInterface, ArrayAccess
     * cloudServiceType  服务类型
     * comment  备注信息
     * compositeProductId  组合套餐
-    * deployMode  实例部署方式，默认为云上 - CLOUD： 云上 - OUTSIDE：云外
+    * deployMode  实例部署方式，默认为云上 - CLOUD：云上 - OUTSIDE：云外
     * discountId  折扣ID
     * enterpriseProjectId  企业项目ID
     * flavorRef  ECS规格ID
@@ -234,7 +234,7 @@ class ChargeOrderDbssNew implements ModelInterface, ArrayAccess
     * cloudServiceType  服务类型
     * comment  备注信息
     * compositeProductId  组合套餐
-    * deployMode  实例部署方式，默认为云上 - CLOUD： 云上 - OUTSIDE：云外
+    * deployMode  实例部署方式，默认为云上 - CLOUD：云上 - OUTSIDE：云外
     * discountId  折扣ID
     * enterpriseProjectId  企业项目ID
     * flavorRef  ECS规格ID
@@ -296,7 +296,7 @@ class ChargeOrderDbssNew implements ModelInterface, ArrayAccess
     * cloudServiceType  服务类型
     * comment  备注信息
     * compositeProductId  组合套餐
-    * deployMode  实例部署方式，默认为云上 - CLOUD： 云上 - OUTSIDE：云外
+    * deployMode  实例部署方式，默认为云上 - CLOUD：云上 - OUTSIDE：云外
     * discountId  折扣ID
     * enterpriseProjectId  企业项目ID
     * flavorRef  ECS规格ID
@@ -682,7 +682,7 @@ class ChargeOrderDbssNew implements ModelInterface, ArrayAccess
 
     /**
     * Gets deployMode
-    *  实例部署方式，默认为云上 - CLOUD： 云上 - OUTSIDE：云外
+    *  实例部署方式，默认为云上 - CLOUD：云上 - OUTSIDE：云外
     *
     * @return string
     */
@@ -694,7 +694,7 @@ class ChargeOrderDbssNew implements ModelInterface, ArrayAccess
     /**
     * Sets deployMode
     *
-    * @param string $deployMode 实例部署方式，默认为云上 - CLOUD： 云上 - OUTSIDE：云外
+    * @param string $deployMode 实例部署方式，默认为云上 - CLOUD：云上 - OUTSIDE：云外
     *
     * @return $this
     */

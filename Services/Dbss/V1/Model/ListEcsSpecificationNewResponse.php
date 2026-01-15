@@ -21,22 +21,22 @@ class ListEcsSpecificationNewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * specification  ecs规格集合
+    * specifications  ecs规格集合
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'specification' => '\HuaweiCloud\SDK\Dbss\V1\Model\EcsSpecificationBean[]'
+            'specifications' => '\HuaweiCloud\SDK\Dbss\V1\Model\EcsSpecificationBean[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * specification  ecs规格集合
+    * specifications  ecs规格集合
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'specification' => null
+        'specifications' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class ListEcsSpecificationNewResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * specification  ecs规格集合
+    * specifications  ecs规格集合
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'specification' => 'specification'
+            'specifications' => 'specifications'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * specification  ecs规格集合
+    * specifications  ecs规格集合
     *
     * @var string[]
     */
     protected static $setters = [
-            'specification' => 'setSpecification'
+            'specifications' => 'setSpecifications'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * specification  ecs规格集合
+    * specifications  ecs规格集合
     *
     * @var string[]
     */
     protected static $getters = [
-            'specification' => 'getSpecification'
+            'specifications' => 'getSpecifications'
     ];
 
     /**
@@ -148,7 +148,7 @@ class ListEcsSpecificationNewResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['specification'] = isset($data['specification']) ? $data['specification'] : null;
+        $this->container['specifications'] = isset($data['specifications']) ? $data['specifications'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class ListEcsSpecificationNewResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets specification
+    * Gets specifications
     *  ecs规格集合
     *
     * @return \HuaweiCloud\SDK\Dbss\V1\Model\EcsSpecificationBean[]|null
     */
-    public function getSpecification()
+    public function getSpecifications()
     {
-        return $this->container['specification'];
+        return $this->container['specifications'];
     }
 
     /**
-    * Sets specification
+    * Sets specifications
     *
-    * @param \HuaweiCloud\SDK\Dbss\V1\Model\EcsSpecificationBean[]|null $specification ecs规格集合
+    * @param \HuaweiCloud\SDK\Dbss\V1\Model\EcsSpecificationBean[]|null $specifications ecs规格集合
     *
     * @return $this
     */
-    public function setSpecification($specification)
+    public function setSpecifications($specifications)
     {
-        $this->container['specification'] = $specification;
+        $this->container['specifications'] = $specifications;
         return $this;
     }
 

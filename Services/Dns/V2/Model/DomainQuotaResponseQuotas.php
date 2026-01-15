@@ -20,7 +20,7 @@ class DomainQuotaResponseQuotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * quotaKey  资源类型。
+    * quotaKey  **参数解释：** 资源类型。 **取值范围：** - zone：公网域名配额 - private_zone：内网域名配额 - record_set：记录集配额 - url_record：显性/隐性URL记录集配额 - ptr_record：反向解析配额 - custom_line：自定义线路配额 - line_group：线路分组配额 - inbound_endpoint：入站终端节点配额 - outbound_endpoint：出站终端节点配额 - resolver_rule：转发规则配额
     * quotaLimit  资源配额的最大值。
     * used  配额已使用数量。
     * unit  配额统计单位，取固定值“count”。
@@ -36,7 +36,7 @@ class DomainQuotaResponseQuotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * quotaKey  资源类型。
+    * quotaKey  **参数解释：** 资源类型。 **取值范围：** - zone：公网域名配额 - private_zone：内网域名配额 - record_set：记录集配额 - url_record：显性/隐性URL记录集配额 - ptr_record：反向解析配额 - custom_line：自定义线路配额 - line_group：线路分组配额 - inbound_endpoint：入站终端节点配额 - outbound_endpoint：出站终端节点配额 - resolver_rule：转发规则配额
     * quotaLimit  资源配额的最大值。
     * used  配额已使用数量。
     * unit  配额统计单位，取固定值“count”。
@@ -73,7 +73,7 @@ class DomainQuotaResponseQuotas implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * quotaKey  资源类型。
+    * quotaKey  **参数解释：** 资源类型。 **取值范围：** - zone：公网域名配额 - private_zone：内网域名配额 - record_set：记录集配额 - url_record：显性/隐性URL记录集配额 - ptr_record：反向解析配额 - custom_line：自定义线路配额 - line_group：线路分组配额 - inbound_endpoint：入站终端节点配额 - outbound_endpoint：出站终端节点配额 - resolver_rule：转发规则配额
     * quotaLimit  资源配额的最大值。
     * used  配额已使用数量。
     * unit  配额统计单位，取固定值“count”。
@@ -89,7 +89,7 @@ class DomainQuotaResponseQuotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * quotaKey  资源类型。
+    * quotaKey  **参数解释：** 资源类型。 **取值范围：** - zone：公网域名配额 - private_zone：内网域名配额 - record_set：记录集配额 - url_record：显性/隐性URL记录集配额 - ptr_record：反向解析配额 - custom_line：自定义线路配额 - line_group：线路分组配额 - inbound_endpoint：入站终端节点配额 - outbound_endpoint：出站终端节点配额 - resolver_rule：转发规则配额
     * quotaLimit  资源配额的最大值。
     * used  配额已使用数量。
     * unit  配额统计单位，取固定值“count”。
@@ -105,7 +105,7 @@ class DomainQuotaResponseQuotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * quotaKey  资源类型。
+    * quotaKey  **参数解释：** 资源类型。 **取值范围：** - zone：公网域名配额 - private_zone：内网域名配额 - record_set：记录集配额 - url_record：显性/隐性URL记录集配额 - ptr_record：反向解析配额 - custom_line：自定义线路配额 - line_group：线路分组配额 - inbound_endpoint：入站终端节点配额 - outbound_endpoint：出站终端节点配额 - resolver_rule：转发规则配额
     * quotaLimit  资源配额的最大值。
     * used  配额已使用数量。
     * unit  配额统计单位，取固定值“count”。
@@ -219,7 +219,7 @@ class DomainQuotaResponseQuotas implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaKey
-    *  资源类型。
+    *  **参数解释：** 资源类型。 **取值范围：** - zone：公网域名配额 - private_zone：内网域名配额 - record_set：记录集配额 - url_record：显性/隐性URL记录集配额 - ptr_record：反向解析配额 - custom_line：自定义线路配额 - line_group：线路分组配额 - inbound_endpoint：入站终端节点配额 - outbound_endpoint：出站终端节点配额 - resolver_rule：转发规则配额
     *
     * @return string
     */
@@ -231,7 +231,7 @@ class DomainQuotaResponseQuotas implements ModelInterface, ArrayAccess
     /**
     * Sets quotaKey
     *
-    * @param string $quotaKey 资源类型。
+    * @param string $quotaKey **参数解释：** 资源类型。 **取值范围：** - zone：公网域名配额 - private_zone：内网域名配额 - record_set：记录集配额 - url_record：显性/隐性URL记录集配额 - ptr_record：反向解析配额 - custom_line：自定义线路配额 - line_group：线路分组配额 - inbound_endpoint：入站终端节点配额 - outbound_endpoint：出站终端节点配额 - resolver_rule：转发规则配额
     *
     * @return $this
     */

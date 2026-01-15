@@ -27,7 +27,7 @@ class ShowSyncTaskRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'syncTaskId' => 'string',
-            'queryTime' => 'string'
+            'queryTime' => 'int'
     ];
 
     /**
@@ -39,7 +39,7 @@ class ShowSyncTaskRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'syncTaskId' => null,
-        'queryTime' => null
+        'queryTime' => 'int64'
     ];
 
     /**
@@ -181,11 +181,11 @@ class ShowSyncTaskRequest implements ModelInterface, ArrayAccess
         if ($this->container['queryTime'] === null) {
             $invalidProperties[] = "'queryTime' can't be null";
         }
-            if ((mb_strlen($this->container['queryTime']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'queryTime', the character length must be smaller than or equal to 1024.";
+            if (($this->container['queryTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'queryTime', must be smaller than or equal to 9223372036854775807.";
             }
-            if ((mb_strlen($this->container['queryTime']) < 1)) {
-                $invalidProperties[] = "invalid value for 'queryTime', the character length must be bigger than or equal to 1.";
+            if (($this->container['queryTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'queryTime', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -229,7 +229,7 @@ class ShowSyncTaskRequest implements ModelInterface, ArrayAccess
     * Gets queryTime
     *  查询同步任务详情的时间（毫秒），依据该值返回所在月份的统计数据。
     *
-    * @return string
+    * @return int
     */
     public function getQueryTime()
     {
@@ -239,7 +239,7 @@ class ShowSyncTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets queryTime
     *
-    * @param string $queryTime 查询同步任务详情的时间（毫秒），依据该值返回所在月份的统计数据。
+    * @param int $queryTime 查询同步任务详情的时间（毫秒），依据该值返回所在月份的统计数据。
     *
     * @return $this
     */

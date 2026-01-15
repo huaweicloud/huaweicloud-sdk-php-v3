@@ -27,7 +27,7 @@ class RdsNoAgentDbRequestDatabases implements ModelInterface, ArrayAccess
     * ip  数据库IP
     * instanceName  数据库实例名称
     * version  数据库版本
-    * type  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - TAURUS: Taurus DB - DWS: GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS： DDS(MongoDB)
+    * type  数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - TAURUS：Taurus DB - DWS：GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS：DDS(MongoDB)
     * enterpriseId  企业项目ID
     * enterpriseName  企业项目名称
     *
@@ -55,7 +55,7 @@ class RdsNoAgentDbRequestDatabases implements ModelInterface, ArrayAccess
     * ip  数据库IP
     * instanceName  数据库实例名称
     * version  数据库版本
-    * type  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - TAURUS: Taurus DB - DWS: GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS： DDS(MongoDB)
+    * type  数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - TAURUS：Taurus DB - DWS：GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS：DDS(MongoDB)
     * enterpriseId  企业项目ID
     * enterpriseName  企业项目名称
     *
@@ -104,7 +104,7 @@ class RdsNoAgentDbRequestDatabases implements ModelInterface, ArrayAccess
     * ip  数据库IP
     * instanceName  数据库实例名称
     * version  数据库版本
-    * type  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - TAURUS: Taurus DB - DWS: GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS： DDS(MongoDB)
+    * type  数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - TAURUS：Taurus DB - DWS：GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS：DDS(MongoDB)
     * enterpriseId  企业项目ID
     * enterpriseName  企业项目名称
     *
@@ -132,7 +132,7 @@ class RdsNoAgentDbRequestDatabases implements ModelInterface, ArrayAccess
     * ip  数据库IP
     * instanceName  数据库实例名称
     * version  数据库版本
-    * type  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - TAURUS: Taurus DB - DWS: GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS： DDS(MongoDB)
+    * type  数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - TAURUS：Taurus DB - DWS：GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS：DDS(MongoDB)
     * enterpriseId  企业项目ID
     * enterpriseName  企业项目名称
     *
@@ -160,7 +160,7 @@ class RdsNoAgentDbRequestDatabases implements ModelInterface, ArrayAccess
     * ip  数据库IP
     * instanceName  数据库实例名称
     * version  数据库版本
-    * type  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - TAURUS: Taurus DB - DWS: GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS： DDS(MongoDB)
+    * type  数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - TAURUS：Taurus DB - DWS：GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS：DDS(MongoDB)
     * enterpriseId  企业项目ID
     * enterpriseName  企业项目名称
     *
@@ -468,7 +468,7 @@ class RdsNoAgentDbRequestDatabases implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - TAURUS: Taurus DB - DWS: GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS： DDS(MongoDB)
+    *  数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - TAURUS：Taurus DB - DWS：GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS：DDS(MongoDB)
     *
     * @return string
     */
@@ -480,7 +480,7 @@ class RdsNoAgentDbRequestDatabases implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - TAURUS: Taurus DB - DWS: GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS： DDS(MongoDB)
+    * @param string $type 数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - TAURUS：Taurus DB - DWS：GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS：DDS(MongoDB)
     *
     * @return $this
     */

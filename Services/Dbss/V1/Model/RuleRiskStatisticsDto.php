@@ -28,7 +28,7 @@ class RuleRiskStatisticsDto implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'count' => 'int',
-            'instanceRiskCount' => '\HuaweiCloud\SDK\Dbss\V1\Model\AuditInsanceRiskCount[]',
+            'instanceRiskCount' => '\HuaweiCloud\SDK\Dbss\V1\Model\AuditInstanceRiskCount[]',
             'ruleName' => 'string'
     ];
 
@@ -222,7 +222,7 @@ class RuleRiskStatisticsDto implements ModelInterface, ArrayAccess
     * Gets instanceRiskCount
     *  实例数据库风险汇总
     *
-    * @return \HuaweiCloud\SDK\Dbss\V1\Model\AuditInsanceRiskCount[]|null
+    * @return \HuaweiCloud\SDK\Dbss\V1\Model\AuditInstanceRiskCount[]|null
     */
     public function getInstanceRiskCount()
     {
@@ -232,7 +232,7 @@ class RuleRiskStatisticsDto implements ModelInterface, ArrayAccess
     /**
     * Sets instanceRiskCount
     *
-    * @param \HuaweiCloud\SDK\Dbss\V1\Model\AuditInsanceRiskCount[]|null $instanceRiskCount 实例数据库风险汇总
+    * @param \HuaweiCloud\SDK\Dbss\V1\Model\AuditInstanceRiskCount[]|null $instanceRiskCount 实例数据库风险汇总
     *
     * @return $this
     */

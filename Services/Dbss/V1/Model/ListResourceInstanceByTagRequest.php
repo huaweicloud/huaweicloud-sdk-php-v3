@@ -20,7 +20,7 @@ class ListResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance: 审计  **默认取值**： 不涉及
+    * resourceType  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance：审计  **默认取值**： 不涉及
     * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为1000
     * offset  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
     * body  body
@@ -36,7 +36,7 @@ class ListResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance: 审计  **默认取值**： 不涉及
+    * resourceType  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance：审计  **默认取值**： 不涉及
     * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为1000
     * offset  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
     * body  body
@@ -73,7 +73,7 @@ class ListResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance: 审计  **默认取值**： 不涉及
+    * resourceType  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance：审计  **默认取值**： 不涉及
     * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为1000
     * offset  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
     * body  body
@@ -89,7 +89,7 @@ class ListResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance: 审计  **默认取值**： 不涉及
+    * resourceType  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance：审计  **默认取值**： 不涉及
     * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为1000
     * offset  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
     * body  body
@@ -105,7 +105,7 @@ class ListResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance: 审计  **默认取值**： 不涉及
+    * resourceType  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance：审计  **默认取值**： 不涉及
     * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为1000
     * offset  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
     * body  body
@@ -231,7 +231,7 @@ class ListResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance: 审计  **默认取值**： 不涉及
+    *  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance：审计  **默认取值**： 不涉及
     *
     * @return string
     */
@@ -243,7 +243,7 @@ class ListResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance: 审计  **默认取值**： 不涉及
+    * @param string $resourceType **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance：审计  **默认取值**： 不涉及
     *
     * @return $this
     */

@@ -25,7 +25,7 @@ class QueryProgressResp implements ModelInterface, ArrayAccess
     * increTransDelay  增量迁移时延。单位：s
     * increTransDelayMillis  增量迁移时延。单位：ms
     * taskMode  迁移模式。 - FULL_TRANS: 全量 - INCR_TRANS: 增量 - FULL_INCR_TRANS: 全量+增量
-    * transferStatus  任务状态
+    * transferStatus  任务状态 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     * processTime  迁移时间，时间戳
     * remainingTime  预计剩余时间
     * progressMap  数据，结构，索引迁移进度信息体
@@ -55,7 +55,7 @@ class QueryProgressResp implements ModelInterface, ArrayAccess
     * increTransDelay  增量迁移时延。单位：s
     * increTransDelayMillis  增量迁移时延。单位：ms
     * taskMode  迁移模式。 - FULL_TRANS: 全量 - INCR_TRANS: 增量 - FULL_INCR_TRANS: 全量+增量
-    * transferStatus  任务状态
+    * transferStatus  任务状态 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     * processTime  迁移时间，时间戳
     * remainingTime  预计剩余时间
     * progressMap  数据，结构，索引迁移进度信息体
@@ -106,7 +106,7 @@ class QueryProgressResp implements ModelInterface, ArrayAccess
     * increTransDelay  增量迁移时延。单位：s
     * increTransDelayMillis  增量迁移时延。单位：ms
     * taskMode  迁移模式。 - FULL_TRANS: 全量 - INCR_TRANS: 增量 - FULL_INCR_TRANS: 全量+增量
-    * transferStatus  任务状态
+    * transferStatus  任务状态 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     * processTime  迁移时间，时间戳
     * remainingTime  预计剩余时间
     * progressMap  数据，结构，索引迁移进度信息体
@@ -136,7 +136,7 @@ class QueryProgressResp implements ModelInterface, ArrayAccess
     * increTransDelay  增量迁移时延。单位：s
     * increTransDelayMillis  增量迁移时延。单位：ms
     * taskMode  迁移模式。 - FULL_TRANS: 全量 - INCR_TRANS: 增量 - FULL_INCR_TRANS: 全量+增量
-    * transferStatus  任务状态
+    * transferStatus  任务状态 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     * processTime  迁移时间，时间戳
     * remainingTime  预计剩余时间
     * progressMap  数据，结构，索引迁移进度信息体
@@ -166,7 +166,7 @@ class QueryProgressResp implements ModelInterface, ArrayAccess
     * increTransDelay  增量迁移时延。单位：s
     * increTransDelayMillis  增量迁移时延。单位：ms
     * taskMode  迁移模式。 - FULL_TRANS: 全量 - INCR_TRANS: 增量 - FULL_INCR_TRANS: 全量+增量
-    * transferStatus  任务状态
+    * transferStatus  任务状态 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     * processTime  迁移时间，时间戳
     * remainingTime  预计剩余时间
     * progressMap  数据，结构，索引迁移进度信息体
@@ -429,7 +429,7 @@ class QueryProgressResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets transferStatus
-    *  任务状态
+    *  任务状态 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     *
     * @return string|null
     */
@@ -441,7 +441,7 @@ class QueryProgressResp implements ModelInterface, ArrayAccess
     /**
     * Sets transferStatus
     *
-    * @param string|null $transferStatus 任务状态
+    * @param string|null $transferStatus 任务状态 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     *
     * @return $this
     */

@@ -24,7 +24,7 @@ class ReplaySlowSqlTemplateResp implements ModelInterface, ArrayAccess
     * sqlTemplateMd5  SQL语句模板MD5
     * targetName  目标库别名
     * schemaName  schema名称
-    * queryType  SQL类型
+    * queryType  SQL类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
     * minLatency  SQL执行最小耗时
     * maxLatency  SQL执行最大耗时
     * avgLatency  SQL执行平均耗时
@@ -54,7 +54,7 @@ class ReplaySlowSqlTemplateResp implements ModelInterface, ArrayAccess
     * sqlTemplateMd5  SQL语句模板MD5
     * targetName  目标库别名
     * schemaName  schema名称
-    * queryType  SQL类型
+    * queryType  SQL类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
     * minLatency  SQL执行最小耗时
     * maxLatency  SQL执行最大耗时
     * avgLatency  SQL执行平均耗时
@@ -105,7 +105,7 @@ class ReplaySlowSqlTemplateResp implements ModelInterface, ArrayAccess
     * sqlTemplateMd5  SQL语句模板MD5
     * targetName  目标库别名
     * schemaName  schema名称
-    * queryType  SQL类型
+    * queryType  SQL类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
     * minLatency  SQL执行最小耗时
     * maxLatency  SQL执行最大耗时
     * avgLatency  SQL执行平均耗时
@@ -135,7 +135,7 @@ class ReplaySlowSqlTemplateResp implements ModelInterface, ArrayAccess
     * sqlTemplateMd5  SQL语句模板MD5
     * targetName  目标库别名
     * schemaName  schema名称
-    * queryType  SQL类型
+    * queryType  SQL类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
     * minLatency  SQL执行最小耗时
     * maxLatency  SQL执行最大耗时
     * avgLatency  SQL执行平均耗时
@@ -165,7 +165,7 @@ class ReplaySlowSqlTemplateResp implements ModelInterface, ArrayAccess
     * sqlTemplateMd5  SQL语句模板MD5
     * targetName  目标库别名
     * schemaName  schema名称
-    * queryType  SQL类型
+    * queryType  SQL类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
     * minLatency  SQL执行最小耗时
     * maxLatency  SQL执行最大耗时
     * avgLatency  SQL执行平均耗时
@@ -389,7 +389,7 @@ class ReplaySlowSqlTemplateResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets queryType
-    *  SQL类型
+    *  SQL类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
     *
     * @return string|null
     */
@@ -401,7 +401,7 @@ class ReplaySlowSqlTemplateResp implements ModelInterface, ArrayAccess
     /**
     * Sets queryType
     *
-    * @param string|null $queryType SQL类型
+    * @param string|null $queryType SQL类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
     *
     * @return $this
     */

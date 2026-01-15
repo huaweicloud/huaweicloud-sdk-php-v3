@@ -24,7 +24,7 @@ class CreateConnectionResponse implements ModelInterface, ArrayAccess
     * connectionId  连接ID。
     * name  连接名称。
     * createTime  连接创建时间，格式为时间戳。
-    * dbType  连接类型。
+    * dbType  连接类型。 取值：mysql - postgresql - mongodb - oracle
     * config  config
     * endpoint  endpoint
     * vpc  vpc
@@ -52,7 +52,7 @@ class CreateConnectionResponse implements ModelInterface, ArrayAccess
     * connectionId  连接ID。
     * name  连接名称。
     * createTime  连接创建时间，格式为时间戳。
-    * dbType  连接类型。
+    * dbType  连接类型。 取值：mysql - postgresql - mongodb - oracle
     * config  config
     * endpoint  endpoint
     * vpc  vpc
@@ -101,7 +101,7 @@ class CreateConnectionResponse implements ModelInterface, ArrayAccess
     * connectionId  连接ID。
     * name  连接名称。
     * createTime  连接创建时间，格式为时间戳。
-    * dbType  连接类型。
+    * dbType  连接类型。 取值：mysql - postgresql - mongodb - oracle
     * config  config
     * endpoint  endpoint
     * vpc  vpc
@@ -129,7 +129,7 @@ class CreateConnectionResponse implements ModelInterface, ArrayAccess
     * connectionId  连接ID。
     * name  连接名称。
     * createTime  连接创建时间，格式为时间戳。
-    * dbType  连接类型。
+    * dbType  连接类型。 取值：mysql - postgresql - mongodb - oracle
     * config  config
     * endpoint  endpoint
     * vpc  vpc
@@ -157,7 +157,7 @@ class CreateConnectionResponse implements ModelInterface, ArrayAccess
     * connectionId  连接ID。
     * name  连接名称。
     * createTime  连接创建时间，格式为时间戳。
-    * dbType  连接类型。
+    * dbType  连接类型。 取值：mysql - postgresql - mongodb - oracle
     * config  config
     * endpoint  endpoint
     * vpc  vpc
@@ -382,7 +382,7 @@ class CreateConnectionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbType
-    *  连接类型。
+    *  连接类型。 取值：mysql - postgresql - mongodb - oracle
     *
     * @return string|null
     */
@@ -394,7 +394,7 @@ class CreateConnectionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dbType
     *
-    * @param string|null $dbType 连接类型。
+    * @param string|null $dbType 连接类型。 取值：mysql - postgresql - mongodb - oracle
     *
     * @return $this
     */

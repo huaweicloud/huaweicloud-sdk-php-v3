@@ -21,7 +21,7 @@ class InstInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * engineType  引擎类型
-    * instType  实例类型
+    * instType  实例类型 取值：common，high，ultrahigh
     * ip  迁移实例所在的私有IP
     * publicIp  迁移实例所在的公网IP
     * startTime  迁移实例任务定时启动时间
@@ -43,7 +43,7 @@ class InstInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * engineType  引擎类型
-    * instType  实例类型
+    * instType  实例类型 取值：common，high，ultrahigh
     * ip  迁移实例所在的私有IP
     * publicIp  迁移实例所在的公网IP
     * startTime  迁移实例任务定时启动时间
@@ -86,7 +86,7 @@ class InstInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * engineType  引擎类型
-    * instType  实例类型
+    * instType  实例类型 取值：common，high，ultrahigh
     * ip  迁移实例所在的私有IP
     * publicIp  迁移实例所在的公网IP
     * startTime  迁移实例任务定时启动时间
@@ -108,7 +108,7 @@ class InstInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * engineType  引擎类型
-    * instType  实例类型
+    * instType  实例类型 取值：common，high，ultrahigh
     * ip  迁移实例所在的私有IP
     * publicIp  迁移实例所在的公网IP
     * startTime  迁移实例任务定时启动时间
@@ -130,7 +130,7 @@ class InstInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * engineType  引擎类型
-    * instType  实例类型
+    * instType  实例类型 取值：common，high，ultrahigh
     * ip  迁移实例所在的私有IP
     * publicIp  迁移实例所在的公网IP
     * startTime  迁移实例任务定时启动时间
@@ -343,7 +343,7 @@ class InstInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets instType
-    *  实例类型
+    *  实例类型 取值：common，high，ultrahigh
     *
     * @return string|null
     */
@@ -355,7 +355,7 @@ class InstInfo implements ModelInterface, ArrayAccess
     /**
     * Sets instType
     *
-    * @param string|null $instType 实例类型
+    * @param string|null $instType 实例类型 取值：common，high，ultrahigh
     *
     * @return $this
     */

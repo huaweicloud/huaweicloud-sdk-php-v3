@@ -22,7 +22,7 @@ class UploadDbObjectTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * sendSuccess  是否上传完成。
-    * processStatus  文件解析状态。
+    * processStatus  文件解析状态。 取值：success，failed
     * parsedSuccessNumber  解析成功的行数。
     *
     * @var string[]
@@ -36,7 +36,7 @@ class UploadDbObjectTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * sendSuccess  是否上传完成。
-    * processStatus  文件解析状态。
+    * processStatus  文件解析状态。 取值：success，failed
     * parsedSuccessNumber  解析成功的行数。
     *
     * @var string[]
@@ -71,7 +71,7 @@ class UploadDbObjectTemplateResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * sendSuccess  是否上传完成。
-    * processStatus  文件解析状态。
+    * processStatus  文件解析状态。 取值：success，failed
     * parsedSuccessNumber  解析成功的行数。
     *
     * @var string[]
@@ -85,7 +85,7 @@ class UploadDbObjectTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * sendSuccess  是否上传完成。
-    * processStatus  文件解析状态。
+    * processStatus  文件解析状态。 取值：success，failed
     * parsedSuccessNumber  解析成功的行数。
     *
     * @var string[]
@@ -99,7 +99,7 @@ class UploadDbObjectTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * sendSuccess  是否上传完成。
-    * processStatus  文件解析状态。
+    * processStatus  文件解析状态。 取值：success，failed
     * parsedSuccessNumber  解析成功的行数。
     *
     * @var string[]
@@ -221,7 +221,7 @@ class UploadDbObjectTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets processStatus
-    *  文件解析状态。
+    *  文件解析状态。 取值：success，failed
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class UploadDbObjectTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets processStatus
     *
-    * @param string|null $processStatus 文件解析状态。
+    * @param string|null $processStatus 文件解析状态。 取值：success，failed
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class TagMatch implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键。
-    * value  值。
+    * key  键，例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
+    * value  值，例如键值对{“aaa”:\"bbb\"}的value为\"bbb\"
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class TagMatch implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键。
-    * value  值。
+    * key  键，例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
+    * value  值，例如键值对{“aaa”:\"bbb\"}的value为\"bbb\"
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class TagMatch implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键。
-    * value  值。
+    * key  键，例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
+    * value  值，例如键值对{“aaa”:\"bbb\"}的value为\"bbb\"
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class TagMatch implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键。
-    * value  值。
+    * key  键，例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
+    * value  值，例如键值对{“aaa”:\"bbb\"}的value为\"bbb\"
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class TagMatch implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键。
-    * value  值。
+    * key  键，例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
+    * value  值，例如键值对{“aaa”:\"bbb\"}的value为\"bbb\"
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class TagMatch implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  键。
+    *  键，例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class TagMatch implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 键。
+    * @param string $key 键，例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class TagMatch implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  值。
+    *  值，例如键值对{“aaa”:\"bbb\"}的value为\"bbb\"
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class TagMatch implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 值。
+    * @param string $value 值，例如键值对{“aaa”:\"bbb\"}的value为\"bbb\"
     *
     * @return $this
     */

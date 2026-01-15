@@ -22,12 +22,12 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * azs  ECS规格所在的可用区集合
     * id  规格ID
-    * level  规格等级，支持的等级以局点配置为准。 - entry:入门版 - low:基础版 - medium:专业版 - high:高级版
+    * level  规格等级，支持的等级以局点配置为准。 - entry：入门版 - low：基础版 - medium：专业版 - high：高级版
     * name  规格名称
     * proxy  规格可添加的数据库数量
     * ram  内存
     * vcpus  CPU
-    * azType  可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
+    * azType  可用区类型 - DEDICATED：大网 - DEC：边缘小站 - EDGE：专属
     *
     * @var string[]
     */
@@ -46,12 +46,12 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * azs  ECS规格所在的可用区集合
     * id  规格ID
-    * level  规格等级，支持的等级以局点配置为准。 - entry:入门版 - low:基础版 - medium:专业版 - high:高级版
+    * level  规格等级，支持的等级以局点配置为准。 - entry：入门版 - low：基础版 - medium：专业版 - high：高级版
     * name  规格名称
     * proxy  规格可添加的数据库数量
     * ram  内存
     * vcpus  CPU
-    * azType  可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
+    * azType  可用区类型 - DEDICATED：大网 - DEC：边缘小站 - EDGE：专属
     *
     * @var string[]
     */
@@ -91,12 +91,12 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
     * and the value is the original name
     * azs  ECS规格所在的可用区集合
     * id  规格ID
-    * level  规格等级，支持的等级以局点配置为准。 - entry:入门版 - low:基础版 - medium:专业版 - high:高级版
+    * level  规格等级，支持的等级以局点配置为准。 - entry：入门版 - low：基础版 - medium：专业版 - high：高级版
     * name  规格名称
     * proxy  规格可添加的数据库数量
     * ram  内存
     * vcpus  CPU
-    * azType  可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
+    * azType  可用区类型 - DEDICATED：大网 - DEC：边缘小站 - EDGE：专属
     *
     * @var string[]
     */
@@ -115,12 +115,12 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * azs  ECS规格所在的可用区集合
     * id  规格ID
-    * level  规格等级，支持的等级以局点配置为准。 - entry:入门版 - low:基础版 - medium:专业版 - high:高级版
+    * level  规格等级，支持的等级以局点配置为准。 - entry：入门版 - low：基础版 - medium：专业版 - high：高级版
     * name  规格名称
     * proxy  规格可添加的数据库数量
     * ram  内存
     * vcpus  CPU
-    * azType  可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
+    * azType  可用区类型 - DEDICATED：大网 - DEC：边缘小站 - EDGE：专属
     *
     * @var string[]
     */
@@ -139,12 +139,12 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * azs  ECS规格所在的可用区集合
     * id  规格ID
-    * level  规格等级，支持的等级以局点配置为准。 - entry:入门版 - low:基础版 - medium:专业版 - high:高级版
+    * level  规格等级，支持的等级以局点配置为准。 - entry：入门版 - low：基础版 - medium：专业版 - high：高级版
     * name  规格名称
     * proxy  规格可添加的数据库数量
     * ram  内存
     * vcpus  CPU
-    * azType  可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
+    * azType  可用区类型 - DEDICATED：大网 - DEC：边缘小站 - EDGE：专属
     *
     * @var string[]
     */
@@ -320,7 +320,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets level
-    *  规格等级，支持的等级以局点配置为准。 - entry:入门版 - low:基础版 - medium:专业版 - high:高级版
+    *  规格等级，支持的等级以局点配置为准。 - entry：入门版 - low：基础版 - medium：专业版 - high：高级版
     *
     * @return string
     */
@@ -332,7 +332,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
     /**
     * Sets level
     *
-    * @param string $level 规格等级，支持的等级以局点配置为准。 - entry:入门版 - low:基础版 - medium:专业版 - high:高级版
+    * @param string $level 规格等级，支持的等级以局点配置为准。 - entry：入门版 - low：基础版 - medium：专业版 - high：高级版
     *
     * @return $this
     */
@@ -440,7 +440,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets azType
-    *  可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
+    *  可用区类型 - DEDICATED：大网 - DEC：边缘小站 - EDGE：专属
     *
     * @return string|null
     */
@@ -452,7 +452,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
     /**
     * Sets azType
     *
-    * @param string|null $azType 可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
+    * @param string|null $azType 可用区类型 - DEDICATED：大网 - DEC：边缘小站 - EDGE：专属
     *
     * @return $this
     */

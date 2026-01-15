@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Css\V1\Model;
+namespace HuaweiCloud\SDK\Dbss\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListAiOpsRequestBodySummary implements ModelInterface, ArrayAccess
+class UnsupportedAuditInfoResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,30 @@ class ListAiOpsRequestBodySummary implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListAiOpsRequestBody_summary';
+    protected static $openAPIModelName = 'UnsupportedAuditInfoResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * high  检测项判定为高风险的数量。
-    * medium  检测项判定为中风险的数量。
-    * suggestion  检测项判定为建议的数量。
+    * auditInfos  审计信息
+    * supportVersion  支持的版本
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'high' => 'int',
-            'medium' => 'int',
-            'suggestion' => 'int'
+            'auditInfos' => '\HuaweiCloud\SDK\Dbss\V1\Model\UnsupportedAuditInfo[]',
+            'supportVersion' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * high  检测项判定为高风险的数量。
-    * medium  检测项判定为中风险的数量。
-    * suggestion  检测项判定为建议的数量。
+    * auditInfos  审计信息
+    * supportVersion  支持的版本
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'high' => null,
-        'medium' => null,
-        'suggestion' => null
+        'auditInfos' => null,
+        'supportVersion' => null
     ];
 
     /**
@@ -69,44 +65,38 @@ class ListAiOpsRequestBodySummary implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * high  检测项判定为高风险的数量。
-    * medium  检测项判定为中风险的数量。
-    * suggestion  检测项判定为建议的数量。
+    * auditInfos  审计信息
+    * supportVersion  支持的版本
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'high' => 'high',
-            'medium' => 'medium',
-            'suggestion' => 'suggestion'
+            'auditInfos' => 'audit_infos',
+            'supportVersion' => 'support_version'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * high  检测项判定为高风险的数量。
-    * medium  检测项判定为中风险的数量。
-    * suggestion  检测项判定为建议的数量。
+    * auditInfos  审计信息
+    * supportVersion  支持的版本
     *
     * @var string[]
     */
     protected static $setters = [
-            'high' => 'setHigh',
-            'medium' => 'setMedium',
-            'suggestion' => 'setSuggestion'
+            'auditInfos' => 'setAuditInfos',
+            'supportVersion' => 'setSupportVersion'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * high  检测项判定为高风险的数量。
-    * medium  检测项判定为中风险的数量。
-    * suggestion  检测项判定为建议的数量。
+    * auditInfos  审计信息
+    * supportVersion  支持的版本
     *
     * @var string[]
     */
     protected static $getters = [
-            'high' => 'getHigh',
-            'medium' => 'getMedium',
-            'suggestion' => 'getSuggestion'
+            'auditInfos' => 'getAuditInfos',
+            'supportVersion' => 'getSupportVersion'
     ];
 
     /**
@@ -167,9 +157,8 @@ class ListAiOpsRequestBodySummary implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['high'] = isset($data['high']) ? $data['high'] : null;
-        $this->container['medium'] = isset($data['medium']) ? $data['medium'] : null;
-        $this->container['suggestion'] = isset($data['suggestion']) ? $data['suggestion'] : null;
+        $this->container['auditInfos'] = isset($data['auditInfos']) ? $data['auditInfos'] : null;
+        $this->container['supportVersion'] = isset($data['supportVersion']) ? $data['supportVersion'] : null;
     }
 
     /**
@@ -195,74 +184,50 @@ class ListAiOpsRequestBodySummary implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets high
-    *  检测项判定为高风险的数量。
+    * Gets auditInfos
+    *  审计信息
     *
-    * @return int|null
+    * @return \HuaweiCloud\SDK\Dbss\V1\Model\UnsupportedAuditInfo[]|null
     */
-    public function getHigh()
+    public function getAuditInfos()
     {
-        return $this->container['high'];
+        return $this->container['auditInfos'];
     }
 
     /**
-    * Sets high
+    * Sets auditInfos
     *
-    * @param int|null $high 检测项判定为高风险的数量。
+    * @param \HuaweiCloud\SDK\Dbss\V1\Model\UnsupportedAuditInfo[]|null $auditInfos 审计信息
     *
     * @return $this
     */
-    public function setHigh($high)
+    public function setAuditInfos($auditInfos)
     {
-        $this->container['high'] = $high;
+        $this->container['auditInfos'] = $auditInfos;
         return $this;
     }
 
     /**
-    * Gets medium
-    *  检测项判定为中风险的数量。
+    * Gets supportVersion
+    *  支持的版本
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getMedium()
+    public function getSupportVersion()
     {
-        return $this->container['medium'];
+        return $this->container['supportVersion'];
     }
 
     /**
-    * Sets medium
+    * Sets supportVersion
     *
-    * @param int|null $medium 检测项判定为中风险的数量。
+    * @param string|null $supportVersion 支持的版本
     *
     * @return $this
     */
-    public function setMedium($medium)
+    public function setSupportVersion($supportVersion)
     {
-        $this->container['medium'] = $medium;
-        return $this;
-    }
-
-    /**
-    * Gets suggestion
-    *  检测项判定为建议的数量。
-    *
-    * @return int|null
-    */
-    public function getSuggestion()
-    {
-        return $this->container['suggestion'];
-    }
-
-    /**
-    * Sets suggestion
-    *
-    * @param int|null $suggestion 检测项判定为建议的数量。
-    *
-    * @return $this
-    */
-    public function setSuggestion($suggestion)
-    {
-        $this->container['suggestion'] = $suggestion;
+        $this->container['supportVersion'] = $supportVersion;
         return $this;
     }
 

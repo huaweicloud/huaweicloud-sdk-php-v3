@@ -20,7 +20,7 @@ class ListSmnTopicsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainId  指定待查询的集群ID。
+    * domainId  域账号ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ListSmnTopicsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainId  指定待查询的集群ID。
+    * domainId  域账号ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ListSmnTopicsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainId  指定待查询的集群ID。
+    * domainId  域账号ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListSmnTopicsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainId  指定待查询的集群ID。
+    * domainId  域账号ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListSmnTopicsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainId  指定待查询的集群ID。
+    * domainId  域账号ID。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ListSmnTopicsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  指定待查询的集群ID。
+    *  域账号ID。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class ListSmnTopicsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string $domainId 指定待查询的集群ID。
+    * @param string $domainId 域账号ID。
     *
     * @return $this
     */

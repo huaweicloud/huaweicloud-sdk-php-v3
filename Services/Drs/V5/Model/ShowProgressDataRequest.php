@@ -25,6 +25,7 @@ class ShowProgressDataRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询， offset 大于等于 0。默认为0
     * limit  每页显示的条目数量。默认为10，取值范围【1-1000】
     * type  迁移对象类型。 - table - event - table_structure - procedure - view - function - database - trigger - table_indexs
+    * searchName  需要过滤的源库对象名称
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class ShowProgressDataRequest implements ModelInterface, ArrayAccess
             'jobId' => 'string',
             'offset' => 'int',
             'limit' => 'int',
-            'type' => 'string'
+            'type' => 'string',
+            'searchName' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class ShowProgressDataRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询， offset 大于等于 0。默认为0
     * limit  每页显示的条目数量。默认为10，取值范围【1-1000】
     * type  迁移对象类型。 - table - event - table_structure - procedure - view - function - database - trigger - table_indexs
+    * searchName  需要过滤的源库对象名称
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ShowProgressDataRequest implements ModelInterface, ArrayAccess
         'jobId' => null,
         'offset' => 'int32',
         'limit' => 'int32',
-        'type' => null
+        'type' => null,
+        'searchName' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class ShowProgressDataRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询， offset 大于等于 0。默认为0
     * limit  每页显示的条目数量。默认为10，取值范围【1-1000】
     * type  迁移对象类型。 - table - event - table_structure - procedure - view - function - database - trigger - table_indexs
+    * searchName  需要过滤的源库对象名称
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class ShowProgressDataRequest implements ModelInterface, ArrayAccess
             'jobId' => 'job_id',
             'offset' => 'offset',
             'limit' => 'limit',
-            'type' => 'type'
+            'type' => 'type',
+            'searchName' => 'search_name'
     ];
 
     /**
@@ -100,6 +106,7 @@ class ShowProgressDataRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询， offset 大于等于 0。默认为0
     * limit  每页显示的条目数量。默认为10，取值范围【1-1000】
     * type  迁移对象类型。 - table - event - table_structure - procedure - view - function - database - trigger - table_indexs
+    * searchName  需要过滤的源库对象名称
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class ShowProgressDataRequest implements ModelInterface, ArrayAccess
             'jobId' => 'setJobId',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
-            'type' => 'setType'
+            'type' => 'setType',
+            'searchName' => 'setSearchName'
     ];
 
     /**
@@ -118,6 +126,7 @@ class ShowProgressDataRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询， offset 大于等于 0。默认为0
     * limit  每页显示的条目数量。默认为10，取值范围【1-1000】
     * type  迁移对象类型。 - table - event - table_structure - procedure - view - function - database - trigger - table_indexs
+    * searchName  需要过滤的源库对象名称
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ShowProgressDataRequest implements ModelInterface, ArrayAccess
             'jobId' => 'getJobId',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
-            'type' => 'getType'
+            'type' => 'getType',
+            'searchName' => 'getSearchName'
     ];
 
     /**
@@ -207,6 +217,7 @@ class ShowProgressDataRequest implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['searchName'] = isset($data['searchName']) ? $data['searchName'] : null;
     }
 
     /**
@@ -368,6 +379,30 @@ class ShowProgressDataRequest implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets searchName
+    *  需要过滤的源库对象名称
+    *
+    * @return string|null
+    */
+    public function getSearchName()
+    {
+        return $this->container['searchName'];
+    }
+
+    /**
+    * Sets searchName
+    *
+    * @param string|null $searchName 需要过滤的源库对象名称
+    *
+    * @return $this
+    */
+    public function setSearchName($searchName)
+    {
+        $this->container['searchName'] = $searchName;
         return $this;
     }
 

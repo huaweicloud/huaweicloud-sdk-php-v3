@@ -21,7 +21,7 @@ class TimelineInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  时间轴名称。
-    * status  状态。
+    * status  状态。 取值：success, failed
     * operationTime  操作时间。
     * userName  用户名称。
     *
@@ -37,7 +37,7 @@ class TimelineInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  时间轴名称。
-    * status  状态。
+    * status  状态。 取值：success, failed
     * operationTime  操作时间。
     * userName  用户名称。
     *
@@ -74,7 +74,7 @@ class TimelineInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  时间轴名称。
-    * status  状态。
+    * status  状态。 取值：success, failed
     * operationTime  操作时间。
     * userName  用户名称。
     *
@@ -90,7 +90,7 @@ class TimelineInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  时间轴名称。
-    * status  状态。
+    * status  状态。 取值：success, failed
     * operationTime  操作时间。
     * userName  用户名称。
     *
@@ -106,7 +106,7 @@ class TimelineInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  时间轴名称。
-    * status  状态。
+    * status  状态。 取值：success, failed
     * operationTime  操作时间。
     * userName  用户名称。
     *
@@ -231,7 +231,7 @@ class TimelineInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态。
+    *  状态。 取值：success, failed
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class TimelineInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态。
+    * @param string|null $status 状态。 取值：success, failed
     *
     * @return $this
     */

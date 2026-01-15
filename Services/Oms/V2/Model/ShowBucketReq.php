@@ -29,7 +29,7 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
     * dataCenter  数据中心，区域
     * pageSize  分页信息，页大小
     * behindFilename  分页信息，当前页最后一个对象名称（偏移量）
-    * appId  当源端为腾讯云时，会返回此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * bucketName  桶名
     *
     * @var string[]
@@ -59,7 +59,7 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
     * dataCenter  数据中心，区域
     * pageSize  分页信息，页大小
     * behindFilename  分页信息，当前页最后一个对象名称（偏移量）
-    * appId  当源端为腾讯云时，会返回此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * bucketName  桶名
     *
     * @var string[]
@@ -110,7 +110,7 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
     * dataCenter  数据中心，区域
     * pageSize  分页信息，页大小
     * behindFilename  分页信息，当前页最后一个对象名称（偏移量）
-    * appId  当源端为腾讯云时，会返回此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * bucketName  桶名
     *
     * @var string[]
@@ -140,7 +140,7 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
     * dataCenter  数据中心，区域
     * pageSize  分页信息，页大小
     * behindFilename  分页信息，当前页最后一个对象名称（偏移量）
-    * appId  当源端为腾讯云时，会返回此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * bucketName  桶名
     *
     * @var string[]
@@ -170,7 +170,7 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
     * dataCenter  数据中心，区域
     * pageSize  分页信息，页大小
     * behindFilename  分页信息，当前页最后一个对象名称（偏移量）
-    * appId  当源端为腾讯云时，会返回此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * bucketName  桶名
     *
     * @var string[]
@@ -599,7 +599,7 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
-    *  当源端为腾讯云时，会返回此参数。
+    *  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     *
     * @return string|null
     */
@@ -611,7 +611,7 @@ class ShowBucketReq implements ModelInterface, ArrayAccess
     /**
     * Sets appId
     *
-    * @param string|null $appId 当源端为腾讯云时，会返回此参数。
+    * @param string|null $appId 腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     *
     * @return $this
     */

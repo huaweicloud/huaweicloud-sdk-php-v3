@@ -20,7 +20,7 @@ class PeriodOrderResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  订单状态
+    * status  订单状态 INITIALIZATION：初始化，AWAITING_AUDIT：待审核，AWAITING_REFUND：待退款，PROCESSING：处理中，CANCELED：已取消，COMPLETED：已完成，AWAITING_PAID：待付款，AWAITING_APPROVE：待审批，UNORDERED：未下单，FROZEN_CAN_RENEW：冻结可续费，FROZEN_CAN_UNSUBSCRIBE：冻结可退订，FROZEN_POLICE：公安冻结，FROZEN_CAN_RENEW_FREE：冻结可续费 可结束，FROZEN_CAN_FREE：冻结可结束，LOCK_RESOURCE：限制资源锁定
     * orderId  订单ID
     * chargingMode  计费模式
     * periodType  订购包周期类型
@@ -44,7 +44,7 @@ class PeriodOrderResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  订单状态
+    * status  订单状态 INITIALIZATION：初始化，AWAITING_AUDIT：待审核，AWAITING_REFUND：待退款，PROCESSING：处理中，CANCELED：已取消，COMPLETED：已完成，AWAITING_PAID：待付款，AWAITING_APPROVE：待审批，UNORDERED：未下单，FROZEN_CAN_RENEW：冻结可续费，FROZEN_CAN_UNSUBSCRIBE：冻结可退订，FROZEN_POLICE：公安冻结，FROZEN_CAN_RENEW_FREE：冻结可续费 可结束，FROZEN_CAN_FREE：冻结可结束，LOCK_RESOURCE：限制资源锁定
     * orderId  订单ID
     * chargingMode  计费模式
     * periodType  订购包周期类型
@@ -89,7 +89,7 @@ class PeriodOrderResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  订单状态
+    * status  订单状态 INITIALIZATION：初始化，AWAITING_AUDIT：待审核，AWAITING_REFUND：待退款，PROCESSING：处理中，CANCELED：已取消，COMPLETED：已完成，AWAITING_PAID：待付款，AWAITING_APPROVE：待审批，UNORDERED：未下单，FROZEN_CAN_RENEW：冻结可续费，FROZEN_CAN_UNSUBSCRIBE：冻结可退订，FROZEN_POLICE：公安冻结，FROZEN_CAN_RENEW_FREE：冻结可续费 可结束，FROZEN_CAN_FREE：冻结可结束，LOCK_RESOURCE：限制资源锁定
     * orderId  订单ID
     * chargingMode  计费模式
     * periodType  订购包周期类型
@@ -113,7 +113,7 @@ class PeriodOrderResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  订单状态
+    * status  订单状态 INITIALIZATION：初始化，AWAITING_AUDIT：待审核，AWAITING_REFUND：待退款，PROCESSING：处理中，CANCELED：已取消，COMPLETED：已完成，AWAITING_PAID：待付款，AWAITING_APPROVE：待审批，UNORDERED：未下单，FROZEN_CAN_RENEW：冻结可续费，FROZEN_CAN_UNSUBSCRIBE：冻结可退订，FROZEN_POLICE：公安冻结，FROZEN_CAN_RENEW_FREE：冻结可续费 可结束，FROZEN_CAN_FREE：冻结可结束，LOCK_RESOURCE：限制资源锁定
     * orderId  订单ID
     * chargingMode  计费模式
     * periodType  订购包周期类型
@@ -137,7 +137,7 @@ class PeriodOrderResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  订单状态
+    * status  订单状态 INITIALIZATION：初始化，AWAITING_AUDIT：待审核，AWAITING_REFUND：待退款，PROCESSING：处理中，CANCELED：已取消，COMPLETED：已完成，AWAITING_PAID：待付款，AWAITING_APPROVE：待审批，UNORDERED：未下单，FROZEN_CAN_RENEW：冻结可续费，FROZEN_CAN_UNSUBSCRIBE：冻结可退订，FROZEN_POLICE：公安冻结，FROZEN_CAN_RENEW_FREE：冻结可续费 可结束，FROZEN_CAN_FREE：冻结可结束，LOCK_RESOURCE：限制资源锁定
     * orderId  订单ID
     * chargingMode  计费模式
     * periodType  订购包周期类型
@@ -251,7 +251,7 @@ class PeriodOrderResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  订单状态
+    *  订单状态 INITIALIZATION：初始化，AWAITING_AUDIT：待审核，AWAITING_REFUND：待退款，PROCESSING：处理中，CANCELED：已取消，COMPLETED：已完成，AWAITING_PAID：待付款，AWAITING_APPROVE：待审批，UNORDERED：未下单，FROZEN_CAN_RENEW：冻结可续费，FROZEN_CAN_UNSUBSCRIBE：冻结可退订，FROZEN_POLICE：公安冻结，FROZEN_CAN_RENEW_FREE：冻结可续费 可结束，FROZEN_CAN_FREE：冻结可结束，LOCK_RESOURCE：限制资源锁定
     *
     * @return string|null
     */
@@ -263,7 +263,7 @@ class PeriodOrderResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 订单状态
+    * @param string|null $status 订单状态 INITIALIZATION：初始化，AWAITING_AUDIT：待审核，AWAITING_REFUND：待退款，PROCESSING：处理中，CANCELED：已取消，COMPLETED：已完成，AWAITING_PAID：待付款，AWAITING_APPROVE：待审批，UNORDERED：未下单，FROZEN_CAN_RENEW：冻结可续费，FROZEN_CAN_UNSUBSCRIBE：冻结可退订，FROZEN_POLICE：公安冻结，FROZEN_CAN_RENEW_FREE：冻结可续费 可结束，FROZEN_CAN_FREE：冻结可结束，LOCK_RESOURCE：限制资源锁定
     *
     * @return $this
     */

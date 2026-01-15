@@ -24,9 +24,9 @@ class AlarmLogResponseAlarmLog implements ModelInterface, ArrayAccess
     * alarmLife  告警状态 - ON：持续中 - OFF：已关闭
     * sendEmail  是否发送邮件
     * alarmTime  告警发生时间
-    * alarmType  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
+    * alarmType  告警类型 - RISK_RULE：风险规则 - RISK_CPU：CPU超限 - RISK_MEMORY：内存超限 - RISK_DISK：磁盘超限 - RISK_DISK_CAPACITY：磁盘容量不足六个月 - RISK_BACKUP：备份失败 - AUDIT_QPS_OVERFLOW：流量超限入库延迟告警 - RISK_AGENT：Agent异常 - AUDIT_BACKUP_FAILED：实例备份失败(运维侧)
     * alarmFixTime  告警恢复时间
-    * alarmStatus  告警确认状态 - DONE: 已确认 - UNDO: 未确认
+    * alarmStatus  告警确认状态 - DONE：已确认 - UNDO：未确认
     * alarmRisk  告警风险等级 - LOW：低 - MEDIUM：中 - HIGH：高
     * alarmDescription  告警描述信息
     *
@@ -50,9 +50,9 @@ class AlarmLogResponseAlarmLog implements ModelInterface, ArrayAccess
     * alarmLife  告警状态 - ON：持续中 - OFF：已关闭
     * sendEmail  是否发送邮件
     * alarmTime  告警发生时间
-    * alarmType  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
+    * alarmType  告警类型 - RISK_RULE：风险规则 - RISK_CPU：CPU超限 - RISK_MEMORY：内存超限 - RISK_DISK：磁盘超限 - RISK_DISK_CAPACITY：磁盘容量不足六个月 - RISK_BACKUP：备份失败 - AUDIT_QPS_OVERFLOW：流量超限入库延迟告警 - RISK_AGENT：Agent异常 - AUDIT_BACKUP_FAILED：实例备份失败(运维侧)
     * alarmFixTime  告警恢复时间
-    * alarmStatus  告警确认状态 - DONE: 已确认 - UNDO: 未确认
+    * alarmStatus  告警确认状态 - DONE：已确认 - UNDO：未确认
     * alarmRisk  告警风险等级 - LOW：低 - MEDIUM：中 - HIGH：高
     * alarmDescription  告警描述信息
     *
@@ -97,9 +97,9 @@ class AlarmLogResponseAlarmLog implements ModelInterface, ArrayAccess
     * alarmLife  告警状态 - ON：持续中 - OFF：已关闭
     * sendEmail  是否发送邮件
     * alarmTime  告警发生时间
-    * alarmType  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
+    * alarmType  告警类型 - RISK_RULE：风险规则 - RISK_CPU：CPU超限 - RISK_MEMORY：内存超限 - RISK_DISK：磁盘超限 - RISK_DISK_CAPACITY：磁盘容量不足六个月 - RISK_BACKUP：备份失败 - AUDIT_QPS_OVERFLOW：流量超限入库延迟告警 - RISK_AGENT：Agent异常 - AUDIT_BACKUP_FAILED：实例备份失败(运维侧)
     * alarmFixTime  告警恢复时间
-    * alarmStatus  告警确认状态 - DONE: 已确认 - UNDO: 未确认
+    * alarmStatus  告警确认状态 - DONE：已确认 - UNDO：未确认
     * alarmRisk  告警风险等级 - LOW：低 - MEDIUM：中 - HIGH：高
     * alarmDescription  告警描述信息
     *
@@ -123,9 +123,9 @@ class AlarmLogResponseAlarmLog implements ModelInterface, ArrayAccess
     * alarmLife  告警状态 - ON：持续中 - OFF：已关闭
     * sendEmail  是否发送邮件
     * alarmTime  告警发生时间
-    * alarmType  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
+    * alarmType  告警类型 - RISK_RULE：风险规则 - RISK_CPU：CPU超限 - RISK_MEMORY：内存超限 - RISK_DISK：磁盘超限 - RISK_DISK_CAPACITY：磁盘容量不足六个月 - RISK_BACKUP：备份失败 - AUDIT_QPS_OVERFLOW：流量超限入库延迟告警 - RISK_AGENT：Agent异常 - AUDIT_BACKUP_FAILED：实例备份失败(运维侧)
     * alarmFixTime  告警恢复时间
-    * alarmStatus  告警确认状态 - DONE: 已确认 - UNDO: 未确认
+    * alarmStatus  告警确认状态 - DONE：已确认 - UNDO：未确认
     * alarmRisk  告警风险等级 - LOW：低 - MEDIUM：中 - HIGH：高
     * alarmDescription  告警描述信息
     *
@@ -149,9 +149,9 @@ class AlarmLogResponseAlarmLog implements ModelInterface, ArrayAccess
     * alarmLife  告警状态 - ON：持续中 - OFF：已关闭
     * sendEmail  是否发送邮件
     * alarmTime  告警发生时间
-    * alarmType  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
+    * alarmType  告警类型 - RISK_RULE：风险规则 - RISK_CPU：CPU超限 - RISK_MEMORY：内存超限 - RISK_DISK：磁盘超限 - RISK_DISK_CAPACITY：磁盘容量不足六个月 - RISK_BACKUP：备份失败 - AUDIT_QPS_OVERFLOW：流量超限入库延迟告警 - RISK_AGENT：Agent异常 - AUDIT_BACKUP_FAILED：实例备份失败(运维侧)
     * alarmFixTime  告警恢复时间
-    * alarmStatus  告警确认状态 - DONE: 已确认 - UNDO: 未确认
+    * alarmStatus  告警确认状态 - DONE：已确认 - UNDO：未确认
     * alarmRisk  告警风险等级 - LOW：低 - MEDIUM：中 - HIGH：高
     * alarmDescription  告警描述信息
     *
@@ -358,7 +358,7 @@ class AlarmLogResponseAlarmLog implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmType
-    *  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
+    *  告警类型 - RISK_RULE：风险规则 - RISK_CPU：CPU超限 - RISK_MEMORY：内存超限 - RISK_DISK：磁盘超限 - RISK_DISK_CAPACITY：磁盘容量不足六个月 - RISK_BACKUP：备份失败 - AUDIT_QPS_OVERFLOW：流量超限入库延迟告警 - RISK_AGENT：Agent异常 - AUDIT_BACKUP_FAILED：实例备份失败(运维侧)
     *
     * @return string|null
     */
@@ -370,7 +370,7 @@ class AlarmLogResponseAlarmLog implements ModelInterface, ArrayAccess
     /**
     * Sets alarmType
     *
-    * @param string|null $alarmType 告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
+    * @param string|null $alarmType 告警类型 - RISK_RULE：风险规则 - RISK_CPU：CPU超限 - RISK_MEMORY：内存超限 - RISK_DISK：磁盘超限 - RISK_DISK_CAPACITY：磁盘容量不足六个月 - RISK_BACKUP：备份失败 - AUDIT_QPS_OVERFLOW：流量超限入库延迟告警 - RISK_AGENT：Agent异常 - AUDIT_BACKUP_FAILED：实例备份失败(运维侧)
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class AlarmLogResponseAlarmLog implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmStatus
-    *  告警确认状态 - DONE: 已确认 - UNDO: 未确认
+    *  告警确认状态 - DONE：已确认 - UNDO：未确认
     *
     * @return string|null
     */
@@ -418,7 +418,7 @@ class AlarmLogResponseAlarmLog implements ModelInterface, ArrayAccess
     /**
     * Sets alarmStatus
     *
-    * @param string|null $alarmStatus 告警确认状态 - DONE: 已确认 - UNDO: 未确认
+    * @param string|null $alarmStatus 告警确认状态 - DONE：已确认 - UNDO：未确认
     *
     * @return $this
     */

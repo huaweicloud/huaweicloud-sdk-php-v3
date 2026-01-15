@@ -27,6 +27,7 @@ class ListEnterpriseProjectRequest implements ModelInterface, ArrayAccess
     * sortDir  降序或升序,默认为“desc” 。desc表示降序 。asc 表示升序
     * sortKey  返回结果按该关键字排序（支持updated_at等关键字，默认为“created_at”）
     * status  企业项目状态。 1--启用，2--停用
+    * type  查询项目类型。 - prod-商用项目 - poc-测试项目
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class ListEnterpriseProjectRequest implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'sortDir' => 'string',
             'sortKey' => 'string',
-            'status' => 'int'
+            'status' => 'int',
+            'type' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class ListEnterpriseProjectRequest implements ModelInterface, ArrayAccess
     * sortDir  降序或升序,默认为“desc” 。desc表示降序 。asc 表示升序
     * sortKey  返回结果按该关键字排序（支持updated_at等关键字，默认为“created_at”）
     * status  企业项目状态。 1--启用，2--停用
+    * type  查询项目类型。 - prod-商用项目 - poc-测试项目
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ListEnterpriseProjectRequest implements ModelInterface, ArrayAccess
         'offset' => 'int32',
         'sortDir' => null,
         'sortKey' => null,
-        'status' => 'int32'
+        'status' => 'int32',
+        'type' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class ListEnterpriseProjectRequest implements ModelInterface, ArrayAccess
     * sortDir  降序或升序,默认为“desc” 。desc表示降序 。asc 表示升序
     * sortKey  返回结果按该关键字排序（支持updated_at等关键字，默认为“created_at”）
     * status  企业项目状态。 1--启用，2--停用
+    * type  查询项目类型。 - prod-商用项目 - poc-测试项目
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class ListEnterpriseProjectRequest implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'sortDir' => 'sort_dir',
             'sortKey' => 'sort_key',
-            'status' => 'status'
+            'status' => 'status',
+            'type' => 'type'
     ];
 
     /**
@@ -114,6 +120,7 @@ class ListEnterpriseProjectRequest implements ModelInterface, ArrayAccess
     * sortDir  降序或升序,默认为“desc” 。desc表示降序 。asc 表示升序
     * sortKey  返回结果按该关键字排序（支持updated_at等关键字，默认为“created_at”）
     * status  企业项目状态。 1--启用，2--停用
+    * type  查询项目类型。 - prod-商用项目 - poc-测试项目
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class ListEnterpriseProjectRequest implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'sortDir' => 'setSortDir',
             'sortKey' => 'setSortKey',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'type' => 'setType'
     ];
 
     /**
@@ -136,6 +144,7 @@ class ListEnterpriseProjectRequest implements ModelInterface, ArrayAccess
     * sortDir  降序或升序,默认为“desc” 。desc表示降序 。asc 表示升序
     * sortKey  返回结果按该关键字排序（支持updated_at等关键字，默认为“created_at”）
     * status  企业项目状态。 1--启用，2--停用
+    * type  查询项目类型。 - prod-商用项目 - poc-测试项目
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ListEnterpriseProjectRequest implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'sortDir' => 'getSortDir',
             'sortKey' => 'getSortKey',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'type' => 'getType'
     ];
 
     /**
@@ -193,6 +203,8 @@ class ListEnterpriseProjectRequest implements ModelInterface, ArrayAccess
     const SORT_DIR_ASC = 'asc';
     const SORT_KEY_CREATED_AT = 'created_at';
     const SORT_KEY_UPDATED_AT = 'updated_at';
+    const TYPE_PROD = 'prod';
+    const TYPE_POC = 'poc';
     
 
     /**
@@ -221,6 +233,19 @@ class ListEnterpriseProjectRequest implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_PROD,
+            self::TYPE_POC,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -244,6 +269,7 @@ class ListEnterpriseProjectRequest implements ModelInterface, ArrayAccess
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -266,6 +292,14 @@ class ListEnterpriseProjectRequest implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['sortKey']) && !in_array($this->container['sortKey'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'sortKey', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -449,6 +483,30 @@ class ListEnterpriseProjectRequest implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  查询项目类型。 - prod-商用项目 - poc-测试项目
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 查询项目类型。 - prod-商用项目 - poc-测试项目
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

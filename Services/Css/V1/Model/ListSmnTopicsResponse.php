@@ -21,7 +21,7 @@ class ListSmnTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topicsName  SMN主题名称列表。
+    * topicsName  主题名称
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListSmnTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topicsName  SMN主题名称列表。
+    * topicsName  主题名称
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListSmnTopicsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topicsName  SMN主题名称列表。
+    * topicsName  主题名称
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListSmnTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topicsName  SMN主题名称列表。
+    * topicsName  主题名称
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListSmnTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topicsName  SMN主题名称列表。
+    * topicsName  主题名称
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListSmnTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicsName
-    *  SMN主题名称列表。
+    *  主题名称
     *
     * @return string[]|null
     */
@@ -187,7 +187,7 @@ class ListSmnTopicsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets topicsName
     *
-    * @param string[]|null $topicsName SMN主题名称列表。
+    * @param string[]|null $topicsName 主题名称
     *
     * @return $this
     */

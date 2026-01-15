@@ -24,13 +24,13 @@ class ReportBean implements ModelInterface, ArrayAccess
     * dbNames  数据库名称
     * endTime  结束时间
     * finishTime  完成时间
-    * format  格式  - pdf: PDF文件  - zip: zip文件
+    * format  格式  - pdf：PDF文件  - zip：zip文件
     * id  报表ID
     * name  报表名称
     * percentum  进度
     * startTime  开始时间
-    * templateType  报表类型 - PDF: pdf - ZIP: zip
-    * type  周期 - AUDIT_REPORT_DAY: 按天 - AUDIT_REPORT_WEEK： 按周 - AUDIT_REPORT_MONTH： 按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
+    * templateType  报表类型 - PDF：pdf - ZIP：zip
+    * type  周期 - AUDIT_REPORT_DAY：按天 - AUDIT_REPORT_WEEK：按周 - AUDIT_REPORT_MONTH：按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
     * url  地址URL
     *
     * @var string[]
@@ -56,13 +56,13 @@ class ReportBean implements ModelInterface, ArrayAccess
     * dbNames  数据库名称
     * endTime  结束时间
     * finishTime  完成时间
-    * format  格式  - pdf: PDF文件  - zip: zip文件
+    * format  格式  - pdf：PDF文件  - zip：zip文件
     * id  报表ID
     * name  报表名称
     * percentum  进度
     * startTime  开始时间
-    * templateType  报表类型 - PDF: pdf - ZIP: zip
-    * type  周期 - AUDIT_REPORT_DAY: 按天 - AUDIT_REPORT_WEEK： 按周 - AUDIT_REPORT_MONTH： 按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
+    * templateType  报表类型 - PDF：pdf - ZIP：zip
+    * type  周期 - AUDIT_REPORT_DAY：按天 - AUDIT_REPORT_WEEK：按周 - AUDIT_REPORT_MONTH：按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
     * url  地址URL
     *
     * @var string[]
@@ -109,13 +109,13 @@ class ReportBean implements ModelInterface, ArrayAccess
     * dbNames  数据库名称
     * endTime  结束时间
     * finishTime  完成时间
-    * format  格式  - pdf: PDF文件  - zip: zip文件
+    * format  格式  - pdf：PDF文件  - zip：zip文件
     * id  报表ID
     * name  报表名称
     * percentum  进度
     * startTime  开始时间
-    * templateType  报表类型 - PDF: pdf - ZIP: zip
-    * type  周期 - AUDIT_REPORT_DAY: 按天 - AUDIT_REPORT_WEEK： 按周 - AUDIT_REPORT_MONTH： 按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
+    * templateType  报表类型 - PDF：pdf - ZIP：zip
+    * type  周期 - AUDIT_REPORT_DAY：按天 - AUDIT_REPORT_WEEK：按周 - AUDIT_REPORT_MONTH：按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
     * url  地址URL
     *
     * @var string[]
@@ -141,13 +141,13 @@ class ReportBean implements ModelInterface, ArrayAccess
     * dbNames  数据库名称
     * endTime  结束时间
     * finishTime  完成时间
-    * format  格式  - pdf: PDF文件  - zip: zip文件
+    * format  格式  - pdf：PDF文件  - zip：zip文件
     * id  报表ID
     * name  报表名称
     * percentum  进度
     * startTime  开始时间
-    * templateType  报表类型 - PDF: pdf - ZIP: zip
-    * type  周期 - AUDIT_REPORT_DAY: 按天 - AUDIT_REPORT_WEEK： 按周 - AUDIT_REPORT_MONTH： 按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
+    * templateType  报表类型 - PDF：pdf - ZIP：zip
+    * type  周期 - AUDIT_REPORT_DAY：按天 - AUDIT_REPORT_WEEK：按周 - AUDIT_REPORT_MONTH：按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
     * url  地址URL
     *
     * @var string[]
@@ -173,13 +173,13 @@ class ReportBean implements ModelInterface, ArrayAccess
     * dbNames  数据库名称
     * endTime  结束时间
     * finishTime  完成时间
-    * format  格式  - pdf: PDF文件  - zip: zip文件
+    * format  格式  - pdf：PDF文件  - zip：zip文件
     * id  报表ID
     * name  报表名称
     * percentum  进度
     * startTime  开始时间
-    * templateType  报表类型 - PDF: pdf - ZIP: zip
-    * type  周期 - AUDIT_REPORT_DAY: 按天 - AUDIT_REPORT_WEEK： 按周 - AUDIT_REPORT_MONTH： 按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
+    * templateType  报表类型 - PDF：pdf - ZIP：zip
+    * type  周期 - AUDIT_REPORT_DAY：按天 - AUDIT_REPORT_WEEK：按周 - AUDIT_REPORT_MONTH：按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
     * url  地址URL
     *
     * @var string[]
@@ -397,7 +397,7 @@ class ReportBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets format
-    *  格式  - pdf: PDF文件  - zip: zip文件
+    *  格式  - pdf：PDF文件  - zip：zip文件
     *
     * @return string|null
     */
@@ -409,7 +409,7 @@ class ReportBean implements ModelInterface, ArrayAccess
     /**
     * Sets format
     *
-    * @param string|null $format 格式  - pdf: PDF文件  - zip: zip文件
+    * @param string|null $format 格式  - pdf：PDF文件  - zip：zip文件
     *
     * @return $this
     */
@@ -517,7 +517,7 @@ class ReportBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateType
-    *  报表类型 - PDF: pdf - ZIP: zip
+    *  报表类型 - PDF：pdf - ZIP：zip
     *
     * @return string|null
     */
@@ -529,7 +529,7 @@ class ReportBean implements ModelInterface, ArrayAccess
     /**
     * Sets templateType
     *
-    * @param string|null $templateType 报表类型 - PDF: pdf - ZIP: zip
+    * @param string|null $templateType 报表类型 - PDF：pdf - ZIP：zip
     *
     * @return $this
     */
@@ -541,7 +541,7 @@ class ReportBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  周期 - AUDIT_REPORT_DAY: 按天 - AUDIT_REPORT_WEEK： 按周 - AUDIT_REPORT_MONTH： 按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
+    *  周期 - AUDIT_REPORT_DAY：按天 - AUDIT_REPORT_WEEK：按周 - AUDIT_REPORT_MONTH：按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
     *
     * @return string|null
     */
@@ -553,7 +553,7 @@ class ReportBean implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 周期 - AUDIT_REPORT_DAY: 按天 - AUDIT_REPORT_WEEK： 按周 - AUDIT_REPORT_MONTH： 按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
+    * @param string|null $type 周期 - AUDIT_REPORT_DAY：按天 - AUDIT_REPORT_WEEK：按周 - AUDIT_REPORT_MONTH：按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
     *
     * @return $this
     */

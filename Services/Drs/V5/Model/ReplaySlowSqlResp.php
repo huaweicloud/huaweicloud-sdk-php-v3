@@ -20,7 +20,7 @@ class ReplaySlowSqlResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * objectType  SQL语句类型
+    * objectType  SQL语句类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
     * slowSql  SQL语句
     * oldTime  源库执行耗时
     * replayTime  目标库回放执行耗时
@@ -36,7 +36,7 @@ class ReplaySlowSqlResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * objectType  SQL语句类型
+    * objectType  SQL语句类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
     * slowSql  SQL语句
     * oldTime  源库执行耗时
     * replayTime  目标库回放执行耗时
@@ -73,7 +73,7 @@ class ReplaySlowSqlResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * objectType  SQL语句类型
+    * objectType  SQL语句类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
     * slowSql  SQL语句
     * oldTime  源库执行耗时
     * replayTime  目标库回放执行耗时
@@ -89,7 +89,7 @@ class ReplaySlowSqlResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * objectType  SQL语句类型
+    * objectType  SQL语句类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
     * slowSql  SQL语句
     * oldTime  源库执行耗时
     * replayTime  目标库回放执行耗时
@@ -105,7 +105,7 @@ class ReplaySlowSqlResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * objectType  SQL语句类型
+    * objectType  SQL语句类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
     * slowSql  SQL语句
     * oldTime  源库执行耗时
     * replayTime  目标库回放执行耗时
@@ -207,7 +207,7 @@ class ReplaySlowSqlResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectType
-    *  SQL语句类型
+    *  SQL语句类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class ReplaySlowSqlResp implements ModelInterface, ArrayAccess
     /**
     * Sets objectType
     *
-    * @param string|null $objectType SQL语句类型
+    * @param string|null $objectType SQL语句类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
     *
     * @return $this
     */

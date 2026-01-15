@@ -25,7 +25,7 @@ class Line implements ModelInterface, ArrayAccess
     * ipSegments  IP地址段。
     * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ERROR：失败
     * description  自定义线路的描述信息。
     *
     * @var string[]
@@ -47,7 +47,7 @@ class Line implements ModelInterface, ArrayAccess
     * ipSegments  IP地址段。
     * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ERROR：失败
     * description  自定义线路的描述信息。
     *
     * @var string[]
@@ -90,7 +90,7 @@ class Line implements ModelInterface, ArrayAccess
     * ipSegments  IP地址段。
     * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ERROR：失败
     * description  自定义线路的描述信息。
     *
     * @var string[]
@@ -112,7 +112,7 @@ class Line implements ModelInterface, ArrayAccess
     * ipSegments  IP地址段。
     * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ERROR：失败
     * description  自定义线路的描述信息。
     *
     * @var string[]
@@ -134,7 +134,7 @@ class Line implements ModelInterface, ArrayAccess
     * ipSegments  IP地址段。
     * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
     * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ERROR：失败
     * description  自定义线路的描述信息。
     *
     * @var string[]
@@ -360,7 +360,7 @@ class Line implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源状态。
+    *  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ERROR：失败
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class Line implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源状态。
+    * @param string|null $status **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ERROR：失败
     *
     * @return $this
     */

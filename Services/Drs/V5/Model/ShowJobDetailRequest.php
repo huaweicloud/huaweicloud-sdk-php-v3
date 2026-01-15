@@ -33,6 +33,7 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
     * sourceDbName  数据对比源库名称。
     * targetDbName  数据对比目标库名称。
     * compareDetailType  对比结果类型。取值： - compare：对比完成。 - uncompare：无法对比。
+    * logLevel  查询日志的级别。取值： - Info：提示级别。 - Warn：警告级别。 - Error：错误级别。
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
             'compareTaskId' => 'string',
             'sourceDbName' => 'string',
             'targetDbName' => 'string',
-            'compareDetailType' => 'string'
+            'compareDetailType' => 'string',
+            'logLevel' => 'string'
     ];
 
     /**
@@ -67,6 +69,7 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
     * sourceDbName  数据对比源库名称。
     * targetDbName  数据对比目标库名称。
     * compareDetailType  对比结果类型。取值： - compare：对比完成。 - uncompare：无法对比。
+    * logLevel  查询日志的级别。取值： - Info：提示级别。 - Warn：警告级别。 - Error：错误级别。
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
         'compareTaskId' => null,
         'sourceDbName' => null,
         'targetDbName' => null,
-        'compareDetailType' => null
+        'compareDetailType' => null,
+        'logLevel' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
     * sourceDbName  数据对比源库名称。
     * targetDbName  数据对比目标库名称。
     * compareDetailType  对比结果类型。取值： - compare：对比完成。 - uncompare：无法对比。
+    * logLevel  查询日志的级别。取值： - Info：提示级别。 - Warn：警告级别。 - Error：错误级别。
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
             'compareTaskId' => 'compare_task_id',
             'sourceDbName' => 'source_db_name',
             'targetDbName' => 'target_db_name',
-            'compareDetailType' => 'compare_detail_type'
+            'compareDetailType' => 'compare_detail_type',
+            'logLevel' => 'log_level'
     ];
 
     /**
@@ -156,6 +162,7 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
     * sourceDbName  数据对比源库名称。
     * targetDbName  数据对比目标库名称。
     * compareDetailType  对比结果类型。取值： - compare：对比完成。 - uncompare：无法对比。
+    * logLevel  查询日志的级别。取值： - Info：提示级别。 - Warn：警告级别。 - Error：错误级别。
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
             'compareTaskId' => 'setCompareTaskId',
             'sourceDbName' => 'setSourceDbName',
             'targetDbName' => 'setTargetDbName',
-            'compareDetailType' => 'setCompareDetailType'
+            'compareDetailType' => 'setCompareDetailType',
+            'logLevel' => 'setLogLevel'
     ];
 
     /**
@@ -190,6 +198,7 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
     * sourceDbName  数据对比源库名称。
     * targetDbName  数据对比目标库名称。
     * compareDetailType  对比结果类型。取值： - compare：对比完成。 - uncompare：无法对比。
+    * logLevel  查询日志的级别。取值： - Info：提示级别。 - Warn：警告级别。 - Error：错误级别。
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
             'compareTaskId' => 'getCompareTaskId',
             'sourceDbName' => 'getSourceDbName',
             'targetDbName' => 'getTargetDbName',
-            'compareDetailType' => 'getCompareDetailType'
+            'compareDetailType' => 'getCompareDetailType',
+            'logLevel' => 'getLogLevel'
     ];
 
     /**
@@ -406,6 +416,7 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
         $this->container['sourceDbName'] = isset($data['sourceDbName']) ? $data['sourceDbName'] : null;
         $this->container['targetDbName'] = isset($data['targetDbName']) ? $data['targetDbName'] : null;
         $this->container['compareDetailType'] = isset($data['compareDetailType']) ? $data['compareDetailType'] : null;
+        $this->container['logLevel'] = isset($data['logLevel']) ? $data['logLevel'] : null;
     }
 
     /**
@@ -793,6 +804,30 @@ class ShowJobDetailRequest implements ModelInterface, ArrayAccess
     public function setCompareDetailType($compareDetailType)
     {
         $this->container['compareDetailType'] = $compareDetailType;
+        return $this;
+    }
+
+    /**
+    * Gets logLevel
+    *  查询日志的级别。取值： - Info：提示级别。 - Warn：警告级别。 - Error：错误级别。
+    *
+    * @return string|null
+    */
+    public function getLogLevel()
+    {
+        return $this->container['logLevel'];
+    }
+
+    /**
+    * Sets logLevel
+    *
+    * @param string|null $logLevel 查询日志的级别。取值： - Info：提示级别。 - Warn：警告级别。 - Error：错误级别。
+    *
+    * @return $this
+    */
+    public function setLogLevel($logLevel)
+    {
+        $this->container['logLevel'] = $logLevel;
         return $this;
     }
 

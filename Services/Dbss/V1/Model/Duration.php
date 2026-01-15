@@ -22,7 +22,7 @@ class Duration implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * endTime  结束时间
     * startTime  开始时间
-    * timeRange  时间范围 - HALF_HOUR: 半小时 - HOUR: 1小时 - THREE_HOUR: 3小时 - TWELVE_HOUR: 12小时 - DAY: 1天 - WEEK: 1周 - MONTH: 1个月
+    * timeRange  时间范围 - HALF_HOUR：半小时 - HOUR：1小时 - THREE_HOUR：3小时 - TWELVE_HOUR：12小时 - DAY：1天 - WEEK：1周 - MONTH：1个月
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class Duration implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * endTime  结束时间
     * startTime  开始时间
-    * timeRange  时间范围 - HALF_HOUR: 半小时 - HOUR: 1小时 - THREE_HOUR: 3小时 - TWELVE_HOUR: 12小时 - DAY: 1天 - WEEK: 1周 - MONTH: 1个月
+    * timeRange  时间范围 - HALF_HOUR：半小时 - HOUR：1小时 - THREE_HOUR：3小时 - TWELVE_HOUR：12小时 - DAY：1天 - WEEK：1周 - MONTH：1个月
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class Duration implements ModelInterface, ArrayAccess
     * and the value is the original name
     * endTime  结束时间
     * startTime  开始时间
-    * timeRange  时间范围 - HALF_HOUR: 半小时 - HOUR: 1小时 - THREE_HOUR: 3小时 - TWELVE_HOUR: 12小时 - DAY: 1天 - WEEK: 1周 - MONTH: 1个月
+    * timeRange  时间范围 - HALF_HOUR：半小时 - HOUR：1小时 - THREE_HOUR：3小时 - TWELVE_HOUR：12小时 - DAY：1天 - WEEK：1周 - MONTH：1个月
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class Duration implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * endTime  结束时间
     * startTime  开始时间
-    * timeRange  时间范围 - HALF_HOUR: 半小时 - HOUR: 1小时 - THREE_HOUR: 3小时 - TWELVE_HOUR: 12小时 - DAY: 1天 - WEEK: 1周 - MONTH: 1个月
+    * timeRange  时间范围 - HALF_HOUR：半小时 - HOUR：1小时 - THREE_HOUR：3小时 - TWELVE_HOUR：12小时 - DAY：1天 - WEEK：1周 - MONTH：1个月
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class Duration implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * endTime  结束时间
     * startTime  开始时间
-    * timeRange  时间范围 - HALF_HOUR: 半小时 - HOUR: 1小时 - THREE_HOUR: 3小时 - TWELVE_HOUR: 12小时 - DAY: 1天 - WEEK: 1周 - MONTH: 1个月
+    * timeRange  时间范围 - HALF_HOUR：半小时 - HOUR：1小时 - THREE_HOUR：3小时 - TWELVE_HOUR：12小时 - DAY：1天 - WEEK：1周 - MONTH：1个月
     *
     * @var string[]
     */
@@ -244,7 +244,7 @@ class Duration implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeRange
-    *  时间范围 - HALF_HOUR: 半小时 - HOUR: 1小时 - THREE_HOUR: 3小时 - TWELVE_HOUR: 12小时 - DAY: 1天 - WEEK: 1周 - MONTH: 1个月
+    *  时间范围 - HALF_HOUR：半小时 - HOUR：1小时 - THREE_HOUR：3小时 - TWELVE_HOUR：12小时 - DAY：1天 - WEEK：1周 - MONTH：1个月
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class Duration implements ModelInterface, ArrayAccess
     /**
     * Sets timeRange
     *
-    * @param string|null $timeRange 时间范围 - HALF_HOUR: 半小时 - HOUR: 1小时 - THREE_HOUR: 3小时 - TWELVE_HOUR: 12小时 - DAY: 1天 - WEEK: 1周 - MONTH: 1个月
+    * @param string|null $timeRange 时间范围 - HALF_HOUR：半小时 - HOUR：1小时 - THREE_HOUR：3小时 - TWELVE_HOUR：12小时 - DAY：1天 - WEEK：1周 - MONTH：1个月
     *
     * @return $this
     */

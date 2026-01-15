@@ -22,6 +22,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  **参数解释**： 节点名称 **约束限制**： - 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位，且不能以中划线(-)结尾。 - 若name未指定或指定为空字符串，则按照默认规则生成节点名称。默认规则为：“集群名称-随机字符串”，若集群名称过长，则只取前36个字符。 - 若节点数量(count)大于1时，则按照默认规则会在用户输入的节点名称末尾添加随机字符串。默认规则为：“用户输入名称-随机字符串”，若用户输入的节点名称长度范围超过50位时，系统截取前50位，并在末尾添加随机字符串。  **取值范围**： 不涉及 **默认取值**： 不涉及
     * uid  **参数解释**： 节点ID，资源唯一标识。 **约束限制**： 创建成功后自动生成，填写无效 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * labels  **参数解释**： CCE自有节点标签，非Kubernetes原生labels。 > 标签可用于选择对象并查找满足某些条件的对象集合，格式为key/value键值对。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及  示例：  ``` \"labels\": {   \"key\" : \"value\" } ```
     * annotations  **参数解释**： CCE自有节点注解，非Kubernetes原生annotations，格式为key/value键值对。 > Annotations不用于标识和选择对象。Annotations中的元数据可以是small或large，structured或unstructured，并且可以包括标签不允许使用的字符。  **约束限制**： 仅用于查询，不支持请求时传入，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及  示例： ``` \"annotations\": {   \"key1\" : \"value1\",   \"key2\" : \"value2\" } ```
     * creationTimestamp  **参数解释**： 节点创建时间。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * updateTimestamp  **参数解释**： 节点更新时间。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
@@ -32,6 +33,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'name' => 'string',
             'uid' => 'string',
+            'labels' => 'map[string,string]',
             'annotations' => 'map[string,string]',
             'creationTimestamp' => 'string',
             'updateTimestamp' => 'string',
@@ -42,6 +44,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  **参数解释**： 节点名称 **约束限制**： - 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位，且不能以中划线(-)结尾。 - 若name未指定或指定为空字符串，则按照默认规则生成节点名称。默认规则为：“集群名称-随机字符串”，若集群名称过长，则只取前36个字符。 - 若节点数量(count)大于1时，则按照默认规则会在用户输入的节点名称末尾添加随机字符串。默认规则为：“用户输入名称-随机字符串”，若用户输入的节点名称长度范围超过50位时，系统截取前50位，并在末尾添加随机字符串。  **取值范围**： 不涉及 **默认取值**： 不涉及
     * uid  **参数解释**： 节点ID，资源唯一标识。 **约束限制**： 创建成功后自动生成，填写无效 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * labels  **参数解释**： CCE自有节点标签，非Kubernetes原生labels。 > 标签可用于选择对象并查找满足某些条件的对象集合，格式为key/value键值对。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及  示例：  ``` \"labels\": {   \"key\" : \"value\" } ```
     * annotations  **参数解释**： CCE自有节点注解，非Kubernetes原生annotations，格式为key/value键值对。 > Annotations不用于标识和选择对象。Annotations中的元数据可以是small或large，structured或unstructured，并且可以包括标签不允许使用的字符。  **约束限制**： 仅用于查询，不支持请求时传入，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及  示例： ``` \"annotations\": {   \"key1\" : \"value1\",   \"key2\" : \"value2\" } ```
     * creationTimestamp  **参数解释**： 节点创建时间。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * updateTimestamp  **参数解释**： 节点更新时间。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
@@ -52,6 +55,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'name' => null,
         'uid' => null,
+        'labels' => null,
         'annotations' => null,
         'creationTimestamp' => null,
         'updateTimestamp' => null,
@@ -83,6 +87,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  **参数解释**： 节点名称 **约束限制**： - 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位，且不能以中划线(-)结尾。 - 若name未指定或指定为空字符串，则按照默认规则生成节点名称。默认规则为：“集群名称-随机字符串”，若集群名称过长，则只取前36个字符。 - 若节点数量(count)大于1时，则按照默认规则会在用户输入的节点名称末尾添加随机字符串。默认规则为：“用户输入名称-随机字符串”，若用户输入的节点名称长度范围超过50位时，系统截取前50位，并在末尾添加随机字符串。  **取值范围**： 不涉及 **默认取值**： 不涉及
     * uid  **参数解释**： 节点ID，资源唯一标识。 **约束限制**： 创建成功后自动生成，填写无效 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * labels  **参数解释**： CCE自有节点标签，非Kubernetes原生labels。 > 标签可用于选择对象并查找满足某些条件的对象集合，格式为key/value键值对。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及  示例：  ``` \"labels\": {   \"key\" : \"value\" } ```
     * annotations  **参数解释**： CCE自有节点注解，非Kubernetes原生annotations，格式为key/value键值对。 > Annotations不用于标识和选择对象。Annotations中的元数据可以是small或large，structured或unstructured，并且可以包括标签不允许使用的字符。  **约束限制**： 仅用于查询，不支持请求时传入，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及  示例： ``` \"annotations\": {   \"key1\" : \"value1\",   \"key2\" : \"value2\" } ```
     * creationTimestamp  **参数解释**： 节点创建时间。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * updateTimestamp  **参数解释**： 节点更新时间。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
@@ -93,6 +98,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'name' => 'name',
             'uid' => 'uid',
+            'labels' => 'labels',
             'annotations' => 'annotations',
             'creationTimestamp' => 'creationTimestamp',
             'updateTimestamp' => 'updateTimestamp',
@@ -103,6 +109,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  **参数解释**： 节点名称 **约束限制**： - 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位，且不能以中划线(-)结尾。 - 若name未指定或指定为空字符串，则按照默认规则生成节点名称。默认规则为：“集群名称-随机字符串”，若集群名称过长，则只取前36个字符。 - 若节点数量(count)大于1时，则按照默认规则会在用户输入的节点名称末尾添加随机字符串。默认规则为：“用户输入名称-随机字符串”，若用户输入的节点名称长度范围超过50位时，系统截取前50位，并在末尾添加随机字符串。  **取值范围**： 不涉及 **默认取值**： 不涉及
     * uid  **参数解释**： 节点ID，资源唯一标识。 **约束限制**： 创建成功后自动生成，填写无效 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * labels  **参数解释**： CCE自有节点标签，非Kubernetes原生labels。 > 标签可用于选择对象并查找满足某些条件的对象集合，格式为key/value键值对。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及  示例：  ``` \"labels\": {   \"key\" : \"value\" } ```
     * annotations  **参数解释**： CCE自有节点注解，非Kubernetes原生annotations，格式为key/value键值对。 > Annotations不用于标识和选择对象。Annotations中的元数据可以是small或large，structured或unstructured，并且可以包括标签不允许使用的字符。  **约束限制**： 仅用于查询，不支持请求时传入，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及  示例： ``` \"annotations\": {   \"key1\" : \"value1\",   \"key2\" : \"value2\" } ```
     * creationTimestamp  **参数解释**： 节点创建时间。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * updateTimestamp  **参数解释**： 节点更新时间。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
@@ -113,6 +120,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
     protected static $setters = [
             'name' => 'setName',
             'uid' => 'setUid',
+            'labels' => 'setLabels',
             'annotations' => 'setAnnotations',
             'creationTimestamp' => 'setCreationTimestamp',
             'updateTimestamp' => 'setUpdateTimestamp',
@@ -123,6 +131,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  **参数解释**： 节点名称 **约束限制**： - 命名规则：以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位，且不能以中划线(-)结尾。 - 若name未指定或指定为空字符串，则按照默认规则生成节点名称。默认规则为：“集群名称-随机字符串”，若集群名称过长，则只取前36个字符。 - 若节点数量(count)大于1时，则按照默认规则会在用户输入的节点名称末尾添加随机字符串。默认规则为：“用户输入名称-随机字符串”，若用户输入的节点名称长度范围超过50位时，系统截取前50位，并在末尾添加随机字符串。  **取值范围**： 不涉及 **默认取值**： 不涉及
     * uid  **参数解释**： 节点ID，资源唯一标识。 **约束限制**： 创建成功后自动生成，填写无效 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * labels  **参数解释**： CCE自有节点标签，非Kubernetes原生labels。 > 标签可用于选择对象并查找满足某些条件的对象集合，格式为key/value键值对。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及  示例：  ``` \"labels\": {   \"key\" : \"value\" } ```
     * annotations  **参数解释**： CCE自有节点注解，非Kubernetes原生annotations，格式为key/value键值对。 > Annotations不用于标识和选择对象。Annotations中的元数据可以是small或large，structured或unstructured，并且可以包括标签不允许使用的字符。  **约束限制**： 仅用于查询，不支持请求时传入，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及  示例： ``` \"annotations\": {   \"key1\" : \"value1\",   \"key2\" : \"value2\" } ```
     * creationTimestamp  **参数解释**： 节点创建时间。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * updateTimestamp  **参数解释**： 节点更新时间。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
@@ -133,6 +142,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
     protected static $getters = [
             'name' => 'getName',
             'uid' => 'getUid',
+            'labels' => 'getLabels',
             'annotations' => 'getAnnotations',
             'creationTimestamp' => 'getCreationTimestamp',
             'updateTimestamp' => 'getUpdateTimestamp',
@@ -199,6 +209,7 @@ class NodeMetadata implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['uid'] = isset($data['uid']) ? $data['uid'] : null;
+        $this->container['labels'] = isset($data['labels']) ? $data['labels'] : null;
         $this->container['annotations'] = isset($data['annotations']) ? $data['annotations'] : null;
         $this->container['creationTimestamp'] = isset($data['creationTimestamp']) ? $data['creationTimestamp'] : null;
         $this->container['updateTimestamp'] = isset($data['updateTimestamp']) ? $data['updateTimestamp'] : null;
@@ -281,6 +292,30 @@ class NodeMetadata implements ModelInterface, ArrayAccess
     public function setUid($uid)
     {
         $this->container['uid'] = $uid;
+        return $this;
+    }
+
+    /**
+    * Gets labels
+    *  **参数解释**： CCE自有节点标签，非Kubernetes原生labels。 > 标签可用于选择对象并查找满足某些条件的对象集合，格式为key/value键值对。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及  示例：  ``` \"labels\": {   \"key\" : \"value\" } ```
+    *
+    * @return map[string,string]|null
+    */
+    public function getLabels()
+    {
+        return $this->container['labels'];
+    }
+
+    /**
+    * Sets labels
+    *
+    * @param map[string,string]|null $labels **参数解释**： CCE自有节点标签，非Kubernetes原生labels。 > 标签可用于选择对象并查找满足某些条件的对象集合，格式为key/value键值对。  **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及  示例：  ``` \"labels\": {   \"key\" : \"value\" } ```
+    *
+    * @return $this
+    */
+    public function setLabels($labels)
+    {
+        $this->container['labels'] = $labels;
         return $this;
     }
 

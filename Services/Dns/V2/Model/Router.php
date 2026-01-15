@@ -22,7 +22,7 @@ class Router implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * routerId  关联VPC的ID。
     * routerRegion  关联VPC所在的region。
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class Router implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * routerId  关联VPC的ID。
     * routerRegion  关联VPC所在的region。
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class Router implements ModelInterface, ArrayAccess
     * and the value is the original name
     * routerId  关联VPC的ID。
     * routerRegion  关联VPC所在的region。
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class Router implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * routerId  关联VPC的ID。
     * routerRegion  关联VPC所在的region。
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class Router implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * routerId  关联VPC的ID。
     * routerRegion  关联VPC所在的region。
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     *
     * @var string[]
     */
@@ -247,7 +247,7 @@ class Router implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源状态。
+    *  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     *
     * @return string|null
     */
@@ -259,7 +259,7 @@ class Router implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源状态。
+    * @param string|null $status **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     *
     * @return $this
     */

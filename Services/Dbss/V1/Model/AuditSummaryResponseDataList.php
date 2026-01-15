@@ -21,7 +21,7 @@ class AuditSummaryResponseDataList implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  ID
-    * status  状态 - 1: success - 2: failure
+    * status  状态 - 1：success - 2：failure
     * projectId  项目ID
     * instanceId  实例ID
     * instanceName  实例名称
@@ -57,7 +57,7 @@ class AuditSummaryResponseDataList implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  ID
-    * status  状态 - 1: success - 2: failure
+    * status  状态 - 1：success - 2：failure
     * projectId  项目ID
     * instanceId  实例ID
     * instanceName  实例名称
@@ -114,7 +114,7 @@ class AuditSummaryResponseDataList implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  ID
-    * status  状态 - 1: success - 2: failure
+    * status  状态 - 1：success - 2：failure
     * projectId  项目ID
     * instanceId  实例ID
     * instanceName  实例名称
@@ -150,7 +150,7 @@ class AuditSummaryResponseDataList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  ID
-    * status  状态 - 1: success - 2: failure
+    * status  状态 - 1：success - 2：failure
     * projectId  项目ID
     * instanceId  实例ID
     * instanceName  实例名称
@@ -186,7 +186,7 @@ class AuditSummaryResponseDataList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  ID
-    * status  状态 - 1: success - 2: failure
+    * status  状态 - 1：success - 2：failure
     * projectId  项目ID
     * instanceId  实例ID
     * instanceName  实例名称
@@ -341,7 +341,7 @@ class AuditSummaryResponseDataList implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态 - 1: success - 2: failure
+    *  状态 - 1：success - 2：failure
     *
     * @return string|null
     */
@@ -353,7 +353,7 @@ class AuditSummaryResponseDataList implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态 - 1: success - 2: failure
+    * @param string|null $status 状态 - 1：success - 2：failure
     *
     * @return $this
     */

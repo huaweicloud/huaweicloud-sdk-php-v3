@@ -20,8 +20,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  标签键。
-    * values  标签值。
+    * key  标签键。例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
+    * values  标签值。例如键值对{“aaa”:[\"bbb\"]}的values为[\"bbb\"]
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  标签键。
-    * values  标签值。
+    * key  标签键。例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
+    * values  标签值。例如键值对{“aaa”:[\"bbb\"]}的values为[\"bbb\"]
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  标签键。
-    * values  标签值。
+    * key  标签键。例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
+    * values  标签值。例如键值对{“aaa”:[\"bbb\"]}的values为[\"bbb\"]
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  标签键。
-    * values  标签值。
+    * key  标签键。例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
+    * values  标签值。例如键值对{“aaa”:[\"bbb\"]}的values为[\"bbb\"]
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  标签键。
-    * values  标签值。
+    * key  标签键。例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
+    * values  标签值。例如键值对{“aaa”:[\"bbb\"]}的values为[\"bbb\"]
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  标签键。
+    *  标签键。例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 标签键。
+    * @param string $key 标签键。例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  标签值。
+    *  标签值。例如键值对{“aaa”:[\"bbb\"]}的values为[\"bbb\"]
     *
     * @return string[]
     */
@@ -227,7 +227,7 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param string[] $values 标签值。
+    * @param string[] $values 标签值。例如键值对{“aaa”:[\"bbb\"]}的values为[\"bbb\"]
     *
     * @return $this
     */

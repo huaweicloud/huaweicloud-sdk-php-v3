@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Css\V1\Model;
+namespace HuaweiCloud\SDK\Drs\V5\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class AIOpsRiskInfo implements ModelInterface, ArrayAccess
+class ShowSubscriptionListsRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,38 +16,38 @@ class AIOpsRiskInfo implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'AIOpsRiskInfo';
+    protected static $openAPIModelName = 'ShowSubscriptionListsRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * riskType  检测项介绍。
-    * level  风险等级。 - high - medium - suggestion
-    * desc  风险描述。
-    * suggestion  风险建议。
+    * xLanguage  请求语言类型。
+    * limit  查询返回记录的数量限制，默认为10。
+    * offset  偏移量，表示查询该偏移量后面的记录，默认为0。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'riskType' => 'string',
-            'level' => 'string',
-            'desc' => 'string',
-            'suggestion' => 'string'
+            'xLanguage' => 'string',
+            'limit' => 'int',
+            'offset' => 'int',
+            'body' => '\HuaweiCloud\SDK\Drs\V5\Model\QuerySubscriptionsReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * riskType  检测项介绍。
-    * level  风险等级。 - high - medium - suggestion
-    * desc  风险描述。
-    * suggestion  风险建议。
+    * xLanguage  请求语言类型。
+    * limit  查询返回记录的数量限制，默认为10。
+    * offset  偏移量，表示查询该偏移量后面的记录，默认为0。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'riskType' => null,
-        'level' => null,
-        'desc' => null,
-        'suggestion' => null
+        'xLanguage' => null,
+        'limit' => 'int32',
+        'offset' => 'int32',
+        'body' => null
     ];
 
     /**
@@ -73,50 +73,50 @@ class AIOpsRiskInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * riskType  检测项介绍。
-    * level  风险等级。 - high - medium - suggestion
-    * desc  风险描述。
-    * suggestion  风险建议。
+    * xLanguage  请求语言类型。
+    * limit  查询返回记录的数量限制，默认为10。
+    * offset  偏移量，表示查询该偏移量后面的记录，默认为0。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'riskType' => 'riskType',
-            'level' => 'level',
-            'desc' => 'desc',
-            'suggestion' => 'suggestion'
+            'xLanguage' => 'X-Language',
+            'limit' => 'limit',
+            'offset' => 'offset',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * riskType  检测项介绍。
-    * level  风险等级。 - high - medium - suggestion
-    * desc  风险描述。
-    * suggestion  风险建议。
+    * xLanguage  请求语言类型。
+    * limit  查询返回记录的数量限制，默认为10。
+    * offset  偏移量，表示查询该偏移量后面的记录，默认为0。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'riskType' => 'setRiskType',
-            'level' => 'setLevel',
-            'desc' => 'setDesc',
-            'suggestion' => 'setSuggestion'
+            'xLanguage' => 'setXLanguage',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * riskType  检测项介绍。
-    * level  风险等级。 - high - medium - suggestion
-    * desc  风险描述。
-    * suggestion  风险建议。
+    * xLanguage  请求语言类型。
+    * limit  查询返回记录的数量限制，默认为10。
+    * offset  偏移量，表示查询该偏移量后面的记录，默认为0。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'riskType' => 'getRiskType',
-            'level' => 'getLevel',
-            'desc' => 'getDesc',
-            'suggestion' => 'getSuggestion'
+            'xLanguage' => 'getXLanguage',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset',
+            'body' => 'getBody'
     ];
 
     /**
@@ -159,7 +159,22 @@ class AIOpsRiskInfo implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const X_LANGUAGE_EN_US = 'en-us';
+    const X_LANGUAGE_ZH_CN = 'zh-cn';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getXLanguageAllowableValues()
+    {
+        return [
+            self::X_LANGUAGE_EN_US,
+            self::X_LANGUAGE_ZH_CN,
+        ];
+    }
 
 
     /**
@@ -177,10 +192,10 @@ class AIOpsRiskInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['riskType'] = isset($data['riskType']) ? $data['riskType'] : null;
-        $this->container['level'] = isset($data['level']) ? $data['level'] : null;
-        $this->container['desc'] = isset($data['desc']) ? $data['desc'] : null;
-        $this->container['suggestion'] = isset($data['suggestion']) ? $data['suggestion'] : null;
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -191,6 +206,14 @@ class AIOpsRiskInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getXLanguageAllowableValues();
+                if (!is_null($this->container['xLanguage']) && !in_array($this->container['xLanguage'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'xLanguage', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -206,98 +229,98 @@ class AIOpsRiskInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets riskType
-    *  检测项介绍。
+    * Gets xLanguage
+    *  请求语言类型。
     *
     * @return string|null
     */
-    public function getRiskType()
+    public function getXLanguage()
     {
-        return $this->container['riskType'];
+        return $this->container['xLanguage'];
     }
 
     /**
-    * Sets riskType
+    * Sets xLanguage
     *
-    * @param string|null $riskType 检测项介绍。
+    * @param string|null $xLanguage 请求语言类型。
     *
     * @return $this
     */
-    public function setRiskType($riskType)
+    public function setXLanguage($xLanguage)
     {
-        $this->container['riskType'] = $riskType;
+        $this->container['xLanguage'] = $xLanguage;
         return $this;
     }
 
     /**
-    * Gets level
-    *  风险等级。 - high - medium - suggestion
+    * Gets limit
+    *  查询返回记录的数量限制，默认为10。
     *
-    * @return string|null
+    * @return int|null
     */
-    public function getLevel()
+    public function getLimit()
     {
-        return $this->container['level'];
+        return $this->container['limit'];
     }
 
     /**
-    * Sets level
+    * Sets limit
     *
-    * @param string|null $level 风险等级。 - high - medium - suggestion
+    * @param int|null $limit 查询返回记录的数量限制，默认为10。
     *
     * @return $this
     */
-    public function setLevel($level)
+    public function setLimit($limit)
     {
-        $this->container['level'] = $level;
+        $this->container['limit'] = $limit;
         return $this;
     }
 
     /**
-    * Gets desc
-    *  风险描述。
+    * Gets offset
+    *  偏移量，表示查询该偏移量后面的记录，默认为0。
     *
-    * @return string|null
+    * @return int|null
     */
-    public function getDesc()
+    public function getOffset()
     {
-        return $this->container['desc'];
+        return $this->container['offset'];
     }
 
     /**
-    * Sets desc
+    * Sets offset
     *
-    * @param string|null $desc 风险描述。
+    * @param int|null $offset 偏移量，表示查询该偏移量后面的记录，默认为0。
     *
     * @return $this
     */
-    public function setDesc($desc)
+    public function setOffset($offset)
     {
-        $this->container['desc'] = $desc;
+        $this->container['offset'] = $offset;
         return $this;
     }
 
     /**
-    * Gets suggestion
-    *  风险建议。
+    * Gets body
+    *  body
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\QuerySubscriptionsReq|null
     */
-    public function getSuggestion()
+    public function getBody()
     {
-        return $this->container['suggestion'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets suggestion
+    * Sets body
     *
-    * @param string|null $suggestion 风险建议。
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\QuerySubscriptionsReq|null $body body
     *
     * @return $this
     */
-    public function setSuggestion($suggestion)
+    public function setBody($body)
     {
-        $this->container['suggestion'] = $suggestion;
+        $this->container['body'] = $body;
         return $this;
     }
 

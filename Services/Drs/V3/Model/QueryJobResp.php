@@ -81,6 +81,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     * bindPublicIpState  是否成功绑定公网IP。
     * children  多任务时，存在子任务绑定失败时，返回子任务的信息。
     * isOpenFastClean  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
+    * jobKernelDirection  灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
     *
     * @var string[]
     */
@@ -145,7 +146,8 @@ class QueryJobResp implements ModelInterface, ArrayAccess
             'publicIpList' => '\HuaweiCloud\SDK\Drs\V3\Model\PublicIpConfig[]',
             'bindPublicIpState' => 'string',
             'children' => '\HuaweiCloud\SDK\Drs\V3\Model\FailedToBindEipChildInfo[]',
-            'isOpenFastClean' => 'bool'
+            'isOpenFastClean' => 'bool',
+            'jobKernelDirection' => 'string'
     ];
 
     /**
@@ -211,6 +213,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     * bindPublicIpState  是否成功绑定公网IP。
     * children  多任务时，存在子任务绑定失败时，返回子任务的信息。
     * isOpenFastClean  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
+    * jobKernelDirection  灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
     *
     * @var string[]
     */
@@ -275,7 +278,8 @@ class QueryJobResp implements ModelInterface, ArrayAccess
         'publicIpList' => null,
         'bindPublicIpState' => null,
         'children' => null,
-        'isOpenFastClean' => null
+        'isOpenFastClean' => null,
+        'jobKernelDirection' => null
     ];
 
     /**
@@ -362,6 +366,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     * bindPublicIpState  是否成功绑定公网IP。
     * children  多任务时，存在子任务绑定失败时，返回子任务的信息。
     * isOpenFastClean  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
+    * jobKernelDirection  灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
     *
     * @var string[]
     */
@@ -426,7 +431,8 @@ class QueryJobResp implements ModelInterface, ArrayAccess
             'publicIpList' => 'public_ip_list',
             'bindPublicIpState' => 'bind_public_ip_state',
             'children' => 'children',
-            'isOpenFastClean' => 'is_open_fast_clean'
+            'isOpenFastClean' => 'is_open_fast_clean',
+            'jobKernelDirection' => 'job_kernel_direction'
     ];
 
     /**
@@ -492,6 +498,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     * bindPublicIpState  是否成功绑定公网IP。
     * children  多任务时，存在子任务绑定失败时，返回子任务的信息。
     * isOpenFastClean  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
+    * jobKernelDirection  灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
     *
     * @var string[]
     */
@@ -556,7 +563,8 @@ class QueryJobResp implements ModelInterface, ArrayAccess
             'publicIpList' => 'setPublicIpList',
             'bindPublicIpState' => 'setBindPublicIpState',
             'children' => 'setChildren',
-            'isOpenFastClean' => 'setIsOpenFastClean'
+            'isOpenFastClean' => 'setIsOpenFastClean',
+            'jobKernelDirection' => 'setJobKernelDirection'
     ];
 
     /**
@@ -622,6 +630,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     * bindPublicIpState  是否成功绑定公网IP。
     * children  多任务时，存在子任务绑定失败时，返回子任务的信息。
     * isOpenFastClean  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
+    * jobKernelDirection  灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
     *
     * @var string[]
     */
@@ -686,7 +695,8 @@ class QueryJobResp implements ModelInterface, ArrayAccess
             'publicIpList' => 'getPublicIpList',
             'bindPublicIpState' => 'getBindPublicIpState',
             'children' => 'getChildren',
-            'isOpenFastClean' => 'getIsOpenFastClean'
+            'isOpenFastClean' => 'getIsOpenFastClean',
+            'jobKernelDirection' => 'getJobKernelDirection'
     ];
 
     /**
@@ -779,6 +789,8 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     const ORIGINAL_JOB_DIRECTION_UP = 'up';
     const ORIGINAL_JOB_DIRECTION_DOWN = 'down';
     const ORIGINAL_JOB_DIRECTION_NON_DBS = 'non-dbs';
+    const JOB_KERNEL_DIRECTION_UP = 'up';
+    const JOB_KERNEL_DIRECTION_DOWN = 'down';
     
 
     /**
@@ -919,6 +931,19 @@ class QueryJobResp implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getJobKernelDirectionAllowableValues()
+    {
+        return [
+            self::JOB_KERNEL_DIRECTION_UP,
+            self::JOB_KERNEL_DIRECTION_DOWN,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -996,6 +1021,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
         $this->container['bindPublicIpState'] = isset($data['bindPublicIpState']) ? $data['bindPublicIpState'] : null;
         $this->container['children'] = isset($data['children']) ? $data['children'] : null;
         $this->container['isOpenFastClean'] = isset($data['isOpenFastClean']) ? $data['isOpenFastClean'] : null;
+        $this->container['jobKernelDirection'] = isset($data['jobKernelDirection']) ? $data['jobKernelDirection'] : null;
     }
 
     /**
@@ -1069,6 +1095,14 @@ class QueryJobResp implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['originalJobDirection']) && !in_array($this->container['originalJobDirection'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'originalJobDirection', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getJobKernelDirectionAllowableValues();
+                if (!is_null($this->container['jobKernelDirection']) && !in_array($this->container['jobKernelDirection'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'jobKernelDirection', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -2548,6 +2582,30 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     public function setIsOpenFastClean($isOpenFastClean)
     {
         $this->container['isOpenFastClean'] = $isOpenFastClean;
+        return $this;
+    }
+
+    /**
+    * Gets jobKernelDirection
+    *  灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
+    *
+    * @return string|null
+    */
+    public function getJobKernelDirection()
+    {
+        return $this->container['jobKernelDirection'];
+    }
+
+    /**
+    * Sets jobKernelDirection
+    *
+    * @param string|null $jobKernelDirection 灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
+    *
+    * @return $this
+    */
+    public function setJobKernelDirection($jobKernelDirection)
+    {
+        $this->container['jobKernelDirection'] = $jobKernelDirection;
         return $this;
     }
 

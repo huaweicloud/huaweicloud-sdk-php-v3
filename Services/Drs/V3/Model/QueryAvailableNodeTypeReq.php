@@ -21,9 +21,9 @@ class QueryAvailableNodeTypeReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * engineType  引擎类型
-    * dbUseType  迁移场景，migration-实时迁移,sync-实时同步,cloudDataGuard-实时灾备
+    * dbUseType  迁移场景 migration实时迁移，sync实时同步，dataGuard实时灾备，subscription实时订阅，replay流量回放
     * jobDirection  迁移方向，up ：入云 ，灾备场景时对应本云为备，down：出云，灾备场景时对应本云为主，non-dbs：自建
-    * nodeType  规格类型。
+    * nodeType  规格类型。 micro：极小，small：小，medium：中，high：高，xlarge：超高，2xlarge：极高
     * multiWrite  是否是双主灾备，不填默认为false
     *
     * @var string[]
@@ -39,9 +39,9 @@ class QueryAvailableNodeTypeReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * engineType  引擎类型
-    * dbUseType  迁移场景，migration-实时迁移,sync-实时同步,cloudDataGuard-实时灾备
+    * dbUseType  迁移场景 migration实时迁移，sync实时同步，dataGuard实时灾备，subscription实时订阅，replay流量回放
     * jobDirection  迁移方向，up ：入云 ，灾备场景时对应本云为备，down：出云，灾备场景时对应本云为主，non-dbs：自建
-    * nodeType  规格类型。
+    * nodeType  规格类型。 micro：极小，small：小，medium：中，high：高，xlarge：超高，2xlarge：极高
     * multiWrite  是否是双主灾备，不填默认为false
     *
     * @var string[]
@@ -78,9 +78,9 @@ class QueryAvailableNodeTypeReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * engineType  引擎类型
-    * dbUseType  迁移场景，migration-实时迁移,sync-实时同步,cloudDataGuard-实时灾备
+    * dbUseType  迁移场景 migration实时迁移，sync实时同步，dataGuard实时灾备，subscription实时订阅，replay流量回放
     * jobDirection  迁移方向，up ：入云 ，灾备场景时对应本云为备，down：出云，灾备场景时对应本云为主，non-dbs：自建
-    * nodeType  规格类型。
+    * nodeType  规格类型。 micro：极小，small：小，medium：中，high：高，xlarge：超高，2xlarge：极高
     * multiWrite  是否是双主灾备，不填默认为false
     *
     * @var string[]
@@ -96,9 +96,9 @@ class QueryAvailableNodeTypeReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * engineType  引擎类型
-    * dbUseType  迁移场景，migration-实时迁移,sync-实时同步,cloudDataGuard-实时灾备
+    * dbUseType  迁移场景 migration实时迁移，sync实时同步，dataGuard实时灾备，subscription实时订阅，replay流量回放
     * jobDirection  迁移方向，up ：入云 ，灾备场景时对应本云为备，down：出云，灾备场景时对应本云为主，non-dbs：自建
-    * nodeType  规格类型。
+    * nodeType  规格类型。 micro：极小，small：小，medium：中，high：高，xlarge：超高，2xlarge：极高
     * multiWrite  是否是双主灾备，不填默认为false
     *
     * @var string[]
@@ -114,9 +114,9 @@ class QueryAvailableNodeTypeReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * engineType  引擎类型
-    * dbUseType  迁移场景，migration-实时迁移,sync-实时同步,cloudDataGuard-实时灾备
+    * dbUseType  迁移场景 migration实时迁移，sync实时同步，dataGuard实时灾备，subscription实时订阅，replay流量回放
     * jobDirection  迁移方向，up ：入云 ，灾备场景时对应本云为备，down：出云，灾备场景时对应本云为主，non-dbs：自建
-    * nodeType  规格类型。
+    * nodeType  规格类型。 micro：极小，small：小，medium：中，high：高，xlarge：超高，2xlarge：极高
     * multiWrite  是否是双主灾备，不填默认为false
     *
     * @var string[]
@@ -304,7 +304,7 @@ class QueryAvailableNodeTypeReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbUseType
-    *  迁移场景，migration-实时迁移,sync-实时同步,cloudDataGuard-实时灾备
+    *  迁移场景 migration实时迁移，sync实时同步，dataGuard实时灾备，subscription实时订阅，replay流量回放
     *
     * @return string
     */
@@ -316,7 +316,7 @@ class QueryAvailableNodeTypeReq implements ModelInterface, ArrayAccess
     /**
     * Sets dbUseType
     *
-    * @param string $dbUseType 迁移场景，migration-实时迁移,sync-实时同步,cloudDataGuard-实时灾备
+    * @param string $dbUseType 迁移场景 migration实时迁移，sync实时同步，dataGuard实时灾备，subscription实时订阅，replay流量回放
     *
     * @return $this
     */
@@ -352,7 +352,7 @@ class QueryAvailableNodeTypeReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeType
-    *  规格类型。
+    *  规格类型。 micro：极小，small：小，medium：中，high：高，xlarge：超高，2xlarge：极高
     *
     * @return string
     */
@@ -364,7 +364,7 @@ class QueryAvailableNodeTypeReq implements ModelInterface, ArrayAccess
     /**
     * Sets nodeType
     *
-    * @param string $nodeType 规格类型。
+    * @param string $nodeType 规格类型。 micro：极小，small：小，medium：中，high：高，xlarge：超高，2xlarge：极高
     *
     * @return $this
     */

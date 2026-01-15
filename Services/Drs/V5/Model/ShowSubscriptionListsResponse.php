@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dbss\V1\Model;
+namespace HuaweiCloud\SDK\Drs\V5\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class AuditInsanceRiskCount implements ModelInterface, ArrayAccess
+class ShowSubscriptionListsResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,46 +17,30 @@ class AuditInsanceRiskCount implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'AuditInsanceRiskCount';
+    protected static $openAPIModelName = 'ShowSubscriptionListsResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  风险数量
-    * dbId  数据库ID
-    * dbIp  数据库IP
-    * dbName  数据库名称
-    * instanceId  实例ID
-    * instanceName  实例名称
+    * totalCount  列表中的项目总数，与分页无关。
+    * jobs  jobs
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'count' => 'int',
-            'dbId' => 'string',
-            'dbIp' => 'string',
-            'dbName' => 'string',
-            'instanceId' => 'string',
-            'instanceName' => 'string'
+            'totalCount' => 'int',
+            'jobs' => '\HuaweiCloud\SDK\Drs\V5\Model\SubscriptionListResp'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  风险数量
-    * dbId  数据库ID
-    * dbIp  数据库IP
-    * dbName  数据库名称
-    * instanceId  实例ID
-    * instanceName  实例名称
+    * totalCount  列表中的项目总数，与分页无关。
+    * jobs  jobs
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'count' => 'int64',
-        'dbId' => null,
-        'dbIp' => null,
-        'dbName' => null,
-        'instanceId' => null,
-        'instanceName' => null
+        'totalCount' => 'int32',
+        'jobs' => null
     ];
 
     /**
@@ -81,62 +66,38 @@ class AuditInsanceRiskCount implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  风险数量
-    * dbId  数据库ID
-    * dbIp  数据库IP
-    * dbName  数据库名称
-    * instanceId  实例ID
-    * instanceName  实例名称
+    * totalCount  列表中的项目总数，与分页无关。
+    * jobs  jobs
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'count' => 'count',
-            'dbId' => 'db_id',
-            'dbIp' => 'db_ip',
-            'dbName' => 'db_name',
-            'instanceId' => 'instance_id',
-            'instanceName' => 'instance_name'
+            'totalCount' => 'total_count',
+            'jobs' => 'jobs'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  风险数量
-    * dbId  数据库ID
-    * dbIp  数据库IP
-    * dbName  数据库名称
-    * instanceId  实例ID
-    * instanceName  实例名称
+    * totalCount  列表中的项目总数，与分页无关。
+    * jobs  jobs
     *
     * @var string[]
     */
     protected static $setters = [
-            'count' => 'setCount',
-            'dbId' => 'setDbId',
-            'dbIp' => 'setDbIp',
-            'dbName' => 'setDbName',
-            'instanceId' => 'setInstanceId',
-            'instanceName' => 'setInstanceName'
+            'totalCount' => 'setTotalCount',
+            'jobs' => 'setJobs'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  风险数量
-    * dbId  数据库ID
-    * dbIp  数据库IP
-    * dbName  数据库名称
-    * instanceId  实例ID
-    * instanceName  实例名称
+    * totalCount  列表中的项目总数，与分页无关。
+    * jobs  jobs
     *
     * @var string[]
     */
     protected static $getters = [
-            'count' => 'getCount',
-            'dbId' => 'getDbId',
-            'dbIp' => 'getDbIp',
-            'dbName' => 'getDbName',
-            'instanceId' => 'getInstanceId',
-            'instanceName' => 'getInstanceName'
+            'totalCount' => 'getTotalCount',
+            'jobs' => 'getJobs'
     ];
 
     /**
@@ -197,12 +158,8 @@ class AuditInsanceRiskCount implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
-        $this->container['dbId'] = isset($data['dbId']) ? $data['dbId'] : null;
-        $this->container['dbIp'] = isset($data['dbIp']) ? $data['dbIp'] : null;
-        $this->container['dbName'] = isset($data['dbName']) ? $data['dbName'] : null;
-        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['instanceName'] = isset($data['instanceName']) ? $data['instanceName'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
+        $this->container['jobs'] = isset($data['jobs']) ? $data['jobs'] : null;
     }
 
     /**
@@ -213,6 +170,12 @@ class AuditInsanceRiskCount implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['totalCount'] === null) {
+            $invalidProperties[] = "'totalCount' can't be null";
+        }
+        if ($this->container['jobs'] === null) {
+            $invalidProperties[] = "'jobs' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -228,146 +191,50 @@ class AuditInsanceRiskCount implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets count
-    *  风险数量
+    * Gets totalCount
+    *  列表中的项目总数，与分页无关。
     *
-    * @return int|null
+    * @return int
     */
-    public function getCount()
+    public function getTotalCount()
     {
-        return $this->container['count'];
+        return $this->container['totalCount'];
     }
 
     /**
-    * Sets count
+    * Sets totalCount
     *
-    * @param int|null $count 风险数量
+    * @param int $totalCount 列表中的项目总数，与分页无关。
     *
     * @return $this
     */
-    public function setCount($count)
+    public function setTotalCount($totalCount)
     {
-        $this->container['count'] = $count;
+        $this->container['totalCount'] = $totalCount;
         return $this;
     }
 
     /**
-    * Gets dbId
-    *  数据库ID
+    * Gets jobs
+    *  jobs
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\SubscriptionListResp
     */
-    public function getDbId()
+    public function getJobs()
     {
-        return $this->container['dbId'];
+        return $this->container['jobs'];
     }
 
     /**
-    * Sets dbId
+    * Sets jobs
     *
-    * @param string|null $dbId 数据库ID
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\SubscriptionListResp $jobs jobs
     *
     * @return $this
     */
-    public function setDbId($dbId)
+    public function setJobs($jobs)
     {
-        $this->container['dbId'] = $dbId;
-        return $this;
-    }
-
-    /**
-    * Gets dbIp
-    *  数据库IP
-    *
-    * @return string|null
-    */
-    public function getDbIp()
-    {
-        return $this->container['dbIp'];
-    }
-
-    /**
-    * Sets dbIp
-    *
-    * @param string|null $dbIp 数据库IP
-    *
-    * @return $this
-    */
-    public function setDbIp($dbIp)
-    {
-        $this->container['dbIp'] = $dbIp;
-        return $this;
-    }
-
-    /**
-    * Gets dbName
-    *  数据库名称
-    *
-    * @return string|null
-    */
-    public function getDbName()
-    {
-        return $this->container['dbName'];
-    }
-
-    /**
-    * Sets dbName
-    *
-    * @param string|null $dbName 数据库名称
-    *
-    * @return $this
-    */
-    public function setDbName($dbName)
-    {
-        $this->container['dbName'] = $dbName;
-        return $this;
-    }
-
-    /**
-    * Gets instanceId
-    *  实例ID
-    *
-    * @return string|null
-    */
-    public function getInstanceId()
-    {
-        return $this->container['instanceId'];
-    }
-
-    /**
-    * Sets instanceId
-    *
-    * @param string|null $instanceId 实例ID
-    *
-    * @return $this
-    */
-    public function setInstanceId($instanceId)
-    {
-        $this->container['instanceId'] = $instanceId;
-        return $this;
-    }
-
-    /**
-    * Gets instanceName
-    *  实例名称
-    *
-    * @return string|null
-    */
-    public function getInstanceName()
-    {
-        return $this->container['instanceName'];
-    }
-
-    /**
-    * Sets instanceName
-    *
-    * @param string|null $instanceName 实例名称
-    *
-    * @return $this
-    */
-    public function setInstanceName($instanceName)
-    {
-        $this->container['instanceName'] = $instanceName;
+        $this->container['jobs'] = $jobs;
         return $this;
     }
 

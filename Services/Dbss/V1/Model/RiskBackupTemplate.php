@@ -20,7 +20,7 @@ class RiskBackupTemplate implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * cycle  备份周期 - PER_DAY: 每天 - PER_WEEK: 每周 - PER_MONTH: 每月 - PER_HOUR: 每小时 - FIVE_MIN: 每5分钟
+    * cycle  备份周期 - PER_DAY：每天 - PER_WEEK：每周 - PER_MONTH：每月 - PER_HOUR：每小时 - FIVE_MIN：每5分钟
     * dbId  数据库ID
     * status  备份开关    - 0：关闭    - 1：开启
     *
@@ -34,7 +34,7 @@ class RiskBackupTemplate implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * cycle  备份周期 - PER_DAY: 每天 - PER_WEEK: 每周 - PER_MONTH: 每月 - PER_HOUR: 每小时 - FIVE_MIN: 每5分钟
+    * cycle  备份周期 - PER_DAY：每天 - PER_WEEK：每周 - PER_MONTH：每月 - PER_HOUR：每小时 - FIVE_MIN：每5分钟
     * dbId  数据库ID
     * status  备份开关    - 0：关闭    - 1：开启
     *
@@ -69,7 +69,7 @@ class RiskBackupTemplate implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * cycle  备份周期 - PER_DAY: 每天 - PER_WEEK: 每周 - PER_MONTH: 每月 - PER_HOUR: 每小时 - FIVE_MIN: 每5分钟
+    * cycle  备份周期 - PER_DAY：每天 - PER_WEEK：每周 - PER_MONTH：每月 - PER_HOUR：每小时 - FIVE_MIN：每5分钟
     * dbId  数据库ID
     * status  备份开关    - 0：关闭    - 1：开启
     *
@@ -83,7 +83,7 @@ class RiskBackupTemplate implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * cycle  备份周期 - PER_DAY: 每天 - PER_WEEK: 每周 - PER_MONTH: 每月 - PER_HOUR: 每小时 - FIVE_MIN: 每5分钟
+    * cycle  备份周期 - PER_DAY：每天 - PER_WEEK：每周 - PER_MONTH：每月 - PER_HOUR：每小时 - FIVE_MIN：每5分钟
     * dbId  数据库ID
     * status  备份开关    - 0：关闭    - 1：开启
     *
@@ -97,7 +97,7 @@ class RiskBackupTemplate implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * cycle  备份周期 - PER_DAY: 每天 - PER_WEEK: 每周 - PER_MONTH: 每月 - PER_HOUR: 每小时 - FIVE_MIN: 每5分钟
+    * cycle  备份周期 - PER_DAY：每天 - PER_WEEK：每周 - PER_MONTH：每月 - PER_HOUR：每小时 - FIVE_MIN：每5分钟
     * dbId  数据库ID
     * status  备份开关    - 0：关闭    - 1：开启
     *
@@ -202,7 +202,7 @@ class RiskBackupTemplate implements ModelInterface, ArrayAccess
 
     /**
     * Gets cycle
-    *  备份周期 - PER_DAY: 每天 - PER_WEEK: 每周 - PER_MONTH: 每月 - PER_HOUR: 每小时 - FIVE_MIN: 每5分钟
+    *  备份周期 - PER_DAY：每天 - PER_WEEK：每周 - PER_MONTH：每月 - PER_HOUR：每小时 - FIVE_MIN：每5分钟
     *
     * @return string|null
     */
@@ -214,7 +214,7 @@ class RiskBackupTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets cycle
     *
-    * @param string|null $cycle 备份周期 - PER_DAY: 每天 - PER_WEEK: 每周 - PER_MONTH: 每月 - PER_HOUR: 每小时 - FIVE_MIN: 每5分钟
+    * @param string|null $cycle 备份周期 - PER_DAY：每天 - PER_WEEK：每周 - PER_MONTH：每月 - PER_HOUR：每小时 - FIVE_MIN：每5分钟
     *
     * @return $this
     */

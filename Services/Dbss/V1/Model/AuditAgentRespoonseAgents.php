@@ -21,7 +21,7 @@ class AuditAgentRespoonseAgents implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * agentId  agent ID
-    * agentType  agent 类型 - DB: 数据库端 - APP: 应用端
+    * agentType  agent 类型 - DB：数据库端 - APP：应用端
     * agentOs  agent OS
     * agentIp  agent安装节点IP
     * memThreshold  内存阈值
@@ -55,7 +55,7 @@ class AuditAgentRespoonseAgents implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * agentId  agent ID
-    * agentType  agent 类型 - DB: 数据库端 - APP: 应用端
+    * agentType  agent 类型 - DB：数据库端 - APP：应用端
     * agentOs  agent OS
     * agentIp  agent安装节点IP
     * memThreshold  内存阈值
@@ -110,7 +110,7 @@ class AuditAgentRespoonseAgents implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * agentId  agent ID
-    * agentType  agent 类型 - DB: 数据库端 - APP: 应用端
+    * agentType  agent 类型 - DB：数据库端 - APP：应用端
     * agentOs  agent OS
     * agentIp  agent安装节点IP
     * memThreshold  内存阈值
@@ -144,7 +144,7 @@ class AuditAgentRespoonseAgents implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * agentId  agent ID
-    * agentType  agent 类型 - DB: 数据库端 - APP: 应用端
+    * agentType  agent 类型 - DB：数据库端 - APP：应用端
     * agentOs  agent OS
     * agentIp  agent安装节点IP
     * memThreshold  内存阈值
@@ -178,7 +178,7 @@ class AuditAgentRespoonseAgents implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * agentId  agent ID
-    * agentType  agent 类型 - DB: 数据库端 - APP: 应用端
+    * agentType  agent 类型 - DB：数据库端 - APP：应用端
     * agentOs  agent OS
     * agentIp  agent安装节点IP
     * memThreshold  内存阈值
@@ -342,7 +342,7 @@ class AuditAgentRespoonseAgents implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentType
-    *  agent 类型 - DB: 数据库端 - APP: 应用端
+    *  agent 类型 - DB：数据库端 - APP：应用端
     *
     * @return string
     */
@@ -354,7 +354,7 @@ class AuditAgentRespoonseAgents implements ModelInterface, ArrayAccess
     /**
     * Sets agentType
     *
-    * @param string $agentType agent 类型 - DB: 数据库端 - APP: 应用端
+    * @param string $agentType agent 类型 - DB：数据库端 - APP：应用端
     *
     * @return $this
     */

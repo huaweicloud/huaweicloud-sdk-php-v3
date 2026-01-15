@@ -22,7 +22,7 @@ class CreateLineGroupsResp implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  线路分组名称。
     * lines  线路分组包含的线路列表。 解析线路ID。
-    * status  资源状态。 取值范围：PENDING_CREATE，ACTIVE，PENDING_DELETE，PENDING_UPDATE，ERROR，FREEZE，DISABLE。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ERROR：失败
     * description  线路分组的描述信息
     * lineId  线路分组的ID。
     * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
@@ -44,7 +44,7 @@ class CreateLineGroupsResp implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  线路分组名称。
     * lines  线路分组包含的线路列表。 解析线路ID。
-    * status  资源状态。 取值范围：PENDING_CREATE，ACTIVE，PENDING_DELETE，PENDING_UPDATE，ERROR，FREEZE，DISABLE。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ERROR：失败
     * description  线路分组的描述信息
     * lineId  线路分组的ID。
     * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
@@ -87,7 +87,7 @@ class CreateLineGroupsResp implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  线路分组名称。
     * lines  线路分组包含的线路列表。 解析线路ID。
-    * status  资源状态。 取值范围：PENDING_CREATE，ACTIVE，PENDING_DELETE，PENDING_UPDATE，ERROR，FREEZE，DISABLE。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ERROR：失败
     * description  线路分组的描述信息
     * lineId  线路分组的ID。
     * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
@@ -109,7 +109,7 @@ class CreateLineGroupsResp implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  线路分组名称。
     * lines  线路分组包含的线路列表。 解析线路ID。
-    * status  资源状态。 取值范围：PENDING_CREATE，ACTIVE，PENDING_DELETE，PENDING_UPDATE，ERROR，FREEZE，DISABLE。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ERROR：失败
     * description  线路分组的描述信息
     * lineId  线路分组的ID。
     * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
@@ -131,7 +131,7 @@ class CreateLineGroupsResp implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  线路分组名称。
     * lines  线路分组包含的线路列表。 解析线路ID。
-    * status  资源状态。 取值范围：PENDING_CREATE，ACTIVE，PENDING_DELETE，PENDING_UPDATE，ERROR，FREEZE，DISABLE。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ERROR：失败
     * description  线路分组的描述信息
     * lineId  线路分组的ID。
     * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
@@ -288,7 +288,7 @@ class CreateLineGroupsResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源状态。 取值范围：PENDING_CREATE，ACTIVE，PENDING_DELETE，PENDING_UPDATE，ERROR，FREEZE，DISABLE。
+    *  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ERROR：失败
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class CreateLineGroupsResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源状态。 取值范围：PENDING_CREATE，ACTIVE，PENDING_DELETE，PENDING_UPDATE，ERROR，FREEZE，DISABLE。
+    * @param string|null $status **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ERROR：失败
     *
     * @return $this
     */

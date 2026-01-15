@@ -34,7 +34,7 @@ class QueryMetricResult implements ModelInterface, ArrayAccess
     * applyDdlRate  DDL TPS。
     * applyAverageExecuteTime  事务平均执行时间。
     * applyAverageCommitTime  事务平均提交时间。
-    * applyCurrentState  同步状态。
+    * applyCurrentState  同步状态。 succeed：同步成功，failed：同步失败，processing：同步中，waiting：等待中
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class QueryMetricResult implements ModelInterface, ArrayAccess
     * applyDdlRate  DDL TPS。
     * applyAverageExecuteTime  事务平均执行时间。
     * applyAverageCommitTime  事务平均提交时间。
-    * applyCurrentState  同步状态。
+    * applyCurrentState  同步状态。 succeed：同步成功，failed：同步失败，processing：同步中，waiting：等待中
     *
     * @var string[]
     */
@@ -131,7 +131,7 @@ class QueryMetricResult implements ModelInterface, ArrayAccess
     * applyDdlRate  DDL TPS。
     * applyAverageExecuteTime  事务平均执行时间。
     * applyAverageCommitTime  事务平均提交时间。
-    * applyCurrentState  同步状态。
+    * applyCurrentState  同步状态。 succeed：同步成功，failed：同步失败，processing：同步中，waiting：等待中
     *
     * @var string[]
     */
@@ -169,7 +169,7 @@ class QueryMetricResult implements ModelInterface, ArrayAccess
     * applyDdlRate  DDL TPS。
     * applyAverageExecuteTime  事务平均执行时间。
     * applyAverageCommitTime  事务平均提交时间。
-    * applyCurrentState  同步状态。
+    * applyCurrentState  同步状态。 succeed：同步成功，failed：同步失败，processing：同步中，waiting：等待中
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class QueryMetricResult implements ModelInterface, ArrayAccess
     * applyDdlRate  DDL TPS。
     * applyAverageExecuteTime  事务平均执行时间。
     * applyAverageCommitTime  事务平均提交时间。
-    * applyCurrentState  同步状态。
+    * applyCurrentState  同步状态。 succeed：同步成功，failed：同步失败，processing：同步中，waiting：等待中
     *
     * @var string[]
     */
@@ -664,7 +664,7 @@ class QueryMetricResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets applyCurrentState
-    *  同步状态。
+    *  同步状态。 succeed：同步成功，failed：同步失败，processing：同步中，waiting：等待中
     *
     * @return string|null
     */
@@ -676,7 +676,7 @@ class QueryMetricResult implements ModelInterface, ArrayAccess
     /**
     * Sets applyCurrentState
     *
-    * @param string|null $applyCurrentState 同步状态。
+    * @param string|null $applyCurrentState 同步状态。 succeed：同步成功，failed：同步失败，processing：同步中，waiting：等待中
     *
     * @return $this
     */

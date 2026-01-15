@@ -21,7 +21,7 @@ class ShowDomainDetectionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * zoneId  **参数解释：** 域名ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * type  待诊断记录集的类型。 取值范围：CNAME、TXT、MX。
+    * type  **参数解释：** 待诊断记录集的类型。 **取值范围：** - MX：指定域名对应的邮件服务器。 - CNAME：将域名解析到另一域名，或者多个域名映射到同一域名上。 - TXT：用于对域名进行标识和说明。
     * domainName  待诊断记录集的名称。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class ShowDomainDetectionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * zoneId  **参数解释：** 域名ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * type  待诊断记录集的类型。 取值范围：CNAME、TXT、MX。
+    * type  **参数解释：** 待诊断记录集的类型。 **取值范围：** - MX：指定域名对应的邮件服务器。 - CNAME：将域名解析到另一域名，或者多个域名映射到同一域名上。 - TXT：用于对域名进行标识和说明。
     * domainName  待诊断记录集的名称。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class ShowDomainDetectionRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * zoneId  **参数解释：** 域名ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * type  待诊断记录集的类型。 取值范围：CNAME、TXT、MX。
+    * type  **参数解释：** 待诊断记录集的类型。 **取值范围：** - MX：指定域名对应的邮件服务器。 - CNAME：将域名解析到另一域名，或者多个域名映射到同一域名上。 - TXT：用于对域名进行标识和说明。
     * domainName  待诊断记录集的名称。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class ShowDomainDetectionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * zoneId  **参数解释：** 域名ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * type  待诊断记录集的类型。 取值范围：CNAME、TXT、MX。
+    * type  **参数解释：** 待诊断记录集的类型。 **取值范围：** - MX：指定域名对应的邮件服务器。 - CNAME：将域名解析到另一域名，或者多个域名映射到同一域名上。 - TXT：用于对域名进行标识和说明。
     * domainName  待诊断记录集的名称。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ShowDomainDetectionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * zoneId  **参数解释：** 域名ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * type  待诊断记录集的类型。 取值范围：CNAME、TXT、MX。
+    * type  **参数解释：** 待诊断记录集的类型。 **取值范围：** - MX：指定域名对应的邮件服务器。 - CNAME：将域名解析到另一域名，或者多个域名映射到同一域名上。 - TXT：用于对域名进行标识和说明。
     * domainName  待诊断记录集的名称。
     *
     * @var string[]
@@ -235,7 +235,7 @@ class ShowDomainDetectionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  待诊断记录集的类型。 取值范围：CNAME、TXT、MX。
+    *  **参数解释：** 待诊断记录集的类型。 **取值范围：** - MX：指定域名对应的邮件服务器。 - CNAME：将域名解析到另一域名，或者多个域名映射到同一域名上。 - TXT：用于对域名进行标识和说明。
     *
     * @return string|null
     */
@@ -247,7 +247,7 @@ class ShowDomainDetectionRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 待诊断记录集的类型。 取值范围：CNAME、TXT、MX。
+    * @param string|null $type **参数解释：** 待诊断记录集的类型。 **取值范围：** - MX：指定域名对应的邮件服务器。 - CNAME：将域名解析到另一域名，或者多个域名映射到同一域名上。 - TXT：用于对域名进行标识和说明。
     *
     * @return $this
     */

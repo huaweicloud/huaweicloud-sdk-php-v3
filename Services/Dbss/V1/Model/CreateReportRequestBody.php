@@ -20,7 +20,7 @@ class CreateReportRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dbIds  数据库ID列表，多个用英文逗号分割
+    * dbIds  数据库ID列表，多个用英文逗号分隔
     * endDate  结束日期
     * endTime  结束时间
     * startDate  开始日期
@@ -40,7 +40,7 @@ class CreateReportRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dbIds  数据库ID列表，多个用英文逗号分割
+    * dbIds  数据库ID列表，多个用英文逗号分隔
     * endDate  结束日期
     * endTime  结束时间
     * startDate  开始日期
@@ -81,7 +81,7 @@ class CreateReportRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dbIds  数据库ID列表，多个用英文逗号分割
+    * dbIds  数据库ID列表，多个用英文逗号分隔
     * endDate  结束日期
     * endTime  结束时间
     * startDate  开始日期
@@ -101,7 +101,7 @@ class CreateReportRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dbIds  数据库ID列表，多个用英文逗号分割
+    * dbIds  数据库ID列表，多个用英文逗号分隔
     * endDate  结束日期
     * endTime  结束时间
     * startDate  开始日期
@@ -121,7 +121,7 @@ class CreateReportRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dbIds  数据库ID列表，多个用英文逗号分割
+    * dbIds  数据库ID列表，多个用英文逗号分隔
     * endDate  结束日期
     * endTime  结束时间
     * startDate  开始日期
@@ -238,7 +238,7 @@ class CreateReportRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbIds
-    *  数据库ID列表，多个用英文逗号分割
+    *  数据库ID列表，多个用英文逗号分隔
     *
     * @return string|null
     */
@@ -250,7 +250,7 @@ class CreateReportRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets dbIds
     *
-    * @param string|null $dbIds 数据库ID列表，多个用英文逗号分割
+    * @param string|null $dbIds 数据库ID列表，多个用英文逗号分隔
     *
     * @return $this
     */

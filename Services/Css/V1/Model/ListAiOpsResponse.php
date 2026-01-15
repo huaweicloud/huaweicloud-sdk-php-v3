@@ -21,26 +21,26 @@ class ListAiOpsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalSize  检测任务个数。
-    * aiopsList  创建一个集群检测任务。
+    * aiopsList  aiopsList
+    * totalSize  参数解释： 集群风险检测任务总数。 取值范围： 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'totalSize' => 'int',
-            'aiopsList' => '\HuaweiCloud\SDK\Css\V1\Model\ListAiOpsRequestBodyAiopsList[]'
+            'aiopsList' => '\HuaweiCloud\SDK\Css\V1\Model\AiOps[]',
+            'totalSize' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalSize  检测任务个数。
-    * aiopsList  创建一个集群检测任务。
+    * aiopsList  aiopsList
+    * totalSize  参数解释： 集群风险检测任务总数。 取值范围： 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'totalSize' => null,
-        'aiopsList' => null
+        'aiopsList' => null,
+        'totalSize' => 'int32'
     ];
 
     /**
@@ -66,38 +66,38 @@ class ListAiOpsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalSize  检测任务个数。
-    * aiopsList  创建一个集群检测任务。
+    * aiopsList  aiopsList
+    * totalSize  参数解释： 集群风险检测任务总数。 取值范围： 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'totalSize' => 'total_size',
-            'aiopsList' => 'aiops_list'
+            'aiopsList' => 'aiops_list',
+            'totalSize' => 'total_size'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalSize  检测任务个数。
-    * aiopsList  创建一个集群检测任务。
+    * aiopsList  aiopsList
+    * totalSize  参数解释： 集群风险检测任务总数。 取值范围： 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
-            'totalSize' => 'setTotalSize',
-            'aiopsList' => 'setAiopsList'
+            'aiopsList' => 'setAiopsList',
+            'totalSize' => 'setTotalSize'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalSize  检测任务个数。
-    * aiopsList  创建一个集群检测任务。
+    * aiopsList  aiopsList
+    * totalSize  参数解释： 集群风险检测任务总数。 取值范围： 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
-            'totalSize' => 'getTotalSize',
-            'aiopsList' => 'getAiopsList'
+            'aiopsList' => 'getAiopsList',
+            'totalSize' => 'getTotalSize'
     ];
 
     /**
@@ -158,8 +158,8 @@ class ListAiOpsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['totalSize'] = isset($data['totalSize']) ? $data['totalSize'] : null;
         $this->container['aiopsList'] = isset($data['aiopsList']) ? $data['aiopsList'] : null;
+        $this->container['totalSize'] = isset($data['totalSize']) ? $data['totalSize'] : null;
     }
 
     /**
@@ -185,8 +185,32 @@ class ListAiOpsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets aiopsList
+    *  aiopsList
+    *
+    * @return \HuaweiCloud\SDK\Css\V1\Model\AiOps[]|null
+    */
+    public function getAiopsList()
+    {
+        return $this->container['aiopsList'];
+    }
+
+    /**
+    * Sets aiopsList
+    *
+    * @param \HuaweiCloud\SDK\Css\V1\Model\AiOps[]|null $aiopsList aiopsList
+    *
+    * @return $this
+    */
+    public function setAiopsList($aiopsList)
+    {
+        $this->container['aiopsList'] = $aiopsList;
+        return $this;
+    }
+
+    /**
     * Gets totalSize
-    *  检测任务个数。
+    *  参数解释： 集群风险检测任务总数。 取值范围： 不涉及
     *
     * @return int|null
     */
@@ -198,37 +222,13 @@ class ListAiOpsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalSize
     *
-    * @param int|null $totalSize 检测任务个数。
+    * @param int|null $totalSize 参数解释： 集群风险检测任务总数。 取值范围： 不涉及
     *
     * @return $this
     */
     public function setTotalSize($totalSize)
     {
         $this->container['totalSize'] = $totalSize;
-        return $this;
-    }
-
-    /**
-    * Gets aiopsList
-    *  创建一个集群检测任务。
-    *
-    * @return \HuaweiCloud\SDK\Css\V1\Model\ListAiOpsRequestBodyAiopsList[]|null
-    */
-    public function getAiopsList()
-    {
-        return $this->container['aiopsList'];
-    }
-
-    /**
-    * Sets aiopsList
-    *
-    * @param \HuaweiCloud\SDK\Css\V1\Model\ListAiOpsRequestBodyAiopsList[]|null $aiopsList 创建一个集群检测任务。
-    *
-    * @return $this
-    */
-    public function setAiopsList($aiopsList)
-    {
-        $this->container['aiopsList'] = $aiopsList;
         return $this;
     }
 

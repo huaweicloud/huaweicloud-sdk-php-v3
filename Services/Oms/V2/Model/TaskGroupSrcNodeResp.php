@@ -23,7 +23,7 @@ class TaskGroupSrcNodeResp implements ModelInterface, ArrayAccess
     * bucket  源端桶的名称。
     * cloudType  源端云服务提供商。  可选值有AWS、AZURE、ALIYUN、TENCENT、HUAWEICLOUD、QINGCLOUD、KINGSOFTCLOUD、BAIDU、QINIU、GOOGLE、URLSOURCE或者UCLOUD。默认值为ALIYUN。
     * region  源端桶所处的区域。
-    * appId  当源端为腾讯云时，会返回此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，会返回此参数。
     * objectKey  任务组类型为前缀迁移任务时，表示待迁移前缀。
     * listFile  listFile
     *
@@ -43,7 +43,7 @@ class TaskGroupSrcNodeResp implements ModelInterface, ArrayAccess
     * bucket  源端桶的名称。
     * cloudType  源端云服务提供商。  可选值有AWS、AZURE、ALIYUN、TENCENT、HUAWEICLOUD、QINGCLOUD、KINGSOFTCLOUD、BAIDU、QINIU、GOOGLE、URLSOURCE或者UCLOUD。默认值为ALIYUN。
     * region  源端桶所处的区域。
-    * appId  当源端为腾讯云时，会返回此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，会返回此参数。
     * objectKey  任务组类型为前缀迁移任务时，表示待迁移前缀。
     * listFile  listFile
     *
@@ -84,7 +84,7 @@ class TaskGroupSrcNodeResp implements ModelInterface, ArrayAccess
     * bucket  源端桶的名称。
     * cloudType  源端云服务提供商。  可选值有AWS、AZURE、ALIYUN、TENCENT、HUAWEICLOUD、QINGCLOUD、KINGSOFTCLOUD、BAIDU、QINIU、GOOGLE、URLSOURCE或者UCLOUD。默认值为ALIYUN。
     * region  源端桶所处的区域。
-    * appId  当源端为腾讯云时，会返回此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，会返回此参数。
     * objectKey  任务组类型为前缀迁移任务时，表示待迁移前缀。
     * listFile  listFile
     *
@@ -104,7 +104,7 @@ class TaskGroupSrcNodeResp implements ModelInterface, ArrayAccess
     * bucket  源端桶的名称。
     * cloudType  源端云服务提供商。  可选值有AWS、AZURE、ALIYUN、TENCENT、HUAWEICLOUD、QINGCLOUD、KINGSOFTCLOUD、BAIDU、QINIU、GOOGLE、URLSOURCE或者UCLOUD。默认值为ALIYUN。
     * region  源端桶所处的区域。
-    * appId  当源端为腾讯云时，会返回此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，会返回此参数。
     * objectKey  任务组类型为前缀迁移任务时，表示待迁移前缀。
     * listFile  listFile
     *
@@ -124,7 +124,7 @@ class TaskGroupSrcNodeResp implements ModelInterface, ArrayAccess
     * bucket  源端桶的名称。
     * cloudType  源端云服务提供商。  可选值有AWS、AZURE、ALIYUN、TENCENT、HUAWEICLOUD、QINGCLOUD、KINGSOFTCLOUD、BAIDU、QINIU、GOOGLE、URLSOURCE或者UCLOUD。默认值为ALIYUN。
     * region  源端桶所处的区域。
-    * appId  当源端为腾讯云时，会返回此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，会返回此参数。
     * objectKey  任务组类型为前缀迁移任务时，表示待迁移前缀。
     * listFile  listFile
     *
@@ -371,7 +371,7 @@ class TaskGroupSrcNodeResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
-    *  当源端为腾讯云时，会返回此参数。
+    *  腾讯云APPID，当源端为腾讯云时，会返回此参数。
     *
     * @return string|null
     */
@@ -383,7 +383,7 @@ class TaskGroupSrcNodeResp implements ModelInterface, ArrayAccess
     /**
     * Sets appId
     *
-    * @param string|null $appId 当源端为腾讯云时，会返回此参数。
+    * @param string|null $appId 腾讯云APPID，当源端为腾讯云时，会返回此参数。
     *
     * @return $this
     */

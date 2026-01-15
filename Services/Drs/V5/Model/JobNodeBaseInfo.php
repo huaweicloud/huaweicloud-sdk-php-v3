@@ -23,7 +23,7 @@ class JobNodeBaseInfo implements ModelInterface, ArrayAccess
     * instanceType  实例类型。取值： - single：单机。 - ha：主备。
     * arch  CPU架构。取值： - x86 - arm
     * availabilityZone  可用区ID。 约束：对于任务实例类型不是单机的实例，需要分别为实例所有节点指定可用区，并用“,”英文逗号隔开。示例： - 实例类型为single：\"cn-north-4a\" - 实例类型为ha：\"cn-north-4a,cn-north-4b\"
-    * status  状态。
+    * status  状态。 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     * role  任务主备角色。
     *
     * @var string[]
@@ -41,7 +41,7 @@ class JobNodeBaseInfo implements ModelInterface, ArrayAccess
     * instanceType  实例类型。取值： - single：单机。 - ha：主备。
     * arch  CPU架构。取值： - x86 - arm
     * availabilityZone  可用区ID。 约束：对于任务实例类型不是单机的实例，需要分别为实例所有节点指定可用区，并用“,”英文逗号隔开。示例： - 实例类型为single：\"cn-north-4a\" - 实例类型为ha：\"cn-north-4a,cn-north-4b\"
-    * status  状态。
+    * status  状态。 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     * role  任务主备角色。
     *
     * @var string[]
@@ -80,7 +80,7 @@ class JobNodeBaseInfo implements ModelInterface, ArrayAccess
     * instanceType  实例类型。取值： - single：单机。 - ha：主备。
     * arch  CPU架构。取值： - x86 - arm
     * availabilityZone  可用区ID。 约束：对于任务实例类型不是单机的实例，需要分别为实例所有节点指定可用区，并用“,”英文逗号隔开。示例： - 实例类型为single：\"cn-north-4a\" - 实例类型为ha：\"cn-north-4a,cn-north-4b\"
-    * status  状态。
+    * status  状态。 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     * role  任务主备角色。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class JobNodeBaseInfo implements ModelInterface, ArrayAccess
     * instanceType  实例类型。取值： - single：单机。 - ha：主备。
     * arch  CPU架构。取值： - x86 - arm
     * availabilityZone  可用区ID。 约束：对于任务实例类型不是单机的实例，需要分别为实例所有节点指定可用区，并用“,”英文逗号隔开。示例： - 实例类型为single：\"cn-north-4a\" - 实例类型为ha：\"cn-north-4a,cn-north-4b\"
-    * status  状态。
+    * status  状态。 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     * role  任务主备角色。
     *
     * @var string[]
@@ -116,7 +116,7 @@ class JobNodeBaseInfo implements ModelInterface, ArrayAccess
     * instanceType  实例类型。取值： - single：单机。 - ha：主备。
     * arch  CPU架构。取值： - x86 - arm
     * availabilityZone  可用区ID。 约束：对于任务实例类型不是单机的实例，需要分别为实例所有节点指定可用区，并用“,”英文逗号隔开。示例： - 实例类型为single：\"cn-north-4a\" - 实例类型为ha：\"cn-north-4a,cn-north-4b\"
-    * status  状态。
+    * status  状态。 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     * role  任务主备角色。
     *
     * @var string[]
@@ -345,7 +345,7 @@ class JobNodeBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态。
+    *  状态。 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     *
     * @return string|null
     */
@@ -357,7 +357,7 @@ class JobNodeBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态。
+    * @param string|null $status 状态。 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     *
     * @return $this
     */

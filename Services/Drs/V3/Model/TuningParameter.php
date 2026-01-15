@@ -23,7 +23,7 @@ class TuningParameter implements ModelInterface, ArrayAccess
     * paramName  参数名称。
     * paramValue  参数取值。
     * availability  是否可用。
-    * range  参数取值范围。
+    * range  参数范围。
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class TuningParameter implements ModelInterface, ArrayAccess
     * paramName  参数名称。
     * paramValue  参数取值。
     * availability  是否可用。
-    * range  参数取值范围。
+    * range  参数范围。
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class TuningParameter implements ModelInterface, ArrayAccess
     * paramName  参数名称。
     * paramValue  参数取值。
     * availability  是否可用。
-    * range  参数取值范围。
+    * range  参数范围。
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class TuningParameter implements ModelInterface, ArrayAccess
     * paramName  参数名称。
     * paramValue  参数取值。
     * availability  是否可用。
-    * range  参数取值范围。
+    * range  参数范围。
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class TuningParameter implements ModelInterface, ArrayAccess
     * paramName  参数名称。
     * paramValue  参数取值。
     * availability  是否可用。
-    * range  参数取值范围。
+    * range  参数范围。
     *
     * @var string[]
     */
@@ -279,7 +279,7 @@ class TuningParameter implements ModelInterface, ArrayAccess
 
     /**
     * Gets range
-    *  参数取值范围。
+    *  参数范围。
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class TuningParameter implements ModelInterface, ArrayAccess
     /**
     * Sets range
     *
-    * @param string|null $range 参数取值范围。
+    * @param string|null $range 参数范围。
     *
     * @return $this
     */

@@ -22,25 +22,25 @@ class ShowDomainTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * total  **参数解释：** 查询域名模板总数 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * temlates  temlates
+    * templates  templates
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'total' => 'int',
-            'temlates' => '\HuaweiCloud\SDK\Cdn\V2\Model\TemplateItem[]'
+            'templates' => '\HuaweiCloud\SDK\Cdn\V2\Model\TemplateItem[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * total  **参数解释：** 查询域名模板总数 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * temlates  temlates
+    * templates  templates
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'total' => null,
-        'temlates' => null
+        'templates' => null
     ];
 
     /**
@@ -67,37 +67,37 @@ class ShowDomainTemplateResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * total  **参数解释：** 查询域名模板总数 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * temlates  temlates
+    * templates  templates
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'total' => 'total',
-            'temlates' => 'temlates'
+            'templates' => 'templates'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * total  **参数解释：** 查询域名模板总数 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * temlates  temlates
+    * templates  templates
     *
     * @var string[]
     */
     protected static $setters = [
             'total' => 'setTotal',
-            'temlates' => 'setTemlates'
+            'templates' => 'setTemplates'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * total  **参数解释：** 查询域名模板总数 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * temlates  temlates
+    * templates  templates
     *
     * @var string[]
     */
     protected static $getters = [
             'total' => 'getTotal',
-            'temlates' => 'getTemlates'
+            'templates' => 'getTemplates'
     ];
 
     /**
@@ -159,7 +159,7 @@ class ShowDomainTemplateResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
-        $this->container['temlates'] = isset($data['temlates']) ? $data['temlates'] : null;
+        $this->container['templates'] = isset($data['templates']) ? $data['templates'] : null;
     }
 
     /**
@@ -209,26 +209,26 @@ class ShowDomainTemplateResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets temlates
-    *  temlates
+    * Gets templates
+    *  templates
     *
     * @return \HuaweiCloud\SDK\Cdn\V2\Model\TemplateItem[]|null
     */
-    public function getTemlates()
+    public function getTemplates()
     {
-        return $this->container['temlates'];
+        return $this->container['templates'];
     }
 
     /**
-    * Sets temlates
+    * Sets templates
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\TemplateItem[]|null $temlates temlates
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\TemplateItem[]|null $templates templates
     *
     * @return $this
     */
-    public function setTemlates($temlates)
+    public function setTemplates($templates)
     {
-        $this->container['temlates'] = $temlates;
+        $this->container['templates'] = $templates;
         return $this;
     }
 

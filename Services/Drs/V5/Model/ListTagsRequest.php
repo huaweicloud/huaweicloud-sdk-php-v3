@@ -20,7 +20,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  资源类型。 - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备 - subscription：数据订阅 - backupMigration：备份迁移 - replay：录制回放
+    * resourceType  资源类型。 - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备 - subscription：数据订阅 - backupMigration：备份迁移 - replay：录制回放 - verify：校验任务
     * xLanguage  请求语言类型。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  资源类型。 - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备 - subscription：数据订阅 - backupMigration：备份迁移 - replay：录制回放
+    * resourceType  资源类型。 - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备 - subscription：数据订阅 - backupMigration：备份迁移 - replay：录制回放 - verify：校验任务
     * xLanguage  请求语言类型。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  资源类型。 - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备 - subscription：数据订阅 - backupMigration：备份迁移 - replay：录制回放
+    * resourceType  资源类型。 - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备 - subscription：数据订阅 - backupMigration：备份迁移 - replay：录制回放 - verify：校验任务
     * xLanguage  请求语言类型。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  资源类型。 - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备 - subscription：数据订阅 - backupMigration：备份迁移 - replay：录制回放
+    * resourceType  资源类型。 - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备 - subscription：数据订阅 - backupMigration：备份迁移 - replay：录制回放 - verify：校验任务
     * xLanguage  请求语言类型。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  资源类型。 - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备 - subscription：数据订阅 - backupMigration：备份迁移 - replay：录制回放
+    * resourceType  资源类型。 - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备 - subscription：数据订阅 - backupMigration：备份迁移 - replay：录制回放 - verify：校验任务
     * xLanguage  请求语言类型。
     *
     * @var string[]
@@ -145,6 +145,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     const RESOURCE_TYPE_SUBSCRIPTION = 'subscription';
     const RESOURCE_TYPE_BACKUP_MIGRATION = 'backupMigration';
     const RESOURCE_TYPE_REPLAY = 'replay';
+    const RESOURCE_TYPE_VERIFY = 'verify';
     const X_LANGUAGE_EN_US = 'en-us';
     const X_LANGUAGE_ZH_CN = 'zh-cn';
     
@@ -163,6 +164,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
             self::RESOURCE_TYPE_SUBSCRIPTION,
             self::RESOURCE_TYPE_BACKUP_MIGRATION,
             self::RESOURCE_TYPE_REPLAY,
+            self::RESOURCE_TYPE_VERIFY,
         ];
     }
 
@@ -242,7 +244,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  资源类型。 - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备 - subscription：数据订阅 - backupMigration：备份迁移 - replay：录制回放
+    *  资源类型。 - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备 - subscription：数据订阅 - backupMigration：备份迁移 - replay：录制回放 - verify：校验任务
     *
     * @return string
     */
@@ -254,7 +256,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 资源类型。 - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备 - subscription：数据订阅 - backupMigration：备份迁移 - replay：录制回放
+    * @param string $resourceType 资源类型。 - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备 - subscription：数据订阅 - backupMigration：备份迁移 - replay：录制回放 - verify：校验任务
     *
     * @return $this
     */

@@ -23,7 +23,7 @@ class WhitelistBean implements ModelInterface, ArrayAccess
     * createTimestampMs  创建时间
     * dbIds  数据库IDs
     * desc  描述
-    * enabled  状态 - true:启用 - false: 禁用
+    * enabled  状态 - true：启用 - false：禁用
     * id  记录ID
     * sql  SQL语句
     * updateTimestampMs  更新时间
@@ -45,7 +45,7 @@ class WhitelistBean implements ModelInterface, ArrayAccess
     * createTimestampMs  创建时间
     * dbIds  数据库IDs
     * desc  描述
-    * enabled  状态 - true:启用 - false: 禁用
+    * enabled  状态 - true：启用 - false：禁用
     * id  记录ID
     * sql  SQL语句
     * updateTimestampMs  更新时间
@@ -88,7 +88,7 @@ class WhitelistBean implements ModelInterface, ArrayAccess
     * createTimestampMs  创建时间
     * dbIds  数据库IDs
     * desc  描述
-    * enabled  状态 - true:启用 - false: 禁用
+    * enabled  状态 - true：启用 - false：禁用
     * id  记录ID
     * sql  SQL语句
     * updateTimestampMs  更新时间
@@ -110,7 +110,7 @@ class WhitelistBean implements ModelInterface, ArrayAccess
     * createTimestampMs  创建时间
     * dbIds  数据库IDs
     * desc  描述
-    * enabled  状态 - true:启用 - false: 禁用
+    * enabled  状态 - true：启用 - false：禁用
     * id  记录ID
     * sql  SQL语句
     * updateTimestampMs  更新时间
@@ -132,7 +132,7 @@ class WhitelistBean implements ModelInterface, ArrayAccess
     * createTimestampMs  创建时间
     * dbIds  数据库IDs
     * desc  描述
-    * enabled  状态 - true:启用 - false: 禁用
+    * enabled  状态 - true：启用 - false：禁用
     * id  记录ID
     * sql  SQL语句
     * updateTimestampMs  更新时间
@@ -312,7 +312,7 @@ class WhitelistBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  状态 - true:启用 - false: 禁用
+    *  状态 - true：启用 - false：禁用
     *
     * @return bool|null
     */
@@ -324,7 +324,7 @@ class WhitelistBean implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool|null $enabled 状态 - true:启用 - false: 禁用
+    * @param bool|null $enabled 状态 - true：启用 - false：禁用
     *
     * @return $this
     */

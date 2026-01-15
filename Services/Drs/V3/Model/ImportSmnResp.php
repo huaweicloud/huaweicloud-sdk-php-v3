@@ -21,7 +21,7 @@ class ImportSmnResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  任务ID
-    * status  状态
+    * status  状态 取值：success，failed
     * errorCode  错误码
     * errorMsg  错误信息
     *
@@ -37,7 +37,7 @@ class ImportSmnResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  任务ID
-    * status  状态
+    * status  状态 取值：success，failed
     * errorCode  错误码
     * errorMsg  错误信息
     *
@@ -74,7 +74,7 @@ class ImportSmnResp implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  任务ID
-    * status  状态
+    * status  状态 取值：success，failed
     * errorCode  错误码
     * errorMsg  错误信息
     *
@@ -90,7 +90,7 @@ class ImportSmnResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  任务ID
-    * status  状态
+    * status  状态 取值：success，failed
     * errorCode  错误码
     * errorMsg  错误信息
     *
@@ -106,7 +106,7 @@ class ImportSmnResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  任务ID
-    * status  状态
+    * status  状态 取值：success，failed
     * errorCode  错误码
     * errorMsg  错误信息
     *
@@ -231,7 +231,7 @@ class ImportSmnResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态
+    *  状态 取值：success，failed
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class ImportSmnResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态
+    * @param string|null $status 状态 取值：success，failed
     *
     * @return $this
     */

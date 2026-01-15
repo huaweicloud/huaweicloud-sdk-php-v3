@@ -21,19 +21,19 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * zoneName  域名。
-    * keyTag  密钥标签。
-    * flag  旗标。
-    * digestAlgorithm  摘要算法。
-    * digestType  摘要算法类型。
-    * digest  摘要。
-    * signature  签名算法。
-    * signatureType  签名算法类型。
-    * kskPublicKey  公有密钥。
-    * dsRecord  DS记录。
-    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * status  状态。  取值范围：  ENABLE：启用 DISABLE：关闭
+    * zoneName  **参数解释：** 域名。 **取值范围：** 不涉及。
+    * keyTag  **参数解释：** 密钥标签。 **取值范围：** 不涉及。
+    * flag  **参数解释：** 旗标。 **取值范围：** 不涉及。
+    * digestAlgorithm  **参数解释：** 摘要算法。 **取值范围：** 不涉及。
+    * digestType  **参数解释：** 摘要算法类型。 **取值范围：** 不涉及。
+    * digest  **参数解释：** 摘要。 **取值范围：** 不涉及。
+    * signature  **参数解释：** 签名算法。 **取值范围：** 不涉及。
+    * signatureType  **参数解释：** 签名算法类型。 **取值范围：** 不涉及。
+    * kskPublicKey  **参数解释：** 公有密钥。 **取值范围：** 不涉及。
+    * dsRecord  **参数解释：** DS记录。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * updatedAt  **参数解释：** 更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * status  **参数解释：** 状态。 **取值范围：** - ENABLE：启用 - DISABLE：关闭
     *
     * @var string[]
     */
@@ -55,19 +55,19 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * zoneName  域名。
-    * keyTag  密钥标签。
-    * flag  旗标。
-    * digestAlgorithm  摘要算法。
-    * digestType  摘要算法类型。
-    * digest  摘要。
-    * signature  签名算法。
-    * signatureType  签名算法类型。
-    * kskPublicKey  公有密钥。
-    * dsRecord  DS记录。
-    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * status  状态。  取值范围：  ENABLE：启用 DISABLE：关闭
+    * zoneName  **参数解释：** 域名。 **取值范围：** 不涉及。
+    * keyTag  **参数解释：** 密钥标签。 **取值范围：** 不涉及。
+    * flag  **参数解释：** 旗标。 **取值范围：** 不涉及。
+    * digestAlgorithm  **参数解释：** 摘要算法。 **取值范围：** 不涉及。
+    * digestType  **参数解释：** 摘要算法类型。 **取值范围：** 不涉及。
+    * digest  **参数解释：** 摘要。 **取值范围：** 不涉及。
+    * signature  **参数解释：** 签名算法。 **取值范围：** 不涉及。
+    * signatureType  **参数解释：** 签名算法类型。 **取值范围：** 不涉及。
+    * kskPublicKey  **参数解释：** 公有密钥。 **取值范围：** 不涉及。
+    * dsRecord  **参数解释：** DS记录。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * updatedAt  **参数解释：** 更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * status  **参数解释：** 状态。 **取值范围：** - ENABLE：启用 - DISABLE：关闭
     *
     * @var string[]
     */
@@ -110,19 +110,19 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * zoneName  域名。
-    * keyTag  密钥标签。
-    * flag  旗标。
-    * digestAlgorithm  摘要算法。
-    * digestType  摘要算法类型。
-    * digest  摘要。
-    * signature  签名算法。
-    * signatureType  签名算法类型。
-    * kskPublicKey  公有密钥。
-    * dsRecord  DS记录。
-    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * status  状态。  取值范围：  ENABLE：启用 DISABLE：关闭
+    * zoneName  **参数解释：** 域名。 **取值范围：** 不涉及。
+    * keyTag  **参数解释：** 密钥标签。 **取值范围：** 不涉及。
+    * flag  **参数解释：** 旗标。 **取值范围：** 不涉及。
+    * digestAlgorithm  **参数解释：** 摘要算法。 **取值范围：** 不涉及。
+    * digestType  **参数解释：** 摘要算法类型。 **取值范围：** 不涉及。
+    * digest  **参数解释：** 摘要。 **取值范围：** 不涉及。
+    * signature  **参数解释：** 签名算法。 **取值范围：** 不涉及。
+    * signatureType  **参数解释：** 签名算法类型。 **取值范围：** 不涉及。
+    * kskPublicKey  **参数解释：** 公有密钥。 **取值范围：** 不涉及。
+    * dsRecord  **参数解释：** DS记录。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * updatedAt  **参数解释：** 更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * status  **参数解释：** 状态。 **取值范围：** - ENABLE：启用 - DISABLE：关闭
     *
     * @var string[]
     */
@@ -144,19 +144,19 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * zoneName  域名。
-    * keyTag  密钥标签。
-    * flag  旗标。
-    * digestAlgorithm  摘要算法。
-    * digestType  摘要算法类型。
-    * digest  摘要。
-    * signature  签名算法。
-    * signatureType  签名算法类型。
-    * kskPublicKey  公有密钥。
-    * dsRecord  DS记录。
-    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * status  状态。  取值范围：  ENABLE：启用 DISABLE：关闭
+    * zoneName  **参数解释：** 域名。 **取值范围：** 不涉及。
+    * keyTag  **参数解释：** 密钥标签。 **取值范围：** 不涉及。
+    * flag  **参数解释：** 旗标。 **取值范围：** 不涉及。
+    * digestAlgorithm  **参数解释：** 摘要算法。 **取值范围：** 不涉及。
+    * digestType  **参数解释：** 摘要算法类型。 **取值范围：** 不涉及。
+    * digest  **参数解释：** 摘要。 **取值范围：** 不涉及。
+    * signature  **参数解释：** 签名算法。 **取值范围：** 不涉及。
+    * signatureType  **参数解释：** 签名算法类型。 **取值范围：** 不涉及。
+    * kskPublicKey  **参数解释：** 公有密钥。 **取值范围：** 不涉及。
+    * dsRecord  **参数解释：** DS记录。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * updatedAt  **参数解释：** 更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * status  **参数解释：** 状态。 **取值范围：** - ENABLE：启用 - DISABLE：关闭
     *
     * @var string[]
     */
@@ -178,19 +178,19 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * zoneName  域名。
-    * keyTag  密钥标签。
-    * flag  旗标。
-    * digestAlgorithm  摘要算法。
-    * digestType  摘要算法类型。
-    * digest  摘要。
-    * signature  签名算法。
-    * signatureType  签名算法类型。
-    * kskPublicKey  公有密钥。
-    * dsRecord  DS记录。
-    * createdAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * updatedAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
-    * status  状态。  取值范围：  ENABLE：启用 DISABLE：关闭
+    * zoneName  **参数解释：** 域名。 **取值范围：** 不涉及。
+    * keyTag  **参数解释：** 密钥标签。 **取值范围：** 不涉及。
+    * flag  **参数解释：** 旗标。 **取值范围：** 不涉及。
+    * digestAlgorithm  **参数解释：** 摘要算法。 **取值范围：** 不涉及。
+    * digestType  **参数解释：** 摘要算法类型。 **取值范围：** 不涉及。
+    * digest  **参数解释：** 摘要。 **取值范围：** 不涉及。
+    * signature  **参数解释：** 签名算法。 **取值范围：** 不涉及。
+    * signatureType  **参数解释：** 签名算法类型。 **取值范围：** 不涉及。
+    * kskPublicKey  **参数解释：** 公有密钥。 **取值范围：** 不涉及。
+    * dsRecord  **参数解释：** DS记录。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * updatedAt  **参数解释：** 更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
+    * status  **参数解释：** 状态。 **取值范围：** - ENABLE：启用 - DISABLE：关闭
     *
     * @var string[]
     */
@@ -307,7 +307,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneName
-    *  域名。
+    *  **参数解释：** 域名。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -319,7 +319,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets zoneName
     *
-    * @param string|null $zoneName 域名。
+    * @param string|null $zoneName **参数解释：** 域名。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -331,7 +331,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets keyTag
-    *  密钥标签。
+    *  **参数解释：** 密钥标签。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -343,7 +343,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets keyTag
     *
-    * @param int|null $keyTag 密钥标签。
+    * @param int|null $keyTag **参数解释：** 密钥标签。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -355,7 +355,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets flag
-    *  旗标。
+    *  **参数解释：** 旗标。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -367,7 +367,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets flag
     *
-    * @param int|null $flag 旗标。
+    * @param int|null $flag **参数解释：** 旗标。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -379,7 +379,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets digestAlgorithm
-    *  摘要算法。
+    *  **参数解释：** 摘要算法。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -391,7 +391,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets digestAlgorithm
     *
-    * @param string|null $digestAlgorithm 摘要算法。
+    * @param string|null $digestAlgorithm **参数解释：** 摘要算法。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -403,7 +403,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets digestType
-    *  摘要算法类型。
+    *  **参数解释：** 摘要算法类型。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -415,7 +415,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets digestType
     *
-    * @param int|null $digestType 摘要算法类型。
+    * @param int|null $digestType **参数解释：** 摘要算法类型。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -427,7 +427,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets digest
-    *  摘要。
+    *  **参数解释：** 摘要。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -439,7 +439,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets digest
     *
-    * @param string|null $digest 摘要。
+    * @param string|null $digest **参数解释：** 摘要。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -451,7 +451,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets signature
-    *  签名算法。
+    *  **参数解释：** 签名算法。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -463,7 +463,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets signature
     *
-    * @param string|null $signature 签名算法。
+    * @param string|null $signature **参数解释：** 签名算法。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -475,7 +475,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets signatureType
-    *  签名算法类型。
+    *  **参数解释：** 签名算法类型。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -487,7 +487,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets signatureType
     *
-    * @param int|null $signatureType 签名算法类型。
+    * @param int|null $signatureType **参数解释：** 签名算法类型。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -499,7 +499,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets kskPublicKey
-    *  公有密钥。
+    *  **参数解释：** 公有密钥。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -511,7 +511,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets kskPublicKey
     *
-    * @param string|null $kskPublicKey 公有密钥。
+    * @param string|null $kskPublicKey **参数解释：** 公有密钥。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -523,7 +523,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dsRecord
-    *  DS记录。
+    *  **参数解释：** DS记录。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -535,7 +535,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dsRecord
     *
-    * @param string|null $dsRecord DS记录。
+    * @param string|null $dsRecord **参数解释：** DS记录。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -547,7 +547,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    *  **参数解释：** 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -559,7 +559,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * @param string|null $createdAt **参数解释：** 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -571,7 +571,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    *  **参数解释：** 更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -583,7 +583,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string|null $updatedAt 更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+    * @param string|null $updatedAt **参数解释：** 更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -595,7 +595,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态。  取值范围：  ENABLE：启用 DISABLE：关闭
+    *  **参数解释：** 状态。 **取值范围：** - ENABLE：启用 - DISABLE：关闭
     *
     * @return string|null
     */
@@ -607,7 +607,7 @@ class EnableDnssecConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态。  取值范围：  ENABLE：启用 DISABLE：关闭
+    * @param string|null $status **参数解释：** 状态。 **取值范围：** - ENABLE：启用 - DISABLE：关闭
     *
     * @return $this
     */

@@ -20,30 +20,42 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * primaryInterface  功能说明：取值为true，表示是虚拟机的主网卡。
-    * portFilter  功能说明：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。
-    * ovsHybridPlug  用于通知像nova这样的API消费者，应该使用OVS的混合插入策略。
+    * primaryInterface  是否为虚拟机的主网卡。
+    * portFilter  是否提供端口过滤特性, 如安全组和反MAC/IP欺骗。
+    * ovsHybridPlug  是否为ovs/bridge混合模式。
+    * vlanId  辅助弹性网卡的vlan ID。
+    * parentId  辅助弹性网卡的宿主网卡ID。
+    * parentDeviceId  辅助弹性网卡的宿主网卡所属的设备ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'primaryInterface' => 'bool',
             'portFilter' => 'bool',
-            'ovsHybridPlug' => 'bool'
+            'ovsHybridPlug' => 'bool',
+            'vlanId' => 'string',
+            'parentId' => 'string',
+            'parentDeviceId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * primaryInterface  功能说明：取值为true，表示是虚拟机的主网卡。
-    * portFilter  功能说明：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。
-    * ovsHybridPlug  用于通知像nova这样的API消费者，应该使用OVS的混合插入策略。
+    * primaryInterface  是否为虚拟机的主网卡。
+    * portFilter  是否提供端口过滤特性, 如安全组和反MAC/IP欺骗。
+    * ovsHybridPlug  是否为ovs/bridge混合模式。
+    * vlanId  辅助弹性网卡的vlan ID。
+    * parentId  辅助弹性网卡的宿主网卡ID。
+    * parentDeviceId  辅助弹性网卡的宿主网卡所属的设备ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'primaryInterface' => null,
         'portFilter' => null,
-        'ovsHybridPlug' => null
+        'ovsHybridPlug' => null,
+        'vlanId' => null,
+        'parentId' => null,
+        'parentDeviceId' => null
     ];
 
     /**
@@ -69,44 +81,62 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * primaryInterface  功能说明：取值为true，表示是虚拟机的主网卡。
-    * portFilter  功能说明：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。
-    * ovsHybridPlug  用于通知像nova这样的API消费者，应该使用OVS的混合插入策略。
+    * primaryInterface  是否为虚拟机的主网卡。
+    * portFilter  是否提供端口过滤特性, 如安全组和反MAC/IP欺骗。
+    * ovsHybridPlug  是否为ovs/bridge混合模式。
+    * vlanId  辅助弹性网卡的vlan ID。
+    * parentId  辅助弹性网卡的宿主网卡ID。
+    * parentDeviceId  辅助弹性网卡的宿主网卡所属的设备ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'primaryInterface' => 'primary_interface',
             'portFilter' => 'port_filter',
-            'ovsHybridPlug' => 'ovs_hybrid_plug'
+            'ovsHybridPlug' => 'ovs_hybrid_plug',
+            'vlanId' => 'vlan_id',
+            'parentId' => 'parent_id',
+            'parentDeviceId' => 'parent_device_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * primaryInterface  功能说明：取值为true，表示是虚拟机的主网卡。
-    * portFilter  功能说明：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。
-    * ovsHybridPlug  用于通知像nova这样的API消费者，应该使用OVS的混合插入策略。
+    * primaryInterface  是否为虚拟机的主网卡。
+    * portFilter  是否提供端口过滤特性, 如安全组和反MAC/IP欺骗。
+    * ovsHybridPlug  是否为ovs/bridge混合模式。
+    * vlanId  辅助弹性网卡的vlan ID。
+    * parentId  辅助弹性网卡的宿主网卡ID。
+    * parentDeviceId  辅助弹性网卡的宿主网卡所属的设备ID。
     *
     * @var string[]
     */
     protected static $setters = [
             'primaryInterface' => 'setPrimaryInterface',
             'portFilter' => 'setPortFilter',
-            'ovsHybridPlug' => 'setOvsHybridPlug'
+            'ovsHybridPlug' => 'setOvsHybridPlug',
+            'vlanId' => 'setVlanId',
+            'parentId' => 'setParentId',
+            'parentDeviceId' => 'setParentDeviceId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * primaryInterface  功能说明：取值为true，表示是虚拟机的主网卡。
-    * portFilter  功能说明：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。
-    * ovsHybridPlug  用于通知像nova这样的API消费者，应该使用OVS的混合插入策略。
+    * primaryInterface  是否为虚拟机的主网卡。
+    * portFilter  是否提供端口过滤特性, 如安全组和反MAC/IP欺骗。
+    * ovsHybridPlug  是否为ovs/bridge混合模式。
+    * vlanId  辅助弹性网卡的vlan ID。
+    * parentId  辅助弹性网卡的宿主网卡ID。
+    * parentDeviceId  辅助弹性网卡的宿主网卡所属的设备ID。
     *
     * @var string[]
     */
     protected static $getters = [
             'primaryInterface' => 'getPrimaryInterface',
             'portFilter' => 'getPortFilter',
-            'ovsHybridPlug' => 'getOvsHybridPlug'
+            'ovsHybridPlug' => 'getOvsHybridPlug',
+            'vlanId' => 'getVlanId',
+            'parentId' => 'getParentId',
+            'parentDeviceId' => 'getParentDeviceId'
     ];
 
     /**
@@ -170,6 +200,9 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
         $this->container['primaryInterface'] = isset($data['primaryInterface']) ? $data['primaryInterface'] : null;
         $this->container['portFilter'] = isset($data['portFilter']) ? $data['portFilter'] : null;
         $this->container['ovsHybridPlug'] = isset($data['ovsHybridPlug']) ? $data['ovsHybridPlug'] : null;
+        $this->container['vlanId'] = isset($data['vlanId']) ? $data['vlanId'] : null;
+        $this->container['parentId'] = isset($data['parentId']) ? $data['parentId'] : null;
+        $this->container['parentDeviceId'] = isset($data['parentDeviceId']) ? $data['parentDeviceId'] : null;
     }
 
     /**
@@ -196,7 +229,7 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets primaryInterface
-    *  功能说明：取值为true，表示是虚拟机的主网卡。
+    *  是否为虚拟机的主网卡。
     *
     * @return bool|null
     */
@@ -208,7 +241,7 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
     /**
     * Sets primaryInterface
     *
-    * @param bool|null $primaryInterface 功能说明：取值为true，表示是虚拟机的主网卡。
+    * @param bool|null $primaryInterface 是否为虚拟机的主网卡。
     *
     * @return $this
     */
@@ -220,7 +253,7 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets portFilter
-    *  功能说明：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。
+    *  是否提供端口过滤特性, 如安全组和反MAC/IP欺骗。
     *
     * @return bool|null
     */
@@ -232,7 +265,7 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
     /**
     * Sets portFilter
     *
-    * @param bool|null $portFilter 功能说明：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。
+    * @param bool|null $portFilter 是否提供端口过滤特性, 如安全组和反MAC/IP欺骗。
     *
     * @return $this
     */
@@ -244,7 +277,7 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets ovsHybridPlug
-    *  用于通知像nova这样的API消费者，应该使用OVS的混合插入策略。
+    *  是否为ovs/bridge混合模式。
     *
     * @return bool|null
     */
@@ -256,13 +289,85 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
     /**
     * Sets ovsHybridPlug
     *
-    * @param bool|null $ovsHybridPlug 用于通知像nova这样的API消费者，应该使用OVS的混合插入策略。
+    * @param bool|null $ovsHybridPlug 是否为ovs/bridge混合模式。
     *
     * @return $this
     */
     public function setOvsHybridPlug($ovsHybridPlug)
     {
         $this->container['ovsHybridPlug'] = $ovsHybridPlug;
+        return $this;
+    }
+
+    /**
+    * Gets vlanId
+    *  辅助弹性网卡的vlan ID。
+    *
+    * @return string|null
+    */
+    public function getVlanId()
+    {
+        return $this->container['vlanId'];
+    }
+
+    /**
+    * Sets vlanId
+    *
+    * @param string|null $vlanId 辅助弹性网卡的vlan ID。
+    *
+    * @return $this
+    */
+    public function setVlanId($vlanId)
+    {
+        $this->container['vlanId'] = $vlanId;
+        return $this;
+    }
+
+    /**
+    * Gets parentId
+    *  辅助弹性网卡的宿主网卡ID。
+    *
+    * @return string|null
+    */
+    public function getParentId()
+    {
+        return $this->container['parentId'];
+    }
+
+    /**
+    * Sets parentId
+    *
+    * @param string|null $parentId 辅助弹性网卡的宿主网卡ID。
+    *
+    * @return $this
+    */
+    public function setParentId($parentId)
+    {
+        $this->container['parentId'] = $parentId;
+        return $this;
+    }
+
+    /**
+    * Gets parentDeviceId
+    *  辅助弹性网卡的宿主网卡所属的设备ID。
+    *
+    * @return string|null
+    */
+    public function getParentDeviceId()
+    {
+        return $this->container['parentDeviceId'];
+    }
+
+    /**
+    * Sets parentDeviceId
+    *
+    * @param string|null $parentDeviceId 辅助弹性网卡的宿主网卡所属的设备ID。
+    *
+    * @return $this
+    */
+    public function setParentDeviceId($parentDeviceId)
+    {
+        $this->container['parentDeviceId'] = $parentDeviceId;
         return $this;
     }
 

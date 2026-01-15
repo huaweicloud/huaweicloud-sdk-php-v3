@@ -26,6 +26,8 @@ class ShowDirtyDataRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间，UTC时间，例如：2020-09-01T19:50:20Z
     * offset  偏移量，表示从此偏移量开始查询， offset 大于等于 0。默认为0
     * limit  每页显示的条目数量。默认为10，取值范围【1-1000】
+    * anonymizeMode  是否脱敏。
+    * taskMode  查询任务阶段信息，不传默认查增量阶段信息。 - FULL_TRANSFER，全量阶段
     *
     * @var string[]
     */
@@ -35,7 +37,9 @@ class ShowDirtyDataRequest implements ModelInterface, ArrayAccess
             'beginTime' => 'string',
             'endTime' => 'string',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'anonymizeMode' => 'bool',
+            'taskMode' => 'string'
     ];
 
     /**
@@ -46,6 +50,8 @@ class ShowDirtyDataRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间，UTC时间，例如：2020-09-01T19:50:20Z
     * offset  偏移量，表示从此偏移量开始查询， offset 大于等于 0。默认为0
     * limit  每页显示的条目数量。默认为10，取值范围【1-1000】
+    * anonymizeMode  是否脱敏。
+    * taskMode  查询任务阶段信息，不传默认查增量阶段信息。 - FULL_TRANSFER，全量阶段
     *
     * @var string[]
     */
@@ -55,7 +61,9 @@ class ShowDirtyDataRequest implements ModelInterface, ArrayAccess
         'beginTime' => null,
         'endTime' => null,
         'offset' => 'int32',
-        'limit' => 'int32'
+        'limit' => 'int32',
+        'anonymizeMode' => null,
+        'taskMode' => null
     ];
 
     /**
@@ -87,6 +95,8 @@ class ShowDirtyDataRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间，UTC时间，例如：2020-09-01T19:50:20Z
     * offset  偏移量，表示从此偏移量开始查询， offset 大于等于 0。默认为0
     * limit  每页显示的条目数量。默认为10，取值范围【1-1000】
+    * anonymizeMode  是否脱敏。
+    * taskMode  查询任务阶段信息，不传默认查增量阶段信息。 - FULL_TRANSFER，全量阶段
     *
     * @var string[]
     */
@@ -96,7 +106,9 @@ class ShowDirtyDataRequest implements ModelInterface, ArrayAccess
             'beginTime' => 'begin_time',
             'endTime' => 'end_time',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'anonymizeMode' => 'anonymize_mode',
+            'taskMode' => 'task_mode'
     ];
 
     /**
@@ -107,6 +119,8 @@ class ShowDirtyDataRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间，UTC时间，例如：2020-09-01T19:50:20Z
     * offset  偏移量，表示从此偏移量开始查询， offset 大于等于 0。默认为0
     * limit  每页显示的条目数量。默认为10，取值范围【1-1000】
+    * anonymizeMode  是否脱敏。
+    * taskMode  查询任务阶段信息，不传默认查增量阶段信息。 - FULL_TRANSFER，全量阶段
     *
     * @var string[]
     */
@@ -116,7 +130,9 @@ class ShowDirtyDataRequest implements ModelInterface, ArrayAccess
             'beginTime' => 'setBeginTime',
             'endTime' => 'setEndTime',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'anonymizeMode' => 'setAnonymizeMode',
+            'taskMode' => 'setTaskMode'
     ];
 
     /**
@@ -127,6 +143,8 @@ class ShowDirtyDataRequest implements ModelInterface, ArrayAccess
     * endTime  结束时间，UTC时间，例如：2020-09-01T19:50:20Z
     * offset  偏移量，表示从此偏移量开始查询， offset 大于等于 0。默认为0
     * limit  每页显示的条目数量。默认为10，取值范围【1-1000】
+    * anonymizeMode  是否脱敏。
+    * taskMode  查询任务阶段信息，不传默认查增量阶段信息。 - FULL_TRANSFER，全量阶段
     *
     * @var string[]
     */
@@ -136,7 +154,9 @@ class ShowDirtyDataRequest implements ModelInterface, ArrayAccess
             'beginTime' => 'getBeginTime',
             'endTime' => 'getEndTime',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'anonymizeMode' => 'getAnonymizeMode',
+            'taskMode' => 'getTaskMode'
     ];
 
     /**
@@ -218,6 +238,8 @@ class ShowDirtyDataRequest implements ModelInterface, ArrayAccess
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['anonymizeMode'] = isset($data['anonymizeMode']) ? $data['anonymizeMode'] : null;
+        $this->container['taskMode'] = isset($data['taskMode']) ? $data['taskMode'] : null;
     }
 
     /**
@@ -400,6 +422,54 @@ class ShowDirtyDataRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets anonymizeMode
+    *  是否脱敏。
+    *
+    * @return bool|null
+    */
+    public function getAnonymizeMode()
+    {
+        return $this->container['anonymizeMode'];
+    }
+
+    /**
+    * Sets anonymizeMode
+    *
+    * @param bool|null $anonymizeMode 是否脱敏。
+    *
+    * @return $this
+    */
+    public function setAnonymizeMode($anonymizeMode)
+    {
+        $this->container['anonymizeMode'] = $anonymizeMode;
+        return $this;
+    }
+
+    /**
+    * Gets taskMode
+    *  查询任务阶段信息，不传默认查增量阶段信息。 - FULL_TRANSFER，全量阶段
+    *
+    * @return string|null
+    */
+    public function getTaskMode()
+    {
+        return $this->container['taskMode'];
+    }
+
+    /**
+    * Sets taskMode
+    *
+    * @param string|null $taskMode 查询任务阶段信息，不传默认查增量阶段信息。 - FULL_TRANSFER，全量阶段
+    *
+    * @return $this
+    */
+    public function setTaskMode($taskMode)
+    {
+        $this->container['taskMode'] = $taskMode;
         return $this;
     }
 

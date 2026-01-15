@@ -23,13 +23,19 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
     * primaryInterface  **参数解释**： 表示该网卡是否为云服务器的主网卡。 **取值范围**： - true：该网卡是云服务器的主网卡。 - false：该网卡不是云服务器的主网卡。
     * portFilter  **参数解释**： 表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。 **取值范围**： - true：提供端口过滤特性。 - false：未提供端口过滤特性。
     * ovsHybridPlug  **参数解释**： 是否为ovs/bridge混合模式。 **取值范围**： - true：ovs/bridge混合模式。 - false：非ovs/bridge混合模式。
+    * vlanId  **参数解释**： 辅助弹性网卡的vlan ID。 **取值范围**： 不涉及。
+    * parentId  **参数解释**： 辅助弹性网卡的宿主网卡ID。 **取值范围**： 不涉及。
+    * parentDeviceId  **参数解释**： 辅助弹性网卡的宿主网卡所属的设备ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'primaryInterface' => 'bool',
             'portFilter' => 'bool',
-            'ovsHybridPlug' => 'bool'
+            'ovsHybridPlug' => 'bool',
+            'vlanId' => 'string',
+            'parentId' => 'string',
+            'parentDeviceId' => 'string'
     ];
 
     /**
@@ -37,13 +43,19 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
     * primaryInterface  **参数解释**： 表示该网卡是否为云服务器的主网卡。 **取值范围**： - true：该网卡是云服务器的主网卡。 - false：该网卡不是云服务器的主网卡。
     * portFilter  **参数解释**： 表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。 **取值范围**： - true：提供端口过滤特性。 - false：未提供端口过滤特性。
     * ovsHybridPlug  **参数解释**： 是否为ovs/bridge混合模式。 **取值范围**： - true：ovs/bridge混合模式。 - false：非ovs/bridge混合模式。
+    * vlanId  **参数解释**： 辅助弹性网卡的vlan ID。 **取值范围**： 不涉及。
+    * parentId  **参数解释**： 辅助弹性网卡的宿主网卡ID。 **取值范围**： 不涉及。
+    * parentDeviceId  **参数解释**： 辅助弹性网卡的宿主网卡所属的设备ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'primaryInterface' => null,
         'portFilter' => null,
-        'ovsHybridPlug' => null
+        'ovsHybridPlug' => null,
+        'vlanId' => null,
+        'parentId' => null,
+        'parentDeviceId' => null
     ];
 
     /**
@@ -72,13 +84,19 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
     * primaryInterface  **参数解释**： 表示该网卡是否为云服务器的主网卡。 **取值范围**： - true：该网卡是云服务器的主网卡。 - false：该网卡不是云服务器的主网卡。
     * portFilter  **参数解释**： 表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。 **取值范围**： - true：提供端口过滤特性。 - false：未提供端口过滤特性。
     * ovsHybridPlug  **参数解释**： 是否为ovs/bridge混合模式。 **取值范围**： - true：ovs/bridge混合模式。 - false：非ovs/bridge混合模式。
+    * vlanId  **参数解释**： 辅助弹性网卡的vlan ID。 **取值范围**： 不涉及。
+    * parentId  **参数解释**： 辅助弹性网卡的宿主网卡ID。 **取值范围**： 不涉及。
+    * parentDeviceId  **参数解释**： 辅助弹性网卡的宿主网卡所属的设备ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'primaryInterface' => 'primary_interface',
             'portFilter' => 'port_filter',
-            'ovsHybridPlug' => 'ovs_hybrid_plug'
+            'ovsHybridPlug' => 'ovs_hybrid_plug',
+            'vlanId' => 'vlan_id',
+            'parentId' => 'parent_id',
+            'parentDeviceId' => 'parent_device_id'
     ];
 
     /**
@@ -86,13 +104,19 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
     * primaryInterface  **参数解释**： 表示该网卡是否为云服务器的主网卡。 **取值范围**： - true：该网卡是云服务器的主网卡。 - false：该网卡不是云服务器的主网卡。
     * portFilter  **参数解释**： 表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。 **取值范围**： - true：提供端口过滤特性。 - false：未提供端口过滤特性。
     * ovsHybridPlug  **参数解释**： 是否为ovs/bridge混合模式。 **取值范围**： - true：ovs/bridge混合模式。 - false：非ovs/bridge混合模式。
+    * vlanId  **参数解释**： 辅助弹性网卡的vlan ID。 **取值范围**： 不涉及。
+    * parentId  **参数解释**： 辅助弹性网卡的宿主网卡ID。 **取值范围**： 不涉及。
+    * parentDeviceId  **参数解释**： 辅助弹性网卡的宿主网卡所属的设备ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'primaryInterface' => 'setPrimaryInterface',
             'portFilter' => 'setPortFilter',
-            'ovsHybridPlug' => 'setOvsHybridPlug'
+            'ovsHybridPlug' => 'setOvsHybridPlug',
+            'vlanId' => 'setVlanId',
+            'parentId' => 'setParentId',
+            'parentDeviceId' => 'setParentDeviceId'
     ];
 
     /**
@@ -100,13 +124,19 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
     * primaryInterface  **参数解释**： 表示该网卡是否为云服务器的主网卡。 **取值范围**： - true：该网卡是云服务器的主网卡。 - false：该网卡不是云服务器的主网卡。
     * portFilter  **参数解释**： 表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。 **取值范围**： - true：提供端口过滤特性。 - false：未提供端口过滤特性。
     * ovsHybridPlug  **参数解释**： 是否为ovs/bridge混合模式。 **取值范围**： - true：ovs/bridge混合模式。 - false：非ovs/bridge混合模式。
+    * vlanId  **参数解释**： 辅助弹性网卡的vlan ID。 **取值范围**： 不涉及。
+    * parentId  **参数解释**： 辅助弹性网卡的宿主网卡ID。 **取值范围**： 不涉及。
+    * parentDeviceId  **参数解释**： 辅助弹性网卡的宿主网卡所属的设备ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'primaryInterface' => 'getPrimaryInterface',
             'portFilter' => 'getPortFilter',
-            'ovsHybridPlug' => 'getOvsHybridPlug'
+            'ovsHybridPlug' => 'getOvsHybridPlug',
+            'vlanId' => 'getVlanId',
+            'parentId' => 'getParentId',
+            'parentDeviceId' => 'getParentDeviceId'
     ];
 
     /**
@@ -170,6 +200,9 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
         $this->container['primaryInterface'] = isset($data['primaryInterface']) ? $data['primaryInterface'] : null;
         $this->container['portFilter'] = isset($data['portFilter']) ? $data['portFilter'] : null;
         $this->container['ovsHybridPlug'] = isset($data['ovsHybridPlug']) ? $data['ovsHybridPlug'] : null;
+        $this->container['vlanId'] = isset($data['vlanId']) ? $data['vlanId'] : null;
+        $this->container['parentId'] = isset($data['parentId']) ? $data['parentId'] : null;
+        $this->container['parentDeviceId'] = isset($data['parentDeviceId']) ? $data['parentDeviceId'] : null;
     }
 
     /**
@@ -263,6 +296,78 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
     public function setOvsHybridPlug($ovsHybridPlug)
     {
         $this->container['ovsHybridPlug'] = $ovsHybridPlug;
+        return $this;
+    }
+
+    /**
+    * Gets vlanId
+    *  **参数解释**： 辅助弹性网卡的vlan ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getVlanId()
+    {
+        return $this->container['vlanId'];
+    }
+
+    /**
+    * Sets vlanId
+    *
+    * @param string|null $vlanId **参数解释**： 辅助弹性网卡的vlan ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setVlanId($vlanId)
+    {
+        $this->container['vlanId'] = $vlanId;
+        return $this;
+    }
+
+    /**
+    * Gets parentId
+    *  **参数解释**： 辅助弹性网卡的宿主网卡ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getParentId()
+    {
+        return $this->container['parentId'];
+    }
+
+    /**
+    * Sets parentId
+    *
+    * @param string|null $parentId **参数解释**： 辅助弹性网卡的宿主网卡ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setParentId($parentId)
+    {
+        $this->container['parentId'] = $parentId;
+        return $this;
+    }
+
+    /**
+    * Gets parentDeviceId
+    *  **参数解释**： 辅助弹性网卡的宿主网卡所属的设备ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getParentDeviceId()
+    {
+        return $this->container['parentDeviceId'];
+    }
+
+    /**
+    * Sets parentDeviceId
+    *
+    * @param string|null $parentDeviceId **参数解释**： 辅助弹性网卡的宿主网卡所属的设备ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setParentDeviceId($parentDeviceId)
+    {
+        $this->container['parentDeviceId'] = $parentDeviceId;
         return $this;
     }
 

@@ -20,9 +20,7 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  规则id
     * name  规则名称
-    * policyid  策略id
     * description  规则描述
     * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * conditions  匹配条件列表，匹配条件必须同时满足。
@@ -38,9 +36,7 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
             'name' => 'string',
-            'policyid' => 'string',
             'description' => 'string',
             'status' => 'int',
             'conditions' => '\HuaweiCloud\SDK\Waf\V1\Model\CustomRuleConditions[]',
@@ -56,9 +52,7 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  规则id
     * name  规则名称
-    * policyid  策略id
     * description  规则描述
     * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * conditions  匹配条件列表，匹配条件必须同时满足。
@@ -74,9 +68,7 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
         'name' => null,
-        'policyid' => null,
         'description' => null,
         'status' => null,
         'conditions' => null,
@@ -113,9 +105,7 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  规则id
     * name  规则名称
-    * policyid  策略id
     * description  规则描述
     * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * conditions  匹配条件列表，匹配条件必须同时满足。
@@ -131,9 +121,7 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id',
             'name' => 'name',
-            'policyid' => 'policyid',
             'description' => 'description',
             'status' => 'status',
             'conditions' => 'conditions',
@@ -149,9 +137,7 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  规则id
     * name  规则名称
-    * policyid  策略id
     * description  规则描述
     * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * conditions  匹配条件列表，匹配条件必须同时满足。
@@ -167,9 +153,7 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId',
             'name' => 'setName',
-            'policyid' => 'setPolicyid',
             'description' => 'setDescription',
             'status' => 'setStatus',
             'conditions' => 'setConditions',
@@ -185,9 +169,7 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  规则id
     * name  规则名称
-    * policyid  策略id
     * description  规则描述
     * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * conditions  匹配条件列表，匹配条件必须同时满足。
@@ -203,9 +185,7 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId',
             'name' => 'getName',
-            'policyid' => 'getPolicyid',
             'description' => 'getDescription',
             'status' => 'getStatus',
             'conditions' => 'getConditions',
@@ -277,9 +257,7 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['policyid'] = isset($data['policyid']) ? $data['policyid'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['conditions'] = isset($data['conditions']) ? $data['conditions'] : null;
@@ -301,6 +279,9 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['policyRuleIds'] === null) {
+            $invalidProperties[] = "'policyRuleIds' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -313,30 +294,6 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets id
-    *  规则id
-    *
-    * @return string|null
-    */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-    * Sets id
-    *
-    * @param string|null $id 规则id
-    *
-    * @return $this
-    */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-        return $this;
     }
 
     /**
@@ -360,30 +317,6 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
-        return $this;
-    }
-
-    /**
-    * Gets policyid
-    *  策略id
-    *
-    * @return string|null
-    */
-    public function getPolicyid()
-    {
-        return $this->container['policyid'];
-    }
-
-    /**
-    * Sets policyid
-    *
-    * @param string|null $policyid 策略id
-    *
-    * @return $this
-    */
-    public function setPolicyid($policyid)
-    {
-        $this->container['policyid'] = $policyid;
         return $this;
     }
 
@@ -631,7 +564,7 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     * Gets policyRuleIds
     *  **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
-    * @return \HuaweiCloud\SDK\Waf\V1\Model\PolicyRuleIdRequestBodyPolicyRuleIds[]|null
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\PolicyRuleIdRequestBodyPolicyRuleIds[]
     */
     public function getPolicyRuleIds()
     {
@@ -641,7 +574,7 @@ class BatchUpdateCustomRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets policyRuleIds
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\PolicyRuleIdRequestBodyPolicyRuleIds[]|null $policyRuleIds **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\PolicyRuleIdRequestBodyPolicyRuleIds[] $policyRuleIds **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

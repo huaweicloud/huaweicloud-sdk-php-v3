@@ -21,10 +21,10 @@ class Cluster implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * activateInfo  activateInfo
-    * chargeModel  计费模式  - Period: 包周期  - Demand: 按需
+    * chargeModel  计费模式  - Period：包周期  - Demand：按需
     * comment  备注信息
     * created  创建时间
-    * deployMode  部署方式  - CLOUD: 云上  - OUTSIDE：云外
+    * deployMode  部署方式  - CLOUD：云上  - OUTSIDE：云外
     * detail  detail
     * enterpriseProjectId  企业项目ID
     * expired  过期时间
@@ -61,10 +61,10 @@ class Cluster implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * activateInfo  activateInfo
-    * chargeModel  计费模式  - Period: 包周期  - Demand: 按需
+    * chargeModel  计费模式  - Period：包周期  - Demand：按需
     * comment  备注信息
     * created  创建时间
-    * deployMode  部署方式  - CLOUD: 云上  - OUTSIDE：云外
+    * deployMode  部署方式  - CLOUD：云上  - OUTSIDE：云外
     * detail  detail
     * enterpriseProjectId  企业项目ID
     * expired  过期时间
@@ -122,10 +122,10 @@ class Cluster implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * activateInfo  activateInfo
-    * chargeModel  计费模式  - Period: 包周期  - Demand: 按需
+    * chargeModel  计费模式  - Period：包周期  - Demand：按需
     * comment  备注信息
     * created  创建时间
-    * deployMode  部署方式  - CLOUD: 云上  - OUTSIDE：云外
+    * deployMode  部署方式  - CLOUD：云上  - OUTSIDE：云外
     * detail  detail
     * enterpriseProjectId  企业项目ID
     * expired  过期时间
@@ -162,10 +162,10 @@ class Cluster implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * activateInfo  activateInfo
-    * chargeModel  计费模式  - Period: 包周期  - Demand: 按需
+    * chargeModel  计费模式  - Period：包周期  - Demand：按需
     * comment  备注信息
     * created  创建时间
-    * deployMode  部署方式  - CLOUD: 云上  - OUTSIDE：云外
+    * deployMode  部署方式  - CLOUD：云上  - OUTSIDE：云外
     * detail  detail
     * enterpriseProjectId  企业项目ID
     * expired  过期时间
@@ -202,10 +202,10 @@ class Cluster implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * activateInfo  activateInfo
-    * chargeModel  计费模式  - Period: 包周期  - Demand: 按需
+    * chargeModel  计费模式  - Period：包周期  - Demand：按需
     * comment  备注信息
     * created  创建时间
-    * deployMode  部署方式  - CLOUD: 云上  - OUTSIDE：云外
+    * deployMode  部署方式  - CLOUD：云上  - OUTSIDE：云外
     * detail  detail
     * enterpriseProjectId  企业项目ID
     * expired  过期时间
@@ -411,7 +411,7 @@ class Cluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeModel
-    *  计费模式  - Period: 包周期  - Demand: 按需
+    *  计费模式  - Period：包周期  - Demand：按需
     *
     * @return string|null
     */
@@ -423,7 +423,7 @@ class Cluster implements ModelInterface, ArrayAccess
     /**
     * Sets chargeModel
     *
-    * @param string|null $chargeModel 计费模式  - Period: 包周期  - Demand: 按需
+    * @param string|null $chargeModel 计费模式  - Period：包周期  - Demand：按需
     *
     * @return $this
     */
@@ -483,7 +483,7 @@ class Cluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets deployMode
-    *  部署方式  - CLOUD: 云上  - OUTSIDE：云外
+    *  部署方式  - CLOUD：云上  - OUTSIDE：云外
     *
     * @return string|null
     */
@@ -495,7 +495,7 @@ class Cluster implements ModelInterface, ArrayAccess
     /**
     * Sets deployMode
     *
-    * @param string|null $deployMode 部署方式  - CLOUD: 云上  - OUTSIDE：云外
+    * @param string|null $deployMode 部署方式  - CLOUD：云上  - OUTSIDE：云外
     *
     * @return $this
     */

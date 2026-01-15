@@ -25,6 +25,7 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
     * nodePoolOrder  节点池升级顺序配置，key/value对格式。 > key表示节点池ID，默认节点池取值为\"DefaultPool\" > value表示对应节点池的优先级，默认值为0，优先级最低，数值越大优先级越高
     * strategy  strategy
     * targetVersion  目标集群版本，例如\"v1.23\"
+    * isOnlyUpgrade  是否在集群升级流程中执行升级前检查。默认为false，表示会执行升级前检查，如果您在集群升级编排中调用了升级前检查的API，则升级时可用将该字段置为false，不再额外执行一次检查
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
             'nodeOrder' => 'map[string,\HuaweiCloud\SDK\Cce\V3\Model\NodePriority[]]',
             'nodePoolOrder' => 'map[string,int]',
             'strategy' => '\HuaweiCloud\SDK\Cce\V3\Model\UpgradeStrategy',
-            'targetVersion' => 'string'
+            'targetVersion' => 'string',
+            'isOnlyUpgrade' => 'bool'
     ];
 
     /**
@@ -43,6 +45,7 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
     * nodePoolOrder  节点池升级顺序配置，key/value对格式。 > key表示节点池ID，默认节点池取值为\"DefaultPool\" > value表示对应节点池的优先级，默认值为0，优先级最低，数值越大优先级越高
     * strategy  strategy
     * targetVersion  目标集群版本，例如\"v1.23\"
+    * isOnlyUpgrade  是否在集群升级流程中执行升级前检查。默认为false，表示会执行升级前检查，如果您在集群升级编排中调用了升级前检查的API，则升级时可用将该字段置为false，不再额外执行一次检查
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
         'nodeOrder' => null,
         'nodePoolOrder' => null,
         'strategy' => null,
-        'targetVersion' => null
+        'targetVersion' => null,
+        'isOnlyUpgrade' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
     * nodePoolOrder  节点池升级顺序配置，key/value对格式。 > key表示节点池ID，默认节点池取值为\"DefaultPool\" > value表示对应节点池的优先级，默认值为0，优先级最低，数值越大优先级越高
     * strategy  strategy
     * targetVersion  目标集群版本，例如\"v1.23\"
+    * isOnlyUpgrade  是否在集群升级流程中执行升级前检查。默认为false，表示会执行升级前检查，如果您在集群升级编排中调用了升级前检查的API，则升级时可用将该字段置为false，不再额外执行一次检查
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
             'nodeOrder' => 'nodeOrder',
             'nodePoolOrder' => 'nodePoolOrder',
             'strategy' => 'strategy',
-            'targetVersion' => 'targetVersion'
+            'targetVersion' => 'targetVersion',
+            'isOnlyUpgrade' => 'isOnlyUpgrade'
     ];
 
     /**
@@ -100,6 +106,7 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
     * nodePoolOrder  节点池升级顺序配置，key/value对格式。 > key表示节点池ID，默认节点池取值为\"DefaultPool\" > value表示对应节点池的优先级，默认值为0，优先级最低，数值越大优先级越高
     * strategy  strategy
     * targetVersion  目标集群版本，例如\"v1.23\"
+    * isOnlyUpgrade  是否在集群升级流程中执行升级前检查。默认为false，表示会执行升级前检查，如果您在集群升级编排中调用了升级前检查的API，则升级时可用将该字段置为false，不再额外执行一次检查
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
             'nodeOrder' => 'setNodeOrder',
             'nodePoolOrder' => 'setNodePoolOrder',
             'strategy' => 'setStrategy',
-            'targetVersion' => 'setTargetVersion'
+            'targetVersion' => 'setTargetVersion',
+            'isOnlyUpgrade' => 'setIsOnlyUpgrade'
     ];
 
     /**
@@ -118,6 +126,7 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
     * nodePoolOrder  节点池升级顺序配置，key/value对格式。 > key表示节点池ID，默认节点池取值为\"DefaultPool\" > value表示对应节点池的优先级，默认值为0，优先级最低，数值越大优先级越高
     * strategy  strategy
     * targetVersion  目标集群版本，例如\"v1.23\"
+    * isOnlyUpgrade  是否在集群升级流程中执行升级前检查。默认为false，表示会执行升级前检查，如果您在集群升级编排中调用了升级前检查的API，则升级时可用将该字段置为false，不再额外执行一次检查
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
             'nodeOrder' => 'getNodeOrder',
             'nodePoolOrder' => 'getNodePoolOrder',
             'strategy' => 'getStrategy',
-            'targetVersion' => 'getTargetVersion'
+            'targetVersion' => 'getTargetVersion',
+            'isOnlyUpgrade' => 'getIsOnlyUpgrade'
     ];
 
     /**
@@ -192,6 +202,7 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
         $this->container['nodePoolOrder'] = isset($data['nodePoolOrder']) ? $data['nodePoolOrder'] : null;
         $this->container['strategy'] = isset($data['strategy']) ? $data['strategy'] : null;
         $this->container['targetVersion'] = isset($data['targetVersion']) ? $data['targetVersion'] : null;
+        $this->container['isOnlyUpgrade'] = isset($data['isOnlyUpgrade']) ? $data['isOnlyUpgrade'] : null;
     }
 
     /**
@@ -339,6 +350,30 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
     public function setTargetVersion($targetVersion)
     {
         $this->container['targetVersion'] = $targetVersion;
+        return $this;
+    }
+
+    /**
+    * Gets isOnlyUpgrade
+    *  是否在集群升级流程中执行升级前检查。默认为false，表示会执行升级前检查，如果您在集群升级编排中调用了升级前检查的API，则升级时可用将该字段置为false，不再额外执行一次检查
+    *
+    * @return bool|null
+    */
+    public function getIsOnlyUpgrade()
+    {
+        return $this->container['isOnlyUpgrade'];
+    }
+
+    /**
+    * Sets isOnlyUpgrade
+    *
+    * @param bool|null $isOnlyUpgrade 是否在集群升级流程中执行升级前检查。默认为false，表示会执行升级前检查，如果您在集群升级编排中调用了升级前检查的API，则升级时可用将该字段置为false，不再额外执行一次检查
+    *
+    * @return $this
+    */
+    public function setIsOnlyUpgrade($isOnlyUpgrade)
+    {
+        $this->container['isOnlyUpgrade'] = $isOnlyUpgrade;
         return $this;
     }
 

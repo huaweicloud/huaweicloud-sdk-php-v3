@@ -21,16 +21,16 @@ class BackupInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * backupTaskFailReason  备份失败原因
-    * backupTime  备份时间,yyyy-MM-dd HH:mm:ss
+    * backupTime  备份时间，yyyy-MM-dd HH:mm:ss
     * deleted  标记删除
-    * endTime  备份结束时间,yyyy-MM-dd HH:mm:ss
+    * endTime  备份结束时间，yyyy-MM-dd HH:mm:ss
     * fileSize  文件大小
-    * fileSizeUnit  文件大小单位 - Byte：Byte - KB：kb - MB: mb - GB: gb
+    * fileSizeUnit  文件大小单位 - Byte：Byte - KB：kb - MB：mb - GB：gb
     * id  备份ID
     * mode  备份方式 - AUTO：自动备份
     * name  备份名称
     * percentage  备份进度
-    * progress  进度 - CLEAN_AFTER_FAILED: 清理失败 - DELETING：删除中 - DELETED：已删除 - DELETE_FAIL：删除失败 - RESTORING_WAITING：恢复等待中 - RESTORING：恢复中 - RESTORED：已恢复 - RESTORE_FAIL：恢复失败 - BACKUP_WAITING：等待备份 - FILE_UPLOAD_WAITING：等待上传备份文件 - FILE_UPLOADING：上传中 - AUTO_BACKUPING：自动备份中 - AUTO_BACKUPED：自动备份结束 - AUTO_BACKUP_FAIL：自动备份失败 - MANUAL_BACKUPING：手动备份中 - MANUAL_BACKUPED：手动备份结束 - MANUAL_BACKUP_FAIL：手动备份失败 - ISAP_WAITING：ISAP等待备份 - ISAP_BACKUPING：ISAP备份中 - ISAP_BACKUPED：ISAP备份成功 - ISAP_BACKUP_FAIL：ISAP备份失败 - ISAP_FILE_UPLOAD_WAITING：ISAP等待上传备份文件 - ISAP_FILE_UPLOADING：ISAP上传中
+    * progress  进度 - CLEAN_AFTER_FAILED：清理失败 - DELETING：删除中 - DELETED：已删除 - DELETE_FAIL：删除失败 - RESTORING_WAITING：恢复等待中 - RESTORING：恢复中 - RESTORED：已恢复 - RESTORE_FAIL：恢复失败 - BACKUP_WAITING：等待备份 - FILE_UPLOAD_WAITING：等待上传备份文件 - FILE_UPLOADING：上传中 - AUTO_BACKUPING：自动备份中 - AUTO_BACKUPED：自动备份结束 - AUTO_BACKUP_FAIL：自动备份失败 - MANUAL_BACKUPING：手动备份中 - MANUAL_BACKUPED：手动备份结束 - MANUAL_BACKUP_FAIL：手动备份失败 - ISAP_WAITING：ISAP等待备份 - ISAP_BACKUPING：ISAP备份中 - ISAP_BACKUPED：ISAP备份成功 - ISAP_BACKUP_FAIL：ISAP备份失败 - ISAP_FILE_UPLOAD_WAITING：ISAP等待上传备份文件 - ISAP_FILE_UPLOADING：ISAP上传中
     * restoreTaskFailReason  还原失败原因
     * sha256  文件SHA256
     * startTime  备份开始时间,yyyy-MM-dd HH:mm:ss
@@ -57,16 +57,16 @@ class BackupInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * backupTaskFailReason  备份失败原因
-    * backupTime  备份时间,yyyy-MM-dd HH:mm:ss
+    * backupTime  备份时间，yyyy-MM-dd HH:mm:ss
     * deleted  标记删除
-    * endTime  备份结束时间,yyyy-MM-dd HH:mm:ss
+    * endTime  备份结束时间，yyyy-MM-dd HH:mm:ss
     * fileSize  文件大小
-    * fileSizeUnit  文件大小单位 - Byte：Byte - KB：kb - MB: mb - GB: gb
+    * fileSizeUnit  文件大小单位 - Byte：Byte - KB：kb - MB：mb - GB：gb
     * id  备份ID
     * mode  备份方式 - AUTO：自动备份
     * name  备份名称
     * percentage  备份进度
-    * progress  进度 - CLEAN_AFTER_FAILED: 清理失败 - DELETING：删除中 - DELETED：已删除 - DELETE_FAIL：删除失败 - RESTORING_WAITING：恢复等待中 - RESTORING：恢复中 - RESTORED：已恢复 - RESTORE_FAIL：恢复失败 - BACKUP_WAITING：等待备份 - FILE_UPLOAD_WAITING：等待上传备份文件 - FILE_UPLOADING：上传中 - AUTO_BACKUPING：自动备份中 - AUTO_BACKUPED：自动备份结束 - AUTO_BACKUP_FAIL：自动备份失败 - MANUAL_BACKUPING：手动备份中 - MANUAL_BACKUPED：手动备份结束 - MANUAL_BACKUP_FAIL：手动备份失败 - ISAP_WAITING：ISAP等待备份 - ISAP_BACKUPING：ISAP备份中 - ISAP_BACKUPED：ISAP备份成功 - ISAP_BACKUP_FAIL：ISAP备份失败 - ISAP_FILE_UPLOAD_WAITING：ISAP等待上传备份文件 - ISAP_FILE_UPLOADING：ISAP上传中
+    * progress  进度 - CLEAN_AFTER_FAILED：清理失败 - DELETING：删除中 - DELETED：已删除 - DELETE_FAIL：删除失败 - RESTORING_WAITING：恢复等待中 - RESTORING：恢复中 - RESTORED：已恢复 - RESTORE_FAIL：恢复失败 - BACKUP_WAITING：等待备份 - FILE_UPLOAD_WAITING：等待上传备份文件 - FILE_UPLOADING：上传中 - AUTO_BACKUPING：自动备份中 - AUTO_BACKUPED：自动备份结束 - AUTO_BACKUP_FAIL：自动备份失败 - MANUAL_BACKUPING：手动备份中 - MANUAL_BACKUPED：手动备份结束 - MANUAL_BACKUP_FAIL：手动备份失败 - ISAP_WAITING：ISAP等待备份 - ISAP_BACKUPING：ISAP备份中 - ISAP_BACKUPED：ISAP备份成功 - ISAP_BACKUP_FAIL：ISAP备份失败 - ISAP_FILE_UPLOAD_WAITING：ISAP等待上传备份文件 - ISAP_FILE_UPLOADING：ISAP上传中
     * restoreTaskFailReason  还原失败原因
     * sha256  文件SHA256
     * startTime  备份开始时间,yyyy-MM-dd HH:mm:ss
@@ -114,16 +114,16 @@ class BackupInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * backupTaskFailReason  备份失败原因
-    * backupTime  备份时间,yyyy-MM-dd HH:mm:ss
+    * backupTime  备份时间，yyyy-MM-dd HH:mm:ss
     * deleted  标记删除
-    * endTime  备份结束时间,yyyy-MM-dd HH:mm:ss
+    * endTime  备份结束时间，yyyy-MM-dd HH:mm:ss
     * fileSize  文件大小
-    * fileSizeUnit  文件大小单位 - Byte：Byte - KB：kb - MB: mb - GB: gb
+    * fileSizeUnit  文件大小单位 - Byte：Byte - KB：kb - MB：mb - GB：gb
     * id  备份ID
     * mode  备份方式 - AUTO：自动备份
     * name  备份名称
     * percentage  备份进度
-    * progress  进度 - CLEAN_AFTER_FAILED: 清理失败 - DELETING：删除中 - DELETED：已删除 - DELETE_FAIL：删除失败 - RESTORING_WAITING：恢复等待中 - RESTORING：恢复中 - RESTORED：已恢复 - RESTORE_FAIL：恢复失败 - BACKUP_WAITING：等待备份 - FILE_UPLOAD_WAITING：等待上传备份文件 - FILE_UPLOADING：上传中 - AUTO_BACKUPING：自动备份中 - AUTO_BACKUPED：自动备份结束 - AUTO_BACKUP_FAIL：自动备份失败 - MANUAL_BACKUPING：手动备份中 - MANUAL_BACKUPED：手动备份结束 - MANUAL_BACKUP_FAIL：手动备份失败 - ISAP_WAITING：ISAP等待备份 - ISAP_BACKUPING：ISAP备份中 - ISAP_BACKUPED：ISAP备份成功 - ISAP_BACKUP_FAIL：ISAP备份失败 - ISAP_FILE_UPLOAD_WAITING：ISAP等待上传备份文件 - ISAP_FILE_UPLOADING：ISAP上传中
+    * progress  进度 - CLEAN_AFTER_FAILED：清理失败 - DELETING：删除中 - DELETED：已删除 - DELETE_FAIL：删除失败 - RESTORING_WAITING：恢复等待中 - RESTORING：恢复中 - RESTORED：已恢复 - RESTORE_FAIL：恢复失败 - BACKUP_WAITING：等待备份 - FILE_UPLOAD_WAITING：等待上传备份文件 - FILE_UPLOADING：上传中 - AUTO_BACKUPING：自动备份中 - AUTO_BACKUPED：自动备份结束 - AUTO_BACKUP_FAIL：自动备份失败 - MANUAL_BACKUPING：手动备份中 - MANUAL_BACKUPED：手动备份结束 - MANUAL_BACKUP_FAIL：手动备份失败 - ISAP_WAITING：ISAP等待备份 - ISAP_BACKUPING：ISAP备份中 - ISAP_BACKUPED：ISAP备份成功 - ISAP_BACKUP_FAIL：ISAP备份失败 - ISAP_FILE_UPLOAD_WAITING：ISAP等待上传备份文件 - ISAP_FILE_UPLOADING：ISAP上传中
     * restoreTaskFailReason  还原失败原因
     * sha256  文件SHA256
     * startTime  备份开始时间,yyyy-MM-dd HH:mm:ss
@@ -150,16 +150,16 @@ class BackupInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * backupTaskFailReason  备份失败原因
-    * backupTime  备份时间,yyyy-MM-dd HH:mm:ss
+    * backupTime  备份时间，yyyy-MM-dd HH:mm:ss
     * deleted  标记删除
-    * endTime  备份结束时间,yyyy-MM-dd HH:mm:ss
+    * endTime  备份结束时间，yyyy-MM-dd HH:mm:ss
     * fileSize  文件大小
-    * fileSizeUnit  文件大小单位 - Byte：Byte - KB：kb - MB: mb - GB: gb
+    * fileSizeUnit  文件大小单位 - Byte：Byte - KB：kb - MB：mb - GB：gb
     * id  备份ID
     * mode  备份方式 - AUTO：自动备份
     * name  备份名称
     * percentage  备份进度
-    * progress  进度 - CLEAN_AFTER_FAILED: 清理失败 - DELETING：删除中 - DELETED：已删除 - DELETE_FAIL：删除失败 - RESTORING_WAITING：恢复等待中 - RESTORING：恢复中 - RESTORED：已恢复 - RESTORE_FAIL：恢复失败 - BACKUP_WAITING：等待备份 - FILE_UPLOAD_WAITING：等待上传备份文件 - FILE_UPLOADING：上传中 - AUTO_BACKUPING：自动备份中 - AUTO_BACKUPED：自动备份结束 - AUTO_BACKUP_FAIL：自动备份失败 - MANUAL_BACKUPING：手动备份中 - MANUAL_BACKUPED：手动备份结束 - MANUAL_BACKUP_FAIL：手动备份失败 - ISAP_WAITING：ISAP等待备份 - ISAP_BACKUPING：ISAP备份中 - ISAP_BACKUPED：ISAP备份成功 - ISAP_BACKUP_FAIL：ISAP备份失败 - ISAP_FILE_UPLOAD_WAITING：ISAP等待上传备份文件 - ISAP_FILE_UPLOADING：ISAP上传中
+    * progress  进度 - CLEAN_AFTER_FAILED：清理失败 - DELETING：删除中 - DELETED：已删除 - DELETE_FAIL：删除失败 - RESTORING_WAITING：恢复等待中 - RESTORING：恢复中 - RESTORED：已恢复 - RESTORE_FAIL：恢复失败 - BACKUP_WAITING：等待备份 - FILE_UPLOAD_WAITING：等待上传备份文件 - FILE_UPLOADING：上传中 - AUTO_BACKUPING：自动备份中 - AUTO_BACKUPED：自动备份结束 - AUTO_BACKUP_FAIL：自动备份失败 - MANUAL_BACKUPING：手动备份中 - MANUAL_BACKUPED：手动备份结束 - MANUAL_BACKUP_FAIL：手动备份失败 - ISAP_WAITING：ISAP等待备份 - ISAP_BACKUPING：ISAP备份中 - ISAP_BACKUPED：ISAP备份成功 - ISAP_BACKUP_FAIL：ISAP备份失败 - ISAP_FILE_UPLOAD_WAITING：ISAP等待上传备份文件 - ISAP_FILE_UPLOADING：ISAP上传中
     * restoreTaskFailReason  还原失败原因
     * sha256  文件SHA256
     * startTime  备份开始时间,yyyy-MM-dd HH:mm:ss
@@ -186,16 +186,16 @@ class BackupInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * backupTaskFailReason  备份失败原因
-    * backupTime  备份时间,yyyy-MM-dd HH:mm:ss
+    * backupTime  备份时间，yyyy-MM-dd HH:mm:ss
     * deleted  标记删除
-    * endTime  备份结束时间,yyyy-MM-dd HH:mm:ss
+    * endTime  备份结束时间，yyyy-MM-dd HH:mm:ss
     * fileSize  文件大小
-    * fileSizeUnit  文件大小单位 - Byte：Byte - KB：kb - MB: mb - GB: gb
+    * fileSizeUnit  文件大小单位 - Byte：Byte - KB：kb - MB：mb - GB：gb
     * id  备份ID
     * mode  备份方式 - AUTO：自动备份
     * name  备份名称
     * percentage  备份进度
-    * progress  进度 - CLEAN_AFTER_FAILED: 清理失败 - DELETING：删除中 - DELETED：已删除 - DELETE_FAIL：删除失败 - RESTORING_WAITING：恢复等待中 - RESTORING：恢复中 - RESTORED：已恢复 - RESTORE_FAIL：恢复失败 - BACKUP_WAITING：等待备份 - FILE_UPLOAD_WAITING：等待上传备份文件 - FILE_UPLOADING：上传中 - AUTO_BACKUPING：自动备份中 - AUTO_BACKUPED：自动备份结束 - AUTO_BACKUP_FAIL：自动备份失败 - MANUAL_BACKUPING：手动备份中 - MANUAL_BACKUPED：手动备份结束 - MANUAL_BACKUP_FAIL：手动备份失败 - ISAP_WAITING：ISAP等待备份 - ISAP_BACKUPING：ISAP备份中 - ISAP_BACKUPED：ISAP备份成功 - ISAP_BACKUP_FAIL：ISAP备份失败 - ISAP_FILE_UPLOAD_WAITING：ISAP等待上传备份文件 - ISAP_FILE_UPLOADING：ISAP上传中
+    * progress  进度 - CLEAN_AFTER_FAILED：清理失败 - DELETING：删除中 - DELETED：已删除 - DELETE_FAIL：删除失败 - RESTORING_WAITING：恢复等待中 - RESTORING：恢复中 - RESTORED：已恢复 - RESTORE_FAIL：恢复失败 - BACKUP_WAITING：等待备份 - FILE_UPLOAD_WAITING：等待上传备份文件 - FILE_UPLOADING：上传中 - AUTO_BACKUPING：自动备份中 - AUTO_BACKUPED：自动备份结束 - AUTO_BACKUP_FAIL：自动备份失败 - MANUAL_BACKUPING：手动备份中 - MANUAL_BACKUPED：手动备份结束 - MANUAL_BACKUP_FAIL：手动备份失败 - ISAP_WAITING：ISAP等待备份 - ISAP_BACKUPING：ISAP备份中 - ISAP_BACKUPED：ISAP备份成功 - ISAP_BACKUP_FAIL：ISAP备份失败 - ISAP_FILE_UPLOAD_WAITING：ISAP等待上传备份文件 - ISAP_FILE_UPLOADING：ISAP上传中
     * restoreTaskFailReason  还原失败原因
     * sha256  文件SHA256
     * startTime  备份开始时间,yyyy-MM-dd HH:mm:ss
@@ -341,7 +341,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupTime
-    *  备份时间,yyyy-MM-dd HH:mm:ss
+    *  备份时间，yyyy-MM-dd HH:mm:ss
     *
     * @return \DateTime|null
     */
@@ -353,7 +353,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets backupTime
     *
-    * @param \DateTime|null $backupTime 备份时间,yyyy-MM-dd HH:mm:ss
+    * @param \DateTime|null $backupTime 备份时间，yyyy-MM-dd HH:mm:ss
     *
     * @return $this
     */
@@ -389,7 +389,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  备份结束时间,yyyy-MM-dd HH:mm:ss
+    *  备份结束时间，yyyy-MM-dd HH:mm:ss
     *
     * @return \DateTime|null
     */
@@ -401,7 +401,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param \DateTime|null $endTime 备份结束时间,yyyy-MM-dd HH:mm:ss
+    * @param \DateTime|null $endTime 备份结束时间，yyyy-MM-dd HH:mm:ss
     *
     * @return $this
     */
@@ -437,7 +437,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileSizeUnit
-    *  文件大小单位 - Byte：Byte - KB：kb - MB: mb - GB: gb
+    *  文件大小单位 - Byte：Byte - KB：kb - MB：mb - GB：gb
     *
     * @return string|null
     */
@@ -449,7 +449,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileSizeUnit
     *
-    * @param string|null $fileSizeUnit 文件大小单位 - Byte：Byte - KB：kb - MB: mb - GB: gb
+    * @param string|null $fileSizeUnit 文件大小单位 - Byte：Byte - KB：kb - MB：mb - GB：gb
     *
     * @return $this
     */
@@ -557,7 +557,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets progress
-    *  进度 - CLEAN_AFTER_FAILED: 清理失败 - DELETING：删除中 - DELETED：已删除 - DELETE_FAIL：删除失败 - RESTORING_WAITING：恢复等待中 - RESTORING：恢复中 - RESTORED：已恢复 - RESTORE_FAIL：恢复失败 - BACKUP_WAITING：等待备份 - FILE_UPLOAD_WAITING：等待上传备份文件 - FILE_UPLOADING：上传中 - AUTO_BACKUPING：自动备份中 - AUTO_BACKUPED：自动备份结束 - AUTO_BACKUP_FAIL：自动备份失败 - MANUAL_BACKUPING：手动备份中 - MANUAL_BACKUPED：手动备份结束 - MANUAL_BACKUP_FAIL：手动备份失败 - ISAP_WAITING：ISAP等待备份 - ISAP_BACKUPING：ISAP备份中 - ISAP_BACKUPED：ISAP备份成功 - ISAP_BACKUP_FAIL：ISAP备份失败 - ISAP_FILE_UPLOAD_WAITING：ISAP等待上传备份文件 - ISAP_FILE_UPLOADING：ISAP上传中
+    *  进度 - CLEAN_AFTER_FAILED：清理失败 - DELETING：删除中 - DELETED：已删除 - DELETE_FAIL：删除失败 - RESTORING_WAITING：恢复等待中 - RESTORING：恢复中 - RESTORED：已恢复 - RESTORE_FAIL：恢复失败 - BACKUP_WAITING：等待备份 - FILE_UPLOAD_WAITING：等待上传备份文件 - FILE_UPLOADING：上传中 - AUTO_BACKUPING：自动备份中 - AUTO_BACKUPED：自动备份结束 - AUTO_BACKUP_FAIL：自动备份失败 - MANUAL_BACKUPING：手动备份中 - MANUAL_BACKUPED：手动备份结束 - MANUAL_BACKUP_FAIL：手动备份失败 - ISAP_WAITING：ISAP等待备份 - ISAP_BACKUPING：ISAP备份中 - ISAP_BACKUPED：ISAP备份成功 - ISAP_BACKUP_FAIL：ISAP备份失败 - ISAP_FILE_UPLOAD_WAITING：ISAP等待上传备份文件 - ISAP_FILE_UPLOADING：ISAP上传中
     *
     * @return string|null
     */
@@ -569,7 +569,7 @@ class BackupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets progress
     *
-    * @param string|null $progress 进度 - CLEAN_AFTER_FAILED: 清理失败 - DELETING：删除中 - DELETED：已删除 - DELETE_FAIL：删除失败 - RESTORING_WAITING：恢复等待中 - RESTORING：恢复中 - RESTORED：已恢复 - RESTORE_FAIL：恢复失败 - BACKUP_WAITING：等待备份 - FILE_UPLOAD_WAITING：等待上传备份文件 - FILE_UPLOADING：上传中 - AUTO_BACKUPING：自动备份中 - AUTO_BACKUPED：自动备份结束 - AUTO_BACKUP_FAIL：自动备份失败 - MANUAL_BACKUPING：手动备份中 - MANUAL_BACKUPED：手动备份结束 - MANUAL_BACKUP_FAIL：手动备份失败 - ISAP_WAITING：ISAP等待备份 - ISAP_BACKUPING：ISAP备份中 - ISAP_BACKUPED：ISAP备份成功 - ISAP_BACKUP_FAIL：ISAP备份失败 - ISAP_FILE_UPLOAD_WAITING：ISAP等待上传备份文件 - ISAP_FILE_UPLOADING：ISAP上传中
+    * @param string|null $progress 进度 - CLEAN_AFTER_FAILED：清理失败 - DELETING：删除中 - DELETED：已删除 - DELETE_FAIL：删除失败 - RESTORING_WAITING：恢复等待中 - RESTORING：恢复中 - RESTORED：已恢复 - RESTORE_FAIL：恢复失败 - BACKUP_WAITING：等待备份 - FILE_UPLOAD_WAITING：等待上传备份文件 - FILE_UPLOADING：上传中 - AUTO_BACKUPING：自动备份中 - AUTO_BACKUPED：自动备份结束 - AUTO_BACKUP_FAIL：自动备份失败 - MANUAL_BACKUPING：手动备份中 - MANUAL_BACKUPED：手动备份结束 - MANUAL_BACKUP_FAIL：手动备份失败 - ISAP_WAITING：ISAP等待备份 - ISAP_BACKUPING：ISAP备份中 - ISAP_BACKUPED：ISAP备份成功 - ISAP_BACKUP_FAIL：ISAP备份失败 - ISAP_FILE_UPLOAD_WAITING：ISAP等待上传备份文件 - ISAP_FILE_UPLOADING：ISAP上传中
     *
     * @return $this
     */

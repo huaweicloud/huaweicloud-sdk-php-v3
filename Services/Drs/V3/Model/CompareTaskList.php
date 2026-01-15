@@ -21,7 +21,7 @@ class CompareTaskList implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * compareTaskId  对比任务的id。
-    * compareType  对比任务的类型。
+    * compareType  对比任务的类型。 lines：行对比，contents：值对比，object_comparison：对象级对比落库，object：对象级对比落库，account：账户对比，random：抽样比对，node：内核计算对比结果，mgr：管控计算对比结果
     * compareTaskStatus  对比任务的状态。 - RUNNING-运行中 - WAITING_FOR_RUNNING-等待启动中 - SUCCESSFUL-完成 - FAILED-失败 - CANCELLED-已取消 - TIMEOUT_INTERRUPT-超时中断 - FULL_DOING-全量校验中 - INCRE_DOING-增量校验中
     * createTime  对比开始时间。
     * endTime  对比结束时间。
@@ -39,7 +39,7 @@ class CompareTaskList implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * compareTaskId  对比任务的id。
-    * compareType  对比任务的类型。
+    * compareType  对比任务的类型。 lines：行对比，contents：值对比，object_comparison：对象级对比落库，object：对象级对比落库，account：账户对比，random：抽样比对，node：内核计算对比结果，mgr：管控计算对比结果
     * compareTaskStatus  对比任务的状态。 - RUNNING-运行中 - WAITING_FOR_RUNNING-等待启动中 - SUCCESSFUL-完成 - FAILED-失败 - CANCELLED-已取消 - TIMEOUT_INTERRUPT-超时中断 - FULL_DOING-全量校验中 - INCRE_DOING-增量校验中
     * createTime  对比开始时间。
     * endTime  对比结束时间。
@@ -78,7 +78,7 @@ class CompareTaskList implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * compareTaskId  对比任务的id。
-    * compareType  对比任务的类型。
+    * compareType  对比任务的类型。 lines：行对比，contents：值对比，object_comparison：对象级对比落库，object：对象级对比落库，account：账户对比，random：抽样比对，node：内核计算对比结果，mgr：管控计算对比结果
     * compareTaskStatus  对比任务的状态。 - RUNNING-运行中 - WAITING_FOR_RUNNING-等待启动中 - SUCCESSFUL-完成 - FAILED-失败 - CANCELLED-已取消 - TIMEOUT_INTERRUPT-超时中断 - FULL_DOING-全量校验中 - INCRE_DOING-增量校验中
     * createTime  对比开始时间。
     * endTime  对比结束时间。
@@ -96,7 +96,7 @@ class CompareTaskList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * compareTaskId  对比任务的id。
-    * compareType  对比任务的类型。
+    * compareType  对比任务的类型。 lines：行对比，contents：值对比，object_comparison：对象级对比落库，object：对象级对比落库，account：账户对比，random：抽样比对，node：内核计算对比结果，mgr：管控计算对比结果
     * compareTaskStatus  对比任务的状态。 - RUNNING-运行中 - WAITING_FOR_RUNNING-等待启动中 - SUCCESSFUL-完成 - FAILED-失败 - CANCELLED-已取消 - TIMEOUT_INTERRUPT-超时中断 - FULL_DOING-全量校验中 - INCRE_DOING-增量校验中
     * createTime  对比开始时间。
     * endTime  对比结束时间。
@@ -114,7 +114,7 @@ class CompareTaskList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * compareTaskId  对比任务的id。
-    * compareType  对比任务的类型。
+    * compareType  对比任务的类型。 lines：行对比，contents：值对比，object_comparison：对象级对比落库，object：对象级对比落库，account：账户对比，random：抽样比对，node：内核计算对比结果，mgr：管控计算对比结果
     * compareTaskStatus  对比任务的状态。 - RUNNING-运行中 - WAITING_FOR_RUNNING-等待启动中 - SUCCESSFUL-完成 - FAILED-失败 - CANCELLED-已取消 - TIMEOUT_INTERRUPT-超时中断 - FULL_DOING-全量校验中 - INCRE_DOING-增量校验中
     * createTime  对比开始时间。
     * endTime  对比结束时间。
@@ -289,7 +289,7 @@ class CompareTaskList implements ModelInterface, ArrayAccess
 
     /**
     * Gets compareType
-    *  对比任务的类型。
+    *  对比任务的类型。 lines：行对比，contents：值对比，object_comparison：对象级对比落库，object：对象级对比落库，account：账户对比，random：抽样比对，node：内核计算对比结果，mgr：管控计算对比结果
     *
     * @return string
     */
@@ -301,7 +301,7 @@ class CompareTaskList implements ModelInterface, ArrayAccess
     /**
     * Sets compareType
     *
-    * @param string $compareType 对比任务的类型。
+    * @param string $compareType 对比任务的类型。 lines：行对比，contents：值对比，object_comparison：对象级对比落库，object：对象级对比落库，account：账户对比，random：抽样比对，node：内核计算对比结果，mgr：管控计算对比结果
     *
     * @return $this
     */

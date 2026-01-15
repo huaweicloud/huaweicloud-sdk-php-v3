@@ -21,9 +21,9 @@ class Params implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * compareResult  参数对比结果
-    * dataType  参数类型
+    * dataType  参数类型 figure，string
     * group  分组。 - common-常规参数 - performance-性能参数
-    * key  参数名
+    * key  参数名 binlog_cache_size，binlog_stmt_cache_size，bulk_insert_buffer_size，character_set_server，collation_server...
     * needRestart  是否需要重启
     * sourceValue  源数据库参数值
     * targetValue  目标数据库参数值
@@ -49,9 +49,9 @@ class Params implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * compareResult  参数对比结果
-    * dataType  参数类型
+    * dataType  参数类型 figure，string
     * group  分组。 - common-常规参数 - performance-性能参数
-    * key  参数名
+    * key  参数名 binlog_cache_size，binlog_stmt_cache_size，bulk_insert_buffer_size，character_set_server，collation_server...
     * needRestart  是否需要重启
     * sourceValue  源数据库参数值
     * targetValue  目标数据库参数值
@@ -98,9 +98,9 @@ class Params implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * compareResult  参数对比结果
-    * dataType  参数类型
+    * dataType  参数类型 figure，string
     * group  分组。 - common-常规参数 - performance-性能参数
-    * key  参数名
+    * key  参数名 binlog_cache_size，binlog_stmt_cache_size，bulk_insert_buffer_size，character_set_server，collation_server...
     * needRestart  是否需要重启
     * sourceValue  源数据库参数值
     * targetValue  目标数据库参数值
@@ -126,9 +126,9 @@ class Params implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * compareResult  参数对比结果
-    * dataType  参数类型
+    * dataType  参数类型 figure，string
     * group  分组。 - common-常规参数 - performance-性能参数
-    * key  参数名
+    * key  参数名 binlog_cache_size，binlog_stmt_cache_size，bulk_insert_buffer_size，character_set_server，collation_server...
     * needRestart  是否需要重启
     * sourceValue  源数据库参数值
     * targetValue  目标数据库参数值
@@ -154,9 +154,9 @@ class Params implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * compareResult  参数对比结果
-    * dataType  参数类型
+    * dataType  参数类型 figure，string
     * group  分组。 - common-常规参数 - performance-性能参数
-    * key  参数名
+    * key  参数名 binlog_cache_size，binlog_stmt_cache_size，bulk_insert_buffer_size，character_set_server，collation_server...
     * needRestart  是否需要重启
     * sourceValue  源数据库参数值
     * targetValue  目标数据库参数值
@@ -366,7 +366,7 @@ class Params implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataType
-    *  参数类型
+    *  参数类型 figure，string
     *
     * @return string|null
     */
@@ -378,7 +378,7 @@ class Params implements ModelInterface, ArrayAccess
     /**
     * Sets dataType
     *
-    * @param string|null $dataType 参数类型
+    * @param string|null $dataType 参数类型 figure，string
     *
     * @return $this
     */
@@ -414,7 +414,7 @@ class Params implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  参数名
+    *  参数名 binlog_cache_size，binlog_stmt_cache_size，bulk_insert_buffer_size，character_set_server，collation_server...
     *
     * @return string|null
     */
@@ -426,7 +426,7 @@ class Params implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 参数名
+    * @param string|null $key 参数名 binlog_cache_size，binlog_stmt_cache_size，bulk_insert_buffer_size，character_set_server，collation_server...
     *
     * @return $this
     */

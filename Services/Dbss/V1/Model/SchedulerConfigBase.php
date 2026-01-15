@@ -22,12 +22,12 @@ class SchedulerConfigBase implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * dbIds  数据库ID
     * format  文件类型
-    * frequency  周期 - AUDIT_REPORT_DAY: 天 - AUDIT_REPORT_WEEK：周 - AUDIT_REPORT_MONTH：月 - AUDIT_REPORT_YEAR：年 - AUDIT_REPORT_REAL_TIME：实时
+    * frequency  周期 - AUDIT_REPORT_DAY：天 - AUDIT_REPORT_WEEK：周 - AUDIT_REPORT_MONTH：月 - AUDIT_REPORT_YEAR：年 - AUDIT_REPORT_REAL_TIME：实时
     * id  报表模板ID
     * mode  调度方式
     * notice  是否通知  - OFF：不通知  - ON：通知
     * startTime  开始时间
-    * status  模板状态 - ON: 开启 - OFF：关闭
+    * status  模板状态 - ON：开启 - OFF：关闭
     * topicUrn  主题URN
     *
     * @var string[]
@@ -48,12 +48,12 @@ class SchedulerConfigBase implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * dbIds  数据库ID
     * format  文件类型
-    * frequency  周期 - AUDIT_REPORT_DAY: 天 - AUDIT_REPORT_WEEK：周 - AUDIT_REPORT_MONTH：月 - AUDIT_REPORT_YEAR：年 - AUDIT_REPORT_REAL_TIME：实时
+    * frequency  周期 - AUDIT_REPORT_DAY：天 - AUDIT_REPORT_WEEK：周 - AUDIT_REPORT_MONTH：月 - AUDIT_REPORT_YEAR：年 - AUDIT_REPORT_REAL_TIME：实时
     * id  报表模板ID
     * mode  调度方式
     * notice  是否通知  - OFF：不通知  - ON：通知
     * startTime  开始时间
-    * status  模板状态 - ON: 开启 - OFF：关闭
+    * status  模板状态 - ON：开启 - OFF：关闭
     * topicUrn  主题URN
     *
     * @var string[]
@@ -95,12 +95,12 @@ class SchedulerConfigBase implements ModelInterface, ArrayAccess
     * and the value is the original name
     * dbIds  数据库ID
     * format  文件类型
-    * frequency  周期 - AUDIT_REPORT_DAY: 天 - AUDIT_REPORT_WEEK：周 - AUDIT_REPORT_MONTH：月 - AUDIT_REPORT_YEAR：年 - AUDIT_REPORT_REAL_TIME：实时
+    * frequency  周期 - AUDIT_REPORT_DAY：天 - AUDIT_REPORT_WEEK：周 - AUDIT_REPORT_MONTH：月 - AUDIT_REPORT_YEAR：年 - AUDIT_REPORT_REAL_TIME：实时
     * id  报表模板ID
     * mode  调度方式
     * notice  是否通知  - OFF：不通知  - ON：通知
     * startTime  开始时间
-    * status  模板状态 - ON: 开启 - OFF：关闭
+    * status  模板状态 - ON：开启 - OFF：关闭
     * topicUrn  主题URN
     *
     * @var string[]
@@ -121,12 +121,12 @@ class SchedulerConfigBase implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * dbIds  数据库ID
     * format  文件类型
-    * frequency  周期 - AUDIT_REPORT_DAY: 天 - AUDIT_REPORT_WEEK：周 - AUDIT_REPORT_MONTH：月 - AUDIT_REPORT_YEAR：年 - AUDIT_REPORT_REAL_TIME：实时
+    * frequency  周期 - AUDIT_REPORT_DAY：天 - AUDIT_REPORT_WEEK：周 - AUDIT_REPORT_MONTH：月 - AUDIT_REPORT_YEAR：年 - AUDIT_REPORT_REAL_TIME：实时
     * id  报表模板ID
     * mode  调度方式
     * notice  是否通知  - OFF：不通知  - ON：通知
     * startTime  开始时间
-    * status  模板状态 - ON: 开启 - OFF：关闭
+    * status  模板状态 - ON：开启 - OFF：关闭
     * topicUrn  主题URN
     *
     * @var string[]
@@ -147,12 +147,12 @@ class SchedulerConfigBase implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * dbIds  数据库ID
     * format  文件类型
-    * frequency  周期 - AUDIT_REPORT_DAY: 天 - AUDIT_REPORT_WEEK：周 - AUDIT_REPORT_MONTH：月 - AUDIT_REPORT_YEAR：年 - AUDIT_REPORT_REAL_TIME：实时
+    * frequency  周期 - AUDIT_REPORT_DAY：天 - AUDIT_REPORT_WEEK：周 - AUDIT_REPORT_MONTH：月 - AUDIT_REPORT_YEAR：年 - AUDIT_REPORT_REAL_TIME：实时
     * id  报表模板ID
     * mode  调度方式
     * notice  是否通知  - OFF：不通知  - ON：通知
     * startTime  开始时间
-    * status  模板状态 - ON: 开启 - OFF：关闭
+    * status  模板状态 - ON：开启 - OFF：关闭
     * topicUrn  主题URN
     *
     * @var string[]
@@ -431,7 +431,7 @@ class SchedulerConfigBase implements ModelInterface, ArrayAccess
 
     /**
     * Gets frequency
-    *  周期 - AUDIT_REPORT_DAY: 天 - AUDIT_REPORT_WEEK：周 - AUDIT_REPORT_MONTH：月 - AUDIT_REPORT_YEAR：年 - AUDIT_REPORT_REAL_TIME：实时
+    *  周期 - AUDIT_REPORT_DAY：天 - AUDIT_REPORT_WEEK：周 - AUDIT_REPORT_MONTH：月 - AUDIT_REPORT_YEAR：年 - AUDIT_REPORT_REAL_TIME：实时
     *
     * @return string|null
     */
@@ -443,7 +443,7 @@ class SchedulerConfigBase implements ModelInterface, ArrayAccess
     /**
     * Sets frequency
     *
-    * @param string|null $frequency 周期 - AUDIT_REPORT_DAY: 天 - AUDIT_REPORT_WEEK：周 - AUDIT_REPORT_MONTH：月 - AUDIT_REPORT_YEAR：年 - AUDIT_REPORT_REAL_TIME：实时
+    * @param string|null $frequency 周期 - AUDIT_REPORT_DAY：天 - AUDIT_REPORT_WEEK：周 - AUDIT_REPORT_MONTH：月 - AUDIT_REPORT_YEAR：年 - AUDIT_REPORT_REAL_TIME：实时
     *
     * @return $this
     */
@@ -551,7 +551,7 @@ class SchedulerConfigBase implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  模板状态 - ON: 开启 - OFF：关闭
+    *  模板状态 - ON：开启 - OFF：关闭
     *
     * @return string|null
     */
@@ -563,7 +563,7 @@ class SchedulerConfigBase implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 模板状态 - ON: 开启 - OFF：关闭
+    * @param string|null $status 模板状态 - ON：开启 - OFF：关闭
     *
     * @return $this
     */

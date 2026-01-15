@@ -22,7 +22,7 @@ class AzInfoResp implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * code  可用区标识代码
     * name  可用区名称
-    * status  可用区状态
+    * status  可用区状态，ENABLED：可用，DISABLED：不可用
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class AzInfoResp implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * code  可用区标识代码
     * name  可用区名称
-    * status  可用区状态
+    * status  可用区状态，ENABLED：可用，DISABLED：不可用
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class AzInfoResp implements ModelInterface, ArrayAccess
     * and the value is the original name
     * code  可用区标识代码
     * name  可用区名称
-    * status  可用区状态
+    * status  可用区状态，ENABLED：可用，DISABLED：不可用
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class AzInfoResp implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * code  可用区标识代码
     * name  可用区名称
-    * status  可用区状态
+    * status  可用区状态，ENABLED：可用，DISABLED：不可用
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class AzInfoResp implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * code  可用区标识代码
     * name  可用区名称
-    * status  可用区状态
+    * status  可用区状态，ENABLED：可用，DISABLED：不可用
     *
     * @var string[]
     */
@@ -244,7 +244,7 @@ class AzInfoResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  可用区状态
+    *  可用区状态，ENABLED：可用，DISABLED：不可用
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class AzInfoResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 可用区状态
+    * @param string|null $status 可用区状态，ENABLED：可用，DISABLED：不可用
     *
     * @return $this
     */

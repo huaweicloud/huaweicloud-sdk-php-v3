@@ -22,7 +22,7 @@ class AsyncUpdateJobResp implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  任务ID。
     * name  任务名称。
-    * status  操作结果。
+    * status  操作结果。 取值：success，failed
     * errorCode  错误码。
     * errorMsg  错误描述。
     *
@@ -40,7 +40,7 @@ class AsyncUpdateJobResp implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  任务ID。
     * name  任务名称。
-    * status  操作结果。
+    * status  操作结果。 取值：success，failed
     * errorCode  错误码。
     * errorMsg  错误描述。
     *
@@ -79,7 +79,7 @@ class AsyncUpdateJobResp implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  任务ID。
     * name  任务名称。
-    * status  操作结果。
+    * status  操作结果。 取值：success，failed
     * errorCode  错误码。
     * errorMsg  错误描述。
     *
@@ -97,7 +97,7 @@ class AsyncUpdateJobResp implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  任务ID。
     * name  任务名称。
-    * status  操作结果。
+    * status  操作结果。 取值：success，failed
     * errorCode  错误码。
     * errorMsg  错误描述。
     *
@@ -115,7 +115,7 @@ class AsyncUpdateJobResp implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  任务ID。
     * name  任务名称。
-    * status  操作结果。
+    * status  操作结果。 取值：success，failed
     * errorCode  错误码。
     * errorMsg  错误描述。
     *
@@ -275,7 +275,7 @@ class AsyncUpdateJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  操作结果。
+    *  操作结果。 取值：success，failed
     *
     * @return string
     */
@@ -287,7 +287,7 @@ class AsyncUpdateJobResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 操作结果。
+    * @param string $status 操作结果。 取值：success，failed
     *
     * @return $this
     */

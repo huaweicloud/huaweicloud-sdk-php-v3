@@ -20,8 +20,8 @@ class CreateAiOpsRequestBodyAlarm implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * level  SMN告警消息敏感度。 - high：高风险。 - medium：中风险。 - suggestion：建议。 - norisk：无风险。
-    * smnTopic  SMN主题名称。
+    * level  **参数解释**： 报告发送风险类别，当前功能已废弃。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * smnTopic  **参数解释**： 报告发送主题，当前功能已废弃。 **约束限制**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CreateAiOpsRequestBodyAlarm implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * level  SMN告警消息敏感度。 - high：高风险。 - medium：中风险。 - suggestion：建议。 - norisk：无风险。
-    * smnTopic  SMN主题名称。
+    * level  **参数解释**： 报告发送风险类别，当前功能已废弃。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * smnTopic  **参数解释**： 报告发送主题，当前功能已废弃。 **约束限制**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CreateAiOpsRequestBodyAlarm implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * level  SMN告警消息敏感度。 - high：高风险。 - medium：中风险。 - suggestion：建议。 - norisk：无风险。
-    * smnTopic  SMN主题名称。
+    * level  **参数解释**： 报告发送风险类别，当前功能已废弃。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * smnTopic  **参数解释**： 报告发送主题，当前功能已废弃。 **约束限制**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CreateAiOpsRequestBodyAlarm implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * level  SMN告警消息敏感度。 - high：高风险。 - medium：中风险。 - suggestion：建议。 - norisk：无风险。
-    * smnTopic  SMN主题名称。
+    * level  **参数解释**： 报告发送风险类别，当前功能已废弃。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * smnTopic  **参数解释**： 报告发送主题，当前功能已废弃。 **约束限制**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CreateAiOpsRequestBodyAlarm implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * level  SMN告警消息敏感度。 - high：高风险。 - medium：中风险。 - suggestion：建议。 - norisk：无风险。
-    * smnTopic  SMN主题名称。
+    * level  **参数解释**： 报告发送风险类别，当前功能已废弃。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * smnTopic  **参数解释**： 报告发送主题，当前功能已废弃。 **约束限制**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -169,12 +169,6 @@ class CreateAiOpsRequestBodyAlarm implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['level'] === null) {
-            $invalidProperties[] = "'level' can't be null";
-        }
-        if ($this->container['smnTopic'] === null) {
-            $invalidProperties[] = "'smnTopic' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -191,9 +185,9 @@ class CreateAiOpsRequestBodyAlarm implements ModelInterface, ArrayAccess
 
     /**
     * Gets level
-    *  SMN告警消息敏感度。 - high：高风险。 - medium：中风险。 - suggestion：建议。 - norisk：无风险。
+    *  **参数解释**： 报告发送风险类别，当前功能已废弃。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
-    * @return string
+    * @return string|null
     */
     public function getLevel()
     {
@@ -203,7 +197,7 @@ class CreateAiOpsRequestBodyAlarm implements ModelInterface, ArrayAccess
     /**
     * Sets level
     *
-    * @param string $level SMN告警消息敏感度。 - high：高风险。 - medium：中风险。 - suggestion：建议。 - norisk：无风险。
+    * @param string|null $level **参数解释**： 报告发送风险类别，当前功能已废弃。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -215,9 +209,9 @@ class CreateAiOpsRequestBodyAlarm implements ModelInterface, ArrayAccess
 
     /**
     * Gets smnTopic
-    *  SMN主题名称。
+    *  **参数解释**： 报告发送主题，当前功能已废弃。 **约束限制**： 不涉及 **默认取值**： 不涉及
     *
-    * @return string
+    * @return string|null
     */
     public function getSmnTopic()
     {
@@ -227,7 +221,7 @@ class CreateAiOpsRequestBodyAlarm implements ModelInterface, ArrayAccess
     /**
     * Sets smnTopic
     *
-    * @param string $smnTopic SMN主题名称。
+    * @param string|null $smnTopic **参数解释**： 报告发送主题，当前功能已废弃。 **约束限制**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

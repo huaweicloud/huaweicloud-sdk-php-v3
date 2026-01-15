@@ -23,11 +23,11 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
     * id  操作日志ID
     * user  操作日志用户名
     * time  该条记录发生的时间，格式为时间戳。
-    * action  该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download: 下载
+    * action  该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download：下载
     * function  该条记录的功能类型
     * name  该条记录对应的用户操作对象
     * description  该条记录具体的描述
-    * result  该条记录对应用户执行的结果 - success: 成功 - fail: 失败
+    * result  该条记录对应用户执行的结果 - success：成功 - fail：失败
     *
     * @var string[]
     */
@@ -47,11 +47,11 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
     * id  操作日志ID
     * user  操作日志用户名
     * time  该条记录发生的时间，格式为时间戳。
-    * action  该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download: 下载
+    * action  该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download：下载
     * function  该条记录的功能类型
     * name  该条记录对应的用户操作对象
     * description  该条记录具体的描述
-    * result  该条记录对应用户执行的结果 - success: 成功 - fail: 失败
+    * result  该条记录对应用户执行的结果 - success：成功 - fail：失败
     *
     * @var string[]
     */
@@ -92,11 +92,11 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
     * id  操作日志ID
     * user  操作日志用户名
     * time  该条记录发生的时间，格式为时间戳。
-    * action  该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download: 下载
+    * action  该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download：下载
     * function  该条记录的功能类型
     * name  该条记录对应的用户操作对象
     * description  该条记录具体的描述
-    * result  该条记录对应用户执行的结果 - success: 成功 - fail: 失败
+    * result  该条记录对应用户执行的结果 - success：成功 - fail：失败
     *
     * @var string[]
     */
@@ -116,11 +116,11 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
     * id  操作日志ID
     * user  操作日志用户名
     * time  该条记录发生的时间，格式为时间戳。
-    * action  该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download: 下载
+    * action  该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download：下载
     * function  该条记录的功能类型
     * name  该条记录对应的用户操作对象
     * description  该条记录具体的描述
-    * result  该条记录对应用户执行的结果 - success: 成功 - fail: 失败
+    * result  该条记录对应用户执行的结果 - success：成功 - fail：失败
     *
     * @var string[]
     */
@@ -140,11 +140,11 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
     * id  操作日志ID
     * user  操作日志用户名
     * time  该条记录发生的时间，格式为时间戳。
-    * action  该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download: 下载
+    * action  该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download：下载
     * function  该条记录的功能类型
     * name  该条记录对应的用户操作对象
     * description  该条记录具体的描述
-    * result  该条记录对应用户执行的结果 - success: 成功 - fail: 失败
+    * result  该条记录对应用户执行的结果 - success：成功 - fail：失败
     *
     * @var string[]
     */
@@ -323,7 +323,7 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download: 下载
+    *  该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download：下载
     *
     * @return string|null
     */
@@ -335,7 +335,7 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download: 下载
+    * @param string|null $action 该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download：下载
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  该条记录对应用户执行的结果 - success: 成功 - fail: 失败
+    *  该条记录对应用户执行的结果 - success：成功 - fail：失败
     *
     * @return string|null
     */
@@ -431,7 +431,7 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param string|null $result 该条记录对应用户执行的结果 - success: 成功 - fail: 失败
+    * @param string|null $result 该条记录对应用户执行的结果 - success：成功 - fail：失败
     *
     * @return $this
     */

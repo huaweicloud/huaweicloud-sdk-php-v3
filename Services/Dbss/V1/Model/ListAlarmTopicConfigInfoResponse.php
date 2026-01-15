@@ -28,7 +28,7 @@ class ListAlarmTopicConfigInfoResponse implements ModelInterface, ArrayAccess
     * alarmRisk  告警等级 - high：高  - medium：中  - low：低
     * alarmSwitch  通知开关 - ON：开启 - OFF：关闭
     * alarmTopicUrn  通知消息主题URN,调用SMN服务接口获取
-    * smnEffective  是否支持SMN订阅  - true: 支持  - false: 不支持
+    * smnEffective  是否支持SMN订阅  - true：支持  - false：不支持
     *
     * @var string[]
     */
@@ -52,7 +52,7 @@ class ListAlarmTopicConfigInfoResponse implements ModelInterface, ArrayAccess
     * alarmRisk  告警等级 - high：高  - medium：中  - low：低
     * alarmSwitch  通知开关 - ON：开启 - OFF：关闭
     * alarmTopicUrn  通知消息主题URN,调用SMN服务接口获取
-    * smnEffective  是否支持SMN订阅  - true: 支持  - false: 不支持
+    * smnEffective  是否支持SMN订阅  - true：支持  - false：不支持
     *
     * @var string[]
     */
@@ -97,7 +97,7 @@ class ListAlarmTopicConfigInfoResponse implements ModelInterface, ArrayAccess
     * alarmRisk  告警等级 - high：高  - medium：中  - low：低
     * alarmSwitch  通知开关 - ON：开启 - OFF：关闭
     * alarmTopicUrn  通知消息主题URN,调用SMN服务接口获取
-    * smnEffective  是否支持SMN订阅  - true: 支持  - false: 不支持
+    * smnEffective  是否支持SMN订阅  - true：支持  - false：不支持
     *
     * @var string[]
     */
@@ -121,7 +121,7 @@ class ListAlarmTopicConfigInfoResponse implements ModelInterface, ArrayAccess
     * alarmRisk  告警等级 - high：高  - medium：中  - low：低
     * alarmSwitch  通知开关 - ON：开启 - OFF：关闭
     * alarmTopicUrn  通知消息主题URN,调用SMN服务接口获取
-    * smnEffective  是否支持SMN订阅  - true: 支持  - false: 不支持
+    * smnEffective  是否支持SMN订阅  - true：支持  - false：不支持
     *
     * @var string[]
     */
@@ -145,7 +145,7 @@ class ListAlarmTopicConfigInfoResponse implements ModelInterface, ArrayAccess
     * alarmRisk  告警等级 - high：高  - medium：中  - low：低
     * alarmSwitch  通知开关 - ON：开启 - OFF：关闭
     * alarmTopicUrn  通知消息主题URN,调用SMN服务接口获取
-    * smnEffective  是否支持SMN订阅  - true: 支持  - false: 不支持
+    * smnEffective  是否支持SMN订阅  - true：支持  - false：不支持
     *
     * @var string[]
     */
@@ -456,7 +456,7 @@ class ListAlarmTopicConfigInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets smnEffective
-    *  是否支持SMN订阅  - true: 支持  - false: 不支持
+    *  是否支持SMN订阅  - true：支持  - false：不支持
     *
     * @return bool|null
     */
@@ -468,7 +468,7 @@ class ListAlarmTopicConfigInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets smnEffective
     *
-    * @param bool|null $smnEffective 是否支持SMN订阅  - true: 支持  - false: 不支持
+    * @param bool|null $smnEffective 是否支持SMN订阅  - true：支持  - false：不支持
     *
     * @return $this
     */

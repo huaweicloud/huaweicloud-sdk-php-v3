@@ -20,7 +20,7 @@ class QuotaResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  配额类型信息
+    * type  配额类型信息 instances：实例的数量配额，cpu：CPU的配额，cores：CPU核心数的配额，server_groups服务器组的配额，mem内存配额，ram主存配额
     * min  配额最小取值
     * max  配额最大取值
     * quota  用户配额的实际值
@@ -38,7 +38,7 @@ class QuotaResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  配额类型信息
+    * type  配额类型信息 instances：实例的数量配额，cpu：CPU的配额，cores：CPU核心数的配额，server_groups服务器组的配额，mem内存配额，ram主存配额
     * min  配额最小取值
     * max  配额最大取值
     * quota  用户配额的实际值
@@ -77,7 +77,7 @@ class QuotaResource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  配额类型信息
+    * type  配额类型信息 instances：实例的数量配额，cpu：CPU的配额，cores：CPU核心数的配额，server_groups服务器组的配额，mem内存配额，ram主存配额
     * min  配额最小取值
     * max  配额最大取值
     * quota  用户配额的实际值
@@ -95,7 +95,7 @@ class QuotaResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  配额类型信息
+    * type  配额类型信息 instances：实例的数量配额，cpu：CPU的配额，cores：CPU核心数的配额，server_groups服务器组的配额，mem内存配额，ram主存配额
     * min  配额最小取值
     * max  配额最大取值
     * quota  用户配额的实际值
@@ -113,7 +113,7 @@ class QuotaResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  配额类型信息
+    * type  配额类型信息 instances：实例的数量配额，cpu：CPU的配额，cores：CPU核心数的配额，server_groups服务器组的配额，mem内存配额，ram主存配额
     * min  配额最小取值
     * max  配额最大取值
     * quota  用户配额的实际值
@@ -218,7 +218,7 @@ class QuotaResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  配额类型信息
+    *  配额类型信息 instances：实例的数量配额，cpu：CPU的配额，cores：CPU核心数的配额，server_groups服务器组的配额，mem内存配额，ram主存配额
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class QuotaResource implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 配额类型信息
+    * @param string|null $type 配额类型信息 instances：实例的数量配额，cpu：CPU的配额，cores：CPU核心数的配额，server_groups服务器组的配额，mem内存配额，ram主存配额
     *
     * @return $this
     */

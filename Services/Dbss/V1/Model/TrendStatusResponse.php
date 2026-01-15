@@ -23,7 +23,7 @@ class TrendStatusResponse implements ModelInterface, ArrayAccess
     * dbId  数据库ID
     * dbName  数据库名称
     * generateTime  生成时间
-    * statisticsType  统计类型  - RISK: 风险  - SESSION：SESSION  - SQL: SQL  - COUNT: 数量  - INJECTION：注入 - OPERATION: 操作
+    * statisticsType  统计类型  - RISK：风险  - SESSION：SESSION  - SQL：SQL  - COUNT：数量  - INJECTION：注入 - OPERATION：操作
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class TrendStatusResponse implements ModelInterface, ArrayAccess
     * dbId  数据库ID
     * dbName  数据库名称
     * generateTime  生成时间
-    * statisticsType  统计类型  - RISK: 风险  - SESSION：SESSION  - SQL: SQL  - COUNT: 数量  - INJECTION：注入 - OPERATION: 操作
+    * statisticsType  统计类型  - RISK：风险  - SESSION：SESSION  - SQL：SQL  - COUNT：数量  - INJECTION：注入 - OPERATION：操作
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class TrendStatusResponse implements ModelInterface, ArrayAccess
     * dbId  数据库ID
     * dbName  数据库名称
     * generateTime  生成时间
-    * statisticsType  统计类型  - RISK: 风险  - SESSION：SESSION  - SQL: SQL  - COUNT: 数量  - INJECTION：注入 - OPERATION: 操作
+    * statisticsType  统计类型  - RISK：风险  - SESSION：SESSION  - SQL：SQL  - COUNT：数量  - INJECTION：注入 - OPERATION：操作
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class TrendStatusResponse implements ModelInterface, ArrayAccess
     * dbId  数据库ID
     * dbName  数据库名称
     * generateTime  生成时间
-    * statisticsType  统计类型  - RISK: 风险  - SESSION：SESSION  - SQL: SQL  - COUNT: 数量  - INJECTION：注入 - OPERATION: 操作
+    * statisticsType  统计类型  - RISK：风险  - SESSION：SESSION  - SQL：SQL  - COUNT：数量  - INJECTION：注入 - OPERATION：操作
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class TrendStatusResponse implements ModelInterface, ArrayAccess
     * dbId  数据库ID
     * dbName  数据库名称
     * generateTime  生成时间
-    * statisticsType  统计类型  - RISK: 风险  - SESSION：SESSION  - SQL: SQL  - COUNT: 数量  - INJECTION：注入 - OPERATION: 操作
+    * statisticsType  统计类型  - RISK：风险  - SESSION：SESSION  - SQL：SQL  - COUNT：数量  - INJECTION：注入 - OPERATION：操作
     *
     * @var string[]
     */
@@ -279,7 +279,7 @@ class TrendStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets statisticsType
-    *  统计类型  - RISK: 风险  - SESSION：SESSION  - SQL: SQL  - COUNT: 数量  - INJECTION：注入 - OPERATION: 操作
+    *  统计类型  - RISK：风险  - SESSION：SESSION  - SQL：SQL  - COUNT：数量  - INJECTION：注入 - OPERATION：操作
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class TrendStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets statisticsType
     *
-    * @param string|null $statisticsType 统计类型  - RISK: 风险  - SESSION：SESSION  - SQL: SQL  - COUNT: 数量  - INJECTION：注入 - OPERATION: 操作
+    * @param string|null $statisticsType 统计类型  - RISK：风险  - SESSION：SESSION  - SQL：SQL  - COUNT：数量  - INJECTION：注入 - OPERATION：操作
     *
     * @return $this
     */

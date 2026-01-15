@@ -20,7 +20,7 @@ class IpaddressesData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     * id  终端节点的ID，UUID形式的一个资源标识。
     * ip  IP地址信息。
     * createTime  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
@@ -42,7 +42,7 @@ class IpaddressesData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     * id  终端节点的ID，UUID形式的一个资源标识。
     * ip  IP地址信息。
     * createTime  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
@@ -85,7 +85,7 @@ class IpaddressesData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     * id  终端节点的ID，UUID形式的一个资源标识。
     * ip  IP地址信息。
     * createTime  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
@@ -107,7 +107,7 @@ class IpaddressesData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     * id  终端节点的ID，UUID形式的一个资源标识。
     * ip  IP地址信息。
     * createTime  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
@@ -129,7 +129,7 @@ class IpaddressesData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     * id  终端节点的ID，UUID形式的一个资源标识。
     * ip  IP地址信息。
     * createTime  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
@@ -240,7 +240,7 @@ class IpaddressesData implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源状态。
+    *  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class IpaddressesData implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源状态。
+    * @param string|null $status **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     *
     * @return $this
     */

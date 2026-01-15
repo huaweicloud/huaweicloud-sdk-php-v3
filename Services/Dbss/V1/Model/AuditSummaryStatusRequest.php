@@ -20,8 +20,8 @@ class AuditSummaryStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * code  操作码，operType为switch时必输入  - on: 开启  - off: 关闭
-    * operType  操作类型  - switch: 任务开关  - execute: 立即刷新
+    * code  操作码，operType为switch时必输入  - on：开启  - off：关闭
+    * operType  操作类型  - switch：任务开关  - execute：立即刷新
     * queryBeginTime  查询条件：开始时间
     * queryEndTime  查询条件：结束时间
     *
@@ -36,8 +36,8 @@ class AuditSummaryStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * code  操作码，operType为switch时必输入  - on: 开启  - off: 关闭
-    * operType  操作类型  - switch: 任务开关  - execute: 立即刷新
+    * code  操作码，operType为switch时必输入  - on：开启  - off：关闭
+    * operType  操作类型  - switch：任务开关  - execute：立即刷新
     * queryBeginTime  查询条件：开始时间
     * queryEndTime  查询条件：结束时间
     *
@@ -73,8 +73,8 @@ class AuditSummaryStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * code  操作码，operType为switch时必输入  - on: 开启  - off: 关闭
-    * operType  操作类型  - switch: 任务开关  - execute: 立即刷新
+    * code  操作码，operType为switch时必输入  - on：开启  - off：关闭
+    * operType  操作类型  - switch：任务开关  - execute：立即刷新
     * queryBeginTime  查询条件：开始时间
     * queryEndTime  查询条件：结束时间
     *
@@ -89,8 +89,8 @@ class AuditSummaryStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * code  操作码，operType为switch时必输入  - on: 开启  - off: 关闭
-    * operType  操作类型  - switch: 任务开关  - execute: 立即刷新
+    * code  操作码，operType为switch时必输入  - on：开启  - off：关闭
+    * operType  操作类型  - switch：任务开关  - execute：立即刷新
     * queryBeginTime  查询条件：开始时间
     * queryEndTime  查询条件：结束时间
     *
@@ -105,8 +105,8 @@ class AuditSummaryStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * code  操作码，operType为switch时必输入  - on: 开启  - off: 关闭
-    * operType  操作类型  - switch: 任务开关  - execute: 立即刷新
+    * code  操作码，operType为switch时必输入  - on：开启  - off：关闭
+    * operType  操作类型  - switch：任务开关  - execute：立即刷新
     * queryBeginTime  查询条件：开始时间
     * queryEndTime  查询条件：结束时间
     *
@@ -210,7 +210,7 @@ class AuditSummaryStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
-    *  操作码，operType为switch时必输入  - on: 开启  - off: 关闭
+    *  操作码，operType为switch时必输入  - on：开启  - off：关闭
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class AuditSummaryStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets code
     *
-    * @param string|null $code 操作码，operType为switch时必输入  - on: 开启  - off: 关闭
+    * @param string|null $code 操作码，operType为switch时必输入  - on：开启  - off：关闭
     *
     * @return $this
     */
@@ -234,7 +234,7 @@ class AuditSummaryStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets operType
-    *  操作类型  - switch: 任务开关  - execute: 立即刷新
+    *  操作类型  - switch：任务开关  - execute：立即刷新
     *
     * @return string
     */
@@ -246,7 +246,7 @@ class AuditSummaryStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets operType
     *
-    * @param string $operType 操作类型  - switch: 任务开关  - execute: 立即刷新
+    * @param string $operType 操作类型  - switch：任务开关  - execute：立即刷新
     *
     * @return $this
     */

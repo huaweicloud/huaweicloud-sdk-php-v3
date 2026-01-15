@@ -21,8 +21,8 @@ class ProductInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  ID标识，同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
-    * cloudServiceType  用户购买云服务产品的云服务类型，例如EC2，云服务类型为hws.service.type.ec2。
-    * resourceType  用户购买云服务产品的资源类型，例如EC2中的VM，资源类型为hws.resource.type.vm。
+    * cloudServiceType  用户购买云服务产品的云服务类型，例如EC2，云服务类型为hws.service.type.ec2。 取值：hws.service.type.drs
+    * resourceType  用户购买云服务产品的资源类型，例如EC2中的VM，资源类型为hws.resource.type.vm。 hws.resource.type.drs.instance：instance（实例） hws.resource.type.drs.vm：vm（虚机） hws.resource.type.drs.volume：volume（磁盘） dbs.instanceName：instanceName（实例名称--适配DT） hws.resource.type.drs.flow：flow（DRS流量费） dbs.tag：tag（用户标签） dbs.enterpriseProjectId：enterpriseProjectId（企业项目）
     * resourceSpecCode  用户购买云服务产品的资源规格，例如VM的小型规格，资源规格为m1.tiny。
     * resourceSize  资源容量度量标识。
     * usageFactor  使用量因子，按需计费必填，取值和话单中的使用量因子一致，云服务和使用量因子对应关系如下： - Duration：云服务器 - flow：流量
@@ -47,8 +47,8 @@ class ProductInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  ID标识，同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
-    * cloudServiceType  用户购买云服务产品的云服务类型，例如EC2，云服务类型为hws.service.type.ec2。
-    * resourceType  用户购买云服务产品的资源类型，例如EC2中的VM，资源类型为hws.resource.type.vm。
+    * cloudServiceType  用户购买云服务产品的云服务类型，例如EC2，云服务类型为hws.service.type.ec2。 取值：hws.service.type.drs
+    * resourceType  用户购买云服务产品的资源类型，例如EC2中的VM，资源类型为hws.resource.type.vm。 hws.resource.type.drs.instance：instance（实例） hws.resource.type.drs.vm：vm（虚机） hws.resource.type.drs.volume：volume（磁盘） dbs.instanceName：instanceName（实例名称--适配DT） hws.resource.type.drs.flow：flow（DRS流量费） dbs.tag：tag（用户标签） dbs.enterpriseProjectId：enterpriseProjectId（企业项目）
     * resourceSpecCode  用户购买云服务产品的资源规格，例如VM的小型规格，资源规格为m1.tiny。
     * resourceSize  资源容量度量标识。
     * usageFactor  使用量因子，按需计费必填，取值和话单中的使用量因子一致，云服务和使用量因子对应关系如下： - Duration：云服务器 - flow：流量
@@ -94,8 +94,8 @@ class ProductInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  ID标识，同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
-    * cloudServiceType  用户购买云服务产品的云服务类型，例如EC2，云服务类型为hws.service.type.ec2。
-    * resourceType  用户购买云服务产品的资源类型，例如EC2中的VM，资源类型为hws.resource.type.vm。
+    * cloudServiceType  用户购买云服务产品的云服务类型，例如EC2，云服务类型为hws.service.type.ec2。 取值：hws.service.type.drs
+    * resourceType  用户购买云服务产品的资源类型，例如EC2中的VM，资源类型为hws.resource.type.vm。 hws.resource.type.drs.instance：instance（实例） hws.resource.type.drs.vm：vm（虚机） hws.resource.type.drs.volume：volume（磁盘） dbs.instanceName：instanceName（实例名称--适配DT） hws.resource.type.drs.flow：flow（DRS流量费） dbs.tag：tag（用户标签） dbs.enterpriseProjectId：enterpriseProjectId（企业项目）
     * resourceSpecCode  用户购买云服务产品的资源规格，例如VM的小型规格，资源规格为m1.tiny。
     * resourceSize  资源容量度量标识。
     * usageFactor  使用量因子，按需计费必填，取值和话单中的使用量因子一致，云服务和使用量因子对应关系如下： - Duration：云服务器 - flow：流量
@@ -120,8 +120,8 @@ class ProductInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  ID标识，同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
-    * cloudServiceType  用户购买云服务产品的云服务类型，例如EC2，云服务类型为hws.service.type.ec2。
-    * resourceType  用户购买云服务产品的资源类型，例如EC2中的VM，资源类型为hws.resource.type.vm。
+    * cloudServiceType  用户购买云服务产品的云服务类型，例如EC2，云服务类型为hws.service.type.ec2。 取值：hws.service.type.drs
+    * resourceType  用户购买云服务产品的资源类型，例如EC2中的VM，资源类型为hws.resource.type.vm。 hws.resource.type.drs.instance：instance（实例） hws.resource.type.drs.vm：vm（虚机） hws.resource.type.drs.volume：volume（磁盘） dbs.instanceName：instanceName（实例名称--适配DT） hws.resource.type.drs.flow：flow（DRS流量费） dbs.tag：tag（用户标签） dbs.enterpriseProjectId：enterpriseProjectId（企业项目）
     * resourceSpecCode  用户购买云服务产品的资源规格，例如VM的小型规格，资源规格为m1.tiny。
     * resourceSize  资源容量度量标识。
     * usageFactor  使用量因子，按需计费必填，取值和话单中的使用量因子一致，云服务和使用量因子对应关系如下： - Duration：云服务器 - flow：流量
@@ -146,8 +146,8 @@ class ProductInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  ID标识，同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
-    * cloudServiceType  用户购买云服务产品的云服务类型，例如EC2，云服务类型为hws.service.type.ec2。
-    * resourceType  用户购买云服务产品的资源类型，例如EC2中的VM，资源类型为hws.resource.type.vm。
+    * cloudServiceType  用户购买云服务产品的云服务类型，例如EC2，云服务类型为hws.service.type.ec2。 取值：hws.service.type.drs
+    * resourceType  用户购买云服务产品的资源类型，例如EC2中的VM，资源类型为hws.resource.type.vm。 hws.resource.type.drs.instance：instance（实例） hws.resource.type.drs.vm：vm（虚机） hws.resource.type.drs.volume：volume（磁盘） dbs.instanceName：instanceName（实例名称--适配DT） hws.resource.type.drs.flow：flow（DRS流量费） dbs.tag：tag（用户标签） dbs.enterpriseProjectId：enterpriseProjectId（企业项目）
     * resourceSpecCode  用户购买云服务产品的资源规格，例如VM的小型规格，资源规格为m1.tiny。
     * resourceSize  资源容量度量标识。
     * usageFactor  使用量因子，按需计费必填，取值和话单中的使用量因子一致，云服务和使用量因子对应关系如下： - Duration：云服务器 - flow：流量
@@ -286,7 +286,7 @@ class ProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudServiceType
-    *  用户购买云服务产品的云服务类型，例如EC2，云服务类型为hws.service.type.ec2。
+    *  用户购买云服务产品的云服务类型，例如EC2，云服务类型为hws.service.type.ec2。 取值：hws.service.type.drs
     *
     * @return string|null
     */
@@ -298,7 +298,7 @@ class ProductInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cloudServiceType
     *
-    * @param string|null $cloudServiceType 用户购买云服务产品的云服务类型，例如EC2，云服务类型为hws.service.type.ec2。
+    * @param string|null $cloudServiceType 用户购买云服务产品的云服务类型，例如EC2，云服务类型为hws.service.type.ec2。 取值：hws.service.type.drs
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class ProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  用户购买云服务产品的资源类型，例如EC2中的VM，资源类型为hws.resource.type.vm。
+    *  用户购买云服务产品的资源类型，例如EC2中的VM，资源类型为hws.resource.type.vm。 hws.resource.type.drs.instance：instance（实例） hws.resource.type.drs.vm：vm（虚机） hws.resource.type.drs.volume：volume（磁盘） dbs.instanceName：instanceName（实例名称--适配DT） hws.resource.type.drs.flow：flow（DRS流量费） dbs.tag：tag（用户标签） dbs.enterpriseProjectId：enterpriseProjectId（企业项目）
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class ProductInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string|null $resourceType 用户购买云服务产品的资源类型，例如EC2中的VM，资源类型为hws.resource.type.vm。
+    * @param string|null $resourceType 用户购买云服务产品的资源类型，例如EC2中的VM，资源类型为hws.resource.type.vm。 hws.resource.type.drs.instance：instance（实例） hws.resource.type.drs.vm：vm（虚机） hws.resource.type.drs.volume：volume（磁盘） dbs.instanceName：instanceName（实例名称--适配DT） hws.resource.type.drs.flow：flow（DRS流量费） dbs.tag：tag（用户标签） dbs.enterpriseProjectId：enterpriseProjectId（企业项目）
     *
     * @return $this
     */

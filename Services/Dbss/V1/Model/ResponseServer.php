@@ -26,12 +26,12 @@ class ResponseServer implements ModelInterface, ArrayAccess
     * description  描述
     * effect  实例冻结状态  - 1：冻结可释放 （默认）  - 2：冻结不可释放  - 3：冻结后不可续费
     * instanceId  实例ID
-    * isActive  双机实例HA中用来标注实例为主机还是备机, -0: 主机 -1:备机
+    * isActive  双机实例HA中用来标注实例为主机还是备机, - 0：主机  - 1：备机
     * name  实例名称
     * ram  内存大小
     * region  所属REGION
     * resourceSpecCode  实例所属规格编码
-    * scene  冻结场景  - POLICE: 公安冻结  - ILLEGAL: 违规冻结  - VERIFY: 未实名认证冻结  - PARTNER: 合作伙伴冻结 - ARREAR: 普通冻结（普通）
+    * scene  冻结场景  - POLICE：公安冻结  - ILLEGAL：违规冻结  - VERIFY：未实名认证冻结  - PARTNER：合作伙伴冻结 - ARREAR：普通冻结（普通）
     * securityGroupId  安全组ID
     * specification  资源规格类型编码
     * status  实例状态
@@ -78,12 +78,12 @@ class ResponseServer implements ModelInterface, ArrayAccess
     * description  描述
     * effect  实例冻结状态  - 1：冻结可释放 （默认）  - 2：冻结不可释放  - 3：冻结后不可续费
     * instanceId  实例ID
-    * isActive  双机实例HA中用来标注实例为主机还是备机, -0: 主机 -1:备机
+    * isActive  双机实例HA中用来标注实例为主机还是备机, - 0：主机  - 1：备机
     * name  实例名称
     * ram  内存大小
     * region  所属REGION
     * resourceSpecCode  实例所属规格编码
-    * scene  冻结场景  - POLICE: 公安冻结  - ILLEGAL: 违规冻结  - VERIFY: 未实名认证冻结  - PARTNER: 合作伙伴冻结 - ARREAR: 普通冻结（普通）
+    * scene  冻结场景  - POLICE：公安冻结  - ILLEGAL：违规冻结  - VERIFY：未实名认证冻结  - PARTNER：合作伙伴冻结 - ARREAR：普通冻结（普通）
     * securityGroupId  安全组ID
     * specification  资源规格类型编码
     * status  实例状态
@@ -151,12 +151,12 @@ class ResponseServer implements ModelInterface, ArrayAccess
     * description  描述
     * effect  实例冻结状态  - 1：冻结可释放 （默认）  - 2：冻结不可释放  - 3：冻结后不可续费
     * instanceId  实例ID
-    * isActive  双机实例HA中用来标注实例为主机还是备机, -0: 主机 -1:备机
+    * isActive  双机实例HA中用来标注实例为主机还是备机, - 0：主机  - 1：备机
     * name  实例名称
     * ram  内存大小
     * region  所属REGION
     * resourceSpecCode  实例所属规格编码
-    * scene  冻结场景  - POLICE: 公安冻结  - ILLEGAL: 违规冻结  - VERIFY: 未实名认证冻结  - PARTNER: 合作伙伴冻结 - ARREAR: 普通冻结（普通）
+    * scene  冻结场景  - POLICE：公安冻结  - ILLEGAL：违规冻结  - VERIFY：未实名认证冻结  - PARTNER：合作伙伴冻结 - ARREAR：普通冻结（普通）
     * securityGroupId  安全组ID
     * specification  资源规格类型编码
     * status  实例状态
@@ -203,12 +203,12 @@ class ResponseServer implements ModelInterface, ArrayAccess
     * description  描述
     * effect  实例冻结状态  - 1：冻结可释放 （默认）  - 2：冻结不可释放  - 3：冻结后不可续费
     * instanceId  实例ID
-    * isActive  双机实例HA中用来标注实例为主机还是备机, -0: 主机 -1:备机
+    * isActive  双机实例HA中用来标注实例为主机还是备机, - 0：主机  - 1：备机
     * name  实例名称
     * ram  内存大小
     * region  所属REGION
     * resourceSpecCode  实例所属规格编码
-    * scene  冻结场景  - POLICE: 公安冻结  - ILLEGAL: 违规冻结  - VERIFY: 未实名认证冻结  - PARTNER: 合作伙伴冻结 - ARREAR: 普通冻结（普通）
+    * scene  冻结场景  - POLICE：公安冻结  - ILLEGAL：违规冻结  - VERIFY：未实名认证冻结  - PARTNER：合作伙伴冻结 - ARREAR：普通冻结（普通）
     * securityGroupId  安全组ID
     * specification  资源规格类型编码
     * status  实例状态
@@ -255,12 +255,12 @@ class ResponseServer implements ModelInterface, ArrayAccess
     * description  描述
     * effect  实例冻结状态  - 1：冻结可释放 （默认）  - 2：冻结不可释放  - 3：冻结后不可续费
     * instanceId  实例ID
-    * isActive  双机实例HA中用来标注实例为主机还是备机, -0: 主机 -1:备机
+    * isActive  双机实例HA中用来标注实例为主机还是备机, - 0：主机  - 1：备机
     * name  实例名称
     * ram  内存大小
     * region  所属REGION
     * resourceSpecCode  实例所属规格编码
-    * scene  冻结场景  - POLICE: 公安冻结  - ILLEGAL: 违规冻结  - VERIFY: 未实名认证冻结  - PARTNER: 合作伙伴冻结 - ARREAR: 普通冻结（普通）
+    * scene  冻结场景  - POLICE：公安冻结  - ILLEGAL：违规冻结  - VERIFY：未实名认证冻结  - PARTNER：合作伙伴冻结 - ARREAR：普通冻结（普通）
     * securityGroupId  安全组ID
     * specification  资源规格类型编码
     * status  实例状态
@@ -549,7 +549,7 @@ class ResponseServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets isActive
-    *  双机实例HA中用来标注实例为主机还是备机, -0: 主机 -1:备机
+    *  双机实例HA中用来标注实例为主机还是备机, - 0：主机  - 1：备机
     *
     * @return int|null
     */
@@ -561,7 +561,7 @@ class ResponseServer implements ModelInterface, ArrayAccess
     /**
     * Sets isActive
     *
-    * @param int|null $isActive 双机实例HA中用来标注实例为主机还是备机, -0: 主机 -1:备机
+    * @param int|null $isActive 双机实例HA中用来标注实例为主机还是备机, - 0：主机  - 1：备机
     *
     * @return $this
     */
@@ -669,7 +669,7 @@ class ResponseServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets scene
-    *  冻结场景  - POLICE: 公安冻结  - ILLEGAL: 违规冻结  - VERIFY: 未实名认证冻结  - PARTNER: 合作伙伴冻结 - ARREAR: 普通冻结（普通）
+    *  冻结场景  - POLICE：公安冻结  - ILLEGAL：违规冻结  - VERIFY：未实名认证冻结  - PARTNER：合作伙伴冻结 - ARREAR：普通冻结（普通）
     *
     * @return string|null
     */
@@ -681,7 +681,7 @@ class ResponseServer implements ModelInterface, ArrayAccess
     /**
     * Sets scene
     *
-    * @param string|null $scene 冻结场景  - POLICE: 公安冻结  - ILLEGAL: 违规冻结  - VERIFY: 未实名认证冻结  - PARTNER: 合作伙伴冻结 - ARREAR: 普通冻结（普通）
+    * @param string|null $scene 冻结场景  - POLICE：公安冻结  - ILLEGAL：违规冻结  - VERIFY：未实名认证冻结  - PARTNER：合作伙伴冻结 - ARREAR：普通冻结（普通）
     *
     * @return $this
     */

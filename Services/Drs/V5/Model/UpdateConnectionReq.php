@@ -21,7 +21,7 @@ class UpdateConnectionReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  连接名称。
-    * dbType  数据库类型。
+    * dbType  数据库类型。 取值：mysql - postgresql - mongodb - oracle
     * config  config
     * description  连接描述。
     * endpoint  endpoint
@@ -47,7 +47,7 @@ class UpdateConnectionReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  连接名称。
-    * dbType  数据库类型。
+    * dbType  数据库类型。 取值：mysql - postgresql - mongodb - oracle
     * config  config
     * description  连接描述。
     * endpoint  endpoint
@@ -94,7 +94,7 @@ class UpdateConnectionReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  连接名称。
-    * dbType  数据库类型。
+    * dbType  数据库类型。 取值：mysql - postgresql - mongodb - oracle
     * config  config
     * description  连接描述。
     * endpoint  endpoint
@@ -120,7 +120,7 @@ class UpdateConnectionReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  连接名称。
-    * dbType  数据库类型。
+    * dbType  数据库类型。 取值：mysql - postgresql - mongodb - oracle
     * config  config
     * description  连接描述。
     * endpoint  endpoint
@@ -146,7 +146,7 @@ class UpdateConnectionReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  连接名称。
-    * dbType  数据库类型。
+    * dbType  数据库类型。 取值：mysql - postgresql - mongodb - oracle
     * config  config
     * description  连接描述。
     * endpoint  endpoint
@@ -310,7 +310,7 @@ class UpdateConnectionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbType
-    *  数据库类型。
+    *  数据库类型。 取值：mysql - postgresql - mongodb - oracle
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class UpdateConnectionReq implements ModelInterface, ArrayAccess
     /**
     * Sets dbType
     *
-    * @param string|null $dbType 数据库类型。
+    * @param string|null $dbType 数据库类型。 取值：mysql - postgresql - mongodb - oracle
     *
     * @return $this
     */

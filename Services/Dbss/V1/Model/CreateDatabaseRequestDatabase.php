@@ -20,11 +20,11 @@ class CreateDatabaseRequestDatabase implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dbClassification  数据库分类 - RDS: RDS数据库 - ECS: 自建数据库
+    * dbClassification  数据库分类 - RDS：RDS数据库 - ECS：自建数据库
     * name  数据库名称
-    * type  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG： DAMENG - TAURUS: Taurus DB - DWS: GaussDB(DWS) - KINGBASE: Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM： Greenplum - HIGHGO: HIGHGO - SHENTONG： ShenTong - GBASE8A: GBase 8a - GBASE8S： GBase 8s - GBASEXDM： GBase XDM - MONGODB: MongoDB - DDS： DDS(MongoDB)
+    * type  数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - SQLSERVER：SQL Server - DAMENG：DAMENG - TAURUS：Taurus DB - DWS：GaussDB(DWS) - KINGBASE：Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM：Greenplum - HIGHGO：HIGHGO - SHENTONG：ShenTong - GBASE8A：GBase 8a - GBASE8S：GBase 8s - GBASEXDM：GBase XDM - MONGODB：MongoDB - DDS：DDS(MongoDB)
     * version  数据库版本
-    * charset  字符集。 - GBK： GBK - UTF8：UTF8
+    * charset  字符集。 - GBK：GBK - UTF8：UTF8
     * ip  数据库IP
     * port  数据库端口
     * os  数据库操作系统 - LINUX64：LINUX64 - WINDOWS64：WINDOWS64 - UNIX：UNIX
@@ -46,11 +46,11 @@ class CreateDatabaseRequestDatabase implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dbClassification  数据库分类 - RDS: RDS数据库 - ECS: 自建数据库
+    * dbClassification  数据库分类 - RDS：RDS数据库 - ECS：自建数据库
     * name  数据库名称
-    * type  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG： DAMENG - TAURUS: Taurus DB - DWS: GaussDB(DWS) - KINGBASE: Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM： Greenplum - HIGHGO: HIGHGO - SHENTONG： ShenTong - GBASE8A: GBase 8a - GBASE8S： GBase 8s - GBASEXDM： GBase XDM - MONGODB: MongoDB - DDS： DDS(MongoDB)
+    * type  数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - SQLSERVER：SQL Server - DAMENG：DAMENG - TAURUS：Taurus DB - DWS：GaussDB(DWS) - KINGBASE：Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM：Greenplum - HIGHGO：HIGHGO - SHENTONG：ShenTong - GBASE8A：GBase 8a - GBASE8S：GBase 8s - GBASEXDM：GBase XDM - MONGODB：MongoDB - DDS：DDS(MongoDB)
     * version  数据库版本
-    * charset  字符集。 - GBK： GBK - UTF8：UTF8
+    * charset  字符集。 - GBK：GBK - UTF8：UTF8
     * ip  数据库IP
     * port  数据库端口
     * os  数据库操作系统 - LINUX64：LINUX64 - WINDOWS64：WINDOWS64 - UNIX：UNIX
@@ -93,11 +93,11 @@ class CreateDatabaseRequestDatabase implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dbClassification  数据库分类 - RDS: RDS数据库 - ECS: 自建数据库
+    * dbClassification  数据库分类 - RDS：RDS数据库 - ECS：自建数据库
     * name  数据库名称
-    * type  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG： DAMENG - TAURUS: Taurus DB - DWS: GaussDB(DWS) - KINGBASE: Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM： Greenplum - HIGHGO: HIGHGO - SHENTONG： ShenTong - GBASE8A: GBase 8a - GBASE8S： GBase 8s - GBASEXDM： GBase XDM - MONGODB: MongoDB - DDS： DDS(MongoDB)
+    * type  数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - SQLSERVER：SQL Server - DAMENG：DAMENG - TAURUS：Taurus DB - DWS：GaussDB(DWS) - KINGBASE：Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM：Greenplum - HIGHGO：HIGHGO - SHENTONG：ShenTong - GBASE8A：GBase 8a - GBASE8S：GBase 8s - GBASEXDM：GBase XDM - MONGODB：MongoDB - DDS：DDS(MongoDB)
     * version  数据库版本
-    * charset  字符集。 - GBK： GBK - UTF8：UTF8
+    * charset  字符集。 - GBK：GBK - UTF8：UTF8
     * ip  数据库IP
     * port  数据库端口
     * os  数据库操作系统 - LINUX64：LINUX64 - WINDOWS64：WINDOWS64 - UNIX：UNIX
@@ -119,11 +119,11 @@ class CreateDatabaseRequestDatabase implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dbClassification  数据库分类 - RDS: RDS数据库 - ECS: 自建数据库
+    * dbClassification  数据库分类 - RDS：RDS数据库 - ECS：自建数据库
     * name  数据库名称
-    * type  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG： DAMENG - TAURUS: Taurus DB - DWS: GaussDB(DWS) - KINGBASE: Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM： Greenplum - HIGHGO: HIGHGO - SHENTONG： ShenTong - GBASE8A: GBase 8a - GBASE8S： GBase 8s - GBASEXDM： GBase XDM - MONGODB: MongoDB - DDS： DDS(MongoDB)
+    * type  数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - SQLSERVER：SQL Server - DAMENG：DAMENG - TAURUS：Taurus DB - DWS：GaussDB(DWS) - KINGBASE：Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM：Greenplum - HIGHGO：HIGHGO - SHENTONG：ShenTong - GBASE8A：GBase 8a - GBASE8S：GBase 8s - GBASEXDM：GBase XDM - MONGODB：MongoDB - DDS：DDS(MongoDB)
     * version  数据库版本
-    * charset  字符集。 - GBK： GBK - UTF8：UTF8
+    * charset  字符集。 - GBK：GBK - UTF8：UTF8
     * ip  数据库IP
     * port  数据库端口
     * os  数据库操作系统 - LINUX64：LINUX64 - WINDOWS64：WINDOWS64 - UNIX：UNIX
@@ -145,11 +145,11 @@ class CreateDatabaseRequestDatabase implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dbClassification  数据库分类 - RDS: RDS数据库 - ECS: 自建数据库
+    * dbClassification  数据库分类 - RDS：RDS数据库 - ECS：自建数据库
     * name  数据库名称
-    * type  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG： DAMENG - TAURUS: Taurus DB - DWS: GaussDB(DWS) - KINGBASE: Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM： Greenplum - HIGHGO: HIGHGO - SHENTONG： ShenTong - GBASE8A: GBase 8a - GBASE8S： GBase 8s - GBASEXDM： GBase XDM - MONGODB: MongoDB - DDS： DDS(MongoDB)
+    * type  数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - SQLSERVER：SQL Server - DAMENG：DAMENG - TAURUS：Taurus DB - DWS：GaussDB(DWS) - KINGBASE：Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM：Greenplum - HIGHGO：HIGHGO - SHENTONG：ShenTong - GBASE8A：GBase 8a - GBASE8S：GBase 8s - GBASEXDM：GBase XDM - MONGODB：MongoDB - DDS：DDS(MongoDB)
     * version  数据库版本
-    * charset  字符集。 - GBK： GBK - UTF8：UTF8
+    * charset  字符集。 - GBK：GBK - UTF8：UTF8
     * ip  数据库IP
     * port  数据库端口
     * os  数据库操作系统 - LINUX64：LINUX64 - WINDOWS64：WINDOWS64 - UNIX：UNIX
@@ -309,7 +309,7 @@ class CreateDatabaseRequestDatabase implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbClassification
-    *  数据库分类 - RDS: RDS数据库 - ECS: 自建数据库
+    *  数据库分类 - RDS：RDS数据库 - ECS：自建数据库
     *
     * @return string
     */
@@ -321,7 +321,7 @@ class CreateDatabaseRequestDatabase implements ModelInterface, ArrayAccess
     /**
     * Sets dbClassification
     *
-    * @param string $dbClassification 数据库分类 - RDS: RDS数据库 - ECS: 自建数据库
+    * @param string $dbClassification 数据库分类 - RDS：RDS数据库 - ECS：自建数据库
     *
     * @return $this
     */
@@ -357,7 +357,7 @@ class CreateDatabaseRequestDatabase implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG： DAMENG - TAURUS: Taurus DB - DWS: GaussDB(DWS) - KINGBASE: Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM： Greenplum - HIGHGO: HIGHGO - SHENTONG： ShenTong - GBASE8A: GBase 8a - GBASE8S： GBase 8s - GBASEXDM： GBase XDM - MONGODB: MongoDB - DDS： DDS(MongoDB)
+    *  数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - SQLSERVER：SQL Server - DAMENG：DAMENG - TAURUS：Taurus DB - DWS：GaussDB(DWS) - KINGBASE：Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM：Greenplum - HIGHGO：HIGHGO - SHENTONG：ShenTong - GBASE8A：GBase 8a - GBASE8S：GBase 8s - GBASEXDM：GBase XDM - MONGODB：MongoDB - DDS：DDS(MongoDB)
     *
     * @return string
     */
@@ -369,7 +369,7 @@ class CreateDatabaseRequestDatabase implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG： DAMENG - TAURUS: Taurus DB - DWS: GaussDB(DWS) - KINGBASE: Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM： Greenplum - HIGHGO: HIGHGO - SHENTONG： ShenTong - GBASE8A: GBase 8a - GBASE8S： GBase 8s - GBASEXDM： GBase XDM - MONGODB: MongoDB - DDS： DDS(MongoDB)
+    * @param string $type 数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - SQLSERVER：SQL Server - DAMENG：DAMENG - TAURUS：Taurus DB - DWS：GaussDB(DWS) - KINGBASE：Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM：Greenplum - HIGHGO：HIGHGO - SHENTONG：ShenTong - GBASE8A：GBase 8a - GBASE8S：GBase 8s - GBASEXDM：GBase XDM - MONGODB：MongoDB - DDS：DDS(MongoDB)
     *
     * @return $this
     */
@@ -405,7 +405,7 @@ class CreateDatabaseRequestDatabase implements ModelInterface, ArrayAccess
 
     /**
     * Gets charset
-    *  字符集。 - GBK： GBK - UTF8：UTF8
+    *  字符集。 - GBK：GBK - UTF8：UTF8
     *
     * @return string
     */
@@ -417,7 +417,7 @@ class CreateDatabaseRequestDatabase implements ModelInterface, ArrayAccess
     /**
     * Sets charset
     *
-    * @param string $charset 字符集。 - GBK： GBK - UTF8：UTF8
+    * @param string $charset 字符集。 - GBK：GBK - UTF8：UTF8
     *
     * @return $this
     */

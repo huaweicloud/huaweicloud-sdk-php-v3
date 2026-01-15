@@ -22,7 +22,7 @@ class ShowReplicationJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  任务ID。
-    * status  任务状态。
+    * status  任务状态。取值：success，failed
     * createTime  任务创建时间。
     * finishTime  任务完成时间。
     * backupInfo  backupInfo
@@ -52,7 +52,7 @@ class ShowReplicationJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  任务ID。
-    * status  任务状态。
+    * status  任务状态。取值：success，failed
     * createTime  任务创建时间。
     * finishTime  任务完成时间。
     * backupInfo  backupInfo
@@ -103,7 +103,7 @@ class ShowReplicationJobResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  任务ID。
-    * status  任务状态。
+    * status  任务状态。取值：success，failed
     * createTime  任务创建时间。
     * finishTime  任务完成时间。
     * backupInfo  backupInfo
@@ -133,7 +133,7 @@ class ShowReplicationJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  任务ID。
-    * status  任务状态。
+    * status  任务状态。取值：success，failed
     * createTime  任务创建时间。
     * finishTime  任务完成时间。
     * backupInfo  backupInfo
@@ -163,7 +163,7 @@ class ShowReplicationJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  任务ID。
-    * status  任务状态。
+    * status  任务状态。取值：success，failed
     * createTime  任务创建时间。
     * finishTime  任务完成时间。
     * backupInfo  backupInfo
@@ -351,7 +351,7 @@ class ShowReplicationJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  任务状态。
+    *  任务状态。取值：success，failed
     *
     * @return string|null
     */
@@ -363,7 +363,7 @@ class ShowReplicationJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 任务状态。
+    * @param string|null $status 任务状态。取值：success，failed
     *
     * @return $this
     */

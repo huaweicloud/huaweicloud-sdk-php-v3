@@ -22,7 +22,7 @@ class ListWhitelistsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     * offset  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
-    * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为100
+    * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于等于10的整数 **取值范围**： 大于等于10小于等于100 **默认取值**： 默认值为100
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ListWhitelistsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     * offset  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
-    * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为100
+    * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于等于10的整数 **取值范围**： 大于等于10小于等于100 **默认取值**： 默认值为100
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListWhitelistsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * instanceId  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     * offset  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
-    * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为100
+    * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于等于10的整数 **取值范围**： 大于等于10小于等于100 **默认取值**： 默认值为100
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ListWhitelistsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     * offset  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
-    * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为100
+    * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于等于10的整数 **取值范围**： 大于等于10小于等于100 **默认取值**： 默认值为100
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ListWhitelistsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
     * offset  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
-    * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为100
+    * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于等于10的整数 **取值范围**： 大于等于10小于等于100 **默认取值**： 默认值为100
     *
     * @var string[]
     */
@@ -253,7 +253,7 @@ class ListWhitelistsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为100
+    *  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于等于10的整数 **取值范围**： 大于等于10小于等于100 **默认取值**： 默认值为100
     *
     * @return int|null
     */
@@ -265,7 +265,7 @@ class ListWhitelistsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为100
+    * @param int|null $limit **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于等于10的整数 **取值范围**： 大于等于10小于等于100 **默认取值**： 默认值为100
     *
     * @return $this
     */

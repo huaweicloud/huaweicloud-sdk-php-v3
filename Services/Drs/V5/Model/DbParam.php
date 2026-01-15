@@ -20,7 +20,7 @@ class DbParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  数据库参数名。
+    * key  数据库参数名。 取值：binlog_cache_size，binlog_stmt_cache_size，bulk_insert_buffer_size，innodb_buffer_pool_size，key_buffer_size，long_query_time，query_cache_type，read_buffer_size，read_rnd_buffer_size，sort_buffer_size，sync_binlog，innodb_buffer_pool_instances
     * targetValue  目标数据库参数值。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class DbParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  数据库参数名。
+    * key  数据库参数名。 取值：binlog_cache_size，binlog_stmt_cache_size，bulk_insert_buffer_size，innodb_buffer_pool_size，key_buffer_size，long_query_time，query_cache_type，read_buffer_size，read_rnd_buffer_size，sort_buffer_size，sync_binlog，innodb_buffer_pool_instances
     * targetValue  目标数据库参数值。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class DbParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  数据库参数名。
+    * key  数据库参数名。 取值：binlog_cache_size，binlog_stmt_cache_size，bulk_insert_buffer_size，innodb_buffer_pool_size，key_buffer_size，long_query_time，query_cache_type，read_buffer_size，read_rnd_buffer_size，sort_buffer_size，sync_binlog，innodb_buffer_pool_instances
     * targetValue  目标数据库参数值。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class DbParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  数据库参数名。
+    * key  数据库参数名。 取值：binlog_cache_size，binlog_stmt_cache_size，bulk_insert_buffer_size，innodb_buffer_pool_size，key_buffer_size，long_query_time，query_cache_type，read_buffer_size，read_rnd_buffer_size，sort_buffer_size，sync_binlog，innodb_buffer_pool_instances
     * targetValue  目标数据库参数值。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class DbParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  数据库参数名。
+    * key  数据库参数名。 取值：binlog_cache_size，binlog_stmt_cache_size，bulk_insert_buffer_size，innodb_buffer_pool_size，key_buffer_size，long_query_time，query_cache_type，read_buffer_size，read_rnd_buffer_size，sort_buffer_size，sync_binlog，innodb_buffer_pool_instances
     * targetValue  目标数据库参数值。
     *
     * @var string[]
@@ -191,7 +191,7 @@ class DbParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  数据库参数名。
+    *  数据库参数名。 取值：binlog_cache_size，binlog_stmt_cache_size，bulk_insert_buffer_size，innodb_buffer_pool_size，key_buffer_size，long_query_time，query_cache_type，read_buffer_size，read_rnd_buffer_size，sort_buffer_size，sync_binlog，innodb_buffer_pool_instances
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class DbParam implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 数据库参数名。
+    * @param string $key 数据库参数名。 取值：binlog_cache_size，binlog_stmt_cache_size，bulk_insert_buffer_size，innodb_buffer_pool_size，key_buffer_size，long_query_time，query_cache_type，read_buffer_size，read_rnd_buffer_size，sort_buffer_size，sync_binlog，innodb_buffer_pool_instances
     *
     * @return $this
     */

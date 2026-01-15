@@ -21,7 +21,7 @@ class CreateAuditScopeRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  状态  - SUCCESS: 成功  - FAILED: 失败
+    * status  状态  - SUCCESS：成功  - FAILED：失败
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateAuditScopeRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  状态  - SUCCESS: 成功  - FAILED: 失败
+    * status  状态  - SUCCESS：成功  - FAILED：失败
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateAuditScopeRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  状态  - SUCCESS: 成功  - FAILED: 失败
+    * status  状态  - SUCCESS：成功  - FAILED：失败
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateAuditScopeRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  状态  - SUCCESS: 成功  - FAILED: 失败
+    * status  状态  - SUCCESS：成功  - FAILED：失败
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateAuditScopeRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  状态  - SUCCESS: 成功  - FAILED: 失败
+    * status  状态  - SUCCESS：成功  - FAILED：失败
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class CreateAuditScopeRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态  - SUCCESS: 成功  - FAILED: 失败
+    *  状态  - SUCCESS：成功  - FAILED：失败
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class CreateAuditScopeRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态  - SUCCESS: 成功  - FAILED: 失败
+    * @param string|null $status 状态  - SUCCESS：成功  - FAILED：失败
     *
     * @return $this
     */

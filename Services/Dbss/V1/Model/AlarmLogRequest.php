@@ -21,9 +21,9 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * time  time
-    * risk  风险级别 - LOW: 低 - MEDIUM：中 - HIGH：高
-    * type  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
-    * status  告警确认状态 - DONE: 已确认 - UNDO: 未确认
+    * risk  风险级别 - LOW：低 - MEDIUM：中 - HIGH：高
+    * type  告警类型 - RISK_RULE：风险规则 - RISK_CPU：CPU超限 - RISK_MEMORY：内存超限 - RISK_DISK：磁盘超限 - RISK_DISK_CAPACITY：磁盘容量不足六个月 - RISK_BACKUP：备份失败 - AUDIT_QPS_OVERFLOW：流量超限入库延迟告警 - RISK_AGENT：Agent异常 - AUDIT_BACKUP_FAILED：实例备份失败(运维侧)
+    * status  告警确认状态 - DONE：已确认 - UNDO：未确认
     * page  页码
     * size  每页条数
     *
@@ -41,9 +41,9 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * time  time
-    * risk  风险级别 - LOW: 低 - MEDIUM：中 - HIGH：高
-    * type  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
-    * status  告警确认状态 - DONE: 已确认 - UNDO: 未确认
+    * risk  风险级别 - LOW：低 - MEDIUM：中 - HIGH：高
+    * type  告警类型 - RISK_RULE：风险规则 - RISK_CPU：CPU超限 - RISK_MEMORY：内存超限 - RISK_DISK：磁盘超限 - RISK_DISK_CAPACITY：磁盘容量不足六个月 - RISK_BACKUP：备份失败 - AUDIT_QPS_OVERFLOW：流量超限入库延迟告警 - RISK_AGENT：Agent异常 - AUDIT_BACKUP_FAILED：实例备份失败(运维侧)
+    * status  告警确认状态 - DONE：已确认 - UNDO：未确认
     * page  页码
     * size  每页条数
     *
@@ -82,9 +82,9 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * time  time
-    * risk  风险级别 - LOW: 低 - MEDIUM：中 - HIGH：高
-    * type  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
-    * status  告警确认状态 - DONE: 已确认 - UNDO: 未确认
+    * risk  风险级别 - LOW：低 - MEDIUM：中 - HIGH：高
+    * type  告警类型 - RISK_RULE：风险规则 - RISK_CPU：CPU超限 - RISK_MEMORY：内存超限 - RISK_DISK：磁盘超限 - RISK_DISK_CAPACITY：磁盘容量不足六个月 - RISK_BACKUP：备份失败 - AUDIT_QPS_OVERFLOW：流量超限入库延迟告警 - RISK_AGENT：Agent异常 - AUDIT_BACKUP_FAILED：实例备份失败(运维侧)
+    * status  告警确认状态 - DONE：已确认 - UNDO：未确认
     * page  页码
     * size  每页条数
     *
@@ -102,9 +102,9 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * time  time
-    * risk  风险级别 - LOW: 低 - MEDIUM：中 - HIGH：高
-    * type  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
-    * status  告警确认状态 - DONE: 已确认 - UNDO: 未确认
+    * risk  风险级别 - LOW：低 - MEDIUM：中 - HIGH：高
+    * type  告警类型 - RISK_RULE：风险规则 - RISK_CPU：CPU超限 - RISK_MEMORY：内存超限 - RISK_DISK：磁盘超限 - RISK_DISK_CAPACITY：磁盘容量不足六个月 - RISK_BACKUP：备份失败 - AUDIT_QPS_OVERFLOW：流量超限入库延迟告警 - RISK_AGENT：Agent异常 - AUDIT_BACKUP_FAILED：实例备份失败(运维侧)
+    * status  告警确认状态 - DONE：已确认 - UNDO：未确认
     * page  页码
     * size  每页条数
     *
@@ -122,9 +122,9 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * time  time
-    * risk  风险级别 - LOW: 低 - MEDIUM：中 - HIGH：高
-    * type  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
-    * status  告警确认状态 - DONE: 已确认 - UNDO: 未确认
+    * risk  风险级别 - LOW：低 - MEDIUM：中 - HIGH：高
+    * type  告警类型 - RISK_RULE：风险规则 - RISK_CPU：CPU超限 - RISK_MEMORY：内存超限 - RISK_DISK：磁盘超限 - RISK_DISK_CAPACITY：磁盘容量不足六个月 - RISK_BACKUP：备份失败 - AUDIT_QPS_OVERFLOW：流量超限入库延迟告警 - RISK_AGENT：Agent异常 - AUDIT_BACKUP_FAILED：实例备份失败(运维侧)
+    * status  告警确认状态 - DONE：已确认 - UNDO：未确认
     * page  页码
     * size  每页条数
     *
@@ -285,7 +285,7 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets risk
-    *  风险级别 - LOW: 低 - MEDIUM：中 - HIGH：高
+    *  风险级别 - LOW：低 - MEDIUM：中 - HIGH：高
     *
     * @return string[]|null
     */
@@ -297,7 +297,7 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
     /**
     * Sets risk
     *
-    * @param string[]|null $risk 风险级别 - LOW: 低 - MEDIUM：中 - HIGH：高
+    * @param string[]|null $risk 风险级别 - LOW：低 - MEDIUM：中 - HIGH：高
     *
     * @return $this
     */
@@ -309,7 +309,7 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
+    *  告警类型 - RISK_RULE：风险规则 - RISK_CPU：CPU超限 - RISK_MEMORY：内存超限 - RISK_DISK：磁盘超限 - RISK_DISK_CAPACITY：磁盘容量不足六个月 - RISK_BACKUP：备份失败 - AUDIT_QPS_OVERFLOW：流量超限入库延迟告警 - RISK_AGENT：Agent异常 - AUDIT_BACKUP_FAILED：实例备份失败(运维侧)
     *
     * @return string|null
     */
@@ -321,7 +321,7 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
+    * @param string|null $type 告警类型 - RISK_RULE：风险规则 - RISK_CPU：CPU超限 - RISK_MEMORY：内存超限 - RISK_DISK：磁盘超限 - RISK_DISK_CAPACITY：磁盘容量不足六个月 - RISK_BACKUP：备份失败 - AUDIT_QPS_OVERFLOW：流量超限入库延迟告警 - RISK_AGENT：Agent异常 - AUDIT_BACKUP_FAILED：实例备份失败(运维侧)
     *
     * @return $this
     */
@@ -333,7 +333,7 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  告警确认状态 - DONE: 已确认 - UNDO: 未确认
+    *  告警确认状态 - DONE：已确认 - UNDO：未确认
     *
     * @return string|null
     */
@@ -345,7 +345,7 @@ class AlarmLogRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 告警确认状态 - DONE: 已确认 - UNDO: 未确认
+    * @param string|null $status 告警确认状态 - DONE：已确认 - UNDO：未确认
     *
     * @return $this
     */

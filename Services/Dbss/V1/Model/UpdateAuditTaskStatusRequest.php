@@ -20,7 +20,7 @@ class UpdateAuditTaskStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * busiType  **参数解释**： 业务类型。 **约束限制**： 区分大小写，以取值范围为准 **取值范围**： - risk: 风险  - audit: 审计实例 **默认取值**： 不涉及
+    * busiType  **参数解释**： 业务类型。 **约束限制**： 区分大小写，以取值范围为准 **取值范围**： - risk：风险  - audit：审计实例 **默认取值**： 不涉及
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UpdateAuditTaskStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * busiType  **参数解释**： 业务类型。 **约束限制**： 区分大小写，以取值范围为准 **取值范围**： - risk: 风险  - audit: 审计实例 **默认取值**： 不涉及
+    * busiType  **参数解释**： 业务类型。 **约束限制**： 区分大小写，以取值范围为准 **取值范围**： - risk：风险  - audit：审计实例 **默认取值**： 不涉及
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateAuditTaskStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * busiType  **参数解释**： 业务类型。 **约束限制**： 区分大小写，以取值范围为准 **取值范围**： - risk: 风险  - audit: 审计实例 **默认取值**： 不涉及
+    * busiType  **参数解释**： 业务类型。 **约束限制**： 区分大小写，以取值范围为准 **取值范围**： - risk：风险  - audit：审计实例 **默认取值**： 不涉及
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateAuditTaskStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * busiType  **参数解释**： 业务类型。 **约束限制**： 区分大小写，以取值范围为准 **取值范围**： - risk: 风险  - audit: 审计实例 **默认取值**： 不涉及
+    * busiType  **参数解释**： 业务类型。 **约束限制**： 区分大小写，以取值范围为准 **取值范围**： - risk：风险  - audit：审计实例 **默认取值**： 不涉及
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateAuditTaskStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * busiType  **参数解释**： 业务类型。 **约束限制**： 区分大小写，以取值范围为准 **取值范围**： - risk: 风险  - audit: 审计实例 **默认取值**： 不涉及
+    * busiType  **参数解释**： 业务类型。 **约束限制**： 区分大小写，以取值范围为准 **取值范围**： - risk：风险  - audit：审计实例 **默认取值**： 不涉及
     * body  body
     *
     * @var string[]
@@ -188,7 +188,7 @@ class UpdateAuditTaskStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets busiType
-    *  **参数解释**： 业务类型。 **约束限制**： 区分大小写，以取值范围为准 **取值范围**： - risk: 风险  - audit: 审计实例 **默认取值**： 不涉及
+    *  **参数解释**： 业务类型。 **约束限制**： 区分大小写，以取值范围为准 **取值范围**： - risk：风险  - audit：审计实例 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class UpdateAuditTaskStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets busiType
     *
-    * @param string $busiType **参数解释**： 业务类型。 **约束限制**： 区分大小写，以取值范围为准 **取值范围**： - risk: 风险  - audit: 审计实例 **默认取值**： 不涉及
+    * @param string $busiType **参数解释**： 业务类型。 **约束限制**： 区分大小写，以取值范围为准 **取值范围**： - risk：风险  - audit：审计实例 **默认取值**： 不涉及
     *
     * @return $this
     */

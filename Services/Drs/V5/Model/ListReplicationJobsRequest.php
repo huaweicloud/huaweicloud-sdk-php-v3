@@ -31,7 +31,7 @@ class ListReplicationJobsRequest implements ModelInterface, ArrayAccess
     * tags  标签。
     * limit  查询返回记录的数量限制，默认值为10。
     * offset  偏移量，默认值为0，表示查询该偏移量后面的记录。
-    * sortKey  排序字段。
+    * sortKey  排序字段。 取值：name，db_type，inst_id，ip，created_at，description，tag_value
     * sortDir  排序方法。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ListReplicationJobsRequest implements ModelInterface, ArrayAccess
     * tags  标签。
     * limit  查询返回记录的数量限制，默认值为10。
     * offset  偏移量，默认值为0，表示查询该偏移量后面的记录。
-    * sortKey  排序字段。
+    * sortKey  排序字段。 取值：name，db_type，inst_id，ip，created_at，description，tag_value
     * sortDir  排序方法。
     *
     * @var string[]
@@ -120,7 +120,7 @@ class ListReplicationJobsRequest implements ModelInterface, ArrayAccess
     * tags  标签。
     * limit  查询返回记录的数量限制，默认值为10。
     * offset  偏移量，默认值为0，表示查询该偏移量后面的记录。
-    * sortKey  排序字段。
+    * sortKey  排序字段。 取值：name，db_type，inst_id，ip，created_at，description，tag_value
     * sortDir  排序方法。
     *
     * @var string[]
@@ -154,7 +154,7 @@ class ListReplicationJobsRequest implements ModelInterface, ArrayAccess
     * tags  标签。
     * limit  查询返回记录的数量限制，默认值为10。
     * offset  偏移量，默认值为0，表示查询该偏移量后面的记录。
-    * sortKey  排序字段。
+    * sortKey  排序字段。 取值：name，db_type，inst_id，ip，created_at，description，tag_value
     * sortDir  排序方法。
     *
     * @var string[]
@@ -188,7 +188,7 @@ class ListReplicationJobsRequest implements ModelInterface, ArrayAccess
     * tags  标签。
     * limit  查询返回记录的数量限制，默认值为10。
     * offset  偏移量，默认值为0，表示查询该偏移量后面的记录。
-    * sortKey  排序字段。
+    * sortKey  排序字段。 取值：name，db_type，inst_id，ip，created_at，description，tag_value
     * sortDir  排序方法。
     *
     * @var string[]
@@ -692,7 +692,7 @@ class ListReplicationJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
-    *  排序字段。
+    *  排序字段。 取值：name，db_type，inst_id，ip，created_at，description，tag_value
     *
     * @return string|null
     */
@@ -704,7 +704,7 @@ class ListReplicationJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 排序字段。
+    * @param string|null $sortKey 排序字段。 取值：name，db_type，inst_id，ip，created_at，description，tag_value
     *
     * @return $this
     */

@@ -25,7 +25,7 @@ class ShowBucketRegionReq implements ModelInterface, ArrayAccess
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * connectionString  连接字符串，用于微软云Blob鉴权
-    * appId  当源端为腾讯云时，会返回此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * bucketName  桶名
     *
     * @var string[]
@@ -47,7 +47,7 @@ class ShowBucketRegionReq implements ModelInterface, ArrayAccess
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * connectionString  连接字符串，用于微软云Blob鉴权
-    * appId  当源端为腾讯云时，会返回此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * bucketName  桶名
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ShowBucketRegionReq implements ModelInterface, ArrayAccess
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * connectionString  连接字符串，用于微软云Blob鉴权
-    * appId  当源端为腾讯云时，会返回此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * bucketName  桶名
     *
     * @var string[]
@@ -112,7 +112,7 @@ class ShowBucketRegionReq implements ModelInterface, ArrayAccess
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * connectionString  连接字符串，用于微软云Blob鉴权
-    * appId  当源端为腾讯云时，会返回此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * bucketName  桶名
     *
     * @var string[]
@@ -134,7 +134,7 @@ class ShowBucketRegionReq implements ModelInterface, ArrayAccess
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * connectionString  连接字符串，用于微软云Blob鉴权
-    * appId  当源端为腾讯云时，会返回此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * bucketName  桶名
     *
     * @var string[]
@@ -423,7 +423,7 @@ class ShowBucketRegionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
-    *  当源端为腾讯云时，会返回此参数。
+    *  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     *
     * @return string|null
     */
@@ -435,7 +435,7 @@ class ShowBucketRegionReq implements ModelInterface, ArrayAccess
     /**
     * Sets appId
     *
-    * @param string|null $appId 当源端为腾讯云时，会返回此参数。
+    * @param string|null $appId 腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     *
     * @return $this
     */

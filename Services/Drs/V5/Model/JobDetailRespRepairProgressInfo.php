@@ -20,7 +20,7 @@ class JobDetailRespRepairProgressInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  修复状态。
+    * status  修复状态。 取值：\"FAILED\", \"SUCCEEDED\", \"FINISHED\", \"SUCCESS\"
     * progress  修复进度，百分比。
     * errorMsg  错误信息。
     * count  总数。
@@ -38,7 +38,7 @@ class JobDetailRespRepairProgressInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  修复状态。
+    * status  修复状态。 取值：\"FAILED\", \"SUCCEEDED\", \"FINISHED\", \"SUCCESS\"
     * progress  修复进度，百分比。
     * errorMsg  错误信息。
     * count  总数。
@@ -77,7 +77,7 @@ class JobDetailRespRepairProgressInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  修复状态。
+    * status  修复状态。 取值：\"FAILED\", \"SUCCEEDED\", \"FINISHED\", \"SUCCESS\"
     * progress  修复进度，百分比。
     * errorMsg  错误信息。
     * count  总数。
@@ -95,7 +95,7 @@ class JobDetailRespRepairProgressInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  修复状态。
+    * status  修复状态。 取值：\"FAILED\", \"SUCCEEDED\", \"FINISHED\", \"SUCCESS\"
     * progress  修复进度，百分比。
     * errorMsg  错误信息。
     * count  总数。
@@ -113,7 +113,7 @@ class JobDetailRespRepairProgressInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  修复状态。
+    * status  修复状态。 取值：\"FAILED\", \"SUCCEEDED\", \"FINISHED\", \"SUCCESS\"
     * progress  修复进度，百分比。
     * errorMsg  错误信息。
     * count  总数。
@@ -218,7 +218,7 @@ class JobDetailRespRepairProgressInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  修复状态。
+    *  修复状态。 取值：\"FAILED\", \"SUCCEEDED\", \"FINISHED\", \"SUCCESS\"
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class JobDetailRespRepairProgressInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 修复状态。
+    * @param string|null $status 修复状态。 取值：\"FAILED\", \"SUCCEEDED\", \"FINISHED\", \"SUCCESS\"
     *
     * @return $this
     */

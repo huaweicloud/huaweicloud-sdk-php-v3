@@ -391,6 +391,9 @@ class EpsClient extends Client
         if ($localVarParams['status'] !== null) {
             $queryParams['status'] = $localVarParams['status'];
         }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']

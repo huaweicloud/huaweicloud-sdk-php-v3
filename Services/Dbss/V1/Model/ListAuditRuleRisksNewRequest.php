@@ -24,6 +24,8 @@ class ListAuditRuleRisksNewRequest implements ModelInterface, ArrayAccess
     * name  风险名称
     * riskLevels  **参数解释**： 风险级别 **约束限制**： 以取值范围为准 **取值范围**： - LOW：低风险 - MEDIUM：中风险 - HIGH：高风险 - NO_RISK：无风险 **默认取值**： 不涉及
     * supportDbClassifyRule  **参数解释**： 实例前端是否支持按数据库类型展示风险规则 **约束限制**： 以取值范围为准 **取值范围**： - true: 支持 - false: 不支持 **默认取值**： false: 不支持
+    * offset  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
+    * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于1000 **默认取值**： 默认值为100
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class ListAuditRuleRisksNewRequest implements ModelInterface, ArrayAccess
             'instanceId' => 'string',
             'name' => 'string',
             'riskLevels' => 'string',
-            'supportDbClassifyRule' => 'bool'
+            'supportDbClassifyRule' => 'bool',
+            'offset' => 'string',
+            'limit' => 'string'
     ];
 
     /**
@@ -40,6 +44,8 @@ class ListAuditRuleRisksNewRequest implements ModelInterface, ArrayAccess
     * name  风险名称
     * riskLevels  **参数解释**： 风险级别 **约束限制**： 以取值范围为准 **取值范围**： - LOW：低风险 - MEDIUM：中风险 - HIGH：高风险 - NO_RISK：无风险 **默认取值**： 不涉及
     * supportDbClassifyRule  **参数解释**： 实例前端是否支持按数据库类型展示风险规则 **约束限制**： 以取值范围为准 **取值范围**： - true: 支持 - false: 不支持 **默认取值**： false: 不支持
+    * offset  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
+    * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于1000 **默认取值**： 默认值为100
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class ListAuditRuleRisksNewRequest implements ModelInterface, ArrayAccess
         'instanceId' => null,
         'name' => null,
         'riskLevels' => null,
-        'supportDbClassifyRule' => null
+        'supportDbClassifyRule' => null,
+        'offset' => null,
+        'limit' => null
     ];
 
     /**
@@ -77,6 +85,8 @@ class ListAuditRuleRisksNewRequest implements ModelInterface, ArrayAccess
     * name  风险名称
     * riskLevels  **参数解释**： 风险级别 **约束限制**： 以取值范围为准 **取值范围**： - LOW：低风险 - MEDIUM：中风险 - HIGH：高风险 - NO_RISK：无风险 **默认取值**： 不涉及
     * supportDbClassifyRule  **参数解释**： 实例前端是否支持按数据库类型展示风险规则 **约束限制**： 以取值范围为准 **取值范围**： - true: 支持 - false: 不支持 **默认取值**： false: 不支持
+    * offset  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
+    * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于1000 **默认取值**： 默认值为100
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class ListAuditRuleRisksNewRequest implements ModelInterface, ArrayAccess
             'instanceId' => 'instance_id',
             'name' => 'name',
             'riskLevels' => 'risk_levels',
-            'supportDbClassifyRule' => 'support_db_classify_rule'
+            'supportDbClassifyRule' => 'support_db_classify_rule',
+            'offset' => 'offset',
+            'limit' => 'limit'
     ];
 
     /**
@@ -93,6 +105,8 @@ class ListAuditRuleRisksNewRequest implements ModelInterface, ArrayAccess
     * name  风险名称
     * riskLevels  **参数解释**： 风险级别 **约束限制**： 以取值范围为准 **取值范围**： - LOW：低风险 - MEDIUM：中风险 - HIGH：高风险 - NO_RISK：无风险 **默认取值**： 不涉及
     * supportDbClassifyRule  **参数解释**： 实例前端是否支持按数据库类型展示风险规则 **约束限制**： 以取值范围为准 **取值范围**： - true: 支持 - false: 不支持 **默认取值**： false: 不支持
+    * offset  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
+    * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于1000 **默认取值**： 默认值为100
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class ListAuditRuleRisksNewRequest implements ModelInterface, ArrayAccess
             'instanceId' => 'setInstanceId',
             'name' => 'setName',
             'riskLevels' => 'setRiskLevels',
-            'supportDbClassifyRule' => 'setSupportDbClassifyRule'
+            'supportDbClassifyRule' => 'setSupportDbClassifyRule',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit'
     ];
 
     /**
@@ -109,6 +125,8 @@ class ListAuditRuleRisksNewRequest implements ModelInterface, ArrayAccess
     * name  风险名称
     * riskLevels  **参数解释**： 风险级别 **约束限制**： 以取值范围为准 **取值范围**： - LOW：低风险 - MEDIUM：中风险 - HIGH：高风险 - NO_RISK：无风险 **默认取值**： 不涉及
     * supportDbClassifyRule  **参数解释**： 实例前端是否支持按数据库类型展示风险规则 **约束限制**： 以取值范围为准 **取值范围**： - true: 支持 - false: 不支持 **默认取值**： false: 不支持
+    * offset  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
+    * limit  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于1000 **默认取值**： 默认值为100
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class ListAuditRuleRisksNewRequest implements ModelInterface, ArrayAccess
             'instanceId' => 'getInstanceId',
             'name' => 'getName',
             'riskLevels' => 'getRiskLevels',
-            'supportDbClassifyRule' => 'getSupportDbClassifyRule'
+            'supportDbClassifyRule' => 'getSupportDbClassifyRule',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -181,6 +201,8 @@ class ListAuditRuleRisksNewRequest implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['riskLevels'] = isset($data['riskLevels']) ? $data['riskLevels'] : null;
         $this->container['supportDbClassifyRule'] = isset($data['supportDbClassifyRule']) ? $data['supportDbClassifyRule'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -307,6 +329,54 @@ class ListAuditRuleRisksNewRequest implements ModelInterface, ArrayAccess
     public function setSupportDbClassifyRule($supportDbClassifyRule)
     {
         $this->container['supportDbClassifyRule'] = $supportDbClassifyRule;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
+    *
+    * @return string|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param string|null $offset **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于1000 **默认取值**： 默认值为100
+    *
+    * @return string|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param string|null $limit **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于1000 **默认取值**： 默认值为100
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

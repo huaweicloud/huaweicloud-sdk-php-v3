@@ -34,7 +34,7 @@ class ShowSyncTaskResponse implements ModelInterface, ArrayAccess
     * enableKms  是否开启KMS加密，默认不开启。
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableRestore  是否自动解冻归档数据，默认否。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
-    * appId  当源端为腾讯云时，需要填写此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，会返回此参数。
     * monthlyAcceptanceRequest  当月接收同步请求对象数
     * monthlySuccessObject  当月同步成功对象数
     * monthlyFailureObject  当月同步失败对象数
@@ -86,7 +86,7 @@ class ShowSyncTaskResponse implements ModelInterface, ArrayAccess
     * enableKms  是否开启KMS加密，默认不开启。
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableRestore  是否自动解冻归档数据，默认否。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
-    * appId  当源端为腾讯云时，需要填写此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，会返回此参数。
     * monthlyAcceptanceRequest  当月接收同步请求对象数
     * monthlySuccessObject  当月同步成功对象数
     * monthlyFailureObject  当月同步失败对象数
@@ -159,7 +159,7 @@ class ShowSyncTaskResponse implements ModelInterface, ArrayAccess
     * enableKms  是否开启KMS加密，默认不开启。
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableRestore  是否自动解冻归档数据，默认否。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
-    * appId  当源端为腾讯云时，需要填写此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，会返回此参数。
     * monthlyAcceptanceRequest  当月接收同步请求对象数
     * monthlySuccessObject  当月同步成功对象数
     * monthlyFailureObject  当月同步失败对象数
@@ -211,7 +211,7 @@ class ShowSyncTaskResponse implements ModelInterface, ArrayAccess
     * enableKms  是否开启KMS加密，默认不开启。
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableRestore  是否自动解冻归档数据，默认否。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
-    * appId  当源端为腾讯云时，需要填写此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，会返回此参数。
     * monthlyAcceptanceRequest  当月接收同步请求对象数
     * monthlySuccessObject  当月同步成功对象数
     * monthlyFailureObject  当月同步失败对象数
@@ -263,7 +263,7 @@ class ShowSyncTaskResponse implements ModelInterface, ArrayAccess
     * enableKms  是否开启KMS加密，默认不开启。
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableRestore  是否自动解冻归档数据，默认否。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
-    * appId  当源端为腾讯云时，需要填写此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，会返回此参数。
     * monthlyAcceptanceRequest  当月接收同步请求对象数
     * monthlySuccessObject  当月同步成功对象数
     * monthlyFailureObject  当月同步失败对象数
@@ -972,7 +972,7 @@ class ShowSyncTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
-    *  当源端为腾讯云时，需要填写此参数。
+    *  腾讯云APPID，当源端为腾讯云时，会返回此参数。
     *
     * @return string|null
     */
@@ -984,7 +984,7 @@ class ShowSyncTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets appId
     *
-    * @param string|null $appId 当源端为腾讯云时，需要填写此参数。
+    * @param string|null $appId 腾讯云APPID，当源端为腾讯云时，会返回此参数。
     *
     * @return $this
     */

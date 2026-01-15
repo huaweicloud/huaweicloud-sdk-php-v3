@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dbss\V1\Model;
+namespace HuaweiCloud\SDK\Dns\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UnSupportAuditInfo implements ModelInterface, ArrayAccess
+class ListInstancesResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,26 @@ class UnSupportAuditInfo implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UnSupportAuditInfo';
+    protected static $openAPIModelName = 'ListInstancesResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * auditVersion  实例版本
-    * serverName  实例名称
+    * instances  返回查询到的解析量资源实例。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'auditVersion' => 'string',
-            'serverName' => 'string'
+            'instances' => '\HuaweiCloud\SDK\Dns\V2\Model\ResolutionInstances[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * auditVersion  实例版本
-    * serverName  实例名称
+    * instances  返回查询到的解析量资源实例。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'auditVersion' => null,
-        'serverName' => null
+        'instances' => null
     ];
 
     /**
@@ -65,38 +62,32 @@ class UnSupportAuditInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * auditVersion  实例版本
-    * serverName  实例名称
+    * instances  返回查询到的解析量资源实例。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'auditVersion' => 'audit_version',
-            'serverName' => 'server_name'
+            'instances' => 'instances'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * auditVersion  实例版本
-    * serverName  实例名称
+    * instances  返回查询到的解析量资源实例。
     *
     * @var string[]
     */
     protected static $setters = [
-            'auditVersion' => 'setAuditVersion',
-            'serverName' => 'setServerName'
+            'instances' => 'setInstances'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * auditVersion  实例版本
-    * serverName  实例名称
+    * instances  返回查询到的解析量资源实例。
     *
     * @var string[]
     */
     protected static $getters = [
-            'auditVersion' => 'getAuditVersion',
-            'serverName' => 'getServerName'
+            'instances' => 'getInstances'
     ];
 
     /**
@@ -157,8 +148,7 @@ class UnSupportAuditInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['auditVersion'] = isset($data['auditVersion']) ? $data['auditVersion'] : null;
-        $this->container['serverName'] = isset($data['serverName']) ? $data['serverName'] : null;
+        $this->container['instances'] = isset($data['instances']) ? $data['instances'] : null;
     }
 
     /**
@@ -184,50 +174,26 @@ class UnSupportAuditInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets auditVersion
-    *  实例版本
+    * Gets instances
+    *  返回查询到的解析量资源实例。
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\ResolutionInstances[]|null
     */
-    public function getAuditVersion()
+    public function getInstances()
     {
-        return $this->container['auditVersion'];
+        return $this->container['instances'];
     }
 
     /**
-    * Sets auditVersion
+    * Sets instances
     *
-    * @param string|null $auditVersion 实例版本
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\ResolutionInstances[]|null $instances 返回查询到的解析量资源实例。
     *
     * @return $this
     */
-    public function setAuditVersion($auditVersion)
+    public function setInstances($instances)
     {
-        $this->container['auditVersion'] = $auditVersion;
-        return $this;
-    }
-
-    /**
-    * Gets serverName
-    *  实例名称
-    *
-    * @return string|null
-    */
-    public function getServerName()
-    {
-        return $this->container['serverName'];
-    }
-
-    /**
-    * Sets serverName
-    *
-    * @param string|null $serverName 实例名称
-    *
-    * @return $this
-    */
-    public function setServerName($serverName)
-    {
-        $this->container['serverName'] = $serverName;
+        $this->container['instances'] = $instances;
         return $this;
     }
 

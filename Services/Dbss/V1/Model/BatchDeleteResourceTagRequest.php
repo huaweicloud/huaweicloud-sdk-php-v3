@@ -20,7 +20,7 @@ class BatchDeleteResourceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance: 审计  **默认取值**： 不涉及
+    * resourceType  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance：审计  **默认取值**： 不涉及
     * resourceId  **参数解释**：  资源ID。可在查询实例列表接口的resource_id字段获取。 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口获取值为准，字符长度32-64。 **默认取值**： 不涉及
     * body  body
     *
@@ -34,7 +34,7 @@ class BatchDeleteResourceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance: 审计  **默认取值**： 不涉及
+    * resourceType  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance：审计  **默认取值**： 不涉及
     * resourceId  **参数解释**：  资源ID。可在查询实例列表接口的resource_id字段获取。 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口获取值为准，字符长度32-64。 **默认取值**： 不涉及
     * body  body
     *
@@ -69,7 +69,7 @@ class BatchDeleteResourceTagRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance: 审计  **默认取值**： 不涉及
+    * resourceType  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance：审计  **默认取值**： 不涉及
     * resourceId  **参数解释**：  资源ID。可在查询实例列表接口的resource_id字段获取。 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口获取值为准，字符长度32-64。 **默认取值**： 不涉及
     * body  body
     *
@@ -83,7 +83,7 @@ class BatchDeleteResourceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance: 审计  **默认取值**： 不涉及
+    * resourceType  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance：审计  **默认取值**： 不涉及
     * resourceId  **参数解释**：  资源ID。可在查询实例列表接口的resource_id字段获取。 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口获取值为准，字符长度32-64。 **默认取值**： 不涉及
     * body  body
     *
@@ -97,7 +97,7 @@ class BatchDeleteResourceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance: 审计  **默认取值**： 不涉及
+    * resourceType  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance：审计  **默认取值**： 不涉及
     * resourceId  **参数解释**：  资源ID。可在查询实例列表接口的resource_id字段获取。 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口获取值为准，字符长度32-64。 **默认取值**： 不涉及
     * body  body
     *
@@ -223,7 +223,7 @@ class BatchDeleteResourceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance: 审计  **默认取值**： 不涉及
+    *  **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance：审计  **默认取值**： 不涉及
     *
     * @return string
     */
@@ -235,7 +235,7 @@ class BatchDeleteResourceTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance: 审计  **默认取值**： 不涉及
+    * @param string $resourceType **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance：审计  **默认取值**： 不涉及
     *
     * @return $this
     */

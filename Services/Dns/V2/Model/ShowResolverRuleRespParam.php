@@ -24,7 +24,7 @@ class ShowResolverRuleRespParam implements ModelInterface, ArrayAccess
     * name  规则名称。
     * domainName  域名。
     * endpointId  当前规则所属的终端节点ID。
-    * status  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     * ruleType  规则类型。 预留字段，当前默认为FORWARD。
     * ipaddressCount  当前规则下的IP地址数量。
     * ipaddresses  规则的目标IP地址。
@@ -54,7 +54,7 @@ class ShowResolverRuleRespParam implements ModelInterface, ArrayAccess
     * name  规则名称。
     * domainName  域名。
     * endpointId  当前规则所属的终端节点ID。
-    * status  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     * ruleType  规则类型。 预留字段，当前默认为FORWARD。
     * ipaddressCount  当前规则下的IP地址数量。
     * ipaddresses  规则的目标IP地址。
@@ -105,7 +105,7 @@ class ShowResolverRuleRespParam implements ModelInterface, ArrayAccess
     * name  规则名称。
     * domainName  域名。
     * endpointId  当前规则所属的终端节点ID。
-    * status  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     * ruleType  规则类型。 预留字段，当前默认为FORWARD。
     * ipaddressCount  当前规则下的IP地址数量。
     * ipaddresses  规则的目标IP地址。
@@ -135,7 +135,7 @@ class ShowResolverRuleRespParam implements ModelInterface, ArrayAccess
     * name  规则名称。
     * domainName  域名。
     * endpointId  当前规则所属的终端节点ID。
-    * status  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     * ruleType  规则类型。 预留字段，当前默认为FORWARD。
     * ipaddressCount  当前规则下的IP地址数量。
     * ipaddresses  规则的目标IP地址。
@@ -165,7 +165,7 @@ class ShowResolverRuleRespParam implements ModelInterface, ArrayAccess
     * name  规则名称。
     * domainName  域名。
     * endpointId  当前规则所属的终端节点ID。
-    * status  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     * ruleType  规则类型。 预留字段，当前默认为FORWARD。
     * ipaddressCount  当前规则下的IP地址数量。
     * ipaddresses  规则的目标IP地址。
@@ -380,7 +380,7 @@ class ShowResolverRuleRespParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
+    *  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     *
     * @return string|null
     */
@@ -392,7 +392,7 @@ class ShowResolverRuleRespParam implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
+    * @param string|null $status **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     *
     * @return $this
     */

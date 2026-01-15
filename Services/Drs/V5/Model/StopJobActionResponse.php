@@ -25,7 +25,7 @@ class StopJobActionResponse implements ModelInterface, ArrayAccess
     * errorMsg  错误描述。
     * id  任务ID。
     * name  任务名称。
-    * status  操作结果。
+    * status  操作结果。 success，failed
     *
     * @var string[]
     */
@@ -43,7 +43,7 @@ class StopJobActionResponse implements ModelInterface, ArrayAccess
     * errorMsg  错误描述。
     * id  任务ID。
     * name  任务名称。
-    * status  操作结果。
+    * status  操作结果。 success，failed
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class StopJobActionResponse implements ModelInterface, ArrayAccess
     * errorMsg  错误描述。
     * id  任务ID。
     * name  任务名称。
-    * status  操作结果。
+    * status  操作结果。 success，failed
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class StopJobActionResponse implements ModelInterface, ArrayAccess
     * errorMsg  错误描述。
     * id  任务ID。
     * name  任务名称。
-    * status  操作结果。
+    * status  操作结果。 success，failed
     *
     * @var string[]
     */
@@ -118,7 +118,7 @@ class StopJobActionResponse implements ModelInterface, ArrayAccess
     * errorMsg  错误描述。
     * id  任务ID。
     * name  任务名称。
-    * status  操作结果。
+    * status  操作结果。 success，failed
     *
     * @var string[]
     */
@@ -342,7 +342,7 @@ class StopJobActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  操作结果。
+    *  操作结果。 success，failed
     *
     * @return string
     */
@@ -354,7 +354,7 @@ class StopJobActionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 操作结果。
+    * @param string $status 操作结果。 success，failed
     *
     * @return $this
     */

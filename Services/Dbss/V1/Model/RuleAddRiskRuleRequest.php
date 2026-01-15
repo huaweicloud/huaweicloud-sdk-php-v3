@@ -22,11 +22,11 @@ class RuleAddRiskRuleRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * action  操作类型，多个用英文','分隔
     * affectRows  影响行数
-    * affectSymbol  影响行数操作符 - GREATER: 大于 - EQUAL: 等于 - LESS: 小于 - GREATER_EQUAL: 大于等于 - LESS_EQUAL: 小于等于 - NO_MATCH: 不等于
+    * affectSymbol  影响行数操作符 - GREATER：大于 - EQUAL：等于 - LESS：小于 - GREATER_EQUAL：大于等于 - LESS_EQUAL：小于等于 - NO_MATCH：不等于
     * clientIps  客户端IP，多个用英文','分隔
     * dbIds  数据库ID，多个用英文','分隔
     * exceptionIps  例外IP，IP内不做匹配，多个用英文','分隔
-    * executionSymbol  执行时长操作符 - GREATER: 大于 - EQUAL: 等于 - LESS: 小于 - GREATER_EQUAL: 大于等于 - LESS_EQUAL: 小于等于 - NO_MATCH: 不等于
+    * executionSymbol  执行时长操作符 - GREATER：大于 - EQUAL：等于 - LESS：小于 - GREATER_EQUAL：大于等于 - LESS_EQUAL：小于等于 - NO_MATCH：不等于
     * executionTime  执行时长
     * ignoreCase  是否忽略大小写
     * riskLevel  风险等级   - LOW：低  - MEDIUM：中  - HIGH：高  - NO_RISK：无
@@ -56,11 +56,11 @@ class RuleAddRiskRuleRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * action  操作类型，多个用英文','分隔
     * affectRows  影响行数
-    * affectSymbol  影响行数操作符 - GREATER: 大于 - EQUAL: 等于 - LESS: 小于 - GREATER_EQUAL: 大于等于 - LESS_EQUAL: 小于等于 - NO_MATCH: 不等于
+    * affectSymbol  影响行数操作符 - GREATER：大于 - EQUAL：等于 - LESS：小于 - GREATER_EQUAL：大于等于 - LESS_EQUAL：小于等于 - NO_MATCH：不等于
     * clientIps  客户端IP，多个用英文','分隔
     * dbIds  数据库ID，多个用英文','分隔
     * exceptionIps  例外IP，IP内不做匹配，多个用英文','分隔
-    * executionSymbol  执行时长操作符 - GREATER: 大于 - EQUAL: 等于 - LESS: 小于 - GREATER_EQUAL: 大于等于 - LESS_EQUAL: 小于等于 - NO_MATCH: 不等于
+    * executionSymbol  执行时长操作符 - GREATER：大于 - EQUAL：等于 - LESS：小于 - GREATER_EQUAL：大于等于 - LESS_EQUAL：小于等于 - NO_MATCH：不等于
     * executionTime  执行时长
     * ignoreCase  是否忽略大小写
     * riskLevel  风险等级   - LOW：低  - MEDIUM：中  - HIGH：高  - NO_RISK：无
@@ -111,11 +111,11 @@ class RuleAddRiskRuleRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * action  操作类型，多个用英文','分隔
     * affectRows  影响行数
-    * affectSymbol  影响行数操作符 - GREATER: 大于 - EQUAL: 等于 - LESS: 小于 - GREATER_EQUAL: 大于等于 - LESS_EQUAL: 小于等于 - NO_MATCH: 不等于
+    * affectSymbol  影响行数操作符 - GREATER：大于 - EQUAL：等于 - LESS：小于 - GREATER_EQUAL：大于等于 - LESS_EQUAL：小于等于 - NO_MATCH：不等于
     * clientIps  客户端IP，多个用英文','分隔
     * dbIds  数据库ID，多个用英文','分隔
     * exceptionIps  例外IP，IP内不做匹配，多个用英文','分隔
-    * executionSymbol  执行时长操作符 - GREATER: 大于 - EQUAL: 等于 - LESS: 小于 - GREATER_EQUAL: 大于等于 - LESS_EQUAL: 小于等于 - NO_MATCH: 不等于
+    * executionSymbol  执行时长操作符 - GREATER：大于 - EQUAL：等于 - LESS：小于 - GREATER_EQUAL：大于等于 - LESS_EQUAL：小于等于 - NO_MATCH：不等于
     * executionTime  执行时长
     * ignoreCase  是否忽略大小写
     * riskLevel  风险等级   - LOW：低  - MEDIUM：中  - HIGH：高  - NO_RISK：无
@@ -145,11 +145,11 @@ class RuleAddRiskRuleRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * action  操作类型，多个用英文','分隔
     * affectRows  影响行数
-    * affectSymbol  影响行数操作符 - GREATER: 大于 - EQUAL: 等于 - LESS: 小于 - GREATER_EQUAL: 大于等于 - LESS_EQUAL: 小于等于 - NO_MATCH: 不等于
+    * affectSymbol  影响行数操作符 - GREATER：大于 - EQUAL：等于 - LESS：小于 - GREATER_EQUAL：大于等于 - LESS_EQUAL：小于等于 - NO_MATCH：不等于
     * clientIps  客户端IP，多个用英文','分隔
     * dbIds  数据库ID，多个用英文','分隔
     * exceptionIps  例外IP，IP内不做匹配，多个用英文','分隔
-    * executionSymbol  执行时长操作符 - GREATER: 大于 - EQUAL: 等于 - LESS: 小于 - GREATER_EQUAL: 大于等于 - LESS_EQUAL: 小于等于 - NO_MATCH: 不等于
+    * executionSymbol  执行时长操作符 - GREATER：大于 - EQUAL：等于 - LESS：小于 - GREATER_EQUAL：大于等于 - LESS_EQUAL：小于等于 - NO_MATCH：不等于
     * executionTime  执行时长
     * ignoreCase  是否忽略大小写
     * riskLevel  风险等级   - LOW：低  - MEDIUM：中  - HIGH：高  - NO_RISK：无
@@ -179,11 +179,11 @@ class RuleAddRiskRuleRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * action  操作类型，多个用英文','分隔
     * affectRows  影响行数
-    * affectSymbol  影响行数操作符 - GREATER: 大于 - EQUAL: 等于 - LESS: 小于 - GREATER_EQUAL: 大于等于 - LESS_EQUAL: 小于等于 - NO_MATCH: 不等于
+    * affectSymbol  影响行数操作符 - GREATER：大于 - EQUAL：等于 - LESS：小于 - GREATER_EQUAL：大于等于 - LESS_EQUAL：小于等于 - NO_MATCH：不等于
     * clientIps  客户端IP，多个用英文','分隔
     * dbIds  数据库ID，多个用英文','分隔
     * exceptionIps  例外IP，IP内不做匹配，多个用英文','分隔
-    * executionSymbol  执行时长操作符 - GREATER: 大于 - EQUAL: 等于 - LESS: 小于 - GREATER_EQUAL: 大于等于 - LESS_EQUAL: 小于等于 - NO_MATCH: 不等于
+    * executionSymbol  执行时长操作符 - GREATER：大于 - EQUAL：等于 - LESS：小于 - GREATER_EQUAL：大于等于 - LESS_EQUAL：小于等于 - NO_MATCH：不等于
     * executionTime  执行时长
     * ignoreCase  是否忽略大小写
     * riskLevel  风险等级   - LOW：低  - MEDIUM：中  - HIGH：高  - NO_RISK：无
@@ -375,7 +375,7 @@ class RuleAddRiskRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets affectSymbol
-    *  影响行数操作符 - GREATER: 大于 - EQUAL: 等于 - LESS: 小于 - GREATER_EQUAL: 大于等于 - LESS_EQUAL: 小于等于 - NO_MATCH: 不等于
+    *  影响行数操作符 - GREATER：大于 - EQUAL：等于 - LESS：小于 - GREATER_EQUAL：大于等于 - LESS_EQUAL：小于等于 - NO_MATCH：不等于
     *
     * @return string
     */
@@ -387,7 +387,7 @@ class RuleAddRiskRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets affectSymbol
     *
-    * @param string $affectSymbol 影响行数操作符 - GREATER: 大于 - EQUAL: 等于 - LESS: 小于 - GREATER_EQUAL: 大于等于 - LESS_EQUAL: 小于等于 - NO_MATCH: 不等于
+    * @param string $affectSymbol 影响行数操作符 - GREATER：大于 - EQUAL：等于 - LESS：小于 - GREATER_EQUAL：大于等于 - LESS_EQUAL：小于等于 - NO_MATCH：不等于
     *
     * @return $this
     */
@@ -471,7 +471,7 @@ class RuleAddRiskRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets executionSymbol
-    *  执行时长操作符 - GREATER: 大于 - EQUAL: 等于 - LESS: 小于 - GREATER_EQUAL: 大于等于 - LESS_EQUAL: 小于等于 - NO_MATCH: 不等于
+    *  执行时长操作符 - GREATER：大于 - EQUAL：等于 - LESS：小于 - GREATER_EQUAL：大于等于 - LESS_EQUAL：小于等于 - NO_MATCH：不等于
     *
     * @return string
     */
@@ -483,7 +483,7 @@ class RuleAddRiskRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets executionSymbol
     *
-    * @param string $executionSymbol 执行时长操作符 - GREATER: 大于 - EQUAL: 等于 - LESS: 小于 - GREATER_EQUAL: 大于等于 - LESS_EQUAL: 小于等于 - NO_MATCH: 不等于
+    * @param string $executionSymbol 执行时长操作符 - GREATER：大于 - EQUAL：等于 - LESS：小于 - GREATER_EQUAL：大于等于 - LESS_EQUAL：小于等于 - NO_MATCH：不等于
     *
     * @return $this
     */

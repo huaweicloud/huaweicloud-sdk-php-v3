@@ -21,7 +21,7 @@ class SetAuditAlarmLogStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * result  请求结果  - request_success: 成功
+    * result  请求结果  - request_success：成功
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class SetAuditAlarmLogStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * result  请求结果  - request_success: 成功
+    * result  请求结果  - request_success：成功
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class SetAuditAlarmLogStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * result  请求结果  - request_success: 成功
+    * result  请求结果  - request_success：成功
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class SetAuditAlarmLogStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * result  请求结果  - request_success: 成功
+    * result  请求结果  - request_success：成功
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class SetAuditAlarmLogStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * result  请求结果  - request_success: 成功
+    * result  请求结果  - request_success：成功
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class SetAuditAlarmLogStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  请求结果  - request_success: 成功
+    *  请求结果  - request_success：成功
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class SetAuditAlarmLogStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param string|null $result 请求结果  - request_success: 成功
+    * @param string|null $result 请求结果  - request_success：成功
     *
     * @return $this
     */

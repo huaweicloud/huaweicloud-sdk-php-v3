@@ -36,7 +36,7 @@ class SqlDetailBean implements ModelInterface, ArrayAccess
     * dbPortStr  数据库端口字符
     * dbServiceName  数据库服务名称
     * dbSessionId  数据库连接ID
-    * dbType  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG： DAMENG - TAURUS: Taurus DB - DWS: GaussDB(DWS) - KINGBASE: Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM： Greenplum - HIGHGO: HIGHGO - SHENTONG： ShenTong - GBASE8A: GBase 8a - GBASE8S： GBase 8s - GBASEXDM： GBase XDM - MONGODB: MongoDB - DDS： DDS(MongoDB)
+    * dbType  数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - SQLSERVER：SQL Server - DAMENG：DAMENG - TAURUS：Taurus DB - DWS：GaussDB(DWS) - KINGBASE：Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM：Greenplum - HIGHGO：HIGHGO - SHENTONG：ShenTong - GBASE8A：GBase 8a - GBASE8S：GBase 8s - GBASEXDM：GBase XDM - MONGODB：MongoDB - DDS：DDS(MongoDB)
     * dbUser  数据库用户
     * endTime  请求结束时间
     * executeTime  执行时长
@@ -128,7 +128,7 @@ class SqlDetailBean implements ModelInterface, ArrayAccess
     * dbPortStr  数据库端口字符
     * dbServiceName  数据库服务名称
     * dbSessionId  数据库连接ID
-    * dbType  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG： DAMENG - TAURUS: Taurus DB - DWS: GaussDB(DWS) - KINGBASE: Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM： Greenplum - HIGHGO: HIGHGO - SHENTONG： ShenTong - GBASE8A: GBase 8a - GBASE8S： GBase 8s - GBASEXDM： GBase XDM - MONGODB: MongoDB - DDS： DDS(MongoDB)
+    * dbType  数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - SQLSERVER：SQL Server - DAMENG：DAMENG - TAURUS：Taurus DB - DWS：GaussDB(DWS) - KINGBASE：Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM：Greenplum - HIGHGO：HIGHGO - SHENTONG：ShenTong - GBASE8A：GBase 8a - GBASE8S：GBase 8s - GBASEXDM：GBase XDM - MONGODB：MongoDB - DDS：DDS(MongoDB)
     * dbUser  数据库用户
     * endTime  请求结束时间
     * executeTime  执行时长
@@ -241,7 +241,7 @@ class SqlDetailBean implements ModelInterface, ArrayAccess
     * dbPortStr  数据库端口字符
     * dbServiceName  数据库服务名称
     * dbSessionId  数据库连接ID
-    * dbType  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG： DAMENG - TAURUS: Taurus DB - DWS: GaussDB(DWS) - KINGBASE: Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM： Greenplum - HIGHGO: HIGHGO - SHENTONG： ShenTong - GBASE8A: GBase 8a - GBASE8S： GBase 8s - GBASEXDM： GBase XDM - MONGODB: MongoDB - DDS： DDS(MongoDB)
+    * dbType  数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - SQLSERVER：SQL Server - DAMENG：DAMENG - TAURUS：Taurus DB - DWS：GaussDB(DWS) - KINGBASE：Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM：Greenplum - HIGHGO：HIGHGO - SHENTONG：ShenTong - GBASE8A：GBase 8a - GBASE8S：GBase 8s - GBASEXDM：GBase XDM - MONGODB：MongoDB - DDS：DDS(MongoDB)
     * dbUser  数据库用户
     * endTime  请求结束时间
     * executeTime  执行时长
@@ -333,7 +333,7 @@ class SqlDetailBean implements ModelInterface, ArrayAccess
     * dbPortStr  数据库端口字符
     * dbServiceName  数据库服务名称
     * dbSessionId  数据库连接ID
-    * dbType  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG： DAMENG - TAURUS: Taurus DB - DWS: GaussDB(DWS) - KINGBASE: Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM： Greenplum - HIGHGO: HIGHGO - SHENTONG： ShenTong - GBASE8A: GBase 8a - GBASE8S： GBase 8s - GBASEXDM： GBase XDM - MONGODB: MongoDB - DDS： DDS(MongoDB)
+    * dbType  数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - SQLSERVER：SQL Server - DAMENG：DAMENG - TAURUS：Taurus DB - DWS：GaussDB(DWS) - KINGBASE：Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM：Greenplum - HIGHGO：HIGHGO - SHENTONG：ShenTong - GBASE8A：GBase 8a - GBASE8S：GBase 8s - GBASEXDM：GBase XDM - MONGODB：MongoDB - DDS：DDS(MongoDB)
     * dbUser  数据库用户
     * endTime  请求结束时间
     * executeTime  执行时长
@@ -425,7 +425,7 @@ class SqlDetailBean implements ModelInterface, ArrayAccess
     * dbPortStr  数据库端口字符
     * dbServiceName  数据库服务名称
     * dbSessionId  数据库连接ID
-    * dbType  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG： DAMENG - TAURUS: Taurus DB - DWS: GaussDB(DWS) - KINGBASE: Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM： Greenplum - HIGHGO: HIGHGO - SHENTONG： ShenTong - GBASE8A: GBase 8a - GBASE8S： GBase 8s - GBASEXDM： GBase XDM - MONGODB: MongoDB - DDS： DDS(MongoDB)
+    * dbType  数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - SQLSERVER：SQL Server - DAMENG：DAMENG - TAURUS：Taurus DB - DWS：GaussDB(DWS) - KINGBASE：Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM：Greenplum - HIGHGO：HIGHGO - SHENTONG：ShenTong - GBASE8A：GBase 8a - GBASE8S：GBase 8s - GBASEXDM：GBase XDM - MONGODB：MongoDB - DDS：DDS(MongoDB)
     * dbUser  数据库用户
     * endTime  请求结束时间
     * executeTime  执行时长
@@ -1009,7 +1009,7 @@ class SqlDetailBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbType
-    *  数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG： DAMENG - TAURUS: Taurus DB - DWS: GaussDB(DWS) - KINGBASE: Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM： Greenplum - HIGHGO: HIGHGO - SHENTONG： ShenTong - GBASE8A: GBase 8a - GBASE8S： GBase 8s - GBASEXDM： GBase XDM - MONGODB: MongoDB - DDS： DDS(MongoDB)
+    *  数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - SQLSERVER：SQL Server - DAMENG：DAMENG - TAURUS：Taurus DB - DWS：GaussDB(DWS) - KINGBASE：Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM：Greenplum - HIGHGO：HIGHGO - SHENTONG：ShenTong - GBASE8A：GBase 8a - GBASE8S：GBase 8s - GBASEXDM：GBase XDM - MONGODB：MongoDB - DDS：DDS(MongoDB)
     *
     * @return string|null
     */
@@ -1021,7 +1021,7 @@ class SqlDetailBean implements ModelInterface, ArrayAccess
     /**
     * Sets dbType
     *
-    * @param string|null $dbType 数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG： DAMENG - TAURUS: Taurus DB - DWS: GaussDB(DWS) - KINGBASE: Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM： Greenplum - HIGHGO: HIGHGO - SHENTONG： ShenTong - GBASE8A: GBase 8a - GBASE8S： GBase 8s - GBASEXDM： GBase XDM - MONGODB: MongoDB - DDS： DDS(MongoDB)
+    * @param string|null $dbType 数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - SQLSERVER：SQL Server - DAMENG：DAMENG - TAURUS：Taurus DB - DWS：GaussDB(DWS) - KINGBASE：Kingbase - GAUSSDBOPENGAUSS：GaussDB/openGauss - GREENPLUM：Greenplum - HIGHGO：HIGHGO - SHENTONG：ShenTong - GBASE8A：GBase 8a - GBASE8S：GBase 8s - GBASEXDM：GBase XDM - MONGODB：MongoDB - DDS：DDS(MongoDB)
     *
     * @return $this
     */

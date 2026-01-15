@@ -23,7 +23,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     * id  终端节点的ID，UUID形式的一个资源标识。
     * name  终端节点的名称。
     * direction  终端节点方向。 取值： inbound，表示入站终端节点。 outbound，表示出站终端节点。
-    * status  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     * vpcId  终端节点所属的VPC ID。
     * ipaddressCount  该终端节点下的IP地址数量。
     * resolverRuleCount  该终端节点下的转发规则数量。 仅创建出站终端节点时返回该参数。
@@ -49,7 +49,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     * id  终端节点的ID，UUID形式的一个资源标识。
     * name  终端节点的名称。
     * direction  终端节点方向。 取值： inbound，表示入站终端节点。 outbound，表示出站终端节点。
-    * status  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     * vpcId  终端节点所属的VPC ID。
     * ipaddressCount  该终端节点下的IP地址数量。
     * resolverRuleCount  该终端节点下的转发规则数量。 仅创建出站终端节点时返回该参数。
@@ -96,7 +96,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     * id  终端节点的ID，UUID形式的一个资源标识。
     * name  终端节点的名称。
     * direction  终端节点方向。 取值： inbound，表示入站终端节点。 outbound，表示出站终端节点。
-    * status  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     * vpcId  终端节点所属的VPC ID。
     * ipaddressCount  该终端节点下的IP地址数量。
     * resolverRuleCount  该终端节点下的转发规则数量。 仅创建出站终端节点时返回该参数。
@@ -122,7 +122,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     * id  终端节点的ID，UUID形式的一个资源标识。
     * name  终端节点的名称。
     * direction  终端节点方向。 取值： inbound，表示入站终端节点。 outbound，表示出站终端节点。
-    * status  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     * vpcId  终端节点所属的VPC ID。
     * ipaddressCount  该终端节点下的IP地址数量。
     * resolverRuleCount  该终端节点下的转发规则数量。 仅创建出站终端节点时返回该参数。
@@ -148,7 +148,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     * id  终端节点的ID，UUID形式的一个资源标识。
     * name  终端节点的名称。
     * direction  终端节点方向。 取值： inbound，表示入站终端节点。 outbound，表示出站终端节点。
-    * status  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     * vpcId  终端节点所属的VPC ID。
     * ipaddressCount  该终端节点下的IP地址数量。
     * resolverRuleCount  该终端节点下的转发规则数量。 仅创建出站终端节点时返回该参数。
@@ -334,7 +334,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
+    *  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
+    * @param string|null $status **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
     *
     * @return $this
     */

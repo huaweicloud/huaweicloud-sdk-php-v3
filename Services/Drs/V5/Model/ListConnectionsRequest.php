@@ -32,7 +32,7 @@ class ListConnectionsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，默认值为0，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制，默认值为10。
     * fetchAll  值为“true”时会使得offset和limit参数失效并返回所有记录。
-    * sortKey  返回结果按该关键字排序，默认为“created_at”。
+    * sortKey  返回结果按该关键字排序，默认为“created_at”。 取值：name，db_type，inst_id，ip，created_at，description，tag_value
     * sortDir  降序或升序（分别对应desc和asc，默认为“desc”）。
     *
     * @var string[]
@@ -68,7 +68,7 @@ class ListConnectionsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，默认值为0，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制，默认值为10。
     * fetchAll  值为“true”时会使得offset和limit参数失效并返回所有记录。
-    * sortKey  返回结果按该关键字排序，默认为“created_at”。
+    * sortKey  返回结果按该关键字排序，默认为“created_at”。 取值：name，db_type，inst_id，ip，created_at，description，tag_value
     * sortDir  降序或升序（分别对应desc和asc，默认为“desc”）。
     *
     * @var string[]
@@ -125,7 +125,7 @@ class ListConnectionsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，默认值为0，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制，默认值为10。
     * fetchAll  值为“true”时会使得offset和limit参数失效并返回所有记录。
-    * sortKey  返回结果按该关键字排序，默认为“created_at”。
+    * sortKey  返回结果按该关键字排序，默认为“created_at”。 取值：name，db_type，inst_id，ip，created_at，description，tag_value
     * sortDir  降序或升序（分别对应desc和asc，默认为“desc”）。
     *
     * @var string[]
@@ -161,7 +161,7 @@ class ListConnectionsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，默认值为0，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制，默认值为10。
     * fetchAll  值为“true”时会使得offset和limit参数失效并返回所有记录。
-    * sortKey  返回结果按该关键字排序，默认为“created_at”。
+    * sortKey  返回结果按该关键字排序，默认为“created_at”。 取值：name，db_type，inst_id，ip，created_at，description，tag_value
     * sortDir  降序或升序（分别对应desc和asc，默认为“desc”）。
     *
     * @var string[]
@@ -197,7 +197,7 @@ class ListConnectionsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，默认值为0，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制，默认值为10。
     * fetchAll  值为“true”时会使得offset和limit参数失效并返回所有记录。
-    * sortKey  返回结果按该关键字排序，默认为“created_at”。
+    * sortKey  返回结果按该关键字排序，默认为“created_at”。 取值：name，db_type，inst_id，ip，created_at，description，tag_value
     * sortDir  降序或升序（分别对应desc和asc，默认为“desc”）。
     *
     * @var string[]
@@ -704,7 +704,7 @@ class ListConnectionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
-    *  返回结果按该关键字排序，默认为“created_at”。
+    *  返回结果按该关键字排序，默认为“created_at”。 取值：name，db_type，inst_id，ip，created_at，description，tag_value
     *
     * @return string|null
     */
@@ -716,7 +716,7 @@ class ListConnectionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 返回结果按该关键字排序，默认为“created_at”。
+    * @param string|null $sortKey 返回结果按该关键字排序，默认为“created_at”。 取值：name，db_type，inst_id，ip，created_at，description，tag_value
     *
     * @return $this
     */

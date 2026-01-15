@@ -24,7 +24,7 @@ class ReplayingSqlResp implements ModelInterface, ArrayAccess
     * sqlStatement  SQL语句
     * latency  原始执行耗时
     * executeLatency  回放执行耗时
-    * status  执行状态
+    * status  执行状态 取值：INIT，RUNNING，FAILED，PAUSE，SUCCESS，FINISHED
     * client  客户端IP
     * connectionId  连接ID
     * replayStartTime  回放开始时间
@@ -48,7 +48,7 @@ class ReplayingSqlResp implements ModelInterface, ArrayAccess
     * sqlStatement  SQL语句
     * latency  原始执行耗时
     * executeLatency  回放执行耗时
-    * status  执行状态
+    * status  执行状态 取值：INIT，RUNNING，FAILED，PAUSE，SUCCESS，FINISHED
     * client  客户端IP
     * connectionId  连接ID
     * replayStartTime  回放开始时间
@@ -93,7 +93,7 @@ class ReplayingSqlResp implements ModelInterface, ArrayAccess
     * sqlStatement  SQL语句
     * latency  原始执行耗时
     * executeLatency  回放执行耗时
-    * status  执行状态
+    * status  执行状态 取值：INIT，RUNNING，FAILED，PAUSE，SUCCESS，FINISHED
     * client  客户端IP
     * connectionId  连接ID
     * replayStartTime  回放开始时间
@@ -117,7 +117,7 @@ class ReplayingSqlResp implements ModelInterface, ArrayAccess
     * sqlStatement  SQL语句
     * latency  原始执行耗时
     * executeLatency  回放执行耗时
-    * status  执行状态
+    * status  执行状态 取值：INIT，RUNNING，FAILED，PAUSE，SUCCESS，FINISHED
     * client  客户端IP
     * connectionId  连接ID
     * replayStartTime  回放开始时间
@@ -141,7 +141,7 @@ class ReplayingSqlResp implements ModelInterface, ArrayAccess
     * sqlStatement  SQL语句
     * latency  原始执行耗时
     * executeLatency  回放执行耗时
-    * status  执行状态
+    * status  执行状态 取值：INIT，RUNNING，FAILED，PAUSE，SUCCESS，FINISHED
     * client  客户端IP
     * connectionId  连接ID
     * replayStartTime  回放开始时间
@@ -347,7 +347,7 @@ class ReplayingSqlResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  执行状态
+    *  执行状态 取值：INIT，RUNNING，FAILED，PAUSE，SUCCESS，FINISHED
     *
     * @return string|null
     */
@@ -359,7 +359,7 @@ class ReplayingSqlResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 执行状态
+    * @param string|null $status 执行状态 取值：INIT，RUNNING，FAILED，PAUSE，SUCCESS，FINISHED
     *
     * @return $this
     */

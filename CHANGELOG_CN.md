@@ -1,3 +1,288 @@
+# 3.1.178 2026-01-15
+
+### HuaweiCloud SDK CDN
+
+- _接口版本_
+  - V2
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **UpdateRuleNew**
+    - 请求参数变更
+      - `+ actions.request_limit_rule`
+      - `- actions.request_limit_rules`
+  - **ShowDomainTemplate**
+    - 响应参数变更
+      - `+ templates`
+      - `- temlates`
+  - **CreateRuleNew**
+    - 请求参数变更
+      - `+ actions.request_limit_rule`
+      - `- actions.request_limit_rules`
+  - **ListRuleDetails**
+    - 响应参数变更
+      - `+ rules.actions.request_limit_rule`
+      - `- rules.actions.request_limit_rules`
+  - **UpdateFullRule**
+    - 请求参数变更
+      - `+ rules.actions.request_limit_rule`
+      - `- rules.actions.request_limit_rules`
+
+### HuaweiCloud SDK CSS
+
+- _接口版本_
+  - V1
+- _新增特性_
+  - 支持接口`ShowAiOpsDetector`、`ShowAiOpsSetting`、`UpdateAiOpsSetting`、`CloseAiOpsSetting`
+- _解决问题_
+  - 无
+- _特性变更_
+  - **CreateAiOps**
+    - 请求参数变更
+      - `+ check_type`
+      - `+ check_items`
+  - **ListAiOps**
+    - 请求参数变更
+      - `+ report`
+    - 响应参数变更
+      - `+ aiops_list.check_type`
+      - `+ aiops_list.trigger_type`
+      - `- aiops_list.create_time`
+      - `- aiops_list.smn_status`
+      - `- aiops_list.smn_fail_reason`
+      - `+ aiops_list.summary.highRisk`
+      - `+ aiops_list.summary.mediumRisk`
+      - `+ aiops_list.summary.normal`
+      - `- aiops_list.summary.high`
+      - `- aiops_list.summary.medium`
+      - `* aiops_list.summary: object -> object<SummaryInfo>`
+      - `+ aiops_list.task_risks.id`
+      - `+ aiops_list.task_risks.name`
+      - `+ aiops_list.task_risks.result`
+      - `- aiops_list.task_risks.riskType`
+      - `* aiops_list.task_risks: list<AIOpsRiskInfo> -> list<AiOpsRiskObject>`
+      - `* aiops_list: list<object> -> list<AiOps>`
+
+### HuaweiCloud SDK DBSS
+
+- _接口版本_
+  - V1
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ListEcsSpecificationNew**
+    - 响应参数变更
+      - `+ specifications`
+      - `- specification`
+  - **ListAuditRuleRisksNew**
+    - 请求参数变更
+      - `+ offset`
+      - `+ limit`
+
+### HuaweiCloud SDK DNS
+
+- _接口版本_
+  - V2
+- _新增特性_
+  - 支持接口`ListInstances`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
+### HuaweiCloud SDK DRS
+
+- _接口版本_
+  - V3
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **BatchStartJobs**
+    - 请求参数变更
+      - `+ jobs.is_auto_create_compare`
+  - **BatchListJobDetails**
+    - 响应参数变更
+      - `+ results.job_kernel_direction`
+
+### HuaweiCloud SDK DRS
+
+- _接口版本_
+  - V5
+- _新增特性_
+  - 支持以下接口：
+    - `ShowSubscriptionLists`
+    - `ShowColumnInfos`
+    - `DeleteColumnInfos`
+    - `ShowReplayProgress`
+    - `ModifyColumnInfos`
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ShowSupportObjectType**
+    - 响应参数变更
+      - `+ import_mapping_type`
+      - `+ is_import_unique_key`
+  - **ShowDirtyData**
+    - 请求参数变更
+      - `+ anonymize_mode`
+      - `+ task_mode`
+  - **ShowProgressData**
+    - 请求参数变更
+      - `+ search_name`
+  - **ListTags**
+    - 请求参数变更
+      - `+ resource_type: enum value [verify]`
+  - **ListAsyncJobDetail**
+    - 响应参数变更
+      - `+ jobs.job_kernel_direction`
+  - **ShowJobDetail**
+    - 请求参数变更
+      - `+ log_level`
+    - 响应参数变更
+      - `+ job.job_kernel_direction`
+  - **ExecuteJobAction**
+    - 请求参数变更
+      - `+ job.action_params.is_auto_create_compare`
+  - **BatchExecuteJobActions**
+    - 请求参数变更
+      - `+ jobs.action_params.is_auto_create_compare`
+
+### HuaweiCloud SDK EPS
+
+- _接口版本_
+  - V1
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ListEnterpriseProject**
+    - 请求参数变更
+      - `+ type`
+
+### HuaweiCloud SDK OMS
+
+- _接口版本_
+  - V2
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ShowSyncTask**
+    - 请求参数变更
+      - `* query_time: string -> int64`
+  - **ListSyncTaskStatistic**
+    - 请求参数变更
+      - `* start_time: string -> int64`
+      - `* end_time: string -> int64`
+
+### HuaweiCloud SDK VPC
+
+- _接口版本_
+  - V2
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ListPorts**
+    - 响应参数变更
+      - `+ ports.binding:vif_details.vlan_id`
+      - `+ ports.binding:vif_details.parent_id`
+      - `+ ports.binding:vif_details.parent_device_id`
+  - **CreatePort**
+    - 响应参数变更
+      - `+ port.binding:vif_details.vlan_id`
+      - `+ port.binding:vif_details.parent_id`
+      - `+ port.binding:vif_details.parent_device_id`
+  - **ShowPort**
+    - 响应参数变更
+      - `+ port.binding:vif_details.vlan_id`
+      - `+ port.binding:vif_details.parent_id`
+      - `+ port.binding:vif_details.parent_device_id`
+  - **UpdatePort**
+    - 响应参数变更
+      - `+ port.binding:vif_details.vlan_id`
+      - `+ port.binding:vif_details.parent_id`
+      - `+ port.binding:vif_details.parent_device_id`
+  - **NeutronListPorts**
+    - 响应参数变更
+      - `+ ports.binding:vif_details.vlan_id`
+      - `+ ports.binding:vif_details.parent_id`
+      - `+ ports.binding:vif_details.parent_device_id`
+  - **NeutronCreatePort**
+    - 响应参数变更
+      - `+ port.binding:vif_details.vlan_id`
+      - `+ port.binding:vif_details.parent_id`
+      - `+ port.binding:vif_details.parent_device_id`
+  - **NeutronShowPort**
+    - 响应参数变更
+      - `+ port.binding:vif_details.vlan_id`
+      - `+ port.binding:vif_details.parent_id`
+      - `+ port.binding:vif_details.parent_device_id`
+  - **NeutronUpdatePort**
+    - 响应参数变更
+      - `+ port.binding:vif_details.vlan_id`
+      - `+ port.binding:vif_details.parent_id`
+      - `+ port.binding:vif_details.parent_device_id`
+
+### HuaweiCloud SDK VPC
+
+- _接口版本_
+  - V3
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ListPorts**
+    - 响应参数变更
+      - `+ ports.binding:vif_details.vlan_id`
+      - `+ ports.binding:vif_details.parent_id`
+      - `+ ports.binding:vif_details.parent_device_id`
+  - **ShowPort**
+    - 响应参数变更
+      - `+ port.binding:vif_details.vlan_id`
+      - `+ port.binding:vif_details.parent_id`
+      - `+ port.binding:vif_details.parent_device_id`
+  - **AddSecurityGroups**
+    - 响应参数变更
+      - `+ port.binding:vif_details.vlan_id`
+      - `+ port.binding:vif_details.parent_id`
+      - `+ port.binding:vif_details.parent_device_id`
+  - **RemoveSecurityGroups**
+    - 响应参数变更
+      - `+ port.binding:vif_details.vlan_id`
+      - `+ port.binding:vif_details.parent_id`
+      - `+ port.binding:vif_details.parent_device_id`
+
+### HuaweiCloud SDK WAF
+
+- _接口版本_
+  - V1
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **BatchUpdateIpReputationRules**
+    - 请求参数变更
+      - `- policyname`
+  - **BatchUpdateAntitamperRules**
+    - 请求参数变更
+      - `+ name`
+  - **BatchUpdateCustomRules**
+    - 请求参数变更
+      - `- id`
+      - `- policyid`
+
 # 3.1.177 2026-01-08
 
 ### HuaweiCloud SDK AS

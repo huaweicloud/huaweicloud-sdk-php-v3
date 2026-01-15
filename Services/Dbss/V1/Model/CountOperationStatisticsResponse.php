@@ -23,7 +23,7 @@ class CountOperationStatisticsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * generateTime  生成时间
     * operationStatistics  风险操作统计
-    * status  状态  - FINISHED：已完成  - RUNNING：运行中
+    * status  状态  - FINISHED：已完成 - RUNNING：运行中
     *
     * @var string[]
     */
@@ -37,7 +37,7 @@ class CountOperationStatisticsResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * generateTime  生成时间
     * operationStatistics  风险操作统计
-    * status  状态  - FINISHED：已完成  - RUNNING：运行中
+    * status  状态  - FINISHED：已完成 - RUNNING：运行中
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CountOperationStatisticsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * generateTime  生成时间
     * operationStatistics  风险操作统计
-    * status  状态  - FINISHED：已完成  - RUNNING：运行中
+    * status  状态  - FINISHED：已完成 - RUNNING：运行中
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class CountOperationStatisticsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * generateTime  生成时间
     * operationStatistics  风险操作统计
-    * status  状态  - FINISHED：已完成  - RUNNING：运行中
+    * status  状态  - FINISHED：已完成 - RUNNING：运行中
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class CountOperationStatisticsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * generateTime  生成时间
     * operationStatistics  风险操作统计
-    * status  状态  - FINISHED：已完成  - RUNNING：运行中
+    * status  状态  - FINISHED：已完成 - RUNNING：运行中
     *
     * @var string[]
     */
@@ -245,7 +245,7 @@ class CountOperationStatisticsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态  - FINISHED：已完成  - RUNNING：运行中
+    *  状态  - FINISHED：已完成 - RUNNING：运行中
     *
     * @return string|null
     */
@@ -257,7 +257,7 @@ class CountOperationStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态  - FINISHED：已完成  - RUNNING：运行中
+    * @param string|null $status 状态  - FINISHED：已完成 - RUNNING：运行中
     *
     * @return $this
     */

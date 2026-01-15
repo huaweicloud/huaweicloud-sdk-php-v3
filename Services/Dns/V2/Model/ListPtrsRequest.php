@@ -25,7 +25,7 @@ class ListPtrsRequest implements ModelInterface, ArrayAccess
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。 取值范围：0~2147483647 默认值为0。 当设置marker不为空时，以marker为分页起始标识，offset不生效。
     * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
     * tags  资源标签。 取值格式：key1,value1|key2,value2 多个标签之间用“|”分开，每个标签的键值用英文逗号“,”相隔。
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **约束限制：** 不涉及。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败  **默认取值：** 不涉及。
     * resourceType  弹性公网IP类型。  取值范围： publicip：弹性公网IP（EIP）
     *
     * @var string[]
@@ -47,7 +47,7 @@ class ListPtrsRequest implements ModelInterface, ArrayAccess
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。 取值范围：0~2147483647 默认值为0。 当设置marker不为空时，以marker为分页起始标识，offset不生效。
     * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
     * tags  资源标签。 取值格式：key1,value1|key2,value2 多个标签之间用“|”分开，每个标签的键值用英文逗号“,”相隔。
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **约束限制：** 不涉及。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败  **默认取值：** 不涉及。
     * resourceType  弹性公网IP类型。  取值范围： publicip：弹性公网IP（EIP）
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListPtrsRequest implements ModelInterface, ArrayAccess
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。 取值范围：0~2147483647 默认值为0。 当设置marker不为空时，以marker为分页起始标识，offset不生效。
     * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
     * tags  资源标签。 取值格式：key1,value1|key2,value2 多个标签之间用“|”分开，每个标签的键值用英文逗号“,”相隔。
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **约束限制：** 不涉及。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败  **默认取值：** 不涉及。
     * resourceType  弹性公网IP类型。  取值范围： publicip：弹性公网IP（EIP）
     *
     * @var string[]
@@ -112,7 +112,7 @@ class ListPtrsRequest implements ModelInterface, ArrayAccess
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。 取值范围：0~2147483647 默认值为0。 当设置marker不为空时，以marker为分页起始标识，offset不生效。
     * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
     * tags  资源标签。 取值格式：key1,value1|key2,value2 多个标签之间用“|”分开，每个标签的键值用英文逗号“,”相隔。
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **约束限制：** 不涉及。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败  **默认取值：** 不涉及。
     * resourceType  弹性公网IP类型。  取值范围： publicip：弹性公网IP（EIP）
     *
     * @var string[]
@@ -134,7 +134,7 @@ class ListPtrsRequest implements ModelInterface, ArrayAccess
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。 取值范围：0~2147483647 默认值为0。 当设置marker不为空时，以marker为分页起始标识，offset不生效。
     * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
     * tags  资源标签。 取值格式：key1,value1|key2,value2 多个标签之间用“|”分开，每个标签的键值用英文逗号“,”相隔。
-    * status  资源状态。
+    * status  **参数解释：** 资源状态。 **约束限制：** 不涉及。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败  **默认取值：** 不涉及。
     * resourceType  弹性公网IP类型。  取值范围： publicip：弹性公网IP（EIP）
     *
     * @var string[]
@@ -360,7 +360,7 @@ class ListPtrsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源状态。
+    *  **参数解释：** 资源状态。 **约束限制：** 不涉及。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败  **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class ListPtrsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源状态。
+    * @param string|null $status **参数解释：** 资源状态。 **约束限制：** 不涉及。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败  **默认取值：** 不涉及。
     *
     * @return $this
     */

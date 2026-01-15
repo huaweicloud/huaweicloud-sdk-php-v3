@@ -21,14 +21,14 @@ class JobBean implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务ID。
-    * status  任务状态 - SUCCESS: 成功 - RUNNING：运行中 - FAIL：失败 - INIT：初始化 - READY：就绪
+    * status  任务状态 - SUCCESS：成功 - RUNNING：运行中 - FAIL：失败 - INIT：初始化 - READY：就绪
     * jobType  类型[废弃，未使用]
     * serverId  虚拟机ID
     * serverName  虚拟机名称
     * resourceId  资源ID
     * beginTime  开始时间
     * endTime  结束时间
-    * chargeMode  计费模式 - Period: 包周期计费 - Demand: 按需计费
+    * chargeMode  计费模式 - Period：包周期计费 - Demand：按需计费
     * errorCode  错误码
     * failReason  失败原因
     * haId  防护实例ID,该字段已废弃
@@ -55,14 +55,14 @@ class JobBean implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务ID。
-    * status  任务状态 - SUCCESS: 成功 - RUNNING：运行中 - FAIL：失败 - INIT：初始化 - READY：就绪
+    * status  任务状态 - SUCCESS：成功 - RUNNING：运行中 - FAIL：失败 - INIT：初始化 - READY：就绪
     * jobType  类型[废弃，未使用]
     * serverId  虚拟机ID
     * serverName  虚拟机名称
     * resourceId  资源ID
     * beginTime  开始时间
     * endTime  结束时间
-    * chargeMode  计费模式 - Period: 包周期计费 - Demand: 按需计费
+    * chargeMode  计费模式 - Period：包周期计费 - Demand：按需计费
     * errorCode  错误码
     * failReason  失败原因
     * haId  防护实例ID,该字段已废弃
@@ -110,14 +110,14 @@ class JobBean implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobId  任务ID。
-    * status  任务状态 - SUCCESS: 成功 - RUNNING：运行中 - FAIL：失败 - INIT：初始化 - READY：就绪
+    * status  任务状态 - SUCCESS：成功 - RUNNING：运行中 - FAIL：失败 - INIT：初始化 - READY：就绪
     * jobType  类型[废弃，未使用]
     * serverId  虚拟机ID
     * serverName  虚拟机名称
     * resourceId  资源ID
     * beginTime  开始时间
     * endTime  结束时间
-    * chargeMode  计费模式 - Period: 包周期计费 - Demand: 按需计费
+    * chargeMode  计费模式 - Period：包周期计费 - Demand：按需计费
     * errorCode  错误码
     * failReason  失败原因
     * haId  防护实例ID,该字段已废弃
@@ -144,14 +144,14 @@ class JobBean implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务ID。
-    * status  任务状态 - SUCCESS: 成功 - RUNNING：运行中 - FAIL：失败 - INIT：初始化 - READY：就绪
+    * status  任务状态 - SUCCESS：成功 - RUNNING：运行中 - FAIL：失败 - INIT：初始化 - READY：就绪
     * jobType  类型[废弃，未使用]
     * serverId  虚拟机ID
     * serverName  虚拟机名称
     * resourceId  资源ID
     * beginTime  开始时间
     * endTime  结束时间
-    * chargeMode  计费模式 - Period: 包周期计费 - Demand: 按需计费
+    * chargeMode  计费模式 - Period：包周期计费 - Demand：按需计费
     * errorCode  错误码
     * failReason  失败原因
     * haId  防护实例ID,该字段已废弃
@@ -178,14 +178,14 @@ class JobBean implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务ID。
-    * status  任务状态 - SUCCESS: 成功 - RUNNING：运行中 - FAIL：失败 - INIT：初始化 - READY：就绪
+    * status  任务状态 - SUCCESS：成功 - RUNNING：运行中 - FAIL：失败 - INIT：初始化 - READY：就绪
     * jobType  类型[废弃，未使用]
     * serverId  虚拟机ID
     * serverName  虚拟机名称
     * resourceId  资源ID
     * beginTime  开始时间
     * endTime  结束时间
-    * chargeMode  计费模式 - Period: 包周期计费 - Demand: 按需计费
+    * chargeMode  计费模式 - Period：包周期计费 - Demand：按需计费
     * errorCode  错误码
     * failReason  失败原因
     * haId  防护实例ID,该字段已废弃
@@ -357,7 +357,7 @@ class JobBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  任务状态 - SUCCESS: 成功 - RUNNING：运行中 - FAIL：失败 - INIT：初始化 - READY：就绪
+    *  任务状态 - SUCCESS：成功 - RUNNING：运行中 - FAIL：失败 - INIT：初始化 - READY：就绪
     *
     * @return string
     */
@@ -369,7 +369,7 @@ class JobBean implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 任务状态 - SUCCESS: 成功 - RUNNING：运行中 - FAIL：失败 - INIT：初始化 - READY：就绪
+    * @param string $status 任务状态 - SUCCESS：成功 - RUNNING：运行中 - FAIL：失败 - INIT：初始化 - READY：就绪
     *
     * @return $this
     */
@@ -525,7 +525,7 @@ class JobBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  计费模式 - Period: 包周期计费 - Demand: 按需计费
+    *  计费模式 - Period：包周期计费 - Demand：按需计费
     *
     * @return string
     */
@@ -537,7 +537,7 @@ class JobBean implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string $chargeMode 计费模式 - Period: 包周期计费 - Demand: 按需计费
+    * @param string $chargeMode 计费模式 - Period：包周期计费 - Demand：按需计费
     *
     * @return $this
     */

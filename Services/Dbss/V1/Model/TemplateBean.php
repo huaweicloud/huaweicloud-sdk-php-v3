@@ -24,11 +24,11 @@ class TemplateBean implements ModelInterface, ArrayAccess
     * dbNames  数据库名称
     * desc  描述
     * frequency  周期
-    * group  类型 - COMPREHENSIVE: 综合报表 - COMPLIANCE: 合规报表 - DB_SPECIAL：数据库专项报表 - CLIENT_SPECIAL：客户端专项报表 - SQL_SPECIAL：SQL
+    * group  类型 - COMPREHENSIVE：综合报表 - COMPLIANCE：合规报表 - DB_SPECIAL：数据库专项报表 - CLIENT_SPECIAL：客户端专项报表 - SQL_SPECIAL：SQL
     * id  模板ID
     * name  报表模板名称
     * status  状态 - OFF：已关闭 - ON：已开启
-    * type  报表类型 - COMPREHENSIVE: 数据库安全综合报表 - COMPLIANCE: 数据库安全合规报表 - SOX: SOX-萨班斯报表 - PCI: 行业标准安全报表 - DB_ANALYSIS: 数据库服务器分析报表 - CLIENT_IP_ANALYSIS: 客户端IP分析报表 - SQL_DCL_COMMAND: DCL命令报表 - SQL_DDL_COMMAND: DDL命令报表 - SQL_DML_COMMAND: DML命令报表
+    * type  报表类型 - COMPREHENSIVE：数据库安全综合报表 - COMPLIANCE：数据库安全合规报表 - SOX：SOX-萨班斯报表 - PCI：行业标准安全报表 - DB_ANALYSIS：数据库服务器分析报表 - CLIENT_IP_ANALYSIS：客户端IP分析报表 - SQL_DCL_COMMAND：DCL命令报表 - SQL_DDL_COMMAND：DDL命令报表 - SQL_DML_COMMAND：DML命令报表
     *
     * @var string[]
     */
@@ -50,11 +50,11 @@ class TemplateBean implements ModelInterface, ArrayAccess
     * dbNames  数据库名称
     * desc  描述
     * frequency  周期
-    * group  类型 - COMPREHENSIVE: 综合报表 - COMPLIANCE: 合规报表 - DB_SPECIAL：数据库专项报表 - CLIENT_SPECIAL：客户端专项报表 - SQL_SPECIAL：SQL
+    * group  类型 - COMPREHENSIVE：综合报表 - COMPLIANCE：合规报表 - DB_SPECIAL：数据库专项报表 - CLIENT_SPECIAL：客户端专项报表 - SQL_SPECIAL：SQL
     * id  模板ID
     * name  报表模板名称
     * status  状态 - OFF：已关闭 - ON：已开启
-    * type  报表类型 - COMPREHENSIVE: 数据库安全综合报表 - COMPLIANCE: 数据库安全合规报表 - SOX: SOX-萨班斯报表 - PCI: 行业标准安全报表 - DB_ANALYSIS: 数据库服务器分析报表 - CLIENT_IP_ANALYSIS: 客户端IP分析报表 - SQL_DCL_COMMAND: DCL命令报表 - SQL_DDL_COMMAND: DDL命令报表 - SQL_DML_COMMAND: DML命令报表
+    * type  报表类型 - COMPREHENSIVE：数据库安全综合报表 - COMPLIANCE：数据库安全合规报表 - SOX：SOX-萨班斯报表 - PCI：行业标准安全报表 - DB_ANALYSIS：数据库服务器分析报表 - CLIENT_IP_ANALYSIS：客户端IP分析报表 - SQL_DCL_COMMAND：DCL命令报表 - SQL_DDL_COMMAND：DDL命令报表 - SQL_DML_COMMAND：DML命令报表
     *
     * @var string[]
     */
@@ -97,11 +97,11 @@ class TemplateBean implements ModelInterface, ArrayAccess
     * dbNames  数据库名称
     * desc  描述
     * frequency  周期
-    * group  类型 - COMPREHENSIVE: 综合报表 - COMPLIANCE: 合规报表 - DB_SPECIAL：数据库专项报表 - CLIENT_SPECIAL：客户端专项报表 - SQL_SPECIAL：SQL
+    * group  类型 - COMPREHENSIVE：综合报表 - COMPLIANCE：合规报表 - DB_SPECIAL：数据库专项报表 - CLIENT_SPECIAL：客户端专项报表 - SQL_SPECIAL：SQL
     * id  模板ID
     * name  报表模板名称
     * status  状态 - OFF：已关闭 - ON：已开启
-    * type  报表类型 - COMPREHENSIVE: 数据库安全综合报表 - COMPLIANCE: 数据库安全合规报表 - SOX: SOX-萨班斯报表 - PCI: 行业标准安全报表 - DB_ANALYSIS: 数据库服务器分析报表 - CLIENT_IP_ANALYSIS: 客户端IP分析报表 - SQL_DCL_COMMAND: DCL命令报表 - SQL_DDL_COMMAND: DDL命令报表 - SQL_DML_COMMAND: DML命令报表
+    * type  报表类型 - COMPREHENSIVE：数据库安全综合报表 - COMPLIANCE：数据库安全合规报表 - SOX：SOX-萨班斯报表 - PCI：行业标准安全报表 - DB_ANALYSIS：数据库服务器分析报表 - CLIENT_IP_ANALYSIS：客户端IP分析报表 - SQL_DCL_COMMAND：DCL命令报表 - SQL_DDL_COMMAND：DDL命令报表 - SQL_DML_COMMAND：DML命令报表
     *
     * @var string[]
     */
@@ -123,11 +123,11 @@ class TemplateBean implements ModelInterface, ArrayAccess
     * dbNames  数据库名称
     * desc  描述
     * frequency  周期
-    * group  类型 - COMPREHENSIVE: 综合报表 - COMPLIANCE: 合规报表 - DB_SPECIAL：数据库专项报表 - CLIENT_SPECIAL：客户端专项报表 - SQL_SPECIAL：SQL
+    * group  类型 - COMPREHENSIVE：综合报表 - COMPLIANCE：合规报表 - DB_SPECIAL：数据库专项报表 - CLIENT_SPECIAL：客户端专项报表 - SQL_SPECIAL：SQL
     * id  模板ID
     * name  报表模板名称
     * status  状态 - OFF：已关闭 - ON：已开启
-    * type  报表类型 - COMPREHENSIVE: 数据库安全综合报表 - COMPLIANCE: 数据库安全合规报表 - SOX: SOX-萨班斯报表 - PCI: 行业标准安全报表 - DB_ANALYSIS: 数据库服务器分析报表 - CLIENT_IP_ANALYSIS: 客户端IP分析报表 - SQL_DCL_COMMAND: DCL命令报表 - SQL_DDL_COMMAND: DDL命令报表 - SQL_DML_COMMAND: DML命令报表
+    * type  报表类型 - COMPREHENSIVE：数据库安全综合报表 - COMPLIANCE：数据库安全合规报表 - SOX：SOX-萨班斯报表 - PCI：行业标准安全报表 - DB_ANALYSIS：数据库服务器分析报表 - CLIENT_IP_ANALYSIS：客户端IP分析报表 - SQL_DCL_COMMAND：DCL命令报表 - SQL_DDL_COMMAND：DDL命令报表 - SQL_DML_COMMAND：DML命令报表
     *
     * @var string[]
     */
@@ -149,11 +149,11 @@ class TemplateBean implements ModelInterface, ArrayAccess
     * dbNames  数据库名称
     * desc  描述
     * frequency  周期
-    * group  类型 - COMPREHENSIVE: 综合报表 - COMPLIANCE: 合规报表 - DB_SPECIAL：数据库专项报表 - CLIENT_SPECIAL：客户端专项报表 - SQL_SPECIAL：SQL
+    * group  类型 - COMPREHENSIVE：综合报表 - COMPLIANCE：合规报表 - DB_SPECIAL：数据库专项报表 - CLIENT_SPECIAL：客户端专项报表 - SQL_SPECIAL：SQL
     * id  模板ID
     * name  报表模板名称
     * status  状态 - OFF：已关闭 - ON：已开启
-    * type  报表类型 - COMPREHENSIVE: 数据库安全综合报表 - COMPLIANCE: 数据库安全合规报表 - SOX: SOX-萨班斯报表 - PCI: 行业标准安全报表 - DB_ANALYSIS: 数据库服务器分析报表 - CLIENT_IP_ANALYSIS: 客户端IP分析报表 - SQL_DCL_COMMAND: DCL命令报表 - SQL_DDL_COMMAND: DDL命令报表 - SQL_DML_COMMAND: DML命令报表
+    * type  报表类型 - COMPREHENSIVE：数据库安全综合报表 - COMPLIANCE：数据库安全合规报表 - SOX：SOX-萨班斯报表 - PCI：行业标准安全报表 - DB_ANALYSIS：数据库服务器分析报表 - CLIENT_IP_ANALYSIS：客户端IP分析报表 - SQL_DCL_COMMAND：DCL命令报表 - SQL_DDL_COMMAND：DDL命令报表 - SQL_DML_COMMAND：DML命令报表
     *
     * @var string[]
     */
@@ -447,7 +447,7 @@ class TemplateBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets group
-    *  类型 - COMPREHENSIVE: 综合报表 - COMPLIANCE: 合规报表 - DB_SPECIAL：数据库专项报表 - CLIENT_SPECIAL：客户端专项报表 - SQL_SPECIAL：SQL
+    *  类型 - COMPREHENSIVE：综合报表 - COMPLIANCE：合规报表 - DB_SPECIAL：数据库专项报表 - CLIENT_SPECIAL：客户端专项报表 - SQL_SPECIAL：SQL
     *
     * @return string|null
     */
@@ -459,7 +459,7 @@ class TemplateBean implements ModelInterface, ArrayAccess
     /**
     * Sets group
     *
-    * @param string|null $group 类型 - COMPREHENSIVE: 综合报表 - COMPLIANCE: 合规报表 - DB_SPECIAL：数据库专项报表 - CLIENT_SPECIAL：客户端专项报表 - SQL_SPECIAL：SQL
+    * @param string|null $group 类型 - COMPREHENSIVE：综合报表 - COMPLIANCE：合规报表 - DB_SPECIAL：数据库专项报表 - CLIENT_SPECIAL：客户端专项报表 - SQL_SPECIAL：SQL
     *
     * @return $this
     */
@@ -543,7 +543,7 @@ class TemplateBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  报表类型 - COMPREHENSIVE: 数据库安全综合报表 - COMPLIANCE: 数据库安全合规报表 - SOX: SOX-萨班斯报表 - PCI: 行业标准安全报表 - DB_ANALYSIS: 数据库服务器分析报表 - CLIENT_IP_ANALYSIS: 客户端IP分析报表 - SQL_DCL_COMMAND: DCL命令报表 - SQL_DDL_COMMAND: DDL命令报表 - SQL_DML_COMMAND: DML命令报表
+    *  报表类型 - COMPREHENSIVE：数据库安全综合报表 - COMPLIANCE：数据库安全合规报表 - SOX：SOX-萨班斯报表 - PCI：行业标准安全报表 - DB_ANALYSIS：数据库服务器分析报表 - CLIENT_IP_ANALYSIS：客户端IP分析报表 - SQL_DCL_COMMAND：DCL命令报表 - SQL_DDL_COMMAND：DDL命令报表 - SQL_DML_COMMAND：DML命令报表
     *
     * @return string|null
     */
@@ -555,7 +555,7 @@ class TemplateBean implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 报表类型 - COMPREHENSIVE: 数据库安全综合报表 - COMPLIANCE: 数据库安全合规报表 - SOX: SOX-萨班斯报表 - PCI: 行业标准安全报表 - DB_ANALYSIS: 数据库服务器分析报表 - CLIENT_IP_ANALYSIS: 客户端IP分析报表 - SQL_DCL_COMMAND: DCL命令报表 - SQL_DDL_COMMAND: DDL命令报表 - SQL_DML_COMMAND: DML命令报表
+    * @param string|null $type 报表类型 - COMPREHENSIVE：数据库安全综合报表 - COMPLIANCE：数据库安全合规报表 - SOX：SOX-萨班斯报表 - PCI：行业标准安全报表 - DB_ANALYSIS：数据库服务器分析报表 - CLIENT_IP_ANALYSIS：客户端IP分析报表 - SQL_DCL_COMMAND：DCL命令报表 - SQL_DDL_COMMAND：DDL命令报表 - SQL_DML_COMMAND：DML命令报表
     *
     * @return $this
     */

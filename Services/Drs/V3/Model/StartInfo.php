@@ -21,7 +21,8 @@ class StartInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务id。
-    * isOnlyInitTask  是否支持只初始化任务。
+    * isOnlyInitTask  是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
+    * isAutoCreateCompare  是否在任务结束时自动创建对比任务，不填默认设置为true。
     * startTime  任务启动时间，时间戳格式精确到毫秒，例如：1679966489593，取值为空代表立即启动。
     *
     * @var string[]
@@ -29,13 +30,15 @@ class StartInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'jobId' => 'string',
             'isOnlyInitTask' => 'bool',
+            'isAutoCreateCompare' => 'bool',
             'startTime' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务id。
-    * isOnlyInitTask  是否支持只初始化任务。
+    * isOnlyInitTask  是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
+    * isAutoCreateCompare  是否在任务结束时自动创建对比任务，不填默认设置为true。
     * startTime  任务启动时间，时间戳格式精确到毫秒，例如：1679966489593，取值为空代表立即启动。
     *
     * @var string[]
@@ -43,6 +46,7 @@ class StartInfo implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'jobId' => null,
         'isOnlyInitTask' => null,
+        'isAutoCreateCompare' => null,
         'startTime' => null
     ];
 
@@ -70,7 +74,8 @@ class StartInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobId  任务id。
-    * isOnlyInitTask  是否支持只初始化任务。
+    * isOnlyInitTask  是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
+    * isAutoCreateCompare  是否在任务结束时自动创建对比任务，不填默认设置为true。
     * startTime  任务启动时间，时间戳格式精确到毫秒，例如：1679966489593，取值为空代表立即启动。
     *
     * @var string[]
@@ -78,13 +83,15 @@ class StartInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'jobId' => 'job_id',
             'isOnlyInitTask' => 'is_only_init_task',
+            'isAutoCreateCompare' => 'is_auto_create_compare',
             'startTime' => 'start_time'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务id。
-    * isOnlyInitTask  是否支持只初始化任务。
+    * isOnlyInitTask  是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
+    * isAutoCreateCompare  是否在任务结束时自动创建对比任务，不填默认设置为true。
     * startTime  任务启动时间，时间戳格式精确到毫秒，例如：1679966489593，取值为空代表立即启动。
     *
     * @var string[]
@@ -92,13 +99,15 @@ class StartInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
             'jobId' => 'setJobId',
             'isOnlyInitTask' => 'setIsOnlyInitTask',
+            'isAutoCreateCompare' => 'setIsAutoCreateCompare',
             'startTime' => 'setStartTime'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务id。
-    * isOnlyInitTask  是否支持只初始化任务。
+    * isOnlyInitTask  是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
+    * isAutoCreateCompare  是否在任务结束时自动创建对比任务，不填默认设置为true。
     * startTime  任务启动时间，时间戳格式精确到毫秒，例如：1679966489593，取值为空代表立即启动。
     *
     * @var string[]
@@ -106,6 +115,7 @@ class StartInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
             'jobId' => 'getJobId',
             'isOnlyInitTask' => 'getIsOnlyInitTask',
+            'isAutoCreateCompare' => 'getIsAutoCreateCompare',
             'startTime' => 'getStartTime'
     ];
 
@@ -169,6 +179,7 @@ class StartInfo implements ModelInterface, ArrayAccess
     {
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['isOnlyInitTask'] = isset($data['isOnlyInitTask']) ? $data['isOnlyInitTask'] : null;
+        $this->container['isAutoCreateCompare'] = isset($data['isAutoCreateCompare']) ? $data['isAutoCreateCompare'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
     }
 
@@ -223,7 +234,7 @@ class StartInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isOnlyInitTask
-    *  是否支持只初始化任务。
+    *  是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
     *
     * @return bool|null
     */
@@ -235,13 +246,37 @@ class StartInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isOnlyInitTask
     *
-    * @param bool|null $isOnlyInitTask 是否支持只初始化任务。
+    * @param bool|null $isOnlyInitTask 是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
     *
     * @return $this
     */
     public function setIsOnlyInitTask($isOnlyInitTask)
     {
         $this->container['isOnlyInitTask'] = $isOnlyInitTask;
+        return $this;
+    }
+
+    /**
+    * Gets isAutoCreateCompare
+    *  是否在任务结束时自动创建对比任务，不填默认设置为true。
+    *
+    * @return bool|null
+    */
+    public function getIsAutoCreateCompare()
+    {
+        return $this->container['isAutoCreateCompare'];
+    }
+
+    /**
+    * Sets isAutoCreateCompare
+    *
+    * @param bool|null $isAutoCreateCompare 是否在任务结束时自动创建对比任务，不填默认设置为true。
+    *
+    * @return $this
+    */
+    public function setIsAutoCreateCompare($isAutoCreateCompare)
+    {
+        $this->container['isAutoCreateCompare'] = $isAutoCreateCompare;
         return $this;
     }
 

@@ -21,8 +21,8 @@ class SwitchAuditDbRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  数据库ID,可在查询数据库列表接口的ID字段获取。
-    * status  开关状态 - ON:开启 - OFF:关闭
-    * ltsAuditSwitch  是否关闭LTS审计,DWS数据库场景使用。若用户未选择关闭LTS审计,则不做操作。 - 1 : 是 - 0 或 其它: 保持原状
+    * status  开关状态 - ON：开启 - OFF：关闭
+    * ltsAuditSwitch  是否关闭LTS审计,DWS数据库场景使用。若用户未选择关闭LTS审计,则不做操作。 - 1：是 - 0 或 其它：保持原状
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class SwitchAuditDbRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  数据库ID,可在查询数据库列表接口的ID字段获取。
-    * status  开关状态 - ON:开启 - OFF:关闭
-    * ltsAuditSwitch  是否关闭LTS审计,DWS数据库场景使用。若用户未选择关闭LTS审计,则不做操作。 - 1 : 是 - 0 或 其它: 保持原状
+    * status  开关状态 - ON：开启 - OFF：关闭
+    * ltsAuditSwitch  是否关闭LTS审计,DWS数据库场景使用。若用户未选择关闭LTS审计,则不做操作。 - 1：是 - 0 或 其它：保持原状
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class SwitchAuditDbRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  数据库ID,可在查询数据库列表接口的ID字段获取。
-    * status  开关状态 - ON:开启 - OFF:关闭
-    * ltsAuditSwitch  是否关闭LTS审计,DWS数据库场景使用。若用户未选择关闭LTS审计,则不做操作。 - 1 : 是 - 0 或 其它: 保持原状
+    * status  开关状态 - ON：开启 - OFF：关闭
+    * ltsAuditSwitch  是否关闭LTS审计,DWS数据库场景使用。若用户未选择关闭LTS审计,则不做操作。 - 1：是 - 0 或 其它：保持原状
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class SwitchAuditDbRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  数据库ID,可在查询数据库列表接口的ID字段获取。
-    * status  开关状态 - ON:开启 - OFF:关闭
-    * ltsAuditSwitch  是否关闭LTS审计,DWS数据库场景使用。若用户未选择关闭LTS审计,则不做操作。 - 1 : 是 - 0 或 其它: 保持原状
+    * status  开关状态 - ON：开启 - OFF：关闭
+    * ltsAuditSwitch  是否关闭LTS审计,DWS数据库场景使用。若用户未选择关闭LTS审计,则不做操作。 - 1：是 - 0 或 其它：保持原状
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class SwitchAuditDbRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  数据库ID,可在查询数据库列表接口的ID字段获取。
-    * status  开关状态 - ON:开启 - OFF:关闭
-    * ltsAuditSwitch  是否关闭LTS审计,DWS数据库场景使用。若用户未选择关闭LTS审计,则不做操作。 - 1 : 是 - 0 或 其它: 保持原状
+    * status  开关状态 - ON：开启 - OFF：关闭
+    * ltsAuditSwitch  是否关闭LTS审计,DWS数据库场景使用。若用户未选择关闭LTS审计,则不做操作。 - 1：是 - 0 或 其它：保持原状
     *
     * @var string[]
     */
@@ -249,7 +249,7 @@ class SwitchAuditDbRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  开关状态 - ON:开启 - OFF:关闭
+    *  开关状态 - ON：开启 - OFF：关闭
     *
     * @return string
     */
@@ -261,7 +261,7 @@ class SwitchAuditDbRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 开关状态 - ON:开启 - OFF:关闭
+    * @param string $status 开关状态 - ON：开启 - OFF：关闭
     *
     * @return $this
     */
@@ -273,7 +273,7 @@ class SwitchAuditDbRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ltsAuditSwitch
-    *  是否关闭LTS审计,DWS数据库场景使用。若用户未选择关闭LTS审计,则不做操作。 - 1 : 是 - 0 或 其它: 保持原状
+    *  是否关闭LTS审计,DWS数据库场景使用。若用户未选择关闭LTS审计,则不做操作。 - 1：是 - 0 或 其它：保持原状
     *
     * @return int|null
     */
@@ -285,7 +285,7 @@ class SwitchAuditDbRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ltsAuditSwitch
     *
-    * @param int|null $ltsAuditSwitch 是否关闭LTS审计,DWS数据库场景使用。若用户未选择关闭LTS审计,则不做操作。 - 1 : 是 - 0 或 其它: 保持原状
+    * @param int|null $ltsAuditSwitch 是否关闭LTS审计,DWS数据库场景使用。若用户未选择关闭LTS审计,则不做操作。 - 1：是 - 0 或 其它：保持原状
     *
     * @return $this
     */

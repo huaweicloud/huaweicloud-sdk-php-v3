@@ -25,7 +25,7 @@ class ShowCdnInfoReq implements ModelInterface, ArrayAccess
     * connectionString  连接字符串，用于微软云Blob鉴权
     * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
     * region  区域
-    * appId  当源端为腾讯云时，会返回此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * bucket  桶名
     * prefix  prefix
     * sourceCdn  sourceCdn
@@ -51,7 +51,7 @@ class ShowCdnInfoReq implements ModelInterface, ArrayAccess
     * connectionString  连接字符串，用于微软云Blob鉴权
     * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
     * region  区域
-    * appId  当源端为腾讯云时，会返回此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * bucket  桶名
     * prefix  prefix
     * sourceCdn  sourceCdn
@@ -98,7 +98,7 @@ class ShowCdnInfoReq implements ModelInterface, ArrayAccess
     * connectionString  连接字符串，用于微软云Blob鉴权
     * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
     * region  区域
-    * appId  当源端为腾讯云时，会返回此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * bucket  桶名
     * prefix  prefix
     * sourceCdn  sourceCdn
@@ -124,7 +124,7 @@ class ShowCdnInfoReq implements ModelInterface, ArrayAccess
     * connectionString  连接字符串，用于微软云Blob鉴权
     * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
     * region  区域
-    * appId  当源端为腾讯云时，会返回此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * bucket  桶名
     * prefix  prefix
     * sourceCdn  sourceCdn
@@ -150,7 +150,7 @@ class ShowCdnInfoReq implements ModelInterface, ArrayAccess
     * connectionString  连接字符串，用于微软云Blob鉴权
     * cloudType  云类型 AWS：亚马逊 Aliyun：阿里云 Qiniu：七牛云 QingCloud：青云 Tencent：腾讯云 Baidu：百度云 KingsoftCloud：金山云 Azure：微软云 UCloud：优刻得 HuaweiCloud：华为云 URLSource：URL HEC：HEC
     * region  区域
-    * appId  当源端为腾讯云时，会返回此参数。
+    * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * bucket  桶名
     * prefix  prefix
     * sourceCdn  sourceCdn
@@ -457,7 +457,7 @@ class ShowCdnInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
-    *  当源端为腾讯云时，会返回此参数。
+    *  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     *
     * @return string|null
     */
@@ -469,7 +469,7 @@ class ShowCdnInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets appId
     *
-    * @param string|null $appId 当源端为腾讯云时，会返回此参数。
+    * @param string|null $appId 腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     *
     * @return $this
     */

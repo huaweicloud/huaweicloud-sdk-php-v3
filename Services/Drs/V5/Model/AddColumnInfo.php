@@ -20,10 +20,10 @@ class AddColumnInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * columnType  列类型
+    * columnType  列类型 取值：default_value，create_time，update_time，expression，server_database_table
     * columnName  列名称
     * columnValue  列填充值
-    * dataType  填充列的数据类型
+    * dataType  填充列的数据类型 取值：int，long，varchar(256)，varchar(191)，datetime，timestamp
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class AddColumnInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * columnType  列类型
+    * columnType  列类型 取值：default_value，create_time，update_time，expression，server_database_table
     * columnName  列名称
     * columnValue  列填充值
-    * dataType  填充列的数据类型
+    * dataType  填充列的数据类型 取值：int，long，varchar(256)，varchar(191)，datetime，timestamp
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class AddColumnInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * columnType  列类型
+    * columnType  列类型 取值：default_value，create_time，update_time，expression，server_database_table
     * columnName  列名称
     * columnValue  列填充值
-    * dataType  填充列的数据类型
+    * dataType  填充列的数据类型 取值：int，long，varchar(256)，varchar(191)，datetime，timestamp
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class AddColumnInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * columnType  列类型
+    * columnType  列类型 取值：default_value，create_time，update_time，expression，server_database_table
     * columnName  列名称
     * columnValue  列填充值
-    * dataType  填充列的数据类型
+    * dataType  填充列的数据类型 取值：int，long，varchar(256)，varchar(191)，datetime，timestamp
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class AddColumnInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * columnType  列类型
+    * columnType  列类型 取值：default_value，create_time，update_time，expression，server_database_table
     * columnName  列名称
     * columnValue  列填充值
-    * dataType  填充列的数据类型
+    * dataType  填充列的数据类型 取值：int，long，varchar(256)，varchar(191)，datetime，timestamp
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class AddColumnInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets columnType
-    *  列类型
+    *  列类型 取值：default_value，create_time，update_time，expression，server_database_table
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class AddColumnInfo implements ModelInterface, ArrayAccess
     /**
     * Sets columnType
     *
-    * @param string|null $columnType 列类型
+    * @param string|null $columnType 列类型 取值：default_value，create_time，update_time，expression，server_database_table
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class AddColumnInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataType
-    *  填充列的数据类型
+    *  填充列的数据类型 取值：int，long，varchar(256)，varchar(191)，datetime，timestamp
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class AddColumnInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dataType
     *
-    * @param string|null $dataType 填充列的数据类型
+    * @param string|null $dataType 填充列的数据类型 取值：int，long，varchar(256)，varchar(191)，datetime，timestamp
     *
     * @return $this
     */

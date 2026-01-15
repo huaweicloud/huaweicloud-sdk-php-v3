@@ -24,8 +24,8 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
     * sqlTemplateMd5  SQL模板MD5
     * targetName  目标库昵称
     * schemaName  schema名称
-    * queryType  SQL类型
-    * targetType  目标库类型
+    * queryType  SQL类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
+    * targetType  目标库类型 取值：mysql,taurusha,sqlserver,postgresql,ddm,mongodb,awsdocumentdb,hwmongodb,hwpostgresql,oracle,taurus,gaussdb,kafka,mrsKafka,cassandra,dynamo,dws,gaussdbv5,gaussdbv5ha,gaussmongodb,multigaussdbv5,dmq,gaussdbt,gaussdbtha,gaussdb300,elasticsearch,db2,tidb,redis,gaussredis,rediscluster,mariadb,oceanbase,informix,gaussdbv1,gausscassandra,geminidynamo,dds,tauruslite
     * count  归类的SQL数量
     *
     * @var string[]
@@ -46,8 +46,8 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
     * sqlTemplateMd5  SQL模板MD5
     * targetName  目标库昵称
     * schemaName  schema名称
-    * queryType  SQL类型
-    * targetType  目标库类型
+    * queryType  SQL类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
+    * targetType  目标库类型 取值：mysql,taurusha,sqlserver,postgresql,ddm,mongodb,awsdocumentdb,hwmongodb,hwpostgresql,oracle,taurus,gaussdb,kafka,mrsKafka,cassandra,dynamo,dws,gaussdbv5,gaussdbv5ha,gaussmongodb,multigaussdbv5,dmq,gaussdbt,gaussdbtha,gaussdb300,elasticsearch,db2,tidb,redis,gaussredis,rediscluster,mariadb,oceanbase,informix,gaussdbv1,gausscassandra,geminidynamo,dds,tauruslite
     * count  归类的SQL数量
     *
     * @var string[]
@@ -89,8 +89,8 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
     * sqlTemplateMd5  SQL模板MD5
     * targetName  目标库昵称
     * schemaName  schema名称
-    * queryType  SQL类型
-    * targetType  目标库类型
+    * queryType  SQL类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
+    * targetType  目标库类型 取值：mysql,taurusha,sqlserver,postgresql,ddm,mongodb,awsdocumentdb,hwmongodb,hwpostgresql,oracle,taurus,gaussdb,kafka,mrsKafka,cassandra,dynamo,dws,gaussdbv5,gaussdbv5ha,gaussmongodb,multigaussdbv5,dmq,gaussdbt,gaussdbtha,gaussdb300,elasticsearch,db2,tidb,redis,gaussredis,rediscluster,mariadb,oceanbase,informix,gaussdbv1,gausscassandra,geminidynamo,dds,tauruslite
     * count  归类的SQL数量
     *
     * @var string[]
@@ -111,8 +111,8 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
     * sqlTemplateMd5  SQL模板MD5
     * targetName  目标库昵称
     * schemaName  schema名称
-    * queryType  SQL类型
-    * targetType  目标库类型
+    * queryType  SQL类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
+    * targetType  目标库类型 取值：mysql,taurusha,sqlserver,postgresql,ddm,mongodb,awsdocumentdb,hwmongodb,hwpostgresql,oracle,taurus,gaussdb,kafka,mrsKafka,cassandra,dynamo,dws,gaussdbv5,gaussdbv5ha,gaussmongodb,multigaussdbv5,dmq,gaussdbt,gaussdbtha,gaussdb300,elasticsearch,db2,tidb,redis,gaussredis,rediscluster,mariadb,oceanbase,informix,gaussdbv1,gausscassandra,geminidynamo,dds,tauruslite
     * count  归类的SQL数量
     *
     * @var string[]
@@ -133,8 +133,8 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
     * sqlTemplateMd5  SQL模板MD5
     * targetName  目标库昵称
     * schemaName  schema名称
-    * queryType  SQL类型
-    * targetType  目标库类型
+    * queryType  SQL类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
+    * targetType  目标库类型 取值：mysql,taurusha,sqlserver,postgresql,ddm,mongodb,awsdocumentdb,hwmongodb,hwpostgresql,oracle,taurus,gaussdb,kafka,mrsKafka,cassandra,dynamo,dws,gaussdbv5,gaussdbv5ha,gaussmongodb,multigaussdbv5,dmq,gaussdbt,gaussdbtha,gaussdb300,elasticsearch,db2,tidb,redis,gaussredis,rediscluster,mariadb,oceanbase,informix,gaussdbv1,gausscassandra,geminidynamo,dds,tauruslite
     * count  归类的SQL数量
     *
     * @var string[]
@@ -336,7 +336,7 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets queryType
-    *  SQL类型
+    *  SQL类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
     /**
     * Sets queryType
     *
-    * @param string|null $queryType SQL类型
+    * @param string|null $queryType SQL类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetType
-    *  目标库类型
+    *  目标库类型 取值：mysql,taurusha,sqlserver,postgresql,ddm,mongodb,awsdocumentdb,hwmongodb,hwpostgresql,oracle,taurus,gaussdb,kafka,mrsKafka,cassandra,dynamo,dws,gaussdbv5,gaussdbv5ha,gaussmongodb,multigaussdbv5,dmq,gaussdbt,gaussdbtha,gaussdb300,elasticsearch,db2,tidb,redis,gaussredis,rediscluster,mariadb,oceanbase,informix,gaussdbv1,gausscassandra,geminidynamo,dds,tauruslite
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
     /**
     * Sets targetType
     *
-    * @param string|null $targetType 目标库类型
+    * @param string|null $targetType 目标库类型 取值：mysql,taurusha,sqlserver,postgresql,ddm,mongodb,awsdocumentdb,hwmongodb,hwpostgresql,oracle,taurus,gaussdb,kafka,mrsKafka,cassandra,dynamo,dws,gaussdbv5,gaussdbv5ha,gaussmongodb,multigaussdbv5,dmq,gaussdbt,gaussdbtha,gaussdb300,elasticsearch,db2,tidb,redis,gaussredis,rediscluster,mariadb,oceanbase,informix,gaussdbv1,gausscassandra,geminidynamo,dds,tauruslite
     *
     * @return $this
     */

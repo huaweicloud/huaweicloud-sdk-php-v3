@@ -26,8 +26,8 @@ class CreateEipRecordSetResponse implements ModelInterface, ArrayAccess
     * description  对反向解析记录的描述。
     * ttl  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * address  弹性公网IP的IP地址。
-    * status  资源状态。
-    * action  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败
+    * action  **参数解释：** 对该资源的当前操作。 **取值范围：** - CREATE：创建操作 - UPDATE：更新操作 - DELETE：删除操作 - NONE：无操作
     * links  links
     * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
     *
@@ -52,8 +52,8 @@ class CreateEipRecordSetResponse implements ModelInterface, ArrayAccess
     * description  对反向解析记录的描述。
     * ttl  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * address  弹性公网IP的IP地址。
-    * status  资源状态。
-    * action  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败
+    * action  **参数解释：** 对该资源的当前操作。 **取值范围：** - CREATE：创建操作 - UPDATE：更新操作 - DELETE：删除操作 - NONE：无操作
     * links  links
     * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
     *
@@ -99,8 +99,8 @@ class CreateEipRecordSetResponse implements ModelInterface, ArrayAccess
     * description  对反向解析记录的描述。
     * ttl  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * address  弹性公网IP的IP地址。
-    * status  资源状态。
-    * action  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败
+    * action  **参数解释：** 对该资源的当前操作。 **取值范围：** - CREATE：创建操作 - UPDATE：更新操作 - DELETE：删除操作 - NONE：无操作
     * links  links
     * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
     *
@@ -125,8 +125,8 @@ class CreateEipRecordSetResponse implements ModelInterface, ArrayAccess
     * description  对反向解析记录的描述。
     * ttl  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * address  弹性公网IP的IP地址。
-    * status  资源状态。
-    * action  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败
+    * action  **参数解释：** 对该资源的当前操作。 **取值范围：** - CREATE：创建操作 - UPDATE：更新操作 - DELETE：删除操作 - NONE：无操作
     * links  links
     * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
     *
@@ -151,8 +151,8 @@ class CreateEipRecordSetResponse implements ModelInterface, ArrayAccess
     * description  对反向解析记录的描述。
     * ttl  反向解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * address  弹性公网IP的IP地址。
-    * status  资源状态。
-    * action  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
+    * status  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败
+    * action  **参数解释：** 对该资源的当前操作。 **取值范围：** - CREATE：创建操作 - UPDATE：更新操作 - DELETE：删除操作 - NONE：无操作
     * links  links
     * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
     *
@@ -383,7 +383,7 @@ class CreateEipRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源状态。
+    *  **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败
     *
     * @return string|null
     */
@@ -395,7 +395,7 @@ class CreateEipRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源状态。
+    * @param string|null $status **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ILLEGAL：违规冻结 - POLICE：公安冻结 - ERROR：失败
     *
     * @return $this
     */
@@ -407,7 +407,7 @@ class CreateEipRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
+    *  **参数解释：** 对该资源的当前操作。 **取值范围：** - CREATE：创建操作 - UPDATE：更新操作 - DELETE：删除操作 - NONE：无操作
     *
     * @return string|null
     */
@@ -419,7 +419,7 @@ class CreateEipRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
+    * @param string|null $action **参数解释：** 对该资源的当前操作。 **取值范围：** - CREATE：创建操作 - UPDATE：更新操作 - DELETE：删除操作 - NONE：无操作
     *
     * @return $this
     */

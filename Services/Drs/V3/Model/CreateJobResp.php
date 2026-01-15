@@ -22,7 +22,7 @@ class CreateJobResp implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  任务ID
     * name  任务名称
-    * status  任务状态
+    * status  任务状态 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     * createTime  创建时间，时间戳
     * errorCode  错误码
     * errorMsg  错误信息
@@ -44,7 +44,7 @@ class CreateJobResp implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  任务ID
     * name  任务名称
-    * status  任务状态
+    * status  任务状态 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     * createTime  创建时间，时间戳
     * errorCode  错误码
     * errorMsg  错误信息
@@ -87,7 +87,7 @@ class CreateJobResp implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  任务ID
     * name  任务名称
-    * status  任务状态
+    * status  任务状态 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     * createTime  创建时间，时间戳
     * errorCode  错误码
     * errorMsg  错误信息
@@ -109,7 +109,7 @@ class CreateJobResp implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  任务ID
     * name  任务名称
-    * status  任务状态
+    * status  任务状态 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     * createTime  创建时间，时间戳
     * errorCode  错误码
     * errorMsg  错误信息
@@ -131,7 +131,7 @@ class CreateJobResp implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  任务ID
     * name  任务名称
-    * status  任务状态
+    * status  任务状态 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     * createTime  创建时间，时间戳
     * errorCode  错误码
     * errorMsg  错误信息
@@ -291,7 +291,7 @@ class CreateJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  任务状态
+    *  任务状态 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     *
     * @return string|null
     */
@@ -303,7 +303,7 @@ class CreateJobResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 任务状态
+    * @param string|null $status 任务状态 CREATING：创建中，CREATE_FAILED：创建失败，CONFIGURATION：配置中，WAITING_FOR_START：等待启动中，RELEASE_RESOURCE_COMPLETE：已结束，DELETED：已删除，INCRE_TRANSFER_STARTED：增量迁移中，INCRE_TRANSFER_FAILED：增量迁移失败，FULL_TRANSFER_STARTED：全量迁移中，FULL_TRANSFER_COMPLETE：全量迁移完成，PAUSING：暂停中，FULL_TRANSFER_FAILED：全量迁移失败
     *
     * @return $this
     */

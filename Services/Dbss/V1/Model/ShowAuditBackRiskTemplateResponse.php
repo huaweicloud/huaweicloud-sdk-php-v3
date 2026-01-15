@@ -26,7 +26,7 @@ class ShowAuditBackRiskTemplateResponse implements ModelInterface, ArrayAccess
     * dbName  数据库名称
     * dbPort  数据库端口
     * id  配置ID
-    * status  状态 - 0: 关闭 - 1：开启
+    * status  状态 - 0：关闭 - 1：开启
     *
     * @var string[]
     */
@@ -46,7 +46,7 @@ class ShowAuditBackRiskTemplateResponse implements ModelInterface, ArrayAccess
     * dbName  数据库名称
     * dbPort  数据库端口
     * id  配置ID
-    * status  状态 - 0: 关闭 - 1：开启
+    * status  状态 - 0：关闭 - 1：开启
     *
     * @var string[]
     */
@@ -87,7 +87,7 @@ class ShowAuditBackRiskTemplateResponse implements ModelInterface, ArrayAccess
     * dbName  数据库名称
     * dbPort  数据库端口
     * id  配置ID
-    * status  状态 - 0: 关闭 - 1：开启
+    * status  状态 - 0：关闭 - 1：开启
     *
     * @var string[]
     */
@@ -107,7 +107,7 @@ class ShowAuditBackRiskTemplateResponse implements ModelInterface, ArrayAccess
     * dbName  数据库名称
     * dbPort  数据库端口
     * id  配置ID
-    * status  状态 - 0: 关闭 - 1：开启
+    * status  状态 - 0：关闭 - 1：开启
     *
     * @var string[]
     */
@@ -127,7 +127,7 @@ class ShowAuditBackRiskTemplateResponse implements ModelInterface, ArrayAccess
     * dbName  数据库名称
     * dbPort  数据库端口
     * id  配置ID
-    * status  状态 - 0: 关闭 - 1：开启
+    * status  状态 - 0：关闭 - 1：开启
     *
     * @var string[]
     */
@@ -350,7 +350,7 @@ class ShowAuditBackRiskTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态 - 0: 关闭 - 1：开启
+    *  状态 - 0：关闭 - 1：开启
     *
     * @return int|null
     */
@@ -362,7 +362,7 @@ class ShowAuditBackRiskTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 状态 - 0: 关闭 - 1：开启
+    * @param int|null $status 状态 - 0：关闭 - 1：开启
     *
     * @return $this
     */

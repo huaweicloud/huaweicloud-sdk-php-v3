@@ -20,6 +20,7 @@ class BatchUpdateAntiTamperRulesRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * hostname  防护网站，查询云模式防护域名列表（ListHost）接口获取防护域名，响应体中的的hostname字段
     * url  防篡改规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
     * description  规则描述
@@ -28,6 +29,7 @@ class BatchUpdateAntiTamperRulesRequestBody implements ModelInterface, ArrayAcce
     * @var string[]
     */
     protected static $openAPITypes = [
+            'name' => 'string',
             'hostname' => 'string',
             'url' => 'string',
             'description' => 'string',
@@ -36,6 +38,7 @@ class BatchUpdateAntiTamperRulesRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * hostname  防护网站，查询云模式防护域名列表（ListHost）接口获取防护域名，响应体中的的hostname字段
     * url  防篡改规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
     * description  规则描述
@@ -44,6 +47,7 @@ class BatchUpdateAntiTamperRulesRequestBody implements ModelInterface, ArrayAcce
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'name' => null,
         'hostname' => null,
         'url' => null,
         'description' => null,
@@ -73,6 +77,7 @@ class BatchUpdateAntiTamperRulesRequestBody implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * hostname  防护网站，查询云模式防护域名列表（ListHost）接口获取防护域名，响应体中的的hostname字段
     * url  防篡改规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
     * description  规则描述
@@ -81,6 +86,7 @@ class BatchUpdateAntiTamperRulesRequestBody implements ModelInterface, ArrayAcce
     * @var string[]
     */
     protected static $attributeMap = [
+            'name' => 'name',
             'hostname' => 'hostname',
             'url' => 'url',
             'description' => 'description',
@@ -89,6 +95,7 @@ class BatchUpdateAntiTamperRulesRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * hostname  防护网站，查询云模式防护域名列表（ListHost）接口获取防护域名，响应体中的的hostname字段
     * url  防篡改规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
     * description  规则描述
@@ -97,6 +104,7 @@ class BatchUpdateAntiTamperRulesRequestBody implements ModelInterface, ArrayAcce
     * @var string[]
     */
     protected static $setters = [
+            'name' => 'setName',
             'hostname' => 'setHostname',
             'url' => 'setUrl',
             'description' => 'setDescription',
@@ -105,6 +113,7 @@ class BatchUpdateAntiTamperRulesRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * hostname  防护网站，查询云模式防护域名列表（ListHost）接口获取防护域名，响应体中的的hostname字段
     * url  防篡改规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
     * description  规则描述
@@ -113,6 +122,7 @@ class BatchUpdateAntiTamperRulesRequestBody implements ModelInterface, ArrayAcce
     * @var string[]
     */
     protected static $getters = [
+            'name' => 'getName',
             'hostname' => 'getHostname',
             'url' => 'getUrl',
             'description' => 'getDescription',
@@ -177,6 +187,7 @@ class BatchUpdateAntiTamperRulesRequestBody implements ModelInterface, ArrayAcce
     */
     public function __construct(array $data = null)
     {
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['hostname'] = isset($data['hostname']) ? $data['hostname'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -212,6 +223,30 @@ class BatchUpdateAntiTamperRulesRequestBody implements ModelInterface, ArrayAcce
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets name
+    *  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
     }
 
     /**

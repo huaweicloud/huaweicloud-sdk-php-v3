@@ -33,6 +33,8 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
     * previousSelect  上一次选择迁移对象或者同步对象的方式。 - srcImportObject：当前任务上次选择的方式为导入方式
     * importLevel  对象导入类型。 - table：表级 - database：库级
     * isImportCloumn  取值： - true： 当前任务上次选择列加工方式为导入方式 - false 或者 空：当前任务上次选择列加工方式为手动选择方式
+    * importMappingType  文件导入映射场景。 - table_mapping - topic_mapping
+    * isImportUniqueKey  唯一键信息是否导入。
     *
     * @var string[]
     */
@@ -48,7 +50,9 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
             'fileSize' => 'string',
             'previousSelect' => 'string',
             'importLevel' => 'string',
-            'isImportCloumn' => 'bool'
+            'isImportCloumn' => 'bool',
+            'importMappingType' => 'string',
+            'isImportUniqueKey' => 'bool'
     ];
 
     /**
@@ -65,6 +69,8 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
     * previousSelect  上一次选择迁移对象或者同步对象的方式。 - srcImportObject：当前任务上次选择的方式为导入方式
     * importLevel  对象导入类型。 - table：表级 - database：库级
     * isImportCloumn  取值： - true： 当前任务上次选择列加工方式为导入方式 - false 或者 空：当前任务上次选择列加工方式为手动选择方式
+    * importMappingType  文件导入映射场景。 - table_mapping - topic_mapping
+    * isImportUniqueKey  唯一键信息是否导入。
     *
     * @var string[]
     */
@@ -80,7 +86,9 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
         'fileSize' => null,
         'previousSelect' => null,
         'importLevel' => null,
-        'isImportCloumn' => null
+        'isImportCloumn' => null,
+        'importMappingType' => null,
+        'isImportUniqueKey' => null
     ];
 
     /**
@@ -118,6 +126,8 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
     * previousSelect  上一次选择迁移对象或者同步对象的方式。 - srcImportObject：当前任务上次选择的方式为导入方式
     * importLevel  对象导入类型。 - table：表级 - database：库级
     * isImportCloumn  取值： - true： 当前任务上次选择列加工方式为导入方式 - false 或者 空：当前任务上次选择列加工方式为手动选择方式
+    * importMappingType  文件导入映射场景。 - table_mapping - topic_mapping
+    * isImportUniqueKey  唯一键信息是否导入。
     *
     * @var string[]
     */
@@ -133,7 +143,9 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
             'fileSize' => 'file_size',
             'previousSelect' => 'previous_select',
             'importLevel' => 'import_level',
-            'isImportCloumn' => 'is_import_cloumn'
+            'isImportCloumn' => 'is_import_cloumn',
+            'importMappingType' => 'import_mapping_type',
+            'isImportUniqueKey' => 'is_import_unique_key'
     ];
 
     /**
@@ -150,6 +162,8 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
     * previousSelect  上一次选择迁移对象或者同步对象的方式。 - srcImportObject：当前任务上次选择的方式为导入方式
     * importLevel  对象导入类型。 - table：表级 - database：库级
     * isImportCloumn  取值： - true： 当前任务上次选择列加工方式为导入方式 - false 或者 空：当前任务上次选择列加工方式为手动选择方式
+    * importMappingType  文件导入映射场景。 - table_mapping - topic_mapping
+    * isImportUniqueKey  唯一键信息是否导入。
     *
     * @var string[]
     */
@@ -165,7 +179,9 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
             'fileSize' => 'setFileSize',
             'previousSelect' => 'setPreviousSelect',
             'importLevel' => 'setImportLevel',
-            'isImportCloumn' => 'setIsImportCloumn'
+            'isImportCloumn' => 'setIsImportCloumn',
+            'importMappingType' => 'setImportMappingType',
+            'isImportUniqueKey' => 'setIsImportUniqueKey'
     ];
 
     /**
@@ -182,6 +198,8 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
     * previousSelect  上一次选择迁移对象或者同步对象的方式。 - srcImportObject：当前任务上次选择的方式为导入方式
     * importLevel  对象导入类型。 - table：表级 - database：库级
     * isImportCloumn  取值： - true： 当前任务上次选择列加工方式为导入方式 - false 或者 空：当前任务上次选择列加工方式为手动选择方式
+    * importMappingType  文件导入映射场景。 - table_mapping - topic_mapping
+    * isImportUniqueKey  唯一键信息是否导入。
     *
     * @var string[]
     */
@@ -197,7 +215,9 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
             'fileSize' => 'getFileSize',
             'previousSelect' => 'getPreviousSelect',
             'importLevel' => 'getImportLevel',
-            'isImportCloumn' => 'getIsImportCloumn'
+            'isImportCloumn' => 'getIsImportCloumn',
+            'importMappingType' => 'getImportMappingType',
+            'isImportUniqueKey' => 'getIsImportUniqueKey'
     ];
 
     /**
@@ -270,6 +290,8 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
         $this->container['previousSelect'] = isset($data['previousSelect']) ? $data['previousSelect'] : null;
         $this->container['importLevel'] = isset($data['importLevel']) ? $data['importLevel'] : null;
         $this->container['isImportCloumn'] = isset($data['isImportCloumn']) ? $data['isImportCloumn'] : null;
+        $this->container['importMappingType'] = isset($data['importMappingType']) ? $data['importMappingType'] : null;
+        $this->container['isImportUniqueKey'] = isset($data['isImportUniqueKey']) ? $data['isImportUniqueKey'] : null;
     }
 
     /**
@@ -579,6 +601,54 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
     public function setIsImportCloumn($isImportCloumn)
     {
         $this->container['isImportCloumn'] = $isImportCloumn;
+        return $this;
+    }
+
+    /**
+    * Gets importMappingType
+    *  文件导入映射场景。 - table_mapping - topic_mapping
+    *
+    * @return string|null
+    */
+    public function getImportMappingType()
+    {
+        return $this->container['importMappingType'];
+    }
+
+    /**
+    * Sets importMappingType
+    *
+    * @param string|null $importMappingType 文件导入映射场景。 - table_mapping - topic_mapping
+    *
+    * @return $this
+    */
+    public function setImportMappingType($importMappingType)
+    {
+        $this->container['importMappingType'] = $importMappingType;
+        return $this;
+    }
+
+    /**
+    * Gets isImportUniqueKey
+    *  唯一键信息是否导入。
+    *
+    * @return bool|null
+    */
+    public function getIsImportUniqueKey()
+    {
+        return $this->container['isImportUniqueKey'];
+    }
+
+    /**
+    * Sets isImportUniqueKey
+    *
+    * @param bool|null $isImportUniqueKey 唯一键信息是否导入。
+    *
+    * @return $this
+    */
+    public function setIsImportUniqueKey($isImportUniqueKey)
+    {
+        $this->container['isImportUniqueKey'] = $isImportUniqueKey;
         return $this;
     }
 

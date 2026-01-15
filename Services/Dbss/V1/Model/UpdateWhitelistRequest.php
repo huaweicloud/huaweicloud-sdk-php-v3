@@ -22,7 +22,7 @@ class UpdateWhitelistRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * dbIds  数据库ID列表
     * desc  备注
-    * enabled  是否启用  - true: 启用  - false: 禁用
+    * enabled  是否启用  - true：启用  - false：禁用
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class UpdateWhitelistRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * dbIds  数据库ID列表
     * desc  备注
-    * enabled  是否启用  - true: 启用  - false: 禁用
+    * enabled  是否启用  - true：启用  - false：禁用
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateWhitelistRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * dbIds  数据库ID列表
     * desc  备注
-    * enabled  是否启用  - true: 启用  - false: 禁用
+    * enabled  是否启用  - true：启用  - false：禁用
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class UpdateWhitelistRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * dbIds  数据库ID列表
     * desc  备注
-    * enabled  是否启用  - true: 启用  - false: 禁用
+    * enabled  是否启用  - true：启用  - false：禁用
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class UpdateWhitelistRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * dbIds  数据库ID列表
     * desc  备注
-    * enabled  是否启用  - true: 启用  - false: 禁用
+    * enabled  是否启用  - true：启用  - false：禁用
     *
     * @var string[]
     */
@@ -247,7 +247,7 @@ class UpdateWhitelistRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  是否启用  - true: 启用  - false: 禁用
+    *  是否启用  - true：启用  - false：禁用
     *
     * @return bool
     */
@@ -259,7 +259,7 @@ class UpdateWhitelistRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool $enabled 是否启用  - true: 启用  - false: 禁用
+    * @param bool $enabled 是否启用  - true：启用  - false：禁用
     *
     * @return $this
     */
