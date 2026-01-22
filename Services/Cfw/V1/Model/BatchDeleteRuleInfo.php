@@ -20,8 +20,8 @@ class BatchDeleteRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  批量删除的acl的名称
-    * id  批量删除的acl的id
+    * name  **参数解释**： 批量删除的ACL的名称 **取值范围**： 不涉及
+    * id  **参数解释**： 批量删除的ACL的ID **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class BatchDeleteRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  批量删除的acl的名称
-    * id  批量删除的acl的id
+    * name  **参数解释**： 批量删除的ACL的名称 **取值范围**： 不涉及
+    * id  **参数解释**： 批量删除的ACL的ID **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class BatchDeleteRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  批量删除的acl的名称
-    * id  批量删除的acl的id
+    * name  **参数解释**： 批量删除的ACL的名称 **取值范围**： 不涉及
+    * id  **参数解释**： 批量删除的ACL的ID **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class BatchDeleteRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  批量删除的acl的名称
-    * id  批量删除的acl的id
+    * name  **参数解释**： 批量删除的ACL的名称 **取值范围**： 不涉及
+    * id  **参数解释**： 批量删除的ACL的ID **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class BatchDeleteRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  批量删除的acl的名称
-    * id  批量删除的acl的id
+    * name  **参数解释**： 批量删除的ACL的名称 **取值范围**： 不涉及
+    * id  **参数解释**： 批量删除的ACL的ID **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class BatchDeleteRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  批量删除的acl的名称
+    *  **参数解释**： 批量删除的ACL的名称 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class BatchDeleteRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 批量删除的acl的名称
+    * @param string|null $name **参数解释**： 批量删除的ACL的名称 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class BatchDeleteRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  批量删除的acl的id
+    *  **参数解释**： 批量删除的ACL的ID **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class BatchDeleteRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 批量删除的acl的id
+    * @param string|null $id **参数解释**： 批量删除的ACL的ID **取值范围**： 不涉及
     *
     * @return $this
     */

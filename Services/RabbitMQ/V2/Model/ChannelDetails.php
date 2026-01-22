@@ -20,12 +20,12 @@ class ChannelDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  channel信息，包括客户端IP:Port到服务端IP:Port(channel_id)。
-    * number  channel数量
-    * user  消费者用户名，在开启ACL访问控制后返回真实用户名，未开启ACL时返回null。
-    * connectionName  connection信息，包括客户端IP:Port到服务端IP:Port。
-    * peerHost  连接的消费者IP
-    * peerPort  连接的消费者进程端口号
+    * name  **参数解释**： channel信息，包括客户端IP:Port到服务端IP:Port(channel_id)。 **取值范围**： 不涉及。
+    * number  **参数解释**： channel数量。 **取值范围**： 不涉及。
+    * user  **参数解释**： 消费者用户名，在开启ACL访问控制后返回真实用户名，未开启ACL时返回null。 **取值范围**： 不涉及。
+    * connectionName  **参数解释**： connection信息，包括客户端IP:Port到服务端IP:Port。 **取值范围**： 不涉及。
+    * peerHost  **参数解释**： 连接的消费者IP。 **取值范围**： 不涉及。
+    * peerPort  **参数解释**： 连接的消费者进程端口号。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class ChannelDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  channel信息，包括客户端IP:Port到服务端IP:Port(channel_id)。
-    * number  channel数量
-    * user  消费者用户名，在开启ACL访问控制后返回真实用户名，未开启ACL时返回null。
-    * connectionName  connection信息，包括客户端IP:Port到服务端IP:Port。
-    * peerHost  连接的消费者IP
-    * peerPort  连接的消费者进程端口号
+    * name  **参数解释**： channel信息，包括客户端IP:Port到服务端IP:Port(channel_id)。 **取值范围**： 不涉及。
+    * number  **参数解释**： channel数量。 **取值范围**： 不涉及。
+    * user  **参数解释**： 消费者用户名，在开启ACL访问控制后返回真实用户名，未开启ACL时返回null。 **取值范围**： 不涉及。
+    * connectionName  **参数解释**： connection信息，包括客户端IP:Port到服务端IP:Port。 **取值范围**： 不涉及。
+    * peerHost  **参数解释**： 连接的消费者IP。 **取值范围**： 不涉及。
+    * peerPort  **参数解释**： 连接的消费者进程端口号。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class ChannelDetails implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  channel信息，包括客户端IP:Port到服务端IP:Port(channel_id)。
-    * number  channel数量
-    * user  消费者用户名，在开启ACL访问控制后返回真实用户名，未开启ACL时返回null。
-    * connectionName  connection信息，包括客户端IP:Port到服务端IP:Port。
-    * peerHost  连接的消费者IP
-    * peerPort  连接的消费者进程端口号
+    * name  **参数解释**： channel信息，包括客户端IP:Port到服务端IP:Port(channel_id)。 **取值范围**： 不涉及。
+    * number  **参数解释**： channel数量。 **取值范围**： 不涉及。
+    * user  **参数解释**： 消费者用户名，在开启ACL访问控制后返回真实用户名，未开启ACL时返回null。 **取值范围**： 不涉及。
+    * connectionName  **参数解释**： connection信息，包括客户端IP:Port到服务端IP:Port。 **取值范围**： 不涉及。
+    * peerHost  **参数解释**： 连接的消费者IP。 **取值范围**： 不涉及。
+    * peerPort  **参数解释**： 连接的消费者进程端口号。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class ChannelDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  channel信息，包括客户端IP:Port到服务端IP:Port(channel_id)。
-    * number  channel数量
-    * user  消费者用户名，在开启ACL访问控制后返回真实用户名，未开启ACL时返回null。
-    * connectionName  connection信息，包括客户端IP:Port到服务端IP:Port。
-    * peerHost  连接的消费者IP
-    * peerPort  连接的消费者进程端口号
+    * name  **参数解释**： channel信息，包括客户端IP:Port到服务端IP:Port(channel_id)。 **取值范围**： 不涉及。
+    * number  **参数解释**： channel数量。 **取值范围**： 不涉及。
+    * user  **参数解释**： 消费者用户名，在开启ACL访问控制后返回真实用户名，未开启ACL时返回null。 **取值范围**： 不涉及。
+    * connectionName  **参数解释**： connection信息，包括客户端IP:Port到服务端IP:Port。 **取值范围**： 不涉及。
+    * peerHost  **参数解释**： 连接的消费者IP。 **取值范围**： 不涉及。
+    * peerPort  **参数解释**： 连接的消费者进程端口号。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class ChannelDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  channel信息，包括客户端IP:Port到服务端IP:Port(channel_id)。
-    * number  channel数量
-    * user  消费者用户名，在开启ACL访问控制后返回真实用户名，未开启ACL时返回null。
-    * connectionName  connection信息，包括客户端IP:Port到服务端IP:Port。
-    * peerHost  连接的消费者IP
-    * peerPort  连接的消费者进程端口号
+    * name  **参数解释**： channel信息，包括客户端IP:Port到服务端IP:Port(channel_id)。 **取值范围**： 不涉及。
+    * number  **参数解释**： channel数量。 **取值范围**： 不涉及。
+    * user  **参数解释**： 消费者用户名，在开启ACL访问控制后返回真实用户名，未开启ACL时返回null。 **取值范围**： 不涉及。
+    * connectionName  **参数解释**： connection信息，包括客户端IP:Port到服务端IP:Port。 **取值范围**： 不涉及。
+    * peerHost  **参数解释**： 连接的消费者IP。 **取值范围**： 不涉及。
+    * peerPort  **参数解释**： 连接的消费者进程端口号。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class ChannelDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  channel信息，包括客户端IP:Port到服务端IP:Port(channel_id)。
+    *  **参数解释**： channel信息，包括客户端IP:Port到服务端IP:Port(channel_id)。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class ChannelDetails implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name channel信息，包括客户端IP:Port到服务端IP:Port(channel_id)。
+    * @param string|null $name **参数解释**： channel信息，包括客户端IP:Port到服务端IP:Port(channel_id)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class ChannelDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets number
-    *  channel数量
+    *  **参数解释**： channel数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -265,7 +265,7 @@ class ChannelDetails implements ModelInterface, ArrayAccess
     /**
     * Sets number
     *
-    * @param int|null $number channel数量
+    * @param int|null $number **参数解释**： channel数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class ChannelDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets user
-    *  消费者用户名，在开启ACL访问控制后返回真实用户名，未开启ACL时返回null。
+    *  **参数解释**： 消费者用户名，在开启ACL访问控制后返回真实用户名，未开启ACL时返回null。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class ChannelDetails implements ModelInterface, ArrayAccess
     /**
     * Sets user
     *
-    * @param string|null $user 消费者用户名，在开启ACL访问控制后返回真实用户名，未开启ACL时返回null。
+    * @param string|null $user **参数解释**： 消费者用户名，在开启ACL访问控制后返回真实用户名，未开启ACL时返回null。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class ChannelDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets connectionName
-    *  connection信息，包括客户端IP:Port到服务端IP:Port。
+    *  **参数解释**： connection信息，包括客户端IP:Port到服务端IP:Port。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class ChannelDetails implements ModelInterface, ArrayAccess
     /**
     * Sets connectionName
     *
-    * @param string|null $connectionName connection信息，包括客户端IP:Port到服务端IP:Port。
+    * @param string|null $connectionName **参数解释**： connection信息，包括客户端IP:Port到服务端IP:Port。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class ChannelDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets peerHost
-    *  连接的消费者IP
+    *  **参数解释**： 连接的消费者IP。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class ChannelDetails implements ModelInterface, ArrayAccess
     /**
     * Sets peerHost
     *
-    * @param string|null $peerHost 连接的消费者IP
+    * @param string|null $peerHost **参数解释**： 连接的消费者IP。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class ChannelDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets peerPort
-    *  连接的消费者进程端口号
+    *  **参数解释**： 连接的消费者进程端口号。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -361,7 +361,7 @@ class ChannelDetails implements ModelInterface, ArrayAccess
     /**
     * Sets peerPort
     *
-    * @param int|null $peerPort 连接的消费者进程端口号
+    * @param int|null $peerPort **参数解释**： 连接的消费者进程端口号。 **取值范围**： 不涉及。
     *
     * @return $this
     */

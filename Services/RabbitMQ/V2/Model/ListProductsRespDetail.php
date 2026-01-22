@@ -20,14 +20,14 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * storage  消息存储空间。
-    * productId  产品ID。
-    * specCode  规格ID。
-    * io  IO信息。
-    * unavailableZones  资源售罄的可用区列表。
-    * availableZones  有可用资源的可用区列表。
-    * ecsFlavorId  该产品规格对应的虚拟机规格。
-    * archType  实例规格架构类型。当前仅支持X86。
+    * storage  **参数解释**： 消息存储空间。 **取值范围**： 不涉及。
+    * productId  **参数解释**： 产品ID。 **取值范围**： 不涉及。
+    * specCode  **参数解释**： 规格ID。 **取值范围**： 不涉及。
+    * io  **参数解释**： IO信息。
+    * unavailableZones  **参数解释**： 资源售罄的可用区列表。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 有可用资源的可用区列表。 **取值范围**： 不涉及。
+    * ecsFlavorId  **参数解释**： 该产品规格对应的虚拟机规格。 **取值范围**： 不涉及。
+    * archType  **参数解释**： 实例规格架构类型。当前仅支持X86。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * storage  消息存储空间。
-    * productId  产品ID。
-    * specCode  规格ID。
-    * io  IO信息。
-    * unavailableZones  资源售罄的可用区列表。
-    * availableZones  有可用资源的可用区列表。
-    * ecsFlavorId  该产品规格对应的虚拟机规格。
-    * archType  实例规格架构类型。当前仅支持X86。
+    * storage  **参数解释**： 消息存储空间。 **取值范围**： 不涉及。
+    * productId  **参数解释**： 产品ID。 **取值范围**： 不涉及。
+    * specCode  **参数解释**： 规格ID。 **取值范围**： 不涉及。
+    * io  **参数解释**： IO信息。
+    * unavailableZones  **参数解释**： 资源售罄的可用区列表。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 有可用资源的可用区列表。 **取值范围**： 不涉及。
+    * ecsFlavorId  **参数解释**： 该产品规格对应的虚拟机规格。 **取值范围**： 不涉及。
+    * archType  **参数解释**： 实例规格架构类型。当前仅支持X86。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * storage  消息存储空间。
-    * productId  产品ID。
-    * specCode  规格ID。
-    * io  IO信息。
-    * unavailableZones  资源售罄的可用区列表。
-    * availableZones  有可用资源的可用区列表。
-    * ecsFlavorId  该产品规格对应的虚拟机规格。
-    * archType  实例规格架构类型。当前仅支持X86。
+    * storage  **参数解释**： 消息存储空间。 **取值范围**： 不涉及。
+    * productId  **参数解释**： 产品ID。 **取值范围**： 不涉及。
+    * specCode  **参数解释**： 规格ID。 **取值范围**： 不涉及。
+    * io  **参数解释**： IO信息。
+    * unavailableZones  **参数解释**： 资源售罄的可用区列表。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 有可用资源的可用区列表。 **取值范围**： 不涉及。
+    * ecsFlavorId  **参数解释**： 该产品规格对应的虚拟机规格。 **取值范围**： 不涉及。
+    * archType  **参数解释**： 实例规格架构类型。当前仅支持X86。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * storage  消息存储空间。
-    * productId  产品ID。
-    * specCode  规格ID。
-    * io  IO信息。
-    * unavailableZones  资源售罄的可用区列表。
-    * availableZones  有可用资源的可用区列表。
-    * ecsFlavorId  该产品规格对应的虚拟机规格。
-    * archType  实例规格架构类型。当前仅支持X86。
+    * storage  **参数解释**： 消息存储空间。 **取值范围**： 不涉及。
+    * productId  **参数解释**： 产品ID。 **取值范围**： 不涉及。
+    * specCode  **参数解释**： 规格ID。 **取值范围**： 不涉及。
+    * io  **参数解释**： IO信息。
+    * unavailableZones  **参数解释**： 资源售罄的可用区列表。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 有可用资源的可用区列表。 **取值范围**： 不涉及。
+    * ecsFlavorId  **参数解释**： 该产品规格对应的虚拟机规格。 **取值范围**： 不涉及。
+    * archType  **参数解释**： 实例规格架构类型。当前仅支持X86。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * storage  消息存储空间。
-    * productId  产品ID。
-    * specCode  规格ID。
-    * io  IO信息。
-    * unavailableZones  资源售罄的可用区列表。
-    * availableZones  有可用资源的可用区列表。
-    * ecsFlavorId  该产品规格对应的虚拟机规格。
-    * archType  实例规格架构类型。当前仅支持X86。
+    * storage  **参数解释**： 消息存储空间。 **取值范围**： 不涉及。
+    * productId  **参数解释**： 产品ID。 **取值范围**： 不涉及。
+    * specCode  **参数解释**： 规格ID。 **取值范围**： 不涉及。
+    * io  **参数解释**： IO信息。
+    * unavailableZones  **参数解释**： 资源售罄的可用区列表。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 有可用资源的可用区列表。 **取值范围**： 不涉及。
+    * ecsFlavorId  **参数解释**： 该产品规格对应的虚拟机规格。 **取值范围**： 不涉及。
+    * archType  **参数解释**： 实例规格架构类型。当前仅支持X86。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -251,7 +251,7 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets storage
-    *  消息存储空间。
+    *  **参数解释**： 消息存储空间。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -263,7 +263,7 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
     /**
     * Sets storage
     *
-    * @param string|null $storage 消息存储空间。
+    * @param string|null $storage **参数解释**： 消息存储空间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -275,7 +275,7 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
-    *  产品ID。
+    *  **参数解释**： 产品ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -287,7 +287,7 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
     /**
     * Sets productId
     *
-    * @param string|null $productId 产品ID。
+    * @param string|null $productId **参数解释**： 产品ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -299,7 +299,7 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets specCode
-    *  规格ID。
+    *  **参数解释**： 规格ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -311,7 +311,7 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
     /**
     * Sets specCode
     *
-    * @param string|null $specCode 规格ID。
+    * @param string|null $specCode **参数解释**： 规格ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets io
-    *  IO信息。
+    *  **参数解释**： IO信息。
     *
     * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespIo[]|null
     */
@@ -335,7 +335,7 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
     /**
     * Sets io
     *
-    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespIo[]|null $io IO信息。
+    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespIo[]|null $io **参数解释**： IO信息。
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets unavailableZones
-    *  资源售罄的可用区列表。
+    *  **参数解释**： 资源售罄的可用区列表。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -359,7 +359,7 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
     /**
     * Sets unavailableZones
     *
-    * @param string[]|null $unavailableZones 资源售罄的可用区列表。
+    * @param string[]|null $unavailableZones **参数解释**： 资源售罄的可用区列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableZones
-    *  有可用资源的可用区列表。
+    *  **参数解释**： 有可用资源的可用区列表。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -383,7 +383,7 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
     /**
     * Sets availableZones
     *
-    * @param string[]|null $availableZones 有可用资源的可用区列表。
+    * @param string[]|null $availableZones **参数解释**： 有可用资源的可用区列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -395,7 +395,7 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets ecsFlavorId
-    *  该产品规格对应的虚拟机规格。
+    *  **参数解释**： 该产品规格对应的虚拟机规格。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -407,7 +407,7 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
     /**
     * Sets ecsFlavorId
     *
-    * @param string|null $ecsFlavorId 该产品规格对应的虚拟机规格。
+    * @param string|null $ecsFlavorId **参数解释**： 该产品规格对应的虚拟机规格。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets archType
-    *  实例规格架构类型。当前仅支持X86。
+    *  **参数解释**： 实例规格架构类型。当前仅支持X86。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -431,7 +431,7 @@ class ListProductsRespDetail implements ModelInterface, ArrayAccess
     /**
     * Sets archType
     *
-    * @param string|null $archType 实例规格架构类型。当前仅支持X86。
+    * @param string|null $archType **参数解释**： 实例规格架构类型。当前仅支持X86。 **取值范围**： 不涉及。
     *
     * @return $this
     */

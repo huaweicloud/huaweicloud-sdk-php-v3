@@ -20,18 +20,18 @@ class ListEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     * keyWord  查询防护EIP列表关键字，可选用弹性公网ID和弹性公网IP
     * status  防护状态 null-全部 0-开启防护 1-关闭防护
     * sync  是否同步租户EIP数据 0-不同步 1-同步
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
-    * deviceKey  设备关键字，是eip绑定的资产的名称或id
+    * deviceKey  设备关键字，是eip绑定的资产的名称或id，可通过EIP服务的查询弹性公网IP列表接口获取，通过返回值中的publicips.id（.表示各对象之间层级的区分）获得
     * addressType  地址类型0 ipv4，1 ipv6
-    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
-    * fwKeyWord  防火墙关键字，可使用防火墙id或名称查询，可通过[防火墙ID获取方式](cfw_02_0028.xml)
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * fwKeyWord  防火墙关键字，可使用防火墙ID或名称查询，可通过[防火墙ID获取方式](cfw_02_0028.xml)
     * epsId  弹性公网ip的企业项目id，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，租户未开启企业项目时为0
     * tags  标签列表信息可通过查询EIP服务界面列表标签页签获得
     *
@@ -56,18 +56,18 @@ class ListEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     * keyWord  查询防护EIP列表关键字，可选用弹性公网ID和弹性公网IP
     * status  防护状态 null-全部 0-开启防护 1-关闭防护
     * sync  是否同步租户EIP数据 0-不同步 1-同步
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
-    * deviceKey  设备关键字，是eip绑定的资产的名称或id
+    * deviceKey  设备关键字，是eip绑定的资产的名称或id，可通过EIP服务的查询弹性公网IP列表接口获取，通过返回值中的publicips.id（.表示各对象之间层级的区分）获得
     * addressType  地址类型0 ipv4，1 ipv6
-    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
-    * fwKeyWord  防火墙关键字，可使用防火墙id或名称查询，可通过[防火墙ID获取方式](cfw_02_0028.xml)
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * fwKeyWord  防火墙关键字，可使用防火墙ID或名称查询，可通过[防火墙ID获取方式](cfw_02_0028.xml)
     * epsId  弹性公网ip的企业项目id，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，租户未开启企业项目时为0
     * tags  标签列表信息可通过查询EIP服务界面列表标签页签获得
     *
@@ -113,18 +113,18 @@ class ListEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     * keyWord  查询防护EIP列表关键字，可选用弹性公网ID和弹性公网IP
     * status  防护状态 null-全部 0-开启防护 1-关闭防护
     * sync  是否同步租户EIP数据 0-不同步 1-同步
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
-    * deviceKey  设备关键字，是eip绑定的资产的名称或id
+    * deviceKey  设备关键字，是eip绑定的资产的名称或id，可通过EIP服务的查询弹性公网IP列表接口获取，通过返回值中的publicips.id（.表示各对象之间层级的区分）获得
     * addressType  地址类型0 ipv4，1 ipv6
-    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
-    * fwKeyWord  防火墙关键字，可使用防火墙id或名称查询，可通过[防火墙ID获取方式](cfw_02_0028.xml)
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * fwKeyWord  防火墙关键字，可使用防火墙ID或名称查询，可通过[防火墙ID获取方式](cfw_02_0028.xml)
     * epsId  弹性公网ip的企业项目id，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，租户未开启企业项目时为0
     * tags  标签列表信息可通过查询EIP服务界面列表标签页签获得
     *
@@ -149,18 +149,18 @@ class ListEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     * keyWord  查询防护EIP列表关键字，可选用弹性公网ID和弹性公网IP
     * status  防护状态 null-全部 0-开启防护 1-关闭防护
     * sync  是否同步租户EIP数据 0-不同步 1-同步
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
-    * deviceKey  设备关键字，是eip绑定的资产的名称或id
+    * deviceKey  设备关键字，是eip绑定的资产的名称或id，可通过EIP服务的查询弹性公网IP列表接口获取，通过返回值中的publicips.id（.表示各对象之间层级的区分）获得
     * addressType  地址类型0 ipv4，1 ipv6
-    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
-    * fwKeyWord  防火墙关键字，可使用防火墙id或名称查询，可通过[防火墙ID获取方式](cfw_02_0028.xml)
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * fwKeyWord  防火墙关键字，可使用防火墙ID或名称查询，可通过[防火墙ID获取方式](cfw_02_0028.xml)
     * epsId  弹性公网ip的企业项目id，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，租户未开启企业项目时为0
     * tags  标签列表信息可通过查询EIP服务界面列表标签页签获得
     *
@@ -185,18 +185,18 @@ class ListEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     * keyWord  查询防护EIP列表关键字，可选用弹性公网ID和弹性公网IP
     * status  防护状态 null-全部 0-开启防护 1-关闭防护
     * sync  是否同步租户EIP数据 0-不同步 1-同步
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
-    * deviceKey  设备关键字，是eip绑定的资产的名称或id
+    * deviceKey  设备关键字，是eip绑定的资产的名称或id，可通过EIP服务的查询弹性公网IP列表接口获取，通过返回值中的publicips.id（.表示各对象之间层级的区分）获得
     * addressType  地址类型0 ipv4，1 ipv6
-    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
-    * fwKeyWord  防火墙关键字，可使用防火墙id或名称查询，可通过[防火墙ID获取方式](cfw_02_0028.xml)
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * fwKeyWord  防火墙关键字，可使用防火墙ID或名称查询，可通过[防火墙ID获取方式](cfw_02_0028.xml)
     * epsId  弹性公网ip的企业项目id，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，租户未开启企业项目时为0
     * tags  标签列表信息可通过查询EIP服务界面列表标签页签获得
     *
@@ -341,7 +341,7 @@ class ListEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    *  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     *
     * @return string
     */
@@ -353,7 +353,7 @@ class ListEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * @param string $projectId 项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     *
     * @return $this
     */
@@ -365,7 +365,7 @@ class ListEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     *
     * @return string
     */
@@ -377,7 +377,7 @@ class ListEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * @param string $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -533,7 +533,7 @@ class ListEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceKey
-    *  设备关键字，是eip绑定的资产的名称或id
+    *  设备关键字，是eip绑定的资产的名称或id，可通过EIP服务的查询弹性公网IP列表接口获取，通过返回值中的publicips.id（.表示各对象之间层级的区分）获得
     *
     * @return string|null
     */
@@ -545,7 +545,7 @@ class ListEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets deviceKey
     *
-    * @param string|null $deviceKey 设备关键字，是eip绑定的资产的名称或id
+    * @param string|null $deviceKey 设备关键字，是eip绑定的资产的名称或id，可通过EIP服务的查询弹性公网IP列表接口获取，通过返回值中的publicips.id（.表示各对象之间层级的区分）获得
     *
     * @return $this
     */
@@ -581,7 +581,7 @@ class ListEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fwInstanceId
-    *  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    *  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @return string|null
     */
@@ -593,7 +593,7 @@ class ListEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fwInstanceId
     *
-    * @param string|null $fwInstanceId 防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * @param string|null $fwInstanceId 防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @return $this
     */
@@ -605,7 +605,7 @@ class ListEipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fwKeyWord
-    *  防火墙关键字，可使用防火墙id或名称查询，可通过[防火墙ID获取方式](cfw_02_0028.xml)
+    *  防火墙关键字，可使用防火墙ID或名称查询，可通过[防火墙ID获取方式](cfw_02_0028.xml)
     *
     * @return string|null
     */
@@ -617,7 +617,7 @@ class ListEipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fwKeyWord
     *
-    * @param string|null $fwKeyWord 防火墙关键字，可使用防火墙id或名称查询，可通过[防火墙ID获取方式](cfw_02_0028.xml)
+    * @param string|null $fwKeyWord 防火墙关键字，可使用防火墙ID或名称查询，可通过[防火墙ID获取方式](cfw_02_0028.xml)
     *
     * @return $this
     */

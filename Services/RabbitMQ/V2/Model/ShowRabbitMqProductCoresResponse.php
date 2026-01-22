@@ -21,22 +21,26 @@ class ShowRabbitMqProductCoresResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * coreNum  核数
+    * coreNum  **参数解释**： 核数。 **取值范围**： 不涉及。
+    * totalExtendStorageSpace  **参数解释**： 预估存储空间，当填写的broker_num小于等于当前实例真实值时，显示为当前实例的存储空间。如果填写的broker_num大于当前实例真实值时，显示为所填写broker_num时实例的预估存储空间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'coreNum' => 'int'
+            'coreNum' => 'int',
+            'totalExtendStorageSpace' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * coreNum  核数
+    * coreNum  **参数解释**： 核数。 **取值范围**： 不涉及。
+    * totalExtendStorageSpace  **参数解释**： 预估存储空间，当填写的broker_num小于等于当前实例真实值时，显示为当前实例的存储空间。如果填写的broker_num大于当前实例真实值时，显示为所填写broker_num时实例的预估存储空间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'coreNum' => null
+        'coreNum' => null,
+        'totalExtendStorageSpace' => null
     ];
 
     /**
@@ -62,32 +66,38 @@ class ShowRabbitMqProductCoresResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * coreNum  核数
+    * coreNum  **参数解释**： 核数。 **取值范围**： 不涉及。
+    * totalExtendStorageSpace  **参数解释**： 预估存储空间，当填写的broker_num小于等于当前实例真实值时，显示为当前实例的存储空间。如果填写的broker_num大于当前实例真实值时，显示为所填写broker_num时实例的预估存储空间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'coreNum' => 'core_num'
+            'coreNum' => 'core_num',
+            'totalExtendStorageSpace' => 'total_extend_storage_space'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * coreNum  核数
+    * coreNum  **参数解释**： 核数。 **取值范围**： 不涉及。
+    * totalExtendStorageSpace  **参数解释**： 预估存储空间，当填写的broker_num小于等于当前实例真实值时，显示为当前实例的存储空间。如果填写的broker_num大于当前实例真实值时，显示为所填写broker_num时实例的预估存储空间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'coreNum' => 'setCoreNum'
+            'coreNum' => 'setCoreNum',
+            'totalExtendStorageSpace' => 'setTotalExtendStorageSpace'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * coreNum  核数
+    * coreNum  **参数解释**： 核数。 **取值范围**： 不涉及。
+    * totalExtendStorageSpace  **参数解释**： 预估存储空间，当填写的broker_num小于等于当前实例真实值时，显示为当前实例的存储空间。如果填写的broker_num大于当前实例真实值时，显示为所填写broker_num时实例的预估存储空间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'coreNum' => 'getCoreNum'
+            'coreNum' => 'getCoreNum',
+            'totalExtendStorageSpace' => 'getTotalExtendStorageSpace'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ShowRabbitMqProductCoresResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['coreNum'] = isset($data['coreNum']) ? $data['coreNum'] : null;
+        $this->container['totalExtendStorageSpace'] = isset($data['totalExtendStorageSpace']) ? $data['totalExtendStorageSpace'] : null;
     }
 
     /**
@@ -175,7 +186,7 @@ class ShowRabbitMqProductCoresResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets coreNum
-    *  核数
+    *  **参数解释**： 核数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -187,13 +198,37 @@ class ShowRabbitMqProductCoresResponse implements ModelInterface, ArrayAccess
     /**
     * Sets coreNum
     *
-    * @param int|null $coreNum 核数
+    * @param int|null $coreNum **参数解释**： 核数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
     public function setCoreNum($coreNum)
     {
         $this->container['coreNum'] = $coreNum;
+        return $this;
+    }
+
+    /**
+    * Gets totalExtendStorageSpace
+    *  **参数解释**： 预估存储空间，当填写的broker_num小于等于当前实例真实值时，显示为当前实例的存储空间。如果填写的broker_num大于当前实例真实值时，显示为所填写broker_num时实例的预估存储空间。 **取值范围**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getTotalExtendStorageSpace()
+    {
+        return $this->container['totalExtendStorageSpace'];
+    }
+
+    /**
+    * Sets totalExtendStorageSpace
+    *
+    * @param int|null $totalExtendStorageSpace **参数解释**： 预估存储空间，当填写的broker_num小于等于当前实例真实值时，显示为当前实例的存储空间。如果填写的broker_num大于当前实例真实值时，显示为所填写broker_num时实例的预估存储空间。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setTotalExtendStorageSpace($totalExtendStorageSpace)
+    {
+        $this->container['totalExtendStorageSpace'] = $totalExtendStorageSpace;
         return $this;
     }
 

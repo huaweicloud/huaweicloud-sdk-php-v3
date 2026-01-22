@@ -20,26 +20,26 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * success  是否成功。
-    * traceType  轨迹类型
-    * timestamp  时间。
-    * groupName  生产组或消费组。
-    * costTime  耗时。
-    * requestId  请求ID。
-    * consumeStatus  消费状态：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败
-    * topic  主题名称。
-    * msgId  消息ID。
-    * offsetMsgId  offset消息ID。
-    * tags  消息的标签。
-    * keys  消息的keys。
-    * storeHost  存储消息的主机IP。
-    * clientHost  产生消息的主机IP。
-    * retryTimes  重试次数。
-    * bodyLength  消息体长度。
-    * msgType  消息类型。
-    * transactionState  事务状态。
-    * transactionId  事务ID。
-    * fromTransactionCheck  是否为事务回查的响应。
+    * success  **参数解释**： 是否成功。 **约束限制**： 不涉及。 **取值范围**： - true：成功。 - false：失败。 **默认取值**： 不涉及。
+    * traceType  **参数解释**： 轨迹类型。 **约束限制**： 不涉及。 **取值范围**： - Pub：生产者成功发送消息。 - SubBefore：消费者准备消费消息。 - SubAfter：消费者完成消息消费。 - EndTransaction：事务消息被提交或回滚。 - Receive：服务侧接收消息。 - Ack：消费者手动确认消费。 **默认取值**： 不涉及。
+    * timestamp  **参数解释**： 时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupName  **参数解释**： 生产组或消费组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * costTime  **参数解释**： 耗时。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * requestId  **参数解释**： 请求ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeStatus  **参数解释**： 消费状态： **约束限制**： 不涉及。 **取值范围**：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败 **默认取值**： 不涉及。
+    * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**
+    * msgId  **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * offsetMsgId  **参数解释**： offset消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * tags  **参数解释**： 消息的标签。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * keys  **参数解释**： 消息的keys。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * storeHost  **参数解释**： 存储消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * clientHost  **参数解释**： 产生消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * retryTimes  **参数解释**： 重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * bodyLength  **参数解释**： 消息体长度。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * msgType  **参数解释**： 消息类型。 **约束限制**： 不涉及。 **取值范围**： - Normal_Msg：普通消息。 - Trans_Msg_Half：事务半消息。 - Trans_msg_Commit：事务提交消息。 - Delay_Msg：延迟消息。 - Order_Msg：顺序消息。 **默认取值** 不涉及。
+    * transactionState  **参数解释**： 事务状态。 **约束限制**： 不涉及。 **取值范围**： - COMMIT_MESSAGE - ROLLBACK_MESSAGE - UNKNOW **默认取值** 不涉及。
+    * transactionId  **参数解释**： 事务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * fromTransactionCheck  **参数解释**： 是否为事务回查的响应。 **约束限制**： 不涉及。 **取值范围**： - true：是事务回查的响应。 - false：不是事务回查的响应。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -68,26 +68,26 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * success  是否成功。
-    * traceType  轨迹类型
-    * timestamp  时间。
-    * groupName  生产组或消费组。
-    * costTime  耗时。
-    * requestId  请求ID。
-    * consumeStatus  消费状态：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败
-    * topic  主题名称。
-    * msgId  消息ID。
-    * offsetMsgId  offset消息ID。
-    * tags  消息的标签。
-    * keys  消息的keys。
-    * storeHost  存储消息的主机IP。
-    * clientHost  产生消息的主机IP。
-    * retryTimes  重试次数。
-    * bodyLength  消息体长度。
-    * msgType  消息类型。
-    * transactionState  事务状态。
-    * transactionId  事务ID。
-    * fromTransactionCheck  是否为事务回查的响应。
+    * success  **参数解释**： 是否成功。 **约束限制**： 不涉及。 **取值范围**： - true：成功。 - false：失败。 **默认取值**： 不涉及。
+    * traceType  **参数解释**： 轨迹类型。 **约束限制**： 不涉及。 **取值范围**： - Pub：生产者成功发送消息。 - SubBefore：消费者准备消费消息。 - SubAfter：消费者完成消息消费。 - EndTransaction：事务消息被提交或回滚。 - Receive：服务侧接收消息。 - Ack：消费者手动确认消费。 **默认取值**： 不涉及。
+    * timestamp  **参数解释**： 时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupName  **参数解释**： 生产组或消费组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * costTime  **参数解释**： 耗时。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * requestId  **参数解释**： 请求ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeStatus  **参数解释**： 消费状态： **约束限制**： 不涉及。 **取值范围**：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败 **默认取值**： 不涉及。
+    * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**
+    * msgId  **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * offsetMsgId  **参数解释**： offset消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * tags  **参数解释**： 消息的标签。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * keys  **参数解释**： 消息的keys。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * storeHost  **参数解释**： 存储消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * clientHost  **参数解释**： 产生消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * retryTimes  **参数解释**： 重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * bodyLength  **参数解释**： 消息体长度。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * msgType  **参数解释**： 消息类型。 **约束限制**： 不涉及。 **取值范围**： - Normal_Msg：普通消息。 - Trans_Msg_Half：事务半消息。 - Trans_msg_Commit：事务提交消息。 - Delay_Msg：延迟消息。 - Order_Msg：顺序消息。 **默认取值** 不涉及。
+    * transactionState  **参数解释**： 事务状态。 **约束限制**： 不涉及。 **取值范围**： - COMMIT_MESSAGE - ROLLBACK_MESSAGE - UNKNOW **默认取值** 不涉及。
+    * transactionId  **参数解释**： 事务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * fromTransactionCheck  **参数解释**： 是否为事务回查的响应。 **约束限制**： 不涉及。 **取值范围**： - true：是事务回查的响应。 - false：不是事务回查的响应。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -137,26 +137,26 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * success  是否成功。
-    * traceType  轨迹类型
-    * timestamp  时间。
-    * groupName  生产组或消费组。
-    * costTime  耗时。
-    * requestId  请求ID。
-    * consumeStatus  消费状态：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败
-    * topic  主题名称。
-    * msgId  消息ID。
-    * offsetMsgId  offset消息ID。
-    * tags  消息的标签。
-    * keys  消息的keys。
-    * storeHost  存储消息的主机IP。
-    * clientHost  产生消息的主机IP。
-    * retryTimes  重试次数。
-    * bodyLength  消息体长度。
-    * msgType  消息类型。
-    * transactionState  事务状态。
-    * transactionId  事务ID。
-    * fromTransactionCheck  是否为事务回查的响应。
+    * success  **参数解释**： 是否成功。 **约束限制**： 不涉及。 **取值范围**： - true：成功。 - false：失败。 **默认取值**： 不涉及。
+    * traceType  **参数解释**： 轨迹类型。 **约束限制**： 不涉及。 **取值范围**： - Pub：生产者成功发送消息。 - SubBefore：消费者准备消费消息。 - SubAfter：消费者完成消息消费。 - EndTransaction：事务消息被提交或回滚。 - Receive：服务侧接收消息。 - Ack：消费者手动确认消费。 **默认取值**： 不涉及。
+    * timestamp  **参数解释**： 时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupName  **参数解释**： 生产组或消费组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * costTime  **参数解释**： 耗时。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * requestId  **参数解释**： 请求ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeStatus  **参数解释**： 消费状态： **约束限制**： 不涉及。 **取值范围**：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败 **默认取值**： 不涉及。
+    * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**
+    * msgId  **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * offsetMsgId  **参数解释**： offset消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * tags  **参数解释**： 消息的标签。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * keys  **参数解释**： 消息的keys。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * storeHost  **参数解释**： 存储消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * clientHost  **参数解释**： 产生消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * retryTimes  **参数解释**： 重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * bodyLength  **参数解释**： 消息体长度。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * msgType  **参数解释**： 消息类型。 **约束限制**： 不涉及。 **取值范围**： - Normal_Msg：普通消息。 - Trans_Msg_Half：事务半消息。 - Trans_msg_Commit：事务提交消息。 - Delay_Msg：延迟消息。 - Order_Msg：顺序消息。 **默认取值** 不涉及。
+    * transactionState  **参数解释**： 事务状态。 **约束限制**： 不涉及。 **取值范围**： - COMMIT_MESSAGE - ROLLBACK_MESSAGE - UNKNOW **默认取值** 不涉及。
+    * transactionId  **参数解释**： 事务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * fromTransactionCheck  **参数解释**： 是否为事务回查的响应。 **约束限制**： 不涉及。 **取值范围**： - true：是事务回查的响应。 - false：不是事务回查的响应。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -185,26 +185,26 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * success  是否成功。
-    * traceType  轨迹类型
-    * timestamp  时间。
-    * groupName  生产组或消费组。
-    * costTime  耗时。
-    * requestId  请求ID。
-    * consumeStatus  消费状态：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败
-    * topic  主题名称。
-    * msgId  消息ID。
-    * offsetMsgId  offset消息ID。
-    * tags  消息的标签。
-    * keys  消息的keys。
-    * storeHost  存储消息的主机IP。
-    * clientHost  产生消息的主机IP。
-    * retryTimes  重试次数。
-    * bodyLength  消息体长度。
-    * msgType  消息类型。
-    * transactionState  事务状态。
-    * transactionId  事务ID。
-    * fromTransactionCheck  是否为事务回查的响应。
+    * success  **参数解释**： 是否成功。 **约束限制**： 不涉及。 **取值范围**： - true：成功。 - false：失败。 **默认取值**： 不涉及。
+    * traceType  **参数解释**： 轨迹类型。 **约束限制**： 不涉及。 **取值范围**： - Pub：生产者成功发送消息。 - SubBefore：消费者准备消费消息。 - SubAfter：消费者完成消息消费。 - EndTransaction：事务消息被提交或回滚。 - Receive：服务侧接收消息。 - Ack：消费者手动确认消费。 **默认取值**： 不涉及。
+    * timestamp  **参数解释**： 时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupName  **参数解释**： 生产组或消费组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * costTime  **参数解释**： 耗时。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * requestId  **参数解释**： 请求ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeStatus  **参数解释**： 消费状态： **约束限制**： 不涉及。 **取值范围**：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败 **默认取值**： 不涉及。
+    * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**
+    * msgId  **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * offsetMsgId  **参数解释**： offset消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * tags  **参数解释**： 消息的标签。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * keys  **参数解释**： 消息的keys。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * storeHost  **参数解释**： 存储消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * clientHost  **参数解释**： 产生消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * retryTimes  **参数解释**： 重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * bodyLength  **参数解释**： 消息体长度。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * msgType  **参数解释**： 消息类型。 **约束限制**： 不涉及。 **取值范围**： - Normal_Msg：普通消息。 - Trans_Msg_Half：事务半消息。 - Trans_msg_Commit：事务提交消息。 - Delay_Msg：延迟消息。 - Order_Msg：顺序消息。 **默认取值** 不涉及。
+    * transactionState  **参数解释**： 事务状态。 **约束限制**： 不涉及。 **取值范围**： - COMMIT_MESSAGE - ROLLBACK_MESSAGE - UNKNOW **默认取值** 不涉及。
+    * transactionId  **参数解释**： 事务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * fromTransactionCheck  **参数解释**： 是否为事务回查的响应。 **约束限制**： 不涉及。 **取值范围**： - true：是事务回查的响应。 - false：不是事务回查的响应。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -233,26 +233,26 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * success  是否成功。
-    * traceType  轨迹类型
-    * timestamp  时间。
-    * groupName  生产组或消费组。
-    * costTime  耗时。
-    * requestId  请求ID。
-    * consumeStatus  消费状态：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败
-    * topic  主题名称。
-    * msgId  消息ID。
-    * offsetMsgId  offset消息ID。
-    * tags  消息的标签。
-    * keys  消息的keys。
-    * storeHost  存储消息的主机IP。
-    * clientHost  产生消息的主机IP。
-    * retryTimes  重试次数。
-    * bodyLength  消息体长度。
-    * msgType  消息类型。
-    * transactionState  事务状态。
-    * transactionId  事务ID。
-    * fromTransactionCheck  是否为事务回查的响应。
+    * success  **参数解释**： 是否成功。 **约束限制**： 不涉及。 **取值范围**： - true：成功。 - false：失败。 **默认取值**： 不涉及。
+    * traceType  **参数解释**： 轨迹类型。 **约束限制**： 不涉及。 **取值范围**： - Pub：生产者成功发送消息。 - SubBefore：消费者准备消费消息。 - SubAfter：消费者完成消息消费。 - EndTransaction：事务消息被提交或回滚。 - Receive：服务侧接收消息。 - Ack：消费者手动确认消费。 **默认取值**： 不涉及。
+    * timestamp  **参数解释**： 时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupName  **参数解释**： 生产组或消费组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * costTime  **参数解释**： 耗时。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * requestId  **参数解释**： 请求ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeStatus  **参数解释**： 消费状态： **约束限制**： 不涉及。 **取值范围**：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败 **默认取值**： 不涉及。
+    * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**
+    * msgId  **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * offsetMsgId  **参数解释**： offset消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * tags  **参数解释**： 消息的标签。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * keys  **参数解释**： 消息的keys。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * storeHost  **参数解释**： 存储消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * clientHost  **参数解释**： 产生消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * retryTimes  **参数解释**： 重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * bodyLength  **参数解释**： 消息体长度。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * msgType  **参数解释**： 消息类型。 **约束限制**： 不涉及。 **取值范围**： - Normal_Msg：普通消息。 - Trans_Msg_Half：事务半消息。 - Trans_msg_Commit：事务提交消息。 - Delay_Msg：延迟消息。 - Order_Msg：顺序消息。 **默认取值** 不涉及。
+    * transactionState  **参数解释**： 事务状态。 **约束限制**： 不涉及。 **取值范围**： - COMMIT_MESSAGE - ROLLBACK_MESSAGE - UNKNOW **默认取值** 不涉及。
+    * transactionId  **参数解释**： 事务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * fromTransactionCheck  **参数解释**： 是否为事务回查的响应。 **约束限制**： 不涉及。 **取值范围**： - true：是事务回查的响应。 - false：不是事务回查的响应。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -323,10 +323,13 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     const TRACE_TYPE_SUB_BEFORE = 'SubBefore';
     const TRACE_TYPE_SUB_AFTER = 'SubAfter';
     const TRACE_TYPE_END_TRANSACTION = 'EndTransaction';
+    const TRACE_TYPE_RECEIVE = 'Receive';
+    const TRACE_TYPE_ACK = 'Ack';
     const MSG_TYPE_NORMAL_MSG = 'Normal_Msg';
     const MSG_TYPE_TRANS_MSG_HALF = 'Trans_Msg_Half';
     const MSG_TYPE_TRANS_MSG_COMMIT = 'Trans_msg_Commit';
     const MSG_TYPE_DELAY_MSG = 'Delay_Msg';
+    const MSG_TYPE_ORDER_MSG = 'Order_Msg';
     const TRANSACTION_STATE_COMMIT_MESSAGE = 'COMMIT_MESSAGE';
     const TRANSACTION_STATE_ROLLBACK_MESSAGE = 'ROLLBACK_MESSAGE';
     const TRANSACTION_STATE_UNKNOW = 'UNKNOW';
@@ -344,6 +347,8 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
             self::TRACE_TYPE_SUB_BEFORE,
             self::TRACE_TYPE_SUB_AFTER,
             self::TRACE_TYPE_END_TRANSACTION,
+            self::TRACE_TYPE_RECEIVE,
+            self::TRACE_TYPE_ACK,
         ];
     }
 
@@ -359,6 +364,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
             self::MSG_TYPE_TRANS_MSG_HALF,
             self::MSG_TYPE_TRANS_MSG_COMMIT,
             self::MSG_TYPE_DELAY_MSG,
+            self::MSG_TYPE_ORDER_MSG,
         ];
     }
 
@@ -462,7 +468,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets success
-    *  是否成功。
+    *  **参数解释**： 是否成功。 **约束限制**： 不涉及。 **取值范围**： - true：成功。 - false：失败。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -474,7 +480,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets success
     *
-    * @param bool|null $success 是否成功。
+    * @param bool|null $success **参数解释**： 是否成功。 **约束限制**： 不涉及。 **取值范围**： - true：成功。 - false：失败。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -486,7 +492,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets traceType
-    *  轨迹类型
+    *  **参数解释**： 轨迹类型。 **约束限制**： 不涉及。 **取值范围**： - Pub：生产者成功发送消息。 - SubBefore：消费者准备消费消息。 - SubAfter：消费者完成消息消费。 - EndTransaction：事务消息被提交或回滚。 - Receive：服务侧接收消息。 - Ack：消费者手动确认消费。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -498,7 +504,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets traceType
     *
-    * @param string|null $traceType 轨迹类型
+    * @param string|null $traceType **参数解释**： 轨迹类型。 **约束限制**： 不涉及。 **取值范围**： - Pub：生产者成功发送消息。 - SubBefore：消费者准备消费消息。 - SubAfter：消费者完成消息消费。 - EndTransaction：事务消息被提交或回滚。 - Receive：服务侧接收消息。 - Ack：消费者手动确认消费。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -510,7 +516,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets timestamp
-    *  时间。
+    *  **参数解释**： 时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -522,7 +528,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets timestamp
     *
-    * @param float|null $timestamp 时间。
+    * @param float|null $timestamp **参数解释**： 时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -534,7 +540,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  生产组或消费组。
+    *  **参数解释**： 生产组或消费组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -546,7 +552,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName 生产组或消费组。
+    * @param string|null $groupName **参数解释**： 生产组或消费组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -558,7 +564,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets costTime
-    *  耗时。
+    *  **参数解释**： 耗时。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -570,7 +576,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets costTime
     *
-    * @param float|null $costTime 耗时。
+    * @param float|null $costTime **参数解释**： 耗时。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -582,7 +588,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestId
-    *  请求ID。
+    *  **参数解释**： 请求ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -594,7 +600,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets requestId
     *
-    * @param string|null $requestId 请求ID。
+    * @param string|null $requestId **参数解释**： 请求ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -606,7 +612,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumeStatus
-    *  消费状态：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败
+    *  **参数解释**： 消费状态： **约束限制**： 不涉及。 **取值范围**：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -618,7 +624,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets consumeStatus
     *
-    * @param float|null $consumeStatus 消费状态：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败
+    * @param float|null $consumeStatus **参数解释**： 消费状态： **约束限制**： 不涉及。 **取值范围**：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -630,7 +636,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  主题名称。
+    *  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**
     *
     * @return string|null
     */
@@ -642,7 +648,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic 主题名称。
+    * @param string|null $topic **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**
     *
     * @return $this
     */
@@ -654,7 +660,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets msgId
-    *  消息ID。
+    *  **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -666,7 +672,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets msgId
     *
-    * @param string|null $msgId 消息ID。
+    * @param string|null $msgId **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -678,7 +684,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets offsetMsgId
-    *  offset消息ID。
+    *  **参数解释**： offset消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -690,7 +696,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets offsetMsgId
     *
-    * @param string|null $offsetMsgId offset消息ID。
+    * @param string|null $offsetMsgId **参数解释**： offset消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -702,7 +708,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  消息的标签。
+    *  **参数解释**： 消息的标签。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -714,7 +720,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string|null $tags 消息的标签。
+    * @param string|null $tags **参数解释**： 消息的标签。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -726,7 +732,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets keys
-    *  消息的keys。
+    *  **参数解释**： 消息的keys。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -738,7 +744,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets keys
     *
-    * @param string|null $keys 消息的keys。
+    * @param string|null $keys **参数解释**： 消息的keys。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -750,7 +756,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets storeHost
-    *  存储消息的主机IP。
+    *  **参数解释**： 存储消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -762,7 +768,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets storeHost
     *
-    * @param string|null $storeHost 存储消息的主机IP。
+    * @param string|null $storeHost **参数解释**： 存储消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -774,7 +780,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets clientHost
-    *  产生消息的主机IP。
+    *  **参数解释**： 产生消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -786,7 +792,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets clientHost
     *
-    * @param string|null $clientHost 产生消息的主机IP。
+    * @param string|null $clientHost **参数解释**： 产生消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -798,7 +804,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets retryTimes
-    *  重试次数。
+    *  **参数解释**： 重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return int|null
     */
@@ -810,7 +816,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets retryTimes
     *
-    * @param int|null $retryTimes 重试次数。
+    * @param int|null $retryTimes **参数解释**： 重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -822,7 +828,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets bodyLength
-    *  消息体长度。
+    *  **参数解释**： 消息体长度。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return float|null
     */
@@ -834,7 +840,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets bodyLength
     *
-    * @param float|null $bodyLength 消息体长度。
+    * @param float|null $bodyLength **参数解释**： 消息体长度。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -846,7 +852,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets msgType
-    *  消息类型。
+    *  **参数解释**： 消息类型。 **约束限制**： 不涉及。 **取值范围**： - Normal_Msg：普通消息。 - Trans_Msg_Half：事务半消息。 - Trans_msg_Commit：事务提交消息。 - Delay_Msg：延迟消息。 - Order_Msg：顺序消息。 **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -858,7 +864,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets msgType
     *
-    * @param string|null $msgType 消息类型。
+    * @param string|null $msgType **参数解释**： 消息类型。 **约束限制**： 不涉及。 **取值范围**： - Normal_Msg：普通消息。 - Trans_Msg_Half：事务半消息。 - Trans_msg_Commit：事务提交消息。 - Delay_Msg：延迟消息。 - Order_Msg：顺序消息。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -870,7 +876,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets transactionState
-    *  事务状态。
+    *  **参数解释**： 事务状态。 **约束限制**： 不涉及。 **取值范围**： - COMMIT_MESSAGE - ROLLBACK_MESSAGE - UNKNOW **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -882,7 +888,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets transactionState
     *
-    * @param string|null $transactionState 事务状态。
+    * @param string|null $transactionState **参数解释**： 事务状态。 **约束限制**： 不涉及。 **取值范围**： - COMMIT_MESSAGE - ROLLBACK_MESSAGE - UNKNOW **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -894,7 +900,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets transactionId
-    *  事务ID。
+    *  **参数解释**： 事务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -906,7 +912,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets transactionId
     *
-    * @param string|null $transactionId 事务ID。
+    * @param string|null $transactionId **参数解释**： 事务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -918,7 +924,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets fromTransactionCheck
-    *  是否为事务回查的响应。
+    *  **参数解释**： 是否为事务回查的响应。 **约束限制**： 不涉及。 **取值范围**： - true：是事务回查的响应。 - false：不是事务回查的响应。 **默认取值** 不涉及。
     *
     * @return bool|null
     */
@@ -930,7 +936,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets fromTransactionCheck
     *
-    * @param bool|null $fromTransactionCheck 是否为事务回查的响应。
+    * @param bool|null $fromTransactionCheck **参数解释**： 是否为事务回查的响应。 **约束限制**： 不涉及。 **取值范围**： - true：是事务回查的响应。 - false：不是事务回查的响应。 **默认取值** 不涉及。
     *
     * @return $this
     */

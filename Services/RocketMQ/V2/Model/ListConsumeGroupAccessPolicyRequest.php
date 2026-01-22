@@ -20,38 +20,38 @@ class ListConsumeGroupAccessPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  消息引擎。
-    * instanceId  实例ID。
-    * groupId  消费组。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * limit  查询数量。
+    * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： rocketmq。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * group  **参数解释**： 消费组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询， offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'engine' => 'string',
             'instanceId' => 'string',
-            'groupId' => 'string',
-            'offset' => 'string',
-            'limit' => 'string'
+            'group' => 'string',
+            'offset' => 'int',
+            'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  消息引擎。
-    * instanceId  实例ID。
-    * groupId  消费组。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * limit  查询数量。
+    * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： rocketmq。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * group  **参数解释**： 消费组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询， offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'engine' => null,
         'instanceId' => null,
-        'groupId' => null,
-        'offset' => null,
-        'limit' => null
+        'group' => null,
+        'offset' => 'int32',
+        'limit' => 'int32'
     ];
 
     /**
@@ -77,54 +77,54 @@ class ListConsumeGroupAccessPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  消息引擎。
-    * instanceId  实例ID。
-    * groupId  消费组。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * limit  查询数量。
+    * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： rocketmq。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * group  **参数解释**： 消费组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询， offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'engine' => 'engine',
             'instanceId' => 'instance_id',
-            'groupId' => 'group_id',
+            'group' => 'group',
             'offset' => 'offset',
             'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  消息引擎。
-    * instanceId  实例ID。
-    * groupId  消费组。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * limit  查询数量。
+    * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： rocketmq。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * group  **参数解释**： 消费组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询， offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'engine' => 'setEngine',
             'instanceId' => 'setInstanceId',
-            'groupId' => 'setGroupId',
+            'group' => 'setGroup',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  消息引擎。
-    * instanceId  实例ID。
-    * groupId  消费组。
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * limit  查询数量。
+    * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： rocketmq。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * group  **参数解释**： 消费组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询， offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'engine' => 'getEngine',
             'instanceId' => 'getInstanceId',
-            'groupId' => 'getGroupId',
+            'group' => 'getGroup',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
     ];
@@ -169,20 +169,7 @@ class ListConsumeGroupAccessPolicyRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const ENGINE_RELIABILITY = 'reliability';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getEngineAllowableValues()
-    {
-        return [
-            self::ENGINE_RELIABILITY,
-        ];
-    }
 
 
     /**
@@ -202,7 +189,7 @@ class ListConsumeGroupAccessPolicyRequest implements ModelInterface, ArrayAccess
     {
         $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
+        $this->container['group'] = isset($data['group']) ? $data['group'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
@@ -218,19 +205,11 @@ class ListConsumeGroupAccessPolicyRequest implements ModelInterface, ArrayAccess
         if ($this->container['engine'] === null) {
             $invalidProperties[] = "'engine' can't be null";
         }
-            $allowedValues = $this->getEngineAllowableValues();
-                if (!is_null($this->container['engine']) && !in_array($this->container['engine'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'engine', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
-        if ($this->container['groupId'] === null) {
-            $invalidProperties[] = "'groupId' can't be null";
+        if ($this->container['group'] === null) {
+            $invalidProperties[] = "'group' can't be null";
         }
         return $invalidProperties;
     }
@@ -248,7 +227,7 @@ class ListConsumeGroupAccessPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  消息引擎。
+    *  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： rocketmq。
     *
     * @return string
     */
@@ -260,7 +239,7 @@ class ListConsumeGroupAccessPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string $engine 消息引擎。
+    * @param string $engine **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： rocketmq。
     *
     * @return $this
     */
@@ -272,7 +251,7 @@ class ListConsumeGroupAccessPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -284,7 +263,7 @@ class ListConsumeGroupAccessPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string $instanceId **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -295,34 +274,34 @@ class ListConsumeGroupAccessPolicyRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets groupId
-    *  消费组。
+    * Gets group
+    *  **参数解释**： 消费组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
-    public function getGroupId()
+    public function getGroup()
     {
-        return $this->container['groupId'];
+        return $this->container['group'];
     }
 
     /**
-    * Sets groupId
+    * Sets group
     *
-    * @param string $groupId 消费组。
+    * @param string $group **参数解释**： 消费组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
-    public function setGroupId($groupId)
+    public function setGroup($group)
     {
-        $this->container['groupId'] = $groupId;
+        $this->container['group'] = $group;
         return $this;
     }
 
     /**
     * Gets offset
-    *  偏移量，表示从此偏移量开始查询， offset大于等于0。
+    *  **参数解释**： 偏移量，表示从此偏移量开始查询， offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getOffset()
     {
@@ -332,7 +311,7 @@ class ListConsumeGroupAccessPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param string|null $offset 偏移量，表示从此偏移量开始查询， offset大于等于0。
+    * @param int|null $offset **参数解释**： 偏移量，表示从此偏移量开始查询， offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -344,9 +323,9 @@ class ListConsumeGroupAccessPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询数量。
+    *  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getLimit()
     {
@@ -356,7 +335,7 @@ class ListConsumeGroupAccessPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 查询数量。
+    * @param int|null $limit **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

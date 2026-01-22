@@ -20,15 +20,15 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  参数模板ID。
-    * name  参数模板名称。
-    * description  参数模板描述。
-    * datastoreVersion  数据库版本。
-    * datastoreName  数据库类型。
-    * nodeType  参数模板节点类型。 - mongos，表示集群mongos节点类型。 - shard，表示集群shard节点类型。 - config，表示集群config节点类型。 - replica，表示副本集类型。 - single，表示单节点类型。
-    * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * userDefined  是否是用户自定义参数模板。 - false表示为默认参数模板。 - true表示为用户自定义参数模板。
+    * id  **参数解释：** 参数模板ID。 **取值范围：** 不涉及。
+    * name  **参数解释：** 参数模板名称。 **取值范围：** 不涉及。
+    * description  **参数解释：** 参数模板描述。 **取值范围：** 不涉及。
+    * datastoreVersion  **参数解释：** 数据库版本。 **取值范围：** 不涉及。
+    * datastoreName  **参数解释：** 数据库类型。 **取值范围：** 不涉及。
+    * nodeType  **参数解释：** 参数模板节点类型。 **取值范围：** - mongos，表示集群mongos节点类型。 - shard，表示集群shard节点类型。 - config，表示集群config节点类型。 - replica，表示副本集类型。 - readonly，表示副本集只读节点类型。 - shard_readonly，表示集群只读节点类型。 - single，表示单节点类型。
+    * created  **参数解释：** 创建时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * updated  **参数解释：** 更新时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * userDefined  **参数解释：** 是否是用户自定义参数模板。 **取值范围：** - 取值为“false”，表示为系统默认参数模板。 - 取值为“true”，表示为用户自定义参数模板。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  参数模板ID。
-    * name  参数模板名称。
-    * description  参数模板描述。
-    * datastoreVersion  数据库版本。
-    * datastoreName  数据库类型。
-    * nodeType  参数模板节点类型。 - mongos，表示集群mongos节点类型。 - shard，表示集群shard节点类型。 - config，表示集群config节点类型。 - replica，表示副本集类型。 - single，表示单节点类型。
-    * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * userDefined  是否是用户自定义参数模板。 - false表示为默认参数模板。 - true表示为用户自定义参数模板。
+    * id  **参数解释：** 参数模板ID。 **取值范围：** 不涉及。
+    * name  **参数解释：** 参数模板名称。 **取值范围：** 不涉及。
+    * description  **参数解释：** 参数模板描述。 **取值范围：** 不涉及。
+    * datastoreVersion  **参数解释：** 数据库版本。 **取值范围：** 不涉及。
+    * datastoreName  **参数解释：** 数据库类型。 **取值范围：** 不涉及。
+    * nodeType  **参数解释：** 参数模板节点类型。 **取值范围：** - mongos，表示集群mongos节点类型。 - shard，表示集群shard节点类型。 - config，表示集群config节点类型。 - replica，表示副本集类型。 - readonly，表示副本集只读节点类型。 - shard_readonly，表示集群只读节点类型。 - single，表示单节点类型。
+    * created  **参数解释：** 创建时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * updated  **参数解释：** 更新时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * userDefined  **参数解释：** 是否是用户自定义参数模板。 **取值范围：** - 取值为“false”，表示为系统默认参数模板。 - 取值为“true”，表示为用户自定义参数模板。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  参数模板ID。
-    * name  参数模板名称。
-    * description  参数模板描述。
-    * datastoreVersion  数据库版本。
-    * datastoreName  数据库类型。
-    * nodeType  参数模板节点类型。 - mongos，表示集群mongos节点类型。 - shard，表示集群shard节点类型。 - config，表示集群config节点类型。 - replica，表示副本集类型。 - single，表示单节点类型。
-    * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * userDefined  是否是用户自定义参数模板。 - false表示为默认参数模板。 - true表示为用户自定义参数模板。
+    * id  **参数解释：** 参数模板ID。 **取值范围：** 不涉及。
+    * name  **参数解释：** 参数模板名称。 **取值范围：** 不涉及。
+    * description  **参数解释：** 参数模板描述。 **取值范围：** 不涉及。
+    * datastoreVersion  **参数解释：** 数据库版本。 **取值范围：** 不涉及。
+    * datastoreName  **参数解释：** 数据库类型。 **取值范围：** 不涉及。
+    * nodeType  **参数解释：** 参数模板节点类型。 **取值范围：** - mongos，表示集群mongos节点类型。 - shard，表示集群shard节点类型。 - config，表示集群config节点类型。 - replica，表示副本集类型。 - readonly，表示副本集只读节点类型。 - shard_readonly，表示集群只读节点类型。 - single，表示单节点类型。
+    * created  **参数解释：** 创建时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * updated  **参数解释：** 更新时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * userDefined  **参数解释：** 是否是用户自定义参数模板。 **取值范围：** - 取值为“false”，表示为系统默认参数模板。 - 取值为“true”，表示为用户自定义参数模板。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  参数模板ID。
-    * name  参数模板名称。
-    * description  参数模板描述。
-    * datastoreVersion  数据库版本。
-    * datastoreName  数据库类型。
-    * nodeType  参数模板节点类型。 - mongos，表示集群mongos节点类型。 - shard，表示集群shard节点类型。 - config，表示集群config节点类型。 - replica，表示副本集类型。 - single，表示单节点类型。
-    * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * userDefined  是否是用户自定义参数模板。 - false表示为默认参数模板。 - true表示为用户自定义参数模板。
+    * id  **参数解释：** 参数模板ID。 **取值范围：** 不涉及。
+    * name  **参数解释：** 参数模板名称。 **取值范围：** 不涉及。
+    * description  **参数解释：** 参数模板描述。 **取值范围：** 不涉及。
+    * datastoreVersion  **参数解释：** 数据库版本。 **取值范围：** 不涉及。
+    * datastoreName  **参数解释：** 数据库类型。 **取值范围：** 不涉及。
+    * nodeType  **参数解释：** 参数模板节点类型。 **取值范围：** - mongos，表示集群mongos节点类型。 - shard，表示集群shard节点类型。 - config，表示集群config节点类型。 - replica，表示副本集类型。 - readonly，表示副本集只读节点类型。 - shard_readonly，表示集群只读节点类型。 - single，表示单节点类型。
+    * created  **参数解释：** 创建时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * updated  **参数解释：** 更新时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * userDefined  **参数解释：** 是否是用户自定义参数模板。 **取值范围：** - 取值为“false”，表示为系统默认参数模板。 - 取值为“true”，表示为用户自定义参数模板。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  参数模板ID。
-    * name  参数模板名称。
-    * description  参数模板描述。
-    * datastoreVersion  数据库版本。
-    * datastoreName  数据库类型。
-    * nodeType  参数模板节点类型。 - mongos，表示集群mongos节点类型。 - shard，表示集群shard节点类型。 - config，表示集群config节点类型。 - replica，表示副本集类型。 - single，表示单节点类型。
-    * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * userDefined  是否是用户自定义参数模板。 - false表示为默认参数模板。 - true表示为用户自定义参数模板。
+    * id  **参数解释：** 参数模板ID。 **取值范围：** 不涉及。
+    * name  **参数解释：** 参数模板名称。 **取值范围：** 不涉及。
+    * description  **参数解释：** 参数模板描述。 **取值范围：** 不涉及。
+    * datastoreVersion  **参数解释：** 数据库版本。 **取值范围：** 不涉及。
+    * datastoreName  **参数解释：** 数据库类型。 **取值范围：** 不涉及。
+    * nodeType  **参数解释：** 参数模板节点类型。 **取值范围：** - mongos，表示集群mongos节点类型。 - shard，表示集群shard节点类型。 - config，表示集群config节点类型。 - replica，表示副本集类型。 - readonly，表示副本集只读节点类型。 - shard_readonly，表示集群只读节点类型。 - single，表示单节点类型。
+    * created  **参数解释：** 创建时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * updated  **参数解释：** 更新时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * userDefined  **参数解释：** 是否是用户自定义参数模板。 **取值范围：** - 取值为“false”，表示为系统默认参数模板。 - 取值为“true”，表示为用户自定义参数模板。
     *
     * @var string[]
     */
@@ -289,7 +289,7 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  参数模板ID。
+    *  **参数解释：** 参数模板ID。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -301,7 +301,7 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 参数模板ID。
+    * @param string $id **参数解释：** 参数模板ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -313,7 +313,7 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  参数模板名称。
+    *  **参数解释：** 参数模板名称。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -325,7 +325,7 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 参数模板名称。
+    * @param string $name **参数解释：** 参数模板名称。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -337,7 +337,7 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  参数模板描述。
+    *  **参数解释：** 参数模板描述。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -349,7 +349,7 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 参数模板描述。
+    * @param string $description **参数解释：** 参数模板描述。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -361,7 +361,7 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets datastoreVersion
-    *  数据库版本。
+    *  **参数解释：** 数据库版本。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -373,7 +373,7 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
     /**
     * Sets datastoreVersion
     *
-    * @param string $datastoreVersion 数据库版本。
+    * @param string $datastoreVersion **参数解释：** 数据库版本。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets datastoreName
-    *  数据库类型。
+    *  **参数解释：** 数据库类型。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -397,7 +397,7 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
     /**
     * Sets datastoreName
     *
-    * @param string $datastoreName 数据库类型。
+    * @param string $datastoreName **参数解释：** 数据库类型。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -409,7 +409,7 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeType
-    *  参数模板节点类型。 - mongos，表示集群mongos节点类型。 - shard，表示集群shard节点类型。 - config，表示集群config节点类型。 - replica，表示副本集类型。 - single，表示单节点类型。
+    *  **参数解释：** 参数模板节点类型。 **取值范围：** - mongos，表示集群mongos节点类型。 - shard，表示集群shard节点类型。 - config，表示集群config节点类型。 - replica，表示副本集类型。 - readonly，表示副本集只读节点类型。 - shard_readonly，表示集群只读节点类型。 - single，表示单节点类型。
     *
     * @return string
     */
@@ -421,7 +421,7 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
     /**
     * Sets nodeType
     *
-    * @param string $nodeType 参数模板节点类型。 - mongos，表示集群mongos节点类型。 - shard，表示集群shard节点类型。 - config，表示集群config节点类型。 - replica，表示副本集类型。 - single，表示单节点类型。
+    * @param string $nodeType **参数解释：** 参数模板节点类型。 **取值范围：** - mongos，表示集群mongos节点类型。 - shard，表示集群shard节点类型。 - config，表示集群config节点类型。 - replica，表示副本集类型。 - readonly，表示副本集只读节点类型。 - shard_readonly，表示集群只读节点类型。 - single，表示单节点类型。
     *
     * @return $this
     */
@@ -433,7 +433,7 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets created
-    *  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    *  **参数解释：** 创建时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -445,7 +445,7 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
     /**
     * Sets created
     *
-    * @param string $created 创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * @param string $created **参数解释：** 创建时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -457,7 +457,7 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets updated
-    *  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    *  **参数解释：** 更新时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -469,7 +469,7 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
     /**
     * Sets updated
     *
-    * @param string $updated 更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * @param string $updated **参数解释：** 更新时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -481,7 +481,7 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets userDefined
-    *  是否是用户自定义参数模板。 - false表示为默认参数模板。 - true表示为用户自定义参数模板。
+    *  **参数解释：** 是否是用户自定义参数模板。 **取值范围：** - 取值为“false”，表示为系统默认参数模板。 - 取值为“true”，表示为用户自定义参数模板。
     *
     * @return bool
     */
@@ -493,7 +493,7 @@ class ListConfigurationsResult implements ModelInterface, ArrayAccess
     /**
     * Sets userDefined
     *
-    * @param bool $userDefined 是否是用户自定义参数模板。 - false表示为默认参数模板。 - true表示为用户自定义参数模板。
+    * @param bool $userDefined **参数解释：** 是否是用户自定义参数模板。 **取值范围：** - 取值为“false”，表示为系统默认参数模板。 - 取值为“true”，表示为用户自定义参数模板。
     *
     * @return $this
     */

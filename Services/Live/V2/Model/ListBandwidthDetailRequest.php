@@ -31,6 +31,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     * serviceType  服务类型： - Live：直播 - LLL：超低时延直播 - ALL：默认所有直播
+    * ipType  ip类型，取值如下：  - v4 ：ipv4协议  - v6 ：ipv6协议   不填写默认查询所有ip类型的数据   该参数只对2026-01-30后的数据生效。
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
             'interval' => 'int',
             'startTime' => 'string',
             'endTime' => 'string',
-            'serviceType' => 'string'
+            'serviceType' => 'string',
+            'ipType' => 'string'
     ];
 
     /**
@@ -61,6 +63,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     * serviceType  服务类型： - Live：直播 - LLL：超低时延直播 - ALL：默认所有直播
+    * ipType  ip类型，取值如下：  - v4 ：ipv4协议  - v6 ：ipv6协议   不填写默认查询所有ip类型的数据   该参数只对2026-01-30后的数据生效。
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
         'interval' => 'int32',
         'startTime' => null,
         'endTime' => null,
-        'serviceType' => null
+        'serviceType' => null,
+        'ipType' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     * serviceType  服务类型： - Live：直播 - LLL：超低时延直播 - ALL：默认所有直播
+    * ipType  ip类型，取值如下：  - v4 ：ipv4协议  - v6 ：ipv6协议   不填写默认查询所有ip类型的数据   该参数只对2026-01-30后的数据生效。
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
             'interval' => 'interval',
             'startTime' => 'start_time',
             'endTime' => 'end_time',
-            'serviceType' => 'service_type'
+            'serviceType' => 'service_type',
+            'ipType' => 'ip_type'
     ];
 
     /**
@@ -142,6 +148,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     * serviceType  服务类型： - Live：直播 - LLL：超低时延直播 - ALL：默认所有直播
+    * ipType  ip类型，取值如下：  - v4 ：ipv4协议  - v6 ：ipv6协议   不填写默认查询所有ip类型的数据   该参数只对2026-01-30后的数据生效。
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
             'interval' => 'setInterval',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
-            'serviceType' => 'setServiceType'
+            'serviceType' => 'setServiceType',
+            'ipType' => 'setIpType'
     ];
 
     /**
@@ -172,6 +180,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     * serviceType  服务类型： - Live：直播 - LLL：超低时延直播 - ALL：默认所有直播
+    * ipType  ip类型，取值如下：  - v4 ：ipv4协议  - v6 ：ipv6协议   不填写默认查询所有ip类型的数据   该参数只对2026-01-30后的数据生效。
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
             'interval' => 'getInterval',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
-            'serviceType' => 'getServiceType'
+            'serviceType' => 'getServiceType',
+            'ipType' => 'getIpType'
     ];
 
     /**
@@ -237,6 +247,8 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     const SERVICE_TYPE_LIVE = 'Live';
     const SERVICE_TYPE_LLL = 'LLL';
     const SERVICE_TYPE_ALL = 'ALL';
+    const IP_TYPE_V4 = 'v4';
+    const IP_TYPE_V6 = 'v6';
     
 
     /**
@@ -280,6 +292,19 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getIpTypeAllowableValues()
+    {
+        return [
+            self::IP_TYPE_V4,
+            self::IP_TYPE_V6,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -307,6 +332,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
+        $this->container['ipType'] = isset($data['ipType']) ? $data['ipType'] : null;
     }
 
     /**
@@ -382,6 +408,20 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['serviceType']) && (mb_strlen($this->container['serviceType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'serviceType', the character length must be bigger than or equal to 1.";
+            }
+            $allowedValues = $this->getIpTypeAllowableValues();
+                if (!is_null($this->container['ipType']) && !in_array($this->container['ipType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'ipType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['ipType']) && (mb_strlen($this->container['ipType']) > 128)) {
+                $invalidProperties[] = "invalid value for 'ipType', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['ipType']) && (mb_strlen($this->container['ipType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'ipType', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -658,6 +698,30 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     public function setServiceType($serviceType)
     {
         $this->container['serviceType'] = $serviceType;
+        return $this;
+    }
+
+    /**
+    * Gets ipType
+    *  ip类型，取值如下：  - v4 ：ipv4协议  - v6 ：ipv6协议   不填写默认查询所有ip类型的数据   该参数只对2026-01-30后的数据生效。
+    *
+    * @return string|null
+    */
+    public function getIpType()
+    {
+        return $this->container['ipType'];
+    }
+
+    /**
+    * Sets ipType
+    *
+    * @param string|null $ipType ip类型，取值如下：  - v4 ：ipv4协议  - v6 ：ipv6协议   不填写默认查询所有ip类型的数据   该参数只对2026-01-30后的数据生效。
+    *
+    * @return $this
+    */
+    public function setIpType($ipType)
+    {
+        $this->container['ipType'] = $ipType;
         return $this;
     }
 

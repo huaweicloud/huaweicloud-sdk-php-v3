@@ -24,7 +24,6 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
     * resourceType  资源类型。domain:resource_name为域名，account:resource_name为账号
     * resourceName  资源名称为账号或域名。多个域名以英文逗号分隔
     * configInfo  配置信息.top指标仅支持ua、refer、url、origin url
-    * expiredTime  统计配置失效时间，秒时间戳。不能超过当前时间点往后一年
     *
     * @var string[]
     */
@@ -32,8 +31,7 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
             'configType' => 'int',
             'resourceType' => 'string',
             'resourceName' => 'string',
-            'configInfo' => 'object',
-            'expiredTime' => 'int'
+            'configInfo' => 'object'
     ];
 
     /**
@@ -42,7 +40,6 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
     * resourceType  资源类型。domain:resource_name为域名，account:resource_name为账号
     * resourceName  资源名称为账号或域名。多个域名以英文逗号分隔
     * configInfo  配置信息.top指标仅支持ua、refer、url、origin url
-    * expiredTime  统计配置失效时间，秒时间戳。不能超过当前时间点往后一年
     *
     * @var string[]
     */
@@ -50,8 +47,7 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
         'configType' => null,
         'resourceType' => null,
         'resourceName' => null,
-        'configInfo' => null,
-        'expiredTime' => 'int64'
+        'configInfo' => null
     ];
 
     /**
@@ -81,7 +77,6 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
     * resourceType  资源类型。domain:resource_name为域名，account:resource_name为账号
     * resourceName  资源名称为账号或域名。多个域名以英文逗号分隔
     * configInfo  配置信息.top指标仅支持ua、refer、url、origin url
-    * expiredTime  统计配置失效时间，秒时间戳。不能超过当前时间点往后一年
     *
     * @var string[]
     */
@@ -89,8 +84,7 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
             'configType' => 'config_type',
             'resourceType' => 'resource_type',
             'resourceName' => 'resource_name',
-            'configInfo' => 'config_info',
-            'expiredTime' => 'expired_time'
+            'configInfo' => 'config_info'
     ];
 
     /**
@@ -99,7 +93,6 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
     * resourceType  资源类型。domain:resource_name为域名，account:resource_name为账号
     * resourceName  资源名称为账号或域名。多个域名以英文逗号分隔
     * configInfo  配置信息.top指标仅支持ua、refer、url、origin url
-    * expiredTime  统计配置失效时间，秒时间戳。不能超过当前时间点往后一年
     *
     * @var string[]
     */
@@ -107,8 +100,7 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
             'configType' => 'setConfigType',
             'resourceType' => 'setResourceType',
             'resourceName' => 'setResourceName',
-            'configInfo' => 'setConfigInfo',
-            'expiredTime' => 'setExpiredTime'
+            'configInfo' => 'setConfigInfo'
     ];
 
     /**
@@ -117,7 +109,6 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
     * resourceType  资源类型。domain:resource_name为域名，account:resource_name为账号
     * resourceName  资源名称为账号或域名。多个域名以英文逗号分隔
     * configInfo  配置信息.top指标仅支持ua、refer、url、origin url
-    * expiredTime  统计配置失效时间，秒时间戳。不能超过当前时间点往后一年
     *
     * @var string[]
     */
@@ -125,8 +116,7 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
             'configType' => 'getConfigType',
             'resourceType' => 'getResourceType',
             'resourceName' => 'getResourceName',
-            'configInfo' => 'getConfigInfo',
-            'expiredTime' => 'getExpiredTime'
+            'configInfo' => 'getConfigInfo'
     ];
 
     /**
@@ -191,7 +181,6 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
         $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
         $this->container['configInfo'] = isset($data['configInfo']) ? $data['configInfo'] : null;
-        $this->container['expiredTime'] = isset($data['expiredTime']) ? $data['expiredTime'] : null;
     }
 
     /**
@@ -229,12 +218,6 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
         if ($this->container['configInfo'] === null) {
             $invalidProperties[] = "'configInfo' can't be null";
         }
-            if (!is_null($this->container['expiredTime']) && ($this->container['expiredTime'] > 4102416000)) {
-                $invalidProperties[] = "invalid value for 'expiredTime', must be smaller than or equal to 4102416000.";
-            }
-            if (!is_null($this->container['expiredTime']) && ($this->container['expiredTime'] < 0)) {
-                $invalidProperties[] = "invalid value for 'expiredTime', must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -342,30 +325,6 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
     public function setConfigInfo($configInfo)
     {
         $this->container['configInfo'] = $configInfo;
-        return $this;
-    }
-
-    /**
-    * Gets expiredTime
-    *  统计配置失效时间，秒时间戳。不能超过当前时间点往后一年
-    *
-    * @return int|null
-    */
-    public function getExpiredTime()
-    {
-        return $this->container['expiredTime'];
-    }
-
-    /**
-    * Sets expiredTime
-    *
-    * @param int|null $expiredTime 统计配置失效时间，秒时间戳。不能超过当前时间点往后一年
-    *
-    * @return $this
-    */
-    public function setExpiredTime($expiredTime)
-    {
-        $this->container['expiredTime'] = $expiredTime;
         return $this;
     }
 

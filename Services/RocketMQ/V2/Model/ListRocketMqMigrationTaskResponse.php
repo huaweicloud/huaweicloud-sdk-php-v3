@@ -21,8 +21,8 @@ class ListRocketMqMigrationTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  元数据迁移任务总数。
-    * task  元数据迁移任务列表。
+    * total  **参数解释**： 元数据迁移任务总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * task  **参数解释**： 元数据迁移任务列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListRocketMqMigrationTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  元数据迁移任务总数。
-    * task  元数据迁移任务列表。
+    * total  **参数解释**： 元数据迁移任务总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * task  **参数解释**： 元数据迁移任务列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListRocketMqMigrationTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  元数据迁移任务总数。
-    * task  元数据迁移任务列表。
+    * total  **参数解释**： 元数据迁移任务总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * task  **参数解释**： 元数据迁移任务列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListRocketMqMigrationTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  元数据迁移任务总数。
-    * task  元数据迁移任务列表。
+    * total  **参数解释**： 元数据迁移任务总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * task  **参数解释**： 元数据迁移任务列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListRocketMqMigrationTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  元数据迁移任务总数。
-    * task  元数据迁移任务列表。
+    * total  **参数解释**： 元数据迁移任务总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * task  **参数解释**： 元数据迁移任务列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListRocketMqMigrationTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  元数据迁移任务总数。
+    *  **参数解释**： 元数据迁移任务总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ListRocketMqMigrationTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 元数据迁移任务总数。
+    * @param int|null $total **参数解释**： 元数据迁移任务总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListRocketMqMigrationTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets task
-    *  元数据迁移任务列表。
+    *  **参数解释**： 元数据迁移任务列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\MetadataTask[]|null
     */
@@ -222,7 +222,7 @@ class ListRocketMqMigrationTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets task
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\MetadataTask[]|null $task 元数据迁移任务列表。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\MetadataTask[]|null $task **参数解释**： 元数据迁移任务列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

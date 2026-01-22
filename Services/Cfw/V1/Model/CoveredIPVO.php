@@ -20,8 +20,8 @@ class CoveredIPVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ip  ip地址
-    * coveredIp  覆盖ip地址。
+    * ip  IP地址
+    * coveredIp  覆盖IP地址。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CoveredIPVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ip  ip地址
-    * coveredIp  覆盖ip地址。
+    * ip  IP地址
+    * coveredIp  覆盖IP地址。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CoveredIPVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ip  ip地址
-    * coveredIp  覆盖ip地址。
+    * ip  IP地址
+    * coveredIp  覆盖IP地址。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CoveredIPVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ip  ip地址
-    * coveredIp  覆盖ip地址。
+    * ip  IP地址
+    * coveredIp  覆盖IP地址。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CoveredIPVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ip  ip地址
-    * coveredIp  覆盖ip地址。
+    * ip  IP地址
+    * coveredIp  覆盖IP地址。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class CoveredIPVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ip
-    *  ip地址
+    *  IP地址
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class CoveredIPVO implements ModelInterface, ArrayAccess
     /**
     * Sets ip
     *
-    * @param string|null $ip ip地址
+    * @param string|null $ip IP地址
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class CoveredIPVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets coveredIp
-    *  覆盖ip地址。
+    *  覆盖IP地址。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class CoveredIPVO implements ModelInterface, ArrayAccess
     /**
     * Sets coveredIp
     *
-    * @param string|null $coveredIp 覆盖ip地址。
+    * @param string|null $coveredIp 覆盖IP地址。
     *
     * @return $this
     */

@@ -228,7 +228,7 @@ class RabbitMQAsyncClient extends Client
     /**
      * 创建实例
      *
-     * 创建实例[，该接口支持创建按需[和包周期](tag:hws,hws_eu,hws_hk,ctc,cmcc)计费方式的实例](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,cmcc,sbc)。
+     * 创建实例[，该接口支持创建按需[和包周期](tag:hws,hws_eu,hws_hk,ctc,cmcc,ax)计费方式的实例](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,hk_tm,cmcc,sbc,ax,hk_sbc)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -495,6 +495,74 @@ class RabbitMQAsyncClient extends Client
     }
 
     /**
+     * 删除定时任务管理中的指定记录
+     *
+     * 删除定时任务管理中的指定记录
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteScheduledTaskAsync($request)
+    {
+        return $this->deleteScheduledTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteScheduledTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/scheduled-tasks/{task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\DeleteScheduledTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\DeleteScheduledTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 删除用户
      *
      * 删除用户（仅AMQP版本支持）。
@@ -559,6 +627,71 @@ class RabbitMQAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\DeleteUserResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\DeleteUserRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 开启RabbitMQ实例域名访问能力
+     *
+     * 开启RabbitMQ实例域名访问功能后，客户端可以通过域名连接RabbitMQ实例。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function enableDnsAsync($request)
+    {
+        return $this->enableDnsAsyncWithHttpInfo($request);
+    }
+    
+    public function enableDnsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/rabbitmq/instances/{instance_id}/dns';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\EnableDnsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\EnableDnsRequest',
             $asyncRequest = true);
     }
 
@@ -655,8 +788,8 @@ class RabbitMQAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['start'] !== null) {
-            $queryParams['start'] = $localVarParams['start'];
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
@@ -698,6 +831,68 @@ class RabbitMQAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListBackgroundTasksResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListBackgroundTasksRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询特性开关列表
+     *
+     * 查询特性开关列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listConfigFeaturesAsync($request)
+    {
+        return $this->listConfigFeaturesAsyncWithHttpInfo($request);
+    }
+    
+    public function listConfigFeaturesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/config/features';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListConfigFeaturesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListConfigFeaturesRequest',
             $asyncRequest = true);
     }
 
@@ -989,6 +1184,83 @@ class RabbitMQAsyncClient extends Client
     }
 
     /**
+     * 查询实例的定时任务列表
+     *
+     * 查询实例的定时任务列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listScheduledTasksAsync($request)
+    {
+        return $this->listScheduledTasksAsyncWithHttpInfo($request);
+    }
+    
+    public function listScheduledTasksAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/scheduled-tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['start'] !== null) {
+            $queryParams['start'] = $localVarParams['start'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['beginTime'] !== null) {
+            $queryParams['begin_time'] = $localVarParams['beginTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListScheduledTasksResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListScheduledTasksRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询用户列表
      *
      * 查询用户列表（仅AMQP版本支持）。
@@ -1056,6 +1328,71 @@ class RabbitMQAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListUserResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListUserRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新回收站策略
+     *
+     * 更新回收站策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyRecyclePolicyAsync($request)
+    {
+        return $this->modifyRecyclePolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function modifyRecyclePolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/recycle';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ModifyRecyclePolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ModifyRecyclePolicyRequest',
             $asyncRequest = true);
     }
 
@@ -1132,7 +1469,7 @@ class RabbitMQAsyncClient extends Client
      *
      * 实例规格变更。
      * 
-     * [**当前通过调用API，只支持按需实例进行实例规格变更。**](tag:hws,hws_hk,ctc,cmcc,hws_eu)
+     * [**当前通过调用API，只支持按需实例进行实例规格变更。**](tag:hws,hws_hk,ctc,cmcc,hws_eu,ax)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1267,6 +1604,71 @@ class RabbitMQAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ResizeInstanceResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ResizeInstanceRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 恢复回收站实例
+     *
+     * 恢复回收站实例。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function restoreRecycleInstanceAsync($request)
+    {
+        return $this->restoreRecycleInstanceAsyncWithHttpInfo($request);
+    }
+    
+    public function restoreRecycleInstanceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/recycle';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\RestoreRecycleInstanceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\RestoreRecycleInstanceRequest',
             $asyncRequest = true);
     }
 
@@ -1773,6 +2175,9 @@ class RabbitMQAsyncClient extends Client
         if ($localVarParams['productId'] !== null) {
             $queryParams['product_id'] = $localVarParams['productId'];
         }
+        if ($localVarParams['brokerNum'] !== null) {
+            $queryParams['broker_num'] = $localVarParams['brokerNum'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1932,6 +2337,133 @@ class RabbitMQAsyncClient extends Client
     }
 
     /**
+     * 查询回收站实例列表
+     *
+     * 查询回收站实例列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showRecycleInstancesAsync($request)
+    {
+        return $this->showRecycleInstancesAsyncWithHttpInfo($request);
+    }
+    
+    public function showRecycleInstancesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/recycle';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowRecycleInstancesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowRecycleInstancesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询磁盘自动扩容配置
+     *
+     * 查询磁盘自动扩容配置，包括磁盘自动扩容是否开启，以及开启后的扩容阈值、扩容步长、扩容上限信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showVolumeExpandConfigAsync($request)
+    {
+        return $this->showVolumeExpandConfigAsyncWithHttpInfo($request);
+    }
+    
+    public function showVolumeExpandConfigAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/auto-volume-expand';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowVolumeExpandConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowVolumeExpandConfigRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 修改实例信息
      *
      * 修改实例的名称和描述信息。
@@ -2068,6 +2600,80 @@ class RabbitMQAsyncClient extends Client
     }
 
     /**
+     * 修改定时任务管理中的指定记录
+     *
+     * 修改定时任务管理中的指定记录
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateScheduledTaskAsync($request)
+    {
+        return $this->updateScheduledTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function updateScheduledTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/scheduled-tasks/{task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['executeAt'] !== null) {
+            $queryParams['execute_at'] = $localVarParams['executeAt'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\UpdateScheduledTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\UpdateScheduledTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 修改用户参数
      *
      * 修改用户参数（仅AMQP版本支持）。
@@ -2135,6 +2741,74 @@ class RabbitMQAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\UpdateUserResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\UpdateUserRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改磁盘自动扩容配置
+     *
+     * 该接口用于修改磁盘自动扩容配置，包含磁盘自动扩容是否开启、扩容阈值、扩容步长，以及扩容上限的配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateVolumeExpansionConfigAsync($request)
+    {
+        return $this->updateVolumeExpansionConfigAsyncWithHttpInfo($request);
+    }
+    
+    public function updateVolumeExpansionConfigAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/auto-volume-expand';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\UpdateVolumeExpansionConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\UpdateVolumeExpansionConfigRequest',
             $asyncRequest = true);
     }
 

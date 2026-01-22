@@ -20,17 +20,15 @@ class ListAccessPolicyRespPolicies implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accessKey  用户名。
-    * secretKey  密钥。
-    * whiteRemoteAddress  IP白名单。
-    * admin  是否为管理员。
-    * perm  权限。
+    * accessKey  **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * whiteRemoteAddress  **参数解释**： IP白名单。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * admin  **参数解释**： 是否为管理员。 **约束限制**： 不涉及。 **取值范围**： - true：是管理员。 - false：不是管理员。 **默认取值**： 不涉及。
+    * perm  **参数解释**： 用户权限。 **约束限制**： 不涉及。 **取值范围**： - PUB：拥有发布权限。 - SUB：拥有订阅权限。 - PUB|SUB：拥有发布订阅权限。 - DENY：无权限。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'accessKey' => 'string',
-            'secretKey' => 'string',
             'whiteRemoteAddress' => 'string',
             'admin' => 'bool',
             'perm' => 'string'
@@ -38,17 +36,15 @@ class ListAccessPolicyRespPolicies implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accessKey  用户名。
-    * secretKey  密钥。
-    * whiteRemoteAddress  IP白名单。
-    * admin  是否为管理员。
-    * perm  权限。
+    * accessKey  **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * whiteRemoteAddress  **参数解释**： IP白名单。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * admin  **参数解释**： 是否为管理员。 **约束限制**： 不涉及。 **取值范围**： - true：是管理员。 - false：不是管理员。 **默认取值**： 不涉及。
+    * perm  **参数解释**： 用户权限。 **约束限制**： 不涉及。 **取值范围**： - PUB：拥有发布权限。 - SUB：拥有订阅权限。 - PUB|SUB：拥有发布订阅权限。 - DENY：无权限。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'accessKey' => null,
-        'secretKey' => null,
         'whiteRemoteAddress' => null,
         'admin' => null,
         'perm' => null
@@ -77,17 +73,15 @@ class ListAccessPolicyRespPolicies implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accessKey  用户名。
-    * secretKey  密钥。
-    * whiteRemoteAddress  IP白名单。
-    * admin  是否为管理员。
-    * perm  权限。
+    * accessKey  **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * whiteRemoteAddress  **参数解释**： IP白名单。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * admin  **参数解释**： 是否为管理员。 **约束限制**： 不涉及。 **取值范围**： - true：是管理员。 - false：不是管理员。 **默认取值**： 不涉及。
+    * perm  **参数解释**： 用户权限。 **约束限制**： 不涉及。 **取值范围**： - PUB：拥有发布权限。 - SUB：拥有订阅权限。 - PUB|SUB：拥有发布订阅权限。 - DENY：无权限。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'accessKey' => 'access_key',
-            'secretKey' => 'secret_key',
             'whiteRemoteAddress' => 'white_remote_address',
             'admin' => 'admin',
             'perm' => 'perm'
@@ -95,17 +89,15 @@ class ListAccessPolicyRespPolicies implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accessKey  用户名。
-    * secretKey  密钥。
-    * whiteRemoteAddress  IP白名单。
-    * admin  是否为管理员。
-    * perm  权限。
+    * accessKey  **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * whiteRemoteAddress  **参数解释**： IP白名单。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * admin  **参数解释**： 是否为管理员。 **约束限制**： 不涉及。 **取值范围**： - true：是管理员。 - false：不是管理员。 **默认取值**： 不涉及。
+    * perm  **参数解释**： 用户权限。 **约束限制**： 不涉及。 **取值范围**： - PUB：拥有发布权限。 - SUB：拥有订阅权限。 - PUB|SUB：拥有发布订阅权限。 - DENY：无权限。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'accessKey' => 'setAccessKey',
-            'secretKey' => 'setSecretKey',
             'whiteRemoteAddress' => 'setWhiteRemoteAddress',
             'admin' => 'setAdmin',
             'perm' => 'setPerm'
@@ -113,17 +105,15 @@ class ListAccessPolicyRespPolicies implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accessKey  用户名。
-    * secretKey  密钥。
-    * whiteRemoteAddress  IP白名单。
-    * admin  是否为管理员。
-    * perm  权限。
+    * accessKey  **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * whiteRemoteAddress  **参数解释**： IP白名单。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * admin  **参数解释**： 是否为管理员。 **约束限制**： 不涉及。 **取值范围**： - true：是管理员。 - false：不是管理员。 **默认取值**： 不涉及。
+    * perm  **参数解释**： 用户权限。 **约束限制**： 不涉及。 **取值范围**： - PUB：拥有发布权限。 - SUB：拥有订阅权限。 - PUB|SUB：拥有发布订阅权限。 - DENY：无权限。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'accessKey' => 'getAccessKey',
-            'secretKey' => 'getSecretKey',
             'whiteRemoteAddress' => 'getWhiteRemoteAddress',
             'admin' => 'getAdmin',
             'perm' => 'getPerm'
@@ -188,7 +178,6 @@ class ListAccessPolicyRespPolicies implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['accessKey'] = isset($data['accessKey']) ? $data['accessKey'] : null;
-        $this->container['secretKey'] = isset($data['secretKey']) ? $data['secretKey'] : null;
         $this->container['whiteRemoteAddress'] = isset($data['whiteRemoteAddress']) ? $data['whiteRemoteAddress'] : null;
         $this->container['admin'] = isset($data['admin']) ? $data['admin'] : null;
         $this->container['perm'] = isset($data['perm']) ? $data['perm'] : null;
@@ -218,7 +207,7 @@ class ListAccessPolicyRespPolicies implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessKey
-    *  用户名。
+    *  **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +219,7 @@ class ListAccessPolicyRespPolicies implements ModelInterface, ArrayAccess
     /**
     * Sets accessKey
     *
-    * @param string|null $accessKey 用户名。
+    * @param string|null $accessKey **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -241,32 +230,8 @@ class ListAccessPolicyRespPolicies implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets secretKey
-    *  密钥。
-    *
-    * @return string|null
-    */
-    public function getSecretKey()
-    {
-        return $this->container['secretKey'];
-    }
-
-    /**
-    * Sets secretKey
-    *
-    * @param string|null $secretKey 密钥。
-    *
-    * @return $this
-    */
-    public function setSecretKey($secretKey)
-    {
-        $this->container['secretKey'] = $secretKey;
-        return $this;
-    }
-
-    /**
     * Gets whiteRemoteAddress
-    *  IP白名单。
+    *  **参数解释**： IP白名单。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -278,7 +243,7 @@ class ListAccessPolicyRespPolicies implements ModelInterface, ArrayAccess
     /**
     * Sets whiteRemoteAddress
     *
-    * @param string|null $whiteRemoteAddress IP白名单。
+    * @param string|null $whiteRemoteAddress **参数解释**： IP白名单。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -290,7 +255,7 @@ class ListAccessPolicyRespPolicies implements ModelInterface, ArrayAccess
 
     /**
     * Gets admin
-    *  是否为管理员。
+    *  **参数解释**： 是否为管理员。 **约束限制**： 不涉及。 **取值范围**： - true：是管理员。 - false：不是管理员。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -302,7 +267,7 @@ class ListAccessPolicyRespPolicies implements ModelInterface, ArrayAccess
     /**
     * Sets admin
     *
-    * @param bool|null $admin 是否为管理员。
+    * @param bool|null $admin **参数解释**： 是否为管理员。 **约束限制**： 不涉及。 **取值范围**： - true：是管理员。 - false：不是管理员。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -314,7 +279,7 @@ class ListAccessPolicyRespPolicies implements ModelInterface, ArrayAccess
 
     /**
     * Gets perm
-    *  权限。
+    *  **参数解释**： 用户权限。 **约束限制**： 不涉及。 **取值范围**： - PUB：拥有发布权限。 - SUB：拥有订阅权限。 - PUB|SUB：拥有发布订阅权限。 - DENY：无权限。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -326,7 +291,7 @@ class ListAccessPolicyRespPolicies implements ModelInterface, ArrayAccess
     /**
     * Sets perm
     *
-    * @param string|null $perm 权限。
+    * @param string|null $perm **参数解释**： 用户权限。 **约束限制**： 不涉及。 **取值范围**： - PUB：拥有发布权限。 - SUB：拥有订阅权限。 - PUB|SUB：拥有发布订阅权限。 - DENY：无权限。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -22,9 +22,9 @@ class AttackStatisticRespBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * apps  **参数解释**： 应用列表 **取值范围**： 不涉及
     * associatedName  **参数解释**： 绑定资源名称 **取值范围**： 不涉及
-    * associatedType  **参数解释**： 绑定资源类型 **取值范围**： 不涉及
+    * associatedType  **参数解释**： 绑定资源类型 **取值范围**： PORT：IPV4云服务器 IPV6_PORT：IPV6云服务器
     * attackCount  **参数解释**： 攻击次数 **取值范围**： 不涉及
-    * attackType  **参数解释**： 攻击类型 **取值范围**： 不涉及
+    * attackType  **参数解释**： 攻击类型 **取值范围**： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马
     * denyCount  **参数解释**： 拦截次数 **取值范围**： 不涉及
     * dstPorts  **参数解释**： 目的端口列表 **取值范围**： 不涉及
     * ip  **参数解释**： IP地址 **取值范围**： 不涉及
@@ -56,9 +56,9 @@ class AttackStatisticRespBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * apps  **参数解释**： 应用列表 **取值范围**： 不涉及
     * associatedName  **参数解释**： 绑定资源名称 **取值范围**： 不涉及
-    * associatedType  **参数解释**： 绑定资源类型 **取值范围**： 不涉及
+    * associatedType  **参数解释**： 绑定资源类型 **取值范围**： PORT：IPV4云服务器 IPV6_PORT：IPV6云服务器
     * attackCount  **参数解释**： 攻击次数 **取值范围**： 不涉及
-    * attackType  **参数解释**： 攻击类型 **取值范围**： 不涉及
+    * attackType  **参数解释**： 攻击类型 **取值范围**： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马
     * denyCount  **参数解释**： 拦截次数 **取值范围**： 不涉及
     * dstPorts  **参数解释**： 目的端口列表 **取值范围**： 不涉及
     * ip  **参数解释**： IP地址 **取值范围**： 不涉及
@@ -111,9 +111,9 @@ class AttackStatisticRespBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * apps  **参数解释**： 应用列表 **取值范围**： 不涉及
     * associatedName  **参数解释**： 绑定资源名称 **取值范围**： 不涉及
-    * associatedType  **参数解释**： 绑定资源类型 **取值范围**： 不涉及
+    * associatedType  **参数解释**： 绑定资源类型 **取值范围**： PORT：IPV4云服务器 IPV6_PORT：IPV6云服务器
     * attackCount  **参数解释**： 攻击次数 **取值范围**： 不涉及
-    * attackType  **参数解释**： 攻击类型 **取值范围**： 不涉及
+    * attackType  **参数解释**： 攻击类型 **取值范围**： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马
     * denyCount  **参数解释**： 拦截次数 **取值范围**： 不涉及
     * dstPorts  **参数解释**： 目的端口列表 **取值范围**： 不涉及
     * ip  **参数解释**： IP地址 **取值范围**： 不涉及
@@ -145,9 +145,9 @@ class AttackStatisticRespBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * apps  **参数解释**： 应用列表 **取值范围**： 不涉及
     * associatedName  **参数解释**： 绑定资源名称 **取值范围**： 不涉及
-    * associatedType  **参数解释**： 绑定资源类型 **取值范围**： 不涉及
+    * associatedType  **参数解释**： 绑定资源类型 **取值范围**： PORT：IPV4云服务器 IPV6_PORT：IPV6云服务器
     * attackCount  **参数解释**： 攻击次数 **取值范围**： 不涉及
-    * attackType  **参数解释**： 攻击类型 **取值范围**： 不涉及
+    * attackType  **参数解释**： 攻击类型 **取值范围**： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马
     * denyCount  **参数解释**： 拦截次数 **取值范围**： 不涉及
     * dstPorts  **参数解释**： 目的端口列表 **取值范围**： 不涉及
     * ip  **参数解释**： IP地址 **取值范围**： 不涉及
@@ -179,9 +179,9 @@ class AttackStatisticRespBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * apps  **参数解释**： 应用列表 **取值范围**： 不涉及
     * associatedName  **参数解释**： 绑定资源名称 **取值范围**： 不涉及
-    * associatedType  **参数解释**： 绑定资源类型 **取值范围**： 不涉及
+    * associatedType  **参数解释**： 绑定资源类型 **取值范围**： PORT：IPV4云服务器 IPV6_PORT：IPV6云服务器
     * attackCount  **参数解释**： 攻击次数 **取值范围**： 不涉及
-    * attackType  **参数解释**： 攻击类型 **取值范围**： 不涉及
+    * attackType  **参数解释**： 攻击类型 **取值范围**： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马
     * denyCount  **参数解释**： 拦截次数 **取值范围**： 不涉及
     * dstPorts  **参数解释**： 目的端口列表 **取值范围**： 不涉及
     * ip  **参数解释**： IP地址 **取值范围**： 不涉及
@@ -354,7 +354,7 @@ class AttackStatisticRespBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets associatedType
-    *  **参数解释**： 绑定资源类型 **取值范围**： 不涉及
+    *  **参数解释**： 绑定资源类型 **取值范围**： PORT：IPV4云服务器 IPV6_PORT：IPV6云服务器
     *
     * @return string|null
     */
@@ -366,7 +366,7 @@ class AttackStatisticRespBody implements ModelInterface, ArrayAccess
     /**
     * Sets associatedType
     *
-    * @param string|null $associatedType **参数解释**： 绑定资源类型 **取值范围**： 不涉及
+    * @param string|null $associatedType **参数解释**： 绑定资源类型 **取值范围**： PORT：IPV4云服务器 IPV6_PORT：IPV6云服务器
     *
     * @return $this
     */
@@ -402,7 +402,7 @@ class AttackStatisticRespBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets attackType
-    *  **参数解释**： 攻击类型 **取值范围**： 不涉及
+    *  **参数解释**： 攻击类型 **取值范围**： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马
     *
     * @return string|null
     */
@@ -414,7 +414,7 @@ class AttackStatisticRespBody implements ModelInterface, ArrayAccess
     /**
     * Sets attackType
     *
-    * @param string|null $attackType **参数解释**： 攻击类型 **取值范围**： 不涉及
+    * @param string|null $attackType **参数解释**： 攻击类型 **取值范围**： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马
     *
     * @return $this
     */

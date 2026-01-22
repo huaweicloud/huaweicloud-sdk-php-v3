@@ -23,8 +23,8 @@ class ShowEntityConfigurationResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * datastoreVersion  数据库版本。
     * datastoreName  数据库类型。
-    * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量
+    * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量
     * parameters  参数对象，用户基于默认参数模板自定义的参数配置。
     *
     * @var string[]
@@ -41,8 +41,8 @@ class ShowEntityConfigurationResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * datastoreVersion  数据库版本。
     * datastoreName  数据库类型。
-    * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量
+    * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量
     * parameters  参数对象，用户基于默认参数模板自定义的参数配置。
     *
     * @var string[]
@@ -80,8 +80,8 @@ class ShowEntityConfigurationResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * datastoreVersion  数据库版本。
     * datastoreName  数据库类型。
-    * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量
+    * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量
     * parameters  参数对象，用户基于默认参数模板自定义的参数配置。
     *
     * @var string[]
@@ -98,8 +98,8 @@ class ShowEntityConfigurationResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * datastoreVersion  数据库版本。
     * datastoreName  数据库类型。
-    * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量
+    * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量
     * parameters  参数对象，用户基于默认参数模板自定义的参数配置。
     *
     * @var string[]
@@ -116,8 +116,8 @@ class ShowEntityConfigurationResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * datastoreVersion  数据库版本。
     * datastoreName  数据库类型。
-    * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量
+    * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量
     * parameters  参数对象，用户基于默认参数模板自定义的参数配置。
     *
     * @var string[]
@@ -267,7 +267,7 @@ class ShowEntityConfigurationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets created
-    *  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    *  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量
     *
     * @return string|null
     */
@@ -279,7 +279,7 @@ class ShowEntityConfigurationResponse implements ModelInterface, ArrayAccess
     /**
     * Sets created
     *
-    * @param string|null $created 创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * @param string|null $created 创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class ShowEntityConfigurationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updated
-    *  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    *  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量
     *
     * @return string|null
     */
@@ -303,7 +303,7 @@ class ShowEntityConfigurationResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updated
     *
-    * @param string|null $updated 更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * @param string|null $updated 更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量
     *
     * @return $this
     */

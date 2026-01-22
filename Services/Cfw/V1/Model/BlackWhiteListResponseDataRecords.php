@@ -22,11 +22,13 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * listId  黑白名单列表id
     * direction  黑白地址方向0：源地址1：目的地址
-    * addressType  ip地址类型0：ipv4，1:ipv6
-    * address  ip地址
+    * addressType  IP地址类型0：ipv4，1:ipv6
+    * address  IP地址
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * port  端口
     * description  描述
+    * createdDate  |- **参数解释**： 黑白名单创建时间。 **取值范围**： 不涉及
+    * modifiedDate  |- **参数解释**： 黑白名单修改时间。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -37,18 +39,22 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
             'address' => 'string',
             'protocol' => 'int',
             'port' => 'string',
-            'description' => 'string'
+            'description' => 'string',
+            'createdDate' => 'string',
+            'modifiedDate' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * listId  黑白名单列表id
     * direction  黑白地址方向0：源地址1：目的地址
-    * addressType  ip地址类型0：ipv4，1:ipv6
-    * address  ip地址
+    * addressType  IP地址类型0：ipv4，1:ipv6
+    * address  IP地址
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * port  端口
     * description  描述
+    * createdDate  |- **参数解释**： 黑白名单创建时间。 **取值范围**： 不涉及
+    * modifiedDate  |- **参数解释**： 黑白名单修改时间。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -59,7 +65,9 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
         'address' => null,
         'protocol' => null,
         'port' => null,
-        'description' => null
+        'description' => null,
+        'createdDate' => null,
+        'modifiedDate' => null
     ];
 
     /**
@@ -87,11 +95,13 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
     * and the value is the original name
     * listId  黑白名单列表id
     * direction  黑白地址方向0：源地址1：目的地址
-    * addressType  ip地址类型0：ipv4，1:ipv6
-    * address  ip地址
+    * addressType  IP地址类型0：ipv4，1:ipv6
+    * address  IP地址
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * port  端口
     * description  描述
+    * createdDate  |- **参数解释**： 黑白名单创建时间。 **取值范围**： 不涉及
+    * modifiedDate  |- **参数解释**： 黑白名单修改时间。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -102,18 +112,22 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
             'address' => 'address',
             'protocol' => 'protocol',
             'port' => 'port',
-            'description' => 'description'
+            'description' => 'description',
+            'createdDate' => 'created_date',
+            'modifiedDate' => 'modified_date'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * listId  黑白名单列表id
     * direction  黑白地址方向0：源地址1：目的地址
-    * addressType  ip地址类型0：ipv4，1:ipv6
-    * address  ip地址
+    * addressType  IP地址类型0：ipv4，1:ipv6
+    * address  IP地址
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * port  端口
     * description  描述
+    * createdDate  |- **参数解释**： 黑白名单创建时间。 **取值范围**： 不涉及
+    * modifiedDate  |- **参数解释**： 黑白名单修改时间。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -124,18 +138,22 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
             'address' => 'setAddress',
             'protocol' => 'setProtocol',
             'port' => 'setPort',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'createdDate' => 'setCreatedDate',
+            'modifiedDate' => 'setModifiedDate'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * listId  黑白名单列表id
     * direction  黑白地址方向0：源地址1：目的地址
-    * addressType  ip地址类型0：ipv4，1:ipv6
-    * address  ip地址
+    * addressType  IP地址类型0：ipv4，1:ipv6
+    * address  IP地址
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * port  端口
     * description  描述
+    * createdDate  |- **参数解释**： 黑白名单创建时间。 **取值范围**： 不涉及
+    * modifiedDate  |- **参数解释**： 黑白名单修改时间。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -146,7 +164,9 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
             'address' => 'getAddress',
             'protocol' => 'getProtocol',
             'port' => 'getPort',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'createdDate' => 'getCreatedDate',
+            'modifiedDate' => 'getModifiedDate'
     ];
 
     /**
@@ -214,6 +234,8 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['createdDate'] = isset($data['createdDate']) ? $data['createdDate'] : null;
+        $this->container['modifiedDate'] = isset($data['modifiedDate']) ? $data['modifiedDate'] : null;
     }
 
     /**
@@ -288,7 +310,7 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressType
-    *  ip地址类型0：ipv4，1:ipv6
+    *  IP地址类型0：ipv4，1:ipv6
     *
     * @return int|null
     */
@@ -300,7 +322,7 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets addressType
     *
-    * @param int|null $addressType ip地址类型0：ipv4，1:ipv6
+    * @param int|null $addressType IP地址类型0：ipv4，1:ipv6
     *
     * @return $this
     */
@@ -312,7 +334,7 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets address
-    *  ip地址
+    *  IP地址
     *
     * @return string|null
     */
@@ -324,7 +346,7 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets address
     *
-    * @param string|null $address ip地址
+    * @param string|null $address IP地址
     *
     * @return $this
     */
@@ -403,6 +425,54 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets createdDate
+    *  |- **参数解释**： 黑白名单创建时间。 **取值范围**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getCreatedDate()
+    {
+        return $this->container['createdDate'];
+    }
+
+    /**
+    * Sets createdDate
+    *
+    * @param string|null $createdDate |- **参数解释**： 黑白名单创建时间。 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setCreatedDate($createdDate)
+    {
+        $this->container['createdDate'] = $createdDate;
+        return $this;
+    }
+
+    /**
+    * Gets modifiedDate
+    *  |- **参数解释**： 黑白名单修改时间。 **取值范围**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getModifiedDate()
+    {
+        return $this->container['modifiedDate'];
+    }
+
+    /**
+    * Sets modifiedDate
+    *
+    * @param string|null $modifiedDate |- **参数解释**： 黑白名单修改时间。 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setModifiedDate($modifiedDate)
+    {
+        $this->container['modifiedDate'] = $modifiedDate;
         return $this;
     }
 

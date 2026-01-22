@@ -21,10 +21,10 @@ class ListBrokersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  总数。
-    * nextOffset  下个分页的offset。
-    * previousOffset  上个分页的offset。
-    * brokers  代理列表。
+    * total  **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * nextOffset  **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * previousOffset  **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -37,10 +37,10 @@ class ListBrokersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  总数。
-    * nextOffset  下个分页的offset。
-    * previousOffset  上个分页的offset。
-    * brokers  代理列表。
+    * total  **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * nextOffset  **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * previousOffset  **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -74,10 +74,10 @@ class ListBrokersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  总数。
-    * nextOffset  下个分页的offset。
-    * previousOffset  上个分页的offset。
-    * brokers  代理列表。
+    * total  **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * nextOffset  **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * previousOffset  **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -90,10 +90,10 @@ class ListBrokersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  总数。
-    * nextOffset  下个分页的offset。
-    * previousOffset  上个分页的offset。
-    * brokers  代理列表。
+    * total  **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * nextOffset  **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * previousOffset  **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -106,10 +106,10 @@ class ListBrokersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  总数。
-    * nextOffset  下个分页的offset。
-    * previousOffset  上个分页的offset。
-    * brokers  代理列表。
+    * total  **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * nextOffset  **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * previousOffset  **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class ListBrokersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  总数。
+    *  **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -220,7 +220,7 @@ class ListBrokersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param float|null $total 总数。
+    * @param float|null $total **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class ListBrokersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nextOffset
-    *  下个分页的offset。
+    *  **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -244,7 +244,7 @@ class ListBrokersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nextOffset
     *
-    * @param int|null $nextOffset 下个分页的offset。
+    * @param int|null $nextOffset **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class ListBrokersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets previousOffset
-    *  上个分页的offset。
+    *  **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -268,7 +268,7 @@ class ListBrokersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets previousOffset
     *
-    * @param int|null $previousOffset 上个分页的offset。
+    * @param int|null $previousOffset **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class ListBrokersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokers
-    *  代理列表。
+    *  **参数解释**： 代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\ListBrokersRespBrokers[]|null
     */
@@ -292,7 +292,7 @@ class ListBrokersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets brokers
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ListBrokersRespBrokers[]|null $brokers 代理列表。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ListBrokersRespBrokers[]|null $brokers **参数解释**： 代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

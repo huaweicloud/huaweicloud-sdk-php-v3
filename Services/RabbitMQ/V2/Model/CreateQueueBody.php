@@ -22,11 +22,11 @@ class CreateQueueBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  Queue名称
     * autoDelete  是否自动删除
-    * durable  是否持久化[（AMQP版本默认持久化，不涉及此字段）](tag:hws,hws_hk)
+    * durable  是否持久化[（AMQP版本默认持久化，不涉及此字段）](tag:hws,hws_hk,hws_eu)
     * deadLetterExchange  死信Exchange名称，消息被拒绝或过期时将重新发布到该Exchange。
     * deadLetterRoutingKey  死信Exchange的RoutingKey，死信Exchange会发送死信消息到绑定对应RoutingKey的Queue上。
     * messageTtl  发布到Queue的消息在被丢弃之前可以存活多长时间
-    * lazyMode  若设置惰性队列，请输入lazy。惰性队列模式会在磁盘上存储尽可能多的消息以减少内存使用；若不设置，队列将消息存储在内存缓存以尽可能快地传递消息。[（AMQP版本默认将消息存储到磁盘，不涉及此字段）](tag:hws,hws_hk)
+    * lazyMode  若设置惰性队列，请输入lazy。惰性队列模式会在磁盘上存储尽可能多的消息以减少内存使用；若不设置，队列将消息存储在内存缓存以尽可能快地传递消息。[（AMQP版本默认将消息存储到磁盘，不涉及此字段）](tag:hws,hws_hk,hws_eu)
     *
     * @var string[]
     */
@@ -44,11 +44,11 @@ class CreateQueueBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  Queue名称
     * autoDelete  是否自动删除
-    * durable  是否持久化[（AMQP版本默认持久化，不涉及此字段）](tag:hws,hws_hk)
+    * durable  是否持久化[（AMQP版本默认持久化，不涉及此字段）](tag:hws,hws_hk,hws_eu)
     * deadLetterExchange  死信Exchange名称，消息被拒绝或过期时将重新发布到该Exchange。
     * deadLetterRoutingKey  死信Exchange的RoutingKey，死信Exchange会发送死信消息到绑定对应RoutingKey的Queue上。
     * messageTtl  发布到Queue的消息在被丢弃之前可以存活多长时间
-    * lazyMode  若设置惰性队列，请输入lazy。惰性队列模式会在磁盘上存储尽可能多的消息以减少内存使用；若不设置，队列将消息存储在内存缓存以尽可能快地传递消息。[（AMQP版本默认将消息存储到磁盘，不涉及此字段）](tag:hws,hws_hk)
+    * lazyMode  若设置惰性队列，请输入lazy。惰性队列模式会在磁盘上存储尽可能多的消息以减少内存使用；若不设置，队列将消息存储在内存缓存以尽可能快地传递消息。[（AMQP版本默认将消息存储到磁盘，不涉及此字段）](tag:hws,hws_hk,hws_eu)
     *
     * @var string[]
     */
@@ -87,11 +87,11 @@ class CreateQueueBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  Queue名称
     * autoDelete  是否自动删除
-    * durable  是否持久化[（AMQP版本默认持久化，不涉及此字段）](tag:hws,hws_hk)
+    * durable  是否持久化[（AMQP版本默认持久化，不涉及此字段）](tag:hws,hws_hk,hws_eu)
     * deadLetterExchange  死信Exchange名称，消息被拒绝或过期时将重新发布到该Exchange。
     * deadLetterRoutingKey  死信Exchange的RoutingKey，死信Exchange会发送死信消息到绑定对应RoutingKey的Queue上。
     * messageTtl  发布到Queue的消息在被丢弃之前可以存活多长时间
-    * lazyMode  若设置惰性队列，请输入lazy。惰性队列模式会在磁盘上存储尽可能多的消息以减少内存使用；若不设置，队列将消息存储在内存缓存以尽可能快地传递消息。[（AMQP版本默认将消息存储到磁盘，不涉及此字段）](tag:hws,hws_hk)
+    * lazyMode  若设置惰性队列，请输入lazy。惰性队列模式会在磁盘上存储尽可能多的消息以减少内存使用；若不设置，队列将消息存储在内存缓存以尽可能快地传递消息。[（AMQP版本默认将消息存储到磁盘，不涉及此字段）](tag:hws,hws_hk,hws_eu)
     *
     * @var string[]
     */
@@ -109,11 +109,11 @@ class CreateQueueBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  Queue名称
     * autoDelete  是否自动删除
-    * durable  是否持久化[（AMQP版本默认持久化，不涉及此字段）](tag:hws,hws_hk)
+    * durable  是否持久化[（AMQP版本默认持久化，不涉及此字段）](tag:hws,hws_hk,hws_eu)
     * deadLetterExchange  死信Exchange名称，消息被拒绝或过期时将重新发布到该Exchange。
     * deadLetterRoutingKey  死信Exchange的RoutingKey，死信Exchange会发送死信消息到绑定对应RoutingKey的Queue上。
     * messageTtl  发布到Queue的消息在被丢弃之前可以存活多长时间
-    * lazyMode  若设置惰性队列，请输入lazy。惰性队列模式会在磁盘上存储尽可能多的消息以减少内存使用；若不设置，队列将消息存储在内存缓存以尽可能快地传递消息。[（AMQP版本默认将消息存储到磁盘，不涉及此字段）](tag:hws,hws_hk)
+    * lazyMode  若设置惰性队列，请输入lazy。惰性队列模式会在磁盘上存储尽可能多的消息以减少内存使用；若不设置，队列将消息存储在内存缓存以尽可能快地传递消息。[（AMQP版本默认将消息存储到磁盘，不涉及此字段）](tag:hws,hws_hk,hws_eu)
     *
     * @var string[]
     */
@@ -131,11 +131,11 @@ class CreateQueueBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  Queue名称
     * autoDelete  是否自动删除
-    * durable  是否持久化[（AMQP版本默认持久化，不涉及此字段）](tag:hws,hws_hk)
+    * durable  是否持久化[（AMQP版本默认持久化，不涉及此字段）](tag:hws,hws_hk,hws_eu)
     * deadLetterExchange  死信Exchange名称，消息被拒绝或过期时将重新发布到该Exchange。
     * deadLetterRoutingKey  死信Exchange的RoutingKey，死信Exchange会发送死信消息到绑定对应RoutingKey的Queue上。
     * messageTtl  发布到Queue的消息在被丢弃之前可以存活多长时间
-    * lazyMode  若设置惰性队列，请输入lazy。惰性队列模式会在磁盘上存储尽可能多的消息以减少内存使用；若不设置，队列将消息存储在内存缓存以尽可能快地传递消息。[（AMQP版本默认将消息存储到磁盘，不涉及此字段）](tag:hws,hws_hk)
+    * lazyMode  若设置惰性队列，请输入lazy。惰性队列模式会在磁盘上存储尽可能多的消息以减少内存使用；若不设置，队列将消息存储在内存缓存以尽可能快地传递消息。[（AMQP版本默认将消息存储到磁盘，不涉及此字段）](tag:hws,hws_hk,hws_eu)
     *
     * @var string[]
     */
@@ -294,7 +294,7 @@ class CreateQueueBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets durable
-    *  是否持久化[（AMQP版本默认持久化，不涉及此字段）](tag:hws,hws_hk)
+    *  是否持久化[（AMQP版本默认持久化，不涉及此字段）](tag:hws,hws_hk,hws_eu)
     *
     * @return bool|null
     */
@@ -306,7 +306,7 @@ class CreateQueueBody implements ModelInterface, ArrayAccess
     /**
     * Sets durable
     *
-    * @param bool|null $durable 是否持久化[（AMQP版本默认持久化，不涉及此字段）](tag:hws,hws_hk)
+    * @param bool|null $durable 是否持久化[（AMQP版本默认持久化，不涉及此字段）](tag:hws,hws_hk,hws_eu)
     *
     * @return $this
     */
@@ -390,7 +390,7 @@ class CreateQueueBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets lazyMode
-    *  若设置惰性队列，请输入lazy。惰性队列模式会在磁盘上存储尽可能多的消息以减少内存使用；若不设置，队列将消息存储在内存缓存以尽可能快地传递消息。[（AMQP版本默认将消息存储到磁盘，不涉及此字段）](tag:hws,hws_hk)
+    *  若设置惰性队列，请输入lazy。惰性队列模式会在磁盘上存储尽可能多的消息以减少内存使用；若不设置，队列将消息存储在内存缓存以尽可能快地传递消息。[（AMQP版本默认将消息存储到磁盘，不涉及此字段）](tag:hws,hws_hk,hws_eu)
     *
     * @return string|null
     */
@@ -402,7 +402,7 @@ class CreateQueueBody implements ModelInterface, ArrayAccess
     /**
     * Sets lazyMode
     *
-    * @param string|null $lazyMode 若设置惰性队列，请输入lazy。惰性队列模式会在磁盘上存储尽可能多的消息以减少内存使用；若不设置，队列将消息存储在内存缓存以尽可能快地传递消息。[（AMQP版本默认将消息存储到磁盘，不涉及此字段）](tag:hws,hws_hk)
+    * @param string|null $lazyMode 若设置惰性队列，请输入lazy。惰性队列模式会在磁盘上存储尽可能多的消息以减少内存使用；若不设置，队列将消息存储在内存缓存以尽可能快地传递消息。[（AMQP版本默认将消息存储到磁盘，不涉及此字段）](tag:hws,hws_hk,hws_eu)
     *
     * @return $this
     */

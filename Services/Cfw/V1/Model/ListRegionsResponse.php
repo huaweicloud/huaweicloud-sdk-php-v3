@@ -21,17 +21,17 @@ class ListRegionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * data  region列表
+    * data  **参数解释**： 地域列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'data' => 'object'
+            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\IpRegionResponseBodyData[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * data  region列表
+    * data  **参数解释**： 地域列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListRegionsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * data  region列表
+    * data  **参数解释**： 地域列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListRegionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * data  region列表
+    * data  **参数解释**： 地域列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListRegionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * data  region列表
+    * data  **参数解释**： 地域列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class ListRegionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
-    *  region列表
+    *  **参数解释**： 地域列表 **取值范围**： 不涉及
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\IpRegionResponseBodyData[]|null
     */
     public function getData()
     {
@@ -187,7 +187,7 @@ class ListRegionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param object|null $data region列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\IpRegionResponseBodyData[]|null $data **参数解释**： 地域列表 **取值范围**： 不涉及
     *
     * @return $this
     */

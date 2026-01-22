@@ -22,7 +22,7 @@ class SendMessageReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  **参数解释**： 消息内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * propertyList  **参数解释**： 特性列表。
+    * propertyList  **参数解释**： 特性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class SendMessageReq implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  **参数解释**： 消息内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * propertyList  **参数解释**： 特性列表。
+    * propertyList  **参数解释**： 特性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class SendMessageReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  **参数解释**： 消息内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * propertyList  **参数解释**： 特性列表。
+    * propertyList  **参数解释**： 特性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class SendMessageReq implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  **参数解释**： 消息内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * propertyList  **参数解释**： 特性列表。
+    * propertyList  **参数解释**： 特性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class SendMessageReq implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  **参数解释**： 消息内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * propertyList  **参数解释**： 特性列表。
+    * propertyList  **参数解释**： 特性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -180,6 +180,12 @@ class SendMessageReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['topic'] === null) {
+            $invalidProperties[] = "'topic' can't be null";
+        }
+        if ($this->container['body'] === null) {
+            $invalidProperties[] = "'body' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -198,7 +204,7 @@ class SendMessageReq implements ModelInterface, ArrayAccess
     * Gets topic
     *  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return string|null
+    * @return string
     */
     public function getTopic()
     {
@@ -208,7 +214,7 @@ class SendMessageReq implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string $topic **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -222,7 +228,7 @@ class SendMessageReq implements ModelInterface, ArrayAccess
     * Gets body
     *  **参数解释**： 消息内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return string|null
+    * @return string
     */
     public function getBody()
     {
@@ -232,7 +238,7 @@ class SendMessageReq implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param string|null $body **参数解释**： 消息内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string $body **参数解释**： 消息内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -244,7 +250,7 @@ class SendMessageReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets propertyList
-    *  **参数解释**： 特性列表。
+    *  **参数解释**： 特性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\SendMessageProperties[]|null
     */
@@ -256,7 +262,7 @@ class SendMessageReq implements ModelInterface, ArrayAccess
     /**
     * Sets propertyList
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\SendMessageProperties[]|null $propertyList **参数解释**： 特性列表。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\SendMessageProperties[]|null $propertyList **参数解释**： 特性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */

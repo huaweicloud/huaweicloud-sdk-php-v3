@@ -21,12 +21,12 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  **参数解释**： 总数。 **取值范围**： 大于等于0。
-    * nextOffset  **参数解释**： 下个分页的offset。 **取值范围**： 大于等于0。
-    * previousOffset  **参数解释**： 上个分页的offset。 **取值范围**： 大于等于0。
-    * engine  **参数解释**： 引擎类型。 **取值范围**： 不涉及。
-    * versions  **参数解释**： 支持的版本。
-    * products  **参数解释**： 产品详情列表。
+    * total  **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
+    * nextOffset  **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * previousOffset  **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * engine  **参数解释**： 引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+    * versions  **参数解释**： 支持的版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * products  **参数解释**： 产品详情列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -41,12 +41,12 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  **参数解释**： 总数。 **取值范围**： 大于等于0。
-    * nextOffset  **参数解释**： 下个分页的offset。 **取值范围**： 大于等于0。
-    * previousOffset  **参数解释**： 上个分页的offset。 **取值范围**： 大于等于0。
-    * engine  **参数解释**： 引擎类型。 **取值范围**： 不涉及。
-    * versions  **参数解释**： 支持的版本。
-    * products  **参数解释**： 产品详情列表。
+    * total  **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
+    * nextOffset  **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * previousOffset  **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * engine  **参数解释**： 引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+    * versions  **参数解释**： 支持的版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * products  **参数解释**： 产品详情列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -82,12 +82,12 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  **参数解释**： 总数。 **取值范围**： 大于等于0。
-    * nextOffset  **参数解释**： 下个分页的offset。 **取值范围**： 大于等于0。
-    * previousOffset  **参数解释**： 上个分页的offset。 **取值范围**： 大于等于0。
-    * engine  **参数解释**： 引擎类型。 **取值范围**： 不涉及。
-    * versions  **参数解释**： 支持的版本。
-    * products  **参数解释**： 产品详情列表。
+    * total  **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
+    * nextOffset  **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * previousOffset  **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * engine  **参数解释**： 引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+    * versions  **参数解释**： 支持的版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * products  **参数解释**： 产品详情列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -102,12 +102,12 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  **参数解释**： 总数。 **取值范围**： 大于等于0。
-    * nextOffset  **参数解释**： 下个分页的offset。 **取值范围**： 大于等于0。
-    * previousOffset  **参数解释**： 上个分页的offset。 **取值范围**： 大于等于0。
-    * engine  **参数解释**： 引擎类型。 **取值范围**： 不涉及。
-    * versions  **参数解释**： 支持的版本。
-    * products  **参数解释**： 产品详情列表。
+    * total  **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
+    * nextOffset  **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * previousOffset  **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * engine  **参数解释**： 引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+    * versions  **参数解释**： 支持的版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * products  **参数解释**： 产品详情列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -122,12 +122,12 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  **参数解释**： 总数。 **取值范围**： 大于等于0。
-    * nextOffset  **参数解释**： 下个分页的offset。 **取值范围**： 大于等于0。
-    * previousOffset  **参数解释**： 上个分页的offset。 **取值范围**： 大于等于0。
-    * engine  **参数解释**： 引擎类型。 **取值范围**： 不涉及。
-    * versions  **参数解释**： 支持的版本。
-    * products  **参数解释**： 产品详情列表。
+    * total  **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
+    * nextOffset  **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * previousOffset  **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * engine  **参数解释**： 引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+    * versions  **参数解释**： 支持的版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * products  **参数解释**： 产品详情列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -230,7 +230,7 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  **参数解释**： 总数。 **取值范围**： 大于等于0。
+    *  **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -242,7 +242,7 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param float|null $total **参数解释**： 总数。 **取值范围**： 大于等于0。
+    * @param float|null $total **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -254,7 +254,7 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nextOffset
-    *  **参数解释**： 下个分页的offset。 **取值范围**： 大于等于0。
+    *  **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -266,7 +266,7 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nextOffset
     *
-    * @param int|null $nextOffset **参数解释**： 下个分页的offset。 **取值范围**： 大于等于0。
+    * @param int|null $nextOffset **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -278,7 +278,7 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets previousOffset
-    *  **参数解释**： 上个分页的offset。 **取值范围**： 大于等于0。
+    *  **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -290,7 +290,7 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets previousOffset
     *
-    * @param int|null $previousOffset **参数解释**： 上个分页的offset。 **取值范围**： 大于等于0。
+    * @param int|null $previousOffset **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -302,7 +302,7 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  **参数解释**： 引擎类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -314,7 +314,7 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string|null $engine **参数解释**： 引擎类型。 **取值范围**： 不涉及。
+    * @param string|null $engine **参数解释**： 引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -326,7 +326,7 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets versions
-    *  **参数解释**： 支持的版本。
+    *  **参数解释**： 支持的版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -338,7 +338,7 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets versions
     *
-    * @param string[]|null $versions **参数解释**： 支持的版本。
+    * @param string[]|null $versions **参数解释**： 支持的版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -350,7 +350,7 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets products
-    *  **参数解释**： 产品详情列表。
+    *  **参数解释**： 产品详情列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\ProductEntity[]|null
     */
@@ -362,7 +362,7 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets products
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ProductEntity[]|null $products **参数解释**： 产品详情列表。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ProductEntity[]|null $products **参数解释**： 产品详情列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

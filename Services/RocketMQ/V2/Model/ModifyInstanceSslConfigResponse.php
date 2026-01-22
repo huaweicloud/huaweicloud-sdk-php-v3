@@ -21,8 +21,8 @@ class ModifyInstanceSslConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  任务ID。
-    * tlsMode  协议模式。
+    * jobId  **参数解释**： 任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * tlsMode  **参数解释**： 协议模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ModifyInstanceSslConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  任务ID。
-    * tlsMode  协议模式。
+    * jobId  **参数解释**： 任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * tlsMode  **参数解释**： 协议模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ModifyInstanceSslConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  任务ID。
-    * tlsMode  协议模式。
+    * jobId  **参数解释**： 任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * tlsMode  **参数解释**： 协议模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ModifyInstanceSslConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  任务ID。
-    * tlsMode  协议模式。
+    * jobId  **参数解释**： 任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * tlsMode  **参数解释**： 协议模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ModifyInstanceSslConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  任务ID。
-    * tlsMode  协议模式。
+    * jobId  **参数解释**： 任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * tlsMode  **参数解释**： 协议模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ModifyInstanceSslConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  任务ID。
+    *  **参数解释**： 任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class ModifyInstanceSslConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 任务ID。
+    * @param string|null $jobId **参数解释**： 任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ModifyInstanceSslConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets tlsMode
-    *  协议模式。
+    *  **参数解释**： 协议模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class ModifyInstanceSslConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets tlsMode
     *
-    * @param string|null $tlsMode 协议模式。
+    * @param string|null $tlsMode **参数解释**： 协议模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

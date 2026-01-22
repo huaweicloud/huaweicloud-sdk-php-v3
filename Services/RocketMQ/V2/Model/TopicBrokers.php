@@ -20,9 +20,9 @@ class TopicBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * brokerName  **参数解释**： 代理名称。 **取值范围**： 不涉及。
-    * readQueueNum  **参数解释**： 读队列个数。 **取值范围**： 不涉及。
-    * writeQueueNum  **参数解释**： 写队列个数。 **取值范围**： 不涉及。
+    * brokerName  **参数解释**： 代理名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * readQueueNum  **参数解释**： 读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * writeQueueNum  **参数解释**： 写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class TopicBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * brokerName  **参数解释**： 代理名称。 **取值范围**： 不涉及。
-    * readQueueNum  **参数解释**： 读队列个数。 **取值范围**： 不涉及。
-    * writeQueueNum  **参数解释**： 写队列个数。 **取值范围**： 不涉及。
+    * brokerName  **参数解释**： 代理名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * readQueueNum  **参数解释**： 读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * writeQueueNum  **参数解释**： 写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class TopicBrokers implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * brokerName  **参数解释**： 代理名称。 **取值范围**： 不涉及。
-    * readQueueNum  **参数解释**： 读队列个数。 **取值范围**： 不涉及。
-    * writeQueueNum  **参数解释**： 写队列个数。 **取值范围**： 不涉及。
+    * brokerName  **参数解释**： 代理名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * readQueueNum  **参数解释**： 读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * writeQueueNum  **参数解释**： 写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class TopicBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * brokerName  **参数解释**： 代理名称。 **取值范围**： 不涉及。
-    * readQueueNum  **参数解释**： 读队列个数。 **取值范围**： 不涉及。
-    * writeQueueNum  **参数解释**： 写队列个数。 **取值范围**： 不涉及。
+    * brokerName  **参数解释**： 代理名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * readQueueNum  **参数解释**： 读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * writeQueueNum  **参数解释**： 写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class TopicBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * brokerName  **参数解释**： 代理名称。 **取值范围**： 不涉及。
-    * readQueueNum  **参数解释**： 读队列个数。 **取值范围**： 不涉及。
-    * writeQueueNum  **参数解释**： 写队列个数。 **取值范围**： 不涉及。
+    * brokerName  **参数解释**： 代理名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * readQueueNum  **参数解释**： 读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * writeQueueNum  **参数解释**： 写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class TopicBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokerName
-    *  **参数解释**： 代理名称。 **取值范围**： 不涉及。
+    *  **参数解释**： 代理名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class TopicBrokers implements ModelInterface, ArrayAccess
     /**
     * Sets brokerName
     *
-    * @param string|null $brokerName **参数解释**： 代理名称。 **取值范围**： 不涉及。
+    * @param string|null $brokerName **参数解释**： 代理名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class TopicBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Gets readQueueNum
-    *  **参数解释**： 读队列个数。 **取值范围**： 不涉及。
+    *  **参数解释**： 读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -232,7 +232,7 @@ class TopicBrokers implements ModelInterface, ArrayAccess
     /**
     * Sets readQueueNum
     *
-    * @param float|null $readQueueNum **参数解释**： 读队列个数。 **取值范围**： 不涉及。
+    * @param float|null $readQueueNum **参数解释**： 读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class TopicBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Gets writeQueueNum
-    *  **参数解释**： 写队列个数。 **取值范围**： 不涉及。
+    *  **参数解释**： 写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -256,7 +256,7 @@ class TopicBrokers implements ModelInterface, ArrayAccess
     /**
     * Sets writeQueueNum
     *
-    * @param float|null $writeQueueNum **参数解释**： 写队列个数。 **取值范围**： 不涉及。
+    * @param float|null $writeQueueNum **参数解释**： 写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

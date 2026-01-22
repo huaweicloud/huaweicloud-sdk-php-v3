@@ -20,11 +20,11 @@ class NodeContextEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID
-    * brokerName  broker名称
-    * brokerId  broker的ID
-    * address  地址
-    * publicAddress  公网地址
+    * id  **参数解释**： ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokerName  **参数解释**： broker名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokerId  **参数解释**： broker的ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * address  **参数解释**： 地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicAddress  **参数解释**： 公网地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class NodeContextEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID
-    * brokerName  broker名称
-    * brokerId  broker的ID
-    * address  地址
-    * publicAddress  公网地址
+    * id  **参数解释**： ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokerName  **参数解释**： broker名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokerId  **参数解释**： broker的ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * address  **参数解释**： 地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicAddress  **参数解释**： 公网地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class NodeContextEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID
-    * brokerName  broker名称
-    * brokerId  broker的ID
-    * address  地址
-    * publicAddress  公网地址
+    * id  **参数解释**： ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokerName  **参数解释**： broker名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokerId  **参数解释**： broker的ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * address  **参数解释**： 地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicAddress  **参数解释**： 公网地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class NodeContextEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID
-    * brokerName  broker名称
-    * brokerId  broker的ID
-    * address  地址
-    * publicAddress  公网地址
+    * id  **参数解释**： ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokerName  **参数解释**： broker名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokerId  **参数解释**： broker的ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * address  **参数解释**： 地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicAddress  **参数解释**： 公网地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class NodeContextEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID
-    * brokerName  broker名称
-    * brokerId  broker的ID
-    * address  地址
-    * publicAddress  公网地址
+    * id  **参数解释**： ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokerName  **参数解释**： broker名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokerId  **参数解释**： broker的ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * address  **参数解释**： 地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicAddress  **参数解释**： 公网地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class NodeContextEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  **参数解释**： ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class NodeContextEntity implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ID
+    * @param string|null $id **参数解释**： ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class NodeContextEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokerName
-    *  broker名称
+    *  **参数解释**： broker名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class NodeContextEntity implements ModelInterface, ArrayAccess
     /**
     * Sets brokerName
     *
-    * @param string|null $brokerName broker名称
+    * @param string|null $brokerName **参数解释**： broker名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class NodeContextEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokerId
-    *  broker的ID
+    *  **参数解释**： broker的ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -278,7 +278,7 @@ class NodeContextEntity implements ModelInterface, ArrayAccess
     /**
     * Sets brokerId
     *
-    * @param int|null $brokerId broker的ID
+    * @param int|null $brokerId **参数解释**： broker的ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class NodeContextEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets address
-    *  地址
+    *  **参数解释**： 地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class NodeContextEntity implements ModelInterface, ArrayAccess
     /**
     * Sets address
     *
-    * @param string|null $address 地址
+    * @param string|null $address **参数解释**： 地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class NodeContextEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicAddress
-    *  公网地址
+    *  **参数解释**： 公网地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class NodeContextEntity implements ModelInterface, ArrayAccess
     /**
     * Sets publicAddress
     *
-    * @param string|null $publicAddress 公网地址
+    * @param string|null $publicAddress **参数解释**： 公网地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

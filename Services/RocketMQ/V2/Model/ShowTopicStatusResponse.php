@@ -21,9 +21,9 @@ class ShowTopicStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * maxOffset  最大偏移量。
-    * minOffset  最小偏移量。
-    * brokers  代理。
+    * maxOffset  **参数解释**： 最大偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * minOffset  **参数解释**： 最小偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ShowTopicStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * maxOffset  最大偏移量。
-    * minOffset  最小偏移量。
-    * brokers  代理。
+    * maxOffset  **参数解释**： 最大偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * minOffset  **参数解释**： 最小偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ShowTopicStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * maxOffset  最大偏移量。
-    * minOffset  最小偏移量。
-    * brokers  代理。
+    * maxOffset  **参数解释**： 最大偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * minOffset  **参数解释**： 最小偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ShowTopicStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * maxOffset  最大偏移量。
-    * minOffset  最小偏移量。
-    * brokers  代理。
+    * maxOffset  **参数解释**： 最大偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * minOffset  **参数解释**： 最小偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ShowTopicStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * maxOffset  最大偏移量。
-    * minOffset  最小偏移量。
-    * brokers  代理。
+    * maxOffset  **参数解释**： 最大偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * minOffset  **参数解释**： 最小偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ShowTopicStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxOffset
-    *  最大偏移量。
+    *  **参数解释**： 最大偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -209,7 +209,7 @@ class ShowTopicStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets maxOffset
     *
-    * @param int|null $maxOffset 最大偏移量。
+    * @param int|null $maxOffset **参数解释**： 最大偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ShowTopicStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets minOffset
-    *  最小偏移量。
+    *  **参数解释**： 最小偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class ShowTopicStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets minOffset
     *
-    * @param int|null $minOffset 最小偏移量。
+    * @param int|null $minOffset **参数解释**： 最小偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ShowTopicStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokers
-    *  代理。
+    *  **参数解释**： 代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\ShowTopicStatusRespBrokers[]|null
     */
@@ -257,7 +257,7 @@ class ShowTopicStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets brokers
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ShowTopicStatusRespBrokers[]|null $brokers 代理。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ShowTopicStatusRespBrokers[]|null $brokers **参数解释**： 代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

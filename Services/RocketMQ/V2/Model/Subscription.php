@@ -20,8 +20,8 @@ class Subscription implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topic  订阅的Topic名称。
-    * type  订阅类型，取值如下：TAG和SQL92。
+    * topic  **参数解释**： 订阅的Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 订阅类型。 **约束限制**： 不涉及。 **取值范围**： - TAG：基于TAG进行订阅。 - SQL92：基于消息属性进行复杂条件过滤的订阅。 **默认取值**： 不涉及。
     * expression  订阅tag字符。
     *
     * @var string[]
@@ -34,8 +34,8 @@ class Subscription implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topic  订阅的Topic名称。
-    * type  订阅类型，取值如下：TAG和SQL92。
+    * topic  **参数解释**： 订阅的Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 订阅类型。 **约束限制**： 不涉及。 **取值范围**： - TAG：基于TAG进行订阅。 - SQL92：基于消息属性进行复杂条件过滤的订阅。 **默认取值**： 不涉及。
     * expression  订阅tag字符。
     *
     * @var string[]
@@ -69,8 +69,8 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topic  订阅的Topic名称。
-    * type  订阅类型，取值如下：TAG和SQL92。
+    * topic  **参数解释**： 订阅的Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 订阅类型。 **约束限制**： 不涉及。 **取值范围**： - TAG：基于TAG进行订阅。 - SQL92：基于消息属性进行复杂条件过滤的订阅。 **默认取值**： 不涉及。
     * expression  订阅tag字符。
     *
     * @var string[]
@@ -83,8 +83,8 @@ class Subscription implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topic  订阅的Topic名称。
-    * type  订阅类型，取值如下：TAG和SQL92。
+    * topic  **参数解释**： 订阅的Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 订阅类型。 **约束限制**： 不涉及。 **取值范围**： - TAG：基于TAG进行订阅。 - SQL92：基于消息属性进行复杂条件过滤的订阅。 **默认取值**： 不涉及。
     * expression  订阅tag字符。
     *
     * @var string[]
@@ -97,8 +97,8 @@ class Subscription implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topic  订阅的Topic名称。
-    * type  订阅类型，取值如下：TAG和SQL92。
+    * topic  **参数解释**： 订阅的Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 订阅类型。 **约束限制**： 不涉及。 **取值范围**： - TAG：基于TAG进行订阅。 - SQL92：基于消息属性进行复杂条件过滤的订阅。 **默认取值**： 不涉及。
     * expression  订阅tag字符。
     *
     * @var string[]
@@ -196,7 +196,7 @@ class Subscription implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  订阅的Topic名称。
+    *  **参数解释**： 订阅的Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic 订阅的Topic名称。
+    * @param string|null $topic **参数解释**： 订阅的Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class Subscription implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  订阅类型，取值如下：TAG和SQL92。
+    *  **参数解释**： 订阅类型。 **约束限制**： 不涉及。 **取值范围**： - TAG：基于TAG进行订阅。 - SQL92：基于消息属性进行复杂条件过滤的订阅。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 订阅类型，取值如下：TAG和SQL92。
+    * @param string|null $type **参数解释**： 订阅类型。 **约束限制**： 不涉及。 **取值范围**： - TAG：基于TAG进行订阅。 - SQL92：基于消息属性进行复杂条件过滤的订阅。 **默认取值**： 不涉及。
     *
     * @return $this
     */

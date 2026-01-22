@@ -20,10 +20,10 @@ class CustomerIpsPageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  **参数解释**： 查询返回记录的数量限制 **取值范围**： 1-1024
-    * offset  **参数解释**： 偏移量，表示查询该偏移量后面的记录 **取值范围**： 0 - 1024
-    * records  **参数解释**： 自定义IPS规则列表 **取值范围**： 不涉及
-    * total  **参数解释**： 自定义IPS规则数量 **取值范围**： 不涉及
+    * limit  **参数解释**： 查询返回记录的数量限制 **约束限制**：   不涉及 **取值范围**： 1-1024 **默认取值**：   不涉及
+    * offset  **参数解释**： 偏移量，表示查询该偏移量后面的记录 **约束限制**：   不涉及 **取值范围**： 0 - 1024 **默认取值**：   不涉及
+    * records  **参数解释**： 自定义IPS规则列表 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
+    * total  **参数解释**： 自定义IPS规则数量 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class CustomerIpsPageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  **参数解释**： 查询返回记录的数量限制 **取值范围**： 1-1024
-    * offset  **参数解释**： 偏移量，表示查询该偏移量后面的记录 **取值范围**： 0 - 1024
-    * records  **参数解释**： 自定义IPS规则列表 **取值范围**： 不涉及
-    * total  **参数解释**： 自定义IPS规则数量 **取值范围**： 不涉及
+    * limit  **参数解释**： 查询返回记录的数量限制 **约束限制**：   不涉及 **取值范围**： 1-1024 **默认取值**：   不涉及
+    * offset  **参数解释**： 偏移量，表示查询该偏移量后面的记录 **约束限制**：   不涉及 **取值范围**： 0 - 1024 **默认取值**：   不涉及
+    * records  **参数解释**： 自定义IPS规则列表 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
+    * total  **参数解释**： 自定义IPS规则数量 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class CustomerIpsPageInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  **参数解释**： 查询返回记录的数量限制 **取值范围**： 1-1024
-    * offset  **参数解释**： 偏移量，表示查询该偏移量后面的记录 **取值范围**： 0 - 1024
-    * records  **参数解释**： 自定义IPS规则列表 **取值范围**： 不涉及
-    * total  **参数解释**： 自定义IPS规则数量 **取值范围**： 不涉及
+    * limit  **参数解释**： 查询返回记录的数量限制 **约束限制**：   不涉及 **取值范围**： 1-1024 **默认取值**：   不涉及
+    * offset  **参数解释**： 偏移量，表示查询该偏移量后面的记录 **约束限制**：   不涉及 **取值范围**： 0 - 1024 **默认取值**：   不涉及
+    * records  **参数解释**： 自定义IPS规则列表 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
+    * total  **参数解释**： 自定义IPS规则数量 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class CustomerIpsPageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  **参数解释**： 查询返回记录的数量限制 **取值范围**： 1-1024
-    * offset  **参数解释**： 偏移量，表示查询该偏移量后面的记录 **取值范围**： 0 - 1024
-    * records  **参数解释**： 自定义IPS规则列表 **取值范围**： 不涉及
-    * total  **参数解释**： 自定义IPS规则数量 **取值范围**： 不涉及
+    * limit  **参数解释**： 查询返回记录的数量限制 **约束限制**：   不涉及 **取值范围**： 1-1024 **默认取值**：   不涉及
+    * offset  **参数解释**： 偏移量，表示查询该偏移量后面的记录 **约束限制**：   不涉及 **取值范围**： 0 - 1024 **默认取值**：   不涉及
+    * records  **参数解释**： 自定义IPS规则列表 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
+    * total  **参数解释**： 自定义IPS规则数量 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class CustomerIpsPageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  **参数解释**： 查询返回记录的数量限制 **取值范围**： 1-1024
-    * offset  **参数解释**： 偏移量，表示查询该偏移量后面的记录 **取值范围**： 0 - 1024
-    * records  **参数解释**： 自定义IPS规则列表 **取值范围**： 不涉及
-    * total  **参数解释**： 自定义IPS规则数量 **取值范围**： 不涉及
+    * limit  **参数解释**： 查询返回记录的数量限制 **约束限制**：   不涉及 **取值范围**： 1-1024 **默认取值**：   不涉及
+    * offset  **参数解释**： 偏移量，表示查询该偏移量后面的记录 **约束限制**：   不涉及 **取值范围**： 0 - 1024 **默认取值**：   不涉及
+    * records  **参数解释**： 自定义IPS规则列表 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
+    * total  **参数解释**： 自定义IPS规则数量 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class CustomerIpsPageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  **参数解释**： 查询返回记录的数量限制 **取值范围**： 1-1024
+    *  **参数解释**： 查询返回记录的数量限制 **约束限制**：   不涉及 **取值范围**： 1-1024 **默认取值**：   不涉及
     *
     * @return int|null
     */
@@ -219,7 +219,7 @@ class CustomerIpsPageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit **参数解释**： 查询返回记录的数量限制 **取值范围**： 1-1024
+    * @param int|null $limit **参数解释**： 查询返回记录的数量限制 **约束限制**：   不涉及 **取值范围**： 1-1024 **默认取值**：   不涉及
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class CustomerIpsPageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  **参数解释**： 偏移量，表示查询该偏移量后面的记录 **取值范围**： 0 - 1024
+    *  **参数解释**： 偏移量，表示查询该偏移量后面的记录 **约束限制**：   不涉及 **取值范围**： 0 - 1024 **默认取值**：   不涉及
     *
     * @return int|null
     */
@@ -243,7 +243,7 @@ class CustomerIpsPageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset **参数解释**： 偏移量，表示查询该偏移量后面的记录 **取值范围**： 0 - 1024
+    * @param int|null $offset **参数解释**： 偏移量，表示查询该偏移量后面的记录 **约束限制**：   不涉及 **取值范围**： 0 - 1024 **默认取值**：   不涉及
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class CustomerIpsPageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets records
-    *  **参数解释**： 自定义IPS规则列表 **取值范围**： 不涉及
+    *  **参数解释**： 自定义IPS规则列表 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\CustomerIpsListVO[]|null
     */
@@ -267,7 +267,7 @@ class CustomerIpsPageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets records
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\CustomerIpsListVO[]|null $records **参数解释**： 自定义IPS规则列表 **取值范围**： 不涉及
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\CustomerIpsListVO[]|null $records **参数解释**： 自定义IPS规则列表 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class CustomerIpsPageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  **参数解释**： 自定义IPS规则数量 **取值范围**： 不涉及
+    *  **参数解释**： 自定义IPS规则数量 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class CustomerIpsPageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total **参数解释**： 自定义IPS规则数量 **取值范围**： 不涉及
+    * @param int|null $total **参数解释**： 自定义IPS规则数量 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @return $this
     */

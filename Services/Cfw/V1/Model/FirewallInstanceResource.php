@@ -20,12 +20,12 @@ class FirewallInstanceResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceId  资源id，包括防火墙资源id，带宽资源id，eip资源id，vpc资源id，cbc回调后返回id。
-    * cloudServiceType  服务类型，用于CBC使用，特指：hws.service.type.cfw
-    * resourceType  资源类型 包括:   1、云防火墙:hws.resource.type.cfw   2、EIP:hws.resource.type.cfw.exp.eip   3、带宽:hws.resource.type.cfw.exp.bandwidth   4、VPC:hws.resource.type.cfw.exp
-    * resourceSpecCode  库存单位码，包括：1、防火墙标准版cfw.standard 2、防火墙专业版cfw.professional 3、eip标准版cfw.expack.eip.standard 4、eip专业版cfw.expack.eip.professional 5、带宽基础版cfw.expack.bandwidth.standard 6、带宽专业版cfw.expack.bandwidth.professional 7、vpc专业版cfw.expack.vpc.professional
-    * resourceSize  资源数量
-    * resourceSizeMeasureId  资源单位
+    * resourceId  **参数解释**： 资源id，包括防火墙资源id，带宽资源id，eip资源id，vpc资源id，cbc回调后返回id。 **取值范围**： 不涉及
+    * cloudServiceType  **参数解释**： 服务类型，用于CBC使用，特指：hws.service.type.cfw **取值范围**： 不涉及
+    * resourceType  **参数解释**： 资源类型 **取值范围**： - 1：云防火墙:hws.resource.type.cfw - 2：EIP:hws.resource.type.cfw.exp.eip - 3：带宽:hws.resource.type.cfw.exp.bandwidth - 4：VPC:hws.resource.type.cfw.exp
+    * resourceSpecCode  **参数解释**： 库存单位码 **取值范围**： - 1：防火墙标准版cfw.standard - 2：防火墙专业版cfw.professional - 3：eip标准版cfw.expack.eip.standard - 4：eip专业版cfw.expack.eip.professional - 5：带宽基础版cfw.expack.bandwidth.standard - 6：带宽专业版cfw.expack.bandwidth.professional - 7：vpc专业版cfw.expack.vpc.professional
+    * resourceSize  **参数解释**： 资源数量 **取值范围**： 不涉及
+    * resourceSizeMeasureId  **参数解释**： 资源单位 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class FirewallInstanceResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceId  资源id，包括防火墙资源id，带宽资源id，eip资源id，vpc资源id，cbc回调后返回id。
-    * cloudServiceType  服务类型，用于CBC使用，特指：hws.service.type.cfw
-    * resourceType  资源类型 包括:   1、云防火墙:hws.resource.type.cfw   2、EIP:hws.resource.type.cfw.exp.eip   3、带宽:hws.resource.type.cfw.exp.bandwidth   4、VPC:hws.resource.type.cfw.exp
-    * resourceSpecCode  库存单位码，包括：1、防火墙标准版cfw.standard 2、防火墙专业版cfw.professional 3、eip标准版cfw.expack.eip.standard 4、eip专业版cfw.expack.eip.professional 5、带宽基础版cfw.expack.bandwidth.standard 6、带宽专业版cfw.expack.bandwidth.professional 7、vpc专业版cfw.expack.vpc.professional
-    * resourceSize  资源数量
-    * resourceSizeMeasureId  资源单位
+    * resourceId  **参数解释**： 资源id，包括防火墙资源id，带宽资源id，eip资源id，vpc资源id，cbc回调后返回id。 **取值范围**： 不涉及
+    * cloudServiceType  **参数解释**： 服务类型，用于CBC使用，特指：hws.service.type.cfw **取值范围**： 不涉及
+    * resourceType  **参数解释**： 资源类型 **取值范围**： - 1：云防火墙:hws.resource.type.cfw - 2：EIP:hws.resource.type.cfw.exp.eip - 3：带宽:hws.resource.type.cfw.exp.bandwidth - 4：VPC:hws.resource.type.cfw.exp
+    * resourceSpecCode  **参数解释**： 库存单位码 **取值范围**： - 1：防火墙标准版cfw.standard - 2：防火墙专业版cfw.professional - 3：eip标准版cfw.expack.eip.standard - 4：eip专业版cfw.expack.eip.professional - 5：带宽基础版cfw.expack.bandwidth.standard - 6：带宽专业版cfw.expack.bandwidth.professional - 7：vpc专业版cfw.expack.vpc.professional
+    * resourceSize  **参数解释**： 资源数量 **取值范围**： 不涉及
+    * resourceSizeMeasureId  **参数解释**： 资源单位 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class FirewallInstanceResource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceId  资源id，包括防火墙资源id，带宽资源id，eip资源id，vpc资源id，cbc回调后返回id。
-    * cloudServiceType  服务类型，用于CBC使用，特指：hws.service.type.cfw
-    * resourceType  资源类型 包括:   1、云防火墙:hws.resource.type.cfw   2、EIP:hws.resource.type.cfw.exp.eip   3、带宽:hws.resource.type.cfw.exp.bandwidth   4、VPC:hws.resource.type.cfw.exp
-    * resourceSpecCode  库存单位码，包括：1、防火墙标准版cfw.standard 2、防火墙专业版cfw.professional 3、eip标准版cfw.expack.eip.standard 4、eip专业版cfw.expack.eip.professional 5、带宽基础版cfw.expack.bandwidth.standard 6、带宽专业版cfw.expack.bandwidth.professional 7、vpc专业版cfw.expack.vpc.professional
-    * resourceSize  资源数量
-    * resourceSizeMeasureId  资源单位
+    * resourceId  **参数解释**： 资源id，包括防火墙资源id，带宽资源id，eip资源id，vpc资源id，cbc回调后返回id。 **取值范围**： 不涉及
+    * cloudServiceType  **参数解释**： 服务类型，用于CBC使用，特指：hws.service.type.cfw **取值范围**： 不涉及
+    * resourceType  **参数解释**： 资源类型 **取值范围**： - 1：云防火墙:hws.resource.type.cfw - 2：EIP:hws.resource.type.cfw.exp.eip - 3：带宽:hws.resource.type.cfw.exp.bandwidth - 4：VPC:hws.resource.type.cfw.exp
+    * resourceSpecCode  **参数解释**： 库存单位码 **取值范围**： - 1：防火墙标准版cfw.standard - 2：防火墙专业版cfw.professional - 3：eip标准版cfw.expack.eip.standard - 4：eip专业版cfw.expack.eip.professional - 5：带宽基础版cfw.expack.bandwidth.standard - 6：带宽专业版cfw.expack.bandwidth.professional - 7：vpc专业版cfw.expack.vpc.professional
+    * resourceSize  **参数解释**： 资源数量 **取值范围**： 不涉及
+    * resourceSizeMeasureId  **参数解释**： 资源单位 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class FirewallInstanceResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceId  资源id，包括防火墙资源id，带宽资源id，eip资源id，vpc资源id，cbc回调后返回id。
-    * cloudServiceType  服务类型，用于CBC使用，特指：hws.service.type.cfw
-    * resourceType  资源类型 包括:   1、云防火墙:hws.resource.type.cfw   2、EIP:hws.resource.type.cfw.exp.eip   3、带宽:hws.resource.type.cfw.exp.bandwidth   4、VPC:hws.resource.type.cfw.exp
-    * resourceSpecCode  库存单位码，包括：1、防火墙标准版cfw.standard 2、防火墙专业版cfw.professional 3、eip标准版cfw.expack.eip.standard 4、eip专业版cfw.expack.eip.professional 5、带宽基础版cfw.expack.bandwidth.standard 6、带宽专业版cfw.expack.bandwidth.professional 7、vpc专业版cfw.expack.vpc.professional
-    * resourceSize  资源数量
-    * resourceSizeMeasureId  资源单位
+    * resourceId  **参数解释**： 资源id，包括防火墙资源id，带宽资源id，eip资源id，vpc资源id，cbc回调后返回id。 **取值范围**： 不涉及
+    * cloudServiceType  **参数解释**： 服务类型，用于CBC使用，特指：hws.service.type.cfw **取值范围**： 不涉及
+    * resourceType  **参数解释**： 资源类型 **取值范围**： - 1：云防火墙:hws.resource.type.cfw - 2：EIP:hws.resource.type.cfw.exp.eip - 3：带宽:hws.resource.type.cfw.exp.bandwidth - 4：VPC:hws.resource.type.cfw.exp
+    * resourceSpecCode  **参数解释**： 库存单位码 **取值范围**： - 1：防火墙标准版cfw.standard - 2：防火墙专业版cfw.professional - 3：eip标准版cfw.expack.eip.standard - 4：eip专业版cfw.expack.eip.professional - 5：带宽基础版cfw.expack.bandwidth.standard - 6：带宽专业版cfw.expack.bandwidth.professional - 7：vpc专业版cfw.expack.vpc.professional
+    * resourceSize  **参数解释**： 资源数量 **取值范围**： 不涉及
+    * resourceSizeMeasureId  **参数解释**： 资源单位 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class FirewallInstanceResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceId  资源id，包括防火墙资源id，带宽资源id，eip资源id，vpc资源id，cbc回调后返回id。
-    * cloudServiceType  服务类型，用于CBC使用，特指：hws.service.type.cfw
-    * resourceType  资源类型 包括:   1、云防火墙:hws.resource.type.cfw   2、EIP:hws.resource.type.cfw.exp.eip   3、带宽:hws.resource.type.cfw.exp.bandwidth   4、VPC:hws.resource.type.cfw.exp
-    * resourceSpecCode  库存单位码，包括：1、防火墙标准版cfw.standard 2、防火墙专业版cfw.professional 3、eip标准版cfw.expack.eip.standard 4、eip专业版cfw.expack.eip.professional 5、带宽基础版cfw.expack.bandwidth.standard 6、带宽专业版cfw.expack.bandwidth.professional 7、vpc专业版cfw.expack.vpc.professional
-    * resourceSize  资源数量
-    * resourceSizeMeasureId  资源单位
+    * resourceId  **参数解释**： 资源id，包括防火墙资源id，带宽资源id，eip资源id，vpc资源id，cbc回调后返回id。 **取值范围**： 不涉及
+    * cloudServiceType  **参数解释**： 服务类型，用于CBC使用，特指：hws.service.type.cfw **取值范围**： 不涉及
+    * resourceType  **参数解释**： 资源类型 **取值范围**： - 1：云防火墙:hws.resource.type.cfw - 2：EIP:hws.resource.type.cfw.exp.eip - 3：带宽:hws.resource.type.cfw.exp.bandwidth - 4：VPC:hws.resource.type.cfw.exp
+    * resourceSpecCode  **参数解释**： 库存单位码 **取值范围**： - 1：防火墙标准版cfw.standard - 2：防火墙专业版cfw.professional - 3：eip标准版cfw.expack.eip.standard - 4：eip专业版cfw.expack.eip.professional - 5：带宽基础版cfw.expack.bandwidth.standard - 6：带宽专业版cfw.expack.bandwidth.professional - 7：vpc专业版cfw.expack.vpc.professional
+    * resourceSize  **参数解释**： 资源数量 **取值范围**： 不涉及
+    * resourceSizeMeasureId  **参数解释**： 资源单位 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -232,7 +232,7 @@ class FirewallInstanceResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  资源id，包括防火墙资源id，带宽资源id，eip资源id，vpc资源id，cbc回调后返回id。
+    *  **参数解释**： 资源id，包括防火墙资源id，带宽资源id，eip资源id，vpc资源id，cbc回调后返回id。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class FirewallInstanceResource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId 资源id，包括防火墙资源id，带宽资源id，eip资源id，vpc资源id，cbc回调后返回id。
+    * @param string|null $resourceId **参数解释**： 资源id，包括防火墙资源id，带宽资源id，eip资源id，vpc资源id，cbc回调后返回id。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class FirewallInstanceResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudServiceType
-    *  服务类型，用于CBC使用，特指：hws.service.type.cfw
+    *  **参数解释**： 服务类型，用于CBC使用，特指：hws.service.type.cfw **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -268,7 +268,7 @@ class FirewallInstanceResource implements ModelInterface, ArrayAccess
     /**
     * Sets cloudServiceType
     *
-    * @param string|null $cloudServiceType 服务类型，用于CBC使用，特指：hws.service.type.cfw
+    * @param string|null $cloudServiceType **参数解释**： 服务类型，用于CBC使用，特指：hws.service.type.cfw **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class FirewallInstanceResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  资源类型 包括:   1、云防火墙:hws.resource.type.cfw   2、EIP:hws.resource.type.cfw.exp.eip   3、带宽:hws.resource.type.cfw.exp.bandwidth   4、VPC:hws.resource.type.cfw.exp
+    *  **参数解释**： 资源类型 **取值范围**： - 1：云防火墙:hws.resource.type.cfw - 2：EIP:hws.resource.type.cfw.exp.eip - 3：带宽:hws.resource.type.cfw.exp.bandwidth - 4：VPC:hws.resource.type.cfw.exp
     *
     * @return string|null
     */
@@ -292,7 +292,7 @@ class FirewallInstanceResource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string|null $resourceType 资源类型 包括:   1、云防火墙:hws.resource.type.cfw   2、EIP:hws.resource.type.cfw.exp.eip   3、带宽:hws.resource.type.cfw.exp.bandwidth   4、VPC:hws.resource.type.cfw.exp
+    * @param string|null $resourceType **参数解释**： 资源类型 **取值范围**： - 1：云防火墙:hws.resource.type.cfw - 2：EIP:hws.resource.type.cfw.exp.eip - 3：带宽:hws.resource.type.cfw.exp.bandwidth - 4：VPC:hws.resource.type.cfw.exp
     *
     * @return $this
     */
@@ -304,7 +304,7 @@ class FirewallInstanceResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSpecCode
-    *  库存单位码，包括：1、防火墙标准版cfw.standard 2、防火墙专业版cfw.professional 3、eip标准版cfw.expack.eip.standard 4、eip专业版cfw.expack.eip.professional 5、带宽基础版cfw.expack.bandwidth.standard 6、带宽专业版cfw.expack.bandwidth.professional 7、vpc专业版cfw.expack.vpc.professional
+    *  **参数解释**： 库存单位码 **取值范围**： - 1：防火墙标准版cfw.standard - 2：防火墙专业版cfw.professional - 3：eip标准版cfw.expack.eip.standard - 4：eip专业版cfw.expack.eip.professional - 5：带宽基础版cfw.expack.bandwidth.standard - 6：带宽专业版cfw.expack.bandwidth.professional - 7：vpc专业版cfw.expack.vpc.professional
     *
     * @return string|null
     */
@@ -316,7 +316,7 @@ class FirewallInstanceResource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSpecCode
     *
-    * @param string|null $resourceSpecCode 库存单位码，包括：1、防火墙标准版cfw.standard 2、防火墙专业版cfw.professional 3、eip标准版cfw.expack.eip.standard 4、eip专业版cfw.expack.eip.professional 5、带宽基础版cfw.expack.bandwidth.standard 6、带宽专业版cfw.expack.bandwidth.professional 7、vpc专业版cfw.expack.vpc.professional
+    * @param string|null $resourceSpecCode **参数解释**： 库存单位码 **取值范围**： - 1：防火墙标准版cfw.standard - 2：防火墙专业版cfw.professional - 3：eip标准版cfw.expack.eip.standard - 4：eip专业版cfw.expack.eip.professional - 5：带宽基础版cfw.expack.bandwidth.standard - 6：带宽专业版cfw.expack.bandwidth.professional - 7：vpc专业版cfw.expack.vpc.professional
     *
     * @return $this
     */
@@ -328,7 +328,7 @@ class FirewallInstanceResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSize
-    *  资源数量
+    *  **参数解释**： 资源数量 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -340,7 +340,7 @@ class FirewallInstanceResource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSize
     *
-    * @param int|null $resourceSize 资源数量
+    * @param int|null $resourceSize **参数解释**： 资源数量 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -352,7 +352,7 @@ class FirewallInstanceResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSizeMeasureId
-    *  资源单位
+    *  **参数解释**： 资源单位 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -364,7 +364,7 @@ class FirewallInstanceResource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSizeMeasureId
     *
-    * @param int|null $resourceSizeMeasureId 资源单位
+    * @param int|null $resourceSizeMeasureId **参数解释**： 资源单位 **取值范围**： 不涉及
     *
     * @return $this
     */

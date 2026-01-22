@@ -20,8 +20,8 @@ class CreateTopicReqQueues implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * broker  关联的代理。
-    * queueNum  队列数，范围1~50。
+    * broker  **参数解释**： 关联的代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queueNum  **参数解释**： 队列数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CreateTopicReqQueues implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * broker  关联的代理。
-    * queueNum  队列数，范围1~50。
+    * broker  **参数解释**： 关联的代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queueNum  **参数解释**： 队列数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CreateTopicReqQueues implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * broker  关联的代理。
-    * queueNum  队列数，范围1~50。
+    * broker  **参数解释**： 关联的代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queueNum  **参数解释**： 队列数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CreateTopicReqQueues implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * broker  关联的代理。
-    * queueNum  队列数，范围1~50。
+    * broker  **参数解释**： 关联的代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queueNum  **参数解释**： 队列数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CreateTopicReqQueues implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * broker  关联的代理。
-    * queueNum  队列数，范围1~50。
+    * broker  **参数解释**： 关联的代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queueNum  **参数解释**： 队列数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class CreateTopicReqQueues implements ModelInterface, ArrayAccess
 
     /**
     * Gets broker
-    *  关联的代理。
+    *  **参数解释**： 关联的代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class CreateTopicReqQueues implements ModelInterface, ArrayAccess
     /**
     * Sets broker
     *
-    * @param string|null $broker 关联的代理。
+    * @param string|null $broker **参数解释**： 关联的代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class CreateTopicReqQueues implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueNum
-    *  队列数，范围1~50。
+    *  **参数解释**： 队列数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -221,7 +221,7 @@ class CreateTopicReqQueues implements ModelInterface, ArrayAccess
     /**
     * Sets queueNum
     *
-    * @param float|null $queueNum 队列数，范围1~50。
+    * @param float|null $queueNum **参数解释**： 队列数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 不涉及。
     *
     * @return $this
     */

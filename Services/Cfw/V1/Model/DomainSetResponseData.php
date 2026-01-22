@@ -20,8 +20,8 @@ class DomainSetResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  域名组id
-    * name  域名组名称
+    * id  **参数解释**： 域名组id **取值范围**： 不涉及
+    * name  **参数解释**： 域名组名称 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DomainSetResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  域名组id
-    * name  域名组名称
+    * id  **参数解释**： 域名组id **取值范围**： 不涉及
+    * name  **参数解释**： 域名组名称 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DomainSetResponseData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  域名组id
-    * name  域名组名称
+    * id  **参数解释**： 域名组id **取值范围**： 不涉及
+    * name  **参数解释**： 域名组名称 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DomainSetResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  域名组id
-    * name  域名组名称
+    * id  **参数解释**： 域名组id **取值范围**： 不涉及
+    * name  **参数解释**： 域名组名称 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DomainSetResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  域名组id
-    * name  域名组名称
+    * id  **参数解释**： 域名组id **取值范围**： 不涉及
+    * name  **参数解释**： 域名组名称 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class DomainSetResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  域名组id
+    *  **参数解释**： 域名组id **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class DomainSetResponseData implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 域名组id
+    * @param string|null $id **参数解释**： 域名组id **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class DomainSetResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  域名组名称
+    *  **参数解释**： 域名组名称 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class DomainSetResponseData implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 域名组名称
+    * @param string|null $name **参数解释**： 域名组名称 **取值范围**： 不涉及
     *
     * @return $this
     */

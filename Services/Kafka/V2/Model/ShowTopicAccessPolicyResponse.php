@@ -22,7 +22,7 @@ class ShowTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  Topic名称。
-    * topicType  Topic类型。
+    * topicType  **参数解释**： Topic类型。 **取值范围**： - 0：普通Topic。 - 1：系统(内部)Topic。
     * policies  权限列表。
     *
     * @var string[]
@@ -36,7 +36,7 @@ class ShowTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  Topic名称。
-    * topicType  Topic类型。
+    * topicType  **参数解释**： Topic类型。 **取值范围**： - 0：普通Topic。 - 1：系统(内部)Topic。
     * policies  权限列表。
     *
     * @var string[]
@@ -71,7 +71,7 @@ class ShowTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  Topic名称。
-    * topicType  Topic类型。
+    * topicType  **参数解释**： Topic类型。 **取值范围**： - 0：普通Topic。 - 1：系统(内部)Topic。
     * policies  权限列表。
     *
     * @var string[]
@@ -85,7 +85,7 @@ class ShowTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  Topic名称。
-    * topicType  Topic类型。
+    * topicType  **参数解释**： Topic类型。 **取值范围**： - 0：普通Topic。 - 1：系统(内部)Topic。
     * policies  权限列表。
     *
     * @var string[]
@@ -99,7 +99,7 @@ class ShowTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  Topic名称。
-    * topicType  Topic类型。
+    * topicType  **参数解释**： Topic类型。 **取值范围**： - 0：普通Topic。 - 1：系统(内部)Topic。
     * policies  权限列表。
     *
     * @var string[]
@@ -221,7 +221,7 @@ class ShowTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicType
-    *  Topic类型。
+    *  **参数解释**： Topic类型。 **取值范围**： - 0：普通Topic。 - 1：系统(内部)Topic。
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class ShowTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets topicType
     *
-    * @param int|null $topicType Topic类型。
+    * @param int|null $topicType **参数解释**： Topic类型。 **取值范围**： - 0：普通Topic。 - 1：系统(内部)Topic。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class UpdateConfigurationParameterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * configId  参数模板ID。
+    * configId  **参数解释：** 参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UpdateConfigurationParameterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * configId  参数模板ID。
+    * configId  **参数解释：** 参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateConfigurationParameterRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * configId  参数模板ID。
+    * configId  **参数解释：** 参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateConfigurationParameterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * configId  参数模板ID。
+    * configId  **参数解释：** 参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateConfigurationParameterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * configId  参数模板ID。
+    * configId  **参数解释：** 参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * body  body
     *
     * @var string[]
@@ -188,7 +188,7 @@ class UpdateConfigurationParameterRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets configId
-    *  参数模板ID。
+    *  **参数解释：** 参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class UpdateConfigurationParameterRequest implements ModelInterface, ArrayAccess
     /**
     * Sets configId
     *
-    * @param string $configId 参数模板ID。
+    * @param string $configId **参数解释：** 参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */

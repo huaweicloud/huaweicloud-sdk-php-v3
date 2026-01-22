@@ -20,20 +20,20 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  地址类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-应用型。
-    * addressType  地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
-    * address  IP地址信息
-    * addressSetId  关联IP地址组ID
-    * addressSetName  地址组名称
-    * domainAddressName  域名地址名称
-    * regionListJson  规则地域列表json值
-    * regionList  规则地域列表
-    * domainSetId  域名组id
-    * domainSetName  域名组名称
-    * ipAddress  IP地址列表
-    * addressGroup  地址组id列表
-    * addressGroupNames  地址组名称列表
-    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * type  **参数解释**： 地址输入类型，用于区分不同的输入类型 **约束限制**： 不涉及 **取值范围**： 0手动输入，1关联IP地址组，2域名，3地理位置，4域名组-应用型，5多对象，6域名组-网络型，7域名-应用型。 **默认取值**： 不涉及
+    * addressType  **参数解释**： IP地址互联网协议类型，用于区分不同互联网协议 **约束限制**： 不涉及 **取值范围**： 地址类型0 IPv4，1 IPv6。 **默认取值**： 不涉及
+    * address  **参数解释**： IP地址信息，用于明确规则IP地址 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addressSetId  **参数解释**： 关联IP地址组ID，用于明确规则IP地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addressSetName  **参数解释**： 关联IP地址组名称，用于明确规则IP地址组名称，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * domainAddressName  **参数解释**： 域名名称或引用域名组名称，用于明确规则引用域名或域名组名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * regionListJson  **参数解释**： 规则地域列表json值，用于明确规则引用地域名称列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * regionList  **参数解释**： 规则地域列表传输值 **约束限制**： 不涉及
+    * domainSetId  **参数解释**： 域名组id，用于明确规则引用域名组。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * domainSetName  **参数解释**： 域名组名称，用于明确规则引用域名组。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * ipAddress  **参数解释**： IP地址列表，用于明确规则引用IP地址列表。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addressGroup  **参数解释**： 地址组id列表，用于明确规则引用地址组id列表。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为0自定义地址组。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addressGroupNames  **参数解释**： 地址组名称列表 **约束限制**： 不涉及
+    * addressSetType  **参数解释**： 地址组类型，用于明确规则引用地址组类型。 **约束限制**： 不涉及 **取值范围**： 0表示自定义地址组，1表示WAF回源IP地址组，3表示NAT64转换地址组 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -56,20 +56,20 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  地址类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-应用型。
-    * addressType  地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
-    * address  IP地址信息
-    * addressSetId  关联IP地址组ID
-    * addressSetName  地址组名称
-    * domainAddressName  域名地址名称
-    * regionListJson  规则地域列表json值
-    * regionList  规则地域列表
-    * domainSetId  域名组id
-    * domainSetName  域名组名称
-    * ipAddress  IP地址列表
-    * addressGroup  地址组id列表
-    * addressGroupNames  地址组名称列表
-    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * type  **参数解释**： 地址输入类型，用于区分不同的输入类型 **约束限制**： 不涉及 **取值范围**： 0手动输入，1关联IP地址组，2域名，3地理位置，4域名组-应用型，5多对象，6域名组-网络型，7域名-应用型。 **默认取值**： 不涉及
+    * addressType  **参数解释**： IP地址互联网协议类型，用于区分不同互联网协议 **约束限制**： 不涉及 **取值范围**： 地址类型0 IPv4，1 IPv6。 **默认取值**： 不涉及
+    * address  **参数解释**： IP地址信息，用于明确规则IP地址 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addressSetId  **参数解释**： 关联IP地址组ID，用于明确规则IP地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addressSetName  **参数解释**： 关联IP地址组名称，用于明确规则IP地址组名称，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * domainAddressName  **参数解释**： 域名名称或引用域名组名称，用于明确规则引用域名或域名组名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * regionListJson  **参数解释**： 规则地域列表json值，用于明确规则引用地域名称列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * regionList  **参数解释**： 规则地域列表传输值 **约束限制**： 不涉及
+    * domainSetId  **参数解释**： 域名组id，用于明确规则引用域名组。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * domainSetName  **参数解释**： 域名组名称，用于明确规则引用域名组。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * ipAddress  **参数解释**： IP地址列表，用于明确规则引用IP地址列表。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addressGroup  **参数解释**： 地址组id列表，用于明确规则引用地址组id列表。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为0自定义地址组。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addressGroupNames  **参数解释**： 地址组名称列表 **约束限制**： 不涉及
+    * addressSetType  **参数解释**： 地址组类型，用于明确规则引用地址组类型。 **约束限制**： 不涉及 **取值范围**： 0表示自定义地址组，1表示WAF回源IP地址组，3表示NAT64转换地址组 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -113,20 +113,20 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  地址类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-应用型。
-    * addressType  地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
-    * address  IP地址信息
-    * addressSetId  关联IP地址组ID
-    * addressSetName  地址组名称
-    * domainAddressName  域名地址名称
-    * regionListJson  规则地域列表json值
-    * regionList  规则地域列表
-    * domainSetId  域名组id
-    * domainSetName  域名组名称
-    * ipAddress  IP地址列表
-    * addressGroup  地址组id列表
-    * addressGroupNames  地址组名称列表
-    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * type  **参数解释**： 地址输入类型，用于区分不同的输入类型 **约束限制**： 不涉及 **取值范围**： 0手动输入，1关联IP地址组，2域名，3地理位置，4域名组-应用型，5多对象，6域名组-网络型，7域名-应用型。 **默认取值**： 不涉及
+    * addressType  **参数解释**： IP地址互联网协议类型，用于区分不同互联网协议 **约束限制**： 不涉及 **取值范围**： 地址类型0 IPv4，1 IPv6。 **默认取值**： 不涉及
+    * address  **参数解释**： IP地址信息，用于明确规则IP地址 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addressSetId  **参数解释**： 关联IP地址组ID，用于明确规则IP地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addressSetName  **参数解释**： 关联IP地址组名称，用于明确规则IP地址组名称，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * domainAddressName  **参数解释**： 域名名称或引用域名组名称，用于明确规则引用域名或域名组名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * regionListJson  **参数解释**： 规则地域列表json值，用于明确规则引用地域名称列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * regionList  **参数解释**： 规则地域列表传输值 **约束限制**： 不涉及
+    * domainSetId  **参数解释**： 域名组id，用于明确规则引用域名组。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * domainSetName  **参数解释**： 域名组名称，用于明确规则引用域名组。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * ipAddress  **参数解释**： IP地址列表，用于明确规则引用IP地址列表。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addressGroup  **参数解释**： 地址组id列表，用于明确规则引用地址组id列表。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为0自定义地址组。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addressGroupNames  **参数解释**： 地址组名称列表 **约束限制**： 不涉及
+    * addressSetType  **参数解释**： 地址组类型，用于明确规则引用地址组类型。 **约束限制**： 不涉及 **取值范围**： 0表示自定义地址组，1表示WAF回源IP地址组，3表示NAT64转换地址组 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -149,20 +149,20 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  地址类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-应用型。
-    * addressType  地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
-    * address  IP地址信息
-    * addressSetId  关联IP地址组ID
-    * addressSetName  地址组名称
-    * domainAddressName  域名地址名称
-    * regionListJson  规则地域列表json值
-    * regionList  规则地域列表
-    * domainSetId  域名组id
-    * domainSetName  域名组名称
-    * ipAddress  IP地址列表
-    * addressGroup  地址组id列表
-    * addressGroupNames  地址组名称列表
-    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * type  **参数解释**： 地址输入类型，用于区分不同的输入类型 **约束限制**： 不涉及 **取值范围**： 0手动输入，1关联IP地址组，2域名，3地理位置，4域名组-应用型，5多对象，6域名组-网络型，7域名-应用型。 **默认取值**： 不涉及
+    * addressType  **参数解释**： IP地址互联网协议类型，用于区分不同互联网协议 **约束限制**： 不涉及 **取值范围**： 地址类型0 IPv4，1 IPv6。 **默认取值**： 不涉及
+    * address  **参数解释**： IP地址信息，用于明确规则IP地址 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addressSetId  **参数解释**： 关联IP地址组ID，用于明确规则IP地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addressSetName  **参数解释**： 关联IP地址组名称，用于明确规则IP地址组名称，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * domainAddressName  **参数解释**： 域名名称或引用域名组名称，用于明确规则引用域名或域名组名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * regionListJson  **参数解释**： 规则地域列表json值，用于明确规则引用地域名称列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * regionList  **参数解释**： 规则地域列表传输值 **约束限制**： 不涉及
+    * domainSetId  **参数解释**： 域名组id，用于明确规则引用域名组。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * domainSetName  **参数解释**： 域名组名称，用于明确规则引用域名组。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * ipAddress  **参数解释**： IP地址列表，用于明确规则引用IP地址列表。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addressGroup  **参数解释**： 地址组id列表，用于明确规则引用地址组id列表。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为0自定义地址组。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addressGroupNames  **参数解释**： 地址组名称列表 **约束限制**： 不涉及
+    * addressSetType  **参数解释**： 地址组类型，用于明确规则引用地址组类型。 **约束限制**： 不涉及 **取值范围**： 0表示自定义地址组，1表示WAF回源IP地址组，3表示NAT64转换地址组 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -185,20 +185,20 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  地址类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-应用型。
-    * addressType  地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
-    * address  IP地址信息
-    * addressSetId  关联IP地址组ID
-    * addressSetName  地址组名称
-    * domainAddressName  域名地址名称
-    * regionListJson  规则地域列表json值
-    * regionList  规则地域列表
-    * domainSetId  域名组id
-    * domainSetName  域名组名称
-    * ipAddress  IP地址列表
-    * addressGroup  地址组id列表
-    * addressGroupNames  地址组名称列表
-    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * type  **参数解释**： 地址输入类型，用于区分不同的输入类型 **约束限制**： 不涉及 **取值范围**： 0手动输入，1关联IP地址组，2域名，3地理位置，4域名组-应用型，5多对象，6域名组-网络型，7域名-应用型。 **默认取值**： 不涉及
+    * addressType  **参数解释**： IP地址互联网协议类型，用于区分不同互联网协议 **约束限制**： 不涉及 **取值范围**： 地址类型0 IPv4，1 IPv6。 **默认取值**： 不涉及
+    * address  **参数解释**： IP地址信息，用于明确规则IP地址 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addressSetId  **参数解释**： 关联IP地址组ID，用于明确规则IP地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addressSetName  **参数解释**： 关联IP地址组名称，用于明确规则IP地址组名称，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * domainAddressName  **参数解释**： 域名名称或引用域名组名称，用于明确规则引用域名或域名组名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * regionListJson  **参数解释**： 规则地域列表json值，用于明确规则引用地域名称列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * regionList  **参数解释**： 规则地域列表传输值 **约束限制**： 不涉及
+    * domainSetId  **参数解释**： 域名组id，用于明确规则引用域名组。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * domainSetName  **参数解释**： 域名组名称，用于明确规则引用域名组。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * ipAddress  **参数解释**： IP地址列表，用于明确规则引用IP地址列表。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addressGroup  **参数解释**： 地址组id列表，用于明确规则引用地址组id列表。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为0自定义地址组。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addressGroupNames  **参数解释**： 地址组名称列表 **约束限制**： 不涉及
+    * addressSetType  **参数解释**： 地址组类型，用于明确规则引用地址组类型。 **约束限制**： 不涉及 **取值范围**： 0表示自定义地址组，1表示WAF回源IP地址组，3表示NAT64转换地址组 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -320,7 +320,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  地址类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-应用型。
+    *  **参数解释**： 地址输入类型，用于区分不同的输入类型 **约束限制**： 不涉及 **取值范围**： 0手动输入，1关联IP地址组，2域名，3地理位置，4域名组-应用型，5多对象，6域名组-网络型，7域名-应用型。 **默认取值**： 不涉及
     *
     * @return int
     */
@@ -332,7 +332,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int $type 地址类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-应用型。
+    * @param int $type **参数解释**： 地址输入类型，用于区分不同的输入类型 **约束限制**： 不涉及 **取值范围**： 0手动输入，1关联IP地址组，2域名，3地理位置，4域名组-应用型，5多对象，6域名组-网络型，7域名-应用型。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -344,7 +344,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressType
-    *  地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
+    *  **参数解释**： IP地址互联网协议类型，用于区分不同互联网协议 **约束限制**： 不涉及 **取值范围**： 地址类型0 IPv4，1 IPv6。 **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -356,7 +356,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets addressType
     *
-    * @param int|null $addressType 地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
+    * @param int|null $addressType **参数解释**： IP地址互联网协议类型，用于区分不同互联网协议 **约束限制**： 不涉及 **取值范围**： 地址类型0 IPv4，1 IPv6。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -368,7 +368,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets address
-    *  IP地址信息
+    *  **参数解释**： IP地址信息，用于明确规则IP地址 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -380,7 +380,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets address
     *
-    * @param string|null $address IP地址信息
+    * @param string|null $address **参数解释**： IP地址信息，用于明确规则IP地址 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -392,7 +392,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressSetId
-    *  关联IP地址组ID
+    *  **参数解释**： 关联IP地址组ID，用于明确规则IP地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -404,7 +404,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets addressSetId
     *
-    * @param string|null $addressSetId 关联IP地址组ID
+    * @param string|null $addressSetId **参数解释**： 关联IP地址组ID，用于明确规则IP地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -416,7 +416,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressSetName
-    *  地址组名称
+    *  **参数解释**： 关联IP地址组名称，用于明确规则IP地址组名称，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -428,7 +428,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets addressSetName
     *
-    * @param string|null $addressSetName 地址组名称
+    * @param string|null $addressSetName **参数解释**： 关联IP地址组名称，用于明确规则IP地址组名称，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -440,7 +440,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainAddressName
-    *  域名地址名称
+    *  **参数解释**： 域名名称或引用域名组名称，用于明确规则引用域名或域名组名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -452,7 +452,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets domainAddressName
     *
-    * @param string|null $domainAddressName 域名地址名称
+    * @param string|null $domainAddressName **参数解释**： 域名名称或引用域名组名称，用于明确规则引用域名或域名组名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -464,7 +464,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionListJson
-    *  规则地域列表json值
+    *  **参数解释**： 规则地域列表json值，用于明确规则引用地域名称列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -476,7 +476,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets regionListJson
     *
-    * @param string|null $regionListJson 规则地域列表json值
+    * @param string|null $regionListJson **参数解释**： 规则地域列表json值，用于明确规则引用地域名称列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -488,7 +488,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionList
-    *  规则地域列表
+    *  **参数解释**： 规则地域列表传输值 **约束限制**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\IpRegionDto[]|null
     */
@@ -500,7 +500,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets regionList
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\IpRegionDto[]|null $regionList 规则地域列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\IpRegionDto[]|null $regionList **参数解释**： 规则地域列表传输值 **约束限制**： 不涉及
     *
     * @return $this
     */
@@ -512,7 +512,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainSetId
-    *  域名组id
+    *  **参数解释**： 域名组id，用于明确规则引用域名组。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -524,7 +524,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets domainSetId
     *
-    * @param string|null $domainSetId 域名组id
+    * @param string|null $domainSetId **参数解释**： 域名组id，用于明确规则引用域名组。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -536,7 +536,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainSetName
-    *  域名组名称
+    *  **参数解释**： 域名组名称，用于明确规则引用域名组。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -548,7 +548,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets domainSetName
     *
-    * @param string|null $domainSetName 域名组名称
+    * @param string|null $domainSetName **参数解释**： 域名组名称，用于明确规则引用域名组。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -560,7 +560,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipAddress
-    *  IP地址列表
+    *  **参数解释**： IP地址列表，用于明确规则引用IP地址列表。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string[]|null
     */
@@ -572,7 +572,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ipAddress
     *
-    * @param string[]|null $ipAddress IP地址列表
+    * @param string[]|null $ipAddress **参数解释**： IP地址列表，用于明确规则引用IP地址列表。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -584,7 +584,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressGroup
-    *  地址组id列表
+    *  **参数解释**： 地址组id列表，用于明确规则引用地址组id列表。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为0自定义地址组。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string[]|null
     */
@@ -596,7 +596,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets addressGroup
     *
-    * @param string[]|null $addressGroup 地址组id列表
+    * @param string[]|null $addressGroup **参数解释**： 地址组id列表，用于明确规则引用地址组id列表。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为0自定义地址组。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -608,7 +608,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressGroupNames
-    *  地址组名称列表
+    *  **参数解释**： 地址组名称列表 **约束限制**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\AddressGroupVO[]|null
     */
@@ -620,7 +620,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets addressGroupNames
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\AddressGroupVO[]|null $addressGroupNames 地址组名称列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\AddressGroupVO[]|null $addressGroupNames **参数解释**： 地址组名称列表 **约束限制**： 不涉及
     *
     * @return $this
     */
@@ -632,7 +632,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressSetType
-    *  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    *  **参数解释**： 地址组类型，用于明确规则引用地址组类型。 **约束限制**： 不涉及 **取值范围**： 0表示自定义地址组，1表示WAF回源IP地址组，3表示NAT64转换地址组 **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -644,7 +644,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets addressSetType
     *
-    * @param int|null $addressSetType 地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * @param int|null $addressSetType **参数解释**： 地址组类型，用于明确规则引用地址组类型。 **约束限制**： 不涉及 **取值范围**： 0表示自定义地址组，1表示WAF回源IP地址组，3表示NAT64转换地址组 **默认取值**： 不涉及
     *
     * @return $this
     */

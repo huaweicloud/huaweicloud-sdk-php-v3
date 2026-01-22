@@ -20,8 +20,8 @@ class ShowCeshierarchyRespExchanges implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  Exchange名称。
-    * vhost  对应的Vhost。
+    * name  **参数解释**： Exchange名称。   **取值范围**： 不涉及。
+    * vhost  **参数解释**： 对应的Vhost。      **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ShowCeshierarchyRespExchanges implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  Exchange名称。
-    * vhost  对应的Vhost。
+    * name  **参数解释**： Exchange名称。   **取值范围**： 不涉及。
+    * vhost  **参数解释**： 对应的Vhost。      **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ShowCeshierarchyRespExchanges implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  Exchange名称。
-    * vhost  对应的Vhost。
+    * name  **参数解释**： Exchange名称。   **取值范围**： 不涉及。
+    * vhost  **参数解释**： 对应的Vhost。      **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ShowCeshierarchyRespExchanges implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  Exchange名称。
-    * vhost  对应的Vhost。
+    * name  **参数解释**： Exchange名称。   **取值范围**： 不涉及。
+    * vhost  **参数解释**： 对应的Vhost。      **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ShowCeshierarchyRespExchanges implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  Exchange名称。
-    * vhost  对应的Vhost。
+    * name  **参数解释**： Exchange名称。   **取值范围**： 不涉及。
+    * vhost  **参数解释**： 对应的Vhost。      **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ShowCeshierarchyRespExchanges implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  Exchange名称。
+    *  **参数解释**： Exchange名称。   **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class ShowCeshierarchyRespExchanges implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name Exchange名称。
+    * @param string|null $name **参数解释**： Exchange名称。   **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ShowCeshierarchyRespExchanges implements ModelInterface, ArrayAccess
 
     /**
     * Gets vhost
-    *  对应的Vhost。
+    *  **参数解释**： 对应的Vhost。      **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class ShowCeshierarchyRespExchanges implements ModelInterface, ArrayAccess
     /**
     * Sets vhost
     *
-    * @param string|null $vhost 对应的Vhost。
+    * @param string|null $vhost **参数解释**： 对应的Vhost。      **取值范围**： 不涉及。
     *
     * @return $this
     */

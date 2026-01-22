@@ -20,7 +20,7 @@ class ClearAccessLogRuleHitCountsDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ruleIds  删除规则击中次数请求的规则列表，规则id可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    * ruleIds  **参数解释**： 删除规则击中次数请求的规则列表，规则ID可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ClearAccessLogRuleHitCountsDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ruleIds  删除规则击中次数请求的规则列表，规则id可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    * ruleIds  **参数解释**： 删除规则击中次数请求的规则列表，规则ID可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ClearAccessLogRuleHitCountsDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ruleIds  删除规则击中次数请求的规则列表，规则id可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    * ruleIds  **参数解释**： 删除规则击中次数请求的规则列表，规则ID可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ClearAccessLogRuleHitCountsDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ruleIds  删除规则击中次数请求的规则列表，规则id可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    * ruleIds  **参数解释**： 删除规则击中次数请求的规则列表，规则ID可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ClearAccessLogRuleHitCountsDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ruleIds  删除规则击中次数请求的规则列表，规则id可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    * ruleIds  **参数解释**： 删除规则击中次数请求的规则列表，规则ID可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ClearAccessLogRuleHitCountsDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleIds
-    *  删除规则击中次数请求的规则列表，规则id可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    *  **参数解释**： 删除规则击中次数请求的规则列表，规则ID可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @return string[]
     */
@@ -189,7 +189,7 @@ class ClearAccessLogRuleHitCountsDto implements ModelInterface, ArrayAccess
     /**
     * Sets ruleIds
     *
-    * @param string[] $ruleIds 删除规则击中次数请求的规则列表，规则id可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    * @param string[] $ruleIds **参数解释**： 删除规则击中次数请求的规则列表，规则ID可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @return $this
     */

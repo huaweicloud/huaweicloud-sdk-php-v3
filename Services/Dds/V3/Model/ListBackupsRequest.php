@@ -20,8 +20,8 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  **参数解释：** 实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。如果instance_id以“”起始，表示按照“”后面的值模糊匹配，否则，按照实际填写的instance_id精确匹配查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * backupId  **参数解释：** 备份ID。如果backup_id以“”起始，表示按照“”后面的值模糊匹配，否则，按照实际填写的backup_id精确匹配查询。 **约束限制：** 当该字段传入的备份ID归属为自动增量备份时，实例ID必传，且实例ID必须为精确匹配。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * instanceId  **参数解释：** 实例ID，可以调用“查询实例列表和详情-QueryingInstancesandDetails”接口获取。如果未申请实例，可以调用“创建实例-CreatingaDBInstance”接口创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * backupId  **参数解释：** 备份ID。 **约束限制：** 当该字段传入的备份ID归属为自动增量备份时，实例ID必传。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * backupType  **参数解释：** 备份类型。 **约束限制：** 当该字段取值为“Incremental”时，实例ID必传。 **取值范围：** - 取值为“Auto”，表示自动全量备份。 - 取值为“Manual”，表示手动全量备份。 - 取值为“Incremental”，表示自动增量备份。 - 当该字段未传入值时，默认只查询所有的全量备份，包括自动全备备份和手动全量备份。当该字段取值为“Incremental”时，实例ID必传。  **默认取值：** 不涉及。
     * offset  **参数解释：** 索引位置偏移量，表示从指定project ID下最新的备份创建时间开始，按时间的先后顺序偏移offset条数据后查询对应的备份信息。 **约束限制：** 不涉及。 **取值范围：** 大于或等于0。 **默认取值：** 0，表示从最新的备份创建时间对应的备份开始查询。
     * limit  **参数解释：** 查询备份个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 100。不传该参数时，默认查询前100条备份信息。
@@ -56,8 +56,8 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  **参数解释：** 实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。如果instance_id以“”起始，表示按照“”后面的值模糊匹配，否则，按照实际填写的instance_id精确匹配查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * backupId  **参数解释：** 备份ID。如果backup_id以“”起始，表示按照“”后面的值模糊匹配，否则，按照实际填写的backup_id精确匹配查询。 **约束限制：** 当该字段传入的备份ID归属为自动增量备份时，实例ID必传，且实例ID必须为精确匹配。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * instanceId  **参数解释：** 实例ID，可以调用“查询实例列表和详情-QueryingInstancesandDetails”接口获取。如果未申请实例，可以调用“创建实例-CreatingaDBInstance”接口创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * backupId  **参数解释：** 备份ID。 **约束限制：** 当该字段传入的备份ID归属为自动增量备份时，实例ID必传。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * backupType  **参数解释：** 备份类型。 **约束限制：** 当该字段取值为“Incremental”时，实例ID必传。 **取值范围：** - 取值为“Auto”，表示自动全量备份。 - 取值为“Manual”，表示手动全量备份。 - 取值为“Incremental”，表示自动增量备份。 - 当该字段未传入值时，默认只查询所有的全量备份，包括自动全备备份和手动全量备份。当该字段取值为“Incremental”时，实例ID必传。  **默认取值：** 不涉及。
     * offset  **参数解释：** 索引位置偏移量，表示从指定project ID下最新的备份创建时间开始，按时间的先后顺序偏移offset条数据后查询对应的备份信息。 **约束限制：** 不涉及。 **取值范围：** 大于或等于0。 **默认取值：** 0，表示从最新的备份创建时间对应的备份开始查询。
     * limit  **参数解释：** 查询备份个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 100。不传该参数时，默认查询前100条备份信息。
@@ -113,8 +113,8 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  **参数解释：** 实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。如果instance_id以“”起始，表示按照“”后面的值模糊匹配，否则，按照实际填写的instance_id精确匹配查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * backupId  **参数解释：** 备份ID。如果backup_id以“”起始，表示按照“”后面的值模糊匹配，否则，按照实际填写的backup_id精确匹配查询。 **约束限制：** 当该字段传入的备份ID归属为自动增量备份时，实例ID必传，且实例ID必须为精确匹配。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * instanceId  **参数解释：** 实例ID，可以调用“查询实例列表和详情-QueryingInstancesandDetails”接口获取。如果未申请实例，可以调用“创建实例-CreatingaDBInstance”接口创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * backupId  **参数解释：** 备份ID。 **约束限制：** 当该字段传入的备份ID归属为自动增量备份时，实例ID必传。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * backupType  **参数解释：** 备份类型。 **约束限制：** 当该字段取值为“Incremental”时，实例ID必传。 **取值范围：** - 取值为“Auto”，表示自动全量备份。 - 取值为“Manual”，表示手动全量备份。 - 取值为“Incremental”，表示自动增量备份。 - 当该字段未传入值时，默认只查询所有的全量备份，包括自动全备备份和手动全量备份。当该字段取值为“Incremental”时，实例ID必传。  **默认取值：** 不涉及。
     * offset  **参数解释：** 索引位置偏移量，表示从指定project ID下最新的备份创建时间开始，按时间的先后顺序偏移offset条数据后查询对应的备份信息。 **约束限制：** 不涉及。 **取值范围：** 大于或等于0。 **默认取值：** 0，表示从最新的备份创建时间对应的备份开始查询。
     * limit  **参数解释：** 查询备份个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 100。不传该参数时，默认查询前100条备份信息。
@@ -149,8 +149,8 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  **参数解释：** 实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。如果instance_id以“”起始，表示按照“”后面的值模糊匹配，否则，按照实际填写的instance_id精确匹配查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * backupId  **参数解释：** 备份ID。如果backup_id以“”起始，表示按照“”后面的值模糊匹配，否则，按照实际填写的backup_id精确匹配查询。 **约束限制：** 当该字段传入的备份ID归属为自动增量备份时，实例ID必传，且实例ID必须为精确匹配。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * instanceId  **参数解释：** 实例ID，可以调用“查询实例列表和详情-QueryingInstancesandDetails”接口获取。如果未申请实例，可以调用“创建实例-CreatingaDBInstance”接口创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * backupId  **参数解释：** 备份ID。 **约束限制：** 当该字段传入的备份ID归属为自动增量备份时，实例ID必传。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * backupType  **参数解释：** 备份类型。 **约束限制：** 当该字段取值为“Incremental”时，实例ID必传。 **取值范围：** - 取值为“Auto”，表示自动全量备份。 - 取值为“Manual”，表示手动全量备份。 - 取值为“Incremental”，表示自动增量备份。 - 当该字段未传入值时，默认只查询所有的全量备份，包括自动全备备份和手动全量备份。当该字段取值为“Incremental”时，实例ID必传。  **默认取值：** 不涉及。
     * offset  **参数解释：** 索引位置偏移量，表示从指定project ID下最新的备份创建时间开始，按时间的先后顺序偏移offset条数据后查询对应的备份信息。 **约束限制：** 不涉及。 **取值范围：** 大于或等于0。 **默认取值：** 0，表示从最新的备份创建时间对应的备份开始查询。
     * limit  **参数解释：** 查询备份个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 100。不传该参数时，默认查询前100条备份信息。
@@ -185,8 +185,8 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  **参数解释：** 实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。如果instance_id以“”起始，表示按照“”后面的值模糊匹配，否则，按照实际填写的instance_id精确匹配查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * backupId  **参数解释：** 备份ID。如果backup_id以“”起始，表示按照“”后面的值模糊匹配，否则，按照实际填写的backup_id精确匹配查询。 **约束限制：** 当该字段传入的备份ID归属为自动增量备份时，实例ID必传，且实例ID必须为精确匹配。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * instanceId  **参数解释：** 实例ID，可以调用“查询实例列表和详情-QueryingInstancesandDetails”接口获取。如果未申请实例，可以调用“创建实例-CreatingaDBInstance”接口创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * backupId  **参数解释：** 备份ID。 **约束限制：** 当该字段传入的备份ID归属为自动增量备份时，实例ID必传。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * backupType  **参数解释：** 备份类型。 **约束限制：** 当该字段取值为“Incremental”时，实例ID必传。 **取值范围：** - 取值为“Auto”，表示自动全量备份。 - 取值为“Manual”，表示手动全量备份。 - 取值为“Incremental”，表示自动增量备份。 - 当该字段未传入值时，默认只查询所有的全量备份，包括自动全备备份和手动全量备份。当该字段取值为“Incremental”时，实例ID必传。  **默认取值：** 不涉及。
     * offset  **参数解释：** 索引位置偏移量，表示从指定project ID下最新的备份创建时间开始，按时间的先后顺序偏移offset条数据后查询对应的备份信息。 **约束限制：** 不涉及。 **取值范围：** 大于或等于0。 **默认取值：** 0，表示从最新的备份创建时间对应的备份开始查询。
     * limit  **参数解释：** 查询备份个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 100。不传该参数时，默认查询前100条备份信息。
@@ -376,7 +376,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  **参数解释：** 实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。如果instance_id以“”起始，表示按照“”后面的值模糊匹配，否则，按照实际填写的instance_id精确匹配查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *  **参数解释：** 实例ID，可以调用“查询实例列表和详情-QueryingInstancesandDetails”接口获取。如果未申请实例，可以调用“创建实例-CreatingaDBInstance”接口创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -388,7 +388,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId **参数解释：** 实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。如果instance_id以“”起始，表示按照“”后面的值模糊匹配，否则，按照实际填写的instance_id精确匹配查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * @param string|null $instanceId **参数解释：** 实例ID，可以调用“查询实例列表和详情-QueryingInstancesandDetails”接口获取。如果未申请实例，可以调用“创建实例-CreatingaDBInstance”接口创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -400,7 +400,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupId
-    *  **参数解释：** 备份ID。如果backup_id以“”起始，表示按照“”后面的值模糊匹配，否则，按照实际填写的backup_id精确匹配查询。 **约束限制：** 当该字段传入的备份ID归属为自动增量备份时，实例ID必传，且实例ID必须为精确匹配。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *  **参数解释：** 备份ID。 **约束限制：** 当该字段传入的备份ID归属为自动增量备份时，实例ID必传。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -412,7 +412,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets backupId
     *
-    * @param string|null $backupId **参数解释：** 备份ID。如果backup_id以“”起始，表示按照“”后面的值模糊匹配，否则，按照实际填写的backup_id精确匹配查询。 **约束限制：** 当该字段传入的备份ID归属为自动增量备份时，实例ID必传，且实例ID必须为精确匹配。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * @param string|null $backupId **参数解释：** 备份ID。 **约束限制：** 当该字段传入的备份ID归属为自动增量备份时，实例ID必传。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */

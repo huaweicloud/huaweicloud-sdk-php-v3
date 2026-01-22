@@ -21,7 +21,7 @@ class ListExchangesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID
-    * vhost  所属Vhost名称
+    * vhost  vhost名称，名称中包含/时，需要将/替换为__F_SLASH__，否则会调用失败。例如：Vhost名称为/test，入参值为__F_SLASH__test。
     * offset  分页查询偏移量，表示从此偏移量开始查询，offset大于等于0，默认从0开始查询。
     * limit  分页查询单页数量，取值范围0~50，默认查询10条。
     *
@@ -37,7 +37,7 @@ class ListExchangesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID
-    * vhost  所属Vhost名称
+    * vhost  vhost名称，名称中包含/时，需要将/替换为__F_SLASH__，否则会调用失败。例如：Vhost名称为/test，入参值为__F_SLASH__test。
     * offset  分页查询偏移量，表示从此偏移量开始查询，offset大于等于0，默认从0开始查询。
     * limit  分页查询单页数量，取值范围0~50，默认查询10条。
     *
@@ -74,7 +74,7 @@ class ListExchangesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID
-    * vhost  所属Vhost名称
+    * vhost  vhost名称，名称中包含/时，需要将/替换为__F_SLASH__，否则会调用失败。例如：Vhost名称为/test，入参值为__F_SLASH__test。
     * offset  分页查询偏移量，表示从此偏移量开始查询，offset大于等于0，默认从0开始查询。
     * limit  分页查询单页数量，取值范围0~50，默认查询10条。
     *
@@ -90,7 +90,7 @@ class ListExchangesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID
-    * vhost  所属Vhost名称
+    * vhost  vhost名称，名称中包含/时，需要将/替换为__F_SLASH__，否则会调用失败。例如：Vhost名称为/test，入参值为__F_SLASH__test。
     * offset  分页查询偏移量，表示从此偏移量开始查询，offset大于等于0，默认从0开始查询。
     * limit  分页查询单页数量，取值范围0~50，默认查询10条。
     *
@@ -106,7 +106,7 @@ class ListExchangesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID
-    * vhost  所属Vhost名称
+    * vhost  vhost名称，名称中包含/时，需要将/替换为__F_SLASH__，否则会调用失败。例如：Vhost名称为/test，入参值为__F_SLASH__test。
     * offset  分页查询偏移量，表示从此偏移量开始查询，offset大于等于0，默认从0开始查询。
     * limit  分页查询单页数量，取值范围0~50，默认查询10条。
     *
@@ -237,7 +237,7 @@ class ListExchangesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets vhost
-    *  所属Vhost名称
+    *  vhost名称，名称中包含/时，需要将/替换为__F_SLASH__，否则会调用失败。例如：Vhost名称为/test，入参值为__F_SLASH__test。
     *
     * @return string
     */
@@ -249,7 +249,7 @@ class ListExchangesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets vhost
     *
-    * @param string $vhost 所属Vhost名称
+    * @param string $vhost vhost名称，名称中包含/时，需要将/替换为__F_SLASH__，否则会调用失败。例如：Vhost名称为/test，入参值为__F_SLASH__test。
     *
     * @return $this
     */

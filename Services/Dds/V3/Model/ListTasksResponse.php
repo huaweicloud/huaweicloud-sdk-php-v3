@@ -22,7 +22,7 @@ class ListTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobs  任务列表。
-    * totalCount  任务列表总数
+    * totalCount  任务列表总数。
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class ListTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobs  任务列表。
-    * totalCount  任务列表总数
+    * totalCount  任务列表总数。
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class ListTasksResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobs  任务列表。
-    * totalCount  任务列表总数
+    * totalCount  任务列表总数。
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class ListTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobs  任务列表。
-    * totalCount  任务列表总数
+    * totalCount  任务列表总数。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobs  任务列表。
-    * totalCount  任务列表总数
+    * totalCount  任务列表总数。
     *
     * @var string[]
     */
@@ -210,7 +210,7 @@ class ListTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCount
-    *  任务列表总数
+    *  任务列表总数。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount 任务列表总数
+    * @param int|null $totalCount 任务列表总数。
     *
     * @return $this
     */

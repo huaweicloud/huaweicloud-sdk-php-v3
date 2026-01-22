@@ -20,8 +20,8 @@ class ListJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * jobId  创建按需防火墙返回的任务ID，可通过调用[创建防火墙接口](CreateFirewall.xml)返回值获得。返回值中job_id即为此处的job_id
+    * projectId  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
+    * jobId  **参数解释**： 创建按需防火墙返回的任务ID，可通过调用[创建防火墙接口](CreateFirewall.xml)返回值获得。返回值中job_id即为此处的job_id **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ListJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * jobId  创建按需防火墙返回的任务ID，可通过调用[创建防火墙接口](CreateFirewall.xml)返回值获得。返回值中job_id即为此处的job_id
+    * projectId  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
+    * jobId  **参数解释**： 创建按需防火墙返回的任务ID，可通过调用[创建防火墙接口](CreateFirewall.xml)返回值获得。返回值中job_id即为此处的job_id **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ListJobRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * jobId  创建按需防火墙返回的任务ID，可通过调用[创建防火墙接口](CreateFirewall.xml)返回值获得。返回值中job_id即为此处的job_id
+    * projectId  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
+    * jobId  **参数解释**： 创建按需防火墙返回的任务ID，可通过调用[创建防火墙接口](CreateFirewall.xml)返回值获得。返回值中job_id即为此处的job_id **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ListJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * jobId  创建按需防火墙返回的任务ID，可通过调用[创建防火墙接口](CreateFirewall.xml)返回值获得。返回值中job_id即为此处的job_id
+    * projectId  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
+    * jobId  **参数解释**： 创建按需防火墙返回的任务ID，可通过调用[创建防火墙接口](CreateFirewall.xml)返回值获得。返回值中job_id即为此处的job_id **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ListJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * jobId  创建按需防火墙返回的任务ID，可通过调用[创建防火墙接口](CreateFirewall.xml)返回值获得。返回值中job_id即为此处的job_id
+    * projectId  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
+    * jobId  **参数解释**： 创建按需防火墙返回的任务ID，可通过调用[创建防火墙接口](CreateFirewall.xml)返回值获得。返回值中job_id即为此处的job_id **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class ListJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    *  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class ListJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * @param string $projectId **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class ListJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  创建按需防火墙返回的任务ID，可通过调用[创建防火墙接口](CreateFirewall.xml)返回值获得。返回值中job_id即为此处的job_id
+    *  **参数解释**： 创建按需防火墙返回的任务ID，可通过调用[创建防火墙接口](CreateFirewall.xml)返回值获得。返回值中job_id即为此处的job_id **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class ListJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string $jobId 创建按需防火墙返回的任务ID，可通过调用[创建防火墙接口](CreateFirewall.xml)返回值获得。返回值中job_id即为此处的job_id
+    * @param string $jobId **参数解释**： 创建按需防火墙返回的任务ID，可通过调用[创建防火墙接口](CreateFirewall.xml)返回值获得。返回值中job_id即为此处的job_id **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @return $this
     */

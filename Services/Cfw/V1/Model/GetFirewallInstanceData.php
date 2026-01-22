@@ -20,10 +20,10 @@ class GetFirewallInstanceData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  每页显示个数，范围为1-1024
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * total  防火墙总数
-    * records  查询防火墙实例信息列表
+    * limit  **参数解释**： 每页显示个数 **取值范围**： 1-1024
+    * offset  **参数解释**： 偏移量：指定返回记录的开始位 **取值范围**： 大于或等于0
+    * total  **参数解释**： 防火墙总数 **取值范围**： 不涉及
+    * records  **参数解释**： 查询防火墙实例信息列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class GetFirewallInstanceData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  每页显示个数，范围为1-1024
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * total  防火墙总数
-    * records  查询防火墙实例信息列表
+    * limit  **参数解释**： 每页显示个数 **取值范围**： 1-1024
+    * offset  **参数解释**： 偏移量：指定返回记录的开始位 **取值范围**： 大于或等于0
+    * total  **参数解释**： 防火墙总数 **取值范围**： 不涉及
+    * records  **参数解释**： 查询防火墙实例信息列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class GetFirewallInstanceData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  每页显示个数，范围为1-1024
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * total  防火墙总数
-    * records  查询防火墙实例信息列表
+    * limit  **参数解释**： 每页显示个数 **取值范围**： 1-1024
+    * offset  **参数解释**： 偏移量：指定返回记录的开始位 **取值范围**： 大于或等于0
+    * total  **参数解释**： 防火墙总数 **取值范围**： 不涉及
+    * records  **参数解释**： 查询防火墙实例信息列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class GetFirewallInstanceData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  每页显示个数，范围为1-1024
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * total  防火墙总数
-    * records  查询防火墙实例信息列表
+    * limit  **参数解释**： 每页显示个数 **取值范围**： 1-1024
+    * offset  **参数解释**： 偏移量：指定返回记录的开始位 **取值范围**： 大于或等于0
+    * total  **参数解释**： 防火墙总数 **取值范围**： 不涉及
+    * records  **参数解释**： 查询防火墙实例信息列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class GetFirewallInstanceData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  每页显示个数，范围为1-1024
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * total  防火墙总数
-    * records  查询防火墙实例信息列表
+    * limit  **参数解释**： 每页显示个数 **取值范围**： 1-1024
+    * offset  **参数解释**： 偏移量：指定返回记录的开始位 **取值范围**： 大于或等于0
+    * total  **参数解释**： 防火墙总数 **取值范围**： 不涉及
+    * records  **参数解释**： 查询防火墙实例信息列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class GetFirewallInstanceData implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示个数，范围为1-1024
+    *  **参数解释**： 每页显示个数 **取值范围**： 1-1024
     *
     * @return int|null
     */
@@ -219,7 +219,7 @@ class GetFirewallInstanceData implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示个数，范围为1-1024
+    * @param int|null $limit **参数解释**： 每页显示个数 **取值范围**： 1-1024
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class GetFirewallInstanceData implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  **参数解释**： 偏移量：指定返回记录的开始位 **取值范围**： 大于或等于0
     *
     * @return int|null
     */
@@ -243,7 +243,7 @@ class GetFirewallInstanceData implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset **参数解释**： 偏移量：指定返回记录的开始位 **取值范围**： 大于或等于0
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class GetFirewallInstanceData implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  防火墙总数
+    *  **参数解释**： 防火墙总数 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -267,7 +267,7 @@ class GetFirewallInstanceData implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 防火墙总数
+    * @param int|null $total **参数解释**： 防火墙总数 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class GetFirewallInstanceData implements ModelInterface, ArrayAccess
 
     /**
     * Gets records
-    *  查询防火墙实例信息列表
+    *  **参数解释**： 查询防火墙实例信息列表 **取值范围**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\GetFirewallInstanceResponseRecord[]|null
     */
@@ -291,7 +291,7 @@ class GetFirewallInstanceData implements ModelInterface, ArrayAccess
     /**
     * Sets records
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\GetFirewallInstanceResponseRecord[]|null $records 查询防火墙实例信息列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\GetFirewallInstanceResponseRecord[]|null $records **参数解释**： 查询防火墙实例信息列表 **取值范围**： 不涉及
     *
     * @return $this
     */

@@ -21,8 +21,8 @@ class ListDnsServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * data  dns服务器列表
-    * total  dns服务器总数
+    * data  **参数解释**： dns服务器列表 **取值范围**： 不涉及
+    * total  **参数解释**： dns服务器总数 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListDnsServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * data  dns服务器列表
-    * total  dns服务器总数
+    * data  **参数解释**： dns服务器列表 **取值范围**： 不涉及
+    * total  **参数解释**： dns服务器总数 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListDnsServersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * data  dns服务器列表
-    * total  dns服务器总数
+    * data  **参数解释**： dns服务器列表 **取值范围**： 不涉及
+    * total  **参数解释**： dns服务器总数 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListDnsServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * data  dns服务器列表
-    * total  dns服务器总数
+    * data  **参数解释**： dns服务器列表 **取值范围**： 不涉及
+    * total  **参数解释**： dns服务器总数 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListDnsServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * data  dns服务器列表
-    * total  dns服务器总数
+    * data  **参数解释**： dns服务器列表 **取值范围**： 不涉及
+    * total  **参数解释**： dns服务器总数 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListDnsServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
-    *  dns服务器列表
+    *  **参数解释**： dns服务器列表 **取值范围**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\DnsServersResponseDTO[]|null
     */
@@ -198,7 +198,7 @@ class ListDnsServersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\DnsServersResponseDTO[]|null $data dns服务器列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\DnsServersResponseDTO[]|null $data **参数解释**： dns服务器列表 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListDnsServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  dns服务器总数
+    *  **参数解释**： dns服务器总数 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListDnsServersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total dns服务器总数
+    * @param int|null $total **参数解释**： dns服务器总数 **取值范围**： 不涉及
     *
     * @return $this
     */

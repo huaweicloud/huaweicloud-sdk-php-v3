@@ -194,9 +194,6 @@ class CreateClusterPublicIpReq implements ModelInterface, ArrayAccess
         if ($this->container['eip'] === null) {
             $invalidProperties[] = "'eip' can't be null";
         }
-        if ($this->container['elbWhiteListReq'] === null) {
-            $invalidProperties[] = "'elbWhiteListReq' can't be null";
-        }
         if ($this->container['publicBindType'] === null) {
             $invalidProperties[] = "'publicBindType' can't be null";
         }
@@ -242,7 +239,7 @@ class CreateClusterPublicIpReq implements ModelInterface, ArrayAccess
     * Gets elbWhiteListReq
     *  elbWhiteListReq
     *
-    * @return \HuaweiCloud\SDK\Css\V2\Model\CreateClusterElbWhiteList
+    * @return \HuaweiCloud\SDK\Css\V2\Model\CreateClusterElbWhiteList|null
     */
     public function getElbWhiteListReq()
     {
@@ -252,7 +249,7 @@ class CreateClusterPublicIpReq implements ModelInterface, ArrayAccess
     /**
     * Sets elbWhiteListReq
     *
-    * @param \HuaweiCloud\SDK\Css\V2\Model\CreateClusterElbWhiteList $elbWhiteListReq elbWhiteListReq
+    * @param \HuaweiCloud\SDK\Css\V2\Model\CreateClusterElbWhiteList|null $elbWhiteListReq elbWhiteListReq
     *
     * @return $this
     */

@@ -20,20 +20,26 @@ class ShowQuotasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * includeTagsQuota  **参数解释**： 是否包含标签配额标志。 **约束限制**： 不涉及。 **取值范围**： - true：包含配额。 - false：不包含配额。 **默认取值**： true。
+    * onlyQuota  **参数解释**： 查询指定配额引擎。 **约束限制**： 不涉及。 **取值范围**： - reliability：RocketMQ消息引擎别称。 - kafka：kafka消息引擎别称。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'includeTagsQuota' => 'string',
+            'onlyQuota' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * includeTagsQuota  **参数解释**： 是否包含标签配额标志。 **约束限制**： 不涉及。 **取值范围**： - true：包含配额。 - false：不包含配额。 **默认取值**： true。
+    * onlyQuota  **参数解释**： 查询指定配额引擎。 **约束限制**： 不涉及。 **取值范围**： - reliability：RocketMQ消息引擎别称。 - kafka：kafka消息引擎别称。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'includeTagsQuota' => null,
+        'onlyQuota' => null
     ];
 
     /**
@@ -59,29 +65,38 @@ class ShowQuotasRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * includeTagsQuota  **参数解释**： 是否包含标签配额标志。 **约束限制**： 不涉及。 **取值范围**： - true：包含配额。 - false：不包含配额。 **默认取值**： true。
+    * onlyQuota  **参数解释**： 查询指定配额引擎。 **约束限制**： 不涉及。 **取值范围**： - reliability：RocketMQ消息引擎别称。 - kafka：kafka消息引擎别称。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'includeTagsQuota' => 'includeTagsQuota',
+            'onlyQuota' => 'onlyQuota'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * includeTagsQuota  **参数解释**： 是否包含标签配额标志。 **约束限制**： 不涉及。 **取值范围**： - true：包含配额。 - false：不包含配额。 **默认取值**： true。
+    * onlyQuota  **参数解释**： 查询指定配额引擎。 **约束限制**： 不涉及。 **取值范围**： - reliability：RocketMQ消息引擎别称。 - kafka：kafka消息引擎别称。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
+            'includeTagsQuota' => 'setIncludeTagsQuota',
+            'onlyQuota' => 'setOnlyQuota'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * includeTagsQuota  **参数解释**： 是否包含标签配额标志。 **约束限制**： 不涉及。 **取值范围**： - true：包含配额。 - false：不包含配额。 **默认取值**： true。
+    * onlyQuota  **参数解释**： 查询指定配额引擎。 **约束限制**： 不涉及。 **取值范围**： - reliability：RocketMQ消息引擎别称。 - kafka：kafka消息引擎别称。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
+            'includeTagsQuota' => 'getIncludeTagsQuota',
+            'onlyQuota' => 'getOnlyQuota'
     ];
 
     /**
@@ -142,6 +157,8 @@ class ShowQuotasRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['includeTagsQuota'] = isset($data['includeTagsQuota']) ? $data['includeTagsQuota'] : null;
+        $this->container['onlyQuota'] = isset($data['onlyQuota']) ? $data['onlyQuota'] : null;
     }
 
     /**
@@ -164,6 +181,54 @@ class ShowQuotasRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets includeTagsQuota
+    *  **参数解释**： 是否包含标签配额标志。 **约束限制**： 不涉及。 **取值范围**： - true：包含配额。 - false：不包含配额。 **默认取值**： true。
+    *
+    * @return string|null
+    */
+    public function getIncludeTagsQuota()
+    {
+        return $this->container['includeTagsQuota'];
+    }
+
+    /**
+    * Sets includeTagsQuota
+    *
+    * @param string|null $includeTagsQuota **参数解释**： 是否包含标签配额标志。 **约束限制**： 不涉及。 **取值范围**： - true：包含配额。 - false：不包含配额。 **默认取值**： true。
+    *
+    * @return $this
+    */
+    public function setIncludeTagsQuota($includeTagsQuota)
+    {
+        $this->container['includeTagsQuota'] = $includeTagsQuota;
+        return $this;
+    }
+
+    /**
+    * Gets onlyQuota
+    *  **参数解释**： 查询指定配额引擎。 **约束限制**： 不涉及。 **取值范围**： - reliability：RocketMQ消息引擎别称。 - kafka：kafka消息引擎别称。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getOnlyQuota()
+    {
+        return $this->container['onlyQuota'];
+    }
+
+    /**
+    * Sets onlyQuota
+    *
+    * @param string|null $onlyQuota **参数解释**： 查询指定配额引擎。 **约束限制**： 不涉及。 **取值范围**： - reliability：RocketMQ消息引擎别称。 - kafka：kafka消息引擎别称。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setOnlyQuota($onlyQuota)
+    {
+        $this->container['onlyQuota'] = $onlyQuota;
+        return $this;
     }
 
     /**

@@ -21,8 +21,8 @@ class ListMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * messages  消息列表。
-    * total  消息总数。
+    * messages  **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： 消息总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * messages  消息列表。
-    * total  消息总数。
+    * messages  **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： 消息总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListMessagesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * messages  消息列表。
-    * total  消息总数。
+    * messages  **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： 消息总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * messages  消息列表。
-    * total  消息总数。
+    * messages  **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： 消息总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * messages  消息列表。
-    * total  消息总数。
+    * messages  **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： 消息总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets messages
-    *  消息列表。
+    *  **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\Message[]|null
     */
@@ -198,7 +198,7 @@ class ListMessagesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets messages
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\Message[]|null $messages 消息列表。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\Message[]|null $messages **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  消息总数。
+    *  **参数解释**： 消息总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -222,7 +222,7 @@ class ListMessagesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param float|null $total 消息总数。
+    * @param float|null $total **参数解释**： 消息总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

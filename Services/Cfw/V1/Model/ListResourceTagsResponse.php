@@ -22,29 +22,29 @@ class ListResourceTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * data  data
+    * tags  资源标签列表
     * sysTags  sysTags
-    * tags  tags
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'data' => 'string',
-            'sysTags' => '\HuaweiCloud\SDK\Cfw\V1\Model\ResourceTag[]',
-            'tags' => '\HuaweiCloud\SDK\Cfw\V1\Model\ResourceTag[]'
+            'tags' => '\HuaweiCloud\SDK\Cfw\V1\Model\ResourceTag[]',
+            'sysTags' => '\HuaweiCloud\SDK\Cfw\V1\Model\ResourceTag[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * data  data
+    * tags  资源标签列表
     * sysTags  sysTags
-    * tags  tags
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'data' => null,
-        'sysTags' => null,
-        'tags' => null
+        'tags' => null,
+        'sysTags' => null
     ];
 
     /**
@@ -71,43 +71,43 @@ class ListResourceTagsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * data  data
+    * tags  资源标签列表
     * sysTags  sysTags
-    * tags  tags
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'data' => 'data',
-            'sysTags' => 'sys_tags',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'sysTags' => 'sys_tags'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * data  data
+    * tags  资源标签列表
     * sysTags  sysTags
-    * tags  tags
     *
     * @var string[]
     */
     protected static $setters = [
             'data' => 'setData',
-            'sysTags' => 'setSysTags',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'sysTags' => 'setSysTags'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * data  data
+    * tags  资源标签列表
     * sysTags  sysTags
-    * tags  tags
     *
     * @var string[]
     */
     protected static $getters = [
             'data' => 'getData',
-            'sysTags' => 'getSysTags',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'sysTags' => 'getSysTags'
     ];
 
     /**
@@ -169,8 +169,8 @@ class ListResourceTagsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
-        $this->container['sysTags'] = isset($data['sysTags']) ? $data['sysTags'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['sysTags'] = isset($data['sysTags']) ? $data['sysTags'] : null;
     }
 
     /**
@@ -220,6 +220,30 @@ class ListResourceTagsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets tags
+    *  资源标签列表
+    *
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\ResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\ResourceTag[]|null $tags 资源标签列表
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
     * Gets sysTags
     *  sysTags
     *
@@ -240,30 +264,6 @@ class ListResourceTagsResponse implements ModelInterface, ArrayAccess
     public function setSysTags($sysTags)
     {
         $this->container['sysTags'] = $sysTags;
-        return $this;
-    }
-
-    /**
-    * Gets tags
-    *  tags
-    *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\ResourceTag[]|null
-    */
-    public function getTags()
-    {
-        return $this->container['tags'];
-    }
-
-    /**
-    * Sets tags
-    *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\ResourceTag[]|null $tags tags
-    *
-    * @return $this
-    */
-    public function setTags($tags)
-    {
-        $this->container['tags'] = $tags;
         return $this;
     }
 

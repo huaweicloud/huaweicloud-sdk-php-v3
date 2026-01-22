@@ -91,6 +91,71 @@ class LiveAsyncClient extends Client
     }
 
     /**
+     * 域名归属权认证
+     *
+     * 域名归属权认证，确保创建的域名对应的主域名有归属权。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function checkDomainVerificationAsync($request)
+    {
+        return $this->checkDomainVerificationAsyncWithHttpInfo($request);
+    }
+    
+    public function checkDomainVerificationAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/domain/verification';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json;charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json;charset=utf-8'],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\CheckDomainVerificationResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\CheckDomainVerificationRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建直播域名
      *
      * 可单独创建直播播放域名或推流域名，每个租户最多可配置64条域名记录。
@@ -350,6 +415,71 @@ class LiveAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Live\V1\Model\CreateFlowsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V1\Model\CreateFlowsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建直播拉流转推任务
+     *
+     * 根据租户指定的拉流源以及拉流任务信息创建直播拉流转推任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createPullTaskAsync($request)
+    {
+        return $this->createPullTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function createPullTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/pull/stream/task';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json'],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\CreatePullTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\CreatePullTaskRequest',
             $asyncRequest = true);
     }
 
@@ -1461,6 +1591,74 @@ class LiveAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Live\V1\Model\DeletePublishTemplateResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V1\Model\DeletePublishTemplateRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除直播拉流转推任务
+     *
+     * 停止并删除直播拉流转推任务。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deletePullTaskAsync($request)
+    {
+        return $this->deletePullTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function deletePullTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/pull/stream/task';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['region'] !== null) {
+            $queryParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $queryParams['task_id'] = $localVarParams['taskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\DeletePullTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\DeletePullTaskRequest',
             $asyncRequest = true);
     }
 
@@ -2606,6 +2804,80 @@ class LiveAsyncClient extends Client
     }
 
     /**
+     * 查询直播拉流转推任务
+     *
+     * 查询直播拉流转推任务。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPullTasksAsync($request)
+    {
+        return $this->listPullTasksAsyncWithHttpInfo($request);
+    }
+    
+    public function listPullTasksAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/pull/stream/task';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['region'] !== null) {
+            $queryParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $queryParams['task_id'] = $localVarParams['taskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ListPullTasksResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ListPullTasksRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询录制回调配置列表
      *
      * 查询录制回调配置列表接口。通过指定条件，查询满足条件的配置列表。
@@ -3512,6 +3784,71 @@ class LiveAsyncClient extends Client
     }
 
     /**
+     * 修改直播拉流转推任务
+     *
+     * 修改直播拉流转推任务，仅当source_type为PullVodPushLive的任务生效
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyPullTaskAsync($request)
+    {
+        return $this->modifyPullTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function modifyPullTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/pull/stream/task';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json'],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ModifyPullTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ModifyPullTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 提交录制控制命令
      *
      * 对单条流的实时录制控制接口。
@@ -3774,6 +4111,71 @@ class LiveAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Live\V1\Model\ShowDomainKeyChainResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V1\Model\ShowDomainKeyChainRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询域名归属权验证信息
+     *
+     * 查询域名归属权验证信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDomainVerificationAsync($request)
+    {
+        return $this->showDomainVerificationAsyncWithHttpInfo($request);
+    }
+    
+    public function showDomainVerificationAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/domain/verification';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domain'] !== null) {
+            $queryParams['domain'] = $localVarParams['domain'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json;charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json;charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ShowDomainVerificationResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ShowDomainVerificationRequest',
             $asyncRequest = true);
     }
 
@@ -5633,6 +6035,77 @@ class LiveAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Live\V1\Model\DeleteDomainHttpsCertResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V1\Model\DeleteDomainHttpsCertRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询HTTPS证书信息
+     *
+     * 根据项目ID、域名等信息查询HTTPS证书信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showCertificateInfoAsync($request)
+    {
+        return $this->showCertificateInfoAsyncWithHttpInfo($request);
+    }
+    
+    public function showCertificateInfoAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/certificates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['playDomain'] !== null) {
+            $queryParams['play_domain'] = $localVarParams['playDomain'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ShowCertificateInfoResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ShowCertificateInfoRequest',
             $asyncRequest = true);
     }
 

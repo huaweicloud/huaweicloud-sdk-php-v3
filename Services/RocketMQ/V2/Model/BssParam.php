@@ -20,11 +20,11 @@ class BssParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isAutoRenew  是否自动续订。  取值范围：   - true: 自动续订。   - false: 不自动续订。  默认不自动续订。
-    * chargingMode  计费模式。  功能说明：付费方式。  取值范围：   - prePaid：预付费，即包年包月；   - postPaid：后付费，即按需付费；  默认为postPaid。
-    * isAutoPay  下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。  取值范围：   - true：是（自动支付）   - false：否（需要客户手动支付）  默认为手动支付。
-    * periodType  订购周期类型。  取值范围：   - month：月   - year：年  **chargingMode为prePaid时生效且为必选值。**
-    * periodNum  订购周期数。  取值范围：   - periodType=month（周期类型为月）时，取值为[1，9]；  - periodType=year（周期类型为年）时，取值为[1，3]；  **chargingMode为prePaid时生效且为必选值。**
+    * isAutoRenew  **参数解释**： 是否自动续订。 **约束限制**： 不涉及。 **取值范围**： - true：自动续订。 - false：不自动续订。 **默认取值**： false。
+    * chargingMode  **参数解释**： 计费模式。功能说明：付费方式。 **约束限制**： 不涉及。 **取值范围**： - prePaid：预付费，即包年包月； - postPaid：后付费，即按需付费； **默认取值**： postPaid。
+    * isAutoPay  **参数解释**： 下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。 **约束限制**： 不涉及。 **取值范围**： - true：是（自动支付） - false：否（需要客户手动支付） **默认取值**： 不涉及。
+    * periodType  **参数解释**： 订购周期类型。 **约束限制**： chargingMode为prePaid时生效且为必选值。 **取值范围**： - month：月 - year：年 **默认取值**： 不涉及。
+    * periodNum  **参数解释**： 订购周期数。 **约束限制**： chargingMode为prePaid时生效且为必选值。 **取值范围**： - periodType=month（周期类型为月）时，取值为[1，9]； - periodType=year（周期类型为年）时，取值为[1，3]； **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class BssParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isAutoRenew  是否自动续订。  取值范围：   - true: 自动续订。   - false: 不自动续订。  默认不自动续订。
-    * chargingMode  计费模式。  功能说明：付费方式。  取值范围：   - prePaid：预付费，即包年包月；   - postPaid：后付费，即按需付费；  默认为postPaid。
-    * isAutoPay  下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。  取值范围：   - true：是（自动支付）   - false：否（需要客户手动支付）  默认为手动支付。
-    * periodType  订购周期类型。  取值范围：   - month：月   - year：年  **chargingMode为prePaid时生效且为必选值。**
-    * periodNum  订购周期数。  取值范围：   - periodType=month（周期类型为月）时，取值为[1，9]；  - periodType=year（周期类型为年）时，取值为[1，3]；  **chargingMode为prePaid时生效且为必选值。**
+    * isAutoRenew  **参数解释**： 是否自动续订。 **约束限制**： 不涉及。 **取值范围**： - true：自动续订。 - false：不自动续订。 **默认取值**： false。
+    * chargingMode  **参数解释**： 计费模式。功能说明：付费方式。 **约束限制**： 不涉及。 **取值范围**： - prePaid：预付费，即包年包月； - postPaid：后付费，即按需付费； **默认取值**： postPaid。
+    * isAutoPay  **参数解释**： 下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。 **约束限制**： 不涉及。 **取值范围**： - true：是（自动支付） - false：否（需要客户手动支付） **默认取值**： 不涉及。
+    * periodType  **参数解释**： 订购周期类型。 **约束限制**： chargingMode为prePaid时生效且为必选值。 **取值范围**： - month：月 - year：年 **默认取值**： 不涉及。
+    * periodNum  **参数解释**： 订购周期数。 **约束限制**： chargingMode为prePaid时生效且为必选值。 **取值范围**： - periodType=month（周期类型为月）时，取值为[1，9]； - periodType=year（周期类型为年）时，取值为[1，3]； **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class BssParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isAutoRenew  是否自动续订。  取值范围：   - true: 自动续订。   - false: 不自动续订。  默认不自动续订。
-    * chargingMode  计费模式。  功能说明：付费方式。  取值范围：   - prePaid：预付费，即包年包月；   - postPaid：后付费，即按需付费；  默认为postPaid。
-    * isAutoPay  下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。  取值范围：   - true：是（自动支付）   - false：否（需要客户手动支付）  默认为手动支付。
-    * periodType  订购周期类型。  取值范围：   - month：月   - year：年  **chargingMode为prePaid时生效且为必选值。**
-    * periodNum  订购周期数。  取值范围：   - periodType=month（周期类型为月）时，取值为[1，9]；  - periodType=year（周期类型为年）时，取值为[1，3]；  **chargingMode为prePaid时生效且为必选值。**
+    * isAutoRenew  **参数解释**： 是否自动续订。 **约束限制**： 不涉及。 **取值范围**： - true：自动续订。 - false：不自动续订。 **默认取值**： false。
+    * chargingMode  **参数解释**： 计费模式。功能说明：付费方式。 **约束限制**： 不涉及。 **取值范围**： - prePaid：预付费，即包年包月； - postPaid：后付费，即按需付费； **默认取值**： postPaid。
+    * isAutoPay  **参数解释**： 下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。 **约束限制**： 不涉及。 **取值范围**： - true：是（自动支付） - false：否（需要客户手动支付） **默认取值**： 不涉及。
+    * periodType  **参数解释**： 订购周期类型。 **约束限制**： chargingMode为prePaid时生效且为必选值。 **取值范围**： - month：月 - year：年 **默认取值**： 不涉及。
+    * periodNum  **参数解释**： 订购周期数。 **约束限制**： chargingMode为prePaid时生效且为必选值。 **取值范围**： - periodType=month（周期类型为月）时，取值为[1，9]； - periodType=year（周期类型为年）时，取值为[1，3]； **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class BssParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isAutoRenew  是否自动续订。  取值范围：   - true: 自动续订。   - false: 不自动续订。  默认不自动续订。
-    * chargingMode  计费模式。  功能说明：付费方式。  取值范围：   - prePaid：预付费，即包年包月；   - postPaid：后付费，即按需付费；  默认为postPaid。
-    * isAutoPay  下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。  取值范围：   - true：是（自动支付）   - false：否（需要客户手动支付）  默认为手动支付。
-    * periodType  订购周期类型。  取值范围：   - month：月   - year：年  **chargingMode为prePaid时生效且为必选值。**
-    * periodNum  订购周期数。  取值范围：   - periodType=month（周期类型为月）时，取值为[1，9]；  - periodType=year（周期类型为年）时，取值为[1，3]；  **chargingMode为prePaid时生效且为必选值。**
+    * isAutoRenew  **参数解释**： 是否自动续订。 **约束限制**： 不涉及。 **取值范围**： - true：自动续订。 - false：不自动续订。 **默认取值**： false。
+    * chargingMode  **参数解释**： 计费模式。功能说明：付费方式。 **约束限制**： 不涉及。 **取值范围**： - prePaid：预付费，即包年包月； - postPaid：后付费，即按需付费； **默认取值**： postPaid。
+    * isAutoPay  **参数解释**： 下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。 **约束限制**： 不涉及。 **取值范围**： - true：是（自动支付） - false：否（需要客户手动支付） **默认取值**： 不涉及。
+    * periodType  **参数解释**： 订购周期类型。 **约束限制**： chargingMode为prePaid时生效且为必选值。 **取值范围**： - month：月 - year：年 **默认取值**： 不涉及。
+    * periodNum  **参数解释**： 订购周期数。 **约束限制**： chargingMode为prePaid时生效且为必选值。 **取值范围**： - periodType=month（周期类型为月）时，取值为[1，9]； - periodType=year（周期类型为年）时，取值为[1，3]； **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class BssParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isAutoRenew  是否自动续订。  取值范围：   - true: 自动续订。   - false: 不自动续订。  默认不自动续订。
-    * chargingMode  计费模式。  功能说明：付费方式。  取值范围：   - prePaid：预付费，即包年包月；   - postPaid：后付费，即按需付费；  默认为postPaid。
-    * isAutoPay  下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。  取值范围：   - true：是（自动支付）   - false：否（需要客户手动支付）  默认为手动支付。
-    * periodType  订购周期类型。  取值范围：   - month：月   - year：年  **chargingMode为prePaid时生效且为必选值。**
-    * periodNum  订购周期数。  取值范围：   - periodType=month（周期类型为月）时，取值为[1，9]；  - periodType=year（周期类型为年）时，取值为[1，3]；  **chargingMode为prePaid时生效且为必选值。**
+    * isAutoRenew  **参数解释**： 是否自动续订。 **约束限制**： 不涉及。 **取值范围**： - true：自动续订。 - false：不自动续订。 **默认取值**： false。
+    * chargingMode  **参数解释**： 计费模式。功能说明：付费方式。 **约束限制**： 不涉及。 **取值范围**： - prePaid：预付费，即包年包月； - postPaid：后付费，即按需付费； **默认取值**： postPaid。
+    * isAutoPay  **参数解释**： 下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。 **约束限制**： 不涉及。 **取值范围**： - true：是（自动支付） - false：否（需要客户手动支付） **默认取值**： 不涉及。
+    * periodType  **参数解释**： 订购周期类型。 **约束限制**： chargingMode为prePaid时生效且为必选值。 **取值范围**： - month：月 - year：年 **默认取值**： 不涉及。
+    * periodNum  **参数解释**： 订购周期数。 **约束限制**： chargingMode为prePaid时生效且为必选值。 **取值范围**： - periodType=month（周期类型为月）时，取值为[1，9]； - periodType=year（周期类型为年）时，取值为[1，3]； **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -264,7 +264,7 @@ class BssParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoRenew
-    *  是否自动续订。  取值范围：   - true: 自动续订。   - false: 不自动续订。  默认不自动续订。
+    *  **参数解释**： 是否自动续订。 **约束限制**： 不涉及。 **取值范围**： - true：自动续订。 - false：不自动续订。 **默认取值**： false。
     *
     * @return bool|null
     */
@@ -276,7 +276,7 @@ class BssParam implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoRenew
     *
-    * @param bool|null $isAutoRenew 是否自动续订。  取值范围：   - true: 自动续订。   - false: 不自动续订。  默认不自动续订。
+    * @param bool|null $isAutoRenew **参数解释**： 是否自动续订。 **约束限制**： 不涉及。 **取值范围**： - true：自动续订。 - false：不自动续订。 **默认取值**： false。
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class BssParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  计费模式。  功能说明：付费方式。  取值范围：   - prePaid：预付费，即包年包月；   - postPaid：后付费，即按需付费；  默认为postPaid。
+    *  **参数解释**： 计费模式。功能说明：付费方式。 **约束限制**： 不涉及。 **取值范围**： - prePaid：预付费，即包年包月； - postPaid：后付费，即按需付费； **默认取值**： postPaid。
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class BssParam implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param string|null $chargingMode 计费模式。  功能说明：付费方式。  取值范围：   - prePaid：预付费，即包年包月；   - postPaid：后付费，即按需付费；  默认为postPaid。
+    * @param string|null $chargingMode **参数解释**： 计费模式。功能说明：付费方式。 **约束限制**： 不涉及。 **取值范围**： - prePaid：预付费，即包年包月； - postPaid：后付费，即按需付费； **默认取值**： postPaid。
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class BssParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoPay
-    *  下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。  取值范围：   - true：是（自动支付）   - false：否（需要客户手动支付）  默认为手动支付。
+    *  **参数解释**： 下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。 **约束限制**： 不涉及。 **取值范围**： - true：是（自动支付） - false：否（需要客户手动支付） **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -324,7 +324,7 @@ class BssParam implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoPay
     *
-    * @param bool|null $isAutoPay 下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。  取值范围：   - true：是（自动支付）   - false：否（需要客户手动支付）  默认为手动支付。
+    * @param bool|null $isAutoPay **参数解释**： 下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。 **约束限制**： 不涉及。 **取值范围**： - true：是（自动支付） - false：否（需要客户手动支付） **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class BssParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodType
-    *  订购周期类型。  取值范围：   - month：月   - year：年  **chargingMode为prePaid时生效且为必选值。**
+    *  **参数解释**： 订购周期类型。 **约束限制**： chargingMode为prePaid时生效且为必选值。 **取值范围**： - month：月 - year：年 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class BssParam implements ModelInterface, ArrayAccess
     /**
     * Sets periodType
     *
-    * @param string|null $periodType 订购周期类型。  取值范围：   - month：月   - year：年  **chargingMode为prePaid时生效且为必选值。**
+    * @param string|null $periodType **参数解释**： 订购周期类型。 **约束限制**： chargingMode为prePaid时生效且为必选值。 **取值范围**： - month：月 - year：年 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class BssParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodNum
-    *  订购周期数。  取值范围：   - periodType=month（周期类型为月）时，取值为[1，9]；  - periodType=year（周期类型为年）时，取值为[1，3]；  **chargingMode为prePaid时生效且为必选值。**
+    *  **参数解释**： 订购周期数。 **约束限制**： chargingMode为prePaid时生效且为必选值。 **取值范围**： - periodType=month（周期类型为月）时，取值为[1，9]； - periodType=year（周期类型为年）时，取值为[1，3]； **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -372,7 +372,7 @@ class BssParam implements ModelInterface, ArrayAccess
     /**
     * Sets periodNum
     *
-    * @param int|null $periodNum 订购周期数。  取值范围：   - periodType=month（周期类型为月）时，取值为[1，9]；  - periodType=year（周期类型为年）时，取值为[1，3]；  **chargingMode为prePaid时生效且为必选值。**
+    * @param int|null $periodNum **参数解释**： 订购周期数。 **约束限制**： chargingMode为prePaid时生效且为必选值。 **取值范围**： - periodType=month（周期类型为月）时，取值为[1，9]； - periodType=year（周期类型为年）时，取值为[1，3]； **默认取值**： 不涉及。
     *
     * @return $this
     */

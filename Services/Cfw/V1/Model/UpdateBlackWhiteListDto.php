@@ -22,7 +22,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * direction  地址方向0：源地址1：目的地址
     * addressType  地址类型0：ipv4，1:ipv6
-    * address  ip地址
+    * address  IP地址
     * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1
     * port  端口
     * description  描述
@@ -42,7 +42,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * direction  地址方向0：源地址1：目的地址
     * addressType  地址类型0：ipv4，1:ipv6
-    * address  ip地址
+    * address  IP地址
     * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1
     * port  端口
     * description  描述
@@ -83,7 +83,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     * and the value is the original name
     * direction  地址方向0：源地址1：目的地址
     * addressType  地址类型0：ipv4，1:ipv6
-    * address  ip地址
+    * address  IP地址
     * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1
     * port  端口
     * description  描述
@@ -103,7 +103,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * direction  地址方向0：源地址1：目的地址
     * addressType  地址类型0：ipv4，1:ipv6
-    * address  ip地址
+    * address  IP地址
     * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1
     * port  端口
     * description  描述
@@ -123,7 +123,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * direction  地址方向0：源地址1：目的地址
     * addressType  地址类型0：ipv4，1:ipv6
-    * address  ip地址
+    * address  IP地址
     * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1
     * port  端口
     * description  描述
@@ -280,7 +280,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets address
-    *  ip地址
+    *  IP地址
     *
     * @return string
     */
@@ -292,7 +292,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     /**
     * Sets address
     *
-    * @param string $address ip地址
+    * @param string $address IP地址
     *
     * @return $this
     */

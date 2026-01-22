@@ -20,17 +20,17 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accountName  账号名称
-    * alarmId  告警id
-    * alarmTimePeriod  告警周期，0：全天，1：8时到22时
-    * alarmType  告警类型 0:攻击告警; 1:流量超额预警; 2:EIP未防护告警; 3:威胁情报告警
-    * enableStatus  告警状态 0:失效; 1:生效
-    * frequencyCount  告警触发频次
-    * frequencyTime  告警频次时间范围
-    * language  告警语言
-    * severity  告警等级
-    * topicUrn  告警urn
-    * username  用户名称
+    * accountName  账户名称
+    * alarmId  账户名称ID.
+    * alarmTimePeriod  告警周期，0：全天，1：8时到22时，为必传参数
+    * alarmType  告警类型 0：攻击告警; 1：流量超额预警; 2：EIP未防护告警; 3：异常外联告警，为必传参数
+    * enableStatus  告警状态 0：失效; 1：生效，为必传参数
+    * frequencyCount  告警触发频次，为必传参数
+    * frequencyTime  告警频次时间范围，以分钟为单位，为必传参数
+    * language  告警语言，zh-cn为中文，en-us为英文
+    * severity  告警等级，当type为0和4时，severity为CRITICAL,HIGH,MEDIUM,LOW四种等级的组合字符串，当type为1时，severity为2；当type为2时，severity固定为3，为必传参数
+    * topicUrn  告警urn，为必传参数
+    * username  用户名称，为cfw，为必传参数
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accountName  账号名称
-    * alarmId  告警id
-    * alarmTimePeriod  告警周期，0：全天，1：8时到22时
-    * alarmType  告警类型 0:攻击告警; 1:流量超额预警; 2:EIP未防护告警; 3:威胁情报告警
-    * enableStatus  告警状态 0:失效; 1:生效
-    * frequencyCount  告警触发频次
-    * frequencyTime  告警频次时间范围
-    * language  告警语言
-    * severity  告警等级
-    * topicUrn  告警urn
-    * username  用户名称
+    * accountName  账户名称
+    * alarmId  账户名称ID.
+    * alarmTimePeriod  告警周期，0：全天，1：8时到22时，为必传参数
+    * alarmType  告警类型 0：攻击告警; 1：流量超额预警; 2：EIP未防护告警; 3：异常外联告警，为必传参数
+    * enableStatus  告警状态 0：失效; 1：生效，为必传参数
+    * frequencyCount  告警触发频次，为必传参数
+    * frequencyTime  告警频次时间范围，以分钟为单位，为必传参数
+    * language  告警语言，zh-cn为中文，en-us为英文
+    * severity  告警等级，当type为0和4时，severity为CRITICAL,HIGH,MEDIUM,LOW四种等级的组合字符串，当type为1时，severity为2；当type为2时，severity固定为3，为必传参数
+    * topicUrn  告警urn，为必传参数
+    * username  用户名称，为cfw，为必传参数
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accountName  账号名称
-    * alarmId  告警id
-    * alarmTimePeriod  告警周期，0：全天，1：8时到22时
-    * alarmType  告警类型 0:攻击告警; 1:流量超额预警; 2:EIP未防护告警; 3:威胁情报告警
-    * enableStatus  告警状态 0:失效; 1:生效
-    * frequencyCount  告警触发频次
-    * frequencyTime  告警频次时间范围
-    * language  告警语言
-    * severity  告警等级
-    * topicUrn  告警urn
-    * username  用户名称
+    * accountName  账户名称
+    * alarmId  账户名称ID.
+    * alarmTimePeriod  告警周期，0：全天，1：8时到22时，为必传参数
+    * alarmType  告警类型 0：攻击告警; 1：流量超额预警; 2：EIP未防护告警; 3：异常外联告警，为必传参数
+    * enableStatus  告警状态 0：失效; 1：生效，为必传参数
+    * frequencyCount  告警触发频次，为必传参数
+    * frequencyTime  告警频次时间范围，以分钟为单位，为必传参数
+    * language  告警语言，zh-cn为中文，en-us为英文
+    * severity  告警等级，当type为0和4时，severity为CRITICAL,HIGH,MEDIUM,LOW四种等级的组合字符串，当type为1时，severity为2；当type为2时，severity固定为3，为必传参数
+    * topicUrn  告警urn，为必传参数
+    * username  用户名称，为cfw，为必传参数
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accountName  账号名称
-    * alarmId  告警id
-    * alarmTimePeriod  告警周期，0：全天，1：8时到22时
-    * alarmType  告警类型 0:攻击告警; 1:流量超额预警; 2:EIP未防护告警; 3:威胁情报告警
-    * enableStatus  告警状态 0:失效; 1:生效
-    * frequencyCount  告警触发频次
-    * frequencyTime  告警频次时间范围
-    * language  告警语言
-    * severity  告警等级
-    * topicUrn  告警urn
-    * username  用户名称
+    * accountName  账户名称
+    * alarmId  账户名称ID.
+    * alarmTimePeriod  告警周期，0：全天，1：8时到22时，为必传参数
+    * alarmType  告警类型 0：攻击告警; 1：流量超额预警; 2：EIP未防护告警; 3：异常外联告警，为必传参数
+    * enableStatus  告警状态 0：失效; 1：生效，为必传参数
+    * frequencyCount  告警触发频次，为必传参数
+    * frequencyTime  告警频次时间范围，以分钟为单位，为必传参数
+    * language  告警语言，zh-cn为中文，en-us为英文
+    * severity  告警等级，当type为0和4时，severity为CRITICAL,HIGH,MEDIUM,LOW四种等级的组合字符串，当type为1时，severity为2；当type为2时，severity固定为3，为必传参数
+    * topicUrn  告警urn，为必传参数
+    * username  用户名称，为cfw，为必传参数
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accountName  账号名称
-    * alarmId  告警id
-    * alarmTimePeriod  告警周期，0：全天，1：8时到22时
-    * alarmType  告警类型 0:攻击告警; 1:流量超额预警; 2:EIP未防护告警; 3:威胁情报告警
-    * enableStatus  告警状态 0:失效; 1:生效
-    * frequencyCount  告警触发频次
-    * frequencyTime  告警频次时间范围
-    * language  告警语言
-    * severity  告警等级
-    * topicUrn  告警urn
-    * username  用户名称
+    * accountName  账户名称
+    * alarmId  账户名称ID.
+    * alarmTimePeriod  告警周期，0：全天，1：8时到22时，为必传参数
+    * alarmType  告警类型 0：攻击告警; 1：流量超额预警; 2：EIP未防护告警; 3：异常外联告警，为必传参数
+    * enableStatus  告警状态 0：失效; 1：生效，为必传参数
+    * frequencyCount  告警触发频次，为必传参数
+    * frequencyTime  告警频次时间范围，以分钟为单位，为必传参数
+    * language  告警语言，zh-cn为中文，en-us为英文
+    * severity  告警等级，当type为0和4时，severity为CRITICAL,HIGH,MEDIUM,LOW四种等级的组合字符串，当type为1时，severity为2；当type为2时，severity固定为3，为必传参数
+    * topicUrn  告警urn，为必传参数
+    * username  用户名称，为cfw，为必传参数
     *
     * @var string[]
     */
@@ -284,7 +284,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountName
-    *  账号名称
+    *  账户名称
     *
     * @return string|null
     */
@@ -296,7 +296,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
     /**
     * Sets accountName
     *
-    * @param string|null $accountName 账号名称
+    * @param string|null $accountName 账户名称
     *
     * @return $this
     */
@@ -308,7 +308,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmId
-    *  告警id
+    *  账户名称ID.
     *
     * @return string|null
     */
@@ -320,7 +320,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
     /**
     * Sets alarmId
     *
-    * @param string|null $alarmId 告警id
+    * @param string|null $alarmId 账户名称ID.
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmTimePeriod
-    *  告警周期，0：全天，1：8时到22时
+    *  告警周期，0：全天，1：8时到22时，为必传参数
     *
     * @return int|null
     */
@@ -344,7 +344,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
     /**
     * Sets alarmTimePeriod
     *
-    * @param int|null $alarmTimePeriod 告警周期，0：全天，1：8时到22时
+    * @param int|null $alarmTimePeriod 告警周期，0：全天，1：8时到22时，为必传参数
     *
     * @return $this
     */
@@ -356,7 +356,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmType
-    *  告警类型 0:攻击告警; 1:流量超额预警; 2:EIP未防护告警; 3:威胁情报告警
+    *  告警类型 0：攻击告警; 1：流量超额预警; 2：EIP未防护告警; 3：异常外联告警，为必传参数
     *
     * @return int|null
     */
@@ -368,7 +368,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
     /**
     * Sets alarmType
     *
-    * @param int|null $alarmType 告警类型 0:攻击告警; 1:流量超额预警; 2:EIP未防护告警; 3:威胁情报告警
+    * @param int|null $alarmType 告警类型 0：攻击告警; 1：流量超额预警; 2：EIP未防护告警; 3：异常外联告警，为必传参数
     *
     * @return $this
     */
@@ -380,7 +380,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableStatus
-    *  告警状态 0:失效; 1:生效
+    *  告警状态 0：失效; 1：生效，为必传参数
     *
     * @return int|null
     */
@@ -392,7 +392,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
     /**
     * Sets enableStatus
     *
-    * @param int|null $enableStatus 告警状态 0:失效; 1:生效
+    * @param int|null $enableStatus 告警状态 0：失效; 1：生效，为必传参数
     *
     * @return $this
     */
@@ -404,7 +404,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets frequencyCount
-    *  告警触发频次
+    *  告警触发频次，为必传参数
     *
     * @return int|null
     */
@@ -416,7 +416,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
     /**
     * Sets frequencyCount
     *
-    * @param int|null $frequencyCount 告警触发频次
+    * @param int|null $frequencyCount 告警触发频次，为必传参数
     *
     * @return $this
     */
@@ -428,7 +428,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets frequencyTime
-    *  告警频次时间范围
+    *  告警频次时间范围，以分钟为单位，为必传参数
     *
     * @return int|null
     */
@@ -440,7 +440,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
     /**
     * Sets frequencyTime
     *
-    * @param int|null $frequencyTime 告警频次时间范围
+    * @param int|null $frequencyTime 告警频次时间范围，以分钟为单位，为必传参数
     *
     * @return $this
     */
@@ -452,7 +452,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  告警语言
+    *  告警语言，zh-cn为中文，en-us为英文
     *
     * @return string|null
     */
@@ -464,7 +464,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 告警语言
+    * @param string|null $language 告警语言，zh-cn为中文，en-us为英文
     *
     * @return $this
     */
@@ -476,7 +476,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  告警等级
+    *  告警等级，当type为0和4时，severity为CRITICAL,HIGH,MEDIUM,LOW四种等级的组合字符串，当type为1时，severity为2；当type为2时，severity固定为3，为必传参数
     *
     * @return string|null
     */
@@ -488,7 +488,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param string|null $severity 告警等级
+    * @param string|null $severity 告警等级，当type为0和4时，severity为CRITICAL,HIGH,MEDIUM,LOW四种等级的组合字符串，当type为1时，severity为2；当type为2时，severity固定为3，为必传参数
     *
     * @return $this
     */
@@ -500,7 +500,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicUrn
-    *  告警urn
+    *  告警urn，为必传参数
     *
     * @return string|null
     */
@@ -512,7 +512,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
     /**
     * Sets topicUrn
     *
-    * @param string|null $topicUrn 告警urn
+    * @param string|null $topicUrn 告警urn，为必传参数
     *
     * @return $this
     */
@@ -524,7 +524,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets username
-    *  用户名称
+    *  用户名称，为cfw，为必传参数
     *
     * @return string|null
     */
@@ -536,7 +536,7 @@ class UpdateAttackLogAlarmConfigDto implements ModelInterface, ArrayAccess
     /**
     * Sets username
     *
-    * @param string|null $username 用户名称
+    * @param string|null $username 用户名称，为cfw，为必传参数
     *
     * @return $this
     */

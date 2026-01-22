@@ -20,7 +20,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
+    * status  **参数解释**：检查任务状态。  **取值范围**： - processed：检查任务执行完成。 - processing：检查任务执行中。 - failed：检查任务执行失败。
     * result  result
     * createdAt  **参数解释**：任务创建时间。  **取值范围**：不涉及
     * updatedAt  **参数解释**：任务更新时间。  **取值范围**：不涉及
@@ -46,7 +46,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
+    * status  **参数解释**：检查任务状态。  **取值范围**： - processed：检查任务执行完成。 - processing：检查任务执行中。 - failed：检查任务执行失败。
     * result  result
     * createdAt  **参数解释**：任务创建时间。  **取值范围**：不涉及
     * updatedAt  **参数解释**：任务更新时间。  **取值范围**：不涉及
@@ -93,7 +93,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
+    * status  **参数解释**：检查任务状态。  **取值范围**： - processed：检查任务执行完成。 - processing：检查任务执行中。 - failed：检查任务执行失败。
     * result  result
     * createdAt  **参数解释**：任务创建时间。  **取值范围**：不涉及
     * updatedAt  **参数解释**：任务更新时间。  **取值范围**：不涉及
@@ -119,7 +119,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
+    * status  **参数解释**：检查任务状态。  **取值范围**： - processed：检查任务执行完成。 - processing：检查任务执行中。 - failed：检查任务执行失败。
     * result  result
     * createdAt  **参数解释**：任务创建时间。  **取值范围**：不涉及
     * updatedAt  **参数解释**：任务更新时间。  **取值范围**：不涉及
@@ -145,7 +145,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
+    * status  **参数解释**：检查任务状态。  **取值范围**： - processed：检查任务执行完成。 - processing：检查任务执行中。 - failed：检查任务执行失败。
     * result  result
     * createdAt  **参数解释**：任务创建时间。  **取值范围**：不涉及
     * updatedAt  **参数解释**：任务更新时间。  **取值范围**：不涉及
@@ -262,7 +262,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
+    *  **参数解释**：检查任务状态。  **取值范围**： - processed：检查任务执行完成。 - processing：检查任务执行中。 - failed：检查任务执行失败。
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class MemberCheckJobInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
+    * @param string|null $status **参数解释**：检查任务状态。  **取值范围**： - processed：检查任务执行完成。 - processing：检查任务执行中。 - failed：检查任务执行失败。
     *
     * @return $this
     */

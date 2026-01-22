@@ -22,21 +22,25 @@ class ListYmlsJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * configList  历史修改配置列表。
+    * totalSize  **参数解释**： 配置任务数量。 **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'configList' => '\HuaweiCloud\SDK\Css\V1\Model\ConfigListRsp[]'
+            'configList' => '\HuaweiCloud\SDK\Css\V1\Model\ConfigListRsp[]',
+            'totalSize' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * configList  历史修改配置列表。
+    * totalSize  **参数解释**： 配置任务数量。 **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'configList' => null
+        'configList' => null,
+        'totalSize' => 'int32'
     ];
 
     /**
@@ -63,31 +67,37 @@ class ListYmlsJobResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * configList  历史修改配置列表。
+    * totalSize  **参数解释**： 配置任务数量。 **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'configList' => 'configList'
+            'configList' => 'configList',
+            'totalSize' => 'totalSize'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * configList  历史修改配置列表。
+    * totalSize  **参数解释**： 配置任务数量。 **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
-            'configList' => 'setConfigList'
+            'configList' => 'setConfigList',
+            'totalSize' => 'setTotalSize'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * configList  历史修改配置列表。
+    * totalSize  **参数解释**： 配置任务数量。 **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
-            'configList' => 'getConfigList'
+            'configList' => 'getConfigList',
+            'totalSize' => 'getTotalSize'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListYmlsJobResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['configList'] = isset($data['configList']) ? $data['configList'] : null;
+        $this->container['totalSize'] = isset($data['totalSize']) ? $data['totalSize'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ListYmlsJobResponse implements ModelInterface, ArrayAccess
     public function setConfigList($configList)
     {
         $this->container['configList'] = $configList;
+        return $this;
+    }
+
+    /**
+    * Gets totalSize
+    *  **参数解释**： 配置任务数量。 **取值范围**： 不涉及
+    *
+    * @return int|null
+    */
+    public function getTotalSize()
+    {
+        return $this->container['totalSize'];
+    }
+
+    /**
+    * Sets totalSize
+    *
+    * @param int|null $totalSize **参数解释**： 配置任务数量。 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setTotalSize($totalSize)
+    {
+        $this->container['totalSize'] = $totalSize;
         return $this;
     }
 

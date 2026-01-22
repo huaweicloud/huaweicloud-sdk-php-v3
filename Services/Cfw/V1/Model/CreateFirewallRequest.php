@@ -20,29 +20,25 @@ class CreateFirewallRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * xClientToken  保证客户端请求幂等性的标识。  该标识为32位UUID格式，由客户端生成，且需确保不同请求之间该标识具有唯一性。
+    * projectId  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'projectId' => 'string',
-            'xClientToken' => 'string',
             'body' => '\HuaweiCloud\SDK\Cfw\V1\Model\CreateFirewallReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * xClientToken  保证客户端请求幂等性的标识。  该标识为32位UUID格式，由客户端生成，且需确保不同请求之间该标识具有唯一性。
+    * projectId  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'projectId' => null,
-        'xClientToken' => null,
         'body' => null
     ];
 
@@ -69,43 +65,37 @@ class CreateFirewallRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * xClientToken  保证客户端请求幂等性的标识。  该标识为32位UUID格式，由客户端生成，且需确保不同请求之间该标识具有唯一性。
+    * projectId  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'projectId' => 'project_id',
-            'xClientToken' => 'X-Client-Token',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * xClientToken  保证客户端请求幂等性的标识。  该标识为32位UUID格式，由客户端生成，且需确保不同请求之间该标识具有唯一性。
+    * projectId  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
             'projectId' => 'setProjectId',
-            'xClientToken' => 'setXClientToken',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * xClientToken  保证客户端请求幂等性的标识。  该标识为32位UUID格式，由客户端生成，且需确保不同请求之间该标识具有唯一性。
+    * projectId  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
             'projectId' => 'getProjectId',
-            'xClientToken' => 'getXClientToken',
             'body' => 'getBody'
     ];
 
@@ -168,7 +158,6 @@ class CreateFirewallRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
-        $this->container['xClientToken'] = isset($data['xClientToken']) ? $data['xClientToken'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -183,6 +172,12 @@ class CreateFirewallRequest implements ModelInterface, ArrayAccess
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
         }
+            if ((mb_strlen($this->container['projectId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['projectId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -199,7 +194,7 @@ class CreateFirewallRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    *  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @return string
     */
@@ -211,37 +206,13 @@ class CreateFirewallRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * @param string $projectId **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @return $this
     */
     public function setProjectId($projectId)
     {
         $this->container['projectId'] = $projectId;
-        return $this;
-    }
-
-    /**
-    * Gets xClientToken
-    *  保证客户端请求幂等性的标识。  该标识为32位UUID格式，由客户端生成，且需确保不同请求之间该标识具有唯一性。
-    *
-    * @return string|null
-    */
-    public function getXClientToken()
-    {
-        return $this->container['xClientToken'];
-    }
-
-    /**
-    * Sets xClientToken
-    *
-    * @param string|null $xClientToken 保证客户端请求幂等性的标识。  该标识为32位UUID格式，由客户端生成，且需确保不同请求之间该标识具有唯一性。
-    *
-    * @return $this
-    */
-    public function setXClientToken($xClientToken)
-    {
-        $this->container['xClientToken'] = $xClientToken;
         return $this;
     }
 

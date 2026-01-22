@@ -20,11 +20,11 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  监控维度名称。
-    * metrics  监控指标名称。
-    * keyName  监控查询使用的key。
-    * dimRouter  监控维度路由。
-    * children  子维度列表。
+    * name  **参数解释**： 监控维度名称。 **取值范围**： 不涉及。
+    * metrics  **参数解释**： 监控指标名称。
+    * keyName  **参数解释**： 监控查询使用的key。
+    * dimRouter  **参数解释**： 监控维度路由。
+    * children  **参数解释**： 子维度列表。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  监控维度名称。
-    * metrics  监控指标名称。
-    * keyName  监控查询使用的key。
-    * dimRouter  监控维度路由。
-    * children  子维度列表。
+    * name  **参数解释**： 监控维度名称。 **取值范围**： 不涉及。
+    * metrics  **参数解释**： 监控指标名称。
+    * keyName  **参数解释**： 监控查询使用的key。
+    * dimRouter  **参数解释**： 监控维度路由。
+    * children  **参数解释**： 子维度列表。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  监控维度名称。
-    * metrics  监控指标名称。
-    * keyName  监控查询使用的key。
-    * dimRouter  监控维度路由。
-    * children  子维度列表。
+    * name  **参数解释**： 监控维度名称。 **取值范围**： 不涉及。
+    * metrics  **参数解释**： 监控指标名称。
+    * keyName  **参数解释**： 监控查询使用的key。
+    * dimRouter  **参数解释**： 监控维度路由。
+    * children  **参数解释**： 子维度列表。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  监控维度名称。
-    * metrics  监控指标名称。
-    * keyName  监控查询使用的key。
-    * dimRouter  监控维度路由。
-    * children  子维度列表。
+    * name  **参数解释**： 监控维度名称。 **取值范围**： 不涉及。
+    * metrics  **参数解释**： 监控指标名称。
+    * keyName  **参数解释**： 监控查询使用的key。
+    * dimRouter  **参数解释**： 监控维度路由。
+    * children  **参数解释**： 子维度列表。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  监控维度名称。
-    * metrics  监控指标名称。
-    * keyName  监控查询使用的key。
-    * dimRouter  监控维度路由。
-    * children  子维度列表。
+    * name  **参数解释**： 监控维度名称。 **取值范围**： 不涉及。
+    * metrics  **参数解释**： 监控指标名称。
+    * keyName  **参数解释**： 监控查询使用的key。
+    * dimRouter  **参数解释**： 监控维度路由。
+    * children  **参数解释**： 子维度列表。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  监控维度名称。
+    *  **参数解释**： 监控维度名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 监控维度名称。
+    * @param string|null $name **参数解释**： 监控维度名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
 
     /**
     * Gets metrics
-    *  监控指标名称。
+    *  **参数解释**： 监控指标名称。
     *
     * @return string[]|null
     */
@@ -254,7 +254,7 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
     /**
     * Sets metrics
     *
-    * @param string[]|null $metrics 监控指标名称。
+    * @param string[]|null $metrics **参数解释**： 监控指标名称。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
 
     /**
     * Gets keyName
-    *  监控查询使用的key。
+    *  **参数解释**： 监控查询使用的key。
     *
     * @return string[]|null
     */
@@ -278,7 +278,7 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
     /**
     * Sets keyName
     *
-    * @param string[]|null $keyName 监控查询使用的key。
+    * @param string[]|null $keyName **参数解释**： 监控查询使用的key。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimRouter
-    *  监控维度路由。
+    *  **参数解释**： 监控维度路由。
     *
     * @return string[]|null
     */
@@ -302,7 +302,7 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
     /**
     * Sets dimRouter
     *
-    * @param string[]|null $dimRouter 监控维度路由。
+    * @param string[]|null $dimRouter **参数解释**： 监控维度路由。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
 
     /**
     * Gets children
-    *  子维度列表。
+    *  **参数解释**： 子维度列表。
     *
     * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowCeshierarchyRespChildren[]|null
     */
@@ -326,7 +326,7 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
     /**
     * Sets children
     *
-    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowCeshierarchyRespChildren[]|null $children 子维度列表。
+    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowCeshierarchyRespChildren[]|null $children **参数解释**： 子维度列表。
     *
     * @return $this
     */

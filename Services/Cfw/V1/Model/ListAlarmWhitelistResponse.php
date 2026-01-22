@@ -26,7 +26,7 @@ class ListAlarmWhitelistResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\PageInfo'
+            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\HttpListAlarmWhiteListResponseData'
     ];
 
     /**
@@ -177,7 +177,7 @@ class ListAlarmWhitelistResponse implements ModelInterface, ArrayAccess
     * Gets data
     *  data
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\PageInfo|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\HttpListAlarmWhiteListResponseData|null
     */
     public function getData()
     {
@@ -187,7 +187,7 @@ class ListAlarmWhitelistResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\PageInfo|null $data data
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\HttpListAlarmWhiteListResponseData|null $data data
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class AntiVirusSwitchDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * antiVirusStatus  反病毒开关状态
-    * objectId  防护对象ID
+    * antiVirusStatus  参数解释： 反病毒开关状态，为必传参数 约束限制： 不涉及 取值范围： 0：开启 1：关闭 默认取值： 不涉及
+    * objectId  防护对象ID，为必传参数
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class AntiVirusSwitchDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * antiVirusStatus  反病毒开关状态
-    * objectId  防护对象ID
+    * antiVirusStatus  参数解释： 反病毒开关状态，为必传参数 约束限制： 不涉及 取值范围： 0：开启 1：关闭 默认取值： 不涉及
+    * objectId  防护对象ID，为必传参数
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class AntiVirusSwitchDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * antiVirusStatus  反病毒开关状态
-    * objectId  防护对象ID
+    * antiVirusStatus  参数解释： 反病毒开关状态，为必传参数 约束限制： 不涉及 取值范围： 0：开启 1：关闭 默认取值： 不涉及
+    * objectId  防护对象ID，为必传参数
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class AntiVirusSwitchDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * antiVirusStatus  反病毒开关状态
-    * objectId  防护对象ID
+    * antiVirusStatus  参数解释： 反病毒开关状态，为必传参数 约束限制： 不涉及 取值范围： 0：开启 1：关闭 默认取值： 不涉及
+    * objectId  防护对象ID，为必传参数
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class AntiVirusSwitchDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * antiVirusStatus  反病毒开关状态
-    * objectId  防护对象ID
+    * antiVirusStatus  参数解释： 反病毒开关状态，为必传参数 约束限制： 不涉及 取值范围： 0：开启 1：关闭 默认取值： 不涉及
+    * objectId  防护对象ID，为必传参数
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class AntiVirusSwitchDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets antiVirusStatus
-    *  反病毒开关状态
+    *  参数解释： 反病毒开关状态，为必传参数 约束限制： 不涉及 取值范围： 0：开启 1：关闭 默认取值： 不涉及
     *
     * @return int|null
     */
@@ -203,7 +203,7 @@ class AntiVirusSwitchDto implements ModelInterface, ArrayAccess
     /**
     * Sets antiVirusStatus
     *
-    * @param int|null $antiVirusStatus 反病毒开关状态
+    * @param int|null $antiVirusStatus 参数解释： 反病毒开关状态，为必传参数 约束限制： 不涉及 取值范围： 0：开启 1：关闭 默认取值： 不涉及
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class AntiVirusSwitchDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  防护对象ID
+    *  防护对象ID，为必传参数
     *
     * @return string|null
     */
@@ -227,7 +227,7 @@ class AntiVirusSwitchDto implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string|null $objectId 防护对象ID
+    * @param string|null $objectId 防护对象ID，为必传参数
     *
     * @return $this
     */

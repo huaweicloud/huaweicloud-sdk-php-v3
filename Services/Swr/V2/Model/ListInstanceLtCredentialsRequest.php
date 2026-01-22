@@ -23,13 +23,15 @@ class ListInstanceLtCredentialsRequest implements ModelInterface, ArrayAccess
     * instanceId  企业仓库实例ID
     * offset  起始索引，默认为0。**注意：offset和limit参数需要配套使用。**
     * limit  返回条数，默认为100，最大值为100。**注意：offset和limit参数需要配套使用。**
+    * selfOnly  值为false的时候，拥有te_admin角色的用户可以查询实例下所有的长期登录凭证，默认情况下只查询自己创建的长期登录凭证
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'instanceId' => 'string',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'selfOnly' => 'bool'
     ];
 
     /**
@@ -37,13 +39,15 @@ class ListInstanceLtCredentialsRequest implements ModelInterface, ArrayAccess
     * instanceId  企业仓库实例ID
     * offset  起始索引，默认为0。**注意：offset和limit参数需要配套使用。**
     * limit  返回条数，默认为100，最大值为100。**注意：offset和limit参数需要配套使用。**
+    * selfOnly  值为false的时候，拥有te_admin角色的用户可以查询实例下所有的长期登录凭证，默认情况下只查询自己创建的长期登录凭证
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'instanceId' => null,
         'offset' => 'int32',
-        'limit' => 'int32'
+        'limit' => 'int32',
+        'selfOnly' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class ListInstanceLtCredentialsRequest implements ModelInterface, ArrayAccess
     * instanceId  企业仓库实例ID
     * offset  起始索引，默认为0。**注意：offset和limit参数需要配套使用。**
     * limit  返回条数，默认为100，最大值为100。**注意：offset和limit参数需要配套使用。**
+    * selfOnly  值为false的时候，拥有te_admin角色的用户可以查询实例下所有的长期登录凭证，默认情况下只查询自己创建的长期登录凭证
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'instanceId' => 'instance_id',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'selfOnly' => 'self_only'
     ];
 
     /**
@@ -86,13 +92,15 @@ class ListInstanceLtCredentialsRequest implements ModelInterface, ArrayAccess
     * instanceId  企业仓库实例ID
     * offset  起始索引，默认为0。**注意：offset和limit参数需要配套使用。**
     * limit  返回条数，默认为100，最大值为100。**注意：offset和limit参数需要配套使用。**
+    * selfOnly  值为false的时候，拥有te_admin角色的用户可以查询实例下所有的长期登录凭证，默认情况下只查询自己创建的长期登录凭证
     *
     * @var string[]
     */
     protected static $setters = [
             'instanceId' => 'setInstanceId',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'selfOnly' => 'setSelfOnly'
     ];
 
     /**
@@ -100,13 +108,15 @@ class ListInstanceLtCredentialsRequest implements ModelInterface, ArrayAccess
     * instanceId  企业仓库实例ID
     * offset  起始索引，默认为0。**注意：offset和limit参数需要配套使用。**
     * limit  返回条数，默认为100，最大值为100。**注意：offset和limit参数需要配套使用。**
+    * selfOnly  值为false的时候，拥有te_admin角色的用户可以查询实例下所有的长期登录凭证，默认情况下只查询自己创建的长期登录凭证
     *
     * @var string[]
     */
     protected static $getters = [
             'instanceId' => 'getInstanceId',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'selfOnly' => 'getSelfOnly'
     ];
 
     /**
@@ -170,6 +180,7 @@ class ListInstanceLtCredentialsRequest implements ModelInterface, ArrayAccess
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['selfOnly'] = isset($data['selfOnly']) ? $data['selfOnly'] : null;
     }
 
     /**
@@ -272,6 +283,30 @@ class ListInstanceLtCredentialsRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets selfOnly
+    *  值为false的时候，拥有te_admin角色的用户可以查询实例下所有的长期登录凭证，默认情况下只查询自己创建的长期登录凭证
+    *
+    * @return bool|null
+    */
+    public function getSelfOnly()
+    {
+        return $this->container['selfOnly'];
+    }
+
+    /**
+    * Sets selfOnly
+    *
+    * @param bool|null $selfOnly 值为false的时候，拥有te_admin角色的用户可以查询实例下所有的长期登录凭证，默认情况下只查询自己创建的长期登录凭证
+    *
+    * @return $this
+    */
+    public function setSelfOnly($selfOnly)
+    {
+        $this->container['selfOnly'] = $selfOnly;
         return $this;
     }
 

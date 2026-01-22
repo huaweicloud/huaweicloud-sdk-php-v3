@@ -21,16 +21,16 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vhost  Queue所属Vhost名称
-    * name  Queue名称
-    * durable  是否持久化
-    * autoDelete  是否自动删除
-    * messages  待消费消息数
-    * consumers  连接的消费者数
-    * policy  策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
+    * vhost  **参数解释**： Queue所属Vhost名称。 **取值范围**： 不涉及。
+    * name  **参数解释**： Queue名称。 **取值范围**： 不涉及。
+    * durable  **参数解释**： Queue是否开启持久化。 **取值范围**： - true：开启持久化。 - false：未开启持久化。
+    * autoDelete  **参数解释**： Queue是否开启自动删除。 **取值范围**： - true：开启自动删除。 - false：未开启自动删除。
+    * messages  **参数解释**： 待消费消息数。 **取值范围**： 不涉及。
+    * consumers  **参数解释**： 连接的消费者数。 **取值范围**： 不涉及。
+    * policy  **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
     * arguments  arguments
-    * consumerDetails  订阅该Queue的消费者信息。
-    * queueBindings  以此Queue为目标的绑定信息列表。
+    * consumerDetails  **参数解释**： 订阅该Queue的消费者信息。
+    * queueBindings  **参数解释**： 以此Queue为目标的绑定信息列表。
     *
     * @var string[]
     */
@@ -49,16 +49,16 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vhost  Queue所属Vhost名称
-    * name  Queue名称
-    * durable  是否持久化
-    * autoDelete  是否自动删除
-    * messages  待消费消息数
-    * consumers  连接的消费者数
-    * policy  策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
+    * vhost  **参数解释**： Queue所属Vhost名称。 **取值范围**： 不涉及。
+    * name  **参数解释**： Queue名称。 **取值范围**： 不涉及。
+    * durable  **参数解释**： Queue是否开启持久化。 **取值范围**： - true：开启持久化。 - false：未开启持久化。
+    * autoDelete  **参数解释**： Queue是否开启自动删除。 **取值范围**： - true：开启自动删除。 - false：未开启自动删除。
+    * messages  **参数解释**： 待消费消息数。 **取值范围**： 不涉及。
+    * consumers  **参数解释**： 连接的消费者数。 **取值范围**： 不涉及。
+    * policy  **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
     * arguments  arguments
-    * consumerDetails  订阅该Queue的消费者信息。
-    * queueBindings  以此Queue为目标的绑定信息列表。
+    * consumerDetails  **参数解释**： 订阅该Queue的消费者信息。
+    * queueBindings  **参数解释**： 以此Queue为目标的绑定信息列表。
     *
     * @var string[]
     */
@@ -98,16 +98,16 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vhost  Queue所属Vhost名称
-    * name  Queue名称
-    * durable  是否持久化
-    * autoDelete  是否自动删除
-    * messages  待消费消息数
-    * consumers  连接的消费者数
-    * policy  策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
+    * vhost  **参数解释**： Queue所属Vhost名称。 **取值范围**： 不涉及。
+    * name  **参数解释**： Queue名称。 **取值范围**： 不涉及。
+    * durable  **参数解释**： Queue是否开启持久化。 **取值范围**： - true：开启持久化。 - false：未开启持久化。
+    * autoDelete  **参数解释**： Queue是否开启自动删除。 **取值范围**： - true：开启自动删除。 - false：未开启自动删除。
+    * messages  **参数解释**： 待消费消息数。 **取值范围**： 不涉及。
+    * consumers  **参数解释**： 连接的消费者数。 **取值范围**： 不涉及。
+    * policy  **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
     * arguments  arguments
-    * consumerDetails  订阅该Queue的消费者信息。
-    * queueBindings  以此Queue为目标的绑定信息列表。
+    * consumerDetails  **参数解释**： 订阅该Queue的消费者信息。
+    * queueBindings  **参数解释**： 以此Queue为目标的绑定信息列表。
     *
     * @var string[]
     */
@@ -126,16 +126,16 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vhost  Queue所属Vhost名称
-    * name  Queue名称
-    * durable  是否持久化
-    * autoDelete  是否自动删除
-    * messages  待消费消息数
-    * consumers  连接的消费者数
-    * policy  策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
+    * vhost  **参数解释**： Queue所属Vhost名称。 **取值范围**： 不涉及。
+    * name  **参数解释**： Queue名称。 **取值范围**： 不涉及。
+    * durable  **参数解释**： Queue是否开启持久化。 **取值范围**： - true：开启持久化。 - false：未开启持久化。
+    * autoDelete  **参数解释**： Queue是否开启自动删除。 **取值范围**： - true：开启自动删除。 - false：未开启自动删除。
+    * messages  **参数解释**： 待消费消息数。 **取值范围**： 不涉及。
+    * consumers  **参数解释**： 连接的消费者数。 **取值范围**： 不涉及。
+    * policy  **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
     * arguments  arguments
-    * consumerDetails  订阅该Queue的消费者信息。
-    * queueBindings  以此Queue为目标的绑定信息列表。
+    * consumerDetails  **参数解释**： 订阅该Queue的消费者信息。
+    * queueBindings  **参数解释**： 以此Queue为目标的绑定信息列表。
     *
     * @var string[]
     */
@@ -154,16 +154,16 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vhost  Queue所属Vhost名称
-    * name  Queue名称
-    * durable  是否持久化
-    * autoDelete  是否自动删除
-    * messages  待消费消息数
-    * consumers  连接的消费者数
-    * policy  策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
+    * vhost  **参数解释**： Queue所属Vhost名称。 **取值范围**： 不涉及。
+    * name  **参数解释**： Queue名称。 **取值范围**： 不涉及。
+    * durable  **参数解释**： Queue是否开启持久化。 **取值范围**： - true：开启持久化。 - false：未开启持久化。
+    * autoDelete  **参数解释**： Queue是否开启自动删除。 **取值范围**： - true：开启自动删除。 - false：未开启自动删除。
+    * messages  **参数解释**： 待消费消息数。 **取值范围**： 不涉及。
+    * consumers  **参数解释**： 连接的消费者数。 **取值范围**： 不涉及。
+    * policy  **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
     * arguments  arguments
-    * consumerDetails  订阅该Queue的消费者信息。
-    * queueBindings  以此Queue为目标的绑定信息列表。
+    * consumerDetails  **参数解释**： 订阅该Queue的消费者信息。
+    * queueBindings  **参数解释**： 以此Queue为目标的绑定信息列表。
     *
     * @var string[]
     */
@@ -274,7 +274,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets vhost
-    *  Queue所属Vhost名称
+    *  **参数解释**： Queue所属Vhost名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -286,7 +286,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets vhost
     *
-    * @param string|null $vhost Queue所属Vhost名称
+    * @param string|null $vhost **参数解释**： Queue所属Vhost名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -298,7 +298,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  Queue名称
+    *  **参数解释**： Queue名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -310,7 +310,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name Queue名称
+    * @param string|null $name **参数解释**： Queue名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -322,7 +322,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets durable
-    *  是否持久化
+    *  **参数解释**： Queue是否开启持久化。 **取值范围**： - true：开启持久化。 - false：未开启持久化。
     *
     * @return bool|null
     */
@@ -334,7 +334,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets durable
     *
-    * @param bool|null $durable 是否持久化
+    * @param bool|null $durable **参数解释**： Queue是否开启持久化。 **取值范围**： - true：开启持久化。 - false：未开启持久化。
     *
     * @return $this
     */
@@ -346,7 +346,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoDelete
-    *  是否自动删除
+    *  **参数解释**： Queue是否开启自动删除。 **取值范围**： - true：开启自动删除。 - false：未开启自动删除。
     *
     * @return bool|null
     */
@@ -358,7 +358,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets autoDelete
     *
-    * @param bool|null $autoDelete 是否自动删除
+    * @param bool|null $autoDelete **参数解释**： Queue是否开启自动删除。 **取值范围**： - true：开启自动删除。 - false：未开启自动删除。
     *
     * @return $this
     */
@@ -370,7 +370,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets messages
-    *  待消费消息数
+    *  **参数解释**： 待消费消息数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -382,7 +382,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets messages
     *
-    * @param int|null $messages 待消费消息数
+    * @param int|null $messages **参数解释**： 待消费消息数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -394,7 +394,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumers
-    *  连接的消费者数
+    *  **参数解释**： 连接的消费者数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -406,7 +406,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets consumers
     *
-    * @param int|null $consumers 连接的消费者数
+    * @param int|null $consumers **参数解释**： 连接的消费者数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -418,7 +418,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets policy
-    *  策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
+    *  **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -430,7 +430,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets policy
     *
-    * @param string|null $policy 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
+    * @param string|null $policy **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -466,7 +466,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumerDetails
-    *  订阅该Queue的消费者信息。
+    *  **参数解释**： 订阅该Queue的消费者信息。
     *
     * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\ConsumerDetails[]|null
     */
@@ -478,7 +478,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets consumerDetails
     *
-    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ConsumerDetails[]|null $consumerDetails 订阅该Queue的消费者信息。
+    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ConsumerDetails[]|null $consumerDetails **参数解释**： 订阅该Queue的消费者信息。
     *
     * @return $this
     */
@@ -490,7 +490,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueBindings
-    *  以此Queue为目标的绑定信息列表。
+    *  **参数解释**： 以此Queue为目标的绑定信息列表。
     *
     * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\BindingsDetails[]|null
     */
@@ -502,7 +502,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets queueBindings
     *
-    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\BindingsDetails[]|null $queueBindings 以此Queue为目标的绑定信息列表。
+    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\BindingsDetails[]|null $queueBindings **参数解释**： 以此Queue为目标的绑定信息列表。
     *
     * @return $this
     */

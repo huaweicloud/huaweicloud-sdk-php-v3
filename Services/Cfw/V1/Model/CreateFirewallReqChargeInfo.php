@@ -20,11 +20,11 @@ class CreateFirewallReqChargeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * chargeMode  计费模式。  取值范围：  prePaid：预付费，即包年/包月。 postPaid：后付费，即按需付费。
-    * periodType  订购周期类型。  取值范围：  month：包月。 year：包年。 说明：“charge_mode”为“prePaid”时生效，且为必选值。
-    * periodNum  “charge_mode”为“prePaid”时生效，且为必选值，指定订购的时间。  取值范围：  - 当“period_type”为“month”时，取值为1~9。 - 当“period_type”为“year”时，取值为1~3。
-    * isAutoRenew  创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。  true，为自动续订。 false，为不自动续订，默认该方式。
-    * isAutoPay  创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  - true，为自动支付。（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败会生成、但订单状态为“待支付”，等待客户手动支付(手动支付时，可以修改系统自动选择的折扣和优惠券) - false，为手动支付，默认该方式。（需要客户手动去支付，客户可以选择折扣和优惠券）
+    * chargeMode  **参数解释**： 计费模式 **约束限制**： 不涉及 **取值范围**： - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费 **默认取值**： 不涉及
+    * periodType  **参数解释**： 订购周期类型 **约束限制**： “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围**： - month：包月。 - year：包年 **默认取值**： 不涉及
+    * periodNum  **参数解释**： 订购时间 **约束限制**： “charge_mode”为“prePaid”时，“period_num”必填。 **取值范围**： - 当“period_type”为“month”时，此处取值为1~9。 - 当“period_type”为“year”时，此处取值为1~3。 **默认取值**： 不涉及
+    * isAutoRenew  **参数解释**： 是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 **约束限制**： 创建包周期实例时可指定 **取值范围**： - true，为自动续订。 - false，为不自动续订 **默认取值**： false
+    * isAutoPay  **参数解释**： 是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **约束限制**： 创建包周期时可指定 **取值范围**： - true：自动支付（会自动选择折扣和优惠券进行优惠，并自动从客户账户中支付），自动支付失败会生成订单、但订单状态为“待支付”，等待客户手动支付（手动支付时，可以修改系统自动选择的折扣和优惠券） - false：手动支付，默认该方式。（需要客户手动去支付，客户可以选择折扣和优惠券） **默认取值**： false
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class CreateFirewallReqChargeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * chargeMode  计费模式。  取值范围：  prePaid：预付费，即包年/包月。 postPaid：后付费，即按需付费。
-    * periodType  订购周期类型。  取值范围：  month：包月。 year：包年。 说明：“charge_mode”为“prePaid”时生效，且为必选值。
-    * periodNum  “charge_mode”为“prePaid”时生效，且为必选值，指定订购的时间。  取值范围：  - 当“period_type”为“month”时，取值为1~9。 - 当“period_type”为“year”时，取值为1~3。
-    * isAutoRenew  创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。  true，为自动续订。 false，为不自动续订，默认该方式。
-    * isAutoPay  创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  - true，为自动支付。（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败会生成、但订单状态为“待支付”，等待客户手动支付(手动支付时，可以修改系统自动选择的折扣和优惠券) - false，为手动支付，默认该方式。（需要客户手动去支付，客户可以选择折扣和优惠券）
+    * chargeMode  **参数解释**： 计费模式 **约束限制**： 不涉及 **取值范围**： - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费 **默认取值**： 不涉及
+    * periodType  **参数解释**： 订购周期类型 **约束限制**： “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围**： - month：包月。 - year：包年 **默认取值**： 不涉及
+    * periodNum  **参数解释**： 订购时间 **约束限制**： “charge_mode”为“prePaid”时，“period_num”必填。 **取值范围**： - 当“period_type”为“month”时，此处取值为1~9。 - 当“period_type”为“year”时，此处取值为1~3。 **默认取值**： 不涉及
+    * isAutoRenew  **参数解释**： 是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 **约束限制**： 创建包周期实例时可指定 **取值范围**： - true，为自动续订。 - false，为不自动续订 **默认取值**： false
+    * isAutoPay  **参数解释**： 是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **约束限制**： 创建包周期时可指定 **取值范围**： - true：自动支付（会自动选择折扣和优惠券进行优惠，并自动从客户账户中支付），自动支付失败会生成订单、但订单状态为“待支付”，等待客户手动支付（手动支付时，可以修改系统自动选择的折扣和优惠券） - false：手动支付，默认该方式。（需要客户手动去支付，客户可以选择折扣和优惠券） **默认取值**： false
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class CreateFirewallReqChargeInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * chargeMode  计费模式。  取值范围：  prePaid：预付费，即包年/包月。 postPaid：后付费，即按需付费。
-    * periodType  订购周期类型。  取值范围：  month：包月。 year：包年。 说明：“charge_mode”为“prePaid”时生效，且为必选值。
-    * periodNum  “charge_mode”为“prePaid”时生效，且为必选值，指定订购的时间。  取值范围：  - 当“period_type”为“month”时，取值为1~9。 - 当“period_type”为“year”时，取值为1~3。
-    * isAutoRenew  创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。  true，为自动续订。 false，为不自动续订，默认该方式。
-    * isAutoPay  创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  - true，为自动支付。（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败会生成、但订单状态为“待支付”，等待客户手动支付(手动支付时，可以修改系统自动选择的折扣和优惠券) - false，为手动支付，默认该方式。（需要客户手动去支付，客户可以选择折扣和优惠券）
+    * chargeMode  **参数解释**： 计费模式 **约束限制**： 不涉及 **取值范围**： - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费 **默认取值**： 不涉及
+    * periodType  **参数解释**： 订购周期类型 **约束限制**： “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围**： - month：包月。 - year：包年 **默认取值**： 不涉及
+    * periodNum  **参数解释**： 订购时间 **约束限制**： “charge_mode”为“prePaid”时，“period_num”必填。 **取值范围**： - 当“period_type”为“month”时，此处取值为1~9。 - 当“period_type”为“year”时，此处取值为1~3。 **默认取值**： 不涉及
+    * isAutoRenew  **参数解释**： 是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 **约束限制**： 创建包周期实例时可指定 **取值范围**： - true，为自动续订。 - false，为不自动续订 **默认取值**： false
+    * isAutoPay  **参数解释**： 是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **约束限制**： 创建包周期时可指定 **取值范围**： - true：自动支付（会自动选择折扣和优惠券进行优惠，并自动从客户账户中支付），自动支付失败会生成订单、但订单状态为“待支付”，等待客户手动支付（手动支付时，可以修改系统自动选择的折扣和优惠券） - false：手动支付，默认该方式。（需要客户手动去支付，客户可以选择折扣和优惠券） **默认取值**： false
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class CreateFirewallReqChargeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * chargeMode  计费模式。  取值范围：  prePaid：预付费，即包年/包月。 postPaid：后付费，即按需付费。
-    * periodType  订购周期类型。  取值范围：  month：包月。 year：包年。 说明：“charge_mode”为“prePaid”时生效，且为必选值。
-    * periodNum  “charge_mode”为“prePaid”时生效，且为必选值，指定订购的时间。  取值范围：  - 当“period_type”为“month”时，取值为1~9。 - 当“period_type”为“year”时，取值为1~3。
-    * isAutoRenew  创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。  true，为自动续订。 false，为不自动续订，默认该方式。
-    * isAutoPay  创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  - true，为自动支付。（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败会生成、但订单状态为“待支付”，等待客户手动支付(手动支付时，可以修改系统自动选择的折扣和优惠券) - false，为手动支付，默认该方式。（需要客户手动去支付，客户可以选择折扣和优惠券）
+    * chargeMode  **参数解释**： 计费模式 **约束限制**： 不涉及 **取值范围**： - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费 **默认取值**： 不涉及
+    * periodType  **参数解释**： 订购周期类型 **约束限制**： “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围**： - month：包月。 - year：包年 **默认取值**： 不涉及
+    * periodNum  **参数解释**： 订购时间 **约束限制**： “charge_mode”为“prePaid”时，“period_num”必填。 **取值范围**： - 当“period_type”为“month”时，此处取值为1~9。 - 当“period_type”为“year”时，此处取值为1~3。 **默认取值**： 不涉及
+    * isAutoRenew  **参数解释**： 是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 **约束限制**： 创建包周期实例时可指定 **取值范围**： - true，为自动续订。 - false，为不自动续订 **默认取值**： false
+    * isAutoPay  **参数解释**： 是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **约束限制**： 创建包周期时可指定 **取值范围**： - true：自动支付（会自动选择折扣和优惠券进行优惠，并自动从客户账户中支付），自动支付失败会生成订单、但订单状态为“待支付”，等待客户手动支付（手动支付时，可以修改系统自动选择的折扣和优惠券） - false：手动支付，默认该方式。（需要客户手动去支付，客户可以选择折扣和优惠券） **默认取值**： false
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class CreateFirewallReqChargeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * chargeMode  计费模式。  取值范围：  prePaid：预付费，即包年/包月。 postPaid：后付费，即按需付费。
-    * periodType  订购周期类型。  取值范围：  month：包月。 year：包年。 说明：“charge_mode”为“prePaid”时生效，且为必选值。
-    * periodNum  “charge_mode”为“prePaid”时生效，且为必选值，指定订购的时间。  取值范围：  - 当“period_type”为“month”时，取值为1~9。 - 当“period_type”为“year”时，取值为1~3。
-    * isAutoRenew  创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。  true，为自动续订。 false，为不自动续订，默认该方式。
-    * isAutoPay  创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  - true，为自动支付。（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败会生成、但订单状态为“待支付”，等待客户手动支付(手动支付时，可以修改系统自动选择的折扣和优惠券) - false，为手动支付，默认该方式。（需要客户手动去支付，客户可以选择折扣和优惠券）
+    * chargeMode  **参数解释**： 计费模式 **约束限制**： 不涉及 **取值范围**： - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费 **默认取值**： 不涉及
+    * periodType  **参数解释**： 订购周期类型 **约束限制**： “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围**： - month：包月。 - year：包年 **默认取值**： 不涉及
+    * periodNum  **参数解释**： 订购时间 **约束限制**： “charge_mode”为“prePaid”时，“period_num”必填。 **取值范围**： - 当“period_type”为“month”时，此处取值为1~9。 - 当“period_type”为“year”时，此处取值为1~3。 **默认取值**： 不涉及
+    * isAutoRenew  **参数解释**： 是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 **约束限制**： 创建包周期实例时可指定 **取值范围**： - true，为自动续订。 - false，为不自动续订 **默认取值**： false
+    * isAutoPay  **参数解释**： 是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **约束限制**： 创建包周期时可指定 **取值范围**： - true：自动支付（会自动选择折扣和优惠券进行优惠，并自动从客户账户中支付），自动支付失败会生成订单、但订单状态为“待支付”，等待客户手动支付（手动支付时，可以修改系统自动选择的折扣和优惠券） - false：手动支付，默认该方式。（需要客户手动去支付，客户可以选择折扣和优惠券） **默认取值**： false
     *
     * @var string[]
     */
@@ -227,7 +227,7 @@ class CreateFirewallReqChargeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  计费模式。  取值范围：  prePaid：预付费，即包年/包月。 postPaid：后付费，即按需付费。
+    *  **参数解释**： 计费模式 **约束限制**： 不涉及 **取值范围**： - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -239,7 +239,7 @@ class CreateFirewallReqChargeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string $chargeMode 计费模式。  取值范围：  prePaid：预付费，即包年/包月。 postPaid：后付费，即按需付费。
+    * @param string $chargeMode **参数解释**： 计费模式 **约束限制**： 不涉及 **取值范围**： - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -251,7 +251,7 @@ class CreateFirewallReqChargeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodType
-    *  订购周期类型。  取值范围：  month：包月。 year：包年。 说明：“charge_mode”为“prePaid”时生效，且为必选值。
+    *  **参数解释**： 订购周期类型 **约束限制**： “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围**： - month：包月。 - year：包年 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -263,7 +263,7 @@ class CreateFirewallReqChargeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets periodType
     *
-    * @param string|null $periodType 订购周期类型。  取值范围：  month：包月。 year：包年。 说明：“charge_mode”为“prePaid”时生效，且为必选值。
+    * @param string|null $periodType **参数解释**： 订购周期类型 **约束限制**： “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围**： - month：包月。 - year：包年 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -275,7 +275,7 @@ class CreateFirewallReqChargeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodNum
-    *  “charge_mode”为“prePaid”时生效，且为必选值，指定订购的时间。  取值范围：  - 当“period_type”为“month”时，取值为1~9。 - 当“period_type”为“year”时，取值为1~3。
+    *  **参数解释**： 订购时间 **约束限制**： “charge_mode”为“prePaid”时，“period_num”必填。 **取值范围**： - 当“period_type”为“month”时，此处取值为1~9。 - 当“period_type”为“year”时，此处取值为1~3。 **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -287,7 +287,7 @@ class CreateFirewallReqChargeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets periodNum
     *
-    * @param int|null $periodNum “charge_mode”为“prePaid”时生效，且为必选值，指定订购的时间。  取值范围：  - 当“period_type”为“month”时，取值为1~9。 - 当“period_type”为“year”时，取值为1~3。
+    * @param int|null $periodNum **参数解释**： 订购时间 **约束限制**： “charge_mode”为“prePaid”时，“period_num”必填。 **取值范围**： - 当“period_type”为“month”时，此处取值为1~9。 - 当“period_type”为“year”时，此处取值为1~3。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -299,7 +299,7 @@ class CreateFirewallReqChargeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoRenew
-    *  创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。  true，为自动续订。 false，为不自动续订，默认该方式。
+    *  **参数解释**： 是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 **约束限制**： 创建包周期实例时可指定 **取值范围**： - true，为自动续订。 - false，为不自动续订 **默认取值**： false
     *
     * @return bool
     */
@@ -311,7 +311,7 @@ class CreateFirewallReqChargeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoRenew
     *
-    * @param bool $isAutoRenew 创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。  true，为自动续订。 false，为不自动续订，默认该方式。
+    * @param bool $isAutoRenew **参数解释**： 是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 **约束限制**： 创建包周期实例时可指定 **取值范围**： - true，为自动续订。 - false，为不自动续订 **默认取值**： false
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class CreateFirewallReqChargeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoPay
-    *  创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  - true，为自动支付。（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败会生成、但订单状态为“待支付”，等待客户手动支付(手动支付时，可以修改系统自动选择的折扣和优惠券) - false，为手动支付，默认该方式。（需要客户手动去支付，客户可以选择折扣和优惠券）
+    *  **参数解释**： 是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **约束限制**： 创建包周期时可指定 **取值范围**： - true：自动支付（会自动选择折扣和优惠券进行优惠，并自动从客户账户中支付），自动支付失败会生成订单、但订单状态为“待支付”，等待客户手动支付（手动支付时，可以修改系统自动选择的折扣和优惠券） - false：手动支付，默认该方式。（需要客户手动去支付，客户可以选择折扣和优惠券） **默认取值**： false
     *
     * @return bool
     */
@@ -335,7 +335,7 @@ class CreateFirewallReqChargeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoPay
     *
-    * @param bool $isAutoPay 创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  - true，为自动支付。（会自动选择折扣和优惠券进行优惠，然后自动从客户华为云账户中支付），自动支付失败会生成、但订单状态为“待支付”，等待客户手动支付(手动支付时，可以修改系统自动选择的折扣和优惠券) - false，为手动支付，默认该方式。（需要客户手动去支付，客户可以选择折扣和优惠券）
+    * @param bool $isAutoPay **参数解释**： 是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。 **约束限制**： 创建包周期时可指定 **取值范围**： - true：自动支付（会自动选择折扣和优惠券进行优惠，并自动从客户账户中支付），自动支付失败会生成订单、但订单状态为“待支付”，等待客户手动支付（手动支付时，可以修改系统自动选择的折扣和优惠券） - false：手动支付，默认该方式。（需要客户手动去支付，客户可以选择折扣和优惠券） **默认取值**： false
     *
     * @return $this
     */

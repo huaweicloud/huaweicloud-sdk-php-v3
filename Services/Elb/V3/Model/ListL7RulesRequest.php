@@ -26,7 +26,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
     * pageReverse  **参数解释**：是否反向查询。  **约束限制**： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。  **取值范围**： - true：查询上一页。 - false：查询下一页。  **默认取值**：false
     * id  **参数解释**：转发规则ID。 支持多值查询，查询条件格式：*id=xxx&id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * compareType  **参数解释**：转发匹配方式。 支持多值查询，查询条件格式：*compare_type=xxx&compare_type=xxx*。  **约束限制**：不涉及  **取值范围**： - EQUAL_TO 表示精确匹配。 - REGEX 表示正则匹配。 - STARTS_WITH 表示前缀匹配。  **默认取值**：不涉及
-    * provisioningStatus  **参数解释**：转发规则的配置状态。 支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。  **约束限制**：不涉及  **取值范围**：ACTIVE 表示正常。  **默认取值**：不涉及
+    * provisioningStatus  **参数解释**：转发规则的配置状态。 支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。  **约束限制**：不涉及  **取值范围**： - ACTIVE：已生效。 - PENDING_CREATE：创建中。 - ERROR：当前配置有误。  **默认取值**：不涉及
     * invert  **参数解释**：是否反向匹配。  **约束限制**：不涉及  **取值范围**：false  **默认取值**：不涉及
     * adminStateUp  **参数解释**：转发规则的管理状态。 不支持该字段，请勿使用。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * value  **参数解释**：匹配内容的值。 支持多值查询，查询条件格式：*value=xxx&value=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
@@ -60,7 +60,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
     * pageReverse  **参数解释**：是否反向查询。  **约束限制**： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。  **取值范围**： - true：查询上一页。 - false：查询下一页。  **默认取值**：false
     * id  **参数解释**：转发规则ID。 支持多值查询，查询条件格式：*id=xxx&id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * compareType  **参数解释**：转发匹配方式。 支持多值查询，查询条件格式：*compare_type=xxx&compare_type=xxx*。  **约束限制**：不涉及  **取值范围**： - EQUAL_TO 表示精确匹配。 - REGEX 表示正则匹配。 - STARTS_WITH 表示前缀匹配。  **默认取值**：不涉及
-    * provisioningStatus  **参数解释**：转发规则的配置状态。 支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。  **约束限制**：不涉及  **取值范围**：ACTIVE 表示正常。  **默认取值**：不涉及
+    * provisioningStatus  **参数解释**：转发规则的配置状态。 支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。  **约束限制**：不涉及  **取值范围**： - ACTIVE：已生效。 - PENDING_CREATE：创建中。 - ERROR：当前配置有误。  **默认取值**：不涉及
     * invert  **参数解释**：是否反向匹配。  **约束限制**：不涉及  **取值范围**：false  **默认取值**：不涉及
     * adminStateUp  **参数解释**：转发规则的管理状态。 不支持该字段，请勿使用。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * value  **参数解释**：匹配内容的值。 支持多值查询，查询条件格式：*value=xxx&value=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
@@ -115,7 +115,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
     * pageReverse  **参数解释**：是否反向查询。  **约束限制**： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。  **取值范围**： - true：查询上一页。 - false：查询下一页。  **默认取值**：false
     * id  **参数解释**：转发规则ID。 支持多值查询，查询条件格式：*id=xxx&id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * compareType  **参数解释**：转发匹配方式。 支持多值查询，查询条件格式：*compare_type=xxx&compare_type=xxx*。  **约束限制**：不涉及  **取值范围**： - EQUAL_TO 表示精确匹配。 - REGEX 表示正则匹配。 - STARTS_WITH 表示前缀匹配。  **默认取值**：不涉及
-    * provisioningStatus  **参数解释**：转发规则的配置状态。 支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。  **约束限制**：不涉及  **取值范围**：ACTIVE 表示正常。  **默认取值**：不涉及
+    * provisioningStatus  **参数解释**：转发规则的配置状态。 支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。  **约束限制**：不涉及  **取值范围**： - ACTIVE：已生效。 - PENDING_CREATE：创建中。 - ERROR：当前配置有误。  **默认取值**：不涉及
     * invert  **参数解释**：是否反向匹配。  **约束限制**：不涉及  **取值范围**：false  **默认取值**：不涉及
     * adminStateUp  **参数解释**：转发规则的管理状态。 不支持该字段，请勿使用。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * value  **参数解释**：匹配内容的值。 支持多值查询，查询条件格式：*value=xxx&value=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
@@ -149,7 +149,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
     * pageReverse  **参数解释**：是否反向查询。  **约束限制**： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。  **取值范围**： - true：查询上一页。 - false：查询下一页。  **默认取值**：false
     * id  **参数解释**：转发规则ID。 支持多值查询，查询条件格式：*id=xxx&id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * compareType  **参数解释**：转发匹配方式。 支持多值查询，查询条件格式：*compare_type=xxx&compare_type=xxx*。  **约束限制**：不涉及  **取值范围**： - EQUAL_TO 表示精确匹配。 - REGEX 表示正则匹配。 - STARTS_WITH 表示前缀匹配。  **默认取值**：不涉及
-    * provisioningStatus  **参数解释**：转发规则的配置状态。 支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。  **约束限制**：不涉及  **取值范围**：ACTIVE 表示正常。  **默认取值**：不涉及
+    * provisioningStatus  **参数解释**：转发规则的配置状态。 支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。  **约束限制**：不涉及  **取值范围**： - ACTIVE：已生效。 - PENDING_CREATE：创建中。 - ERROR：当前配置有误。  **默认取值**：不涉及
     * invert  **参数解释**：是否反向匹配。  **约束限制**：不涉及  **取值范围**：false  **默认取值**：不涉及
     * adminStateUp  **参数解释**：转发规则的管理状态。 不支持该字段，请勿使用。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * value  **参数解释**：匹配内容的值。 支持多值查询，查询条件格式：*value=xxx&value=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
@@ -183,7 +183,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
     * pageReverse  **参数解释**：是否反向查询。  **约束限制**： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。  **取值范围**： - true：查询上一页。 - false：查询下一页。  **默认取值**：false
     * id  **参数解释**：转发规则ID。 支持多值查询，查询条件格式：*id=xxx&id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * compareType  **参数解释**：转发匹配方式。 支持多值查询，查询条件格式：*compare_type=xxx&compare_type=xxx*。  **约束限制**：不涉及  **取值范围**： - EQUAL_TO 表示精确匹配。 - REGEX 表示正则匹配。 - STARTS_WITH 表示前缀匹配。  **默认取值**：不涉及
-    * provisioningStatus  **参数解释**：转发规则的配置状态。 支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。  **约束限制**：不涉及  **取值范围**：ACTIVE 表示正常。  **默认取值**：不涉及
+    * provisioningStatus  **参数解释**：转发规则的配置状态。 支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。  **约束限制**：不涉及  **取值范围**： - ACTIVE：已生效。 - PENDING_CREATE：创建中。 - ERROR：当前配置有误。  **默认取值**：不涉及
     * invert  **参数解释**：是否反向匹配。  **约束限制**：不涉及  **取值范围**：false  **默认取值**：不涉及
     * adminStateUp  **参数解释**：转发规则的管理状态。 不支持该字段，请勿使用。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * value  **参数解释**：匹配内容的值。 支持多值查询，查询条件格式：*value=xxx&value=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
@@ -459,7 +459,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets provisioningStatus
-    *  **参数解释**：转发规则的配置状态。 支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。  **约束限制**：不涉及  **取值范围**：ACTIVE 表示正常。  **默认取值**：不涉及
+    *  **参数解释**：转发规则的配置状态。 支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。  **约束限制**：不涉及  **取值范围**： - ACTIVE：已生效。 - PENDING_CREATE：创建中。 - ERROR：当前配置有误。  **默认取值**：不涉及
     *
     * @return string[]|null
     */
@@ -471,7 +471,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets provisioningStatus
     *
-    * @param string[]|null $provisioningStatus **参数解释**：转发规则的配置状态。 支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。  **约束限制**：不涉及  **取值范围**：ACTIVE 表示正常。  **默认取值**：不涉及
+    * @param string[]|null $provisioningStatus **参数解释**：转发规则的配置状态。 支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。  **约束限制**：不涉及  **取值范围**： - ACTIVE：已生效。 - PENDING_CREATE：创建中。 - ERROR：当前配置有误。  **默认取值**：不涉及
     *
     * @return $this
     */

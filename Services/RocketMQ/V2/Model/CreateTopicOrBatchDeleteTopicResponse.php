@@ -21,8 +21,8 @@ class CreateTopicOrBatchDeleteTopicResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  主题名称。
-    * jobId  删除主题任务ID。
+    * id  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * jobId  **参数解释**： 删除主题任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class CreateTopicOrBatchDeleteTopicResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  主题名称。
-    * jobId  删除主题任务ID。
+    * id  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * jobId  **参数解释**： 删除主题任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class CreateTopicOrBatchDeleteTopicResponse implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  主题名称。
-    * jobId  删除主题任务ID。
+    * id  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * jobId  **参数解释**： 删除主题任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class CreateTopicOrBatchDeleteTopicResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  主题名称。
-    * jobId  删除主题任务ID。
+    * id  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * jobId  **参数解释**： 删除主题任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class CreateTopicOrBatchDeleteTopicResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  主题名称。
-    * jobId  删除主题任务ID。
+    * id  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * jobId  **参数解释**： 删除主题任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class CreateTopicOrBatchDeleteTopicResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets id
-    *  主题名称。
+    *  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class CreateTopicOrBatchDeleteTopicResponse implements ModelInterface, ArrayAcce
     /**
     * Sets id
     *
-    * @param string|null $id 主题名称。
+    * @param string|null $id **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class CreateTopicOrBatchDeleteTopicResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets jobId
-    *  删除主题任务ID。
+    *  **参数解释**： 删除主题任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class CreateTopicOrBatchDeleteTopicResponse implements ModelInterface, ArrayAcce
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 删除主题任务ID。
+    * @param string|null $jobId **参数解释**： 删除主题任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

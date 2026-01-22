@@ -20,8 +20,8 @@ class Er implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * erId  ER ID，创建东西向防护引用的 ID
-    * erAttachId  企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
+    * erId  **参数解释**： ER ID，创建东西向防护引用的 ID **取值范围**： 不涉及
+    * erAttachId  **参数解释**： 企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接，了解连接具体情况。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Er implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * erId  ER ID，创建东西向防护引用的 ID
-    * erAttachId  企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
+    * erId  **参数解释**： ER ID，创建东西向防护引用的 ID **取值范围**： 不涉及
+    * erAttachId  **参数解释**： 企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接，了解连接具体情况。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Er implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * erId  ER ID，创建东西向防护引用的 ID
-    * erAttachId  企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
+    * erId  **参数解释**： ER ID，创建东西向防护引用的 ID **取值范围**： 不涉及
+    * erAttachId  **参数解释**： 企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接，了解连接具体情况。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Er implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * erId  ER ID，创建东西向防护引用的 ID
-    * erAttachId  企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
+    * erId  **参数解释**： ER ID，创建东西向防护引用的 ID **取值范围**： 不涉及
+    * erAttachId  **参数解释**： 企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接，了解连接具体情况。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Er implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * erId  ER ID，创建东西向防护引用的 ID
-    * erAttachId  企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
+    * erId  **参数解释**： ER ID，创建东西向防护引用的 ID **取值范围**： 不涉及
+    * erAttachId  **参数解释**： 企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接，了解连接具体情况。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class Er implements ModelInterface, ArrayAccess
 
     /**
     * Gets erId
-    *  ER ID，创建东西向防护引用的 ID
+    *  **参数解释**： ER ID，创建东西向防护引用的 ID **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class Er implements ModelInterface, ArrayAccess
     /**
     * Sets erId
     *
-    * @param string|null $erId ER ID，创建东西向防护引用的 ID
+    * @param string|null $erId **参数解释**： ER ID，创建东西向防护引用的 ID **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class Er implements ModelInterface, ArrayAccess
 
     /**
     * Gets erAttachId
-    *  企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
+    *  **参数解释**： 企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接，了解连接具体情况。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class Er implements ModelInterface, ArrayAccess
     /**
     * Sets erAttachId
     *
-    * @param string|null $erAttachId 企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
+    * @param string|null $erAttachId **参数解释**： 企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接，了解连接具体情况。 **取值范围**： 不涉及
     *
     * @return $this
     */

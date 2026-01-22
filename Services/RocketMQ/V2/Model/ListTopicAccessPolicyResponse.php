@@ -21,9 +21,9 @@ class ListTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * policies  用户列表。
-    * total  总用户个数。
-    * name  主题或消费组名称。
+    * policies  **参数解释**： 用户列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： 总用户个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 主题或消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ListTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * policies  用户列表。
-    * total  总用户个数。
-    * name  主题或消费组名称。
+    * policies  **参数解释**： 用户列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： 总用户个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 主题或消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ListTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * policies  用户列表。
-    * total  总用户个数。
-    * name  主题或消费组名称。
+    * policies  **参数解释**： 用户列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： 总用户个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 主题或消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * policies  用户列表。
-    * total  总用户个数。
-    * name  主题或消费组名称。
+    * policies  **参数解释**： 用户列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： 总用户个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 主题或消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ListTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * policies  用户列表。
-    * total  总用户个数。
-    * name  主题或消费组名称。
+    * policies  **参数解释**： 用户列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： 总用户个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 主题或消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ListTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets policies
-    *  用户列表。
+    *  **参数解释**： 用户列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\ListAccessPolicyRespPolicies[]|null
     */
@@ -209,7 +209,7 @@ class ListTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets policies
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ListAccessPolicyRespPolicies[]|null $policies 用户列表。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ListAccessPolicyRespPolicies[]|null $policies **参数解释**： 用户列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ListTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  总用户个数。
+    *  **参数解释**： 总用户个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -233,7 +233,7 @@ class ListTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param float|null $total 总用户个数。
+    * @param float|null $total **参数解释**： 总用户个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ListTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  主题或消费组名称。
+    *  **参数解释**： 主题或消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -257,7 +257,7 @@ class ListTopicAccessPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 主题或消费组名称。
+    * @param string|null $name **参数解释**： 主题或消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

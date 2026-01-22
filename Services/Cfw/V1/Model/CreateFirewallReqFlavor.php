@@ -20,10 +20,10 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * version  防火墙版本 “charge_mode”为“prePaid”时，支持标准版、专业版。 “charge_mode”为“postPaid”时，仅支持专业版。  Standard - 标准版 Professional - 专业版
-    * extendEipCount  扩展EIP数量，仅包周期场景下生效，当用户需要在增加EIP使用时需要使用此参数。
-    * extendBandwidth  扩展带宽，步长为5，仅包周期场景下生效，当用户需要在增加带宽使用时需要使用此参数。
-    * extendVpcCount  扩展VPC数量，仅包周期场景下生效，当用户需要增加VPC使用时需要使用此参数。
+    * version  **参数解释**： 防火墙版本 **约束限制**： “charge_mode”为“prePaid”时，支持标准版、专业版。 “charge_mode”为“postPaid”时，仅支持专业版。 **取值范围**： Standard - 标准版 Professional - 专业版 **默认取值**： 不涉及
+    * extendEipCount  **参数解释**： 扩展EIP数量 **约束限制**： 仅包周期场景下生效，当用户需要增加EIP防护数量时使用此参数。 **取值范围**： 0-2000 **默认取值**： 0
+    * extendBandwidth  **参数解释**： 扩展带宽，步长为5 **约束限制**： 仅包周期场景下生效，当用户需要防护带宽时使用此参数。 **取值范围**： 0-5000 **默认取值**： 不涉及
+    * extendVpcCount  **参数解释**： 扩展VPC数量 **约束限制**： 仅包周期场景下生效，当用户需要增加VPC防护数量时使用此参数。 **取值范围**： 0-100 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * version  防火墙版本 “charge_mode”为“prePaid”时，支持标准版、专业版。 “charge_mode”为“postPaid”时，仅支持专业版。  Standard - 标准版 Professional - 专业版
-    * extendEipCount  扩展EIP数量，仅包周期场景下生效，当用户需要在增加EIP使用时需要使用此参数。
-    * extendBandwidth  扩展带宽，步长为5，仅包周期场景下生效，当用户需要在增加带宽使用时需要使用此参数。
-    * extendVpcCount  扩展VPC数量，仅包周期场景下生效，当用户需要增加VPC使用时需要使用此参数。
+    * version  **参数解释**： 防火墙版本 **约束限制**： “charge_mode”为“prePaid”时，支持标准版、专业版。 “charge_mode”为“postPaid”时，仅支持专业版。 **取值范围**： Standard - 标准版 Professional - 专业版 **默认取值**： 不涉及
+    * extendEipCount  **参数解释**： 扩展EIP数量 **约束限制**： 仅包周期场景下生效，当用户需要增加EIP防护数量时使用此参数。 **取值范围**： 0-2000 **默认取值**： 0
+    * extendBandwidth  **参数解释**： 扩展带宽，步长为5 **约束限制**： 仅包周期场景下生效，当用户需要防护带宽时使用此参数。 **取值范围**： 0-5000 **默认取值**： 不涉及
+    * extendVpcCount  **参数解释**： 扩展VPC数量 **约束限制**： 仅包周期场景下生效，当用户需要增加VPC防护数量时使用此参数。 **取值范围**： 0-100 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * version  防火墙版本 “charge_mode”为“prePaid”时，支持标准版、专业版。 “charge_mode”为“postPaid”时，仅支持专业版。  Standard - 标准版 Professional - 专业版
-    * extendEipCount  扩展EIP数量，仅包周期场景下生效，当用户需要在增加EIP使用时需要使用此参数。
-    * extendBandwidth  扩展带宽，步长为5，仅包周期场景下生效，当用户需要在增加带宽使用时需要使用此参数。
-    * extendVpcCount  扩展VPC数量，仅包周期场景下生效，当用户需要增加VPC使用时需要使用此参数。
+    * version  **参数解释**： 防火墙版本 **约束限制**： “charge_mode”为“prePaid”时，支持标准版、专业版。 “charge_mode”为“postPaid”时，仅支持专业版。 **取值范围**： Standard - 标准版 Professional - 专业版 **默认取值**： 不涉及
+    * extendEipCount  **参数解释**： 扩展EIP数量 **约束限制**： 仅包周期场景下生效，当用户需要增加EIP防护数量时使用此参数。 **取值范围**： 0-2000 **默认取值**： 0
+    * extendBandwidth  **参数解释**： 扩展带宽，步长为5 **约束限制**： 仅包周期场景下生效，当用户需要防护带宽时使用此参数。 **取值范围**： 0-5000 **默认取值**： 不涉及
+    * extendVpcCount  **参数解释**： 扩展VPC数量 **约束限制**： 仅包周期场景下生效，当用户需要增加VPC防护数量时使用此参数。 **取值范围**： 0-100 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * version  防火墙版本 “charge_mode”为“prePaid”时，支持标准版、专业版。 “charge_mode”为“postPaid”时，仅支持专业版。  Standard - 标准版 Professional - 专业版
-    * extendEipCount  扩展EIP数量，仅包周期场景下生效，当用户需要在增加EIP使用时需要使用此参数。
-    * extendBandwidth  扩展带宽，步长为5，仅包周期场景下生效，当用户需要在增加带宽使用时需要使用此参数。
-    * extendVpcCount  扩展VPC数量，仅包周期场景下生效，当用户需要增加VPC使用时需要使用此参数。
+    * version  **参数解释**： 防火墙版本 **约束限制**： “charge_mode”为“prePaid”时，支持标准版、专业版。 “charge_mode”为“postPaid”时，仅支持专业版。 **取值范围**： Standard - 标准版 Professional - 专业版 **默认取值**： 不涉及
+    * extendEipCount  **参数解释**： 扩展EIP数量 **约束限制**： 仅包周期场景下生效，当用户需要增加EIP防护数量时使用此参数。 **取值范围**： 0-2000 **默认取值**： 0
+    * extendBandwidth  **参数解释**： 扩展带宽，步长为5 **约束限制**： 仅包周期场景下生效，当用户需要防护带宽时使用此参数。 **取值范围**： 0-5000 **默认取值**： 不涉及
+    * extendVpcCount  **参数解释**： 扩展VPC数量 **约束限制**： 仅包周期场景下生效，当用户需要增加VPC防护数量时使用此参数。 **取值范围**： 0-100 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * version  防火墙版本 “charge_mode”为“prePaid”时，支持标准版、专业版。 “charge_mode”为“postPaid”时，仅支持专业版。  Standard - 标准版 Professional - 专业版
-    * extendEipCount  扩展EIP数量，仅包周期场景下生效，当用户需要在增加EIP使用时需要使用此参数。
-    * extendBandwidth  扩展带宽，步长为5，仅包周期场景下生效，当用户需要在增加带宽使用时需要使用此参数。
-    * extendVpcCount  扩展VPC数量，仅包周期场景下生效，当用户需要增加VPC使用时需要使用此参数。
+    * version  **参数解释**： 防火墙版本 **约束限制**： “charge_mode”为“prePaid”时，支持标准版、专业版。 “charge_mode”为“postPaid”时，仅支持专业版。 **取值范围**： Standard - 标准版 Professional - 专业版 **默认取值**： 不涉及
+    * extendEipCount  **参数解释**： 扩展EIP数量 **约束限制**： 仅包周期场景下生效，当用户需要增加EIP防护数量时使用此参数。 **取值范围**： 0-2000 **默认取值**： 0
+    * extendBandwidth  **参数解释**： 扩展带宽，步长为5 **约束限制**： 仅包周期场景下生效，当用户需要防护带宽时使用此参数。 **取值范围**： 0-5000 **默认取值**： 不涉及
+    * extendVpcCount  **参数解释**： 扩展VPC数量 **约束限制**： 仅包周期场景下生效，当用户需要增加VPC防护数量时使用此参数。 **取值范围**： 0-100 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -251,7 +251,7 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  防火墙版本 “charge_mode”为“prePaid”时，支持标准版、专业版。 “charge_mode”为“postPaid”时，仅支持专业版。  Standard - 标准版 Professional - 专业版
+    *  **参数解释**： 防火墙版本 **约束限制**： “charge_mode”为“prePaid”时，支持标准版、专业版。 “charge_mode”为“postPaid”时，仅支持专业版。 **取值范围**： Standard - 标准版 Professional - 专业版 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -263,7 +263,7 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string $version 防火墙版本 “charge_mode”为“prePaid”时，支持标准版、专业版。 “charge_mode”为“postPaid”时，仅支持专业版。  Standard - 标准版 Professional - 专业版
+    * @param string $version **参数解释**： 防火墙版本 **约束限制**： “charge_mode”为“prePaid”时，支持标准版、专业版。 “charge_mode”为“postPaid”时，仅支持专业版。 **取值范围**： Standard - 标准版 Professional - 专业版 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -275,7 +275,7 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendEipCount
-    *  扩展EIP数量，仅包周期场景下生效，当用户需要在增加EIP使用时需要使用此参数。
+    *  **参数解释**： 扩展EIP数量 **约束限制**： 仅包周期场景下生效，当用户需要增加EIP防护数量时使用此参数。 **取值范围**： 0-2000 **默认取值**： 0
     *
     * @return int|null
     */
@@ -287,7 +287,7 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
     /**
     * Sets extendEipCount
     *
-    * @param int|null $extendEipCount 扩展EIP数量，仅包周期场景下生效，当用户需要在增加EIP使用时需要使用此参数。
+    * @param int|null $extendEipCount **参数解释**： 扩展EIP数量 **约束限制**： 仅包周期场景下生效，当用户需要增加EIP防护数量时使用此参数。 **取值范围**： 0-2000 **默认取值**： 0
     *
     * @return $this
     */
@@ -299,7 +299,7 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendBandwidth
-    *  扩展带宽，步长为5，仅包周期场景下生效，当用户需要在增加带宽使用时需要使用此参数。
+    *  **参数解释**： 扩展带宽，步长为5 **约束限制**： 仅包周期场景下生效，当用户需要防护带宽时使用此参数。 **取值范围**： 0-5000 **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -311,7 +311,7 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
     /**
     * Sets extendBandwidth
     *
-    * @param int|null $extendBandwidth 扩展带宽，步长为5，仅包周期场景下生效，当用户需要在增加带宽使用时需要使用此参数。
+    * @param int|null $extendBandwidth **参数解释**： 扩展带宽，步长为5 **约束限制**： 仅包周期场景下生效，当用户需要防护带宽时使用此参数。 **取值范围**： 0-5000 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendVpcCount
-    *  扩展VPC数量，仅包周期场景下生效，当用户需要增加VPC使用时需要使用此参数。
+    *  **参数解释**： 扩展VPC数量 **约束限制**： 仅包周期场景下生效，当用户需要增加VPC防护数量时使用此参数。 **取值范围**： 0-100 **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -335,7 +335,7 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
     /**
     * Sets extendVpcCount
     *
-    * @param int|null $extendVpcCount 扩展VPC数量，仅包周期场景下生效，当用户需要增加VPC使用时需要使用此参数。
+    * @param int|null $extendVpcCount **参数解释**： 扩展VPC数量 **约束限制**： 仅包周期场景下生效，当用户需要增加VPC防护数量时使用此参数。 **取值范围**： 0-100 **默认取值**： 不涉及
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class BackupDatabase implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * type  **参数解释：** 数据库引擎 **取值范围：** DDS-Community。
-    * version  **参数解释：** 数据库版本。 **取值范围：** 取值为“5.0”、“4.4”、“4.2”、“4.0”、“3.4”。
+    * version  **参数解释：** 数据库版本。支持5.0、4.4、4.2、4.0、3.4版本。 **取值范围：** 取值为“5.0”、“4.4”、“4.2”、“4.0”、“3.4”。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class BackupDatabase implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  **参数解释：** 数据库引擎 **取值范围：** DDS-Community。
-    * version  **参数解释：** 数据库版本。 **取值范围：** 取值为“5.0”、“4.4”、“4.2”、“4.0”、“3.4”。
+    * version  **参数解释：** 数据库版本。支持5.0、4.4、4.2、4.0、3.4版本。 **取值范围：** 取值为“5.0”、“4.4”、“4.2”、“4.0”、“3.4”。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class BackupDatabase implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * type  **参数解释：** 数据库引擎 **取值范围：** DDS-Community。
-    * version  **参数解释：** 数据库版本。 **取值范围：** 取值为“5.0”、“4.4”、“4.2”、“4.0”、“3.4”。
+    * version  **参数解释：** 数据库版本。支持5.0、4.4、4.2、4.0、3.4版本。 **取值范围：** 取值为“5.0”、“4.4”、“4.2”、“4.0”、“3.4”。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class BackupDatabase implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  **参数解释：** 数据库引擎 **取值范围：** DDS-Community。
-    * version  **参数解释：** 数据库版本。 **取值范围：** 取值为“5.0”、“4.4”、“4.2”、“4.0”、“3.4”。
+    * version  **参数解释：** 数据库版本。支持5.0、4.4、4.2、4.0、3.4版本。 **取值范围：** 取值为“5.0”、“4.4”、“4.2”、“4.0”、“3.4”。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class BackupDatabase implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  **参数解释：** 数据库引擎 **取值范围：** DDS-Community。
-    * version  **参数解释：** 数据库版本。 **取值范围：** 取值为“5.0”、“4.4”、“4.2”、“4.0”、“3.4”。
+    * version  **参数解释：** 数据库版本。支持5.0、4.4、4.2、4.0、3.4版本。 **取值范围：** 取值为“5.0”、“4.4”、“4.2”、“4.0”、“3.4”。
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class BackupDatabase implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  **参数解释：** 数据库版本。 **取值范围：** 取值为“5.0”、“4.4”、“4.2”、“4.0”、“3.4”。
+    *  **参数解释：** 数据库版本。支持5.0、4.4、4.2、4.0、3.4版本。 **取值范围：** 取值为“5.0”、“4.4”、“4.2”、“4.0”、“3.4”。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class BackupDatabase implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string $version **参数解释：** 数据库版本。 **取值范围：** 取值为“5.0”、“4.4”、“4.2”、“4.0”、“3.4”。
+    * @param string $version **参数解释：** 数据库版本。支持5.0、4.4、4.2、4.0、3.4版本。 **取值范围：** 取值为“5.0”、“4.4”、“4.2”、“4.0”、“3.4”。
     *
     * @return $this
     */

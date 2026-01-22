@@ -20,13 +20,13 @@ class SubnetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * availabilityZone  子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml)
-    * cidr  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
-    * name  子网名称
-    * id  子网id
-    * gatewayIp  子网的网关，取值范围为子网网段cidr中的ip地址
-    * vpcId  创建vpc产生的uuid
-    * ipv6Enable  是否支持ipv6，boolean值为true表示是，false表示否
+    * availabilityZone  **参数解释**： 子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml) **取值范围**： 不涉及
+    * cidr  **参数解释**： 虚拟私有云下可用子网的范围 **取值范围**： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24
+    * name  **参数解释**： 子网名称 **取值范围**： 不涉及
+    * id  **参数解释**： 子网id **取值范围**： 不涉及
+    * gatewayIp  **参数解释**： 子网的网关 **取值范围**： 子网网段cidr中的IP地址
+    * vpcId  **参数解释**： 创建VPC产生的uuid **取值范围**： 不涉及
+    * ipv6Enable  **参数解释**： 是否支持ipv6 **取值范围**： - true：是 - false：否
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class SubnetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * availabilityZone  子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml)
-    * cidr  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
-    * name  子网名称
-    * id  子网id
-    * gatewayIp  子网的网关，取值范围为子网网段cidr中的ip地址
-    * vpcId  创建vpc产生的uuid
-    * ipv6Enable  是否支持ipv6，boolean值为true表示是，false表示否
+    * availabilityZone  **参数解释**： 子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml) **取值范围**： 不涉及
+    * cidr  **参数解释**： 虚拟私有云下可用子网的范围 **取值范围**： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24
+    * name  **参数解释**： 子网名称 **取值范围**： 不涉及
+    * id  **参数解释**： 子网id **取值范围**： 不涉及
+    * gatewayIp  **参数解释**： 子网的网关 **取值范围**： 子网网段cidr中的IP地址
+    * vpcId  **参数解释**： 创建VPC产生的uuid **取值范围**： 不涉及
+    * ipv6Enable  **参数解释**： 是否支持ipv6 **取值范围**： - true：是 - false：否
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * availabilityZone  子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml)
-    * cidr  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
-    * name  子网名称
-    * id  子网id
-    * gatewayIp  子网的网关，取值范围为子网网段cidr中的ip地址
-    * vpcId  创建vpc产生的uuid
-    * ipv6Enable  是否支持ipv6，boolean值为true表示是，false表示否
+    * availabilityZone  **参数解释**： 子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml) **取值范围**： 不涉及
+    * cidr  **参数解释**： 虚拟私有云下可用子网的范围 **取值范围**： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24
+    * name  **参数解释**： 子网名称 **取值范围**： 不涉及
+    * id  **参数解释**： 子网id **取值范围**： 不涉及
+    * gatewayIp  **参数解释**： 子网的网关 **取值范围**： 子网网段cidr中的IP地址
+    * vpcId  **参数解释**： 创建VPC产生的uuid **取值范围**： 不涉及
+    * ipv6Enable  **参数解释**： 是否支持ipv6 **取值范围**： - true：是 - false：否
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class SubnetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * availabilityZone  子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml)
-    * cidr  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
-    * name  子网名称
-    * id  子网id
-    * gatewayIp  子网的网关，取值范围为子网网段cidr中的ip地址
-    * vpcId  创建vpc产生的uuid
-    * ipv6Enable  是否支持ipv6，boolean值为true表示是，false表示否
+    * availabilityZone  **参数解释**： 子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml) **取值范围**： 不涉及
+    * cidr  **参数解释**： 虚拟私有云下可用子网的范围 **取值范围**： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24
+    * name  **参数解释**： 子网名称 **取值范围**： 不涉及
+    * id  **参数解释**： 子网id **取值范围**： 不涉及
+    * gatewayIp  **参数解释**： 子网的网关 **取值范围**： 子网网段cidr中的IP地址
+    * vpcId  **参数解释**： 创建VPC产生的uuid **取值范围**： 不涉及
+    * ipv6Enable  **参数解释**： 是否支持ipv6 **取值范围**： - true：是 - false：否
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class SubnetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * availabilityZone  子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml)
-    * cidr  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
-    * name  子网名称
-    * id  子网id
-    * gatewayIp  子网的网关，取值范围为子网网段cidr中的ip地址
-    * vpcId  创建vpc产生的uuid
-    * ipv6Enable  是否支持ipv6，boolean值为true表示是，false表示否
+    * availabilityZone  **参数解释**： 子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml) **取值范围**： 不涉及
+    * cidr  **参数解释**： 虚拟私有云下可用子网的范围 **取值范围**： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24
+    * name  **参数解释**： 子网名称 **取值范围**： 不涉及
+    * id  **参数解释**： 子网id **取值范围**： 不涉及
+    * gatewayIp  **参数解释**： 子网的网关 **取值范围**： 子网网段cidr中的IP地址
+    * vpcId  **参数解释**： 创建VPC产生的uuid **取值范围**： 不涉及
+    * ipv6Enable  **参数解释**： 是否支持ipv6 **取值范围**： - true：是 - false：否
     *
     * @var string[]
     */
@@ -243,7 +243,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
-    *  子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml)
+    *  **参数解释**： 子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml) **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -255,7 +255,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZone
     *
-    * @param string|null $availabilityZone 子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml)
+    * @param string|null $availabilityZone **参数解释**： 子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml) **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets cidr
-    *  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
+    *  **参数解释**： 虚拟私有云下可用子网的范围 **取值范围**： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24
     *
     * @return string|null
     */
@@ -279,7 +279,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cidr
     *
-    * @param string|null $cidr 功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
+    * @param string|null $cidr **参数解释**： 虚拟私有云下可用子网的范围 **取值范围**： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  子网名称
+    *  **参数解释**： 子网名称 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -303,7 +303,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 子网名称
+    * @param string|null $name **参数解释**： 子网名称 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -315,7 +315,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  子网id
+    *  **参数解释**： 子网id **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -327,7 +327,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 子网id
+    * @param string|null $id **参数解释**： 子网id **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -339,7 +339,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets gatewayIp
-    *  子网的网关，取值范围为子网网段cidr中的ip地址
+    *  **参数解释**： 子网的网关 **取值范围**： 子网网段cidr中的IP地址
     *
     * @return string|null
     */
@@ -351,7 +351,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets gatewayIp
     *
-    * @param string|null $gatewayIp 子网的网关，取值范围为子网网段cidr中的ip地址
+    * @param string|null $gatewayIp **参数解释**： 子网的网关 **取值范围**： 子网网段cidr中的IP地址
     *
     * @return $this
     */
@@ -363,7 +363,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  创建vpc产生的uuid
+    *  **参数解释**： 创建VPC产生的uuid **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -375,7 +375,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId 创建vpc产生的uuid
+    * @param string|null $vpcId **参数解释**： 创建VPC产生的uuid **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -387,7 +387,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6Enable
-    *  是否支持ipv6，boolean值为true表示是，false表示否
+    *  **参数解释**： 是否支持ipv6 **取值范围**： - true：是 - false：否
     *
     * @return bool|null
     */
@@ -399,7 +399,7 @@ class SubnetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6Enable
     *
-    * @param bool|null $ipv6Enable 是否支持ipv6，boolean值为true表示是，false表示否
+    * @param bool|null $ipv6Enable **参数解释**： 是否支持ipv6 **取值范围**： - true：是 - false：否
     *
     * @return $this
     */

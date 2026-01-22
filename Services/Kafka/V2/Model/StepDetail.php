@@ -21,7 +21,7 @@ class StepDetail implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  **参数解释**： 任务名称。  **取值范围**： 不涉及。
-    * status  **参数解释**： 任务状态。 **取值范围**： - COMPLETED：任务已完成。 - IN_PROGRESS：任务正在进行。 - FAILED：任务失败。 - WAITING：等待开始。
+    * statue  **参数解释**： 任务状态。 **取值范围**： - COMPLETED：任务已完成。 - IN_PROGRESS：任务正在进行。 - FAILED：任务失败。 - WAITING：等待开始。
     * startTime  **参数解释**： 开始时间。     **取值范围**： 不涉及。
     * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
@@ -29,7 +29,7 @@ class StepDetail implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'status' => 'string',
+            'statue' => 'string',
             'startTime' => 'string',
             'endTime' => 'string'
     ];
@@ -37,7 +37,7 @@ class StepDetail implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  **参数解释**： 任务名称。  **取值范围**： 不涉及。
-    * status  **参数解释**： 任务状态。 **取值范围**： - COMPLETED：任务已完成。 - IN_PROGRESS：任务正在进行。 - FAILED：任务失败。 - WAITING：等待开始。
+    * statue  **参数解释**： 任务状态。 **取值范围**： - COMPLETED：任务已完成。 - IN_PROGRESS：任务正在进行。 - FAILED：任务失败。 - WAITING：等待开始。
     * startTime  **参数解释**： 开始时间。     **取值范围**： 不涉及。
     * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
@@ -45,7 +45,7 @@ class StepDetail implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'name' => null,
-        'status' => null,
+        'statue' => null,
         'startTime' => null,
         'endTime' => null
     ];
@@ -74,7 +74,7 @@ class StepDetail implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  **参数解释**： 任务名称。  **取值范围**： 不涉及。
-    * status  **参数解释**： 任务状态。 **取值范围**： - COMPLETED：任务已完成。 - IN_PROGRESS：任务正在进行。 - FAILED：任务失败。 - WAITING：等待开始。
+    * statue  **参数解释**： 任务状态。 **取值范围**： - COMPLETED：任务已完成。 - IN_PROGRESS：任务正在进行。 - FAILED：任务失败。 - WAITING：等待开始。
     * startTime  **参数解释**： 开始时间。     **取值范围**： 不涉及。
     * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
@@ -82,7 +82,7 @@ class StepDetail implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'name' => 'name',
-            'status' => 'status',
+            'statue' => 'statue',
             'startTime' => 'start_time',
             'endTime' => 'end_time'
     ];
@@ -90,7 +90,7 @@ class StepDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  **参数解释**： 任务名称。  **取值范围**： 不涉及。
-    * status  **参数解释**： 任务状态。 **取值范围**： - COMPLETED：任务已完成。 - IN_PROGRESS：任务正在进行。 - FAILED：任务失败。 - WAITING：等待开始。
+    * statue  **参数解释**： 任务状态。 **取值范围**： - COMPLETED：任务已完成。 - IN_PROGRESS：任务正在进行。 - FAILED：任务失败。 - WAITING：等待开始。
     * startTime  **参数解释**： 开始时间。     **取值范围**： 不涉及。
     * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
@@ -98,7 +98,7 @@ class StepDetail implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'name' => 'setName',
-            'status' => 'setStatus',
+            'statue' => 'setStatue',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime'
     ];
@@ -106,7 +106,7 @@ class StepDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  **参数解释**： 任务名称。  **取值范围**： 不涉及。
-    * status  **参数解释**： 任务状态。 **取值范围**： - COMPLETED：任务已完成。 - IN_PROGRESS：任务正在进行。 - FAILED：任务失败。 - WAITING：等待开始。
+    * statue  **参数解释**： 任务状态。 **取值范围**： - COMPLETED：任务已完成。 - IN_PROGRESS：任务正在进行。 - FAILED：任务失败。 - WAITING：等待开始。
     * startTime  **参数解释**： 开始时间。     **取值范围**： 不涉及。
     * endTime  **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
@@ -114,7 +114,7 @@ class StepDetail implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'name' => 'getName',
-            'status' => 'getStatus',
+            'statue' => 'getStatue',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime'
     ];
@@ -178,7 +178,7 @@ class StepDetail implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['statue'] = isset($data['statue']) ? $data['statue'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
     }
@@ -230,26 +230,26 @@ class StepDetail implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets status
+    * Gets statue
     *  **参数解释**： 任务状态。 **取值范围**： - COMPLETED：任务已完成。 - IN_PROGRESS：任务正在进行。 - FAILED：任务失败。 - WAITING：等待开始。
     *
     * @return string|null
     */
-    public function getStatus()
+    public function getStatue()
     {
-        return $this->container['status'];
+        return $this->container['statue'];
     }
 
     /**
-    * Sets status
+    * Sets statue
     *
-    * @param string|null $status **参数解释**： 任务状态。 **取值范围**： - COMPLETED：任务已完成。 - IN_PROGRESS：任务正在进行。 - FAILED：任务失败。 - WAITING：等待开始。
+    * @param string|null $statue **参数解释**： 任务状态。 **取值范围**： - COMPLETED：任务已完成。 - IN_PROGRESS：任务正在进行。 - FAILED：任务失败。 - WAITING：等待开始。
     *
     * @return $this
     */
-    public function setStatus($status)
+    public function setStatue($statue)
     {
-        $this->container['status'] = $status;
+        $this->container['statue'] = $statue;
         return $this;
     }
 

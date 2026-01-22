@@ -20,10 +20,10 @@ class ConsumerDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * consumerTag  消费者标识
+    * consumerTag  **参数解释**： 消费者标识。 **取值范围**： 不涉及。
     * channelDetails  channelDetails
-    * ackRequired  消费者客户端是否设置手动ack
-    * prefetchCount  消费者客户端预取值
+    * ackRequired  **参数解释**： 消费者客户端是否设置手动ack。 **取值范围**： - true：设置手动ack。 - false：不设置手动ack。
+    * prefetchCount  **参数解释**： 消费者客户端预取值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ConsumerDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * consumerTag  消费者标识
+    * consumerTag  **参数解释**： 消费者标识。 **取值范围**： 不涉及。
     * channelDetails  channelDetails
-    * ackRequired  消费者客户端是否设置手动ack
-    * prefetchCount  消费者客户端预取值
+    * ackRequired  **参数解释**： 消费者客户端是否设置手动ack。 **取值范围**： - true：设置手动ack。 - false：不设置手动ack。
+    * prefetchCount  **参数解释**： 消费者客户端预取值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ConsumerDetails implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * consumerTag  消费者标识
+    * consumerTag  **参数解释**： 消费者标识。 **取值范围**： 不涉及。
     * channelDetails  channelDetails
-    * ackRequired  消费者客户端是否设置手动ack
-    * prefetchCount  消费者客户端预取值
+    * ackRequired  **参数解释**： 消费者客户端是否设置手动ack。 **取值范围**： - true：设置手动ack。 - false：不设置手动ack。
+    * prefetchCount  **参数解释**： 消费者客户端预取值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ConsumerDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * consumerTag  消费者标识
+    * consumerTag  **参数解释**： 消费者标识。 **取值范围**： 不涉及。
     * channelDetails  channelDetails
-    * ackRequired  消费者客户端是否设置手动ack
-    * prefetchCount  消费者客户端预取值
+    * ackRequired  **参数解释**： 消费者客户端是否设置手动ack。 **取值范围**： - true：设置手动ack。 - false：不设置手动ack。
+    * prefetchCount  **参数解释**： 消费者客户端预取值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ConsumerDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * consumerTag  消费者标识
+    * consumerTag  **参数解释**： 消费者标识。 **取值范围**： 不涉及。
     * channelDetails  channelDetails
-    * ackRequired  消费者客户端是否设置手动ack
-    * prefetchCount  消费者客户端预取值
+    * ackRequired  **参数解释**： 消费者客户端是否设置手动ack。 **取值范围**： - true：设置手动ack。 - false：不设置手动ack。
+    * prefetchCount  **参数解释**： 消费者客户端预取值。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class ConsumerDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumerTag
-    *  消费者标识
+    *  **参数解释**： 消费者标识。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class ConsumerDetails implements ModelInterface, ArrayAccess
     /**
     * Sets consumerTag
     *
-    * @param string|null $consumerTag 消费者标识
+    * @param string|null $consumerTag **参数解释**： 消费者标识。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class ConsumerDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets ackRequired
-    *  消费者客户端是否设置手动ack
+    *  **参数解释**： 消费者客户端是否设置手动ack。 **取值范围**： - true：设置手动ack。 - false：不设置手动ack。
     *
     * @return bool|null
     */
@@ -267,7 +267,7 @@ class ConsumerDetails implements ModelInterface, ArrayAccess
     /**
     * Sets ackRequired
     *
-    * @param bool|null $ackRequired 消费者客户端是否设置手动ack
+    * @param bool|null $ackRequired **参数解释**： 消费者客户端是否设置手动ack。 **取值范围**： - true：设置手动ack。 - false：不设置手动ack。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class ConsumerDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets prefetchCount
-    *  消费者客户端预取值
+    *  **参数解释**： 消费者客户端预取值。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class ConsumerDetails implements ModelInterface, ArrayAccess
     /**
     * Sets prefetchCount
     *
-    * @param int|null $prefetchCount 消费者客户端预取值
+    * @param int|null $prefetchCount **参数解释**： 消费者客户端预取值。 **取值范围**： 不涉及。
     *
     * @return $this
     */

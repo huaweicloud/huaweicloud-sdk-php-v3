@@ -20,9 +20,9 @@ class DeadletterResendRespResendResults implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * msgId  消息ID。
-    * errorCode  错误码。
-    * errorMessage  错误信息。
+    * msgId  **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * errorCode  **参数解释**： 错误码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * errorMessage  **参数解释**： 错误信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class DeadletterResendRespResendResults implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * msgId  消息ID。
-    * errorCode  错误码。
-    * errorMessage  错误信息。
+    * msgId  **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * errorCode  **参数解释**： 错误码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * errorMessage  **参数解释**： 错误信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class DeadletterResendRespResendResults implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * msgId  消息ID。
-    * errorCode  错误码。
-    * errorMessage  错误信息。
+    * msgId  **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * errorCode  **参数解释**： 错误码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * errorMessage  **参数解释**： 错误信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class DeadletterResendRespResendResults implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * msgId  消息ID。
-    * errorCode  错误码。
-    * errorMessage  错误信息。
+    * msgId  **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * errorCode  **参数解释**： 错误码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * errorMessage  **参数解释**： 错误信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class DeadletterResendRespResendResults implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * msgId  消息ID。
-    * errorCode  错误码。
-    * errorMessage  错误信息。
+    * msgId  **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * errorCode  **参数解释**： 错误码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * errorMessage  **参数解释**： 错误信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class DeadletterResendRespResendResults implements ModelInterface, ArrayAccess
 
     /**
     * Gets msgId
-    *  消息ID。
+    *  **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class DeadletterResendRespResendResults implements ModelInterface, ArrayAccess
     /**
     * Sets msgId
     *
-    * @param string|null $msgId 消息ID。
+    * @param string|null $msgId **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class DeadletterResendRespResendResults implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
-    *  错误码。
+    *  **参数解释**： 错误码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class DeadletterResendRespResendResults implements ModelInterface, ArrayAccess
     /**
     * Sets errorCode
     *
-    * @param string|null $errorCode 错误码。
+    * @param string|null $errorCode **参数解释**： 错误码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class DeadletterResendRespResendResults implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorMessage
-    *  错误信息。
+    *  **参数解释**： 错误信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class DeadletterResendRespResendResults implements ModelInterface, ArrayAccess
     /**
     * Sets errorMessage
     *
-    * @param string|null $errorMessage 错误信息。
+    * @param string|null $errorMessage **参数解释**： 错误信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */

@@ -21,9 +21,9 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * size  当前显示数量
-    * total  查询结果总数
-    * items  查询详情
+    * size  **参数解释**： 当前显示数量。 **取值范围**： 不涉及。
+    * total  **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
+    * items  **参数解释**： 查询详情。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * size  当前显示数量
-    * total  查询结果总数
-    * items  查询详情
+    * size  **参数解释**： 当前显示数量。 **取值范围**： 不涉及。
+    * total  **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
+    * items  **参数解释**： 查询详情。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * size  当前显示数量
-    * total  查询结果总数
-    * items  查询详情
+    * size  **参数解释**： 当前显示数量。 **取值范围**： 不涉及。
+    * total  **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
+    * items  **参数解释**： 查询详情。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * size  当前显示数量
-    * total  查询结果总数
-    * items  查询详情
+    * size  **参数解释**： 当前显示数量。 **取值范围**： 不涉及。
+    * total  **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
+    * items  **参数解释**： 查询详情。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * size  当前显示数量
-    * total  查询结果总数
-    * items  查询详情
+    * size  **参数解释**： 当前显示数量。 **取值范围**： 不涉及。
+    * total  **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
+    * items  **参数解释**： 查询详情。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  当前显示数量
+    *  **参数解释**： 当前显示数量。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -209,7 +209,7 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 当前显示数量
+    * @param int|null $size **参数解释**： 当前显示数量。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  查询结果总数
+    *  **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 查询结果总数
+    * @param int|null $total **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets items
-    *  查询详情
+    *  **参数解释**： 查询详情。
     *
     * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\QueueDetails[]|null
     */
@@ -257,7 +257,7 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\QueueDetails[]|null $items 查询详情
+    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\QueueDetails[]|null $items **参数解释**： 查询详情。
     *
     * @return $this
     */

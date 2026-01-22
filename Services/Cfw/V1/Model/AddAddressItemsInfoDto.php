@@ -169,6 +169,9 @@ class AddAddressItemsInfoDto implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['setId'] === null) {
+            $invalidProperties[] = "'setId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -187,7 +190,7 @@ class AddAddressItemsInfoDto implements ModelInterface, ArrayAccess
     * Gets setId
     *  地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
-    * @return string|null
+    * @return string
     */
     public function getSetId()
     {
@@ -197,7 +200,7 @@ class AddAddressItemsInfoDto implements ModelInterface, ArrayAccess
     /**
     * Sets setId
     *
-    * @param string|null $setId 地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * @param string $setId 地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */

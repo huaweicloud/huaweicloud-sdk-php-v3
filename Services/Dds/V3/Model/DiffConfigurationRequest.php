@@ -20,8 +20,8 @@ class DiffConfigurationRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * sourceConfigurationId  需要进行比较的参数模板ID。
-    * targetConfigurationId  需要进行比较的参数模板ID。
+    * sourceConfigurationId  **参数解释：** 需要进行比较的参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * targetConfigurationId  **参数解释：** 需要进行比较的参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DiffConfigurationRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * sourceConfigurationId  需要进行比较的参数模板ID。
-    * targetConfigurationId  需要进行比较的参数模板ID。
+    * sourceConfigurationId  **参数解释：** 需要进行比较的参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * targetConfigurationId  **参数解释：** 需要进行比较的参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DiffConfigurationRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * sourceConfigurationId  需要进行比较的参数模板ID。
-    * targetConfigurationId  需要进行比较的参数模板ID。
+    * sourceConfigurationId  **参数解释：** 需要进行比较的参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * targetConfigurationId  **参数解释：** 需要进行比较的参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DiffConfigurationRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * sourceConfigurationId  需要进行比较的参数模板ID。
-    * targetConfigurationId  需要进行比较的参数模板ID。
+    * sourceConfigurationId  **参数解释：** 需要进行比较的参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * targetConfigurationId  **参数解释：** 需要进行比较的参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DiffConfigurationRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * sourceConfigurationId  需要进行比较的参数模板ID。
-    * targetConfigurationId  需要进行比较的参数模板ID。
+    * sourceConfigurationId  **参数解释：** 需要进行比较的参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * targetConfigurationId  **参数解释：** 需要进行比较的参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class DiffConfigurationRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceConfigurationId
-    *  需要进行比较的参数模板ID。
+    *  **参数解释：** 需要进行比较的参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class DiffConfigurationRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sourceConfigurationId
     *
-    * @param string $sourceConfigurationId 需要进行比较的参数模板ID。
+    * @param string $sourceConfigurationId **参数解释：** 需要进行比较的参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class DiffConfigurationRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetConfigurationId
-    *  需要进行比较的参数模板ID。
+    *  **参数解释：** 需要进行比较的参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class DiffConfigurationRequest implements ModelInterface, ArrayAccess
     /**
     * Sets targetConfigurationId
     *
-    * @param string $targetConfigurationId 需要进行比较的参数模板ID。
+    * @param string $targetConfigurationId **参数解释：** 需要进行比较的参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */

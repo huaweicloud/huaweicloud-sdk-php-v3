@@ -20,9 +20,9 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  防火墙名称
-    * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
-    * tags  服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计。
+    * name  **参数解释**： 防火墙名称 约束限制： 不涉及 **取值范围**： 不涉及 默认取值： 不涉及
+    * enterpriseProjectId  **参数解释**： 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取 约束限制： 不涉及 **取值范围**： 不涉及 默认取值： 0
+    * tags  **参数解释**： 服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计 **约束限制**： 不涉及
     * flavor  flavor
     * chargeInfo  chargeInfo
     *
@@ -38,9 +38,9 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  防火墙名称
-    * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
-    * tags  服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计。
+    * name  **参数解释**： 防火墙名称 约束限制： 不涉及 **取值范围**： 不涉及 默认取值： 不涉及
+    * enterpriseProjectId  **参数解释**： 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取 约束限制： 不涉及 **取值范围**： 不涉及 默认取值： 0
+    * tags  **参数解释**： 服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计 **约束限制**： 不涉及
     * flavor  flavor
     * chargeInfo  chargeInfo
     *
@@ -77,9 +77,9 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  防火墙名称
-    * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
-    * tags  服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计。
+    * name  **参数解释**： 防火墙名称 约束限制： 不涉及 **取值范围**： 不涉及 默认取值： 不涉及
+    * enterpriseProjectId  **参数解释**： 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取 约束限制： 不涉及 **取值范围**： 不涉及 默认取值： 0
+    * tags  **参数解释**： 服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计 **约束限制**： 不涉及
     * flavor  flavor
     * chargeInfo  chargeInfo
     *
@@ -95,9 +95,9 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  防火墙名称
-    * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
-    * tags  服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计。
+    * name  **参数解释**： 防火墙名称 约束限制： 不涉及 **取值范围**： 不涉及 默认取值： 不涉及
+    * enterpriseProjectId  **参数解释**： 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取 约束限制： 不涉及 **取值范围**： 不涉及 默认取值： 0
+    * tags  **参数解释**： 服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计 **约束限制**： 不涉及
     * flavor  flavor
     * chargeInfo  chargeInfo
     *
@@ -113,9 +113,9 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  防火墙名称
-    * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
-    * tags  服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计。
+    * name  **参数解释**： 防火墙名称 约束限制： 不涉及 **取值范围**： 不涉及 默认取值： 不涉及
+    * enterpriseProjectId  **参数解释**： 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取 约束限制： 不涉及 **取值范围**： 不涉及 默认取值： 0
+    * tags  **参数解释**： 服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计 **约束限制**： 不涉及
     * flavor  flavor
     * chargeInfo  chargeInfo
     *
@@ -227,7 +227,7 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  防火墙名称
+    *  **参数解释**： 防火墙名称 约束限制： 不涉及 **取值范围**： 不涉及 默认取值： 不涉及
     *
     * @return string
     */
@@ -239,7 +239,7 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 防火墙名称
+    * @param string $name **参数解释**： 防火墙名称 约束限制： 不涉及 **取值范围**： 不涉及 默认取值： 不涉及
     *
     * @return $this
     */
@@ -251,7 +251,7 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
+    *  **参数解释**： 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取 约束限制： 不涉及 **取值范围**： 不涉及 默认取值： 0
     *
     * @return string|null
     */
@@ -263,7 +263,7 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
+    * @param string|null $enterpriseProjectId **参数解释**： 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取 约束限制： 不涉及 **取值范围**： 不涉及 默认取值： 0
     *
     * @return $this
     */
@@ -275,7 +275,7 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计。
+    *  **参数解释**： 服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计 **约束限制**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\CreateFirewallReqTags[]|null
     */
@@ -287,7 +287,7 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\CreateFirewallReqTags[]|null $tags 服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计。
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\CreateFirewallReqTags[]|null $tags **参数解释**： 服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计 **约束限制**： 不涉及
     *
     * @return $this
     */

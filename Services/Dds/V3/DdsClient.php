@@ -576,11 +576,11 @@ class DdsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                [],
                 []
             );
         }
@@ -1441,7 +1441,7 @@ class DdsClient extends Client
     /**
      * 删除参数模板
      *
-     * 删除参数模板。
+     * 删除指定参数模板。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3673,7 +3673,7 @@ class DdsClient extends Client
     /**
      * 查询数据库慢日志
      *
-     * 查询数据库慢日志信息。
+     * 查询数据库慢日志信息，支持关键字、数据库表名等搜索功能。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4487,6 +4487,9 @@ class DdsClient extends Client
         }
         if ($localVarParams['status'] !== null) {
             $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
         }
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
@@ -6008,7 +6011,7 @@ class DdsClient extends Client
     /**
      * 获取参数模板的详情
      *
-     * 获取参数模板的详情。
+     * 获取指定参数模板的参数信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6200,7 +6203,7 @@ class DdsClient extends Client
     /**
      * 获取指定实例的参数信息
      *
-     * 获取指定实例的参数，可以是实例，组，节点的参数模板。
+     * 获取指定实例的参数信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

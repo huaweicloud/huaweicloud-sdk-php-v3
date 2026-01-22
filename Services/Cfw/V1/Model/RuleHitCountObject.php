@@ -20,8 +20,8 @@ class RuleHitCountObject implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ruleId  规则id
-    * ruleHitCount  规则击中次数，当acl规则被触发时，对应规则id的击中次数会添加一次。
+    * ruleId  **参数解释**： 规则ID **取值范围**： 不涉及
+    * ruleHitCount  **参数解释**： 规则击中次数，当acl规则被触发时，对应规则ID的击中次数会添加一次。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class RuleHitCountObject implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ruleId  规则id
-    * ruleHitCount  规则击中次数，当acl规则被触发时，对应规则id的击中次数会添加一次。
+    * ruleId  **参数解释**： 规则ID **取值范围**： 不涉及
+    * ruleHitCount  **参数解释**： 规则击中次数，当acl规则被触发时，对应规则ID的击中次数会添加一次。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class RuleHitCountObject implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ruleId  规则id
-    * ruleHitCount  规则击中次数，当acl规则被触发时，对应规则id的击中次数会添加一次。
+    * ruleId  **参数解释**： 规则ID **取值范围**： 不涉及
+    * ruleHitCount  **参数解释**： 规则击中次数，当acl规则被触发时，对应规则ID的击中次数会添加一次。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class RuleHitCountObject implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ruleId  规则id
-    * ruleHitCount  规则击中次数，当acl规则被触发时，对应规则id的击中次数会添加一次。
+    * ruleId  **参数解释**： 规则ID **取值范围**： 不涉及
+    * ruleHitCount  **参数解释**： 规则击中次数，当acl规则被触发时，对应规则ID的击中次数会添加一次。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class RuleHitCountObject implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ruleId  规则id
-    * ruleHitCount  规则击中次数，当acl规则被触发时，对应规则id的击中次数会添加一次。
+    * ruleId  **参数解释**： 规则ID **取值范围**： 不涉及
+    * ruleHitCount  **参数解释**： 规则击中次数，当acl规则被触发时，对应规则ID的击中次数会添加一次。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class RuleHitCountObject implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleId
-    *  规则id
+    *  **参数解释**： 规则ID **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class RuleHitCountObject implements ModelInterface, ArrayAccess
     /**
     * Sets ruleId
     *
-    * @param string|null $ruleId 规则id
+    * @param string|null $ruleId **参数解释**： 规则ID **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class RuleHitCountObject implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleHitCount
-    *  规则击中次数，当acl规则被触发时，对应规则id的击中次数会添加一次。
+    *  **参数解释**： 规则击中次数，当acl规则被触发时，对应规则ID的击中次数会添加一次。 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class RuleHitCountObject implements ModelInterface, ArrayAccess
     /**
     * Sets ruleHitCount
     *
-    * @param int|null $ruleHitCount 规则击中次数，当acl规则被触发时，对应规则id的击中次数会添加一次。
+    * @param int|null $ruleHitCount **参数解释**： 规则击中次数，当acl规则被触发时，对应规则ID的击中次数会添加一次。 **取值范围**： 不涉及
     *
     * @return $this
     */

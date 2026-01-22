@@ -20,10 +20,10 @@ class MigrationRabbitExchangeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vhost  vhost名称。
-    * name  交换机名称。
-    * type  交换机类型。
-    * durable  是否持久化。
+    * vhost  **参数解释**： vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 交换机名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 交换机类型。 **约束限制**： 不涉及。 **取值范围**： - topic：支持routing key的模糊匹配。 - direct：按routing key精确匹配进行消息路由。 - fanout：广播模式，消息会发送到所有绑定的队列，忽略routing key。 - headers：根据消息头（headers）中的键值对进行路由，而不是routing key。 **默认取值**： 不涉及。
+    * durable  **参数解释**： 是否持久化。 **约束限制**： 不涉及。 **取值范围**： - true：持久化。 - false：不进行持久化。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class MigrationRabbitExchangeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vhost  vhost名称。
-    * name  交换机名称。
-    * type  交换机类型。
-    * durable  是否持久化。
+    * vhost  **参数解释**： vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 交换机名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 交换机类型。 **约束限制**： 不涉及。 **取值范围**： - topic：支持routing key的模糊匹配。 - direct：按routing key精确匹配进行消息路由。 - fanout：广播模式，消息会发送到所有绑定的队列，忽略routing key。 - headers：根据消息头（headers）中的键值对进行路由，而不是routing key。 **默认取值**： 不涉及。
+    * durable  **参数解释**： 是否持久化。 **约束限制**： 不涉及。 **取值范围**： - true：持久化。 - false：不进行持久化。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class MigrationRabbitExchangeMetadata implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vhost  vhost名称。
-    * name  交换机名称。
-    * type  交换机类型。
-    * durable  是否持久化。
+    * vhost  **参数解释**： vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 交换机名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 交换机类型。 **约束限制**： 不涉及。 **取值范围**： - topic：支持routing key的模糊匹配。 - direct：按routing key精确匹配进行消息路由。 - fanout：广播模式，消息会发送到所有绑定的队列，忽略routing key。 - headers：根据消息头（headers）中的键值对进行路由，而不是routing key。 **默认取值**： 不涉及。
+    * durable  **参数解释**： 是否持久化。 **约束限制**： 不涉及。 **取值范围**： - true：持久化。 - false：不进行持久化。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class MigrationRabbitExchangeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vhost  vhost名称。
-    * name  交换机名称。
-    * type  交换机类型。
-    * durable  是否持久化。
+    * vhost  **参数解释**： vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 交换机名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 交换机类型。 **约束限制**： 不涉及。 **取值范围**： - topic：支持routing key的模糊匹配。 - direct：按routing key精确匹配进行消息路由。 - fanout：广播模式，消息会发送到所有绑定的队列，忽略routing key。 - headers：根据消息头（headers）中的键值对进行路由，而不是routing key。 **默认取值**： 不涉及。
+    * durable  **参数解释**： 是否持久化。 **约束限制**： 不涉及。 **取值范围**： - true：持久化。 - false：不进行持久化。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class MigrationRabbitExchangeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vhost  vhost名称。
-    * name  交换机名称。
-    * type  交换机类型。
-    * durable  是否持久化。
+    * vhost  **参数解释**： vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 交换机名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 交换机类型。 **约束限制**： 不涉及。 **取值范围**： - topic：支持routing key的模糊匹配。 - direct：按routing key精确匹配进行消息路由。 - fanout：广播模式，消息会发送到所有绑定的队列，忽略routing key。 - headers：根据消息头（headers）中的键值对进行路由，而不是routing key。 **默认取值**： 不涉及。
+    * durable  **参数解释**： 是否持久化。 **约束限制**： 不涉及。 **取值范围**： - true：持久化。 - false：不进行持久化。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class MigrationRabbitExchangeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets vhost
-    *  vhost名称。
+    *  **参数解释**： vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class MigrationRabbitExchangeMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets vhost
     *
-    * @param string|null $vhost vhost名称。
+    * @param string|null $vhost **参数解释**： vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class MigrationRabbitExchangeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  交换机名称。
+    *  **参数解释**： 交换机名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class MigrationRabbitExchangeMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 交换机名称。
+    * @param string|null $name **参数解释**： 交换机名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class MigrationRabbitExchangeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  交换机类型。
+    *  **参数解释**： 交换机类型。 **约束限制**： 不涉及。 **取值范围**： - topic：支持routing key的模糊匹配。 - direct：按routing key精确匹配进行消息路由。 - fanout：广播模式，消息会发送到所有绑定的队列，忽略routing key。 - headers：根据消息头（headers）中的键值对进行路由，而不是routing key。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class MigrationRabbitExchangeMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 交换机类型。
+    * @param string|null $type **参数解释**： 交换机类型。 **约束限制**： 不涉及。 **取值范围**： - topic：支持routing key的模糊匹配。 - direct：按routing key精确匹配进行消息路由。 - fanout：广播模式，消息会发送到所有绑定的队列，忽略routing key。 - headers：根据消息头（headers）中的键值对进行路由，而不是routing key。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class MigrationRabbitExchangeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets durable
-    *  是否持久化。
+    *  **参数解释**： 是否持久化。 **约束限制**： 不涉及。 **取值范围**： - true：持久化。 - false：不进行持久化。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -291,7 +291,7 @@ class MigrationRabbitExchangeMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets durable
     *
-    * @param bool|null $durable 是否持久化。
+    * @param bool|null $durable **参数解释**： 是否持久化。 **约束限制**： 不涉及。 **取值范围**： - true：持久化。 - false：不进行持久化。 **默认取值**： 不涉及。
     *
     * @return $this
     */

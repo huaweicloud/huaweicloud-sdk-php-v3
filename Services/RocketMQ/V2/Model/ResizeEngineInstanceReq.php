@@ -20,11 +20,11 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * operType  变更类型  取值范围： [- storage：存储空间扩容，代理数量不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt) - horizontal：代理数量扩容，每个broker的存储空间不变。 [- vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)
-    * newStorageSpace  当oper_type类型是[storage或](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)horizontal时，该参数有效且必填，实例存储空间 = 代理数量 * 每个broker的存储空间。  [- 当oper_type类型是storage时，代理数量不变，每个broker存储空间最少扩容100GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)  - 当oper_type类型是horizontal时，每个broker的存储空间不变。
-    * newProductId  当oper_type类型是vertical时，该参数才有效且必填。
-    * newBrokerNum  代理数量  当oper_type参数为horizontal时，该参数必填。
-    * publicipId  实例绑定的弹性IP地址的ID。 以英文逗号隔开多个弹性IP地址的ID。 当oper_type参数为horizontal且开启了公网访问时，此参数必填。
+    * operType  **参数解释**： 变更类型。 **约束限制**： 不涉及。 **取值范围**： [- storage：存储空间扩容，节点数量不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,cmcc,ax,srg) - horizontal：[RocketMQ 5.x为实例规格扩容。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,srg)[RocketMQ 4.8.0为代理数扩容。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax) [- vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变，仅RocketMQ 4.8.0支持。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax,srg) **默认取值**： 不涉及。
+    * newStorageSpace  **参数解释**： 新存储规格 **约束限制**： 当oper_type类型是storage时，该参数有效且必填。  [- 当oper_type类型是storage时，每个broker存储空间最少扩容100GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,cmcc,ax,srg)  - 当oper_type类型是horizontal时，每个broker的存储空间不变。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * newProductId  **参数解释**： 新产品ID **约束限制**：  [- RocketMQ 5.x：当oper_type类型是horizontal时该参数有效且必填，规格变更仅限于集群实例。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,srg) [- RocketMQ 4.8.0：当oper_type类型是vertical时该参数有效且必填，规格变更仅限于集群实例。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax) **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * newBrokerNum  **参数解释**： 代理数量 **约束限制**： 当oper_type参数为horizontal时，该参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。以英文逗号隔开多个弹性IP地址的ID。 **约束限制**：  当oper_type参数为horizontal且开启了公网访问时，此参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * operType  变更类型  取值范围： [- storage：存储空间扩容，代理数量不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt) - horizontal：代理数量扩容，每个broker的存储空间不变。 [- vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)
-    * newStorageSpace  当oper_type类型是[storage或](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)horizontal时，该参数有效且必填，实例存储空间 = 代理数量 * 每个broker的存储空间。  [- 当oper_type类型是storage时，代理数量不变，每个broker存储空间最少扩容100GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)  - 当oper_type类型是horizontal时，每个broker的存储空间不变。
-    * newProductId  当oper_type类型是vertical时，该参数才有效且必填。
-    * newBrokerNum  代理数量  当oper_type参数为horizontal时，该参数必填。
-    * publicipId  实例绑定的弹性IP地址的ID。 以英文逗号隔开多个弹性IP地址的ID。 当oper_type参数为horizontal且开启了公网访问时，此参数必填。
+    * operType  **参数解释**： 变更类型。 **约束限制**： 不涉及。 **取值范围**： [- storage：存储空间扩容，节点数量不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,cmcc,ax,srg) - horizontal：[RocketMQ 5.x为实例规格扩容。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,srg)[RocketMQ 4.8.0为代理数扩容。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax) [- vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变，仅RocketMQ 4.8.0支持。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax,srg) **默认取值**： 不涉及。
+    * newStorageSpace  **参数解释**： 新存储规格 **约束限制**： 当oper_type类型是storage时，该参数有效且必填。  [- 当oper_type类型是storage时，每个broker存储空间最少扩容100GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,cmcc,ax,srg)  - 当oper_type类型是horizontal时，每个broker的存储空间不变。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * newProductId  **参数解释**： 新产品ID **约束限制**：  [- RocketMQ 5.x：当oper_type类型是horizontal时该参数有效且必填，规格变更仅限于集群实例。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,srg) [- RocketMQ 4.8.0：当oper_type类型是vertical时该参数有效且必填，规格变更仅限于集群实例。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax) **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * newBrokerNum  **参数解释**： 代理数量 **约束限制**： 当oper_type参数为horizontal时，该参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。以英文逗号隔开多个弹性IP地址的ID。 **约束限制**：  当oper_type参数为horizontal且开启了公网访问时，此参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * operType  变更类型  取值范围： [- storage：存储空间扩容，代理数量不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt) - horizontal：代理数量扩容，每个broker的存储空间不变。 [- vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)
-    * newStorageSpace  当oper_type类型是[storage或](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)horizontal时，该参数有效且必填，实例存储空间 = 代理数量 * 每个broker的存储空间。  [- 当oper_type类型是storage时，代理数量不变，每个broker存储空间最少扩容100GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)  - 当oper_type类型是horizontal时，每个broker的存储空间不变。
-    * newProductId  当oper_type类型是vertical时，该参数才有效且必填。
-    * newBrokerNum  代理数量  当oper_type参数为horizontal时，该参数必填。
-    * publicipId  实例绑定的弹性IP地址的ID。 以英文逗号隔开多个弹性IP地址的ID。 当oper_type参数为horizontal且开启了公网访问时，此参数必填。
+    * operType  **参数解释**： 变更类型。 **约束限制**： 不涉及。 **取值范围**： [- storage：存储空间扩容，节点数量不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,cmcc,ax,srg) - horizontal：[RocketMQ 5.x为实例规格扩容。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,srg)[RocketMQ 4.8.0为代理数扩容。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax) [- vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变，仅RocketMQ 4.8.0支持。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax,srg) **默认取值**： 不涉及。
+    * newStorageSpace  **参数解释**： 新存储规格 **约束限制**： 当oper_type类型是storage时，该参数有效且必填。  [- 当oper_type类型是storage时，每个broker存储空间最少扩容100GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,cmcc,ax,srg)  - 当oper_type类型是horizontal时，每个broker的存储空间不变。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * newProductId  **参数解释**： 新产品ID **约束限制**：  [- RocketMQ 5.x：当oper_type类型是horizontal时该参数有效且必填，规格变更仅限于集群实例。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,srg) [- RocketMQ 4.8.0：当oper_type类型是vertical时该参数有效且必填，规格变更仅限于集群实例。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax) **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * newBrokerNum  **参数解释**： 代理数量 **约束限制**： 当oper_type参数为horizontal时，该参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。以英文逗号隔开多个弹性IP地址的ID。 **约束限制**：  当oper_type参数为horizontal且开启了公网访问时，此参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * operType  变更类型  取值范围： [- storage：存储空间扩容，代理数量不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt) - horizontal：代理数量扩容，每个broker的存储空间不变。 [- vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)
-    * newStorageSpace  当oper_type类型是[storage或](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)horizontal时，该参数有效且必填，实例存储空间 = 代理数量 * 每个broker的存储空间。  [- 当oper_type类型是storage时，代理数量不变，每个broker存储空间最少扩容100GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)  - 当oper_type类型是horizontal时，每个broker的存储空间不变。
-    * newProductId  当oper_type类型是vertical时，该参数才有效且必填。
-    * newBrokerNum  代理数量  当oper_type参数为horizontal时，该参数必填。
-    * publicipId  实例绑定的弹性IP地址的ID。 以英文逗号隔开多个弹性IP地址的ID。 当oper_type参数为horizontal且开启了公网访问时，此参数必填。
+    * operType  **参数解释**： 变更类型。 **约束限制**： 不涉及。 **取值范围**： [- storage：存储空间扩容，节点数量不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,cmcc,ax,srg) - horizontal：[RocketMQ 5.x为实例规格扩容。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,srg)[RocketMQ 4.8.0为代理数扩容。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax) [- vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变，仅RocketMQ 4.8.0支持。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax,srg) **默认取值**： 不涉及。
+    * newStorageSpace  **参数解释**： 新存储规格 **约束限制**： 当oper_type类型是storage时，该参数有效且必填。  [- 当oper_type类型是storage时，每个broker存储空间最少扩容100GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,cmcc,ax,srg)  - 当oper_type类型是horizontal时，每个broker的存储空间不变。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * newProductId  **参数解释**： 新产品ID **约束限制**：  [- RocketMQ 5.x：当oper_type类型是horizontal时该参数有效且必填，规格变更仅限于集群实例。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,srg) [- RocketMQ 4.8.0：当oper_type类型是vertical时该参数有效且必填，规格变更仅限于集群实例。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax) **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * newBrokerNum  **参数解释**： 代理数量 **约束限制**： 当oper_type参数为horizontal时，该参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。以英文逗号隔开多个弹性IP地址的ID。 **约束限制**：  当oper_type参数为horizontal且开启了公网访问时，此参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * operType  变更类型  取值范围： [- storage：存储空间扩容，代理数量不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt) - horizontal：代理数量扩容，每个broker的存储空间不变。 [- vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)
-    * newStorageSpace  当oper_type类型是[storage或](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)horizontal时，该参数有效且必填，实例存储空间 = 代理数量 * 每个broker的存储空间。  [- 当oper_type类型是storage时，代理数量不变，每个broker存储空间最少扩容100GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)  - 当oper_type类型是horizontal时，每个broker的存储空间不变。
-    * newProductId  当oper_type类型是vertical时，该参数才有效且必填。
-    * newBrokerNum  代理数量  当oper_type参数为horizontal时，该参数必填。
-    * publicipId  实例绑定的弹性IP地址的ID。 以英文逗号隔开多个弹性IP地址的ID。 当oper_type参数为horizontal且开启了公网访问时，此参数必填。
+    * operType  **参数解释**： 变更类型。 **约束限制**： 不涉及。 **取值范围**： [- storage：存储空间扩容，节点数量不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,cmcc,ax,srg) - horizontal：[RocketMQ 5.x为实例规格扩容。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,srg)[RocketMQ 4.8.0为代理数扩容。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax) [- vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变，仅RocketMQ 4.8.0支持。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax,srg) **默认取值**： 不涉及。
+    * newStorageSpace  **参数解释**： 新存储规格 **约束限制**： 当oper_type类型是storage时，该参数有效且必填。  [- 当oper_type类型是storage时，每个broker存储空间最少扩容100GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,cmcc,ax,srg)  - 当oper_type类型是horizontal时，每个broker的存储空间不变。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * newProductId  **参数解释**： 新产品ID **约束限制**：  [- RocketMQ 5.x：当oper_type类型是horizontal时该参数有效且必填，规格变更仅限于集群实例。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,srg) [- RocketMQ 4.8.0：当oper_type类型是vertical时该参数有效且必填，规格变更仅限于集群实例。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax) **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * newBrokerNum  **参数解释**： 代理数量 **约束限制**： 当oper_type参数为horizontal时，该参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。以英文逗号隔开多个弹性IP地址的ID。 **约束限制**：  当oper_type参数为horizontal且开启了公网访问时，此参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -221,7 +221,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets operType
-    *  变更类型  取值范围： [- storage：存储空间扩容，代理数量不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt) - horizontal：代理数量扩容，每个broker的存储空间不变。 [- vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)
+    *  **参数解释**： 变更类型。 **约束限制**： 不涉及。 **取值范围**： [- storage：存储空间扩容，节点数量不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,cmcc,ax,srg) - horizontal：[RocketMQ 5.x为实例规格扩容。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,srg)[RocketMQ 4.8.0为代理数扩容。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax) [- vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变，仅RocketMQ 4.8.0支持。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax,srg) **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -233,7 +233,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets operType
     *
-    * @param string $operType 变更类型  取值范围： [- storage：存储空间扩容，代理数量不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt) - horizontal：代理数量扩容，每个broker的存储空间不变。 [- vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)
+    * @param string $operType **参数解释**： 变更类型。 **约束限制**： 不涉及。 **取值范围**： [- storage：存储空间扩容，节点数量不变。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,cmcc,ax,srg) - horizontal：[RocketMQ 5.x为实例规格扩容。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,srg)[RocketMQ 4.8.0为代理数扩容。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax) [- vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变，仅RocketMQ 4.8.0支持。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax,srg) **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets newStorageSpace
-    *  当oper_type类型是[storage或](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)horizontal时，该参数有效且必填，实例存储空间 = 代理数量 * 每个broker的存储空间。  [- 当oper_type类型是storage时，代理数量不变，每个broker存储空间最少扩容100GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)  - 当oper_type类型是horizontal时，每个broker的存储空间不变。
+    *  **参数解释**： 新存储规格 **约束限制**： 当oper_type类型是storage时，该参数有效且必填。  [- 当oper_type类型是storage时，每个broker存储空间最少扩容100GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,cmcc,ax,srg)  - 当oper_type类型是horizontal时，每个broker的存储空间不变。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -257,7 +257,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets newStorageSpace
     *
-    * @param int|null $newStorageSpace 当oper_type类型是[storage或](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)horizontal时，该参数有效且必填，实例存储空间 = 代理数量 * 每个broker的存储空间。  [- 当oper_type类型是storage时，代理数量不变，每个broker存储空间最少扩容100GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt)  - 当oper_type类型是horizontal时，每个broker的存储空间不变。
+    * @param int|null $newStorageSpace **参数解释**： 新存储规格 **约束限制**： 当oper_type类型是storage时，该参数有效且必填。  [- 当oper_type类型是storage时，每个broker存储空间最少扩容100GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,cmcc,ax,srg)  - 当oper_type类型是horizontal时，每个broker的存储空间不变。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -269,7 +269,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets newProductId
-    *  当oper_type类型是vertical时，该参数才有效且必填。
+    *  **参数解释**： 新产品ID **约束限制**：  [- RocketMQ 5.x：当oper_type类型是horizontal时该参数有效且必填，规格变更仅限于集群实例。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,srg) [- RocketMQ 4.8.0：当oper_type类型是vertical时该参数有效且必填，规格变更仅限于集群实例。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax) **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -281,7 +281,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets newProductId
     *
-    * @param string|null $newProductId 当oper_type类型是vertical时，该参数才有效且必填。
+    * @param string|null $newProductId **参数解释**： 新产品ID **约束限制**：  [- RocketMQ 5.x：当oper_type类型是horizontal时该参数有效且必填，规格变更仅限于集群实例。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,dt,srg) [- RocketMQ 4.8.0：当oper_type类型是vertical时该参数有效且必填，规格变更仅限于集群实例。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,fcs,cmcc,ax) **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -293,7 +293,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets newBrokerNum
-    *  代理数量  当oper_type参数为horizontal时，该参数必填。
+    *  **参数解释**： 代理数量 **约束限制**： 当oper_type参数为horizontal时，该参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -305,7 +305,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets newBrokerNum
     *
-    * @param int|null $newBrokerNum 代理数量  当oper_type参数为horizontal时，该参数必填。
+    * @param int|null $newBrokerNum **参数解释**： 代理数量 **约束限制**： 当oper_type参数为horizontal时，该参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -317,7 +317,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicipId
-    *  实例绑定的弹性IP地址的ID。 以英文逗号隔开多个弹性IP地址的ID。 当oper_type参数为horizontal且开启了公网访问时，此参数必填。
+    *  **参数解释**： 实例绑定的弹性IP地址的ID。以英文逗号隔开多个弹性IP地址的ID。 **约束限制**：  当oper_type参数为horizontal且开启了公网访问时，此参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -329,7 +329,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets publicipId
     *
-    * @param string|null $publicipId 实例绑定的弹性IP地址的ID。 以英文逗号隔开多个弹性IP地址的ID。 当oper_type参数为horizontal且开启了公网访问时，此参数必填。
+    * @param string|null $publicipId **参数解释**： 实例绑定的弹性IP地址的ID。以英文逗号隔开多个弹性IP地址的ID。 **约束限制**：  当oper_type参数为horizontal且开启了公网访问时，此参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

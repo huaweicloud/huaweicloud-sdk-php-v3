@@ -20,12 +20,13 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线组成，长度为4~64的字符。
-    * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
-    * securityGroupId  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
-    * enableAcl  ACL访问控制。
-    * enablePublicip  是否开启公网。
-    * publicipId  实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
+    * name  **参数解释**： 实例名称。 **约束限制**： 由英文字符开头，只能由英文字母、数字、中划线组成，长度为4~64的字符。 **取值范围**： - true：开启弹性TPS。 - false：不开启弹性TPS。 **默认取值**： 不涉及。
+    * description  **参数解释**： 实例的描述信息。 **约束限制**： 长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * enableAcl  **参数解释**： 是否开启ACL访问控制。 **约束限制**： 不涉及。 **取值范围**： - true：开启ACL访问控制。 - false：不开启ACL访问控制。 **默认取值**： 不涉及。
+    * enablePublicip  **参数解释**： 是否开启公网。 **约束限制**： 不涉及。 **取值范围**： - true：开启公网。 - false：不开启公网。 **默认取值**： 不涉及。
+    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。 **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。 如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * enterpriseProjectId  **参数解释**： 企业项目。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -35,17 +36,19 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
             'securityGroupId' => 'string',
             'enableAcl' => 'bool',
             'enablePublicip' => 'bool',
-            'publicipId' => 'string'
+            'publicipId' => 'string',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线组成，长度为4~64的字符。
-    * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
-    * securityGroupId  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
-    * enableAcl  ACL访问控制。
-    * enablePublicip  是否开启公网。
-    * publicipId  实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
+    * name  **参数解释**： 实例名称。 **约束限制**： 由英文字符开头，只能由英文字母、数字、中划线组成，长度为4~64的字符。 **取值范围**： - true：开启弹性TPS。 - false：不开启弹性TPS。 **默认取值**： 不涉及。
+    * description  **参数解释**： 实例的描述信息。 **约束限制**： 长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * enableAcl  **参数解释**： 是否开启ACL访问控制。 **约束限制**： 不涉及。 **取值范围**： - true：开启ACL访问控制。 - false：不开启ACL访问控制。 **默认取值**： 不涉及。
+    * enablePublicip  **参数解释**： 是否开启公网。 **约束限制**： 不涉及。 **取值范围**： - true：开启公网。 - false：不开启公网。 **默认取值**： 不涉及。
+    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。 **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。 如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * enterpriseProjectId  **参数解释**： 企业项目。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
         'securityGroupId' => null,
         'enableAcl' => null,
         'enablePublicip' => null,
-        'publicipId' => null
+        'publicipId' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -81,12 +85,13 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线组成，长度为4~64的字符。
-    * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
-    * securityGroupId  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
-    * enableAcl  ACL访问控制。
-    * enablePublicip  是否开启公网。
-    * publicipId  实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
+    * name  **参数解释**： 实例名称。 **约束限制**： 由英文字符开头，只能由英文字母、数字、中划线组成，长度为4~64的字符。 **取值范围**： - true：开启弹性TPS。 - false：不开启弹性TPS。 **默认取值**： 不涉及。
+    * description  **参数解释**： 实例的描述信息。 **约束限制**： 长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * enableAcl  **参数解释**： 是否开启ACL访问控制。 **约束限制**： 不涉及。 **取值范围**： - true：开启ACL访问控制。 - false：不开启ACL访问控制。 **默认取值**： 不涉及。
+    * enablePublicip  **参数解释**： 是否开启公网。 **约束限制**： 不涉及。 **取值范围**： - true：开启公网。 - false：不开启公网。 **默认取值**： 不涉及。
+    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。 **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。 如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * enterpriseProjectId  **参数解释**： 企业项目。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -96,17 +101,19 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
             'securityGroupId' => 'security_group_id',
             'enableAcl' => 'enable_acl',
             'enablePublicip' => 'enable_publicip',
-            'publicipId' => 'publicip_id'
+            'publicipId' => 'publicip_id',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线组成，长度为4~64的字符。
-    * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
-    * securityGroupId  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
-    * enableAcl  ACL访问控制。
-    * enablePublicip  是否开启公网。
-    * publicipId  实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
+    * name  **参数解释**： 实例名称。 **约束限制**： 由英文字符开头，只能由英文字母、数字、中划线组成，长度为4~64的字符。 **取值范围**： - true：开启弹性TPS。 - false：不开启弹性TPS。 **默认取值**： 不涉及。
+    * description  **参数解释**： 实例的描述信息。 **约束限制**： 长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * enableAcl  **参数解释**： 是否开启ACL访问控制。 **约束限制**： 不涉及。 **取值范围**： - true：开启ACL访问控制。 - false：不开启ACL访问控制。 **默认取值**： 不涉及。
+    * enablePublicip  **参数解释**： 是否开启公网。 **约束限制**： 不涉及。 **取值范围**： - true：开启公网。 - false：不开启公网。 **默认取值**： 不涉及。
+    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。 **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。 如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * enterpriseProjectId  **参数解释**： 企业项目。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -116,17 +123,19 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
             'securityGroupId' => 'setSecurityGroupId',
             'enableAcl' => 'setEnableAcl',
             'enablePublicip' => 'setEnablePublicip',
-            'publicipId' => 'setPublicipId'
+            'publicipId' => 'setPublicipId',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线组成，长度为4~64的字符。
-    * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
-    * securityGroupId  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
-    * enableAcl  ACL访问控制。
-    * enablePublicip  是否开启公网。
-    * publicipId  实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
+    * name  **参数解释**： 实例名称。 **约束限制**： 由英文字符开头，只能由英文字母、数字、中划线组成，长度为4~64的字符。 **取值范围**： - true：开启弹性TPS。 - false：不开启弹性TPS。 **默认取值**： 不涉及。
+    * description  **参数解释**： 实例的描述信息。 **约束限制**： 长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * enableAcl  **参数解释**： 是否开启ACL访问控制。 **约束限制**： 不涉及。 **取值范围**： - true：开启ACL访问控制。 - false：不开启ACL访问控制。 **默认取值**： 不涉及。
+    * enablePublicip  **参数解释**： 是否开启公网。 **约束限制**： 不涉及。 **取值范围**： - true：开启公网。 - false：不开启公网。 **默认取值**： 不涉及。
+    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。 **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。 如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * enterpriseProjectId  **参数解释**： 企业项目。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
             'securityGroupId' => 'getSecurityGroupId',
             'enableAcl' => 'getEnableAcl',
             'enablePublicip' => 'getEnablePublicip',
-            'publicipId' => 'getPublicipId'
+            'publicipId' => 'getPublicipId',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -203,6 +213,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
         $this->container['enableAcl'] = isset($data['enableAcl']) ? $data['enableAcl'] : null;
         $this->container['enablePublicip'] = isset($data['enablePublicip']) ? $data['enablePublicip'] : null;
         $this->container['publicipId'] = isset($data['publicipId']) ? $data['publicipId'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -229,7 +240,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  实例名称。  由英文字符开头，只能由英文字母、数字、中划线组成，长度为4~64的字符。
+    *  **参数解释**： 实例名称。 **约束限制**： 由英文字符开头，只能由英文字母、数字、中划线组成，长度为4~64的字符。 **取值范围**： - true：开启弹性TPS。 - false：不开启弹性TPS。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -241,7 +252,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 实例名称。  由英文字符开头，只能由英文字母、数字、中划线组成，长度为4~64的字符。
+    * @param string|null $name **参数解释**： 实例名称。 **约束限制**： 由英文字符开头，只能由英文字母、数字、中划线组成，长度为4~64的字符。 **取值范围**： - true：开启弹性TPS。 - false：不开启弹性TPS。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -253,7 +264,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
+    *  **参数解释**： 实例的描述信息。 **约束限制**： 长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -265,7 +276,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
+    * @param string|null $description **参数解释**： 实例的描述信息。 **约束限制**： 长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -277,7 +288,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
-    *  安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+    *  **参数解释**： 安全组ID。 获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -289,7 +300,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string|null $securityGroupId 安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+    * @param string|null $securityGroupId **参数解释**： 安全组ID。 获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -301,7 +312,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableAcl
-    *  ACL访问控制。
+    *  **参数解释**： 是否开启ACL访问控制。 **约束限制**： 不涉及。 **取值范围**： - true：开启ACL访问控制。 - false：不开启ACL访问控制。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -313,7 +324,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets enableAcl
     *
-    * @param bool|null $enableAcl ACL访问控制。
+    * @param bool|null $enableAcl **参数解释**： 是否开启ACL访问控制。 **约束限制**： 不涉及。 **取值范围**： - true：开启ACL访问控制。 - false：不开启ACL访问控制。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -325,7 +336,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets enablePublicip
-    *  是否开启公网。
+    *  **参数解释**： 是否开启公网。 **约束限制**： 不涉及。 **取值范围**： - true：开启公网。 - false：不开启公网。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -337,7 +348,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets enablePublicip
     *
-    * @param bool|null $enablePublicip 是否开启公网。
+    * @param bool|null $enablePublicip **参数解释**： 是否开启公网。 **约束限制**： 不涉及。 **取值范围**： - true：开启公网。 - false：不开启公网。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -349,7 +360,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicipId
-    *  实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
+    *  **参数解释**： 实例绑定的弹性IP地址的ID。 **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。 如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -361,13 +372,37 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets publicipId
     *
-    * @param string|null $publicipId 实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。
+    * @param string|null $publicipId **参数解释**： 实例绑定的弹性IP地址的ID。 **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。 如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
     public function setPublicipId($publicipId)
     {
         $this->container['publicipId'] = $publicipId;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  **参数解释**： 企业项目。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId **参数解释**： 企业项目。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

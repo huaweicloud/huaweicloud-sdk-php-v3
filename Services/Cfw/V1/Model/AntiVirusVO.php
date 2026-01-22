@@ -22,7 +22,7 @@ class AntiVirusVO implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * antiVirusStatus  反病毒开关状态，0表示关闭，1表示开启
     * id  防护对象id
-    * name  name
+    * name  防护对象名称
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class AntiVirusVO implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * antiVirusStatus  反病毒开关状态，0表示关闭，1表示开启
     * id  防护对象id
-    * name  name
+    * name  防护对象名称
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class AntiVirusVO implements ModelInterface, ArrayAccess
     * and the value is the original name
     * antiVirusStatus  反病毒开关状态，0表示关闭，1表示开启
     * id  防护对象id
-    * name  name
+    * name  防护对象名称
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class AntiVirusVO implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * antiVirusStatus  反病毒开关状态，0表示关闭，1表示开启
     * id  防护对象id
-    * name  name
+    * name  防护对象名称
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class AntiVirusVO implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * antiVirusStatus  反病毒开关状态，0表示关闭，1表示开启
     * id  防护对象id
-    * name  name
+    * name  防护对象名称
     *
     * @var string[]
     */
@@ -244,7 +244,7 @@ class AntiVirusVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  name
+    *  防护对象名称
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class AntiVirusVO implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name name
+    * @param string|null $name 防护对象名称
     *
     * @return $this
     */

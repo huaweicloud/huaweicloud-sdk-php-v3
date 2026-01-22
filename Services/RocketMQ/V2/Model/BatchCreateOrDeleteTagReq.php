@@ -20,8 +20,8 @@ class BatchCreateOrDeleteTagReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  操作标识（仅支持小写）： - create（创建） - delete（删除）
-    * tags  标签列表。
+    * action  **参数解释**： 操作标识。 **约束限制**： 不涉及。 **取值范围**： - create：创建。 - delete：删除。 **默认取值**： 不涉及。
+    * tags  **参数解释**： 标签列表。 **约束限制**： 一个RocketMQ实例最多添加20个标签。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class BatchCreateOrDeleteTagReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  操作标识（仅支持小写）： - create（创建） - delete（删除）
-    * tags  标签列表。
+    * action  **参数解释**： 操作标识。 **约束限制**： 不涉及。 **取值范围**： - create：创建。 - delete：删除。 **默认取值**： 不涉及。
+    * tags  **参数解释**： 标签列表。 **约束限制**： 一个RocketMQ实例最多添加20个标签。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class BatchCreateOrDeleteTagReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  操作标识（仅支持小写）： - create（创建） - delete（删除）
-    * tags  标签列表。
+    * action  **参数解释**： 操作标识。 **约束限制**： 不涉及。 **取值范围**： - create：创建。 - delete：删除。 **默认取值**： 不涉及。
+    * tags  **参数解释**： 标签列表。 **约束限制**： 一个RocketMQ实例最多添加20个标签。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class BatchCreateOrDeleteTagReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  操作标识（仅支持小写）： - create（创建） - delete（删除）
-    * tags  标签列表。
+    * action  **参数解释**： 操作标识。 **约束限制**： 不涉及。 **取值范围**： - create：创建。 - delete：删除。 **默认取值**： 不涉及。
+    * tags  **参数解释**： 标签列表。 **约束限制**： 一个RocketMQ实例最多添加20个标签。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class BatchCreateOrDeleteTagReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  操作标识（仅支持小写）： - create（创建） - delete（删除）
-    * tags  标签列表。
+    * action  **参数解释**： 操作标识。 **约束限制**： 不涉及。 **取值范围**： - create：创建。 - delete：删除。 **默认取值**： 不涉及。
+    * tags  **参数解释**： 标签列表。 **约束限制**： 一个RocketMQ实例最多添加20个标签。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -184,6 +184,9 @@ class BatchCreateOrDeleteTagReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['action'] === null) {
+            $invalidProperties[] = "'action' can't be null";
+        }
             $allowedValues = $this->getActionAllowableValues();
                 if (!is_null($this->container['action']) && !in_array($this->container['action'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -192,6 +195,9 @@ class BatchCreateOrDeleteTagReq implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['tags'] === null) {
+            $invalidProperties[] = "'tags' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -208,9 +214,9 @@ class BatchCreateOrDeleteTagReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  操作标识（仅支持小写）： - create（创建） - delete（删除）
+    *  **参数解释**： 操作标识。 **约束限制**： 不涉及。 **取值范围**： - create：创建。 - delete：删除。 **默认取值**： 不涉及。
     *
-    * @return string|null
+    * @return string
     */
     public function getAction()
     {
@@ -220,7 +226,7 @@ class BatchCreateOrDeleteTagReq implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 操作标识（仅支持小写）： - create（创建） - delete（删除）
+    * @param string $action **参数解释**： 操作标识。 **约束限制**： 不涉及。 **取值范围**： - create：创建。 - delete：删除。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -232,9 +238,9 @@ class BatchCreateOrDeleteTagReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签列表。
+    *  **参数解释**： 标签列表。 **约束限制**： 一个RocketMQ实例最多添加20个标签。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\TagEntity[]|null
+    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\TagEntity[]
     */
     public function getTags()
     {
@@ -244,7 +250,7 @@ class BatchCreateOrDeleteTagReq implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\TagEntity[]|null $tags 标签列表。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\TagEntity[] $tags **参数解释**： 标签列表。 **约束限制**： 一个RocketMQ实例最多添加20个标签。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

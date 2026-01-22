@@ -20,8 +20,8 @@ class ResizeInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  消息引擎的类型。支持的类型为rocketmq。
-    * instanceId  实例ID。
+    * engine  **参数解释**： 消息引擎的类型。支持的类型为rocketmq。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -34,8 +34,8 @@ class ResizeInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  消息引擎的类型。支持的类型为rocketmq。
-    * instanceId  实例ID。
+    * engine  **参数解释**： 消息引擎的类型。支持的类型为rocketmq。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -69,8 +69,8 @@ class ResizeInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  消息引擎的类型。支持的类型为rocketmq。
-    * instanceId  实例ID。
+    * engine  **参数解释**： 消息引擎的类型。支持的类型为rocketmq。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -83,8 +83,8 @@ class ResizeInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  消息引擎的类型。支持的类型为rocketmq。
-    * instanceId  实例ID。
+    * engine  **参数解释**： 消息引擎的类型。支持的类型为rocketmq。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -97,8 +97,8 @@ class ResizeInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  消息引擎的类型。支持的类型为rocketmq。
-    * instanceId  实例ID。
+    * engine  **参数解释**： 消息引擎的类型。支持的类型为rocketmq。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -202,7 +202,7 @@ class ResizeInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  消息引擎的类型。支持的类型为rocketmq。
+    *  **参数解释**： 消息引擎的类型。支持的类型为rocketmq。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -214,7 +214,7 @@ class ResizeInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string $engine 消息引擎的类型。支持的类型为rocketmq。
+    * @param string $engine **参数解释**： 消息引擎的类型。支持的类型为rocketmq。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -226,7 +226,7 @@ class ResizeInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -238,7 +238,7 @@ class ResizeInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string $instanceId **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

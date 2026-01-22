@@ -21,7 +21,7 @@ class UserGroupPerms implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * perm  **参数解释**： 消费组权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
+    * perm  **参数解释**： 消费组权限。 **约束限制**： 不涉及。 **取值范围**： - SUB：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class UserGroupPerms implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * perm  **参数解释**： 消费组权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
+    * perm  **参数解释**： 消费组权限。 **约束限制**： 不涉及。 **取值范围**： - SUB：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class UserGroupPerms implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * perm  **参数解释**： 消费组权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
+    * perm  **参数解释**： 消费组权限。 **约束限制**： 不涉及。 **取值范围**： - SUB：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class UserGroupPerms implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * perm  **参数解释**： 消费组权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
+    * perm  **参数解释**： 消费组权限。 **约束限制**： 不涉及。 **取值范围**： - SUB：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class UserGroupPerms implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * perm  **参数解释**： 消费组权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
+    * perm  **参数解释**： 消费组权限。 **约束限制**： 不涉及。 **取值范围**： - SUB：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -232,7 +232,7 @@ class UserGroupPerms implements ModelInterface, ArrayAccess
 
     /**
     * Gets perm
-    *  **参数解释**： 消费组权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
+    *  **参数解释**： 消费组权限。 **约束限制**： 不涉及。 **取值范围**： - SUB：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class UserGroupPerms implements ModelInterface, ArrayAccess
     /**
     * Sets perm
     *
-    * @param string|null $perm **参数解释**： 消费组权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
+    * @param string|null $perm **参数解释**： 消费组权限。 **约束限制**： 不涉及。 **取值范围**： - SUB：拥有订阅权限。 - DENY：无权限。  **默认取值**： 不涉及。
     *
     * @return $this
     */

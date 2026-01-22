@@ -21,7 +21,7 @@ class ListBindingsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID
-    * vhost  Vhost名称
+    * vhost  vhost名称，名称中包含/时，需要将/替换为__F_SLASH__，否则会调用失败。例如：Vhost名称为/test，入参值为__F_SLASH__test。
     * exchange  Exchange名称
     *
     * @var string[]
@@ -35,7 +35,7 @@ class ListBindingsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID
-    * vhost  Vhost名称
+    * vhost  vhost名称，名称中包含/时，需要将/替换为__F_SLASH__，否则会调用失败。例如：Vhost名称为/test，入参值为__F_SLASH__test。
     * exchange  Exchange名称
     *
     * @var string[]
@@ -70,7 +70,7 @@ class ListBindingsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID
-    * vhost  Vhost名称
+    * vhost  vhost名称，名称中包含/时，需要将/替换为__F_SLASH__，否则会调用失败。例如：Vhost名称为/test，入参值为__F_SLASH__test。
     * exchange  Exchange名称
     *
     * @var string[]
@@ -84,7 +84,7 @@ class ListBindingsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID
-    * vhost  Vhost名称
+    * vhost  vhost名称，名称中包含/时，需要将/替换为__F_SLASH__，否则会调用失败。例如：Vhost名称为/test，入参值为__F_SLASH__test。
     * exchange  Exchange名称
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ListBindingsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID
-    * vhost  Vhost名称
+    * vhost  vhost名称，名称中包含/时，需要将/替换为__F_SLASH__，否则会调用失败。例如：Vhost名称为/test，入参值为__F_SLASH__test。
     * exchange  Exchange名称
     *
     * @var string[]
@@ -229,7 +229,7 @@ class ListBindingsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets vhost
-    *  Vhost名称
+    *  vhost名称，名称中包含/时，需要将/替换为__F_SLASH__，否则会调用失败。例如：Vhost名称为/test，入参值为__F_SLASH__test。
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class ListBindingsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets vhost
     *
-    * @param string $vhost Vhost名称
+    * @param string $vhost vhost名称，名称中包含/时，需要将/替换为__F_SLASH__，否则会调用失败。例如：Vhost名称为/test，入参值为__F_SLASH__test。
     *
     * @return $this
     */

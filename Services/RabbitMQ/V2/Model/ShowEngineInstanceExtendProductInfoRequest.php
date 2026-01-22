@@ -22,7 +22,7 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     * Array of property to type mappings. Used for (de)serialization
     * engine  消息引擎的类型。支持的类型为rabbitmq。
     * instanceId  实例ID。
-    * type  产品的类型。   - advanced：专享版   - platinum：铂金版   - dec：专属云版   - exp：体验版
+    * type  **参数解释**： 产品的类型。 **约束限制**： 不涉及。 **取值范围**： advanced：专享版 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     * Array of property to format mappings. Used for (de)serialization
     * engine  消息引擎的类型。支持的类型为rabbitmq。
     * instanceId  实例ID。
-    * type  产品的类型。   - advanced：专享版   - platinum：铂金版   - dec：专属云版   - exp：体验版
+    * type  **参数解释**： 产品的类型。 **约束限制**： 不涉及。 **取值范围**： advanced：专享版 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     * and the value is the original name
     * engine  消息引擎的类型。支持的类型为rabbitmq。
     * instanceId  实例ID。
-    * type  产品的类型。   - advanced：专享版   - platinum：铂金版   - dec：专属云版   - exp：体验版
+    * type  **参数解释**： 产品的类型。 **约束限制**： 不涉及。 **取值范围**： advanced：专享版 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     * Array of attributes to setter functions (for deserialization of responses)
     * engine  消息引擎的类型。支持的类型为rabbitmq。
     * instanceId  实例ID。
-    * type  产品的类型。   - advanced：专享版   - platinum：铂金版   - dec：专属云版   - exp：体验版
+    * type  **参数解释**： 产品的类型。 **约束限制**： 不涉及。 **取值范围**： advanced：专享版 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     * Array of attributes to getter functions (for serialization of requests)
     * engine  消息引擎的类型。支持的类型为rabbitmq。
     * instanceId  实例ID。
-    * type  产品的类型。   - advanced：专享版   - platinum：铂金版   - dec：专属云版   - exp：体验版
+    * type  **参数解释**： 产品的类型。 **约束限制**： 不涉及。 **取值范围**： advanced：专享版 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -150,10 +150,6 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
         return self::$openAPIModelName;
     }
     const ENGINE_RABBITMQ = 'rabbitmq';
-    const TYPE_ADVANCED = 'advanced';
-    const TYPE_PLATINUM = 'platinum';
-    const TYPE_DEC = 'dec';
-    const TYPE_EXP = 'exp';
     
 
     /**
@@ -165,21 +161,6 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     {
         return [
             self::ENGINE_RABBITMQ,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_ADVANCED,
-            self::TYPE_PLATINUM,
-            self::TYPE_DEC,
-            self::TYPE_EXP,
         ];
     }
 
@@ -226,14 +207,6 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
-            $allowedValues = $this->getTypeAllowableValues();
-                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -298,7 +271,7 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
 
     /**
     * Gets type
-    *  产品的类型。   - advanced：专享版   - platinum：铂金版   - dec：专属云版   - exp：体验版
+    *  **参数解释**： 产品的类型。 **约束限制**： 不涉及。 **取值范围**： advanced：专享版 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -310,7 +283,7 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     /**
     * Sets type
     *
-    * @param string|null $type 产品的类型。   - advanced：专享版   - platinum：铂金版   - dec：专属云版   - exp：体验版
+    * @param string|null $type **参数解释**： 产品的类型。 **约束限制**： 不涉及。 **取值范围**： advanced：专享版 **默认取值**： 不涉及。
     *
     * @return $this
     */

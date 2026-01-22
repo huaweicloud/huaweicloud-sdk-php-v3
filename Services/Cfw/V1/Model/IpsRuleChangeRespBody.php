@@ -23,7 +23,7 @@ class IpsRuleChangeRespBody implements ModelInterface, ArrayAccess
     * errorCode  错误代码
     * errorMsg  错误信息
     * groupId  分组id
-    * id  防火墙id
+    * id  防火墙ID
     * ipsIds  ips的id列表
     * result  修改结果
     *
@@ -43,7 +43,7 @@ class IpsRuleChangeRespBody implements ModelInterface, ArrayAccess
     * errorCode  错误代码
     * errorMsg  错误信息
     * groupId  分组id
-    * id  防火墙id
+    * id  防火墙ID
     * ipsIds  ips的id列表
     * result  修改结果
     *
@@ -84,7 +84,7 @@ class IpsRuleChangeRespBody implements ModelInterface, ArrayAccess
     * errorCode  错误代码
     * errorMsg  错误信息
     * groupId  分组id
-    * id  防火墙id
+    * id  防火墙ID
     * ipsIds  ips的id列表
     * result  修改结果
     *
@@ -104,7 +104,7 @@ class IpsRuleChangeRespBody implements ModelInterface, ArrayAccess
     * errorCode  错误代码
     * errorMsg  错误信息
     * groupId  分组id
-    * id  防火墙id
+    * id  防火墙ID
     * ipsIds  ips的id列表
     * result  修改结果
     *
@@ -124,7 +124,7 @@ class IpsRuleChangeRespBody implements ModelInterface, ArrayAccess
     * errorCode  错误代码
     * errorMsg  错误信息
     * groupId  分组id
-    * id  防火墙id
+    * id  防火墙ID
     * ipsIds  ips的id列表
     * result  修改结果
     *
@@ -301,7 +301,7 @@ class IpsRuleChangeRespBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  防火墙id
+    *  防火墙ID
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class IpsRuleChangeRespBody implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 防火墙id
+    * @param string|null $id 防火墙ID
     *
     * @return $this
     */

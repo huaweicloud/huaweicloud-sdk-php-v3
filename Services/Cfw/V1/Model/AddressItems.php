@@ -21,7 +21,7 @@ class AddressItems implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * items  地址组成员id列表
-    * coveredIp  覆盖ip列表
+    * coveredIp  覆盖IP列表
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class AddressItems implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * items  地址组成员id列表
-    * coveredIp  覆盖ip列表
+    * coveredIp  覆盖IP列表
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class AddressItems implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * items  地址组成员id列表
-    * coveredIp  覆盖ip列表
+    * coveredIp  覆盖IP列表
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class AddressItems implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * items  地址组成员id列表
-    * coveredIp  覆盖ip列表
+    * coveredIp  覆盖IP列表
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class AddressItems implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * items  地址组成员id列表
-    * coveredIp  覆盖ip列表
+    * coveredIp  覆盖IP列表
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class AddressItems implements ModelInterface, ArrayAccess
 
     /**
     * Gets coveredIp
-    *  覆盖ip列表
+    *  覆盖IP列表
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\CoveredIPVO[]|null
     */
@@ -221,7 +221,7 @@ class AddressItems implements ModelInterface, ArrayAccess
     /**
     * Sets coveredIp
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\CoveredIPVO[]|null $coveredIp 覆盖ip列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\CoveredIPVO[]|null $coveredIp 覆盖IP列表
     *
     * @return $this
     */

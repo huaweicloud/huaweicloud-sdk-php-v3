@@ -24,13 +24,15 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableUserDefObs  是否支持使用用户的obs桶
     * enableEnterprise  是否支持支持企业项目
     * cerAvailable  是否支持SWR企业版功能
+    * enableObsEncryptUserKmsKey  是否支持使用已有KSM密钥ID创建OBS桶
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'enableUserDefObs' => 'bool',
             'enableEnterprise' => 'bool',
-            'cerAvailable' => 'bool'
+            'cerAvailable' => 'bool',
+            'enableObsEncryptUserKmsKey' => 'bool'
     ];
 
     /**
@@ -38,13 +40,15 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableUserDefObs  是否支持使用用户的obs桶
     * enableEnterprise  是否支持支持企业项目
     * cerAvailable  是否支持SWR企业版功能
+    * enableObsEncryptUserKmsKey  是否支持使用已有KSM密钥ID创建OBS桶
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'enableUserDefObs' => null,
         'enableEnterprise' => null,
-        'cerAvailable' => null
+        'cerAvailable' => null,
+        'enableObsEncryptUserKmsKey' => null
     ];
 
     /**
@@ -73,13 +77,15 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableUserDefObs  是否支持使用用户的obs桶
     * enableEnterprise  是否支持支持企业项目
     * cerAvailable  是否支持SWR企业版功能
+    * enableObsEncryptUserKmsKey  是否支持使用已有KSM密钥ID创建OBS桶
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'enableUserDefObs' => 'enableUserDefObs',
             'enableEnterprise' => 'enableEnterprise',
-            'cerAvailable' => 'cerAvailable'
+            'cerAvailable' => 'cerAvailable',
+            'enableObsEncryptUserKmsKey' => 'enableOBSEncryptUserKmsKey'
     ];
 
     /**
@@ -87,13 +93,15 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableUserDefObs  是否支持使用用户的obs桶
     * enableEnterprise  是否支持支持企业项目
     * cerAvailable  是否支持SWR企业版功能
+    * enableObsEncryptUserKmsKey  是否支持使用已有KSM密钥ID创建OBS桶
     *
     * @var string[]
     */
     protected static $setters = [
             'enableUserDefObs' => 'setEnableUserDefObs',
             'enableEnterprise' => 'setEnableEnterprise',
-            'cerAvailable' => 'setCerAvailable'
+            'cerAvailable' => 'setCerAvailable',
+            'enableObsEncryptUserKmsKey' => 'setEnableObsEncryptUserKmsKey'
     ];
 
     /**
@@ -101,13 +109,15 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableUserDefObs  是否支持使用用户的obs桶
     * enableEnterprise  是否支持支持企业项目
     * cerAvailable  是否支持SWR企业版功能
+    * enableObsEncryptUserKmsKey  是否支持使用已有KSM密钥ID创建OBS桶
     *
     * @var string[]
     */
     protected static $getters = [
             'enableUserDefObs' => 'getEnableUserDefObs',
             'enableEnterprise' => 'getEnableEnterprise',
-            'cerAvailable' => 'getCerAvailable'
+            'cerAvailable' => 'getCerAvailable',
+            'enableObsEncryptUserKmsKey' => 'getEnableObsEncryptUserKmsKey'
     ];
 
     /**
@@ -171,6 +181,7 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
         $this->container['enableUserDefObs'] = isset($data['enableUserDefObs']) ? $data['enableUserDefObs'] : null;
         $this->container['enableEnterprise'] = isset($data['enableEnterprise']) ? $data['enableEnterprise'] : null;
         $this->container['cerAvailable'] = isset($data['cerAvailable']) ? $data['cerAvailable'] : null;
+        $this->container['enableObsEncryptUserKmsKey'] = isset($data['enableObsEncryptUserKmsKey']) ? $data['enableObsEncryptUserKmsKey'] : null;
     }
 
     /**
@@ -264,6 +275,30 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
     public function setCerAvailable($cerAvailable)
     {
         $this->container['cerAvailable'] = $cerAvailable;
+        return $this;
+    }
+
+    /**
+    * Gets enableObsEncryptUserKmsKey
+    *  是否支持使用已有KSM密钥ID创建OBS桶
+    *
+    * @return bool|null
+    */
+    public function getEnableObsEncryptUserKmsKey()
+    {
+        return $this->container['enableObsEncryptUserKmsKey'];
+    }
+
+    /**
+    * Sets enableObsEncryptUserKmsKey
+    *
+    * @param bool|null $enableObsEncryptUserKmsKey 是否支持使用已有KSM密钥ID创建OBS桶
+    *
+    * @return $this
+    */
+    public function setEnableObsEncryptUserKmsKey($enableObsEncryptUserKmsKey)
+    {
+        $this->container['enableObsEncryptUserKmsKey'] = $enableObsEncryptUserKmsKey;
         return $this;
     }
 

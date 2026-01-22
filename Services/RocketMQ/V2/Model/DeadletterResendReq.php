@@ -20,8 +20,8 @@ class DeadletterResendReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topic  Topic名称。
-    * msgIdList  消息列表。
+    * topic  **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * msgIdList  **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DeadletterResendReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topic  Topic名称。
-    * msgIdList  消息列表。
+    * topic  **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * msgIdList  **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DeadletterResendReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topic  Topic名称。
-    * msgIdList  消息列表。
+    * topic  **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * msgIdList  **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DeadletterResendReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topic  Topic名称。
-    * msgIdList  消息列表。
+    * topic  **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * msgIdList  **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DeadletterResendReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topic  Topic名称。
-    * msgIdList  消息列表。
+    * topic  **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * msgIdList  **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class DeadletterResendReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  Topic名称。
+    *  **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class DeadletterResendReq implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic Topic名称。
+    * @param string|null $topic **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class DeadletterResendReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets msgIdList
-    *  消息列表。
+    *  **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return string[]|null
     */
@@ -221,7 +221,7 @@ class DeadletterResendReq implements ModelInterface, ArrayAccess
     /**
     * Sets msgIdList
     *
-    * @param string[]|null $msgIdList 消息列表。
+    * @param string[]|null $msgIdList **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */

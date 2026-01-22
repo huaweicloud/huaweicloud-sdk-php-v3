@@ -20,7 +20,7 @@ class BatchDeleteInstanceRespResults implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * result  操作结果。
+    * result  **参数解释**： 操作结果。 **约束限制**： 不涉及。 **取值范围**： - success - failed **默认取值**： 不涉及。
     * instance  实例ID。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class BatchDeleteInstanceRespResults implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * result  操作结果。
+    * result  **参数解释**： 操作结果。 **约束限制**： 不涉及。 **取值范围**： - success - failed **默认取值**： 不涉及。
     * instance  实例ID。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class BatchDeleteInstanceRespResults implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * result  操作结果。
+    * result  **参数解释**： 操作结果。 **约束限制**： 不涉及。 **取值范围**： - success - failed **默认取值**： 不涉及。
     * instance  实例ID。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class BatchDeleteInstanceRespResults implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * result  操作结果。
+    * result  **参数解释**： 操作结果。 **约束限制**： 不涉及。 **取值范围**： - success - failed **默认取值**： 不涉及。
     * instance  实例ID。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class BatchDeleteInstanceRespResults implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * result  操作结果。
+    * result  **参数解释**： 操作结果。 **约束限制**： 不涉及。 **取值范围**： - success - failed **默认取值**： 不涉及。
     * instance  实例ID。
     *
     * @var string[]
@@ -208,7 +208,7 @@ class BatchDeleteInstanceRespResults implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  操作结果。
+    *  **参数解释**： 操作结果。 **约束限制**： 不涉及。 **取值范围**： - success - failed **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -220,7 +220,7 @@ class BatchDeleteInstanceRespResults implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param string|null $result 操作结果。
+    * @param string|null $result **参数解释**： 操作结果。 **约束限制**： 不涉及。 **取值范围**： - success - failed **默认取值**： 不涉及。
     *
     * @return $this
     */

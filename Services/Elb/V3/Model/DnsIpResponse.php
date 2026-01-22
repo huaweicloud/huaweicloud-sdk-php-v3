@@ -24,7 +24,7 @@ class DnsIpResponse implements ModelInterface, ArrayAccess
     * enable  **参数解释**：ip是否加入了域名解析。  **取值范围**： true：已加入域名解析。 false：未加入域名解析。
     * ipAddress  **参数解释**：ip地址。可以是ipv4地址也可以是ipv6地址。  **约束限制**：必须是负载均衡器的私网地址或者公网地址。
     * type  **参数解释**：地址类型。  **取值范围**： vip：私网ip。 eip：公网ip。
-    * domainName  **参数解释**：ip对应的域名。  **约束限制**： - 如果ip为私网类型，则这里为负载均衡实例的私网域名 - 如果ip为公网类型，则这里为负载均衡实例的公网域名
+    * domainName  **参数解释**：ip对应的域名。  **约束限制**： - 如果ip为私网类型，则这里为负载均衡实例的私网域名。 - 如果ip为公网类型，则这里为负载均衡实例的公网域名。
     * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
@@ -46,7 +46,7 @@ class DnsIpResponse implements ModelInterface, ArrayAccess
     * enable  **参数解释**：ip是否加入了域名解析。  **取值范围**： true：已加入域名解析。 false：未加入域名解析。
     * ipAddress  **参数解释**：ip地址。可以是ipv4地址也可以是ipv6地址。  **约束限制**：必须是负载均衡器的私网地址或者公网地址。
     * type  **参数解释**：地址类型。  **取值范围**： vip：私网ip。 eip：公网ip。
-    * domainName  **参数解释**：ip对应的域名。  **约束限制**： - 如果ip为私网类型，则这里为负载均衡实例的私网域名 - 如果ip为公网类型，则这里为负载均衡实例的公网域名
+    * domainName  **参数解释**：ip对应的域名。  **约束限制**： - 如果ip为私网类型，则这里为负载均衡实例的私网域名。 - 如果ip为公网类型，则这里为负载均衡实例的公网域名。
     * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
@@ -89,7 +89,7 @@ class DnsIpResponse implements ModelInterface, ArrayAccess
     * enable  **参数解释**：ip是否加入了域名解析。  **取值范围**： true：已加入域名解析。 false：未加入域名解析。
     * ipAddress  **参数解释**：ip地址。可以是ipv4地址也可以是ipv6地址。  **约束限制**：必须是负载均衡器的私网地址或者公网地址。
     * type  **参数解释**：地址类型。  **取值范围**： vip：私网ip。 eip：公网ip。
-    * domainName  **参数解释**：ip对应的域名。  **约束限制**： - 如果ip为私网类型，则这里为负载均衡实例的私网域名 - 如果ip为公网类型，则这里为负载均衡实例的公网域名
+    * domainName  **参数解释**：ip对应的域名。  **约束限制**： - 如果ip为私网类型，则这里为负载均衡实例的私网域名。 - 如果ip为公网类型，则这里为负载均衡实例的公网域名。
     * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
@@ -111,7 +111,7 @@ class DnsIpResponse implements ModelInterface, ArrayAccess
     * enable  **参数解释**：ip是否加入了域名解析。  **取值范围**： true：已加入域名解析。 false：未加入域名解析。
     * ipAddress  **参数解释**：ip地址。可以是ipv4地址也可以是ipv6地址。  **约束限制**：必须是负载均衡器的私网地址或者公网地址。
     * type  **参数解释**：地址类型。  **取值范围**： vip：私网ip。 eip：公网ip。
-    * domainName  **参数解释**：ip对应的域名。  **约束限制**： - 如果ip为私网类型，则这里为负载均衡实例的私网域名 - 如果ip为公网类型，则这里为负载均衡实例的公网域名
+    * domainName  **参数解释**：ip对应的域名。  **约束限制**： - 如果ip为私网类型，则这里为负载均衡实例的私网域名。 - 如果ip为公网类型，则这里为负载均衡实例的公网域名。
     * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
@@ -133,7 +133,7 @@ class DnsIpResponse implements ModelInterface, ArrayAccess
     * enable  **参数解释**：ip是否加入了域名解析。  **取值范围**： true：已加入域名解析。 false：未加入域名解析。
     * ipAddress  **参数解释**：ip地址。可以是ipv4地址也可以是ipv6地址。  **约束限制**：必须是负载均衡器的私网地址或者公网地址。
     * type  **参数解释**：地址类型。  **取值范围**： vip：私网ip。 eip：公网ip。
-    * domainName  **参数解释**：ip对应的域名。  **约束限制**： - 如果ip为私网类型，则这里为负载均衡实例的私网域名 - 如果ip为公网类型，则这里为负载均衡实例的公网域名
+    * domainName  **参数解释**：ip对应的域名。  **约束限制**： - 如果ip为私网类型，则这里为负载均衡实例的私网域名。 - 如果ip为公网类型，则这里为负载均衡实例的公网域名。
     * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
     *
@@ -336,7 +336,7 @@ class DnsIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainName
-    *  **参数解释**：ip对应的域名。  **约束限制**： - 如果ip为私网类型，则这里为负载均衡实例的私网域名 - 如果ip为公网类型，则这里为负载均衡实例的公网域名
+    *  **参数解释**：ip对应的域名。  **约束限制**： - 如果ip为私网类型，则这里为负载均衡实例的私网域名。 - 如果ip为公网类型，则这里为负载均衡实例的公网域名。
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class DnsIpResponse implements ModelInterface, ArrayAccess
     /**
     * Sets domainName
     *
-    * @param string|null $domainName **参数解释**：ip对应的域名。  **约束限制**： - 如果ip为私网类型，则这里为负载均衡实例的私网域名 - 如果ip为公网类型，则这里为负载均衡实例的公网域名
+    * @param string|null $domainName **参数解释**：ip对应的域名。  **约束限制**： - 如果ip为私网类型，则这里为负载均衡实例的私网域名。 - 如果ip为公网类型，则这里为负载均衡实例的公网域名。
     *
     * @return $this
     */

@@ -21,20 +21,20 @@ class ListAvailableZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * regionId  **参数解释**： 区域ID。 **取值范围**： 不涉及。
-    * availableZones  **参数解释**： 可用区数组。
+    * regionId  **参数解释**： 区域ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availableZones  **参数解释**： 可用区数组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'regionId' => 'string',
-            'availableZones' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\ListAvailableZonesRespAvailableZones[]'
+            'availableZones' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\ListAvailableZonesElements[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * regionId  **参数解释**： 区域ID。 **取值范围**： 不涉及。
-    * availableZones  **参数解释**： 可用区数组。
+    * regionId  **参数解释**： 区域ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availableZones  **参数解释**： 可用区数组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListAvailableZonesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * regionId  **参数解释**： 区域ID。 **取值范围**： 不涉及。
-    * availableZones  **参数解释**： 可用区数组。
+    * regionId  **参数解释**： 区域ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availableZones  **参数解释**： 可用区数组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListAvailableZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * regionId  **参数解释**： 区域ID。 **取值范围**： 不涉及。
-    * availableZones  **参数解释**： 可用区数组。
+    * regionId  **参数解释**： 区域ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availableZones  **参数解释**： 可用区数组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListAvailableZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * regionId  **参数解释**： 区域ID。 **取值范围**： 不涉及。
-    * availableZones  **参数解释**： 可用区数组。
+    * regionId  **参数解释**： 区域ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availableZones  **参数解释**： 可用区数组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListAvailableZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionId
-    *  **参数解释**： 区域ID。 **取值范围**： 不涉及。
+    *  **参数解释**： 区域ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class ListAvailableZonesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets regionId
     *
-    * @param string|null $regionId **参数解释**： 区域ID。 **取值范围**： 不涉及。
+    * @param string|null $regionId **参数解释**： 区域ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -210,9 +210,9 @@ class ListAvailableZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableZones
-    *  **参数解释**： 可用区数组。
+    *  **参数解释**： 可用区数组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\ListAvailableZonesRespAvailableZones[]|null
+    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\ListAvailableZonesElements[]|null
     */
     public function getAvailableZones()
     {
@@ -222,7 +222,7 @@ class ListAvailableZonesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets availableZones
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ListAvailableZonesRespAvailableZones[]|null $availableZones **参数解释**： 可用区数组。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ListAvailableZonesElements[]|null $availableZones **参数解释**： 可用区数组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

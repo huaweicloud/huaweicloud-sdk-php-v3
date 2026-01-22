@@ -21,7 +21,7 @@ class JobEntities implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resourceId  **参数解释**：子任务关联的资源ID。  **取值范围**：不涉及
-    * resourceType  **参数解释**：子任务关联的资源类型。  **取值范围**：不涉及
+    * resourceType  **参数解释**：子任务关联的资源类型。  **取值范围**： - loadbalancer：弹性负载均衡器。 - listener：监听器。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class JobEntities implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resourceId  **参数解释**：子任务关联的资源ID。  **取值范围**：不涉及
-    * resourceType  **参数解释**：子任务关联的资源类型。  **取值范围**：不涉及
+    * resourceType  **参数解释**：子任务关联的资源类型。  **取值范围**： - loadbalancer：弹性负载均衡器。 - listener：监听器。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class JobEntities implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resourceId  **参数解释**：子任务关联的资源ID。  **取值范围**：不涉及
-    * resourceType  **参数解释**：子任务关联的资源类型。  **取值范围**：不涉及
+    * resourceType  **参数解释**：子任务关联的资源类型。  **取值范围**： - loadbalancer：弹性负载均衡器。 - listener：监听器。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class JobEntities implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceId  **参数解释**：子任务关联的资源ID。  **取值范围**：不涉及
-    * resourceType  **参数解释**：子任务关联的资源类型。  **取值范围**：不涉及
+    * resourceType  **参数解释**：子任务关联的资源类型。  **取值范围**： - loadbalancer：弹性负载均衡器。 - listener：监听器。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class JobEntities implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resourceId  **参数解释**：子任务关联的资源ID。  **取值范围**：不涉及
-    * resourceType  **参数解释**：子任务关联的资源类型。  **取值范围**：不涉及
+    * resourceType  **参数解释**：子任务关联的资源类型。  **取值范围**： - loadbalancer：弹性负载均衡器。 - listener：监听器。
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  **参数解释**：子任务关联的资源类型。  **取值范围**：不涉及
+    *  **参数解释**：子任务关联的资源类型。  **取值范围**： - loadbalancer：弹性负载均衡器。 - listener：监听器。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class JobEntities implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string|null $resourceType **参数解释**：子任务关联的资源类型。  **取值范围**：不涉及
+    * @param string|null $resourceType **参数解释**：子任务关联的资源类型。  **取值范围**： - loadbalancer：弹性负载均衡器。 - listener：监听器。
     *
     * @return $this
     */

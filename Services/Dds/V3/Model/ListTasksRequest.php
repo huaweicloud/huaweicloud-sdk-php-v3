@@ -23,6 +23,7 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
     * startTime  查询开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始，Z指时区偏移量
     * endTime  查询结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”，且大于查询开始时间，时间跨度不超过30天。 其中，T指某个时间的开始，Z指时区偏移量。
     * status  任务状态： 取值为“Running”为执行中； 取值为“Completed”为完成； 取值为“Failed” 为失败。
+    * id  任务ID。
     * name  任务名称。对应取值如下： - \"CreateMongoDB\"：创建集群实例 - \"CreateMongoDBReplica\"：创建副本集实例 - \"CreateMongoDBReplicaSingle\"：创建单节点实例 - \"EnlargeMongoDBVolume\"：磁盘扩容 - \"ResizeMongoDBInstance\"：社区版实例规格变更 - \"ResizeDfvMongoDBInstance\"：社区增强版实例规格变更 - \"EnlargeMongoDBGroup\"：添加节点 - \"ReplicaSetEnlargeNode\"：副本集添加备节点 - \"AddReadonlyNode\"：添加只读节点 - \"RestartInstance\"：重启集群实例 - \"RestartGroup\"：重启集群节点组 - \"RestartNode\"：重启集群节点 - \"RestartReplicaSetInstance\"：重启副本集实例 - \"RestartReplicaSingleInstance\"：重启单节点实例 - \"SwitchPrimary\"：主备切换 - \"ModifyIp\"：修改内网地址 - \"ModifySecurityGroup\"：修改安全组 - \"ModifyPort\"：修改数据库端口 - \"BindPublicIP\"：绑定弹性IP - \"UnbindPublicIP\"：解绑弹性IP - \"SwitchInstanceSSL\"：切换SSL - \"AzMigrate\"：迁移可用区 - \"CreateIp\"：显示shard/config IP - \"ModifyOpLogSize\"：修改oplog大小 - \"RestoreMongoDB\"：集群恢复到新实例 - \"RestoreMongoDB_Replica\"：副本集恢复到新实例 - \"RestoreMongoDB_Replica_Single\"：单节点恢复到新实例 - \"RestoreMongoDB_Replica_PITR\"：副本集恢复到指定时间点 - \"MongodbSnapshotBackup\"：创建物理备份 - \"MongodbSnapshotEBackup\"：创建快照备份 - \"MongodbRestoreData2CurrentInstance\"：备份恢复到当前实例 - \"MongodbRestoreData2NewInstance\"：备份恢复到新实例 - \"MongodbPitr2CurrentInstance\"：备份恢复到当前实例指定时间点 - \"MongodbPitr2NewInstance\"：备份恢复到新实例指定时间点 - \"MongodbRecycleBackup\"：备份回收 - \"MongodbRestoreTable\"：库表级时间点恢复 - \"UpgradeDatabaseVersion\"：升级数据库补丁
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
@@ -33,6 +34,7 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
             'startTime' => 'string',
             'endTime' => 'string',
             'status' => 'string',
+            'id' => 'string',
             'name' => 'string',
             'offset' => 'int',
             'limit' => 'int'
@@ -43,6 +45,7 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
     * startTime  查询开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始，Z指时区偏移量
     * endTime  查询结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”，且大于查询开始时间，时间跨度不超过30天。 其中，T指某个时间的开始，Z指时区偏移量。
     * status  任务状态： 取值为“Running”为执行中； 取值为“Completed”为完成； 取值为“Failed” 为失败。
+    * id  任务ID。
     * name  任务名称。对应取值如下： - \"CreateMongoDB\"：创建集群实例 - \"CreateMongoDBReplica\"：创建副本集实例 - \"CreateMongoDBReplicaSingle\"：创建单节点实例 - \"EnlargeMongoDBVolume\"：磁盘扩容 - \"ResizeMongoDBInstance\"：社区版实例规格变更 - \"ResizeDfvMongoDBInstance\"：社区增强版实例规格变更 - \"EnlargeMongoDBGroup\"：添加节点 - \"ReplicaSetEnlargeNode\"：副本集添加备节点 - \"AddReadonlyNode\"：添加只读节点 - \"RestartInstance\"：重启集群实例 - \"RestartGroup\"：重启集群节点组 - \"RestartNode\"：重启集群节点 - \"RestartReplicaSetInstance\"：重启副本集实例 - \"RestartReplicaSingleInstance\"：重启单节点实例 - \"SwitchPrimary\"：主备切换 - \"ModifyIp\"：修改内网地址 - \"ModifySecurityGroup\"：修改安全组 - \"ModifyPort\"：修改数据库端口 - \"BindPublicIP\"：绑定弹性IP - \"UnbindPublicIP\"：解绑弹性IP - \"SwitchInstanceSSL\"：切换SSL - \"AzMigrate\"：迁移可用区 - \"CreateIp\"：显示shard/config IP - \"ModifyOpLogSize\"：修改oplog大小 - \"RestoreMongoDB\"：集群恢复到新实例 - \"RestoreMongoDB_Replica\"：副本集恢复到新实例 - \"RestoreMongoDB_Replica_Single\"：单节点恢复到新实例 - \"RestoreMongoDB_Replica_PITR\"：副本集恢复到指定时间点 - \"MongodbSnapshotBackup\"：创建物理备份 - \"MongodbSnapshotEBackup\"：创建快照备份 - \"MongodbRestoreData2CurrentInstance\"：备份恢复到当前实例 - \"MongodbRestoreData2NewInstance\"：备份恢复到新实例 - \"MongodbPitr2CurrentInstance\"：备份恢复到当前实例指定时间点 - \"MongodbPitr2NewInstance\"：备份恢复到新实例指定时间点 - \"MongodbRecycleBackup\"：备份回收 - \"MongodbRestoreTable\"：库表级时间点恢复 - \"UpgradeDatabaseVersion\"：升级数据库补丁
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
@@ -53,6 +56,7 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
         'startTime' => null,
         'endTime' => null,
         'status' => null,
+        'id' => null,
         'name' => null,
         'offset' => 'int32',
         'limit' => 'int32'
@@ -84,6 +88,7 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
     * startTime  查询开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始，Z指时区偏移量
     * endTime  查询结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”，且大于查询开始时间，时间跨度不超过30天。 其中，T指某个时间的开始，Z指时区偏移量。
     * status  任务状态： 取值为“Running”为执行中； 取值为“Completed”为完成； 取值为“Failed” 为失败。
+    * id  任务ID。
     * name  任务名称。对应取值如下： - \"CreateMongoDB\"：创建集群实例 - \"CreateMongoDBReplica\"：创建副本集实例 - \"CreateMongoDBReplicaSingle\"：创建单节点实例 - \"EnlargeMongoDBVolume\"：磁盘扩容 - \"ResizeMongoDBInstance\"：社区版实例规格变更 - \"ResizeDfvMongoDBInstance\"：社区增强版实例规格变更 - \"EnlargeMongoDBGroup\"：添加节点 - \"ReplicaSetEnlargeNode\"：副本集添加备节点 - \"AddReadonlyNode\"：添加只读节点 - \"RestartInstance\"：重启集群实例 - \"RestartGroup\"：重启集群节点组 - \"RestartNode\"：重启集群节点 - \"RestartReplicaSetInstance\"：重启副本集实例 - \"RestartReplicaSingleInstance\"：重启单节点实例 - \"SwitchPrimary\"：主备切换 - \"ModifyIp\"：修改内网地址 - \"ModifySecurityGroup\"：修改安全组 - \"ModifyPort\"：修改数据库端口 - \"BindPublicIP\"：绑定弹性IP - \"UnbindPublicIP\"：解绑弹性IP - \"SwitchInstanceSSL\"：切换SSL - \"AzMigrate\"：迁移可用区 - \"CreateIp\"：显示shard/config IP - \"ModifyOpLogSize\"：修改oplog大小 - \"RestoreMongoDB\"：集群恢复到新实例 - \"RestoreMongoDB_Replica\"：副本集恢复到新实例 - \"RestoreMongoDB_Replica_Single\"：单节点恢复到新实例 - \"RestoreMongoDB_Replica_PITR\"：副本集恢复到指定时间点 - \"MongodbSnapshotBackup\"：创建物理备份 - \"MongodbSnapshotEBackup\"：创建快照备份 - \"MongodbRestoreData2CurrentInstance\"：备份恢复到当前实例 - \"MongodbRestoreData2NewInstance\"：备份恢复到新实例 - \"MongodbPitr2CurrentInstance\"：备份恢复到当前实例指定时间点 - \"MongodbPitr2NewInstance\"：备份恢复到新实例指定时间点 - \"MongodbRecycleBackup\"：备份回收 - \"MongodbRestoreTable\"：库表级时间点恢复 - \"UpgradeDatabaseVersion\"：升级数据库补丁
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
@@ -94,6 +99,7 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
             'startTime' => 'start_time',
             'endTime' => 'end_time',
             'status' => 'status',
+            'id' => 'id',
             'name' => 'name',
             'offset' => 'offset',
             'limit' => 'limit'
@@ -104,6 +110,7 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
     * startTime  查询开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始，Z指时区偏移量
     * endTime  查询结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”，且大于查询开始时间，时间跨度不超过30天。 其中，T指某个时间的开始，Z指时区偏移量。
     * status  任务状态： 取值为“Running”为执行中； 取值为“Completed”为完成； 取值为“Failed” 为失败。
+    * id  任务ID。
     * name  任务名称。对应取值如下： - \"CreateMongoDB\"：创建集群实例 - \"CreateMongoDBReplica\"：创建副本集实例 - \"CreateMongoDBReplicaSingle\"：创建单节点实例 - \"EnlargeMongoDBVolume\"：磁盘扩容 - \"ResizeMongoDBInstance\"：社区版实例规格变更 - \"ResizeDfvMongoDBInstance\"：社区增强版实例规格变更 - \"EnlargeMongoDBGroup\"：添加节点 - \"ReplicaSetEnlargeNode\"：副本集添加备节点 - \"AddReadonlyNode\"：添加只读节点 - \"RestartInstance\"：重启集群实例 - \"RestartGroup\"：重启集群节点组 - \"RestartNode\"：重启集群节点 - \"RestartReplicaSetInstance\"：重启副本集实例 - \"RestartReplicaSingleInstance\"：重启单节点实例 - \"SwitchPrimary\"：主备切换 - \"ModifyIp\"：修改内网地址 - \"ModifySecurityGroup\"：修改安全组 - \"ModifyPort\"：修改数据库端口 - \"BindPublicIP\"：绑定弹性IP - \"UnbindPublicIP\"：解绑弹性IP - \"SwitchInstanceSSL\"：切换SSL - \"AzMigrate\"：迁移可用区 - \"CreateIp\"：显示shard/config IP - \"ModifyOpLogSize\"：修改oplog大小 - \"RestoreMongoDB\"：集群恢复到新实例 - \"RestoreMongoDB_Replica\"：副本集恢复到新实例 - \"RestoreMongoDB_Replica_Single\"：单节点恢复到新实例 - \"RestoreMongoDB_Replica_PITR\"：副本集恢复到指定时间点 - \"MongodbSnapshotBackup\"：创建物理备份 - \"MongodbSnapshotEBackup\"：创建快照备份 - \"MongodbRestoreData2CurrentInstance\"：备份恢复到当前实例 - \"MongodbRestoreData2NewInstance\"：备份恢复到新实例 - \"MongodbPitr2CurrentInstance\"：备份恢复到当前实例指定时间点 - \"MongodbPitr2NewInstance\"：备份恢复到新实例指定时间点 - \"MongodbRecycleBackup\"：备份回收 - \"MongodbRestoreTable\"：库表级时间点恢复 - \"UpgradeDatabaseVersion\"：升级数据库补丁
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
@@ -114,6 +121,7 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
             'status' => 'setStatus',
+            'id' => 'setId',
             'name' => 'setName',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
@@ -124,6 +132,7 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
     * startTime  查询开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始，Z指时区偏移量
     * endTime  查询结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”，且大于查询开始时间，时间跨度不超过30天。 其中，T指某个时间的开始，Z指时区偏移量。
     * status  任务状态： 取值为“Running”为执行中； 取值为“Completed”为完成； 取值为“Failed” 为失败。
+    * id  任务ID。
     * name  任务名称。对应取值如下： - \"CreateMongoDB\"：创建集群实例 - \"CreateMongoDBReplica\"：创建副本集实例 - \"CreateMongoDBReplicaSingle\"：创建单节点实例 - \"EnlargeMongoDBVolume\"：磁盘扩容 - \"ResizeMongoDBInstance\"：社区版实例规格变更 - \"ResizeDfvMongoDBInstance\"：社区增强版实例规格变更 - \"EnlargeMongoDBGroup\"：添加节点 - \"ReplicaSetEnlargeNode\"：副本集添加备节点 - \"AddReadonlyNode\"：添加只读节点 - \"RestartInstance\"：重启集群实例 - \"RestartGroup\"：重启集群节点组 - \"RestartNode\"：重启集群节点 - \"RestartReplicaSetInstance\"：重启副本集实例 - \"RestartReplicaSingleInstance\"：重启单节点实例 - \"SwitchPrimary\"：主备切换 - \"ModifyIp\"：修改内网地址 - \"ModifySecurityGroup\"：修改安全组 - \"ModifyPort\"：修改数据库端口 - \"BindPublicIP\"：绑定弹性IP - \"UnbindPublicIP\"：解绑弹性IP - \"SwitchInstanceSSL\"：切换SSL - \"AzMigrate\"：迁移可用区 - \"CreateIp\"：显示shard/config IP - \"ModifyOpLogSize\"：修改oplog大小 - \"RestoreMongoDB\"：集群恢复到新实例 - \"RestoreMongoDB_Replica\"：副本集恢复到新实例 - \"RestoreMongoDB_Replica_Single\"：单节点恢复到新实例 - \"RestoreMongoDB_Replica_PITR\"：副本集恢复到指定时间点 - \"MongodbSnapshotBackup\"：创建物理备份 - \"MongodbSnapshotEBackup\"：创建快照备份 - \"MongodbRestoreData2CurrentInstance\"：备份恢复到当前实例 - \"MongodbRestoreData2NewInstance\"：备份恢复到新实例 - \"MongodbPitr2CurrentInstance\"：备份恢复到当前实例指定时间点 - \"MongodbPitr2NewInstance\"：备份恢复到新实例指定时间点 - \"MongodbRecycleBackup\"：备份回收 - \"MongodbRestoreTable\"：库表级时间点恢复 - \"UpgradeDatabaseVersion\"：升级数据库补丁
     * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
     * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
@@ -134,6 +143,7 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
             'status' => 'getStatus',
+            'id' => 'getId',
             'name' => 'getName',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
@@ -200,6 +210,7 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
@@ -302,6 +313,30 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  任务ID。
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id 任务ID。
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
         return $this;
     }
 

@@ -20,9 +20,9 @@ class VpcDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  创建引流VPC产生的随机UUID
-    * name  引流VPC名称
-    * cidr  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
+    * id  **参数解释**： 创建引流VPC产生的随机UUID **取值范围**： 不涉及
+    * name  **参数解释**： 引流VPC名称 **取值范围**： 不涉及
+    * cidr  **参数解释**： 虚拟私有云下可用子网的范围 **取值范围**： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class VpcDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  创建引流VPC产生的随机UUID
-    * name  引流VPC名称
-    * cidr  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
+    * id  **参数解释**： 创建引流VPC产生的随机UUID **取值范围**： 不涉及
+    * name  **参数解释**： 引流VPC名称 **取值范围**： 不涉及
+    * cidr  **参数解释**： 虚拟私有云下可用子网的范围 **取值范围**： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class VpcDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  创建引流VPC产生的随机UUID
-    * name  引流VPC名称
-    * cidr  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
+    * id  **参数解释**： 创建引流VPC产生的随机UUID **取值范围**： 不涉及
+    * name  **参数解释**： 引流VPC名称 **取值范围**： 不涉及
+    * cidr  **参数解释**： 虚拟私有云下可用子网的范围 **取值范围**： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class VpcDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  创建引流VPC产生的随机UUID
-    * name  引流VPC名称
-    * cidr  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
+    * id  **参数解释**： 创建引流VPC产生的随机UUID **取值范围**： 不涉及
+    * name  **参数解释**： 引流VPC名称 **取值范围**： 不涉及
+    * cidr  **参数解释**： 虚拟私有云下可用子网的范围 **取值范围**： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class VpcDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  创建引流VPC产生的随机UUID
-    * name  引流VPC名称
-    * cidr  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
+    * id  **参数解释**： 创建引流VPC产生的随机UUID **取值范围**： 不涉及
+    * name  **参数解释**： 引流VPC名称 **取值范围**： 不涉及
+    * cidr  **参数解释**： 虚拟私有云下可用子网的范围 **取值范围**： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class VpcDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  创建引流VPC产生的随机UUID
+    *  **参数解释**： 创建引流VPC产生的随机UUID **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class VpcDetail implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 创建引流VPC产生的随机UUID
+    * @param string|null $id **参数解释**： 创建引流VPC产生的随机UUID **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class VpcDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  引流VPC名称
+    *  **参数解释**： 引流VPC名称 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class VpcDetail implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 引流VPC名称
+    * @param string|null $name **参数解释**： 引流VPC名称 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class VpcDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets cidr
-    *  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
+    *  **参数解释**： 虚拟私有云下可用子网的范围 **取值范围**： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class VpcDetail implements ModelInterface, ArrayAccess
     /**
     * Sets cidr
     *
-    * @param string|null $cidr 功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
+    * @param string|null $cidr **参数解释**： 虚拟私有云下可用子网的范围 **取值范围**： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24
     *
     * @return $this
     */

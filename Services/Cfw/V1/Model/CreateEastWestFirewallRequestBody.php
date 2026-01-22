@@ -20,9 +20,9 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * erId  出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分）
-    * inspectionCidr  创建引流VPC时使用的网段
-    * mode  东西向防火墙模式，填写er
+    * erId  **参数解释**： 出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分） **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * inspectionCidr  **参数解释**： 创建引流VPC时使用的网段 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * mode  **参数解释**： 东西向防火墙模式，填写er **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * erId  出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分）
-    * inspectionCidr  创建引流VPC时使用的网段
-    * mode  东西向防火墙模式，填写er
+    * erId  **参数解释**： 出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分） **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * inspectionCidr  **参数解释**： 创建引流VPC时使用的网段 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * mode  **参数解释**： 东西向防火墙模式，填写er **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * erId  出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分）
-    * inspectionCidr  创建引流VPC时使用的网段
-    * mode  东西向防火墙模式，填写er
+    * erId  **参数解释**： 出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分） **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * inspectionCidr  **参数解释**： 创建引流VPC时使用的网段 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * mode  **参数解释**： 东西向防火墙模式，填写er **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * erId  出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分）
-    * inspectionCidr  创建引流VPC时使用的网段
-    * mode  东西向防火墙模式，填写er
+    * erId  **参数解释**： 出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分） **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * inspectionCidr  **参数解释**： 创建引流VPC时使用的网段 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * mode  **参数解释**： 东西向防火墙模式，填写er **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * erId  出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分）
-    * inspectionCidr  创建引流VPC时使用的网段
-    * mode  东西向防火墙模式，填写er
+    * erId  **参数解释**： 出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分） **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * inspectionCidr  **参数解释**： 创建引流VPC时使用的网段 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * mode  **参数解释**： 东西向防火墙模式，填写er **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets erId
-    *  出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分）
+    *  **参数解释**： 出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分） **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -220,7 +220,7 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets erId
     *
-    * @param string $erId 出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分）
+    * @param string $erId **参数解释**： 出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分） **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets inspectionCidr
-    *  创建引流VPC时使用的网段
+    *  **参数解释**： 创建引流VPC时使用的网段 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -244,7 +244,7 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets inspectionCidr
     *
-    * @param string $inspectionCidr 创建引流VPC时使用的网段
+    * @param string $inspectionCidr **参数解释**： 创建引流VPC时使用的网段 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
-    *  东西向防火墙模式，填写er
+    *  **参数解释**： 东西向防火墙模式，填写er **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -268,7 +268,7 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param string $mode 东西向防火墙模式，填写er
+    * @param string $mode **参数解释**： 东西向防火墙模式，填写er **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

@@ -20,20 +20,20 @@ class Message implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * msgId  消息ID。
-    * instanceId  实例ID。
-    * topic  主题名称。
-    * storeTimestamp  存储消息的时间。
-    * bornTimestamp  产生消息的时间。
-    * reconsumeTimes  重试次数。
-    * body  消息体。
-    * bodyCrc  消息体校验和。
-    * storeSize  存储大小。
-    * propertyList  消息属性列表。
-    * bornHost  产生消息的主机IP。
-    * storeHost  存储消息的主机IP。
-    * queueId  队列ID。
-    * queueOffset  在队列中的偏移量。
+    * msgId  **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * storeTimestamp  **参数解释**： 存储消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * bornTimestamp  **参数解释**： 产生消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * reconsumeTimes  **参数解释**： 重试次数。 **取值范围**： 不涉及。
+    * body  **参数解释**： 消息体。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * bodyCrc  **参数解释**： 消息体校验和。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * storeSize  **参数解释**： 存储大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * propertyList  **参数解释**： 消息属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * bornHost  **参数解释**： 产生消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * storeHost  **参数解释**： 存储消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queueId  **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queueOffset  **参数解释**： 在队列中的偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -56,20 +56,20 @@ class Message implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * msgId  消息ID。
-    * instanceId  实例ID。
-    * topic  主题名称。
-    * storeTimestamp  存储消息的时间。
-    * bornTimestamp  产生消息的时间。
-    * reconsumeTimes  重试次数。
-    * body  消息体。
-    * bodyCrc  消息体校验和。
-    * storeSize  存储大小。
-    * propertyList  消息属性列表。
-    * bornHost  产生消息的主机IP。
-    * storeHost  存储消息的主机IP。
-    * queueId  队列ID。
-    * queueOffset  在队列中的偏移量。
+    * msgId  **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * storeTimestamp  **参数解释**： 存储消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * bornTimestamp  **参数解释**： 产生消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * reconsumeTimes  **参数解释**： 重试次数。 **取值范围**： 不涉及。
+    * body  **参数解释**： 消息体。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * bodyCrc  **参数解释**： 消息体校验和。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * storeSize  **参数解释**： 存储大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * propertyList  **参数解释**： 消息属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * bornHost  **参数解释**： 产生消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * storeHost  **参数解释**： 存储消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queueId  **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queueOffset  **参数解释**： 在队列中的偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,20 +113,20 @@ class Message implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * msgId  消息ID。
-    * instanceId  实例ID。
-    * topic  主题名称。
-    * storeTimestamp  存储消息的时间。
-    * bornTimestamp  产生消息的时间。
-    * reconsumeTimes  重试次数。
-    * body  消息体。
-    * bodyCrc  消息体校验和。
-    * storeSize  存储大小。
-    * propertyList  消息属性列表。
-    * bornHost  产生消息的主机IP。
-    * storeHost  存储消息的主机IP。
-    * queueId  队列ID。
-    * queueOffset  在队列中的偏移量。
+    * msgId  **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * storeTimestamp  **参数解释**： 存储消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * bornTimestamp  **参数解释**： 产生消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * reconsumeTimes  **参数解释**： 重试次数。 **取值范围**： 不涉及。
+    * body  **参数解释**： 消息体。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * bodyCrc  **参数解释**： 消息体校验和。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * storeSize  **参数解释**： 存储大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * propertyList  **参数解释**： 消息属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * bornHost  **参数解释**： 产生消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * storeHost  **参数解释**： 存储消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queueId  **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queueOffset  **参数解释**： 在队列中的偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -149,20 +149,20 @@ class Message implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * msgId  消息ID。
-    * instanceId  实例ID。
-    * topic  主题名称。
-    * storeTimestamp  存储消息的时间。
-    * bornTimestamp  产生消息的时间。
-    * reconsumeTimes  重试次数。
-    * body  消息体。
-    * bodyCrc  消息体校验和。
-    * storeSize  存储大小。
-    * propertyList  消息属性列表。
-    * bornHost  产生消息的主机IP。
-    * storeHost  存储消息的主机IP。
-    * queueId  队列ID。
-    * queueOffset  在队列中的偏移量。
+    * msgId  **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * storeTimestamp  **参数解释**： 存储消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * bornTimestamp  **参数解释**： 产生消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * reconsumeTimes  **参数解释**： 重试次数。 **取值范围**： 不涉及。
+    * body  **参数解释**： 消息体。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * bodyCrc  **参数解释**： 消息体校验和。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * storeSize  **参数解释**： 存储大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * propertyList  **参数解释**： 消息属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * bornHost  **参数解释**： 产生消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * storeHost  **参数解释**： 存储消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queueId  **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queueOffset  **参数解释**： 在队列中的偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -185,20 +185,20 @@ class Message implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * msgId  消息ID。
-    * instanceId  实例ID。
-    * topic  主题名称。
-    * storeTimestamp  存储消息的时间。
-    * bornTimestamp  产生消息的时间。
-    * reconsumeTimes  重试次数。
-    * body  消息体。
-    * bodyCrc  消息体校验和。
-    * storeSize  存储大小。
-    * propertyList  消息属性列表。
-    * bornHost  产生消息的主机IP。
-    * storeHost  存储消息的主机IP。
-    * queueId  队列ID。
-    * queueOffset  在队列中的偏移量。
+    * msgId  **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * storeTimestamp  **参数解释**： 存储消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * bornTimestamp  **参数解释**： 产生消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * reconsumeTimes  **参数解释**： 重试次数。 **取值范围**： 不涉及。
+    * body  **参数解释**： 消息体。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * bodyCrc  **参数解释**： 消息体校验和。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * storeSize  **参数解释**： 存储大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * propertyList  **参数解释**： 消息属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * bornHost  **参数解释**： 产生消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * storeHost  **参数解释**： 存储消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queueId  **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queueOffset  **参数解释**： 在队列中的偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -317,7 +317,7 @@ class Message implements ModelInterface, ArrayAccess
 
     /**
     * Gets msgId
-    *  消息ID。
+    *  **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -329,7 +329,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
     * Sets msgId
     *
-    * @param string|null $msgId 消息ID。
+    * @param string|null $msgId **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -341,7 +341,7 @@ class Message implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**： 实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -353,7 +353,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 实例ID。
+    * @param string|null $instanceId **参数解释**： 实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -365,7 +365,7 @@ class Message implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  主题名称。
+    *  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -377,7 +377,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic 主题名称。
+    * @param string|null $topic **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -389,7 +389,7 @@ class Message implements ModelInterface, ArrayAccess
 
     /**
     * Gets storeTimestamp
-    *  存储消息的时间。
+    *  **参数解释**： 存储消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -401,7 +401,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
     * Sets storeTimestamp
     *
-    * @param float|null $storeTimestamp 存储消息的时间。
+    * @param float|null $storeTimestamp **参数解释**： 存储消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -413,7 +413,7 @@ class Message implements ModelInterface, ArrayAccess
 
     /**
     * Gets bornTimestamp
-    *  产生消息的时间。
+    *  **参数解释**： 产生消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -425,7 +425,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
     * Sets bornTimestamp
     *
-    * @param float|null $bornTimestamp 产生消息的时间。
+    * @param float|null $bornTimestamp **参数解释**： 产生消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -437,7 +437,7 @@ class Message implements ModelInterface, ArrayAccess
 
     /**
     * Gets reconsumeTimes
-    *  重试次数。
+    *  **参数解释**： 重试次数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -449,7 +449,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
     * Sets reconsumeTimes
     *
-    * @param int|null $reconsumeTimes 重试次数。
+    * @param int|null $reconsumeTimes **参数解释**： 重试次数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -461,7 +461,7 @@ class Message implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
-    *  消息体。
+    *  **参数解释**： 消息体。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -473,7 +473,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param string|null $body 消息体。
+    * @param string|null $body **参数解释**： 消息体。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -485,7 +485,7 @@ class Message implements ModelInterface, ArrayAccess
 
     /**
     * Gets bodyCrc
-    *  消息体校验和。
+    *  **参数解释**： 消息体校验和。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -497,7 +497,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
     * Sets bodyCrc
     *
-    * @param float|null $bodyCrc 消息体校验和。
+    * @param float|null $bodyCrc **参数解释**： 消息体校验和。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -509,7 +509,7 @@ class Message implements ModelInterface, ArrayAccess
 
     /**
     * Gets storeSize
-    *  存储大小。
+    *  **参数解释**： 存储大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -521,7 +521,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
     * Sets storeSize
     *
-    * @param float|null $storeSize 存储大小。
+    * @param float|null $storeSize **参数解释**： 存储大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -533,7 +533,7 @@ class Message implements ModelInterface, ArrayAccess
 
     /**
     * Gets propertyList
-    *  消息属性列表。
+    *  **参数解释**： 消息属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\MessagePropertyList[]|null
     */
@@ -545,7 +545,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
     * Sets propertyList
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\MessagePropertyList[]|null $propertyList 消息属性列表。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\MessagePropertyList[]|null $propertyList **参数解释**： 消息属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -557,7 +557,7 @@ class Message implements ModelInterface, ArrayAccess
 
     /**
     * Gets bornHost
-    *  产生消息的主机IP。
+    *  **参数解释**： 产生消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -569,7 +569,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
     * Sets bornHost
     *
-    * @param string|null $bornHost 产生消息的主机IP。
+    * @param string|null $bornHost **参数解释**： 产生消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -581,7 +581,7 @@ class Message implements ModelInterface, ArrayAccess
 
     /**
     * Gets storeHost
-    *  存储消息的主机IP。
+    *  **参数解释**： 存储消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -593,7 +593,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
     * Sets storeHost
     *
-    * @param string|null $storeHost 存储消息的主机IP。
+    * @param string|null $storeHost **参数解释**： 存储消息的主机IP。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -605,7 +605,7 @@ class Message implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueId
-    *  队列ID。
+    *  **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -617,7 +617,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
     * Sets queueId
     *
-    * @param int|null $queueId 队列ID。
+    * @param int|null $queueId **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -629,7 +629,7 @@ class Message implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueOffset
-    *  在队列中的偏移量。
+    *  **参数解释**： 在队列中的偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -641,7 +641,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
     * Sets queueOffset
     *
-    * @param int|null $queueOffset 在队列中的偏移量。
+    * @param int|null $queueOffset **参数解释**： 在队列中的偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -20,13 +20,13 @@ class DomainSetVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * setId  域名组id
-    * name  域名组名称
-    * description  域名组描述
-    * refCount  域名组被规则引用次数
-    * domainSetType  域名组类型，0表示应用域名组，1表示网络域名组
-    * configStatus  配置状态，-1表示未配置态，0表示配置失败，1表示配置成功，2表示配置中，3表示正常，4表示配置异常
-    * rules  使用规则id列表
+    * setId  **参数解释**： 域名组id **取值范围**： 不涉及
+    * name  **参数解释**： 域名组名称 **取值范围**： 不涉及
+    * description  **参数解释**： 域名组描述 **取值范围**： 不涉及
+    * refCount  **参数解释**： 域名组被规则引用次数 **取值范围**： 不涉及
+    * domainSetType  **参数解释**： 域名组类型 **取值范围**： - 0：应用域名组 - 1：网络域名组
+    * configStatus  **参数解释**： 配置状态 **取值范围**： - -1：未配置态 - 0：配置失败 - 1：配置成功 - 2：配置中 - 3：正常 - 4：配置异常
+    * rules  **参数解释**： 使用规则id列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class DomainSetVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * setId  域名组id
-    * name  域名组名称
-    * description  域名组描述
-    * refCount  域名组被规则引用次数
-    * domainSetType  域名组类型，0表示应用域名组，1表示网络域名组
-    * configStatus  配置状态，-1表示未配置态，0表示配置失败，1表示配置成功，2表示配置中，3表示正常，4表示配置异常
-    * rules  使用规则id列表
+    * setId  **参数解释**： 域名组id **取值范围**： 不涉及
+    * name  **参数解释**： 域名组名称 **取值范围**： 不涉及
+    * description  **参数解释**： 域名组描述 **取值范围**： 不涉及
+    * refCount  **参数解释**： 域名组被规则引用次数 **取值范围**： 不涉及
+    * domainSetType  **参数解释**： 域名组类型 **取值范围**： - 0：应用域名组 - 1：网络域名组
+    * configStatus  **参数解释**： 配置状态 **取值范围**： - -1：未配置态 - 0：配置失败 - 1：配置成功 - 2：配置中 - 3：正常 - 4：配置异常
+    * rules  **参数解释**： 使用规则id列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * setId  域名组id
-    * name  域名组名称
-    * description  域名组描述
-    * refCount  域名组被规则引用次数
-    * domainSetType  域名组类型，0表示应用域名组，1表示网络域名组
-    * configStatus  配置状态，-1表示未配置态，0表示配置失败，1表示配置成功，2表示配置中，3表示正常，4表示配置异常
-    * rules  使用规则id列表
+    * setId  **参数解释**： 域名组id **取值范围**： 不涉及
+    * name  **参数解释**： 域名组名称 **取值范围**： 不涉及
+    * description  **参数解释**： 域名组描述 **取值范围**： 不涉及
+    * refCount  **参数解释**： 域名组被规则引用次数 **取值范围**： 不涉及
+    * domainSetType  **参数解释**： 域名组类型 **取值范围**： - 0：应用域名组 - 1：网络域名组
+    * configStatus  **参数解释**： 配置状态 **取值范围**： - -1：未配置态 - 0：配置失败 - 1：配置成功 - 2：配置中 - 3：正常 - 4：配置异常
+    * rules  **参数解释**： 使用规则id列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class DomainSetVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * setId  域名组id
-    * name  域名组名称
-    * description  域名组描述
-    * refCount  域名组被规则引用次数
-    * domainSetType  域名组类型，0表示应用域名组，1表示网络域名组
-    * configStatus  配置状态，-1表示未配置态，0表示配置失败，1表示配置成功，2表示配置中，3表示正常，4表示配置异常
-    * rules  使用规则id列表
+    * setId  **参数解释**： 域名组id **取值范围**： 不涉及
+    * name  **参数解释**： 域名组名称 **取值范围**： 不涉及
+    * description  **参数解释**： 域名组描述 **取值范围**： 不涉及
+    * refCount  **参数解释**： 域名组被规则引用次数 **取值范围**： 不涉及
+    * domainSetType  **参数解释**： 域名组类型 **取值范围**： - 0：应用域名组 - 1：网络域名组
+    * configStatus  **参数解释**： 配置状态 **取值范围**： - -1：未配置态 - 0：配置失败 - 1：配置成功 - 2：配置中 - 3：正常 - 4：配置异常
+    * rules  **参数解释**： 使用规则id列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class DomainSetVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * setId  域名组id
-    * name  域名组名称
-    * description  域名组描述
-    * refCount  域名组被规则引用次数
-    * domainSetType  域名组类型，0表示应用域名组，1表示网络域名组
-    * configStatus  配置状态，-1表示未配置态，0表示配置失败，1表示配置成功，2表示配置中，3表示正常，4表示配置异常
-    * rules  使用规则id列表
+    * setId  **参数解释**： 域名组id **取值范围**： 不涉及
+    * name  **参数解释**： 域名组名称 **取值范围**： 不涉及
+    * description  **参数解释**： 域名组描述 **取值范围**： 不涉及
+    * refCount  **参数解释**： 域名组被规则引用次数 **取值范围**： 不涉及
+    * domainSetType  **参数解释**： 域名组类型 **取值范围**： - 0：应用域名组 - 1：网络域名组
+    * configStatus  **参数解释**： 配置状态 **取值范围**： - -1：未配置态 - 0：配置失败 - 1：配置成功 - 2：配置中 - 3：正常 - 4：配置异常
+    * rules  **参数解释**： 使用规则id列表 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets setId
-    *  域名组id
+    *  **参数解释**： 域名组id **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     /**
     * Sets setId
     *
-    * @param string|null $setId 域名组id
+    * @param string|null $setId **参数解释**： 域名组id **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  域名组名称
+    *  **参数解释**： 域名组名称 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 域名组名称
+    * @param string|null $name **参数解释**： 域名组名称 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  域名组描述
+    *  **参数解释**： 域名组描述 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 域名组描述
+    * @param string|null $description **参数解释**： 域名组描述 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets refCount
-    *  域名组被规则引用次数
+    *  **参数解释**： 域名组被规则引用次数 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -324,7 +324,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     /**
     * Sets refCount
     *
-    * @param int|null $refCount 域名组被规则引用次数
+    * @param int|null $refCount **参数解释**： 域名组被规则引用次数 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainSetType
-    *  域名组类型，0表示应用域名组，1表示网络域名组
+    *  **参数解释**： 域名组类型 **取值范围**： - 0：应用域名组 - 1：网络域名组
     *
     * @return int|null
     */
@@ -348,7 +348,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     /**
     * Sets domainSetType
     *
-    * @param int|null $domainSetType 域名组类型，0表示应用域名组，1表示网络域名组
+    * @param int|null $domainSetType **参数解释**： 域名组类型 **取值范围**： - 0：应用域名组 - 1：网络域名组
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets configStatus
-    *  配置状态，-1表示未配置态，0表示配置失败，1表示配置成功，2表示配置中，3表示正常，4表示配置异常
+    *  **参数解释**： 配置状态 **取值范围**： - -1：未配置态 - 0：配置失败 - 1：配置成功 - 2：配置中 - 3：正常 - 4：配置异常
     *
     * @return int|null
     */
@@ -372,7 +372,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     /**
     * Sets configStatus
     *
-    * @param int|null $configStatus 配置状态，-1表示未配置态，0表示配置失败，1表示配置成功，2表示配置中，3表示正常，4表示配置异常
+    * @param int|null $configStatus **参数解释**： 配置状态 **取值范围**： - -1：未配置态 - 0：配置失败 - 1：配置成功 - 2：配置中 - 3：正常 - 4：配置异常
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets rules
-    *  使用规则id列表
+    *  **参数解释**： 使用规则id列表 **取值范围**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\UseRuleVO[]|null
     */
@@ -396,7 +396,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     /**
     * Sets rules
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\UseRuleVO[]|null $rules 使用规则id列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\UseRuleVO[]|null $rules **参数解释**： 使用规则id列表 **取值范围**： 不涉及
     *
     * @return $this
     */

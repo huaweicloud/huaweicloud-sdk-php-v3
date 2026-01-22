@@ -20,11 +20,11 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enabled  是否可以消费。
-    * broadcast  是否广播。
-    * brokers  关联的代理列表。
-    * name  待修改参数的消费组（消费组名称不支持修改）。
-    * retryMaxTime  最大重试次数，取值范围为1~16。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 待修改参数的消费组（消费组名称不支持修改）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enabled  是否可以消费。
-    * broadcast  是否广播。
-    * brokers  关联的代理列表。
-    * name  待修改参数的消费组（消费组名称不支持修改）。
-    * retryMaxTime  最大重试次数，取值范围为1~16。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 待修改参数的消费组（消费组名称不支持修改）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enabled  是否可以消费。
-    * broadcast  是否广播。
-    * brokers  关联的代理列表。
-    * name  待修改参数的消费组（消费组名称不支持修改）。
-    * retryMaxTime  最大重试次数，取值范围为1~16。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 待修改参数的消费组（消费组名称不支持修改）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enabled  是否可以消费。
-    * broadcast  是否广播。
-    * brokers  关联的代理列表。
-    * name  待修改参数的消费组（消费组名称不支持修改）。
-    * retryMaxTime  最大重试次数，取值范围为1~16。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 待修改参数的消费组（消费组名称不支持修改）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enabled  是否可以消费。
-    * broadcast  是否广播。
-    * brokers  关联的代理列表。
-    * name  待修改参数的消费组（消费组名称不支持修改）。
-    * retryMaxTime  最大重试次数，取值范围为1~16。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 待修改参数的消费组（消费组名称不支持修改）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -227,7 +227,7 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  是否可以消费。
+    *  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
     *
     * @return bool
     */
@@ -239,7 +239,7 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool $enabled 是否可以消费。
+    * @param bool $enabled **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -251,7 +251,7 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets broadcast
-    *  是否广播。
+    *  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
     *
     * @return bool
     */
@@ -263,7 +263,7 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets broadcast
     *
-    * @param bool $broadcast 是否广播。
+    * @param bool $broadcast **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -275,7 +275,7 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokers
-    *  关联的代理列表。
+    *  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -287,7 +287,7 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets brokers
     *
-    * @param string[]|null $brokers 关联的代理列表。
+    * @param string[]|null $brokers **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -299,7 +299,7 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  待修改参数的消费组（消费组名称不支持修改）。
+    *  **参数解释**： 待修改参数的消费组（消费组名称不支持修改）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -311,7 +311,7 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 待修改参数的消费组（消费组名称不支持修改）。
+    * @param string|null $name **参数解释**： 待修改参数的消费组（消费组名称不支持修改）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets retryMaxTime
-    *  最大重试次数，取值范围为1~16。
+    *  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
     *
     * @return int
     */
@@ -335,7 +335,7 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets retryMaxTime
     *
-    * @param int $retryMaxTime 最大重试次数，取值范围为1~16。
+    * @param int $retryMaxTime **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
     *
     * @return $this
     */

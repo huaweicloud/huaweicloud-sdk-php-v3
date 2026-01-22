@@ -22,7 +22,9 @@ class GroupMessageOffsetsDetailEntity implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * partition  分区
     * messageCurrentOffset  消息当前位点
+    * topic  topic名称
     * messageLogStartOffset  消息开始位点
+    * lag  剩余可消费消息数，即消息堆积数
     * messageLogEndOffset  消息结束位点
     * consumerId  消费者Id
     * host  host名称
@@ -33,7 +35,9 @@ class GroupMessageOffsetsDetailEntity implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'partition' => 'string',
             'messageCurrentOffset' => 'string',
+            'topic' => 'string',
             'messageLogStartOffset' => 'int',
+            'lag' => 'int',
             'messageLogEndOffset' => 'int',
             'consumerId' => 'string',
             'host' => 'string',
@@ -44,7 +48,9 @@ class GroupMessageOffsetsDetailEntity implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * partition  分区
     * messageCurrentOffset  消息当前位点
+    * topic  topic名称
     * messageLogStartOffset  消息开始位点
+    * lag  剩余可消费消息数，即消息堆积数
     * messageLogEndOffset  消息结束位点
     * consumerId  消费者Id
     * host  host名称
@@ -55,7 +61,9 @@ class GroupMessageOffsetsDetailEntity implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'partition' => null,
         'messageCurrentOffset' => null,
+        'topic' => null,
         'messageLogStartOffset' => null,
+        'lag' => null,
         'messageLogEndOffset' => null,
         'consumerId' => null,
         'host' => null,
@@ -87,7 +95,9 @@ class GroupMessageOffsetsDetailEntity implements ModelInterface, ArrayAccess
     * and the value is the original name
     * partition  分区
     * messageCurrentOffset  消息当前位点
+    * topic  topic名称
     * messageLogStartOffset  消息开始位点
+    * lag  剩余可消费消息数，即消息堆积数
     * messageLogEndOffset  消息结束位点
     * consumerId  消费者Id
     * host  host名称
@@ -98,7 +108,9 @@ class GroupMessageOffsetsDetailEntity implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'partition' => 'partition',
             'messageCurrentOffset' => 'message_current_offset',
+            'topic' => 'topic',
             'messageLogStartOffset' => 'message_log_start_offset',
+            'lag' => 'lag',
             'messageLogEndOffset' => 'message_log_end_offset',
             'consumerId' => 'consumer_id',
             'host' => 'host',
@@ -109,7 +121,9 @@ class GroupMessageOffsetsDetailEntity implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * partition  分区
     * messageCurrentOffset  消息当前位点
+    * topic  topic名称
     * messageLogStartOffset  消息开始位点
+    * lag  剩余可消费消息数，即消息堆积数
     * messageLogEndOffset  消息结束位点
     * consumerId  消费者Id
     * host  host名称
@@ -120,7 +134,9 @@ class GroupMessageOffsetsDetailEntity implements ModelInterface, ArrayAccess
     protected static $setters = [
             'partition' => 'setPartition',
             'messageCurrentOffset' => 'setMessageCurrentOffset',
+            'topic' => 'setTopic',
             'messageLogStartOffset' => 'setMessageLogStartOffset',
+            'lag' => 'setLag',
             'messageLogEndOffset' => 'setMessageLogEndOffset',
             'consumerId' => 'setConsumerId',
             'host' => 'setHost',
@@ -131,7 +147,9 @@ class GroupMessageOffsetsDetailEntity implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * partition  分区
     * messageCurrentOffset  消息当前位点
+    * topic  topic名称
     * messageLogStartOffset  消息开始位点
+    * lag  剩余可消费消息数，即消息堆积数
     * messageLogEndOffset  消息结束位点
     * consumerId  消费者Id
     * host  host名称
@@ -142,7 +160,9 @@ class GroupMessageOffsetsDetailEntity implements ModelInterface, ArrayAccess
     protected static $getters = [
             'partition' => 'getPartition',
             'messageCurrentOffset' => 'getMessageCurrentOffset',
+            'topic' => 'getTopic',
             'messageLogStartOffset' => 'getMessageLogStartOffset',
+            'lag' => 'getLag',
             'messageLogEndOffset' => 'getMessageLogEndOffset',
             'consumerId' => 'getConsumerId',
             'host' => 'getHost',
@@ -209,7 +229,9 @@ class GroupMessageOffsetsDetailEntity implements ModelInterface, ArrayAccess
     {
         $this->container['partition'] = isset($data['partition']) ? $data['partition'] : null;
         $this->container['messageCurrentOffset'] = isset($data['messageCurrentOffset']) ? $data['messageCurrentOffset'] : null;
+        $this->container['topic'] = isset($data['topic']) ? $data['topic'] : null;
         $this->container['messageLogStartOffset'] = isset($data['messageLogStartOffset']) ? $data['messageLogStartOffset'] : null;
+        $this->container['lag'] = isset($data['lag']) ? $data['lag'] : null;
         $this->container['messageLogEndOffset'] = isset($data['messageLogEndOffset']) ? $data['messageLogEndOffset'] : null;
         $this->container['consumerId'] = isset($data['consumerId']) ? $data['consumerId'] : null;
         $this->container['host'] = isset($data['host']) ? $data['host'] : null;
@@ -287,6 +309,30 @@ class GroupMessageOffsetsDetailEntity implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets topic
+    *  topic名称
+    *
+    * @return string|null
+    */
+    public function getTopic()
+    {
+        return $this->container['topic'];
+    }
+
+    /**
+    * Sets topic
+    *
+    * @param string|null $topic topic名称
+    *
+    * @return $this
+    */
+    public function setTopic($topic)
+    {
+        $this->container['topic'] = $topic;
+        return $this;
+    }
+
+    /**
     * Gets messageLogStartOffset
     *  消息开始位点
     *
@@ -307,6 +353,30 @@ class GroupMessageOffsetsDetailEntity implements ModelInterface, ArrayAccess
     public function setMessageLogStartOffset($messageLogStartOffset)
     {
         $this->container['messageLogStartOffset'] = $messageLogStartOffset;
+        return $this;
+    }
+
+    /**
+    * Gets lag
+    *  剩余可消费消息数，即消息堆积数
+    *
+    * @return int|null
+    */
+    public function getLag()
+    {
+        return $this->container['lag'];
+    }
+
+    /**
+    * Sets lag
+    *
+    * @param int|null $lag 剩余可消费消息数，即消息堆积数
+    *
+    * @return $this
+    */
+    public function setLag($lag)
+    {
+        $this->container['lag'] = $lag;
         return $this;
     }
 

@@ -21,7 +21,7 @@ class ResetConsumeOffsetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * queues  重置的队列。
+    * queues  **参数解释**： 重置的队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ResetConsumeOffsetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * queues  重置的队列。
+    * queues  **参数解释**： 重置的队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ResetConsumeOffsetResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * queues  重置的队列。
+    * queues  **参数解释**： 重置的队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ResetConsumeOffsetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * queues  重置的队列。
+    * queues  **参数解释**： 重置的队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ResetConsumeOffsetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * queues  重置的队列。
+    * queues  **参数解释**： 重置的队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ResetConsumeOffsetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets queues
-    *  重置的队列。
+    *  **参数解释**： 重置的队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\ResetConsumeOffsetRespQueues[]|null
     */
@@ -187,7 +187,7 @@ class ResetConsumeOffsetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets queues
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ResetConsumeOffsetRespQueues[]|null $queues 重置的队列。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ResetConsumeOffsetRespQueues[]|null $queues **参数解释**： 重置的队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

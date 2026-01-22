@@ -21,7 +21,7 @@ class SendDlqMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resendResults  重发死信消息结果。
+    * resendResults  **参数解释**： 重发死信消息结果。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class SendDlqMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resendResults  重发死信消息结果。
+    * resendResults  **参数解释**： 重发死信消息结果。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class SendDlqMessageResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resendResults  重发死信消息结果。
+    * resendResults  **参数解释**： 重发死信消息结果。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class SendDlqMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resendResults  重发死信消息结果。
+    * resendResults  **参数解释**： 重发死信消息结果。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class SendDlqMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resendResults  重发死信消息结果。
+    * resendResults  **参数解释**： 重发死信消息结果。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class SendDlqMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resendResults
-    *  重发死信消息结果。
+    *  **参数解释**： 重发死信消息结果。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\DeadletterResendRespResendResults[]|null
     */
@@ -187,7 +187,7 @@ class SendDlqMessageResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resendResults
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\DeadletterResendRespResendResults[]|null $resendResults 重发死信消息结果。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\DeadletterResendRespResendResults[]|null $resendResults **参数解释**： 重发死信消息结果。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */

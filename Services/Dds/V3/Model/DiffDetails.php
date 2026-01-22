@@ -20,9 +20,9 @@ class DiffDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * parameterName  参数名称
-    * sourceValue  比较参数模板的参数值。
-    * targetValue  目标参数模板的参数值。
+    * parameterName  **参数解释：** 参数名称。 **取值范围：** 不涉及。
+    * sourceValue  **参数解释：** 源参数模板中的参数值。 **取值范围：** 不涉及。
+    * targetValue  **参数解释：** 目标参数模板中的参数值。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class DiffDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * parameterName  参数名称
-    * sourceValue  比较参数模板的参数值。
-    * targetValue  目标参数模板的参数值。
+    * parameterName  **参数解释：** 参数名称。 **取值范围：** 不涉及。
+    * sourceValue  **参数解释：** 源参数模板中的参数值。 **取值范围：** 不涉及。
+    * targetValue  **参数解释：** 目标参数模板中的参数值。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class DiffDetails implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * parameterName  参数名称
-    * sourceValue  比较参数模板的参数值。
-    * targetValue  目标参数模板的参数值。
+    * parameterName  **参数解释：** 参数名称。 **取值范围：** 不涉及。
+    * sourceValue  **参数解释：** 源参数模板中的参数值。 **取值范围：** 不涉及。
+    * targetValue  **参数解释：** 目标参数模板中的参数值。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class DiffDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * parameterName  参数名称
-    * sourceValue  比较参数模板的参数值。
-    * targetValue  目标参数模板的参数值。
+    * parameterName  **参数解释：** 参数名称。 **取值范围：** 不涉及。
+    * sourceValue  **参数解释：** 源参数模板中的参数值。 **取值范围：** 不涉及。
+    * targetValue  **参数解释：** 目标参数模板中的参数值。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class DiffDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * parameterName  参数名称
-    * sourceValue  比较参数模板的参数值。
-    * targetValue  目标参数模板的参数值。
+    * parameterName  **参数解释：** 参数名称。 **取值范围：** 不涉及。
+    * sourceValue  **参数解释：** 源参数模板中的参数值。 **取值范围：** 不涉及。
+    * targetValue  **参数解释：** 目标参数模板中的参数值。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class DiffDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets parameterName
-    *  参数名称
+    *  **参数解释：** 参数名称。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class DiffDetails implements ModelInterface, ArrayAccess
     /**
     * Sets parameterName
     *
-    * @param string $parameterName 参数名称
+    * @param string $parameterName **参数解释：** 参数名称。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class DiffDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceValue
-    *  比较参数模板的参数值。
+    *  **参数解释：** 源参数模板中的参数值。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class DiffDetails implements ModelInterface, ArrayAccess
     /**
     * Sets sourceValue
     *
-    * @param string $sourceValue 比较参数模板的参数值。
+    * @param string $sourceValue **参数解释：** 源参数模板中的参数值。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class DiffDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetValue
-    *  目标参数模板的参数值。
+    *  **参数解释：** 目标参数模板中的参数值。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class DiffDetails implements ModelInterface, ArrayAccess
     /**
     * Sets targetValue
     *
-    * @param string $targetValue 目标参数模板的参数值。
+    * @param string $targetValue **参数解释：** 目标参数模板中的参数值。 **取值范围：** 不涉及。
     *
     * @return $this
     */

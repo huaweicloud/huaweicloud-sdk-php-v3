@@ -20,7 +20,7 @@ class VpcAttachmentDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vpcId  东西向防护添加的防护vpc的id
+    * vpcId  **参数解释**： 东西向防护添加的防护VPC的ID **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class VpcAttachmentDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vpcId  东西向防护添加的防护vpc的id
+    * vpcId  **参数解释**： 东西向防护添加的防护VPC的ID **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class VpcAttachmentDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vpcId  东西向防护添加的防护vpc的id
+    * vpcId  **参数解释**： 东西向防护添加的防护VPC的ID **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class VpcAttachmentDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vpcId  东西向防护添加的防护vpc的id
+    * vpcId  **参数解释**： 东西向防护添加的防护VPC的ID **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class VpcAttachmentDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vpcId  东西向防护添加的防护vpc的id
+    * vpcId  **参数解释**： 东西向防护添加的防护VPC的ID **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class VpcAttachmentDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  东西向防护添加的防护vpc的id
+    *  **参数解释**： 东西向防护添加的防护VPC的ID **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class VpcAttachmentDetail implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId 东西向防护添加的防护vpc的id
+    * @param string|null $vpcId **参数解释**： 东西向防护添加的防护VPC的ID **取值范围**： 不涉及
     *
     * @return $this
     */

@@ -331,14 +331,14 @@ class ShowTrafficTrendRequest implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['startTime']) && ($this->container['startTime'] > 9223372036854775807)) {
-                $invalidProperties[] = "invalid value for 'startTime', must be smaller than or equal to 9223372036854775807.";
+            if (!is_null($this->container['startTime']) && ($this->container['startTime'] > 9007199254740992)) {
+                $invalidProperties[] = "invalid value for 'startTime', must be smaller than or equal to 9007199254740992.";
             }
             if (!is_null($this->container['startTime']) && ($this->container['startTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'startTime', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['endTime']) && ($this->container['endTime'] > 9223372036854775807)) {
-                $invalidProperties[] = "invalid value for 'endTime', must be smaller than or equal to 9223372036854775807.";
+            if (!is_null($this->container['endTime']) && ($this->container['endTime'] > 9007199254740992)) {
+                $invalidProperties[] = "invalid value for 'endTime', must be smaller than or equal to 9007199254740992.";
             }
             if (!is_null($this->container['endTime']) && ($this->container['endTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'endTime', must be bigger than or equal to 0.";

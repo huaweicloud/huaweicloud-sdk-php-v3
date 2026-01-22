@@ -21,7 +21,7 @@ class ShowInstanceExtendProductInfoRespHourly implements ModelInterface, ArrayAc
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  消息引擎的名称，该字段显示为rabbitmq。
-    * version  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:hk_sbc,sbc)。
+    * version  消息引擎的版本，当前支持3.8.35。
     * values  产品规格列表。
     *
     * @var string[]
@@ -29,13 +29,13 @@ class ShowInstanceExtendProductInfoRespHourly implements ModelInterface, ArrayAc
     protected static $openAPITypes = [
             'name' => 'string',
             'version' => 'string',
-            'values' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespValues[]'
+            'values' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowInstanceExtendProductInfoRespValues[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  消息引擎的名称，该字段显示为rabbitmq。
-    * version  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:hk_sbc,sbc)。
+    * version  消息引擎的版本，当前支持3.8.35。
     * values  产品规格列表。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class ShowInstanceExtendProductInfoRespHourly implements ModelInterface, ArrayAc
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  消息引擎的名称，该字段显示为rabbitmq。
-    * version  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:hk_sbc,sbc)。
+    * version  消息引擎的版本，当前支持3.8.35。
     * values  产品规格列表。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class ShowInstanceExtendProductInfoRespHourly implements ModelInterface, ArrayAc
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  消息引擎的名称，该字段显示为rabbitmq。
-    * version  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:hk_sbc,sbc)。
+    * version  消息引擎的版本，当前支持3.8.35。
     * values  产品规格列表。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ShowInstanceExtendProductInfoRespHourly implements ModelInterface, ArrayAc
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  消息引擎的名称，该字段显示为rabbitmq。
-    * version  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:hk_sbc,sbc)。
+    * version  消息引擎的版本，当前支持3.8.35。
     * values  产品规格列表。
     *
     * @var string[]
@@ -220,7 +220,7 @@ class ShowInstanceExtendProductInfoRespHourly implements ModelInterface, ArrayAc
 
     /**
     * Gets version
-    *  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:hk_sbc,sbc)。
+    *  消息引擎的版本，当前支持3.8.35。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class ShowInstanceExtendProductInfoRespHourly implements ModelInterface, ArrayAc
     /**
     * Sets version
     *
-    * @param string|null $version 消息引擎的版本，当前支持3.8.35[和3.7.17](tag:hk_sbc,sbc)。
+    * @param string|null $version 消息引擎的版本，当前支持3.8.35。
     *
     * @return $this
     */
@@ -246,7 +246,7 @@ class ShowInstanceExtendProductInfoRespHourly implements ModelInterface, ArrayAc
     * Gets values
     *  产品规格列表。
     *
-    * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespValues[]|null
+    * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowInstanceExtendProductInfoRespValues[]|null
     */
     public function getValues()
     {
@@ -256,7 +256,7 @@ class ShowInstanceExtendProductInfoRespHourly implements ModelInterface, ArrayAc
     /**
     * Sets values
     *
-    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespValues[]|null $values 产品规格列表。
+    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowInstanceExtendProductInfoRespValues[]|null $values 产品规格列表。
     *
     * @return $this
     */

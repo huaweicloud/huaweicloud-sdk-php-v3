@@ -20,9 +20,9 @@ class IpsRuleChangeDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ipsIds  ips的id列表
+    * ipsIds  ips的id列表，Ips规则id，为必填参数，可通过[获取ips规则列表]( ListIpsRules.xml)查询获得，通过返回值中的data.records.ips_id（.表示各对象之间层级的区分）获得。
     * objectId  防护对象id
-    * status  ips规则状态
+    * status  ips规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class IpsRuleChangeDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ipsIds  ips的id列表
+    * ipsIds  ips的id列表，Ips规则id，为必填参数，可通过[获取ips规则列表]( ListIpsRules.xml)查询获得，通过返回值中的data.records.ips_id（.表示各对象之间层级的区分）获得。
     * objectId  防护对象id
-    * status  ips规则状态
+    * status  ips规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class IpsRuleChangeDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ipsIds  ips的id列表
+    * ipsIds  ips的id列表，Ips规则id，为必填参数，可通过[获取ips规则列表]( ListIpsRules.xml)查询获得，通过返回值中的data.records.ips_id（.表示各对象之间层级的区分）获得。
     * objectId  防护对象id
-    * status  ips规则状态
+    * status  ips规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class IpsRuleChangeDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ipsIds  ips的id列表
+    * ipsIds  ips的id列表，Ips规则id，为必填参数，可通过[获取ips规则列表]( ListIpsRules.xml)查询获得，通过返回值中的data.records.ips_id（.表示各对象之间层级的区分）获得。
     * objectId  防护对象id
-    * status  ips规则状态
+    * status  ips规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class IpsRuleChangeDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ipsIds  ips的id列表
+    * ipsIds  ips的id列表，Ips规则id，为必填参数，可通过[获取ips规则列表]( ListIpsRules.xml)查询获得，通过返回值中的data.records.ips_id（.表示各对象之间层级的区分）获得。
     * objectId  防护对象id
-    * status  ips规则状态
+    * status  ips规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
     *
     * @var string[]
     */
@@ -225,7 +225,7 @@ class IpsRuleChangeDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipsIds
-    *  ips的id列表
+    *  ips的id列表，Ips规则id，为必填参数，可通过[获取ips规则列表]( ListIpsRules.xml)查询获得，通过返回值中的data.records.ips_id（.表示各对象之间层级的区分）获得。
     *
     * @return string[]|null
     */
@@ -237,7 +237,7 @@ class IpsRuleChangeDto implements ModelInterface, ArrayAccess
     /**
     * Sets ipsIds
     *
-    * @param string[]|null $ipsIds ips的id列表
+    * @param string[]|null $ipsIds ips的id列表，Ips规则id，为必填参数，可通过[获取ips规则列表]( ListIpsRules.xml)查询获得，通过返回值中的data.records.ips_id（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -273,7 +273,7 @@ class IpsRuleChangeDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  ips规则状态
+    *  ips规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class IpsRuleChangeDto implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status ips规则状态
+    * @param string|null $status ips规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
     *
     * @return $this
     */

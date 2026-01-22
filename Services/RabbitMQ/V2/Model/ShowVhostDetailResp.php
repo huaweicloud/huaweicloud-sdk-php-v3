@@ -21,7 +21,7 @@ class ShowVhostDetailResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  **参数解释**： Vhost名称。 **取值范围**： 不涉及。
-    * tracing  **参数解释**： 是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk)。 **取值范围**： - true：开启。 - false：不开启
+    * tracing  **参数解释**： 是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk,hws_eu)。 **取值范围**： - true：开启。 - false：不开启。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ShowVhostDetailResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  **参数解释**： Vhost名称。 **取值范围**： 不涉及。
-    * tracing  **参数解释**： 是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk)。 **取值范围**： - true：开启。 - false：不开启
+    * tracing  **参数解释**： 是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk,hws_eu)。 **取值范围**： - true：开启。 - false：不开启。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ShowVhostDetailResp implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  **参数解释**： Vhost名称。 **取值范围**： 不涉及。
-    * tracing  **参数解释**： 是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk)。 **取值范围**： - true：开启。 - false：不开启
+    * tracing  **参数解释**： 是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk,hws_eu)。 **取值范围**： - true：开启。 - false：不开启。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ShowVhostDetailResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  **参数解释**： Vhost名称。 **取值范围**： 不涉及。
-    * tracing  **参数解释**： 是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk)。 **取值范围**： - true：开启。 - false：不开启
+    * tracing  **参数解释**： 是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk,hws_eu)。 **取值范围**： - true：开启。 - false：不开启。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ShowVhostDetailResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  **参数解释**： Vhost名称。 **取值范围**： 不涉及。
-    * tracing  **参数解释**： 是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk)。 **取值范围**： - true：开启。 - false：不开启
+    * tracing  **参数解释**： 是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk,hws_eu)。 **取值范围**： - true：开启。 - false：不开启。
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class ShowVhostDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets tracing
-    *  **参数解释**： 是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk)。 **取值范围**： - true：开启。 - false：不开启
+    *  **参数解释**： 是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk,hws_eu)。 **取值范围**： - true：开启。 - false：不开启。
     *
     * @return bool|null
     */
@@ -221,7 +221,7 @@ class ShowVhostDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets tracing
     *
-    * @param bool|null $tracing **参数解释**： 是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk)。 **取值范围**： - true：开启。 - false：不开启
+    * @param bool|null $tracing **参数解释**： 是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk,hws_eu)。 **取值范围**： - true：开启。 - false：不开启。
     *
     * @return $this
     */

@@ -20,9 +20,9 @@ class MemberCheckJobResultGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * checkResult  **参数解释**：检查结果，true表示检查通过，false为检查不通过。  **取值范围**：不涉及
+    * checkResult  **参数解释**：检查结果。  **取值范围**：true表示检查通过，false为检查不通过。
     * checkItems  **参数解释**：分组检查项汇总。
-    * checkStatus  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
+    * checkStatus  **参数解释**：分组检查任务状态。  **取值范围**： - processed：检查任务执行完成。 - processing：检查任务执行中。 - failed：检查任务执行失败。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class MemberCheckJobResultGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * checkResult  **参数解释**：检查结果，true表示检查通过，false为检查不通过。  **取值范围**：不涉及
+    * checkResult  **参数解释**：检查结果。  **取值范围**：true表示检查通过，false为检查不通过。
     * checkItems  **参数解释**：分组检查项汇总。
-    * checkStatus  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
+    * checkStatus  **参数解释**：分组检查任务状态。  **取值范围**： - processed：检查任务执行完成。 - processing：检查任务执行中。 - failed：检查任务执行失败。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class MemberCheckJobResultGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * checkResult  **参数解释**：检查结果，true表示检查通过，false为检查不通过。  **取值范围**：不涉及
+    * checkResult  **参数解释**：检查结果。  **取值范围**：true表示检查通过，false为检查不通过。
     * checkItems  **参数解释**：分组检查项汇总。
-    * checkStatus  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
+    * checkStatus  **参数解释**：分组检查任务状态。  **取值范围**： - processed：检查任务执行完成。 - processing：检查任务执行中。 - failed：检查任务执行失败。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class MemberCheckJobResultGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * checkResult  **参数解释**：检查结果，true表示检查通过，false为检查不通过。  **取值范围**：不涉及
+    * checkResult  **参数解释**：检查结果。  **取值范围**：true表示检查通过，false为检查不通过。
     * checkItems  **参数解释**：分组检查项汇总。
-    * checkStatus  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
+    * checkStatus  **参数解释**：分组检查任务状态。  **取值范围**： - processed：检查任务执行完成。 - processing：检查任务执行中。 - failed：检查任务执行失败。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class MemberCheckJobResultGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * checkResult  **参数解释**：检查结果，true表示检查通过，false为检查不通过。  **取值范围**：不涉及
+    * checkResult  **参数解释**：检查结果。  **取值范围**：true表示检查通过，false为检查不通过。
     * checkItems  **参数解释**：分组检查项汇总。
-    * checkStatus  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
+    * checkStatus  **参数解释**：分组检查任务状态。  **取值范围**： - processed：检查任务执行完成。 - processing：检查任务执行中。 - failed：检查任务执行失败。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class MemberCheckJobResultGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkResult
-    *  **参数解释**：检查结果，true表示检查通过，false为检查不通过。  **取值范围**：不涉及
+    *  **参数解释**：检查结果。  **取值范围**：true表示检查通过，false为检查不通过。
     *
     * @return bool|null
     */
@@ -208,7 +208,7 @@ class MemberCheckJobResultGroup implements ModelInterface, ArrayAccess
     /**
     * Sets checkResult
     *
-    * @param bool|null $checkResult **参数解释**：检查结果，true表示检查通过，false为检查不通过。  **取值范围**：不涉及
+    * @param bool|null $checkResult **参数解释**：检查结果。  **取值范围**：true表示检查通过，false为检查不通过。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class MemberCheckJobResultGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkStatus
-    *  **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
+    *  **参数解释**：分组检查任务状态。  **取值范围**： - processed：检查任务执行完成。 - processing：检查任务执行中。 - failed：检查任务执行失败。
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class MemberCheckJobResultGroup implements ModelInterface, ArrayAccess
     /**
     * Sets checkStatus
     *
-    * @param string|null $checkStatus **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
+    * @param string|null $checkStatus **参数解释**：分组检查任务状态。  **取值范围**： - processed：检查任务执行完成。 - processing：检查任务执行中。 - failed：检查任务执行失败。
     *
     * @return $this
     */

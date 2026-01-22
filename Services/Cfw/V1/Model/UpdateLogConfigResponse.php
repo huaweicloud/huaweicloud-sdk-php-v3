@@ -21,7 +21,7 @@ class UpdateLogConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * data  更新日志配置返回值，为防火墙id
+    * data  更新日志配置返回值，为防火墙ID
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class UpdateLogConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * data  更新日志配置返回值，为防火墙id
+    * data  更新日志配置返回值，为防火墙ID
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class UpdateLogConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * data  更新日志配置返回值，为防火墙id
+    * data  更新日志配置返回值，为防火墙ID
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class UpdateLogConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * data  更新日志配置返回值，为防火墙id
+    * data  更新日志配置返回值，为防火墙ID
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class UpdateLogConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * data  更新日志配置返回值，为防火墙id
+    * data  更新日志配置返回值，为防火墙ID
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class UpdateLogConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
-    *  更新日志配置返回值，为防火墙id
+    *  更新日志配置返回值，为防火墙ID
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class UpdateLogConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param string|null $data 更新日志配置返回值，为防火墙id
+    * @param string|null $data 更新日志配置返回值，为防火墙ID
     *
     * @return $this
     */

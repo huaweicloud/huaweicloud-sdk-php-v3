@@ -21,8 +21,8 @@ class UpdateEntityConfigurationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  修改实例参数的异步任务ID。
-    * restartRequired  参数修改涉及范围（实例，组，节点）否需要重启。 - false不需要重启 - true需要重启。
+    * jobId  **参数解释：** 修改实例参数的异步任务ID。 **取值范围：** 不涉及。
+    * restartRequired  **参数解释：** 参数修改涉及范围（实例，组，节点）否需要重启。 **取值范围：** - 取值为false，不需要重启。 - 取值为true，需要重启。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class UpdateEntityConfigurationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  修改实例参数的异步任务ID。
-    * restartRequired  参数修改涉及范围（实例，组，节点）否需要重启。 - false不需要重启 - true需要重启。
+    * jobId  **参数解释：** 修改实例参数的异步任务ID。 **取值范围：** 不涉及。
+    * restartRequired  **参数解释：** 参数修改涉及范围（实例，组，节点）否需要重启。 **取值范围：** - 取值为false，不需要重启。 - 取值为true，需要重启。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class UpdateEntityConfigurationResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  修改实例参数的异步任务ID。
-    * restartRequired  参数修改涉及范围（实例，组，节点）否需要重启。 - false不需要重启 - true需要重启。
+    * jobId  **参数解释：** 修改实例参数的异步任务ID。 **取值范围：** 不涉及。
+    * restartRequired  **参数解释：** 参数修改涉及范围（实例，组，节点）否需要重启。 **取值范围：** - 取值为false，不需要重启。 - 取值为true，需要重启。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class UpdateEntityConfigurationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  修改实例参数的异步任务ID。
-    * restartRequired  参数修改涉及范围（实例，组，节点）否需要重启。 - false不需要重启 - true需要重启。
+    * jobId  **参数解释：** 修改实例参数的异步任务ID。 **取值范围：** 不涉及。
+    * restartRequired  **参数解释：** 参数修改涉及范围（实例，组，节点）否需要重启。 **取值范围：** - 取值为false，不需要重启。 - 取值为true，需要重启。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class UpdateEntityConfigurationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  修改实例参数的异步任务ID。
-    * restartRequired  参数修改涉及范围（实例，组，节点）否需要重启。 - false不需要重启 - true需要重启。
+    * jobId  **参数解释：** 修改实例参数的异步任务ID。 **取值范围：** 不涉及。
+    * restartRequired  **参数解释：** 参数修改涉及范围（实例，组，节点）否需要重启。 **取值范围：** - 取值为false，不需要重启。 - 取值为true，需要重启。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class UpdateEntityConfigurationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  修改实例参数的异步任务ID。
+    *  **参数解释：** 修改实例参数的异步任务ID。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class UpdateEntityConfigurationResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 修改实例参数的异步任务ID。
+    * @param string|null $jobId **参数解释：** 修改实例参数的异步任务ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class UpdateEntityConfigurationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets restartRequired
-    *  参数修改涉及范围（实例，组，节点）否需要重启。 - false不需要重启 - true需要重启。
+    *  **参数解释：** 参数修改涉及范围（实例，组，节点）否需要重启。 **取值范围：** - 取值为false，不需要重启。 - 取值为true，需要重启。
     *
     * @return bool|null
     */
@@ -222,7 +222,7 @@ class UpdateEntityConfigurationResponse implements ModelInterface, ArrayAccess
     /**
     * Sets restartRequired
     *
-    * @param bool|null $restartRequired 参数修改涉及范围（实例，组，节点）否需要重启。 - false不需要重启 - true需要重启。
+    * @param bool|null $restartRequired **参数解释：** 参数修改涉及范围（实例，组，节点）否需要重启。 **取值范围：** - 取值为false，不需要重启。 - 取值为true，需要重启。
     *
     * @return $this
     */

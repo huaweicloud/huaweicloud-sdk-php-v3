@@ -20,8 +20,8 @@ class DomainSetInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainName  域名，如www.test.com
-    * description  域名描述
+    * domainName  **参数解释**： 域名 **约束限制**： 不涉及 **取值范围**： 域名格式，如www.example.com **默认取值**： 不涉及
+    * description  **参数解释**： 域名描述 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DomainSetInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainName  域名，如www.test.com
-    * description  域名描述
+    * domainName  **参数解释**： 域名 **约束限制**： 不涉及 **取值范围**： 域名格式，如www.example.com **默认取值**： 不涉及
+    * description  **参数解释**： 域名描述 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DomainSetInfoDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainName  域名，如www.test.com
-    * description  域名描述
+    * domainName  **参数解释**： 域名 **约束限制**： 不涉及 **取值范围**： 域名格式，如www.example.com **默认取值**： 不涉及
+    * description  **参数解释**： 域名描述 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DomainSetInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainName  域名，如www.test.com
-    * description  域名描述
+    * domainName  **参数解释**： 域名 **约束限制**： 不涉及 **取值范围**： 域名格式，如www.example.com **默认取值**： 不涉及
+    * description  **参数解释**： 域名描述 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DomainSetInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainName  域名，如www.test.com
-    * description  域名描述
+    * domainName  **参数解释**： 域名 **约束限制**： 不涉及 **取值范围**： 域名格式，如www.example.com **默认取值**： 不涉及
+    * description  **参数解释**： 域名描述 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class DomainSetInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainName
-    *  域名，如www.test.com
+    *  **参数解释**： 域名 **约束限制**： 不涉及 **取值范围**： 域名格式，如www.example.com **默认取值**： 不涉及
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class DomainSetInfoDto implements ModelInterface, ArrayAccess
     /**
     * Sets domainName
     *
-    * @param string $domainName 域名，如www.test.com
+    * @param string $domainName **参数解释**： 域名 **约束限制**： 不涉及 **取值范围**： 域名格式，如www.example.com **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class DomainSetInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  域名描述
+    *  **参数解释**： 域名描述 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -224,7 +224,7 @@ class DomainSetInfoDto implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 域名描述
+    * @param string|null $description **参数解释**： 域名描述 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

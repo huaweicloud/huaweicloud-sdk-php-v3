@@ -20,8 +20,8 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topic  重置的主题。
-    * timestamp  重置的时间。
+    * topic  **参数解释**： 重置的主题。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * timestamp  **参数解释**： 重置的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topic  重置的主题。
-    * timestamp  重置的时间。
+    * topic  **参数解释**： 重置的主题。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * timestamp  **参数解释**： 重置的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topic  重置的主题。
-    * timestamp  重置的时间。
+    * topic  **参数解释**： 重置的主题。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * timestamp  **参数解释**： 重置的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topic  重置的主题。
-    * timestamp  重置的时间。
+    * topic  **参数解释**： 重置的主题。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * timestamp  **参数解释**： 重置的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topic  重置的主题。
-    * timestamp  重置的时间。
+    * topic  **参数解释**： 重置的主题。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * timestamp  **参数解释**： 重置的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  重置的主题。
+    *  **参数解释**： 重置的主题。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string $topic 重置的主题。
+    * @param string $topic **参数解释**： 重置的主题。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets timestamp
-    *  重置的时间。
+    *  **参数解释**： 重置的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
     /**
     * Sets timestamp
     *
-    * @param string $timestamp 重置的时间。
+    * @param string $timestamp **参数解释**： 重置的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class BlackWhiteListId implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  黑白名单id
-    * name  黑白名单名称，为黑白名单的地址
+    * name  黑白名单的地址
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class BlackWhiteListId implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  黑白名单id
-    * name  黑白名单名称，为黑白名单的地址
+    * name  黑白名单的地址
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class BlackWhiteListId implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  黑白名单id
-    * name  黑白名单名称，为黑白名单的地址
+    * name  黑白名单的地址
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class BlackWhiteListId implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  黑白名单id
-    * name  黑白名单名称，为黑白名单的地址
+    * name  黑白名单的地址
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class BlackWhiteListId implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  黑白名单id
-    * name  黑白名单名称，为黑白名单的地址
+    * name  黑白名单的地址
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class BlackWhiteListId implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  黑白名单名称，为黑白名单的地址
+    *  黑白名单的地址
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class BlackWhiteListId implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 黑白名单名称，为黑白名单的地址
+    * @param string|null $name 黑白名单的地址
     *
     * @return $this
     */

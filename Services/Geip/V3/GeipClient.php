@@ -2487,18 +2487,6 @@ class GeipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['marker'] !== null) {
-            $queryParams['marker'] = $localVarParams['marker'];
-        }
-        if ($localVarParams['pageReverse'] !== null) {
-            $queryParams['page_reverse'] = $localVarParams['pageReverse'];
-        }
         if ($localVarParams['fields'] !== null) {
             $queryParams['fields'] = $localVarParams['fields'];
         }

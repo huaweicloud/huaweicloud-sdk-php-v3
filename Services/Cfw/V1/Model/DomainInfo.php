@@ -20,9 +20,9 @@ class DomainInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainAddressId  域名地址id
-    * domainName  域名，如www.test.com
-    * description  域名描述
+    * domainAddressId  **参数解释**： 域名地址id **取值范围**： 不涉及
+    * domainName  **参数解释**： 域名 **取值范围**： 不涉及
+    * description  **参数解释**： 域名描述 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class DomainInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainAddressId  域名地址id
-    * domainName  域名，如www.test.com
-    * description  域名描述
+    * domainAddressId  **参数解释**： 域名地址id **取值范围**： 不涉及
+    * domainName  **参数解释**： 域名 **取值范围**： 不涉及
+    * description  **参数解释**： 域名描述 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class DomainInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainAddressId  域名地址id
-    * domainName  域名，如www.test.com
-    * description  域名描述
+    * domainAddressId  **参数解释**： 域名地址id **取值范围**： 不涉及
+    * domainName  **参数解释**： 域名 **取值范围**： 不涉及
+    * description  **参数解释**： 域名描述 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class DomainInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainAddressId  域名地址id
-    * domainName  域名，如www.test.com
-    * description  域名描述
+    * domainAddressId  **参数解释**： 域名地址id **取值范围**： 不涉及
+    * domainName  **参数解释**： 域名 **取值范围**： 不涉及
+    * description  **参数解释**： 域名描述 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class DomainInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainAddressId  域名地址id
-    * domainName  域名，如www.test.com
-    * description  域名描述
+    * domainAddressId  **参数解释**： 域名地址id **取值范围**： 不涉及
+    * domainName  **参数解释**： 域名 **取值范围**： 不涉及
+    * description  **参数解释**： 域名描述 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class DomainInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainAddressId
-    *  域名地址id
+    *  **参数解释**： 域名地址id **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class DomainInfo implements ModelInterface, ArrayAccess
     /**
     * Sets domainAddressId
     *
-    * @param string|null $domainAddressId 域名地址id
+    * @param string|null $domainAddressId **参数解释**： 域名地址id **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class DomainInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainName
-    *  域名，如www.test.com
+    *  **参数解释**： 域名 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class DomainInfo implements ModelInterface, ArrayAccess
     /**
     * Sets domainName
     *
-    * @param string|null $domainName 域名，如www.test.com
+    * @param string|null $domainName **参数解释**： 域名 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class DomainInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  域名描述
+    *  **参数解释**： 域名描述 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class DomainInfo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 域名描述
+    * @param string|null $description **参数解释**： 域名描述 **取值范围**： 不涉及
     *
     * @return $this
     */

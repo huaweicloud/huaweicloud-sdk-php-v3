@@ -20,28 +20,80 @@ class ListIpsRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * objectId  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
-    * projectId  项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    * affectedApplicationLike  受影响对象查询关键字，可包含如下：Others、Sun、Apache、IBM、VMware、WordPress、Adobe、Oracle、Google Chrome等
+    * createTime  IPS规则创建的年份
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * ipsCveLike  cve id查询关键字，cve id为cve漏洞库中存储的漏洞id
+    * ipsGroup  IPS组，使用IPS规则拦截模式区分，包含，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
+    * ipsId  IPS规则id
+    * ipsLevel  IPS严重等级，包含CRITICAL、HIGH、MEDIUM、LOW
+    * ipsNameLike  IPS规则名称查询关键字
+    * ipsRulesTypeLike  IPS规则类型，包括漏洞扫描、黑客工具、特洛伊木马等
+    * ipsStatus  IPS规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
+    * isUpdatedIpsRuleQueried  是否查询虚拟补丁相对基础防御更新规则，是表示true,否表示false
+    * limit  每页显示个数，范围为1-1024
+    * objectId  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'affectedApplicationLike' => 'int',
+            'createTime' => 'int',
+            'fwInstanceId' => 'string',
+            'ipsCveLike' => 'int',
+            'ipsGroup' => 'int',
+            'ipsId' => 'string',
+            'ipsLevel' => 'int',
+            'ipsNameLike' => 'string',
+            'ipsRulesTypeLike' => 'int',
+            'ipsStatus' => 'string',
+            'isUpdatedIpsRuleQueried' => 'bool',
+            'limit' => 'int',
             'objectId' => 'string',
+            'offset' => 'int',
             'projectId' => 'string',
             'enterpriseProjectId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * objectId  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
-    * projectId  项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    * affectedApplicationLike  受影响对象查询关键字，可包含如下：Others、Sun、Apache、IBM、VMware、WordPress、Adobe、Oracle、Google Chrome等
+    * createTime  IPS规则创建的年份
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * ipsCveLike  cve id查询关键字，cve id为cve漏洞库中存储的漏洞id
+    * ipsGroup  IPS组，使用IPS规则拦截模式区分，包含，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
+    * ipsId  IPS规则id
+    * ipsLevel  IPS严重等级，包含CRITICAL、HIGH、MEDIUM、LOW
+    * ipsNameLike  IPS规则名称查询关键字
+    * ipsRulesTypeLike  IPS规则类型，包括漏洞扫描、黑客工具、特洛伊木马等
+    * ipsStatus  IPS规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
+    * isUpdatedIpsRuleQueried  是否查询虚拟补丁相对基础防御更新规则，是表示true,否表示false
+    * limit  每页显示个数，范围为1-1024
+    * objectId  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'affectedApplicationLike' => 'int32',
+        'createTime' => 'int32',
+        'fwInstanceId' => null,
+        'ipsCveLike' => 'int32',
+        'ipsGroup' => 'int32',
+        'ipsId' => null,
+        'ipsLevel' => 'int32',
+        'ipsNameLike' => null,
+        'ipsRulesTypeLike' => 'int32',
+        'ipsStatus' => null,
+        'isUpdatedIpsRuleQueried' => null,
+        'limit' => 'int32',
         'objectId' => null,
+        'offset' => 'int32',
         'projectId' => null,
         'enterpriseProjectId' => null
     ];
@@ -69,42 +121,120 @@ class ListIpsRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * objectId  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
-    * projectId  项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    * affectedApplicationLike  受影响对象查询关键字，可包含如下：Others、Sun、Apache、IBM、VMware、WordPress、Adobe、Oracle、Google Chrome等
+    * createTime  IPS规则创建的年份
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * ipsCveLike  cve id查询关键字，cve id为cve漏洞库中存储的漏洞id
+    * ipsGroup  IPS组，使用IPS规则拦截模式区分，包含，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
+    * ipsId  IPS规则id
+    * ipsLevel  IPS严重等级，包含CRITICAL、HIGH、MEDIUM、LOW
+    * ipsNameLike  IPS规则名称查询关键字
+    * ipsRulesTypeLike  IPS规则类型，包括漏洞扫描、黑客工具、特洛伊木马等
+    * ipsStatus  IPS规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
+    * isUpdatedIpsRuleQueried  是否查询虚拟补丁相对基础防御更新规则，是表示true,否表示false
+    * limit  每页显示个数，范围为1-1024
+    * objectId  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'affectedApplicationLike' => 'affected_application_like',
+            'createTime' => 'create_time',
+            'fwInstanceId' => 'fw_instance_id',
+            'ipsCveLike' => 'ips_cve_like',
+            'ipsGroup' => 'ips_group',
+            'ipsId' => 'ips_id',
+            'ipsLevel' => 'ips_level',
+            'ipsNameLike' => 'ips_name_like',
+            'ipsRulesTypeLike' => 'ips_rules_type_like',
+            'ipsStatus' => 'ips_status',
+            'isUpdatedIpsRuleQueried' => 'is_updated_ips_rule_queried',
+            'limit' => 'limit',
             'objectId' => 'object_id',
+            'offset' => 'offset',
             'projectId' => 'project_id',
             'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * objectId  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
-    * projectId  项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    * affectedApplicationLike  受影响对象查询关键字，可包含如下：Others、Sun、Apache、IBM、VMware、WordPress、Adobe、Oracle、Google Chrome等
+    * createTime  IPS规则创建的年份
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * ipsCveLike  cve id查询关键字，cve id为cve漏洞库中存储的漏洞id
+    * ipsGroup  IPS组，使用IPS规则拦截模式区分，包含，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
+    * ipsId  IPS规则id
+    * ipsLevel  IPS严重等级，包含CRITICAL、HIGH、MEDIUM、LOW
+    * ipsNameLike  IPS规则名称查询关键字
+    * ipsRulesTypeLike  IPS规则类型，包括漏洞扫描、黑客工具、特洛伊木马等
+    * ipsStatus  IPS规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
+    * isUpdatedIpsRuleQueried  是否查询虚拟补丁相对基础防御更新规则，是表示true,否表示false
+    * limit  每页显示个数，范围为1-1024
+    * objectId  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     *
     * @var string[]
     */
     protected static $setters = [
+            'affectedApplicationLike' => 'setAffectedApplicationLike',
+            'createTime' => 'setCreateTime',
+            'fwInstanceId' => 'setFwInstanceId',
+            'ipsCveLike' => 'setIpsCveLike',
+            'ipsGroup' => 'setIpsGroup',
+            'ipsId' => 'setIpsId',
+            'ipsLevel' => 'setIpsLevel',
+            'ipsNameLike' => 'setIpsNameLike',
+            'ipsRulesTypeLike' => 'setIpsRulesTypeLike',
+            'ipsStatus' => 'setIpsStatus',
+            'isUpdatedIpsRuleQueried' => 'setIsUpdatedIpsRuleQueried',
+            'limit' => 'setLimit',
             'objectId' => 'setObjectId',
+            'offset' => 'setOffset',
             'projectId' => 'setProjectId',
             'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * objectId  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
-    * projectId  项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    * affectedApplicationLike  受影响对象查询关键字，可包含如下：Others、Sun、Apache、IBM、VMware、WordPress、Adobe、Oracle、Google Chrome等
+    * createTime  IPS规则创建的年份
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * ipsCveLike  cve id查询关键字，cve id为cve漏洞库中存储的漏洞id
+    * ipsGroup  IPS组，使用IPS规则拦截模式区分，包含，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
+    * ipsId  IPS规则id
+    * ipsLevel  IPS严重等级，包含CRITICAL、HIGH、MEDIUM、LOW
+    * ipsNameLike  IPS规则名称查询关键字
+    * ipsRulesTypeLike  IPS规则类型，包括漏洞扫描、黑客工具、特洛伊木马等
+    * ipsStatus  IPS规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
+    * isUpdatedIpsRuleQueried  是否查询虚拟补丁相对基础防御更新规则，是表示true,否表示false
+    * limit  每页显示个数，范围为1-1024
+    * objectId  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     *
     * @var string[]
     */
     protected static $getters = [
+            'affectedApplicationLike' => 'getAffectedApplicationLike',
+            'createTime' => 'getCreateTime',
+            'fwInstanceId' => 'getFwInstanceId',
+            'ipsCveLike' => 'getIpsCveLike',
+            'ipsGroup' => 'getIpsGroup',
+            'ipsId' => 'getIpsId',
+            'ipsLevel' => 'getIpsLevel',
+            'ipsNameLike' => 'getIpsNameLike',
+            'ipsRulesTypeLike' => 'getIpsRulesTypeLike',
+            'ipsStatus' => 'getIpsStatus',
+            'isUpdatedIpsRuleQueried' => 'getIsUpdatedIpsRuleQueried',
+            'limit' => 'getLimit',
             'objectId' => 'getObjectId',
+            'offset' => 'getOffset',
             'projectId' => 'getProjectId',
             'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
@@ -167,7 +297,20 @@ class ListIpsRulesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['affectedApplicationLike'] = isset($data['affectedApplicationLike']) ? $data['affectedApplicationLike'] : null;
+        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['fwInstanceId'] = isset($data['fwInstanceId']) ? $data['fwInstanceId'] : null;
+        $this->container['ipsCveLike'] = isset($data['ipsCveLike']) ? $data['ipsCveLike'] : null;
+        $this->container['ipsGroup'] = isset($data['ipsGroup']) ? $data['ipsGroup'] : null;
+        $this->container['ipsId'] = isset($data['ipsId']) ? $data['ipsId'] : null;
+        $this->container['ipsLevel'] = isset($data['ipsLevel']) ? $data['ipsLevel'] : null;
+        $this->container['ipsNameLike'] = isset($data['ipsNameLike']) ? $data['ipsNameLike'] : null;
+        $this->container['ipsRulesTypeLike'] = isset($data['ipsRulesTypeLike']) ? $data['ipsRulesTypeLike'] : null;
+        $this->container['ipsStatus'] = isset($data['ipsStatus']) ? $data['ipsStatus'] : null;
+        $this->container['isUpdatedIpsRuleQueried'] = isset($data['isUpdatedIpsRuleQueried']) ? $data['isUpdatedIpsRuleQueried'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
@@ -180,9 +323,24 @@ class ListIpsRulesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['limit'] === null) {
+            $invalidProperties[] = "'limit' can't be null";
+        }
+            if (($this->container['limit'] > 1024)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1024.";
+            }
+            if (($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
         if ($this->container['objectId'] === null) {
             $invalidProperties[] = "'objectId' can't be null";
         }
+        if ($this->container['offset'] === null) {
+            $invalidProperties[] = "'offset' can't be null";
+        }
+            if (($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
         }
@@ -201,8 +359,296 @@ class ListIpsRulesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets affectedApplicationLike
+    *  受影响对象查询关键字，可包含如下：Others、Sun、Apache、IBM、VMware、WordPress、Adobe、Oracle、Google Chrome等
+    *
+    * @return int|null
+    */
+    public function getAffectedApplicationLike()
+    {
+        return $this->container['affectedApplicationLike'];
+    }
+
+    /**
+    * Sets affectedApplicationLike
+    *
+    * @param int|null $affectedApplicationLike 受影响对象查询关键字，可包含如下：Others、Sun、Apache、IBM、VMware、WordPress、Adobe、Oracle、Google Chrome等
+    *
+    * @return $this
+    */
+    public function setAffectedApplicationLike($affectedApplicationLike)
+    {
+        $this->container['affectedApplicationLike'] = $affectedApplicationLike;
+        return $this;
+    }
+
+    /**
+    * Gets createTime
+    *  IPS规则创建的年份
+    *
+    * @return int|null
+    */
+    public function getCreateTime()
+    {
+        return $this->container['createTime'];
+    }
+
+    /**
+    * Sets createTime
+    *
+    * @param int|null $createTime IPS规则创建的年份
+    *
+    * @return $this
+    */
+    public function setCreateTime($createTime)
+    {
+        $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets fwInstanceId
+    *  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    *
+    * @return string|null
+    */
+    public function getFwInstanceId()
+    {
+        return $this->container['fwInstanceId'];
+    }
+
+    /**
+    * Sets fwInstanceId
+    *
+    * @param string|null $fwInstanceId 防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    *
+    * @return $this
+    */
+    public function setFwInstanceId($fwInstanceId)
+    {
+        $this->container['fwInstanceId'] = $fwInstanceId;
+        return $this;
+    }
+
+    /**
+    * Gets ipsCveLike
+    *  cve id查询关键字，cve id为cve漏洞库中存储的漏洞id
+    *
+    * @return int|null
+    */
+    public function getIpsCveLike()
+    {
+        return $this->container['ipsCveLike'];
+    }
+
+    /**
+    * Sets ipsCveLike
+    *
+    * @param int|null $ipsCveLike cve id查询关键字，cve id为cve漏洞库中存储的漏洞id
+    *
+    * @return $this
+    */
+    public function setIpsCveLike($ipsCveLike)
+    {
+        $this->container['ipsCveLike'] = $ipsCveLike;
+        return $this;
+    }
+
+    /**
+    * Gets ipsGroup
+    *  IPS组，使用IPS规则拦截模式区分，包含，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
+    *
+    * @return int|null
+    */
+    public function getIpsGroup()
+    {
+        return $this->container['ipsGroup'];
+    }
+
+    /**
+    * Sets ipsGroup
+    *
+    * @param int|null $ipsGroup IPS组，使用IPS规则拦截模式区分，包含，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
+    *
+    * @return $this
+    */
+    public function setIpsGroup($ipsGroup)
+    {
+        $this->container['ipsGroup'] = $ipsGroup;
+        return $this;
+    }
+
+    /**
+    * Gets ipsId
+    *  IPS规则id
+    *
+    * @return string|null
+    */
+    public function getIpsId()
+    {
+        return $this->container['ipsId'];
+    }
+
+    /**
+    * Sets ipsId
+    *
+    * @param string|null $ipsId IPS规则id
+    *
+    * @return $this
+    */
+    public function setIpsId($ipsId)
+    {
+        $this->container['ipsId'] = $ipsId;
+        return $this;
+    }
+
+    /**
+    * Gets ipsLevel
+    *  IPS严重等级，包含CRITICAL、HIGH、MEDIUM、LOW
+    *
+    * @return int|null
+    */
+    public function getIpsLevel()
+    {
+        return $this->container['ipsLevel'];
+    }
+
+    /**
+    * Sets ipsLevel
+    *
+    * @param int|null $ipsLevel IPS严重等级，包含CRITICAL、HIGH、MEDIUM、LOW
+    *
+    * @return $this
+    */
+    public function setIpsLevel($ipsLevel)
+    {
+        $this->container['ipsLevel'] = $ipsLevel;
+        return $this;
+    }
+
+    /**
+    * Gets ipsNameLike
+    *  IPS规则名称查询关键字
+    *
+    * @return string|null
+    */
+    public function getIpsNameLike()
+    {
+        return $this->container['ipsNameLike'];
+    }
+
+    /**
+    * Sets ipsNameLike
+    *
+    * @param string|null $ipsNameLike IPS规则名称查询关键字
+    *
+    * @return $this
+    */
+    public function setIpsNameLike($ipsNameLike)
+    {
+        $this->container['ipsNameLike'] = $ipsNameLike;
+        return $this;
+    }
+
+    /**
+    * Gets ipsRulesTypeLike
+    *  IPS规则类型，包括漏洞扫描、黑客工具、特洛伊木马等
+    *
+    * @return int|null
+    */
+    public function getIpsRulesTypeLike()
+    {
+        return $this->container['ipsRulesTypeLike'];
+    }
+
+    /**
+    * Sets ipsRulesTypeLike
+    *
+    * @param int|null $ipsRulesTypeLike IPS规则类型，包括漏洞扫描、黑客工具、特洛伊木马等
+    *
+    * @return $this
+    */
+    public function setIpsRulesTypeLike($ipsRulesTypeLike)
+    {
+        $this->container['ipsRulesTypeLike'] = $ipsRulesTypeLike;
+        return $this;
+    }
+
+    /**
+    * Gets ipsStatus
+    *  IPS规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
+    *
+    * @return string|null
+    */
+    public function getIpsStatus()
+    {
+        return $this->container['ipsStatus'];
+    }
+
+    /**
+    * Sets ipsStatus
+    *
+    * @param string|null $ipsStatus IPS规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
+    *
+    * @return $this
+    */
+    public function setIpsStatus($ipsStatus)
+    {
+        $this->container['ipsStatus'] = $ipsStatus;
+        return $this;
+    }
+
+    /**
+    * Gets isUpdatedIpsRuleQueried
+    *  是否查询虚拟补丁相对基础防御更新规则，是表示true,否表示false
+    *
+    * @return bool|null
+    */
+    public function getIsUpdatedIpsRuleQueried()
+    {
+        return $this->container['isUpdatedIpsRuleQueried'];
+    }
+
+    /**
+    * Sets isUpdatedIpsRuleQueried
+    *
+    * @param bool|null $isUpdatedIpsRuleQueried 是否查询虚拟补丁相对基础防御更新规则，是表示true,否表示false
+    *
+    * @return $this
+    */
+    public function setIsUpdatedIpsRuleQueried($isUpdatedIpsRuleQueried)
+    {
+        $this->container['isUpdatedIpsRuleQueried'] = $isUpdatedIpsRuleQueried;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  每页显示个数，范围为1-1024
+    *
+    * @return int
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int $limit 每页显示个数，范围为1-1024
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
     * Gets objectId
-    *  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    *  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     *
     * @return string
     */
@@ -214,7 +660,7 @@ class ListIpsRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string $objectId 防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * @param string $objectId 防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -225,8 +671,32 @@ class ListIpsRulesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets offset
+    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *
+    * @return int
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
     * Gets projectId
-    *  项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    *  项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
     *
     * @return string
     */
@@ -238,7 +708,7 @@ class ListIpsRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    * @param string $projectId 项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
     *
     * @return $this
     */

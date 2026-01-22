@@ -20,10 +20,10 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vhost  需要配置权限的Vhost名称，一个用户可以配置多个Vhost下的资源权限。
-    * conf  使用正则表达式匹配资源配置权限。例如，在输入框内输入“^janeway-.*”，则表示授权给该用户当前Vhost下，所有名称以“janeway-”开头的资源的配置权限。
-    * write  使用正则表达式匹配资源写权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的写权限。
-    * read  使用正则表达式匹配资源读权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的读权限。
+    * vhost  **参数解释**： 需要配置权限的Vhost名称，一个用户可以配置多个Vhost下的资源权限。 **取值范围**： 不涉及。
+    * conf  **参数解释**： 使用正则表达式匹配资源配置权限。例如，在输入框内输入“^janeway-.*”，则表示授权给该用户当前Vhost下，所有名称以“janeway-”开头的资源的配置权限。 **取值范围**： 不涉及。
+    * write  **参数解释**： 使用正则表达式匹配资源写权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的写权限。 **取值范围**： 不涉及。
+    * read  **参数解释**： 使用正则表达式匹配资源读权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的读权限。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vhost  需要配置权限的Vhost名称，一个用户可以配置多个Vhost下的资源权限。
-    * conf  使用正则表达式匹配资源配置权限。例如，在输入框内输入“^janeway-.*”，则表示授权给该用户当前Vhost下，所有名称以“janeway-”开头的资源的配置权限。
-    * write  使用正则表达式匹配资源写权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的写权限。
-    * read  使用正则表达式匹配资源读权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的读权限。
+    * vhost  **参数解释**： 需要配置权限的Vhost名称，一个用户可以配置多个Vhost下的资源权限。 **取值范围**： 不涉及。
+    * conf  **参数解释**： 使用正则表达式匹配资源配置权限。例如，在输入框内输入“^janeway-.*”，则表示授权给该用户当前Vhost下，所有名称以“janeway-”开头的资源的配置权限。 **取值范围**： 不涉及。
+    * write  **参数解释**： 使用正则表达式匹配资源写权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的写权限。 **取值范围**： 不涉及。
+    * read  **参数解释**： 使用正则表达式匹配资源读权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的读权限。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vhost  需要配置权限的Vhost名称，一个用户可以配置多个Vhost下的资源权限。
-    * conf  使用正则表达式匹配资源配置权限。例如，在输入框内输入“^janeway-.*”，则表示授权给该用户当前Vhost下，所有名称以“janeway-”开头的资源的配置权限。
-    * write  使用正则表达式匹配资源写权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的写权限。
-    * read  使用正则表达式匹配资源读权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的读权限。
+    * vhost  **参数解释**： 需要配置权限的Vhost名称，一个用户可以配置多个Vhost下的资源权限。 **取值范围**： 不涉及。
+    * conf  **参数解释**： 使用正则表达式匹配资源配置权限。例如，在输入框内输入“^janeway-.*”，则表示授权给该用户当前Vhost下，所有名称以“janeway-”开头的资源的配置权限。 **取值范围**： 不涉及。
+    * write  **参数解释**： 使用正则表达式匹配资源写权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的写权限。 **取值范围**： 不涉及。
+    * read  **参数解释**： 使用正则表达式匹配资源读权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的读权限。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vhost  需要配置权限的Vhost名称，一个用户可以配置多个Vhost下的资源权限。
-    * conf  使用正则表达式匹配资源配置权限。例如，在输入框内输入“^janeway-.*”，则表示授权给该用户当前Vhost下，所有名称以“janeway-”开头的资源的配置权限。
-    * write  使用正则表达式匹配资源写权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的写权限。
-    * read  使用正则表达式匹配资源读权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的读权限。
+    * vhost  **参数解释**： 需要配置权限的Vhost名称，一个用户可以配置多个Vhost下的资源权限。 **取值范围**： 不涉及。
+    * conf  **参数解释**： 使用正则表达式匹配资源配置权限。例如，在输入框内输入“^janeway-.*”，则表示授权给该用户当前Vhost下，所有名称以“janeway-”开头的资源的配置权限。 **取值范围**： 不涉及。
+    * write  **参数解释**： 使用正则表达式匹配资源写权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的写权限。 **取值范围**： 不涉及。
+    * read  **参数解释**： 使用正则表达式匹配资源读权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的读权限。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vhost  需要配置权限的Vhost名称，一个用户可以配置多个Vhost下的资源权限。
-    * conf  使用正则表达式匹配资源配置权限。例如，在输入框内输入“^janeway-.*”，则表示授权给该用户当前Vhost下，所有名称以“janeway-”开头的资源的配置权限。
-    * write  使用正则表达式匹配资源写权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的写权限。
-    * read  使用正则表达式匹配资源读权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的读权限。
+    * vhost  **参数解释**： 需要配置权限的Vhost名称，一个用户可以配置多个Vhost下的资源权限。 **取值范围**： 不涉及。
+    * conf  **参数解释**： 使用正则表达式匹配资源配置权限。例如，在输入框内输入“^janeway-.*”，则表示授权给该用户当前Vhost下，所有名称以“janeway-”开头的资源的配置权限。 **取值范围**： 不涉及。
+    * write  **参数解释**： 使用正则表达式匹配资源写权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的写权限。 **取值范围**： 不涉及。
+    * read  **参数解释**： 使用正则表达式匹配资源读权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的读权限。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
 
     /**
     * Gets vhost
-    *  需要配置权限的Vhost名称，一个用户可以配置多个Vhost下的资源权限。
+    *  **参数解释**： 需要配置权限的Vhost名称，一个用户可以配置多个Vhost下的资源权限。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -231,7 +231,7 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
     /**
     * Sets vhost
     *
-    * @param string $vhost 需要配置权限的Vhost名称，一个用户可以配置多个Vhost下的资源权限。
+    * @param string $vhost **参数解释**： 需要配置权限的Vhost名称，一个用户可以配置多个Vhost下的资源权限。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
 
     /**
     * Gets conf
-    *  使用正则表达式匹配资源配置权限。例如，在输入框内输入“^janeway-.*”，则表示授权给该用户当前Vhost下，所有名称以“janeway-”开头的资源的配置权限。
+    *  **参数解释**： 使用正则表达式匹配资源配置权限。例如，在输入框内输入“^janeway-.*”，则表示授权给该用户当前Vhost下，所有名称以“janeway-”开头的资源的配置权限。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -255,7 +255,7 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
     /**
     * Sets conf
     *
-    * @param string $conf 使用正则表达式匹配资源配置权限。例如，在输入框内输入“^janeway-.*”，则表示授权给该用户当前Vhost下，所有名称以“janeway-”开头的资源的配置权限。
+    * @param string $conf **参数解释**： 使用正则表达式匹配资源配置权限。例如，在输入框内输入“^janeway-.*”，则表示授权给该用户当前Vhost下，所有名称以“janeway-”开头的资源的配置权限。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
 
     /**
     * Gets write
-    *  使用正则表达式匹配资源写权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的写权限。
+    *  **参数解释**： 使用正则表达式匹配资源写权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的写权限。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -279,7 +279,7 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
     /**
     * Sets write
     *
-    * @param string $write 使用正则表达式匹配资源写权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的写权限。
+    * @param string $write **参数解释**： 使用正则表达式匹配资源写权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的写权限。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
 
     /**
     * Gets read
-    *  使用正则表达式匹配资源读权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的读权限。
+    *  **参数解释**： 使用正则表达式匹配资源读权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的读权限。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -303,7 +303,7 @@ class AMQPUserPerm implements ModelInterface, ArrayAccess
     /**
     * Sets read
     *
-    * @param string $read 使用正则表达式匹配资源读权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的读权限。
+    * @param string $read **参数解释**： 使用正则表达式匹配资源读权限。例如，在输入框内输入“.*”，则表示授权给该用户当前Vhost下，所有资源的读权限。 **取值范围**： 不涉及。
     *
     * @return $this
     */

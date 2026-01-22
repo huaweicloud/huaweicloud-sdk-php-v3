@@ -20,30 +20,34 @@ class BatchDeleteInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instances  实例的ID列表。
-    * action  对实例的操作：delete。
-    * allFailure  参数值为reliability，表示删除租户所有创建失败的RocketMQ实例。
+    * instances  **参数解释**： 实例的ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * action  **参数解释**： 对实例的操作：delete。 **约束限制**： 不涉及。 **取值范围**：  - delete **默认取值**： 不涉及
+    * allFailure  **参数解释**： 参数值为reliability，表示删除租户所有创建失败的RocketMQ实例。 **约束限制**： 不涉及。 **取值范围**： - reliability **默认取值**： 不涉及。
+    * forceDelete  **参数解释**： 是否强删除。 **约束限制**： 不涉及。 **取值范围**： - true：强删除，强删除实例不进入回收站。 - false：弱删除，开启回收站功能后，实例进入回收站。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'instances' => 'string[]',
             'action' => 'string',
-            'allFailure' => 'string'
+            'allFailure' => 'string',
+            'forceDelete' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instances  实例的ID列表。
-    * action  对实例的操作：delete。
-    * allFailure  参数值为reliability，表示删除租户所有创建失败的RocketMQ实例。
+    * instances  **参数解释**： 实例的ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * action  **参数解释**： 对实例的操作：delete。 **约束限制**： 不涉及。 **取值范围**：  - delete **默认取值**： 不涉及
+    * allFailure  **参数解释**： 参数值为reliability，表示删除租户所有创建失败的RocketMQ实例。 **约束限制**： 不涉及。 **取值范围**： - reliability **默认取值**： 不涉及。
+    * forceDelete  **参数解释**： 是否强删除。 **约束限制**： 不涉及。 **取值范围**： - true：强删除，强删除实例不进入回收站。 - false：弱删除，开启回收站功能后，实例进入回收站。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'instances' => null,
         'action' => null,
-        'allFailure' => null
+        'allFailure' => null,
+        'forceDelete' => null
     ];
 
     /**
@@ -69,44 +73,50 @@ class BatchDeleteInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instances  实例的ID列表。
-    * action  对实例的操作：delete。
-    * allFailure  参数值为reliability，表示删除租户所有创建失败的RocketMQ实例。
+    * instances  **参数解释**： 实例的ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * action  **参数解释**： 对实例的操作：delete。 **约束限制**： 不涉及。 **取值范围**：  - delete **默认取值**： 不涉及
+    * allFailure  **参数解释**： 参数值为reliability，表示删除租户所有创建失败的RocketMQ实例。 **约束限制**： 不涉及。 **取值范围**： - reliability **默认取值**： 不涉及。
+    * forceDelete  **参数解释**： 是否强删除。 **约束限制**： 不涉及。 **取值范围**： - true：强删除，强删除实例不进入回收站。 - false：弱删除，开启回收站功能后，实例进入回收站。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'instances' => 'instances',
             'action' => 'action',
-            'allFailure' => 'all_failure'
+            'allFailure' => 'all_failure',
+            'forceDelete' => 'force_delete'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instances  实例的ID列表。
-    * action  对实例的操作：delete。
-    * allFailure  参数值为reliability，表示删除租户所有创建失败的RocketMQ实例。
+    * instances  **参数解释**： 实例的ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * action  **参数解释**： 对实例的操作：delete。 **约束限制**： 不涉及。 **取值范围**：  - delete **默认取值**： 不涉及
+    * allFailure  **参数解释**： 参数值为reliability，表示删除租户所有创建失败的RocketMQ实例。 **约束限制**： 不涉及。 **取值范围**： - reliability **默认取值**： 不涉及。
+    * forceDelete  **参数解释**： 是否强删除。 **约束限制**： 不涉及。 **取值范围**： - true：强删除，强删除实例不进入回收站。 - false：弱删除，开启回收站功能后，实例进入回收站。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'instances' => 'setInstances',
             'action' => 'setAction',
-            'allFailure' => 'setAllFailure'
+            'allFailure' => 'setAllFailure',
+            'forceDelete' => 'setForceDelete'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instances  实例的ID列表。
-    * action  对实例的操作：delete。
-    * allFailure  参数值为reliability，表示删除租户所有创建失败的RocketMQ实例。
+    * instances  **参数解释**： 实例的ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * action  **参数解释**： 对实例的操作：delete。 **约束限制**： 不涉及。 **取值范围**：  - delete **默认取值**： 不涉及
+    * allFailure  **参数解释**： 参数值为reliability，表示删除租户所有创建失败的RocketMQ实例。 **约束限制**： 不涉及。 **取值范围**： - reliability **默认取值**： 不涉及。
+    * forceDelete  **参数解释**： 是否强删除。 **约束限制**： 不涉及。 **取值范围**： - true：强删除，强删除实例不进入回收站。 - false：弱删除，开启回收站功能后，实例进入回收站。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'instances' => 'getInstances',
             'action' => 'getAction',
-            'allFailure' => 'getAllFailure'
+            'allFailure' => 'getAllFailure',
+            'forceDelete' => 'getForceDelete'
     ];
 
     /**
@@ -196,6 +206,7 @@ class BatchDeleteInstanceReq implements ModelInterface, ArrayAccess
         $this->container['instances'] = isset($data['instances']) ? $data['instances'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['allFailure'] = isset($data['allFailure']) ? $data['allFailure'] : null;
+        $this->container['forceDelete'] = isset($data['forceDelete']) ? $data['forceDelete'] : null;
     }
 
     /**
@@ -241,7 +252,7 @@ class BatchDeleteInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets instances
-    *  实例的ID列表。
+    *  **参数解释**： 实例的ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -253,7 +264,7 @@ class BatchDeleteInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets instances
     *
-    * @param string[]|null $instances 实例的ID列表。
+    * @param string[]|null $instances **参数解释**： 实例的ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -265,7 +276,7 @@ class BatchDeleteInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  对实例的操作：delete。
+    *  **参数解释**： 对实例的操作：delete。 **约束限制**： 不涉及。 **取值范围**：  - delete **默认取值**： 不涉及
     *
     * @return string
     */
@@ -277,7 +288,7 @@ class BatchDeleteInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string $action 对实例的操作：delete。
+    * @param string $action **参数解释**： 对实例的操作：delete。 **约束限制**： 不涉及。 **取值范围**：  - delete **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -289,7 +300,7 @@ class BatchDeleteInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets allFailure
-    *  参数值为reliability，表示删除租户所有创建失败的RocketMQ实例。
+    *  **参数解释**： 参数值为reliability，表示删除租户所有创建失败的RocketMQ实例。 **约束限制**： 不涉及。 **取值范围**： - reliability **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -301,13 +312,37 @@ class BatchDeleteInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets allFailure
     *
-    * @param string|null $allFailure 参数值为reliability，表示删除租户所有创建失败的RocketMQ实例。
+    * @param string|null $allFailure **参数解释**： 参数值为reliability，表示删除租户所有创建失败的RocketMQ实例。 **约束限制**： 不涉及。 **取值范围**： - reliability **默认取值**： 不涉及。
     *
     * @return $this
     */
     public function setAllFailure($allFailure)
     {
         $this->container['allFailure'] = $allFailure;
+        return $this;
+    }
+
+    /**
+    * Gets forceDelete
+    *  **参数解释**： 是否强删除。 **约束限制**： 不涉及。 **取值范围**： - true：强删除，强删除实例不进入回收站。 - false：弱删除，开启回收站功能后，实例进入回收站。 **默认取值**： 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getForceDelete()
+    {
+        return $this->container['forceDelete'];
+    }
+
+    /**
+    * Sets forceDelete
+    *
+    * @param bool|null $forceDelete **参数解释**： 是否强删除。 **约束限制**： 不涉及。 **取值范围**： - true：强删除，强删除实例不进入回收站。 - false：弱删除，开启回收站功能后，实例进入回收站。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setForceDelete($forceDelete)
+    {
+        $this->container['forceDelete'] = $forceDelete;
         return $this;
     }
 

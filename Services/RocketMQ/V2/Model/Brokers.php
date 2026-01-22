@@ -20,8 +20,8 @@ class Brokers implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * brokerName  **参数解释**： Topic关联代理名称。 **取值范围**： 不涉及。
-    * queues  **参数解释**： 关联代理的队列详情。
+    * brokerName  **参数解释**： Topic关联代理名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queues  **参数解释**： 关联代理的队列详情。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Brokers implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * brokerName  **参数解释**： Topic关联代理名称。 **取值范围**： 不涉及。
-    * queues  **参数解释**： 关联代理的队列详情。
+    * brokerName  **参数解释**： Topic关联代理名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queues  **参数解释**： 关联代理的队列详情。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Brokers implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * brokerName  **参数解释**： Topic关联代理名称。 **取值范围**： 不涉及。
-    * queues  **参数解释**： 关联代理的队列详情。
+    * brokerName  **参数解释**： Topic关联代理名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queues  **参数解释**： 关联代理的队列详情。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Brokers implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * brokerName  **参数解释**： Topic关联代理名称。 **取值范围**： 不涉及。
-    * queues  **参数解释**： 关联代理的队列详情。
+    * brokerName  **参数解释**： Topic关联代理名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queues  **参数解释**： 关联代理的队列详情。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Brokers implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * brokerName  **参数解释**： Topic关联代理名称。 **取值范围**： 不涉及。
-    * queues  **参数解释**： 关联代理的队列详情。
+    * brokerName  **参数解释**： Topic关联代理名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queues  **参数解释**： 关联代理的队列详情。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class Brokers implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokerName
-    *  **参数解释**： Topic关联代理名称。 **取值范围**： 不涉及。
+    *  **参数解释**： Topic关联代理名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class Brokers implements ModelInterface, ArrayAccess
     /**
     * Sets brokerName
     *
-    * @param string|null $brokerName **参数解释**： Topic关联代理名称。 **取值范围**： 不涉及。
+    * @param string|null $brokerName **参数解释**： Topic关联代理名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class Brokers implements ModelInterface, ArrayAccess
 
     /**
     * Gets queues
-    *  **参数解释**： 关联代理的队列详情。
+    *  **参数解释**： 关联代理的队列详情。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\Queue[]|null
     */
@@ -221,7 +221,7 @@ class Brokers implements ModelInterface, ArrayAccess
     /**
     * Sets queues
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\Queue[]|null $queues **参数解释**： 关联代理的队列详情。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\Queue[]|null $queues **参数解释**： 关联代理的队列详情。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

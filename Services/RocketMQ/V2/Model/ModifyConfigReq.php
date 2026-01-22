@@ -20,7 +20,7 @@ class ModifyConfigReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * rocketmqConfigs  RocketMQ配置。
+    * rocketmqConfigs  **参数解释**： RocketMQ配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ModifyConfigReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * rocketmqConfigs  RocketMQ配置。
+    * rocketmqConfigs  **参数解释**： RocketMQ配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ModifyConfigReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * rocketmqConfigs  RocketMQ配置。
+    * rocketmqConfigs  **参数解释**： RocketMQ配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ModifyConfigReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * rocketmqConfigs  RocketMQ配置。
+    * rocketmqConfigs  **参数解释**： RocketMQ配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ModifyConfigReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * rocketmqConfigs  RocketMQ配置。
+    * rocketmqConfigs  **参数解释**： RocketMQ配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -158,6 +158,9 @@ class ModifyConfigReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['rocketmqConfigs'] === null) {
+            $invalidProperties[] = "'rocketmqConfigs' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -174,9 +177,9 @@ class ModifyConfigReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets rocketmqConfigs
-    *  RocketMQ配置。
+    *  **参数解释**： RocketMQ配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\RocketMQConfigReq[]|null
+    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\RocketMQConfigReq[]
     */
     public function getRocketmqConfigs()
     {
@@ -186,7 +189,7 @@ class ModifyConfigReq implements ModelInterface, ArrayAccess
     /**
     * Sets rocketmqConfigs
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\RocketMQConfigReq[]|null $rocketmqConfigs RocketMQ配置。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\RocketMQConfigReq[] $rocketmqConfigs **参数解释**： RocketMQ配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

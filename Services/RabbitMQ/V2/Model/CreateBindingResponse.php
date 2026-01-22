@@ -22,7 +22,7 @@ class CreateBindingResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * source  绑定对象
-    * destinationType  绑定Exchange或者Queue
+    * destinationType  **参数解释**： 绑定目标端类型。 **取值范围**： - exchange：交换机。 - queue：队列。[AMQP版本只支持绑定queue。](tag:hws,hws_hk,hws_eu)
     * destination  要投递的Exchange或Queue名称
     * routingKey  绑定键值，用于告知Exchange应该将消息投递到哪些Queue中
     *
@@ -38,7 +38,7 @@ class CreateBindingResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * source  绑定对象
-    * destinationType  绑定Exchange或者Queue
+    * destinationType  **参数解释**： 绑定目标端类型。 **取值范围**： - exchange：交换机。 - queue：队列。[AMQP版本只支持绑定queue。](tag:hws,hws_hk,hws_eu)
     * destination  要投递的Exchange或Queue名称
     * routingKey  绑定键值，用于告知Exchange应该将消息投递到哪些Queue中
     *
@@ -75,7 +75,7 @@ class CreateBindingResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * source  绑定对象
-    * destinationType  绑定Exchange或者Queue
+    * destinationType  **参数解释**： 绑定目标端类型。 **取值范围**： - exchange：交换机。 - queue：队列。[AMQP版本只支持绑定queue。](tag:hws,hws_hk,hws_eu)
     * destination  要投递的Exchange或Queue名称
     * routingKey  绑定键值，用于告知Exchange应该将消息投递到哪些Queue中
     *
@@ -91,7 +91,7 @@ class CreateBindingResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * source  绑定对象
-    * destinationType  绑定Exchange或者Queue
+    * destinationType  **参数解释**： 绑定目标端类型。 **取值范围**： - exchange：交换机。 - queue：队列。[AMQP版本只支持绑定queue。](tag:hws,hws_hk,hws_eu)
     * destination  要投递的Exchange或Queue名称
     * routingKey  绑定键值，用于告知Exchange应该将消息投递到哪些Queue中
     *
@@ -107,7 +107,7 @@ class CreateBindingResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * source  绑定对象
-    * destinationType  绑定Exchange或者Queue
+    * destinationType  **参数解释**： 绑定目标端类型。 **取值范围**： - exchange：交换机。 - queue：队列。[AMQP版本只支持绑定queue。](tag:hws,hws_hk,hws_eu)
     * destination  要投递的Exchange或Queue名称
     * routingKey  绑定键值，用于告知Exchange应该将消息投递到哪些Queue中
     *
@@ -232,7 +232,7 @@ class CreateBindingResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets destinationType
-    *  绑定Exchange或者Queue
+    *  **参数解释**： 绑定目标端类型。 **取值范围**： - exchange：交换机。 - queue：队列。[AMQP版本只支持绑定queue。](tag:hws,hws_hk,hws_eu)
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class CreateBindingResponse implements ModelInterface, ArrayAccess
     /**
     * Sets destinationType
     *
-    * @param string|null $destinationType 绑定Exchange或者Queue
+    * @param string|null $destinationType **参数解释**： 绑定目标端类型。 **取值范围**： - exchange：交换机。 - queue：队列。[AMQP版本只支持绑定queue。](tag:hws,hws_hk,hws_eu)
     *
     * @return $this
     */

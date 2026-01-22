@@ -21,8 +21,8 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instances  **参数解释**： 实例列表。 **取值范围**： 不涉及。
-    * instanceNum  **参数解释**： 实例数量。 **取值范围**： 不涉及。
+    * instances  **参数解释**： 实例列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceNum  **参数解释**： 实例数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instances  **参数解释**： 实例列表。 **取值范围**： 不涉及。
-    * instanceNum  **参数解释**： 实例数量。 **取值范围**： 不涉及。
+    * instances  **参数解释**： 实例列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceNum  **参数解释**： 实例数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instances  **参数解释**： 实例列表。 **取值范围**： 不涉及。
-    * instanceNum  **参数解释**： 实例数量。 **取值范围**： 不涉及。
+    * instances  **参数解释**： 实例列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceNum  **参数解释**： 实例数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instances  **参数解释**： 实例列表。 **取值范围**： 不涉及。
-    * instanceNum  **参数解释**： 实例数量。 **取值范围**： 不涉及。
+    * instances  **参数解释**： 实例列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceNum  **参数解释**： 实例数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instances  **参数解释**： 实例列表。 **取值范围**： 不涉及。
-    * instanceNum  **参数解释**： 实例数量。 **取值范围**： 不涉及。
+    * instances  **参数解释**： 实例列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceNum  **参数解释**： 实例数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets instances
-    *  **参数解释**： 实例列表。 **取值范围**： 不涉及。
+    *  **参数解释**： 实例列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\InstanceDetail[]|null
     */
@@ -198,7 +198,7 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets instances
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\InstanceDetail[]|null $instances **参数解释**： 实例列表。 **取值范围**： 不涉及。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\InstanceDetail[]|null $instances **参数解释**： 实例列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceNum
-    *  **参数解释**： 实例数量。 **取值范围**： 不涉及。
+    *  **参数解释**： 实例数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets instanceNum
     *
-    * @param int|null $instanceNum **参数解释**： 实例数量。 **取值范围**： 不涉及。
+    * @param int|null $instanceNum **参数解释**： 实例数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

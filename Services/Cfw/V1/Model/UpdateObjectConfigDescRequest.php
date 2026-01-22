@@ -20,19 +20,19 @@ class UpdateObjectConfigDescRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目ID，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'projectId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Cfw\V1\Model\ObjectInfoDto'
+            'body' => '\HuaweiCloud\SDK\Cfw\V1\Model\UpdateObjectConfigDesc'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目ID，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateObjectConfigDescRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目ID，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateObjectConfigDescRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目ID，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateObjectConfigDescRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目ID，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     * body  body
     *
     * @var string[]
@@ -188,7 +188,7 @@ class UpdateObjectConfigDescRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    *  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class UpdateObjectConfigDescRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * @param string $projectId 项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     *
     * @return $this
     */
@@ -214,7 +214,7 @@ class UpdateObjectConfigDescRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\ObjectInfoDto|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\UpdateObjectConfigDesc|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class UpdateObjectConfigDescRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\ObjectInfoDto|null $body body
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\UpdateObjectConfigDesc|null $body body
     *
     * @return $this
     */

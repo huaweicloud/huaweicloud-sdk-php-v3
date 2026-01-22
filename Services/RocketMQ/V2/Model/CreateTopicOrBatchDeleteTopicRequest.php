@@ -20,8 +20,8 @@ class CreateTopicOrBatchDeleteTopicRequest implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * action  批量删除Topic时使用，不配置则为创建接口。删除操作：delete。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * action  **参数解释**： 批量删除Topic时使用，不配置则为创建接口。 **约束限制**： 不涉及。 **取值范围**： - delete：批量删除Topic。 - 不填：创建Topic。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -34,8 +34,8 @@ class CreateTopicOrBatchDeleteTopicRequest implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * action  批量删除Topic时使用，不配置则为创建接口。删除操作：delete。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * action  **参数解释**： 批量删除Topic时使用，不配置则为创建接口。 **约束限制**： 不涉及。 **取值范围**： - delete：批量删除Topic。 - 不填：创建Topic。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -69,8 +69,8 @@ class CreateTopicOrBatchDeleteTopicRequest implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID。
-    * action  批量删除Topic时使用，不配置则为创建接口。删除操作：delete。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * action  **参数解释**： 批量删除Topic时使用，不配置则为创建接口。 **约束限制**： 不涉及。 **取值范围**： - delete：批量删除Topic。 - 不填：创建Topic。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -83,8 +83,8 @@ class CreateTopicOrBatchDeleteTopicRequest implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID。
-    * action  批量删除Topic时使用，不配置则为创建接口。删除操作：delete。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * action  **参数解释**： 批量删除Topic时使用，不配置则为创建接口。 **约束限制**： 不涉及。 **取值范围**： - delete：批量删除Topic。 - 不填：创建Topic。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -97,8 +97,8 @@ class CreateTopicOrBatchDeleteTopicRequest implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID。
-    * action  批量删除Topic时使用，不配置则为创建接口。删除操作：delete。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * action  **参数解释**： 批量删除Topic时使用，不配置则为创建接口。 **约束限制**： 不涉及。 **取值范围**： - delete：批量删除Topic。 - 不填：创建Topic。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -199,7 +199,7 @@ class CreateTopicOrBatchDeleteTopicRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -211,7 +211,7 @@ class CreateTopicOrBatchDeleteTopicRequest implements ModelInterface, ArrayAcces
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string $instanceId **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -223,7 +223,7 @@ class CreateTopicOrBatchDeleteTopicRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets action
-    *  批量删除Topic时使用，不配置则为创建接口。删除操作：delete。
+    *  **参数解释**： 批量删除Topic时使用，不配置则为创建接口。 **约束限制**： 不涉及。 **取值范围**： - delete：批量删除Topic。 - 不填：创建Topic。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -235,7 +235,7 @@ class CreateTopicOrBatchDeleteTopicRequest implements ModelInterface, ArrayAcces
     /**
     * Sets action
     *
-    * @param string|null $action 批量删除Topic时使用，不配置则为创建接口。删除操作：delete。
+    * @param string|null $action **参数解释**： 批量删除Topic时使用，不配置则为创建接口。 **约束限制**： 不涉及。 **取值范围**： - delete：批量删除Topic。 - 不填：创建Topic。 **默认取值**： 不涉及。
     *
     * @return $this
     */

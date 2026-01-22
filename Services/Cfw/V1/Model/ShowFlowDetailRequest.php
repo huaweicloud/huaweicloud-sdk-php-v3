@@ -403,14 +403,14 @@ class ShowFlowDetailRequest implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['startTime']) && ($this->container['startTime'] > 9223372036854775807)) {
-                $invalidProperties[] = "invalid value for 'startTime', must be smaller than or equal to 9223372036854775807.";
+            if (!is_null($this->container['startTime']) && ($this->container['startTime'] > 9007199254740992)) {
+                $invalidProperties[] = "invalid value for 'startTime', must be smaller than or equal to 9007199254740992.";
             }
             if (!is_null($this->container['startTime']) && ($this->container['startTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'startTime', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['endTime']) && ($this->container['endTime'] > 9223372036854775807)) {
-                $invalidProperties[] = "invalid value for 'endTime', must be smaller than or equal to 9223372036854775807.";
+            if (!is_null($this->container['endTime']) && ($this->container['endTime'] > 9007199254740992)) {
+                $invalidProperties[] = "invalid value for 'endTime', must be smaller than or equal to 9007199254740992.";
             }
             if (!is_null($this->container['endTime']) && ($this->container['endTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'endTime', must be bigger than or equal to 0.";
@@ -437,8 +437,8 @@ class ShowFlowDetailRequest implements ModelInterface, ArrayAccess
         if ($this->container['value'] === null) {
             $invalidProperties[] = "'value' can't be null";
         }
-            if ((mb_strlen($this->container['value']) > 32)) {
-                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 32.";
+            if ((mb_strlen($this->container['value']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 1024.";
             }
             if ((mb_strlen($this->container['value']) < 1)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 1.";

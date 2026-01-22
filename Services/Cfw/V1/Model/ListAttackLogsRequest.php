@@ -20,28 +20,28 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
     * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
     * srcPort  源端口号
     * dstIp  目的IP
     * dstPort  目的端口号
-    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
-    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * protocol  协议类型，包含TCP, UDP，ICMP，ICMPV6等。
+    * app  规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
     * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的event_time
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     * action  动作包含permit，deny
     * direction  方向，包含in2out，out2in
-    * attackType  入侵事件类型
+    * attackType  参数解释： 入侵事件类型 约束限制： 不涉及 取值范围： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马 worms：蠕虫 Buffer Overflow：缓冲区溢出 Hacking tools：黑客工具 Spyware：间谍软件 DDoS flooding：DDoS泛洪 Application-layer DDoS attacks：应用层DDoS攻击 Other suspicious behavior：其他可疑行为 Suspicious DNS activity：可疑DNS活动 Phishing：网络钓鱼 Spam：垃圾邮件 Others：其他攻击 默认取值： 不涉及
     * attackRule  入侵事件规则
     * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     * dstHost  目标主机
-    * logType  日志类型包括：internet，vpc，nat
+    * logType  **参数解释**： 日志类型 **约束限制**： 不涉及 **取值范围**： internet为南北向日志、nat为nat场景日志，vpc为东西向日志，vgw为vgw场景日志 **默认取值**： 不涉及
     * attackRuleId  入侵事件id
     * srcRegionName  源region名称
     * dstRegionName  目的region名称
@@ -86,28 +86,28 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
     * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
     * srcPort  源端口号
     * dstIp  目的IP
     * dstPort  目的端口号
-    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
-    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * protocol  协议类型，包含TCP, UDP，ICMP，ICMPV6等。
+    * app  规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
     * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的event_time
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     * action  动作包含permit，deny
     * direction  方向，包含in2out，out2in
-    * attackType  入侵事件类型
+    * attackType  参数解释： 入侵事件类型 约束限制： 不涉及 取值范围： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马 worms：蠕虫 Buffer Overflow：缓冲区溢出 Hacking tools：黑客工具 Spyware：间谍软件 DDoS flooding：DDoS泛洪 Application-layer DDoS attacks：应用层DDoS攻击 Other suspicious behavior：其他可疑行为 Suspicious DNS activity：可疑DNS活动 Phishing：网络钓鱼 Spam：垃圾邮件 Others：其他攻击 默认取值： 不涉及
     * attackRule  入侵事件规则
     * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     * dstHost  目标主机
-    * logType  日志类型包括：internet，vpc，nat
+    * logType  **参数解释**： 日志类型 **约束限制**： 不涉及 **取值范围**： internet为南北向日志、nat为nat场景日志，vpc为东西向日志，vgw为vgw场景日志 **默认取值**： 不涉及
     * attackRuleId  入侵事件id
     * srcRegionName  源region名称
     * dstRegionName  目的region名称
@@ -173,28 +173,28 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
     * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
     * srcPort  源端口号
     * dstIp  目的IP
     * dstPort  目的端口号
-    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
-    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * protocol  协议类型，包含TCP, UDP，ICMP，ICMPV6等。
+    * app  规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
     * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的event_time
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     * action  动作包含permit，deny
     * direction  方向，包含in2out，out2in
-    * attackType  入侵事件类型
+    * attackType  参数解释： 入侵事件类型 约束限制： 不涉及 取值范围： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马 worms：蠕虫 Buffer Overflow：缓冲区溢出 Hacking tools：黑客工具 Spyware：间谍软件 DDoS flooding：DDoS泛洪 Application-layer DDoS attacks：应用层DDoS攻击 Other suspicious behavior：其他可疑行为 Suspicious DNS activity：可疑DNS活动 Phishing：网络钓鱼 Spam：垃圾邮件 Others：其他攻击 默认取值： 不涉及
     * attackRule  入侵事件规则
     * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     * dstHost  目标主机
-    * logType  日志类型包括：internet，vpc，nat
+    * logType  **参数解释**： 日志类型 **约束限制**： 不涉及 **取值范围**： internet为南北向日志、nat为nat场景日志，vpc为东西向日志，vgw为vgw场景日志 **默认取值**： 不涉及
     * attackRuleId  入侵事件id
     * srcRegionName  源region名称
     * dstRegionName  目的region名称
@@ -239,28 +239,28 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
     * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
     * srcPort  源端口号
     * dstIp  目的IP
     * dstPort  目的端口号
-    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
-    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * protocol  协议类型，包含TCP, UDP，ICMP，ICMPV6等。
+    * app  规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
     * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的event_time
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     * action  动作包含permit，deny
     * direction  方向，包含in2out，out2in
-    * attackType  入侵事件类型
+    * attackType  参数解释： 入侵事件类型 约束限制： 不涉及 取值范围： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马 worms：蠕虫 Buffer Overflow：缓冲区溢出 Hacking tools：黑客工具 Spyware：间谍软件 DDoS flooding：DDoS泛洪 Application-layer DDoS attacks：应用层DDoS攻击 Other suspicious behavior：其他可疑行为 Suspicious DNS activity：可疑DNS活动 Phishing：网络钓鱼 Spam：垃圾邮件 Others：其他攻击 默认取值： 不涉及
     * attackRule  入侵事件规则
     * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     * dstHost  目标主机
-    * logType  日志类型包括：internet，vpc，nat
+    * logType  **参数解释**： 日志类型 **约束限制**： 不涉及 **取值范围**： internet为南北向日志、nat为nat场景日志，vpc为东西向日志，vgw为vgw场景日志 **默认取值**： 不涉及
     * attackRuleId  入侵事件id
     * srcRegionName  源region名称
     * dstRegionName  目的region名称
@@ -305,28 +305,28 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
     * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
     * srcPort  源端口号
     * dstIp  目的IP
     * dstPort  目的端口号
-    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
-    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * protocol  协议类型，包含TCP, UDP，ICMP，ICMPV6等。
+    * app  规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
     * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的event_time
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     * action  动作包含permit，deny
     * direction  方向，包含in2out，out2in
-    * attackType  入侵事件类型
+    * attackType  参数解释： 入侵事件类型 约束限制： 不涉及 取值范围： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马 worms：蠕虫 Buffer Overflow：缓冲区溢出 Hacking tools：黑客工具 Spyware：间谍软件 DDoS flooding：DDoS泛洪 Application-layer DDoS attacks：应用层DDoS攻击 Other suspicious behavior：其他可疑行为 Suspicious DNS activity：可疑DNS活动 Phishing：网络钓鱼 Spam：垃圾邮件 Others：其他攻击 默认取值： 不涉及
     * attackRule  入侵事件规则
     * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     * dstHost  目标主机
-    * logType  日志类型包括：internet，vpc，nat
+    * logType  **参数解释**： 日志类型 **约束限制**： 不涉及 **取值范围**： internet为南北向日志、nat为nat场景日志，vpc为东西向日志，vgw为vgw场景日志 **默认取值**： 不涉及
     * attackRuleId  入侵事件id
     * srcRegionName  源region名称
     * dstRegionName  目的region名称
@@ -534,7 +534,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    *  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     *
     * @return string
     */
@@ -546,7 +546,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * @param string $projectId 项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     *
     * @return $this
     */
@@ -702,7 +702,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
+    *  协议类型，包含TCP, UDP，ICMP，ICMPV6等。
     *
     * @return string|null
     */
@@ -714,7 +714,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string|null $protocol 协议类型，包含TCP, UDP,ICMP,ICMPV6等。
+    * @param string|null $protocol 协议类型，包含TCP, UDP，ICMP，ICMPV6等。
     *
     * @return $this
     */
@@ -726,7 +726,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets app
-    *  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    *  规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     *
     * @return string|null
     */
@@ -738,7 +738,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets app
     *
-    * @param string|null $app 规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * @param string|null $app 规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     *
     * @return $this
     */
@@ -846,7 +846,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fwInstanceId
-    *  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    *  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @return string
     */
@@ -858,7 +858,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fwInstanceId
     *
-    * @param string $fwInstanceId 防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * @param string $fwInstanceId 防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @return $this
     */
@@ -918,7 +918,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets attackType
-    *  入侵事件类型
+    *  参数解释： 入侵事件类型 约束限制： 不涉及 取值范围： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马 worms：蠕虫 Buffer Overflow：缓冲区溢出 Hacking tools：黑客工具 Spyware：间谍软件 DDoS flooding：DDoS泛洪 Application-layer DDoS attacks：应用层DDoS攻击 Other suspicious behavior：其他可疑行为 Suspicious DNS activity：可疑DNS活动 Phishing：网络钓鱼 Spam：垃圾邮件 Others：其他攻击 默认取值： 不涉及
     *
     * @return string|null
     */
@@ -930,7 +930,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets attackType
     *
-    * @param string|null $attackType 入侵事件类型
+    * @param string|null $attackType 参数解释： 入侵事件类型 约束限制： 不涉及 取值范围： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马 worms：蠕虫 Buffer Overflow：缓冲区溢出 Hacking tools：黑客工具 Spyware：间谍软件 DDoS flooding：DDoS泛洪 Application-layer DDoS attacks：应用层DDoS攻击 Other suspicious behavior：其他可疑行为 Suspicious DNS activity：可疑DNS活动 Phishing：网络钓鱼 Spam：垃圾邮件 Others：其他攻击 默认取值： 不涉及
     *
     * @return $this
     */
@@ -1038,7 +1038,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets logType
-    *  日志类型包括：internet，vpc，nat
+    *  **参数解释**： 日志类型 **约束限制**： 不涉及 **取值范围**： internet为南北向日志、nat为nat场景日志，vpc为东西向日志，vgw为vgw场景日志 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -1050,7 +1050,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets logType
     *
-    * @param string|null $logType 日志类型包括：internet，vpc，nat
+    * @param string|null $logType **参数解释**： 日志类型 **约束限制**： 不涉及 **取值范围**： internet为南北向日志、nat为nat场景日志，vpc为东西向日志，vgw为vgw场景日志 **默认取值**： 不涉及
     *
     * @return $this
     */

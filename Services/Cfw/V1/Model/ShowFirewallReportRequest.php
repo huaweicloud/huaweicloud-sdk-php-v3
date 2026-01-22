@@ -23,7 +23,7 @@ class ShowFirewallReportRequest implements ModelInterface, ArrayAccess
     * projectId  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * fwInstanceId  **参数解释**： 防火墙ID，用户创建防火墙实例后产生的唯一ID，配置后可区分不同防火墙，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * reportProfileId  **参数解释**： 安全报告模板ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
-    * reportId  **参数解释**： 安全报告ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
+    * reportId  **参数解释**： 安全报告ID，可以通过调用[查询安全报告发送历史接口]获得，通过返回值中的data.records.report_id获得 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class ShowFirewallReportRequest implements ModelInterface, ArrayAccess
     * projectId  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * fwInstanceId  **参数解释**： 防火墙ID，用户创建防火墙实例后产生的唯一ID，配置后可区分不同防火墙，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * reportProfileId  **参数解释**： 安全报告模板ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
-    * reportId  **参数解释**： 安全报告ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
+    * reportId  **参数解释**： 安全报告ID，可以通过调用[查询安全报告发送历史接口]获得，通过返回值中的data.records.report_id获得 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class ShowFirewallReportRequest implements ModelInterface, ArrayAccess
     * projectId  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * fwInstanceId  **参数解释**： 防火墙ID，用户创建防火墙实例后产生的唯一ID，配置后可区分不同防火墙，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * reportProfileId  **参数解释**： 安全报告模板ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
-    * reportId  **参数解释**： 安全报告ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
+    * reportId  **参数解释**： 安全报告ID，可以通过调用[查询安全报告发送历史接口]获得，通过返回值中的data.records.report_id获得 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class ShowFirewallReportRequest implements ModelInterface, ArrayAccess
     * projectId  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * fwInstanceId  **参数解释**： 防火墙ID，用户创建防火墙实例后产生的唯一ID，配置后可区分不同防火墙，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * reportProfileId  **参数解释**： 安全报告模板ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
-    * reportId  **参数解释**： 安全报告ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
+    * reportId  **参数解释**： 安全报告ID，可以通过调用[查询安全报告发送历史接口]获得，通过返回值中的data.records.report_id获得 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class ShowFirewallReportRequest implements ModelInterface, ArrayAccess
     * projectId  **参数解释**： 项目ID，用于明确项目归属，配置后可通过该ID查询项目下资产，可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * fwInstanceId  **参数解释**： 防火墙ID，用户创建防火墙实例后产生的唯一ID，配置后可区分不同防火墙，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     * reportProfileId  **参数解释**： 安全报告模板ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
-    * reportId  **参数解释**： 安全报告ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
+    * reportId  **参数解释**： 安全报告ID，可以通过调用[查询安全报告发送历史接口]获得，通过返回值中的data.records.report_id获得 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -306,7 +306,7 @@ class ShowFirewallReportRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets reportId
-    *  **参数解释**： 安全报告ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
+    *  **参数解释**： 安全报告ID，可以通过调用[查询安全报告发送历史接口]获得，通过返回值中的data.records.report_id获得 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @return string
     */
@@ -318,7 +318,7 @@ class ShowFirewallReportRequest implements ModelInterface, ArrayAccess
     /**
     * Sets reportId
     *
-    * @param string $reportId **参数解释**： 安全报告ID **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
+    * @param string $reportId **参数解释**： 安全报告ID，可以通过调用[查询安全报告发送历史接口]获得，通过返回值中的data.records.report_id获得 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
     *
     * @return $this
     */

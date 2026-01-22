@@ -20,8 +20,8 @@ class SwitchEipStatusDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * fwInstanceId  防火墙id
-    * objectId  防护对象id
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
     * status  是否开启新增eip自动防护，1；是，0：否
     *
     * @var string[]
@@ -34,8 +34,8 @@ class SwitchEipStatusDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * fwInstanceId  防火墙id
-    * objectId  防护对象id
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
     * status  是否开启新增eip自动防护，1；是，0：否
     *
     * @var string[]
@@ -69,8 +69,8 @@ class SwitchEipStatusDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * fwInstanceId  防火墙id
-    * objectId  防护对象id
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
     * status  是否开启新增eip自动防护，1；是，0：否
     *
     * @var string[]
@@ -83,8 +83,8 @@ class SwitchEipStatusDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * fwInstanceId  防火墙id
-    * objectId  防护对象id
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
     * status  是否开启新增eip自动防护，1；是，0：否
     *
     * @var string[]
@@ -97,8 +97,8 @@ class SwitchEipStatusDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * fwInstanceId  防火墙id
-    * objectId  防护对象id
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
     * status  是否开启新增eip自动防护，1；是，0：否
     *
     * @var string[]
@@ -180,6 +180,15 @@ class SwitchEipStatusDto implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['fwInstanceId'] === null) {
+            $invalidProperties[] = "'fwInstanceId' can't be null";
+        }
+        if ($this->container['objectId'] === null) {
+            $invalidProperties[] = "'objectId' can't be null";
+        }
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -196,9 +205,9 @@ class SwitchEipStatusDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets fwInstanceId
-    *  防火墙id
+    *  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
-    * @return string|null
+    * @return string
     */
     public function getFwInstanceId()
     {
@@ -208,7 +217,7 @@ class SwitchEipStatusDto implements ModelInterface, ArrayAccess
     /**
     * Sets fwInstanceId
     *
-    * @param string|null $fwInstanceId 防火墙id
+    * @param string $fwInstanceId 防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @return $this
     */
@@ -220,9 +229,9 @@ class SwitchEipStatusDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  防护对象id
+    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
     *
-    * @return string|null
+    * @return string
     */
     public function getObjectId()
     {
@@ -232,7 +241,7 @@ class SwitchEipStatusDto implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string|null $objectId 防护对象id
+    * @param string $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
     *
     * @return $this
     */
@@ -246,7 +255,7 @@ class SwitchEipStatusDto implements ModelInterface, ArrayAccess
     * Gets status
     *  是否开启新增eip自动防护，1；是，0：否
     *
-    * @return int|null
+    * @return int
     */
     public function getStatus()
     {
@@ -256,7 +265,7 @@ class SwitchEipStatusDto implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 是否开启新增eip自动防护，1；是，0：否
+    * @param int $status 是否开启新增eip自动防护，1；是，0：否
     *
     * @return $this
     */

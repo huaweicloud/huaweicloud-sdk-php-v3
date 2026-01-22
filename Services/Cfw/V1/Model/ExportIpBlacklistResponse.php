@@ -23,13 +23,15 @@ class ExportIpBlacklistResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * body  body
     * contentDisposition  contentDisposition
+    * contentLength  contentLength
     * contentType  contentType
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'string',
+            'body' => 'object',
             'contentDisposition' => 'string',
+            'contentLength' => 'int',
             'contentType' => 'string'
     ];
 
@@ -37,6 +39,7 @@ class ExportIpBlacklistResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * body  body
     * contentDisposition  contentDisposition
+    * contentLength  contentLength
     * contentType  contentType
     *
     * @var string[]
@@ -44,6 +47,7 @@ class ExportIpBlacklistResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'body' => null,
         'contentDisposition' => null,
+        'contentLength' => 'int32',
         'contentType' => null
     ];
 
@@ -72,6 +76,7 @@ class ExportIpBlacklistResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * body  body
     * contentDisposition  contentDisposition
+    * contentLength  contentLength
     * contentType  contentType
     *
     * @var string[]
@@ -79,6 +84,7 @@ class ExportIpBlacklistResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'body' => 'body',
             'contentDisposition' => 'Content-Disposition',
+            'contentLength' => 'Content-Length',
             'contentType' => 'Content-Type'
     ];
 
@@ -86,6 +92,7 @@ class ExportIpBlacklistResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * body  body
     * contentDisposition  contentDisposition
+    * contentLength  contentLength
     * contentType  contentType
     *
     * @var string[]
@@ -93,6 +100,7 @@ class ExportIpBlacklistResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'body' => 'setBody',
             'contentDisposition' => 'setContentDisposition',
+            'contentLength' => 'setContentLength',
             'contentType' => 'setContentType'
     ];
 
@@ -100,6 +108,7 @@ class ExportIpBlacklistResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * body  body
     * contentDisposition  contentDisposition
+    * contentLength  contentLength
     * contentType  contentType
     *
     * @var string[]
@@ -107,6 +116,7 @@ class ExportIpBlacklistResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'body' => 'getBody',
             'contentDisposition' => 'getContentDisposition',
+            'contentLength' => 'getContentLength',
             'contentType' => 'getContentType'
     ];
 
@@ -170,6 +180,7 @@ class ExportIpBlacklistResponse implements ModelInterface, ArrayAccess
     {
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
         $this->container['contentDisposition'] = isset($data['contentDisposition']) ? $data['contentDisposition'] : null;
+        $this->container['contentLength'] = isset($data['contentLength']) ? $data['contentLength'] : null;
         $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
     }
 
@@ -199,7 +210,7 @@ class ExportIpBlacklistResponse implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return string|null
+    * @return object|null
     */
     public function getBody()
     {
@@ -209,7 +220,7 @@ class ExportIpBlacklistResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param string|null $body body
+    * @param object|null $body body
     *
     * @return $this
     */
@@ -240,6 +251,30 @@ class ExportIpBlacklistResponse implements ModelInterface, ArrayAccess
     public function setContentDisposition($contentDisposition)
     {
         $this->container['contentDisposition'] = $contentDisposition;
+        return $this;
+    }
+
+    /**
+    * Gets contentLength
+    *  contentLength
+    *
+    * @return int|null
+    */
+    public function getContentLength()
+    {
+        return $this->container['contentLength'];
+    }
+
+    /**
+    * Sets contentLength
+    *
+    * @param int|null $contentLength contentLength
+    *
+    * @return $this
+    */
+    public function setContentLength($contentLength)
+    {
+        $this->container['contentLength'] = $contentLength;
         return $this;
     }
 

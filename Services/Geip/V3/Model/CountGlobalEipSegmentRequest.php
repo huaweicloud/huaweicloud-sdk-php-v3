@@ -20,10 +20,6 @@ class CountGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  每页条数
-    * offset  分页起始点
-    * marker  分页起始点
-    * pageReverse  翻页方向
     * fields  fields
     * id  id
     * internetBandwidthId  internetBandwidthId
@@ -50,10 +46,6 @@ class CountGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'limit' => 'int',
-            'offset' => 'int',
-            'marker' => 'string',
-            'pageReverse' => 'bool',
             'fields' => 'string[]',
             'id' => 'string[]',
             'internetBandwidthId' => 'string[]',
@@ -80,10 +72,6 @@ class CountGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  每页条数
-    * offset  分页起始点
-    * marker  分页起始点
-    * pageReverse  翻页方向
     * fields  fields
     * id  id
     * internetBandwidthId  internetBandwidthId
@@ -110,10 +98,6 @@ class CountGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'limit' => 'int32',
-        'offset' => 'int32',
-        'marker' => null,
-        'pageReverse' => null,
         'fields' => null,
         'id' => null,
         'internetBandwidthId' => null,
@@ -161,10 +145,6 @@ class CountGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  每页条数
-    * offset  分页起始点
-    * marker  分页起始点
-    * pageReverse  翻页方向
     * fields  fields
     * id  id
     * internetBandwidthId  internetBandwidthId
@@ -191,10 +171,6 @@ class CountGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'limit' => 'limit',
-            'offset' => 'offset',
-            'marker' => 'marker',
-            'pageReverse' => 'page_reverse',
             'fields' => 'fields',
             'id' => 'id',
             'internetBandwidthId' => 'internet_bandwidth_id',
@@ -221,10 +197,6 @@ class CountGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  每页条数
-    * offset  分页起始点
-    * marker  分页起始点
-    * pageReverse  翻页方向
     * fields  fields
     * id  id
     * internetBandwidthId  internetBandwidthId
@@ -251,10 +223,6 @@ class CountGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'limit' => 'setLimit',
-            'offset' => 'setOffset',
-            'marker' => 'setMarker',
-            'pageReverse' => 'setPageReverse',
             'fields' => 'setFields',
             'id' => 'setId',
             'internetBandwidthId' => 'setInternetBandwidthId',
@@ -281,10 +249,6 @@ class CountGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  每页条数
-    * offset  分页起始点
-    * marker  分页起始点
-    * pageReverse  翻页方向
     * fields  fields
     * id  id
     * internetBandwidthId  internetBandwidthId
@@ -311,10 +275,6 @@ class CountGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'limit' => 'getLimit',
-            'offset' => 'getOffset',
-            'marker' => 'getMarker',
-            'pageReverse' => 'getPageReverse',
             'fields' => 'getFields',
             'id' => 'getId',
             'internetBandwidthId' => 'getInternetBandwidthId',
@@ -444,10 +404,6 @@ class CountGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
-        $this->container['pageReverse'] = isset($data['pageReverse']) ? $data['pageReverse'] : null;
         $this->container['fields'] = isset($data['fields']) ? $data['fields'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['internetBandwidthId'] = isset($data['internetBandwidthId']) ? $data['internetBandwidthId'] : null;
@@ -480,15 +436,6 @@ class CountGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 2000)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 2000.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['marker']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['marker'])) {
-                $invalidProperties[] = "invalid value for 'marker', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
-            }
         return $invalidProperties;
     }
 
@@ -501,102 +448,6 @@ class CountGlobalEipSegmentRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets limit
-    *  每页条数
-    *
-    * @return int|null
-    */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-    * Sets limit
-    *
-    * @param int|null $limit 每页条数
-    *
-    * @return $this
-    */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
-        return $this;
-    }
-
-    /**
-    * Gets offset
-    *  分页起始点
-    *
-    * @return int|null
-    */
-    public function getOffset()
-    {
-        return $this->container['offset'];
-    }
-
-    /**
-    * Sets offset
-    *
-    * @param int|null $offset 分页起始点
-    *
-    * @return $this
-    */
-    public function setOffset($offset)
-    {
-        $this->container['offset'] = $offset;
-        return $this;
-    }
-
-    /**
-    * Gets marker
-    *  分页起始点
-    *
-    * @return string|null
-    */
-    public function getMarker()
-    {
-        return $this->container['marker'];
-    }
-
-    /**
-    * Sets marker
-    *
-    * @param string|null $marker 分页起始点
-    *
-    * @return $this
-    */
-    public function setMarker($marker)
-    {
-        $this->container['marker'] = $marker;
-        return $this;
-    }
-
-    /**
-    * Gets pageReverse
-    *  翻页方向
-    *
-    * @return bool|null
-    */
-    public function getPageReverse()
-    {
-        return $this->container['pageReverse'];
-    }
-
-    /**
-    * Sets pageReverse
-    *
-    * @param bool|null $pageReverse 翻页方向
-    *
-    * @return $this
-    */
-    public function setPageReverse($pageReverse)
-    {
-        $this->container['pageReverse'] = $pageReverse;
-        return $this;
     }
 
     /**

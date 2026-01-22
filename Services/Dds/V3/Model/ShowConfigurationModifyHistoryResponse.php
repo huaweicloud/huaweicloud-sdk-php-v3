@@ -21,7 +21,7 @@ class ShowConfigurationModifyHistoryResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * histories  参数模板的修改历史列表。
+    * histories  **参数解释：** 参数模板的修改历史列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowConfigurationModifyHistoryResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * histories  参数模板的修改历史列表。
+    * histories  **参数解释：** 参数模板的修改历史列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowConfigurationModifyHistoryResponse implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * histories  参数模板的修改历史列表。
+    * histories  **参数解释：** 参数模板的修改历史列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowConfigurationModifyHistoryResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * histories  参数模板的修改历史列表。
+    * histories  **参数解释：** 参数模板的修改历史列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowConfigurationModifyHistoryResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * histories  参数模板的修改历史列表。
+    * histories  **参数解释：** 参数模板的修改历史列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowConfigurationModifyHistoryResponse implements ModelInterface, ArrayAcc
 
     /**
     * Gets histories
-    *  参数模板的修改历史列表。
+    *  **参数解释：** 参数模板的修改历史列表。 **取值范围：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dds\V3\Model\HistoryInfo[]|null
     */
@@ -187,7 +187,7 @@ class ShowConfigurationModifyHistoryResponse implements ModelInterface, ArrayAcc
     /**
     * Sets histories
     *
-    * @param \HuaweiCloud\SDK\Dds\V3\Model\HistoryInfo[]|null $histories 参数模板的修改历史列表。
+    * @param \HuaweiCloud\SDK\Dds\V3\Model\HistoryInfo[]|null $histories **参数解释：** 参数模板的修改历史列表。 **取值范围：** 不涉及。
     *
     * @return $this
     */

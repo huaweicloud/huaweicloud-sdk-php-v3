@@ -26,7 +26,7 @@ class ListIpsRulesResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\AdvancedIpsRuleListVo'
+            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\IpsRuleListVO'
     ];
 
     /**
@@ -177,7 +177,7 @@ class ListIpsRulesResponse implements ModelInterface, ArrayAccess
     * Gets data
     *  data
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\AdvancedIpsRuleListVo|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\IpsRuleListVO|null
     */
     public function getData()
     {
@@ -187,7 +187,7 @@ class ListIpsRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\AdvancedIpsRuleListVo|null $data data
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\IpsRuleListVO|null $data data
     *
     * @return $this
     */

@@ -20,9 +20,9 @@ class ListAppliedInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * configId  参数模板ID。
-    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
-    * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * configId  **参数解释：** 参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * offset  **参数解释：** 索引位置，偏移量。 **约束限制：** 必须为整数数字。 **取值范围：** >=0。 **默认取值：** 0。偏移0条数据，表示从第一条数据开始查询。
+    * limit  **参数解释：** 查询记录数。 **约束限制：** 正整数。 **取值范围：** 1~100。 **默认取值：** 100。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ListAppliedInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * configId  参数模板ID。
-    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
-    * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * configId  **参数解释：** 参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * offset  **参数解释：** 索引位置，偏移量。 **约束限制：** 必须为整数数字。 **取值范围：** >=0。 **默认取值：** 0。偏移0条数据，表示从第一条数据开始查询。
+    * limit  **参数解释：** 查询记录数。 **约束限制：** 正整数。 **取值范围：** 1~100。 **默认取值：** 100。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ListAppliedInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * configId  参数模板ID。
-    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
-    * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * configId  **参数解释：** 参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * offset  **参数解释：** 索引位置，偏移量。 **约束限制：** 必须为整数数字。 **取值范围：** >=0。 **默认取值：** 0。偏移0条数据，表示从第一条数据开始查询。
+    * limit  **参数解释：** 查询记录数。 **约束限制：** 正整数。 **取值范围：** 1~100。 **默认取值：** 100。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ListAppliedInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * configId  参数模板ID。
-    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
-    * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * configId  **参数解释：** 参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * offset  **参数解释：** 索引位置，偏移量。 **约束限制：** 必须为整数数字。 **取值范围：** >=0。 **默认取值：** 0。偏移0条数据，表示从第一条数据开始查询。
+    * limit  **参数解释：** 查询记录数。 **约束限制：** 正整数。 **取值范围：** 1~100。 **默认取值：** 100。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ListAppliedInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * configId  参数模板ID。
-    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
-    * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * configId  **参数解释：** 参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * offset  **参数解释：** 索引位置，偏移量。 **约束限制：** 必须为整数数字。 **取值范围：** >=0。 **默认取值：** 0。偏移0条数据，表示从第一条数据开始查询。
+    * limit  **参数解释：** 查询记录数。 **约束限制：** 正整数。 **取值范围：** 1~100。 **默认取值：** 100。
     *
     * @var string[]
     */
@@ -199,7 +199,7 @@ class ListAppliedInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets configId
-    *  参数模板ID。
+    *  **参数解释：** 参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -211,7 +211,7 @@ class ListAppliedInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets configId
     *
-    * @param string $configId 参数模板ID。
+    * @param string $configId **参数解释：** 参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -223,7 +223,7 @@ class ListAppliedInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
+    *  **参数解释：** 索引位置，偏移量。 **约束限制：** 必须为整数数字。 **取值范围：** >=0。 **默认取值：** 0。偏移0条数据，表示从第一条数据开始查询。
     *
     * @return int|null
     */
@@ -235,7 +235,7 @@ class ListAppliedInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
+    * @param int|null $offset **参数解释：** 索引位置，偏移量。 **约束限制：** 必须为整数数字。 **取值范围：** >=0。 **默认取值：** 0。偏移0条数据，表示从第一条数据开始查询。
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class ListAppliedInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    *  **参数解释：** 查询记录数。 **约束限制：** 正整数。 **取值范围：** 1~100。 **默认取值：** 100。
     *
     * @return int|null
     */
@@ -259,7 +259,7 @@ class ListAppliedInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * @param int|null $limit **参数解释：** 查询记录数。 **约束限制：** 正整数。 **取值范围：** 1~100。 **默认取值：** 100。
     *
     * @return $this
     */

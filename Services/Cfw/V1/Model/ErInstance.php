@@ -20,10 +20,10 @@ class ErInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ER ID，创建ER时产生的ID
-    * name  ER名称
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * attachmentId  企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
+    * id  **参数解释**： ER ID，创建ER时产生的ID **取值范围**： 不涉及
+    * name  **参数解释**： ER名称 **取值范围**： 不涉及
+    * projectId  **参数解释**： 项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **取值范围**： 不涉及
+    * attachmentId  **参数解释**： 企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ErInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ER ID，创建ER时产生的ID
-    * name  ER名称
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * attachmentId  企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
+    * id  **参数解释**： ER ID，创建ER时产生的ID **取值范围**： 不涉及
+    * name  **参数解释**： ER名称 **取值范围**： 不涉及
+    * projectId  **参数解释**： 项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **取值范围**： 不涉及
+    * attachmentId  **参数解释**： 企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ErInstance implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ER ID，创建ER时产生的ID
-    * name  ER名称
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * attachmentId  企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
+    * id  **参数解释**： ER ID，创建ER时产生的ID **取值范围**： 不涉及
+    * name  **参数解释**： ER名称 **取值范围**： 不涉及
+    * projectId  **参数解释**： 项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **取值范围**： 不涉及
+    * attachmentId  **参数解释**： 企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ErInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ER ID，创建ER时产生的ID
-    * name  ER名称
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * attachmentId  企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
+    * id  **参数解释**： ER ID，创建ER时产生的ID **取值范围**： 不涉及
+    * name  **参数解释**： ER名称 **取值范围**： 不涉及
+    * projectId  **参数解释**： 项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **取值范围**： 不涉及
+    * attachmentId  **参数解释**： 企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ErInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ER ID，创建ER时产生的ID
-    * name  ER名称
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * attachmentId  企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
+    * id  **参数解释**： ER ID，创建ER时产生的ID **取值范围**： 不涉及
+    * name  **参数解释**： ER名称 **取值范围**： 不涉及
+    * projectId  **参数解释**： 项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **取值范围**： 不涉及
+    * attachmentId  **参数解释**： 企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class ErInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ER ID，创建ER时产生的ID
+    *  **参数解释**： ER ID，创建ER时产生的ID **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class ErInstance implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ER ID，创建ER时产生的ID
+    * @param string|null $id **参数解释**： ER ID，创建ER时产生的ID **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class ErInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  ER名称
+    *  **参数解释**： ER名称 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class ErInstance implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name ER名称
+    * @param string|null $name **参数解释**： ER名称 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class ErInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    *  **参数解释**： 项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class ErInstance implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * @param string|null $projectId **参数解释**： 项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class ErInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets attachmentId
-    *  企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
+    *  **参数解释**： 企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class ErInstance implements ModelInterface, ArrayAccess
     /**
     * Sets attachmentId
     *
-    * @param string|null $attachmentId 企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
+    * @param string|null $attachmentId **参数解释**： 企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。 **取值范围**： 不涉及
     *
     * @return $this
     */

@@ -20,9 +20,9 @@ class QuotaResourceEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  支持rabbitmqInstance、kafkaInstance、rocketmqInstance、tags四种。   - rabbitmqInstance表示RabbitMQ实例配额。   - kafkaInstance表示Kafka实例配额。   - rocketmqInstance表示RocketMQ实例配额。   - tags表示标签的配额。
-    * quota  租户最大可以创建的实例个数，或者每个实例最大可以创建的标签个数。
-    * used  已创建的实例个数。
+    * type  **参数解释**： 支持[rabbitmqInstance、](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,fcs,ax,srg)kafkaInstance、rocketmqInstance、tags。 [- rabbitmqInstance表示RabbitMQ实例配额。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,fcs,ax,srg) - kafkaInstance表示Kafka实例配额。 - rocketmqInstance表示RocketMQ实例配额。 - tags表示标签的配额。 - kafkaInstancePublic表示kafka公网配额，已弃用。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * quota  **参数解释**： 租户最大可以创建的实例个数，或者每个实例最大可以创建的标签个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * used  **参数解释**： 已创建的实例个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class QuotaResourceEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  支持rabbitmqInstance、kafkaInstance、rocketmqInstance、tags四种。   - rabbitmqInstance表示RabbitMQ实例配额。   - kafkaInstance表示Kafka实例配额。   - rocketmqInstance表示RocketMQ实例配额。   - tags表示标签的配额。
-    * quota  租户最大可以创建的实例个数，或者每个实例最大可以创建的标签个数。
-    * used  已创建的实例个数。
+    * type  **参数解释**： 支持[rabbitmqInstance、](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,fcs,ax,srg)kafkaInstance、rocketmqInstance、tags。 [- rabbitmqInstance表示RabbitMQ实例配额。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,fcs,ax,srg) - kafkaInstance表示Kafka实例配额。 - rocketmqInstance表示RocketMQ实例配额。 - tags表示标签的配额。 - kafkaInstancePublic表示kafka公网配额，已弃用。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * quota  **参数解释**： 租户最大可以创建的实例个数，或者每个实例最大可以创建的标签个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * used  **参数解释**： 已创建的实例个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class QuotaResourceEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  支持rabbitmqInstance、kafkaInstance、rocketmqInstance、tags四种。   - rabbitmqInstance表示RabbitMQ实例配额。   - kafkaInstance表示Kafka实例配额。   - rocketmqInstance表示RocketMQ实例配额。   - tags表示标签的配额。
-    * quota  租户最大可以创建的实例个数，或者每个实例最大可以创建的标签个数。
-    * used  已创建的实例个数。
+    * type  **参数解释**： 支持[rabbitmqInstance、](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,fcs,ax,srg)kafkaInstance、rocketmqInstance、tags。 [- rabbitmqInstance表示RabbitMQ实例配额。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,fcs,ax,srg) - kafkaInstance表示Kafka实例配额。 - rocketmqInstance表示RocketMQ实例配额。 - tags表示标签的配额。 - kafkaInstancePublic表示kafka公网配额，已弃用。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * quota  **参数解释**： 租户最大可以创建的实例个数，或者每个实例最大可以创建的标签个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * used  **参数解释**： 已创建的实例个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class QuotaResourceEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  支持rabbitmqInstance、kafkaInstance、rocketmqInstance、tags四种。   - rabbitmqInstance表示RabbitMQ实例配额。   - kafkaInstance表示Kafka实例配额。   - rocketmqInstance表示RocketMQ实例配额。   - tags表示标签的配额。
-    * quota  租户最大可以创建的实例个数，或者每个实例最大可以创建的标签个数。
-    * used  已创建的实例个数。
+    * type  **参数解释**： 支持[rabbitmqInstance、](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,fcs,ax,srg)kafkaInstance、rocketmqInstance、tags。 [- rabbitmqInstance表示RabbitMQ实例配额。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,fcs,ax,srg) - kafkaInstance表示Kafka实例配额。 - rocketmqInstance表示RocketMQ实例配额。 - tags表示标签的配额。 - kafkaInstancePublic表示kafka公网配额，已弃用。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * quota  **参数解释**： 租户最大可以创建的实例个数，或者每个实例最大可以创建的标签个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * used  **参数解释**： 已创建的实例个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class QuotaResourceEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  支持rabbitmqInstance、kafkaInstance、rocketmqInstance、tags四种。   - rabbitmqInstance表示RabbitMQ实例配额。   - kafkaInstance表示Kafka实例配额。   - rocketmqInstance表示RocketMQ实例配额。   - tags表示标签的配额。
-    * quota  租户最大可以创建的实例个数，或者每个实例最大可以创建的标签个数。
-    * used  已创建的实例个数。
+    * type  **参数解释**： 支持[rabbitmqInstance、](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,fcs,ax,srg)kafkaInstance、rocketmqInstance、tags。 [- rabbitmqInstance表示RabbitMQ实例配额。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,fcs,ax,srg) - kafkaInstance表示Kafka实例配额。 - rocketmqInstance表示RocketMQ实例配额。 - tags表示标签的配额。 - kafkaInstancePublic表示kafka公网配额，已弃用。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * quota  **参数解释**： 租户最大可以创建的实例个数，或者每个实例最大可以创建的标签个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * used  **参数解释**： 已创建的实例个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class QuotaResourceEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  支持rabbitmqInstance、kafkaInstance、rocketmqInstance、tags四种。   - rabbitmqInstance表示RabbitMQ实例配额。   - kafkaInstance表示Kafka实例配额。   - rocketmqInstance表示RocketMQ实例配额。   - tags表示标签的配额。
+    *  **参数解释**： 支持[rabbitmqInstance、](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,fcs,ax,srg)kafkaInstance、rocketmqInstance、tags。 [- rabbitmqInstance表示RabbitMQ实例配额。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,fcs,ax,srg) - kafkaInstance表示Kafka实例配额。 - rocketmqInstance表示RocketMQ实例配额。 - tags表示标签的配额。 - kafkaInstancePublic表示kafka公网配额，已弃用。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class QuotaResourceEntity implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 支持rabbitmqInstance、kafkaInstance、rocketmqInstance、tags四种。   - rabbitmqInstance表示RabbitMQ实例配额。   - kafkaInstance表示Kafka实例配额。   - rocketmqInstance表示RocketMQ实例配额。   - tags表示标签的配额。
+    * @param string|null $type **参数解释**： 支持[rabbitmqInstance、](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,fcs,ax,srg)kafkaInstance、rocketmqInstance、tags。 [- rabbitmqInstance表示RabbitMQ实例配额。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,fcs,ax,srg) - kafkaInstance表示Kafka实例配额。 - rocketmqInstance表示RocketMQ实例配额。 - tags表示标签的配额。 - kafkaInstancePublic表示kafka公网配额，已弃用。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class QuotaResourceEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets quota
-    *  租户最大可以创建的实例个数，或者每个实例最大可以创建的标签个数。
+    *  **参数解释**： 租户最大可以创建的实例个数，或者每个实例最大可以创建的标签个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -232,7 +232,7 @@ class QuotaResourceEntity implements ModelInterface, ArrayAccess
     /**
     * Sets quota
     *
-    * @param int|null $quota 租户最大可以创建的实例个数，或者每个实例最大可以创建的标签个数。
+    * @param int|null $quota **参数解释**： 租户最大可以创建的实例个数，或者每个实例最大可以创建的标签个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class QuotaResourceEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets used
-    *  已创建的实例个数。
+    *  **参数解释**： 已创建的实例个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -256,7 +256,7 @@ class QuotaResourceEntity implements ModelInterface, ArrayAccess
     /**
     * Sets used
     *
-    * @param int|null $used 已创建的实例个数。
+    * @param int|null $used **参数解释**： 已创建的实例个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

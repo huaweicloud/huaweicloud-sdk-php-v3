@@ -28,7 +28,7 @@ class AvailableZonesResp implements ModelInterface, ArrayAccess
     * resourceAvailability  **参数解释**： 可用区上是否还有可用资源。 **取值范围**： - true：有可用资源 - false：无可用资源
     * defaultAz  **参数解释**： 是否为默认可用区。 **取值范围**： - true：默认可用区 - false：不是默认可用区
     * remainTime  **参数解释**： 剩余时间，以Unix时间戳显示。 **取值范围**： 不涉及
-    * ipv6Enable  **参数解释**： 是否支持IPv6。 **取值范围**： - true：支持 - false：不支持
+    * ipv6Enable  **参数解释**： 是否支持IPv6。[华为云Stack不支持此参数。](tag:hcs)  **取值范围**： - true：支持 - false：不支持
     *
     * @var string[]
     */
@@ -54,7 +54,7 @@ class AvailableZonesResp implements ModelInterface, ArrayAccess
     * resourceAvailability  **参数解释**： 可用区上是否还有可用资源。 **取值范围**： - true：有可用资源 - false：无可用资源
     * defaultAz  **参数解释**： 是否为默认可用区。 **取值范围**： - true：默认可用区 - false：不是默认可用区
     * remainTime  **参数解释**： 剩余时间，以Unix时间戳显示。 **取值范围**： 不涉及
-    * ipv6Enable  **参数解释**： 是否支持IPv6。 **取值范围**： - true：支持 - false：不支持
+    * ipv6Enable  **参数解释**： 是否支持IPv6。[华为云Stack不支持此参数。](tag:hcs)  **取值范围**： - true：支持 - false：不支持
     *
     * @var string[]
     */
@@ -101,7 +101,7 @@ class AvailableZonesResp implements ModelInterface, ArrayAccess
     * resourceAvailability  **参数解释**： 可用区上是否还有可用资源。 **取值范围**： - true：有可用资源 - false：无可用资源
     * defaultAz  **参数解释**： 是否为默认可用区。 **取值范围**： - true：默认可用区 - false：不是默认可用区
     * remainTime  **参数解释**： 剩余时间，以Unix时间戳显示。 **取值范围**： 不涉及
-    * ipv6Enable  **参数解释**： 是否支持IPv6。 **取值范围**： - true：支持 - false：不支持
+    * ipv6Enable  **参数解释**： 是否支持IPv6。[华为云Stack不支持此参数。](tag:hcs)  **取值范围**： - true：支持 - false：不支持
     *
     * @var string[]
     */
@@ -127,7 +127,7 @@ class AvailableZonesResp implements ModelInterface, ArrayAccess
     * resourceAvailability  **参数解释**： 可用区上是否还有可用资源。 **取值范围**： - true：有可用资源 - false：无可用资源
     * defaultAz  **参数解释**： 是否为默认可用区。 **取值范围**： - true：默认可用区 - false：不是默认可用区
     * remainTime  **参数解释**： 剩余时间，以Unix时间戳显示。 **取值范围**： 不涉及
-    * ipv6Enable  **参数解释**： 是否支持IPv6。 **取值范围**： - true：支持 - false：不支持
+    * ipv6Enable  **参数解释**： 是否支持IPv6。[华为云Stack不支持此参数。](tag:hcs)  **取值范围**： - true：支持 - false：不支持
     *
     * @var string[]
     */
@@ -153,7 +153,7 @@ class AvailableZonesResp implements ModelInterface, ArrayAccess
     * resourceAvailability  **参数解释**： 可用区上是否还有可用资源。 **取值范围**： - true：有可用资源 - false：无可用资源
     * defaultAz  **参数解释**： 是否为默认可用区。 **取值范围**： - true：默认可用区 - false：不是默认可用区
     * remainTime  **参数解释**： 剩余时间，以Unix时间戳显示。 **取值范围**： 不涉及
-    * ipv6Enable  **参数解释**： 是否支持IPv6。 **取值范围**： - true：支持 - false：不支持
+    * ipv6Enable  **参数解释**： 是否支持IPv6。[华为云Stack不支持此参数。](tag:hcs)  **取值范围**： - true：支持 - false：不支持
     *
     * @var string[]
     */
@@ -454,7 +454,7 @@ class AvailableZonesResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6Enable
-    *  **参数解释**： 是否支持IPv6。 **取值范围**： - true：支持 - false：不支持
+    *  **参数解释**： 是否支持IPv6。[华为云Stack不支持此参数。](tag:hcs)  **取值范围**： - true：支持 - false：不支持
     *
     * @return bool|null
     */
@@ -466,7 +466,7 @@ class AvailableZonesResp implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6Enable
     *
-    * @param bool|null $ipv6Enable **参数解释**： 是否支持IPv6。 **取值范围**： - true：支持 - false：不支持
+    * @param bool|null $ipv6Enable **参数解释**： 是否支持IPv6。[华为云Stack不支持此参数。](tag:hcs)  **取值范围**： - true：支持 - false：不支持
     *
     * @return $this
     */

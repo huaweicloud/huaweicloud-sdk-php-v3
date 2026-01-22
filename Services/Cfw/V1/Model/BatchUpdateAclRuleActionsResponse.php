@@ -21,7 +21,7 @@ class BatchUpdateAclRuleActionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * data  批量更新acl规则id，为请求体中传入的规则id
+    * data  **参数解释**： 批量更新acl规则ID，为请求体中传入的规则ID **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class BatchUpdateAclRuleActionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * data  批量更新acl规则id，为请求体中传入的规则id
+    * data  **参数解释**： 批量更新acl规则ID，为请求体中传入的规则ID **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class BatchUpdateAclRuleActionsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * data  批量更新acl规则id，为请求体中传入的规则id
+    * data  **参数解释**： 批量更新acl规则ID，为请求体中传入的规则ID **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class BatchUpdateAclRuleActionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * data  批量更新acl规则id，为请求体中传入的规则id
+    * data  **参数解释**： 批量更新acl规则ID，为请求体中传入的规则ID **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class BatchUpdateAclRuleActionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * data  批量更新acl规则id，为请求体中传入的规则id
+    * data  **参数解释**： 批量更新acl规则ID，为请求体中传入的规则ID **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class BatchUpdateAclRuleActionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
-    *  批量更新acl规则id，为请求体中传入的规则id
+    *  **参数解释**： 批量更新acl规则ID，为请求体中传入的规则ID **取值范围**： 不涉及
     *
     * @return string[]|null
     */
@@ -187,7 +187,7 @@ class BatchUpdateAclRuleActionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param string[]|null $data 批量更新acl规则id，为请求体中传入的规则id
+    * @param string[]|null $data **参数解释**： 批量更新acl规则ID，为请求体中传入的规则ID **取值范围**： 不涉及
     *
     * @return $this
     */

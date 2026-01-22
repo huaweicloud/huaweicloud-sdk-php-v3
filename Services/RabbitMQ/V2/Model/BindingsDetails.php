@@ -20,11 +20,11 @@ class BindingsDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * source  Exchange名称
-    * destinationType  绑定目标类型
-    * destination  绑定目标的名称
-    * routingKey  绑定键值
-    * propertiesKey  经过URL转译后routing_key
+    * source  **参数解释**： Exchange名称。 **取值范围**： 不涉及。
+    * destinationType  **参数解释**： 绑定目标的类型。 **取值范围**： - exchange：交换机。 - queue：队列。
+    * destination  **参数解释**： 绑定目标。 **取值范围**： 不涉及。
+    * routingKey  **参数解释**： 绑定键值。 **取值范围**： 不涉及。
+    * propertiesKey  **参数解释**： 经过URL转译后routing_key。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class BindingsDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * source  Exchange名称
-    * destinationType  绑定目标类型
-    * destination  绑定目标的名称
-    * routingKey  绑定键值
-    * propertiesKey  经过URL转译后routing_key
+    * source  **参数解释**： Exchange名称。 **取值范围**： 不涉及。
+    * destinationType  **参数解释**： 绑定目标的类型。 **取值范围**： - exchange：交换机。 - queue：队列。
+    * destination  **参数解释**： 绑定目标。 **取值范围**： 不涉及。
+    * routingKey  **参数解释**： 绑定键值。 **取值范围**： 不涉及。
+    * propertiesKey  **参数解释**： 经过URL转译后routing_key。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class BindingsDetails implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * source  Exchange名称
-    * destinationType  绑定目标类型
-    * destination  绑定目标的名称
-    * routingKey  绑定键值
-    * propertiesKey  经过URL转译后routing_key
+    * source  **参数解释**： Exchange名称。 **取值范围**： 不涉及。
+    * destinationType  **参数解释**： 绑定目标的类型。 **取值范围**： - exchange：交换机。 - queue：队列。
+    * destination  **参数解释**： 绑定目标。 **取值范围**： 不涉及。
+    * routingKey  **参数解释**： 绑定键值。 **取值范围**： 不涉及。
+    * propertiesKey  **参数解释**： 经过URL转译后routing_key。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class BindingsDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * source  Exchange名称
-    * destinationType  绑定目标类型
-    * destination  绑定目标的名称
-    * routingKey  绑定键值
-    * propertiesKey  经过URL转译后routing_key
+    * source  **参数解释**： Exchange名称。 **取值范围**： 不涉及。
+    * destinationType  **参数解释**： 绑定目标的类型。 **取值范围**： - exchange：交换机。 - queue：队列。
+    * destination  **参数解释**： 绑定目标。 **取值范围**： 不涉及。
+    * routingKey  **参数解释**： 绑定键值。 **取值范围**： 不涉及。
+    * propertiesKey  **参数解释**： 经过URL转译后routing_key。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class BindingsDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * source  Exchange名称
-    * destinationType  绑定目标类型
-    * destination  绑定目标的名称
-    * routingKey  绑定键值
-    * propertiesKey  经过URL转译后routing_key
+    * source  **参数解释**： Exchange名称。 **取值范围**： 不涉及。
+    * destinationType  **参数解释**： 绑定目标的类型。 **取值范围**： - exchange：交换机。 - queue：队列。
+    * destination  **参数解释**： 绑定目标。 **取值范围**： 不涉及。
+    * routingKey  **参数解释**： 绑定键值。 **取值范围**： 不涉及。
+    * propertiesKey  **参数解释**： 经过URL转译后routing_key。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class BindingsDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets source
-    *  Exchange名称
+    *  **参数解释**： Exchange名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class BindingsDetails implements ModelInterface, ArrayAccess
     /**
     * Sets source
     *
-    * @param string|null $source Exchange名称
+    * @param string|null $source **参数解释**： Exchange名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class BindingsDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets destinationType
-    *  绑定目标类型
+    *  **参数解释**： 绑定目标的类型。 **取值范围**： - exchange：交换机。 - queue：队列。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class BindingsDetails implements ModelInterface, ArrayAccess
     /**
     * Sets destinationType
     *
-    * @param string|null $destinationType 绑定目标类型
+    * @param string|null $destinationType **参数解释**： 绑定目标的类型。 **取值范围**： - exchange：交换机。 - queue：队列。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class BindingsDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets destination
-    *  绑定目标的名称
+    *  **参数解释**： 绑定目标。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class BindingsDetails implements ModelInterface, ArrayAccess
     /**
     * Sets destination
     *
-    * @param string|null $destination 绑定目标的名称
+    * @param string|null $destination **参数解释**： 绑定目标。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class BindingsDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets routingKey
-    *  绑定键值
+    *  **参数解释**： 绑定键值。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class BindingsDetails implements ModelInterface, ArrayAccess
     /**
     * Sets routingKey
     *
-    * @param string|null $routingKey 绑定键值
+    * @param string|null $routingKey **参数解释**： 绑定键值。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class BindingsDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets propertiesKey
-    *  经过URL转译后routing_key
+    *  **参数解释**： 经过URL转译后routing_key。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class BindingsDetails implements ModelInterface, ArrayAccess
     /**
     * Sets propertiesKey
     *
-    * @param string|null $propertiesKey 经过URL转译后routing_key
+    * @param string|null $propertiesKey **参数解释**： 经过URL转译后routing_key。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -21,8 +21,8 @@ class AccessTopVO implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * denyCount  **参数解释**： 阻断次数 **取值范围**： 不涉及
-    * denyTopOneAclId  **参数解释**： 高频命中的阻断策略ID **取值范围**： 不涉及
-    * denyTopOneAclName  **参数解释**： 高频命中的阻断策略ID **取值范围**： 不涉及
+    * denyTopOneAclId  **参数解释**： Top命中的阻断策略ID **取值范围**： 不涉及
+    * denyTopOneAclName  **参数解释**： Top命中的阻断策略名称 **取值范围**： 不涉及
     * hitCount  **参数解释**： 命中次数 **取值范围**： 不涉及
     * in2outDenyDstIpList  **参数解释**： TOP出云阻断目的IP列表 **取值范围**： 不涉及
     * in2outDenyDstPortList  **参数解释**： TOP出云阻断端口列表 **取值范围**： 不涉及
@@ -65,8 +65,8 @@ class AccessTopVO implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * denyCount  **参数解释**： 阻断次数 **取值范围**： 不涉及
-    * denyTopOneAclId  **参数解释**： 高频命中的阻断策略ID **取值范围**： 不涉及
-    * denyTopOneAclName  **参数解释**： 高频命中的阻断策略ID **取值范围**： 不涉及
+    * denyTopOneAclId  **参数解释**： Top命中的阻断策略ID **取值范围**： 不涉及
+    * denyTopOneAclName  **参数解释**： Top命中的阻断策略名称 **取值范围**： 不涉及
     * hitCount  **参数解释**： 命中次数 **取值范围**： 不涉及
     * in2outDenyDstIpList  **参数解释**： TOP出云阻断目的IP列表 **取值范围**： 不涉及
     * in2outDenyDstPortList  **参数解释**： TOP出云阻断端口列表 **取值范围**： 不涉及
@@ -130,8 +130,8 @@ class AccessTopVO implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * denyCount  **参数解释**： 阻断次数 **取值范围**： 不涉及
-    * denyTopOneAclId  **参数解释**： 高频命中的阻断策略ID **取值范围**： 不涉及
-    * denyTopOneAclName  **参数解释**： 高频命中的阻断策略ID **取值范围**： 不涉及
+    * denyTopOneAclId  **参数解释**： Top命中的阻断策略ID **取值范围**： 不涉及
+    * denyTopOneAclName  **参数解释**： Top命中的阻断策略名称 **取值范围**： 不涉及
     * hitCount  **参数解释**： 命中次数 **取值范围**： 不涉及
     * in2outDenyDstIpList  **参数解释**： TOP出云阻断目的IP列表 **取值范围**： 不涉及
     * in2outDenyDstPortList  **参数解释**： TOP出云阻断端口列表 **取值范围**： 不涉及
@@ -174,8 +174,8 @@ class AccessTopVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * denyCount  **参数解释**： 阻断次数 **取值范围**： 不涉及
-    * denyTopOneAclId  **参数解释**： 高频命中的阻断策略ID **取值范围**： 不涉及
-    * denyTopOneAclName  **参数解释**： 高频命中的阻断策略ID **取值范围**： 不涉及
+    * denyTopOneAclId  **参数解释**： Top命中的阻断策略ID **取值范围**： 不涉及
+    * denyTopOneAclName  **参数解释**： Top命中的阻断策略名称 **取值范围**： 不涉及
     * hitCount  **参数解释**： 命中次数 **取值范围**： 不涉及
     * in2outDenyDstIpList  **参数解释**： TOP出云阻断目的IP列表 **取值范围**： 不涉及
     * in2outDenyDstPortList  **参数解释**： TOP出云阻断端口列表 **取值范围**： 不涉及
@@ -218,8 +218,8 @@ class AccessTopVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * denyCount  **参数解释**： 阻断次数 **取值范围**： 不涉及
-    * denyTopOneAclId  **参数解释**： 高频命中的阻断策略ID **取值范围**： 不涉及
-    * denyTopOneAclName  **参数解释**： 高频命中的阻断策略ID **取值范围**： 不涉及
+    * denyTopOneAclId  **参数解释**： Top命中的阻断策略ID **取值范围**： 不涉及
+    * denyTopOneAclName  **参数解释**： Top命中的阻断策略名称 **取值范围**： 不涉及
     * hitCount  **参数解释**： 命中次数 **取值范围**： 不涉及
     * in2outDenyDstIpList  **参数解释**： TOP出云阻断目的IP列表 **取值范围**： 不涉及
     * in2outDenyDstPortList  **参数解释**： TOP出云阻断端口列表 **取值范围**： 不涉及
@@ -385,7 +385,7 @@ class AccessTopVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets denyTopOneAclId
-    *  **参数解释**： 高频命中的阻断策略ID **取值范围**： 不涉及
+    *  **参数解释**： Top命中的阻断策略ID **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -397,7 +397,7 @@ class AccessTopVO implements ModelInterface, ArrayAccess
     /**
     * Sets denyTopOneAclId
     *
-    * @param string|null $denyTopOneAclId **参数解释**： 高频命中的阻断策略ID **取值范围**： 不涉及
+    * @param string|null $denyTopOneAclId **参数解释**： Top命中的阻断策略ID **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -409,7 +409,7 @@ class AccessTopVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets denyTopOneAclName
-    *  **参数解释**： 高频命中的阻断策略ID **取值范围**： 不涉及
+    *  **参数解释**： Top命中的阻断策略名称 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -421,7 +421,7 @@ class AccessTopVO implements ModelInterface, ArrayAccess
     /**
     * Sets denyTopOneAclName
     *
-    * @param string|null $denyTopOneAclName **参数解释**： 高频命中的阻断策略ID **取值范围**： 不涉及
+    * @param string|null $denyTopOneAclName **参数解释**： Top命中的阻断策略名称 **取值范围**： 不涉及
     *
     * @return $this
     */

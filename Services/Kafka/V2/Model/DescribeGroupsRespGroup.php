@@ -31,7 +31,7 @@ class DescribeGroupsRespGroup implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'state' => 'string',
-            'createdAt' => 'object',
+            'createdAt' => 'int',
             'groupId' => 'string',
             'coordinatorId' => 'int',
             'assignmentStrategy' => 'string',
@@ -255,7 +255,7 @@ class DescribeGroupsRespGroup implements ModelInterface, ArrayAccess
     * Gets createdAt
     *  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
-    * @return object|null
+    * @return int|null
     */
     public function getCreatedAt()
     {
@@ -265,7 +265,7 @@ class DescribeGroupsRespGroup implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param object|null $createdAt **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * @param int|null $createdAt **参数解释**： 创建时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */

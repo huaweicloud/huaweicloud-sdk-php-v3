@@ -20,13 +20,13 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topicName  Topic名称。
-    * order  是否有序消息。
-    * perm  Topic权限。
-    * readQueueNums  读队列个数。
-    * writeQueueNums  写队列个数。
-    * topicFilterType  Topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
-    * topicSysFlag  Topic系统标志位。
+    * topicName  **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * order  **参数解释**： 是否有序消息。 **约束限制**： 不涉及。 **取值范围**： - true：有序消息。 - false：无序消息。 **默认取值**： false。
+    * perm  **参数解释**： Topic权限。 **约束限制**： 不涉及。 **取值范围**： - PUB：拥有发布权限。 - SUB：拥有订阅权限。 - PUB|SUB：拥有发布订阅权限。 - DENY：无权限。 **默认取值**： 6。
+    * readQueueNums  **参数解释**： 读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
+    * writeQueueNums  **参数解释**： 写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
+    * topicFilterType  **参数解释**： Topic过滤类型。 **约束限制**： 不涉及。 **取值范围**： - SINGLE_TAG：单标签   - MULTI_TAG：多标签 **默认取值**： 不涉及。
+    * topicSysFlag  **参数解释**： Topic系统标志位。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topicName  Topic名称。
-    * order  是否有序消息。
-    * perm  Topic权限。
-    * readQueueNums  读队列个数。
-    * writeQueueNums  写队列个数。
-    * topicFilterType  Topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
-    * topicSysFlag  Topic系统标志位。
+    * topicName  **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * order  **参数解释**： 是否有序消息。 **约束限制**： 不涉及。 **取值范围**： - true：有序消息。 - false：无序消息。 **默认取值**： false。
+    * perm  **参数解释**： Topic权限。 **约束限制**： 不涉及。 **取值范围**： - PUB：拥有发布权限。 - SUB：拥有订阅权限。 - PUB|SUB：拥有发布订阅权限。 - DENY：无权限。 **默认取值**： 6。
+    * readQueueNums  **参数解释**： 读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
+    * writeQueueNums  **参数解释**： 写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
+    * topicFilterType  **参数解释**： Topic过滤类型。 **约束限制**： 不涉及。 **取值范围**： - SINGLE_TAG：单标签   - MULTI_TAG：多标签 **默认取值**： 不涉及。
+    * topicSysFlag  **参数解释**： Topic系统标志位。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -85,35 +85,35 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topicName  Topic名称。
-    * order  是否有序消息。
-    * perm  Topic权限。
-    * readQueueNums  读队列个数。
-    * writeQueueNums  写队列个数。
-    * topicFilterType  Topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
-    * topicSysFlag  Topic系统标志位。
+    * topicName  **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * order  **参数解释**： 是否有序消息。 **约束限制**： 不涉及。 **取值范围**： - true：有序消息。 - false：无序消息。 **默认取值**： false。
+    * perm  **参数解释**： Topic权限。 **约束限制**： 不涉及。 **取值范围**： - PUB：拥有发布权限。 - SUB：拥有订阅权限。 - PUB|SUB：拥有发布订阅权限。 - DENY：无权限。 **默认取值**： 6。
+    * readQueueNums  **参数解释**： 读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
+    * writeQueueNums  **参数解释**： 写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
+    * topicFilterType  **参数解释**： Topic过滤类型。 **约束限制**： 不涉及。 **取值范围**： - SINGLE_TAG：单标签   - MULTI_TAG：多标签 **默认取值**： 不涉及。
+    * topicSysFlag  **参数解释**： Topic系统标志位。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'topicName' => 'topicName',
+            'topicName' => 'topic_name',
             'order' => 'order',
             'perm' => 'perm',
-            'readQueueNums' => 'readQueueNums',
-            'writeQueueNums' => 'writeQueueNums',
-            'topicFilterType' => 'topicFilterType',
-            'topicSysFlag' => 'topicSysFlag'
+            'readQueueNums' => 'read_queue_nums',
+            'writeQueueNums' => 'write_queue_nums',
+            'topicFilterType' => 'topic_filter_type',
+            'topicSysFlag' => 'topic_sys_flag'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topicName  Topic名称。
-    * order  是否有序消息。
-    * perm  Topic权限。
-    * readQueueNums  读队列个数。
-    * writeQueueNums  写队列个数。
-    * topicFilterType  Topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
-    * topicSysFlag  Topic系统标志位。
+    * topicName  **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * order  **参数解释**： 是否有序消息。 **约束限制**： 不涉及。 **取值范围**： - true：有序消息。 - false：无序消息。 **默认取值**： false。
+    * perm  **参数解释**： Topic权限。 **约束限制**： 不涉及。 **取值范围**： - PUB：拥有发布权限。 - SUB：拥有订阅权限。 - PUB|SUB：拥有发布订阅权限。 - DENY：无权限。 **默认取值**： 6。
+    * readQueueNums  **参数解释**： 读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
+    * writeQueueNums  **参数解释**： 写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
+    * topicFilterType  **参数解释**： Topic过滤类型。 **约束限制**： 不涉及。 **取值范围**： - SINGLE_TAG：单标签   - MULTI_TAG：多标签 **默认取值**： 不涉及。
+    * topicSysFlag  **参数解释**： Topic系统标志位。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topicName  Topic名称。
-    * order  是否有序消息。
-    * perm  Topic权限。
-    * readQueueNums  读队列个数。
-    * writeQueueNums  写队列个数。
-    * topicFilterType  Topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
-    * topicSysFlag  Topic系统标志位。
+    * topicName  **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * order  **参数解释**： 是否有序消息。 **约束限制**： 不涉及。 **取值范围**： - true：有序消息。 - false：无序消息。 **默认取值**： false。
+    * perm  **参数解释**： Topic权限。 **约束限制**： 不涉及。 **取值范围**： - PUB：拥有发布权限。 - SUB：拥有订阅权限。 - PUB|SUB：拥有发布订阅权限。 - DENY：无权限。 **默认取值**： 6。
+    * readQueueNums  **参数解释**： 读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
+    * writeQueueNums  **参数解释**： 写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
+    * topicFilterType  **参数解释**： Topic过滤类型。 **约束限制**： 不涉及。 **取值范围**： - SINGLE_TAG：单标签   - MULTI_TAG：多标签 **默认取值**： 不涉及。
+    * topicSysFlag  **参数解释**： Topic系统标志位。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicName
-    *  Topic名称。
+    *  **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
     /**
     * Sets topicName
     *
-    * @param string|null $topicName Topic名称。
+    * @param string|null $topicName **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets order
-    *  是否有序消息。
+    *  **参数解释**： 是否有序消息。 **约束限制**： 不涉及。 **取值范围**： - true：有序消息。 - false：无序消息。 **默认取值**： false。
     *
     * @return bool|null
     */
@@ -276,7 +276,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
     /**
     * Sets order
     *
-    * @param bool|null $order 是否有序消息。
+    * @param bool|null $order **参数解释**： 是否有序消息。 **约束限制**： 不涉及。 **取值范围**： - true：有序消息。 - false：无序消息。 **默认取值**： false。
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets perm
-    *  Topic权限。
+    *  **参数解释**： Topic权限。 **约束限制**： 不涉及。 **取值范围**： - PUB：拥有发布权限。 - SUB：拥有订阅权限。 - PUB|SUB：拥有发布订阅权限。 - DENY：无权限。 **默认取值**： 6。
     *
     * @return int|null
     */
@@ -300,7 +300,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
     /**
     * Sets perm
     *
-    * @param int|null $perm Topic权限。
+    * @param int|null $perm **参数解释**： Topic权限。 **约束限制**： 不涉及。 **取值范围**： - PUB：拥有发布权限。 - SUB：拥有订阅权限。 - PUB|SUB：拥有发布订阅权限。 - DENY：无权限。 **默认取值**： 6。
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets readQueueNums
-    *  读队列个数。
+    *  **参数解释**： 读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
     *
     * @return int|null
     */
@@ -324,7 +324,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
     /**
     * Sets readQueueNums
     *
-    * @param int|null $readQueueNums 读队列个数。
+    * @param int|null $readQueueNums **参数解释**： 读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets writeQueueNums
-    *  写队列个数。
+    *  **参数解释**： 写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
     *
     * @return int|null
     */
@@ -348,7 +348,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
     /**
     * Sets writeQueueNums
     *
-    * @param int|null $writeQueueNums 写队列个数。
+    * @param int|null $writeQueueNums **参数解释**： 写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicFilterType
-    *  Topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
+    *  **参数解释**： Topic过滤类型。 **约束限制**： 不涉及。 **取值范围**： - SINGLE_TAG：单标签   - MULTI_TAG：多标签 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
     /**
     * Sets topicFilterType
     *
-    * @param string|null $topicFilterType Topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
+    * @param string|null $topicFilterType **参数解释**： Topic过滤类型。 **约束限制**： 不涉及。 **取值范围**： - SINGLE_TAG：单标签   - MULTI_TAG：多标签 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicSysFlag
-    *  Topic系统标志位。
+    *  **参数解释**： Topic系统标志位。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @return int|null
     */
@@ -396,7 +396,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
     /**
     * Sets topicSysFlag
     *
-    * @param int|null $topicSysFlag Topic系统标志位。
+    * @param int|null $topicSysFlag **参数解释**： Topic系统标志位。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @return $this
     */

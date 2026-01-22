@@ -38,7 +38,7 @@ class UpdateLoadBalancerOption implements ModelInterface, ArrayAccess
     * wafFailureAction  **参数解释**：WAF故障时的流量处理策略。  **约束限制**：只有绑定了waf的LB实例，该字段才会生效。  **取值范围**：discard:丢弃，forward: 转发到后端。  **默认取值**：forward  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
     * protectionStatus  **参数解释**：修改保护状态。  **约束限制**：不涉及  **取值范围**： - nonProtection: 不保护 - consoleProtection: 控制台修改保护。  **默认取值**：不涉及
     * protectionReason  **参数解释**：设置保护的原因。作为protection_status的转态设置的原因。  **约束限制**：仅当protection_status为consoleProtection时有效。  **取值范围**：除'<'和'>'外通用Unicode字符集字符，最大255个字符。  **默认取值**：不涉及
-    * ipv6VipAddress  **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及 [不支持IPv6，请勿使用。](tag:dt)
+    * ipv6VipAddress  **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
     *
     * @var string[]
     */
@@ -84,7 +84,7 @@ class UpdateLoadBalancerOption implements ModelInterface, ArrayAccess
     * wafFailureAction  **参数解释**：WAF故障时的流量处理策略。  **约束限制**：只有绑定了waf的LB实例，该字段才会生效。  **取值范围**：discard:丢弃，forward: 转发到后端。  **默认取值**：forward  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
     * protectionStatus  **参数解释**：修改保护状态。  **约束限制**：不涉及  **取值范围**： - nonProtection: 不保护 - consoleProtection: 控制台修改保护。  **默认取值**：不涉及
     * protectionReason  **参数解释**：设置保护的原因。作为protection_status的转态设置的原因。  **约束限制**：仅当protection_status为consoleProtection时有效。  **取值范围**：除'<'和'>'外通用Unicode字符集字符，最大255个字符。  **默认取值**：不涉及
-    * ipv6VipAddress  **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及 [不支持IPv6，请勿使用。](tag:dt)
+    * ipv6VipAddress  **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
     *
     * @var string[]
     */
@@ -151,7 +151,7 @@ class UpdateLoadBalancerOption implements ModelInterface, ArrayAccess
     * wafFailureAction  **参数解释**：WAF故障时的流量处理策略。  **约束限制**：只有绑定了waf的LB实例，该字段才会生效。  **取值范围**：discard:丢弃，forward: 转发到后端。  **默认取值**：forward  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
     * protectionStatus  **参数解释**：修改保护状态。  **约束限制**：不涉及  **取值范围**： - nonProtection: 不保护 - consoleProtection: 控制台修改保护。  **默认取值**：不涉及
     * protectionReason  **参数解释**：设置保护的原因。作为protection_status的转态设置的原因。  **约束限制**：仅当protection_status为consoleProtection时有效。  **取值范围**：除'<'和'>'外通用Unicode字符集字符，最大255个字符。  **默认取值**：不涉及
-    * ipv6VipAddress  **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及 [不支持IPv6，请勿使用。](tag:dt)
+    * ipv6VipAddress  **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class UpdateLoadBalancerOption implements ModelInterface, ArrayAccess
     * wafFailureAction  **参数解释**：WAF故障时的流量处理策略。  **约束限制**：只有绑定了waf的LB实例，该字段才会生效。  **取值范围**：discard:丢弃，forward: 转发到后端。  **默认取值**：forward  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
     * protectionStatus  **参数解释**：修改保护状态。  **约束限制**：不涉及  **取值范围**： - nonProtection: 不保护 - consoleProtection: 控制台修改保护。  **默认取值**：不涉及
     * protectionReason  **参数解释**：设置保护的原因。作为protection_status的转态设置的原因。  **约束限制**：仅当protection_status为consoleProtection时有效。  **取值范围**：除'<'和'>'外通用Unicode字符集字符，最大255个字符。  **默认取值**：不涉及
-    * ipv6VipAddress  **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及 [不支持IPv6，请勿使用。](tag:dt)
+    * ipv6VipAddress  **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
     *
     * @var string[]
     */
@@ -243,7 +243,7 @@ class UpdateLoadBalancerOption implements ModelInterface, ArrayAccess
     * wafFailureAction  **参数解释**：WAF故障时的流量处理策略。  **约束限制**：只有绑定了waf的LB实例，该字段才会生效。  **取值范围**：discard:丢弃，forward: 转发到后端。  **默认取值**：forward  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
     * protectionStatus  **参数解释**：修改保护状态。  **约束限制**：不涉及  **取值范围**： - nonProtection: 不保护 - consoleProtection: 控制台修改保护。  **默认取值**：不涉及
     * protectionReason  **参数解释**：设置保护的原因。作为protection_status的转态设置的原因。  **约束限制**：仅当protection_status为consoleProtection时有效。  **取值范围**：除'<'和'>'外通用Unicode字符集字符，最大255个字符。  **默认取值**：不涉及
-    * ipv6VipAddress  **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及 [不支持IPv6，请勿使用。](tag:dt)
+    * ipv6VipAddress  **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
     *
     * @var string[]
     */
@@ -898,7 +898,7 @@ class UpdateLoadBalancerOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6VipAddress
-    *  **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及 [不支持IPv6，请勿使用。](tag:dt)
+    *  **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
     *
     * @return string|null
     */
@@ -910,7 +910,7 @@ class UpdateLoadBalancerOption implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6VipAddress
     *
-    * @param string|null $ipv6VipAddress **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及 [不支持IPv6，请勿使用。](tag:dt)
+    * @param string|null $ipv6VipAddress **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
     *
     * @return $this
     */

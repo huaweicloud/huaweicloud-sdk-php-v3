@@ -21,7 +21,7 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * start  开启查询的任务编号。
+    * offset  开启查询的任务编号。
     * limit  查询的任务个数。
     * beginTime  查询任务的最小时间，格式为YYYYMMDDHHmmss。
     * endTime  查询任务的最大时间，格式为YYYYMMDDHHmmss。
@@ -30,7 +30,7 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'instanceId' => 'string',
-            'start' => 'int',
+            'offset' => 'int',
             'limit' => 'int',
             'beginTime' => 'string',
             'endTime' => 'string'
@@ -39,7 +39,7 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * start  开启查询的任务编号。
+    * offset  开启查询的任务编号。
     * limit  查询的任务个数。
     * beginTime  查询任务的最小时间，格式为YYYYMMDDHHmmss。
     * endTime  查询任务的最大时间，格式为YYYYMMDDHHmmss。
@@ -48,7 +48,7 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'instanceId' => null,
-        'start' => null,
+        'offset' => null,
         'limit' => null,
         'beginTime' => null,
         'endTime' => null
@@ -78,7 +78,7 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID。
-    * start  开启查询的任务编号。
+    * offset  开启查询的任务编号。
     * limit  查询的任务个数。
     * beginTime  查询任务的最小时间，格式为YYYYMMDDHHmmss。
     * endTime  查询任务的最大时间，格式为YYYYMMDDHHmmss。
@@ -87,7 +87,7 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'instanceId' => 'instance_id',
-            'start' => 'start',
+            'offset' => 'offset',
             'limit' => 'limit',
             'beginTime' => 'begin_time',
             'endTime' => 'end_time'
@@ -96,7 +96,7 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID。
-    * start  开启查询的任务编号。
+    * offset  开启查询的任务编号。
     * limit  查询的任务个数。
     * beginTime  查询任务的最小时间，格式为YYYYMMDDHHmmss。
     * endTime  查询任务的最大时间，格式为YYYYMMDDHHmmss。
@@ -105,7 +105,7 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'instanceId' => 'setInstanceId',
-            'start' => 'setStart',
+            'offset' => 'setOffset',
             'limit' => 'setLimit',
             'beginTime' => 'setBeginTime',
             'endTime' => 'setEndTime'
@@ -114,7 +114,7 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID。
-    * start  开启查询的任务编号。
+    * offset  开启查询的任务编号。
     * limit  查询的任务个数。
     * beginTime  查询任务的最小时间，格式为YYYYMMDDHHmmss。
     * endTime  查询任务的最大时间，格式为YYYYMMDDHHmmss。
@@ -123,7 +123,7 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'instanceId' => 'getInstanceId',
-            'start' => 'getStart',
+            'offset' => 'getOffset',
             'limit' => 'getLimit',
             'beginTime' => 'getBeginTime',
             'endTime' => 'getEndTime'
@@ -188,7 +188,7 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['start'] = isset($data['start']) ? $data['start'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['beginTime'] = isset($data['beginTime']) ? $data['beginTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
@@ -244,26 +244,26 @@ class ListBackgroundTasksRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets start
+    * Gets offset
     *  开启查询的任务编号。
     *
     * @return int|null
     */
-    public function getStart()
+    public function getOffset()
     {
-        return $this->container['start'];
+        return $this->container['offset'];
     }
 
     /**
-    * Sets start
+    * Sets offset
     *
-    * @param int|null $start 开启查询的任务编号。
+    * @param int|null $offset 开启查询的任务编号。
     *
     * @return $this
     */
-    public function setStart($start)
+    public function setOffset($offset)
     {
-        $this->container['start'] = $start;
+        $this->container['offset'] = $offset;
         return $this;
     }
 

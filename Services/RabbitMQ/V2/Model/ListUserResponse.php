@@ -21,8 +21,8 @@ class ListUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * users  用户列表。
-    * total  总用户个数。
+    * users  **参数解释**： 用户列表。
+    * total  **参数解释**： 总用户个数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * users  用户列表。
-    * total  总用户个数。
+    * users  **参数解释**： 用户列表。
+    * total  **参数解释**： 总用户个数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListUserResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * users  用户列表。
-    * total  总用户个数。
+    * users  **参数解释**： 用户列表。
+    * total  **参数解释**： 总用户个数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * users  用户列表。
-    * total  总用户个数。
+    * users  **参数解释**： 用户列表。
+    * total  **参数解释**： 总用户个数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * users  用户列表。
-    * total  总用户个数。
+    * users  **参数解释**： 用户列表。
+    * total  **参数解释**： 总用户个数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets users
-    *  用户列表。
+    *  **参数解释**： 用户列表。
     *
     * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\AMQPUser[]|null
     */
@@ -198,7 +198,7 @@ class ListUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets users
     *
-    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\AMQPUser[]|null $users 用户列表。
+    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\AMQPUser[]|null $users **参数解释**： 用户列表。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  总用户个数。
+    *  **参数解释**： 总用户个数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 总用户个数。
+    * @param int|null $total **参数解释**： 总用户个数。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class CopyConfigurationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  复制后的参数模板模板名称
-    * description  参数模板模板描述。
+    * name  复制后的参数模板模板名称 参数模板名称在1到64个字符之间，区分大小写，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
+    * description  参数模板描述。 默认为空。取值范围：长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CopyConfigurationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  复制后的参数模板模板名称
-    * description  参数模板模板描述。
+    * name  复制后的参数模板模板名称 参数模板名称在1到64个字符之间，区分大小写，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
+    * description  参数模板描述。 默认为空。取值范围：长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CopyConfigurationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  复制后的参数模板模板名称
-    * description  参数模板模板描述。
+    * name  复制后的参数模板模板名称 参数模板名称在1到64个字符之间，区分大小写，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
+    * description  参数模板描述。 默认为空。取值范围：长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CopyConfigurationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  复制后的参数模板模板名称
-    * description  参数模板模板描述。
+    * name  复制后的参数模板模板名称 参数模板名称在1到64个字符之间，区分大小写，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
+    * description  参数模板描述。 默认为空。取值范围：长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CopyConfigurationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  复制后的参数模板模板名称
-    * description  参数模板模板描述。
+    * name  复制后的参数模板模板名称 参数模板名称在1到64个字符之间，区分大小写，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
+    * description  参数模板描述。 默认为空。取值范围：长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class CopyConfigurationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  复制后的参数模板模板名称
+    *  复制后的参数模板模板名称 参数模板名称在1到64个字符之间，区分大小写，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class CopyConfigurationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 复制后的参数模板模板名称
+    * @param string $name 复制后的参数模板模板名称 参数模板名称在1到64个字符之间，区分大小写，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class CopyConfigurationRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  参数模板模板描述。
+    *  参数模板描述。 默认为空。取值范围：长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。
     *
     * @return string|null
     */
@@ -224,7 +224,7 @@ class CopyConfigurationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 参数模板模板描述。
+    * @param string|null $description 参数模板描述。 默认为空。取值范围：长度不超过256位，且不能包含回车和>!<\"&'=特殊字符。
     *
     * @return $this
     */

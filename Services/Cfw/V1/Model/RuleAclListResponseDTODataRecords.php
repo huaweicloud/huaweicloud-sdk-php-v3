@@ -20,36 +20,37 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ruleId  规则id
-    * applications  应用列表
-    * addressType  地址类型0 ipv4，1 ipv6
-    * name  规则名称
-    * orderId  排序id
-    * direction  规则方向0：外到内1：内到外
-    * actionType  动作0：permit，1：deny
-    * status  规则下发状态 0：禁用，1：启用
-    * description  描述
-    * longConnectTime  长连接时长
-    * longConnectEnable  长连接支持
-    * longConnectTimeHour  长连接时长对应小时
-    * longConnectTimeMinute  长连接时长对应分钟
-    * longConnectTimeSecond  长连接时长秒
+    * ruleId  **参数解释**： 规则ID **取值范围**： 不涉及
+    * orderId  **参数解释**： 排序id **取值范围**： 不涉及
+    * applications  **参数解释**： 应用列表 **取值范围**： 不涉及
+    * addressType  参数解释： IP地址的互联网协议类型，用于指定IP地址的互联网协议，由客户指定 约束限制： 不涉及 取值范围： 0：IPv4 1：IPv6 默认取值： 不涉及
+    * name  **参数解释**： 规则名称 **取值范围**： 不涉及
+    * direction  **参数解释**： 规则方向 **取值范围**： 0：外到内1：内到外
+    * actionType  **参数解释**： 规则动作类型，用于区分规则对流量的动作 **取值范围**： 0表示允许通行（permit），1表示拒绝通行（deny）
+    * status  **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示启用，1表示禁用
+    * description  **参数解释**： 规则描述，用于描述规则的用途。 **取值范围**： 不涉及
+    * longConnectTime  **参数解释**： 长连接时长（s）。 **取值范围**： 1-86400000。
+    * longConnectEnable  **参数解释**： 用于表示是否支持长连接。 **取值范围**： 0表示不支持，1表示支持
+    * longConnectTimeHour  **参数解释**： 长连接时长对应小时数（h）。 **取值范围**： 0-24000。
+    * longConnectTimeMinute  **参数解释**： 长连接时长对应分钟数（min）。 **取值范围**： 0-60。
+    * longConnectTimeSecond  **参数解释**： 长连接时长对应秒数（s）。 **取值范围**： 0-60。
     * source  source
     * destination  destination
     * service  service
-    * type  规则类型，0：互联网规则，1：vpc规则，2：nat规则
-    * createdDate  规则创建时间，例如：\"2024-08-12 08:40:00\"
-    * lastOpenTime  规则最后开启时间，例如：\"2024-08-12 08:40:00\"
+    * type  **参数解释**： 规则类型，用于区分不同防护对象设置规则类型。 **取值范围**：  0：互联网边界规则，源（source）和目的（destination）地址需要为公网IP或域名； 1：VPC间规则，源（source）和目的（destination）地址需要为私有ip； 2：NAT规则，源（source）地址需要为私网IP，目的地址为公网IP或域名。
+    * createdDate  **参数解释**： 规则创建时间。 **取值范围**： 不涉及
+    * modifiedDate  **参数解释**： 规则修改时间。 **取值范围**： 不涉及
+    * lastOpenTime  **参数解释**： 规则最后开启时间。 **取值范围**： 不涉及
     * tag  tag
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'ruleId' => 'string',
+            'orderId' => 'int',
             'applications' => 'string[]',
             'addressType' => 'int',
             'name' => 'string',
-            'orderId' => 'int',
             'direction' => 'int',
             'actionType' => 'int',
             'status' => 'int',
@@ -64,42 +65,44 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
             'service' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleServiceDtoForResponse',
             'type' => 'int',
             'createdDate' => 'string',
+            'modifiedDate' => 'string',
             'lastOpenTime' => 'string',
             'tag' => '\HuaweiCloud\SDK\Cfw\V1\Model\TagsVO'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ruleId  规则id
-    * applications  应用列表
-    * addressType  地址类型0 ipv4，1 ipv6
-    * name  规则名称
-    * orderId  排序id
-    * direction  规则方向0：外到内1：内到外
-    * actionType  动作0：permit，1：deny
-    * status  规则下发状态 0：禁用，1：启用
-    * description  描述
-    * longConnectTime  长连接时长
-    * longConnectEnable  长连接支持
-    * longConnectTimeHour  长连接时长对应小时
-    * longConnectTimeMinute  长连接时长对应分钟
-    * longConnectTimeSecond  长连接时长秒
+    * ruleId  **参数解释**： 规则ID **取值范围**： 不涉及
+    * orderId  **参数解释**： 排序id **取值范围**： 不涉及
+    * applications  **参数解释**： 应用列表 **取值范围**： 不涉及
+    * addressType  参数解释： IP地址的互联网协议类型，用于指定IP地址的互联网协议，由客户指定 约束限制： 不涉及 取值范围： 0：IPv4 1：IPv6 默认取值： 不涉及
+    * name  **参数解释**： 规则名称 **取值范围**： 不涉及
+    * direction  **参数解释**： 规则方向 **取值范围**： 0：外到内1：内到外
+    * actionType  **参数解释**： 规则动作类型，用于区分规则对流量的动作 **取值范围**： 0表示允许通行（permit），1表示拒绝通行（deny）
+    * status  **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示启用，1表示禁用
+    * description  **参数解释**： 规则描述，用于描述规则的用途。 **取值范围**： 不涉及
+    * longConnectTime  **参数解释**： 长连接时长（s）。 **取值范围**： 1-86400000。
+    * longConnectEnable  **参数解释**： 用于表示是否支持长连接。 **取值范围**： 0表示不支持，1表示支持
+    * longConnectTimeHour  **参数解释**： 长连接时长对应小时数（h）。 **取值范围**： 0-24000。
+    * longConnectTimeMinute  **参数解释**： 长连接时长对应分钟数（min）。 **取值范围**： 0-60。
+    * longConnectTimeSecond  **参数解释**： 长连接时长对应秒数（s）。 **取值范围**： 0-60。
     * source  source
     * destination  destination
     * service  service
-    * type  规则类型，0：互联网规则，1：vpc规则，2：nat规则
-    * createdDate  规则创建时间，例如：\"2024-08-12 08:40:00\"
-    * lastOpenTime  规则最后开启时间，例如：\"2024-08-12 08:40:00\"
+    * type  **参数解释**： 规则类型，用于区分不同防护对象设置规则类型。 **取值范围**：  0：互联网边界规则，源（source）和目的（destination）地址需要为公网IP或域名； 1：VPC间规则，源（source）和目的（destination）地址需要为私有ip； 2：NAT规则，源（source）地址需要为私网IP，目的地址为公网IP或域名。
+    * createdDate  **参数解释**： 规则创建时间。 **取值范围**： 不涉及
+    * modifiedDate  **参数解释**： 规则修改时间。 **取值范围**： 不涉及
+    * lastOpenTime  **参数解释**： 规则最后开启时间。 **取值范围**： 不涉及
     * tag  tag
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'ruleId' => null,
+        'orderId' => 'int32',
         'applications' => null,
         'addressType' => 'int32',
         'name' => null,
-        'orderId' => 'int32',
         'direction' => 'int32',
         'actionType' => null,
         'status' => null,
@@ -114,6 +117,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
         'service' => null,
         'type' => 'int32',
         'createdDate' => null,
+        'modifiedDate' => null,
         'lastOpenTime' => null,
         'tag' => null
     ];
@@ -141,36 +145,37 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ruleId  规则id
-    * applications  应用列表
-    * addressType  地址类型0 ipv4，1 ipv6
-    * name  规则名称
-    * orderId  排序id
-    * direction  规则方向0：外到内1：内到外
-    * actionType  动作0：permit，1：deny
-    * status  规则下发状态 0：禁用，1：启用
-    * description  描述
-    * longConnectTime  长连接时长
-    * longConnectEnable  长连接支持
-    * longConnectTimeHour  长连接时长对应小时
-    * longConnectTimeMinute  长连接时长对应分钟
-    * longConnectTimeSecond  长连接时长秒
+    * ruleId  **参数解释**： 规则ID **取值范围**： 不涉及
+    * orderId  **参数解释**： 排序id **取值范围**： 不涉及
+    * applications  **参数解释**： 应用列表 **取值范围**： 不涉及
+    * addressType  参数解释： IP地址的互联网协议类型，用于指定IP地址的互联网协议，由客户指定 约束限制： 不涉及 取值范围： 0：IPv4 1：IPv6 默认取值： 不涉及
+    * name  **参数解释**： 规则名称 **取值范围**： 不涉及
+    * direction  **参数解释**： 规则方向 **取值范围**： 0：外到内1：内到外
+    * actionType  **参数解释**： 规则动作类型，用于区分规则对流量的动作 **取值范围**： 0表示允许通行（permit），1表示拒绝通行（deny）
+    * status  **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示启用，1表示禁用
+    * description  **参数解释**： 规则描述，用于描述规则的用途。 **取值范围**： 不涉及
+    * longConnectTime  **参数解释**： 长连接时长（s）。 **取值范围**： 1-86400000。
+    * longConnectEnable  **参数解释**： 用于表示是否支持长连接。 **取值范围**： 0表示不支持，1表示支持
+    * longConnectTimeHour  **参数解释**： 长连接时长对应小时数（h）。 **取值范围**： 0-24000。
+    * longConnectTimeMinute  **参数解释**： 长连接时长对应分钟数（min）。 **取值范围**： 0-60。
+    * longConnectTimeSecond  **参数解释**： 长连接时长对应秒数（s）。 **取值范围**： 0-60。
     * source  source
     * destination  destination
     * service  service
-    * type  规则类型，0：互联网规则，1：vpc规则，2：nat规则
-    * createdDate  规则创建时间，例如：\"2024-08-12 08:40:00\"
-    * lastOpenTime  规则最后开启时间，例如：\"2024-08-12 08:40:00\"
+    * type  **参数解释**： 规则类型，用于区分不同防护对象设置规则类型。 **取值范围**：  0：互联网边界规则，源（source）和目的（destination）地址需要为公网IP或域名； 1：VPC间规则，源（source）和目的（destination）地址需要为私有ip； 2：NAT规则，源（source）地址需要为私网IP，目的地址为公网IP或域名。
+    * createdDate  **参数解释**： 规则创建时间。 **取值范围**： 不涉及
+    * modifiedDate  **参数解释**： 规则修改时间。 **取值范围**： 不涉及
+    * lastOpenTime  **参数解释**： 规则最后开启时间。 **取值范围**： 不涉及
     * tag  tag
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'ruleId' => 'rule_id',
+            'orderId' => 'order_id',
             'applications' => 'applications',
             'addressType' => 'address_type',
             'name' => 'name',
-            'orderId' => 'order_id',
             'direction' => 'direction',
             'actionType' => 'action_type',
             'status' => 'status',
@@ -185,42 +190,44 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
             'service' => 'service',
             'type' => 'type',
             'createdDate' => 'created_date',
+            'modifiedDate' => 'modified_date',
             'lastOpenTime' => 'last_open_time',
             'tag' => 'tag'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ruleId  规则id
-    * applications  应用列表
-    * addressType  地址类型0 ipv4，1 ipv6
-    * name  规则名称
-    * orderId  排序id
-    * direction  规则方向0：外到内1：内到外
-    * actionType  动作0：permit，1：deny
-    * status  规则下发状态 0：禁用，1：启用
-    * description  描述
-    * longConnectTime  长连接时长
-    * longConnectEnable  长连接支持
-    * longConnectTimeHour  长连接时长对应小时
-    * longConnectTimeMinute  长连接时长对应分钟
-    * longConnectTimeSecond  长连接时长秒
+    * ruleId  **参数解释**： 规则ID **取值范围**： 不涉及
+    * orderId  **参数解释**： 排序id **取值范围**： 不涉及
+    * applications  **参数解释**： 应用列表 **取值范围**： 不涉及
+    * addressType  参数解释： IP地址的互联网协议类型，用于指定IP地址的互联网协议，由客户指定 约束限制： 不涉及 取值范围： 0：IPv4 1：IPv6 默认取值： 不涉及
+    * name  **参数解释**： 规则名称 **取值范围**： 不涉及
+    * direction  **参数解释**： 规则方向 **取值范围**： 0：外到内1：内到外
+    * actionType  **参数解释**： 规则动作类型，用于区分规则对流量的动作 **取值范围**： 0表示允许通行（permit），1表示拒绝通行（deny）
+    * status  **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示启用，1表示禁用
+    * description  **参数解释**： 规则描述，用于描述规则的用途。 **取值范围**： 不涉及
+    * longConnectTime  **参数解释**： 长连接时长（s）。 **取值范围**： 1-86400000。
+    * longConnectEnable  **参数解释**： 用于表示是否支持长连接。 **取值范围**： 0表示不支持，1表示支持
+    * longConnectTimeHour  **参数解释**： 长连接时长对应小时数（h）。 **取值范围**： 0-24000。
+    * longConnectTimeMinute  **参数解释**： 长连接时长对应分钟数（min）。 **取值范围**： 0-60。
+    * longConnectTimeSecond  **参数解释**： 长连接时长对应秒数（s）。 **取值范围**： 0-60。
     * source  source
     * destination  destination
     * service  service
-    * type  规则类型，0：互联网规则，1：vpc规则，2：nat规则
-    * createdDate  规则创建时间，例如：\"2024-08-12 08:40:00\"
-    * lastOpenTime  规则最后开启时间，例如：\"2024-08-12 08:40:00\"
+    * type  **参数解释**： 规则类型，用于区分不同防护对象设置规则类型。 **取值范围**：  0：互联网边界规则，源（source）和目的（destination）地址需要为公网IP或域名； 1：VPC间规则，源（source）和目的（destination）地址需要为私有ip； 2：NAT规则，源（source）地址需要为私网IP，目的地址为公网IP或域名。
+    * createdDate  **参数解释**： 规则创建时间。 **取值范围**： 不涉及
+    * modifiedDate  **参数解释**： 规则修改时间。 **取值范围**： 不涉及
+    * lastOpenTime  **参数解释**： 规则最后开启时间。 **取值范围**： 不涉及
     * tag  tag
     *
     * @var string[]
     */
     protected static $setters = [
             'ruleId' => 'setRuleId',
+            'orderId' => 'setOrderId',
             'applications' => 'setApplications',
             'addressType' => 'setAddressType',
             'name' => 'setName',
-            'orderId' => 'setOrderId',
             'direction' => 'setDirection',
             'actionType' => 'setActionType',
             'status' => 'setStatus',
@@ -235,42 +242,44 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
             'service' => 'setService',
             'type' => 'setType',
             'createdDate' => 'setCreatedDate',
+            'modifiedDate' => 'setModifiedDate',
             'lastOpenTime' => 'setLastOpenTime',
             'tag' => 'setTag'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ruleId  规则id
-    * applications  应用列表
-    * addressType  地址类型0 ipv4，1 ipv6
-    * name  规则名称
-    * orderId  排序id
-    * direction  规则方向0：外到内1：内到外
-    * actionType  动作0：permit，1：deny
-    * status  规则下发状态 0：禁用，1：启用
-    * description  描述
-    * longConnectTime  长连接时长
-    * longConnectEnable  长连接支持
-    * longConnectTimeHour  长连接时长对应小时
-    * longConnectTimeMinute  长连接时长对应分钟
-    * longConnectTimeSecond  长连接时长秒
+    * ruleId  **参数解释**： 规则ID **取值范围**： 不涉及
+    * orderId  **参数解释**： 排序id **取值范围**： 不涉及
+    * applications  **参数解释**： 应用列表 **取值范围**： 不涉及
+    * addressType  参数解释： IP地址的互联网协议类型，用于指定IP地址的互联网协议，由客户指定 约束限制： 不涉及 取值范围： 0：IPv4 1：IPv6 默认取值： 不涉及
+    * name  **参数解释**： 规则名称 **取值范围**： 不涉及
+    * direction  **参数解释**： 规则方向 **取值范围**： 0：外到内1：内到外
+    * actionType  **参数解释**： 规则动作类型，用于区分规则对流量的动作 **取值范围**： 0表示允许通行（permit），1表示拒绝通行（deny）
+    * status  **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示启用，1表示禁用
+    * description  **参数解释**： 规则描述，用于描述规则的用途。 **取值范围**： 不涉及
+    * longConnectTime  **参数解释**： 长连接时长（s）。 **取值范围**： 1-86400000。
+    * longConnectEnable  **参数解释**： 用于表示是否支持长连接。 **取值范围**： 0表示不支持，1表示支持
+    * longConnectTimeHour  **参数解释**： 长连接时长对应小时数（h）。 **取值范围**： 0-24000。
+    * longConnectTimeMinute  **参数解释**： 长连接时长对应分钟数（min）。 **取值范围**： 0-60。
+    * longConnectTimeSecond  **参数解释**： 长连接时长对应秒数（s）。 **取值范围**： 0-60。
     * source  source
     * destination  destination
     * service  service
-    * type  规则类型，0：互联网规则，1：vpc规则，2：nat规则
-    * createdDate  规则创建时间，例如：\"2024-08-12 08:40:00\"
-    * lastOpenTime  规则最后开启时间，例如：\"2024-08-12 08:40:00\"
+    * type  **参数解释**： 规则类型，用于区分不同防护对象设置规则类型。 **取值范围**：  0：互联网边界规则，源（source）和目的（destination）地址需要为公网IP或域名； 1：VPC间规则，源（source）和目的（destination）地址需要为私有ip； 2：NAT规则，源（source）地址需要为私网IP，目的地址为公网IP或域名。
+    * createdDate  **参数解释**： 规则创建时间。 **取值范围**： 不涉及
+    * modifiedDate  **参数解释**： 规则修改时间。 **取值范围**： 不涉及
+    * lastOpenTime  **参数解释**： 规则最后开启时间。 **取值范围**： 不涉及
     * tag  tag
     *
     * @var string[]
     */
     protected static $getters = [
             'ruleId' => 'getRuleId',
+            'orderId' => 'getOrderId',
             'applications' => 'getApplications',
             'addressType' => 'getAddressType',
             'name' => 'getName',
-            'orderId' => 'getOrderId',
             'direction' => 'getDirection',
             'actionType' => 'getActionType',
             'status' => 'getStatus',
@@ -285,6 +294,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
             'service' => 'getService',
             'type' => 'getType',
             'createdDate' => 'getCreatedDate',
+            'modifiedDate' => 'getModifiedDate',
             'lastOpenTime' => 'getLastOpenTime',
             'tag' => 'getTag'
     ];
@@ -380,10 +390,10 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['ruleId'] = isset($data['ruleId']) ? $data['ruleId'] : null;
+        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
         $this->container['applications'] = isset($data['applications']) ? $data['applications'] : null;
         $this->container['addressType'] = isset($data['addressType']) ? $data['addressType'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
         $this->container['direction'] = isset($data['direction']) ? $data['direction'] : null;
         $this->container['actionType'] = isset($data['actionType']) ? $data['actionType'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -398,6 +408,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
         $this->container['service'] = isset($data['service']) ? $data['service'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['createdDate'] = isset($data['createdDate']) ? $data['createdDate'] : null;
+        $this->container['modifiedDate'] = isset($data['modifiedDate']) ? $data['modifiedDate'] : null;
         $this->container['lastOpenTime'] = isset($data['lastOpenTime']) ? $data['lastOpenTime'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
     }
@@ -445,7 +456,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleId
-    *  规则id
+    *  **参数解释**： 规则ID **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -457,7 +468,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets ruleId
     *
-    * @param string|null $ruleId 规则id
+    * @param string|null $ruleId **参数解释**： 规则ID **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -468,80 +479,8 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets applications
-    *  应用列表
-    *
-    * @return string[]|null
-    */
-    public function getApplications()
-    {
-        return $this->container['applications'];
-    }
-
-    /**
-    * Sets applications
-    *
-    * @param string[]|null $applications 应用列表
-    *
-    * @return $this
-    */
-    public function setApplications($applications)
-    {
-        $this->container['applications'] = $applications;
-        return $this;
-    }
-
-    /**
-    * Gets addressType
-    *  地址类型0 ipv4，1 ipv6
-    *
-    * @return int|null
-    */
-    public function getAddressType()
-    {
-        return $this->container['addressType'];
-    }
-
-    /**
-    * Sets addressType
-    *
-    * @param int|null $addressType 地址类型0 ipv4，1 ipv6
-    *
-    * @return $this
-    */
-    public function setAddressType($addressType)
-    {
-        $this->container['addressType'] = $addressType;
-        return $this;
-    }
-
-    /**
-    * Gets name
-    *  规则名称
-    *
-    * @return string|null
-    */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-    * Sets name
-    *
-    * @param string|null $name 规则名称
-    *
-    * @return $this
-    */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-        return $this;
-    }
-
-    /**
     * Gets orderId
-    *  排序id
+    *  **参数解释**： 排序id **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -553,7 +492,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param int|null $orderId 排序id
+    * @param int|null $orderId **参数解释**： 排序id **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -564,8 +503,80 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets applications
+    *  **参数解释**： 应用列表 **取值范围**： 不涉及
+    *
+    * @return string[]|null
+    */
+    public function getApplications()
+    {
+        return $this->container['applications'];
+    }
+
+    /**
+    * Sets applications
+    *
+    * @param string[]|null $applications **参数解释**： 应用列表 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setApplications($applications)
+    {
+        $this->container['applications'] = $applications;
+        return $this;
+    }
+
+    /**
+    * Gets addressType
+    *  参数解释： IP地址的互联网协议类型，用于指定IP地址的互联网协议，由客户指定 约束限制： 不涉及 取值范围： 0：IPv4 1：IPv6 默认取值： 不涉及
+    *
+    * @return int|null
+    */
+    public function getAddressType()
+    {
+        return $this->container['addressType'];
+    }
+
+    /**
+    * Sets addressType
+    *
+    * @param int|null $addressType 参数解释： IP地址的互联网协议类型，用于指定IP地址的互联网协议，由客户指定 约束限制： 不涉及 取值范围： 0：IPv4 1：IPv6 默认取值： 不涉及
+    *
+    * @return $this
+    */
+    public function setAddressType($addressType)
+    {
+        $this->container['addressType'] = $addressType;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  **参数解释**： 规则名称 **取值范围**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name **参数解释**： 规则名称 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
     * Gets direction
-    *  规则方向0：外到内1：内到外
+    *  **参数解释**： 规则方向 **取值范围**： 0：外到内1：内到外
     *
     * @return int|null
     */
@@ -577,7 +588,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets direction
     *
-    * @param int|null $direction 规则方向0：外到内1：内到外
+    * @param int|null $direction **参数解释**： 规则方向 **取值范围**： 0：外到内1：内到外
     *
     * @return $this
     */
@@ -589,7 +600,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets actionType
-    *  动作0：permit，1：deny
+    *  **参数解释**： 规则动作类型，用于区分规则对流量的动作 **取值范围**： 0表示允许通行（permit），1表示拒绝通行（deny）
     *
     * @return int|null
     */
@@ -601,7 +612,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets actionType
     *
-    * @param int|null $actionType 动作0：permit，1：deny
+    * @param int|null $actionType **参数解释**： 规则动作类型，用于区分规则对流量的动作 **取值范围**： 0表示允许通行（permit），1表示拒绝通行（deny）
     *
     * @return $this
     */
@@ -613,7 +624,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  规则下发状态 0：禁用，1：启用
+    *  **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示启用，1表示禁用
     *
     * @return int|null
     */
@@ -625,7 +636,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 规则下发状态 0：禁用，1：启用
+    * @param int|null $status **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示启用，1表示禁用
     *
     * @return $this
     */
@@ -637,7 +648,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  **参数解释**： 规则描述，用于描述规则的用途。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -649,7 +660,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description **参数解释**： 规则描述，用于描述规则的用途。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -661,7 +672,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets longConnectTime
-    *  长连接时长
+    *  **参数解释**： 长连接时长（s）。 **取值范围**： 1-86400000。
     *
     * @return int|null
     */
@@ -673,7 +684,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets longConnectTime
     *
-    * @param int|null $longConnectTime 长连接时长
+    * @param int|null $longConnectTime **参数解释**： 长连接时长（s）。 **取值范围**： 1-86400000。
     *
     * @return $this
     */
@@ -685,7 +696,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets longConnectEnable
-    *  长连接支持
+    *  **参数解释**： 用于表示是否支持长连接。 **取值范围**： 0表示不支持，1表示支持
     *
     * @return int|null
     */
@@ -697,7 +708,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets longConnectEnable
     *
-    * @param int|null $longConnectEnable 长连接支持
+    * @param int|null $longConnectEnable **参数解释**： 用于表示是否支持长连接。 **取值范围**： 0表示不支持，1表示支持
     *
     * @return $this
     */
@@ -709,7 +720,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets longConnectTimeHour
-    *  长连接时长对应小时
+    *  **参数解释**： 长连接时长对应小时数（h）。 **取值范围**： 0-24000。
     *
     * @return int|null
     */
@@ -721,7 +732,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets longConnectTimeHour
     *
-    * @param int|null $longConnectTimeHour 长连接时长对应小时
+    * @param int|null $longConnectTimeHour **参数解释**： 长连接时长对应小时数（h）。 **取值范围**： 0-24000。
     *
     * @return $this
     */
@@ -733,7 +744,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets longConnectTimeMinute
-    *  长连接时长对应分钟
+    *  **参数解释**： 长连接时长对应分钟数（min）。 **取值范围**： 0-60。
     *
     * @return int|null
     */
@@ -745,7 +756,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets longConnectTimeMinute
     *
-    * @param int|null $longConnectTimeMinute 长连接时长对应分钟
+    * @param int|null $longConnectTimeMinute **参数解释**： 长连接时长对应分钟数（min）。 **取值范围**： 0-60。
     *
     * @return $this
     */
@@ -757,7 +768,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets longConnectTimeSecond
-    *  长连接时长秒
+    *  **参数解释**： 长连接时长对应秒数（s）。 **取值范围**： 0-60。
     *
     * @return int|null
     */
@@ -769,7 +780,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets longConnectTimeSecond
     *
-    * @param int|null $longConnectTimeSecond 长连接时长秒
+    * @param int|null $longConnectTimeSecond **参数解释**： 长连接时长对应秒数（s）。 **取值范围**： 0-60。
     *
     * @return $this
     */
@@ -853,7 +864,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  规则类型，0：互联网规则，1：vpc规则，2：nat规则
+    *  **参数解释**： 规则类型，用于区分不同防护对象设置规则类型。 **取值范围**：  0：互联网边界规则，源（source）和目的（destination）地址需要为公网IP或域名； 1：VPC间规则，源（source）和目的（destination）地址需要为私有ip； 2：NAT规则，源（source）地址需要为私网IP，目的地址为公网IP或域名。
     *
     * @return int|null
     */
@@ -865,7 +876,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int|null $type 规则类型，0：互联网规则，1：vpc规则，2：nat规则
+    * @param int|null $type **参数解释**： 规则类型，用于区分不同防护对象设置规则类型。 **取值范围**：  0：互联网边界规则，源（source）和目的（destination）地址需要为公网IP或域名； 1：VPC间规则，源（source）和目的（destination）地址需要为私有ip； 2：NAT规则，源（source）地址需要为私网IP，目的地址为公网IP或域名。
     *
     * @return $this
     */
@@ -877,7 +888,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdDate
-    *  规则创建时间，例如：\"2024-08-12 08:40:00\"
+    *  **参数解释**： 规则创建时间。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -889,7 +900,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets createdDate
     *
-    * @param string|null $createdDate 规则创建时间，例如：\"2024-08-12 08:40:00\"
+    * @param string|null $createdDate **参数解释**： 规则创建时间。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -900,8 +911,32 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets modifiedDate
+    *  **参数解释**： 规则修改时间。 **取值范围**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getModifiedDate()
+    {
+        return $this->container['modifiedDate'];
+    }
+
+    /**
+    * Sets modifiedDate
+    *
+    * @param string|null $modifiedDate **参数解释**： 规则修改时间。 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setModifiedDate($modifiedDate)
+    {
+        $this->container['modifiedDate'] = $modifiedDate;
+        return $this;
+    }
+
+    /**
     * Gets lastOpenTime
-    *  规则最后开启时间，例如：\"2024-08-12 08:40:00\"
+    *  **参数解释**： 规则最后开启时间。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -913,7 +948,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets lastOpenTime
     *
-    * @param string|null $lastOpenTime 规则最后开启时间，例如：\"2024-08-12 08:40:00\"
+    * @param string|null $lastOpenTime **参数解释**： 规则最后开启时间。 **取值范围**： 不涉及
     *
     * @return $this
     */

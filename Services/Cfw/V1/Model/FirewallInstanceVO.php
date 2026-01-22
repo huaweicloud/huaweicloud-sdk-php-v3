@@ -20,18 +20,18 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标记防火墙由系统自动生成的id。
-    * resourceId  资源id，与防火墙实例id fw_instance_id相同
-    * name  创建防火墙时的时间戳
-    * fwInstanceName  防火墙名称
-    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * haType  集群类型，包含主备（0）和集群（1）两种方式，主备模式包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点，集群模式仅拉起两个节点作为集群。
-    * chargeMode  计费模式 0：包年/包月 1：按需
-    * serviceType  防火墙防护类型，目前仅支持0，互联网防护。
-    * engineType  引擎类型，0：自研引擎 1：山石引擎 3：天融信引擎
+    * fwInstanceId  **参数解释**： 防火墙实例id，创建云防火墙后用于标记防火墙由系统自动生成的id。 **约束限制**： 不涉及
+    * resourceId  **参数解释**： 资源id，与防火墙实例id fw_instance_id相同。 **约束限制**： 不涉及
+    * name  **参数解释**： 创建防火墙时的时间戳 **约束限制**： 不涉及
+    * fwInstanceName  **参数解释**： 防火墙名称 **约束限制**： 不涉及
+    * enterpriseProjectId  **参数解释**： 企业项目id，用户支持企业项目后，由企业项目生成的id。 **约束限制**： 不涉及
+    * haType  **参数解释**： 集群类型 **约束限制**： 不涉及 **取值范围**： - 0：主备模式，包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点 - 1：集群模式，仅拉起两个节点作为集群
+    * chargeMode  **参数解释**： 计费模式 **约束限制**： 不涉及 **取值范围**： - 0：包年/包月 - 1：按需 **默认取值**： 不涉及
+    * serviceType  **参数解释**： 防火墙防护类型 **约束限制**： 不涉及 **取值范围**： 目前仅支持0，互联网防护
+    * engineType  **参数解释**： 引擎类型 **约束限制**： 不涉及 **取值范围**： - 0：自研引擎 - 1：山石引擎 - 3：天融信引擎
     * flavor  flavor
-    * status  防火墙状态列表，包括-1：等待支付，0：创建中，1：删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
-    * tags  标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\"
+    * status  **参数解释**： 防火墙状态列表 **约束限制**： 不涉及 **取值范围**： - -1：等待支付 - 0：创建中 - 1，删除中 - 2：运行中 - 3：升级中 - 4：删除完成 - 5：冻结中 - 6：创建失败 - 7：删除失败 - 8：冻结失败 - 9：存储中 - 10：存储失败 - 11：升级失败
+    * tags  **参数解释**： 标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\" **约束限制**： 不涉及
     *
     * @var string[]
     */
@@ -52,18 +52,18 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标记防火墙由系统自动生成的id。
-    * resourceId  资源id，与防火墙实例id fw_instance_id相同
-    * name  创建防火墙时的时间戳
-    * fwInstanceName  防火墙名称
-    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * haType  集群类型，包含主备（0）和集群（1）两种方式，主备模式包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点，集群模式仅拉起两个节点作为集群。
-    * chargeMode  计费模式 0：包年/包月 1：按需
-    * serviceType  防火墙防护类型，目前仅支持0，互联网防护。
-    * engineType  引擎类型，0：自研引擎 1：山石引擎 3：天融信引擎
+    * fwInstanceId  **参数解释**： 防火墙实例id，创建云防火墙后用于标记防火墙由系统自动生成的id。 **约束限制**： 不涉及
+    * resourceId  **参数解释**： 资源id，与防火墙实例id fw_instance_id相同。 **约束限制**： 不涉及
+    * name  **参数解释**： 创建防火墙时的时间戳 **约束限制**： 不涉及
+    * fwInstanceName  **参数解释**： 防火墙名称 **约束限制**： 不涉及
+    * enterpriseProjectId  **参数解释**： 企业项目id，用户支持企业项目后，由企业项目生成的id。 **约束限制**： 不涉及
+    * haType  **参数解释**： 集群类型 **约束限制**： 不涉及 **取值范围**： - 0：主备模式，包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点 - 1：集群模式，仅拉起两个节点作为集群
+    * chargeMode  **参数解释**： 计费模式 **约束限制**： 不涉及 **取值范围**： - 0：包年/包月 - 1：按需 **默认取值**： 不涉及
+    * serviceType  **参数解释**： 防火墙防护类型 **约束限制**： 不涉及 **取值范围**： 目前仅支持0，互联网防护
+    * engineType  **参数解释**： 引擎类型 **约束限制**： 不涉及 **取值范围**： - 0：自研引擎 - 1：山石引擎 - 3：天融信引擎
     * flavor  flavor
-    * status  防火墙状态列表，包括-1：等待支付，0：创建中，1：删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
-    * tags  标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\"
+    * status  **参数解释**： 防火墙状态列表 **约束限制**： 不涉及 **取值范围**： - -1：等待支付 - 0：创建中 - 1，删除中 - 2：运行中 - 3：升级中 - 4：删除完成 - 5：冻结中 - 6：创建失败 - 7：删除失败 - 8：冻结失败 - 9：存储中 - 10：存储失败 - 11：升级失败
+    * tags  **参数解释**： 标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\" **约束限制**： 不涉及
     *
     * @var string[]
     */
@@ -105,18 +105,18 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标记防火墙由系统自动生成的id。
-    * resourceId  资源id，与防火墙实例id fw_instance_id相同
-    * name  创建防火墙时的时间戳
-    * fwInstanceName  防火墙名称
-    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * haType  集群类型，包含主备（0）和集群（1）两种方式，主备模式包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点，集群模式仅拉起两个节点作为集群。
-    * chargeMode  计费模式 0：包年/包月 1：按需
-    * serviceType  防火墙防护类型，目前仅支持0，互联网防护。
-    * engineType  引擎类型，0：自研引擎 1：山石引擎 3：天融信引擎
+    * fwInstanceId  **参数解释**： 防火墙实例id，创建云防火墙后用于标记防火墙由系统自动生成的id。 **约束限制**： 不涉及
+    * resourceId  **参数解释**： 资源id，与防火墙实例id fw_instance_id相同。 **约束限制**： 不涉及
+    * name  **参数解释**： 创建防火墙时的时间戳 **约束限制**： 不涉及
+    * fwInstanceName  **参数解释**： 防火墙名称 **约束限制**： 不涉及
+    * enterpriseProjectId  **参数解释**： 企业项目id，用户支持企业项目后，由企业项目生成的id。 **约束限制**： 不涉及
+    * haType  **参数解释**： 集群类型 **约束限制**： 不涉及 **取值范围**： - 0：主备模式，包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点 - 1：集群模式，仅拉起两个节点作为集群
+    * chargeMode  **参数解释**： 计费模式 **约束限制**： 不涉及 **取值范围**： - 0：包年/包月 - 1：按需 **默认取值**： 不涉及
+    * serviceType  **参数解释**： 防火墙防护类型 **约束限制**： 不涉及 **取值范围**： 目前仅支持0，互联网防护
+    * engineType  **参数解释**： 引擎类型 **约束限制**： 不涉及 **取值范围**： - 0：自研引擎 - 1：山石引擎 - 3：天融信引擎
     * flavor  flavor
-    * status  防火墙状态列表，包括-1：等待支付，0：创建中，1：删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
-    * tags  标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\"
+    * status  **参数解释**： 防火墙状态列表 **约束限制**： 不涉及 **取值范围**： - -1：等待支付 - 0：创建中 - 1，删除中 - 2：运行中 - 3：升级中 - 4：删除完成 - 5：冻结中 - 6：创建失败 - 7：删除失败 - 8：冻结失败 - 9：存储中 - 10：存储失败 - 11：升级失败
+    * tags  **参数解释**： 标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\" **约束限制**： 不涉及
     *
     * @var string[]
     */
@@ -137,18 +137,18 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标记防火墙由系统自动生成的id。
-    * resourceId  资源id，与防火墙实例id fw_instance_id相同
-    * name  创建防火墙时的时间戳
-    * fwInstanceName  防火墙名称
-    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * haType  集群类型，包含主备（0）和集群（1）两种方式，主备模式包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点，集群模式仅拉起两个节点作为集群。
-    * chargeMode  计费模式 0：包年/包月 1：按需
-    * serviceType  防火墙防护类型，目前仅支持0，互联网防护。
-    * engineType  引擎类型，0：自研引擎 1：山石引擎 3：天融信引擎
+    * fwInstanceId  **参数解释**： 防火墙实例id，创建云防火墙后用于标记防火墙由系统自动生成的id。 **约束限制**： 不涉及
+    * resourceId  **参数解释**： 资源id，与防火墙实例id fw_instance_id相同。 **约束限制**： 不涉及
+    * name  **参数解释**： 创建防火墙时的时间戳 **约束限制**： 不涉及
+    * fwInstanceName  **参数解释**： 防火墙名称 **约束限制**： 不涉及
+    * enterpriseProjectId  **参数解释**： 企业项目id，用户支持企业项目后，由企业项目生成的id。 **约束限制**： 不涉及
+    * haType  **参数解释**： 集群类型 **约束限制**： 不涉及 **取值范围**： - 0：主备模式，包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点 - 1：集群模式，仅拉起两个节点作为集群
+    * chargeMode  **参数解释**： 计费模式 **约束限制**： 不涉及 **取值范围**： - 0：包年/包月 - 1：按需 **默认取值**： 不涉及
+    * serviceType  **参数解释**： 防火墙防护类型 **约束限制**： 不涉及 **取值范围**： 目前仅支持0，互联网防护
+    * engineType  **参数解释**： 引擎类型 **约束限制**： 不涉及 **取值范围**： - 0：自研引擎 - 1：山石引擎 - 3：天融信引擎
     * flavor  flavor
-    * status  防火墙状态列表，包括-1：等待支付，0：创建中，1：删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
-    * tags  标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\"
+    * status  **参数解释**： 防火墙状态列表 **约束限制**： 不涉及 **取值范围**： - -1：等待支付 - 0：创建中 - 1，删除中 - 2：运行中 - 3：升级中 - 4：删除完成 - 5：冻结中 - 6：创建失败 - 7：删除失败 - 8：冻结失败 - 9：存储中 - 10：存储失败 - 11：升级失败
+    * tags  **参数解释**： 标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\" **约束限制**： 不涉及
     *
     * @var string[]
     */
@@ -169,18 +169,18 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标记防火墙由系统自动生成的id。
-    * resourceId  资源id，与防火墙实例id fw_instance_id相同
-    * name  创建防火墙时的时间戳
-    * fwInstanceName  防火墙名称
-    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * haType  集群类型，包含主备（0）和集群（1）两种方式，主备模式包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点，集群模式仅拉起两个节点作为集群。
-    * chargeMode  计费模式 0：包年/包月 1：按需
-    * serviceType  防火墙防护类型，目前仅支持0，互联网防护。
-    * engineType  引擎类型，0：自研引擎 1：山石引擎 3：天融信引擎
+    * fwInstanceId  **参数解释**： 防火墙实例id，创建云防火墙后用于标记防火墙由系统自动生成的id。 **约束限制**： 不涉及
+    * resourceId  **参数解释**： 资源id，与防火墙实例id fw_instance_id相同。 **约束限制**： 不涉及
+    * name  **参数解释**： 创建防火墙时的时间戳 **约束限制**： 不涉及
+    * fwInstanceName  **参数解释**： 防火墙名称 **约束限制**： 不涉及
+    * enterpriseProjectId  **参数解释**： 企业项目id，用户支持企业项目后，由企业项目生成的id。 **约束限制**： 不涉及
+    * haType  **参数解释**： 集群类型 **约束限制**： 不涉及 **取值范围**： - 0：主备模式，包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点 - 1：集群模式，仅拉起两个节点作为集群
+    * chargeMode  **参数解释**： 计费模式 **约束限制**： 不涉及 **取值范围**： - 0：包年/包月 - 1：按需 **默认取值**： 不涉及
+    * serviceType  **参数解释**： 防火墙防护类型 **约束限制**： 不涉及 **取值范围**： 目前仅支持0，互联网防护
+    * engineType  **参数解释**： 引擎类型 **约束限制**： 不涉及 **取值范围**： - 0：自研引擎 - 1：山石引擎 - 3：天融信引擎
     * flavor  flavor
-    * status  防火墙状态列表，包括-1：等待支付，0：创建中，1：删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
-    * tags  标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\"
+    * status  **参数解释**： 防火墙状态列表 **约束限制**： 不涉及 **取值范围**： - -1：等待支付 - 0：创建中 - 1，删除中 - 2：运行中 - 3：升级中 - 4：删除完成 - 5：冻结中 - 6：创建失败 - 7：删除失败 - 8：冻结失败 - 9：存储中 - 10：存储失败 - 11：升级失败
+    * tags  **参数解释**： 标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\" **约束限制**： 不涉及
     *
     * @var string[]
     */
@@ -295,7 +295,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fwInstanceId
-    *  防火墙实例id，创建云防火墙后用于标记防火墙由系统自动生成的id。
+    *  **参数解释**： 防火墙实例id，创建云防火墙后用于标记防火墙由系统自动生成的id。 **约束限制**： 不涉及
     *
     * @return string|null
     */
@@ -307,7 +307,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
     /**
     * Sets fwInstanceId
     *
-    * @param string|null $fwInstanceId 防火墙实例id，创建云防火墙后用于标记防火墙由系统自动生成的id。
+    * @param string|null $fwInstanceId **参数解释**： 防火墙实例id，创建云防火墙后用于标记防火墙由系统自动生成的id。 **约束限制**： 不涉及
     *
     * @return $this
     */
@@ -319,7 +319,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  资源id，与防火墙实例id fw_instance_id相同
+    *  **参数解释**： 资源id，与防火墙实例id fw_instance_id相同。 **约束限制**： 不涉及
     *
     * @return string|null
     */
@@ -331,7 +331,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId 资源id，与防火墙实例id fw_instance_id相同
+    * @param string|null $resourceId **参数解释**： 资源id，与防火墙实例id fw_instance_id相同。 **约束限制**： 不涉及
     *
     * @return $this
     */
@@ -343,7 +343,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  创建防火墙时的时间戳
+    *  **参数解释**： 创建防火墙时的时间戳 **约束限制**： 不涉及
     *
     * @return string|null
     */
@@ -355,7 +355,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 创建防火墙时的时间戳
+    * @param string|null $name **参数解释**： 创建防火墙时的时间戳 **约束限制**： 不涉及
     *
     * @return $this
     */
@@ -367,7 +367,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fwInstanceName
-    *  防火墙名称
+    *  **参数解释**： 防火墙名称 **约束限制**： 不涉及
     *
     * @return string|null
     */
@@ -379,7 +379,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
     /**
     * Sets fwInstanceName
     *
-    * @param string|null $fwInstanceName 防火墙名称
+    * @param string|null $fwInstanceName **参数解释**： 防火墙名称 **约束限制**： 不涉及
     *
     * @return $this
     */
@@ -391,7 +391,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    *  **参数解释**： 企业项目id，用户支持企业项目后，由企业项目生成的id。 **约束限制**： 不涉及
     *
     * @return string|null
     */
@@ -403,7 +403,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * @param string|null $enterpriseProjectId **参数解释**： 企业项目id，用户支持企业项目后，由企业项目生成的id。 **约束限制**： 不涉及
     *
     * @return $this
     */
@@ -415,7 +415,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets haType
-    *  集群类型，包含主备（0）和集群（1）两种方式，主备模式包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点，集群模式仅拉起两个节点作为集群。
+    *  **参数解释**： 集群类型 **约束限制**： 不涉及 **取值范围**： - 0：主备模式，包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点 - 1：集群模式，仅拉起两个节点作为集群
     *
     * @return int|null
     */
@@ -427,7 +427,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
     /**
     * Sets haType
     *
-    * @param int|null $haType 集群类型，包含主备（0）和集群（1）两种方式，主备模式包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点，集群模式仅拉起两个节点作为集群。
+    * @param int|null $haType **参数解释**： 集群类型 **约束限制**： 不涉及 **取值范围**： - 0：主备模式，包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点 - 1：集群模式，仅拉起两个节点作为集群
     *
     * @return $this
     */
@@ -439,7 +439,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  计费模式 0：包年/包月 1：按需
+    *  **参数解释**： 计费模式 **约束限制**： 不涉及 **取值范围**： - 0：包年/包月 - 1：按需 **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -451,7 +451,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param int|null $chargeMode 计费模式 0：包年/包月 1：按需
+    * @param int|null $chargeMode **参数解释**： 计费模式 **约束限制**： 不涉及 **取值范围**： - 0：包年/包月 - 1：按需 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -463,7 +463,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
-    *  防火墙防护类型，目前仅支持0，互联网防护。
+    *  **参数解释**： 防火墙防护类型 **约束限制**： 不涉及 **取值范围**： 目前仅支持0，互联网防护
     *
     * @return int|null
     */
@@ -475,7 +475,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
     /**
     * Sets serviceType
     *
-    * @param int|null $serviceType 防火墙防护类型，目前仅支持0，互联网防护。
+    * @param int|null $serviceType **参数解释**： 防火墙防护类型 **约束限制**： 不涉及 **取值范围**： 目前仅支持0，互联网防护
     *
     * @return $this
     */
@@ -487,7 +487,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets engineType
-    *  引擎类型，0：自研引擎 1：山石引擎 3：天融信引擎
+    *  **参数解释**： 引擎类型 **约束限制**： 不涉及 **取值范围**： - 0：自研引擎 - 1：山石引擎 - 3：天融信引擎
     *
     * @return int|null
     */
@@ -499,7 +499,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
     /**
     * Sets engineType
     *
-    * @param int|null $engineType 引擎类型，0：自研引擎 1：山石引擎 3：天融信引擎
+    * @param int|null $engineType **参数解释**： 引擎类型 **约束限制**： 不涉及 **取值范围**： - 0：自研引擎 - 1：山石引擎 - 3：天融信引擎
     *
     * @return $this
     */
@@ -535,7 +535,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  防火墙状态列表，包括-1：等待支付，0：创建中，1：删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
+    *  **参数解释**： 防火墙状态列表 **约束限制**： 不涉及 **取值范围**： - -1：等待支付 - 0：创建中 - 1，删除中 - 2：运行中 - 3：升级中 - 4：删除完成 - 5：冻结中 - 6：创建失败 - 7：删除失败 - 8：冻结失败 - 9：存储中 - 10：存储失败 - 11：升级失败
     *
     * @return int|null
     */
@@ -547,7 +547,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 防火墙状态列表，包括-1：等待支付，0：创建中，1：删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
+    * @param int|null $status **参数解释**： 防火墙状态列表 **约束限制**： 不涉及 **取值范围**： - -1：等待支付 - 0：创建中 - 1，删除中 - 2：运行中 - 3：升级中 - 4：删除完成 - 5：冻结中 - 6：创建失败 - 7：删除失败 - 8：冻结失败 - 9：存储中 - 10：存储失败 - 11：升级失败
     *
     * @return $this
     */
@@ -559,7 +559,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\"
+    *  **参数解释**： 标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\" **约束限制**： 不涉及
     *
     * @return string|null
     */
@@ -571,7 +571,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string|null $tags 标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\"
+    * @param string|null $tags **参数解释**： 标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\" **约束限制**： 不涉及
     *
     * @return $this
     */

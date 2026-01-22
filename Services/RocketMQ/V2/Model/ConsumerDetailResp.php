@@ -20,10 +20,10 @@ class ConsumerDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * lag  **参数解释**： 消费堆积总数。 **取值范围**： 不涉及。
-    * maxOffset  **参数解释**： 消息总数。 **取值范围**： 不涉及。
-    * consumerOffset  **参数解释**： 已消费消息数。 **取值范围**： 不涉及。
-    * brokers  **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。
+    * lag  **参数解释**： 消费堆积总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maxOffset  **参数解释**： 消息总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumerOffset  **参数解释**： 已消费消息数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ConsumerDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * lag  **参数解释**： 消费堆积总数。 **取值范围**： 不涉及。
-    * maxOffset  **参数解释**： 消息总数。 **取值范围**： 不涉及。
-    * consumerOffset  **参数解释**： 已消费消息数。 **取值范围**： 不涉及。
-    * brokers  **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。
+    * lag  **参数解释**： 消费堆积总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maxOffset  **参数解释**： 消息总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumerOffset  **参数解释**： 已消费消息数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ConsumerDetailResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * lag  **参数解释**： 消费堆积总数。 **取值范围**： 不涉及。
-    * maxOffset  **参数解释**： 消息总数。 **取值范围**： 不涉及。
-    * consumerOffset  **参数解释**： 已消费消息数。 **取值范围**： 不涉及。
-    * brokers  **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。
+    * lag  **参数解释**： 消费堆积总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maxOffset  **参数解释**： 消息总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumerOffset  **参数解释**： 已消费消息数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ConsumerDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * lag  **参数解释**： 消费堆积总数。 **取值范围**： 不涉及。
-    * maxOffset  **参数解释**： 消息总数。 **取值范围**： 不涉及。
-    * consumerOffset  **参数解释**： 已消费消息数。 **取值范围**： 不涉及。
-    * brokers  **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。
+    * lag  **参数解释**： 消费堆积总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maxOffset  **参数解释**： 消息总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumerOffset  **参数解释**： 已消费消息数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ConsumerDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * lag  **参数解释**： 消费堆积总数。 **取值范围**： 不涉及。
-    * maxOffset  **参数解释**： 消息总数。 **取值范围**： 不涉及。
-    * consumerOffset  **参数解释**： 已消费消息数。 **取值范围**： 不涉及。
-    * brokers  **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。
+    * lag  **参数解释**： 消费堆积总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maxOffset  **参数解释**： 消息总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumerOffset  **参数解释**： 已消费消息数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class ConsumerDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets lag
-    *  **参数解释**： 消费堆积总数。 **取值范围**： 不涉及。
+    *  **参数解释**： 消费堆积总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -219,7 +219,7 @@ class ConsumerDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets lag
     *
-    * @param int|null $lag **参数解释**： 消费堆积总数。 **取值范围**： 不涉及。
+    * @param int|null $lag **参数解释**： 消费堆积总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class ConsumerDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxOffset
-    *  **参数解释**： 消息总数。 **取值范围**： 不涉及。
+    *  **参数解释**： 消息总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -243,7 +243,7 @@ class ConsumerDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets maxOffset
     *
-    * @param int|null $maxOffset **参数解释**： 消息总数。 **取值范围**： 不涉及。
+    * @param int|null $maxOffset **参数解释**： 消息总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class ConsumerDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumerOffset
-    *  **参数解释**： 已消费消息数。 **取值范围**： 不涉及。
+    *  **参数解释**： 已消费消息数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -267,7 +267,7 @@ class ConsumerDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets consumerOffset
     *
-    * @param int|null $consumerOffset **参数解释**： 已消费消息数。 **取值范围**： 不涉及。
+    * @param int|null $consumerOffset **参数解释**： 已消费消息数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class ConsumerDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokers
-    *  **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。
+    *  **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\Brokers[]|null
     */
@@ -291,7 +291,7 @@ class ConsumerDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets brokers
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\Brokers[]|null $brokers **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\Brokers[]|null $brokers **参数解释**： Topic关联代理（当查询Topic消费“详情”才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -20,16 +20,16 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * affectedApplication  affectedApplication
-    * createTime  createTime
-    * defaultStatus  defaultStatus
-    * ipsCve  ipsCve
-    * ipsGroup  ipsGroup
-    * ipsId  ipsId
-    * ipsLevel  ipsLevel
-    * ipsName  ipsName
-    * ipsRulesType  ipsRulesType
-    * ipsStatus  ipsStatus
+    * affectedApplication  受影响对象，可包含如下：Others、Sun、Apache、IBM、VMware、WordPress、Adobe、Oracle、Google Chrome等
+    * createTime  ips规则创建的年份
+    * defaultStatus  默认状态
+    * ipsCve  cve id
+    * ipsGroup  ips组，使用ips规则拦截模式区分，包含，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
+    * ipsId  ips规则id
+    * ipsLevel  ips严重等级，  ips严重等级，包含CRITICAL、HIGH、MEDIUM、LOW
+    * ipsName  ips规则名称
+    * ipsRulesType  ips规则类型，包括漏洞扫描、黑客工具、特洛伊木马等
+    * ipsStatus  ips规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * affectedApplication  affectedApplication
-    * createTime  createTime
-    * defaultStatus  defaultStatus
-    * ipsCve  ipsCve
-    * ipsGroup  ipsGroup
-    * ipsId  ipsId
-    * ipsLevel  ipsLevel
-    * ipsName  ipsName
-    * ipsRulesType  ipsRulesType
-    * ipsStatus  ipsStatus
+    * affectedApplication  受影响对象，可包含如下：Others、Sun、Apache、IBM、VMware、WordPress、Adobe、Oracle、Google Chrome等
+    * createTime  ips规则创建的年份
+    * defaultStatus  默认状态
+    * ipsCve  cve id
+    * ipsGroup  ips组，使用ips规则拦截模式区分，包含，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
+    * ipsId  ips规则id
+    * ipsLevel  ips严重等级，  ips严重等级，包含CRITICAL、HIGH、MEDIUM、LOW
+    * ipsName  ips规则名称
+    * ipsRulesType  ips规则类型，包括漏洞扫描、黑客工具、特洛伊木马等
+    * ipsStatus  ips规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * affectedApplication  affectedApplication
-    * createTime  createTime
-    * defaultStatus  defaultStatus
-    * ipsCve  ipsCve
-    * ipsGroup  ipsGroup
-    * ipsId  ipsId
-    * ipsLevel  ipsLevel
-    * ipsName  ipsName
-    * ipsRulesType  ipsRulesType
-    * ipsStatus  ipsStatus
+    * affectedApplication  受影响对象，可包含如下：Others、Sun、Apache、IBM、VMware、WordPress、Adobe、Oracle、Google Chrome等
+    * createTime  ips规则创建的年份
+    * defaultStatus  默认状态
+    * ipsCve  cve id
+    * ipsGroup  ips组，使用ips规则拦截模式区分，包含，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
+    * ipsId  ips规则id
+    * ipsLevel  ips严重等级，  ips严重等级，包含CRITICAL、HIGH、MEDIUM、LOW
+    * ipsName  ips规则名称
+    * ipsRulesType  ips规则类型，包括漏洞扫描、黑客工具、特洛伊木马等
+    * ipsStatus  ips规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * affectedApplication  affectedApplication
-    * createTime  createTime
-    * defaultStatus  defaultStatus
-    * ipsCve  ipsCve
-    * ipsGroup  ipsGroup
-    * ipsId  ipsId
-    * ipsLevel  ipsLevel
-    * ipsName  ipsName
-    * ipsRulesType  ipsRulesType
-    * ipsStatus  ipsStatus
+    * affectedApplication  受影响对象，可包含如下：Others、Sun、Apache、IBM、VMware、WordPress、Adobe、Oracle、Google Chrome等
+    * createTime  ips规则创建的年份
+    * defaultStatus  默认状态
+    * ipsCve  cve id
+    * ipsGroup  ips组，使用ips规则拦截模式区分，包含，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
+    * ipsId  ips规则id
+    * ipsLevel  ips严重等级，  ips严重等级，包含CRITICAL、HIGH、MEDIUM、LOW
+    * ipsName  ips规则名称
+    * ipsRulesType  ips规则类型，包括漏洞扫描、黑客工具、特洛伊木马等
+    * ipsStatus  ips规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * affectedApplication  affectedApplication
-    * createTime  createTime
-    * defaultStatus  defaultStatus
-    * ipsCve  ipsCve
-    * ipsGroup  ipsGroup
-    * ipsId  ipsId
-    * ipsLevel  ipsLevel
-    * ipsName  ipsName
-    * ipsRulesType  ipsRulesType
-    * ipsStatus  ipsStatus
+    * affectedApplication  受影响对象，可包含如下：Others、Sun、Apache、IBM、VMware、WordPress、Adobe、Oracle、Google Chrome等
+    * createTime  ips规则创建的年份
+    * defaultStatus  默认状态
+    * ipsCve  cve id
+    * ipsGroup  ips组，使用ips规则拦截模式区分，包含，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
+    * ipsId  ips规则id
+    * ipsLevel  ips严重等级，  ips严重等级，包含CRITICAL、HIGH、MEDIUM、LOW
+    * ipsName  ips规则名称
+    * ipsRulesType  ips规则类型，包括漏洞扫描、黑客工具、特洛伊木马等
+    * ipsStatus  ips规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
     *
     * @var string[]
     */
@@ -387,7 +387,7 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets affectedApplication
-    *  affectedApplication
+    *  受影响对象，可包含如下：Others、Sun、Apache、IBM、VMware、WordPress、Adobe、Oracle、Google Chrome等
     *
     * @return string|null
     */
@@ -399,7 +399,7 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
     /**
     * Sets affectedApplication
     *
-    * @param string|null $affectedApplication affectedApplication
+    * @param string|null $affectedApplication 受影响对象，可包含如下：Others、Sun、Apache、IBM、VMware、WordPress、Adobe、Oracle、Google Chrome等
     *
     * @return $this
     */
@@ -411,7 +411,7 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  createTime
+    *  ips规则创建的年份
     *
     * @return string|null
     */
@@ -423,7 +423,7 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime createTime
+    * @param string|null $createTime ips规则创建的年份
     *
     * @return $this
     */
@@ -435,7 +435,7 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultStatus
-    *  defaultStatus
+    *  默认状态
     *
     * @return string|null
     */
@@ -447,7 +447,7 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
     /**
     * Sets defaultStatus
     *
-    * @param string|null $defaultStatus defaultStatus
+    * @param string|null $defaultStatus 默认状态
     *
     * @return $this
     */
@@ -459,7 +459,7 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipsCve
-    *  ipsCve
+    *  cve id
     *
     * @return string|null
     */
@@ -471,7 +471,7 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
     /**
     * Sets ipsCve
     *
-    * @param string|null $ipsCve ipsCve
+    * @param string|null $ipsCve cve id
     *
     * @return $this
     */
@@ -483,7 +483,7 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipsGroup
-    *  ipsGroup
+    *  ips组，使用ips规则拦截模式区分，包含，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
     *
     * @return string|null
     */
@@ -495,7 +495,7 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
     /**
     * Sets ipsGroup
     *
-    * @param string|null $ipsGroup ipsGroup
+    * @param string|null $ipsGroup ips组，使用ips规则拦截模式区分，包含，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
     *
     * @return $this
     */
@@ -507,7 +507,7 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipsId
-    *  ipsId
+    *  ips规则id
     *
     * @return string|null
     */
@@ -519,7 +519,7 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
     /**
     * Sets ipsId
     *
-    * @param string|null $ipsId ipsId
+    * @param string|null $ipsId ips规则id
     *
     * @return $this
     */
@@ -531,7 +531,7 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipsLevel
-    *  ipsLevel
+    *  ips严重等级，  ips严重等级，包含CRITICAL、HIGH、MEDIUM、LOW
     *
     * @return string|null
     */
@@ -543,7 +543,7 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
     /**
     * Sets ipsLevel
     *
-    * @param string|null $ipsLevel ipsLevel
+    * @param string|null $ipsLevel ips严重等级，  ips严重等级，包含CRITICAL、HIGH、MEDIUM、LOW
     *
     * @return $this
     */
@@ -555,7 +555,7 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipsName
-    *  ipsName
+    *  ips规则名称
     *
     * @return string|null
     */
@@ -567,7 +567,7 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
     /**
     * Sets ipsName
     *
-    * @param string|null $ipsName ipsName
+    * @param string|null $ipsName ips规则名称
     *
     * @return $this
     */
@@ -579,7 +579,7 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipsRulesType
-    *  ipsRulesType
+    *  ips规则类型，包括漏洞扫描、黑客工具、特洛伊木马等
     *
     * @return string|null
     */
@@ -591,7 +591,7 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
     /**
     * Sets ipsRulesType
     *
-    * @param string|null $ipsRulesType ipsRulesType
+    * @param string|null $ipsRulesType ips规则类型，包括漏洞扫描、黑客工具、特洛伊木马等
     *
     * @return $this
     */
@@ -603,7 +603,7 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipsStatus
-    *  ipsStatus
+    *  ips规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
     *
     * @return string|null
     */
@@ -615,7 +615,7 @@ class IpsRuleVO implements ModelInterface, ArrayAccess
     /**
     * Sets ipsStatus
     *
-    * @param string|null $ipsStatus ipsStatus
+    * @param string|null $ipsStatus ips规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
     *
     * @return $this
     */

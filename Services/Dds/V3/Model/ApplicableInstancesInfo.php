@@ -20,9 +20,9 @@ class ApplicableInstancesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * instanceName  实例名称。
-    * entities  节点组信息或节点信息的列表对象。  当参数模板是集群类型时，如果是shard组或者config组的参数模板，则可应用到的是对应类型的节点组，如果是mongos组的参数模板，则可应用到的是对应类型的的节点。  当参数模板是副本集或单节点类型时，直接应用到对应实例。  例如：一个mongos参数模板可应用到一个或多个mongos节点。
+    * instanceId  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * instanceName  **参数解释：** 实例名称。 **取值范围：** 不涉及。
+    * entities  **参数解释：** 节点组信息或节点信息的列表对象。 **取值范围：** 当参数模板是副本集或单节点类型时，不返回该字段，模板直接应用到对应实例。 当参数模板是集群类型时，如果是shard组或者config组的参数模板，则返回的是对应类型的节点组信息；如果是mongos组的参数模板，则返回的是对应类型的的节点信息。 例如：一个mongos参数模板可应用到一个或多个mongos节点。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ApplicableInstancesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * instanceName  实例名称。
-    * entities  节点组信息或节点信息的列表对象。  当参数模板是集群类型时，如果是shard组或者config组的参数模板，则可应用到的是对应类型的节点组，如果是mongos组的参数模板，则可应用到的是对应类型的的节点。  当参数模板是副本集或单节点类型时，直接应用到对应实例。  例如：一个mongos参数模板可应用到一个或多个mongos节点。
+    * instanceId  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * instanceName  **参数解释：** 实例名称。 **取值范围：** 不涉及。
+    * entities  **参数解释：** 节点组信息或节点信息的列表对象。 **取值范围：** 当参数模板是副本集或单节点类型时，不返回该字段，模板直接应用到对应实例。 当参数模板是集群类型时，如果是shard组或者config组的参数模板，则返回的是对应类型的节点组信息；如果是mongos组的参数模板，则返回的是对应类型的的节点信息。 例如：一个mongos参数模板可应用到一个或多个mongos节点。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ApplicableInstancesInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID。
-    * instanceName  实例名称。
-    * entities  节点组信息或节点信息的列表对象。  当参数模板是集群类型时，如果是shard组或者config组的参数模板，则可应用到的是对应类型的节点组，如果是mongos组的参数模板，则可应用到的是对应类型的的节点。  当参数模板是副本集或单节点类型时，直接应用到对应实例。  例如：一个mongos参数模板可应用到一个或多个mongos节点。
+    * instanceId  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * instanceName  **参数解释：** 实例名称。 **取值范围：** 不涉及。
+    * entities  **参数解释：** 节点组信息或节点信息的列表对象。 **取值范围：** 当参数模板是副本集或单节点类型时，不返回该字段，模板直接应用到对应实例。 当参数模板是集群类型时，如果是shard组或者config组的参数模板，则返回的是对应类型的节点组信息；如果是mongos组的参数模板，则返回的是对应类型的的节点信息。 例如：一个mongos参数模板可应用到一个或多个mongos节点。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ApplicableInstancesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID。
-    * instanceName  实例名称。
-    * entities  节点组信息或节点信息的列表对象。  当参数模板是集群类型时，如果是shard组或者config组的参数模板，则可应用到的是对应类型的节点组，如果是mongos组的参数模板，则可应用到的是对应类型的的节点。  当参数模板是副本集或单节点类型时，直接应用到对应实例。  例如：一个mongos参数模板可应用到一个或多个mongos节点。
+    * instanceId  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * instanceName  **参数解释：** 实例名称。 **取值范围：** 不涉及。
+    * entities  **参数解释：** 节点组信息或节点信息的列表对象。 **取值范围：** 当参数模板是副本集或单节点类型时，不返回该字段，模板直接应用到对应实例。 当参数模板是集群类型时，如果是shard组或者config组的参数模板，则返回的是对应类型的节点组信息；如果是mongos组的参数模板，则返回的是对应类型的的节点信息。 例如：一个mongos参数模板可应用到一个或多个mongos节点。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ApplicableInstancesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID。
-    * instanceName  实例名称。
-    * entities  节点组信息或节点信息的列表对象。  当参数模板是集群类型时，如果是shard组或者config组的参数模板，则可应用到的是对应类型的节点组，如果是mongos组的参数模板，则可应用到的是对应类型的的节点。  当参数模板是副本集或单节点类型时，直接应用到对应实例。  例如：一个mongos参数模板可应用到一个或多个mongos节点。
+    * instanceId  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * instanceName  **参数解释：** 实例名称。 **取值范围：** 不涉及。
+    * entities  **参数解释：** 节点组信息或节点信息的列表对象。 **取值范围：** 当参数模板是副本集或单节点类型时，不返回该字段，模板直接应用到对应实例。 当参数模板是集群类型时，如果是shard组或者config组的参数模板，则返回的是对应类型的节点组信息；如果是mongos组的参数模板，则返回的是对应类型的的节点信息。 例如：一个mongos参数模板可应用到一个或多个mongos节点。
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class ApplicableInstancesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释：** 实例ID。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class ApplicableInstancesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string $instanceId **参数解释：** 实例ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class ApplicableInstancesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceName
-    *  实例名称。
+    *  **参数解释：** 实例名称。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class ApplicableInstancesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets instanceName
     *
-    * @param string $instanceName 实例名称。
+    * @param string $instanceName **参数解释：** 实例名称。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class ApplicableInstancesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets entities
-    *  节点组信息或节点信息的列表对象。  当参数模板是集群类型时，如果是shard组或者config组的参数模板，则可应用到的是对应类型的节点组，如果是mongos组的参数模板，则可应用到的是对应类型的的节点。  当参数模板是副本集或单节点类型时，直接应用到对应实例。  例如：一个mongos参数模板可应用到一个或多个mongos节点。
+    *  **参数解释：** 节点组信息或节点信息的列表对象。 **取值范围：** 当参数模板是副本集或单节点类型时，不返回该字段，模板直接应用到对应实例。 当参数模板是集群类型时，如果是shard组或者config组的参数模板，则返回的是对应类型的节点组信息；如果是mongos组的参数模板，则返回的是对应类型的的节点信息。 例如：一个mongos参数模板可应用到一个或多个mongos节点。
     *
     * @return \HuaweiCloud\SDK\Dds\V3\Model\EntityInfo[]
     */
@@ -265,7 +265,7 @@ class ApplicableInstancesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets entities
     *
-    * @param \HuaweiCloud\SDK\Dds\V3\Model\EntityInfo[] $entities 节点组信息或节点信息的列表对象。  当参数模板是集群类型时，如果是shard组或者config组的参数模板，则可应用到的是对应类型的节点组，如果是mongos组的参数模板，则可应用到的是对应类型的的节点。  当参数模板是副本集或单节点类型时，直接应用到对应实例。  例如：一个mongos参数模板可应用到一个或多个mongos节点。
+    * @param \HuaweiCloud\SDK\Dds\V3\Model\EntityInfo[] $entities **参数解释：** 节点组信息或节点信息的列表对象。 **取值范围：** 当参数模板是副本集或单节点类型时，不返回该字段，模板直接应用到对应实例。 当参数模板是集群类型时，如果是shard组或者config组的参数模板，则返回的是对应类型的节点组信息；如果是mongos组的参数模板，则返回的是对应类型的的节点信息。 例如：一个mongos参数模板可应用到一个或多个mongos节点。
     *
     * @return $this
     */

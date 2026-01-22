@@ -20,12 +20,12 @@ class IpsRuleListVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * fwInstanceId  fwInstanceId
-    * limit  limit
-    * objectId  objectId
-    * offset  offset
-    * records  records
-    * total  total
+    * fwInstanceId  防火墙ID
+    * limit  每页显示个数，范围为1-1024
+    * objectId  防护对象id
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * records  查询ips规则列表
+    * total  查询ips规则总数
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class IpsRuleListVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * fwInstanceId  fwInstanceId
-    * limit  limit
-    * objectId  objectId
-    * offset  offset
-    * records  records
-    * total  total
+    * fwInstanceId  防火墙ID
+    * limit  每页显示个数，范围为1-1024
+    * objectId  防护对象id
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * records  查询ips规则列表
+    * total  查询ips规则总数
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class IpsRuleListVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * fwInstanceId  fwInstanceId
-    * limit  limit
-    * objectId  objectId
-    * offset  offset
-    * records  records
-    * total  total
+    * fwInstanceId  防火墙ID
+    * limit  每页显示个数，范围为1-1024
+    * objectId  防护对象id
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * records  查询ips规则列表
+    * total  查询ips规则总数
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class IpsRuleListVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * fwInstanceId  fwInstanceId
-    * limit  limit
-    * objectId  objectId
-    * offset  offset
-    * records  records
-    * total  total
+    * fwInstanceId  防火墙ID
+    * limit  每页显示个数，范围为1-1024
+    * objectId  防护对象id
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * records  查询ips规则列表
+    * total  查询ips规则总数
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class IpsRuleListVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * fwInstanceId  fwInstanceId
-    * limit  limit
-    * objectId  objectId
-    * offset  offset
-    * records  records
-    * total  total
+    * fwInstanceId  防火墙ID
+    * limit  每页显示个数，范围为1-1024
+    * objectId  防护对象id
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * records  查询ips规则列表
+    * total  查询ips规则总数
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class IpsRuleListVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fwInstanceId
-    *  fwInstanceId
+    *  防火墙ID
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class IpsRuleListVO implements ModelInterface, ArrayAccess
     /**
     * Sets fwInstanceId
     *
-    * @param string|null $fwInstanceId fwInstanceId
+    * @param string|null $fwInstanceId 防火墙ID
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class IpsRuleListVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  limit
+    *  每页显示个数，范围为1-1024
     *
     * @return int|null
     */
@@ -265,7 +265,7 @@ class IpsRuleListVO implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 每页显示个数，范围为1-1024
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class IpsRuleListVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  objectId
+    *  防护对象id
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class IpsRuleListVO implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string|null $objectId objectId
+    * @param string|null $objectId 防护对象id
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class IpsRuleListVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  offset
+    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
     * @return int|null
     */
@@ -313,7 +313,7 @@ class IpsRuleListVO implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset offset
+    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class IpsRuleListVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets records
-    *  records
+    *  查询ips规则列表
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\IpsRuleVO[]|null
     */
@@ -337,7 +337,7 @@ class IpsRuleListVO implements ModelInterface, ArrayAccess
     /**
     * Sets records
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\IpsRuleVO[]|null $records records
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\IpsRuleVO[]|null $records 查询ips规则列表
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class IpsRuleListVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  total
+    *  查询ips规则总数
     *
     * @return int|null
     */
@@ -361,7 +361,7 @@ class IpsRuleListVO implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total total
+    * @param int|null $total 查询ips规则总数
     *
     * @return $this
     */

@@ -183,9 +183,6 @@ class StartKibanaPublicReq implements ModelInterface, ArrayAccess
         if ($this->container['eipSize'] === null) {
             $invalidProperties[] = "'eipSize' can't be null";
         }
-        if ($this->container['elbWhiteList'] === null) {
-            $invalidProperties[] = "'elbWhiteList' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -228,7 +225,7 @@ class StartKibanaPublicReq implements ModelInterface, ArrayAccess
     * Gets elbWhiteList
     *  elbWhiteList
     *
-    * @return \HuaweiCloud\SDK\Css\V1\Model\StartKibanaPublicReqElbWhitelist
+    * @return \HuaweiCloud\SDK\Css\V1\Model\StartKibanaPublicReqElbWhitelist|null
     */
     public function getElbWhiteList()
     {
@@ -238,7 +235,7 @@ class StartKibanaPublicReq implements ModelInterface, ArrayAccess
     /**
     * Sets elbWhiteList
     *
-    * @param \HuaweiCloud\SDK\Css\V1\Model\StartKibanaPublicReqElbWhitelist $elbWhiteList elbWhiteList
+    * @param \HuaweiCloud\SDK\Css\V1\Model\StartKibanaPublicReqElbWhitelist|null $elbWhiteList elbWhiteList
     *
     * @return $this
     */

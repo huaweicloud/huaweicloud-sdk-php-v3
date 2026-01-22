@@ -20,11 +20,11 @@ class ClientData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * language  客户端语言。
-    * version  客户端版本。
-    * clientId  客户端ID。
-    * clientAddr  客户端地址。
-    * subscriptions  订阅关系列表。
+    * language  **参数解释**： 客户端语言。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * version  **参数解释**： 客户端版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clientId  **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clientAddr  **参数解释**： 客户端地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subscriptions  **参数解释**： 订阅关系列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ClientData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * language  客户端语言。
-    * version  客户端版本。
-    * clientId  客户端ID。
-    * clientAddr  客户端地址。
-    * subscriptions  订阅关系列表。
+    * language  **参数解释**： 客户端语言。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * version  **参数解释**： 客户端版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clientId  **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clientAddr  **参数解释**： 客户端地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subscriptions  **参数解释**： 订阅关系列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ClientData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * language  客户端语言。
-    * version  客户端版本。
-    * clientId  客户端ID。
-    * clientAddr  客户端地址。
-    * subscriptions  订阅关系列表。
+    * language  **参数解释**： 客户端语言。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * version  **参数解释**： 客户端版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clientId  **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clientAddr  **参数解释**： 客户端地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subscriptions  **参数解释**： 订阅关系列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ClientData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * language  客户端语言。
-    * version  客户端版本。
-    * clientId  客户端ID。
-    * clientAddr  客户端地址。
-    * subscriptions  订阅关系列表。
+    * language  **参数解释**： 客户端语言。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * version  **参数解释**： 客户端版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clientId  **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clientAddr  **参数解释**： 客户端地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subscriptions  **参数解释**： 订阅关系列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ClientData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * language  客户端语言。
-    * version  客户端版本。
-    * clientId  客户端ID。
-    * clientAddr  客户端地址。
-    * subscriptions  订阅关系列表。
+    * language  **参数解释**： 客户端语言。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * version  **参数解释**： 客户端版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clientId  **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clientAddr  **参数解释**： 客户端地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subscriptions  **参数解释**： 订阅关系列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class ClientData implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  客户端语言。
+    *  **参数解释**： 客户端语言。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class ClientData implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 客户端语言。
+    * @param string|null $language **参数解释**： 客户端语言。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class ClientData implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  客户端版本。
+    *  **参数解释**： 客户端版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class ClientData implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 客户端版本。
+    * @param string|null $version **参数解释**： 客户端版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class ClientData implements ModelInterface, ArrayAccess
 
     /**
     * Gets clientId
-    *  客户端ID。
+    *  **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class ClientData implements ModelInterface, ArrayAccess
     /**
     * Sets clientId
     *
-    * @param string|null $clientId 客户端ID。
+    * @param string|null $clientId **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class ClientData implements ModelInterface, ArrayAccess
 
     /**
     * Gets clientAddr
-    *  客户端地址。
+    *  **参数解释**： 客户端地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class ClientData implements ModelInterface, ArrayAccess
     /**
     * Sets clientAddr
     *
-    * @param string|null $clientAddr 客户端地址。
+    * @param string|null $clientAddr **参数解释**： 客户端地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class ClientData implements ModelInterface, ArrayAccess
 
     /**
     * Gets subscriptions
-    *  订阅关系列表。
+    *  **参数解释**： 订阅关系列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\Subscription[]|null
     */
@@ -326,7 +326,7 @@ class ClientData implements ModelInterface, ArrayAccess
     /**
     * Sets subscriptions
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\Subscription[]|null $subscriptions 订阅关系列表。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\Subscription[]|null $subscriptions **参数解释**： 订阅关系列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

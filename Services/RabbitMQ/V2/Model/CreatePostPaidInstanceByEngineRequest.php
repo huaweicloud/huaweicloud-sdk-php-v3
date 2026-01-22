@@ -20,7 +20,7 @@ class CreatePostPaidInstanceByEngineRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  消息引擎。
+    * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： rabbitmq：RabbitMQ引擎。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CreatePostPaidInstanceByEngineRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  消息引擎。
+    * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： rabbitmq：RabbitMQ引擎。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CreatePostPaidInstanceByEngineRequest implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  消息引擎。
+    * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： rabbitmq：RabbitMQ引擎。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CreatePostPaidInstanceByEngineRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  消息引擎。
+    * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： rabbitmq：RabbitMQ引擎。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CreatePostPaidInstanceByEngineRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  消息引擎。
+    * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： rabbitmq：RabbitMQ引擎。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -209,7 +209,7 @@ class CreatePostPaidInstanceByEngineRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets engine
-    *  消息引擎。
+    *  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： rabbitmq：RabbitMQ引擎。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -221,7 +221,7 @@ class CreatePostPaidInstanceByEngineRequest implements ModelInterface, ArrayAcce
     /**
     * Sets engine
     *
-    * @param string $engine 消息引擎。
+    * @param string $engine **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： rabbitmq：RabbitMQ引擎。 **默认取值**： 不涉及。
     *
     * @return $this
     */

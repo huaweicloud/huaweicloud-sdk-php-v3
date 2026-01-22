@@ -20,7 +20,7 @@ class ExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ioSpec  **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
+    * ioSpec  **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 [- dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) [- dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
     * availableZones  有可用资源的可用区列表。
     * type  **参数解释**： IO类型。 **取值范围**： evs
     * unavailableZones  资源售罄的可用区列表。
@@ -36,7 +36,7 @@ class ExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ioSpec  **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
+    * ioSpec  **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 [- dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) [- dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
     * availableZones  有可用资源的可用区列表。
     * type  **参数解释**： IO类型。 **取值范围**： evs
     * unavailableZones  资源售罄的可用区列表。
@@ -73,7 +73,7 @@ class ExtendProductIosEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ioSpec  **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
+    * ioSpec  **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 [- dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) [- dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
     * availableZones  有可用资源的可用区列表。
     * type  **参数解释**： IO类型。 **取值范围**： evs
     * unavailableZones  资源售罄的可用区列表。
@@ -89,7 +89,7 @@ class ExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ioSpec  **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
+    * ioSpec  **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 [- dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) [- dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
     * availableZones  有可用资源的可用区列表。
     * type  **参数解释**： IO类型。 **取值范围**： evs
     * unavailableZones  资源售罄的可用区列表。
@@ -105,7 +105,7 @@ class ExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ioSpec  **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
+    * ioSpec  **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 [- dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) [- dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
     * availableZones  有可用资源的可用区列表。
     * type  **参数解释**： IO类型。 **取值范围**： evs
     * unavailableZones  资源售罄的可用区列表。
@@ -207,7 +207,7 @@ class ExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets ioSpec
-    *  **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
+    *  **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 [- dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) [- dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class ExtendProductIosEntity implements ModelInterface, ArrayAccess
     /**
     * Sets ioSpec
     *
-    * @param string|null $ioSpec **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
+    * @param string|null $ioSpec **参数解释**： 存储IO规格。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 [- dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) [- dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax)
     *
     * @return $this
     */

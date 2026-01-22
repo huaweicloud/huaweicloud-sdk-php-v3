@@ -25,6 +25,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
     * startTime  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * endTime  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * statType  参数类型支持：flux(流量)，req_num(请求总数)。
+    * result  按指定的分组方式组织的数据
     *
     * @var string[]
     */
@@ -32,7 +33,8 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
             'action' => 'string',
             'startTime' => 'int',
             'endTime' => 'int',
-            'statType' => 'string'
+            'statType' => 'string',
+            'result' => 'map[string,object]'
     ];
 
     /**
@@ -41,6 +43,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
     * startTime  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * endTime  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * statType  参数类型支持：flux(流量)，req_num(请求总数)。
+    * result  按指定的分组方式组织的数据
     *
     * @var string[]
     */
@@ -48,7 +51,8 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
         'action' => null,
         'startTime' => 'int64',
         'endTime' => 'int64',
-        'statType' => null
+        'statType' => null,
+        'result' => null
     ];
 
     /**
@@ -78,6 +82,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
     * startTime  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * endTime  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * statType  参数类型支持：flux(流量)，req_num(请求总数)。
+    * result  按指定的分组方式组织的数据
     *
     * @var string[]
     */
@@ -85,7 +90,8 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
             'action' => 'action',
             'startTime' => 'start_time',
             'endTime' => 'end_time',
-            'statType' => 'stat_type'
+            'statType' => 'stat_type',
+            'result' => 'result'
     ];
 
     /**
@@ -94,6 +100,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
     * startTime  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * endTime  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * statType  参数类型支持：flux(流量)，req_num(请求总数)。
+    * result  按指定的分组方式组织的数据
     *
     * @var string[]
     */
@@ -101,7 +108,8 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
             'action' => 'setAction',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
-            'statType' => 'setStatType'
+            'statType' => 'setStatType',
+            'result' => 'setResult'
     ];
 
     /**
@@ -110,6 +118,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
     * startTime  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * endTime  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * statType  参数类型支持：flux(流量)，req_num(请求总数)。
+    * result  按指定的分组方式组织的数据
     *
     * @var string[]
     */
@@ -117,7 +126,8 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
             'action' => 'getAction',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
-            'statType' => 'getStatType'
+            'statType' => 'getStatType',
+            'result' => 'getResult'
     ];
 
     /**
@@ -182,6 +192,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['statType'] = isset($data['statType']) ? $data['statType'] : null;
+        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
     }
 
     /**
@@ -299,6 +310,30 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
     public function setStatType($statType)
     {
         $this->container['statType'] = $statType;
+        return $this;
+    }
+
+    /**
+    * Gets result
+    *  按指定的分组方式组织的数据
+    *
+    * @return map[string,object]|null
+    */
+    public function getResult()
+    {
+        return $this->container['result'];
+    }
+
+    /**
+    * Sets result
+    *
+    * @param map[string,object]|null $result 按指定的分组方式组织的数据
+    *
+    * @return $this
+    */
+    public function setResult($result)
+    {
+        $this->container['result'] = $result;
         return $this;
     }
 

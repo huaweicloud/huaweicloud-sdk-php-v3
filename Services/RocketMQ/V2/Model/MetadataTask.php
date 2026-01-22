@@ -20,11 +20,11 @@ class MetadataTask implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  元数据迁移任务ID。
-    * name  元数据迁移任务名称。
-    * startDate  元数据迁移任务开始时间。
-    * status  元数据迁移任务状态。
-    * type  元数据迁移类型。
+    * id  **参数解释**： 元数据迁移任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 元数据迁移任务名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * startDate  **参数解释**： 元数据迁移任务开始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 元数据迁移任务状态。 **约束限制**： 不涉及。 **取值范围**： - creating：创建中。 - starting：迁移中。 - failed：迁移失败。 - finished：迁移完成。 **默认取值**： 不涉及。
+    * type  **参数解释**： 元数据迁移类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：从rocketmq迁移到rocketmq。 - rabbitToRocket：从rabbitmq迁移到rocketmq。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class MetadataTask implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  元数据迁移任务ID。
-    * name  元数据迁移任务名称。
-    * startDate  元数据迁移任务开始时间。
-    * status  元数据迁移任务状态。
-    * type  元数据迁移类型。
+    * id  **参数解释**： 元数据迁移任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 元数据迁移任务名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * startDate  **参数解释**： 元数据迁移任务开始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 元数据迁移任务状态。 **约束限制**： 不涉及。 **取值范围**： - creating：创建中。 - starting：迁移中。 - failed：迁移失败。 - finished：迁移完成。 **默认取值**： 不涉及。
+    * type  **参数解释**： 元数据迁移类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：从rocketmq迁移到rocketmq。 - rabbitToRocket：从rabbitmq迁移到rocketmq。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class MetadataTask implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  元数据迁移任务ID。
-    * name  元数据迁移任务名称。
-    * startDate  元数据迁移任务开始时间。
-    * status  元数据迁移任务状态。
-    * type  元数据迁移类型。
+    * id  **参数解释**： 元数据迁移任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 元数据迁移任务名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * startDate  **参数解释**： 元数据迁移任务开始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 元数据迁移任务状态。 **约束限制**： 不涉及。 **取值范围**： - creating：创建中。 - starting：迁移中。 - failed：迁移失败。 - finished：迁移完成。 **默认取值**： 不涉及。
+    * type  **参数解释**： 元数据迁移类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：从rocketmq迁移到rocketmq。 - rabbitToRocket：从rabbitmq迁移到rocketmq。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class MetadataTask implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  元数据迁移任务ID。
-    * name  元数据迁移任务名称。
-    * startDate  元数据迁移任务开始时间。
-    * status  元数据迁移任务状态。
-    * type  元数据迁移类型。
+    * id  **参数解释**： 元数据迁移任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 元数据迁移任务名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * startDate  **参数解释**： 元数据迁移任务开始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 元数据迁移任务状态。 **约束限制**： 不涉及。 **取值范围**： - creating：创建中。 - starting：迁移中。 - failed：迁移失败。 - finished：迁移完成。 **默认取值**： 不涉及。
+    * type  **参数解释**： 元数据迁移类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：从rocketmq迁移到rocketmq。 - rabbitToRocket：从rabbitmq迁移到rocketmq。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class MetadataTask implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  元数据迁移任务ID。
-    * name  元数据迁移任务名称。
-    * startDate  元数据迁移任务开始时间。
-    * status  元数据迁移任务状态。
-    * type  元数据迁移类型。
+    * id  **参数解释**： 元数据迁移任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 元数据迁移任务名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * startDate  **参数解释**： 元数据迁移任务开始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 元数据迁移任务状态。 **约束限制**： 不涉及。 **取值范围**： - creating：创建中。 - starting：迁移中。 - failed：迁移失败。 - finished：迁移完成。 **默认取值**： 不涉及。
+    * type  **参数解释**： 元数据迁移类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：从rocketmq迁移到rocketmq。 - rabbitToRocket：从rabbitmq迁移到rocketmq。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class MetadataTask implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  元数据迁移任务ID。
+    *  **参数解释**： 元数据迁移任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class MetadataTask implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 元数据迁移任务ID。
+    * @param string|null $id **参数解释**： 元数据迁移任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class MetadataTask implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  元数据迁移任务名称。
+    *  **参数解释**： 元数据迁移任务名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class MetadataTask implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 元数据迁移任务名称。
+    * @param string|null $name **参数解释**： 元数据迁移任务名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class MetadataTask implements ModelInterface, ArrayAccess
 
     /**
     * Gets startDate
-    *  元数据迁移任务开始时间。
+    *  **参数解释**： 元数据迁移任务开始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class MetadataTask implements ModelInterface, ArrayAccess
     /**
     * Sets startDate
     *
-    * @param string|null $startDate 元数据迁移任务开始时间。
+    * @param string|null $startDate **参数解释**： 元数据迁移任务开始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class MetadataTask implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  元数据迁移任务状态。
+    *  **参数解释**： 元数据迁移任务状态。 **约束限制**： 不涉及。 **取值范围**： - creating：创建中。 - starting：迁移中。 - failed：迁移失败。 - finished：迁移完成。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class MetadataTask implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 元数据迁移任务状态。
+    * @param string|null $status **参数解释**： 元数据迁移任务状态。 **约束限制**： 不涉及。 **取值范围**： - creating：创建中。 - starting：迁移中。 - failed：迁移失败。 - finished：迁移完成。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class MetadataTask implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  元数据迁移类型。
+    *  **参数解释**： 元数据迁移类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：从rocketmq迁移到rocketmq。 - rabbitToRocket：从rabbitmq迁移到rocketmq。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class MetadataTask implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 元数据迁移类型。
+    * @param string|null $type **参数解释**： 元数据迁移类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：从rocketmq迁移到rocketmq。 - rabbitToRocket：从rabbitmq迁移到rocketmq。 **默认取值**： 不涉及。
     *
     * @return $this
     */

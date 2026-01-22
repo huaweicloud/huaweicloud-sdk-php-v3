@@ -27,7 +27,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
     * tenantId  **参数解释**：租户ID，含义同project_id。  **取值范围**：不涉及
     * feature  **参数解释**：特性名称。  **取值范围**：不涉及
     * switch  **参数解释**：特性配置启用开关，表示当前配置是否生效。  **取值范围**： - true：特性配置已生效。 - false: 特性配置未生效。
-    * type  **参数解释**：特性配置值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
+    * type  **参数解释**：特性配置值(value字段)的类型。  **取值范围**： - VARCHAR：字符串 - INT：整型 - BOOL：布尔型 - LIST：列表
     * value  **参数解释**：特性配置值。如开关类型的特性配置取值true/false，表示特性开启关闭；配额类型的特性配置取值整数，表示限制配额。  **取值范围**：不涉及
     * description  **参数解释**：特性配置描述。  **取值范围**：不涉及
     * caller  **参数解释**：配置创建者。  **取值范围**：不涉及
@@ -57,7 +57,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
     * tenantId  **参数解释**：租户ID，含义同project_id。  **取值范围**：不涉及
     * feature  **参数解释**：特性名称。  **取值范围**：不涉及
     * switch  **参数解释**：特性配置启用开关，表示当前配置是否生效。  **取值范围**： - true：特性配置已生效。 - false: 特性配置未生效。
-    * type  **参数解释**：特性配置值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
+    * type  **参数解释**：特性配置值(value字段)的类型。  **取值范围**： - VARCHAR：字符串 - INT：整型 - BOOL：布尔型 - LIST：列表
     * value  **参数解释**：特性配置值。如开关类型的特性配置取值true/false，表示特性开启关闭；配额类型的特性配置取值整数，表示限制配额。  **取值范围**：不涉及
     * description  **参数解释**：特性配置描述。  **取值范围**：不涉及
     * caller  **参数解释**：配置创建者。  **取值范围**：不涉及
@@ -108,7 +108,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
     * tenantId  **参数解释**：租户ID，含义同project_id。  **取值范围**：不涉及
     * feature  **参数解释**：特性名称。  **取值范围**：不涉及
     * switch  **参数解释**：特性配置启用开关，表示当前配置是否生效。  **取值范围**： - true：特性配置已生效。 - false: 特性配置未生效。
-    * type  **参数解释**：特性配置值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
+    * type  **参数解释**：特性配置值(value字段)的类型。  **取值范围**： - VARCHAR：字符串 - INT：整型 - BOOL：布尔型 - LIST：列表
     * value  **参数解释**：特性配置值。如开关类型的特性配置取值true/false，表示特性开启关闭；配额类型的特性配置取值整数，表示限制配额。  **取值范围**：不涉及
     * description  **参数解释**：特性配置描述。  **取值范围**：不涉及
     * caller  **参数解释**：配置创建者。  **取值范围**：不涉及
@@ -138,7 +138,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
     * tenantId  **参数解释**：租户ID，含义同project_id。  **取值范围**：不涉及
     * feature  **参数解释**：特性名称。  **取值范围**：不涉及
     * switch  **参数解释**：特性配置启用开关，表示当前配置是否生效。  **取值范围**： - true：特性配置已生效。 - false: 特性配置未生效。
-    * type  **参数解释**：特性配置值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
+    * type  **参数解释**：特性配置值(value字段)的类型。  **取值范围**： - VARCHAR：字符串 - INT：整型 - BOOL：布尔型 - LIST：列表
     * value  **参数解释**：特性配置值。如开关类型的特性配置取值true/false，表示特性开启关闭；配额类型的特性配置取值整数，表示限制配额。  **取值范围**：不涉及
     * description  **参数解释**：特性配置描述。  **取值范围**：不涉及
     * caller  **参数解释**：配置创建者。  **取值范围**：不涉及
@@ -168,7 +168,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
     * tenantId  **参数解释**：租户ID，含义同project_id。  **取值范围**：不涉及
     * feature  **参数解释**：特性名称。  **取值范围**：不涉及
     * switch  **参数解释**：特性配置启用开关，表示当前配置是否生效。  **取值范围**： - true：特性配置已生效。 - false: 特性配置未生效。
-    * type  **参数解释**：特性配置值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
+    * type  **参数解释**：特性配置值(value字段)的类型。  **取值范围**： - VARCHAR：字符串 - INT：整型 - BOOL：布尔型 - LIST：列表
     * value  **参数解释**：特性配置值。如开关类型的特性配置取值true/false，表示特性开启关闭；配额类型的特性配置取值整数，表示限制配额。  **取值范围**：不涉及
     * description  **参数解释**：特性配置描述。  **取值范围**：不涉及
     * caller  **参数解释**：配置创建者。  **取值范围**：不涉及
@@ -485,7 +485,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**：特性配置值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
+    *  **参数解释**：特性配置值(value字段)的类型。  **取值范围**： - VARCHAR：字符串 - INT：整型 - BOOL：布尔型 - LIST：列表
     *
     * @return string
     */
@@ -497,7 +497,7 @@ class FeatureConfig implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type **参数解释**：特性配置值(value字段)的类型，如：INT，表示整型。  **取值范围**：不涉及
+    * @param string $type **参数解释**：特性配置值(value字段)的类型。  **取值范围**： - VARCHAR：字符串 - INT：整型 - BOOL：布尔型 - LIST：列表
     *
     * @return $this
     */

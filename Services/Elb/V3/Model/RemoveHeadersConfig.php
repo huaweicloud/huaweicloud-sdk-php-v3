@@ -20,7 +20,7 @@ class RemoveHeadersConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * configs  **参数解释**：要移除的请求头、响应头参数列表。  **约束限制**：不涉及
+    * configs  **参数解释**：要移除的请求头参数列表。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class RemoveHeadersConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * configs  **参数解释**：要移除的请求头、响应头参数列表。  **约束限制**：不涉及
+    * configs  **参数解释**：要移除的请求头参数列表。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class RemoveHeadersConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * configs  **参数解释**：要移除的请求头、响应头参数列表。  **约束限制**：不涉及
+    * configs  **参数解释**：要移除的请求头参数列表。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class RemoveHeadersConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * configs  **参数解释**：要移除的请求头、响应头参数列表。  **约束限制**：不涉及
+    * configs  **参数解释**：要移除的请求头参数列表。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class RemoveHeadersConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * configs  **参数解释**：要移除的请求头、响应头参数列表。  **约束限制**：不涉及
+    * configs  **参数解释**：要移除的请求头参数列表。  **约束限制**：不涉及
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class RemoveHeadersConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets configs
-    *  **参数解释**：要移除的请求头、响应头参数列表。  **约束限制**：不涉及
+    *  **参数解释**：要移除的请求头参数列表。  **约束限制**：不涉及
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\RemoveHeaderConfig[]
     */
@@ -189,7 +189,7 @@ class RemoveHeadersConfig implements ModelInterface, ArrayAccess
     /**
     * Sets configs
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\RemoveHeaderConfig[] $configs **参数解释**：要移除的请求头、响应头参数列表。  **约束限制**：不涉及
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\RemoveHeaderConfig[] $configs **参数解释**：要移除的请求头参数列表。  **约束限制**：不涉及
     *
     * @return $this
     */

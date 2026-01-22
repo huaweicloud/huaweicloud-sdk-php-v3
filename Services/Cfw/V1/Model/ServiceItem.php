@@ -20,11 +20,11 @@ class ServiceItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,RuleServiceDto.type为0时不能为空。
-    * sourcePort  源端口
-    * destPort  目的端口
-    * description  服务成员描述
-    * name  服务成员名称
+    * protocol  **参数解释**： 协议类型，用于明确规则网络协议 **约束限制**：  RuleServiceDto.type为0时，此处不能为空。 **取值范围**： - 6：TCP - 17：UDP - 1：ICMP - 58：ICMPV6 - -1：Any **默认取值**： 不涉及
+    * sourcePort  **参数解释**： 源端口，会话发起方的端口。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * destPort  **参数解释**： 目的端口，会话接收方的端口。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * description  **参数解释**： 服务组成员描述信息 **约束限制**： 字符串长度0-255 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * name  **参数解释**： 服务（协议、源端口、目的端口）成员 **约束限制**： 字符串长度0-255 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ServiceItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,RuleServiceDto.type为0时不能为空。
-    * sourcePort  源端口
-    * destPort  目的端口
-    * description  服务成员描述
-    * name  服务成员名称
+    * protocol  **参数解释**： 协议类型，用于明确规则网络协议 **约束限制**：  RuleServiceDto.type为0时，此处不能为空。 **取值范围**： - 6：TCP - 17：UDP - 1：ICMP - 58：ICMPV6 - -1：Any **默认取值**： 不涉及
+    * sourcePort  **参数解释**： 源端口，会话发起方的端口。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * destPort  **参数解释**： 目的端口，会话接收方的端口。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * description  **参数解释**： 服务组成员描述信息 **约束限制**： 字符串长度0-255 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * name  **参数解释**： 服务（协议、源端口、目的端口）成员 **约束限制**： 字符串长度0-255 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ServiceItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,RuleServiceDto.type为0时不能为空。
-    * sourcePort  源端口
-    * destPort  目的端口
-    * description  服务成员描述
-    * name  服务成员名称
+    * protocol  **参数解释**： 协议类型，用于明确规则网络协议 **约束限制**：  RuleServiceDto.type为0时，此处不能为空。 **取值范围**： - 6：TCP - 17：UDP - 1：ICMP - 58：ICMPV6 - -1：Any **默认取值**： 不涉及
+    * sourcePort  **参数解释**： 源端口，会话发起方的端口。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * destPort  **参数解释**： 目的端口，会话接收方的端口。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * description  **参数解释**： 服务组成员描述信息 **约束限制**： 字符串长度0-255 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * name  **参数解释**： 服务（协议、源端口、目的端口）成员 **约束限制**： 字符串长度0-255 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ServiceItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,RuleServiceDto.type为0时不能为空。
-    * sourcePort  源端口
-    * destPort  目的端口
-    * description  服务成员描述
-    * name  服务成员名称
+    * protocol  **参数解释**： 协议类型，用于明确规则网络协议 **约束限制**：  RuleServiceDto.type为0时，此处不能为空。 **取值范围**： - 6：TCP - 17：UDP - 1：ICMP - 58：ICMPV6 - -1：Any **默认取值**： 不涉及
+    * sourcePort  **参数解释**： 源端口，会话发起方的端口。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * destPort  **参数解释**： 目的端口，会话接收方的端口。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * description  **参数解释**： 服务组成员描述信息 **约束限制**： 字符串长度0-255 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * name  **参数解释**： 服务（协议、源端口、目的端口）成员 **约束限制**： 字符串长度0-255 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ServiceItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,RuleServiceDto.type为0时不能为空。
-    * sourcePort  源端口
-    * destPort  目的端口
-    * description  服务成员描述
-    * name  服务成员名称
+    * protocol  **参数解释**： 协议类型，用于明确规则网络协议 **约束限制**：  RuleServiceDto.type为0时，此处不能为空。 **取值范围**： - 6：TCP - 17：UDP - 1：ICMP - 58：ICMPV6 - -1：Any **默认取值**： 不涉及
+    * sourcePort  **参数解释**： 源端口，会话发起方的端口。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * destPort  **参数解释**： 目的端口，会话接收方的端口。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * description  **参数解释**： 服务组成员描述信息 **约束限制**： 字符串长度0-255 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * name  **参数解释**： 服务（协议、源端口、目的端口）成员 **约束限制**： 字符串长度0-255 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class ServiceItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,RuleServiceDto.type为0时不能为空。
+    *  **参数解释**： 协议类型，用于明确规则网络协议 **约束限制**：  RuleServiceDto.type为0时，此处不能为空。 **取值范围**： - 6：TCP - 17：UDP - 1：ICMP - 58：ICMPV6 - -1：Any **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -230,7 +230,7 @@ class ServiceItem implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param int|null $protocol 协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,RuleServiceDto.type为0时不能为空。
+    * @param int|null $protocol **参数解释**： 协议类型，用于明确规则网络协议 **约束限制**：  RuleServiceDto.type为0时，此处不能为空。 **取值范围**： - 6：TCP - 17：UDP - 1：ICMP - 58：ICMPV6 - -1：Any **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class ServiceItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourcePort
-    *  源端口
+    *  **参数解释**： 源端口，会话发起方的端口。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class ServiceItem implements ModelInterface, ArrayAccess
     /**
     * Sets sourcePort
     *
-    * @param string|null $sourcePort 源端口
+    * @param string|null $sourcePort **参数解释**： 源端口，会话发起方的端口。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class ServiceItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets destPort
-    *  目的端口
+    *  **参数解释**： 目的端口，会话接收方的端口。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class ServiceItem implements ModelInterface, ArrayAccess
     /**
     * Sets destPort
     *
-    * @param string|null $destPort 目的端口
+    * @param string|null $destPort **参数解释**： 目的端口，会话接收方的端口。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class ServiceItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  服务成员描述
+    *  **参数解释**： 服务组成员描述信息 **约束限制**： 字符串长度0-255 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class ServiceItem implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 服务成员描述
+    * @param string|null $description **参数解释**： 服务组成员描述信息 **约束限制**： 字符串长度0-255 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class ServiceItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  服务成员名称
+    *  **参数解释**： 服务（协议、源端口、目的端口）成员 **约束限制**： 字符串长度0-255 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class ServiceItem implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 服务成员名称
+    * @param string|null $name **参数解释**： 服务（协议、源端口、目的端口）成员 **约束限制**： 字符串长度0-255 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

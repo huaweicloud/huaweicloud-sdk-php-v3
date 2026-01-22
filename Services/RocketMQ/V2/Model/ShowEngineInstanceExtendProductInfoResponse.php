@@ -21,12 +21,12 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  总数。
-    * nextOffset  下个分页的offset。
-    * previousOffset  上个分页的offset。
-    * engine  消息引擎类型。
-    * versions  消息引擎支持的版本。
-    * products  规格变更的产品信息。
+    * total  **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * nextOffset  **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * previousOffset  **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * engine  **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+    * versions  **参数解释**： 消息引擎支持的版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * products  **参数解释**： 规格变更的产品信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -41,12 +41,12 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  总数。
-    * nextOffset  下个分页的offset。
-    * previousOffset  上个分页的offset。
-    * engine  消息引擎类型。
-    * versions  消息引擎支持的版本。
-    * products  规格变更的产品信息。
+    * total  **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * nextOffset  **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * previousOffset  **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * engine  **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+    * versions  **参数解释**： 消息引擎支持的版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * products  **参数解释**： 规格变更的产品信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -82,12 +82,12 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  总数。
-    * nextOffset  下个分页的offset。
-    * previousOffset  上个分页的offset。
-    * engine  消息引擎类型。
-    * versions  消息引擎支持的版本。
-    * products  规格变更的产品信息。
+    * total  **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * nextOffset  **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * previousOffset  **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * engine  **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+    * versions  **参数解释**： 消息引擎支持的版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * products  **参数解释**： 规格变更的产品信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -102,12 +102,12 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  总数。
-    * nextOffset  下个分页的offset。
-    * previousOffset  上个分页的offset。
-    * engine  消息引擎类型。
-    * versions  消息引擎支持的版本。
-    * products  规格变更的产品信息。
+    * total  **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * nextOffset  **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * previousOffset  **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * engine  **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+    * versions  **参数解释**： 消息引擎支持的版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * products  **参数解释**： 规格变更的产品信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -122,12 +122,12 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  总数。
-    * nextOffset  下个分页的offset。
-    * previousOffset  上个分页的offset。
-    * engine  消息引擎类型。
-    * versions  消息引擎支持的版本。
-    * products  规格变更的产品信息。
+    * total  **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * nextOffset  **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * previousOffset  **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * engine  **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+    * versions  **参数解释**： 消息引擎支持的版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * products  **参数解释**： 规格变更的产品信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -230,7 +230,7 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
 
     /**
     * Gets total
-    *  总数。
+    *  **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -242,7 +242,7 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
     /**
     * Sets total
     *
-    * @param float|null $total 总数。
+    * @param float|null $total **参数解释**： 总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -254,7 +254,7 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
 
     /**
     * Gets nextOffset
-    *  下个分页的offset。
+    *  **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -266,7 +266,7 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
     /**
     * Sets nextOffset
     *
-    * @param int|null $nextOffset 下个分页的offset。
+    * @param int|null $nextOffset **参数解释**： 下个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -278,7 +278,7 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
 
     /**
     * Gets previousOffset
-    *  上个分页的offset。
+    *  **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -290,7 +290,7 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
     /**
     * Sets previousOffset
     *
-    * @param int|null $previousOffset 上个分页的offset。
+    * @param int|null $previousOffset **参数解释**： 上个分页的offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -302,7 +302,7 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
 
     /**
     * Gets engine
-    *  消息引擎类型。
+    *  **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -314,7 +314,7 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
     /**
     * Sets engine
     *
-    * @param string|null $engine 消息引擎类型。
+    * @param string|null $engine **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -326,7 +326,7 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
 
     /**
     * Gets versions
-    *  消息引擎支持的版本。
+    *  **参数解释**： 消息引擎支持的版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -338,7 +338,7 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
     /**
     * Sets versions
     *
-    * @param string[]|null $versions 消息引擎支持的版本。
+    * @param string[]|null $versions **参数解释**： 消息引擎支持的版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -350,7 +350,7 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
 
     /**
     * Gets products
-    *  规格变更的产品信息。
+    *  **参数解释**： 规格变更的产品信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\RocketMQExtendProductInfoEntity[]|null
     */
@@ -362,7 +362,7 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
     /**
     * Sets products
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\RocketMQExtendProductInfoEntity[]|null $products 规格变更的产品信息。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\RocketMQExtendProductInfoEntity[]|null $products **参数解释**： 规格变更的产品信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

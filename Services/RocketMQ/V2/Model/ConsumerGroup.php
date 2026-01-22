@@ -20,15 +20,16 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enabled  **参数解释**： 是否可以消费。 **取值范围**： - true：可以消费。 - false：不可以消费。
-    * broadcast  **参数解释**： 是否广播。 **取值范围**： - true：可以广播。 - false：不可以广播。
-    * brokers  **参数解释**： 关联的代理列表。
-    * name  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
-    * groupDesc  **参数解释**： 消费组描述。 **取值范围**： 不涉及。
-    * retryMaxTime  **参数解释**： 最大重试次数。 **取值范围**： 1~16。
-    * createdAt  **参数解释**： 创建时间戳。 **取值范围**： 不涉及。
-    * permissions  **参数解释**： 权限集。
-    * consumeOrderly  **参数解释**： 是否按顺序消费。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否广播。 **约束限制**： 不涉及。 **取值范围**： - true：可以广播。 - false：不可以广播。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permissions  **参数解释**： 权限集。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否按顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    * groupOnline  **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -41,20 +42,22 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
             'retryMaxTime' => 'int',
             'createdAt' => 'int',
             'permissions' => 'string[]',
-            'consumeOrderly' => 'bool'
+            'consumeOrderly' => 'bool',
+            'groupOnline' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enabled  **参数解释**： 是否可以消费。 **取值范围**： - true：可以消费。 - false：不可以消费。
-    * broadcast  **参数解释**： 是否广播。 **取值范围**： - true：可以广播。 - false：不可以广播。
-    * brokers  **参数解释**： 关联的代理列表。
-    * name  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
-    * groupDesc  **参数解释**： 消费组描述。 **取值范围**： 不涉及。
-    * retryMaxTime  **参数解释**： 最大重试次数。 **取值范围**： 1~16。
-    * createdAt  **参数解释**： 创建时间戳。 **取值范围**： 不涉及。
-    * permissions  **参数解释**： 权限集。
-    * consumeOrderly  **参数解释**： 是否按顺序消费。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否广播。 **约束限制**： 不涉及。 **取值范围**： - true：可以广播。 - false：不可以广播。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permissions  **参数解释**： 权限集。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否按顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    * groupOnline  **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
         'retryMaxTime' => null,
         'createdAt' => 'int64',
         'permissions' => null,
-        'consumeOrderly' => null
+        'consumeOrderly' => null,
+        'groupOnline' => null
     ];
 
     /**
@@ -93,15 +97,16 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enabled  **参数解释**： 是否可以消费。 **取值范围**： - true：可以消费。 - false：不可以消费。
-    * broadcast  **参数解释**： 是否广播。 **取值范围**： - true：可以广播。 - false：不可以广播。
-    * brokers  **参数解释**： 关联的代理列表。
-    * name  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
-    * groupDesc  **参数解释**： 消费组描述。 **取值范围**： 不涉及。
-    * retryMaxTime  **参数解释**： 最大重试次数。 **取值范围**： 1~16。
-    * createdAt  **参数解释**： 创建时间戳。 **取值范围**： 不涉及。
-    * permissions  **参数解释**： 权限集。
-    * consumeOrderly  **参数解释**： 是否按顺序消费。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否广播。 **约束限制**： 不涉及。 **取值范围**： - true：可以广播。 - false：不可以广播。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permissions  **参数解释**： 权限集。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否按顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    * groupOnline  **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -112,22 +117,24 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
             'name' => 'name',
             'groupDesc' => 'group_desc',
             'retryMaxTime' => 'retry_max_time',
-            'createdAt' => 'createdAt',
+            'createdAt' => 'created_at',
             'permissions' => 'permissions',
-            'consumeOrderly' => 'consume_orderly'
+            'consumeOrderly' => 'consume_orderly',
+            'groupOnline' => 'group_online'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enabled  **参数解释**： 是否可以消费。 **取值范围**： - true：可以消费。 - false：不可以消费。
-    * broadcast  **参数解释**： 是否广播。 **取值范围**： - true：可以广播。 - false：不可以广播。
-    * brokers  **参数解释**： 关联的代理列表。
-    * name  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
-    * groupDesc  **参数解释**： 消费组描述。 **取值范围**： 不涉及。
-    * retryMaxTime  **参数解释**： 最大重试次数。 **取值范围**： 1~16。
-    * createdAt  **参数解释**： 创建时间戳。 **取值范围**： 不涉及。
-    * permissions  **参数解释**： 权限集。
-    * consumeOrderly  **参数解释**： 是否按顺序消费。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否广播。 **约束限制**： 不涉及。 **取值范围**： - true：可以广播。 - false：不可以广播。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permissions  **参数解释**： 权限集。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否按顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    * groupOnline  **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -140,20 +147,22 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
             'retryMaxTime' => 'setRetryMaxTime',
             'createdAt' => 'setCreatedAt',
             'permissions' => 'setPermissions',
-            'consumeOrderly' => 'setConsumeOrderly'
+            'consumeOrderly' => 'setConsumeOrderly',
+            'groupOnline' => 'setGroupOnline'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enabled  **参数解释**： 是否可以消费。 **取值范围**： - true：可以消费。 - false：不可以消费。
-    * broadcast  **参数解释**： 是否广播。 **取值范围**： - true：可以广播。 - false：不可以广播。
-    * brokers  **参数解释**： 关联的代理列表。
-    * name  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
-    * groupDesc  **参数解释**： 消费组描述。 **取值范围**： 不涉及。
-    * retryMaxTime  **参数解释**： 最大重试次数。 **取值范围**： 1~16。
-    * createdAt  **参数解释**： 创建时间戳。 **取值范围**： 不涉及。
-    * permissions  **参数解释**： 权限集。
-    * consumeOrderly  **参数解释**： 是否按顺序消费。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否广播。 **约束限制**： 不涉及。 **取值范围**： - true：可以广播。 - false：不可以广播。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permissions  **参数解释**： 权限集。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否按顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    * groupOnline  **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
             'retryMaxTime' => 'getRetryMaxTime',
             'createdAt' => 'getCreatedAt',
             'permissions' => 'getPermissions',
-            'consumeOrderly' => 'getConsumeOrderly'
+            'consumeOrderly' => 'getConsumeOrderly',
+            'groupOnline' => 'getGroupOnline'
     ];
 
     /**
@@ -236,6 +246,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['permissions'] = isset($data['permissions']) ? $data['permissions'] : null;
         $this->container['consumeOrderly'] = isset($data['consumeOrderly']) ? $data['consumeOrderly'] : null;
+        $this->container['groupOnline'] = isset($data['groupOnline']) ? $data['groupOnline'] : null;
     }
 
     /**
@@ -268,7 +279,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  **参数解释**： 是否可以消费。 **取值范围**： - true：可以消费。 - false：不可以消费。
+    *  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -280,7 +291,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool|null $enabled **参数解释**： 是否可以消费。 **取值范围**： - true：可以消费。 - false：不可以消费。
+    * @param bool|null $enabled **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -292,7 +303,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets broadcast
-    *  **参数解释**： 是否广播。 **取值范围**： - true：可以广播。 - false：不可以广播。
+    *  **参数解释**： 是否广播。 **约束限制**： 不涉及。 **取值范围**： - true：可以广播。 - false：不可以广播。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -304,7 +315,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets broadcast
     *
-    * @param bool|null $broadcast **参数解释**： 是否广播。 **取值范围**： - true：可以广播。 - false：不可以广播。
+    * @param bool|null $broadcast **参数解释**： 是否广播。 **约束限制**： 不涉及。 **取值范围**： - true：可以广播。 - false：不可以广播。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -316,7 +327,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokers
-    *  **参数解释**： 关联的代理列表。
+    *  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -328,7 +339,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets brokers
     *
-    * @param string[]|null $brokers **参数解释**： 关联的代理列表。
+    * @param string[]|null $brokers **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -340,7 +351,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    *  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -352,7 +363,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * @param string|null $name **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -364,7 +375,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupDesc
-    *  **参数解释**： 消费组描述。 **取值范围**： 不涉及。
+    *  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -376,7 +387,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets groupDesc
     *
-    * @param string|null $groupDesc **参数解释**： 消费组描述。 **取值范围**： 不涉及。
+    * @param string|null $groupDesc **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -388,7 +399,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets retryMaxTime
-    *  **参数解释**： 最大重试次数。 **取值范围**： 1~16。
+    *  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -400,7 +411,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets retryMaxTime
     *
-    * @param int|null $retryMaxTime **参数解释**： 最大重试次数。 **取值范围**： 1~16。
+    * @param int|null $retryMaxTime **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -412,7 +423,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  **参数解释**： 创建时间戳。 **取值范围**： 不涉及。
+    *  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -424,7 +435,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param int|null $createdAt **参数解释**： 创建时间戳。 **取值范围**： 不涉及。
+    * @param int|null $createdAt **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -436,7 +447,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets permissions
-    *  **参数解释**： 权限集。
+    *  **参数解释**： 权限集。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -448,7 +459,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets permissions
     *
-    * @param string[]|null $permissions **参数解释**： 权限集。
+    * @param string[]|null $permissions **参数解释**： 权限集。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -460,7 +471,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumeOrderly
-    *  **参数解释**： 是否按顺序消费。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。
+    *  **参数解释**： 是否按顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -472,13 +483,37 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets consumeOrderly
     *
-    * @param bool|null $consumeOrderly **参数解释**： 是否按顺序消费。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。
+    * @param bool|null $consumeOrderly **参数解释**： 是否按顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
     *
     * @return $this
     */
     public function setConsumeOrderly($consumeOrderly)
     {
         $this->container['consumeOrderly'] = $consumeOrderly;
+        return $this;
+    }
+
+    /**
+    * Gets groupOnline
+    *  **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getGroupOnline()
+    {
+        return $this->container['groupOnline'];
+    }
+
+    /**
+    * Sets groupOnline
+    *
+    * @param bool|null $groupOnline **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setGroupOnline($groupOnline)
+    {
+        $this->container['groupOnline'] = $groupOnline;
         return $this;
     }
 

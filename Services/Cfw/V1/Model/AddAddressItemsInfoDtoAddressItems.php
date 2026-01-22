@@ -21,7 +21,7 @@ class AddAddressItemsInfoDtoAddressItems implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * addressType  地址类型0 ipv4，1 ipv6
-    * address  ip
+    * address  ip地址
     * description  地址组成员描述
     *
     * @var string[]
@@ -35,7 +35,7 @@ class AddAddressItemsInfoDtoAddressItems implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * addressType  地址类型0 ipv4，1 ipv6
-    * address  ip
+    * address  ip地址
     * description  地址组成员描述
     *
     * @var string[]
@@ -70,7 +70,7 @@ class AddAddressItemsInfoDtoAddressItems implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * addressType  地址类型0 ipv4，1 ipv6
-    * address  ip
+    * address  ip地址
     * description  地址组成员描述
     *
     * @var string[]
@@ -84,7 +84,7 @@ class AddAddressItemsInfoDtoAddressItems implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * addressType  地址类型0 ipv4，1 ipv6
-    * address  ip
+    * address  ip地址
     * description  地址组成员描述
     *
     * @var string[]
@@ -98,7 +98,7 @@ class AddAddressItemsInfoDtoAddressItems implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * addressType  地址类型0 ipv4，1 ipv6
-    * address  ip
+    * address  ip地址
     * description  地址组成员描述
     *
     * @var string[]
@@ -223,7 +223,7 @@ class AddAddressItemsInfoDtoAddressItems implements ModelInterface, ArrayAccess
 
     /**
     * Gets address
-    *  ip
+    *  ip地址
     *
     * @return string
     */
@@ -235,7 +235,7 @@ class AddAddressItemsInfoDtoAddressItems implements ModelInterface, ArrayAccess
     /**
     * Sets address
     *
-    * @param string $address ip
+    * @param string $address ip地址
     *
     * @return $this
     */

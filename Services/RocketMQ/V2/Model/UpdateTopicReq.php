@@ -20,10 +20,10 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * readQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * writeQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * permission  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * queues  **参数解释**： 队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * readQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * writeQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permission  **参数解释**： 权限。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queues  **参数解释**： 队列。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * topicDesc  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -38,10 +38,10 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * readQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * writeQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * permission  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * queues  **参数解释**： 队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * readQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * writeQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permission  **参数解释**： 权限。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queues  **参数解释**： 队列。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * topicDesc  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -77,10 +77,10 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * readQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * writeQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * permission  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * queues  **参数解释**： 队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * readQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * writeQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permission  **参数解释**： 权限。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queues  **参数解释**： 队列。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * topicDesc  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -95,10 +95,10 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * readQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * writeQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * permission  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * queues  **参数解释**： 队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * readQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * writeQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permission  **参数解释**： 权限。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queues  **参数解释**： 队列。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * topicDesc  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -113,10 +113,10 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * readQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * writeQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * permission  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * queues  **参数解释**： 队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * readQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * writeQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permission  **参数解释**： 权限。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queues  **参数解释**： 队列。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * topicDesc  **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -243,7 +243,7 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets readQueueNum
-    *  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *  **参数解释**： 总读队列个数。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -255,7 +255,7 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets readQueueNum
     *
-    * @param float|null $readQueueNum **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param float|null $readQueueNum **参数解释**： 总读队列个数。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets writeQueueNum
-    *  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *  **参数解释**： 总写队列个数。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -279,7 +279,7 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets writeQueueNum
     *
-    * @param float|null $writeQueueNum **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param float|null $writeQueueNum **参数解释**： 总写队列个数。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets permission
-    *  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *  **参数解释**： 权限。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -303,7 +303,7 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets permission
     *
-    * @param string|null $permission **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string|null $permission **参数解释**： 权限。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -315,7 +315,7 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets queues
-    *  **参数解释**： 队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *  **参数解释**： 队列。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\UpdateTopicQueueEntity[]|null
     */
@@ -327,7 +327,7 @@ class UpdateTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets queues
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\UpdateTopicQueueEntity[]|null $queues **参数解释**： 队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\UpdateTopicQueueEntity[]|null $queues **参数解释**： 队列。 **约束限制**： 仅4.8.0实例支持修改该参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

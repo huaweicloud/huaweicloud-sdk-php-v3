@@ -172,9 +172,6 @@ class CreateClusterPublicKibanaReq implements ModelInterface, ArrayAccess
         if ($this->container['eipSize'] === null) {
             $invalidProperties[] = "'eipSize' can't be null";
         }
-        if ($this->container['elbWhiteList'] === null) {
-            $invalidProperties[] = "'elbWhiteList' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -217,7 +214,7 @@ class CreateClusterPublicKibanaReq implements ModelInterface, ArrayAccess
     * Gets elbWhiteList
     *  elbWhiteList
     *
-    * @return \HuaweiCloud\SDK\Css\V2\Model\CreateClusterPublicKibanaElbWhiteList
+    * @return \HuaweiCloud\SDK\Css\V2\Model\CreateClusterPublicKibanaElbWhiteList|null
     */
     public function getElbWhiteList()
     {
@@ -227,7 +224,7 @@ class CreateClusterPublicKibanaReq implements ModelInterface, ArrayAccess
     /**
     * Sets elbWhiteList
     *
-    * @param \HuaweiCloud\SDK\Css\V2\Model\CreateClusterPublicKibanaElbWhiteList $elbWhiteList elbWhiteList
+    * @param \HuaweiCloud\SDK\Css\V2\Model\CreateClusterPublicKibanaElbWhiteList|null $elbWhiteList elbWhiteList
     *
     * @return $this
     */

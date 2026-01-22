@@ -21,8 +21,8 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupResponse implements ModelInte
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  删除消费组的任务ID
-    * name  创建成功的消费组名称。
+    * jobId  **参数解释**： 删除消费组的任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 创建成功的消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupResponse implements ModelInte
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  删除消费组的任务ID
-    * name  创建成功的消费组名称。
+    * jobId  **参数解释**： 删除消费组的任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 创建成功的消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupResponse implements ModelInte
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  删除消费组的任务ID
-    * name  创建成功的消费组名称。
+    * jobId  **参数解释**： 删除消费组的任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 创建成功的消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupResponse implements ModelInte
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  删除消费组的任务ID
-    * name  创建成功的消费组名称。
+    * jobId  **参数解释**： 删除消费组的任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 创建成功的消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupResponse implements ModelInte
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  删除消费组的任务ID
-    * name  创建成功的消费组名称。
+    * jobId  **参数解释**： 删除消费组的任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 创建成功的消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupResponse implements ModelInte
 
     /**
     * Gets jobId
-    *  删除消费组的任务ID
+    *  **参数解释**： 删除消费组的任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupResponse implements ModelInte
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 删除消费组的任务ID
+    * @param string|null $jobId **参数解释**： 删除消费组的任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupResponse implements ModelInte
 
     /**
     * Gets name
-    *  创建成功的消费组名称。
+    *  **参数解释**： 创建成功的消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupResponse implements ModelInte
     /**
     * Sets name
     *
-    * @param string|null $name 创建成功的消费组名称。
+    * @param string|null $name **参数解释**： 创建成功的消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

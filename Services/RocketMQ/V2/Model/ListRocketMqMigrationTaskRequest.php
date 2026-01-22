@@ -20,12 +20,12 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * id  任务ID。
-    * type  查询类型。
-    * offset  当前页，从1开始。
-    * limit  当前页大小。
-    * name  - 查询vhost列表时，该字段可为空。 - 查询exchange列表时，该字段为exchange所属vhost名称。 - 查询queue列表时，该字段为queue所属vhost-所属exchange，例vhost1-exchange1。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * id  **参数解释**： 任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 查询类型。 **约束限制**： 不涉及。 **取值范围**： - vhost：虚拟主机。 - exchange：交换机。 - queue：队列。 - all：所有。            **默认取值**： 不涉及。
+    * offset  **参数解释**： 当前页，从1开始。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 当前页大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： vhost名称 **约束限制**： - 查询vhost列表时，该字段可为空。 - 查询exchange列表时，该字段为exchange所属vhost名称。 - 查询queue列表时，该字段为queue所属vhost-所属exchange，例vhost1-exchange1。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -33,19 +33,19 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
             'instanceId' => 'string',
             'id' => 'string',
             'type' => 'string',
-            'offset' => 'string',
-            'limit' => 'string',
+            'offset' => 'int',
+            'limit' => 'int',
             'name' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * id  任务ID。
-    * type  查询类型。
-    * offset  当前页，从1开始。
-    * limit  当前页大小。
-    * name  - 查询vhost列表时，该字段可为空。 - 查询exchange列表时，该字段为exchange所属vhost名称。 - 查询queue列表时，该字段为queue所属vhost-所属exchange，例vhost1-exchange1。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * id  **参数解释**： 任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 查询类型。 **约束限制**： 不涉及。 **取值范围**： - vhost：虚拟主机。 - exchange：交换机。 - queue：队列。 - all：所有。            **默认取值**： 不涉及。
+    * offset  **参数解释**： 当前页，从1开始。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 当前页大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： vhost名称 **约束限制**： - 查询vhost列表时，该字段可为空。 - 查询exchange列表时，该字段为exchange所属vhost名称。 - 查询queue列表时，该字段为queue所属vhost-所属exchange，例vhost1-exchange1。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -53,8 +53,8 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
         'instanceId' => null,
         'id' => null,
         'type' => null,
-        'offset' => null,
-        'limit' => null,
+        'offset' => 'int32',
+        'limit' => 'int32',
         'name' => null
     ];
 
@@ -81,12 +81,12 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID。
-    * id  任务ID。
-    * type  查询类型。
-    * offset  当前页，从1开始。
-    * limit  当前页大小。
-    * name  - 查询vhost列表时，该字段可为空。 - 查询exchange列表时，该字段为exchange所属vhost名称。 - 查询queue列表时，该字段为queue所属vhost-所属exchange，例vhost1-exchange1。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * id  **参数解释**： 任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 查询类型。 **约束限制**： 不涉及。 **取值范围**： - vhost：虚拟主机。 - exchange：交换机。 - queue：队列。 - all：所有。            **默认取值**： 不涉及。
+    * offset  **参数解释**： 当前页，从1开始。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 当前页大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： vhost名称 **约束限制**： - 查询vhost列表时，该字段可为空。 - 查询exchange列表时，该字段为exchange所属vhost名称。 - 查询queue列表时，该字段为queue所属vhost-所属exchange，例vhost1-exchange1。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID。
-    * id  任务ID。
-    * type  查询类型。
-    * offset  当前页，从1开始。
-    * limit  当前页大小。
-    * name  - 查询vhost列表时，该字段可为空。 - 查询exchange列表时，该字段为exchange所属vhost名称。 - 查询queue列表时，该字段为queue所属vhost-所属exchange，例vhost1-exchange1。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * id  **参数解释**： 任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 查询类型。 **约束限制**： 不涉及。 **取值范围**： - vhost：虚拟主机。 - exchange：交换机。 - queue：队列。 - all：所有。            **默认取值**： 不涉及。
+    * offset  **参数解释**： 当前页，从1开始。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 当前页大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： vhost名称 **约束限制**： - 查询vhost列表时，该字段可为空。 - 查询exchange列表时，该字段为exchange所属vhost名称。 - 查询queue列表时，该字段为queue所属vhost-所属exchange，例vhost1-exchange1。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID。
-    * id  任务ID。
-    * type  查询类型。
-    * offset  当前页，从1开始。
-    * limit  当前页大小。
-    * name  - 查询vhost列表时，该字段可为空。 - 查询exchange列表时，该字段为exchange所属vhost名称。 - 查询queue列表时，该字段为queue所属vhost-所属exchange，例vhost1-exchange1。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * id  **参数解释**： 任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 查询类型。 **约束限制**： 不涉及。 **取值范围**： - vhost：虚拟主机。 - exchange：交换机。 - queue：队列。 - all：所有。            **默认取值**： 不涉及。
+    * offset  **参数解释**： 当前页，从1开始。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 当前页大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： vhost名称 **约束限制**： - 查询vhost列表时，该字段可为空。 - 查询exchange列表时，该字段为exchange所属vhost名称。 - 查询queue列表时，该字段为queue所属vhost-所属exchange，例vhost1-exchange1。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -259,7 +259,7 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -271,7 +271,7 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string $instanceId **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -283,7 +283,7 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  任务ID。
+    *  **参数解释**： 任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -295,7 +295,7 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 任务ID。
+    * @param string|null $id **参数解释**： 任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -307,7 +307,7 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  查询类型。
+    *  **参数解释**： 查询类型。 **约束限制**： 不涉及。 **取值范围**： - vhost：虚拟主机。 - exchange：交换机。 - queue：队列。 - all：所有。            **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -319,7 +319,7 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 查询类型。
+    * @param string|null $type **参数解释**： 查询类型。 **约束限制**： 不涉及。 **取值范围**： - vhost：虚拟主机。 - exchange：交换机。 - queue：队列。 - all：所有。            **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -331,9 +331,9 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  当前页，从1开始。
+    *  **参数解释**： 当前页，从1开始。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getOffset()
     {
@@ -343,7 +343,7 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param string|null $offset 当前页，从1开始。
+    * @param int|null $offset **参数解释**： 当前页，从1开始。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -355,9 +355,9 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  当前页大小。
+    *  **参数解释**： 当前页大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getLimit()
     {
@@ -367,7 +367,7 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 当前页大小。
+    * @param int|null $limit **参数解释**： 当前页大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -379,7 +379,7 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  - 查询vhost列表时，该字段可为空。 - 查询exchange列表时，该字段为exchange所属vhost名称。 - 查询queue列表时，该字段为queue所属vhost-所属exchange，例vhost1-exchange1。
+    *  **参数解释**： vhost名称 **约束限制**： - 查询vhost列表时，该字段可为空。 - 查询exchange列表时，该字段为exchange所属vhost名称。 - 查询queue列表时，该字段为queue所属vhost-所属exchange，例vhost1-exchange1。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -391,7 +391,7 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name - 查询vhost列表时，该字段可为空。 - 查询exchange列表时，该字段为exchange所属vhost名称。 - 查询queue列表时，该字段为queue所属vhost-所属exchange，例vhost1-exchange1。
+    * @param string|null $name **参数解释**： vhost名称 **约束限制**： - 查询vhost列表时，该字段可为空。 - 查询exchange列表时，该字段为exchange所属vhost名称。 - 查询queue列表时，该字段为queue所属vhost-所属exchange，例vhost1-exchange1。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

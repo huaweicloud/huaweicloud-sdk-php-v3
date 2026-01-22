@@ -20,7 +20,7 @@ class BatchDeleteAclRulesResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * responseDatas  批量删除规则返回data
+    * responseDatas  **参数解释**： 批量删除规则返回 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchDeleteAclRulesResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * responseDatas  批量删除规则返回data
+    * responseDatas  **参数解释**： 批量删除规则返回 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchDeleteAclRulesResponseData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * responseDatas  批量删除规则返回data
+    * responseDatas  **参数解释**： 批量删除规则返回 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchDeleteAclRulesResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * responseDatas  批量删除规则返回data
+    * responseDatas  **参数解释**： 批量删除规则返回 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchDeleteAclRulesResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * responseDatas  批量删除规则返回data
+    * responseDatas  **参数解释**： 批量删除规则返回 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class BatchDeleteAclRulesResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Gets responseDatas
-    *  批量删除规则返回data
+    *  **参数解释**： 批量删除规则返回 **取值范围**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\BatchDeleteRuleInfo[]|null
     */
@@ -186,7 +186,7 @@ class BatchDeleteAclRulesResponseData implements ModelInterface, ArrayAccess
     /**
     * Sets responseDatas
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\BatchDeleteRuleInfo[]|null $responseDatas 批量删除规则返回data
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\BatchDeleteRuleInfo[]|null $responseDatas **参数解释**： 批量删除规则返回 **取值范围**： 不涉及
     *
     * @return $this
     */

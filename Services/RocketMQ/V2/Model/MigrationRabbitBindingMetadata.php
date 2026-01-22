@@ -20,11 +20,11 @@ class MigrationRabbitBindingMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vhost  vhost名称。
-    * source  消息的来源。
-    * destination  消息的目标。
-    * destinationType  目标的类型。
-    * routingKey  路由键。
+    * vhost  **参数解释**： vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * source  **参数解释**： 消息的来源。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * destination  **参数解释**： 消息的目标。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * destinationType  **参数解释**： 目标的类型。 **约束限制**： 不涉及。 **取值范围**： - exchange：交换机。 - queue：队列。[RabbitMQ AMQP版本只支持绑定queue。](tag:hws,hws_hk) **默认取值**： 不涉及。
+    * routingKey  **参数解释**： 路由键。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class MigrationRabbitBindingMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vhost  vhost名称。
-    * source  消息的来源。
-    * destination  消息的目标。
-    * destinationType  目标的类型。
-    * routingKey  路由键。
+    * vhost  **参数解释**： vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * source  **参数解释**： 消息的来源。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * destination  **参数解释**： 消息的目标。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * destinationType  **参数解释**： 目标的类型。 **约束限制**： 不涉及。 **取值范围**： - exchange：交换机。 - queue：队列。[RabbitMQ AMQP版本只支持绑定queue。](tag:hws,hws_hk) **默认取值**： 不涉及。
+    * routingKey  **参数解释**： 路由键。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class MigrationRabbitBindingMetadata implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vhost  vhost名称。
-    * source  消息的来源。
-    * destination  消息的目标。
-    * destinationType  目标的类型。
-    * routingKey  路由键。
+    * vhost  **参数解释**： vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * source  **参数解释**： 消息的来源。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * destination  **参数解释**： 消息的目标。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * destinationType  **参数解释**： 目标的类型。 **约束限制**： 不涉及。 **取值范围**： - exchange：交换机。 - queue：队列。[RabbitMQ AMQP版本只支持绑定queue。](tag:hws,hws_hk) **默认取值**： 不涉及。
+    * routingKey  **参数解释**： 路由键。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class MigrationRabbitBindingMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vhost  vhost名称。
-    * source  消息的来源。
-    * destination  消息的目标。
-    * destinationType  目标的类型。
-    * routingKey  路由键。
+    * vhost  **参数解释**： vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * source  **参数解释**： 消息的来源。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * destination  **参数解释**： 消息的目标。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * destinationType  **参数解释**： 目标的类型。 **约束限制**： 不涉及。 **取值范围**： - exchange：交换机。 - queue：队列。[RabbitMQ AMQP版本只支持绑定queue。](tag:hws,hws_hk) **默认取值**： 不涉及。
+    * routingKey  **参数解释**： 路由键。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class MigrationRabbitBindingMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vhost  vhost名称。
-    * source  消息的来源。
-    * destination  消息的目标。
-    * destinationType  目标的类型。
-    * routingKey  路由键。
+    * vhost  **参数解释**： vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * source  **参数解释**： 消息的来源。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * destination  **参数解释**： 消息的目标。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * destinationType  **参数解释**： 目标的类型。 **约束限制**： 不涉及。 **取值范围**： - exchange：交换机。 - queue：队列。[RabbitMQ AMQP版本只支持绑定queue。](tag:hws,hws_hk) **默认取值**： 不涉及。
+    * routingKey  **参数解释**： 路由键。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class MigrationRabbitBindingMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets vhost
-    *  vhost名称。
+    *  **参数解释**： vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class MigrationRabbitBindingMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets vhost
     *
-    * @param string|null $vhost vhost名称。
+    * @param string|null $vhost **参数解释**： vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class MigrationRabbitBindingMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets source
-    *  消息的来源。
+    *  **参数解释**： 消息的来源。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class MigrationRabbitBindingMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets source
     *
-    * @param string|null $source 消息的来源。
+    * @param string|null $source **参数解释**： 消息的来源。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class MigrationRabbitBindingMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets destination
-    *  消息的目标。
+    *  **参数解释**： 消息的目标。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class MigrationRabbitBindingMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets destination
     *
-    * @param string|null $destination 消息的目标。
+    * @param string|null $destination **参数解释**： 消息的目标。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class MigrationRabbitBindingMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets destinationType
-    *  目标的类型。
+    *  **参数解释**： 目标的类型。 **约束限制**： 不涉及。 **取值范围**： - exchange：交换机。 - queue：队列。[RabbitMQ AMQP版本只支持绑定queue。](tag:hws,hws_hk) **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class MigrationRabbitBindingMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets destinationType
     *
-    * @param string|null $destinationType 目标的类型。
+    * @param string|null $destinationType **参数解释**： 目标的类型。 **约束限制**： 不涉及。 **取值范围**： - exchange：交换机。 - queue：队列。[RabbitMQ AMQP版本只支持绑定queue。](tag:hws,hws_hk) **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class MigrationRabbitBindingMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets routingKey
-    *  路由键。
+    *  **参数解释**： 路由键。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class MigrationRabbitBindingMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets routingKey
     *
-    * @param string|null $routingKey 路由键。
+    * @param string|null $routingKey **参数解释**： 路由键。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -20,10 +20,10 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * overwrite  true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当Topic或group已存在则会报错。
-    * name  迁移任务名称，名称规则参考创建实例。
-    * type  迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * overwrite  **参数解释**： true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当Topic或group已存在则会报错。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 迁移任务名称，名称规则参考创建实例。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket) **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -38,10 +38,10 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID。
-    * overwrite  true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当Topic或group已存在则会报错。
-    * name  迁移任务名称，名称规则参考创建实例。
-    * type  迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * overwrite  **参数解释**： true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当Topic或group已存在则会报错。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 迁移任务名称，名称规则参考创建实例。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket) **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -77,10 +77,10 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID。
-    * overwrite  true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当Topic或group已存在则会报错。
-    * name  迁移任务名称，名称规则参考创建实例。
-    * type  迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * overwrite  **参数解释**： true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当Topic或group已存在则会报错。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 迁移任务名称，名称规则参考创建实例。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket) **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -95,10 +95,10 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID。
-    * overwrite  true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当Topic或group已存在则会报错。
-    * name  迁移任务名称，名称规则参考创建实例。
-    * type  迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * overwrite  **参数解释**： true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当Topic或group已存在则会报错。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 迁移任务名称，名称规则参考创建实例。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket) **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -113,10 +113,10 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID。
-    * overwrite  true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当Topic或group已存在则会报错。
-    * name  迁移任务名称，名称规则参考创建实例。
-    * type  迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * overwrite  **参数解释**： true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当Topic或group已存在则会报错。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 迁移任务名称，名称规则参考创建实例。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket) **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -276,7 +276,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -288,7 +288,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string $instanceId **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -300,7 +300,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets overwrite
-    *  true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当Topic或group已存在则会报错。
+    *  **参数解释**： true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当Topic或group已存在则会报错。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -312,7 +312,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets overwrite
     *
-    * @param string $overwrite true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当Topic或group已存在则会报错。
+    * @param string $overwrite **参数解释**： true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当Topic或group已存在则会报错。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -324,7 +324,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  迁移任务名称，名称规则参考创建实例。
+    *  **参数解释**： 迁移任务名称，名称规则参考创建实例。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -336,7 +336,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 迁移任务名称，名称规则参考创建实例。
+    * @param string $name **参数解释**： 迁移任务名称，名称规则参考创建实例。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -348,7 +348,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)
+    *  **参数解释**： 迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket) **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -360,7 +360,7 @@ class CreateRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)
+    * @param string $type **参数解释**： 迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket) **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

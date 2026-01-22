@@ -21,15 +21,15 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enabled  是否可以消费。
-    * broadcast  是否广播。
-    * brokers  关联的代理列表。
-    * name  消费组名称。
-    * groupDesc  消费组描述。
-    * retryMaxTime  最大重试次数。
-    * appId  应用ID。
-    * appName  应用名称。
-    * permissions  权限。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否广播。 **约束限制**： 不涉及。 **取值范围**： - true：开启广播消费。 - false：不开启广播消费。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permissions  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：开启顺序消费。 - false：不开启顺序消费。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -39,23 +39,23 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
             'brokers' => 'string[]',
             'name' => 'string',
             'groupDesc' => 'string',
+            'createdAt' => 'int',
             'retryMaxTime' => 'int',
-            'appId' => 'string',
-            'appName' => 'string',
-            'permissions' => 'string[]'
+            'permissions' => 'string[]',
+            'consumeOrderly' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enabled  是否可以消费。
-    * broadcast  是否广播。
-    * brokers  关联的代理列表。
-    * name  消费组名称。
-    * groupDesc  消费组描述。
-    * retryMaxTime  最大重试次数。
-    * appId  应用ID。
-    * appName  应用名称。
-    * permissions  权限。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否广播。 **约束限制**： 不涉及。 **取值范围**： - true：开启广播消费。 - false：不开启广播消费。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permissions  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：开启顺序消费。 - false：不开启顺序消费。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,10 +65,10 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
         'brokers' => null,
         'name' => null,
         'groupDesc' => null,
+        'createdAt' => 'int64',
         'retryMaxTime' => null,
-        'appId' => null,
-        'appName' => null,
-        'permissions' => null
+        'permissions' => null,
+        'consumeOrderly' => null
     ];
 
     /**
@@ -94,15 +94,15 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enabled  是否可以消费。
-    * broadcast  是否广播。
-    * brokers  关联的代理列表。
-    * name  消费组名称。
-    * groupDesc  消费组描述。
-    * retryMaxTime  最大重试次数。
-    * appId  应用ID。
-    * appName  应用名称。
-    * permissions  权限。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否广播。 **约束限制**： 不涉及。 **取值范围**： - true：开启广播消费。 - false：不开启广播消费。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permissions  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：开启顺序消费。 - false：不开启顺序消费。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -112,23 +112,23 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
             'brokers' => 'brokers',
             'name' => 'name',
             'groupDesc' => 'group_desc',
+            'createdAt' => 'created_at',
             'retryMaxTime' => 'retry_max_time',
-            'appId' => 'app_id',
-            'appName' => 'app_name',
-            'permissions' => 'permissions'
+            'permissions' => 'permissions',
+            'consumeOrderly' => 'consume_orderly'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enabled  是否可以消费。
-    * broadcast  是否广播。
-    * brokers  关联的代理列表。
-    * name  消费组名称。
-    * groupDesc  消费组描述。
-    * retryMaxTime  最大重试次数。
-    * appId  应用ID。
-    * appName  应用名称。
-    * permissions  权限。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否广播。 **约束限制**： 不涉及。 **取值范围**： - true：开启广播消费。 - false：不开启广播消费。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permissions  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：开启顺序消费。 - false：不开启顺序消费。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -138,23 +138,23 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
             'brokers' => 'setBrokers',
             'name' => 'setName',
             'groupDesc' => 'setGroupDesc',
+            'createdAt' => 'setCreatedAt',
             'retryMaxTime' => 'setRetryMaxTime',
-            'appId' => 'setAppId',
-            'appName' => 'setAppName',
-            'permissions' => 'setPermissions'
+            'permissions' => 'setPermissions',
+            'consumeOrderly' => 'setConsumeOrderly'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enabled  是否可以消费。
-    * broadcast  是否广播。
-    * brokers  关联的代理列表。
-    * name  消费组名称。
-    * groupDesc  消费组描述。
-    * retryMaxTime  最大重试次数。
-    * appId  应用ID。
-    * appName  应用名称。
-    * permissions  权限。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否广播。 **约束限制**： 不涉及。 **取值范围**： - true：开启广播消费。 - false：不开启广播消费。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permissions  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：开启顺序消费。 - false：不开启顺序消费。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -164,10 +164,10 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
             'brokers' => 'getBrokers',
             'name' => 'getName',
             'groupDesc' => 'getGroupDesc',
+            'createdAt' => 'getCreatedAt',
             'retryMaxTime' => 'getRetryMaxTime',
-            'appId' => 'getAppId',
-            'appName' => 'getAppName',
-            'permissions' => 'getPermissions'
+            'permissions' => 'getPermissions',
+            'consumeOrderly' => 'getConsumeOrderly'
     ];
 
     /**
@@ -233,10 +233,10 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
         $this->container['brokers'] = isset($data['brokers']) ? $data['brokers'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['groupDesc'] = isset($data['groupDesc']) ? $data['groupDesc'] : null;
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['retryMaxTime'] = isset($data['retryMaxTime']) ? $data['retryMaxTime'] : null;
-        $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
-        $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
         $this->container['permissions'] = isset($data['permissions']) ? $data['permissions'] : null;
+        $this->container['consumeOrderly'] = isset($data['consumeOrderly']) ? $data['consumeOrderly'] : null;
     }
 
     /**
@@ -263,7 +263,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  是否可以消费。
+    *  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -275,7 +275,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool|null $enabled 是否可以消费。
+    * @param bool|null $enabled **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -287,7 +287,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets broadcast
-    *  是否广播。
+    *  **参数解释**： 是否广播。 **约束限制**： 不涉及。 **取值范围**： - true：开启广播消费。 - false：不开启广播消费。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -299,7 +299,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets broadcast
     *
-    * @param bool|null $broadcast 是否广播。
+    * @param bool|null $broadcast **参数解释**： 是否广播。 **约束限制**： 不涉及。 **取值范围**： - true：开启广播消费。 - false：不开启广播消费。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -311,7 +311,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokers
-    *  关联的代理列表。
+    *  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -323,7 +323,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets brokers
     *
-    * @param string[]|null $brokers 关联的代理列表。
+    * @param string[]|null $brokers **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -335,7 +335,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  消费组名称。
+    *  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -347,7 +347,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 消费组名称。
+    * @param string|null $name **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -359,7 +359,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupDesc
-    *  消费组描述。
+    *  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -371,7 +371,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets groupDesc
     *
-    * @param string|null $groupDesc 消费组描述。
+    * @param string|null $groupDesc **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -382,8 +382,32 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets createdAt
+    *  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getCreatedAt()
+    {
+        return $this->container['createdAt'];
+    }
+
+    /**
+    * Sets createdAt
+    *
+    * @param int|null $createdAt **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setCreatedAt($createdAt)
+    {
+        $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
     * Gets retryMaxTime
-    *  最大重试次数。
+    *  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -395,7 +419,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets retryMaxTime
     *
-    * @param int|null $retryMaxTime 最大重试次数。
+    * @param int|null $retryMaxTime **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -406,56 +430,8 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets appId
-    *  应用ID。
-    *
-    * @return string|null
-    */
-    public function getAppId()
-    {
-        return $this->container['appId'];
-    }
-
-    /**
-    * Sets appId
-    *
-    * @param string|null $appId 应用ID。
-    *
-    * @return $this
-    */
-    public function setAppId($appId)
-    {
-        $this->container['appId'] = $appId;
-        return $this;
-    }
-
-    /**
-    * Gets appName
-    *  应用名称。
-    *
-    * @return string|null
-    */
-    public function getAppName()
-    {
-        return $this->container['appName'];
-    }
-
-    /**
-    * Sets appName
-    *
-    * @param string|null $appName 应用名称。
-    *
-    * @return $this
-    */
-    public function setAppName($appName)
-    {
-        $this->container['appName'] = $appName;
-        return $this;
-    }
-
-    /**
     * Gets permissions
-    *  权限。
+    *  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -467,13 +443,37 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets permissions
     *
-    * @param string[]|null $permissions 权限。
+    * @param string[]|null $permissions **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
     public function setPermissions($permissions)
     {
         $this->container['permissions'] = $permissions;
+        return $this;
+    }
+
+    /**
+    * Gets consumeOrderly
+    *  **参数解释**： 是否顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：开启顺序消费。 - false：不开启顺序消费。 **默认取值**： 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getConsumeOrderly()
+    {
+        return $this->container['consumeOrderly'];
+    }
+
+    /**
+    * Sets consumeOrderly
+    *
+    * @param bool|null $consumeOrderly **参数解释**： 是否顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：开启顺序消费。 - false：不开启顺序消费。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setConsumeOrderly($consumeOrderly)
+    {
+        $this->container['consumeOrderly'] = $consumeOrderly;
         return $this;
     }
 

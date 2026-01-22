@@ -21,22 +21,22 @@ class DeleteIpBlacklistResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * data  data
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'data' => 'object'
+            'body' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * data  data
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'data' => null
+        'body' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class DeleteIpBlacklistResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * data  data
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'data' => 'data'
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * data  data
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'data' => 'setData'
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * data  data
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'data' => 'getData'
+            'body' => 'getBody'
     ];
 
     /**
@@ -148,7 +148,7 @@ class DeleteIpBlacklistResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class DeleteIpBlacklistResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets data
-    *  data
+    * Gets body
+    *  body
     *
     * @return object|null
     */
-    public function getData()
+    public function getBody()
     {
-        return $this->container['data'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets data
+    * Sets body
     *
-    * @param object|null $data data
+    * @param object|null $body body
     *
     * @return $this
     */
-    public function setData($data)
+    public function setBody($body)
     {
-        $this->container['data'] = $data;
+        $this->container['body'] = $body;
         return $this;
     }
 

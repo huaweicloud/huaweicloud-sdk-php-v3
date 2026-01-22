@@ -20,10 +20,10 @@ class HistoryInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * parameterName  参数名称
-    * oldValue  修改前的值。
-    * newValue  修改后的值。
-    * updatedAt  修改时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * parameterName  **参数解释：** 参数名称。 **取值范围：** 不涉及。
+    * oldValue  **参数解释：** 修改前的值。 **取值范围：** 不涉及。
+    * newValue  **参数解释：** 修改后的值。 **取值范围：** 不涉及。
+    * updatedAt  **参数解释：** 修改时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class HistoryInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * parameterName  参数名称
-    * oldValue  修改前的值。
-    * newValue  修改后的值。
-    * updatedAt  修改时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * parameterName  **参数解释：** 参数名称。 **取值范围：** 不涉及。
+    * oldValue  **参数解释：** 修改前的值。 **取值范围：** 不涉及。
+    * newValue  **参数解释：** 修改后的值。 **取值范围：** 不涉及。
+    * updatedAt  **参数解释：** 修改时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class HistoryInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * parameterName  参数名称
-    * oldValue  修改前的值。
-    * newValue  修改后的值。
-    * updatedAt  修改时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * parameterName  **参数解释：** 参数名称。 **取值范围：** 不涉及。
+    * oldValue  **参数解释：** 修改前的值。 **取值范围：** 不涉及。
+    * newValue  **参数解释：** 修改后的值。 **取值范围：** 不涉及。
+    * updatedAt  **参数解释：** 修改时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class HistoryInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * parameterName  参数名称
-    * oldValue  修改前的值。
-    * newValue  修改后的值。
-    * updatedAt  修改时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * parameterName  **参数解释：** 参数名称。 **取值范围：** 不涉及。
+    * oldValue  **参数解释：** 修改前的值。 **取值范围：** 不涉及。
+    * newValue  **参数解释：** 修改后的值。 **取值范围：** 不涉及。
+    * updatedAt  **参数解释：** 修改时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class HistoryInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * parameterName  参数名称
-    * oldValue  修改前的值。
-    * newValue  修改后的值。
-    * updatedAt  修改时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * parameterName  **参数解释：** 参数名称。 **取值范围：** 不涉及。
+    * oldValue  **参数解释：** 修改前的值。 **取值范围：** 不涉及。
+    * newValue  **参数解释：** 修改后的值。 **取值范围：** 不涉及。
+    * updatedAt  **参数解释：** 修改时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class HistoryInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets parameterName
-    *  参数名称
+    *  **参数解释：** 参数名称。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -231,7 +231,7 @@ class HistoryInfo implements ModelInterface, ArrayAccess
     /**
     * Sets parameterName
     *
-    * @param string $parameterName 参数名称
+    * @param string $parameterName **参数解释：** 参数名称。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class HistoryInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets oldValue
-    *  修改前的值。
+    *  **参数解释：** 修改前的值。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -255,7 +255,7 @@ class HistoryInfo implements ModelInterface, ArrayAccess
     /**
     * Sets oldValue
     *
-    * @param string $oldValue 修改前的值。
+    * @param string $oldValue **参数解释：** 修改前的值。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class HistoryInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets newValue
-    *  修改后的值。
+    *  **参数解释：** 修改后的值。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -279,7 +279,7 @@ class HistoryInfo implements ModelInterface, ArrayAccess
     /**
     * Sets newValue
     *
-    * @param string $newValue 修改后的值。
+    * @param string $newValue **参数解释：** 修改后的值。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class HistoryInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  修改时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    *  **参数解释：** 修改时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -303,7 +303,7 @@ class HistoryInfo implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string $updatedAt 修改时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * @param string $updatedAt **参数解释：** 修改时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **取值范围：** 不涉及。
     *
     * @return $this
     */

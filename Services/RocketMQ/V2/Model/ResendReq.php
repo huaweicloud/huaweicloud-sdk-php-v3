@@ -20,10 +20,10 @@ class ResendReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * group  Group ID。
-    * topic  消息所属Topic。
-    * clientId  客户端ID。
-    * msgIdList  消息列表。
+    * group  **参数解释**： Group ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * topic  **参数解释**： 消息所属Topic。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * clientId  **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * msgIdList  **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ResendReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * group  Group ID。
-    * topic  消息所属Topic。
-    * clientId  客户端ID。
-    * msgIdList  消息列表。
+    * group  **参数解释**： Group ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * topic  **参数解释**： 消息所属Topic。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * clientId  **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * msgIdList  **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ResendReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * group  Group ID。
-    * topic  消息所属Topic。
-    * clientId  客户端ID。
-    * msgIdList  消息列表。
+    * group  **参数解释**： Group ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * topic  **参数解释**： 消息所属Topic。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * clientId  **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * msgIdList  **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ResendReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * group  Group ID。
-    * topic  消息所属Topic。
-    * clientId  客户端ID。
-    * msgIdList  消息列表。
+    * group  **参数解释**： Group ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * topic  **参数解释**： 消息所属Topic。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * clientId  **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * msgIdList  **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ResendReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * group  Group ID。
-    * topic  消息所属Topic。
-    * clientId  客户端ID。
-    * msgIdList  消息列表。
+    * group  **参数解释**： Group ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * topic  **参数解释**： 消息所属Topic。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * clientId  **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * msgIdList  **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -213,7 +213,7 @@ class ResendReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets group
-    *  Group ID。
+    *  **参数解释**： Group ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return string
     */
@@ -225,7 +225,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     /**
     * Sets group
     *
-    * @param string $group Group ID。
+    * @param string $group **参数解释**： Group ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -237,7 +237,7 @@ class ResendReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  消息所属Topic。
+    *  **参数解释**： 消息所属Topic。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -249,7 +249,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic 消息所属Topic。
+    * @param string|null $topic **参数解释**： 消息所属Topic。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -261,7 +261,7 @@ class ResendReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets clientId
-    *  客户端ID。
+    *  **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return string
     */
@@ -273,7 +273,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     /**
     * Sets clientId
     *
-    * @param string $clientId 客户端ID。
+    * @param string $clientId **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -285,7 +285,7 @@ class ResendReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets msgIdList
-    *  消息列表。
+    *  **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return string[]|null
     */
@@ -297,7 +297,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     /**
     * Sets msgIdList
     *
-    * @param string[]|null $msgIdList 消息列表。
+    * @param string[]|null $msgIdList **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */

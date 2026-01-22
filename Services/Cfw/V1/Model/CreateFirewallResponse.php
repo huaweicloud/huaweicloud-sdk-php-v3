@@ -21,8 +21,8 @@ class CreateFirewallResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  实例创建的任务id。仅创建按需实例时会返回该参数。
-    * orderId  订单号，创建包年包月时返回该参数。
+    * jobId  **参数解释**： 实例创建的任务id **取值范围**： 不涉及
+    * orderId  **参数解释**： 订单号 **取值范围**： 不涉及
     * data  data
     *
     * @var string[]
@@ -35,8 +35,8 @@ class CreateFirewallResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  实例创建的任务id。仅创建按需实例时会返回该参数。
-    * orderId  订单号，创建包年包月时返回该参数。
+    * jobId  **参数解释**： 实例创建的任务id **取值范围**： 不涉及
+    * orderId  **参数解释**： 订单号 **取值范围**： 不涉及
     * data  data
     *
     * @var string[]
@@ -70,8 +70,8 @@ class CreateFirewallResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  实例创建的任务id。仅创建按需实例时会返回该参数。
-    * orderId  订单号，创建包年包月时返回该参数。
+    * jobId  **参数解释**： 实例创建的任务id **取值范围**： 不涉及
+    * orderId  **参数解释**： 订单号 **取值范围**： 不涉及
     * data  data
     *
     * @var string[]
@@ -84,8 +84,8 @@ class CreateFirewallResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  实例创建的任务id。仅创建按需实例时会返回该参数。
-    * orderId  订单号，创建包年包月时返回该参数。
+    * jobId  **参数解释**： 实例创建的任务id **取值范围**： 不涉及
+    * orderId  **参数解释**： 订单号 **取值范围**： 不涉及
     * data  data
     *
     * @var string[]
@@ -98,8 +98,8 @@ class CreateFirewallResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  实例创建的任务id。仅创建按需实例时会返回该参数。
-    * orderId  订单号，创建包年包月时返回该参数。
+    * jobId  **参数解释**： 实例创建的任务id **取值范围**： 不涉及
+    * orderId  **参数解释**： 订单号 **取值范围**： 不涉及
     * data  data
     *
     * @var string[]
@@ -197,7 +197,7 @@ class CreateFirewallResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  实例创建的任务id。仅创建按需实例时会返回该参数。
+    *  **参数解释**： 实例创建的任务id **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class CreateFirewallResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 实例创建的任务id。仅创建按需实例时会返回该参数。
+    * @param string|null $jobId **参数解释**： 实例创建的任务id **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class CreateFirewallResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  订单号，创建包年包月时返回该参数。
+    *  **参数解释**： 订单号 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class CreateFirewallResponse implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId 订单号，创建包年包月时返回该参数。
+    * @param string|null $orderId **参数解释**： 订单号 **取值范围**： 不涉及
     *
     * @return $this
     */

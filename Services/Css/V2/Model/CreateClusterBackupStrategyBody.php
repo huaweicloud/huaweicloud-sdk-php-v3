@@ -255,6 +255,12 @@ class CreateClusterBackupStrategyBody implements ModelInterface, ArrayAccess
         if ($this->container['keepday'] === null) {
             $invalidProperties[] = "'keepday' can't be null";
         }
+        if ($this->container['bucket'] === null) {
+            $invalidProperties[] = "'bucket' can't be null";
+        }
+        if ($this->container['basePath'] === null) {
+            $invalidProperties[] = "'basePath' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -369,7 +375,7 @@ class CreateClusterBackupStrategyBody implements ModelInterface, ArrayAccess
     * Gets bucket
     *  备份使用的OBS桶名称。
     *
-    * @return string|null
+    * @return string
     */
     public function getBucket()
     {
@@ -379,7 +385,7 @@ class CreateClusterBackupStrategyBody implements ModelInterface, ArrayAccess
     /**
     * Sets bucket
     *
-    * @param string|null $bucket 备份使用的OBS桶名称。
+    * @param string $bucket 备份使用的OBS桶名称。
     *
     * @return $this
     */
@@ -393,7 +399,7 @@ class CreateClusterBackupStrategyBody implements ModelInterface, ArrayAccess
     * Gets basePath
     *  快照在OBS桶中的存放路径。
     *
-    * @return string|null
+    * @return string
     */
     public function getBasePath()
     {
@@ -403,7 +409,7 @@ class CreateClusterBackupStrategyBody implements ModelInterface, ArrayAccess
     /**
     * Sets basePath
     *
-    * @param string|null $basePath 快照在OBS桶中的存放路径。
+    * @param string $basePath 快照在OBS桶中的存放路径。
     *
     * @return $this
     */

@@ -195,6 +195,9 @@ class LiveAsyncClient extends Client
         if ($localVarParams['serviceType'] !== null) {
             $queryParams['service_type'] = $localVarParams['serviceType'];
         }
+        if ($localVarParams['ipType'] !== null) {
+            $queryParams['ip_type'] = $localVarParams['ipType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

@@ -20,9 +20,9 @@ class ResetConsumeOffsetRespQueues implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * brokerName  队列所在的broker。
-    * queueId  队列ID。
-    * timestampOffset  重置消费进度。
+    * brokerName  **参数解释**： 队列所在的broker。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queueId  **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * timestampOffset  **参数解释**： 重置消费进度。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ResetConsumeOffsetRespQueues implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * brokerName  队列所在的broker。
-    * queueId  队列ID。
-    * timestampOffset  重置消费进度。
+    * brokerName  **参数解释**： 队列所在的broker。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queueId  **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * timestampOffset  **参数解释**： 重置消费进度。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ResetConsumeOffsetRespQueues implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * brokerName  队列所在的broker。
-    * queueId  队列ID。
-    * timestampOffset  重置消费进度。
+    * brokerName  **参数解释**： 队列所在的broker。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queueId  **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * timestampOffset  **参数解释**： 重置消费进度。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ResetConsumeOffsetRespQueues implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * brokerName  队列所在的broker。
-    * queueId  队列ID。
-    * timestampOffset  重置消费进度。
+    * brokerName  **参数解释**： 队列所在的broker。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queueId  **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * timestampOffset  **参数解释**： 重置消费进度。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ResetConsumeOffsetRespQueues implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * brokerName  队列所在的broker。
-    * queueId  队列ID。
-    * timestampOffset  重置消费进度。
+    * brokerName  **参数解释**： 队列所在的broker。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queueId  **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * timestampOffset  **参数解释**： 重置消费进度。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class ResetConsumeOffsetRespQueues implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokerName
-    *  队列所在的broker。
+    *  **参数解释**： 队列所在的broker。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class ResetConsumeOffsetRespQueues implements ModelInterface, ArrayAccess
     /**
     * Sets brokerName
     *
-    * @param string|null $brokerName 队列所在的broker。
+    * @param string|null $brokerName **参数解释**： 队列所在的broker。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class ResetConsumeOffsetRespQueues implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueId
-    *  队列ID。
+    *  **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -232,7 +232,7 @@ class ResetConsumeOffsetRespQueues implements ModelInterface, ArrayAccess
     /**
     * Sets queueId
     *
-    * @param int|null $queueId 队列ID。
+    * @param int|null $queueId **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class ResetConsumeOffsetRespQueues implements ModelInterface, ArrayAccess
 
     /**
     * Gets timestampOffset
-    *  重置消费进度。
+    *  **参数解释**： 重置消费进度。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -256,7 +256,7 @@ class ResetConsumeOffsetRespQueues implements ModelInterface, ArrayAccess
     /**
     * Sets timestampOffset
     *
-    * @param int|null $timestampOffset 重置消费进度。
+    * @param int|null $timestampOffset **参数解释**： 重置消费进度。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

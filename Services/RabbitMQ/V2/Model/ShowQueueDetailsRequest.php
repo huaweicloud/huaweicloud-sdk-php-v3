@@ -20,9 +20,9 @@ class ShowQueueDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID
-    * vhost  所属Vhost名称
-    * queue  Queue名称
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vhost  **参数解释**：  Vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queue  **参数解释**：  分页查询偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ShowQueueDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID
-    * vhost  所属Vhost名称
-    * queue  Queue名称
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vhost  **参数解释**：  Vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queue  **参数解释**：  分页查询偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ShowQueueDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID
-    * vhost  所属Vhost名称
-    * queue  Queue名称
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vhost  **参数解释**：  Vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queue  **参数解释**：  分页查询偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ShowQueueDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID
-    * vhost  所属Vhost名称
-    * queue  Queue名称
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vhost  **参数解释**：  Vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queue  **参数解释**：  分页查询偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ShowQueueDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID
-    * vhost  所属Vhost名称
-    * queue  Queue名称
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vhost  **参数解释**：  Vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * queue  **参数解释**：  分页查询偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class ShowQueueDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID
+    *  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class ShowQueueDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID
+    * @param string $instanceId **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class ShowQueueDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets vhost
-    *  所属Vhost名称
+    *  **参数解释**：  Vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class ShowQueueDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets vhost
     *
-    * @param string $vhost 所属Vhost名称
+    * @param string $vhost **参数解释**：  Vhost名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class ShowQueueDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets queue
-    *  Queue名称
+    *  **参数解释**：  分页查询偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0。
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class ShowQueueDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets queue
     *
-    * @param string $queue Queue名称
+    * @param string $queue **参数解释**：  分页查询偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0。
     *
     * @return $this
     */

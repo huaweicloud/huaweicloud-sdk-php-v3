@@ -1111,6 +1111,77 @@ class KafkaAsyncClient extends Client
     }
 
     /**
+     * 新增Kafka实例指定Topic分区
+     *
+     * 新增Kafka实例指定Topic分区。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createPartitionAsync($request)
+    {
+        return $this->createPartitionAsyncWithHttpInfo($request);
+    }
+    
+    public function createPartitionAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/management/topics/{topic}/partitions-reassignment';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['topic'] !== null) {
+            $pathParams['topic'] = $localVarParams['topic'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\CreatePartitionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\CreatePartitionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建实例
      *
      * 创建按需计费类型的Kafka实例。
@@ -1450,9 +1521,79 @@ class KafkaAsyncClient extends Client
     }
 
     /**
+     * kafka实例删除指定消费组
+     *
+     * kafka实例删除指定消费组
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteGroupAsync($request)
+    {
+        return $this->deleteGroupAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteGroupAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/groups/{group}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['group'] !== null) {
+            $pathParams['group'] = $localVarParams['group'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\DeleteGroupResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\DeleteGroupRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 删除指定的实例
      *
      * 删除指定的实例，释放该实例的所有资源。
+     * 
+     * [注意：调用本接口删除的实例将被彻底删除，不会进入回收站，且删除后不可恢复。若您需要删除的实例进入回收站，请使用[批量重启或删除实例](BatchRestartOrDeleteInstances.xml)。](tag:hws,hws_hk,cmcc,ctc,sbc,hk_sbc,tm,hk_tm,srg)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1653,6 +1794,77 @@ class KafkaAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\DeleteKafkaMessageResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\DeleteKafkaMessageRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除Kafka消息
+     *
+     * 删除Kafka消息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteKafkaTopicMessagesAsync($request)
+    {
+        return $this->deleteKafkaTopicMessagesAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteKafkaTopicMessagesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/kafka/instances/{instance_id}/topics/{topic}/messages/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['topic'] !== null) {
+            $pathParams['topic'] = $localVarParams['topic'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\DeleteKafkaTopicMessagesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\DeleteKafkaTopicMessagesRequest',
             $asyncRequest = true);
     }
 
@@ -1861,23 +2073,23 @@ class KafkaAsyncClient extends Client
     }
 
     /**
-     * 删除指定用户
+     * 开启Kafka实例域名访问能力
      *
-     * 删除指定用户。
+     * 开启Kafka实例域名访问后，客户端可以通过域名连接Kafka实例。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function deleteUserAsync($request)
+    public function enableDnsAsync($request)
     {
-        return $this->deleteUserAsyncWithHttpInfo($request);
+        return $this->enableDnsAsyncWithHttpInfo($request);
     }
     
-    public function deleteUserAsyncWithHttpInfo($request){
+    public function enableDnsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v2/{project_id}/instances/{instance_id}/users/{user_name}';
+        $resourcePath = '/v2/{project_id}/kafka/instances/{instance_id}/dns';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1894,17 +2106,14 @@ class KafkaAsyncClient extends Client
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
         }
-        if ($localVarParams['userName'] !== null) {
-            $pathParams['user_name'] = $localVarParams['userName'];
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                [],
                 []
             );
         }
@@ -1914,7 +2123,7 @@ class KafkaAsyncClient extends Client
         );
 
         return $this->callApi(
-            $method='DELETE',
+            $method='POST',
             $resourcePath,
             $pathParams,
             $queryParams,
@@ -1922,9 +2131,9 @@ class KafkaAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\DeleteUserResponse',
+            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\EnableDnsResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\DeleteUserRequest',
+            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\EnableDnsRequest',
             $asyncRequest = true);
     }
 
@@ -4774,6 +4983,74 @@ class KafkaAsyncClient extends Client
     }
 
     /**
+     * 查询指定消费组信息
+     *
+     * 查询指定消费组信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showGroupAsync($request)
+    {
+        return $this->showGroupAsyncWithHttpInfo($request);
+    }
+    
+    public function showGroupAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/groups/{group}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['group'] !== null) {
+            $pathParams['group'] = $localVarParams['group'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\ShowGroupResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\ShowGroupRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询消费组信息
      *
      * 查询消费组信息。
@@ -5045,8 +5322,9 @@ class KafkaAsyncClient extends Client
     /**
      * 查询消息
      *
-     * 查询消息的偏移量和消息内容。
-     * 先根据时间戳查询消息的偏移量，再根据偏移量查询消息内容。
+     * Kafka实例支持两种消息查询方式，具体查询范围及结果如下：
+     * - 按创建时间查询：若已知消息的创建时间段，可通过该方式查询，将返回消息列表及对应偏移量，但不包含消息具体内容。
+     * - 按偏移量查询：若已知目标消息所属Topic的分区及具体偏移量，可通过该方式查询，将返回消息列表及完整的消息内容。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7694,77 +7972,6 @@ class KafkaAsyncClient extends Client
     }
 
     /**
-     * 修改Kafka实例Topic分区的副本
-     *
-     * 修改Kafka实例Topic分区的副本。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function updateTopicReplicaAsync($request)
-    {
-        return $this->updateTopicReplicaAsyncWithHttpInfo($request);
-    }
-    
-    public function updateTopicReplicaAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v2/{project_id}/instances/{instance_id}/management/topics/{topic}/replicas-reassignment';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['instanceId'] !== null) {
-            $pathParams['instance_id'] = $localVarParams['instanceId'];
-        }
-        if ($localVarParams['topic'] !== null) {
-            $pathParams['topic'] = $localVarParams['topic'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\UpdateTopicReplicaResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\UpdateTopicReplicaRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 修改磁盘自动扩容配置
      *
      * 该接口用于修改磁盘自动扩容配置，包含磁盘自动扩容是否开启、扩容阈值、扩容步长，以及扩容上限的配置。
@@ -7804,11 +8011,11 @@ class KafkaAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                [],
                 ['application/json']
             );
         }
@@ -8648,9 +8855,9 @@ class KafkaAsyncClient extends Client
     }
 
     /**
-     * 查询开启Smart Connector功能所需资源信息
+     * 查询开启Smart Connect功能所需资源信息
      *
-     * 查询开启Smart Connector功能所需要使用的资源的情况
+     * 查询开启Smart Connect功能所需要使用的资源的情况
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

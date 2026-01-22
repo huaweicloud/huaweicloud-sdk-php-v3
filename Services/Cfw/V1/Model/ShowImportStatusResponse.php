@@ -26,7 +26,7 @@ class ShowImportStatusResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'data' => 'object'
+            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\ShowImportStatusId'
     ];
 
     /**
@@ -177,7 +177,7 @@ class ShowImportStatusResponse implements ModelInterface, ArrayAccess
     * Gets data
     *  data
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\ShowImportStatusId|null
     */
     public function getData()
     {
@@ -187,7 +187,7 @@ class ShowImportStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param object|null $data data
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\ShowImportStatusId|null $data data
     *
     * @return $this
     */

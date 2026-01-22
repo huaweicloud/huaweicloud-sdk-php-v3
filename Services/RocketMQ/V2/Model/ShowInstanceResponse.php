@@ -21,71 +21,76 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
-    * engine  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
-    * description  **参数解释**： 消息描述。 **取值范围**： 不涉及。
-    * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
-    * specification  **参数解释**： 实例规格。 **取值范围**： 不涉及。
-    * engineVersion  **参数解释**： 实例版本。 **取值范围**： 不涉及。
-    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
-    * chargingMode  **参数解释**： 付费模式。 **取值范围**： [1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs,fcs)
-    * vpcId  **参数解释**： 私有云ID。 **取值范围**： 不涉及。
-    * vpcName  **参数解释**： 私有云名称。 **取值范围**： 不涉及。
-    * createdAt  **参数解释**： 完成创建时间。  格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
-    * productId  **参数解释**： 产品标识。 **取值范围**： 不涉及。
-    * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
-    * securityGroupName  **参数解释**： 安全组名称。 **取值范围**： 不涉及。
-    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
-    * subnetName  **参数解释**： 子网名称。 **取值范围**： 不涉及。
-    * subnetCidr  **参数解释**： 子网路由（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * availableZones  **参数解释**： 可用区ID列表。 **取值范围**： 不涉及。
-    * availableZoneNames  **参数解释**： 可用区名称列表。
-    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
-    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
-    * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
-    * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
-    * enableLogCollection  **参数解释**： 是否开启消息收集功能。 **取值范围**： - true：开启。 - false：不开启。
-    * storageSpace  **参数解释**： 存储空间，单位：GB。 **取值范围**： 不涉及。
-    * usedStorageSpace  **参数解释**： 已用消息存储空间，单位：GB。 **取值范围**： 不涉及。
-    * enablePublicip  **参数解释**： 是否开启公网。 **取值范围**： - true：开启。 - false：不开启。
-    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。
-    * publicipAddress  **参数解释**： 公网IP地址。 **取值范围**： 不涉及。
-    * sslEnable  **参数解释**： 是否开启SSL。 **取值范围**： - true：开启。 - false：未开启。
-    * crossVpcInfo  **参数解释**： 跨VPC访问信息。 **取值范围**： 不涉及。
-    * storageResourceId  **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
-    * storageSpecCode  **参数解释**： 存储规格代码。 **取值范围**： 不涉及。
-    * serviceType  **参数解释**： 服务类型。 **取值范围**： 不涉及。
-    * storageType  **参数解释**： 存储类型。 **取值范围**： 不涉及。
-    * extendTimes  **参数解释**： 扩展时间。 **取值范围**： 不涉及。
-    * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启。 - false：未开启。
-    * supportFeatures  **参数解释**： 实例支持的特性功能。 **取值范围**： 不涉及。
-    * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启。 - false：不开启。
-    * cesVersion  **参数解释**： 云监控版本。 **取值范围**： 不涉及。
-    * nodeNum  **参数解释**： 节点数。 **取值范围**： 不涉及。
-    * newSpecBillingEnable  **参数解释**： 是否启用新规格计费。 **取值范围**： - true：开启。 - false：未开启。
-    * enableAcl  **参数解释**： 是否开启访问控制列表。 **取值范围**： - true：开启。 - false：未开启。
-    * brokerNum  **参数解释**： Broker节点数（仅RocketMQ 4.8.0版本会显示此字段）。 **取值范围**： 不涉及。
-    * dnsEnable  **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启。 - false：未开启。
-    * namesrvAddress  **参数解释**： 元数据地址。 **取值范围**： 不涉及。
-    * namesrvDomainName  **参数解释**： 元数据域名。 **取值范围**： 不涉及。
-    * brokerAddress  **参数解释**： 业务数据地址。 **取值范围**： 不涉及。
-    * publicNamesrvAddress  **参数解释**： 公网元数据地址。 **取值范围**： 不涉及。
-    * publicNamesrvDomainName  **参数解释**： 公网元数据域名。 **取值范围**： 不涉及。
-    * publicBrokerAddress  **参数解释**： 公网业务数据地址。 **取值范围**： 不涉及。
-    * grpcAddress  **参数解释**： grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * grpcDomainName  **参数解释**： grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * publicGrpcAddress  **参数解释**： 公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * publicGrpcDomainName  **参数解释**： 公网grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * enterpriseProjectId  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
-    * tags  **参数解释**： 标签列表。 **取值范围**： 不涉及。
-    * totalStorageSpace  **参数解释**： 总存储空间。 **取值范围**： 不涉及。
-    * resourceSpecCode  **参数解释**： 资源规格。 **取值范围**： 不涉及。
-    * producePortion  **参数解释**： 生产TPS占比。 **取值范围**： 不涉及。
-    * consumePortion  **参数解释**： 消费TPS占比。 **取值范围**： 不涉及。
-    * drEnable  **参数解释**： 是否为容灾实例。 **取值范围**： 不涉及。
-    * configSslNeedRestartProcess  **参数解释**： 配置ssl是否需要重启。 **取值范围**： 不涉及。
-    * tlsMode  **参数解释**： 实例使用的安全协议。 **取值范围**： 不涉及。
+    * name  **参数解释**： 实例名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * engine  **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+    * status  **参数解释**： 消息状态。 **约束限制**： 不涉及。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,dt,ax,srg)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs,hcs_oemout) **默认取值**： 不涉及。
+    * description  **参数解释**： 消息描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 消息描述。 **约束限制**： 不涉及。 **取值范围**： [- single：4.8.0单机。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- cluster：4.8.0集群。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- single.basic：5.x单机基础版。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- cluster.basic：5.x集群基础版。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- cluster.professional：5.x集群专业版。](tag:hws,hws_eu,hws_hk,ctc,srg) **默认取值**： 不涉及。
+    * specification  **参数解释**： 实例规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * engineVersion  **参数解释**： 实例版本。 **约束限制**： 不涉及。 **取值范围**： [- 4.8.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- 5.x](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * chargingMode  **参数解释**： 付费模式。 **约束限制**： 不涉及。 **取值范围**： [1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,dt)[1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc,cmcc,ax) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs,fcs,hcs_oemout,srg) **默认取值**： 不涉及。
+    * vpcId  **参数解释**： 私有云ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vpcName  **参数解释**： 私有云名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 完成创建时间。 格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * productId  **参数解释**： RocketMQ实例规格。[x86环境后缀为.x86，arm环境为.arm。single表示单机，cluster表示集群。](tag:hcs,fcs,hcs_oemout)  **约束限制**： 不涉及。 **取值范围**： [当“type”为“single.basic”选择单机规格；当“type”为“cluster.basic”选择集群规格。](tag:dt) [- c6.2u8g.cluster.x86或c6.2u8g.cluster.arm：单个代理最大分区数50，单个代理最大消费组数100](tag:fcs) [- c6.4u8g.cluster.small：单个代理最大Topic数2000，单个代理最大消费组数2000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.4u8g.cluster：单个代理最大Topic数4000，单个代理最大消费组数4000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.4u16g.cluster.x86或c6.4u16g.cluster.arm：单个代理最大分区数100，单个代理最大消费组数200](tag:hcs,hcs_oemout) [- c6.8u16g.cluster：单个代理最大Topic数8000，单个代理最大消费组数8000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.8u32g.cluster.x86或c6.8u32g.cluster.arm：单个代理最大Topic数200，单个代理最大消费组数400](tag:hcs,fcs,hcs_oemout) [- c6.12u24g.cluster：单个代理最大Topic数12000，单个代理最大消费组数12000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.16u64g.cluster.x86或c6.16u64g.cluster.arm：单个代理最大Topic数300，单个代理最大消费组数600](tag:hcs,fcs,hcs_oemout) [- c6.16u32g.cluster：单个代理最大Topic数16000，单个代理最大消费组数16000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.32u128g.cluster.x86或c6.32u128g.cluster.arm：单个代理最大Topic数400，单个代理最大消费组数800](tag:hcs,fcs,hcs_oemout) [- rocketmq.b1.large.1：RocketMQ 5.x基础版单机规格，实例TPS 500](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.4：RocketMQ 5.x基础版集群规格，实例TPS 2000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.8：RocketMQ 5.x基础版集群规格，实例TPS 4000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.12：RocketMQ 5.x基础版集群规格，实例TPS 6000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.p1.large.1：RocketMQ 5.x专业版单机规格，实例TPS 500](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.8：RocketMQ 5.x专业版集群规格，实例TPS 4000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.12：RocketMQ 5.x专业版集群规格，实例TPS 6000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.20：RocketMQ 5.x专业版集群规格，实例TPS 10000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.40：RocketMQ 5.x专业版集群规格，实例TPS 20000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.100：RocketMQ 5.x专业版集群规格，实例TPS 50000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.150：RocketMQ 5.x专业版集群规格，实例TPS 75000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.200：RocketMQ 5.x专业版集群规格，实例TPS 100000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.300：RocketMQ 5.x专业版集群规格，实例TPS 150000](tag:hws,hws_eu,hws_hk,ctc,srg)  **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupName  **参数解释**： 安全组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetName  **参数解释**： 子网名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetCidr  **参数解释**： 子网路由。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availableZones  **参数解释**： 可用区ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availableZoneNames  **参数解释**： 可用区名称列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * userName  **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * enableLogCollection  **参数解释**： 是否开启消息收集功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * storageSpace  **参数解释**： 存储空间，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不同的实例规格支持不同的存储配置。 [- RocketMQ 5.x 单机存储取值范围：100-30000。](tag:dt) [- RocketMQ 5.x 集群存储取值范围：200-60000。](tag:dt) **默认取值**： 不涉及。
+    * usedStorageSpace  **参数解释**： 已用消息存储空间，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不同的实例规格支持不同的存储配置。 [- RocketMQ 5.x 单机存储取值范围：100-30000。](tag:dt) [- RocketMQ 5.x 集群存储取值范围：200-60000。](tag:dt) **默认取值**： 不涉及。
+    * enablePublicip  **参数解释**： 是否开启公网。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * publicipAddress  **参数解释**： 公网IP地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sslEnable  **参数解释**： 是否开启SSL。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * crossVpcInfo  **参数解释**： 跨VPC访问信息。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * storageResourceId  **参数解释**： 存储资源ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * storageSpecCode  **参数解释**： 存储规格代码。 **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO类型磁盘 - dms.physical.storage.ultra.v2：超高IO类型磁盘 [- dms.physical.storage.general：使用通用型SSD的磁盘类型。](tag:hws,hws_hk,dt,ctc,ax) [- dms.physical.storage.extreme：使用极速型SSD的磁盘类型。](tag:hws,hws_hk,dt,ctc,ax) **默认取值**： 不涉及。
+    * serviceType  **参数解释**： 服务类型。 **约束限制**： 不涉及。 **取值范围**： - advanced：[华为云服务类型。](tag:hws,hws_hk)[服务类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,srg,ax,srg,hcs_oemout) [- dec：专属云服务类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
+    * storageType  **参数解释**： 存储类型。 **约束限制**： 不涉及。 **取值范围**： - hec：[华为云存储类型。](tag:hws,hws_hk)[存储类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,srg,ax,srg,hcs_oemout) [- dss：专属云存储类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
+    * extendTimes  **参数解释**： 扩展时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6Enable  **参数解释**： 是否开启IPv6。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * supportFeatures  **参数解释**： 实例支持的特性功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * cesVersion  **参数解释**： 云监控版本。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * nodeNum  **参数解释**： 节点数。（仅RocketMQ 4.8.0版本会显示此字段） **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * newSpecBillingEnable  **参数解释**： 是否启用新规格计费。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * enableAcl  **参数解释**： 是否开启访问控制列表。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * brokerNum  **参数解释**： Broker节点数。 **约束限制**： 不涉及。 **取值范围**：   不涉及。 **默认取值**： 不涉及。
+    * dnsEnable  **参数解释**： 实例是否开启域名访问功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * namesrvAddress  **参数解释**： 元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * namesrvDomainName  **参数解释**： 元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokerAddress  **参数解释**： 业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicNamesrvAddress  **参数解释**： 公网元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicNamesrvDomainName  **参数解释**： 公网元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicBrokerAddress  **参数解释**： 公网业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * grpcAddress  **参数解释**： grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * grpcDomainName  **参数解释**： grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicGrpcAddress  **参数解释**： 公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicGrpcDomainName  **参数解释**： 公网grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * tags  **参数解释**： 标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * totalStorageSpace  **参数解释**： 总存储空间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * resourceSpecCode  **参数解释**： 资源规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * producePortion  **参数解释**： 生产TPS占比。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumePortion  **参数解释**： 消费TPS占比。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * drEnable  **参数解释**： 是否为容灾实例。 **约束限制**： 不涉及。 **取值范围**： - true：容灾实例。 - false：非容灾实例。 **默认取值**： 不涉及。
+    * quotaAddress  **参数解释**： 流控地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maxMsgProcessTps  **参数解释**： 最大消息TPS。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * configSslNeedRestartProcess  **参数解释**： 配置ssl是否需要重启。 **约束限制**： 不涉及。 **取值范围**： - true：需要重启。 - false：不需要重启。 **默认取值**： 不涉及。
+    * tlsMode  **参数解释**： 实例使用的安全协议。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * archType  **参数解释**： 架构类型。 **约束限制**： 不涉及。 **取值范围**： - X86。 - ARM。 **默认取值**： 不涉及。
+    * enableElasticTps  **参数解释**： 弹性TPS开关状态。 **约束限制**： 不涉及。 **取值范围**： - true：开启弹性TPS。 - false：不开启弹性TPS。 **默认取值**： 不涉及。
+    * autoVolumeExpandEnable  **参数解释**： 是否开启自动磁盘扩容。 **约束限制**： 不涉及。 **取值范围**： - true：开启自动磁盘扩容。 - false：不开启自动磁盘扩容。     **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -153,77 +158,87 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'producePortion' => 'int',
             'consumePortion' => 'int',
             'drEnable' => 'bool',
+            'quotaAddress' => 'string',
+            'maxMsgProcessTps' => 'int',
             'configSslNeedRestartProcess' => 'bool',
-            'tlsMode' => 'string'
+            'tlsMode' => 'string',
+            'archType' => 'string',
+            'enableElasticTps' => 'bool',
+            'autoVolumeExpandEnable' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
-    * engine  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
-    * description  **参数解释**： 消息描述。 **取值范围**： 不涉及。
-    * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
-    * specification  **参数解释**： 实例规格。 **取值范围**： 不涉及。
-    * engineVersion  **参数解释**： 实例版本。 **取值范围**： 不涉及。
-    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
-    * chargingMode  **参数解释**： 付费模式。 **取值范围**： [1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs,fcs)
-    * vpcId  **参数解释**： 私有云ID。 **取值范围**： 不涉及。
-    * vpcName  **参数解释**： 私有云名称。 **取值范围**： 不涉及。
-    * createdAt  **参数解释**： 完成创建时间。  格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
-    * productId  **参数解释**： 产品标识。 **取值范围**： 不涉及。
-    * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
-    * securityGroupName  **参数解释**： 安全组名称。 **取值范围**： 不涉及。
-    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
-    * subnetName  **参数解释**： 子网名称。 **取值范围**： 不涉及。
-    * subnetCidr  **参数解释**： 子网路由（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * availableZones  **参数解释**： 可用区ID列表。 **取值范围**： 不涉及。
-    * availableZoneNames  **参数解释**： 可用区名称列表。
-    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
-    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
-    * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
-    * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
-    * enableLogCollection  **参数解释**： 是否开启消息收集功能。 **取值范围**： - true：开启。 - false：不开启。
-    * storageSpace  **参数解释**： 存储空间，单位：GB。 **取值范围**： 不涉及。
-    * usedStorageSpace  **参数解释**： 已用消息存储空间，单位：GB。 **取值范围**： 不涉及。
-    * enablePublicip  **参数解释**： 是否开启公网。 **取值范围**： - true：开启。 - false：不开启。
-    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。
-    * publicipAddress  **参数解释**： 公网IP地址。 **取值范围**： 不涉及。
-    * sslEnable  **参数解释**： 是否开启SSL。 **取值范围**： - true：开启。 - false：未开启。
-    * crossVpcInfo  **参数解释**： 跨VPC访问信息。 **取值范围**： 不涉及。
-    * storageResourceId  **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
-    * storageSpecCode  **参数解释**： 存储规格代码。 **取值范围**： 不涉及。
-    * serviceType  **参数解释**： 服务类型。 **取值范围**： 不涉及。
-    * storageType  **参数解释**： 存储类型。 **取值范围**： 不涉及。
-    * extendTimes  **参数解释**： 扩展时间。 **取值范围**： 不涉及。
-    * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启。 - false：未开启。
-    * supportFeatures  **参数解释**： 实例支持的特性功能。 **取值范围**： 不涉及。
-    * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启。 - false：不开启。
-    * cesVersion  **参数解释**： 云监控版本。 **取值范围**： 不涉及。
-    * nodeNum  **参数解释**： 节点数。 **取值范围**： 不涉及。
-    * newSpecBillingEnable  **参数解释**： 是否启用新规格计费。 **取值范围**： - true：开启。 - false：未开启。
-    * enableAcl  **参数解释**： 是否开启访问控制列表。 **取值范围**： - true：开启。 - false：未开启。
-    * brokerNum  **参数解释**： Broker节点数（仅RocketMQ 4.8.0版本会显示此字段）。 **取值范围**： 不涉及。
-    * dnsEnable  **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启。 - false：未开启。
-    * namesrvAddress  **参数解释**： 元数据地址。 **取值范围**： 不涉及。
-    * namesrvDomainName  **参数解释**： 元数据域名。 **取值范围**： 不涉及。
-    * brokerAddress  **参数解释**： 业务数据地址。 **取值范围**： 不涉及。
-    * publicNamesrvAddress  **参数解释**： 公网元数据地址。 **取值范围**： 不涉及。
-    * publicNamesrvDomainName  **参数解释**： 公网元数据域名。 **取值范围**： 不涉及。
-    * publicBrokerAddress  **参数解释**： 公网业务数据地址。 **取值范围**： 不涉及。
-    * grpcAddress  **参数解释**： grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * grpcDomainName  **参数解释**： grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * publicGrpcAddress  **参数解释**： 公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * publicGrpcDomainName  **参数解释**： 公网grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * enterpriseProjectId  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
-    * tags  **参数解释**： 标签列表。 **取值范围**： 不涉及。
-    * totalStorageSpace  **参数解释**： 总存储空间。 **取值范围**： 不涉及。
-    * resourceSpecCode  **参数解释**： 资源规格。 **取值范围**： 不涉及。
-    * producePortion  **参数解释**： 生产TPS占比。 **取值范围**： 不涉及。
-    * consumePortion  **参数解释**： 消费TPS占比。 **取值范围**： 不涉及。
-    * drEnable  **参数解释**： 是否为容灾实例。 **取值范围**： 不涉及。
-    * configSslNeedRestartProcess  **参数解释**： 配置ssl是否需要重启。 **取值范围**： 不涉及。
-    * tlsMode  **参数解释**： 实例使用的安全协议。 **取值范围**： 不涉及。
+    * name  **参数解释**： 实例名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * engine  **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+    * status  **参数解释**： 消息状态。 **约束限制**： 不涉及。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,dt,ax,srg)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs,hcs_oemout) **默认取值**： 不涉及。
+    * description  **参数解释**： 消息描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 消息描述。 **约束限制**： 不涉及。 **取值范围**： [- single：4.8.0单机。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- cluster：4.8.0集群。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- single.basic：5.x单机基础版。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- cluster.basic：5.x集群基础版。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- cluster.professional：5.x集群专业版。](tag:hws,hws_eu,hws_hk,ctc,srg) **默认取值**： 不涉及。
+    * specification  **参数解释**： 实例规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * engineVersion  **参数解释**： 实例版本。 **约束限制**： 不涉及。 **取值范围**： [- 4.8.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- 5.x](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * chargingMode  **参数解释**： 付费模式。 **约束限制**： 不涉及。 **取值范围**： [1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,dt)[1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc,cmcc,ax) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs,fcs,hcs_oemout,srg) **默认取值**： 不涉及。
+    * vpcId  **参数解释**： 私有云ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vpcName  **参数解释**： 私有云名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 完成创建时间。 格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * productId  **参数解释**： RocketMQ实例规格。[x86环境后缀为.x86，arm环境为.arm。single表示单机，cluster表示集群。](tag:hcs,fcs,hcs_oemout)  **约束限制**： 不涉及。 **取值范围**： [当“type”为“single.basic”选择单机规格；当“type”为“cluster.basic”选择集群规格。](tag:dt) [- c6.2u8g.cluster.x86或c6.2u8g.cluster.arm：单个代理最大分区数50，单个代理最大消费组数100](tag:fcs) [- c6.4u8g.cluster.small：单个代理最大Topic数2000，单个代理最大消费组数2000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.4u8g.cluster：单个代理最大Topic数4000，单个代理最大消费组数4000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.4u16g.cluster.x86或c6.4u16g.cluster.arm：单个代理最大分区数100，单个代理最大消费组数200](tag:hcs,hcs_oemout) [- c6.8u16g.cluster：单个代理最大Topic数8000，单个代理最大消费组数8000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.8u32g.cluster.x86或c6.8u32g.cluster.arm：单个代理最大Topic数200，单个代理最大消费组数400](tag:hcs,fcs,hcs_oemout) [- c6.12u24g.cluster：单个代理最大Topic数12000，单个代理最大消费组数12000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.16u64g.cluster.x86或c6.16u64g.cluster.arm：单个代理最大Topic数300，单个代理最大消费组数600](tag:hcs,fcs,hcs_oemout) [- c6.16u32g.cluster：单个代理最大Topic数16000，单个代理最大消费组数16000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.32u128g.cluster.x86或c6.32u128g.cluster.arm：单个代理最大Topic数400，单个代理最大消费组数800](tag:hcs,fcs,hcs_oemout) [- rocketmq.b1.large.1：RocketMQ 5.x基础版单机规格，实例TPS 500](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.4：RocketMQ 5.x基础版集群规格，实例TPS 2000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.8：RocketMQ 5.x基础版集群规格，实例TPS 4000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.12：RocketMQ 5.x基础版集群规格，实例TPS 6000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.p1.large.1：RocketMQ 5.x专业版单机规格，实例TPS 500](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.8：RocketMQ 5.x专业版集群规格，实例TPS 4000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.12：RocketMQ 5.x专业版集群规格，实例TPS 6000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.20：RocketMQ 5.x专业版集群规格，实例TPS 10000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.40：RocketMQ 5.x专业版集群规格，实例TPS 20000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.100：RocketMQ 5.x专业版集群规格，实例TPS 50000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.150：RocketMQ 5.x专业版集群规格，实例TPS 75000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.200：RocketMQ 5.x专业版集群规格，实例TPS 100000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.300：RocketMQ 5.x专业版集群规格，实例TPS 150000](tag:hws,hws_eu,hws_hk,ctc,srg)  **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupName  **参数解释**： 安全组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetName  **参数解释**： 子网名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetCidr  **参数解释**： 子网路由。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availableZones  **参数解释**： 可用区ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availableZoneNames  **参数解释**： 可用区名称列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * userName  **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * enableLogCollection  **参数解释**： 是否开启消息收集功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * storageSpace  **参数解释**： 存储空间，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不同的实例规格支持不同的存储配置。 [- RocketMQ 5.x 单机存储取值范围：100-30000。](tag:dt) [- RocketMQ 5.x 集群存储取值范围：200-60000。](tag:dt) **默认取值**： 不涉及。
+    * usedStorageSpace  **参数解释**： 已用消息存储空间，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不同的实例规格支持不同的存储配置。 [- RocketMQ 5.x 单机存储取值范围：100-30000。](tag:dt) [- RocketMQ 5.x 集群存储取值范围：200-60000。](tag:dt) **默认取值**： 不涉及。
+    * enablePublicip  **参数解释**： 是否开启公网。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * publicipAddress  **参数解释**： 公网IP地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sslEnable  **参数解释**： 是否开启SSL。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * crossVpcInfo  **参数解释**： 跨VPC访问信息。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * storageResourceId  **参数解释**： 存储资源ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * storageSpecCode  **参数解释**： 存储规格代码。 **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO类型磁盘 - dms.physical.storage.ultra.v2：超高IO类型磁盘 [- dms.physical.storage.general：使用通用型SSD的磁盘类型。](tag:hws,hws_hk,dt,ctc,ax) [- dms.physical.storage.extreme：使用极速型SSD的磁盘类型。](tag:hws,hws_hk,dt,ctc,ax) **默认取值**： 不涉及。
+    * serviceType  **参数解释**： 服务类型。 **约束限制**： 不涉及。 **取值范围**： - advanced：[华为云服务类型。](tag:hws,hws_hk)[服务类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,srg,ax,srg,hcs_oemout) [- dec：专属云服务类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
+    * storageType  **参数解释**： 存储类型。 **约束限制**： 不涉及。 **取值范围**： - hec：[华为云存储类型。](tag:hws,hws_hk)[存储类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,srg,ax,srg,hcs_oemout) [- dss：专属云存储类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
+    * extendTimes  **参数解释**： 扩展时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6Enable  **参数解释**： 是否开启IPv6。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * supportFeatures  **参数解释**： 实例支持的特性功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * cesVersion  **参数解释**： 云监控版本。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * nodeNum  **参数解释**： 节点数。（仅RocketMQ 4.8.0版本会显示此字段） **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * newSpecBillingEnable  **参数解释**： 是否启用新规格计费。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * enableAcl  **参数解释**： 是否开启访问控制列表。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * brokerNum  **参数解释**： Broker节点数。 **约束限制**： 不涉及。 **取值范围**：   不涉及。 **默认取值**： 不涉及。
+    * dnsEnable  **参数解释**： 实例是否开启域名访问功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * namesrvAddress  **参数解释**： 元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * namesrvDomainName  **参数解释**： 元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokerAddress  **参数解释**： 业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicNamesrvAddress  **参数解释**： 公网元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicNamesrvDomainName  **参数解释**： 公网元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicBrokerAddress  **参数解释**： 公网业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * grpcAddress  **参数解释**： grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * grpcDomainName  **参数解释**： grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicGrpcAddress  **参数解释**： 公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicGrpcDomainName  **参数解释**： 公网grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * tags  **参数解释**： 标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * totalStorageSpace  **参数解释**： 总存储空间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * resourceSpecCode  **参数解释**： 资源规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * producePortion  **参数解释**： 生产TPS占比。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumePortion  **参数解释**： 消费TPS占比。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * drEnable  **参数解释**： 是否为容灾实例。 **约束限制**： 不涉及。 **取值范围**： - true：容灾实例。 - false：非容灾实例。 **默认取值**： 不涉及。
+    * quotaAddress  **参数解释**： 流控地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maxMsgProcessTps  **参数解释**： 最大消息TPS。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * configSslNeedRestartProcess  **参数解释**： 配置ssl是否需要重启。 **约束限制**： 不涉及。 **取值范围**： - true：需要重启。 - false：不需要重启。 **默认取值**： 不涉及。
+    * tlsMode  **参数解释**： 实例使用的安全协议。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * archType  **参数解释**： 架构类型。 **约束限制**： 不涉及。 **取值范围**： - X86。 - ARM。 **默认取值**： 不涉及。
+    * enableElasticTps  **参数解释**： 弹性TPS开关状态。 **约束限制**： 不涉及。 **取值范围**： - true：开启弹性TPS。 - false：不开启弹性TPS。 **默认取值**： 不涉及。
+    * autoVolumeExpandEnable  **参数解释**： 是否开启自动磁盘扩容。 **约束限制**： 不涉及。 **取值范围**： - true：开启自动磁盘扩容。 - false：不开启自动磁盘扩容。     **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -291,8 +306,13 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         'producePortion' => null,
         'consumePortion' => null,
         'drEnable' => null,
+        'quotaAddress' => null,
+        'maxMsgProcessTps' => null,
         'configSslNeedRestartProcess' => null,
-        'tlsMode' => null
+        'tlsMode' => null,
+        'archType' => null,
+        'enableElasticTps' => null,
+        'autoVolumeExpandEnable' => null
     ];
 
     /**
@@ -318,71 +338,76 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
-    * engine  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
-    * description  **参数解释**： 消息描述。 **取值范围**： 不涉及。
-    * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
-    * specification  **参数解释**： 实例规格。 **取值范围**： 不涉及。
-    * engineVersion  **参数解释**： 实例版本。 **取值范围**： 不涉及。
-    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
-    * chargingMode  **参数解释**： 付费模式。 **取值范围**： [1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs,fcs)
-    * vpcId  **参数解释**： 私有云ID。 **取值范围**： 不涉及。
-    * vpcName  **参数解释**： 私有云名称。 **取值范围**： 不涉及。
-    * createdAt  **参数解释**： 完成创建时间。  格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
-    * productId  **参数解释**： 产品标识。 **取值范围**： 不涉及。
-    * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
-    * securityGroupName  **参数解释**： 安全组名称。 **取值范围**： 不涉及。
-    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
-    * subnetName  **参数解释**： 子网名称。 **取值范围**： 不涉及。
-    * subnetCidr  **参数解释**： 子网路由（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * availableZones  **参数解释**： 可用区ID列表。 **取值范围**： 不涉及。
-    * availableZoneNames  **参数解释**： 可用区名称列表。
-    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
-    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
-    * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
-    * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
-    * enableLogCollection  **参数解释**： 是否开启消息收集功能。 **取值范围**： - true：开启。 - false：不开启。
-    * storageSpace  **参数解释**： 存储空间，单位：GB。 **取值范围**： 不涉及。
-    * usedStorageSpace  **参数解释**： 已用消息存储空间，单位：GB。 **取值范围**： 不涉及。
-    * enablePublicip  **参数解释**： 是否开启公网。 **取值范围**： - true：开启。 - false：不开启。
-    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。
-    * publicipAddress  **参数解释**： 公网IP地址。 **取值范围**： 不涉及。
-    * sslEnable  **参数解释**： 是否开启SSL。 **取值范围**： - true：开启。 - false：未开启。
-    * crossVpcInfo  **参数解释**： 跨VPC访问信息。 **取值范围**： 不涉及。
-    * storageResourceId  **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
-    * storageSpecCode  **参数解释**： 存储规格代码。 **取值范围**： 不涉及。
-    * serviceType  **参数解释**： 服务类型。 **取值范围**： 不涉及。
-    * storageType  **参数解释**： 存储类型。 **取值范围**： 不涉及。
-    * extendTimes  **参数解释**： 扩展时间。 **取值范围**： 不涉及。
-    * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启。 - false：未开启。
-    * supportFeatures  **参数解释**： 实例支持的特性功能。 **取值范围**： 不涉及。
-    * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启。 - false：不开启。
-    * cesVersion  **参数解释**： 云监控版本。 **取值范围**： 不涉及。
-    * nodeNum  **参数解释**： 节点数。 **取值范围**： 不涉及。
-    * newSpecBillingEnable  **参数解释**： 是否启用新规格计费。 **取值范围**： - true：开启。 - false：未开启。
-    * enableAcl  **参数解释**： 是否开启访问控制列表。 **取值范围**： - true：开启。 - false：未开启。
-    * brokerNum  **参数解释**： Broker节点数（仅RocketMQ 4.8.0版本会显示此字段）。 **取值范围**： 不涉及。
-    * dnsEnable  **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启。 - false：未开启。
-    * namesrvAddress  **参数解释**： 元数据地址。 **取值范围**： 不涉及。
-    * namesrvDomainName  **参数解释**： 元数据域名。 **取值范围**： 不涉及。
-    * brokerAddress  **参数解释**： 业务数据地址。 **取值范围**： 不涉及。
-    * publicNamesrvAddress  **参数解释**： 公网元数据地址。 **取值范围**： 不涉及。
-    * publicNamesrvDomainName  **参数解释**： 公网元数据域名。 **取值范围**： 不涉及。
-    * publicBrokerAddress  **参数解释**： 公网业务数据地址。 **取值范围**： 不涉及。
-    * grpcAddress  **参数解释**： grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * grpcDomainName  **参数解释**： grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * publicGrpcAddress  **参数解释**： 公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * publicGrpcDomainName  **参数解释**： 公网grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * enterpriseProjectId  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
-    * tags  **参数解释**： 标签列表。 **取值范围**： 不涉及。
-    * totalStorageSpace  **参数解释**： 总存储空间。 **取值范围**： 不涉及。
-    * resourceSpecCode  **参数解释**： 资源规格。 **取值范围**： 不涉及。
-    * producePortion  **参数解释**： 生产TPS占比。 **取值范围**： 不涉及。
-    * consumePortion  **参数解释**： 消费TPS占比。 **取值范围**： 不涉及。
-    * drEnable  **参数解释**： 是否为容灾实例。 **取值范围**： 不涉及。
-    * configSslNeedRestartProcess  **参数解释**： 配置ssl是否需要重启。 **取值范围**： 不涉及。
-    * tlsMode  **参数解释**： 实例使用的安全协议。 **取值范围**： 不涉及。
+    * name  **参数解释**： 实例名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * engine  **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+    * status  **参数解释**： 消息状态。 **约束限制**： 不涉及。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,dt,ax,srg)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs,hcs_oemout) **默认取值**： 不涉及。
+    * description  **参数解释**： 消息描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 消息描述。 **约束限制**： 不涉及。 **取值范围**： [- single：4.8.0单机。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- cluster：4.8.0集群。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- single.basic：5.x单机基础版。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- cluster.basic：5.x集群基础版。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- cluster.professional：5.x集群专业版。](tag:hws,hws_eu,hws_hk,ctc,srg) **默认取值**： 不涉及。
+    * specification  **参数解释**： 实例规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * engineVersion  **参数解释**： 实例版本。 **约束限制**： 不涉及。 **取值范围**： [- 4.8.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- 5.x](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * chargingMode  **参数解释**： 付费模式。 **约束限制**： 不涉及。 **取值范围**： [1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,dt)[1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc,cmcc,ax) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs,fcs,hcs_oemout,srg) **默认取值**： 不涉及。
+    * vpcId  **参数解释**： 私有云ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vpcName  **参数解释**： 私有云名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 完成创建时间。 格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * productId  **参数解释**： RocketMQ实例规格。[x86环境后缀为.x86，arm环境为.arm。single表示单机，cluster表示集群。](tag:hcs,fcs,hcs_oemout)  **约束限制**： 不涉及。 **取值范围**： [当“type”为“single.basic”选择单机规格；当“type”为“cluster.basic”选择集群规格。](tag:dt) [- c6.2u8g.cluster.x86或c6.2u8g.cluster.arm：单个代理最大分区数50，单个代理最大消费组数100](tag:fcs) [- c6.4u8g.cluster.small：单个代理最大Topic数2000，单个代理最大消费组数2000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.4u8g.cluster：单个代理最大Topic数4000，单个代理最大消费组数4000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.4u16g.cluster.x86或c6.4u16g.cluster.arm：单个代理最大分区数100，单个代理最大消费组数200](tag:hcs,hcs_oemout) [- c6.8u16g.cluster：单个代理最大Topic数8000，单个代理最大消费组数8000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.8u32g.cluster.x86或c6.8u32g.cluster.arm：单个代理最大Topic数200，单个代理最大消费组数400](tag:hcs,fcs,hcs_oemout) [- c6.12u24g.cluster：单个代理最大Topic数12000，单个代理最大消费组数12000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.16u64g.cluster.x86或c6.16u64g.cluster.arm：单个代理最大Topic数300，单个代理最大消费组数600](tag:hcs,fcs,hcs_oemout) [- c6.16u32g.cluster：单个代理最大Topic数16000，单个代理最大消费组数16000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.32u128g.cluster.x86或c6.32u128g.cluster.arm：单个代理最大Topic数400，单个代理最大消费组数800](tag:hcs,fcs,hcs_oemout) [- rocketmq.b1.large.1：RocketMQ 5.x基础版单机规格，实例TPS 500](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.4：RocketMQ 5.x基础版集群规格，实例TPS 2000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.8：RocketMQ 5.x基础版集群规格，实例TPS 4000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.12：RocketMQ 5.x基础版集群规格，实例TPS 6000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.p1.large.1：RocketMQ 5.x专业版单机规格，实例TPS 500](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.8：RocketMQ 5.x专业版集群规格，实例TPS 4000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.12：RocketMQ 5.x专业版集群规格，实例TPS 6000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.20：RocketMQ 5.x专业版集群规格，实例TPS 10000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.40：RocketMQ 5.x专业版集群规格，实例TPS 20000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.100：RocketMQ 5.x专业版集群规格，实例TPS 50000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.150：RocketMQ 5.x专业版集群规格，实例TPS 75000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.200：RocketMQ 5.x专业版集群规格，实例TPS 100000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.300：RocketMQ 5.x专业版集群规格，实例TPS 150000](tag:hws,hws_eu,hws_hk,ctc,srg)  **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupName  **参数解释**： 安全组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetName  **参数解释**： 子网名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetCidr  **参数解释**： 子网路由。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availableZones  **参数解释**： 可用区ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availableZoneNames  **参数解释**： 可用区名称列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * userName  **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * enableLogCollection  **参数解释**： 是否开启消息收集功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * storageSpace  **参数解释**： 存储空间，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不同的实例规格支持不同的存储配置。 [- RocketMQ 5.x 单机存储取值范围：100-30000。](tag:dt) [- RocketMQ 5.x 集群存储取值范围：200-60000。](tag:dt) **默认取值**： 不涉及。
+    * usedStorageSpace  **参数解释**： 已用消息存储空间，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不同的实例规格支持不同的存储配置。 [- RocketMQ 5.x 单机存储取值范围：100-30000。](tag:dt) [- RocketMQ 5.x 集群存储取值范围：200-60000。](tag:dt) **默认取值**： 不涉及。
+    * enablePublicip  **参数解释**： 是否开启公网。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * publicipAddress  **参数解释**： 公网IP地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sslEnable  **参数解释**： 是否开启SSL。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * crossVpcInfo  **参数解释**： 跨VPC访问信息。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * storageResourceId  **参数解释**： 存储资源ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * storageSpecCode  **参数解释**： 存储规格代码。 **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO类型磁盘 - dms.physical.storage.ultra.v2：超高IO类型磁盘 [- dms.physical.storage.general：使用通用型SSD的磁盘类型。](tag:hws,hws_hk,dt,ctc,ax) [- dms.physical.storage.extreme：使用极速型SSD的磁盘类型。](tag:hws,hws_hk,dt,ctc,ax) **默认取值**： 不涉及。
+    * serviceType  **参数解释**： 服务类型。 **约束限制**： 不涉及。 **取值范围**： - advanced：[华为云服务类型。](tag:hws,hws_hk)[服务类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,srg,ax,srg,hcs_oemout) [- dec：专属云服务类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
+    * storageType  **参数解释**： 存储类型。 **约束限制**： 不涉及。 **取值范围**： - hec：[华为云存储类型。](tag:hws,hws_hk)[存储类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,srg,ax,srg,hcs_oemout) [- dss：专属云存储类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
+    * extendTimes  **参数解释**： 扩展时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6Enable  **参数解释**： 是否开启IPv6。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * supportFeatures  **参数解释**： 实例支持的特性功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * cesVersion  **参数解释**： 云监控版本。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * nodeNum  **参数解释**： 节点数。（仅RocketMQ 4.8.0版本会显示此字段） **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * newSpecBillingEnable  **参数解释**： 是否启用新规格计费。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * enableAcl  **参数解释**： 是否开启访问控制列表。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * brokerNum  **参数解释**： Broker节点数。 **约束限制**： 不涉及。 **取值范围**：   不涉及。 **默认取值**： 不涉及。
+    * dnsEnable  **参数解释**： 实例是否开启域名访问功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * namesrvAddress  **参数解释**： 元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * namesrvDomainName  **参数解释**： 元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokerAddress  **参数解释**： 业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicNamesrvAddress  **参数解释**： 公网元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicNamesrvDomainName  **参数解释**： 公网元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicBrokerAddress  **参数解释**： 公网业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * grpcAddress  **参数解释**： grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * grpcDomainName  **参数解释**： grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicGrpcAddress  **参数解释**： 公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicGrpcDomainName  **参数解释**： 公网grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * tags  **参数解释**： 标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * totalStorageSpace  **参数解释**： 总存储空间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * resourceSpecCode  **参数解释**： 资源规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * producePortion  **参数解释**： 生产TPS占比。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumePortion  **参数解释**： 消费TPS占比。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * drEnable  **参数解释**： 是否为容灾实例。 **约束限制**： 不涉及。 **取值范围**： - true：容灾实例。 - false：非容灾实例。 **默认取值**： 不涉及。
+    * quotaAddress  **参数解释**： 流控地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maxMsgProcessTps  **参数解释**： 最大消息TPS。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * configSslNeedRestartProcess  **参数解释**： 配置ssl是否需要重启。 **约束限制**： 不涉及。 **取值范围**： - true：需要重启。 - false：不需要重启。 **默认取值**： 不涉及。
+    * tlsMode  **参数解释**： 实例使用的安全协议。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * archType  **参数解释**： 架构类型。 **约束限制**： 不涉及。 **取值范围**： - X86。 - ARM。 **默认取值**： 不涉及。
+    * enableElasticTps  **参数解释**： 弹性TPS开关状态。 **约束限制**： 不涉及。 **取值范围**： - true：开启弹性TPS。 - false：不开启弹性TPS。 **默认取值**： 不涉及。
+    * autoVolumeExpandEnable  **参数解释**： 是否开启自动磁盘扩容。 **约束限制**： 不涉及。 **取值范围**： - true：开启自动磁盘扩容。 - false：不开启自动磁盘扩容。     **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -450,77 +475,87 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'producePortion' => 'produce_portion',
             'consumePortion' => 'consume_portion',
             'drEnable' => 'dr_enable',
+            'quotaAddress' => 'quota_address',
+            'maxMsgProcessTps' => 'max_msg_process_tps',
             'configSslNeedRestartProcess' => 'config_ssl_need_restart_process',
-            'tlsMode' => 'tls_mode'
+            'tlsMode' => 'tls_mode',
+            'archType' => 'arch_type',
+            'enableElasticTps' => 'enable_elastic_tps',
+            'autoVolumeExpandEnable' => 'auto_volume_expand_enable'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
-    * engine  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
-    * description  **参数解释**： 消息描述。 **取值范围**： 不涉及。
-    * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
-    * specification  **参数解释**： 实例规格。 **取值范围**： 不涉及。
-    * engineVersion  **参数解释**： 实例版本。 **取值范围**： 不涉及。
-    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
-    * chargingMode  **参数解释**： 付费模式。 **取值范围**： [1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs,fcs)
-    * vpcId  **参数解释**： 私有云ID。 **取值范围**： 不涉及。
-    * vpcName  **参数解释**： 私有云名称。 **取值范围**： 不涉及。
-    * createdAt  **参数解释**： 完成创建时间。  格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
-    * productId  **参数解释**： 产品标识。 **取值范围**： 不涉及。
-    * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
-    * securityGroupName  **参数解释**： 安全组名称。 **取值范围**： 不涉及。
-    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
-    * subnetName  **参数解释**： 子网名称。 **取值范围**： 不涉及。
-    * subnetCidr  **参数解释**： 子网路由（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * availableZones  **参数解释**： 可用区ID列表。 **取值范围**： 不涉及。
-    * availableZoneNames  **参数解释**： 可用区名称列表。
-    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
-    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
-    * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
-    * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
-    * enableLogCollection  **参数解释**： 是否开启消息收集功能。 **取值范围**： - true：开启。 - false：不开启。
-    * storageSpace  **参数解释**： 存储空间，单位：GB。 **取值范围**： 不涉及。
-    * usedStorageSpace  **参数解释**： 已用消息存储空间，单位：GB。 **取值范围**： 不涉及。
-    * enablePublicip  **参数解释**： 是否开启公网。 **取值范围**： - true：开启。 - false：不开启。
-    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。
-    * publicipAddress  **参数解释**： 公网IP地址。 **取值范围**： 不涉及。
-    * sslEnable  **参数解释**： 是否开启SSL。 **取值范围**： - true：开启。 - false：未开启。
-    * crossVpcInfo  **参数解释**： 跨VPC访问信息。 **取值范围**： 不涉及。
-    * storageResourceId  **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
-    * storageSpecCode  **参数解释**： 存储规格代码。 **取值范围**： 不涉及。
-    * serviceType  **参数解释**： 服务类型。 **取值范围**： 不涉及。
-    * storageType  **参数解释**： 存储类型。 **取值范围**： 不涉及。
-    * extendTimes  **参数解释**： 扩展时间。 **取值范围**： 不涉及。
-    * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启。 - false：未开启。
-    * supportFeatures  **参数解释**： 实例支持的特性功能。 **取值范围**： 不涉及。
-    * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启。 - false：不开启。
-    * cesVersion  **参数解释**： 云监控版本。 **取值范围**： 不涉及。
-    * nodeNum  **参数解释**： 节点数。 **取值范围**： 不涉及。
-    * newSpecBillingEnable  **参数解释**： 是否启用新规格计费。 **取值范围**： - true：开启。 - false：未开启。
-    * enableAcl  **参数解释**： 是否开启访问控制列表。 **取值范围**： - true：开启。 - false：未开启。
-    * brokerNum  **参数解释**： Broker节点数（仅RocketMQ 4.8.0版本会显示此字段）。 **取值范围**： 不涉及。
-    * dnsEnable  **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启。 - false：未开启。
-    * namesrvAddress  **参数解释**： 元数据地址。 **取值范围**： 不涉及。
-    * namesrvDomainName  **参数解释**： 元数据域名。 **取值范围**： 不涉及。
-    * brokerAddress  **参数解释**： 业务数据地址。 **取值范围**： 不涉及。
-    * publicNamesrvAddress  **参数解释**： 公网元数据地址。 **取值范围**： 不涉及。
-    * publicNamesrvDomainName  **参数解释**： 公网元数据域名。 **取值范围**： 不涉及。
-    * publicBrokerAddress  **参数解释**： 公网业务数据地址。 **取值范围**： 不涉及。
-    * grpcAddress  **参数解释**： grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * grpcDomainName  **参数解释**： grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * publicGrpcAddress  **参数解释**： 公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * publicGrpcDomainName  **参数解释**： 公网grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * enterpriseProjectId  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
-    * tags  **参数解释**： 标签列表。 **取值范围**： 不涉及。
-    * totalStorageSpace  **参数解释**： 总存储空间。 **取值范围**： 不涉及。
-    * resourceSpecCode  **参数解释**： 资源规格。 **取值范围**： 不涉及。
-    * producePortion  **参数解释**： 生产TPS占比。 **取值范围**： 不涉及。
-    * consumePortion  **参数解释**： 消费TPS占比。 **取值范围**： 不涉及。
-    * drEnable  **参数解释**： 是否为容灾实例。 **取值范围**： 不涉及。
-    * configSslNeedRestartProcess  **参数解释**： 配置ssl是否需要重启。 **取值范围**： 不涉及。
-    * tlsMode  **参数解释**： 实例使用的安全协议。 **取值范围**： 不涉及。
+    * name  **参数解释**： 实例名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * engine  **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+    * status  **参数解释**： 消息状态。 **约束限制**： 不涉及。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,dt,ax,srg)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs,hcs_oemout) **默认取值**： 不涉及。
+    * description  **参数解释**： 消息描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 消息描述。 **约束限制**： 不涉及。 **取值范围**： [- single：4.8.0单机。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- cluster：4.8.0集群。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- single.basic：5.x单机基础版。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- cluster.basic：5.x集群基础版。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- cluster.professional：5.x集群专业版。](tag:hws,hws_eu,hws_hk,ctc,srg) **默认取值**： 不涉及。
+    * specification  **参数解释**： 实例规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * engineVersion  **参数解释**： 实例版本。 **约束限制**： 不涉及。 **取值范围**： [- 4.8.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- 5.x](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * chargingMode  **参数解释**： 付费模式。 **约束限制**： 不涉及。 **取值范围**： [1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,dt)[1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc,cmcc,ax) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs,fcs,hcs_oemout,srg) **默认取值**： 不涉及。
+    * vpcId  **参数解释**： 私有云ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vpcName  **参数解释**： 私有云名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 完成创建时间。 格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * productId  **参数解释**： RocketMQ实例规格。[x86环境后缀为.x86，arm环境为.arm。single表示单机，cluster表示集群。](tag:hcs,fcs,hcs_oemout)  **约束限制**： 不涉及。 **取值范围**： [当“type”为“single.basic”选择单机规格；当“type”为“cluster.basic”选择集群规格。](tag:dt) [- c6.2u8g.cluster.x86或c6.2u8g.cluster.arm：单个代理最大分区数50，单个代理最大消费组数100](tag:fcs) [- c6.4u8g.cluster.small：单个代理最大Topic数2000，单个代理最大消费组数2000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.4u8g.cluster：单个代理最大Topic数4000，单个代理最大消费组数4000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.4u16g.cluster.x86或c6.4u16g.cluster.arm：单个代理最大分区数100，单个代理最大消费组数200](tag:hcs,hcs_oemout) [- c6.8u16g.cluster：单个代理最大Topic数8000，单个代理最大消费组数8000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.8u32g.cluster.x86或c6.8u32g.cluster.arm：单个代理最大Topic数200，单个代理最大消费组数400](tag:hcs,fcs,hcs_oemout) [- c6.12u24g.cluster：单个代理最大Topic数12000，单个代理最大消费组数12000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.16u64g.cluster.x86或c6.16u64g.cluster.arm：单个代理最大Topic数300，单个代理最大消费组数600](tag:hcs,fcs,hcs_oemout) [- c6.16u32g.cluster：单个代理最大Topic数16000，单个代理最大消费组数16000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.32u128g.cluster.x86或c6.32u128g.cluster.arm：单个代理最大Topic数400，单个代理最大消费组数800](tag:hcs,fcs,hcs_oemout) [- rocketmq.b1.large.1：RocketMQ 5.x基础版单机规格，实例TPS 500](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.4：RocketMQ 5.x基础版集群规格，实例TPS 2000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.8：RocketMQ 5.x基础版集群规格，实例TPS 4000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.12：RocketMQ 5.x基础版集群规格，实例TPS 6000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.p1.large.1：RocketMQ 5.x专业版单机规格，实例TPS 500](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.8：RocketMQ 5.x专业版集群规格，实例TPS 4000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.12：RocketMQ 5.x专业版集群规格，实例TPS 6000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.20：RocketMQ 5.x专业版集群规格，实例TPS 10000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.40：RocketMQ 5.x专业版集群规格，实例TPS 20000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.100：RocketMQ 5.x专业版集群规格，实例TPS 50000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.150：RocketMQ 5.x专业版集群规格，实例TPS 75000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.200：RocketMQ 5.x专业版集群规格，实例TPS 100000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.300：RocketMQ 5.x专业版集群规格，实例TPS 150000](tag:hws,hws_eu,hws_hk,ctc,srg)  **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupName  **参数解释**： 安全组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetName  **参数解释**： 子网名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetCidr  **参数解释**： 子网路由。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availableZones  **参数解释**： 可用区ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availableZoneNames  **参数解释**： 可用区名称列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * userName  **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * enableLogCollection  **参数解释**： 是否开启消息收集功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * storageSpace  **参数解释**： 存储空间，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不同的实例规格支持不同的存储配置。 [- RocketMQ 5.x 单机存储取值范围：100-30000。](tag:dt) [- RocketMQ 5.x 集群存储取值范围：200-60000。](tag:dt) **默认取值**： 不涉及。
+    * usedStorageSpace  **参数解释**： 已用消息存储空间，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不同的实例规格支持不同的存储配置。 [- RocketMQ 5.x 单机存储取值范围：100-30000。](tag:dt) [- RocketMQ 5.x 集群存储取值范围：200-60000。](tag:dt) **默认取值**： 不涉及。
+    * enablePublicip  **参数解释**： 是否开启公网。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * publicipAddress  **参数解释**： 公网IP地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sslEnable  **参数解释**： 是否开启SSL。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * crossVpcInfo  **参数解释**： 跨VPC访问信息。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * storageResourceId  **参数解释**： 存储资源ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * storageSpecCode  **参数解释**： 存储规格代码。 **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO类型磁盘 - dms.physical.storage.ultra.v2：超高IO类型磁盘 [- dms.physical.storage.general：使用通用型SSD的磁盘类型。](tag:hws,hws_hk,dt,ctc,ax) [- dms.physical.storage.extreme：使用极速型SSD的磁盘类型。](tag:hws,hws_hk,dt,ctc,ax) **默认取值**： 不涉及。
+    * serviceType  **参数解释**： 服务类型。 **约束限制**： 不涉及。 **取值范围**： - advanced：[华为云服务类型。](tag:hws,hws_hk)[服务类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,srg,ax,srg,hcs_oemout) [- dec：专属云服务类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
+    * storageType  **参数解释**： 存储类型。 **约束限制**： 不涉及。 **取值范围**： - hec：[华为云存储类型。](tag:hws,hws_hk)[存储类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,srg,ax,srg,hcs_oemout) [- dss：专属云存储类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
+    * extendTimes  **参数解释**： 扩展时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6Enable  **参数解释**： 是否开启IPv6。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * supportFeatures  **参数解释**： 实例支持的特性功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * cesVersion  **参数解释**： 云监控版本。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * nodeNum  **参数解释**： 节点数。（仅RocketMQ 4.8.0版本会显示此字段） **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * newSpecBillingEnable  **参数解释**： 是否启用新规格计费。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * enableAcl  **参数解释**： 是否开启访问控制列表。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * brokerNum  **参数解释**： Broker节点数。 **约束限制**： 不涉及。 **取值范围**：   不涉及。 **默认取值**： 不涉及。
+    * dnsEnable  **参数解释**： 实例是否开启域名访问功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * namesrvAddress  **参数解释**： 元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * namesrvDomainName  **参数解释**： 元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokerAddress  **参数解释**： 业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicNamesrvAddress  **参数解释**： 公网元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicNamesrvDomainName  **参数解释**： 公网元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicBrokerAddress  **参数解释**： 公网业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * grpcAddress  **参数解释**： grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * grpcDomainName  **参数解释**： grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicGrpcAddress  **参数解释**： 公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicGrpcDomainName  **参数解释**： 公网grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * tags  **参数解释**： 标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * totalStorageSpace  **参数解释**： 总存储空间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * resourceSpecCode  **参数解释**： 资源规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * producePortion  **参数解释**： 生产TPS占比。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumePortion  **参数解释**： 消费TPS占比。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * drEnable  **参数解释**： 是否为容灾实例。 **约束限制**： 不涉及。 **取值范围**： - true：容灾实例。 - false：非容灾实例。 **默认取值**： 不涉及。
+    * quotaAddress  **参数解释**： 流控地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maxMsgProcessTps  **参数解释**： 最大消息TPS。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * configSslNeedRestartProcess  **参数解释**： 配置ssl是否需要重启。 **约束限制**： 不涉及。 **取值范围**： - true：需要重启。 - false：不需要重启。 **默认取值**： 不涉及。
+    * tlsMode  **参数解释**： 实例使用的安全协议。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * archType  **参数解释**： 架构类型。 **约束限制**： 不涉及。 **取值范围**： - X86。 - ARM。 **默认取值**： 不涉及。
+    * enableElasticTps  **参数解释**： 弹性TPS开关状态。 **约束限制**： 不涉及。 **取值范围**： - true：开启弹性TPS。 - false：不开启弹性TPS。 **默认取值**： 不涉及。
+    * autoVolumeExpandEnable  **参数解释**： 是否开启自动磁盘扩容。 **约束限制**： 不涉及。 **取值范围**： - true：开启自动磁盘扩容。 - false：不开启自动磁盘扩容。     **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -588,77 +623,87 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'producePortion' => 'setProducePortion',
             'consumePortion' => 'setConsumePortion',
             'drEnable' => 'setDrEnable',
+            'quotaAddress' => 'setQuotaAddress',
+            'maxMsgProcessTps' => 'setMaxMsgProcessTps',
             'configSslNeedRestartProcess' => 'setConfigSslNeedRestartProcess',
-            'tlsMode' => 'setTlsMode'
+            'tlsMode' => 'setTlsMode',
+            'archType' => 'setArchType',
+            'enableElasticTps' => 'setEnableElasticTps',
+            'autoVolumeExpandEnable' => 'setAutoVolumeExpandEnable'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
-    * engine  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
-    * description  **参数解释**： 消息描述。 **取值范围**： 不涉及。
-    * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
-    * specification  **参数解释**： 实例规格。 **取值范围**： 不涉及。
-    * engineVersion  **参数解释**： 实例版本。 **取值范围**： 不涉及。
-    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
-    * chargingMode  **参数解释**： 付费模式。 **取值范围**： [1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs,fcs)
-    * vpcId  **参数解释**： 私有云ID。 **取值范围**： 不涉及。
-    * vpcName  **参数解释**： 私有云名称。 **取值范围**： 不涉及。
-    * createdAt  **参数解释**： 完成创建时间。  格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
-    * productId  **参数解释**： 产品标识。 **取值范围**： 不涉及。
-    * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
-    * securityGroupName  **参数解释**： 安全组名称。 **取值范围**： 不涉及。
-    * subnetId  **参数解释**： 子网ID。 **取值范围**： 不涉及。
-    * subnetName  **参数解释**： 子网名称。 **取值范围**： 不涉及。
-    * subnetCidr  **参数解释**： 子网路由（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * availableZones  **参数解释**： 可用区ID列表。 **取值范围**： 不涉及。
-    * availableZoneNames  **参数解释**： 可用区名称列表。
-    * userId  **参数解释**： 用户ID。 **取值范围**： 不涉及。
-    * userName  **参数解释**： 用户名。 **取值范围**： 不涉及。
-    * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
-    * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
-    * enableLogCollection  **参数解释**： 是否开启消息收集功能。 **取值范围**： - true：开启。 - false：不开启。
-    * storageSpace  **参数解释**： 存储空间，单位：GB。 **取值范围**： 不涉及。
-    * usedStorageSpace  **参数解释**： 已用消息存储空间，单位：GB。 **取值范围**： 不涉及。
-    * enablePublicip  **参数解释**： 是否开启公网。 **取值范围**： - true：开启。 - false：不开启。
-    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。
-    * publicipAddress  **参数解释**： 公网IP地址。 **取值范围**： 不涉及。
-    * sslEnable  **参数解释**： 是否开启SSL。 **取值范围**： - true：开启。 - false：未开启。
-    * crossVpcInfo  **参数解释**： 跨VPC访问信息。 **取值范围**： 不涉及。
-    * storageResourceId  **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
-    * storageSpecCode  **参数解释**： 存储规格代码。 **取值范围**： 不涉及。
-    * serviceType  **参数解释**： 服务类型。 **取值范围**： 不涉及。
-    * storageType  **参数解释**： 存储类型。 **取值范围**： 不涉及。
-    * extendTimes  **参数解释**： 扩展时间。 **取值范围**： 不涉及。
-    * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启。 - false：未开启。
-    * supportFeatures  **参数解释**： 实例支持的特性功能。 **取值范围**： 不涉及。
-    * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启。 - false：不开启。
-    * cesVersion  **参数解释**： 云监控版本。 **取值范围**： 不涉及。
-    * nodeNum  **参数解释**： 节点数。 **取值范围**： 不涉及。
-    * newSpecBillingEnable  **参数解释**： 是否启用新规格计费。 **取值范围**： - true：开启。 - false：未开启。
-    * enableAcl  **参数解释**： 是否开启访问控制列表。 **取值范围**： - true：开启。 - false：未开启。
-    * brokerNum  **参数解释**： Broker节点数（仅RocketMQ 4.8.0版本会显示此字段）。 **取值范围**： 不涉及。
-    * dnsEnable  **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启。 - false：未开启。
-    * namesrvAddress  **参数解释**： 元数据地址。 **取值范围**： 不涉及。
-    * namesrvDomainName  **参数解释**： 元数据域名。 **取值范围**： 不涉及。
-    * brokerAddress  **参数解释**： 业务数据地址。 **取值范围**： 不涉及。
-    * publicNamesrvAddress  **参数解释**： 公网元数据地址。 **取值范围**： 不涉及。
-    * publicNamesrvDomainName  **参数解释**： 公网元数据域名。 **取值范围**： 不涉及。
-    * publicBrokerAddress  **参数解释**： 公网业务数据地址。 **取值范围**： 不涉及。
-    * grpcAddress  **参数解释**： grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * grpcDomainName  **参数解释**： grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * publicGrpcAddress  **参数解释**： 公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * publicGrpcDomainName  **参数解释**： 公网grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
-    * enterpriseProjectId  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
-    * tags  **参数解释**： 标签列表。 **取值范围**： 不涉及。
-    * totalStorageSpace  **参数解释**： 总存储空间。 **取值范围**： 不涉及。
-    * resourceSpecCode  **参数解释**： 资源规格。 **取值范围**： 不涉及。
-    * producePortion  **参数解释**： 生产TPS占比。 **取值范围**： 不涉及。
-    * consumePortion  **参数解释**： 消费TPS占比。 **取值范围**： 不涉及。
-    * drEnable  **参数解释**： 是否为容灾实例。 **取值范围**： 不涉及。
-    * configSslNeedRestartProcess  **参数解释**： 配置ssl是否需要重启。 **取值范围**： 不涉及。
-    * tlsMode  **参数解释**： 实例使用的安全协议。 **取值范围**： 不涉及。
+    * name  **参数解释**： 实例名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * engine  **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+    * status  **参数解释**： 消息状态。 **约束限制**： 不涉及。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,dt,ax,srg)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs,hcs_oemout) **默认取值**： 不涉及。
+    * description  **参数解释**： 消息描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： 消息描述。 **约束限制**： 不涉及。 **取值范围**： [- single：4.8.0单机。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- cluster：4.8.0集群。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- single.basic：5.x单机基础版。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- cluster.basic：5.x集群基础版。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- cluster.professional：5.x集群专业版。](tag:hws,hws_eu,hws_hk,ctc,srg) **默认取值**： 不涉及。
+    * specification  **参数解释**： 实例规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * engineVersion  **参数解释**： 实例版本。 **约束限制**： 不涉及。 **取值范围**： [- 4.8.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- 5.x](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * chargingMode  **参数解释**： 付费模式。 **约束限制**： 不涉及。 **取值范围**： [1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,dt)[1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc,cmcc,ax) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs,fcs,hcs_oemout,srg) **默认取值**： 不涉及。
+    * vpcId  **参数解释**： 私有云ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vpcName  **参数解释**： 私有云名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 完成创建时间。 格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * productId  **参数解释**： RocketMQ实例规格。[x86环境后缀为.x86，arm环境为.arm。single表示单机，cluster表示集群。](tag:hcs,fcs,hcs_oemout)  **约束限制**： 不涉及。 **取值范围**： [当“type”为“single.basic”选择单机规格；当“type”为“cluster.basic”选择集群规格。](tag:dt) [- c6.2u8g.cluster.x86或c6.2u8g.cluster.arm：单个代理最大分区数50，单个代理最大消费组数100](tag:fcs) [- c6.4u8g.cluster.small：单个代理最大Topic数2000，单个代理最大消费组数2000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.4u8g.cluster：单个代理最大Topic数4000，单个代理最大消费组数4000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.4u16g.cluster.x86或c6.4u16g.cluster.arm：单个代理最大分区数100，单个代理最大消费组数200](tag:hcs,hcs_oemout) [- c6.8u16g.cluster：单个代理最大Topic数8000，单个代理最大消费组数8000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.8u32g.cluster.x86或c6.8u32g.cluster.arm：单个代理最大Topic数200，单个代理最大消费组数400](tag:hcs,fcs,hcs_oemout) [- c6.12u24g.cluster：单个代理最大Topic数12000，单个代理最大消费组数12000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.16u64g.cluster.x86或c6.16u64g.cluster.arm：单个代理最大Topic数300，单个代理最大消费组数600](tag:hcs,fcs,hcs_oemout) [- c6.16u32g.cluster：单个代理最大Topic数16000，单个代理最大消费组数16000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.32u128g.cluster.x86或c6.32u128g.cluster.arm：单个代理最大Topic数400，单个代理最大消费组数800](tag:hcs,fcs,hcs_oemout) [- rocketmq.b1.large.1：RocketMQ 5.x基础版单机规格，实例TPS 500](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.4：RocketMQ 5.x基础版集群规格，实例TPS 2000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.8：RocketMQ 5.x基础版集群规格，实例TPS 4000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.12：RocketMQ 5.x基础版集群规格，实例TPS 6000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.p1.large.1：RocketMQ 5.x专业版单机规格，实例TPS 500](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.8：RocketMQ 5.x专业版集群规格，实例TPS 4000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.12：RocketMQ 5.x专业版集群规格，实例TPS 6000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.20：RocketMQ 5.x专业版集群规格，实例TPS 10000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.40：RocketMQ 5.x专业版集群规格，实例TPS 20000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.100：RocketMQ 5.x专业版集群规格，实例TPS 50000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.150：RocketMQ 5.x专业版集群规格，实例TPS 75000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.200：RocketMQ 5.x专业版集群规格，实例TPS 100000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.300：RocketMQ 5.x专业版集群规格，实例TPS 150000](tag:hws,hws_eu,hws_hk,ctc,srg)  **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupName  **参数解释**： 安全组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetName  **参数解释**： 子网名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetCidr  **参数解释**： 子网路由。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availableZones  **参数解释**： 可用区ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availableZoneNames  **参数解释**： 可用区名称列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * userId  **参数解释**： 用户ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * userName  **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * enableLogCollection  **参数解释**： 是否开启消息收集功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * storageSpace  **参数解释**： 存储空间，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不同的实例规格支持不同的存储配置。 [- RocketMQ 5.x 单机存储取值范围：100-30000。](tag:dt) [- RocketMQ 5.x 集群存储取值范围：200-60000。](tag:dt) **默认取值**： 不涉及。
+    * usedStorageSpace  **参数解释**： 已用消息存储空间，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不同的实例规格支持不同的存储配置。 [- RocketMQ 5.x 单机存储取值范围：100-30000。](tag:dt) [- RocketMQ 5.x 集群存储取值范围：200-60000。](tag:dt) **默认取值**： 不涉及。
+    * enablePublicip  **参数解释**： 是否开启公网。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * publicipAddress  **参数解释**： 公网IP地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * sslEnable  **参数解释**： 是否开启SSL。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * crossVpcInfo  **参数解释**： 跨VPC访问信息。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * storageResourceId  **参数解释**： 存储资源ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * storageSpecCode  **参数解释**： 存储规格代码。 **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO类型磁盘 - dms.physical.storage.ultra.v2：超高IO类型磁盘 [- dms.physical.storage.general：使用通用型SSD的磁盘类型。](tag:hws,hws_hk,dt,ctc,ax) [- dms.physical.storage.extreme：使用极速型SSD的磁盘类型。](tag:hws,hws_hk,dt,ctc,ax) **默认取值**： 不涉及。
+    * serviceType  **参数解释**： 服务类型。 **约束限制**： 不涉及。 **取值范围**： - advanced：[华为云服务类型。](tag:hws,hws_hk)[服务类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,srg,ax,srg,hcs_oemout) [- dec：专属云服务类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
+    * storageType  **参数解释**： 存储类型。 **约束限制**： 不涉及。 **取值范围**： - hec：[华为云存储类型。](tag:hws,hws_hk)[存储类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,srg,ax,srg,hcs_oemout) [- dss：专属云存储类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
+    * extendTimes  **参数解释**： 扩展时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6Enable  **参数解释**： 是否开启IPv6。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * supportFeatures  **参数解释**： 实例支持的特性功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * cesVersion  **参数解释**： 云监控版本。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * nodeNum  **参数解释**： 节点数。（仅RocketMQ 4.8.0版本会显示此字段） **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * newSpecBillingEnable  **参数解释**： 是否启用新规格计费。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * enableAcl  **参数解释**： 是否开启访问控制列表。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * brokerNum  **参数解释**： Broker节点数。 **约束限制**： 不涉及。 **取值范围**：   不涉及。 **默认取值**： 不涉及。
+    * dnsEnable  **参数解释**： 实例是否开启域名访问功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
+    * namesrvAddress  **参数解释**： 元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * namesrvDomainName  **参数解释**： 元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokerAddress  **参数解释**： 业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicNamesrvAddress  **参数解释**： 公网元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicNamesrvDomainName  **参数解释**： 公网元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicBrokerAddress  **参数解释**： 公网业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * grpcAddress  **参数解释**： grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * grpcDomainName  **参数解释**： grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicGrpcAddress  **参数解释**： 公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicGrpcDomainName  **参数解释**： 公网grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * enterpriseProjectId  **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * tags  **参数解释**： 标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * totalStorageSpace  **参数解释**： 总存储空间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * resourceSpecCode  **参数解释**： 资源规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * producePortion  **参数解释**： 生产TPS占比。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumePortion  **参数解释**： 消费TPS占比。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * drEnable  **参数解释**： 是否为容灾实例。 **约束限制**： 不涉及。 **取值范围**： - true：容灾实例。 - false：非容灾实例。 **默认取值**： 不涉及。
+    * quotaAddress  **参数解释**： 流控地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maxMsgProcessTps  **参数解释**： 最大消息TPS。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * configSslNeedRestartProcess  **参数解释**： 配置ssl是否需要重启。 **约束限制**： 不涉及。 **取值范围**： - true：需要重启。 - false：不需要重启。 **默认取值**： 不涉及。
+    * tlsMode  **参数解释**： 实例使用的安全协议。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * archType  **参数解释**： 架构类型。 **约束限制**： 不涉及。 **取值范围**： - X86。 - ARM。 **默认取值**： 不涉及。
+    * enableElasticTps  **参数解释**： 弹性TPS开关状态。 **约束限制**： 不涉及。 **取值范围**： - true：开启弹性TPS。 - false：不开启弹性TPS。 **默认取值**： 不涉及。
+    * autoVolumeExpandEnable  **参数解释**： 是否开启自动磁盘扩容。 **约束限制**： 不涉及。 **取值范围**： - true：开启自动磁盘扩容。 - false：不开启自动磁盘扩容。     **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -726,8 +771,13 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'producePortion' => 'getProducePortion',
             'consumePortion' => 'getConsumePortion',
             'drEnable' => 'getDrEnable',
+            'quotaAddress' => 'getQuotaAddress',
+            'maxMsgProcessTps' => 'getMaxMsgProcessTps',
             'configSslNeedRestartProcess' => 'getConfigSslNeedRestartProcess',
-            'tlsMode' => 'getTlsMode'
+            'tlsMode' => 'getTlsMode',
+            'archType' => 'getArchType',
+            'enableElasticTps' => 'getEnableElasticTps',
+            'autoVolumeExpandEnable' => 'getAutoVolumeExpandEnable'
     ];
 
     /**
@@ -770,22 +820,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const TYPE_SINGLE = 'single';
-    const TYPE_CLUSTER = 'cluster';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_SINGLE,
-            self::TYPE_CLUSTER,
-        ];
-    }
 
 
     /**
@@ -866,8 +901,13 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['producePortion'] = isset($data['producePortion']) ? $data['producePortion'] : null;
         $this->container['consumePortion'] = isset($data['consumePortion']) ? $data['consumePortion'] : null;
         $this->container['drEnable'] = isset($data['drEnable']) ? $data['drEnable'] : null;
+        $this->container['quotaAddress'] = isset($data['quotaAddress']) ? $data['quotaAddress'] : null;
+        $this->container['maxMsgProcessTps'] = isset($data['maxMsgProcessTps']) ? $data['maxMsgProcessTps'] : null;
         $this->container['configSslNeedRestartProcess'] = isset($data['configSslNeedRestartProcess']) ? $data['configSslNeedRestartProcess'] : null;
         $this->container['tlsMode'] = isset($data['tlsMode']) ? $data['tlsMode'] : null;
+        $this->container['archType'] = isset($data['archType']) ? $data['archType'] : null;
+        $this->container['enableElasticTps'] = isset($data['enableElasticTps']) ? $data['enableElasticTps'] : null;
+        $this->container['autoVolumeExpandEnable'] = isset($data['autoVolumeExpandEnable']) ? $data['autoVolumeExpandEnable'] : null;
     }
 
     /**
@@ -878,14 +918,6 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getTypeAllowableValues();
-                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -902,7 +934,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    *  **参数解释**： 实例名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -914,7 +946,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name **参数解释**： 实例名称。 **取值范围**： 不涉及。
+    * @param string|null $name **参数解释**： 实例名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -926,7 +958,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
+    *  **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -938,7 +970,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string|null $engine **参数解释**： 消息引擎。 **取值范围**： 不涉及。
+    * @param string|null $engine **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -950,7 +982,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 状态。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
+    *  **参数解释**： 消息状态。 **约束限制**： 不涉及。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,dt,ax,srg)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs,hcs_oemout) **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -962,7 +994,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 状态。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs)
+    * @param string|null $status **参数解释**： 消息状态。 **约束限制**： 不涉及。 **取值范围**： [详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,dt,ax,srg)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs,fcs,hcs_oemout) **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -974,7 +1006,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  **参数解释**： 消息描述。 **取值范围**： 不涉及。
+    *  **参数解释**： 消息描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -986,7 +1018,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description **参数解释**： 消息描述。 **取值范围**： 不涉及。
+    * @param string|null $description **参数解释**： 消息描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -998,7 +1030,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
+    *  **参数解释**： 消息描述。 **约束限制**： 不涉及。 **取值范围**： [- single：4.8.0单机。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- cluster：4.8.0集群。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- single.basic：5.x单机基础版。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- cluster.basic：5.x集群基础版。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- cluster.professional：5.x集群专业版。](tag:hws,hws_eu,hws_hk,ctc,srg) **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1010,7 +1042,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
+    * @param string|null $type **参数解释**： 消息描述。 **约束限制**： 不涉及。 **取值范围**： [- single：4.8.0单机。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- cluster：4.8.0集群。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- single.basic：5.x单机基础版。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- cluster.basic：5.x集群基础版。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- cluster.professional：5.x集群专业版。](tag:hws,hws_eu,hws_hk,ctc,srg) **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1022,7 +1054,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets specification
-    *  **参数解释**： 实例规格。 **取值范围**： 不涉及。
+    *  **参数解释**： 实例规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1034,7 +1066,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets specification
     *
-    * @param string|null $specification **参数解释**： 实例规格。 **取值范围**： 不涉及。
+    * @param string|null $specification **参数解释**： 实例规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1046,7 +1078,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets engineVersion
-    *  **参数解释**： 实例版本。 **取值范围**： 不涉及。
+    *  **参数解释**： 实例版本。 **约束限制**： 不涉及。 **取值范围**： [- 4.8.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- 5.x](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1058,7 +1090,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets engineVersion
     *
-    * @param string|null $engineVersion **参数解释**： 实例版本。 **取值范围**： 不涉及。
+    * @param string|null $engineVersion **参数解释**： 实例版本。 **约束限制**： 不涉及。 **取值范围**： [- 4.8.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- 5.x](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1070,7 +1102,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    *  **参数解释**： 实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1082,7 +1114,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * @param string|null $instanceId **参数解释**： 实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1094,7 +1126,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  **参数解释**： 付费模式。 **取值范围**： [1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs,fcs)
+    *  **参数解释**： 付费模式。 **约束限制**： 不涉及。 **取值范围**： [1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,dt)[1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc,cmcc,ax) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs,fcs,hcs_oemout,srg) **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -1106,7 +1138,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param int|null $chargingMode **参数解释**： 付费模式。 **取值范围**： [1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs,fcs)
+    * @param int|null $chargingMode **参数解释**： 付费模式。 **约束限制**： 不涉及。 **取值范围**： [1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,dt)[1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc,cmcc,ax) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs,fcs,hcs_oemout,srg) **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1118,7 +1150,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  **参数解释**： 私有云ID。 **取值范围**： 不涉及。
+    *  **参数解释**： 私有云ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1130,7 +1162,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId **参数解释**： 私有云ID。 **取值范围**： 不涉及。
+    * @param string|null $vpcId **参数解释**： 私有云ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1142,7 +1174,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcName
-    *  **参数解释**： 私有云名称。 **取值范围**： 不涉及。
+    *  **参数解释**： 私有云名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1154,7 +1186,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets vpcName
     *
-    * @param string|null $vpcName **参数解释**： 私有云名称。 **取值范围**： 不涉及。
+    * @param string|null $vpcName **参数解释**： 私有云名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1166,7 +1198,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  **参数解释**： 完成创建时间。  格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
+    *  **参数解释**： 完成创建时间。 格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1178,7 +1210,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt **参数解释**： 完成创建时间。  格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **取值范围**： 不涉及。
+    * @param string|null $createdAt **参数解释**： 完成创建时间。 格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1190,7 +1222,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
-    *  **参数解释**： 产品标识。 **取值范围**： 不涉及。
+    *  **参数解释**： RocketMQ实例规格。[x86环境后缀为.x86，arm环境为.arm。single表示单机，cluster表示集群。](tag:hcs,fcs,hcs_oemout)  **约束限制**： 不涉及。 **取值范围**： [当“type”为“single.basic”选择单机规格；当“type”为“cluster.basic”选择集群规格。](tag:dt) [- c6.2u8g.cluster.x86或c6.2u8g.cluster.arm：单个代理最大分区数50，单个代理最大消费组数100](tag:fcs) [- c6.4u8g.cluster.small：单个代理最大Topic数2000，单个代理最大消费组数2000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.4u8g.cluster：单个代理最大Topic数4000，单个代理最大消费组数4000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.4u16g.cluster.x86或c6.4u16g.cluster.arm：单个代理最大分区数100，单个代理最大消费组数200](tag:hcs,hcs_oemout) [- c6.8u16g.cluster：单个代理最大Topic数8000，单个代理最大消费组数8000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.8u32g.cluster.x86或c6.8u32g.cluster.arm：单个代理最大Topic数200，单个代理最大消费组数400](tag:hcs,fcs,hcs_oemout) [- c6.12u24g.cluster：单个代理最大Topic数12000，单个代理最大消费组数12000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.16u64g.cluster.x86或c6.16u64g.cluster.arm：单个代理最大Topic数300，单个代理最大消费组数600](tag:hcs,fcs,hcs_oemout) [- c6.16u32g.cluster：单个代理最大Topic数16000，单个代理最大消费组数16000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.32u128g.cluster.x86或c6.32u128g.cluster.arm：单个代理最大Topic数400，单个代理最大消费组数800](tag:hcs,fcs,hcs_oemout) [- rocketmq.b1.large.1：RocketMQ 5.x基础版单机规格，实例TPS 500](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.4：RocketMQ 5.x基础版集群规格，实例TPS 2000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.8：RocketMQ 5.x基础版集群规格，实例TPS 4000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.12：RocketMQ 5.x基础版集群规格，实例TPS 6000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.p1.large.1：RocketMQ 5.x专业版单机规格，实例TPS 500](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.8：RocketMQ 5.x专业版集群规格，实例TPS 4000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.12：RocketMQ 5.x专业版集群规格，实例TPS 6000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.20：RocketMQ 5.x专业版集群规格，实例TPS 10000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.40：RocketMQ 5.x专业版集群规格，实例TPS 20000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.100：RocketMQ 5.x专业版集群规格，实例TPS 50000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.150：RocketMQ 5.x专业版集群规格，实例TPS 75000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.200：RocketMQ 5.x专业版集群规格，实例TPS 100000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.300：RocketMQ 5.x专业版集群规格，实例TPS 150000](tag:hws,hws_eu,hws_hk,ctc,srg)  **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1202,7 +1234,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets productId
     *
-    * @param string|null $productId **参数解释**： 产品标识。 **取值范围**： 不涉及。
+    * @param string|null $productId **参数解释**： RocketMQ实例规格。[x86环境后缀为.x86，arm环境为.arm。single表示单机，cluster表示集群。](tag:hcs,fcs,hcs_oemout)  **约束限制**： 不涉及。 **取值范围**： [当“type”为“single.basic”选择单机规格；当“type”为“cluster.basic”选择集群规格。](tag:dt) [- c6.2u8g.cluster.x86或c6.2u8g.cluster.arm：单个代理最大分区数50，单个代理最大消费组数100](tag:fcs) [- c6.4u8g.cluster.small：单个代理最大Topic数2000，单个代理最大消费组数2000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.4u8g.cluster：单个代理最大Topic数4000，单个代理最大消费组数4000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.4u16g.cluster.x86或c6.4u16g.cluster.arm：单个代理最大分区数100，单个代理最大消费组数200](tag:hcs,hcs_oemout) [- c6.8u16g.cluster：单个代理最大Topic数8000，单个代理最大消费组数8000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.8u32g.cluster.x86或c6.8u32g.cluster.arm：单个代理最大Topic数200，单个代理最大消费组数400](tag:hcs,fcs,hcs_oemout) [- c6.12u24g.cluster：单个代理最大Topic数12000，单个代理最大消费组数12000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.16u64g.cluster.x86或c6.16u64g.cluster.arm：单个代理最大Topic数300，单个代理最大消费组数600](tag:hcs,fcs,hcs_oemout) [- c6.16u32g.cluster：单个代理最大Topic数16000，单个代理最大消费组数16000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- c6.32u128g.cluster.x86或c6.32u128g.cluster.arm：单个代理最大Topic数400，单个代理最大消费组数800](tag:hcs,fcs,hcs_oemout) [- rocketmq.b1.large.1：RocketMQ 5.x基础版单机规格，实例TPS 500](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.4：RocketMQ 5.x基础版集群规格，实例TPS 2000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.8：RocketMQ 5.x基础版集群规格，实例TPS 4000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.b2.large.12：RocketMQ 5.x基础版集群规格，实例TPS 6000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) [- rocketmq.p1.large.1：RocketMQ 5.x专业版单机规格，实例TPS 500](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.8：RocketMQ 5.x专业版集群规格，实例TPS 4000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.12：RocketMQ 5.x专业版集群规格，实例TPS 6000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.20：RocketMQ 5.x专业版集群规格，实例TPS 10000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.40：RocketMQ 5.x专业版集群规格，实例TPS 20000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.100：RocketMQ 5.x专业版集群规格，实例TPS 50000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.150：RocketMQ 5.x专业版集群规格，实例TPS 75000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.200：RocketMQ 5.x专业版集群规格，实例TPS 100000](tag:hws,hws_eu,hws_hk,ctc,srg) [- rocketmq.p2.large.300：RocketMQ 5.x专业版集群规格，实例TPS 150000](tag:hws,hws_eu,hws_hk,ctc,srg)  **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1214,7 +1246,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
-    *  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
+    *  **参数解释**： 安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1226,7 +1258,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string|null $securityGroupId **参数解释**： 安全组ID。 **取值范围**： 不涉及。
+    * @param string|null $securityGroupId **参数解释**： 安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1238,7 +1270,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupName
-    *  **参数解释**： 安全组名称。 **取值范围**： 不涉及。
+    *  **参数解释**： 安全组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1250,7 +1282,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupName
     *
-    * @param string|null $securityGroupName **参数解释**： 安全组名称。 **取值范围**： 不涉及。
+    * @param string|null $securityGroupName **参数解释**： 安全组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1262,7 +1294,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    *  **参数解释**： 子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1274,7 +1306,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string|null $subnetId **参数解释**： 子网ID。 **取值范围**： 不涉及。
+    * @param string|null $subnetId **参数解释**： 子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1286,7 +1318,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetName
-    *  **参数解释**： 子网名称。 **取值范围**： 不涉及。
+    *  **参数解释**： 子网名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1298,7 +1330,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets subnetName
     *
-    * @param string|null $subnetName **参数解释**： 子网名称。 **取值范围**： 不涉及。
+    * @param string|null $subnetName **参数解释**： 子网名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1310,7 +1342,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetCidr
-    *  **参数解释**： 子网路由（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
+    *  **参数解释**： 子网路由。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1322,7 +1354,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets subnetCidr
     *
-    * @param string|null $subnetCidr **参数解释**： 子网路由（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
+    * @param string|null $subnetCidr **参数解释**： 子网路由。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1334,7 +1366,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableZones
-    *  **参数解释**： 可用区ID列表。 **取值范围**： 不涉及。
+    *  **参数解释**： 可用区ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -1346,7 +1378,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets availableZones
     *
-    * @param string[]|null $availableZones **参数解释**： 可用区ID列表。 **取值范围**： 不涉及。
+    * @param string[]|null $availableZones **参数解释**： 可用区ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1358,7 +1390,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableZoneNames
-    *  **参数解释**： 可用区名称列表。
+    *  **参数解释**： 可用区名称列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -1370,7 +1402,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets availableZoneNames
     *
-    * @param string[]|null $availableZoneNames **参数解释**： 可用区名称列表。
+    * @param string[]|null $availableZoneNames **参数解释**： 可用区名称列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1382,7 +1414,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
-    *  **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    *  **参数解释**： 用户ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1394,7 +1426,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param string|null $userId **参数解释**： 用户ID。 **取值范围**： 不涉及。
+    * @param string|null $userId **参数解释**： 用户ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1406,7 +1438,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  **参数解释**： 用户名。 **取值范围**： 不涉及。
+    *  **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1418,7 +1450,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName **参数解释**： 用户名。 **取值范围**： 不涉及。
+    * @param string|null $userName **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1430,7 +1462,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets maintainBegin
-    *  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    *  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1442,7 +1474,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets maintainBegin
     *
-    * @param string|null $maintainBegin **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * @param string|null $maintainBegin **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1454,7 +1486,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets maintainEnd
-    *  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    *  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1466,7 +1498,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets maintainEnd
     *
-    * @param string|null $maintainEnd **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
+    * @param string|null $maintainEnd **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1478,7 +1510,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableLogCollection
-    *  **参数解释**： 是否开启消息收集功能。 **取值范围**： - true：开启。 - false：不开启。
+    *  **参数解释**： 是否开启消息收集功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -1490,7 +1522,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enableLogCollection
     *
-    * @param bool|null $enableLogCollection **参数解释**： 是否开启消息收集功能。 **取值范围**： - true：开启。 - false：不开启。
+    * @param bool|null $enableLogCollection **参数解释**： 是否开启消息收集功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1502,7 +1534,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets storageSpace
-    *  **参数解释**： 存储空间，单位：GB。 **取值范围**： 不涉及。
+    *  **参数解释**： 存储空间，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不同的实例规格支持不同的存储配置。 [- RocketMQ 5.x 单机存储取值范围：100-30000。](tag:dt) [- RocketMQ 5.x 集群存储取值范围：200-60000。](tag:dt) **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -1514,7 +1546,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets storageSpace
     *
-    * @param int|null $storageSpace **参数解释**： 存储空间，单位：GB。 **取值范围**： 不涉及。
+    * @param int|null $storageSpace **参数解释**： 存储空间，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不同的实例规格支持不同的存储配置。 [- RocketMQ 5.x 单机存储取值范围：100-30000。](tag:dt) [- RocketMQ 5.x 集群存储取值范围：200-60000。](tag:dt) **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1526,7 +1558,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedStorageSpace
-    *  **参数解释**： 已用消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    *  **参数解释**： 已用消息存储空间，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不同的实例规格支持不同的存储配置。 [- RocketMQ 5.x 单机存储取值范围：100-30000。](tag:dt) [- RocketMQ 5.x 集群存储取值范围：200-60000。](tag:dt) **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -1538,7 +1570,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets usedStorageSpace
     *
-    * @param int|null $usedStorageSpace **参数解释**： 已用消息存储空间，单位：GB。 **取值范围**： 不涉及。
+    * @param int|null $usedStorageSpace **参数解释**： 已用消息存储空间，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不同的实例规格支持不同的存储配置。 [- RocketMQ 5.x 单机存储取值范围：100-30000。](tag:dt) [- RocketMQ 5.x 集群存储取值范围：200-60000。](tag:dt) **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1550,7 +1582,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enablePublicip
-    *  **参数解释**： 是否开启公网。 **取值范围**： - true：开启。 - false：不开启。
+    *  **参数解释**： 是否开启公网。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -1562,7 +1594,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enablePublicip
     *
-    * @param bool|null $enablePublicip **参数解释**： 是否开启公网。 **取值范围**： - true：开启。 - false：不开启。
+    * @param bool|null $enablePublicip **参数解释**： 是否开启公网。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1574,7 +1606,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicipId
-    *  **参数解释**： 实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。
+    *  **参数解释**： 实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1586,7 +1618,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets publicipId
     *
-    * @param string|null $publicipId **参数解释**： 实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。
+    * @param string|null $publicipId **参数解释**： 实例绑定的弹性IP地址的ID。  以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1598,7 +1630,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicipAddress
-    *  **参数解释**： 公网IP地址。 **取值范围**： 不涉及。
+    *  **参数解释**： 公网IP地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1610,7 +1642,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets publicipAddress
     *
-    * @param string|null $publicipAddress **参数解释**： 公网IP地址。 **取值范围**： 不涉及。
+    * @param string|null $publicipAddress **参数解释**： 公网IP地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1622,7 +1654,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets sslEnable
-    *  **参数解释**： 是否开启SSL。 **取值范围**： - true：开启。 - false：未开启。
+    *  **参数解释**： 是否开启SSL。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -1634,7 +1666,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sslEnable
     *
-    * @param bool|null $sslEnable **参数解释**： 是否开启SSL。 **取值范围**： - true：开启。 - false：未开启。
+    * @param bool|null $sslEnable **参数解释**： 是否开启SSL。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1646,7 +1678,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets crossVpcInfo
-    *  **参数解释**： 跨VPC访问信息。 **取值范围**： 不涉及。
+    *  **参数解释**： 跨VPC访问信息。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1658,7 +1690,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets crossVpcInfo
     *
-    * @param string|null $crossVpcInfo **参数解释**： 跨VPC访问信息。 **取值范围**： 不涉及。
+    * @param string|null $crossVpcInfo **参数解释**： 跨VPC访问信息。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1670,7 +1702,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets storageResourceId
-    *  **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
+    *  **参数解释**： 存储资源ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1682,7 +1714,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets storageResourceId
     *
-    * @param string|null $storageResourceId **参数解释**： 存储资源ID。 **取值范围**： 不涉及。
+    * @param string|null $storageResourceId **参数解释**： 存储资源ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1694,7 +1726,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets storageSpecCode
-    *  **参数解释**： 存储规格代码。 **取值范围**： 不涉及。
+    *  **参数解释**： 存储规格代码。 **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO类型磁盘 - dms.physical.storage.ultra.v2：超高IO类型磁盘 [- dms.physical.storage.general：使用通用型SSD的磁盘类型。](tag:hws,hws_hk,dt,ctc,ax) [- dms.physical.storage.extreme：使用极速型SSD的磁盘类型。](tag:hws,hws_hk,dt,ctc,ax) **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1706,7 +1738,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets storageSpecCode
     *
-    * @param string|null $storageSpecCode **参数解释**： 存储规格代码。 **取值范围**： 不涉及。
+    * @param string|null $storageSpecCode **参数解释**： 存储规格代码。 **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO类型磁盘 - dms.physical.storage.ultra.v2：超高IO类型磁盘 [- dms.physical.storage.general：使用通用型SSD的磁盘类型。](tag:hws,hws_hk,dt,ctc,ax) [- dms.physical.storage.extreme：使用极速型SSD的磁盘类型。](tag:hws,hws_hk,dt,ctc,ax) **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1718,7 +1750,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
-    *  **参数解释**： 服务类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 服务类型。 **约束限制**： 不涉及。 **取值范围**： - advanced：[华为云服务类型。](tag:hws,hws_hk)[服务类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,srg,ax,srg,hcs_oemout) [- dec：专属云服务类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1730,7 +1762,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets serviceType
     *
-    * @param string|null $serviceType **参数解释**： 服务类型。 **取值范围**： 不涉及。
+    * @param string|null $serviceType **参数解释**： 服务类型。 **约束限制**： 不涉及。 **取值范围**： - advanced：[华为云服务类型。](tag:hws,hws_hk)[服务类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,srg,ax,srg,hcs_oemout) [- dec：专属云服务类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1742,7 +1774,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets storageType
-    *  **参数解释**： 存储类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 存储类型。 **约束限制**： 不涉及。 **取值范围**： - hec：[华为云存储类型。](tag:hws,hws_hk)[存储类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,srg,ax,srg,hcs_oemout) [- dss：专属云存储类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1754,7 +1786,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets storageType
     *
-    * @param string|null $storageType **参数解释**： 存储类型。 **取值范围**： 不涉及。
+    * @param string|null $storageType **参数解释**： 存储类型。 **约束限制**： 不涉及。 **取值范围**： - hec：[华为云存储类型。](tag:hws,hws_hk)[存储类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,srg,ax,srg,hcs_oemout) [- dss：专属云存储类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1766,7 +1798,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendTimes
-    *  **参数解释**： 扩展时间。 **取值范围**： 不涉及。
+    *  **参数解释**： 扩展时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -1778,7 +1810,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets extendTimes
     *
-    * @param int|null $extendTimes **参数解释**： 扩展时间。 **取值范围**： 不涉及。
+    * @param int|null $extendTimes **参数解释**： 扩展时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1790,7 +1822,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6Enable
-    *  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启。 - false：未开启。
+    *  **参数解释**： 是否开启IPv6。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -1802,7 +1834,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6Enable
     *
-    * @param bool|null $ipv6Enable **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启。 - false：未开启。
+    * @param bool|null $ipv6Enable **参数解释**： 是否开启IPv6。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1814,7 +1846,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportFeatures
-    *  **参数解释**： 实例支持的特性功能。 **取值范围**： 不涉及。
+    *  **参数解释**： 实例支持的特性功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1826,7 +1858,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets supportFeatures
     *
-    * @param string|null $supportFeatures **参数解释**： 实例支持的特性功能。 **取值范围**： 不涉及。
+    * @param string|null $supportFeatures **参数解释**： 实例支持的特性功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1838,7 +1870,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets diskEncrypted
-    *  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启。 - false：不开启。
+    *  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -1850,7 +1882,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets diskEncrypted
     *
-    * @param bool|null $diskEncrypted **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启。 - false：不开启。
+    * @param bool|null $diskEncrypted **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1862,7 +1894,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets cesVersion
-    *  **参数解释**： 云监控版本。 **取值范围**： 不涉及。
+    *  **参数解释**： 云监控版本。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1874,7 +1906,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets cesVersion
     *
-    * @param string|null $cesVersion **参数解释**： 云监控版本。 **取值范围**： 不涉及。
+    * @param string|null $cesVersion **参数解释**： 云监控版本。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1886,7 +1918,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeNum
-    *  **参数解释**： 节点数。 **取值范围**： 不涉及。
+    *  **参数解释**： 节点数。（仅RocketMQ 4.8.0版本会显示此字段） **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -1898,7 +1930,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nodeNum
     *
-    * @param int|null $nodeNum **参数解释**： 节点数。 **取值范围**： 不涉及。
+    * @param int|null $nodeNum **参数解释**： 节点数。（仅RocketMQ 4.8.0版本会显示此字段） **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1910,7 +1942,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets newSpecBillingEnable
-    *  **参数解释**： 是否启用新规格计费。 **取值范围**： - true：开启。 - false：未开启。
+    *  **参数解释**： 是否启用新规格计费。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -1922,7 +1954,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets newSpecBillingEnable
     *
-    * @param bool|null $newSpecBillingEnable **参数解释**： 是否启用新规格计费。 **取值范围**： - true：开启。 - false：未开启。
+    * @param bool|null $newSpecBillingEnable **参数解释**： 是否启用新规格计费。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1934,7 +1966,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableAcl
-    *  **参数解释**： 是否开启访问控制列表。 **取值范围**： - true：开启。 - false：未开启。
+    *  **参数解释**： 是否开启访问控制列表。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -1946,7 +1978,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enableAcl
     *
-    * @param bool|null $enableAcl **参数解释**： 是否开启访问控制列表。 **取值范围**： - true：开启。 - false：未开启。
+    * @param bool|null $enableAcl **参数解释**： 是否开启访问控制列表。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1958,7 +1990,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokerNum
-    *  **参数解释**： Broker节点数（仅RocketMQ 4.8.0版本会显示此字段）。 **取值范围**： 不涉及。
+    *  **参数解释**： Broker节点数。 **约束限制**： 不涉及。 **取值范围**：   不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -1970,7 +2002,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets brokerNum
     *
-    * @param int|null $brokerNum **参数解释**： Broker节点数（仅RocketMQ 4.8.0版本会显示此字段）。 **取值范围**： 不涉及。
+    * @param int|null $brokerNum **参数解释**： Broker节点数。 **约束限制**： 不涉及。 **取值范围**：   不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1982,7 +2014,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dnsEnable
-    *  **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启。 - false：未开启。
+    *  **参数解释**： 实例是否开启域名访问功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -1994,7 +2026,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dnsEnable
     *
-    * @param bool|null $dnsEnable **参数解释**： 实例是否开启域名访问功能。 **取值范围**： - true：开启。 - false：未开启。
+    * @param bool|null $dnsEnable **参数解释**： 实例是否开启域名访问功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -2006,7 +2038,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets namesrvAddress
-    *  **参数解释**： 元数据地址。 **取值范围**： 不涉及。
+    *  **参数解释**： 元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -2018,7 +2050,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets namesrvAddress
     *
-    * @param string|null $namesrvAddress **参数解释**： 元数据地址。 **取值范围**： 不涉及。
+    * @param string|null $namesrvAddress **参数解释**： 元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -2030,7 +2062,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets namesrvDomainName
-    *  **参数解释**： 元数据域名。 **取值范围**： 不涉及。
+    *  **参数解释**： 元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -2042,7 +2074,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets namesrvDomainName
     *
-    * @param string|null $namesrvDomainName **参数解释**： 元数据域名。 **取值范围**： 不涉及。
+    * @param string|null $namesrvDomainName **参数解释**： 元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -2054,7 +2086,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokerAddress
-    *  **参数解释**： 业务数据地址。 **取值范围**： 不涉及。
+    *  **参数解释**： 业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -2066,7 +2098,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets brokerAddress
     *
-    * @param string|null $brokerAddress **参数解释**： 业务数据地址。 **取值范围**： 不涉及。
+    * @param string|null $brokerAddress **参数解释**： 业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -2078,7 +2110,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicNamesrvAddress
-    *  **参数解释**： 公网元数据地址。 **取值范围**： 不涉及。
+    *  **参数解释**： 公网元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -2090,7 +2122,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets publicNamesrvAddress
     *
-    * @param string|null $publicNamesrvAddress **参数解释**： 公网元数据地址。 **取值范围**： 不涉及。
+    * @param string|null $publicNamesrvAddress **参数解释**： 公网元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -2102,7 +2134,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicNamesrvDomainName
-    *  **参数解释**： 公网元数据域名。 **取值范围**： 不涉及。
+    *  **参数解释**： 公网元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -2114,7 +2146,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets publicNamesrvDomainName
     *
-    * @param string|null $publicNamesrvDomainName **参数解释**： 公网元数据域名。 **取值范围**： 不涉及。
+    * @param string|null $publicNamesrvDomainName **参数解释**： 公网元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -2126,7 +2158,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicBrokerAddress
-    *  **参数解释**： 公网业务数据地址。 **取值范围**： 不涉及。
+    *  **参数解释**： 公网业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -2138,7 +2170,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets publicBrokerAddress
     *
-    * @param string|null $publicBrokerAddress **参数解释**： 公网业务数据地址。 **取值范围**： 不涉及。
+    * @param string|null $publicBrokerAddress **参数解释**： 公网业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -2150,7 +2182,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets grpcAddress
-    *  **参数解释**： grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
+    *  **参数解释**： grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -2162,7 +2194,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets grpcAddress
     *
-    * @param string|null $grpcAddress **参数解释**： grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
+    * @param string|null $grpcAddress **参数解释**： grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -2174,7 +2206,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets grpcDomainName
-    *  **参数解释**： grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
+    *  **参数解释**： grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -2186,7 +2218,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets grpcDomainName
     *
-    * @param string|null $grpcDomainName **参数解释**： grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
+    * @param string|null $grpcDomainName **参数解释**： grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -2198,7 +2230,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicGrpcAddress
-    *  **参数解释**： 公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
+    *  **参数解释**： 公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -2210,7 +2242,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets publicGrpcAddress
     *
-    * @param string|null $publicGrpcAddress **参数解释**： 公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
+    * @param string|null $publicGrpcAddress **参数解释**： 公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -2222,7 +2254,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicGrpcDomainName
-    *  **参数解释**： 公网grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
+    *  **参数解释**： 公网grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -2234,7 +2266,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets publicGrpcDomainName
     *
-    * @param string|null $publicGrpcDomainName **参数解释**： 公网grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **取值范围**： 不涉及。
+    * @param string|null $publicGrpcDomainName **参数解释**： 公网grpc连接域名（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -2246,7 +2278,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
+    *  **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -2258,7 +2290,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
+    * @param string|null $enterpriseProjectId **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -2270,7 +2302,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  **参数解释**： 标签列表。 **取值范围**： 不涉及。
+    *  **参数解释**： 标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\TagEntity[]|null
     */
@@ -2282,7 +2314,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\TagEntity[]|null $tags **参数解释**： 标签列表。 **取值范围**： 不涉及。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\TagEntity[]|null $tags **参数解释**： 标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -2294,7 +2326,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalStorageSpace
-    *  **参数解释**： 总存储空间。 **取值范围**： 不涉及。
+    *  **参数解释**： 总存储空间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -2306,7 +2338,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalStorageSpace
     *
-    * @param int|null $totalStorageSpace **参数解释**： 总存储空间。 **取值范围**： 不涉及。
+    * @param int|null $totalStorageSpace **参数解释**： 总存储空间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -2318,7 +2350,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSpecCode
-    *  **参数解释**： 资源规格。 **取值范围**： 不涉及。
+    *  **参数解释**： 资源规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -2330,7 +2362,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSpecCode
     *
-    * @param string|null $resourceSpecCode **参数解释**： 资源规格。 **取值范围**： 不涉及。
+    * @param string|null $resourceSpecCode **参数解释**： 资源规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -2342,7 +2374,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets producePortion
-    *  **参数解释**： 生产TPS占比。 **取值范围**： 不涉及。
+    *  **参数解释**： 生产TPS占比。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -2354,7 +2386,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets producePortion
     *
-    * @param int|null $producePortion **参数解释**： 生产TPS占比。 **取值范围**： 不涉及。
+    * @param int|null $producePortion **参数解释**： 生产TPS占比。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -2366,7 +2398,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumePortion
-    *  **参数解释**： 消费TPS占比。 **取值范围**： 不涉及。
+    *  **参数解释**： 消费TPS占比。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -2378,7 +2410,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets consumePortion
     *
-    * @param int|null $consumePortion **参数解释**： 消费TPS占比。 **取值范围**： 不涉及。
+    * @param int|null $consumePortion **参数解释**： 消费TPS占比。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -2390,7 +2422,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets drEnable
-    *  **参数解释**： 是否为容灾实例。 **取值范围**： 不涉及。
+    *  **参数解释**： 是否为容灾实例。 **约束限制**： 不涉及。 **取值范围**： - true：容灾实例。 - false：非容灾实例。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -2402,7 +2434,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets drEnable
     *
-    * @param bool|null $drEnable **参数解释**： 是否为容灾实例。 **取值范围**： 不涉及。
+    * @param bool|null $drEnable **参数解释**： 是否为容灾实例。 **约束限制**： 不涉及。 **取值范围**： - true：容灾实例。 - false：非容灾实例。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -2413,8 +2445,56 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets quotaAddress
+    *  **参数解释**： 流控地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getQuotaAddress()
+    {
+        return $this->container['quotaAddress'];
+    }
+
+    /**
+    * Sets quotaAddress
+    *
+    * @param string|null $quotaAddress **参数解释**： 流控地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setQuotaAddress($quotaAddress)
+    {
+        $this->container['quotaAddress'] = $quotaAddress;
+        return $this;
+    }
+
+    /**
+    * Gets maxMsgProcessTps
+    *  **参数解释**： 最大消息TPS。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getMaxMsgProcessTps()
+    {
+        return $this->container['maxMsgProcessTps'];
+    }
+
+    /**
+    * Sets maxMsgProcessTps
+    *
+    * @param int|null $maxMsgProcessTps **参数解释**： 最大消息TPS。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setMaxMsgProcessTps($maxMsgProcessTps)
+    {
+        $this->container['maxMsgProcessTps'] = $maxMsgProcessTps;
+        return $this;
+    }
+
+    /**
     * Gets configSslNeedRestartProcess
-    *  **参数解释**： 配置ssl是否需要重启。 **取值范围**： 不涉及。
+    *  **参数解释**： 配置ssl是否需要重启。 **约束限制**： 不涉及。 **取值范围**： - true：需要重启。 - false：不需要重启。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -2426,7 +2506,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets configSslNeedRestartProcess
     *
-    * @param bool|null $configSslNeedRestartProcess **参数解释**： 配置ssl是否需要重启。 **取值范围**： 不涉及。
+    * @param bool|null $configSslNeedRestartProcess **参数解释**： 配置ssl是否需要重启。 **约束限制**： 不涉及。 **取值范围**： - true：需要重启。 - false：不需要重启。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -2438,7 +2518,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets tlsMode
-    *  **参数解释**： 实例使用的安全协议。 **取值范围**： 不涉及。
+    *  **参数解释**： 实例使用的安全协议。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -2450,13 +2530,85 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets tlsMode
     *
-    * @param string|null $tlsMode **参数解释**： 实例使用的安全协议。 **取值范围**： 不涉及。
+    * @param string|null $tlsMode **参数解释**： 实例使用的安全协议。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
     public function setTlsMode($tlsMode)
     {
         $this->container['tlsMode'] = $tlsMode;
+        return $this;
+    }
+
+    /**
+    * Gets archType
+    *  **参数解释**： 架构类型。 **约束限制**： 不涉及。 **取值范围**： - X86。 - ARM。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getArchType()
+    {
+        return $this->container['archType'];
+    }
+
+    /**
+    * Sets archType
+    *
+    * @param string|null $archType **参数解释**： 架构类型。 **约束限制**： 不涉及。 **取值范围**： - X86。 - ARM。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setArchType($archType)
+    {
+        $this->container['archType'] = $archType;
+        return $this;
+    }
+
+    /**
+    * Gets enableElasticTps
+    *  **参数解释**： 弹性TPS开关状态。 **约束限制**： 不涉及。 **取值范围**： - true：开启弹性TPS。 - false：不开启弹性TPS。 **默认取值**： 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getEnableElasticTps()
+    {
+        return $this->container['enableElasticTps'];
+    }
+
+    /**
+    * Sets enableElasticTps
+    *
+    * @param bool|null $enableElasticTps **参数解释**： 弹性TPS开关状态。 **约束限制**： 不涉及。 **取值范围**： - true：开启弹性TPS。 - false：不开启弹性TPS。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setEnableElasticTps($enableElasticTps)
+    {
+        $this->container['enableElasticTps'] = $enableElasticTps;
+        return $this;
+    }
+
+    /**
+    * Gets autoVolumeExpandEnable
+    *  **参数解释**： 是否开启自动磁盘扩容。 **约束限制**： 不涉及。 **取值范围**： - true：开启自动磁盘扩容。 - false：不开启自动磁盘扩容。     **默认取值**： 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getAutoVolumeExpandEnable()
+    {
+        return $this->container['autoVolumeExpandEnable'];
+    }
+
+    /**
+    * Sets autoVolumeExpandEnable
+    *
+    * @param bool|null $autoVolumeExpandEnable **参数解释**： 是否开启自动磁盘扩容。 **约束限制**： 不涉及。 **取值范围**： - true：开启自动磁盘扩容。 - false：不开启自动磁盘扩容。     **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setAutoVolumeExpandEnable($autoVolumeExpandEnable)
+    {
+        $this->container['autoVolumeExpandEnable'] = $autoVolumeExpandEnable;
         return $this;
     }
 

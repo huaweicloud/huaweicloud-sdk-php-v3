@@ -26,7 +26,7 @@ class EnableIpBlacklistResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'string'
+            'body' => 'object'
     ];
 
     /**
@@ -177,7 +177,7 @@ class EnableIpBlacklistResponse implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return string|null
+    * @return object|null
     */
     public function getBody()
     {
@@ -187,7 +187,7 @@ class EnableIpBlacklistResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param string|null $body body
+    * @param object|null $body body
     *
     * @return $this
     */

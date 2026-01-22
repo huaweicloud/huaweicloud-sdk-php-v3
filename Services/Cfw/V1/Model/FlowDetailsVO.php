@@ -25,6 +25,8 @@ class FlowDetailsVO implements ModelInterface, ArrayAccess
     * deviceName  **参数解释**： 关联资产名称 **取值范围**： 不涉及
     * item  **参数解释**： 聚合项 **取值范围**： 不涉及
     * lastTime  **参数解释**： 最近访问时间 **取值范围**： 不涉及
+    * aggStartTime  **参数解释**： 聚合开始时间 **取值范围**： 不涉及
+    * aggEndTime  **参数解释**： 聚合结束时间 **取值范围**： 不涉及
     * ports  **参数解释**： 端口统计 **取值范围**： 不涉及
     * region  **参数解释**： 地区 **取值范围**： 不涉及
     * requestByte  **参数解释**： 请求字节数 **取值范围**： 不涉及
@@ -43,6 +45,8 @@ class FlowDetailsVO implements ModelInterface, ArrayAccess
             'deviceName' => 'string',
             'item' => 'string',
             'lastTime' => 'int',
+            'aggStartTime' => 'int',
+            'aggEndTime' => 'int',
             'ports' => '\HuaweiCloud\SDK\Cfw\V1\Model\ItemVO[]',
             'region' => 'string',
             'requestByte' => 'double',
@@ -61,6 +65,8 @@ class FlowDetailsVO implements ModelInterface, ArrayAccess
     * deviceName  **参数解释**： 关联资产名称 **取值范围**： 不涉及
     * item  **参数解释**： 聚合项 **取值范围**： 不涉及
     * lastTime  **参数解释**： 最近访问时间 **取值范围**： 不涉及
+    * aggStartTime  **参数解释**： 聚合开始时间 **取值范围**： 不涉及
+    * aggEndTime  **参数解释**： 聚合结束时间 **取值范围**： 不涉及
     * ports  **参数解释**： 端口统计 **取值范围**： 不涉及
     * region  **参数解释**： 地区 **取值范围**： 不涉及
     * requestByte  **参数解释**： 请求字节数 **取值范围**： 不涉及
@@ -79,6 +85,8 @@ class FlowDetailsVO implements ModelInterface, ArrayAccess
         'deviceName' => null,
         'item' => null,
         'lastTime' => 'int64',
+        'aggStartTime' => 'int64',
+        'aggEndTime' => 'int64',
         'ports' => null,
         'region' => null,
         'requestByte' => 'double',
@@ -118,6 +126,8 @@ class FlowDetailsVO implements ModelInterface, ArrayAccess
     * deviceName  **参数解释**： 关联资产名称 **取值范围**： 不涉及
     * item  **参数解释**： 聚合项 **取值范围**： 不涉及
     * lastTime  **参数解释**： 最近访问时间 **取值范围**： 不涉及
+    * aggStartTime  **参数解释**： 聚合开始时间 **取值范围**： 不涉及
+    * aggEndTime  **参数解释**： 聚合结束时间 **取值范围**： 不涉及
     * ports  **参数解释**： 端口统计 **取值范围**： 不涉及
     * region  **参数解释**： 地区 **取值范围**： 不涉及
     * requestByte  **参数解释**： 请求字节数 **取值范围**： 不涉及
@@ -136,6 +146,8 @@ class FlowDetailsVO implements ModelInterface, ArrayAccess
             'deviceName' => 'device_name',
             'item' => 'item',
             'lastTime' => 'last_time',
+            'aggStartTime' => 'agg_start_time',
+            'aggEndTime' => 'agg_end_time',
             'ports' => 'ports',
             'region' => 'region',
             'requestByte' => 'request_byte',
@@ -154,6 +166,8 @@ class FlowDetailsVO implements ModelInterface, ArrayAccess
     * deviceName  **参数解释**： 关联资产名称 **取值范围**： 不涉及
     * item  **参数解释**： 聚合项 **取值范围**： 不涉及
     * lastTime  **参数解释**： 最近访问时间 **取值范围**： 不涉及
+    * aggStartTime  **参数解释**： 聚合开始时间 **取值范围**： 不涉及
+    * aggEndTime  **参数解释**： 聚合结束时间 **取值范围**： 不涉及
     * ports  **参数解释**： 端口统计 **取值范围**： 不涉及
     * region  **参数解释**： 地区 **取值范围**： 不涉及
     * requestByte  **参数解释**： 请求字节数 **取值范围**： 不涉及
@@ -172,6 +186,8 @@ class FlowDetailsVO implements ModelInterface, ArrayAccess
             'deviceName' => 'setDeviceName',
             'item' => 'setItem',
             'lastTime' => 'setLastTime',
+            'aggStartTime' => 'setAggStartTime',
+            'aggEndTime' => 'setAggEndTime',
             'ports' => 'setPorts',
             'region' => 'setRegion',
             'requestByte' => 'setRequestByte',
@@ -190,6 +206,8 @@ class FlowDetailsVO implements ModelInterface, ArrayAccess
     * deviceName  **参数解释**： 关联资产名称 **取值范围**： 不涉及
     * item  **参数解释**： 聚合项 **取值范围**： 不涉及
     * lastTime  **参数解释**： 最近访问时间 **取值范围**： 不涉及
+    * aggStartTime  **参数解释**： 聚合开始时间 **取值范围**： 不涉及
+    * aggEndTime  **参数解释**： 聚合结束时间 **取值范围**： 不涉及
     * ports  **参数解释**： 端口统计 **取值范围**： 不涉及
     * region  **参数解释**： 地区 **取值范围**： 不涉及
     * requestByte  **参数解释**： 请求字节数 **取值范围**： 不涉及
@@ -208,6 +226,8 @@ class FlowDetailsVO implements ModelInterface, ArrayAccess
             'deviceName' => 'getDeviceName',
             'item' => 'getItem',
             'lastTime' => 'getLastTime',
+            'aggStartTime' => 'getAggStartTime',
+            'aggEndTime' => 'getAggEndTime',
             'ports' => 'getPorts',
             'region' => 'getRegion',
             'requestByte' => 'getRequestByte',
@@ -282,6 +302,8 @@ class FlowDetailsVO implements ModelInterface, ArrayAccess
         $this->container['deviceName'] = isset($data['deviceName']) ? $data['deviceName'] : null;
         $this->container['item'] = isset($data['item']) ? $data['item'] : null;
         $this->container['lastTime'] = isset($data['lastTime']) ? $data['lastTime'] : null;
+        $this->container['aggStartTime'] = isset($data['aggStartTime']) ? $data['aggStartTime'] : null;
+        $this->container['aggEndTime'] = isset($data['aggEndTime']) ? $data['aggEndTime'] : null;
         $this->container['ports'] = isset($data['ports']) ? $data['ports'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['requestByte'] = isset($data['requestByte']) ? $data['requestByte'] : null;
@@ -432,6 +454,54 @@ class FlowDetailsVO implements ModelInterface, ArrayAccess
     public function setLastTime($lastTime)
     {
         $this->container['lastTime'] = $lastTime;
+        return $this;
+    }
+
+    /**
+    * Gets aggStartTime
+    *  **参数解释**： 聚合开始时间 **取值范围**： 不涉及
+    *
+    * @return int|null
+    */
+    public function getAggStartTime()
+    {
+        return $this->container['aggStartTime'];
+    }
+
+    /**
+    * Sets aggStartTime
+    *
+    * @param int|null $aggStartTime **参数解释**： 聚合开始时间 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setAggStartTime($aggStartTime)
+    {
+        $this->container['aggStartTime'] = $aggStartTime;
+        return $this;
+    }
+
+    /**
+    * Gets aggEndTime
+    *  **参数解释**： 聚合结束时间 **取值范围**： 不涉及
+    *
+    * @return int|null
+    */
+    public function getAggEndTime()
+    {
+        return $this->container['aggEndTime'];
+    }
+
+    /**
+    * Sets aggEndTime
+    *
+    * @param int|null $aggEndTime **参数解释**： 聚合结束时间 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setAggEndTime($aggEndTime)
+    {
+        $this->container['aggEndTime'] = $aggEndTime;
         return $this;
     }
 

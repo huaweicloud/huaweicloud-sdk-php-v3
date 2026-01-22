@@ -20,9 +20,9 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  分页查询数据限制
-    * offset  查询偏移量
-    * projectId  项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    * limit  每页显示个数，范围为1-1024
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     *
     * @var string[]
@@ -36,9 +36,9 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  分页查询数据限制
-    * offset  查询偏移量
-    * projectId  项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    * limit  每页显示个数，范围为1-1024
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     *
     * @var string[]
@@ -73,9 +73,9 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  分页查询数据限制
-    * offset  查询偏移量
-    * projectId  项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    * limit  每页显示个数，范围为1-1024
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     *
     * @var string[]
@@ -89,9 +89,9 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  分页查询数据限制
-    * offset  查询偏移量
-    * projectId  项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    * limit  每页显示个数，范围为1-1024
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     *
     * @var string[]
@@ -105,9 +105,9 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  分页查询数据限制
-    * offset  查询偏移量
-    * projectId  项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    * limit  每页显示个数，范围为1-1024
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     *
     * @var string[]
@@ -225,7 +225,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  分页查询数据限制
+    *  每页显示个数，范围为1-1024
     *
     * @return int
     */
@@ -237,7 +237,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int $limit 分页查询数据限制
+    * @param int $limit 每页显示个数，范围为1-1024
     *
     * @return $this
     */
@@ -249,7 +249,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  查询偏移量
+    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
     * @return int
     */
@@ -261,7 +261,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int $offset 查询偏移量
+    * @param int $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
     * @return $this
     */
@@ -273,7 +273,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    *  项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
     *
     * @return string
     */
@@ -285,7 +285,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    * @param string $projectId 项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
     *
     * @return $this
     */

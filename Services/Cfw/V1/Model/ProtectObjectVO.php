@@ -20,9 +20,9 @@ class ProtectObjectVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id。
-    * objectName  防护对象名称
-    * type  防护对象类型：0 南北向，1 东西向护对象类型
+    * objectId  **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id。 **取值范围**： 不涉及
+    * objectName  **参数解释**： 防护对象名称 **取值范围**： 不涉及
+    * type  **参数解释**： 防护对象类型 **取值范围**： - 0：南北向 - 1：东西向
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ProtectObjectVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id。
-    * objectName  防护对象名称
-    * type  防护对象类型：0 南北向，1 东西向护对象类型
+    * objectId  **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id。 **取值范围**： 不涉及
+    * objectName  **参数解释**： 防护对象名称 **取值范围**： 不涉及
+    * type  **参数解释**： 防护对象类型 **取值范围**： - 0：南北向 - 1：东西向
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ProtectObjectVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id。
-    * objectName  防护对象名称
-    * type  防护对象类型：0 南北向，1 东西向护对象类型
+    * objectId  **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id。 **取值范围**： 不涉及
+    * objectName  **参数解释**： 防护对象名称 **取值范围**： 不涉及
+    * type  **参数解释**： 防护对象类型 **取值范围**： - 0：南北向 - 1：东西向
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ProtectObjectVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id。
-    * objectName  防护对象名称
-    * type  防护对象类型：0 南北向，1 东西向护对象类型
+    * objectId  **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id。 **取值范围**： 不涉及
+    * objectName  **参数解释**： 防护对象名称 **取值范围**： 不涉及
+    * type  **参数解释**： 防护对象类型 **取值范围**： - 0：南北向 - 1：东西向
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ProtectObjectVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id。
-    * objectName  防护对象名称
-    * type  防护对象类型：0 南北向，1 东西向护对象类型
+    * objectId  **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id。 **取值范围**： 不涉及
+    * objectName  **参数解释**： 防护对象名称 **取值范围**： 不涉及
+    * type  **参数解释**： 防护对象类型 **取值范围**： - 0：南北向 - 1：东西向
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class ProtectObjectVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id。
+    *  **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -231,7 +231,7 @@ class ProtectObjectVO implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string|null $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id。
+    * @param string|null $objectId **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class ProtectObjectVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectName
-    *  防护对象名称
+    *  **参数解释**： 防护对象名称 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -255,7 +255,7 @@ class ProtectObjectVO implements ModelInterface, ArrayAccess
     /**
     * Sets objectName
     *
-    * @param string|null $objectName 防护对象名称
+    * @param string|null $objectName **参数解释**： 防护对象名称 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class ProtectObjectVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  防护对象类型：0 南北向，1 东西向护对象类型
+    *  **参数解释**： 防护对象类型 **取值范围**： - 0：南北向 - 1：东西向
     *
     * @return int|null
     */
@@ -279,7 +279,7 @@ class ProtectObjectVO implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int|null $type 防护对象类型：0 南北向，1 东西向护对象类型
+    * @param int|null $type **参数解释**： 防护对象类型 **取值范围**： - 0：南北向 - 1：东西向
     *
     * @return $this
     */

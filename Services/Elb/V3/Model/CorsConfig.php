@@ -20,7 +20,7 @@ class CorsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * allowOrigin  **参数解释**：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  **约束限制**： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
+    * allowOrigin  **参数解释**：允许的访问来源列表。  **取值范围**：单个列表项的取值 - 通配符（*），表示匹配所有来源。 - 除通配符外，其他值只能是以http://或者https://开头（小写），后面加域名。可以是具体域名或一级泛域名，可以包含端口或不包含端口。例：http://_*.test.abc.example.com:80
     * allowMethods  **参数解释**：选择跨域访问时允许的 HTTP 方法。  **取值范围**：不涉及
     * allowHeaders  **参数解释**：允许跨域的 Header 列表。  **取值范围**：不涉及
     * exposeHeaders  **参数解释**：允许暴露的Header列表。  **取值范围**：不涉及
@@ -40,7 +40,7 @@ class CorsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * allowOrigin  **参数解释**：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  **约束限制**： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
+    * allowOrigin  **参数解释**：允许的访问来源列表。  **取值范围**：单个列表项的取值 - 通配符（*），表示匹配所有来源。 - 除通配符外，其他值只能是以http://或者https://开头（小写），后面加域名。可以是具体域名或一级泛域名，可以包含端口或不包含端口。例：http://_*.test.abc.example.com:80
     * allowMethods  **参数解释**：选择跨域访问时允许的 HTTP 方法。  **取值范围**：不涉及
     * allowHeaders  **参数解释**：允许跨域的 Header 列表。  **取值范围**：不涉及
     * exposeHeaders  **参数解释**：允许暴露的Header列表。  **取值范围**：不涉及
@@ -81,7 +81,7 @@ class CorsConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * allowOrigin  **参数解释**：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  **约束限制**： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
+    * allowOrigin  **参数解释**：允许的访问来源列表。  **取值范围**：单个列表项的取值 - 通配符（*），表示匹配所有来源。 - 除通配符外，其他值只能是以http://或者https://开头（小写），后面加域名。可以是具体域名或一级泛域名，可以包含端口或不包含端口。例：http://_*.test.abc.example.com:80
     * allowMethods  **参数解释**：选择跨域访问时允许的 HTTP 方法。  **取值范围**：不涉及
     * allowHeaders  **参数解释**：允许跨域的 Header 列表。  **取值范围**：不涉及
     * exposeHeaders  **参数解释**：允许暴露的Header列表。  **取值范围**：不涉及
@@ -101,7 +101,7 @@ class CorsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * allowOrigin  **参数解释**：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  **约束限制**： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
+    * allowOrigin  **参数解释**：允许的访问来源列表。  **取值范围**：单个列表项的取值 - 通配符（*），表示匹配所有来源。 - 除通配符外，其他值只能是以http://或者https://开头（小写），后面加域名。可以是具体域名或一级泛域名，可以包含端口或不包含端口。例：http://_*.test.abc.example.com:80
     * allowMethods  **参数解释**：选择跨域访问时允许的 HTTP 方法。  **取值范围**：不涉及
     * allowHeaders  **参数解释**：允许跨域的 Header 列表。  **取值范围**：不涉及
     * exposeHeaders  **参数解释**：允许暴露的Header列表。  **取值范围**：不涉及
@@ -121,7 +121,7 @@ class CorsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * allowOrigin  **参数解释**：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  **约束限制**： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
+    * allowOrigin  **参数解释**：允许的访问来源列表。  **取值范围**：单个列表项的取值 - 通配符（*），表示匹配所有来源。 - 除通配符外，其他值只能是以http://或者https://开头（小写），后面加域名。可以是具体域名或一级泛域名，可以包含端口或不包含端口。例：http://_*.test.abc.example.com:80
     * allowMethods  **参数解释**：选择跨域访问时允许的 HTTP 方法。  **取值范围**：不涉及
     * allowHeaders  **参数解释**：允许跨域的 Header 列表。  **取值范围**：不涉及
     * exposeHeaders  **参数解释**：允许暴露的Header列表。  **取值范围**：不涉及
@@ -229,7 +229,7 @@ class CorsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets allowOrigin
-    *  **参数解释**：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  **约束限制**： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
+    *  **参数解释**：允许的访问来源列表。  **取值范围**：单个列表项的取值 - 通配符（*），表示匹配所有来源。 - 除通配符外，其他值只能是以http://或者https://开头（小写），后面加域名。可以是具体域名或一级泛域名，可以包含端口或不包含端口。例：http://_*.test.abc.example.com:80
     *
     * @return string[]|null
     */
@@ -241,7 +241,7 @@ class CorsConfig implements ModelInterface, ArrayAccess
     /**
     * Sets allowOrigin
     *
-    * @param string[]|null $allowOrigin **参数解释**：允许的访问来源列表。支持只配置一个元素*，或配置一个或多个值。  **约束限制**： - 单个值必须以http://或者https://开头，后边加一个正确的域名或一级泛域名。（例：http://_*.test.abc.example.com） - 单个值可以不加端口，也可以指定端口，端口范围：1~65535。
+    * @param string[]|null $allowOrigin **参数解释**：允许的访问来源列表。  **取值范围**：单个列表项的取值 - 通配符（*），表示匹配所有来源。 - 除通配符外，其他值只能是以http://或者https://开头（小写），后面加域名。可以是具体域名或一级泛域名，可以包含端口或不包含端口。例：http://_*.test.abc.example.com:80
     *
     * @return $this
     */

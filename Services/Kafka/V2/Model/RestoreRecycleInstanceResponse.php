@@ -21,22 +21,22 @@ class RestoreRecycleInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instances  **参数解释**： 实例列表。
+    * results  **参数解释**： 实例恢复列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instances' => '\HuaweiCloud\SDK\Kafka\V2\Model\InstanceResumeResult[]'
+            'results' => '\HuaweiCloud\SDK\Kafka\V2\Model\InstanceResumeResult[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instances  **参数解释**： 实例列表。
+    * results  **参数解释**： 实例恢复列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instances' => null
+        'results' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class RestoreRecycleInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instances  **参数解释**： 实例列表。
+    * results  **参数解释**： 实例恢复列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instances' => 'instances'
+            'results' => 'results'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instances  **参数解释**： 实例列表。
+    * results  **参数解释**： 实例恢复列表。
     *
     * @var string[]
     */
     protected static $setters = [
-            'instances' => 'setInstances'
+            'results' => 'setResults'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instances  **参数解释**： 实例列表。
+    * results  **参数解释**： 实例恢复列表。
     *
     * @var string[]
     */
     protected static $getters = [
-            'instances' => 'getInstances'
+            'results' => 'getResults'
     ];
 
     /**
@@ -148,7 +148,7 @@ class RestoreRecycleInstanceResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['instances'] = isset($data['instances']) ? $data['instances'] : null;
+        $this->container['results'] = isset($data['results']) ? $data['results'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class RestoreRecycleInstanceResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets instances
-    *  **参数解释**： 实例列表。
+    * Gets results
+    *  **参数解释**： 实例恢复列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\InstanceResumeResult[]|null
     */
-    public function getInstances()
+    public function getResults()
     {
-        return $this->container['instances'];
+        return $this->container['results'];
     }
 
     /**
-    * Sets instances
+    * Sets results
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\InstanceResumeResult[]|null $instances **参数解释**： 实例列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\InstanceResumeResult[]|null $results **参数解释**： 实例恢复列表。
     *
     * @return $this
     */
-    public function setInstances($instances)
+    public function setResults($results)
     {
-        $this->container['instances'] = $instances;
+        $this->container['results'] = $results;
         return $this;
     }
 

@@ -20,26 +20,26 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id。，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    * name  防火墙名称
-    * haType  集群类型，包含主备（0）和集群（1）两种方式，主备模式包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点，集群模式仅拉起两个节点作为集群。
-    * chargeMode  计费模式 0：包年/包月 1：按需
-    * serviceType  防火墙防护类型，目前仅支持0，互联网防护
-    * engineType  引擎类型，0：自研引擎 1：山石引擎 3：天融信引擎
+    * fwInstanceId  **参数解释**： 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id。可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获取 **取值范围**： 不涉及
+    * name  **参数解释**： 防火墙名称 **取值范围**： 不涉及
+    * haType  **参数解释**： 集群类型 **取值范围**： - 0：主备模式，包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点 - 1：集群模式，仅拉起两个节点作为集群
+    * chargeMode  **参数解释**： 计费模式 **取值范围**： - 0：包年/包月 - 1：按需
+    * serviceType  **参数解释**： 防火墙防护类型 **取值范围**： 目前仅支持0，互联网防护
+    * engineType  **参数解释**： 引擎类型 **取值范围**： - 0：自研引擎 - 1：山石引擎 - 3：天融信引擎
     * flavor  flavor
-    * protectObjects  防护对象列表
-    * status  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
-    * isOldFirewallInstance  是否为旧引擎，true表示是，false表示不是
-    * isAvailableObs  是否支持obs，true表示是，false表示不是
-    * isSupportThreatTags  是否支持威胁情报标签，true表示是，false表示不是
-    * supportIpv6  是否支持ipv6，true表示是，false表示不是
-    * featureToggle  特性开关，boolean值为true表示是，false表示否
-    * resources  防火墙资源列表
-    * fwInstanceName  防火墙名称
-    * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
-    * resourceId  防火墙资源id，同fw_instance_id
-    * supportUrlFiltering  是否支持url过滤，true表示是，false表示不是
-    * tags  标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\"
+    * protectObjects  **参数解释**： 防护对象列表 **取值范围**： 不涉及
+    * status  **参数解释**： 防火墙状态列表 **取值范围**： - -1：等待支付 - 0：创建中 - 1，删除中 - 2：运行中 - 3：升级中 - 4：删除完成 - 5：冻结中 - 6：创建失败 - 7：删除失败 - 8：冻结失败 - 9：存储中 - 10：存储失败 - 11：升级失败
+    * isOldFirewallInstance  **参数解释**： 是否为旧引擎 **取值范围**： - true：是 - false：不是
+    * isAvailableObs  **参数解释**： 是否支持obs **取值范围**： - true：是 - false：不是
+    * isSupportThreatTags  **参数解释**： 是否支持威胁情报标签 **取值范围**： - true：是 - false：不是
+    * supportIpv6  **参数解释**： 是否支持ipv6 **取值范围**： - true：是 - false：不是
+    * featureToggle  **参数解释**： 特性开关 **取值范围**： - true：是 - false：不是
+    * resources  **参数解释**： 防火墙资源列表 **取值范围**： 不涉及
+    * fwInstanceName  **参数解释**： 防火墙名称 **取值范围**： 不涉及
+    * enterpriseProjectId  **参数解释**： 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取 **取值范围**： 不涉及
+    * resourceId  **参数解释**： 防火墙资源id，同fw_instance_id **取值范围**： 不涉及
+    * supportUrlFiltering  **参数解释**： 是否支持url过滤 **取值范围**： - true：是 - false：不是
+    * tags  **参数解释**： 标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\" **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -68,26 +68,26 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id。，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    * name  防火墙名称
-    * haType  集群类型，包含主备（0）和集群（1）两种方式，主备模式包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点，集群模式仅拉起两个节点作为集群。
-    * chargeMode  计费模式 0：包年/包月 1：按需
-    * serviceType  防火墙防护类型，目前仅支持0，互联网防护
-    * engineType  引擎类型，0：自研引擎 1：山石引擎 3：天融信引擎
+    * fwInstanceId  **参数解释**： 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id。可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获取 **取值范围**： 不涉及
+    * name  **参数解释**： 防火墙名称 **取值范围**： 不涉及
+    * haType  **参数解释**： 集群类型 **取值范围**： - 0：主备模式，包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点 - 1：集群模式，仅拉起两个节点作为集群
+    * chargeMode  **参数解释**： 计费模式 **取值范围**： - 0：包年/包月 - 1：按需
+    * serviceType  **参数解释**： 防火墙防护类型 **取值范围**： 目前仅支持0，互联网防护
+    * engineType  **参数解释**： 引擎类型 **取值范围**： - 0：自研引擎 - 1：山石引擎 - 3：天融信引擎
     * flavor  flavor
-    * protectObjects  防护对象列表
-    * status  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
-    * isOldFirewallInstance  是否为旧引擎，true表示是，false表示不是
-    * isAvailableObs  是否支持obs，true表示是，false表示不是
-    * isSupportThreatTags  是否支持威胁情报标签，true表示是，false表示不是
-    * supportIpv6  是否支持ipv6，true表示是，false表示不是
-    * featureToggle  特性开关，boolean值为true表示是，false表示否
-    * resources  防火墙资源列表
-    * fwInstanceName  防火墙名称
-    * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
-    * resourceId  防火墙资源id，同fw_instance_id
-    * supportUrlFiltering  是否支持url过滤，true表示是，false表示不是
-    * tags  标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\"
+    * protectObjects  **参数解释**： 防护对象列表 **取值范围**： 不涉及
+    * status  **参数解释**： 防火墙状态列表 **取值范围**： - -1：等待支付 - 0：创建中 - 1，删除中 - 2：运行中 - 3：升级中 - 4：删除完成 - 5：冻结中 - 6：创建失败 - 7：删除失败 - 8：冻结失败 - 9：存储中 - 10：存储失败 - 11：升级失败
+    * isOldFirewallInstance  **参数解释**： 是否为旧引擎 **取值范围**： - true：是 - false：不是
+    * isAvailableObs  **参数解释**： 是否支持obs **取值范围**： - true：是 - false：不是
+    * isSupportThreatTags  **参数解释**： 是否支持威胁情报标签 **取值范围**： - true：是 - false：不是
+    * supportIpv6  **参数解释**： 是否支持ipv6 **取值范围**： - true：是 - false：不是
+    * featureToggle  **参数解释**： 特性开关 **取值范围**： - true：是 - false：不是
+    * resources  **参数解释**： 防火墙资源列表 **取值范围**： 不涉及
+    * fwInstanceName  **参数解释**： 防火墙名称 **取值范围**： 不涉及
+    * enterpriseProjectId  **参数解释**： 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取 **取值范围**： 不涉及
+    * resourceId  **参数解释**： 防火墙资源id，同fw_instance_id **取值范围**： 不涉及
+    * supportUrlFiltering  **参数解释**： 是否支持url过滤 **取值范围**： - true：是 - false：不是
+    * tags  **参数解释**： 标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\" **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -137,26 +137,26 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id。，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    * name  防火墙名称
-    * haType  集群类型，包含主备（0）和集群（1）两种方式，主备模式包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点，集群模式仅拉起两个节点作为集群。
-    * chargeMode  计费模式 0：包年/包月 1：按需
-    * serviceType  防火墙防护类型，目前仅支持0，互联网防护
-    * engineType  引擎类型，0：自研引擎 1：山石引擎 3：天融信引擎
+    * fwInstanceId  **参数解释**： 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id。可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获取 **取值范围**： 不涉及
+    * name  **参数解释**： 防火墙名称 **取值范围**： 不涉及
+    * haType  **参数解释**： 集群类型 **取值范围**： - 0：主备模式，包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点 - 1：集群模式，仅拉起两个节点作为集群
+    * chargeMode  **参数解释**： 计费模式 **取值范围**： - 0：包年/包月 - 1：按需
+    * serviceType  **参数解释**： 防火墙防护类型 **取值范围**： 目前仅支持0，互联网防护
+    * engineType  **参数解释**： 引擎类型 **取值范围**： - 0：自研引擎 - 1：山石引擎 - 3：天融信引擎
     * flavor  flavor
-    * protectObjects  防护对象列表
-    * status  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
-    * isOldFirewallInstance  是否为旧引擎，true表示是，false表示不是
-    * isAvailableObs  是否支持obs，true表示是，false表示不是
-    * isSupportThreatTags  是否支持威胁情报标签，true表示是，false表示不是
-    * supportIpv6  是否支持ipv6，true表示是，false表示不是
-    * featureToggle  特性开关，boolean值为true表示是，false表示否
-    * resources  防火墙资源列表
-    * fwInstanceName  防火墙名称
-    * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
-    * resourceId  防火墙资源id，同fw_instance_id
-    * supportUrlFiltering  是否支持url过滤，true表示是，false表示不是
-    * tags  标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\"
+    * protectObjects  **参数解释**： 防护对象列表 **取值范围**： 不涉及
+    * status  **参数解释**： 防火墙状态列表 **取值范围**： - -1：等待支付 - 0：创建中 - 1，删除中 - 2：运行中 - 3：升级中 - 4：删除完成 - 5：冻结中 - 6：创建失败 - 7：删除失败 - 8：冻结失败 - 9：存储中 - 10：存储失败 - 11：升级失败
+    * isOldFirewallInstance  **参数解释**： 是否为旧引擎 **取值范围**： - true：是 - false：不是
+    * isAvailableObs  **参数解释**： 是否支持obs **取值范围**： - true：是 - false：不是
+    * isSupportThreatTags  **参数解释**： 是否支持威胁情报标签 **取值范围**： - true：是 - false：不是
+    * supportIpv6  **参数解释**： 是否支持ipv6 **取值范围**： - true：是 - false：不是
+    * featureToggle  **参数解释**： 特性开关 **取值范围**： - true：是 - false：不是
+    * resources  **参数解释**： 防火墙资源列表 **取值范围**： 不涉及
+    * fwInstanceName  **参数解释**： 防火墙名称 **取值范围**： 不涉及
+    * enterpriseProjectId  **参数解释**： 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取 **取值范围**： 不涉及
+    * resourceId  **参数解释**： 防火墙资源id，同fw_instance_id **取值范围**： 不涉及
+    * supportUrlFiltering  **参数解释**： 是否支持url过滤 **取值范围**： - true：是 - false：不是
+    * tags  **参数解释**： 标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\" **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -185,26 +185,26 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id。，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    * name  防火墙名称
-    * haType  集群类型，包含主备（0）和集群（1）两种方式，主备模式包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点，集群模式仅拉起两个节点作为集群。
-    * chargeMode  计费模式 0：包年/包月 1：按需
-    * serviceType  防火墙防护类型，目前仅支持0，互联网防护
-    * engineType  引擎类型，0：自研引擎 1：山石引擎 3：天融信引擎
+    * fwInstanceId  **参数解释**： 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id。可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获取 **取值范围**： 不涉及
+    * name  **参数解释**： 防火墙名称 **取值范围**： 不涉及
+    * haType  **参数解释**： 集群类型 **取值范围**： - 0：主备模式，包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点 - 1：集群模式，仅拉起两个节点作为集群
+    * chargeMode  **参数解释**： 计费模式 **取值范围**： - 0：包年/包月 - 1：按需
+    * serviceType  **参数解释**： 防火墙防护类型 **取值范围**： 目前仅支持0，互联网防护
+    * engineType  **参数解释**： 引擎类型 **取值范围**： - 0：自研引擎 - 1：山石引擎 - 3：天融信引擎
     * flavor  flavor
-    * protectObjects  防护对象列表
-    * status  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
-    * isOldFirewallInstance  是否为旧引擎，true表示是，false表示不是
-    * isAvailableObs  是否支持obs，true表示是，false表示不是
-    * isSupportThreatTags  是否支持威胁情报标签，true表示是，false表示不是
-    * supportIpv6  是否支持ipv6，true表示是，false表示不是
-    * featureToggle  特性开关，boolean值为true表示是，false表示否
-    * resources  防火墙资源列表
-    * fwInstanceName  防火墙名称
-    * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
-    * resourceId  防火墙资源id，同fw_instance_id
-    * supportUrlFiltering  是否支持url过滤，true表示是，false表示不是
-    * tags  标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\"
+    * protectObjects  **参数解释**： 防护对象列表 **取值范围**： 不涉及
+    * status  **参数解释**： 防火墙状态列表 **取值范围**： - -1：等待支付 - 0：创建中 - 1，删除中 - 2：运行中 - 3：升级中 - 4：删除完成 - 5：冻结中 - 6：创建失败 - 7：删除失败 - 8：冻结失败 - 9：存储中 - 10：存储失败 - 11：升级失败
+    * isOldFirewallInstance  **参数解释**： 是否为旧引擎 **取值范围**： - true：是 - false：不是
+    * isAvailableObs  **参数解释**： 是否支持obs **取值范围**： - true：是 - false：不是
+    * isSupportThreatTags  **参数解释**： 是否支持威胁情报标签 **取值范围**： - true：是 - false：不是
+    * supportIpv6  **参数解释**： 是否支持ipv6 **取值范围**： - true：是 - false：不是
+    * featureToggle  **参数解释**： 特性开关 **取值范围**： - true：是 - false：不是
+    * resources  **参数解释**： 防火墙资源列表 **取值范围**： 不涉及
+    * fwInstanceName  **参数解释**： 防火墙名称 **取值范围**： 不涉及
+    * enterpriseProjectId  **参数解释**： 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取 **取值范围**： 不涉及
+    * resourceId  **参数解释**： 防火墙资源id，同fw_instance_id **取值范围**： 不涉及
+    * supportUrlFiltering  **参数解释**： 是否支持url过滤 **取值范围**： - true：是 - false：不是
+    * tags  **参数解释**： 标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\" **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -233,26 +233,26 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id。，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    * name  防火墙名称
-    * haType  集群类型，包含主备（0）和集群（1）两种方式，主备模式包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点，集群模式仅拉起两个节点作为集群。
-    * chargeMode  计费模式 0：包年/包月 1：按需
-    * serviceType  防火墙防护类型，目前仅支持0，互联网防护
-    * engineType  引擎类型，0：自研引擎 1：山石引擎 3：天融信引擎
+    * fwInstanceId  **参数解释**： 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id。可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获取 **取值范围**： 不涉及
+    * name  **参数解释**： 防火墙名称 **取值范围**： 不涉及
+    * haType  **参数解释**： 集群类型 **取值范围**： - 0：主备模式，包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点 - 1：集群模式，仅拉起两个节点作为集群
+    * chargeMode  **参数解释**： 计费模式 **取值范围**： - 0：包年/包月 - 1：按需
+    * serviceType  **参数解释**： 防火墙防护类型 **取值范围**： 目前仅支持0，互联网防护
+    * engineType  **参数解释**： 引擎类型 **取值范围**： - 0：自研引擎 - 1：山石引擎 - 3：天融信引擎
     * flavor  flavor
-    * protectObjects  防护对象列表
-    * status  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
-    * isOldFirewallInstance  是否为旧引擎，true表示是，false表示不是
-    * isAvailableObs  是否支持obs，true表示是，false表示不是
-    * isSupportThreatTags  是否支持威胁情报标签，true表示是，false表示不是
-    * supportIpv6  是否支持ipv6，true表示是，false表示不是
-    * featureToggle  特性开关，boolean值为true表示是，false表示否
-    * resources  防火墙资源列表
-    * fwInstanceName  防火墙名称
-    * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
-    * resourceId  防火墙资源id，同fw_instance_id
-    * supportUrlFiltering  是否支持url过滤，true表示是，false表示不是
-    * tags  标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\"
+    * protectObjects  **参数解释**： 防护对象列表 **取值范围**： 不涉及
+    * status  **参数解释**： 防火墙状态列表 **取值范围**： - -1：等待支付 - 0：创建中 - 1，删除中 - 2：运行中 - 3：升级中 - 4：删除完成 - 5：冻结中 - 6：创建失败 - 7：删除失败 - 8：冻结失败 - 9：存储中 - 10：存储失败 - 11：升级失败
+    * isOldFirewallInstance  **参数解释**： 是否为旧引擎 **取值范围**： - true：是 - false：不是
+    * isAvailableObs  **参数解释**： 是否支持obs **取值范围**： - true：是 - false：不是
+    * isSupportThreatTags  **参数解释**： 是否支持威胁情报标签 **取值范围**： - true：是 - false：不是
+    * supportIpv6  **参数解释**： 是否支持ipv6 **取值范围**： - true：是 - false：不是
+    * featureToggle  **参数解释**： 特性开关 **取值范围**： - true：是 - false：不是
+    * resources  **参数解释**： 防火墙资源列表 **取值范围**： 不涉及
+    * fwInstanceName  **参数解释**： 防火墙名称 **取值范围**： 不涉及
+    * enterpriseProjectId  **参数解释**： 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取 **取值范围**： 不涉及
+    * resourceId  **参数解释**： 防火墙资源id，同fw_instance_id **取值范围**： 不涉及
+    * supportUrlFiltering  **参数解释**： 是否支持url过滤 **取值范围**： - true：是 - false：不是
+    * tags  **参数解释**： 标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\" **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -383,7 +383,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets fwInstanceId
-    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id。，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    *  **参数解释**： 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id。可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获取 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -395,7 +395,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Sets fwInstanceId
     *
-    * @param string|null $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id。，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * @param string|null $fwInstanceId **参数解释**： 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id。可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获取 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -407,7 +407,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  防火墙名称
+    *  **参数解释**： 防火墙名称 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -419,7 +419,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 防火墙名称
+    * @param string|null $name **参数解释**： 防火墙名称 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -431,7 +431,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets haType
-    *  集群类型，包含主备（0）和集群（1）两种方式，主备模式包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点，集群模式仅拉起两个节点作为集群。
+    *  **参数解释**： 集群类型 **取值范围**： - 0：主备模式，包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点 - 1：集群模式，仅拉起两个节点作为集群
     *
     * @return int|null
     */
@@ -443,7 +443,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Sets haType
     *
-    * @param int|null $haType 集群类型，包含主备（0）和集群（1）两种方式，主备模式包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点，集群模式仅拉起两个节点作为集群。
+    * @param int|null $haType **参数解释**： 集群类型 **取值范围**： - 0：主备模式，包含四个节点，2个主节点构成集群，剩余两个节点为主节点的备节点 - 1：集群模式，仅拉起两个节点作为集群
     *
     * @return $this
     */
@@ -455,7 +455,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  计费模式 0：包年/包月 1：按需
+    *  **参数解释**： 计费模式 **取值范围**： - 0：包年/包月 - 1：按需
     *
     * @return int|null
     */
@@ -467,7 +467,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param int|null $chargeMode 计费模式 0：包年/包月 1：按需
+    * @param int|null $chargeMode **参数解释**： 计费模式 **取值范围**： - 0：包年/包月 - 1：按需
     *
     * @return $this
     */
@@ -479,7 +479,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
-    *  防火墙防护类型，目前仅支持0，互联网防护
+    *  **参数解释**： 防火墙防护类型 **取值范围**： 目前仅支持0，互联网防护
     *
     * @return int|null
     */
@@ -491,7 +491,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Sets serviceType
     *
-    * @param int|null $serviceType 防火墙防护类型，目前仅支持0，互联网防护
+    * @param int|null $serviceType **参数解释**： 防火墙防护类型 **取值范围**： 目前仅支持0，互联网防护
     *
     * @return $this
     */
@@ -503,7 +503,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets engineType
-    *  引擎类型，0：自研引擎 1：山石引擎 3：天融信引擎
+    *  **参数解释**： 引擎类型 **取值范围**： - 0：自研引擎 - 1：山石引擎 - 3：天融信引擎
     *
     * @return int|null
     */
@@ -515,7 +515,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Sets engineType
     *
-    * @param int|null $engineType 引擎类型，0：自研引擎 1：山石引擎 3：天融信引擎
+    * @param int|null $engineType **参数解释**： 引擎类型 **取值范围**： - 0：自研引擎 - 1：山石引擎 - 3：天融信引擎
     *
     * @return $this
     */
@@ -551,7 +551,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectObjects
-    *  防护对象列表
+    *  **参数解释**： 防护对象列表 **取值范围**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\ProtectObjectVO[]|null
     */
@@ -563,7 +563,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Sets protectObjects
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\ProtectObjectVO[]|null $protectObjects 防护对象列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\ProtectObjectVO[]|null $protectObjects **参数解释**： 防护对象列表 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -575,7 +575,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
+    *  **参数解释**： 防火墙状态列表 **取值范围**： - -1：等待支付 - 0：创建中 - 1，删除中 - 2：运行中 - 3：升级中 - 4：删除完成 - 5：冻结中 - 6：创建失败 - 7：删除失败 - 8：冻结失败 - 9：存储中 - 10：存储失败 - 11：升级失败
     *
     * @return int|null
     */
@@ -587,7 +587,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
+    * @param int|null $status **参数解释**： 防火墙状态列表 **取值范围**： - -1：等待支付 - 0：创建中 - 1，删除中 - 2：运行中 - 3：升级中 - 4：删除完成 - 5：冻结中 - 6：创建失败 - 7：删除失败 - 8：冻结失败 - 9：存储中 - 10：存储失败 - 11：升级失败
     *
     * @return $this
     */
@@ -599,7 +599,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets isOldFirewallInstance
-    *  是否为旧引擎，true表示是，false表示不是
+    *  **参数解释**： 是否为旧引擎 **取值范围**： - true：是 - false：不是
     *
     * @return bool|null
     */
@@ -611,7 +611,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Sets isOldFirewallInstance
     *
-    * @param bool|null $isOldFirewallInstance 是否为旧引擎，true表示是，false表示不是
+    * @param bool|null $isOldFirewallInstance **参数解释**： 是否为旧引擎 **取值范围**： - true：是 - false：不是
     *
     * @return $this
     */
@@ -623,7 +623,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAvailableObs
-    *  是否支持obs，true表示是，false表示不是
+    *  **参数解释**： 是否支持obs **取值范围**： - true：是 - false：不是
     *
     * @return bool|null
     */
@@ -635,7 +635,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Sets isAvailableObs
     *
-    * @param bool|null $isAvailableObs 是否支持obs，true表示是，false表示不是
+    * @param bool|null $isAvailableObs **参数解释**： 是否支持obs **取值范围**： - true：是 - false：不是
     *
     * @return $this
     */
@@ -647,7 +647,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSupportThreatTags
-    *  是否支持威胁情报标签，true表示是，false表示不是
+    *  **参数解释**： 是否支持威胁情报标签 **取值范围**： - true：是 - false：不是
     *
     * @return bool|null
     */
@@ -659,7 +659,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Sets isSupportThreatTags
     *
-    * @param bool|null $isSupportThreatTags 是否支持威胁情报标签，true表示是，false表示不是
+    * @param bool|null $isSupportThreatTags **参数解释**： 是否支持威胁情报标签 **取值范围**： - true：是 - false：不是
     *
     * @return $this
     */
@@ -671,7 +671,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportIpv6
-    *  是否支持ipv6，true表示是，false表示不是
+    *  **参数解释**： 是否支持ipv6 **取值范围**： - true：是 - false：不是
     *
     * @return bool|null
     */
@@ -683,7 +683,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Sets supportIpv6
     *
-    * @param bool|null $supportIpv6 是否支持ipv6，true表示是，false表示不是
+    * @param bool|null $supportIpv6 **参数解释**： 是否支持ipv6 **取值范围**： - true：是 - false：不是
     *
     * @return $this
     */
@@ -695,7 +695,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets featureToggle
-    *  特性开关，boolean值为true表示是，false表示否
+    *  **参数解释**： 特性开关 **取值范围**： - true：是 - false：不是
     *
     * @return map[string,bool]|null
     */
@@ -707,7 +707,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Sets featureToggle
     *
-    * @param map[string,bool]|null $featureToggle 特性开关，boolean值为true表示是，false表示否
+    * @param map[string,bool]|null $featureToggle **参数解释**： 特性开关 **取值范围**： - true：是 - false：不是
     *
     * @return $this
     */
@@ -719,7 +719,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets resources
-    *  防火墙资源列表
+    *  **参数解释**： 防火墙资源列表 **取值范围**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\FirewallInstanceResource[]|null
     */
@@ -731,7 +731,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\FirewallInstanceResource[]|null $resources 防火墙资源列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\FirewallInstanceResource[]|null $resources **参数解释**： 防火墙资源列表 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -743,7 +743,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets fwInstanceName
-    *  防火墙名称
+    *  **参数解释**： 防火墙名称 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -755,7 +755,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Sets fwInstanceName
     *
-    * @param string|null $fwInstanceName 防火墙名称
+    * @param string|null $fwInstanceName **参数解释**： 防火墙名称 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -767,7 +767,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
+    *  **参数解释**： 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -779,7 +779,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
+    * @param string|null $enterpriseProjectId **参数解释**： 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -791,7 +791,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  防火墙资源id，同fw_instance_id
+    *  **参数解释**： 防火墙资源id，同fw_instance_id **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -803,7 +803,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId 防火墙资源id，同fw_instance_id
+    * @param string|null $resourceId **参数解释**： 防火墙资源id，同fw_instance_id **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -815,7 +815,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportUrlFiltering
-    *  是否支持url过滤，true表示是，false表示不是
+    *  **参数解释**： 是否支持url过滤 **取值范围**： - true：是 - false：不是
     *
     * @return bool|null
     */
@@ -827,7 +827,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Sets supportUrlFiltering
     *
-    * @param bool|null $supportUrlFiltering 是否支持url过滤，true表示是，false表示不是
+    * @param bool|null $supportUrlFiltering **参数解释**： 是否支持url过滤 **取值范围**： - true：是 - false：不是
     *
     * @return $this
     */
@@ -839,7 +839,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\"
+    *  **参数解释**： 标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\" **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -851,7 +851,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string|null $tags 标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\"
+    * @param string|null $tags **参数解释**： 标签列表，标签键值map转化的json字符串，如\"{\\\"key\\\":\\\"value\\\"}\" **取值范围**： 不涉及
     *
     * @return $this
     */

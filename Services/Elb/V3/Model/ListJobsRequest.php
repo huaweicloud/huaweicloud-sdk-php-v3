@@ -24,8 +24,8 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * marker  **参数解释**：上一页最后一条记录的ID。  **约束限制**： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。  **取值范围**：不涉及  **默认取值**：不涉及
     * pageReverse  **参数解释**：是否反向查询。  **约束限制**： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。  **取值范围**： - true：查询上一页。 - false：查询下一页。  **默认取值**：false
     * jobId  **参数解释**：任务ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
-    * jobType  **参数解释**：任务类型。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
-    * status  **参数解释**：任务状态。  **约束限制**：不涉及  **取值范围**：INIT,RUNNING,FAIL,SUCCESS,ROLLBACKING,COMPLETE,ROLLBACK_FAIL,CANCEL  **默认取值**：不涉及
+    * jobType  **参数解释**：任务类型。  **约束限制**：不涉及  **取值范围**： - cloneLoadbalancer：复制负载均衡器任务。 - cloneListener：复制监听器任务。 - batchCreateV2Loadbalancer：批量创建共享型负载均衡器任务。 - batchCreateV3Loadbalancer：批量创建独享型负载均衡器任务。 - batchDeleteLoadbalancer：批量删除负载均衡器任务。 - batchDeleteListener：批量删除监听器任务。  **默认取值**：不涉及
+    * status  **参数解释**：任务状态。  **约束限制**：不涉及  **取值范围**： - INIT：初始状态。 - RUNNING：任务处理中。 - FAIL：任务处理失败。 - SUCCESS：任务处理成功。 - ROLLBACKING：任务正在回退。 - COMPLETE：任务完成。 - ROLLBACK_FAIL：回退失败。 - CANCEL：已取消。  **默认取值**：不涉及
     * errorCode  **参数解释**：任务的错误码。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * resourceId  **参数解释**：资源ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * beginTime  **参数解释**：查询任务的开始时间大于等于传入时间的任务。格式：yyyy-MM-dd'T'HH:mm:ss  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
@@ -50,8 +50,8 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * marker  **参数解释**：上一页最后一条记录的ID。  **约束限制**： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。  **取值范围**：不涉及  **默认取值**：不涉及
     * pageReverse  **参数解释**：是否反向查询。  **约束限制**： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。  **取值范围**： - true：查询上一页。 - false：查询下一页。  **默认取值**：false
     * jobId  **参数解释**：任务ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
-    * jobType  **参数解释**：任务类型。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
-    * status  **参数解释**：任务状态。  **约束限制**：不涉及  **取值范围**：INIT,RUNNING,FAIL,SUCCESS,ROLLBACKING,COMPLETE,ROLLBACK_FAIL,CANCEL  **默认取值**：不涉及
+    * jobType  **参数解释**：任务类型。  **约束限制**：不涉及  **取值范围**： - cloneLoadbalancer：复制负载均衡器任务。 - cloneListener：复制监听器任务。 - batchCreateV2Loadbalancer：批量创建共享型负载均衡器任务。 - batchCreateV3Loadbalancer：批量创建独享型负载均衡器任务。 - batchDeleteLoadbalancer：批量删除负载均衡器任务。 - batchDeleteListener：批量删除监听器任务。  **默认取值**：不涉及
+    * status  **参数解释**：任务状态。  **约束限制**：不涉及  **取值范围**： - INIT：初始状态。 - RUNNING：任务处理中。 - FAIL：任务处理失败。 - SUCCESS：任务处理成功。 - ROLLBACKING：任务正在回退。 - COMPLETE：任务完成。 - ROLLBACK_FAIL：回退失败。 - CANCEL：已取消。  **默认取值**：不涉及
     * errorCode  **参数解释**：任务的错误码。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * resourceId  **参数解释**：资源ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * beginTime  **参数解释**：查询任务的开始时间大于等于传入时间的任务。格式：yyyy-MM-dd'T'HH:mm:ss  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
@@ -97,8 +97,8 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * marker  **参数解释**：上一页最后一条记录的ID。  **约束限制**： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。  **取值范围**：不涉及  **默认取值**：不涉及
     * pageReverse  **参数解释**：是否反向查询。  **约束限制**： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。  **取值范围**： - true：查询上一页。 - false：查询下一页。  **默认取值**：false
     * jobId  **参数解释**：任务ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
-    * jobType  **参数解释**：任务类型。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
-    * status  **参数解释**：任务状态。  **约束限制**：不涉及  **取值范围**：INIT,RUNNING,FAIL,SUCCESS,ROLLBACKING,COMPLETE,ROLLBACK_FAIL,CANCEL  **默认取值**：不涉及
+    * jobType  **参数解释**：任务类型。  **约束限制**：不涉及  **取值范围**： - cloneLoadbalancer：复制负载均衡器任务。 - cloneListener：复制监听器任务。 - batchCreateV2Loadbalancer：批量创建共享型负载均衡器任务。 - batchCreateV3Loadbalancer：批量创建独享型负载均衡器任务。 - batchDeleteLoadbalancer：批量删除负载均衡器任务。 - batchDeleteListener：批量删除监听器任务。  **默认取值**：不涉及
+    * status  **参数解释**：任务状态。  **约束限制**：不涉及  **取值范围**： - INIT：初始状态。 - RUNNING：任务处理中。 - FAIL：任务处理失败。 - SUCCESS：任务处理成功。 - ROLLBACKING：任务正在回退。 - COMPLETE：任务完成。 - ROLLBACK_FAIL：回退失败。 - CANCEL：已取消。  **默认取值**：不涉及
     * errorCode  **参数解释**：任务的错误码。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * resourceId  **参数解释**：资源ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * beginTime  **参数解释**：查询任务的开始时间大于等于传入时间的任务。格式：yyyy-MM-dd'T'HH:mm:ss  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
@@ -123,8 +123,8 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * marker  **参数解释**：上一页最后一条记录的ID。  **约束限制**： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。  **取值范围**：不涉及  **默认取值**：不涉及
     * pageReverse  **参数解释**：是否反向查询。  **约束限制**： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。  **取值范围**： - true：查询上一页。 - false：查询下一页。  **默认取值**：false
     * jobId  **参数解释**：任务ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
-    * jobType  **参数解释**：任务类型。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
-    * status  **参数解释**：任务状态。  **约束限制**：不涉及  **取值范围**：INIT,RUNNING,FAIL,SUCCESS,ROLLBACKING,COMPLETE,ROLLBACK_FAIL,CANCEL  **默认取值**：不涉及
+    * jobType  **参数解释**：任务类型。  **约束限制**：不涉及  **取值范围**： - cloneLoadbalancer：复制负载均衡器任务。 - cloneListener：复制监听器任务。 - batchCreateV2Loadbalancer：批量创建共享型负载均衡器任务。 - batchCreateV3Loadbalancer：批量创建独享型负载均衡器任务。 - batchDeleteLoadbalancer：批量删除负载均衡器任务。 - batchDeleteListener：批量删除监听器任务。  **默认取值**：不涉及
+    * status  **参数解释**：任务状态。  **约束限制**：不涉及  **取值范围**： - INIT：初始状态。 - RUNNING：任务处理中。 - FAIL：任务处理失败。 - SUCCESS：任务处理成功。 - ROLLBACKING：任务正在回退。 - COMPLETE：任务完成。 - ROLLBACK_FAIL：回退失败。 - CANCEL：已取消。  **默认取值**：不涉及
     * errorCode  **参数解释**：任务的错误码。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * resourceId  **参数解释**：资源ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * beginTime  **参数解释**：查询任务的开始时间大于等于传入时间的任务。格式：yyyy-MM-dd'T'HH:mm:ss  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
@@ -149,8 +149,8 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * marker  **参数解释**：上一页最后一条记录的ID。  **约束限制**： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。  **取值范围**：不涉及  **默认取值**：不涉及
     * pageReverse  **参数解释**：是否反向查询。  **约束限制**： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。  **取值范围**： - true：查询上一页。 - false：查询下一页。  **默认取值**：false
     * jobId  **参数解释**：任务ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
-    * jobType  **参数解释**：任务类型。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
-    * status  **参数解释**：任务状态。  **约束限制**：不涉及  **取值范围**：INIT,RUNNING,FAIL,SUCCESS,ROLLBACKING,COMPLETE,ROLLBACK_FAIL,CANCEL  **默认取值**：不涉及
+    * jobType  **参数解释**：任务类型。  **约束限制**：不涉及  **取值范围**： - cloneLoadbalancer：复制负载均衡器任务。 - cloneListener：复制监听器任务。 - batchCreateV2Loadbalancer：批量创建共享型负载均衡器任务。 - batchCreateV3Loadbalancer：批量创建独享型负载均衡器任务。 - batchDeleteLoadbalancer：批量删除负载均衡器任务。 - batchDeleteListener：批量删除监听器任务。  **默认取值**：不涉及
+    * status  **参数解释**：任务状态。  **约束限制**：不涉及  **取值范围**： - INIT：初始状态。 - RUNNING：任务处理中。 - FAIL：任务处理失败。 - SUCCESS：任务处理成功。 - ROLLBACKING：任务正在回退。 - COMPLETE：任务完成。 - ROLLBACK_FAIL：回退失败。 - CANCEL：已取消。  **默认取值**：不涉及
     * errorCode  **参数解释**：任务的错误码。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * resourceId  **参数解释**：资源ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * beginTime  **参数解释**：查询任务的开始时间大于等于传入时间的任务。格式：yyyy-MM-dd'T'HH:mm:ss  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
@@ -364,7 +364,7 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobType
-    *  **参数解释**：任务类型。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    *  **参数解释**：任务类型。  **约束限制**：不涉及  **取值范围**： - cloneLoadbalancer：复制负载均衡器任务。 - cloneListener：复制监听器任务。 - batchCreateV2Loadbalancer：批量创建共享型负载均衡器任务。 - batchCreateV3Loadbalancer：批量创建独享型负载均衡器任务。 - batchDeleteLoadbalancer：批量删除负载均衡器任务。 - batchDeleteListener：批量删除监听器任务。  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -376,7 +376,7 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets jobType
     *
-    * @param string|null $jobType **参数解释**：任务类型。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * @param string|null $jobType **参数解释**：任务类型。  **约束限制**：不涉及  **取值范围**： - cloneLoadbalancer：复制负载均衡器任务。 - cloneListener：复制监听器任务。 - batchCreateV2Loadbalancer：批量创建共享型负载均衡器任务。 - batchCreateV3Loadbalancer：批量创建独享型负载均衡器任务。 - batchDeleteLoadbalancer：批量删除负载均衡器任务。 - batchDeleteListener：批量删除监听器任务。  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -388,7 +388,7 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**：任务状态。  **约束限制**：不涉及  **取值范围**：INIT,RUNNING,FAIL,SUCCESS,ROLLBACKING,COMPLETE,ROLLBACK_FAIL,CANCEL  **默认取值**：不涉及
+    *  **参数解释**：任务状态。  **约束限制**：不涉及  **取值范围**： - INIT：初始状态。 - RUNNING：任务处理中。 - FAIL：任务处理失败。 - SUCCESS：任务处理成功。 - ROLLBACKING：任务正在回退。 - COMPLETE：任务完成。 - ROLLBACK_FAIL：回退失败。 - CANCEL：已取消。  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -400,7 +400,7 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**：任务状态。  **约束限制**：不涉及  **取值范围**：INIT,RUNNING,FAIL,SUCCESS,ROLLBACKING,COMPLETE,ROLLBACK_FAIL,CANCEL  **默认取值**：不涉及
+    * @param string|null $status **参数解释**：任务状态。  **约束限制**：不涉及  **取值范围**： - INIT：初始状态。 - RUNNING：任务处理中。 - FAIL：任务处理失败。 - SUCCESS：任务处理成功。 - ROLLBACKING：任务正在回退。 - COMPLETE：任务完成。 - ROLLBACK_FAIL：回退失败。 - CANCEL：已取消。  **默认取值**：不涉及
     *
     * @return $this
     */

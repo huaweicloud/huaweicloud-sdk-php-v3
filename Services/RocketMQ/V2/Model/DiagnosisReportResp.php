@@ -20,13 +20,13 @@ class DiagnosisReportResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * reportId  **参数解释**： 报告ID。 **取值范围**： 不涉及。
-    * groupName  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
-    * consumerNums  **参数解释**： 消费者数量。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
-    * creatAt  **参数解释**： 生成时间。 **取值范围**： 不涉及。
-    * abnormalItemSum  **参数解释**： 异常项数量。 **取值范围**： 不涉及。
-    * faultedNodeSum  **参数解释**： 异常节点数量。 **取值范围**： 不涉及。
+    * reportId  **参数解释**： 报告ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupName  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumerNums  **参数解释**： 消费者数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 状态。 **约束限制**： 不涉及。 **取值范围**： - diagnosing：诊断中。 - failed：诊断失败。 - deleted：手动删除。 - finished：诊断完成。 - normal：诊断结果正常。 - abnormal：诊断结果异常。 **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * abnormalItemSum  **参数解释**： 异常项数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * faultedNodeSum  **参数解释**： 异常节点数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -35,20 +35,20 @@ class DiagnosisReportResp implements ModelInterface, ArrayAccess
             'groupName' => 'string',
             'consumerNums' => 'int',
             'status' => 'string',
-            'creatAt' => 'int',
+            'createdAt' => 'string',
             'abnormalItemSum' => 'int',
             'faultedNodeSum' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * reportId  **参数解释**： 报告ID。 **取值范围**： 不涉及。
-    * groupName  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
-    * consumerNums  **参数解释**： 消费者数量。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
-    * creatAt  **参数解释**： 生成时间。 **取值范围**： 不涉及。
-    * abnormalItemSum  **参数解释**： 异常项数量。 **取值范围**： 不涉及。
-    * faultedNodeSum  **参数解释**： 异常节点数量。 **取值范围**： 不涉及。
+    * reportId  **参数解释**： 报告ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupName  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumerNums  **参数解释**： 消费者数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 状态。 **约束限制**： 不涉及。 **取值范围**： - diagnosing：诊断中。 - failed：诊断失败。 - deleted：手动删除。 - finished：诊断完成。 - normal：诊断结果正常。 - abnormal：诊断结果异常。 **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * abnormalItemSum  **参数解释**： 异常项数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * faultedNodeSum  **参数解释**： 异常节点数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -57,7 +57,7 @@ class DiagnosisReportResp implements ModelInterface, ArrayAccess
         'groupName' => null,
         'consumerNums' => 'int32',
         'status' => null,
-        'creatAt' => 'int64',
+        'createdAt' => null,
         'abnormalItemSum' => 'int32',
         'faultedNodeSum' => 'int32'
     ];
@@ -85,13 +85,13 @@ class DiagnosisReportResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * reportId  **参数解释**： 报告ID。 **取值范围**： 不涉及。
-    * groupName  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
-    * consumerNums  **参数解释**： 消费者数量。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
-    * creatAt  **参数解释**： 生成时间。 **取值范围**： 不涉及。
-    * abnormalItemSum  **参数解释**： 异常项数量。 **取值范围**： 不涉及。
-    * faultedNodeSum  **参数解释**： 异常节点数量。 **取值范围**： 不涉及。
+    * reportId  **参数解释**： 报告ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupName  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumerNums  **参数解释**： 消费者数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 状态。 **约束限制**： 不涉及。 **取值范围**： - diagnosing：诊断中。 - failed：诊断失败。 - deleted：手动删除。 - finished：诊断完成。 - normal：诊断结果正常。 - abnormal：诊断结果异常。 **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * abnormalItemSum  **参数解释**： 异常项数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * faultedNodeSum  **参数解释**： 异常节点数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -100,20 +100,20 @@ class DiagnosisReportResp implements ModelInterface, ArrayAccess
             'groupName' => 'group_name',
             'consumerNums' => 'consumer_nums',
             'status' => 'status',
-            'creatAt' => 'creat_at',
+            'createdAt' => 'created_at',
             'abnormalItemSum' => 'abnormal_item_sum',
             'faultedNodeSum' => 'faulted_node_sum'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * reportId  **参数解释**： 报告ID。 **取值范围**： 不涉及。
-    * groupName  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
-    * consumerNums  **参数解释**： 消费者数量。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
-    * creatAt  **参数解释**： 生成时间。 **取值范围**： 不涉及。
-    * abnormalItemSum  **参数解释**： 异常项数量。 **取值范围**： 不涉及。
-    * faultedNodeSum  **参数解释**： 异常节点数量。 **取值范围**： 不涉及。
+    * reportId  **参数解释**： 报告ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupName  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumerNums  **参数解释**： 消费者数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 状态。 **约束限制**： 不涉及。 **取值范围**： - diagnosing：诊断中。 - failed：诊断失败。 - deleted：手动删除。 - finished：诊断完成。 - normal：诊断结果正常。 - abnormal：诊断结果异常。 **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * abnormalItemSum  **参数解释**： 异常项数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * faultedNodeSum  **参数解释**： 异常节点数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -122,20 +122,20 @@ class DiagnosisReportResp implements ModelInterface, ArrayAccess
             'groupName' => 'setGroupName',
             'consumerNums' => 'setConsumerNums',
             'status' => 'setStatus',
-            'creatAt' => 'setCreatAt',
+            'createdAt' => 'setCreatedAt',
             'abnormalItemSum' => 'setAbnormalItemSum',
             'faultedNodeSum' => 'setFaultedNodeSum'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * reportId  **参数解释**： 报告ID。 **取值范围**： 不涉及。
-    * groupName  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
-    * consumerNums  **参数解释**： 消费者数量。 **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
-    * creatAt  **参数解释**： 生成时间。 **取值范围**： 不涉及。
-    * abnormalItemSum  **参数解释**： 异常项数量。 **取值范围**： 不涉及。
-    * faultedNodeSum  **参数解释**： 异常节点数量。 **取值范围**： 不涉及。
+    * reportId  **参数解释**： 报告ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groupName  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumerNums  **参数解释**： 消费者数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * status  **参数解释**： 状态。 **约束限制**： 不涉及。 **取值范围**： - diagnosing：诊断中。 - failed：诊断失败。 - deleted：手动删除。 - finished：诊断完成。 - normal：诊断结果正常。 - abnormal：诊断结果异常。 **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * abnormalItemSum  **参数解释**： 异常项数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * faultedNodeSum  **参数解释**： 异常节点数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -144,7 +144,7 @@ class DiagnosisReportResp implements ModelInterface, ArrayAccess
             'groupName' => 'getGroupName',
             'consumerNums' => 'getConsumerNums',
             'status' => 'getStatus',
-            'creatAt' => 'getCreatAt',
+            'createdAt' => 'getCreatedAt',
             'abnormalItemSum' => 'getAbnormalItemSum',
             'faultedNodeSum' => 'getFaultedNodeSum'
     ];
@@ -211,7 +211,7 @@ class DiagnosisReportResp implements ModelInterface, ArrayAccess
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
         $this->container['consumerNums'] = isset($data['consumerNums']) ? $data['consumerNums'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['creatAt'] = isset($data['creatAt']) ? $data['creatAt'] : null;
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['abnormalItemSum'] = isset($data['abnormalItemSum']) ? $data['abnormalItemSum'] : null;
         $this->container['faultedNodeSum'] = isset($data['faultedNodeSum']) ? $data['faultedNodeSum'] : null;
     }
@@ -240,7 +240,7 @@ class DiagnosisReportResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets reportId
-    *  **参数解释**： 报告ID。 **取值范围**： 不涉及。
+    *  **参数解释**： 报告ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class DiagnosisReportResp implements ModelInterface, ArrayAccess
     /**
     * Sets reportId
     *
-    * @param string|null $reportId **参数解释**： 报告ID。 **取值范围**： 不涉及。
+    * @param string|null $reportId **参数解释**： 报告ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class DiagnosisReportResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    *  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class DiagnosisReportResp implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName **参数解释**： 消费组名称。 **取值范围**： 不涉及。
+    * @param string|null $groupName **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class DiagnosisReportResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumerNums
-    *  **参数解释**： 消费者数量。 **取值范围**： 不涉及。
+    *  **参数解释**： 消费者数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -300,7 +300,7 @@ class DiagnosisReportResp implements ModelInterface, ArrayAccess
     /**
     * Sets consumerNums
     *
-    * @param int|null $consumerNums **参数解释**： 消费者数量。 **取值范围**： 不涉及。
+    * @param int|null $consumerNums **参数解释**： 消费者数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class DiagnosisReportResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 状态。 **取值范围**： 不涉及。
+    *  **参数解释**： 状态。 **约束限制**： 不涉及。 **取值范围**： - diagnosing：诊断中。 - failed：诊断失败。 - deleted：手动删除。 - finished：诊断完成。 - normal：诊断结果正常。 - abnormal：诊断结果异常。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -324,7 +324,7 @@ class DiagnosisReportResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 状态。 **取值范围**： 不涉及。
+    * @param string|null $status **参数解释**： 状态。 **约束限制**： 不涉及。 **取值范围**： - diagnosing：诊断中。 - failed：诊断失败。 - deleted：手动删除。 - finished：诊断完成。 - normal：诊断结果正常。 - abnormal：诊断结果异常。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -335,32 +335,32 @@ class DiagnosisReportResp implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets creatAt
-    *  **参数解释**： 生成时间。 **取值范围**： 不涉及。
+    * Gets createdAt
+    *  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getCreatAt()
+    public function getCreatedAt()
     {
-        return $this->container['creatAt'];
+        return $this->container['createdAt'];
     }
 
     /**
-    * Sets creatAt
+    * Sets createdAt
     *
-    * @param int|null $creatAt **参数解释**： 生成时间。 **取值范围**： 不涉及。
+    * @param string|null $createdAt **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
-    public function setCreatAt($creatAt)
+    public function setCreatedAt($createdAt)
     {
-        $this->container['creatAt'] = $creatAt;
+        $this->container['createdAt'] = $createdAt;
         return $this;
     }
 
     /**
     * Gets abnormalItemSum
-    *  **参数解释**： 异常项数量。 **取值范围**： 不涉及。
+    *  **参数解释**： 异常项数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -372,7 +372,7 @@ class DiagnosisReportResp implements ModelInterface, ArrayAccess
     /**
     * Sets abnormalItemSum
     *
-    * @param int|null $abnormalItemSum **参数解释**： 异常项数量。 **取值范围**： 不涉及。
+    * @param int|null $abnormalItemSum **参数解释**： 异常项数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class DiagnosisReportResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets faultedNodeSum
-    *  **参数解释**： 异常节点数量。 **取值范围**： 不涉及。
+    *  **参数解释**： 异常节点数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -396,7 +396,7 @@ class DiagnosisReportResp implements ModelInterface, ArrayAccess
     /**
     * Sets faultedNodeSum
     *
-    * @param int|null $faultedNodeSum **参数解释**： 异常节点数量。 **取值范围**： 不涉及。
+    * @param int|null $faultedNodeSum **参数解释**： 异常节点数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -20,11 +20,12 @@ class RuleAclListResponseDTOData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数，范围为1-1024
-    * total  查询规则列表总条数
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * records  查询规则列表记录
+    * offset  **参数解释**： 偏移量：指定返回记录的开始位置 **取值范围**： 大于或等于0
+    * limit  **参数解释**： 每页显示个数 **取值范围**： 1-1024
+    * total  **参数解释**： 查询规则列表总条数 **取值范围**： 大于0
+    * objectId  **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得  **取值范围**：  32位UUID
+    * upRulesCount  **参数解释**： 顶部规则数量 **取值范围**： 不涉及
+    * records  **参数解释**： 查询规则列表记录
     *
     * @var string[]
     */
@@ -33,16 +34,18 @@ class RuleAclListResponseDTOData implements ModelInterface, ArrayAccess
             'limit' => 'int',
             'total' => 'int',
             'objectId' => 'string',
+            'upRulesCount' => 'int',
             'records' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleAclListResponseDTODataRecords[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数，范围为1-1024
-    * total  查询规则列表总条数
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * records  查询规则列表记录
+    * offset  **参数解释**： 偏移量：指定返回记录的开始位置 **取值范围**： 大于或等于0
+    * limit  **参数解释**： 每页显示个数 **取值范围**： 1-1024
+    * total  **参数解释**： 查询规则列表总条数 **取值范围**： 大于0
+    * objectId  **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得  **取值范围**：  32位UUID
+    * upRulesCount  **参数解释**： 顶部规则数量 **取值范围**： 不涉及
+    * records  **参数解释**： 查询规则列表记录
     *
     * @var string[]
     */
@@ -51,6 +54,7 @@ class RuleAclListResponseDTOData implements ModelInterface, ArrayAccess
         'limit' => null,
         'total' => null,
         'objectId' => null,
+        'upRulesCount' => 'int32',
         'records' => null
     ];
 
@@ -77,11 +81,12 @@ class RuleAclListResponseDTOData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数，范围为1-1024
-    * total  查询规则列表总条数
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * records  查询规则列表记录
+    * offset  **参数解释**： 偏移量：指定返回记录的开始位置 **取值范围**： 大于或等于0
+    * limit  **参数解释**： 每页显示个数 **取值范围**： 1-1024
+    * total  **参数解释**： 查询规则列表总条数 **取值范围**： 大于0
+    * objectId  **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得  **取值范围**：  32位UUID
+    * upRulesCount  **参数解释**： 顶部规则数量 **取值范围**： 不涉及
+    * records  **参数解释**： 查询规则列表记录
     *
     * @var string[]
     */
@@ -90,16 +95,18 @@ class RuleAclListResponseDTOData implements ModelInterface, ArrayAccess
             'limit' => 'limit',
             'total' => 'total',
             'objectId' => 'object_id',
+            'upRulesCount' => 'up_rules_count',
             'records' => 'records'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数，范围为1-1024
-    * total  查询规则列表总条数
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * records  查询规则列表记录
+    * offset  **参数解释**： 偏移量：指定返回记录的开始位置 **取值范围**： 大于或等于0
+    * limit  **参数解释**： 每页显示个数 **取值范围**： 1-1024
+    * total  **参数解释**： 查询规则列表总条数 **取值范围**： 大于0
+    * objectId  **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得  **取值范围**：  32位UUID
+    * upRulesCount  **参数解释**： 顶部规则数量 **取值范围**： 不涉及
+    * records  **参数解释**： 查询规则列表记录
     *
     * @var string[]
     */
@@ -108,16 +115,18 @@ class RuleAclListResponseDTOData implements ModelInterface, ArrayAccess
             'limit' => 'setLimit',
             'total' => 'setTotal',
             'objectId' => 'setObjectId',
+            'upRulesCount' => 'setUpRulesCount',
             'records' => 'setRecords'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数，范围为1-1024
-    * total  查询规则列表总条数
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * records  查询规则列表记录
+    * offset  **参数解释**： 偏移量：指定返回记录的开始位置 **取值范围**： 大于或等于0
+    * limit  **参数解释**： 每页显示个数 **取值范围**： 1-1024
+    * total  **参数解释**： 查询规则列表总条数 **取值范围**： 大于0
+    * objectId  **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得  **取值范围**：  32位UUID
+    * upRulesCount  **参数解释**： 顶部规则数量 **取值范围**： 不涉及
+    * records  **参数解释**： 查询规则列表记录
     *
     * @var string[]
     */
@@ -126,6 +135,7 @@ class RuleAclListResponseDTOData implements ModelInterface, ArrayAccess
             'limit' => 'getLimit',
             'total' => 'getTotal',
             'objectId' => 'getObjectId',
+            'upRulesCount' => 'getUpRulesCount',
             'records' => 'getRecords'
     ];
 
@@ -191,6 +201,7 @@ class RuleAclListResponseDTOData implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
+        $this->container['upRulesCount'] = isset($data['upRulesCount']) ? $data['upRulesCount'] : null;
         $this->container['records'] = isset($data['records']) ? $data['records'] : null;
     }
 
@@ -218,7 +229,7 @@ class RuleAclListResponseDTOData implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  **参数解释**： 偏移量：指定返回记录的开始位置 **取值范围**： 大于或等于0
     *
     * @return int|null
     */
@@ -230,7 +241,7 @@ class RuleAclListResponseDTOData implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset **参数解释**： 偏移量：指定返回记录的开始位置 **取值范围**： 大于或等于0
     *
     * @return $this
     */
@@ -242,7 +253,7 @@ class RuleAclListResponseDTOData implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示个数，范围为1-1024
+    *  **参数解释**： 每页显示个数 **取值范围**： 1-1024
     *
     * @return int|null
     */
@@ -254,7 +265,7 @@ class RuleAclListResponseDTOData implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示个数，范围为1-1024
+    * @param int|null $limit **参数解释**： 每页显示个数 **取值范围**： 1-1024
     *
     * @return $this
     */
@@ -266,7 +277,7 @@ class RuleAclListResponseDTOData implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  查询规则列表总条数
+    *  **参数解释**： 查询规则列表总条数 **取值范围**： 大于0
     *
     * @return int|null
     */
@@ -278,7 +289,7 @@ class RuleAclListResponseDTOData implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 查询规则列表总条数
+    * @param int|null $total **参数解释**： 查询规则列表总条数 **取值范围**： 大于0
     *
     * @return $this
     */
@@ -290,7 +301,7 @@ class RuleAclListResponseDTOData implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
+    *  **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得  **取值范围**：  32位UUID
     *
     * @return string|null
     */
@@ -302,7 +313,7 @@ class RuleAclListResponseDTOData implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string|null $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
+    * @param string|null $objectId **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得  **取值范围**：  32位UUID
     *
     * @return $this
     */
@@ -313,8 +324,32 @@ class RuleAclListResponseDTOData implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets upRulesCount
+    *  **参数解释**： 顶部规则数量 **取值范围**： 不涉及
+    *
+    * @return int|null
+    */
+    public function getUpRulesCount()
+    {
+        return $this->container['upRulesCount'];
+    }
+
+    /**
+    * Sets upRulesCount
+    *
+    * @param int|null $upRulesCount **参数解释**： 顶部规则数量 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setUpRulesCount($upRulesCount)
+    {
+        $this->container['upRulesCount'] = $upRulesCount;
+        return $this;
+    }
+
+    /**
     * Gets records
-    *  查询规则列表记录
+    *  **参数解释**： 查询规则列表记录
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\RuleAclListResponseDTODataRecords[]|null
     */
@@ -326,7 +361,7 @@ class RuleAclListResponseDTOData implements ModelInterface, ArrayAccess
     /**
     * Sets records
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\RuleAclListResponseDTODataRecords[]|null $records 查询规则列表记录
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\RuleAclListResponseDTODataRecords[]|null $records **参数解释**： 查询规则列表记录
     *
     * @return $this
     */

@@ -20,18 +20,18 @@ class AlarmConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accountName  账号名称
-    * alarmId  告警id
-    * alarmTimePeriod  告警周期，0：全天，1：8时到22时
+    * accountName  accountName
+    * alarmId  alarmId
+    * alarmTimePeriod  告警周期，0：8时到22时，1：全天
     * alarmType  告警类型 0:攻击告警; 1:流量超额预警; 2:EIP未防护告警; 3:威胁情报告警
     * enableStatus  告警状态 0:失效; 1:生效
     * frequencyCount  告警触发频次
-    * frequencyTime  告警频次时间范围
-    * language  告警语言
-    * name  告警主题名称
-    * severity  告警等级
-    * topicUrn  告警urn
-    * username  用户名称
+    * frequencyTime  告警频次时间范围，以分钟为单位
+    * language  告警语言，zh-cn为中文，en-us为英文
+    * name  通知群组名称
+    * severity  告警等级，当type为0和4时，severity为CRITICAL,HIGH,MEDIUM,LOW四种等级的组合字符串，当type为2时，severity固定为3
+    * topicUrn  告警topic的urn
+    * username  用户名称，为cfw
     *
     * @var string[]
     */
@@ -52,18 +52,18 @@ class AlarmConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accountName  账号名称
-    * alarmId  告警id
-    * alarmTimePeriod  告警周期，0：全天，1：8时到22时
+    * accountName  accountName
+    * alarmId  alarmId
+    * alarmTimePeriod  告警周期，0：8时到22时，1：全天
     * alarmType  告警类型 0:攻击告警; 1:流量超额预警; 2:EIP未防护告警; 3:威胁情报告警
     * enableStatus  告警状态 0:失效; 1:生效
     * frequencyCount  告警触发频次
-    * frequencyTime  告警频次时间范围
-    * language  告警语言
-    * name  告警主题名称
-    * severity  告警等级
-    * topicUrn  告警urn
-    * username  用户名称
+    * frequencyTime  告警频次时间范围，以分钟为单位
+    * language  告警语言，zh-cn为中文，en-us为英文
+    * name  通知群组名称
+    * severity  告警等级，当type为0和4时，severity为CRITICAL,HIGH,MEDIUM,LOW四种等级的组合字符串，当type为2时，severity固定为3
+    * topicUrn  告警topic的urn
+    * username  用户名称，为cfw
     *
     * @var string[]
     */
@@ -105,18 +105,18 @@ class AlarmConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accountName  账号名称
-    * alarmId  告警id
-    * alarmTimePeriod  告警周期，0：全天，1：8时到22时
+    * accountName  accountName
+    * alarmId  alarmId
+    * alarmTimePeriod  告警周期，0：8时到22时，1：全天
     * alarmType  告警类型 0:攻击告警; 1:流量超额预警; 2:EIP未防护告警; 3:威胁情报告警
     * enableStatus  告警状态 0:失效; 1:生效
     * frequencyCount  告警触发频次
-    * frequencyTime  告警频次时间范围
-    * language  告警语言
-    * name  告警主题名称
-    * severity  告警等级
-    * topicUrn  告警urn
-    * username  用户名称
+    * frequencyTime  告警频次时间范围，以分钟为单位
+    * language  告警语言，zh-cn为中文，en-us为英文
+    * name  通知群组名称
+    * severity  告警等级，当type为0和4时，severity为CRITICAL,HIGH,MEDIUM,LOW四种等级的组合字符串，当type为2时，severity固定为3
+    * topicUrn  告警topic的urn
+    * username  用户名称，为cfw
     *
     * @var string[]
     */
@@ -137,18 +137,18 @@ class AlarmConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accountName  账号名称
-    * alarmId  告警id
-    * alarmTimePeriod  告警周期，0：全天，1：8时到22时
+    * accountName  accountName
+    * alarmId  alarmId
+    * alarmTimePeriod  告警周期，0：8时到22时，1：全天
     * alarmType  告警类型 0:攻击告警; 1:流量超额预警; 2:EIP未防护告警; 3:威胁情报告警
     * enableStatus  告警状态 0:失效; 1:生效
     * frequencyCount  告警触发频次
-    * frequencyTime  告警频次时间范围
-    * language  告警语言
-    * name  告警主题名称
-    * severity  告警等级
-    * topicUrn  告警urn
-    * username  用户名称
+    * frequencyTime  告警频次时间范围，以分钟为单位
+    * language  告警语言，zh-cn为中文，en-us为英文
+    * name  通知群组名称
+    * severity  告警等级，当type为0和4时，severity为CRITICAL,HIGH,MEDIUM,LOW四种等级的组合字符串，当type为2时，severity固定为3
+    * topicUrn  告警topic的urn
+    * username  用户名称，为cfw
     *
     * @var string[]
     */
@@ -169,18 +169,18 @@ class AlarmConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accountName  账号名称
-    * alarmId  告警id
-    * alarmTimePeriod  告警周期，0：全天，1：8时到22时
+    * accountName  accountName
+    * alarmId  alarmId
+    * alarmTimePeriod  告警周期，0：8时到22时，1：全天
     * alarmType  告警类型 0:攻击告警; 1:流量超额预警; 2:EIP未防护告警; 3:威胁情报告警
     * enableStatus  告警状态 0:失效; 1:生效
     * frequencyCount  告警触发频次
-    * frequencyTime  告警频次时间范围
-    * language  告警语言
-    * name  告警主题名称
-    * severity  告警等级
-    * topicUrn  告警urn
-    * username  用户名称
+    * frequencyTime  告警频次时间范围，以分钟为单位
+    * language  告警语言，zh-cn为中文，en-us为英文
+    * name  通知群组名称
+    * severity  告警等级，当type为0和4时，severity为CRITICAL,HIGH,MEDIUM,LOW四种等级的组合字符串，当type为2时，severity固定为3
+    * topicUrn  告警topic的urn
+    * username  用户名称，为cfw
     *
     * @var string[]
     */
@@ -295,7 +295,7 @@ class AlarmConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountName
-    *  账号名称
+    *  accountName
     *
     * @return string|null
     */
@@ -307,7 +307,7 @@ class AlarmConfig implements ModelInterface, ArrayAccess
     /**
     * Sets accountName
     *
-    * @param string|null $accountName 账号名称
+    * @param string|null $accountName accountName
     *
     * @return $this
     */
@@ -319,7 +319,7 @@ class AlarmConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmId
-    *  告警id
+    *  alarmId
     *
     * @return string|null
     */
@@ -331,7 +331,7 @@ class AlarmConfig implements ModelInterface, ArrayAccess
     /**
     * Sets alarmId
     *
-    * @param string|null $alarmId 告警id
+    * @param string|null $alarmId alarmId
     *
     * @return $this
     */
@@ -343,7 +343,7 @@ class AlarmConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmTimePeriod
-    *  告警周期，0：全天，1：8时到22时
+    *  告警周期，0：8时到22时，1：全天
     *
     * @return int|null
     */
@@ -355,7 +355,7 @@ class AlarmConfig implements ModelInterface, ArrayAccess
     /**
     * Sets alarmTimePeriod
     *
-    * @param int|null $alarmTimePeriod 告警周期，0：全天，1：8时到22时
+    * @param int|null $alarmTimePeriod 告警周期，0：8时到22时，1：全天
     *
     * @return $this
     */
@@ -439,7 +439,7 @@ class AlarmConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets frequencyTime
-    *  告警频次时间范围
+    *  告警频次时间范围，以分钟为单位
     *
     * @return int|null
     */
@@ -451,7 +451,7 @@ class AlarmConfig implements ModelInterface, ArrayAccess
     /**
     * Sets frequencyTime
     *
-    * @param int|null $frequencyTime 告警频次时间范围
+    * @param int|null $frequencyTime 告警频次时间范围，以分钟为单位
     *
     * @return $this
     */
@@ -463,7 +463,7 @@ class AlarmConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  告警语言
+    *  告警语言，zh-cn为中文，en-us为英文
     *
     * @return string|null
     */
@@ -475,7 +475,7 @@ class AlarmConfig implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 告警语言
+    * @param string|null $language 告警语言，zh-cn为中文，en-us为英文
     *
     * @return $this
     */
@@ -487,7 +487,7 @@ class AlarmConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  告警主题名称
+    *  通知群组名称
     *
     * @return string|null
     */
@@ -499,7 +499,7 @@ class AlarmConfig implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 告警主题名称
+    * @param string|null $name 通知群组名称
     *
     * @return $this
     */
@@ -511,7 +511,7 @@ class AlarmConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  告警等级
+    *  告警等级，当type为0和4时，severity为CRITICAL,HIGH,MEDIUM,LOW四种等级的组合字符串，当type为2时，severity固定为3
     *
     * @return string|null
     */
@@ -523,7 +523,7 @@ class AlarmConfig implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param string|null $severity 告警等级
+    * @param string|null $severity 告警等级，当type为0和4时，severity为CRITICAL,HIGH,MEDIUM,LOW四种等级的组合字符串，当type为2时，severity固定为3
     *
     * @return $this
     */
@@ -535,7 +535,7 @@ class AlarmConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicUrn
-    *  告警urn
+    *  告警topic的urn
     *
     * @return string|null
     */
@@ -547,7 +547,7 @@ class AlarmConfig implements ModelInterface, ArrayAccess
     /**
     * Sets topicUrn
     *
-    * @param string|null $topicUrn 告警urn
+    * @param string|null $topicUrn 告警topic的urn
     *
     * @return $this
     */
@@ -559,7 +559,7 @@ class AlarmConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets username
-    *  用户名称
+    *  用户名称，为cfw
     *
     * @return string|null
     */
@@ -571,7 +571,7 @@ class AlarmConfig implements ModelInterface, ArrayAccess
     /**
     * Sets username
     *
-    * @param string|null $username 用户名称
+    * @param string|null $username 用户名称，为cfw
     *
     * @return $this
     */

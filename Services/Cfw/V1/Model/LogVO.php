@@ -88,7 +88,7 @@ class LogVO implements ModelInterface, ArrayAccess
             'srcIp' => 'string',
             'srcPort' => 'int',
             'startTime' => 'int',
-            'dstRegionId' => 'object',
+            'dstRegionId' => 'string',
             'dstRegionName' => 'string',
             'dstProvinceId' => 'string',
             'dstProvinceName' => 'string',
@@ -1038,7 +1038,7 @@ class LogVO implements ModelInterface, ArrayAccess
     * Gets dstRegionId
     *  **参数解释**： 目的地区ID **取值范围**： 不涉及
     *
-    * @return object|null
+    * @return string|null
     */
     public function getDstRegionId()
     {
@@ -1048,7 +1048,7 @@ class LogVO implements ModelInterface, ArrayAccess
     /**
     * Sets dstRegionId
     *
-    * @param object|null $dstRegionId **参数解释**： 目的地区ID **取值范围**： 不涉及
+    * @param string|null $dstRegionId **参数解释**： 目的地区ID **取值范围**： 不涉及
     *
     * @return $this
     */

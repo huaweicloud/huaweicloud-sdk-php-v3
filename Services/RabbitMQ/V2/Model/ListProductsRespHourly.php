@@ -20,9 +20,9 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  消息引擎的名称，该字段显示为rabbitmq。
-    * version  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:sbc,hk_sbc)。
-    * values  产品规格列表。
+    * name  **参数解释**： 消息引擎的名称，该字段显示为rabbitmq。 **取值范围**： 不涉及。
+    * version  **参数解释**： 消息引擎的版本。 **取值范围**： - 3.8.35 [- 3.12.13](tag:srg) [- AMQP-0-9-1](tag:hws,hws_hk,hws_eu)
+    * values  **参数解释**： 产品规格列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  消息引擎的名称，该字段显示为rabbitmq。
-    * version  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:sbc,hk_sbc)。
-    * values  产品规格列表。
+    * name  **参数解释**： 消息引擎的名称，该字段显示为rabbitmq。 **取值范围**： 不涉及。
+    * version  **参数解释**： 消息引擎的版本。 **取值范围**： - 3.8.35 [- 3.12.13](tag:srg) [- AMQP-0-9-1](tag:hws,hws_hk,hws_eu)
+    * values  **参数解释**： 产品规格列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  消息引擎的名称，该字段显示为rabbitmq。
-    * version  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:sbc,hk_sbc)。
-    * values  产品规格列表。
+    * name  **参数解释**： 消息引擎的名称，该字段显示为rabbitmq。 **取值范围**： 不涉及。
+    * version  **参数解释**： 消息引擎的版本。 **取值范围**： - 3.8.35 [- 3.12.13](tag:srg) [- AMQP-0-9-1](tag:hws,hws_hk,hws_eu)
+    * values  **参数解释**： 产品规格列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  消息引擎的名称，该字段显示为rabbitmq。
-    * version  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:sbc,hk_sbc)。
-    * values  产品规格列表。
+    * name  **参数解释**： 消息引擎的名称，该字段显示为rabbitmq。 **取值范围**： 不涉及。
+    * version  **参数解释**： 消息引擎的版本。 **取值范围**： - 3.8.35 [- 3.12.13](tag:srg) [- AMQP-0-9-1](tag:hws,hws_hk,hws_eu)
+    * values  **参数解释**： 产品规格列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  消息引擎的名称，该字段显示为rabbitmq。
-    * version  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:sbc,hk_sbc)。
-    * values  产品规格列表。
+    * name  **参数解释**： 消息引擎的名称，该字段显示为rabbitmq。 **取值范围**： 不涉及。
+    * version  **参数解释**： 消息引擎的版本。 **取值范围**： - 3.8.35 [- 3.12.13](tag:srg) [- AMQP-0-9-1](tag:hws,hws_hk,hws_eu)
+    * values  **参数解释**： 产品规格列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  消息引擎的名称，该字段显示为rabbitmq。
+    *  **参数解释**： 消息引擎的名称，该字段显示为rabbitmq。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 消息引擎的名称，该字段显示为rabbitmq。
+    * @param string|null $name **参数解释**： 消息引擎的名称，该字段显示为rabbitmq。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  消息引擎的版本，当前支持3.8.35[和3.7.17](tag:sbc,hk_sbc)。
+    *  **参数解释**： 消息引擎的版本。 **取值范围**： - 3.8.35 [- 3.12.13](tag:srg) [- AMQP-0-9-1](tag:hws,hws_hk,hws_eu)
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 消息引擎的版本，当前支持3.8.35[和3.7.17](tag:sbc,hk_sbc)。
+    * @param string|null $version **参数解释**： 消息引擎的版本。 **取值范围**： - 3.8.35 [- 3.12.13](tag:srg) [- AMQP-0-9-1](tag:hws,hws_hk,hws_eu)
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  产品规格列表。
+    *  **参数解释**： 产品规格列表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespValues[]|null
     */
@@ -256,7 +256,7 @@ class ListProductsRespHourly implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespValues[]|null $values 产品规格列表。
+    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespValues[]|null $values **参数解释**： 产品规格列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

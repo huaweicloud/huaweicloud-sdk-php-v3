@@ -1648,6 +1648,65 @@ class CssClient extends Client
     }
 
     /**
+     * 列举磁盘类型
+     *
+     * 获取各可用区支持的磁盘类型。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDiskType($request)
+    {
+        return $this->listDiskTypeWithHttpInfo($request);
+    }
+
+    public function listDiskTypeWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/disktypes';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Css\V1\Model\ListDiskTypeResponse',
+            $requestType='\HuaweiCloud\SDK\Css\V1\Model\ListDiskTypeRequest');
+    }
+
+    /**
      * 查询证书列表
      *
      * 该接口用于查询证书列表。

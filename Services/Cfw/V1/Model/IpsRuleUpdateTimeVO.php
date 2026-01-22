@@ -20,9 +20,9 @@ class IpsRuleUpdateTimeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ipsType  ipsType
-    * ipsVersion  ipsVersion
-    * updateTime  updateTime
+    * ipsType  ips类型，0表示基础防御，1表示虚拟补丁
+    * ipsVersion  ips规则版本
+    * updateTime  ips更新时间戳
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class IpsRuleUpdateTimeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ipsType  ipsType
-    * ipsVersion  ipsVersion
-    * updateTime  updateTime
+    * ipsType  ips类型，0表示基础防御，1表示虚拟补丁
+    * ipsVersion  ips规则版本
+    * updateTime  ips更新时间戳
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class IpsRuleUpdateTimeVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ipsType  ipsType
-    * ipsVersion  ipsVersion
-    * updateTime  updateTime
+    * ipsType  ips类型，0表示基础防御，1表示虚拟补丁
+    * ipsVersion  ips规则版本
+    * updateTime  ips更新时间戳
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class IpsRuleUpdateTimeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ipsType  ipsType
-    * ipsVersion  ipsVersion
-    * updateTime  updateTime
+    * ipsType  ips类型，0表示基础防御，1表示虚拟补丁
+    * ipsVersion  ips规则版本
+    * updateTime  ips更新时间戳
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class IpsRuleUpdateTimeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ipsType  ipsType
-    * ipsVersion  ipsVersion
-    * updateTime  updateTime
+    * ipsType  ips类型，0表示基础防御，1表示虚拟补丁
+    * ipsVersion  ips规则版本
+    * updateTime  ips更新时间戳
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class IpsRuleUpdateTimeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipsType
-    *  ipsType
+    *  ips类型，0表示基础防御，1表示虚拟补丁
     *
     * @return int|null
     */
@@ -208,7 +208,7 @@ class IpsRuleUpdateTimeVO implements ModelInterface, ArrayAccess
     /**
     * Sets ipsType
     *
-    * @param int|null $ipsType ipsType
+    * @param int|null $ipsType ips类型，0表示基础防御，1表示虚拟补丁
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class IpsRuleUpdateTimeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipsVersion
-    *  ipsVersion
+    *  ips规则版本
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class IpsRuleUpdateTimeVO implements ModelInterface, ArrayAccess
     /**
     * Sets ipsVersion
     *
-    * @param string|null $ipsVersion ipsVersion
+    * @param string|null $ipsVersion ips规则版本
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class IpsRuleUpdateTimeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  updateTime
+    *  ips更新时间戳
     *
     * @return int|null
     */
@@ -256,7 +256,7 @@ class IpsRuleUpdateTimeVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int|null $updateTime updateTime
+    * @param int|null $updateTime ips更新时间戳
     *
     * @return $this
     */

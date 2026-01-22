@@ -22,9 +22,9 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * reassignments  分区平衡分配方案。
     * throttle  分区平衡门限值。
-    * isSchedule  是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。
-    * executeAt  定时时间，格式为Unix时间戳，单位为毫秒
-    * timeEstimate  设为true表示执行时间预估任务，false为执行分区平衡任务。
+    * isSchedule  **参数解释**： 是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
+    * executeAt  **参数解释**： 定时时间，格式为Unix时间戳，单位为毫秒 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
+    * timeEstimate  **参数解释**： 设为true表示执行时间预估任务，false为执行分区平衡任务。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
     *
     * @var string[]
     */
@@ -40,9 +40,9 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * reassignments  分区平衡分配方案。
     * throttle  分区平衡门限值。
-    * isSchedule  是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。
-    * executeAt  定时时间，格式为Unix时间戳，单位为毫秒
-    * timeEstimate  设为true表示执行时间预估任务，false为执行分区平衡任务。
+    * isSchedule  **参数解释**： 是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
+    * executeAt  **参数解释**： 定时时间，格式为Unix时间戳，单位为毫秒 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
+    * timeEstimate  **参数解释**： 设为true表示执行时间预估任务，false为执行分区平衡任务。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
     *
     * @var string[]
     */
@@ -79,9 +79,9 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * reassignments  分区平衡分配方案。
     * throttle  分区平衡门限值。
-    * isSchedule  是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。
-    * executeAt  定时时间，格式为Unix时间戳，单位为毫秒
-    * timeEstimate  设为true表示执行时间预估任务，false为执行分区平衡任务。
+    * isSchedule  **参数解释**： 是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
+    * executeAt  **参数解释**： 定时时间，格式为Unix时间戳，单位为毫秒 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
+    * timeEstimate  **参数解释**： 设为true表示执行时间预估任务，false为执行分区平衡任务。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * reassignments  分区平衡分配方案。
     * throttle  分区平衡门限值。
-    * isSchedule  是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。
-    * executeAt  定时时间，格式为Unix时间戳，单位为毫秒
-    * timeEstimate  设为true表示执行时间预估任务，false为执行分区平衡任务。
+    * isSchedule  **参数解释**： 是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
+    * executeAt  **参数解释**： 定时时间，格式为Unix时间戳，单位为毫秒 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
+    * timeEstimate  **参数解释**： 设为true表示执行时间预估任务，false为执行分区平衡任务。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
     *
     * @var string[]
     */
@@ -115,9 +115,9 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * reassignments  分区平衡分配方案。
     * throttle  分区平衡门限值。
-    * isSchedule  是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。
-    * executeAt  定时时间，格式为Unix时间戳，单位为毫秒
-    * timeEstimate  设为true表示执行时间预估任务，false为执行分区平衡任务。
+    * isSchedule  **参数解释**： 是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
+    * executeAt  **参数解释**： 定时时间，格式为Unix时间戳，单位为毫秒 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
+    * timeEstimate  **参数解释**： 设为true表示执行时间预估任务，false为执行分区平衡任务。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
     *
     * @var string[]
     */
@@ -269,7 +269,7 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSchedule
-    *  是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。
+    *  **参数解释**： 是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
     *
     * @return bool|null
     */
@@ -281,7 +281,7 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isSchedule
     *
-    * @param bool|null $isSchedule 是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。
+    * @param bool|null $isSchedule **参数解释**： 是否作为定时任务执行。若非定时执行，is_schedule和execute_at字段可为空。若为定时执行，is_schedule为true，execute_at字段非空。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
     *
     * @return $this
     */
@@ -293,7 +293,7 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets executeAt
-    *  定时时间，格式为Unix时间戳，单位为毫秒
+    *  **参数解释**： 定时时间，格式为Unix时间戳，单位为毫秒 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
     *
     * @return int|null
     */
@@ -305,7 +305,7 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     /**
     * Sets executeAt
     *
-    * @param int|null $executeAt 定时时间，格式为Unix时间戳，单位为毫秒
+    * @param int|null $executeAt **参数解释**： 定时时间，格式为Unix时间戳，单位为毫秒 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
     *
     * @return $this
     */
@@ -317,7 +317,7 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeEstimate
-    *  设为true表示执行时间预估任务，false为执行分区平衡任务。
+    *  **参数解释**： 设为true表示执行时间预估任务，false为执行分区平衡任务。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
     *
     * @return bool|null
     */
@@ -329,7 +329,7 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     /**
     * Sets timeEstimate
     *
-    * @param bool|null $timeEstimate 设为true表示执行时间预估任务，false为执行分区平衡任务。
+    * @param bool|null $timeEstimate **参数解释**： 设为true表示执行时间预估任务，false为执行分区平衡任务。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs)
     *
     * @return $this
     */

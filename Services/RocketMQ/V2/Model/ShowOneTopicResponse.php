@@ -21,12 +21,12 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  **参数解释**： Topic名称。 **取值范围**： 不涉及。
-    * totalReadQueueNum  **参数解释**： 总读队列个数。 **取值范围**： 不涉及。
-    * totalWriteQueueNum  **参数解释**： 总写队列个数。 **取值范围**： 不涉及。
-    * permission  **参数解释**： 权限。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。
-    * brokers  关联的代理。
-    * messageType  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。
+    * name  **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * totalReadQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * totalWriteQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permission  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。       **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * messageType  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **约束限制**： 不涉及。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -41,12 +41,12 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  **参数解释**： Topic名称。 **取值范围**： 不涉及。
-    * totalReadQueueNum  **参数解释**： 总读队列个数。 **取值范围**： 不涉及。
-    * totalWriteQueueNum  **参数解释**： 总写队列个数。 **取值范围**： 不涉及。
-    * permission  **参数解释**： 权限。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。
-    * brokers  关联的代理。
-    * messageType  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。
+    * name  **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * totalReadQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * totalWriteQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permission  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。       **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * messageType  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **约束限制**： 不涉及。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -82,12 +82,12 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  **参数解释**： Topic名称。 **取值范围**： 不涉及。
-    * totalReadQueueNum  **参数解释**： 总读队列个数。 **取值范围**： 不涉及。
-    * totalWriteQueueNum  **参数解释**： 总写队列个数。 **取值范围**： 不涉及。
-    * permission  **参数解释**： 权限。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。
-    * brokers  关联的代理。
-    * messageType  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。
+    * name  **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * totalReadQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * totalWriteQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permission  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。       **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * messageType  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **约束限制**： 不涉及。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -102,12 +102,12 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  **参数解释**： Topic名称。 **取值范围**： 不涉及。
-    * totalReadQueueNum  **参数解释**： 总读队列个数。 **取值范围**： 不涉及。
-    * totalWriteQueueNum  **参数解释**： 总写队列个数。 **取值范围**： 不涉及。
-    * permission  **参数解释**： 权限。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。
-    * brokers  关联的代理。
-    * messageType  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。
+    * name  **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * totalReadQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * totalWriteQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permission  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。       **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * messageType  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **约束限制**： 不涉及。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -122,12 +122,12 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  **参数解释**： Topic名称。 **取值范围**： 不涉及。
-    * totalReadQueueNum  **参数解释**： 总读队列个数。 **取值范围**： 不涉及。
-    * totalWriteQueueNum  **参数解释**： 总写队列个数。 **取值范围**： 不涉及。
-    * permission  **参数解释**： 权限。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。
-    * brokers  关联的代理。
-    * messageType  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。
+    * name  **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * totalReadQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * totalWriteQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * permission  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。       **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * messageType  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **约束限制**： 不涉及。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -282,7 +282,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    *  **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -294,7 +294,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name **参数解释**： Topic名称。 **取值范围**： 不涉及。
+    * @param string|null $name **参数解释**： Topic名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -306,7 +306,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalReadQueueNum
-    *  **参数解释**： 总读队列个数。 **取值范围**： 不涉及。
+    *  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -318,7 +318,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalReadQueueNum
     *
-    * @param float|null $totalReadQueueNum **参数解释**： 总读队列个数。 **取值范围**： 不涉及。
+    * @param float|null $totalReadQueueNum **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -330,7 +330,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalWriteQueueNum
-    *  **参数解释**： 总写队列个数。 **取值范围**： 不涉及。
+    *  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -342,7 +342,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalWriteQueueNum
     *
-    * @param float|null $totalWriteQueueNum **参数解释**： 总写队列个数。 **取值范围**： 不涉及。
+    * @param float|null $totalWriteQueueNum **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -354,7 +354,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets permission
-    *  **参数解释**： 权限。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。
+    *  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。       **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -366,7 +366,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
     /**
     * Sets permission
     *
-    * @param string|null $permission **参数解释**： 权限。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。
+    * @param string|null $permission **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。       **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -378,7 +378,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokers
-    *  关联的代理。
+    *  **参数解释**： 关联的代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\TopicBrokers[]|null
     */
@@ -390,7 +390,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
     /**
     * Sets brokers
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\TopicBrokers[]|null $brokers 关联的代理。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\TopicBrokers[]|null $brokers **参数解释**： 关联的代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -402,7 +402,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageType
-    *  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。
+    *  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **约束限制**： 不涉及。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -414,7 +414,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
     /**
     * Sets messageType
     *
-    * @param string|null $messageType **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。
+    * @param string|null $messageType **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **约束限制**： 不涉及。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。 **默认取值**： 不涉及。
     *
     * @return $this
     */

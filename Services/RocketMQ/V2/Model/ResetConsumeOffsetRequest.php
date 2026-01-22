@@ -20,9 +20,9 @@ class ResetConsumeOffsetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  引擎类型：reliability。
-    * instanceId  实例ID。
-    * groupId  消费组名称。
+    * engine  **参数解释**： 引擎。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * group  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -30,15 +30,15 @@ class ResetConsumeOffsetRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'engine' => 'string',
             'instanceId' => 'string',
-            'groupId' => 'string',
+            'group' => 'string',
             'body' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\ResetConsumeOffsetReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  引擎类型：reliability。
-    * instanceId  实例ID。
-    * groupId  消费组名称。
+    * engine  **参数解释**： 引擎。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * group  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -46,7 +46,7 @@ class ResetConsumeOffsetRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'engine' => null,
         'instanceId' => null,
-        'groupId' => null,
+        'group' => null,
         'body' => null
     ];
 
@@ -73,9 +73,9 @@ class ResetConsumeOffsetRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  引擎类型：reliability。
-    * instanceId  实例ID。
-    * groupId  消费组名称。
+    * engine  **参数解释**： 引擎。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * group  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -83,15 +83,15 @@ class ResetConsumeOffsetRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'engine' => 'engine',
             'instanceId' => 'instance_id',
-            'groupId' => 'group_id',
+            'group' => 'group',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  引擎类型：reliability。
-    * instanceId  实例ID。
-    * groupId  消费组名称。
+    * engine  **参数解释**： 引擎。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * group  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -99,15 +99,15 @@ class ResetConsumeOffsetRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'engine' => 'setEngine',
             'instanceId' => 'setInstanceId',
-            'groupId' => 'setGroupId',
+            'group' => 'setGroup',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  引擎类型：reliability。
-    * instanceId  实例ID。
-    * groupId  消费组名称。
+    * engine  **参数解释**： 引擎。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * group  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * body  body
     *
     * @var string[]
@@ -115,7 +115,7 @@ class ResetConsumeOffsetRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'engine' => 'getEngine',
             'instanceId' => 'getInstanceId',
-            'groupId' => 'getGroupId',
+            'group' => 'getGroup',
             'body' => 'getBody'
     ];
 
@@ -159,20 +159,7 @@ class ResetConsumeOffsetRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const ENGINE_RELIABILITY = 'reliability';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getEngineAllowableValues()
-    {
-        return [
-            self::ENGINE_RELIABILITY,
-        ];
-    }
 
 
     /**
@@ -192,7 +179,7 @@ class ResetConsumeOffsetRequest implements ModelInterface, ArrayAccess
     {
         $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
+        $this->container['group'] = isset($data['group']) ? $data['group'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -207,19 +194,11 @@ class ResetConsumeOffsetRequest implements ModelInterface, ArrayAccess
         if ($this->container['engine'] === null) {
             $invalidProperties[] = "'engine' can't be null";
         }
-            $allowedValues = $this->getEngineAllowableValues();
-                if (!is_null($this->container['engine']) && !in_array($this->container['engine'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'engine', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
-        if ($this->container['groupId'] === null) {
-            $invalidProperties[] = "'groupId' can't be null";
+        if ($this->container['group'] === null) {
+            $invalidProperties[] = "'group' can't be null";
         }
         return $invalidProperties;
     }
@@ -237,7 +216,7 @@ class ResetConsumeOffsetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  引擎类型：reliability。
+    *  **参数解释**： 引擎。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -249,7 +228,7 @@ class ResetConsumeOffsetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string $engine 引擎类型：reliability。
+    * @param string $engine **参数解释**： 引擎。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -261,7 +240,7 @@ class ResetConsumeOffsetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -273,7 +252,7 @@ class ResetConsumeOffsetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string $instanceId **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -284,26 +263,26 @@ class ResetConsumeOffsetRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets groupId
-    *  消费组名称。
+    * Gets group
+    *  **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
-    public function getGroupId()
+    public function getGroup()
     {
-        return $this->container['groupId'];
+        return $this->container['group'];
     }
 
     /**
-    * Sets groupId
+    * Sets group
     *
-    * @param string $groupId 消费组名称。
+    * @param string $group **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
-    public function setGroupId($groupId)
+    public function setGroup($group)
     {
-        $this->container['groupId'] = $groupId;
+        $this->container['group'] = $group;
         return $this;
     }
 

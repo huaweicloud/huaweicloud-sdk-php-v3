@@ -20,9 +20,9 @@ class TagsVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tagId  规则id
-    * tagKey  规则标签键
-    * tagValue  规则标签值
+    * tagId  **参数解释**： 规则标签ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * tagKey  **参数解释**： 规则标签键 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * tagValue  **参数解释**： 规则标签值 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class TagsVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tagId  规则id
-    * tagKey  规则标签键
-    * tagValue  规则标签值
+    * tagId  **参数解释**： 规则标签ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * tagKey  **参数解释**： 规则标签键 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * tagValue  **参数解释**： 规则标签值 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class TagsVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tagId  规则id
-    * tagKey  规则标签键
-    * tagValue  规则标签值
+    * tagId  **参数解释**： 规则标签ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * tagKey  **参数解释**： 规则标签键 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * tagValue  **参数解释**： 规则标签值 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class TagsVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tagId  规则id
-    * tagKey  规则标签键
-    * tagValue  规则标签值
+    * tagId  **参数解释**： 规则标签ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * tagKey  **参数解释**： 规则标签键 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * tagValue  **参数解释**： 规则标签值 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class TagsVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tagId  规则id
-    * tagKey  规则标签键
-    * tagValue  规则标签值
+    * tagId  **参数解释**： 规则标签ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * tagKey  **参数解释**： 规则标签键 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * tagValue  **参数解释**： 规则标签值 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class TagsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tagId
-    *  规则id
+    *  **参数解释**： 规则标签ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class TagsVO implements ModelInterface, ArrayAccess
     /**
     * Sets tagId
     *
-    * @param string|null $tagId 规则id
+    * @param string|null $tagId **参数解释**： 规则标签ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class TagsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tagKey
-    *  规则标签键
+    *  **参数解释**： 规则标签键 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class TagsVO implements ModelInterface, ArrayAccess
     /**
     * Sets tagKey
     *
-    * @param string|null $tagKey 规则标签键
+    * @param string|null $tagKey **参数解释**： 规则标签键 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class TagsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tagValue
-    *  规则标签值
+    *  **参数解释**： 规则标签值 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class TagsVO implements ModelInterface, ArrayAccess
     /**
     * Sets tagValue
     *
-    * @param string|null $tagValue 规则标签值
+    * @param string|null $tagValue **参数解释**： 规则标签值 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

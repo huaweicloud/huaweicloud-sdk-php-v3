@@ -26,6 +26,7 @@ class AiOps implements ModelInterface, ArrayAccess
     * name  **参数解释**： 集群风险检测任务名称。 **取值范围**： 不涉及
     * desc  **参数解释**： 集群风险检测任务描述。 **取值范围**： 不涉及
     * status  **参数解释**： 任务执行状态。 **取值范围**： - 150：未开启。 - 200：已开启。 - 300：已发送。
+    * createTime  **参数解释**： 集群风险检测任务创建时间。 **取值范围**： 格式：Unix时间戳格式。
     * summary  summary
     * taskRisks  **参数解释**： 集群风险项详情。 **取值范围**： 不涉及
     *
@@ -38,6 +39,7 @@ class AiOps implements ModelInterface, ArrayAccess
             'name' => 'string',
             'desc' => 'string',
             'status' => 'int',
+            'createTime' => '\DateTime',
             'summary' => '\HuaweiCloud\SDK\Css\V1\Model\SummaryInfo',
             'taskRisks' => '\HuaweiCloud\SDK\Css\V1\Model\AiOpsRiskObject[]'
     ];
@@ -50,6 +52,7 @@ class AiOps implements ModelInterface, ArrayAccess
     * name  **参数解释**： 集群风险检测任务名称。 **取值范围**： 不涉及
     * desc  **参数解释**： 集群风险检测任务描述。 **取值范围**： 不涉及
     * status  **参数解释**： 任务执行状态。 **取值范围**： - 150：未开启。 - 200：已开启。 - 300：已发送。
+    * createTime  **参数解释**： 集群风险检测任务创建时间。 **取值范围**： 格式：Unix时间戳格式。
     * summary  summary
     * taskRisks  **参数解释**： 集群风险项详情。 **取值范围**： 不涉及
     *
@@ -62,6 +65,7 @@ class AiOps implements ModelInterface, ArrayAccess
         'name' => null,
         'desc' => null,
         'status' => null,
+        'createTime' => 'date',
         'summary' => null,
         'taskRisks' => null
     ];
@@ -95,6 +99,7 @@ class AiOps implements ModelInterface, ArrayAccess
     * name  **参数解释**： 集群风险检测任务名称。 **取值范围**： 不涉及
     * desc  **参数解释**： 集群风险检测任务描述。 **取值范围**： 不涉及
     * status  **参数解释**： 任务执行状态。 **取值范围**： - 150：未开启。 - 200：已开启。 - 300：已发送。
+    * createTime  **参数解释**： 集群风险检测任务创建时间。 **取值范围**： 格式：Unix时间戳格式。
     * summary  summary
     * taskRisks  **参数解释**： 集群风险项详情。 **取值范围**： 不涉及
     *
@@ -107,6 +112,7 @@ class AiOps implements ModelInterface, ArrayAccess
             'name' => 'name',
             'desc' => 'desc',
             'status' => 'status',
+            'createTime' => 'create_time',
             'summary' => 'summary',
             'taskRisks' => 'task_risks'
     ];
@@ -119,6 +125,7 @@ class AiOps implements ModelInterface, ArrayAccess
     * name  **参数解释**： 集群风险检测任务名称。 **取值范围**： 不涉及
     * desc  **参数解释**： 集群风险检测任务描述。 **取值范围**： 不涉及
     * status  **参数解释**： 任务执行状态。 **取值范围**： - 150：未开启。 - 200：已开启。 - 300：已发送。
+    * createTime  **参数解释**： 集群风险检测任务创建时间。 **取值范围**： 格式：Unix时间戳格式。
     * summary  summary
     * taskRisks  **参数解释**： 集群风险项详情。 **取值范围**： 不涉及
     *
@@ -131,6 +138,7 @@ class AiOps implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'desc' => 'setDesc',
             'status' => 'setStatus',
+            'createTime' => 'setCreateTime',
             'summary' => 'setSummary',
             'taskRisks' => 'setTaskRisks'
     ];
@@ -143,6 +151,7 @@ class AiOps implements ModelInterface, ArrayAccess
     * name  **参数解释**： 集群风险检测任务名称。 **取值范围**： 不涉及
     * desc  **参数解释**： 集群风险检测任务描述。 **取值范围**： 不涉及
     * status  **参数解释**： 任务执行状态。 **取值范围**： - 150：未开启。 - 200：已开启。 - 300：已发送。
+    * createTime  **参数解释**： 集群风险检测任务创建时间。 **取值范围**： 格式：Unix时间戳格式。
     * summary  summary
     * taskRisks  **参数解释**： 集群风险项详情。 **取值范围**： 不涉及
     *
@@ -155,6 +164,7 @@ class AiOps implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'desc' => 'getDesc',
             'status' => 'getStatus',
+            'createTime' => 'getCreateTime',
             'summary' => 'getSummary',
             'taskRisks' => 'getTaskRisks'
     ];
@@ -223,6 +233,7 @@ class AiOps implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['desc'] = isset($data['desc']) ? $data['desc'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['summary'] = isset($data['summary']) ? $data['summary'] : null;
         $this->container['taskRisks'] = isset($data['taskRisks']) ? $data['taskRisks'] : null;
     }
@@ -390,6 +401,30 @@ class AiOps implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets createTime
+    *  **参数解释**： 集群风险检测任务创建时间。 **取值范围**： 格式：Unix时间戳格式。
+    *
+    * @return \DateTime|null
+    */
+    public function getCreateTime()
+    {
+        return $this->container['createTime'];
+    }
+
+    /**
+    * Sets createTime
+    *
+    * @param \DateTime|null $createTime **参数解释**： 集群风险检测任务创建时间。 **取值范围**： 格式：Unix时间戳格式。
+    *
+    * @return $this
+    */
+    public function setCreateTime($createTime)
+    {
+        $this->container['createTime'] = $createTime;
         return $this;
     }
 

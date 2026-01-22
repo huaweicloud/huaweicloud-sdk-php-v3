@@ -20,11 +20,12 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  域名服务器id
-    * isApplied  域名服务器是否应用，0否 1是
-    * isCustomized  域名服务器是否是用户自定义的dns服务器，0否 1是
-    * serverIp  DNS服务器IP
-    * healthCheckDomainName  健康检查域名
+    * id  **参数解释**： 域名服务器id **取值范围**： 不涉及
+    * isApplied  **参数解释**： 域名服务器是否应用 **取值范围**： - 0：否 - 1：是
+    * isCustomized  **参数解释**： 域名服务器是否是用户自定义的dns服务器 **取值范围**： - 0：否 - 1：是
+    * serverIp  **参数解释**： DNS服务器IP **取值范围**： 不涉及
+    * status  **参数解释**： dns服务器解析状态 **取值范围**： 0：解析域名的频率正常 1：解析域名的频率缓慢 2：解析域名异常
+    * healthCheckDomainName  **参数解释**： 健康检查域名 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -33,16 +34,18 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
             'isApplied' => 'int',
             'isCustomized' => 'int',
             'serverIp' => 'string',
+            'status' => 'int',
             'healthCheckDomainName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  域名服务器id
-    * isApplied  域名服务器是否应用，0否 1是
-    * isCustomized  域名服务器是否是用户自定义的dns服务器，0否 1是
-    * serverIp  DNS服务器IP
-    * healthCheckDomainName  健康检查域名
+    * id  **参数解释**： 域名服务器id **取值范围**： 不涉及
+    * isApplied  **参数解释**： 域名服务器是否应用 **取值范围**： - 0：否 - 1：是
+    * isCustomized  **参数解释**： 域名服务器是否是用户自定义的dns服务器 **取值范围**： - 0：否 - 1：是
+    * serverIp  **参数解释**： DNS服务器IP **取值范围**： 不涉及
+    * status  **参数解释**： dns服务器解析状态 **取值范围**： 0：解析域名的频率正常 1：解析域名的频率缓慢 2：解析域名异常
+    * healthCheckDomainName  **参数解释**： 健康检查域名 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -51,6 +54,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
         'isApplied' => 'int32',
         'isCustomized' => 'int32',
         'serverIp' => null,
+        'status' => 'int32',
         'healthCheckDomainName' => null
     ];
 
@@ -77,11 +81,12 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  域名服务器id
-    * isApplied  域名服务器是否应用，0否 1是
-    * isCustomized  域名服务器是否是用户自定义的dns服务器，0否 1是
-    * serverIp  DNS服务器IP
-    * healthCheckDomainName  健康检查域名
+    * id  **参数解释**： 域名服务器id **取值范围**： 不涉及
+    * isApplied  **参数解释**： 域名服务器是否应用 **取值范围**： - 0：否 - 1：是
+    * isCustomized  **参数解释**： 域名服务器是否是用户自定义的dns服务器 **取值范围**： - 0：否 - 1：是
+    * serverIp  **参数解释**： DNS服务器IP **取值范围**： 不涉及
+    * status  **参数解释**： dns服务器解析状态 **取值范围**： 0：解析域名的频率正常 1：解析域名的频率缓慢 2：解析域名异常
+    * healthCheckDomainName  **参数解释**： 健康检查域名 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -90,16 +95,18 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
             'isApplied' => 'is_applied',
             'isCustomized' => 'is_customized',
             'serverIp' => 'server_ip',
+            'status' => 'status',
             'healthCheckDomainName' => 'health_check_domain_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  域名服务器id
-    * isApplied  域名服务器是否应用，0否 1是
-    * isCustomized  域名服务器是否是用户自定义的dns服务器，0否 1是
-    * serverIp  DNS服务器IP
-    * healthCheckDomainName  健康检查域名
+    * id  **参数解释**： 域名服务器id **取值范围**： 不涉及
+    * isApplied  **参数解释**： 域名服务器是否应用 **取值范围**： - 0：否 - 1：是
+    * isCustomized  **参数解释**： 域名服务器是否是用户自定义的dns服务器 **取值范围**： - 0：否 - 1：是
+    * serverIp  **参数解释**： DNS服务器IP **取值范围**： 不涉及
+    * status  **参数解释**： dns服务器解析状态 **取值范围**： 0：解析域名的频率正常 1：解析域名的频率缓慢 2：解析域名异常
+    * healthCheckDomainName  **参数解释**： 健康检查域名 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -108,16 +115,18 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
             'isApplied' => 'setIsApplied',
             'isCustomized' => 'setIsCustomized',
             'serverIp' => 'setServerIp',
+            'status' => 'setStatus',
             'healthCheckDomainName' => 'setHealthCheckDomainName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  域名服务器id
-    * isApplied  域名服务器是否应用，0否 1是
-    * isCustomized  域名服务器是否是用户自定义的dns服务器，0否 1是
-    * serverIp  DNS服务器IP
-    * healthCheckDomainName  健康检查域名
+    * id  **参数解释**： 域名服务器id **取值范围**： 不涉及
+    * isApplied  **参数解释**： 域名服务器是否应用 **取值范围**： - 0：否 - 1：是
+    * isCustomized  **参数解释**： 域名服务器是否是用户自定义的dns服务器 **取值范围**： - 0：否 - 1：是
+    * serverIp  **参数解释**： DNS服务器IP **取值范围**： 不涉及
+    * status  **参数解释**： dns服务器解析状态 **取值范围**： 0：解析域名的频率正常 1：解析域名的频率缓慢 2：解析域名异常
+    * healthCheckDomainName  **参数解释**： 健康检查域名 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -126,6 +135,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
             'isApplied' => 'getIsApplied',
             'isCustomized' => 'getIsCustomized',
             'serverIp' => 'getServerIp',
+            'status' => 'getStatus',
             'healthCheckDomainName' => 'getHealthCheckDomainName'
     ];
 
@@ -191,6 +201,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
         $this->container['isApplied'] = isset($data['isApplied']) ? $data['isApplied'] : null;
         $this->container['isCustomized'] = isset($data['isCustomized']) ? $data['isCustomized'] : null;
         $this->container['serverIp'] = isset($data['serverIp']) ? $data['serverIp'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['healthCheckDomainName'] = isset($data['healthCheckDomainName']) ? $data['healthCheckDomainName'] : null;
     }
 
@@ -218,7 +229,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  域名服务器id
+    *  **参数解释**： 域名服务器id **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -230,7 +241,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 域名服务器id
+    * @param int|null $id **参数解释**： 域名服务器id **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -242,7 +253,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isApplied
-    *  域名服务器是否应用，0否 1是
+    *  **参数解释**： 域名服务器是否应用 **取值范围**： - 0：否 - 1：是
     *
     * @return int|null
     */
@@ -254,7 +265,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
     /**
     * Sets isApplied
     *
-    * @param int|null $isApplied 域名服务器是否应用，0否 1是
+    * @param int|null $isApplied **参数解释**： 域名服务器是否应用 **取值范围**： - 0：否 - 1：是
     *
     * @return $this
     */
@@ -266,7 +277,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isCustomized
-    *  域名服务器是否是用户自定义的dns服务器，0否 1是
+    *  **参数解释**： 域名服务器是否是用户自定义的dns服务器 **取值范围**： - 0：否 - 1：是
     *
     * @return int|null
     */
@@ -278,7 +289,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
     /**
     * Sets isCustomized
     *
-    * @param int|null $isCustomized 域名服务器是否是用户自定义的dns服务器，0否 1是
+    * @param int|null $isCustomized **参数解释**： 域名服务器是否是用户自定义的dns服务器 **取值范围**： - 0：否 - 1：是
     *
     * @return $this
     */
@@ -290,7 +301,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverIp
-    *  DNS服务器IP
+    *  **参数解释**： DNS服务器IP **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -302,7 +313,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
     /**
     * Sets serverIp
     *
-    * @param string|null $serverIp DNS服务器IP
+    * @param string|null $serverIp **参数解释**： DNS服务器IP **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -313,8 +324,32 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets status
+    *  **参数解释**： dns服务器解析状态 **取值范围**： 0：解析域名的频率正常 1：解析域名的频率缓慢 2：解析域名异常
+    *
+    * @return int|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param int|null $status **参数解释**： dns服务器解析状态 **取值范围**： 0：解析域名的频率正常 1：解析域名的频率缓慢 2：解析域名异常
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
     * Gets healthCheckDomainName
-    *  健康检查域名
+    *  **参数解释**： 健康检查域名 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -326,7 +361,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
     /**
     * Sets healthCheckDomainName
     *
-    * @param string|null $healthCheckDomainName 健康检查域名
+    * @param string|null $healthCheckDomainName **参数解释**： 健康检查域名 **取值范围**： 不涉及
     *
     * @return $this
     */

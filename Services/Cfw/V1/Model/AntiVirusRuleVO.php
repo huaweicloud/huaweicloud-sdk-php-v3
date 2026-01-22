@@ -20,10 +20,10 @@ class AntiVirusRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  id
-    * name  name
-    * scanProtocolConfigs  scanProtocolConfigs
-    * total  total
+    * id  反病毒规则id
+    * name  反病毒规则名称
+    * scanProtocolConfigs  反病毒扫描协议列表
+    * total  反病毒扫描协议列表总数
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class AntiVirusRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  id
-    * name  name
-    * scanProtocolConfigs  scanProtocolConfigs
-    * total  total
+    * id  反病毒规则id
+    * name  反病毒规则名称
+    * scanProtocolConfigs  反病毒扫描协议列表
+    * total  反病毒扫描协议列表总数
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class AntiVirusRuleVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  id
-    * name  name
-    * scanProtocolConfigs  scanProtocolConfigs
-    * total  total
+    * id  反病毒规则id
+    * name  反病毒规则名称
+    * scanProtocolConfigs  反病毒扫描协议列表
+    * total  反病毒扫描协议列表总数
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class AntiVirusRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  id
-    * name  name
-    * scanProtocolConfigs  scanProtocolConfigs
-    * total  total
+    * id  反病毒规则id
+    * name  反病毒规则名称
+    * scanProtocolConfigs  反病毒扫描协议列表
+    * total  反病毒扫描协议列表总数
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class AntiVirusRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  id
-    * name  name
-    * scanProtocolConfigs  scanProtocolConfigs
-    * total  total
+    * id  反病毒规则id
+    * name  反病毒规则名称
+    * scanProtocolConfigs  反病毒扫描协议列表
+    * total  反病毒扫描协议列表总数
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class AntiVirusRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  id
+    *  反病毒规则id
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class AntiVirusRuleVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id id
+    * @param string|null $id 反病毒规则id
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class AntiVirusRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  name
+    *  反病毒规则名称
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class AntiVirusRuleVO implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name name
+    * @param string|null $name 反病毒规则名称
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class AntiVirusRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanProtocolConfigs
-    *  scanProtocolConfigs
+    *  反病毒扫描协议列表
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\ScanProtocolConfig[]|null
     */
@@ -267,7 +267,7 @@ class AntiVirusRuleVO implements ModelInterface, ArrayAccess
     /**
     * Sets scanProtocolConfigs
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\ScanProtocolConfig[]|null $scanProtocolConfigs scanProtocolConfigs
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\ScanProtocolConfig[]|null $scanProtocolConfigs 反病毒扫描协议列表
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class AntiVirusRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  total
+    *  反病毒扫描协议列表总数
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class AntiVirusRuleVO implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total total
+    * @param int|null $total 反病毒扫描协议列表总数
     *
     * @return $this
     */

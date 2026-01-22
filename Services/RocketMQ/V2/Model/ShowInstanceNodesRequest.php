@@ -20,10 +20,10 @@ class ShowInstanceNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  消息引擎类型。
-    * instanceId  实例id。
-    * limit  查询数量。
-    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
+    * engine  **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询，offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ShowInstanceNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  消息引擎类型。
-    * instanceId  实例id。
-    * limit  查询数量。
-    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
+    * engine  **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询，offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ShowInstanceNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  消息引擎类型。
-    * instanceId  实例id。
-    * limit  查询数量。
-    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
+    * engine  **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询，offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ShowInstanceNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  消息引擎类型。
-    * instanceId  实例id。
-    * limit  查询数量。
-    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
+    * engine  **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询，offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ShowInstanceNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  消息引擎类型。
-    * instanceId  实例id。
-    * limit  查询数量。
-    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
+    * engine  **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    * offset  **参数解释**： 偏移量，表示从此偏移量开始查询，offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -197,6 +197,12 @@ class ShowInstanceNodesRequest implements ModelInterface, ArrayAccess
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
+            if ((mb_strlen($this->container['instanceId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['instanceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -213,7 +219,7 @@ class ShowInstanceNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  消息引擎类型。
+    *  **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -225,7 +231,7 @@ class ShowInstanceNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string $engine 消息引擎类型。
+    * @param string $engine **参数解释**： 消息引擎类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -237,7 +243,7 @@ class ShowInstanceNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例id。
+    *  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -249,7 +255,7 @@ class ShowInstanceNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例id。
+    * @param string $instanceId **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -261,7 +267,7 @@ class ShowInstanceNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询数量。
+    *  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
     *
     * @return int|null
     */
@@ -273,7 +279,7 @@ class ShowInstanceNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询数量。
+    * @param int|null $limit **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
     *
     * @return $this
     */
@@ -285,7 +291,7 @@ class ShowInstanceNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量，表示从此偏移量开始查询，offset大于等于0。
+    *  **参数解释**： 偏移量，表示从此偏移量开始查询，offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @return int|null
     */
@@ -297,7 +303,7 @@ class ShowInstanceNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量，表示从此偏移量开始查询，offset大于等于0。
+    * @param int|null $offset **参数解释**： 偏移量，表示从此偏移量开始查询，offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @return $this
     */

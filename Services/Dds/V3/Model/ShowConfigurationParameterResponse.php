@@ -21,14 +21,14 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  参数模板ID。
-    * name  参数模板名称。
-    * datastoreVersion  数据库版本。
-    * datastoreName  数据库类型。
-    * description  参数模板描述。
-    * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * parameters  参数对象，用户基于默认参数模板自定义的参数配置。
+    * id  **参数解释：** 参数模板ID。 **取值范围：** 不涉及。
+    * name  **参数解释：** 参数模板名称。 **取值范围：** 不涉及。
+    * datastoreVersion  **参数解释：** 数据库版本。 **取值范围：** 不涉及。
+    * datastoreName  **参数解释：** 数据库类型。 **取值范围：** 不涉及。
+    * description  **参数解释：** 参数模板描述。 **取值范围：** 不涉及。
+    * created  **参数解释：** 创建时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * updated  **参数解释：** 更新时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * parameters  **参数解释：** 参数对象，用户基于默认参数模板自定义的参数配置。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -45,14 +45,14 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  参数模板ID。
-    * name  参数模板名称。
-    * datastoreVersion  数据库版本。
-    * datastoreName  数据库类型。
-    * description  参数模板描述。
-    * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * parameters  参数对象，用户基于默认参数模板自定义的参数配置。
+    * id  **参数解释：** 参数模板ID。 **取值范围：** 不涉及。
+    * name  **参数解释：** 参数模板名称。 **取值范围：** 不涉及。
+    * datastoreVersion  **参数解释：** 数据库版本。 **取值范围：** 不涉及。
+    * datastoreName  **参数解释：** 数据库类型。 **取值范围：** 不涉及。
+    * description  **参数解释：** 参数模板描述。 **取值范围：** 不涉及。
+    * created  **参数解释：** 创建时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * updated  **参数解释：** 更新时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * parameters  **参数解释：** 参数对象，用户基于默认参数模板自定义的参数配置。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -90,14 +90,14 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  参数模板ID。
-    * name  参数模板名称。
-    * datastoreVersion  数据库版本。
-    * datastoreName  数据库类型。
-    * description  参数模板描述。
-    * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * parameters  参数对象，用户基于默认参数模板自定义的参数配置。
+    * id  **参数解释：** 参数模板ID。 **取值范围：** 不涉及。
+    * name  **参数解释：** 参数模板名称。 **取值范围：** 不涉及。
+    * datastoreVersion  **参数解释：** 数据库版本。 **取值范围：** 不涉及。
+    * datastoreName  **参数解释：** 数据库类型。 **取值范围：** 不涉及。
+    * description  **参数解释：** 参数模板描述。 **取值范围：** 不涉及。
+    * created  **参数解释：** 创建时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * updated  **参数解释：** 更新时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * parameters  **参数解释：** 参数对象，用户基于默认参数模板自定义的参数配置。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -114,14 +114,14 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  参数模板ID。
-    * name  参数模板名称。
-    * datastoreVersion  数据库版本。
-    * datastoreName  数据库类型。
-    * description  参数模板描述。
-    * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * parameters  参数对象，用户基于默认参数模板自定义的参数配置。
+    * id  **参数解释：** 参数模板ID。 **取值范围：** 不涉及。
+    * name  **参数解释：** 参数模板名称。 **取值范围：** 不涉及。
+    * datastoreVersion  **参数解释：** 数据库版本。 **取值范围：** 不涉及。
+    * datastoreName  **参数解释：** 数据库类型。 **取值范围：** 不涉及。
+    * description  **参数解释：** 参数模板描述。 **取值范围：** 不涉及。
+    * created  **参数解释：** 创建时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * updated  **参数解释：** 更新时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * parameters  **参数解释：** 参数对象，用户基于默认参数模板自定义的参数配置。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -138,14 +138,14 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  参数模板ID。
-    * name  参数模板名称。
-    * datastoreVersion  数据库版本。
-    * datastoreName  数据库类型。
-    * description  参数模板描述。
-    * created  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * updated  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
-    * parameters  参数对象，用户基于默认参数模板自定义的参数配置。
+    * id  **参数解释：** 参数模板ID。 **取值范围：** 不涉及。
+    * name  **参数解释：** 参数模板名称。 **取值范围：** 不涉及。
+    * datastoreVersion  **参数解释：** 数据库版本。 **取值范围：** 不涉及。
+    * datastoreName  **参数解释：** 数据库类型。 **取值范围：** 不涉及。
+    * description  **参数解释：** 参数模板描述。 **取值范围：** 不涉及。
+    * created  **参数解释：** 创建时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * updated  **参数解释：** 更新时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
+    * parameters  **参数解释：** 参数对象，用户基于默认参数模板自定义的参数配置。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -252,7 +252,7 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  参数模板ID。
+    *  **参数解释：** 参数模板ID。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -264,7 +264,7 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 参数模板ID。
+    * @param string|null $id **参数解释：** 参数模板ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -276,7 +276,7 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  参数模板名称。
+    *  **参数解释：** 参数模板名称。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -288,7 +288,7 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 参数模板名称。
+    * @param string|null $name **参数解释：** 参数模板名称。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -300,7 +300,7 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets datastoreVersion
-    *  数据库版本。
+    *  **参数解释：** 数据库版本。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -312,7 +312,7 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
     /**
     * Sets datastoreVersion
     *
-    * @param string|null $datastoreVersion 数据库版本。
+    * @param string|null $datastoreVersion **参数解释：** 数据库版本。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -324,7 +324,7 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets datastoreName
-    *  数据库类型。
+    *  **参数解释：** 数据库类型。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -336,7 +336,7 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
     /**
     * Sets datastoreName
     *
-    * @param string|null $datastoreName 数据库类型。
+    * @param string|null $datastoreName **参数解释：** 数据库类型。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -348,7 +348,7 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  参数模板描述。
+    *  **参数解释：** 参数模板描述。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -360,7 +360,7 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 参数模板描述。
+    * @param string|null $description **参数解释：** 参数模板描述。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -372,7 +372,7 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets created
-    *  创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    *  **参数解释：** 创建时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -384,7 +384,7 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
     /**
     * Sets created
     *
-    * @param string|null $created 创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * @param string|null $created **参数解释：** 创建时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -396,7 +396,7 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updated
-    *  更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    *  **参数解释：** 更新时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -408,7 +408,7 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updated
     *
-    * @param string|null $updated 更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * @param string|null $updated **参数解释：** 更新时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -420,7 +420,7 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets parameters
-    *  参数对象，用户基于默认参数模板自定义的参数配置。
+    *  **参数解释：** 参数对象，用户基于默认参数模板自定义的参数配置。 **取值范围：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dds\V3\Model\ConfigurationParametersResult[]|null
     */
@@ -432,7 +432,7 @@ class ShowConfigurationParameterResponse implements ModelInterface, ArrayAccess
     /**
     * Sets parameters
     *
-    * @param \HuaweiCloud\SDK\Dds\V3\Model\ConfigurationParametersResult[]|null $parameters 参数对象，用户基于默认参数模板自定义的参数配置。
+    * @param \HuaweiCloud\SDK\Dds\V3\Model\ConfigurationParametersResult[]|null $parameters **参数解释：** 参数对象，用户基于默认参数模板自定义的参数配置。 **取值范围：** 不涉及。
     *
     * @return $this
     */

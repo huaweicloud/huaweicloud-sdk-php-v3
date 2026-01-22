@@ -20,11 +20,11 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  消息引擎。
-    * instanceId  实例ID。
-    * msgId  消息ID。
-    * limit  查询数量。
-    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
+    * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： reliability。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * msgId  **参数解释**：  消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**：  查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    * offset  **参数解释**：  偏移量，表示从此偏移量开始查询，offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  消息引擎。
-    * instanceId  实例ID。
-    * msgId  消息ID。
-    * limit  查询数量。
-    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
+    * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： reliability。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * msgId  **参数解释**：  消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**：  查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    * offset  **参数解释**：  偏移量，表示从此偏移量开始查询，offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  消息引擎。
-    * instanceId  实例ID。
-    * msgId  消息ID。
-    * limit  查询数量。
-    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
+    * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： reliability。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * msgId  **参数解释**：  消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**：  查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    * offset  **参数解释**：  偏移量，表示从此偏移量开始查询，offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  消息引擎。
-    * instanceId  实例ID。
-    * msgId  消息ID。
-    * limit  查询数量。
-    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
+    * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： reliability。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * msgId  **参数解释**：  消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**：  查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    * offset  **参数解释**：  偏移量，表示从此偏移量开始查询，offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  消息引擎。
-    * instanceId  实例ID。
-    * msgId  消息ID。
-    * limit  查询数量。
-    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0。
+    * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： reliability。
+    * instanceId  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * msgId  **参数解释**：  消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * limit  **参数解释**：  查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
+    * offset  **参数解释**：  偏移量，表示从此偏移量开始查询，offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @var string[]
     */
@@ -169,20 +169,7 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const ENGINE_RELIABILITY = 'reliability';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getEngineAllowableValues()
-    {
-        return [
-            self::ENGINE_RELIABILITY,
-        ];
-    }
 
 
     /**
@@ -218,14 +205,6 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
         if ($this->container['engine'] === null) {
             $invalidProperties[] = "'engine' can't be null";
         }
-            $allowedValues = $this->getEngineAllowableValues();
-                if (!is_null($this->container['engine']) && !in_array($this->container['engine'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'engine', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
@@ -248,7 +227,7 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  消息引擎。
+    *  **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： reliability。
     *
     * @return string
     */
@@ -260,7 +239,7 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string $engine 消息引擎。
+    * @param string $engine **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： reliability。
     *
     * @return $this
     */
@@ -272,7 +251,7 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -284,7 +263,7 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string $instanceId **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -296,7 +275,7 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets msgId
-    *  消息ID。
+    *  **参数解释**：  消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -308,7 +287,7 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets msgId
     *
-    * @param string $msgId 消息ID。
+    * @param string $msgId **参数解释**：  消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -320,7 +299,7 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询数量。
+    *  **参数解释**：  查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
     *
     * @return int|null
     */
@@ -332,7 +311,7 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询数量。
+    * @param int|null $limit **参数解释**：  查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
     *
     * @return $this
     */
@@ -344,7 +323,7 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量，表示从此偏移量开始查询，offset大于等于0。
+    *  **参数解释**：  偏移量，表示从此偏移量开始查询，offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @return int|null
     */
@@ -356,7 +335,7 @@ class ListMessageTraceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量，表示从此偏移量开始查询，offset大于等于0。
+    * @param int|null $offset **参数解释**：  偏移量，表示从此偏移量开始查询，offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
     *
     * @return $this
     */

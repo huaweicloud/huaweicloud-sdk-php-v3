@@ -20,10 +20,10 @@ class ListProductsRespValues implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * detail  规格详情。
-    * name  实例类型。
-    * unavailableZones  资源售罄的可用区列表。
-    * availableZones  有可用资源的可用区列表。
+    * detail  **参数解释**： 规格详情。
+    * name  **参数解释**： 实例类型。 **取值范围**： 不涉及。
+    * unavailableZones  **参数解释**： 资源售罄的可用区列表。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 有可用资源的可用区列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ListProductsRespValues implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * detail  规格详情。
-    * name  实例类型。
-    * unavailableZones  资源售罄的可用区列表。
-    * availableZones  有可用资源的可用区列表。
+    * detail  **参数解释**： 规格详情。
+    * name  **参数解释**： 实例类型。 **取值范围**： 不涉及。
+    * unavailableZones  **参数解释**： 资源售罄的可用区列表。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 有可用资源的可用区列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ListProductsRespValues implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * detail  规格详情。
-    * name  实例类型。
-    * unavailableZones  资源售罄的可用区列表。
-    * availableZones  有可用资源的可用区列表。
+    * detail  **参数解释**： 规格详情。
+    * name  **参数解释**： 实例类型。 **取值范围**： 不涉及。
+    * unavailableZones  **参数解释**： 资源售罄的可用区列表。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 有可用资源的可用区列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ListProductsRespValues implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * detail  规格详情。
-    * name  实例类型。
-    * unavailableZones  资源售罄的可用区列表。
-    * availableZones  有可用资源的可用区列表。
+    * detail  **参数解释**： 规格详情。
+    * name  **参数解释**： 实例类型。 **取值范围**： 不涉及。
+    * unavailableZones  **参数解释**： 资源售罄的可用区列表。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 有可用资源的可用区列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ListProductsRespValues implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * detail  规格详情。
-    * name  实例类型。
-    * unavailableZones  资源售罄的可用区列表。
-    * availableZones  有可用资源的可用区列表。
+    * detail  **参数解释**： 规格详情。
+    * name  **参数解释**： 实例类型。 **取值范围**： 不涉及。
+    * unavailableZones  **参数解释**： 资源售罄的可用区列表。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： 有可用资源的可用区列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class ListProductsRespValues implements ModelInterface, ArrayAccess
 
     /**
     * Gets detail
-    *  规格详情。
+    *  **参数解释**： 规格详情。
     *
     * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespDetail[]|null
     */
@@ -219,7 +219,7 @@ class ListProductsRespValues implements ModelInterface, ArrayAccess
     /**
     * Sets detail
     *
-    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespDetail[]|null $detail 规格详情。
+    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRespDetail[]|null $detail **参数解释**： 规格详情。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class ListProductsRespValues implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  实例类型。
+    *  **参数解释**： 实例类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class ListProductsRespValues implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 实例类型。
+    * @param string|null $name **参数解释**： 实例类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class ListProductsRespValues implements ModelInterface, ArrayAccess
 
     /**
     * Gets unavailableZones
-    *  资源售罄的可用区列表。
+    *  **参数解释**： 资源售罄的可用区列表。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -267,7 +267,7 @@ class ListProductsRespValues implements ModelInterface, ArrayAccess
     /**
     * Sets unavailableZones
     *
-    * @param string[]|null $unavailableZones 资源售罄的可用区列表。
+    * @param string[]|null $unavailableZones **参数解释**： 资源售罄的可用区列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class ListProductsRespValues implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableZones
-    *  有可用资源的可用区列表。
+    *  **参数解释**： 有可用资源的可用区列表。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -291,7 +291,7 @@ class ListProductsRespValues implements ModelInterface, ArrayAccess
     /**
     * Sets availableZones
     *
-    * @param string[]|null $availableZones 有可用资源的可用区列表。
+    * @param string[]|null $availableZones **参数解释**： 有可用资源的可用区列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */

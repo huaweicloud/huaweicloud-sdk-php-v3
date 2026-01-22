@@ -20,13 +20,13 @@ class IpsContent implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * content  **参数解释**： 内容 **取值范围**： 不涉及
-    * depth  **参数解释**： 深度 **取值范围**： 不涉及
-    * isHex  **参数解释**： 报文内容是否为十六进制 **取值范围**： 不涉及
-    * isIgnore  **参数解释**： 是否忽略大小写 **取值范围**： 不涉及
-    * isUri  **参数解释**： 是否在uri中截取报文 **取值范围**： 不涉及
-    * offset  **参数解释**： 偏移量 **取值范围**： 不涉及
-    * relativePosition  **参数解释**： 相对位置 **取值范围**： 不涉及
+    * content  **参数解释**： 内容 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
+    * depth  **参数解释**： 匹配特征时，截止匹配的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
+    * isHex  **参数解释**： 报文内容是否为十六进制 **约束限制**： 不涉及 **取值范围**： true： 是十六进制 false： 不是十六进制 **默认取值**：   不涉及
+    * isIgnore  **参数解释**： 是否忽略大小写 **约束限制**： 不涉及 **取值范围**： true： 忽略 false： 不忽略 **默认取值**：   不涉及
+    * isUri  **参数解释**： 是否匹配URL中跟“内容”一致的字段 **约束限制**： 不涉及 **取值范围**： true： 匹配 false： 不匹配 **默认取值**：   不涉及
+    * offset  **参数解释**： 匹配特征时开始的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
+    * relativePosition  **参数解释**： 匹配特征时，指定开始的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class IpsContent implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * content  **参数解释**： 内容 **取值范围**： 不涉及
-    * depth  **参数解释**： 深度 **取值范围**： 不涉及
-    * isHex  **参数解释**： 报文内容是否为十六进制 **取值范围**： 不涉及
-    * isIgnore  **参数解释**： 是否忽略大小写 **取值范围**： 不涉及
-    * isUri  **参数解释**： 是否在uri中截取报文 **取值范围**： 不涉及
-    * offset  **参数解释**： 偏移量 **取值范围**： 不涉及
-    * relativePosition  **参数解释**： 相对位置 **取值范围**： 不涉及
+    * content  **参数解释**： 内容 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
+    * depth  **参数解释**： 匹配特征时，截止匹配的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
+    * isHex  **参数解释**： 报文内容是否为十六进制 **约束限制**： 不涉及 **取值范围**： true： 是十六进制 false： 不是十六进制 **默认取值**：   不涉及
+    * isIgnore  **参数解释**： 是否忽略大小写 **约束限制**： 不涉及 **取值范围**： true： 忽略 false： 不忽略 **默认取值**：   不涉及
+    * isUri  **参数解释**： 是否匹配URL中跟“内容”一致的字段 **约束限制**： 不涉及 **取值范围**： true： 匹配 false： 不匹配 **默认取值**：   不涉及
+    * offset  **参数解释**： 匹配特征时开始的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
+    * relativePosition  **参数解释**： 匹配特征时，指定开始的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class IpsContent implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * content  **参数解释**： 内容 **取值范围**： 不涉及
-    * depth  **参数解释**： 深度 **取值范围**： 不涉及
-    * isHex  **参数解释**： 报文内容是否为十六进制 **取值范围**： 不涉及
-    * isIgnore  **参数解释**： 是否忽略大小写 **取值范围**： 不涉及
-    * isUri  **参数解释**： 是否在uri中截取报文 **取值范围**： 不涉及
-    * offset  **参数解释**： 偏移量 **取值范围**： 不涉及
-    * relativePosition  **参数解释**： 相对位置 **取值范围**： 不涉及
+    * content  **参数解释**： 内容 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
+    * depth  **参数解释**： 匹配特征时，截止匹配的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
+    * isHex  **参数解释**： 报文内容是否为十六进制 **约束限制**： 不涉及 **取值范围**： true： 是十六进制 false： 不是十六进制 **默认取值**：   不涉及
+    * isIgnore  **参数解释**： 是否忽略大小写 **约束限制**： 不涉及 **取值范围**： true： 忽略 false： 不忽略 **默认取值**：   不涉及
+    * isUri  **参数解释**： 是否匹配URL中跟“内容”一致的字段 **约束限制**： 不涉及 **取值范围**： true： 匹配 false： 不匹配 **默认取值**：   不涉及
+    * offset  **参数解释**： 匹配特征时开始的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
+    * relativePosition  **参数解释**： 匹配特征时，指定开始的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class IpsContent implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * content  **参数解释**： 内容 **取值范围**： 不涉及
-    * depth  **参数解释**： 深度 **取值范围**： 不涉及
-    * isHex  **参数解释**： 报文内容是否为十六进制 **取值范围**： 不涉及
-    * isIgnore  **参数解释**： 是否忽略大小写 **取值范围**： 不涉及
-    * isUri  **参数解释**： 是否在uri中截取报文 **取值范围**： 不涉及
-    * offset  **参数解释**： 偏移量 **取值范围**： 不涉及
-    * relativePosition  **参数解释**： 相对位置 **取值范围**： 不涉及
+    * content  **参数解释**： 内容 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
+    * depth  **参数解释**： 匹配特征时，截止匹配的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
+    * isHex  **参数解释**： 报文内容是否为十六进制 **约束限制**： 不涉及 **取值范围**： true： 是十六进制 false： 不是十六进制 **默认取值**：   不涉及
+    * isIgnore  **参数解释**： 是否忽略大小写 **约束限制**： 不涉及 **取值范围**： true： 忽略 false： 不忽略 **默认取值**：   不涉及
+    * isUri  **参数解释**： 是否匹配URL中跟“内容”一致的字段 **约束限制**： 不涉及 **取值范围**： true： 匹配 false： 不匹配 **默认取值**：   不涉及
+    * offset  **参数解释**： 匹配特征时开始的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
+    * relativePosition  **参数解释**： 匹配特征时，指定开始的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class IpsContent implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * content  **参数解释**： 内容 **取值范围**： 不涉及
-    * depth  **参数解释**： 深度 **取值范围**： 不涉及
-    * isHex  **参数解释**： 报文内容是否为十六进制 **取值范围**： 不涉及
-    * isIgnore  **参数解释**： 是否忽略大小写 **取值范围**： 不涉及
-    * isUri  **参数解释**： 是否在uri中截取报文 **取值范围**： 不涉及
-    * offset  **参数解释**： 偏移量 **取值范围**： 不涉及
-    * relativePosition  **参数解释**： 相对位置 **取值范围**： 不涉及
+    * content  **参数解释**： 内容 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
+    * depth  **参数解释**： 匹配特征时，截止匹配的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
+    * isHex  **参数解释**： 报文内容是否为十六进制 **约束限制**： 不涉及 **取值范围**： true： 是十六进制 false： 不是十六进制 **默认取值**：   不涉及
+    * isIgnore  **参数解释**： 是否忽略大小写 **约束限制**： 不涉及 **取值范围**： true： 忽略 false： 不忽略 **默认取值**：   不涉及
+    * isUri  **参数解释**： 是否匹配URL中跟“内容”一致的字段 **约束限制**： 不涉及 **取值范围**： true： 匹配 false： 不匹配 **默认取值**：   不涉及
+    * offset  **参数解释**： 匹配特征时开始的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
+    * relativePosition  **参数解释**： 匹配特征时，指定开始的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @var string[]
     */
@@ -264,7 +264,7 @@ class IpsContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets content
-    *  **参数解释**： 内容 **取值范围**： 不涉及
+    *  **参数解释**： 内容 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class IpsContent implements ModelInterface, ArrayAccess
     /**
     * Sets content
     *
-    * @param string|null $content **参数解释**： 内容 **取值范围**： 不涉及
+    * @param string|null $content **参数解释**： 内容 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class IpsContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets depth
-    *  **参数解释**： 深度 **取值范围**： 不涉及
+    *  **参数解释**： 匹配特征时，截止匹配的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @return int|null
     */
@@ -300,7 +300,7 @@ class IpsContent implements ModelInterface, ArrayAccess
     /**
     * Sets depth
     *
-    * @param int|null $depth **参数解释**： 深度 **取值范围**： 不涉及
+    * @param int|null $depth **参数解释**： 匹配特征时，截止匹配的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class IpsContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets isHex
-    *  **参数解释**： 报文内容是否为十六进制 **取值范围**： 不涉及
+    *  **参数解释**： 报文内容是否为十六进制 **约束限制**： 不涉及 **取值范围**： true： 是十六进制 false： 不是十六进制 **默认取值**：   不涉及
     *
     * @return bool|null
     */
@@ -324,7 +324,7 @@ class IpsContent implements ModelInterface, ArrayAccess
     /**
     * Sets isHex
     *
-    * @param bool|null $isHex **参数解释**： 报文内容是否为十六进制 **取值范围**： 不涉及
+    * @param bool|null $isHex **参数解释**： 报文内容是否为十六进制 **约束限制**： 不涉及 **取值范围**： true： 是十六进制 false： 不是十六进制 **默认取值**：   不涉及
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class IpsContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets isIgnore
-    *  **参数解释**： 是否忽略大小写 **取值范围**： 不涉及
+    *  **参数解释**： 是否忽略大小写 **约束限制**： 不涉及 **取值范围**： true： 忽略 false： 不忽略 **默认取值**：   不涉及
     *
     * @return bool|null
     */
@@ -348,7 +348,7 @@ class IpsContent implements ModelInterface, ArrayAccess
     /**
     * Sets isIgnore
     *
-    * @param bool|null $isIgnore **参数解释**： 是否忽略大小写 **取值范围**： 不涉及
+    * @param bool|null $isIgnore **参数解释**： 是否忽略大小写 **约束限制**： 不涉及 **取值范围**： true： 忽略 false： 不忽略 **默认取值**：   不涉及
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class IpsContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets isUri
-    *  **参数解释**： 是否在uri中截取报文 **取值范围**： 不涉及
+    *  **参数解释**： 是否匹配URL中跟“内容”一致的字段 **约束限制**： 不涉及 **取值范围**： true： 匹配 false： 不匹配 **默认取值**：   不涉及
     *
     * @return bool|null
     */
@@ -372,7 +372,7 @@ class IpsContent implements ModelInterface, ArrayAccess
     /**
     * Sets isUri
     *
-    * @param bool|null $isUri **参数解释**： 是否在uri中截取报文 **取值范围**： 不涉及
+    * @param bool|null $isUri **参数解释**： 是否匹配URL中跟“内容”一致的字段 **约束限制**： 不涉及 **取值范围**： true： 匹配 false： 不匹配 **默认取值**：   不涉及
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class IpsContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  **参数解释**： 偏移量 **取值范围**： 不涉及
+    *  **参数解释**： 匹配特征时开始的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @return int|null
     */
@@ -396,7 +396,7 @@ class IpsContent implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset **参数解释**： 偏移量 **取值范围**： 不涉及
+    * @param int|null $offset **参数解释**： 匹配特征时开始的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @return $this
     */
@@ -408,7 +408,7 @@ class IpsContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets relativePosition
-    *  **参数解释**： 相对位置 **取值范围**： 不涉及
+    *  **参数解释**： 匹配特征时，指定开始的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @return int|null
     */
@@ -420,7 +420,7 @@ class IpsContent implements ModelInterface, ArrayAccess
     /**
     * Sets relativePosition
     *
-    * @param int|null $relativePosition **参数解释**： 相对位置 **取值范围**： 不涉及
+    * @param int|null $relativePosition **参数解释**： 匹配特征时，指定开始的位置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @return $this
     */

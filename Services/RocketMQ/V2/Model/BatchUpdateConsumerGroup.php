@@ -20,12 +20,12 @@ class BatchUpdateConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * broadcast  是否广播。
-    * retryMaxTime  最大重试次数，取值范围为1~16。
-    * enabled  是否可以消费。
-    * consumeOrderly  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
-    * groupDesc  消费组描述，长度0~200个字符。
+    * name  **参数解释**： 消费组名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。[华为云Stack不支持](tag:hcs,hcs_oemout) **约束限制**： 不涉及。 **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 长度0~200个字符 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class BatchUpdateConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * broadcast  是否广播。
-    * retryMaxTime  最大重试次数，取值范围为1~16。
-    * enabled  是否可以消费。
-    * consumeOrderly  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
-    * groupDesc  消费组描述，长度0~200个字符。
+    * name  **参数解释**： 消费组名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。[华为云Stack不支持](tag:hcs,hcs_oemout) **约束限制**： 不涉及。 **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 长度0~200个字符 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class BatchUpdateConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * broadcast  是否广播。
-    * retryMaxTime  最大重试次数，取值范围为1~16。
-    * enabled  是否可以消费。
-    * consumeOrderly  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
-    * groupDesc  消费组描述，长度0~200个字符。
+    * name  **参数解释**： 消费组名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。[华为云Stack不支持](tag:hcs,hcs_oemout) **约束限制**： 不涉及。 **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 长度0~200个字符 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class BatchUpdateConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * broadcast  是否广播。
-    * retryMaxTime  最大重试次数，取值范围为1~16。
-    * enabled  是否可以消费。
-    * consumeOrderly  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
-    * groupDesc  消费组描述，长度0~200个字符。
+    * name  **参数解释**： 消费组名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。[华为云Stack不支持](tag:hcs,hcs_oemout) **约束限制**： 不涉及。 **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 长度0~200个字符 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class BatchUpdateConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * broadcast  是否广播。
-    * retryMaxTime  最大重试次数，取值范围为1~16。
-    * enabled  是否可以消费。
-    * consumeOrderly  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
-    * groupDesc  消费组描述，长度0~200个字符。
+    * name  **参数解释**： 消费组名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。[华为云Stack不支持](tag:hcs,hcs_oemout) **约束限制**： 不涉及。 **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 长度0~200个字符 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -213,6 +213,9 @@ class BatchUpdateConsumerGroup implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
             if (!is_null($this->container['groupDesc']) && (mb_strlen($this->container['groupDesc']) > 200)) {
                 $invalidProperties[] = "invalid value for 'groupDesc', the character length must be smaller than or equal to 200.";
             }
@@ -235,9 +238,9 @@ class BatchUpdateConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
+    *  **参数解释**： 消费组名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -247,7 +250,7 @@ class BatchUpdateConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
+    * @param string $name **参数解释**： 消费组名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -259,7 +262,7 @@ class BatchUpdateConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets broadcast
-    *  是否广播。
+    *  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -271,7 +274,7 @@ class BatchUpdateConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets broadcast
     *
-    * @param bool|null $broadcast 是否广播。
+    * @param bool|null $broadcast **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -283,7 +286,7 @@ class BatchUpdateConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets retryMaxTime
-    *  最大重试次数，取值范围为1~16。
+    *  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -295,7 +298,7 @@ class BatchUpdateConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets retryMaxTime
     *
-    * @param int|null $retryMaxTime 最大重试次数，取值范围为1~16。
+    * @param int|null $retryMaxTime **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -307,7 +310,7 @@ class BatchUpdateConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  是否可以消费。
+    *  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -319,7 +322,7 @@ class BatchUpdateConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool|null $enabled 是否可以消费。
+    * @param bool|null $enabled **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -331,7 +334,7 @@ class BatchUpdateConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumeOrderly
-    *  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
+    *  **参数解释**： 是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。[华为云Stack不支持](tag:hcs,hcs_oemout) **约束限制**： 不涉及。 **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -343,7 +346,7 @@ class BatchUpdateConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets consumeOrderly
     *
-    * @param bool|null $consumeOrderly 是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
+    * @param bool|null $consumeOrderly **参数解释**： 是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。[华为云Stack不支持](tag:hcs,hcs_oemout) **约束限制**： 不涉及。 **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -355,7 +358,7 @@ class BatchUpdateConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupDesc
-    *  消费组描述，长度0~200个字符。
+    *  **参数解释**： 消费组描述。 **约束限制**： 长度0~200个字符 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -367,7 +370,7 @@ class BatchUpdateConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets groupDesc
     *
-    * @param string|null $groupDesc 消费组描述，长度0~200个字符。
+    * @param string|null $groupDesc **参数解释**： 消费组描述。 **约束限制**： 长度0~200个字符 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

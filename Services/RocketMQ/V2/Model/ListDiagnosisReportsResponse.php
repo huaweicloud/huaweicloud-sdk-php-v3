@@ -21,22 +21,26 @@ class ListDiagnosisReportsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * diagnosisReportList  **参数解释**： 诊断报告列表。 **取值范围**： 不涉及。
+    * diagnosisReportList  **参数解释**： 诊断报告列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * totalNum  **参数解释**： 报告数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'diagnosisReportList' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\DiagnosisReportResp[]'
+            'diagnosisReportList' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\DiagnosisReportResp[]',
+            'totalNum' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * diagnosisReportList  **参数解释**： 诊断报告列表。 **取值范围**： 不涉及。
+    * diagnosisReportList  **参数解释**： 诊断报告列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * totalNum  **参数解释**： 报告数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'diagnosisReportList' => null
+        'diagnosisReportList' => null,
+        'totalNum' => null
     ];
 
     /**
@@ -62,32 +66,38 @@ class ListDiagnosisReportsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * diagnosisReportList  **参数解释**： 诊断报告列表。 **取值范围**： 不涉及。
+    * diagnosisReportList  **参数解释**： 诊断报告列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * totalNum  **参数解释**： 报告数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'diagnosisReportList' => 'diagnosis_report_list'
+            'diagnosisReportList' => 'diagnosis_report_list',
+            'totalNum' => 'total_num'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * diagnosisReportList  **参数解释**： 诊断报告列表。 **取值范围**： 不涉及。
+    * diagnosisReportList  **参数解释**： 诊断报告列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * totalNum  **参数解释**： 报告数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'diagnosisReportList' => 'setDiagnosisReportList'
+            'diagnosisReportList' => 'setDiagnosisReportList',
+            'totalNum' => 'setTotalNum'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * diagnosisReportList  **参数解释**： 诊断报告列表。 **取值范围**： 不涉及。
+    * diagnosisReportList  **参数解释**： 诊断报告列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * totalNum  **参数解释**： 报告数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'diagnosisReportList' => 'getDiagnosisReportList'
+            'diagnosisReportList' => 'getDiagnosisReportList',
+            'totalNum' => 'getTotalNum'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListDiagnosisReportsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['diagnosisReportList'] = isset($data['diagnosisReportList']) ? $data['diagnosisReportList'] : null;
+        $this->container['totalNum'] = isset($data['totalNum']) ? $data['totalNum'] : null;
     }
 
     /**
@@ -175,7 +186,7 @@ class ListDiagnosisReportsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets diagnosisReportList
-    *  **参数解释**： 诊断报告列表。 **取值范围**： 不涉及。
+    *  **参数解释**： 诊断报告列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\DiagnosisReportResp[]|null
     */
@@ -187,13 +198,37 @@ class ListDiagnosisReportsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets diagnosisReportList
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\DiagnosisReportResp[]|null $diagnosisReportList **参数解释**： 诊断报告列表。 **取值范围**： 不涉及。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\DiagnosisReportResp[]|null $diagnosisReportList **参数解释**： 诊断报告列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
     public function setDiagnosisReportList($diagnosisReportList)
     {
         $this->container['diagnosisReportList'] = $diagnosisReportList;
+        return $this;
+    }
+
+    /**
+    * Gets totalNum
+    *  **参数解释**： 报告数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return object|null
+    */
+    public function getTotalNum()
+    {
+        return $this->container['totalNum'];
+    }
+
+    /**
+    * Sets totalNum
+    *
+    * @param object|null $totalNum **参数解释**： 报告数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setTotalNum($totalNum)
+    {
+        $this->container['totalNum'] = $totalNum;
         return $this;
     }
 

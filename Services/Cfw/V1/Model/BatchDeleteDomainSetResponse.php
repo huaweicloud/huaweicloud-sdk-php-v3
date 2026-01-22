@@ -21,7 +21,7 @@ class BatchDeleteDomainSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * data  data
+    * data  **参数解释**： 批量删除域名组响应信息 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class BatchDeleteDomainSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * data  data
+    * data  **参数解释**： 批量删除域名组响应信息 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class BatchDeleteDomainSetResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * data  data
+    * data  **参数解释**： 批量删除域名组响应信息 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class BatchDeleteDomainSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * data  data
+    * data  **参数解释**： 批量删除域名组响应信息 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class BatchDeleteDomainSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * data  data
+    * data  **参数解释**： 批量删除域名组响应信息 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class BatchDeleteDomainSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
-    *  data
+    *  **参数解释**： 批量删除域名组响应信息 **取值范围**： 不涉及
     *
     * @return map[string,\HuaweiCloud\SDK\Cfw\V1\Model\MapStringString[]]|null
     */
@@ -187,7 +187,7 @@ class BatchDeleteDomainSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param map[string,\HuaweiCloud\SDK\Cfw\V1\Model\MapStringString[]]|null $data data
+    * @param map[string,\HuaweiCloud\SDK\Cfw\V1\Model\MapStringString[]]|null $data **参数解释**： 批量删除域名组响应信息 **取值范围**： 不涉及
     *
     * @return $this
     */

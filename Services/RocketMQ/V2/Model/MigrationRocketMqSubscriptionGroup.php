@@ -20,14 +20,14 @@ class MigrationRocketMqSubscriptionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupName  消费组名。
-    * consumeBroadcastEnable  是否允许以广播模式消费。
-    * consumeEnable  是否允许消费。
-    * consumeFromMinEnable  是否从最小偏移量开始消费。
-    * notifyConsumerIdsChangedEnable  消费者ID变化时是否通知。
-    * retryMaxTimes  消费最大重试次数。
-    * retryQueueNums  重试队列个数。
-    * whichBrokerWhenConsumeSlow  慢消费时选择的broker节点ID。
+    * groupName  **参数解释**： 消费组名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeBroadcastEnable  **参数解释**： 是否允许以广播模式消费。 **约束限制**： 不涉及。 **取值范围**： - true：允许以广播模式消费。 - false：不允许以广播模式消费。 **默认取值**： 不涉及。
+    * consumeEnable  **参数解释**： 是否允许消费。 **约束限制**： 不涉及。 **取值范围**： - true：允许消费。 - false：不允许消费。 **默认取值**： true。
+    * consumeFromMinEnable  **参数解释**： 是否从最小偏移量开始消费。 **约束限制**： 不涉及。 **取值范围**： - true：是。 - false：不是。 **默认取值**： true。
+    * notifyConsumerIdsChangedEnable  **参数解释**： 消费者ID变化时是否通知。 **约束限制**： 不涉及。 **取值范围**： - true：是。 - false：不是。 **默认取值**： true。
+    * retryMaxTimes  **参数解释**： 消费最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
+    * retryQueueNums  **参数解释**： 消费最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 1。
+    * whichBrokerWhenConsumeSlow  **参数解释**： 慢消费时选择的broker节点ID **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 1。
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class MigrationRocketMqSubscriptionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupName  消费组名。
-    * consumeBroadcastEnable  是否允许以广播模式消费。
-    * consumeEnable  是否允许消费。
-    * consumeFromMinEnable  是否从最小偏移量开始消费。
-    * notifyConsumerIdsChangedEnable  消费者ID变化时是否通知。
-    * retryMaxTimes  消费最大重试次数。
-    * retryQueueNums  重试队列个数。
-    * whichBrokerWhenConsumeSlow  慢消费时选择的broker节点ID。
+    * groupName  **参数解释**： 消费组名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeBroadcastEnable  **参数解释**： 是否允许以广播模式消费。 **约束限制**： 不涉及。 **取值范围**： - true：允许以广播模式消费。 - false：不允许以广播模式消费。 **默认取值**： 不涉及。
+    * consumeEnable  **参数解释**： 是否允许消费。 **约束限制**： 不涉及。 **取值范围**： - true：允许消费。 - false：不允许消费。 **默认取值**： true。
+    * consumeFromMinEnable  **参数解释**： 是否从最小偏移量开始消费。 **约束限制**： 不涉及。 **取值范围**： - true：是。 - false：不是。 **默认取值**： true。
+    * notifyConsumerIdsChangedEnable  **参数解释**： 消费者ID变化时是否通知。 **约束限制**： 不涉及。 **取值范围**： - true：是。 - false：不是。 **默认取值**： true。
+    * retryMaxTimes  **参数解释**： 消费最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
+    * retryQueueNums  **参数解释**： 消费最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 1。
+    * whichBrokerWhenConsumeSlow  **参数解释**： 慢消费时选择的broker节点ID **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 1。
     *
     * @var string[]
     */
@@ -89,38 +89,38 @@ class MigrationRocketMqSubscriptionGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupName  消费组名。
-    * consumeBroadcastEnable  是否允许以广播模式消费。
-    * consumeEnable  是否允许消费。
-    * consumeFromMinEnable  是否从最小偏移量开始消费。
-    * notifyConsumerIdsChangedEnable  消费者ID变化时是否通知。
-    * retryMaxTimes  消费最大重试次数。
-    * retryQueueNums  重试队列个数。
-    * whichBrokerWhenConsumeSlow  慢消费时选择的broker节点ID。
+    * groupName  **参数解释**： 消费组名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeBroadcastEnable  **参数解释**： 是否允许以广播模式消费。 **约束限制**： 不涉及。 **取值范围**： - true：允许以广播模式消费。 - false：不允许以广播模式消费。 **默认取值**： 不涉及。
+    * consumeEnable  **参数解释**： 是否允许消费。 **约束限制**： 不涉及。 **取值范围**： - true：允许消费。 - false：不允许消费。 **默认取值**： true。
+    * consumeFromMinEnable  **参数解释**： 是否从最小偏移量开始消费。 **约束限制**： 不涉及。 **取值范围**： - true：是。 - false：不是。 **默认取值**： true。
+    * notifyConsumerIdsChangedEnable  **参数解释**： 消费者ID变化时是否通知。 **约束限制**： 不涉及。 **取值范围**： - true：是。 - false：不是。 **默认取值**： true。
+    * retryMaxTimes  **参数解释**： 消费最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
+    * retryQueueNums  **参数解释**： 消费最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 1。
+    * whichBrokerWhenConsumeSlow  **参数解释**： 慢消费时选择的broker节点ID **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 1。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'groupName' => 'groupName',
-            'consumeBroadcastEnable' => 'consumeBroadcastEnable',
-            'consumeEnable' => 'consumeEnable',
-            'consumeFromMinEnable' => 'consumeFromMinEnable',
-            'notifyConsumerIdsChangedEnable' => 'notifyConsumerIdsChangedEnable',
-            'retryMaxTimes' => 'retryMaxTimes',
-            'retryQueueNums' => 'retryQueueNums',
-            'whichBrokerWhenConsumeSlow' => 'whichBrokerWhenConsumeSlow'
+            'groupName' => 'group_name',
+            'consumeBroadcastEnable' => 'consume_broadcast_enable',
+            'consumeEnable' => 'consume_enable',
+            'consumeFromMinEnable' => 'consume_from_min_enable',
+            'notifyConsumerIdsChangedEnable' => 'notify_consumer_ids_changed_enable',
+            'retryMaxTimes' => 'retry_max_times',
+            'retryQueueNums' => 'retry_queue_nums',
+            'whichBrokerWhenConsumeSlow' => 'which_broker_when_consume_slow'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupName  消费组名。
-    * consumeBroadcastEnable  是否允许以广播模式消费。
-    * consumeEnable  是否允许消费。
-    * consumeFromMinEnable  是否从最小偏移量开始消费。
-    * notifyConsumerIdsChangedEnable  消费者ID变化时是否通知。
-    * retryMaxTimes  消费最大重试次数。
-    * retryQueueNums  重试队列个数。
-    * whichBrokerWhenConsumeSlow  慢消费时选择的broker节点ID。
+    * groupName  **参数解释**： 消费组名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeBroadcastEnable  **参数解释**： 是否允许以广播模式消费。 **约束限制**： 不涉及。 **取值范围**： - true：允许以广播模式消费。 - false：不允许以广播模式消费。 **默认取值**： 不涉及。
+    * consumeEnable  **参数解释**： 是否允许消费。 **约束限制**： 不涉及。 **取值范围**： - true：允许消费。 - false：不允许消费。 **默认取值**： true。
+    * consumeFromMinEnable  **参数解释**： 是否从最小偏移量开始消费。 **约束限制**： 不涉及。 **取值范围**： - true：是。 - false：不是。 **默认取值**： true。
+    * notifyConsumerIdsChangedEnable  **参数解释**： 消费者ID变化时是否通知。 **约束限制**： 不涉及。 **取值范围**： - true：是。 - false：不是。 **默认取值**： true。
+    * retryMaxTimes  **参数解释**： 消费最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
+    * retryQueueNums  **参数解释**： 消费最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 1。
+    * whichBrokerWhenConsumeSlow  **参数解释**： 慢消费时选择的broker节点ID **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 1。
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class MigrationRocketMqSubscriptionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupName  消费组名。
-    * consumeBroadcastEnable  是否允许以广播模式消费。
-    * consumeEnable  是否允许消费。
-    * consumeFromMinEnable  是否从最小偏移量开始消费。
-    * notifyConsumerIdsChangedEnable  消费者ID变化时是否通知。
-    * retryMaxTimes  消费最大重试次数。
-    * retryQueueNums  重试队列个数。
-    * whichBrokerWhenConsumeSlow  慢消费时选择的broker节点ID。
+    * groupName  **参数解释**： 消费组名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeBroadcastEnable  **参数解释**： 是否允许以广播模式消费。 **约束限制**： 不涉及。 **取值范围**： - true：允许以广播模式消费。 - false：不允许以广播模式消费。 **默认取值**： 不涉及。
+    * consumeEnable  **参数解释**： 是否允许消费。 **约束限制**： 不涉及。 **取值范围**： - true：允许消费。 - false：不允许消费。 **默认取值**： true。
+    * consumeFromMinEnable  **参数解释**： 是否从最小偏移量开始消费。 **约束限制**： 不涉及。 **取值范围**： - true：是。 - false：不是。 **默认取值**： true。
+    * notifyConsumerIdsChangedEnable  **参数解释**： 消费者ID变化时是否通知。 **约束限制**： 不涉及。 **取值范围**： - true：是。 - false：不是。 **默认取值**： true。
+    * retryMaxTimes  **参数解释**： 消费最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
+    * retryQueueNums  **参数解释**： 消费最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 1。
+    * whichBrokerWhenConsumeSlow  **参数解释**： 慢消费时选择的broker节点ID **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 1。
     *
     * @var string[]
     */
@@ -251,7 +251,7 @@ class MigrationRocketMqSubscriptionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  消费组名。
+    *  **参数解释**： 消费组名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -263,7 +263,7 @@ class MigrationRocketMqSubscriptionGroup implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName 消费组名。
+    * @param string|null $groupName **参数解释**： 消费组名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -275,7 +275,7 @@ class MigrationRocketMqSubscriptionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumeBroadcastEnable
-    *  是否允许以广播模式消费。
+    *  **参数解释**： 是否允许以广播模式消费。 **约束限制**： 不涉及。 **取值范围**： - true：允许以广播模式消费。 - false：不允许以广播模式消费。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -287,7 +287,7 @@ class MigrationRocketMqSubscriptionGroup implements ModelInterface, ArrayAccess
     /**
     * Sets consumeBroadcastEnable
     *
-    * @param bool|null $consumeBroadcastEnable 是否允许以广播模式消费。
+    * @param bool|null $consumeBroadcastEnable **参数解释**： 是否允许以广播模式消费。 **约束限制**： 不涉及。 **取值范围**： - true：允许以广播模式消费。 - false：不允许以广播模式消费。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -299,7 +299,7 @@ class MigrationRocketMqSubscriptionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumeEnable
-    *  是否允许消费。
+    *  **参数解释**： 是否允许消费。 **约束限制**： 不涉及。 **取值范围**： - true：允许消费。 - false：不允许消费。 **默认取值**： true。
     *
     * @return bool|null
     */
@@ -311,7 +311,7 @@ class MigrationRocketMqSubscriptionGroup implements ModelInterface, ArrayAccess
     /**
     * Sets consumeEnable
     *
-    * @param bool|null $consumeEnable 是否允许消费。
+    * @param bool|null $consumeEnable **参数解释**： 是否允许消费。 **约束限制**： 不涉及。 **取值范围**： - true：允许消费。 - false：不允许消费。 **默认取值**： true。
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class MigrationRocketMqSubscriptionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumeFromMinEnable
-    *  是否从最小偏移量开始消费。
+    *  **参数解释**： 是否从最小偏移量开始消费。 **约束限制**： 不涉及。 **取值范围**： - true：是。 - false：不是。 **默认取值**： true。
     *
     * @return bool|null
     */
@@ -335,7 +335,7 @@ class MigrationRocketMqSubscriptionGroup implements ModelInterface, ArrayAccess
     /**
     * Sets consumeFromMinEnable
     *
-    * @param bool|null $consumeFromMinEnable 是否从最小偏移量开始消费。
+    * @param bool|null $consumeFromMinEnable **参数解释**： 是否从最小偏移量开始消费。 **约束限制**： 不涉及。 **取值范围**： - true：是。 - false：不是。 **默认取值**： true。
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class MigrationRocketMqSubscriptionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets notifyConsumerIdsChangedEnable
-    *  消费者ID变化时是否通知。
+    *  **参数解释**： 消费者ID变化时是否通知。 **约束限制**： 不涉及。 **取值范围**： - true：是。 - false：不是。 **默认取值**： true。
     *
     * @return bool|null
     */
@@ -359,7 +359,7 @@ class MigrationRocketMqSubscriptionGroup implements ModelInterface, ArrayAccess
     /**
     * Sets notifyConsumerIdsChangedEnable
     *
-    * @param bool|null $notifyConsumerIdsChangedEnable 消费者ID变化时是否通知。
+    * @param bool|null $notifyConsumerIdsChangedEnable **参数解释**： 消费者ID变化时是否通知。 **约束限制**： 不涉及。 **取值范围**： - true：是。 - false：不是。 **默认取值**： true。
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class MigrationRocketMqSubscriptionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets retryMaxTimes
-    *  消费最大重试次数。
+    *  **参数解释**： 消费最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
     *
     * @return int|null
     */
@@ -383,7 +383,7 @@ class MigrationRocketMqSubscriptionGroup implements ModelInterface, ArrayAccess
     /**
     * Sets retryMaxTimes
     *
-    * @param int|null $retryMaxTimes 消费最大重试次数。
+    * @param int|null $retryMaxTimes **参数解释**： 消费最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
     *
     * @return $this
     */
@@ -395,7 +395,7 @@ class MigrationRocketMqSubscriptionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets retryQueueNums
-    *  重试队列个数。
+    *  **参数解释**： 消费最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 1。
     *
     * @return int|null
     */
@@ -407,7 +407,7 @@ class MigrationRocketMqSubscriptionGroup implements ModelInterface, ArrayAccess
     /**
     * Sets retryQueueNums
     *
-    * @param int|null $retryQueueNums 重试队列个数。
+    * @param int|null $retryQueueNums **参数解释**： 消费最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 1。
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class MigrationRocketMqSubscriptionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets whichBrokerWhenConsumeSlow
-    *  慢消费时选择的broker节点ID。
+    *  **参数解释**： 慢消费时选择的broker节点ID **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 1。
     *
     * @return int|null
     */
@@ -431,7 +431,7 @@ class MigrationRocketMqSubscriptionGroup implements ModelInterface, ArrayAccess
     /**
     * Sets whichBrokerWhenConsumeSlow
     *
-    * @param int|null $whichBrokerWhenConsumeSlow 慢消费时选择的broker节点ID。
+    * @param int|null $whichBrokerWhenConsumeSlow **参数解释**： 慢消费时选择的broker节点ID **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 1。
     *
     * @return $this
     */

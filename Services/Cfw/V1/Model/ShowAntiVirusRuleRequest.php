@@ -20,42 +20,42 @@ class ShowAntiVirusRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
-    * objectId  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
-    * engineType  防火墙类型
-    * limit  每页显示的数据量
-    * offset  查询偏移量
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    * objectId  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * limit  每页显示个数，范围为1-1024
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
+    * engineType  废弃字段
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'projectId' => 'string',
             'objectId' => 'string',
-            'engineType' => 'int',
             'limit' => 'int',
             'offset' => 'int',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'engineType' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
-    * objectId  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
-    * engineType  防火墙类型
-    * limit  每页显示的数据量
-    * offset  查询偏移量
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    * objectId  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * limit  每页显示个数，范围为1-1024
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
+    * engineType  废弃字段
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'projectId' => null,
         'objectId' => null,
-        'engineType' => 'int32',
         'limit' => 'int32',
         'offset' => 'int32',
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'engineType' => 'int32'
     ];
 
     /**
@@ -81,62 +81,62 @@ class ShowAntiVirusRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
-    * objectId  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
-    * engineType  防火墙类型
-    * limit  每页显示的数据量
-    * offset  查询偏移量
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    * objectId  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * limit  每页显示个数，范围为1-1024
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
+    * engineType  废弃字段
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'projectId' => 'project_id',
             'objectId' => 'object_id',
-            'engineType' => 'engine_type',
             'limit' => 'limit',
             'offset' => 'offset',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'engineType' => 'engine_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
-    * objectId  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
-    * engineType  防火墙类型
-    * limit  每页显示的数据量
-    * offset  查询偏移量
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    * objectId  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * limit  每页显示个数，范围为1-1024
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
+    * engineType  废弃字段
     *
     * @var string[]
     */
     protected static $setters = [
             'projectId' => 'setProjectId',
             'objectId' => 'setObjectId',
-            'engineType' => 'setEngineType',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'engineType' => 'setEngineType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
-    * objectId  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
-    * engineType  防火墙类型
-    * limit  每页显示的数据量
-    * offset  查询偏移量
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    * objectId  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * limit  每页显示个数，范围为1-1024
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
+    * engineType  废弃字段
     *
     * @var string[]
     */
     protected static $getters = [
             'projectId' => 'getProjectId',
             'objectId' => 'getObjectId',
-            'engineType' => 'getEngineType',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'engineType' => 'getEngineType'
     ];
 
     /**
@@ -199,10 +199,10 @@ class ShowAntiVirusRuleRequest implements ModelInterface, ArrayAccess
     {
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
-        $this->container['engineType'] = isset($data['engineType']) ? $data['engineType'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['engineType'] = isset($data['engineType']) ? $data['engineType'] : null;
     }
 
     /**
@@ -219,15 +219,6 @@ class ShowAntiVirusRuleRequest implements ModelInterface, ArrayAccess
         if ($this->container['objectId'] === null) {
             $invalidProperties[] = "'objectId' can't be null";
         }
-        if ($this->container['engineType'] === null) {
-            $invalidProperties[] = "'engineType' can't be null";
-        }
-            if (($this->container['engineType'] > 2)) {
-                $invalidProperties[] = "invalid value for 'engineType', must be smaller than or equal to 2.";
-            }
-            if (($this->container['engineType'] < 0)) {
-                $invalidProperties[] = "invalid value for 'engineType', must be bigger than or equal to 0.";
-            }
         if ($this->container['limit'] === null) {
             $invalidProperties[] = "'limit' can't be null";
         }
@@ -259,7 +250,7 @@ class ShowAntiVirusRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    *  项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
     *
     * @return string
     */
@@ -271,7 +262,7 @@ class ShowAntiVirusRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID，可以从调API处获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
+    * @param string $projectId 项目ID，可以通过调用API获取，也可以从控制台获取。可通过[项目ID获取方式](cfw_02_0015.xml)获取
     *
     * @return $this
     */
@@ -283,7 +274,7 @@ class ShowAntiVirusRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    *  防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     *
     * @return string
     */
@@ -295,7 +286,7 @@ class ShowAntiVirusRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string $objectId 防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * @param string $objectId 防护对象ID，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -306,32 +297,8 @@ class ShowAntiVirusRuleRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets engineType
-    *  防火墙类型
-    *
-    * @return int
-    */
-    public function getEngineType()
-    {
-        return $this->container['engineType'];
-    }
-
-    /**
-    * Sets engineType
-    *
-    * @param int $engineType 防火墙类型
-    *
-    * @return $this
-    */
-    public function setEngineType($engineType)
-    {
-        $this->container['engineType'] = $engineType;
-        return $this;
-    }
-
-    /**
     * Gets limit
-    *  每页显示的数据量
+    *  每页显示个数，范围为1-1024
     *
     * @return int
     */
@@ -343,7 +310,7 @@ class ShowAntiVirusRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int $limit 每页显示的数据量
+    * @param int $limit 每页显示个数，范围为1-1024
     *
     * @return $this
     */
@@ -355,7 +322,7 @@ class ShowAntiVirusRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  查询偏移量
+    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     *
     * @return int
     */
@@ -367,7 +334,7 @@ class ShowAntiVirusRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int $offset 查询偏移量
+    * @param int $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     *
     * @return $this
     */
@@ -398,6 +365,30 @@ class ShowAntiVirusRuleRequest implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets engineType
+    *  废弃字段
+    *
+    * @return int|null
+    */
+    public function getEngineType()
+    {
+        return $this->container['engineType'];
+    }
+
+    /**
+    * Sets engineType
+    *
+    * @param int|null $engineType 废弃字段
+    *
+    * @return $this
+    */
+    public function setEngineType($engineType)
+    {
+        $this->container['engineType'] = $engineType;
         return $this;
     }
 

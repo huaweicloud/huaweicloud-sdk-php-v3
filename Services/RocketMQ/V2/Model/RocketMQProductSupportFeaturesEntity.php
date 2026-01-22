@@ -20,8 +20,8 @@ class RocketMQProductSupportFeaturesEntity implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  特性名称。
-    * properties  功能特性的键值对。
+    * name  **参数解释**： 特性名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * properties  **参数解释**： 功能特性的键值对。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class RocketMQProductSupportFeaturesEntity implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  特性名称。
-    * properties  功能特性的键值对。
+    * name  **参数解释**： 特性名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * properties  **参数解释**： 功能特性的键值对。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class RocketMQProductSupportFeaturesEntity implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  特性名称。
-    * properties  功能特性的键值对。
+    * name  **参数解释**： 特性名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * properties  **参数解释**： 功能特性的键值对。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class RocketMQProductSupportFeaturesEntity implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  特性名称。
-    * properties  功能特性的键值对。
+    * name  **参数解释**： 特性名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * properties  **参数解释**： 功能特性的键值对。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class RocketMQProductSupportFeaturesEntity implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  特性名称。
-    * properties  功能特性的键值对。
+    * name  **参数解释**： 特性名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * properties  **参数解释**： 功能特性的键值对。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class RocketMQProductSupportFeaturesEntity implements ModelInterface, ArrayAcces
 
     /**
     * Gets name
-    *  特性名称。
+    *  **参数解释**： 特性名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class RocketMQProductSupportFeaturesEntity implements ModelInterface, ArrayAcces
     /**
     * Sets name
     *
-    * @param string|null $name 特性名称。
+    * @param string|null $name **参数解释**： 特性名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class RocketMQProductSupportFeaturesEntity implements ModelInterface, ArrayAcces
 
     /**
     * Gets properties
-    *  功能特性的键值对。
+    *  **参数解释**： 功能特性的键值对。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return map[string,string]|null
     */
@@ -221,7 +221,7 @@ class RocketMQProductSupportFeaturesEntity implements ModelInterface, ArrayAcces
     /**
     * Sets properties
     *
-    * @param map[string,string]|null $properties 功能特性的键值对。
+    * @param map[string,string]|null $properties **参数解释**： 功能特性的键值对。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

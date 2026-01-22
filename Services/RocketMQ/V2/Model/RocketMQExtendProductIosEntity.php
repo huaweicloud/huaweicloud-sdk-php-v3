@@ -20,10 +20,10 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ioSpec  存储IO规格。
-    * availableZones  有可用资源的可用区列表。
-    * type  IO类型。
-    * unavailableZones  资源售罄的可用区列表。
+    * ioSpec  **参数解释**： 存储IO规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availableZones  **参数解释**： 可用分区列表。RocketMQ 5.X基础版部署架构为单机时，请选择1个可用区，为集群时可选择1个或2个可用区。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： IO类型。 **约束限制**： 不涉及。 **取值范围**： - evs：[华为云磁盘类型。](tag:hws,hws_hk)[磁盘类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,hcs_oemout,ax,srg) [- dss：专属云磁盘类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
+    * unavailableZones  **参数解释**： 不可用分区列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ioSpec  存储IO规格。
-    * availableZones  有可用资源的可用区列表。
-    * type  IO类型。
-    * unavailableZones  资源售罄的可用区列表。
+    * ioSpec  **参数解释**： 存储IO规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availableZones  **参数解释**： 可用分区列表。RocketMQ 5.X基础版部署架构为单机时，请选择1个可用区，为集群时可选择1个或2个可用区。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： IO类型。 **约束限制**： 不涉及。 **取值范围**： - evs：[华为云磁盘类型。](tag:hws,hws_hk)[磁盘类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,hcs_oemout,ax,srg) [- dss：专属云磁盘类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
+    * unavailableZones  **参数解释**： 不可用分区列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ioSpec  存储IO规格。
-    * availableZones  有可用资源的可用区列表。
-    * type  IO类型。
-    * unavailableZones  资源售罄的可用区列表。
+    * ioSpec  **参数解释**： 存储IO规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availableZones  **参数解释**： 可用分区列表。RocketMQ 5.X基础版部署架构为单机时，请选择1个可用区，为集群时可选择1个或2个可用区。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： IO类型。 **约束限制**： 不涉及。 **取值范围**： - evs：[华为云磁盘类型。](tag:hws,hws_hk)[磁盘类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,hcs_oemout,ax,srg) [- dss：专属云磁盘类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
+    * unavailableZones  **参数解释**： 不可用分区列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ioSpec  存储IO规格。
-    * availableZones  有可用资源的可用区列表。
-    * type  IO类型。
-    * unavailableZones  资源售罄的可用区列表。
+    * ioSpec  **参数解释**： 存储IO规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availableZones  **参数解释**： 可用分区列表。RocketMQ 5.X基础版部署架构为单机时，请选择1个可用区，为集群时可选择1个或2个可用区。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： IO类型。 **约束限制**： 不涉及。 **取值范围**： - evs：[华为云磁盘类型。](tag:hws,hws_hk)[磁盘类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,hcs_oemout,ax,srg) [- dss：专属云磁盘类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
+    * unavailableZones  **参数解释**： 不可用分区列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ioSpec  存储IO规格。
-    * availableZones  有可用资源的可用区列表。
-    * type  IO类型。
-    * unavailableZones  资源售罄的可用区列表。
+    * ioSpec  **参数解释**： 存储IO规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * availableZones  **参数解释**： 可用分区列表。RocketMQ 5.X基础版部署架构为单机时，请选择1个可用区，为集群时可选择1个或2个可用区。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * type  **参数解释**： IO类型。 **约束限制**： 不涉及。 **取值范围**： - evs：[华为云磁盘类型。](tag:hws,hws_hk)[磁盘类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,hcs_oemout,ax,srg) [- dss：专属云磁盘类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
+    * unavailableZones  **参数解释**： 不可用分区列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets ioSpec
-    *  存储IO规格。
+    *  **参数解释**： 存储IO规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
     /**
     * Sets ioSpec
     *
-    * @param string|null $ioSpec 存储IO规格。
+    * @param string|null $ioSpec **参数解释**： 存储IO规格。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableZones
-    *  有可用资源的可用区列表。
+    *  **参数解释**： 可用分区列表。RocketMQ 5.X基础版部署架构为单机时，请选择1个可用区，为集群时可选择1个或2个可用区。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -243,7 +243,7 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
     /**
     * Sets availableZones
     *
-    * @param string[]|null $availableZones 有可用资源的可用区列表。
+    * @param string[]|null $availableZones **参数解释**： 可用分区列表。RocketMQ 5.X基础版部署架构为单机时，请选择1个可用区，为集群时可选择1个或2个可用区。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  IO类型。
+    *  **参数解释**： IO类型。 **约束限制**： 不涉及。 **取值范围**： - evs：[华为云磁盘类型。](tag:hws,hws_hk)[磁盘类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,hcs_oemout,ax,srg) [- dss：专属云磁盘类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type IO类型。
+    * @param string|null $type **参数解释**： IO类型。 **约束限制**： 不涉及。 **取值范围**： - evs：[华为云磁盘类型。](tag:hws,hws_hk)[磁盘类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,hcs_oemout,ax,srg) [- dss：专属云磁盘类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets unavailableZones
-    *  资源售罄的可用区列表。
+    *  **参数解释**： 不可用分区列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -291,7 +291,7 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
     /**
     * Sets unavailableZones
     *
-    * @param string[]|null $unavailableZones 资源售罄的可用区列表。
+    * @param string[]|null $unavailableZones **参数解释**： 不可用分区列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

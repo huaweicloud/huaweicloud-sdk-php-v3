@@ -20,8 +20,8 @@ class ListBrokersRespBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ids  全部代理ID。
-    * brokerName  节点名称。
+    * ids  **参数解释**： 全部代理ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokerName  **参数解释**： 节点名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ListBrokersRespBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ids  全部代理ID。
-    * brokerName  节点名称。
+    * ids  **参数解释**： 全部代理ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokerName  **参数解释**： 节点名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ListBrokersRespBrokers implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ids  全部代理ID。
-    * brokerName  节点名称。
+    * ids  **参数解释**： 全部代理ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokerName  **参数解释**： 节点名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ListBrokersRespBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ids  全部代理ID。
-    * brokerName  节点名称。
+    * ids  **参数解释**： 全部代理ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokerName  **参数解释**： 节点名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ListBrokersRespBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ids  全部代理ID。
-    * brokerName  节点名称。
+    * ids  **参数解释**： 全部代理ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokerName  **参数解释**： 节点名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ListBrokersRespBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Gets ids
-    *  全部代理ID。
+    *  **参数解释**： 全部代理ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return float[]|null
     */
@@ -197,7 +197,7 @@ class ListBrokersRespBrokers implements ModelInterface, ArrayAccess
     /**
     * Sets ids
     *
-    * @param float[]|null $ids 全部代理ID。
+    * @param float[]|null $ids **参数解释**： 全部代理ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ListBrokersRespBrokers implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokerName
-    *  节点名称。
+    *  **参数解释**： 节点名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class ListBrokersRespBrokers implements ModelInterface, ArrayAccess
     /**
     * Sets brokerName
     *
-    * @param string|null $brokerName 节点名称。
+    * @param string|null $brokerName **参数解释**： 节点名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

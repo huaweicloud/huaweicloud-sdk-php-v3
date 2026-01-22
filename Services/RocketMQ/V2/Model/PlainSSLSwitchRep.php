@@ -20,7 +20,7 @@ class PlainSSLSwitchRep implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tlsMode  协议模式。
+    * tlsMode  **参数解释**： 协议模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class PlainSSLSwitchRep implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tlsMode  协议模式。
+    * tlsMode  **参数解释**： 协议模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class PlainSSLSwitchRep implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tlsMode  协议模式。
+    * tlsMode  **参数解释**： 协议模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class PlainSSLSwitchRep implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tlsMode  协议模式。
+    * tlsMode  **参数解释**： 协议模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class PlainSSLSwitchRep implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tlsMode  协议模式。
+    * tlsMode  **参数解释**： 协议模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class PlainSSLSwitchRep implements ModelInterface, ArrayAccess
 
     /**
     * Gets tlsMode
-    *  协议模式。
+    *  **参数解释**： 协议模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class PlainSSLSwitchRep implements ModelInterface, ArrayAccess
     /**
     * Sets tlsMode
     *
-    * @param string|null $tlsMode 协议模式。
+    * @param string|null $tlsMode **参数解释**： 协议模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

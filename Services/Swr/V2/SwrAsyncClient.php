@@ -801,6 +801,9 @@ class SwrAsyncClient extends Client
         if ($localVarParams['projectname'] !== null) {
             $queryParams['projectname'] = $localVarParams['projectname'];
         }
+        if ($localVarParams['durationSeconds'] !== null) {
+            $queryParams['duration_seconds'] = $localVarParams['durationSeconds'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1796,6 +1799,160 @@ class SwrAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Swr\V2\Model\ListQuotasResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Swr\V2\Model\ListQuotasRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取签名镜像关联的被签名镜像版本列表
+     *
+     * 获取签名镜像关联的被签名镜像版本列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listReferencesAsync($request)
+    {
+        return $this->listReferencesAsyncWithHttpInfo($request);
+    }
+    
+    public function listReferencesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/manage/namespaces/{namespace}/repos/{repository}/{tag}/references';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $pathParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['repository'] !== null) {
+            $pathParams['repository'] = $localVarParams['repository'];
+        }
+        if ($localVarParams['tag'] !== null) {
+            $pathParams['tag'] = $localVarParams['tag'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Swr\V2\Model\ListReferencesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Swr\V2\Model\ListReferencesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询镜像的附件列表
+     *
+     * 获取共享仓的镜像的附件列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listRepoAccessoriesAsync($request)
+    {
+        return $this->listRepoAccessoriesAsyncWithHttpInfo($request);
+    }
+    
+    public function listRepoAccessoriesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/manage/namespaces/{namespace}/repos/{repository}/{tag}/accessories';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $pathParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['repository'] !== null) {
+            $pathParams['repository'] = $localVarParams['repository'];
+        }
+        if ($localVarParams['tag'] !== null) {
+            $pathParams['tag'] = $localVarParams['tag'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Swr\V2\Model\ListRepoAccessoriesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Swr\V2\Model\ListRepoAccessoriesRequest',
             $asyncRequest = true);
     }
 
@@ -7370,6 +7527,9 @@ class SwrAsyncClient extends Client
         }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['selfOnly'] !== null) {
+            $queryParams['self_only'] = $localVarParams['selfOnly'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];

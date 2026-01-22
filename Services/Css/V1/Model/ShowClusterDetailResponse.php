@@ -28,6 +28,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * updated  集群上次修改时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
     * name  集群名称。
     * publicIp  公网IP信息。
+    * snapshotPolicy  **参数解释**： 集群自动快照策略相关信息。 **取值范围**： 不涉及
     * created  集群创建时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
     * id  集群ID。
     * status  集群状态值。  - 100：操作进行中，如创建中。 - 200：可用。 - 303：不可用，如创建失败。
@@ -66,6 +67,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
             'updated' => 'string',
             'name' => 'string',
             'publicIp' => 'string',
+            'snapshotPolicy' => 'object',
             'created' => 'string',
             'id' => 'string',
             'status' => 'string',
@@ -104,6 +106,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * updated  集群上次修改时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
     * name  集群名称。
     * publicIp  公网IP信息。
+    * snapshotPolicy  **参数解释**： 集群自动快照策略相关信息。 **取值范围**： 不涉及
     * created  集群创建时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
     * id  集群ID。
     * status  集群状态值。  - 100：操作进行中，如创建中。 - 200：可用。 - 303：不可用，如创建失败。
@@ -142,6 +145,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
         'updated' => null,
         'name' => null,
         'publicIp' => null,
+        'snapshotPolicy' => null,
         'created' => null,
         'id' => null,
         'status' => null,
@@ -201,6 +205,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * updated  集群上次修改时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
     * name  集群名称。
     * publicIp  公网IP信息。
+    * snapshotPolicy  **参数解释**： 集群自动快照策略相关信息。 **取值范围**： 不涉及
     * created  集群创建时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
     * id  集群ID。
     * status  集群状态值。  - 100：操作进行中，如创建中。 - 200：可用。 - 303：不可用，如创建失败。
@@ -239,6 +244,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
             'updated' => 'updated',
             'name' => 'name',
             'publicIp' => 'publicIp',
+            'snapshotPolicy' => 'snapshotPolicy',
             'created' => 'created',
             'id' => 'id',
             'status' => 'status',
@@ -277,6 +283,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * updated  集群上次修改时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
     * name  集群名称。
     * publicIp  公网IP信息。
+    * snapshotPolicy  **参数解释**： 集群自动快照策略相关信息。 **取值范围**： 不涉及
     * created  集群创建时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
     * id  集群ID。
     * status  集群状态值。  - 100：操作进行中，如创建中。 - 200：可用。 - 303：不可用，如创建失败。
@@ -315,6 +322,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
             'updated' => 'setUpdated',
             'name' => 'setName',
             'publicIp' => 'setPublicIp',
+            'snapshotPolicy' => 'setSnapshotPolicy',
             'created' => 'setCreated',
             'id' => 'setId',
             'status' => 'setStatus',
@@ -353,6 +361,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * updated  集群上次修改时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
     * name  集群名称。
     * publicIp  公网IP信息。
+    * snapshotPolicy  **参数解释**： 集群自动快照策略相关信息。 **取值范围**： 不涉及
     * created  集群创建时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
     * id  集群ID。
     * status  集群状态值。  - 100：操作进行中，如创建中。 - 200：可用。 - 303：不可用，如创建失败。
@@ -391,6 +400,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
             'updated' => 'getUpdated',
             'name' => 'getName',
             'publicIp' => 'getPublicIp',
+            'snapshotPolicy' => 'getSnapshotPolicy',
             'created' => 'getCreated',
             'id' => 'getId',
             'status' => 'getStatus',
@@ -485,6 +495,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['publicIp'] = isset($data['publicIp']) ? $data['publicIp'] : null;
+        $this->container['snapshotPolicy'] = isset($data['snapshotPolicy']) ? $data['snapshotPolicy'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -701,6 +712,30 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     public function setPublicIp($publicIp)
     {
         $this->container['publicIp'] = $publicIp;
+        return $this;
+    }
+
+    /**
+    * Gets snapshotPolicy
+    *  **参数解释**： 集群自动快照策略相关信息。 **取值范围**： 不涉及
+    *
+    * @return object|null
+    */
+    public function getSnapshotPolicy()
+    {
+        return $this->container['snapshotPolicy'];
+    }
+
+    /**
+    * Sets snapshotPolicy
+    *
+    * @param object|null $snapshotPolicy **参数解释**： 集群自动快照策略相关信息。 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setSnapshotPolicy($snapshotPolicy)
+    {
+        $this->container['snapshotPolicy'] = $snapshotPolicy;
         return $this;
     }
 

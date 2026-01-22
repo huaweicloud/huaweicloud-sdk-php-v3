@@ -20,8 +20,8 @@ class AntiVirusRuleDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * objectId  防护对象ID
-    * scanProtocolConfigs  扫描协议配置
+    * objectId  防护对象ID，为必传参数
+    * scanProtocolConfigs  扫描协议配置列表
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class AntiVirusRuleDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * objectId  防护对象ID
-    * scanProtocolConfigs  扫描协议配置
+    * objectId  防护对象ID，为必传参数
+    * scanProtocolConfigs  扫描协议配置列表
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class AntiVirusRuleDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * objectId  防护对象ID
-    * scanProtocolConfigs  扫描协议配置
+    * objectId  防护对象ID，为必传参数
+    * scanProtocolConfigs  扫描协议配置列表
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class AntiVirusRuleDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * objectId  防护对象ID
-    * scanProtocolConfigs  扫描协议配置
+    * objectId  防护对象ID，为必传参数
+    * scanProtocolConfigs  扫描协议配置列表
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class AntiVirusRuleDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * objectId  防护对象ID
-    * scanProtocolConfigs  扫描协议配置
+    * objectId  防护对象ID，为必传参数
+    * scanProtocolConfigs  扫描协议配置列表
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class AntiVirusRuleDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  防护对象ID
+    *  防护对象ID，为必传参数
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class AntiVirusRuleDto implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string|null $objectId 防护对象ID
+    * @param string|null $objectId 防护对象ID，为必传参数
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class AntiVirusRuleDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanProtocolConfigs
-    *  扫描协议配置
+    *  扫描协议配置列表
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\ScanProtocolConfig[]|null
     */
@@ -221,7 +221,7 @@ class AntiVirusRuleDto implements ModelInterface, ArrayAccess
     /**
     * Sets scanProtocolConfigs
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\ScanProtocolConfig[]|null $scanProtocolConfigs 扫描协议配置
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\ScanProtocolConfig[]|null $scanProtocolConfigs 扫描协议配置列表
     *
     * @return $this
     */

@@ -158,9 +158,6 @@ class UpdateYmlsReqEditModify implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['elasticsearchYml'] === null) {
-            $invalidProperties[] = "'elasticsearchYml' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -179,7 +176,7 @@ class UpdateYmlsReqEditModify implements ModelInterface, ArrayAccess
     * Gets elasticsearchYml
     *  参数配置列表。值为需要修改的json数据。
     *
-    * @return object
+    * @return object|null
     */
     public function getElasticsearchYml()
     {
@@ -189,7 +186,7 @@ class UpdateYmlsReqEditModify implements ModelInterface, ArrayAccess
     /**
     * Sets elasticsearchYml
     *
-    * @param object $elasticsearchYml 参数配置列表。值为需要修改的json数据。
+    * @param object|null $elasticsearchYml 参数配置列表。值为需要修改的json数据。
     *
     * @return $this
     */

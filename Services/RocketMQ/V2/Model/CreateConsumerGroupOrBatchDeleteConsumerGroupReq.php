@@ -20,19 +20,19 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groups  待删除的消费组列表。
-    * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * brokers  关联的代理列表（仅RocketMQ实例4.8.0版本需要填写此参数）。
-    * broadcast  是否广播。
-    * retryMaxTime  最大重试次数，取值范围为1~16。
-    * enabled  是否可以消费。
-    * consumeOrderly  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
-    * groupDesc  消费组描述，长度0~200个字符。
+    * jobId  **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 消费组名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 当创建消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 仅RocketMQ实例4.8.0版本需要填写此参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否按顺序消费。 **约束限制**： 仅RocketMQ实例5.x版本需要填写此参数。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 0~200。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'groups' => 'string[]',
+            'jobId' => 'string',
             'name' => 'string',
             'brokers' => 'string[]',
             'broadcast' => 'bool',
@@ -44,19 +44,19 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groups  待删除的消费组列表。
-    * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * brokers  关联的代理列表（仅RocketMQ实例4.8.0版本需要填写此参数）。
-    * broadcast  是否广播。
-    * retryMaxTime  最大重试次数，取值范围为1~16。
-    * enabled  是否可以消费。
-    * consumeOrderly  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
-    * groupDesc  消费组描述，长度0~200个字符。
+    * jobId  **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 消费组名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 当创建消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 仅RocketMQ实例4.8.0版本需要填写此参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否按顺序消费。 **约束限制**： 仅RocketMQ实例5.x版本需要填写此参数。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 0~200。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'groups' => null,
+        'jobId' => null,
         'name' => null,
         'brokers' => null,
         'broadcast' => null,
@@ -89,19 +89,19 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groups  待删除的消费组列表。
-    * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * brokers  关联的代理列表（仅RocketMQ实例4.8.0版本需要填写此参数）。
-    * broadcast  是否广播。
-    * retryMaxTime  最大重试次数，取值范围为1~16。
-    * enabled  是否可以消费。
-    * consumeOrderly  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
-    * groupDesc  消费组描述，长度0~200个字符。
+    * jobId  **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 消费组名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 当创建消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 仅RocketMQ实例4.8.0版本需要填写此参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否按顺序消费。 **约束限制**： 仅RocketMQ实例5.x版本需要填写此参数。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 0~200。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'groups' => 'groups',
+            'jobId' => 'job_id',
             'name' => 'name',
             'brokers' => 'brokers',
             'broadcast' => 'broadcast',
@@ -113,19 +113,19 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groups  待删除的消费组列表。
-    * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * brokers  关联的代理列表（仅RocketMQ实例4.8.0版本需要填写此参数）。
-    * broadcast  是否广播。
-    * retryMaxTime  最大重试次数，取值范围为1~16。
-    * enabled  是否可以消费。
-    * consumeOrderly  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
-    * groupDesc  消费组描述，长度0~200个字符。
+    * jobId  **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 消费组名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 当创建消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 仅RocketMQ实例4.8.0版本需要填写此参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否按顺序消费。 **约束限制**： 仅RocketMQ实例5.x版本需要填写此参数。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 0~200。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'groups' => 'setGroups',
+            'jobId' => 'setJobId',
             'name' => 'setName',
             'brokers' => 'setBrokers',
             'broadcast' => 'setBroadcast',
@@ -137,19 +137,19 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groups  待删除的消费组列表。
-    * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * brokers  关联的代理列表（仅RocketMQ实例4.8.0版本需要填写此参数）。
-    * broadcast  是否广播。
-    * retryMaxTime  最大重试次数，取值范围为1~16。
-    * enabled  是否可以消费。
-    * consumeOrderly  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
-    * groupDesc  消费组描述，长度0~200个字符。
+    * jobId  **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * name  **参数解释**： 消费组名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 当创建消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 仅RocketMQ实例4.8.0版本需要填写此参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * broadcast  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
+    * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
+    * enabled  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否按顺序消费。 **约束限制**： 仅RocketMQ实例5.x版本需要填写此参数。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 0~200。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'groups' => 'getGroups',
+            'jobId' => 'getJobId',
             'name' => 'getName',
             'brokers' => 'getBrokers',
             'broadcast' => 'getBroadcast',
@@ -217,7 +217,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     */
     public function __construct(array $data = null)
     {
-        $this->container['groups'] = isset($data['groups']) ? $data['groups'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['brokers'] = isset($data['brokers']) ? $data['brokers'] : null;
         $this->container['broadcast'] = isset($data['broadcast']) ? $data['broadcast'] : null;
@@ -256,32 +256,32 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     }
 
     /**
-    * Gets groups
-    *  待删除的消费组列表。
+    * Gets jobId
+    *  **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return string[]|null
+    * @return string|null
     */
-    public function getGroups()
+    public function getJobId()
     {
-        return $this->container['groups'];
+        return $this->container['jobId'];
     }
 
     /**
-    * Sets groups
+    * Sets jobId
     *
-    * @param string[]|null $groups 待删除的消费组列表。
+    * @param string|null $jobId **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
-    public function setGroups($groups)
+    public function setJobId($jobId)
     {
-        $this->container['groups'] = $groups;
+        $this->container['jobId'] = $jobId;
         return $this;
     }
 
     /**
     * Gets name
-    *  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
+    *  **参数解释**： 消费组名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 当创建消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -293,7 +293,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     /**
     * Sets name
     *
-    * @param string|null $name 消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
+    * @param string|null $name **参数解释**： 消费组名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 当创建消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -305,7 +305,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
 
     /**
     * Gets brokers
-    *  关联的代理列表（仅RocketMQ实例4.8.0版本需要填写此参数）。
+    *  **参数解释**： 关联的代理列表。 **约束限制**： 仅RocketMQ实例4.8.0版本需要填写此参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -317,7 +317,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     /**
     * Sets brokers
     *
-    * @param string[]|null $brokers 关联的代理列表（仅RocketMQ实例4.8.0版本需要填写此参数）。
+    * @param string[]|null $brokers **参数解释**： 关联的代理列表。 **约束限制**： 仅RocketMQ实例4.8.0版本需要填写此参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -329,7 +329,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
 
     /**
     * Gets broadcast
-    *  是否广播。
+    *  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -341,7 +341,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     /**
     * Sets broadcast
     *
-    * @param bool|null $broadcast 是否广播。
+    * @param bool|null $broadcast **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -353,7 +353,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
 
     /**
     * Gets retryMaxTime
-    *  最大重试次数，取值范围为1~16。
+    *  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -365,7 +365,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     /**
     * Sets retryMaxTime
     *
-    * @param int|null $retryMaxTime 最大重试次数，取值范围为1~16。
+    * @param int|null $retryMaxTime **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -377,7 +377,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
 
     /**
     * Gets enabled
-    *  是否可以消费。
+    *  **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -389,7 +389,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     /**
     * Sets enabled
     *
-    * @param bool|null $enabled 是否可以消费。
+    * @param bool|null $enabled **参数解释**： 是否可以消费。 **约束限制**： 不涉及。 **取值范围**： - true：可以消费。 - false：不可以消费。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -401,7 +401,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
 
     /**
     * Gets consumeOrderly
-    *  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
+    *  **参数解释**： 是否按顺序消费。 **约束限制**： 仅RocketMQ实例5.x版本需要填写此参数。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
     *
     * @return bool|null
     */
@@ -413,7 +413,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     /**
     * Sets consumeOrderly
     *
-    * @param bool|null $consumeOrderly 是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
+    * @param bool|null $consumeOrderly **参数解释**： 是否按顺序消费。 **约束限制**： 仅RocketMQ实例5.x版本需要填写此参数。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -425,7 +425,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
 
     /**
     * Gets groupDesc
-    *  消费组描述，长度0~200个字符。
+    *  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 0~200。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -437,7 +437,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     /**
     * Sets groupDesc
     *
-    * @param string|null $groupDesc 消费组描述，长度0~200个字符。
+    * @param string|null $groupDesc **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 0~200。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -32,7 +32,6 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
     * thumbnail  thumbnail
     * thumbnails  多截图任务，数组，最多支持20个成员。
     * imageSprites  雪碧图参数，数组，最多支持20个成员。
-    * pipelineId  
     * priority  任务优先级，取值如下： - 9代表高优先级。 - 6代表中优先级，默认为6。  暂时只支持6和9。
     * subtitle  subtitle
     * encryption  encryption
@@ -58,7 +57,6 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
             'thumbnail' => '\HuaweiCloud\SDK\Mpc\V1\Model\Thumbnail',
             'thumbnails' => '\HuaweiCloud\SDK\Mpc\V1\Model\Thumbnail[]',
             'imageSprites' => '\HuaweiCloud\SDK\Mpc\V1\Model\ImageSprite[]',
-            'pipelineId' => 'string',
             'priority' => 'int',
             'subtitle' => '\HuaweiCloud\SDK\Mpc\V1\Model\Subtitle',
             'encryption' => '\HuaweiCloud\SDK\Mpc\V1\Model\Encryption',
@@ -84,7 +82,6 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
     * thumbnail  thumbnail
     * thumbnails  多截图任务，数组，最多支持20个成员。
     * imageSprites  雪碧图参数，数组，最多支持20个成员。
-    * pipelineId  
     * priority  任务优先级，取值如下： - 9代表高优先级。 - 6代表中优先级，默认为6。  暂时只支持6和9。
     * subtitle  subtitle
     * encryption  encryption
@@ -110,7 +107,6 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
         'thumbnail' => null,
         'thumbnails' => null,
         'imageSprites' => null,
-        'pipelineId' => null,
         'priority' => 'int32',
         'subtitle' => null,
         'encryption' => null,
@@ -157,7 +153,6 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
     * thumbnail  thumbnail
     * thumbnails  多截图任务，数组，最多支持20个成员。
     * imageSprites  雪碧图参数，数组，最多支持20个成员。
-    * pipelineId  
     * priority  任务优先级，取值如下： - 9代表高优先级。 - 6代表中优先级，默认为6。  暂时只支持6和9。
     * subtitle  subtitle
     * encryption  encryption
@@ -183,7 +178,6 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
             'thumbnail' => 'thumbnail',
             'thumbnails' => 'thumbnails',
             'imageSprites' => 'image_sprites',
-            'pipelineId' => 'pipeline_id',
             'priority' => 'priority',
             'subtitle' => 'subtitle',
             'encryption' => 'encryption',
@@ -209,7 +203,6 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
     * thumbnail  thumbnail
     * thumbnails  多截图任务，数组，最多支持20个成员。
     * imageSprites  雪碧图参数，数组，最多支持20个成员。
-    * pipelineId  
     * priority  任务优先级，取值如下： - 9代表高优先级。 - 6代表中优先级，默认为6。  暂时只支持6和9。
     * subtitle  subtitle
     * encryption  encryption
@@ -235,7 +228,6 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
             'thumbnail' => 'setThumbnail',
             'thumbnails' => 'setThumbnails',
             'imageSprites' => 'setImageSprites',
-            'pipelineId' => 'setPipelineId',
             'priority' => 'setPriority',
             'subtitle' => 'setSubtitle',
             'encryption' => 'setEncryption',
@@ -261,7 +253,6 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
     * thumbnail  thumbnail
     * thumbnails  多截图任务，数组，最多支持20个成员。
     * imageSprites  雪碧图参数，数组，最多支持20个成员。
-    * pipelineId  
     * priority  任务优先级，取值如下： - 9代表高优先级。 - 6代表中优先级，默认为6。  暂时只支持6和9。
     * subtitle  subtitle
     * encryption  encryption
@@ -287,7 +278,6 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
             'thumbnail' => 'getThumbnail',
             'thumbnails' => 'getThumbnails',
             'imageSprites' => 'getImageSprites',
-            'pipelineId' => 'getPipelineId',
             'priority' => 'getPriority',
             'subtitle' => 'getSubtitle',
             'encryption' => 'getEncryption',
@@ -369,7 +359,6 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
         $this->container['thumbnail'] = isset($data['thumbnail']) ? $data['thumbnail'] : null;
         $this->container['thumbnails'] = isset($data['thumbnails']) ? $data['thumbnails'] : null;
         $this->container['imageSprites'] = isset($data['imageSprites']) ? $data['imageSprites'] : null;
-        $this->container['pipelineId'] = isset($data['pipelineId']) ? $data['pipelineId'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
         $this->container['subtitle'] = isset($data['subtitle']) ? $data['subtitle'] : null;
         $this->container['encryption'] = isset($data['encryption']) ? $data['encryption'] : null;
@@ -397,12 +386,6 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['userData']) && (mb_strlen($this->container['userData']) < 0)) {
                 $invalidProperties[] = "invalid value for 'userData', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['pipelineId']) && (mb_strlen($this->container['pipelineId']) > 128)) {
-                $invalidProperties[] = "invalid value for 'pipelineId', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['pipelineId']) && (mb_strlen($this->container['pipelineId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'pipelineId', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['priority']) && ($this->container['priority'] > 9)) {
                 $invalidProperties[] = "invalid value for 'priority', must be smaller than or equal to 9.";
@@ -709,30 +692,6 @@ class CreateTranscodingReq implements ModelInterface, ArrayAccess
     public function setImageSprites($imageSprites)
     {
         $this->container['imageSprites'] = $imageSprites;
-        return $this;
-    }
-
-    /**
-    * Gets pipelineId
-    *  
-    *
-    * @return string|null
-    */
-    public function getPipelineId()
-    {
-        return $this->container['pipelineId'];
-    }
-
-    /**
-    * Sets pipelineId
-    *
-    * @param string|null $pipelineId 
-    *
-    * @return $this
-    */
-    public function setPipelineId($pipelineId)
-    {
-        $this->container['pipelineId'] = $pipelineId;
         return $this;
     }
 

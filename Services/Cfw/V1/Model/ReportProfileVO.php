@@ -25,7 +25,7 @@ class ReportProfileVO implements ModelInterface, ArrayAccess
     * category  **参数解释**： 模板类型 **取值范围**： daily 日报 weekly 周报 custom 自定义报告
     * status  **参数解释**： 启用状态 **取值范围**： 不涉及
     * reportId  **参数解释**： 最新的报告的ID **取值范围**： 不涉及
-    * lastTime  **参数解释**： 最新的报告的生成时间 **取值范围**： 不涉及
+    * lastTime  **参数解释**： 最新的报告的生成时间，毫秒级时间戳 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class ReportProfileVO implements ModelInterface, ArrayAccess
     * category  **参数解释**： 模板类型 **取值范围**： daily 日报 weekly 周报 custom 自定义报告
     * status  **参数解释**： 启用状态 **取值范围**： 不涉及
     * reportId  **参数解释**： 最新的报告的ID **取值范围**： 不涉及
-    * lastTime  **参数解释**： 最新的报告的生成时间 **取值范围**： 不涉及
+    * lastTime  **参数解释**： 最新的报告的生成时间，毫秒级时间戳 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ReportProfileVO implements ModelInterface, ArrayAccess
     * category  **参数解释**： 模板类型 **取值范围**： daily 日报 weekly 周报 custom 自定义报告
     * status  **参数解释**： 启用状态 **取值范围**： 不涉及
     * reportId  **参数解释**： 最新的报告的ID **取值范围**： 不涉及
-    * lastTime  **参数解释**： 最新的报告的生成时间 **取值范围**： 不涉及
+    * lastTime  **参数解释**： 最新的报告的生成时间，毫秒级时间戳 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class ReportProfileVO implements ModelInterface, ArrayAccess
     * category  **参数解释**： 模板类型 **取值范围**： daily 日报 weekly 周报 custom 自定义报告
     * status  **参数解释**： 启用状态 **取值范围**： 不涉及
     * reportId  **参数解释**： 最新的报告的ID **取值范围**： 不涉及
-    * lastTime  **参数解释**： 最新的报告的生成时间 **取值范围**： 不涉及
+    * lastTime  **参数解释**： 最新的报告的生成时间，毫秒级时间戳 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class ReportProfileVO implements ModelInterface, ArrayAccess
     * category  **参数解释**： 模板类型 **取值范围**： daily 日报 weekly 周报 custom 自定义报告
     * status  **参数解释**： 启用状态 **取值范围**： 不涉及
     * reportId  **参数解释**： 最新的报告的ID **取值范围**： 不涉及
-    * lastTime  **参数解释**： 最新的报告的生成时间 **取值范围**： 不涉及
+    * lastTime  **参数解释**： 最新的报告的生成时间，毫秒级时间戳 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -349,7 +349,7 @@ class ReportProfileVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastTime
-    *  **参数解释**： 最新的报告的生成时间 **取值范围**： 不涉及
+    *  **参数解释**： 最新的报告的生成时间，毫秒级时间戳 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -361,7 +361,7 @@ class ReportProfileVO implements ModelInterface, ArrayAccess
     /**
     * Sets lastTime
     *
-    * @param int|null $lastTime **参数解释**： 最新的报告的生成时间 **取值范围**： 不涉及
+    * @param int|null $lastTime **参数解释**： 最新的报告的生成时间，毫秒级时间戳 **取值范围**： 不涉及
     *
     * @return $this
     */

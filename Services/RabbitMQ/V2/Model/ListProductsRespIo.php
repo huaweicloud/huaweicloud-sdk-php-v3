@@ -20,11 +20,11 @@ class ListProductsRespIo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ioType  IO类型。
-    * storageSpecCode  IO规格。
-    * availableZones  IO未售罄的可用区列表。
-    * unavailableZones  IO已售罄的不可用区列表。
-    * volumeType  磁盘类型。
+    * ioType  **参数解释**： IO类型。 **取值范围**： 不涉及。
+    * storageSpecCode  **参数解释**： IO规格。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： IO未售罄的可用区列表。 **取值范围**： 不涉及。
+    * unavailableZones  **参数解释**： IO已售罄的不可用区列表。 **取值范围**： 不涉及。
+    * volumeType  **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ListProductsRespIo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ioType  IO类型。
-    * storageSpecCode  IO规格。
-    * availableZones  IO未售罄的可用区列表。
-    * unavailableZones  IO已售罄的不可用区列表。
-    * volumeType  磁盘类型。
+    * ioType  **参数解释**： IO类型。 **取值范围**： 不涉及。
+    * storageSpecCode  **参数解释**： IO规格。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： IO未售罄的可用区列表。 **取值范围**： 不涉及。
+    * unavailableZones  **参数解释**： IO已售罄的不可用区列表。 **取值范围**： 不涉及。
+    * volumeType  **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ListProductsRespIo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ioType  IO类型。
-    * storageSpecCode  IO规格。
-    * availableZones  IO未售罄的可用区列表。
-    * unavailableZones  IO已售罄的不可用区列表。
-    * volumeType  磁盘类型。
+    * ioType  **参数解释**： IO类型。 **取值范围**： 不涉及。
+    * storageSpecCode  **参数解释**： IO规格。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： IO未售罄的可用区列表。 **取值范围**： 不涉及。
+    * unavailableZones  **参数解释**： IO已售罄的不可用区列表。 **取值范围**： 不涉及。
+    * volumeType  **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ListProductsRespIo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ioType  IO类型。
-    * storageSpecCode  IO规格。
-    * availableZones  IO未售罄的可用区列表。
-    * unavailableZones  IO已售罄的不可用区列表。
-    * volumeType  磁盘类型。
+    * ioType  **参数解释**： IO类型。 **取值范围**： 不涉及。
+    * storageSpecCode  **参数解释**： IO规格。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： IO未售罄的可用区列表。 **取值范围**： 不涉及。
+    * unavailableZones  **参数解释**： IO已售罄的不可用区列表。 **取值范围**： 不涉及。
+    * volumeType  **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ListProductsRespIo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ioType  IO类型。
-    * storageSpecCode  IO规格。
-    * availableZones  IO未售罄的可用区列表。
-    * unavailableZones  IO已售罄的不可用区列表。
-    * volumeType  磁盘类型。
+    * ioType  **参数解释**： IO类型。 **取值范围**： 不涉及。
+    * storageSpecCode  **参数解释**： IO规格。 **取值范围**： 不涉及。
+    * availableZones  **参数解释**： IO未售罄的可用区列表。 **取值范围**： 不涉及。
+    * unavailableZones  **参数解释**： IO已售罄的不可用区列表。 **取值范围**： 不涉及。
+    * volumeType  **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class ListProductsRespIo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ioType
-    *  IO类型。
+    *  **参数解释**： IO类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class ListProductsRespIo implements ModelInterface, ArrayAccess
     /**
     * Sets ioType
     *
-    * @param string|null $ioType IO类型。
+    * @param string|null $ioType **参数解释**： IO类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class ListProductsRespIo implements ModelInterface, ArrayAccess
 
     /**
     * Gets storageSpecCode
-    *  IO规格。
+    *  **参数解释**： IO规格。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class ListProductsRespIo implements ModelInterface, ArrayAccess
     /**
     * Sets storageSpecCode
     *
-    * @param string|null $storageSpecCode IO规格。
+    * @param string|null $storageSpecCode **参数解释**： IO规格。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class ListProductsRespIo implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableZones
-    *  IO未售罄的可用区列表。
+    *  **参数解释**： IO未售罄的可用区列表。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -278,7 +278,7 @@ class ListProductsRespIo implements ModelInterface, ArrayAccess
     /**
     * Sets availableZones
     *
-    * @param string[]|null $availableZones IO未售罄的可用区列表。
+    * @param string[]|null $availableZones **参数解释**： IO未售罄的可用区列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class ListProductsRespIo implements ModelInterface, ArrayAccess
 
     /**
     * Gets unavailableZones
-    *  IO已售罄的不可用区列表。
+    *  **参数解释**： IO已售罄的不可用区列表。 **取值范围**： 不涉及。
     *
     * @return string[]|null
     */
@@ -302,7 +302,7 @@ class ListProductsRespIo implements ModelInterface, ArrayAccess
     /**
     * Sets unavailableZones
     *
-    * @param string[]|null $unavailableZones IO已售罄的不可用区列表。
+    * @param string[]|null $unavailableZones **参数解释**： IO已售罄的不可用区列表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class ListProductsRespIo implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeType
-    *  磁盘类型。
+    *  **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class ListProductsRespIo implements ModelInterface, ArrayAccess
     /**
     * Sets volumeType
     *
-    * @param string|null $volumeType 磁盘类型。
+    * @param string|null $volumeType **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */

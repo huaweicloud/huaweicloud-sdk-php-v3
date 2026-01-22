@@ -20,22 +20,22 @@ class BatchDeleteConsumerGroupReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groups  待删除的消费组列表。
+    * jobId  **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'groups' => 'string[]'
+            'jobId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groups  待删除的消费组列表。
+    * jobId  **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'groups' => null
+        'jobId' => null
     ];
 
     /**
@@ -61,32 +61,32 @@ class BatchDeleteConsumerGroupReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groups  待删除的消费组列表。
+    * jobId  **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'groups' => 'groups'
+            'jobId' => 'job_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groups  待删除的消费组列表。
+    * jobId  **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'groups' => 'setGroups'
+            'jobId' => 'setJobId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groups  待删除的消费组列表。
+    * jobId  **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'groups' => 'getGroups'
+            'jobId' => 'getJobId'
     ];
 
     /**
@@ -147,7 +147,7 @@ class BatchDeleteConsumerGroupReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['groups'] = isset($data['groups']) ? $data['groups'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
     }
 
     /**
@@ -173,26 +173,26 @@ class BatchDeleteConsumerGroupReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets groups
-    *  待删除的消费组列表。
+    * Gets jobId
+    *  **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return string[]|null
+    * @return string|null
     */
-    public function getGroups()
+    public function getJobId()
     {
-        return $this->container['groups'];
+        return $this->container['jobId'];
     }
 
     /**
-    * Sets groups
+    * Sets jobId
     *
-    * @param string[]|null $groups 待删除的消费组列表。
+    * @param string|null $jobId **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
-    public function setGroups($groups)
+    public function setJobId($jobId)
     {
-        $this->container['groups'] = $groups;
+        $this->container['jobId'] = $jobId;
         return $this;
     }
 

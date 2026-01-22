@@ -21,7 +21,7 @@ class ListConfigFeatures implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * featureId  **参数解释**： 特性ID。     **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。  **取值范围**： - 0：特性关闭。 - 1：特性开启。
+    * status  **参数解释**： 状态。  **取值范围**： - 1：特性开启。 - 0：特性关闭。
     * description  **参数解释**： 特性描述。  **取值范围**： 不涉及。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class ListConfigFeatures implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * featureId  **参数解释**： 特性ID。     **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。  **取值范围**： - 0：特性关闭。 - 1：特性开启。
+    * status  **参数解释**： 状态。  **取值范围**： - 1：特性开启。 - 0：特性关闭。
     * description  **参数解释**： 特性描述。  **取值范围**： 不涉及。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class ListConfigFeatures implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * featureId  **参数解释**： 特性ID。     **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。  **取值范围**： - 0：特性关闭。 - 1：特性开启。
+    * status  **参数解释**： 状态。  **取值范围**： - 1：特性开启。 - 0：特性关闭。
     * description  **参数解释**： 特性描述。  **取值范围**： 不涉及。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class ListConfigFeatures implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * featureId  **参数解释**： 特性ID。     **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。  **取值范围**： - 0：特性关闭。 - 1：特性开启。
+    * status  **参数解释**： 状态。  **取值范围**： - 1：特性开启。 - 0：特性关闭。
     * description  **参数解释**： 特性描述。  **取值范围**： 不涉及。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ListConfigFeatures implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * featureId  **参数解释**： 特性ID。     **取值范围**： 不涉及。
-    * status  **参数解释**： 状态。  **取值范围**： - 0：特性关闭。 - 1：特性开启。
+    * status  **参数解释**： 状态。  **取值范围**： - 1：特性开启。 - 0：特性关闭。
     * description  **参数解释**： 特性描述。  **取值范围**： 不涉及。
     *
     * @var string[]
@@ -220,7 +220,7 @@ class ListConfigFeatures implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 状态。  **取值范围**： - 0：特性关闭。 - 1：特性开启。
+    *  **参数解释**： 状态。  **取值范围**： - 1：特性开启。 - 0：特性关闭。
     *
     * @return int|null
     */
@@ -232,7 +232,7 @@ class ListConfigFeatures implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status **参数解释**： 状态。  **取值范围**： - 0：特性关闭。 - 1：特性开启。
+    * @param int|null $status **参数解释**： 状态。  **取值范围**： - 1：特性开启。 - 0：特性关闭。
     *
     * @return $this
     */

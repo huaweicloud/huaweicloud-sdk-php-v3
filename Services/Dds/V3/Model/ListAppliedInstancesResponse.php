@@ -21,7 +21,7 @@ class ListAppliedInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instances  可以应用的实例列表。
+    * instances  **参数解释：** 可以应用的实例列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListAppliedInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instances  可以应用的实例列表。
+    * instances  **参数解释：** 可以应用的实例列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListAppliedInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instances  可以应用的实例列表。
+    * instances  **参数解释：** 可以应用的实例列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListAppliedInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instances  可以应用的实例列表。
+    * instances  **参数解释：** 可以应用的实例列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListAppliedInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instances  可以应用的实例列表。
+    * instances  **参数解释：** 可以应用的实例列表。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListAppliedInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets instances
-    *  可以应用的实例列表。
+    *  **参数解释：** 可以应用的实例列表。 **取值范围：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\Dds\V3\Model\ApplicableInstancesInfo[]|null
     */
@@ -187,7 +187,7 @@ class ListAppliedInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets instances
     *
-    * @param \HuaweiCloud\SDK\Dds\V3\Model\ApplicableInstancesInfo[]|null $instances 可以应用的实例列表。
+    * @param \HuaweiCloud\SDK\Dds\V3\Model\ApplicableInstancesInfo[]|null $instances **参数解释：** 可以应用的实例列表。 **取值范围：** 不涉及。
     *
     * @return $this
     */

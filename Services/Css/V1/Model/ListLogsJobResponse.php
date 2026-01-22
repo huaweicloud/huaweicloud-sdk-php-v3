@@ -22,21 +22,25 @@ class ListLogsJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clusterLogRecord  clusterLogRecord
+    * totalSize  **参数解释**： 日志记录总条数。 **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'clusterLogRecord' => '\HuaweiCloud\SDK\Css\V1\Model\ClusterLogRecord[]'
+            'clusterLogRecord' => '\HuaweiCloud\SDK\Css\V1\Model\ClusterLogRecord[]',
+            'totalSize' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterLogRecord  clusterLogRecord
+    * totalSize  **参数解释**： 日志记录总条数。 **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'clusterLogRecord' => null
+        'clusterLogRecord' => null,
+        'totalSize' => 'int32'
     ];
 
     /**
@@ -63,31 +67,37 @@ class ListLogsJobResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clusterLogRecord  clusterLogRecord
+    * totalSize  **参数解释**： 日志记录总条数。 **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'clusterLogRecord' => 'clusterLogRecord'
+            'clusterLogRecord' => 'clusterLogRecord',
+            'totalSize' => 'totalSize'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterLogRecord  clusterLogRecord
+    * totalSize  **参数解释**： 日志记录总条数。 **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
-            'clusterLogRecord' => 'setClusterLogRecord'
+            'clusterLogRecord' => 'setClusterLogRecord',
+            'totalSize' => 'setTotalSize'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterLogRecord  clusterLogRecord
+    * totalSize  **参数解释**： 日志记录总条数。 **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
-            'clusterLogRecord' => 'getClusterLogRecord'
+            'clusterLogRecord' => 'getClusterLogRecord',
+            'totalSize' => 'getTotalSize'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListLogsJobResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['clusterLogRecord'] = isset($data['clusterLogRecord']) ? $data['clusterLogRecord'] : null;
+        $this->container['totalSize'] = isset($data['totalSize']) ? $data['totalSize'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ListLogsJobResponse implements ModelInterface, ArrayAccess
     public function setClusterLogRecord($clusterLogRecord)
     {
         $this->container['clusterLogRecord'] = $clusterLogRecord;
+        return $this;
+    }
+
+    /**
+    * Gets totalSize
+    *  **参数解释**： 日志记录总条数。 **取值范围**： 不涉及
+    *
+    * @return int|null
+    */
+    public function getTotalSize()
+    {
+        return $this->container['totalSize'];
+    }
+
+    /**
+    * Sets totalSize
+    *
+    * @param int|null $totalSize **参数解释**： 日志记录总条数。 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setTotalSize($totalSize)
+    {
+        $this->container['totalSize'] = $totalSize;
         return $this;
     }
 

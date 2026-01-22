@@ -20,7 +20,7 @@ class TagValue implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  tag键
+    * key  **参数解释**： 标签键 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * value  tag值
     *
     * @var string[]
@@ -32,7 +32,7 @@ class TagValue implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  tag键
+    * key  **参数解释**： 标签键 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * value  tag值
     *
     * @var string[]
@@ -65,7 +65,7 @@ class TagValue implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  tag键
+    * key  **参数解释**： 标签键 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * value  tag值
     *
     * @var string[]
@@ -77,7 +77,7 @@ class TagValue implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  tag键
+    * key  **参数解释**： 标签键 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * value  tag值
     *
     * @var string[]
@@ -89,7 +89,7 @@ class TagValue implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  tag键
+    * key  **参数解释**： 标签键 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * value  tag值
     *
     * @var string[]
@@ -185,7 +185,7 @@ class TagValue implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  tag键
+    *  **参数解释**： 标签键 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class TagValue implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key tag键
+    * @param string|null $key **参数解释**： 标签键 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

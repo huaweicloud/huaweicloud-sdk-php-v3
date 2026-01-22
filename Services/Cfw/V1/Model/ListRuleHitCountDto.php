@@ -20,7 +20,7 @@ class ListRuleHitCountDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ruleIds  规则id列表，规则id，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    * ruleIds  规则id列表，规则ID，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ListRuleHitCountDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ruleIds  规则id列表，规则id，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    * ruleIds  规则id列表，规则ID，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ListRuleHitCountDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ruleIds  规则id列表，规则id，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    * ruleIds  规则id列表，规则ID，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListRuleHitCountDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ruleIds  规则id列表，规则id，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    * ruleIds  规则id列表，规则ID，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListRuleHitCountDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ruleIds  规则id列表，规则id，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    * ruleIds  规则id列表，规则ID，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ListRuleHitCountDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleIds
-    *  规则id列表，规则id，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    *  规则id列表，规则ID，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     *
     * @return string[]
     */
@@ -189,7 +189,7 @@ class ListRuleHitCountDto implements ModelInterface, ArrayAccess
     /**
     * Sets ruleIds
     *
-    * @param string[] $ruleIds 规则id列表，规则id，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    * @param string[] $ruleIds 规则id列表，规则ID，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */

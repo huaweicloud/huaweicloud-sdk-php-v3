@@ -20,13 +20,13 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  总防护VPC数
-    * selfTotal  防火墙东西向防护可进行跨账号防护VPC，self_total表示本项目防护VPC总数。
-    * otherTotal  防火墙东西向防护可进行跨账号防护VPC，other_total表示其他项目防护VPC数
-    * protectVpcs  防火墙东西向防护可进行跨账号防护VPC，protect_vpcs指的是总体防护VPC列表
-    * selfProtectVpcs  防火墙东西向防护可进行跨账号防护VPC，self_protect_vpcs指的是本项目防护VPC列表
-    * otherProtectVpcs  防火墙东西向防护可进行跨账号防护VPC，other_protect_vpcs指的是其他项目防护VPC列表
-    * totalAssets  租户的所有VPC资产数量
+    * total  **参数解释**： 总防护VPC数 **取值范围**： 不涉及
+    * selfTotal  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，self_total表示本项目防护VPC总数。 **取值范围**： 不涉及
+    * otherTotal  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，other_total表示其他项目防护VPC数 **取值范围**： 不涉及
+    * protectVpcs  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，protect_vpcs表示总体防护VPC列表 **取值范围**： 不涉及
+    * selfProtectVpcs  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，self_protect_vpcs表示本项目防护VPC列表 **取值范围**： 不涉及
+    * otherProtectVpcs  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，other_protect_vpcs表示其他项目防护VPC列表 **取值范围**： 不涉及
+    * totalAssets  **参数解释**： 租户的所有VPC资产数量 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  总防护VPC数
-    * selfTotal  防火墙东西向防护可进行跨账号防护VPC，self_total表示本项目防护VPC总数。
-    * otherTotal  防火墙东西向防护可进行跨账号防护VPC，other_total表示其他项目防护VPC数
-    * protectVpcs  防火墙东西向防护可进行跨账号防护VPC，protect_vpcs指的是总体防护VPC列表
-    * selfProtectVpcs  防火墙东西向防护可进行跨账号防护VPC，self_protect_vpcs指的是本项目防护VPC列表
-    * otherProtectVpcs  防火墙东西向防护可进行跨账号防护VPC，other_protect_vpcs指的是其他项目防护VPC列表
-    * totalAssets  租户的所有VPC资产数量
+    * total  **参数解释**： 总防护VPC数 **取值范围**： 不涉及
+    * selfTotal  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，self_total表示本项目防护VPC总数。 **取值范围**： 不涉及
+    * otherTotal  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，other_total表示其他项目防护VPC数 **取值范围**： 不涉及
+    * protectVpcs  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，protect_vpcs表示总体防护VPC列表 **取值范围**： 不涉及
+    * selfProtectVpcs  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，self_protect_vpcs表示本项目防护VPC列表 **取值范围**： 不涉及
+    * otherProtectVpcs  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，other_protect_vpcs表示其他项目防护VPC列表 **取值范围**： 不涉及
+    * totalAssets  **参数解释**： 租户的所有VPC资产数量 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  总防护VPC数
-    * selfTotal  防火墙东西向防护可进行跨账号防护VPC，self_total表示本项目防护VPC总数。
-    * otherTotal  防火墙东西向防护可进行跨账号防护VPC，other_total表示其他项目防护VPC数
-    * protectVpcs  防火墙东西向防护可进行跨账号防护VPC，protect_vpcs指的是总体防护VPC列表
-    * selfProtectVpcs  防火墙东西向防护可进行跨账号防护VPC，self_protect_vpcs指的是本项目防护VPC列表
-    * otherProtectVpcs  防火墙东西向防护可进行跨账号防护VPC，other_protect_vpcs指的是其他项目防护VPC列表
-    * totalAssets  租户的所有VPC资产数量
+    * total  **参数解释**： 总防护VPC数 **取值范围**： 不涉及
+    * selfTotal  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，self_total表示本项目防护VPC总数。 **取值范围**： 不涉及
+    * otherTotal  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，other_total表示其他项目防护VPC数 **取值范围**： 不涉及
+    * protectVpcs  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，protect_vpcs表示总体防护VPC列表 **取值范围**： 不涉及
+    * selfProtectVpcs  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，self_protect_vpcs表示本项目防护VPC列表 **取值范围**： 不涉及
+    * otherProtectVpcs  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，other_protect_vpcs表示其他项目防护VPC列表 **取值范围**： 不涉及
+    * totalAssets  **参数解释**： 租户的所有VPC资产数量 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  总防护VPC数
-    * selfTotal  防火墙东西向防护可进行跨账号防护VPC，self_total表示本项目防护VPC总数。
-    * otherTotal  防火墙东西向防护可进行跨账号防护VPC，other_total表示其他项目防护VPC数
-    * protectVpcs  防火墙东西向防护可进行跨账号防护VPC，protect_vpcs指的是总体防护VPC列表
-    * selfProtectVpcs  防火墙东西向防护可进行跨账号防护VPC，self_protect_vpcs指的是本项目防护VPC列表
-    * otherProtectVpcs  防火墙东西向防护可进行跨账号防护VPC，other_protect_vpcs指的是其他项目防护VPC列表
-    * totalAssets  租户的所有VPC资产数量
+    * total  **参数解释**： 总防护VPC数 **取值范围**： 不涉及
+    * selfTotal  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，self_total表示本项目防护VPC总数。 **取值范围**： 不涉及
+    * otherTotal  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，other_total表示其他项目防护VPC数 **取值范围**： 不涉及
+    * protectVpcs  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，protect_vpcs表示总体防护VPC列表 **取值范围**： 不涉及
+    * selfProtectVpcs  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，self_protect_vpcs表示本项目防护VPC列表 **取值范围**： 不涉及
+    * otherProtectVpcs  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，other_protect_vpcs表示其他项目防护VPC列表 **取值范围**： 不涉及
+    * totalAssets  **参数解释**： 租户的所有VPC资产数量 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  总防护VPC数
-    * selfTotal  防火墙东西向防护可进行跨账号防护VPC，self_total表示本项目防护VPC总数。
-    * otherTotal  防火墙东西向防护可进行跨账号防护VPC，other_total表示其他项目防护VPC数
-    * protectVpcs  防火墙东西向防护可进行跨账号防护VPC，protect_vpcs指的是总体防护VPC列表
-    * selfProtectVpcs  防火墙东西向防护可进行跨账号防护VPC，self_protect_vpcs指的是本项目防护VPC列表
-    * otherProtectVpcs  防火墙东西向防护可进行跨账号防护VPC，other_protect_vpcs指的是其他项目防护VPC列表
-    * totalAssets  租户的所有VPC资产数量
+    * total  **参数解释**： 总防护VPC数 **取值范围**： 不涉及
+    * selfTotal  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，self_total表示本项目防护VPC总数。 **取值范围**： 不涉及
+    * otherTotal  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，other_total表示其他项目防护VPC数 **取值范围**： 不涉及
+    * protectVpcs  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，protect_vpcs表示总体防护VPC列表 **取值范围**： 不涉及
+    * selfProtectVpcs  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，self_protect_vpcs表示本项目防护VPC列表 **取值范围**： 不涉及
+    * otherProtectVpcs  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，other_protect_vpcs表示其他项目防护VPC列表 **取值范围**： 不涉及
+    * totalAssets  **参数解释**： 租户的所有VPC资产数量 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  总防护VPC数
+    *  **参数解释**： 总防护VPC数 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -252,7 +252,7 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 总防护VPC数
+    * @param int|null $total **参数解释**： 总防护VPC数 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets selfTotal
-    *  防火墙东西向防护可进行跨账号防护VPC，self_total表示本项目防护VPC总数。
+    *  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，self_total表示本项目防护VPC总数。 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -276,7 +276,7 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
     /**
     * Sets selfTotal
     *
-    * @param int|null $selfTotal 防火墙东西向防护可进行跨账号防护VPC，self_total表示本项目防护VPC总数。
+    * @param int|null $selfTotal **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，self_total表示本项目防护VPC总数。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets otherTotal
-    *  防火墙东西向防护可进行跨账号防护VPC，other_total表示其他项目防护VPC数
+    *  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，other_total表示其他项目防护VPC数 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -300,7 +300,7 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
     /**
     * Sets otherTotal
     *
-    * @param int|null $otherTotal 防火墙东西向防护可进行跨账号防护VPC，other_total表示其他项目防护VPC数
+    * @param int|null $otherTotal **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，other_total表示其他项目防护VPC数 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectVpcs
-    *  防火墙东西向防护可进行跨账号防护VPC，protect_vpcs指的是总体防护VPC列表
+    *  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，protect_vpcs表示总体防护VPC列表 **取值范围**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\VpcAttachmentDetail[]|null
     */
@@ -324,7 +324,7 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
     /**
     * Sets protectVpcs
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\VpcAttachmentDetail[]|null $protectVpcs 防火墙东西向防护可进行跨账号防护VPC，protect_vpcs指的是总体防护VPC列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\VpcAttachmentDetail[]|null $protectVpcs **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，protect_vpcs表示总体防护VPC列表 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets selfProtectVpcs
-    *  防火墙东西向防护可进行跨账号防护VPC，self_protect_vpcs指的是本项目防护VPC列表
+    *  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，self_protect_vpcs表示本项目防护VPC列表 **取值范围**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\VpcAttachmentDetail[]|null
     */
@@ -348,7 +348,7 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
     /**
     * Sets selfProtectVpcs
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\VpcAttachmentDetail[]|null $selfProtectVpcs 防火墙东西向防护可进行跨账号防护VPC，self_protect_vpcs指的是本项目防护VPC列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\VpcAttachmentDetail[]|null $selfProtectVpcs **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，self_protect_vpcs表示本项目防护VPC列表 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets otherProtectVpcs
-    *  防火墙东西向防护可进行跨账号防护VPC，other_protect_vpcs指的是其他项目防护VPC列表
+    *  **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，other_protect_vpcs表示其他项目防护VPC列表 **取值范围**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\VpcAttachmentDetail[]|null
     */
@@ -372,7 +372,7 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
     /**
     * Sets otherProtectVpcs
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\VpcAttachmentDetail[]|null $otherProtectVpcs 防火墙东西向防护可进行跨账号防护VPC，other_protect_vpcs指的是其他项目防护VPC列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\VpcAttachmentDetail[]|null $otherProtectVpcs **参数解释**： 防火墙东西向防护可进行跨账号防护VPC，other_protect_vpcs表示其他项目防护VPC列表 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalAssets
-    *  租户的所有VPC资产数量
+    *  **参数解释**： 租户的所有VPC资产数量 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -396,7 +396,7 @@ class VPCProtectsVo implements ModelInterface, ArrayAccess
     /**
     * Sets totalAssets
     *
-    * @param int|null $totalAssets 租户的所有VPC资产数量
+    * @param int|null $totalAssets **参数解释**： 租户的所有VPC资产数量 **取值范围**： 不涉及
     *
     * @return $this
     */

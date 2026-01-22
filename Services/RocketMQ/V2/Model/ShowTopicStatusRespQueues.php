@@ -20,10 +20,10 @@ class ShowTopicStatusRespQueues implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  队列ID。
-    * minOffset  最小偏移量。
-    * maxOffset  最大偏移量。
-    * lastMessageTime  最后一条消息的时间。
+    * id  **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * minOffset  **参数解释**： 最小偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maxOffset  **参数解释**： 最大偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * lastMessageTime  **参数解释**： 最后一条消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ShowTopicStatusRespQueues implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  队列ID。
-    * minOffset  最小偏移量。
-    * maxOffset  最大偏移量。
-    * lastMessageTime  最后一条消息的时间。
+    * id  **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * minOffset  **参数解释**： 最小偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maxOffset  **参数解释**： 最大偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * lastMessageTime  **参数解释**： 最后一条消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ShowTopicStatusRespQueues implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  队列ID。
-    * minOffset  最小偏移量。
-    * maxOffset  最大偏移量。
-    * lastMessageTime  最后一条消息的时间。
+    * id  **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * minOffset  **参数解释**： 最小偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maxOffset  **参数解释**： 最大偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * lastMessageTime  **参数解释**： 最后一条消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ShowTopicStatusRespQueues implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  队列ID。
-    * minOffset  最小偏移量。
-    * maxOffset  最大偏移量。
-    * lastMessageTime  最后一条消息的时间。
+    * id  **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * minOffset  **参数解释**： 最小偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maxOffset  **参数解释**： 最大偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * lastMessageTime  **参数解释**： 最后一条消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ShowTopicStatusRespQueues implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  队列ID。
-    * minOffset  最小偏移量。
-    * maxOffset  最大偏移量。
-    * lastMessageTime  最后一条消息的时间。
+    * id  **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * minOffset  **参数解释**： 最小偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maxOffset  **参数解释**： 最大偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * lastMessageTime  **参数解释**： 最后一条消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class ShowTopicStatusRespQueues implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  队列ID。
+    *  **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -219,7 +219,7 @@ class ShowTopicStatusRespQueues implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 队列ID。
+    * @param int|null $id **参数解释**： 队列ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class ShowTopicStatusRespQueues implements ModelInterface, ArrayAccess
 
     /**
     * Gets minOffset
-    *  最小偏移量。
+    *  **参数解释**： 最小偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -243,7 +243,7 @@ class ShowTopicStatusRespQueues implements ModelInterface, ArrayAccess
     /**
     * Sets minOffset
     *
-    * @param int|null $minOffset 最小偏移量。
+    * @param int|null $minOffset **参数解释**： 最小偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class ShowTopicStatusRespQueues implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxOffset
-    *  最大偏移量。
+    *  **参数解释**： 最大偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -267,7 +267,7 @@ class ShowTopicStatusRespQueues implements ModelInterface, ArrayAccess
     /**
     * Sets maxOffset
     *
-    * @param int|null $maxOffset 最大偏移量。
+    * @param int|null $maxOffset **参数解释**： 最大偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class ShowTopicStatusRespQueues implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastMessageTime
-    *  最后一条消息的时间。
+    *  **参数解释**： 最后一条消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class ShowTopicStatusRespQueues implements ModelInterface, ArrayAccess
     /**
     * Sets lastMessageTime
     *
-    * @param int|null $lastMessageTime 最后一条消息的时间。
+    * @param int|null $lastMessageTime **参数解释**： 最后一条消息的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

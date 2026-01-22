@@ -23,7 +23,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * direction  方向，包含in2out，out2in
     * action  动作包含permit，deny
     * eventTime  事件时间，以毫秒为单位的时间戳，如1718936272648
-    * attackType  攻击类型
+    * attackType  参数解释： 入侵事件类型 约束限制： 不涉及 取值范围： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马 worms：蠕虫 Buffer Overflow：缓冲区溢出 Hacking tools：黑客工具 Spyware：间谍软件 DDoS flooding：DDoS泛洪 Application-layer DDoS attacks：应用层DDoS攻击 Other suspicious behavior：其他可疑行为 Suspicious DNS activity：可疑DNS活动 Phishing：网络钓鱼 Spam：垃圾邮件 Others：其他攻击 默认取值： 不涉及
     * attackRule  攻击规则
     * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     * source  来源
@@ -37,7 +37,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * dstPort  目的端口
     * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     * packet  攻击日志报文
-    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * app  规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * packetMessages  攻击报文信息
     * srcRegionId  源区域id
     * srcRegionName  源区域名称
@@ -93,7 +93,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * direction  方向，包含in2out，out2in
     * action  动作包含permit，deny
     * eventTime  事件时间，以毫秒为单位的时间戳，如1718936272648
-    * attackType  攻击类型
+    * attackType  参数解释： 入侵事件类型 约束限制： 不涉及 取值范围： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马 worms：蠕虫 Buffer Overflow：缓冲区溢出 Hacking tools：黑客工具 Spyware：间谍软件 DDoS flooding：DDoS泛洪 Application-layer DDoS attacks：应用层DDoS攻击 Other suspicious behavior：其他可疑行为 Suspicious DNS activity：可疑DNS活动 Phishing：网络钓鱼 Spam：垃圾邮件 Others：其他攻击 默认取值： 不涉及
     * attackRule  攻击规则
     * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     * source  来源
@@ -107,7 +107,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * dstPort  目的端口
     * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     * packet  攻击日志报文
-    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * app  规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * packetMessages  攻击报文信息
     * srcRegionId  源区域id
     * srcRegionName  源区域名称
@@ -184,7 +184,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * direction  方向，包含in2out，out2in
     * action  动作包含permit，deny
     * eventTime  事件时间，以毫秒为单位的时间戳，如1718936272648
-    * attackType  攻击类型
+    * attackType  参数解释： 入侵事件类型 约束限制： 不涉及 取值范围： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马 worms：蠕虫 Buffer Overflow：缓冲区溢出 Hacking tools：黑客工具 Spyware：间谍软件 DDoS flooding：DDoS泛洪 Application-layer DDoS attacks：应用层DDoS攻击 Other suspicious behavior：其他可疑行为 Suspicious DNS activity：可疑DNS活动 Phishing：网络钓鱼 Spam：垃圾邮件 Others：其他攻击 默认取值： 不涉及
     * attackRule  攻击规则
     * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     * source  来源
@@ -198,7 +198,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * dstPort  目的端口
     * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     * packet  攻击日志报文
-    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * app  规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * packetMessages  攻击报文信息
     * srcRegionId  源区域id
     * srcRegionName  源区域名称
@@ -254,7 +254,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * direction  方向，包含in2out，out2in
     * action  动作包含permit，deny
     * eventTime  事件时间，以毫秒为单位的时间戳，如1718936272648
-    * attackType  攻击类型
+    * attackType  参数解释： 入侵事件类型 约束限制： 不涉及 取值范围： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马 worms：蠕虫 Buffer Overflow：缓冲区溢出 Hacking tools：黑客工具 Spyware：间谍软件 DDoS flooding：DDoS泛洪 Application-layer DDoS attacks：应用层DDoS攻击 Other suspicious behavior：其他可疑行为 Suspicious DNS activity：可疑DNS活动 Phishing：网络钓鱼 Spam：垃圾邮件 Others：其他攻击 默认取值： 不涉及
     * attackRule  攻击规则
     * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     * source  来源
@@ -268,7 +268,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * dstPort  目的端口
     * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     * packet  攻击日志报文
-    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * app  规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * packetMessages  攻击报文信息
     * srcRegionId  源区域id
     * srcRegionName  源区域名称
@@ -324,7 +324,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * direction  方向，包含in2out，out2in
     * action  动作包含permit，deny
     * eventTime  事件时间，以毫秒为单位的时间戳，如1718936272648
-    * attackType  攻击类型
+    * attackType  参数解释： 入侵事件类型 约束限制： 不涉及 取值范围： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马 worms：蠕虫 Buffer Overflow：缓冲区溢出 Hacking tools：黑客工具 Spyware：间谍软件 DDoS flooding：DDoS泛洪 Application-layer DDoS attacks：应用层DDoS攻击 Other suspicious behavior：其他可疑行为 Suspicious DNS activity：可疑DNS活动 Phishing：网络钓鱼 Spam：垃圾邮件 Others：其他攻击 默认取值： 不涉及
     * attackRule  攻击规则
     * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     * source  来源
@@ -338,7 +338,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * dstPort  目的端口
     * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     * packet  攻击日志报文
-    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * app  规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * packetMessages  攻击报文信息
     * srcRegionId  源区域id
     * srcRegionName  源区域名称
@@ -611,7 +611,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
 
     /**
     * Gets attackType
-    *  攻击类型
+    *  参数解释： 入侵事件类型 约束限制： 不涉及 取值范围： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马 worms：蠕虫 Buffer Overflow：缓冲区溢出 Hacking tools：黑客工具 Spyware：间谍软件 DDoS flooding：DDoS泛洪 Application-layer DDoS attacks：应用层DDoS攻击 Other suspicious behavior：其他可疑行为 Suspicious DNS activity：可疑DNS活动 Phishing：网络钓鱼 Spam：垃圾邮件 Others：其他攻击 默认取值： 不涉及
     *
     * @return string|null
     */
@@ -623,7 +623,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     /**
     * Sets attackType
     *
-    * @param string|null $attackType 攻击类型
+    * @param string|null $attackType 参数解释： 入侵事件类型 约束限制： 不涉及 取值范围： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马 worms：蠕虫 Buffer Overflow：缓冲区溢出 Hacking tools：黑客工具 Spyware：间谍软件 DDoS flooding：DDoS泛洪 Application-layer DDoS attacks：应用层DDoS攻击 Other suspicious behavior：其他可疑行为 Suspicious DNS activity：可疑DNS活动 Phishing：网络钓鱼 Spam：垃圾邮件 Others：其他攻击 默认取值： 不涉及
     *
     * @return $this
     */
@@ -947,7 +947,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
 
     /**
     * Gets app
-    *  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    *  规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     *
     * @return string|null
     */
@@ -959,7 +959,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     /**
     * Sets app
     *
-    * @param string|null $app 规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * @param string|null $app 规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     *
     * @return $this
     */

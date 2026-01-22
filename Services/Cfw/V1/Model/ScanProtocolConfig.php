@@ -21,7 +21,7 @@ class ScanProtocolConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * action  反病毒动作，0：观察 1：拦截 2：禁用
-    * protocolType  协议类型
+    * protocolType  协议类型，包括0：HTTP、1：SMTP、2： POP3、3：IMAP4、4：FTP、5：SMB、6：恶意访问、7：IM
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ScanProtocolConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * action  反病毒动作，0：观察 1：拦截 2：禁用
-    * protocolType  协议类型
+    * protocolType  协议类型，包括0：HTTP、1：SMTP、2： POP3、3：IMAP4、4：FTP、5：SMB、6：恶意访问、7：IM
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ScanProtocolConfig implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * action  反病毒动作，0：观察 1：拦截 2：禁用
-    * protocolType  协议类型
+    * protocolType  协议类型，包括0：HTTP、1：SMTP、2： POP3、3：IMAP4、4：FTP、5：SMB、6：恶意访问、7：IM
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ScanProtocolConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * action  反病毒动作，0：观察 1：拦截 2：禁用
-    * protocolType  协议类型
+    * protocolType  协议类型，包括0：HTTP、1：SMTP、2： POP3、3：IMAP4、4：FTP、5：SMB、6：恶意访问、7：IM
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ScanProtocolConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * action  反病毒动作，0：观察 1：拦截 2：禁用
-    * protocolType  协议类型
+    * protocolType  协议类型，包括0：HTTP、1：SMTP、2： POP3、3：IMAP4、4：FTP、5：SMB、6：恶意访问、7：IM
     *
     * @var string[]
     */
@@ -221,7 +221,7 @@ class ScanProtocolConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocolType
-    *  协议类型
+    *  协议类型，包括0：HTTP、1：SMTP、2： POP3、3：IMAP4、4：FTP、5：SMB、6：恶意访问、7：IM
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class ScanProtocolConfig implements ModelInterface, ArrayAccess
     /**
     * Sets protocolType
     *
-    * @param int|null $protocolType 协议类型
+    * @param int|null $protocolType 协议类型，包括0：HTTP、1：SMTP、2： POP3、3：IMAP4、4：FTP、5：SMB、6：恶意访问、7：IM
     *
     * @return $this
     */

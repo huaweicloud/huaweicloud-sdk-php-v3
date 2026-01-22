@@ -20,8 +20,8 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * portType  **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
-    * ports  **参数解释**： 端口 **取值范围**： 不涉及
+    * portType  **参数解释**： 端口操作类型 **约束限制**：   不涉及 **取值范围**： -1：Any 0：包含 1：排除 **默认取值**：   不涉及
+    * ports  **参数解释**： 端口 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * portType  **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
-    * ports  **参数解释**： 端口 **取值范围**： 不涉及
+    * portType  **参数解释**： 端口操作类型 **约束限制**：   不涉及 **取值范围**： -1：Any 0：包含 1：排除 **默认取值**：   不涉及
+    * ports  **参数解释**： 端口 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * portType  **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
-    * ports  **参数解释**： 端口 **取值范围**： 不涉及
+    * portType  **参数解释**： 端口操作类型 **约束限制**：   不涉及 **取值范围**： -1：Any 0：包含 1：排除 **默认取值**：   不涉及
+    * ports  **参数解释**： 端口 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * portType  **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
-    * ports  **参数解释**： 端口 **取值范围**： 不涉及
+    * portType  **参数解释**： 端口操作类型 **约束限制**：   不涉及 **取值范围**： -1：Any 0：包含 1：排除 **默认取值**：   不涉及
+    * ports  **参数解释**： 端口 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * portType  **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
-    * ports  **参数解释**： 端口 **取值范围**： 不涉及
+    * portType  **参数解释**： 端口操作类型 **约束限制**：   不涉及 **取值范围**： -1：Any 0：包含 1：排除 **默认取值**：   不涉及
+    * ports  **参数解释**： 端口 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets portType
-    *  **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
+    *  **参数解释**： 端口操作类型 **约束限制**：   不涉及 **取值范围**： -1：Any 0：包含 1：排除 **默认取值**：   不涉及
     *
     * @return int|null
     */
@@ -209,7 +209,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets portType
     *
-    * @param int|null $portType **参数解释**： 端口类型 **取值范围**： -1 Any，0 包含，1 排除
+    * @param int|null $portType **参数解释**： 端口操作类型 **约束限制**：   不涉及 **取值范围**： -1：Any 0：包含 1：排除 **默认取值**：   不涉及
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets ports
-    *  **参数解释**： 端口 **取值范围**： 不涉及
+    *  **参数解释**： 端口 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets ports
     *
-    * @param string|null $ports **参数解释**： 端口 **取值范围**： 不涉及
+    * @param string|null $ports **参数解释**： 端口 **约束限制**：   不涉及 **取值范围**： 不涉及 **默认取值**：   不涉及
     *
     * @return $this
     */

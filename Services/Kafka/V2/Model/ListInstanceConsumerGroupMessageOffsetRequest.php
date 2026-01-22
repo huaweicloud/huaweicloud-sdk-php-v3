@@ -23,7 +23,7 @@ class ListInstanceConsumerGroupMessageOffsetRequest implements ModelInterface, A
     * engine  消息引擎。
     * instanceId  实例ID。
     * group  消费组名称。
-    * topic  topic名称。
+    * topic  topic名称。查询消费组消息位点时必填项。
     * partition  分区名称。
     * offset  偏移值。
     * limit  最大值。
@@ -45,7 +45,7 @@ class ListInstanceConsumerGroupMessageOffsetRequest implements ModelInterface, A
     * engine  消息引擎。
     * instanceId  实例ID。
     * group  消费组名称。
-    * topic  topic名称。
+    * topic  topic名称。查询消费组消息位点时必填项。
     * partition  分区名称。
     * offset  偏移值。
     * limit  最大值。
@@ -88,7 +88,7 @@ class ListInstanceConsumerGroupMessageOffsetRequest implements ModelInterface, A
     * engine  消息引擎。
     * instanceId  实例ID。
     * group  消费组名称。
-    * topic  topic名称。
+    * topic  topic名称。查询消费组消息位点时必填项。
     * partition  分区名称。
     * offset  偏移值。
     * limit  最大值。
@@ -110,7 +110,7 @@ class ListInstanceConsumerGroupMessageOffsetRequest implements ModelInterface, A
     * engine  消息引擎。
     * instanceId  实例ID。
     * group  消费组名称。
-    * topic  topic名称。
+    * topic  topic名称。查询消费组消息位点时必填项。
     * partition  分区名称。
     * offset  偏移值。
     * limit  最大值。
@@ -132,7 +132,7 @@ class ListInstanceConsumerGroupMessageOffsetRequest implements ModelInterface, A
     * engine  消息引擎。
     * instanceId  实例ID。
     * group  消费组名称。
-    * topic  topic名称。
+    * topic  topic名称。查询消费组消息位点时必填项。
     * partition  分区名称。
     * offset  偏移值。
     * limit  最大值。
@@ -233,6 +233,9 @@ class ListInstanceConsumerGroupMessageOffsetRequest implements ModelInterface, A
         if ($this->container['group'] === null) {
             $invalidProperties[] = "'group' can't be null";
         }
+        if ($this->container['topic'] === null) {
+            $invalidProperties[] = "'topic' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -321,9 +324,9 @@ class ListInstanceConsumerGroupMessageOffsetRequest implements ModelInterface, A
 
     /**
     * Gets topic
-    *  topic名称。
+    *  topic名称。查询消费组消息位点时必填项。
     *
-    * @return string|null
+    * @return string
     */
     public function getTopic()
     {
@@ -333,7 +336,7 @@ class ListInstanceConsumerGroupMessageOffsetRequest implements ModelInterface, A
     /**
     * Sets topic
     *
-    * @param string|null $topic topic名称。
+    * @param string $topic topic名称。查询消费组消息位点时必填项。
     *
     * @return $this
     */

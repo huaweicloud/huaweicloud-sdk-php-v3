@@ -20,11 +20,11 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  每页显示个数，范围为1-1024
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * projectId  租户项目ID
-    * total  防火墙总数量
-    * records  查询防火墙列表记录
+    * limit  **参数解释**： 每页显示个数 **约束限制**： 不涉及 **取值范围**： 1-1024
+    * offset  **参数解释**： 偏移量：指定返回记录的开始位置 **约束限制**： 不涉及 **取值范围**： 大于或等于0
+    * projectId  **参数解释**： 租户项目ID **约束限制**： 不涉及
+    * total  **参数解释**： 防火墙总数量 **约束限制**： 不涉及
+    * records  **参数解释**： 查询防火墙列表记录 **约束限制**： 不涉及
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  每页显示个数，范围为1-1024
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * projectId  租户项目ID
-    * total  防火墙总数量
-    * records  查询防火墙列表记录
+    * limit  **参数解释**： 每页显示个数 **约束限制**： 不涉及 **取值范围**： 1-1024
+    * offset  **参数解释**： 偏移量：指定返回记录的开始位置 **约束限制**： 不涉及 **取值范围**： 大于或等于0
+    * projectId  **参数解释**： 租户项目ID **约束限制**： 不涉及
+    * total  **参数解释**： 防火墙总数量 **约束限制**： 不涉及
+    * records  **参数解释**： 查询防火墙列表记录 **约束限制**： 不涉及
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  每页显示个数，范围为1-1024
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * projectId  租户项目ID
-    * total  防火墙总数量
-    * records  查询防火墙列表记录
+    * limit  **参数解释**： 每页显示个数 **约束限制**： 不涉及 **取值范围**： 1-1024
+    * offset  **参数解释**： 偏移量：指定返回记录的开始位置 **约束限制**： 不涉及 **取值范围**： 大于或等于0
+    * projectId  **参数解释**： 租户项目ID **约束限制**： 不涉及
+    * total  **参数解释**： 防火墙总数量 **约束限制**： 不涉及
+    * records  **参数解释**： 查询防火墙列表记录 **约束限制**： 不涉及
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  每页显示个数，范围为1-1024
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * projectId  租户项目ID
-    * total  防火墙总数量
-    * records  查询防火墙列表记录
+    * limit  **参数解释**： 每页显示个数 **约束限制**： 不涉及 **取值范围**： 1-1024
+    * offset  **参数解释**： 偏移量：指定返回记录的开始位置 **约束限制**： 不涉及 **取值范围**： 大于或等于0
+    * projectId  **参数解释**： 租户项目ID **约束限制**： 不涉及
+    * total  **参数解释**： 防火墙总数量 **约束限制**： 不涉及
+    * records  **参数解释**： 查询防火墙列表记录 **约束限制**： 不涉及
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  每页显示个数，范围为1-1024
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * projectId  租户项目ID
-    * total  防火墙总数量
-    * records  查询防火墙列表记录
+    * limit  **参数解释**： 每页显示个数 **约束限制**： 不涉及 **取值范围**： 1-1024
+    * offset  **参数解释**： 偏移量：指定返回记录的开始位置 **约束限制**： 不涉及 **取值范围**： 大于或等于0
+    * projectId  **参数解释**： 租户项目ID **约束限制**： 不涉及
+    * total  **参数解释**： 防火墙总数量 **约束限制**： 不涉及
+    * records  **参数解释**： 查询防火墙列表记录 **约束限制**： 不涉及
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
 
     /**
     * Gets limit
-    *  每页显示个数，范围为1-1024
+    *  **参数解释**： 每页显示个数 **约束限制**： 不涉及 **取值范围**： 1-1024
     *
     * @return int|null
     */
@@ -230,7 +230,7 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示个数，范围为1-1024
+    * @param int|null $limit **参数解释**： 每页显示个数 **约束限制**： 不涉及 **取值范围**： 1-1024
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  **参数解释**： 偏移量：指定返回记录的开始位置 **约束限制**： 不涉及 **取值范围**： 大于或等于0
     *
     * @return int|null
     */
@@ -254,7 +254,7 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset **参数解释**： 偏移量：指定返回记录的开始位置 **约束限制**： 不涉及 **取值范围**： 大于或等于0
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
 
     /**
     * Gets projectId
-    *  租户项目ID
+    *  **参数解释**： 租户项目ID **约束限制**： 不涉及
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 租户项目ID
+    * @param string|null $projectId **参数解释**： 租户项目ID **约束限制**： 不涉及
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
 
     /**
     * Gets total
-    *  防火墙总数量
+    *  **参数解释**： 防火墙总数量 **约束限制**： 不涉及
     *
     * @return int|null
     */
@@ -302,7 +302,7 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
     /**
     * Sets total
     *
-    * @param int|null $total 防火墙总数量
+    * @param int|null $total **参数解释**： 防火墙总数量 **约束限制**： 不涉及
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
 
     /**
     * Gets records
-    *  查询防火墙列表记录
+    *  **参数解释**： 查询防火墙列表记录 **约束限制**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\FirewallInstanceVO[]|null
     */
@@ -326,7 +326,7 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
     /**
     * Sets records
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\FirewallInstanceVO[]|null $records 查询防火墙列表记录
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\FirewallInstanceVO[]|null $records **参数解释**： 查询防火墙列表记录 **约束限制**： 不涉及
     *
     * @return $this
     */

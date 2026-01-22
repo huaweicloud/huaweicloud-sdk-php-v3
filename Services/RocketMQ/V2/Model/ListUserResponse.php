@@ -21,20 +21,20 @@ class ListUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * users  用户列表。
-    * total  总用户个数。
+    * users  **参数解释**： 用户列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： 总用户个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'users' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\User[]',
+            'users' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\UserResp[]',
             'total' => 'float'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * users  用户列表。
-    * total  总用户个数。
+    * users  **参数解释**： 用户列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： 总用户个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListUserResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * users  用户列表。
-    * total  总用户个数。
+    * users  **参数解释**： 用户列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： 总用户个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * users  用户列表。
-    * total  总用户个数。
+    * users  **参数解释**： 用户列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： 总用户个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * users  用户列表。
-    * total  总用户个数。
+    * users  **参数解释**： 用户列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： 总用户个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -186,9 +186,9 @@ class ListUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets users
-    *  用户列表。
+    *  **参数解释**： 用户列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\User[]|null
+    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\UserResp[]|null
     */
     public function getUsers()
     {
@@ -198,7 +198,7 @@ class ListUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets users
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\User[]|null $users 用户列表。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\UserResp[]|null $users **参数解释**： 用户列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListUserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  总用户个数。
+    *  **参数解释**： 总用户个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -222,7 +222,7 @@ class ListUserResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param float|null $total 总用户个数。
+    * @param float|null $total **参数解释**： 总用户个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

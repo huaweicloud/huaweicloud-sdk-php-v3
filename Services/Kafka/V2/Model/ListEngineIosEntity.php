@@ -20,8 +20,8 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ioSpec  **参数解释**： 磁盘IO编码。 **取值范围**： 不涉及。
-    * type  **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
+    * ioSpec  **参数解释**： 磁盘IO编码。 **取值范围**： - dms.physical.storage.high.v2：高IO类型磁盘。 - dms.physical.storage.ultra.v2：超高IO类型磁盘。 [- dms.physical.storage.general：使用通用型SSD的磁盘类型。](tag:hws,hws_hk,ax,dt) [- dms.physical.storage.extreme：使用极速型SSD的磁盘类型。](tag:hws,hws_hk,ax,dt)
+    * type  **参数解释**： 磁盘类型。 **取值范围**： evs。
     * availableZones  **参数解释**： 可用区。
     * unavailableZones  **参数解释**： 不可用区。
     *
@@ -36,8 +36,8 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ioSpec  **参数解释**： 磁盘IO编码。 **取值范围**： 不涉及。
-    * type  **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
+    * ioSpec  **参数解释**： 磁盘IO编码。 **取值范围**： - dms.physical.storage.high.v2：高IO类型磁盘。 - dms.physical.storage.ultra.v2：超高IO类型磁盘。 [- dms.physical.storage.general：使用通用型SSD的磁盘类型。](tag:hws,hws_hk,ax,dt) [- dms.physical.storage.extreme：使用极速型SSD的磁盘类型。](tag:hws,hws_hk,ax,dt)
+    * type  **参数解释**： 磁盘类型。 **取值范围**： evs。
     * availableZones  **参数解释**： 可用区。
     * unavailableZones  **参数解释**： 不可用区。
     *
@@ -73,8 +73,8 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ioSpec  **参数解释**： 磁盘IO编码。 **取值范围**： 不涉及。
-    * type  **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
+    * ioSpec  **参数解释**： 磁盘IO编码。 **取值范围**： - dms.physical.storage.high.v2：高IO类型磁盘。 - dms.physical.storage.ultra.v2：超高IO类型磁盘。 [- dms.physical.storage.general：使用通用型SSD的磁盘类型。](tag:hws,hws_hk,ax,dt) [- dms.physical.storage.extreme：使用极速型SSD的磁盘类型。](tag:hws,hws_hk,ax,dt)
+    * type  **参数解释**： 磁盘类型。 **取值范围**： evs。
     * availableZones  **参数解释**： 可用区。
     * unavailableZones  **参数解释**： 不可用区。
     *
@@ -89,8 +89,8 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ioSpec  **参数解释**： 磁盘IO编码。 **取值范围**： 不涉及。
-    * type  **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
+    * ioSpec  **参数解释**： 磁盘IO编码。 **取值范围**： - dms.physical.storage.high.v2：高IO类型磁盘。 - dms.physical.storage.ultra.v2：超高IO类型磁盘。 [- dms.physical.storage.general：使用通用型SSD的磁盘类型。](tag:hws,hws_hk,ax,dt) [- dms.physical.storage.extreme：使用极速型SSD的磁盘类型。](tag:hws,hws_hk,ax,dt)
+    * type  **参数解释**： 磁盘类型。 **取值范围**： evs。
     * availableZones  **参数解释**： 可用区。
     * unavailableZones  **参数解释**： 不可用区。
     *
@@ -105,8 +105,8 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ioSpec  **参数解释**： 磁盘IO编码。 **取值范围**： 不涉及。
-    * type  **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
+    * ioSpec  **参数解释**： 磁盘IO编码。 **取值范围**： - dms.physical.storage.high.v2：高IO类型磁盘。 - dms.physical.storage.ultra.v2：超高IO类型磁盘。 [- dms.physical.storage.general：使用通用型SSD的磁盘类型。](tag:hws,hws_hk,ax,dt) [- dms.physical.storage.extreme：使用极速型SSD的磁盘类型。](tag:hws,hws_hk,ax,dt)
+    * type  **参数解释**： 磁盘类型。 **取值范围**： evs。
     * availableZones  **参数解释**： 可用区。
     * unavailableZones  **参数解释**： 不可用区。
     *
@@ -207,7 +207,7 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets ioSpec
-    *  **参数解释**： 磁盘IO编码。 **取值范围**： 不涉及。
+    *  **参数解释**： 磁盘IO编码。 **取值范围**： - dms.physical.storage.high.v2：高IO类型磁盘。 - dms.physical.storage.ultra.v2：超高IO类型磁盘。 [- dms.physical.storage.general：使用通用型SSD的磁盘类型。](tag:hws,hws_hk,ax,dt) [- dms.physical.storage.extreme：使用极速型SSD的磁盘类型。](tag:hws,hws_hk,ax,dt)
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
     /**
     * Sets ioSpec
     *
-    * @param string|null $ioSpec **参数解释**： 磁盘IO编码。 **取值范围**： 不涉及。
+    * @param string|null $ioSpec **参数解释**： 磁盘IO编码。 **取值范围**： - dms.physical.storage.high.v2：高IO类型磁盘。 - dms.physical.storage.ultra.v2：超高IO类型磁盘。 [- dms.physical.storage.general：使用通用型SSD的磁盘类型。](tag:hws,hws_hk,ax,dt) [- dms.physical.storage.extreme：使用极速型SSD的磁盘类型。](tag:hws,hws_hk,ax,dt)
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
+    *  **参数解释**： 磁盘类型。 **取值范围**： evs。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class ListEngineIosEntity implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
+    * @param string|null $type **参数解释**： 磁盘类型。 **取值范围**： evs。
     *
     * @return $this
     */

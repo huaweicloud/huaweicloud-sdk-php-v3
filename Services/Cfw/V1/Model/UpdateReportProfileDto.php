@@ -22,7 +22,7 @@ class UpdateReportProfileDto implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * description  **参数解释**： 模板描述 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * name  **参数解释**： 模板名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * sendPeriod  **参数解释**： 发送时间，日报和周报需要设置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * sendPeriod  **参数解释**： 发送时间，日报和周报需要设置 **约束限制**： 不涉及 **取值范围**： 0-23 **默认取值**： 不涉及
     * sendWeekDay  **参数解释**： 发送星期，周报需要设置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * statisticPeriod  statisticPeriod
     * status  **参数解释**： 启用状态 **约束限制**： 不涉及 **取值范围**： 0 关闭 1 启用 **默认取值**： 不涉及
@@ -46,7 +46,7 @@ class UpdateReportProfileDto implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * description  **参数解释**： 模板描述 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * name  **参数解释**： 模板名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * sendPeriod  **参数解释**： 发送时间，日报和周报需要设置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * sendPeriod  **参数解释**： 发送时间，日报和周报需要设置 **约束限制**： 不涉及 **取值范围**： 0-23 **默认取值**： 不涉及
     * sendWeekDay  **参数解释**： 发送星期，周报需要设置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * statisticPeriod  statisticPeriod
     * status  **参数解释**： 启用状态 **约束限制**： 不涉及 **取值范围**： 0 关闭 1 启用 **默认取值**： 不涉及
@@ -91,7 +91,7 @@ class UpdateReportProfileDto implements ModelInterface, ArrayAccess
     * and the value is the original name
     * description  **参数解释**： 模板描述 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * name  **参数解释**： 模板名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * sendPeriod  **参数解释**： 发送时间，日报和周报需要设置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * sendPeriod  **参数解释**： 发送时间，日报和周报需要设置 **约束限制**： 不涉及 **取值范围**： 0-23 **默认取值**： 不涉及
     * sendWeekDay  **参数解释**： 发送星期，周报需要设置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * statisticPeriod  statisticPeriod
     * status  **参数解释**： 启用状态 **约束限制**： 不涉及 **取值范围**： 0 关闭 1 启用 **默认取值**： 不涉及
@@ -115,7 +115,7 @@ class UpdateReportProfileDto implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * description  **参数解释**： 模板描述 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * name  **参数解释**： 模板名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * sendPeriod  **参数解释**： 发送时间，日报和周报需要设置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * sendPeriod  **参数解释**： 发送时间，日报和周报需要设置 **约束限制**： 不涉及 **取值范围**： 0-23 **默认取值**： 不涉及
     * sendWeekDay  **参数解释**： 发送星期，周报需要设置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * statisticPeriod  statisticPeriod
     * status  **参数解释**： 启用状态 **约束限制**： 不涉及 **取值范围**： 0 关闭 1 启用 **默认取值**： 不涉及
@@ -139,7 +139,7 @@ class UpdateReportProfileDto implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * description  **参数解释**： 模板描述 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * name  **参数解释**： 模板名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * sendPeriod  **参数解释**： 发送时间，日报和周报需要设置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * sendPeriod  **参数解释**： 发送时间，日报和周报需要设置 **约束限制**： 不涉及 **取值范围**： 0-23 **默认取值**： 不涉及
     * sendWeekDay  **参数解释**： 发送星期，周报需要设置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * statisticPeriod  statisticPeriod
     * status  **参数解释**： 启用状态 **约束限制**： 不涉及 **取值范围**： 0 关闭 1 启用 **默认取值**： 不涉及
@@ -381,7 +381,7 @@ class UpdateReportProfileDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets sendPeriod
-    *  **参数解释**： 发送时间，日报和周报需要设置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *  **参数解释**： 发送时间，日报和周报需要设置 **约束限制**： 不涉及 **取值范围**： 0-23 **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -393,7 +393,7 @@ class UpdateReportProfileDto implements ModelInterface, ArrayAccess
     /**
     * Sets sendPeriod
     *
-    * @param int|null $sendPeriod **参数解释**： 发送时间，日报和周报需要设置 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * @param int|null $sendPeriod **参数解释**： 发送时间，日报和周报需要设置 **约束限制**： 不涉及 **取值范围**： 0-23 **默认取值**： 不涉及
     *
     * @return $this
     */

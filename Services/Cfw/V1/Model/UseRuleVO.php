@@ -20,7 +20,7 @@ class UseRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  规则id
+    * id  规则ID
     * name  规则名称
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UseRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  规则id
+    * id  规则ID
     * name  规则名称
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UseRuleVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  规则id
+    * id  规则ID
     * name  规则名称
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UseRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  规则id
+    * id  规则ID
     * name  规则名称
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UseRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  规则id
+    * id  规则ID
     * name  规则名称
     *
     * @var string[]
@@ -185,7 +185,7 @@ class UseRuleVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  规则id
+    *  规则ID
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class UseRuleVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 规则id
+    * @param string|null $id 规则ID
     *
     * @return $this
     */

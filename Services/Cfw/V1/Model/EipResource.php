@@ -28,14 +28,15 @@ class EipResource implements ModelInterface, ArrayAccess
     * deviceId  EIP绑定设备（如ecs，nat）id
     * deviceName  EIP绑定设备（如ecs，nat）名称
     * deviceOwner  EIP绑定设备（如ecs，nat）拥有者
-    * associateInstanceType  关联实例类型，包括：NATGW，ELB，PORT等。
+    * associateInstanceType  **参数解释**： 关联实例类型 **约束限制**： 不涉及 **取值范围**： PORT：IPV4云服务器 NATGW：NAT网关 ELB： 负载均衡器 VPN： 虚拟专用网络 EVPN： 虚拟专用网络 IPV6_PORT：IPV6云服务器 **默认取值**： 不涉及
     * fwInstanceName  防火墙名称
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
     * fwEnterpriseProjectId  Eip绑定的防火墙企业项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     * tags  标签列表
     * domainId  EIP所属用户id，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
     * fwDomainId  防火墙所属用户，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
+    * bypassStatus  bypass状态，0: 未bypass, 1: 已bypass, 2: 失败
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class EipResource implements ModelInterface, ArrayAccess
             'objectId' => 'string',
             'tags' => 'string',
             'domainId' => 'string',
-            'fwDomainId' => 'string'
+            'fwDomainId' => 'string',
+            'bypassStatus' => 'int'
     ];
 
     /**
@@ -68,14 +70,15 @@ class EipResource implements ModelInterface, ArrayAccess
     * deviceId  EIP绑定设备（如ecs，nat）id
     * deviceName  EIP绑定设备（如ecs，nat）名称
     * deviceOwner  EIP绑定设备（如ecs，nat）拥有者
-    * associateInstanceType  关联实例类型，包括：NATGW，ELB，PORT等。
+    * associateInstanceType  **参数解释**： 关联实例类型 **约束限制**： 不涉及 **取值范围**： PORT：IPV4云服务器 NATGW：NAT网关 ELB： 负载均衡器 VPN： 虚拟专用网络 EVPN： 虚拟专用网络 IPV6_PORT：IPV6云服务器 **默认取值**： 不涉及
     * fwInstanceName  防火墙名称
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
     * fwEnterpriseProjectId  Eip绑定的防火墙企业项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     * tags  标签列表
     * domainId  EIP所属用户id，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
     * fwDomainId  防火墙所属用户，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
+    * bypassStatus  bypass状态，0: 未bypass, 1: 已bypass, 2: 失败
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class EipResource implements ModelInterface, ArrayAccess
         'objectId' => null,
         'tags' => null,
         'domainId' => null,
-        'fwDomainId' => null
+        'fwDomainId' => null,
+        'bypassStatus' => 'int32'
     ];
 
     /**
@@ -129,14 +133,15 @@ class EipResource implements ModelInterface, ArrayAccess
     * deviceId  EIP绑定设备（如ecs，nat）id
     * deviceName  EIP绑定设备（如ecs，nat）名称
     * deviceOwner  EIP绑定设备（如ecs，nat）拥有者
-    * associateInstanceType  关联实例类型，包括：NATGW，ELB，PORT等。
+    * associateInstanceType  **参数解释**： 关联实例类型 **约束限制**： 不涉及 **取值范围**： PORT：IPV4云服务器 NATGW：NAT网关 ELB： 负载均衡器 VPN： 虚拟专用网络 EVPN： 虚拟专用网络 IPV6_PORT：IPV6云服务器 **默认取值**： 不涉及
     * fwInstanceName  防火墙名称
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
     * fwEnterpriseProjectId  Eip绑定的防火墙企业项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     * tags  标签列表
     * domainId  EIP所属用户id，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
     * fwDomainId  防火墙所属用户，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
+    * bypassStatus  bypass状态，0: 未bypass, 1: 已bypass, 2: 失败
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class EipResource implements ModelInterface, ArrayAccess
             'objectId' => 'object_id',
             'tags' => 'tags',
             'domainId' => 'domain_id',
-            'fwDomainId' => 'fw_domain_id'
+            'fwDomainId' => 'fw_domain_id',
+            'bypassStatus' => 'bypass_status'
     ];
 
     /**
@@ -169,14 +175,15 @@ class EipResource implements ModelInterface, ArrayAccess
     * deviceId  EIP绑定设备（如ecs，nat）id
     * deviceName  EIP绑定设备（如ecs，nat）名称
     * deviceOwner  EIP绑定设备（如ecs，nat）拥有者
-    * associateInstanceType  关联实例类型，包括：NATGW，ELB，PORT等。
+    * associateInstanceType  **参数解释**： 关联实例类型 **约束限制**： 不涉及 **取值范围**： PORT：IPV4云服务器 NATGW：NAT网关 ELB： 负载均衡器 VPN： 虚拟专用网络 EVPN： 虚拟专用网络 IPV6_PORT：IPV6云服务器 **默认取值**： 不涉及
     * fwInstanceName  防火墙名称
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
     * fwEnterpriseProjectId  Eip绑定的防火墙企业项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     * tags  标签列表
     * domainId  EIP所属用户id，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
     * fwDomainId  防火墙所属用户，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
+    * bypassStatus  bypass状态，0: 未bypass, 1: 已bypass, 2: 失败
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class EipResource implements ModelInterface, ArrayAccess
             'objectId' => 'setObjectId',
             'tags' => 'setTags',
             'domainId' => 'setDomainId',
-            'fwDomainId' => 'setFwDomainId'
+            'fwDomainId' => 'setFwDomainId',
+            'bypassStatus' => 'setBypassStatus'
     ];
 
     /**
@@ -209,14 +217,15 @@ class EipResource implements ModelInterface, ArrayAccess
     * deviceId  EIP绑定设备（如ecs，nat）id
     * deviceName  EIP绑定设备（如ecs，nat）名称
     * deviceOwner  EIP绑定设备（如ecs，nat）拥有者
-    * associateInstanceType  关联实例类型，包括：NATGW，ELB，PORT等。
+    * associateInstanceType  **参数解释**： 关联实例类型 **约束限制**： 不涉及 **取值范围**： PORT：IPV4云服务器 NATGW：NAT网关 ELB： 负载均衡器 VPN： 虚拟专用网络 EVPN： 虚拟专用网络 IPV6_PORT：IPV6云服务器 **默认取值**： 不涉及
     * fwInstanceName  防火墙名称
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
     * fwEnterpriseProjectId  Eip绑定的防火墙企业项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     * tags  标签列表
     * domainId  EIP所属用户id，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
     * fwDomainId  防火墙所属用户，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
+    * bypassStatus  bypass状态，0: 未bypass, 1: 已bypass, 2: 失败
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class EipResource implements ModelInterface, ArrayAccess
             'objectId' => 'getObjectId',
             'tags' => 'getTags',
             'domainId' => 'getDomainId',
-            'fwDomainId' => 'getFwDomainId'
+            'fwDomainId' => 'getFwDomainId',
+            'bypassStatus' => 'getBypassStatus'
     ];
 
     /**
@@ -328,6 +338,7 @@ class EipResource implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['fwDomainId'] = isset($data['fwDomainId']) ? $data['fwDomainId'] : null;
+        $this->container['bypassStatus'] = isset($data['bypassStatus']) ? $data['bypassStatus'] : null;
     }
 
     /**
@@ -554,7 +565,7 @@ class EipResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets associateInstanceType
-    *  关联实例类型，包括：NATGW，ELB，PORT等。
+    *  **参数解释**： 关联实例类型 **约束限制**： 不涉及 **取值范围**： PORT：IPV4云服务器 NATGW：NAT网关 ELB： 负载均衡器 VPN： 虚拟专用网络 EVPN： 虚拟专用网络 IPV6_PORT：IPV6云服务器 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -566,7 +577,7 @@ class EipResource implements ModelInterface, ArrayAccess
     /**
     * Sets associateInstanceType
     *
-    * @param string|null $associateInstanceType 关联实例类型，包括：NATGW，ELB，PORT等。
+    * @param string|null $associateInstanceType **参数解释**： 关联实例类型 **约束限制**： 不涉及 **取值范围**： PORT：IPV4云服务器 NATGW：NAT网关 ELB： 负载均衡器 VPN： 虚拟专用网络 EVPN： 虚拟专用网络 IPV6_PORT：IPV6云服务器 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -650,7 +661,7 @@ class EipResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     *
     * @return string|null
     */
@@ -662,7 +673,7 @@ class EipResource implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string|null $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * @param string|null $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -741,6 +752,30 @@ class EipResource implements ModelInterface, ArrayAccess
     public function setFwDomainId($fwDomainId)
     {
         $this->container['fwDomainId'] = $fwDomainId;
+        return $this;
+    }
+
+    /**
+    * Gets bypassStatus
+    *  bypass状态，0: 未bypass, 1: 已bypass, 2: 失败
+    *
+    * @return int|null
+    */
+    public function getBypassStatus()
+    {
+        return $this->container['bypassStatus'];
+    }
+
+    /**
+    * Sets bypassStatus
+    *
+    * @param int|null $bypassStatus bypass状态，0: 未bypass, 1: 已bypass, 2: 失败
+    *
+    * @return $this
+    */
+    public function setBypassStatus($bypassStatus)
+    {
+        $this->container['bypassStatus'] = $bypassStatus;
         return $this;
     }
 

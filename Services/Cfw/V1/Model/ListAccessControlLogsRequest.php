@@ -20,22 +20,22 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
-    * ruleId  规则id，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * ruleId  规则ID，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
     * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
     * srcPort  源端口
     * dstIp  目的IP
     * dstPort  目的端口
-    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
-    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * protocol  协议类型，包含TCP, UDP，ICMP，ICMPV6等。
+    * app  规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
     * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的start_time
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * logType  日志类型包括：internet，vpc，nat
+    * logType  **参数解释**： 日志类型 **约束限制**： 不涉及 **取值范围**： internet为南北向日志、nat为nat场景日志，vpc为东西向日志，vgw为vgw场景日志 **默认取值**： 不涉及
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     * dstHost  目标主机
     * ruleName  规则名称
@@ -80,22 +80,22 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
-    * ruleId  规则id，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * ruleId  规则ID，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
     * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
     * srcPort  源端口
     * dstIp  目的IP
     * dstPort  目的端口
-    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
-    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * protocol  协议类型，包含TCP, UDP，ICMP，ICMPV6等。
+    * app  规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
     * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的start_time
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * logType  日志类型包括：internet，vpc，nat
+    * logType  **参数解释**： 日志类型 **约束限制**： 不涉及 **取值范围**： internet为南北向日志、nat为nat场景日志，vpc为东西向日志，vgw为vgw场景日志 **默认取值**： 不涉及
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     * dstHost  目标主机
     * ruleName  规则名称
@@ -161,22 +161,22 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
-    * ruleId  规则id，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * ruleId  规则ID，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
     * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
     * srcPort  源端口
     * dstIp  目的IP
     * dstPort  目的端口
-    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
-    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * protocol  协议类型，包含TCP, UDP，ICMP，ICMPV6等。
+    * app  规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
     * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的start_time
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * logType  日志类型包括：internet，vpc，nat
+    * logType  **参数解释**： 日志类型 **约束限制**： 不涉及 **取值范围**： internet为南北向日志、nat为nat场景日志，vpc为东西向日志，vgw为vgw场景日志 **默认取值**： 不涉及
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     * dstHost  目标主机
     * ruleName  规则名称
@@ -221,22 +221,22 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
-    * ruleId  规则id，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * ruleId  规则ID，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
     * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
     * srcPort  源端口
     * dstIp  目的IP
     * dstPort  目的端口
-    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
-    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * protocol  协议类型，包含TCP, UDP，ICMP，ICMPV6等。
+    * app  规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
     * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的start_time
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * logType  日志类型包括：internet，vpc，nat
+    * logType  **参数解释**： 日志类型 **约束限制**： 不涉及 **取值范围**： internet为南北向日志、nat为nat场景日志，vpc为东西向日志，vgw为vgw场景日志 **默认取值**： 不涉及
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     * dstHost  目标主机
     * ruleName  规则名称
@@ -281,22 +281,22 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
-    * ruleId  规则id，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    * projectId  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * fwInstanceId  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * ruleId  规则ID，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
     * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
     * srcPort  源端口
     * dstIp  目的IP
     * dstPort  目的端口
-    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
-    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * protocol  协议类型，包含TCP, UDP，ICMP，ICMPV6等。
+    * app  规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
     * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的start_time
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * logType  日志类型包括：internet，vpc，nat
+    * logType  **参数解释**： 日志类型 **约束限制**： 不涉及 **取值范围**： internet为南北向日志、nat为nat场景日志，vpc为东西向日志，vgw为vgw场景日志 **默认取值**： 不涉及
     * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     * dstHost  目标主机
     * ruleName  规则名称
@@ -495,7 +495,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    *  项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     *
     * @return string
     */
@@ -507,7 +507,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * @param string $projectId 项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     *
     * @return $this
     */
@@ -519,7 +519,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fwInstanceId
-    *  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    *  防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @return string
     */
@@ -531,7 +531,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fwInstanceId
     *
-    * @param string $fwInstanceId 防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * @param string $fwInstanceId 防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @return $this
     */
@@ -543,7 +543,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleId
-    *  规则id，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    *  规则ID，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     *
     * @return string|null
     */
@@ -555,7 +555,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ruleId
     *
-    * @param string|null $ruleId 规则id，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+    * @param string|null $ruleId 规则ID，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -711,7 +711,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
+    *  协议类型，包含TCP, UDP，ICMP，ICMPV6等。
     *
     * @return string|null
     */
@@ -723,7 +723,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string|null $protocol 协议类型，包含TCP, UDP,ICMP,ICMPV6等。
+    * @param string|null $protocol 协议类型，包含TCP, UDP，ICMP，ICMPV6等。
     *
     * @return $this
     */
@@ -735,7 +735,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets app
-    *  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    *  规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     *
     * @return string|null
     */
@@ -747,7 +747,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets app
     *
-    * @param string|null $app 规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * @param string|null $app 规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     *
     * @return $this
     */
@@ -855,7 +855,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets logType
-    *  日志类型包括：internet，vpc，nat
+    *  **参数解释**： 日志类型 **约束限制**： 不涉及 **取值范围**： internet为南北向日志、nat为nat场景日志，vpc为东西向日志，vgw为vgw场景日志 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -867,7 +867,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets logType
     *
-    * @param string|null $logType 日志类型包括：internet，vpc，nat
+    * @param string|null $logType **参数解释**： 日志类型 **约束限制**： 不涉及 **取值范围**： internet为南北向日志、nat为nat场景日志，vpc为东西向日志，vgw为vgw场景日志 **默认取值**： 不涉及
     *
     * @return $this
     */

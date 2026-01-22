@@ -20,12 +20,12 @@ class RocketMQConfigResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  RocketMQ配置名称。
-    * value  RocketMQ配置当前值。
-    * configType  RocketMQ配置的类型。
-    * defaultValue  RocketMQ配置的默认值。
-    * validValues  RocketMQ配置取值的范围。
-    * valueType  RocketMQ配置值的类型。
+    * name  **参数解释**： RocketMQ配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * value  **参数解释**： RocketMQ配置当前值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * configType  **参数解释**： RocketMQ配置的类型。 **约束限制**： 不涉及。 **取值范围**： - dynamic：动态。 - static：静态。    **默认取值**： 不涉及。
+    * defaultValue  **参数解释**： RocketMQ配置的默认值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * validValues  **参数解释**： RocketMQ配置取值的范围。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * valueType  **参数解释**： RocketMQ配置值的类型。 **约束限制**： 不涉及。 **取值范围**： - integer：整数类型。 - boolean：布尔类型。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class RocketMQConfigResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  RocketMQ配置名称。
-    * value  RocketMQ配置当前值。
-    * configType  RocketMQ配置的类型。
-    * defaultValue  RocketMQ配置的默认值。
-    * validValues  RocketMQ配置取值的范围。
-    * valueType  RocketMQ配置值的类型。
+    * name  **参数解释**： RocketMQ配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * value  **参数解释**： RocketMQ配置当前值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * configType  **参数解释**： RocketMQ配置的类型。 **约束限制**： 不涉及。 **取值范围**： - dynamic：动态。 - static：静态。    **默认取值**： 不涉及。
+    * defaultValue  **参数解释**： RocketMQ配置的默认值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * validValues  **参数解释**： RocketMQ配置取值的范围。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * valueType  **参数解释**： RocketMQ配置值的类型。 **约束限制**： 不涉及。 **取值范围**： - integer：整数类型。 - boolean：布尔类型。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class RocketMQConfigResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  RocketMQ配置名称。
-    * value  RocketMQ配置当前值。
-    * configType  RocketMQ配置的类型。
-    * defaultValue  RocketMQ配置的默认值。
-    * validValues  RocketMQ配置取值的范围。
-    * valueType  RocketMQ配置值的类型。
+    * name  **参数解释**： RocketMQ配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * value  **参数解释**： RocketMQ配置当前值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * configType  **参数解释**： RocketMQ配置的类型。 **约束限制**： 不涉及。 **取值范围**： - dynamic：动态。 - static：静态。    **默认取值**： 不涉及。
+    * defaultValue  **参数解释**： RocketMQ配置的默认值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * validValues  **参数解释**： RocketMQ配置取值的范围。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * valueType  **参数解释**： RocketMQ配置值的类型。 **约束限制**： 不涉及。 **取值范围**： - integer：整数类型。 - boolean：布尔类型。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class RocketMQConfigResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  RocketMQ配置名称。
-    * value  RocketMQ配置当前值。
-    * configType  RocketMQ配置的类型。
-    * defaultValue  RocketMQ配置的默认值。
-    * validValues  RocketMQ配置取值的范围。
-    * valueType  RocketMQ配置值的类型。
+    * name  **参数解释**： RocketMQ配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * value  **参数解释**： RocketMQ配置当前值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * configType  **参数解释**： RocketMQ配置的类型。 **约束限制**： 不涉及。 **取值范围**： - dynamic：动态。 - static：静态。    **默认取值**： 不涉及。
+    * defaultValue  **参数解释**： RocketMQ配置的默认值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * validValues  **参数解释**： RocketMQ配置取值的范围。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * valueType  **参数解释**： RocketMQ配置值的类型。 **约束限制**： 不涉及。 **取值范围**： - integer：整数类型。 - boolean：布尔类型。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class RocketMQConfigResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  RocketMQ配置名称。
-    * value  RocketMQ配置当前值。
-    * configType  RocketMQ配置的类型。
-    * defaultValue  RocketMQ配置的默认值。
-    * validValues  RocketMQ配置取值的范围。
-    * valueType  RocketMQ配置值的类型。
+    * name  **参数解释**： RocketMQ配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * value  **参数解释**： RocketMQ配置当前值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * configType  **参数解释**： RocketMQ配置的类型。 **约束限制**： 不涉及。 **取值范围**： - dynamic：动态。 - static：静态。    **默认取值**： 不涉及。
+    * defaultValue  **参数解释**： RocketMQ配置的默认值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * validValues  **参数解释**： RocketMQ配置取值的范围。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * valueType  **参数解释**： RocketMQ配置值的类型。 **约束限制**： 不涉及。 **取值范围**： - integer：整数类型。 - boolean：布尔类型。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class RocketMQConfigResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  RocketMQ配置名称。
+    *  **参数解释**： RocketMQ配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class RocketMQConfigResp implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name RocketMQ配置名称。
+    * @param string|null $name **参数解释**： RocketMQ配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class RocketMQConfigResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  RocketMQ配置当前值。
+    *  **参数解释**： RocketMQ配置当前值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class RocketMQConfigResp implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value RocketMQ配置当前值。
+    * @param string|null $value **参数解释**： RocketMQ配置当前值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class RocketMQConfigResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets configType
-    *  RocketMQ配置的类型。
+    *  **参数解释**： RocketMQ配置的类型。 **约束限制**： 不涉及。 **取值范围**： - dynamic：动态。 - static：静态。    **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class RocketMQConfigResp implements ModelInterface, ArrayAccess
     /**
     * Sets configType
     *
-    * @param string|null $configType RocketMQ配置的类型。
+    * @param string|null $configType **参数解释**： RocketMQ配置的类型。 **约束限制**： 不涉及。 **取值范围**： - dynamic：动态。 - static：静态。    **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class RocketMQConfigResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultValue
-    *  RocketMQ配置的默认值。
+    *  **参数解释**： RocketMQ配置的默认值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class RocketMQConfigResp implements ModelInterface, ArrayAccess
     /**
     * Sets defaultValue
     *
-    * @param string|null $defaultValue RocketMQ配置的默认值。
+    * @param string|null $defaultValue **参数解释**： RocketMQ配置的默认值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class RocketMQConfigResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets validValues
-    *  RocketMQ配置取值的范围。
+    *  **参数解释**： RocketMQ配置取值的范围。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class RocketMQConfigResp implements ModelInterface, ArrayAccess
     /**
     * Sets validValues
     *
-    * @param string|null $validValues RocketMQ配置取值的范围。
+    * @param string|null $validValues **参数解释**： RocketMQ配置取值的范围。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class RocketMQConfigResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets valueType
-    *  RocketMQ配置值的类型。
+    *  **参数解释**： RocketMQ配置值的类型。 **约束限制**： 不涉及。 **取值范围**： - integer：整数类型。 - boolean：布尔类型。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -361,7 +361,7 @@ class RocketMQConfigResp implements ModelInterface, ArrayAccess
     /**
     * Sets valueType
     *
-    * @param string|null $valueType RocketMQ配置值的类型。
+    * @param string|null $valueType **参数解释**： RocketMQ配置值的类型。 **约束限制**： 不涉及。 **取值范围**： - integer：整数类型。 - boolean：布尔类型。 **默认取值**： 不涉及。
     *
     * @return $this
     */

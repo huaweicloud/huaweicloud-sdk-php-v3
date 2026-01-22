@@ -24,8 +24,8 @@ class DiskusageEntity implements ModelInterface, ArrayAccess
     * dataDiskSize  磁盘容量。
     * dataDiskUse  已使用的磁盘容量。
     * dataDiskFree  剩余可用的磁盘容量。
-    * dataDiskUsePercentage  消息标签。
-    * status  消息标签。
+    * dataDiskUsePercentage  **参数解释**： 已使用的磁盘容量占比。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
     * topicList  Topic磁盘容量使用列表。
     *
     * @var string[]
@@ -46,8 +46,8 @@ class DiskusageEntity implements ModelInterface, ArrayAccess
     * dataDiskSize  磁盘容量。
     * dataDiskUse  已使用的磁盘容量。
     * dataDiskFree  剩余可用的磁盘容量。
-    * dataDiskUsePercentage  消息标签。
-    * status  消息标签。
+    * dataDiskUsePercentage  **参数解释**： 已使用的磁盘容量占比。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
     * topicList  Topic磁盘容量使用列表。
     *
     * @var string[]
@@ -89,8 +89,8 @@ class DiskusageEntity implements ModelInterface, ArrayAccess
     * dataDiskSize  磁盘容量。
     * dataDiskUse  已使用的磁盘容量。
     * dataDiskFree  剩余可用的磁盘容量。
-    * dataDiskUsePercentage  消息标签。
-    * status  消息标签。
+    * dataDiskUsePercentage  **参数解释**： 已使用的磁盘容量占比。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
     * topicList  Topic磁盘容量使用列表。
     *
     * @var string[]
@@ -111,8 +111,8 @@ class DiskusageEntity implements ModelInterface, ArrayAccess
     * dataDiskSize  磁盘容量。
     * dataDiskUse  已使用的磁盘容量。
     * dataDiskFree  剩余可用的磁盘容量。
-    * dataDiskUsePercentage  消息标签。
-    * status  消息标签。
+    * dataDiskUsePercentage  **参数解释**： 已使用的磁盘容量占比。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
     * topicList  Topic磁盘容量使用列表。
     *
     * @var string[]
@@ -133,8 +133,8 @@ class DiskusageEntity implements ModelInterface, ArrayAccess
     * dataDiskSize  磁盘容量。
     * dataDiskUse  已使用的磁盘容量。
     * dataDiskFree  剩余可用的磁盘容量。
-    * dataDiskUsePercentage  消息标签。
-    * status  消息标签。
+    * dataDiskUsePercentage  **参数解释**： 已使用的磁盘容量占比。 **取值范围**： 不涉及。
+    * status  **参数解释**： 状态。 **取值范围**： 不涉及。
     * topicList  Topic磁盘容量使用列表。
     *
     * @var string[]
@@ -336,7 +336,7 @@ class DiskusageEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataDiskUsePercentage
-    *  消息标签。
+    *  **参数解释**： 已使用的磁盘容量占比。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class DiskusageEntity implements ModelInterface, ArrayAccess
     /**
     * Sets dataDiskUsePercentage
     *
-    * @param string|null $dataDiskUsePercentage 消息标签。
+    * @param string|null $dataDiskUsePercentage **参数解释**： 已使用的磁盘容量占比。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class DiskusageEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  消息标签。
+    *  **参数解释**： 状态。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class DiskusageEntity implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 消息标签。
+    * @param string|null $status **参数解释**： 状态。 **取值范围**： 不涉及。
     *
     * @return $this
     */

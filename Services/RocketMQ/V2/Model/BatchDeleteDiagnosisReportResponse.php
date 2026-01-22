@@ -21,7 +21,7 @@ class BatchDeleteDiagnosisReportResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * reportIdList  **参数解释**： 诊断报告ID列表。 **取值范围**： 不涉及。
+    * reportIdList  **参数解释**： 诊断报告ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class BatchDeleteDiagnosisReportResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * reportIdList  **参数解释**： 诊断报告ID列表。 **取值范围**： 不涉及。
+    * reportIdList  **参数解释**： 诊断报告ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class BatchDeleteDiagnosisReportResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * reportIdList  **参数解释**： 诊断报告ID列表。 **取值范围**： 不涉及。
+    * reportIdList  **参数解释**： 诊断报告ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class BatchDeleteDiagnosisReportResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * reportIdList  **参数解释**： 诊断报告ID列表。 **取值范围**： 不涉及。
+    * reportIdList  **参数解释**： 诊断报告ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class BatchDeleteDiagnosisReportResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * reportIdList  **参数解释**： 诊断报告ID列表。 **取值范围**： 不涉及。
+    * reportIdList  **参数解释**： 诊断报告ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class BatchDeleteDiagnosisReportResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets reportIdList
-    *  **参数解释**： 诊断报告ID列表。 **取值范围**： 不涉及。
+    *  **参数解释**： 诊断报告ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -187,7 +187,7 @@ class BatchDeleteDiagnosisReportResponse implements ModelInterface, ArrayAccess
     /**
     * Sets reportIdList
     *
-    * @param string[]|null $reportIdList **参数解释**： 诊断报告ID列表。 **取值范围**： 不涉及。
+    * @param string[]|null $reportIdList **参数解释**： 诊断报告ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

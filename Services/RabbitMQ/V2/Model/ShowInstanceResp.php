@@ -23,8 +23,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * accessUser  **参数解释**： 认证用户名。 **取值范围**： 不涉及。
     * brokerNum  **参数解释**： 代理个数。 **取值范围**： - 1 - 3 - 5 - 7
     * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
-    * engine  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
-    * engineVersion  **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
+    * engine  **参数解释**： 消息引擎类型。 **取值范围**： rabbitmq：RabbitMQ引擎。
+    * engineVersion  **参数解释**： 消息引擎版本。 **取值范围**： - 3.8.35 [- 3.12.13](tag:srg) [- AMQP-0-9-1](tag:hws,hws_hk,hws_eu)
     * specification  **参数解释**： 实例规格。 **取值范围**： - 单机实例：返回vm规格。 - 集群实例：返回vm规格和节点数。
     * storageSpace  **参数解释**： 消息存储空间，单位：GB。 **取值范围**： 不涉及。
     * usedStorageSpace  **参数解释**： 已使用的消息存储空间，单位：GB。 **取值范围**： 不涉及。
@@ -34,10 +34,10 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * publicConnectAddress  **参数解释**： 实例公网连接IP地址。 **取值范围**： 不涉及。
     * publicConnectDomainName  **参数解释**： 实例公网连接域名。 **取值范围**： 不涉及。
     * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
-    * status  **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
+    * status  **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,ax)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
     * description  **参数解释**： 实例描述。 **取值范围**： 不涉及。
     * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
-    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： -[ dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,hk_tm,sbc,ax,hk_sbc)
     * chargingMode  **参数解释**： 付费模式。 **取值范围**： - 1：按需计费。 - 0：包年/包月计费。
     * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
     * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
@@ -57,7 +57,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * sslEnable  **参数解释**： 是否开启安全认证。 **取值范围**： - true：开启 - false：未开启
     * enterpriseProjectId  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
     * isLogicalVolume  **参数解释**： 实例扩容时用于区分老实例与新实例。 **取值范围**： - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：特别老的实例不支持磁盘扩容。
-    * extendTimes  **参数解释**： 实例扩容磁盘次数，如果超过20次则无法扩容磁盘。 **取值范围**： 不涉及。
+    * extendTimes  **参数解释**： 实例扩容磁盘次数。 **取值范围**： 不涉及。
     * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     * productId  **参数解释**： 产品标识。 **取值范围**： 不涉及。
     * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
@@ -71,6 +71,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启。 - false：不开启。
     * ipv6ConnectAddresses  **参数解释**： IPv6的连接地址。
     * tags  **参数解释**： 标签列表。
+    * serviceType  **参数解释**： 服务类型。 **取值范围**： advanced：服务类型。
+    * storageType  **参数解释**： 存储类型。 **取值范围**： hec：存储类型。
     *
     * @var string[]
     */
@@ -125,7 +127,9 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
             'storageSpecCode' => 'string',
             'ipv6Enable' => 'bool',
             'ipv6ConnectAddresses' => 'string[]',
-            'tags' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\TagEntity[]'
+            'tags' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\TagEntity[]',
+            'serviceType' => 'string',
+            'storageType' => 'string'
     ];
 
     /**
@@ -133,8 +137,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * accessUser  **参数解释**： 认证用户名。 **取值范围**： 不涉及。
     * brokerNum  **参数解释**： 代理个数。 **取值范围**： - 1 - 3 - 5 - 7
     * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
-    * engine  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
-    * engineVersion  **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
+    * engine  **参数解释**： 消息引擎类型。 **取值范围**： rabbitmq：RabbitMQ引擎。
+    * engineVersion  **参数解释**： 消息引擎版本。 **取值范围**： - 3.8.35 [- 3.12.13](tag:srg) [- AMQP-0-9-1](tag:hws,hws_hk,hws_eu)
     * specification  **参数解释**： 实例规格。 **取值范围**： - 单机实例：返回vm规格。 - 集群实例：返回vm规格和节点数。
     * storageSpace  **参数解释**： 消息存储空间，单位：GB。 **取值范围**： 不涉及。
     * usedStorageSpace  **参数解释**： 已使用的消息存储空间，单位：GB。 **取值范围**： 不涉及。
@@ -144,10 +148,10 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * publicConnectAddress  **参数解释**： 实例公网连接IP地址。 **取值范围**： 不涉及。
     * publicConnectDomainName  **参数解释**： 实例公网连接域名。 **取值范围**： 不涉及。
     * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
-    * status  **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
+    * status  **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,ax)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
     * description  **参数解释**： 实例描述。 **取值范围**： 不涉及。
     * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
-    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： -[ dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,hk_tm,sbc,ax,hk_sbc)
     * chargingMode  **参数解释**： 付费模式。 **取值范围**： - 1：按需计费。 - 0：包年/包月计费。
     * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
     * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
@@ -167,7 +171,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * sslEnable  **参数解释**： 是否开启安全认证。 **取值范围**： - true：开启 - false：未开启
     * enterpriseProjectId  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
     * isLogicalVolume  **参数解释**： 实例扩容时用于区分老实例与新实例。 **取值范围**： - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：特别老的实例不支持磁盘扩容。
-    * extendTimes  **参数解释**： 实例扩容磁盘次数，如果超过20次则无法扩容磁盘。 **取值范围**： 不涉及。
+    * extendTimes  **参数解释**： 实例扩容磁盘次数。 **取值范围**： 不涉及。
     * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     * productId  **参数解释**： 产品标识。 **取值范围**： 不涉及。
     * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
@@ -181,6 +185,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启。 - false：不开启。
     * ipv6ConnectAddresses  **参数解释**： IPv6的连接地址。
     * tags  **参数解释**： 标签列表。
+    * serviceType  **参数解释**： 服务类型。 **取值范围**： advanced：服务类型。
+    * storageType  **参数解释**： 存储类型。 **取值范围**： hec：存储类型。
     *
     * @var string[]
     */
@@ -235,7 +241,9 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
         'storageSpecCode' => null,
         'ipv6Enable' => null,
         'ipv6ConnectAddresses' => null,
-        'tags' => null
+        'tags' => null,
+        'serviceType' => null,
+        'storageType' => null
     ];
 
     /**
@@ -264,8 +272,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * accessUser  **参数解释**： 认证用户名。 **取值范围**： 不涉及。
     * brokerNum  **参数解释**： 代理个数。 **取值范围**： - 1 - 3 - 5 - 7
     * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
-    * engine  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
-    * engineVersion  **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
+    * engine  **参数解释**： 消息引擎类型。 **取值范围**： rabbitmq：RabbitMQ引擎。
+    * engineVersion  **参数解释**： 消息引擎版本。 **取值范围**： - 3.8.35 [- 3.12.13](tag:srg) [- AMQP-0-9-1](tag:hws,hws_hk,hws_eu)
     * specification  **参数解释**： 实例规格。 **取值范围**： - 单机实例：返回vm规格。 - 集群实例：返回vm规格和节点数。
     * storageSpace  **参数解释**： 消息存储空间，单位：GB。 **取值范围**： 不涉及。
     * usedStorageSpace  **参数解释**： 已使用的消息存储空间，单位：GB。 **取值范围**： 不涉及。
@@ -275,10 +283,10 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * publicConnectAddress  **参数解释**： 实例公网连接IP地址。 **取值范围**： 不涉及。
     * publicConnectDomainName  **参数解释**： 实例公网连接域名。 **取值范围**： 不涉及。
     * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
-    * status  **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
+    * status  **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,ax)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
     * description  **参数解释**： 实例描述。 **取值范围**： 不涉及。
     * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
-    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： -[ dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,hk_tm,sbc,ax,hk_sbc)
     * chargingMode  **参数解释**： 付费模式。 **取值范围**： - 1：按需计费。 - 0：包年/包月计费。
     * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
     * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
@@ -298,7 +306,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * sslEnable  **参数解释**： 是否开启安全认证。 **取值范围**： - true：开启 - false：未开启
     * enterpriseProjectId  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
     * isLogicalVolume  **参数解释**： 实例扩容时用于区分老实例与新实例。 **取值范围**： - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：特别老的实例不支持磁盘扩容。
-    * extendTimes  **参数解释**： 实例扩容磁盘次数，如果超过20次则无法扩容磁盘。 **取值范围**： 不涉及。
+    * extendTimes  **参数解释**： 实例扩容磁盘次数。 **取值范围**： 不涉及。
     * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     * productId  **参数解释**： 产品标识。 **取值范围**： 不涉及。
     * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
@@ -312,6 +320,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启。 - false：不开启。
     * ipv6ConnectAddresses  **参数解释**： IPv6的连接地址。
     * tags  **参数解释**： 标签列表。
+    * serviceType  **参数解释**： 服务类型。 **取值范围**： advanced：服务类型。
+    * storageType  **参数解释**： 存储类型。 **取值范围**： hec：存储类型。
     *
     * @var string[]
     */
@@ -366,7 +376,9 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
             'storageSpecCode' => 'storage_spec_code',
             'ipv6Enable' => 'ipv6_enable',
             'ipv6ConnectAddresses' => 'ipv6_connect_addresses',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'serviceType' => 'service_type',
+            'storageType' => 'storage_type'
     ];
 
     /**
@@ -374,8 +386,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * accessUser  **参数解释**： 认证用户名。 **取值范围**： 不涉及。
     * brokerNum  **参数解释**： 代理个数。 **取值范围**： - 1 - 3 - 5 - 7
     * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
-    * engine  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
-    * engineVersion  **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
+    * engine  **参数解释**： 消息引擎类型。 **取值范围**： rabbitmq：RabbitMQ引擎。
+    * engineVersion  **参数解释**： 消息引擎版本。 **取值范围**： - 3.8.35 [- 3.12.13](tag:srg) [- AMQP-0-9-1](tag:hws,hws_hk,hws_eu)
     * specification  **参数解释**： 实例规格。 **取值范围**： - 单机实例：返回vm规格。 - 集群实例：返回vm规格和节点数。
     * storageSpace  **参数解释**： 消息存储空间，单位：GB。 **取值范围**： 不涉及。
     * usedStorageSpace  **参数解释**： 已使用的消息存储空间，单位：GB。 **取值范围**： 不涉及。
@@ -385,10 +397,10 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * publicConnectAddress  **参数解释**： 实例公网连接IP地址。 **取值范围**： 不涉及。
     * publicConnectDomainName  **参数解释**： 实例公网连接域名。 **取值范围**： 不涉及。
     * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
-    * status  **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
+    * status  **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,ax)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
     * description  **参数解释**： 实例描述。 **取值范围**： 不涉及。
     * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
-    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： -[ dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,hk_tm,sbc,ax,hk_sbc)
     * chargingMode  **参数解释**： 付费模式。 **取值范围**： - 1：按需计费。 - 0：包年/包月计费。
     * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
     * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
@@ -408,7 +420,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * sslEnable  **参数解释**： 是否开启安全认证。 **取值范围**： - true：开启 - false：未开启
     * enterpriseProjectId  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
     * isLogicalVolume  **参数解释**： 实例扩容时用于区分老实例与新实例。 **取值范围**： - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：特别老的实例不支持磁盘扩容。
-    * extendTimes  **参数解释**： 实例扩容磁盘次数，如果超过20次则无法扩容磁盘。 **取值范围**： 不涉及。
+    * extendTimes  **参数解释**： 实例扩容磁盘次数。 **取值范围**： 不涉及。
     * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     * productId  **参数解释**： 产品标识。 **取值范围**： 不涉及。
     * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
@@ -422,6 +434,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启。 - false：不开启。
     * ipv6ConnectAddresses  **参数解释**： IPv6的连接地址。
     * tags  **参数解释**： 标签列表。
+    * serviceType  **参数解释**： 服务类型。 **取值范围**： advanced：服务类型。
+    * storageType  **参数解释**： 存储类型。 **取值范围**： hec：存储类型。
     *
     * @var string[]
     */
@@ -476,7 +490,9 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
             'storageSpecCode' => 'setStorageSpecCode',
             'ipv6Enable' => 'setIpv6Enable',
             'ipv6ConnectAddresses' => 'setIpv6ConnectAddresses',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'serviceType' => 'setServiceType',
+            'storageType' => 'setStorageType'
     ];
 
     /**
@@ -484,8 +500,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * accessUser  **参数解释**： 认证用户名。 **取值范围**： 不涉及。
     * brokerNum  **参数解释**： 代理个数。 **取值范围**： - 1 - 3 - 5 - 7
     * name  **参数解释**： 实例名称。 **取值范围**： 不涉及。
-    * engine  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
-    * engineVersion  **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
+    * engine  **参数解释**： 消息引擎类型。 **取值范围**： rabbitmq：RabbitMQ引擎。
+    * engineVersion  **参数解释**： 消息引擎版本。 **取值范围**： - 3.8.35 [- 3.12.13](tag:srg) [- AMQP-0-9-1](tag:hws,hws_hk,hws_eu)
     * specification  **参数解释**： 实例规格。 **取值范围**： - 单机实例：返回vm规格。 - 集群实例：返回vm规格和节点数。
     * storageSpace  **参数解释**： 消息存储空间，单位：GB。 **取值范围**： 不涉及。
     * usedStorageSpace  **参数解释**： 已使用的消息存储空间，单位：GB。 **取值范围**： 不涉及。
@@ -495,10 +511,10 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * publicConnectAddress  **参数解释**： 实例公网连接IP地址。 **取值范围**： 不涉及。
     * publicConnectDomainName  **参数解释**： 实例公网连接域名。 **取值范围**： 不涉及。
     * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
-    * status  **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
+    * status  **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,ax)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
     * description  **参数解释**： 实例描述。 **取值范围**： 不涉及。
     * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
-    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： -[ dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,hk_tm,sbc,ax,hk_sbc)
     * chargingMode  **参数解释**： 付费模式。 **取值范围**： - 1：按需计费。 - 0：包年/包月计费。
     * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
     * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
@@ -518,7 +534,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * sslEnable  **参数解释**： 是否开启安全认证。 **取值范围**： - true：开启 - false：未开启
     * enterpriseProjectId  **参数解释**： 企业项目ID。 **取值范围**： 不涉及。
     * isLogicalVolume  **参数解释**： 实例扩容时用于区分老实例与新实例。 **取值范围**： - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：特别老的实例不支持磁盘扩容。
-    * extendTimes  **参数解释**： 实例扩容磁盘次数，如果超过20次则无法扩容磁盘。 **取值范围**： 不涉及。
+    * extendTimes  **参数解释**： 实例扩容磁盘次数。 **取值范围**： 不涉及。
     * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     * productId  **参数解释**： 产品标识。 **取值范围**： 不涉及。
     * securityGroupId  **参数解释**： 安全组ID。 **取值范围**： 不涉及。
@@ -532,6 +548,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启。 - false：不开启。
     * ipv6ConnectAddresses  **参数解释**： IPv6的连接地址。
     * tags  **参数解释**： 标签列表。
+    * serviceType  **参数解释**： 服务类型。 **取值范围**： advanced：服务类型。
+    * storageType  **参数解释**： 存储类型。 **取值范围**： hec：存储类型。
     *
     * @var string[]
     */
@@ -586,7 +604,9 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
             'storageSpecCode' => 'getStorageSpecCode',
             'ipv6Enable' => 'getIpv6Enable',
             'ipv6ConnectAddresses' => 'getIpv6ConnectAddresses',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'serviceType' => 'getServiceType',
+            'storageType' => 'getStorageType'
     ];
 
     /**
@@ -732,6 +752,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
         $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
         $this->container['ipv6ConnectAddresses'] = isset($data['ipv6ConnectAddresses']) ? $data['ipv6ConnectAddresses'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
+        $this->container['storageType'] = isset($data['storageType']) ? $data['storageType'] : null;
     }
 
     /**
@@ -846,7 +868,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  **参数解释**： 消息引擎。 **取值范围**： 不涉及。
+    *  **参数解释**： 消息引擎类型。 **取值范围**： rabbitmq：RabbitMQ引擎。
     *
     * @return string|null
     */
@@ -858,7 +880,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string|null $engine **参数解释**： 消息引擎。 **取值范围**： 不涉及。
+    * @param string|null $engine **参数解释**： 消息引擎类型。 **取值范围**： rabbitmq：RabbitMQ引擎。
     *
     * @return $this
     */
@@ -870,7 +892,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets engineVersion
-    *  **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
+    *  **参数解释**： 消息引擎版本。 **取值范围**： - 3.8.35 [- 3.12.13](tag:srg) [- AMQP-0-9-1](tag:hws,hws_hk,hws_eu)
     *
     * @return string|null
     */
@@ -882,7 +904,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets engineVersion
     *
-    * @param string|null $engineVersion **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
+    * @param string|null $engineVersion **参数解释**： 消息引擎版本。 **取值范围**： - 3.8.35 [- 3.12.13](tag:srg) [- AMQP-0-9-1](tag:hws,hws_hk,hws_eu)
     *
     * @return $this
     */
@@ -1110,7 +1132,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
+    *  **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,ax)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
     *
     * @return string|null
     */
@@ -1122,7 +1144,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
+    * @param string|null $status **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,ax)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
     *
     * @return $this
     */
@@ -1182,7 +1204,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSpecCode
-    *  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
+    *  **参数解释**： 资源规格标识。 **取值范围**： -[ dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,hk_tm,sbc,ax,hk_sbc)
     *
     * @return string|null
     */
@@ -1194,7 +1216,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSpecCode
     *
-    * @param string|null $resourceSpecCode **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
+    * @param string|null $resourceSpecCode **参数解释**： 资源规格标识。 **取值范围**： -[ dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,hk_tm,sbc,ax,hk_sbc)
     *
     * @return $this
     */
@@ -1662,7 +1684,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendTimes
-    *  **参数解释**： 实例扩容磁盘次数，如果超过20次则无法扩容磁盘。 **取值范围**： 不涉及。
+    *  **参数解释**： 实例扩容磁盘次数。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -1674,7 +1696,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets extendTimes
     *
-    * @param int|null $extendTimes **参数解释**： 实例扩容磁盘次数，如果超过20次则无法扩容磁盘。 **取值范围**： 不涉及。
+    * @param int|null $extendTimes **参数解释**： 实例扩容磁盘次数。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1993,6 +2015,54 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets serviceType
+    *  **参数解释**： 服务类型。 **取值范围**： advanced：服务类型。
+    *
+    * @return string|null
+    */
+    public function getServiceType()
+    {
+        return $this->container['serviceType'];
+    }
+
+    /**
+    * Sets serviceType
+    *
+    * @param string|null $serviceType **参数解释**： 服务类型。 **取值范围**： advanced：服务类型。
+    *
+    * @return $this
+    */
+    public function setServiceType($serviceType)
+    {
+        $this->container['serviceType'] = $serviceType;
+        return $this;
+    }
+
+    /**
+    * Gets storageType
+    *  **参数解释**： 存储类型。 **取值范围**： hec：存储类型。
+    *
+    * @return string|null
+    */
+    public function getStorageType()
+    {
+        return $this->container['storageType'];
+    }
+
+    /**
+    * Sets storageType
+    *
+    * @param string|null $storageType **参数解释**： 存储类型。 **取值范围**： hec：存储类型。
+    *
+    * @return $this
+    */
+    public function setStorageType($storageType)
+    {
+        $this->container['storageType'] = $storageType;
         return $this;
     }
 

@@ -43,7 +43,7 @@ class ListSupportMasksRequest implements ModelInterface, ArrayAccess
             'sortDir' => 'string[]',
             'id' => 'string[]',
             'ipVersion' => 'int[]',
-            'mask' => 'int[]'
+            'mask' => 'int'
     ];
 
     /**
@@ -338,6 +338,12 @@ class ListSupportMasksRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['marker']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['marker'])) {
                 $invalidProperties[] = "invalid value for 'marker', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
+            if (!is_null($this->container['mask']) && ($this->container['mask'] > 128)) {
+                $invalidProperties[] = "invalid value for 'mask', must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['mask']) && ($this->container['mask'] < 1)) {
+                $invalidProperties[] = "invalid value for 'mask', must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -572,7 +578,7 @@ class ListSupportMasksRequest implements ModelInterface, ArrayAccess
     * Gets mask
     *  mask
     *
-    * @return int[]|null
+    * @return int|null
     */
     public function getMask()
     {
@@ -582,7 +588,7 @@ class ListSupportMasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets mask
     *
-    * @param int[]|null $mask mask
+    * @param int|null $mask mask
     *
     * @return $this
     */

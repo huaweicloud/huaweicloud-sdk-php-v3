@@ -20,8 +20,8 @@ class UpdateDnsServersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dnsServer  DNS服务器列表
-    * healthCheckDomainName  健康检查域名，可通过[查询dns服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.health_check_domain_name（.表示各对象之间层级的区分）获得。
+    * dnsServer  **参数解释**： DNS服务器列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * healthCheckDomainName  **参数解释**： 健康检查域名，可通过[查询DNS服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.health_check_domain_name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class UpdateDnsServersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dnsServer  DNS服务器列表
-    * healthCheckDomainName  健康检查域名，可通过[查询dns服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.health_check_domain_name（.表示各对象之间层级的区分）获得。
+    * dnsServer  **参数解释**： DNS服务器列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * healthCheckDomainName  **参数解释**： 健康检查域名，可通过[查询DNS服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.health_check_domain_name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class UpdateDnsServersRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dnsServer  DNS服务器列表
-    * healthCheckDomainName  健康检查域名，可通过[查询dns服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.health_check_domain_name（.表示各对象之间层级的区分）获得。
+    * dnsServer  **参数解释**： DNS服务器列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * healthCheckDomainName  **参数解释**： 健康检查域名，可通过[查询DNS服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.health_check_domain_name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class UpdateDnsServersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dnsServer  DNS服务器列表
-    * healthCheckDomainName  健康检查域名，可通过[查询dns服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.health_check_domain_name（.表示各对象之间层级的区分）获得。
+    * dnsServer  **参数解释**： DNS服务器列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * healthCheckDomainName  **参数解释**： 健康检查域名，可通过[查询DNS服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.health_check_domain_name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class UpdateDnsServersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dnsServer  DNS服务器列表
-    * healthCheckDomainName  健康检查域名，可通过[查询dns服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.health_check_domain_name（.表示各对象之间层级的区分）获得。
+    * dnsServer  **参数解释**： DNS服务器列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * healthCheckDomainName  **参数解释**： 健康检查域名，可通过[查询DNS服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.health_check_domain_name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class UpdateDnsServersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets dnsServer
-    *  DNS服务器列表
+    *  **参数解释**： DNS服务器列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\UpdateDnsServersRequestBodyDnsServer[]
     */
@@ -200,7 +200,7 @@ class UpdateDnsServersRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets dnsServer
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\UpdateDnsServersRequestBodyDnsServer[] $dnsServer DNS服务器列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\UpdateDnsServersRequestBodyDnsServer[] $dnsServer **参数解释**： DNS服务器列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class UpdateDnsServersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets healthCheckDomainName
-    *  健康检查域名，可通过[查询dns服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.health_check_domain_name（.表示各对象之间层级的区分）获得。
+    *  **参数解释**： 健康检查域名，可通过[查询DNS服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.health_check_domain_name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -224,7 +224,7 @@ class UpdateDnsServersRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets healthCheckDomainName
     *
-    * @param string|null $healthCheckDomainName 健康检查域名，可通过[查询dns服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.health_check_domain_name（.表示各对象之间层级的区分）获得。
+    * @param string|null $healthCheckDomainName **参数解释**： 健康检查域名，可通过[查询DNS服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.health_check_domain_name（.表示各对象之间层级的区分）获得。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

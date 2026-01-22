@@ -20,8 +20,8 @@ class AdvancedIpsRuleListVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * advancedIpsRules  advancedIpsRules
-    * total  total
+    * advancedIpsRules  频率ips规则列表
+    * total  频率ips规则总数
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class AdvancedIpsRuleListVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * advancedIpsRules  advancedIpsRules
-    * total  total
+    * advancedIpsRules  频率ips规则列表
+    * total  频率ips规则总数
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class AdvancedIpsRuleListVo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * advancedIpsRules  advancedIpsRules
-    * total  total
+    * advancedIpsRules  频率ips规则列表
+    * total  频率ips规则总数
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class AdvancedIpsRuleListVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * advancedIpsRules  advancedIpsRules
-    * total  total
+    * advancedIpsRules  频率ips规则列表
+    * total  频率ips规则总数
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class AdvancedIpsRuleListVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * advancedIpsRules  advancedIpsRules
-    * total  total
+    * advancedIpsRules  频率ips规则列表
+    * total  频率ips规则总数
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class AdvancedIpsRuleListVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets advancedIpsRules
-    *  advancedIpsRules
+    *  频率ips规则列表
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\AdvancedIpsRuleVo[]|null
     */
@@ -197,7 +197,7 @@ class AdvancedIpsRuleListVo implements ModelInterface, ArrayAccess
     /**
     * Sets advancedIpsRules
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\AdvancedIpsRuleVo[]|null $advancedIpsRules advancedIpsRules
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\AdvancedIpsRuleVo[]|null $advancedIpsRules 频率ips规则列表
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class AdvancedIpsRuleListVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  total
+    *  频率ips规则总数
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class AdvancedIpsRuleListVo implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total total
+    * @param int|null $total 频率ips规则总数
     *
     * @return $this
     */

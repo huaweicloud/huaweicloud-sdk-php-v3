@@ -21,10 +21,10 @@ class AdvancedIpsRuleVo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * action  动作：0表示仅记录日志、1表示拦截session、2表示拦截ip
-    * ipsRuleId  高级ips规则id
-    * ipsRuleType  ips规则类型：0表示敏感目录扫描、1表示反弹xshell
-    * param  包含特殊参数的JSON字符串
-    * status  开关状态：0表示关闭、1表示开启
+    * ipsRuleId  频率ips规则id
+    * ipsRuleType  ips规则类型：0表示敏感目录扫描、1表示反弹shell
+    * param  频率ips定义JSON字符串
+    * status  频率ips规则状态，0表示关闭，1表示开启
     *
     * @var string[]
     */
@@ -39,10 +39,10 @@ class AdvancedIpsRuleVo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * action  动作：0表示仅记录日志、1表示拦截session、2表示拦截ip
-    * ipsRuleId  高级ips规则id
-    * ipsRuleType  ips规则类型：0表示敏感目录扫描、1表示反弹xshell
-    * param  包含特殊参数的JSON字符串
-    * status  开关状态：0表示关闭、1表示开启
+    * ipsRuleId  频率ips规则id
+    * ipsRuleType  ips规则类型：0表示敏感目录扫描、1表示反弹shell
+    * param  频率ips定义JSON字符串
+    * status  频率ips规则状态，0表示关闭，1表示开启
     *
     * @var string[]
     */
@@ -78,10 +78,10 @@ class AdvancedIpsRuleVo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * action  动作：0表示仅记录日志、1表示拦截session、2表示拦截ip
-    * ipsRuleId  高级ips规则id
-    * ipsRuleType  ips规则类型：0表示敏感目录扫描、1表示反弹xshell
-    * param  包含特殊参数的JSON字符串
-    * status  开关状态：0表示关闭、1表示开启
+    * ipsRuleId  频率ips规则id
+    * ipsRuleType  ips规则类型：0表示敏感目录扫描、1表示反弹shell
+    * param  频率ips定义JSON字符串
+    * status  频率ips规则状态，0表示关闭，1表示开启
     *
     * @var string[]
     */
@@ -96,10 +96,10 @@ class AdvancedIpsRuleVo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * action  动作：0表示仅记录日志、1表示拦截session、2表示拦截ip
-    * ipsRuleId  高级ips规则id
-    * ipsRuleType  ips规则类型：0表示敏感目录扫描、1表示反弹xshell
-    * param  包含特殊参数的JSON字符串
-    * status  开关状态：0表示关闭、1表示开启
+    * ipsRuleId  频率ips规则id
+    * ipsRuleType  ips规则类型：0表示敏感目录扫描、1表示反弹shell
+    * param  频率ips定义JSON字符串
+    * status  频率ips规则状态，0表示关闭，1表示开启
     *
     * @var string[]
     */
@@ -114,10 +114,10 @@ class AdvancedIpsRuleVo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * action  动作：0表示仅记录日志、1表示拦截session、2表示拦截ip
-    * ipsRuleId  高级ips规则id
-    * ipsRuleType  ips规则类型：0表示敏感目录扫描、1表示反弹xshell
-    * param  包含特殊参数的JSON字符串
-    * status  开关状态：0表示关闭、1表示开启
+    * ipsRuleId  频率ips规则id
+    * ipsRuleType  ips规则类型：0表示敏感目录扫描、1表示反弹shell
+    * param  频率ips定义JSON字符串
+    * status  频率ips规则状态，0表示关闭，1表示开启
     *
     * @var string[]
     */
@@ -242,7 +242,7 @@ class AdvancedIpsRuleVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipsRuleId
-    *  高级ips规则id
+    *  频率ips规则id
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class AdvancedIpsRuleVo implements ModelInterface, ArrayAccess
     /**
     * Sets ipsRuleId
     *
-    * @param string|null $ipsRuleId 高级ips规则id
+    * @param string|null $ipsRuleId 频率ips规则id
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class AdvancedIpsRuleVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipsRuleType
-    *  ips规则类型：0表示敏感目录扫描、1表示反弹xshell
+    *  ips规则类型：0表示敏感目录扫描、1表示反弹shell
     *
     * @return int|null
     */
@@ -278,7 +278,7 @@ class AdvancedIpsRuleVo implements ModelInterface, ArrayAccess
     /**
     * Sets ipsRuleType
     *
-    * @param int|null $ipsRuleType ips规则类型：0表示敏感目录扫描、1表示反弹xshell
+    * @param int|null $ipsRuleType ips规则类型：0表示敏感目录扫描、1表示反弹shell
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class AdvancedIpsRuleVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets param
-    *  包含特殊参数的JSON字符串
+    *  频率ips定义JSON字符串
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class AdvancedIpsRuleVo implements ModelInterface, ArrayAccess
     /**
     * Sets param
     *
-    * @param string|null $param 包含特殊参数的JSON字符串
+    * @param string|null $param 频率ips定义JSON字符串
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class AdvancedIpsRuleVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  开关状态：0表示关闭、1表示开启
+    *  频率ips规则状态，0表示关闭，1表示开启
     *
     * @return int|null
     */
@@ -326,7 +326,7 @@ class AdvancedIpsRuleVo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 开关状态：0表示关闭、1表示开启
+    * @param int|null $status 频率ips规则状态，0表示关闭，1表示开启
     *
     * @return $this
     */

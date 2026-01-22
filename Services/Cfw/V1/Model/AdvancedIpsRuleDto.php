@@ -25,7 +25,7 @@ class AdvancedIpsRuleDto implements ModelInterface, ArrayAccess
     * ipsRuleType  ips规则类型：0表示敏感目录扫描、1表示反弹xshell
     * objectId  防护对象id
     * param  包含特殊参数的JSON字符串
-    * status  开关状态：0表示关闭、1表示开启
+    * status  频率ips规则状态，0表示关闭，1表示打开
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class AdvancedIpsRuleDto implements ModelInterface, ArrayAccess
     * ipsRuleType  ips规则类型：0表示敏感目录扫描、1表示反弹xshell
     * objectId  防护对象id
     * param  包含特殊参数的JSON字符串
-    * status  开关状态：0表示关闭、1表示开启
+    * status  频率ips规则状态，0表示关闭，1表示打开
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class AdvancedIpsRuleDto implements ModelInterface, ArrayAccess
     * ipsRuleType  ips规则类型：0表示敏感目录扫描、1表示反弹xshell
     * objectId  防护对象id
     * param  包含特殊参数的JSON字符串
-    * status  开关状态：0表示关闭、1表示开启
+    * status  频率ips规则状态，0表示关闭，1表示打开
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class AdvancedIpsRuleDto implements ModelInterface, ArrayAccess
     * ipsRuleType  ips规则类型：0表示敏感目录扫描、1表示反弹xshell
     * objectId  防护对象id
     * param  包含特殊参数的JSON字符串
-    * status  开关状态：0表示关闭、1表示开启
+    * status  频率ips规则状态，0表示关闭，1表示打开
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class AdvancedIpsRuleDto implements ModelInterface, ArrayAccess
     * ipsRuleType  ips规则类型：0表示敏感目录扫描、1表示反弹xshell
     * objectId  防护对象id
     * param  包含特殊参数的JSON字符串
-    * status  开关状态：0表示关闭、1表示开启
+    * status  频率ips规则状态，0表示关闭，1表示打开
     *
     * @var string[]
     */
@@ -367,7 +367,7 @@ class AdvancedIpsRuleDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  开关状态：0表示关闭、1表示开启
+    *  频率ips规则状态，0表示关闭，1表示打开
     *
     * @return int|null
     */
@@ -379,7 +379,7 @@ class AdvancedIpsRuleDto implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 开关状态：0表示关闭、1表示开启
+    * @param int|null $status 频率ips规则状态，0表示关闭，1表示打开
     *
     * @return $this
     */

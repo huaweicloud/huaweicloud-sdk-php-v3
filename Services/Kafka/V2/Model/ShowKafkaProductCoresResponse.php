@@ -22,7 +22,7 @@ class ShowKafkaProductCoresResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * coreNum  **参数解释**： 核数。 **取值范围**： 不涉及。
-    * totalExtendStorageSpace  **参数解释**： 需要扩容的存储空间。 **取值范围**： 不涉及。
+    * totalExtendStorageSpace  **参数解释**： 预估存储空间，当填写的broker_num小于等于当前实例真实值时，显示为当前实例的存储空间。如果填写的broker_num大于当前实例真实值时，显示为所填写broker_num时实例的预估存储空间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class ShowKafkaProductCoresResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * coreNum  **参数解释**： 核数。 **取值范围**： 不涉及。
-    * totalExtendStorageSpace  **参数解释**： 需要扩容的存储空间。 **取值范围**： 不涉及。
+    * totalExtendStorageSpace  **参数解释**： 预估存储空间，当填写的broker_num小于等于当前实例真实值时，显示为当前实例的存储空间。如果填写的broker_num大于当前实例真实值时，显示为所填写broker_num时实例的预估存储空间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class ShowKafkaProductCoresResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * coreNum  **参数解释**： 核数。 **取值范围**： 不涉及。
-    * totalExtendStorageSpace  **参数解释**： 需要扩容的存储空间。 **取值范围**： 不涉及。
+    * totalExtendStorageSpace  **参数解释**： 预估存储空间，当填写的broker_num小于等于当前实例真实值时，显示为当前实例的存储空间。如果填写的broker_num大于当前实例真实值时，显示为所填写broker_num时实例的预估存储空间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class ShowKafkaProductCoresResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * coreNum  **参数解释**： 核数。 **取值范围**： 不涉及。
-    * totalExtendStorageSpace  **参数解释**： 需要扩容的存储空间。 **取值范围**： 不涉及。
+    * totalExtendStorageSpace  **参数解释**： 预估存储空间，当填写的broker_num小于等于当前实例真实值时，显示为当前实例的存储空间。如果填写的broker_num大于当前实例真实值时，显示为所填写broker_num时实例的预估存储空间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ShowKafkaProductCoresResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * coreNum  **参数解释**： 核数。 **取值范围**： 不涉及。
-    * totalExtendStorageSpace  **参数解释**： 需要扩容的存储空间。 **取值范围**： 不涉及。
+    * totalExtendStorageSpace  **参数解释**： 预估存储空间，当填写的broker_num小于等于当前实例真实值时，显示为当前实例的存储空间。如果填写的broker_num大于当前实例真实值时，显示为所填写broker_num时实例的预估存储空间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -210,7 +210,7 @@ class ShowKafkaProductCoresResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalExtendStorageSpace
-    *  **参数解释**： 需要扩容的存储空间。 **取值范围**： 不涉及。
+    *  **参数解释**： 预估存储空间，当填写的broker_num小于等于当前实例真实值时，显示为当前实例的存储空间。如果填写的broker_num大于当前实例真实值时，显示为所填写broker_num时实例的预估存储空间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ShowKafkaProductCoresResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalExtendStorageSpace
     *
-    * @param int|null $totalExtendStorageSpace **参数解释**： 需要扩容的存储空间。 **取值范围**： 不涉及。
+    * @param int|null $totalExtendStorageSpace **参数解释**： 预估存储空间，当填写的broker_num小于等于当前实例真实值时，显示为当前实例的存储空间。如果填写的broker_num大于当前实例真实值时，显示为所填写broker_num时实例的预估存储空间。 **取值范围**： 不涉及。
     *
     * @return $this
     */

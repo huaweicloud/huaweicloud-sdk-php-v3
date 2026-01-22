@@ -20,17 +20,17 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * status  防护状态：0 已开启防护， 1 未开启防护
-    * firewallAssociatedSubnets  云防火墙关联子网信息
+    * objectId  **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得。type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。 **取值范围**： 不涉及
+    * projectId  **参数解释**： 项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **取值范围**： 不涉及
+    * status  **参数解释**： 防护状态： 不涉及 **取值范围**： 0：已开启防护 1：未开启防护
+    * firewallAssociatedSubnets  **参数解释**： 云防火墙关联子网信息 **取值范围**： 不涉及
     * er  er
     * inspectionVpc  inspectionVpc
-    * protectInfos  东西向防护资源信息
-    * total  防护VPC总数
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数，范围为1-1024
-    * mode  防护模式，值为er
+    * protectInfos  **参数解释**： 东西向防护资源信息 **取值范围**： 不涉及
+    * total  **参数解释**： 防护VPC总数 **取值范围**： 不涉及
+    * offset  **参数解释**： 偏移量：指定返回记录的开始位置 **取值范围**： 大于或等于0
+    * limit  **参数解释**： 每页显示个数 **取值范围**： 1-1024
+    * mode  **参数解释**： 防护模式，值为er **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * status  防护状态：0 已开启防护， 1 未开启防护
-    * firewallAssociatedSubnets  云防火墙关联子网信息
+    * objectId  **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得。type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。 **取值范围**： 不涉及
+    * projectId  **参数解释**： 项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **取值范围**： 不涉及
+    * status  **参数解释**： 防护状态： 不涉及 **取值范围**： 0：已开启防护 1：未开启防护
+    * firewallAssociatedSubnets  **参数解释**： 云防火墙关联子网信息 **取值范围**： 不涉及
     * er  er
     * inspectionVpc  inspectionVpc
-    * protectInfos  东西向防护资源信息
-    * total  防护VPC总数
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数，范围为1-1024
-    * mode  防护模式，值为er
+    * protectInfos  **参数解释**： 东西向防护资源信息 **取值范围**： 不涉及
+    * total  **参数解释**： 防护VPC总数 **取值范围**： 不涉及
+    * offset  **参数解释**： 偏移量：指定返回记录的开始位置 **取值范围**： 大于或等于0
+    * limit  **参数解释**： 每页显示个数 **取值范围**： 1-1024
+    * mode  **参数解释**： 防护模式，值为er **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * status  防护状态：0 已开启防护， 1 未开启防护
-    * firewallAssociatedSubnets  云防火墙关联子网信息
+    * objectId  **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得。type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。 **取值范围**： 不涉及
+    * projectId  **参数解释**： 项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **取值范围**： 不涉及
+    * status  **参数解释**： 防护状态： 不涉及 **取值范围**： 0：已开启防护 1：未开启防护
+    * firewallAssociatedSubnets  **参数解释**： 云防火墙关联子网信息 **取值范围**： 不涉及
     * er  er
     * inspectionVpc  inspectionVpc
-    * protectInfos  东西向防护资源信息
-    * total  防护VPC总数
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数，范围为1-1024
-    * mode  防护模式，值为er
+    * protectInfos  **参数解释**： 东西向防护资源信息 **取值范围**： 不涉及
+    * total  **参数解释**： 防护VPC总数 **取值范围**： 不涉及
+    * offset  **参数解释**： 偏移量：指定返回记录的开始位置 **取值范围**： 大于或等于0
+    * limit  **参数解释**： 每页显示个数 **取值范围**： 1-1024
+    * mode  **参数解释**： 防护模式，值为er **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * status  防护状态：0 已开启防护， 1 未开启防护
-    * firewallAssociatedSubnets  云防火墙关联子网信息
+    * objectId  **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得。type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。 **取值范围**： 不涉及
+    * projectId  **参数解释**： 项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **取值范围**： 不涉及
+    * status  **参数解释**： 防护状态： 不涉及 **取值范围**： 0：已开启防护 1：未开启防护
+    * firewallAssociatedSubnets  **参数解释**： 云防火墙关联子网信息 **取值范围**： 不涉及
     * er  er
     * inspectionVpc  inspectionVpc
-    * protectInfos  东西向防护资源信息
-    * total  防护VPC总数
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数，范围为1-1024
-    * mode  防护模式，值为er
+    * protectInfos  **参数解释**： 东西向防护资源信息 **取值范围**： 不涉及
+    * total  **参数解释**： 防护VPC总数 **取值范围**： 不涉及
+    * offset  **参数解释**： 偏移量：指定返回记录的开始位置 **取值范围**： 大于或等于0
+    * limit  **参数解释**： 每页显示个数 **取值范围**： 1-1024
+    * mode  **参数解释**： 防护模式，值为er **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
-    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
-    * status  防护状态：0 已开启防护， 1 未开启防护
-    * firewallAssociatedSubnets  云防火墙关联子网信息
+    * objectId  **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得。type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。 **取值范围**： 不涉及
+    * projectId  **参数解释**： 项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **取值范围**： 不涉及
+    * status  **参数解释**： 防护状态： 不涉及 **取值范围**： 0：已开启防护 1：未开启防护
+    * firewallAssociatedSubnets  **参数解释**： 云防火墙关联子网信息 **取值范围**： 不涉及
     * er  er
     * inspectionVpc  inspectionVpc
-    * protectInfos  东西向防护资源信息
-    * total  防护VPC总数
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数，范围为1-1024
-    * mode  防护模式，值为er
+    * protectInfos  **参数解释**： 东西向防护资源信息 **取值范围**： 不涉及
+    * total  **参数解释**： 防护VPC总数 **取值范围**： 不涉及
+    * offset  **参数解释**： 偏移量：指定返回记录的开始位置 **取值范围**： 大于或等于0
+    * limit  **参数解释**： 每页显示个数 **取值范围**： 1-1024
+    * mode  **参数解释**： 防护模式，值为er **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -284,7 +284,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    *  **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得。type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -296,7 +296,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string|null $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * @param string|null $objectId **参数解释**： 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得。type为0时，object_id为互联网边界防护对象ID，type为1时，object_id为VPC边界防护对象ID。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -308,7 +308,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    *  **参数解释**： 项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -320,7 +320,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * @param string|null $projectId **参数解释**： 项目ID，可以通过调用API获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml) **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  防护状态：0 已开启防护， 1 未开启防护
+    *  **参数解释**： 防护状态： 不涉及 **取值范围**： 0：已开启防护 1：未开启防护
     *
     * @return int|null
     */
@@ -344,7 +344,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 防护状态：0 已开启防护， 1 未开启防护
+    * @param int|null $status **参数解释**： 防护状态： 不涉及 **取值范围**： 0：已开启防护 1：未开启防护
     *
     * @return $this
     */
@@ -356,7 +356,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets firewallAssociatedSubnets
-    *  云防火墙关联子网信息
+    *  **参数解释**： 云防火墙关联子网信息 **取值范围**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\SubnetInfo[]|null
     */
@@ -368,7 +368,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets firewallAssociatedSubnets
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\SubnetInfo[]|null $firewallAssociatedSubnets 云防火墙关联子网信息
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\SubnetInfo[]|null $firewallAssociatedSubnets **参数解释**： 云防火墙关联子网信息 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -428,7 +428,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectInfos
-    *  东西向防护资源信息
+    *  **参数解释**： 东西向防护资源信息 **取值范围**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\EwProtectResourceInfo[]|null
     */
@@ -440,7 +440,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets protectInfos
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\EwProtectResourceInfo[]|null $protectInfos 东西向防护资源信息
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\EwProtectResourceInfo[]|null $protectInfos **参数解释**： 东西向防护资源信息 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -452,7 +452,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  防护VPC总数
+    *  **参数解释**： 防护VPC总数 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -464,7 +464,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 防护VPC总数
+    * @param int|null $total **参数解释**： 防护VPC总数 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -476,7 +476,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  **参数解释**： 偏移量：指定返回记录的开始位置 **取值范围**： 大于或等于0
     *
     * @return int|null
     */
@@ -488,7 +488,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset **参数解释**： 偏移量：指定返回记录的开始位置 **取值范围**： 大于或等于0
     *
     * @return $this
     */
@@ -500,7 +500,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示个数，范围为1-1024
+    *  **参数解释**： 每页显示个数 **取值范围**： 1-1024
     *
     * @return int|null
     */
@@ -512,7 +512,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示个数，范围为1-1024
+    * @param int|null $limit **参数解释**： 每页显示个数 **取值范围**： 1-1024
     *
     * @return $this
     */
@@ -524,7 +524,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
-    *  防护模式，值为er
+    *  **参数解释**： 防护模式，值为er **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -536,7 +536,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param string|null $mode 防护模式，值为er
+    * @param string|null $mode **参数解释**： 防护模式，值为er **取值范围**： 不涉及
     *
     * @return $this
     */

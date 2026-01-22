@@ -20,9 +20,9 @@ class ExportDlqMessageReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topic  主题名称。
-    * msgIdList  消息ID列表。
-    * uniqKeyList  唯一Key列表。
+    * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * msgIdList  **参数解释**： 消息ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * uniqKeyList  **参数解释**： 唯一Key列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ExportDlqMessageReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topic  主题名称。
-    * msgIdList  消息ID列表。
-    * uniqKeyList  唯一Key列表。
+    * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * msgIdList  **参数解释**： 消息ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * uniqKeyList  **参数解释**： 唯一Key列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ExportDlqMessageReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topic  主题名称。
-    * msgIdList  消息ID列表。
-    * uniqKeyList  唯一Key列表。
+    * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * msgIdList  **参数解释**： 消息ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * uniqKeyList  **参数解释**： 唯一Key列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ExportDlqMessageReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topic  主题名称。
-    * msgIdList  消息ID列表。
-    * uniqKeyList  唯一Key列表。
+    * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * msgIdList  **参数解释**： 消息ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * uniqKeyList  **参数解释**： 唯一Key列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ExportDlqMessageReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topic  主题名称。
-    * msgIdList  消息ID列表。
-    * uniqKeyList  唯一Key列表。
+    * topic  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * msgIdList  **参数解释**： 消息ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+    * uniqKeyList  **参数解释**： 唯一Key列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @var string[]
     */
@@ -180,6 +180,12 @@ class ExportDlqMessageReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['topic'] === null) {
+            $invalidProperties[] = "'topic' can't be null";
+        }
+        if ($this->container['msgIdList'] === null) {
+            $invalidProperties[] = "'msgIdList' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -196,9 +202,9 @@ class ExportDlqMessageReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  主题名称。
+    *  **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
-    * @return string|null
+    * @return string
     */
     public function getTopic()
     {
@@ -208,7 +214,7 @@ class ExportDlqMessageReq implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic 主题名称。
+    * @param string $topic **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -220,9 +226,9 @@ class ExportDlqMessageReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets msgIdList
-    *  消息ID列表。
+    *  **参数解释**： 消息ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getMsgIdList()
     {
@@ -232,7 +238,7 @@ class ExportDlqMessageReq implements ModelInterface, ArrayAccess
     /**
     * Sets msgIdList
     *
-    * @param string[]|null $msgIdList 消息ID列表。
+    * @param string[] $msgIdList **参数解释**： 消息ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -244,7 +250,7 @@ class ExportDlqMessageReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets uniqKeyList
-    *  唯一Key列表。
+    *  **参数解释**： 唯一Key列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return string[]|null
     */
@@ -256,7 +262,7 @@ class ExportDlqMessageReq implements ModelInterface, ArrayAccess
     /**
     * Sets uniqKeyList
     *
-    * @param string[]|null $uniqKeyList 唯一Key列表。
+    * @param string[]|null $uniqKeyList **参数解释**： 唯一Key列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
     *
     * @return $this
     */

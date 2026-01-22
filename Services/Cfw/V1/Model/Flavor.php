@@ -20,15 +20,15 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * version  防火墙版本，0：标准版，1：专业版，3：基础版，购买时，当防火墙“charge_mode”为“postPaid”时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
-    * eipCount  eip数量
-    * vpcCount  vpc数量
-    * bandwidth  带宽，单位为mbps
-    * logStorage  日志存储，单位为byte
-    * defaultBandwidth  默认防火墙带宽，单位为mbps，标准版为10，专业版为50，按需专业版为200
-    * defaultEipCount  默认eip数，标准版为20，专业版为50，按需专业版为1000
-    * defaultLogStorage  默认日志存储，单位为byte，默认为0
-    * defaultVpcCount  默认vpc数，标准版为0，专业版为2，按需专业版为5
+    * version  **参数解释**： 防火墙版本 **取值范围**： - 0：标准版 - 1：专业版 - 3：基础版，
+    * eipCount  **参数解释**： EIP数量 **取值范围**： 不涉及
+    * vpcCount  **参数解释**： VPC数量 **取值范围**： 不涉及
+    * bandwidth  **参数解释**： 带宽，单位为mbps **取值范围**： 不涉及
+    * logStorage  **参数解释**： 日志存储，单位为byte **取值范围**： 不涉及
+    * defaultBandwidth  **参数解释**： 默认防火墙带宽，单位为mbps **取值范围**： 包周期标准版为10，专业版为50，按需专业版为200
+    * defaultEipCount  **参数解释**： 默认eip数 **取值范围**： 包周期标准版为20，专业版为50，按需专业版为1000
+    * defaultLogStorage  **参数解释**： 默认日志存储，单位为byte **取值范围**： 不涉及
+    * defaultVpcCount  **参数解释**： 默认vpc数 **约束限制**： 包周期标准版为0，专业版为2，按需专业版为5
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * version  防火墙版本，0：标准版，1：专业版，3：基础版，购买时，当防火墙“charge_mode”为“postPaid”时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
-    * eipCount  eip数量
-    * vpcCount  vpc数量
-    * bandwidth  带宽，单位为mbps
-    * logStorage  日志存储，单位为byte
-    * defaultBandwidth  默认防火墙带宽，单位为mbps，标准版为10，专业版为50，按需专业版为200
-    * defaultEipCount  默认eip数，标准版为20，专业版为50，按需专业版为1000
-    * defaultLogStorage  默认日志存储，单位为byte，默认为0
-    * defaultVpcCount  默认vpc数，标准版为0，专业版为2，按需专业版为5
+    * version  **参数解释**： 防火墙版本 **取值范围**： - 0：标准版 - 1：专业版 - 3：基础版，
+    * eipCount  **参数解释**： EIP数量 **取值范围**： 不涉及
+    * vpcCount  **参数解释**： VPC数量 **取值范围**： 不涉及
+    * bandwidth  **参数解释**： 带宽，单位为mbps **取值范围**： 不涉及
+    * logStorage  **参数解释**： 日志存储，单位为byte **取值范围**： 不涉及
+    * defaultBandwidth  **参数解释**： 默认防火墙带宽，单位为mbps **取值范围**： 包周期标准版为10，专业版为50，按需专业版为200
+    * defaultEipCount  **参数解释**： 默认eip数 **取值范围**： 包周期标准版为20，专业版为50，按需专业版为1000
+    * defaultLogStorage  **参数解释**： 默认日志存储，单位为byte **取值范围**： 不涉及
+    * defaultVpcCount  **参数解释**： 默认vpc数 **约束限制**： 包周期标准版为0，专业版为2，按需专业版为5
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * version  防火墙版本，0：标准版，1：专业版，3：基础版，购买时，当防火墙“charge_mode”为“postPaid”时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
-    * eipCount  eip数量
-    * vpcCount  vpc数量
-    * bandwidth  带宽，单位为mbps
-    * logStorage  日志存储，单位为byte
-    * defaultBandwidth  默认防火墙带宽，单位为mbps，标准版为10，专业版为50，按需专业版为200
-    * defaultEipCount  默认eip数，标准版为20，专业版为50，按需专业版为1000
-    * defaultLogStorage  默认日志存储，单位为byte，默认为0
-    * defaultVpcCount  默认vpc数，标准版为0，专业版为2，按需专业版为5
+    * version  **参数解释**： 防火墙版本 **取值范围**： - 0：标准版 - 1：专业版 - 3：基础版，
+    * eipCount  **参数解释**： EIP数量 **取值范围**： 不涉及
+    * vpcCount  **参数解释**： VPC数量 **取值范围**： 不涉及
+    * bandwidth  **参数解释**： 带宽，单位为mbps **取值范围**： 不涉及
+    * logStorage  **参数解释**： 日志存储，单位为byte **取值范围**： 不涉及
+    * defaultBandwidth  **参数解释**： 默认防火墙带宽，单位为mbps **取值范围**： 包周期标准版为10，专业版为50，按需专业版为200
+    * defaultEipCount  **参数解释**： 默认eip数 **取值范围**： 包周期标准版为20，专业版为50，按需专业版为1000
+    * defaultLogStorage  **参数解释**： 默认日志存储，单位为byte **取值范围**： 不涉及
+    * defaultVpcCount  **参数解释**： 默认vpc数 **约束限制**： 包周期标准版为0，专业版为2，按需专业版为5
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * version  防火墙版本，0：标准版，1：专业版，3：基础版，购买时，当防火墙“charge_mode”为“postPaid”时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
-    * eipCount  eip数量
-    * vpcCount  vpc数量
-    * bandwidth  带宽，单位为mbps
-    * logStorage  日志存储，单位为byte
-    * defaultBandwidth  默认防火墙带宽，单位为mbps，标准版为10，专业版为50，按需专业版为200
-    * defaultEipCount  默认eip数，标准版为20，专业版为50，按需专业版为1000
-    * defaultLogStorage  默认日志存储，单位为byte，默认为0
-    * defaultVpcCount  默认vpc数，标准版为0，专业版为2，按需专业版为5
+    * version  **参数解释**： 防火墙版本 **取值范围**： - 0：标准版 - 1：专业版 - 3：基础版，
+    * eipCount  **参数解释**： EIP数量 **取值范围**： 不涉及
+    * vpcCount  **参数解释**： VPC数量 **取值范围**： 不涉及
+    * bandwidth  **参数解释**： 带宽，单位为mbps **取值范围**： 不涉及
+    * logStorage  **参数解释**： 日志存储，单位为byte **取值范围**： 不涉及
+    * defaultBandwidth  **参数解释**： 默认防火墙带宽，单位为mbps **取值范围**： 包周期标准版为10，专业版为50，按需专业版为200
+    * defaultEipCount  **参数解释**： 默认eip数 **取值范围**： 包周期标准版为20，专业版为50，按需专业版为1000
+    * defaultLogStorage  **参数解释**： 默认日志存储，单位为byte **取值范围**： 不涉及
+    * defaultVpcCount  **参数解释**： 默认vpc数 **约束限制**： 包周期标准版为0，专业版为2，按需专业版为5
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * version  防火墙版本，0：标准版，1：专业版，3：基础版，购买时，当防火墙“charge_mode”为“postPaid”时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
-    * eipCount  eip数量
-    * vpcCount  vpc数量
-    * bandwidth  带宽，单位为mbps
-    * logStorage  日志存储，单位为byte
-    * defaultBandwidth  默认防火墙带宽，单位为mbps，标准版为10，专业版为50，按需专业版为200
-    * defaultEipCount  默认eip数，标准版为20，专业版为50，按需专业版为1000
-    * defaultLogStorage  默认日志存储，单位为byte，默认为0
-    * defaultVpcCount  默认vpc数，标准版为0，专业版为2，按需专业版为5
+    * version  **参数解释**： 防火墙版本 **取值范围**： - 0：标准版 - 1：专业版 - 3：基础版，
+    * eipCount  **参数解释**： EIP数量 **取值范围**： 不涉及
+    * vpcCount  **参数解释**： VPC数量 **取值范围**： 不涉及
+    * bandwidth  **参数解释**： 带宽，单位为mbps **取值范围**： 不涉及
+    * logStorage  **参数解释**： 日志存储，单位为byte **取值范围**： 不涉及
+    * defaultBandwidth  **参数解释**： 默认防火墙带宽，单位为mbps **取值范围**： 包周期标准版为10，专业版为50，按需专业版为200
+    * defaultEipCount  **参数解释**： 默认eip数 **取值范围**： 包周期标准版为20，专业版为50，按需专业版为1000
+    * defaultLogStorage  **参数解释**： 默认日志存储，单位为byte **取值范围**： 不涉及
+    * defaultVpcCount  **参数解释**： 默认vpc数 **约束限制**： 包周期标准版为0，专业版为2，按需专业版为5
     *
     * @var string[]
     */
@@ -298,7 +298,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  防火墙版本，0：标准版，1：专业版，3：基础版，购买时，当防火墙“charge_mode”为“postPaid”时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
+    *  **参数解释**： 防火墙版本 **取值范围**： - 0：标准版 - 1：专业版 - 3：基础版，
     *
     * @return int|null
     */
@@ -310,7 +310,7 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param int|null $version 防火墙版本，0：标准版，1：专业版，3：基础版，购买时，当防火墙“charge_mode”为“postPaid”时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
+    * @param int|null $version **参数解释**： 防火墙版本 **取值范围**： - 0：标准版 - 1：专业版 - 3：基础版，
     *
     * @return $this
     */
@@ -322,7 +322,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets eipCount
-    *  eip数量
+    *  **参数解释**： EIP数量 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -334,7 +334,7 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Sets eipCount
     *
-    * @param int|null $eipCount eip数量
+    * @param int|null $eipCount **参数解释**： EIP数量 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -346,7 +346,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcCount
-    *  vpc数量
+    *  **参数解释**： VPC数量 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -358,7 +358,7 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Sets vpcCount
     *
-    * @param int|null $vpcCount vpc数量
+    * @param int|null $vpcCount **参数解释**： VPC数量 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -370,7 +370,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidth
-    *  带宽，单位为mbps
+    *  **参数解释**： 带宽，单位为mbps **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -382,7 +382,7 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidth
     *
-    * @param int|null $bandwidth 带宽，单位为mbps
+    * @param int|null $bandwidth **参数解释**： 带宽，单位为mbps **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -394,7 +394,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets logStorage
-    *  日志存储，单位为byte
+    *  **参数解释**： 日志存储，单位为byte **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -406,7 +406,7 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Sets logStorage
     *
-    * @param int|null $logStorage 日志存储，单位为byte
+    * @param int|null $logStorage **参数解释**： 日志存储，单位为byte **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -418,7 +418,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultBandwidth
-    *  默认防火墙带宽，单位为mbps，标准版为10，专业版为50，按需专业版为200
+    *  **参数解释**： 默认防火墙带宽，单位为mbps **取值范围**： 包周期标准版为10，专业版为50，按需专业版为200
     *
     * @return int|null
     */
@@ -430,7 +430,7 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Sets defaultBandwidth
     *
-    * @param int|null $defaultBandwidth 默认防火墙带宽，单位为mbps，标准版为10，专业版为50，按需专业版为200
+    * @param int|null $defaultBandwidth **参数解释**： 默认防火墙带宽，单位为mbps **取值范围**： 包周期标准版为10，专业版为50，按需专业版为200
     *
     * @return $this
     */
@@ -442,7 +442,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultEipCount
-    *  默认eip数，标准版为20，专业版为50，按需专业版为1000
+    *  **参数解释**： 默认eip数 **取值范围**： 包周期标准版为20，专业版为50，按需专业版为1000
     *
     * @return int|null
     */
@@ -454,7 +454,7 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Sets defaultEipCount
     *
-    * @param int|null $defaultEipCount 默认eip数，标准版为20，专业版为50，按需专业版为1000
+    * @param int|null $defaultEipCount **参数解释**： 默认eip数 **取值范围**： 包周期标准版为20，专业版为50，按需专业版为1000
     *
     * @return $this
     */
@@ -466,7 +466,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultLogStorage
-    *  默认日志存储，单位为byte，默认为0
+    *  **参数解释**： 默认日志存储，单位为byte **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -478,7 +478,7 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Sets defaultLogStorage
     *
-    * @param int|null $defaultLogStorage 默认日志存储，单位为byte，默认为0
+    * @param int|null $defaultLogStorage **参数解释**： 默认日志存储，单位为byte **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -490,7 +490,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultVpcCount
-    *  默认vpc数，标准版为0，专业版为2，按需专业版为5
+    *  **参数解释**： 默认vpc数 **约束限制**： 包周期标准版为0，专业版为2，按需专业版为5
     *
     * @return int|null
     */
@@ -502,7 +502,7 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Sets defaultVpcCount
     *
-    * @param int|null $defaultVpcCount 默认vpc数，标准版为0，专业版为2，按需专业版为5
+    * @param int|null $defaultVpcCount **参数解释**： 默认vpc数 **约束限制**： 包周期标准版为0，专业版为2，按需专业版为5
     *
     * @return $this
     */

@@ -21,8 +21,8 @@ class ShowDiagnosisStackResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * threadName  **参数解释**： 线程名。 **取值范围**： 不涉及。
-    * stack  **参数解释**： 堆信息。 **取值范围**： 不涉及。
+    * threadName  **参数解释**： 线程名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * stack  **参数解释**： 客户端的栈信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ShowDiagnosisStackResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * threadName  **参数解释**： 线程名。 **取值范围**： 不涉及。
-    * stack  **参数解释**： 堆信息。 **取值范围**： 不涉及。
+    * threadName  **参数解释**： 线程名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * stack  **参数解释**： 客户端的栈信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ShowDiagnosisStackResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * threadName  **参数解释**： 线程名。 **取值范围**： 不涉及。
-    * stack  **参数解释**： 堆信息。 **取值范围**： 不涉及。
+    * threadName  **参数解释**： 线程名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * stack  **参数解释**： 客户端的栈信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ShowDiagnosisStackResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * threadName  **参数解释**： 线程名。 **取值范围**： 不涉及。
-    * stack  **参数解释**： 堆信息。 **取值范围**： 不涉及。
+    * threadName  **参数解释**： 线程名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * stack  **参数解释**： 客户端的栈信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ShowDiagnosisStackResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * threadName  **参数解释**： 线程名。 **取值范围**： 不涉及。
-    * stack  **参数解释**： 堆信息。 **取值范围**： 不涉及。
+    * threadName  **参数解释**： 线程名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * stack  **参数解释**： 客户端的栈信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ShowDiagnosisStackResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets threadName
-    *  **参数解释**： 线程名。 **取值范围**： 不涉及。
+    *  **参数解释**： 线程名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class ShowDiagnosisStackResponse implements ModelInterface, ArrayAccess
     /**
     * Sets threadName
     *
-    * @param string|null $threadName **参数解释**： 线程名。 **取值范围**： 不涉及。
+    * @param string|null $threadName **参数解释**： 线程名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ShowDiagnosisStackResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets stack
-    *  **参数解释**： 堆信息。 **取值范围**： 不涉及。
+    *  **参数解释**： 客户端的栈信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class ShowDiagnosisStackResponse implements ModelInterface, ArrayAccess
     /**
     * Sets stack
     *
-    * @param string|null $stack **参数解释**： 堆信息。 **取值范围**： 不涉及。
+    * @param string|null $stack **参数解释**： 客户端的栈信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

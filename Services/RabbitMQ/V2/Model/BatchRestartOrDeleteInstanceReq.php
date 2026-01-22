@@ -23,13 +23,15 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     * instances  实例的ID列表。
     * action  对实例的操作：delete
     * allFailure  是否批量删除创建失败的实例。  当参数值为“rabbitmq”时，删除租户所有创建失败的实例，此时请求参数instances可为空。
+    * forceDelete  **参数解释**： 是否强删除。 **约束限制**： 不涉及。 **取值范围**： - true：强删除，强删除实例不进入回收站。 - false：弱删除，实例进入回收站。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'instances' => 'string[]',
             'action' => 'string',
-            'allFailure' => 'string'
+            'allFailure' => 'string',
+            'forceDelete' => 'bool'
     ];
 
     /**
@@ -37,13 +39,15 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     * instances  实例的ID列表。
     * action  对实例的操作：delete
     * allFailure  是否批量删除创建失败的实例。  当参数值为“rabbitmq”时，删除租户所有创建失败的实例，此时请求参数instances可为空。
+    * forceDelete  **参数解释**： 是否强删除。 **约束限制**： 不涉及。 **取值范围**： - true：强删除，强删除实例不进入回收站。 - false：弱删除，实例进入回收站。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'instances' => null,
         'action' => null,
-        'allFailure' => null
+        'allFailure' => null,
+        'forceDelete' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     * instances  实例的ID列表。
     * action  对实例的操作：delete
     * allFailure  是否批量删除创建失败的实例。  当参数值为“rabbitmq”时，删除租户所有创建失败的实例，此时请求参数instances可为空。
+    * forceDelete  **参数解释**： 是否强删除。 **约束限制**： 不涉及。 **取值范围**： - true：强删除，强删除实例不进入回收站。 - false：弱删除，实例进入回收站。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'instances' => 'instances',
             'action' => 'action',
-            'allFailure' => 'all_failure'
+            'allFailure' => 'all_failure',
+            'forceDelete' => 'force_delete'
     ];
 
     /**
@@ -86,13 +92,15 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     * instances  实例的ID列表。
     * action  对实例的操作：delete
     * allFailure  是否批量删除创建失败的实例。  当参数值为“rabbitmq”时，删除租户所有创建失败的实例，此时请求参数instances可为空。
+    * forceDelete  **参数解释**： 是否强删除。 **约束限制**： 不涉及。 **取值范围**： - true：强删除，强删除实例不进入回收站。 - false：弱删除，实例进入回收站。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'instances' => 'setInstances',
             'action' => 'setAction',
-            'allFailure' => 'setAllFailure'
+            'allFailure' => 'setAllFailure',
+            'forceDelete' => 'setForceDelete'
     ];
 
     /**
@@ -100,13 +108,15 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     * instances  实例的ID列表。
     * action  对实例的操作：delete
     * allFailure  是否批量删除创建失败的实例。  当参数值为“rabbitmq”时，删除租户所有创建失败的实例，此时请求参数instances可为空。
+    * forceDelete  **参数解释**： 是否强删除。 **约束限制**： 不涉及。 **取值范围**： - true：强删除，强删除实例不进入回收站。 - false：弱删除，实例进入回收站。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'instances' => 'getInstances',
             'action' => 'getAction',
-            'allFailure' => 'getAllFailure'
+            'allFailure' => 'getAllFailure',
+            'forceDelete' => 'getForceDelete'
     ];
 
     /**
@@ -196,6 +206,7 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
         $this->container['instances'] = isset($data['instances']) ? $data['instances'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['allFailure'] = isset($data['allFailure']) ? $data['allFailure'] : null;
+        $this->container['forceDelete'] = isset($data['forceDelete']) ? $data['forceDelete'] : null;
     }
 
     /**
@@ -308,6 +319,30 @@ class BatchRestartOrDeleteInstanceReq implements ModelInterface, ArrayAccess
     public function setAllFailure($allFailure)
     {
         $this->container['allFailure'] = $allFailure;
+        return $this;
+    }
+
+    /**
+    * Gets forceDelete
+    *  **参数解释**： 是否强删除。 **约束限制**： 不涉及。 **取值范围**： - true：强删除，强删除实例不进入回收站。 - false：弱删除，实例进入回收站。 **默认取值**： 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getForceDelete()
+    {
+        return $this->container['forceDelete'];
+    }
+
+    /**
+    * Sets forceDelete
+    *
+    * @param bool|null $forceDelete **参数解释**： 是否强删除。 **约束限制**： 不涉及。 **取值范围**： - true：强删除，强删除实例不进入回收站。 - false：弱删除，实例进入回收站。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setForceDelete($forceDelete)
+    {
+        $this->container['forceDelete'] = $forceDelete;
         return $this;
     }
 

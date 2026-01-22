@@ -21,7 +21,7 @@ class ResizeInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * newSpecCode  规格变更后的规格ID。
-    * newStorageSpace  规格变更后的消息存储空间，单位：GB。
+    * newStorageSpace  规格变更后的消息存储空间，单位：GB。注意：磁盘容量仅支持设置为100的整数倍。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ResizeInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * newSpecCode  规格变更后的规格ID。
-    * newStorageSpace  规格变更后的消息存储空间，单位：GB。
+    * newStorageSpace  规格变更后的消息存储空间，单位：GB。注意：磁盘容量仅支持设置为100的整数倍。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ResizeInstanceReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * newSpecCode  规格变更后的规格ID。
-    * newStorageSpace  规格变更后的消息存储空间，单位：GB。
+    * newStorageSpace  规格变更后的消息存储空间，单位：GB。注意：磁盘容量仅支持设置为100的整数倍。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ResizeInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * newSpecCode  规格变更后的规格ID。
-    * newStorageSpace  规格变更后的消息存储空间，单位：GB。
+    * newStorageSpace  规格变更后的消息存储空间，单位：GB。注意：磁盘容量仅支持设置为100的整数倍。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ResizeInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * newSpecCode  规格变更后的规格ID。
-    * newStorageSpace  规格变更后的消息存储空间，单位：GB。
+    * newStorageSpace  规格变更后的消息存储空间，单位：GB。注意：磁盘容量仅支持设置为100的整数倍。
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class ResizeInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets newStorageSpace
-    *  规格变更后的消息存储空间，单位：GB。
+    *  规格变更后的消息存储空间，单位：GB。注意：磁盘容量仅支持设置为100的整数倍。
     *
     * @return int
     */
@@ -252,7 +252,7 @@ class ResizeInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets newStorageSpace
     *
-    * @param int $newStorageSpace 规格变更后的消息存储空间，单位：GB。
+    * @param int $newStorageSpace 规格变更后的消息存储空间，单位：GB。注意：磁盘容量仅支持设置为100的整数倍。
     *
     * @return $this
     */

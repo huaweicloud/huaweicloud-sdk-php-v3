@@ -23,32 +23,32 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * name  **参数解释**： 实例名称。 **约束限制**： 由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * description  **参数解释**： 实例的描述信息。 **约束限制**： 长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs,fcs) \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\\\\\或者\\\\\"。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及 **取值范围**： kafka **默认取值**： 不涉及。
-    * engineVersion  **参数解释**： 消息引擎的版本。 **约束限制**： 不涉及 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc,hws_eu) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax) **默认取值**： 不涉及。
+    * engineVersion  **参数解释**： 消息引擎的版本。 **约束限制**： 不涉及 **取值范围**： [- 1.1.0](tag:hws,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc,hk_sbc,cmcc,ax,srg) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,cmcc,ocb,hws_ocb) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hk_sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax,cmcc,srg) **默认取值**： 不涉及。
     * brokerNum  **参数解释**： 代理个数。 **约束限制**： 不涉及。 **取值范围**： [- Kafka实例规格为kafka.2u4g.cluster.small时，代理数取值范围3-30。](tag:hws,hws_hk,hws_eu,dt,ax) - Kafka实例规格为kafka.2u4g.cluster时，代理数取值范围3-30。 - Kafka实例规格为kafka.4u8g.cluster时，代理数取值范围3-30。 - Kafka实例规格为kafka.8u16g.cluster时，代理数取值范围3-50。 - Kafka实例规格为kafka.12u24g.cluster时，代理数取值范围3-50。 - Kafka实例规格为kafka.16u32g.cluster时，代理数取值范围3-50。 **默认取值**： 不涉及。
-    * storageSpace  **参数解释**： 消息存储空间，单位GB。 **约束限制**： 不涉及。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [- Kafka实例规格为s6.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs) **默认取值**： 不涉及。
+    * storageSpace  **参数解释**： 消息存储空间，单位GB。 **约束限制**： 磁盘容量仅支持设置为100的整数倍。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,cmcc,sbc,hk_sbc,srg) [- Kafka实例规格为s6.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs) **默认取值**： 不涉及。
     * accessUser  **参数解释**：  认证用户名。 **约束限制**： 只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * password  **参数解释**： 实例的认证密码。 **约束限制**： - 当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。 - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的三种组合：   - 小写字母。   - 大写字母。   - 数字。   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）和空格，并且不能以-开头。    **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * vpcId  **参数解释**：  虚拟私有云ID。获取方法如下：参考《虚拟私有云 API参考》，调用“查询VPC列表”接口，从响应体中获取VPC ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * securityGroupId  **参数解释**： 指定实例所属的安全组。获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * subnetId  **参数解释**： 子网信息。获取方法如下：参考《虚拟私有云 API参考》，调用“查询子网列表”接口，从响应体中获取子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vpcId  **参数解释**：  虚拟私有云ID。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_apiv3_0003.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_apiv3_0003.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_apiv3_0003.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询VPC列表”接口，从响应体中获取VPC ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 指定实例所属的安全组。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_apiv3_0011.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_apiv3_0011.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_apiv3_0011.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 子网信息。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_subnet01_0003.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_subnet01_0003.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询子网列表”接口，从响应体中获取子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * availableZones  **参数解释**： 创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。 **约束限制**： 该参数不能为空数组或者数组的值为空。  创建Kafka实例，节点需要部署在1个或3个及以上可用区中。如果部署在多个可用区中，以英文逗号隔开多个可用区ID。
     * productId  **参数解释**： 产品ID。产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * maintainBegin  **参数解释**： 维护时间窗开始时间。 **约束限制**： 格式为HH:mm。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * maintainEnd  **参数解释**： 维护时间窗结束时间。 **约束限制**： 格式为HH:mm。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * enablePublicip  **参数解释**： 是否开启公网访问功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     * tenantIps  **参数解释**： 创建实例时可以手动指定实例节点的内网IP地址，仅支持指定IPv4地址。 **约束限制**： 指定内网IP地址数量必须小于等于创建的节点数量。  如果指定的内网IP地址数量小于创建的节点数量时，系统会自动为剩余的节点随机分配内网IP地址。
-    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。 **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。[获取方法：参考[[《弹性公网IP API参考》](https://support.huaweicloud.com/api-eip/ListPublicipsV3.html)](tag:hws)[[《弹性公网IP API参考》](https://support.huaweicloud.com/intl/zh-cn/api-eip/ListPublicipsV3.html)](tag:hws_hk)[[《弹性公网IP API参考》](https://support.huaweicloud.com/eu/api-eip/ListPublicipsV3.html)](tag:hws_eu)[《弹性公网IP API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询弹性公网IP列表”接口，从响应体中获取弹性公网IP的ID。](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,srg,dt,ocb,hws_ocb,hcs,fcs,hws,hws_hk,hws_eu) **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * sslEnable  **参数解释**： 是否开启SASL加密访问。  [实例创建后将不支持动态开启和关闭。](tag:ocb,hws_ocb,hcs) **约束限制**： 不涉及。 **取值范围**： - true：开启SASL加密访问。 - false：关闭SASL加密访问。 **默认取值**： 不涉及。
-    * kafkaSecurityProtocol  **参数解释**： 开启SASL后使用的安全协议。 **约束限制**： 若该字段值为空，默认开启SASL_SSL认证机制。实例创建后，此参数不支持动态修改。 若创建实例时，使用了port_protocol参数，则Kafka的内网访问安全协议以及公网访问安全协议会使用port_protocol中的值，则此参数无效。 **取值范围**： - SASL_SSL：使用SSL证书加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT：通过明文传输，支持账号密码认证，性能更好。 **默认取值**： 不涉及。
+    * kafkaSecurityProtocol  **参数解释**： 开启SASL后使用的安全协议。 **约束限制**： 若该字段值为空，默认开启SASL_SSL认证机制。实例创建后，此参数不支持动态修改。 若创建实例时，使用了port_protocol参数，则Kafka的内网访问安全协议以及公网访问安全协议会使用port_protocol中的值，则此参数无效。 **取值范围**： - SASL_SSL：使用SSL证书加密传输，支持账号密码认证，安全性更高。 [- SASL_PLAINTEXT：通过明文传输，支持账号密码认证，性能更好。](tag:cmcc,ctc,dt,fcs,g42,hk_g42,sbc,hk_sbc,hws,hws_hk,hws_eu,ax,tm,hk_tm,srg) **默认取值**： 不涉及。
     * saslEnabledMechanisms  **参数解释**： 开启SASL后使用的认证机制。 **约束限制**： 如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。若该字段值为空，默认开启PLAIN认证机制。
     * portProtocol  portProtocol
     * retentionPolicy  **参数解释**： 磁盘的容量到达容量阈值后，对于消息的处理策略。 **约束限制**： 不涉及。 **取值范围**： - produce_reject：表示拒绝消息写入。 - time_base：表示自动删除最老消息。 **默认取值**： 不涉及。
-    * ipv6Enable  **参数解释**： 是否开启IPv6。 **约束限制**： 仅在虚拟私有云支持IPv6时生效。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * ipv6Enable  **参数解释**： 是否开启IPv6。 **约束限制**： 仅在虚拟私有云支持IPv6时生效。[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     * diskEncryptedEnable  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * connectorEnable  **参数解释**： 是否开启Smart Connect功能。Smart Connect用于Kafka实例和其他云服务之间的数据同步，或者两个Kafka实例之间的数据同步，实现数据的备份或迁移。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
-    * enableAutoTopic  **参数解释**： 是否开启kafka自动创建Topic功能。当您选择开启，向一个未创建的Topic生产或消费消息时，系统会自动创建此Topic。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
-    * storageSpecCode  **参数解释**： 云硬盘类型。[如何选择磁盘类型请参考《云硬盘 [产品介绍](tag:hws,hws_hk,hws_eu,cmcc)[用户指南](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb,ax)》的“磁盘类型及性能介绍”。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax) **默认取值**： 不涉及。
+    * connectorEnable  **参数解释**： 是否开启Smart Connect功能。Smart Connect用于Kafka实例和其他云服务之间的数据同步，或者两个Kafka实例之间的数据同步，实现数据的备份或迁移。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * enableAutoTopic  **参数解释**： 是否开启kafka自动创建Topic功能。当您选择开启，向一个未创建的Topic生产或消费消息时，系统会自动创建此Topic。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * storageSpecCode  **参数解释**： 云硬盘类型。[如何选择磁盘类型请参考[[《云硬盘 产品介绍》](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0014580744.html)](tag:hws)[[《云硬盘 产品介绍》](https://support.huaweicloud.com/intl/zh-cn/productdesc-evs/zh-cn_topic_0014580744.html)](tag:hws_hk)[[《云硬盘 产品介绍》](https://support.huaweicloud.com/eu/productdesc-evs/en-us_topic_0014580744.html)](tag:hws_eu)[《云硬盘 产品介绍》](tag:cmcc)[《云硬盘 用户指南》](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb,ax,hk_sbc,srg)的“磁盘类型及性能介绍”。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,cmcc,sbc,hk_sbc,srg) **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 [- dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) [- dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax) **默认取值**： 不涉及。
     * enterpriseProjectId  **参数解释**： 企业项目ID。 **约束限制**： 若为企业项目账号，该参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * tags  **参数解释**： Kafka实例的标签信息。 **约束限制**： 不涉及。
     * archType  **参数解释**： CPU架构。 **约束限制**： 不涉及。 **取值范围**： - X86 [- ARM](tag:hcs,fcs,ctc) **默认取值**： 不涉及。
@@ -99,32 +99,32 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * name  **参数解释**： 实例名称。 **约束限制**： 由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * description  **参数解释**： 实例的描述信息。 **约束限制**： 长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs,fcs) \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\\\\\或者\\\\\"。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及 **取值范围**： kafka **默认取值**： 不涉及。
-    * engineVersion  **参数解释**： 消息引擎的版本。 **约束限制**： 不涉及 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc,hws_eu) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax) **默认取值**： 不涉及。
+    * engineVersion  **参数解释**： 消息引擎的版本。 **约束限制**： 不涉及 **取值范围**： [- 1.1.0](tag:hws,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc,hk_sbc,cmcc,ax,srg) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,cmcc,ocb,hws_ocb) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hk_sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax,cmcc,srg) **默认取值**： 不涉及。
     * brokerNum  **参数解释**： 代理个数。 **约束限制**： 不涉及。 **取值范围**： [- Kafka实例规格为kafka.2u4g.cluster.small时，代理数取值范围3-30。](tag:hws,hws_hk,hws_eu,dt,ax) - Kafka实例规格为kafka.2u4g.cluster时，代理数取值范围3-30。 - Kafka实例规格为kafka.4u8g.cluster时，代理数取值范围3-30。 - Kafka实例规格为kafka.8u16g.cluster时，代理数取值范围3-50。 - Kafka实例规格为kafka.12u24g.cluster时，代理数取值范围3-50。 - Kafka实例规格为kafka.16u32g.cluster时，代理数取值范围3-50。 **默认取值**： 不涉及。
-    * storageSpace  **参数解释**： 消息存储空间，单位GB。 **约束限制**： 不涉及。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [- Kafka实例规格为s6.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs) **默认取值**： 不涉及。
+    * storageSpace  **参数解释**： 消息存储空间，单位GB。 **约束限制**： 磁盘容量仅支持设置为100的整数倍。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,cmcc,sbc,hk_sbc,srg) [- Kafka实例规格为s6.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs) **默认取值**： 不涉及。
     * accessUser  **参数解释**：  认证用户名。 **约束限制**： 只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * password  **参数解释**： 实例的认证密码。 **约束限制**： - 当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。 - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的三种组合：   - 小写字母。   - 大写字母。   - 数字。   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）和空格，并且不能以-开头。    **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * vpcId  **参数解释**：  虚拟私有云ID。获取方法如下：参考《虚拟私有云 API参考》，调用“查询VPC列表”接口，从响应体中获取VPC ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * securityGroupId  **参数解释**： 指定实例所属的安全组。获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * subnetId  **参数解释**： 子网信息。获取方法如下：参考《虚拟私有云 API参考》，调用“查询子网列表”接口，从响应体中获取子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vpcId  **参数解释**：  虚拟私有云ID。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_apiv3_0003.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_apiv3_0003.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_apiv3_0003.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询VPC列表”接口，从响应体中获取VPC ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 指定实例所属的安全组。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_apiv3_0011.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_apiv3_0011.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_apiv3_0011.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 子网信息。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_subnet01_0003.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_subnet01_0003.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询子网列表”接口，从响应体中获取子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * availableZones  **参数解释**： 创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。 **约束限制**： 该参数不能为空数组或者数组的值为空。  创建Kafka实例，节点需要部署在1个或3个及以上可用区中。如果部署在多个可用区中，以英文逗号隔开多个可用区ID。
     * productId  **参数解释**： 产品ID。产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * maintainBegin  **参数解释**： 维护时间窗开始时间。 **约束限制**： 格式为HH:mm。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * maintainEnd  **参数解释**： 维护时间窗结束时间。 **约束限制**： 格式为HH:mm。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * enablePublicip  **参数解释**： 是否开启公网访问功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     * tenantIps  **参数解释**： 创建实例时可以手动指定实例节点的内网IP地址，仅支持指定IPv4地址。 **约束限制**： 指定内网IP地址数量必须小于等于创建的节点数量。  如果指定的内网IP地址数量小于创建的节点数量时，系统会自动为剩余的节点随机分配内网IP地址。
-    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。 **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。[获取方法：参考[[《弹性公网IP API参考》](https://support.huaweicloud.com/api-eip/ListPublicipsV3.html)](tag:hws)[[《弹性公网IP API参考》](https://support.huaweicloud.com/intl/zh-cn/api-eip/ListPublicipsV3.html)](tag:hws_hk)[[《弹性公网IP API参考》](https://support.huaweicloud.com/eu/api-eip/ListPublicipsV3.html)](tag:hws_eu)[《弹性公网IP API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询弹性公网IP列表”接口，从响应体中获取弹性公网IP的ID。](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,srg,dt,ocb,hws_ocb,hcs,fcs,hws,hws_hk,hws_eu) **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * sslEnable  **参数解释**： 是否开启SASL加密访问。  [实例创建后将不支持动态开启和关闭。](tag:ocb,hws_ocb,hcs) **约束限制**： 不涉及。 **取值范围**： - true：开启SASL加密访问。 - false：关闭SASL加密访问。 **默认取值**： 不涉及。
-    * kafkaSecurityProtocol  **参数解释**： 开启SASL后使用的安全协议。 **约束限制**： 若该字段值为空，默认开启SASL_SSL认证机制。实例创建后，此参数不支持动态修改。 若创建实例时，使用了port_protocol参数，则Kafka的内网访问安全协议以及公网访问安全协议会使用port_protocol中的值，则此参数无效。 **取值范围**： - SASL_SSL：使用SSL证书加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT：通过明文传输，支持账号密码认证，性能更好。 **默认取值**： 不涉及。
+    * kafkaSecurityProtocol  **参数解释**： 开启SASL后使用的安全协议。 **约束限制**： 若该字段值为空，默认开启SASL_SSL认证机制。实例创建后，此参数不支持动态修改。 若创建实例时，使用了port_protocol参数，则Kafka的内网访问安全协议以及公网访问安全协议会使用port_protocol中的值，则此参数无效。 **取值范围**： - SASL_SSL：使用SSL证书加密传输，支持账号密码认证，安全性更高。 [- SASL_PLAINTEXT：通过明文传输，支持账号密码认证，性能更好。](tag:cmcc,ctc,dt,fcs,g42,hk_g42,sbc,hk_sbc,hws,hws_hk,hws_eu,ax,tm,hk_tm,srg) **默认取值**： 不涉及。
     * saslEnabledMechanisms  **参数解释**： 开启SASL后使用的认证机制。 **约束限制**： 如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。若该字段值为空，默认开启PLAIN认证机制。
     * portProtocol  portProtocol
     * retentionPolicy  **参数解释**： 磁盘的容量到达容量阈值后，对于消息的处理策略。 **约束限制**： 不涉及。 **取值范围**： - produce_reject：表示拒绝消息写入。 - time_base：表示自动删除最老消息。 **默认取值**： 不涉及。
-    * ipv6Enable  **参数解释**： 是否开启IPv6。 **约束限制**： 仅在虚拟私有云支持IPv6时生效。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * ipv6Enable  **参数解释**： 是否开启IPv6。 **约束限制**： 仅在虚拟私有云支持IPv6时生效。[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     * diskEncryptedEnable  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * connectorEnable  **参数解释**： 是否开启Smart Connect功能。Smart Connect用于Kafka实例和其他云服务之间的数据同步，或者两个Kafka实例之间的数据同步，实现数据的备份或迁移。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
-    * enableAutoTopic  **参数解释**： 是否开启kafka自动创建Topic功能。当您选择开启，向一个未创建的Topic生产或消费消息时，系统会自动创建此Topic。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
-    * storageSpecCode  **参数解释**： 云硬盘类型。[如何选择磁盘类型请参考《云硬盘 [产品介绍](tag:hws,hws_hk,hws_eu,cmcc)[用户指南](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb,ax)》的“磁盘类型及性能介绍”。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax) **默认取值**： 不涉及。
+    * connectorEnable  **参数解释**： 是否开启Smart Connect功能。Smart Connect用于Kafka实例和其他云服务之间的数据同步，或者两个Kafka实例之间的数据同步，实现数据的备份或迁移。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * enableAutoTopic  **参数解释**： 是否开启kafka自动创建Topic功能。当您选择开启，向一个未创建的Topic生产或消费消息时，系统会自动创建此Topic。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * storageSpecCode  **参数解释**： 云硬盘类型。[如何选择磁盘类型请参考[[《云硬盘 产品介绍》](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0014580744.html)](tag:hws)[[《云硬盘 产品介绍》](https://support.huaweicloud.com/intl/zh-cn/productdesc-evs/zh-cn_topic_0014580744.html)](tag:hws_hk)[[《云硬盘 产品介绍》](https://support.huaweicloud.com/eu/productdesc-evs/en-us_topic_0014580744.html)](tag:hws_eu)[《云硬盘 产品介绍》](tag:cmcc)[《云硬盘 用户指南》](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb,ax,hk_sbc,srg)的“磁盘类型及性能介绍”。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,cmcc,sbc,hk_sbc,srg) **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 [- dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) [- dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax) **默认取值**： 不涉及。
     * enterpriseProjectId  **参数解释**： 企业项目ID。 **约束限制**： 若为企业项目账号，该参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * tags  **参数解释**： Kafka实例的标签信息。 **约束限制**： 不涉及。
     * archType  **参数解释**： CPU架构。 **约束限制**： 不涉及。 **取值范围**： - X86 [- ARM](tag:hcs,fcs,ctc) **默认取值**： 不涉及。
@@ -196,32 +196,32 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * name  **参数解释**： 实例名称。 **约束限制**： 由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * description  **参数解释**： 实例的描述信息。 **约束限制**： 长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs,fcs) \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\\\\\或者\\\\\"。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及 **取值范围**： kafka **默认取值**： 不涉及。
-    * engineVersion  **参数解释**： 消息引擎的版本。 **约束限制**： 不涉及 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc,hws_eu) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax) **默认取值**： 不涉及。
+    * engineVersion  **参数解释**： 消息引擎的版本。 **约束限制**： 不涉及 **取值范围**： [- 1.1.0](tag:hws,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc,hk_sbc,cmcc,ax,srg) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,cmcc,ocb,hws_ocb) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hk_sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax,cmcc,srg) **默认取值**： 不涉及。
     * brokerNum  **参数解释**： 代理个数。 **约束限制**： 不涉及。 **取值范围**： [- Kafka实例规格为kafka.2u4g.cluster.small时，代理数取值范围3-30。](tag:hws,hws_hk,hws_eu,dt,ax) - Kafka实例规格为kafka.2u4g.cluster时，代理数取值范围3-30。 - Kafka实例规格为kafka.4u8g.cluster时，代理数取值范围3-30。 - Kafka实例规格为kafka.8u16g.cluster时，代理数取值范围3-50。 - Kafka实例规格为kafka.12u24g.cluster时，代理数取值范围3-50。 - Kafka实例规格为kafka.16u32g.cluster时，代理数取值范围3-50。 **默认取值**： 不涉及。
-    * storageSpace  **参数解释**： 消息存储空间，单位GB。 **约束限制**： 不涉及。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [- Kafka实例规格为s6.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs) **默认取值**： 不涉及。
+    * storageSpace  **参数解释**： 消息存储空间，单位GB。 **约束限制**： 磁盘容量仅支持设置为100的整数倍。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,cmcc,sbc,hk_sbc,srg) [- Kafka实例规格为s6.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs) **默认取值**： 不涉及。
     * accessUser  **参数解释**：  认证用户名。 **约束限制**： 只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * password  **参数解释**： 实例的认证密码。 **约束限制**： - 当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。 - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的三种组合：   - 小写字母。   - 大写字母。   - 数字。   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）和空格，并且不能以-开头。    **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * vpcId  **参数解释**：  虚拟私有云ID。获取方法如下：参考《虚拟私有云 API参考》，调用“查询VPC列表”接口，从响应体中获取VPC ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * securityGroupId  **参数解释**： 指定实例所属的安全组。获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * subnetId  **参数解释**： 子网信息。获取方法如下：参考《虚拟私有云 API参考》，调用“查询子网列表”接口，从响应体中获取子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vpcId  **参数解释**：  虚拟私有云ID。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_apiv3_0003.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_apiv3_0003.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_apiv3_0003.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询VPC列表”接口，从响应体中获取VPC ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 指定实例所属的安全组。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_apiv3_0011.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_apiv3_0011.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_apiv3_0011.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 子网信息。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_subnet01_0003.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_subnet01_0003.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询子网列表”接口，从响应体中获取子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * availableZones  **参数解释**： 创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。 **约束限制**： 该参数不能为空数组或者数组的值为空。  创建Kafka实例，节点需要部署在1个或3个及以上可用区中。如果部署在多个可用区中，以英文逗号隔开多个可用区ID。
     * productId  **参数解释**： 产品ID。产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * maintainBegin  **参数解释**： 维护时间窗开始时间。 **约束限制**： 格式为HH:mm。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * maintainEnd  **参数解释**： 维护时间窗结束时间。 **约束限制**： 格式为HH:mm。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * enablePublicip  **参数解释**： 是否开启公网访问功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     * tenantIps  **参数解释**： 创建实例时可以手动指定实例节点的内网IP地址，仅支持指定IPv4地址。 **约束限制**： 指定内网IP地址数量必须小于等于创建的节点数量。  如果指定的内网IP地址数量小于创建的节点数量时，系统会自动为剩余的节点随机分配内网IP地址。
-    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。 **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。[获取方法：参考[[《弹性公网IP API参考》](https://support.huaweicloud.com/api-eip/ListPublicipsV3.html)](tag:hws)[[《弹性公网IP API参考》](https://support.huaweicloud.com/intl/zh-cn/api-eip/ListPublicipsV3.html)](tag:hws_hk)[[《弹性公网IP API参考》](https://support.huaweicloud.com/eu/api-eip/ListPublicipsV3.html)](tag:hws_eu)[《弹性公网IP API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询弹性公网IP列表”接口，从响应体中获取弹性公网IP的ID。](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,srg,dt,ocb,hws_ocb,hcs,fcs,hws,hws_hk,hws_eu) **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * sslEnable  **参数解释**： 是否开启SASL加密访问。  [实例创建后将不支持动态开启和关闭。](tag:ocb,hws_ocb,hcs) **约束限制**： 不涉及。 **取值范围**： - true：开启SASL加密访问。 - false：关闭SASL加密访问。 **默认取值**： 不涉及。
-    * kafkaSecurityProtocol  **参数解释**： 开启SASL后使用的安全协议。 **约束限制**： 若该字段值为空，默认开启SASL_SSL认证机制。实例创建后，此参数不支持动态修改。 若创建实例时，使用了port_protocol参数，则Kafka的内网访问安全协议以及公网访问安全协议会使用port_protocol中的值，则此参数无效。 **取值范围**： - SASL_SSL：使用SSL证书加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT：通过明文传输，支持账号密码认证，性能更好。 **默认取值**： 不涉及。
+    * kafkaSecurityProtocol  **参数解释**： 开启SASL后使用的安全协议。 **约束限制**： 若该字段值为空，默认开启SASL_SSL认证机制。实例创建后，此参数不支持动态修改。 若创建实例时，使用了port_protocol参数，则Kafka的内网访问安全协议以及公网访问安全协议会使用port_protocol中的值，则此参数无效。 **取值范围**： - SASL_SSL：使用SSL证书加密传输，支持账号密码认证，安全性更高。 [- SASL_PLAINTEXT：通过明文传输，支持账号密码认证，性能更好。](tag:cmcc,ctc,dt,fcs,g42,hk_g42,sbc,hk_sbc,hws,hws_hk,hws_eu,ax,tm,hk_tm,srg) **默认取值**： 不涉及。
     * saslEnabledMechanisms  **参数解释**： 开启SASL后使用的认证机制。 **约束限制**： 如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。若该字段值为空，默认开启PLAIN认证机制。
     * portProtocol  portProtocol
     * retentionPolicy  **参数解释**： 磁盘的容量到达容量阈值后，对于消息的处理策略。 **约束限制**： 不涉及。 **取值范围**： - produce_reject：表示拒绝消息写入。 - time_base：表示自动删除最老消息。 **默认取值**： 不涉及。
-    * ipv6Enable  **参数解释**： 是否开启IPv6。 **约束限制**： 仅在虚拟私有云支持IPv6时生效。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * ipv6Enable  **参数解释**： 是否开启IPv6。 **约束限制**： 仅在虚拟私有云支持IPv6时生效。[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     * diskEncryptedEnable  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * connectorEnable  **参数解释**： 是否开启Smart Connect功能。Smart Connect用于Kafka实例和其他云服务之间的数据同步，或者两个Kafka实例之间的数据同步，实现数据的备份或迁移。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
-    * enableAutoTopic  **参数解释**： 是否开启kafka自动创建Topic功能。当您选择开启，向一个未创建的Topic生产或消费消息时，系统会自动创建此Topic。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
-    * storageSpecCode  **参数解释**： 云硬盘类型。[如何选择磁盘类型请参考《云硬盘 [产品介绍](tag:hws,hws_hk,hws_eu,cmcc)[用户指南](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb,ax)》的“磁盘类型及性能介绍”。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax) **默认取值**： 不涉及。
+    * connectorEnable  **参数解释**： 是否开启Smart Connect功能。Smart Connect用于Kafka实例和其他云服务之间的数据同步，或者两个Kafka实例之间的数据同步，实现数据的备份或迁移。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * enableAutoTopic  **参数解释**： 是否开启kafka自动创建Topic功能。当您选择开启，向一个未创建的Topic生产或消费消息时，系统会自动创建此Topic。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * storageSpecCode  **参数解释**： 云硬盘类型。[如何选择磁盘类型请参考[[《云硬盘 产品介绍》](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0014580744.html)](tag:hws)[[《云硬盘 产品介绍》](https://support.huaweicloud.com/intl/zh-cn/productdesc-evs/zh-cn_topic_0014580744.html)](tag:hws_hk)[[《云硬盘 产品介绍》](https://support.huaweicloud.com/eu/productdesc-evs/en-us_topic_0014580744.html)](tag:hws_eu)[《云硬盘 产品介绍》](tag:cmcc)[《云硬盘 用户指南》](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb,ax,hk_sbc,srg)的“磁盘类型及性能介绍”。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,cmcc,sbc,hk_sbc,srg) **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 [- dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) [- dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax) **默认取值**： 不涉及。
     * enterpriseProjectId  **参数解释**： 企业项目ID。 **约束限制**： 若为企业项目账号，该参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * tags  **参数解释**： Kafka实例的标签信息。 **约束限制**： 不涉及。
     * archType  **参数解释**： CPU架构。 **约束限制**： 不涉及。 **取值范围**： - X86 [- ARM](tag:hcs,fcs,ctc) **默认取值**： 不涉及。
@@ -272,32 +272,32 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * name  **参数解释**： 实例名称。 **约束限制**： 由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * description  **参数解释**： 实例的描述信息。 **约束限制**： 长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs,fcs) \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\\\\\或者\\\\\"。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及 **取值范围**： kafka **默认取值**： 不涉及。
-    * engineVersion  **参数解释**： 消息引擎的版本。 **约束限制**： 不涉及 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc,hws_eu) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax) **默认取值**： 不涉及。
+    * engineVersion  **参数解释**： 消息引擎的版本。 **约束限制**： 不涉及 **取值范围**： [- 1.1.0](tag:hws,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc,hk_sbc,cmcc,ax,srg) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,cmcc,ocb,hws_ocb) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hk_sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax,cmcc,srg) **默认取值**： 不涉及。
     * brokerNum  **参数解释**： 代理个数。 **约束限制**： 不涉及。 **取值范围**： [- Kafka实例规格为kafka.2u4g.cluster.small时，代理数取值范围3-30。](tag:hws,hws_hk,hws_eu,dt,ax) - Kafka实例规格为kafka.2u4g.cluster时，代理数取值范围3-30。 - Kafka实例规格为kafka.4u8g.cluster时，代理数取值范围3-30。 - Kafka实例规格为kafka.8u16g.cluster时，代理数取值范围3-50。 - Kafka实例规格为kafka.12u24g.cluster时，代理数取值范围3-50。 - Kafka实例规格为kafka.16u32g.cluster时，代理数取值范围3-50。 **默认取值**： 不涉及。
-    * storageSpace  **参数解释**： 消息存储空间，单位GB。 **约束限制**： 不涉及。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [- Kafka实例规格为s6.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs) **默认取值**： 不涉及。
+    * storageSpace  **参数解释**： 消息存储空间，单位GB。 **约束限制**： 磁盘容量仅支持设置为100的整数倍。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,cmcc,sbc,hk_sbc,srg) [- Kafka实例规格为s6.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs) **默认取值**： 不涉及。
     * accessUser  **参数解释**：  认证用户名。 **约束限制**： 只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * password  **参数解释**： 实例的认证密码。 **约束限制**： - 当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。 - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的三种组合：   - 小写字母。   - 大写字母。   - 数字。   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）和空格，并且不能以-开头。    **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * vpcId  **参数解释**：  虚拟私有云ID。获取方法如下：参考《虚拟私有云 API参考》，调用“查询VPC列表”接口，从响应体中获取VPC ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * securityGroupId  **参数解释**： 指定实例所属的安全组。获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * subnetId  **参数解释**： 子网信息。获取方法如下：参考《虚拟私有云 API参考》，调用“查询子网列表”接口，从响应体中获取子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vpcId  **参数解释**：  虚拟私有云ID。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_apiv3_0003.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_apiv3_0003.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_apiv3_0003.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询VPC列表”接口，从响应体中获取VPC ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 指定实例所属的安全组。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_apiv3_0011.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_apiv3_0011.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_apiv3_0011.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 子网信息。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_subnet01_0003.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_subnet01_0003.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询子网列表”接口，从响应体中获取子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * availableZones  **参数解释**： 创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。 **约束限制**： 该参数不能为空数组或者数组的值为空。  创建Kafka实例，节点需要部署在1个或3个及以上可用区中。如果部署在多个可用区中，以英文逗号隔开多个可用区ID。
     * productId  **参数解释**： 产品ID。产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * maintainBegin  **参数解释**： 维护时间窗开始时间。 **约束限制**： 格式为HH:mm。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * maintainEnd  **参数解释**： 维护时间窗结束时间。 **约束限制**： 格式为HH:mm。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * enablePublicip  **参数解释**： 是否开启公网访问功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     * tenantIps  **参数解释**： 创建实例时可以手动指定实例节点的内网IP地址，仅支持指定IPv4地址。 **约束限制**： 指定内网IP地址数量必须小于等于创建的节点数量。  如果指定的内网IP地址数量小于创建的节点数量时，系统会自动为剩余的节点随机分配内网IP地址。
-    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。 **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。[获取方法：参考[[《弹性公网IP API参考》](https://support.huaweicloud.com/api-eip/ListPublicipsV3.html)](tag:hws)[[《弹性公网IP API参考》](https://support.huaweicloud.com/intl/zh-cn/api-eip/ListPublicipsV3.html)](tag:hws_hk)[[《弹性公网IP API参考》](https://support.huaweicloud.com/eu/api-eip/ListPublicipsV3.html)](tag:hws_eu)[《弹性公网IP API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询弹性公网IP列表”接口，从响应体中获取弹性公网IP的ID。](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,srg,dt,ocb,hws_ocb,hcs,fcs,hws,hws_hk,hws_eu) **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * sslEnable  **参数解释**： 是否开启SASL加密访问。  [实例创建后将不支持动态开启和关闭。](tag:ocb,hws_ocb,hcs) **约束限制**： 不涉及。 **取值范围**： - true：开启SASL加密访问。 - false：关闭SASL加密访问。 **默认取值**： 不涉及。
-    * kafkaSecurityProtocol  **参数解释**： 开启SASL后使用的安全协议。 **约束限制**： 若该字段值为空，默认开启SASL_SSL认证机制。实例创建后，此参数不支持动态修改。 若创建实例时，使用了port_protocol参数，则Kafka的内网访问安全协议以及公网访问安全协议会使用port_protocol中的值，则此参数无效。 **取值范围**： - SASL_SSL：使用SSL证书加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT：通过明文传输，支持账号密码认证，性能更好。 **默认取值**： 不涉及。
+    * kafkaSecurityProtocol  **参数解释**： 开启SASL后使用的安全协议。 **约束限制**： 若该字段值为空，默认开启SASL_SSL认证机制。实例创建后，此参数不支持动态修改。 若创建实例时，使用了port_protocol参数，则Kafka的内网访问安全协议以及公网访问安全协议会使用port_protocol中的值，则此参数无效。 **取值范围**： - SASL_SSL：使用SSL证书加密传输，支持账号密码认证，安全性更高。 [- SASL_PLAINTEXT：通过明文传输，支持账号密码认证，性能更好。](tag:cmcc,ctc,dt,fcs,g42,hk_g42,sbc,hk_sbc,hws,hws_hk,hws_eu,ax,tm,hk_tm,srg) **默认取值**： 不涉及。
     * saslEnabledMechanisms  **参数解释**： 开启SASL后使用的认证机制。 **约束限制**： 如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。若该字段值为空，默认开启PLAIN认证机制。
     * portProtocol  portProtocol
     * retentionPolicy  **参数解释**： 磁盘的容量到达容量阈值后，对于消息的处理策略。 **约束限制**： 不涉及。 **取值范围**： - produce_reject：表示拒绝消息写入。 - time_base：表示自动删除最老消息。 **默认取值**： 不涉及。
-    * ipv6Enable  **参数解释**： 是否开启IPv6。 **约束限制**： 仅在虚拟私有云支持IPv6时生效。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * ipv6Enable  **参数解释**： 是否开启IPv6。 **约束限制**： 仅在虚拟私有云支持IPv6时生效。[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     * diskEncryptedEnable  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * connectorEnable  **参数解释**： 是否开启Smart Connect功能。Smart Connect用于Kafka实例和其他云服务之间的数据同步，或者两个Kafka实例之间的数据同步，实现数据的备份或迁移。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
-    * enableAutoTopic  **参数解释**： 是否开启kafka自动创建Topic功能。当您选择开启，向一个未创建的Topic生产或消费消息时，系统会自动创建此Topic。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
-    * storageSpecCode  **参数解释**： 云硬盘类型。[如何选择磁盘类型请参考《云硬盘 [产品介绍](tag:hws,hws_hk,hws_eu,cmcc)[用户指南](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb,ax)》的“磁盘类型及性能介绍”。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax) **默认取值**： 不涉及。
+    * connectorEnable  **参数解释**： 是否开启Smart Connect功能。Smart Connect用于Kafka实例和其他云服务之间的数据同步，或者两个Kafka实例之间的数据同步，实现数据的备份或迁移。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * enableAutoTopic  **参数解释**： 是否开启kafka自动创建Topic功能。当您选择开启，向一个未创建的Topic生产或消费消息时，系统会自动创建此Topic。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * storageSpecCode  **参数解释**： 云硬盘类型。[如何选择磁盘类型请参考[[《云硬盘 产品介绍》](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0014580744.html)](tag:hws)[[《云硬盘 产品介绍》](https://support.huaweicloud.com/intl/zh-cn/productdesc-evs/zh-cn_topic_0014580744.html)](tag:hws_hk)[[《云硬盘 产品介绍》](https://support.huaweicloud.com/eu/productdesc-evs/en-us_topic_0014580744.html)](tag:hws_eu)[《云硬盘 产品介绍》](tag:cmcc)[《云硬盘 用户指南》](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb,ax,hk_sbc,srg)的“磁盘类型及性能介绍”。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,cmcc,sbc,hk_sbc,srg) **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 [- dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) [- dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax) **默认取值**： 不涉及。
     * enterpriseProjectId  **参数解释**： 企业项目ID。 **约束限制**： 若为企业项目账号，该参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * tags  **参数解释**： Kafka实例的标签信息。 **约束限制**： 不涉及。
     * archType  **参数解释**： CPU架构。 **约束限制**： 不涉及。 **取值范围**： - X86 [- ARM](tag:hcs,fcs,ctc) **默认取值**： 不涉及。
@@ -348,32 +348,32 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * name  **参数解释**： 实例名称。 **约束限制**： 由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * description  **参数解释**： 实例的描述信息。 **约束限制**： 长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs,fcs) \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\\\\\或者\\\\\"。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * engine  **参数解释**： 消息引擎。 **约束限制**： 不涉及 **取值范围**： kafka **默认取值**： 不涉及。
-    * engineVersion  **参数解释**： 消息引擎的版本。 **约束限制**： 不涉及 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc,hws_eu) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax) **默认取值**： 不涉及。
+    * engineVersion  **参数解释**： 消息引擎的版本。 **约束限制**： 不涉及 **取值范围**： [- 1.1.0](tag:hws,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc,hk_sbc,cmcc,ax,srg) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,cmcc,ocb,hws_ocb) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hk_sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax,cmcc,srg) **默认取值**： 不涉及。
     * brokerNum  **参数解释**： 代理个数。 **约束限制**： 不涉及。 **取值范围**： [- Kafka实例规格为kafka.2u4g.cluster.small时，代理数取值范围3-30。](tag:hws,hws_hk,hws_eu,dt,ax) - Kafka实例规格为kafka.2u4g.cluster时，代理数取值范围3-30。 - Kafka实例规格为kafka.4u8g.cluster时，代理数取值范围3-30。 - Kafka实例规格为kafka.8u16g.cluster时，代理数取值范围3-50。 - Kafka实例规格为kafka.12u24g.cluster时，代理数取值范围3-50。 - Kafka实例规格为kafka.16u32g.cluster时，代理数取值范围3-50。 **默认取值**： 不涉及。
-    * storageSpace  **参数解释**： 消息存储空间，单位GB。 **约束限制**： 不涉及。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [- Kafka实例规格为s6.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs) **默认取值**： 不涉及。
+    * storageSpace  **参数解释**： 消息存储空间，单位GB。 **约束限制**： 磁盘容量仅支持设置为100的整数倍。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,cmcc,sbc,hk_sbc,srg) [- Kafka实例规格为s6.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs) **默认取值**： 不涉及。
     * accessUser  **参数解释**：  认证用户名。 **约束限制**： 只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * password  **参数解释**： 实例的认证密码。 **约束限制**： - 当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。 - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的三种组合：   - 小写字母。   - 大写字母。   - 数字。   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）和空格，并且不能以-开头。    **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * vpcId  **参数解释**：  虚拟私有云ID。获取方法如下：参考《虚拟私有云 API参考》，调用“查询VPC列表”接口，从响应体中获取VPC ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * securityGroupId  **参数解释**： 指定实例所属的安全组。获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * subnetId  **参数解释**： 子网信息。获取方法如下：参考《虚拟私有云 API参考》，调用“查询子网列表”接口，从响应体中获取子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * vpcId  **参数解释**：  虚拟私有云ID。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_apiv3_0003.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_apiv3_0003.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_apiv3_0003.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询VPC列表”接口，从响应体中获取VPC ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * securityGroupId  **参数解释**： 指定实例所属的安全组。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_apiv3_0011.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_apiv3_0011.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_apiv3_0011.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subnetId  **参数解释**： 子网信息。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_subnet01_0003.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_subnet01_0003.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询子网列表”接口，从响应体中获取子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * availableZones  **参数解释**： 创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。 **约束限制**： 该参数不能为空数组或者数组的值为空。  创建Kafka实例，节点需要部署在1个或3个及以上可用区中。如果部署在多个可用区中，以英文逗号隔开多个可用区ID。
     * productId  **参数解释**： 产品ID。产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * maintainBegin  **参数解释**： 维护时间窗开始时间。 **约束限制**： 格式为HH:mm。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * maintainEnd  **参数解释**： 维护时间窗结束时间。 **约束限制**： 格式为HH:mm。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * enablePublicip  **参数解释**： 是否开启公网访问功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     * tenantIps  **参数解释**： 创建实例时可以手动指定实例节点的内网IP地址，仅支持指定IPv4地址。 **约束限制**： 指定内网IP地址数量必须小于等于创建的节点数量。  如果指定的内网IP地址数量小于创建的节点数量时，系统会自动为剩余的节点随机分配内网IP地址。
-    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。 **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * publicipId  **参数解释**： 实例绑定的弹性IP地址的ID。[获取方法：参考[[《弹性公网IP API参考》](https://support.huaweicloud.com/api-eip/ListPublicipsV3.html)](tag:hws)[[《弹性公网IP API参考》](https://support.huaweicloud.com/intl/zh-cn/api-eip/ListPublicipsV3.html)](tag:hws_hk)[[《弹性公网IP API参考》](https://support.huaweicloud.com/eu/api-eip/ListPublicipsV3.html)](tag:hws_eu)[《弹性公网IP API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询弹性公网IP列表”接口，从响应体中获取弹性公网IP的ID。](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,srg,dt,ocb,hws_ocb,hcs,fcs,hws,hws_hk,hws_eu) **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * sslEnable  **参数解释**： 是否开启SASL加密访问。  [实例创建后将不支持动态开启和关闭。](tag:ocb,hws_ocb,hcs) **约束限制**： 不涉及。 **取值范围**： - true：开启SASL加密访问。 - false：关闭SASL加密访问。 **默认取值**： 不涉及。
-    * kafkaSecurityProtocol  **参数解释**： 开启SASL后使用的安全协议。 **约束限制**： 若该字段值为空，默认开启SASL_SSL认证机制。实例创建后，此参数不支持动态修改。 若创建实例时，使用了port_protocol参数，则Kafka的内网访问安全协议以及公网访问安全协议会使用port_protocol中的值，则此参数无效。 **取值范围**： - SASL_SSL：使用SSL证书加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT：通过明文传输，支持账号密码认证，性能更好。 **默认取值**： 不涉及。
+    * kafkaSecurityProtocol  **参数解释**： 开启SASL后使用的安全协议。 **约束限制**： 若该字段值为空，默认开启SASL_SSL认证机制。实例创建后，此参数不支持动态修改。 若创建实例时，使用了port_protocol参数，则Kafka的内网访问安全协议以及公网访问安全协议会使用port_protocol中的值，则此参数无效。 **取值范围**： - SASL_SSL：使用SSL证书加密传输，支持账号密码认证，安全性更高。 [- SASL_PLAINTEXT：通过明文传输，支持账号密码认证，性能更好。](tag:cmcc,ctc,dt,fcs,g42,hk_g42,sbc,hk_sbc,hws,hws_hk,hws_eu,ax,tm,hk_tm,srg) **默认取值**： 不涉及。
     * saslEnabledMechanisms  **参数解释**： 开启SASL后使用的认证机制。 **约束限制**： 如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。若该字段值为空，默认开启PLAIN认证机制。
     * portProtocol  portProtocol
     * retentionPolicy  **参数解释**： 磁盘的容量到达容量阈值后，对于消息的处理策略。 **约束限制**： 不涉及。 **取值范围**： - produce_reject：表示拒绝消息写入。 - time_base：表示自动删除最老消息。 **默认取值**： 不涉及。
-    * ipv6Enable  **参数解释**： 是否开启IPv6。 **约束限制**： 仅在虚拟私有云支持IPv6时生效。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * ipv6Enable  **参数解释**： 是否开启IPv6。 **约束限制**： 仅在虚拟私有云支持IPv6时生效。[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     * diskEncryptedEnable  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * connectorEnable  **参数解释**： 是否开启Smart Connect功能。Smart Connect用于Kafka实例和其他云服务之间的数据同步，或者两个Kafka实例之间的数据同步，实现数据的备份或迁移。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
-    * enableAutoTopic  **参数解释**： 是否开启kafka自动创建Topic功能。当您选择开启，向一个未创建的Topic生产或消费消息时，系统会自动创建此Topic。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
-    * storageSpecCode  **参数解释**： 云硬盘类型。[如何选择磁盘类型请参考《云硬盘 [产品介绍](tag:hws,hws_hk,hws_eu,cmcc)[用户指南](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb,ax)》的“磁盘类型及性能介绍”。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax) **默认取值**： 不涉及。
+    * connectorEnable  **参数解释**： 是否开启Smart Connect功能。Smart Connect用于Kafka实例和其他云服务之间的数据同步，或者两个Kafka实例之间的数据同步，实现数据的备份或迁移。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * enableAutoTopic  **参数解释**： 是否开启kafka自动创建Topic功能。当您选择开启，向一个未创建的Topic生产或消费消息时，系统会自动创建此Topic。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * storageSpecCode  **参数解释**： 云硬盘类型。[如何选择磁盘类型请参考[[《云硬盘 产品介绍》](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0014580744.html)](tag:hws)[[《云硬盘 产品介绍》](https://support.huaweicloud.com/intl/zh-cn/productdesc-evs/zh-cn_topic_0014580744.html)](tag:hws_hk)[[《云硬盘 产品介绍》](https://support.huaweicloud.com/eu/productdesc-evs/en-us_topic_0014580744.html)](tag:hws_eu)[《云硬盘 产品介绍》](tag:cmcc)[《云硬盘 用户指南》](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb,ax,hk_sbc,srg)的“磁盘类型及性能介绍”。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,cmcc,sbc,hk_sbc,srg) **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 [- dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) [- dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax) **默认取值**： 不涉及。
     * enterpriseProjectId  **参数解释**： 企业项目ID。 **约束限制**： 若为企业项目账号，该参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * tags  **参数解释**： Kafka实例的标签信息。 **约束限制**： 不涉及。
     * archType  **参数解释**： CPU架构。 **约束限制**： 不涉及。 **取值范围**： - X86 [- ARM](tag:hcs,fcs,ctc) **默认取值**： 不涉及。
@@ -728,7 +728,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets engineVersion
-    *  **参数解释**： 消息引擎的版本。 **约束限制**： 不涉及 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc,hws_eu) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax) **默认取值**： 不涉及。
+    *  **参数解释**： 消息引擎的版本。 **约束限制**： 不涉及 **取值范围**： [- 1.1.0](tag:hws,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc,hk_sbc,cmcc,ax,srg) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,cmcc,ocb,hws_ocb) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hk_sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax,cmcc,srg) **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -740,7 +740,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     /**
     * Sets engineVersion
     *
-    * @param string $engineVersion **参数解释**： 消息引擎的版本。 **约束限制**： 不涉及 **取值范围**： [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc,cmcc,ax) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc,hws_eu) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax) **默认取值**： 不涉及。
+    * @param string $engineVersion **参数解释**： 消息引擎的版本。 **约束限制**： 不涉及 **取值范围**： [- 1.1.0](tag:hws,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc,hk_sbc,cmcc,ax,srg) [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,cmcc,ocb,hws_ocb) - 2.7 [- 3.x](tag:hws,hws_hk,dt,sbc,hk_sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu,ax,cmcc,srg) **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -776,7 +776,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets storageSpace
-    *  **参数解释**： 消息存储空间，单位GB。 **约束限制**： 不涉及。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [- Kafka实例规格为s6.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs) **默认取值**： 不涉及。
+    *  **参数解释**： 消息存储空间，单位GB。 **约束限制**： 磁盘容量仅支持设置为100的整数倍。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,cmcc,sbc,hk_sbc,srg) [- Kafka实例规格为s6.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs) **默认取值**： 不涉及。
     *
     * @return int
     */
@@ -788,7 +788,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     /**
     * Sets storageSpace
     *
-    * @param int $storageSpace **参数解释**： 消息存储空间，单位GB。 **约束限制**： 不涉及。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [- Kafka实例规格为s6.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs) **默认取值**： 不涉及。
+    * @param int $storageSpace **参数解释**： 消息存储空间，单位GB。 **约束限制**： 磁盘容量仅支持设置为100的整数倍。 **取值范围**： [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。 - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。 - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 1500000GB。 - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 1500000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,cmcc,sbc,hk_sbc,srg) [- Kafka实例规格为s6.2u4g.cluster.small时，存储空间取值范围300GB~300000GB。](tag:hws,hws_hk,hws_eu,dt,ax) [- Kafka实例规格为kafka.2u8g.cluster时，存储空间取值范围300GB~300000GB。](tag:fcs) [- Kafka实例规格为kafka.4u16g.cluster时，存储空间取值范围300GB~600000GB。 - Kafka实例规格为kafka.8u32g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.16u64g.cluster时，存储空间取值范围300GB~1500000GB。 - Kafka实例规格为kafka.32u128g.cluster时，存储空间取值范围300GB~1500000GB。](tag:hcs,fcs) **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -848,7 +848,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  **参数解释**：  虚拟私有云ID。获取方法如下：参考《虚拟私有云 API参考》，调用“查询VPC列表”接口，从响应体中获取VPC ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *  **参数解释**：  虚拟私有云ID。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_apiv3_0003.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_apiv3_0003.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_apiv3_0003.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询VPC列表”接口，从响应体中获取VPC ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -860,7 +860,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string $vpcId **参数解释**：  虚拟私有云ID。获取方法如下：参考《虚拟私有云 API参考》，调用“查询VPC列表”接口，从响应体中获取VPC ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string $vpcId **参数解释**：  虚拟私有云ID。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_apiv3_0003.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_apiv3_0003.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_apiv3_0003.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询VPC列表”接口，从响应体中获取VPC ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -872,7 +872,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
-    *  **参数解释**： 指定实例所属的安全组。获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *  **参数解释**： 指定实例所属的安全组。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_apiv3_0011.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_apiv3_0011.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_apiv3_0011.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -884,7 +884,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string $securityGroupId **参数解释**： 指定实例所属的安全组。获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string $securityGroupId **参数解释**： 指定实例所属的安全组。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_apiv3_0011.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_apiv3_0011.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_apiv3_0011.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询安全组列表”接口，从响应体中获取安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -896,7 +896,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  **参数解释**： 子网信息。获取方法如下：参考《虚拟私有云 API参考》，调用“查询子网列表”接口，从响应体中获取子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *  **参数解释**： 子网信息。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_subnet01_0003.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_subnet01_0003.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询子网列表”接口，从响应体中获取子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -908,7 +908,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string $subnetId **参数解释**： 子网信息。获取方法如下：参考《虚拟私有云 API参考》，调用“查询子网列表”接口，从响应体中获取子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string $subnetId **参数解释**： 子网信息。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_subnet01_0003.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_subnet01_0003.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询子网列表”接口，从响应体中获取子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1064,7 +1064,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicipId
-    *  **参数解释**： 实例绑定的弹性IP地址的ID。 **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *  **参数解释**： 实例绑定的弹性IP地址的ID。[获取方法：参考[[《弹性公网IP API参考》](https://support.huaweicloud.com/api-eip/ListPublicipsV3.html)](tag:hws)[[《弹性公网IP API参考》](https://support.huaweicloud.com/intl/zh-cn/api-eip/ListPublicipsV3.html)](tag:hws_hk)[[《弹性公网IP API参考》](https://support.huaweicloud.com/eu/api-eip/ListPublicipsV3.html)](tag:hws_eu)[《弹性公网IP API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询弹性公网IP列表”接口，从响应体中获取弹性公网IP的ID。](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,srg,dt,ocb,hws_ocb,hcs,fcs,hws,hws_hk,hws_eu) **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1076,7 +1076,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     /**
     * Sets publicipId
     *
-    * @param string|null $publicipId **参数解释**： 实例绑定的弹性IP地址的ID。 **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string|null $publicipId **参数解释**： 实例绑定的弹性IP地址的ID。[获取方法：参考[[《弹性公网IP API参考》](https://support.huaweicloud.com/api-eip/ListPublicipsV3.html)](tag:hws)[[《弹性公网IP API参考》](https://support.huaweicloud.com/intl/zh-cn/api-eip/ListPublicipsV3.html)](tag:hws_hk)[[《弹性公网IP API参考》](https://support.huaweicloud.com/eu/api-eip/ListPublicipsV3.html)](tag:hws_eu)[《弹性公网IP API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,srg,dt,ocb,hws_ocb,hcs,fcs)，调用“查询弹性公网IP列表”接口，从响应体中获取弹性公网IP的ID。](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,srg,dt,ocb,hws_ocb,hcs,fcs,hws,hws_hk,hws_eu) **约束限制**： 以英文逗号隔开多个弹性IP地址的ID。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1112,7 +1112,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets kafkaSecurityProtocol
-    *  **参数解释**： 开启SASL后使用的安全协议。 **约束限制**： 若该字段值为空，默认开启SASL_SSL认证机制。实例创建后，此参数不支持动态修改。 若创建实例时，使用了port_protocol参数，则Kafka的内网访问安全协议以及公网访问安全协议会使用port_protocol中的值，则此参数无效。 **取值范围**： - SASL_SSL：使用SSL证书加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT：通过明文传输，支持账号密码认证，性能更好。 **默认取值**： 不涉及。
+    *  **参数解释**： 开启SASL后使用的安全协议。 **约束限制**： 若该字段值为空，默认开启SASL_SSL认证机制。实例创建后，此参数不支持动态修改。 若创建实例时，使用了port_protocol参数，则Kafka的内网访问安全协议以及公网访问安全协议会使用port_protocol中的值，则此参数无效。 **取值范围**： - SASL_SSL：使用SSL证书加密传输，支持账号密码认证，安全性更高。 [- SASL_PLAINTEXT：通过明文传输，支持账号密码认证，性能更好。](tag:cmcc,ctc,dt,fcs,g42,hk_g42,sbc,hk_sbc,hws,hws_hk,hws_eu,ax,tm,hk_tm,srg) **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -1124,7 +1124,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     /**
     * Sets kafkaSecurityProtocol
     *
-    * @param string|null $kafkaSecurityProtocol **参数解释**： 开启SASL后使用的安全协议。 **约束限制**： 若该字段值为空，默认开启SASL_SSL认证机制。实例创建后，此参数不支持动态修改。 若创建实例时，使用了port_protocol参数，则Kafka的内网访问安全协议以及公网访问安全协议会使用port_protocol中的值，则此参数无效。 **取值范围**： - SASL_SSL：使用SSL证书加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT：通过明文传输，支持账号密码认证，性能更好。 **默认取值**： 不涉及。
+    * @param string|null $kafkaSecurityProtocol **参数解释**： 开启SASL后使用的安全协议。 **约束限制**： 若该字段值为空，默认开启SASL_SSL认证机制。实例创建后，此参数不支持动态修改。 若创建实例时，使用了port_protocol参数，则Kafka的内网访问安全协议以及公网访问安全协议会使用port_protocol中的值，则此参数无效。 **取值范围**： - SASL_SSL：使用SSL证书加密传输，支持账号密码认证，安全性更高。 [- SASL_PLAINTEXT：通过明文传输，支持账号密码认证，性能更好。](tag:cmcc,ctc,dt,fcs,g42,hk_g42,sbc,hk_sbc,hws,hws_hk,hws_eu,ax,tm,hk_tm,srg) **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1208,7 +1208,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6Enable
-    *  **参数解释**： 是否开启IPv6。 **约束限制**： 仅在虚拟私有云支持IPv6时生效。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    *  **参数解释**： 是否开启IPv6。 **约束限制**： 仅在虚拟私有云支持IPv6时生效。[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     *
     * @return bool|null
     */
@@ -1220,7 +1220,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6Enable
     *
-    * @param bool|null $ipv6Enable **参数解释**： 是否开启IPv6。 **约束限制**： 仅在虚拟私有云支持IPv6时生效。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * @param bool|null $ipv6Enable **参数解释**： 是否开启IPv6。 **约束限制**： 仅在虚拟私有云支持IPv6时生效。[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     *
     * @return $this
     */
@@ -1280,7 +1280,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets connectorEnable
-    *  **参数解释**： 是否开启Smart Connect功能。Smart Connect用于Kafka实例和其他云服务之间的数据同步，或者两个Kafka实例之间的数据同步，实现数据的备份或迁移。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    *  **参数解释**： 是否开启Smart Connect功能。Smart Connect用于Kafka实例和其他云服务之间的数据同步，或者两个Kafka实例之间的数据同步，实现数据的备份或迁移。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     *
     * @return bool|null
     */
@@ -1292,7 +1292,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     /**
     * Sets connectorEnable
     *
-    * @param bool|null $connectorEnable **参数解释**： 是否开启Smart Connect功能。Smart Connect用于Kafka实例和其他云服务之间的数据同步，或者两个Kafka实例之间的数据同步，实现数据的备份或迁移。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * @param bool|null $connectorEnable **参数解释**： 是否开启Smart Connect功能。Smart Connect用于Kafka实例和其他云服务之间的数据同步，或者两个Kafka实例之间的数据同步，实现数据的备份或迁移。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     *
     * @return $this
     */
@@ -1304,7 +1304,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableAutoTopic
-    *  **参数解释**： 是否开启kafka自动创建Topic功能。当您选择开启，向一个未创建的Topic生产或消费消息时，系统会自动创建此Topic。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    *  **参数解释**： 是否开启kafka自动创建Topic功能。当您选择开启，向一个未创建的Topic生产或消费消息时，系统会自动创建此Topic。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     *
     * @return bool|null
     */
@@ -1316,7 +1316,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     /**
     * Sets enableAutoTopic
     *
-    * @param bool|null $enableAutoTopic **参数解释**： 是否开启kafka自动创建Topic功能。当您选择开启，向一个未创建的Topic生产或消费消息时，系统会自动创建此Topic。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * @param bool|null $enableAutoTopic **参数解释**： 是否开启kafka自动创建Topic功能。当您选择开启，向一个未创建的Topic生产或消费消息时，系统会自动创建此Topic。 **约束限制**： [不涉及。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,sbc,hk_sbc,srg,fcs,cmcc)[华为云Stack不支持此参数。](tag:hcs) **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
     *
     * @return $this
     */
@@ -1328,7 +1328,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets storageSpecCode
-    *  **参数解释**： 云硬盘类型。[如何选择磁盘类型请参考《云硬盘 [产品介绍](tag:hws,hws_hk,hws_eu,cmcc)[用户指南](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb,ax)》的“磁盘类型及性能介绍”。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax) **默认取值**： 不涉及。
+    *  **参数解释**： 云硬盘类型。[如何选择磁盘类型请参考[[《云硬盘 产品介绍》](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0014580744.html)](tag:hws)[[《云硬盘 产品介绍》](https://support.huaweicloud.com/intl/zh-cn/productdesc-evs/zh-cn_topic_0014580744.html)](tag:hws_hk)[[《云硬盘 产品介绍》](https://support.huaweicloud.com/eu/productdesc-evs/en-us_topic_0014580744.html)](tag:hws_eu)[《云硬盘 产品介绍》](tag:cmcc)[《云硬盘 用户指南》](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb,ax,hk_sbc,srg)的“磁盘类型及性能介绍”。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,cmcc,sbc,hk_sbc,srg) **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 [- dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) [- dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax) **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -1340,7 +1340,7 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     /**
     * Sets storageSpecCode
     *
-    * @param string $storageSpecCode **参数解释**： 云硬盘类型。[如何选择磁盘类型请参考《云硬盘 [产品介绍](tag:hws,hws_hk,hws_eu,cmcc)[用户指南](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb,ax)》的“磁盘类型及性能介绍”。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 - [dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) - [dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax) **默认取值**： 不涉及。
+    * @param string $storageSpecCode **参数解释**： 云硬盘类型。[如何选择磁盘类型请参考[[《云硬盘 产品介绍》](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0014580744.html)](tag:hws)[[《云硬盘 产品介绍》](https://support.huaweicloud.com/intl/zh-cn/productdesc-evs/zh-cn_topic_0014580744.html)](tag:hws_hk)[[《云硬盘 产品介绍》](https://support.huaweicloud.com/eu/productdesc-evs/en-us_topic_0014580744.html)](tag:hws_eu)[《云硬盘 产品介绍》](tag:cmcc)[《云硬盘 用户指南》](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb,ax,hk_sbc,srg)的“磁盘类型及性能介绍”。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax,cmcc,sbc,hk_sbc,srg) **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 [- dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) [- dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax) **默认取值**： 不涉及。
     *
     * @return $this
     */

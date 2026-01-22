@@ -20,8 +20,8 @@ class ConsumerList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topics  **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。
-    * total  **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **取值范围**： 不涉及。
+    * topics  **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ConsumerList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topics  **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。
-    * total  **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **取值范围**： 不涉及。
+    * topics  **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ConsumerList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topics  **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。
-    * total  **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **取值范围**： 不涉及。
+    * topics  **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ConsumerList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topics  **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。
-    * total  **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **取值范围**： 不涉及。
+    * topics  **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ConsumerList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topics  **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。
-    * total  **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **取值范围**： 不涉及。
+    * topics  **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ConsumerList implements ModelInterface, ArrayAccess
 
     /**
     * Gets topics
-    *  **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。
+    *  **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -197,7 +197,7 @@ class ConsumerList implements ModelInterface, ArrayAccess
     /**
     * Sets topics
     *
-    * @param string[]|null $topics **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。
+    * @param string[]|null $topics **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ConsumerList implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **取值范围**： 不涉及。
+    *  **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class ConsumerList implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **取值范围**： 不涉及。
+    * @param int|null $total **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
