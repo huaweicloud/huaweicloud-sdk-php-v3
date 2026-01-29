@@ -20,6 +20,7 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  package唯一标识id，由服务创建并在查询时返回，修改endpoints时需要携带。
     * url  客户自定义的拉流地址，包括方法、域名、路径
     * streamSelection  从全量流中过滤出一个码率在[min, max]区间的流。如果不需要码率过滤可不选。
     * hlsVersion  HLS版本号
@@ -38,10 +39,12 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
     * originDomainSlave  源站分发域名-备region 满足正则：^(\\[a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.){2,}[a-zA-Z]{2,16}$ 最大长度255
     * manifestName  output的索引文件名字 默认：index 长度：0-128 字符集：大小写字母、数字、\"-\"、\".\"、\"_\"，不能有/路径
     * slaveUrl  客户自定义的拉流地址，包括方法、域名、路径
+    * manifestSelection  manifestSelection
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'id' => 'string',
             'url' => 'string',
             'streamSelection' => '\HuaweiCloud\SDK\Live\V1\Model\StreamSelectionItem[]',
             'hlsVersion' => 'string',
@@ -59,11 +62,13 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
             'originDomainMaster' => 'string',
             'originDomainSlave' => 'string',
             'manifestName' => 'string',
-            'slaveUrl' => 'string'
+            'slaveUrl' => 'string',
+            'manifestSelection' => '\HuaweiCloud\SDK\Live\V1\Model\ManifestSelection'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  package唯一标识id，由服务创建并在查询时返回，修改endpoints时需要携带。
     * url  客户自定义的拉流地址，包括方法、域名、路径
     * streamSelection  从全量流中过滤出一个码率在[min, max]区间的流。如果不需要码率过滤可不选。
     * hlsVersion  HLS版本号
@@ -82,10 +87,12 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
     * originDomainSlave  源站分发域名-备region 满足正则：^(\\[a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.){2,}[a-zA-Z]{2,16}$ 最大长度255
     * manifestName  output的索引文件名字 默认：index 长度：0-128 字符集：大小写字母、数字、\"-\"、\".\"、\"_\"，不能有/路径
     * slaveUrl  客户自定义的拉流地址，包括方法、域名、路径
+    * manifestSelection  manifestSelection
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'id' => null,
         'url' => null,
         'streamSelection' => null,
         'hlsVersion' => null,
@@ -103,7 +110,8 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
         'originDomainMaster' => null,
         'originDomainSlave' => null,
         'manifestName' => null,
-        'slaveUrl' => null
+        'slaveUrl' => null,
+        'manifestSelection' => null
     ];
 
     /**
@@ -129,6 +137,7 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  package唯一标识id，由服务创建并在查询时返回，修改endpoints时需要携带。
     * url  客户自定义的拉流地址，包括方法、域名、路径
     * streamSelection  从全量流中过滤出一个码率在[min, max]区间的流。如果不需要码率过滤可不选。
     * hlsVersion  HLS版本号
@@ -147,10 +156,12 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
     * originDomainSlave  源站分发域名-备region 满足正则：^(\\[a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.){2,}[a-zA-Z]{2,16}$ 最大长度255
     * manifestName  output的索引文件名字 默认：index 长度：0-128 字符集：大小写字母、数字、\"-\"、\".\"、\"_\"，不能有/路径
     * slaveUrl  客户自定义的拉流地址，包括方法、域名、路径
+    * manifestSelection  manifestSelection
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'id' => 'id',
             'url' => 'url',
             'streamSelection' => 'stream_selection',
             'hlsVersion' => 'hls_version',
@@ -168,11 +179,13 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
             'originDomainMaster' => 'origin_domain_master',
             'originDomainSlave' => 'origin_domain_slave',
             'manifestName' => 'manifest_name',
-            'slaveUrl' => 'slave_url'
+            'slaveUrl' => 'slave_url',
+            'manifestSelection' => 'manifest_selection'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  package唯一标识id，由服务创建并在查询时返回，修改endpoints时需要携带。
     * url  客户自定义的拉流地址，包括方法、域名、路径
     * streamSelection  从全量流中过滤出一个码率在[min, max]区间的流。如果不需要码率过滤可不选。
     * hlsVersion  HLS版本号
@@ -191,10 +204,12 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
     * originDomainSlave  源站分发域名-备region 满足正则：^(\\[a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.){2,}[a-zA-Z]{2,16}$ 最大长度255
     * manifestName  output的索引文件名字 默认：index 长度：0-128 字符集：大小写字母、数字、\"-\"、\".\"、\"_\"，不能有/路径
     * slaveUrl  客户自定义的拉流地址，包括方法、域名、路径
+    * manifestSelection  manifestSelection
     *
     * @var string[]
     */
     protected static $setters = [
+            'id' => 'setId',
             'url' => 'setUrl',
             'streamSelection' => 'setStreamSelection',
             'hlsVersion' => 'setHlsVersion',
@@ -212,11 +227,13 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
             'originDomainMaster' => 'setOriginDomainMaster',
             'originDomainSlave' => 'setOriginDomainSlave',
             'manifestName' => 'setManifestName',
-            'slaveUrl' => 'setSlaveUrl'
+            'slaveUrl' => 'setSlaveUrl',
+            'manifestSelection' => 'setManifestSelection'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  package唯一标识id，由服务创建并在查询时返回，修改endpoints时需要携带。
     * url  客户自定义的拉流地址，包括方法、域名、路径
     * streamSelection  从全量流中过滤出一个码率在[min, max]区间的流。如果不需要码率过滤可不选。
     * hlsVersion  HLS版本号
@@ -235,10 +252,12 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
     * originDomainSlave  源站分发域名-备region 满足正则：^(\\[a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.){2,}[a-zA-Z]{2,16}$ 最大长度255
     * manifestName  output的索引文件名字 默认：index 长度：0-128 字符集：大小写字母、数字、\"-\"、\".\"、\"_\"，不能有/路径
     * slaveUrl  客户自定义的拉流地址，包括方法、域名、路径
+    * manifestSelection  manifestSelection
     *
     * @var string[]
     */
     protected static $getters = [
+            'id' => 'getId',
             'url' => 'getUrl',
             'streamSelection' => 'getStreamSelection',
             'hlsVersion' => 'getHlsVersion',
@@ -256,7 +275,8 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
             'originDomainMaster' => 'getOriginDomainMaster',
             'originDomainSlave' => 'getOriginDomainSlave',
             'manifestName' => 'getManifestName',
-            'slaveUrl' => 'getSlaveUrl'
+            'slaveUrl' => 'getSlaveUrl',
+            'manifestSelection' => 'getManifestSelection'
     ];
 
     /**
@@ -317,6 +337,7 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['streamSelection'] = isset($data['streamSelection']) ? $data['streamSelection'] : null;
         $this->container['hlsVersion'] = isset($data['hlsVersion']) ? $data['hlsVersion'] : null;
@@ -335,6 +356,7 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
         $this->container['originDomainSlave'] = isset($data['originDomainSlave']) ? $data['originDomainSlave'] : null;
         $this->container['manifestName'] = isset($data['manifestName']) ? $data['manifestName'] : null;
         $this->container['slaveUrl'] = isset($data['slaveUrl']) ? $data['slaveUrl'] : null;
+        $this->container['manifestSelection'] = isset($data['manifestSelection']) ? $data['manifestSelection'] : null;
     }
 
     /**
@@ -345,6 +367,12 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 32)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 0)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['url']) && (mb_strlen($this->container['url']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'url', the character length must be smaller than or equal to 1024.";
             }
@@ -414,6 +442,30 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets id
+    *  package唯一标识id，由服务创建并在查询时返回，修改endpoints时需要携带。
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id package唯一标识id，由服务创建并在查询时返回，修改endpoints时需要携带。
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+        return $this;
     }
 
     /**
@@ -845,6 +897,30 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
     public function setSlaveUrl($slaveUrl)
     {
         $this->container['slaveUrl'] = $slaveUrl;
+        return $this;
+    }
+
+    /**
+    * Gets manifestSelection
+    *  manifestSelection
+    *
+    * @return \HuaweiCloud\SDK\Live\V1\Model\ManifestSelection|null
+    */
+    public function getManifestSelection()
+    {
+        return $this->container['manifestSelection'];
+    }
+
+    /**
+    * Sets manifestSelection
+    *
+    * @param \HuaweiCloud\SDK\Live\V1\Model\ManifestSelection|null $manifestSelection manifestSelection
+    *
+    * @return $this
+    */
+    public function setManifestSelection($manifestSelection)
+    {
+        $this->container['manifestSelection'] = $manifestSelection;
         return $this;
     }
 

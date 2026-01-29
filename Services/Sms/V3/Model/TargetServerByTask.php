@@ -202,9 +202,6 @@ class TargetServerByTask implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['disks'] === null) {
-            $invalidProperties[] = "'disks' can't be null";
-        }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
@@ -265,7 +262,7 @@ class TargetServerByTask implements ModelInterface, ArrayAccess
     * Gets disks
     *  磁盘信息
     *
-    * @return \HuaweiCloud\SDK\Sms\V3\Model\TargetDisks[]
+    * @return \HuaweiCloud\SDK\Sms\V3\Model\TargetDisks[]|null
     */
     public function getDisks()
     {
@@ -275,7 +272,7 @@ class TargetServerByTask implements ModelInterface, ArrayAccess
     /**
     * Sets disks
     *
-    * @param \HuaweiCloud\SDK\Sms\V3\Model\TargetDisks[] $disks 磁盘信息
+    * @param \HuaweiCloud\SDK\Sms\V3\Model\TargetDisks[]|null $disks 磁盘信息
     *
     * @return $this
     */

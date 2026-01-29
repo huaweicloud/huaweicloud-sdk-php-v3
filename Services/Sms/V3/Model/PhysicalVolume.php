@@ -20,7 +20,7 @@ class PhysicalVolume implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * deviceUse  分区类型，普通分区，启动分区，系统分区
+    * deviceUse  磁盘类型。 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     * fileSystem  文件系统类型
     * index  顺序
     * mountPoint  挂载点
@@ -50,7 +50,7 @@ class PhysicalVolume implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * deviceUse  分区类型，普通分区，启动分区，系统分区
+    * deviceUse  磁盘类型。 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     * fileSystem  文件系统类型
     * index  顺序
     * mountPoint  挂载点
@@ -101,7 +101,7 @@ class PhysicalVolume implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * deviceUse  分区类型，普通分区，启动分区，系统分区
+    * deviceUse  磁盘类型。 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     * fileSystem  文件系统类型
     * index  顺序
     * mountPoint  挂载点
@@ -131,7 +131,7 @@ class PhysicalVolume implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * deviceUse  分区类型，普通分区，启动分区，系统分区
+    * deviceUse  磁盘类型。 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     * fileSystem  文件系统类型
     * index  顺序
     * mountPoint  挂载点
@@ -161,7 +161,7 @@ class PhysicalVolume implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * deviceUse  分区类型，普通分区，启动分区，系统分区
+    * deviceUse  磁盘类型。 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     * fileSystem  文件系统类型
     * index  顺序
     * mountPoint  挂载点
@@ -350,7 +350,7 @@ class PhysicalVolume implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceUse
-    *  分区类型，普通分区，启动分区，系统分区
+    *  磁盘类型。 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     *
     * @return string|null
     */
@@ -362,7 +362,7 @@ class PhysicalVolume implements ModelInterface, ArrayAccess
     /**
     * Sets deviceUse
     *
-    * @param string|null $deviceUse 分区类型，普通分区，启动分区，系统分区
+    * @param string|null $deviceUse 磁盘类型。 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     *
     * @return $this
     */

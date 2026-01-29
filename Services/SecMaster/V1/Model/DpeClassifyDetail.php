@@ -359,6 +359,12 @@ class DpeClassifyDetail implements ModelInterface, ArrayAccess
             if (!is_null($this->container['mappingId']) && (mb_strlen($this->container['mappingId']) < 32)) {
                 $invalidProperties[] = "invalid value for 'mappingId', the character length must be bigger than or equal to 32.";
             }
+            if (!is_null($this->container['directClassifier']) && (mb_strlen($this->container['directClassifier']) > 8)) {
+                $invalidProperties[] = "invalid value for 'directClassifier', the character length must be smaller than or equal to 8.";
+            }
+            if (!is_null($this->container['directClassifier']) && (mb_strlen($this->container['directClassifier']) < 1)) {
+                $invalidProperties[] = "invalid value for 'directClassifier', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['directClassifierTypeId']) && (mb_strlen($this->container['directClassifierTypeId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'directClassifierTypeId', the character length must be smaller than or equal to 64.";
             }

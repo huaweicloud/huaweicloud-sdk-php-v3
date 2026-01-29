@@ -24,6 +24,8 @@ class IndicatorDataObjectDetailDataSource implements ModelInterface, ArrayAccess
     * domainId  租户ID
     * projectId  项目ID
     * regionId  区域ID
+    * productName  数据源产品名称
+    * productFeature  数据源产品特性
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class IndicatorDataObjectDetailDataSource implements ModelInterface, ArrayAccess
             'sourceType' => 'int',
             'domainId' => 'string',
             'projectId' => 'string',
-            'regionId' => 'string'
+            'regionId' => 'string',
+            'productName' => 'string',
+            'productFeature' => 'string'
     ];
 
     /**
@@ -40,6 +44,8 @@ class IndicatorDataObjectDetailDataSource implements ModelInterface, ArrayAccess
     * domainId  租户ID
     * projectId  项目ID
     * regionId  区域ID
+    * productName  数据源产品名称
+    * productFeature  数据源产品特性
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class IndicatorDataObjectDetailDataSource implements ModelInterface, ArrayAccess
         'sourceType' => null,
         'domainId' => null,
         'projectId' => null,
-        'regionId' => null
+        'regionId' => null,
+        'productName' => null,
+        'productFeature' => null
     ];
 
     /**
@@ -77,6 +85,8 @@ class IndicatorDataObjectDetailDataSource implements ModelInterface, ArrayAccess
     * domainId  租户ID
     * projectId  项目ID
     * regionId  区域ID
+    * productName  数据源产品名称
+    * productFeature  数据源产品特性
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class IndicatorDataObjectDetailDataSource implements ModelInterface, ArrayAccess
             'sourceType' => 'source_type',
             'domainId' => 'domain_id',
             'projectId' => 'project_id',
-            'regionId' => 'region_id'
+            'regionId' => 'region_id',
+            'productName' => 'product_name',
+            'productFeature' => 'product_feature'
     ];
 
     /**
@@ -93,6 +105,8 @@ class IndicatorDataObjectDetailDataSource implements ModelInterface, ArrayAccess
     * domainId  租户ID
     * projectId  项目ID
     * regionId  区域ID
+    * productName  数据源产品名称
+    * productFeature  数据源产品特性
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class IndicatorDataObjectDetailDataSource implements ModelInterface, ArrayAccess
             'sourceType' => 'setSourceType',
             'domainId' => 'setDomainId',
             'projectId' => 'setProjectId',
-            'regionId' => 'setRegionId'
+            'regionId' => 'setRegionId',
+            'productName' => 'setProductName',
+            'productFeature' => 'setProductFeature'
     ];
 
     /**
@@ -109,6 +125,8 @@ class IndicatorDataObjectDetailDataSource implements ModelInterface, ArrayAccess
     * domainId  租户ID
     * projectId  项目ID
     * regionId  区域ID
+    * productName  数据源产品名称
+    * productFeature  数据源产品特性
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class IndicatorDataObjectDetailDataSource implements ModelInterface, ArrayAccess
             'sourceType' => 'getSourceType',
             'domainId' => 'getDomainId',
             'projectId' => 'getProjectId',
-            'regionId' => 'getRegionId'
+            'regionId' => 'getRegionId',
+            'productName' => 'getProductName',
+            'productFeature' => 'getProductFeature'
     ];
 
     /**
@@ -181,6 +201,8 @@ class IndicatorDataObjectDetailDataSource implements ModelInterface, ArrayAccess
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
+        $this->container['productName'] = isset($data['productName']) ? $data['productName'] : null;
+        $this->container['productFeature'] = isset($data['productFeature']) ? $data['productFeature'] : null;
     }
 
     /**
@@ -214,6 +236,18 @@ class IndicatorDataObjectDetailDataSource implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'regionId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'productName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['productName']) && (mb_strlen($this->container['productName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'productName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['productFeature']) && (mb_strlen($this->container['productFeature']) > 64)) {
+                $invalidProperties[] = "invalid value for 'productFeature', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['productFeature']) && (mb_strlen($this->container['productFeature']) < 1)) {
+                $invalidProperties[] = "invalid value for 'productFeature', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -322,6 +356,54 @@ class IndicatorDataObjectDetailDataSource implements ModelInterface, ArrayAccess
     public function setRegionId($regionId)
     {
         $this->container['regionId'] = $regionId;
+        return $this;
+    }
+
+    /**
+    * Gets productName
+    *  数据源产品名称
+    *
+    * @return string|null
+    */
+    public function getProductName()
+    {
+        return $this->container['productName'];
+    }
+
+    /**
+    * Sets productName
+    *
+    * @param string|null $productName 数据源产品名称
+    *
+    * @return $this
+    */
+    public function setProductName($productName)
+    {
+        $this->container['productName'] = $productName;
+        return $this;
+    }
+
+    /**
+    * Gets productFeature
+    *  数据源产品特性
+    *
+    * @return string|null
+    */
+    public function getProductFeature()
+    {
+        return $this->container['productFeature'];
+    }
+
+    /**
+    * Sets productFeature
+    *
+    * @param string|null $productFeature 数据源产品特性
+    *
+    * @return $this
+    */
+    public function setProductFeature($productFeature)
+    {
+        $this->container['productFeature'] = $productFeature;
         return $this;
     }
 

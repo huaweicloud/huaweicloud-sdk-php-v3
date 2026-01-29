@@ -253,6 +253,24 @@ $iamClient = IamClient::newBuilder()
 **说明：**
 
 - `endpoint` 是华为云各服务应用区域和各服务的终端节点，详情请查看 [地区和终端节点](https://developer.huaweicloud.com/endpoint) 。
+- 
+#### 3.2 用户自定义User-Agent [:top:](#用户手册-top)
+
+从**3.1.184**版本起，默认会在请求头User-Agent中附加额外信息，用于识别客户端调用服务时所使用的SDK语言、客户端库版本以及平台信息等。 User-Agent包含PHP版本、操作系统和时区语言信息，同时会生成一个随机标识符追加到User-Agent信息中。随机标识符会存储在用户主目录下，linux为 `~/.huaweicloud/application_id`，windows为`C:\Users\USER_NAME\.huaweicloud\application_id`。
+
+上述信息将用于保护您及您的用户的华为云账号安全。
+
+您可以通过自定义User-Agent的方式关闭上述行为，自定义User-Agent信息建议长度不超过50个字符，仅可包含ASCII可打印字符：
+
+```php
+// Initialize specified service client instance, take IamClient for example
+$iamClient = IamClient::newBuilder()
+    ->withHttpConfig($config)
+    ->withEndpoint($endpoint)
+    ->withUserAgent("custom user agent...")
+    ->withCredentials($globalCredentials)
+    ->build();
+```
 
 ### 4. 发送请求并查看响应 [:top:](#用户手册-top)
 

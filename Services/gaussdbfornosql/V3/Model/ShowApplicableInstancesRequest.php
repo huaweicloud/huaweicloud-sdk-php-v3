@@ -23,13 +23,17 @@ class ShowApplicableInstancesRequest implements ModelInterface, ArrayAccess
     * configId  参数模板id
     * offset  索引位置，偏移量。  从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。  取值必须为数字，不能为负数。
     * limit  查询个数上限值。   - 取值范围: 1~100。   - 不传该参数时，默认查询前100条信息。
+    * instanceName  **参数解释：** 实例名称，支持模糊搜索。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instanceId  **参数解释：** 实例ID，支持模糊搜索。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'configId' => 'string',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'instanceName' => 'string',
+            'instanceId' => 'string'
     ];
 
     /**
@@ -37,13 +41,17 @@ class ShowApplicableInstancesRequest implements ModelInterface, ArrayAccess
     * configId  参数模板id
     * offset  索引位置，偏移量。  从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。  取值必须为数字，不能为负数。
     * limit  查询个数上限值。   - 取值范围: 1~100。   - 不传该参数时，默认查询前100条信息。
+    * instanceName  **参数解释：** 实例名称，支持模糊搜索。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instanceId  **参数解释：** 实例ID，支持模糊搜索。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'configId' => null,
         'offset' => 'int32',
-        'limit' => null
+        'limit' => null,
+        'instanceName' => null,
+        'instanceId' => null
     ];
 
     /**
@@ -72,13 +80,17 @@ class ShowApplicableInstancesRequest implements ModelInterface, ArrayAccess
     * configId  参数模板id
     * offset  索引位置，偏移量。  从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。  取值必须为数字，不能为负数。
     * limit  查询个数上限值。   - 取值范围: 1~100。   - 不传该参数时，默认查询前100条信息。
+    * instanceName  **参数解释：** 实例名称，支持模糊搜索。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instanceId  **参数解释：** 实例ID，支持模糊搜索。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'configId' => 'config_id',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'instanceName' => 'instance_name',
+            'instanceId' => 'instance_id'
     ];
 
     /**
@@ -86,13 +98,17 @@ class ShowApplicableInstancesRequest implements ModelInterface, ArrayAccess
     * configId  参数模板id
     * offset  索引位置，偏移量。  从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。  取值必须为数字，不能为负数。
     * limit  查询个数上限值。   - 取值范围: 1~100。   - 不传该参数时，默认查询前100条信息。
+    * instanceName  **参数解释：** 实例名称，支持模糊搜索。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instanceId  **参数解释：** 实例ID，支持模糊搜索。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
             'configId' => 'setConfigId',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'instanceName' => 'setInstanceName',
+            'instanceId' => 'setInstanceId'
     ];
 
     /**
@@ -100,13 +116,17 @@ class ShowApplicableInstancesRequest implements ModelInterface, ArrayAccess
     * configId  参数模板id
     * offset  索引位置，偏移量。  从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。  取值必须为数字，不能为负数。
     * limit  查询个数上限值。   - 取值范围: 1~100。   - 不传该参数时，默认查询前100条信息。
+    * instanceName  **参数解释：** 实例名称，支持模糊搜索。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instanceId  **参数解释：** 实例ID，支持模糊搜索。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
             'configId' => 'getConfigId',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'instanceName' => 'getInstanceName',
+            'instanceId' => 'getInstanceId'
     ];
 
     /**
@@ -170,6 +190,8 @@ class ShowApplicableInstancesRequest implements ModelInterface, ArrayAccess
         $this->container['configId'] = isset($data['configId']) ? $data['configId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['instanceName'] = isset($data['instanceName']) ? $data['instanceName'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
     }
 
     /**
@@ -266,6 +288,54 @@ class ShowApplicableInstancesRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets instanceName
+    *  **参数解释：** 实例名称，支持模糊搜索。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getInstanceName()
+    {
+        return $this->container['instanceName'];
+    }
+
+    /**
+    * Sets instanceName
+    *
+    * @param string|null $instanceName **参数解释：** 实例名称，支持模糊搜索。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setInstanceName($instanceName)
+    {
+        $this->container['instanceName'] = $instanceName;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  **参数解释：** 实例ID，支持模糊搜索。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string|null $instanceId **参数解释：** 实例ID，支持模糊搜索。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
         return $this;
     }
 

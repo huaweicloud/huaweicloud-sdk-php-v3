@@ -180,22 +180,16 @@ class VpcObject implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-            if ((mb_strlen($this->container['id']) > 255)) {
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 255)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['id']) < 1)) {
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 1)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-            if ((mb_strlen($this->container['name']) > 255)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 255)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['name']) < 1)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['cidr']) && (mb_strlen($this->container['cidr']) > 255)) {
@@ -222,7 +216,7 @@ class VpcObject implements ModelInterface, ArrayAccess
     * Gets id
     *  虚拟私有云ID，如果是自动创建，填“autoCreate”
     *
-    * @return string
+    * @return string|null
     */
     public function getId()
     {
@@ -232,7 +226,7 @@ class VpcObject implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 虚拟私有云ID，如果是自动创建，填“autoCreate”
+    * @param string|null $id 虚拟私有云ID，如果是自动创建，填“autoCreate”
     *
     * @return $this
     */
@@ -246,7 +240,7 @@ class VpcObject implements ModelInterface, ArrayAccess
     * Gets name
     *  虚拟私有云名称
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -256,7 +250,7 @@ class VpcObject implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 虚拟私有云名称
+    * @param string|null $name 虚拟私有云名称
     *
     * @return $this
     */

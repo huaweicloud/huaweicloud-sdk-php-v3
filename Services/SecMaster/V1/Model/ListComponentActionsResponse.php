@@ -28,6 +28,7 @@ class ListComponentActionsResponse implements ModelInterface, ArrayAccess
     * message  **参数解释**: 响应的错误信息 **约束限制**: 不涉及
     * success  **参数解释**: 是否响应成功 **约束限制**: 不涉及
     * requestId  **参数解释**: 请求id **约束限制**: 不涉及
+    * data  列表
     *
     * @var string[]
     */
@@ -38,7 +39,8 @@ class ListComponentActionsResponse implements ModelInterface, ArrayAccess
             'page' => 'int',
             'message' => 'string',
             'success' => 'bool',
-            'requestId' => 'string'
+            'requestId' => 'string',
+            'data' => '\HuaweiCloud\SDK\SecMaster\V1\Model\ComponentActionInfo[]'
     ];
 
     /**
@@ -50,6 +52,7 @@ class ListComponentActionsResponse implements ModelInterface, ArrayAccess
     * message  **参数解释**: 响应的错误信息 **约束限制**: 不涉及
     * success  **参数解释**: 是否响应成功 **约束限制**: 不涉及
     * requestId  **参数解释**: 请求id **约束限制**: 不涉及
+    * data  列表
     *
     * @var string[]
     */
@@ -60,7 +63,8 @@ class ListComponentActionsResponse implements ModelInterface, ArrayAccess
         'page' => null,
         'message' => null,
         'success' => null,
-        'requestId' => null
+        'requestId' => null,
+        'data' => null
     ];
 
     /**
@@ -93,6 +97,7 @@ class ListComponentActionsResponse implements ModelInterface, ArrayAccess
     * message  **参数解释**: 响应的错误信息 **约束限制**: 不涉及
     * success  **参数解释**: 是否响应成功 **约束限制**: 不涉及
     * requestId  **参数解释**: 请求id **约束限制**: 不涉及
+    * data  列表
     *
     * @var string[]
     */
@@ -103,7 +108,8 @@ class ListComponentActionsResponse implements ModelInterface, ArrayAccess
             'page' => 'page',
             'message' => 'message',
             'success' => 'success',
-            'requestId' => 'request_id'
+            'requestId' => 'request_id',
+            'data' => 'data'
     ];
 
     /**
@@ -115,6 +121,7 @@ class ListComponentActionsResponse implements ModelInterface, ArrayAccess
     * message  **参数解释**: 响应的错误信息 **约束限制**: 不涉及
     * success  **参数解释**: 是否响应成功 **约束限制**: 不涉及
     * requestId  **参数解释**: 请求id **约束限制**: 不涉及
+    * data  列表
     *
     * @var string[]
     */
@@ -125,7 +132,8 @@ class ListComponentActionsResponse implements ModelInterface, ArrayAccess
             'page' => 'setPage',
             'message' => 'setMessage',
             'success' => 'setSuccess',
-            'requestId' => 'setRequestId'
+            'requestId' => 'setRequestId',
+            'data' => 'setData'
     ];
 
     /**
@@ -137,6 +145,7 @@ class ListComponentActionsResponse implements ModelInterface, ArrayAccess
     * message  **参数解释**: 响应的错误信息 **约束限制**: 不涉及
     * success  **参数解释**: 是否响应成功 **约束限制**: 不涉及
     * requestId  **参数解释**: 请求id **约束限制**: 不涉及
+    * data  列表
     *
     * @var string[]
     */
@@ -147,7 +156,8 @@ class ListComponentActionsResponse implements ModelInterface, ArrayAccess
             'page' => 'getPage',
             'message' => 'getMessage',
             'success' => 'getSuccess',
-            'requestId' => 'getRequestId'
+            'requestId' => 'getRequestId',
+            'data' => 'getData'
     ];
 
     /**
@@ -215,6 +225,7 @@ class ListComponentActionsResponse implements ModelInterface, ArrayAccess
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['success'] = isset($data['success']) ? $data['success'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -440,6 +451,30 @@ class ListComponentActionsResponse implements ModelInterface, ArrayAccess
     public function setRequestId($requestId)
     {
         $this->container['requestId'] = $requestId;
+        return $this;
+    }
+
+    /**
+    * Gets data
+    *  列表
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\ComponentActionInfo[]|null
+    */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+    * Sets data
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\ComponentActionInfo[]|null $data 列表
+    *
+    * @return $this
+    */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
         return $this;
     }
 

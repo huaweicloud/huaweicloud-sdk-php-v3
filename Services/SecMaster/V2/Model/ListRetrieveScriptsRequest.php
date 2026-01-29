@@ -22,8 +22,8 @@ class ListRetrieveScriptsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * workspaceId  工作空间ID
     * tableId  表ID
-    * scriptName  脚本名称
     * offset  **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * scriptName  脚本名称
     * limit  **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
     * sortKey  按照属性排序。
     * sortDir  排序顺序，支持 `ASC` 或 `DESC`。
@@ -33,8 +33,8 @@ class ListRetrieveScriptsRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'workspaceId' => 'string',
             'tableId' => 'string',
-            'scriptName' => 'string',
             'offset' => 'int',
+            'scriptName' => 'string',
             'limit' => 'int',
             'sortKey' => 'string',
             'sortDir' => 'string'
@@ -44,8 +44,8 @@ class ListRetrieveScriptsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * workspaceId  工作空间ID
     * tableId  表ID
-    * scriptName  脚本名称
     * offset  **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * scriptName  脚本名称
     * limit  **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
     * sortKey  按照属性排序。
     * sortDir  排序顺序，支持 `ASC` 或 `DESC`。
@@ -55,8 +55,8 @@ class ListRetrieveScriptsRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'workspaceId' => null,
         'tableId' => null,
-        'scriptName' => null,
         'offset' => 'int64',
+        'scriptName' => null,
         'limit' => 'int64',
         'sortKey' => null,
         'sortDir' => null
@@ -87,8 +87,8 @@ class ListRetrieveScriptsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * workspaceId  工作空间ID
     * tableId  表ID
-    * scriptName  脚本名称
     * offset  **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * scriptName  脚本名称
     * limit  **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
     * sortKey  按照属性排序。
     * sortDir  排序顺序，支持 `ASC` 或 `DESC`。
@@ -98,8 +98,8 @@ class ListRetrieveScriptsRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'workspaceId' => 'workspace_id',
             'tableId' => 'table_id',
-            'scriptName' => 'script_name',
             'offset' => 'offset',
+            'scriptName' => 'script_name',
             'limit' => 'limit',
             'sortKey' => 'sort_key',
             'sortDir' => 'sort_dir'
@@ -109,8 +109,8 @@ class ListRetrieveScriptsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * workspaceId  工作空间ID
     * tableId  表ID
-    * scriptName  脚本名称
     * offset  **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * scriptName  脚本名称
     * limit  **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
     * sortKey  按照属性排序。
     * sortDir  排序顺序，支持 `ASC` 或 `DESC`。
@@ -120,8 +120,8 @@ class ListRetrieveScriptsRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'workspaceId' => 'setWorkspaceId',
             'tableId' => 'setTableId',
-            'scriptName' => 'setScriptName',
             'offset' => 'setOffset',
+            'scriptName' => 'setScriptName',
             'limit' => 'setLimit',
             'sortKey' => 'setSortKey',
             'sortDir' => 'setSortDir'
@@ -131,8 +131,8 @@ class ListRetrieveScriptsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * workspaceId  工作空间ID
     * tableId  表ID
-    * scriptName  脚本名称
     * offset  **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * scriptName  脚本名称
     * limit  **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
     * sortKey  按照属性排序。
     * sortDir  排序顺序，支持 `ASC` 或 `DESC`。
@@ -142,8 +142,8 @@ class ListRetrieveScriptsRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'workspaceId' => 'getWorkspaceId',
             'tableId' => 'getTableId',
-            'scriptName' => 'getScriptName',
             'offset' => 'getOffset',
+            'scriptName' => 'getScriptName',
             'limit' => 'getLimit',
             'sortKey' => 'getSortKey',
             'sortDir' => 'getSortDir'
@@ -209,8 +209,8 @@ class ListRetrieveScriptsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['workspaceId'] = isset($data['workspaceId']) ? $data['workspaceId'] : null;
         $this->container['tableId'] = isset($data['tableId']) ? $data['tableId'] : null;
-        $this->container['scriptName'] = isset($data['scriptName']) ? $data['scriptName'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['scriptName'] = isset($data['scriptName']) ? $data['scriptName'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
@@ -239,17 +239,17 @@ class ListRetrieveScriptsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['tableId']) && (mb_strlen($this->container['tableId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'tableId', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['scriptName']) && (mb_strlen($this->container['scriptName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'scriptName', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['scriptName']) && (mb_strlen($this->container['scriptName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'scriptName', the character length must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['offset']) && ($this->container['offset'] > 9223372036854775800)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 9223372036854775800.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['scriptName']) && (mb_strlen($this->container['scriptName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'scriptName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['scriptName']) && (mb_strlen($this->container['scriptName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'scriptName', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
@@ -332,30 +332,6 @@ class ListRetrieveScriptsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets scriptName
-    *  脚本名称
-    *
-    * @return string|null
-    */
-    public function getScriptName()
-    {
-        return $this->container['scriptName'];
-    }
-
-    /**
-    * Sets scriptName
-    *
-    * @param string|null $scriptName 脚本名称
-    *
-    * @return $this
-    */
-    public function setScriptName($scriptName)
-    {
-        $this->container['scriptName'] = $scriptName;
-        return $this;
-    }
-
-    /**
     * Gets offset
     *  **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
@@ -376,6 +352,30 @@ class ListRetrieveScriptsRequest implements ModelInterface, ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets scriptName
+    *  脚本名称
+    *
+    * @return string|null
+    */
+    public function getScriptName()
+    {
+        return $this->container['scriptName'];
+    }
+
+    /**
+    * Sets scriptName
+    *
+    * @param string|null $scriptName 脚本名称
+    *
+    * @return $this
+    */
+    public function setScriptName($scriptName)
+    {
+        $this->container['scriptName'] = $scriptName;
         return $this;
     }
 

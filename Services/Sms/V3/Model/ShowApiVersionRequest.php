@@ -20,7 +20,7 @@ class ShowApiVersionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * version  版本信息
+    * version  版本信息，如v3
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ShowApiVersionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * version  版本信息
+    * version  版本信息，如v3
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ShowApiVersionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * version  版本信息
+    * version  版本信息，如v3
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowApiVersionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * version  版本信息
+    * version  版本信息，如v3
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowApiVersionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * version  版本信息
+    * version  版本信息，如v3
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ShowApiVersionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  版本信息
+    *  版本信息，如v3
     *
     * @return string
     */
@@ -198,7 +198,7 @@ class ShowApiVersionRequest implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string $version 版本信息
+    * @param string $version 版本信息，如v3
     *
     * @return $this
     */

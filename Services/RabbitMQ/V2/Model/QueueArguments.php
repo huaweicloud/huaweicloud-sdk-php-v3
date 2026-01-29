@@ -23,7 +23,7 @@ class QueueArguments implements ModelInterface, ArrayAccess
     * xMessageTtl  **参数解释**： 消息过期时间，发布到Queue的消息在被丢弃之前可以存活多长时间。 **取值范围**： 不涉及。
     * xDeadLetterExchange  **参数解释**： 死信Exchange名称，消息被拒绝或过期时将重新发布到该Exchange。 **取值范围**： 不涉及。
     * xDeadLetterRoutingKey  **参数解释**： 死信的RoutingKey，死信Exchange会发送死信消息到绑定对应RoutingKey的Queue上。 **取值范围**： 不涉及。
-    * xQueueMode  **参数解释**： 惰性队列[（AMQP版本默认持久化所有消息，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
+    * xQueueMode  **参数解释**： 惰性队列[（AMQP版本默认持久化所有消息，不涉及此参数）](tag:hws,hws_hk,hws_eu,srg)。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class QueueArguments implements ModelInterface, ArrayAccess
     * xMessageTtl  **参数解释**： 消息过期时间，发布到Queue的消息在被丢弃之前可以存活多长时间。 **取值范围**： 不涉及。
     * xDeadLetterExchange  **参数解释**： 死信Exchange名称，消息被拒绝或过期时将重新发布到该Exchange。 **取值范围**： 不涉及。
     * xDeadLetterRoutingKey  **参数解释**： 死信的RoutingKey，死信Exchange会发送死信消息到绑定对应RoutingKey的Queue上。 **取值范围**： 不涉及。
-    * xQueueMode  **参数解释**： 惰性队列[（AMQP版本默认持久化所有消息，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
+    * xQueueMode  **参数解释**： 惰性队列[（AMQP版本默认持久化所有消息，不涉及此参数）](tag:hws,hws_hk,hws_eu,srg)。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class QueueArguments implements ModelInterface, ArrayAccess
     * xMessageTtl  **参数解释**： 消息过期时间，发布到Queue的消息在被丢弃之前可以存活多长时间。 **取值范围**： 不涉及。
     * xDeadLetterExchange  **参数解释**： 死信Exchange名称，消息被拒绝或过期时将重新发布到该Exchange。 **取值范围**： 不涉及。
     * xDeadLetterRoutingKey  **参数解释**： 死信的RoutingKey，死信Exchange会发送死信消息到绑定对应RoutingKey的Queue上。 **取值范围**： 不涉及。
-    * xQueueMode  **参数解释**： 惰性队列[（AMQP版本默认持久化所有消息，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
+    * xQueueMode  **参数解释**： 惰性队列[（AMQP版本默认持久化所有消息，不涉及此参数）](tag:hws,hws_hk,hws_eu,srg)。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class QueueArguments implements ModelInterface, ArrayAccess
     * xMessageTtl  **参数解释**： 消息过期时间，发布到Queue的消息在被丢弃之前可以存活多长时间。 **取值范围**： 不涉及。
     * xDeadLetterExchange  **参数解释**： 死信Exchange名称，消息被拒绝或过期时将重新发布到该Exchange。 **取值范围**： 不涉及。
     * xDeadLetterRoutingKey  **参数解释**： 死信的RoutingKey，死信Exchange会发送死信消息到绑定对应RoutingKey的Queue上。 **取值范围**： 不涉及。
-    * xQueueMode  **参数解释**： 惰性队列[（AMQP版本默认持久化所有消息，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
+    * xQueueMode  **参数解释**： 惰性队列[（AMQP版本默认持久化所有消息，不涉及此参数）](tag:hws,hws_hk,hws_eu,srg)。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class QueueArguments implements ModelInterface, ArrayAccess
     * xMessageTtl  **参数解释**： 消息过期时间，发布到Queue的消息在被丢弃之前可以存活多长时间。 **取值范围**： 不涉及。
     * xDeadLetterExchange  **参数解释**： 死信Exchange名称，消息被拒绝或过期时将重新发布到该Exchange。 **取值范围**： 不涉及。
     * xDeadLetterRoutingKey  **参数解释**： 死信的RoutingKey，死信Exchange会发送死信消息到绑定对应RoutingKey的Queue上。 **取值范围**： 不涉及。
-    * xQueueMode  **参数解释**： 惰性队列[（AMQP版本默认持久化所有消息，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
+    * xQueueMode  **参数解释**： 惰性队列[（AMQP版本默认持久化所有消息，不涉及此参数）](tag:hws,hws_hk,hws_eu,srg)。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -279,7 +279,7 @@ class QueueArguments implements ModelInterface, ArrayAccess
 
     /**
     * Gets xQueueMode
-    *  **参数解释**： 惰性队列[（AMQP版本默认持久化所有消息，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
+    *  **参数解释**： 惰性队列[（AMQP版本默认持久化所有消息，不涉及此参数）](tag:hws,hws_hk,hws_eu,srg)。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class QueueArguments implements ModelInterface, ArrayAccess
     /**
     * Sets xQueueMode
     *
-    * @param string|null $xQueueMode **参数解释**： 惰性队列[（AMQP版本默认持久化所有消息，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
+    * @param string|null $xQueueMode **参数解释**： 惰性队列[（AMQP版本默认持久化所有消息，不涉及此参数）](tag:hws,hws_hk,hws_eu,srg)。 **取值范围**： 不涉及。
     *
     * @return $this
     */

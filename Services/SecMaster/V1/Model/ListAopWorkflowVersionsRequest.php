@@ -81,7 +81,7 @@ class ListAopWorkflowVersionsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'contentType' => 'content-type',
+            'contentType' => 'Content-Type',
             'workspaceId' => 'workspace_id',
             'workflowId' => 'workflow_id',
             'status' => 'status'

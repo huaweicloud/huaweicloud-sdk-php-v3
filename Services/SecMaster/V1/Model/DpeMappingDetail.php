@@ -27,7 +27,8 @@ class DpeMappingDetail implements ModelInterface, ArrayAccess
     * dataclassId  映射id
     * dataclassName  数据类名称
     * mapperTypeId  映射id
-    * dpeInfo  dpeInfo
+    * mappingId  映射id
+    * mappingInfo  mappingInfo
     * createTime  创建时间
     * creatorId  创建者id
     * creatorName  创建者名称
@@ -46,7 +47,8 @@ class DpeMappingDetail implements ModelInterface, ArrayAccess
             'dataclassId' => 'string',
             'dataclassName' => 'string',
             'mapperTypeId' => 'string',
-            'dpeInfo' => '\HuaweiCloud\SDK\SecMaster\V1\Model\DpeInfo',
+            'mappingId' => 'string',
+            'mappingInfo' => '\HuaweiCloud\SDK\SecMaster\V1\Model\DpeInfo',
             'createTime' => 'string',
             'creatorId' => 'string',
             'creatorName' => 'string',
@@ -65,7 +67,8 @@ class DpeMappingDetail implements ModelInterface, ArrayAccess
     * dataclassId  映射id
     * dataclassName  数据类名称
     * mapperTypeId  映射id
-    * dpeInfo  dpeInfo
+    * mappingId  映射id
+    * mappingInfo  mappingInfo
     * createTime  创建时间
     * creatorId  创建者id
     * creatorName  创建者名称
@@ -84,7 +87,8 @@ class DpeMappingDetail implements ModelInterface, ArrayAccess
         'dataclassId' => null,
         'dataclassName' => null,
         'mapperTypeId' => null,
-        'dpeInfo' => null,
+        'mappingId' => null,
+        'mappingInfo' => null,
         'createTime' => null,
         'creatorId' => null,
         'creatorName' => null,
@@ -124,7 +128,8 @@ class DpeMappingDetail implements ModelInterface, ArrayAccess
     * dataclassId  映射id
     * dataclassName  数据类名称
     * mapperTypeId  映射id
-    * dpeInfo  dpeInfo
+    * mappingId  映射id
+    * mappingInfo  mappingInfo
     * createTime  创建时间
     * creatorId  创建者id
     * creatorName  创建者名称
@@ -143,7 +148,8 @@ class DpeMappingDetail implements ModelInterface, ArrayAccess
             'dataclassId' => 'dataclass_id',
             'dataclassName' => 'dataclass_name',
             'mapperTypeId' => 'mapper_type_id',
-            'dpeInfo' => 'dpe_info',
+            'mappingId' => 'mapping_id',
+            'mappingInfo' => 'mapping_info',
             'createTime' => 'create_time',
             'creatorId' => 'creator_id',
             'creatorName' => 'creator_name',
@@ -162,7 +168,8 @@ class DpeMappingDetail implements ModelInterface, ArrayAccess
     * dataclassId  映射id
     * dataclassName  数据类名称
     * mapperTypeId  映射id
-    * dpeInfo  dpeInfo
+    * mappingId  映射id
+    * mappingInfo  mappingInfo
     * createTime  创建时间
     * creatorId  创建者id
     * creatorName  创建者名称
@@ -181,7 +188,8 @@ class DpeMappingDetail implements ModelInterface, ArrayAccess
             'dataclassId' => 'setDataclassId',
             'dataclassName' => 'setDataclassName',
             'mapperTypeId' => 'setMapperTypeId',
-            'dpeInfo' => 'setDpeInfo',
+            'mappingId' => 'setMappingId',
+            'mappingInfo' => 'setMappingInfo',
             'createTime' => 'setCreateTime',
             'creatorId' => 'setCreatorId',
             'creatorName' => 'setCreatorName',
@@ -200,7 +208,8 @@ class DpeMappingDetail implements ModelInterface, ArrayAccess
     * dataclassId  映射id
     * dataclassName  数据类名称
     * mapperTypeId  映射id
-    * dpeInfo  dpeInfo
+    * mappingId  映射id
+    * mappingInfo  mappingInfo
     * createTime  创建时间
     * creatorId  创建者id
     * creatorName  创建者名称
@@ -219,7 +228,8 @@ class DpeMappingDetail implements ModelInterface, ArrayAccess
             'dataclassId' => 'getDataclassId',
             'dataclassName' => 'getDataclassName',
             'mapperTypeId' => 'getMapperTypeId',
-            'dpeInfo' => 'getDpeInfo',
+            'mappingId' => 'getMappingId',
+            'mappingInfo' => 'getMappingInfo',
             'createTime' => 'getCreateTime',
             'creatorId' => 'getCreatorId',
             'creatorName' => 'getCreatorName',
@@ -294,7 +304,8 @@ class DpeMappingDetail implements ModelInterface, ArrayAccess
         $this->container['dataclassId'] = isset($data['dataclassId']) ? $data['dataclassId'] : null;
         $this->container['dataclassName'] = isset($data['dataclassName']) ? $data['dataclassName'] : null;
         $this->container['mapperTypeId'] = isset($data['mapperTypeId']) ? $data['mapperTypeId'] : null;
-        $this->container['dpeInfo'] = isset($data['dpeInfo']) ? $data['dpeInfo'] : null;
+        $this->container['mappingId'] = isset($data['mappingId']) ? $data['mappingId'] : null;
+        $this->container['mappingInfo'] = isset($data['mappingInfo']) ? $data['mappingInfo'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['creatorId'] = isset($data['creatorId']) ? $data['creatorId'] : null;
         $this->container['creatorName'] = isset($data['creatorName']) ? $data['creatorName'] : null;
@@ -353,6 +364,12 @@ class DpeMappingDetail implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['mapperTypeId']) && (mb_strlen($this->container['mapperTypeId']) < 32)) {
                 $invalidProperties[] = "invalid value for 'mapperTypeId', the character length must be bigger than or equal to 32.";
+            }
+            if (!is_null($this->container['mappingId']) && (mb_strlen($this->container['mappingId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'mappingId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['mappingId']) && (mb_strlen($this->container['mappingId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'mappingId', the character length must be bigger than or equal to 32.";
             }
             if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) > 64)) {
                 $invalidProperties[] = "invalid value for 'createTime', the character length must be smaller than or equal to 64.";
@@ -573,26 +590,50 @@ class DpeMappingDetail implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets dpeInfo
-    *  dpeInfo
+    * Gets mappingId
+    *  映射id
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\DpeInfo|null
+    * @return string|null
     */
-    public function getDpeInfo()
+    public function getMappingId()
     {
-        return $this->container['dpeInfo'];
+        return $this->container['mappingId'];
     }
 
     /**
-    * Sets dpeInfo
+    * Sets mappingId
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\DpeInfo|null $dpeInfo dpeInfo
+    * @param string|null $mappingId 映射id
     *
     * @return $this
     */
-    public function setDpeInfo($dpeInfo)
+    public function setMappingId($mappingId)
     {
-        $this->container['dpeInfo'] = $dpeInfo;
+        $this->container['mappingId'] = $mappingId;
+        return $this;
+    }
+
+    /**
+    * Gets mappingInfo
+    *  mappingInfo
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\DpeInfo|null
+    */
+    public function getMappingInfo()
+    {
+        return $this->container['mappingInfo'];
+    }
+
+    /**
+    * Sets mappingInfo
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\DpeInfo|null $mappingInfo mappingInfo
+    *
+    * @return $this
+    */
+    public function setMappingInfo($mappingInfo)
+    {
+        $this->container['mappingInfo'] = $mappingInfo;
         return $this;
     }
 

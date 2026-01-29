@@ -24,6 +24,7 @@ class ListServersRequest implements ModelInterface, ArrayAccess
     * name  源端服务器名称
     * id  源端服务器ID
     * ip  源端服务器IP地址
+    * ipv6  源端服务器IPV6地址，优先使用IP进行查询
     * migproject  迁移项目ID，填写该参数将查询迁移项目下的所有虚拟机
     * limit  每一页记录的源端服务器数量，0表示用默认值 200
     * offset  偏移量，默认值0
@@ -31,6 +32,7 @@ class ListServersRequest implements ModelInterface, ArrayAccess
     * connected  查询失去连接的源端
     * enterpriseProjectId  需要查询的企业项目ID
     * isConsistencyResultExist  是否存在一致性校验结果
+    * vmId  平台的克隆服务器id
     *
     * @var string[]
     */
@@ -39,13 +41,15 @@ class ListServersRequest implements ModelInterface, ArrayAccess
             'name' => 'string',
             'id' => 'string',
             'ip' => 'string',
+            'ipv6' => 'string',
             'migproject' => 'string',
             'limit' => 'int',
             'offset' => 'int',
             'migrationCycle' => 'string',
             'connected' => 'bool',
             'enterpriseProjectId' => 'string',
-            'isConsistencyResultExist' => 'bool'
+            'isConsistencyResultExist' => 'bool',
+            'vmId' => 'string'
     ];
 
     /**
@@ -54,6 +58,7 @@ class ListServersRequest implements ModelInterface, ArrayAccess
     * name  源端服务器名称
     * id  源端服务器ID
     * ip  源端服务器IP地址
+    * ipv6  源端服务器IPV6地址，优先使用IP进行查询
     * migproject  迁移项目ID，填写该参数将查询迁移项目下的所有虚拟机
     * limit  每一页记录的源端服务器数量，0表示用默认值 200
     * offset  偏移量，默认值0
@@ -61,6 +66,7 @@ class ListServersRequest implements ModelInterface, ArrayAccess
     * connected  查询失去连接的源端
     * enterpriseProjectId  需要查询的企业项目ID
     * isConsistencyResultExist  是否存在一致性校验结果
+    * vmId  平台的克隆服务器id
     *
     * @var string[]
     */
@@ -69,13 +75,15 @@ class ListServersRequest implements ModelInterface, ArrayAccess
         'name' => null,
         'id' => null,
         'ip' => null,
+        'ipv6' => null,
         'migproject' => null,
         'limit' => 'int32',
         'offset' => 'int32',
         'migrationCycle' => null,
         'connected' => null,
         'enterpriseProjectId' => null,
-        'isConsistencyResultExist' => null
+        'isConsistencyResultExist' => null,
+        'vmId' => null
     ];
 
     /**
@@ -105,6 +113,7 @@ class ListServersRequest implements ModelInterface, ArrayAccess
     * name  源端服务器名称
     * id  源端服务器ID
     * ip  源端服务器IP地址
+    * ipv6  源端服务器IPV6地址，优先使用IP进行查询
     * migproject  迁移项目ID，填写该参数将查询迁移项目下的所有虚拟机
     * limit  每一页记录的源端服务器数量，0表示用默认值 200
     * offset  偏移量，默认值0
@@ -112,6 +121,7 @@ class ListServersRequest implements ModelInterface, ArrayAccess
     * connected  查询失去连接的源端
     * enterpriseProjectId  需要查询的企业项目ID
     * isConsistencyResultExist  是否存在一致性校验结果
+    * vmId  平台的克隆服务器id
     *
     * @var string[]
     */
@@ -120,13 +130,15 @@ class ListServersRequest implements ModelInterface, ArrayAccess
             'name' => 'name',
             'id' => 'id',
             'ip' => 'ip',
+            'ipv6' => 'ipv6',
             'migproject' => 'migproject',
             'limit' => 'limit',
             'offset' => 'offset',
             'migrationCycle' => 'migration_cycle',
             'connected' => 'connected',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'isConsistencyResultExist' => 'is_consistency_result_exist'
+            'isConsistencyResultExist' => 'is_consistency_result_exist',
+            'vmId' => 'vm_id'
     ];
 
     /**
@@ -135,6 +147,7 @@ class ListServersRequest implements ModelInterface, ArrayAccess
     * name  源端服务器名称
     * id  源端服务器ID
     * ip  源端服务器IP地址
+    * ipv6  源端服务器IPV6地址，优先使用IP进行查询
     * migproject  迁移项目ID，填写该参数将查询迁移项目下的所有虚拟机
     * limit  每一页记录的源端服务器数量，0表示用默认值 200
     * offset  偏移量，默认值0
@@ -142,6 +155,7 @@ class ListServersRequest implements ModelInterface, ArrayAccess
     * connected  查询失去连接的源端
     * enterpriseProjectId  需要查询的企业项目ID
     * isConsistencyResultExist  是否存在一致性校验结果
+    * vmId  平台的克隆服务器id
     *
     * @var string[]
     */
@@ -150,13 +164,15 @@ class ListServersRequest implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'id' => 'setId',
             'ip' => 'setIp',
+            'ipv6' => 'setIpv6',
             'migproject' => 'setMigproject',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
             'migrationCycle' => 'setMigrationCycle',
             'connected' => 'setConnected',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'isConsistencyResultExist' => 'setIsConsistencyResultExist'
+            'isConsistencyResultExist' => 'setIsConsistencyResultExist',
+            'vmId' => 'setVmId'
     ];
 
     /**
@@ -165,6 +181,7 @@ class ListServersRequest implements ModelInterface, ArrayAccess
     * name  源端服务器名称
     * id  源端服务器ID
     * ip  源端服务器IP地址
+    * ipv6  源端服务器IPV6地址，优先使用IP进行查询
     * migproject  迁移项目ID，填写该参数将查询迁移项目下的所有虚拟机
     * limit  每一页记录的源端服务器数量，0表示用默认值 200
     * offset  偏移量，默认值0
@@ -172,6 +189,7 @@ class ListServersRequest implements ModelInterface, ArrayAccess
     * connected  查询失去连接的源端
     * enterpriseProjectId  需要查询的企业项目ID
     * isConsistencyResultExist  是否存在一致性校验结果
+    * vmId  平台的克隆服务器id
     *
     * @var string[]
     */
@@ -180,13 +198,15 @@ class ListServersRequest implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'id' => 'getId',
             'ip' => 'getIp',
+            'ipv6' => 'getIpv6',
             'migproject' => 'getMigproject',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
             'migrationCycle' => 'getMigrationCycle',
             'connected' => 'getConnected',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'isConsistencyResultExist' => 'getIsConsistencyResultExist'
+            'isConsistencyResultExist' => 'getIsConsistencyResultExist',
+            'vmId' => 'getVmId'
     ];
 
     /**
@@ -323,6 +343,7 @@ class ListServersRequest implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
+        $this->container['ipv6'] = isset($data['ipv6']) ? $data['ipv6'] : null;
         $this->container['migproject'] = isset($data['migproject']) ? $data['migproject'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
@@ -330,6 +351,7 @@ class ListServersRequest implements ModelInterface, ArrayAccess
         $this->container['connected'] = isset($data['connected']) ? $data['connected'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['isConsistencyResultExist'] = isset($data['isConsistencyResultExist']) ? $data['isConsistencyResultExist'] : null;
+        $this->container['vmId'] = isset($data['vmId']) ? $data['vmId'] : null;
     }
 
     /**
@@ -365,6 +387,12 @@ class ListServersRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['ip']) && (mb_strlen($this->container['ip']) < 0)) {
                 $invalidProperties[] = "invalid value for 'ip', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['ipv6']) && (mb_strlen($this->container['ipv6']) > 255)) {
+                $invalidProperties[] = "invalid value for 'ipv6', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['ipv6']) && (mb_strlen($this->container['ipv6']) < 0)) {
+                $invalidProperties[] = "invalid value for 'ipv6', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['migproject']) && (mb_strlen($this->container['migproject']) > 255)) {
                 $invalidProperties[] = "invalid value for 'migproject', the character length must be smaller than or equal to 255.";
@@ -403,6 +431,12 @@ class ListServersRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['vmId']) && (mb_strlen($this->container['vmId']) > 255)) {
+                $invalidProperties[] = "invalid value for 'vmId', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['vmId']) && (mb_strlen($this->container['vmId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'vmId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -511,6 +545,30 @@ class ListServersRequest implements ModelInterface, ArrayAccess
     public function setIp($ip)
     {
         $this->container['ip'] = $ip;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6
+    *  源端服务器IPV6地址，优先使用IP进行查询
+    *
+    * @return string|null
+    */
+    public function getIpv6()
+    {
+        return $this->container['ipv6'];
+    }
+
+    /**
+    * Sets ipv6
+    *
+    * @param string|null $ipv6 源端服务器IPV6地址，优先使用IP进行查询
+    *
+    * @return $this
+    */
+    public function setIpv6($ipv6)
+    {
+        $this->container['ipv6'] = $ipv6;
         return $this;
     }
 
@@ -679,6 +737,30 @@ class ListServersRequest implements ModelInterface, ArrayAccess
     public function setIsConsistencyResultExist($isConsistencyResultExist)
     {
         $this->container['isConsistencyResultExist'] = $isConsistencyResultExist;
+        return $this;
+    }
+
+    /**
+    * Gets vmId
+    *  平台的克隆服务器id
+    *
+    * @return string|null
+    */
+    public function getVmId()
+    {
+        return $this->container['vmId'];
+    }
+
+    /**
+    * Sets vmId
+    *
+    * @param string|null $vmId 平台的克隆服务器id
+    *
+    * @return $this
+    */
+    public function setVmId($vmId)
+    {
+        $this->container['vmId'] = $vmId;
         return $this;
     }
 

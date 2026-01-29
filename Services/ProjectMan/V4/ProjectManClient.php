@@ -1976,6 +1976,142 @@ class ProjectManClient extends Client
     }
 
     /**
+     * 删除工作项描述中的图片
+     *
+     * 删除工作项描述中的图片
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteIpdImageInIssue($request)
+    {
+        return $this->deleteIpdImageInIssueWithHttpInfo($request);
+    }
+
+    public function deleteIpdImageInIssueWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/ipdprojectservice/projects/{project_id}/images';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['issueId'] !== null) {
+            $queryParams['issue_id'] = $localVarParams['issueId'];
+        }
+        if ($localVarParams['fileName'] !== null) {
+            $queryParams['file_name'] = $localVarParams['fileName'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\DeleteIpdImageInIssueResponse',
+            $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\DeleteIpdImageInIssueRequest');
+    }
+
+    /**
+     * 下载工作项描述中的图片
+     *
+     * 下载工作项描述中的图片
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function downloadIpdImageInIssue($request)
+    {
+        return $this->downloadIpdImageInIssueWithHttpInfo($request);
+    }
+
+    public function downloadIpdImageInIssueWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/ipdprojectservice/projects/{project_id}/images';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['issueId'] !== null) {
+            $queryParams['issue_id'] = $localVarParams['issueId'];
+        }
+        if ($localVarParams['fileName'] !== null) {
+            $queryParams['file_name'] = $localVarParams['fileName'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\DownloadIpdImageInIssueResponse',
+            $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\DownloadIpdImageInIssueRequest');
+    }
+
+    /**
      * 查询项目工作项列表
      *
      * 查询Ipd项目的工作项列表
@@ -2452,6 +2588,79 @@ class ProjectManClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\TransferWorkItemFlowResponse',
             $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\TransferWorkItemFlowRequest');
+    }
+
+    /**
+     * 上传图片到工作项描述中
+     *
+     * 上传图片并更新到工作项描述中
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function uploadIpdImageInIssue($request)
+    {
+        return $this->uploadIpdImageInIssueWithHttpInfo($request);
+    }
+
+    public function uploadIpdImageInIssueWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/ipdprojectservice/projects/{project_id}/images';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = true;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['issueId'] !== null) {
+            $queryParams['issue_id'] = $localVarParams['issueId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        foreach ($httpBody::attributeMap() as $k => $v) {
+            $getter = $httpBody::getters()[$k];
+            $value = $httpBody->$getter();
+            $formParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['multipart/form-data']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ProjectMan\V4\Model\UploadIpdImageInIssueResponse',
+            $requestType='\HuaweiCloud\SDK\ProjectMan\V4\Model\UploadIpdImageInIssueRequest');
     }
 
     /**

@@ -34,10 +34,8 @@ class CreateIndicatorDetail implements ModelInterface, ArrayAccess
     * id  威胁情报ID
     * indicatorType  indicatorType
     * name  威胁情报名称
-    * dataclassId  数据类ID
     * workspaceId  工作空间ID
     * projectId  项目ID
-    * dataclass  dataclass
     * createTime  创建时间
     * updateTime  更新时间
     *
@@ -58,10 +56,8 @@ class CreateIndicatorDetail implements ModelInterface, ArrayAccess
             'id' => 'string',
             'indicatorType' => '\HuaweiCloud\SDK\SecMaster\V1\Model\CreateIndicatorDetailIndicatorType',
             'name' => 'string',
-            'dataclassId' => 'string',
             'workspaceId' => 'string',
             'projectId' => 'string',
-            'dataclass' => '\HuaweiCloud\SDK\SecMaster\V1\Model\DataClassRefPojo',
             'createTime' => 'string',
             'updateTime' => 'string'
     ];
@@ -82,10 +78,8 @@ class CreateIndicatorDetail implements ModelInterface, ArrayAccess
     * id  威胁情报ID
     * indicatorType  indicatorType
     * name  威胁情报名称
-    * dataclassId  数据类ID
     * workspaceId  工作空间ID
     * projectId  项目ID
-    * dataclass  dataclass
     * createTime  创建时间
     * updateTime  更新时间
     *
@@ -106,10 +100,8 @@ class CreateIndicatorDetail implements ModelInterface, ArrayAccess
         'id' => null,
         'indicatorType' => null,
         'name' => null,
-        'dataclassId' => null,
         'workspaceId' => null,
         'projectId' => null,
-        'dataclass' => null,
         'createTime' => null,
         'updateTime' => null
     ];
@@ -151,10 +143,8 @@ class CreateIndicatorDetail implements ModelInterface, ArrayAccess
     * id  威胁情报ID
     * indicatorType  indicatorType
     * name  威胁情报名称
-    * dataclassId  数据类ID
     * workspaceId  工作空间ID
     * projectId  项目ID
-    * dataclass  dataclass
     * createTime  创建时间
     * updateTime  更新时间
     *
@@ -175,10 +165,8 @@ class CreateIndicatorDetail implements ModelInterface, ArrayAccess
             'id' => 'id',
             'indicatorType' => 'indicator_type',
             'name' => 'name',
-            'dataclassId' => 'dataclass_id',
             'workspaceId' => 'workspace_id',
             'projectId' => 'project_id',
-            'dataclass' => 'dataclass',
             'createTime' => 'create_time',
             'updateTime' => 'update_time'
     ];
@@ -199,10 +187,8 @@ class CreateIndicatorDetail implements ModelInterface, ArrayAccess
     * id  威胁情报ID
     * indicatorType  indicatorType
     * name  威胁情报名称
-    * dataclassId  数据类ID
     * workspaceId  工作空间ID
     * projectId  项目ID
-    * dataclass  dataclass
     * createTime  创建时间
     * updateTime  更新时间
     *
@@ -223,10 +209,8 @@ class CreateIndicatorDetail implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'indicatorType' => 'setIndicatorType',
             'name' => 'setName',
-            'dataclassId' => 'setDataclassId',
             'workspaceId' => 'setWorkspaceId',
             'projectId' => 'setProjectId',
-            'dataclass' => 'setDataclass',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime'
     ];
@@ -247,10 +231,8 @@ class CreateIndicatorDetail implements ModelInterface, ArrayAccess
     * id  威胁情报ID
     * indicatorType  indicatorType
     * name  威胁情报名称
-    * dataclassId  数据类ID
     * workspaceId  工作空间ID
     * projectId  项目ID
-    * dataclass  dataclass
     * createTime  创建时间
     * updateTime  更新时间
     *
@@ -271,10 +253,8 @@ class CreateIndicatorDetail implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'indicatorType' => 'getIndicatorType',
             'name' => 'getName',
-            'dataclassId' => 'getDataclassId',
             'workspaceId' => 'getWorkspaceId',
             'projectId' => 'getProjectId',
-            'dataclass' => 'getDataclass',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime'
     ];
@@ -351,10 +331,8 @@ class CreateIndicatorDetail implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['indicatorType'] = isset($data['indicatorType']) ? $data['indicatorType'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['dataclassId'] = isset($data['dataclassId']) ? $data['dataclassId'] : null;
         $this->container['workspaceId'] = isset($data['workspaceId']) ? $data['workspaceId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
-        $this->container['dataclass'] = isset($data['dataclass']) ? $data['dataclass'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
     }
@@ -453,12 +431,6 @@ class CreateIndicatorDetail implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['dataclassId']) && (mb_strlen($this->container['dataclassId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'dataclassId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['dataclassId']) && (mb_strlen($this->container['dataclassId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'dataclassId', the character length must be bigger than or equal to 32.";
             }
         if ($this->container['workspaceId'] === null) {
             $invalidProperties[] = "'workspaceId' can't be null";
@@ -838,30 +810,6 @@ class CreateIndicatorDetail implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets dataclassId
-    *  数据类ID
-    *
-    * @return string|null
-    */
-    public function getDataclassId()
-    {
-        return $this->container['dataclassId'];
-    }
-
-    /**
-    * Sets dataclassId
-    *
-    * @param string|null $dataclassId 数据类ID
-    *
-    * @return $this
-    */
-    public function setDataclassId($dataclassId)
-    {
-        $this->container['dataclassId'] = $dataclassId;
-        return $this;
-    }
-
-    /**
     * Gets workspaceId
     *  工作空间ID
     *
@@ -906,30 +854,6 @@ class CreateIndicatorDetail implements ModelInterface, ArrayAccess
     public function setProjectId($projectId)
     {
         $this->container['projectId'] = $projectId;
-        return $this;
-    }
-
-    /**
-    * Gets dataclass
-    *  dataclass
-    *
-    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\DataClassRefPojo|null
-    */
-    public function getDataclass()
-    {
-        return $this->container['dataclass'];
-    }
-
-    /**
-    * Sets dataclass
-    *
-    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\DataClassRefPojo|null $dataclass dataclass
-    *
-    * @return $this
-    */
-    public function setDataclass($dataclass)
-    {
-        $this->container['dataclass'] = $dataclass;
         return $this;
     }
 

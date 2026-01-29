@@ -21,26 +21,30 @@ class ShowMappingFunctionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * compareList  比较函数信息
-    * operationList  操作函数信息
+    * code  **参数解释**: 错误码 **取值范围**: 不涉及
+    * message  **参数解释**: 错误描述 **取值范围**: 不涉及
+    * data  分类映射函数数据
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'compareList' => '\HuaweiCloud\SDK\SecMaster\V1\Model\DpeCompareFunctionDetail[]',
-            'operationList' => '\HuaweiCloud\SDK\SecMaster\V1\Model\DpeOperateFunctionDetail[]'
+            'code' => 'string',
+            'message' => 'string',
+            'data' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * compareList  比较函数信息
-    * operationList  操作函数信息
+    * code  **参数解释**: 错误码 **取值范围**: 不涉及
+    * message  **参数解释**: 错误描述 **取值范围**: 不涉及
+    * data  分类映射函数数据
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'compareList' => null,
-        'operationList' => null
+        'code' => null,
+        'message' => null,
+        'data' => null
     ];
 
     /**
@@ -66,38 +70,44 @@ class ShowMappingFunctionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * compareList  比较函数信息
-    * operationList  操作函数信息
+    * code  **参数解释**: 错误码 **取值范围**: 不涉及
+    * message  **参数解释**: 错误描述 **取值范围**: 不涉及
+    * data  分类映射函数数据
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'compareList' => 'compare_list',
-            'operationList' => 'operation_list'
+            'code' => 'code',
+            'message' => 'message',
+            'data' => 'data'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * compareList  比较函数信息
-    * operationList  操作函数信息
+    * code  **参数解释**: 错误码 **取值范围**: 不涉及
+    * message  **参数解释**: 错误描述 **取值范围**: 不涉及
+    * data  分类映射函数数据
     *
     * @var string[]
     */
     protected static $setters = [
-            'compareList' => 'setCompareList',
-            'operationList' => 'setOperationList'
+            'code' => 'setCode',
+            'message' => 'setMessage',
+            'data' => 'setData'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * compareList  比较函数信息
-    * operationList  操作函数信息
+    * code  **参数解释**: 错误码 **取值范围**: 不涉及
+    * message  **参数解释**: 错误描述 **取值范围**: 不涉及
+    * data  分类映射函数数据
     *
     * @var string[]
     */
     protected static $getters = [
-            'compareList' => 'getCompareList',
-            'operationList' => 'getOperationList'
+            'code' => 'getCode',
+            'message' => 'getMessage',
+            'data' => 'getData'
     ];
 
     /**
@@ -158,8 +168,9 @@ class ShowMappingFunctionResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['compareList'] = isset($data['compareList']) ? $data['compareList'] : null;
-        $this->container['operationList'] = isset($data['operationList']) ? $data['operationList'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -170,6 +181,18 @@ class ShowMappingFunctionResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['code']) && (mb_strlen($this->container['code']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'code', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['code']) && (mb_strlen($this->container['code']) < 0)) {
+                $invalidProperties[] = "invalid value for 'code', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['message']) && (mb_strlen($this->container['message']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'message', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['message']) && (mb_strlen($this->container['message']) < 0)) {
+                $invalidProperties[] = "invalid value for 'message', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -185,50 +208,74 @@ class ShowMappingFunctionResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets compareList
-    *  比较函数信息
+    * Gets code
+    *  **参数解释**: 错误码 **取值范围**: 不涉及
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\DpeCompareFunctionDetail[]|null
+    * @return string|null
     */
-    public function getCompareList()
+    public function getCode()
     {
-        return $this->container['compareList'];
+        return $this->container['code'];
     }
 
     /**
-    * Sets compareList
+    * Sets code
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\DpeCompareFunctionDetail[]|null $compareList 比较函数信息
+    * @param string|null $code **参数解释**: 错误码 **取值范围**: 不涉及
     *
     * @return $this
     */
-    public function setCompareList($compareList)
+    public function setCode($code)
     {
-        $this->container['compareList'] = $compareList;
+        $this->container['code'] = $code;
         return $this;
     }
 
     /**
-    * Gets operationList
-    *  操作函数信息
+    * Gets message
+    *  **参数解释**: 错误描述 **取值范围**: 不涉及
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\DpeOperateFunctionDetail[]|null
+    * @return string|null
     */
-    public function getOperationList()
+    public function getMessage()
     {
-        return $this->container['operationList'];
+        return $this->container['message'];
     }
 
     /**
-    * Sets operationList
+    * Sets message
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\DpeOperateFunctionDetail[]|null $operationList 操作函数信息
+    * @param string|null $message **参数解释**: 错误描述 **取值范围**: 不涉及
     *
     * @return $this
     */
-    public function setOperationList($operationList)
+    public function setMessage($message)
     {
-        $this->container['operationList'] = $operationList;
+        $this->container['message'] = $message;
+        return $this;
+    }
+
+    /**
+    * Gets data
+    *  分类映射函数数据
+    *
+    * @return object|null
+    */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+    * Sets data
+    *
+    * @param object|null $data 分类映射函数数据
+    *
+    * @return $this
+    */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
         return $this;
     }
 

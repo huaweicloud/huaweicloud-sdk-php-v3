@@ -22,8 +22,8 @@ class PutSourceServerBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  源端服务器修改后的名字
     * migprojectid  源端服务器修改后所属的迁移项目ID
-    * disks  磁盘
-    * volumeGroups  卷组
+    * disks  磁盘，仅在“待配置目的端”状态下，此修改才生效
+    * volumeGroups  卷组，仅在“待配置目的端”状态下，此修改才生效
     *
     * @var string[]
     */
@@ -38,8 +38,8 @@ class PutSourceServerBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  源端服务器修改后的名字
     * migprojectid  源端服务器修改后所属的迁移项目ID
-    * disks  磁盘
-    * volumeGroups  卷组
+    * disks  磁盘，仅在“待配置目的端”状态下，此修改才生效
+    * volumeGroups  卷组，仅在“待配置目的端”状态下，此修改才生效
     *
     * @var string[]
     */
@@ -75,8 +75,8 @@ class PutSourceServerBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  源端服务器修改后的名字
     * migprojectid  源端服务器修改后所属的迁移项目ID
-    * disks  磁盘
-    * volumeGroups  卷组
+    * disks  磁盘，仅在“待配置目的端”状态下，此修改才生效
+    * volumeGroups  卷组，仅在“待配置目的端”状态下，此修改才生效
     *
     * @var string[]
     */
@@ -91,8 +91,8 @@ class PutSourceServerBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  源端服务器修改后的名字
     * migprojectid  源端服务器修改后所属的迁移项目ID
-    * disks  磁盘
-    * volumeGroups  卷组
+    * disks  磁盘，仅在“待配置目的端”状态下，此修改才生效
+    * volumeGroups  卷组，仅在“待配置目的端”状态下，此修改才生效
     *
     * @var string[]
     */
@@ -107,8 +107,8 @@ class PutSourceServerBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  源端服务器修改后的名字
     * migprojectid  源端服务器修改后所属的迁移项目ID
-    * disks  磁盘
-    * volumeGroups  卷组
+    * disks  磁盘，仅在“待配置目的端”状态下，此修改才生效
+    * volumeGroups  卷组，仅在“待配置目的端”状态下，此修改才生效
     *
     * @var string[]
     */
@@ -267,7 +267,7 @@ class PutSourceServerBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets disks
-    *  磁盘
+    *  磁盘，仅在“待配置目的端”状态下，此修改才生效
     *
     * @return \HuaweiCloud\SDK\Sms\V3\Model\PutDisk[]|null
     */
@@ -279,7 +279,7 @@ class PutSourceServerBody implements ModelInterface, ArrayAccess
     /**
     * Sets disks
     *
-    * @param \HuaweiCloud\SDK\Sms\V3\Model\PutDisk[]|null $disks 磁盘
+    * @param \HuaweiCloud\SDK\Sms\V3\Model\PutDisk[]|null $disks 磁盘，仅在“待配置目的端”状态下，此修改才生效
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class PutSourceServerBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeGroups
-    *  卷组
+    *  卷组，仅在“待配置目的端”状态下，此修改才生效
     *
     * @return \HuaweiCloud\SDK\Sms\V3\Model\PutVolumeGroups[]|null
     */
@@ -303,7 +303,7 @@ class PutSourceServerBody implements ModelInterface, ArrayAccess
     /**
     * Sets volumeGroups
     *
-    * @param \HuaweiCloud\SDK\Sms\V3\Model\PutVolumeGroups[]|null $volumeGroups 卷组
+    * @param \HuaweiCloud\SDK\Sms\V3\Model\PutVolumeGroups[]|null $volumeGroups 卷组，仅在“待配置目的端”状态下，此修改才生效
     *
     * @return $this
     */

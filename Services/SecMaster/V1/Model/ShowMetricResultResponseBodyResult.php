@@ -22,7 +22,7 @@ class ShowMetricResultResponseBodyResult implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * labels  指标查询结果表格标题
     * datarows  指标查询结果内容表格
-    * effectiveColumn  生效的列, 当有该参数时，使用指定列作为指标数据结果
+    * effectiveColumn  生效的列，当有该参数时，使用指定列作为指标数据结果
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ShowMetricResultResponseBodyResult implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * labels  指标查询结果表格标题
     * datarows  指标查询结果内容表格
-    * effectiveColumn  生效的列, 当有该参数时，使用指定列作为指标数据结果
+    * effectiveColumn  生效的列，当有该参数时，使用指定列作为指标数据结果
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowMetricResultResponseBodyResult implements ModelInterface, ArrayAccess
     * and the value is the original name
     * labels  指标查询结果表格标题
     * datarows  指标查询结果内容表格
-    * effectiveColumn  生效的列, 当有该参数时，使用指定列作为指标数据结果
+    * effectiveColumn  生效的列，当有该参数时，使用指定列作为指标数据结果
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ShowMetricResultResponseBodyResult implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * labels  指标查询结果表格标题
     * datarows  指标查询结果内容表格
-    * effectiveColumn  生效的列, 当有该参数时，使用指定列作为指标数据结果
+    * effectiveColumn  生效的列，当有该参数时，使用指定列作为指标数据结果
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ShowMetricResultResponseBodyResult implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * labels  指标查询结果表格标题
     * datarows  指标查询结果内容表格
-    * effectiveColumn  生效的列, 当有该参数时，使用指定列作为指标数据结果
+    * effectiveColumn  生效的列，当有该参数时，使用指定列作为指标数据结果
     *
     * @var string[]
     */
@@ -253,7 +253,7 @@ class ShowMetricResultResponseBodyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets effectiveColumn
-    *  生效的列, 当有该参数时，使用指定列作为指标数据结果
+    *  生效的列，当有该参数时，使用指定列作为指标数据结果
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class ShowMetricResultResponseBodyResult implements ModelInterface, ArrayAccess
     /**
     * Sets effectiveColumn
     *
-    * @param string|null $effectiveColumn 生效的列, 当有该参数时，使用指定列作为指标数据结果
+    * @param string|null $effectiveColumn 生效的列，当有该参数时，使用指定列作为指标数据结果
     *
     * @return $this
     */

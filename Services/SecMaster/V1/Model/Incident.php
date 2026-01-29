@@ -45,7 +45,7 @@ class Incident implements ModelInterface, ArrayAccess
     * remediation  remediation
     * verificationState  验证状态，标识事件的准确性。可选类型如下： Unknown – 未知 True_Positive – 确认 False_Positive – 误报 默认填写Unknown
     * handleStatus  事件处理状态，可选类型如下： Open – 打开，默认 Block – 阻塞 Closed – 关闭 默认填写Open
-    * sla  约束闭环时间：设置风险接受持续时间。单位：小时
+    * sla  约束闭环时间：设置风险接受持续时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * closeTime  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * ipdrrPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
@@ -86,11 +86,11 @@ class Incident implements ModelInterface, ArrayAccess
             'criticality' => 'int',
             'incidentType' => '\HuaweiCloud\SDK\SecMaster\V1\Model\IncidentIncidentType',
             'networkList' => '\HuaweiCloud\SDK\SecMaster\V1\Model\AlertNetworkList[]',
-            'resourceList' => '\HuaweiCloud\SDK\SecMaster\V1\Model\AlertResourceList[]',
+            'resourceList' => '\HuaweiCloud\SDK\SecMaster\V1\Model\IncidentResourceList[]',
             'remediation' => '\HuaweiCloud\SDK\SecMaster\V1\Model\AlertRemediation',
             'verificationState' => 'string',
             'handleStatus' => 'string',
-            'sla' => 'int',
+            'sla' => 'string',
             'updateTime' => 'string',
             'closeTime' => 'string',
             'ipdrrPhase' => 'string',
@@ -135,7 +135,7 @@ class Incident implements ModelInterface, ArrayAccess
     * remediation  remediation
     * verificationState  验证状态，标识事件的准确性。可选类型如下： Unknown – 未知 True_Positive – 确认 False_Positive – 误报 默认填写Unknown
     * handleStatus  事件处理状态，可选类型如下： Open – 打开，默认 Block – 阻塞 Closed – 关闭 默认填写Open
-    * sla  约束闭环时间：设置风险接受持续时间。单位：小时
+    * sla  约束闭环时间：设置风险接受持续时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * closeTime  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * ipdrrPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
@@ -246,7 +246,7 @@ class Incident implements ModelInterface, ArrayAccess
     * remediation  remediation
     * verificationState  验证状态，标识事件的准确性。可选类型如下： Unknown – 未知 True_Positive – 确认 False_Positive – 误报 默认填写Unknown
     * handleStatus  事件处理状态，可选类型如下： Open – 打开，默认 Block – 阻塞 Closed – 关闭 默认填写Open
-    * sla  约束闭环时间：设置风险接受持续时间。单位：小时
+    * sla  约束闭环时间：设置风险接受持续时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * closeTime  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * ipdrrPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
@@ -336,7 +336,7 @@ class Incident implements ModelInterface, ArrayAccess
     * remediation  remediation
     * verificationState  验证状态，标识事件的准确性。可选类型如下： Unknown – 未知 True_Positive – 确认 False_Positive – 误报 默认填写Unknown
     * handleStatus  事件处理状态，可选类型如下： Open – 打开，默认 Block – 阻塞 Closed – 关闭 默认填写Open
-    * sla  约束闭环时间：设置风险接受持续时间。单位：小时
+    * sla  约束闭环时间：设置风险接受持续时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * closeTime  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * ipdrrPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
@@ -426,7 +426,7 @@ class Incident implements ModelInterface, ArrayAccess
     * remediation  remediation
     * verificationState  验证状态，标识事件的准确性。可选类型如下： Unknown – 未知 True_Positive – 确认 False_Positive – 误报 默认填写Unknown
     * handleStatus  事件处理状态，可选类型如下： Open – 打开，默认 Block – 阻塞 Closed – 关闭 默认填写Open
-    * sla  约束闭环时间：设置风险接受持续时间。单位：小时
+    * sla  约束闭环时间：设置风险接受持续时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * closeTime  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * ipdrrPhase  周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
@@ -829,11 +829,11 @@ class Incident implements ModelInterface, ArrayAccess
             if (!is_null($this->container['handleStatus']) && (mb_strlen($this->container['handleStatus']) < 4)) {
                 $invalidProperties[] = "invalid value for 'handleStatus', the character length must be bigger than or equal to 4.";
             }
-            if (!is_null($this->container['sla']) && ($this->container['sla'] > 999)) {
-                $invalidProperties[] = "invalid value for 'sla', must be smaller than or equal to 999.";
+            if (!is_null($this->container['sla']) && (mb_strlen($this->container['sla']) > 30)) {
+                $invalidProperties[] = "invalid value for 'sla', the character length must be smaller than or equal to 30.";
             }
-            if (!is_null($this->container['sla']) && ($this->container['sla'] < 0)) {
-                $invalidProperties[] = "invalid value for 'sla', must be bigger than or equal to 0.";
+            if (!is_null($this->container['sla']) && (mb_strlen($this->container['sla']) < 0)) {
+                $invalidProperties[] = "invalid value for 'sla', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['updateTime']) && (mb_strlen($this->container['updateTime']) > 30)) {
                 $invalidProperties[] = "invalid value for 'updateTime', the character length must be smaller than or equal to 30.";
@@ -1427,7 +1427,7 @@ class Incident implements ModelInterface, ArrayAccess
     * Gets resourceList
     *  受影响资产
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\AlertResourceList[]|null
+    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\IncidentResourceList[]|null
     */
     public function getResourceList()
     {
@@ -1437,7 +1437,7 @@ class Incident implements ModelInterface, ArrayAccess
     /**
     * Sets resourceList
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\AlertResourceList[]|null $resourceList 受影响资产
+    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\IncidentResourceList[]|null $resourceList 受影响资产
     *
     * @return $this
     */
@@ -1521,9 +1521,9 @@ class Incident implements ModelInterface, ArrayAccess
 
     /**
     * Gets sla
-    *  约束闭环时间：设置风险接受持续时间。单位：小时
+    *  约束闭环时间：设置风险接受持续时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     *
-    * @return int|null
+    * @return string|null
     */
     public function getSla()
     {
@@ -1533,7 +1533,7 @@ class Incident implements ModelInterface, ArrayAccess
     /**
     * Sets sla
     *
-    * @param int|null $sla 约束闭环时间：设置风险接受持续时间。单位：小时
+    * @param string|null $sla 约束闭环时间：设置风险接受持续时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     *
     * @return $this
     */

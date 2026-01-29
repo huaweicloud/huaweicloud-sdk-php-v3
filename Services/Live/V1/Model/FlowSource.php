@@ -29,6 +29,7 @@ class FlowSource implements ModelInterface, ArrayAccess
     * protocol  协议，srt-caller，srt-listener
     * name  入流资源名称
     * decryption  decryption
+    * healthStatus  **参数解释**： 转推流状态 **约束限制**： 不涉及 **取值范围**： - CONNECTED：转推中 - DISCONNECTED：转推中断
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class FlowSource implements ModelInterface, ArrayAccess
             'description' => 'string',
             'protocol' => 'string',
             'name' => 'string',
-            'decryption' => '\HuaweiCloud\SDK\Live\V1\Model\FlowSourceDecryption'
+            'decryption' => '\HuaweiCloud\SDK\Live\V1\Model\FlowSourceDecryption',
+            'healthStatus' => 'string'
     ];
 
     /**
@@ -55,6 +57,7 @@ class FlowSource implements ModelInterface, ArrayAccess
     * protocol  协议，srt-caller，srt-listener
     * name  入流资源名称
     * decryption  decryption
+    * healthStatus  **参数解释**： 转推流状态 **约束限制**： 不涉及 **取值范围**： - CONNECTED：转推中 - DISCONNECTED：转推中断
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class FlowSource implements ModelInterface, ArrayAccess
         'description' => null,
         'protocol' => null,
         'name' => null,
-        'decryption' => null
+        'decryption' => null,
+        'healthStatus' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class FlowSource implements ModelInterface, ArrayAccess
     * protocol  协议，srt-caller，srt-listener
     * name  入流资源名称
     * decryption  decryption
+    * healthStatus  **参数解释**： 转推流状态 **约束限制**： 不涉及 **取值范围**： - CONNECTED：转推中 - DISCONNECTED：转推中断
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class FlowSource implements ModelInterface, ArrayAccess
             'description' => 'description',
             'protocol' => 'protocol',
             'name' => 'name',
-            'decryption' => 'decryption'
+            'decryption' => 'decryption',
+            'healthStatus' => 'health_status'
     ];
 
     /**
@@ -128,6 +134,7 @@ class FlowSource implements ModelInterface, ArrayAccess
     * protocol  协议，srt-caller，srt-listener
     * name  入流资源名称
     * decryption  decryption
+    * healthStatus  **参数解释**： 转推流状态 **约束限制**： 不涉及 **取值范围**： - CONNECTED：转推中 - DISCONNECTED：转推中断
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class FlowSource implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'protocol' => 'setProtocol',
             'name' => 'setName',
-            'decryption' => 'setDecryption'
+            'decryption' => 'setDecryption',
+            'healthStatus' => 'setHealthStatus'
     ];
 
     /**
@@ -154,6 +162,7 @@ class FlowSource implements ModelInterface, ArrayAccess
     * protocol  协议，srt-caller，srt-listener
     * name  入流资源名称
     * decryption  decryption
+    * healthStatus  **参数解释**： 转推流状态 **约束限制**： 不涉及 **取值范围**： - CONNECTED：转推中 - DISCONNECTED：转推中断
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class FlowSource implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'protocol' => 'getProtocol',
             'name' => 'getName',
-            'decryption' => 'getDecryption'
+            'decryption' => 'getDecryption',
+            'healthStatus' => 'getHealthStatus'
     ];
 
     /**
@@ -211,6 +221,8 @@ class FlowSource implements ModelInterface, ArrayAccess
     }
     const PROTOCOL_SRT_CALLER = 'srt-caller';
     const PROTOCOL_SRT_LISTENER = 'srt-listener';
+    const HEALTH_STATUS_CONNECTED = 'CONNECTED';
+    const HEALTH_STATUS_DISCONNECTED = 'DISCONNECTED';
     
 
     /**
@@ -223,6 +235,19 @@ class FlowSource implements ModelInterface, ArrayAccess
         return [
             self::PROTOCOL_SRT_CALLER,
             self::PROTOCOL_SRT_LISTENER,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getHealthStatusAllowableValues()
+    {
+        return [
+            self::HEALTH_STATUS_CONNECTED,
+            self::HEALTH_STATUS_DISCONNECTED,
         ];
     }
 
@@ -251,6 +276,7 @@ class FlowSource implements ModelInterface, ArrayAccess
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['decryption'] = isset($data['decryption']) ? $data['decryption'] : null;
+        $this->container['healthStatus'] = isset($data['healthStatus']) ? $data['healthStatus'] : null;
     }
 
     /**
@@ -320,6 +346,14 @@ class FlowSource implements ModelInterface, ArrayAccess
             if (!preg_match("/^([a-zA-Z0-9\\-_]){1,64}$/", $this->container['name'])) {
                 $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^([a-zA-Z0-9\\-_]){1,64}$/.";
             }
+            $allowedValues = $this->getHealthStatusAllowableValues();
+                if (!is_null($this->container['healthStatus']) && !in_array($this->container['healthStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'healthStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -547,6 +581,30 @@ class FlowSource implements ModelInterface, ArrayAccess
     public function setDecryption($decryption)
     {
         $this->container['decryption'] = $decryption;
+        return $this;
+    }
+
+    /**
+    * Gets healthStatus
+    *  **参数解释**： 转推流状态 **约束限制**： 不涉及 **取值范围**： - CONNECTED：转推中 - DISCONNECTED：转推中断
+    *
+    * @return string|null
+    */
+    public function getHealthStatus()
+    {
+        return $this->container['healthStatus'];
+    }
+
+    /**
+    * Sets healthStatus
+    *
+    * @param string|null $healthStatus **参数解释**： 转推流状态 **约束限制**： 不涉及 **取值范围**： - CONNECTED：转推中 - DISCONNECTED：转推中断
+    *
+    * @return $this
+    */
+    public function setHealthStatus($healthStatus)
+    {
+        $this->container['healthStatus'] = $healthStatus;
         return $this;
     }
 

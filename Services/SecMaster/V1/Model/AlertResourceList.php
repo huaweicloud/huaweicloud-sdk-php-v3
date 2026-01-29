@@ -43,7 +43,7 @@ class AlertResourceList implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'epId' => 'string',
             'epName' => 'string',
-            'tags' => 'string'
+            'tags' => 'object'
     ];
 
     /**
@@ -311,12 +311,6 @@ class AlertResourceList implements ModelInterface, ArrayAccess
             if (!is_null($this->container['epName']) && (mb_strlen($this->container['epName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'epName', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['tags']) && (mb_strlen($this->container['tags']) > 2048)) {
-                $invalidProperties[] = "invalid value for 'tags', the character length must be smaller than or equal to 2048.";
-            }
-            if (!is_null($this->container['tags']) && (mb_strlen($this->container['tags']) < 0)) {
-                $invalidProperties[] = "invalid value for 'tags', the character length must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -551,7 +545,7 @@ class AlertResourceList implements ModelInterface, ArrayAccess
     * Gets tags
     *  资产标签 1、最多50个key/values对 2、values：最大255字符，取值范围：字母数字,空格,+, -, =, ., _, :, /,@
     *
-    * @return string|null
+    * @return object|null
     */
     public function getTags()
     {
@@ -561,7 +555,7 @@ class AlertResourceList implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string|null $tags 资产标签 1、最多50个key/values对 2、values：最大255字符，取值范围：字母数字,空格,+, -, =, ., _, :, /,@
+    * @param object|null $tags 资产标签 1、最多50个key/values对 2、values：最大255字符，取值范围：字母数字,空格,+, -, =, ., _, :, /,@
     *
     * @return $this
     */

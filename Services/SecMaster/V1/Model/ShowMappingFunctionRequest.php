@@ -71,7 +71,7 @@ class ShowMappingFunctionRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'contentType' => 'content-type',
+            'contentType' => 'Content-Type',
             'workspaceId' => 'workspace_id'
     ];
 

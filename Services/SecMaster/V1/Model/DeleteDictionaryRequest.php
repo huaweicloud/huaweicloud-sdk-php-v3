@@ -21,7 +21,7 @@ class DeleteDictionaryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * dictList  字典列表
-    * isBuiltIn  是否删除内置字典,默认不对外开放删除内置字典工具
+    * isBuiltIn  是否删除内置字典，默认不对外开放删除内置字典工具
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class DeleteDictionaryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * dictList  字典列表
-    * isBuiltIn  是否删除内置字典,默认不对外开放删除内置字典工具
+    * isBuiltIn  是否删除内置字典，默认不对外开放删除内置字典工具
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class DeleteDictionaryRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * dictList  字典列表
-    * isBuiltIn  是否删除内置字典,默认不对外开放删除内置字典工具
+    * isBuiltIn  是否删除内置字典，默认不对外开放删除内置字典工具
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class DeleteDictionaryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * dictList  字典列表
-    * isBuiltIn  是否删除内置字典,默认不对外开放删除内置字典工具
+    * isBuiltIn  是否删除内置字典，默认不对外开放删除内置字典工具
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class DeleteDictionaryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * dictList  字典列表
-    * isBuiltIn  是否删除内置字典,默认不对外开放删除内置字典工具
+    * isBuiltIn  是否删除内置字典，默认不对外开放删除内置字典工具
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class DeleteDictionaryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets isBuiltIn
-    *  是否删除内置字典,默认不对外开放删除内置字典工具
+    *  是否删除内置字典，默认不对外开放删除内置字典工具
     *
     * @return bool|null
     */
@@ -221,7 +221,7 @@ class DeleteDictionaryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isBuiltIn
     *
-    * @param bool|null $isBuiltIn 是否删除内置字典,默认不对外开放删除内置字典工具
+    * @param bool|null $isBuiltIn 是否删除内置字典，默认不对外开放删除内置字典工具
     *
     * @return $this
     */

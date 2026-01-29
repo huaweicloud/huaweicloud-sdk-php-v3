@@ -21,17 +21,17 @@ class ListObsBucketsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * body  Obs桶查询列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Kafka\V2\Model\ListObsBucketsResponseBody[]'
+            'body' => '\HuaweiCloud\SDK\Kafka\V2\Model\ObsBucketEntity[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * body  Obs桶查询列表
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListObsBucketsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * body  Obs桶查询列表
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListObsBucketsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * body  Obs桶查询列表
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListObsBucketsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * body  Obs桶查询列表
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class ListObsBucketsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
-    *  body
+    *  Obs桶查询列表
     *
-    * @return \HuaweiCloud\SDK\Kafka\V2\Model\ListObsBucketsResponseBody[]|null
+    * @return \HuaweiCloud\SDK\Kafka\V2\Model\ObsBucketEntity[]|null
     */
     public function getBody()
     {
@@ -187,7 +187,7 @@ class ListObsBucketsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ListObsBucketsResponseBody[]|null $body body
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ObsBucketEntity[]|null $body Obs桶查询列表
     *
     * @return $this
     */

@@ -30,7 +30,7 @@ class CreateMapperResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'code' => 'string',
             'message' => 'string',
-            'data' => '\HuaweiCloud\SDK\SecMaster\V1\Model\DpeMappingDetail'
+            'data' => '\HuaweiCloud\SDK\SecMaster\V1\Model\CreateDpeMappingRequestBody'
     ];
 
     /**
@@ -259,7 +259,7 @@ class CreateMapperResponse implements ModelInterface, ArrayAccess
     * Gets data
     *  data
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\DpeMappingDetail|null
+    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\CreateDpeMappingRequestBody|null
     */
     public function getData()
     {
@@ -269,7 +269,7 @@ class CreateMapperResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\DpeMappingDetail|null $data data
+    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\CreateDpeMappingRequestBody|null $data data
     *
     * @return $this
     */

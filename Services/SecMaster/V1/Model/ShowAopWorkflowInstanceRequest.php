@@ -81,7 +81,7 @@ class ShowAopWorkflowInstanceRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'contentType' => 'content-type',
+            'contentType' => 'Content-Type',
             'workspaceId' => 'workspace_id',
             'instanceId' => 'instance_id',
             'showTopology' => 'show_topology'

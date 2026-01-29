@@ -20,9 +20,9 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源 migration_test: 开始迁移演练
+    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 cutover:启动目的端 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源 migration_test: 开始迁移演练 error_for_overspeed:处理任务超速，任务自动暂停
     * templateId  模板id
-    * switchHce  是否切换hce
+    * switchHce  是否切换hce，仅支持linux的迁移任务
     * isNeedConsistencyCheck  是否进行一致性校验
     *
     * @var string[]
@@ -36,9 +36,9 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源 migration_test: 开始迁移演练
+    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 cutover:启动目的端 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源 migration_test: 开始迁移演练 error_for_overspeed:处理任务超速，任务自动暂停
     * templateId  模板id
-    * switchHce  是否切换hce
+    * switchHce  是否切换hce，仅支持linux的迁移任务
     * isNeedConsistencyCheck  是否进行一致性校验
     *
     * @var string[]
@@ -73,9 +73,9 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源 migration_test: 开始迁移演练
+    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 cutover:启动目的端 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源 migration_test: 开始迁移演练 error_for_overspeed:处理任务超速，任务自动暂停
     * templateId  模板id
-    * switchHce  是否切换hce
+    * switchHce  是否切换hce，仅支持linux的迁移任务
     * isNeedConsistencyCheck  是否进行一致性校验
     *
     * @var string[]
@@ -89,9 +89,9 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源 migration_test: 开始迁移演练
+    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 cutover:启动目的端 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源 migration_test: 开始迁移演练 error_for_overspeed:处理任务超速，任务自动暂停
     * templateId  模板id
-    * switchHce  是否切换hce
+    * switchHce  是否切换hce，仅支持linux的迁移任务
     * isNeedConsistencyCheck  是否进行一致性校验
     *
     * @var string[]
@@ -105,9 +105,9 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源 migration_test: 开始迁移演练
+    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 cutover:启动目的端 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源 migration_test: 开始迁移演练 error_for_overspeed:处理任务超速，任务自动暂停
     * templateId  模板id
-    * switchHce  是否切换hce
+    * switchHce  是否切换hce，仅支持linux的迁移任务
     * isNeedConsistencyCheck  是否进行一致性校验
     *
     * @var string[]
@@ -231,8 +231,8 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['templateId']) && (mb_strlen($this->container['templateId']) > 2048)) {
-                $invalidProperties[] = "invalid value for 'templateId', the character length must be smaller than or equal to 2048.";
+            if (!is_null($this->container['templateId']) && (mb_strlen($this->container['templateId']) > 255)) {
+                $invalidProperties[] = "invalid value for 'templateId', the character length must be smaller than or equal to 255.";
             }
             if (!is_null($this->container['templateId']) && (mb_strlen($this->container['templateId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'templateId', the character length must be bigger than or equal to 0.";
@@ -253,7 +253,7 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets operation
-    *  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源 migration_test: 开始迁移演练
+    *  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 cutover:启动目的端 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源 migration_test: 开始迁移演练 error_for_overspeed:处理任务超速，任务自动暂停
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     /**
     * Sets operation
     *
-    * @param string $operation 操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源 migration_test: 开始迁移演练
+    * @param string $operation 操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 cutover:启动目的端 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源 migration_test: 开始迁移演练 error_for_overspeed:处理任务超速，任务自动暂停
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets switchHce
-    *  是否切换hce
+    *  是否切换hce，仅支持linux的迁移任务
     *
     * @return bool|null
     */
@@ -313,7 +313,7 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     /**
     * Sets switchHce
     *
-    * @param bool|null $switchHce 是否切换hce
+    * @param bool|null $switchHce 是否切换hce，仅支持linux的迁移任务
     *
     * @return $this
     */

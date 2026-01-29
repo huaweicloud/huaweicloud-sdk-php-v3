@@ -33,7 +33,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
     * status  **参数解释**： 实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。 **取值范围**： 不涉及。
     * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
-    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax)
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [不涉及。](tag:hcs)
     * chargingMode  **参数解释**： 付费模式。 **取值范围**： [- 1表示按需计费。 - 0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc,ax,hws_eu)[付费模式，暂未使用。](tag:hws_ocb,ocb) [- 1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc)
     * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
     * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
@@ -169,8 +169,8 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
             'publicBandwidth' => 'int',
             'enableLogCollection' => 'bool',
             'newAuthCert' => 'bool',
-            'crossVpcInfo' => 'object',
-            'publicCrossVpcInfo' => 'object',
+            'crossVpcInfo' => 'string',
+            'publicCrossVpcInfo' => 'string',
             'ipv6Enable' => 'bool',
             'ipv6ConnectAddresses' => 'string[]',
             'connectorEnable' => 'bool',
@@ -215,7 +215,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
     * status  **参数解释**： 实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。 **取值范围**： 不涉及。
     * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
-    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax)
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [不涉及。](tag:hcs)
     * chargingMode  **参数解释**： 付费模式。 **取值范围**： [- 1表示按需计费。 - 0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc,ax,hws_eu)[付费模式，暂未使用。](tag:hws_ocb,ocb) [- 1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc)
     * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
     * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
@@ -418,7 +418,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
     * status  **参数解释**： 实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。 **取值范围**： 不涉及。
     * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
-    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax)
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [不涉及。](tag:hcs)
     * chargingMode  **参数解释**： 付费模式。 **取值范围**： [- 1表示按需计费。 - 0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc,ax,hws_eu)[付费模式，暂未使用。](tag:hws_ocb,ocb) [- 1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc)
     * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
     * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
@@ -600,7 +600,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
     * status  **参数解释**： 实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。 **取值范围**： 不涉及。
     * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
-    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax)
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [不涉及。](tag:hcs)
     * chargingMode  **参数解释**： 付费模式。 **取值范围**： [- 1表示按需计费。 - 0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc,ax,hws_eu)[付费模式，暂未使用。](tag:hws_ocb,ocb) [- 1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc)
     * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
     * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
@@ -782,7 +782,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
     * status  **参数解释**： 实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。 **取值范围**： 不涉及。
     * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
-    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax)
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [不涉及。](tag:hcs)
     * chargingMode  **参数解释**： 付费模式。 **取值范围**： [- 1表示按需计费。 - 0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc,ax,hws_eu)[付费模式，暂未使用。](tag:hws_ocb,ocb) [- 1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc)
     * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
     * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
@@ -1493,7 +1493,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSpecCode
-    *  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax)
+    *  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [不涉及。](tag:hcs)
     *
     * @return string|null
     */
@@ -1505,7 +1505,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSpecCode
     *
-    * @param string|null $resourceSpecCode **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax)
+    * @param string|null $resourceSpecCode **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [不涉及。](tag:hcs)
     *
     * @return $this
     */
@@ -2575,7 +2575,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * Gets crossVpcInfo
     *  **参数解释**： 跨VPC访问信息。 **取值范围**： 不涉及。
     *
-    * @return object|null
+    * @return string|null
     */
     public function getCrossVpcInfo()
     {
@@ -2585,7 +2585,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets crossVpcInfo
     *
-    * @param object|null $crossVpcInfo **参数解释**： 跨VPC访问信息。 **取值范围**： 不涉及。
+    * @param string|null $crossVpcInfo **参数解释**： 跨VPC访问信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2599,7 +2599,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * Gets publicCrossVpcInfo
     *  **参数解释**： 公网跨VPC访问信息。 **取值范围**： 不涉及。
     *
-    * @return object|null
+    * @return string|null
     */
     public function getPublicCrossVpcInfo()
     {
@@ -2609,7 +2609,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets publicCrossVpcInfo
     *
-    * @param object|null $publicCrossVpcInfo **参数解释**： 公网跨VPC访问信息。 **取值范围**： 不涉及。
+    * @param string|null $publicCrossVpcInfo **参数解释**： 公网跨VPC访问信息。 **取值范围**： 不涉及。
     *
     * @return $this
     */

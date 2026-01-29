@@ -23,6 +23,7 @@ namespace HuaweiCloud\SDK\Core;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Utils;
 use HuaweiCloud\SDK\Core\Http\HttpClient;
+use HuaweiCloud\SDK\Core\Http\UserAgent;
 use HuaweiCloud\SDK\Core\Http\HttpHandler;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use Monolog\Formatter\LineFormatter;
@@ -33,13 +34,14 @@ use Monolog\Logger;
 class Client
 {
     private $defaultHeaders = [];
-    private $Agent = [];
+    private $agent = [];
     private $httpConfig;
     private $credentials;
     private $endpoint;
     private $httpClient;
 
     private $httpHandler = null;
+    private $userAgent = null;
     private $fileLoggerHandler = null;
     private $streamLoggerHandler = null;
     private $logger = null;
@@ -47,7 +49,9 @@ class Client
 
     public function __construct()
     {
-        $this->Agent = ['User-Agent' => 'huaweicloud-usdk-php/3.0'];
+        $this->userAgent = new UserAgent();
+        $userAgentMessage = $this->userAgent->GetUserAgentMessage();
+        $this->agent =  ["User-Agent" => $userAgentMessage];
     }
 
     /**
@@ -58,6 +62,19 @@ class Client
     public function withHttpConfig($httpConfig)
     {
         $this->httpConfig = $httpConfig;
+
+        return $this;
+    }
+
+    /**
+     * @param string $userAgent
+     *
+     * @return Client
+     */
+    public function withAgent($userAgent)
+    {
+        $userAgentArray = ["User-Agent" => $userAgent];
+        $this->agent = $userAgentArray;
 
         return $this;
     }
@@ -189,7 +206,7 @@ class Client
      */
     public function getAgent()
     {
-        return $this->Agent;
+        return $this->agent;
     }
 
     /**
@@ -263,7 +280,7 @@ class Client
         if (isset($headerParams)) {
             $headerParams = ObjectSerializer::sanitizeForSerialization($headerParams);
         }
-        $headerParams = array_merge($headerParams, $this->Agent);
+        $headerParams = array_merge($headerParams, $this->agent);
 
         return $headerParams;
     }

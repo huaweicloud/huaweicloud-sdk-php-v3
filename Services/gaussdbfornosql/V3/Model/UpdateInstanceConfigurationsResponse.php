@@ -22,7 +22,7 @@ class UpdateInstanceConfigurationsResponse implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobId  修改实例参数的异步任务ID。
-    * restartRequired  实例是否需要重启。 - “true”需要重启。 - “false”不需要重启。
+    * restartRequired  **参数解释：** 实例是否需要重启。 **取值范围：** - “true”需要重启。 - “false”不需要重启。
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class UpdateInstanceConfigurationsResponse implements ModelInterface, ArrayAcces
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  修改实例参数的异步任务ID。
-    * restartRequired  实例是否需要重启。 - “true”需要重启。 - “false”不需要重启。
+    * restartRequired  **参数解释：** 实例是否需要重启。 **取值范围：** - “true”需要重启。 - “false”不需要重启。
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class UpdateInstanceConfigurationsResponse implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobId  修改实例参数的异步任务ID。
-    * restartRequired  实例是否需要重启。 - “true”需要重启。 - “false”不需要重启。
+    * restartRequired  **参数解释：** 实例是否需要重启。 **取值范围：** - “true”需要重启。 - “false”不需要重启。
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class UpdateInstanceConfigurationsResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  修改实例参数的异步任务ID。
-    * restartRequired  实例是否需要重启。 - “true”需要重启。 - “false”不需要重启。
+    * restartRequired  **参数解释：** 实例是否需要重启。 **取值范围：** - “true”需要重启。 - “false”不需要重启。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class UpdateInstanceConfigurationsResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  修改实例参数的异步任务ID。
-    * restartRequired  实例是否需要重启。 - “true”需要重启。 - “false”不需要重启。
+    * restartRequired  **参数解释：** 实例是否需要重启。 **取值范围：** - “true”需要重启。 - “false”不需要重启。
     *
     * @var string[]
     */
@@ -210,7 +210,7 @@ class UpdateInstanceConfigurationsResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets restartRequired
-    *  实例是否需要重启。 - “true”需要重启。 - “false”不需要重启。
+    *  **参数解释：** 实例是否需要重启。 **取值范围：** - “true”需要重启。 - “false”不需要重启。
     *
     * @return bool|null
     */
@@ -222,7 +222,7 @@ class UpdateInstanceConfigurationsResponse implements ModelInterface, ArrayAcces
     /**
     * Sets restartRequired
     *
-    * @param bool|null $restartRequired 实例是否需要重启。 - “true”需要重启。 - “false”不需要重启。
+    * @param bool|null $restartRequired **参数解释：** 实例是否需要重启。 **取值范围：** - “true”需要重启。 - “false”不需要重启。
     *
     * @return $this
     */

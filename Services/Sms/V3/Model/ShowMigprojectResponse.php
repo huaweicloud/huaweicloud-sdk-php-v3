@@ -21,8 +21,7 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  迁移项目ID
-    * name  迁移项目名称
+    * name  迁移项目名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     * description  迁移项目描述
     * isdefault  是否为默认模板
     * region  区域名称
@@ -38,7 +37,6 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
             'name' => 'string',
             'description' => 'string',
             'isdefault' => 'bool',
@@ -55,8 +53,7 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  迁移项目ID
-    * name  迁移项目名称
+    * name  迁移项目名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     * description  迁移项目描述
     * isdefault  是否为默认模板
     * region  区域名称
@@ -72,7 +69,6 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
         'name' => null,
         'description' => null,
         'isdefault' => null,
@@ -110,8 +106,7 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  迁移项目ID
-    * name  迁移项目名称
+    * name  迁移项目名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     * description  迁移项目描述
     * isdefault  是否为默认模板
     * region  区域名称
@@ -127,7 +122,6 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id',
             'name' => 'name',
             'description' => 'description',
             'isdefault' => 'isdefault',
@@ -144,8 +138,7 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  迁移项目ID
-    * name  迁移项目名称
+    * name  迁移项目名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     * description  迁移项目描述
     * isdefault  是否为默认模板
     * region  区域名称
@@ -161,7 +154,6 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId',
             'name' => 'setName',
             'description' => 'setDescription',
             'isdefault' => 'setIsdefault',
@@ -178,8 +170,7 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  迁移项目ID
-    * name  迁移项目名称
+    * name  迁移项目名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     * description  迁移项目描述
     * isdefault  是否为默认模板
     * region  区域名称
@@ -195,7 +186,6 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId',
             'name' => 'getName',
             'description' => 'getDescription',
             'isdefault' => 'getIsdefault',
@@ -283,7 +273,6 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['isdefault'] = isset($data['isdefault']) ? $data['isdefault'] : null;
@@ -306,17 +295,14 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 255)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 0)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 20)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 20.";
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 100)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 100.";
             }
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['name']) && !preg_match("/[\\u4e00-\\u9fa5-_0-9a-zA-Z]*/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /[\\u4e00-\\u9fa5-_0-9a-zA-Z]*/.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
@@ -330,8 +316,8 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) < 0)) {
                 $invalidProperties[] = "invalid value for 'region', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['speedLimit']) && ($this->container['speedLimit'] > 10000)) {
-                $invalidProperties[] = "invalid value for 'speedLimit', must be smaller than or equal to 10000.";
+            if (!is_null($this->container['speedLimit']) && ($this->container['speedLimit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'speedLimit', must be smaller than or equal to 1000.";
             }
             if (!is_null($this->container['speedLimit']) && ($this->container['speedLimit'] < 0)) {
                 $invalidProperties[] = "invalid value for 'speedLimit', must be bigger than or equal to 0.";
@@ -365,32 +351,8 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  迁移项目ID
-    *
-    * @return string|null
-    */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-    * Sets id
-    *
-    * @param string|null $id 迁移项目ID
-    *
-    * @return $this
-    */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-        return $this;
-    }
-
-    /**
     * Gets name
-    *  迁移项目名称
+    *  迁移项目名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     *
     * @return string|null
     */
@@ -402,7 +364,7 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 迁移项目名称
+    * @param string|null $name 迁移项目名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     *
     * @return $this
     */

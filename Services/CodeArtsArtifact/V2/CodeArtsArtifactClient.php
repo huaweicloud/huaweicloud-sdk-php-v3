@@ -1753,6 +1753,65 @@ class CodeArtsArtifactClient extends Client
     }
 
     /**
+     * 查询用户权限
+     *
+     * 查询用户在项目下的角色及权限，如创建仓库、编辑仓库、上传、下载、导入和导出等权限。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listUserPrivileges($request)
+    {
+        return $this->listUserPrivilegesWithHttpInfo($request);
+    }
+
+    public function listUserPrivilegesWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/user/{project_id}/privileges';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsArtifact\V2\Model\ListUserPrivilegesResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsArtifact\V2\Model\ListUserPrivilegesRequest');
+    }
+
+    /**
      * 编辑仓库
      *
      * 编辑仓库
@@ -2837,6 +2896,77 @@ class CodeArtsArtifactClient extends Client
     }
 
     /**
+     * 查询项目列表
+     *
+     * 调用该接口可以快速查询项目列表信息，包含仓库和项目的关联关系，以便于仓库的管理和协作。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showProjectRelatedRepository($request)
+    {
+        return $this->showProjectRelatedRepositoryWithHttpInfo($request);
+    }
+
+    public function showProjectRelatedRepositoryWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/maven/project/repository';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['searchName'] !== null) {
+            $queryParams['search_name'] = $localVarParams['searchName'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['repoId'] !== null) {
+            $queryParams['repo_id'] = $localVarParams['repoId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsArtifact\V2\Model\ShowProjectRelatedRepositoryResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsArtifact\V2\Model\ShowProjectRelatedRepositoryRequest');
+    }
+
+    /**
      * 获取项目下文件版本信息列表
      *
      * 获取项目下文件版本信息列表
@@ -2964,6 +3094,68 @@ class CodeArtsArtifactClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\CodeArtsArtifact\V2\Model\ShowProjectStorageInfoResponse',
             $requestType='\HuaweiCloud\SDK\CodeArtsArtifact\V2\Model\ShowProjectStorageInfoRequest');
+    }
+
+    /**
+     * 查询项目下的版本数量
+     *
+     * 当发布库版本众多时，用户可根据项目ID查询对应发布库的版本数量，以便于管理和跟踪不同版本的发布情况。该接口支持通过版本名称过滤。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showProjectVersionsCount($request)
+    {
+        return $this->showProjectVersionsCountWithHttpInfo($request);
+    }
+
+    public function showProjectVersionsCountWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/versions/count';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['buildVersion'] !== null) {
+            $queryParams['build_version'] = $localVarParams['buildVersion'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsArtifact\V2\Model\ShowProjectVersionsCountResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsArtifact\V2\Model\ShowProjectVersionsCountRequest');
     }
 
     /**
@@ -3224,6 +3416,71 @@ class CodeArtsArtifactClient extends Client
     }
 
     /**
+     * 查询仓库权限
+     *
+     * 根据仓库ID查询指定仓库的权限，包含各角色对该仓库的权限信息。当用户需要指定仓库的指定权限时，可调用该接口查看需要授权的角色。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showRepositoryRolesPrivilege($request)
+    {
+        return $this->showRepositoryRolesPrivilegeWithHttpInfo($request);
+    }
+
+    public function showRepositoryRolesPrivilegeWithHttpInfo($request)
+    {
+        $resourcePath = '/cloudartifact/v5/repositories/{project_id}/{repo_id}/privileges';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['repoId'] !== null) {
+            $pathParams['repo_id'] = $localVarParams['repoId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsArtifact\V2\Model\ShowRepositoryRolesPrivilegeResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsArtifact\V2\Model\ShowRepositoryRolesPrivilegeRequest');
+    }
+
+    /**
      * 仓库用量查询
      *
      * 仓库用量查询
@@ -3407,6 +3664,74 @@ class CodeArtsArtifactClient extends Client
     }
 
     /**
+     * 查询发布库版本列表
+     *
+     * 当发布库版本众多时，用户可根据项目ID分页查询对应发布库下的版本列表。该接口支持版本名称的模糊搜索。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showVersionList($request)
+    {
+        return $this->showVersionListWithHttpInfo($request);
+    }
+
+    public function showVersionListWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/versions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['buildVersion'] !== null) {
+            $queryParams['build_version'] = $localVarParams['buildVersion'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsArtifact\V2\Model\ShowVersionListResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsArtifact\V2\Model\ShowVersionListRequest');
+    }
+
+    /**
      * 编辑非maven仓库信息
      *
      * 编辑非maven仓库信息
@@ -3466,6 +3791,71 @@ class CodeArtsArtifactClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\CodeArtsArtifact\V2\Model\UpdateArtifactoryResponse',
             $requestType='\HuaweiCloud\SDK\CodeArtsArtifact\V2\Model\UpdateArtifactoryRequest');
+    }
+
+    /**
+     * 更新角色权限
+     *
+     * 根据角色ID更新指定角色的权限，如创建仓库、编辑仓库、上传、下载、导入和导出等权限，实现权限的集中管理和自动化分配。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateRepoRolesPrivilege($request)
+    {
+        return $this->updateRepoRolesPrivilegeWithHttpInfo($request);
+    }
+
+    public function updateRepoRolesPrivilegeWithHttpInfo($request)
+    {
+        $resourcePath = '/cloudartifact/v5/repositories/{role_id}/privileges';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['roleId'] !== null) {
+            $pathParams['role_id'] = $localVarParams['roleId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsArtifact\V2\Model\UpdateRepoRolesPrivilegeResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsArtifact\V2\Model\UpdateRepoRolesPrivilegeRequest');
     }
 
     protected function callApi(

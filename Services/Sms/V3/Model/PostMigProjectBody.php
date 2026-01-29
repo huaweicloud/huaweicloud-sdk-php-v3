@@ -25,7 +25,7 @@ class PostMigProjectBody implements ModelInterface, ArrayAccess
     * isdefault  是否为默认模板
     * region  区域名称
     * startTargetServer  迁移后是否启动目的端虚拟机
-    * speedLimit  限制迁移速率，单位：Mbps
+    * speedLimit  限制迁移速率，单位：Mbps。0表示不限速
     * usePublicIp  是否使用公网IP迁移
     * existServer  是否是已经存在的服务器
     * type  迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
@@ -57,7 +57,7 @@ class PostMigProjectBody implements ModelInterface, ArrayAccess
     * isdefault  是否为默认模板
     * region  区域名称
     * startTargetServer  迁移后是否启动目的端虚拟机
-    * speedLimit  限制迁移速率，单位：Mbps
+    * speedLimit  限制迁移速率，单位：Mbps。0表示不限速
     * usePublicIp  是否使用公网IP迁移
     * existServer  是否是已经存在的服务器
     * type  迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
@@ -110,7 +110,7 @@ class PostMigProjectBody implements ModelInterface, ArrayAccess
     * isdefault  是否为默认模板
     * region  区域名称
     * startTargetServer  迁移后是否启动目的端虚拟机
-    * speedLimit  限制迁移速率，单位：Mbps
+    * speedLimit  限制迁移速率，单位：Mbps。0表示不限速
     * usePublicIp  是否使用公网IP迁移
     * existServer  是否是已经存在的服务器
     * type  迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
@@ -142,7 +142,7 @@ class PostMigProjectBody implements ModelInterface, ArrayAccess
     * isdefault  是否为默认模板
     * region  区域名称
     * startTargetServer  迁移后是否启动目的端虚拟机
-    * speedLimit  限制迁移速率，单位：Mbps
+    * speedLimit  限制迁移速率，单位：Mbps。0表示不限速
     * usePublicIp  是否使用公网IP迁移
     * existServer  是否是已经存在的服务器
     * type  迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
@@ -174,7 +174,7 @@ class PostMigProjectBody implements ModelInterface, ArrayAccess
     * isdefault  是否为默认模板
     * region  区域名称
     * startTargetServer  迁移后是否启动目的端虚拟机
-    * speedLimit  限制迁移速率，单位：Mbps
+    * speedLimit  限制迁移速率，单位：Mbps。0表示不限速
     * usePublicIp  是否使用公网IP迁移
     * existServer  是否是已经存在的服务器
     * type  迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
@@ -483,7 +483,7 @@ class PostMigProjectBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets speedLimit
-    *  限制迁移速率，单位：Mbps
+    *  限制迁移速率，单位：Mbps。0表示不限速
     *
     * @return int|null
     */
@@ -495,7 +495,7 @@ class PostMigProjectBody implements ModelInterface, ArrayAccess
     /**
     * Sets speedLimit
     *
-    * @param int|null $speedLimit 限制迁移速率，单位：Mbps
+    * @param int|null $speedLimit 限制迁移速率，单位：Mbps。0表示不限速
     *
     * @return $this
     */

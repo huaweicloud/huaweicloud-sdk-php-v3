@@ -323,144 +323,96 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-            if ((mb_strlen($this->container['name']) > 255)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 255)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['name']) < 0)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['label'] === null) {
-            $invalidProperties[] = "'label' can't be null";
-        }
-            if ((mb_strlen($this->container['label']) > 255)) {
+            if (!is_null($this->container['label']) && (mb_strlen($this->container['label']) > 255)) {
                 $invalidProperties[] = "invalid value for 'label', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['label']) < 0)) {
+            if (!is_null($this->container['label']) && (mb_strlen($this->container['label']) < 0)) {
                 $invalidProperties[] = "invalid value for 'label', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['uuid'] === null) {
-            $invalidProperties[] = "'uuid' can't be null";
-        }
-            if ((mb_strlen($this->container['uuid']) > 255)) {
+            if (!is_null($this->container['uuid']) && (mb_strlen($this->container['uuid']) > 255)) {
                 $invalidProperties[] = "invalid value for 'uuid', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['uuid']) < 0)) {
+            if (!is_null($this->container['uuid']) && (mb_strlen($this->container['uuid']) < 0)) {
                 $invalidProperties[] = "invalid value for 'uuid', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['device'] === null) {
-            $invalidProperties[] = "'device' can't be null";
-        }
-            if ((mb_strlen($this->container['device']) > 255)) {
+            if (!is_null($this->container['device']) && (mb_strlen($this->container['device']) > 255)) {
                 $invalidProperties[] = "invalid value for 'device', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['device']) < 0)) {
+            if (!is_null($this->container['device']) && (mb_strlen($this->container['device']) < 0)) {
                 $invalidProperties[] = "invalid value for 'device', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['size'] === null) {
-            $invalidProperties[] = "'size' can't be null";
-        }
-            if (($this->container['size'] > 9223372036854775807)) {
+            if (!is_null($this->container['size']) && ($this->container['size'] > 9223372036854775807)) {
                 $invalidProperties[] = "invalid value for 'size', must be smaller than or equal to 9223372036854775807.";
             }
-            if (($this->container['size'] < 0)) {
+            if (!is_null($this->container['size']) && ($this->container['size'] < 0)) {
                 $invalidProperties[] = "invalid value for 'size', must be bigger than or equal to 0.";
             }
-        if ($this->container['nodesize'] === null) {
-            $invalidProperties[] = "'nodesize' can't be null";
-        }
-            if (($this->container['nodesize'] > 9223372036854775807)) {
+            if (!is_null($this->container['nodesize']) && ($this->container['nodesize'] > 9223372036854775807)) {
                 $invalidProperties[] = "invalid value for 'nodesize', must be smaller than or equal to 9223372036854775807.";
             }
-            if (($this->container['nodesize'] < 0)) {
+            if (!is_null($this->container['nodesize']) && ($this->container['nodesize'] < 0)) {
                 $invalidProperties[] = "invalid value for 'nodesize', must be bigger than or equal to 0.";
             }
-        if ($this->container['sectorsize'] === null) {
-            $invalidProperties[] = "'sectorsize' can't be null";
-        }
-            if (($this->container['sectorsize'] > 2147483647)) {
+            if (!is_null($this->container['sectorsize']) && ($this->container['sectorsize'] > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'sectorsize', must be smaller than or equal to 2147483647.";
             }
-            if (($this->container['sectorsize'] < 0)) {
+            if (!is_null($this->container['sectorsize']) && ($this->container['sectorsize'] < 0)) {
                 $invalidProperties[] = "invalid value for 'sectorsize', must be bigger than or equal to 0.";
             }
-        if ($this->container['dataProfile'] === null) {
-            $invalidProperties[] = "'dataProfile' can't be null";
-        }
-            if ((mb_strlen($this->container['dataProfile']) > 255)) {
+            if (!is_null($this->container['dataProfile']) && (mb_strlen($this->container['dataProfile']) > 255)) {
                 $invalidProperties[] = "invalid value for 'dataProfile', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['dataProfile']) < 0)) {
+            if (!is_null($this->container['dataProfile']) && (mb_strlen($this->container['dataProfile']) < 0)) {
                 $invalidProperties[] = "invalid value for 'dataProfile', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['systemProfile'] === null) {
-            $invalidProperties[] = "'systemProfile' can't be null";
-        }
-            if ((mb_strlen($this->container['systemProfile']) > 255)) {
+            if (!is_null($this->container['systemProfile']) && (mb_strlen($this->container['systemProfile']) > 255)) {
                 $invalidProperties[] = "invalid value for 'systemProfile', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['systemProfile']) < 0)) {
+            if (!is_null($this->container['systemProfile']) && (mb_strlen($this->container['systemProfile']) < 0)) {
                 $invalidProperties[] = "invalid value for 'systemProfile', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['metadataProfile'] === null) {
-            $invalidProperties[] = "'metadataProfile' can't be null";
-        }
-            if ((mb_strlen($this->container['metadataProfile']) > 255)) {
+            if (!is_null($this->container['metadataProfile']) && (mb_strlen($this->container['metadataProfile']) > 255)) {
                 $invalidProperties[] = "invalid value for 'metadataProfile', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['metadataProfile']) < 0)) {
+            if (!is_null($this->container['metadataProfile']) && (mb_strlen($this->container['metadataProfile']) < 0)) {
                 $invalidProperties[] = "invalid value for 'metadataProfile', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['globalReserve1'] === null) {
-            $invalidProperties[] = "'globalReserve1' can't be null";
-        }
-            if ((mb_strlen($this->container['globalReserve1']) > 255)) {
+            if (!is_null($this->container['globalReserve1']) && (mb_strlen($this->container['globalReserve1']) > 255)) {
                 $invalidProperties[] = "invalid value for 'globalReserve1', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['globalReserve1']) < 0)) {
+            if (!is_null($this->container['globalReserve1']) && (mb_strlen($this->container['globalReserve1']) < 0)) {
                 $invalidProperties[] = "invalid value for 'globalReserve1', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['gVolUsedSize'] === null) {
-            $invalidProperties[] = "'gVolUsedSize' can't be null";
-        }
-            if (($this->container['gVolUsedSize'] > 9223372036854775807)) {
+            if (!is_null($this->container['gVolUsedSize']) && ($this->container['gVolUsedSize'] > 9223372036854775807)) {
                 $invalidProperties[] = "invalid value for 'gVolUsedSize', must be smaller than or equal to 9223372036854775807.";
             }
-            if (($this->container['gVolUsedSize'] < 0)) {
+            if (!is_null($this->container['gVolUsedSize']) && ($this->container['gVolUsedSize'] < 0)) {
                 $invalidProperties[] = "invalid value for 'gVolUsedSize', must be bigger than or equal to 0.";
             }
-        if ($this->container['defaultSubvolid'] === null) {
-            $invalidProperties[] = "'defaultSubvolid' can't be null";
-        }
-            if ((mb_strlen($this->container['defaultSubvolid']) > 255)) {
+            if (!is_null($this->container['defaultSubvolid']) && (mb_strlen($this->container['defaultSubvolid']) > 255)) {
                 $invalidProperties[] = "invalid value for 'defaultSubvolid', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['defaultSubvolid']) < 0)) {
+            if (!is_null($this->container['defaultSubvolid']) && (mb_strlen($this->container['defaultSubvolid']) < 0)) {
                 $invalidProperties[] = "invalid value for 'defaultSubvolid', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['defaultSubvolName'] === null) {
-            $invalidProperties[] = "'defaultSubvolName' can't be null";
-        }
-            if ((mb_strlen($this->container['defaultSubvolName']) > 255)) {
+            if (!is_null($this->container['defaultSubvolName']) && (mb_strlen($this->container['defaultSubvolName']) > 255)) {
                 $invalidProperties[] = "invalid value for 'defaultSubvolName', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['defaultSubvolName']) < 0)) {
+            if (!is_null($this->container['defaultSubvolName']) && (mb_strlen($this->container['defaultSubvolName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'defaultSubvolName', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['defaultSubvolMountpath'] === null) {
-            $invalidProperties[] = "'defaultSubvolMountpath' can't be null";
-        }
-            if ((mb_strlen($this->container['defaultSubvolMountpath']) > 255)) {
+            if (!is_null($this->container['defaultSubvolMountpath']) && (mb_strlen($this->container['defaultSubvolMountpath']) > 255)) {
                 $invalidProperties[] = "invalid value for 'defaultSubvolMountpath', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['defaultSubvolMountpath']) < 0)) {
+            if (!is_null($this->container['defaultSubvolMountpath']) && (mb_strlen($this->container['defaultSubvolMountpath']) < 0)) {
                 $invalidProperties[] = "invalid value for 'defaultSubvolMountpath', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['subvolumn'] === null) {
-            $invalidProperties[] = "'subvolumn' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -479,7 +431,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     * Gets name
     *  文件系统名称
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -489,7 +441,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 文件系统名称
+    * @param string|null $name 文件系统名称
     *
     * @return $this
     */
@@ -503,7 +455,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     * Gets label
     *  文件系统标签，若无标签为空字符串
     *
-    * @return string
+    * @return string|null
     */
     public function getLabel()
     {
@@ -513,7 +465,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     /**
     * Sets label
     *
-    * @param string $label 文件系统标签，若无标签为空字符串
+    * @param string|null $label 文件系统标签，若无标签为空字符串
     *
     * @return $this
     */
@@ -527,7 +479,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     * Gets uuid
     *  文件系统的uuid
     *
-    * @return string
+    * @return string|null
     */
     public function getUuid()
     {
@@ -537,7 +489,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     /**
     * Sets uuid
     *
-    * @param string $uuid 文件系统的uuid
+    * @param string|null $uuid 文件系统的uuid
     *
     * @return $this
     */
@@ -551,7 +503,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     * Gets device
     *  btrfs包含的设备名称
     *
-    * @return string
+    * @return string|null
     */
     public function getDevice()
     {
@@ -561,7 +513,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     /**
     * Sets device
     *
-    * @param string $device btrfs包含的设备名称
+    * @param string|null $device btrfs包含的设备名称
     *
     * @return $this
     */
@@ -575,7 +527,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     * Gets size
     *  文件系统数据占用大小
     *
-    * @return int
+    * @return int|null
     */
     public function getSize()
     {
@@ -585,7 +537,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int $size 文件系统数据占用大小
+    * @param int|null $size 文件系统数据占用大小
     *
     * @return $this
     */
@@ -599,7 +551,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     * Gets nodesize
     *  btrfs节点大小
     *
-    * @return int
+    * @return int|null
     */
     public function getNodesize()
     {
@@ -609,7 +561,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     /**
     * Sets nodesize
     *
-    * @param int $nodesize btrfs节点大小
+    * @param int|null $nodesize btrfs节点大小
     *
     * @return $this
     */
@@ -623,7 +575,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     * Gets sectorsize
     *  扇区大小
     *
-    * @return int
+    * @return int|null
     */
     public function getSectorsize()
     {
@@ -633,7 +585,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     /**
     * Sets sectorsize
     *
-    * @param int $sectorsize 扇区大小
+    * @param int|null $sectorsize 扇区大小
     *
     * @return $this
     */
@@ -647,7 +599,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     * Gets dataProfile
     *  数据配置（RAD）
     *
-    * @return string
+    * @return string|null
     */
     public function getDataProfile()
     {
@@ -657,7 +609,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     /**
     * Sets dataProfile
     *
-    * @param string $dataProfile 数据配置（RAD）
+    * @param string|null $dataProfile 数据配置（RAD）
     *
     * @return $this
     */
@@ -671,7 +623,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     * Gets systemProfile
     *  文件系统配置（RAD）
     *
-    * @return string
+    * @return string|null
     */
     public function getSystemProfile()
     {
@@ -681,7 +633,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     /**
     * Sets systemProfile
     *
-    * @param string $systemProfile 文件系统配置（RAD）
+    * @param string|null $systemProfile 文件系统配置（RAD）
     *
     * @return $this
     */
@@ -695,7 +647,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     * Gets metadataProfile
     *  元数据配置（RAD）
     *
-    * @return string
+    * @return string|null
     */
     public function getMetadataProfile()
     {
@@ -705,7 +657,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     /**
     * Sets metadataProfile
     *
-    * @param string $metadataProfile 元数据配置（RAD）
+    * @param string|null $metadataProfile 元数据配置（RAD）
     *
     * @return $this
     */
@@ -719,7 +671,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     * Gets globalReserve1
     *  Btrfs文件系统信息
     *
-    * @return string
+    * @return string|null
     */
     public function getGlobalReserve1()
     {
@@ -729,7 +681,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     /**
     * Sets globalReserve1
     *
-    * @param string $globalReserve1 Btrfs文件系统信息
+    * @param string|null $globalReserve1 Btrfs文件系统信息
     *
     * @return $this
     */
@@ -743,7 +695,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     * Gets gVolUsedSize
     *  Btrfs卷已使用空间大小
     *
-    * @return int
+    * @return int|null
     */
     public function getGVolUsedSize()
     {
@@ -753,7 +705,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     /**
     * Sets gVolUsedSize
     *
-    * @param int $gVolUsedSize Btrfs卷已使用空间大小
+    * @param int|null $gVolUsedSize Btrfs卷已使用空间大小
     *
     * @return $this
     */
@@ -767,7 +719,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     * Gets defaultSubvolid
     *  默认子卷ID
     *
-    * @return string
+    * @return string|null
     */
     public function getDefaultSubvolid()
     {
@@ -777,7 +729,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     /**
     * Sets defaultSubvolid
     *
-    * @param string $defaultSubvolid 默认子卷ID
+    * @param string|null $defaultSubvolid 默认子卷ID
     *
     * @return $this
     */
@@ -791,7 +743,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     * Gets defaultSubvolName
     *  默认子卷名称
     *
-    * @return string
+    * @return string|null
     */
     public function getDefaultSubvolName()
     {
@@ -801,7 +753,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     /**
     * Sets defaultSubvolName
     *
-    * @param string $defaultSubvolName 默认子卷名称
+    * @param string|null $defaultSubvolName 默认子卷名称
     *
     * @return $this
     */
@@ -815,7 +767,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     * Gets defaultSubvolMountpath
     *  默认子卷挂载路径/BTRFS文件系统的挂载路径
     *
-    * @return string
+    * @return string|null
     */
     public function getDefaultSubvolMountpath()
     {
@@ -825,7 +777,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     /**
     * Sets defaultSubvolMountpath
     *
-    * @param string $defaultSubvolMountpath 默认子卷挂载路径/BTRFS文件系统的挂载路径
+    * @param string|null $defaultSubvolMountpath 默认子卷挂载路径/BTRFS文件系统的挂载路径
     *
     * @return $this
     */
@@ -839,7 +791,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     * Gets subvolumn
     *  子卷信息
     *
-    * @return \HuaweiCloud\SDK\Sms\V3\Model\BtrfsSubvolumn[]
+    * @return \HuaweiCloud\SDK\Sms\V3\Model\BtrfsSubvolumn[]|null
     */
     public function getSubvolumn()
     {
@@ -849,7 +801,7 @@ class BtrfsFileSystem implements ModelInterface, ArrayAccess
     /**
     * Sets subvolumn
     *
-    * @param \HuaweiCloud\SDK\Sms\V3\Model\BtrfsSubvolumn[] $subvolumn 子卷信息
+    * @param \HuaweiCloud\SDK\Sms\V3\Model\BtrfsSubvolumn[]|null $subvolumn 子卷信息
     *
     * @return $this
     */

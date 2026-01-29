@@ -243,8 +243,8 @@ class LogGroup implements ModelInterface, ArrayAccess
         if ($this->container['ttlInDays'] === null) {
             $invalidProperties[] = "'ttlInDays' can't be null";
         }
-            if (($this->container['ttlInDays'] > 30)) {
-                $invalidProperties[] = "invalid value for 'ttlInDays', must be smaller than or equal to 30.";
+            if (($this->container['ttlInDays'] > 365)) {
+                $invalidProperties[] = "invalid value for 'ttlInDays', must be smaller than or equal to 365.";
             }
             if (($this->container['ttlInDays'] < 1)) {
                 $invalidProperties[] = "invalid value for 'ttlInDays', must be bigger than or equal to 1.";

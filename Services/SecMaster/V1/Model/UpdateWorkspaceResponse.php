@@ -64,7 +64,7 @@ class UpdateWorkspaceResponse implements ModelInterface, ArrayAccess
             'regionId' => 'string',
             'viewBindId' => 'string',
             'viewBindName' => 'string',
-            'workspaceAgencyList' => '\HuaweiCloud\SDK\SecMaster\V1\Model\CreateWorkspaceResponseBodyWorkspaceAgencyList[]'
+            'workspaceAgencyList' => '\HuaweiCloud\SDK\SecMaster\V1\Model\UpdateWorkspaceResponseBodyWorkspaceAgencyList[]'
     ];
 
     /**
@@ -950,7 +950,7 @@ class UpdateWorkspaceResponse implements ModelInterface, ArrayAccess
     * Gets workspaceAgencyList
     *  纳管空间列表
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\CreateWorkspaceResponseBodyWorkspaceAgencyList[]|null
+    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\UpdateWorkspaceResponseBodyWorkspaceAgencyList[]|null
     */
     public function getWorkspaceAgencyList()
     {
@@ -960,7 +960,7 @@ class UpdateWorkspaceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets workspaceAgencyList
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\CreateWorkspaceResponseBodyWorkspaceAgencyList[]|null $workspaceAgencyList 纳管空间列表
+    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\UpdateWorkspaceResponseBodyWorkspaceAgencyList[]|null $workspaceAgencyList 纳管空间列表
     *
     * @return $this
     */

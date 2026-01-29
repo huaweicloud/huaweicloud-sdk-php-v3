@@ -21,17 +21,17 @@ class ShowKafkaTopicDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  Topic详情。
+    * body  查询Kafka主题详情
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Kafka\V2\Model\ShowKafkaTopicDetailResponseBody[]'
+            'body' => '\HuaweiCloud\SDK\Kafka\V2\Model\KafkaTopicDetailEntity[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  Topic详情。
+    * body  查询Kafka主题详情
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowKafkaTopicDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  Topic详情。
+    * body  查询Kafka主题详情
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowKafkaTopicDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  Topic详情。
+    * body  查询Kafka主题详情
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowKafkaTopicDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  Topic详情。
+    * body  查询Kafka主题详情
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class ShowKafkaTopicDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
-    *  Topic详情。
+    *  查询Kafka主题详情
     *
-    * @return \HuaweiCloud\SDK\Kafka\V2\Model\ShowKafkaTopicDetailResponseBody[]|null
+    * @return \HuaweiCloud\SDK\Kafka\V2\Model\KafkaTopicDetailEntity[]|null
     */
     public function getBody()
     {
@@ -187,7 +187,7 @@ class ShowKafkaTopicDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ShowKafkaTopicDetailResponseBody[]|null $body Topic详情。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\KafkaTopicDetailEntity[]|null $body 查询Kafka主题详情
     *
     * @return $this
     */

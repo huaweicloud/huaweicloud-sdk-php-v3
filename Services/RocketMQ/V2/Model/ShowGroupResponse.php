@@ -30,6 +30,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * permissions  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * consumeOrderly  **参数解释**： 是否顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：开启顺序消费。 - false：不开启顺序消费。 **默认取值**： 不涉及。
+    * groupOnline  **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -42,7 +43,8 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
             'createdAt' => 'int',
             'retryMaxTime' => 'int',
             'permissions' => 'string[]',
-            'consumeOrderly' => 'bool'
+            'consumeOrderly' => 'bool',
+            'groupOnline' => 'bool'
     ];
 
     /**
@@ -56,6 +58,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * permissions  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * consumeOrderly  **参数解释**： 是否顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：开启顺序消费。 - false：不开启顺序消费。 **默认取值**： 不涉及。
+    * groupOnline  **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -68,7 +71,8 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
         'createdAt' => 'int64',
         'retryMaxTime' => null,
         'permissions' => null,
-        'consumeOrderly' => null
+        'consumeOrderly' => null,
+        'groupOnline' => null
     ];
 
     /**
@@ -103,6 +107,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * permissions  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * consumeOrderly  **参数解释**： 是否顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：开启顺序消费。 - false：不开启顺序消费。 **默认取值**： 不涉及。
+    * groupOnline  **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -115,7 +120,8 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
             'createdAt' => 'created_at',
             'retryMaxTime' => 'retry_max_time',
             'permissions' => 'permissions',
-            'consumeOrderly' => 'consume_orderly'
+            'consumeOrderly' => 'consume_orderly',
+            'groupOnline' => 'group_online'
     ];
 
     /**
@@ -129,6 +135,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * permissions  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * consumeOrderly  **参数解释**： 是否顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：开启顺序消费。 - false：不开启顺序消费。 **默认取值**： 不涉及。
+    * groupOnline  **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -141,7 +148,8 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
             'createdAt' => 'setCreatedAt',
             'retryMaxTime' => 'setRetryMaxTime',
             'permissions' => 'setPermissions',
-            'consumeOrderly' => 'setConsumeOrderly'
+            'consumeOrderly' => 'setConsumeOrderly',
+            'groupOnline' => 'setGroupOnline'
     ];
 
     /**
@@ -155,6 +163,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * permissions  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * consumeOrderly  **参数解释**： 是否顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：开启顺序消费。 - false：不开启顺序消费。 **默认取值**： 不涉及。
+    * groupOnline  **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -167,7 +176,8 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
             'createdAt' => 'getCreatedAt',
             'retryMaxTime' => 'getRetryMaxTime',
             'permissions' => 'getPermissions',
-            'consumeOrderly' => 'getConsumeOrderly'
+            'consumeOrderly' => 'getConsumeOrderly',
+            'groupOnline' => 'getGroupOnline'
     ];
 
     /**
@@ -237,6 +247,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
         $this->container['retryMaxTime'] = isset($data['retryMaxTime']) ? $data['retryMaxTime'] : null;
         $this->container['permissions'] = isset($data['permissions']) ? $data['permissions'] : null;
         $this->container['consumeOrderly'] = isset($data['consumeOrderly']) ? $data['consumeOrderly'] : null;
+        $this->container['groupOnline'] = isset($data['groupOnline']) ? $data['groupOnline'] : null;
     }
 
     /**
@@ -474,6 +485,30 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     public function setConsumeOrderly($consumeOrderly)
     {
         $this->container['consumeOrderly'] = $consumeOrderly;
+        return $this;
+    }
+
+    /**
+    * Gets groupOnline
+    *  **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getGroupOnline()
+    {
+        return $this->container['groupOnline'];
+    }
+
+    /**
+    * Sets groupOnline
+    *
+    * @param bool|null $groupOnline **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setGroupOnline($groupOnline)
+    {
+        $this->container['groupOnline'] = $groupOnline;
         return $this;
     }
 

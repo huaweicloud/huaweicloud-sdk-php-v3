@@ -23,6 +23,8 @@ class DeleteDataobjectRelationResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * code  错误码
     * message  错误信息
+    * requestId  请求ID
+    * success  是否成功
     * data  data
     * xRequestId  xRequestId
     *
@@ -31,6 +33,8 @@ class DeleteDataobjectRelationResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'code' => 'string',
             'message' => 'string',
+            'requestId' => 'string',
+            'success' => 'bool',
             'data' => '\HuaweiCloud\SDK\SecMaster\V1\Model\BatchOperateDataobjectResult',
             'xRequestId' => 'string'
     ];
@@ -39,6 +43,8 @@ class DeleteDataobjectRelationResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * code  错误码
     * message  错误信息
+    * requestId  请求ID
+    * success  是否成功
     * data  data
     * xRequestId  xRequestId
     *
@@ -47,6 +53,8 @@ class DeleteDataobjectRelationResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'code' => null,
         'message' => null,
+        'requestId' => null,
+        'success' => null,
         'data' => null,
         'xRequestId' => null
     ];
@@ -76,6 +84,8 @@ class DeleteDataobjectRelationResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * code  错误码
     * message  错误信息
+    * requestId  请求ID
+    * success  是否成功
     * data  data
     * xRequestId  xRequestId
     *
@@ -84,6 +94,8 @@ class DeleteDataobjectRelationResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'code' => 'code',
             'message' => 'message',
+            'requestId' => 'request_id',
+            'success' => 'success',
             'data' => 'data',
             'xRequestId' => 'X-request-id'
     ];
@@ -92,6 +104,8 @@ class DeleteDataobjectRelationResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * code  错误码
     * message  错误信息
+    * requestId  请求ID
+    * success  是否成功
     * data  data
     * xRequestId  xRequestId
     *
@@ -100,6 +114,8 @@ class DeleteDataobjectRelationResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'code' => 'setCode',
             'message' => 'setMessage',
+            'requestId' => 'setRequestId',
+            'success' => 'setSuccess',
             'data' => 'setData',
             'xRequestId' => 'setXRequestId'
     ];
@@ -108,6 +124,8 @@ class DeleteDataobjectRelationResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * code  错误码
     * message  错误信息
+    * requestId  请求ID
+    * success  是否成功
     * data  data
     * xRequestId  xRequestId
     *
@@ -116,6 +134,8 @@ class DeleteDataobjectRelationResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'code' => 'getCode',
             'message' => 'getMessage',
+            'requestId' => 'getRequestId',
+            'success' => 'getSuccess',
             'data' => 'getData',
             'xRequestId' => 'getXRequestId'
     ];
@@ -180,6 +200,8 @@ class DeleteDataobjectRelationResponse implements ModelInterface, ArrayAccess
     {
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['success'] = isset($data['success']) ? $data['success'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
@@ -203,6 +225,12 @@ class DeleteDataobjectRelationResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['message']) && (mb_strlen($this->container['message']) < 0)) {
                 $invalidProperties[] = "invalid value for 'message', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -263,6 +291,54 @@ class DeleteDataobjectRelationResponse implements ModelInterface, ArrayAccess
     public function setMessage($message)
     {
         $this->container['message'] = $message;
+        return $this;
+    }
+
+    /**
+    * Gets requestId
+    *  请求ID
+    *
+    * @return string|null
+    */
+    public function getRequestId()
+    {
+        return $this->container['requestId'];
+    }
+
+    /**
+    * Sets requestId
+    *
+    * @param string|null $requestId 请求ID
+    *
+    * @return $this
+    */
+    public function setRequestId($requestId)
+    {
+        $this->container['requestId'] = $requestId;
+        return $this;
+    }
+
+    /**
+    * Gets success
+    *  是否成功
+    *
+    * @return bool|null
+    */
+    public function getSuccess()
+    {
+        return $this->container['success'];
+    }
+
+    /**
+    * Sets success
+    *
+    * @param bool|null $success 是否成功
+    *
+    * @return $this
+    */
+    public function setSuccess($success)
+    {
+        $this->container['success'] = $success;
         return $this;
     }
 

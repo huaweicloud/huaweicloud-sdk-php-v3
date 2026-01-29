@@ -21,7 +21,7 @@ class DataObjectDetail implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * createTime  记录时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
-    * dataobject  数据对象
+    * dataObject  数据对象
     * dataclassRef  dataclassRef
     * formatVersion  格式版本
     * id  事件唯一标识，UUID格式，最大36个字符
@@ -34,7 +34,7 @@ class DataObjectDetail implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'createTime' => 'string',
-            'dataobject' => 'object',
+            'dataObject' => 'object',
             'dataclassRef' => '\HuaweiCloud\SDK\SecMaster\V1\Model\AlertDetailDataclassRef',
             'formatVersion' => 'int',
             'id' => 'string',
@@ -47,7 +47,7 @@ class DataObjectDetail implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * createTime  记录时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
-    * dataobject  数据对象
+    * dataObject  数据对象
     * dataclassRef  dataclassRef
     * formatVersion  格式版本
     * id  事件唯一标识，UUID格式，最大36个字符
@@ -60,7 +60,7 @@ class DataObjectDetail implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'createTime' => null,
-        'dataobject' => null,
+        'dataObject' => null,
         'dataclassRef' => null,
         'formatVersion' => null,
         'id' => null,
@@ -94,7 +94,7 @@ class DataObjectDetail implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * createTime  记录时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
-    * dataobject  数据对象
+    * dataObject  数据对象
     * dataclassRef  dataclassRef
     * formatVersion  格式版本
     * id  事件唯一标识，UUID格式，最大36个字符
@@ -107,7 +107,7 @@ class DataObjectDetail implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'createTime' => 'create_time',
-            'dataobject' => 'dataobject',
+            'dataObject' => 'data_object',
             'dataclassRef' => 'dataclass_ref',
             'formatVersion' => 'format_version',
             'id' => 'id',
@@ -120,7 +120,7 @@ class DataObjectDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * createTime  记录时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
-    * dataobject  数据对象
+    * dataObject  数据对象
     * dataclassRef  dataclassRef
     * formatVersion  格式版本
     * id  事件唯一标识，UUID格式，最大36个字符
@@ -133,7 +133,7 @@ class DataObjectDetail implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'createTime' => 'setCreateTime',
-            'dataobject' => 'setDataobject',
+            'dataObject' => 'setDataObject',
             'dataclassRef' => 'setDataclassRef',
             'formatVersion' => 'setFormatVersion',
             'id' => 'setId',
@@ -146,7 +146,7 @@ class DataObjectDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * createTime  记录时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
-    * dataobject  数据对象
+    * dataObject  数据对象
     * dataclassRef  dataclassRef
     * formatVersion  格式版本
     * id  事件唯一标识，UUID格式，最大36个字符
@@ -159,7 +159,7 @@ class DataObjectDetail implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'createTime' => 'getCreateTime',
-            'dataobject' => 'getDataobject',
+            'dataObject' => 'getDataObject',
             'dataclassRef' => 'getDataclassRef',
             'formatVersion' => 'getFormatVersion',
             'id' => 'getId',
@@ -228,7 +228,7 @@ class DataObjectDetail implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
-        $this->container['dataobject'] = isset($data['dataobject']) ? $data['dataobject'] : null;
+        $this->container['dataObject'] = isset($data['dataObject']) ? $data['dataObject'] : null;
         $this->container['dataclassRef'] = isset($data['dataclassRef']) ? $data['dataclassRef'] : null;
         $this->container['formatVersion'] = isset($data['formatVersion']) ? $data['formatVersion'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
@@ -327,26 +327,26 @@ class DataObjectDetail implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets dataobject
+    * Gets dataObject
     *  数据对象
     *
     * @return object|null
     */
-    public function getDataobject()
+    public function getDataObject()
     {
-        return $this->container['dataobject'];
+        return $this->container['dataObject'];
     }
 
     /**
-    * Sets dataobject
+    * Sets dataObject
     *
-    * @param object|null $dataobject 数据对象
+    * @param object|null $dataObject 数据对象
     *
     * @return $this
     */
-    public function setDataobject($dataobject)
+    public function setDataObject($dataObject)
     {
-        $this->container['dataobject'] = $dataobject;
+        $this->container['dataObject'] = $dataObject;
         return $this;
     }
 

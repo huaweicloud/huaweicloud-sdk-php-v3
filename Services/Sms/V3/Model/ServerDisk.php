@@ -21,8 +21,8 @@ class ServerDisk implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  磁盘名称
-    * partitionStyle  磁盘的分区类型，添加源端时源端磁盘必选 MBR：mbr格式 GPT：gpt格式
-    * deviceUse  磁盘类型 BOOT：BOOT设备 OS：系统设备
+    * partitionStyle  磁盘的分区类型，添加源端时源端磁盘必选，否则无法通过后续环境检查 （非枚举数据，来源于EVS服务） 常见类型如：MBR：主启动记录分区，GPT：Guid Partition Table，全局分区表。 详细类型请参考EVS服务API文档中“MBR和GPT分区形式有何区别”部分描述
+    * deviceUse  磁盘类型。 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     * size  磁盘总大小，以字节为单位
     * usedSize  磁盘已使用大小，以字节为单位
     * physicalVolumes  磁盘上的物理分区信息
@@ -47,8 +47,8 @@ class ServerDisk implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  磁盘名称
-    * partitionStyle  磁盘的分区类型，添加源端时源端磁盘必选 MBR：mbr格式 GPT：gpt格式
-    * deviceUse  磁盘类型 BOOT：BOOT设备 OS：系统设备
+    * partitionStyle  磁盘的分区类型，添加源端时源端磁盘必选，否则无法通过后续环境检查 （非枚举数据，来源于EVS服务） 常见类型如：MBR：主启动记录分区，GPT：Guid Partition Table，全局分区表。 详细类型请参考EVS服务API文档中“MBR和GPT分区形式有何区别”部分描述
+    * deviceUse  磁盘类型。 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     * size  磁盘总大小，以字节为单位
     * usedSize  磁盘已使用大小，以字节为单位
     * physicalVolumes  磁盘上的物理分区信息
@@ -94,8 +94,8 @@ class ServerDisk implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  磁盘名称
-    * partitionStyle  磁盘的分区类型，添加源端时源端磁盘必选 MBR：mbr格式 GPT：gpt格式
-    * deviceUse  磁盘类型 BOOT：BOOT设备 OS：系统设备
+    * partitionStyle  磁盘的分区类型，添加源端时源端磁盘必选，否则无法通过后续环境检查 （非枚举数据，来源于EVS服务） 常见类型如：MBR：主启动记录分区，GPT：Guid Partition Table，全局分区表。 详细类型请参考EVS服务API文档中“MBR和GPT分区形式有何区别”部分描述
+    * deviceUse  磁盘类型。 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     * size  磁盘总大小，以字节为单位
     * usedSize  磁盘已使用大小，以字节为单位
     * physicalVolumes  磁盘上的物理分区信息
@@ -120,8 +120,8 @@ class ServerDisk implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  磁盘名称
-    * partitionStyle  磁盘的分区类型，添加源端时源端磁盘必选 MBR：mbr格式 GPT：gpt格式
-    * deviceUse  磁盘类型 BOOT：BOOT设备 OS：系统设备
+    * partitionStyle  磁盘的分区类型，添加源端时源端磁盘必选，否则无法通过后续环境检查 （非枚举数据，来源于EVS服务） 常见类型如：MBR：主启动记录分区，GPT：Guid Partition Table，全局分区表。 详细类型请参考EVS服务API文档中“MBR和GPT分区形式有何区别”部分描述
+    * deviceUse  磁盘类型。 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     * size  磁盘总大小，以字节为单位
     * usedSize  磁盘已使用大小，以字节为单位
     * physicalVolumes  磁盘上的物理分区信息
@@ -146,8 +146,8 @@ class ServerDisk implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  磁盘名称
-    * partitionStyle  磁盘的分区类型，添加源端时源端磁盘必选 MBR：mbr格式 GPT：gpt格式
-    * deviceUse  磁盘类型 BOOT：BOOT设备 OS：系统设备
+    * partitionStyle  磁盘的分区类型，添加源端时源端磁盘必选，否则无法通过后续环境检查 （非枚举数据，来源于EVS服务） 常见类型如：MBR：主启动记录分区，GPT：Guid Partition Table，全局分区表。 详细类型请参考EVS服务API文档中“MBR和GPT分区形式有何区别”部分描述
+    * deviceUse  磁盘类型。 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     * size  磁盘总大小，以字节为单位
     * usedSize  磁盘已使用大小，以字节为单位
     * physicalVolumes  磁盘上的物理分区信息
@@ -209,37 +209,7 @@ class ServerDisk implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const PARTITION_STYLE_MBR = 'MBR';
-    const PARTITION_STYLE_GPT = 'GPT';
-    const DEVICE_USE_BOOT = 'BOOT';
-    const DEVICE_USE_OS = 'OS';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getPartitionStyleAllowableValues()
-    {
-        return [
-            self::PARTITION_STYLE_MBR,
-            self::PARTITION_STYLE_GPT,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getDeviceUseAllowableValues()
-    {
-        return [
-            self::DEVICE_USE_BOOT,
-            self::DEVICE_USE_OS,
-        ];
-    }
 
 
     /**
@@ -276,55 +246,36 @@ class ServerDisk implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-            if ((mb_strlen($this->container['name']) > 255)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 255)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['name']) < 0)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
             }
-            $allowedValues = $this->getPartitionStyleAllowableValues();
-                if (!is_null($this->container['partitionStyle']) && !in_array($this->container['partitionStyle'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'partitionStyle', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if (!is_null($this->container['partitionStyle']) && (mb_strlen($this->container['partitionStyle']) > 255)) {
+                $invalidProperties[] = "invalid value for 'partitionStyle', the character length must be smaller than or equal to 255.";
             }
-
-        if ($this->container['deviceUse'] === null) {
-            $invalidProperties[] = "'deviceUse' can't be null";
-        }
-            $allowedValues = $this->getDeviceUseAllowableValues();
-                if (!is_null($this->container['deviceUse']) && !in_array($this->container['deviceUse'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'deviceUse', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if (!is_null($this->container['partitionStyle']) && (mb_strlen($this->container['partitionStyle']) < 0)) {
+                $invalidProperties[] = "invalid value for 'partitionStyle', the character length must be bigger than or equal to 0.";
             }
-
-        if ($this->container['size'] === null) {
-            $invalidProperties[] = "'size' can't be null";
-        }
-            if (($this->container['size'] > 9223372036854775807)) {
+            if (!is_null($this->container['deviceUse']) && (mb_strlen($this->container['deviceUse']) > 255)) {
+                $invalidProperties[] = "invalid value for 'deviceUse', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['deviceUse']) && (mb_strlen($this->container['deviceUse']) < 0)) {
+                $invalidProperties[] = "invalid value for 'deviceUse', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['size']) && ($this->container['size'] > 9223372036854775807)) {
                 $invalidProperties[] = "invalid value for 'size', must be smaller than or equal to 9223372036854775807.";
             }
-            if (($this->container['size'] < 0)) {
+            if (!is_null($this->container['size']) && ($this->container['size'] < 0)) {
                 $invalidProperties[] = "invalid value for 'size', must be bigger than or equal to 0.";
             }
-        if ($this->container['usedSize'] === null) {
-            $invalidProperties[] = "'usedSize' can't be null";
-        }
-            if (($this->container['usedSize'] > 9223372036854775807)) {
+            if (!is_null($this->container['usedSize']) && ($this->container['usedSize'] > 9223372036854775807)) {
                 $invalidProperties[] = "invalid value for 'usedSize', must be smaller than or equal to 9223372036854775807.";
             }
-            if (($this->container['usedSize'] < 0)) {
+            if (!is_null($this->container['usedSize']) && ($this->container['usedSize'] < 0)) {
                 $invalidProperties[] = "invalid value for 'usedSize', must be bigger than or equal to 0.";
             }
-        if ($this->container['physicalVolumes'] === null) {
-            $invalidProperties[] = "'physicalVolumes' can't be null";
-        }
             if (!is_null($this->container['relationName']) && (mb_strlen($this->container['relationName']) > 255)) {
                 $invalidProperties[] = "invalid value for 'relationName', the character length must be smaller than or equal to 255.";
             }
@@ -355,7 +306,7 @@ class ServerDisk implements ModelInterface, ArrayAccess
     * Gets name
     *  磁盘名称
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -365,7 +316,7 @@ class ServerDisk implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 磁盘名称
+    * @param string|null $name 磁盘名称
     *
     * @return $this
     */
@@ -377,7 +328,7 @@ class ServerDisk implements ModelInterface, ArrayAccess
 
     /**
     * Gets partitionStyle
-    *  磁盘的分区类型，添加源端时源端磁盘必选 MBR：mbr格式 GPT：gpt格式
+    *  磁盘的分区类型，添加源端时源端磁盘必选，否则无法通过后续环境检查 （非枚举数据，来源于EVS服务） 常见类型如：MBR：主启动记录分区，GPT：Guid Partition Table，全局分区表。 详细类型请参考EVS服务API文档中“MBR和GPT分区形式有何区别”部分描述
     *
     * @return string|null
     */
@@ -389,7 +340,7 @@ class ServerDisk implements ModelInterface, ArrayAccess
     /**
     * Sets partitionStyle
     *
-    * @param string|null $partitionStyle 磁盘的分区类型，添加源端时源端磁盘必选 MBR：mbr格式 GPT：gpt格式
+    * @param string|null $partitionStyle 磁盘的分区类型，添加源端时源端磁盘必选，否则无法通过后续环境检查 （非枚举数据，来源于EVS服务） 常见类型如：MBR：主启动记录分区，GPT：Guid Partition Table，全局分区表。 详细类型请参考EVS服务API文档中“MBR和GPT分区形式有何区别”部分描述
     *
     * @return $this
     */
@@ -401,9 +352,9 @@ class ServerDisk implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceUse
-    *  磁盘类型 BOOT：BOOT设备 OS：系统设备
+    *  磁盘类型。 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     *
-    * @return string
+    * @return string|null
     */
     public function getDeviceUse()
     {
@@ -413,7 +364,7 @@ class ServerDisk implements ModelInterface, ArrayAccess
     /**
     * Sets deviceUse
     *
-    * @param string $deviceUse 磁盘类型 BOOT：BOOT设备 OS：系统设备
+    * @param string|null $deviceUse 磁盘类型。 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     *
     * @return $this
     */
@@ -427,7 +378,7 @@ class ServerDisk implements ModelInterface, ArrayAccess
     * Gets size
     *  磁盘总大小，以字节为单位
     *
-    * @return int
+    * @return int|null
     */
     public function getSize()
     {
@@ -437,7 +388,7 @@ class ServerDisk implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int $size 磁盘总大小，以字节为单位
+    * @param int|null $size 磁盘总大小，以字节为单位
     *
     * @return $this
     */
@@ -451,7 +402,7 @@ class ServerDisk implements ModelInterface, ArrayAccess
     * Gets usedSize
     *  磁盘已使用大小，以字节为单位
     *
-    * @return int
+    * @return int|null
     */
     public function getUsedSize()
     {
@@ -461,7 +412,7 @@ class ServerDisk implements ModelInterface, ArrayAccess
     /**
     * Sets usedSize
     *
-    * @param int $usedSize 磁盘已使用大小，以字节为单位
+    * @param int|null $usedSize 磁盘已使用大小，以字节为单位
     *
     * @return $this
     */
@@ -475,7 +426,7 @@ class ServerDisk implements ModelInterface, ArrayAccess
     * Gets physicalVolumes
     *  磁盘上的物理分区信息
     *
-    * @return \HuaweiCloud\SDK\Sms\V3\Model\PhysicalVolume[]
+    * @return \HuaweiCloud\SDK\Sms\V3\Model\PhysicalVolume[]|null
     */
     public function getPhysicalVolumes()
     {
@@ -485,7 +436,7 @@ class ServerDisk implements ModelInterface, ArrayAccess
     /**
     * Sets physicalVolumes
     *
-    * @param \HuaweiCloud\SDK\Sms\V3\Model\PhysicalVolume[] $physicalVolumes 磁盘上的物理分区信息
+    * @param \HuaweiCloud\SDK\Sms\V3\Model\PhysicalVolume[]|null $physicalVolumes 磁盘上的物理分区信息
     *
     * @return $this
     */

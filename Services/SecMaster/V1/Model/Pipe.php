@@ -367,8 +367,8 @@ class Pipe implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['domainId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'domainId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['domainId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 36.";
+            if ((mb_strlen($this->container['domainId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 32.";
             }
         if ($this->container['pipeId'] === null) {
             $invalidProperties[] = "'pipeId' can't be null";
@@ -399,11 +399,11 @@ class Pipe implements ModelInterface, ArrayAccess
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
         }
-            if ((mb_strlen($this->container['projectId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['projectId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
             }
-            if ((mb_strlen($this->container['projectId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 36.";
+            if ((mb_strlen($this->container['projectId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
             }
         if ($this->container['shards'] === null) {
             $invalidProperties[] = "'shards' can't be null";

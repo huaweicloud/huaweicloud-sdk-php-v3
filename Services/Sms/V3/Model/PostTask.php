@@ -20,20 +20,21 @@ class PostTask implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  任务名称
+    * name  任务名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     * type  任务类型 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
     * startTargetServer  迁移后是否启动目的端虚拟机
     * autoStart  是否自动启动
     * osType  操作系统类型 WINDOWS:Windows系统类型 LINUX:Linux系统类型
     * sourceServer  sourceServer
     * targetServer  targetServer
-    * migrationIp  迁移IP，如果是自动创建虚拟机，不需要此参数
+    * migrationIp  迁移IP，如果是自动创建虚拟机，不需要此参数。 use_ipv6是false时，migration_ip应满足ipv4的格式标准；use_ipv6是true时，migration_ip应满足ipv6的格式标准。
     * regionName  region的名称
     * regionId  region ID
     * projectName  项目名称
     * projectId  项目ID
     * priority  优先级。默认为1
     * vmTemplateId  自动创建虚拟机使用模板
+    * clonevmTemplateId  克隆服务器模板ID
     * usePublicIp  是否使用公网ip
     * useIpv6  是否使用ipv6
     * syncing  复制或者同步后是否会继续持续同步，不添加则默认是false
@@ -61,6 +62,7 @@ class PostTask implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'priority' => 'int',
             'vmTemplateId' => 'string',
+            'clonevmTemplateId' => 'string',
             'usePublicIp' => 'bool',
             'useIpv6' => 'bool',
             'syncing' => 'bool',
@@ -74,20 +76,21 @@ class PostTask implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  任务名称
+    * name  任务名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     * type  任务类型 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
     * startTargetServer  迁移后是否启动目的端虚拟机
     * autoStart  是否自动启动
     * osType  操作系统类型 WINDOWS:Windows系统类型 LINUX:Linux系统类型
     * sourceServer  sourceServer
     * targetServer  targetServer
-    * migrationIp  迁移IP，如果是自动创建虚拟机，不需要此参数
+    * migrationIp  迁移IP，如果是自动创建虚拟机，不需要此参数。 use_ipv6是false时，migration_ip应满足ipv4的格式标准；use_ipv6是true时，migration_ip应满足ipv6的格式标准。
     * regionName  region的名称
     * regionId  region ID
     * projectName  项目名称
     * projectId  项目ID
     * priority  优先级。默认为1
     * vmTemplateId  自动创建虚拟机使用模板
+    * clonevmTemplateId  克隆服务器模板ID
     * usePublicIp  是否使用公网ip
     * useIpv6  是否使用ipv6
     * syncing  复制或者同步后是否会继续持续同步，不添加则默认是false
@@ -115,6 +118,7 @@ class PostTask implements ModelInterface, ArrayAccess
         'projectId' => null,
         'priority' => 'int32',
         'vmTemplateId' => null,
+        'clonevmTemplateId' => null,
         'usePublicIp' => null,
         'useIpv6' => null,
         'syncing' => null,
@@ -149,20 +153,21 @@ class PostTask implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  任务名称
+    * name  任务名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     * type  任务类型 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
     * startTargetServer  迁移后是否启动目的端虚拟机
     * autoStart  是否自动启动
     * osType  操作系统类型 WINDOWS:Windows系统类型 LINUX:Linux系统类型
     * sourceServer  sourceServer
     * targetServer  targetServer
-    * migrationIp  迁移IP，如果是自动创建虚拟机，不需要此参数
+    * migrationIp  迁移IP，如果是自动创建虚拟机，不需要此参数。 use_ipv6是false时，migration_ip应满足ipv4的格式标准；use_ipv6是true时，migration_ip应满足ipv6的格式标准。
     * regionName  region的名称
     * regionId  region ID
     * projectName  项目名称
     * projectId  项目ID
     * priority  优先级。默认为1
     * vmTemplateId  自动创建虚拟机使用模板
+    * clonevmTemplateId  克隆服务器模板ID
     * usePublicIp  是否使用公网ip
     * useIpv6  是否使用ipv6
     * syncing  复制或者同步后是否会继续持续同步，不添加则默认是false
@@ -190,6 +195,7 @@ class PostTask implements ModelInterface, ArrayAccess
             'projectId' => 'project_id',
             'priority' => 'priority',
             'vmTemplateId' => 'vm_template_id',
+            'clonevmTemplateId' => 'clonevm_template_id',
             'usePublicIp' => 'use_public_ip',
             'useIpv6' => 'use_ipv6',
             'syncing' => 'syncing',
@@ -203,20 +209,21 @@ class PostTask implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  任务名称
+    * name  任务名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     * type  任务类型 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
     * startTargetServer  迁移后是否启动目的端虚拟机
     * autoStart  是否自动启动
     * osType  操作系统类型 WINDOWS:Windows系统类型 LINUX:Linux系统类型
     * sourceServer  sourceServer
     * targetServer  targetServer
-    * migrationIp  迁移IP，如果是自动创建虚拟机，不需要此参数
+    * migrationIp  迁移IP，如果是自动创建虚拟机，不需要此参数。 use_ipv6是false时，migration_ip应满足ipv4的格式标准；use_ipv6是true时，migration_ip应满足ipv6的格式标准。
     * regionName  region的名称
     * regionId  region ID
     * projectName  项目名称
     * projectId  项目ID
     * priority  优先级。默认为1
     * vmTemplateId  自动创建虚拟机使用模板
+    * clonevmTemplateId  克隆服务器模板ID
     * usePublicIp  是否使用公网ip
     * useIpv6  是否使用ipv6
     * syncing  复制或者同步后是否会继续持续同步，不添加则默认是false
@@ -244,6 +251,7 @@ class PostTask implements ModelInterface, ArrayAccess
             'projectId' => 'setProjectId',
             'priority' => 'setPriority',
             'vmTemplateId' => 'setVmTemplateId',
+            'clonevmTemplateId' => 'setClonevmTemplateId',
             'usePublicIp' => 'setUsePublicIp',
             'useIpv6' => 'setUseIpv6',
             'syncing' => 'setSyncing',
@@ -257,20 +265,21 @@ class PostTask implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  任务名称
+    * name  任务名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     * type  任务类型 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
     * startTargetServer  迁移后是否启动目的端虚拟机
     * autoStart  是否自动启动
     * osType  操作系统类型 WINDOWS:Windows系统类型 LINUX:Linux系统类型
     * sourceServer  sourceServer
     * targetServer  targetServer
-    * migrationIp  迁移IP，如果是自动创建虚拟机，不需要此参数
+    * migrationIp  迁移IP，如果是自动创建虚拟机，不需要此参数。 use_ipv6是false时，migration_ip应满足ipv4的格式标准；use_ipv6是true时，migration_ip应满足ipv6的格式标准。
     * regionName  region的名称
     * regionId  region ID
     * projectName  项目名称
     * projectId  项目ID
     * priority  优先级。默认为1
     * vmTemplateId  自动创建虚拟机使用模板
+    * clonevmTemplateId  克隆服务器模板ID
     * usePublicIp  是否使用公网ip
     * useIpv6  是否使用ipv6
     * syncing  复制或者同步后是否会继续持续同步，不添加则默认是false
@@ -298,6 +307,7 @@ class PostTask implements ModelInterface, ArrayAccess
             'projectId' => 'getProjectId',
             'priority' => 'getPriority',
             'vmTemplateId' => 'getVmTemplateId',
+            'clonevmTemplateId' => 'getClonevmTemplateId',
             'usePublicIp' => 'getUsePublicIp',
             'useIpv6' => 'getUseIpv6',
             'syncing' => 'getSyncing',
@@ -411,6 +421,7 @@ class PostTask implements ModelInterface, ArrayAccess
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
         $this->container['vmTemplateId'] = isset($data['vmTemplateId']) ? $data['vmTemplateId'] : null;
+        $this->container['clonevmTemplateId'] = isset($data['clonevmTemplateId']) ? $data['clonevmTemplateId'] : null;
         $this->container['usePublicIp'] = isset($data['usePublicIp']) ? $data['usePublicIp'] : null;
         $this->container['useIpv6'] = isset($data['useIpv6']) ? $data['useIpv6'] : null;
         $this->container['syncing'] = isset($data['syncing']) ? $data['syncing'] : null;
@@ -433,11 +444,14 @@ class PostTask implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-            if ((mb_strlen($this->container['name']) > 255)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
+            if ((mb_strlen($this->container['name']) > 64)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
             }
-            if ((mb_strlen($this->container['name']) < 0)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+            }
+            if (!preg_match("/^[A-Za-z0-9_\\-\\u4e00-\\u9fa5]{1,64}$/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[A-Za-z0-9_\\-\\u4e00-\\u9fa5]{1,64}$/.";
             }
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
@@ -450,9 +464,6 @@ class PostTask implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['osType'] === null) {
-            $invalidProperties[] = "'osType' can't be null";
-        }
             $allowedValues = $this->getOsTypeAllowableValues();
                 if (!is_null($this->container['osType']) && !in_array($this->container['osType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -515,14 +526,20 @@ class PostTask implements ModelInterface, ArrayAccess
             if (!is_null($this->container['priority']) && ($this->container['priority'] < 0)) {
                 $invalidProperties[] = "invalid value for 'priority', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['vmTemplateId']) && (mb_strlen($this->container['vmTemplateId']) > 255)) {
-                $invalidProperties[] = "invalid value for 'vmTemplateId', the character length must be smaller than or equal to 255.";
+            if (!is_null($this->container['vmTemplateId']) && (mb_strlen($this->container['vmTemplateId']) > 100)) {
+                $invalidProperties[] = "invalid value for 'vmTemplateId', the character length must be smaller than or equal to 100.";
             }
             if (!is_null($this->container['vmTemplateId']) && (mb_strlen($this->container['vmTemplateId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'vmTemplateId', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['speedLimit']) && ($this->container['speedLimit'] > 10000)) {
-                $invalidProperties[] = "invalid value for 'speedLimit', must be smaller than or equal to 10000.";
+            if (!is_null($this->container['clonevmTemplateId']) && (mb_strlen($this->container['clonevmTemplateId']) > 100)) {
+                $invalidProperties[] = "invalid value for 'clonevmTemplateId', the character length must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['clonevmTemplateId']) && (mb_strlen($this->container['clonevmTemplateId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'clonevmTemplateId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['speedLimit']) && ($this->container['speedLimit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'speedLimit', must be smaller than or equal to 1000.";
             }
             if (!is_null($this->container['speedLimit']) && ($this->container['speedLimit'] < 0)) {
                 $invalidProperties[] = "invalid value for 'speedLimit', must be bigger than or equal to 0.";
@@ -549,7 +566,7 @@ class PostTask implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  任务名称
+    *  任务名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     *
     * @return string
     */
@@ -561,7 +578,7 @@ class PostTask implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 任务名称
+    * @param string $name 任务名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     *
     * @return $this
     */
@@ -647,7 +664,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * Gets osType
     *  操作系统类型 WINDOWS:Windows系统类型 LINUX:Linux系统类型
     *
-    * @return string
+    * @return string|null
     */
     public function getOsType()
     {
@@ -657,7 +674,7 @@ class PostTask implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string $osType 操作系统类型 WINDOWS:Windows系统类型 LINUX:Linux系统类型
+    * @param string|null $osType 操作系统类型 WINDOWS:Windows系统类型 LINUX:Linux系统类型
     *
     * @return $this
     */
@@ -717,7 +734,7 @@ class PostTask implements ModelInterface, ArrayAccess
 
     /**
     * Gets migrationIp
-    *  迁移IP，如果是自动创建虚拟机，不需要此参数
+    *  迁移IP，如果是自动创建虚拟机，不需要此参数。 use_ipv6是false时，migration_ip应满足ipv4的格式标准；use_ipv6是true时，migration_ip应满足ipv6的格式标准。
     *
     * @return string|null
     */
@@ -729,7 +746,7 @@ class PostTask implements ModelInterface, ArrayAccess
     /**
     * Sets migrationIp
     *
-    * @param string|null $migrationIp 迁移IP，如果是自动创建虚拟机，不需要此参数
+    * @param string|null $migrationIp 迁移IP，如果是自动创建虚拟机，不需要此参数。 use_ipv6是false时，migration_ip应满足ipv4的格式标准；use_ipv6是true时，migration_ip应满足ipv6的格式标准。
     *
     * @return $this
     */
@@ -880,6 +897,30 @@ class PostTask implements ModelInterface, ArrayAccess
     public function setVmTemplateId($vmTemplateId)
     {
         $this->container['vmTemplateId'] = $vmTemplateId;
+        return $this;
+    }
+
+    /**
+    * Gets clonevmTemplateId
+    *  克隆服务器模板ID
+    *
+    * @return string|null
+    */
+    public function getClonevmTemplateId()
+    {
+        return $this->container['clonevmTemplateId'];
+    }
+
+    /**
+    * Sets clonevmTemplateId
+    *
+    * @param string|null $clonevmTemplateId 克隆服务器模板ID
+    *
+    * @return $this
+    */
+    public function setClonevmTemplateId($clonevmTemplateId)
+    {
+        $this->container['clonevmTemplateId'] = $clonevmTemplateId;
         return $this;
     }
 

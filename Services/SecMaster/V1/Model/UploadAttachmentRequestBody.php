@@ -21,7 +21,7 @@ class UploadAttachmentRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * fileType  固定枚举，当前仅支持user_task/用户任务
-    * uploadFile  导入的流程文件
+    * uploadFile  上传的附件
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class UploadAttachmentRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * fileType  固定枚举，当前仅支持user_task/用户任务
-    * uploadFile  导入的流程文件
+    * uploadFile  上传的附件
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class UploadAttachmentRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * fileType  固定枚举，当前仅支持user_task/用户任务
-    * uploadFile  导入的流程文件
+    * uploadFile  上传的附件
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class UploadAttachmentRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * fileType  固定枚举，当前仅支持user_task/用户任务
-    * uploadFile  导入的流程文件
+    * uploadFile  上传的附件
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class UploadAttachmentRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * fileType  固定枚举，当前仅支持user_task/用户任务
-    * uploadFile  导入的流程文件
+    * uploadFile  上传的附件
     *
     * @var string[]
     */
@@ -239,7 +239,7 @@ class UploadAttachmentRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets uploadFile
-    *  导入的流程文件
+    *  上传的附件
     *
     * @return \SplFileObject
     */
@@ -251,7 +251,7 @@ class UploadAttachmentRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets uploadFile
     *
-    * @param \SplFileObject $uploadFile 导入的流程文件
+    * @param \SplFileObject $uploadFile 上传的附件
     *
     * @return $this
     */

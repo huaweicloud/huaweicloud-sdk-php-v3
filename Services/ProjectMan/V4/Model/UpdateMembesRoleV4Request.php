@@ -27,7 +27,7 @@ class UpdateMembesRoleV4Request implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'projectId' => 'string',
-            'body' => '\HuaweiCloud\SDK\ProjectMan\V4\Model\UpdateMembesRoleV4RequestBody'
+            'body' => '\HuaweiCloud\SDK\ProjectMan\V4\Model\UpdateMembersRoleV4RequestBody'
     ];
 
     /**
@@ -223,7 +223,7 @@ class UpdateMembesRoleV4Request implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\ProjectMan\V4\Model\UpdateMembesRoleV4RequestBody|null
+    * @return \HuaweiCloud\SDK\ProjectMan\V4\Model\UpdateMembersRoleV4RequestBody|null
     */
     public function getBody()
     {
@@ -233,7 +233,7 @@ class UpdateMembesRoleV4Request implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\ProjectMan\V4\Model\UpdateMembesRoleV4RequestBody|null $body body
+    * @param \HuaweiCloud\SDK\ProjectMan\V4\Model\UpdateMembersRoleV4RequestBody|null $body body
     *
     * @return $this
     */

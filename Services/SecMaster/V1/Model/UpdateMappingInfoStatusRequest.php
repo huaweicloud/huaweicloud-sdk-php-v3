@@ -81,7 +81,7 @@ class UpdateMappingInfoStatusRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'contentType' => 'content-type',
+            'contentType' => 'Content-Type',
             'workspaceId' => 'workspace_id',
             'mappingId' => 'mapping_id',
             'body' => 'body'

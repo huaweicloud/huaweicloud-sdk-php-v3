@@ -45,6 +45,7 @@ class CreateDataclassTypeResponse implements ModelInterface, ArrayAccess
     * createTime  创建时间
     * updateTime  修改时间
     * dataclassBusinessCode  所属数据类业务编码
+    * subCount  类型分类下子类型数目
     *
     * @var string[]
     */
@@ -72,7 +73,8 @@ class CreateDataclassTypeResponse implements ModelInterface, ArrayAccess
             'modifierName' => 'string',
             'createTime' => 'string',
             'updateTime' => 'string',
-            'dataclassBusinessCode' => 'string'
+            'dataclassBusinessCode' => 'string',
+            'subCount' => 'int'
     ];
 
     /**
@@ -101,6 +103,7 @@ class CreateDataclassTypeResponse implements ModelInterface, ArrayAccess
     * createTime  创建时间
     * updateTime  修改时间
     * dataclassBusinessCode  所属数据类业务编码
+    * subCount  类型分类下子类型数目
     *
     * @var string[]
     */
@@ -128,7 +131,8 @@ class CreateDataclassTypeResponse implements ModelInterface, ArrayAccess
         'modifierName' => null,
         'createTime' => null,
         'updateTime' => null,
-        'dataclassBusinessCode' => null
+        'dataclassBusinessCode' => null,
+        'subCount' => 'int32'
     ];
 
     /**
@@ -178,6 +182,7 @@ class CreateDataclassTypeResponse implements ModelInterface, ArrayAccess
     * createTime  创建时间
     * updateTime  修改时间
     * dataclassBusinessCode  所属数据类业务编码
+    * subCount  类型分类下子类型数目
     *
     * @var string[]
     */
@@ -205,7 +210,8 @@ class CreateDataclassTypeResponse implements ModelInterface, ArrayAccess
             'modifierName' => 'modifier_name',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
-            'dataclassBusinessCode' => 'dataclass_business_code'
+            'dataclassBusinessCode' => 'dataclass_business_code',
+            'subCount' => 'sub_count'
     ];
 
     /**
@@ -234,6 +240,7 @@ class CreateDataclassTypeResponse implements ModelInterface, ArrayAccess
     * createTime  创建时间
     * updateTime  修改时间
     * dataclassBusinessCode  所属数据类业务编码
+    * subCount  类型分类下子类型数目
     *
     * @var string[]
     */
@@ -261,7 +268,8 @@ class CreateDataclassTypeResponse implements ModelInterface, ArrayAccess
             'modifierName' => 'setModifierName',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
-            'dataclassBusinessCode' => 'setDataclassBusinessCode'
+            'dataclassBusinessCode' => 'setDataclassBusinessCode',
+            'subCount' => 'setSubCount'
     ];
 
     /**
@@ -290,6 +298,7 @@ class CreateDataclassTypeResponse implements ModelInterface, ArrayAccess
     * createTime  创建时间
     * updateTime  修改时间
     * dataclassBusinessCode  所属数据类业务编码
+    * subCount  类型分类下子类型数目
     *
     * @var string[]
     */
@@ -317,7 +326,8 @@ class CreateDataclassTypeResponse implements ModelInterface, ArrayAccess
             'modifierName' => 'getModifierName',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
-            'dataclassBusinessCode' => 'getDataclassBusinessCode'
+            'dataclassBusinessCode' => 'getDataclassBusinessCode',
+            'subCount' => 'getSubCount'
     ];
 
     /**
@@ -402,6 +412,7 @@ class CreateDataclassTypeResponse implements ModelInterface, ArrayAccess
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['dataclassBusinessCode'] = isset($data['dataclassBusinessCode']) ? $data['dataclassBusinessCode'] : null;
+        $this->container['subCount'] = isset($data['subCount']) ? $data['subCount'] : null;
     }
 
     /**
@@ -543,6 +554,12 @@ class CreateDataclassTypeResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['dataclassBusinessCode']) && (mb_strlen($this->container['dataclassBusinessCode']) < 2)) {
                 $invalidProperties[] = "invalid value for 'dataclassBusinessCode', the character length must be bigger than or equal to 2.";
+            }
+            if (!is_null($this->container['subCount']) && ($this->container['subCount'] > 999999999)) {
+                $invalidProperties[] = "invalid value for 'subCount', must be smaller than or equal to 999999999.";
+            }
+            if (!is_null($this->container['subCount']) && ($this->container['subCount'] < 0)) {
+                $invalidProperties[] = "invalid value for 'subCount', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -1131,6 +1148,30 @@ class CreateDataclassTypeResponse implements ModelInterface, ArrayAccess
     public function setDataclassBusinessCode($dataclassBusinessCode)
     {
         $this->container['dataclassBusinessCode'] = $dataclassBusinessCode;
+        return $this;
+    }
+
+    /**
+    * Gets subCount
+    *  类型分类下子类型数目
+    *
+    * @return int|null
+    */
+    public function getSubCount()
+    {
+        return $this->container['subCount'];
+    }
+
+    /**
+    * Sets subCount
+    *
+    * @param int|null $subCount 类型分类下子类型数目
+    *
+    * @return $this
+    */
+    public function setSubCount($subCount)
+    {
+        $this->container['subCount'] = $subCount;
         return $this;
     }
 

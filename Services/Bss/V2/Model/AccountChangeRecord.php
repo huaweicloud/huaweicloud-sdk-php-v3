@@ -27,6 +27,8 @@ class AccountChangeRecord implements ModelInterface, ArrayAccess
     * changeAmount  变更金额，单位为元。
     * balanceAfterChange  变更后余额，单位为元。
     * type  收支类型。 1：收入2：支出
+    * customerId  |参数名称：客户账号ID| |参数约束及描述：客户账号ID。说明：交易详细类型取值为如下值时，该字段不为空 SOURCE_OPERATION_BEADJUST：伙伴拨款 SOURCE_OPERATION_BEUNBIND：交易模式变更(切换/解除关联回收) SOURCE_OPERATION_BERETRIEVE：伙伴回收|
+    * accountName  |参数名称：客户登录名称| |参数约束及描述：客户登录名称。说明：客户账号ID不为空时，该字段不为空|
     *
     * @var string[]
     */
@@ -37,7 +39,9 @@ class AccountChangeRecord implements ModelInterface, ArrayAccess
             'tradeId' => 'string',
             'changeAmount' => 'string',
             'balanceAfterChange' => 'string',
-            'type' => 'string'
+            'type' => 'string',
+            'customerId' => 'string',
+            'accountName' => 'string'
     ];
 
     /**
@@ -49,6 +53,8 @@ class AccountChangeRecord implements ModelInterface, ArrayAccess
     * changeAmount  变更金额，单位为元。
     * balanceAfterChange  变更后余额，单位为元。
     * type  收支类型。 1：收入2：支出
+    * customerId  |参数名称：客户账号ID| |参数约束及描述：客户账号ID。说明：交易详细类型取值为如下值时，该字段不为空 SOURCE_OPERATION_BEADJUST：伙伴拨款 SOURCE_OPERATION_BEUNBIND：交易模式变更(切换/解除关联回收) SOURCE_OPERATION_BERETRIEVE：伙伴回收|
+    * accountName  |参数名称：客户登录名称| |参数约束及描述：客户登录名称。说明：客户账号ID不为空时，该字段不为空|
     *
     * @var string[]
     */
@@ -59,7 +65,9 @@ class AccountChangeRecord implements ModelInterface, ArrayAccess
         'tradeId' => null,
         'changeAmount' => null,
         'balanceAfterChange' => null,
-        'type' => null
+        'type' => null,
+        'customerId' => null,
+        'accountName' => null
     ];
 
     /**
@@ -92,6 +100,8 @@ class AccountChangeRecord implements ModelInterface, ArrayAccess
     * changeAmount  变更金额，单位为元。
     * balanceAfterChange  变更后余额，单位为元。
     * type  收支类型。 1：收入2：支出
+    * customerId  |参数名称：客户账号ID| |参数约束及描述：客户账号ID。说明：交易详细类型取值为如下值时，该字段不为空 SOURCE_OPERATION_BEADJUST：伙伴拨款 SOURCE_OPERATION_BEUNBIND：交易模式变更(切换/解除关联回收) SOURCE_OPERATION_BERETRIEVE：伙伴回收|
+    * accountName  |参数名称：客户登录名称| |参数约束及描述：客户登录名称。说明：客户账号ID不为空时，该字段不为空|
     *
     * @var string[]
     */
@@ -102,7 +112,9 @@ class AccountChangeRecord implements ModelInterface, ArrayAccess
             'tradeId' => 'trade_id',
             'changeAmount' => 'change_amount',
             'balanceAfterChange' => 'balance_after_change',
-            'type' => 'type'
+            'type' => 'type',
+            'customerId' => 'customer_id',
+            'accountName' => 'account_name'
     ];
 
     /**
@@ -114,6 +126,8 @@ class AccountChangeRecord implements ModelInterface, ArrayAccess
     * changeAmount  变更金额，单位为元。
     * balanceAfterChange  变更后余额，单位为元。
     * type  收支类型。 1：收入2：支出
+    * customerId  |参数名称：客户账号ID| |参数约束及描述：客户账号ID。说明：交易详细类型取值为如下值时，该字段不为空 SOURCE_OPERATION_BEADJUST：伙伴拨款 SOURCE_OPERATION_BEUNBIND：交易模式变更(切换/解除关联回收) SOURCE_OPERATION_BERETRIEVE：伙伴回收|
+    * accountName  |参数名称：客户登录名称| |参数约束及描述：客户登录名称。说明：客户账号ID不为空时，该字段不为空|
     *
     * @var string[]
     */
@@ -124,7 +138,9 @@ class AccountChangeRecord implements ModelInterface, ArrayAccess
             'tradeId' => 'setTradeId',
             'changeAmount' => 'setChangeAmount',
             'balanceAfterChange' => 'setBalanceAfterChange',
-            'type' => 'setType'
+            'type' => 'setType',
+            'customerId' => 'setCustomerId',
+            'accountName' => 'setAccountName'
     ];
 
     /**
@@ -136,6 +152,8 @@ class AccountChangeRecord implements ModelInterface, ArrayAccess
     * changeAmount  变更金额，单位为元。
     * balanceAfterChange  变更后余额，单位为元。
     * type  收支类型。 1：收入2：支出
+    * customerId  |参数名称：客户账号ID| |参数约束及描述：客户账号ID。说明：交易详细类型取值为如下值时，该字段不为空 SOURCE_OPERATION_BEADJUST：伙伴拨款 SOURCE_OPERATION_BEUNBIND：交易模式变更(切换/解除关联回收) SOURCE_OPERATION_BERETRIEVE：伙伴回收|
+    * accountName  |参数名称：客户登录名称| |参数约束及描述：客户登录名称。说明：客户账号ID不为空时，该字段不为空|
     *
     * @var string[]
     */
@@ -146,7 +164,9 @@ class AccountChangeRecord implements ModelInterface, ArrayAccess
             'tradeId' => 'getTradeId',
             'changeAmount' => 'getChangeAmount',
             'balanceAfterChange' => 'getBalanceAfterChange',
-            'type' => 'getType'
+            'type' => 'getType',
+            'customerId' => 'getCustomerId',
+            'accountName' => 'getAccountName'
     ];
 
     /**
@@ -214,6 +234,8 @@ class AccountChangeRecord implements ModelInterface, ArrayAccess
         $this->container['changeAmount'] = isset($data['changeAmount']) ? $data['changeAmount'] : null;
         $this->container['balanceAfterChange'] = isset($data['balanceAfterChange']) ? $data['balanceAfterChange'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
+        $this->container['accountName'] = isset($data['accountName']) ? $data['accountName'] : null;
     }
 
     /**
@@ -224,6 +246,18 @@ class AccountChangeRecord implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['customerId']) && (mb_strlen($this->container['customerId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'customerId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['customerId']) && (mb_strlen($this->container['customerId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'customerId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['accountName']) && (mb_strlen($this->container['accountName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'accountName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['accountName']) && (mb_strlen($this->container['accountName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'accountName', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -403,6 +437,54 @@ class AccountChangeRecord implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets customerId
+    *  |参数名称：客户账号ID| |参数约束及描述：客户账号ID。说明：交易详细类型取值为如下值时，该字段不为空 SOURCE_OPERATION_BEADJUST：伙伴拨款 SOURCE_OPERATION_BEUNBIND：交易模式变更(切换/解除关联回收) SOURCE_OPERATION_BERETRIEVE：伙伴回收|
+    *
+    * @return string|null
+    */
+    public function getCustomerId()
+    {
+        return $this->container['customerId'];
+    }
+
+    /**
+    * Sets customerId
+    *
+    * @param string|null $customerId |参数名称：客户账号ID| |参数约束及描述：客户账号ID。说明：交易详细类型取值为如下值时，该字段不为空 SOURCE_OPERATION_BEADJUST：伙伴拨款 SOURCE_OPERATION_BEUNBIND：交易模式变更(切换/解除关联回收) SOURCE_OPERATION_BERETRIEVE：伙伴回收|
+    *
+    * @return $this
+    */
+    public function setCustomerId($customerId)
+    {
+        $this->container['customerId'] = $customerId;
+        return $this;
+    }
+
+    /**
+    * Gets accountName
+    *  |参数名称：客户登录名称| |参数约束及描述：客户登录名称。说明：客户账号ID不为空时，该字段不为空|
+    *
+    * @return string|null
+    */
+    public function getAccountName()
+    {
+        return $this->container['accountName'];
+    }
+
+    /**
+    * Sets accountName
+    *
+    * @param string|null $accountName |参数名称：客户登录名称| |参数约束及描述：客户登录名称。说明：客户账号ID不为空时，该字段不为空|
+    *
+    * @return $this
+    */
+    public function setAccountName($accountName)
+    {
+        $this->container['accountName'] = $accountName;
         return $this;
     }
 

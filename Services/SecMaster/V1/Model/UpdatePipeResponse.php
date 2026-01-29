@@ -350,8 +350,8 @@ class UpdatePipeResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'domainId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 36.";
+            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 32.";
             }
             if (!is_null($this->container['pipeId']) && (mb_strlen($this->container['pipeId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'pipeId', the character length must be smaller than or equal to 36.";
@@ -373,11 +373,11 @@ class UpdatePipeResponse implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 36.";
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
             }
             if (!is_null($this->container['shards']) && ($this->container['shards'] > 64)) {
                 $invalidProperties[] = "invalid value for 'shards', must be smaller than or equal to 64.";

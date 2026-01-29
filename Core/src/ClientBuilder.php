@@ -21,7 +21,9 @@
 namespace HuaweiCloud\SDK\Core;
 
 use HuaweiCloud\SDK\Core\Auth\Credentials;
+use HuaweiCloud\SDK\Core\Http\UserAgent;
 use Monolog\Logger;
+use HuaweiCloud\SDK\Core\Http\HttpHandler;
 use HuaweiCloud\SDK\Core\Auth\BasicCredentials;
 use HuaweiCloud\SDK\Core\Exceptions\SdkException;
 use HuaweiCloud\SDK\Core\Utils\CommonUtils;
@@ -31,10 +33,12 @@ class ClientBuilder
     private $httpConfig;
     private $credentials = null;
     private $endpoint;
+    private $userAgent;
     private $clientType;
     private $credentialType = [];
 
     private $httpHandler = null;
+    private $userAgentHandler = null;
     private $fileLoggerHandler = null;
     private $streamLoggerHandler = null;
     private $region = null;
@@ -56,6 +60,8 @@ class ClientBuilder
         } else {
             $this->credentialType = explode(' ', $credentialTypeName);
         }
+        $this->userAgentHandler = new UserAgent();
+        $this->userAgent = $this->userAgentHandler->GetUserAgentMessage();
     }
 
     /**
@@ -96,6 +102,18 @@ class ClientBuilder
     public function withEndpoint($endpoint)
     {
         $this->endpoint = $endpoint;
+
+        return $this;
+    }
+
+    /**
+     * @param String $userAgent
+     *
+     * @return ClientBuilder
+     */
+    public function withUserAgent($userAgent)
+    {
+        $this->userAgent = $userAgent;
 
         return $this;
     }
@@ -170,7 +188,7 @@ class ClientBuilder
     {
         return $this->credentialType;
     }
-    
+
     public function build()
     {
         $credentialType = $this->credentialType[0];
@@ -191,6 +209,7 @@ class ClientBuilder
         $client = $this->clientType
             ->withCredentials($this->credentials)
             ->withEndpoint($this->endpoint)
+            ->withAgent($this->userAgent)
             ->withHttpConfig($this->httpConfig)
             ->withHttpHandler($this->httpHandler);
         if (isset($this->streamLoggerHandler)) {

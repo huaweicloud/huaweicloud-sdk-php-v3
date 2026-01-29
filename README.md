@@ -237,6 +237,24 @@ $iamClient = IamClient::newBuilder()
 - `$endpoint`: varies by services and regions,
   see [Regions and Endpoints](https://developer.huaweicloud.com/intl/en-us/endpoint) to obtain correct endpoint.
 
+#### 3.2 User Agent [:top:](#user-manual-top)
+
+Additional information will be appended to the User-Agent in the request header by default since **v3.1.184**. It is used by service to identify what SDK language, php version, and platform info a client is using to call into their service, and a random identifier will be generated and appended to the User-Agent. The identifier will be stored in the user's home directory, as `~/.huaweicloud/application_id` on Linux and `C:\Users\USER_NAME\.huaweicloud\application_id` on Windows.
+
+The above information will be used to protect the security of your and your users' Huawei Cloud accounts.
+
+You can disable this automatic User-Agent augmentation by explicitly setting a custom User-Agent header value. The value is recommended to be less than 50 characters and should use US-ASCII visible characters:
+
+```php
+// Initialize specified service client instance, take IamClient for example
+$iamClient = IamClient::newBuilder()
+    ->withHttpConfig($config)
+    ->withEndpoint($endpoint)
+    ->withUserAgent("custom user agent...")
+    ->withCredentials($globalCredentials)
+    ->build();
+```
+
 ### 4. Send Requests and Handle Responses [:top:](#user-manual-top)
 
 ``` php

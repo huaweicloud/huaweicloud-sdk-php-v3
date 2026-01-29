@@ -22,7 +22,6 @@ class ListErrorServersRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * limit  每一页记录的错误数量
     * offset  偏移量
-    * migproject  需要查询的迁移项目ID，添加此字段将只查询对应ID下的迁移任务报错信息
     * enterpriseProjectId  需要查询的企业项目ID
     *
     * @var string[]
@@ -30,7 +29,6 @@ class ListErrorServersRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'limit' => 'int',
             'offset' => 'int',
-            'migproject' => 'string',
             'enterpriseProjectId' => 'string'
     ];
 
@@ -38,7 +36,6 @@ class ListErrorServersRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * limit  每一页记录的错误数量
     * offset  偏移量
-    * migproject  需要查询的迁移项目ID，添加此字段将只查询对应ID下的迁移任务报错信息
     * enterpriseProjectId  需要查询的企业项目ID
     *
     * @var string[]
@@ -46,7 +43,6 @@ class ListErrorServersRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'limit' => 'int32',
         'offset' => 'int32',
-        'migproject' => null,
         'enterpriseProjectId' => null
     ];
 
@@ -75,7 +71,6 @@ class ListErrorServersRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * limit  每一页记录的错误数量
     * offset  偏移量
-    * migproject  需要查询的迁移项目ID，添加此字段将只查询对应ID下的迁移任务报错信息
     * enterpriseProjectId  需要查询的企业项目ID
     *
     * @var string[]
@@ -83,7 +78,6 @@ class ListErrorServersRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'limit' => 'limit',
             'offset' => 'offset',
-            'migproject' => 'migproject',
             'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
@@ -91,7 +85,6 @@ class ListErrorServersRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * limit  每一页记录的错误数量
     * offset  偏移量
-    * migproject  需要查询的迁移项目ID，添加此字段将只查询对应ID下的迁移任务报错信息
     * enterpriseProjectId  需要查询的企业项目ID
     *
     * @var string[]
@@ -99,7 +92,6 @@ class ListErrorServersRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'limit' => 'setLimit',
             'offset' => 'setOffset',
-            'migproject' => 'setMigproject',
             'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
@@ -107,7 +99,6 @@ class ListErrorServersRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * limit  每一页记录的错误数量
     * offset  偏移量
-    * migproject  需要查询的迁移项目ID，添加此字段将只查询对应ID下的迁移任务报错信息
     * enterpriseProjectId  需要查询的企业项目ID
     *
     * @var string[]
@@ -115,7 +106,6 @@ class ListErrorServersRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'limit' => 'getLimit',
             'offset' => 'getOffset',
-            'migproject' => 'getMigproject',
             'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
@@ -179,7 +169,6 @@ class ListErrorServersRequest implements ModelInterface, ArrayAccess
     {
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['migproject'] = isset($data['migproject']) ? $data['migproject'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
@@ -205,12 +194,6 @@ class ListErrorServersRequest implements ModelInterface, ArrayAccess
             }
             if (($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['migproject']) && (mb_strlen($this->container['migproject']) > 255)) {
-                $invalidProperties[] = "invalid value for 'migproject', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['migproject']) && (mb_strlen($this->container['migproject']) < 0)) {
-                $invalidProperties[] = "invalid value for 'migproject', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 255)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 255.";
@@ -277,30 +260,6 @@ class ListErrorServersRequest implements ModelInterface, ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
-        return $this;
-    }
-
-    /**
-    * Gets migproject
-    *  需要查询的迁移项目ID，添加此字段将只查询对应ID下的迁移任务报错信息
-    *
-    * @return string|null
-    */
-    public function getMigproject()
-    {
-        return $this->container['migproject'];
-    }
-
-    /**
-    * Sets migproject
-    *
-    * @param string|null $migproject 需要查询的迁移项目ID，添加此字段将只查询对应ID下的迁移任务报错信息
-    *
-    * @return $this
-    */
-    public function setMigproject($migproject)
-    {
-        $this->container['migproject'] = $migproject;
         return $this;
     }
 

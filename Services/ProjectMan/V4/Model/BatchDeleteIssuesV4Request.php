@@ -27,7 +27,7 @@ class BatchDeleteIssuesV4Request implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'projectId' => 'string',
-            'body' => '\HuaweiCloud\SDK\ProjectMan\V4\Model\BatchDelelteIssuesRequestV4'
+            'body' => '\HuaweiCloud\SDK\ProjectMan\V4\Model\BatchDeleteIssuesRequestV4'
     ];
 
     /**
@@ -223,7 +223,7 @@ class BatchDeleteIssuesV4Request implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\ProjectMan\V4\Model\BatchDelelteIssuesRequestV4|null
+    * @return \HuaweiCloud\SDK\ProjectMan\V4\Model\BatchDeleteIssuesRequestV4|null
     */
     public function getBody()
     {
@@ -233,7 +233,7 @@ class BatchDeleteIssuesV4Request implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\ProjectMan\V4\Model\BatchDelelteIssuesRequestV4|null $body body
+    * @param \HuaweiCloud\SDK\ProjectMan\V4\Model\BatchDeleteIssuesRequestV4|null $body body
     *
     * @return $this
     */

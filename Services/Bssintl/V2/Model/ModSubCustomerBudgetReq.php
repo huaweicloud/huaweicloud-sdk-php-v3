@@ -31,7 +31,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'customerId' => 'string',
-            'budgetAmount' => 'double',
+            'budgetAmount' => 'float',
             'cancelPartnerFrozen' => 'string',
             'indirectPartnerId' => 'string',
             'budgetType' => 'string',
@@ -51,7 +51,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'customerId' => null,
-        'budgetAmount' => 'double',
+        'budgetAmount' => 'bigdecimal',
         'cancelPartnerFrozen' => null,
         'indirectPartnerId' => null,
         'budgetType' => null,
@@ -314,7 +314,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * Gets budgetAmount
     *  调整的目标金额。 单位：元。精确至小数点后2位。
     *
-    * @return double
+    * @return float
     */
     public function getBudgetAmount()
     {
@@ -324,7 +324,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     /**
     * Sets budgetAmount
     *
-    * @param double $budgetAmount 调整的目标金额。 单位：元。精确至小数点后2位。
+    * @param float $budgetAmount 调整的目标金额。 单位：元。精确至小数点后2位。
     *
     * @return $this
     */

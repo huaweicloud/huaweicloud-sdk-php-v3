@@ -22,12 +22,12 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * domainConnectivity  域名连通性
     * destinationConnectivity  目的端连通性
-    * networkDelay  网络时延
-    * networkJitter  网络抖动
-    * migrationSpeed  带宽
-    * lossPercentage  丢包
-    * cpuUsage  CPU占用
-    * memUsage  内存占用
+    * networkDelay  网络时延（ms）
+    * networkJitter  网络抖动（ms）
+    * migrationSpeed  带宽速率（Mbit/s）
+    * lossPercentage  丢包率（%）
+    * cpuUsage  CPU占用率（%）
+    * memUsage  内存占用率（%）
     * evaluationResult  评估结果
     *
     * @var string[]
@@ -48,12 +48,12 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * domainConnectivity  域名连通性
     * destinationConnectivity  目的端连通性
-    * networkDelay  网络时延
-    * networkJitter  网络抖动
-    * migrationSpeed  带宽
-    * lossPercentage  丢包
-    * cpuUsage  CPU占用
-    * memUsage  内存占用
+    * networkDelay  网络时延（ms）
+    * networkJitter  网络抖动（ms）
+    * migrationSpeed  带宽速率（Mbit/s）
+    * lossPercentage  丢包率（%）
+    * cpuUsage  CPU占用率（%）
+    * memUsage  内存占用率（%）
     * evaluationResult  评估结果
     *
     * @var string[]
@@ -95,12 +95,12 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * domainConnectivity  域名连通性
     * destinationConnectivity  目的端连通性
-    * networkDelay  网络时延
-    * networkJitter  网络抖动
-    * migrationSpeed  带宽
-    * lossPercentage  丢包
-    * cpuUsage  CPU占用
-    * memUsage  内存占用
+    * networkDelay  网络时延（ms）
+    * networkJitter  网络抖动（ms）
+    * migrationSpeed  带宽速率（Mbit/s）
+    * lossPercentage  丢包率（%）
+    * cpuUsage  CPU占用率（%）
+    * memUsage  内存占用率（%）
     * evaluationResult  评估结果
     *
     * @var string[]
@@ -121,12 +121,12 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * domainConnectivity  域名连通性
     * destinationConnectivity  目的端连通性
-    * networkDelay  网络时延
-    * networkJitter  网络抖动
-    * migrationSpeed  带宽
-    * lossPercentage  丢包
-    * cpuUsage  CPU占用
-    * memUsage  内存占用
+    * networkDelay  网络时延（ms）
+    * networkJitter  网络抖动（ms）
+    * migrationSpeed  带宽速率（Mbit/s）
+    * lossPercentage  丢包率（%）
+    * cpuUsage  CPU占用率（%）
+    * memUsage  内存占用率（%）
     * evaluationResult  评估结果
     *
     * @var string[]
@@ -147,12 +147,12 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * domainConnectivity  域名连通性
     * destinationConnectivity  目的端连通性
-    * networkDelay  网络时延
-    * networkJitter  网络抖动
-    * migrationSpeed  带宽
-    * lossPercentage  丢包
-    * cpuUsage  CPU占用
-    * memUsage  内存占用
+    * networkDelay  网络时延（ms）
+    * networkJitter  网络抖动（ms）
+    * migrationSpeed  带宽速率（Mbit/s）
+    * lossPercentage  丢包率（%）
+    * cpuUsage  CPU占用率（%）
+    * memUsage  内存占用率（%）
     * evaluationResult  评估结果
     *
     * @var string[]
@@ -303,11 +303,11 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['evaluationResult'] === null) {
             $invalidProperties[] = "'evaluationResult' can't be null";
         }
-            if ((mb_strlen($this->container['evaluationResult']) > 8)) {
-                $invalidProperties[] = "invalid value for 'evaluationResult', the character length must be smaller than or equal to 8.";
+            if ((mb_strlen($this->container['evaluationResult']) > 9)) {
+                $invalidProperties[] = "invalid value for 'evaluationResult', the character length must be smaller than or equal to 9.";
             }
-            if ((mb_strlen($this->container['evaluationResult']) < 6)) {
-                $invalidProperties[] = "invalid value for 'evaluationResult', the character length must be bigger than or equal to 6.";
+            if ((mb_strlen($this->container['evaluationResult']) < 5)) {
+                $invalidProperties[] = "invalid value for 'evaluationResult', the character length must be bigger than or equal to 5.";
             }
         return $invalidProperties;
     }
@@ -373,7 +373,7 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets networkDelay
-    *  网络时延
+    *  网络时延（ms）
     *
     * @return double
     */
@@ -385,7 +385,7 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets networkDelay
     *
-    * @param double $networkDelay 网络时延
+    * @param double $networkDelay 网络时延（ms）
     *
     * @return $this
     */
@@ -397,7 +397,7 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets networkJitter
-    *  网络抖动
+    *  网络抖动（ms）
     *
     * @return double
     */
@@ -409,7 +409,7 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets networkJitter
     *
-    * @param double $networkJitter 网络抖动
+    * @param double $networkJitter 网络抖动（ms）
     *
     * @return $this
     */
@@ -421,7 +421,7 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets migrationSpeed
-    *  带宽
+    *  带宽速率（Mbit/s）
     *
     * @return double
     */
@@ -433,7 +433,7 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets migrationSpeed
     *
-    * @param double $migrationSpeed 带宽
+    * @param double $migrationSpeed 带宽速率（Mbit/s）
     *
     * @return $this
     */
@@ -445,7 +445,7 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets lossPercentage
-    *  丢包
+    *  丢包率（%）
     *
     * @return double
     */
@@ -457,7 +457,7 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets lossPercentage
     *
-    * @param double $lossPercentage 丢包
+    * @param double $lossPercentage 丢包率（%）
     *
     * @return $this
     */
@@ -469,7 +469,7 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets cpuUsage
-    *  CPU占用
+    *  CPU占用率（%）
     *
     * @return double
     */
@@ -481,7 +481,7 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets cpuUsage
     *
-    * @param double $cpuUsage CPU占用
+    * @param double $cpuUsage CPU占用率（%）
     *
     * @return $this
     */
@@ -493,7 +493,7 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets memUsage
-    *  内存占用
+    *  内存占用率（%）
     *
     * @return double
     */
@@ -505,7 +505,7 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets memUsage
     *
-    * @param double $memUsage 内存占用
+    * @param double $memUsage 内存占用率（%）
     *
     * @return $this
     */

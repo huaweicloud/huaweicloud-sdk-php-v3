@@ -28,7 +28,7 @@ class ListDiagnosisReportsResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'diagnosisReportList' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\DiagnosisReportResp[]',
-            'totalNum' => 'object'
+            'totalNum' => 'int'
     ];
 
     /**
@@ -40,7 +40,7 @@ class ListDiagnosisReportsResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'diagnosisReportList' => null,
-        'totalNum' => null
+        'totalNum' => 'int64'
     ];
 
     /**
@@ -212,7 +212,7 @@ class ListDiagnosisReportsResponse implements ModelInterface, ArrayAccess
     * Gets totalNum
     *  **参数解释**： 报告数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return object|null
+    * @return int|null
     */
     public function getTotalNum()
     {
@@ -222,7 +222,7 @@ class ListDiagnosisReportsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param object|null $totalNum **参数解释**： 报告数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param int|null $totalNum **参数解释**： 报告数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

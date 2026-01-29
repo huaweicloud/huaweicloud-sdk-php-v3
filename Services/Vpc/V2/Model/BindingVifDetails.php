@@ -33,7 +33,7 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
             'primaryInterface' => 'bool',
             'portFilter' => 'bool',
             'ovsHybridPlug' => 'bool',
-            'vlanId' => 'string',
+            'vlanId' => 'int',
             'parentId' => 'string',
             'parentDeviceId' => 'string'
     ];
@@ -53,7 +53,7 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
         'primaryInterface' => null,
         'portFilter' => null,
         'ovsHybridPlug' => null,
-        'vlanId' => null,
+        'vlanId' => 'int32',
         'parentId' => null,
         'parentDeviceId' => null
     ];
@@ -303,7 +303,7 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
     * Gets vlanId
     *  辅助弹性网卡的vlan ID。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getVlanId()
     {
@@ -313,7 +313,7 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
     /**
     * Sets vlanId
     *
-    * @param string|null $vlanId 辅助弹性网卡的vlan ID。
+    * @param int|null $vlanId 辅助弹性网卡的vlan ID。
     *
     * @return $this
     */

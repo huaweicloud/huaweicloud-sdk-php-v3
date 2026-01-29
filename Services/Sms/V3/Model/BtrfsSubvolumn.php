@@ -213,58 +213,40 @@ class BtrfsSubvolumn implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['uuid'] === null) {
-            $invalidProperties[] = "'uuid' can't be null";
-        }
-            if ((mb_strlen($this->container['uuid']) > 255)) {
+            if (!is_null($this->container['uuid']) && (mb_strlen($this->container['uuid']) > 255)) {
                 $invalidProperties[] = "invalid value for 'uuid', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['uuid']) < 0)) {
+            if (!is_null($this->container['uuid']) && (mb_strlen($this->container['uuid']) < 0)) {
                 $invalidProperties[] = "invalid value for 'uuid', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['isSnapshot'] === null) {
-            $invalidProperties[] = "'isSnapshot' can't be null";
-        }
-            if ((mb_strlen($this->container['isSnapshot']) > 255)) {
+            if (!is_null($this->container['isSnapshot']) && (mb_strlen($this->container['isSnapshot']) > 255)) {
                 $invalidProperties[] = "invalid value for 'isSnapshot', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['isSnapshot']) < 0)) {
+            if (!is_null($this->container['isSnapshot']) && (mb_strlen($this->container['isSnapshot']) < 0)) {
                 $invalidProperties[] = "invalid value for 'isSnapshot', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['subvolId'] === null) {
-            $invalidProperties[] = "'subvolId' can't be null";
-        }
-            if ((mb_strlen($this->container['subvolId']) > 255)) {
+            if (!is_null($this->container['subvolId']) && (mb_strlen($this->container['subvolId']) > 255)) {
                 $invalidProperties[] = "invalid value for 'subvolId', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['subvolId']) < 0)) {
+            if (!is_null($this->container['subvolId']) && (mb_strlen($this->container['subvolId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'subvolId', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['parentId'] === null) {
-            $invalidProperties[] = "'parentId' can't be null";
-        }
-            if ((mb_strlen($this->container['parentId']) > 255)) {
+            if (!is_null($this->container['parentId']) && (mb_strlen($this->container['parentId']) > 255)) {
                 $invalidProperties[] = "invalid value for 'parentId', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['parentId']) < 0)) {
+            if (!is_null($this->container['parentId']) && (mb_strlen($this->container['parentId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'parentId', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['subvolName'] === null) {
-            $invalidProperties[] = "'subvolName' can't be null";
-        }
-            if ((mb_strlen($this->container['subvolName']) > 255)) {
+            if (!is_null($this->container['subvolName']) && (mb_strlen($this->container['subvolName']) > 255)) {
                 $invalidProperties[] = "invalid value for 'subvolName', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['subvolName']) < 0)) {
+            if (!is_null($this->container['subvolName']) && (mb_strlen($this->container['subvolName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'subvolName', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['subvolMountPath'] === null) {
-            $invalidProperties[] = "'subvolMountPath' can't be null";
-        }
-            if ((mb_strlen($this->container['subvolMountPath']) > 255)) {
+            if (!is_null($this->container['subvolMountPath']) && (mb_strlen($this->container['subvolMountPath']) > 255)) {
                 $invalidProperties[] = "invalid value for 'subvolMountPath', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['subvolMountPath']) < 0)) {
+            if (!is_null($this->container['subvolMountPath']) && (mb_strlen($this->container['subvolMountPath']) < 0)) {
                 $invalidProperties[] = "invalid value for 'subvolMountPath', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -285,7 +267,7 @@ class BtrfsSubvolumn implements ModelInterface, ArrayAccess
     * Gets uuid
     *  父卷的uuid
     *
-    * @return string
+    * @return string|null
     */
     public function getUuid()
     {
@@ -295,7 +277,7 @@ class BtrfsSubvolumn implements ModelInterface, ArrayAccess
     /**
     * Sets uuid
     *
-    * @param string $uuid 父卷的uuid
+    * @param string|null $uuid 父卷的uuid
     *
     * @return $this
     */
@@ -309,7 +291,7 @@ class BtrfsSubvolumn implements ModelInterface, ArrayAccess
     * Gets isSnapshot
     *  子卷是否为快照
     *
-    * @return string
+    * @return string|null
     */
     public function getIsSnapshot()
     {
@@ -319,7 +301,7 @@ class BtrfsSubvolumn implements ModelInterface, ArrayAccess
     /**
     * Sets isSnapshot
     *
-    * @param string $isSnapshot 子卷是否为快照
+    * @param string|null $isSnapshot 子卷是否为快照
     *
     * @return $this
     */
@@ -333,7 +315,7 @@ class BtrfsSubvolumn implements ModelInterface, ArrayAccess
     * Gets subvolId
     *  子卷的ID
     *
-    * @return string
+    * @return string|null
     */
     public function getSubvolId()
     {
@@ -343,7 +325,7 @@ class BtrfsSubvolumn implements ModelInterface, ArrayAccess
     /**
     * Sets subvolId
     *
-    * @param string $subvolId 子卷的ID
+    * @param string|null $subvolId 子卷的ID
     *
     * @return $this
     */
@@ -357,7 +339,7 @@ class BtrfsSubvolumn implements ModelInterface, ArrayAccess
     * Gets parentId
     *  父卷ID
     *
-    * @return string
+    * @return string|null
     */
     public function getParentId()
     {
@@ -367,7 +349,7 @@ class BtrfsSubvolumn implements ModelInterface, ArrayAccess
     /**
     * Sets parentId
     *
-    * @param string $parentId 父卷ID
+    * @param string|null $parentId 父卷ID
     *
     * @return $this
     */
@@ -381,7 +363,7 @@ class BtrfsSubvolumn implements ModelInterface, ArrayAccess
     * Gets subvolName
     *  子卷的名称
     *
-    * @return string
+    * @return string|null
     */
     public function getSubvolName()
     {
@@ -391,7 +373,7 @@ class BtrfsSubvolumn implements ModelInterface, ArrayAccess
     /**
     * Sets subvolName
     *
-    * @param string $subvolName 子卷的名称
+    * @param string|null $subvolName 子卷的名称
     *
     * @return $this
     */
@@ -405,7 +387,7 @@ class BtrfsSubvolumn implements ModelInterface, ArrayAccess
     * Gets subvolMountPath
     *  子卷的挂载路径
     *
-    * @return string
+    * @return string|null
     */
     public function getSubvolMountPath()
     {
@@ -415,7 +397,7 @@ class BtrfsSubvolumn implements ModelInterface, ArrayAccess
     /**
     * Sets subvolMountPath
     *
-    * @param string $subvolMountPath 子卷的挂载路径
+    * @param string|null $subvolMountPath 子卷的挂载路径
     *
     * @return $this
     */

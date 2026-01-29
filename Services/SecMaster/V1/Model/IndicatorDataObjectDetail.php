@@ -38,6 +38,8 @@ class IndicatorDataObjectDetail implements ModelInterface, ArrayAccess
     * verdict  威胁度， Black--黑,White--白，Gray--灰
     * workspaceId  工作空间ID
     * confidence  置信度，取值范围是80-100
+    * labels  标签
+    * defanged  是否失效
     *
     * @var string[]
     */
@@ -59,7 +61,9 @@ class IndicatorDataObjectDetail implements ModelInterface, ArrayAccess
             'status' => 'string',
             'verdict' => 'string',
             'workspaceId' => 'string',
-            'confidence' => 'int'
+            'confidence' => 'int',
+            'labels' => 'string',
+            'defanged' => 'bool'
     ];
 
     /**
@@ -82,6 +86,8 @@ class IndicatorDataObjectDetail implements ModelInterface, ArrayAccess
     * verdict  威胁度， Black--黑,White--白，Gray--灰
     * workspaceId  工作空间ID
     * confidence  置信度，取值范围是80-100
+    * labels  标签
+    * defanged  是否失效
     *
     * @var string[]
     */
@@ -103,7 +109,9 @@ class IndicatorDataObjectDetail implements ModelInterface, ArrayAccess
         'status' => null,
         'verdict' => null,
         'workspaceId' => null,
-        'confidence' => null
+        'confidence' => null,
+        'labels' => null,
+        'defanged' => null
     ];
 
     /**
@@ -147,6 +155,8 @@ class IndicatorDataObjectDetail implements ModelInterface, ArrayAccess
     * verdict  威胁度， Black--黑,White--白，Gray--灰
     * workspaceId  工作空间ID
     * confidence  置信度，取值范围是80-100
+    * labels  标签
+    * defanged  是否失效
     *
     * @var string[]
     */
@@ -168,7 +178,9 @@ class IndicatorDataObjectDetail implements ModelInterface, ArrayAccess
             'status' => 'status',
             'verdict' => 'verdict',
             'workspaceId' => 'workspace_id',
-            'confidence' => 'confidence'
+            'confidence' => 'confidence',
+            'labels' => 'labels',
+            'defanged' => 'defanged'
     ];
 
     /**
@@ -191,6 +203,8 @@ class IndicatorDataObjectDetail implements ModelInterface, ArrayAccess
     * verdict  威胁度， Black--黑,White--白，Gray--灰
     * workspaceId  工作空间ID
     * confidence  置信度，取值范围是80-100
+    * labels  标签
+    * defanged  是否失效
     *
     * @var string[]
     */
@@ -212,7 +226,9 @@ class IndicatorDataObjectDetail implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'verdict' => 'setVerdict',
             'workspaceId' => 'setWorkspaceId',
-            'confidence' => 'setConfidence'
+            'confidence' => 'setConfidence',
+            'labels' => 'setLabels',
+            'defanged' => 'setDefanged'
     ];
 
     /**
@@ -235,6 +251,8 @@ class IndicatorDataObjectDetail implements ModelInterface, ArrayAccess
     * verdict  威胁度， Black--黑,White--白，Gray--灰
     * workspaceId  工作空间ID
     * confidence  置信度，取值范围是80-100
+    * labels  标签
+    * defanged  是否失效
     *
     * @var string[]
     */
@@ -256,7 +274,9 @@ class IndicatorDataObjectDetail implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'verdict' => 'getVerdict',
             'workspaceId' => 'getWorkspaceId',
-            'confidence' => 'getConfidence'
+            'confidence' => 'getConfidence',
+            'labels' => 'getLabels',
+            'defanged' => 'getDefanged'
     ];
 
     /**
@@ -335,6 +355,8 @@ class IndicatorDataObjectDetail implements ModelInterface, ArrayAccess
         $this->container['verdict'] = isset($data['verdict']) ? $data['verdict'] : null;
         $this->container['workspaceId'] = isset($data['workspaceId']) ? $data['workspaceId'] : null;
         $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
+        $this->container['labels'] = isset($data['labels']) ? $data['labels'] : null;
+        $this->container['defanged'] = isset($data['defanged']) ? $data['defanged'] : null;
     }
 
     /**
@@ -422,6 +444,12 @@ class IndicatorDataObjectDetail implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['confidence']) && ($this->container['confidence'] < 80)) {
                 $invalidProperties[] = "invalid value for 'confidence', must be bigger than or equal to 80.";
+            }
+            if (!is_null($this->container['labels']) && (mb_strlen($this->container['labels']) > 64)) {
+                $invalidProperties[] = "invalid value for 'labels', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['labels']) && (mb_strlen($this->container['labels']) < 1)) {
+                $invalidProperties[] = "invalid value for 'labels', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -866,6 +894,54 @@ class IndicatorDataObjectDetail implements ModelInterface, ArrayAccess
     public function setConfidence($confidence)
     {
         $this->container['confidence'] = $confidence;
+        return $this;
+    }
+
+    /**
+    * Gets labels
+    *  标签
+    *
+    * @return string|null
+    */
+    public function getLabels()
+    {
+        return $this->container['labels'];
+    }
+
+    /**
+    * Sets labels
+    *
+    * @param string|null $labels 标签
+    *
+    * @return $this
+    */
+    public function setLabels($labels)
+    {
+        $this->container['labels'] = $labels;
+        return $this;
+    }
+
+    /**
+    * Gets defanged
+    *  是否失效
+    *
+    * @return bool|null
+    */
+    public function getDefanged()
+    {
+        return $this->container['defanged'];
+    }
+
+    /**
+    * Sets defanged
+    *
+    * @param bool|null $defanged 是否失效
+    *
+    * @return $this
+    */
+    public function setDefanged($defanged)
+    {
+        $this->container['defanged'] = $defanged;
         return $this;
     }
 

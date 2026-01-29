@@ -22,6 +22,8 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  映射id
     * name  名称
+    * projectId  projectId
+    * workspaceId  workspaceId
     * dataclassId  映射id
     * dataSource  数据源
     * description  描述信息
@@ -32,6 +34,8 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'name' => 'string',
+            'projectId' => 'object',
+            'workspaceId' => 'object',
             'dataclassId' => 'string',
             'dataSource' => 'string',
             'description' => 'string',
@@ -42,6 +46,8 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  映射id
     * name  名称
+    * projectId  projectId
+    * workspaceId  workspaceId
     * dataclassId  映射id
     * dataSource  数据源
     * description  描述信息
@@ -52,6 +58,8 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
+        'projectId' => null,
+        'workspaceId' => null,
         'dataclassId' => null,
         'dataSource' => null,
         'description' => null,
@@ -83,6 +91,8 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  映射id
     * name  名称
+    * projectId  projectId
+    * workspaceId  workspaceId
     * dataclassId  映射id
     * dataSource  数据源
     * description  描述信息
@@ -93,6 +103,8 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'id' => 'id',
             'name' => 'name',
+            'projectId' => 'project_id',
+            'workspaceId' => 'workspace_id',
             'dataclassId' => 'dataclass_id',
             'dataSource' => 'data_source',
             'description' => 'description',
@@ -103,6 +115,8 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  映射id
     * name  名称
+    * projectId  projectId
+    * workspaceId  workspaceId
     * dataclassId  映射id
     * dataSource  数据源
     * description  描述信息
@@ -113,6 +127,8 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
     protected static $setters = [
             'id' => 'setId',
             'name' => 'setName',
+            'projectId' => 'setProjectId',
+            'workspaceId' => 'setWorkspaceId',
             'dataclassId' => 'setDataclassId',
             'dataSource' => 'setDataSource',
             'description' => 'setDescription',
@@ -123,6 +139,8 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  映射id
     * name  名称
+    * projectId  projectId
+    * workspaceId  workspaceId
     * dataclassId  映射id
     * dataSource  数据源
     * description  描述信息
@@ -133,6 +151,8 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
     protected static $getters = [
             'id' => 'getId',
             'name' => 'getName',
+            'projectId' => 'getProjectId',
+            'workspaceId' => 'getWorkspaceId',
             'dataclassId' => 'getDataclassId',
             'dataSource' => 'getDataSource',
             'description' => 'getDescription',
@@ -199,6 +219,8 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['workspaceId'] = isset($data['workspaceId']) ? $data['workspaceId'] : null;
         $this->container['dataclassId'] = isset($data['dataclassId']) ? $data['dataclassId'] : null;
         $this->container['dataSource'] = isset($data['dataSource']) ? $data['dataSource'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -320,6 +342,54 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets projectId
+    *  projectId
+    *
+    * @return object|null
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param object|null $projectId projectId
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets workspaceId
+    *  workspaceId
+    *
+    * @return object|null
+    */
+    public function getWorkspaceId()
+    {
+        return $this->container['workspaceId'];
+    }
+
+    /**
+    * Sets workspaceId
+    *
+    * @param object|null $workspaceId workspaceId
+    *
+    * @return $this
+    */
+    public function setWorkspaceId($workspaceId)
+    {
+        $this->container['workspaceId'] = $workspaceId;
         return $this;
     }
 

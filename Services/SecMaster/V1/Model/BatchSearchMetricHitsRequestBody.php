@@ -20,8 +20,8 @@ class BatchSearchMetricHitsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * metricIds  待查询的指标Id列表, 可参照附录中指标信息说明获取已有指标信息。
-    * workspaceIds  工作空间列表, 当指标支持获取多工作空间数据时填写。
+    * metricIds  待查询的指标Id列表，可参照附录中指标信息说明获取已有指标信息。
+    * workspaceIds  工作空间列表，当指标支持获取多工作空间数据时填写。
     * params  待查询指标的参数列表，列表内每个元素为<String, String>的K-V形式，元素数量必须与metric_ids列表相同，具体填写方式请参照附录。
     * interactiveParams  交互式参数查询，当指标支持交互式参数时，填写<String, String>的K-V形式的参数列表，具体填写方式请参照附录。
     * fieldIds  指标卡片ID列表
@@ -38,8 +38,8 @@ class BatchSearchMetricHitsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * metricIds  待查询的指标Id列表, 可参照附录中指标信息说明获取已有指标信息。
-    * workspaceIds  工作空间列表, 当指标支持获取多工作空间数据时填写。
+    * metricIds  待查询的指标Id列表，可参照附录中指标信息说明获取已有指标信息。
+    * workspaceIds  工作空间列表，当指标支持获取多工作空间数据时填写。
     * params  待查询指标的参数列表，列表内每个元素为<String, String>的K-V形式，元素数量必须与metric_ids列表相同，具体填写方式请参照附录。
     * interactiveParams  交互式参数查询，当指标支持交互式参数时，填写<String, String>的K-V形式的参数列表，具体填写方式请参照附录。
     * fieldIds  指标卡片ID列表
@@ -77,8 +77,8 @@ class BatchSearchMetricHitsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * metricIds  待查询的指标Id列表, 可参照附录中指标信息说明获取已有指标信息。
-    * workspaceIds  工作空间列表, 当指标支持获取多工作空间数据时填写。
+    * metricIds  待查询的指标Id列表，可参照附录中指标信息说明获取已有指标信息。
+    * workspaceIds  工作空间列表，当指标支持获取多工作空间数据时填写。
     * params  待查询指标的参数列表，列表内每个元素为<String, String>的K-V形式，元素数量必须与metric_ids列表相同，具体填写方式请参照附录。
     * interactiveParams  交互式参数查询，当指标支持交互式参数时，填写<String, String>的K-V形式的参数列表，具体填写方式请参照附录。
     * fieldIds  指标卡片ID列表
@@ -95,8 +95,8 @@ class BatchSearchMetricHitsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * metricIds  待查询的指标Id列表, 可参照附录中指标信息说明获取已有指标信息。
-    * workspaceIds  工作空间列表, 当指标支持获取多工作空间数据时填写。
+    * metricIds  待查询的指标Id列表，可参照附录中指标信息说明获取已有指标信息。
+    * workspaceIds  工作空间列表，当指标支持获取多工作空间数据时填写。
     * params  待查询指标的参数列表，列表内每个元素为<String, String>的K-V形式，元素数量必须与metric_ids列表相同，具体填写方式请参照附录。
     * interactiveParams  交互式参数查询，当指标支持交互式参数时，填写<String, String>的K-V形式的参数列表，具体填写方式请参照附录。
     * fieldIds  指标卡片ID列表
@@ -113,8 +113,8 @@ class BatchSearchMetricHitsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * metricIds  待查询的指标Id列表, 可参照附录中指标信息说明获取已有指标信息。
-    * workspaceIds  工作空间列表, 当指标支持获取多工作空间数据时填写。
+    * metricIds  待查询的指标Id列表，可参照附录中指标信息说明获取已有指标信息。
+    * workspaceIds  工作空间列表，当指标支持获取多工作空间数据时填写。
     * params  待查询指标的参数列表，列表内每个元素为<String, String>的K-V形式，元素数量必须与metric_ids列表相同，具体填写方式请参照附录。
     * interactiveParams  交互式参数查询，当指标支持交互式参数时，填写<String, String>的K-V形式的参数列表，具体填写方式请参照附录。
     * fieldIds  指标卡片ID列表
@@ -221,7 +221,7 @@ class BatchSearchMetricHitsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricIds
-    *  待查询的指标Id列表, 可参照附录中指标信息说明获取已有指标信息。
+    *  待查询的指标Id列表，可参照附录中指标信息说明获取已有指标信息。
     *
     * @return string[]
     */
@@ -233,7 +233,7 @@ class BatchSearchMetricHitsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets metricIds
     *
-    * @param string[] $metricIds 待查询的指标Id列表, 可参照附录中指标信息说明获取已有指标信息。
+    * @param string[] $metricIds 待查询的指标Id列表，可参照附录中指标信息说明获取已有指标信息。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class BatchSearchMetricHitsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspaceIds
-    *  工作空间列表, 当指标支持获取多工作空间数据时填写。
+    *  工作空间列表，当指标支持获取多工作空间数据时填写。
     *
     * @return string[]|null
     */
@@ -257,7 +257,7 @@ class BatchSearchMetricHitsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets workspaceIds
     *
-    * @param string[]|null $workspaceIds 工作空间列表, 当指标支持获取多工作空间数据时填写。
+    * @param string[]|null $workspaceIds 工作空间列表，当指标支持获取多工作空间数据时填写。
     *
     * @return $this
     */

@@ -23,7 +23,6 @@ class AlertEnvironment implements ModelInterface, ArrayAccess
     * vendorType  环境供应商
     * domainId  租户id
     * regionId  区域id，全局服务global
-    * crossWorkspaceId  数据投递前的源工作空间id，在源空间下值为null，投递后为被委托用户的id
     * projectId  项目id， 全局服务默认null
     *
     * @var string[]
@@ -32,7 +31,6 @@ class AlertEnvironment implements ModelInterface, ArrayAccess
             'vendorType' => 'string',
             'domainId' => 'string',
             'regionId' => 'string',
-            'crossWorkspaceId' => 'string',
             'projectId' => 'string'
     ];
 
@@ -41,7 +39,6 @@ class AlertEnvironment implements ModelInterface, ArrayAccess
     * vendorType  环境供应商
     * domainId  租户id
     * regionId  区域id，全局服务global
-    * crossWorkspaceId  数据投递前的源工作空间id，在源空间下值为null，投递后为被委托用户的id
     * projectId  项目id， 全局服务默认null
     *
     * @var string[]
@@ -50,7 +47,6 @@ class AlertEnvironment implements ModelInterface, ArrayAccess
         'vendorType' => null,
         'domainId' => null,
         'regionId' => null,
-        'crossWorkspaceId' => null,
         'projectId' => null
     ];
 
@@ -80,7 +76,6 @@ class AlertEnvironment implements ModelInterface, ArrayAccess
     * vendorType  环境供应商
     * domainId  租户id
     * regionId  区域id，全局服务global
-    * crossWorkspaceId  数据投递前的源工作空间id，在源空间下值为null，投递后为被委托用户的id
     * projectId  项目id， 全局服务默认null
     *
     * @var string[]
@@ -89,7 +84,6 @@ class AlertEnvironment implements ModelInterface, ArrayAccess
             'vendorType' => 'vendor_type',
             'domainId' => 'domain_id',
             'regionId' => 'region_id',
-            'crossWorkspaceId' => 'cross_workspace_id',
             'projectId' => 'project_id'
     ];
 
@@ -98,7 +92,6 @@ class AlertEnvironment implements ModelInterface, ArrayAccess
     * vendorType  环境供应商
     * domainId  租户id
     * regionId  区域id，全局服务global
-    * crossWorkspaceId  数据投递前的源工作空间id，在源空间下值为null，投递后为被委托用户的id
     * projectId  项目id， 全局服务默认null
     *
     * @var string[]
@@ -107,7 +100,6 @@ class AlertEnvironment implements ModelInterface, ArrayAccess
             'vendorType' => 'setVendorType',
             'domainId' => 'setDomainId',
             'regionId' => 'setRegionId',
-            'crossWorkspaceId' => 'setCrossWorkspaceId',
             'projectId' => 'setProjectId'
     ];
 
@@ -116,7 +108,6 @@ class AlertEnvironment implements ModelInterface, ArrayAccess
     * vendorType  环境供应商
     * domainId  租户id
     * regionId  区域id，全局服务global
-    * crossWorkspaceId  数据投递前的源工作空间id，在源空间下值为null，投递后为被委托用户的id
     * projectId  项目id， 全局服务默认null
     *
     * @var string[]
@@ -125,7 +116,6 @@ class AlertEnvironment implements ModelInterface, ArrayAccess
             'vendorType' => 'getVendorType',
             'domainId' => 'getDomainId',
             'regionId' => 'getRegionId',
-            'crossWorkspaceId' => 'getCrossWorkspaceId',
             'projectId' => 'getProjectId'
     ];
 
@@ -190,7 +180,6 @@ class AlertEnvironment implements ModelInterface, ArrayAccess
         $this->container['vendorType'] = isset($data['vendorType']) ? $data['vendorType'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
-        $this->container['crossWorkspaceId'] = isset($data['crossWorkspaceId']) ? $data['crossWorkspaceId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
     }
 
@@ -219,12 +208,6 @@ class AlertEnvironment implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'regionId', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['crossWorkspaceId']) && (mb_strlen($this->container['crossWorkspaceId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'crossWorkspaceId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['crossWorkspaceId']) && (mb_strlen($this->container['crossWorkspaceId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'crossWorkspaceId', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 64.";
@@ -315,30 +298,6 @@ class AlertEnvironment implements ModelInterface, ArrayAccess
     public function setRegionId($regionId)
     {
         $this->container['regionId'] = $regionId;
-        return $this;
-    }
-
-    /**
-    * Gets crossWorkspaceId
-    *  数据投递前的源工作空间id，在源空间下值为null，投递后为被委托用户的id
-    *
-    * @return string|null
-    */
-    public function getCrossWorkspaceId()
-    {
-        return $this->container['crossWorkspaceId'];
-    }
-
-    /**
-    * Sets crossWorkspaceId
-    *
-    * @param string|null $crossWorkspaceId 数据投递前的源工作空间id，在源空间下值为null，投递后为被委托用户的id
-    *
-    * @return $this
-    */
-    public function setCrossWorkspaceId($crossWorkspaceId)
-    {
-        $this->container['crossWorkspaceId'] = $crossWorkspaceId;
         return $this;
     }
 

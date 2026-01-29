@@ -224,19 +224,19 @@ class ShowPreProcessRulesListRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-            if ((mb_strlen($this->container['name']) > 64)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
             }
-            if ((mb_strlen($this->container['name']) < 1)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['mappingId']) && (mb_strlen($this->container['mappingId']) > 64)) {
+        if ($this->container['mappingId'] === null) {
+            $invalidProperties[] = "'mappingId' can't be null";
+        }
+            if ((mb_strlen($this->container['mappingId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'mappingId', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['mappingId']) && (mb_strlen($this->container['mappingId']) < 32)) {
+            if ((mb_strlen($this->container['mappingId']) < 32)) {
                 $invalidProperties[] = "invalid value for 'mappingId', the character length must be bigger than or equal to 32.";
             }
         if ($this->container['offset'] === null) {
@@ -299,7 +299,7 @@ class ShowPreProcessRulesListRequestBody implements ModelInterface, ArrayAccess
     * Gets name
     *  名称
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -309,7 +309,7 @@ class ShowPreProcessRulesListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 名称
+    * @param string|null $name 名称
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class ShowPreProcessRulesListRequestBody implements ModelInterface, ArrayAccess
     * Gets mappingId
     *  映射id
     *
-    * @return string|null
+    * @return string
     */
     public function getMappingId()
     {
@@ -333,7 +333,7 @@ class ShowPreProcessRulesListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets mappingId
     *
-    * @param string|null $mappingId 映射id
+    * @param string $mappingId 映射id
     *
     * @return $this
     */

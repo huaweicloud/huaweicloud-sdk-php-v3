@@ -25,6 +25,7 @@ class ShowChannelStatisticReq implements ModelInterface, ArrayAccess
     * id  频道ID。频道唯一标识，为必填项。
     * type  统计信息的类型，scte35。
     * scte35  scte35
+    * regionType  **参数解释**： 频道对应的region类型，是主region，还是备region **约束限制**： 如果region_type不填，或是没有该字段，则按照主region处理 **取值范围**： - master: 主region - slave: 备region - all: 所有region
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class ShowChannelStatisticReq implements ModelInterface, ArrayAccess
             'appName' => 'string',
             'id' => 'string',
             'type' => 'string',
-            'scte35' => '\HuaweiCloud\SDK\Live\V1\Model\SCTE35StatisticReq'
+            'scte35' => '\HuaweiCloud\SDK\Live\V1\Model\SCTE35StatisticReq',
+            'regionType' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class ShowChannelStatisticReq implements ModelInterface, ArrayAccess
     * id  频道ID。频道唯一标识，为必填项。
     * type  统计信息的类型，scte35。
     * scte35  scte35
+    * regionType  **参数解释**： 频道对应的region类型，是主region，还是备region **约束限制**： 如果region_type不填，或是没有该字段，则按照主region处理 **取值范围**： - master: 主region - slave: 备region - all: 所有region
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ShowChannelStatisticReq implements ModelInterface, ArrayAccess
         'appName' => null,
         'id' => null,
         'type' => null,
-        'scte35' => null
+        'scte35' => null,
+        'regionType' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class ShowChannelStatisticReq implements ModelInterface, ArrayAccess
     * id  频道ID。频道唯一标识，为必填项。
     * type  统计信息的类型，scte35。
     * scte35  scte35
+    * regionType  **参数解释**： 频道对应的region类型，是主region，还是备region **约束限制**： 如果region_type不填，或是没有该字段，则按照主region处理 **取值范围**： - master: 主region - slave: 备region - all: 所有region
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class ShowChannelStatisticReq implements ModelInterface, ArrayAccess
             'appName' => 'app_name',
             'id' => 'id',
             'type' => 'type',
-            'scte35' => 'scte35'
+            'scte35' => 'scte35',
+            'regionType' => 'region_type'
     ];
 
     /**
@@ -100,6 +106,7 @@ class ShowChannelStatisticReq implements ModelInterface, ArrayAccess
     * id  频道ID。频道唯一标识，为必填项。
     * type  统计信息的类型，scte35。
     * scte35  scte35
+    * regionType  **参数解释**： 频道对应的region类型，是主region，还是备region **约束限制**： 如果region_type不填，或是没有该字段，则按照主region处理 **取值范围**： - master: 主region - slave: 备region - all: 所有region
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class ShowChannelStatisticReq implements ModelInterface, ArrayAccess
             'appName' => 'setAppName',
             'id' => 'setId',
             'type' => 'setType',
-            'scte35' => 'setScte35'
+            'scte35' => 'setScte35',
+            'regionType' => 'setRegionType'
     ];
 
     /**
@@ -118,6 +126,7 @@ class ShowChannelStatisticReq implements ModelInterface, ArrayAccess
     * id  频道ID。频道唯一标识，为必填项。
     * type  统计信息的类型，scte35。
     * scte35  scte35
+    * regionType  **参数解释**： 频道对应的region类型，是主region，还是备region **约束限制**： 如果region_type不填，或是没有该字段，则按照主region处理 **取值范围**： - master: 主region - slave: 备region - all: 所有region
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ShowChannelStatisticReq implements ModelInterface, ArrayAccess
             'appName' => 'getAppName',
             'id' => 'getId',
             'type' => 'getType',
-            'scte35' => 'getScte35'
+            'scte35' => 'getScte35',
+            'regionType' => 'getRegionType'
     ];
 
     /**
@@ -170,6 +180,9 @@ class ShowChannelStatisticReq implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const TYPE_SCTE35 = 'scte35';
+    const REGION_TYPE_MASTER = 'master';
+    const REGION_TYPE_SLAVE = 'slave';
+    const REGION_TYPE_ALL = 'all';
     
 
     /**
@@ -181,6 +194,20 @@ class ShowChannelStatisticReq implements ModelInterface, ArrayAccess
     {
         return [
             self::TYPE_SCTE35,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getRegionTypeAllowableValues()
+    {
+        return [
+            self::REGION_TYPE_MASTER,
+            self::REGION_TYPE_SLAVE,
+            self::REGION_TYPE_ALL,
         ];
     }
 
@@ -205,6 +232,7 @@ class ShowChannelStatisticReq implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['scte35'] = isset($data['scte35']) ? $data['scte35'] : null;
+        $this->container['regionType'] = isset($data['regionType']) ? $data['regionType'] : null;
     }
 
     /**
@@ -258,6 +286,20 @@ class ShowChannelStatisticReq implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['type']) < 1)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 1.";
+            }
+            $allowedValues = $this->getRegionTypeAllowableValues();
+                if (!is_null($this->container['regionType']) && !in_array($this->container['regionType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'regionType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['regionType']) && (mb_strlen($this->container['regionType']) > 6)) {
+                $invalidProperties[] = "invalid value for 'regionType', the character length must be smaller than or equal to 6.";
+            }
+            if (!is_null($this->container['regionType']) && (mb_strlen($this->container['regionType']) < 3)) {
+                $invalidProperties[] = "invalid value for 'regionType', the character length must be bigger than or equal to 3.";
             }
         return $invalidProperties;
     }
@@ -390,6 +432,30 @@ class ShowChannelStatisticReq implements ModelInterface, ArrayAccess
     public function setScte35($scte35)
     {
         $this->container['scte35'] = $scte35;
+        return $this;
+    }
+
+    /**
+    * Gets regionType
+    *  **参数解释**： 频道对应的region类型，是主region，还是备region **约束限制**： 如果region_type不填，或是没有该字段，则按照主region处理 **取值范围**： - master: 主region - slave: 备region - all: 所有region
+    *
+    * @return string|null
+    */
+    public function getRegionType()
+    {
+        return $this->container['regionType'];
+    }
+
+    /**
+    * Sets regionType
+    *
+    * @param string|null $regionType **参数解释**： 频道对应的region类型，是主region，还是备region **约束限制**： 如果region_type不填，或是没有该字段，则按照主region处理 **取值范围**： - master: 主region - slave: 备region - all: 所有region
+    *
+    * @return $this
+    */
+    public function setRegionType($regionType)
+    {
+        $this->container['regionType'] = $regionType;
         return $this;
     }
 

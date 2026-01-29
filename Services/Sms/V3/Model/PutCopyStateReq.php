@@ -20,8 +20,8 @@ class PutCopyStateReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * copystate  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready：迁移演练就绪 premiged：迁移演练完成 premigfailed：迁移演练失败 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 error：错误
-    * migrationcycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
+    * copystate  源端服务器状态 unavailable: 环境校验不通过 waiting: 等待 init: 初始化 replicate: 复制 syncing: 持续同步 stopping: 暂停中 stopped: 已暂停 skipping: 跳过中 deleting: 删除中 clearing: 清理快照资源中 cleared: 清理快照资源完成 clearfailed: 清理快照资源失败 premigready: 迁移演练就绪 premiging: 迁移演练中 premiged: 迁移演练完成 premigfailed: 迁移演练失败 cloning: 等待克隆完成 cutovering: 启动目的端中 finished: 启动目的端完成 error: 错误
+    * migrationcycle  迁移周期 no_ready:未就绪 ready_for_test:已就绪 testing:测试中 tested:测试完成 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class PutCopyStateReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * copystate  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready：迁移演练就绪 premiged：迁移演练完成 premigfailed：迁移演练失败 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 error：错误
-    * migrationcycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
+    * copystate  源端服务器状态 unavailable: 环境校验不通过 waiting: 等待 init: 初始化 replicate: 复制 syncing: 持续同步 stopping: 暂停中 stopped: 已暂停 skipping: 跳过中 deleting: 删除中 clearing: 清理快照资源中 cleared: 清理快照资源完成 clearfailed: 清理快照资源失败 premigready: 迁移演练就绪 premiging: 迁移演练中 premiged: 迁移演练完成 premigfailed: 迁移演练失败 cloning: 等待克隆完成 cutovering: 启动目的端中 finished: 启动目的端完成 error: 错误
+    * migrationcycle  迁移周期 no_ready:未就绪 ready_for_test:已就绪 testing:测试中 tested:测试完成 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class PutCopyStateReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * copystate  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready：迁移演练就绪 premiged：迁移演练完成 premigfailed：迁移演练失败 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 error：错误
-    * migrationcycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
+    * copystate  源端服务器状态 unavailable: 环境校验不通过 waiting: 等待 init: 初始化 replicate: 复制 syncing: 持续同步 stopping: 暂停中 stopped: 已暂停 skipping: 跳过中 deleting: 删除中 clearing: 清理快照资源中 cleared: 清理快照资源完成 clearfailed: 清理快照资源失败 premigready: 迁移演练就绪 premiging: 迁移演练中 premiged: 迁移演练完成 premigfailed: 迁移演练失败 cloning: 等待克隆完成 cutovering: 启动目的端中 finished: 启动目的端完成 error: 错误
+    * migrationcycle  迁移周期 no_ready:未就绪 ready_for_test:已就绪 testing:测试中 tested:测试完成 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class PutCopyStateReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * copystate  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready：迁移演练就绪 premiged：迁移演练完成 premigfailed：迁移演练失败 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 error：错误
-    * migrationcycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
+    * copystate  源端服务器状态 unavailable: 环境校验不通过 waiting: 等待 init: 初始化 replicate: 复制 syncing: 持续同步 stopping: 暂停中 stopped: 已暂停 skipping: 跳过中 deleting: 删除中 clearing: 清理快照资源中 cleared: 清理快照资源完成 clearfailed: 清理快照资源失败 premigready: 迁移演练就绪 premiging: 迁移演练中 premiged: 迁移演练完成 premigfailed: 迁移演练失败 cloning: 等待克隆完成 cutovering: 启动目的端中 finished: 启动目的端完成 error: 错误
+    * migrationcycle  迁移周期 no_ready:未就绪 ready_for_test:已就绪 testing:测试中 tested:测试完成 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class PutCopyStateReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * copystate  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready：迁移演练就绪 premiged：迁移演练完成 premigfailed：迁移演练失败 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 error：错误
-    * migrationcycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
+    * copystate  源端服务器状态 unavailable: 环境校验不通过 waiting: 等待 init: 初始化 replicate: 复制 syncing: 持续同步 stopping: 暂停中 stopped: 已暂停 skipping: 跳过中 deleting: 删除中 clearing: 清理快照资源中 cleared: 清理快照资源完成 clearfailed: 清理快照资源失败 premigready: 迁移演练就绪 premiging: 迁移演练中 premiged: 迁移演练完成 premigfailed: 迁移演练失败 cloning: 等待克隆完成 cutovering: 启动目的端中 finished: 启动目的端完成 error: 错误
+    * migrationcycle  迁移周期 no_ready:未就绪 ready_for_test:已就绪 testing:测试中 tested:测试完成 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     *
     * @var string[]
     */
@@ -141,7 +141,7 @@ class PutCopyStateReq implements ModelInterface, ArrayAccess
     }
     const COPYSTATE_UNAVAILABLE = 'unavailable';
     const COPYSTATE_WAITING = 'waiting';
-    const COPYSTATE_INITIALIZE = 'initialize';
+    const COPYSTATE_INIT = 'init';
     const COPYSTATE_REPLICATE = 'replicate';
     const COPYSTATE_SYNCING = 'syncing';
     const COPYSTATE_STOPPING = 'stopping';
@@ -152,12 +152,17 @@ class PutCopyStateReq implements ModelInterface, ArrayAccess
     const COPYSTATE_CLEARED = 'cleared';
     const COPYSTATE_CLEARFAILED = 'clearfailed';
     const COPYSTATE_PREMIGREADY = 'premigready';
+    const COPYSTATE_PREMIGING = 'premiging';
     const COPYSTATE_PREMIGED = 'premiged';
     const COPYSTATE_PREMIGFAILED = 'premigfailed';
     const COPYSTATE_CLONING = 'cloning';
     const COPYSTATE_CUTOVERING = 'cutovering';
     const COPYSTATE_FINISHED = 'finished';
     const COPYSTATE_ERROR = 'error';
+    const MIGRATIONCYCLE_NO_READY = 'no_ready';
+    const MIGRATIONCYCLE_READY_FOR_TEST = 'ready_for_test';
+    const MIGRATIONCYCLE_TESTING = 'testing';
+    const MIGRATIONCYCLE_TESTED = 'tested';
     const MIGRATIONCYCLE_CUTOVERING = 'cutovering';
     const MIGRATIONCYCLE_CUTOVERED = 'cutovered';
     const MIGRATIONCYCLE_CHECKING = 'checking';
@@ -176,7 +181,7 @@ class PutCopyStateReq implements ModelInterface, ArrayAccess
         return [
             self::COPYSTATE_UNAVAILABLE,
             self::COPYSTATE_WAITING,
-            self::COPYSTATE_INITIALIZE,
+            self::COPYSTATE_INIT,
             self::COPYSTATE_REPLICATE,
             self::COPYSTATE_SYNCING,
             self::COPYSTATE_STOPPING,
@@ -187,6 +192,7 @@ class PutCopyStateReq implements ModelInterface, ArrayAccess
             self::COPYSTATE_CLEARED,
             self::COPYSTATE_CLEARFAILED,
             self::COPYSTATE_PREMIGREADY,
+            self::COPYSTATE_PREMIGING,
             self::COPYSTATE_PREMIGED,
             self::COPYSTATE_PREMIGFAILED,
             self::COPYSTATE_CLONING,
@@ -204,6 +210,10 @@ class PutCopyStateReq implements ModelInterface, ArrayAccess
     public function getMigrationcycleAllowableValues()
     {
         return [
+            self::MIGRATIONCYCLE_NO_READY,
+            self::MIGRATIONCYCLE_READY_FOR_TEST,
+            self::MIGRATIONCYCLE_TESTING,
+            self::MIGRATIONCYCLE_TESTED,
             self::MIGRATIONCYCLE_CUTOVERING,
             self::MIGRATIONCYCLE_CUTOVERED,
             self::MIGRATIONCYCLE_CHECKING,
@@ -241,6 +251,9 @@ class PutCopyStateReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['copystate'] === null) {
+            $invalidProperties[] = "'copystate' can't be null";
+        }
             $allowedValues = $this->getCopystateAllowableValues();
                 if (!is_null($this->container['copystate']) && !in_array($this->container['copystate'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -249,6 +262,9 @@ class PutCopyStateReq implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['migrationcycle'] === null) {
+            $invalidProperties[] = "'migrationcycle' can't be null";
+        }
             $allowedValues = $this->getMigrationcycleAllowableValues();
                 if (!is_null($this->container['migrationcycle']) && !in_array($this->container['migrationcycle'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -273,9 +289,9 @@ class PutCopyStateReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets copystate
-    *  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready：迁移演练就绪 premiged：迁移演练完成 premigfailed：迁移演练失败 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 error：错误
+    *  源端服务器状态 unavailable: 环境校验不通过 waiting: 等待 init: 初始化 replicate: 复制 syncing: 持续同步 stopping: 暂停中 stopped: 已暂停 skipping: 跳过中 deleting: 删除中 clearing: 清理快照资源中 cleared: 清理快照资源完成 clearfailed: 清理快照资源失败 premigready: 迁移演练就绪 premiging: 迁移演练中 premiged: 迁移演练完成 premigfailed: 迁移演练失败 cloning: 等待克隆完成 cutovering: 启动目的端中 finished: 启动目的端完成 error: 错误
     *
-    * @return string|null
+    * @return string
     */
     public function getCopystate()
     {
@@ -285,7 +301,7 @@ class PutCopyStateReq implements ModelInterface, ArrayAccess
     /**
     * Sets copystate
     *
-    * @param string|null $copystate 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready：迁移演练就绪 premiged：迁移演练完成 premigfailed：迁移演练失败 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 error：错误
+    * @param string $copystate 源端服务器状态 unavailable: 环境校验不通过 waiting: 等待 init: 初始化 replicate: 复制 syncing: 持续同步 stopping: 暂停中 stopped: 已暂停 skipping: 跳过中 deleting: 删除中 clearing: 清理快照资源中 cleared: 清理快照资源完成 clearfailed: 清理快照资源失败 premigready: 迁移演练就绪 premiging: 迁移演练中 premiged: 迁移演练完成 premigfailed: 迁移演练失败 cloning: 等待克隆完成 cutovering: 启动目的端中 finished: 启动目的端完成 error: 错误
     *
     * @return $this
     */
@@ -297,9 +313,9 @@ class PutCopyStateReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets migrationcycle
-    *  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
+    *  迁移周期 no_ready:未就绪 ready_for_test:已就绪 testing:测试中 tested:测试完成 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     *
-    * @return string|null
+    * @return string
     */
     public function getMigrationcycle()
     {
@@ -309,7 +325,7 @@ class PutCopyStateReq implements ModelInterface, ArrayAccess
     /**
     * Sets migrationcycle
     *
-    * @param string|null $migrationcycle 迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
+    * @param string $migrationcycle 迁移周期 no_ready:未就绪 ready_for_test:已就绪 testing:测试中 tested:测试完成 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     *
     * @return $this
     */

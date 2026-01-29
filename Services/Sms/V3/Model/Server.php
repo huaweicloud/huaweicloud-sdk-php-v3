@@ -429,22 +429,16 @@ class Server implements ModelInterface, ArrayAccess
             if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 0)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['ip'] === null) {
-            $invalidProperties[] = "'ip' can't be null";
-        }
-            if ((mb_strlen($this->container['ip']) > 255)) {
+            if (!is_null($this->container['ip']) && (mb_strlen($this->container['ip']) > 255)) {
                 $invalidProperties[] = "invalid value for 'ip', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['ip']) < 0)) {
+            if (!is_null($this->container['ip']) && (mb_strlen($this->container['ip']) < 0)) {
                 $invalidProperties[] = "invalid value for 'ip', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-            if ((mb_strlen($this->container['name']) > 255)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 255)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['name']) < 0)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['hostname']) && (mb_strlen($this->container['hostname']) > 255)) {
@@ -453,9 +447,6 @@ class Server implements ModelInterface, ArrayAccess
             if (!is_null($this->container['hostname']) && (mb_strlen($this->container['hostname']) < 0)) {
                 $invalidProperties[] = "invalid value for 'hostname', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['osType'] === null) {
-            $invalidProperties[] = "'osType' can't be null";
-        }
             $allowedValues = $this->getOsTypeAllowableValues();
                 if (!is_null($this->container['osType']) && !in_array($this->container['osType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -464,10 +455,10 @@ class Server implements ModelInterface, ArrayAccess
                 );
             }
 
-            if ((mb_strlen($this->container['osType']) > 255)) {
+            if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) > 255)) {
                 $invalidProperties[] = "invalid value for 'osType', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['osType']) < 0)) {
+            if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'osType', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['osVersion']) && (mb_strlen($this->container['osVersion']) > 255)) {
@@ -570,7 +561,7 @@ class Server implements ModelInterface, ArrayAccess
     * Gets ip
     *  服务器IP，注册源端时必选，更新非必选
     *
-    * @return string
+    * @return string|null
     */
     public function getIp()
     {
@@ -580,7 +571,7 @@ class Server implements ModelInterface, ArrayAccess
     /**
     * Sets ip
     *
-    * @param string $ip 服务器IP，注册源端时必选，更新非必选
+    * @param string|null $ip 服务器IP，注册源端时必选，更新非必选
     *
     * @return $this
     */
@@ -594,7 +585,7 @@ class Server implements ModelInterface, ArrayAccess
     * Gets name
     *  用来区分不同服务器的名称
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -604,7 +595,7 @@ class Server implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 用来区分不同服务器的名称
+    * @param string|null $name 用来区分不同服务器的名称
     *
     * @return $this
     */
@@ -642,7 +633,7 @@ class Server implements ModelInterface, ArrayAccess
     * Gets osType
     *  服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     *
-    * @return string
+    * @return string|null
     */
     public function getOsType()
     {
@@ -652,7 +643,7 @@ class Server implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string $osType 服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
+    * @param string|null $osType 服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     *
     * @return $this
     */

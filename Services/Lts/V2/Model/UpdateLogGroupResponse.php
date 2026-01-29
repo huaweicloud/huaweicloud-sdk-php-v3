@@ -204,8 +204,8 @@ class UpdateLogGroupResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['logGroupId']) && (mb_strlen($this->container['logGroupId']) < 19)) {
                 $invalidProperties[] = "invalid value for 'logGroupId', the character length must be bigger than or equal to 19.";
             }
-            if (!is_null($this->container['ttlInDays']) && ($this->container['ttlInDays'] > 30)) {
-                $invalidProperties[] = "invalid value for 'ttlInDays', must be smaller than or equal to 30.";
+            if (!is_null($this->container['ttlInDays']) && ($this->container['ttlInDays'] > 365)) {
+                $invalidProperties[] = "invalid value for 'ttlInDays', must be smaller than or equal to 365.";
             }
             if (!is_null($this->container['ttlInDays']) && ($this->container['ttlInDays'] < 1)) {
                 $invalidProperties[] = "invalid value for 'ttlInDays', must be bigger than or equal to 1.";

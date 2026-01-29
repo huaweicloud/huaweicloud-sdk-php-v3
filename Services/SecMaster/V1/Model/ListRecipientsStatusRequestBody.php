@@ -20,7 +20,7 @@ class ListRecipientsStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * emailAddress  收件人邮箱,可以为多个，多个时由英文分号(\";\")分割
+    * emailAddress  收件人邮箱,可以为多个，多个时由英文分号(\";\")分隔
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ListRecipientsStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * emailAddress  收件人邮箱,可以为多个，多个时由英文分号(\";\")分割
+    * emailAddress  收件人邮箱,可以为多个，多个时由英文分号(\";\")分隔
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ListRecipientsStatusRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * emailAddress  收件人邮箱,可以为多个，多个时由英文分号(\";\")分割
+    * emailAddress  收件人邮箱,可以为多个，多个时由英文分号(\";\")分隔
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListRecipientsStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * emailAddress  收件人邮箱,可以为多个，多个时由英文分号(\";\")分割
+    * emailAddress  收件人邮箱,可以为多个，多个时由英文分号(\";\")分隔
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListRecipientsStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * emailAddress  收件人邮箱,可以为多个，多个时由英文分号(\";\")分割
+    * emailAddress  收件人邮箱,可以为多个，多个时由英文分号(\";\")分隔
     *
     * @var string[]
     */
@@ -183,7 +183,7 @@ class ListRecipientsStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets emailAddress
-    *  收件人邮箱,可以为多个，多个时由英文分号(\";\")分割
+    *  收件人邮箱,可以为多个，多个时由英文分号(\";\")分隔
     *
     * @return string
     */
@@ -195,7 +195,7 @@ class ListRecipientsStatusRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets emailAddress
     *
-    * @param string $emailAddress 收件人邮箱,可以为多个，多个时由英文分号(\";\")分割
+    * @param string $emailAddress 收件人邮箱,可以为多个，多个时由英文分号(\";\")分隔
     *
     * @return $this
     */

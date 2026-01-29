@@ -24,6 +24,8 @@ class TaxInfo implements ModelInterface, ArrayAccess
     * taxRate  税率。
     * subTaxClass  税种子类。 PISCOFINSCGSTSGSTIGSTISSWHTVAT
     * taxAmount  税金金额。 单位：美元
+    * taxVisibleFlag  |参数名称：是否展示| |参数的约束及描述：是否展示。Y：展示 N：不展示|
+    * taxAccountingFlag  |参数名称：是否入账| |参数的约束及描述：是否入账。Y：入账 N：不入账|
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class TaxInfo implements ModelInterface, ArrayAccess
             'taxClass' => 'string',
             'taxRate' => 'string',
             'subTaxClass' => 'string',
-            'taxAmount' => 'float'
+            'taxAmount' => 'float',
+            'taxVisibleFlag' => 'string',
+            'taxAccountingFlag' => 'string'
     ];
 
     /**
@@ -40,6 +44,8 @@ class TaxInfo implements ModelInterface, ArrayAccess
     * taxRate  税率。
     * subTaxClass  税种子类。 PISCOFINSCGSTSGSTIGSTISSWHTVAT
     * taxAmount  税金金额。 单位：美元
+    * taxVisibleFlag  |参数名称：是否展示| |参数的约束及描述：是否展示。Y：展示 N：不展示|
+    * taxAccountingFlag  |参数名称：是否入账| |参数的约束及描述：是否入账。Y：入账 N：不入账|
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class TaxInfo implements ModelInterface, ArrayAccess
         'taxClass' => null,
         'taxRate' => null,
         'subTaxClass' => null,
-        'taxAmount' => 'bigdecimal'
+        'taxAmount' => 'bigdecimal',
+        'taxVisibleFlag' => null,
+        'taxAccountingFlag' => null
     ];
 
     /**
@@ -77,6 +85,8 @@ class TaxInfo implements ModelInterface, ArrayAccess
     * taxRate  税率。
     * subTaxClass  税种子类。 PISCOFINSCGSTSGSTIGSTISSWHTVAT
     * taxAmount  税金金额。 单位：美元
+    * taxVisibleFlag  |参数名称：是否展示| |参数的约束及描述：是否展示。Y：展示 N：不展示|
+    * taxAccountingFlag  |参数名称：是否入账| |参数的约束及描述：是否入账。Y：入账 N：不入账|
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class TaxInfo implements ModelInterface, ArrayAccess
             'taxClass' => 'taxClass',
             'taxRate' => 'taxRate',
             'subTaxClass' => 'subTaxClass',
-            'taxAmount' => 'taxAmount'
+            'taxAmount' => 'taxAmount',
+            'taxVisibleFlag' => 'taxVisibleFlag',
+            'taxAccountingFlag' => 'taxAccountingFlag'
     ];
 
     /**
@@ -93,6 +105,8 @@ class TaxInfo implements ModelInterface, ArrayAccess
     * taxRate  税率。
     * subTaxClass  税种子类。 PISCOFINSCGSTSGSTIGSTISSWHTVAT
     * taxAmount  税金金额。 单位：美元
+    * taxVisibleFlag  |参数名称：是否展示| |参数的约束及描述：是否展示。Y：展示 N：不展示|
+    * taxAccountingFlag  |参数名称：是否入账| |参数的约束及描述：是否入账。Y：入账 N：不入账|
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class TaxInfo implements ModelInterface, ArrayAccess
             'taxClass' => 'setTaxClass',
             'taxRate' => 'setTaxRate',
             'subTaxClass' => 'setSubTaxClass',
-            'taxAmount' => 'setTaxAmount'
+            'taxAmount' => 'setTaxAmount',
+            'taxVisibleFlag' => 'setTaxVisibleFlag',
+            'taxAccountingFlag' => 'setTaxAccountingFlag'
     ];
 
     /**
@@ -109,6 +125,8 @@ class TaxInfo implements ModelInterface, ArrayAccess
     * taxRate  税率。
     * subTaxClass  税种子类。 PISCOFINSCGSTSGSTIGSTISSWHTVAT
     * taxAmount  税金金额。 单位：美元
+    * taxVisibleFlag  |参数名称：是否展示| |参数的约束及描述：是否展示。Y：展示 N：不展示|
+    * taxAccountingFlag  |参数名称：是否入账| |参数的约束及描述：是否入账。Y：入账 N：不入账|
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class TaxInfo implements ModelInterface, ArrayAccess
             'taxClass' => 'getTaxClass',
             'taxRate' => 'getTaxRate',
             'subTaxClass' => 'getSubTaxClass',
-            'taxAmount' => 'getTaxAmount'
+            'taxAmount' => 'getTaxAmount',
+            'taxVisibleFlag' => 'getTaxVisibleFlag',
+            'taxAccountingFlag' => 'getTaxAccountingFlag'
     ];
 
     /**
@@ -181,6 +201,8 @@ class TaxInfo implements ModelInterface, ArrayAccess
         $this->container['taxRate'] = isset($data['taxRate']) ? $data['taxRate'] : null;
         $this->container['subTaxClass'] = isset($data['subTaxClass']) ? $data['subTaxClass'] : null;
         $this->container['taxAmount'] = isset($data['taxAmount']) ? $data['taxAmount'] : null;
+        $this->container['taxVisibleFlag'] = isset($data['taxVisibleFlag']) ? $data['taxVisibleFlag'] : null;
+        $this->container['taxAccountingFlag'] = isset($data['taxAccountingFlag']) ? $data['taxAccountingFlag'] : null;
     }
 
     /**
@@ -208,6 +230,18 @@ class TaxInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['subTaxClass']) && (mb_strlen($this->container['subTaxClass']) < 0)) {
                 $invalidProperties[] = "invalid value for 'subTaxClass', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['taxVisibleFlag']) && (mb_strlen($this->container['taxVisibleFlag']) > 1)) {
+                $invalidProperties[] = "invalid value for 'taxVisibleFlag', the character length must be smaller than or equal to 1.";
+            }
+            if (!is_null($this->container['taxVisibleFlag']) && (mb_strlen($this->container['taxVisibleFlag']) < 0)) {
+                $invalidProperties[] = "invalid value for 'taxVisibleFlag', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['taxAccountingFlag']) && (mb_strlen($this->container['taxAccountingFlag']) > 1)) {
+                $invalidProperties[] = "invalid value for 'taxAccountingFlag', the character length must be smaller than or equal to 1.";
+            }
+            if (!is_null($this->container['taxAccountingFlag']) && (mb_strlen($this->container['taxAccountingFlag']) < 0)) {
+                $invalidProperties[] = "invalid value for 'taxAccountingFlag', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -316,6 +350,54 @@ class TaxInfo implements ModelInterface, ArrayAccess
     public function setTaxAmount($taxAmount)
     {
         $this->container['taxAmount'] = $taxAmount;
+        return $this;
+    }
+
+    /**
+    * Gets taxVisibleFlag
+    *  |参数名称：是否展示| |参数的约束及描述：是否展示。Y：展示 N：不展示|
+    *
+    * @return string|null
+    */
+    public function getTaxVisibleFlag()
+    {
+        return $this->container['taxVisibleFlag'];
+    }
+
+    /**
+    * Sets taxVisibleFlag
+    *
+    * @param string|null $taxVisibleFlag |参数名称：是否展示| |参数的约束及描述：是否展示。Y：展示 N：不展示|
+    *
+    * @return $this
+    */
+    public function setTaxVisibleFlag($taxVisibleFlag)
+    {
+        $this->container['taxVisibleFlag'] = $taxVisibleFlag;
+        return $this;
+    }
+
+    /**
+    * Gets taxAccountingFlag
+    *  |参数名称：是否入账| |参数的约束及描述：是否入账。Y：入账 N：不入账|
+    *
+    * @return string|null
+    */
+    public function getTaxAccountingFlag()
+    {
+        return $this->container['taxAccountingFlag'];
+    }
+
+    /**
+    * Sets taxAccountingFlag
+    *
+    * @param string|null $taxAccountingFlag |参数名称：是否入账| |参数的约束及描述：是否入账。Y：入账 N：不入账|
+    *
+    * @return $this
+    */
+    public function setTaxAccountingFlag($taxAccountingFlag)
+    {
+        $this->container['taxAccountingFlag'] = $taxAccountingFlag;
         return $this;
     }
 

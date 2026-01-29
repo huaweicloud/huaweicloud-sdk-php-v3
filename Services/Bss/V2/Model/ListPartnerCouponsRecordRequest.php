@@ -20,7 +20,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * operationTypes  操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收此参数不携带时，不作为筛选条件；携带值为空列表或携带值为null时，作为筛选条件。
+    * operationTypes  操作类型 1：发放，2：手动回收，3：解绑自动回收，4：过期回收，5：退订回收，6：退款充值撤销，7：建立关联回收， 8：切换关联模式自动回收，9：云经销商转移。此参数不携带时，不作为筛选条件；携带值为空列表时，作为筛选条件。
     * quotaId  额度ID。请从“查询优惠券额度”接口的响应参数中获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
     * quotaType  额度类型。0：代金券额度1：现金券额度此参数不携带或携带值为空或携带值为null时，不作为筛选条件；不支持携带值为空串。
     * couponIds  代金券ID列表。请从“发放优惠券”接口的响应参数中获取。此参数不携带时，不作为筛选条件；携带值为空列表或携带值为null时，作为筛选条件。
@@ -50,7 +50,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * operationTypes  操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收此参数不携带时，不作为筛选条件；携带值为空列表或携带值为null时，作为筛选条件。
+    * operationTypes  操作类型 1：发放，2：手动回收，3：解绑自动回收，4：过期回收，5：退订回收，6：退款充值撤销，7：建立关联回收， 8：切换关联模式自动回收，9：云经销商转移。此参数不携带时，不作为筛选条件；携带值为空列表时，作为筛选条件。
     * quotaId  额度ID。请从“查询优惠券额度”接口的响应参数中获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
     * quotaType  额度类型。0：代金券额度1：现金券额度此参数不携带或携带值为空或携带值为null时，不作为筛选条件；不支持携带值为空串。
     * couponIds  代金券ID列表。请从“发放优惠券”接口的响应参数中获取。此参数不携带时，不作为筛选条件；携带值为空列表或携带值为null时，作为筛选条件。
@@ -101,7 +101,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * operationTypes  操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收此参数不携带时，不作为筛选条件；携带值为空列表或携带值为null时，作为筛选条件。
+    * operationTypes  操作类型 1：发放，2：手动回收，3：解绑自动回收，4：过期回收，5：退订回收，6：退款充值撤销，7：建立关联回收， 8：切换关联模式自动回收，9：云经销商转移。此参数不携带时，不作为筛选条件；携带值为空列表时，作为筛选条件。
     * quotaId  额度ID。请从“查询优惠券额度”接口的响应参数中获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
     * quotaType  额度类型。0：代金券额度1：现金券额度此参数不携带或携带值为空或携带值为null时，不作为筛选条件；不支持携带值为空串。
     * couponIds  代金券ID列表。请从“发放优惠券”接口的响应参数中获取。此参数不携带时，不作为筛选条件；携带值为空列表或携带值为null时，作为筛选条件。
@@ -131,7 +131,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * operationTypes  操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收此参数不携带时，不作为筛选条件；携带值为空列表或携带值为null时，作为筛选条件。
+    * operationTypes  操作类型 1：发放，2：手动回收，3：解绑自动回收，4：过期回收，5：退订回收，6：退款充值撤销，7：建立关联回收， 8：切换关联模式自动回收，9：云经销商转移。此参数不携带时，不作为筛选条件；携带值为空列表时，作为筛选条件。
     * quotaId  额度ID。请从“查询优惠券额度”接口的响应参数中获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
     * quotaType  额度类型。0：代金券额度1：现金券额度此参数不携带或携带值为空或携带值为null时，不作为筛选条件；不支持携带值为空串。
     * couponIds  代金券ID列表。请从“发放优惠券”接口的响应参数中获取。此参数不携带时，不作为筛选条件；携带值为空列表或携带值为null时，作为筛选条件。
@@ -161,7 +161,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * operationTypes  操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收此参数不携带时，不作为筛选条件；携带值为空列表或携带值为null时，作为筛选条件。
+    * operationTypes  操作类型 1：发放，2：手动回收，3：解绑自动回收，4：过期回收，5：退订回收，6：退款充值撤销，7：建立关联回收， 8：切换关联模式自动回收，9：云经销商转移。此参数不携带时，不作为筛选条件；携带值为空列表时，作为筛选条件。
     * quotaId  额度ID。请从“查询优惠券额度”接口的响应参数中获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
     * quotaType  额度类型。0：代金券额度1：现金券额度此参数不携带或携带值为空或携带值为null时，不作为筛选条件；不支持携带值为空串。
     * couponIds  代金券ID列表。请从“发放优惠券”接口的响应参数中获取。此参数不携带时，不作为筛选条件；携带值为空列表或携带值为null时，作为筛选条件。
@@ -302,7 +302,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets operationTypes
-    *  操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收此参数不携带时，不作为筛选条件；携带值为空列表或携带值为null时，作为筛选条件。
+    *  操作类型 1：发放，2：手动回收，3：解绑自动回收，4：过期回收，5：退订回收，6：退款充值撤销，7：建立关联回收， 8：切换关联模式自动回收，9：云经销商转移。此参数不携带时，不作为筛选条件；携带值为空列表时，作为筛选条件。
     *
     * @return string[]|null
     */
@@ -314,7 +314,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Sets operationTypes
     *
-    * @param string[]|null $operationTypes 操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收此参数不携带时，不作为筛选条件；携带值为空列表或携带值为null时，作为筛选条件。
+    * @param string[]|null $operationTypes 操作类型 1：发放，2：手动回收，3：解绑自动回收，4：过期回收，5：退订回收，6：退款充值撤销，7：建立关联回收， 8：切换关联模式自动回收，9：云经销商转移。此参数不携带时，不作为筛选条件；携带值为空列表时，作为筛选条件。
     *
     * @return $this
     */

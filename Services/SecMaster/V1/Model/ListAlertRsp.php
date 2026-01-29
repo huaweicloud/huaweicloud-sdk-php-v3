@@ -78,7 +78,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'regionId' => 'string',
             'workspaceId' => 'string',
             'labels' => 'string',
-            'environment' => '\HuaweiCloud\SDK\SecMaster\V1\Model\AlertEnvironment',
+            'environment' => '\HuaweiCloud\SDK\SecMaster\V1\Model\ListAlertRspEnvironment',
             'dataSource' => '\HuaweiCloud\SDK\SecMaster\V1\Model\AlertDataSource',
             'firstObservedTime' => 'string',
             'lastObservedTime' => 'string',
@@ -1168,7 +1168,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * Gets environment
     *  environment
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\AlertEnvironment|null
+    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\ListAlertRspEnvironment|null
     */
     public function getEnvironment()
     {
@@ -1178,7 +1178,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets environment
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\AlertEnvironment|null $environment environment
+    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\ListAlertRspEnvironment|null $environment environment
     *
     * @return $this
     */

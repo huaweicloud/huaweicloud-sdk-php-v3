@@ -20,20 +20,20 @@ class TemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  模板名称
+    * name  模板名称 仅由中文字符、下划线、短横线、数字、英文大小写字母组成
     * isTemplate  是否是通用模板，如果模板关联一个任务，则不算通用模板
     * region  Region信息
     * projectid  项目ID
     * targetServerName  目标端服务器名称
     * availabilityZone  可用区
-    * volumetype  磁盘类型 SAS:串行连接SCSI SSD:固态硬盘 SATA:串口硬盘
+    * volumetype  磁盘类型 （非枚举数据，来源于EVS服务） 常见类型如：SAS:串行连接SCSI，SSD:固态硬盘，SATA:串口硬盘等。 详细类型请参考EIP服务API文档中“查询单个云硬盘详情”部分，查看响应参数的中volume_type字段描述
     * flavor  虚拟机规格
     * vpc  vpc
     * nics  网卡信息，支持多个网卡，如果是自动创建，只填一个，ID使用“autoCreate”
     * securityGroups  安全组，支持多个安全组，如果是自动创建，只填一个，ID使用“autoCreate”
     * publicip  publicip
     * disk  磁盘信息
-    * dataVolumeType  数据盘磁盘类型 SAS:串行连接SCSI SSD:固态硬盘 SATA:串口硬盘
+    * dataVolumeType  数据盘磁盘类型 （非枚举数据，来源于EVS服务） 常见类型如：SAS:串行连接SCSI，SSD:固态硬盘，SATA:串口硬盘等。 详细类型请参考EIP服务API文档中“查询单个云硬盘详情”部分，查看响应参数的中volume_type字段描述
     * targetPassword  目的端密码
     * imageId  新建目的虚拟机用户选择的镜像版本Id值
     *
@@ -60,20 +60,20 @@ class TemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  模板名称
+    * name  模板名称 仅由中文字符、下划线、短横线、数字、英文大小写字母组成
     * isTemplate  是否是通用模板，如果模板关联一个任务，则不算通用模板
     * region  Region信息
     * projectid  项目ID
     * targetServerName  目标端服务器名称
     * availabilityZone  可用区
-    * volumetype  磁盘类型 SAS:串行连接SCSI SSD:固态硬盘 SATA:串口硬盘
+    * volumetype  磁盘类型 （非枚举数据，来源于EVS服务） 常见类型如：SAS:串行连接SCSI，SSD:固态硬盘，SATA:串口硬盘等。 详细类型请参考EIP服务API文档中“查询单个云硬盘详情”部分，查看响应参数的中volume_type字段描述
     * flavor  虚拟机规格
     * vpc  vpc
     * nics  网卡信息，支持多个网卡，如果是自动创建，只填一个，ID使用“autoCreate”
     * securityGroups  安全组，支持多个安全组，如果是自动创建，只填一个，ID使用“autoCreate”
     * publicip  publicip
     * disk  磁盘信息
-    * dataVolumeType  数据盘磁盘类型 SAS:串行连接SCSI SSD:固态硬盘 SATA:串口硬盘
+    * dataVolumeType  数据盘磁盘类型 （非枚举数据，来源于EVS服务） 常见类型如：SAS:串行连接SCSI，SSD:固态硬盘，SATA:串口硬盘等。 详细类型请参考EIP服务API文档中“查询单个云硬盘详情”部分，查看响应参数的中volume_type字段描述
     * targetPassword  目的端密码
     * imageId  新建目的虚拟机用户选择的镜像版本Id值
     *
@@ -121,20 +121,20 @@ class TemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  模板名称
+    * name  模板名称 仅由中文字符、下划线、短横线、数字、英文大小写字母组成
     * isTemplate  是否是通用模板，如果模板关联一个任务，则不算通用模板
     * region  Region信息
     * projectid  项目ID
     * targetServerName  目标端服务器名称
     * availabilityZone  可用区
-    * volumetype  磁盘类型 SAS:串行连接SCSI SSD:固态硬盘 SATA:串口硬盘
+    * volumetype  磁盘类型 （非枚举数据，来源于EVS服务） 常见类型如：SAS:串行连接SCSI，SSD:固态硬盘，SATA:串口硬盘等。 详细类型请参考EIP服务API文档中“查询单个云硬盘详情”部分，查看响应参数的中volume_type字段描述
     * flavor  虚拟机规格
     * vpc  vpc
     * nics  网卡信息，支持多个网卡，如果是自动创建，只填一个，ID使用“autoCreate”
     * securityGroups  安全组，支持多个安全组，如果是自动创建，只填一个，ID使用“autoCreate”
     * publicip  publicip
     * disk  磁盘信息
-    * dataVolumeType  数据盘磁盘类型 SAS:串行连接SCSI SSD:固态硬盘 SATA:串口硬盘
+    * dataVolumeType  数据盘磁盘类型 （非枚举数据，来源于EVS服务） 常见类型如：SAS:串行连接SCSI，SSD:固态硬盘，SATA:串口硬盘等。 详细类型请参考EIP服务API文档中“查询单个云硬盘详情”部分，查看响应参数的中volume_type字段描述
     * targetPassword  目的端密码
     * imageId  新建目的虚拟机用户选择的镜像版本Id值
     *
@@ -161,20 +161,20 @@ class TemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  模板名称
+    * name  模板名称 仅由中文字符、下划线、短横线、数字、英文大小写字母组成
     * isTemplate  是否是通用模板，如果模板关联一个任务，则不算通用模板
     * region  Region信息
     * projectid  项目ID
     * targetServerName  目标端服务器名称
     * availabilityZone  可用区
-    * volumetype  磁盘类型 SAS:串行连接SCSI SSD:固态硬盘 SATA:串口硬盘
+    * volumetype  磁盘类型 （非枚举数据，来源于EVS服务） 常见类型如：SAS:串行连接SCSI，SSD:固态硬盘，SATA:串口硬盘等。 详细类型请参考EIP服务API文档中“查询单个云硬盘详情”部分，查看响应参数的中volume_type字段描述
     * flavor  虚拟机规格
     * vpc  vpc
     * nics  网卡信息，支持多个网卡，如果是自动创建，只填一个，ID使用“autoCreate”
     * securityGroups  安全组，支持多个安全组，如果是自动创建，只填一个，ID使用“autoCreate”
     * publicip  publicip
     * disk  磁盘信息
-    * dataVolumeType  数据盘磁盘类型 SAS:串行连接SCSI SSD:固态硬盘 SATA:串口硬盘
+    * dataVolumeType  数据盘磁盘类型 （非枚举数据，来源于EVS服务） 常见类型如：SAS:串行连接SCSI，SSD:固态硬盘，SATA:串口硬盘等。 详细类型请参考EIP服务API文档中“查询单个云硬盘详情”部分，查看响应参数的中volume_type字段描述
     * targetPassword  目的端密码
     * imageId  新建目的虚拟机用户选择的镜像版本Id值
     *
@@ -201,20 +201,20 @@ class TemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  模板名称
+    * name  模板名称 仅由中文字符、下划线、短横线、数字、英文大小写字母组成
     * isTemplate  是否是通用模板，如果模板关联一个任务，则不算通用模板
     * region  Region信息
     * projectid  项目ID
     * targetServerName  目标端服务器名称
     * availabilityZone  可用区
-    * volumetype  磁盘类型 SAS:串行连接SCSI SSD:固态硬盘 SATA:串口硬盘
+    * volumetype  磁盘类型 （非枚举数据，来源于EVS服务） 常见类型如：SAS:串行连接SCSI，SSD:固态硬盘，SATA:串口硬盘等。 详细类型请参考EIP服务API文档中“查询单个云硬盘详情”部分，查看响应参数的中volume_type字段描述
     * flavor  虚拟机规格
     * vpc  vpc
     * nics  网卡信息，支持多个网卡，如果是自动创建，只填一个，ID使用“autoCreate”
     * securityGroups  安全组，支持多个安全组，如果是自动创建，只填一个，ID使用“autoCreate”
     * publicip  publicip
     * disk  磁盘信息
-    * dataVolumeType  数据盘磁盘类型 SAS:串行连接SCSI SSD:固态硬盘 SATA:串口硬盘
+    * dataVolumeType  数据盘磁盘类型 （非枚举数据，来源于EVS服务） 常见类型如：SAS:串行连接SCSI，SSD:固态硬盘，SATA:串口硬盘等。 详细类型请参考EIP服务API文档中“查询单个云硬盘详情”部分，查看响应参数的中volume_type字段描述
     * targetPassword  目的端密码
     * imageId  新建目的虚拟机用户选择的镜像版本Id值
     *
@@ -279,41 +279,7 @@ class TemplateRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const VOLUMETYPE_SAS = 'SAS';
-    const VOLUMETYPE_SSD = 'SSD';
-    const VOLUMETYPE_SATA = 'SATA';
-    const DATA_VOLUME_TYPE_SAS = 'SAS';
-    const DATA_VOLUME_TYPE_SSD = 'SSD';
-    const DATA_VOLUME_TYPE_SATA = 'SATA';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getVolumetypeAllowableValues()
-    {
-        return [
-            self::VOLUMETYPE_SAS,
-            self::VOLUMETYPE_SSD,
-            self::VOLUMETYPE_SATA,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getDataVolumeTypeAllowableValues()
-    {
-        return [
-            self::DATA_VOLUME_TYPE_SAS,
-            self::DATA_VOLUME_TYPE_SSD,
-            self::DATA_VOLUME_TYPE_SATA,
-        ];
-    }
 
 
     /**
@@ -360,31 +326,25 @@ class TemplateRequest implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-            if ((mb_strlen($this->container['name']) > 255)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
+            if ((mb_strlen($this->container['name']) > 64)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
             }
-            if ((mb_strlen($this->container['name']) < 0)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['isTemplate'] === null) {
-            $invalidProperties[] = "'isTemplate' can't be null";
-        }
-        if ($this->container['region'] === null) {
-            $invalidProperties[] = "'region' can't be null";
-        }
-            if ((mb_strlen($this->container['region']) > 255)) {
+            if (!preg_match("/[\\u4e00-\\u9fa5-_0-9a-zA-Z]*/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /[\\u4e00-\\u9fa5-_0-9a-zA-Z]*/.";
+            }
+            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) > 255)) {
                 $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['region']) < 0)) {
+            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) < 0)) {
                 $invalidProperties[] = "invalid value for 'region', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['projectid'] === null) {
-            $invalidProperties[] = "'projectid' can't be null";
-        }
-            if ((mb_strlen($this->container['projectid']) > 255)) {
+            if (!is_null($this->container['projectid']) && (mb_strlen($this->container['projectid']) > 255)) {
                 $invalidProperties[] = "invalid value for 'projectid', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['projectid']) < 0)) {
+            if (!is_null($this->container['projectid']) && (mb_strlen($this->container['projectid']) < 0)) {
                 $invalidProperties[] = "invalid value for 'projectid', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['targetServerName']) && (mb_strlen($this->container['targetServerName']) > 255)) {
@@ -399,28 +359,24 @@ class TemplateRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['availabilityZone']) && (mb_strlen($this->container['availabilityZone']) < 0)) {
                 $invalidProperties[] = "invalid value for 'availabilityZone', the character length must be bigger than or equal to 0.";
             }
-            $allowedValues = $this->getVolumetypeAllowableValues();
-                if (!is_null($this->container['volumetype']) && !in_array($this->container['volumetype'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'volumetype', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if (!is_null($this->container['volumetype']) && (mb_strlen($this->container['volumetype']) > 255)) {
+                $invalidProperties[] = "invalid value for 'volumetype', the character length must be smaller than or equal to 255.";
             }
-
+            if (!is_null($this->container['volumetype']) && (mb_strlen($this->container['volumetype']) < 0)) {
+                $invalidProperties[] = "invalid value for 'volumetype', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['flavor']) && (mb_strlen($this->container['flavor']) > 65535)) {
                 $invalidProperties[] = "invalid value for 'flavor', the character length must be smaller than or equal to 65535.";
             }
             if (!is_null($this->container['flavor']) && (mb_strlen($this->container['flavor']) < 0)) {
                 $invalidProperties[] = "invalid value for 'flavor', the character length must be bigger than or equal to 0.";
             }
-            $allowedValues = $this->getDataVolumeTypeAllowableValues();
-                if (!is_null($this->container['dataVolumeType']) && !in_array($this->container['dataVolumeType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'dataVolumeType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if (!is_null($this->container['dataVolumeType']) && (mb_strlen($this->container['dataVolumeType']) > 255)) {
+                $invalidProperties[] = "invalid value for 'dataVolumeType', the character length must be smaller than or equal to 255.";
             }
-
+            if (!is_null($this->container['dataVolumeType']) && (mb_strlen($this->container['dataVolumeType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'dataVolumeType', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['targetPassword']) && (mb_strlen($this->container['targetPassword']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'targetPassword', the character length must be smaller than or equal to 1024.";
             }
@@ -449,7 +405,7 @@ class TemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  模板名称
+    *  模板名称 仅由中文字符、下划线、短横线、数字、英文大小写字母组成
     *
     * @return string
     */
@@ -461,7 +417,7 @@ class TemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 模板名称
+    * @param string $name 模板名称 仅由中文字符、下划线、短横线、数字、英文大小写字母组成
     *
     * @return $this
     */
@@ -475,7 +431,7 @@ class TemplateRequest implements ModelInterface, ArrayAccess
     * Gets isTemplate
     *  是否是通用模板，如果模板关联一个任务，则不算通用模板
     *
-    * @return bool
+    * @return bool|null
     */
     public function getIsTemplate()
     {
@@ -485,7 +441,7 @@ class TemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isTemplate
     *
-    * @param bool $isTemplate 是否是通用模板，如果模板关联一个任务，则不算通用模板
+    * @param bool|null $isTemplate 是否是通用模板，如果模板关联一个任务，则不算通用模板
     *
     * @return $this
     */
@@ -499,7 +455,7 @@ class TemplateRequest implements ModelInterface, ArrayAccess
     * Gets region
     *  Region信息
     *
-    * @return string
+    * @return string|null
     */
     public function getRegion()
     {
@@ -509,7 +465,7 @@ class TemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string $region Region信息
+    * @param string|null $region Region信息
     *
     * @return $this
     */
@@ -523,7 +479,7 @@ class TemplateRequest implements ModelInterface, ArrayAccess
     * Gets projectid
     *  项目ID
     *
-    * @return string
+    * @return string|null
     */
     public function getProjectid()
     {
@@ -533,7 +489,7 @@ class TemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectid
     *
-    * @param string $projectid 项目ID
+    * @param string|null $projectid 项目ID
     *
     * @return $this
     */
@@ -593,7 +549,7 @@ class TemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumetype
-    *  磁盘类型 SAS:串行连接SCSI SSD:固态硬盘 SATA:串口硬盘
+    *  磁盘类型 （非枚举数据，来源于EVS服务） 常见类型如：SAS:串行连接SCSI，SSD:固态硬盘，SATA:串口硬盘等。 详细类型请参考EIP服务API文档中“查询单个云硬盘详情”部分，查看响应参数的中volume_type字段描述
     *
     * @return string|null
     */
@@ -605,7 +561,7 @@ class TemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets volumetype
     *
-    * @param string|null $volumetype 磁盘类型 SAS:串行连接SCSI SSD:固态硬盘 SATA:串口硬盘
+    * @param string|null $volumetype 磁盘类型 （非枚举数据，来源于EVS服务） 常见类型如：SAS:串行连接SCSI，SSD:固态硬盘，SATA:串口硬盘等。 详细类型请参考EIP服务API文档中“查询单个云硬盘详情”部分，查看响应参数的中volume_type字段描述
     *
     * @return $this
     */
@@ -761,7 +717,7 @@ class TemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataVolumeType
-    *  数据盘磁盘类型 SAS:串行连接SCSI SSD:固态硬盘 SATA:串口硬盘
+    *  数据盘磁盘类型 （非枚举数据，来源于EVS服务） 常见类型如：SAS:串行连接SCSI，SSD:固态硬盘，SATA:串口硬盘等。 详细类型请参考EIP服务API文档中“查询单个云硬盘详情”部分，查看响应参数的中volume_type字段描述
     *
     * @return string|null
     */
@@ -773,7 +729,7 @@ class TemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dataVolumeType
     *
-    * @param string|null $dataVolumeType 数据盘磁盘类型 SAS:串行连接SCSI SSD:固态硬盘 SATA:串口硬盘
+    * @param string|null $dataVolumeType 数据盘磁盘类型 （非枚举数据，来源于EVS服务） 常见类型如：SAS:串行连接SCSI，SSD:固态硬盘，SATA:串口硬盘等。 详细类型请参考EIP服务API文档中“查询单个云硬盘详情”部分，查看响应参数的中volume_type字段描述
     *
     * @return $this
     */

@@ -27,6 +27,7 @@ class CesQueryRespQuery implements ModelInterface, ArrayAccess
     * medialivePackage  medialivePackage
     * medialiveConnect  medialiveConnect
     * medialiveTailor  medialiveTailor
+    * region  region
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class CesQueryRespQuery implements ModelInterface, ArrayAccess
             'medialiveCdn' => '\HuaweiCloud\SDK\Live\V1\Model\CesDimsItem',
             'medialivePackage' => '\HuaweiCloud\SDK\Live\V1\Model\CesDimsItem',
             'medialiveConnect' => '\HuaweiCloud\SDK\Live\V1\Model\CesDimsItem',
-            'medialiveTailor' => '\HuaweiCloud\SDK\Live\V1\Model\CesDimsItem'
+            'medialiveTailor' => '\HuaweiCloud\SDK\Live\V1\Model\CesDimsItem',
+            'region' => '\HuaweiCloud\SDK\Live\V1\Model\CesDimsItem'
     ];
 
     /**
@@ -49,6 +51,7 @@ class CesQueryRespQuery implements ModelInterface, ArrayAccess
     * medialivePackage  medialivePackage
     * medialiveConnect  medialiveConnect
     * medialiveTailor  medialiveTailor
+    * region  region
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class CesQueryRespQuery implements ModelInterface, ArrayAccess
         'medialiveCdn' => null,
         'medialivePackage' => null,
         'medialiveConnect' => null,
-        'medialiveTailor' => null
+        'medialiveTailor' => null,
+        'region' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class CesQueryRespQuery implements ModelInterface, ArrayAccess
     * medialivePackage  medialivePackage
     * medialiveConnect  medialiveConnect
     * medialiveTailor  medialiveTailor
+    * region  region
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class CesQueryRespQuery implements ModelInterface, ArrayAccess
             'medialiveCdn' => 'medialive_cdn',
             'medialivePackage' => 'medialive_package',
             'medialiveConnect' => 'medialive_connect',
-            'medialiveTailor' => 'medialive_tailor'
+            'medialiveTailor' => 'medialive_tailor',
+            'region' => 'region'
     ];
 
     /**
@@ -114,6 +120,7 @@ class CesQueryRespQuery implements ModelInterface, ArrayAccess
     * medialivePackage  medialivePackage
     * medialiveConnect  medialiveConnect
     * medialiveTailor  medialiveTailor
+    * region  region
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class CesQueryRespQuery implements ModelInterface, ArrayAccess
             'medialiveCdn' => 'setMedialiveCdn',
             'medialivePackage' => 'setMedialivePackage',
             'medialiveConnect' => 'setMedialiveConnect',
-            'medialiveTailor' => 'setMedialiveTailor'
+            'medialiveTailor' => 'setMedialiveTailor',
+            'region' => 'setRegion'
     ];
 
     /**
@@ -136,6 +144,7 @@ class CesQueryRespQuery implements ModelInterface, ArrayAccess
     * medialivePackage  medialivePackage
     * medialiveConnect  medialiveConnect
     * medialiveTailor  medialiveTailor
+    * region  region
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class CesQueryRespQuery implements ModelInterface, ArrayAccess
             'medialiveCdn' => 'getMedialiveCdn',
             'medialivePackage' => 'getMedialivePackage',
             'medialiveConnect' => 'getMedialiveConnect',
-            'medialiveTailor' => 'getMedialiveTailor'
+            'medialiveTailor' => 'getMedialiveTailor',
+            'region' => 'getRegion'
     ];
 
     /**
@@ -214,6 +224,7 @@ class CesQueryRespQuery implements ModelInterface, ArrayAccess
         $this->container['medialivePackage'] = isset($data['medialivePackage']) ? $data['medialivePackage'] : null;
         $this->container['medialiveConnect'] = isset($data['medialiveConnect']) ? $data['medialiveConnect'] : null;
         $this->container['medialiveTailor'] = isset($data['medialiveTailor']) ? $data['medialiveTailor'] : null;
+        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
     }
 
     /**
@@ -244,6 +255,9 @@ class CesQueryRespQuery implements ModelInterface, ArrayAccess
         }
         if ($this->container['medialiveTailor'] === null) {
             $invalidProperties[] = "'medialiveTailor' can't be null";
+        }
+        if ($this->container['region'] === null) {
+            $invalidProperties[] = "'region' can't be null";
         }
         return $invalidProperties;
     }
@@ -424,6 +438,30 @@ class CesQueryRespQuery implements ModelInterface, ArrayAccess
     public function setMedialiveTailor($medialiveTailor)
     {
         $this->container['medialiveTailor'] = $medialiveTailor;
+        return $this;
+    }
+
+    /**
+    * Gets region
+    *  region
+    *
+    * @return \HuaweiCloud\SDK\Live\V1\Model\CesDimsItem
+    */
+    public function getRegion()
+    {
+        return $this->container['region'];
+    }
+
+    /**
+    * Sets region
+    *
+    * @param \HuaweiCloud\SDK\Live\V1\Model\CesDimsItem $region region
+    *
+    * @return $this
+    */
+    public function setRegion($region)
+    {
+        $this->container['region'] = $region;
         return $this;
     }
 

@@ -25,7 +25,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * fileSystem  文件系统
     * inodeSize  inode数量
     * inodeNums  inode节点数量
-    * deviceUse  分区类型，普通分区，启动分区，系统分区
+    * deviceUse  分区类型 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     * mountPoint  挂载点
     * name  名称
     * size  大小
@@ -55,7 +55,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * fileSystem  文件系统
     * inodeSize  inode数量
     * inodeNums  inode节点数量
-    * deviceUse  分区类型，普通分区，启动分区，系统分区
+    * deviceUse  分区类型 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     * mountPoint  挂载点
     * name  名称
     * size  大小
@@ -106,7 +106,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * fileSystem  文件系统
     * inodeSize  inode数量
     * inodeNums  inode节点数量
-    * deviceUse  分区类型，普通分区，启动分区，系统分区
+    * deviceUse  分区类型 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     * mountPoint  挂载点
     * name  名称
     * size  大小
@@ -136,7 +136,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * fileSystem  文件系统
     * inodeSize  inode数量
     * inodeNums  inode节点数量
-    * deviceUse  分区类型，普通分区，启动分区，系统分区
+    * deviceUse  分区类型 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     * mountPoint  挂载点
     * name  名称
     * size  大小
@@ -166,7 +166,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * fileSystem  文件系统
     * inodeSize  inode数量
     * inodeNums  inode节点数量
-    * deviceUse  分区类型，普通分区，启动分区，系统分区
+    * deviceUse  分区类型 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     * mountPoint  挂载点
     * name  名称
     * size  大小
@@ -280,22 +280,16 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
             if (!is_null($this->container['blockSize']) && ($this->container['blockSize'] < 0)) {
                 $invalidProperties[] = "invalid value for 'blockSize', must be bigger than or equal to 0.";
             }
-        if ($this->container['fileSystem'] === null) {
-            $invalidProperties[] = "'fileSystem' can't be null";
-        }
-            if ((mb_strlen($this->container['fileSystem']) > 255)) {
+            if (!is_null($this->container['fileSystem']) && (mb_strlen($this->container['fileSystem']) > 255)) {
                 $invalidProperties[] = "invalid value for 'fileSystem', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['fileSystem']) < 0)) {
+            if (!is_null($this->container['fileSystem']) && (mb_strlen($this->container['fileSystem']) < 0)) {
                 $invalidProperties[] = "invalid value for 'fileSystem', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['inodeSize'] === null) {
-            $invalidProperties[] = "'inodeSize' can't be null";
-        }
-            if (($this->container['inodeSize'] > 2147483647)) {
+            if (!is_null($this->container['inodeSize']) && ($this->container['inodeSize'] > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'inodeSize', must be smaller than or equal to 2147483647.";
             }
-            if (($this->container['inodeSize'] < 0)) {
+            if (!is_null($this->container['inodeSize']) && ($this->container['inodeSize'] < 0)) {
                 $invalidProperties[] = "invalid value for 'inodeSize', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['inodeNums']) && ($this->container['inodeNums'] > 9223372036854775807)) {
@@ -310,49 +304,34 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
             if (!is_null($this->container['deviceUse']) && (mb_strlen($this->container['deviceUse']) < 0)) {
                 $invalidProperties[] = "invalid value for 'deviceUse', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['mountPoint'] === null) {
-            $invalidProperties[] = "'mountPoint' can't be null";
-        }
-            if ((mb_strlen($this->container['mountPoint']) > 256)) {
+            if (!is_null($this->container['mountPoint']) && (mb_strlen($this->container['mountPoint']) > 256)) {
                 $invalidProperties[] = "invalid value for 'mountPoint', the character length must be smaller than or equal to 256.";
             }
-            if ((mb_strlen($this->container['mountPoint']) < 0)) {
+            if (!is_null($this->container['mountPoint']) && (mb_strlen($this->container['mountPoint']) < 0)) {
                 $invalidProperties[] = "invalid value for 'mountPoint', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-            if ((mb_strlen($this->container['name']) > 1024)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 1024.";
             }
-            if ((mb_strlen($this->container['name']) < 0)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['size'] === null) {
-            $invalidProperties[] = "'size' can't be null";
-        }
-            if (($this->container['size'] > 9223372036854775807)) {
+            if (!is_null($this->container['size']) && ($this->container['size'] > 9223372036854775807)) {
                 $invalidProperties[] = "invalid value for 'size', must be smaller than or equal to 9223372036854775807.";
             }
-            if (($this->container['size'] < 0)) {
+            if (!is_null($this->container['size']) && ($this->container['size'] < 0)) {
                 $invalidProperties[] = "invalid value for 'size', must be bigger than or equal to 0.";
             }
-        if ($this->container['usedSize'] === null) {
-            $invalidProperties[] = "'usedSize' can't be null";
-        }
-            if (($this->container['usedSize'] > 9223372036854775807)) {
+            if (!is_null($this->container['usedSize']) && ($this->container['usedSize'] > 9223372036854775807)) {
                 $invalidProperties[] = "invalid value for 'usedSize', must be smaller than or equal to 9223372036854775807.";
             }
-            if (($this->container['usedSize'] < 0)) {
+            if (!is_null($this->container['usedSize']) && ($this->container['usedSize'] < 0)) {
                 $invalidProperties[] = "invalid value for 'usedSize', must be bigger than or equal to 0.";
             }
-        if ($this->container['freeSize'] === null) {
-            $invalidProperties[] = "'freeSize' can't be null";
-        }
-            if (($this->container['freeSize'] > 9223372036854775807)) {
+            if (!is_null($this->container['freeSize']) && ($this->container['freeSize'] > 9223372036854775807)) {
                 $invalidProperties[] = "invalid value for 'freeSize', must be smaller than or equal to 9223372036854775807.";
             }
-            if (($this->container['freeSize'] < 0)) {
+            if (!is_null($this->container['freeSize']) && ($this->container['freeSize'] < 0)) {
                 $invalidProperties[] = "invalid value for 'freeSize', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -421,7 +400,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * Gets fileSystem
     *  文件系统
     *
-    * @return string
+    * @return string|null
     */
     public function getFileSystem()
     {
@@ -431,7 +410,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     /**
     * Sets fileSystem
     *
-    * @param string $fileSystem 文件系统
+    * @param string|null $fileSystem 文件系统
     *
     * @return $this
     */
@@ -445,7 +424,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * Gets inodeSize
     *  inode数量
     *
-    * @return int
+    * @return int|null
     */
     public function getInodeSize()
     {
@@ -455,7 +434,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     /**
     * Sets inodeSize
     *
-    * @param int $inodeSize inode数量
+    * @param int|null $inodeSize inode数量
     *
     * @return $this
     */
@@ -491,7 +470,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceUse
-    *  分区类型，普通分区，启动分区，系统分区
+    *  分区类型 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     *
     * @return string|null
     */
@@ -503,7 +482,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     /**
     * Sets deviceUse
     *
-    * @param string|null $deviceUse 分区类型，普通分区，启动分区，系统分区
+    * @param string|null $deviceUse 分区类型 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
     *
     * @return $this
     */
@@ -517,7 +496,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * Gets mountPoint
     *  挂载点
     *
-    * @return string
+    * @return string|null
     */
     public function getMountPoint()
     {
@@ -527,7 +506,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     /**
     * Sets mountPoint
     *
-    * @param string $mountPoint 挂载点
+    * @param string|null $mountPoint 挂载点
     *
     * @return $this
     */
@@ -541,7 +520,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * Gets name
     *  名称
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -551,7 +530,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 名称
+    * @param string|null $name 名称
     *
     * @return $this
     */
@@ -565,7 +544,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * Gets size
     *  大小
     *
-    * @return int
+    * @return int|null
     */
     public function getSize()
     {
@@ -575,7 +554,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int $size 大小
+    * @param int|null $size 大小
     *
     * @return $this
     */
@@ -589,7 +568,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * Gets usedSize
     *  使用大小
     *
-    * @return int
+    * @return int|null
     */
     public function getUsedSize()
     {
@@ -599,7 +578,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     /**
     * Sets usedSize
     *
-    * @param int $usedSize 使用大小
+    * @param int|null $usedSize 使用大小
     *
     * @return $this
     */
@@ -613,7 +592,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * Gets freeSize
     *  剩余空间
     *
-    * @return int
+    * @return int|null
     */
     public function getFreeSize()
     {
@@ -623,7 +602,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     /**
     * Sets freeSize
     *
-    * @param int $freeSize 剩余空间
+    * @param int|null $freeSize 剩余空间
     *
     * @return $this
     */

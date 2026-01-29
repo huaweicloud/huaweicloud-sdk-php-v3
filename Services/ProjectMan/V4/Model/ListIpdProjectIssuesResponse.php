@@ -22,21 +22,21 @@ class ListIpdProjectIssuesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * message  返回信息
-    * result  返回对象
+    * result  result
     * status  返回状态
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'message' => 'string',
-            'result' => 'object',
+            'result' => '\HuaweiCloud\SDK\ProjectMan\V4\Model\IssueListResult',
             'status' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * message  返回信息
-    * result  返回对象
+    * result  result
     * status  返回状态
     *
     * @var string[]
@@ -71,7 +71,7 @@ class ListIpdProjectIssuesResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * message  返回信息
-    * result  返回对象
+    * result  result
     * status  返回状态
     *
     * @var string[]
@@ -85,7 +85,7 @@ class ListIpdProjectIssuesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * message  返回信息
-    * result  返回对象
+    * result  result
     * status  返回状态
     *
     * @var string[]
@@ -99,7 +99,7 @@ class ListIpdProjectIssuesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * message  返回信息
-    * result  返回对象
+    * result  result
     * status  返回状态
     *
     * @var string[]
@@ -221,9 +221,9 @@ class ListIpdProjectIssuesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  返回对象
+    *  result
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\ProjectMan\V4\Model\IssueListResult|null
     */
     public function getResult()
     {
@@ -233,7 +233,7 @@ class ListIpdProjectIssuesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param object|null $result 返回对象
+    * @param \HuaweiCloud\SDK\ProjectMan\V4\Model\IssueListResult|null $result result
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * operType  变更类型。  取值范围：  [storage：存储空间扩容，代理数量不变。](tag:hws,hws_eu,hws_hk,sbc,ctc,g42,hk_g42,tm,hk_tm,cmcc,ax,hk_sbc)  horizontal：代理数量扩容，每个broker的存储空间不变。  [vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。](tag:hws,hws_eu,hws_hk,sbc,ctc,g42,hk_g42,tm,hk_tm,cmcc,ax,hk_sbc)
+    * operType  变更类型。  取值范围：  - storage：存储空间扩容，代理数量不变。  - horizontal：代理数量扩容，每个broker的存储空间不变。  - vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。
     * newStorageSpace  扩容后的存储空间。注意：磁盘容量仅支持设置为100的整数倍。  当oper_type类型是storage或horizontal时，该参数有效且必填。  实例存储空间 = 代理数量 * 每个broker的存储空间。  - 当oper_type类型是storage时，代理数量不变，每个broker存储空间最少扩容100GB。  - 当oper_type类型是horizontal时，每个broker的存储空间不变。
     * newProductId  规格，例如c6.8u16g.cluster，当oper_type类型是vertical时，该参数才有效且必填。
     * newBrokerNum  当oper_type参数为horizontal时，该参数有效。
@@ -38,7 +38,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * operType  变更类型。  取值范围：  [storage：存储空间扩容，代理数量不变。](tag:hws,hws_eu,hws_hk,sbc,ctc,g42,hk_g42,tm,hk_tm,cmcc,ax,hk_sbc)  horizontal：代理数量扩容，每个broker的存储空间不变。  [vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。](tag:hws,hws_eu,hws_hk,sbc,ctc,g42,hk_g42,tm,hk_tm,cmcc,ax,hk_sbc)
+    * operType  变更类型。  取值范围：  - storage：存储空间扩容，代理数量不变。  - horizontal：代理数量扩容，每个broker的存储空间不变。  - vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。
     * newStorageSpace  扩容后的存储空间。注意：磁盘容量仅支持设置为100的整数倍。  当oper_type类型是storage或horizontal时，该参数有效且必填。  实例存储空间 = 代理数量 * 每个broker的存储空间。  - 当oper_type类型是storage时，代理数量不变，每个broker存储空间最少扩容100GB。  - 当oper_type类型是horizontal时，每个broker的存储空间不变。
     * newProductId  规格，例如c6.8u16g.cluster，当oper_type类型是vertical时，该参数才有效且必填。
     * newBrokerNum  当oper_type参数为horizontal时，该参数有效。
@@ -77,7 +77,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * operType  变更类型。  取值范围：  [storage：存储空间扩容，代理数量不变。](tag:hws,hws_eu,hws_hk,sbc,ctc,g42,hk_g42,tm,hk_tm,cmcc,ax,hk_sbc)  horizontal：代理数量扩容，每个broker的存储空间不变。  [vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。](tag:hws,hws_eu,hws_hk,sbc,ctc,g42,hk_g42,tm,hk_tm,cmcc,ax,hk_sbc)
+    * operType  变更类型。  取值范围：  - storage：存储空间扩容，代理数量不变。  - horizontal：代理数量扩容，每个broker的存储空间不变。  - vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。
     * newStorageSpace  扩容后的存储空间。注意：磁盘容量仅支持设置为100的整数倍。  当oper_type类型是storage或horizontal时，该参数有效且必填。  实例存储空间 = 代理数量 * 每个broker的存储空间。  - 当oper_type类型是storage时，代理数量不变，每个broker存储空间最少扩容100GB。  - 当oper_type类型是horizontal时，每个broker的存储空间不变。
     * newProductId  规格，例如c6.8u16g.cluster，当oper_type类型是vertical时，该参数才有效且必填。
     * newBrokerNum  当oper_type参数为horizontal时，该参数有效。
@@ -95,7 +95,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * operType  变更类型。  取值范围：  [storage：存储空间扩容，代理数量不变。](tag:hws,hws_eu,hws_hk,sbc,ctc,g42,hk_g42,tm,hk_tm,cmcc,ax,hk_sbc)  horizontal：代理数量扩容，每个broker的存储空间不变。  [vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。](tag:hws,hws_eu,hws_hk,sbc,ctc,g42,hk_g42,tm,hk_tm,cmcc,ax,hk_sbc)
+    * operType  变更类型。  取值范围：  - storage：存储空间扩容，代理数量不变。  - horizontal：代理数量扩容，每个broker的存储空间不变。  - vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。
     * newStorageSpace  扩容后的存储空间。注意：磁盘容量仅支持设置为100的整数倍。  当oper_type类型是storage或horizontal时，该参数有效且必填。  实例存储空间 = 代理数量 * 每个broker的存储空间。  - 当oper_type类型是storage时，代理数量不变，每个broker存储空间最少扩容100GB。  - 当oper_type类型是horizontal时，每个broker的存储空间不变。
     * newProductId  规格，例如c6.8u16g.cluster，当oper_type类型是vertical时，该参数才有效且必填。
     * newBrokerNum  当oper_type参数为horizontal时，该参数有效。
@@ -113,7 +113,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * operType  变更类型。  取值范围：  [storage：存储空间扩容，代理数量不变。](tag:hws,hws_eu,hws_hk,sbc,ctc,g42,hk_g42,tm,hk_tm,cmcc,ax,hk_sbc)  horizontal：代理数量扩容，每个broker的存储空间不变。  [vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。](tag:hws,hws_eu,hws_hk,sbc,ctc,g42,hk_g42,tm,hk_tm,cmcc,ax,hk_sbc)
+    * operType  变更类型。  取值范围：  - storage：存储空间扩容，代理数量不变。  - horizontal：代理数量扩容，每个broker的存储空间不变。  - vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。
     * newStorageSpace  扩容后的存储空间。注意：磁盘容量仅支持设置为100的整数倍。  当oper_type类型是storage或horizontal时，该参数有效且必填。  实例存储空间 = 代理数量 * 每个broker的存储空间。  - 当oper_type类型是storage时，代理数量不变，每个broker存储空间最少扩容100GB。  - 当oper_type类型是horizontal时，每个broker的存储空间不变。
     * newProductId  规格，例如c6.8u16g.cluster，当oper_type类型是vertical时，该参数才有效且必填。
     * newBrokerNum  当oper_type参数为horizontal时，该参数有效。
@@ -221,7 +221,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets operType
-    *  变更类型。  取值范围：  [storage：存储空间扩容，代理数量不变。](tag:hws,hws_eu,hws_hk,sbc,ctc,g42,hk_g42,tm,hk_tm,cmcc,ax,hk_sbc)  horizontal：代理数量扩容，每个broker的存储空间不变。  [vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。](tag:hws,hws_eu,hws_hk,sbc,ctc,g42,hk_g42,tm,hk_tm,cmcc,ax,hk_sbc)
+    *  变更类型。  取值范围：  - storage：存储空间扩容，代理数量不变。  - horizontal：代理数量扩容，每个broker的存储空间不变。  - vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。
     *
     * @return string
     */
@@ -233,7 +233,7 @@ class ResizeEngineInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets operType
     *
-    * @param string $operType 变更类型。  取值范围：  [storage：存储空间扩容，代理数量不变。](tag:hws,hws_eu,hws_hk,sbc,ctc,g42,hk_g42,tm,hk_tm,cmcc,ax,hk_sbc)  horizontal：代理数量扩容，每个broker的存储空间不变。  [vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。](tag:hws,hws_eu,hws_hk,sbc,ctc,g42,hk_g42,tm,hk_tm,cmcc,ax,hk_sbc)
+    * @param string $operType 变更类型。  取值范围：  - storage：存储空间扩容，代理数量不变。  - horizontal：代理数量扩容，每个broker的存储空间不变。  - vertical：垂直扩容，broker的底层虚机规格变更，代理数量和存储空间不变。
     *
     * @return $this
     */

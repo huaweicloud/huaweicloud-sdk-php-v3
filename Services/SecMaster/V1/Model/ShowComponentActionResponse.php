@@ -25,6 +25,7 @@ class ShowComponentActionResponse implements ModelInterface, ArrayAccess
     * message  **参数解释**: 响应的错误信息 **约束限制**: 不涉及
     * success  **参数解释**: 是否响应成功 **约束限制**: 不涉及
     * requestId  **参数解释**: 请求id **约束限制**: 不涉及
+    * data  data
     *
     * @var string[]
     */
@@ -32,7 +33,8 @@ class ShowComponentActionResponse implements ModelInterface, ArrayAccess
             'code' => 'string',
             'message' => 'string',
             'success' => 'bool',
-            'requestId' => 'string'
+            'requestId' => 'string',
+            'data' => '\HuaweiCloud\SDK\SecMaster\V1\Model\ComponentActionInfo'
     ];
 
     /**
@@ -41,6 +43,7 @@ class ShowComponentActionResponse implements ModelInterface, ArrayAccess
     * message  **参数解释**: 响应的错误信息 **约束限制**: 不涉及
     * success  **参数解释**: 是否响应成功 **约束限制**: 不涉及
     * requestId  **参数解释**: 请求id **约束限制**: 不涉及
+    * data  data
     *
     * @var string[]
     */
@@ -48,7 +51,8 @@ class ShowComponentActionResponse implements ModelInterface, ArrayAccess
         'code' => null,
         'message' => null,
         'success' => null,
-        'requestId' => null
+        'requestId' => null,
+        'data' => null
     ];
 
     /**
@@ -78,6 +82,7 @@ class ShowComponentActionResponse implements ModelInterface, ArrayAccess
     * message  **参数解释**: 响应的错误信息 **约束限制**: 不涉及
     * success  **参数解释**: 是否响应成功 **约束限制**: 不涉及
     * requestId  **参数解释**: 请求id **约束限制**: 不涉及
+    * data  data
     *
     * @var string[]
     */
@@ -85,7 +90,8 @@ class ShowComponentActionResponse implements ModelInterface, ArrayAccess
             'code' => 'code',
             'message' => 'message',
             'success' => 'success',
-            'requestId' => 'request_id'
+            'requestId' => 'request_id',
+            'data' => 'data'
     ];
 
     /**
@@ -94,6 +100,7 @@ class ShowComponentActionResponse implements ModelInterface, ArrayAccess
     * message  **参数解释**: 响应的错误信息 **约束限制**: 不涉及
     * success  **参数解释**: 是否响应成功 **约束限制**: 不涉及
     * requestId  **参数解释**: 请求id **约束限制**: 不涉及
+    * data  data
     *
     * @var string[]
     */
@@ -101,7 +108,8 @@ class ShowComponentActionResponse implements ModelInterface, ArrayAccess
             'code' => 'setCode',
             'message' => 'setMessage',
             'success' => 'setSuccess',
-            'requestId' => 'setRequestId'
+            'requestId' => 'setRequestId',
+            'data' => 'setData'
     ];
 
     /**
@@ -110,6 +118,7 @@ class ShowComponentActionResponse implements ModelInterface, ArrayAccess
     * message  **参数解释**: 响应的错误信息 **约束限制**: 不涉及
     * success  **参数解释**: 是否响应成功 **约束限制**: 不涉及
     * requestId  **参数解释**: 请求id **约束限制**: 不涉及
+    * data  data
     *
     * @var string[]
     */
@@ -117,7 +126,8 @@ class ShowComponentActionResponse implements ModelInterface, ArrayAccess
             'code' => 'getCode',
             'message' => 'getMessage',
             'success' => 'getSuccess',
-            'requestId' => 'getRequestId'
+            'requestId' => 'getRequestId',
+            'data' => 'getData'
     ];
 
     /**
@@ -182,6 +192,7 @@ class ShowComponentActionResponse implements ModelInterface, ArrayAccess
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['success'] = isset($data['success']) ? $data['success'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -320,6 +331,30 @@ class ShowComponentActionResponse implements ModelInterface, ArrayAccess
     public function setRequestId($requestId)
     {
         $this->container['requestId'] = $requestId;
+        return $this;
+    }
+
+    /**
+    * Gets data
+    *  data
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\ComponentActionInfo|null
+    */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+    * Sets data
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\ComponentActionInfo|null $data data
+    *
+    * @return $this
+    */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
         return $this;
     }
 

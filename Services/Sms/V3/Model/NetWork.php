@@ -26,7 +26,7 @@ class NetWork implements ModelInterface, ArrayAccess
     * netmask  掩码
     * gateway  网关
     * mtu  Linux必选，网卡的MTU
-    * mac  Mac地址
+    * mac  列表中第一个Mac地址必须非空
     * id  数据库ID
     *
     * @var string[]
@@ -50,7 +50,7 @@ class NetWork implements ModelInterface, ArrayAccess
     * netmask  掩码
     * gateway  网关
     * mtu  Linux必选，网卡的MTU
-    * mac  Mac地址
+    * mac  列表中第一个Mac地址必须非空
     * id  数据库ID
     *
     * @var string[]
@@ -95,7 +95,7 @@ class NetWork implements ModelInterface, ArrayAccess
     * netmask  掩码
     * gateway  网关
     * mtu  Linux必选，网卡的MTU
-    * mac  Mac地址
+    * mac  列表中第一个Mac地址必须非空
     * id  数据库ID
     *
     * @var string[]
@@ -119,7 +119,7 @@ class NetWork implements ModelInterface, ArrayAccess
     * netmask  掩码
     * gateway  网关
     * mtu  Linux必选，网卡的MTU
-    * mac  Mac地址
+    * mac  列表中第一个Mac地址必须非空
     * id  数据库ID
     *
     * @var string[]
@@ -143,7 +143,7 @@ class NetWork implements ModelInterface, ArrayAccess
     * netmask  掩码
     * gateway  网关
     * mtu  Linux必选，网卡的MTU
-    * mac  Mac地址
+    * mac  列表中第一个Mac地址必须非空
     * id  数据库ID
     *
     * @var string[]
@@ -235,22 +235,16 @@ class NetWork implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-            if ((mb_strlen($this->container['name']) > 255)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 255)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['name']) < 0)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['ip'] === null) {
-            $invalidProperties[] = "'ip' can't be null";
-        }
-            if ((mb_strlen($this->container['ip']) > 255)) {
+            if (!is_null($this->container['ip']) && (mb_strlen($this->container['ip']) > 255)) {
                 $invalidProperties[] = "invalid value for 'ip', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['ip']) < 0)) {
+            if (!is_null($this->container['ip']) && (mb_strlen($this->container['ip']) < 0)) {
                 $invalidProperties[] = "invalid value for 'ip', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['ipv6']) && (mb_strlen($this->container['ipv6']) > 255)) {
@@ -259,22 +253,16 @@ class NetWork implements ModelInterface, ArrayAccess
             if (!is_null($this->container['ipv6']) && (mb_strlen($this->container['ipv6']) < 0)) {
                 $invalidProperties[] = "invalid value for 'ipv6', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['netmask'] === null) {
-            $invalidProperties[] = "'netmask' can't be null";
-        }
-            if ((mb_strlen($this->container['netmask']) > 255)) {
+            if (!is_null($this->container['netmask']) && (mb_strlen($this->container['netmask']) > 255)) {
                 $invalidProperties[] = "invalid value for 'netmask', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['netmask']) < 0)) {
+            if (!is_null($this->container['netmask']) && (mb_strlen($this->container['netmask']) < 0)) {
                 $invalidProperties[] = "invalid value for 'netmask', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['gateway'] === null) {
-            $invalidProperties[] = "'gateway' can't be null";
-        }
-            if ((mb_strlen($this->container['gateway']) > 255)) {
+            if (!is_null($this->container['gateway']) && (mb_strlen($this->container['gateway']) > 255)) {
                 $invalidProperties[] = "invalid value for 'gateway', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['gateway']) < 0)) {
+            if (!is_null($this->container['gateway']) && (mb_strlen($this->container['gateway']) < 0)) {
                 $invalidProperties[] = "invalid value for 'gateway', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['mtu']) && ($this->container['mtu'] > 2147483647)) {
@@ -316,7 +304,7 @@ class NetWork implements ModelInterface, ArrayAccess
     * Gets name
     *  网卡的名称
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -326,7 +314,7 @@ class NetWork implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 网卡的名称
+    * @param string|null $name 网卡的名称
     *
     * @return $this
     */
@@ -340,7 +328,7 @@ class NetWork implements ModelInterface, ArrayAccess
     * Gets ip
     *  该网卡绑定的IP
     *
-    * @return string
+    * @return string|null
     */
     public function getIp()
     {
@@ -350,7 +338,7 @@ class NetWork implements ModelInterface, ArrayAccess
     /**
     * Sets ip
     *
-    * @param string $ip 该网卡绑定的IP
+    * @param string|null $ip 该网卡绑定的IP
     *
     * @return $this
     */
@@ -388,7 +376,7 @@ class NetWork implements ModelInterface, ArrayAccess
     * Gets netmask
     *  掩码
     *
-    * @return string
+    * @return string|null
     */
     public function getNetmask()
     {
@@ -398,7 +386,7 @@ class NetWork implements ModelInterface, ArrayAccess
     /**
     * Sets netmask
     *
-    * @param string $netmask 掩码
+    * @param string|null $netmask 掩码
     *
     * @return $this
     */
@@ -412,7 +400,7 @@ class NetWork implements ModelInterface, ArrayAccess
     * Gets gateway
     *  网关
     *
-    * @return string
+    * @return string|null
     */
     public function getGateway()
     {
@@ -422,7 +410,7 @@ class NetWork implements ModelInterface, ArrayAccess
     /**
     * Sets gateway
     *
-    * @param string $gateway 网关
+    * @param string|null $gateway 网关
     *
     * @return $this
     */
@@ -458,7 +446,7 @@ class NetWork implements ModelInterface, ArrayAccess
 
     /**
     * Gets mac
-    *  Mac地址
+    *  列表中第一个Mac地址必须非空
     *
     * @return string
     */
@@ -470,7 +458,7 @@ class NetWork implements ModelInterface, ArrayAccess
     /**
     * Sets mac
     *
-    * @param string $mac Mac地址
+    * @param string $mac 列表中第一个Mac地址必须非空
     *
     * @return $this
     */

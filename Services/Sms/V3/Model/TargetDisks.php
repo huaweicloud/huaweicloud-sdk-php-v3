@@ -20,7 +20,7 @@ class TargetDisks implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * deviceUse  磁盘类型，普通磁盘，OS所在磁盘，BOOT所在磁盘 BOOT：BOOT设备 OS：系统设备 NORMAL:平常
+    * deviceUse  磁盘类型，仅起提示作用，不作校验 BOOT：BOOT所在磁盘 OS：OS所在磁盘 NORMAL：普通磁盘
     * diskId  磁盘ID,自动创建虚拟机不用设置
     * name  名称，根据磁盘顺序设置为disk X
     * physicalVolumes  物理卷信息
@@ -40,7 +40,7 @@ class TargetDisks implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * deviceUse  磁盘类型，普通磁盘，OS所在磁盘，BOOT所在磁盘 BOOT：BOOT设备 OS：系统设备 NORMAL:平常
+    * deviceUse  磁盘类型，仅起提示作用，不作校验 BOOT：BOOT所在磁盘 OS：OS所在磁盘 NORMAL：普通磁盘
     * diskId  磁盘ID,自动创建虚拟机不用设置
     * name  名称，根据磁盘顺序设置为disk X
     * physicalVolumes  物理卷信息
@@ -81,7 +81,7 @@ class TargetDisks implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * deviceUse  磁盘类型，普通磁盘，OS所在磁盘，BOOT所在磁盘 BOOT：BOOT设备 OS：系统设备 NORMAL:平常
+    * deviceUse  磁盘类型，仅起提示作用，不作校验 BOOT：BOOT所在磁盘 OS：OS所在磁盘 NORMAL：普通磁盘
     * diskId  磁盘ID,自动创建虚拟机不用设置
     * name  名称，根据磁盘顺序设置为disk X
     * physicalVolumes  物理卷信息
@@ -101,7 +101,7 @@ class TargetDisks implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * deviceUse  磁盘类型，普通磁盘，OS所在磁盘，BOOT所在磁盘 BOOT：BOOT设备 OS：系统设备 NORMAL:平常
+    * deviceUse  磁盘类型，仅起提示作用，不作校验 BOOT：BOOT所在磁盘 OS：OS所在磁盘 NORMAL：普通磁盘
     * diskId  磁盘ID,自动创建虚拟机不用设置
     * name  名称，根据磁盘顺序设置为disk X
     * physicalVolumes  物理卷信息
@@ -121,7 +121,7 @@ class TargetDisks implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * deviceUse  磁盘类型，普通磁盘，OS所在磁盘，BOOT所在磁盘 BOOT：BOOT设备 OS：系统设备 NORMAL:平常
+    * deviceUse  磁盘类型，仅起提示作用，不作校验 BOOT：BOOT所在磁盘 OS：OS所在磁盘 NORMAL：普通磁盘
     * diskId  磁盘ID,自动创建虚拟机不用设置
     * name  名称，根据磁盘顺序设置为disk X
     * physicalVolumes  物理卷信息
@@ -244,34 +244,22 @@ class TargetDisks implements ModelInterface, ArrayAccess
             if (!is_null($this->container['diskId']) && (mb_strlen($this->container['diskId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'diskId', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-            if ((mb_strlen($this->container['name']) > 255)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 255)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['name']) < 0)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['physicalVolumes'] === null) {
-            $invalidProperties[] = "'physicalVolumes' can't be null";
-        }
-        if ($this->container['size'] === null) {
-            $invalidProperties[] = "'size' can't be null";
-        }
-            if (($this->container['size'] > 9223372036854775807)) {
+            if (!is_null($this->container['size']) && ($this->container['size'] > 9223372036854775807)) {
                 $invalidProperties[] = "invalid value for 'size', must be smaller than or equal to 9223372036854775807.";
             }
-            if (($this->container['size'] < 0)) {
+            if (!is_null($this->container['size']) && ($this->container['size'] < 0)) {
                 $invalidProperties[] = "invalid value for 'size', must be bigger than or equal to 0.";
             }
-        if ($this->container['usedSize'] === null) {
-            $invalidProperties[] = "'usedSize' can't be null";
-        }
-            if (($this->container['usedSize'] > 9223372036854775807)) {
+            if (!is_null($this->container['usedSize']) && ($this->container['usedSize'] > 9223372036854775807)) {
                 $invalidProperties[] = "invalid value for 'usedSize', must be smaller than or equal to 9223372036854775807.";
             }
-            if (($this->container['usedSize'] < 0)) {
+            if (!is_null($this->container['usedSize']) && ($this->container['usedSize'] < 0)) {
                 $invalidProperties[] = "invalid value for 'usedSize', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -290,7 +278,7 @@ class TargetDisks implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceUse
-    *  磁盘类型，普通磁盘，OS所在磁盘，BOOT所在磁盘 BOOT：BOOT设备 OS：系统设备 NORMAL:平常
+    *  磁盘类型，仅起提示作用，不作校验 BOOT：BOOT所在磁盘 OS：OS所在磁盘 NORMAL：普通磁盘
     *
     * @return string|null
     */
@@ -302,7 +290,7 @@ class TargetDisks implements ModelInterface, ArrayAccess
     /**
     * Sets deviceUse
     *
-    * @param string|null $deviceUse 磁盘类型，普通磁盘，OS所在磁盘，BOOT所在磁盘 BOOT：BOOT设备 OS：系统设备 NORMAL:平常
+    * @param string|null $deviceUse 磁盘类型，仅起提示作用，不作校验 BOOT：BOOT所在磁盘 OS：OS所在磁盘 NORMAL：普通磁盘
     *
     * @return $this
     */
@@ -340,7 +328,7 @@ class TargetDisks implements ModelInterface, ArrayAccess
     * Gets name
     *  名称，根据磁盘顺序设置为disk X
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -350,7 +338,7 @@ class TargetDisks implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 名称，根据磁盘顺序设置为disk X
+    * @param string|null $name 名称，根据磁盘顺序设置为disk X
     *
     * @return $this
     */
@@ -364,7 +352,7 @@ class TargetDisks implements ModelInterface, ArrayAccess
     * Gets physicalVolumes
     *  物理卷信息
     *
-    * @return \HuaweiCloud\SDK\Sms\V3\Model\PhysicalVolumes[]
+    * @return \HuaweiCloud\SDK\Sms\V3\Model\PhysicalVolumes[]|null
     */
     public function getPhysicalVolumes()
     {
@@ -374,7 +362,7 @@ class TargetDisks implements ModelInterface, ArrayAccess
     /**
     * Sets physicalVolumes
     *
-    * @param \HuaweiCloud\SDK\Sms\V3\Model\PhysicalVolumes[] $physicalVolumes 物理卷信息
+    * @param \HuaweiCloud\SDK\Sms\V3\Model\PhysicalVolumes[]|null $physicalVolumes 物理卷信息
     *
     * @return $this
     */
@@ -388,7 +376,7 @@ class TargetDisks implements ModelInterface, ArrayAccess
     * Gets size
     *  大小
     *
-    * @return int
+    * @return int|null
     */
     public function getSize()
     {
@@ -398,7 +386,7 @@ class TargetDisks implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int $size 大小
+    * @param int|null $size 大小
     *
     * @return $this
     */
@@ -412,7 +400,7 @@ class TargetDisks implements ModelInterface, ArrayAccess
     * Gets usedSize
     *  使用大小
     *
-    * @return int
+    * @return int|null
     */
     public function getUsedSize()
     {
@@ -422,7 +410,7 @@ class TargetDisks implements ModelInterface, ArrayAccess
     /**
     * Sets usedSize
     *
-    * @param int $usedSize 使用大小
+    * @param int|null $usedSize 使用大小
     *
     * @return $this
     */

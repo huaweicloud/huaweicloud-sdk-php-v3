@@ -20,142 +20,94 @@ class PutTaskReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  任务名称（用户自定义）
+    * name  任务名称（用户自定义） 仅由中文字符、下划线、短横线、数字、英文大小写字母组成
     * type  任务类型，创建时必选，更新时可选 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
-    * osType  操作系统类型，分为WINDOWS和LINUX，创建时必选，更新时可选
-    * id  迁移任务ID
-    * priority  进程优先级  0：低  1：标准（默认）  2：高
     * regionId  目的端服务器的区域ID
-    * startTargetServer  迁移完成后是否启动目的端服务器  true：启动  false：停止
-    * enterpriseProjectId  企业项目ID
-    * existServer  目的端服务器是否存在。true代表已有目的端服务器，false代表需要新建目的端服务器
-    * migrationIp  目的端服务器的IP地址。  公网迁移时请填写弹性IP地址  专线迁移时请填写私有IP地址
     * regionName  目的端服务器的区域名称
+    * existServer  目的端服务器是否存在。true代表已有目的端服务器，false代表需要新建目的端服务器
+    * migrationIp  目的端服务器的IP地址。 公网迁移时请填写弹性IP地址 专线迁移时请填写私有IP地址 如果use_ipv6是true，则需要满足ipv6的格式，如果use_ipv6是false，则需要满足ipv4的格式
+    * useIpv6  目的端服务器的IP地址是否使用ipv6
+    * usePublicIp  是否为公网
     * speedLimit  限制迁移速率，单位：Mbps
     * projectName  目的端服务器所在项目名称
     * projectId  目的端服务器所在项目ID
+    * enterpriseProject  企业项目ID
+    * imageDiskId  目的端服务器镜像代理磁盘ID
     * vmTemplateId  模板ID
-    * sourceServer  sourceServer
+    * targetDiskIds  目的端服务器磁盘ID数组，用空格分隔，单个id长度不超过255
+    * snapshotIds  目的端的快照ID，id之间\";\"分隔
+    * cutoveredSnapshotIds  割接的快照ID
     * targetServer  targetServer
-    * state  迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
-    * estimateCompleteTime  预估完成时间
-    * connected  连接状态
-    * createDate  任务创建时间
-    * startDate  任务开始时间
-    * finishDate  任务结束时间
-    * migrateSpeed  迁移速率，单位：Mbit/s
-    * errorJson  错误信息
-    * totalTime  任务总耗时
-    * floatIp  暂时保留float,兼容现网老版本的SMS-Agent
-    * remainSeconds  迁移剩余时间（秒）
-    * targetSnapshotId  目的端的快照ID
     * cloneServer  cloneServer
-    * subTasks  任务包含的子任务列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
             'type' => 'string',
-            'osType' => 'string',
-            'id' => 'string',
-            'priority' => 'int',
             'regionId' => 'string',
-            'startTargetServer' => 'bool',
-            'enterpriseProjectId' => 'string',
+            'regionName' => 'string',
             'existServer' => 'bool',
             'migrationIp' => 'string',
-            'regionName' => 'string',
+            'useIpv6' => 'bool',
+            'usePublicIp' => 'bool',
             'speedLimit' => 'int',
             'projectName' => 'string',
             'projectId' => 'string',
+            'enterpriseProject' => 'string',
+            'imageDiskId' => 'string',
             'vmTemplateId' => 'string',
-            'sourceServer' => '\HuaweiCloud\SDK\Sms\V3\Model\PostSourceServerBody',
+            'targetDiskIds' => 'string',
+            'snapshotIds' => 'string',
+            'cutoveredSnapshotIds' => 'string',
             'targetServer' => '\HuaweiCloud\SDK\Sms\V3\Model\TargetServer',
-            'state' => 'string',
-            'estimateCompleteTime' => 'int',
-            'connected' => 'bool',
-            'createDate' => 'int',
-            'startDate' => 'int',
-            'finishDate' => 'int',
-            'migrateSpeed' => 'double',
-            'errorJson' => 'string',
-            'totalTime' => 'int',
-            'floatIp' => 'string',
-            'remainSeconds' => 'int',
-            'targetSnapshotId' => 'string',
-            'cloneServer' => '\HuaweiCloud\SDK\Sms\V3\Model\CloneServer',
-            'subTasks' => '\HuaweiCloud\SDK\Sms\V3\Model\SubTask[]'
+            'cloneServer' => '\HuaweiCloud\SDK\Sms\V3\Model\CloneServer'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  任务名称（用户自定义）
+    * name  任务名称（用户自定义） 仅由中文字符、下划线、短横线、数字、英文大小写字母组成
     * type  任务类型，创建时必选，更新时可选 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
-    * osType  操作系统类型，分为WINDOWS和LINUX，创建时必选，更新时可选
-    * id  迁移任务ID
-    * priority  进程优先级  0：低  1：标准（默认）  2：高
     * regionId  目的端服务器的区域ID
-    * startTargetServer  迁移完成后是否启动目的端服务器  true：启动  false：停止
-    * enterpriseProjectId  企业项目ID
-    * existServer  目的端服务器是否存在。true代表已有目的端服务器，false代表需要新建目的端服务器
-    * migrationIp  目的端服务器的IP地址。  公网迁移时请填写弹性IP地址  专线迁移时请填写私有IP地址
     * regionName  目的端服务器的区域名称
+    * existServer  目的端服务器是否存在。true代表已有目的端服务器，false代表需要新建目的端服务器
+    * migrationIp  目的端服务器的IP地址。 公网迁移时请填写弹性IP地址 专线迁移时请填写私有IP地址 如果use_ipv6是true，则需要满足ipv6的格式，如果use_ipv6是false，则需要满足ipv4的格式
+    * useIpv6  目的端服务器的IP地址是否使用ipv6
+    * usePublicIp  是否为公网
     * speedLimit  限制迁移速率，单位：Mbps
     * projectName  目的端服务器所在项目名称
     * projectId  目的端服务器所在项目ID
+    * enterpriseProject  企业项目ID
+    * imageDiskId  目的端服务器镜像代理磁盘ID
     * vmTemplateId  模板ID
-    * sourceServer  sourceServer
+    * targetDiskIds  目的端服务器磁盘ID数组，用空格分隔，单个id长度不超过255
+    * snapshotIds  目的端的快照ID，id之间\";\"分隔
+    * cutoveredSnapshotIds  割接的快照ID
     * targetServer  targetServer
-    * state  迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
-    * estimateCompleteTime  预估完成时间
-    * connected  连接状态
-    * createDate  任务创建时间
-    * startDate  任务开始时间
-    * finishDate  任务结束时间
-    * migrateSpeed  迁移速率，单位：Mbit/s
-    * errorJson  错误信息
-    * totalTime  任务总耗时
-    * floatIp  暂时保留float,兼容现网老版本的SMS-Agent
-    * remainSeconds  迁移剩余时间（秒）
-    * targetSnapshotId  目的端的快照ID
     * cloneServer  cloneServer
-    * subTasks  任务包含的子任务列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
         'type' => null,
-        'osType' => null,
-        'id' => null,
-        'priority' => 'int32',
         'regionId' => null,
-        'startTargetServer' => null,
-        'enterpriseProjectId' => null,
+        'regionName' => null,
         'existServer' => null,
         'migrationIp' => null,
-        'regionName' => null,
+        'useIpv6' => null,
+        'usePublicIp' => null,
         'speedLimit' => 'int32',
         'projectName' => null,
         'projectId' => null,
+        'enterpriseProject' => null,
+        'imageDiskId' => null,
         'vmTemplateId' => null,
-        'sourceServer' => null,
+        'targetDiskIds' => null,
+        'snapshotIds' => null,
+        'cutoveredSnapshotIds' => null,
         'targetServer' => null,
-        'state' => null,
-        'estimateCompleteTime' => 'int64',
-        'connected' => null,
-        'createDate' => 'int64',
-        'startDate' => 'int64',
-        'finishDate' => 'int64',
-        'migrateSpeed' => 'double',
-        'errorJson' => null,
-        'totalTime' => 'int64',
-        'floatIp' => null,
-        'remainSeconds' => 'int64',
-        'targetSnapshotId' => null,
-        'cloneServer' => null,
-        'subTasks' => null
+        'cloneServer' => null
     ];
 
     /**
@@ -181,212 +133,140 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  任务名称（用户自定义）
+    * name  任务名称（用户自定义） 仅由中文字符、下划线、短横线、数字、英文大小写字母组成
     * type  任务类型，创建时必选，更新时可选 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
-    * osType  操作系统类型，分为WINDOWS和LINUX，创建时必选，更新时可选
-    * id  迁移任务ID
-    * priority  进程优先级  0：低  1：标准（默认）  2：高
     * regionId  目的端服务器的区域ID
-    * startTargetServer  迁移完成后是否启动目的端服务器  true：启动  false：停止
-    * enterpriseProjectId  企业项目ID
-    * existServer  目的端服务器是否存在。true代表已有目的端服务器，false代表需要新建目的端服务器
-    * migrationIp  目的端服务器的IP地址。  公网迁移时请填写弹性IP地址  专线迁移时请填写私有IP地址
     * regionName  目的端服务器的区域名称
+    * existServer  目的端服务器是否存在。true代表已有目的端服务器，false代表需要新建目的端服务器
+    * migrationIp  目的端服务器的IP地址。 公网迁移时请填写弹性IP地址 专线迁移时请填写私有IP地址 如果use_ipv6是true，则需要满足ipv6的格式，如果use_ipv6是false，则需要满足ipv4的格式
+    * useIpv6  目的端服务器的IP地址是否使用ipv6
+    * usePublicIp  是否为公网
     * speedLimit  限制迁移速率，单位：Mbps
     * projectName  目的端服务器所在项目名称
     * projectId  目的端服务器所在项目ID
+    * enterpriseProject  企业项目ID
+    * imageDiskId  目的端服务器镜像代理磁盘ID
     * vmTemplateId  模板ID
-    * sourceServer  sourceServer
+    * targetDiskIds  目的端服务器磁盘ID数组，用空格分隔，单个id长度不超过255
+    * snapshotIds  目的端的快照ID，id之间\";\"分隔
+    * cutoveredSnapshotIds  割接的快照ID
     * targetServer  targetServer
-    * state  迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
-    * estimateCompleteTime  预估完成时间
-    * connected  连接状态
-    * createDate  任务创建时间
-    * startDate  任务开始时间
-    * finishDate  任务结束时间
-    * migrateSpeed  迁移速率，单位：Mbit/s
-    * errorJson  错误信息
-    * totalTime  任务总耗时
-    * floatIp  暂时保留float,兼容现网老版本的SMS-Agent
-    * remainSeconds  迁移剩余时间（秒）
-    * targetSnapshotId  目的端的快照ID
     * cloneServer  cloneServer
-    * subTasks  任务包含的子任务列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
             'type' => 'type',
-            'osType' => 'os_type',
-            'id' => 'id',
-            'priority' => 'priority',
             'regionId' => 'region_id',
-            'startTargetServer' => 'start_target_server',
-            'enterpriseProjectId' => 'enterprise_project_id',
+            'regionName' => 'region_name',
             'existServer' => 'exist_server',
             'migrationIp' => 'migration_ip',
-            'regionName' => 'region_name',
+            'useIpv6' => 'use_ipv6',
+            'usePublicIp' => 'use_public_ip',
             'speedLimit' => 'speed_limit',
             'projectName' => 'project_name',
             'projectId' => 'project_id',
+            'enterpriseProject' => 'enterprise_project',
+            'imageDiskId' => 'image_disk_id',
             'vmTemplateId' => 'vm_template_id',
-            'sourceServer' => 'source_server',
+            'targetDiskIds' => 'target_disk_ids',
+            'snapshotIds' => 'snapshot_ids',
+            'cutoveredSnapshotIds' => 'cutovered_snapshot_ids',
             'targetServer' => 'target_server',
-            'state' => 'state',
-            'estimateCompleteTime' => 'estimate_complete_time',
-            'connected' => 'connected',
-            'createDate' => 'create_date',
-            'startDate' => 'start_date',
-            'finishDate' => 'finish_date',
-            'migrateSpeed' => 'migrate_speed',
-            'errorJson' => 'error_json',
-            'totalTime' => 'total_time',
-            'floatIp' => 'float_ip',
-            'remainSeconds' => 'remain_seconds',
-            'targetSnapshotId' => 'target_snapshot_id',
-            'cloneServer' => 'clone_server',
-            'subTasks' => 'sub_tasks'
+            'cloneServer' => 'clone_server'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  任务名称（用户自定义）
+    * name  任务名称（用户自定义） 仅由中文字符、下划线、短横线、数字、英文大小写字母组成
     * type  任务类型，创建时必选，更新时可选 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
-    * osType  操作系统类型，分为WINDOWS和LINUX，创建时必选，更新时可选
-    * id  迁移任务ID
-    * priority  进程优先级  0：低  1：标准（默认）  2：高
     * regionId  目的端服务器的区域ID
-    * startTargetServer  迁移完成后是否启动目的端服务器  true：启动  false：停止
-    * enterpriseProjectId  企业项目ID
-    * existServer  目的端服务器是否存在。true代表已有目的端服务器，false代表需要新建目的端服务器
-    * migrationIp  目的端服务器的IP地址。  公网迁移时请填写弹性IP地址  专线迁移时请填写私有IP地址
     * regionName  目的端服务器的区域名称
+    * existServer  目的端服务器是否存在。true代表已有目的端服务器，false代表需要新建目的端服务器
+    * migrationIp  目的端服务器的IP地址。 公网迁移时请填写弹性IP地址 专线迁移时请填写私有IP地址 如果use_ipv6是true，则需要满足ipv6的格式，如果use_ipv6是false，则需要满足ipv4的格式
+    * useIpv6  目的端服务器的IP地址是否使用ipv6
+    * usePublicIp  是否为公网
     * speedLimit  限制迁移速率，单位：Mbps
     * projectName  目的端服务器所在项目名称
     * projectId  目的端服务器所在项目ID
+    * enterpriseProject  企业项目ID
+    * imageDiskId  目的端服务器镜像代理磁盘ID
     * vmTemplateId  模板ID
-    * sourceServer  sourceServer
+    * targetDiskIds  目的端服务器磁盘ID数组，用空格分隔，单个id长度不超过255
+    * snapshotIds  目的端的快照ID，id之间\";\"分隔
+    * cutoveredSnapshotIds  割接的快照ID
     * targetServer  targetServer
-    * state  迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
-    * estimateCompleteTime  预估完成时间
-    * connected  连接状态
-    * createDate  任务创建时间
-    * startDate  任务开始时间
-    * finishDate  任务结束时间
-    * migrateSpeed  迁移速率，单位：Mbit/s
-    * errorJson  错误信息
-    * totalTime  任务总耗时
-    * floatIp  暂时保留float,兼容现网老版本的SMS-Agent
-    * remainSeconds  迁移剩余时间（秒）
-    * targetSnapshotId  目的端的快照ID
     * cloneServer  cloneServer
-    * subTasks  任务包含的子任务列表
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
             'type' => 'setType',
-            'osType' => 'setOsType',
-            'id' => 'setId',
-            'priority' => 'setPriority',
             'regionId' => 'setRegionId',
-            'startTargetServer' => 'setStartTargetServer',
-            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'regionName' => 'setRegionName',
             'existServer' => 'setExistServer',
             'migrationIp' => 'setMigrationIp',
-            'regionName' => 'setRegionName',
+            'useIpv6' => 'setUseIpv6',
+            'usePublicIp' => 'setUsePublicIp',
             'speedLimit' => 'setSpeedLimit',
             'projectName' => 'setProjectName',
             'projectId' => 'setProjectId',
+            'enterpriseProject' => 'setEnterpriseProject',
+            'imageDiskId' => 'setImageDiskId',
             'vmTemplateId' => 'setVmTemplateId',
-            'sourceServer' => 'setSourceServer',
+            'targetDiskIds' => 'setTargetDiskIds',
+            'snapshotIds' => 'setSnapshotIds',
+            'cutoveredSnapshotIds' => 'setCutoveredSnapshotIds',
             'targetServer' => 'setTargetServer',
-            'state' => 'setState',
-            'estimateCompleteTime' => 'setEstimateCompleteTime',
-            'connected' => 'setConnected',
-            'createDate' => 'setCreateDate',
-            'startDate' => 'setStartDate',
-            'finishDate' => 'setFinishDate',
-            'migrateSpeed' => 'setMigrateSpeed',
-            'errorJson' => 'setErrorJson',
-            'totalTime' => 'setTotalTime',
-            'floatIp' => 'setFloatIp',
-            'remainSeconds' => 'setRemainSeconds',
-            'targetSnapshotId' => 'setTargetSnapshotId',
-            'cloneServer' => 'setCloneServer',
-            'subTasks' => 'setSubTasks'
+            'cloneServer' => 'setCloneServer'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  任务名称（用户自定义）
+    * name  任务名称（用户自定义） 仅由中文字符、下划线、短横线、数字、英文大小写字母组成
     * type  任务类型，创建时必选，更新时可选 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
-    * osType  操作系统类型，分为WINDOWS和LINUX，创建时必选，更新时可选
-    * id  迁移任务ID
-    * priority  进程优先级  0：低  1：标准（默认）  2：高
     * regionId  目的端服务器的区域ID
-    * startTargetServer  迁移完成后是否启动目的端服务器  true：启动  false：停止
-    * enterpriseProjectId  企业项目ID
-    * existServer  目的端服务器是否存在。true代表已有目的端服务器，false代表需要新建目的端服务器
-    * migrationIp  目的端服务器的IP地址。  公网迁移时请填写弹性IP地址  专线迁移时请填写私有IP地址
     * regionName  目的端服务器的区域名称
+    * existServer  目的端服务器是否存在。true代表已有目的端服务器，false代表需要新建目的端服务器
+    * migrationIp  目的端服务器的IP地址。 公网迁移时请填写弹性IP地址 专线迁移时请填写私有IP地址 如果use_ipv6是true，则需要满足ipv6的格式，如果use_ipv6是false，则需要满足ipv4的格式
+    * useIpv6  目的端服务器的IP地址是否使用ipv6
+    * usePublicIp  是否为公网
     * speedLimit  限制迁移速率，单位：Mbps
     * projectName  目的端服务器所在项目名称
     * projectId  目的端服务器所在项目ID
+    * enterpriseProject  企业项目ID
+    * imageDiskId  目的端服务器镜像代理磁盘ID
     * vmTemplateId  模板ID
-    * sourceServer  sourceServer
+    * targetDiskIds  目的端服务器磁盘ID数组，用空格分隔，单个id长度不超过255
+    * snapshotIds  目的端的快照ID，id之间\";\"分隔
+    * cutoveredSnapshotIds  割接的快照ID
     * targetServer  targetServer
-    * state  迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
-    * estimateCompleteTime  预估完成时间
-    * connected  连接状态
-    * createDate  任务创建时间
-    * startDate  任务开始时间
-    * finishDate  任务结束时间
-    * migrateSpeed  迁移速率，单位：Mbit/s
-    * errorJson  错误信息
-    * totalTime  任务总耗时
-    * floatIp  暂时保留float,兼容现网老版本的SMS-Agent
-    * remainSeconds  迁移剩余时间（秒）
-    * targetSnapshotId  目的端的快照ID
     * cloneServer  cloneServer
-    * subTasks  任务包含的子任务列表
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
             'type' => 'getType',
-            'osType' => 'getOsType',
-            'id' => 'getId',
-            'priority' => 'getPriority',
             'regionId' => 'getRegionId',
-            'startTargetServer' => 'getStartTargetServer',
-            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'regionName' => 'getRegionName',
             'existServer' => 'getExistServer',
             'migrationIp' => 'getMigrationIp',
-            'regionName' => 'getRegionName',
+            'useIpv6' => 'getUseIpv6',
+            'usePublicIp' => 'getUsePublicIp',
             'speedLimit' => 'getSpeedLimit',
             'projectName' => 'getProjectName',
             'projectId' => 'getProjectId',
+            'enterpriseProject' => 'getEnterpriseProject',
+            'imageDiskId' => 'getImageDiskId',
             'vmTemplateId' => 'getVmTemplateId',
-            'sourceServer' => 'getSourceServer',
+            'targetDiskIds' => 'getTargetDiskIds',
+            'snapshotIds' => 'getSnapshotIds',
+            'cutoveredSnapshotIds' => 'getCutoveredSnapshotIds',
             'targetServer' => 'getTargetServer',
-            'state' => 'getState',
-            'estimateCompleteTime' => 'getEstimateCompleteTime',
-            'connected' => 'getConnected',
-            'createDate' => 'getCreateDate',
-            'startDate' => 'getStartDate',
-            'finishDate' => 'getFinishDate',
-            'migrateSpeed' => 'getMigrateSpeed',
-            'errorJson' => 'getErrorJson',
-            'totalTime' => 'getTotalTime',
-            'floatIp' => 'getFloatIp',
-            'remainSeconds' => 'getRemainSeconds',
-            'targetSnapshotId' => 'getTargetSnapshotId',
-            'cloneServer' => 'getCloneServer',
-            'subTasks' => 'getSubTasks'
+            'cloneServer' => 'getCloneServer'
     ];
 
     /**
@@ -431,23 +311,6 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     }
     const TYPE_MIGRATE_FILE = 'MIGRATE_FILE';
     const TYPE_MIGRATE_BLOCK = 'MIGRATE_BLOCK';
-    const OS_TYPE_WINDOWS = 'WINDOWS';
-    const OS_TYPE_LINUX = 'LINUX';
-    const PRIORITY_0 = 0;
-    const PRIORITY_1 = 1;
-    const PRIORITY_2 = 2;
-    const STATE_READY = 'READY';
-    const STATE_RUNNING = 'RUNNING';
-    const STATE_SYNCING = 'SYNCING';
-    const STATE_MIGRATE_SUCCESS = 'MIGRATE_SUCCESS';
-    const STATE_SYNC_SUCCESS = 'SYNC_SUCCESS';
-    const STATE_MIGRATE_FAIL = 'MIGRATE_FAIL';
-    const STATE_SYNC_FAIL = 'SYNC_FAIL';
-    const STATE_ABORTING = 'ABORTING';
-    const STATE_ABORT = 'ABORT';
-    const STATE_SKIPPING = 'SKIPPING';
-    const STATE_DELETING = 'DELETING';
-    const STATE_RESETING = 'RESETING';
     
 
     /**
@@ -460,56 +323,6 @@ class PutTaskReq implements ModelInterface, ArrayAccess
         return [
             self::TYPE_MIGRATE_FILE,
             self::TYPE_MIGRATE_BLOCK,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getOsTypeAllowableValues()
-    {
-        return [
-            self::OS_TYPE_WINDOWS,
-            self::OS_TYPE_LINUX,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getPriorityAllowableValues()
-    {
-        return [
-            self::PRIORITY_0,
-            self::PRIORITY_1,
-            self::PRIORITY_2,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getStateAllowableValues()
-    {
-        return [
-            self::STATE_READY,
-            self::STATE_RUNNING,
-            self::STATE_SYNCING,
-            self::STATE_MIGRATE_SUCCESS,
-            self::STATE_SYNC_SUCCESS,
-            self::STATE_MIGRATE_FAIL,
-            self::STATE_SYNC_FAIL,
-            self::STATE_ABORTING,
-            self::STATE_ABORT,
-            self::STATE_SKIPPING,
-            self::STATE_DELETING,
-            self::STATE_RESETING,
         ];
     }
 
@@ -531,35 +344,23 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['osType'] = isset($data['osType']) ? $data['osType'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
         $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
-        $this->container['startTargetServer'] = isset($data['startTargetServer']) ? $data['startTargetServer'] : null;
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['regionName'] = isset($data['regionName']) ? $data['regionName'] : null;
         $this->container['existServer'] = isset($data['existServer']) ? $data['existServer'] : null;
         $this->container['migrationIp'] = isset($data['migrationIp']) ? $data['migrationIp'] : null;
-        $this->container['regionName'] = isset($data['regionName']) ? $data['regionName'] : null;
+        $this->container['useIpv6'] = isset($data['useIpv6']) ? $data['useIpv6'] : null;
+        $this->container['usePublicIp'] = isset($data['usePublicIp']) ? $data['usePublicIp'] : null;
         $this->container['speedLimit'] = isset($data['speedLimit']) ? $data['speedLimit'] : null;
         $this->container['projectName'] = isset($data['projectName']) ? $data['projectName'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['enterpriseProject'] = isset($data['enterpriseProject']) ? $data['enterpriseProject'] : null;
+        $this->container['imageDiskId'] = isset($data['imageDiskId']) ? $data['imageDiskId'] : null;
         $this->container['vmTemplateId'] = isset($data['vmTemplateId']) ? $data['vmTemplateId'] : null;
-        $this->container['sourceServer'] = isset($data['sourceServer']) ? $data['sourceServer'] : null;
+        $this->container['targetDiskIds'] = isset($data['targetDiskIds']) ? $data['targetDiskIds'] : null;
+        $this->container['snapshotIds'] = isset($data['snapshotIds']) ? $data['snapshotIds'] : null;
+        $this->container['cutoveredSnapshotIds'] = isset($data['cutoveredSnapshotIds']) ? $data['cutoveredSnapshotIds'] : null;
         $this->container['targetServer'] = isset($data['targetServer']) ? $data['targetServer'] : null;
-        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
-        $this->container['estimateCompleteTime'] = isset($data['estimateCompleteTime']) ? $data['estimateCompleteTime'] : null;
-        $this->container['connected'] = isset($data['connected']) ? $data['connected'] : null;
-        $this->container['createDate'] = isset($data['createDate']) ? $data['createDate'] : null;
-        $this->container['startDate'] = isset($data['startDate']) ? $data['startDate'] : null;
-        $this->container['finishDate'] = isset($data['finishDate']) ? $data['finishDate'] : null;
-        $this->container['migrateSpeed'] = isset($data['migrateSpeed']) ? $data['migrateSpeed'] : null;
-        $this->container['errorJson'] = isset($data['errorJson']) ? $data['errorJson'] : null;
-        $this->container['totalTime'] = isset($data['totalTime']) ? $data['totalTime'] : null;
-        $this->container['floatIp'] = isset($data['floatIp']) ? $data['floatIp'] : null;
-        $this->container['remainSeconds'] = isset($data['remainSeconds']) ? $data['remainSeconds'] : null;
-        $this->container['targetSnapshotId'] = isset($data['targetSnapshotId']) ? $data['targetSnapshotId'] : null;
         $this->container['cloneServer'] = isset($data['cloneServer']) ? $data['cloneServer'] : null;
-        $this->container['subTasks'] = isset($data['subTasks']) ? $data['subTasks'] : null;
     }
 
     /**
@@ -570,11 +371,14 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 255)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['name']) && !preg_match("/^[A-Za-z0-9_\\-\\u4e00-\\u9fa5]{1,64}$/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[A-Za-z0-9_\\-\\u4e00-\\u9fa5]{1,64}$/.";
             }
             $allowedValues = $this->getTypeAllowableValues();
                 if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
@@ -590,51 +394,11 @@ class PutTaskReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 0)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
             }
-            $allowedValues = $this->getOsTypeAllowableValues();
-                if (!is_null($this->container['osType']) && !in_array($this->container['osType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'osType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 255)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 0)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
-            }
-            $allowedValues = $this->getPriorityAllowableValues();
-                if (!is_null($this->container['priority']) && !in_array($this->container['priority'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'priority', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if (!is_null($this->container['priority']) && ($this->container['priority'] > 2)) {
-                $invalidProperties[] = "invalid value for 'priority', must be smaller than or equal to 2.";
-            }
-            if (!is_null($this->container['priority']) && ($this->container['priority'] < 0)) {
-                $invalidProperties[] = "invalid value for 'priority', must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) > 255)) {
                 $invalidProperties[] = "invalid value for 'regionId', the character length must be smaller than or equal to 255.";
             }
             if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'regionId', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 255)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['migrationIp']) && (mb_strlen($this->container['migrationIp']) > 255)) {
-                $invalidProperties[] = "invalid value for 'migrationIp', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['migrationIp']) && (mb_strlen($this->container['migrationIp']) < 0)) {
-                $invalidProperties[] = "invalid value for 'migrationIp', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['regionName']) && (mb_strlen($this->container['regionName']) > 255)) {
                 $invalidProperties[] = "invalid value for 'regionName', the character length must be smaller than or equal to 255.";
@@ -642,8 +406,14 @@ class PutTaskReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['regionName']) && (mb_strlen($this->container['regionName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'regionName', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['speedLimit']) && ($this->container['speedLimit'] > 10000)) {
-                $invalidProperties[] = "invalid value for 'speedLimit', must be smaller than or equal to 10000.";
+            if (!is_null($this->container['migrationIp']) && (mb_strlen($this->container['migrationIp']) > 255)) {
+                $invalidProperties[] = "invalid value for 'migrationIp', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['migrationIp']) && (mb_strlen($this->container['migrationIp']) < 0)) {
+                $invalidProperties[] = "invalid value for 'migrationIp', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['speedLimit']) && ($this->container['speedLimit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'speedLimit', must be smaller than or equal to 1000.";
             }
             if (!is_null($this->container['speedLimit']) && ($this->container['speedLimit'] < 0)) {
                 $invalidProperties[] = "invalid value for 'speedLimit', must be bigger than or equal to 0.";
@@ -660,79 +430,41 @@ class PutTaskReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['vmTemplateId']) && (mb_strlen($this->container['vmTemplateId']) > 255)) {
-                $invalidProperties[] = "invalid value for 'vmTemplateId', the character length must be smaller than or equal to 255.";
+            if (!is_null($this->container['enterpriseProject']) && (mb_strlen($this->container['enterpriseProject']) > 36)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProject', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['enterpriseProject']) && (mb_strlen($this->container['enterpriseProject']) < 0)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProject', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['imageDiskId']) && (mb_strlen($this->container['imageDiskId']) > 255)) {
+                $invalidProperties[] = "invalid value for 'imageDiskId', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['imageDiskId']) && (mb_strlen($this->container['imageDiskId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'imageDiskId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['vmTemplateId']) && (mb_strlen($this->container['vmTemplateId']) > 100)) {
+                $invalidProperties[] = "invalid value for 'vmTemplateId', the character length must be smaller than or equal to 100.";
             }
             if (!is_null($this->container['vmTemplateId']) && (mb_strlen($this->container['vmTemplateId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'vmTemplateId', the character length must be bigger than or equal to 0.";
             }
-            $allowedValues = $this->getStateAllowableValues();
-                if (!is_null($this->container['state']) && !in_array($this->container['state'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'state', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if (!is_null($this->container['targetDiskIds']) && (mb_strlen($this->container['targetDiskIds']) > 16384)) {
+                $invalidProperties[] = "invalid value for 'targetDiskIds', the character length must be smaller than or equal to 16384.";
             }
-
-            if (!is_null($this->container['estimateCompleteTime']) && ($this->container['estimateCompleteTime'] > 9223372036854775807)) {
-                $invalidProperties[] = "invalid value for 'estimateCompleteTime', must be smaller than or equal to 9223372036854775807.";
+            if (!is_null($this->container['targetDiskIds']) && (mb_strlen($this->container['targetDiskIds']) < 0)) {
+                $invalidProperties[] = "invalid value for 'targetDiskIds', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['estimateCompleteTime']) && ($this->container['estimateCompleteTime'] < 0)) {
-                $invalidProperties[] = "invalid value for 'estimateCompleteTime', must be bigger than or equal to 0.";
+            if (!is_null($this->container['snapshotIds']) && (mb_strlen($this->container['snapshotIds']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'snapshotIds', the character length must be smaller than or equal to 1024.";
             }
-            if (!is_null($this->container['createDate']) && ($this->container['createDate'] > 9223372036854775807)) {
-                $invalidProperties[] = "invalid value for 'createDate', must be smaller than or equal to 9223372036854775807.";
+            if (!is_null($this->container['snapshotIds']) && (mb_strlen($this->container['snapshotIds']) < 0)) {
+                $invalidProperties[] = "invalid value for 'snapshotIds', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['createDate']) && ($this->container['createDate'] < 0)) {
-                $invalidProperties[] = "invalid value for 'createDate', must be bigger than or equal to 0.";
+            if (!is_null($this->container['cutoveredSnapshotIds']) && (mb_strlen($this->container['cutoveredSnapshotIds']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'cutoveredSnapshotIds', the character length must be smaller than or equal to 1024.";
             }
-            if (!is_null($this->container['startDate']) && ($this->container['startDate'] > 9223372036854775807)) {
-                $invalidProperties[] = "invalid value for 'startDate', must be smaller than or equal to 9223372036854775807.";
-            }
-            if (!is_null($this->container['startDate']) && ($this->container['startDate'] < 0)) {
-                $invalidProperties[] = "invalid value for 'startDate', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['finishDate']) && ($this->container['finishDate'] > 9223372036854775807)) {
-                $invalidProperties[] = "invalid value for 'finishDate', must be smaller than or equal to 9223372036854775807.";
-            }
-            if (!is_null($this->container['finishDate']) && ($this->container['finishDate'] < 0)) {
-                $invalidProperties[] = "invalid value for 'finishDate', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['migrateSpeed']) && ($this->container['migrateSpeed'] > 1E+4)) {
-                $invalidProperties[] = "invalid value for 'migrateSpeed', must be smaller than or equal to 1E+4.";
-            }
-            if (!is_null($this->container['migrateSpeed']) && ($this->container['migrateSpeed'] < 0)) {
-                $invalidProperties[] = "invalid value for 'migrateSpeed', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['errorJson']) && (mb_strlen($this->container['errorJson']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'errorJson', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['errorJson']) && (mb_strlen($this->container['errorJson']) < 0)) {
-                $invalidProperties[] = "invalid value for 'errorJson', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['totalTime']) && ($this->container['totalTime'] > 9223372036854775807)) {
-                $invalidProperties[] = "invalid value for 'totalTime', must be smaller than or equal to 9223372036854775807.";
-            }
-            if (!is_null($this->container['totalTime']) && ($this->container['totalTime'] < 0)) {
-                $invalidProperties[] = "invalid value for 'totalTime', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['floatIp']) && (mb_strlen($this->container['floatIp']) > 255)) {
-                $invalidProperties[] = "invalid value for 'floatIp', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['floatIp']) && (mb_strlen($this->container['floatIp']) < 0)) {
-                $invalidProperties[] = "invalid value for 'floatIp', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['remainSeconds']) && ($this->container['remainSeconds'] > 9223372036854775807)) {
-                $invalidProperties[] = "invalid value for 'remainSeconds', must be smaller than or equal to 9223372036854775807.";
-            }
-            if (!is_null($this->container['remainSeconds']) && ($this->container['remainSeconds'] < 0)) {
-                $invalidProperties[] = "invalid value for 'remainSeconds', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['targetSnapshotId']) && (mb_strlen($this->container['targetSnapshotId']) > 255)) {
-                $invalidProperties[] = "invalid value for 'targetSnapshotId', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['targetSnapshotId']) && (mb_strlen($this->container['targetSnapshotId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'targetSnapshotId', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['cutoveredSnapshotIds']) && (mb_strlen($this->container['cutoveredSnapshotIds']) < 0)) {
+                $invalidProperties[] = "invalid value for 'cutoveredSnapshotIds', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -750,7 +482,7 @@ class PutTaskReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  任务名称（用户自定义）
+    *  任务名称（用户自定义） 仅由中文字符、下划线、短横线、数字、英文大小写字母组成
     *
     * @return string|null
     */
@@ -762,7 +494,7 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 任务名称（用户自定义）
+    * @param string|null $name 任务名称（用户自定义） 仅由中文字符、下划线、短横线、数字、英文大小写字母组成
     *
     * @return $this
     */
@@ -797,78 +529,6 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets osType
-    *  操作系统类型，分为WINDOWS和LINUX，创建时必选，更新时可选
-    *
-    * @return string|null
-    */
-    public function getOsType()
-    {
-        return $this->container['osType'];
-    }
-
-    /**
-    * Sets osType
-    *
-    * @param string|null $osType 操作系统类型，分为WINDOWS和LINUX，创建时必选，更新时可选
-    *
-    * @return $this
-    */
-    public function setOsType($osType)
-    {
-        $this->container['osType'] = $osType;
-        return $this;
-    }
-
-    /**
-    * Gets id
-    *  迁移任务ID
-    *
-    * @return string|null
-    */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-    * Sets id
-    *
-    * @param string|null $id 迁移任务ID
-    *
-    * @return $this
-    */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-        return $this;
-    }
-
-    /**
-    * Gets priority
-    *  进程优先级  0：低  1：标准（默认）  2：高
-    *
-    * @return int|null
-    */
-    public function getPriority()
-    {
-        return $this->container['priority'];
-    }
-
-    /**
-    * Sets priority
-    *
-    * @param int|null $priority 进程优先级  0：低  1：标准（默认）  2：高
-    *
-    * @return $this
-    */
-    public function setPriority($priority)
-    {
-        $this->container['priority'] = $priority;
-        return $this;
-    }
-
-    /**
     * Gets regionId
     *  目的端服务器的区域ID
     *
@@ -893,50 +553,26 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets startTargetServer
-    *  迁移完成后是否启动目的端服务器  true：启动  false：停止
-    *
-    * @return bool|null
-    */
-    public function getStartTargetServer()
-    {
-        return $this->container['startTargetServer'];
-    }
-
-    /**
-    * Sets startTargetServer
-    *
-    * @param bool|null $startTargetServer 迁移完成后是否启动目的端服务器  true：启动  false：停止
-    *
-    * @return $this
-    */
-    public function setStartTargetServer($startTargetServer)
-    {
-        $this->container['startTargetServer'] = $startTargetServer;
-        return $this;
-    }
-
-    /**
-    * Gets enterpriseProjectId
-    *  企业项目ID
+    * Gets regionName
+    *  目的端服务器的区域名称
     *
     * @return string|null
     */
-    public function getEnterpriseProjectId()
+    public function getRegionName()
     {
-        return $this->container['enterpriseProjectId'];
+        return $this->container['regionName'];
     }
 
     /**
-    * Sets enterpriseProjectId
+    * Sets regionName
     *
-    * @param string|null $enterpriseProjectId 企业项目ID
+    * @param string|null $regionName 目的端服务器的区域名称
     *
     * @return $this
     */
-    public function setEnterpriseProjectId($enterpriseProjectId)
+    public function setRegionName($regionName)
     {
-        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        $this->container['regionName'] = $regionName;
         return $this;
     }
 
@@ -966,7 +602,7 @@ class PutTaskReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets migrationIp
-    *  目的端服务器的IP地址。  公网迁移时请填写弹性IP地址  专线迁移时请填写私有IP地址
+    *  目的端服务器的IP地址。 公网迁移时请填写弹性IP地址 专线迁移时请填写私有IP地址 如果use_ipv6是true，则需要满足ipv6的格式，如果use_ipv6是false，则需要满足ipv4的格式
     *
     * @return string|null
     */
@@ -978,7 +614,7 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     /**
     * Sets migrationIp
     *
-    * @param string|null $migrationIp 目的端服务器的IP地址。  公网迁移时请填写弹性IP地址  专线迁移时请填写私有IP地址
+    * @param string|null $migrationIp 目的端服务器的IP地址。 公网迁移时请填写弹性IP地址 专线迁移时请填写私有IP地址 如果use_ipv6是true，则需要满足ipv6的格式，如果use_ipv6是false，则需要满足ipv4的格式
     *
     * @return $this
     */
@@ -989,26 +625,50 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets regionName
-    *  目的端服务器的区域名称
+    * Gets useIpv6
+    *  目的端服务器的IP地址是否使用ipv6
     *
-    * @return string|null
+    * @return bool|null
     */
-    public function getRegionName()
+    public function getUseIpv6()
     {
-        return $this->container['regionName'];
+        return $this->container['useIpv6'];
     }
 
     /**
-    * Sets regionName
+    * Sets useIpv6
     *
-    * @param string|null $regionName 目的端服务器的区域名称
+    * @param bool|null $useIpv6 目的端服务器的IP地址是否使用ipv6
     *
     * @return $this
     */
-    public function setRegionName($regionName)
+    public function setUseIpv6($useIpv6)
     {
-        $this->container['regionName'] = $regionName;
+        $this->container['useIpv6'] = $useIpv6;
+        return $this;
+    }
+
+    /**
+    * Gets usePublicIp
+    *  是否为公网
+    *
+    * @return bool|null
+    */
+    public function getUsePublicIp()
+    {
+        return $this->container['usePublicIp'];
+    }
+
+    /**
+    * Sets usePublicIp
+    *
+    * @param bool|null $usePublicIp 是否为公网
+    *
+    * @return $this
+    */
+    public function setUsePublicIp($usePublicIp)
+    {
+        $this->container['usePublicIp'] = $usePublicIp;
         return $this;
     }
 
@@ -1085,6 +745,54 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets enterpriseProject
+    *  企业项目ID
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProject()
+    {
+        return $this->container['enterpriseProject'];
+    }
+
+    /**
+    * Sets enterpriseProject
+    *
+    * @param string|null $enterpriseProject 企业项目ID
+    *
+    * @return $this
+    */
+    public function setEnterpriseProject($enterpriseProject)
+    {
+        $this->container['enterpriseProject'] = $enterpriseProject;
+        return $this;
+    }
+
+    /**
+    * Gets imageDiskId
+    *  目的端服务器镜像代理磁盘ID
+    *
+    * @return string|null
+    */
+    public function getImageDiskId()
+    {
+        return $this->container['imageDiskId'];
+    }
+
+    /**
+    * Sets imageDiskId
+    *
+    * @param string|null $imageDiskId 目的端服务器镜像代理磁盘ID
+    *
+    * @return $this
+    */
+    public function setImageDiskId($imageDiskId)
+    {
+        $this->container['imageDiskId'] = $imageDiskId;
+        return $this;
+    }
+
+    /**
     * Gets vmTemplateId
     *  模板ID
     *
@@ -1109,26 +817,74 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets sourceServer
-    *  sourceServer
+    * Gets targetDiskIds
+    *  目的端服务器磁盘ID数组，用空格分隔，单个id长度不超过255
     *
-    * @return \HuaweiCloud\SDK\Sms\V3\Model\PostSourceServerBody|null
+    * @return string|null
     */
-    public function getSourceServer()
+    public function getTargetDiskIds()
     {
-        return $this->container['sourceServer'];
+        return $this->container['targetDiskIds'];
     }
 
     /**
-    * Sets sourceServer
+    * Sets targetDiskIds
     *
-    * @param \HuaweiCloud\SDK\Sms\V3\Model\PostSourceServerBody|null $sourceServer sourceServer
+    * @param string|null $targetDiskIds 目的端服务器磁盘ID数组，用空格分隔，单个id长度不超过255
     *
     * @return $this
     */
-    public function setSourceServer($sourceServer)
+    public function setTargetDiskIds($targetDiskIds)
     {
-        $this->container['sourceServer'] = $sourceServer;
+        $this->container['targetDiskIds'] = $targetDiskIds;
+        return $this;
+    }
+
+    /**
+    * Gets snapshotIds
+    *  目的端的快照ID，id之间\";\"分隔
+    *
+    * @return string|null
+    */
+    public function getSnapshotIds()
+    {
+        return $this->container['snapshotIds'];
+    }
+
+    /**
+    * Sets snapshotIds
+    *
+    * @param string|null $snapshotIds 目的端的快照ID，id之间\";\"分隔
+    *
+    * @return $this
+    */
+    public function setSnapshotIds($snapshotIds)
+    {
+        $this->container['snapshotIds'] = $snapshotIds;
+        return $this;
+    }
+
+    /**
+    * Gets cutoveredSnapshotIds
+    *  割接的快照ID
+    *
+    * @return string|null
+    */
+    public function getCutoveredSnapshotIds()
+    {
+        return $this->container['cutoveredSnapshotIds'];
+    }
+
+    /**
+    * Sets cutoveredSnapshotIds
+    *
+    * @param string|null $cutoveredSnapshotIds 割接的快照ID
+    *
+    * @return $this
+    */
+    public function setCutoveredSnapshotIds($cutoveredSnapshotIds)
+    {
+        $this->container['cutoveredSnapshotIds'] = $cutoveredSnapshotIds;
         return $this;
     }
 
@@ -1157,294 +913,6 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets state
-    *  迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
-    *
-    * @return string|null
-    */
-    public function getState()
-    {
-        return $this->container['state'];
-    }
-
-    /**
-    * Sets state
-    *
-    * @param string|null $state 迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
-    *
-    * @return $this
-    */
-    public function setState($state)
-    {
-        $this->container['state'] = $state;
-        return $this;
-    }
-
-    /**
-    * Gets estimateCompleteTime
-    *  预估完成时间
-    *
-    * @return int|null
-    */
-    public function getEstimateCompleteTime()
-    {
-        return $this->container['estimateCompleteTime'];
-    }
-
-    /**
-    * Sets estimateCompleteTime
-    *
-    * @param int|null $estimateCompleteTime 预估完成时间
-    *
-    * @return $this
-    */
-    public function setEstimateCompleteTime($estimateCompleteTime)
-    {
-        $this->container['estimateCompleteTime'] = $estimateCompleteTime;
-        return $this;
-    }
-
-    /**
-    * Gets connected
-    *  连接状态
-    *
-    * @return bool|null
-    */
-    public function getConnected()
-    {
-        return $this->container['connected'];
-    }
-
-    /**
-    * Sets connected
-    *
-    * @param bool|null $connected 连接状态
-    *
-    * @return $this
-    */
-    public function setConnected($connected)
-    {
-        $this->container['connected'] = $connected;
-        return $this;
-    }
-
-    /**
-    * Gets createDate
-    *  任务创建时间
-    *
-    * @return int|null
-    */
-    public function getCreateDate()
-    {
-        return $this->container['createDate'];
-    }
-
-    /**
-    * Sets createDate
-    *
-    * @param int|null $createDate 任务创建时间
-    *
-    * @return $this
-    */
-    public function setCreateDate($createDate)
-    {
-        $this->container['createDate'] = $createDate;
-        return $this;
-    }
-
-    /**
-    * Gets startDate
-    *  任务开始时间
-    *
-    * @return int|null
-    */
-    public function getStartDate()
-    {
-        return $this->container['startDate'];
-    }
-
-    /**
-    * Sets startDate
-    *
-    * @param int|null $startDate 任务开始时间
-    *
-    * @return $this
-    */
-    public function setStartDate($startDate)
-    {
-        $this->container['startDate'] = $startDate;
-        return $this;
-    }
-
-    /**
-    * Gets finishDate
-    *  任务结束时间
-    *
-    * @return int|null
-    */
-    public function getFinishDate()
-    {
-        return $this->container['finishDate'];
-    }
-
-    /**
-    * Sets finishDate
-    *
-    * @param int|null $finishDate 任务结束时间
-    *
-    * @return $this
-    */
-    public function setFinishDate($finishDate)
-    {
-        $this->container['finishDate'] = $finishDate;
-        return $this;
-    }
-
-    /**
-    * Gets migrateSpeed
-    *  迁移速率，单位：Mbit/s
-    *
-    * @return double|null
-    */
-    public function getMigrateSpeed()
-    {
-        return $this->container['migrateSpeed'];
-    }
-
-    /**
-    * Sets migrateSpeed
-    *
-    * @param double|null $migrateSpeed 迁移速率，单位：Mbit/s
-    *
-    * @return $this
-    */
-    public function setMigrateSpeed($migrateSpeed)
-    {
-        $this->container['migrateSpeed'] = $migrateSpeed;
-        return $this;
-    }
-
-    /**
-    * Gets errorJson
-    *  错误信息
-    *
-    * @return string|null
-    */
-    public function getErrorJson()
-    {
-        return $this->container['errorJson'];
-    }
-
-    /**
-    * Sets errorJson
-    *
-    * @param string|null $errorJson 错误信息
-    *
-    * @return $this
-    */
-    public function setErrorJson($errorJson)
-    {
-        $this->container['errorJson'] = $errorJson;
-        return $this;
-    }
-
-    /**
-    * Gets totalTime
-    *  任务总耗时
-    *
-    * @return int|null
-    */
-    public function getTotalTime()
-    {
-        return $this->container['totalTime'];
-    }
-
-    /**
-    * Sets totalTime
-    *
-    * @param int|null $totalTime 任务总耗时
-    *
-    * @return $this
-    */
-    public function setTotalTime($totalTime)
-    {
-        $this->container['totalTime'] = $totalTime;
-        return $this;
-    }
-
-    /**
-    * Gets floatIp
-    *  暂时保留float,兼容现网老版本的SMS-Agent
-    *
-    * @return string|null
-    */
-    public function getFloatIp()
-    {
-        return $this->container['floatIp'];
-    }
-
-    /**
-    * Sets floatIp
-    *
-    * @param string|null $floatIp 暂时保留float,兼容现网老版本的SMS-Agent
-    *
-    * @return $this
-    */
-    public function setFloatIp($floatIp)
-    {
-        $this->container['floatIp'] = $floatIp;
-        return $this;
-    }
-
-    /**
-    * Gets remainSeconds
-    *  迁移剩余时间（秒）
-    *
-    * @return int|null
-    */
-    public function getRemainSeconds()
-    {
-        return $this->container['remainSeconds'];
-    }
-
-    /**
-    * Sets remainSeconds
-    *
-    * @param int|null $remainSeconds 迁移剩余时间（秒）
-    *
-    * @return $this
-    */
-    public function setRemainSeconds($remainSeconds)
-    {
-        $this->container['remainSeconds'] = $remainSeconds;
-        return $this;
-    }
-
-    /**
-    * Gets targetSnapshotId
-    *  目的端的快照ID
-    *
-    * @return string|null
-    */
-    public function getTargetSnapshotId()
-    {
-        return $this->container['targetSnapshotId'];
-    }
-
-    /**
-    * Sets targetSnapshotId
-    *
-    * @param string|null $targetSnapshotId 目的端的快照ID
-    *
-    * @return $this
-    */
-    public function setTargetSnapshotId($targetSnapshotId)
-    {
-        $this->container['targetSnapshotId'] = $targetSnapshotId;
-        return $this;
-    }
-
-    /**
     * Gets cloneServer
     *  cloneServer
     *
@@ -1465,30 +933,6 @@ class PutTaskReq implements ModelInterface, ArrayAccess
     public function setCloneServer($cloneServer)
     {
         $this->container['cloneServer'] = $cloneServer;
-        return $this;
-    }
-
-    /**
-    * Gets subTasks
-    *  任务包含的子任务列表
-    *
-    * @return \HuaweiCloud\SDK\Sms\V3\Model\SubTask[]|null
-    */
-    public function getSubTasks()
-    {
-        return $this->container['subTasks'];
-    }
-
-    /**
-    * Sets subTasks
-    *
-    * @param \HuaweiCloud\SDK\Sms\V3\Model\SubTask[]|null $subTasks 任务包含的子任务列表
-    *
-    * @return $this
-    */
-    public function setSubTasks($subTasks)
-    {
-        $this->container['subTasks'] = $subTasks;
         return $this;
     }
 

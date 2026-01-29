@@ -158,6 +158,9 @@ class DeletetemplatesReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['ids'] === null) {
+            $invalidProperties[] = "'ids' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class DeletetemplatesReq implements ModelInterface, ArrayAccess
     * Gets ids
     *  需要删除的模板ID
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getIds()
     {
@@ -186,7 +189,7 @@ class DeletetemplatesReq implements ModelInterface, ArrayAccess
     /**
     * Sets ids
     *
-    * @param string[]|null $ids 需要删除的模板ID
+    * @param string[] $ids 需要删除的模板ID
     *
     * @return $this
     */

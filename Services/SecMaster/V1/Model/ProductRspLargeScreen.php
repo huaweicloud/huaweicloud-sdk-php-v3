@@ -20,7 +20,7 @@ class ProductRspLargeScreen implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * cloudServiceType  云服务产品的主服务类型，云脑默认为：hws.service.type.sa
+    * cloudServiceType  云服务产品的主服务类型，云脑默认为：xxx.service.type.sa
     * resourceType  资源类型编码
     * resourceSpecCode  资源规格编码
     * resourceSizeMeasureId  资源容量度量标识
@@ -42,7 +42,7 @@ class ProductRspLargeScreen implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * cloudServiceType  云服务产品的主服务类型，云脑默认为：hws.service.type.sa
+    * cloudServiceType  云服务产品的主服务类型，云脑默认为：xxx.service.type.sa
     * resourceType  资源类型编码
     * resourceSpecCode  资源规格编码
     * resourceSizeMeasureId  资源容量度量标识
@@ -85,7 +85,7 @@ class ProductRspLargeScreen implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * cloudServiceType  云服务产品的主服务类型，云脑默认为：hws.service.type.sa
+    * cloudServiceType  云服务产品的主服务类型，云脑默认为：xxx.service.type.sa
     * resourceType  资源类型编码
     * resourceSpecCode  资源规格编码
     * resourceSizeMeasureId  资源容量度量标识
@@ -107,7 +107,7 @@ class ProductRspLargeScreen implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * cloudServiceType  云服务产品的主服务类型，云脑默认为：hws.service.type.sa
+    * cloudServiceType  云服务产品的主服务类型，云脑默认为：xxx.service.type.sa
     * resourceType  资源类型编码
     * resourceSpecCode  资源规格编码
     * resourceSizeMeasureId  资源容量度量标识
@@ -129,7 +129,7 @@ class ProductRspLargeScreen implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * cloudServiceType  云服务产品的主服务类型，云脑默认为：hws.service.type.sa
+    * cloudServiceType  云服务产品的主服务类型，云脑默认为：xxx.service.type.sa
     * resourceType  资源类型编码
     * resourceSpecCode  资源规格编码
     * resourceSizeMeasureId  资源容量度量标识
@@ -282,7 +282,7 @@ class ProductRspLargeScreen implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudServiceType
-    *  云服务产品的主服务类型，云脑默认为：hws.service.type.sa
+    *  云服务产品的主服务类型，云脑默认为：xxx.service.type.sa
     *
     * @return string|null
     */
@@ -294,7 +294,7 @@ class ProductRspLargeScreen implements ModelInterface, ArrayAccess
     /**
     * Sets cloudServiceType
     *
-    * @param string|null $cloudServiceType 云服务产品的主服务类型，云脑默认为：hws.service.type.sa
+    * @param string|null $cloudServiceType 云服务产品的主服务类型，云脑默认为：xxx.service.type.sa
     *
     * @return $this
     */

@@ -191,22 +191,16 @@ class PutDisk implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-            if ((mb_strlen($this->container['id']) > 255)) {
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 255)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['id']) < 0)) {
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 0)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['adjustSize'] === null) {
-            $invalidProperties[] = "'adjustSize' can't be null";
-        }
-            if (($this->container['adjustSize'] > 9223372036854775807)) {
+            if (!is_null($this->container['adjustSize']) && ($this->container['adjustSize'] > 9223372036854775807)) {
                 $invalidProperties[] = "invalid value for 'adjustSize', must be smaller than or equal to 9223372036854775807.";
             }
-            if (($this->container['adjustSize'] < 0)) {
+            if (!is_null($this->container['adjustSize']) && ($this->container['adjustSize'] < 0)) {
                 $invalidProperties[] = "invalid value for 'adjustSize', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -251,7 +245,7 @@ class PutDisk implements ModelInterface, ArrayAccess
     * Gets id
     *  磁盘ID
     *
-    * @return string
+    * @return string|null
     */
     public function getId()
     {
@@ -261,7 +255,7 @@ class PutDisk implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 磁盘ID
+    * @param string|null $id 磁盘ID
     *
     * @return $this
     */
@@ -275,7 +269,7 @@ class PutDisk implements ModelInterface, ArrayAccess
     * Gets adjustSize
     *  调整大小
     *
-    * @return int
+    * @return int|null
     */
     public function getAdjustSize()
     {
@@ -285,7 +279,7 @@ class PutDisk implements ModelInterface, ArrayAccess
     /**
     * Sets adjustSize
     *
-    * @param int $adjustSize 调整大小
+    * @param int|null $adjustSize 调整大小
     *
     * @return $this
     */

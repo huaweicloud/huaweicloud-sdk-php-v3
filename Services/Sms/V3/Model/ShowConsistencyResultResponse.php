@@ -27,7 +27,7 @@ class ShowConsistencyResultResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resultList' => '\HuaweiCloud\SDK\Sms\V3\Model\ConsistencyResultRequestBodyResultList[]',
+            'resultList' => 'string[]',
             'taskId' => 'string'
     ];
 
@@ -170,6 +170,12 @@ class ShowConsistencyResultResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['taskId']) && (mb_strlen($this->container['taskId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'taskId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['taskId']) && (mb_strlen($this->container['taskId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'taskId', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -188,7 +194,7 @@ class ShowConsistencyResultResponse implements ModelInterface, ArrayAccess
     * Gets resultList
     *  一致性校验结果列表
     *
-    * @return \HuaweiCloud\SDK\Sms\V3\Model\ConsistencyResultRequestBodyResultList[]|null
+    * @return string[]|null
     */
     public function getResultList()
     {
@@ -198,7 +204,7 @@ class ShowConsistencyResultResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resultList
     *
-    * @param \HuaweiCloud\SDK\Sms\V3\Model\ConsistencyResultRequestBodyResultList[]|null $resultList 一致性校验结果列表
+    * @param string[]|null $resultList 一致性校验结果列表
     *
     * @return $this
     */

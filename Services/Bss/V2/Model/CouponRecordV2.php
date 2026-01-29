@@ -21,7 +21,7 @@ class CouponRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  该记录的ID。
-    * operationType  操作类型。 1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收
+    * operationType  操作类型 1：发放，2：手动回收，3：解绑自动回收，4：过期回收，5：退订回收，6：退款充值撤销，7：建立关联回收， 8：切换关联模式自动回收，9：云经销商转移。
     * quotaId  额度ID。
     * quotaType  额度类型。 0：代金券额度1：现金券额度
     * couponId  代金券ID。
@@ -49,7 +49,7 @@ class CouponRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  该记录的ID。
-    * operationType  操作类型。 1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收
+    * operationType  操作类型 1：发放，2：手动回收，3：解绑自动回收，4：过期回收，5：退订回收，6：退款充值撤销，7：建立关联回收， 8：切换关联模式自动回收，9：云经销商转移。
     * quotaId  额度ID。
     * quotaType  额度类型。 0：代金券额度1：现金券额度
     * couponId  代金券ID。
@@ -98,7 +98,7 @@ class CouponRecordV2 implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  该记录的ID。
-    * operationType  操作类型。 1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收
+    * operationType  操作类型 1：发放，2：手动回收，3：解绑自动回收，4：过期回收，5：退订回收，6：退款充值撤销，7：建立关联回收， 8：切换关联模式自动回收，9：云经销商转移。
     * quotaId  额度ID。
     * quotaType  额度类型。 0：代金券额度1：现金券额度
     * couponId  代金券ID。
@@ -126,7 +126,7 @@ class CouponRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  该记录的ID。
-    * operationType  操作类型。 1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收
+    * operationType  操作类型 1：发放，2：手动回收，3：解绑自动回收，4：过期回收，5：退订回收，6：退款充值撤销，7：建立关联回收， 8：切换关联模式自动回收，9：云经销商转移。
     * quotaId  额度ID。
     * quotaType  额度类型。 0：代金券额度1：现金券额度
     * couponId  代金券ID。
@@ -154,7 +154,7 @@ class CouponRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  该记录的ID。
-    * operationType  操作类型。 1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收
+    * operationType  操作类型 1：发放，2：手动回收，3：解绑自动回收，4：过期回收，5：退订回收，6：退款充值撤销，7：建立关联回收， 8：切换关联模式自动回收，9：云经销商转移。
     * quotaId  额度ID。
     * quotaType  额度类型。 0：代金券额度1：现金券额度
     * couponId  代金券ID。
@@ -297,7 +297,7 @@ class CouponRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets operationType
-    *  操作类型。 1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收
+    *  操作类型 1：发放，2：手动回收，3：解绑自动回收，4：过期回收，5：退订回收，6：退款充值撤销，7：建立关联回收， 8：切换关联模式自动回收，9：云经销商转移。
     *
     * @return string|null
     */
@@ -309,7 +309,7 @@ class CouponRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets operationType
     *
-    * @param string|null $operationType 操作类型。 1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收
+    * @param string|null $operationType 操作类型 1：发放，2：手动回收，3：解绑自动回收，4：过期回收，5：退订回收，6：退款充值撤销，7：建立关联回收， 8：切换关联模式自动回收，9：云经销商转移。
     *
     * @return $this
     */

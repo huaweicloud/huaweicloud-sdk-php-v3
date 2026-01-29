@@ -209,13 +209,10 @@ class SpeedLimitlJson implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['end']) < 0)) {
                 $invalidProperties[] = "invalid value for 'end', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['speed'] === null) {
-            $invalidProperties[] = "'speed' can't be null";
-        }
-            if (($this->container['speed'] > 10000)) {
-                $invalidProperties[] = "invalid value for 'speed', must be smaller than or equal to 10000.";
+            if (!is_null($this->container['speed']) && ($this->container['speed'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'speed', must be smaller than or equal to 1000.";
             }
-            if (($this->container['speed'] < 0)) {
+            if (!is_null($this->container['speed']) && ($this->container['speed'] < 0)) {
                 $invalidProperties[] = "invalid value for 'speed', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['overSpeedThreshold']) && ($this->container['overSpeedThreshold'] > 1E+2)) {
@@ -290,7 +287,7 @@ class SpeedLimitlJson implements ModelInterface, ArrayAccess
     * Gets speed
     *  时间段的速率，0-1000的整数，单位：Mbit/s。
     *
-    * @return int
+    * @return int|null
     */
     public function getSpeed()
     {
@@ -300,7 +297,7 @@ class SpeedLimitlJson implements ModelInterface, ArrayAccess
     /**
     * Sets speed
     *
-    * @param int $speed 时间段的速率，0-1000的整数，单位：Mbit/s。
+    * @param int|null $speed 时间段的速率，0-1000的整数，单位：Mbit/s。
     *
     * @return $this
     */

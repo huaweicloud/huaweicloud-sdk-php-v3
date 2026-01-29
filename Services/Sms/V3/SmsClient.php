@@ -872,9 +872,6 @@ class SmsClient extends Client
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
         }
-        if ($localVarParams['migproject'] !== null) {
-            $queryParams['migproject'] = $localVarParams['migproject'];
-        }
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
@@ -1014,6 +1011,9 @@ class SmsClient extends Client
         if ($localVarParams['ip'] !== null) {
             $queryParams['ip'] = $localVarParams['ip'];
         }
+        if ($localVarParams['ipv6'] !== null) {
+            $queryParams['ipv6'] = $localVarParams['ipv6'];
+        }
         if ($localVarParams['migproject'] !== null) {
             $queryParams['migproject'] = $localVarParams['migproject'];
         }
@@ -1034,6 +1034,9 @@ class SmsClient extends Client
         }
         if ($localVarParams['isConsistencyResultExist'] !== null) {
             $queryParams['is_consistency_result_exist'] = $localVarParams['isConsistencyResultExist'];
+        }
+        if ($localVarParams['vmId'] !== null) {
+            $queryParams['vm_id'] = $localVarParams['vmId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1188,6 +1191,9 @@ class SmsClient extends Client
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2219,6 +2225,7 @@ class SmsClient extends Client
      * 更新任务对应源端复制状态
      *
      * 更新任务对应源端复制状态。
+     * 在以下情况下不校验请求参数且更新不会生效：“迁移服务器”列表中“实时状态”一栏为“校验失败”、“暂停中”、“已暂停”、“删除中”、“迁移已完成”、“资源清理中”、“资源清理失败”时。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2346,6 +2353,7 @@ class SmsClient extends Client
      * 更新磁盘信息
      *
      * 更新服务器的磁盘信息，此接口会把服务器原有磁盘信息清空，然后更新成新磁盘信息。
+     * 接口仅在“待设置目的端”才能生效，开始迁移后更改磁盘信息不生效。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2801,7 +2809,7 @@ class SmsClient extends Client
     /**
      * 管理迁移任务
      *
-     * 管理迁移任务，包括启动任务，暂停任务，同步任务，日志上传，回滚失败迁移任务，删除快照资源。
+     * 管理迁移任务，包括启动任务，暂停任务，同步任务，日志上传，删除快照资源等。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3126,7 +3134,7 @@ class SmsClient extends Client
     /**
      * 查询主机迁移服务的API版本信息
      *
-     * 查询主机迁移服务的API版本信息。
+     * 查询主机迁移服务的API版本信息
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

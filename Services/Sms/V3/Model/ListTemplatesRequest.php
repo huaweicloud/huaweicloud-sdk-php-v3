@@ -25,6 +25,7 @@ class ListTemplatesRequest implements ModelInterface, ArrayAccess
     * region  Region ID
     * limit  分页大小，不传值默认为50
     * offset  偏移量，不传值默认为0
+    * id  模板id
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class ListTemplatesRequest implements ModelInterface, ArrayAccess
             'availabilityZone' => 'string',
             'region' => 'string',
             'limit' => 'int',
-            'offset' => 'int'
+            'offset' => 'int',
+            'id' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class ListTemplatesRequest implements ModelInterface, ArrayAccess
     * region  Region ID
     * limit  分页大小，不传值默认为50
     * offset  偏移量，不传值默认为0
+    * id  模板id
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ListTemplatesRequest implements ModelInterface, ArrayAccess
         'availabilityZone' => null,
         'region' => null,
         'limit' => 'int32',
-        'offset' => 'int32'
+        'offset' => 'int32',
+        'id' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class ListTemplatesRequest implements ModelInterface, ArrayAccess
     * region  Region ID
     * limit  分页大小，不传值默认为50
     * offset  偏移量，不传值默认为0
+    * id  模板id
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class ListTemplatesRequest implements ModelInterface, ArrayAccess
             'availabilityZone' => 'availability_zone',
             'region' => 'region',
             'limit' => 'limit',
-            'offset' => 'offset'
+            'offset' => 'offset',
+            'id' => 'id'
     ];
 
     /**
@@ -100,6 +106,7 @@ class ListTemplatesRequest implements ModelInterface, ArrayAccess
     * region  Region ID
     * limit  分页大小，不传值默认为50
     * offset  偏移量，不传值默认为0
+    * id  模板id
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class ListTemplatesRequest implements ModelInterface, ArrayAccess
             'availabilityZone' => 'setAvailabilityZone',
             'region' => 'setRegion',
             'limit' => 'setLimit',
-            'offset' => 'setOffset'
+            'offset' => 'setOffset',
+            'id' => 'setId'
     ];
 
     /**
@@ -118,6 +126,7 @@ class ListTemplatesRequest implements ModelInterface, ArrayAccess
     * region  Region ID
     * limit  分页大小，不传值默认为50
     * offset  偏移量，不传值默认为0
+    * id  模板id
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ListTemplatesRequest implements ModelInterface, ArrayAccess
             'availabilityZone' => 'getAvailabilityZone',
             'region' => 'getRegion',
             'limit' => 'getLimit',
-            'offset' => 'getOffset'
+            'offset' => 'getOffset',
+            'id' => 'getId'
     ];
 
     /**
@@ -192,6 +202,7 @@ class ListTemplatesRequest implements ModelInterface, ArrayAccess
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -231,6 +242,15 @@ class ListTemplatesRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 36)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 1)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['id']) && !preg_match("/^[a-zA-Z0-9\\-]{1,36}$/", $this->container['id'])) {
+                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /^[a-zA-Z0-9\\-]{1,36}$/.";
             }
         return $invalidProperties;
     }
@@ -363,6 +383,30 @@ class ListTemplatesRequest implements ModelInterface, ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  模板id
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id 模板id
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
         return $this;
     }
 

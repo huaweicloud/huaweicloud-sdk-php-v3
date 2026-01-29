@@ -81,7 +81,7 @@ class CopyMappingRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'contentType' => 'content-type',
+            'contentType' => 'Content-Type',
             'mappingId' => 'mapping_id',
             'workspaceId' => 'workspace_id',
             'body' => 'body'

@@ -21,8 +21,8 @@ class CreateWorkspaceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * regionId  区域id
-    * enterpriseProjectId  企业项目id
-    * enterpriseProjectName  企业项目名称
+    * enterpriseProjectId  enterprise project id
+    * enterpriseProjectName  enterprise project name
     * viewBindId  视图绑定的空间id
     * isView  是否是视图
     * name  工作空间名称
@@ -47,8 +47,8 @@ class CreateWorkspaceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * regionId  区域id
-    * enterpriseProjectId  企业项目id
-    * enterpriseProjectName  企业项目名称
+    * enterpriseProjectId  enterprise project id
+    * enterpriseProjectName  enterprise project name
     * viewBindId  视图绑定的空间id
     * isView  是否是视图
     * name  工作空间名称
@@ -94,8 +94,8 @@ class CreateWorkspaceRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * regionId  区域id
-    * enterpriseProjectId  企业项目id
-    * enterpriseProjectName  企业项目名称
+    * enterpriseProjectId  enterprise project id
+    * enterpriseProjectName  enterprise project name
     * viewBindId  视图绑定的空间id
     * isView  是否是视图
     * name  工作空间名称
@@ -120,8 +120,8 @@ class CreateWorkspaceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * regionId  区域id
-    * enterpriseProjectId  企业项目id
-    * enterpriseProjectName  企业项目名称
+    * enterpriseProjectId  enterprise project id
+    * enterpriseProjectName  enterprise project name
     * viewBindId  视图绑定的空间id
     * isView  是否是视图
     * name  工作空间名称
@@ -146,8 +146,8 @@ class CreateWorkspaceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * regionId  区域id
-    * enterpriseProjectId  企业项目id
-    * enterpriseProjectName  企业项目名称
+    * enterpriseProjectId  enterprise project id
+    * enterpriseProjectName  enterprise project name
     * viewBindId  视图绑定的空间id
     * isView  是否是视图
     * name  工作空间名称
@@ -358,7 +358,7 @@ class CreateWorkspaceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目id
+    *  enterprise project id
     *
     * @return string|null
     */
@@ -370,7 +370,7 @@ class CreateWorkspaceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目id
+    * @param string|null $enterpriseProjectId enterprise project id
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class CreateWorkspaceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectName
-    *  企业项目名称
+    *  enterprise project name
     *
     * @return string|null
     */
@@ -394,7 +394,7 @@ class CreateWorkspaceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectName
     *
-    * @param string|null $enterpriseProjectName 企业项目名称
+    * @param string|null $enterpriseProjectName enterprise project name
     *
     * @return $this
     */

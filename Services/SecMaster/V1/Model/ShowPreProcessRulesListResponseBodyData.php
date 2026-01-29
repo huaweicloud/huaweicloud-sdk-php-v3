@@ -28,9 +28,13 @@ class ShowPreProcessRulesListResponseBodyData implements ModelInterface, ArrayAc
     * mapperId  映射id
     * mapperTypeId  映射id
     * action  预处理选项: drop-丢弃
+    * creatorId  创建者id
+    * creatorName  创建者名称
     * expression  表达式
     * createTime  创建时间
     * updateTime  更新时间
+    * modifierId  修改者id
+    * modifierName  修改者名称
     *
     * @var string[]
     */
@@ -43,9 +47,13 @@ class ShowPreProcessRulesListResponseBodyData implements ModelInterface, ArrayAc
             'mapperId' => 'string',
             'mapperTypeId' => 'string',
             'action' => 'string',
+            'creatorId' => 'string',
+            'creatorName' => 'string',
             'expression' => 'string',
             'createTime' => 'string',
-            'updateTime' => 'string'
+            'updateTime' => 'string',
+            'modifierId' => 'string',
+            'modifierName' => 'string'
     ];
 
     /**
@@ -58,9 +66,13 @@ class ShowPreProcessRulesListResponseBodyData implements ModelInterface, ArrayAc
     * mapperId  映射id
     * mapperTypeId  映射id
     * action  预处理选项: drop-丢弃
+    * creatorId  创建者id
+    * creatorName  创建者名称
     * expression  表达式
     * createTime  创建时间
     * updateTime  更新时间
+    * modifierId  修改者id
+    * modifierName  修改者名称
     *
     * @var string[]
     */
@@ -73,9 +85,13 @@ class ShowPreProcessRulesListResponseBodyData implements ModelInterface, ArrayAc
         'mapperId' => null,
         'mapperTypeId' => null,
         'action' => null,
+        'creatorId' => null,
+        'creatorName' => null,
         'expression' => null,
         'createTime' => null,
-        'updateTime' => null
+        'updateTime' => null,
+        'modifierId' => null,
+        'modifierName' => null
     ];
 
     /**
@@ -109,9 +125,13 @@ class ShowPreProcessRulesListResponseBodyData implements ModelInterface, ArrayAc
     * mapperId  映射id
     * mapperTypeId  映射id
     * action  预处理选项: drop-丢弃
+    * creatorId  创建者id
+    * creatorName  创建者名称
     * expression  表达式
     * createTime  创建时间
     * updateTime  更新时间
+    * modifierId  修改者id
+    * modifierName  修改者名称
     *
     * @var string[]
     */
@@ -124,9 +144,13 @@ class ShowPreProcessRulesListResponseBodyData implements ModelInterface, ArrayAc
             'mapperId' => 'mapper_id',
             'mapperTypeId' => 'mapper_type_id',
             'action' => 'action',
+            'creatorId' => 'creator_id',
+            'creatorName' => 'creator_name',
             'expression' => 'expression',
             'createTime' => 'create_time',
-            'updateTime' => 'update_time'
+            'updateTime' => 'update_time',
+            'modifierId' => 'modifier_id',
+            'modifierName' => 'modifier_name'
     ];
 
     /**
@@ -139,9 +163,13 @@ class ShowPreProcessRulesListResponseBodyData implements ModelInterface, ArrayAc
     * mapperId  映射id
     * mapperTypeId  映射id
     * action  预处理选项: drop-丢弃
+    * creatorId  创建者id
+    * creatorName  创建者名称
     * expression  表达式
     * createTime  创建时间
     * updateTime  更新时间
+    * modifierId  修改者id
+    * modifierName  修改者名称
     *
     * @var string[]
     */
@@ -154,9 +182,13 @@ class ShowPreProcessRulesListResponseBodyData implements ModelInterface, ArrayAc
             'mapperId' => 'setMapperId',
             'mapperTypeId' => 'setMapperTypeId',
             'action' => 'setAction',
+            'creatorId' => 'setCreatorId',
+            'creatorName' => 'setCreatorName',
             'expression' => 'setExpression',
             'createTime' => 'setCreateTime',
-            'updateTime' => 'setUpdateTime'
+            'updateTime' => 'setUpdateTime',
+            'modifierId' => 'setModifierId',
+            'modifierName' => 'setModifierName'
     ];
 
     /**
@@ -169,9 +201,13 @@ class ShowPreProcessRulesListResponseBodyData implements ModelInterface, ArrayAc
     * mapperId  映射id
     * mapperTypeId  映射id
     * action  预处理选项: drop-丢弃
+    * creatorId  创建者id
+    * creatorName  创建者名称
     * expression  表达式
     * createTime  创建时间
     * updateTime  更新时间
+    * modifierId  修改者id
+    * modifierName  修改者名称
     *
     * @var string[]
     */
@@ -184,9 +220,13 @@ class ShowPreProcessRulesListResponseBodyData implements ModelInterface, ArrayAc
             'mapperId' => 'getMapperId',
             'mapperTypeId' => 'getMapperTypeId',
             'action' => 'getAction',
+            'creatorId' => 'getCreatorId',
+            'creatorName' => 'getCreatorName',
             'expression' => 'getExpression',
             'createTime' => 'getCreateTime',
-            'updateTime' => 'getUpdateTime'
+            'updateTime' => 'getUpdateTime',
+            'modifierId' => 'getModifierId',
+            'modifierName' => 'getModifierName'
     ];
 
     /**
@@ -268,9 +308,13 @@ class ShowPreProcessRulesListResponseBodyData implements ModelInterface, ArrayAc
         $this->container['mapperId'] = isset($data['mapperId']) ? $data['mapperId'] : null;
         $this->container['mapperTypeId'] = isset($data['mapperTypeId']) ? $data['mapperTypeId'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
+        $this->container['creatorId'] = isset($data['creatorId']) ? $data['creatorId'] : null;
+        $this->container['creatorName'] = isset($data['creatorName']) ? $data['creatorName'] : null;
         $this->container['expression'] = isset($data['expression']) ? $data['expression'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
+        $this->container['modifierId'] = isset($data['modifierId']) ? $data['modifierId'] : null;
+        $this->container['modifierName'] = isset($data['modifierName']) ? $data['modifierName'] : null;
     }
 
     /**
@@ -337,6 +381,18 @@ class ShowPreProcessRulesListResponseBodyData implements ModelInterface, ArrayAc
             if (!is_null($this->container['action']) && (mb_strlen($this->container['action']) < 1)) {
                 $invalidProperties[] = "invalid value for 'action', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['creatorId']) && (mb_strlen($this->container['creatorId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'creatorId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['creatorId']) && (mb_strlen($this->container['creatorId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'creatorId', the character length must be bigger than or equal to 32.";
+            }
+            if (!is_null($this->container['creatorName']) && (mb_strlen($this->container['creatorName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'creatorName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['creatorName']) && (mb_strlen($this->container['creatorName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'creatorName', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['expression']) && (mb_strlen($this->container['expression']) > 9999)) {
                 $invalidProperties[] = "invalid value for 'expression', the character length must be smaller than or equal to 9999.";
             }
@@ -354,6 +410,18 @@ class ShowPreProcessRulesListResponseBodyData implements ModelInterface, ArrayAc
             }
             if (!is_null($this->container['updateTime']) && (mb_strlen($this->container['updateTime']) < 0)) {
                 $invalidProperties[] = "invalid value for 'updateTime', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['modifierId']) && (mb_strlen($this->container['modifierId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'modifierId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['modifierId']) && (mb_strlen($this->container['modifierId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'modifierId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['modifierName']) && (mb_strlen($this->container['modifierName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'modifierName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['modifierName']) && (mb_strlen($this->container['modifierName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'modifierName', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -562,6 +630,54 @@ class ShowPreProcessRulesListResponseBodyData implements ModelInterface, ArrayAc
     }
 
     /**
+    * Gets creatorId
+    *  创建者id
+    *
+    * @return string|null
+    */
+    public function getCreatorId()
+    {
+        return $this->container['creatorId'];
+    }
+
+    /**
+    * Sets creatorId
+    *
+    * @param string|null $creatorId 创建者id
+    *
+    * @return $this
+    */
+    public function setCreatorId($creatorId)
+    {
+        $this->container['creatorId'] = $creatorId;
+        return $this;
+    }
+
+    /**
+    * Gets creatorName
+    *  创建者名称
+    *
+    * @return string|null
+    */
+    public function getCreatorName()
+    {
+        return $this->container['creatorName'];
+    }
+
+    /**
+    * Sets creatorName
+    *
+    * @param string|null $creatorName 创建者名称
+    *
+    * @return $this
+    */
+    public function setCreatorName($creatorName)
+    {
+        $this->container['creatorName'] = $creatorName;
+        return $this;
+    }
+
+    /**
     * Gets expression
     *  表达式
     *
@@ -630,6 +746,54 @@ class ShowPreProcessRulesListResponseBodyData implements ModelInterface, ArrayAc
     public function setUpdateTime($updateTime)
     {
         $this->container['updateTime'] = $updateTime;
+        return $this;
+    }
+
+    /**
+    * Gets modifierId
+    *  修改者id
+    *
+    * @return string|null
+    */
+    public function getModifierId()
+    {
+        return $this->container['modifierId'];
+    }
+
+    /**
+    * Sets modifierId
+    *
+    * @param string|null $modifierId 修改者id
+    *
+    * @return $this
+    */
+    public function setModifierId($modifierId)
+    {
+        $this->container['modifierId'] = $modifierId;
+        return $this;
+    }
+
+    /**
+    * Gets modifierName
+    *  修改者名称
+    *
+    * @return string|null
+    */
+    public function getModifierName()
+    {
+        return $this->container['modifierName'];
+    }
+
+    /**
+    * Sets modifierName
+    *
+    * @param string|null $modifierName 修改者名称
+    *
+    * @return $this
+    */
+    public function setModifierName($modifierName)
+    {
+        $this->container['modifierName'] = $modifierName;
         return $this;
     }
 

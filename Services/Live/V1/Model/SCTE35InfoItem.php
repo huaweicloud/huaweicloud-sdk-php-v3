@@ -27,6 +27,8 @@ class SCTE35InfoItem implements ModelInterface, ArrayAccess
     * segmentationType  // Splice Insert填空\"-\"； // Time Signal，支持0x30，0x31，0x32，0x33，0x34，0x35，0x36，0x37 // 0x30: ProviderAdvertisementStart // 0x31: ProviderAdvertisementEnd // 0x32: DistributorAdvertisementStart // 0x33: DistributorAdvertisementEnd // 0x34: ProviderPlacementOpportunityStart // 0x35: ProviderPlacementOpportunityEnd // 0x36: DistributorPlacementOpportunityStart // 0x37: DistributorPlacementOpportunityEnd
     * base64Data  广告信号原始数据的base64值。
     * rawSplice  广告信号全量信息。
+    * regionType  **参数解释**： 该广告信号对应的region类型，是主region，还是备region **取值范围**：  - master: 主region  - slave: 备region
+    * region  **参数解释**： 该广告信号对应的region区域 **取值范围**： 华为云的region
     *
     * @var string[]
     */
@@ -37,7 +39,9 @@ class SCTE35InfoItem implements ModelInterface, ArrayAccess
             'duration' => 'int',
             'segmentationType' => 'string',
             'base64Data' => 'string',
-            'rawSplice' => 'string'
+            'rawSplice' => 'string',
+            'regionType' => 'string',
+            'region' => 'string'
     ];
 
     /**
@@ -49,6 +53,8 @@ class SCTE35InfoItem implements ModelInterface, ArrayAccess
     * segmentationType  // Splice Insert填空\"-\"； // Time Signal，支持0x30，0x31，0x32，0x33，0x34，0x35，0x36，0x37 // 0x30: ProviderAdvertisementStart // 0x31: ProviderAdvertisementEnd // 0x32: DistributorAdvertisementStart // 0x33: DistributorAdvertisementEnd // 0x34: ProviderPlacementOpportunityStart // 0x35: ProviderPlacementOpportunityEnd // 0x36: DistributorPlacementOpportunityStart // 0x37: DistributorPlacementOpportunityEnd
     * base64Data  广告信号原始数据的base64值。
     * rawSplice  广告信号全量信息。
+    * regionType  **参数解释**： 该广告信号对应的region类型，是主region，还是备region **取值范围**：  - master: 主region  - slave: 备region
+    * region  **参数解释**： 该广告信号对应的region区域 **取值范围**： 华为云的region
     *
     * @var string[]
     */
@@ -59,7 +65,9 @@ class SCTE35InfoItem implements ModelInterface, ArrayAccess
         'duration' => 'int32',
         'segmentationType' => null,
         'base64Data' => null,
-        'rawSplice' => null
+        'rawSplice' => null,
+        'regionType' => null,
+        'region' => null
     ];
 
     /**
@@ -92,6 +100,8 @@ class SCTE35InfoItem implements ModelInterface, ArrayAccess
     * segmentationType  // Splice Insert填空\"-\"； // Time Signal，支持0x30，0x31，0x32，0x33，0x34，0x35，0x36，0x37 // 0x30: ProviderAdvertisementStart // 0x31: ProviderAdvertisementEnd // 0x32: DistributorAdvertisementStart // 0x33: DistributorAdvertisementEnd // 0x34: ProviderPlacementOpportunityStart // 0x35: ProviderPlacementOpportunityEnd // 0x36: DistributorPlacementOpportunityStart // 0x37: DistributorPlacementOpportunityEnd
     * base64Data  广告信号原始数据的base64值。
     * rawSplice  广告信号全量信息。
+    * regionType  **参数解释**： 该广告信号对应的region类型，是主region，还是备region **取值范围**：  - master: 主region  - slave: 备region
+    * region  **参数解释**： 该广告信号对应的region区域 **取值范围**： 华为云的region
     *
     * @var string[]
     */
@@ -102,7 +112,9 @@ class SCTE35InfoItem implements ModelInterface, ArrayAccess
             'duration' => 'duration',
             'segmentationType' => 'segmentation_type',
             'base64Data' => 'base64_data',
-            'rawSplice' => 'raw_splice'
+            'rawSplice' => 'raw_splice',
+            'regionType' => 'region_type',
+            'region' => 'region'
     ];
 
     /**
@@ -114,6 +126,8 @@ class SCTE35InfoItem implements ModelInterface, ArrayAccess
     * segmentationType  // Splice Insert填空\"-\"； // Time Signal，支持0x30，0x31，0x32，0x33，0x34，0x35，0x36，0x37 // 0x30: ProviderAdvertisementStart // 0x31: ProviderAdvertisementEnd // 0x32: DistributorAdvertisementStart // 0x33: DistributorAdvertisementEnd // 0x34: ProviderPlacementOpportunityStart // 0x35: ProviderPlacementOpportunityEnd // 0x36: DistributorPlacementOpportunityStart // 0x37: DistributorPlacementOpportunityEnd
     * base64Data  广告信号原始数据的base64值。
     * rawSplice  广告信号全量信息。
+    * regionType  **参数解释**： 该广告信号对应的region类型，是主region，还是备region **取值范围**：  - master: 主region  - slave: 备region
+    * region  **参数解释**： 该广告信号对应的region区域 **取值范围**： 华为云的region
     *
     * @var string[]
     */
@@ -124,7 +138,9 @@ class SCTE35InfoItem implements ModelInterface, ArrayAccess
             'duration' => 'setDuration',
             'segmentationType' => 'setSegmentationType',
             'base64Data' => 'setBase64Data',
-            'rawSplice' => 'setRawSplice'
+            'rawSplice' => 'setRawSplice',
+            'regionType' => 'setRegionType',
+            'region' => 'setRegion'
     ];
 
     /**
@@ -136,6 +152,8 @@ class SCTE35InfoItem implements ModelInterface, ArrayAccess
     * segmentationType  // Splice Insert填空\"-\"； // Time Signal，支持0x30，0x31，0x32，0x33，0x34，0x35，0x36，0x37 // 0x30: ProviderAdvertisementStart // 0x31: ProviderAdvertisementEnd // 0x32: DistributorAdvertisementStart // 0x33: DistributorAdvertisementEnd // 0x34: ProviderPlacementOpportunityStart // 0x35: ProviderPlacementOpportunityEnd // 0x36: DistributorPlacementOpportunityStart // 0x37: DistributorPlacementOpportunityEnd
     * base64Data  广告信号原始数据的base64值。
     * rawSplice  广告信号全量信息。
+    * regionType  **参数解释**： 该广告信号对应的region类型，是主region，还是备region **取值范围**：  - master: 主region  - slave: 备region
+    * region  **参数解释**： 该广告信号对应的region区域 **取值范围**： 华为云的region
     *
     * @var string[]
     */
@@ -146,7 +164,9 @@ class SCTE35InfoItem implements ModelInterface, ArrayAccess
             'duration' => 'getDuration',
             'segmentationType' => 'getSegmentationType',
             'base64Data' => 'getBase64Data',
-            'rawSplice' => 'getRawSplice'
+            'rawSplice' => 'getRawSplice',
+            'regionType' => 'getRegionType',
+            'region' => 'getRegion'
     ];
 
     /**
@@ -200,6 +220,8 @@ class SCTE35InfoItem implements ModelInterface, ArrayAccess
     const SEGMENTATION_TYPE_PROVIDER_PLACEMENT_OPPORTUNITY_END = 'ProviderPlacementOpportunityEnd';
     const SEGMENTATION_TYPE_DISTRIBUTOR_PLACEMENT_OPPORTUNITY_START = 'DistributorPlacementOpportunityStart';
     const SEGMENTATION_TYPE_DISTRIBUTOR_PLACEMENT_OPPORTUNITY_END = 'DistributorPlacementOpportunityEnd';
+    const REGION_TYPE_MASTER = 'master';
+    const REGION_TYPE_SLAVE = 'slave';
     
 
     /**
@@ -235,6 +257,19 @@ class SCTE35InfoItem implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getRegionTypeAllowableValues()
+    {
+        return [
+            self::REGION_TYPE_MASTER,
+            self::REGION_TYPE_SLAVE,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -258,6 +293,8 @@ class SCTE35InfoItem implements ModelInterface, ArrayAccess
         $this->container['segmentationType'] = isset($data['segmentationType']) ? $data['segmentationType'] : null;
         $this->container['base64Data'] = isset($data['base64Data']) ? $data['base64Data'] : null;
         $this->container['rawSplice'] = isset($data['rawSplice']) ? $data['rawSplice'] : null;
+        $this->container['regionType'] = isset($data['regionType']) ? $data['regionType'] : null;
+        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
     }
 
     /**
@@ -346,6 +383,26 @@ class SCTE35InfoItem implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['rawSplice']) < 1)) {
                 $invalidProperties[] = "invalid value for 'rawSplice', the character length must be bigger than or equal to 1.";
+            }
+            $allowedValues = $this->getRegionTypeAllowableValues();
+                if (!is_null($this->container['regionType']) && !in_array($this->container['regionType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'regionType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['regionType']) && (mb_strlen($this->container['regionType']) > 6)) {
+                $invalidProperties[] = "invalid value for 'regionType', the character length must be smaller than or equal to 6.";
+            }
+            if (!is_null($this->container['regionType']) && (mb_strlen($this->container['regionType']) < 5)) {
+                $invalidProperties[] = "invalid value for 'regionType', the character length must be bigger than or equal to 5.";
+            }
+            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) > 20)) {
+                $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 20.";
+            }
+            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) < 3)) {
+                $invalidProperties[] = "invalid value for 'region', the character length must be bigger than or equal to 3.";
             }
         return $invalidProperties;
     }
@@ -526,6 +583,54 @@ class SCTE35InfoItem implements ModelInterface, ArrayAccess
     public function setRawSplice($rawSplice)
     {
         $this->container['rawSplice'] = $rawSplice;
+        return $this;
+    }
+
+    /**
+    * Gets regionType
+    *  **参数解释**： 该广告信号对应的region类型，是主region，还是备region **取值范围**：  - master: 主region  - slave: 备region
+    *
+    * @return string|null
+    */
+    public function getRegionType()
+    {
+        return $this->container['regionType'];
+    }
+
+    /**
+    * Sets regionType
+    *
+    * @param string|null $regionType **参数解释**： 该广告信号对应的region类型，是主region，还是备region **取值范围**：  - master: 主region  - slave: 备region
+    *
+    * @return $this
+    */
+    public function setRegionType($regionType)
+    {
+        $this->container['regionType'] = $regionType;
+        return $this;
+    }
+
+    /**
+    * Gets region
+    *  **参数解释**： 该广告信号对应的region区域 **取值范围**： 华为云的region
+    *
+    * @return string|null
+    */
+    public function getRegion()
+    {
+        return $this->container['region'];
+    }
+
+    /**
+    * Sets region
+    *
+    * @param string|null $region **参数解释**： 该广告信号对应的region区域 **取值范围**： 华为云的region
+    *
+    * @return $this
+    */
+    public function setRegion($region)
+    {
+        $this->container['region'] = $region;
         return $this;
     }
 

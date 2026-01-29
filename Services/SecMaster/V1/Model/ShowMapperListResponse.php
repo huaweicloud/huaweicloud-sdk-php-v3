@@ -23,9 +23,9 @@ class ShowMapperListResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * code  **参数解释**: 错误码 **取值范围**: 不涉及
     * message  **参数解释**: 错误描述 **取值范围**: 不涉及
+    * size  分页查询数据大小
+    * page  当前页码
     * total  总数
-    * offset  **参数解释：** 偏移量 **约束限制：** 0-10000 **取值范围：** 不涉及 **默认取值：** 0
-    * limit  **参数解释**: 当前页码 **约束限制**: 不涉及
     * data  分类映射信息集合
     *
     * @var string[]
@@ -33,9 +33,9 @@ class ShowMapperListResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'code' => 'string',
             'message' => 'string',
+            'size' => 'int',
+            'page' => 'int',
             'total' => 'int',
-            'offset' => 'int',
-            'limit' => 'int',
             'data' => '\HuaweiCloud\SDK\SecMaster\V1\Model\DpeMappingContent[]'
     ];
 
@@ -43,9 +43,9 @@ class ShowMapperListResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * code  **参数解释**: 错误码 **取值范围**: 不涉及
     * message  **参数解释**: 错误描述 **取值范围**: 不涉及
+    * size  分页查询数据大小
+    * page  当前页码
     * total  总数
-    * offset  **参数解释：** 偏移量 **约束限制：** 0-10000 **取值范围：** 不涉及 **默认取值：** 0
-    * limit  **参数解释**: 当前页码 **约束限制**: 不涉及
     * data  分类映射信息集合
     *
     * @var string[]
@@ -53,9 +53,9 @@ class ShowMapperListResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'code' => null,
         'message' => null,
+        'size' => null,
+        'page' => null,
         'total' => null,
-        'offset' => 'int32',
-        'limit' => 'int32',
         'data' => null
     ];
 
@@ -84,9 +84,9 @@ class ShowMapperListResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * code  **参数解释**: 错误码 **取值范围**: 不涉及
     * message  **参数解释**: 错误描述 **取值范围**: 不涉及
+    * size  分页查询数据大小
+    * page  当前页码
     * total  总数
-    * offset  **参数解释：** 偏移量 **约束限制：** 0-10000 **取值范围：** 不涉及 **默认取值：** 0
-    * limit  **参数解释**: 当前页码 **约束限制**: 不涉及
     * data  分类映射信息集合
     *
     * @var string[]
@@ -94,9 +94,9 @@ class ShowMapperListResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'code' => 'code',
             'message' => 'message',
+            'size' => 'size',
+            'page' => 'page',
             'total' => 'total',
-            'offset' => 'offset',
-            'limit' => 'limit',
             'data' => 'data'
     ];
 
@@ -104,9 +104,9 @@ class ShowMapperListResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * code  **参数解释**: 错误码 **取值范围**: 不涉及
     * message  **参数解释**: 错误描述 **取值范围**: 不涉及
+    * size  分页查询数据大小
+    * page  当前页码
     * total  总数
-    * offset  **参数解释：** 偏移量 **约束限制：** 0-10000 **取值范围：** 不涉及 **默认取值：** 0
-    * limit  **参数解释**: 当前页码 **约束限制**: 不涉及
     * data  分类映射信息集合
     *
     * @var string[]
@@ -114,9 +114,9 @@ class ShowMapperListResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'code' => 'setCode',
             'message' => 'setMessage',
+            'size' => 'setSize',
+            'page' => 'setPage',
             'total' => 'setTotal',
-            'offset' => 'setOffset',
-            'limit' => 'setLimit',
             'data' => 'setData'
     ];
 
@@ -124,9 +124,9 @@ class ShowMapperListResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * code  **参数解释**: 错误码 **取值范围**: 不涉及
     * message  **参数解释**: 错误描述 **取值范围**: 不涉及
+    * size  分页查询数据大小
+    * page  当前页码
     * total  总数
-    * offset  **参数解释：** 偏移量 **约束限制：** 0-10000 **取值范围：** 不涉及 **默认取值：** 0
-    * limit  **参数解释**: 当前页码 **约束限制**: 不涉及
     * data  分类映射信息集合
     *
     * @var string[]
@@ -134,9 +134,9 @@ class ShowMapperListResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'code' => 'getCode',
             'message' => 'getMessage',
+            'size' => 'getSize',
+            'page' => 'getPage',
             'total' => 'getTotal',
-            'offset' => 'getOffset',
-            'limit' => 'getLimit',
             'data' => 'getData'
     ];
 
@@ -200,9 +200,9 @@ class ShowMapperListResponse implements ModelInterface, ArrayAccess
     {
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
@@ -226,23 +226,23 @@ class ShowMapperListResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['message']) && (mb_strlen($this->container['message']) < 0)) {
                 $invalidProperties[] = "invalid value for 'message', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['size']) && ($this->container['size'] > 9999)) {
+                $invalidProperties[] = "invalid value for 'size', must be smaller than or equal to 9999.";
+            }
+            if (!is_null($this->container['size']) && ($this->container['size'] < 0)) {
+                $invalidProperties[] = "invalid value for 'size', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['page']) && ($this->container['page'] > 100)) {
+                $invalidProperties[] = "invalid value for 'page', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['page']) && ($this->container['page'] < 0)) {
+                $invalidProperties[] = "invalid value for 'page', must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['total']) && ($this->container['total'] > 99999)) {
                 $invalidProperties[] = "invalid value for 'total', must be smaller than or equal to 99999.";
             }
             if (!is_null($this->container['total']) && ($this->container['total'] < 0)) {
                 $invalidProperties[] = "invalid value for 'total', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 999999)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 999999.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
-                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 999999)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 999999.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -307,6 +307,54 @@ class ShowMapperListResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets size
+    *  分页查询数据大小
+    *
+    * @return int|null
+    */
+    public function getSize()
+    {
+        return $this->container['size'];
+    }
+
+    /**
+    * Sets size
+    *
+    * @param int|null $size 分页查询数据大小
+    *
+    * @return $this
+    */
+    public function setSize($size)
+    {
+        $this->container['size'] = $size;
+        return $this;
+    }
+
+    /**
+    * Gets page
+    *  当前页码
+    *
+    * @return int|null
+    */
+    public function getPage()
+    {
+        return $this->container['page'];
+    }
+
+    /**
+    * Sets page
+    *
+    * @param int|null $page 当前页码
+    *
+    * @return $this
+    */
+    public function setPage($page)
+    {
+        $this->container['page'] = $page;
+        return $this;
+    }
+
+    /**
     * Gets total
     *  总数
     *
@@ -327,54 +375,6 @@ class ShowMapperListResponse implements ModelInterface, ArrayAccess
     public function setTotal($total)
     {
         $this->container['total'] = $total;
-        return $this;
-    }
-
-    /**
-    * Gets offset
-    *  **参数解释：** 偏移量 **约束限制：** 0-10000 **取值范围：** 不涉及 **默认取值：** 0
-    *
-    * @return int|null
-    */
-    public function getOffset()
-    {
-        return $this->container['offset'];
-    }
-
-    /**
-    * Sets offset
-    *
-    * @param int|null $offset **参数解释：** 偏移量 **约束限制：** 0-10000 **取值范围：** 不涉及 **默认取值：** 0
-    *
-    * @return $this
-    */
-    public function setOffset($offset)
-    {
-        $this->container['offset'] = $offset;
-        return $this;
-    }
-
-    /**
-    * Gets limit
-    *  **参数解释**: 当前页码 **约束限制**: 不涉及
-    *
-    * @return int|null
-    */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-    * Sets limit
-    *
-    * @param int|null $limit **参数解释**: 当前页码 **约束限制**: 不涉及
-    *
-    * @return $this
-    */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
         return $this;
     }
 

@@ -20,7 +20,7 @@ class UpdateLogGroupParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ttlInDays  日志存储时间 天。 取值范围为 [1, 30]
+    * ttlInDays  日志存储时间 天。 取值范围为 [1, 365]
     * tags  标签字段信息
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UpdateLogGroupParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ttlInDays  日志存储时间 天。 取值范围为 [1, 30]
+    * ttlInDays  日志存储时间 天。 取值范围为 [1, 365]
     * tags  标签字段信息
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateLogGroupParams implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ttlInDays  日志存储时间 天。 取值范围为 [1, 30]
+    * ttlInDays  日志存储时间 天。 取值范围为 [1, 365]
     * tags  标签字段信息
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateLogGroupParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ttlInDays  日志存储时间 天。 取值范围为 [1, 30]
+    * ttlInDays  日志存储时间 天。 取值范围为 [1, 365]
     * tags  标签字段信息
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateLogGroupParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ttlInDays  日志存储时间 天。 取值范围为 [1, 30]
+    * ttlInDays  日志存储时间 天。 取值范围为 [1, 365]
     * tags  标签字段信息
     *
     * @var string[]
@@ -172,8 +172,8 @@ class UpdateLogGroupParams implements ModelInterface, ArrayAccess
         if ($this->container['ttlInDays'] === null) {
             $invalidProperties[] = "'ttlInDays' can't be null";
         }
-            if (($this->container['ttlInDays'] > 30)) {
-                $invalidProperties[] = "invalid value for 'ttlInDays', must be smaller than or equal to 30.";
+            if (($this->container['ttlInDays'] > 365)) {
+                $invalidProperties[] = "invalid value for 'ttlInDays', must be smaller than or equal to 365.";
             }
             if (($this->container['ttlInDays'] < 1)) {
                 $invalidProperties[] = "invalid value for 'ttlInDays', must be bigger than or equal to 1.";
@@ -194,7 +194,7 @@ class UpdateLogGroupParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets ttlInDays
-    *  日志存储时间 天。 取值范围为 [1, 30]
+    *  日志存储时间 天。 取值范围为 [1, 365]
     *
     * @return int
     */
@@ -206,7 +206,7 @@ class UpdateLogGroupParams implements ModelInterface, ArrayAccess
     /**
     * Sets ttlInDays
     *
-    * @param int $ttlInDays 日志存储时间 天。 取值范围为 [1, 30]
+    * @param int $ttlInDays 日志存储时间 天。 取值范围为 [1, 365]
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class UpdateInstanceConfigurationsRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * values  参数值对象，用户基于默认参数模板自定义的参数值。为空时不修改参数值。
+    * values  **参数解释：** 参数值对象，用户基于默认参数模板自定义的参数值。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 为空时不修改参数值。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UpdateInstanceConfigurationsRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * values  参数值对象，用户基于默认参数模板自定义的参数值。为空时不修改参数值。
+    * values  **参数解释：** 参数值对象，用户基于默认参数模板自定义的参数值。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 为空时不修改参数值。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UpdateInstanceConfigurationsRequestBody implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * values  参数值对象，用户基于默认参数模板自定义的参数值。为空时不修改参数值。
+    * values  **参数解释：** 参数值对象，用户基于默认参数模板自定义的参数值。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 为空时不修改参数值。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateInstanceConfigurationsRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * values  参数值对象，用户基于默认参数模板自定义的参数值。为空时不修改参数值。
+    * values  **参数解释：** 参数值对象，用户基于默认参数模板自定义的参数值。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 为空时不修改参数值。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UpdateInstanceConfigurationsRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * values  参数值对象，用户基于默认参数模板自定义的参数值。为空时不修改参数值。
+    * values  **参数解释：** 参数值对象，用户基于默认参数模板自定义的参数值。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 为空时不修改参数值。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class UpdateInstanceConfigurationsRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets values
-    *  参数值对象，用户基于默认参数模板自定义的参数值。为空时不修改参数值。
+    *  **参数解释：** 参数值对象，用户基于默认参数模板自定义的参数值。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 为空时不修改参数值。
     *
     * @return map[string,string]
     */
@@ -189,7 +189,7 @@ class UpdateInstanceConfigurationsRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets values
     *
-    * @param map[string,string] $values 参数值对象，用户基于默认参数模板自定义的参数值。为空时不修改参数值。
+    * @param map[string,string] $values **参数解释：** 参数值对象，用户基于默认参数模板自定义的参数值。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 为空时不修改参数值。
     *
     * @return $this
     */

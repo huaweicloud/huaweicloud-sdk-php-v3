@@ -180,31 +180,22 @@ class BatchConsistencyReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['taskId'] === null) {
-            $invalidProperties[] = "'taskId' can't be null";
-        }
-            if ((mb_strlen($this->container['taskId']) > 36)) {
+            if (!is_null($this->container['taskId']) && (mb_strlen($this->container['taskId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'taskId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['taskId']) < 1)) {
+            if (!is_null($this->container['taskId']) && (mb_strlen($this->container['taskId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'taskId', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['sourceId'] === null) {
-            $invalidProperties[] = "'sourceId' can't be null";
-        }
-            if ((mb_strlen($this->container['sourceId']) > 255)) {
+            if (!is_null($this->container['sourceId']) && (mb_strlen($this->container['sourceId']) > 255)) {
                 $invalidProperties[] = "invalid value for 'sourceId', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['sourceId']) < 0)) {
+            if (!is_null($this->container['sourceId']) && (mb_strlen($this->container['sourceId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'sourceId', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['sourceName'] === null) {
-            $invalidProperties[] = "'sourceName' can't be null";
-        }
-            if ((mb_strlen($this->container['sourceName']) > 255)) {
+            if (!is_null($this->container['sourceName']) && (mb_strlen($this->container['sourceName']) > 255)) {
                 $invalidProperties[] = "invalid value for 'sourceName', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['sourceName']) < 0)) {
+            if (!is_null($this->container['sourceName']) && (mb_strlen($this->container['sourceName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'sourceName', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -225,7 +216,7 @@ class BatchConsistencyReq implements ModelInterface, ArrayAccess
     * Gets taskId
     *  任务ID
     *
-    * @return string
+    * @return string|null
     */
     public function getTaskId()
     {
@@ -235,7 +226,7 @@ class BatchConsistencyReq implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string $taskId 任务ID
+    * @param string|null $taskId 任务ID
     *
     * @return $this
     */
@@ -249,7 +240,7 @@ class BatchConsistencyReq implements ModelInterface, ArrayAccess
     * Gets sourceId
     *  源端ID
     *
-    * @return string
+    * @return string|null
     */
     public function getSourceId()
     {
@@ -259,7 +250,7 @@ class BatchConsistencyReq implements ModelInterface, ArrayAccess
     /**
     * Sets sourceId
     *
-    * @param string $sourceId 源端ID
+    * @param string|null $sourceId 源端ID
     *
     * @return $this
     */
@@ -273,7 +264,7 @@ class BatchConsistencyReq implements ModelInterface, ArrayAccess
     * Gets sourceName
     *  源端名称
     *
-    * @return string
+    * @return string|null
     */
     public function getSourceName()
     {
@@ -283,7 +274,7 @@ class BatchConsistencyReq implements ModelInterface, ArrayAccess
     /**
     * Sets sourceName
     *
-    * @param string $sourceName 源端名称
+    * @param string|null $sourceName 源端名称
     *
     * @return $this
     */

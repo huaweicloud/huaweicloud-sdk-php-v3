@@ -27,7 +27,7 @@ class ShowKafkaUserClientQuotaResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'quotas' => '\HuaweiCloud\SDK\Kafka\V2\Model\Quota[]',
+            'quotas' => '\HuaweiCloud\SDK\Kafka\V2\Model\QuotaResp[]',
             'count' => 'int'
     ];
 
@@ -188,7 +188,7 @@ class ShowKafkaUserClientQuotaResponse implements ModelInterface, ArrayAccess
     * Gets quotas
     *  客户端流控配置列表。
     *
-    * @return \HuaweiCloud\SDK\Kafka\V2\Model\Quota[]|null
+    * @return \HuaweiCloud\SDK\Kafka\V2\Model\QuotaResp[]|null
     */
     public function getQuotas()
     {
@@ -198,7 +198,7 @@ class ShowKafkaUserClientQuotaResponse implements ModelInterface, ArrayAccess
     /**
     * Sets quotas
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\Quota[]|null $quotas 客户端流控配置列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\QuotaResp[]|null $quotas 客户端流控配置列表。
     *
     * @return $this
     */

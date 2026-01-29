@@ -21,7 +21,7 @@ class ListConfigurationDictionariesRequest implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  用户当前语言环境
-    * scene  字典使用场景, 告警为ALERT, 等级云为QUAD_CLOUD
+    * scene  字典使用场景，告警为ALERT，等级云为QUAD_CLOUD
     * level  仅QUAD_CLOUD场景使用[S1, S2, S3, S4]
     * scope  该字典作用域
     * dictKey  字典key
@@ -45,7 +45,7 @@ class ListConfigurationDictionariesRequest implements ModelInterface, ArrayAcces
     /**
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  用户当前语言环境
-    * scene  字典使用场景, 告警为ALERT, 等级云为QUAD_CLOUD
+    * scene  字典使用场景，告警为ALERT，等级云为QUAD_CLOUD
     * level  仅QUAD_CLOUD场景使用[S1, S2, S3, S4]
     * scope  该字典作用域
     * dictKey  字典key
@@ -90,7 +90,7 @@ class ListConfigurationDictionariesRequest implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * xLanguage  用户当前语言环境
-    * scene  字典使用场景, 告警为ALERT, 等级云为QUAD_CLOUD
+    * scene  字典使用场景，告警为ALERT，等级云为QUAD_CLOUD
     * level  仅QUAD_CLOUD场景使用[S1, S2, S3, S4]
     * scope  该字典作用域
     * dictKey  字典key
@@ -114,7 +114,7 @@ class ListConfigurationDictionariesRequest implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  用户当前语言环境
-    * scene  字典使用场景, 告警为ALERT, 等级云为QUAD_CLOUD
+    * scene  字典使用场景，告警为ALERT，等级云为QUAD_CLOUD
     * level  仅QUAD_CLOUD场景使用[S1, S2, S3, S4]
     * scope  该字典作用域
     * dictKey  字典key
@@ -138,7 +138,7 @@ class ListConfigurationDictionariesRequest implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  用户当前语言环境
-    * scene  字典使用场景, 告警为ALERT, 等级云为QUAD_CLOUD
+    * scene  字典使用场景，告警为ALERT，等级云为QUAD_CLOUD
     * level  仅QUAD_CLOUD场景使用[S1, S2, S3, S4]
     * scope  该字典作用域
     * dictKey  字典key
@@ -320,7 +320,7 @@ class ListConfigurationDictionariesRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets scene
-    *  字典使用场景, 告警为ALERT, 等级云为QUAD_CLOUD
+    *  字典使用场景，告警为ALERT，等级云为QUAD_CLOUD
     *
     * @return string|null
     */
@@ -332,7 +332,7 @@ class ListConfigurationDictionariesRequest implements ModelInterface, ArrayAcces
     /**
     * Sets scene
     *
-    * @param string|null $scene 字典使用场景, 告警为ALERT, 等级云为QUAD_CLOUD
+    * @param string|null $scene 字典使用场景，告警为ALERT，等级云为QUAD_CLOUD
     *
     * @return $this
     */

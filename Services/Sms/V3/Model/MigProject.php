@@ -20,8 +20,7 @@ class MigProject implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  迁移项目ID
-    * name  迁移项目名称
+    * name  迁移项目名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     * description  迁移项目描述
     * isdefault  是否为默认模板
     * region  区域名称
@@ -37,7 +36,6 @@ class MigProject implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
             'name' => 'string',
             'description' => 'string',
             'isdefault' => 'bool',
@@ -54,8 +52,7 @@ class MigProject implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  迁移项目ID
-    * name  迁移项目名称
+    * name  迁移项目名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     * description  迁移项目描述
     * isdefault  是否为默认模板
     * region  区域名称
@@ -71,7 +68,6 @@ class MigProject implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
         'name' => null,
         'description' => null,
         'isdefault' => null,
@@ -109,8 +105,7 @@ class MigProject implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  迁移项目ID
-    * name  迁移项目名称
+    * name  迁移项目名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     * description  迁移项目描述
     * isdefault  是否为默认模板
     * region  区域名称
@@ -126,7 +121,6 @@ class MigProject implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id',
             'name' => 'name',
             'description' => 'description',
             'isdefault' => 'isdefault',
@@ -143,8 +137,7 @@ class MigProject implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  迁移项目ID
-    * name  迁移项目名称
+    * name  迁移项目名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     * description  迁移项目描述
     * isdefault  是否为默认模板
     * region  区域名称
@@ -160,7 +153,6 @@ class MigProject implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId',
             'name' => 'setName',
             'description' => 'setDescription',
             'isdefault' => 'setIsdefault',
@@ -177,8 +169,7 @@ class MigProject implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  迁移项目ID
-    * name  迁移项目名称
+    * name  迁移项目名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     * description  迁移项目描述
     * isdefault  是否为默认模板
     * region  区域名称
@@ -194,7 +185,6 @@ class MigProject implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId',
             'name' => 'getName',
             'description' => 'getDescription',
             'isdefault' => 'getIsdefault',
@@ -282,7 +272,6 @@ class MigProject implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['isdefault'] = isset($data['isdefault']) ? $data['isdefault'] : null;
@@ -305,20 +294,14 @@ class MigProject implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 255)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 255.";
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 100)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 100.";
             }
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 0)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
-            }
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-            if ((mb_strlen($this->container['name']) > 20)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 20.";
-            }
-            if ((mb_strlen($this->container['name']) < 1)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['name']) && !preg_match("/[\\u4e00-\\u9fa5-_0-9a-zA-Z]*/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /[\\u4e00-\\u9fa5-_0-9a-zA-Z]*/.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
@@ -326,30 +309,18 @@ class MigProject implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['region'] === null) {
-            $invalidProperties[] = "'region' can't be null";
-        }
-            if ((mb_strlen($this->container['region']) > 255)) {
+            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) > 255)) {
                 $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['region']) < 0)) {
+            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) < 0)) {
                 $invalidProperties[] = "invalid value for 'region', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['speedLimit']) && ($this->container['speedLimit'] > 10000)) {
-                $invalidProperties[] = "invalid value for 'speedLimit', must be smaller than or equal to 10000.";
+            if (!is_null($this->container['speedLimit']) && ($this->container['speedLimit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'speedLimit', must be smaller than or equal to 1000.";
             }
             if (!is_null($this->container['speedLimit']) && ($this->container['speedLimit'] < 0)) {
                 $invalidProperties[] = "invalid value for 'speedLimit', must be bigger than or equal to 0.";
             }
-        if ($this->container['usePublicIp'] === null) {
-            $invalidProperties[] = "'usePublicIp' can't be null";
-        }
-        if ($this->container['existServer'] === null) {
-            $invalidProperties[] = "'existServer' can't be null";
-        }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
             $allowedValues = $this->getTypeAllowableValues();
                 if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -364,9 +335,6 @@ class MigProject implements ModelInterface, ArrayAccess
             if (!is_null($this->container['enterpriseProject']) && (mb_strlen($this->container['enterpriseProject']) < 0)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProject', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['syncing'] === null) {
-            $invalidProperties[] = "'syncing' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -382,34 +350,10 @@ class MigProject implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  迁移项目ID
+    * Gets name
+    *  迁移项目名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     *
     * @return string|null
-    */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-    * Sets id
-    *
-    * @param string|null $id 迁移项目ID
-    *
-    * @return $this
-    */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-        return $this;
-    }
-
-    /**
-    * Gets name
-    *  迁移项目名称
-    *
-    * @return string
     */
     public function getName()
     {
@@ -419,7 +363,7 @@ class MigProject implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 迁移项目名称
+    * @param string|null $name 迁移项目名称，只能由中文字符、英文字母、数字、下划线、短横线组成
     *
     * @return $this
     */
@@ -481,7 +425,7 @@ class MigProject implements ModelInterface, ArrayAccess
     * Gets region
     *  区域名称
     *
-    * @return string
+    * @return string|null
     */
     public function getRegion()
     {
@@ -491,7 +435,7 @@ class MigProject implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string $region 区域名称
+    * @param string|null $region 区域名称
     *
     * @return $this
     */
@@ -553,7 +497,7 @@ class MigProject implements ModelInterface, ArrayAccess
     * Gets usePublicIp
     *  是否使用公网IP迁移
     *
-    * @return bool
+    * @return bool|null
     */
     public function getUsePublicIp()
     {
@@ -563,7 +507,7 @@ class MigProject implements ModelInterface, ArrayAccess
     /**
     * Sets usePublicIp
     *
-    * @param bool $usePublicIp 是否使用公网IP迁移
+    * @param bool|null $usePublicIp 是否使用公网IP迁移
     *
     * @return $this
     */
@@ -577,7 +521,7 @@ class MigProject implements ModelInterface, ArrayAccess
     * Gets existServer
     *  是否是已经存在的服务器
     *
-    * @return bool
+    * @return bool|null
     */
     public function getExistServer()
     {
@@ -587,7 +531,7 @@ class MigProject implements ModelInterface, ArrayAccess
     /**
     * Sets existServer
     *
-    * @param bool $existServer 是否是已经存在的服务器
+    * @param bool|null $existServer 是否是已经存在的服务器
     *
     * @return $this
     */
@@ -601,7 +545,7 @@ class MigProject implements ModelInterface, ArrayAccess
     * Gets type
     *  迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
     *
-    * @return string
+    * @return string|null
     */
     public function getType()
     {
@@ -611,7 +555,7 @@ class MigProject implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
+    * @param string|null $type 迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
     *
     * @return $this
     */
@@ -649,7 +593,7 @@ class MigProject implements ModelInterface, ArrayAccess
     * Gets syncing
     *  首次复制或者同步后 是否继续持续同步
     *
-    * @return bool
+    * @return bool|null
     */
     public function getSyncing()
     {
@@ -659,7 +603,7 @@ class MigProject implements ModelInterface, ArrayAccess
     /**
     * Sets syncing
     *
-    * @param bool $syncing 首次复制或者同步后 是否继续持续同步
+    * @param bool|null $syncing 首次复制或者同步后 是否继续持续同步
     *
     * @return $this
     */

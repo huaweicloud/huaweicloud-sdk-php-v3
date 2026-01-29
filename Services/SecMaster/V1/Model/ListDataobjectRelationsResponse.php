@@ -24,8 +24,8 @@ class ListDataobjectRelationsResponse implements ModelInterface, ArrayAccess
     * code  错误码
     * message  错误信息
     * total  总数
-    * limit  分页大小
-    * offset  偏移量
+    * size  分页大小
+    * page  分页的页码
     * success  是否成功
     * data  详情列表
     * xRequestId  xRequestId
@@ -36,8 +36,8 @@ class ListDataobjectRelationsResponse implements ModelInterface, ArrayAccess
             'code' => 'string',
             'message' => 'string',
             'total' => 'int',
-            'limit' => 'int',
-            'offset' => 'int',
+            'size' => 'int',
+            'page' => 'int',
             'success' => 'bool',
             'data' => '\HuaweiCloud\SDK\SecMaster\V1\Model\DataObjectDetail[]',
             'xRequestId' => 'string'
@@ -48,8 +48,8 @@ class ListDataobjectRelationsResponse implements ModelInterface, ArrayAccess
     * code  错误码
     * message  错误信息
     * total  总数
-    * limit  分页大小
-    * offset  偏移量
+    * size  分页大小
+    * page  分页的页码
     * success  是否成功
     * data  详情列表
     * xRequestId  xRequestId
@@ -60,8 +60,8 @@ class ListDataobjectRelationsResponse implements ModelInterface, ArrayAccess
         'code' => null,
         'message' => null,
         'total' => null,
-        'limit' => null,
-        'offset' => null,
+        'size' => null,
+        'page' => null,
         'success' => null,
         'data' => null,
         'xRequestId' => null
@@ -93,8 +93,8 @@ class ListDataobjectRelationsResponse implements ModelInterface, ArrayAccess
     * code  错误码
     * message  错误信息
     * total  总数
-    * limit  分页大小
-    * offset  偏移量
+    * size  分页大小
+    * page  分页的页码
     * success  是否成功
     * data  详情列表
     * xRequestId  xRequestId
@@ -105,8 +105,8 @@ class ListDataobjectRelationsResponse implements ModelInterface, ArrayAccess
             'code' => 'code',
             'message' => 'message',
             'total' => 'total',
-            'limit' => 'limit',
-            'offset' => 'offset',
+            'size' => 'size',
+            'page' => 'page',
             'success' => 'success',
             'data' => 'data',
             'xRequestId' => 'X-request-id'
@@ -117,8 +117,8 @@ class ListDataobjectRelationsResponse implements ModelInterface, ArrayAccess
     * code  错误码
     * message  错误信息
     * total  总数
-    * limit  分页大小
-    * offset  偏移量
+    * size  分页大小
+    * page  分页的页码
     * success  是否成功
     * data  详情列表
     * xRequestId  xRequestId
@@ -129,8 +129,8 @@ class ListDataobjectRelationsResponse implements ModelInterface, ArrayAccess
             'code' => 'setCode',
             'message' => 'setMessage',
             'total' => 'setTotal',
-            'limit' => 'setLimit',
-            'offset' => 'setOffset',
+            'size' => 'setSize',
+            'page' => 'setPage',
             'success' => 'setSuccess',
             'data' => 'setData',
             'xRequestId' => 'setXRequestId'
@@ -141,8 +141,8 @@ class ListDataobjectRelationsResponse implements ModelInterface, ArrayAccess
     * code  错误码
     * message  错误信息
     * total  总数
-    * limit  分页大小
-    * offset  偏移量
+    * size  分页大小
+    * page  分页的页码
     * success  是否成功
     * data  详情列表
     * xRequestId  xRequestId
@@ -153,8 +153,8 @@ class ListDataobjectRelationsResponse implements ModelInterface, ArrayAccess
             'code' => 'getCode',
             'message' => 'getMessage',
             'total' => 'getTotal',
-            'limit' => 'getLimit',
-            'offset' => 'getOffset',
+            'size' => 'getSize',
+            'page' => 'getPage',
             'success' => 'getSuccess',
             'data' => 'getData',
             'xRequestId' => 'getXRequestId'
@@ -221,8 +221,8 @@ class ListDataobjectRelationsResponse implements ModelInterface, ArrayAccess
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
         $this->container['success'] = isset($data['success']) ? $data['success'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
@@ -254,17 +254,17 @@ class ListDataobjectRelationsResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['total']) && ($this->container['total'] < 0)) {
                 $invalidProperties[] = "invalid value for 'total', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 10000)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 10000.";
+            if (!is_null($this->container['size']) && ($this->container['size'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'size', must be smaller than or equal to 1000.";
             }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            if (!is_null($this->container['size']) && ($this->container['size'] < 0)) {
+                $invalidProperties[] = "invalid value for 'size', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 10000)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 10000.";
+            if (!is_null($this->container['page']) && ($this->container['page'] > 10000)) {
+                $invalidProperties[] = "invalid value for 'page', must be smaller than or equal to 10000.";
             }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
-                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            if (!is_null($this->container['page']) && ($this->container['page'] < 0)) {
+                $invalidProperties[] = "invalid value for 'page', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -353,50 +353,50 @@ class ListDataobjectRelationsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets limit
+    * Gets size
     *  分页大小
     *
     * @return int|null
     */
-    public function getLimit()
+    public function getSize()
     {
-        return $this->container['limit'];
+        return $this->container['size'];
     }
 
     /**
-    * Sets limit
+    * Sets size
     *
-    * @param int|null $limit 分页大小
+    * @param int|null $size 分页大小
     *
     * @return $this
     */
-    public function setLimit($limit)
+    public function setSize($size)
     {
-        $this->container['limit'] = $limit;
+        $this->container['size'] = $size;
         return $this;
     }
 
     /**
-    * Gets offset
-    *  偏移量
+    * Gets page
+    *  分页的页码
     *
     * @return int|null
     */
-    public function getOffset()
+    public function getPage()
     {
-        return $this->container['offset'];
+        return $this->container['page'];
     }
 
     /**
-    * Sets offset
+    * Sets page
     *
-    * @param int|null $offset 偏移量
+    * @param int|null $page 分页的页码
     *
     * @return $this
     */
-    public function setOffset($offset)
+    public function setPage($page)
     {
-        $this->container['offset'] = $offset;
+        $this->container['page'] = $page;
         return $this;
     }
 

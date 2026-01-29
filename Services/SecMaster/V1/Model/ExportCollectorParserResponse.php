@@ -21,22 +21,20 @@ class ExportCollectorParserResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * parserIds  相关描述信息
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'parserIds' => '\HuaweiCloud\SDK\SecMaster\V1\Model\ExportParserResponseDto[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * parserIds  相关描述信息
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'parserIds' => null
     ];
 
     /**
@@ -62,32 +60,29 @@ class ExportCollectorParserResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * parserIds  相关描述信息
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'parserIds' => 'parser_ids'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * parserIds  相关描述信息
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'parserIds' => 'setParserIds'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * parserIds  相关描述信息
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'parserIds' => 'getParserIds'
     ];
 
     /**
@@ -148,7 +143,6 @@ class ExportCollectorParserResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['parserIds'] = isset($data['parserIds']) ? $data['parserIds'] : null;
     }
 
     /**
@@ -171,30 +165,6 @@ class ExportCollectorParserResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets parserIds
-    *  相关描述信息
-    *
-    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\ExportParserResponseDto[]|null
-    */
-    public function getParserIds()
-    {
-        return $this->container['parserIds'];
-    }
-
-    /**
-    * Sets parserIds
-    *
-    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\ExportParserResponseDto[]|null $parserIds 相关描述信息
-    *
-    * @return $this
-    */
-    public function setParserIds($parserIds)
-    {
-        $this->container['parserIds'] = $parserIds;
-        return $this;
     }
 
     /**

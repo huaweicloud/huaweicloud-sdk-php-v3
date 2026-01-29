@@ -34,7 +34,7 @@ class ShowAdhocResultResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'batch' => 'object',
+            'batch' => 'int',
             'schema' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AdhocQueryAnalysisField[]',
             'datarows' => 'object[][]',
             'datarowsUpsert' => '\HuaweiCloud\SDK\SecMaster\V2\Model\DataRow[][]',
@@ -247,6 +247,12 @@ class ShowAdhocResultResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['batch']) && ($this->container['batch'] > 255)) {
+                $invalidProperties[] = "invalid value for 'batch', must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['batch']) && ($this->container['batch'] < 0)) {
+                $invalidProperties[] = "invalid value for 'batch', must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['total']) && ($this->container['total'] > 10000)) {
                 $invalidProperties[] = "invalid value for 'total', must be smaller than or equal to 10000.";
             }
@@ -289,7 +295,7 @@ class ShowAdhocResultResponse implements ModelInterface, ArrayAccess
     * Gets batch
     *  获取数据的批次，为0则为第一次查询
     *
-    * @return object|null
+    * @return int|null
     */
     public function getBatch()
     {
@@ -299,7 +305,7 @@ class ShowAdhocResultResponse implements ModelInterface, ArrayAccess
     /**
     * Sets batch
     *
-    * @param object|null $batch 获取数据的批次，为0则为第一次查询
+    * @param int|null $batch 获取数据的批次，为0则为第一次查询
     *
     * @return $this
     */

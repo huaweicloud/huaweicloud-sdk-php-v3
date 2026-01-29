@@ -24,9 +24,6 @@ class BatchCreateDataobjectRelationsResponse implements ModelInterface, ArrayAcc
     * code  错误码
     * message  错误信息
     * requestId  请求ID
-    * total  总数
-    * limit  分页大小
-    * offset  偏移量
     * success  是否成功
     * data  data
     *
@@ -36,9 +33,6 @@ class BatchCreateDataobjectRelationsResponse implements ModelInterface, ArrayAcc
             'code' => 'string',
             'message' => 'string',
             'requestId' => 'string',
-            'total' => 'int',
-            'limit' => 'int',
-            'offset' => 'int',
             'success' => 'bool',
             'data' => '\HuaweiCloud\SDK\SecMaster\V1\Model\BatchOperateDataobjectResult'
     ];
@@ -48,9 +42,6 @@ class BatchCreateDataobjectRelationsResponse implements ModelInterface, ArrayAcc
     * code  错误码
     * message  错误信息
     * requestId  请求ID
-    * total  总数
-    * limit  分页大小
-    * offset  偏移量
     * success  是否成功
     * data  data
     *
@@ -60,9 +51,6 @@ class BatchCreateDataobjectRelationsResponse implements ModelInterface, ArrayAcc
         'code' => null,
         'message' => null,
         'requestId' => null,
-        'total' => null,
-        'limit' => null,
-        'offset' => null,
         'success' => null,
         'data' => null
     ];
@@ -93,9 +81,6 @@ class BatchCreateDataobjectRelationsResponse implements ModelInterface, ArrayAcc
     * code  错误码
     * message  错误信息
     * requestId  请求ID
-    * total  总数
-    * limit  分页大小
-    * offset  偏移量
     * success  是否成功
     * data  data
     *
@@ -105,9 +90,6 @@ class BatchCreateDataobjectRelationsResponse implements ModelInterface, ArrayAcc
             'code' => 'code',
             'message' => 'message',
             'requestId' => 'request_id',
-            'total' => 'total',
-            'limit' => 'limit',
-            'offset' => 'offset',
             'success' => 'success',
             'data' => 'data'
     ];
@@ -117,9 +99,6 @@ class BatchCreateDataobjectRelationsResponse implements ModelInterface, ArrayAcc
     * code  错误码
     * message  错误信息
     * requestId  请求ID
-    * total  总数
-    * limit  分页大小
-    * offset  偏移量
     * success  是否成功
     * data  data
     *
@@ -129,9 +108,6 @@ class BatchCreateDataobjectRelationsResponse implements ModelInterface, ArrayAcc
             'code' => 'setCode',
             'message' => 'setMessage',
             'requestId' => 'setRequestId',
-            'total' => 'setTotal',
-            'limit' => 'setLimit',
-            'offset' => 'setOffset',
             'success' => 'setSuccess',
             'data' => 'setData'
     ];
@@ -141,9 +117,6 @@ class BatchCreateDataobjectRelationsResponse implements ModelInterface, ArrayAcc
     * code  错误码
     * message  错误信息
     * requestId  请求ID
-    * total  总数
-    * limit  分页大小
-    * offset  偏移量
     * success  是否成功
     * data  data
     *
@@ -153,9 +126,6 @@ class BatchCreateDataobjectRelationsResponse implements ModelInterface, ArrayAcc
             'code' => 'getCode',
             'message' => 'getMessage',
             'requestId' => 'getRequestId',
-            'total' => 'getTotal',
-            'limit' => 'getLimit',
-            'offset' => 'getOffset',
             'success' => 'getSuccess',
             'data' => 'getData'
     ];
@@ -221,9 +191,6 @@ class BatchCreateDataobjectRelationsResponse implements ModelInterface, ArrayAcc
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
-        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['success'] = isset($data['success']) ? $data['success'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
@@ -253,24 +220,6 @@ class BatchCreateDataobjectRelationsResponse implements ModelInterface, ArrayAcc
             }
             if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['total']) && ($this->container['total'] > 10000)) {
-                $invalidProperties[] = "invalid value for 'total', must be smaller than or equal to 10000.";
-            }
-            if (!is_null($this->container['total']) && ($this->container['total'] < 0)) {
-                $invalidProperties[] = "invalid value for 'total', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 10000)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 10000.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 10000)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 10000.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
-                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -355,78 +304,6 @@ class BatchCreateDataobjectRelationsResponse implements ModelInterface, ArrayAcc
     public function setRequestId($requestId)
     {
         $this->container['requestId'] = $requestId;
-        return $this;
-    }
-
-    /**
-    * Gets total
-    *  总数
-    *
-    * @return int|null
-    */
-    public function getTotal()
-    {
-        return $this->container['total'];
-    }
-
-    /**
-    * Sets total
-    *
-    * @param int|null $total 总数
-    *
-    * @return $this
-    */
-    public function setTotal($total)
-    {
-        $this->container['total'] = $total;
-        return $this;
-    }
-
-    /**
-    * Gets limit
-    *  分页大小
-    *
-    * @return int|null
-    */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-    * Sets limit
-    *
-    * @param int|null $limit 分页大小
-    *
-    * @return $this
-    */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
-        return $this;
-    }
-
-    /**
-    * Gets offset
-    *  偏移量
-    *
-    * @return int|null
-    */
-    public function getOffset()
-    {
-        return $this->container['offset'];
-    }
-
-    /**
-    * Sets offset
-    *
-    * @param int|null $offset 偏移量
-    *
-    * @return $this
-    */
-    public function setOffset($offset)
-    {
-        $this->container['offset'] = $offset;
         return $this;
     }
 

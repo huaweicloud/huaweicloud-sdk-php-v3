@@ -27,7 +27,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     * autoDelete  **参数解释**： Queue是否开启自动删除。 **取值范围**： - true：开启自动删除。 - false：未开启自动删除。
     * messages  **参数解释**： 待消费消息数。 **取值范围**： 不涉及。
     * consumers  **参数解释**： 连接的消费者数。 **取值范围**： 不涉及。
-    * policy  **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
+    * policy  **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu,srg)。 **取值范围**： 不涉及。
     * arguments  arguments
     * consumerDetails  **参数解释**： 订阅该Queue的消费者信息。
     * queueBindings  **参数解释**： 以此Queue为目标的绑定信息列表。
@@ -55,7 +55,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     * autoDelete  **参数解释**： Queue是否开启自动删除。 **取值范围**： - true：开启自动删除。 - false：未开启自动删除。
     * messages  **参数解释**： 待消费消息数。 **取值范围**： 不涉及。
     * consumers  **参数解释**： 连接的消费者数。 **取值范围**： 不涉及。
-    * policy  **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
+    * policy  **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu,srg)。 **取值范围**： 不涉及。
     * arguments  arguments
     * consumerDetails  **参数解释**： 订阅该Queue的消费者信息。
     * queueBindings  **参数解释**： 以此Queue为目标的绑定信息列表。
@@ -104,7 +104,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     * autoDelete  **参数解释**： Queue是否开启自动删除。 **取值范围**： - true：开启自动删除。 - false：未开启自动删除。
     * messages  **参数解释**： 待消费消息数。 **取值范围**： 不涉及。
     * consumers  **参数解释**： 连接的消费者数。 **取值范围**： 不涉及。
-    * policy  **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
+    * policy  **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu,srg)。 **取值范围**： 不涉及。
     * arguments  arguments
     * consumerDetails  **参数解释**： 订阅该Queue的消费者信息。
     * queueBindings  **参数解释**： 以此Queue为目标的绑定信息列表。
@@ -132,7 +132,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     * autoDelete  **参数解释**： Queue是否开启自动删除。 **取值范围**： - true：开启自动删除。 - false：未开启自动删除。
     * messages  **参数解释**： 待消费消息数。 **取值范围**： 不涉及。
     * consumers  **参数解释**： 连接的消费者数。 **取值范围**： 不涉及。
-    * policy  **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
+    * policy  **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu,srg)。 **取值范围**： 不涉及。
     * arguments  arguments
     * consumerDetails  **参数解释**： 订阅该Queue的消费者信息。
     * queueBindings  **参数解释**： 以此Queue为目标的绑定信息列表。
@@ -160,7 +160,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     * autoDelete  **参数解释**： Queue是否开启自动删除。 **取值范围**： - true：开启自动删除。 - false：未开启自动删除。
     * messages  **参数解释**： 待消费消息数。 **取值范围**： 不涉及。
     * consumers  **参数解释**： 连接的消费者数。 **取值范围**： 不涉及。
-    * policy  **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
+    * policy  **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu,srg)。 **取值范围**： 不涉及。
     * arguments  arguments
     * consumerDetails  **参数解释**： 订阅该Queue的消费者信息。
     * queueBindings  **参数解释**： 以此Queue为目标的绑定信息列表。
@@ -418,7 +418,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets policy
-    *  **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
+    *  **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu,srg)。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -430,7 +430,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets policy
     *
-    * @param string|null $policy **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
+    * @param string|null $policy **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu,srg)。 **取值范围**： 不涉及。
     *
     * @return $this
     */

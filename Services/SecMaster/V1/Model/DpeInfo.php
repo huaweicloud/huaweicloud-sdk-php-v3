@@ -30,6 +30,8 @@ class DpeInfo implements ModelInterface, ArrayAccess
     * status  状态
     * completeDegree  完成度
     * instanceNum  关联实例数
+    * builtIn  是否内置数据
+    * dataSource  数据源
     * description  描述信息
     * updateTime  更新时间
     * createTime  创建时间
@@ -51,6 +53,8 @@ class DpeInfo implements ModelInterface, ArrayAccess
             'status' => 'string',
             'completeDegree' => 'string',
             'instanceNum' => 'string',
+            'builtIn' => 'string',
+            'dataSource' => 'string',
             'description' => 'string',
             'updateTime' => 'string',
             'createTime' => 'string',
@@ -72,6 +76,8 @@ class DpeInfo implements ModelInterface, ArrayAccess
     * status  状态
     * completeDegree  完成度
     * instanceNum  关联实例数
+    * builtIn  是否内置数据
+    * dataSource  数据源
     * description  描述信息
     * updateTime  更新时间
     * createTime  创建时间
@@ -93,6 +99,8 @@ class DpeInfo implements ModelInterface, ArrayAccess
         'status' => null,
         'completeDegree' => null,
         'instanceNum' => null,
+        'builtIn' => null,
+        'dataSource' => null,
         'description' => null,
         'updateTime' => null,
         'createTime' => null,
@@ -135,6 +143,8 @@ class DpeInfo implements ModelInterface, ArrayAccess
     * status  状态
     * completeDegree  完成度
     * instanceNum  关联实例数
+    * builtIn  是否内置数据
+    * dataSource  数据源
     * description  描述信息
     * updateTime  更新时间
     * createTime  创建时间
@@ -156,6 +166,8 @@ class DpeInfo implements ModelInterface, ArrayAccess
             'status' => 'status',
             'completeDegree' => 'complete_degree',
             'instanceNum' => 'instance_num',
+            'builtIn' => 'built_in',
+            'dataSource' => 'data_source',
             'description' => 'description',
             'updateTime' => 'update_time',
             'createTime' => 'create_time',
@@ -177,6 +189,8 @@ class DpeInfo implements ModelInterface, ArrayAccess
     * status  状态
     * completeDegree  完成度
     * instanceNum  关联实例数
+    * builtIn  是否内置数据
+    * dataSource  数据源
     * description  描述信息
     * updateTime  更新时间
     * createTime  创建时间
@@ -198,6 +212,8 @@ class DpeInfo implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'completeDegree' => 'setCompleteDegree',
             'instanceNum' => 'setInstanceNum',
+            'builtIn' => 'setBuiltIn',
+            'dataSource' => 'setDataSource',
             'description' => 'setDescription',
             'updateTime' => 'setUpdateTime',
             'createTime' => 'setCreateTime',
@@ -219,6 +235,8 @@ class DpeInfo implements ModelInterface, ArrayAccess
     * status  状态
     * completeDegree  完成度
     * instanceNum  关联实例数
+    * builtIn  是否内置数据
+    * dataSource  数据源
     * description  描述信息
     * updateTime  更新时间
     * createTime  创建时间
@@ -240,6 +258,8 @@ class DpeInfo implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'completeDegree' => 'getCompleteDegree',
             'instanceNum' => 'getInstanceNum',
+            'builtIn' => 'getBuiltIn',
+            'dataSource' => 'getDataSource',
             'description' => 'getDescription',
             'updateTime' => 'getUpdateTime',
             'createTime' => 'getCreateTime',
@@ -317,6 +337,8 @@ class DpeInfo implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['completeDegree'] = isset($data['completeDegree']) ? $data['completeDegree'] : null;
         $this->container['instanceNum'] = isset($data['instanceNum']) ? $data['instanceNum'] : null;
+        $this->container['builtIn'] = isset($data['builtIn']) ? $data['builtIn'] : null;
+        $this->container['dataSource'] = isset($data['dataSource']) ? $data['dataSource'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
@@ -387,6 +409,24 @@ class DpeInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['completeDegree']) && (mb_strlen($this->container['completeDegree']) < 1)) {
                 $invalidProperties[] = "invalid value for 'completeDegree', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['instanceNum']) && (mb_strlen($this->container['instanceNum']) > 5)) {
+                $invalidProperties[] = "invalid value for 'instanceNum', the character length must be smaller than or equal to 5.";
+            }
+            if (!is_null($this->container['instanceNum']) && (mb_strlen($this->container['instanceNum']) < 1)) {
+                $invalidProperties[] = "invalid value for 'instanceNum', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['builtIn']) && (mb_strlen($this->container['builtIn']) > 8)) {
+                $invalidProperties[] = "invalid value for 'builtIn', the character length must be smaller than or equal to 8.";
+            }
+            if (!is_null($this->container['builtIn']) && (mb_strlen($this->container['builtIn']) < 1)) {
+                $invalidProperties[] = "invalid value for 'builtIn', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['dataSource']) && (mb_strlen($this->container['dataSource']) > 10)) {
+                $invalidProperties[] = "invalid value for 'dataSource', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['dataSource']) && (mb_strlen($this->container['dataSource']) < 0)) {
+                $invalidProperties[] = "invalid value for 'dataSource', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 1024.";
@@ -681,6 +721,54 @@ class DpeInfo implements ModelInterface, ArrayAccess
     public function setInstanceNum($instanceNum)
     {
         $this->container['instanceNum'] = $instanceNum;
+        return $this;
+    }
+
+    /**
+    * Gets builtIn
+    *  是否内置数据
+    *
+    * @return string|null
+    */
+    public function getBuiltIn()
+    {
+        return $this->container['builtIn'];
+    }
+
+    /**
+    * Sets builtIn
+    *
+    * @param string|null $builtIn 是否内置数据
+    *
+    * @return $this
+    */
+    public function setBuiltIn($builtIn)
+    {
+        $this->container['builtIn'] = $builtIn;
+        return $this;
+    }
+
+    /**
+    * Gets dataSource
+    *  数据源
+    *
+    * @return string|null
+    */
+    public function getDataSource()
+    {
+        return $this->container['dataSource'];
+    }
+
+    /**
+    * Sets dataSource
+    *
+    * @param string|null $dataSource 数据源
+    *
+    * @return $this
+    */
+    public function setDataSource($dataSource)
+    {
+        $this->container['dataSource'] = $dataSource;
         return $this;
     }
 

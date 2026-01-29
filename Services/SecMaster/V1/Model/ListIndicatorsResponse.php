@@ -24,6 +24,8 @@ class ListIndicatorsResponse implements ModelInterface, ArrayAccess
     * code  错误码
     * message  错误信息
     * total  总数
+    * size  分页大小
+    * page  分页的页码
     * data  情报列表数据
     * xRequestId  xRequestId
     *
@@ -33,6 +35,8 @@ class ListIndicatorsResponse implements ModelInterface, ArrayAccess
             'code' => 'string',
             'message' => 'string',
             'total' => 'int',
+            'size' => 'int',
+            'page' => 'int',
             'data' => '\HuaweiCloud\SDK\SecMaster\V1\Model\IndicatorDetail[]',
             'xRequestId' => 'string'
     ];
@@ -42,6 +46,8 @@ class ListIndicatorsResponse implements ModelInterface, ArrayAccess
     * code  错误码
     * message  错误信息
     * total  总数
+    * size  分页大小
+    * page  分页的页码
     * data  情报列表数据
     * xRequestId  xRequestId
     *
@@ -51,6 +57,8 @@ class ListIndicatorsResponse implements ModelInterface, ArrayAccess
         'code' => null,
         'message' => null,
         'total' => null,
+        'size' => null,
+        'page' => null,
         'data' => null,
         'xRequestId' => null
     ];
@@ -81,6 +89,8 @@ class ListIndicatorsResponse implements ModelInterface, ArrayAccess
     * code  错误码
     * message  错误信息
     * total  总数
+    * size  分页大小
+    * page  分页的页码
     * data  情报列表数据
     * xRequestId  xRequestId
     *
@@ -90,6 +100,8 @@ class ListIndicatorsResponse implements ModelInterface, ArrayAccess
             'code' => 'code',
             'message' => 'message',
             'total' => 'total',
+            'size' => 'size',
+            'page' => 'page',
             'data' => 'data',
             'xRequestId' => 'X-request-id'
     ];
@@ -99,6 +111,8 @@ class ListIndicatorsResponse implements ModelInterface, ArrayAccess
     * code  错误码
     * message  错误信息
     * total  总数
+    * size  分页大小
+    * page  分页的页码
     * data  情报列表数据
     * xRequestId  xRequestId
     *
@@ -108,6 +122,8 @@ class ListIndicatorsResponse implements ModelInterface, ArrayAccess
             'code' => 'setCode',
             'message' => 'setMessage',
             'total' => 'setTotal',
+            'size' => 'setSize',
+            'page' => 'setPage',
             'data' => 'setData',
             'xRequestId' => 'setXRequestId'
     ];
@@ -117,6 +133,8 @@ class ListIndicatorsResponse implements ModelInterface, ArrayAccess
     * code  错误码
     * message  错误信息
     * total  总数
+    * size  分页大小
+    * page  分页的页码
     * data  情报列表数据
     * xRequestId  xRequestId
     *
@@ -126,6 +144,8 @@ class ListIndicatorsResponse implements ModelInterface, ArrayAccess
             'code' => 'getCode',
             'message' => 'getMessage',
             'total' => 'getTotal',
+            'size' => 'getSize',
+            'page' => 'getPage',
             'data' => 'getData',
             'xRequestId' => 'getXRequestId'
     ];
@@ -191,6 +211,8 @@ class ListIndicatorsResponse implements ModelInterface, ArrayAccess
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
@@ -220,6 +242,18 @@ class ListIndicatorsResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['total']) && ($this->container['total'] < 0)) {
                 $invalidProperties[] = "invalid value for 'total', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['size']) && ($this->container['size'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'size', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['size']) && ($this->container['size'] < 0)) {
+                $invalidProperties[] = "invalid value for 'size', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['page']) && ($this->container['page'] > 10000)) {
+                $invalidProperties[] = "invalid value for 'page', must be smaller than or equal to 10000.";
+            }
+            if (!is_null($this->container['page']) && ($this->container['page'] < 0)) {
+                $invalidProperties[] = "invalid value for 'page', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -304,6 +338,54 @@ class ListIndicatorsResponse implements ModelInterface, ArrayAccess
     public function setTotal($total)
     {
         $this->container['total'] = $total;
+        return $this;
+    }
+
+    /**
+    * Gets size
+    *  分页大小
+    *
+    * @return int|null
+    */
+    public function getSize()
+    {
+        return $this->container['size'];
+    }
+
+    /**
+    * Sets size
+    *
+    * @param int|null $size 分页大小
+    *
+    * @return $this
+    */
+    public function setSize($size)
+    {
+        $this->container['size'] = $size;
+        return $this;
+    }
+
+    /**
+    * Gets page
+    *  分页的页码
+    *
+    * @return int|null
+    */
+    public function getPage()
+    {
+        return $this->container['page'];
+    }
+
+    /**
+    * Sets page
+    *
+    * @param int|null $page 分页的页码
+    *
+    * @return $this
+    */
+    public function setPage($page)
+    {
+        $this->container['page'] = $page;
         return $this;
     }
 

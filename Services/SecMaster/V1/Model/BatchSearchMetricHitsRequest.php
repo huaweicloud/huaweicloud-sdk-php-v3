@@ -22,7 +22,7 @@ class BatchSearchMetricHitsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * workspaceId  工作空间ID
     * timespan  查询指标的时间范围，ISO8601格式，例如：2007-03-01T13:00:00Z/2008-05-11T15:30:00Z或2007-03-01T13:00:00Z/P1Y2M10DT2H30M或P1Y2M10DT2H30M/2008-05-11T15:30:00Z
-    * cache  是否启用缓存，默认true, 禁用缓存 false
+    * cache  是否启用缓存，默认true，禁用缓存 false
     * body  body
     *
     * @var string[]
@@ -38,7 +38,7 @@ class BatchSearchMetricHitsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * workspaceId  工作空间ID
     * timespan  查询指标的时间范围，ISO8601格式，例如：2007-03-01T13:00:00Z/2008-05-11T15:30:00Z或2007-03-01T13:00:00Z/P1Y2M10DT2H30M或P1Y2M10DT2H30M/2008-05-11T15:30:00Z
-    * cache  是否启用缓存，默认true, 禁用缓存 false
+    * cache  是否启用缓存，默认true，禁用缓存 false
     * body  body
     *
     * @var string[]
@@ -75,7 +75,7 @@ class BatchSearchMetricHitsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * workspaceId  工作空间ID
     * timespan  查询指标的时间范围，ISO8601格式，例如：2007-03-01T13:00:00Z/2008-05-11T15:30:00Z或2007-03-01T13:00:00Z/P1Y2M10DT2H30M或P1Y2M10DT2H30M/2008-05-11T15:30:00Z
-    * cache  是否启用缓存，默认true, 禁用缓存 false
+    * cache  是否启用缓存，默认true，禁用缓存 false
     * body  body
     *
     * @var string[]
@@ -91,7 +91,7 @@ class BatchSearchMetricHitsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * workspaceId  工作空间ID
     * timespan  查询指标的时间范围，ISO8601格式，例如：2007-03-01T13:00:00Z/2008-05-11T15:30:00Z或2007-03-01T13:00:00Z/P1Y2M10DT2H30M或P1Y2M10DT2H30M/2008-05-11T15:30:00Z
-    * cache  是否启用缓存，默认true, 禁用缓存 false
+    * cache  是否启用缓存，默认true，禁用缓存 false
     * body  body
     *
     * @var string[]
@@ -107,7 +107,7 @@ class BatchSearchMetricHitsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * workspaceId  工作空间ID
     * timespan  查询指标的时间范围，ISO8601格式，例如：2007-03-01T13:00:00Z/2008-05-11T15:30:00Z或2007-03-01T13:00:00Z/P1Y2M10DT2H30M或P1Y2M10DT2H30M/2008-05-11T15:30:00Z
-    * cache  是否启用缓存，默认true, 禁用缓存 false
+    * cache  是否启用缓存，默认true，禁用缓存 false
     * body  body
     *
     * @var string[]
@@ -270,7 +270,7 @@ class BatchSearchMetricHitsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets cache
-    *  是否启用缓存，默认true, 禁用缓存 false
+    *  是否启用缓存，默认true，禁用缓存 false
     *
     * @return bool|null
     */
@@ -282,7 +282,7 @@ class BatchSearchMetricHitsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets cache
     *
-    * @param bool|null $cache 是否启用缓存，默认true, 禁用缓存 false
+    * @param bool|null $cache 是否启用缓存，默认true，禁用缓存 false
     *
     * @return $this
     */

@@ -191,13 +191,10 @@ class PutVolumeGroups implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-            if ((mb_strlen($this->container['id']) > 255)) {
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 255)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['id']) < 0)) {
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 0)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['adjustSize']) && ($this->container['adjustSize'] > 9223372036854775807)) {
@@ -248,7 +245,7 @@ class PutVolumeGroups implements ModelInterface, ArrayAccess
     * Gets id
     *  卷组ID
     *
-    * @return string
+    * @return string|null
     */
     public function getId()
     {
@@ -258,7 +255,7 @@ class PutVolumeGroups implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 卷组ID
+    * @param string|null $id 卷组ID
     *
     * @return $this
     */

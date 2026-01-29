@@ -20,7 +20,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  企业仓库实例名称，小写字母或数字开头，后面跟小写字母、数字、点、下划线或中划线（其中点、下划线、中划线不能直接连续），小写字母或数字结尾，3-64个字符。
+    * name  企业仓库实例名称，长度范围为3-64个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
     * description  企业仓库实例描述
     * spec  企业仓库实例规格，目前支持企业版(swr.ee.professional)
     * vpcId  用户虚拟私有云ID
@@ -54,7 +54,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  企业仓库实例名称，小写字母或数字开头，后面跟小写字母、数字、点、下划线或中划线（其中点、下划线、中划线不能直接连续），小写字母或数字结尾，3-64个字符。
+    * name  企业仓库实例名称，长度范围为3-64个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
     * description  企业仓库实例描述
     * spec  企业仓库实例规格，目前支持企业版(swr.ee.professional)
     * vpcId  用户虚拟私有云ID
@@ -109,7 +109,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  企业仓库实例名称，小写字母或数字开头，后面跟小写字母、数字、点、下划线或中划线（其中点、下划线、中划线不能直接连续），小写字母或数字结尾，3-64个字符。
+    * name  企业仓库实例名称，长度范围为3-64个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
     * description  企业仓库实例描述
     * spec  企业仓库实例规格，目前支持企业版(swr.ee.professional)
     * vpcId  用户虚拟私有云ID
@@ -143,7 +143,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  企业仓库实例名称，小写字母或数字开头，后面跟小写字母、数字、点、下划线或中划线（其中点、下划线、中划线不能直接连续），小写字母或数字结尾，3-64个字符。
+    * name  企业仓库实例名称，长度范围为3-64个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
     * description  企业仓库实例描述
     * spec  企业仓库实例规格，目前支持企业版(swr.ee.professional)
     * vpcId  用户虚拟私有云ID
@@ -177,7 +177,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  企业仓库实例名称，小写字母或数字开头，后面跟小写字母、数字、点、下划线或中划线（其中点、下划线、中划线不能直接连续），小写字母或数字结尾，3-64个字符。
+    * name  企业仓库实例名称，长度范围为3-64个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
     * description  企业仓库实例描述
     * spec  企业仓库实例规格，目前支持企业版(swr.ee.professional)
     * vpcId  用户虚拟私有云ID
@@ -392,7 +392,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  企业仓库实例名称，小写字母或数字开头，后面跟小写字母、数字、点、下划线或中划线（其中点、下划线、中划线不能直接连续），小写字母或数字结尾，3-64个字符。
+    *  企业仓库实例名称，长度范围为3-64个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
     *
     * @return string
     */
@@ -404,7 +404,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 企业仓库实例名称，小写字母或数字开头，后面跟小写字母、数字、点、下划线或中划线（其中点、下划线、中划线不能直接连续），小写字母或数字结尾，3-64个字符。
+    * @param string $name 企业仓库实例名称，长度范围为3-64个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
     *
     * @return $this
     */
