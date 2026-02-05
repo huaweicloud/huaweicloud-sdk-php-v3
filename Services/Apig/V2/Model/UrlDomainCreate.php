@@ -24,7 +24,7 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
     * isHttpRedirectToHttps  是否开启http到https的重定向，false为关闭，true为开启，默认为false
     * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；如果填写该参数，则必须同时填写https_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * ingressHttpsPort  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
-    * urlDomain  自定义域名。长度为0-255位的字符串，需要符合域名规范（即符合正则'^(\\[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\\\\.){1,7}[a-zA-Z]{2,64}\\\\.?$'或者符合正则'^\\[*](\\\\.\\[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?){1,6}\\\\.[a-zA-Z]{2,64}\\\\.?$'）。
+    * urlDomain  自定义域名。长度为0-255位的字符串，需要符合域名规范（即符合正则'^(\\[a-zA-Z0-9]([a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_])?\\\\.){1,7}[a-zA-Z]{2,64}\\\\.?$'或者符合正则'^\\[*](\\\\.\\[a-zA-Z0-9_]([a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_])?){1,6}\\\\.[a-zA-Z]{2,64}\\\\.?$'）。
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
     * isHttpRedirectToHttps  是否开启http到https的重定向，false为关闭，true为开启，默认为false
     * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；如果填写该参数，则必须同时填写https_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * ingressHttpsPort  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
-    * urlDomain  自定义域名。长度为0-255位的字符串，需要符合域名规范（即符合正则'^(\\[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\\\\.){1,7}[a-zA-Z]{2,64}\\\\.?$'或者符合正则'^\\[*](\\\\.\\[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?){1,6}\\\\.[a-zA-Z]{2,64}\\\\.?$'）。
+    * urlDomain  自定义域名。长度为0-255位的字符串，需要符合域名规范（即符合正则'^(\\[a-zA-Z0-9]([a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_])?\\\\.){1,7}[a-zA-Z]{2,64}\\\\.?$'或者符合正则'^\\[*](\\\\.\\[a-zA-Z0-9_]([a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_])?){1,6}\\\\.[a-zA-Z]{2,64}\\\\.?$'）。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
     * isHttpRedirectToHttps  是否开启http到https的重定向，false为关闭，true为开启，默认为false
     * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；如果填写该参数，则必须同时填写https_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * ingressHttpsPort  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
-    * urlDomain  自定义域名。长度为0-255位的字符串，需要符合域名规范（即符合正则'^(\\[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\\\\.){1,7}[a-zA-Z]{2,64}\\\\.?$'或者符合正则'^\\[*](\\\\.\\[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?){1,6}\\\\.[a-zA-Z]{2,64}\\\\.?$'）。
+    * urlDomain  自定义域名。长度为0-255位的字符串，需要符合域名规范（即符合正则'^(\\[a-zA-Z0-9]([a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_])?\\\\.){1,7}[a-zA-Z]{2,64}\\\\.?$'或者符合正则'^\\[*](\\\\.\\[a-zA-Z0-9_]([a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_])?){1,6}\\\\.[a-zA-Z]{2,64}\\\\.?$'）。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
     * isHttpRedirectToHttps  是否开启http到https的重定向，false为关闭，true为开启，默认为false
     * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；如果填写该参数，则必须同时填写https_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * ingressHttpsPort  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
-    * urlDomain  自定义域名。长度为0-255位的字符串，需要符合域名规范（即符合正则'^(\\[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\\\\.){1,7}[a-zA-Z]{2,64}\\\\.?$'或者符合正则'^\\[*](\\\\.\\[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?){1,6}\\\\.[a-zA-Z]{2,64}\\\\.?$'）。
+    * urlDomain  自定义域名。长度为0-255位的字符串，需要符合域名规范（即符合正则'^(\\[a-zA-Z0-9]([a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_])?\\\\.){1,7}[a-zA-Z]{2,64}\\\\.?$'或者符合正则'^\\[*](\\\\.\\[a-zA-Z0-9_]([a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_])?){1,6}\\\\.[a-zA-Z]{2,64}\\\\.?$'）。
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
     * isHttpRedirectToHttps  是否开启http到https的重定向，false为关闭，true为开启，默认为false
     * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；如果填写该参数，则必须同时填写https_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * ingressHttpsPort  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
-    * urlDomain  自定义域名。长度为0-255位的字符串，需要符合域名规范（即符合正则'^(\\[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\\\\.){1,7}[a-zA-Z]{2,64}\\\\.?$'或者符合正则'^\\[*](\\\\.\\[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?){1,6}\\\\.[a-zA-Z]{2,64}\\\\.?$'）。
+    * urlDomain  自定义域名。长度为0-255位的字符串，需要符合域名规范（即符合正则'^(\\[a-zA-Z0-9]([a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_])?\\\\.){1,7}[a-zA-Z]{2,64}\\\\.?$'或者符合正则'^\\[*](\\\\.\\[a-zA-Z0-9_]([a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_])?){1,6}\\\\.[a-zA-Z]{2,64}\\\\.?$'）。
     *
     * @var string[]
     */
@@ -243,8 +243,8 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
             if (!is_null($this->container['urlDomain']) && (mb_strlen($this->container['urlDomain']) < 0)) {
                 $invalidProperties[] = "invalid value for 'urlDomain', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['urlDomain']) && !preg_match("/^([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\\.){1,7}[a-zA-Z]{2,64}\\.?$|^[*](\\.[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?){1,6}\\.[a-zA-Z]{2,64}\\.?$/", $this->container['urlDomain'])) {
-                $invalidProperties[] = "invalid value for 'urlDomain', must be conform to the pattern /^([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\\.){1,7}[a-zA-Z]{2,64}\\.?$|^[*](\\.[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?){1,6}\\.[a-zA-Z]{2,64}\\.?$/.";
+            if (!is_null($this->container['urlDomain']) && !preg_match("/^([a-zA-Z0-9]([a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_])?\\.){1,7}[a-zA-Z]{2,64}\\.?$|^[*](\\.[a-zA-Z0-9_]([a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_])?){1,6}\\.[a-zA-Z]{2,64}\\.?$/", $this->container['urlDomain'])) {
+                $invalidProperties[] = "invalid value for 'urlDomain', must be conform to the pattern /^([a-zA-Z0-9]([a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_])?\\.){1,7}[a-zA-Z]{2,64}\\.?$|^[*](\\.[a-zA-Z0-9_]([a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_])?){1,6}\\.[a-zA-Z]{2,64}\\.?$/.";
             }
         return $invalidProperties;
     }
@@ -358,7 +358,7 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
 
     /**
     * Gets urlDomain
-    *  自定义域名。长度为0-255位的字符串，需要符合域名规范（即符合正则'^(\\[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\\\\.){1,7}[a-zA-Z]{2,64}\\\\.?$'或者符合正则'^\\[*](\\\\.\\[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?){1,6}\\\\.[a-zA-Z]{2,64}\\\\.?$'）。
+    *  自定义域名。长度为0-255位的字符串，需要符合域名规范（即符合正则'^(\\[a-zA-Z0-9]([a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_])?\\\\.){1,7}[a-zA-Z]{2,64}\\\\.?$'或者符合正则'^\\[*](\\\\.\\[a-zA-Z0-9_]([a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_])?){1,6}\\\\.[a-zA-Z]{2,64}\\\\.?$'）。
     *
     * @return string|null
     */
@@ -370,7 +370,7 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
     /**
     * Sets urlDomain
     *
-    * @param string|null $urlDomain 自定义域名。长度为0-255位的字符串，需要符合域名规范（即符合正则'^(\\[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\\\\.){1,7}[a-zA-Z]{2,64}\\\\.?$'或者符合正则'^\\[*](\\\\.\\[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?){1,6}\\\\.[a-zA-Z]{2,64}\\\\.?$'）。
+    * @param string|null $urlDomain 自定义域名。长度为0-255位的字符串，需要符合域名规范（即符合正则'^(\\[a-zA-Z0-9]([a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_])?\\\\.){1,7}[a-zA-Z]{2,64}\\\\.?$'或者符合正则'^\\[*](\\\\.\\[a-zA-Z0-9_]([a-zA-Z0-9-_]{0,61}[a-zA-Z0-9_])?){1,6}\\\\.[a-zA-Z]{2,64}\\\\.?$'）。
     *
     * @return $this
     */

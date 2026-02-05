@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ddm\V1\Model;
+namespace HuaweiCloud\SDK\Sis\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListInstancesAppliedParameterGroupV0V3Response implements ModelInterface, ArrayAccess
+class ListVoicesResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,30 +17,30 @@ class ListInstancesAppliedParameterGroupV0V3Response implements ModelInterface, 
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListInstancesAppliedParameterGroupV0V3Response';
+    protected static $openAPIModelName = 'ListVoicesResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * entities  **参数解释**：  查询可应用的实例列表返回相关信息的集合。  **参数范围**：  不涉及。
-    * instanceCountLimit  **参数解释**：  分页参数: 每页记录数。  **约束限制**：  不涉及。  **取值范围**：  大于0且小于等于128。  **默认取值**：  默认值是10。
+    * traceId  服务内部的令牌，可用于在日志中追溯具体流程，调用失败无此字段。  在某些错误情况下可能没有此令牌字符串。
+    * result  result
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'entities' => '\HuaweiCloud\SDK\Ddm\V1\Model\ApplicableInstance[]',
-            'instanceCountLimit' => 'int'
+            'traceId' => 'string',
+            'result' => '\HuaweiCloud\SDK\Sis\V1\Model\VoiceListResult'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * entities  **参数解释**：  查询可应用的实例列表返回相关信息的集合。  **参数范围**：  不涉及。
-    * instanceCountLimit  **参数解释**：  分页参数: 每页记录数。  **约束限制**：  不涉及。  **取值范围**：  大于0且小于等于128。  **默认取值**：  默认值是10。
+    * traceId  服务内部的令牌，可用于在日志中追溯具体流程，调用失败无此字段。  在某些错误情况下可能没有此令牌字符串。
+    * result  result
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'entities' => null,
-        'instanceCountLimit' => 'int32'
+        'traceId' => null,
+        'result' => null
     ];
 
     /**
@@ -66,38 +66,38 @@ class ListInstancesAppliedParameterGroupV0V3Response implements ModelInterface, 
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * entities  **参数解释**：  查询可应用的实例列表返回相关信息的集合。  **参数范围**：  不涉及。
-    * instanceCountLimit  **参数解释**：  分页参数: 每页记录数。  **约束限制**：  不涉及。  **取值范围**：  大于0且小于等于128。  **默认取值**：  默认值是10。
+    * traceId  服务内部的令牌，可用于在日志中追溯具体流程，调用失败无此字段。  在某些错误情况下可能没有此令牌字符串。
+    * result  result
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'entities' => 'entities',
-            'instanceCountLimit' => 'instance_count_limit'
+            'traceId' => 'trace_id',
+            'result' => 'result'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * entities  **参数解释**：  查询可应用的实例列表返回相关信息的集合。  **参数范围**：  不涉及。
-    * instanceCountLimit  **参数解释**：  分页参数: 每页记录数。  **约束限制**：  不涉及。  **取值范围**：  大于0且小于等于128。  **默认取值**：  默认值是10。
+    * traceId  服务内部的令牌，可用于在日志中追溯具体流程，调用失败无此字段。  在某些错误情况下可能没有此令牌字符串。
+    * result  result
     *
     * @var string[]
     */
     protected static $setters = [
-            'entities' => 'setEntities',
-            'instanceCountLimit' => 'setInstanceCountLimit'
+            'traceId' => 'setTraceId',
+            'result' => 'setResult'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * entities  **参数解释**：  查询可应用的实例列表返回相关信息的集合。  **参数范围**：  不涉及。
-    * instanceCountLimit  **参数解释**：  分页参数: 每页记录数。  **约束限制**：  不涉及。  **取值范围**：  大于0且小于等于128。  **默认取值**：  默认值是10。
+    * traceId  服务内部的令牌，可用于在日志中追溯具体流程，调用失败无此字段。  在某些错误情况下可能没有此令牌字符串。
+    * result  result
     *
     * @var string[]
     */
     protected static $getters = [
-            'entities' => 'getEntities',
-            'instanceCountLimit' => 'getInstanceCountLimit'
+            'traceId' => 'getTraceId',
+            'result' => 'getResult'
     ];
 
     /**
@@ -158,8 +158,8 @@ class ListInstancesAppliedParameterGroupV0V3Response implements ModelInterface, 
     */
     public function __construct(array $data = null)
     {
-        $this->container['entities'] = isset($data['entities']) ? $data['entities'] : null;
-        $this->container['instanceCountLimit'] = isset($data['instanceCountLimit']) ? $data['instanceCountLimit'] : null;
+        $this->container['traceId'] = isset($data['traceId']) ? $data['traceId'] : null;
+        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
     }
 
     /**
@@ -170,12 +170,6 @@ class ListInstancesAppliedParameterGroupV0V3Response implements ModelInterface, 
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['instanceCountLimit']) && ($this->container['instanceCountLimit'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'instanceCountLimit', must be smaller than or equal to 2147483647.";
-            }
-            if (!is_null($this->container['instanceCountLimit']) && ($this->container['instanceCountLimit'] < 1)) {
-                $invalidProperties[] = "invalid value for 'instanceCountLimit', must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -191,50 +185,50 @@ class ListInstancesAppliedParameterGroupV0V3Response implements ModelInterface, 
     }
 
     /**
-    * Gets entities
-    *  **参数解释**：  查询可应用的实例列表返回相关信息的集合。  **参数范围**：  不涉及。
+    * Gets traceId
+    *  服务内部的令牌，可用于在日志中追溯具体流程，调用失败无此字段。  在某些错误情况下可能没有此令牌字符串。
     *
-    * @return \HuaweiCloud\SDK\Ddm\V1\Model\ApplicableInstance[]|null
+    * @return string|null
     */
-    public function getEntities()
+    public function getTraceId()
     {
-        return $this->container['entities'];
+        return $this->container['traceId'];
     }
 
     /**
-    * Sets entities
+    * Sets traceId
     *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\ApplicableInstance[]|null $entities **参数解释**：  查询可应用的实例列表返回相关信息的集合。  **参数范围**：  不涉及。
+    * @param string|null $traceId 服务内部的令牌，可用于在日志中追溯具体流程，调用失败无此字段。  在某些错误情况下可能没有此令牌字符串。
     *
     * @return $this
     */
-    public function setEntities($entities)
+    public function setTraceId($traceId)
     {
-        $this->container['entities'] = $entities;
+        $this->container['traceId'] = $traceId;
         return $this;
     }
 
     /**
-    * Gets instanceCountLimit
-    *  **参数解释**：  分页参数: 每页记录数。  **约束限制**：  不涉及。  **取值范围**：  大于0且小于等于128。  **默认取值**：  默认值是10。
+    * Gets result
+    *  result
     *
-    * @return int|null
+    * @return \HuaweiCloud\SDK\Sis\V1\Model\VoiceListResult|null
     */
-    public function getInstanceCountLimit()
+    public function getResult()
     {
-        return $this->container['instanceCountLimit'];
+        return $this->container['result'];
     }
 
     /**
-    * Sets instanceCountLimit
+    * Sets result
     *
-    * @param int|null $instanceCountLimit **参数解释**：  分页参数: 每页记录数。  **约束限制**：  不涉及。  **取值范围**：  大于0且小于等于128。  **默认取值**：  默认值是10。
+    * @param \HuaweiCloud\SDK\Sis\V1\Model\VoiceListResult|null $result result
     *
     * @return $this
     */
-    public function setInstanceCountLimit($instanceCountLimit)
+    public function setResult($result)
     {
-        $this->container['instanceCountLimit'] = $instanceCountLimit;
+        $this->container['result'] = $result;
         return $this;
     }
 

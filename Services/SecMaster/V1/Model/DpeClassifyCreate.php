@@ -26,7 +26,7 @@ class DpeClassifyCreate implements ModelInterface, ArrayAccess
     * dataclassId  映射id
     * dataclassName  数据类名称
     * mappingId  映射id
-    * directClassifier  分类方式
+    * directClassifier  是否直接分类
     * directClassifierTypeId  映射id
     * createTime  创建时间
     * creatorId  创建者id
@@ -46,7 +46,7 @@ class DpeClassifyCreate implements ModelInterface, ArrayAccess
             'dataclassId' => 'string',
             'dataclassName' => 'string',
             'mappingId' => 'string',
-            'directClassifier' => 'object',
+            'directClassifier' => 'string',
             'directClassifierTypeId' => 'string',
             'createTime' => 'string',
             'creatorId' => 'string',
@@ -66,7 +66,7 @@ class DpeClassifyCreate implements ModelInterface, ArrayAccess
     * dataclassId  映射id
     * dataclassName  数据类名称
     * mappingId  映射id
-    * directClassifier  分类方式
+    * directClassifier  是否直接分类
     * directClassifierTypeId  映射id
     * createTime  创建时间
     * creatorId  创建者id
@@ -127,7 +127,7 @@ class DpeClassifyCreate implements ModelInterface, ArrayAccess
     * dataclassId  映射id
     * dataclassName  数据类名称
     * mappingId  映射id
-    * directClassifier  分类方式
+    * directClassifier  是否直接分类
     * directClassifierTypeId  映射id
     * createTime  创建时间
     * creatorId  创建者id
@@ -167,7 +167,7 @@ class DpeClassifyCreate implements ModelInterface, ArrayAccess
     * dataclassId  映射id
     * dataclassName  数据类名称
     * mappingId  映射id
-    * directClassifier  分类方式
+    * directClassifier  是否直接分类
     * directClassifierTypeId  映射id
     * createTime  创建时间
     * creatorId  创建者id
@@ -207,7 +207,7 @@ class DpeClassifyCreate implements ModelInterface, ArrayAccess
     * dataclassId  映射id
     * dataclassName  数据类名称
     * mappingId  映射id
-    * directClassifier  分类方式
+    * directClassifier  是否直接分类
     * directClassifierTypeId  映射id
     * createTime  创建时间
     * creatorId  创建者id
@@ -358,6 +358,12 @@ class DpeClassifyCreate implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['mappingId']) && (mb_strlen($this->container['mappingId']) < 32)) {
                 $invalidProperties[] = "invalid value for 'mappingId', the character length must be bigger than or equal to 32.";
+            }
+            if (!is_null($this->container['directClassifier']) && (mb_strlen($this->container['directClassifier']) > 256)) {
+                $invalidProperties[] = "invalid value for 'directClassifier', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['directClassifier']) && (mb_strlen($this->container['directClassifier']) < 1)) {
+                $invalidProperties[] = "invalid value for 'directClassifier', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['directClassifierTypeId']) && (mb_strlen($this->container['directClassifierTypeId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'directClassifierTypeId', the character length must be smaller than or equal to 64.";
@@ -561,9 +567,9 @@ class DpeClassifyCreate implements ModelInterface, ArrayAccess
 
     /**
     * Gets directClassifier
-    *  分类方式
+    *  是否直接分类
     *
-    * @return object|null
+    * @return string|null
     */
     public function getDirectClassifier()
     {
@@ -573,7 +579,7 @@ class DpeClassifyCreate implements ModelInterface, ArrayAccess
     /**
     * Sets directClassifier
     *
-    * @param object|null $directClassifier 分类方式
+    * @param string|null $directClassifier 是否直接分类
     *
     * @return $this
     */

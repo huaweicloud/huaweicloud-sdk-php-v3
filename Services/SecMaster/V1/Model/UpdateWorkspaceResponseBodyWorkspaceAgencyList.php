@@ -30,7 +30,7 @@ class UpdateWorkspaceResponseBodyWorkspaceAgencyList implements ModelInterface, 
     * domainName  委托租户名称
     * iamAgencyId  iam委托id
     * iamAgencyName  iam委托名称
-    * resourceSpecCode  委托空间购买版本
+    * resourceSpecCode  资源规格编码
     * selected  是否被视图选中
     *
     * @var string[]
@@ -62,7 +62,7 @@ class UpdateWorkspaceResponseBodyWorkspaceAgencyList implements ModelInterface, 
     * domainName  委托租户名称
     * iamAgencyId  iam委托id
     * iamAgencyName  iam委托名称
-    * resourceSpecCode  委托空间购买版本
+    * resourceSpecCode  资源规格编码
     * selected  是否被视图选中
     *
     * @var string[]
@@ -115,7 +115,7 @@ class UpdateWorkspaceResponseBodyWorkspaceAgencyList implements ModelInterface, 
     * domainName  委托租户名称
     * iamAgencyId  iam委托id
     * iamAgencyName  iam委托名称
-    * resourceSpecCode  委托空间购买版本
+    * resourceSpecCode  资源规格编码
     * selected  是否被视图选中
     *
     * @var string[]
@@ -147,7 +147,7 @@ class UpdateWorkspaceResponseBodyWorkspaceAgencyList implements ModelInterface, 
     * domainName  委托租户名称
     * iamAgencyId  iam委托id
     * iamAgencyName  iam委托名称
-    * resourceSpecCode  委托空间购买版本
+    * resourceSpecCode  资源规格编码
     * selected  是否被视图选中
     *
     * @var string[]
@@ -179,7 +179,7 @@ class UpdateWorkspaceResponseBodyWorkspaceAgencyList implements ModelInterface, 
     * domainName  委托租户名称
     * iamAgencyId  iam委托id
     * iamAgencyName  iam委托名称
-    * resourceSpecCode  委托空间购买版本
+    * resourceSpecCode  资源规格编码
     * selected  是否被视图选中
     *
     * @var string[]
@@ -612,7 +612,7 @@ class UpdateWorkspaceResponseBodyWorkspaceAgencyList implements ModelInterface, 
 
     /**
     * Gets resourceSpecCode
-    *  委托空间购买版本
+    *  资源规格编码
     *
     * @return string[]|null
     */
@@ -624,7 +624,7 @@ class UpdateWorkspaceResponseBodyWorkspaceAgencyList implements ModelInterface, 
     /**
     * Sets resourceSpecCode
     *
-    * @param string[]|null $resourceSpecCode 委托空间购买版本
+    * @param string[]|null $resourceSpecCode 资源规格编码
     *
     * @return $this
     */

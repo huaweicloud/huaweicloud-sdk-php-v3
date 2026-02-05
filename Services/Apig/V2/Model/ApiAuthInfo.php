@@ -24,7 +24,7 @@ class ApiAuthInfo implements ModelInterface, ArrayAccess
     * apiId  API的编号
     * apiName  API的名称
     * groupName  API绑定的分组名称
-    * apiType  API类型
+    * apiType  API类型。 - 1：公有API - 2：私有API
     * apiRemark  API的描述信息
     * envId  api授权绑定的环境ID
     * authRole  授权者
@@ -78,7 +78,7 @@ class ApiAuthInfo implements ModelInterface, ArrayAccess
     * apiId  API的编号
     * apiName  API的名称
     * groupName  API绑定的分组名称
-    * apiType  API类型
+    * apiType  API类型。 - 1：公有API - 2：私有API
     * apiRemark  API的描述信息
     * envId  api授权绑定的环境ID
     * authRole  授权者
@@ -153,7 +153,7 @@ class ApiAuthInfo implements ModelInterface, ArrayAccess
     * apiId  API的编号
     * apiName  API的名称
     * groupName  API绑定的分组名称
-    * apiType  API类型
+    * apiType  API类型。 - 1：公有API - 2：私有API
     * apiRemark  API的描述信息
     * envId  api授权绑定的环境ID
     * authRole  授权者
@@ -207,7 +207,7 @@ class ApiAuthInfo implements ModelInterface, ArrayAccess
     * apiId  API的编号
     * apiName  API的名称
     * groupName  API绑定的分组名称
-    * apiType  API类型
+    * apiType  API类型。 - 1：公有API - 2：私有API
     * apiRemark  API的描述信息
     * envId  api授权绑定的环境ID
     * authRole  授权者
@@ -261,7 +261,7 @@ class ApiAuthInfo implements ModelInterface, ArrayAccess
     * apiId  API的编号
     * apiName  API的名称
     * groupName  API绑定的分组名称
-    * apiType  API类型
+    * apiType  API类型。 - 1：公有API - 2：私有API
     * apiRemark  API的描述信息
     * envId  api授权绑定的环境ID
     * authRole  授权者
@@ -349,11 +349,26 @@ class ApiAuthInfo implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const API_TYPE_1 = 1;
+    const API_TYPE_2 = 2;
     const APP_TYPE_APIG = 'apig';
     const APP_TYPE_ROMA = 'roma';
     const AUTH_TUNNEL_NORMAL = 'NORMAL';
     const AUTH_TUNNEL_GREEN = 'GREEN';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getApiTypeAllowableValues()
+    {
+        return [
+            self::API_TYPE_1,
+            self::API_TYPE_2,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -430,6 +445,14 @@ class ApiAuthInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getApiTypeAllowableValues();
+                if (!is_null($this->container['apiType']) && !in_array($this->container['apiType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'apiType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             $allowedValues = $this->getAppTypeAllowableValues();
                 if (!is_null($this->container['appType']) && !in_array($this->container['appType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -558,7 +581,7 @@ class ApiAuthInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiType
-    *  API类型
+    *  API类型。 - 1：公有API - 2：私有API
     *
     * @return int|null
     */
@@ -570,7 +593,7 @@ class ApiAuthInfo implements ModelInterface, ArrayAccess
     /**
     * Sets apiType
     *
-    * @param int|null $apiType API类型
+    * @param int|null $apiType API类型。 - 1：公有API - 2：私有API
     *
     * @return $this
     */

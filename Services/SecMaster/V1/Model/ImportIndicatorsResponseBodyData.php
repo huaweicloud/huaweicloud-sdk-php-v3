@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ddm\V1\Model;
+namespace HuaweiCloud\SDK\SecMaster\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CheckDataNodeConnectionV0V3Response implements ModelInterface, ArrayAccess
+class ImportIndicatorsResponseBodyData implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,26 +16,26 @@ class CheckDataNodeConnectionV0V3Response implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CheckDataNodeConnectionV0V3Response';
+    protected static $openAPIModelName = 'ImportIndicatorsResponseBody_data';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * rdsCheckInfos  **参数解释**：  rds测试连通性相关信息的集合。  **参数范围**：  不涉及。
+    * ids  导入的情报id列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'rdsCheckInfos' => '\HuaweiCloud\SDK\Ddm\V1\Model\CheckRdsConnectionResqVO[]'
+            'ids' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * rdsCheckInfos  **参数解释**：  rds测试连通性相关信息的集合。  **参数范围**：  不涉及。
+    * ids  导入的情报id列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'rdsCheckInfos' => null
+        'ids' => null
     ];
 
     /**
@@ -62,32 +61,32 @@ class CheckDataNodeConnectionV0V3Response implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * rdsCheckInfos  **参数解释**：  rds测试连通性相关信息的集合。  **参数范围**：  不涉及。
+    * ids  导入的情报id列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'rdsCheckInfos' => 'rds_check_infos'
+            'ids' => 'ids'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * rdsCheckInfos  **参数解释**：  rds测试连通性相关信息的集合。  **参数范围**：  不涉及。
+    * ids  导入的情报id列表
     *
     * @var string[]
     */
     protected static $setters = [
-            'rdsCheckInfos' => 'setRdsCheckInfos'
+            'ids' => 'setIds'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * rdsCheckInfos  **参数解释**：  rds测试连通性相关信息的集合。  **参数范围**：  不涉及。
+    * ids  导入的情报id列表
     *
     * @var string[]
     */
     protected static $getters = [
-            'rdsCheckInfos' => 'getRdsCheckInfos'
+            'ids' => 'getIds'
     ];
 
     /**
@@ -148,7 +147,7 @@ class CheckDataNodeConnectionV0V3Response implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['rdsCheckInfos'] = isset($data['rdsCheckInfos']) ? $data['rdsCheckInfos'] : null;
+        $this->container['ids'] = isset($data['ids']) ? $data['ids'] : null;
     }
 
     /**
@@ -174,26 +173,26 @@ class CheckDataNodeConnectionV0V3Response implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets rdsCheckInfos
-    *  **参数解释**：  rds测试连通性相关信息的集合。  **参数范围**：  不涉及。
+    * Gets ids
+    *  导入的情报id列表
     *
-    * @return \HuaweiCloud\SDK\Ddm\V1\Model\CheckRdsConnectionResqVO[]|null
+    * @return string[]|null
     */
-    public function getRdsCheckInfos()
+    public function getIds()
     {
-        return $this->container['rdsCheckInfos'];
+        return $this->container['ids'];
     }
 
     /**
-    * Sets rdsCheckInfos
+    * Sets ids
     *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\CheckRdsConnectionResqVO[]|null $rdsCheckInfos **参数解释**：  rds测试连通性相关信息的集合。  **参数范围**：  不涉及。
+    * @param string[]|null $ids 导入的情报id列表
     *
     * @return $this
     */
-    public function setRdsCheckInfos($rdsCheckInfos)
+    public function setIds($ids)
     {
-        $this->container['rdsCheckInfos'] = $rdsCheckInfos;
+        $this->container['ids'] = $ids;
         return $this;
     }
 

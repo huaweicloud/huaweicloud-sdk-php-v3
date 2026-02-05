@@ -20,39 +20,39 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  实例ID。
-    * name  实例名称。
-    * alias  实例别名。
-    * projectId  项目ID。
-    * clusterMode  集群模式。
-    * status  状态。
-    * bpdomainId  bpdomain_id
-    * userId  账户ID。
-    * datastoreVersion  数据库版本。
-    * datastoreType  数据库类型。
-    * createAt  创建时间。
-    * updateAt  更新时间。
-    * deleteAt  删除时间。
-    * newVersionAvailable  是否有版本可升级。
-    * rollbackVersionAvailable  是否有版本可回滚。
-    * degradeVersionAvailable  是否有版本可降级。
-    * publicIp  公共ip。
-    * port  端口。
-    * createFailErrorCode  创建失败原因编码。
-    * timeZone  时区。
-    * payModel  付费模式。
-    * orderId  订单ID。
-    * period  周期。
-    * isFrozen  是否冻结。
-    * frozenTime  冻结时间。
-    * actions  锁状态。
-    * onlyDefaultGroup  是否只有默认组。
-    * groups  组信息。
-    * extendMap  其他信息。
-    * tagsInfo  标签信息。
-    * adminUserName  管理员账号。
-    * eipBindingInfo  绑定eip信息。
-    * enableSsl  是否支持ssl。
+    * id  **参数解释**：  实例ID，此参数是实例的唯一标识。  **参数范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。
+    * name  **参数解释**：  实例名称。  **参数范围**：  不涉及。
+    * alias  **参数解释**：  实例别名。  **参数范围**：  不涉及。
+    * projectId  **参数解释**：  租户在某一Region下的project ID。  获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-ddm/ddm_api_01_0063.html)。  **参数范围**：  只能由英文字母、数字组成，且长度为32个字符。
+    * clusterMode  **参数解释**：  集群模式。  **参数范围**：  不涉及。
+    * status  **参数解释**：  状态。  **参数范围**：  不涉及。
+    * bpdomainId  **参数解释**：  bpdomain_id。  **参数范围**：  不涉及。
+    * userId  **参数解释**：  账户ID。  **参数范围**：  不涉及。
+    * datastoreVersion  **参数解释**：  数据库版本。  **参数范围**：  不涉及。
+    * datastoreType  **参数解释**：  数据库类型。  **参数范围**：  不涉及。
+    * createAt  **参数解释**：  创建时间。  **参数范围**：  不涉及。
+    * updateAt  **参数解释**：  更新时间。  **参数范围**：  不涉及。
+    * deleteAt  **参数解释**：  删除时间。  **参数范围**：  不涉及。
+    * newVersionAvailable  **参数解释**：  是否有版本可升级。  **参数范围**：  不涉及。
+    * rollbackVersionAvailable  **参数解释**：  是否有版本可回滚。  **参数范围**：  不涉及。
+    * degradeVersionAvailable  **参数解释**：  是否有版本可降级。  **参数范围**：  不涉及。
+    * publicIp  **参数解释**：  公共ip。  **参数范围**：  不涉及。
+    * port  **参数解释**：  端口。  **参数范围**：  不涉及。
+    * createFailErrorCode  **参数解释**：  创建失败原因编码。  **参数范围**：  不涉及。
+    * timeZone  **参数解释**：  时区。  **参数范围**：  不涉及。
+    * payModel  **参数解释**：  付费模式。  **参数范围**：  不涉及。
+    * orderId  **参数解释**：  订单ID。  **参数范围**：  不涉及。
+    * period  **参数解释**：  周期。  **参数范围**：  不涉及。
+    * isFrozen  **参数解释**：  是否冻结。  **参数范围**：  不涉及。
+    * frozenTime  **参数解释**：  冻结时间。  **参数范围**：  不涉及。
+    * actions  **参数解释**：  锁状态。  **参数范围**：  不涉及。
+    * onlyDefaultGroup  **参数解释**：  是否只有默认组。  **参数范围**：  不涉及。
+    * groups  **参数解释**：  组信息。  **参数范围**：  不涉及。
+    * extendMap  **参数解释**：  其他信息。  **参数范围**：  不涉及。
+    * tagsInfo  **参数解释**：  标签信息。  **参数范围**：  不涉及。
+    * adminUserName  **参数解释**：  管理员账号。  **参数范围**：  不涉及。
+    * eipBindingInfo  **参数解释**：  绑定eip信息。  **参数范围**：  不涉及。
+    * enableSsl  **参数解释**：  是否支持ssl。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
             'onlyDefaultGroup' => 'bool',
             'groups' => '\HuaweiCloud\SDK\Ddm\V1\Model\DdmGroupInfo[]',
             'extendMap' => 'map[string,string]',
-            'tagsInfo' => '\HuaweiCloud\SDK\Ddm\V1\Model\TagsInfo[]',
+            'tagsInfo' => 'object',
             'adminUserName' => 'string',
             'eipBindingInfo' => 'object',
             'enableSsl' => 'int'
@@ -94,39 +94,39 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  实例ID。
-    * name  实例名称。
-    * alias  实例别名。
-    * projectId  项目ID。
-    * clusterMode  集群模式。
-    * status  状态。
-    * bpdomainId  bpdomain_id
-    * userId  账户ID。
-    * datastoreVersion  数据库版本。
-    * datastoreType  数据库类型。
-    * createAt  创建时间。
-    * updateAt  更新时间。
-    * deleteAt  删除时间。
-    * newVersionAvailable  是否有版本可升级。
-    * rollbackVersionAvailable  是否有版本可回滚。
-    * degradeVersionAvailable  是否有版本可降级。
-    * publicIp  公共ip。
-    * port  端口。
-    * createFailErrorCode  创建失败原因编码。
-    * timeZone  时区。
-    * payModel  付费模式。
-    * orderId  订单ID。
-    * period  周期。
-    * isFrozen  是否冻结。
-    * frozenTime  冻结时间。
-    * actions  锁状态。
-    * onlyDefaultGroup  是否只有默认组。
-    * groups  组信息。
-    * extendMap  其他信息。
-    * tagsInfo  标签信息。
-    * adminUserName  管理员账号。
-    * eipBindingInfo  绑定eip信息。
-    * enableSsl  是否支持ssl。
+    * id  **参数解释**：  实例ID，此参数是实例的唯一标识。  **参数范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。
+    * name  **参数解释**：  实例名称。  **参数范围**：  不涉及。
+    * alias  **参数解释**：  实例别名。  **参数范围**：  不涉及。
+    * projectId  **参数解释**：  租户在某一Region下的project ID。  获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-ddm/ddm_api_01_0063.html)。  **参数范围**：  只能由英文字母、数字组成，且长度为32个字符。
+    * clusterMode  **参数解释**：  集群模式。  **参数范围**：  不涉及。
+    * status  **参数解释**：  状态。  **参数范围**：  不涉及。
+    * bpdomainId  **参数解释**：  bpdomain_id。  **参数范围**：  不涉及。
+    * userId  **参数解释**：  账户ID。  **参数范围**：  不涉及。
+    * datastoreVersion  **参数解释**：  数据库版本。  **参数范围**：  不涉及。
+    * datastoreType  **参数解释**：  数据库类型。  **参数范围**：  不涉及。
+    * createAt  **参数解释**：  创建时间。  **参数范围**：  不涉及。
+    * updateAt  **参数解释**：  更新时间。  **参数范围**：  不涉及。
+    * deleteAt  **参数解释**：  删除时间。  **参数范围**：  不涉及。
+    * newVersionAvailable  **参数解释**：  是否有版本可升级。  **参数范围**：  不涉及。
+    * rollbackVersionAvailable  **参数解释**：  是否有版本可回滚。  **参数范围**：  不涉及。
+    * degradeVersionAvailable  **参数解释**：  是否有版本可降级。  **参数范围**：  不涉及。
+    * publicIp  **参数解释**：  公共ip。  **参数范围**：  不涉及。
+    * port  **参数解释**：  端口。  **参数范围**：  不涉及。
+    * createFailErrorCode  **参数解释**：  创建失败原因编码。  **参数范围**：  不涉及。
+    * timeZone  **参数解释**：  时区。  **参数范围**：  不涉及。
+    * payModel  **参数解释**：  付费模式。  **参数范围**：  不涉及。
+    * orderId  **参数解释**：  订单ID。  **参数范围**：  不涉及。
+    * period  **参数解释**：  周期。  **参数范围**：  不涉及。
+    * isFrozen  **参数解释**：  是否冻结。  **参数范围**：  不涉及。
+    * frozenTime  **参数解释**：  冻结时间。  **参数范围**：  不涉及。
+    * actions  **参数解释**：  锁状态。  **参数范围**：  不涉及。
+    * onlyDefaultGroup  **参数解释**：  是否只有默认组。  **参数范围**：  不涉及。
+    * groups  **参数解释**：  组信息。  **参数范围**：  不涉及。
+    * extendMap  **参数解释**：  其他信息。  **参数范围**：  不涉及。
+    * tagsInfo  **参数解释**：  标签信息。  **参数范围**：  不涉及。
+    * adminUserName  **参数解释**：  管理员账号。  **参数范围**：  不涉及。
+    * eipBindingInfo  **参数解释**：  绑定eip信息。  **参数范围**：  不涉及。
+    * enableSsl  **参数解释**：  是否支持ssl。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -189,39 +189,39 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  实例ID。
-    * name  实例名称。
-    * alias  实例别名。
-    * projectId  项目ID。
-    * clusterMode  集群模式。
-    * status  状态。
-    * bpdomainId  bpdomain_id
-    * userId  账户ID。
-    * datastoreVersion  数据库版本。
-    * datastoreType  数据库类型。
-    * createAt  创建时间。
-    * updateAt  更新时间。
-    * deleteAt  删除时间。
-    * newVersionAvailable  是否有版本可升级。
-    * rollbackVersionAvailable  是否有版本可回滚。
-    * degradeVersionAvailable  是否有版本可降级。
-    * publicIp  公共ip。
-    * port  端口。
-    * createFailErrorCode  创建失败原因编码。
-    * timeZone  时区。
-    * payModel  付费模式。
-    * orderId  订单ID。
-    * period  周期。
-    * isFrozen  是否冻结。
-    * frozenTime  冻结时间。
-    * actions  锁状态。
-    * onlyDefaultGroup  是否只有默认组。
-    * groups  组信息。
-    * extendMap  其他信息。
-    * tagsInfo  标签信息。
-    * adminUserName  管理员账号。
-    * eipBindingInfo  绑定eip信息。
-    * enableSsl  是否支持ssl。
+    * id  **参数解释**：  实例ID，此参数是实例的唯一标识。  **参数范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。
+    * name  **参数解释**：  实例名称。  **参数范围**：  不涉及。
+    * alias  **参数解释**：  实例别名。  **参数范围**：  不涉及。
+    * projectId  **参数解释**：  租户在某一Region下的project ID。  获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-ddm/ddm_api_01_0063.html)。  **参数范围**：  只能由英文字母、数字组成，且长度为32个字符。
+    * clusterMode  **参数解释**：  集群模式。  **参数范围**：  不涉及。
+    * status  **参数解释**：  状态。  **参数范围**：  不涉及。
+    * bpdomainId  **参数解释**：  bpdomain_id。  **参数范围**：  不涉及。
+    * userId  **参数解释**：  账户ID。  **参数范围**：  不涉及。
+    * datastoreVersion  **参数解释**：  数据库版本。  **参数范围**：  不涉及。
+    * datastoreType  **参数解释**：  数据库类型。  **参数范围**：  不涉及。
+    * createAt  **参数解释**：  创建时间。  **参数范围**：  不涉及。
+    * updateAt  **参数解释**：  更新时间。  **参数范围**：  不涉及。
+    * deleteAt  **参数解释**：  删除时间。  **参数范围**：  不涉及。
+    * newVersionAvailable  **参数解释**：  是否有版本可升级。  **参数范围**：  不涉及。
+    * rollbackVersionAvailable  **参数解释**：  是否有版本可回滚。  **参数范围**：  不涉及。
+    * degradeVersionAvailable  **参数解释**：  是否有版本可降级。  **参数范围**：  不涉及。
+    * publicIp  **参数解释**：  公共ip。  **参数范围**：  不涉及。
+    * port  **参数解释**：  端口。  **参数范围**：  不涉及。
+    * createFailErrorCode  **参数解释**：  创建失败原因编码。  **参数范围**：  不涉及。
+    * timeZone  **参数解释**：  时区。  **参数范围**：  不涉及。
+    * payModel  **参数解释**：  付费模式。  **参数范围**：  不涉及。
+    * orderId  **参数解释**：  订单ID。  **参数范围**：  不涉及。
+    * period  **参数解释**：  周期。  **参数范围**：  不涉及。
+    * isFrozen  **参数解释**：  是否冻结。  **参数范围**：  不涉及。
+    * frozenTime  **参数解释**：  冻结时间。  **参数范围**：  不涉及。
+    * actions  **参数解释**：  锁状态。  **参数范围**：  不涉及。
+    * onlyDefaultGroup  **参数解释**：  是否只有默认组。  **参数范围**：  不涉及。
+    * groups  **参数解释**：  组信息。  **参数范围**：  不涉及。
+    * extendMap  **参数解释**：  其他信息。  **参数范围**：  不涉及。
+    * tagsInfo  **参数解释**：  标签信息。  **参数范围**：  不涉及。
+    * adminUserName  **参数解释**：  管理员账号。  **参数范围**：  不涉及。
+    * eipBindingInfo  **参数解释**：  绑定eip信息。  **参数范围**：  不涉及。
+    * enableSsl  **参数解释**：  是否支持ssl。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -263,39 +263,39 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  实例ID。
-    * name  实例名称。
-    * alias  实例别名。
-    * projectId  项目ID。
-    * clusterMode  集群模式。
-    * status  状态。
-    * bpdomainId  bpdomain_id
-    * userId  账户ID。
-    * datastoreVersion  数据库版本。
-    * datastoreType  数据库类型。
-    * createAt  创建时间。
-    * updateAt  更新时间。
-    * deleteAt  删除时间。
-    * newVersionAvailable  是否有版本可升级。
-    * rollbackVersionAvailable  是否有版本可回滚。
-    * degradeVersionAvailable  是否有版本可降级。
-    * publicIp  公共ip。
-    * port  端口。
-    * createFailErrorCode  创建失败原因编码。
-    * timeZone  时区。
-    * payModel  付费模式。
-    * orderId  订单ID。
-    * period  周期。
-    * isFrozen  是否冻结。
-    * frozenTime  冻结时间。
-    * actions  锁状态。
-    * onlyDefaultGroup  是否只有默认组。
-    * groups  组信息。
-    * extendMap  其他信息。
-    * tagsInfo  标签信息。
-    * adminUserName  管理员账号。
-    * eipBindingInfo  绑定eip信息。
-    * enableSsl  是否支持ssl。
+    * id  **参数解释**：  实例ID，此参数是实例的唯一标识。  **参数范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。
+    * name  **参数解释**：  实例名称。  **参数范围**：  不涉及。
+    * alias  **参数解释**：  实例别名。  **参数范围**：  不涉及。
+    * projectId  **参数解释**：  租户在某一Region下的project ID。  获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-ddm/ddm_api_01_0063.html)。  **参数范围**：  只能由英文字母、数字组成，且长度为32个字符。
+    * clusterMode  **参数解释**：  集群模式。  **参数范围**：  不涉及。
+    * status  **参数解释**：  状态。  **参数范围**：  不涉及。
+    * bpdomainId  **参数解释**：  bpdomain_id。  **参数范围**：  不涉及。
+    * userId  **参数解释**：  账户ID。  **参数范围**：  不涉及。
+    * datastoreVersion  **参数解释**：  数据库版本。  **参数范围**：  不涉及。
+    * datastoreType  **参数解释**：  数据库类型。  **参数范围**：  不涉及。
+    * createAt  **参数解释**：  创建时间。  **参数范围**：  不涉及。
+    * updateAt  **参数解释**：  更新时间。  **参数范围**：  不涉及。
+    * deleteAt  **参数解释**：  删除时间。  **参数范围**：  不涉及。
+    * newVersionAvailable  **参数解释**：  是否有版本可升级。  **参数范围**：  不涉及。
+    * rollbackVersionAvailable  **参数解释**：  是否有版本可回滚。  **参数范围**：  不涉及。
+    * degradeVersionAvailable  **参数解释**：  是否有版本可降级。  **参数范围**：  不涉及。
+    * publicIp  **参数解释**：  公共ip。  **参数范围**：  不涉及。
+    * port  **参数解释**：  端口。  **参数范围**：  不涉及。
+    * createFailErrorCode  **参数解释**：  创建失败原因编码。  **参数范围**：  不涉及。
+    * timeZone  **参数解释**：  时区。  **参数范围**：  不涉及。
+    * payModel  **参数解释**：  付费模式。  **参数范围**：  不涉及。
+    * orderId  **参数解释**：  订单ID。  **参数范围**：  不涉及。
+    * period  **参数解释**：  周期。  **参数范围**：  不涉及。
+    * isFrozen  **参数解释**：  是否冻结。  **参数范围**：  不涉及。
+    * frozenTime  **参数解释**：  冻结时间。  **参数范围**：  不涉及。
+    * actions  **参数解释**：  锁状态。  **参数范围**：  不涉及。
+    * onlyDefaultGroup  **参数解释**：  是否只有默认组。  **参数范围**：  不涉及。
+    * groups  **参数解释**：  组信息。  **参数范围**：  不涉及。
+    * extendMap  **参数解释**：  其他信息。  **参数范围**：  不涉及。
+    * tagsInfo  **参数解释**：  标签信息。  **参数范围**：  不涉及。
+    * adminUserName  **参数解释**：  管理员账号。  **参数范围**：  不涉及。
+    * eipBindingInfo  **参数解释**：  绑定eip信息。  **参数范围**：  不涉及。
+    * enableSsl  **参数解释**：  是否支持ssl。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -337,39 +337,39 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  实例ID。
-    * name  实例名称。
-    * alias  实例别名。
-    * projectId  项目ID。
-    * clusterMode  集群模式。
-    * status  状态。
-    * bpdomainId  bpdomain_id
-    * userId  账户ID。
-    * datastoreVersion  数据库版本。
-    * datastoreType  数据库类型。
-    * createAt  创建时间。
-    * updateAt  更新时间。
-    * deleteAt  删除时间。
-    * newVersionAvailable  是否有版本可升级。
-    * rollbackVersionAvailable  是否有版本可回滚。
-    * degradeVersionAvailable  是否有版本可降级。
-    * publicIp  公共ip。
-    * port  端口。
-    * createFailErrorCode  创建失败原因编码。
-    * timeZone  时区。
-    * payModel  付费模式。
-    * orderId  订单ID。
-    * period  周期。
-    * isFrozen  是否冻结。
-    * frozenTime  冻结时间。
-    * actions  锁状态。
-    * onlyDefaultGroup  是否只有默认组。
-    * groups  组信息。
-    * extendMap  其他信息。
-    * tagsInfo  标签信息。
-    * adminUserName  管理员账号。
-    * eipBindingInfo  绑定eip信息。
-    * enableSsl  是否支持ssl。
+    * id  **参数解释**：  实例ID，此参数是实例的唯一标识。  **参数范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。
+    * name  **参数解释**：  实例名称。  **参数范围**：  不涉及。
+    * alias  **参数解释**：  实例别名。  **参数范围**：  不涉及。
+    * projectId  **参数解释**：  租户在某一Region下的project ID。  获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-ddm/ddm_api_01_0063.html)。  **参数范围**：  只能由英文字母、数字组成，且长度为32个字符。
+    * clusterMode  **参数解释**：  集群模式。  **参数范围**：  不涉及。
+    * status  **参数解释**：  状态。  **参数范围**：  不涉及。
+    * bpdomainId  **参数解释**：  bpdomain_id。  **参数范围**：  不涉及。
+    * userId  **参数解释**：  账户ID。  **参数范围**：  不涉及。
+    * datastoreVersion  **参数解释**：  数据库版本。  **参数范围**：  不涉及。
+    * datastoreType  **参数解释**：  数据库类型。  **参数范围**：  不涉及。
+    * createAt  **参数解释**：  创建时间。  **参数范围**：  不涉及。
+    * updateAt  **参数解释**：  更新时间。  **参数范围**：  不涉及。
+    * deleteAt  **参数解释**：  删除时间。  **参数范围**：  不涉及。
+    * newVersionAvailable  **参数解释**：  是否有版本可升级。  **参数范围**：  不涉及。
+    * rollbackVersionAvailable  **参数解释**：  是否有版本可回滚。  **参数范围**：  不涉及。
+    * degradeVersionAvailable  **参数解释**：  是否有版本可降级。  **参数范围**：  不涉及。
+    * publicIp  **参数解释**：  公共ip。  **参数范围**：  不涉及。
+    * port  **参数解释**：  端口。  **参数范围**：  不涉及。
+    * createFailErrorCode  **参数解释**：  创建失败原因编码。  **参数范围**：  不涉及。
+    * timeZone  **参数解释**：  时区。  **参数范围**：  不涉及。
+    * payModel  **参数解释**：  付费模式。  **参数范围**：  不涉及。
+    * orderId  **参数解释**：  订单ID。  **参数范围**：  不涉及。
+    * period  **参数解释**：  周期。  **参数范围**：  不涉及。
+    * isFrozen  **参数解释**：  是否冻结。  **参数范围**：  不涉及。
+    * frozenTime  **参数解释**：  冻结时间。  **参数范围**：  不涉及。
+    * actions  **参数解释**：  锁状态。  **参数范围**：  不涉及。
+    * onlyDefaultGroup  **参数解释**：  是否只有默认组。  **参数范围**：  不涉及。
+    * groups  **参数解释**：  组信息。  **参数范围**：  不涉及。
+    * extendMap  **参数解释**：  其他信息。  **参数范围**：  不涉及。
+    * tagsInfo  **参数解释**：  标签信息。  **参数范围**：  不涉及。
+    * adminUserName  **参数解释**：  管理员账号。  **参数范围**：  不涉及。
+    * eipBindingInfo  **参数解释**：  绑定eip信息。  **参数范围**：  不涉及。
+    * enableSsl  **参数解释**：  是否支持ssl。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -664,7 +664,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  实例ID。
+    *  **参数解释**：  实例ID，此参数是实例的唯一标识。  **参数范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。
     *
     * @return string|null
     */
@@ -676,7 +676,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 实例ID。
+    * @param string|null $id **参数解释**：  实例ID，此参数是实例的唯一标识。  **参数范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。
     *
     * @return $this
     */
@@ -688,7 +688,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  实例名称。
+    *  **参数解释**：  实例名称。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -700,7 +700,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 实例名称。
+    * @param string|null $name **参数解释**：  实例名称。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -712,7 +712,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets alias
-    *  实例别名。
+    *  **参数解释**：  实例别名。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -724,7 +724,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets alias
     *
-    * @param string|null $alias 实例别名。
+    * @param string|null $alias **参数解释**：  实例别名。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -736,7 +736,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID。
+    *  **参数解释**：  租户在某一Region下的project ID。  获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-ddm/ddm_api_01_0063.html)。  **参数范围**：  只能由英文字母、数字组成，且长度为32个字符。
     *
     * @return string|null
     */
@@ -748,7 +748,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID。
+    * @param string|null $projectId **参数解释**：  租户在某一Region下的project ID。  获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-ddm/ddm_api_01_0063.html)。  **参数范围**：  只能由英文字母、数字组成，且长度为32个字符。
     *
     * @return $this
     */
@@ -760,7 +760,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterMode
-    *  集群模式。
+    *  **参数解释**：  集群模式。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -772,7 +772,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets clusterMode
     *
-    * @param string|null $clusterMode 集群模式。
+    * @param string|null $clusterMode **参数解释**：  集群模式。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -784,7 +784,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态。
+    *  **参数解释**：  状态。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -796,7 +796,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态。
+    * @param string|null $status **参数解释**：  状态。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -808,7 +808,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets bpdomainId
-    *  bpdomain_id
+    *  **参数解释**：  bpdomain_id。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -820,7 +820,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets bpdomainId
     *
-    * @param string|null $bpdomainId bpdomain_id
+    * @param string|null $bpdomainId **参数解释**：  bpdomain_id。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -832,7 +832,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
-    *  账户ID。
+    *  **参数解释**：  账户ID。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -844,7 +844,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param string|null $userId 账户ID。
+    * @param string|null $userId **参数解释**：  账户ID。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -856,7 +856,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets datastoreVersion
-    *  数据库版本。
+    *  **参数解释**：  数据库版本。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -868,7 +868,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets datastoreVersion
     *
-    * @param string|null $datastoreVersion 数据库版本。
+    * @param string|null $datastoreVersion **参数解释**：  数据库版本。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -880,7 +880,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets datastoreType
-    *  数据库类型。
+    *  **参数解释**：  数据库类型。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -892,7 +892,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets datastoreType
     *
-    * @param string|null $datastoreType 数据库类型。
+    * @param string|null $datastoreType **参数解释**：  数据库类型。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -904,7 +904,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets createAt
-    *  创建时间。
+    *  **参数解释**：  创建时间。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -916,7 +916,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets createAt
     *
-    * @param string|null $createAt 创建时间。
+    * @param string|null $createAt **参数解释**：  创建时间。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -928,7 +928,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateAt
-    *  更新时间。
+    *  **参数解释**：  更新时间。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -940,7 +940,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets updateAt
     *
-    * @param string|null $updateAt 更新时间。
+    * @param string|null $updateAt **参数解释**：  更新时间。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -952,7 +952,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets deleteAt
-    *  删除时间。
+    *  **参数解释**：  删除时间。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -964,7 +964,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets deleteAt
     *
-    * @param string|null $deleteAt 删除时间。
+    * @param string|null $deleteAt **参数解释**：  删除时间。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -976,7 +976,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets newVersionAvailable
-    *  是否有版本可升级。
+    *  **参数解释**：  是否有版本可升级。  **参数范围**：  不涉及。
     *
     * @return bool|null
     */
@@ -988,7 +988,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets newVersionAvailable
     *
-    * @param bool|null $newVersionAvailable 是否有版本可升级。
+    * @param bool|null $newVersionAvailable **参数解释**：  是否有版本可升级。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -1000,7 +1000,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets rollbackVersionAvailable
-    *  是否有版本可回滚。
+    *  **参数解释**：  是否有版本可回滚。  **参数范围**：  不涉及。
     *
     * @return bool|null
     */
@@ -1012,7 +1012,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets rollbackVersionAvailable
     *
-    * @param bool|null $rollbackVersionAvailable 是否有版本可回滚。
+    * @param bool|null $rollbackVersionAvailable **参数解释**：  是否有版本可回滚。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -1024,7 +1024,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets degradeVersionAvailable
-    *  是否有版本可降级。
+    *  **参数解释**：  是否有版本可降级。  **参数范围**：  不涉及。
     *
     * @return bool|null
     */
@@ -1036,7 +1036,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets degradeVersionAvailable
     *
-    * @param bool|null $degradeVersionAvailable 是否有版本可降级。
+    * @param bool|null $degradeVersionAvailable **参数解释**：  是否有版本可降级。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -1048,7 +1048,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  公共ip。
+    *  **参数解释**：  公共ip。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -1060,7 +1060,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp 公共ip。
+    * @param string|null $publicIp **参数解释**：  公共ip。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -1072,7 +1072,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets port
-    *  端口。
+    *  **参数解释**：  端口。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -1084,7 +1084,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets port
     *
-    * @param string|null $port 端口。
+    * @param string|null $port **参数解释**：  端口。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -1096,7 +1096,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets createFailErrorCode
-    *  创建失败原因编码。
+    *  **参数解释**：  创建失败原因编码。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -1108,7 +1108,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets createFailErrorCode
     *
-    * @param string|null $createFailErrorCode 创建失败原因编码。
+    * @param string|null $createFailErrorCode **参数解释**：  创建失败原因编码。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -1120,7 +1120,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeZone
-    *  时区。
+    *  **参数解释**：  时区。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -1132,7 +1132,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets timeZone
     *
-    * @param string|null $timeZone 时区。
+    * @param string|null $timeZone **参数解释**：  时区。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -1144,7 +1144,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets payModel
-    *  付费模式。
+    *  **参数解释**：  付费模式。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -1156,7 +1156,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets payModel
     *
-    * @param string|null $payModel 付费模式。
+    * @param string|null $payModel **参数解释**：  付费模式。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -1168,7 +1168,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  订单ID。
+    *  **参数解释**：  订单ID。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -1180,7 +1180,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId 订单ID。
+    * @param string|null $orderId **参数解释**：  订单ID。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -1192,7 +1192,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets period
-    *  周期。
+    *  **参数解释**：  周期。  **参数范围**：  不涉及。
     *
     * @return int|null
     */
@@ -1204,7 +1204,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets period
     *
-    * @param int|null $period 周期。
+    * @param int|null $period **参数解释**：  周期。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -1216,7 +1216,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets isFrozen
-    *  是否冻结。
+    *  **参数解释**：  是否冻结。  **参数范围**：  不涉及。
     *
     * @return bool|null
     */
@@ -1228,7 +1228,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets isFrozen
     *
-    * @param bool|null $isFrozen 是否冻结。
+    * @param bool|null $isFrozen **参数解释**：  是否冻结。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -1240,7 +1240,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets frozenTime
-    *  冻结时间。
+    *  **参数解释**：  冻结时间。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -1252,7 +1252,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets frozenTime
     *
-    * @param string|null $frozenTime 冻结时间。
+    * @param string|null $frozenTime **参数解释**：  冻结时间。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -1264,7 +1264,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets actions
-    *  锁状态。
+    *  **参数解释**：  锁状态。  **参数范围**：  不涉及。
     *
     * @return \HuaweiCloud\SDK\Ddm\V1\Model\ActionInfo[]|null
     */
@@ -1276,7 +1276,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets actions
     *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\ActionInfo[]|null $actions 锁状态。
+    * @param \HuaweiCloud\SDK\Ddm\V1\Model\ActionInfo[]|null $actions **参数解释**：  锁状态。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -1288,7 +1288,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets onlyDefaultGroup
-    *  是否只有默认组。
+    *  **参数解释**：  是否只有默认组。  **参数范围**：  不涉及。
     *
     * @return bool|null
     */
@@ -1300,7 +1300,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets onlyDefaultGroup
     *
-    * @param bool|null $onlyDefaultGroup 是否只有默认组。
+    * @param bool|null $onlyDefaultGroup **参数解释**：  是否只有默认组。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -1312,7 +1312,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets groups
-    *  组信息。
+    *  **参数解释**：  组信息。  **参数范围**：  不涉及。
     *
     * @return \HuaweiCloud\SDK\Ddm\V1\Model\DdmGroupInfo[]|null
     */
@@ -1324,7 +1324,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets groups
     *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\DdmGroupInfo[]|null $groups 组信息。
+    * @param \HuaweiCloud\SDK\Ddm\V1\Model\DdmGroupInfo[]|null $groups **参数解释**：  组信息。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -1336,7 +1336,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendMap
-    *  其他信息。
+    *  **参数解释**：  其他信息。  **参数范围**：  不涉及。
     *
     * @return map[string,string]|null
     */
@@ -1348,7 +1348,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets extendMap
     *
-    * @param map[string,string]|null $extendMap 其他信息。
+    * @param map[string,string]|null $extendMap **参数解释**：  其他信息。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -1360,9 +1360,9 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets tagsInfo
-    *  标签信息。
+    *  **参数解释**：  标签信息。  **参数范围**：  不涉及。
     *
-    * @return \HuaweiCloud\SDK\Ddm\V1\Model\TagsInfo[]|null
+    * @return object|null
     */
     public function getTagsInfo()
     {
@@ -1372,7 +1372,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets tagsInfo
     *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\TagsInfo[]|null $tagsInfo 标签信息。
+    * @param object|null $tagsInfo **参数解释**：  标签信息。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -1384,7 +1384,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets adminUserName
-    *  管理员账号。
+    *  **参数解释**：  管理员账号。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -1396,7 +1396,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets adminUserName
     *
-    * @param string|null $adminUserName 管理员账号。
+    * @param string|null $adminUserName **参数解释**：  管理员账号。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -1408,7 +1408,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets eipBindingInfo
-    *  绑定eip信息。
+    *  **参数解释**：  绑定eip信息。  **参数范围**：  不涉及。
     *
     * @return object|null
     */
@@ -1420,7 +1420,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets eipBindingInfo
     *
-    * @param object|null $eipBindingInfo 绑定eip信息。
+    * @param object|null $eipBindingInfo **参数解释**：  绑定eip信息。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -1432,7 +1432,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableSsl
-    *  是否支持ssl。
+    *  **参数解释**：  是否支持ssl。  **参数范围**：  不涉及。
     *
     * @return int|null
     */
@@ -1444,7 +1444,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets enableSsl
     *
-    * @param int|null $enableSsl 是否支持ssl。
+    * @param int|null $enableSsl **参数解释**：  是否支持ssl。  **参数范围**：  不涉及。
     *
     * @return $this
     */

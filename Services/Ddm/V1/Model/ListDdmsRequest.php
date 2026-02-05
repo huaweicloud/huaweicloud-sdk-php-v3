@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListInstancesAppliedParameterGroupV0V3Request implements ModelInterface, ArrayAccess
+class ListDdmsRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,30 @@ class ListInstancesAppliedParameterGroupV0V3Request implements ModelInterface, A
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListInstancesAppliedParameterGroupV0V3Request';
+    protected static $openAPIModelName = 'ListDdmsRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * configId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
     * offset  **参数解释**：  分页参数: 起始值。  **约束限制**：  不涉及。  **取值范围**：  大于等于0。  **默认取值**：  默认值是0。
     * limit  **参数解释**：  分页参数: 每页记录数。  **约束限制**：  不涉及。  **取值范围**：  大于0且小于等于128。  **默认取值**：  默认值是10。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'configId' => 'string',
             'offset' => 'int',
             'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * configId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
     * offset  **参数解释**：  分页参数: 起始值。  **约束限制**：  不涉及。  **取值范围**：  大于等于0。  **默认取值**：  默认值是0。
     * limit  **参数解释**：  分页参数: 每页记录数。  **约束限制**：  不涉及。  **取值范围**：  大于0且小于等于128。  **默认取值**：  默认值是10。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'configId' => null,
-        'offset' => 'int32',
-        'limit' => 'int32'
+        'offset' => null,
+        'limit' => null
     ];
 
     /**
@@ -69,42 +65,36 @@ class ListInstancesAppliedParameterGroupV0V3Request implements ModelInterface, A
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * configId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
     * offset  **参数解释**：  分页参数: 起始值。  **约束限制**：  不涉及。  **取值范围**：  大于等于0。  **默认取值**：  默认值是0。
     * limit  **参数解释**：  分页参数: 每页记录数。  **约束限制**：  不涉及。  **取值范围**：  大于0且小于等于128。  **默认取值**：  默认值是10。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'configId' => 'config_id',
             'offset' => 'offset',
             'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * configId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
     * offset  **参数解释**：  分页参数: 起始值。  **约束限制**：  不涉及。  **取值范围**：  大于等于0。  **默认取值**：  默认值是0。
     * limit  **参数解释**：  分页参数: 每页记录数。  **约束限制**：  不涉及。  **取值范围**：  大于0且小于等于128。  **默认取值**：  默认值是10。
     *
     * @var string[]
     */
     protected static $setters = [
-            'configId' => 'setConfigId',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * configId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
     * offset  **参数解释**：  分页参数: 起始值。  **约束限制**：  不涉及。  **取值范围**：  大于等于0。  **默认取值**：  默认值是0。
     * limit  **参数解释**：  分页参数: 每页记录数。  **约束限制**：  不涉及。  **取值范围**：  大于0且小于等于128。  **默认取值**：  默认值是10。
     *
     * @var string[]
     */
     protected static $getters = [
-            'configId' => 'getConfigId',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
     ];
@@ -167,7 +157,6 @@ class ListInstancesAppliedParameterGroupV0V3Request implements ModelInterface, A
     */
     public function __construct(array $data = null)
     {
-        $this->container['configId'] = isset($data['configId']) ? $data['configId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
@@ -180,26 +169,17 @@ class ListInstancesAppliedParameterGroupV0V3Request implements ModelInterface, A
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['configId'] === null) {
-            $invalidProperties[] = "'configId' can't be null";
-        }
-            if ((mb_strlen($this->container['configId']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'configId', the character length must be smaller than or equal to 1024.";
-            }
-            if ((mb_strlen($this->container['configId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'configId', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 128)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 128.";
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 1024)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 1024.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 128)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 128.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1024)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1024.";
             }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -213,30 +193,6 @@ class ListInstancesAppliedParameterGroupV0V3Request implements ModelInterface, A
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets configId
-    *  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
-    *
-    * @return string
-    */
-    public function getConfigId()
-    {
-        return $this->container['configId'];
-    }
-
-    /**
-    * Sets configId
-    *
-    * @param string $configId **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
-    *
-    * @return $this
-    */
-    public function setConfigId($configId)
-    {
-        $this->container['configId'] = $configId;
-        return $this;
     }
 
     /**

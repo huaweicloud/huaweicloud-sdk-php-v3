@@ -22,7 +22,7 @@ class ListCollectConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * allVendors  所有的云厂商、云产品和日志
-    * cofingStatistics  cofingStatistics
+    * configStatistics  configStatistics
     * dataList  数据
     * datasets  数据集列表
     * dataspaceId  数据空间ID
@@ -37,7 +37,7 @@ class ListCollectConfigResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'allVendors' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ListCollectConfigResponseBodyAllVendors[]',
-            'cofingStatistics' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ListCollectConfigResponseBodyCofingStatistics',
+            'configStatistics' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ListCollectConfigResponseBodyConfigStatistics',
             'dataList' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ListCollectConfigResponseBodyDataList[]',
             'datasets' => '\HuaweiCloud\SDK\SecMaster\V2\Model\DatasetInfo[]',
             'dataspaceId' => 'string',
@@ -52,7 +52,7 @@ class ListCollectConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * allVendors  所有的云厂商、云产品和日志
-    * cofingStatistics  cofingStatistics
+    * configStatistics  configStatistics
     * dataList  数据
     * datasets  数据集列表
     * dataspaceId  数据空间ID
@@ -67,7 +67,7 @@ class ListCollectConfigResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'allVendors' => null,
-        'cofingStatistics' => null,
+        'configStatistics' => null,
         'dataList' => null,
         'datasets' => null,
         'dataspaceId' => null,
@@ -103,7 +103,7 @@ class ListCollectConfigResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * allVendors  所有的云厂商、云产品和日志
-    * cofingStatistics  cofingStatistics
+    * configStatistics  configStatistics
     * dataList  数据
     * datasets  数据集列表
     * dataspaceId  数据空间ID
@@ -118,7 +118,7 @@ class ListCollectConfigResponse implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'allVendors' => 'all_vendors',
-            'cofingStatistics' => 'cofing_statistics',
+            'configStatistics' => 'config_statistics',
             'dataList' => 'data_list',
             'datasets' => 'datasets',
             'dataspaceId' => 'dataspace_id',
@@ -133,7 +133,7 @@ class ListCollectConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * allVendors  所有的云厂商、云产品和日志
-    * cofingStatistics  cofingStatistics
+    * configStatistics  configStatistics
     * dataList  数据
     * datasets  数据集列表
     * dataspaceId  数据空间ID
@@ -148,7 +148,7 @@ class ListCollectConfigResponse implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'allVendors' => 'setAllVendors',
-            'cofingStatistics' => 'setCofingStatistics',
+            'configStatistics' => 'setConfigStatistics',
             'dataList' => 'setDataList',
             'datasets' => 'setDatasets',
             'dataspaceId' => 'setDataspaceId',
@@ -163,7 +163,7 @@ class ListCollectConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * allVendors  所有的云厂商、云产品和日志
-    * cofingStatistics  cofingStatistics
+    * configStatistics  configStatistics
     * dataList  数据
     * datasets  数据集列表
     * dataspaceId  数据空间ID
@@ -178,7 +178,7 @@ class ListCollectConfigResponse implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'allVendors' => 'getAllVendors',
-            'cofingStatistics' => 'getCofingStatistics',
+            'configStatistics' => 'getConfigStatistics',
             'dataList' => 'getDataList',
             'datasets' => 'getDatasets',
             'dataspaceId' => 'getDataspaceId',
@@ -249,7 +249,7 @@ class ListCollectConfigResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['allVendors'] = isset($data['allVendors']) ? $data['allVendors'] : null;
-        $this->container['cofingStatistics'] = isset($data['cofingStatistics']) ? $data['cofingStatistics'] : null;
+        $this->container['configStatistics'] = isset($data['configStatistics']) ? $data['configStatistics'] : null;
         $this->container['dataList'] = isset($data['dataList']) ? $data['dataList'] : null;
         $this->container['datasets'] = isset($data['datasets']) ? $data['datasets'] : null;
         $this->container['dataspaceId'] = isset($data['dataspaceId']) ? $data['dataspaceId'] : null;
@@ -344,26 +344,26 @@ class ListCollectConfigResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets cofingStatistics
-    *  cofingStatistics
+    * Gets configStatistics
+    *  configStatistics
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\ListCollectConfigResponseBodyCofingStatistics|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\ListCollectConfigResponseBodyConfigStatistics|null
     */
-    public function getCofingStatistics()
+    public function getConfigStatistics()
     {
-        return $this->container['cofingStatistics'];
+        return $this->container['configStatistics'];
     }
 
     /**
-    * Sets cofingStatistics
+    * Sets configStatistics
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\ListCollectConfigResponseBodyCofingStatistics|null $cofingStatistics cofingStatistics
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\ListCollectConfigResponseBodyConfigStatistics|null $configStatistics configStatistics
     *
     * @return $this
     */
-    public function setCofingStatistics($cofingStatistics)
+    public function setConfigStatistics($configStatistics)
     {
-        $this->container['cofingStatistics'] = $cofingStatistics;
+        $this->container['configStatistics'] = $configStatistics;
         return $this;
     }
 

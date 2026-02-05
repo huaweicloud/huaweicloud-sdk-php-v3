@@ -26,8 +26,10 @@ class SubscriptionResource implements ModelInterface, ArrayAccess
     * cloudService  订单来源，默认数据为SecMaster
     * resourceType  资源类型
     * resourceSpecCode  资源规格编码
+    * toPeriod  当前资源是否能进行按需转包周期操作
     * createTime  创建时间戳
-    * expireTime  到期时间戳，只有按需资源有该字段
+    * updateTime  更新时间戳
+    * expireTime  到期时间戳，只有包年包月资源才有该字段
     * resourceStatus  资源状态，目前返回正常运行的资源，其状态值为0
     * orderId  订单Id，包周期资源有该字段
     * chargingMode  计费模式，目前有包周期（包年包月）PREPAID、按需POSTPAID，大小写不敏感
@@ -43,8 +45,10 @@ class SubscriptionResource implements ModelInterface, ArrayAccess
             'cloudService' => 'string',
             'resourceType' => 'string',
             'resourceSpecCode' => 'string',
-            'createTime' => 'string',
-            'expireTime' => 'string',
+            'toPeriod' => 'bool',
+            'createTime' => 'int',
+            'updateTime' => 'int',
+            'expireTime' => 'int',
             'resourceStatus' => 'int',
             'orderId' => 'string',
             'chargingMode' => 'string',
@@ -60,8 +64,10 @@ class SubscriptionResource implements ModelInterface, ArrayAccess
     * cloudService  订单来源，默认数据为SecMaster
     * resourceType  资源类型
     * resourceSpecCode  资源规格编码
+    * toPeriod  当前资源是否能进行按需转包周期操作
     * createTime  创建时间戳
-    * expireTime  到期时间戳，只有按需资源有该字段
+    * updateTime  更新时间戳
+    * expireTime  到期时间戳，只有包年包月资源才有该字段
     * resourceStatus  资源状态，目前返回正常运行的资源，其状态值为0
     * orderId  订单Id，包周期资源有该字段
     * chargingMode  计费模式，目前有包周期（包年包月）PREPAID、按需POSTPAID，大小写不敏感
@@ -77,8 +83,10 @@ class SubscriptionResource implements ModelInterface, ArrayAccess
         'cloudService' => null,
         'resourceType' => null,
         'resourceSpecCode' => null,
-        'createTime' => null,
-        'expireTime' => null,
+        'toPeriod' => null,
+        'createTime' => 'int64',
+        'updateTime' => 'int64',
+        'expireTime' => 'int64',
         'resourceStatus' => 'int32',
         'orderId' => null,
         'chargingMode' => null,
@@ -115,8 +123,10 @@ class SubscriptionResource implements ModelInterface, ArrayAccess
     * cloudService  订单来源，默认数据为SecMaster
     * resourceType  资源类型
     * resourceSpecCode  资源规格编码
+    * toPeriod  当前资源是否能进行按需转包周期操作
     * createTime  创建时间戳
-    * expireTime  到期时间戳，只有按需资源有该字段
+    * updateTime  更新时间戳
+    * expireTime  到期时间戳，只有包年包月资源才有该字段
     * resourceStatus  资源状态，目前返回正常运行的资源，其状态值为0
     * orderId  订单Id，包周期资源有该字段
     * chargingMode  计费模式，目前有包周期（包年包月）PREPAID、按需POSTPAID，大小写不敏感
@@ -132,7 +142,9 @@ class SubscriptionResource implements ModelInterface, ArrayAccess
             'cloudService' => 'cloud_service',
             'resourceType' => 'resource_type',
             'resourceSpecCode' => 'resource_spec_code',
+            'toPeriod' => 'to_period',
             'createTime' => 'create_time',
+            'updateTime' => 'update_time',
             'expireTime' => 'expire_time',
             'resourceStatus' => 'resource_status',
             'orderId' => 'order_id',
@@ -149,8 +161,10 @@ class SubscriptionResource implements ModelInterface, ArrayAccess
     * cloudService  订单来源，默认数据为SecMaster
     * resourceType  资源类型
     * resourceSpecCode  资源规格编码
+    * toPeriod  当前资源是否能进行按需转包周期操作
     * createTime  创建时间戳
-    * expireTime  到期时间戳，只有按需资源有该字段
+    * updateTime  更新时间戳
+    * expireTime  到期时间戳，只有包年包月资源才有该字段
     * resourceStatus  资源状态，目前返回正常运行的资源，其状态值为0
     * orderId  订单Id，包周期资源有该字段
     * chargingMode  计费模式，目前有包周期（包年包月）PREPAID、按需POSTPAID，大小写不敏感
@@ -166,7 +180,9 @@ class SubscriptionResource implements ModelInterface, ArrayAccess
             'cloudService' => 'setCloudService',
             'resourceType' => 'setResourceType',
             'resourceSpecCode' => 'setResourceSpecCode',
+            'toPeriod' => 'setToPeriod',
             'createTime' => 'setCreateTime',
+            'updateTime' => 'setUpdateTime',
             'expireTime' => 'setExpireTime',
             'resourceStatus' => 'setResourceStatus',
             'orderId' => 'setOrderId',
@@ -183,8 +199,10 @@ class SubscriptionResource implements ModelInterface, ArrayAccess
     * cloudService  订单来源，默认数据为SecMaster
     * resourceType  资源类型
     * resourceSpecCode  资源规格编码
+    * toPeriod  当前资源是否能进行按需转包周期操作
     * createTime  创建时间戳
-    * expireTime  到期时间戳，只有按需资源有该字段
+    * updateTime  更新时间戳
+    * expireTime  到期时间戳，只有包年包月资源才有该字段
     * resourceStatus  资源状态，目前返回正常运行的资源，其状态值为0
     * orderId  订单Id，包周期资源有该字段
     * chargingMode  计费模式，目前有包周期（包年包月）PREPAID、按需POSTPAID，大小写不敏感
@@ -200,7 +218,9 @@ class SubscriptionResource implements ModelInterface, ArrayAccess
             'cloudService' => 'getCloudService',
             'resourceType' => 'getResourceType',
             'resourceSpecCode' => 'getResourceSpecCode',
+            'toPeriod' => 'getToPeriod',
             'createTime' => 'getCreateTime',
+            'updateTime' => 'getUpdateTime',
             'expireTime' => 'getExpireTime',
             'resourceStatus' => 'getResourceStatus',
             'orderId' => 'getOrderId',
@@ -288,7 +308,9 @@ class SubscriptionResource implements ModelInterface, ArrayAccess
         $this->container['cloudService'] = isset($data['cloudService']) ? $data['cloudService'] : null;
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
         $this->container['resourceSpecCode'] = isset($data['resourceSpecCode']) ? $data['resourceSpecCode'] : null;
+        $this->container['toPeriod'] = isset($data['toPeriod']) ? $data['toPeriod'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
         $this->container['resourceStatus'] = isset($data['resourceStatus']) ? $data['resourceStatus'] : null;
         $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
@@ -341,17 +363,23 @@ class SubscriptionResource implements ModelInterface, ArrayAccess
             if (!is_null($this->container['resourceSpecCode']) && (mb_strlen($this->container['resourceSpecCode']) < 2)) {
                 $invalidProperties[] = "invalid value for 'resourceSpecCode', the character length must be bigger than or equal to 2.";
             }
-            if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) > 64)) {
-                $invalidProperties[] = "invalid value for 'createTime', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] > 4796640000000)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 4796640000000.";
             }
-            if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) < 2)) {
-                $invalidProperties[] = "invalid value for 'createTime', the character length must be bigger than or equal to 2.";
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] < 1640966400000)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be bigger than or equal to 1640966400000.";
             }
-            if (!is_null($this->container['expireTime']) && (mb_strlen($this->container['expireTime']) > 64)) {
-                $invalidProperties[] = "invalid value for 'expireTime', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] > 4796640000000)) {
+                $invalidProperties[] = "invalid value for 'updateTime', must be smaller than or equal to 4796640000000.";
             }
-            if (!is_null($this->container['expireTime']) && (mb_strlen($this->container['expireTime']) < 2)) {
-                $invalidProperties[] = "invalid value for 'expireTime', the character length must be bigger than or equal to 2.";
+            if (!is_null($this->container['updateTime']) && ($this->container['updateTime'] < 1640966400000)) {
+                $invalidProperties[] = "invalid value for 'updateTime', must be bigger than or equal to 1640966400000.";
+            }
+            if (!is_null($this->container['expireTime']) && ($this->container['expireTime'] > 4796640000000)) {
+                $invalidProperties[] = "invalid value for 'expireTime', must be smaller than or equal to 4796640000000.";
+            }
+            if (!is_null($this->container['expireTime']) && ($this->container['expireTime'] < 1640966400000)) {
+                $invalidProperties[] = "invalid value for 'expireTime', must be bigger than or equal to 1640966400000.";
             }
             if (!is_null($this->container['resourceStatus']) && ($this->container['resourceStatus'] > 2)) {
                 $invalidProperties[] = "invalid value for 'resourceStatus', must be smaller than or equal to 2.";
@@ -538,10 +566,34 @@ class SubscriptionResource implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets toPeriod
+    *  当前资源是否能进行按需转包周期操作
+    *
+    * @return bool|null
+    */
+    public function getToPeriod()
+    {
+        return $this->container['toPeriod'];
+    }
+
+    /**
+    * Sets toPeriod
+    *
+    * @param bool|null $toPeriod 当前资源是否能进行按需转包周期操作
+    *
+    * @return $this
+    */
+    public function setToPeriod($toPeriod)
+    {
+        $this->container['toPeriod'] = $toPeriod;
+        return $this;
+    }
+
+    /**
     * Gets createTime
     *  创建时间戳
     *
-    * @return string|null
+    * @return int|null
     */
     public function getCreateTime()
     {
@@ -551,7 +603,7 @@ class SubscriptionResource implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime 创建时间戳
+    * @param int|null $createTime 创建时间戳
     *
     * @return $this
     */
@@ -562,10 +614,34 @@ class SubscriptionResource implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets expireTime
-    *  到期时间戳，只有按需资源有该字段
+    * Gets updateTime
+    *  更新时间戳
     *
-    * @return string|null
+    * @return int|null
+    */
+    public function getUpdateTime()
+    {
+        return $this->container['updateTime'];
+    }
+
+    /**
+    * Sets updateTime
+    *
+    * @param int|null $updateTime 更新时间戳
+    *
+    * @return $this
+    */
+    public function setUpdateTime($updateTime)
+    {
+        $this->container['updateTime'] = $updateTime;
+        return $this;
+    }
+
+    /**
+    * Gets expireTime
+    *  到期时间戳，只有包年包月资源才有该字段
+    *
+    * @return int|null
     */
     public function getExpireTime()
     {
@@ -575,7 +651,7 @@ class SubscriptionResource implements ModelInterface, ArrayAccess
     /**
     * Sets expireTime
     *
-    * @param string|null $expireTime 到期时间戳，只有按需资源有该字段
+    * @param int|null $expireTime 到期时间戳，只有包年包月资源才有该字段
     *
     * @return $this
     */

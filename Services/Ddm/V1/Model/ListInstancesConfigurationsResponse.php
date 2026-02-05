@@ -7,8 +7,9 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CopyParameterGroupRequest implements ModelInterface, ArrayAccess
+class ListInstancesConfigurationsResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,30 @@ class CopyParameterGroupRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CopyParameterGroupRequest';
+    protected static $openAPIModelName = 'ListInstancesConfigurationsResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * configId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
-    * body  body
+    * entities  **参数解释**：  查询可应用的实例列表返回相关信息的集合。  **参数范围**：  不涉及。
+    * total  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'configId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Ddm\V1\Model\ConfigurationCopyReqV3'
+            'entities' => '\HuaweiCloud\SDK\Ddm\V1\Model\ApplicableInstance[]',
+            'total' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * configId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
-    * body  body
+    * entities  **参数解释**：  查询可应用的实例列表返回相关信息的集合。  **参数范围**：  不涉及。
+    * total  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'configId' => null,
-        'body' => null
+        'entities' => null,
+        'total' => 'int32'
     ];
 
     /**
@@ -65,38 +66,38 @@ class CopyParameterGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * configId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
-    * body  body
+    * entities  **参数解释**：  查询可应用的实例列表返回相关信息的集合。  **参数范围**：  不涉及。
+    * total  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'configId' => 'config_id',
-            'body' => 'body'
+            'entities' => 'entities',
+            'total' => 'total'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * configId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
-    * body  body
+    * entities  **参数解释**：  查询可应用的实例列表返回相关信息的集合。  **参数范围**：  不涉及。
+    * total  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'configId' => 'setConfigId',
-            'body' => 'setBody'
+            'entities' => 'setEntities',
+            'total' => 'setTotal'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * configId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
-    * body  body
+    * entities  **参数解释**：  查询可应用的实例列表返回相关信息的集合。  **参数范围**：  不涉及。
+    * total  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'configId' => 'getConfigId',
-            'body' => 'getBody'
+            'entities' => 'getEntities',
+            'total' => 'getTotal'
     ];
 
     /**
@@ -157,8 +158,8 @@ class CopyParameterGroupRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['configId'] = isset($data['configId']) ? $data['configId'] : null;
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['entities'] = isset($data['entities']) ? $data['entities'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
 
     /**
@@ -169,14 +170,11 @@ class CopyParameterGroupRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['configId'] === null) {
-            $invalidProperties[] = "'configId' can't be null";
-        }
-            if ((mb_strlen($this->container['configId']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'configId', the character length must be smaller than or equal to 1024.";
+            if (!is_null($this->container['total']) && ($this->container['total'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'total', must be smaller than or equal to 2147483647.";
             }
-            if ((mb_strlen($this->container['configId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'configId', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['total']) && ($this->container['total'] < 1)) {
+                $invalidProperties[] = "invalid value for 'total', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -193,50 +191,50 @@ class CopyParameterGroupRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets configId
-    *  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * Gets entities
+    *  **参数解释**：  查询可应用的实例列表返回相关信息的集合。  **参数范围**：  不涉及。
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Ddm\V1\Model\ApplicableInstance[]|null
     */
-    public function getConfigId()
+    public function getEntities()
     {
-        return $this->container['configId'];
+        return $this->container['entities'];
     }
 
     /**
-    * Sets configId
+    * Sets entities
     *
-    * @param string $configId **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * @param \HuaweiCloud\SDK\Ddm\V1\Model\ApplicableInstance[]|null $entities **参数解释**：  查询可应用的实例列表返回相关信息的集合。  **参数范围**：  不涉及。
     *
     * @return $this
     */
-    public function setConfigId($configId)
+    public function setEntities($entities)
     {
-        $this->container['configId'] = $configId;
+        $this->container['entities'] = $entities;
         return $this;
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets total
+    *  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  不涉及。
     *
-    * @return \HuaweiCloud\SDK\Ddm\V1\Model\ConfigurationCopyReqV3|null
+    * @return int|null
     */
-    public function getBody()
+    public function getTotal()
     {
-        return $this->container['body'];
+        return $this->container['total'];
     }
 
     /**
-    * Sets body
+    * Sets total
     *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\ConfigurationCopyReqV3|null $body body
+    * @param int|null $total **参数解释**：  分页参数: 每页记录数。  **参数范围**：  不涉及。
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setTotal($total)
     {
-        $this->container['body'] = $body;
+        $this->container['total'] = $total;
         return $this;
     }
 

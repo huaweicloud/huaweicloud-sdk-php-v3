@@ -151,6 +151,68 @@ class SisClient extends Client
     }
 
     /**
+     * 注册接口
+     *
+     * 客户上传一段录音，并指定voice_name，在系统中注册声音。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createVoice($request)
+    {
+        return $this->createVoiceWithHttpInfo($request);
+    }
+
+    public function createVoiceWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/vcs/voices';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sis\V1\Model\CreateVoiceResponse',
+            $requestType='\HuaweiCloud\SDK\Sis\V1\Model\CreateVoiceRequest');
+    }
+
+    /**
      * 删除热词表
      *
      * 通过热词表id删除热词表。
@@ -210,6 +272,133 @@ class SisClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sis\V1\Model\DeleteVocabularyResponse',
             $requestType='\HuaweiCloud\SDK\Sis\V1\Model\DeleteVocabularyRequest');
+    }
+
+    /**
+     * 合成接口
+     *
+     * 用户指定一个声色名称，并指定对应的文本，合成对应的复刻的声音
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function generateSpeech($request)
+    {
+        return $this->generateSpeechWithHttpInfo($request);
+    }
+
+    public function generateSpeechWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/vcs/voices/clone';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sis\V1\Model\GenerateSpeechResponse',
+            $requestType='\HuaweiCloud\SDK\Sis\V1\Model\GenerateSpeechRequest');
+    }
+
+    /**
+     * 查询接口
+     *
+     * 查询已注册的声音列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVoices($request)
+    {
+        return $this->listVoicesWithHttpInfo($request);
+    }
+
+    public function listVoicesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/vcs/voices';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sis\V1\Model\ListVoicesResponse',
+            $requestType='\HuaweiCloud\SDK\Sis\V1\Model\ListVoicesRequest');
     }
 
     /**

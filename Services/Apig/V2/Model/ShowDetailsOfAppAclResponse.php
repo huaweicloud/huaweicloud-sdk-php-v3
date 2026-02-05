@@ -22,7 +22,7 @@ class ShowDetailsOfAppAclResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * appId  APP编号
-    * appAclType  类型 -  PERMIT (白名单类型) -  DENY (黑名单类型)
+    * appAclType  类型 - PERMIT：白名单类型 - DENY：黑名单类型
     * appAclValues  ACL策略值，支持IP、IP范围和CIDR方式。IP范围以英文中划线分隔。
     *
     * @var string[]
@@ -36,7 +36,7 @@ class ShowDetailsOfAppAclResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * appId  APP编号
-    * appAclType  类型 -  PERMIT (白名单类型) -  DENY (黑名单类型)
+    * appAclType  类型 - PERMIT：白名单类型 - DENY：黑名单类型
     * appAclValues  ACL策略值，支持IP、IP范围和CIDR方式。IP范围以英文中划线分隔。
     *
     * @var string[]
@@ -71,7 +71,7 @@ class ShowDetailsOfAppAclResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * appId  APP编号
-    * appAclType  类型 -  PERMIT (白名单类型) -  DENY (黑名单类型)
+    * appAclType  类型 - PERMIT：白名单类型 - DENY：黑名单类型
     * appAclValues  ACL策略值，支持IP、IP范围和CIDR方式。IP范围以英文中划线分隔。
     *
     * @var string[]
@@ -85,7 +85,7 @@ class ShowDetailsOfAppAclResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * appId  APP编号
-    * appAclType  类型 -  PERMIT (白名单类型) -  DENY (黑名单类型)
+    * appAclType  类型 - PERMIT：白名单类型 - DENY：黑名单类型
     * appAclValues  ACL策略值，支持IP、IP范围和CIDR方式。IP范围以英文中划线分隔。
     *
     * @var string[]
@@ -99,7 +99,7 @@ class ShowDetailsOfAppAclResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * appId  APP编号
-    * appAclType  类型 -  PERMIT (白名单类型) -  DENY (黑名单类型)
+    * appAclType  类型 - PERMIT：白名单类型 - DENY：黑名单类型
     * appAclValues  ACL策略值，支持IP、IP范围和CIDR方式。IP范围以英文中划线分隔。
     *
     * @var string[]
@@ -221,7 +221,7 @@ class ShowDetailsOfAppAclResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets appAclType
-    *  类型 -  PERMIT (白名单类型) -  DENY (黑名单类型)
+    *  类型 - PERMIT：白名单类型 - DENY：黑名单类型
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class ShowDetailsOfAppAclResponse implements ModelInterface, ArrayAccess
     /**
     * Sets appAclType
     *
-    * @param string|null $appAclType 类型 -  PERMIT (白名单类型) -  DENY (黑名单类型)
+    * @param string|null $appAclType 类型 - PERMIT：白名单类型 - DENY：黑名单类型
     *
     * @return $this
     */

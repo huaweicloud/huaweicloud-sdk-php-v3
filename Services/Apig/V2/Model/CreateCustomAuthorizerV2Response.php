@@ -23,7 +23,7 @@ class CreateCustomAuthorizerV2Response implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  自定义认证的名称。 长度为3 ~ 64位的字符串，字符串由中文、英文字母、数字、“_”组成，且只能以英文或中文开头。
     * type  自定义认证类型  - FRONTEND：前端 - BACKEND：后端  不支持修改
-    * authorizerType  只能为：FUNC
+    * authorizerType  自定义认证的类型。当前只支持函数类型：FUNC。
     * authorizerUri  函数地址。
     * networkType  对接函数的网络架构类型 - V1：非VPC网络架构 - V2：VPC网络架构
     * authorizerVersion  函数版本。  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
@@ -63,7 +63,7 @@ class CreateCustomAuthorizerV2Response implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  自定义认证的名称。 长度为3 ~ 64位的字符串，字符串由中文、英文字母、数字、“_”组成，且只能以英文或中文开头。
     * type  自定义认证类型  - FRONTEND：前端 - BACKEND：后端  不支持修改
-    * authorizerType  只能为：FUNC
+    * authorizerType  自定义认证的类型。当前只支持函数类型：FUNC。
     * authorizerUri  函数地址。
     * networkType  对接函数的网络架构类型 - V1：非VPC网络架构 - V2：VPC网络架构
     * authorizerVersion  函数版本。  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
@@ -124,7 +124,7 @@ class CreateCustomAuthorizerV2Response implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  自定义认证的名称。 长度为3 ~ 64位的字符串，字符串由中文、英文字母、数字、“_”组成，且只能以英文或中文开头。
     * type  自定义认证类型  - FRONTEND：前端 - BACKEND：后端  不支持修改
-    * authorizerType  只能为：FUNC
+    * authorizerType  自定义认证的类型。当前只支持函数类型：FUNC。
     * authorizerUri  函数地址。
     * networkType  对接函数的网络架构类型 - V1：非VPC网络架构 - V2：VPC网络架构
     * authorizerVersion  函数版本。  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
@@ -164,7 +164,7 @@ class CreateCustomAuthorizerV2Response implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  自定义认证的名称。 长度为3 ~ 64位的字符串，字符串由中文、英文字母、数字、“_”组成，且只能以英文或中文开头。
     * type  自定义认证类型  - FRONTEND：前端 - BACKEND：后端  不支持修改
-    * authorizerType  只能为：FUNC
+    * authorizerType  自定义认证的类型。当前只支持函数类型：FUNC。
     * authorizerUri  函数地址。
     * networkType  对接函数的网络架构类型 - V1：非VPC网络架构 - V2：VPC网络架构
     * authorizerVersion  函数版本。  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
@@ -204,7 +204,7 @@ class CreateCustomAuthorizerV2Response implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  自定义认证的名称。 长度为3 ~ 64位的字符串，字符串由中文、英文字母、数字、“_”组成，且只能以英文或中文开头。
     * type  自定义认证类型  - FRONTEND：前端 - BACKEND：后端  不支持修改
-    * authorizerType  只能为：FUNC
+    * authorizerType  自定义认证的类型。当前只支持函数类型：FUNC。
     * authorizerUri  函数地址。
     * networkType  对接函数的网络架构类型 - V1：非VPC网络架构 - V2：VPC网络架构
     * authorizerVersion  函数版本。  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
@@ -470,7 +470,7 @@ class CreateCustomAuthorizerV2Response implements ModelInterface, ArrayAccess
 
     /**
     * Gets authorizerType
-    *  只能为：FUNC
+    *  自定义认证的类型。当前只支持函数类型：FUNC。
     *
     * @return string
     */
@@ -482,7 +482,7 @@ class CreateCustomAuthorizerV2Response implements ModelInterface, ArrayAccess
     /**
     * Sets authorizerType
     *
-    * @param string $authorizerType 只能为：FUNC
+    * @param string $authorizerType 自定义认证的类型。当前只支持函数类型：FUNC。
     *
     * @return $this
     */

@@ -23,7 +23,7 @@ class AddEipV2Response implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * eipId  弹性公网IP编号
     * eipAddress  弹性公网IP
-    * eipStatus  弹性公网IP状态
+    * eipStatus  弹性公网IP状态。 - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     * eipIpv6Address  弹性公网IP(IPV6)
     *
     * @var string[]
@@ -39,7 +39,7 @@ class AddEipV2Response implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * eipId  弹性公网IP编号
     * eipAddress  弹性公网IP
-    * eipStatus  弹性公网IP状态
+    * eipStatus  弹性公网IP状态。 - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     * eipIpv6Address  弹性公网IP(IPV6)
     *
     * @var string[]
@@ -76,7 +76,7 @@ class AddEipV2Response implements ModelInterface, ArrayAccess
     * and the value is the original name
     * eipId  弹性公网IP编号
     * eipAddress  弹性公网IP
-    * eipStatus  弹性公网IP状态
+    * eipStatus  弹性公网IP状态。 - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     * eipIpv6Address  弹性公网IP(IPV6)
     *
     * @var string[]
@@ -92,7 +92,7 @@ class AddEipV2Response implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * eipId  弹性公网IP编号
     * eipAddress  弹性公网IP
-    * eipStatus  弹性公网IP状态
+    * eipStatus  弹性公网IP状态。 - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     * eipIpv6Address  弹性公网IP(IPV6)
     *
     * @var string[]
@@ -108,7 +108,7 @@ class AddEipV2Response implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * eipId  弹性公网IP编号
     * eipAddress  弹性公网IP
-    * eipStatus  弹性公网IP状态
+    * eipStatus  弹性公网IP状态。 - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     * eipIpv6Address  弹性公网IP(IPV6)
     *
     * @var string[]
@@ -160,7 +160,44 @@ class AddEipV2Response implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const EIP_STATUS_FREEZED = 'FREEZED';
+    const EIP_STATUS_BIND_ERROR = 'BIND_ERROR';
+    const EIP_STATUS_BINDING = 'BINDING';
+    const EIP_STATUS_PENDING_DELETE = 'PENDING_DELETE';
+    const EIP_STATUS_PENDING_CREATE = 'PENDING_CREATE';
+    const EIP_STATUS_NOTIFYING = 'NOTIFYING';
+    const EIP_STATUS_NOTIFY_DELETE = 'NOTIFY_DELETE';
+    const EIP_STATUS_PENDING_UPDATE = 'PENDING_UPDATE';
+    const EIP_STATUS_DOWN = 'DOWN';
+    const EIP_STATUS_ACTIVE = 'ACTIVE';
+    const EIP_STATUS_ELB = 'ELB';
+    const EIP_STATUS_VPN = 'VPN';
+    const EIP_STATUS_ERROR = 'ERROR';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getEipStatusAllowableValues()
+    {
+        return [
+            self::EIP_STATUS_FREEZED,
+            self::EIP_STATUS_BIND_ERROR,
+            self::EIP_STATUS_BINDING,
+            self::EIP_STATUS_PENDING_DELETE,
+            self::EIP_STATUS_PENDING_CREATE,
+            self::EIP_STATUS_NOTIFYING,
+            self::EIP_STATUS_NOTIFY_DELETE,
+            self::EIP_STATUS_PENDING_UPDATE,
+            self::EIP_STATUS_DOWN,
+            self::EIP_STATUS_ACTIVE,
+            self::EIP_STATUS_ELB,
+            self::EIP_STATUS_VPN,
+            self::EIP_STATUS_ERROR,
+        ];
+    }
 
 
     /**
@@ -192,6 +229,14 @@ class AddEipV2Response implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getEipStatusAllowableValues();
+                if (!is_null($this->container['eipStatus']) && !in_array($this->container['eipStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'eipStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -256,7 +301,7 @@ class AddEipV2Response implements ModelInterface, ArrayAccess
 
     /**
     * Gets eipStatus
-    *  弹性公网IP状态
+    *  弹性公网IP状态。 - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     *
     * @return string|null
     */
@@ -268,7 +313,7 @@ class AddEipV2Response implements ModelInterface, ArrayAccess
     /**
     * Sets eipStatus
     *
-    * @param string|null $eipStatus 弹性公网IP状态
+    * @param string|null $eipStatus 弹性公网IP状态。 - FREEZED：冻结 - BIND_ERROR：绑定失败 - BINDING：绑定中 - PENDING_DELETE：释放中 - PENDING_CREATE：创建中 - NOTIFYING：创建中 - NOTIFY_DELETE：释放中 - PENDING_UPDATE：更新中 - DOWN：未绑定 - ACTIVE：绑定 - ELB：绑定ELB - VPN：绑定VPN - ERROR：失败
     *
     * @return $this
     */

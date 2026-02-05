@@ -20,14 +20,14 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * authType  API的认证方式
+    * authType  API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     * groupName  API所属分组的名称
     * publishId  API的发布记录编号
     * throttleApplyId  与流控策略的绑定关系编号
     * applyTime  已绑定的流控策略的绑定时间
     * remark  API描述
     * runEnvId  发布的环境id
-    * type  API类型
+    * type  API类型。 - 1：公有API - 2：私有API
     * throttleName  绑定的流控策略名称
     * reqUri  API的访问地址
     * runEnvName  发布的环境名
@@ -60,14 +60,14 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * authType  API的认证方式
+    * authType  API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     * groupName  API所属分组的名称
     * publishId  API的发布记录编号
     * throttleApplyId  与流控策略的绑定关系编号
     * applyTime  已绑定的流控策略的绑定时间
     * remark  API描述
     * runEnvId  发布的环境id
-    * type  API类型
+    * type  API类型。 - 1：公有API - 2：私有API
     * throttleName  绑定的流控策略名称
     * reqUri  API的访问地址
     * runEnvName  发布的环境名
@@ -121,14 +121,14 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * authType  API的认证方式
+    * authType  API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     * groupName  API所属分组的名称
     * publishId  API的发布记录编号
     * throttleApplyId  与流控策略的绑定关系编号
     * applyTime  已绑定的流控策略的绑定时间
     * remark  API描述
     * runEnvId  发布的环境id
-    * type  API类型
+    * type  API类型。 - 1：公有API - 2：私有API
     * throttleName  绑定的流控策略名称
     * reqUri  API的访问地址
     * runEnvName  发布的环境名
@@ -161,14 +161,14 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * authType  API的认证方式
+    * authType  API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     * groupName  API所属分组的名称
     * publishId  API的发布记录编号
     * throttleApplyId  与流控策略的绑定关系编号
     * applyTime  已绑定的流控策略的绑定时间
     * remark  API描述
     * runEnvId  发布的环境id
-    * type  API类型
+    * type  API类型。 - 1：公有API - 2：私有API
     * throttleName  绑定的流控策略名称
     * reqUri  API的访问地址
     * runEnvName  发布的环境名
@@ -201,14 +201,14 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * authType  API的认证方式
+    * authType  API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     * groupName  API所属分组的名称
     * publishId  API的发布记录编号
     * throttleApplyId  与流控策略的绑定关系编号
     * applyTime  已绑定的流控策略的绑定时间
     * remark  API描述
     * runEnvId  发布的环境id
-    * type  API类型
+    * type  API类型。 - 1：公有API - 2：私有API
     * throttleName  绑定的流控策略名称
     * reqUri  API的访问地址
     * runEnvName  发布的环境名
@@ -279,6 +279,12 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const AUTH_TYPE_NONE = 'NONE';
+    const AUTH_TYPE_APP = 'APP';
+    const AUTH_TYPE_IAM = 'IAM';
+    const AUTH_TYPE_AUTHORIZER = 'AUTHORIZER';
+    const TYPE_1 = 1;
+    const TYPE_2 = 2;
     const REQ_METHOD_GET = 'GET';
     const REQ_METHOD_POST = 'POST';
     const REQ_METHOD_DELETE = 'DELETE';
@@ -288,6 +294,34 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
     const REQ_METHOD_OPTIONS = 'OPTIONS';
     const REQ_METHOD_ANY = 'ANY';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAuthTypeAllowableValues()
+    {
+        return [
+            self::AUTH_TYPE_NONE,
+            self::AUTH_TYPE_APP,
+            self::AUTH_TYPE_IAM,
+            self::AUTH_TYPE_AUTHORIZER,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_1,
+            self::TYPE_2,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -350,6 +384,22 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getAuthTypeAllowableValues();
+                if (!is_null($this->container['authType']) && !in_array($this->container['authType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'authType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             $allowedValues = $this->getReqMethodAllowableValues();
                 if (!is_null($this->container['reqMethod']) && !in_array($this->container['reqMethod'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -374,7 +424,7 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
 
     /**
     * Gets authType
-    *  API的认证方式
+    *  API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     *
     * @return string|null
     */
@@ -386,7 +436,7 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
     /**
     * Sets authType
     *
-    * @param string|null $authType API的认证方式
+    * @param string|null $authType API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     *
     * @return $this
     */
@@ -542,7 +592,7 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  API类型
+    *  API类型。 - 1：公有API - 2：私有API
     *
     * @return int|null
     */
@@ -554,7 +604,7 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int|null $type API类型
+    * @param int|null $type API类型。 - 1：公有API - 2：私有API
     *
     * @return $this
     */

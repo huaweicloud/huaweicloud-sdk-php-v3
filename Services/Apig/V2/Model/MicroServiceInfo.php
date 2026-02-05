@@ -22,7 +22,7 @@ class MicroServiceInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  微服务编号
     * instanceId  实例编号
-    * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: nacos引擎，nacos_info必填
+    * serviceType  微服务类型。 - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE：CCE云容器引擎（Service）（暂不支持） - NACOS：nacos引擎，nacos_info必填
     * cseInfo  cseInfo
     * cceInfo  cceInfo
     * cceServiceInfo  cceServiceInfo
@@ -48,7 +48,7 @@ class MicroServiceInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  微服务编号
     * instanceId  实例编号
-    * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: nacos引擎，nacos_info必填
+    * serviceType  微服务类型。 - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE：CCE云容器引擎（Service）（暂不支持） - NACOS：nacos引擎，nacos_info必填
     * cseInfo  cseInfo
     * cceInfo  cceInfo
     * cceServiceInfo  cceServiceInfo
@@ -95,7 +95,7 @@ class MicroServiceInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  微服务编号
     * instanceId  实例编号
-    * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: nacos引擎，nacos_info必填
+    * serviceType  微服务类型。 - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE：CCE云容器引擎（Service）（暂不支持） - NACOS：nacos引擎，nacos_info必填
     * cseInfo  cseInfo
     * cceInfo  cceInfo
     * cceServiceInfo  cceServiceInfo
@@ -121,7 +121,7 @@ class MicroServiceInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  微服务编号
     * instanceId  实例编号
-    * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: nacos引擎，nacos_info必填
+    * serviceType  微服务类型。 - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE：CCE云容器引擎（Service）（暂不支持） - NACOS：nacos引擎，nacos_info必填
     * cseInfo  cseInfo
     * cceInfo  cceInfo
     * cceServiceInfo  cceServiceInfo
@@ -147,7 +147,7 @@ class MicroServiceInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  微服务编号
     * instanceId  实例编号
-    * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: nacos引擎，nacos_info必填
+    * serviceType  微服务类型。 - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE：CCE云容器引擎（Service）（暂不支持） - NACOS：nacos引擎，nacos_info必填
     * cseInfo  cseInfo
     * cceInfo  cceInfo
     * cceServiceInfo  cceServiceInfo
@@ -337,7 +337,7 @@ class MicroServiceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
-    *  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: nacos引擎，nacos_info必填
+    *  微服务类型。 - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE：CCE云容器引擎（Service）（暂不支持） - NACOS：nacos引擎，nacos_info必填
     *
     * @return string|null
     */
@@ -349,7 +349,7 @@ class MicroServiceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets serviceType
     *
-    * @param string|null $serviceType 微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: nacos引擎，nacos_info必填
+    * @param string|null $serviceType 微服务类型。 - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE：CCE云容器引擎（Service）（暂不支持） - NACOS：nacos引擎，nacos_info必填
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class ListCollectConfigResponseBodySourceList implements ModelInterface, ArrayAc
     /**
     * Array of property to type mappings. Used for (de)serialization
     * csvcDisplay  云产品名称
-    * csvcHzzelp  云产品描述
+    * csvcHelp  云产品描述
     * link  链接
     * sourceDisplay  日志名称
     * sourceHelp  日志描述
@@ -30,7 +30,7 @@ class ListCollectConfigResponseBodySourceList implements ModelInterface, ArrayAc
     */
     protected static $openAPITypes = [
             'csvcDisplay' => 'string',
-            'csvcHzzelp' => 'string',
+            'csvcHelp' => 'string',
             'link' => 'string',
             'sourceDisplay' => 'string',
             'sourceHelp' => 'string'
@@ -39,7 +39,7 @@ class ListCollectConfigResponseBodySourceList implements ModelInterface, ArrayAc
     /**
     * Array of property to format mappings. Used for (de)serialization
     * csvcDisplay  云产品名称
-    * csvcHzzelp  云产品描述
+    * csvcHelp  云产品描述
     * link  链接
     * sourceDisplay  日志名称
     * sourceHelp  日志描述
@@ -48,7 +48,7 @@ class ListCollectConfigResponseBodySourceList implements ModelInterface, ArrayAc
     */
     protected static $openAPIFormats = [
         'csvcDisplay' => null,
-        'csvcHzzelp' => null,
+        'csvcHelp' => null,
         'link' => null,
         'sourceDisplay' => null,
         'sourceHelp' => null
@@ -78,7 +78,7 @@ class ListCollectConfigResponseBodySourceList implements ModelInterface, ArrayAc
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * csvcDisplay  云产品名称
-    * csvcHzzelp  云产品描述
+    * csvcHelp  云产品描述
     * link  链接
     * sourceDisplay  日志名称
     * sourceHelp  日志描述
@@ -87,7 +87,7 @@ class ListCollectConfigResponseBodySourceList implements ModelInterface, ArrayAc
     */
     protected static $attributeMap = [
             'csvcDisplay' => 'csvc_display',
-            'csvcHzzelp' => 'csvc_hzzelp',
+            'csvcHelp' => 'csvc_help',
             'link' => 'link',
             'sourceDisplay' => 'source_display',
             'sourceHelp' => 'source_help'
@@ -96,7 +96,7 @@ class ListCollectConfigResponseBodySourceList implements ModelInterface, ArrayAc
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * csvcDisplay  云产品名称
-    * csvcHzzelp  云产品描述
+    * csvcHelp  云产品描述
     * link  链接
     * sourceDisplay  日志名称
     * sourceHelp  日志描述
@@ -105,7 +105,7 @@ class ListCollectConfigResponseBodySourceList implements ModelInterface, ArrayAc
     */
     protected static $setters = [
             'csvcDisplay' => 'setCsvcDisplay',
-            'csvcHzzelp' => 'setCsvcHzzelp',
+            'csvcHelp' => 'setCsvcHelp',
             'link' => 'setLink',
             'sourceDisplay' => 'setSourceDisplay',
             'sourceHelp' => 'setSourceHelp'
@@ -114,7 +114,7 @@ class ListCollectConfigResponseBodySourceList implements ModelInterface, ArrayAc
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * csvcDisplay  云产品名称
-    * csvcHzzelp  云产品描述
+    * csvcHelp  云产品描述
     * link  链接
     * sourceDisplay  日志名称
     * sourceHelp  日志描述
@@ -123,7 +123,7 @@ class ListCollectConfigResponseBodySourceList implements ModelInterface, ArrayAc
     */
     protected static $getters = [
             'csvcDisplay' => 'getCsvcDisplay',
-            'csvcHzzelp' => 'getCsvcHzzelp',
+            'csvcHelp' => 'getCsvcHelp',
             'link' => 'getLink',
             'sourceDisplay' => 'getSourceDisplay',
             'sourceHelp' => 'getSourceHelp'
@@ -188,7 +188,7 @@ class ListCollectConfigResponseBodySourceList implements ModelInterface, ArrayAc
     public function __construct(array $data = null)
     {
         $this->container['csvcDisplay'] = isset($data['csvcDisplay']) ? $data['csvcDisplay'] : null;
-        $this->container['csvcHzzelp'] = isset($data['csvcHzzelp']) ? $data['csvcHzzelp'] : null;
+        $this->container['csvcHelp'] = isset($data['csvcHelp']) ? $data['csvcHelp'] : null;
         $this->container['link'] = isset($data['link']) ? $data['link'] : null;
         $this->container['sourceDisplay'] = isset($data['sourceDisplay']) ? $data['sourceDisplay'] : null;
         $this->container['sourceHelp'] = isset($data['sourceHelp']) ? $data['sourceHelp'] : null;
@@ -208,11 +208,11 @@ class ListCollectConfigResponseBodySourceList implements ModelInterface, ArrayAc
             if (!is_null($this->container['csvcDisplay']) && (mb_strlen($this->container['csvcDisplay']) < 0)) {
                 $invalidProperties[] = "invalid value for 'csvcDisplay', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['csvcHzzelp']) && (mb_strlen($this->container['csvcHzzelp']) > 64)) {
-                $invalidProperties[] = "invalid value for 'csvcHzzelp', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['csvcHelp']) && (mb_strlen($this->container['csvcHelp']) > 64)) {
+                $invalidProperties[] = "invalid value for 'csvcHelp', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['csvcHzzelp']) && (mb_strlen($this->container['csvcHzzelp']) < 0)) {
-                $invalidProperties[] = "invalid value for 'csvcHzzelp', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['csvcHelp']) && (mb_strlen($this->container['csvcHelp']) < 0)) {
+                $invalidProperties[] = "invalid value for 'csvcHelp', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['link']) && (mb_strlen($this->container['link']) > 64)) {
                 $invalidProperties[] = "invalid value for 'link', the character length must be smaller than or equal to 64.";
@@ -271,26 +271,26 @@ class ListCollectConfigResponseBodySourceList implements ModelInterface, ArrayAc
     }
 
     /**
-    * Gets csvcHzzelp
+    * Gets csvcHelp
     *  云产品描述
     *
     * @return string|null
     */
-    public function getCsvcHzzelp()
+    public function getCsvcHelp()
     {
-        return $this->container['csvcHzzelp'];
+        return $this->container['csvcHelp'];
     }
 
     /**
-    * Sets csvcHzzelp
+    * Sets csvcHelp
     *
-    * @param string|null $csvcHzzelp 云产品描述
+    * @param string|null $csvcHelp 云产品描述
     *
     * @return $this
     */
-    public function setCsvcHzzelp($csvcHzzelp)
+    public function setCsvcHelp($csvcHelp)
     {
-        $this->container['csvcHzzelp'] = $csvcHzzelp;
+        $this->container['csvcHelp'] = $csvcHelp;
         return $this;
     }
 

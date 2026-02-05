@@ -40,7 +40,7 @@ class StatisticsAPI implements ModelInterface, ArrayAccess
     * provider  API拥有者
     * reqTime  API请求时间
     * registerTime  记录时间
-    * status  状态
+    * status  状态。 - 1：有效
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class StatisticsAPI implements ModelInterface, ArrayAccess
     * provider  API拥有者
     * reqTime  API请求时间
     * registerTime  记录时间
-    * status  状态
+    * status  状态。 - 1：有效
     *
     * @var string[]
     */
@@ -161,7 +161,7 @@ class StatisticsAPI implements ModelInterface, ArrayAccess
     * provider  API拥有者
     * reqTime  API请求时间
     * registerTime  记录时间
-    * status  状态
+    * status  状态。 - 1：有效
     *
     * @var string[]
     */
@@ -211,7 +211,7 @@ class StatisticsAPI implements ModelInterface, ArrayAccess
     * provider  API拥有者
     * reqTime  API请求时间
     * registerTime  记录时间
-    * status  状态
+    * status  状态。 - 1：有效
     *
     * @var string[]
     */
@@ -261,7 +261,7 @@ class StatisticsAPI implements ModelInterface, ArrayAccess
     * provider  API拥有者
     * reqTime  API请求时间
     * registerTime  记录时间
-    * status  状态
+    * status  状态。 - 1：有效
     *
     * @var string[]
     */
@@ -332,6 +332,7 @@ class StatisticsAPI implements ModelInterface, ArrayAccess
     const CYCLE_MINUTE = 'MINUTE';
     const CYCLE_HOUR = 'HOUR';
     const CYCLE_DAY = 'DAY';
+    const STATUS_1 = 1;
     
 
     /**
@@ -345,6 +346,18 @@ class StatisticsAPI implements ModelInterface, ArrayAccess
             self::CYCLE_MINUTE,
             self::CYCLE_HOUR,
             self::CYCLE_DAY,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_1,
         ];
     }
 
@@ -399,6 +412,14 @@ class StatisticsAPI implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['cycle']) && !in_array($this->container['cycle'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'cycle', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -899,7 +920,7 @@ class StatisticsAPI implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态
+    *  状态。 - 1：有效
     *
     * @return int|null
     */
@@ -911,7 +932,7 @@ class StatisticsAPI implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 状态
+    * @param int|null $status 状态。 - 1：有效
     *
     * @return $this
     */

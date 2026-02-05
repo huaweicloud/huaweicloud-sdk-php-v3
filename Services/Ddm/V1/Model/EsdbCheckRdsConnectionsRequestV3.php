@@ -20,25 +20,21 @@ class EsdbCheckRdsConnectionsRequestV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  **参数解释**：  实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。  **默认取值**：  不涉及。
-    * infos  **参数解释**：  rds连通性检查相关信息的集合。  **参数范围**：  不涉及。
+    * infos  **参数解释**：  rds连通性检查相关信息的集合。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instanceId' => 'string',
             'infos' => '\HuaweiCloud\SDK\Ddm\V1\Model\EsdbCheckRdsConnectionRequestV3[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  **参数解释**：  实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。  **默认取值**：  不涉及。
-    * infos  **参数解释**：  rds连通性检查相关信息的集合。  **参数范围**：  不涉及。
+    * infos  **参数解释**：  rds连通性检查相关信息的集合。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instanceId' => null,
         'infos' => null
     ];
 
@@ -65,37 +61,31 @@ class EsdbCheckRdsConnectionsRequestV3 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  **参数解释**：  实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。  **默认取值**：  不涉及。
-    * infos  **参数解释**：  rds连通性检查相关信息的集合。  **参数范围**：  不涉及。
+    * infos  **参数解释**：  rds连通性检查相关信息的集合。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instanceId' => 'instance_id',
             'infos' => 'infos'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  **参数解释**：  实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。  **默认取值**：  不涉及。
-    * infos  **参数解释**：  rds连通性检查相关信息的集合。  **参数范围**：  不涉及。
+    * infos  **参数解释**：  rds连通性检查相关信息的集合。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'instanceId' => 'setInstanceId',
             'infos' => 'setInfos'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  **参数解释**：  实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。  **默认取值**：  不涉及。
-    * infos  **参数解释**：  rds连通性检查相关信息的集合。  **参数范围**：  不涉及。
+    * infos  **参数解释**：  rds连通性检查相关信息的集合。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'instanceId' => 'getInstanceId',
             'infos' => 'getInfos'
     ];
 
@@ -157,7 +147,6 @@ class EsdbCheckRdsConnectionsRequestV3 implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['infos'] = isset($data['infos']) ? $data['infos'] : null;
     }
 
@@ -169,12 +158,9 @@ class EsdbCheckRdsConnectionsRequestV3 implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 32.";
-            }
+        if ($this->container['infos'] === null) {
+            $invalidProperties[] = "'infos' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -190,34 +176,10 @@ class EsdbCheckRdsConnectionsRequestV3 implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets instanceId
-    *  **参数解释**：  实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。  **默认取值**：  不涉及。
-    *
-    * @return string|null
-    */
-    public function getInstanceId()
-    {
-        return $this->container['instanceId'];
-    }
-
-    /**
-    * Sets instanceId
-    *
-    * @param string|null $instanceId **参数解释**：  实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。  **默认取值**：  不涉及。
-    *
-    * @return $this
-    */
-    public function setInstanceId($instanceId)
-    {
-        $this->container['instanceId'] = $instanceId;
-        return $this;
-    }
-
-    /**
     * Gets infos
-    *  **参数解释**：  rds连通性检查相关信息的集合。  **参数范围**：  不涉及。
+    *  **参数解释**：  rds连通性检查相关信息的集合。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
-    * @return \HuaweiCloud\SDK\Ddm\V1\Model\EsdbCheckRdsConnectionRequestV3[]|null
+    * @return \HuaweiCloud\SDK\Ddm\V1\Model\EsdbCheckRdsConnectionRequestV3[]
     */
     public function getInfos()
     {
@@ -227,7 +189,7 @@ class EsdbCheckRdsConnectionsRequestV3 implements ModelInterface, ArrayAccess
     /**
     * Sets infos
     *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\EsdbCheckRdsConnectionRequestV3[]|null $infos **参数解释**：  rds连通性检查相关信息的集合。  **参数范围**：  不涉及。
+    * @param \HuaweiCloud\SDK\Ddm\V1\Model\EsdbCheckRdsConnectionRequestV3[] $infos **参数解释**：  rds连通性检查相关信息的集合。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return $this
     */

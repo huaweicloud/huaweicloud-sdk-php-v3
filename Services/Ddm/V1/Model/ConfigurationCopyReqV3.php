@@ -20,26 +20,26 @@ class ConfigurationCopyReqV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * copyPara  copyPara
-    * sourceId  **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * newName  **参数解释**：  新参数组的名称。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * description  **参数解释**：  描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'copyPara' => '\HuaweiCloud\SDK\Ddm\V1\Model\ParaGroupCopy',
-            'sourceId' => 'string'
+            'newName' => 'string',
+            'description' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * copyPara  copyPara
-    * sourceId  **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * newName  **参数解释**：  新参数组的名称。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * description  **参数解释**：  描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'copyPara' => null,
-        'sourceId' => null
+        'newName' => null,
+        'description' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class ConfigurationCopyReqV3 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * copyPara  copyPara
-    * sourceId  **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * newName  **参数解释**：  新参数组的名称。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * description  **参数解释**：  描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'copyPara' => 'copy_para',
-            'sourceId' => 'source_id'
+            'newName' => 'new_name',
+            'description' => 'description'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * copyPara  copyPara
-    * sourceId  **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * newName  **参数解释**：  新参数组的名称。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * description  **参数解释**：  描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'copyPara' => 'setCopyPara',
-            'sourceId' => 'setSourceId'
+            'newName' => 'setNewName',
+            'description' => 'setDescription'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * copyPara  copyPara
-    * sourceId  **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * newName  **参数解释**：  新参数组的名称。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * description  **参数解释**：  描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'copyPara' => 'getCopyPara',
-            'sourceId' => 'getSourceId'
+            'newName' => 'getNewName',
+            'description' => 'getDescription'
     ];
 
     /**
@@ -157,8 +157,8 @@ class ConfigurationCopyReqV3 implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['copyPara'] = isset($data['copyPara']) ? $data['copyPara'] : null;
-        $this->container['sourceId'] = isset($data['sourceId']) ? $data['sourceId'] : null;
+        $this->container['newName'] = isset($data['newName']) ? $data['newName'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -169,11 +169,20 @@ class ConfigurationCopyReqV3 implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['sourceId']) && (mb_strlen($this->container['sourceId']) > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'sourceId', the character length must be smaller than or equal to 2147483647.";
+        if ($this->container['newName'] === null) {
+            $invalidProperties[] = "'newName' can't be null";
+        }
+            if ((mb_strlen($this->container['newName']) > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'newName', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['sourceId']) && (mb_strlen($this->container['sourceId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'sourceId', the character length must be bigger than or equal to 1.";
+            if ((mb_strlen($this->container['newName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'newName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 1)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -190,50 +199,50 @@ class ConfigurationCopyReqV3 implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets copyPara
-    *  copyPara
+    * Gets newName
+    *  **参数解释**：  新参数组的名称。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
-    * @return \HuaweiCloud\SDK\Ddm\V1\Model\ParaGroupCopy|null
+    * @return string
     */
-    public function getCopyPara()
+    public function getNewName()
     {
-        return $this->container['copyPara'];
+        return $this->container['newName'];
     }
 
     /**
-    * Sets copyPara
+    * Sets newName
     *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\ParaGroupCopy|null $copyPara copyPara
+    * @param string $newName **参数解释**：  新参数组的名称。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return $this
     */
-    public function setCopyPara($copyPara)
+    public function setNewName($newName)
     {
-        $this->container['copyPara'] = $copyPara;
+        $this->container['newName'] = $newName;
         return $this;
     }
 
     /**
-    * Gets sourceId
-    *  **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * Gets description
+    *  **参数解释**：  描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return string|null
     */
-    public function getSourceId()
+    public function getDescription()
     {
-        return $this->container['sourceId'];
+        return $this->container['description'];
     }
 
     /**
-    * Sets sourceId
+    * Sets description
     *
-    * @param string|null $sourceId **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * @param string|null $description **参数解释**：  描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return $this
     */
-    public function setSourceId($sourceId)
+    public function setDescription($description)
     {
-        $this->container['sourceId'] = $sourceId;
+        $this->container['description'] = $description;
         return $this;
     }
 

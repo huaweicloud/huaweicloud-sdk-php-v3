@@ -20,22 +20,26 @@ class ConfigurationDiffReqV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * diffPara  diffPara
+    * sourceId  **参数解释**：  源参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * targetId  **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'diffPara' => '\HuaweiCloud\SDK\Ddm\V1\Model\ParaGroupDiff'
+            'sourceId' => 'string',
+            'targetId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * diffPara  diffPara
+    * sourceId  **参数解释**：  源参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * targetId  **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'diffPara' => null
+        'sourceId' => null,
+        'targetId' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class ConfigurationDiffReqV3 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * diffPara  diffPara
+    * sourceId  **参数解释**：  源参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * targetId  **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'diffPara' => 'diff_para'
+            'sourceId' => 'source_id',
+            'targetId' => 'target_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * diffPara  diffPara
+    * sourceId  **参数解释**：  源参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * targetId  **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'diffPara' => 'setDiffPara'
+            'sourceId' => 'setSourceId',
+            'targetId' => 'setTargetId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * diffPara  diffPara
+    * sourceId  **参数解释**：  源参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * targetId  **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'diffPara' => 'getDiffPara'
+            'sourceId' => 'getSourceId',
+            'targetId' => 'getTargetId'
     ];
 
     /**
@@ -147,7 +157,8 @@ class ConfigurationDiffReqV3 implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['diffPara'] = isset($data['diffPara']) ? $data['diffPara'] : null;
+        $this->container['sourceId'] = isset($data['sourceId']) ? $data['sourceId'] : null;
+        $this->container['targetId'] = isset($data['targetId']) ? $data['targetId'] : null;
     }
 
     /**
@@ -158,6 +169,24 @@ class ConfigurationDiffReqV3 implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['sourceId'] === null) {
+            $invalidProperties[] = "'sourceId' can't be null";
+        }
+            if ((mb_strlen($this->container['sourceId']) > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'sourceId', the character length must be smaller than or equal to 2147483647.";
+            }
+            if ((mb_strlen($this->container['sourceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'sourceId', the character length must be bigger than or equal to 1.";
+            }
+        if ($this->container['targetId'] === null) {
+            $invalidProperties[] = "'targetId' can't be null";
+        }
+            if ((mb_strlen($this->container['targetId']) > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'targetId', the character length must be smaller than or equal to 2147483647.";
+            }
+            if ((mb_strlen($this->container['targetId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'targetId', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -173,26 +202,50 @@ class ConfigurationDiffReqV3 implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets diffPara
-    *  diffPara
+    * Gets sourceId
+    *  **参数解释**：  源参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
     *
-    * @return \HuaweiCloud\SDK\Ddm\V1\Model\ParaGroupDiff|null
+    * @return string
     */
-    public function getDiffPara()
+    public function getSourceId()
     {
-        return $this->container['diffPara'];
+        return $this->container['sourceId'];
     }
 
     /**
-    * Sets diffPara
+    * Sets sourceId
     *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\ParaGroupDiff|null $diffPara diffPara
+    * @param string $sourceId **参数解释**：  源参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
     *
     * @return $this
     */
-    public function setDiffPara($diffPara)
+    public function setSourceId($sourceId)
     {
-        $this->container['diffPara'] = $diffPara;
+        $this->container['sourceId'] = $sourceId;
+        return $this;
+    }
+
+    /**
+    * Gets targetId
+    *  **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    *
+    * @return string
+    */
+    public function getTargetId()
+    {
+        return $this->container['targetId'];
+    }
+
+    /**
+    * Sets targetId
+    *
+    * @param string $targetId **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    *
+    * @return $this
+    */
+    public function setTargetId($targetId)
+    {
+        $this->container['targetId'] = $targetId;
         return $this;
     }
 

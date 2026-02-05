@@ -20,7 +20,7 @@ class CbcOperationLock implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * lockScene  限制操作场景： - TO_PERIOD_LOCK：按需转包周期场景锁，不允许进行删除、规格变更、按需转包周期等 - SPEC_CHG_LOCK：包周期规格变更场景锁，不允许进行删除、规格变更等
+    * lockScene  限制操作场景： - TO_PERIOD_LOCK：[按需转包周期场景锁，不允许进行删除、规格变更、按需转包周期等](tag:hws,ctc)[暂不支持](tag:hws_hk,cmcc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,srg,ax) - SPEC_CHG_LOCK：[包周期规格变更场景锁，不允许进行删除、规格变更等](tag:hws,ctc)[暂不支持](tag:hws_hk,cmcc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,srg,ax)
     * lockSourceId  发起限制操作对象的标志
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CbcOperationLock implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * lockScene  限制操作场景： - TO_PERIOD_LOCK：按需转包周期场景锁，不允许进行删除、规格变更、按需转包周期等 - SPEC_CHG_LOCK：包周期规格变更场景锁，不允许进行删除、规格变更等
+    * lockScene  限制操作场景： - TO_PERIOD_LOCK：[按需转包周期场景锁，不允许进行删除、规格变更、按需转包周期等](tag:hws,ctc)[暂不支持](tag:hws_hk,cmcc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,srg,ax) - SPEC_CHG_LOCK：[包周期规格变更场景锁，不允许进行删除、规格变更等](tag:hws,ctc)[暂不支持](tag:hws_hk,cmcc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,srg,ax)
     * lockSourceId  发起限制操作对象的标志
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CbcOperationLock implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * lockScene  限制操作场景： - TO_PERIOD_LOCK：按需转包周期场景锁，不允许进行删除、规格变更、按需转包周期等 - SPEC_CHG_LOCK：包周期规格变更场景锁，不允许进行删除、规格变更等
+    * lockScene  限制操作场景： - TO_PERIOD_LOCK：[按需转包周期场景锁，不允许进行删除、规格变更、按需转包周期等](tag:hws,ctc)[暂不支持](tag:hws_hk,cmcc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,srg,ax) - SPEC_CHG_LOCK：[包周期规格变更场景锁，不允许进行删除、规格变更等](tag:hws,ctc)[暂不支持](tag:hws_hk,cmcc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,srg,ax)
     * lockSourceId  发起限制操作对象的标志
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CbcOperationLock implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * lockScene  限制操作场景： - TO_PERIOD_LOCK：按需转包周期场景锁，不允许进行删除、规格变更、按需转包周期等 - SPEC_CHG_LOCK：包周期规格变更场景锁，不允许进行删除、规格变更等
+    * lockScene  限制操作场景： - TO_PERIOD_LOCK：[按需转包周期场景锁，不允许进行删除、规格变更、按需转包周期等](tag:hws,ctc)[暂不支持](tag:hws_hk,cmcc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,srg,ax) - SPEC_CHG_LOCK：[包周期规格变更场景锁，不允许进行删除、规格变更等](tag:hws,ctc)[暂不支持](tag:hws_hk,cmcc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,srg,ax)
     * lockSourceId  发起限制操作对象的标志
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CbcOperationLock implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * lockScene  限制操作场景： - TO_PERIOD_LOCK：按需转包周期场景锁，不允许进行删除、规格变更、按需转包周期等 - SPEC_CHG_LOCK：包周期规格变更场景锁，不允许进行删除、规格变更等
+    * lockScene  限制操作场景： - TO_PERIOD_LOCK：[按需转包周期场景锁，不允许进行删除、规格变更、按需转包周期等](tag:hws,ctc)[暂不支持](tag:hws_hk,cmcc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,srg,ax) - SPEC_CHG_LOCK：[包周期规格变更场景锁，不允许进行删除、规格变更等](tag:hws,ctc)[暂不支持](tag:hws_hk,cmcc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,srg,ax)
     * lockSourceId  发起限制操作对象的标志
     *
     * @var string[]
@@ -208,7 +208,7 @@ class CbcOperationLock implements ModelInterface, ArrayAccess
 
     /**
     * Gets lockScene
-    *  限制操作场景： - TO_PERIOD_LOCK：按需转包周期场景锁，不允许进行删除、规格变更、按需转包周期等 - SPEC_CHG_LOCK：包周期规格变更场景锁，不允许进行删除、规格变更等
+    *  限制操作场景： - TO_PERIOD_LOCK：[按需转包周期场景锁，不允许进行删除、规格变更、按需转包周期等](tag:hws,ctc)[暂不支持](tag:hws_hk,cmcc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,srg,ax) - SPEC_CHG_LOCK：[包周期规格变更场景锁，不允许进行删除、规格变更等](tag:hws,ctc)[暂不支持](tag:hws_hk,cmcc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,srg,ax)
     *
     * @return string|null
     */
@@ -220,7 +220,7 @@ class CbcOperationLock implements ModelInterface, ArrayAccess
     /**
     * Sets lockScene
     *
-    * @param string|null $lockScene 限制操作场景： - TO_PERIOD_LOCK：按需转包周期场景锁，不允许进行删除、规格变更、按需转包周期等 - SPEC_CHG_LOCK：包周期规格变更场景锁，不允许进行删除、规格变更等
+    * @param string|null $lockScene 限制操作场景： - TO_PERIOD_LOCK：[按需转包周期场景锁，不允许进行删除、规格变更、按需转包周期等](tag:hws,ctc)[暂不支持](tag:hws_hk,cmcc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,srg,ax) - SPEC_CHG_LOCK：[包周期规格变更场景锁，不允许进行删除、规格变更等](tag:hws,ctc)[暂不支持](tag:hws_hk,cmcc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,srg,ax)
     *
     * @return $this
     */

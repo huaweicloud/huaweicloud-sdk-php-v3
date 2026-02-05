@@ -24,7 +24,7 @@ class ListAppQuotaBoundAppsRequest implements ModelInterface, ArrayAccess
     * appQuotaId  凭据配额编号
     * offset  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
-    * appName  凭据名称
+    * appName  APP凭据名称。
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class ListAppQuotaBoundAppsRequest implements ModelInterface, ArrayAccess
     * appQuotaId  凭据配额编号
     * offset  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
-    * appName  凭据名称
+    * appName  APP凭据名称。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListAppQuotaBoundAppsRequest implements ModelInterface, ArrayAccess
     * appQuotaId  凭据配额编号
     * offset  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
-    * appName  凭据名称
+    * appName  APP凭据名称。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ListAppQuotaBoundAppsRequest implements ModelInterface, ArrayAccess
     * appQuotaId  凭据配额编号
     * offset  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
-    * appName  凭据名称
+    * appName  APP凭据名称。
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class ListAppQuotaBoundAppsRequest implements ModelInterface, ArrayAccess
     * appQuotaId  凭据配额编号
     * offset  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
-    * appName  凭据名称
+    * appName  APP凭据名称。
     *
     * @var string[]
     */
@@ -326,7 +326,7 @@ class ListAppQuotaBoundAppsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets appName
-    *  凭据名称
+    *  APP凭据名称。
     *
     * @return string|null
     */
@@ -338,7 +338,7 @@ class ListAppQuotaBoundAppsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets appName
     *
-    * @param string|null $appName 凭据名称
+    * @param string|null $appName APP凭据名称。
     *
     * @return $this
     */

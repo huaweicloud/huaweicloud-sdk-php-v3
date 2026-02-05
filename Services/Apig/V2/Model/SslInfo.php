@@ -23,7 +23,8 @@ class SslInfo implements ModelInterface, ArrayAccess
     * sslId  SSL证书编号。
     * sslName  SSL证书名称。
     * algorithmType  证书算法类型： - RSA - ECC - SM2
-    * type  证书可见范围： - instance：当前实例 - global：全局
+    * type  证书可见范围： - 1: 当前实例 - 2: 全局
+    * isHasTrustedRootCa  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class SslInfo implements ModelInterface, ArrayAccess
             'sslId' => 'string',
             'sslName' => 'string',
             'algorithmType' => 'string',
-            'type' => 'string'
+            'type' => 'int',
+            'isHasTrustedRootCa' => 'bool'
     ];
 
     /**
@@ -39,7 +41,8 @@ class SslInfo implements ModelInterface, ArrayAccess
     * sslId  SSL证书编号。
     * sslName  SSL证书名称。
     * algorithmType  证书算法类型： - RSA - ECC - SM2
-    * type  证书可见范围： - instance：当前实例 - global：全局
+    * type  证书可见范围： - 1: 当前实例 - 2: 全局
+    * isHasTrustedRootCa  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class SslInfo implements ModelInterface, ArrayAccess
         'sslId' => null,
         'sslName' => null,
         'algorithmType' => null,
-        'type' => null
+        'type' => null,
+        'isHasTrustedRootCa' => null
     ];
 
     /**
@@ -76,7 +80,8 @@ class SslInfo implements ModelInterface, ArrayAccess
     * sslId  SSL证书编号。
     * sslName  SSL证书名称。
     * algorithmType  证书算法类型： - RSA - ECC - SM2
-    * type  证书可见范围： - instance：当前实例 - global：全局
+    * type  证书可见范围： - 1: 当前实例 - 2: 全局
+    * isHasTrustedRootCa  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class SslInfo implements ModelInterface, ArrayAccess
             'sslId' => 'ssl_id',
             'sslName' => 'ssl_name',
             'algorithmType' => 'algorithm_type',
-            'type' => 'type'
+            'type' => 'type',
+            'isHasTrustedRootCa' => 'is_has_trusted_root_ca'
     ];
 
     /**
@@ -92,7 +98,8 @@ class SslInfo implements ModelInterface, ArrayAccess
     * sslId  SSL证书编号。
     * sslName  SSL证书名称。
     * algorithmType  证书算法类型： - RSA - ECC - SM2
-    * type  证书可见范围： - instance：当前实例 - global：全局
+    * type  证书可见范围： - 1: 当前实例 - 2: 全局
+    * isHasTrustedRootCa  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class SslInfo implements ModelInterface, ArrayAccess
             'sslId' => 'setSslId',
             'sslName' => 'setSslName',
             'algorithmType' => 'setAlgorithmType',
-            'type' => 'setType'
+            'type' => 'setType',
+            'isHasTrustedRootCa' => 'setIsHasTrustedRootCa'
     ];
 
     /**
@@ -108,7 +116,8 @@ class SslInfo implements ModelInterface, ArrayAccess
     * sslId  SSL证书编号。
     * sslName  SSL证书名称。
     * algorithmType  证书算法类型： - RSA - ECC - SM2
-    * type  证书可见范围： - instance：当前实例 - global：全局
+    * type  证书可见范围： - 1: 当前实例 - 2: 全局
+    * isHasTrustedRootCa  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class SslInfo implements ModelInterface, ArrayAccess
             'sslId' => 'getSslId',
             'sslName' => 'getSslName',
             'algorithmType' => 'getAlgorithmType',
-            'type' => 'getType'
+            'type' => 'getType',
+            'isHasTrustedRootCa' => 'getIsHasTrustedRootCa'
     ];
 
     /**
@@ -162,8 +172,6 @@ class SslInfo implements ModelInterface, ArrayAccess
     const ALGORITHM_TYPE_RSA = 'RSA';
     const ALGORITHM_TYPE_ECC = 'ECC';
     const ALGORITHM_TYPE_SM2 = 'SM2';
-    const TYPE_INSTANCE = 'instance';
-    const TYPE__GLOBAL = 'global';
     
 
     /**
@@ -177,19 +185,6 @@ class SslInfo implements ModelInterface, ArrayAccess
             self::ALGORITHM_TYPE_RSA,
             self::ALGORITHM_TYPE_ECC,
             self::ALGORITHM_TYPE_SM2,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_INSTANCE,
-            self::TYPE__GLOBAL,
         ];
     }
 
@@ -213,6 +208,7 @@ class SslInfo implements ModelInterface, ArrayAccess
         $this->container['sslName'] = isset($data['sslName']) ? $data['sslName'] : null;
         $this->container['algorithmType'] = isset($data['algorithmType']) ? $data['algorithmType'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['isHasTrustedRootCa'] = isset($data['isHasTrustedRootCa']) ? $data['isHasTrustedRootCa'] : null;
     }
 
     /**
@@ -227,14 +223,6 @@ class SslInfo implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['algorithmType']) && !in_array($this->container['algorithmType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'algorithmType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            $allowedValues = $this->getTypeAllowableValues();
-                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -327,9 +315,9 @@ class SslInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  证书可见范围： - instance：当前实例 - global：全局
+    *  证书可见范围： - 1: 当前实例 - 2: 全局
     *
-    * @return string|null
+    * @return int|null
     */
     public function getType()
     {
@@ -339,13 +327,37 @@ class SslInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 证书可见范围： - instance：当前实例 - global：全局
+    * @param int|null $type 证书可见范围： - 1: 当前实例 - 2: 全局
     *
     * @return $this
     */
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets isHasTrustedRootCa
+    *  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+    *
+    * @return bool|null
+    */
+    public function getIsHasTrustedRootCa()
+    {
+        return $this->container['isHasTrustedRootCa'];
+    }
+
+    /**
+    * Sets isHasTrustedRootCa
+    *
+    * @param bool|null $isHasTrustedRootCa 是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+    *
+    * @return $this
+    */
+    public function setIsHasTrustedRootCa($isHasTrustedRootCa)
+    {
+        $this->container['isHasTrustedRootCa'] = $isHasTrustedRootCa;
         return $this;
     }
 

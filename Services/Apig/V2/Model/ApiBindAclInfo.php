@@ -22,8 +22,8 @@ class ApiBindAclInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * aclId  ACL策略编号
     * aclName  ACL策略名称
-    * entityType  ACL策略作用的对象类型
-    * aclType  ACL策略类型 - PERMIT：白名单类型 - DENY：黑名单类型
+    * entityType  ACL策略作用的对象类型。 - IP：IP地址 - DOMAIN：账号名 - DOMAIN_ID：账号ID
+    * aclType  ACL策略类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     * aclValue  ACL策略值
     * envId  生效的环境编号
     * envName  生效的环境名称
@@ -48,8 +48,8 @@ class ApiBindAclInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * aclId  ACL策略编号
     * aclName  ACL策略名称
-    * entityType  ACL策略作用的对象类型
-    * aclType  ACL策略类型 - PERMIT：白名单类型 - DENY：黑名单类型
+    * entityType  ACL策略作用的对象类型。 - IP：IP地址 - DOMAIN：账号名 - DOMAIN_ID：账号ID
+    * aclType  ACL策略类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     * aclValue  ACL策略值
     * envId  生效的环境编号
     * envName  生效的环境名称
@@ -95,8 +95,8 @@ class ApiBindAclInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * aclId  ACL策略编号
     * aclName  ACL策略名称
-    * entityType  ACL策略作用的对象类型
-    * aclType  ACL策略类型 - PERMIT：白名单类型 - DENY：黑名单类型
+    * entityType  ACL策略作用的对象类型。 - IP：IP地址 - DOMAIN：账号名 - DOMAIN_ID：账号ID
+    * aclType  ACL策略类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     * aclValue  ACL策略值
     * envId  生效的环境编号
     * envName  生效的环境名称
@@ -121,8 +121,8 @@ class ApiBindAclInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * aclId  ACL策略编号
     * aclName  ACL策略名称
-    * entityType  ACL策略作用的对象类型
-    * aclType  ACL策略类型 - PERMIT：白名单类型 - DENY：黑名单类型
+    * entityType  ACL策略作用的对象类型。 - IP：IP地址 - DOMAIN：账号名 - DOMAIN_ID：账号ID
+    * aclType  ACL策略类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     * aclValue  ACL策略值
     * envId  生效的环境编号
     * envName  生效的环境名称
@@ -147,8 +147,8 @@ class ApiBindAclInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * aclId  ACL策略编号
     * aclName  ACL策略名称
-    * entityType  ACL策略作用的对象类型
-    * aclType  ACL策略类型 - PERMIT：白名单类型 - DENY：黑名单类型
+    * entityType  ACL策略作用的对象类型。 - IP：IP地址 - DOMAIN：账号名 - DOMAIN_ID：账号ID
+    * aclType  ACL策略类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     * aclValue  ACL策略值
     * envId  生效的环境编号
     * envName  生效的环境名称
@@ -358,7 +358,7 @@ class ApiBindAclInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets entityType
-    *  ACL策略作用的对象类型
+    *  ACL策略作用的对象类型。 - IP：IP地址 - DOMAIN：账号名 - DOMAIN_ID：账号ID
     *
     * @return string|null
     */
@@ -370,7 +370,7 @@ class ApiBindAclInfo implements ModelInterface, ArrayAccess
     /**
     * Sets entityType
     *
-    * @param string|null $entityType ACL策略作用的对象类型
+    * @param string|null $entityType ACL策略作用的对象类型。 - IP：IP地址 - DOMAIN：账号名 - DOMAIN_ID：账号ID
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class ApiBindAclInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets aclType
-    *  ACL策略类型 - PERMIT：白名单类型 - DENY：黑名单类型
+    *  ACL策略类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     *
     * @return string|null
     */
@@ -394,7 +394,7 @@ class ApiBindAclInfo implements ModelInterface, ArrayAccess
     /**
     * Sets aclType
     *
-    * @param string|null $aclType ACL策略类型 - PERMIT：白名单类型 - DENY：黑名单类型
+    * @param string|null $aclType ACL策略类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     *
     * @return $this
     */

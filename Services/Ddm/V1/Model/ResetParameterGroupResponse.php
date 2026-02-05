@@ -21,20 +21,22 @@ class ResetParameterGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * needRestart  **参数解释**：  是否需要重启。  **参数范围**：  false、true。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'needRestart' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * needRestart  **参数解释**：  是否需要重启。  **参数范围**：  false、true。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'needRestart' => null
     ];
 
     /**
@@ -60,29 +62,32 @@ class ResetParameterGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * needRestart  **参数解释**：  是否需要重启。  **参数范围**：  false、true。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'needRestart' => 'need_restart'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * needRestart  **参数解释**：  是否需要重启。  **参数范围**：  false、true。
     *
     * @var string[]
     */
     protected static $setters = [
+            'needRestart' => 'setNeedRestart'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * needRestart  **参数解释**：  是否需要重启。  **参数范围**：  false、true。
     *
     * @var string[]
     */
     protected static $getters = [
+            'needRestart' => 'getNeedRestart'
     ];
 
     /**
@@ -143,6 +148,7 @@ class ResetParameterGroupResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['needRestart'] = isset($data['needRestart']) ? $data['needRestart'] : null;
     }
 
     /**
@@ -165,6 +171,30 @@ class ResetParameterGroupResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets needRestart
+    *  **参数解释**：  是否需要重启。  **参数范围**：  false、true。
+    *
+    * @return bool|null
+    */
+    public function getNeedRestart()
+    {
+        return $this->container['needRestart'];
+    }
+
+    /**
+    * Sets needRestart
+    *
+    * @param bool|null $needRestart **参数解释**：  是否需要重启。  **参数范围**：  false、true。
+    *
+    * @return $this
+    */
+    public function setNeedRestart($needRestart)
+    {
+        $this->container['needRestart'] = $needRestart;
+        return $this;
     }
 
     /**

@@ -22,7 +22,7 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * apiId  API编号
     * apiName  API名称
-    * apiType  API类型
+    * apiType  API类型。 - 1：公有API - 2：私有API
     * apiRemark  API的描述信息
     * envId  生效的环境编号
     * envName  生效的环境名称
@@ -54,7 +54,7 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * apiId  API编号
     * apiName  API名称
-    * apiType  API类型
+    * apiType  API类型。 - 1：公有API - 2：私有API
     * apiRemark  API的描述信息
     * envId  生效的环境编号
     * envName  生效的环境名称
@@ -70,7 +70,7 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'apiId' => null,
         'apiName' => null,
-        'apiType' => 'int64',
+        'apiType' => 'int32',
         'apiRemark' => null,
         'envId' => null,
         'envName' => null,
@@ -107,7 +107,7 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * apiId  API编号
     * apiName  API名称
-    * apiType  API类型
+    * apiType  API类型。 - 1：公有API - 2：私有API
     * apiRemark  API的描述信息
     * envId  生效的环境编号
     * envName  生效的环境名称
@@ -139,7 +139,7 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * apiId  API编号
     * apiName  API名称
-    * apiType  API类型
+    * apiType  API类型。 - 1：公有API - 2：私有API
     * apiRemark  API的描述信息
     * envId  生效的环境编号
     * envName  生效的环境名称
@@ -171,7 +171,7 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * apiId  API编号
     * apiName  API名称
-    * apiType  API类型
+    * apiType  API类型。 - 1：公有API - 2：私有API
     * apiRemark  API的描述信息
     * envId  生效的环境编号
     * envName  生效的环境名称
@@ -239,6 +239,8 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const API_TYPE_1 = 1;
+    const API_TYPE_2 = 2;
     const REQ_METHOD_GET = 'GET';
     const REQ_METHOD_POST = 'POST';
     const REQ_METHOD_DELETE = 'DELETE';
@@ -248,6 +250,19 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
     const REQ_METHOD_OPTIONS = 'OPTIONS';
     const REQ_METHOD_ANY = 'ANY';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getApiTypeAllowableValues()
+    {
+        return [
+            self::API_TYPE_1,
+            self::API_TYPE_2,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -306,6 +321,14 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getApiTypeAllowableValues();
+                if (!is_null($this->container['apiType']) && !in_array($this->container['apiType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'apiType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             $allowedValues = $this->getReqMethodAllowableValues();
                 if (!is_null($this->container['reqMethod']) && !in_array($this->container['reqMethod'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -378,7 +401,7 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiType
-    *  API类型
+    *  API类型。 - 1：公有API - 2：私有API
     *
     * @return int|null
     */
@@ -390,7 +413,7 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
     /**
     * Sets apiType
     *
-    * @param int|null $apiType API类型
+    * @param int|null $apiType API类型。 - 1：公有API - 2：私有API
     *
     * @return $this
     */

@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ddm\V1\Model;
+namespace HuaweiCloud\SDK\Sis\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CheckDataNodeConnectionV0V3Request implements ModelInterface, ArrayAccess
+class VoiceListResult implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,26 @@ class CheckDataNodeConnectionV0V3Request implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CheckDataNodeConnectionV0V3Request';
+    protected static $openAPIModelName = 'VoiceList_result';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * voices  声色列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Ddm\V1\Model\EsdbCheckRdsConnectionsRequestV3'
+            'voices' => '\HuaweiCloud\SDK\Sis\V1\Model\VoiceListResultVoices[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * voices  声色列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'voices' => null
     ];
 
     /**
@@ -61,32 +61,32 @@ class CheckDataNodeConnectionV0V3Request implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * voices  声色列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'voices' => 'voices'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * voices  声色列表
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'voices' => 'setVoices'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * voices  声色列表
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'voices' => 'getVoices'
     ];
 
     /**
@@ -147,7 +147,7 @@ class CheckDataNodeConnectionV0V3Request implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['voices'] = isset($data['voices']) ? $data['voices'] : null;
     }
 
     /**
@@ -173,26 +173,26 @@ class CheckDataNodeConnectionV0V3Request implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets voices
+    *  声色列表
     *
-    * @return \HuaweiCloud\SDK\Ddm\V1\Model\EsdbCheckRdsConnectionsRequestV3|null
+    * @return \HuaweiCloud\SDK\Sis\V1\Model\VoiceListResultVoices[]|null
     */
-    public function getBody()
+    public function getVoices()
     {
-        return $this->container['body'];
+        return $this->container['voices'];
     }
 
     /**
-    * Sets body
+    * Sets voices
     *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\EsdbCheckRdsConnectionsRequestV3|null $body body
+    * @param \HuaweiCloud\SDK\Sis\V1\Model\VoiceListResultVoices[]|null $voices 声色列表
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setVoices($voices)
     {
-        $this->container['body'] = $body;
+        $this->container['voices'] = $voices;
         return $this;
     }
 

@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ddm\V1\Model;
+namespace HuaweiCloud\SDK\Sis\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CopyParameterGroupResponse implements ModelInterface, ArrayAccess
+class GenerateSpeechRequest implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,7 +16,7 @@ class CopyParameterGroupResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CopyParameterGroupResponse';
+    protected static $openAPIModelName = 'GenerateSpeechRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
@@ -26,7 +25,7 @@ class CopyParameterGroupResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'string'
+            'body' => '\HuaweiCloud\SDK\Sis\V1\Model\GenerateSpeechRequestBody'
     ];
 
     /**
@@ -177,7 +176,7 @@ class CopyParameterGroupResponse implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Sis\V1\Model\GenerateSpeechRequestBody|null
     */
     public function getBody()
     {
@@ -187,7 +186,7 @@ class CopyParameterGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param string|null $body body
+    * @param \HuaweiCloud\SDK\Sis\V1\Model\GenerateSpeechRequestBody|null $body body
     *
     * @return $this
     */

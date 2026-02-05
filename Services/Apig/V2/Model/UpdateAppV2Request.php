@@ -21,7 +21,7 @@ class UpdateAppV2Request implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID，在API网关控制台的“实例信息”中获取。
-    * appId  应用编号
+    * appId  凭据编号
     * body  body
     *
     * @var string[]
@@ -35,7 +35,7 @@ class UpdateAppV2Request implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID，在API网关控制台的“实例信息”中获取。
-    * appId  应用编号
+    * appId  凭据编号
     * body  body
     *
     * @var string[]
@@ -70,7 +70,7 @@ class UpdateAppV2Request implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID，在API网关控制台的“实例信息”中获取。
-    * appId  应用编号
+    * appId  凭据编号
     * body  body
     *
     * @var string[]
@@ -84,7 +84,7 @@ class UpdateAppV2Request implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID，在API网关控制台的“实例信息”中获取。
-    * appId  应用编号
+    * appId  凭据编号
     * body  body
     *
     * @var string[]
@@ -98,7 +98,7 @@ class UpdateAppV2Request implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID，在API网关控制台的“实例信息”中获取。
-    * appId  应用编号
+    * appId  凭据编号
     * body  body
     *
     * @var string[]
@@ -229,7 +229,7 @@ class UpdateAppV2Request implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
-    *  应用编号
+    *  凭据编号
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class UpdateAppV2Request implements ModelInterface, ArrayAccess
     /**
     * Sets appId
     *
-    * @param string $appId 应用编号
+    * @param string $appId 凭据编号
     *
     * @return $this
     */

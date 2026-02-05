@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ddm\V1\Model;
+namespace HuaweiCloud\SDK\Apig\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListParameterGroupApplyHistoryV0V3Request implements ModelInterface, ArrayAccess
+class ListAiApiKeysRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,33 +16,37 @@ class ListParameterGroupApplyHistoryV0V3Request implements ModelInterface, Array
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListParameterGroupApplyHistoryV0V3Request';
+    protected static $openAPIModelName = 'ListAiApiKeysRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * configId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
-    * offset  **参数解释**：  分页参数: 起始值。  **约束限制**：  不涉及。  **取值范围**：  大于等于0。  **默认取值**：  默认值是0。
-    * limit  **参数解释**：  分页参数: 每页记录数。  **约束限制**：  不涉及。  **取值范围**：  大于0且小于等于128。  **默认取值**：  默认值是10。
+    * instanceId  实例ID，在API网关控制台的“实例信息”中获取。
+    * appId  凭据编号
+    * offset  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
+    * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'configId' => 'string',
+            'instanceId' => 'string',
+            'appId' => 'string',
             'offset' => 'int',
             'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * configId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
-    * offset  **参数解释**：  分页参数: 起始值。  **约束限制**：  不涉及。  **取值范围**：  大于等于0。  **默认取值**：  默认值是0。
-    * limit  **参数解释**：  分页参数: 每页记录数。  **约束限制**：  不涉及。  **取值范围**：  大于0且小于等于128。  **默认取值**：  默认值是10。
+    * instanceId  实例ID，在API网关控制台的“实例信息”中获取。
+    * appId  凭据编号
+    * offset  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
+    * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'configId' => null,
-        'offset' => 'int32',
+        'instanceId' => null,
+        'appId' => null,
+        'offset' => 'int64',
         'limit' => 'int32'
     ];
 
@@ -69,42 +73,48 @@ class ListParameterGroupApplyHistoryV0V3Request implements ModelInterface, Array
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * configId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
-    * offset  **参数解释**：  分页参数: 起始值。  **约束限制**：  不涉及。  **取值范围**：  大于等于0。  **默认取值**：  默认值是0。
-    * limit  **参数解释**：  分页参数: 每页记录数。  **约束限制**：  不涉及。  **取值范围**：  大于0且小于等于128。  **默认取值**：  默认值是10。
+    * instanceId  实例ID，在API网关控制台的“实例信息”中获取。
+    * appId  凭据编号
+    * offset  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
+    * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'configId' => 'config_id',
+            'instanceId' => 'instance_id',
+            'appId' => 'app_id',
             'offset' => 'offset',
             'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * configId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
-    * offset  **参数解释**：  分页参数: 起始值。  **约束限制**：  不涉及。  **取值范围**：  大于等于0。  **默认取值**：  默认值是0。
-    * limit  **参数解释**：  分页参数: 每页记录数。  **约束限制**：  不涉及。  **取值范围**：  大于0且小于等于128。  **默认取值**：  默认值是10。
+    * instanceId  实例ID，在API网关控制台的“实例信息”中获取。
+    * appId  凭据编号
+    * offset  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
+    * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     *
     * @var string[]
     */
     protected static $setters = [
-            'configId' => 'setConfigId',
+            'instanceId' => 'setInstanceId',
+            'appId' => 'setAppId',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * configId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
-    * offset  **参数解释**：  分页参数: 起始值。  **约束限制**：  不涉及。  **取值范围**：  大于等于0。  **默认取值**：  默认值是0。
-    * limit  **参数解释**：  分页参数: 每页记录数。  **约束限制**：  不涉及。  **取值范围**：  大于0且小于等于128。  **默认取值**：  默认值是10。
+    * instanceId  实例ID，在API网关控制台的“实例信息”中获取。
+    * appId  凭据编号
+    * offset  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
+    * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     *
     * @var string[]
     */
     protected static $getters = [
-            'configId' => 'getConfigId',
+            'instanceId' => 'getInstanceId',
+            'appId' => 'getAppId',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
     ];
@@ -167,7 +177,8 @@ class ListParameterGroupApplyHistoryV0V3Request implements ModelInterface, Array
     */
     public function __construct(array $data = null)
     {
-        $this->container['configId'] = isset($data['configId']) ? $data['configId'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
@@ -180,23 +191,17 @@ class ListParameterGroupApplyHistoryV0V3Request implements ModelInterface, Array
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['configId'] === null) {
-            $invalidProperties[] = "'configId' can't be null";
+        if ($this->container['instanceId'] === null) {
+            $invalidProperties[] = "'instanceId' can't be null";
         }
-            if ((mb_strlen($this->container['configId']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'configId', the character length must be smaller than or equal to 1024.";
+        if ($this->container['appId'] === null) {
+            $invalidProperties[] = "'appId' can't be null";
+        }
+            if (!preg_match("/^[a-zA-Z0-9-_]{0,64}$/", $this->container['appId'])) {
+                $invalidProperties[] = "invalid value for 'appId', must be conform to the pattern /^[a-zA-Z0-9-_]{0,64}$/.";
             }
-            if ((mb_strlen($this->container['configId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'configId', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 128)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
-                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 128)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 128.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 500)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 500.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
@@ -216,32 +221,56 @@ class ListParameterGroupApplyHistoryV0V3Request implements ModelInterface, Array
     }
 
     /**
-    * Gets configId
-    *  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * Gets instanceId
+    *  实例ID，在API网关控制台的“实例信息”中获取。
     *
     * @return string
     */
-    public function getConfigId()
+    public function getInstanceId()
     {
-        return $this->container['configId'];
+        return $this->container['instanceId'];
     }
 
     /**
-    * Sets configId
+    * Sets instanceId
     *
-    * @param string $configId **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * @param string $instanceId 实例ID，在API网关控制台的“实例信息”中获取。
     *
     * @return $this
     */
-    public function setConfigId($configId)
+    public function setInstanceId($instanceId)
     {
-        $this->container['configId'] = $configId;
+        $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets appId
+    *  凭据编号
+    *
+    * @return string
+    */
+    public function getAppId()
+    {
+        return $this->container['appId'];
+    }
+
+    /**
+    * Sets appId
+    *
+    * @param string $appId 凭据编号
+    *
+    * @return $this
+    */
+    public function setAppId($appId)
+    {
+        $this->container['appId'] = $appId;
         return $this;
     }
 
     /**
     * Gets offset
-    *  **参数解释**：  分页参数: 起始值。  **约束限制**：  不涉及。  **取值范围**：  大于等于0。  **默认取值**：  默认值是0。
+    *  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
     *
     * @return int|null
     */
@@ -253,7 +282,7 @@ class ListParameterGroupApplyHistoryV0V3Request implements ModelInterface, Array
     /**
     * Sets offset
     *
-    * @param int|null $offset **参数解释**：  分页参数: 起始值。  **约束限制**：  不涉及。  **取值范围**：  大于等于0。  **默认取值**：  默认值是0。
+    * @param int|null $offset 偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
     *
     * @return $this
     */
@@ -265,7 +294,7 @@ class ListParameterGroupApplyHistoryV0V3Request implements ModelInterface, Array
 
     /**
     * Gets limit
-    *  **参数解释**：  分页参数: 每页记录数。  **约束限制**：  不涉及。  **取值范围**：  大于0且小于等于128。  **默认取值**：  默认值是10。
+    *  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     *
     * @return int|null
     */
@@ -277,7 +306,7 @@ class ListParameterGroupApplyHistoryV0V3Request implements ModelInterface, Array
     /**
     * Sets limit
     *
-    * @param int|null $limit **参数解释**：  分页参数: 每页记录数。  **约束限制**：  不涉及。  **取值范围**：  大于0且小于等于128。  **默认取值**：  默认值是10。
+    * @param int|null $limit 每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     *
     * @return $this
     */

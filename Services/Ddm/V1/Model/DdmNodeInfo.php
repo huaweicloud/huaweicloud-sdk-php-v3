@@ -20,12 +20,12 @@ class DdmNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  节点ID。
-    * status  状态。
-    * name  名称。
-    * azCode  可用区编码。
-    * actions  锁状态。
-    * subnetId  子网ID。
+    * id  **参数解释**：  节点ID。  **参数范围**：  不涉及。
+    * status  **参数解释**：  状态。  **参数范围**：  不涉及。
+    * name  **参数解释**：  名称。  **参数范围**：  不涉及。
+    * azCode  **参数解释**：  可用区编码。  **参数范围**：  不涉及。
+    * actions  **参数解释**：  锁状态。  **参数范围**：  不涉及。
+    * subnetId  **参数解释**：  子网ID。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class DdmNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  节点ID。
-    * status  状态。
-    * name  名称。
-    * azCode  可用区编码。
-    * actions  锁状态。
-    * subnetId  子网ID。
+    * id  **参数解释**：  节点ID。  **参数范围**：  不涉及。
+    * status  **参数解释**：  状态。  **参数范围**：  不涉及。
+    * name  **参数解释**：  名称。  **参数范围**：  不涉及。
+    * azCode  **参数解释**：  可用区编码。  **参数范围**：  不涉及。
+    * actions  **参数解释**：  锁状态。  **参数范围**：  不涉及。
+    * subnetId  **参数解释**：  子网ID。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class DdmNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  节点ID。
-    * status  状态。
-    * name  名称。
-    * azCode  可用区编码。
-    * actions  锁状态。
-    * subnetId  子网ID。
+    * id  **参数解释**：  节点ID。  **参数范围**：  不涉及。
+    * status  **参数解释**：  状态。  **参数范围**：  不涉及。
+    * name  **参数解释**：  名称。  **参数范围**：  不涉及。
+    * azCode  **参数解释**：  可用区编码。  **参数范围**：  不涉及。
+    * actions  **参数解释**：  锁状态。  **参数范围**：  不涉及。
+    * subnetId  **参数解释**：  子网ID。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class DdmNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  节点ID。
-    * status  状态。
-    * name  名称。
-    * azCode  可用区编码。
-    * actions  锁状态。
-    * subnetId  子网ID。
+    * id  **参数解释**：  节点ID。  **参数范围**：  不涉及。
+    * status  **参数解释**：  状态。  **参数范围**：  不涉及。
+    * name  **参数解释**：  名称。  **参数范围**：  不涉及。
+    * azCode  **参数解释**：  可用区编码。  **参数范围**：  不涉及。
+    * actions  **参数解释**：  锁状态。  **参数范围**：  不涉及。
+    * subnetId  **参数解释**：  子网ID。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class DdmNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  节点ID。
-    * status  状态。
-    * name  名称。
-    * azCode  可用区编码。
-    * actions  锁状态。
-    * subnetId  子网ID。
+    * id  **参数解释**：  节点ID。  **参数范围**：  不涉及。
+    * status  **参数解释**：  状态。  **参数范围**：  不涉及。
+    * name  **参数解释**：  名称。  **参数范围**：  不涉及。
+    * azCode  **参数解释**：  可用区编码。  **参数范围**：  不涉及。
+    * actions  **参数解释**：  锁状态。  **参数范围**：  不涉及。
+    * subnetId  **参数解释**：  子网ID。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -259,7 +259,7 @@ class DdmNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  节点ID。
+    *  **参数解释**：  节点ID。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -271,7 +271,7 @@ class DdmNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 节点ID。
+    * @param string|null $id **参数解释**：  节点ID。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -283,7 +283,7 @@ class DdmNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态。
+    *  **参数解释**：  状态。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -295,7 +295,7 @@ class DdmNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态。
+    * @param string|null $status **参数解释**：  状态。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -307,7 +307,7 @@ class DdmNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称。
+    *  **参数解释**：  名称。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -319,7 +319,7 @@ class DdmNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 名称。
+    * @param string|null $name **参数解释**：  名称。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -331,7 +331,7 @@ class DdmNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets azCode
-    *  可用区编码。
+    *  **参数解释**：  可用区编码。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -343,7 +343,7 @@ class DdmNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets azCode
     *
-    * @param string|null $azCode 可用区编码。
+    * @param string|null $azCode **参数解释**：  可用区编码。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -355,7 +355,7 @@ class DdmNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets actions
-    *  锁状态。
+    *  **参数解释**：  锁状态。  **参数范围**：  不涉及。
     *
     * @return \HuaweiCloud\SDK\Ddm\V1\Model\ActionInfo[]|null
     */
@@ -367,7 +367,7 @@ class DdmNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets actions
     *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\ActionInfo[]|null $actions 锁状态。
+    * @param \HuaweiCloud\SDK\Ddm\V1\Model\ActionInfo[]|null $actions **参数解释**：  锁状态。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -379,7 +379,7 @@ class DdmNodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  子网ID。
+    *  **参数解释**：  子网ID。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -391,7 +391,7 @@ class DdmNodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string|null $subnetId 子网ID。
+    * @param string|null $subnetId **参数解释**：  子网ID。  **参数范围**：  不涉及。
     *
     * @return $this
     */

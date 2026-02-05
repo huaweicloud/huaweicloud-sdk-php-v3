@@ -224,49 +224,34 @@ class BaselineCatalogModel implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['uuid'] === null) {
-            $invalidProperties[] = "'uuid' can't be null";
-        }
-            if ((mb_strlen($this->container['uuid']) > 36)) {
+            if (!is_null($this->container['uuid']) && (mb_strlen($this->container['uuid']) > 36)) {
                 $invalidProperties[] = "invalid value for 'uuid', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['uuid']) < 0)) {
+            if (!is_null($this->container['uuid']) && (mb_strlen($this->container['uuid']) < 0)) {
                 $invalidProperties[] = "invalid value for 'uuid', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['serialNumber'] === null) {
-            $invalidProperties[] = "'serialNumber' can't be null";
-        }
-            if (($this->container['serialNumber'] > 99)) {
+            if (!is_null($this->container['serialNumber']) && ($this->container['serialNumber'] > 99)) {
                 $invalidProperties[] = "invalid value for 'serialNumber', must be smaller than or equal to 99.";
             }
-            if (($this->container['serialNumber'] < 0)) {
+            if (!is_null($this->container['serialNumber']) && ($this->container['serialNumber'] < 0)) {
                 $invalidProperties[] = "invalid value for 'serialNumber', must be bigger than or equal to 0.";
             }
-        if ($this->container['levelNumber'] === null) {
-            $invalidProperties[] = "'levelNumber' can't be null";
-        }
-            if (($this->container['levelNumber'] > 99)) {
+            if (!is_null($this->container['levelNumber']) && ($this->container['levelNumber'] > 99)) {
                 $invalidProperties[] = "invalid value for 'levelNumber', must be smaller than or equal to 99.";
             }
-            if (($this->container['levelNumber'] < 0)) {
+            if (!is_null($this->container['levelNumber']) && ($this->container['levelNumber'] < 0)) {
                 $invalidProperties[] = "invalid value for 'levelNumber', must be bigger than or equal to 0.";
             }
-        if ($this->container['root'] === null) {
-            $invalidProperties[] = "'root' can't be null";
-        }
-            if ((mb_strlen($this->container['root']) > 36)) {
+            if (!is_null($this->container['root']) && (mb_strlen($this->container['root']) > 36)) {
                 $invalidProperties[] = "invalid value for 'root', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['root']) < 0)) {
+            if (!is_null($this->container['root']) && (mb_strlen($this->container['root']) < 0)) {
                 $invalidProperties[] = "invalid value for 'root', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['parent'] === null) {
-            $invalidProperties[] = "'parent' can't be null";
-        }
-            if ((mb_strlen($this->container['parent']) > 36)) {
+            if (!is_null($this->container['parent']) && (mb_strlen($this->container['parent']) > 36)) {
                 $invalidProperties[] = "invalid value for 'parent', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['parent']) < 0)) {
+            if (!is_null($this->container['parent']) && (mb_strlen($this->container['parent']) < 0)) {
                 $invalidProperties[] = "invalid value for 'parent', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -287,7 +272,7 @@ class BaselineCatalogModel implements ModelInterface, ArrayAccess
     * Gets uuid
     *  目录ID唯一标识，UUID
     *
-    * @return string
+    * @return string|null
     */
     public function getUuid()
     {
@@ -297,7 +282,7 @@ class BaselineCatalogModel implements ModelInterface, ArrayAccess
     /**
     * Sets uuid
     *
-    * @param string $uuid 目录ID唯一标识，UUID
+    * @param string|null $uuid 目录ID唯一标识，UUID
     *
     * @return $this
     */
@@ -311,7 +296,7 @@ class BaselineCatalogModel implements ModelInterface, ArrayAccess
     * Gets serialNumber
     *  目录的位置顺序
     *
-    * @return int
+    * @return int|null
     */
     public function getSerialNumber()
     {
@@ -321,7 +306,7 @@ class BaselineCatalogModel implements ModelInterface, ArrayAccess
     /**
     * Sets serialNumber
     *
-    * @param int $serialNumber 目录的位置顺序
+    * @param int|null $serialNumber 目录的位置顺序
     *
     * @return $this
     */
@@ -335,7 +320,7 @@ class BaselineCatalogModel implements ModelInterface, ArrayAccess
     * Gets levelNumber
     *  目录的层级关系
     *
-    * @return int
+    * @return int|null
     */
     public function getLevelNumber()
     {
@@ -345,7 +330,7 @@ class BaselineCatalogModel implements ModelInterface, ArrayAccess
     /**
     * Sets levelNumber
     *
-    * @param int $levelNumber 目录的层级关系
+    * @param int|null $levelNumber 目录的层级关系
     *
     * @return $this
     */
@@ -359,7 +344,7 @@ class BaselineCatalogModel implements ModelInterface, ArrayAccess
     * Gets root
     *  该目录所在遵从包UUID
     *
-    * @return string
+    * @return string|null
     */
     public function getRoot()
     {
@@ -369,7 +354,7 @@ class BaselineCatalogModel implements ModelInterface, ArrayAccess
     /**
     * Sets root
     *
-    * @param string $root 该目录所在遵从包UUID
+    * @param string|null $root 该目录所在遵从包UUID
     *
     * @return $this
     */
@@ -383,7 +368,7 @@ class BaselineCatalogModel implements ModelInterface, ArrayAccess
     * Gets parent
     *  该目录的父目录UUID，如果等于为第一层目录，则为遵从包UUID
     *
-    * @return string
+    * @return string|null
     */
     public function getParent()
     {
@@ -393,7 +378,7 @@ class BaselineCatalogModel implements ModelInterface, ArrayAccess
     /**
     * Sets parent
     *
-    * @param string $parent 该目录的父目录UUID，如果等于为第一层目录，则为遵从包UUID
+    * @param string|null $parent 该目录的父目录UUID，如果等于为第一层目录，则为遵从包UUID
     *
     * @return $this
     */

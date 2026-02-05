@@ -21,7 +21,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * groupInfo  groupInfo
-    * serviceType  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填。
+    * serviceType  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE：CCE云容器引擎（Service）（暂不支持） - NACOS：nacos注册中心，nacos_info必填
     * protocol  API网关访问微服务的请求协议 - HTTP - HTTPS
     * apis  导入的api列表
     * backendTimeout  APIG请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000，默认5000  单位：毫秒。
@@ -51,7 +51,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * groupInfo  groupInfo
-    * serviceType  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填。
+    * serviceType  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE：CCE云容器引擎（Service）（暂不支持） - NACOS：nacos注册中心，nacos_info必填
     * protocol  API网关访问微服务的请求协议 - HTTP - HTTPS
     * apis  导入的api列表
     * backendTimeout  APIG请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000，默认5000  单位：毫秒。
@@ -102,7 +102,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * groupInfo  groupInfo
-    * serviceType  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填。
+    * serviceType  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE：CCE云容器引擎（Service）（暂不支持） - NACOS：nacos注册中心，nacos_info必填
     * protocol  API网关访问微服务的请求协议 - HTTP - HTTPS
     * apis  导入的api列表
     * backendTimeout  APIG请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000，默认5000  单位：毫秒。
@@ -132,7 +132,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * groupInfo  groupInfo
-    * serviceType  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填。
+    * serviceType  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE：CCE云容器引擎（Service）（暂不支持） - NACOS：nacos注册中心，nacos_info必填
     * protocol  API网关访问微服务的请求协议 - HTTP - HTTPS
     * apis  导入的api列表
     * backendTimeout  APIG请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000，默认5000  单位：毫秒。
@@ -162,7 +162,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * groupInfo  groupInfo
-    * serviceType  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填。
+    * serviceType  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE：CCE云容器引擎（Service）（暂不支持） - NACOS：nacos注册中心，nacos_info必填
     * protocol  API网关访问微服务的请求协议 - HTTP - HTTPS
     * apis  导入的api列表
     * backendTimeout  APIG请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000，默认5000  单位：毫秒。
@@ -395,7 +395,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
-    *  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填。
+    *  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE：CCE云容器引擎（Service）（暂不支持） - NACOS：nacos注册中心，nacos_info必填
     *
     * @return string
     */
@@ -407,7 +407,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     /**
     * Sets serviceType
     *
-    * @param string $serviceType 微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填。
+    * @param string $serviceType 微服务中心类型。 - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE：CCE云容器引擎（Service）（暂不支持） - NACOS：nacos注册中心，nacos_info必填
     *
     * @return $this
     */

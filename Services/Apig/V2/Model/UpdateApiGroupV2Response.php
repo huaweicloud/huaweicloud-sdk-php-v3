@@ -27,7 +27,7 @@ class UpdateApiGroupV2Response implements ModelInterface, ArrayAccess
     * slDomain  系统默认分配的子域名
     * registerTime  创建时间
     * updateTime  最近修改时间
-    * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     * urlDomains  分组上绑定的独立域名列表
     * slDomainAccessEnabled  调试域名是否可以访问，true表示可以访问，false表示禁止访问
     * slDomains  系统默认分配的子域名列表
@@ -36,7 +36,7 @@ class UpdateApiGroupV2Response implements ModelInterface, ArrayAccess
     * timeInterval  流控时长  暂不支持
     * timeUnit  流控的时间单位  暂不支持
     * isDefault  是否为默认分组
-    * version  分组版本  - V1：全局分组 - V2：应用级分组  暂不支持，默认为V1
+    * version  分组版本。 - V1：全局分组。 - V2：应用级分组。 暂不支持。
     * romaAppId  分组归属的集成应用编号。  分组版本V2时必填。  暂不支持
     * romaAppName  分组归属的集成应用名称  暂不支持
     *
@@ -71,7 +71,7 @@ class UpdateApiGroupV2Response implements ModelInterface, ArrayAccess
     * slDomain  系统默认分配的子域名
     * registerTime  创建时间
     * updateTime  最近修改时间
-    * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     * urlDomains  分组上绑定的独立域名列表
     * slDomainAccessEnabled  调试域名是否可以访问，true表示可以访问，false表示禁止访问
     * slDomains  系统默认分配的子域名列表
@@ -80,7 +80,7 @@ class UpdateApiGroupV2Response implements ModelInterface, ArrayAccess
     * timeInterval  流控时长  暂不支持
     * timeUnit  流控的时间单位  暂不支持
     * isDefault  是否为默认分组
-    * version  分组版本  - V1：全局分组 - V2：应用级分组  暂不支持，默认为V1
+    * version  分组版本。 - V1：全局分组。 - V2：应用级分组。 暂不支持。
     * romaAppId  分组归属的集成应用编号。  分组版本V2时必填。  暂不支持
     * romaAppName  分组归属的集成应用名称  暂不支持
     *
@@ -136,7 +136,7 @@ class UpdateApiGroupV2Response implements ModelInterface, ArrayAccess
     * slDomain  系统默认分配的子域名
     * registerTime  创建时间
     * updateTime  最近修改时间
-    * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     * urlDomains  分组上绑定的独立域名列表
     * slDomainAccessEnabled  调试域名是否可以访问，true表示可以访问，false表示禁止访问
     * slDomains  系统默认分配的子域名列表
@@ -145,7 +145,7 @@ class UpdateApiGroupV2Response implements ModelInterface, ArrayAccess
     * timeInterval  流控时长  暂不支持
     * timeUnit  流控的时间单位  暂不支持
     * isDefault  是否为默认分组
-    * version  分组版本  - V1：全局分组 - V2：应用级分组  暂不支持，默认为V1
+    * version  分组版本。 - V1：全局分组。 - V2：应用级分组。 暂不支持。
     * romaAppId  分组归属的集成应用编号。  分组版本V2时必填。  暂不支持
     * romaAppName  分组归属的集成应用名称  暂不支持
     *
@@ -180,7 +180,7 @@ class UpdateApiGroupV2Response implements ModelInterface, ArrayAccess
     * slDomain  系统默认分配的子域名
     * registerTime  创建时间
     * updateTime  最近修改时间
-    * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     * urlDomains  分组上绑定的独立域名列表
     * slDomainAccessEnabled  调试域名是否可以访问，true表示可以访问，false表示禁止访问
     * slDomains  系统默认分配的子域名列表
@@ -189,7 +189,7 @@ class UpdateApiGroupV2Response implements ModelInterface, ArrayAccess
     * timeInterval  流控时长  暂不支持
     * timeUnit  流控的时间单位  暂不支持
     * isDefault  是否为默认分组
-    * version  分组版本  - V1：全局分组 - V2：应用级分组  暂不支持，默认为V1
+    * version  分组版本。 - V1：全局分组。 - V2：应用级分组。 暂不支持。
     * romaAppId  分组归属的集成应用编号。  分组版本V2时必填。  暂不支持
     * romaAppName  分组归属的集成应用名称  暂不支持
     *
@@ -224,7 +224,7 @@ class UpdateApiGroupV2Response implements ModelInterface, ArrayAccess
     * slDomain  系统默认分配的子域名
     * registerTime  创建时间
     * updateTime  最近修改时间
-    * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     * urlDomains  分组上绑定的独立域名列表
     * slDomainAccessEnabled  调试域名是否可以访问，true表示可以访问，false表示禁止访问
     * slDomains  系统默认分配的子域名列表
@@ -233,7 +233,7 @@ class UpdateApiGroupV2Response implements ModelInterface, ArrayAccess
     * timeInterval  流控时长  暂不支持
     * timeUnit  流控的时间单位  暂不支持
     * isDefault  是否为默认分组
-    * version  分组版本  - V1：全局分组 - V2：应用级分组  暂不支持，默认为V1
+    * version  分组版本。 - V1：全局分组。 - V2：应用级分组。 暂不支持。
     * romaAppId  分组归属的集成应用编号。  分组版本V2时必填。  暂不支持
     * romaAppName  分组归属的集成应用名称  暂不支持
     *
@@ -548,7 +548,7 @@ class UpdateApiGroupV2Response implements ModelInterface, ArrayAccess
 
     /**
     * Gets onSellStatus
-    *  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    *  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     *
     * @return int
     */
@@ -560,7 +560,7 @@ class UpdateApiGroupV2Response implements ModelInterface, ArrayAccess
     /**
     * Sets onSellStatus
     *
-    * @param int $onSellStatus 是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    * @param int $onSellStatus 是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     *
     * @return $this
     */
@@ -764,7 +764,7 @@ class UpdateApiGroupV2Response implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  分组版本  - V1：全局分组 - V2：应用级分组  暂不支持，默认为V1
+    *  分组版本。 - V1：全局分组。 - V2：应用级分组。 暂不支持。
     *
     * @return string|null
     */
@@ -776,7 +776,7 @@ class UpdateApiGroupV2Response implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 分组版本  - V1：全局分组 - V2：应用级分组  暂不支持，默认为V1
+    * @param string|null $version 分组版本。 - V1：全局分组。 - V2：应用级分组。 暂不支持。
     *
     * @return $this
     */

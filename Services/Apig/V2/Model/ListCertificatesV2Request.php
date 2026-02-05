@@ -25,9 +25,9 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
     * name  证书名称
     * commonName  证书域名
     * signatureAlgorithm  证书签名算法
-    * type  证书可见范围
+    * type  证书类型。 - instance：实例证书 - global：全局证书
     * instanceId  证书所属实例ID
-    * algorithmType  证书算法类型： - RSA。 - ECC。 - SM2。
+    * algorithmType  证书算法类型。 - RSA - ECC - SM2
     *
     * @var string[]
     */
@@ -49,9 +49,9 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
     * name  证书名称
     * commonName  证书域名
     * signatureAlgorithm  证书签名算法
-    * type  证书可见范围
+    * type  证书类型。 - instance：实例证书 - global：全局证书
     * instanceId  证书所属实例ID
-    * algorithmType  证书算法类型： - RSA。 - ECC。 - SM2。
+    * algorithmType  证书算法类型。 - RSA - ECC - SM2
     *
     * @var string[]
     */
@@ -94,9 +94,9 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
     * name  证书名称
     * commonName  证书域名
     * signatureAlgorithm  证书签名算法
-    * type  证书可见范围
+    * type  证书类型。 - instance：实例证书 - global：全局证书
     * instanceId  证书所属实例ID
-    * algorithmType  证书算法类型： - RSA。 - ECC。 - SM2。
+    * algorithmType  证书算法类型。 - RSA - ECC - SM2
     *
     * @var string[]
     */
@@ -118,9 +118,9 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
     * name  证书名称
     * commonName  证书域名
     * signatureAlgorithm  证书签名算法
-    * type  证书可见范围
+    * type  证书类型。 - instance：实例证书 - global：全局证书
     * instanceId  证书所属实例ID
-    * algorithmType  证书算法类型： - RSA。 - ECC。 - SM2。
+    * algorithmType  证书算法类型。 - RSA - ECC - SM2
     *
     * @var string[]
     */
@@ -142,9 +142,9 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
     * name  证书名称
     * commonName  证书域名
     * signatureAlgorithm  证书签名算法
-    * type  证书可见范围
+    * type  证书类型。 - instance：实例证书 - global：全局证书
     * instanceId  证书所属实例ID
-    * algorithmType  证书算法类型： - RSA。 - ECC。 - SM2。
+    * algorithmType  证书算法类型。 - RSA - ECC - SM2
     *
     * @var string[]
     */
@@ -428,7 +428,7 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  证书可见范围
+    *  证书类型。 - instance：实例证书 - global：全局证书
     *
     * @return string|null
     */
@@ -440,7 +440,7 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 证书可见范围
+    * @param string|null $type 证书类型。 - instance：实例证书 - global：全局证书
     *
     * @return $this
     */
@@ -476,7 +476,7 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
 
     /**
     * Gets algorithmType
-    *  证书算法类型： - RSA。 - ECC。 - SM2。
+    *  证书算法类型。 - RSA - ECC - SM2
     *
     * @return string|null
     */
@@ -488,7 +488,7 @@ class ListCertificatesV2Request implements ModelInterface, ArrayAccess
     /**
     * Sets algorithmType
     *
-    * @param string|null $algorithmType 证书算法类型： - RSA。 - ECC。 - SM2。
+    * @param string|null $algorithmType 证书算法类型。 - RSA - ECC - SM2
     *
     * @return $this
     */

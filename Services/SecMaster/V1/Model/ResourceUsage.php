@@ -36,7 +36,7 @@ class ResourceUsage implements ModelInterface, ArrayAccess
             'unit' => 'string',
             'resourceTypeName' => 'string',
             'sourceResourceSpecCode' => 'string',
-            'resourceSpecCode' => 'object',
+            'resourceSpecCode' => 'string',
             'sourceType' => 'string',
             'usedPercent' => 'double',
             'quota' => 'double',
@@ -289,6 +289,12 @@ class ResourceUsage implements ModelInterface, ArrayAccess
             if (!is_null($this->container['sourceResourceSpecCode']) && (mb_strlen($this->container['sourceResourceSpecCode']) < 2)) {
                 $invalidProperties[] = "invalid value for 'sourceResourceSpecCode', the character length must be bigger than or equal to 2.";
             }
+            if (!is_null($this->container['resourceSpecCode']) && (mb_strlen($this->container['resourceSpecCode']) > 64)) {
+                $invalidProperties[] = "invalid value for 'resourceSpecCode', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['resourceSpecCode']) && (mb_strlen($this->container['resourceSpecCode']) < 2)) {
+                $invalidProperties[] = "invalid value for 'resourceSpecCode', the character length must be bigger than or equal to 2.";
+            }
             if (!is_null($this->container['sourceType']) && (mb_strlen($this->container['sourceType']) > 64)) {
                 $invalidProperties[] = "invalid value for 'sourceType', the character length must be smaller than or equal to 64.";
             }
@@ -409,7 +415,7 @@ class ResourceUsage implements ModelInterface, ArrayAccess
     * Gets resourceSpecCode
     *  源资源规格编码
     *
-    * @return object|null
+    * @return string|null
     */
     public function getResourceSpecCode()
     {
@@ -419,7 +425,7 @@ class ResourceUsage implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSpecCode
     *
-    * @param object|null $resourceSpecCode 源资源规格编码
+    * @param string|null $resourceSpecCode 源资源规格编码
     *
     * @return $this
     */

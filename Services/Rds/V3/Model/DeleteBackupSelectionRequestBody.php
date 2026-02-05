@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ddm\V1\Model;
+namespace HuaweiCloud\SDK\Rds\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class TagsInfo implements ModelInterface, ArrayAccess
+class DeleteBackupSelectionRequestBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class TagsInfo implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'TagsInfo';
+    protected static $openAPIModelName = 'DeleteBackupSelectionRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tags  标签。
-    * sysTags  系统标签。
+    * selection  选择是否保留自动备份标志
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tags' => '\HuaweiCloud\SDK\Ddm\V1\Model\Tags[]',
-            'sysTags' => '\HuaweiCloud\SDK\Ddm\V1\Model\Tags[]'
+            'selection' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tags  标签。
-    * sysTags  系统标签。
+    * selection  选择是否保留自动备份标志
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'tags' => null,
-        'sysTags' => null
+        'selection' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class TagsInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tags  标签。
-    * sysTags  系统标签。
+    * selection  选择是否保留自动备份标志
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'tags' => 'tags',
-            'sysTags' => 'sys_tags'
+            'selection' => 'selection'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tags  标签。
-    * sysTags  系统标签。
+    * selection  选择是否保留自动备份标志
     *
     * @var string[]
     */
     protected static $setters = [
-            'tags' => 'setTags',
-            'sysTags' => 'setSysTags'
+            'selection' => 'setSelection'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tags  标签。
-    * sysTags  系统标签。
+    * selection  选择是否保留自动备份标志
     *
     * @var string[]
     */
     protected static $getters = [
-            'tags' => 'getTags',
-            'sysTags' => 'getSysTags'
+            'selection' => 'getSelection'
     ];
 
     /**
@@ -157,8 +147,7 @@ class TagsInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['sysTags'] = isset($data['sysTags']) ? $data['sysTags'] : null;
+        $this->container['selection'] = isset($data['selection']) ? $data['selection'] : null;
     }
 
     /**
@@ -169,6 +158,9 @@ class TagsInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['selection'] === null) {
+            $invalidProperties[] = "'selection' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -184,50 +176,26 @@ class TagsInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets tags
-    *  标签。
+    * Gets selection
+    *  选择是否保留自动备份标志
     *
-    * @return \HuaweiCloud\SDK\Ddm\V1\Model\Tags[]|null
+    * @return bool
     */
-    public function getTags()
+    public function getSelection()
     {
-        return $this->container['tags'];
+        return $this->container['selection'];
     }
 
     /**
-    * Sets tags
+    * Sets selection
     *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\Tags[]|null $tags 标签。
+    * @param bool $selection 选择是否保留自动备份标志
     *
     * @return $this
     */
-    public function setTags($tags)
+    public function setSelection($selection)
     {
-        $this->container['tags'] = $tags;
-        return $this;
-    }
-
-    /**
-    * Gets sysTags
-    *  系统标签。
-    *
-    * @return \HuaweiCloud\SDK\Ddm\V1\Model\Tags[]|null
-    */
-    public function getSysTags()
-    {
-        return $this->container['sysTags'];
-    }
-
-    /**
-    * Sets sysTags
-    *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\Tags[]|null $sysTags 系统标签。
-    *
-    * @return $this
-    */
-    public function setSysTags($sysTags)
-    {
-        $this->container['sysTags'] = $sysTags;
+        $this->container['selection'] = $selection;
         return $this;
     }
 

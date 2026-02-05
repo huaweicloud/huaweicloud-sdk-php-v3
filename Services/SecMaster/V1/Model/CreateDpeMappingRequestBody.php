@@ -35,6 +35,7 @@ class CreateDpeMappingRequestBody implements ModelInterface, ArrayAccess
     * modifierId  修改者id
     * modifierName  修改者名称
     * mapper  mapper
+    * classifier  classifier
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class CreateDpeMappingRequestBody implements ModelInterface, ArrayAccess
             'updateTime' => 'string',
             'modifierId' => 'string',
             'modifierName' => 'string',
-            'mapper' => '\HuaweiCloud\SDK\SecMaster\V1\Model\DpeMappingDetail'
+            'mapper' => '\HuaweiCloud\SDK\SecMaster\V1\Model\DpeMappingDetail',
+            'classifier' => '\HuaweiCloud\SDK\SecMaster\V1\Model\DpeClassifyCreate'
     ];
 
     /**
@@ -73,6 +75,7 @@ class CreateDpeMappingRequestBody implements ModelInterface, ArrayAccess
     * modifierId  修改者id
     * modifierName  修改者名称
     * mapper  mapper
+    * classifier  classifier
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class CreateDpeMappingRequestBody implements ModelInterface, ArrayAccess
         'updateTime' => null,
         'modifierId' => null,
         'modifierName' => null,
-        'mapper' => null
+        'mapper' => null,
+        'classifier' => null
     ];
 
     /**
@@ -132,6 +136,7 @@ class CreateDpeMappingRequestBody implements ModelInterface, ArrayAccess
     * modifierId  修改者id
     * modifierName  修改者名称
     * mapper  mapper
+    * classifier  classifier
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class CreateDpeMappingRequestBody implements ModelInterface, ArrayAccess
             'updateTime' => 'update_time',
             'modifierId' => 'modifier_id',
             'modifierName' => 'modifier_name',
-            'mapper' => 'mapper'
+            'mapper' => 'mapper',
+            'classifier' => 'classifier'
     ];
 
     /**
@@ -170,6 +176,7 @@ class CreateDpeMappingRequestBody implements ModelInterface, ArrayAccess
     * modifierId  修改者id
     * modifierName  修改者名称
     * mapper  mapper
+    * classifier  classifier
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class CreateDpeMappingRequestBody implements ModelInterface, ArrayAccess
             'updateTime' => 'setUpdateTime',
             'modifierId' => 'setModifierId',
             'modifierName' => 'setModifierName',
-            'mapper' => 'setMapper'
+            'mapper' => 'setMapper',
+            'classifier' => 'setClassifier'
     ];
 
     /**
@@ -208,6 +216,7 @@ class CreateDpeMappingRequestBody implements ModelInterface, ArrayAccess
     * modifierId  修改者id
     * modifierName  修改者名称
     * mapper  mapper
+    * classifier  classifier
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class CreateDpeMappingRequestBody implements ModelInterface, ArrayAccess
             'updateTime' => 'getUpdateTime',
             'modifierId' => 'getModifierId',
             'modifierName' => 'getModifierName',
-            'mapper' => 'getMapper'
+            'mapper' => 'getMapper',
+            'classifier' => 'getClassifier'
     ];
 
     /**
@@ -302,6 +312,7 @@ class CreateDpeMappingRequestBody implements ModelInterface, ArrayAccess
         $this->container['modifierId'] = isset($data['modifierId']) ? $data['modifierId'] : null;
         $this->container['modifierName'] = isset($data['modifierName']) ? $data['modifierName'] : null;
         $this->container['mapper'] = isset($data['mapper']) ? $data['mapper'] : null;
+        $this->container['classifier'] = isset($data['classifier']) ? $data['classifier'] : null;
     }
 
     /**
@@ -354,8 +365,8 @@ class CreateDpeMappingRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['dataSource']) && (mb_strlen($this->container['dataSource']) < 0)) {
                 $invalidProperties[] = "invalid value for 'dataSource', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) > 2)) {
-                $invalidProperties[] = "invalid value for 'status', the character length must be smaller than or equal to 2.";
+            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) > 10)) {
+                $invalidProperties[] = "invalid value for 'status', the character length must be smaller than or equal to 10.";
             }
             if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 0)) {
                 $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
@@ -776,6 +787,30 @@ class CreateDpeMappingRequestBody implements ModelInterface, ArrayAccess
     public function setMapper($mapper)
     {
         $this->container['mapper'] = $mapper;
+        return $this;
+    }
+
+    /**
+    * Gets classifier
+    *  classifier
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\DpeClassifyCreate|null
+    */
+    public function getClassifier()
+    {
+        return $this->container['classifier'];
+    }
+
+    /**
+    * Sets classifier
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\DpeClassifyCreate|null $classifier classifier
+    *
+    * @return $this
+    */
+    public function setClassifier($classifier)
+    {
+        $this->container['classifier'] = $classifier;
         return $this;
     }
 

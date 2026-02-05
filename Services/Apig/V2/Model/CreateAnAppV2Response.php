@@ -26,11 +26,13 @@ class CreateAnAppV2Response implements ModelInterface, ArrayAccess
     * remark  描述
     * creator  APP的创建者 - USER：用户自行创建 - MARKET：云商店分配  暂不支持MARKET
     * updateTime  更新时间
-    * appKey  APP的key
+    * appKey  APP凭据的key。
+    * relatedDomainId  凭据关联的账号ID。
+    * relatedProjectId  凭据关联的项目ID。
     * appSecret  密钥
     * registerTime  注册时间
     * status  状态   - 1： 有效
-    * appType  APP的类型： - apig：存量apig应用，不推荐使用 - roma：roma集成应用  默认apig，暂不支持其他类型
+    * appType  APP的类型。 - apig：APIG凭据应用  默认apig，暂不支持其他类型
     * romaAppType  ROMA_APP的类型： - subscription：订阅应用 - integration：集成应用  暂不支持
     *
     * @var string[]
@@ -42,6 +44,8 @@ class CreateAnAppV2Response implements ModelInterface, ArrayAccess
             'creator' => 'string',
             'updateTime' => '\DateTime',
             'appKey' => 'string',
+            'relatedDomainId' => 'string',
+            'relatedProjectId' => 'string',
             'appSecret' => 'string',
             'registerTime' => '\DateTime',
             'status' => 'int',
@@ -56,11 +60,13 @@ class CreateAnAppV2Response implements ModelInterface, ArrayAccess
     * remark  描述
     * creator  APP的创建者 - USER：用户自行创建 - MARKET：云商店分配  暂不支持MARKET
     * updateTime  更新时间
-    * appKey  APP的key
+    * appKey  APP凭据的key。
+    * relatedDomainId  凭据关联的账号ID。
+    * relatedProjectId  凭据关联的项目ID。
     * appSecret  密钥
     * registerTime  注册时间
     * status  状态   - 1： 有效
-    * appType  APP的类型： - apig：存量apig应用，不推荐使用 - roma：roma集成应用  默认apig，暂不支持其他类型
+    * appType  APP的类型。 - apig：APIG凭据应用  默认apig，暂不支持其他类型
     * romaAppType  ROMA_APP的类型： - subscription：订阅应用 - integration：集成应用  暂不支持
     *
     * @var string[]
@@ -72,6 +78,8 @@ class CreateAnAppV2Response implements ModelInterface, ArrayAccess
         'creator' => null,
         'updateTime' => 'date-time',
         'appKey' => null,
+        'relatedDomainId' => null,
+        'relatedProjectId' => null,
         'appSecret' => null,
         'registerTime' => 'date-time',
         'status' => 'int32',
@@ -107,11 +115,13 @@ class CreateAnAppV2Response implements ModelInterface, ArrayAccess
     * remark  描述
     * creator  APP的创建者 - USER：用户自行创建 - MARKET：云商店分配  暂不支持MARKET
     * updateTime  更新时间
-    * appKey  APP的key
+    * appKey  APP凭据的key。
+    * relatedDomainId  凭据关联的账号ID。
+    * relatedProjectId  凭据关联的项目ID。
     * appSecret  密钥
     * registerTime  注册时间
     * status  状态   - 1： 有效
-    * appType  APP的类型： - apig：存量apig应用，不推荐使用 - roma：roma集成应用  默认apig，暂不支持其他类型
+    * appType  APP的类型。 - apig：APIG凭据应用  默认apig，暂不支持其他类型
     * romaAppType  ROMA_APP的类型： - subscription：订阅应用 - integration：集成应用  暂不支持
     *
     * @var string[]
@@ -123,6 +133,8 @@ class CreateAnAppV2Response implements ModelInterface, ArrayAccess
             'creator' => 'creator',
             'updateTime' => 'update_time',
             'appKey' => 'app_key',
+            'relatedDomainId' => 'related_domain_id',
+            'relatedProjectId' => 'related_project_id',
             'appSecret' => 'app_secret',
             'registerTime' => 'register_time',
             'status' => 'status',
@@ -137,11 +149,13 @@ class CreateAnAppV2Response implements ModelInterface, ArrayAccess
     * remark  描述
     * creator  APP的创建者 - USER：用户自行创建 - MARKET：云商店分配  暂不支持MARKET
     * updateTime  更新时间
-    * appKey  APP的key
+    * appKey  APP凭据的key。
+    * relatedDomainId  凭据关联的账号ID。
+    * relatedProjectId  凭据关联的项目ID。
     * appSecret  密钥
     * registerTime  注册时间
     * status  状态   - 1： 有效
-    * appType  APP的类型： - apig：存量apig应用，不推荐使用 - roma：roma集成应用  默认apig，暂不支持其他类型
+    * appType  APP的类型。 - apig：APIG凭据应用  默认apig，暂不支持其他类型
     * romaAppType  ROMA_APP的类型： - subscription：订阅应用 - integration：集成应用  暂不支持
     *
     * @var string[]
@@ -153,6 +167,8 @@ class CreateAnAppV2Response implements ModelInterface, ArrayAccess
             'creator' => 'setCreator',
             'updateTime' => 'setUpdateTime',
             'appKey' => 'setAppKey',
+            'relatedDomainId' => 'setRelatedDomainId',
+            'relatedProjectId' => 'setRelatedProjectId',
             'appSecret' => 'setAppSecret',
             'registerTime' => 'setRegisterTime',
             'status' => 'setStatus',
@@ -167,11 +183,13 @@ class CreateAnAppV2Response implements ModelInterface, ArrayAccess
     * remark  描述
     * creator  APP的创建者 - USER：用户自行创建 - MARKET：云商店分配  暂不支持MARKET
     * updateTime  更新时间
-    * appKey  APP的key
+    * appKey  APP凭据的key。
+    * relatedDomainId  凭据关联的账号ID。
+    * relatedProjectId  凭据关联的项目ID。
     * appSecret  密钥
     * registerTime  注册时间
     * status  状态   - 1： 有效
-    * appType  APP的类型： - apig：存量apig应用，不推荐使用 - roma：roma集成应用  默认apig，暂不支持其他类型
+    * appType  APP的类型。 - apig：APIG凭据应用  默认apig，暂不支持其他类型
     * romaAppType  ROMA_APP的类型： - subscription：订阅应用 - integration：集成应用  暂不支持
     *
     * @var string[]
@@ -183,6 +201,8 @@ class CreateAnAppV2Response implements ModelInterface, ArrayAccess
             'creator' => 'getCreator',
             'updateTime' => 'getUpdateTime',
             'appKey' => 'getAppKey',
+            'relatedDomainId' => 'getRelatedDomainId',
+            'relatedProjectId' => 'getRelatedProjectId',
             'appSecret' => 'getAppSecret',
             'registerTime' => 'getRegisterTime',
             'status' => 'getStatus',
@@ -234,7 +254,6 @@ class CreateAnAppV2Response implements ModelInterface, ArrayAccess
     const CREATOR_MARKET = 'MARKET';
     const STATUS_1 = 1;
     const APP_TYPE_APIG = 'apig';
-    const APP_TYPE_ROMA = 'roma';
     
 
     /**
@@ -271,7 +290,6 @@ class CreateAnAppV2Response implements ModelInterface, ArrayAccess
     {
         return [
             self::APP_TYPE_APIG,
-            self::APP_TYPE_ROMA,
         ];
     }
 
@@ -297,6 +315,8 @@ class CreateAnAppV2Response implements ModelInterface, ArrayAccess
         $this->container['creator'] = isset($data['creator']) ? $data['creator'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['appKey'] = isset($data['appKey']) ? $data['appKey'] : null;
+        $this->container['relatedDomainId'] = isset($data['relatedDomainId']) ? $data['relatedDomainId'] : null;
+        $this->container['relatedProjectId'] = isset($data['relatedProjectId']) ? $data['relatedProjectId'] : null;
         $this->container['appSecret'] = isset($data['appSecret']) ? $data['appSecret'] : null;
         $this->container['registerTime'] = isset($data['registerTime']) ? $data['registerTime'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -320,6 +340,18 @@ class CreateAnAppV2Response implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['relatedDomainId']) && (mb_strlen($this->container['relatedDomainId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'relatedDomainId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['relatedDomainId']) && (mb_strlen($this->container['relatedDomainId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'relatedDomainId', the character length must be bigger than or equal to 32.";
+            }
+            if (!is_null($this->container['relatedProjectId']) && (mb_strlen($this->container['relatedProjectId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'relatedProjectId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['relatedProjectId']) && (mb_strlen($this->container['relatedProjectId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'relatedProjectId', the character length must be bigger than or equal to 32.";
+            }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -472,7 +504,7 @@ class CreateAnAppV2Response implements ModelInterface, ArrayAccess
 
     /**
     * Gets appKey
-    *  APP的key
+    *  APP凭据的key。
     *
     * @return string|null
     */
@@ -484,13 +516,61 @@ class CreateAnAppV2Response implements ModelInterface, ArrayAccess
     /**
     * Sets appKey
     *
-    * @param string|null $appKey APP的key
+    * @param string|null $appKey APP凭据的key。
     *
     * @return $this
     */
     public function setAppKey($appKey)
     {
         $this->container['appKey'] = $appKey;
+        return $this;
+    }
+
+    /**
+    * Gets relatedDomainId
+    *  凭据关联的账号ID。
+    *
+    * @return string|null
+    */
+    public function getRelatedDomainId()
+    {
+        return $this->container['relatedDomainId'];
+    }
+
+    /**
+    * Sets relatedDomainId
+    *
+    * @param string|null $relatedDomainId 凭据关联的账号ID。
+    *
+    * @return $this
+    */
+    public function setRelatedDomainId($relatedDomainId)
+    {
+        $this->container['relatedDomainId'] = $relatedDomainId;
+        return $this;
+    }
+
+    /**
+    * Gets relatedProjectId
+    *  凭据关联的项目ID。
+    *
+    * @return string|null
+    */
+    public function getRelatedProjectId()
+    {
+        return $this->container['relatedProjectId'];
+    }
+
+    /**
+    * Sets relatedProjectId
+    *
+    * @param string|null $relatedProjectId 凭据关联的项目ID。
+    *
+    * @return $this
+    */
+    public function setRelatedProjectId($relatedProjectId)
+    {
+        $this->container['relatedProjectId'] = $relatedProjectId;
         return $this;
     }
 
@@ -568,7 +648,7 @@ class CreateAnAppV2Response implements ModelInterface, ArrayAccess
 
     /**
     * Gets appType
-    *  APP的类型： - apig：存量apig应用，不推荐使用 - roma：roma集成应用  默认apig，暂不支持其他类型
+    *  APP的类型。 - apig：APIG凭据应用  默认apig，暂不支持其他类型
     *
     * @return string|null
     */
@@ -580,7 +660,7 @@ class CreateAnAppV2Response implements ModelInterface, ArrayAccess
     /**
     * Sets appType
     *
-    * @param string|null $appType APP的类型： - apig：存量apig应用，不推荐使用 - roma：roma集成应用  默认apig，暂不支持其他类型
+    * @param string|null $appType APP的类型。 - apig：APIG凭据应用  默认apig，暂不支持其他类型
     *
     * @return $this
     */

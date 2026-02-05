@@ -21,22 +21,26 @@ class ListAlertRuleTemplateMetricsResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  响应结果
+    * severity  severity
+    * status  status
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'map[string,\HuaweiCloud\SDK\SecMaster\V1\Model\AlertRuleTemplateMetric]'
+            'severity' => '\HuaweiCloud\SDK\SecMaster\V1\Model\AlertRuleTemplateMetric',
+            'status' => '\HuaweiCloud\SDK\SecMaster\V1\Model\AlertRuleTemplateMetric'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  响应结果
+    * severity  severity
+    * status  status
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'severity' => null,
+        'status' => null
     ];
 
     /**
@@ -62,32 +66,38 @@ class ListAlertRuleTemplateMetricsResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  响应结果
+    * severity  severity
+    * status  status
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'severity' => 'severity',
+            'status' => 'status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  响应结果
+    * severity  severity
+    * status  status
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'severity' => 'setSeverity',
+            'status' => 'setStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  响应结果
+    * severity  severity
+    * status  status
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'severity' => 'getSeverity',
+            'status' => 'getStatus'
     ];
 
     /**
@@ -148,7 +158,8 @@ class ListAlertRuleTemplateMetricsResponse implements ModelInterface, ArrayAcces
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['severity'] = isset($data['severity']) ? $data['severity'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -174,26 +185,50 @@ class ListAlertRuleTemplateMetricsResponse implements ModelInterface, ArrayAcces
     }
 
     /**
-    * Gets body
-    *  响应结果
+    * Gets severity
+    *  severity
     *
-    * @return map[string,\HuaweiCloud\SDK\SecMaster\V1\Model\AlertRuleTemplateMetric]|null
+    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\AlertRuleTemplateMetric|null
     */
-    public function getBody()
+    public function getSeverity()
     {
-        return $this->container['body'];
+        return $this->container['severity'];
     }
 
     /**
-    * Sets body
+    * Sets severity
     *
-    * @param map[string,\HuaweiCloud\SDK\SecMaster\V1\Model\AlertRuleTemplateMetric]|null $body 响应结果
+    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\AlertRuleTemplateMetric|null $severity severity
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setSeverity($severity)
     {
-        $this->container['body'] = $body;
+        $this->container['severity'] = $severity;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  status
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\AlertRuleTemplateMetric|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\AlertRuleTemplateMetric|null $status status
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

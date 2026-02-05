@@ -29,7 +29,7 @@ class UpdatePipeIndexRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'workspaceId' => 'string',
             'pipeId' => 'string',
-            'body' => '\HuaweiCloud\SDK\SecMaster\V1\Model\Index'
+            'body' => '\HuaweiCloud\SDK\SecMaster\V1\Model\UpdateIndexRequestBody'
     ];
 
     /**
@@ -264,7 +264,7 @@ class UpdatePipeIndexRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\Index|null
+    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\UpdateIndexRequestBody|null
     */
     public function getBody()
     {
@@ -274,7 +274,7 @@ class UpdatePipeIndexRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\Index|null $body body
+    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\UpdateIndexRequestBody|null $body body
     *
     * @return $this
     */

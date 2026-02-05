@@ -21,7 +21,7 @@ class ListAppCodesV2Request implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID，在API网关控制台的“实例信息”中获取。
-    * appId  应用编号
+    * appId  凭据编号
     * offset  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     *
@@ -37,7 +37,7 @@ class ListAppCodesV2Request implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID，在API网关控制台的“实例信息”中获取。
-    * appId  应用编号
+    * appId  凭据编号
     * offset  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     *
@@ -74,7 +74,7 @@ class ListAppCodesV2Request implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID，在API网关控制台的“实例信息”中获取。
-    * appId  应用编号
+    * appId  凭据编号
     * offset  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     *
@@ -90,7 +90,7 @@ class ListAppCodesV2Request implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID，在API网关控制台的“实例信息”中获取。
-    * appId  应用编号
+    * appId  凭据编号
     * offset  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     *
@@ -106,7 +106,7 @@ class ListAppCodesV2Request implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID，在API网关控制台的“实例信息”中获取。
-    * appId  应用编号
+    * appId  凭据编号
     * offset  偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     *
@@ -246,7 +246,7 @@ class ListAppCodesV2Request implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
-    *  应用编号
+    *  凭据编号
     *
     * @return string
     */
@@ -258,7 +258,7 @@ class ListAppCodesV2Request implements ModelInterface, ArrayAccess
     /**
     * Sets appId
     *
-    * @param string $appId 应用编号
+    * @param string $appId 凭据编号
     *
     * @return $this
     */

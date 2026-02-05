@@ -22,8 +22,10 @@ class AppCreate implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  APP的名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3 ~ 64个字符。 > 中文字符必须为UTF-8或者unicode编码。
     * remark  APP描述。字符长度不能大于255。 > 中文字符必须为UTF-8或者unicode编码。
-    * appKey  APP的key。支持英文，数字，“_”，“-”，且只能以英文或数字开头，8 ~ 200个字符。
+    * appKey  APP凭据的key。支持英文，数字，“_”，“-”，且只能以英文或数字开头，8 ~ 200个字符。
     * appSecret  密钥。支持英文，数字，“_”，“-”，“!”，“@”，“#”，“$”，“%”，且只能以英文或数字开头，8 ~ 128个字符。
+    * relatedDomainId  凭据关联的账号ID。
+    * relatedProjectId  凭据关联的项目ID。
     *
     * @var string[]
     */
@@ -31,15 +33,19 @@ class AppCreate implements ModelInterface, ArrayAccess
             'name' => 'string',
             'remark' => 'string',
             'appKey' => 'string',
-            'appSecret' => 'string'
+            'appSecret' => 'string',
+            'relatedDomainId' => 'string',
+            'relatedProjectId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  APP的名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3 ~ 64个字符。 > 中文字符必须为UTF-8或者unicode编码。
     * remark  APP描述。字符长度不能大于255。 > 中文字符必须为UTF-8或者unicode编码。
-    * appKey  APP的key。支持英文，数字，“_”，“-”，且只能以英文或数字开头，8 ~ 200个字符。
+    * appKey  APP凭据的key。支持英文，数字，“_”，“-”，且只能以英文或数字开头，8 ~ 200个字符。
     * appSecret  密钥。支持英文，数字，“_”，“-”，“!”，“@”，“#”，“$”，“%”，且只能以英文或数字开头，8 ~ 128个字符。
+    * relatedDomainId  凭据关联的账号ID。
+    * relatedProjectId  凭据关联的项目ID。
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class AppCreate implements ModelInterface, ArrayAccess
         'name' => null,
         'remark' => null,
         'appKey' => null,
-        'appSecret' => null
+        'appSecret' => null,
+        'relatedDomainId' => null,
+        'relatedProjectId' => null
     ];
 
     /**
@@ -75,8 +83,10 @@ class AppCreate implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  APP的名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3 ~ 64个字符。 > 中文字符必须为UTF-8或者unicode编码。
     * remark  APP描述。字符长度不能大于255。 > 中文字符必须为UTF-8或者unicode编码。
-    * appKey  APP的key。支持英文，数字，“_”，“-”，且只能以英文或数字开头，8 ~ 200个字符。
+    * appKey  APP凭据的key。支持英文，数字，“_”，“-”，且只能以英文或数字开头，8 ~ 200个字符。
     * appSecret  密钥。支持英文，数字，“_”，“-”，“!”，“@”，“#”，“$”，“%”，且只能以英文或数字开头，8 ~ 128个字符。
+    * relatedDomainId  凭据关联的账号ID。
+    * relatedProjectId  凭据关联的项目ID。
     *
     * @var string[]
     */
@@ -84,15 +94,19 @@ class AppCreate implements ModelInterface, ArrayAccess
             'name' => 'name',
             'remark' => 'remark',
             'appKey' => 'app_key',
-            'appSecret' => 'app_secret'
+            'appSecret' => 'app_secret',
+            'relatedDomainId' => 'related_domain_id',
+            'relatedProjectId' => 'related_project_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  APP的名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3 ~ 64个字符。 > 中文字符必须为UTF-8或者unicode编码。
     * remark  APP描述。字符长度不能大于255。 > 中文字符必须为UTF-8或者unicode编码。
-    * appKey  APP的key。支持英文，数字，“_”，“-”，且只能以英文或数字开头，8 ~ 200个字符。
+    * appKey  APP凭据的key。支持英文，数字，“_”，“-”，且只能以英文或数字开头，8 ~ 200个字符。
     * appSecret  密钥。支持英文，数字，“_”，“-”，“!”，“@”，“#”，“$”，“%”，且只能以英文或数字开头，8 ~ 128个字符。
+    * relatedDomainId  凭据关联的账号ID。
+    * relatedProjectId  凭据关联的项目ID。
     *
     * @var string[]
     */
@@ -100,15 +114,19 @@ class AppCreate implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'remark' => 'setRemark',
             'appKey' => 'setAppKey',
-            'appSecret' => 'setAppSecret'
+            'appSecret' => 'setAppSecret',
+            'relatedDomainId' => 'setRelatedDomainId',
+            'relatedProjectId' => 'setRelatedProjectId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  APP的名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3 ~ 64个字符。 > 中文字符必须为UTF-8或者unicode编码。
     * remark  APP描述。字符长度不能大于255。 > 中文字符必须为UTF-8或者unicode编码。
-    * appKey  APP的key。支持英文，数字，“_”，“-”，且只能以英文或数字开头，8 ~ 200个字符。
+    * appKey  APP凭据的key。支持英文，数字，“_”，“-”，且只能以英文或数字开头，8 ~ 200个字符。
     * appSecret  密钥。支持英文，数字，“_”，“-”，“!”，“@”，“#”，“$”，“%”，且只能以英文或数字开头，8 ~ 128个字符。
+    * relatedDomainId  凭据关联的账号ID。
+    * relatedProjectId  凭据关联的项目ID。
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class AppCreate implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'remark' => 'getRemark',
             'appKey' => 'getAppKey',
-            'appSecret' => 'getAppSecret'
+            'appSecret' => 'getAppSecret',
+            'relatedDomainId' => 'getRelatedDomainId',
+            'relatedProjectId' => 'getRelatedProjectId'
     ];
 
     /**
@@ -181,6 +201,8 @@ class AppCreate implements ModelInterface, ArrayAccess
         $this->container['remark'] = isset($data['remark']) ? $data['remark'] : null;
         $this->container['appKey'] = isset($data['appKey']) ? $data['appKey'] : null;
         $this->container['appSecret'] = isset($data['appSecret']) ? $data['appSecret'] : null;
+        $this->container['relatedDomainId'] = isset($data['relatedDomainId']) ? $data['relatedDomainId'] : null;
+        $this->container['relatedProjectId'] = isset($data['relatedProjectId']) ? $data['relatedProjectId'] : null;
     }
 
     /**
@@ -194,6 +216,18 @@ class AppCreate implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
+            if (!is_null($this->container['relatedDomainId']) && (mb_strlen($this->container['relatedDomainId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'relatedDomainId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['relatedDomainId']) && (mb_strlen($this->container['relatedDomainId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'relatedDomainId', the character length must be bigger than or equal to 32.";
+            }
+            if (!is_null($this->container['relatedProjectId']) && (mb_strlen($this->container['relatedProjectId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'relatedProjectId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['relatedProjectId']) && (mb_strlen($this->container['relatedProjectId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'relatedProjectId', the character length must be bigger than or equal to 32.";
+            }
         return $invalidProperties;
     }
 
@@ -258,7 +292,7 @@ class AppCreate implements ModelInterface, ArrayAccess
 
     /**
     * Gets appKey
-    *  APP的key。支持英文，数字，“_”，“-”，且只能以英文或数字开头，8 ~ 200个字符。
+    *  APP凭据的key。支持英文，数字，“_”，“-”，且只能以英文或数字开头，8 ~ 200个字符。
     *
     * @return string|null
     */
@@ -270,7 +304,7 @@ class AppCreate implements ModelInterface, ArrayAccess
     /**
     * Sets appKey
     *
-    * @param string|null $appKey APP的key。支持英文，数字，“_”，“-”，且只能以英文或数字开头，8 ~ 200个字符。
+    * @param string|null $appKey APP凭据的key。支持英文，数字，“_”，“-”，且只能以英文或数字开头，8 ~ 200个字符。
     *
     * @return $this
     */
@@ -301,6 +335,54 @@ class AppCreate implements ModelInterface, ArrayAccess
     public function setAppSecret($appSecret)
     {
         $this->container['appSecret'] = $appSecret;
+        return $this;
+    }
+
+    /**
+    * Gets relatedDomainId
+    *  凭据关联的账号ID。
+    *
+    * @return string|null
+    */
+    public function getRelatedDomainId()
+    {
+        return $this->container['relatedDomainId'];
+    }
+
+    /**
+    * Sets relatedDomainId
+    *
+    * @param string|null $relatedDomainId 凭据关联的账号ID。
+    *
+    * @return $this
+    */
+    public function setRelatedDomainId($relatedDomainId)
+    {
+        $this->container['relatedDomainId'] = $relatedDomainId;
+        return $this;
+    }
+
+    /**
+    * Gets relatedProjectId
+    *  凭据关联的项目ID。
+    *
+    * @return string|null
+    */
+    public function getRelatedProjectId()
+    {
+        return $this->container['relatedProjectId'];
+    }
+
+    /**
+    * Sets relatedProjectId
+    *
+    * @param string|null $relatedProjectId 凭据关联的项目ID。
+    *
+    * @return $this
+    */
+    public function setRelatedProjectId($relatedProjectId)
+    {
+        $this->container['relatedProjectId'] = $relatedProjectId;
         return $this;
     }
 

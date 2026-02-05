@@ -27,9 +27,9 @@ class CheckitemModel implements ModelInterface, ArrayAccess
     * cloudServer  检查项所属云服务
     * description  对检查项的描述
     * level  表示该检查项的严重程度 informational：提示 low: 低危 medium：中危 high: 高危 fatal：致命
-    * method  表示该检查项的检查方式 0：自动项 3: 剧本流程/logic app
+    * method  表示该检查项的检查方式 0：手动 1：自动 3: 自动-剧本流程 4: 自动-企业主机安全 5：自动-配置审计服务
     * name  检查项的名称
-    * source  表示该检查项的来源 0：默认/default 2: 剧本流程/playbook
+    * source  表示该检查项的来源 0：自动 2: 自动-剧本流程 3: 手动 4: 自动-企业主机安全 5：自动-配置审计服务
     * workflowId  **参数解释**: 流程ID **约束限制**: 不涉及
     * specCheckitemList  检查项所属遵从包的信息
     *
@@ -59,9 +59,9 @@ class CheckitemModel implements ModelInterface, ArrayAccess
     * cloudServer  检查项所属云服务
     * description  对检查项的描述
     * level  表示该检查项的严重程度 informational：提示 low: 低危 medium：中危 high: 高危 fatal：致命
-    * method  表示该检查项的检查方式 0：自动项 3: 剧本流程/logic app
+    * method  表示该检查项的检查方式 0：手动 1：自动 3: 自动-剧本流程 4: 自动-企业主机安全 5：自动-配置审计服务
     * name  检查项的名称
-    * source  表示该检查项的来源 0：默认/default 2: 剧本流程/playbook
+    * source  表示该检查项的来源 0：自动 2: 自动-剧本流程 3: 手动 4: 自动-企业主机安全 5：自动-配置审计服务
     * workflowId  **参数解释**: 流程ID **约束限制**: 不涉及
     * specCheckitemList  检查项所属遵从包的信息
     *
@@ -112,9 +112,9 @@ class CheckitemModel implements ModelInterface, ArrayAccess
     * cloudServer  检查项所属云服务
     * description  对检查项的描述
     * level  表示该检查项的严重程度 informational：提示 low: 低危 medium：中危 high: 高危 fatal：致命
-    * method  表示该检查项的检查方式 0：自动项 3: 剧本流程/logic app
+    * method  表示该检查项的检查方式 0：手动 1：自动 3: 自动-剧本流程 4: 自动-企业主机安全 5：自动-配置审计服务
     * name  检查项的名称
-    * source  表示该检查项的来源 0：默认/default 2: 剧本流程/playbook
+    * source  表示该检查项的来源 0：自动 2: 自动-剧本流程 3: 手动 4: 自动-企业主机安全 5：自动-配置审计服务
     * workflowId  **参数解释**: 流程ID **约束限制**: 不涉及
     * specCheckitemList  检查项所属遵从包的信息
     *
@@ -144,9 +144,9 @@ class CheckitemModel implements ModelInterface, ArrayAccess
     * cloudServer  检查项所属云服务
     * description  对检查项的描述
     * level  表示该检查项的严重程度 informational：提示 low: 低危 medium：中危 high: 高危 fatal：致命
-    * method  表示该检查项的检查方式 0：自动项 3: 剧本流程/logic app
+    * method  表示该检查项的检查方式 0：手动 1：自动 3: 自动-剧本流程 4: 自动-企业主机安全 5：自动-配置审计服务
     * name  检查项的名称
-    * source  表示该检查项的来源 0：默认/default 2: 剧本流程/playbook
+    * source  表示该检查项的来源 0：自动 2: 自动-剧本流程 3: 手动 4: 自动-企业主机安全 5：自动-配置审计服务
     * workflowId  **参数解释**: 流程ID **约束限制**: 不涉及
     * specCheckitemList  检查项所属遵从包的信息
     *
@@ -176,9 +176,9 @@ class CheckitemModel implements ModelInterface, ArrayAccess
     * cloudServer  检查项所属云服务
     * description  对检查项的描述
     * level  表示该检查项的严重程度 informational：提示 low: 低危 medium：中危 high: 高危 fatal：致命
-    * method  表示该检查项的检查方式 0：自动项 3: 剧本流程/logic app
+    * method  表示该检查项的检查方式 0：手动 1：自动 3: 自动-剧本流程 4: 自动-企业主机安全 5：自动-配置审计服务
     * name  检查项的名称
-    * source  表示该检查项的来源 0：默认/default 2: 剧本流程/playbook
+    * source  表示该检查项的来源 0：自动 2: 自动-剧本流程 3: 手动 4: 自动-企业主机安全 5：自动-配置审计服务
     * workflowId  **参数解释**: 流程ID **约束限制**: 不涉及
     * specCheckitemList  检查项所属遵从包的信息
     *
@@ -544,7 +544,7 @@ class CheckitemModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets method
-    *  表示该检查项的检查方式 0：自动项 3: 剧本流程/logic app
+    *  表示该检查项的检查方式 0：手动 1：自动 3: 自动-剧本流程 4: 自动-企业主机安全 5：自动-配置审计服务
     *
     * @return int
     */
@@ -556,7 +556,7 @@ class CheckitemModel implements ModelInterface, ArrayAccess
     /**
     * Sets method
     *
-    * @param int $method 表示该检查项的检查方式 0：自动项 3: 剧本流程/logic app
+    * @param int $method 表示该检查项的检查方式 0：手动 1：自动 3: 自动-剧本流程 4: 自动-企业主机安全 5：自动-配置审计服务
     *
     * @return $this
     */
@@ -592,7 +592,7 @@ class CheckitemModel implements ModelInterface, ArrayAccess
 
     /**
     * Gets source
-    *  表示该检查项的来源 0：默认/default 2: 剧本流程/playbook
+    *  表示该检查项的来源 0：自动 2: 自动-剧本流程 3: 手动 4: 自动-企业主机安全 5：自动-配置审计服务
     *
     * @return int|null
     */
@@ -604,7 +604,7 @@ class CheckitemModel implements ModelInterface, ArrayAccess
     /**
     * Sets source
     *
-    * @param int|null $source 表示该检查项的来源 0：默认/default 2: 剧本流程/playbook
+    * @param int|null $source 表示该检查项的来源 0：自动 2: 自动-剧本流程 3: 手动 4: 自动-企业主机安全 5：自动-配置审计服务
     *
     * @return $this
     */

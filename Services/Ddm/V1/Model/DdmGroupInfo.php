@@ -20,16 +20,16 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  组ID。
-    * name  名称。
-    * role  角色。
-    * endpoint  组ip。
-    * ipv6Endpoint  ipv6。
-    * nodeCount  节点数量。
-    * loadBalance  负载均衡。
-    * isDefaultGroup  是否默认组。
-    * extendMap  其他信息。
-    * nodes  节点信息。
+    * id  **参数解释**：  组ID。  **参数范围**：  不涉及。
+    * name  **参数解释**：  名称。  **参数范围**：  不涉及。
+    * role  **参数解释**：  角色。  **参数范围**：  不涉及。
+    * endpoint  **参数解释**：  组ip。  **参数范围**：  不涉及。
+    * ipv6Endpoint  **参数解释**：  ipv6。  **参数范围**：  不涉及。
+    * nodeCount  **参数解释**：  节点数量。  **参数范围**：  不涉及。
+    * loadBalance  **参数解释**：  负载均衡。  **参数范围**：  不涉及。
+    * isDefaultGroup  **参数解释**：  是否默认组。  **参数范围**：  不涉及。
+    * extendMap  **参数解释**：  其他信息。  **参数范围**：  不涉及。
+    * nodes  **参数解释**：  节点信息。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  组ID。
-    * name  名称。
-    * role  角色。
-    * endpoint  组ip。
-    * ipv6Endpoint  ipv6。
-    * nodeCount  节点数量。
-    * loadBalance  负载均衡。
-    * isDefaultGroup  是否默认组。
-    * extendMap  其他信息。
-    * nodes  节点信息。
+    * id  **参数解释**：  组ID。  **参数范围**：  不涉及。
+    * name  **参数解释**：  名称。  **参数范围**：  不涉及。
+    * role  **参数解释**：  角色。  **参数范围**：  不涉及。
+    * endpoint  **参数解释**：  组ip。  **参数范围**：  不涉及。
+    * ipv6Endpoint  **参数解释**：  ipv6。  **参数范围**：  不涉及。
+    * nodeCount  **参数解释**：  节点数量。  **参数范围**：  不涉及。
+    * loadBalance  **参数解释**：  负载均衡。  **参数范围**：  不涉及。
+    * isDefaultGroup  **参数解释**：  是否默认组。  **参数范围**：  不涉及。
+    * extendMap  **参数解释**：  其他信息。  **参数范围**：  不涉及。
+    * nodes  **参数解释**：  节点信息。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  组ID。
-    * name  名称。
-    * role  角色。
-    * endpoint  组ip。
-    * ipv6Endpoint  ipv6。
-    * nodeCount  节点数量。
-    * loadBalance  负载均衡。
-    * isDefaultGroup  是否默认组。
-    * extendMap  其他信息。
-    * nodes  节点信息。
+    * id  **参数解释**：  组ID。  **参数范围**：  不涉及。
+    * name  **参数解释**：  名称。  **参数范围**：  不涉及。
+    * role  **参数解释**：  角色。  **参数范围**：  不涉及。
+    * endpoint  **参数解释**：  组ip。  **参数范围**：  不涉及。
+    * ipv6Endpoint  **参数解释**：  ipv6。  **参数范围**：  不涉及。
+    * nodeCount  **参数解释**：  节点数量。  **参数范围**：  不涉及。
+    * loadBalance  **参数解释**：  负载均衡。  **参数范围**：  不涉及。
+    * isDefaultGroup  **参数解释**：  是否默认组。  **参数范围**：  不涉及。
+    * extendMap  **参数解释**：  其他信息。  **参数范围**：  不涉及。
+    * nodes  **参数解释**：  节点信息。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  组ID。
-    * name  名称。
-    * role  角色。
-    * endpoint  组ip。
-    * ipv6Endpoint  ipv6。
-    * nodeCount  节点数量。
-    * loadBalance  负载均衡。
-    * isDefaultGroup  是否默认组。
-    * extendMap  其他信息。
-    * nodes  节点信息。
+    * id  **参数解释**：  组ID。  **参数范围**：  不涉及。
+    * name  **参数解释**：  名称。  **参数范围**：  不涉及。
+    * role  **参数解释**：  角色。  **参数范围**：  不涉及。
+    * endpoint  **参数解释**：  组ip。  **参数范围**：  不涉及。
+    * ipv6Endpoint  **参数解释**：  ipv6。  **参数范围**：  不涉及。
+    * nodeCount  **参数解释**：  节点数量。  **参数范围**：  不涉及。
+    * loadBalance  **参数解释**：  负载均衡。  **参数范围**：  不涉及。
+    * isDefaultGroup  **参数解释**：  是否默认组。  **参数范围**：  不涉及。
+    * extendMap  **参数解释**：  其他信息。  **参数范围**：  不涉及。
+    * nodes  **参数解释**：  节点信息。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  组ID。
-    * name  名称。
-    * role  角色。
-    * endpoint  组ip。
-    * ipv6Endpoint  ipv6。
-    * nodeCount  节点数量。
-    * loadBalance  负载均衡。
-    * isDefaultGroup  是否默认组。
-    * extendMap  其他信息。
-    * nodes  节点信息。
+    * id  **参数解释**：  组ID。  **参数范围**：  不涉及。
+    * name  **参数解释**：  名称。  **参数范围**：  不涉及。
+    * role  **参数解释**：  角色。  **参数范围**：  不涉及。
+    * endpoint  **参数解释**：  组ip。  **参数范围**：  不涉及。
+    * ipv6Endpoint  **参数解释**：  ipv6。  **参数范围**：  不涉及。
+    * nodeCount  **参数解释**：  节点数量。  **参数范围**：  不涉及。
+    * loadBalance  **参数解释**：  负载均衡。  **参数范围**：  不涉及。
+    * isDefaultGroup  **参数解释**：  是否默认组。  **参数范围**：  不涉及。
+    * extendMap  **参数解释**：  其他信息。  **参数范围**：  不涉及。
+    * nodes  **参数解释**：  节点信息。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -309,7 +309,7 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  组ID。
+    *  **参数解释**：  组ID。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -321,7 +321,7 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 组ID。
+    * @param string|null $id **参数解释**：  组ID。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -333,7 +333,7 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称。
+    *  **参数解释**：  名称。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -345,7 +345,7 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 名称。
+    * @param string|null $name **参数解释**：  名称。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -357,7 +357,7 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets role
-    *  角色。
+    *  **参数解释**：  角色。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -369,7 +369,7 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets role
     *
-    * @param string|null $role 角色。
+    * @param string|null $role **参数解释**：  角色。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -381,7 +381,7 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpoint
-    *  组ip。
+    *  **参数解释**：  组ip。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -393,7 +393,7 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets endpoint
     *
-    * @param string|null $endpoint 组ip。
+    * @param string|null $endpoint **参数解释**：  组ip。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -405,7 +405,7 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6Endpoint
-    *  ipv6。
+    *  **参数解释**：  ipv6。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -417,7 +417,7 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6Endpoint
     *
-    * @param string|null $ipv6Endpoint ipv6。
+    * @param string|null $ipv6Endpoint **参数解释**：  ipv6。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -429,7 +429,7 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeCount
-    *  节点数量。
+    *  **参数解释**：  节点数量。  **参数范围**：  不涉及。
     *
     * @return int|null
     */
@@ -441,7 +441,7 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nodeCount
     *
-    * @param int|null $nodeCount 节点数量。
+    * @param int|null $nodeCount **参数解释**：  节点数量。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -453,7 +453,7 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets loadBalance
-    *  负载均衡。
+    *  **参数解释**：  负载均衡。  **参数范围**：  不涉及。
     *
     * @return bool|null
     */
@@ -465,7 +465,7 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets loadBalance
     *
-    * @param bool|null $loadBalance 负载均衡。
+    * @param bool|null $loadBalance **参数解释**：  负载均衡。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -477,7 +477,7 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isDefaultGroup
-    *  是否默认组。
+    *  **参数解释**：  是否默认组。  **参数范围**：  不涉及。
     *
     * @return bool|null
     */
@@ -489,7 +489,7 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isDefaultGroup
     *
-    * @param bool|null $isDefaultGroup 是否默认组。
+    * @param bool|null $isDefaultGroup **参数解释**：  是否默认组。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -501,7 +501,7 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendMap
-    *  其他信息。
+    *  **参数解释**：  其他信息。  **参数范围**：  不涉及。
     *
     * @return map[string,string]|null
     */
@@ -513,7 +513,7 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets extendMap
     *
-    * @param map[string,string]|null $extendMap 其他信息。
+    * @param map[string,string]|null $extendMap **参数解释**：  其他信息。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -525,7 +525,7 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodes
-    *  节点信息。
+    *  **参数解释**：  节点信息。  **参数范围**：  不涉及。
     *
     * @return \HuaweiCloud\SDK\Ddm\V1\Model\DdmNodeInfo[]|null
     */
@@ -537,7 +537,7 @@ class DdmGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nodes
     *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\DdmNodeInfo[]|null $nodes 节点信息。
+    * @param \HuaweiCloud\SDK\Ddm\V1\Model\DdmNodeInfo[]|null $nodes **参数解释**：  节点信息。  **参数范围**：  不涉及。
     *
     * @return $this
     */

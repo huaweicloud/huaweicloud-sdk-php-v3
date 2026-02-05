@@ -20,13 +20,13 @@ class ImportApiDefinitionsV2RequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isCreateGroup  是否创建新分组
-    * groupId  API分组编号，当is_create_group=false时为必填
+    * isCreateGroup  是否创建新分组。
+    * groupId  API分组编号，当is_create_group=false时为必填。
     * extendMode  扩展信息导入模式 - merge：当扩展信息定义冲突时，merge保留原有扩展信息 - override：当扩展信息定义冲突时，override会覆盖原有扩展信息
-    * simpleMode  是否开启简易导入模式
-    * mockMode  是否开启Mock后端
+    * simpleMode  是否开启简易导入模式。
+    * mockMode  是否开启Mock后端。
     * apiMode  导入模式 - merge：当API信息定义冲突时，merge保留原有API信息 - override：当API信息定义冲突时，override会覆盖原有API信息
-    * fileName  导入Api的请求体，json或yaml格式的文件
+    * fileName  导入Api的请求体，json或yaml或yml格式的文件。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class ImportApiDefinitionsV2RequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isCreateGroup  是否创建新分组
-    * groupId  API分组编号，当is_create_group=false时为必填
+    * isCreateGroup  是否创建新分组。
+    * groupId  API分组编号，当is_create_group=false时为必填。
     * extendMode  扩展信息导入模式 - merge：当扩展信息定义冲突时，merge保留原有扩展信息 - override：当扩展信息定义冲突时，override会覆盖原有扩展信息
-    * simpleMode  是否开启简易导入模式
-    * mockMode  是否开启Mock后端
+    * simpleMode  是否开启简易导入模式。
+    * mockMode  是否开启Mock后端。
     * apiMode  导入模式 - merge：当API信息定义冲突时，merge保留原有API信息 - override：当API信息定义冲突时，override会覆盖原有API信息
-    * fileName  导入Api的请求体，json或yaml格式的文件
+    * fileName  导入Api的请求体，json或yaml或yml格式的文件。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class ImportApiDefinitionsV2RequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isCreateGroup  是否创建新分组
-    * groupId  API分组编号，当is_create_group=false时为必填
+    * isCreateGroup  是否创建新分组。
+    * groupId  API分组编号，当is_create_group=false时为必填。
     * extendMode  扩展信息导入模式 - merge：当扩展信息定义冲突时，merge保留原有扩展信息 - override：当扩展信息定义冲突时，override会覆盖原有扩展信息
-    * simpleMode  是否开启简易导入模式
-    * mockMode  是否开启Mock后端
+    * simpleMode  是否开启简易导入模式。
+    * mockMode  是否开启Mock后端。
     * apiMode  导入模式 - merge：当API信息定义冲突时，merge保留原有API信息 - override：当API信息定义冲突时，override会覆盖原有API信息
-    * fileName  导入Api的请求体，json或yaml格式的文件
+    * fileName  导入Api的请求体，json或yaml或yml格式的文件。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class ImportApiDefinitionsV2RequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isCreateGroup  是否创建新分组
-    * groupId  API分组编号，当is_create_group=false时为必填
+    * isCreateGroup  是否创建新分组。
+    * groupId  API分组编号，当is_create_group=false时为必填。
     * extendMode  扩展信息导入模式 - merge：当扩展信息定义冲突时，merge保留原有扩展信息 - override：当扩展信息定义冲突时，override会覆盖原有扩展信息
-    * simpleMode  是否开启简易导入模式
-    * mockMode  是否开启Mock后端
+    * simpleMode  是否开启简易导入模式。
+    * mockMode  是否开启Mock后端。
     * apiMode  导入模式 - merge：当API信息定义冲突时，merge保留原有API信息 - override：当API信息定义冲突时，override会覆盖原有API信息
-    * fileName  导入Api的请求体，json或yaml格式的文件
+    * fileName  导入Api的请求体，json或yaml或yml格式的文件。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class ImportApiDefinitionsV2RequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isCreateGroup  是否创建新分组
-    * groupId  API分组编号，当is_create_group=false时为必填
+    * isCreateGroup  是否创建新分组。
+    * groupId  API分组编号，当is_create_group=false时为必填。
     * extendMode  扩展信息导入模式 - merge：当扩展信息定义冲突时，merge保留原有扩展信息 - override：当扩展信息定义冲突时，override会覆盖原有扩展信息
-    * simpleMode  是否开启简易导入模式
-    * mockMode  是否开启Mock后端
+    * simpleMode  是否开启简易导入模式。
+    * mockMode  是否开启Mock后端。
     * apiMode  导入模式 - merge：当API信息定义冲突时，merge保留原有API信息 - override：当API信息定义冲突时，override会覆盖原有API信息
-    * fileName  导入Api的请求体，json或yaml格式的文件
+    * fileName  导入Api的请求体，json或yaml或yml格式的文件。
     *
     * @var string[]
     */
@@ -289,7 +289,7 @@ class ImportApiDefinitionsV2RequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets isCreateGroup
-    *  是否创建新分组
+    *  是否创建新分组。
     *
     * @return bool|null
     */
@@ -301,7 +301,7 @@ class ImportApiDefinitionsV2RequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets isCreateGroup
     *
-    * @param bool|null $isCreateGroup 是否创建新分组
+    * @param bool|null $isCreateGroup 是否创建新分组。
     *
     * @return $this
     */
@@ -313,7 +313,7 @@ class ImportApiDefinitionsV2RequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  API分组编号，当is_create_group=false时为必填
+    *  API分组编号，当is_create_group=false时为必填。
     *
     * @return string|null
     */
@@ -325,7 +325,7 @@ class ImportApiDefinitionsV2RequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId API分组编号，当is_create_group=false时为必填
+    * @param string|null $groupId API分组编号，当is_create_group=false时为必填。
     *
     * @return $this
     */
@@ -361,7 +361,7 @@ class ImportApiDefinitionsV2RequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets simpleMode
-    *  是否开启简易导入模式
+    *  是否开启简易导入模式。
     *
     * @return bool|null
     */
@@ -373,7 +373,7 @@ class ImportApiDefinitionsV2RequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets simpleMode
     *
-    * @param bool|null $simpleMode 是否开启简易导入模式
+    * @param bool|null $simpleMode 是否开启简易导入模式。
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class ImportApiDefinitionsV2RequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets mockMode
-    *  是否开启Mock后端
+    *  是否开启Mock后端。
     *
     * @return bool|null
     */
@@ -397,7 +397,7 @@ class ImportApiDefinitionsV2RequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets mockMode
     *
-    * @param bool|null $mockMode 是否开启Mock后端
+    * @param bool|null $mockMode 是否开启Mock后端。
     *
     * @return $this
     */
@@ -433,7 +433,7 @@ class ImportApiDefinitionsV2RequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileName
-    *  导入Api的请求体，json或yaml格式的文件
+    *  导入Api的请求体，json或yaml或yml格式的文件。
     *
     * @return \SplFileObject
     */
@@ -445,7 +445,7 @@ class ImportApiDefinitionsV2RequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets fileName
     *
-    * @param \SplFileObject $fileName 导入Api的请求体，json或yaml格式的文件
+    * @param \SplFileObject $fileName 导入Api的请求体，json或yaml或yml格式的文件。
     *
     * @return $this
     */

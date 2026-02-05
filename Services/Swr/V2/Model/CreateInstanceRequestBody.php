@@ -20,7 +20,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  企业仓库实例名称，长度范围为3-64个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
+    * name  企业仓库实例名称，长度范围为3-48个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
     * description  企业仓库实例描述
     * spec  企业仓库实例规格，目前支持企业版(swr.ee.professional)
     * vpcId  用户虚拟私有云ID
@@ -32,7 +32,6 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * obsEncrypt  obs桶是否开启加密, 如果开启了加密，则可以根据encrypt_type指定加密算法
     * encryptType  obs桶加密类型，空值使用AES-256加密算法, gm为国密加密算法
     * obsBucketName  指定obs桶的名称，当指定自定义obs桶之后，则无需对obs_encrypt、encrypt_type进行传值。
-    * obsEncKmsKeyId  KMS的密钥ID，用于对自动创建的OBS桶进行加密。密钥的加密算法支持AES-256和SM4。指定该字段时必须开启OBS桶加密开关，且不能指定自定义OBS桶。
     *
     * @var string[]
     */
@@ -48,13 +47,12 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'resourceTags' => '\HuaweiCloud\SDK\Swr\V2\Model\CreateInstanceRequestBodyResourceTags[]',
             'obsEncrypt' => 'bool',
             'encryptType' => 'string',
-            'obsBucketName' => 'string',
-            'obsEncKmsKeyId' => 'string'
+            'obsBucketName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  企业仓库实例名称，长度范围为3-64个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
+    * name  企业仓库实例名称，长度范围为3-48个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
     * description  企业仓库实例描述
     * spec  企业仓库实例规格，目前支持企业版(swr.ee.professional)
     * vpcId  用户虚拟私有云ID
@@ -66,7 +64,6 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * obsEncrypt  obs桶是否开启加密, 如果开启了加密，则可以根据encrypt_type指定加密算法
     * encryptType  obs桶加密类型，空值使用AES-256加密算法, gm为国密加密算法
     * obsBucketName  指定obs桶的名称，当指定自定义obs桶之后，则无需对obs_encrypt、encrypt_type进行传值。
-    * obsEncKmsKeyId  KMS的密钥ID，用于对自动创建的OBS桶进行加密。密钥的加密算法支持AES-256和SM4。指定该字段时必须开启OBS桶加密开关，且不能指定自定义OBS桶。
     *
     * @var string[]
     */
@@ -82,8 +79,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
         'resourceTags' => null,
         'obsEncrypt' => null,
         'encryptType' => null,
-        'obsBucketName' => null,
-        'obsEncKmsKeyId' => null
+        'obsBucketName' => null
     ];
 
     /**
@@ -109,7 +105,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  企业仓库实例名称，长度范围为3-64个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
+    * name  企业仓库实例名称，长度范围为3-48个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
     * description  企业仓库实例描述
     * spec  企业仓库实例规格，目前支持企业版(swr.ee.professional)
     * vpcId  用户虚拟私有云ID
@@ -121,7 +117,6 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * obsEncrypt  obs桶是否开启加密, 如果开启了加密，则可以根据encrypt_type指定加密算法
     * encryptType  obs桶加密类型，空值使用AES-256加密算法, gm为国密加密算法
     * obsBucketName  指定obs桶的名称，当指定自定义obs桶之后，则无需对obs_encrypt、encrypt_type进行传值。
-    * obsEncKmsKeyId  KMS的密钥ID，用于对自动创建的OBS桶进行加密。密钥的加密算法支持AES-256和SM4。指定该字段时必须开启OBS桶加密开关，且不能指定自定义OBS桶。
     *
     * @var string[]
     */
@@ -137,13 +132,12 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'resourceTags' => 'resource_tags',
             'obsEncrypt' => 'obs_encrypt',
             'encryptType' => 'encrypt_type',
-            'obsBucketName' => 'obs_bucket_name',
-            'obsEncKmsKeyId' => 'obs_enc_kms_key_id'
+            'obsBucketName' => 'obs_bucket_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  企业仓库实例名称，长度范围为3-64个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
+    * name  企业仓库实例名称，长度范围为3-48个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
     * description  企业仓库实例描述
     * spec  企业仓库实例规格，目前支持企业版(swr.ee.professional)
     * vpcId  用户虚拟私有云ID
@@ -155,7 +149,6 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * obsEncrypt  obs桶是否开启加密, 如果开启了加密，则可以根据encrypt_type指定加密算法
     * encryptType  obs桶加密类型，空值使用AES-256加密算法, gm为国密加密算法
     * obsBucketName  指定obs桶的名称，当指定自定义obs桶之后，则无需对obs_encrypt、encrypt_type进行传值。
-    * obsEncKmsKeyId  KMS的密钥ID，用于对自动创建的OBS桶进行加密。密钥的加密算法支持AES-256和SM4。指定该字段时必须开启OBS桶加密开关，且不能指定自定义OBS桶。
     *
     * @var string[]
     */
@@ -171,13 +164,12 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'resourceTags' => 'setResourceTags',
             'obsEncrypt' => 'setObsEncrypt',
             'encryptType' => 'setEncryptType',
-            'obsBucketName' => 'setObsBucketName',
-            'obsEncKmsKeyId' => 'setObsEncKmsKeyId'
+            'obsBucketName' => 'setObsBucketName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  企业仓库实例名称，长度范围为3-64个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
+    * name  企业仓库实例名称，长度范围为3-48个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
     * description  企业仓库实例描述
     * spec  企业仓库实例规格，目前支持企业版(swr.ee.professional)
     * vpcId  用户虚拟私有云ID
@@ -189,7 +181,6 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * obsEncrypt  obs桶是否开启加密, 如果开启了加密，则可以根据encrypt_type指定加密算法
     * encryptType  obs桶加密类型，空值使用AES-256加密算法, gm为国密加密算法
     * obsBucketName  指定obs桶的名称，当指定自定义obs桶之后，则无需对obs_encrypt、encrypt_type进行传值。
-    * obsEncKmsKeyId  KMS的密钥ID，用于对自动创建的OBS桶进行加密。密钥的加密算法支持AES-256和SM4。指定该字段时必须开启OBS桶加密开关，且不能指定自定义OBS桶。
     *
     * @var string[]
     */
@@ -205,8 +196,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'resourceTags' => 'getResourceTags',
             'obsEncrypt' => 'getObsEncrypt',
             'encryptType' => 'getEncryptType',
-            'obsBucketName' => 'getObsBucketName',
-            'obsEncKmsKeyId' => 'getObsEncKmsKeyId'
+            'obsBucketName' => 'getObsBucketName'
     ];
 
     /**
@@ -320,7 +310,6 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
         $this->container['obsEncrypt'] = isset($data['obsEncrypt']) ? $data['obsEncrypt'] : null;
         $this->container['encryptType'] = isset($data['encryptType']) ? $data['encryptType'] : null;
         $this->container['obsBucketName'] = isset($data['obsBucketName']) ? $data['obsBucketName'] : null;
-        $this->container['obsEncKmsKeyId'] = isset($data['obsEncKmsKeyId']) ? $data['obsEncKmsKeyId'] : null;
     }
 
     /**
@@ -392,7 +381,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  企业仓库实例名称，长度范围为3-64个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
+    *  企业仓库实例名称，长度范围为3-48个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
     *
     * @return string
     */
@@ -404,7 +393,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 企业仓库实例名称，长度范围为3-64个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
+    * @param string $name 企业仓库实例名称，长度范围为3-48个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾，中划线不能连续。
     *
     * @return $this
     */
@@ -675,30 +664,6 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     public function setObsBucketName($obsBucketName)
     {
         $this->container['obsBucketName'] = $obsBucketName;
-        return $this;
-    }
-
-    /**
-    * Gets obsEncKmsKeyId
-    *  KMS的密钥ID，用于对自动创建的OBS桶进行加密。密钥的加密算法支持AES-256和SM4。指定该字段时必须开启OBS桶加密开关，且不能指定自定义OBS桶。
-    *
-    * @return string|null
-    */
-    public function getObsEncKmsKeyId()
-    {
-        return $this->container['obsEncKmsKeyId'];
-    }
-
-    /**
-    * Sets obsEncKmsKeyId
-    *
-    * @param string|null $obsEncKmsKeyId KMS的密钥ID，用于对自动创建的OBS桶进行加密。密钥的加密算法支持AES-256和SM4。指定该字段时必须开启OBS桶加密开关，且不能指定自定义OBS桶。
-    *
-    * @return $this
-    */
-    public function setObsEncKmsKeyId($obsEncKmsKeyId)
-    {
-        $this->container['obsEncKmsKeyId'] = $obsEncKmsKeyId;
         return $this;
     }
 

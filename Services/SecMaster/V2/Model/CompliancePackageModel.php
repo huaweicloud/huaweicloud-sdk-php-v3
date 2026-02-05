@@ -320,13 +320,10 @@ class CompliancePackageModel implements ModelInterface, ArrayAccess
             if (!is_null($this->container['owner']) && (mb_strlen($this->container['owner']) < 0)) {
                 $invalidProperties[] = "invalid value for 'owner', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['description'] === null) {
-            $invalidProperties[] = "'description' can't be null";
-        }
-            if ((mb_strlen($this->container['description']) > 4096)) {
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 4096)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 4096.";
             }
-            if ((mb_strlen($this->container['description']) < 0)) {
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['classify']) && (mb_strlen($this->container['classify']) > 64)) {
@@ -488,7 +485,7 @@ class CompliancePackageModel implements ModelInterface, ArrayAccess
     * Gets description
     *  对遵从包的描述
     *
-    * @return string
+    * @return string|null
     */
     public function getDescription()
     {
@@ -498,7 +495,7 @@ class CompliancePackageModel implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 对遵从包的描述
+    * @param string|null $description 对遵从包的描述
     *
     * @return $this
     */

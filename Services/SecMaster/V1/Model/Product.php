@@ -22,7 +22,7 @@ class Product implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * resourceType  资源类型
     * resourceSpecCode  资源规格编码
-    * resourceSize  订购数量
+    * resourceSize  订阅数量
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class Product implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * resourceType  资源类型
     * resourceSpecCode  资源规格编码
-    * resourceSize  订购数量
+    * resourceSize  订阅数量
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class Product implements ModelInterface, ArrayAccess
     * and the value is the original name
     * resourceType  资源类型
     * resourceSpecCode  资源规格编码
-    * resourceSize  订购数量
+    * resourceSize  订阅数量
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class Product implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceType  资源类型
     * resourceSpecCode  资源规格编码
-    * resourceSize  订购数量
+    * resourceSize  订阅数量
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class Product implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * resourceType  资源类型
     * resourceSpecCode  资源规格编码
-    * resourceSize  订购数量
+    * resourceSize  订阅数量
     *
     * @var string[]
     */
@@ -271,7 +271,7 @@ class Product implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSize
-    *  订购数量
+    *  订阅数量
     *
     * @return int
     */
@@ -283,7 +283,7 @@ class Product implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSize
     *
-    * @param int $resourceSize 订购数量
+    * @param int $resourceSize 订阅数量
     *
     * @return $this
     */

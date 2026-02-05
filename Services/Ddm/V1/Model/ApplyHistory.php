@@ -20,10 +20,10 @@ class ApplyHistory implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * targetId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * targetId  **参数解释**：  参数组ID。  **参数范围**：  不涉及。
     * targetName  **参数解释**：  参数组的名称。  **参数范围**：  不涉及。
     * applyResult  **参数解释**：  应用结果。  **参数范围**：  不涉及。
-    * appliedAt  **参数解释**：  应用日期。  格式为yyyy-mm-dd Thh:mm:ssZ。  其中，T指定某个时间的开始；Z指示 UTC 时间。  **参数范围**：  不涉及。
+    * appliedAt  **参数解释**：  应用日期。  **参数范围**：  不涉及。
     * errorCode  **参数解释**：  错误码。  **参数范围**：  不涉及。
     *
     * @var string[]
@@ -38,10 +38,10 @@ class ApplyHistory implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * targetId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * targetId  **参数解释**：  参数组ID。  **参数范围**：  不涉及。
     * targetName  **参数解释**：  参数组的名称。  **参数范围**：  不涉及。
     * applyResult  **参数解释**：  应用结果。  **参数范围**：  不涉及。
-    * appliedAt  **参数解释**：  应用日期。  格式为yyyy-mm-dd Thh:mm:ssZ。  其中，T指定某个时间的开始；Z指示 UTC 时间。  **参数范围**：  不涉及。
+    * appliedAt  **参数解释**：  应用日期。  **参数范围**：  不涉及。
     * errorCode  **参数解释**：  错误码。  **参数范围**：  不涉及。
     *
     * @var string[]
@@ -77,10 +77,10 @@ class ApplyHistory implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * targetId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * targetId  **参数解释**：  参数组ID。  **参数范围**：  不涉及。
     * targetName  **参数解释**：  参数组的名称。  **参数范围**：  不涉及。
     * applyResult  **参数解释**：  应用结果。  **参数范围**：  不涉及。
-    * appliedAt  **参数解释**：  应用日期。  格式为yyyy-mm-dd Thh:mm:ssZ。  其中，T指定某个时间的开始；Z指示 UTC 时间。  **参数范围**：  不涉及。
+    * appliedAt  **参数解释**：  应用日期。  **参数范围**：  不涉及。
     * errorCode  **参数解释**：  错误码。  **参数范围**：  不涉及。
     *
     * @var string[]
@@ -95,10 +95,10 @@ class ApplyHistory implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * targetId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * targetId  **参数解释**：  参数组ID。  **参数范围**：  不涉及。
     * targetName  **参数解释**：  参数组的名称。  **参数范围**：  不涉及。
     * applyResult  **参数解释**：  应用结果。  **参数范围**：  不涉及。
-    * appliedAt  **参数解释**：  应用日期。  格式为yyyy-mm-dd Thh:mm:ssZ。  其中，T指定某个时间的开始；Z指示 UTC 时间。  **参数范围**：  不涉及。
+    * appliedAt  **参数解释**：  应用日期。  **参数范围**：  不涉及。
     * errorCode  **参数解释**：  错误码。  **参数范围**：  不涉及。
     *
     * @var string[]
@@ -113,10 +113,10 @@ class ApplyHistory implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * targetId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * targetId  **参数解释**：  参数组ID。  **参数范围**：  不涉及。
     * targetName  **参数解释**：  参数组的名称。  **参数范围**：  不涉及。
     * applyResult  **参数解释**：  应用结果。  **参数范围**：  不涉及。
-    * appliedAt  **参数解释**：  应用日期。  格式为yyyy-mm-dd Thh:mm:ssZ。  其中，T指定某个时间的开始；Z指示 UTC 时间。  **参数范围**：  不涉及。
+    * appliedAt  **参数解释**：  应用日期。  **参数范围**：  不涉及。
     * errorCode  **参数解释**：  错误码。  **参数范围**：  不涉及。
     *
     * @var string[]
@@ -242,7 +242,7 @@ class ApplyHistory implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetId
-    *  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    *  **参数解释**：  参数组ID。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class ApplyHistory implements ModelInterface, ArrayAccess
     /**
     * Sets targetId
     *
-    * @param string|null $targetId **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * @param string|null $targetId **参数解释**：  参数组ID。  **参数范围**：  不涉及。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class ApplyHistory implements ModelInterface, ArrayAccess
 
     /**
     * Gets appliedAt
-    *  **参数解释**：  应用日期。  格式为yyyy-mm-dd Thh:mm:ssZ。  其中，T指定某个时间的开始；Z指示 UTC 时间。  **参数范围**：  不涉及。
+    *  **参数解释**：  应用日期。  **参数范围**：  不涉及。
     *
     * @return \DateTime|null
     */
@@ -326,7 +326,7 @@ class ApplyHistory implements ModelInterface, ArrayAccess
     /**
     * Sets appliedAt
     *
-    * @param \DateTime|null $appliedAt **参数解释**：  应用日期。  格式为yyyy-mm-dd Thh:mm:ssZ。  其中，T指定某个时间的开始；Z指示 UTC 时间。  **参数范围**：  不涉及。
+    * @param \DateTime|null $appliedAt **参数解释**：  应用日期。  **参数范围**：  不涉及。
     *
     * @return $this
     */

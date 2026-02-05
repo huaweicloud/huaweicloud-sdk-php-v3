@@ -26,7 +26,7 @@ class SignApiBindingInfo implements ModelInterface, ArrayAccess
     * bindingTime  绑定时间
     * envId  API所属环境的编号
     * envName  API所属环境的名称
-    * apiType  API类型
+    * apiType  API类型。 - 1：公有API - 2：私有API
     * apiName  API名称
     * id  绑定关系的ID
     * apiRemark  API描述
@@ -68,7 +68,7 @@ class SignApiBindingInfo implements ModelInterface, ArrayAccess
     * bindingTime  绑定时间
     * envId  API所属环境的编号
     * envName  API所属环境的名称
-    * apiType  API类型
+    * apiType  API类型。 - 1：公有API - 2：私有API
     * apiName  API名称
     * id  绑定关系的ID
     * apiRemark  API描述
@@ -131,7 +131,7 @@ class SignApiBindingInfo implements ModelInterface, ArrayAccess
     * bindingTime  绑定时间
     * envId  API所属环境的编号
     * envName  API所属环境的名称
-    * apiType  API类型
+    * apiType  API类型。 - 1：公有API - 2：私有API
     * apiName  API名称
     * id  绑定关系的ID
     * apiRemark  API描述
@@ -173,7 +173,7 @@ class SignApiBindingInfo implements ModelInterface, ArrayAccess
     * bindingTime  绑定时间
     * envId  API所属环境的编号
     * envName  API所属环境的名称
-    * apiType  API类型
+    * apiType  API类型。 - 1：公有API - 2：私有API
     * apiName  API名称
     * id  绑定关系的ID
     * apiRemark  API描述
@@ -215,7 +215,7 @@ class SignApiBindingInfo implements ModelInterface, ArrayAccess
     * bindingTime  绑定时间
     * envId  API所属环境的编号
     * envName  API所属环境的名称
-    * apiType  API类型
+    * apiType  API类型。 - 1：公有API - 2：私有API
     * apiName  API名称
     * id  绑定关系的ID
     * apiRemark  API描述
@@ -289,6 +289,8 @@ class SignApiBindingInfo implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const API_TYPE_1 = 1;
+    const API_TYPE_2 = 2;
     const REQ_METHOD_GET = 'GET';
     const REQ_METHOD_POST = 'POST';
     const REQ_METHOD_DELETE = 'DELETE';
@@ -302,6 +304,19 @@ class SignApiBindingInfo implements ModelInterface, ArrayAccess
     const SIGN_TYPE_PUBLIC_KEY = 'public_key';
     const SIGN_TYPE_AES = 'aes';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getApiTypeAllowableValues()
+    {
+        return [
+            self::API_TYPE_1,
+            self::API_TYPE_2,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -380,6 +395,14 @@ class SignApiBindingInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getApiTypeAllowableValues();
+                if (!is_null($this->container['apiType']) && !in_array($this->container['apiType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'apiType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             $allowedValues = $this->getReqMethodAllowableValues();
                 if (!is_null($this->container['reqMethod']) && !in_array($this->container['reqMethod'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -556,7 +579,7 @@ class SignApiBindingInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiType
-    *  API类型
+    *  API类型。 - 1：公有API - 2：私有API
     *
     * @return int|null
     */
@@ -568,7 +591,7 @@ class SignApiBindingInfo implements ModelInterface, ArrayAccess
     /**
     * Sets apiType
     *
-    * @param int|null $apiType API类型
+    * @param int|null $apiType API类型。 - 1：公有API - 2：私有API
     *
     * @return $this
     */

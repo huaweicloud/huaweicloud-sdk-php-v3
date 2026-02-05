@@ -20,22 +20,30 @@ class ConfigurationUpdateReqV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * updatePara  **参数解释**：  修改参数组相关信息。  **参数范围**：  不涉及。
+    * description  **参数解释**：  描述。  **约束限制**：  不涉及  **取值范围**：  0-256的不是!、<、>、=、&、\" 或 ' 的字符。  **默认取值**：  不涉及。
+    * values  **参数解释**：  修改的值。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
+    * name  **参数解释**：  参数的名称。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'updatePara' => 'object'
+            'description' => 'string',
+            'values' => 'map[string,string]',
+            'name' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * updatePara  **参数解释**：  修改参数组相关信息。  **参数范围**：  不涉及。
+    * description  **参数解释**：  描述。  **约束限制**：  不涉及  **取值范围**：  0-256的不是!、<、>、=、&、\" 或 ' 的字符。  **默认取值**：  不涉及。
+    * values  **参数解释**：  修改的值。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
+    * name  **参数解释**：  参数的名称。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'updatePara' => null
+        'description' => null,
+        'values' => null,
+        'name' => null
     ];
 
     /**
@@ -61,32 +69,44 @@ class ConfigurationUpdateReqV3 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * updatePara  **参数解释**：  修改参数组相关信息。  **参数范围**：  不涉及。
+    * description  **参数解释**：  描述。  **约束限制**：  不涉及  **取值范围**：  0-256的不是!、<、>、=、&、\" 或 ' 的字符。  **默认取值**：  不涉及。
+    * values  **参数解释**：  修改的值。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
+    * name  **参数解释**：  参数的名称。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'updatePara' => 'update_para'
+            'description' => 'description',
+            'values' => 'values',
+            'name' => 'name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * updatePara  **参数解释**：  修改参数组相关信息。  **参数范围**：  不涉及。
+    * description  **参数解释**：  描述。  **约束限制**：  不涉及  **取值范围**：  0-256的不是!、<、>、=、&、\" 或 ' 的字符。  **默认取值**：  不涉及。
+    * values  **参数解释**：  修改的值。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
+    * name  **参数解释**：  参数的名称。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'updatePara' => 'setUpdatePara'
+            'description' => 'setDescription',
+            'values' => 'setValues',
+            'name' => 'setName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * updatePara  **参数解释**：  修改参数组相关信息。  **参数范围**：  不涉及。
+    * description  **参数解释**：  描述。  **约束限制**：  不涉及  **取值范围**：  0-256的不是!、<、>、=、&、\" 或 ' 的字符。  **默认取值**：  不涉及。
+    * values  **参数解释**：  修改的值。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
+    * name  **参数解释**：  参数的名称。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'updatePara' => 'getUpdatePara'
+            'description' => 'getDescription',
+            'values' => 'getValues',
+            'name' => 'getName'
     ];
 
     /**
@@ -147,7 +167,9 @@ class ConfigurationUpdateReqV3 implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['updatePara'] = isset($data['updatePara']) ? $data['updatePara'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['values'] = isset($data['values']) ? $data['values'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -158,6 +180,21 @@ class ConfigurationUpdateReqV3 implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 256)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
+        if ($this->container['values'] === null) {
+            $invalidProperties[] = "'values' can't be null";
+        }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -173,26 +210,74 @@ class ConfigurationUpdateReqV3 implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets updatePara
-    *  **参数解释**：  修改参数组相关信息。  **参数范围**：  不涉及。
+    * Gets description
+    *  **参数解释**：  描述。  **约束限制**：  不涉及  **取值范围**：  0-256的不是!、<、>、=、&、\" 或 ' 的字符。  **默认取值**：  不涉及。
     *
-    * @return object|null
+    * @return string|null
     */
-    public function getUpdatePara()
+    public function getDescription()
     {
-        return $this->container['updatePara'];
+        return $this->container['description'];
     }
 
     /**
-    * Sets updatePara
+    * Sets description
     *
-    * @param object|null $updatePara **参数解释**：  修改参数组相关信息。  **参数范围**：  不涉及。
+    * @param string|null $description **参数解释**：  描述。  **约束限制**：  不涉及  **取值范围**：  0-256的不是!、<、>、=、&、\" 或 ' 的字符。  **默认取值**：  不涉及。
     *
     * @return $this
     */
-    public function setUpdatePara($updatePara)
+    public function setDescription($description)
     {
-        $this->container['updatePara'] = $updatePara;
+        $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets values
+    *  **参数解释**：  修改的值。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
+    *
+    * @return map[string,string]
+    */
+    public function getValues()
+    {
+        return $this->container['values'];
+    }
+
+    /**
+    * Sets values
+    *
+    * @param map[string,string] $values **参数解释**：  修改的值。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
+    *
+    * @return $this
+    */
+    public function setValues($values)
+    {
+        $this->container['values'] = $values;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  **参数解释**：  参数的名称。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name **参数解释**：  参数的名称。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
         return $this;
     }
 

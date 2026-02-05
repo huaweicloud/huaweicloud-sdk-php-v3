@@ -29,6 +29,7 @@ class SubscriptionResourceInfo implements ModelInterface, ArrayAccess
     * resourceStatus  资源状态，目前返回正常运行的资源，其状态值为0
     * orderId  订单Id，包周期资源有该字段
     * chargingMode  计费模式，目前有包周期（包年包月）PREPAID、按需POSTPAID，大小写不敏感
+    * toPeriod  当前资源是否能进行按需转包周期操作
     * tagList  资源列表
     *
     * @var string[]
@@ -43,6 +44,7 @@ class SubscriptionResourceInfo implements ModelInterface, ArrayAccess
             'resourceStatus' => 'int',
             'orderId' => 'string',
             'chargingMode' => 'string',
+            'toPeriod' => 'bool',
             'tagList' => '\HuaweiCloud\SDK\SecMaster\V1\Model\TagInfo[]'
     ];
 
@@ -57,6 +59,7 @@ class SubscriptionResourceInfo implements ModelInterface, ArrayAccess
     * resourceStatus  资源状态，目前返回正常运行的资源，其状态值为0
     * orderId  订单Id，包周期资源有该字段
     * chargingMode  计费模式，目前有包周期（包年包月）PREPAID、按需POSTPAID，大小写不敏感
+    * toPeriod  当前资源是否能进行按需转包周期操作
     * tagList  资源列表
     *
     * @var string[]
@@ -71,6 +74,7 @@ class SubscriptionResourceInfo implements ModelInterface, ArrayAccess
         'resourceStatus' => 'int32',
         'orderId' => null,
         'chargingMode' => null,
+        'toPeriod' => null,
         'tagList' => null
     ];
 
@@ -106,6 +110,7 @@ class SubscriptionResourceInfo implements ModelInterface, ArrayAccess
     * resourceStatus  资源状态，目前返回正常运行的资源，其状态值为0
     * orderId  订单Id，包周期资源有该字段
     * chargingMode  计费模式，目前有包周期（包年包月）PREPAID、按需POSTPAID，大小写不敏感
+    * toPeriod  当前资源是否能进行按需转包周期操作
     * tagList  资源列表
     *
     * @var string[]
@@ -120,6 +125,7 @@ class SubscriptionResourceInfo implements ModelInterface, ArrayAccess
             'resourceStatus' => 'resource_status',
             'orderId' => 'order_id',
             'chargingMode' => 'charging_mode',
+            'toPeriod' => 'to_period',
             'tagList' => 'tag_list'
     ];
 
@@ -134,6 +140,7 @@ class SubscriptionResourceInfo implements ModelInterface, ArrayAccess
     * resourceStatus  资源状态，目前返回正常运行的资源，其状态值为0
     * orderId  订单Id，包周期资源有该字段
     * chargingMode  计费模式，目前有包周期（包年包月）PREPAID、按需POSTPAID，大小写不敏感
+    * toPeriod  当前资源是否能进行按需转包周期操作
     * tagList  资源列表
     *
     * @var string[]
@@ -148,6 +155,7 @@ class SubscriptionResourceInfo implements ModelInterface, ArrayAccess
             'resourceStatus' => 'setResourceStatus',
             'orderId' => 'setOrderId',
             'chargingMode' => 'setChargingMode',
+            'toPeriod' => 'setToPeriod',
             'tagList' => 'setTagList'
     ];
 
@@ -162,6 +170,7 @@ class SubscriptionResourceInfo implements ModelInterface, ArrayAccess
     * resourceStatus  资源状态，目前返回正常运行的资源，其状态值为0
     * orderId  订单Id，包周期资源有该字段
     * chargingMode  计费模式，目前有包周期（包年包月）PREPAID、按需POSTPAID，大小写不敏感
+    * toPeriod  当前资源是否能进行按需转包周期操作
     * tagList  资源列表
     *
     * @var string[]
@@ -176,6 +185,7 @@ class SubscriptionResourceInfo implements ModelInterface, ArrayAccess
             'resourceStatus' => 'getResourceStatus',
             'orderId' => 'getOrderId',
             'chargingMode' => 'getChargingMode',
+            'toPeriod' => 'getToPeriod',
             'tagList' => 'getTagList'
     ];
 
@@ -261,6 +271,7 @@ class SubscriptionResourceInfo implements ModelInterface, ArrayAccess
         $this->container['resourceStatus'] = isset($data['resourceStatus']) ? $data['resourceStatus'] : null;
         $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
+        $this->container['toPeriod'] = isset($data['toPeriod']) ? $data['toPeriod'] : null;
         $this->container['tagList'] = isset($data['tagList']) ? $data['tagList'] : null;
     }
 
@@ -295,6 +306,18 @@ class SubscriptionResourceInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['resourceSpecCode']) && (mb_strlen($this->container['resourceSpecCode']) < 2)) {
                 $invalidProperties[] = "invalid value for 'resourceSpecCode', the character length must be bigger than or equal to 2.";
+            }
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] > 4796640000000)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be smaller than or equal to 4796640000000.";
+            }
+            if (!is_null($this->container['createTime']) && ($this->container['createTime'] < 1640966400000)) {
+                $invalidProperties[] = "invalid value for 'createTime', must be bigger than or equal to 1640966400000.";
+            }
+            if (!is_null($this->container['expireTime']) && ($this->container['expireTime'] > 4796640000000)) {
+                $invalidProperties[] = "invalid value for 'expireTime', must be smaller than or equal to 4796640000000.";
+            }
+            if (!is_null($this->container['expireTime']) && ($this->container['expireTime'] < 1640966400000)) {
+                $invalidProperties[] = "invalid value for 'expireTime', must be bigger than or equal to 1640966400000.";
             }
             if (!is_null($this->container['resourceStatus']) && ($this->container['resourceStatus'] > 2)) {
                 $invalidProperties[] = "invalid value for 'resourceStatus', must be smaller than or equal to 2.";
@@ -549,6 +572,30 @@ class SubscriptionResourceInfo implements ModelInterface, ArrayAccess
     public function setChargingMode($chargingMode)
     {
         $this->container['chargingMode'] = $chargingMode;
+        return $this;
+    }
+
+    /**
+    * Gets toPeriod
+    *  当前资源是否能进行按需转包周期操作
+    *
+    * @return bool|null
+    */
+    public function getToPeriod()
+    {
+        return $this->container['toPeriod'];
+    }
+
+    /**
+    * Sets toPeriod
+    *
+    * @param bool|null $toPeriod 当前资源是否能进行按需转包周期操作
+    *
+    * @return $this
+    */
+    public function setToPeriod($toPeriod)
+    {
+        $this->container['toPeriod'] = $toPeriod;
         return $this;
     }
 

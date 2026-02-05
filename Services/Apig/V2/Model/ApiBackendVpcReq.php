@@ -169,6 +169,9 @@ class ApiBackendVpcReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['vpcChannelProxyHost']) && !preg_match("/^[.:a-zA-Z0-9-_]{1,254}$/", $this->container['vpcChannelProxyHost'])) {
+                $invalidProperties[] = "invalid value for 'vpcChannelProxyHost', must be conform to the pattern /^[.:a-zA-Z0-9-_]{1,254}$/.";
+            }
         if ($this->container['vpcChannelId'] === null) {
             $invalidProperties[] = "'vpcChannelId' can't be null";
         }

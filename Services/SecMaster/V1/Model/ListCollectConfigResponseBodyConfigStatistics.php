@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListCollectConfigResponseBodyCofingStatistics implements ModelInterface, ArrayAccess
+class ListCollectConfigResponseBodyConfigStatistics implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,7 +16,7 @@ class ListCollectConfigResponseBodyCofingStatistics implements ModelInterface, A
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListCollectConfigResponseBody_cofing_statistics';
+    protected static $openAPIModelName = 'ListCollectConfigResponseBody_config_statistics';
 
     /**
     * Array of property to type mappings. Used for (de)serialization

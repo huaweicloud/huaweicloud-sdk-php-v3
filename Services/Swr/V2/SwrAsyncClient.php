@@ -801,9 +801,6 @@ class SwrAsyncClient extends Client
         if ($localVarParams['projectname'] !== null) {
             $queryParams['projectname'] = $localVarParams['projectname'];
         }
-        if ($localVarParams['durationSeconds'] !== null) {
-            $queryParams['duration_seconds'] = $localVarParams['durationSeconds'];
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

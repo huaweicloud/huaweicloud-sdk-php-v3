@@ -191,13 +191,10 @@ class UpdateProduct implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['resourceType'] === null) {
-            $invalidProperties[] = "'resourceType' can't be null";
-        }
-            if ((mb_strlen($this->container['resourceType']) > 64)) {
+            if (!is_null($this->container['resourceType']) && (mb_strlen($this->container['resourceType']) > 64)) {
                 $invalidProperties[] = "invalid value for 'resourceType', the character length must be smaller than or equal to 64.";
             }
-            if ((mb_strlen($this->container['resourceType']) < 2)) {
+            if (!is_null($this->container['resourceType']) && (mb_strlen($this->container['resourceType']) < 2)) {
                 $invalidProperties[] = "invalid value for 'resourceType', the character length must be bigger than or equal to 2.";
             }
         if ($this->container['resourceSpecCode'] === null) {
@@ -209,13 +206,10 @@ class UpdateProduct implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['resourceSpecCode']) < 2)) {
                 $invalidProperties[] = "invalid value for 'resourceSpecCode', the character length must be bigger than or equal to 2.";
             }
-        if ($this->container['resourceSize'] === null) {
-            $invalidProperties[] = "'resourceSize' can't be null";
-        }
-            if (($this->container['resourceSize'] > 10000)) {
+            if (!is_null($this->container['resourceSize']) && ($this->container['resourceSize'] > 10000)) {
                 $invalidProperties[] = "invalid value for 'resourceSize', must be smaller than or equal to 10000.";
             }
-            if (($this->container['resourceSize'] < 1)) {
+            if (!is_null($this->container['resourceSize']) && ($this->container['resourceSize'] < 1)) {
                 $invalidProperties[] = "invalid value for 'resourceSize', must be bigger than or equal to 1.";
             }
         if ($this->container['resourceId'] === null) {
@@ -245,7 +239,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
     * Gets resourceType
     *  变更后的资源类型
     *
-    * @return string
+    * @return string|null
     */
     public function getResourceType()
     {
@@ -255,7 +249,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 变更后的资源类型
+    * @param string|null $resourceType 变更后的资源类型
     *
     * @return $this
     */
@@ -293,7 +287,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
     * Gets resourceSize
     *  变更后的资源配额 如果operate_type为addition时，resource_size必须要大于原来的resource_id，decrease时要小于原来的resource_size，并且大于等于当前project下的ecs数量
     *
-    * @return int
+    * @return int|null
     */
     public function getResourceSize()
     {
@@ -303,7 +297,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSize
     *
-    * @param int $resourceSize 变更后的资源配额 如果operate_type为addition时，resource_size必须要大于原来的resource_id，decrease时要小于原来的resource_size，并且大于等于当前project下的ecs数量
+    * @param int|null $resourceSize 变更后的资源配额 如果operate_type为addition时，resource_size必须要大于原来的resource_id，decrease时要小于原来的resource_size，并且大于等于当前project下的ecs数量
     *
     * @return $this
     */

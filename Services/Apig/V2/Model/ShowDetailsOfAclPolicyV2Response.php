@@ -22,7 +22,7 @@ class ShowDetailsOfAclPolicyV2Response implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * aclName  名称
-    * aclType  类型: - PERMIT（白名单类型） - DENY（黑名单类型）
+    * aclType  类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     * aclValue  ACL策略值
     * entityType  对象类型： - IP - DOMAIN - DOMAIN_ID
     * id  编号
@@ -42,7 +42,7 @@ class ShowDetailsOfAclPolicyV2Response implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * aclName  名称
-    * aclType  类型: - PERMIT（白名单类型） - DENY（黑名单类型）
+    * aclType  类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     * aclValue  ACL策略值
     * entityType  对象类型： - IP - DOMAIN - DOMAIN_ID
     * id  编号
@@ -83,7 +83,7 @@ class ShowDetailsOfAclPolicyV2Response implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * aclName  名称
-    * aclType  类型: - PERMIT（白名单类型） - DENY（黑名单类型）
+    * aclType  类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     * aclValue  ACL策略值
     * entityType  对象类型： - IP - DOMAIN - DOMAIN_ID
     * id  编号
@@ -103,7 +103,7 @@ class ShowDetailsOfAclPolicyV2Response implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * aclName  名称
-    * aclType  类型: - PERMIT（白名单类型） - DENY（黑名单类型）
+    * aclType  类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     * aclValue  ACL策略值
     * entityType  对象类型： - IP - DOMAIN - DOMAIN_ID
     * id  编号
@@ -123,7 +123,7 @@ class ShowDetailsOfAclPolicyV2Response implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * aclName  名称
-    * aclType  类型: - PERMIT（白名单类型） - DENY（黑名单类型）
+    * aclType  类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     * aclValue  ACL策略值
     * entityType  对象类型： - IP - DOMAIN - DOMAIN_ID
     * id  编号
@@ -180,7 +180,22 @@ class ShowDetailsOfAclPolicyV2Response implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ACL_TYPE_PERMIT = 'PERMIT';
+    const ACL_TYPE_DENY = 'DENY';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAclTypeAllowableValues()
+    {
+        return [
+            self::ACL_TYPE_PERMIT,
+            self::ACL_TYPE_DENY,
+        ];
+    }
 
 
     /**
@@ -214,6 +229,14 @@ class ShowDetailsOfAclPolicyV2Response implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getAclTypeAllowableValues();
+                if (!is_null($this->container['aclType']) && !in_array($this->container['aclType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'aclType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -254,7 +277,7 @@ class ShowDetailsOfAclPolicyV2Response implements ModelInterface, ArrayAccess
 
     /**
     * Gets aclType
-    *  类型: - PERMIT（白名单类型） - DENY（黑名单类型）
+    *  类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     *
     * @return string|null
     */
@@ -266,7 +289,7 @@ class ShowDetailsOfAclPolicyV2Response implements ModelInterface, ArrayAccess
     /**
     * Sets aclType
     *
-    * @param string|null $aclType 类型: - PERMIT（白名单类型） - DENY（黑名单类型）
+    * @param string|null $aclType 类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     *
     * @return $this
     */

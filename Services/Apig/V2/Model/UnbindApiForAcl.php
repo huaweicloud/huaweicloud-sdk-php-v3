@@ -24,14 +24,14 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
     * name  API名称
     * groupId  API所属分组的编号
     * groupName  API所属分组的名称
-    * type  API开放状态
+    * type  API开放状态。 - 1：公有API - 2：私有API
     * remark  API描述
     * runEnvName  发布的环境名
     * runEnvId  发布的环境id
     * publishId  API发布记录编号
     * aclName  绑定的其他同类型的ACL策略名称
     * reqUri  API的请求地址
-    * authType  API的认证方式
+    * authType  API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     * reqMethod  API请求方法
     * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
@@ -60,14 +60,14 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
     * name  API名称
     * groupId  API所属分组的编号
     * groupName  API所属分组的名称
-    * type  API开放状态
+    * type  API开放状态。 - 1：公有API - 2：私有API
     * remark  API描述
     * runEnvName  发布的环境名
     * runEnvId  发布的环境id
     * publishId  API发布记录编号
     * aclName  绑定的其他同类型的ACL策略名称
     * reqUri  API的请求地址
-    * authType  API的认证方式
+    * authType  API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     * reqMethod  API请求方法
     * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
@@ -117,14 +117,14 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
     * name  API名称
     * groupId  API所属分组的编号
     * groupName  API所属分组的名称
-    * type  API开放状态
+    * type  API开放状态。 - 1：公有API - 2：私有API
     * remark  API描述
     * runEnvName  发布的环境名
     * runEnvId  发布的环境id
     * publishId  API发布记录编号
     * aclName  绑定的其他同类型的ACL策略名称
     * reqUri  API的请求地址
-    * authType  API的认证方式
+    * authType  API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     * reqMethod  API请求方法
     * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
@@ -153,14 +153,14 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
     * name  API名称
     * groupId  API所属分组的编号
     * groupName  API所属分组的名称
-    * type  API开放状态
+    * type  API开放状态。 - 1：公有API - 2：私有API
     * remark  API描述
     * runEnvName  发布的环境名
     * runEnvId  发布的环境id
     * publishId  API发布记录编号
     * aclName  绑定的其他同类型的ACL策略名称
     * reqUri  API的请求地址
-    * authType  API的认证方式
+    * authType  API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     * reqMethod  API请求方法
     * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
@@ -189,14 +189,14 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
     * name  API名称
     * groupId  API所属分组的编号
     * groupName  API所属分组的名称
-    * type  API开放状态
+    * type  API开放状态。 - 1：公有API - 2：私有API
     * remark  API描述
     * runEnvName  发布的环境名
     * runEnvId  发布的环境id
     * publishId  API发布记录编号
     * aclName  绑定的其他同类型的ACL策略名称
     * reqUri  API的请求地址
-    * authType  API的认证方式
+    * authType  API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     * reqMethod  API请求方法
     * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
@@ -259,6 +259,12 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TYPE_1 = 1;
+    const TYPE_2 = 2;
+    const AUTH_TYPE_NONE = 'NONE';
+    const AUTH_TYPE_APP = 'APP';
+    const AUTH_TYPE_IAM = 'IAM';
+    const AUTH_TYPE_AUTHORIZER = 'AUTHORIZER';
     const REQ_METHOD_GET = 'GET';
     const REQ_METHOD_POST = 'POST';
     const REQ_METHOD_DELETE = 'DELETE';
@@ -268,6 +274,34 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
     const REQ_METHOD_OPTIONS = 'OPTIONS';
     const REQ_METHOD_ANY = 'ANY';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_1,
+            self::TYPE_2,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAuthTypeAllowableValues()
+    {
+        return [
+            self::AUTH_TYPE_NONE,
+            self::AUTH_TYPE_APP,
+            self::AUTH_TYPE_IAM,
+            self::AUTH_TYPE_AUTHORIZER,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -328,6 +362,22 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getAuthTypeAllowableValues();
+                if (!is_null($this->container['authType']) && !in_array($this->container['authType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'authType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             $allowedValues = $this->getReqMethodAllowableValues();
                 if (!is_null($this->container['reqMethod']) && !in_array($this->container['reqMethod'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -448,7 +498,7 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  API开放状态
+    *  API开放状态。 - 1：公有API - 2：私有API
     *
     * @return int|null
     */
@@ -460,7 +510,7 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int|null $type API开放状态
+    * @param int|null $type API开放状态。 - 1：公有API - 2：私有API
     *
     * @return $this
     */
@@ -616,7 +666,7 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
 
     /**
     * Gets authType
-    *  API的认证方式
+    *  API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     *
     * @return string|null
     */
@@ -628,7 +678,7 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
     /**
     * Sets authType
     *
-    * @param string|null $authType API的认证方式
+    * @param string|null $authType API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     *
     * @return $this
     */

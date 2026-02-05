@@ -9768,11 +9768,11 @@ class SecMasterAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 ['multipart/form-data']
             );
         }
@@ -12935,11 +12935,11 @@ class SecMasterAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 []
             );
         }
@@ -20990,11 +20990,11 @@ class SecMasterAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 []
             );
         }
@@ -22623,9 +22623,9 @@ class SecMasterAsyncClient extends Client
     }
 
     /**
-     * 更新订购资源
+     * 更新订阅资源
      *
-     * 更新订购资源
+     * 更新订阅资源
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

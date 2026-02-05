@@ -25,7 +25,7 @@ class ListAclStrategiesV2Request implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     * id  ACL策略编号。
     * name  ACL策略名称。
-    * aclType  类型 - PERMIT (白名单类型) - DENY (黑名单类型)
+    * aclType  类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     * entityType  作用的对象类型： - IP - DOMAIN
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name
     *
@@ -49,7 +49,7 @@ class ListAclStrategiesV2Request implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     * id  ACL策略编号。
     * name  ACL策略名称。
-    * aclType  类型 - PERMIT (白名单类型) - DENY (黑名单类型)
+    * aclType  类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     * entityType  作用的对象类型： - IP - DOMAIN
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name
     *
@@ -94,7 +94,7 @@ class ListAclStrategiesV2Request implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     * id  ACL策略编号。
     * name  ACL策略名称。
-    * aclType  类型 - PERMIT (白名单类型) - DENY (黑名单类型)
+    * aclType  类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     * entityType  作用的对象类型： - IP - DOMAIN
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name
     *
@@ -118,7 +118,7 @@ class ListAclStrategiesV2Request implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     * id  ACL策略编号。
     * name  ACL策略名称。
-    * aclType  类型 - PERMIT (白名单类型) - DENY (黑名单类型)
+    * aclType  类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     * entityType  作用的对象类型： - IP - DOMAIN
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name
     *
@@ -142,7 +142,7 @@ class ListAclStrategiesV2Request implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     * id  ACL策略编号。
     * name  ACL策略名称。
-    * aclType  类型 - PERMIT (白名单类型) - DENY (黑名单类型)
+    * aclType  类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     * entityType  作用的对象类型： - IP - DOMAIN
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name
     *
@@ -199,7 +199,22 @@ class ListAclStrategiesV2Request implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ACL_TYPE_PERMIT = 'PERMIT';
+    const ACL_TYPE_DENY = 'DENY';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAclTypeAllowableValues()
+    {
+        return [
+            self::ACL_TYPE_PERMIT,
+            self::ACL_TYPE_DENY,
+        ];
+    }
 
 
     /**
@@ -244,6 +259,14 @@ class ListAclStrategiesV2Request implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getAclTypeAllowableValues();
+                if (!is_null($this->container['aclType']) && !in_array($this->container['aclType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'aclType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -380,7 +403,7 @@ class ListAclStrategiesV2Request implements ModelInterface, ArrayAccess
 
     /**
     * Gets aclType
-    *  类型 - PERMIT (白名单类型) - DENY (黑名单类型)
+    *  类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     *
     * @return string|null
     */
@@ -392,7 +415,7 @@ class ListAclStrategiesV2Request implements ModelInterface, ArrayAccess
     /**
     * Sets aclType
     *
-    * @param string|null $aclType 类型 - PERMIT (白名单类型) - DENY (黑名单类型)
+    * @param string|null $aclType 类型。 - PERMIT：白名单类型 - DENY：黑名单类型
     *
     * @return $this
     */

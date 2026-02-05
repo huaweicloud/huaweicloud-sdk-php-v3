@@ -33,7 +33,6 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableResource  是否支持镜像资源。设置为true时，前端界面显示“镜像资源”页签，可查看镜像中心。
     * enableListV3  是否支持list v3接口
     * enableImageQuota  是否启用镜像配额
-    * enableCustomizeValidityPeriod  是否支持自定义临时登录指令有效期
     *
     * @var string[]
     */
@@ -49,8 +48,7 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enableAuthorizationToken' => 'bool',
             'enableResource' => 'bool',
             'enableListV3' => 'bool',
-            'enableImageQuota' => 'bool',
-            'enableCustomizeValidityPeriod' => 'bool'
+            'enableImageQuota' => 'bool'
     ];
 
     /**
@@ -67,7 +65,6 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableResource  是否支持镜像资源。设置为true时，前端界面显示“镜像资源”页签，可查看镜像中心。
     * enableListV3  是否支持list v3接口
     * enableImageQuota  是否启用镜像配额
-    * enableCustomizeValidityPeriod  是否支持自定义临时登录指令有效期
     *
     * @var string[]
     */
@@ -83,8 +80,7 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
         'enableAuthorizationToken' => null,
         'enableResource' => null,
         'enableListV3' => null,
-        'enableImageQuota' => null,
-        'enableCustomizeValidityPeriod' => null
+        'enableImageQuota' => null
     ];
 
     /**
@@ -122,7 +118,6 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableResource  是否支持镜像资源。设置为true时，前端界面显示“镜像资源”页签，可查看镜像中心。
     * enableListV3  是否支持list v3接口
     * enableImageQuota  是否启用镜像配额
-    * enableCustomizeValidityPeriod  是否支持自定义临时登录指令有效期
     *
     * @var string[]
     */
@@ -138,8 +133,7 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enableAuthorizationToken' => 'enable_authorization_token',
             'enableResource' => 'enable_resource',
             'enableListV3' => 'enable_list_v3',
-            'enableImageQuota' => 'enable_image_quota',
-            'enableCustomizeValidityPeriod' => 'enable_customize_validity_period'
+            'enableImageQuota' => 'enable_image_quota'
     ];
 
     /**
@@ -156,7 +150,6 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableResource  是否支持镜像资源。设置为true时，前端界面显示“镜像资源”页签，可查看镜像中心。
     * enableListV3  是否支持list v3接口
     * enableImageQuota  是否启用镜像配额
-    * enableCustomizeValidityPeriod  是否支持自定义临时登录指令有效期
     *
     * @var string[]
     */
@@ -172,8 +165,7 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enableAuthorizationToken' => 'setEnableAuthorizationToken',
             'enableResource' => 'setEnableResource',
             'enableListV3' => 'setEnableListV3',
-            'enableImageQuota' => 'setEnableImageQuota',
-            'enableCustomizeValidityPeriod' => 'setEnableCustomizeValidityPeriod'
+            'enableImageQuota' => 'setEnableImageQuota'
     ];
 
     /**
@@ -190,7 +182,6 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableResource  是否支持镜像资源。设置为true时，前端界面显示“镜像资源”页签，可查看镜像中心。
     * enableListV3  是否支持list v3接口
     * enableImageQuota  是否启用镜像配额
-    * enableCustomizeValidityPeriod  是否支持自定义临时登录指令有效期
     *
     * @var string[]
     */
@@ -206,8 +197,7 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enableAuthorizationToken' => 'getEnableAuthorizationToken',
             'enableResource' => 'getEnableResource',
             'enableListV3' => 'getEnableListV3',
-            'enableImageQuota' => 'getEnableImageQuota',
-            'enableCustomizeValidityPeriod' => 'getEnableCustomizeValidityPeriod'
+            'enableImageQuota' => 'getEnableImageQuota'
     ];
 
     /**
@@ -280,7 +270,6 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
         $this->container['enableResource'] = isset($data['enableResource']) ? $data['enableResource'] : null;
         $this->container['enableListV3'] = isset($data['enableListV3']) ? $data['enableListV3'] : null;
         $this->container['enableImageQuota'] = isset($data['enableImageQuota']) ? $data['enableImageQuota'] : null;
-        $this->container['enableCustomizeValidityPeriod'] = isset($data['enableCustomizeValidityPeriod']) ? $data['enableCustomizeValidityPeriod'] : null;
     }
 
     /**
@@ -590,30 +579,6 @@ class ShowShareFeatureGatesResponse implements ModelInterface, ArrayAccess
     public function setEnableImageQuota($enableImageQuota)
     {
         $this->container['enableImageQuota'] = $enableImageQuota;
-        return $this;
-    }
-
-    /**
-    * Gets enableCustomizeValidityPeriod
-    *  是否支持自定义临时登录指令有效期
-    *
-    * @return bool|null
-    */
-    public function getEnableCustomizeValidityPeriod()
-    {
-        return $this->container['enableCustomizeValidityPeriod'];
-    }
-
-    /**
-    * Sets enableCustomizeValidityPeriod
-    *
-    * @param bool|null $enableCustomizeValidityPeriod 是否支持自定义临时登录指令有效期
-    *
-    * @return $this
-    */
-    public function setEnableCustomizeValidityPeriod($enableCustomizeValidityPeriod)
-    {
-        $this->container['enableCustomizeValidityPeriod'] = $enableCustomizeValidityPeriod;
         return $this;
     }
 

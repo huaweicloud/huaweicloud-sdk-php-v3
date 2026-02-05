@@ -26,7 +26,7 @@ class ApiGroupCommonInfo implements ModelInterface, ArrayAccess
     * slDomain  系统默认分配的子域名
     * registerTime  创建时间
     * updateTime  最近修改时间
-    * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     * urlDomains  分组上绑定的独立域名列表
     * slDomainAccessEnabled  调试域名是否可以访问，true表示可以访问，false表示禁止访问
     *
@@ -52,7 +52,7 @@ class ApiGroupCommonInfo implements ModelInterface, ArrayAccess
     * slDomain  系统默认分配的子域名
     * registerTime  创建时间
     * updateTime  最近修改时间
-    * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     * urlDomains  分组上绑定的独立域名列表
     * slDomainAccessEnabled  调试域名是否可以访问，true表示可以访问，false表示禁止访问
     *
@@ -99,7 +99,7 @@ class ApiGroupCommonInfo implements ModelInterface, ArrayAccess
     * slDomain  系统默认分配的子域名
     * registerTime  创建时间
     * updateTime  最近修改时间
-    * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     * urlDomains  分组上绑定的独立域名列表
     * slDomainAccessEnabled  调试域名是否可以访问，true表示可以访问，false表示禁止访问
     *
@@ -125,7 +125,7 @@ class ApiGroupCommonInfo implements ModelInterface, ArrayAccess
     * slDomain  系统默认分配的子域名
     * registerTime  创建时间
     * updateTime  最近修改时间
-    * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     * urlDomains  分组上绑定的独立域名列表
     * slDomainAccessEnabled  调试域名是否可以访问，true表示可以访问，false表示禁止访问
     *
@@ -151,7 +151,7 @@ class ApiGroupCommonInfo implements ModelInterface, ArrayAccess
     * slDomain  系统默认分配的子域名
     * registerTime  创建时间
     * updateTime  最近修改时间
-    * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     * urlDomains  分组上绑定的独立域名列表
     * slDomainAccessEnabled  调试域名是否可以访问，true表示可以访问，false表示禁止访问
     *
@@ -448,7 +448,7 @@ class ApiGroupCommonInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets onSellStatus
-    *  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    *  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     *
     * @return int
     */
@@ -460,7 +460,7 @@ class ApiGroupCommonInfo implements ModelInterface, ArrayAccess
     /**
     * Sets onSellStatus
     *
-    * @param int $onSellStatus 是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    * @param int $onSellStatus 是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     *
     * @return $this
     */

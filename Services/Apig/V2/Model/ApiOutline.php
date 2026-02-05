@@ -20,7 +20,7 @@ class ApiOutline implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * authType  API的认证方式
+    * authType  API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     * runEnvName  发布的环境名
     * groupName  API所属分组的名称
     * publishId  发布记录的编号
@@ -50,7 +50,7 @@ class ApiOutline implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * authType  API的认证方式
+    * authType  API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     * runEnvName  发布的环境名
     * groupName  API所属分组的名称
     * publishId  发布记录的编号
@@ -101,7 +101,7 @@ class ApiOutline implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * authType  API的认证方式
+    * authType  API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     * runEnvName  发布的环境名
     * groupName  API所属分组的名称
     * publishId  发布记录的编号
@@ -131,7 +131,7 @@ class ApiOutline implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * authType  API的认证方式
+    * authType  API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     * runEnvName  发布的环境名
     * groupName  API所属分组的名称
     * publishId  发布记录的编号
@@ -161,7 +161,7 @@ class ApiOutline implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * authType  API的认证方式
+    * authType  API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     * runEnvName  发布的环境名
     * groupName  API所属分组的名称
     * publishId  发布记录的编号
@@ -229,7 +229,26 @@ class ApiOutline implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const AUTH_TYPE_NONE = 'NONE';
+    const AUTH_TYPE_APP = 'APP';
+    const AUTH_TYPE_IAM = 'IAM';
+    const AUTH_TYPE_AUTHORIZER = 'AUTHORIZER';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAuthTypeAllowableValues()
+    {
+        return [
+            self::AUTH_TYPE_NONE,
+            self::AUTH_TYPE_APP,
+            self::AUTH_TYPE_IAM,
+            self::AUTH_TYPE_AUTHORIZER,
+        ];
+    }
 
 
     /**
@@ -268,6 +287,14 @@ class ApiOutline implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getAuthTypeAllowableValues();
+                if (!is_null($this->container['authType']) && !in_array($this->container['authType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'authType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -284,7 +311,7 @@ class ApiOutline implements ModelInterface, ArrayAccess
 
     /**
     * Gets authType
-    *  API的认证方式
+    *  API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     *
     * @return string|null
     */
@@ -296,7 +323,7 @@ class ApiOutline implements ModelInterface, ArrayAccess
     /**
     * Sets authType
     *
-    * @param string|null $authType API的认证方式
+    * @param string|null $authType API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     *
     * @return $this
     */

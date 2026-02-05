@@ -31,7 +31,9 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
     * ingressHttpsPort  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * sslName  证书的名称
     * sslId  证书的编号
-    * sslInfos  SSL证书列表。
+    * instanceId  实例ID。
+    * apiGroupId  API分组的ID。
+    * apiGroupName  API分组的名称。
     *
     * @var string[]
     */
@@ -46,7 +48,9 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
             'ingressHttpsPort' => 'int',
             'sslName' => 'string',
             'sslId' => 'string',
-            'sslInfos' => '\HuaweiCloud\SDK\Apig\V2\Model\SslInfo[]'
+            'instanceId' => 'string',
+            'apiGroupId' => 'string',
+            'apiGroupName' => 'string'
     ];
 
     /**
@@ -61,7 +65,9 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
     * ingressHttpsPort  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * sslName  证书的名称
     * sslId  证书的编号
-    * sslInfos  SSL证书列表。
+    * instanceId  实例ID。
+    * apiGroupId  API分组的ID。
+    * apiGroupName  API分组的名称。
     *
     * @var string[]
     */
@@ -76,7 +82,9 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
         'ingressHttpsPort' => null,
         'sslName' => null,
         'sslId' => null,
-        'sslInfos' => null
+        'instanceId' => null,
+        'apiGroupId' => null,
+        'apiGroupName' => null
     ];
 
     /**
@@ -112,7 +120,9 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
     * ingressHttpsPort  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * sslName  证书的名称
     * sslId  证书的编号
-    * sslInfos  SSL证书列表。
+    * instanceId  实例ID。
+    * apiGroupId  API分组的ID。
+    * apiGroupName  API分组的名称。
     *
     * @var string[]
     */
@@ -127,7 +137,9 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
             'ingressHttpsPort' => 'ingress_https_port',
             'sslName' => 'ssl_name',
             'sslId' => 'ssl_id',
-            'sslInfos' => 'ssl_infos'
+            'instanceId' => 'instance_id',
+            'apiGroupId' => 'api_group_id',
+            'apiGroupName' => 'api_group_name'
     ];
 
     /**
@@ -142,7 +154,9 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
     * ingressHttpsPort  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * sslName  证书的名称
     * sslId  证书的编号
-    * sslInfos  SSL证书列表。
+    * instanceId  实例ID。
+    * apiGroupId  API分组的ID。
+    * apiGroupName  API分组的名称。
     *
     * @var string[]
     */
@@ -157,7 +171,9 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
             'ingressHttpsPort' => 'setIngressHttpsPort',
             'sslName' => 'setSslName',
             'sslId' => 'setSslId',
-            'sslInfos' => 'setSslInfos'
+            'instanceId' => 'setInstanceId',
+            'apiGroupId' => 'setApiGroupId',
+            'apiGroupName' => 'setApiGroupName'
     ];
 
     /**
@@ -172,7 +188,9 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
     * ingressHttpsPort  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * sslName  证书的名称
     * sslId  证书的编号
-    * sslInfos  SSL证书列表。
+    * instanceId  实例ID。
+    * apiGroupId  API分组的ID。
+    * apiGroupName  API分组的名称。
     *
     * @var string[]
     */
@@ -187,7 +205,9 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
             'ingressHttpsPort' => 'getIngressHttpsPort',
             'sslName' => 'getSslName',
             'sslId' => 'getSslId',
-            'sslInfos' => 'getSslInfos'
+            'instanceId' => 'getInstanceId',
+            'apiGroupId' => 'getApiGroupId',
+            'apiGroupName' => 'getApiGroupName'
     ];
 
     /**
@@ -277,7 +297,9 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
         $this->container['ingressHttpsPort'] = isset($data['ingressHttpsPort']) ? $data['ingressHttpsPort'] : null;
         $this->container['sslName'] = isset($data['sslName']) ? $data['sslName'] : null;
         $this->container['sslId'] = isset($data['sslId']) ? $data['sslId'] : null;
-        $this->container['sslInfos'] = isset($data['sslInfos']) ? $data['sslInfos'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['apiGroupId'] = isset($data['apiGroupId']) ? $data['apiGroupId'] : null;
+        $this->container['apiGroupName'] = isset($data['apiGroupName']) ? $data['apiGroupName'] : null;
     }
 
     /**
@@ -326,6 +348,24 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
         if ($this->container['sslId'] === null) {
             $invalidProperties[] = "'sslId' can't be null";
         }
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 32.";
+            }
+            if (!is_null($this->container['apiGroupId']) && (mb_strlen($this->container['apiGroupId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'apiGroupId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['apiGroupId']) && (mb_strlen($this->container['apiGroupId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'apiGroupId', the character length must be bigger than or equal to 32.";
+            }
+            if (!is_null($this->container['apiGroupName']) && (mb_strlen($this->container['apiGroupName']) > 255)) {
+                $invalidProperties[] = "invalid value for 'apiGroupName', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['apiGroupName']) && (mb_strlen($this->container['apiGroupName']) < 3)) {
+                $invalidProperties[] = "invalid value for 'apiGroupName', the character length must be bigger than or equal to 3.";
+            }
         return $invalidProperties;
     }
 
@@ -581,26 +621,74 @@ class AssociateCertificateV2Response implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets sslInfos
-    *  SSL证书列表。
+    * Gets instanceId
+    *  实例ID。
     *
-    * @return \HuaweiCloud\SDK\Apig\V2\Model\SslInfo[]|null
+    * @return string|null
     */
-    public function getSslInfos()
+    public function getInstanceId()
     {
-        return $this->container['sslInfos'];
+        return $this->container['instanceId'];
     }
 
     /**
-    * Sets sslInfos
+    * Sets instanceId
     *
-    * @param \HuaweiCloud\SDK\Apig\V2\Model\SslInfo[]|null $sslInfos SSL证书列表。
+    * @param string|null $instanceId 实例ID。
     *
     * @return $this
     */
-    public function setSslInfos($sslInfos)
+    public function setInstanceId($instanceId)
     {
-        $this->container['sslInfos'] = $sslInfos;
+        $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets apiGroupId
+    *  API分组的ID。
+    *
+    * @return string|null
+    */
+    public function getApiGroupId()
+    {
+        return $this->container['apiGroupId'];
+    }
+
+    /**
+    * Sets apiGroupId
+    *
+    * @param string|null $apiGroupId API分组的ID。
+    *
+    * @return $this
+    */
+    public function setApiGroupId($apiGroupId)
+    {
+        $this->container['apiGroupId'] = $apiGroupId;
+        return $this;
+    }
+
+    /**
+    * Gets apiGroupName
+    *  API分组的名称。
+    *
+    * @return string|null
+    */
+    public function getApiGroupName()
+    {
+        return $this->container['apiGroupName'];
+    }
+
+    /**
+    * Sets apiGroupName
+    *
+    * @param string|null $apiGroupName API分组的名称。
+    *
+    * @return $this
+    */
+    public function setApiGroupName($apiGroupName)
+    {
+        $this->container['apiGroupName'] = $apiGroupName;
         return $this;
     }
 

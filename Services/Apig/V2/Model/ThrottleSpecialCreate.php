@@ -22,7 +22,7 @@ class ThrottleSpecialCreate implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * callLimits  流控时间内特殊对象能够访问API的最大次数限制
     * objectId  特殊APP的编号或特殊租户的账号ID
-    * objectType  特殊对象类型
+    * objectType  特殊对象类型。 - APP：特殊APP - USER：特殊租户
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ThrottleSpecialCreate implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * callLimits  流控时间内特殊对象能够访问API的最大次数限制
     * objectId  特殊APP的编号或特殊租户的账号ID
-    * objectType  特殊对象类型
+    * objectType  特殊对象类型。 - APP：特殊APP - USER：特殊租户
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ThrottleSpecialCreate implements ModelInterface, ArrayAccess
     * and the value is the original name
     * callLimits  流控时间内特殊对象能够访问API的最大次数限制
     * objectId  特殊APP的编号或特殊租户的账号ID
-    * objectType  特殊对象类型
+    * objectType  特殊对象类型。 - APP：特殊APP - USER：特殊租户
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ThrottleSpecialCreate implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * callLimits  流控时间内特殊对象能够访问API的最大次数限制
     * objectId  特殊APP的编号或特殊租户的账号ID
-    * objectType  特殊对象类型
+    * objectType  特殊对象类型。 - APP：特殊APP - USER：特殊租户
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ThrottleSpecialCreate implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * callLimits  流控时间内特殊对象能够访问API的最大次数限制
     * objectId  特殊APP的编号或特殊租户的账号ID
-    * objectType  特殊对象类型
+    * objectType  特殊对象类型。 - APP：特殊APP - USER：特殊租户
     *
     * @var string[]
     */
@@ -276,7 +276,7 @@ class ThrottleSpecialCreate implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectType
-    *  特殊对象类型
+    *  特殊对象类型。 - APP：特殊APP - USER：特殊租户
     *
     * @return string
     */
@@ -288,7 +288,7 @@ class ThrottleSpecialCreate implements ModelInterface, ArrayAccess
     /**
     * Sets objectType
     *
-    * @param string $objectType 特殊对象类型
+    * @param string $objectType 特殊对象类型。 - APP：特殊APP - USER：特殊租户
     *
     * @return $this
     */

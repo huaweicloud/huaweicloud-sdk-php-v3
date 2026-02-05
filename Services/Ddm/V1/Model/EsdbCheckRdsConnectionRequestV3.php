@@ -20,9 +20,9 @@ class EsdbCheckRdsConnectionRequestV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * endpoint  **参数解释**：  内网地址以及端口号。  格式为xx.xx.xx.xx:xx。  **参数范围**：  不涉及。
-    * username  **参数解释**：  实例账号名称。  **参数范围**：  不涉及。
-    * password  **参数解释**：  实例账号密码。  **约束限制**：  - 至少包含三种字符组合：小写字母、大写字母、数字、特殊字符 ~ ! @ # % ^ * - _ + ? - 不能使用简单、强度不够、容易被猜测的密码。 - 不能与账号名称或者倒序的账号名称相同。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * endpoint  **参数解释**：  内网地址以及端口号。  格式为xx.xx.xx.xx:xx。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * username  **参数解释**：  数据节点的账号名称。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * password  **参数解释**：  数据节点的账号密码。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * rdsInstanceId  **参数解释**：  rds实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in01，长度为36个字符。  **默认取值**：  不涉及。
     *
     * @var string[]
@@ -36,9 +36,9 @@ class EsdbCheckRdsConnectionRequestV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * endpoint  **参数解释**：  内网地址以及端口号。  格式为xx.xx.xx.xx:xx。  **参数范围**：  不涉及。
-    * username  **参数解释**：  实例账号名称。  **参数范围**：  不涉及。
-    * password  **参数解释**：  实例账号密码。  **约束限制**：  - 至少包含三种字符组合：小写字母、大写字母、数字、特殊字符 ~ ! @ # % ^ * - _ + ? - 不能使用简单、强度不够、容易被猜测的密码。 - 不能与账号名称或者倒序的账号名称相同。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * endpoint  **参数解释**：  内网地址以及端口号。  格式为xx.xx.xx.xx:xx。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * username  **参数解释**：  数据节点的账号名称。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * password  **参数解释**：  数据节点的账号密码。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * rdsInstanceId  **参数解释**：  rds实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in01，长度为36个字符。  **默认取值**：  不涉及。
     *
     * @var string[]
@@ -73,9 +73,9 @@ class EsdbCheckRdsConnectionRequestV3 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * endpoint  **参数解释**：  内网地址以及端口号。  格式为xx.xx.xx.xx:xx。  **参数范围**：  不涉及。
-    * username  **参数解释**：  实例账号名称。  **参数范围**：  不涉及。
-    * password  **参数解释**：  实例账号密码。  **约束限制**：  - 至少包含三种字符组合：小写字母、大写字母、数字、特殊字符 ~ ! @ # % ^ * - _ + ? - 不能使用简单、强度不够、容易被猜测的密码。 - 不能与账号名称或者倒序的账号名称相同。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * endpoint  **参数解释**：  内网地址以及端口号。  格式为xx.xx.xx.xx:xx。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * username  **参数解释**：  数据节点的账号名称。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * password  **参数解释**：  数据节点的账号密码。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * rdsInstanceId  **参数解释**：  rds实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in01，长度为36个字符。  **默认取值**：  不涉及。
     *
     * @var string[]
@@ -89,9 +89,9 @@ class EsdbCheckRdsConnectionRequestV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * endpoint  **参数解释**：  内网地址以及端口号。  格式为xx.xx.xx.xx:xx。  **参数范围**：  不涉及。
-    * username  **参数解释**：  实例账号名称。  **参数范围**：  不涉及。
-    * password  **参数解释**：  实例账号密码。  **约束限制**：  - 至少包含三种字符组合：小写字母、大写字母、数字、特殊字符 ~ ! @ # % ^ * - _ + ? - 不能使用简单、强度不够、容易被猜测的密码。 - 不能与账号名称或者倒序的账号名称相同。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * endpoint  **参数解释**：  内网地址以及端口号。  格式为xx.xx.xx.xx:xx。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * username  **参数解释**：  数据节点的账号名称。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * password  **参数解释**：  数据节点的账号密码。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * rdsInstanceId  **参数解释**：  rds实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in01，长度为36个字符。  **默认取值**：  不涉及。
     *
     * @var string[]
@@ -105,9 +105,9 @@ class EsdbCheckRdsConnectionRequestV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * endpoint  **参数解释**：  内网地址以及端口号。  格式为xx.xx.xx.xx:xx。  **参数范围**：  不涉及。
-    * username  **参数解释**：  实例账号名称。  **参数范围**：  不涉及。
-    * password  **参数解释**：  实例账号密码。  **约束限制**：  - 至少包含三种字符组合：小写字母、大写字母、数字、特殊字符 ~ ! @ # % ^ * - _ + ? - 不能使用简单、强度不够、容易被猜测的密码。 - 不能与账号名称或者倒序的账号名称相同。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * endpoint  **参数解释**：  内网地址以及端口号。  格式为xx.xx.xx.xx:xx。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * username  **参数解释**：  数据节点的账号名称。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * password  **参数解释**：  数据节点的账号密码。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * rdsInstanceId  **参数解释**：  rds实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in01，长度为36个字符。  **默认取值**：  不涉及。
     *
     * @var string[]
@@ -243,7 +243,7 @@ class EsdbCheckRdsConnectionRequestV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpoint
-    *  **参数解释**：  内网地址以及端口号。  格式为xx.xx.xx.xx:xx。  **参数范围**：  不涉及。
+    *  **参数解释**：  内网地址以及端口号。  格式为xx.xx.xx.xx:xx。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return string
     */
@@ -255,7 +255,7 @@ class EsdbCheckRdsConnectionRequestV3 implements ModelInterface, ArrayAccess
     /**
     * Sets endpoint
     *
-    * @param string $endpoint **参数解释**：  内网地址以及端口号。  格式为xx.xx.xx.xx:xx。  **参数范围**：  不涉及。
+    * @param string $endpoint **参数解释**：  内网地址以及端口号。  格式为xx.xx.xx.xx:xx。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class EsdbCheckRdsConnectionRequestV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets username
-    *  **参数解释**：  实例账号名称。  **参数范围**：  不涉及。
+    *  **参数解释**：  数据节点的账号名称。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return string
     */
@@ -279,7 +279,7 @@ class EsdbCheckRdsConnectionRequestV3 implements ModelInterface, ArrayAccess
     /**
     * Sets username
     *
-    * @param string $username **参数解释**：  实例账号名称。  **参数范围**：  不涉及。
+    * @param string $username **参数解释**：  数据节点的账号名称。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class EsdbCheckRdsConnectionRequestV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets password
-    *  **参数解释**：  实例账号密码。  **约束限制**：  - 至少包含三种字符组合：小写字母、大写字母、数字、特殊字符 ~ ! @ # % ^ * - _ + ? - 不能使用简单、强度不够、容易被猜测的密码。 - 不能与账号名称或者倒序的账号名称相同。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    *  **参数解释**：  数据节点的账号密码。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return string
     */
@@ -303,7 +303,7 @@ class EsdbCheckRdsConnectionRequestV3 implements ModelInterface, ArrayAccess
     /**
     * Sets password
     *
-    * @param string $password **参数解释**：  实例账号密码。  **约束限制**：  - 至少包含三种字符组合：小写字母、大写字母、数字、特殊字符 ~ ! @ # % ^ * - _ + ? - 不能使用简单、强度不够、容易被猜测的密码。 - 不能与账号名称或者倒序的账号名称相同。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * @param string $password **参数解释**：  数据节点的账号密码。  **约束限制**：  不涉及  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return $this
     */

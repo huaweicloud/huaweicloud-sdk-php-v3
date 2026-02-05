@@ -21,20 +21,30 @@ class ImportIndicatorsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * code  错误码
+    * message  错误信息
+    * data  data
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'code' => 'string',
+            'message' => 'string',
+            'data' => '\HuaweiCloud\SDK\SecMaster\V1\Model\ImportIndicatorsResponseBodyData'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * code  错误码
+    * message  错误信息
+    * data  data
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'code' => null,
+        'message' => null,
+        'data' => null
     ];
 
     /**
@@ -60,29 +70,44 @@ class ImportIndicatorsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * code  错误码
+    * message  错误信息
+    * data  data
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'code' => 'code',
+            'message' => 'message',
+            'data' => 'data'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * code  错误码
+    * message  错误信息
+    * data  data
     *
     * @var string[]
     */
     protected static $setters = [
+            'code' => 'setCode',
+            'message' => 'setMessage',
+            'data' => 'setData'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * code  错误码
+    * message  错误信息
+    * data  data
     *
     * @var string[]
     */
     protected static $getters = [
+            'code' => 'getCode',
+            'message' => 'getMessage',
+            'data' => 'getData'
     ];
 
     /**
@@ -143,6 +168,9 @@ class ImportIndicatorsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -153,6 +181,18 @@ class ImportIndicatorsResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['code']) && (mb_strlen($this->container['code']) > 64)) {
+                $invalidProperties[] = "invalid value for 'code', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['code']) && (mb_strlen($this->container['code']) < 0)) {
+                $invalidProperties[] = "invalid value for 'code', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['message']) && (mb_strlen($this->container['message']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'message', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['message']) && (mb_strlen($this->container['message']) < 0)) {
+                $invalidProperties[] = "invalid value for 'message', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -165,6 +205,78 @@ class ImportIndicatorsResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets code
+    *  错误码
+    *
+    * @return string|null
+    */
+    public function getCode()
+    {
+        return $this->container['code'];
+    }
+
+    /**
+    * Sets code
+    *
+    * @param string|null $code 错误码
+    *
+    * @return $this
+    */
+    public function setCode($code)
+    {
+        $this->container['code'] = $code;
+        return $this;
+    }
+
+    /**
+    * Gets message
+    *  错误信息
+    *
+    * @return string|null
+    */
+    public function getMessage()
+    {
+        return $this->container['message'];
+    }
+
+    /**
+    * Sets message
+    *
+    * @param string|null $message 错误信息
+    *
+    * @return $this
+    */
+    public function setMessage($message)
+    {
+        $this->container['message'] = $message;
+        return $this;
+    }
+
+    /**
+    * Gets data
+    *  data
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\ImportIndicatorsResponseBodyData|null
+    */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+    * Sets data
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\ImportIndicatorsResponseBodyData|null $data data
+    *
+    * @return $this
+    */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
+        return $this;
     }
 
     /**

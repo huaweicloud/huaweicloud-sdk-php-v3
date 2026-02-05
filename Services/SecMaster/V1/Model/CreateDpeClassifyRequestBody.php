@@ -28,6 +28,7 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
     * dataSource  数据源
     * description  描述信息
     * classifier  classifier
+    * mapper  mapper
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
             'dataclassId' => 'string',
             'dataSource' => 'string',
             'description' => 'string',
-            'classifier' => '\HuaweiCloud\SDK\SecMaster\V1\Model\DpeClassifyCreate'
+            'classifier' => '\HuaweiCloud\SDK\SecMaster\V1\Model\DpeClassifyCreate',
+            'mapper' => '\HuaweiCloud\SDK\SecMaster\V1\Model\CreateDpeMappingRequestBody'
     ];
 
     /**
@@ -52,6 +54,7 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
     * dataSource  数据源
     * description  描述信息
     * classifier  classifier
+    * mapper  mapper
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
         'dataclassId' => null,
         'dataSource' => null,
         'description' => null,
-        'classifier' => null
+        'classifier' => null,
+        'mapper' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
     * dataSource  数据源
     * description  描述信息
     * classifier  classifier
+    * mapper  mapper
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
             'dataclassId' => 'dataclass_id',
             'dataSource' => 'data_source',
             'description' => 'description',
-            'classifier' => 'classifier'
+            'classifier' => 'classifier',
+            'mapper' => 'mapper'
     ];
 
     /**
@@ -121,6 +127,7 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
     * dataSource  数据源
     * description  描述信息
     * classifier  classifier
+    * mapper  mapper
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
             'dataclassId' => 'setDataclassId',
             'dataSource' => 'setDataSource',
             'description' => 'setDescription',
-            'classifier' => 'setClassifier'
+            'classifier' => 'setClassifier',
+            'mapper' => 'setMapper'
     ];
 
     /**
@@ -145,6 +153,7 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
     * dataSource  数据源
     * description  描述信息
     * classifier  classifier
+    * mapper  mapper
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
             'dataclassId' => 'getDataclassId',
             'dataSource' => 'getDataSource',
             'description' => 'getDescription',
-            'classifier' => 'getClassifier'
+            'classifier' => 'getClassifier',
+            'mapper' => 'getMapper'
     ];
 
     /**
@@ -225,6 +235,7 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
         $this->container['dataSource'] = isset($data['dataSource']) ? $data['dataSource'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['classifier'] = isset($data['classifier']) ? $data['classifier'] : null;
+        $this->container['mapper'] = isset($data['mapper']) ? $data['mapper'] : null;
     }
 
     /**
@@ -486,6 +497,30 @@ class CreateDpeClassifyRequestBody implements ModelInterface, ArrayAccess
     public function setClassifier($classifier)
     {
         $this->container['classifier'] = $classifier;
+        return $this;
+    }
+
+    /**
+    * Gets mapper
+    *  mapper
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V1\Model\CreateDpeMappingRequestBody|null
+    */
+    public function getMapper()
+    {
+        return $this->container['mapper'];
+    }
+
+    /**
+    * Sets mapper
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V1\Model\CreateDpeMappingRequestBody|null $mapper mapper
+    *
+    * @return $this
+    */
+    public function setMapper($mapper)
+    {
+        $this->container['mapper'] = $mapper;
         return $this;
     }
 

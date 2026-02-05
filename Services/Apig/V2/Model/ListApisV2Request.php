@@ -29,9 +29,9 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     * reqProtocol  请求协议
     * reqMethod  请求方法
     * reqUri  请求路径
-    * authType  授权类型
+    * authType  授权类型。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     * envId  发布的环境编号
-    * type  API类型
+    * type  API类型。 - 1：公有API - 2：私有API
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name、req_uri
     * vpcChannelName  负载通道名称
     * returnDataMode  指定API详情中需要包含的额外返回结果，多个参数之间使用“,”隔开，当brief和其他include参数共同使用时，brief不生效。 目前仅支持brief，include_group，include_group_backend。 brief：默认值，不包含额外信息。 include_group：返回结果中包含api_group_info。 include_group_backend：返回结果中包含backend_api。
@@ -69,9 +69,9 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     * reqProtocol  请求协议
     * reqMethod  请求方法
     * reqUri  请求路径
-    * authType  授权类型
+    * authType  授权类型。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     * envId  发布的环境编号
-    * type  API类型
+    * type  API类型。 - 1：公有API - 2：私有API
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name、req_uri
     * vpcChannelName  负载通道名称
     * returnDataMode  指定API详情中需要包含的额外返回结果，多个参数之间使用“,”隔开，当brief和其他include参数共同使用时，brief不生效。 目前仅支持brief，include_group，include_group_backend。 brief：默认值，不包含额外信息。 include_group：返回结果中包含api_group_info。 include_group_backend：返回结果中包含backend_api。
@@ -130,9 +130,9 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     * reqProtocol  请求协议
     * reqMethod  请求方法
     * reqUri  请求路径
-    * authType  授权类型
+    * authType  授权类型。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     * envId  发布的环境编号
-    * type  API类型
+    * type  API类型。 - 1：公有API - 2：私有API
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name、req_uri
     * vpcChannelName  负载通道名称
     * returnDataMode  指定API详情中需要包含的额外返回结果，多个参数之间使用“,”隔开，当brief和其他include参数共同使用时，brief不生效。 目前仅支持brief，include_group，include_group_backend。 brief：默认值，不包含额外信息。 include_group：返回结果中包含api_group_info。 include_group_backend：返回结果中包含backend_api。
@@ -170,9 +170,9 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     * reqProtocol  请求协议
     * reqMethod  请求方法
     * reqUri  请求路径
-    * authType  授权类型
+    * authType  授权类型。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     * envId  发布的环境编号
-    * type  API类型
+    * type  API类型。 - 1：公有API - 2：私有API
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name、req_uri
     * vpcChannelName  负载通道名称
     * returnDataMode  指定API详情中需要包含的额外返回结果，多个参数之间使用“,”隔开，当brief和其他include参数共同使用时，brief不生效。 目前仅支持brief，include_group，include_group_backend。 brief：默认值，不包含额外信息。 include_group：返回结果中包含api_group_info。 include_group_backend：返回结果中包含backend_api。
@@ -210,9 +210,9 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     * reqProtocol  请求协议
     * reqMethod  请求方法
     * reqUri  请求路径
-    * authType  授权类型
+    * authType  授权类型。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     * envId  发布的环境编号
-    * type  API类型
+    * type  API类型。 - 1：公有API - 2：私有API
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name、req_uri
     * vpcChannelName  负载通道名称
     * returnDataMode  指定API详情中需要包含的额外返回结果，多个参数之间使用“,”隔开，当brief和其他include参数共同使用时，brief不生效。 目前仅支持brief，include_group，include_group_backend。 brief：默认值，不包含额外信息。 include_group：返回结果中包含api_group_info。 include_group_backend：返回结果中包含backend_api。
@@ -279,7 +279,41 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const AUTH_TYPE_NONE = 'NONE';
+    const AUTH_TYPE_APP = 'APP';
+    const AUTH_TYPE_IAM = 'IAM';
+    const AUTH_TYPE_AUTHORIZER = 'AUTHORIZER';
+    const TYPE_1 = 1;
+    const TYPE_2 = 2;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAuthTypeAllowableValues()
+    {
+        return [
+            self::AUTH_TYPE_NONE,
+            self::AUTH_TYPE_APP,
+            self::AUTH_TYPE_IAM,
+            self::AUTH_TYPE_AUTHORIZER,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_1,
+            self::TYPE_2,
+        ];
+    }
 
 
     /**
@@ -332,6 +366,22 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getAuthTypeAllowableValues();
+                if (!is_null($this->container['authType']) && !in_array($this->container['authType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'authType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['tags']) && (mb_strlen($this->container['tags']) > 128)) {
                 $invalidProperties[] = "invalid value for 'tags', the character length must be smaller than or equal to 128.";
             }
@@ -573,7 +623,7 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
 
     /**
     * Gets authType
-    *  授权类型
+    *  授权类型。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     *
     * @return string|null
     */
@@ -585,7 +635,7 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     /**
     * Sets authType
     *
-    * @param string|null $authType 授权类型
+    * @param string|null $authType 授权类型。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
     *
     * @return $this
     */
@@ -621,7 +671,7 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  API类型
+    *  API类型。 - 1：公有API - 2：私有API
     *
     * @return int|null
     */
@@ -633,7 +683,7 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int|null $type API类型
+    * @param int|null $type API类型。 - 1：公有API - 2：私有API
     *
     * @return $this
     */

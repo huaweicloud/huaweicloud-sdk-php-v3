@@ -21,7 +21,7 @@ class ShowDdmDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instances  实例详情。
+    * instances  **参数解释**：  查询实例详情相关信息的返回集合。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowDdmDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instances  实例详情。
+    * instances  **参数解释**：  查询实例详情相关信息的返回集合。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowDdmDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instances  实例详情。
+    * instances  **参数解释**：  查询实例详情相关信息的返回集合。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowDdmDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instances  实例详情。
+    * instances  **参数解释**：  查询实例详情相关信息的返回集合。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowDdmDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instances  实例详情。
+    * instances  **参数解释**：  查询实例详情相关信息的返回集合。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowDdmDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets instances
-    *  实例详情。
+    *  **参数解释**：  查询实例详情相关信息的返回集合。  **参数范围**：  不涉及。
     *
     * @return \HuaweiCloud\SDK\Ddm\V1\Model\InstanceDetail[]|null
     */
@@ -187,7 +187,7 @@ class ShowDdmDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets instances
     *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\InstanceDetail[]|null $instances 实例详情。
+    * @param \HuaweiCloud\SDK\Ddm\V1\Model\InstanceDetail[]|null $instances **参数解释**：  查询实例详情相关信息的返回集合。  **参数范围**：  不涉及。
     *
     * @return $this
     */

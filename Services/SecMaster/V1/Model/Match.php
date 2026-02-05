@@ -21,7 +21,7 @@ class Match implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * key  键。第一期限定为resource_name,后续扩展。
-    * value  值。每个值最大长度255个unicode字符 。不校验字符集范。
+    * value  值。每个值最大长度255个unicode字符。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class Match implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * key  键。第一期限定为resource_name,后续扩展。
-    * value  值。每个值最大长度255个unicode字符 。不校验字符集范。
+    * value  值。每个值最大长度255个unicode字符。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class Match implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * key  键。第一期限定为resource_name,后续扩展。
-    * value  值。每个值最大长度255个unicode字符 。不校验字符集范。
+    * value  值。每个值最大长度255个unicode字符。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class Match implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * key  键。第一期限定为resource_name,后续扩展。
-    * value  值。每个值最大长度255个unicode字符 。不校验字符集范。
+    * value  值。每个值最大长度255个unicode字符。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class Match implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * key  键。第一期限定为resource_name,后续扩展。
-    * value  值。每个值最大长度255个unicode字符 。不校验字符集范。
+    * value  值。每个值最大长度255个unicode字符。
     *
     * @var string[]
     */
@@ -227,7 +227,7 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  值。每个值最大长度255个unicode字符 。不校验字符集范。
+    *  值。每个值最大长度255个unicode字符。
     *
     * @return string
     */
@@ -239,7 +239,7 @@ class Match implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 值。每个值最大长度255个unicode字符 。不校验字符集范。
+    * @param string $value 值。每个值最大长度255个unicode字符。
     *
     * @return $this
     */

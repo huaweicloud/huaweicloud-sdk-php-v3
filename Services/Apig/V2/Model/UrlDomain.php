@@ -23,11 +23,11 @@ class UrlDomain implements ModelInterface, ArrayAccess
     * id  域名编号
     * domain  访问域名
     * cnameStatus  域名cname状态： - 1：未解析 - 2：解析中 - 3：解析成功 - 4：解析失败
-    * sslId  SSL证书编号
-    * sslName  SSL证书名称
+    * sslId  SSL证书编号。当绑定的证书有RSA类型时，该字段有值，且展示对应RSA证书的编号。
+    * sslName  SSL证书名称。当绑定的证书有RSA类型时，该字段有值，且展示对应RSA证书的名称。
     * minSslVersion  最小ssl协议版本号。支持TLSv1.1或TLSv1.2
     * verifiedClientCertificateEnabled  是否开启客户端证书校验。只有绑定证书时，该参数才生效。当绑定证书存在trusted_root_ca时，默认开启；当绑定证书不存在trusted_root_ca时，默认关闭。
-    * isHasTrustedRootCa  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+    * isHasTrustedRootCa  是否存在信任的根证书CA。只有当域名绑定的所有证书都存在信任的根证书CA时为true。
     * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；如果填写该参数，则必须同时填写https_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * ingressHttpsPort  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * sslInfos  SSL证书列表。
@@ -53,11 +53,11 @@ class UrlDomain implements ModelInterface, ArrayAccess
     * id  域名编号
     * domain  访问域名
     * cnameStatus  域名cname状态： - 1：未解析 - 2：解析中 - 3：解析成功 - 4：解析失败
-    * sslId  SSL证书编号
-    * sslName  SSL证书名称
+    * sslId  SSL证书编号。当绑定的证书有RSA类型时，该字段有值，且展示对应RSA证书的编号。
+    * sslName  SSL证书名称。当绑定的证书有RSA类型时，该字段有值，且展示对应RSA证书的名称。
     * minSslVersion  最小ssl协议版本号。支持TLSv1.1或TLSv1.2
     * verifiedClientCertificateEnabled  是否开启客户端证书校验。只有绑定证书时，该参数才生效。当绑定证书存在trusted_root_ca时，默认开启；当绑定证书不存在trusted_root_ca时，默认关闭。
-    * isHasTrustedRootCa  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+    * isHasTrustedRootCa  是否存在信任的根证书CA。只有当域名绑定的所有证书都存在信任的根证书CA时为true。
     * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；如果填写该参数，则必须同时填写https_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * ingressHttpsPort  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * sslInfos  SSL证书列表。
@@ -104,11 +104,11 @@ class UrlDomain implements ModelInterface, ArrayAccess
     * id  域名编号
     * domain  访问域名
     * cnameStatus  域名cname状态： - 1：未解析 - 2：解析中 - 3：解析成功 - 4：解析失败
-    * sslId  SSL证书编号
-    * sslName  SSL证书名称
+    * sslId  SSL证书编号。当绑定的证书有RSA类型时，该字段有值，且展示对应RSA证书的编号。
+    * sslName  SSL证书名称。当绑定的证书有RSA类型时，该字段有值，且展示对应RSA证书的名称。
     * minSslVersion  最小ssl协议版本号。支持TLSv1.1或TLSv1.2
     * verifiedClientCertificateEnabled  是否开启客户端证书校验。只有绑定证书时，该参数才生效。当绑定证书存在trusted_root_ca时，默认开启；当绑定证书不存在trusted_root_ca时，默认关闭。
-    * isHasTrustedRootCa  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+    * isHasTrustedRootCa  是否存在信任的根证书CA。只有当域名绑定的所有证书都存在信任的根证书CA时为true。
     * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；如果填写该参数，则必须同时填写https_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * ingressHttpsPort  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * sslInfos  SSL证书列表。
@@ -134,11 +134,11 @@ class UrlDomain implements ModelInterface, ArrayAccess
     * id  域名编号
     * domain  访问域名
     * cnameStatus  域名cname状态： - 1：未解析 - 2：解析中 - 3：解析成功 - 4：解析失败
-    * sslId  SSL证书编号
-    * sslName  SSL证书名称
+    * sslId  SSL证书编号。当绑定的证书有RSA类型时，该字段有值，且展示对应RSA证书的编号。
+    * sslName  SSL证书名称。当绑定的证书有RSA类型时，该字段有值，且展示对应RSA证书的名称。
     * minSslVersion  最小ssl协议版本号。支持TLSv1.1或TLSv1.2
     * verifiedClientCertificateEnabled  是否开启客户端证书校验。只有绑定证书时，该参数才生效。当绑定证书存在trusted_root_ca时，默认开启；当绑定证书不存在trusted_root_ca时，默认关闭。
-    * isHasTrustedRootCa  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+    * isHasTrustedRootCa  是否存在信任的根证书CA。只有当域名绑定的所有证书都存在信任的根证书CA时为true。
     * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；如果填写该参数，则必须同时填写https_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * ingressHttpsPort  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * sslInfos  SSL证书列表。
@@ -164,11 +164,11 @@ class UrlDomain implements ModelInterface, ArrayAccess
     * id  域名编号
     * domain  访问域名
     * cnameStatus  域名cname状态： - 1：未解析 - 2：解析中 - 3：解析成功 - 4：解析失败
-    * sslId  SSL证书编号
-    * sslName  SSL证书名称
+    * sslId  SSL证书编号。当绑定的证书有RSA类型时，该字段有值，且展示对应RSA证书的编号。
+    * sslName  SSL证书名称。当绑定的证书有RSA类型时，该字段有值，且展示对应RSA证书的名称。
     * minSslVersion  最小ssl协议版本号。支持TLSv1.1或TLSv1.2
     * verifiedClientCertificateEnabled  是否开启客户端证书校验。只有绑定证书时，该参数才生效。当绑定证书存在trusted_root_ca时，默认开启；当绑定证书不存在trusted_root_ca时，默认关闭。
-    * isHasTrustedRootCa  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+    * isHasTrustedRootCa  是否存在信任的根证书CA。只有当域名绑定的所有证书都存在信任的根证书CA时为true。
     * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；如果填写该参数，则必须同时填写https_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * ingressHttpsPort  访问该域名绑定的https协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；如果填写该参数，则必须同时填写http_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * sslInfos  SSL证书列表。
@@ -391,7 +391,7 @@ class UrlDomain implements ModelInterface, ArrayAccess
 
     /**
     * Gets sslId
-    *  SSL证书编号
+    *  SSL证书编号。当绑定的证书有RSA类型时，该字段有值，且展示对应RSA证书的编号。
     *
     * @return string|null
     */
@@ -403,7 +403,7 @@ class UrlDomain implements ModelInterface, ArrayAccess
     /**
     * Sets sslId
     *
-    * @param string|null $sslId SSL证书编号
+    * @param string|null $sslId SSL证书编号。当绑定的证书有RSA类型时，该字段有值，且展示对应RSA证书的编号。
     *
     * @return $this
     */
@@ -415,7 +415,7 @@ class UrlDomain implements ModelInterface, ArrayAccess
 
     /**
     * Gets sslName
-    *  SSL证书名称
+    *  SSL证书名称。当绑定的证书有RSA类型时，该字段有值，且展示对应RSA证书的名称。
     *
     * @return string|null
     */
@@ -427,7 +427,7 @@ class UrlDomain implements ModelInterface, ArrayAccess
     /**
     * Sets sslName
     *
-    * @param string|null $sslName SSL证书名称
+    * @param string|null $sslName SSL证书名称。当绑定的证书有RSA类型时，该字段有值，且展示对应RSA证书的名称。
     *
     * @return $this
     */
@@ -487,7 +487,7 @@ class UrlDomain implements ModelInterface, ArrayAccess
 
     /**
     * Gets isHasTrustedRootCa
-    *  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+    *  是否存在信任的根证书CA。只有当域名绑定的所有证书都存在信任的根证书CA时为true。
     *
     * @return bool|null
     */
@@ -499,7 +499,7 @@ class UrlDomain implements ModelInterface, ArrayAccess
     /**
     * Sets isHasTrustedRootCa
     *
-    * @param bool|null $isHasTrustedRootCa 是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+    * @param bool|null $isHasTrustedRootCa 是否存在信任的根证书CA。只有当域名绑定的所有证书都存在信任的根证书CA时为true。
     *
     * @return $this
     */

@@ -20,26 +20,26 @@ class ApplicableInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * entityId  **参数解释**：  实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。  **默认取值**：  不涉及。
-    * configId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * instanceId  **参数解释**：  实例ID，此参数是实例的唯一标识。  **参数范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。
+    * instanceName  **参数解释**：  实例名称。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'entityId' => 'string',
-            'configId' => 'string'
+            'instanceId' => 'string',
+            'instanceName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * entityId  **参数解释**：  实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。  **默认取值**：  不涉及。
-    * configId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * instanceId  **参数解释**：  实例ID，此参数是实例的唯一标识。  **参数范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。
+    * instanceName  **参数解释**：  实例名称。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'entityId' => null,
-        'configId' => null
+        'instanceId' => null,
+        'instanceName' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class ApplicableInstance implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * entityId  **参数解释**：  实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。  **默认取值**：  不涉及。
-    * configId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * instanceId  **参数解释**：  实例ID，此参数是实例的唯一标识。  **参数范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。
+    * instanceName  **参数解释**：  实例名称。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'entityId' => 'entity_id',
-            'configId' => 'config_id'
+            'instanceId' => 'instance_id',
+            'instanceName' => 'instance_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * entityId  **参数解释**：  实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。  **默认取值**：  不涉及。
-    * configId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * instanceId  **参数解释**：  实例ID，此参数是实例的唯一标识。  **参数范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。
+    * instanceName  **参数解释**：  实例名称。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'entityId' => 'setEntityId',
-            'configId' => 'setConfigId'
+            'instanceId' => 'setInstanceId',
+            'instanceName' => 'setInstanceName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * entityId  **参数解释**：  实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。  **默认取值**：  不涉及。
-    * configId  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * instanceId  **参数解释**：  实例ID，此参数是实例的唯一标识。  **参数范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。
+    * instanceName  **参数解释**：  实例名称。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'entityId' => 'getEntityId',
-            'configId' => 'getConfigId'
+            'instanceId' => 'getInstanceId',
+            'instanceName' => 'getInstanceName'
     ];
 
     /**
@@ -157,8 +157,8 @@ class ApplicableInstance implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['entityId'] = isset($data['entityId']) ? $data['entityId'] : null;
-        $this->container['configId'] = isset($data['configId']) ? $data['configId'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['instanceName'] = isset($data['instanceName']) ? $data['instanceName'] : null;
     }
 
     /**
@@ -169,17 +169,17 @@ class ApplicableInstance implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['entityId']) && (mb_strlen($this->container['entityId']) > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'entityId', the character length must be smaller than or equal to 2147483647.";
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['entityId']) && (mb_strlen($this->container['entityId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'entityId', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['configId']) && (mb_strlen($this->container['configId']) > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'configId', the character length must be smaller than or equal to 2147483647.";
+            if (!is_null($this->container['instanceName']) && (mb_strlen($this->container['instanceName']) > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'instanceName', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['configId']) && (mb_strlen($this->container['configId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'configId', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['instanceName']) && (mb_strlen($this->container['instanceName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'instanceName', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -196,50 +196,50 @@ class ApplicableInstance implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets entityId
-    *  **参数解释**：  实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。  **默认取值**：  不涉及。
+    * Gets instanceId
+    *  **参数解释**：  实例ID，此参数是实例的唯一标识。  **参数范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。
     *
     * @return string|null
     */
-    public function getEntityId()
+    public function getInstanceId()
     {
-        return $this->container['entityId'];
+        return $this->container['instanceId'];
     }
 
     /**
-    * Sets entityId
+    * Sets instanceId
     *
-    * @param string|null $entityId **参数解释**：  实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。  **默认取值**：  不涉及。
+    * @param string|null $instanceId **参数解释**：  实例ID，此参数是实例的唯一标识。  **参数范围**：  只能由英文字母、数字组成，后缀为in09，长度为36个字符。
     *
     * @return $this
     */
-    public function setEntityId($entityId)
+    public function setInstanceId($instanceId)
     {
-        $this->container['entityId'] = $entityId;
+        $this->container['instanceId'] = $instanceId;
         return $this;
     }
 
     /**
-    * Gets configId
-    *  **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * Gets instanceName
+    *  **参数解释**：  实例名称。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
-    public function getConfigId()
+    public function getInstanceName()
     {
-        return $this->container['configId'];
+        return $this->container['instanceName'];
     }
 
     /**
-    * Sets configId
+    * Sets instanceName
     *
-    * @param string|null $configId **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * @param string|null $instanceName **参数解释**：  实例名称。  **参数范围**：  不涉及。
     *
     * @return $this
     */
-    public function setConfigId($configId)
+    public function setInstanceName($instanceName)
     {
-        $this->container['configId'] = $configId;
+        $this->container['instanceName'] = $instanceName;
         return $this;
     }
 

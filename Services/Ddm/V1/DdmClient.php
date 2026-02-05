@@ -2845,6 +2845,71 @@ class DdmClient extends Client
     }
 
     /**
+     * 查询实例列表
+     *
+     * 查询实例列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDdms($request)
+    {
+        return $this->listDdmsWithHttpInfo($request);
+    }
+
+    public function listDdmsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\ListDdmsResponse',
+            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\ListDdmsRequest');
+    }
+
+    /**
      * 查询DDM引擎信息
      *
      * 查询DDM引擎信息详情。
@@ -3324,6 +3389,83 @@ class DdmClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\ListSlowLogResponse',
             $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\ListSlowLogRequest');
+    }
+
+    /**
+     * 查询慢日志
+     *
+     * 查询慢日志V3
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSlowLogAnalysis($request)
+    {
+        return $this->listSlowLogAnalysisWithHttpInfo($request);
+    }
+
+    public function listSlowLogAnalysisWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/slow-log-analysis';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['startDate'] !== null) {
+            $queryParams['start_date'] = $localVarParams['startDate'];
+        }
+        if ($localVarParams['endDate'] !== null) {
+            $queryParams['end_date'] = $localVarParams['endDate'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['order'] !== null) {
+            $queryParams['order'] = $localVarParams['order'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\ListSlowLogAnalysisResponse',
+            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\ListSlowLogAnalysisRequest');
     }
 
     /**
@@ -5115,6 +5257,71 @@ class DdmClient extends Client
     }
 
     /**
+     * 查询访问控制组
+     *
+     * 查询访问控制组
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showIpGroup($request)
+    {
+        return $this->showIpGroupWithHttpInfo($request);
+    }
+
+    public function showIpGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/groups/{group_id}/acls';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\ShowIpGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\ShowIpGroupRequest');
+    }
+
+    /**
      * 查询逻辑会话列表
      *
      * 查询逻辑会话列表
@@ -5183,6 +5390,77 @@ class DdmClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\ShowLogicalProcessesResponse',
             $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\ShowLogicalProcessesRequest');
+    }
+
+    /**
+     * 查询分片变更的日志
+     *
+     * 查询分片变更的日志
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showMigrationLog($request)
+    {
+        return $this->showMigrationLogWithHttpInfo($request);
+    }
+
+    public function showMigrationLogWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instance/{instance_id}/task/{task_id}/run-logs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\ShowMigrationLogResponse',
+            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\ShowMigrationLogRequest');
     }
 
     /**
@@ -5591,6 +5869,74 @@ class DdmClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\ShrinkInstanceNodesResponse',
             $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\ShrinkInstanceNodesRequest');
+    }
+
+    /**
+     * 创建访问控制组
+     *
+     * 创建访问控制组
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function switchIpGroup($request)
+    {
+        return $this->switchIpGroupWithHttpInfo($request);
+    }
+
+    public function switchIpGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/groups/{group_id}/acls';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\SwitchIpGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\SwitchIpGroupRequest');
     }
 
     /**
@@ -6445,14 +6791,14 @@ class DdmClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function checkDataNodeConnectionV0V3($request)
+    public function checkDataNodeConnection($request)
     {
-        return $this->checkDataNodeConnectionV0V3WithHttpInfo($request);
+        return $this->checkDataNodeConnectionWithHttpInfo($request);
     }
 
-    public function checkDataNodeConnectionV0V3WithHttpInfo($request)
+    public function checkDataNodeConnectionWithHttpInfo($request)
     {
-        $resourcePath = '/v3/ddm/instance/rds/connection';
+        $resourcePath = '/v3/{project_id}/instance/{instance_id}/rds/connection';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -6465,6 +6811,9 @@ class DdmClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -6493,8 +6842,8 @@ class DdmClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\CheckDataNodeConnectionV0V3Response',
-            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\CheckDataNodeConnectionV0V3Request');
+            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\CheckDataNodeConnectionResponse',
+            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\CheckDataNodeConnectionRequest');
     }
 
     /**
@@ -6569,12 +6918,12 @@ class DdmClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function copyParameterGroup($request)
+    public function copyConfiguration($request)
     {
-        return $this->copyParameterGroupWithHttpInfo($request);
+        return $this->copyConfigurationWithHttpInfo($request);
     }
 
-    public function copyParameterGroupWithHttpInfo($request)
+    public function copyConfigurationWithHttpInfo($request)
     {
         $resourcePath = '/v3/{project_id}/configurations/{config_id}/copy';
         $formParams = [];
@@ -6598,11 +6947,11 @@ class DdmClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/plain']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/plain'],
+                [],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -6620,76 +6969,8 @@ class DdmClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\CopyParameterGroupResponse',
-            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\CopyParameterGroupRequest');
-    }
-
-    /**
-     * 查询可应用的实例列表V3
-     *
-     * 查询可应用的实例列表V3
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listInstancesAppliedParameterGroupV0V3($request)
-    {
-        return $this->listInstancesAppliedParameterGroupV0V3WithHttpInfo($request);
-    }
-
-    public function listInstancesAppliedParameterGroupV0V3WithHttpInfo($request)
-    {
-        $resourcePath = '/v3/{project_id}/configurations/{config_id}/query-instances';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['configId'] !== null) {
-            $pathParams['config_id'] = $localVarParams['configId'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\ListInstancesAppliedParameterGroupV0V3Response',
-            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\ListInstancesAppliedParameterGroupV0V3Request');
+            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\CopyConfigurationResponse',
+            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\CopyConfigurationRequest');
     }
 
     /**
@@ -6702,12 +6983,12 @@ class DdmClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function listParameterGroupApplyHistoryV0V3($request)
+    public function listConfigurationApplyHistories($request)
     {
-        return $this->listParameterGroupApplyHistoryV0V3WithHttpInfo($request);
+        return $this->listConfigurationApplyHistoriesWithHttpInfo($request);
     }
 
-    public function listParameterGroupApplyHistoryV0V3WithHttpInfo($request)
+    public function listConfigurationApplyHistoriesWithHttpInfo($request)
     {
         $resourcePath = '/v3/{project_id}/configurations/{config_id}/apply-histories';
         $formParams = [];
@@ -6756,8 +7037,76 @@ class DdmClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\ListParameterGroupApplyHistoryV0V3Response',
-            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\ListParameterGroupApplyHistoryV0V3Request');
+            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\ListConfigurationApplyHistoriesResponse',
+            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\ListConfigurationApplyHistoriesRequest');
+    }
+
+    /**
+     * 查询可应用的实例列表V3
+     *
+     * 查询可应用的实例列表V3
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listInstancesConfigurations($request)
+    {
+        return $this->listInstancesConfigurationsWithHttpInfo($request);
+    }
+
+    public function listInstancesConfigurationsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/configurations/{config_id}/query-instances';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['configId'] !== null) {
+            $pathParams['config_id'] = $localVarParams['configId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\ListInstancesConfigurationsResponse',
+            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\ListInstancesConfigurationsRequest');
     }
 
     /**
@@ -6777,7 +7126,7 @@ class DdmClient extends Client
 
     public function resetParameterGroupWithHttpInfo($request)
     {
-        $resourcePath = '/v3/{project_id}/configurations/{config_id}/reset';
+        $resourcePath = '/v3/{project_id}/configurations/{config_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -6799,11 +7148,11 @@ class DdmClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -6861,11 +7210,11 @@ class DdmClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -6885,6 +7234,204 @@ class DdmClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\ShowDdmDetailResponse',
             $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\ShowDdmDetailRequest');
+    }
+
+    /**
+     * 批量设置读策略V3
+     *
+     * 批量设置读策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchModifyReadWriteStrategy($request)
+    {
+        return $this->batchModifyReadWriteStrategyWithHttpInfo($request);
+    }
+
+    public function batchModifyReadWriteStrategyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/action/batch-modify-read-write-strategy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\BatchModifyReadWriteStrategyResponse',
+            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\BatchModifyReadWriteStrategyRequest');
+    }
+
+    /**
+     * 修改sql黑名单
+     *
+     * 修改sql黑名单V3
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifySqlBlackList($request)
+    {
+        return $this->modifySqlBlackListWithHttpInfo($request);
+    }
+
+    public function modifySqlBlackListWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/databases/{logic_db_name}/sql-black-list';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['logicDbName'] !== null) {
+            $pathParams['logic_db_name'] = $localVarParams['logicDbName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\ModifySqlBlackListResponse',
+            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\ModifySqlBlackListRequest');
+    }
+
+    /**
+     * 查询sql黑名单V3
+     *
+     * 查询sql黑名单
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSqlBlack($request)
+    {
+        return $this->listSqlBlackWithHttpInfo($request);
+    }
+
+    public function listSqlBlackWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/databases/{logic_db_name}/sql-black-list';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['logicDbName'] !== null) {
+            $pathParams['logic_db_name'] = $localVarParams['logicDbName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\ListSqlBlackResponse',
+            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\ListSqlBlackRequest');
     }
 
     protected function callApi(

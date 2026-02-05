@@ -20,7 +20,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  锁。
+    * action  **参数解释**：  锁。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  锁。
+    * action  **参数解释**：  锁。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  锁。
+    * action  **参数解释**：  锁。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  锁。
+    * action  **参数解释**：  锁。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  锁。
+    * action  **参数解释**：  锁。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
@@ -180,7 +180,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  锁。
+    *  **参数解释**：  锁。  **参数范围**：  不涉及。
     *
     * @return string|null
     */
@@ -192,7 +192,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 锁。
+    * @param string|null $action **参数解释**：  锁。  **参数范围**：  不涉及。
     *
     * @return $this
     */

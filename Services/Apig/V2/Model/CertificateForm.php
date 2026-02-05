@@ -23,7 +23,7 @@ class CertificateForm implements ModelInterface, ArrayAccess
     * name  证书名称。支持中文，英文字母，数字，下划线，且只能以英文或汉字开头，4~50个字符。 > 中文字符必须为UTF-8或者unicode编码。
     * certContent  证书内容
     * privateKey  证书私钥
-    * type  证书可见范围
+    * type  证书类型。 - instance：实例证书 - global：全局证书
     * instanceId  所属实例ID，当type=instance时必填
     * trustedRootCa  信任的根证书CA
     * algorithmType  证书算法类型： - RSA - ECC - SM2
@@ -49,7 +49,7 @@ class CertificateForm implements ModelInterface, ArrayAccess
     * name  证书名称。支持中文，英文字母，数字，下划线，且只能以英文或汉字开头，4~50个字符。 > 中文字符必须为UTF-8或者unicode编码。
     * certContent  证书内容
     * privateKey  证书私钥
-    * type  证书可见范围
+    * type  证书类型。 - instance：实例证书 - global：全局证书
     * instanceId  所属实例ID，当type=instance时必填
     * trustedRootCa  信任的根证书CA
     * algorithmType  证书算法类型： - RSA - ECC - SM2
@@ -96,7 +96,7 @@ class CertificateForm implements ModelInterface, ArrayAccess
     * name  证书名称。支持中文，英文字母，数字，下划线，且只能以英文或汉字开头，4~50个字符。 > 中文字符必须为UTF-8或者unicode编码。
     * certContent  证书内容
     * privateKey  证书私钥
-    * type  证书可见范围
+    * type  证书类型。 - instance：实例证书 - global：全局证书
     * instanceId  所属实例ID，当type=instance时必填
     * trustedRootCa  信任的根证书CA
     * algorithmType  证书算法类型： - RSA - ECC - SM2
@@ -122,7 +122,7 @@ class CertificateForm implements ModelInterface, ArrayAccess
     * name  证书名称。支持中文，英文字母，数字，下划线，且只能以英文或汉字开头，4~50个字符。 > 中文字符必须为UTF-8或者unicode编码。
     * certContent  证书内容
     * privateKey  证书私钥
-    * type  证书可见范围
+    * type  证书类型。 - instance：实例证书 - global：全局证书
     * instanceId  所属实例ID，当type=instance时必填
     * trustedRootCa  信任的根证书CA
     * algorithmType  证书算法类型： - RSA - ECC - SM2
@@ -148,7 +148,7 @@ class CertificateForm implements ModelInterface, ArrayAccess
     * name  证书名称。支持中文，英文字母，数字，下划线，且只能以英文或汉字开头，4~50个字符。 > 中文字符必须为UTF-8或者unicode编码。
     * certContent  证书内容
     * privateKey  证书私钥
-    * type  证书可见范围
+    * type  证书类型。 - instance：实例证书 - global：全局证书
     * instanceId  所属实例ID，当type=instance时必填
     * trustedRootCa  信任的根证书CA
     * algorithmType  证书算法类型： - RSA - ECC - SM2
@@ -400,7 +400,7 @@ class CertificateForm implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  证书可见范围
+    *  证书类型。 - instance：实例证书 - global：全局证书
     *
     * @return string|null
     */
@@ -412,7 +412,7 @@ class CertificateForm implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 证书可见范围
+    * @param string|null $type 证书类型。 - instance：实例证书 - global：全局证书
     *
     * @return $this
     */

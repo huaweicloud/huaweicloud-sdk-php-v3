@@ -21,9 +21,9 @@ class CompareParameterGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * sourceId  **参数解释**：  源参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * sourceId  **参数解释**：  源参数组ID。  **参数范围**：  只能由英文字母、数字组成，长度为36个字符。
     * sourceName  **参数解释**：  源参数组名称。  **参数范围**：  不涉及。
-    * targetId  **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * targetId  **参数解释**：  目标参数组ID。  **参数范围**：  只能由英文字母、数字组成，长度为36个字符。
     * targetName  **参数解释**：  目标参数组名称。  **参数范围**：  不涉及。
     * parameters  **参数解释**：  比较参数组返回相关信息的集合。  **参数范围**：  不涉及。
     *
@@ -39,9 +39,9 @@ class CompareParameterGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * sourceId  **参数解释**：  源参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * sourceId  **参数解释**：  源参数组ID。  **参数范围**：  只能由英文字母、数字组成，长度为36个字符。
     * sourceName  **参数解释**：  源参数组名称。  **参数范围**：  不涉及。
-    * targetId  **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * targetId  **参数解释**：  目标参数组ID。  **参数范围**：  只能由英文字母、数字组成，长度为36个字符。
     * targetName  **参数解释**：  目标参数组名称。  **参数范围**：  不涉及。
     * parameters  **参数解释**：  比较参数组返回相关信息的集合。  **参数范围**：  不涉及。
     *
@@ -78,9 +78,9 @@ class CompareParameterGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * sourceId  **参数解释**：  源参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * sourceId  **参数解释**：  源参数组ID。  **参数范围**：  只能由英文字母、数字组成，长度为36个字符。
     * sourceName  **参数解释**：  源参数组名称。  **参数范围**：  不涉及。
-    * targetId  **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * targetId  **参数解释**：  目标参数组ID。  **参数范围**：  只能由英文字母、数字组成，长度为36个字符。
     * targetName  **参数解释**：  目标参数组名称。  **参数范围**：  不涉及。
     * parameters  **参数解释**：  比较参数组返回相关信息的集合。  **参数范围**：  不涉及。
     *
@@ -96,9 +96,9 @@ class CompareParameterGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * sourceId  **参数解释**：  源参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * sourceId  **参数解释**：  源参数组ID。  **参数范围**：  只能由英文字母、数字组成，长度为36个字符。
     * sourceName  **参数解释**：  源参数组名称。  **参数范围**：  不涉及。
-    * targetId  **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * targetId  **参数解释**：  目标参数组ID。  **参数范围**：  只能由英文字母、数字组成，长度为36个字符。
     * targetName  **参数解释**：  目标参数组名称。  **参数范围**：  不涉及。
     * parameters  **参数解释**：  比较参数组返回相关信息的集合。  **参数范围**：  不涉及。
     *
@@ -114,9 +114,9 @@ class CompareParameterGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * sourceId  **参数解释**：  源参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * sourceId  **参数解释**：  源参数组ID。  **参数范围**：  只能由英文字母、数字组成，长度为36个字符。
     * sourceName  **参数解释**：  源参数组名称。  **参数范围**：  不涉及。
-    * targetId  **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * targetId  **参数解释**：  目标参数组ID。  **参数范围**：  只能由英文字母、数字组成，长度为36个字符。
     * targetName  **参数解释**：  目标参数组名称。  **参数范围**：  不涉及。
     * parameters  **参数解释**：  比较参数组返回相关信息的集合。  **参数范围**：  不涉及。
     *
@@ -243,7 +243,7 @@ class CompareParameterGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceId
-    *  **参数解释**：  源参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    *  **参数解释**：  源参数组ID。  **参数范围**：  只能由英文字母、数字组成，长度为36个字符。
     *
     * @return string|null
     */
@@ -255,7 +255,7 @@ class CompareParameterGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sourceId
     *
-    * @param string|null $sourceId **参数解释**：  源参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * @param string|null $sourceId **参数解释**：  源参数组ID。  **参数范围**：  只能由英文字母、数字组成，长度为36个字符。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class CompareParameterGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetId
-    *  **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    *  **参数解释**：  目标参数组ID。  **参数范围**：  只能由英文字母、数字组成，长度为36个字符。
     *
     * @return string|null
     */
@@ -303,7 +303,7 @@ class CompareParameterGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets targetId
     *
-    * @param string|null $targetId **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+    * @param string|null $targetId **参数解释**：  目标参数组ID。  **参数范围**：  只能由英文字母、数字组成，长度为36个字符。
     *
     * @return $this
     */

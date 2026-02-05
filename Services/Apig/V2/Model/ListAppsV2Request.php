@@ -25,10 +25,12 @@ class ListAppsV2Request implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     * id  APP编号
     * name  APP名称
-    * status  APP状态
-    * appKey  APP的KEY
-    * creator  APP的创建者。 - USER：用户自行创建 - MARKET：[云商店分配](tag:hws)[暂未使用](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    * status  APP状态。 - 1：有效
+    * appKey  APP凭据的key。
+    * creator  APP的创建者。 - USER：用户自行创建 - MARKET：[云商店分配](tag:hws)[暂未使用](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name
+    * relatedDomainId  凭据关联的账号ID。
+    * relatedProjectId  凭据关联的项目ID。
     *
     * @var string[]
     */
@@ -41,7 +43,9 @@ class ListAppsV2Request implements ModelInterface, ArrayAccess
             'status' => 'int',
             'appKey' => 'string',
             'creator' => 'string',
-            'preciseSearch' => 'string'
+            'preciseSearch' => 'string',
+            'relatedDomainId' => 'string',
+            'relatedProjectId' => 'string'
     ];
 
     /**
@@ -51,10 +55,12 @@ class ListAppsV2Request implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     * id  APP编号
     * name  APP名称
-    * status  APP状态
-    * appKey  APP的KEY
-    * creator  APP的创建者。 - USER：用户自行创建 - MARKET：[云商店分配](tag:hws)[暂未使用](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    * status  APP状态。 - 1：有效
+    * appKey  APP凭据的key。
+    * creator  APP的创建者。 - USER：用户自行创建 - MARKET：[云商店分配](tag:hws)[暂未使用](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name
+    * relatedDomainId  凭据关联的账号ID。
+    * relatedProjectId  凭据关联的项目ID。
     *
     * @var string[]
     */
@@ -67,7 +73,9 @@ class ListAppsV2Request implements ModelInterface, ArrayAccess
         'status' => null,
         'appKey' => null,
         'creator' => null,
-        'preciseSearch' => null
+        'preciseSearch' => null,
+        'relatedDomainId' => null,
+        'relatedProjectId' => null
     ];
 
     /**
@@ -98,10 +106,12 @@ class ListAppsV2Request implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     * id  APP编号
     * name  APP名称
-    * status  APP状态
-    * appKey  APP的KEY
-    * creator  APP的创建者。 - USER：用户自行创建 - MARKET：[云商店分配](tag:hws)[暂未使用](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    * status  APP状态。 - 1：有效
+    * appKey  APP凭据的key。
+    * creator  APP的创建者。 - USER：用户自行创建 - MARKET：[云商店分配](tag:hws)[暂未使用](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name
+    * relatedDomainId  凭据关联的账号ID。
+    * relatedProjectId  凭据关联的项目ID。
     *
     * @var string[]
     */
@@ -114,7 +124,9 @@ class ListAppsV2Request implements ModelInterface, ArrayAccess
             'status' => 'status',
             'appKey' => 'app_key',
             'creator' => 'creator',
-            'preciseSearch' => 'precise_search'
+            'preciseSearch' => 'precise_search',
+            'relatedDomainId' => 'related_domain_id',
+            'relatedProjectId' => 'related_project_id'
     ];
 
     /**
@@ -124,10 +136,12 @@ class ListAppsV2Request implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     * id  APP编号
     * name  APP名称
-    * status  APP状态
-    * appKey  APP的KEY
-    * creator  APP的创建者。 - USER：用户自行创建 - MARKET：[云商店分配](tag:hws)[暂未使用](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    * status  APP状态。 - 1：有效
+    * appKey  APP凭据的key。
+    * creator  APP的创建者。 - USER：用户自行创建 - MARKET：[云商店分配](tag:hws)[暂未使用](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name
+    * relatedDomainId  凭据关联的账号ID。
+    * relatedProjectId  凭据关联的项目ID。
     *
     * @var string[]
     */
@@ -140,7 +154,9 @@ class ListAppsV2Request implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'appKey' => 'setAppKey',
             'creator' => 'setCreator',
-            'preciseSearch' => 'setPreciseSearch'
+            'preciseSearch' => 'setPreciseSearch',
+            'relatedDomainId' => 'setRelatedDomainId',
+            'relatedProjectId' => 'setRelatedProjectId'
     ];
 
     /**
@@ -150,10 +166,12 @@ class ListAppsV2Request implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     * id  APP编号
     * name  APP名称
-    * status  APP状态
-    * appKey  APP的KEY
-    * creator  APP的创建者。 - USER：用户自行创建 - MARKET：[云商店分配](tag:hws)[暂未使用](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    * status  APP状态。 - 1：有效
+    * appKey  APP凭据的key。
+    * creator  APP的创建者。 - USER：用户自行创建 - MARKET：[云商店分配](tag:hws)[暂未使用](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name
+    * relatedDomainId  凭据关联的账号ID。
+    * relatedProjectId  凭据关联的项目ID。
     *
     * @var string[]
     */
@@ -166,7 +184,9 @@ class ListAppsV2Request implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'appKey' => 'getAppKey',
             'creator' => 'getCreator',
-            'preciseSearch' => 'getPreciseSearch'
+            'preciseSearch' => 'getPreciseSearch',
+            'relatedDomainId' => 'getRelatedDomainId',
+            'relatedProjectId' => 'getRelatedProjectId'
     ];
 
     /**
@@ -209,7 +229,20 @@ class ListAppsV2Request implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_1 = 1;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_1,
+        ];
+    }
 
 
     /**
@@ -236,6 +269,8 @@ class ListAppsV2Request implements ModelInterface, ArrayAccess
         $this->container['appKey'] = isset($data['appKey']) ? $data['appKey'] : null;
         $this->container['creator'] = isset($data['creator']) ? $data['creator'] : null;
         $this->container['preciseSearch'] = isset($data['preciseSearch']) ? $data['preciseSearch'] : null;
+        $this->container['relatedDomainId'] = isset($data['relatedDomainId']) ? $data['relatedDomainId'] : null;
+        $this->container['relatedProjectId'] = isset($data['relatedProjectId']) ? $data['relatedProjectId'] : null;
     }
 
     /**
@@ -254,6 +289,26 @@ class ListAppsV2Request implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['relatedDomainId']) && (mb_strlen($this->container['relatedDomainId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'relatedDomainId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['relatedDomainId']) && (mb_strlen($this->container['relatedDomainId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'relatedDomainId', the character length must be bigger than or equal to 32.";
+            }
+            if (!is_null($this->container['relatedProjectId']) && (mb_strlen($this->container['relatedProjectId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'relatedProjectId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['relatedProjectId']) && (mb_strlen($this->container['relatedProjectId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'relatedProjectId', the character length must be bigger than or equal to 32.";
             }
         return $invalidProperties;
     }
@@ -391,7 +446,7 @@ class ListAppsV2Request implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  APP状态
+    *  APP状态。 - 1：有效
     *
     * @return int|null
     */
@@ -403,7 +458,7 @@ class ListAppsV2Request implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status APP状态
+    * @param int|null $status APP状态。 - 1：有效
     *
     * @return $this
     */
@@ -415,7 +470,7 @@ class ListAppsV2Request implements ModelInterface, ArrayAccess
 
     /**
     * Gets appKey
-    *  APP的KEY
+    *  APP凭据的key。
     *
     * @return string|null
     */
@@ -427,7 +482,7 @@ class ListAppsV2Request implements ModelInterface, ArrayAccess
     /**
     * Sets appKey
     *
-    * @param string|null $appKey APP的KEY
+    * @param string|null $appKey APP凭据的key。
     *
     * @return $this
     */
@@ -439,7 +494,7 @@ class ListAppsV2Request implements ModelInterface, ArrayAccess
 
     /**
     * Gets creator
-    *  APP的创建者。 - USER：用户自行创建 - MARKET：[云商店分配](tag:hws)[暂未使用](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    *  APP的创建者。 - USER：用户自行创建 - MARKET：[云商店分配](tag:hws)[暂未使用](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     *
     * @return string|null
     */
@@ -451,7 +506,7 @@ class ListAppsV2Request implements ModelInterface, ArrayAccess
     /**
     * Sets creator
     *
-    * @param string|null $creator APP的创建者。 - USER：用户自行创建 - MARKET：[云商店分配](tag:hws)[暂未使用](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+    * @param string|null $creator APP的创建者。 - USER：用户自行创建 - MARKET：[云商店分配](tag:hws)[暂未使用](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
     *
     * @return $this
     */
@@ -482,6 +537,54 @@ class ListAppsV2Request implements ModelInterface, ArrayAccess
     public function setPreciseSearch($preciseSearch)
     {
         $this->container['preciseSearch'] = $preciseSearch;
+        return $this;
+    }
+
+    /**
+    * Gets relatedDomainId
+    *  凭据关联的账号ID。
+    *
+    * @return string|null
+    */
+    public function getRelatedDomainId()
+    {
+        return $this->container['relatedDomainId'];
+    }
+
+    /**
+    * Sets relatedDomainId
+    *
+    * @param string|null $relatedDomainId 凭据关联的账号ID。
+    *
+    * @return $this
+    */
+    public function setRelatedDomainId($relatedDomainId)
+    {
+        $this->container['relatedDomainId'] = $relatedDomainId;
+        return $this;
+    }
+
+    /**
+    * Gets relatedProjectId
+    *  凭据关联的项目ID。
+    *
+    * @return string|null
+    */
+    public function getRelatedProjectId()
+    {
+        return $this->container['relatedProjectId'];
+    }
+
+    /**
+    * Sets relatedProjectId
+    *
+    * @param string|null $relatedProjectId 凭据关联的项目ID。
+    *
+    * @return $this
+    */
+    public function setRelatedProjectId($relatedProjectId)
+    {
+        $this->container['relatedProjectId'] = $relatedProjectId;
         return $this;
     }
 

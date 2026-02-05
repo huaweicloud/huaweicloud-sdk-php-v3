@@ -25,7 +25,7 @@ class ListCustomAuthorizersV2Request implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     * id  编号
     * name  名称
-    * type  类型
+    * type  自定义认证类型。 - FRONTEND：前端 - BACKEND：后端
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class ListCustomAuthorizersV2Request implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     * id  编号
     * name  名称
-    * type  类型
+    * type  自定义认证类型。 - FRONTEND：前端 - BACKEND：后端
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ListCustomAuthorizersV2Request implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     * id  编号
     * name  名称
-    * type  类型
+    * type  自定义认证类型。 - FRONTEND：前端 - BACKEND：后端
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class ListCustomAuthorizersV2Request implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     * id  编号
     * name  名称
-    * type  类型
+    * type  自定义认证类型。 - FRONTEND：前端 - BACKEND：后端
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class ListCustomAuthorizersV2Request implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
     * id  编号
     * name  名称
-    * type  类型
+    * type  自定义认证类型。 - FRONTEND：前端 - BACKEND：后端
     *
     * @var string[]
     */
@@ -179,7 +179,22 @@ class ListCustomAuthorizersV2Request implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TYPE_FRONTEND = 'FRONTEND';
+    const TYPE_BACKEND = 'BACKEND';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_FRONTEND,
+            self::TYPE_BACKEND,
+        ];
+    }
 
 
     /**
@@ -222,6 +237,14 @@ class ListCustomAuthorizersV2Request implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -358,7 +381,7 @@ class ListCustomAuthorizersV2Request implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型
+    *  自定义认证类型。 - FRONTEND：前端 - BACKEND：后端
     *
     * @return string|null
     */
@@ -370,7 +393,7 @@ class ListCustomAuthorizersV2Request implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 类型
+    * @param string|null $type 自定义认证类型。 - FRONTEND：前端 - BACKEND：后端
     *
     * @return $this
     */

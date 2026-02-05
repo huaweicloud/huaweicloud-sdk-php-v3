@@ -23,7 +23,7 @@ class ExportOpenApiReq implements ModelInterface, ArrayAccess
     * envId  API分组发布的环境ID
     * groupId  API分组ID
     * define  导出API的定义范围： - spec：基础定义，只包括api前端定义 - proxy：全量定义，包括api前后端定义 - all：扩展定义，包括api前后端定义以及流控、访问控制、自定义认证等扩展定义 - dev：开发定义，包括未发布的api的前后端定义
-    * type  导出的API定义的格式
+    * type  导出的API定义的格式。 - json - yaml - yml
     * version  导出的API定义版本，默认为当前时间
     * apis  导出的API ID列表
     *
@@ -43,7 +43,7 @@ class ExportOpenApiReq implements ModelInterface, ArrayAccess
     * envId  API分组发布的环境ID
     * groupId  API分组ID
     * define  导出API的定义范围： - spec：基础定义，只包括api前端定义 - proxy：全量定义，包括api前后端定义 - all：扩展定义，包括api前后端定义以及流控、访问控制、自定义认证等扩展定义 - dev：开发定义，包括未发布的api的前后端定义
-    * type  导出的API定义的格式
+    * type  导出的API定义的格式。 - json - yaml - yml
     * version  导出的API定义版本，默认为当前时间
     * apis  导出的API ID列表
     *
@@ -84,7 +84,7 @@ class ExportOpenApiReq implements ModelInterface, ArrayAccess
     * envId  API分组发布的环境ID
     * groupId  API分组ID
     * define  导出API的定义范围： - spec：基础定义，只包括api前端定义 - proxy：全量定义，包括api前后端定义 - all：扩展定义，包括api前后端定义以及流控、访问控制、自定义认证等扩展定义 - dev：开发定义，包括未发布的api的前后端定义
-    * type  导出的API定义的格式
+    * type  导出的API定义的格式。 - json - yaml - yml
     * version  导出的API定义版本，默认为当前时间
     * apis  导出的API ID列表
     *
@@ -104,7 +104,7 @@ class ExportOpenApiReq implements ModelInterface, ArrayAccess
     * envId  API分组发布的环境ID
     * groupId  API分组ID
     * define  导出API的定义范围： - spec：基础定义，只包括api前端定义 - proxy：全量定义，包括api前后端定义 - all：扩展定义，包括api前后端定义以及流控、访问控制、自定义认证等扩展定义 - dev：开发定义，包括未发布的api的前后端定义
-    * type  导出的API定义的格式
+    * type  导出的API定义的格式。 - json - yaml - yml
     * version  导出的API定义版本，默认为当前时间
     * apis  导出的API ID列表
     *
@@ -124,7 +124,7 @@ class ExportOpenApiReq implements ModelInterface, ArrayAccess
     * envId  API分组发布的环境ID
     * groupId  API分组ID
     * define  导出API的定义范围： - spec：基础定义，只包括api前端定义 - proxy：全量定义，包括api前后端定义 - all：扩展定义，包括api前后端定义以及流控、访问控制、自定义认证等扩展定义 - dev：开发定义，包括未发布的api的前后端定义
-    * type  导出的API定义的格式
+    * type  导出的API定义的格式。 - json - yaml - yml
     * version  导出的API定义版本，默认为当前时间
     * apis  导出的API ID列表
     *
@@ -359,7 +359,7 @@ class ExportOpenApiReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  导出的API定义的格式
+    *  导出的API定义的格式。 - json - yaml - yml
     *
     * @return string|null
     */
@@ -371,7 +371,7 @@ class ExportOpenApiReq implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 导出的API定义的格式
+    * @param string|null $type 导出的API定义的格式。 - json - yaml - yml
     *
     * @return $this
     */

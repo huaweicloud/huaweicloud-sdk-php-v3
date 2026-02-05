@@ -21,19 +21,20 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * urlDomain  策略后端的Endpoint。  由域名（或IP地址）和端口号组成，总长度不超过255。格式为域名:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443， HTTP默认端口号为80。  支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、“_”、“-”组成，且只能以英文开头。
-    * reqProtocol  请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC时可选GRPC、GRPCS
-    * reqMethod  请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC时固定为POST
-    * reqUri  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
+    * reqProtocol  请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC&GRPCS时可选GRPC、GRPCS，当vpc_channel_status取值为1或者2时，该字段必填。
+    * reqMethod  请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC&GRPCS时固定为POST，当vpc_channel_status取值为1或者2时，该字段必填。
+    * reqUri  请求地址，当vpc_channel_status取值为1或者2时，该字段必填。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512字符，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3~32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * retryCount  请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
     * enableSmChannel  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
+    * memberGroupUrlInfos  后端服务器分组详细信息，当vpc_channel_status取值为4时，该字段必填。
     * effectMode  关联的策略组合模式： - ALL：满足全部条件 - ANY：满足任一条件
     * name  策略后端名称。字符串由中文、英文字母、数字、下划线组成，且只能以中文或英文开头。
     * backendParams  后端参数列表，后端类型为GRPC时不支持配置
     * conditions  策略条件列表
     * authorizerId  后端自定义认证对象的ID
     * vpcChannelInfo  vpcChannelInfo
-    * vpcChannelStatus  是否使用VPC通道 - 1 : 使用VPC通道 - 2 : 不使用VPC通道
+    * vpcChannelStatus  负载类型。 - 1: 使用VPC通道，单模后端 - 2: 不使用VPC通道 - 3：livedata（暂不支持） - 4：使用VPC通道，多模后端
     *
     * @var string[]
     */
@@ -45,6 +46,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
             'timeout' => 'int',
             'retryCount' => 'string',
             'enableSmChannel' => 'bool',
+            'memberGroupUrlInfos' => '\HuaweiCloud\SDK\Apig\V2\Model\MemberGroupUrlInfo[]',
             'effectMode' => 'string',
             'name' => 'string',
             'backendParams' => '\HuaweiCloud\SDK\Apig\V2\Model\BackendParamBase[]',
@@ -57,19 +59,20 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * urlDomain  策略后端的Endpoint。  由域名（或IP地址）和端口号组成，总长度不超过255。格式为域名:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443， HTTP默认端口号为80。  支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、“_”、“-”组成，且只能以英文开头。
-    * reqProtocol  请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC时可选GRPC、GRPCS
-    * reqMethod  请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC时固定为POST
-    * reqUri  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
+    * reqProtocol  请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC&GRPCS时可选GRPC、GRPCS，当vpc_channel_status取值为1或者2时，该字段必填。
+    * reqMethod  请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC&GRPCS时固定为POST，当vpc_channel_status取值为1或者2时，该字段必填。
+    * reqUri  请求地址，当vpc_channel_status取值为1或者2时，该字段必填。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512字符，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3~32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * retryCount  请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
     * enableSmChannel  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
+    * memberGroupUrlInfos  后端服务器分组详细信息，当vpc_channel_status取值为4时，该字段必填。
     * effectMode  关联的策略组合模式： - ALL：满足全部条件 - ANY：满足任一条件
     * name  策略后端名称。字符串由中文、英文字母、数字、下划线组成，且只能以中文或英文开头。
     * backendParams  后端参数列表，后端类型为GRPC时不支持配置
     * conditions  策略条件列表
     * authorizerId  后端自定义认证对象的ID
     * vpcChannelInfo  vpcChannelInfo
-    * vpcChannelStatus  是否使用VPC通道 - 1 : 使用VPC通道 - 2 : 不使用VPC通道
+    * vpcChannelStatus  负载类型。 - 1: 使用VPC通道，单模后端 - 2: 不使用VPC通道 - 3：livedata（暂不支持） - 4：使用VPC通道，多模后端
     *
     * @var string[]
     */
@@ -81,6 +84,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
         'timeout' => 'int32',
         'retryCount' => null,
         'enableSmChannel' => null,
+        'memberGroupUrlInfos' => null,
         'effectMode' => null,
         'name' => null,
         'backendParams' => null,
@@ -114,19 +118,20 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * urlDomain  策略后端的Endpoint。  由域名（或IP地址）和端口号组成，总长度不超过255。格式为域名:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443， HTTP默认端口号为80。  支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、“_”、“-”组成，且只能以英文开头。
-    * reqProtocol  请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC时可选GRPC、GRPCS
-    * reqMethod  请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC时固定为POST
-    * reqUri  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
+    * reqProtocol  请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC&GRPCS时可选GRPC、GRPCS，当vpc_channel_status取值为1或者2时，该字段必填。
+    * reqMethod  请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC&GRPCS时固定为POST，当vpc_channel_status取值为1或者2时，该字段必填。
+    * reqUri  请求地址，当vpc_channel_status取值为1或者2时，该字段必填。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512字符，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3~32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * retryCount  请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
     * enableSmChannel  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
+    * memberGroupUrlInfos  后端服务器分组详细信息，当vpc_channel_status取值为4时，该字段必填。
     * effectMode  关联的策略组合模式： - ALL：满足全部条件 - ANY：满足任一条件
     * name  策略后端名称。字符串由中文、英文字母、数字、下划线组成，且只能以中文或英文开头。
     * backendParams  后端参数列表，后端类型为GRPC时不支持配置
     * conditions  策略条件列表
     * authorizerId  后端自定义认证对象的ID
     * vpcChannelInfo  vpcChannelInfo
-    * vpcChannelStatus  是否使用VPC通道 - 1 : 使用VPC通道 - 2 : 不使用VPC通道
+    * vpcChannelStatus  负载类型。 - 1: 使用VPC通道，单模后端 - 2: 不使用VPC通道 - 3：livedata（暂不支持） - 4：使用VPC通道，多模后端
     *
     * @var string[]
     */
@@ -138,6 +143,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
             'timeout' => 'timeout',
             'retryCount' => 'retry_count',
             'enableSmChannel' => 'enable_sm_channel',
+            'memberGroupUrlInfos' => 'member_group_url_infos',
             'effectMode' => 'effect_mode',
             'name' => 'name',
             'backendParams' => 'backend_params',
@@ -150,19 +156,20 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * urlDomain  策略后端的Endpoint。  由域名（或IP地址）和端口号组成，总长度不超过255。格式为域名:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443， HTTP默认端口号为80。  支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、“_”、“-”组成，且只能以英文开头。
-    * reqProtocol  请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC时可选GRPC、GRPCS
-    * reqMethod  请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC时固定为POST
-    * reqUri  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
+    * reqProtocol  请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC&GRPCS时可选GRPC、GRPCS，当vpc_channel_status取值为1或者2时，该字段必填。
+    * reqMethod  请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC&GRPCS时固定为POST，当vpc_channel_status取值为1或者2时，该字段必填。
+    * reqUri  请求地址，当vpc_channel_status取值为1或者2时，该字段必填。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512字符，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3~32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * retryCount  请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
     * enableSmChannel  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
+    * memberGroupUrlInfos  后端服务器分组详细信息，当vpc_channel_status取值为4时，该字段必填。
     * effectMode  关联的策略组合模式： - ALL：满足全部条件 - ANY：满足任一条件
     * name  策略后端名称。字符串由中文、英文字母、数字、下划线组成，且只能以中文或英文开头。
     * backendParams  后端参数列表，后端类型为GRPC时不支持配置
     * conditions  策略条件列表
     * authorizerId  后端自定义认证对象的ID
     * vpcChannelInfo  vpcChannelInfo
-    * vpcChannelStatus  是否使用VPC通道 - 1 : 使用VPC通道 - 2 : 不使用VPC通道
+    * vpcChannelStatus  负载类型。 - 1: 使用VPC通道，单模后端 - 2: 不使用VPC通道 - 3：livedata（暂不支持） - 4：使用VPC通道，多模后端
     *
     * @var string[]
     */
@@ -174,6 +181,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
             'timeout' => 'setTimeout',
             'retryCount' => 'setRetryCount',
             'enableSmChannel' => 'setEnableSmChannel',
+            'memberGroupUrlInfos' => 'setMemberGroupUrlInfos',
             'effectMode' => 'setEffectMode',
             'name' => 'setName',
             'backendParams' => 'setBackendParams',
@@ -186,19 +194,20 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * urlDomain  策略后端的Endpoint。  由域名（或IP地址）和端口号组成，总长度不超过255。格式为域名:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443， HTTP默认端口号为80。  支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、“_”、“-”组成，且只能以英文开头。
-    * reqProtocol  请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC时可选GRPC、GRPCS
-    * reqMethod  请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC时固定为POST
-    * reqUri  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
+    * reqProtocol  请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC&GRPCS时可选GRPC、GRPCS，当vpc_channel_status取值为1或者2时，该字段必填。
+    * reqMethod  请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC&GRPCS时固定为POST，当vpc_channel_status取值为1或者2时，该字段必填。
+    * reqUri  请求地址，当vpc_channel_status取值为1或者2时，该字段必填。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512字符，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3~32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
     * timeout  API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * retryCount  请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
     * enableSmChannel  是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
+    * memberGroupUrlInfos  后端服务器分组详细信息，当vpc_channel_status取值为4时，该字段必填。
     * effectMode  关联的策略组合模式： - ALL：满足全部条件 - ANY：满足任一条件
     * name  策略后端名称。字符串由中文、英文字母、数字、下划线组成，且只能以中文或英文开头。
     * backendParams  后端参数列表，后端类型为GRPC时不支持配置
     * conditions  策略条件列表
     * authorizerId  后端自定义认证对象的ID
     * vpcChannelInfo  vpcChannelInfo
-    * vpcChannelStatus  是否使用VPC通道 - 1 : 使用VPC通道 - 2 : 不使用VPC通道
+    * vpcChannelStatus  负载类型。 - 1: 使用VPC通道，单模后端 - 2: 不使用VPC通道 - 3：livedata（暂不支持） - 4：使用VPC通道，多模后端
     *
     * @var string[]
     */
@@ -210,6 +219,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
             'timeout' => 'getTimeout',
             'retryCount' => 'getRetryCount',
             'enableSmChannel' => 'getEnableSmChannel',
+            'memberGroupUrlInfos' => 'getMemberGroupUrlInfos',
             'effectMode' => 'getEffectMode',
             'name' => 'getName',
             'backendParams' => 'getBackendParams',
@@ -275,6 +285,8 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     const EFFECT_MODE_ANY = 'ANY';
     const VPC_CHANNEL_STATUS_1 = 1;
     const VPC_CHANNEL_STATUS_2 = 2;
+    const VPC_CHANNEL_STATUS_3 = 3;
+    const VPC_CHANNEL_STATUS_4 = 4;
     
 
     /**
@@ -334,6 +346,8 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
         return [
             self::VPC_CHANNEL_STATUS_1,
             self::VPC_CHANNEL_STATUS_2,
+            self::VPC_CHANNEL_STATUS_3,
+            self::VPC_CHANNEL_STATUS_4,
         ];
     }
 
@@ -360,6 +374,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
         $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : null;
         $this->container['retryCount'] = isset($data['retryCount']) ? $data['retryCount'] : null;
         $this->container['enableSmChannel'] = isset($data['enableSmChannel']) ? $data['enableSmChannel'] : null;
+        $this->container['memberGroupUrlInfos'] = isset($data['memberGroupUrlInfos']) ? $data['memberGroupUrlInfos'] : null;
         $this->container['effectMode'] = isset($data['effectMode']) ? $data['effectMode'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['backendParams'] = isset($data['backendParams']) ? $data['backendParams'] : null;
@@ -377,9 +392,6 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['reqProtocol'] === null) {
-            $invalidProperties[] = "'reqProtocol' can't be null";
-        }
             $allowedValues = $this->getReqProtocolAllowableValues();
                 if (!is_null($this->container['reqProtocol']) && !in_array($this->container['reqProtocol'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -388,9 +400,6 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['reqMethod'] === null) {
-            $invalidProperties[] = "'reqMethod' can't be null";
-        }
             $allowedValues = $this->getReqMethodAllowableValues();
                 if (!is_null($this->container['reqMethod']) && !in_array($this->container['reqMethod'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -399,9 +408,6 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['reqUri'] === null) {
-            $invalidProperties[] = "'reqUri' can't be null";
-        }
             if (!is_null($this->container['timeout']) && ($this->container['timeout'] < 1)) {
                 $invalidProperties[] = "invalid value for 'timeout', must be bigger than or equal to 1.";
             }
@@ -479,9 +485,9 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
 
     /**
     * Gets reqProtocol
-    *  请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC时可选GRPC、GRPCS
+    *  请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC&GRPCS时可选GRPC、GRPCS，当vpc_channel_status取值为1或者2时，该字段必填。
     *
-    * @return string
+    * @return string|null
     */
     public function getReqProtocol()
     {
@@ -491,7 +497,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     /**
     * Sets reqProtocol
     *
-    * @param string $reqProtocol 请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC时可选GRPC、GRPCS
+    * @param string|null $reqProtocol 请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC&GRPCS时可选GRPC、GRPCS，当vpc_channel_status取值为1或者2时，该字段必填。
     *
     * @return $this
     */
@@ -503,9 +509,9 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
 
     /**
     * Gets reqMethod
-    *  请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC时固定为POST
+    *  请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC&GRPCS时固定为POST，当vpc_channel_status取值为1或者2时，该字段必填。
     *
-    * @return string
+    * @return string|null
     */
     public function getReqMethod()
     {
@@ -515,7 +521,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     /**
     * Sets reqMethod
     *
-    * @param string $reqMethod 请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC时固定为POST
+    * @param string|null $reqMethod 请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC&GRPCS时固定为POST，当vpc_channel_status取值为1或者2时，该字段必填。
     *
     * @return $this
     */
@@ -527,9 +533,9 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
 
     /**
     * Gets reqUri
-    *  请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
+    *  请求地址，当vpc_channel_status取值为1或者2时，该字段必填。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512字符，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3~32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
     *
-    * @return string
+    * @return string|null
     */
     public function getReqUri()
     {
@@ -539,7 +545,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     /**
     * Sets reqUri
     *
-    * @param string $reqUri 请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
+    * @param string|null $reqUri 请求地址，当vpc_channel_status取值为1或者2时，该字段必填。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512字符，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3~32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
     *
     * @return $this
     */
@@ -618,6 +624,30 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     public function setEnableSmChannel($enableSmChannel)
     {
         $this->container['enableSmChannel'] = $enableSmChannel;
+        return $this;
+    }
+
+    /**
+    * Gets memberGroupUrlInfos
+    *  后端服务器分组详细信息，当vpc_channel_status取值为4时，该字段必填。
+    *
+    * @return \HuaweiCloud\SDK\Apig\V2\Model\MemberGroupUrlInfo[]|null
+    */
+    public function getMemberGroupUrlInfos()
+    {
+        return $this->container['memberGroupUrlInfos'];
+    }
+
+    /**
+    * Sets memberGroupUrlInfos
+    *
+    * @param \HuaweiCloud\SDK\Apig\V2\Model\MemberGroupUrlInfo[]|null $memberGroupUrlInfos 后端服务器分组详细信息，当vpc_channel_status取值为4时，该字段必填。
+    *
+    * @return $this
+    */
+    public function setMemberGroupUrlInfos($memberGroupUrlInfos)
+    {
+        $this->container['memberGroupUrlInfos'] = $memberGroupUrlInfos;
         return $this;
     }
 
@@ -767,7 +797,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcChannelStatus
-    *  是否使用VPC通道 - 1 : 使用VPC通道 - 2 : 不使用VPC通道
+    *  负载类型。 - 1: 使用VPC通道，单模后端 - 2: 不使用VPC通道 - 3：livedata（暂不支持） - 4：使用VPC通道，多模后端
     *
     * @return int|null
     */
@@ -779,7 +809,7 @@ class ApiPolicyHttpCreate implements ModelInterface, ArrayAccess
     /**
     * Sets vpcChannelStatus
     *
-    * @param int|null $vpcChannelStatus 是否使用VPC通道 - 1 : 使用VPC通道 - 2 : 不使用VPC通道
+    * @param int|null $vpcChannelStatus 负载类型。 - 1: 使用VPC通道，单模后端 - 2: 不使用VPC通道 - 3：livedata（暂不支持） - 4：使用VPC通道，多模后端
     *
     * @return $this
     */

@@ -20,14 +20,16 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * appId  凭据编号
-    * name  凭据名称
+    * appId  APP凭据编号。
+    * name  APP凭据名称。
     * status  凭据状态： - 1：启用 - 2：禁用
-    * appKey  凭据的Key
-    * remark  凭据描述
+    * appKey  APP凭据的key。
+    * relatedDomainId  凭据关联的账号ID。
+    * relatedProjectId  凭据关联的项目ID。
+    * remark  APP凭据描述。
     * registerTime  创建时间
     * updateTime  更新时间
-    * appQuotaId  凭据配额编号
+    * appQuotaId  APP凭据配额编号。
     * appQuotaName  配额名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3-255字符
     * boundTime  绑定时间
     *
@@ -38,6 +40,8 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
             'name' => 'string',
             'status' => 'int',
             'appKey' => 'string',
+            'relatedDomainId' => 'string',
+            'relatedProjectId' => 'string',
             'remark' => 'string',
             'registerTime' => '\DateTime',
             'updateTime' => '\DateTime',
@@ -48,14 +52,16 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * appId  凭据编号
-    * name  凭据名称
+    * appId  APP凭据编号。
+    * name  APP凭据名称。
     * status  凭据状态： - 1：启用 - 2：禁用
-    * appKey  凭据的Key
-    * remark  凭据描述
+    * appKey  APP凭据的key。
+    * relatedDomainId  凭据关联的账号ID。
+    * relatedProjectId  凭据关联的项目ID。
+    * remark  APP凭据描述。
     * registerTime  创建时间
     * updateTime  更新时间
-    * appQuotaId  凭据配额编号
+    * appQuotaId  APP凭据配额编号。
     * appQuotaName  配额名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3-255字符
     * boundTime  绑定时间
     *
@@ -66,6 +72,8 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
         'name' => null,
         'status' => null,
         'appKey' => null,
+        'relatedDomainId' => null,
+        'relatedProjectId' => null,
         'remark' => null,
         'registerTime' => 'date-time',
         'updateTime' => 'date-time',
@@ -97,14 +105,16 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * appId  凭据编号
-    * name  凭据名称
+    * appId  APP凭据编号。
+    * name  APP凭据名称。
     * status  凭据状态： - 1：启用 - 2：禁用
-    * appKey  凭据的Key
-    * remark  凭据描述
+    * appKey  APP凭据的key。
+    * relatedDomainId  凭据关联的账号ID。
+    * relatedProjectId  凭据关联的项目ID。
+    * remark  APP凭据描述。
     * registerTime  创建时间
     * updateTime  更新时间
-    * appQuotaId  凭据配额编号
+    * appQuotaId  APP凭据配额编号。
     * appQuotaName  配额名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3-255字符
     * boundTime  绑定时间
     *
@@ -115,6 +125,8 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
             'name' => 'name',
             'status' => 'status',
             'appKey' => 'app_key',
+            'relatedDomainId' => 'related_domain_id',
+            'relatedProjectId' => 'related_project_id',
             'remark' => 'remark',
             'registerTime' => 'register_time',
             'updateTime' => 'update_time',
@@ -125,14 +137,16 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * appId  凭据编号
-    * name  凭据名称
+    * appId  APP凭据编号。
+    * name  APP凭据名称。
     * status  凭据状态： - 1：启用 - 2：禁用
-    * appKey  凭据的Key
-    * remark  凭据描述
+    * appKey  APP凭据的key。
+    * relatedDomainId  凭据关联的账号ID。
+    * relatedProjectId  凭据关联的项目ID。
+    * remark  APP凭据描述。
     * registerTime  创建时间
     * updateTime  更新时间
-    * appQuotaId  凭据配额编号
+    * appQuotaId  APP凭据配额编号。
     * appQuotaName  配额名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3-255字符
     * boundTime  绑定时间
     *
@@ -143,6 +157,8 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'status' => 'setStatus',
             'appKey' => 'setAppKey',
+            'relatedDomainId' => 'setRelatedDomainId',
+            'relatedProjectId' => 'setRelatedProjectId',
             'remark' => 'setRemark',
             'registerTime' => 'setRegisterTime',
             'updateTime' => 'setUpdateTime',
@@ -153,14 +169,16 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * appId  凭据编号
-    * name  凭据名称
+    * appId  APP凭据编号。
+    * name  APP凭据名称。
     * status  凭据状态： - 1：启用 - 2：禁用
-    * appKey  凭据的Key
-    * remark  凭据描述
+    * appKey  APP凭据的key。
+    * relatedDomainId  凭据关联的账号ID。
+    * relatedProjectId  凭据关联的项目ID。
+    * remark  APP凭据描述。
     * registerTime  创建时间
     * updateTime  更新时间
-    * appQuotaId  凭据配额编号
+    * appQuotaId  APP凭据配额编号。
     * appQuotaName  配额名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3-255字符
     * boundTime  绑定时间
     *
@@ -171,6 +189,8 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'status' => 'getStatus',
             'appKey' => 'getAppKey',
+            'relatedDomainId' => 'getRelatedDomainId',
+            'relatedProjectId' => 'getRelatedProjectId',
             'remark' => 'getRemark',
             'registerTime' => 'getRegisterTime',
             'updateTime' => 'getUpdateTime',
@@ -241,6 +261,8 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['appKey'] = isset($data['appKey']) ? $data['appKey'] : null;
+        $this->container['relatedDomainId'] = isset($data['relatedDomainId']) ? $data['relatedDomainId'] : null;
+        $this->container['relatedProjectId'] = isset($data['relatedProjectId']) ? $data['relatedProjectId'] : null;
         $this->container['remark'] = isset($data['remark']) ? $data['remark'] : null;
         $this->container['registerTime'] = isset($data['registerTime']) ? $data['registerTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
@@ -257,6 +279,18 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['relatedDomainId']) && (mb_strlen($this->container['relatedDomainId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'relatedDomainId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['relatedDomainId']) && (mb_strlen($this->container['relatedDomainId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'relatedDomainId', the character length must be bigger than or equal to 32.";
+            }
+            if (!is_null($this->container['relatedProjectId']) && (mb_strlen($this->container['relatedProjectId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'relatedProjectId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['relatedProjectId']) && (mb_strlen($this->container['relatedProjectId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'relatedProjectId', the character length must be bigger than or equal to 32.";
+            }
         return $invalidProperties;
     }
 
@@ -273,7 +307,7 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
-    *  凭据编号
+    *  APP凭据编号。
     *
     * @return string|null
     */
@@ -285,7 +319,7 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
     /**
     * Sets appId
     *
-    * @param string|null $appId 凭据编号
+    * @param string|null $appId APP凭据编号。
     *
     * @return $this
     */
@@ -297,7 +331,7 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  凭据名称
+    *  APP凭据名称。
     *
     * @return string|null
     */
@@ -309,7 +343,7 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 凭据名称
+    * @param string|null $name APP凭据名称。
     *
     * @return $this
     */
@@ -345,7 +379,7 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets appKey
-    *  凭据的Key
+    *  APP凭据的key。
     *
     * @return string|null
     */
@@ -357,7 +391,7 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
     /**
     * Sets appKey
     *
-    * @param string|null $appKey 凭据的Key
+    * @param string|null $appKey APP凭据的key。
     *
     * @return $this
     */
@@ -368,8 +402,56 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets relatedDomainId
+    *  凭据关联的账号ID。
+    *
+    * @return string|null
+    */
+    public function getRelatedDomainId()
+    {
+        return $this->container['relatedDomainId'];
+    }
+
+    /**
+    * Sets relatedDomainId
+    *
+    * @param string|null $relatedDomainId 凭据关联的账号ID。
+    *
+    * @return $this
+    */
+    public function setRelatedDomainId($relatedDomainId)
+    {
+        $this->container['relatedDomainId'] = $relatedDomainId;
+        return $this;
+    }
+
+    /**
+    * Gets relatedProjectId
+    *  凭据关联的项目ID。
+    *
+    * @return string|null
+    */
+    public function getRelatedProjectId()
+    {
+        return $this->container['relatedProjectId'];
+    }
+
+    /**
+    * Sets relatedProjectId
+    *
+    * @param string|null $relatedProjectId 凭据关联的项目ID。
+    *
+    * @return $this
+    */
+    public function setRelatedProjectId($relatedProjectId)
+    {
+        $this->container['relatedProjectId'] = $relatedProjectId;
+        return $this;
+    }
+
+    /**
     * Gets remark
-    *  凭据描述
+    *  APP凭据描述。
     *
     * @return string|null
     */
@@ -381,7 +463,7 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
     /**
     * Sets remark
     *
-    * @param string|null $remark 凭据描述
+    * @param string|null $remark APP凭据描述。
     *
     * @return $this
     */
@@ -441,7 +523,7 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets appQuotaId
-    *  凭据配额编号
+    *  APP凭据配额编号。
     *
     * @return string|null
     */
@@ -453,7 +535,7 @@ class AppQuotaAppInfo implements ModelInterface, ArrayAccess
     /**
     * Sets appQuotaId
     *
-    * @param string|null $appQuotaId 凭据配额编号
+    * @param string|null $appQuotaId APP凭据配额编号。
     *
     * @return $this
     */

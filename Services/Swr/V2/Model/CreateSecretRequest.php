@@ -21,25 +21,21 @@ class CreateSecretRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * projectname  项目名称，缺省值默认为区域名称，例如：cn-north-1。
-    * durationSeconds  自定义临时凭证有效期，单位秒，取值范围15min-24h
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'projectname' => 'string',
-            'durationSeconds' => 'int'
+            'projectname' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * projectname  项目名称，缺省值默认为区域名称，例如：cn-north-1。
-    * durationSeconds  自定义临时凭证有效期，单位秒，取值范围15min-24h
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'projectname' => null,
-        'durationSeconds' => 'int32'
+        'projectname' => null
     ];
 
     /**
@@ -66,37 +62,31 @@ class CreateSecretRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * projectname  项目名称，缺省值默认为区域名称，例如：cn-north-1。
-    * durationSeconds  自定义临时凭证有效期，单位秒，取值范围15min-24h
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'projectname' => 'projectname',
-            'durationSeconds' => 'duration_seconds'
+            'projectname' => 'projectname'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * projectname  项目名称，缺省值默认为区域名称，例如：cn-north-1。
-    * durationSeconds  自定义临时凭证有效期，单位秒，取值范围15min-24h
     *
     * @var string[]
     */
     protected static $setters = [
-            'projectname' => 'setProjectname',
-            'durationSeconds' => 'setDurationSeconds'
+            'projectname' => 'setProjectname'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * projectname  项目名称，缺省值默认为区域名称，例如：cn-north-1。
-    * durationSeconds  自定义临时凭证有效期，单位秒，取值范围15min-24h
     *
     * @var string[]
     */
     protected static $getters = [
-            'projectname' => 'getProjectname',
-            'durationSeconds' => 'getDurationSeconds'
+            'projectname' => 'getProjectname'
     ];
 
     /**
@@ -158,7 +148,6 @@ class CreateSecretRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['projectname'] = isset($data['projectname']) ? $data['projectname'] : null;
-        $this->container['durationSeconds'] = isset($data['durationSeconds']) ? $data['durationSeconds'] : null;
     }
 
     /**
@@ -169,12 +158,6 @@ class CreateSecretRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['durationSeconds']) && ($this->container['durationSeconds'] > 86400)) {
-                $invalidProperties[] = "invalid value for 'durationSeconds', must be smaller than or equal to 86400.";
-            }
-            if (!is_null($this->container['durationSeconds']) && ($this->container['durationSeconds'] < 900)) {
-                $invalidProperties[] = "invalid value for 'durationSeconds', must be bigger than or equal to 900.";
-            }
         return $invalidProperties;
     }
 
@@ -210,30 +193,6 @@ class CreateSecretRequest implements ModelInterface, ArrayAccess
     public function setProjectname($projectname)
     {
         $this->container['projectname'] = $projectname;
-        return $this;
-    }
-
-    /**
-    * Gets durationSeconds
-    *  自定义临时凭证有效期，单位秒，取值范围15min-24h
-    *
-    * @return int|null
-    */
-    public function getDurationSeconds()
-    {
-        return $this->container['durationSeconds'];
-    }
-
-    /**
-    * Sets durationSeconds
-    *
-    * @param int|null $durationSeconds 自定义临时凭证有效期，单位秒，取值范围15min-24h
-    *
-    * @return $this
-    */
-    public function setDurationSeconds($durationSeconds)
-    {
-        $this->container['durationSeconds'] = $durationSeconds;
         return $this;
     }
 

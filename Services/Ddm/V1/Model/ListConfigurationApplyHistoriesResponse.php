@@ -7,8 +7,9 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ParaGroupCopy implements ModelInterface, ArrayAccess
+class ListConfigurationApplyHistoriesResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,30 @@ class ParaGroupCopy implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ParaGroupCopy';
+    protected static $openAPIModelName = 'ListConfigurationApplyHistoriesResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * newName  **参数解释**：  新参数组的名称。  **参数范围**：  不涉及。
-    * description  **参数解释**：  描述。  **参数范围**：  不涉及。
+    * histories  **参数解释**：  参数组应用记录相关信息的集合。  **参数范围**：  不涉及。
+    * total  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'newName' => 'string',
-            'description' => 'string'
+            'histories' => '\HuaweiCloud\SDK\Ddm\V1\Model\ApplyHistory[]',
+            'total' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * newName  **参数解释**：  新参数组的名称。  **参数范围**：  不涉及。
-    * description  **参数解释**：  描述。  **参数范围**：  不涉及。
+    * histories  **参数解释**：  参数组应用记录相关信息的集合。  **参数范围**：  不涉及。
+    * total  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'newName' => null,
-        'description' => null
+        'histories' => null,
+        'total' => 'int32'
     ];
 
     /**
@@ -65,38 +66,38 @@ class ParaGroupCopy implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * newName  **参数解释**：  新参数组的名称。  **参数范围**：  不涉及。
-    * description  **参数解释**：  描述。  **参数范围**：  不涉及。
+    * histories  **参数解释**：  参数组应用记录相关信息的集合。  **参数范围**：  不涉及。
+    * total  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'newName' => 'new_name',
-            'description' => 'description'
+            'histories' => 'histories',
+            'total' => 'total'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * newName  **参数解释**：  新参数组的名称。  **参数范围**：  不涉及。
-    * description  **参数解释**：  描述。  **参数范围**：  不涉及。
+    * histories  **参数解释**：  参数组应用记录相关信息的集合。  **参数范围**：  不涉及。
+    * total  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'newName' => 'setNewName',
-            'description' => 'setDescription'
+            'histories' => 'setHistories',
+            'total' => 'setTotal'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * newName  **参数解释**：  新参数组的名称。  **参数范围**：  不涉及。
-    * description  **参数解释**：  描述。  **参数范围**：  不涉及。
+    * histories  **参数解释**：  参数组应用记录相关信息的集合。  **参数范围**：  不涉及。
+    * total  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'newName' => 'getNewName',
-            'description' => 'getDescription'
+            'histories' => 'getHistories',
+            'total' => 'getTotal'
     ];
 
     /**
@@ -157,8 +158,8 @@ class ParaGroupCopy implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['newName'] = isset($data['newName']) ? $data['newName'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['histories'] = isset($data['histories']) ? $data['histories'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
 
     /**
@@ -169,20 +170,11 @@ class ParaGroupCopy implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['newName'] === null) {
-            $invalidProperties[] = "'newName' can't be null";
-        }
-            if ((mb_strlen($this->container['newName']) > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'newName', the character length must be smaller than or equal to 2147483647.";
+            if (!is_null($this->container['total']) && ($this->container['total'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'total', must be smaller than or equal to 2147483647.";
             }
-            if ((mb_strlen($this->container['newName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'newName', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 2147483647.";
-            }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 1)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['total']) && ($this->container['total'] < 1)) {
+                $invalidProperties[] = "invalid value for 'total', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -199,50 +191,50 @@ class ParaGroupCopy implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets newName
-    *  **参数解释**：  新参数组的名称。  **参数范围**：  不涉及。
+    * Gets histories
+    *  **参数解释**：  参数组应用记录相关信息的集合。  **参数范围**：  不涉及。
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Ddm\V1\Model\ApplyHistory[]|null
     */
-    public function getNewName()
+    public function getHistories()
     {
-        return $this->container['newName'];
+        return $this->container['histories'];
     }
 
     /**
-    * Sets newName
+    * Sets histories
     *
-    * @param string $newName **参数解释**：  新参数组的名称。  **参数范围**：  不涉及。
+    * @param \HuaweiCloud\SDK\Ddm\V1\Model\ApplyHistory[]|null $histories **参数解释**：  参数组应用记录相关信息的集合。  **参数范围**：  不涉及。
     *
     * @return $this
     */
-    public function setNewName($newName)
+    public function setHistories($histories)
     {
-        $this->container['newName'] = $newName;
+        $this->container['histories'] = $histories;
         return $this;
     }
 
     /**
-    * Gets description
-    *  **参数解释**：  描述。  **参数范围**：  不涉及。
+    * Gets total
+    *  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
-    public function getDescription()
+    public function getTotal()
     {
-        return $this->container['description'];
+        return $this->container['total'];
     }
 
     /**
-    * Sets description
+    * Sets total
     *
-    * @param string|null $description **参数解释**：  描述。  **参数范围**：  不涉及。
+    * @param int|null $total **参数解释**：  分页参数: 每页记录数。  **参数范围**：  不涉及。
     *
     * @return $this
     */
-    public function setDescription($description)
+    public function setTotal($total)
     {
-        $this->container['description'] = $description;
+        $this->container['total'] = $total;
         return $this;
     }
 

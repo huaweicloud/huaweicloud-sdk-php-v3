@@ -21,7 +21,7 @@ class OpenIngressEipReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * bandwidthSize  入公网带宽  单位：Mbit/s
-    * bandwidthChargingMode  入公网带宽计费类型： - bandwidth：按带宽计费 - traffic：按流量计费
+    * bandwidthChargingMode  入公网带宽计费类型： - bandwidth：按带宽计费 - [traffic：按流量计费](tag:hws_test)
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class OpenIngressEipReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * bandwidthSize  入公网带宽  单位：Mbit/s
-    * bandwidthChargingMode  入公网带宽计费类型： - bandwidth：按带宽计费 - traffic：按流量计费
+    * bandwidthChargingMode  入公网带宽计费类型： - bandwidth：按带宽计费 - [traffic：按流量计费](tag:hws_test)
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class OpenIngressEipReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * bandwidthSize  入公网带宽  单位：Mbit/s
-    * bandwidthChargingMode  入公网带宽计费类型： - bandwidth：按带宽计费 - traffic：按流量计费
+    * bandwidthChargingMode  入公网带宽计费类型： - bandwidth：按带宽计费 - [traffic：按流量计费](tag:hws_test)
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class OpenIngressEipReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * bandwidthSize  入公网带宽  单位：Mbit/s
-    * bandwidthChargingMode  入公网带宽计费类型： - bandwidth：按带宽计费 - traffic：按流量计费
+    * bandwidthChargingMode  入公网带宽计费类型： - bandwidth：按带宽计费 - [traffic：按流量计费](tag:hws_test)
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class OpenIngressEipReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * bandwidthSize  入公网带宽  单位：Mbit/s
-    * bandwidthChargingMode  入公网带宽计费类型： - bandwidth：按带宽计费 - traffic：按流量计费
+    * bandwidthChargingMode  入公网带宽计费类型： - bandwidth：按带宽计费 - [traffic：按流量计费](tag:hws_test)
     *
     * @var string[]
     */
@@ -232,7 +232,7 @@ class OpenIngressEipReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidthChargingMode
-    *  入公网带宽计费类型： - bandwidth：按带宽计费 - traffic：按流量计费
+    *  入公网带宽计费类型： - bandwidth：按带宽计费 - [traffic：按流量计费](tag:hws_test)
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class OpenIngressEipReq implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidthChargingMode
     *
-    * @param string|null $bandwidthChargingMode 入公网带宽计费类型： - bandwidth：按带宽计费 - traffic：按流量计费
+    * @param string|null $bandwidthChargingMode 入公网带宽计费类型： - bandwidth：按带宽计费 - [traffic：按流量计费](tag:hws_test)
     *
     * @return $this
     */

@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ddm\V1\Model;
+namespace HuaweiCloud\SDK\Sis\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListParameterGroupApplyHistoryV0V3Response implements ModelInterface, ArrayAccess
+class GenerateSpeechRequestBody implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,26 +16,30 @@ class ListParameterGroupApplyHistoryV0V3Response implements ModelInterface, Arra
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListParameterGroupApplyHistoryV0V3Response';
+    protected static $openAPIModelName = 'GenerateSpeechRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * rdsCheckInfos  **参数解释**：  参数组应用记录相关信息的集合。  **参数范围**：  不涉及。
+    * text  待合成的文本，文本长度不大于300字符。
+    * config  config
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'rdsCheckInfos' => '\HuaweiCloud\SDK\Ddm\V1\Model\ApplyHistory[]'
+            'text' => 'string',
+            'config' => '\HuaweiCloud\SDK\Sis\V1\Model\GenerateSpeechRequestBodyConfig'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * rdsCheckInfos  **参数解释**：  参数组应用记录相关信息的集合。  **参数范围**：  不涉及。
+    * text  待合成的文本，文本长度不大于300字符。
+    * config  config
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'rdsCheckInfos' => null
+        'text' => null,
+        'config' => null
     ];
 
     /**
@@ -62,32 +65,38 @@ class ListParameterGroupApplyHistoryV0V3Response implements ModelInterface, Arra
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * rdsCheckInfos  **参数解释**：  参数组应用记录相关信息的集合。  **参数范围**：  不涉及。
+    * text  待合成的文本，文本长度不大于300字符。
+    * config  config
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'rdsCheckInfos' => 'rds_check_infos'
+            'text' => 'text',
+            'config' => 'config'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * rdsCheckInfos  **参数解释**：  参数组应用记录相关信息的集合。  **参数范围**：  不涉及。
+    * text  待合成的文本，文本长度不大于300字符。
+    * config  config
     *
     * @var string[]
     */
     protected static $setters = [
-            'rdsCheckInfos' => 'setRdsCheckInfos'
+            'text' => 'setText',
+            'config' => 'setConfig'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * rdsCheckInfos  **参数解释**：  参数组应用记录相关信息的集合。  **参数范围**：  不涉及。
+    * text  待合成的文本，文本长度不大于300字符。
+    * config  config
     *
     * @var string[]
     */
     protected static $getters = [
-            'rdsCheckInfos' => 'getRdsCheckInfos'
+            'text' => 'getText',
+            'config' => 'getConfig'
     ];
 
     /**
@@ -148,7 +157,8 @@ class ListParameterGroupApplyHistoryV0V3Response implements ModelInterface, Arra
     */
     public function __construct(array $data = null)
     {
-        $this->container['rdsCheckInfos'] = isset($data['rdsCheckInfos']) ? $data['rdsCheckInfos'] : null;
+        $this->container['text'] = isset($data['text']) ? $data['text'] : null;
+        $this->container['config'] = isset($data['config']) ? $data['config'] : null;
     }
 
     /**
@@ -159,6 +169,12 @@ class ListParameterGroupApplyHistoryV0V3Response implements ModelInterface, Arra
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['text'] === null) {
+            $invalidProperties[] = "'text' can't be null";
+        }
+        if ($this->container['config'] === null) {
+            $invalidProperties[] = "'config' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -174,26 +190,50 @@ class ListParameterGroupApplyHistoryV0V3Response implements ModelInterface, Arra
     }
 
     /**
-    * Gets rdsCheckInfos
-    *  **参数解释**：  参数组应用记录相关信息的集合。  **参数范围**：  不涉及。
+    * Gets text
+    *  待合成的文本，文本长度不大于300字符。
     *
-    * @return \HuaweiCloud\SDK\Ddm\V1\Model\ApplyHistory[]|null
+    * @return string
     */
-    public function getRdsCheckInfos()
+    public function getText()
     {
-        return $this->container['rdsCheckInfos'];
+        return $this->container['text'];
     }
 
     /**
-    * Sets rdsCheckInfos
+    * Sets text
     *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\ApplyHistory[]|null $rdsCheckInfos **参数解释**：  参数组应用记录相关信息的集合。  **参数范围**：  不涉及。
+    * @param string $text 待合成的文本，文本长度不大于300字符。
     *
     * @return $this
     */
-    public function setRdsCheckInfos($rdsCheckInfos)
+    public function setText($text)
     {
-        $this->container['rdsCheckInfos'] = $rdsCheckInfos;
+        $this->container['text'] = $text;
+        return $this;
+    }
+
+    /**
+    * Gets config
+    *  config
+    *
+    * @return \HuaweiCloud\SDK\Sis\V1\Model\GenerateSpeechRequestBodyConfig
+    */
+    public function getConfig()
+    {
+        return $this->container['config'];
+    }
+
+    /**
+    * Sets config
+    *
+    * @param \HuaweiCloud\SDK\Sis\V1\Model\GenerateSpeechRequestBodyConfig $config config
+    *
+    * @return $this
+    */
+    public function setConfig($config)
+    {
+        $this->container['config'] = $config;
         return $this;
     }
 
