@@ -125,6 +125,7 @@ the [CHANGELOG.md](https://github.com/huaweicloud/huaweicloud-sdk-php-v3/blob/ma
     * [2.2 Use Temporary AK&SK](#22-use-temporary-aksk-top)
 * [3. Client Initialization](#3-client-initialization-top)
     * [3.1 Initialize the client with specified Endpoint](#31-initialize-the-serviceclient-with-specified-endpoint-top)
+    * [3.2 Initialize the client with specified User Agent](#32-initialize-the-serviceclient-with-specified-user-agent-top)
 * [4. Send Requests and Handle Responses](#4-send-requests-and-handle-responses-top)
     * [4.1 Exceptions](#41-exceptions-top)
 * [5. Use Asynchronous Client](#5-use-asynchronous-client-top)
@@ -237,9 +238,9 @@ $iamClient = IamClient::newBuilder()
 - `$endpoint`: varies by services and regions,
   see [Regions and Endpoints](https://developer.huaweicloud.com/intl/en-us/endpoint) to obtain correct endpoint.
 
-#### 3.2 User Agent [:top:](#user-manual-top)
+#### 3.2 Initialize the {Service}Client with specified User Agent [:top:](#user-manual-top)
 
-Additional information will be appended to the User-Agent in the request header by default since **v3.1.184**. It is used by service to identify what SDK language, php version, and platform info a client is using to call into their service, and a random identifier will be generated and appended to the User-Agent. The identifier will be stored in the user's home directory, as `~/.huaweicloud/application_id` on Linux and `C:\Users\USER_NAME\.huaweicloud\application_id` on Windows.
+Additional information will be appended to the User-Agent in the request header by default since **v3.1.180**. It is used by service to identify what SDK language, php version, and platform info a client is using to call into their service, and a random identifier will be generated and appended to the User-Agent. The identifier will be stored in the user's home directory, as `~/.huaweicloud/application_id` on Linux and `C:\Users\USER_NAME\.huaweicloud\application_id` on Windows.
 
 The above information will be used to protect the security of your and your users' Huawei Cloud accounts.
 
