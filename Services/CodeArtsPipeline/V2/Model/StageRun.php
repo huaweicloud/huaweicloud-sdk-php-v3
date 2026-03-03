@@ -33,6 +33,7 @@ class StageRun implements ModelInterface, ArrayAccess
     * status  **参数解释**： 状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
     * startTime  **参数解释**： 阶段开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
+    * pauseTime  **参数解释**： 阶段中断时间，单位毫秒。 **取值范围**： 大于等于 0。
     * pre  **参数解释**： 阶段准入。 **取值范围**： 不涉及。
     * post  **参数解释**： 阶段准出。 **取值范围**： 不涉及。
     * jobs  **参数解释**： 任务列表。 **取值范围**： 不涉及。
@@ -53,6 +54,7 @@ class StageRun implements ModelInterface, ArrayAccess
             'status' => 'string',
             'startTime' => 'int',
             'endTime' => 'int',
+            'pauseTime' => 'int',
             'pre' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\StepRun[]',
             'post' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\StepRun[]',
             'jobs' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\JobRun[]'
@@ -73,6 +75,7 @@ class StageRun implements ModelInterface, ArrayAccess
     * status  **参数解释**： 状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
     * startTime  **参数解释**： 阶段开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
+    * pauseTime  **参数解释**： 阶段中断时间，单位毫秒。 **取值范围**： 大于等于 0。
     * pre  **参数解释**： 阶段准入。 **取值范围**： 不涉及。
     * post  **参数解释**： 阶段准出。 **取值范围**： 不涉及。
     * jobs  **参数解释**： 任务列表。 **取值范围**： 不涉及。
@@ -93,6 +96,7 @@ class StageRun implements ModelInterface, ArrayAccess
         'status' => null,
         'startTime' => 'int64',
         'endTime' => 'int64',
+        'pauseTime' => 'int64',
         'pre' => null,
         'post' => null,
         'jobs' => null
@@ -134,6 +138,7 @@ class StageRun implements ModelInterface, ArrayAccess
     * status  **参数解释**： 状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
     * startTime  **参数解释**： 阶段开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
+    * pauseTime  **参数解释**： 阶段中断时间，单位毫秒。 **取值范围**： 大于等于 0。
     * pre  **参数解释**： 阶段准入。 **取值范围**： 不涉及。
     * post  **参数解释**： 阶段准出。 **取值范围**： 不涉及。
     * jobs  **参数解释**： 任务列表。 **取值范围**： 不涉及。
@@ -154,6 +159,7 @@ class StageRun implements ModelInterface, ArrayAccess
             'status' => 'status',
             'startTime' => 'start_time',
             'endTime' => 'end_time',
+            'pauseTime' => 'pause_time',
             'pre' => 'pre',
             'post' => 'post',
             'jobs' => 'jobs'
@@ -174,6 +180,7 @@ class StageRun implements ModelInterface, ArrayAccess
     * status  **参数解释**： 状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
     * startTime  **参数解释**： 阶段开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
+    * pauseTime  **参数解释**： 阶段中断时间，单位毫秒。 **取值范围**： 大于等于 0。
     * pre  **参数解释**： 阶段准入。 **取值范围**： 不涉及。
     * post  **参数解释**： 阶段准出。 **取值范围**： 不涉及。
     * jobs  **参数解释**： 任务列表。 **取值范围**： 不涉及。
@@ -194,6 +201,7 @@ class StageRun implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
+            'pauseTime' => 'setPauseTime',
             'pre' => 'setPre',
             'post' => 'setPost',
             'jobs' => 'setJobs'
@@ -214,6 +222,7 @@ class StageRun implements ModelInterface, ArrayAccess
     * status  **参数解释**： 状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
     * startTime  **参数解释**： 阶段开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
+    * pauseTime  **参数解释**： 阶段中断时间，单位毫秒。 **取值范围**： 大于等于 0。
     * pre  **参数解释**： 阶段准入。 **取值范围**： 不涉及。
     * post  **参数解释**： 阶段准出。 **取值范围**： 不涉及。
     * jobs  **参数解释**： 任务列表。 **取值范围**： 不涉及。
@@ -234,6 +243,7 @@ class StageRun implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
+            'pauseTime' => 'getPauseTime',
             'pre' => 'getPre',
             'post' => 'getPost',
             'jobs' => 'getJobs'
@@ -310,6 +320,7 @@ class StageRun implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['pauseTime'] = isset($data['pauseTime']) ? $data['pauseTime'] : null;
         $this->container['pre'] = isset($data['pre']) ? $data['pre'] : null;
         $this->container['post'] = isset($data['post']) ? $data['post'] : null;
         $this->container['jobs'] = isset($data['jobs']) ? $data['jobs'] : null;
@@ -646,6 +657,30 @@ class StageRun implements ModelInterface, ArrayAccess
     public function setEndTime($endTime)
     {
         $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets pauseTime
+    *  **参数解释**： 阶段中断时间，单位毫秒。 **取值范围**： 大于等于 0。
+    *
+    * @return int|null
+    */
+    public function getPauseTime()
+    {
+        return $this->container['pauseTime'];
+    }
+
+    /**
+    * Sets pauseTime
+    *
+    * @param int|null $pauseTime **参数解释**： 阶段中断时间，单位毫秒。 **取值范围**： 大于等于 0。
+    *
+    * @return $this
+    */
+    public function setPauseTime($pauseTime)
+    {
+        $this->container['pauseTime'] = $pauseTime;
         return $this;
     }
 

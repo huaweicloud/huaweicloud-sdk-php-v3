@@ -1167,6 +1167,68 @@ class MrsClient extends Client
     }
 
     /**
+     * 查询集群界面授权状态
+     *
+     * 查询集群界面授权状态
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listClusterManagerAuthState($request)
+    {
+        return $this->listClusterManagerAuthStateWithHttpInfo($request);
+    }
+
+    public function listClusterManagerAuthStateWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/manager-auth';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Mrs\V2\Model\ListClusterManagerAuthStateResponse',
+            $requestType='\HuaweiCloud\SDK\Mrs\V2\Model\ListClusterManagerAuthStateRequest');
+    }
+
+    /**
      * 查询集群节点列表
      *
      * 查询集群节点列表。
@@ -1380,6 +1442,71 @@ class MrsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Mrs\V2\Model\ShrinkClusterResponse',
             $requestType='\HuaweiCloud\SDK\Mrs\V2\Model\ShrinkClusterRequest');
+    }
+
+    /**
+     * 开启/关闭集群界面授权
+     *
+     * 开启/关闭集群界面授权
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateClusterAuthTros($request)
+    {
+        return $this->updateClusterAuthTrosWithHttpInfo($request);
+    }
+
+    public function updateClusterAuthTrosWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/manager-auth';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Mrs\V2\Model\UpdateClusterAuthTrosResponse',
+            $requestType='\HuaweiCloud\SDK\Mrs\V2\Model\UpdateClusterAuthTrosRequest');
     }
 
     /**

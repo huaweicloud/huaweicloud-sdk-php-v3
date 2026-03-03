@@ -32,6 +32,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     * status  **参数解释**： 流水线运行实例状态。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。
     * triggerType  **参数解释**： 流水线触发类型。 - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。 **取值范围**： 不涉及。
     * runNumber  **参数解释**： 流水线运行序号。 **取值范围**： 大于等于 1。
+    * pauseTime  **参数解释**： 流水线中断时间，单位毫秒。 **取值范围**： 大于等于 0。
     * startTime  **参数解释**： 流水线开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 流水线结束时间。 **取值范围**： 不涉及。
     * stages  **参数解释**： 阶段运行信息列表，包含各个阶段的详细运行信息。 **约束限制**： 不涉及。
@@ -62,6 +63,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
             'status' => 'string',
             'triggerType' => 'string',
             'runNumber' => 'int',
+            'pauseTime' => 'int',
             'startTime' => 'int',
             'endTime' => 'int',
             'stages' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\StageRun[]',
@@ -92,6 +94,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     * status  **参数解释**： 流水线运行实例状态。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。
     * triggerType  **参数解释**： 流水线触发类型。 - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。 **取值范围**： 不涉及。
     * runNumber  **参数解释**： 流水线运行序号。 **取值范围**： 大于等于 1。
+    * pauseTime  **参数解释**： 流水线中断时间，单位毫秒。 **取值范围**： 大于等于 0。
     * startTime  **参数解释**： 流水线开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 流水线结束时间。 **取值范围**： 不涉及。
     * stages  **参数解释**： 阶段运行信息列表，包含各个阶段的详细运行信息。 **约束限制**： 不涉及。
@@ -122,6 +125,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
         'status' => null,
         'triggerType' => null,
         'runNumber' => 'int32',
+        'pauseTime' => 'int64',
         'startTime' => 'int64',
         'endTime' => 'int64',
         'stages' => null,
@@ -173,6 +177,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     * status  **参数解释**： 流水线运行实例状态。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。
     * triggerType  **参数解释**： 流水线触发类型。 - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。 **取值范围**： 不涉及。
     * runNumber  **参数解释**： 流水线运行序号。 **取值范围**： 大于等于 1。
+    * pauseTime  **参数解释**： 流水线中断时间，单位毫秒。 **取值范围**： 大于等于 0。
     * startTime  **参数解释**： 流水线开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 流水线结束时间。 **取值范围**： 不涉及。
     * stages  **参数解释**： 阶段运行信息列表，包含各个阶段的详细运行信息。 **约束限制**： 不涉及。
@@ -203,6 +208,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
             'status' => 'status',
             'triggerType' => 'trigger_type',
             'runNumber' => 'run_number',
+            'pauseTime' => 'pause_time',
             'startTime' => 'start_time',
             'endTime' => 'end_time',
             'stages' => 'stages',
@@ -233,6 +239,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     * status  **参数解释**： 流水线运行实例状态。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。
     * triggerType  **参数解释**： 流水线触发类型。 - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。 **取值范围**： 不涉及。
     * runNumber  **参数解释**： 流水线运行序号。 **取值范围**： 大于等于 1。
+    * pauseTime  **参数解释**： 流水线中断时间，单位毫秒。 **取值范围**： 大于等于 0。
     * startTime  **参数解释**： 流水线开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 流水线结束时间。 **取值范围**： 不涉及。
     * stages  **参数解释**： 阶段运行信息列表，包含各个阶段的详细运行信息。 **约束限制**： 不涉及。
@@ -263,6 +270,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'triggerType' => 'setTriggerType',
             'runNumber' => 'setRunNumber',
+            'pauseTime' => 'setPauseTime',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
             'stages' => 'setStages',
@@ -293,6 +301,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     * status  **参数解释**： 流水线运行实例状态。 **取值范围**： - COMPLETED：已完成。 - RUNNING：运行中。 - FAILED：失败。 - CANCELED：取消。 - PAUSED：暂停。 - SUSPEND：挂起。 - IGNORED：忽略。
     * triggerType  **参数解释**： 流水线触发类型。 - Manual：手动触发。 - Scheduler：定时任务。 - MR：MR触发。 - Push：Push事件触发。 - CreateTag：Tag事件触发。 - Issue：Issue触发。 - Note：评论触发。 **取值范围**： 不涉及。
     * runNumber  **参数解释**： 流水线运行序号。 **取值范围**： 大于等于 1。
+    * pauseTime  **参数解释**： 流水线中断时间，单位毫秒。 **取值范围**： 大于等于 0。
     * startTime  **参数解释**： 流水线开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 流水线结束时间。 **取值范围**： 不涉及。
     * stages  **参数解释**： 阶段运行信息列表，包含各个阶段的详细运行信息。 **约束限制**： 不涉及。
@@ -323,6 +332,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'triggerType' => 'getTriggerType',
             'runNumber' => 'getRunNumber',
+            'pauseTime' => 'getPauseTime',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
             'stages' => 'getStages',
@@ -409,6 +419,7 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['triggerType'] = isset($data['triggerType']) ? $data['triggerType'] : null;
         $this->container['runNumber'] = isset($data['runNumber']) ? $data['runNumber'] : null;
+        $this->container['pauseTime'] = isset($data['pauseTime']) ? $data['pauseTime'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['stages'] = isset($data['stages']) ? $data['stages'] : null;
@@ -709,6 +720,30 @@ class ShowPipelineRunDetailResponse implements ModelInterface, ArrayAccess
     public function setRunNumber($runNumber)
     {
         $this->container['runNumber'] = $runNumber;
+        return $this;
+    }
+
+    /**
+    * Gets pauseTime
+    *  **参数解释**： 流水线中断时间，单位毫秒。 **取值范围**： 大于等于 0。
+    *
+    * @return int|null
+    */
+    public function getPauseTime()
+    {
+        return $this->container['pauseTime'];
+    }
+
+    /**
+    * Sets pauseTime
+    *
+    * @param int|null $pauseTime **参数解释**： 流水线中断时间，单位毫秒。 **取值范围**： 大于等于 0。
+    *
+    * @return $this
+    */
+    public function setPauseTime($pauseTime)
+    {
+        $this->container['pauseTime'] = $pauseTime;
         return $this;
     }
 

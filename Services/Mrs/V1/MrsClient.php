@@ -754,6 +754,68 @@ class MrsClient extends Client
     }
 
     /**
+     * 查询集群节点授权状态
+     *
+     * 查询集群节点授权状态
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listClusterSshState($request)
+    {
+        return $this->listClusterSshStateWithHttpInfo($request);
+    }
+
+    public function listClusterSshStateWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/cluster/{cluster_id}/ssh';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Mrs\V1\Model\ListClusterSshStateResponse',
+            $requestType='\HuaweiCloud\SDK\Mrs\V1\Model\ListClusterSshStateRequest');
+    }
+
+    /**
      * 查询指定集群的标签
      *
      * 查询指定集群的标签信息。
@@ -1291,6 +1353,74 @@ class MrsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Mrs\V1\Model\UpdateClusterScalingResponse',
             $requestType='\HuaweiCloud\SDK\Mrs\V1\Model\UpdateClusterScalingRequest');
+    }
+
+    /**
+     * 开启/关闭集群节点授权
+     *
+     * 开启/关闭集群节点授权
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateClusterSsh($request)
+    {
+        return $this->updateClusterSshWithHttpInfo($request);
+    }
+
+    public function updateClusterSshWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/cluster/{cluster_id}/ssh';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enable'] !== null) {
+            $queryParams['enable'] = $localVarParams['enable'];
+        }
+        if ($localVarParams['expireTime'] !== null) {
+            $queryParams['expire_time'] = $localVarParams['expireTime'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Mrs\V1\Model\UpdateClusterSshResponse',
+            $requestType='\HuaweiCloud\SDK\Mrs\V1\Model\UpdateClusterSshRequest');
     }
 
     /**
