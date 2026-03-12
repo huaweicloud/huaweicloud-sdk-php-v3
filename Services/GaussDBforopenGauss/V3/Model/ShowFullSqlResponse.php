@@ -21,19 +21,19 @@ class ShowFullSqlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * traceStatistics  **参数解释**: 链路详情。
+    * traceStatistics  traceStatistics
     * components  **参数解释**: 组件上SQL执行记录列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'traceStatistics' => 'object',
+            'traceStatistics' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\FullSqlTraceStatisticsResult',
             'components' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\FullSqlComponetResult[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * traceStatistics  **参数解释**: 链路详情。
+    * traceStatistics  traceStatistics
     * components  **参数解释**: 组件上SQL执行记录列表。
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ShowFullSqlResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * traceStatistics  **参数解释**: 链路详情。
+    * traceStatistics  traceStatistics
     * components  **参数解释**: 组件上SQL执行记录列表。
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ShowFullSqlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * traceStatistics  **参数解释**: 链路详情。
+    * traceStatistics  traceStatistics
     * components  **参数解释**: 组件上SQL执行记录列表。
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ShowFullSqlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * traceStatistics  **参数解释**: 链路详情。
+    * traceStatistics  traceStatistics
     * components  **参数解释**: 组件上SQL执行记录列表。
     *
     * @var string[]
@@ -186,9 +186,9 @@ class ShowFullSqlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets traceStatistics
-    *  **参数解释**: 链路详情。
+    *  traceStatistics
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\FullSqlTraceStatisticsResult|null
     */
     public function getTraceStatistics()
     {
@@ -198,7 +198,7 @@ class ShowFullSqlResponse implements ModelInterface, ArrayAccess
     /**
     * Sets traceStatistics
     *
-    * @param object|null $traceStatistics **参数解释**: 链路详情。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\FullSqlTraceStatisticsResult|null $traceStatistics traceStatistics
     *
     * @return $this
     */

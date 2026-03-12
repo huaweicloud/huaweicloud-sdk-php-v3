@@ -17858,6 +17858,18 @@ class GaussDBforopenGaussAsyncClient extends Client
         if ($localVarParams['jobId'] !== null) {
             $queryParams['job_id'] = $localVarParams['jobId'];
         }
+        if ($localVarParams['jobEndTime'] !== null) {
+            $queryParams['job_end_time'] = $localVarParams['jobEndTime'];
+        }
+        if ($localVarParams['jobStartTime'] !== null) {
+            $queryParams['job_start_time'] = $localVarParams['jobStartTime'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['wdrType'] !== null) {
+            $queryParams['wdr_type'] = $localVarParams['wdrType'];
+        }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];
         }

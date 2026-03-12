@@ -246,9 +246,6 @@ class UpdateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['taskName'] === null) {
-            $invalidProperties[] = "'taskName' can't be null";
-        }
         if ($this->container['nodeId'] === null) {
             $invalidProperties[] = "'nodeId' can't be null";
         }
@@ -366,7 +363,7 @@ class UpdateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
     * Gets taskName
     *  **参数解释**: 限流任务名。 **约束限制**: 不涉及。 **取值范围**: 只能为英文字母大小写，下划线，数字和$符。 **默认取值**: 不涉及。
     *
-    * @return string
+    * @return string|null
     */
     public function getTaskName()
     {
@@ -376,7 +373,7 @@ class UpdateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets taskName
     *
-    * @param string $taskName **参数解释**: 限流任务名。 **约束限制**: 不涉及。 **取值范围**: 只能为英文字母大小写，下划线，数字和$符。 **默认取值**: 不涉及。
+    * @param string|null $taskName **参数解释**: 限流任务名。 **约束限制**: 不涉及。 **取值范围**: 只能为英文字母大小写，下划线，数字和$符。 **默认取值**: 不涉及。
     *
     * @return $this
     */

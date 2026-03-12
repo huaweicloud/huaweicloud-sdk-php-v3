@@ -29,7 +29,6 @@ class ShowConfigurationResponse implements ModelInterface, ArrayAccess
     * defaultBackupMediaType  **参数解释**: 默认备份介质。 **取值范围**: - OBS 对象存储
     * defaultBackupMethod  **参数解释**: 默认备份方式。 **取值范围**: - EBACKUP 快照备份 - PHYSICAL_BACKUP 物理备份
     * backupParallelDegree  **参数解释**: 备份并行参数。 **取值范围**: 1, 2, 4, 8
-    * backupNodeInfo  backupNodeInfo
     *
     * @var string[]
     */
@@ -41,8 +40,7 @@ class ShowConfigurationResponse implements ModelInterface, ArrayAccess
             'closeCompression' => 'bool',
             'defaultBackupMediaType' => 'string',
             'defaultBackupMethod' => 'string',
-            'backupParallelDegree' => 'int',
-            'backupNodeInfo' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BackupNodeInfoResult'
+            'backupParallelDegree' => 'int'
     ];
 
     /**
@@ -55,7 +53,6 @@ class ShowConfigurationResponse implements ModelInterface, ArrayAccess
     * defaultBackupMediaType  **参数解释**: 默认备份介质。 **取值范围**: - OBS 对象存储
     * defaultBackupMethod  **参数解释**: 默认备份方式。 **取值范围**: - EBACKUP 快照备份 - PHYSICAL_BACKUP 物理备份
     * backupParallelDegree  **参数解释**: 备份并行参数。 **取值范围**: 1, 2, 4, 8
-    * backupNodeInfo  backupNodeInfo
     *
     * @var string[]
     */
@@ -67,8 +64,7 @@ class ShowConfigurationResponse implements ModelInterface, ArrayAccess
         'closeCompression' => null,
         'defaultBackupMediaType' => null,
         'defaultBackupMethod' => null,
-        'backupParallelDegree' => 'int32',
-        'backupNodeInfo' => null
+        'backupParallelDegree' => 'int32'
     ];
 
     /**
@@ -102,7 +98,6 @@ class ShowConfigurationResponse implements ModelInterface, ArrayAccess
     * defaultBackupMediaType  **参数解释**: 默认备份介质。 **取值范围**: - OBS 对象存储
     * defaultBackupMethod  **参数解释**: 默认备份方式。 **取值范围**: - EBACKUP 快照备份 - PHYSICAL_BACKUP 物理备份
     * backupParallelDegree  **参数解释**: 备份并行参数。 **取值范围**: 1, 2, 4, 8
-    * backupNodeInfo  backupNodeInfo
     *
     * @var string[]
     */
@@ -114,8 +109,7 @@ class ShowConfigurationResponse implements ModelInterface, ArrayAccess
             'closeCompression' => 'close_compression',
             'defaultBackupMediaType' => 'default_backup_media_type',
             'defaultBackupMethod' => 'default_backup_method',
-            'backupParallelDegree' => 'backup_parallel_degree',
-            'backupNodeInfo' => 'backup_node_info'
+            'backupParallelDegree' => 'backup_parallel_degree'
     ];
 
     /**
@@ -128,7 +122,6 @@ class ShowConfigurationResponse implements ModelInterface, ArrayAccess
     * defaultBackupMediaType  **参数解释**: 默认备份介质。 **取值范围**: - OBS 对象存储
     * defaultBackupMethod  **参数解释**: 默认备份方式。 **取值范围**: - EBACKUP 快照备份 - PHYSICAL_BACKUP 物理备份
     * backupParallelDegree  **参数解释**: 备份并行参数。 **取值范围**: 1, 2, 4, 8
-    * backupNodeInfo  backupNodeInfo
     *
     * @var string[]
     */
@@ -140,8 +133,7 @@ class ShowConfigurationResponse implements ModelInterface, ArrayAccess
             'closeCompression' => 'setCloseCompression',
             'defaultBackupMediaType' => 'setDefaultBackupMediaType',
             'defaultBackupMethod' => 'setDefaultBackupMethod',
-            'backupParallelDegree' => 'setBackupParallelDegree',
-            'backupNodeInfo' => 'setBackupNodeInfo'
+            'backupParallelDegree' => 'setBackupParallelDegree'
     ];
 
     /**
@@ -154,7 +146,6 @@ class ShowConfigurationResponse implements ModelInterface, ArrayAccess
     * defaultBackupMediaType  **参数解释**: 默认备份介质。 **取值范围**: - OBS 对象存储
     * defaultBackupMethod  **参数解释**: 默认备份方式。 **取值范围**: - EBACKUP 快照备份 - PHYSICAL_BACKUP 物理备份
     * backupParallelDegree  **参数解释**: 备份并行参数。 **取值范围**: 1, 2, 4, 8
-    * backupNodeInfo  backupNodeInfo
     *
     * @var string[]
     */
@@ -166,8 +157,7 @@ class ShowConfigurationResponse implements ModelInterface, ArrayAccess
             'closeCompression' => 'getCloseCompression',
             'defaultBackupMediaType' => 'getDefaultBackupMediaType',
             'defaultBackupMethod' => 'getDefaultBackupMethod',
-            'backupParallelDegree' => 'getBackupParallelDegree',
-            'backupNodeInfo' => 'getBackupNodeInfo'
+            'backupParallelDegree' => 'getBackupParallelDegree'
     ];
 
     /**
@@ -236,7 +226,6 @@ class ShowConfigurationResponse implements ModelInterface, ArrayAccess
         $this->container['defaultBackupMediaType'] = isset($data['defaultBackupMediaType']) ? $data['defaultBackupMediaType'] : null;
         $this->container['defaultBackupMethod'] = isset($data['defaultBackupMethod']) ? $data['defaultBackupMethod'] : null;
         $this->container['backupParallelDegree'] = isset($data['backupParallelDegree']) ? $data['backupParallelDegree'] : null;
-        $this->container['backupNodeInfo'] = isset($data['backupNodeInfo']) ? $data['backupNodeInfo'] : null;
     }
 
     /**
@@ -468,30 +457,6 @@ class ShowConfigurationResponse implements ModelInterface, ArrayAccess
     public function setBackupParallelDegree($backupParallelDegree)
     {
         $this->container['backupParallelDegree'] = $backupParallelDegree;
-        return $this;
-    }
-
-    /**
-    * Gets backupNodeInfo
-    *  backupNodeInfo
-    *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BackupNodeInfoResult|null
-    */
-    public function getBackupNodeInfo()
-    {
-        return $this->container['backupNodeInfo'];
-    }
-
-    /**
-    * Sets backupNodeInfo
-    *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\BackupNodeInfoResult|null $backupNodeInfo backupNodeInfo
-    *
-    * @return $this
-    */
-    public function setBackupNodeInfo($backupNodeInfo)
-    {
-        $this->container['backupNodeInfo'] = $backupNodeInfo;
         return $this;
     }
 

@@ -34,7 +34,7 @@ class ShowInstanceParamGroupResponse implements ModelInterface, ArrayAccess
             'datastoreName' => 'string',
             'created' => 'string',
             'updated' => 'string',
-            'configurationParameters' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ConfigurationParameter[]'
+            'configurationParameters' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ConfigurationParameterResult[]'
     ];
 
     /**
@@ -317,7 +317,7 @@ class ShowInstanceParamGroupResponse implements ModelInterface, ArrayAccess
     * Gets configurationParameters
     *  参数对象，用户基于默认参数模板自定义的参数配置。
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ConfigurationParameter[]|null
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ConfigurationParameterResult[]|null
     */
     public function getConfigurationParameters()
     {
@@ -327,7 +327,7 @@ class ShowInstanceParamGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets configurationParameters
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ConfigurationParameter[]|null $configurationParameters 参数对象，用户基于默认参数模板自定义的参数配置。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ConfigurationParameterResult[]|null $configurationParameters 参数对象，用户基于默认参数模板自定义的参数配置。
     *
     * @return $this
     */

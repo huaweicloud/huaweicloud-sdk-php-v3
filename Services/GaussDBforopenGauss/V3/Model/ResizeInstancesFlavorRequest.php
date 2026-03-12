@@ -29,7 +29,7 @@ class ResizeInstancesFlavorRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'xLanguage' => 'string',
             'instanceId' => 'string',
-            'body' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\OpenGaussResizeRequest'
+            'body' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\OpenGaussResizeRequestBody'
     ];
 
     /**
@@ -249,7 +249,7 @@ class ResizeInstancesFlavorRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\OpenGaussResizeRequest|null
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\OpenGaussResizeRequestBody|null
     */
     public function getBody()
     {
@@ -259,7 +259,7 @@ class ResizeInstancesFlavorRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\OpenGaussResizeRequest|null $body body
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\OpenGaussResizeRequestBody|null $body body
     *
     * @return $this
     */

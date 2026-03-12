@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model;
+namespace HuaweiCloud\SDK\Vod\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class OpenGaussResizeRequest implements ModelInterface, ArrayAccess
+class DeleteThumbnailsResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,26 @@ class OpenGaussResizeRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'OpenGaussResizeRequest';
+    protected static $openAPIModelName = 'DeleteThumbnailsResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * flavorRef  规格变更时选定的目标规格。新规格的资源规格编码。参考表1中GaussDB的“规格编码”列内容获取。
-    * isAutoPay  创建包周期实例时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。true，表示自动从账户中支付。false，表示手动从账户中支付，默认为该方式。
+    * deleteResultArray  删除截图信息的处理结果。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'flavorRef' => 'string',
-            'isAutoPay' => 'bool'
+            'deleteResultArray' => '\HuaweiCloud\SDK\Vod\V1\Model\DeleteThumbnailResult[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * flavorRef  规格变更时选定的目标规格。新规格的资源规格编码。参考表1中GaussDB的“规格编码”列内容获取。
-    * isAutoPay  创建包周期实例时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。true，表示自动从账户中支付。false，表示手动从账户中支付，默认为该方式。
+    * deleteResultArray  删除截图信息的处理结果。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'flavorRef' => null,
-        'isAutoPay' => null
+        'deleteResultArray' => null
     ];
 
     /**
@@ -65,38 +62,32 @@ class OpenGaussResizeRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * flavorRef  规格变更时选定的目标规格。新规格的资源规格编码。参考表1中GaussDB的“规格编码”列内容获取。
-    * isAutoPay  创建包周期实例时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。true，表示自动从账户中支付。false，表示手动从账户中支付，默认为该方式。
+    * deleteResultArray  删除截图信息的处理结果。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'flavorRef' => 'flavor_ref',
-            'isAutoPay' => 'is_auto_pay'
+            'deleteResultArray' => 'delete_result_array'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * flavorRef  规格变更时选定的目标规格。新规格的资源规格编码。参考表1中GaussDB的“规格编码”列内容获取。
-    * isAutoPay  创建包周期实例时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。true，表示自动从账户中支付。false，表示手动从账户中支付，默认为该方式。
+    * deleteResultArray  删除截图信息的处理结果。
     *
     * @var string[]
     */
     protected static $setters = [
-            'flavorRef' => 'setFlavorRef',
-            'isAutoPay' => 'setIsAutoPay'
+            'deleteResultArray' => 'setDeleteResultArray'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * flavorRef  规格变更时选定的目标规格。新规格的资源规格编码。参考表1中GaussDB的“规格编码”列内容获取。
-    * isAutoPay  创建包周期实例时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。true，表示自动从账户中支付。false，表示手动从账户中支付，默认为该方式。
+    * deleteResultArray  删除截图信息的处理结果。
     *
     * @var string[]
     */
     protected static $getters = [
-            'flavorRef' => 'getFlavorRef',
-            'isAutoPay' => 'getIsAutoPay'
+            'deleteResultArray' => 'getDeleteResultArray'
     ];
 
     /**
@@ -157,8 +148,7 @@ class OpenGaussResizeRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['flavorRef'] = isset($data['flavorRef']) ? $data['flavorRef'] : null;
-        $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : null;
+        $this->container['deleteResultArray'] = isset($data['deleteResultArray']) ? $data['deleteResultArray'] : null;
     }
 
     /**
@@ -169,9 +159,6 @@ class OpenGaussResizeRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['flavorRef'] === null) {
-            $invalidProperties[] = "'flavorRef' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -187,50 +174,26 @@ class OpenGaussResizeRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets flavorRef
-    *  规格变更时选定的目标规格。新规格的资源规格编码。参考表1中GaussDB的“规格编码”列内容获取。
+    * Gets deleteResultArray
+    *  删除截图信息的处理结果。
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Vod\V1\Model\DeleteThumbnailResult[]|null
     */
-    public function getFlavorRef()
+    public function getDeleteResultArray()
     {
-        return $this->container['flavorRef'];
+        return $this->container['deleteResultArray'];
     }
 
     /**
-    * Sets flavorRef
+    * Sets deleteResultArray
     *
-    * @param string $flavorRef 规格变更时选定的目标规格。新规格的资源规格编码。参考表1中GaussDB的“规格编码”列内容获取。
+    * @param \HuaweiCloud\SDK\Vod\V1\Model\DeleteThumbnailResult[]|null $deleteResultArray 删除截图信息的处理结果。
     *
     * @return $this
     */
-    public function setFlavorRef($flavorRef)
+    public function setDeleteResultArray($deleteResultArray)
     {
-        $this->container['flavorRef'] = $flavorRef;
-        return $this;
-    }
-
-    /**
-    * Gets isAutoPay
-    *  创建包周期实例时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。true，表示自动从账户中支付。false，表示手动从账户中支付，默认为该方式。
-    *
-    * @return bool|null
-    */
-    public function getIsAutoPay()
-    {
-        return $this->container['isAutoPay'];
-    }
-
-    /**
-    * Sets isAutoPay
-    *
-    * @param bool|null $isAutoPay 创建包周期实例时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。true，表示自动从账户中支付。false，表示手动从账户中支付，默认为该方式。
-    *
-    * @return $this
-    */
-    public function setIsAutoPay($isAutoPay)
-    {
-        $this->container['isAutoPay'] = $isAutoPay;
+        $this->container['deleteResultArray'] = $deleteResultArray;
         return $this;
     }
 

@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Drs\V5\Model;
+namespace HuaweiCloud\SDK\Organizations\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ApiHttpNullResp implements ModelInterface, ArrayAccess
+class DetachDryRunPolicyResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,7 +17,7 @@ class ApiHttpNullResp implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ApiHttpNullResp';
+    protected static $openAPIModelName = 'DetachDryRunPolicyResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization

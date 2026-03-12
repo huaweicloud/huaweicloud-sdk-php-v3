@@ -22,7 +22,8 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级
+    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级 - partition：partition分区级导入
+    * fileImportMappingType  导入文件模板的映射场景，取值： - table_mapping：表名映射 - topic_mapping：topic名映射
     * body  body
     *
     * @var string[]
@@ -31,6 +32,7 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
             'jobId' => 'string',
             'xLanguage' => 'string',
             'fileImportDbLevel' => 'string',
+            'fileImportMappingType' => 'string',
             'body' => '\HuaweiCloud\SDK\Drs\V5\Model\UploadDbObjectTemplateRequestBody'
     ];
 
@@ -38,7 +40,8 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级
+    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级 - partition：partition分区级导入
+    * fileImportMappingType  导入文件模板的映射场景，取值： - table_mapping：表名映射 - topic_mapping：topic名映射
     * body  body
     *
     * @var string[]
@@ -47,6 +50,7 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
         'jobId' => null,
         'xLanguage' => null,
         'fileImportDbLevel' => null,
+        'fileImportMappingType' => null,
         'body' => null
     ];
 
@@ -75,7 +79,8 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级
+    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级 - partition：partition分区级导入
+    * fileImportMappingType  导入文件模板的映射场景，取值： - table_mapping：表名映射 - topic_mapping：topic名映射
     * body  body
     *
     * @var string[]
@@ -84,6 +89,7 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
             'jobId' => 'job_id',
             'xLanguage' => 'X-Language',
             'fileImportDbLevel' => 'file_import_db_level',
+            'fileImportMappingType' => 'file_import_mapping_type',
             'body' => 'body'
     ];
 
@@ -91,7 +97,8 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级
+    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级 - partition：partition分区级导入
+    * fileImportMappingType  导入文件模板的映射场景，取值： - table_mapping：表名映射 - topic_mapping：topic名映射
     * body  body
     *
     * @var string[]
@@ -100,6 +107,7 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
             'jobId' => 'setJobId',
             'xLanguage' => 'setXLanguage',
             'fileImportDbLevel' => 'setFileImportDbLevel',
+            'fileImportMappingType' => 'setFileImportMappingType',
             'body' => 'setBody'
     ];
 
@@ -107,7 +115,8 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级
+    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级 - partition：partition分区级导入
+    * fileImportMappingType  导入文件模板的映射场景，取值： - table_mapping：表名映射 - topic_mapping：topic名映射
     * body  body
     *
     * @var string[]
@@ -116,6 +125,7 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
             'jobId' => 'getJobId',
             'xLanguage' => 'getXLanguage',
             'fileImportDbLevel' => 'getFileImportDbLevel',
+            'fileImportMappingType' => 'getFileImportMappingType',
             'body' => 'getBody'
     ];
 
@@ -164,6 +174,7 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
     const FILE_IMPORT_DB_LEVEL_DATABASE = 'database';
     const FILE_IMPORT_DB_LEVEL_TABLE = 'table';
     const FILE_IMPORT_DB_LEVEL_COLUMN = 'column';
+    const FILE_IMPORT_DB_LEVEL_PARTITION = 'partition';
     
 
     /**
@@ -190,6 +201,7 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
             self::FILE_IMPORT_DB_LEVEL_DATABASE,
             self::FILE_IMPORT_DB_LEVEL_TABLE,
             self::FILE_IMPORT_DB_LEVEL_COLUMN,
+            self::FILE_IMPORT_DB_LEVEL_PARTITION,
         ];
     }
 
@@ -212,6 +224,7 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['fileImportDbLevel'] = isset($data['fileImportDbLevel']) ? $data['fileImportDbLevel'] : null;
+        $this->container['fileImportMappingType'] = isset($data['fileImportMappingType']) ? $data['fileImportMappingType'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -306,7 +319,7 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileImportDbLevel
-    *  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级
+    *  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级 - partition：partition分区级导入
     *
     * @return string|null
     */
@@ -318,13 +331,37 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fileImportDbLevel
     *
-    * @param string|null $fileImportDbLevel 文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级
+    * @param string|null $fileImportDbLevel 文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级 - partition：partition分区级导入
     *
     * @return $this
     */
     public function setFileImportDbLevel($fileImportDbLevel)
     {
         $this->container['fileImportDbLevel'] = $fileImportDbLevel;
+        return $this;
+    }
+
+    /**
+    * Gets fileImportMappingType
+    *  导入文件模板的映射场景，取值： - table_mapping：表名映射 - topic_mapping：topic名映射
+    *
+    * @return string|null
+    */
+    public function getFileImportMappingType()
+    {
+        return $this->container['fileImportMappingType'];
+    }
+
+    /**
+    * Sets fileImportMappingType
+    *
+    * @param string|null $fileImportMappingType 导入文件模板的映射场景，取值： - table_mapping：表名映射 - topic_mapping：topic名映射
+    *
+    * @return $this
+    */
+    public function setFileImportMappingType($fileImportMappingType)
+    {
+        $this->container['fileImportMappingType'] = $fileImportMappingType;
         return $this;
     }
 

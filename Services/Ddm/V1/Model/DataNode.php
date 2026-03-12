@@ -180,22 +180,31 @@ class DataNode implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 2147483647)) {
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+            if ((mb_strlen($this->container['id']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 1)) {
+            if ((mb_strlen($this->container['id']) < 1)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['user']) && (mb_strlen($this->container['user']) > 2147483647)) {
+        if ($this->container['user'] === null) {
+            $invalidProperties[] = "'user' can't be null";
+        }
+            if ((mb_strlen($this->container['user']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'user', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['user']) && (mb_strlen($this->container['user']) < 1)) {
+            if ((mb_strlen($this->container['user']) < 1)) {
                 $invalidProperties[] = "invalid value for 'user', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['password']) && (mb_strlen($this->container['password']) > 2147483647)) {
+        if ($this->container['password'] === null) {
+            $invalidProperties[] = "'password' can't be null";
+        }
+            if ((mb_strlen($this->container['password']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'password', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['password']) && (mb_strlen($this->container['password']) < 1)) {
+            if ((mb_strlen($this->container['password']) < 1)) {
                 $invalidProperties[] = "invalid value for 'password', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
@@ -216,7 +225,7 @@ class DataNode implements ModelInterface, ArrayAccess
     * Gets id
     *  实例id。
     *
-    * @return string|null
+    * @return string
     */
     public function getId()
     {
@@ -226,7 +235,7 @@ class DataNode implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 实例id。
+    * @param string $id 实例id。
     *
     * @return $this
     */
@@ -240,7 +249,7 @@ class DataNode implements ModelInterface, ArrayAccess
     * Gets user
     *  实例账号。
     *
-    * @return string|null
+    * @return string
     */
     public function getUser()
     {
@@ -250,7 +259,7 @@ class DataNode implements ModelInterface, ArrayAccess
     /**
     * Sets user
     *
-    * @param string|null $user 实例账号。
+    * @param string $user 实例账号。
     *
     * @return $this
     */
@@ -264,7 +273,7 @@ class DataNode implements ModelInterface, ArrayAccess
     * Gets password
     *  实例账号密码。
     *
-    * @return string|null
+    * @return string
     */
     public function getPassword()
     {
@@ -274,7 +283,7 @@ class DataNode implements ModelInterface, ArrayAccess
     /**
     * Sets password
     *
-    * @param string|null $password 实例账号密码。
+    * @param string $password 实例账号密码。
     *
     * @return $this
     */

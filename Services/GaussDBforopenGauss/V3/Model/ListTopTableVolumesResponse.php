@@ -24,13 +24,17 @@ class ListTopTableVolumesResponse implements ModelInterface, ArrayAccess
     * tableVolumes  **参数解释**: 数据库表占用空间列表。
     * totalCount  **参数解释**: 总数。 **取值范围**: 不涉及。
     * state  **参数解释**: 任务状态。 **取值范围**: - RUNNING：运行中。 - ERROR：运行异常。 - FINISHED： 运行结束。
+    * jobId  **参数解释**: 任务ID，当无请求参数时返回。 **取值范围**: 不涉及。
+    * nodeId  **参数解释**: 工作流执行节点ID，当无请求参数时返回。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'tableVolumes' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\TableVolumeResult[]',
             'totalCount' => 'int',
-            'state' => 'string'
+            'state' => 'string',
+            'jobId' => 'string',
+            'nodeId' => 'string'
     ];
 
     /**
@@ -38,13 +42,17 @@ class ListTopTableVolumesResponse implements ModelInterface, ArrayAccess
     * tableVolumes  **参数解释**: 数据库表占用空间列表。
     * totalCount  **参数解释**: 总数。 **取值范围**: 不涉及。
     * state  **参数解释**: 任务状态。 **取值范围**: - RUNNING：运行中。 - ERROR：运行异常。 - FINISHED： 运行结束。
+    * jobId  **参数解释**: 任务ID，当无请求参数时返回。 **取值范围**: 不涉及。
+    * nodeId  **参数解释**: 工作流执行节点ID，当无请求参数时返回。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'tableVolumes' => null,
         'totalCount' => null,
-        'state' => null
+        'state' => null,
+        'jobId' => null,
+        'nodeId' => null
     ];
 
     /**
@@ -73,13 +81,17 @@ class ListTopTableVolumesResponse implements ModelInterface, ArrayAccess
     * tableVolumes  **参数解释**: 数据库表占用空间列表。
     * totalCount  **参数解释**: 总数。 **取值范围**: 不涉及。
     * state  **参数解释**: 任务状态。 **取值范围**: - RUNNING：运行中。 - ERROR：运行异常。 - FINISHED： 运行结束。
+    * jobId  **参数解释**: 任务ID，当无请求参数时返回。 **取值范围**: 不涉及。
+    * nodeId  **参数解释**: 工作流执行节点ID，当无请求参数时返回。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'tableVolumes' => 'table_volumes',
             'totalCount' => 'total_count',
-            'state' => 'state'
+            'state' => 'state',
+            'jobId' => 'job_id',
+            'nodeId' => 'node_id'
     ];
 
     /**
@@ -87,13 +99,17 @@ class ListTopTableVolumesResponse implements ModelInterface, ArrayAccess
     * tableVolumes  **参数解释**: 数据库表占用空间列表。
     * totalCount  **参数解释**: 总数。 **取值范围**: 不涉及。
     * state  **参数解释**: 任务状态。 **取值范围**: - RUNNING：运行中。 - ERROR：运行异常。 - FINISHED： 运行结束。
+    * jobId  **参数解释**: 任务ID，当无请求参数时返回。 **取值范围**: 不涉及。
+    * nodeId  **参数解释**: 工作流执行节点ID，当无请求参数时返回。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'tableVolumes' => 'setTableVolumes',
             'totalCount' => 'setTotalCount',
-            'state' => 'setState'
+            'state' => 'setState',
+            'jobId' => 'setJobId',
+            'nodeId' => 'setNodeId'
     ];
 
     /**
@@ -101,13 +117,17 @@ class ListTopTableVolumesResponse implements ModelInterface, ArrayAccess
     * tableVolumes  **参数解释**: 数据库表占用空间列表。
     * totalCount  **参数解释**: 总数。 **取值范围**: 不涉及。
     * state  **参数解释**: 任务状态。 **取值范围**: - RUNNING：运行中。 - ERROR：运行异常。 - FINISHED： 运行结束。
+    * jobId  **参数解释**: 任务ID，当无请求参数时返回。 **取值范围**: 不涉及。
+    * nodeId  **参数解释**: 工作流执行节点ID，当无请求参数时返回。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'tableVolumes' => 'getTableVolumes',
             'totalCount' => 'getTotalCount',
-            'state' => 'getState'
+            'state' => 'getState',
+            'jobId' => 'getJobId',
+            'nodeId' => 'getNodeId'
     ];
 
     /**
@@ -188,6 +208,8 @@ class ListTopTableVolumesResponse implements ModelInterface, ArrayAccess
         $this->container['tableVolumes'] = isset($data['tableVolumes']) ? $data['tableVolumes'] : null;
         $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['nodeId'] = isset($data['nodeId']) ? $data['nodeId'] : null;
     }
 
     /**
@@ -289,6 +311,54 @@ class ListTopTableVolumesResponse implements ModelInterface, ArrayAccess
     public function setState($state)
     {
         $this->container['state'] = $state;
+        return $this;
+    }
+
+    /**
+    * Gets jobId
+    *  **参数解释**: 任务ID，当无请求参数时返回。 **取值范围**: 不涉及。
+    *
+    * @return string|null
+    */
+    public function getJobId()
+    {
+        return $this->container['jobId'];
+    }
+
+    /**
+    * Sets jobId
+    *
+    * @param string|null $jobId **参数解释**: 任务ID，当无请求参数时返回。 **取值范围**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setJobId($jobId)
+    {
+        $this->container['jobId'] = $jobId;
+        return $this;
+    }
+
+    /**
+    * Gets nodeId
+    *  **参数解释**: 工作流执行节点ID，当无请求参数时返回。 **取值范围**: 不涉及。
+    *
+    * @return string|null
+    */
+    public function getNodeId()
+    {
+        return $this->container['nodeId'];
+    }
+
+    /**
+    * Sets nodeId
+    *
+    * @param string|null $nodeId **参数解释**: 工作流执行节点ID，当无请求参数时返回。 **取值范围**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setNodeId($nodeId)
+    {
+        $this->container['nodeId'] = $nodeId;
         return $this;
     }
 

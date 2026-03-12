@@ -6972,6 +6972,9 @@ class DrsClient extends Client
         if ($localVarParams['fileImportDbLevel'] !== null) {
             $queryParams['file_import_db_level'] = $localVarParams['fileImportDbLevel'];
         }
+        if ($localVarParams['fileImportMappingType'] !== null) {
+            $queryParams['file_import_mapping_type'] = $localVarParams['fileImportMappingType'];
+        }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
         }

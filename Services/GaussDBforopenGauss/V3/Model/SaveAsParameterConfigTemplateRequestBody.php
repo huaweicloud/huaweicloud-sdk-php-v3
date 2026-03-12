@@ -169,6 +169,9 @@ class SaveAsParameterConfigTemplateRequestBody implements ModelInterface, ArrayA
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -187,7 +190,7 @@ class SaveAsParameterConfigTemplateRequestBody implements ModelInterface, ArrayA
     * Gets name
     *  保存参数组模板的名称。
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -197,7 +200,7 @@ class SaveAsParameterConfigTemplateRequestBody implements ModelInterface, ArrayA
     /**
     * Sets name
     *
-    * @param string|null $name 保存参数组模板的名称。
+    * @param string $name 保存参数组模板的名称。
     *
     * @return $this
     */

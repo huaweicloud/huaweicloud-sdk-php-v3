@@ -36,13 +36,13 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
     * query  **参数解释**: 归一化SQL。 **取值范围**: 不涉及。
     * threadId  **参数解释**: 线程ID。 **取值范围**: 不涉及。
     * sessionId  **参数解释**: 会话ID。 **取值范围**: 不涉及。
-    * beginTime  **参数解释**: 开始时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
-    * endTime  **参数解释**: 结束时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
+    * startTime  **参数解释**: 开始时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
+    * finishTime  **参数解释**: 结束时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
     * slowQueryThreshold  **参数解释**: 慢SQL阈值。 **取值范围**: 不涉及。
     * nSoftParse  **参数解释**: 软解析次数。 **取值范围**: 不涉及。
     * nHardParse  **参数解释**: 硬解析次数。 **取值范围**: 不涉及。
     * queryPlan  **参数解释**: 执行计划。 **取值范围**: 不涉及。
-    * nReturnRows  **参数解释**: SELECT语句的返回结果集行数。 **取值范围**: 不涉及。
+    * nReturnedRows  **参数解释**: SELECT语句的返回结果集行数。 **取值范围**: 不涉及。
     * nTuplesFetched  **参数解释**: 随机扫描行。 **取值范围**: 不涉及。
     * nTuplesReturned  **参数解释**: 顺序扫描行。 **取值范围**: 不涉及。
     * nTuplesInserted  **参数解释**: 插入行。 **取值范围**: 不涉及。
@@ -91,13 +91,13 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
             'query' => 'string',
             'threadId' => 'string',
             'sessionId' => 'string',
-            'beginTime' => 'string',
-            'endTime' => 'string',
+            'startTime' => 'string',
+            'finishTime' => 'string',
             'slowQueryThreshold' => 'int',
             'nSoftParse' => 'int',
             'nHardParse' => 'int',
             'queryPlan' => 'string',
-            'nReturnRows' => 'int',
+            'nReturnedRows' => 'int',
             'nTuplesFetched' => 'int',
             'nTuplesReturned' => 'int',
             'nTuplesInserted' => 'int',
@@ -146,13 +146,13 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
     * query  **参数解释**: 归一化SQL。 **取值范围**: 不涉及。
     * threadId  **参数解释**: 线程ID。 **取值范围**: 不涉及。
     * sessionId  **参数解释**: 会话ID。 **取值范围**: 不涉及。
-    * beginTime  **参数解释**: 开始时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
-    * endTime  **参数解释**: 结束时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
+    * startTime  **参数解释**: 开始时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
+    * finishTime  **参数解释**: 结束时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
     * slowQueryThreshold  **参数解释**: 慢SQL阈值。 **取值范围**: 不涉及。
     * nSoftParse  **参数解释**: 软解析次数。 **取值范围**: 不涉及。
     * nHardParse  **参数解释**: 硬解析次数。 **取值范围**: 不涉及。
     * queryPlan  **参数解释**: 执行计划。 **取值范围**: 不涉及。
-    * nReturnRows  **参数解释**: SELECT语句的返回结果集行数。 **取值范围**: 不涉及。
+    * nReturnedRows  **参数解释**: SELECT语句的返回结果集行数。 **取值范围**: 不涉及。
     * nTuplesFetched  **参数解释**: 随机扫描行。 **取值范围**: 不涉及。
     * nTuplesReturned  **参数解释**: 顺序扫描行。 **取值范围**: 不涉及。
     * nTuplesInserted  **参数解释**: 插入行。 **取值范围**: 不涉及。
@@ -201,13 +201,13 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
         'query' => null,
         'threadId' => null,
         'sessionId' => null,
-        'beginTime' => null,
-        'endTime' => null,
+        'startTime' => null,
+        'finishTime' => null,
         'slowQueryThreshold' => 'int64',
         'nSoftParse' => 'int64',
         'nHardParse' => 'int64',
         'queryPlan' => null,
-        'nReturnRows' => 'int64',
+        'nReturnedRows' => 'int64',
         'nTuplesFetched' => 'int64',
         'nTuplesReturned' => 'int64',
         'nTuplesInserted' => 'int64',
@@ -277,13 +277,13 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
     * query  **参数解释**: 归一化SQL。 **取值范围**: 不涉及。
     * threadId  **参数解释**: 线程ID。 **取值范围**: 不涉及。
     * sessionId  **参数解释**: 会话ID。 **取值范围**: 不涉及。
-    * beginTime  **参数解释**: 开始时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
-    * endTime  **参数解释**: 结束时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
+    * startTime  **参数解释**: 开始时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
+    * finishTime  **参数解释**: 结束时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
     * slowQueryThreshold  **参数解释**: 慢SQL阈值。 **取值范围**: 不涉及。
     * nSoftParse  **参数解释**: 软解析次数。 **取值范围**: 不涉及。
     * nHardParse  **参数解释**: 硬解析次数。 **取值范围**: 不涉及。
     * queryPlan  **参数解释**: 执行计划。 **取值范围**: 不涉及。
-    * nReturnRows  **参数解释**: SELECT语句的返回结果集行数。 **取值范围**: 不涉及。
+    * nReturnedRows  **参数解释**: SELECT语句的返回结果集行数。 **取值范围**: 不涉及。
     * nTuplesFetched  **参数解释**: 随机扫描行。 **取值范围**: 不涉及。
     * nTuplesReturned  **参数解释**: 顺序扫描行。 **取值范围**: 不涉及。
     * nTuplesInserted  **参数解释**: 插入行。 **取值范围**: 不涉及。
@@ -332,13 +332,13 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
             'query' => 'query',
             'threadId' => 'thread_id',
             'sessionId' => 'session_id',
-            'beginTime' => 'begin_time',
-            'endTime' => 'end_time',
+            'startTime' => 'start_time',
+            'finishTime' => 'finish_time',
             'slowQueryThreshold' => 'slow_query_threshold',
             'nSoftParse' => 'n_soft_parse',
             'nHardParse' => 'n_hard_parse',
             'queryPlan' => 'query_plan',
-            'nReturnRows' => 'n_return_rows',
+            'nReturnedRows' => 'n_returned_rows',
             'nTuplesFetched' => 'n_tuples_fetched',
             'nTuplesReturned' => 'n_tuples_returned',
             'nTuplesInserted' => 'n_tuples_inserted',
@@ -387,13 +387,13 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
     * query  **参数解释**: 归一化SQL。 **取值范围**: 不涉及。
     * threadId  **参数解释**: 线程ID。 **取值范围**: 不涉及。
     * sessionId  **参数解释**: 会话ID。 **取值范围**: 不涉及。
-    * beginTime  **参数解释**: 开始时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
-    * endTime  **参数解释**: 结束时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
+    * startTime  **参数解释**: 开始时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
+    * finishTime  **参数解释**: 结束时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
     * slowQueryThreshold  **参数解释**: 慢SQL阈值。 **取值范围**: 不涉及。
     * nSoftParse  **参数解释**: 软解析次数。 **取值范围**: 不涉及。
     * nHardParse  **参数解释**: 硬解析次数。 **取值范围**: 不涉及。
     * queryPlan  **参数解释**: 执行计划。 **取值范围**: 不涉及。
-    * nReturnRows  **参数解释**: SELECT语句的返回结果集行数。 **取值范围**: 不涉及。
+    * nReturnedRows  **参数解释**: SELECT语句的返回结果集行数。 **取值范围**: 不涉及。
     * nTuplesFetched  **参数解释**: 随机扫描行。 **取值范围**: 不涉及。
     * nTuplesReturned  **参数解释**: 顺序扫描行。 **取值范围**: 不涉及。
     * nTuplesInserted  **参数解释**: 插入行。 **取值范围**: 不涉及。
@@ -442,13 +442,13 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
             'query' => 'setQuery',
             'threadId' => 'setThreadId',
             'sessionId' => 'setSessionId',
-            'beginTime' => 'setBeginTime',
-            'endTime' => 'setEndTime',
+            'startTime' => 'setStartTime',
+            'finishTime' => 'setFinishTime',
             'slowQueryThreshold' => 'setSlowQueryThreshold',
             'nSoftParse' => 'setNSoftParse',
             'nHardParse' => 'setNHardParse',
             'queryPlan' => 'setQueryPlan',
-            'nReturnRows' => 'setNReturnRows',
+            'nReturnedRows' => 'setNReturnedRows',
             'nTuplesFetched' => 'setNTuplesFetched',
             'nTuplesReturned' => 'setNTuplesReturned',
             'nTuplesInserted' => 'setNTuplesInserted',
@@ -497,13 +497,13 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
     * query  **参数解释**: 归一化SQL。 **取值范围**: 不涉及。
     * threadId  **参数解释**: 线程ID。 **取值范围**: 不涉及。
     * sessionId  **参数解释**: 会话ID。 **取值范围**: 不涉及。
-    * beginTime  **参数解释**: 开始时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
-    * endTime  **参数解释**: 结束时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
+    * startTime  **参数解释**: 开始时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
+    * finishTime  **参数解释**: 结束时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
     * slowQueryThreshold  **参数解释**: 慢SQL阈值。 **取值范围**: 不涉及。
     * nSoftParse  **参数解释**: 软解析次数。 **取值范围**: 不涉及。
     * nHardParse  **参数解释**: 硬解析次数。 **取值范围**: 不涉及。
     * queryPlan  **参数解释**: 执行计划。 **取值范围**: 不涉及。
-    * nReturnRows  **参数解释**: SELECT语句的返回结果集行数。 **取值范围**: 不涉及。
+    * nReturnedRows  **参数解释**: SELECT语句的返回结果集行数。 **取值范围**: 不涉及。
     * nTuplesFetched  **参数解释**: 随机扫描行。 **取值范围**: 不涉及。
     * nTuplesReturned  **参数解释**: 顺序扫描行。 **取值范围**: 不涉及。
     * nTuplesInserted  **参数解释**: 插入行。 **取值范围**: 不涉及。
@@ -552,13 +552,13 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
             'query' => 'getQuery',
             'threadId' => 'getThreadId',
             'sessionId' => 'getSessionId',
-            'beginTime' => 'getBeginTime',
-            'endTime' => 'getEndTime',
+            'startTime' => 'getStartTime',
+            'finishTime' => 'getFinishTime',
             'slowQueryThreshold' => 'getSlowQueryThreshold',
             'nSoftParse' => 'getNSoftParse',
             'nHardParse' => 'getNHardParse',
             'queryPlan' => 'getQueryPlan',
-            'nReturnRows' => 'getNReturnRows',
+            'nReturnedRows' => 'getNReturnedRows',
             'nTuplesFetched' => 'getNTuplesFetched',
             'nTuplesReturned' => 'getNTuplesReturned',
             'nTuplesInserted' => 'getNTuplesInserted',
@@ -663,13 +663,13 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
         $this->container['query'] = isset($data['query']) ? $data['query'] : null;
         $this->container['threadId'] = isset($data['threadId']) ? $data['threadId'] : null;
         $this->container['sessionId'] = isset($data['sessionId']) ? $data['sessionId'] : null;
-        $this->container['beginTime'] = isset($data['beginTime']) ? $data['beginTime'] : null;
-        $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
+        $this->container['finishTime'] = isset($data['finishTime']) ? $data['finishTime'] : null;
         $this->container['slowQueryThreshold'] = isset($data['slowQueryThreshold']) ? $data['slowQueryThreshold'] : null;
         $this->container['nSoftParse'] = isset($data['nSoftParse']) ? $data['nSoftParse'] : null;
         $this->container['nHardParse'] = isset($data['nHardParse']) ? $data['nHardParse'] : null;
         $this->container['queryPlan'] = isset($data['queryPlan']) ? $data['queryPlan'] : null;
-        $this->container['nReturnRows'] = isset($data['nReturnRows']) ? $data['nReturnRows'] : null;
+        $this->container['nReturnedRows'] = isset($data['nReturnedRows']) ? $data['nReturnedRows'] : null;
         $this->container['nTuplesFetched'] = isset($data['nTuplesFetched']) ? $data['nTuplesFetched'] : null;
         $this->container['nTuplesReturned'] = isset($data['nTuplesReturned']) ? $data['nTuplesReturned'] : null;
         $this->container['nTuplesInserted'] = isset($data['nTuplesInserted']) ? $data['nTuplesInserted'] : null;
@@ -1107,50 +1107,50 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets beginTime
+    * Gets startTime
     *  **参数解释**: 开始时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
-    public function getBeginTime()
+    public function getStartTime()
     {
-        return $this->container['beginTime'];
+        return $this->container['startTime'];
     }
 
     /**
-    * Sets beginTime
+    * Sets startTime
     *
-    * @param string|null $beginTime **参数解释**: 开始时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
+    * @param string|null $startTime **参数解释**: 开始时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
     *
     * @return $this
     */
-    public function setBeginTime($beginTime)
+    public function setStartTime($startTime)
     {
-        $this->container['beginTime'] = $beginTime;
+        $this->container['startTime'] = $startTime;
         return $this;
     }
 
     /**
-    * Gets endTime
+    * Gets finishTime
     *  **参数解释**: 结束时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
-    public function getEndTime()
+    public function getFinishTime()
     {
-        return $this->container['endTime'];
+        return $this->container['finishTime'];
     }
 
     /**
-    * Sets endTime
+    * Sets finishTime
     *
-    * @param string|null $endTime **参数解释**: 结束时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
+    * @param string|null $finishTime **参数解释**: 结束时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
     *
     * @return $this
     */
-    public function setEndTime($endTime)
+    public function setFinishTime($finishTime)
     {
-        $this->container['endTime'] = $endTime;
+        $this->container['finishTime'] = $finishTime;
         return $this;
     }
 
@@ -1251,26 +1251,26 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets nReturnRows
+    * Gets nReturnedRows
     *  **参数解释**: SELECT语句的返回结果集行数。 **取值范围**: 不涉及。
     *
     * @return int|null
     */
-    public function getNReturnRows()
+    public function getNReturnedRows()
     {
-        return $this->container['nReturnRows'];
+        return $this->container['nReturnedRows'];
     }
 
     /**
-    * Sets nReturnRows
+    * Sets nReturnedRows
     *
-    * @param int|null $nReturnRows **参数解释**: SELECT语句的返回结果集行数。 **取值范围**: 不涉及。
+    * @param int|null $nReturnedRows **参数解释**: SELECT语句的返回结果集行数。 **取值范围**: 不涉及。
     *
     * @return $this
     */
-    public function setNReturnRows($nReturnRows)
+    public function setNReturnedRows($nReturnedRows)
     {
-        $this->container['nReturnRows'] = $nReturnRows;
+        $this->container['nReturnedRows'] = $nReturnedRows;
         return $this;
     }
 

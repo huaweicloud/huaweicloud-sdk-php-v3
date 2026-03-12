@@ -6335,6 +6335,74 @@ class SwrClient extends Client
     }
 
     /**
+     * 获取当前项目下所有企业仓库实例的仓库列表
+     *
+     * 获取当前项目下所有企业仓库实例的仓库列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAllInstanceRepositories($request)
+    {
+        return $this->listAllInstanceRepositoriesWithHttpInfo($request);
+    }
+
+    public function listAllInstanceRepositoriesWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/repositories';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Swr\V2\Model\ListAllInstanceRepositoriesResponse',
+            $requestType='\HuaweiCloud\SDK\Swr\V2\Model\ListAllInstanceRepositoriesRequest');
+    }
+
+    /**
      * 获取上传下载的相关审计日志列表
      *
      * 获取上传下载的相关审计日志列表

@@ -35,7 +35,7 @@ class ListWaitEventRequestBody implements ModelInterface, ArrayAccess
             'limit' => 'int',
             'offset' => 'int',
             'orderFields' => 'string[][]',
-            'waitEventQueryInfo' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\WaitEventQueryInfo'
+            'waitEventQueryInfo' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\WaitEventQueryInfoOption'
     ];
 
     /**
@@ -354,7 +354,7 @@ class ListWaitEventRequestBody implements ModelInterface, ArrayAccess
     * Gets waitEventQueryInfo
     *  waitEventQueryInfo
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\WaitEventQueryInfo|null
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\WaitEventQueryInfoOption|null
     */
     public function getWaitEventQueryInfo()
     {
@@ -364,7 +364,7 @@ class ListWaitEventRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets waitEventQueryInfo
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\WaitEventQueryInfo|null $waitEventQueryInfo waitEventQueryInfo
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\WaitEventQueryInfoOption|null $waitEventQueryInfo waitEventQueryInfo
     *
     * @return $this
     */

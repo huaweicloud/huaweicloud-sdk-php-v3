@@ -158,6 +158,9 @@ class UpdateInstanceAliasRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['alias'] === null) {
+            $invalidProperties[] = "'alias' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class UpdateInstanceAliasRequestBody implements ModelInterface, ArrayAccess
     * Gets alias
     *  **参数解释**: 实例别名/备注。 **约束限制**: 不涉及。 **取值范围**: 允许中文，英文，数字及“-“、“_“、“.“，且长度为[1-64]个字符。 **默认取值**: 不涉及。
     *
-    * @return string|null
+    * @return string
     */
     public function getAlias()
     {
@@ -186,7 +189,7 @@ class UpdateInstanceAliasRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets alias
     *
-    * @param string|null $alias **参数解释**: 实例别名/备注。 **约束限制**: 不涉及。 **取值范围**: 允许中文，英文，数字及“-“、“_“、“.“，且长度为[1-64]个字符。 **默认取值**: 不涉及。
+    * @param string $alias **参数解释**: 实例别名/备注。 **约束限制**: 不涉及。 **取值范围**: 允许中文，英文，数字及“-“、“_“、“.“，且长度为[1-64]个字符。 **默认取值**: 不涉及。
     *
     * @return $this
     */

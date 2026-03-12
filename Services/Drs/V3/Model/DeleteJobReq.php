@@ -20,7 +20,7 @@ class DeleteJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * deleteType  terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务
+    * deleteType  terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务,roll_back_upgrade_active_standby:转主备任务回滚
     * jobId  任务ID
     * isShowBreakpointPosition  MySQL为源，实时迁移，实时同步，数据订阅，实时灾备结束任务时是否展示断点信息
     *
@@ -34,7 +34,7 @@ class DeleteJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * deleteType  terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务
+    * deleteType  terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务,roll_back_upgrade_active_standby:转主备任务回滚
     * jobId  任务ID
     * isShowBreakpointPosition  MySQL为源，实时迁移，实时同步，数据订阅，实时灾备结束任务时是否展示断点信息
     *
@@ -69,7 +69,7 @@ class DeleteJobReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * deleteType  terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务
+    * deleteType  terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务,roll_back_upgrade_active_standby:转主备任务回滚
     * jobId  任务ID
     * isShowBreakpointPosition  MySQL为源，实时迁移，实时同步，数据订阅，实时灾备结束任务时是否展示断点信息
     *
@@ -83,7 +83,7 @@ class DeleteJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * deleteType  terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务
+    * deleteType  terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务,roll_back_upgrade_active_standby:转主备任务回滚
     * jobId  任务ID
     * isShowBreakpointPosition  MySQL为源，实时迁移，实时同步，数据订阅，实时灾备结束任务时是否展示断点信息
     *
@@ -97,7 +97,7 @@ class DeleteJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * deleteType  terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务
+    * deleteType  terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务,roll_back_upgrade_active_standby:转主备任务回滚
     * jobId  任务ID
     * isShowBreakpointPosition  MySQL为源，实时迁移，实时同步，数据订阅，实时灾备结束任务时是否展示断点信息
     *
@@ -152,6 +152,7 @@ class DeleteJobReq implements ModelInterface, ArrayAccess
     const DELETE_TYPE_TERMINATE = 'terminate';
     const DELETE_TYPE_FORCE_TERMINATE = 'force_terminate';
     const DELETE_TYPE_DELETE = 'delete';
+    const DELETE_TYPE_ROLL_BACK_UPGRADE_ACTIVE_STANDBY = 'roll_back_upgrade_active_standby';
     
 
     /**
@@ -165,6 +166,7 @@ class DeleteJobReq implements ModelInterface, ArrayAccess
             self::DELETE_TYPE_TERMINATE,
             self::DELETE_TYPE_FORCE_TERMINATE,
             self::DELETE_TYPE_DELETE,
+            self::DELETE_TYPE_ROLL_BACK_UPGRADE_ACTIVE_STANDBY,
         ];
     }
 
@@ -227,7 +229,7 @@ class DeleteJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets deleteType
-    *  terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务
+    *  terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务,roll_back_upgrade_active_standby:转主备任务回滚
     *
     * @return string
     */
@@ -239,7 +241,7 @@ class DeleteJobReq implements ModelInterface, ArrayAccess
     /**
     * Sets deleteType
     *
-    * @param string $deleteType terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务
+    * @param string $deleteType terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务,roll_back_upgrade_active_standby:转主备任务回滚
     *
     * @return $this
     */

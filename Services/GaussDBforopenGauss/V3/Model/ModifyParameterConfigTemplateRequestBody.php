@@ -169,6 +169,9 @@ class ModifyParameterConfigTemplateRequestBody implements ModelInterface, ArrayA
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['values'] === null) {
+            $invalidProperties[] = "'values' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -187,7 +190,7 @@ class ModifyParameterConfigTemplateRequestBody implements ModelInterface, ArrayA
     * Gets values
     *  参数值对象Map<String,String>，用户基于默认参数模板自定义的参数值。
     *
-    * @return map[string,string]|null
+    * @return map[string,string]
     */
     public function getValues()
     {
@@ -197,7 +200,7 @@ class ModifyParameterConfigTemplateRequestBody implements ModelInterface, ArrayA
     /**
     * Sets values
     *
-    * @param map[string,string]|null $values 参数值对象Map<String,String>，用户基于默认参数模板自定义的参数值。
+    * @param map[string,string] $values 参数值对象Map<String,String>，用户基于默认参数模板自定义的参数值。
     *
     * @return $this
     */

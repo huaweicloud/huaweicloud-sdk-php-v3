@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model;
+namespace HuaweiCloud\SDK\Organizations\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BackupNodeInfoResult implements ModelInterface, ArrayAccess
+class CreateDryRunPolicyRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,34 @@ class BackupNodeInfoResult implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BackupNodeInfoResult';
+    protected static $openAPIModelName = 'CreateDryRunPolicyRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * azList  **参数解释**: 选择指定az下的节点进行备份。 **取值范围**: 不涉及。
-    * nodeList  **参数解释**: 选择指定节点进行备份。 **取值范围**: 不涉及。
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    * xLanguage  选择接口返回的信息的语言
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'azList' => 'string',
-            'nodeList' => 'string'
+            'xSecurityToken' => 'string',
+            'xLanguage' => 'string',
+            'body' => '\HuaweiCloud\SDK\Organizations\V1\Model\CreateDryRunPolicyReqBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * azList  **参数解释**: 选择指定az下的节点进行备份。 **取值范围**: 不涉及。
-    * nodeList  **参数解释**: 选择指定节点进行备份。 **取值范围**: 不涉及。
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    * xLanguage  选择接口返回的信息的语言
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'azList' => null,
-        'nodeList' => null
+        'xSecurityToken' => null,
+        'xLanguage' => null,
+        'body' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class BackupNodeInfoResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * azList  **参数解释**: 选择指定az下的节点进行备份。 **取值范围**: 不涉及。
-    * nodeList  **参数解释**: 选择指定节点进行备份。 **取值范围**: 不涉及。
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    * xLanguage  选择接口返回的信息的语言
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'azList' => 'az_list',
-            'nodeList' => 'node_list'
+            'xSecurityToken' => 'X-Security-Token',
+            'xLanguage' => 'X-Language',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * azList  **参数解释**: 选择指定az下的节点进行备份。 **取值范围**: 不涉及。
-    * nodeList  **参数解释**: 选择指定节点进行备份。 **取值范围**: 不涉及。
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    * xLanguage  选择接口返回的信息的语言
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'azList' => 'setAzList',
-            'nodeList' => 'setNodeList'
+            'xSecurityToken' => 'setXSecurityToken',
+            'xLanguage' => 'setXLanguage',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * azList  **参数解释**: 选择指定az下的节点进行备份。 **取值范围**: 不涉及。
-    * nodeList  **参数解释**: 选择指定节点进行备份。 **取值范围**: 不涉及。
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    * xLanguage  选择接口返回的信息的语言
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'azList' => 'getAzList',
-            'nodeList' => 'getNodeList'
+            'xSecurityToken' => 'getXSecurityToken',
+            'xLanguage' => 'getXLanguage',
+            'body' => 'getBody'
     ];
 
     /**
@@ -139,7 +149,22 @@ class BackupNodeInfoResult implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const X_LANGUAGE_ZH_CN = 'zh-cn';
+    const X_LANGUAGE_EN_US = 'en-us';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getXLanguageAllowableValues()
+    {
+        return [
+            self::X_LANGUAGE_ZH_CN,
+            self::X_LANGUAGE_EN_US,
+        ];
+    }
 
 
     /**
@@ -157,8 +182,9 @@ class BackupNodeInfoResult implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['azList'] = isset($data['azList']) ? $data['azList'] : null;
-        $this->container['nodeList'] = isset($data['nodeList']) ? $data['nodeList'] : null;
+        $this->container['xSecurityToken'] = isset($data['xSecurityToken']) ? $data['xSecurityToken'] : null;
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -169,6 +195,14 @@ class BackupNodeInfoResult implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getXLanguageAllowableValues();
+                if (!is_null($this->container['xLanguage']) && !in_array($this->container['xLanguage'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'xLanguage', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -184,50 +218,74 @@ class BackupNodeInfoResult implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets azList
-    *  **参数解释**: 选择指定az下的节点进行备份。 **取值范围**: 不涉及。
+    * Gets xSecurityToken
+    *  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     *
     * @return string|null
     */
-    public function getAzList()
+    public function getXSecurityToken()
     {
-        return $this->container['azList'];
+        return $this->container['xSecurityToken'];
     }
 
     /**
-    * Sets azList
+    * Sets xSecurityToken
     *
-    * @param string|null $azList **参数解释**: 选择指定az下的节点进行备份。 **取值范围**: 不涉及。
+    * @param string|null $xSecurityToken 如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     *
     * @return $this
     */
-    public function setAzList($azList)
+    public function setXSecurityToken($xSecurityToken)
     {
-        $this->container['azList'] = $azList;
+        $this->container['xSecurityToken'] = $xSecurityToken;
         return $this;
     }
 
     /**
-    * Gets nodeList
-    *  **参数解释**: 选择指定节点进行备份。 **取值范围**: 不涉及。
+    * Gets xLanguage
+    *  选择接口返回的信息的语言
     *
     * @return string|null
     */
-    public function getNodeList()
+    public function getXLanguage()
     {
-        return $this->container['nodeList'];
+        return $this->container['xLanguage'];
     }
 
     /**
-    * Sets nodeList
+    * Sets xLanguage
     *
-    * @param string|null $nodeList **参数解释**: 选择指定节点进行备份。 **取值范围**: 不涉及。
+    * @param string|null $xLanguage 选择接口返回的信息的语言
     *
     * @return $this
     */
-    public function setNodeList($nodeList)
+    public function setXLanguage($xLanguage)
     {
-        $this->container['nodeList'] = $nodeList;
+        $this->container['xLanguage'] = $xLanguage;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\Organizations\V1\Model\CreateDryRunPolicyReqBody|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\Organizations\V1\Model\CreateDryRunPolicyReqBody|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

@@ -28,6 +28,12 @@ class CollectedWdrSnapshotInfoResult implements ModelInterface, ArrayAccess
     * downloadUrl  **参数解释**： 报告下载链接，有效时间为30分钟。当status为SUCCESS时，该值不为空。 **取值范围**： 不涉及。
     * status  **参数解释**： 采集状态。 **取值范围**: - SUCCESS：采集成功。 - FAILED：采集失败。 - EXPORTING：采集中。
     * notes  **参数解释**： 备注。采集类型为组件级时，内容包括采集的组件ID。 **取值范围**： 不涉及。
+    * jobCreateTime  **参数解释**： WDR报告生成任务的创建时间。格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始，Z指时区偏移量，当前时间固定为+0时区。例如，\"2025-07-08T10:57:59+0000\"。 **取值范围**： 不涉及。
+    * startSnapshotId  **参数解释**： 用于生成WDR报告的第一个对比快照ID。例如：\"20024\"。只针对使用报告生成模式为对比快照ID（mode=snapshot_id）的采集任务生效；如果该任务使用的是时间区间查询方式（mode=time_range），则该字段为空。 **取值范围**： 不涉及。
+    * endSnapshotId  **参数解释**： 用于生成WDR报告的第二个对比快照ID。例如：\"20025\"。只针对使用报告生成模式为对比快照ID（mode=snapshot_id）的采集任务生效；如果该任务使用的是时间区间查询方式（mode=time_range）来生成的，则该字段为空。 **取值范围**： 不涉及。
+    * fileName  **参数解释**： WDR报告临时文件名称。 **取值范围**： 不涉及。
+    * filePath  **参数解释**： WDR报告临时文件保存路径。 **取值范围**： 不涉及。
+    * obsBucket  obsBucket
     *
     * @var string[]
     */
@@ -39,7 +45,13 @@ class CollectedWdrSnapshotInfoResult implements ModelInterface, ArrayAccess
             'endTime' => 'string',
             'downloadUrl' => 'string',
             'status' => 'string',
-            'notes' => 'string'
+            'notes' => 'string',
+            'jobCreateTime' => 'string',
+            'startSnapshotId' => 'string',
+            'endSnapshotId' => 'string',
+            'fileName' => 'string',
+            'filePath' => 'string',
+            'obsBucket' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CollectedWdrSnapshotInfoResultObsBucket'
     ];
 
     /**
@@ -52,6 +64,12 @@ class CollectedWdrSnapshotInfoResult implements ModelInterface, ArrayAccess
     * downloadUrl  **参数解释**： 报告下载链接，有效时间为30分钟。当status为SUCCESS时，该值不为空。 **取值范围**： 不涉及。
     * status  **参数解释**： 采集状态。 **取值范围**: - SUCCESS：采集成功。 - FAILED：采集失败。 - EXPORTING：采集中。
     * notes  **参数解释**： 备注。采集类型为组件级时，内容包括采集的组件ID。 **取值范围**： 不涉及。
+    * jobCreateTime  **参数解释**： WDR报告生成任务的创建时间。格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始，Z指时区偏移量，当前时间固定为+0时区。例如，\"2025-07-08T10:57:59+0000\"。 **取值范围**： 不涉及。
+    * startSnapshotId  **参数解释**： 用于生成WDR报告的第一个对比快照ID。例如：\"20024\"。只针对使用报告生成模式为对比快照ID（mode=snapshot_id）的采集任务生效；如果该任务使用的是时间区间查询方式（mode=time_range），则该字段为空。 **取值范围**： 不涉及。
+    * endSnapshotId  **参数解释**： 用于生成WDR报告的第二个对比快照ID。例如：\"20025\"。只针对使用报告生成模式为对比快照ID（mode=snapshot_id）的采集任务生效；如果该任务使用的是时间区间查询方式（mode=time_range）来生成的，则该字段为空。 **取值范围**： 不涉及。
+    * fileName  **参数解释**： WDR报告临时文件名称。 **取值范围**： 不涉及。
+    * filePath  **参数解释**： WDR报告临时文件保存路径。 **取值范围**： 不涉及。
+    * obsBucket  obsBucket
     *
     * @var string[]
     */
@@ -63,7 +81,13 @@ class CollectedWdrSnapshotInfoResult implements ModelInterface, ArrayAccess
         'endTime' => null,
         'downloadUrl' => null,
         'status' => null,
-        'notes' => null
+        'notes' => null,
+        'jobCreateTime' => null,
+        'startSnapshotId' => null,
+        'endSnapshotId' => null,
+        'fileName' => null,
+        'filePath' => null,
+        'obsBucket' => null
     ];
 
     /**
@@ -97,6 +121,12 @@ class CollectedWdrSnapshotInfoResult implements ModelInterface, ArrayAccess
     * downloadUrl  **参数解释**： 报告下载链接，有效时间为30分钟。当status为SUCCESS时，该值不为空。 **取值范围**： 不涉及。
     * status  **参数解释**： 采集状态。 **取值范围**: - SUCCESS：采集成功。 - FAILED：采集失败。 - EXPORTING：采集中。
     * notes  **参数解释**： 备注。采集类型为组件级时，内容包括采集的组件ID。 **取值范围**： 不涉及。
+    * jobCreateTime  **参数解释**： WDR报告生成任务的创建时间。格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始，Z指时区偏移量，当前时间固定为+0时区。例如，\"2025-07-08T10:57:59+0000\"。 **取值范围**： 不涉及。
+    * startSnapshotId  **参数解释**： 用于生成WDR报告的第一个对比快照ID。例如：\"20024\"。只针对使用报告生成模式为对比快照ID（mode=snapshot_id）的采集任务生效；如果该任务使用的是时间区间查询方式（mode=time_range），则该字段为空。 **取值范围**： 不涉及。
+    * endSnapshotId  **参数解释**： 用于生成WDR报告的第二个对比快照ID。例如：\"20025\"。只针对使用报告生成模式为对比快照ID（mode=snapshot_id）的采集任务生效；如果该任务使用的是时间区间查询方式（mode=time_range）来生成的，则该字段为空。 **取值范围**： 不涉及。
+    * fileName  **参数解释**： WDR报告临时文件名称。 **取值范围**： 不涉及。
+    * filePath  **参数解释**： WDR报告临时文件保存路径。 **取值范围**： 不涉及。
+    * obsBucket  obsBucket
     *
     * @var string[]
     */
@@ -108,7 +138,13 @@ class CollectedWdrSnapshotInfoResult implements ModelInterface, ArrayAccess
             'endTime' => 'end_time',
             'downloadUrl' => 'download_url',
             'status' => 'status',
-            'notes' => 'notes'
+            'notes' => 'notes',
+            'jobCreateTime' => 'job_create_time',
+            'startSnapshotId' => 'start_snapshot_id',
+            'endSnapshotId' => 'end_snapshot_id',
+            'fileName' => 'file_name',
+            'filePath' => 'file_path',
+            'obsBucket' => 'obs_bucket'
     ];
 
     /**
@@ -121,6 +157,12 @@ class CollectedWdrSnapshotInfoResult implements ModelInterface, ArrayAccess
     * downloadUrl  **参数解释**： 报告下载链接，有效时间为30分钟。当status为SUCCESS时，该值不为空。 **取值范围**： 不涉及。
     * status  **参数解释**： 采集状态。 **取值范围**: - SUCCESS：采集成功。 - FAILED：采集失败。 - EXPORTING：采集中。
     * notes  **参数解释**： 备注。采集类型为组件级时，内容包括采集的组件ID。 **取值范围**： 不涉及。
+    * jobCreateTime  **参数解释**： WDR报告生成任务的创建时间。格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始，Z指时区偏移量，当前时间固定为+0时区。例如，\"2025-07-08T10:57:59+0000\"。 **取值范围**： 不涉及。
+    * startSnapshotId  **参数解释**： 用于生成WDR报告的第一个对比快照ID。例如：\"20024\"。只针对使用报告生成模式为对比快照ID（mode=snapshot_id）的采集任务生效；如果该任务使用的是时间区间查询方式（mode=time_range），则该字段为空。 **取值范围**： 不涉及。
+    * endSnapshotId  **参数解释**： 用于生成WDR报告的第二个对比快照ID。例如：\"20025\"。只针对使用报告生成模式为对比快照ID（mode=snapshot_id）的采集任务生效；如果该任务使用的是时间区间查询方式（mode=time_range）来生成的，则该字段为空。 **取值范围**： 不涉及。
+    * fileName  **参数解释**： WDR报告临时文件名称。 **取值范围**： 不涉及。
+    * filePath  **参数解释**： WDR报告临时文件保存路径。 **取值范围**： 不涉及。
+    * obsBucket  obsBucket
     *
     * @var string[]
     */
@@ -132,7 +174,13 @@ class CollectedWdrSnapshotInfoResult implements ModelInterface, ArrayAccess
             'endTime' => 'setEndTime',
             'downloadUrl' => 'setDownloadUrl',
             'status' => 'setStatus',
-            'notes' => 'setNotes'
+            'notes' => 'setNotes',
+            'jobCreateTime' => 'setJobCreateTime',
+            'startSnapshotId' => 'setStartSnapshotId',
+            'endSnapshotId' => 'setEndSnapshotId',
+            'fileName' => 'setFileName',
+            'filePath' => 'setFilePath',
+            'obsBucket' => 'setObsBucket'
     ];
 
     /**
@@ -145,6 +193,12 @@ class CollectedWdrSnapshotInfoResult implements ModelInterface, ArrayAccess
     * downloadUrl  **参数解释**： 报告下载链接，有效时间为30分钟。当status为SUCCESS时，该值不为空。 **取值范围**： 不涉及。
     * status  **参数解释**： 采集状态。 **取值范围**: - SUCCESS：采集成功。 - FAILED：采集失败。 - EXPORTING：采集中。
     * notes  **参数解释**： 备注。采集类型为组件级时，内容包括采集的组件ID。 **取值范围**： 不涉及。
+    * jobCreateTime  **参数解释**： WDR报告生成任务的创建时间。格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始，Z指时区偏移量，当前时间固定为+0时区。例如，\"2025-07-08T10:57:59+0000\"。 **取值范围**： 不涉及。
+    * startSnapshotId  **参数解释**： 用于生成WDR报告的第一个对比快照ID。例如：\"20024\"。只针对使用报告生成模式为对比快照ID（mode=snapshot_id）的采集任务生效；如果该任务使用的是时间区间查询方式（mode=time_range），则该字段为空。 **取值范围**： 不涉及。
+    * endSnapshotId  **参数解释**： 用于生成WDR报告的第二个对比快照ID。例如：\"20025\"。只针对使用报告生成模式为对比快照ID（mode=snapshot_id）的采集任务生效；如果该任务使用的是时间区间查询方式（mode=time_range）来生成的，则该字段为空。 **取值范围**： 不涉及。
+    * fileName  **参数解释**： WDR报告临时文件名称。 **取值范围**： 不涉及。
+    * filePath  **参数解释**： WDR报告临时文件保存路径。 **取值范围**： 不涉及。
+    * obsBucket  obsBucket
     *
     * @var string[]
     */
@@ -156,7 +210,13 @@ class CollectedWdrSnapshotInfoResult implements ModelInterface, ArrayAccess
             'endTime' => 'getEndTime',
             'downloadUrl' => 'getDownloadUrl',
             'status' => 'getStatus',
-            'notes' => 'getNotes'
+            'notes' => 'getNotes',
+            'jobCreateTime' => 'getJobCreateTime',
+            'startSnapshotId' => 'getStartSnapshotId',
+            'endSnapshotId' => 'getEndSnapshotId',
+            'fileName' => 'getFileName',
+            'filePath' => 'getFilePath',
+            'obsBucket' => 'getObsBucket'
     ];
 
     /**
@@ -225,6 +285,12 @@ class CollectedWdrSnapshotInfoResult implements ModelInterface, ArrayAccess
         $this->container['downloadUrl'] = isset($data['downloadUrl']) ? $data['downloadUrl'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
+        $this->container['jobCreateTime'] = isset($data['jobCreateTime']) ? $data['jobCreateTime'] : null;
+        $this->container['startSnapshotId'] = isset($data['startSnapshotId']) ? $data['startSnapshotId'] : null;
+        $this->container['endSnapshotId'] = isset($data['endSnapshotId']) ? $data['endSnapshotId'] : null;
+        $this->container['fileName'] = isset($data['fileName']) ? $data['fileName'] : null;
+        $this->container['filePath'] = isset($data['filePath']) ? $data['filePath'] : null;
+        $this->container['obsBucket'] = isset($data['obsBucket']) ? $data['obsBucket'] : null;
     }
 
     /**
@@ -438,6 +504,150 @@ class CollectedWdrSnapshotInfoResult implements ModelInterface, ArrayAccess
     public function setNotes($notes)
     {
         $this->container['notes'] = $notes;
+        return $this;
+    }
+
+    /**
+    * Gets jobCreateTime
+    *  **参数解释**： WDR报告生成任务的创建时间。格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始，Z指时区偏移量，当前时间固定为+0时区。例如，\"2025-07-08T10:57:59+0000\"。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getJobCreateTime()
+    {
+        return $this->container['jobCreateTime'];
+    }
+
+    /**
+    * Sets jobCreateTime
+    *
+    * @param string|null $jobCreateTime **参数解释**： WDR报告生成任务的创建时间。格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始，Z指时区偏移量，当前时间固定为+0时区。例如，\"2025-07-08T10:57:59+0000\"。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setJobCreateTime($jobCreateTime)
+    {
+        $this->container['jobCreateTime'] = $jobCreateTime;
+        return $this;
+    }
+
+    /**
+    * Gets startSnapshotId
+    *  **参数解释**： 用于生成WDR报告的第一个对比快照ID。例如：\"20024\"。只针对使用报告生成模式为对比快照ID（mode=snapshot_id）的采集任务生效；如果该任务使用的是时间区间查询方式（mode=time_range），则该字段为空。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getStartSnapshotId()
+    {
+        return $this->container['startSnapshotId'];
+    }
+
+    /**
+    * Sets startSnapshotId
+    *
+    * @param string|null $startSnapshotId **参数解释**： 用于生成WDR报告的第一个对比快照ID。例如：\"20024\"。只针对使用报告生成模式为对比快照ID（mode=snapshot_id）的采集任务生效；如果该任务使用的是时间区间查询方式（mode=time_range），则该字段为空。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setStartSnapshotId($startSnapshotId)
+    {
+        $this->container['startSnapshotId'] = $startSnapshotId;
+        return $this;
+    }
+
+    /**
+    * Gets endSnapshotId
+    *  **参数解释**： 用于生成WDR报告的第二个对比快照ID。例如：\"20025\"。只针对使用报告生成模式为对比快照ID（mode=snapshot_id）的采集任务生效；如果该任务使用的是时间区间查询方式（mode=time_range）来生成的，则该字段为空。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getEndSnapshotId()
+    {
+        return $this->container['endSnapshotId'];
+    }
+
+    /**
+    * Sets endSnapshotId
+    *
+    * @param string|null $endSnapshotId **参数解释**： 用于生成WDR报告的第二个对比快照ID。例如：\"20025\"。只针对使用报告生成模式为对比快照ID（mode=snapshot_id）的采集任务生效；如果该任务使用的是时间区间查询方式（mode=time_range）来生成的，则该字段为空。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setEndSnapshotId($endSnapshotId)
+    {
+        $this->container['endSnapshotId'] = $endSnapshotId;
+        return $this;
+    }
+
+    /**
+    * Gets fileName
+    *  **参数解释**： WDR报告临时文件名称。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getFileName()
+    {
+        return $this->container['fileName'];
+    }
+
+    /**
+    * Sets fileName
+    *
+    * @param string|null $fileName **参数解释**： WDR报告临时文件名称。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setFileName($fileName)
+    {
+        $this->container['fileName'] = $fileName;
+        return $this;
+    }
+
+    /**
+    * Gets filePath
+    *  **参数解释**： WDR报告临时文件保存路径。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getFilePath()
+    {
+        return $this->container['filePath'];
+    }
+
+    /**
+    * Sets filePath
+    *
+    * @param string|null $filePath **参数解释**： WDR报告临时文件保存路径。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setFilePath($filePath)
+    {
+        $this->container['filePath'] = $filePath;
+        return $this;
+    }
+
+    /**
+    * Gets obsBucket
+    *  obsBucket
+    *
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CollectedWdrSnapshotInfoResultObsBucket|null
+    */
+    public function getObsBucket()
+    {
+        return $this->container['obsBucket'];
+    }
+
+    /**
+    * Sets obsBucket
+    *
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CollectedWdrSnapshotInfoResultObsBucket|null $obsBucket obsBucket
+    *
+    * @return $this
+    */
+    public function setObsBucket($obsBucket)
+    {
+        $this->container['obsBucket'] = $obsBucket;
         return $this;
     }
 

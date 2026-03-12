@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class WaitEventQueryInfo implements ModelInterface, ArrayAccess
+class WaitEventQueryInfoOption implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,7 +16,7 @@ class WaitEventQueryInfo implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'WaitEventQueryInfo';
+    protected static $openAPIModelName = 'WaitEventQueryInfoOption';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
@@ -40,7 +40,7 @@ class WaitEventQueryInfo implements ModelInterface, ArrayAccess
             'waiting' => 'string',
             'sessionId' => 'string',
             'blockSessionId' => 'string',
-            'blockCount' => 'string',
+            'blockCount' => 'int',
             'uniqueSqlId' => 'string',
             'queryId' => 'string',
             'state' => 'string',
@@ -406,7 +406,7 @@ class WaitEventQueryInfo implements ModelInterface, ArrayAccess
     * Gets blockCount
     *  **参数解释**: 阻塞当前会话的会话数。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getBlockCount()
     {
@@ -416,7 +416,7 @@ class WaitEventQueryInfo implements ModelInterface, ArrayAccess
     /**
     * Sets blockCount
     *
-    * @param string|null $blockCount **参数解释**: 阻塞当前会话的会话数。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * @param int|null $blockCount **参数解释**: 阻塞当前会话的会话数。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */

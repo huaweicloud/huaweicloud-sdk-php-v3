@@ -202,6 +202,9 @@ class MigrateLogicDbOpenReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['dataNodes'] === null) {
+            $invalidProperties[] = "'dataNodes' can't be null";
+        }
             if (!is_null($this->container['switchRouteBeginTime']) && (mb_strlen($this->container['switchRouteBeginTime']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'switchRouteBeginTime', the character length must be smaller than or equal to 2147483647.";
             }
@@ -220,6 +223,9 @@ class MigrateLogicDbOpenReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['newShardNumber']) && (mb_strlen($this->container['newShardNumber']) < 1)) {
                 $invalidProperties[] = "invalid value for 'newShardNumber', the character length must be bigger than or equal to 1.";
             }
+        if ($this->container['isExclusive'] === null) {
+            $invalidProperties[] = "'isExclusive' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -238,7 +244,7 @@ class MigrateLogicDbOpenReq implements ModelInterface, ArrayAccess
     * Gets dataNodes
     *  关联的后端DN信息。
     *
-    * @return \HuaweiCloud\SDK\Ddm\V1\Model\DataNode[]|null
+    * @return \HuaweiCloud\SDK\Ddm\V1\Model\DataNode[]
     */
     public function getDataNodes()
     {
@@ -248,7 +254,7 @@ class MigrateLogicDbOpenReq implements ModelInterface, ArrayAccess
     /**
     * Sets dataNodes
     *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\DataNode[]|null $dataNodes 关联的后端DN信息。
+    * @param \HuaweiCloud\SDK\Ddm\V1\Model\DataNode[] $dataNodes 关联的后端DN信息。
     *
     * @return $this
     */
@@ -334,7 +340,7 @@ class MigrateLogicDbOpenReq implements ModelInterface, ArrayAccess
     * Gets isExclusive
     *  是否独占。
     *
-    * @return bool|null
+    * @return bool
     */
     public function getIsExclusive()
     {
@@ -344,7 +350,7 @@ class MigrateLogicDbOpenReq implements ModelInterface, ArrayAccess
     /**
     * Sets isExclusive
     *
-    * @param bool|null $isExclusive 是否独占。
+    * @param bool $isExclusive 是否独占。
     *
     * @return $this
     */

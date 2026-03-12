@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ConfigurationParameter implements ModelInterface, ArrayAccess
+class ConfigurationParameterResult implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,13 +16,14 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ConfigurationParameter';
+    protected static $openAPIModelName = 'ConfigurationParameterResult';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  参数名称。
     * value  参数值。
     * restartRequired  修改该参数是否需要重启实例。
+    * readonly  **参数解释**: 该参数的value值是否为只读，无法直接修改。 **取值范围**: - true：该参数的value值只读，不允许用户直接修改。 - false：允许修改。
     * valueRange  参数取值范围。
     * type  参数类型，取值为“string”、“integer”、“boolean”、“list”或“float”之一。
     * description  参数描述。
@@ -33,6 +34,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
             'name' => 'string',
             'value' => 'string',
             'restartRequired' => 'bool',
+            'readonly' => 'bool',
             'valueRange' => 'string',
             'type' => 'string',
             'description' => 'string'
@@ -43,6 +45,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     * name  参数名称。
     * value  参数值。
     * restartRequired  修改该参数是否需要重启实例。
+    * readonly  **参数解释**: 该参数的value值是否为只读，无法直接修改。 **取值范围**: - true：该参数的value值只读，不允许用户直接修改。 - false：允许修改。
     * valueRange  参数取值范围。
     * type  参数类型，取值为“string”、“integer”、“boolean”、“list”或“float”之一。
     * description  参数描述。
@@ -53,6 +56,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
         'name' => null,
         'value' => null,
         'restartRequired' => null,
+        'readonly' => null,
         'valueRange' => null,
         'type' => null,
         'description' => null
@@ -84,6 +88,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     * name  参数名称。
     * value  参数值。
     * restartRequired  修改该参数是否需要重启实例。
+    * readonly  **参数解释**: 该参数的value值是否为只读，无法直接修改。 **取值范围**: - true：该参数的value值只读，不允许用户直接修改。 - false：允许修改。
     * valueRange  参数取值范围。
     * type  参数类型，取值为“string”、“integer”、“boolean”、“list”或“float”之一。
     * description  参数描述。
@@ -94,6 +99,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
             'name' => 'name',
             'value' => 'value',
             'restartRequired' => 'restart_required',
+            'readonly' => 'readonly',
             'valueRange' => 'value_range',
             'type' => 'type',
             'description' => 'description'
@@ -104,6 +110,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     * name  参数名称。
     * value  参数值。
     * restartRequired  修改该参数是否需要重启实例。
+    * readonly  **参数解释**: 该参数的value值是否为只读，无法直接修改。 **取值范围**: - true：该参数的value值只读，不允许用户直接修改。 - false：允许修改。
     * valueRange  参数取值范围。
     * type  参数类型，取值为“string”、“integer”、“boolean”、“list”或“float”之一。
     * description  参数描述。
@@ -114,6 +121,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'value' => 'setValue',
             'restartRequired' => 'setRestartRequired',
+            'readonly' => 'setReadonly',
             'valueRange' => 'setValueRange',
             'type' => 'setType',
             'description' => 'setDescription'
@@ -124,6 +132,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     * name  参数名称。
     * value  参数值。
     * restartRequired  修改该参数是否需要重启实例。
+    * readonly  **参数解释**: 该参数的value值是否为只读，无法直接修改。 **取值范围**: - true：该参数的value值只读，不允许用户直接修改。 - false：允许修改。
     * valueRange  参数取值范围。
     * type  参数类型，取值为“string”、“integer”、“boolean”、“list”或“float”之一。
     * description  参数描述。
@@ -134,6 +143,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'value' => 'getValue',
             'restartRequired' => 'getRestartRequired',
+            'readonly' => 'getReadonly',
             'valueRange' => 'getValueRange',
             'type' => 'getType',
             'description' => 'getDescription'
@@ -221,6 +231,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
         $this->container['restartRequired'] = isset($data['restartRequired']) ? $data['restartRequired'] : null;
+        $this->container['readonly'] = isset($data['readonly']) ? $data['readonly'] : null;
         $this->container['valueRange'] = isset($data['valueRange']) ? $data['valueRange'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -234,21 +245,6 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
-        }
-        if ($this->container['restartRequired'] === null) {
-            $invalidProperties[] = "'restartRequired' can't be null";
-        }
-        if ($this->container['valueRange'] === null) {
-            $invalidProperties[] = "'valueRange' can't be null";
-        }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
             $allowedValues = $this->getTypeAllowableValues();
                 if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -257,9 +253,6 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['description'] === null) {
-            $invalidProperties[] = "'description' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -278,7 +271,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     * Gets name
     *  参数名称。
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -288,7 +281,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 参数名称。
+    * @param string|null $name 参数名称。
     *
     * @return $this
     */
@@ -302,7 +295,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     * Gets value
     *  参数值。
     *
-    * @return string
+    * @return string|null
     */
     public function getValue()
     {
@@ -312,7 +305,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 参数值。
+    * @param string|null $value 参数值。
     *
     * @return $this
     */
@@ -326,7 +319,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     * Gets restartRequired
     *  修改该参数是否需要重启实例。
     *
-    * @return bool
+    * @return bool|null
     */
     public function getRestartRequired()
     {
@@ -336,7 +329,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     /**
     * Sets restartRequired
     *
-    * @param bool $restartRequired 修改该参数是否需要重启实例。
+    * @param bool|null $restartRequired 修改该参数是否需要重启实例。
     *
     * @return $this
     */
@@ -347,10 +340,34 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets readonly
+    *  **参数解释**: 该参数的value值是否为只读，无法直接修改。 **取值范围**: - true：该参数的value值只读，不允许用户直接修改。 - false：允许修改。
+    *
+    * @return bool|null
+    */
+    public function getReadonly()
+    {
+        return $this->container['readonly'];
+    }
+
+    /**
+    * Sets readonly
+    *
+    * @param bool|null $readonly **参数解释**: 该参数的value值是否为只读，无法直接修改。 **取值范围**: - true：该参数的value值只读，不允许用户直接修改。 - false：允许修改。
+    *
+    * @return $this
+    */
+    public function setReadonly($readonly)
+    {
+        $this->container['readonly'] = $readonly;
+        return $this;
+    }
+
+    /**
     * Gets valueRange
     *  参数取值范围。
     *
-    * @return string
+    * @return string|null
     */
     public function getValueRange()
     {
@@ -360,7 +377,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     /**
     * Sets valueRange
     *
-    * @param string $valueRange 参数取值范围。
+    * @param string|null $valueRange 参数取值范围。
     *
     * @return $this
     */
@@ -374,7 +391,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     * Gets type
     *  参数类型，取值为“string”、“integer”、“boolean”、“list”或“float”之一。
     *
-    * @return string
+    * @return string|null
     */
     public function getType()
     {
@@ -384,7 +401,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 参数类型，取值为“string”、“integer”、“boolean”、“list”或“float”之一。
+    * @param string|null $type 参数类型，取值为“string”、“integer”、“boolean”、“list”或“float”之一。
     *
     * @return $this
     */
@@ -398,7 +415,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     * Gets description
     *  参数描述。
     *
-    * @return string
+    * @return string|null
     */
     public function getDescription()
     {
@@ -408,7 +425,7 @@ class ConfigurationParameter implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 参数描述。
+    * @param string|null $description 参数描述。
     *
     * @return $this
     */

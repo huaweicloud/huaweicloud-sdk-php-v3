@@ -34,7 +34,7 @@ class RedistributionParameterResult implements ModelInterface, ArrayAccess
             'value' => 'string',
             'restartRequired' => 'bool',
             'valueRange' => 'string',
-            'type' => 'object',
+            'type' => 'string',
             'description' => 'string'
     ];
 
@@ -327,7 +327,7 @@ class RedistributionParameterResult implements ModelInterface, ArrayAccess
     * Gets type
     *  **参数解释**: 参数类型。 **取值范围**: - integer：整数。 - boolean：布尔类型。 - string：字符串类型。
     *
-    * @return object|null
+    * @return string|null
     */
     public function getType()
     {
@@ -337,7 +337,7 @@ class RedistributionParameterResult implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param object|null $type **参数解释**: 参数类型。 **取值范围**: - integer：整数。 - boolean：布尔类型。 - string：字符串类型。
+    * @param string|null $type **参数解释**: 参数类型。 **取值范围**: - integer：整数。 - boolean：布尔类型。 - string：字符串类型。
     *
     * @return $this
     */
