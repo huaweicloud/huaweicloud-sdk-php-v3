@@ -23,7 +23,7 @@ class ShowWebProtectionRuleResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释：** 规则id，唯一标识一条Web防护规则 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * cveNumber  **参数解释：** 关联的CVE编号，对应规则防护的漏洞的CVE标准编号（如CVE-2021-41773） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * riskLevel  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危  **取值范围：** - 1 - 2 - 3
+    * riskLevel  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危 **取值范围：** - 1 - 2 - 3
     * applicationType  **参数解释：** 应用类型，指定规则适用的应用场景（如Web应用、API接口） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * protectionType  **参数解释：** 防护类型，区分规则的防护类别（如SQL注入防护、XSS防护、命令注入防护） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  **参数解释：** 描述，对Web防护规则的功能、适用场景等补充说明 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -45,7 +45,7 @@ class ShowWebProtectionRuleResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释：** 规则id，唯一标识一条Web防护规则 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * cveNumber  **参数解释：** 关联的CVE编号，对应规则防护的漏洞的CVE标准编号（如CVE-2021-41773） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * riskLevel  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危  **取值范围：** - 1 - 2 - 3
+    * riskLevel  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危 **取值范围：** - 1 - 2 - 3
     * applicationType  **参数解释：** 应用类型，指定规则适用的应用场景（如Web应用、API接口） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * protectionType  **参数解释：** 防护类型，区分规则的防护类别（如SQL注入防护、XSS防护、命令注入防护） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  **参数解释：** 描述，对Web防护规则的功能、适用场景等补充说明 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -88,7 +88,7 @@ class ShowWebProtectionRuleResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  **参数解释：** 规则id，唯一标识一条Web防护规则 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * cveNumber  **参数解释：** 关联的CVE编号，对应规则防护的漏洞的CVE标准编号（如CVE-2021-41773） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * riskLevel  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危  **取值范围：** - 1 - 2 - 3
+    * riskLevel  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危 **取值范围：** - 1 - 2 - 3
     * applicationType  **参数解释：** 应用类型，指定规则适用的应用场景（如Web应用、API接口） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * protectionType  **参数解释：** 防护类型，区分规则的防护类别（如SQL注入防护、XSS防护、命令注入防护） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  **参数解释：** 描述，对Web防护规则的功能、适用场景等补充说明 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -110,7 +110,7 @@ class ShowWebProtectionRuleResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释：** 规则id，唯一标识一条Web防护规则 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * cveNumber  **参数解释：** 关联的CVE编号，对应规则防护的漏洞的CVE标准编号（如CVE-2021-41773） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * riskLevel  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危  **取值范围：** - 1 - 2 - 3
+    * riskLevel  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危 **取值范围：** - 1 - 2 - 3
     * applicationType  **参数解释：** 应用类型，指定规则适用的应用场景（如Web应用、API接口） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * protectionType  **参数解释：** 防护类型，区分规则的防护类别（如SQL注入防护、XSS防护、命令注入防护） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  **参数解释：** 描述，对Web防护规则的功能、适用场景等补充说明 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -132,7 +132,7 @@ class ShowWebProtectionRuleResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释：** 规则id，唯一标识一条Web防护规则 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * cveNumber  **参数解释：** 关联的CVE编号，对应规则防护的漏洞的CVE标准编号（如CVE-2021-41773） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * riskLevel  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危  **取值范围：** - 1 - 2 - 3
+    * riskLevel  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危 **取值范围：** - 1 - 2 - 3
     * applicationType  **参数解释：** 应用类型，指定规则适用的应用场景（如Web应用、API接口） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * protectionType  **参数解释：** 防护类型，区分规则的防护类别（如SQL注入防护、XSS防护、命令注入防护） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  **参数解释：** 描述，对Web防护规则的功能、适用场景等补充说明 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -314,7 +314,7 @@ class ShowWebProtectionRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets riskLevel
-    *  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危  **取值范围：** - 1 - 2 - 3
+    *  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危 **取值范围：** - 1 - 2 - 3
     *
     * @return int|null
     */
@@ -326,7 +326,7 @@ class ShowWebProtectionRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets riskLevel
     *
-    * @param int|null $riskLevel **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危  **取值范围：** - 1 - 2 - 3
+    * @param int|null $riskLevel **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危 **取值范围：** - 1 - 2 - 3
     *
     * @return $this
     */

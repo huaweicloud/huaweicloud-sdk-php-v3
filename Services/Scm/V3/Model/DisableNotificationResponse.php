@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Waf\V1\Model;
+namespace HuaweiCloud\SDK\Scm\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BatchUpdateIpReputationRuleRequestBodyAction implements ModelInterface, ArrayAccess
+class DisableNotificationResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,26 +17,24 @@ class BatchUpdateIpReputationRuleRequestBodyAction implements ModelInterface, Ar
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BatchUpdateIpReputationRuleRequestBody_action';
+    protected static $openAPIModelName = 'DisableNotificationResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * category  **参数解释：** 动作类型（如captcha表示验证码） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'category' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * category  **参数解释：** 动作类型（如captcha表示验证码） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'category' => null
     ];
 
     /**
@@ -61,32 +60,29 @@ class BatchUpdateIpReputationRuleRequestBodyAction implements ModelInterface, Ar
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * category  **参数解释：** 动作类型（如captcha表示验证码） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'category' => 'category'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * category  **参数解释：** 动作类型（如captcha表示验证码） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'category' => 'setCategory'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * category  **参数解释：** 动作类型（如captcha表示验证码） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'category' => 'getCategory'
     ];
 
     /**
@@ -147,7 +143,6 @@ class BatchUpdateIpReputationRuleRequestBodyAction implements ModelInterface, Ar
     */
     public function __construct(array $data = null)
     {
-        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
     }
 
     /**
@@ -170,30 +165,6 @@ class BatchUpdateIpReputationRuleRequestBodyAction implements ModelInterface, Ar
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets category
-    *  **参数解释：** 动作类型（如captcha表示验证码） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    *
-    * @return string|null
-    */
-    public function getCategory()
-    {
-        return $this->container['category'];
-    }
-
-    /**
-    * Sets category
-    *
-    * @param string|null $category **参数解释：** 动作类型（如captcha表示验证码） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    *
-    * @return $this
-    */
-    public function setCategory($category)
-    {
-        $this->container['category'] = $category;
-        return $this;
     }
 
     /**

@@ -20,10 +20,10 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * contentType  内容类型
-    * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
-    * id  ip地址组id
-    * action  增量修改ip地址组时，此为必传字段，传入“add”;删除一个或者多个ip时传入“delete”
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
+    * id  **参数解释：** ip地址组id，可从查询地址组列表(ListIpGroup)接口中获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * action  **参数解释：** 修改ip地址组时，此为必传字段 **约束限制：** 不涉及 **取值范围：** - add 添加 - delete 删除 - update 修改 **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
@@ -38,10 +38,10 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * contentType  内容类型
-    * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
-    * id  ip地址组id
-    * action  增量修改ip地址组时，此为必传字段，传入“add”;删除一个或者多个ip时传入“delete”
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
+    * id  **参数解释：** ip地址组id，可从查询地址组列表(ListIpGroup)接口中获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * action  **参数解释：** 修改ip地址组时，此为必传字段 **约束限制：** 不涉及 **取值范围：** - add 添加 - delete 删除 - update 修改 **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
@@ -77,10 +77,10 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * contentType  内容类型
-    * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
-    * id  ip地址组id
-    * action  增量修改ip地址组时，此为必传字段，传入“add”;删除一个或者多个ip时传入“delete”
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
+    * id  **参数解释：** ip地址组id，可从查询地址组列表(ListIpGroup)接口中获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * action  **参数解释：** 修改ip地址组时，此为必传字段 **约束限制：** 不涉及 **取值范围：** - add 添加 - delete 删除 - update 修改 **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
@@ -95,10 +95,10 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * contentType  内容类型
-    * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
-    * id  ip地址组id
-    * action  增量修改ip地址组时，此为必传字段，传入“add”;删除一个或者多个ip时传入“delete”
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
+    * id  **参数解释：** ip地址组id，可从查询地址组列表(ListIpGroup)接口中获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * action  **参数解释：** 修改ip地址组时，此为必传字段 **约束限制：** 不涉及 **取值范围：** - add 添加 - delete 删除 - update 修改 **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
@@ -113,10 +113,10 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * contentType  内容类型
-    * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
-    * id  ip地址组id
-    * action  增量修改ip地址组时，此为必传字段，传入“add”;删除一个或者多个ip时传入“delete”
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
+    * id  **参数解释：** ip地址组id，可从查询地址组列表(ListIpGroup)接口中获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * action  **参数解释：** 修改ip地址组时，此为必传字段 **约束限制：** 不涉及 **取值范围：** - add 添加 - delete 删除 - update 修改 **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
@@ -169,7 +169,24 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ACTION_ADD = 'add';
+    const ACTION_DELETE = 'delete';
+    const ACTION_UPDATE = 'update';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getActionAllowableValues()
+    {
+        return [
+            self::ACTION_ADD,
+            self::ACTION_DELETE,
+            self::ACTION_UPDATE,
+        ];
+    }
 
 
     /**
@@ -208,6 +225,14 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
+            $allowedValues = $this->getActionAllowableValues();
+                if (!is_null($this->container['action']) && !in_array($this->container['action'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'action', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -224,7 +249,7 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets contentType
-    *  内容类型
+    *  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     *
     * @return string
     */
@@ -236,7 +261,7 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets contentType
     *
-    * @param string $contentType 内容类型
+    * @param string $contentType **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     *
     * @return $this
     */
@@ -248,7 +273,7 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
+    *  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
     *
     * @return string|null
     */
@@ -260,7 +285,7 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符  **默认取值：** 0
+    * @param string|null $enterpriseProjectId **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
     *
     * @return $this
     */
@@ -272,7 +297,7 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ip地址组id
+    *  **参数解释：** ip地址组id，可从查询地址组列表(ListIpGroup)接口中获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -284,7 +309,7 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id ip地址组id
+    * @param string $id **参数解释：** ip地址组id，可从查询地址组列表(ListIpGroup)接口中获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -296,7 +321,7 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  增量修改ip地址组时，此为必传字段，传入“add”;删除一个或者多个ip时传入“delete”
+    *  **参数解释：** 修改ip地址组时，此为必传字段 **约束限制：** 不涉及 **取值范围：** - add 添加 - delete 删除 - update 修改 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -308,7 +333,7 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 增量修改ip地址组时，此为必传字段，传入“add”;删除一个或者多个ip时传入“delete”
+    * @param string|null $action **参数解释：** 修改ip地址组时，此为必传字段 **约束限制：** 不涉及 **取值范围：** - add 添加 - delete 删除 - update 修改 **默认取值：** 不涉及
     *
     * @return $this
     */

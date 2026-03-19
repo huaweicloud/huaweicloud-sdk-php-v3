@@ -20,11 +20,11 @@ class ListWhiteblackipRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * contentType  内容类型
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * policyId  防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id
-    * page  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
-    * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
+    * policyId  **参数解释：** 防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * page  **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
+    * pagesize  **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
     * name  黑白名单规则名称
     *
     * @var string[]
@@ -40,11 +40,11 @@ class ListWhiteblackipRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * contentType  内容类型
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * policyId  防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id
-    * page  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
-    * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
+    * policyId  **参数解释：** 防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * page  **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
+    * pagesize  **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
     * name  黑白名单规则名称
     *
     * @var string[]
@@ -81,11 +81,11 @@ class ListWhiteblackipRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * contentType  内容类型
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * policyId  防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id
-    * page  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
-    * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
+    * policyId  **参数解释：** 防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * page  **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
+    * pagesize  **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
     * name  黑白名单规则名称
     *
     * @var string[]
@@ -101,11 +101,11 @@ class ListWhiteblackipRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * contentType  内容类型
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * policyId  防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id
-    * page  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
-    * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
+    * policyId  **参数解释：** 防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * page  **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
+    * pagesize  **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
     * name  黑白名单规则名称
     *
     * @var string[]
@@ -121,11 +121,11 @@ class ListWhiteblackipRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * contentType  内容类型
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * policyId  防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id
-    * page  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
-    * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
+    * policyId  **参数解释：** 防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * page  **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
+    * pagesize  **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
     * name  黑白名单规则名称
     *
     * @var string[]
@@ -219,6 +219,9 @@ class ListWhiteblackipRuleRequest implements ModelInterface, ArrayAccess
         if ($this->container['policyId'] === null) {
             $invalidProperties[] = "'policyId' can't be null";
         }
+            if (!is_null($this->container['page']) && ($this->container['page'] < 1)) {
+                $invalidProperties[] = "invalid value for 'page', must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -235,7 +238,7 @@ class ListWhiteblackipRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets contentType
-    *  内容类型
+    *  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     *
     * @return string
     */
@@ -247,7 +250,7 @@ class ListWhiteblackipRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets contentType
     *
-    * @param string $contentType 内容类型
+    * @param string $contentType **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     *
     * @return $this
     */
@@ -283,7 +286,7 @@ class ListWhiteblackipRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyId
-    *  防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id
+    *  **参数解释：** 防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -295,7 +298,7 @@ class ListWhiteblackipRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets policyId
     *
-    * @param string $policyId 防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id
+    * @param string $policyId **参数解释：** 防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -307,7 +310,7 @@ class ListWhiteblackipRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets page
-    *  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
+    *  **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
     *
     * @return int|null
     */
@@ -319,7 +322,7 @@ class ListWhiteblackipRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets page
     *
-    * @param int|null $page 分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
+    * @param int|null $page **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
     *
     * @return $this
     */
@@ -331,7 +334,7 @@ class ListWhiteblackipRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets pagesize
-    *  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
+    *  **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
     *
     * @return int|null
     */
@@ -343,7 +346,7 @@ class ListWhiteblackipRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets pagesize
     *
-    * @param int|null $pagesize 分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
+    * @param int|null $pagesize **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
     *
     * @return $this
     */

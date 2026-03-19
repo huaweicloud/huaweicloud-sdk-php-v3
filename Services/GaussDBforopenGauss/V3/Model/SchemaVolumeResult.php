@@ -23,7 +23,7 @@ class SchemaVolumeResult implements ModelInterface, ArrayAccess
     * schemaSize  **参数解释**: schema的大小。 **取值范围**: 不涉及。
     * tableCount  **参数解释**: schema拥有的表数量。 **取值范围**: 不涉及。
     * userName  **参数解释**: schema所属用户名称。 **取值范围**: 不涉及。
-    * nspName  **参数解释**: schema名称空间的名称。 **取值范围**: 不涉及。
+    * schemaName  **参数解释**: schema名称空间的名称。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class SchemaVolumeResult implements ModelInterface, ArrayAccess
             'schemaSize' => 'string',
             'tableCount' => 'string',
             'userName' => 'string',
-            'nspName' => 'string'
+            'schemaName' => 'string'
     ];
 
     /**
@@ -39,7 +39,7 @@ class SchemaVolumeResult implements ModelInterface, ArrayAccess
     * schemaSize  **参数解释**: schema的大小。 **取值范围**: 不涉及。
     * tableCount  **参数解释**: schema拥有的表数量。 **取值范围**: 不涉及。
     * userName  **参数解释**: schema所属用户名称。 **取值范围**: 不涉及。
-    * nspName  **参数解释**: schema名称空间的名称。 **取值范围**: 不涉及。
+    * schemaName  **参数解释**: schema名称空间的名称。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -47,7 +47,7 @@ class SchemaVolumeResult implements ModelInterface, ArrayAccess
         'schemaSize' => null,
         'tableCount' => null,
         'userName' => null,
-        'nspName' => null
+        'schemaName' => null
     ];
 
     /**
@@ -76,7 +76,7 @@ class SchemaVolumeResult implements ModelInterface, ArrayAccess
     * schemaSize  **参数解释**: schema的大小。 **取值范围**: 不涉及。
     * tableCount  **参数解释**: schema拥有的表数量。 **取值范围**: 不涉及。
     * userName  **参数解释**: schema所属用户名称。 **取值范围**: 不涉及。
-    * nspName  **参数解释**: schema名称空间的名称。 **取值范围**: 不涉及。
+    * schemaName  **参数解释**: schema名称空间的名称。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -84,7 +84,7 @@ class SchemaVolumeResult implements ModelInterface, ArrayAccess
             'schemaSize' => 'schema_size',
             'tableCount' => 'table_count',
             'userName' => 'user_name',
-            'nspName' => 'nsp_name'
+            'schemaName' => 'schema_name'
     ];
 
     /**
@@ -92,7 +92,7 @@ class SchemaVolumeResult implements ModelInterface, ArrayAccess
     * schemaSize  **参数解释**: schema的大小。 **取值范围**: 不涉及。
     * tableCount  **参数解释**: schema拥有的表数量。 **取值范围**: 不涉及。
     * userName  **参数解释**: schema所属用户名称。 **取值范围**: 不涉及。
-    * nspName  **参数解释**: schema名称空间的名称。 **取值范围**: 不涉及。
+    * schemaName  **参数解释**: schema名称空间的名称。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class SchemaVolumeResult implements ModelInterface, ArrayAccess
             'schemaSize' => 'setSchemaSize',
             'tableCount' => 'setTableCount',
             'userName' => 'setUserName',
-            'nspName' => 'setNspName'
+            'schemaName' => 'setSchemaName'
     ];
 
     /**
@@ -108,7 +108,7 @@ class SchemaVolumeResult implements ModelInterface, ArrayAccess
     * schemaSize  **参数解释**: schema的大小。 **取值范围**: 不涉及。
     * tableCount  **参数解释**: schema拥有的表数量。 **取值范围**: 不涉及。
     * userName  **参数解释**: schema所属用户名称。 **取值范围**: 不涉及。
-    * nspName  **参数解释**: schema名称空间的名称。 **取值范围**: 不涉及。
+    * schemaName  **参数解释**: schema名称空间的名称。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -116,7 +116,7 @@ class SchemaVolumeResult implements ModelInterface, ArrayAccess
             'schemaSize' => 'getSchemaSize',
             'tableCount' => 'getTableCount',
             'userName' => 'getUserName',
-            'nspName' => 'getNspName'
+            'schemaName' => 'getSchemaName'
     ];
 
     /**
@@ -180,7 +180,7 @@ class SchemaVolumeResult implements ModelInterface, ArrayAccess
         $this->container['schemaSize'] = isset($data['schemaSize']) ? $data['schemaSize'] : null;
         $this->container['tableCount'] = isset($data['tableCount']) ? $data['tableCount'] : null;
         $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
-        $this->container['nspName'] = isset($data['nspName']) ? $data['nspName'] : null;
+        $this->container['schemaName'] = isset($data['schemaName']) ? $data['schemaName'] : null;
     }
 
     /**
@@ -278,26 +278,26 @@ class SchemaVolumeResult implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets nspName
+    * Gets schemaName
     *  **参数解释**: schema名称空间的名称。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
-    public function getNspName()
+    public function getSchemaName()
     {
-        return $this->container['nspName'];
+        return $this->container['schemaName'];
     }
 
     /**
-    * Sets nspName
+    * Sets schemaName
     *
-    * @param string|null $nspName **参数解释**: schema名称空间的名称。 **取值范围**: 不涉及。
+    * @param string|null $schemaName **参数解释**: schema名称空间的名称。 **取值范围**: 不涉及。
     *
     * @return $this
     */
-    public function setNspName($nspName)
+    public function setSchemaName($schemaName)
     {
-        $this->container['nspName'] = $nspName;
+        $this->container['schemaName'] = $schemaName;
         return $this;
     }
 

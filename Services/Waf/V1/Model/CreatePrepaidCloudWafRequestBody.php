@@ -23,7 +23,7 @@ class CreatePrepaidCloudWafRequestBody implements ModelInterface, ArrayAccess
     * projectId  项目id
     * isAutoPay  是否自动支付    - false: 否（需要客户手动去支付）   - true：是（自动支付）
     * isAutoRenew  是否自动续订   -  true：自动续订   - false：不自动续订
-    * regionId  region Id
+    * regionId  **参数解释：** 局点ID **约束限制：** 华为云支持的局点ID **取值范围：** 不涉及 **默认取值：** 不涉及
     * wafProductInfo  wafProductInfo
     * domainExpackProductInfo  domainExpackProductInfo
     * bandwidthExpackProductInfo  bandwidthExpackProductInfo
@@ -47,7 +47,7 @@ class CreatePrepaidCloudWafRequestBody implements ModelInterface, ArrayAccess
     * projectId  项目id
     * isAutoPay  是否自动支付    - false: 否（需要客户手动去支付）   - true：是（自动支付）
     * isAutoRenew  是否自动续订   -  true：自动续订   - false：不自动续订
-    * regionId  region Id
+    * regionId  **参数解释：** 局点ID **约束限制：** 华为云支持的局点ID **取值范围：** 不涉及 **默认取值：** 不涉及
     * wafProductInfo  wafProductInfo
     * domainExpackProductInfo  domainExpackProductInfo
     * bandwidthExpackProductInfo  bandwidthExpackProductInfo
@@ -92,7 +92,7 @@ class CreatePrepaidCloudWafRequestBody implements ModelInterface, ArrayAccess
     * projectId  项目id
     * isAutoPay  是否自动支付    - false: 否（需要客户手动去支付）   - true：是（自动支付）
     * isAutoRenew  是否自动续订   -  true：自动续订   - false：不自动续订
-    * regionId  region Id
+    * regionId  **参数解释：** 局点ID **约束限制：** 华为云支持的局点ID **取值范围：** 不涉及 **默认取值：** 不涉及
     * wafProductInfo  wafProductInfo
     * domainExpackProductInfo  domainExpackProductInfo
     * bandwidthExpackProductInfo  bandwidthExpackProductInfo
@@ -116,7 +116,7 @@ class CreatePrepaidCloudWafRequestBody implements ModelInterface, ArrayAccess
     * projectId  项目id
     * isAutoPay  是否自动支付    - false: 否（需要客户手动去支付）   - true：是（自动支付）
     * isAutoRenew  是否自动续订   -  true：自动续订   - false：不自动续订
-    * regionId  region Id
+    * regionId  **参数解释：** 局点ID **约束限制：** 华为云支持的局点ID **取值范围：** 不涉及 **默认取值：** 不涉及
     * wafProductInfo  wafProductInfo
     * domainExpackProductInfo  domainExpackProductInfo
     * bandwidthExpackProductInfo  bandwidthExpackProductInfo
@@ -140,7 +140,7 @@ class CreatePrepaidCloudWafRequestBody implements ModelInterface, ArrayAccess
     * projectId  项目id
     * isAutoPay  是否自动支付    - false: 否（需要客户手动去支付）   - true：是（自动支付）
     * isAutoRenew  是否自动续订   -  true：自动续订   - false：不自动续订
-    * regionId  region Id
+    * regionId  **参数解释：** 局点ID **约束限制：** 华为云支持的局点ID **取值范围：** 不涉及 **默认取值：** 不涉及
     * wafProductInfo  wafProductInfo
     * domainExpackProductInfo  domainExpackProductInfo
     * bandwidthExpackProductInfo  bandwidthExpackProductInfo
@@ -335,7 +335,7 @@ class CreatePrepaidCloudWafRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionId
-    *  region Id
+    *  **参数解释：** 局点ID **约束限制：** 华为云支持的局点ID **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -347,7 +347,7 @@ class CreatePrepaidCloudWafRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets regionId
     *
-    * @param string $regionId region Id
+    * @param string $regionId **参数解释：** 局点ID **约束限制：** 华为云支持的局点ID **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

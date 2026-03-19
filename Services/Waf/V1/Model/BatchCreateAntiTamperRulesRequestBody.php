@@ -21,7 +21,7 @@ class BatchCreateAntiTamperRulesRequestBody implements ModelInterface, ArrayAcce
     /**
     * Array of property to type mappings. Used for (de)serialization
     * hostname  防护网站，查询云模式防护域名列表（ListHost）接口获取防护域名，响应体中的的hostname字段
-    * url  防篡改规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
+    * url  防篡改规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*,以\"\\*\"号结尾代表路径前缀
     * description  规则描述
     * policyIds  添加规则的策略id列表。策略id从\"查询防护策略列表\"(ListPolicy)接口获取，多个策略之间用“,”隔开
     *
@@ -37,7 +37,7 @@ class BatchCreateAntiTamperRulesRequestBody implements ModelInterface, ArrayAcce
     /**
     * Array of property to format mappings. Used for (de)serialization
     * hostname  防护网站，查询云模式防护域名列表（ListHost）接口获取防护域名，响应体中的的hostname字段
-    * url  防篡改规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
+    * url  防篡改规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*,以\"\\*\"号结尾代表路径前缀
     * description  规则描述
     * policyIds  添加规则的策略id列表。策略id从\"查询防护策略列表\"(ListPolicy)接口获取，多个策略之间用“,”隔开
     *
@@ -74,7 +74,7 @@ class BatchCreateAntiTamperRulesRequestBody implements ModelInterface, ArrayAcce
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * hostname  防护网站，查询云模式防护域名列表（ListHost）接口获取防护域名，响应体中的的hostname字段
-    * url  防篡改规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
+    * url  防篡改规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*,以\"\\*\"号结尾代表路径前缀
     * description  规则描述
     * policyIds  添加规则的策略id列表。策略id从\"查询防护策略列表\"(ListPolicy)接口获取，多个策略之间用“,”隔开
     *
@@ -90,7 +90,7 @@ class BatchCreateAntiTamperRulesRequestBody implements ModelInterface, ArrayAcce
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * hostname  防护网站，查询云模式防护域名列表（ListHost）接口获取防护域名，响应体中的的hostname字段
-    * url  防篡改规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
+    * url  防篡改规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*,以\"\\*\"号结尾代表路径前缀
     * description  规则描述
     * policyIds  添加规则的策略id列表。策略id从\"查询防护策略列表\"(ListPolicy)接口获取，多个策略之间用“,”隔开
     *
@@ -106,7 +106,7 @@ class BatchCreateAntiTamperRulesRequestBody implements ModelInterface, ArrayAcce
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * hostname  防护网站，查询云模式防护域名列表（ListHost）接口获取防护域名，响应体中的的hostname字段
-    * url  防篡改规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
+    * url  防篡改规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*,以\"\\*\"号结尾代表路径前缀
     * description  规则描述
     * policyIds  添加规则的策略id列表。策略id从\"查询防护策略列表\"(ListPolicy)接口获取，多个策略之间用“,”隔开
     *
@@ -240,7 +240,7 @@ class BatchCreateAntiTamperRulesRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Gets url
-    *  防篡改规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
+    *  防篡改规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*,以\"\\*\"号结尾代表路径前缀
     *
     * @return string
     */
@@ -252,7 +252,7 @@ class BatchCreateAntiTamperRulesRequestBody implements ModelInterface, ArrayAcce
     /**
     * Sets url
     *
-    * @param string $url 防篡改规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
+    * @param string $url 防篡改规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*,以\"\\*\"号结尾代表路径前缀
     *
     * @return $this
     */

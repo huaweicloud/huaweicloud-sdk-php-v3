@@ -25,8 +25,11 @@ class AppWhitelistHostResponseInfo implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
-    * assetValue  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
+    * osName  **参数解释**: 操作系统名称 **取值范围**: 字符长度0-128位
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
+    * hostStatus  **参数解释**： 主机状态 **取值范围**: - ACTIVE：正在运行 - SHUTOFF：关机 - BUILDING：创建中 - ERROR：故障
+    * agentStatus  **参数解释**： Agent状态 **取值范围**: - installed：已安装 - not_installed：未安 - online：在线 - offline：离线 - install_failed：安装失败 - installing：安装中 - not_online：不在线的（除了在线以外的所有状态，仅作为查询条件）
     *
     * @var string[]
     */
@@ -36,8 +39,11 @@ class AppWhitelistHostResponseInfo implements ModelInterface, ArrayAccess
             'hostName' => 'string',
             'publicIp' => 'string',
             'privateIp' => 'string',
+            'osType' => 'string',
+            'osName' => 'string',
             'assetValue' => 'string',
-            'osType' => 'string'
+            'hostStatus' => 'string',
+            'agentStatus' => 'string'
     ];
 
     /**
@@ -47,8 +53,11 @@ class AppWhitelistHostResponseInfo implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
-    * assetValue  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
+    * osName  **参数解释**: 操作系统名称 **取值范围**: 字符长度0-128位
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
+    * hostStatus  **参数解释**： 主机状态 **取值范围**: - ACTIVE：正在运行 - SHUTOFF：关机 - BUILDING：创建中 - ERROR：故障
+    * agentStatus  **参数解释**： Agent状态 **取值范围**: - installed：已安装 - not_installed：未安 - online：在线 - offline：离线 - install_failed：安装失败 - installing：安装中 - not_online：不在线的（除了在线以外的所有状态，仅作为查询条件）
     *
     * @var string[]
     */
@@ -58,8 +67,11 @@ class AppWhitelistHostResponseInfo implements ModelInterface, ArrayAccess
         'hostName' => null,
         'publicIp' => null,
         'privateIp' => null,
+        'osType' => null,
+        'osName' => null,
         'assetValue' => null,
-        'osType' => null
+        'hostStatus' => null,
+        'agentStatus' => null
     ];
 
     /**
@@ -90,8 +102,11 @@ class AppWhitelistHostResponseInfo implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
-    * assetValue  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
+    * osName  **参数解释**: 操作系统名称 **取值范围**: 字符长度0-128位
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
+    * hostStatus  **参数解释**： 主机状态 **取值范围**: - ACTIVE：正在运行 - SHUTOFF：关机 - BUILDING：创建中 - ERROR：故障
+    * agentStatus  **参数解释**： Agent状态 **取值范围**: - installed：已安装 - not_installed：未安 - online：在线 - offline：离线 - install_failed：安装失败 - installing：安装中 - not_online：不在线的（除了在线以外的所有状态，仅作为查询条件）
     *
     * @var string[]
     */
@@ -101,8 +116,11 @@ class AppWhitelistHostResponseInfo implements ModelInterface, ArrayAccess
             'hostName' => 'host_name',
             'publicIp' => 'public_ip',
             'privateIp' => 'private_ip',
+            'osType' => 'os_type',
+            'osName' => 'os_name',
             'assetValue' => 'asset_value',
-            'osType' => 'os_type'
+            'hostStatus' => 'host_status',
+            'agentStatus' => 'agent_status'
     ];
 
     /**
@@ -112,8 +130,11 @@ class AppWhitelistHostResponseInfo implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
-    * assetValue  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
+    * osName  **参数解释**: 操作系统名称 **取值范围**: 字符长度0-128位
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
+    * hostStatus  **参数解释**： 主机状态 **取值范围**: - ACTIVE：正在运行 - SHUTOFF：关机 - BUILDING：创建中 - ERROR：故障
+    * agentStatus  **参数解释**： Agent状态 **取值范围**: - installed：已安装 - not_installed：未安 - online：在线 - offline：离线 - install_failed：安装失败 - installing：安装中 - not_online：不在线的（除了在线以外的所有状态，仅作为查询条件）
     *
     * @var string[]
     */
@@ -123,8 +144,11 @@ class AppWhitelistHostResponseInfo implements ModelInterface, ArrayAccess
             'hostName' => 'setHostName',
             'publicIp' => 'setPublicIp',
             'privateIp' => 'setPrivateIp',
+            'osType' => 'setOsType',
+            'osName' => 'setOsName',
             'assetValue' => 'setAssetValue',
-            'osType' => 'setOsType'
+            'hostStatus' => 'setHostStatus',
+            'agentStatus' => 'setAgentStatus'
     ];
 
     /**
@@ -134,8 +158,11 @@ class AppWhitelistHostResponseInfo implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * publicIp  **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
     * privateIp  **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
-    * assetValue  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * osType  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
+    * osName  **参数解释**: 操作系统名称 **取值范围**: 字符长度0-128位
+    * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
+    * hostStatus  **参数解释**： 主机状态 **取值范围**: - ACTIVE：正在运行 - SHUTOFF：关机 - BUILDING：创建中 - ERROR：故障
+    * agentStatus  **参数解释**： Agent状态 **取值范围**: - installed：已安装 - not_installed：未安 - online：在线 - offline：离线 - install_failed：安装失败 - installing：安装中 - not_online：不在线的（除了在线以外的所有状态，仅作为查询条件）
     *
     * @var string[]
     */
@@ -145,8 +172,11 @@ class AppWhitelistHostResponseInfo implements ModelInterface, ArrayAccess
             'hostName' => 'getHostName',
             'publicIp' => 'getPublicIp',
             'privateIp' => 'getPrivateIp',
+            'osType' => 'getOsType',
+            'osName' => 'getOsName',
             'assetValue' => 'getAssetValue',
-            'osType' => 'getOsType'
+            'hostStatus' => 'getHostStatus',
+            'agentStatus' => 'getAgentStatus'
     ];
 
     /**
@@ -212,8 +242,11 @@ class AppWhitelistHostResponseInfo implements ModelInterface, ArrayAccess
         $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
         $this->container['publicIp'] = isset($data['publicIp']) ? $data['publicIp'] : null;
         $this->container['privateIp'] = isset($data['privateIp']) ? $data['privateIp'] : null;
-        $this->container['assetValue'] = isset($data['assetValue']) ? $data['assetValue'] : null;
         $this->container['osType'] = isset($data['osType']) ? $data['osType'] : null;
+        $this->container['osName'] = isset($data['osName']) ? $data['osName'] : null;
+        $this->container['assetValue'] = isset($data['assetValue']) ? $data['assetValue'] : null;
+        $this->container['hostStatus'] = isset($data['hostStatus']) ? $data['hostStatus'] : null;
+        $this->container['agentStatus'] = isset($data['agentStatus']) ? $data['agentStatus'] : null;
     }
 
     /**
@@ -263,14 +296,38 @@ class AppWhitelistHostResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['privateIp']) && !preg_match("/^.*$/", $this->container['privateIp'])) {
                 $invalidProperties[] = "invalid value for 'privateIp', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['assetValue']) && !preg_match("/^.*$/", $this->container['assetValue'])) {
-                $invalidProperties[] = "invalid value for 'assetValue', must be conform to the pattern /^.*$/.";
-            }
             if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) > 64)) {
                 $invalidProperties[] = "invalid value for 'osType', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'osType', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['osName']) && (mb_strlen($this->container['osName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'osName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['osName']) && (mb_strlen($this->container['osName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'osName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) > 128)) {
+                $invalidProperties[] = "invalid value for 'assetValue', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) < 0)) {
+                $invalidProperties[] = "invalid value for 'assetValue', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['assetValue']) && !preg_match("/^important|common|test$/", $this->container['assetValue'])) {
+                $invalidProperties[] = "invalid value for 'assetValue', must be conform to the pattern /^important|common|test$/.";
+            }
+            if (!is_null($this->container['hostStatus']) && (mb_strlen($this->container['hostStatus']) > 64)) {
+                $invalidProperties[] = "invalid value for 'hostStatus', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['hostStatus']) && (mb_strlen($this->container['hostStatus']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostStatus', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['agentStatus']) && (mb_strlen($this->container['agentStatus']) > 64)) {
+                $invalidProperties[] = "invalid value for 'agentStatus', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['agentStatus']) && (mb_strlen($this->container['agentStatus']) < 1)) {
+                $invalidProperties[] = "invalid value for 'agentStatus', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -407,30 +464,6 @@ class AppWhitelistHostResponseInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets assetValue
-    *  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    *
-    * @return string|null
-    */
-    public function getAssetValue()
-    {
-        return $this->container['assetValue'];
-    }
-
-    /**
-    * Sets assetValue
-    *
-    * @param string|null $assetValue **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    *
-    * @return $this
-    */
-    public function setAssetValue($assetValue)
-    {
-        $this->container['assetValue'] = $assetValue;
-        return $this;
-    }
-
-    /**
     * Gets osType
     *  **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
     *
@@ -451,6 +484,102 @@ class AppWhitelistHostResponseInfo implements ModelInterface, ArrayAccess
     public function setOsType($osType)
     {
         $this->container['osType'] = $osType;
+        return $this;
+    }
+
+    /**
+    * Gets osName
+    *  **参数解释**: 操作系统名称 **取值范围**: 字符长度0-128位
+    *
+    * @return string|null
+    */
+    public function getOsName()
+    {
+        return $this->container['osName'];
+    }
+
+    /**
+    * Sets osName
+    *
+    * @param string|null $osName **参数解释**: 操作系统名称 **取值范围**: 字符长度0-128位
+    *
+    * @return $this
+    */
+    public function setOsName($osName)
+    {
+        $this->container['osName'] = $osName;
+        return $this;
+    }
+
+    /**
+    * Gets assetValue
+    *  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
+    *
+    * @return string|null
+    */
+    public function getAssetValue()
+    {
+        return $this->container['assetValue'];
+    }
+
+    /**
+    * Sets assetValue
+    *
+    * @param string|null $assetValue **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
+    *
+    * @return $this
+    */
+    public function setAssetValue($assetValue)
+    {
+        $this->container['assetValue'] = $assetValue;
+        return $this;
+    }
+
+    /**
+    * Gets hostStatus
+    *  **参数解释**： 主机状态 **取值范围**: - ACTIVE：正在运行 - SHUTOFF：关机 - BUILDING：创建中 - ERROR：故障
+    *
+    * @return string|null
+    */
+    public function getHostStatus()
+    {
+        return $this->container['hostStatus'];
+    }
+
+    /**
+    * Sets hostStatus
+    *
+    * @param string|null $hostStatus **参数解释**： 主机状态 **取值范围**: - ACTIVE：正在运行 - SHUTOFF：关机 - BUILDING：创建中 - ERROR：故障
+    *
+    * @return $this
+    */
+    public function setHostStatus($hostStatus)
+    {
+        $this->container['hostStatus'] = $hostStatus;
+        return $this;
+    }
+
+    /**
+    * Gets agentStatus
+    *  **参数解释**： Agent状态 **取值范围**: - installed：已安装 - not_installed：未安 - online：在线 - offline：离线 - install_failed：安装失败 - installing：安装中 - not_online：不在线的（除了在线以外的所有状态，仅作为查询条件）
+    *
+    * @return string|null
+    */
+    public function getAgentStatus()
+    {
+        return $this->container['agentStatus'];
+    }
+
+    /**
+    * Sets agentStatus
+    *
+    * @param string|null $agentStatus **参数解释**： Agent状态 **取值范围**: - installed：已安装 - not_installed：未安 - online：在线 - offline：离线 - install_failed：安装失败 - installing：安装中 - not_online：不在线的（除了在线以外的所有状态，仅作为查询条件）
+    *
+    * @return $this
+    */
+    public function setAgentStatus($agentStatus)
+    {
+        $this->container['agentStatus'] = $agentStatus;
         return $this;
     }
 

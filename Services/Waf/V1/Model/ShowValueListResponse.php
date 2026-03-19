@@ -23,7 +23,7 @@ class ShowValueListResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  引用表id
     * name  引用表名称
-    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
+    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body **默认取值：** 不涉及
     * description  引用表描述
     * values  引用表的值
     * producer  引用表来源：  - 1:表示来源于用户手动创建  - 2:表示来源于智能访问控制自动创建
@@ -45,7 +45,7 @@ class ShowValueListResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  引用表id
     * name  引用表名称
-    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
+    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body **默认取值：** 不涉及
     * description  引用表描述
     * values  引用表的值
     * producer  引用表来源：  - 1:表示来源于用户手动创建  - 2:表示来源于智能访问控制自动创建
@@ -88,7 +88,7 @@ class ShowValueListResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  引用表id
     * name  引用表名称
-    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
+    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body **默认取值：** 不涉及
     * description  引用表描述
     * values  引用表的值
     * producer  引用表来源：  - 1:表示来源于用户手动创建  - 2:表示来源于智能访问控制自动创建
@@ -110,7 +110,7 @@ class ShowValueListResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  引用表id
     * name  引用表名称
-    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
+    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body **默认取值：** 不涉及
     * description  引用表描述
     * values  引用表的值
     * producer  引用表来源：  - 1:表示来源于用户手动创建  - 2:表示来源于智能访问控制自动创建
@@ -132,7 +132,7 @@ class ShowValueListResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  引用表id
     * name  引用表名称
-    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
+    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body **默认取值：** 不涉及
     * description  引用表描述
     * values  引用表的值
     * producer  引用表来源：  - 1:表示来源于用户手动创建  - 2:表示来源于智能访问控制自动创建
@@ -328,7 +328,7 @@ class ShowValueListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
+    *  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -340,7 +340,7 @@ class ShowValueListResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
+    * @param string|null $type **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body **默认取值：** 不涉及
     *
     * @return $this
     */

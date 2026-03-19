@@ -21,24 +21,28 @@ class ConfirmPolicyAntileakageMapRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * lang  **参数解释：** 语言的类型 - cn代表中文 - en代表英文  **约束限制：** 不涉及 **取值范围：** - cn - en  **默认取值：** - cn
+    * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
+    * lang  **参数解释：**  语言类型  **约束限制：**  不涉及  **取值范围：**  - cn 中文  - en 英文  **默认取值：**  cn
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'contentType' => 'string',
+            'enterpriseProjectId' => 'string',
             'lang' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * lang  **参数解释：** 语言的类型 - cn代表中文 - en代表英文  **约束限制：** 不涉及 **取值范围：** - cn - en  **默认取值：** - cn
+    * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
+    * lang  **参数解释：**  语言类型  **约束限制：**  不涉及  **取值范围：**  - cn 中文  - en 英文  **默认取值：**  cn
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'contentType' => null,
+        'enterpriseProjectId' => null,
         'lang' => null
     ];
 
@@ -66,36 +70,42 @@ class ConfirmPolicyAntileakageMapRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * lang  **参数解释：** 语言的类型 - cn代表中文 - en代表英文  **约束限制：** 不涉及 **取值范围：** - cn - en  **默认取值：** - cn
+    * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
+    * lang  **参数解释：**  语言类型  **约束限制：**  不涉及  **取值范围：**  - cn 中文  - en 英文  **默认取值：**  cn
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'contentType' => 'Content-Type',
+            'enterpriseProjectId' => 'enterprise_project_id',
             'lang' => 'lang'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * lang  **参数解释：** 语言的类型 - cn代表中文 - en代表英文  **约束限制：** 不涉及 **取值范围：** - cn - en  **默认取值：** - cn
+    * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
+    * lang  **参数解释：**  语言类型  **约束限制：**  不涉及  **取值范围：**  - cn 中文  - en 英文  **默认取值：**  cn
     *
     * @var string[]
     */
     protected static $setters = [
             'contentType' => 'setContentType',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
             'lang' => 'setLang'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * lang  **参数解释：** 语言的类型 - cn代表中文 - en代表英文  **约束限制：** 不涉及 **取值范围：** - cn - en  **默认取值：** - cn
+    * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
+    * lang  **参数解释：**  语言类型  **约束限制：**  不涉及  **取值范围：**  - cn 中文  - en 英文  **默认取值：**  cn
     *
     * @var string[]
     */
     protected static $getters = [
             'contentType' => 'getContentType',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
             'lang' => 'getLang'
     ];
 
@@ -158,6 +168,7 @@ class ConfirmPolicyAntileakageMapRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['lang'] = isset($data['lang']) ? $data['lang'] : null;
     }
 
@@ -214,8 +225,32 @@ class ConfirmPolicyAntileakageMapRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets enterpriseProjectId
+    *  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
     * Gets lang
-    *  **参数解释：** 语言的类型 - cn代表中文 - en代表英文  **约束限制：** 不涉及 **取值范围：** - cn - en  **默认取值：** - cn
+    *  **参数解释：**  语言类型  **约束限制：**  不涉及  **取值范围：**  - cn 中文  - en 英文  **默认取值：**  cn
     *
     * @return string
     */
@@ -227,7 +262,7 @@ class ConfirmPolicyAntileakageMapRequest implements ModelInterface, ArrayAccess
     /**
     * Sets lang
     *
-    * @param string $lang **参数解释：** 语言的类型 - cn代表中文 - en代表英文  **约束限制：** 不涉及 **取值范围：** - cn - en  **默认取值：** - cn
+    * @param string $lang **参数解释：**  语言类型  **约束限制：**  不涉及  **取值范围：**  - cn 中文  - en 英文  **默认取值：**  cn
     *
     * @return $this
     */

@@ -42,7 +42,7 @@ class ConfirmIpReputationRuleResponse implements ModelInterface, ArrayAccess
             'status' => 'int',
             'type' => 'string',
             'tags' => 'string[]',
-            'action' => '\HuaweiCloud\SDK\Waf\V1\Model\CreateIpReputationRuleResponseBodyAction'
+            'action' => '\HuaweiCloud\SDK\Waf\V1\Model\UpdateIdcIpRuleResponseBodyAction'
     ];
 
     /**
@@ -457,7 +457,7 @@ class ConfirmIpReputationRuleResponse implements ModelInterface, ArrayAccess
     * Gets action
     *  action
     *
-    * @return \HuaweiCloud\SDK\Waf\V1\Model\CreateIpReputationRuleResponseBodyAction|null
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\UpdateIdcIpRuleResponseBodyAction|null
     */
     public function getAction()
     {
@@ -467,7 +467,7 @@ class ConfirmIpReputationRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\CreateIpReputationRuleResponseBodyAction|null $action action
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\UpdateIdcIpRuleResponseBodyAction|null $action action
     *
     * @return $this
     */

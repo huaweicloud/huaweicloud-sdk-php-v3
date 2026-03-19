@@ -32,6 +32,7 @@ class ListVulHostHostsRequest implements ModelInterface, ArrayAccess
     * handleStatus  **参数解释**: 主机的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled：待处理 - handled：已处理  **默认取值**: 不涉及
     * status  **参数解释**: 该漏洞状态包含的主机 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复完成 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：重启后再次修复  **默认取值**: 不涉及
     * clusterId  **参数解释**: 集群id **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostIdList  **参数解释**: 主机id列表，多个主机id用英文逗号分隔 **约束限制**: 不涉及 **取值范围**: 字符长度0-1850位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class ListVulHostHostsRequest implements ModelInterface, ArrayAccess
             'severityLevel' => 'string',
             'handleStatus' => 'string',
             'status' => 'string',
-            'clusterId' => 'string'
+            'clusterId' => 'string',
+            'hostIdList' => 'string'
     ];
 
     /**
@@ -64,6 +66,7 @@ class ListVulHostHostsRequest implements ModelInterface, ArrayAccess
     * handleStatus  **参数解释**: 主机的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled：待处理 - handled：已处理  **默认取值**: 不涉及
     * status  **参数解释**: 该漏洞状态包含的主机 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复完成 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：重启后再次修复  **默认取值**: 不涉及
     * clusterId  **参数解释**: 集群id **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostIdList  **参数解释**: 主机id列表，多个主机id用英文逗号分隔 **约束限制**: 不涉及 **取值范围**: 字符长度0-1850位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class ListVulHostHostsRequest implements ModelInterface, ArrayAccess
         'severityLevel' => null,
         'handleStatus' => null,
         'status' => null,
-        'clusterId' => null
+        'clusterId' => null,
+        'hostIdList' => null
     ];
 
     /**
@@ -117,6 +121,7 @@ class ListVulHostHostsRequest implements ModelInterface, ArrayAccess
     * handleStatus  **参数解释**: 主机的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled：待处理 - handled：已处理  **默认取值**: 不涉及
     * status  **参数解释**: 该漏洞状态包含的主机 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复完成 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：重启后再次修复  **默认取值**: 不涉及
     * clusterId  **参数解释**: 集群id **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostIdList  **参数解释**: 主机id列表，多个主机id用英文逗号分隔 **约束限制**: 不涉及 **取值范围**: 字符长度0-1850位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class ListVulHostHostsRequest implements ModelInterface, ArrayAccess
             'severityLevel' => 'severity_level',
             'handleStatus' => 'handle_status',
             'status' => 'status',
-            'clusterId' => 'cluster_id'
+            'clusterId' => 'cluster_id',
+            'hostIdList' => 'host_id_list'
     ];
 
     /**
@@ -149,6 +155,7 @@ class ListVulHostHostsRequest implements ModelInterface, ArrayAccess
     * handleStatus  **参数解释**: 主机的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled：待处理 - handled：已处理  **默认取值**: 不涉及
     * status  **参数解释**: 该漏洞状态包含的主机 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复完成 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：重启后再次修复  **默认取值**: 不涉及
     * clusterId  **参数解释**: 集群id **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostIdList  **参数解释**: 主机id列表，多个主机id用英文逗号分隔 **约束限制**: 不涉及 **取值范围**: 字符长度0-1850位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class ListVulHostHostsRequest implements ModelInterface, ArrayAccess
             'severityLevel' => 'setSeverityLevel',
             'handleStatus' => 'setHandleStatus',
             'status' => 'setStatus',
-            'clusterId' => 'setClusterId'
+            'clusterId' => 'setClusterId',
+            'hostIdList' => 'setHostIdList'
     ];
 
     /**
@@ -181,6 +189,7 @@ class ListVulHostHostsRequest implements ModelInterface, ArrayAccess
     * handleStatus  **参数解释**: 主机的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled：待处理 - handled：已处理  **默认取值**: 不涉及
     * status  **参数解释**: 该漏洞状态包含的主机 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复完成 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：重启后再次修复  **默认取值**: 不涉及
     * clusterId  **参数解释**: 集群id **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    * hostIdList  **参数解释**: 主机id列表，多个主机id用英文逗号分隔 **约束限制**: 不涉及 **取值范围**: 字符长度0-1850位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class ListVulHostHostsRequest implements ModelInterface, ArrayAccess
             'severityLevel' => 'getSeverityLevel',
             'handleStatus' => 'getHandleStatus',
             'status' => 'getStatus',
-            'clusterId' => 'getClusterId'
+            'clusterId' => 'getClusterId',
+            'hostIdList' => 'getHostIdList'
     ];
 
     /**
@@ -269,6 +279,7 @@ class ListVulHostHostsRequest implements ModelInterface, ArrayAccess
         $this->container['handleStatus'] = isset($data['handleStatus']) ? $data['handleStatus'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
+        $this->container['hostIdList'] = isset($data['hostIdList']) ? $data['hostIdList'] : null;
     }
 
     /**
@@ -371,6 +382,12 @@ class ListVulHostHostsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['clusterId']) && (mb_strlen($this->container['clusterId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'clusterId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['hostIdList']) && (mb_strlen($this->container['hostIdList']) > 1850)) {
+                $invalidProperties[] = "invalid value for 'hostIdList', the character length must be smaller than or equal to 1850.";
+            }
+            if (!is_null($this->container['hostIdList']) && (mb_strlen($this->container['hostIdList']) < 0)) {
+                $invalidProperties[] = "invalid value for 'hostIdList', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -671,6 +688,30 @@ class ListVulHostHostsRequest implements ModelInterface, ArrayAccess
     public function setClusterId($clusterId)
     {
         $this->container['clusterId'] = $clusterId;
+        return $this;
+    }
+
+    /**
+    * Gets hostIdList
+    *  **参数解释**: 主机id列表，多个主机id用英文逗号分隔 **约束限制**: 不涉及 **取值范围**: 字符长度0-1850位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getHostIdList()
+    {
+        return $this->container['hostIdList'];
+    }
+
+    /**
+    * Sets hostIdList
+    *
+    * @param string|null $hostIdList **参数解释**: 主机id列表，多个主机id用英文逗号分隔 **约束限制**: 不涉及 **取值范围**: 字符长度0-1850位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setHostIdList($hostIdList)
+    {
+        $this->container['hostIdList'] = $hostIdList;
         return $this;
     }
 

@@ -23,7 +23,7 @@ class WebBasicProtectionRulesItem implements ModelInterface, ArrayAccess
     * id  **参数解释：** 规则的ID，规则的唯一标识 **取值范围：** 不涉及
     * description  **参数解释：** 规则描述 **取值范围：** 不涉及
     * cveNumber  **参数解释：** CVE编号 **取值范围：** 不涉及
-    * riskLevel  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危  **取值范围：** - 1 - 2 - 3
+    * riskLevel  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危 **取值范围：** - 1 - 2 - 3
     * applicationType  **参数解释：** 应用类型 **取值范围：** 不涉及
     * protectionType  **参数解释：** 防护类型 **取值范围：** 不涉及
     * effectiveTime  **参数解释：** 生效时间 **取值范围：** 不涉及
@@ -49,7 +49,7 @@ class WebBasicProtectionRulesItem implements ModelInterface, ArrayAccess
     * id  **参数解释：** 规则的ID，规则的唯一标识 **取值范围：** 不涉及
     * description  **参数解释：** 规则描述 **取值范围：** 不涉及
     * cveNumber  **参数解释：** CVE编号 **取值范围：** 不涉及
-    * riskLevel  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危  **取值范围：** - 1 - 2 - 3
+    * riskLevel  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危 **取值范围：** - 1 - 2 - 3
     * applicationType  **参数解释：** 应用类型 **取值范围：** 不涉及
     * protectionType  **参数解释：** 防护类型 **取值范围：** 不涉及
     * effectiveTime  **参数解释：** 生效时间 **取值范围：** 不涉及
@@ -96,7 +96,7 @@ class WebBasicProtectionRulesItem implements ModelInterface, ArrayAccess
     * id  **参数解释：** 规则的ID，规则的唯一标识 **取值范围：** 不涉及
     * description  **参数解释：** 规则描述 **取值范围：** 不涉及
     * cveNumber  **参数解释：** CVE编号 **取值范围：** 不涉及
-    * riskLevel  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危  **取值范围：** - 1 - 2 - 3
+    * riskLevel  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危 **取值范围：** - 1 - 2 - 3
     * applicationType  **参数解释：** 应用类型 **取值范围：** 不涉及
     * protectionType  **参数解释：** 防护类型 **取值范围：** 不涉及
     * effectiveTime  **参数解释：** 生效时间 **取值范围：** 不涉及
@@ -122,7 +122,7 @@ class WebBasicProtectionRulesItem implements ModelInterface, ArrayAccess
     * id  **参数解释：** 规则的ID，规则的唯一标识 **取值范围：** 不涉及
     * description  **参数解释：** 规则描述 **取值范围：** 不涉及
     * cveNumber  **参数解释：** CVE编号 **取值范围：** 不涉及
-    * riskLevel  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危  **取值范围：** - 1 - 2 - 3
+    * riskLevel  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危 **取值范围：** - 1 - 2 - 3
     * applicationType  **参数解释：** 应用类型 **取值范围：** 不涉及
     * protectionType  **参数解释：** 防护类型 **取值范围：** 不涉及
     * effectiveTime  **参数解释：** 生效时间 **取值范围：** 不涉及
@@ -148,7 +148,7 @@ class WebBasicProtectionRulesItem implements ModelInterface, ArrayAccess
     * id  **参数解释：** 规则的ID，规则的唯一标识 **取值范围：** 不涉及
     * description  **参数解释：** 规则描述 **取值范围：** 不涉及
     * cveNumber  **参数解释：** CVE编号 **取值范围：** 不涉及
-    * riskLevel  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危  **取值范围：** - 1 - 2 - 3
+    * riskLevel  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危 **取值范围：** - 1 - 2 - 3
     * applicationType  **参数解释：** 应用类型 **取值范围：** 不涉及
     * protectionType  **参数解释：** 防护类型 **取值范围：** 不涉及
     * effectiveTime  **参数解释：** 生效时间 **取值范围：** 不涉及
@@ -359,7 +359,7 @@ class WebBasicProtectionRulesItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets riskLevel
-    *  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危  **取值范围：** - 1 - 2 - 3
+    *  **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危 **取值范围：** - 1 - 2 - 3
     *
     * @return int|null
     */
@@ -371,7 +371,7 @@ class WebBasicProtectionRulesItem implements ModelInterface, ArrayAccess
     /**
     * Sets riskLevel
     *
-    * @param int|null $riskLevel **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危  **取值范围：** - 1 - 2 - 3
+    * @param int|null $riskLevel **参数解释：** 危险等级 - 1：高危 - 2：中危 - 3：低危 **取值范围：** - 1 - 2 - 3
     *
     * @return $this
     */

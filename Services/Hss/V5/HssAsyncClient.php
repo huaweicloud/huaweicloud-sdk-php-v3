@@ -8425,14 +8425,14 @@ class HssAsyncClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
+        if ($localVarParams['hostId'] !== null) {
+            $queryParams['host_id'] = $localVarParams['hostId'];
+        }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['hostId'] !== null) {
-            $queryParams['host_id'] = $localVarParams['hostId'];
         }
         if ($localVarParams['startTime'] !== null) {
             $queryParams['start_time'] = $localVarParams['startTime'];
@@ -15016,6 +15016,9 @@ class HssAsyncClient extends Client
         if ($localVarParams['severityList'] !== null) {
             $queryParams['severity_list'] = $localVarParams['severityList'];
         }
+        if ($localVarParams['severities'] !== null) {
+            $queryParams['severities'] = $localVarParams['severities'];
+        }
         if ($localVarParams['assetValue'] !== null) {
             $queryParams['asset_value'] = $localVarParams['assetValue'];
         }
@@ -15458,6 +15461,9 @@ class HssAsyncClient extends Client
         if ($localVarParams['severityList'] !== null) {
             $queryParams['severity_list'] = $localVarParams['severityList'];
         }
+        if ($localVarParams['severities'] !== null) {
+            $queryParams['severities'] = $localVarParams['severities'];
+        }
         if ($localVarParams['assetValue'] !== null) {
             $queryParams['asset_value'] = $localVarParams['assetValue'];
         }
@@ -15475,6 +15481,12 @@ class HssAsyncClient extends Client
         }
         if ($localVarParams['manualIsolate'] !== null) {
             $queryParams['manual_isolate'] = $localVarParams['manualIsolate'];
+        }
+        if ($localVarParams['idList'] !== null) {
+            $queryParams['id_list'] = $localVarParams['idList'];
+        }
+        if ($localVarParams['fileHashList'] !== null) {
+            $queryParams['file_hash_list'] = $localVarParams['fileHashList'];
         }
 
         if ($multipart) {
@@ -18668,9 +18680,9 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 查询配置检测策略组列表10
+     * 查询配置检测策略组列表
      *
-     * 查询配置检测策略组列表10。
+     * 查询配置检测策略组列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18999,6 +19011,9 @@ class HssAsyncClient extends Client
         }
         if ($localVarParams['groupId'] !== null) {
             $queryParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['statisticsType'] !== null) {
+            $queryParams['statistics_type'] = $localVarParams['statisticsType'];
         }
 
         if ($multipart) {
@@ -23696,9 +23711,9 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 创建VPC终端节点的创建
+     * 创建VPC终端节点
      *
-     * 创建VPC终端节点的创建。
+     * 创建VPC终端节点。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -24048,6 +24063,18 @@ class HssAsyncClient extends Client
         }
         if ($localVarParams['vpcId'] !== null) {
             $queryParams['vpc_id'] = $localVarParams['vpcId'];
+        }
+        if ($localVarParams['hostNameList'] !== null) {
+            $queryParams['host_name_list'] = $localVarParams['hostNameList'];
+        }
+        if ($localVarParams['hostIdList'] !== null) {
+            $queryParams['host_id_list'] = $localVarParams['hostIdList'];
+        }
+        if ($localVarParams['publicIpList'] !== null) {
+            $queryParams['public_ip_list'] = $localVarParams['publicIpList'];
+        }
+        if ($localVarParams['privateIpList'] !== null) {
+            $queryParams['private_ip_list'] = $localVarParams['privateIpList'];
         }
         if ($localVarParams['hasIntrusion'] !== null) {
             $queryParams['has_intrusion'] = $localVarParams['hasIntrusion'];
@@ -27167,7 +27194,7 @@ class HssAsyncClient extends Client
     /**
      * 本地镜像列表查询
      *
-     * 本地镜像列表查询。
+     * 本地镜像列表查询
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -27198,17 +27225,17 @@ class HssAsyncClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
-        if ($localVarParams['imageName'] !== null) {
-            $queryParams['image_name'] = $localVarParams['imageName'];
-        }
-        if ($localVarParams['imageVersion'] !== null) {
-            $queryParams['image_version'] = $localVarParams['imageVersion'];
-        }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['imageName'] !== null) {
+            $queryParams['image_name'] = $localVarParams['imageName'];
+        }
+        if ($localVarParams['imageVersion'] !== null) {
+            $queryParams['image_version'] = $localVarParams['imageVersion'];
         }
         if ($localVarParams['scanStatus'] !== null) {
             $queryParams['scan_status'] = $localVarParams['scanStatus'];
@@ -34231,6 +34258,9 @@ class HssAsyncClient extends Client
         if ($localVarParams['severityList'] !== null) {
             $queryParams['severity_list'] = $localVarParams['severityList'];
         }
+        if ($localVarParams['severities'] !== null) {
+            $queryParams['severities'] = $localVarParams['severities'];
+        }
         if ($localVarParams['hostName'] !== null) {
             $queryParams['host_name'] = $localVarParams['hostName'];
         }
@@ -35066,9 +35096,9 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 查询Serverless资产列表
+     * 查询Serverless资产列表--接口已废弃
      *
-     * 查询Serverless资产列表。
+     * 查询Serverless资产列表--接口已废弃
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -35140,9 +35170,9 @@ class HssAsyncClient extends Client
     }
 
     /**
-     * 查询Serverless资产详细信息
+     * 查询Serverless资产详细信息--接口已废弃
      *
-     * 查询Serverless资产详细信息。
+     * 查询Serverless资产详细信息--接口已废弃
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -38655,6 +38685,9 @@ class HssAsyncClient extends Client
         if ($localVarParams['clusterId'] !== null) {
             $queryParams['cluster_id'] = $localVarParams['clusterId'];
         }
+        if ($localVarParams['hostIdList'] !== null) {
+            $queryParams['host_id_list'] = $localVarParams['hostIdList'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -38918,6 +38951,9 @@ class HssAsyncClient extends Client
         }
         if ($localVarParams['repairPriority'] !== null) {
             $queryParams['repair_priority'] = $localVarParams['repairPriority'];
+        }
+        if ($localVarParams['hostIdList'] !== null) {
+            $queryParams['host_id_list'] = $localVarParams['hostIdList'];
         }
 
         if ($multipart) {

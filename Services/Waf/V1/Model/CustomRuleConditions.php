@@ -22,7 +22,7 @@ class CustomRuleConditions implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * category  字段类型。可选值为：url、user-agent、ip、params、cookie、referer、header、request_line、method、reqeust
     * index  子字段：  - 字段类型为url、user-agent、ip、refer、request_line、method、reqeust时，不需要传index参数    - 字段类型为params、header、cookie并且子字段为自定义时，index的值为自定义子字段
-    * logicOperation  条件匹配逻辑。
+    * logicOperation  条件匹配逻辑
     * contents  条件匹配的内容
     * valueListId  引用表id。
     *
@@ -40,7 +40,7 @@ class CustomRuleConditions implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * category  字段类型。可选值为：url、user-agent、ip、params、cookie、referer、header、request_line、method、reqeust
     * index  子字段：  - 字段类型为url、user-agent、ip、refer、request_line、method、reqeust时，不需要传index参数    - 字段类型为params、header、cookie并且子字段为自定义时，index的值为自定义子字段
-    * logicOperation  条件匹配逻辑。
+    * logicOperation  条件匹配逻辑
     * contents  条件匹配的内容
     * valueListId  引用表id。
     *
@@ -79,7 +79,7 @@ class CustomRuleConditions implements ModelInterface, ArrayAccess
     * and the value is the original name
     * category  字段类型。可选值为：url、user-agent、ip、params、cookie、referer、header、request_line、method、reqeust
     * index  子字段：  - 字段类型为url、user-agent、ip、refer、request_line、method、reqeust时，不需要传index参数    - 字段类型为params、header、cookie并且子字段为自定义时，index的值为自定义子字段
-    * logicOperation  条件匹配逻辑。
+    * logicOperation  条件匹配逻辑
     * contents  条件匹配的内容
     * valueListId  引用表id。
     *
@@ -97,7 +97,7 @@ class CustomRuleConditions implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * category  字段类型。可选值为：url、user-agent、ip、params、cookie、referer、header、request_line、method、reqeust
     * index  子字段：  - 字段类型为url、user-agent、ip、refer、request_line、method、reqeust时，不需要传index参数    - 字段类型为params、header、cookie并且子字段为自定义时，index的值为自定义子字段
-    * logicOperation  条件匹配逻辑。
+    * logicOperation  条件匹配逻辑
     * contents  条件匹配的内容
     * valueListId  引用表id。
     *
@@ -115,7 +115,7 @@ class CustomRuleConditions implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * category  字段类型。可选值为：url、user-agent、ip、params、cookie、referer、header、request_line、method、reqeust
     * index  子字段：  - 字段类型为url、user-agent、ip、refer、request_line、method、reqeust时，不需要传index参数    - 字段类型为params、header、cookie并且子字段为自定义时，index的值为自定义子字段
-    * logicOperation  条件匹配逻辑。
+    * logicOperation  条件匹配逻辑
     * contents  条件匹配的内容
     * valueListId  引用表id。
     *
@@ -266,7 +266,7 @@ class CustomRuleConditions implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicOperation
-    *  条件匹配逻辑。
+    *  条件匹配逻辑
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class CustomRuleConditions implements ModelInterface, ArrayAccess
     /**
     * Sets logicOperation
     *
-    * @param string|null $logicOperation 条件匹配逻辑。
+    * @param string|null $logicOperation 条件匹配逻辑
     *
     * @return $this
     */

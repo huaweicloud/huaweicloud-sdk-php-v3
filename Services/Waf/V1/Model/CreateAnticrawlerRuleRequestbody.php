@@ -20,10 +20,10 @@ class CreateAnticrawlerRuleRequestbody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * conditions  匹配条件列表
-    * name  规则名称
-    * type  **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
+    * conditions  匹配条件列表，最多30个
+    * name  **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
+    * type  **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 创建后不支持修改 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则 **默认取值：** anticrawler_except_url
+    * priority  **参数解释：** 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class CreateAnticrawlerRuleRequestbody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * conditions  匹配条件列表
-    * name  规则名称
-    * type  **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
+    * conditions  匹配条件列表，最多30个
+    * name  **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
+    * type  **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 创建后不支持修改 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则 **默认取值：** anticrawler_except_url
+    * priority  **参数解释：** 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class CreateAnticrawlerRuleRequestbody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * conditions  匹配条件列表
-    * name  规则名称
-    * type  **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
+    * conditions  匹配条件列表，最多30个
+    * name  **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
+    * type  **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 创建后不支持修改 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则 **默认取值：** anticrawler_except_url
+    * priority  **参数解释：** 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class CreateAnticrawlerRuleRequestbody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * conditions  匹配条件列表
-    * name  规则名称
-    * type  **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
+    * conditions  匹配条件列表，最多30个
+    * name  **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
+    * type  **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 创建后不支持修改 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则 **默认取值：** anticrawler_except_url
+    * priority  **参数解释：** 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class CreateAnticrawlerRuleRequestbody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * conditions  匹配条件列表
-    * name  规则名称
-    * type  **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
+    * conditions  匹配条件列表，最多30个
+    * name  **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
+    * type  **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 创建后不支持修改 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则 **默认取值：** anticrawler_except_url
+    * priority  **参数解释：** 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -242,7 +242,7 @@ class CreateAnticrawlerRuleRequestbody implements ModelInterface, ArrayAccess
 
     /**
     * Gets conditions
-    *  匹配条件列表
+    *  匹配条件列表，最多30个
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\AnticrawlerCondition[]
     */
@@ -254,7 +254,7 @@ class CreateAnticrawlerRuleRequestbody implements ModelInterface, ArrayAccess
     /**
     * Sets conditions
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\AnticrawlerCondition[] $conditions 匹配条件列表
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\AnticrawlerCondition[] $conditions 匹配条件列表，最多30个
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class CreateAnticrawlerRuleRequestbody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  规则名称
+    *  **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -278,7 +278,7 @@ class CreateAnticrawlerRuleRequestbody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 规则名称
+    * @param string $name **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class CreateAnticrawlerRuleRequestbody implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
+    *  **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 创建后不支持修改 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则 **默认取值：** anticrawler_except_url
     *
     * @return string
     */
@@ -302,7 +302,7 @@ class CreateAnticrawlerRuleRequestbody implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 不涉及 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则  **默认取值：** anticrawler_except_url
+    * @param string $type **参数解释：** JS脚本反爬虫规则类型 **约束限制：** 创建后不支持修改 **取值范围：**  - anticrawler_except_url: 防护所有路径模式，在该模式下，查询的JS脚本反爬虫规则为排除的防护路径规则  - anticrawler_specific_url: 防护指定路径模式，在该模式下，查询的JS脚本反爬虫规则为指定要防护的路径规则 **默认取值：** anticrawler_except_url
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class CreateAnticrawlerRuleRequestbody implements ModelInterface, ArrayAccess
 
     /**
     * Gets priority
-    *  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
+    *  **参数解释：** 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
     *
     * @return int
     */
@@ -326,7 +326,7 @@ class CreateAnticrawlerRuleRequestbody implements ModelInterface, ArrayAccess
     /**
     * Sets priority
     *
-    * @param int $priority 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
+    * @param int $priority **参数解释：** 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
     *
     * @return $this
     */

@@ -21,9 +21,9 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * hostId  **参数解释**: 服务器的唯一标识ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * hostId  Host Id
     * startTime  **参数解释**: 应用防护事件的查询起始时间（Unix时间戳），与end_time配合筛选指定时间段内的事件 **时间格式** Unix时间戳（精确到毫秒，如1736414463000表示2024-12-10 10:41:03） **约束限制**: 需小于end_time，否则返回空结果；时间戳需为有效时间（1970-01-01 00:00:00至今） **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
     * endTime  **参数解释**: 查询时间段的终止时间，毫秒级时间戳(ms) **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
     * appType  **参数解释** 应用防护的应用类型，用于筛选指定类型应用的防护事件 **约束限制** 当前仅支持java类型，传其他值返回空结果，区分大小写 **取值范围** - java：Java语言开发的应用防护事件 **默认取值** 无（查询所有支持的应用类型事件）
@@ -35,9 +35,9 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'enterpriseProjectId' => 'string',
+            'hostId' => 'string',
             'offset' => 'int',
             'limit' => 'int',
-            'hostId' => 'string',
             'startTime' => 'int',
             'endTime' => 'int',
             'appType' => 'string',
@@ -49,9 +49,9 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * hostId  **参数解释**: 服务器的唯一标识ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * hostId  Host Id
     * startTime  **参数解释**: 应用防护事件的查询起始时间（Unix时间戳），与end_time配合筛选指定时间段内的事件 **时间格式** Unix时间戳（精确到毫秒，如1736414463000表示2024-12-10 10:41:03） **约束限制**: 需小于end_time，否则返回空结果；时间戳需为有效时间（1970-01-01 00:00:00至今） **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
     * endTime  **参数解释**: 查询时间段的终止时间，毫秒级时间戳(ms) **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
     * appType  **参数解释** 应用防护的应用类型，用于筛选指定类型应用的防护事件 **约束限制** 当前仅支持java类型，传其他值返回空结果，区分大小写 **取值范围** - java：Java语言开发的应用防护事件 **默认取值** 无（查询所有支持的应用类型事件）
@@ -63,9 +63,9 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'enterpriseProjectId' => null,
+        'hostId' => null,
         'offset' => 'int32',
         'limit' => 'int32',
-        'hostId' => null,
         'startTime' => 'int64',
         'endTime' => 'int64',
         'appType' => null,
@@ -98,9 +98,9 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * hostId  **参数解释**: 服务器的唯一标识ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * hostId  Host Id
     * startTime  **参数解释**: 应用防护事件的查询起始时间（Unix时间戳），与end_time配合筛选指定时间段内的事件 **时间格式** Unix时间戳（精确到毫秒，如1736414463000表示2024-12-10 10:41:03） **约束限制**: 需小于end_time，否则返回空结果；时间戳需为有效时间（1970-01-01 00:00:00至今） **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
     * endTime  **参数解释**: 查询时间段的终止时间，毫秒级时间戳(ms) **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
     * appType  **参数解释** 应用防护的应用类型，用于筛选指定类型应用的防护事件 **约束限制** 当前仅支持java类型，传其他值返回空结果，区分大小写 **取值范围** - java：Java语言开发的应用防护事件 **默认取值** 无（查询所有支持的应用类型事件）
@@ -112,9 +112,9 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'enterpriseProjectId' => 'enterprise_project_id',
+            'hostId' => 'host_id',
             'offset' => 'offset',
             'limit' => 'limit',
-            'hostId' => 'host_id',
             'startTime' => 'start_time',
             'endTime' => 'end_time',
             'appType' => 'app_type',
@@ -126,9 +126,9 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * hostId  **参数解释**: 服务器的唯一标识ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * hostId  Host Id
     * startTime  **参数解释**: 应用防护事件的查询起始时间（Unix时间戳），与end_time配合筛选指定时间段内的事件 **时间格式** Unix时间戳（精确到毫秒，如1736414463000表示2024-12-10 10:41:03） **约束限制**: 需小于end_time，否则返回空结果；时间戳需为有效时间（1970-01-01 00:00:00至今） **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
     * endTime  **参数解释**: 查询时间段的终止时间，毫秒级时间戳(ms) **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
     * appType  **参数解释** 应用防护的应用类型，用于筛选指定类型应用的防护事件 **约束限制** 当前仅支持java类型，传其他值返回空结果，区分大小写 **取值范围** - java：Java语言开发的应用防护事件 **默认取值** 无（查询所有支持的应用类型事件）
@@ -140,9 +140,9 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'hostId' => 'setHostId',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
-            'hostId' => 'setHostId',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
             'appType' => 'setAppType',
@@ -154,9 +154,9 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * hostId  **参数解释**: 服务器的唯一标识ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
-    * hostId  Host Id
     * startTime  **参数解释**: 应用防护事件的查询起始时间（Unix时间戳），与end_time配合筛选指定时间段内的事件 **时间格式** Unix时间戳（精确到毫秒，如1736414463000表示2024-12-10 10:41:03） **约束限制**: 需小于end_time，否则返回空结果；时间戳需为有效时间（1970-01-01 00:00:00至今） **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
     * endTime  **参数解释**: 查询时间段的终止时间，毫秒级时间戳(ms) **约束限制**: 不涉及 **取值范围**: 取值0-9223372036854775807 **默认取值**: 无
     * appType  **参数解释** 应用防护的应用类型，用于筛选指定类型应用的防护事件 **约束限制** 当前仅支持java类型，传其他值返回空结果，区分大小写 **取值范围** - java：Java语言开发的应用防护事件 **默认取值** 无（查询所有支持的应用类型事件）
@@ -168,9 +168,9 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'hostId' => 'getHostId',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
-            'hostId' => 'getHostId',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
             'appType' => 'getAppType',
@@ -238,9 +238,9 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['appType'] = isset($data['appType']) ? $data['appType'] : null;
@@ -266,6 +266,15 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^.*$/", $this->container['enterpriseProjectId'])) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^.*$/.";
             }
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['hostId']) && !preg_match("/^.*$/", $this->container['hostId'])) {
+                $invalidProperties[] = "invalid value for 'hostId', must be conform to the pattern /^.*$/.";
+            }
             if (!is_null($this->container['offset']) && ($this->container['offset'] > 2000000)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2000000.";
             }
@@ -277,15 +286,6 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
-            }
-        if ($this->container['hostId'] === null) {
-            $invalidProperties[] = "'hostId' can't be null";
-        }
-            if ((mb_strlen($this->container['hostId']) > 128)) {
-                $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 128.";
-            }
-            if ((mb_strlen($this->container['hostId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['startTime'] === null) {
             $invalidProperties[] = "'startTime' can't be null";
@@ -380,6 +380,30 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets hostId
+    *  **参数解释**: 服务器的唯一标识ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getHostId()
+    {
+        return $this->container['hostId'];
+    }
+
+    /**
+    * Sets hostId
+    *
+    * @param string|null $hostId **参数解释**: 服务器的唯一标识ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setHostId($hostId)
+    {
+        $this->container['hostId'] = $hostId;
+        return $this;
+    }
+
+    /**
     * Gets offset
     *  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
@@ -424,30 +448,6 @@ class ListRaspEventsRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
-        return $this;
-    }
-
-    /**
-    * Gets hostId
-    *  Host Id
-    *
-    * @return string
-    */
-    public function getHostId()
-    {
-        return $this->container['hostId'];
-    }
-
-    /**
-    * Sets hostId
-    *
-    * @param string $hostId Host Id
-    *
-    * @return $this
-    */
-    public function setHostId($hostId)
-    {
-        $this->container['hostId'] = $hostId;
         return $this;
     }
 

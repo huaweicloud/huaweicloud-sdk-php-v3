@@ -21,8 +21,8 @@ class ListImageLocalResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  本地镜像总数
-    * dataList  本地镜像数据列表
+    * totalNum  **参数解释** 符合所有筛选条件的本地镜像总记录数，用于分页计算总页数 **取值范围** 取值0-2147483647
+    * dataList  **参数解释** 包含查询到的本地镜像详情，每个元素对应一个本地镜像的完整信息 **取值范围** 数组长度0-limit（每页显示个数），元素结构符合ImageLocalInfo定义，数组为空表示无匹配结果
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListImageLocalResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  本地镜像总数
-    * dataList  本地镜像数据列表
+    * totalNum  **参数解释** 符合所有筛选条件的本地镜像总记录数，用于分页计算总页数 **取值范围** 取值0-2147483647
+    * dataList  **参数解释** 包含查询到的本地镜像详情，每个元素对应一个本地镜像的完整信息 **取值范围** 数组长度0-limit（每页显示个数），元素结构符合ImageLocalInfo定义，数组为空表示无匹配结果
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListImageLocalResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  本地镜像总数
-    * dataList  本地镜像数据列表
+    * totalNum  **参数解释** 符合所有筛选条件的本地镜像总记录数，用于分页计算总页数 **取值范围** 取值0-2147483647
+    * dataList  **参数解释** 包含查询到的本地镜像详情，每个元素对应一个本地镜像的完整信息 **取值范围** 数组长度0-limit（每页显示个数），元素结构符合ImageLocalInfo定义，数组为空表示无匹配结果
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListImageLocalResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  本地镜像总数
-    * dataList  本地镜像数据列表
+    * totalNum  **参数解释** 符合所有筛选条件的本地镜像总记录数，用于分页计算总页数 **取值范围** 取值0-2147483647
+    * dataList  **参数解释** 包含查询到的本地镜像详情，每个元素对应一个本地镜像的完整信息 **取值范围** 数组长度0-limit（每页显示个数），元素结构符合ImageLocalInfo定义，数组为空表示无匹配结果
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListImageLocalResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  本地镜像总数
-    * dataList  本地镜像数据列表
+    * totalNum  **参数解释** 符合所有筛选条件的本地镜像总记录数，用于分页计算总页数 **取值范围** 取值0-2147483647
+    * dataList  **参数解释** 包含查询到的本地镜像详情，每个元素对应一个本地镜像的完整信息 **取值范围** 数组长度0-limit（每页显示个数），元素结构符合ImageLocalInfo定义，数组为空表示无匹配结果
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ListImageLocalResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNum
-    *  本地镜像总数
+    *  **参数解释** 符合所有筛选条件的本地镜像总记录数，用于分页计算总页数 **取值范围** 取值0-2147483647
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ListImageLocalResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalNum
     *
-    * @param int|null $totalNum 本地镜像总数
+    * @param int|null $totalNum **参数解释** 符合所有筛选条件的本地镜像总记录数，用于分页计算总页数 **取值范围** 取值0-2147483647
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListImageLocalResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  本地镜像数据列表
+    *  **参数解释** 包含查询到的本地镜像详情，每个元素对应一个本地镜像的完整信息 **取值范围** 数组长度0-limit（每页显示个数），元素结构符合ImageLocalInfo定义，数组为空表示无匹配结果
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\ImageLocalInfo[]|null
     */
@@ -228,7 +228,7 @@ class ListImageLocalResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\ImageLocalInfo[]|null $dataList 本地镜像数据列表
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\ImageLocalInfo[]|null $dataList **参数解释** 包含查询到的本地镜像详情，每个元素对应一个本地镜像的完整信息 **取值范围** 数组长度0-limit（每页显示个数），元素结构符合ImageLocalInfo定义，数组为空表示无匹配结果
     *
     * @return $this
     */

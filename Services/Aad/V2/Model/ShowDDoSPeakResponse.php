@@ -60,7 +60,7 @@ class ShowDDoSPeakResponse implements ModelInterface, ArrayAccess
         'attackBpsPeak' => 'int32',
         'inBpsPeak' => 'int32',
         'ddosCount' => 'int32',
-        'utime' => 'int32'
+        'utime' => 'int64'
     ];
 
     /**

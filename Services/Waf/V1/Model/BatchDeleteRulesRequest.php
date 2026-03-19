@@ -21,7 +21,7 @@ class BatchDeleteRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * ruleType  **参数解释：** 需要删除的规则类型,目前支持cc,custom,whiteblackip,geoip,ip-reputation,antitamper,antileakage,ignore,privacy **约束限制：** 不涉及 **取值范围：** - cc - custom - whiteblackip - geoip - ip-reputation - antitamper - antileakage - ignore - privacy  **默认取值：** 不涉及
+    * ruleType  **参数解释：** 需要删除的规则类型,目前支持cc,custom,whiteblackip,privacy,ignore,geoip,antitamper,antileakage,ip-reputation,llm-guards **约束限制：** 需要购买“大模型防火墙”服务后才可使用llm-guards **取值范围：** - cc CC防护 - custom 精准防护 - whiteblackip 黑白名单 - geoip 地理位置防护 - ip-reputation 威胁情报 - antitamper 防篡改 - antileakage 防敏感信息泄露 - ignore 全局白名单(原误报屏蔽) - privacy 隐私屏蔽 - llm-guards 大模型防火墙 **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
@@ -35,7 +35,7 @@ class BatchDeleteRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * ruleType  **参数解释：** 需要删除的规则类型,目前支持cc,custom,whiteblackip,geoip,ip-reputation,antitamper,antileakage,ignore,privacy **约束限制：** 不涉及 **取值范围：** - cc - custom - whiteblackip - geoip - ip-reputation - antitamper - antileakage - ignore - privacy  **默认取值：** 不涉及
+    * ruleType  **参数解释：** 需要删除的规则类型,目前支持cc,custom,whiteblackip,privacy,ignore,geoip,antitamper,antileakage,ip-reputation,llm-guards **约束限制：** 需要购买“大模型防火墙”服务后才可使用llm-guards **取值范围：** - cc CC防护 - custom 精准防护 - whiteblackip 黑白名单 - geoip 地理位置防护 - ip-reputation 威胁情报 - antitamper 防篡改 - antileakage 防敏感信息泄露 - ignore 全局白名单(原误报屏蔽) - privacy 隐私屏蔽 - llm-guards 大模型防火墙 **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
@@ -70,7 +70,7 @@ class BatchDeleteRulesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * ruleType  **参数解释：** 需要删除的规则类型,目前支持cc,custom,whiteblackip,geoip,ip-reputation,antitamper,antileakage,ignore,privacy **约束限制：** 不涉及 **取值范围：** - cc - custom - whiteblackip - geoip - ip-reputation - antitamper - antileakage - ignore - privacy  **默认取值：** 不涉及
+    * ruleType  **参数解释：** 需要删除的规则类型,目前支持cc,custom,whiteblackip,privacy,ignore,geoip,antitamper,antileakage,ip-reputation,llm-guards **约束限制：** 需要购买“大模型防火墙”服务后才可使用llm-guards **取值范围：** - cc CC防护 - custom 精准防护 - whiteblackip 黑白名单 - geoip 地理位置防护 - ip-reputation 威胁情报 - antitamper 防篡改 - antileakage 防敏感信息泄露 - ignore 全局白名单(原误报屏蔽) - privacy 隐私屏蔽 - llm-guards 大模型防火墙 **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
@@ -84,7 +84,7 @@ class BatchDeleteRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * ruleType  **参数解释：** 需要删除的规则类型,目前支持cc,custom,whiteblackip,geoip,ip-reputation,antitamper,antileakage,ignore,privacy **约束限制：** 不涉及 **取值范围：** - cc - custom - whiteblackip - geoip - ip-reputation - antitamper - antileakage - ignore - privacy  **默认取值：** 不涉及
+    * ruleType  **参数解释：** 需要删除的规则类型,目前支持cc,custom,whiteblackip,privacy,ignore,geoip,antitamper,antileakage,ip-reputation,llm-guards **约束限制：** 需要购买“大模型防火墙”服务后才可使用llm-guards **取值范围：** - cc CC防护 - custom 精准防护 - whiteblackip 黑白名单 - geoip 地理位置防护 - ip-reputation 威胁情报 - antitamper 防篡改 - antileakage 防敏感信息泄露 - ignore 全局白名单(原误报屏蔽) - privacy 隐私屏蔽 - llm-guards 大模型防火墙 **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
@@ -98,7 +98,7 @@ class BatchDeleteRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * ruleType  **参数解释：** 需要删除的规则类型,目前支持cc,custom,whiteblackip,geoip,ip-reputation,antitamper,antileakage,ignore,privacy **约束限制：** 不涉及 **取值范围：** - cc - custom - whiteblackip - geoip - ip-reputation - antitamper - antileakage - ignore - privacy  **默认取值：** 不涉及
+    * ruleType  **参数解释：** 需要删除的规则类型,目前支持cc,custom,whiteblackip,privacy,ignore,geoip,antitamper,antileakage,ip-reputation,llm-guards **约束限制：** 需要购买“大模型防火墙”服务后才可使用llm-guards **取值范围：** - cc CC防护 - custom 精准防护 - whiteblackip 黑白名单 - geoip 地理位置防护 - ip-reputation 威胁情报 - antitamper 防篡改 - antileakage 防敏感信息泄露 - ignore 全局白名单(原误报屏蔽) - privacy 隐私屏蔽 - llm-guards 大模型防火墙 **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
@@ -149,7 +149,38 @@ class BatchDeleteRulesRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const RULE_TYPE_CC = 'cc';
+    const RULE_TYPE_CUSTOM = 'custom';
+    const RULE_TYPE_WHITEBLACKIP = 'whiteblackip';
+    const RULE_TYPE_PRIVACY = 'privacy';
+    const RULE_TYPE_IGNORE = 'ignore';
+    const RULE_TYPE_GEOIP = 'geoip';
+    const RULE_TYPE_ANTITAMPER = 'antitamper';
+    const RULE_TYPE_ANTILEAKAGE = 'antileakage';
+    const RULE_TYPE_IP_REPUTATION = 'ip-reputation';
+    const RULE_TYPE_LLM_GUARDS = 'llm-guards';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getRuleTypeAllowableValues()
+    {
+        return [
+            self::RULE_TYPE_CC,
+            self::RULE_TYPE_CUSTOM,
+            self::RULE_TYPE_WHITEBLACKIP,
+            self::RULE_TYPE_PRIVACY,
+            self::RULE_TYPE_IGNORE,
+            self::RULE_TYPE_GEOIP,
+            self::RULE_TYPE_ANTITAMPER,
+            self::RULE_TYPE_ANTILEAKAGE,
+            self::RULE_TYPE_IP_REPUTATION,
+            self::RULE_TYPE_LLM_GUARDS,
+        ];
+    }
 
 
     /**
@@ -186,6 +217,14 @@ class BatchDeleteRulesRequest implements ModelInterface, ArrayAccess
         if ($this->container['ruleType'] === null) {
             $invalidProperties[] = "'ruleType' can't be null";
         }
+            $allowedValues = $this->getRuleTypeAllowableValues();
+                if (!is_null($this->container['ruleType']) && !in_array($this->container['ruleType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'ruleType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -226,7 +265,7 @@ class BatchDeleteRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleType
-    *  **参数解释：** 需要删除的规则类型,目前支持cc,custom,whiteblackip,geoip,ip-reputation,antitamper,antileakage,ignore,privacy **约束限制：** 不涉及 **取值范围：** - cc - custom - whiteblackip - geoip - ip-reputation - antitamper - antileakage - ignore - privacy  **默认取值：** 不涉及
+    *  **参数解释：** 需要删除的规则类型,目前支持cc,custom,whiteblackip,privacy,ignore,geoip,antitamper,antileakage,ip-reputation,llm-guards **约束限制：** 需要购买“大模型防火墙”服务后才可使用llm-guards **取值范围：** - cc CC防护 - custom 精准防护 - whiteblackip 黑白名单 - geoip 地理位置防护 - ip-reputation 威胁情报 - antitamper 防篡改 - antileakage 防敏感信息泄露 - ignore 全局白名单(原误报屏蔽) - privacy 隐私屏蔽 - llm-guards 大模型防火墙 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -238,7 +277,7 @@ class BatchDeleteRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ruleType
     *
-    * @param string $ruleType **参数解释：** 需要删除的规则类型,目前支持cc,custom,whiteblackip,geoip,ip-reputation,antitamper,antileakage,ignore,privacy **约束限制：** 不涉及 **取值范围：** - cc - custom - whiteblackip - geoip - ip-reputation - antitamper - antileakage - ignore - privacy  **默认取值：** 不涉及
+    * @param string $ruleType **参数解释：** 需要删除的规则类型,目前支持cc,custom,whiteblackip,privacy,ignore,geoip,antitamper,antileakage,ip-reputation,llm-guards **约束限制：** 需要购买“大模型防火墙”服务后才可使用llm-guards **取值范围：** - cc CC防护 - custom 精准防护 - whiteblackip 黑白名单 - geoip 地理位置防护 - ip-reputation 威胁情报 - antitamper 防篡改 - antileakage 防敏感信息泄露 - ignore 全局白名单(原误报屏蔽) - privacy 隐私屏蔽 - llm-guards 大模型防火墙 **默认取值：** 不涉及
     *
     * @return $this
     */

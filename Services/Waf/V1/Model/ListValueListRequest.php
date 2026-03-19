@@ -22,7 +22,7 @@ class ListValueListRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * page  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
-    * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
+    * pagesize  分页查询时，每页包含多少条结果。范围-1-100，默认值为-1，表示查询全部结果。
     * name  引用表名称
     *
     * @var string[]
@@ -38,7 +38,7 @@ class ListValueListRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * page  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
-    * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
+    * pagesize  分页查询时，每页包含多少条结果。范围-1-100，默认值为-1，表示查询全部结果。
     * name  引用表名称
     *
     * @var string[]
@@ -75,7 +75,7 @@ class ListValueListRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * page  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
-    * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
+    * pagesize  分页查询时，每页包含多少条结果。范围-1-100，默认值为-1，表示查询全部结果。
     * name  引用表名称
     *
     * @var string[]
@@ -91,7 +91,7 @@ class ListValueListRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * page  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
-    * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
+    * pagesize  分页查询时，每页包含多少条结果。范围-1-100，默认值为-1，表示查询全部结果。
     * name  引用表名称
     *
     * @var string[]
@@ -107,7 +107,7 @@ class ListValueListRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * page  分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
-    * pagesize  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
+    * pagesize  分页查询时，每页包含多少条结果。范围-1-100，默认值为-1，表示查询全部结果。
     * name  引用表名称
     *
     * @var string[]
@@ -258,7 +258,7 @@ class ListValueListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets pagesize
-    *  分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
+    *  分页查询时，每页包含多少条结果。范围-1-100，默认值为-1，表示查询全部结果。
     *
     * @return int|null
     */
@@ -270,7 +270,7 @@ class ListValueListRequest implements ModelInterface, ArrayAccess
     /**
     * Sets pagesize
     *
-    * @param int|null $pagesize 分页查询时，每页包含多少条结果。范围1-100，默认值为10，表示每页包含10条结果。
+    * @param int|null $pagesize 分页查询时，每页包含多少条结果。范围-1-100，默认值为-1，表示查询全部结果。
     *
     * @return $this
     */

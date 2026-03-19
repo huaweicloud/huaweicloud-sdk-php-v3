@@ -20,11 +20,11 @@ class BatchCreatePrivacyRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * url  隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"（星号）结尾代表路径前缀
-    * category  **参数解释：** 屏蔽字段 **约束限制：** 不涉及 **取值范围：**  - params: 请求参数  - cookie: 根据Cookie区分的Web访问者  - header: 自定义HTTP首部  - form: 表单参数  **默认取值：** 不涉及
-    * index  屏蔽字段名，根据“屏蔽字段”设置字段名，被屏蔽的字段将不会出现在日志中。屏蔽字段名的长度不能超过2048字节，且只能由数字、字母、下划线和中划线组成。
+    * url  **参数解释：** 隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*，以\"\\*\"结尾的路径前缀表示一个通配符，用于匹配该路径前缀下的所有子路径。例如，如果你有一个路径前缀/admin/，那么它将匹配所有以/admin/开头的URL路径。将url的参数设置为/admin/\\*，所有以/admin/开头的URL路径都会被该规则所覆盖 **约束限制：** 标准URL字符串或者URL前缀匹配字符串 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * category  **参数解释：** 屏蔽字段 **约束限制：** 不涉及 **取值范围：**  - params: 请求参数  - cookie: 根据Cookie区分的Web访问者  - header: 自定义HTTP首部  - form: 表单参数 **默认取值：** 不涉及
+    * index  **参数解释：** 屏蔽字段名，被屏蔽的字段将不会出现在日志中 **约束限制：** 长度不能超过2048字节 **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  规则描述，可选参数，设置该规则的备注信息。
-    * policyIds  添加规则的策略id列表。策略id从\"查询防护策略列表\"(ListPolicy)接口获取，多个策略之间用“,”隔开
+    * policyIds  **参数解释：** 添加规则的策略id列表。策略id从\"查询防护策略列表\"(ListPolicy)接口获取，多个策略之间用“,”隔开 **约束限制：** 不能为空 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class BatchCreatePrivacyRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * url  隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"（星号）结尾代表路径前缀
-    * category  **参数解释：** 屏蔽字段 **约束限制：** 不涉及 **取值范围：**  - params: 请求参数  - cookie: 根据Cookie区分的Web访问者  - header: 自定义HTTP首部  - form: 表单参数  **默认取值：** 不涉及
-    * index  屏蔽字段名，根据“屏蔽字段”设置字段名，被屏蔽的字段将不会出现在日志中。屏蔽字段名的长度不能超过2048字节，且只能由数字、字母、下划线和中划线组成。
+    * url  **参数解释：** 隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*，以\"\\*\"结尾的路径前缀表示一个通配符，用于匹配该路径前缀下的所有子路径。例如，如果你有一个路径前缀/admin/，那么它将匹配所有以/admin/开头的URL路径。将url的参数设置为/admin/\\*，所有以/admin/开头的URL路径都会被该规则所覆盖 **约束限制：** 标准URL字符串或者URL前缀匹配字符串 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * category  **参数解释：** 屏蔽字段 **约束限制：** 不涉及 **取值范围：**  - params: 请求参数  - cookie: 根据Cookie区分的Web访问者  - header: 自定义HTTP首部  - form: 表单参数 **默认取值：** 不涉及
+    * index  **参数解释：** 屏蔽字段名，被屏蔽的字段将不会出现在日志中 **约束限制：** 长度不能超过2048字节 **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  规则描述，可选参数，设置该规则的备注信息。
-    * policyIds  添加规则的策略id列表。策略id从\"查询防护策略列表\"(ListPolicy)接口获取，多个策略之间用“,”隔开
+    * policyIds  **参数解释：** 添加规则的策略id列表。策略id从\"查询防护策略列表\"(ListPolicy)接口获取，多个策略之间用“,”隔开 **约束限制：** 不能为空 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class BatchCreatePrivacyRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * url  隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"（星号）结尾代表路径前缀
-    * category  **参数解释：** 屏蔽字段 **约束限制：** 不涉及 **取值范围：**  - params: 请求参数  - cookie: 根据Cookie区分的Web访问者  - header: 自定义HTTP首部  - form: 表单参数  **默认取值：** 不涉及
-    * index  屏蔽字段名，根据“屏蔽字段”设置字段名，被屏蔽的字段将不会出现在日志中。屏蔽字段名的长度不能超过2048字节，且只能由数字、字母、下划线和中划线组成。
+    * url  **参数解释：** 隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*，以\"\\*\"结尾的路径前缀表示一个通配符，用于匹配该路径前缀下的所有子路径。例如，如果你有一个路径前缀/admin/，那么它将匹配所有以/admin/开头的URL路径。将url的参数设置为/admin/\\*，所有以/admin/开头的URL路径都会被该规则所覆盖 **约束限制：** 标准URL字符串或者URL前缀匹配字符串 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * category  **参数解释：** 屏蔽字段 **约束限制：** 不涉及 **取值范围：**  - params: 请求参数  - cookie: 根据Cookie区分的Web访问者  - header: 自定义HTTP首部  - form: 表单参数 **默认取值：** 不涉及
+    * index  **参数解释：** 屏蔽字段名，被屏蔽的字段将不会出现在日志中 **约束限制：** 长度不能超过2048字节 **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  规则描述，可选参数，设置该规则的备注信息。
-    * policyIds  添加规则的策略id列表。策略id从\"查询防护策略列表\"(ListPolicy)接口获取，多个策略之间用“,”隔开
+    * policyIds  **参数解释：** 添加规则的策略id列表。策略id从\"查询防护策略列表\"(ListPolicy)接口获取，多个策略之间用“,”隔开 **约束限制：** 不能为空 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class BatchCreatePrivacyRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * url  隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"（星号）结尾代表路径前缀
-    * category  **参数解释：** 屏蔽字段 **约束限制：** 不涉及 **取值范围：**  - params: 请求参数  - cookie: 根据Cookie区分的Web访问者  - header: 自定义HTTP首部  - form: 表单参数  **默认取值：** 不涉及
-    * index  屏蔽字段名，根据“屏蔽字段”设置字段名，被屏蔽的字段将不会出现在日志中。屏蔽字段名的长度不能超过2048字节，且只能由数字、字母、下划线和中划线组成。
+    * url  **参数解释：** 隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*，以\"\\*\"结尾的路径前缀表示一个通配符，用于匹配该路径前缀下的所有子路径。例如，如果你有一个路径前缀/admin/，那么它将匹配所有以/admin/开头的URL路径。将url的参数设置为/admin/\\*，所有以/admin/开头的URL路径都会被该规则所覆盖 **约束限制：** 标准URL字符串或者URL前缀匹配字符串 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * category  **参数解释：** 屏蔽字段 **约束限制：** 不涉及 **取值范围：**  - params: 请求参数  - cookie: 根据Cookie区分的Web访问者  - header: 自定义HTTP首部  - form: 表单参数 **默认取值：** 不涉及
+    * index  **参数解释：** 屏蔽字段名，被屏蔽的字段将不会出现在日志中 **约束限制：** 长度不能超过2048字节 **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  规则描述，可选参数，设置该规则的备注信息。
-    * policyIds  添加规则的策略id列表。策略id从\"查询防护策略列表\"(ListPolicy)接口获取，多个策略之间用“,”隔开
+    * policyIds  **参数解释：** 添加规则的策略id列表。策略id从\"查询防护策略列表\"(ListPolicy)接口获取，多个策略之间用“,”隔开 **约束限制：** 不能为空 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class BatchCreatePrivacyRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * url  隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"（星号）结尾代表路径前缀
-    * category  **参数解释：** 屏蔽字段 **约束限制：** 不涉及 **取值范围：**  - params: 请求参数  - cookie: 根据Cookie区分的Web访问者  - header: 自定义HTTP首部  - form: 表单参数  **默认取值：** 不涉及
-    * index  屏蔽字段名，根据“屏蔽字段”设置字段名，被屏蔽的字段将不会出现在日志中。屏蔽字段名的长度不能超过2048字节，且只能由数字、字母、下划线和中划线组成。
+    * url  **参数解释：** 隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*，以\"\\*\"结尾的路径前缀表示一个通配符，用于匹配该路径前缀下的所有子路径。例如，如果你有一个路径前缀/admin/，那么它将匹配所有以/admin/开头的URL路径。将url的参数设置为/admin/\\*，所有以/admin/开头的URL路径都会被该规则所覆盖 **约束限制：** 标准URL字符串或者URL前缀匹配字符串 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * category  **参数解释：** 屏蔽字段 **约束限制：** 不涉及 **取值范围：**  - params: 请求参数  - cookie: 根据Cookie区分的Web访问者  - header: 自定义HTTP首部  - form: 表单参数 **默认取值：** 不涉及
+    * index  **参数解释：** 屏蔽字段名，被屏蔽的字段将不会出现在日志中 **约束限制：** 长度不能超过2048字节 **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  规则描述，可选参数，设置该规则的备注信息。
-    * policyIds  添加规则的策略id列表。策略id从\"查询防护策略列表\"(ListPolicy)接口获取，多个策略之间用“,”隔开
+    * policyIds  **参数解释：** 添加规则的策略id列表。策略id从\"查询防护策略列表\"(ListPolicy)接口获取，多个策略之间用“,”隔开 **约束限制：** 不能为空 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -257,7 +257,7 @@ class BatchCreatePrivacyRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets url
-    *  隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"（星号）结尾代表路径前缀
+    *  **参数解释：** 隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*，以\"\\*\"结尾的路径前缀表示一个通配符，用于匹配该路径前缀下的所有子路径。例如，如果你有一个路径前缀/admin/，那么它将匹配所有以/admin/开头的URL路径。将url的参数设置为/admin/\\*，所有以/admin/开头的URL路径都会被该规则所覆盖 **约束限制：** 标准URL字符串或者URL前缀匹配字符串 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -269,7 +269,7 @@ class BatchCreatePrivacyRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets url
     *
-    * @param string $url 隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"（星号）结尾代表路径前缀
+    * @param string $url **参数解释：** 隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*，以\"\\*\"结尾的路径前缀表示一个通配符，用于匹配该路径前缀下的所有子路径。例如，如果你有一个路径前缀/admin/，那么它将匹配所有以/admin/开头的URL路径。将url的参数设置为/admin/\\*，所有以/admin/开头的URL路径都会被该规则所覆盖 **约束限制：** 标准URL字符串或者URL前缀匹配字符串 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -281,7 +281,7 @@ class BatchCreatePrivacyRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  **参数解释：** 屏蔽字段 **约束限制：** 不涉及 **取值范围：**  - params: 请求参数  - cookie: 根据Cookie区分的Web访问者  - header: 自定义HTTP首部  - form: 表单参数  **默认取值：** 不涉及
+    *  **参数解释：** 屏蔽字段 **约束限制：** 不涉及 **取值范围：**  - params: 请求参数  - cookie: 根据Cookie区分的Web访问者  - header: 自定义HTTP首部  - form: 表单参数 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -293,7 +293,7 @@ class BatchCreatePrivacyRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string $category **参数解释：** 屏蔽字段 **约束限制：** 不涉及 **取值范围：**  - params: 请求参数  - cookie: 根据Cookie区分的Web访问者  - header: 自定义HTTP首部  - form: 表单参数  **默认取值：** 不涉及
+    * @param string $category **参数解释：** 屏蔽字段 **约束限制：** 不涉及 **取值范围：**  - params: 请求参数  - cookie: 根据Cookie区分的Web访问者  - header: 自定义HTTP首部  - form: 表单参数 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -305,7 +305,7 @@ class BatchCreatePrivacyRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets index
-    *  屏蔽字段名，根据“屏蔽字段”设置字段名，被屏蔽的字段将不会出现在日志中。屏蔽字段名的长度不能超过2048字节，且只能由数字、字母、下划线和中划线组成。
+    *  **参数解释：** 屏蔽字段名，被屏蔽的字段将不会出现在日志中 **约束限制：** 长度不能超过2048字节 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -317,7 +317,7 @@ class BatchCreatePrivacyRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets index
     *
-    * @param string $index 屏蔽字段名，根据“屏蔽字段”设置字段名，被屏蔽的字段将不会出现在日志中。屏蔽字段名的长度不能超过2048字节，且只能由数字、字母、下划线和中划线组成。
+    * @param string $index **参数解释：** 屏蔽字段名，被屏蔽的字段将不会出现在日志中 **约束限制：** 长度不能超过2048字节 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -353,7 +353,7 @@ class BatchCreatePrivacyRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyIds
-    *  添加规则的策略id列表。策略id从\"查询防护策略列表\"(ListPolicy)接口获取，多个策略之间用“,”隔开
+    *  **参数解释：** 添加规则的策略id列表。策略id从\"查询防护策略列表\"(ListPolicy)接口获取，多个策略之间用“,”隔开 **约束限制：** 不能为空 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string[]
     */
@@ -365,7 +365,7 @@ class BatchCreatePrivacyRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets policyIds
     *
-    * @param string[] $policyIds 添加规则的策略id列表。策略id从\"查询防护策略列表\"(ListPolicy)接口获取，多个策略之间用“,”隔开
+    * @param string[] $policyIds **参数解释：** 添加规则的策略id列表。策略id从\"查询防护策略列表\"(ListPolicy)接口获取，多个策略之间用“,”隔开 **约束限制：** 不能为空 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

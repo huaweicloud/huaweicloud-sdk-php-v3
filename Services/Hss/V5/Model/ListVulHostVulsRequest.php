@@ -35,6 +35,7 @@ class ListVulHostVulsRequest implements ModelInterface, ArrayAccess
     * repairType  **参数解释**: 查询漏洞的修复紧急程度类型 **约束限制**: 不涉及 **取值范围**: - need_urgent_repair：需要紧急修复的漏洞 - unrepair：未完成修复的漏洞  **默认取值**: 不涉及
     * severityLevel  **参数解释**: 漏洞风险等级 **约束限制**: 不涉及 **取值范围**: - Critical: 紧急 - High: 高 - Medium: 中 - Low: 低  **默认取值**: 不涉及
     * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低 **默认取值**: 不涉及
+    * hostIdList  **参数解释**: 主机id列表，多个主机id用英文逗号分隔 **约束限制**: 不涉及 **取值范围**: 字符长度0-1850位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class ListVulHostVulsRequest implements ModelInterface, ArrayAccess
             'type' => 'string',
             'repairType' => 'string',
             'severityLevel' => 'string',
-            'repairPriority' => 'string'
+            'repairPriority' => 'string',
+            'hostIdList' => 'string'
     ];
 
     /**
@@ -73,6 +75,7 @@ class ListVulHostVulsRequest implements ModelInterface, ArrayAccess
     * repairType  **参数解释**: 查询漏洞的修复紧急程度类型 **约束限制**: 不涉及 **取值范围**: - need_urgent_repair：需要紧急修复的漏洞 - unrepair：未完成修复的漏洞  **默认取值**: 不涉及
     * severityLevel  **参数解释**: 漏洞风险等级 **约束限制**: 不涉及 **取值范围**: - Critical: 紧急 - High: 高 - Medium: 中 - Low: 低  **默认取值**: 不涉及
     * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低 **默认取值**: 不涉及
+    * hostIdList  **参数解释**: 主机id列表，多个主机id用英文逗号分隔 **约束限制**: 不涉及 **取值范围**: 字符长度0-1850位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class ListVulHostVulsRequest implements ModelInterface, ArrayAccess
         'type' => null,
         'repairType' => null,
         'severityLevel' => null,
-        'repairPriority' => null
+        'repairPriority' => null,
+        'hostIdList' => null
     ];
 
     /**
@@ -132,6 +136,7 @@ class ListVulHostVulsRequest implements ModelInterface, ArrayAccess
     * repairType  **参数解释**: 查询漏洞的修复紧急程度类型 **约束限制**: 不涉及 **取值范围**: - need_urgent_repair：需要紧急修复的漏洞 - unrepair：未完成修复的漏洞  **默认取值**: 不涉及
     * severityLevel  **参数解释**: 漏洞风险等级 **约束限制**: 不涉及 **取值范围**: - Critical: 紧急 - High: 高 - Medium: 中 - Low: 低  **默认取值**: 不涉及
     * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低 **默认取值**: 不涉及
+    * hostIdList  **参数解释**: 主机id列表，多个主机id用英文逗号分隔 **约束限制**: 不涉及 **取值范围**: 字符长度0-1850位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class ListVulHostVulsRequest implements ModelInterface, ArrayAccess
             'type' => 'type',
             'repairType' => 'repair_type',
             'severityLevel' => 'severity_level',
-            'repairPriority' => 'repair_priority'
+            'repairPriority' => 'repair_priority',
+            'hostIdList' => 'host_id_list'
     ];
 
     /**
@@ -170,6 +176,7 @@ class ListVulHostVulsRequest implements ModelInterface, ArrayAccess
     * repairType  **参数解释**: 查询漏洞的修复紧急程度类型 **约束限制**: 不涉及 **取值范围**: - need_urgent_repair：需要紧急修复的漏洞 - unrepair：未完成修复的漏洞  **默认取值**: 不涉及
     * severityLevel  **参数解释**: 漏洞风险等级 **约束限制**: 不涉及 **取值范围**: - Critical: 紧急 - High: 高 - Medium: 中 - Low: 低  **默认取值**: 不涉及
     * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低 **默认取值**: 不涉及
+    * hostIdList  **参数解释**: 主机id列表，多个主机id用英文逗号分隔 **约束限制**: 不涉及 **取值范围**: 字符长度0-1850位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class ListVulHostVulsRequest implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'repairType' => 'setRepairType',
             'severityLevel' => 'setSeverityLevel',
-            'repairPriority' => 'setRepairPriority'
+            'repairPriority' => 'setRepairPriority',
+            'hostIdList' => 'setHostIdList'
     ];
 
     /**
@@ -208,6 +216,7 @@ class ListVulHostVulsRequest implements ModelInterface, ArrayAccess
     * repairType  **参数解释**: 查询漏洞的修复紧急程度类型 **约束限制**: 不涉及 **取值范围**: - need_urgent_repair：需要紧急修复的漏洞 - unrepair：未完成修复的漏洞  **默认取值**: 不涉及
     * severityLevel  **参数解释**: 漏洞风险等级 **约束限制**: 不涉及 **取值范围**: - Critical: 紧急 - High: 高 - Medium: 中 - Low: 低  **默认取值**: 不涉及
     * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低 **默认取值**: 不涉及
+    * hostIdList  **参数解释**: 主机id列表，多个主机id用英文逗号分隔 **约束限制**: 不涉及 **取值范围**: 字符长度0-1850位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class ListVulHostVulsRequest implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'repairType' => 'getRepairType',
             'severityLevel' => 'getSeverityLevel',
-            'repairPriority' => 'getRepairPriority'
+            'repairPriority' => 'getRepairPriority',
+            'hostIdList' => 'getHostIdList'
     ];
 
     /**
@@ -302,6 +312,7 @@ class ListVulHostVulsRequest implements ModelInterface, ArrayAccess
         $this->container['repairType'] = isset($data['repairType']) ? $data['repairType'] : null;
         $this->container['severityLevel'] = isset($data['severityLevel']) ? $data['severityLevel'] : null;
         $this->container['repairPriority'] = isset($data['repairPriority']) ? $data['repairPriority'] : null;
+        $this->container['hostIdList'] = isset($data['hostIdList']) ? $data['hostIdList'] : null;
     }
 
     /**
@@ -386,6 +397,12 @@ class ListVulHostVulsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['repairPriority']) && !preg_match("/^Critical|High|Medium|Low$/", $this->container['repairPriority'])) {
                 $invalidProperties[] = "invalid value for 'repairPriority', must be conform to the pattern /^Critical|High|Medium|Low$/.";
+            }
+            if (!is_null($this->container['hostIdList']) && (mb_strlen($this->container['hostIdList']) > 1850)) {
+                $invalidProperties[] = "invalid value for 'hostIdList', the character length must be smaller than or equal to 1850.";
+            }
+            if (!is_null($this->container['hostIdList']) && (mb_strlen($this->container['hostIdList']) < 0)) {
+                $invalidProperties[] = "invalid value for 'hostIdList', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -758,6 +775,30 @@ class ListVulHostVulsRequest implements ModelInterface, ArrayAccess
     public function setRepairPriority($repairPriority)
     {
         $this->container['repairPriority'] = $repairPriority;
+        return $this;
+    }
+
+    /**
+    * Gets hostIdList
+    *  **参数解释**: 主机id列表，多个主机id用英文逗号分隔 **约束限制**: 不涉及 **取值范围**: 字符长度0-1850位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getHostIdList()
+    {
+        return $this->container['hostIdList'];
+    }
+
+    /**
+    * Sets hostIdList
+    *
+    * @param string|null $hostIdList **参数解释**: 主机id列表，多个主机id用英文逗号分隔 **约束限制**: 不涉及 **取值范围**: 字符长度0-1850位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setHostIdList($hostIdList)
+    {
+        $this->container['hostIdList'] = $hostIdList;
         return $this;
     }
 

@@ -20,11 +20,13 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * contentType  内容类型
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * policyId  策略id（策略id从查询防护策略列表接口获取）
-    * offset  偏移量，表示查询该偏移量之后的记录。
-    * limit  查询返回记录的数量限制。
+    * policyId  **参数解释：** 防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * offset  **参数解释：** 偏移量，表示查询该偏移量之后的记录，与参数limit一起使用 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
+    * limit  **参数解释：** 查询返回记录的数量限制，与参数offset一起使用，如果offset为设置值，则limit无效 **约束限制：** 不涉及 **取值范围：** [1, 65535] **默认取值：** 10
+    * page  **参数解释：** 当前页码，与参数pagesize一起使用 **约束限制：** 不涉及 **取值范围：** [1, 记录数/pagesize] **默认取值：** 1
+    * pagesize  **参数解释：** 每页大小，与参数page一起使用 **约束限制：** 不涉及 **取值范围：** [0, 2147483647] **默认取值：** 1000
     * name  规则名称
     * status  规则的开启状态，1表示开启，0表示关闭
     * category  **参数解释：** 防护动作 **取值范围：** - block: 拦截，表示超过“限速频率”将直接拦截。 - log：仅记录，表示超过“限速频率”将只记录不拦截。 - captcha：表示超过“限速频率”后弹出验证码，进行人机验证，完成验证后，请求将不受访问限制。人机验证目前支持英文。 - dynamic_block：上一个限速周期内，请求频率超过“限速频率”将被拦截，那么在下一个限速周期内，请求频率超过“放行频率”将被拦截。 - advanced_captcha：高阶人机验证，表示超过“限速频率”后弹出验证码，进行人机验证。 - js_challenge：要求客户端完成一段脚本的执行或验证，从而验证请求来源的合法性。
@@ -38,6 +40,8 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
             'policyId' => 'string',
             'offset' => 'int',
             'limit' => 'int',
+            'page' => 'int',
+            'pagesize' => 'int',
             'name' => 'string',
             'status' => 'int',
             'category' => 'string',
@@ -46,11 +50,13 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * contentType  内容类型
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * policyId  策略id（策略id从查询防护策略列表接口获取）
-    * offset  偏移量，表示查询该偏移量之后的记录。
-    * limit  查询返回记录的数量限制。
+    * policyId  **参数解释：** 防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * offset  **参数解释：** 偏移量，表示查询该偏移量之后的记录，与参数limit一起使用 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
+    * limit  **参数解释：** 查询返回记录的数量限制，与参数offset一起使用，如果offset为设置值，则limit无效 **约束限制：** 不涉及 **取值范围：** [1, 65535] **默认取值：** 10
+    * page  **参数解释：** 当前页码，与参数pagesize一起使用 **约束限制：** 不涉及 **取值范围：** [1, 记录数/pagesize] **默认取值：** 1
+    * pagesize  **参数解释：** 每页大小，与参数page一起使用 **约束限制：** 不涉及 **取值范围：** [0, 2147483647] **默认取值：** 1000
     * name  规则名称
     * status  规则的开启状态，1表示开启，0表示关闭
     * category  **参数解释：** 防护动作 **取值范围：** - block: 拦截，表示超过“限速频率”将直接拦截。 - log：仅记录，表示超过“限速频率”将只记录不拦截。 - captcha：表示超过“限速频率”后弹出验证码，进行人机验证，完成验证后，请求将不受访问限制。人机验证目前支持英文。 - dynamic_block：上一个限速周期内，请求频率超过“限速频率”将被拦截，那么在下一个限速周期内，请求频率超过“放行频率”将被拦截。 - advanced_captcha：高阶人机验证，表示超过“限速频率”后弹出验证码，进行人机验证。 - js_challenge：要求客户端完成一段脚本的执行或验证，从而验证请求来源的合法性。
@@ -64,6 +70,8 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
         'policyId' => null,
         'offset' => null,
         'limit' => null,
+        'page' => null,
+        'pagesize' => null,
         'name' => null,
         'status' => null,
         'category' => null,
@@ -93,11 +101,13 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * contentType  内容类型
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * policyId  策略id（策略id从查询防护策略列表接口获取）
-    * offset  偏移量，表示查询该偏移量之后的记录。
-    * limit  查询返回记录的数量限制。
+    * policyId  **参数解释：** 防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * offset  **参数解释：** 偏移量，表示查询该偏移量之后的记录，与参数limit一起使用 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
+    * limit  **参数解释：** 查询返回记录的数量限制，与参数offset一起使用，如果offset为设置值，则limit无效 **约束限制：** 不涉及 **取值范围：** [1, 65535] **默认取值：** 10
+    * page  **参数解释：** 当前页码，与参数pagesize一起使用 **约束限制：** 不涉及 **取值范围：** [1, 记录数/pagesize] **默认取值：** 1
+    * pagesize  **参数解释：** 每页大小，与参数page一起使用 **约束限制：** 不涉及 **取值范围：** [0, 2147483647] **默认取值：** 1000
     * name  规则名称
     * status  规则的开启状态，1表示开启，0表示关闭
     * category  **参数解释：** 防护动作 **取值范围：** - block: 拦截，表示超过“限速频率”将直接拦截。 - log：仅记录，表示超过“限速频率”将只记录不拦截。 - captcha：表示超过“限速频率”后弹出验证码，进行人机验证，完成验证后，请求将不受访问限制。人机验证目前支持英文。 - dynamic_block：上一个限速周期内，请求频率超过“限速频率”将被拦截，那么在下一个限速周期内，请求频率超过“放行频率”将被拦截。 - advanced_captcha：高阶人机验证，表示超过“限速频率”后弹出验证码，进行人机验证。 - js_challenge：要求客户端完成一段脚本的执行或验证，从而验证请求来源的合法性。
@@ -111,6 +121,8 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
             'policyId' => 'policy_id',
             'offset' => 'offset',
             'limit' => 'limit',
+            'page' => 'page',
+            'pagesize' => 'pagesize',
             'name' => 'name',
             'status' => 'status',
             'category' => 'category',
@@ -119,11 +131,13 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * contentType  内容类型
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * policyId  策略id（策略id从查询防护策略列表接口获取）
-    * offset  偏移量，表示查询该偏移量之后的记录。
-    * limit  查询返回记录的数量限制。
+    * policyId  **参数解释：** 防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * offset  **参数解释：** 偏移量，表示查询该偏移量之后的记录，与参数limit一起使用 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
+    * limit  **参数解释：** 查询返回记录的数量限制，与参数offset一起使用，如果offset为设置值，则limit无效 **约束限制：** 不涉及 **取值范围：** [1, 65535] **默认取值：** 10
+    * page  **参数解释：** 当前页码，与参数pagesize一起使用 **约束限制：** 不涉及 **取值范围：** [1, 记录数/pagesize] **默认取值：** 1
+    * pagesize  **参数解释：** 每页大小，与参数page一起使用 **约束限制：** 不涉及 **取值范围：** [0, 2147483647] **默认取值：** 1000
     * name  规则名称
     * status  规则的开启状态，1表示开启，0表示关闭
     * category  **参数解释：** 防护动作 **取值范围：** - block: 拦截，表示超过“限速频率”将直接拦截。 - log：仅记录，表示超过“限速频率”将只记录不拦截。 - captcha：表示超过“限速频率”后弹出验证码，进行人机验证，完成验证后，请求将不受访问限制。人机验证目前支持英文。 - dynamic_block：上一个限速周期内，请求频率超过“限速频率”将被拦截，那么在下一个限速周期内，请求频率超过“放行频率”将被拦截。 - advanced_captcha：高阶人机验证，表示超过“限速频率”后弹出验证码，进行人机验证。 - js_challenge：要求客户端完成一段脚本的执行或验证，从而验证请求来源的合法性。
@@ -137,6 +151,8 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
             'policyId' => 'setPolicyId',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
+            'page' => 'setPage',
+            'pagesize' => 'setPagesize',
             'name' => 'setName',
             'status' => 'setStatus',
             'category' => 'setCategory',
@@ -145,11 +161,13 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * contentType  内容类型
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * policyId  策略id（策略id从查询防护策略列表接口获取）
-    * offset  偏移量，表示查询该偏移量之后的记录。
-    * limit  查询返回记录的数量限制。
+    * policyId  **参数解释：** 防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * offset  **参数解释：** 偏移量，表示查询该偏移量之后的记录，与参数limit一起使用 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
+    * limit  **参数解释：** 查询返回记录的数量限制，与参数offset一起使用，如果offset为设置值，则limit无效 **约束限制：** 不涉及 **取值范围：** [1, 65535] **默认取值：** 10
+    * page  **参数解释：** 当前页码，与参数pagesize一起使用 **约束限制：** 不涉及 **取值范围：** [1, 记录数/pagesize] **默认取值：** 1
+    * pagesize  **参数解释：** 每页大小，与参数page一起使用 **约束限制：** 不涉及 **取值范围：** [0, 2147483647] **默认取值：** 1000
     * name  规则名称
     * status  规则的开启状态，1表示开启，0表示关闭
     * category  **参数解释：** 防护动作 **取值范围：** - block: 拦截，表示超过“限速频率”将直接拦截。 - log：仅记录，表示超过“限速频率”将只记录不拦截。 - captcha：表示超过“限速频率”后弹出验证码，进行人机验证，完成验证后，请求将不受访问限制。人机验证目前支持英文。 - dynamic_block：上一个限速周期内，请求频率超过“限速频率”将被拦截，那么在下一个限速周期内，请求频率超过“放行频率”将被拦截。 - advanced_captcha：高阶人机验证，表示超过“限速频率”后弹出验证码，进行人机验证。 - js_challenge：要求客户端完成一段脚本的执行或验证，从而验证请求来源的合法性。
@@ -163,6 +181,8 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
             'policyId' => 'getPolicyId',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
+            'page' => 'getPage',
+            'pagesize' => 'getPagesize',
             'name' => 'getName',
             'status' => 'getStatus',
             'category' => 'getCategory',
@@ -257,6 +277,8 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
         $this->container['policyId'] = isset($data['policyId']) ? $data['policyId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['pagesize'] = isset($data['pagesize']) ? $data['pagesize'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['category'] = isset($data['category']) ? $data['category'] : null;
@@ -277,12 +299,12 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
         if ($this->container['policyId'] === null) {
             $invalidProperties[] = "'policyId' can't be null";
         }
-        if ($this->container['offset'] === null) {
-            $invalidProperties[] = "'offset' can't be null";
-        }
-        if ($this->container['limit'] === null) {
-            $invalidProperties[] = "'limit' can't be null";
-        }
+            if (!is_null($this->container['page']) && ($this->container['page'] < 1)) {
+                $invalidProperties[] = "invalid value for 'page', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['pagesize']) && ($this->container['pagesize'] < 0)) {
+                $invalidProperties[] = "invalid value for 'pagesize', must be bigger than or equal to 0.";
+            }
             $allowedValues = $this->getTagTypeAllowableValues();
                 if (!is_null($this->container['tagType']) && !in_array($this->container['tagType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -307,7 +329,7 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets contentType
-    *  内容类型
+    *  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     *
     * @return string
     */
@@ -319,7 +341,7 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets contentType
     *
-    * @param string $contentType 内容类型
+    * @param string $contentType **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     *
     * @return $this
     */
@@ -355,7 +377,7 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyId
-    *  策略id（策略id从查询防护策略列表接口获取）
+    *  **参数解释：** 防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -367,7 +389,7 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets policyId
     *
-    * @param string $policyId 策略id（策略id从查询防护策略列表接口获取）
+    * @param string $policyId **参数解释：** 防护策略id，您可以通过调用查询防护策略列表（ListPolicy）获取策略id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -379,9 +401,9 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量，表示查询该偏移量之后的记录。
+    *  **参数解释：** 偏移量，表示查询该偏移量之后的记录，与参数limit一起使用 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
     *
-    * @return int
+    * @return int|null
     */
     public function getOffset()
     {
@@ -391,7 +413,7 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int $offset 偏移量，表示查询该偏移量之后的记录。
+    * @param int|null $offset **参数解释：** 偏移量，表示查询该偏移量之后的记录，与参数limit一起使用 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -403,9 +425,9 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询返回记录的数量限制。
+    *  **参数解释：** 查询返回记录的数量限制，与参数offset一起使用，如果offset为设置值，则limit无效 **约束限制：** 不涉及 **取值范围：** [1, 65535] **默认取值：** 10
     *
-    * @return int
+    * @return int|null
     */
     public function getLimit()
     {
@@ -415,13 +437,61 @@ class ListCcRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int $limit 查询返回记录的数量限制。
+    * @param int|null $limit **参数解释：** 查询返回记录的数量限制，与参数offset一起使用，如果offset为设置值，则limit无效 **约束限制：** 不涉及 **取值范围：** [1, 65535] **默认取值：** 10
     *
     * @return $this
     */
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets page
+    *  **参数解释：** 当前页码，与参数pagesize一起使用 **约束限制：** 不涉及 **取值范围：** [1, 记录数/pagesize] **默认取值：** 1
+    *
+    * @return int|null
+    */
+    public function getPage()
+    {
+        return $this->container['page'];
+    }
+
+    /**
+    * Sets page
+    *
+    * @param int|null $page **参数解释：** 当前页码，与参数pagesize一起使用 **约束限制：** 不涉及 **取值范围：** [1, 记录数/pagesize] **默认取值：** 1
+    *
+    * @return $this
+    */
+    public function setPage($page)
+    {
+        $this->container['page'] = $page;
+        return $this;
+    }
+
+    /**
+    * Gets pagesize
+    *  **参数解释：** 每页大小，与参数page一起使用 **约束限制：** 不涉及 **取值范围：** [0, 2147483647] **默认取值：** 1000
+    *
+    * @return int|null
+    */
+    public function getPagesize()
+    {
+        return $this->container['pagesize'];
+    }
+
+    /**
+    * Sets pagesize
+    *
+    * @param int|null $pagesize **参数解释：** 每页大小，与参数page一起使用 **约束限制：** 不涉及 **取值范围：** [0, 2147483647] **默认取值：** 1000
+    *
+    * @return $this
+    */
+    public function setPagesize($pagesize)
+    {
+        $this->container['pagesize'] = $pagesize;
         return $this;
     }
 

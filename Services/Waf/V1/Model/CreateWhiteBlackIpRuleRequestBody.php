@@ -20,12 +20,12 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  规则名称只能由字母、数字、-、_和.组成，长度不能超过64个字符
-    * addr  黑白名单ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
+    * name  **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
+    * addr  **参数解释：** ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16 **约束限制：** 参数“addr”和“ip_group_id”必须存在一个，同时存在时以参数“addr”为准 **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  黑白名单规则描述
-    * white  防护动作：  - 0 拦截  - 1 放行   - 2 仅记录
-    * ipGroupId  创建的Ip地址组id，该参数与addr参数只能使用一个；Ip地址组可在控制台中对象管理->地址组管理中添加。
-    * timeMode  生效模式，默认为permanent（立即生效）,创建自定义生效规则时请输入：customize
+    * white  **参数解释：** 防护动作 **约束限制：** 不涉及 **取值范围：**  - 0 拦截  - 1 放行   - 2 仅记录 **默认取值：** 不涉及
+    * ipGroupId  **参数解释：** Ip地址组id，可在控制台中对象管理->地址组管理中添加 **约束限制：** 参数“addr”和“ip_group_id”必须存在一个，同时存在时以参数“addr”为准 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * timeMode  **参数解释：** 生效模式 **约束限制：** 不涉及 **取值范围：** - permanent 立即生效 - customize 自定义生效 **默认取值：** permanent
     * start  规则生效开始时间，生效模式为自定义时，此字段才有效，请输入时间戳
     * terminal  规则生效结束时间，生效模式为自定义时，此字段才有效，请输入时间戳
     *
@@ -44,12 +44,12 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  规则名称只能由字母、数字、-、_和.组成，长度不能超过64个字符
-    * addr  黑白名单ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
+    * name  **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
+    * addr  **参数解释：** ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16 **约束限制：** 参数“addr”和“ip_group_id”必须存在一个，同时存在时以参数“addr”为准 **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  黑白名单规则描述
-    * white  防护动作：  - 0 拦截  - 1 放行   - 2 仅记录
-    * ipGroupId  创建的Ip地址组id，该参数与addr参数只能使用一个；Ip地址组可在控制台中对象管理->地址组管理中添加。
-    * timeMode  生效模式，默认为permanent（立即生效）,创建自定义生效规则时请输入：customize
+    * white  **参数解释：** 防护动作 **约束限制：** 不涉及 **取值范围：**  - 0 拦截  - 1 放行   - 2 仅记录 **默认取值：** 不涉及
+    * ipGroupId  **参数解释：** Ip地址组id，可在控制台中对象管理->地址组管理中添加 **约束限制：** 参数“addr”和“ip_group_id”必须存在一个，同时存在时以参数“addr”为准 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * timeMode  **参数解释：** 生效模式 **约束限制：** 不涉及 **取值范围：** - permanent 立即生效 - customize 自定义生效 **默认取值：** permanent
     * start  规则生效开始时间，生效模式为自定义时，此字段才有效，请输入时间戳
     * terminal  规则生效结束时间，生效模式为自定义时，此字段才有效，请输入时间戳
     *
@@ -89,12 +89,12 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  规则名称只能由字母、数字、-、_和.组成，长度不能超过64个字符
-    * addr  黑白名单ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
+    * name  **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
+    * addr  **参数解释：** ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16 **约束限制：** 参数“addr”和“ip_group_id”必须存在一个，同时存在时以参数“addr”为准 **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  黑白名单规则描述
-    * white  防护动作：  - 0 拦截  - 1 放行   - 2 仅记录
-    * ipGroupId  创建的Ip地址组id，该参数与addr参数只能使用一个；Ip地址组可在控制台中对象管理->地址组管理中添加。
-    * timeMode  生效模式，默认为permanent（立即生效）,创建自定义生效规则时请输入：customize
+    * white  **参数解释：** 防护动作 **约束限制：** 不涉及 **取值范围：**  - 0 拦截  - 1 放行   - 2 仅记录 **默认取值：** 不涉及
+    * ipGroupId  **参数解释：** Ip地址组id，可在控制台中对象管理->地址组管理中添加 **约束限制：** 参数“addr”和“ip_group_id”必须存在一个，同时存在时以参数“addr”为准 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * timeMode  **参数解释：** 生效模式 **约束限制：** 不涉及 **取值范围：** - permanent 立即生效 - customize 自定义生效 **默认取值：** permanent
     * start  规则生效开始时间，生效模式为自定义时，此字段才有效，请输入时间戳
     * terminal  规则生效结束时间，生效模式为自定义时，此字段才有效，请输入时间戳
     *
@@ -113,12 +113,12 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  规则名称只能由字母、数字、-、_和.组成，长度不能超过64个字符
-    * addr  黑白名单ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
+    * name  **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
+    * addr  **参数解释：** ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16 **约束限制：** 参数“addr”和“ip_group_id”必须存在一个，同时存在时以参数“addr”为准 **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  黑白名单规则描述
-    * white  防护动作：  - 0 拦截  - 1 放行   - 2 仅记录
-    * ipGroupId  创建的Ip地址组id，该参数与addr参数只能使用一个；Ip地址组可在控制台中对象管理->地址组管理中添加。
-    * timeMode  生效模式，默认为permanent（立即生效）,创建自定义生效规则时请输入：customize
+    * white  **参数解释：** 防护动作 **约束限制：** 不涉及 **取值范围：**  - 0 拦截  - 1 放行   - 2 仅记录 **默认取值：** 不涉及
+    * ipGroupId  **参数解释：** Ip地址组id，可在控制台中对象管理->地址组管理中添加 **约束限制：** 参数“addr”和“ip_group_id”必须存在一个，同时存在时以参数“addr”为准 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * timeMode  **参数解释：** 生效模式 **约束限制：** 不涉及 **取值范围：** - permanent 立即生效 - customize 自定义生效 **默认取值：** permanent
     * start  规则生效开始时间，生效模式为自定义时，此字段才有效，请输入时间戳
     * terminal  规则生效结束时间，生效模式为自定义时，此字段才有效，请输入时间戳
     *
@@ -137,12 +137,12 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  规则名称只能由字母、数字、-、_和.组成，长度不能超过64个字符
-    * addr  黑白名单ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
+    * name  **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
+    * addr  **参数解释：** ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16 **约束限制：** 参数“addr”和“ip_group_id”必须存在一个，同时存在时以参数“addr”为准 **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  黑白名单规则描述
-    * white  防护动作：  - 0 拦截  - 1 放行   - 2 仅记录
-    * ipGroupId  创建的Ip地址组id，该参数与addr参数只能使用一个；Ip地址组可在控制台中对象管理->地址组管理中添加。
-    * timeMode  生效模式，默认为permanent（立即生效）,创建自定义生效规则时请输入：customize
+    * white  **参数解释：** 防护动作 **约束限制：** 不涉及 **取值范围：**  - 0 拦截  - 1 放行   - 2 仅记录 **默认取值：** 不涉及
+    * ipGroupId  **参数解释：** Ip地址组id，可在控制台中对象管理->地址组管理中添加 **约束限制：** 参数“addr”和“ip_group_id”必须存在一个，同时存在时以参数“addr”为准 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * timeMode  **参数解释：** 生效模式 **约束限制：** 不涉及 **取值范围：** - permanent 立即生效 - customize 自定义生效 **默认取值：** permanent
     * start  规则生效开始时间，生效模式为自定义时，此字段才有效，请输入时间戳
     * terminal  规则生效结束时间，生效模式为自定义时，此字段才有效，请输入时间戳
     *
@@ -199,7 +199,22 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TIME_MODE_PERMANENT = 'permanent';
+    const TIME_MODE_CUSTOMIZE = 'customize';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTimeModeAllowableValues()
+    {
+        return [
+            self::TIME_MODE_PERMANENT,
+            self::TIME_MODE_CUSTOMIZE,
+        ];
+    }
 
 
     /**
@@ -241,6 +256,14 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['white'] === null) {
             $invalidProperties[] = "'white' can't be null";
         }
+            $allowedValues = $this->getTimeModeAllowableValues();
+                if (!is_null($this->container['timeMode']) && !in_array($this->container['timeMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'timeMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -257,7 +280,7 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  规则名称只能由字母、数字、-、_和.组成，长度不能超过64个字符
+    *  **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -269,7 +292,7 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 规则名称只能由字母、数字、-、_和.组成，长度不能超过64个字符
+    * @param string $name **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -281,7 +304,7 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets addr
-    *  黑白名单ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
+    *  **参数解释：** ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16 **约束限制：** 参数“addr”和“ip_group_id”必须存在一个，同时存在时以参数“addr”为准 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -293,7 +316,7 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets addr
     *
-    * @param string|null $addr 黑白名单ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
+    * @param string|null $addr **参数解释：** ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16 **约束限制：** 参数“addr”和“ip_group_id”必须存在一个，同时存在时以参数“addr”为准 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -329,7 +352,7 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets white
-    *  防护动作：  - 0 拦截  - 1 放行   - 2 仅记录
+    *  **参数解释：** 防护动作 **约束限制：** 不涉及 **取值范围：**  - 0 拦截  - 1 放行   - 2 仅记录 **默认取值：** 不涉及
     *
     * @return int
     */
@@ -341,7 +364,7 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets white
     *
-    * @param int $white 防护动作：  - 0 拦截  - 1 放行   - 2 仅记录
+    * @param int $white **参数解释：** 防护动作 **约束限制：** 不涉及 **取值范围：**  - 0 拦截  - 1 放行   - 2 仅记录 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -353,7 +376,7 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipGroupId
-    *  创建的Ip地址组id，该参数与addr参数只能使用一个；Ip地址组可在控制台中对象管理->地址组管理中添加。
+    *  **参数解释：** Ip地址组id，可在控制台中对象管理->地址组管理中添加 **约束限制：** 参数“addr”和“ip_group_id”必须存在一个，同时存在时以参数“addr”为准 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -365,7 +388,7 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets ipGroupId
     *
-    * @param string|null $ipGroupId 创建的Ip地址组id，该参数与addr参数只能使用一个；Ip地址组可在控制台中对象管理->地址组管理中添加。
+    * @param string|null $ipGroupId **参数解释：** Ip地址组id，可在控制台中对象管理->地址组管理中添加 **约束限制：** 参数“addr”和“ip_group_id”必须存在一个，同时存在时以参数“addr”为准 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -377,7 +400,7 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeMode
-    *  生效模式，默认为permanent（立即生效）,创建自定义生效规则时请输入：customize
+    *  **参数解释：** 生效模式 **约束限制：** 不涉及 **取值范围：** - permanent 立即生效 - customize 自定义生效 **默认取值：** permanent
     *
     * @return string|null
     */
@@ -389,7 +412,7 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets timeMode
     *
-    * @param string|null $timeMode 生效模式，默认为permanent（立即生效）,创建自定义生效规则时请输入：customize
+    * @param string|null $timeMode **参数解释：** 生效模式 **约束限制：** 不涉及 **取值范围：** - permanent 立即生效 - customize 自定义生效 **默认取值：** permanent
     *
     * @return $this
     */

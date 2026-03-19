@@ -27,12 +27,15 @@ class UpdateIgnoreRuleResponse implements ModelInterface, ArrayAccess
     * description  规则描述
     * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * url  误报规则屏蔽路径，仅在mode为0的状态下有该字段
-    * rule  需要屏蔽的规则，可屏蔽一个或者多个，屏蔽多个时使用半角符;分隔   - 当需要屏蔽某一条内置规则时，该参数值为该内置规则id,可以在Web应用防火墙控制台的防护策略->策略名称->Web基础防护的高级设置->防护规则中查询；也可以在防护事件的事件详情中查询内置规则id   - 当需要屏蔽web基础防护某一类规则时，该参数值为需要屏蔽的web基础防护某一类规则名。其中，xss：xss攻击；webshell：网站木马；vuln：其他类型攻击；sqli：sql注入攻击；robot：恶意爬虫；rfi：远程文件包含；lfi：本地文件包含；cmdi：命令注入攻击   - 当需要屏蔽Web基础防护模块，该参数值为：all   - 当需要屏蔽规则为所有检测模块时，该参数值为：bypass
+    * rule  被屏蔽检测的规则类型或规则ID
     * mode  版本号，0代表v1旧版本，1代表v2新版本；mode为0时，不存在conditions字段，存在url和url_logic字段；mode为1时，不存在url和url_logic字段，存在conditions字段
     * urlLogic  url匹配逻辑
     * conditions  条件
     * advanced  advanced
     * domain  防护域名或防护网站
+    * updateTime  规则的最后更新时间
+    * clearTime  命中次数手动清零时间
+    * hitNum  规则的命中次数
     *
     * @var string[]
     */
@@ -48,7 +51,10 @@ class UpdateIgnoreRuleResponse implements ModelInterface, ArrayAccess
             'urlLogic' => 'string',
             'conditions' => '\HuaweiCloud\SDK\Waf\V1\Model\Condition[]',
             'advanced' => '\HuaweiCloud\SDK\Waf\V1\Model\IgnoreAdvanced',
-            'domain' => 'string[]'
+            'domain' => 'string[]',
+            'updateTime' => 'int',
+            'clearTime' => 'int',
+            'hitNum' => 'int'
     ];
 
     /**
@@ -59,12 +65,15 @@ class UpdateIgnoreRuleResponse implements ModelInterface, ArrayAccess
     * description  规则描述
     * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * url  误报规则屏蔽路径，仅在mode为0的状态下有该字段
-    * rule  需要屏蔽的规则，可屏蔽一个或者多个，屏蔽多个时使用半角符;分隔   - 当需要屏蔽某一条内置规则时，该参数值为该内置规则id,可以在Web应用防火墙控制台的防护策略->策略名称->Web基础防护的高级设置->防护规则中查询；也可以在防护事件的事件详情中查询内置规则id   - 当需要屏蔽web基础防护某一类规则时，该参数值为需要屏蔽的web基础防护某一类规则名。其中，xss：xss攻击；webshell：网站木马；vuln：其他类型攻击；sqli：sql注入攻击；robot：恶意爬虫；rfi：远程文件包含；lfi：本地文件包含；cmdi：命令注入攻击   - 当需要屏蔽Web基础防护模块，该参数值为：all   - 当需要屏蔽规则为所有检测模块时，该参数值为：bypass
+    * rule  被屏蔽检测的规则类型或规则ID
     * mode  版本号，0代表v1旧版本，1代表v2新版本；mode为0时，不存在conditions字段，存在url和url_logic字段；mode为1时，不存在url和url_logic字段，存在conditions字段
     * urlLogic  url匹配逻辑
     * conditions  条件
     * advanced  advanced
     * domain  防护域名或防护网站
+    * updateTime  规则的最后更新时间
+    * clearTime  命中次数手动清零时间
+    * hitNum  规则的命中次数
     *
     * @var string[]
     */
@@ -80,7 +89,10 @@ class UpdateIgnoreRuleResponse implements ModelInterface, ArrayAccess
         'urlLogic' => null,
         'conditions' => null,
         'advanced' => null,
-        'domain' => null
+        'domain' => null,
+        'updateTime' => 'int64',
+        'clearTime' => 'int64',
+        'hitNum' => 'int32'
     ];
 
     /**
@@ -112,12 +124,15 @@ class UpdateIgnoreRuleResponse implements ModelInterface, ArrayAccess
     * description  规则描述
     * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * url  误报规则屏蔽路径，仅在mode为0的状态下有该字段
-    * rule  需要屏蔽的规则，可屏蔽一个或者多个，屏蔽多个时使用半角符;分隔   - 当需要屏蔽某一条内置规则时，该参数值为该内置规则id,可以在Web应用防火墙控制台的防护策略->策略名称->Web基础防护的高级设置->防护规则中查询；也可以在防护事件的事件详情中查询内置规则id   - 当需要屏蔽web基础防护某一类规则时，该参数值为需要屏蔽的web基础防护某一类规则名。其中，xss：xss攻击；webshell：网站木马；vuln：其他类型攻击；sqli：sql注入攻击；robot：恶意爬虫；rfi：远程文件包含；lfi：本地文件包含；cmdi：命令注入攻击   - 当需要屏蔽Web基础防护模块，该参数值为：all   - 当需要屏蔽规则为所有检测模块时，该参数值为：bypass
+    * rule  被屏蔽检测的规则类型或规则ID
     * mode  版本号，0代表v1旧版本，1代表v2新版本；mode为0时，不存在conditions字段，存在url和url_logic字段；mode为1时，不存在url和url_logic字段，存在conditions字段
     * urlLogic  url匹配逻辑
     * conditions  条件
     * advanced  advanced
     * domain  防护域名或防护网站
+    * updateTime  规则的最后更新时间
+    * clearTime  命中次数手动清零时间
+    * hitNum  规则的命中次数
     *
     * @var string[]
     */
@@ -133,7 +148,10 @@ class UpdateIgnoreRuleResponse implements ModelInterface, ArrayAccess
             'urlLogic' => 'url_logic',
             'conditions' => 'conditions',
             'advanced' => 'advanced',
-            'domain' => 'domain'
+            'domain' => 'domain',
+            'updateTime' => 'update_time',
+            'clearTime' => 'clear_time',
+            'hitNum' => 'hit_num'
     ];
 
     /**
@@ -144,12 +162,15 @@ class UpdateIgnoreRuleResponse implements ModelInterface, ArrayAccess
     * description  规则描述
     * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * url  误报规则屏蔽路径，仅在mode为0的状态下有该字段
-    * rule  需要屏蔽的规则，可屏蔽一个或者多个，屏蔽多个时使用半角符;分隔   - 当需要屏蔽某一条内置规则时，该参数值为该内置规则id,可以在Web应用防火墙控制台的防护策略->策略名称->Web基础防护的高级设置->防护规则中查询；也可以在防护事件的事件详情中查询内置规则id   - 当需要屏蔽web基础防护某一类规则时，该参数值为需要屏蔽的web基础防护某一类规则名。其中，xss：xss攻击；webshell：网站木马；vuln：其他类型攻击；sqli：sql注入攻击；robot：恶意爬虫；rfi：远程文件包含；lfi：本地文件包含；cmdi：命令注入攻击   - 当需要屏蔽Web基础防护模块，该参数值为：all   - 当需要屏蔽规则为所有检测模块时，该参数值为：bypass
+    * rule  被屏蔽检测的规则类型或规则ID
     * mode  版本号，0代表v1旧版本，1代表v2新版本；mode为0时，不存在conditions字段，存在url和url_logic字段；mode为1时，不存在url和url_logic字段，存在conditions字段
     * urlLogic  url匹配逻辑
     * conditions  条件
     * advanced  advanced
     * domain  防护域名或防护网站
+    * updateTime  规则的最后更新时间
+    * clearTime  命中次数手动清零时间
+    * hitNum  规则的命中次数
     *
     * @var string[]
     */
@@ -165,7 +186,10 @@ class UpdateIgnoreRuleResponse implements ModelInterface, ArrayAccess
             'urlLogic' => 'setUrlLogic',
             'conditions' => 'setConditions',
             'advanced' => 'setAdvanced',
-            'domain' => 'setDomain'
+            'domain' => 'setDomain',
+            'updateTime' => 'setUpdateTime',
+            'clearTime' => 'setClearTime',
+            'hitNum' => 'setHitNum'
     ];
 
     /**
@@ -176,12 +200,15 @@ class UpdateIgnoreRuleResponse implements ModelInterface, ArrayAccess
     * description  规则描述
     * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * url  误报规则屏蔽路径，仅在mode为0的状态下有该字段
-    * rule  需要屏蔽的规则，可屏蔽一个或者多个，屏蔽多个时使用半角符;分隔   - 当需要屏蔽某一条内置规则时，该参数值为该内置规则id,可以在Web应用防火墙控制台的防护策略->策略名称->Web基础防护的高级设置->防护规则中查询；也可以在防护事件的事件详情中查询内置规则id   - 当需要屏蔽web基础防护某一类规则时，该参数值为需要屏蔽的web基础防护某一类规则名。其中，xss：xss攻击；webshell：网站木马；vuln：其他类型攻击；sqli：sql注入攻击；robot：恶意爬虫；rfi：远程文件包含；lfi：本地文件包含；cmdi：命令注入攻击   - 当需要屏蔽Web基础防护模块，该参数值为：all   - 当需要屏蔽规则为所有检测模块时，该参数值为：bypass
+    * rule  被屏蔽检测的规则类型或规则ID
     * mode  版本号，0代表v1旧版本，1代表v2新版本；mode为0时，不存在conditions字段，存在url和url_logic字段；mode为1时，不存在url和url_logic字段，存在conditions字段
     * urlLogic  url匹配逻辑
     * conditions  条件
     * advanced  advanced
     * domain  防护域名或防护网站
+    * updateTime  规则的最后更新时间
+    * clearTime  命中次数手动清零时间
+    * hitNum  规则的命中次数
     *
     * @var string[]
     */
@@ -197,7 +224,10 @@ class UpdateIgnoreRuleResponse implements ModelInterface, ArrayAccess
             'urlLogic' => 'getUrlLogic',
             'conditions' => 'getConditions',
             'advanced' => 'getAdvanced',
-            'domain' => 'getDomain'
+            'domain' => 'getDomain',
+            'updateTime' => 'getUpdateTime',
+            'clearTime' => 'getClearTime',
+            'hitNum' => 'getHitNum'
     ];
 
     /**
@@ -270,6 +300,9 @@ class UpdateIgnoreRuleResponse implements ModelInterface, ArrayAccess
         $this->container['conditions'] = isset($data['conditions']) ? $data['conditions'] : null;
         $this->container['advanced'] = isset($data['advanced']) ? $data['advanced'] : null;
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
+        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
+        $this->container['clearTime'] = isset($data['clearTime']) ? $data['clearTime'] : null;
+        $this->container['hitNum'] = isset($data['hitNum']) ? $data['hitNum'] : null;
     }
 
     /**
@@ -440,7 +473,7 @@ class UpdateIgnoreRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets rule
-    *  需要屏蔽的规则，可屏蔽一个或者多个，屏蔽多个时使用半角符;分隔   - 当需要屏蔽某一条内置规则时，该参数值为该内置规则id,可以在Web应用防火墙控制台的防护策略->策略名称->Web基础防护的高级设置->防护规则中查询；也可以在防护事件的事件详情中查询内置规则id   - 当需要屏蔽web基础防护某一类规则时，该参数值为需要屏蔽的web基础防护某一类规则名。其中，xss：xss攻击；webshell：网站木马；vuln：其他类型攻击；sqli：sql注入攻击；robot：恶意爬虫；rfi：远程文件包含；lfi：本地文件包含；cmdi：命令注入攻击   - 当需要屏蔽Web基础防护模块，该参数值为：all   - 当需要屏蔽规则为所有检测模块时，该参数值为：bypass
+    *  被屏蔽检测的规则类型或规则ID
     *
     * @return string|null
     */
@@ -452,7 +485,7 @@ class UpdateIgnoreRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets rule
     *
-    * @param string|null $rule 需要屏蔽的规则，可屏蔽一个或者多个，屏蔽多个时使用半角符;分隔   - 当需要屏蔽某一条内置规则时，该参数值为该内置规则id,可以在Web应用防火墙控制台的防护策略->策略名称->Web基础防护的高级设置->防护规则中查询；也可以在防护事件的事件详情中查询内置规则id   - 当需要屏蔽web基础防护某一类规则时，该参数值为需要屏蔽的web基础防护某一类规则名。其中，xss：xss攻击；webshell：网站木马；vuln：其他类型攻击；sqli：sql注入攻击；robot：恶意爬虫；rfi：远程文件包含；lfi：本地文件包含；cmdi：命令注入攻击   - 当需要屏蔽Web基础防护模块，该参数值为：all   - 当需要屏蔽规则为所有检测模块时，该参数值为：bypass
+    * @param string|null $rule 被屏蔽检测的规则类型或规则ID
     *
     * @return $this
     */
@@ -579,6 +612,78 @@ class UpdateIgnoreRuleResponse implements ModelInterface, ArrayAccess
     public function setDomain($domain)
     {
         $this->container['domain'] = $domain;
+        return $this;
+    }
+
+    /**
+    * Gets updateTime
+    *  规则的最后更新时间
+    *
+    * @return int|null
+    */
+    public function getUpdateTime()
+    {
+        return $this->container['updateTime'];
+    }
+
+    /**
+    * Sets updateTime
+    *
+    * @param int|null $updateTime 规则的最后更新时间
+    *
+    * @return $this
+    */
+    public function setUpdateTime($updateTime)
+    {
+        $this->container['updateTime'] = $updateTime;
+        return $this;
+    }
+
+    /**
+    * Gets clearTime
+    *  命中次数手动清零时间
+    *
+    * @return int|null
+    */
+    public function getClearTime()
+    {
+        return $this->container['clearTime'];
+    }
+
+    /**
+    * Sets clearTime
+    *
+    * @param int|null $clearTime 命中次数手动清零时间
+    *
+    * @return $this
+    */
+    public function setClearTime($clearTime)
+    {
+        $this->container['clearTime'] = $clearTime;
+        return $this;
+    }
+
+    /**
+    * Gets hitNum
+    *  规则的命中次数
+    *
+    * @return int|null
+    */
+    public function getHitNum()
+    {
+        return $this->container['hitNum'];
+    }
+
+    /**
+    * Sets hitNum
+    *
+    * @param int|null $hitNum 规则的命中次数
+    *
+    * @return $this
+    */
+    public function setHitNum($hitNum)
+    {
+        $this->container['hitNum'] = $hitNum;
         return $this;
     }
 

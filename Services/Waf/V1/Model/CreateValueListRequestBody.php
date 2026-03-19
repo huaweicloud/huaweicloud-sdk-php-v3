@@ -20,10 +20,10 @@ class CreateValueListRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  引用表名称，只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过64
-    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
+    * name  **参数解释：** 引用表名称，只能由数字、字母、中划线、下划线和英文句点组成 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
+    * type  **参数解释：** 引用表类型 **约束限制：** 创建后不支持修改 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body **默认取值：** 不涉及
     * values  引用表的值
-    * description  引用表描述，最长128字符
+    * description  引用表描述，字符长度范围[0-128]
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class CreateValueListRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  引用表名称，只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过64
-    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
+    * name  **参数解释：** 引用表名称，只能由数字、字母、中划线、下划线和英文句点组成 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
+    * type  **参数解释：** 引用表类型 **约束限制：** 创建后不支持修改 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body **默认取值：** 不涉及
     * values  引用表的值
-    * description  引用表描述，最长128字符
+    * description  引用表描述，字符长度范围[0-128]
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class CreateValueListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  引用表名称，只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过64
-    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
+    * name  **参数解释：** 引用表名称，只能由数字、字母、中划线、下划线和英文句点组成 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
+    * type  **参数解释：** 引用表类型 **约束限制：** 创建后不支持修改 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body **默认取值：** 不涉及
     * values  引用表的值
-    * description  引用表描述，最长128字符
+    * description  引用表描述，字符长度范围[0-128]
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class CreateValueListRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  引用表名称，只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过64
-    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
+    * name  **参数解释：** 引用表名称，只能由数字、字母、中划线、下划线和英文句点组成 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
+    * type  **参数解释：** 引用表类型 **约束限制：** 创建后不支持修改 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body **默认取值：** 不涉及
     * values  引用表的值
-    * description  引用表描述，最长128字符
+    * description  引用表描述，字符长度范围[0-128]
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class CreateValueListRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  引用表名称，只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过64
-    * type  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
+    * name  **参数解释：** 引用表名称，只能由数字、字母、中划线、下划线和英文句点组成 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
+    * type  **参数解释：** 引用表类型 **约束限制：** 创建后不支持修改 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body **默认取值：** 不涉及
     * values  引用表的值
-    * description  引用表描述，最长128字符
+    * description  引用表描述，字符长度范围[0-128]
     *
     * @var string[]
     */
@@ -225,12 +225,6 @@ class CreateValueListRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-            if ((mb_strlen($this->container['name']) > 64)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
-            }
-            if ((mb_strlen($this->container['name']) < 2)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 2.";
-            }
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
@@ -273,7 +267,7 @@ class CreateValueListRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  引用表名称，只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过64
+    *  **参数解释：** 引用表名称，只能由数字、字母、中划线、下划线和英文句点组成 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -285,7 +279,7 @@ class CreateValueListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 引用表名称，只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过64
+    * @param string $name **参数解释：** 引用表名称，只能由数字、字母、中划线、下划线和英文句点组成 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -297,7 +291,7 @@ class CreateValueListRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
+    *  **参数解释：** 引用表类型 **约束限制：** 创建后不支持修改 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body **默认取值：** 不涉及
     *
     * @return string
     */
@@ -309,7 +303,7 @@ class CreateValueListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
+    * @param string $type **参数解释：** 引用表类型 **约束限制：** 创建后不支持修改 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -345,7 +339,7 @@ class CreateValueListRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  引用表描述，最长128字符
+    *  引用表描述，字符长度范围[0-128]
     *
     * @return string|null
     */
@@ -357,7 +351,7 @@ class CreateValueListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 引用表描述，最长128字符
+    * @param string|null $description 引用表描述，字符长度范围[0-128]
     *
     * @return $this
     */

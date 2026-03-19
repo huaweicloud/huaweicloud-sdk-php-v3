@@ -35,7 +35,7 @@ class BatchUpdateAntileakageRuleRequestBody implements ModelInterface, ArrayAcce
             'contents' => 'string[]',
             'action' => '\HuaweiCloud\SDK\Waf\V1\Model\LeakageListInfoAction',
             'description' => 'string',
-            'policyRuleIds' => '\HuaweiCloud\SDK\Waf\V1\Model\PolicyRuleIdRequestBodyPolicyRuleIds[]'
+            'policyRuleIds' => '\HuaweiCloud\SDK\Waf\V1\Model\BatchUpdateAntileakageRuleRequestBodyPolicyRuleIds[]'
     ];
 
     /**
@@ -386,7 +386,7 @@ class BatchUpdateAntileakageRuleRequestBody implements ModelInterface, ArrayAcce
     * Gets policyRuleIds
     *  **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
-    * @return \HuaweiCloud\SDK\Waf\V1\Model\PolicyRuleIdRequestBodyPolicyRuleIds[]
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\BatchUpdateAntileakageRuleRequestBodyPolicyRuleIds[]
     */
     public function getPolicyRuleIds()
     {
@@ -396,7 +396,7 @@ class BatchUpdateAntileakageRuleRequestBody implements ModelInterface, ArrayAcce
     /**
     * Sets policyRuleIds
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\PolicyRuleIdRequestBodyPolicyRuleIds[] $policyRuleIds **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\BatchUpdateAntileakageRuleRequestBodyPolicyRuleIds[] $policyRuleIds **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

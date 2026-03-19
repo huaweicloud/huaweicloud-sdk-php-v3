@@ -21,8 +21,8 @@ class ListTopIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  **参数解释：** CountItem的总数量 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
-    * items  **参数解释：** CountItem详细信息列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * total  CountItem的总数量
+    * items  CountItem详细信息列表
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListTopIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  **参数解释：** CountItem的总数量 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
-    * items  **参数解释：** CountItem详细信息列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * total  CountItem的总数量
+    * items  CountItem详细信息列表
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListTopIpResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  **参数解释：** CountItem的总数量 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
-    * items  **参数解释：** CountItem详细信息列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * total  CountItem的总数量
+    * items  CountItem详细信息列表
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListTopIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  **参数解释：** CountItem的总数量 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
-    * items  **参数解释：** CountItem详细信息列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * total  CountItem的总数量
+    * items  CountItem详细信息列表
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListTopIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  **参数解释：** CountItem的总数量 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
-    * items  **参数解释：** CountItem详细信息列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * total  CountItem的总数量
+    * items  CountItem详细信息列表
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListTopIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  **参数解释：** CountItem的总数量 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
+    *  CountItem的总数量
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ListTopIpResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total **参数解释：** CountItem的总数量 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
+    * @param int|null $total CountItem的总数量
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListTopIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets items
-    *  **参数解释：** CountItem详细信息列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  CountItem详细信息列表
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\CountItem[]|null
     */
@@ -222,7 +222,7 @@ class ListTopIpResponse implements ModelInterface, ArrayAccess
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\CountItem[]|null $items **参数解释：** CountItem详细信息列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\CountItem[]|null $items CountItem详细信息列表
     *
     * @return $this
     */

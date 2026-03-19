@@ -55,7 +55,7 @@ class BatchUpdateCcRulesRequestBody implements ModelInterface, ArrayAccess
             'domainAggregation' => 'bool',
             'regionAggregation' => 'bool',
             'description' => 'string',
-            'policyRuleIds' => '\HuaweiCloud\SDK\Waf\V1\Model\PolicyRuleIdRequestBodyPolicyRuleIds[]'
+            'policyRuleIds' => '\HuaweiCloud\SDK\Waf\V1\Model\BatchUpdateCcRulesRequestBodyPolicyRuleIds[]'
     ];
 
     /**
@@ -755,7 +755,7 @@ class BatchUpdateCcRulesRequestBody implements ModelInterface, ArrayAccess
     * Gets policyRuleIds
     *  **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
-    * @return \HuaweiCloud\SDK\Waf\V1\Model\PolicyRuleIdRequestBodyPolicyRuleIds[]
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\BatchUpdateCcRulesRequestBodyPolicyRuleIds[]
     */
     public function getPolicyRuleIds()
     {
@@ -765,7 +765,7 @@ class BatchUpdateCcRulesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets policyRuleIds
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\PolicyRuleIdRequestBodyPolicyRuleIds[] $policyRuleIds **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\BatchUpdateCcRulesRequestBodyPolicyRuleIds[] $policyRuleIds **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

@@ -143,6 +143,7 @@ class ShowSwitchesStatusRequest implements ModelInterface, ArrayAccess
     const CODE_IMAGE_PAY_PER_SCAN = 'image_pay_per_scan';
     const CODE_IMAGE_POPUP = 'image_popup';
     const CODE_IMAGE_FREE_TO_PAY_POPUP = 'image_free_to_pay_popup';
+    const CODE_DISPLAY_UNPROTECTED_HOST = 'display_unprotected_host';
     
 
     /**
@@ -157,6 +158,7 @@ class ShowSwitchesStatusRequest implements ModelInterface, ArrayAccess
             self::CODE_IMAGE_PAY_PER_SCAN,
             self::CODE_IMAGE_POPUP,
             self::CODE_IMAGE_FREE_TO_PAY_POPUP,
+            self::CODE_DISPLAY_UNPROTECTED_HOST,
         ];
     }
 

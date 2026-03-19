@@ -34,6 +34,7 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
     * transactionId  **参数解释**: 事务ID，对应内核字段：debug_query_id。 **取值范围**: 不涉及。
     * traceId  **参数解释**: 链路ID。 **取值范围**: 不涉及。
     * query  **参数解释**: 归一化SQL。 **取值范围**: 不涉及。
+    * sql  **参数解释**: 解析后的原始SQL文本。 开启track_stmt_parameter参数后，会把SQL文本中的变量替换成真实值，展示原始的SQL。对于track_stmt_parameter参数关闭时采集的SQL文本，无法获取到SQL参数变量的值，展示的内容为空。 **取值范围**: 不涉及。
     * threadId  **参数解释**: 线程ID。 **取值范围**: 不涉及。
     * sessionId  **参数解释**: 会话ID。 **取值范围**: 不涉及。
     * startTime  **参数解释**: 开始时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
@@ -89,6 +90,7 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
             'transactionId' => 'string',
             'traceId' => 'string',
             'query' => 'string',
+            'sql' => 'string',
             'threadId' => 'string',
             'sessionId' => 'string',
             'startTime' => 'string',
@@ -144,6 +146,7 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
     * transactionId  **参数解释**: 事务ID，对应内核字段：debug_query_id。 **取值范围**: 不涉及。
     * traceId  **参数解释**: 链路ID。 **取值范围**: 不涉及。
     * query  **参数解释**: 归一化SQL。 **取值范围**: 不涉及。
+    * sql  **参数解释**: 解析后的原始SQL文本。 开启track_stmt_parameter参数后，会把SQL文本中的变量替换成真实值，展示原始的SQL。对于track_stmt_parameter参数关闭时采集的SQL文本，无法获取到SQL参数变量的值，展示的内容为空。 **取值范围**: 不涉及。
     * threadId  **参数解释**: 线程ID。 **取值范围**: 不涉及。
     * sessionId  **参数解释**: 会话ID。 **取值范围**: 不涉及。
     * startTime  **参数解释**: 开始时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
@@ -199,6 +202,7 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
         'transactionId' => null,
         'traceId' => null,
         'query' => null,
+        'sql' => null,
         'threadId' => null,
         'sessionId' => null,
         'startTime' => null,
@@ -275,6 +279,7 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
     * transactionId  **参数解释**: 事务ID，对应内核字段：debug_query_id。 **取值范围**: 不涉及。
     * traceId  **参数解释**: 链路ID。 **取值范围**: 不涉及。
     * query  **参数解释**: 归一化SQL。 **取值范围**: 不涉及。
+    * sql  **参数解释**: 解析后的原始SQL文本。 开启track_stmt_parameter参数后，会把SQL文本中的变量替换成真实值，展示原始的SQL。对于track_stmt_parameter参数关闭时采集的SQL文本，无法获取到SQL参数变量的值，展示的内容为空。 **取值范围**: 不涉及。
     * threadId  **参数解释**: 线程ID。 **取值范围**: 不涉及。
     * sessionId  **参数解释**: 会话ID。 **取值范围**: 不涉及。
     * startTime  **参数解释**: 开始时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
@@ -330,6 +335,7 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
             'transactionId' => 'transaction_id',
             'traceId' => 'trace_id',
             'query' => 'query',
+            'sql' => 'sql',
             'threadId' => 'thread_id',
             'sessionId' => 'session_id',
             'startTime' => 'start_time',
@@ -385,6 +391,7 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
     * transactionId  **参数解释**: 事务ID，对应内核字段：debug_query_id。 **取值范围**: 不涉及。
     * traceId  **参数解释**: 链路ID。 **取值范围**: 不涉及。
     * query  **参数解释**: 归一化SQL。 **取值范围**: 不涉及。
+    * sql  **参数解释**: 解析后的原始SQL文本。 开启track_stmt_parameter参数后，会把SQL文本中的变量替换成真实值，展示原始的SQL。对于track_stmt_parameter参数关闭时采集的SQL文本，无法获取到SQL参数变量的值，展示的内容为空。 **取值范围**: 不涉及。
     * threadId  **参数解释**: 线程ID。 **取值范围**: 不涉及。
     * sessionId  **参数解释**: 会话ID。 **取值范围**: 不涉及。
     * startTime  **参数解释**: 开始时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
@@ -440,6 +447,7 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
             'transactionId' => 'setTransactionId',
             'traceId' => 'setTraceId',
             'query' => 'setQuery',
+            'sql' => 'setSql',
             'threadId' => 'setThreadId',
             'sessionId' => 'setSessionId',
             'startTime' => 'setStartTime',
@@ -495,6 +503,7 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
     * transactionId  **参数解释**: 事务ID，对应内核字段：debug_query_id。 **取值范围**: 不涉及。
     * traceId  **参数解释**: 链路ID。 **取值范围**: 不涉及。
     * query  **参数解释**: 归一化SQL。 **取值范围**: 不涉及。
+    * sql  **参数解释**: 解析后的原始SQL文本。 开启track_stmt_parameter参数后，会把SQL文本中的变量替换成真实值，展示原始的SQL。对于track_stmt_parameter参数关闭时采集的SQL文本，无法获取到SQL参数变量的值，展示的内容为空。 **取值范围**: 不涉及。
     * threadId  **参数解释**: 线程ID。 **取值范围**: 不涉及。
     * sessionId  **参数解释**: 会话ID。 **取值范围**: 不涉及。
     * startTime  **参数解释**: 开始时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
@@ -550,6 +559,7 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
             'transactionId' => 'getTransactionId',
             'traceId' => 'getTraceId',
             'query' => 'getQuery',
+            'sql' => 'getSql',
             'threadId' => 'getThreadId',
             'sessionId' => 'getSessionId',
             'startTime' => 'getStartTime',
@@ -661,6 +671,7 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
         $this->container['transactionId'] = isset($data['transactionId']) ? $data['transactionId'] : null;
         $this->container['traceId'] = isset($data['traceId']) ? $data['traceId'] : null;
         $this->container['query'] = isset($data['query']) ? $data['query'] : null;
+        $this->container['sql'] = isset($data['sql']) ? $data['sql'] : null;
         $this->container['threadId'] = isset($data['threadId']) ? $data['threadId'] : null;
         $this->container['sessionId'] = isset($data['sessionId']) ? $data['sessionId'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
@@ -1055,6 +1066,30 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
     public function setQuery($query)
     {
         $this->container['query'] = $query;
+        return $this;
+    }
+
+    /**
+    * Gets sql
+    *  **参数解释**: 解析后的原始SQL文本。 开启track_stmt_parameter参数后，会把SQL文本中的变量替换成真实值，展示原始的SQL。对于track_stmt_parameter参数关闭时采集的SQL文本，无法获取到SQL参数变量的值，展示的内容为空。 **取值范围**: 不涉及。
+    *
+    * @return string|null
+    */
+    public function getSql()
+    {
+        return $this->container['sql'];
+    }
+
+    /**
+    * Sets sql
+    *
+    * @param string|null $sql **参数解释**: 解析后的原始SQL文本。 开启track_stmt_parameter参数后，会把SQL文本中的变量替换成真实值，展示原始的SQL。对于track_stmt_parameter参数关闭时采集的SQL文本，无法获取到SQL参数变量的值，展示的内容为空。 **取值范围**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setSql($sql)
+    {
+        $this->container['sql'] = $sql;
         return $this;
     }
 

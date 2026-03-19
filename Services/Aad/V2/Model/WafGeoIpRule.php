@@ -54,7 +54,7 @@ class WafGeoIpRule implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'overseasType' => 'int32',
-        'timestamp' => 'int32',
+        'timestamp' => 'int64',
         'white' => 'int32'
     ];
 

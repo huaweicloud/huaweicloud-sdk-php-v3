@@ -20,10 +20,10 @@ class ShowEventRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * contentType  内容类型
-    * xLanguage  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    * xLanguage  **参数解释：** 客户端IP所属地理位置展示语言，默认值为en-us **约束限制：** 不涉及 **取值范围：** - zh-cn 中文 - en-us 英文 **默认取值：** en-us
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * eventid  防护事件id,通过调用查询攻击事件列表(ListEvent)接口获取防护事件id
+    * eventid  **参数解释：** 防护事件id,通过调用查询攻击事件列表(ListEvent)接口获取防护事件id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ShowEventRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * contentType  内容类型
-    * xLanguage  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    * xLanguage  **参数解释：** 客户端IP所属地理位置展示语言，默认值为en-us **约束限制：** 不涉及 **取值范围：** - zh-cn 中文 - en-us 英文 **默认取值：** en-us
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * eventid  防护事件id,通过调用查询攻击事件列表(ListEvent)接口获取防护事件id
+    * eventid  **参数解释：** 防护事件id,通过调用查询攻击事件列表(ListEvent)接口获取防护事件id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ShowEventRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * contentType  内容类型
-    * xLanguage  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    * xLanguage  **参数解释：** 客户端IP所属地理位置展示语言，默认值为en-us **约束限制：** 不涉及 **取值范围：** - zh-cn 中文 - en-us 英文 **默认取值：** en-us
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * eventid  防护事件id,通过调用查询攻击事件列表(ListEvent)接口获取防护事件id
+    * eventid  **参数解释：** 防护事件id,通过调用查询攻击事件列表(ListEvent)接口获取防护事件id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ShowEventRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * contentType  内容类型
-    * xLanguage  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    * xLanguage  **参数解释：** 客户端IP所属地理位置展示语言，默认值为en-us **约束限制：** 不涉及 **取值范围：** - zh-cn 中文 - en-us 英文 **默认取值：** en-us
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * eventid  防护事件id,通过调用查询攻击事件列表(ListEvent)接口获取防护事件id
+    * eventid  **参数解释：** 防护事件id,通过调用查询攻击事件列表(ListEvent)接口获取防护事件id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ShowEventRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * contentType  内容类型
-    * xLanguage  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    * xLanguage  **参数解释：** 客户端IP所属地理位置展示语言，默认值为en-us **约束限制：** 不涉及 **取值范围：** - zh-cn 中文 - en-us 英文 **默认取值：** en-us
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * eventid  防护事件id,通过调用查询攻击事件列表(ListEvent)接口获取防护事件id
+    * eventid  **参数解释：** 防护事件id,通过调用查询攻击事件列表(ListEvent)接口获取防护事件id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -159,7 +159,22 @@ class ShowEventRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const X_LANGUAGE_ZH_CN = 'zh-cn';
+    const X_LANGUAGE_EN_US = 'en-us';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getXLanguageAllowableValues()
+    {
+        return [
+            self::X_LANGUAGE_ZH_CN,
+            self::X_LANGUAGE_EN_US,
+        ];
+    }
 
 
     /**
@@ -194,6 +209,14 @@ class ShowEventRequest implements ModelInterface, ArrayAccess
         if ($this->container['contentType'] === null) {
             $invalidProperties[] = "'contentType' can't be null";
         }
+            $allowedValues = $this->getXLanguageAllowableValues();
+                if (!is_null($this->container['xLanguage']) && !in_array($this->container['xLanguage'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'xLanguage', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['eventid'] === null) {
             $invalidProperties[] = "'eventid' can't be null";
         }
@@ -213,7 +236,7 @@ class ShowEventRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets contentType
-    *  内容类型
+    *  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     *
     * @return string
     */
@@ -225,7 +248,7 @@ class ShowEventRequest implements ModelInterface, ArrayAccess
     /**
     * Sets contentType
     *
-    * @param string $contentType 内容类型
+    * @param string $contentType **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     *
     * @return $this
     */
@@ -237,7 +260,7 @@ class ShowEventRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xLanguage
-    *  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
+    *  **参数解释：** 客户端IP所属地理位置展示语言，默认值为en-us **约束限制：** 不涉及 **取值范围：** - zh-cn 中文 - en-us 英文 **默认取值：** en-us
     *
     * @return string|null
     */
@@ -249,7 +272,7 @@ class ShowEventRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xLanguage
     *
-    * @param string|null $xLanguage 语言，默认值为en-us。zh-cn（中文）/en-us（英文）
+    * @param string|null $xLanguage **参数解释：** 客户端IP所属地理位置展示语言，默认值为en-us **约束限制：** 不涉及 **取值范围：** - zh-cn 中文 - en-us 英文 **默认取值：** en-us
     *
     * @return $this
     */
@@ -285,7 +308,7 @@ class ShowEventRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventid
-    *  防护事件id,通过调用查询攻击事件列表(ListEvent)接口获取防护事件id
+    *  **参数解释：** 防护事件id,通过调用查询攻击事件列表(ListEvent)接口获取防护事件id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -297,7 +320,7 @@ class ShowEventRequest implements ModelInterface, ArrayAccess
     /**
     * Sets eventid
     *
-    * @param string $eventid 防护事件id,通过调用查询攻击事件列表(ListEvent)接口获取防护事件id
+    * @param string $eventid **参数解释：** 防护事件id,通过调用查询攻击事件列表(ListEvent)接口获取防护事件id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

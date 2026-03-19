@@ -21,7 +21,7 @@ class DeleteAgencyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * purged  **参数解释：** purged取值为true时，会同步删除在IAM处创建的premium_waf_svc_trust委托，purged取值为false时，不会同步删除在IAM处创建的premium_waf_svc_trust委托 **约束限制：** 不涉及 **取值范围：** - true - false  **默认取值：** 不涉及
+    * purged  **参数解释：** purged取值为true时，会同步删除在IAM处创建的premium_waf_svc_trust委托，purged取值为false时，不会同步删除在IAM处创建的premium_waf_svc_trust委托 **约束限制：** 不涉及 **取值范围：** - true - false **默认取值：** 不涉及
     * roleIdList  **参数解释：** 待删除的代理id **约束限制：** 不涉及 **取值范围：** 从 “查询独享引擎代理”接口的返回结果中，选取需要删除代理的id值 **默认取值：** 不涉及
     *
     * @var string[]
@@ -35,7 +35,7 @@ class DeleteAgencyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * purged  **参数解释：** purged取值为true时，会同步删除在IAM处创建的premium_waf_svc_trust委托，purged取值为false时，不会同步删除在IAM处创建的premium_waf_svc_trust委托 **约束限制：** 不涉及 **取值范围：** - true - false  **默认取值：** 不涉及
+    * purged  **参数解释：** purged取值为true时，会同步删除在IAM处创建的premium_waf_svc_trust委托，purged取值为false时，不会同步删除在IAM处创建的premium_waf_svc_trust委托 **约束限制：** 不涉及 **取值范围：** - true - false **默认取值：** 不涉及
     * roleIdList  **参数解释：** 待删除的代理id **约束限制：** 不涉及 **取值范围：** 从 “查询独享引擎代理”接口的返回结果中，选取需要删除代理的id值 **默认取值：** 不涉及
     *
     * @var string[]
@@ -70,7 +70,7 @@ class DeleteAgencyRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * purged  **参数解释：** purged取值为true时，会同步删除在IAM处创建的premium_waf_svc_trust委托，purged取值为false时，不会同步删除在IAM处创建的premium_waf_svc_trust委托 **约束限制：** 不涉及 **取值范围：** - true - false  **默认取值：** 不涉及
+    * purged  **参数解释：** purged取值为true时，会同步删除在IAM处创建的premium_waf_svc_trust委托，purged取值为false时，不会同步删除在IAM处创建的premium_waf_svc_trust委托 **约束限制：** 不涉及 **取值范围：** - true - false **默认取值：** 不涉及
     * roleIdList  **参数解释：** 待删除的代理id **约束限制：** 不涉及 **取值范围：** 从 “查询独享引擎代理”接口的返回结果中，选取需要删除代理的id值 **默认取值：** 不涉及
     *
     * @var string[]
@@ -84,7 +84,7 @@ class DeleteAgencyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * purged  **参数解释：** purged取值为true时，会同步删除在IAM处创建的premium_waf_svc_trust委托，purged取值为false时，不会同步删除在IAM处创建的premium_waf_svc_trust委托 **约束限制：** 不涉及 **取值范围：** - true - false  **默认取值：** 不涉及
+    * purged  **参数解释：** purged取值为true时，会同步删除在IAM处创建的premium_waf_svc_trust委托，purged取值为false时，不会同步删除在IAM处创建的premium_waf_svc_trust委托 **约束限制：** 不涉及 **取值范围：** - true - false **默认取值：** 不涉及
     * roleIdList  **参数解释：** 待删除的代理id **约束限制：** 不涉及 **取值范围：** 从 “查询独享引擎代理”接口的返回结果中，选取需要删除代理的id值 **默认取值：** 不涉及
     *
     * @var string[]
@@ -98,7 +98,7 @@ class DeleteAgencyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * purged  **参数解释：** purged取值为true时，会同步删除在IAM处创建的premium_waf_svc_trust委托，purged取值为false时，不会同步删除在IAM处创建的premium_waf_svc_trust委托 **约束限制：** 不涉及 **取值范围：** - true - false  **默认取值：** 不涉及
+    * purged  **参数解释：** purged取值为true时，会同步删除在IAM处创建的premium_waf_svc_trust委托，purged取值为false时，不会同步删除在IAM处创建的premium_waf_svc_trust委托 **约束限制：** 不涉及 **取值范围：** - true - false **默认取值：** 不涉及
     * roleIdList  **参数解释：** 待删除的代理id **约束限制：** 不涉及 **取值范围：** 从 “查询独享引擎代理”接口的返回结果中，选取需要删除代理的id值 **默认取值：** 不涉及
     *
     * @var string[]
@@ -223,7 +223,7 @@ class DeleteAgencyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets purged
-    *  **参数解释：** purged取值为true时，会同步删除在IAM处创建的premium_waf_svc_trust委托，purged取值为false时，不会同步删除在IAM处创建的premium_waf_svc_trust委托 **约束限制：** 不涉及 **取值范围：** - true - false  **默认取值：** 不涉及
+    *  **参数解释：** purged取值为true时，会同步删除在IAM处创建的premium_waf_svc_trust委托，purged取值为false时，不会同步删除在IAM处创建的premium_waf_svc_trust委托 **约束限制：** 不涉及 **取值范围：** - true - false **默认取值：** 不涉及
     *
     * @return bool|null
     */
@@ -235,7 +235,7 @@ class DeleteAgencyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets purged
     *
-    * @param bool|null $purged **参数解释：** purged取值为true时，会同步删除在IAM处创建的premium_waf_svc_trust委托，purged取值为false时，不会同步删除在IAM处创建的premium_waf_svc_trust委托 **约束限制：** 不涉及 **取值范围：** - true - false  **默认取值：** 不涉及
+    * @param bool|null $purged **参数解释：** purged取值为true时，会同步删除在IAM处创建的premium_waf_svc_trust委托，purged取值为false时，不会同步删除在IAM处创建的premium_waf_svc_trust委托 **约束限制：** 不涉及 **取值范围：** - true - false **默认取值：** 不涉及
     *
     * @return $this
     */

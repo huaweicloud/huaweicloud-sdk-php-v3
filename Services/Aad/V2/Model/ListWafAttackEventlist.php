@@ -58,7 +58,7 @@ class ListWafAttackEventlist implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'domain' => null,
-        'time' => 'int32',
+        'time' => 'int64',
         'sip' => null,
         'action' => null,
         'url' => null,

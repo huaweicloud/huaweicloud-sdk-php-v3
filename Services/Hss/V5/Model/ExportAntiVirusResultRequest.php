@@ -27,7 +27,8 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * publicIp  **参数解释**: 服务器弹性IP地址 **约束限制**: 不涉及 **取值范围**: IPv4格式（长度7-15位）、IPv6格式（长度15-39位） **默认取值**: 无
     * handleStatus  **参数解释**: 处置状态 **约束限制**: 不涉及 **取值范围**: 包含如下:   - unhandled：未处理   - handled：已处理 **默认取值**: 不涉及
-    * severityList  **参数解释**: 威胁等级 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
+    * severityList  **参数解释**: 威胁等级，已废弃 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
+    * severities  威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 无
     * malwareName  **参数解释**: 病毒名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * filePath  **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
@@ -48,6 +49,7 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
             'publicIp' => 'string',
             'handleStatus' => 'string',
             'severityList' => 'string[]',
+            'severities' => 'string',
             'assetValue' => 'string',
             'malwareName' => 'string',
             'filePath' => 'string',
@@ -67,7 +69,8 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * publicIp  **参数解释**: 服务器弹性IP地址 **约束限制**: 不涉及 **取值范围**: IPv4格式（长度7-15位）、IPv6格式（长度15-39位） **默认取值**: 无
     * handleStatus  **参数解释**: 处置状态 **约束限制**: 不涉及 **取值范围**: 包含如下:   - unhandled：未处理   - handled：已处理 **默认取值**: 不涉及
-    * severityList  **参数解释**: 威胁等级 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
+    * severityList  **参数解释**: 威胁等级，已废弃 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
+    * severities  威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 无
     * malwareName  **参数解释**: 病毒名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * filePath  **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
@@ -88,6 +91,7 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
         'publicIp' => null,
         'handleStatus' => null,
         'severityList' => null,
+        'severities' => null,
         'assetValue' => null,
         'malwareName' => null,
         'filePath' => null,
@@ -128,7 +132,8 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * publicIp  **参数解释**: 服务器弹性IP地址 **约束限制**: 不涉及 **取值范围**: IPv4格式（长度7-15位）、IPv6格式（长度15-39位） **默认取值**: 无
     * handleStatus  **参数解释**: 处置状态 **约束限制**: 不涉及 **取值范围**: 包含如下:   - unhandled：未处理   - handled：已处理 **默认取值**: 不涉及
-    * severityList  **参数解释**: 威胁等级 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
+    * severityList  **参数解释**: 威胁等级，已废弃 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
+    * severities  威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 无
     * malwareName  **参数解释**: 病毒名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * filePath  **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
@@ -149,6 +154,7 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
             'publicIp' => 'public_ip',
             'handleStatus' => 'handle_status',
             'severityList' => 'severity_list',
+            'severities' => 'severities',
             'assetValue' => 'asset_value',
             'malwareName' => 'malware_name',
             'filePath' => 'file_path',
@@ -168,7 +174,8 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * publicIp  **参数解释**: 服务器弹性IP地址 **约束限制**: 不涉及 **取值范围**: IPv4格式（长度7-15位）、IPv6格式（长度15-39位） **默认取值**: 无
     * handleStatus  **参数解释**: 处置状态 **约束限制**: 不涉及 **取值范围**: 包含如下:   - unhandled：未处理   - handled：已处理 **默认取值**: 不涉及
-    * severityList  **参数解释**: 威胁等级 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
+    * severityList  **参数解释**: 威胁等级，已废弃 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
+    * severities  威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 无
     * malwareName  **参数解释**: 病毒名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * filePath  **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
@@ -189,6 +196,7 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
             'publicIp' => 'setPublicIp',
             'handleStatus' => 'setHandleStatus',
             'severityList' => 'setSeverityList',
+            'severities' => 'setSeverities',
             'assetValue' => 'setAssetValue',
             'malwareName' => 'setMalwareName',
             'filePath' => 'setFilePath',
@@ -208,7 +216,8 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
     * privateIp  **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * publicIp  **参数解释**: 服务器弹性IP地址 **约束限制**: 不涉及 **取值范围**: IPv4格式（长度7-15位）、IPv6格式（长度15-39位） **默认取值**: 无
     * handleStatus  **参数解释**: 处置状态 **约束限制**: 不涉及 **取值范围**: 包含如下:   - unhandled：未处理   - handled：已处理 **默认取值**: 不涉及
-    * severityList  **参数解释**: 威胁等级 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
+    * severityList  **参数解释**: 威胁等级，已废弃 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
+    * severities  威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 无
     * malwareName  **参数解释**: 病毒名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * filePath  **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
@@ -229,6 +238,7 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
             'publicIp' => 'getPublicIp',
             'handleStatus' => 'getHandleStatus',
             'severityList' => 'getSeverityList',
+            'severities' => 'getSeverities',
             'assetValue' => 'getAssetValue',
             'malwareName' => 'getMalwareName',
             'filePath' => 'getFilePath',
@@ -305,6 +315,7 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
         $this->container['publicIp'] = isset($data['publicIp']) ? $data['publicIp'] : null;
         $this->container['handleStatus'] = isset($data['handleStatus']) ? $data['handleStatus'] : null;
         $this->container['severityList'] = isset($data['severityList']) ? $data['severityList'] : null;
+        $this->container['severities'] = isset($data['severities']) ? $data['severities'] : null;
         $this->container['assetValue'] = isset($data['assetValue']) ? $data['assetValue'] : null;
         $this->container['malwareName'] = isset($data['malwareName']) ? $data['malwareName'] : null;
         $this->container['filePath'] = isset($data['filePath']) ? $data['filePath'] : null;
@@ -382,6 +393,12 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['handleStatus']) && (mb_strlen($this->container['handleStatus']) < 1)) {
                 $invalidProperties[] = "invalid value for 'handleStatus', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['severities']) && (mb_strlen($this->container['severities']) > 256)) {
+                $invalidProperties[] = "invalid value for 'severities', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['severities']) && (mb_strlen($this->container['severities']) < 1)) {
+                $invalidProperties[] = "invalid value for 'severities', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) > 128)) {
                 $invalidProperties[] = "invalid value for 'assetValue', the character length must be smaller than or equal to 128.";
@@ -615,7 +632,7 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets severityList
-    *  **参数解释**: 威胁等级 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
+    *  **参数解释**: 威胁等级，已废弃 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
     *
     * @return string[]|null
     */
@@ -627,13 +644,37 @@ class ExportAntiVirusResultRequest implements ModelInterface, ArrayAccess
     /**
     * Sets severityList
     *
-    * @param string[]|null $severityList **参数解释**: 威胁等级 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
+    * @param string[]|null $severityList **参数解释**: 威胁等级，已废弃 **约束限制**: 不涉及 **取值范围**: 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命 **默认取值**: 不涉及
     *
     * @return $this
     */
     public function setSeverityList($severityList)
     {
         $this->container['severityList'] = $severityList;
+        return $this;
+    }
+
+    /**
+    * Gets severities
+    *  威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
+    *
+    * @return string|null
+    */
+    public function getSeverities()
+    {
+        return $this->container['severities'];
+    }
+
+    /**
+    * Sets severities
+    *
+    * @param string|null $severities 威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
+    *
+    * @return $this
+    */
+    public function setSeverities($severities)
+    {
+        $this->container['severities'] = $severities;
         return $this;
     }
 

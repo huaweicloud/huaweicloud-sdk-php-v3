@@ -21,7 +21,7 @@ class UpdatePremiumHostAccessStatusResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：** - 0 关闭 - 1 开启 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class UpdatePremiumHostAccessStatusResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：** - 0 关闭 - 1 开启 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class UpdatePremiumHostAccessStatusResponse implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：** - 0 关闭 - 1 开启 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class UpdatePremiumHostAccessStatusResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：** - 0 关闭 - 1 开启 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class UpdatePremiumHostAccessStatusResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * accessStatus  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：** - 0 关闭 - 1 开启 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class UpdatePremiumHostAccessStatusResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets accessStatus
-    *  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：** - 0 关闭 - 1 开启 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -187,7 +187,7 @@ class UpdatePremiumHostAccessStatusResponse implements ModelInterface, ArrayAcce
     /**
     * Sets accessStatus
     *
-    * @param int|null $accessStatus **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param int|null $accessStatus **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：** - 0 关闭 - 1 开启 **默认取值：** 不涉及
     *
     * @return $this
     */

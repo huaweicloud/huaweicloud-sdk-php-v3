@@ -28,7 +28,6 @@ class DedicatedHostType implements ModelInterface, ArrayAccess
     * supportedFlavors  专属主机规格列表。
     * category  专属主机类型的类别。
     * availabilityZoneOfferings  availabilityZoneOfferings
-    * pageInfo  pageInfo
     *
     * @var string[]
     */
@@ -40,8 +39,7 @@ class DedicatedHostType implements ModelInterface, ArrayAccess
             'memory' => 'int',
             'supportedFlavors' => 'string[]',
             'category' => 'string',
-            'availabilityZoneOfferings' => '\HuaweiCloud\SDK\DeH\V1\Model\DedicatedHostTypeOffering[]',
-            'pageInfo' => '\HuaweiCloud\SDK\DeH\V1\Model\PageInfo'
+            'availabilityZoneOfferings' => '\HuaweiCloud\SDK\DeH\V1\Model\DedicatedHostTypeOffering[]'
     ];
 
     /**
@@ -54,7 +52,6 @@ class DedicatedHostType implements ModelInterface, ArrayAccess
     * supportedFlavors  专属主机规格列表。
     * category  专属主机类型的类别。
     * availabilityZoneOfferings  availabilityZoneOfferings
-    * pageInfo  pageInfo
     *
     * @var string[]
     */
@@ -66,8 +63,7 @@ class DedicatedHostType implements ModelInterface, ArrayAccess
         'memory' => 'int32',
         'supportedFlavors' => null,
         'category' => null,
-        'availabilityZoneOfferings' => null,
-        'pageInfo' => null
+        'availabilityZoneOfferings' => null
     ];
 
     /**
@@ -101,7 +97,6 @@ class DedicatedHostType implements ModelInterface, ArrayAccess
     * supportedFlavors  专属主机规格列表。
     * category  专属主机类型的类别。
     * availabilityZoneOfferings  availabilityZoneOfferings
-    * pageInfo  pageInfo
     *
     * @var string[]
     */
@@ -113,8 +108,7 @@ class DedicatedHostType implements ModelInterface, ArrayAccess
             'memory' => 'memory',
             'supportedFlavors' => 'supported_flavors',
             'category' => 'category',
-            'availabilityZoneOfferings' => 'availability_zone_offerings',
-            'pageInfo' => 'page_info'
+            'availabilityZoneOfferings' => 'availability_zone_offerings'
     ];
 
     /**
@@ -127,7 +121,6 @@ class DedicatedHostType implements ModelInterface, ArrayAccess
     * supportedFlavors  专属主机规格列表。
     * category  专属主机类型的类别。
     * availabilityZoneOfferings  availabilityZoneOfferings
-    * pageInfo  pageInfo
     *
     * @var string[]
     */
@@ -139,8 +132,7 @@ class DedicatedHostType implements ModelInterface, ArrayAccess
             'memory' => 'setMemory',
             'supportedFlavors' => 'setSupportedFlavors',
             'category' => 'setCategory',
-            'availabilityZoneOfferings' => 'setAvailabilityZoneOfferings',
-            'pageInfo' => 'setPageInfo'
+            'availabilityZoneOfferings' => 'setAvailabilityZoneOfferings'
     ];
 
     /**
@@ -153,7 +145,6 @@ class DedicatedHostType implements ModelInterface, ArrayAccess
     * supportedFlavors  专属主机规格列表。
     * category  专属主机类型的类别。
     * availabilityZoneOfferings  availabilityZoneOfferings
-    * pageInfo  pageInfo
     *
     * @var string[]
     */
@@ -165,8 +156,7 @@ class DedicatedHostType implements ModelInterface, ArrayAccess
             'memory' => 'getMemory',
             'supportedFlavors' => 'getSupportedFlavors',
             'category' => 'getCategory',
-            'availabilityZoneOfferings' => 'getAvailabilityZoneOfferings',
-            'pageInfo' => 'getPageInfo'
+            'availabilityZoneOfferings' => 'getAvailabilityZoneOfferings'
     ];
 
     /**
@@ -235,7 +225,6 @@ class DedicatedHostType implements ModelInterface, ArrayAccess
         $this->container['supportedFlavors'] = isset($data['supportedFlavors']) ? $data['supportedFlavors'] : null;
         $this->container['category'] = isset($data['category']) ? $data['category'] : null;
         $this->container['availabilityZoneOfferings'] = isset($data['availabilityZoneOfferings']) ? $data['availabilityZoneOfferings'] : null;
-        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
     /**
@@ -279,9 +268,6 @@ class DedicatedHostType implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['category']) < 1)) {
                 $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['pageInfo'] === null) {
-            $invalidProperties[] = "'pageInfo' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -485,30 +471,6 @@ class DedicatedHostType implements ModelInterface, ArrayAccess
     public function setAvailabilityZoneOfferings($availabilityZoneOfferings)
     {
         $this->container['availabilityZoneOfferings'] = $availabilityZoneOfferings;
-        return $this;
-    }
-
-    /**
-    * Gets pageInfo
-    *  pageInfo
-    *
-    * @return \HuaweiCloud\SDK\DeH\V1\Model\PageInfo
-    */
-    public function getPageInfo()
-    {
-        return $this->container['pageInfo'];
-    }
-
-    /**
-    * Sets pageInfo
-    *
-    * @param \HuaweiCloud\SDK\DeH\V1\Model\PageInfo $pageInfo pageInfo
-    *
-    * @return $this
-    */
-    public function setPageInfo($pageInfo)
-    {
-        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

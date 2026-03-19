@@ -27,6 +27,7 @@ class TemplateParamVariable implements ModelInterface, ArrayAccess
     * sensitive  变量是否为敏感字段。
     * type  变量类型。
     * validations  模板的部署参数变量的校验规则。
+    * latestParam  最近一次的部署参数。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class TemplateParamVariable implements ModelInterface, ArrayAccess
             'nullable' => 'bool',
             'sensitive' => 'bool',
             'type' => 'string',
-            'validations' => '\HuaweiCloud\SDK\Rgc\V1\Model\TemplateParamVariableValidation[]'
+            'validations' => '\HuaweiCloud\SDK\Rgc\V1\Model\TemplateParamVariableValidation[]',
+            'latestParam' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class TemplateParamVariable implements ModelInterface, ArrayAccess
     * sensitive  变量是否为敏感字段。
     * type  变量类型。
     * validations  模板的部署参数变量的校验规则。
+    * latestParam  最近一次的部署参数。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class TemplateParamVariable implements ModelInterface, ArrayAccess
         'nullable' => null,
         'sensitive' => null,
         'type' => null,
-        'validations' => null
+        'validations' => null,
+        'latestParam' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class TemplateParamVariable implements ModelInterface, ArrayAccess
     * sensitive  变量是否为敏感字段。
     * type  变量类型。
     * validations  模板的部署参数变量的校验规则。
+    * latestParam  最近一次的部署参数。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class TemplateParamVariable implements ModelInterface, ArrayAccess
             'nullable' => 'nullable',
             'sensitive' => 'sensitive',
             'type' => 'type',
-            'validations' => 'validations'
+            'validations' => 'validations',
+            'latestParam' => 'latest_param'
     ];
 
     /**
@@ -114,6 +120,7 @@ class TemplateParamVariable implements ModelInterface, ArrayAccess
     * sensitive  变量是否为敏感字段。
     * type  变量类型。
     * validations  模板的部署参数变量的校验规则。
+    * latestParam  最近一次的部署参数。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class TemplateParamVariable implements ModelInterface, ArrayAccess
             'nullable' => 'setNullable',
             'sensitive' => 'setSensitive',
             'type' => 'setType',
-            'validations' => 'setValidations'
+            'validations' => 'setValidations',
+            'latestParam' => 'setLatestParam'
     ];
 
     /**
@@ -136,6 +144,7 @@ class TemplateParamVariable implements ModelInterface, ArrayAccess
     * sensitive  变量是否为敏感字段。
     * type  变量类型。
     * validations  模板的部署参数变量的校验规则。
+    * latestParam  最近一次的部署参数。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class TemplateParamVariable implements ModelInterface, ArrayAccess
             'nullable' => 'getNullable',
             'sensitive' => 'getSensitive',
             'type' => 'getType',
-            'validations' => 'getValidations'
+            'validations' => 'getValidations',
+            'latestParam' => 'getLatestParam'
     ];
 
     /**
@@ -214,6 +224,7 @@ class TemplateParamVariable implements ModelInterface, ArrayAccess
         $this->container['sensitive'] = isset($data['sensitive']) ? $data['sensitive'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['validations'] = isset($data['validations']) ? $data['validations'] : null;
+        $this->container['latestParam'] = isset($data['latestParam']) ? $data['latestParam'] : null;
     }
 
     /**
@@ -403,6 +414,30 @@ class TemplateParamVariable implements ModelInterface, ArrayAccess
     public function setValidations($validations)
     {
         $this->container['validations'] = $validations;
+        return $this;
+    }
+
+    /**
+    * Gets latestParam
+    *  最近一次的部署参数。
+    *
+    * @return string|null
+    */
+    public function getLatestParam()
+    {
+        return $this->container['latestParam'];
+    }
+
+    /**
+    * Sets latestParam
+    *
+    * @param string|null $latestParam 最近一次的部署参数。
+    *
+    * @return $this
+    */
+    public function setLatestParam($latestParam)
+    {
+        $this->container['latestParam'] = $latestParam;
         return $this;
     }
 

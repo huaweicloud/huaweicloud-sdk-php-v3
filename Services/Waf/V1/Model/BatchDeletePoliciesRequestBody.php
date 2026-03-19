@@ -20,7 +20,7 @@ class BatchDeletePoliciesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * policyIds  **参数解释：** 策略id数组，包含待批量删除的防护策略唯一标识，从查询防护策略列表接口获取。 **约束限制：** 不涉及 **取值范围：** 数组内元素为字符串类型，每个元素对应一个防护策略ID **默认取值：** 不涉及
+    * policyIds  **参数解释：** 策略id数组，包含待批量删除的防护策略唯一标识，从查询防护策略列表接口获取。 **约束限制：** 不能为空 **取值范围：** 数组内元素为字符串类型，每个元素对应一个防护策略ID **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchDeletePoliciesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * policyIds  **参数解释：** 策略id数组，包含待批量删除的防护策略唯一标识，从查询防护策略列表接口获取。 **约束限制：** 不涉及 **取值范围：** 数组内元素为字符串类型，每个元素对应一个防护策略ID **默认取值：** 不涉及
+    * policyIds  **参数解释：** 策略id数组，包含待批量删除的防护策略唯一标识，从查询防护策略列表接口获取。 **约束限制：** 不能为空 **取值范围：** 数组内元素为字符串类型，每个元素对应一个防护策略ID **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchDeletePoliciesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * policyIds  **参数解释：** 策略id数组，包含待批量删除的防护策略唯一标识，从查询防护策略列表接口获取。 **约束限制：** 不涉及 **取值范围：** 数组内元素为字符串类型，每个元素对应一个防护策略ID **默认取值：** 不涉及
+    * policyIds  **参数解释：** 策略id数组，包含待批量删除的防护策略唯一标识，从查询防护策略列表接口获取。 **约束限制：** 不能为空 **取值范围：** 数组内元素为字符串类型，每个元素对应一个防护策略ID **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchDeletePoliciesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * policyIds  **参数解释：** 策略id数组，包含待批量删除的防护策略唯一标识，从查询防护策略列表接口获取。 **约束限制：** 不涉及 **取值范围：** 数组内元素为字符串类型，每个元素对应一个防护策略ID **默认取值：** 不涉及
+    * policyIds  **参数解释：** 策略id数组，包含待批量删除的防护策略唯一标识，从查询防护策略列表接口获取。 **约束限制：** 不能为空 **取值范围：** 数组内元素为字符串类型，每个元素对应一个防护策略ID **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchDeletePoliciesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * policyIds  **参数解释：** 策略id数组，包含待批量删除的防护策略唯一标识，从查询防护策略列表接口获取。 **约束限制：** 不涉及 **取值范围：** 数组内元素为字符串类型，每个元素对应一个防护策略ID **默认取值：** 不涉及
+    * policyIds  **参数解释：** 策略id数组，包含待批量删除的防护策略唯一标识，从查询防护策略列表接口获取。 **约束限制：** 不能为空 **取值范围：** 数组内元素为字符串类型，每个元素对应一个防护策略ID **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class BatchDeletePoliciesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyIds
-    *  **参数解释：** 策略id数组，包含待批量删除的防护策略唯一标识，从查询防护策略列表接口获取。 **约束限制：** 不涉及 **取值范围：** 数组内元素为字符串类型，每个元素对应一个防护策略ID **默认取值：** 不涉及
+    *  **参数解释：** 策略id数组，包含待批量删除的防护策略唯一标识，从查询防护策略列表接口获取。 **约束限制：** 不能为空 **取值范围：** 数组内元素为字符串类型，每个元素对应一个防护策略ID **默认取值：** 不涉及
     *
     * @return string[]|null
     */
@@ -186,7 +186,7 @@ class BatchDeletePoliciesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets policyIds
     *
-    * @param string[]|null $policyIds **参数解释：** 策略id数组，包含待批量删除的防护策略唯一标识，从查询防护策略列表接口获取。 **约束限制：** 不涉及 **取值范围：** 数组内元素为字符串类型，每个元素对应一个防护策略ID **默认取值：** 不涉及
+    * @param string[]|null $policyIds **参数解释：** 策略id数组，包含待批量删除的防护策略唯一标识，从查询防护策略列表接口获取。 **约束限制：** 不能为空 **取值范围：** 数组内元素为字符串类型，每个元素对应一个防护策略ID **默认取值：** 不涉及
     *
     * @return $this
     */

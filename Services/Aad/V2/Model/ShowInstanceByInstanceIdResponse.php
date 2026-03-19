@@ -63,9 +63,9 @@ class ShowInstanceByInstanceIdResponse implements ModelInterface, ArrayAccess
         'instanceName' => null,
         'enterpriseProjectId' => null,
         'version' => null,
-        'expireTime' => 'int32',
-        'createTime' => 'int32',
-        'currentTime' => 'int32',
+        'expireTime' => 'int64',
+        'createTime' => 'int64',
+        'currentTime' => 'int64',
         'productSpecData' => null,
         'instanceConfig' => null,
         'elasticServiceBwUpdateEnable' => null

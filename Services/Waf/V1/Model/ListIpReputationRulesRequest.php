@@ -23,8 +23,10 @@ class ListIpReputationRulesRequest implements ModelInterface, ArrayAccess
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
     * policyId  **参数解释：** 策略id（策略id从查询防护策略列表接口获取） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * offset  **参数解释：** 偏移量，表示查询该偏移量之后的记录。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * limit  **参数解释：** 查询返回记录的数量限制。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 1000
+    * offset  **参数解释：** 偏移量，表示查询该偏移量之后的记录 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
+    * limit  **参数解释：** 查询返回记录的数量限制 **约束限制：** 不涉及 **取值范围：** [1, 65535] **默认取值：** 10
+    * page  **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
+    * pagesize  **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class ListIpReputationRulesRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'policyId' => 'string',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'page' => 'int',
+            'pagesize' => 'int'
     ];
 
     /**
@@ -41,8 +45,10 @@ class ListIpReputationRulesRequest implements ModelInterface, ArrayAccess
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
     * policyId  **参数解释：** 策略id（策略id从查询防护策略列表接口获取） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * offset  **参数解释：** 偏移量，表示查询该偏移量之后的记录。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * limit  **参数解释：** 查询返回记录的数量限制。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 1000
+    * offset  **参数解释：** 偏移量，表示查询该偏移量之后的记录 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
+    * limit  **参数解释：** 查询返回记录的数量限制 **约束限制：** 不涉及 **取值范围：** [1, 65535] **默认取值：** 10
+    * page  **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
+    * pagesize  **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class ListIpReputationRulesRequest implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'policyId' => null,
         'offset' => null,
-        'limit' => null
+        'limit' => null,
+        'page' => 'int32',
+        'pagesize' => 'int32'
     ];
 
     /**
@@ -80,8 +88,10 @@ class ListIpReputationRulesRequest implements ModelInterface, ArrayAccess
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
     * policyId  **参数解释：** 策略id（策略id从查询防护策略列表接口获取） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * offset  **参数解释：** 偏移量，表示查询该偏移量之后的记录。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * limit  **参数解释：** 查询返回记录的数量限制。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 1000
+    * offset  **参数解释：** 偏移量，表示查询该偏移量之后的记录 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
+    * limit  **参数解释：** 查询返回记录的数量限制 **约束限制：** 不涉及 **取值范围：** [1, 65535] **默认取值：** 10
+    * page  **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
+    * pagesize  **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class ListIpReputationRulesRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'policyId' => 'policy_id',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'page' => 'page',
+            'pagesize' => 'pagesize'
     ];
 
     /**
@@ -98,8 +110,10 @@ class ListIpReputationRulesRequest implements ModelInterface, ArrayAccess
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
     * policyId  **参数解释：** 策略id（策略id从查询防护策略列表接口获取） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * offset  **参数解释：** 偏移量，表示查询该偏移量之后的记录。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * limit  **参数解释：** 查询返回记录的数量限制。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 1000
+    * offset  **参数解释：** 偏移量，表示查询该偏移量之后的记录 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
+    * limit  **参数解释：** 查询返回记录的数量限制 **约束限制：** 不涉及 **取值范围：** [1, 65535] **默认取值：** 10
+    * page  **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
+    * pagesize  **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class ListIpReputationRulesRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'policyId' => 'setPolicyId',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'page' => 'setPage',
+            'pagesize' => 'setPagesize'
     ];
 
     /**
@@ -116,8 +132,10 @@ class ListIpReputationRulesRequest implements ModelInterface, ArrayAccess
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
     * policyId  **参数解释：** 策略id（策略id从查询防护策略列表接口获取） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * offset  **参数解释：** 偏移量，表示查询该偏移量之后的记录。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * limit  **参数解释：** 查询返回记录的数量限制。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 1000
+    * offset  **参数解释：** 偏移量，表示查询该偏移量之后的记录 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
+    * limit  **参数解释：** 查询返回记录的数量限制 **约束限制：** 不涉及 **取值范围：** [1, 65535] **默认取值：** 10
+    * page  **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
+    * pagesize  **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class ListIpReputationRulesRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'policyId' => 'getPolicyId',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'page' => 'getPage',
+            'pagesize' => 'getPagesize'
     ];
 
     /**
@@ -192,6 +212,8 @@ class ListIpReputationRulesRequest implements ModelInterface, ArrayAccess
         $this->container['policyId'] = isset($data['policyId']) ? $data['policyId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['pagesize'] = isset($data['pagesize']) ? $data['pagesize'] : null;
     }
 
     /**
@@ -207,12 +229,6 @@ class ListIpReputationRulesRequest implements ModelInterface, ArrayAccess
         }
         if ($this->container['policyId'] === null) {
             $invalidProperties[] = "'policyId' can't be null";
-        }
-        if ($this->container['offset'] === null) {
-            $invalidProperties[] = "'offset' can't be null";
-        }
-        if ($this->container['limit'] === null) {
-            $invalidProperties[] = "'limit' can't be null";
         }
         return $invalidProperties;
     }
@@ -302,9 +318,9 @@ class ListIpReputationRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  **参数解释：** 偏移量，表示查询该偏移量之后的记录。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  **参数解释：** 偏移量，表示查询该偏移量之后的记录 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
     *
-    * @return int
+    * @return int|null
     */
     public function getOffset()
     {
@@ -314,7 +330,7 @@ class ListIpReputationRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int $offset **参数解释：** 偏移量，表示查询该偏移量之后的记录。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param int|null $offset **参数解释：** 偏移量，表示查询该偏移量之后的记录 **约束限制：** 不涉及 **取值范围：** [0, 65535] **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -326,9 +342,9 @@ class ListIpReputationRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  **参数解释：** 查询返回记录的数量限制。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 1000
+    *  **参数解释：** 查询返回记录的数量限制 **约束限制：** 不涉及 **取值范围：** [1, 65535] **默认取值：** 10
     *
-    * @return int
+    * @return int|null
     */
     public function getLimit()
     {
@@ -338,13 +354,61 @@ class ListIpReputationRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int $limit **参数解释：** 查询返回记录的数量限制。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 1000
+    * @param int|null $limit **参数解释：** 查询返回记录的数量限制 **约束限制：** 不涉及 **取值范围：** [1, 65535] **默认取值：** 10
     *
     * @return $this
     */
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets page
+    *  **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
+    *
+    * @return int|null
+    */
+    public function getPage()
+    {
+        return $this->container['page'];
+    }
+
+    /**
+    * Sets page
+    *
+    * @param int|null $page **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
+    *
+    * @return $this
+    */
+    public function setPage($page)
+    {
+        $this->container['page'] = $page;
+        return $this;
+    }
+
+    /**
+    * Gets pagesize
+    *  **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
+    *
+    * @return int|null
+    */
+    public function getPagesize()
+    {
+        return $this->container['pagesize'];
+    }
+
+    /**
+    * Sets pagesize
+    *
+    * @param int|null $pagesize **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
+    *
+    * @return $this
+    */
+    public function setPagesize($pagesize)
+    {
+        $this->container['pagesize'] = $pagesize;
         return $this;
     }
 

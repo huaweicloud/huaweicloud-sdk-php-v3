@@ -23,6 +23,7 @@ class PunishmentInfo implements ModelInterface, ArrayAccess
     * id  规则id
     * policyid  所属策略id
     * blockTime  拦截时间
+    * timeUnit  时间单位
     * category  攻击惩罚类别
     * description  规则描述
     * timestamp  创建规则时间戳
@@ -33,6 +34,7 @@ class PunishmentInfo implements ModelInterface, ArrayAccess
             'id' => 'string',
             'policyid' => 'string',
             'blockTime' => 'int',
+            'timeUnit' => 'string',
             'category' => 'string',
             'description' => 'string',
             'timestamp' => 'int'
@@ -43,6 +45,7 @@ class PunishmentInfo implements ModelInterface, ArrayAccess
     * id  规则id
     * policyid  所属策略id
     * blockTime  拦截时间
+    * timeUnit  时间单位
     * category  攻击惩罚类别
     * description  规则描述
     * timestamp  创建规则时间戳
@@ -53,6 +56,7 @@ class PunishmentInfo implements ModelInterface, ArrayAccess
         'id' => null,
         'policyid' => null,
         'blockTime' => 'int32',
+        'timeUnit' => null,
         'category' => null,
         'description' => null,
         'timestamp' => 'int64'
@@ -84,6 +88,7 @@ class PunishmentInfo implements ModelInterface, ArrayAccess
     * id  规则id
     * policyid  所属策略id
     * blockTime  拦截时间
+    * timeUnit  时间单位
     * category  攻击惩罚类别
     * description  规则描述
     * timestamp  创建规则时间戳
@@ -94,6 +99,7 @@ class PunishmentInfo implements ModelInterface, ArrayAccess
             'id' => 'id',
             'policyid' => 'policyid',
             'blockTime' => 'block_time',
+            'timeUnit' => 'time_unit',
             'category' => 'category',
             'description' => 'description',
             'timestamp' => 'timestamp'
@@ -104,6 +110,7 @@ class PunishmentInfo implements ModelInterface, ArrayAccess
     * id  规则id
     * policyid  所属策略id
     * blockTime  拦截时间
+    * timeUnit  时间单位
     * category  攻击惩罚类别
     * description  规则描述
     * timestamp  创建规则时间戳
@@ -114,6 +121,7 @@ class PunishmentInfo implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'policyid' => 'setPolicyid',
             'blockTime' => 'setBlockTime',
+            'timeUnit' => 'setTimeUnit',
             'category' => 'setCategory',
             'description' => 'setDescription',
             'timestamp' => 'setTimestamp'
@@ -124,6 +132,7 @@ class PunishmentInfo implements ModelInterface, ArrayAccess
     * id  规则id
     * policyid  所属策略id
     * blockTime  拦截时间
+    * timeUnit  时间单位
     * category  攻击惩罚类别
     * description  规则描述
     * timestamp  创建规则时间戳
@@ -134,6 +143,7 @@ class PunishmentInfo implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'policyid' => 'getPolicyid',
             'blockTime' => 'getBlockTime',
+            'timeUnit' => 'getTimeUnit',
             'category' => 'getCategory',
             'description' => 'getDescription',
             'timestamp' => 'getTimestamp'
@@ -200,6 +210,7 @@ class PunishmentInfo implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['policyid'] = isset($data['policyid']) ? $data['policyid'] : null;
         $this->container['blockTime'] = isset($data['blockTime']) ? $data['blockTime'] : null;
+        $this->container['timeUnit'] = isset($data['timeUnit']) ? $data['timeUnit'] : null;
         $this->container['category'] = isset($data['category']) ? $data['category'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
@@ -296,6 +307,30 @@ class PunishmentInfo implements ModelInterface, ArrayAccess
     public function setBlockTime($blockTime)
     {
         $this->container['blockTime'] = $blockTime;
+        return $this;
+    }
+
+    /**
+    * Gets timeUnit
+    *  时间单位
+    *
+    * @return string|null
+    */
+    public function getTimeUnit()
+    {
+        return $this->container['timeUnit'];
+    }
+
+    /**
+    * Sets timeUnit
+    *
+    * @param string|null $timeUnit 时间单位
+    *
+    * @return $this
+    */
+    public function setTimeUnit($timeUnit)
+    {
+        $this->container['timeUnit'] = $timeUnit;
         return $this;
     }
 

@@ -21,7 +21,7 @@ class PolicyRuleIdRequestBodyPolicyRuleIds implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * policyId  **参数解释：** 策略id，唯一标识一条防护策略.策略id从\"查询防护策略列表\"(ListPolicy)接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * ruleIds  **参数解释：** 规则id数组，包含当前防护策略下的多条规则ID.精准防护规则id，通过对应规则类型的查询防护规则列表接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * ruleIds  **参数解释：** 规则id数组，包含当前防护策略下的单个规则id，通过ListGeoipRule接口获取规则id **约束限制：** 单条规则ID **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class PolicyRuleIdRequestBodyPolicyRuleIds implements ModelInterface, ArrayAcces
     /**
     * Array of property to format mappings. Used for (de)serialization
     * policyId  **参数解释：** 策略id，唯一标识一条防护策略.策略id从\"查询防护策略列表\"(ListPolicy)接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * ruleIds  **参数解释：** 规则id数组，包含当前防护策略下的多条规则ID.精准防护规则id，通过对应规则类型的查询防护规则列表接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * ruleIds  **参数解释：** 规则id数组，包含当前防护策略下的单个规则id，通过ListGeoipRule接口获取规则id **约束限制：** 单条规则ID **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class PolicyRuleIdRequestBodyPolicyRuleIds implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * policyId  **参数解释：** 策略id，唯一标识一条防护策略.策略id从\"查询防护策略列表\"(ListPolicy)接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * ruleIds  **参数解释：** 规则id数组，包含当前防护策略下的多条规则ID.精准防护规则id，通过对应规则类型的查询防护规则列表接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * ruleIds  **参数解释：** 规则id数组，包含当前防护策略下的单个规则id，通过ListGeoipRule接口获取规则id **约束限制：** 单条规则ID **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class PolicyRuleIdRequestBodyPolicyRuleIds implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * policyId  **参数解释：** 策略id，唯一标识一条防护策略.策略id从\"查询防护策略列表\"(ListPolicy)接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * ruleIds  **参数解释：** 规则id数组，包含当前防护策略下的多条规则ID.精准防护规则id，通过对应规则类型的查询防护规则列表接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * ruleIds  **参数解释：** 规则id数组，包含当前防护策略下的单个规则id，通过ListGeoipRule接口获取规则id **约束限制：** 单条规则ID **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class PolicyRuleIdRequestBodyPolicyRuleIds implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * policyId  **参数解释：** 策略id，唯一标识一条防护策略.策略id从\"查询防护策略列表\"(ListPolicy)接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * ruleIds  **参数解释：** 规则id数组，包含当前防护策略下的多条规则ID.精准防护规则id，通过对应规则类型的查询防护规则列表接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * ruleIds  **参数解释：** 规则id数组，包含当前防护策略下的单个规则id，通过ListGeoipRule接口获取规则id **约束限制：** 单条规则ID **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -169,6 +169,12 @@ class PolicyRuleIdRequestBodyPolicyRuleIds implements ModelInterface, ArrayAcces
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['policyId'] === null) {
+            $invalidProperties[] = "'policyId' can't be null";
+        }
+        if ($this->container['ruleIds'] === null) {
+            $invalidProperties[] = "'ruleIds' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -187,7 +193,7 @@ class PolicyRuleIdRequestBodyPolicyRuleIds implements ModelInterface, ArrayAcces
     * Gets policyId
     *  **参数解释：** 策略id，唯一标识一条防护策略.策略id从\"查询防护策略列表\"(ListPolicy)接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
-    * @return string|null
+    * @return string
     */
     public function getPolicyId()
     {
@@ -197,7 +203,7 @@ class PolicyRuleIdRequestBodyPolicyRuleIds implements ModelInterface, ArrayAcces
     /**
     * Sets policyId
     *
-    * @param string|null $policyId **参数解释：** 策略id，唯一标识一条防护策略.策略id从\"查询防护策略列表\"(ListPolicy)接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param string $policyId **参数解释：** 策略id，唯一标识一条防护策略.策略id从\"查询防护策略列表\"(ListPolicy)接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -209,9 +215,9 @@ class PolicyRuleIdRequestBodyPolicyRuleIds implements ModelInterface, ArrayAcces
 
     /**
     * Gets ruleIds
-    *  **参数解释：** 规则id数组，包含当前防护策略下的多条规则ID.精准防护规则id，通过对应规则类型的查询防护规则列表接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  **参数解释：** 规则id数组，包含当前防护策略下的单个规则id，通过ListGeoipRule接口获取规则id **约束限制：** 单条规则ID **取值范围：** 不涉及 **默认取值：** 不涉及
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getRuleIds()
     {
@@ -221,7 +227,7 @@ class PolicyRuleIdRequestBodyPolicyRuleIds implements ModelInterface, ArrayAcces
     /**
     * Sets ruleIds
     *
-    * @param string[]|null $ruleIds **参数解释：** 规则id数组，包含当前防护策略下的多条规则ID.精准防护规则id，通过对应规则类型的查询防护规则列表接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param string[] $ruleIds **参数解释：** 规则id数组，包含当前防护策略下的单个规则id，通过ListGeoipRule接口获取规则id **约束限制：** 单条规则ID **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

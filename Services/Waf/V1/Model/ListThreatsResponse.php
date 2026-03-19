@@ -33,6 +33,9 @@ class ListThreatsResponse implements ModelInterface, ArrayAccess
     * whiteblackip  时间区间内对黑白名单规则攻击数量
     * antileakage  时间区间内反泄漏数量
     * antitamper  时间区间内防篡改数量
+    * llmPromptInjection  时间区间内大模型提示词注入攻击数量
+    * llmPromptSensitive  时间区间内大模型提示词合规检测数量
+    * llmResponseSensitive  时间区间内大模型响应合规检测数量
     *
     * @var string[]
     */
@@ -48,7 +51,10 @@ class ListThreatsResponse implements ModelInterface, ArrayAccess
             'custom' => 'int',
             'whiteblackip' => 'int',
             'antileakage' => 'int',
-            'antitamper' => 'int'
+            'antitamper' => 'int',
+            'llmPromptInjection' => 'int',
+            'llmPromptSensitive' => 'int',
+            'llmResponseSensitive' => 'int'
     ];
 
     /**
@@ -65,6 +71,9 @@ class ListThreatsResponse implements ModelInterface, ArrayAccess
     * whiteblackip  时间区间内对黑白名单规则攻击数量
     * antileakage  时间区间内反泄漏数量
     * antitamper  时间区间内防篡改数量
+    * llmPromptInjection  时间区间内大模型提示词注入攻击数量
+    * llmPromptSensitive  时间区间内大模型提示词合规检测数量
+    * llmResponseSensitive  时间区间内大模型响应合规检测数量
     *
     * @var string[]
     */
@@ -80,7 +89,10 @@ class ListThreatsResponse implements ModelInterface, ArrayAccess
         'custom' => null,
         'whiteblackip' => null,
         'antileakage' => null,
-        'antitamper' => null
+        'antitamper' => null,
+        'llmPromptInjection' => 'int32',
+        'llmPromptSensitive' => 'int32',
+        'llmResponseSensitive' => 'int32'
     ];
 
     /**
@@ -118,6 +130,9 @@ class ListThreatsResponse implements ModelInterface, ArrayAccess
     * whiteblackip  时间区间内对黑白名单规则攻击数量
     * antileakage  时间区间内反泄漏数量
     * antitamper  时间区间内防篡改数量
+    * llmPromptInjection  时间区间内大模型提示词注入攻击数量
+    * llmPromptSensitive  时间区间内大模型提示词合规检测数量
+    * llmResponseSensitive  时间区间内大模型响应合规检测数量
     *
     * @var string[]
     */
@@ -133,7 +148,10 @@ class ListThreatsResponse implements ModelInterface, ArrayAccess
             'custom' => 'custom',
             'whiteblackip' => 'whiteblackip',
             'antileakage' => 'antileakage',
-            'antitamper' => 'antitamper'
+            'antitamper' => 'antitamper',
+            'llmPromptInjection' => 'llm_prompt_injection',
+            'llmPromptSensitive' => 'llm_prompt_sensitive',
+            'llmResponseSensitive' => 'llm_response_sensitive'
     ];
 
     /**
@@ -150,6 +168,9 @@ class ListThreatsResponse implements ModelInterface, ArrayAccess
     * whiteblackip  时间区间内对黑白名单规则攻击数量
     * antileakage  时间区间内反泄漏数量
     * antitamper  时间区间内防篡改数量
+    * llmPromptInjection  时间区间内大模型提示词注入攻击数量
+    * llmPromptSensitive  时间区间内大模型提示词合规检测数量
+    * llmResponseSensitive  时间区间内大模型响应合规检测数量
     *
     * @var string[]
     */
@@ -165,7 +186,10 @@ class ListThreatsResponse implements ModelInterface, ArrayAccess
             'custom' => 'setCustom',
             'whiteblackip' => 'setWhiteblackip',
             'antileakage' => 'setAntileakage',
-            'antitamper' => 'setAntitamper'
+            'antitamper' => 'setAntitamper',
+            'llmPromptInjection' => 'setLlmPromptInjection',
+            'llmPromptSensitive' => 'setLlmPromptSensitive',
+            'llmResponseSensitive' => 'setLlmResponseSensitive'
     ];
 
     /**
@@ -182,6 +206,9 @@ class ListThreatsResponse implements ModelInterface, ArrayAccess
     * whiteblackip  时间区间内对黑白名单规则攻击数量
     * antileakage  时间区间内反泄漏数量
     * antitamper  时间区间内防篡改数量
+    * llmPromptInjection  时间区间内大模型提示词注入攻击数量
+    * llmPromptSensitive  时间区间内大模型提示词合规检测数量
+    * llmResponseSensitive  时间区间内大模型响应合规检测数量
     *
     * @var string[]
     */
@@ -197,7 +224,10 @@ class ListThreatsResponse implements ModelInterface, ArrayAccess
             'custom' => 'getCustom',
             'whiteblackip' => 'getWhiteblackip',
             'antileakage' => 'getAntileakage',
-            'antitamper' => 'getAntitamper'
+            'antitamper' => 'getAntitamper',
+            'llmPromptInjection' => 'getLlmPromptInjection',
+            'llmPromptSensitive' => 'getLlmPromptSensitive',
+            'llmResponseSensitive' => 'getLlmResponseSensitive'
     ];
 
     /**
@@ -270,6 +300,9 @@ class ListThreatsResponse implements ModelInterface, ArrayAccess
         $this->container['whiteblackip'] = isset($data['whiteblackip']) ? $data['whiteblackip'] : null;
         $this->container['antileakage'] = isset($data['antileakage']) ? $data['antileakage'] : null;
         $this->container['antitamper'] = isset($data['antitamper']) ? $data['antitamper'] : null;
+        $this->container['llmPromptInjection'] = isset($data['llmPromptInjection']) ? $data['llmPromptInjection'] : null;
+        $this->container['llmPromptSensitive'] = isset($data['llmPromptSensitive']) ? $data['llmPromptSensitive'] : null;
+        $this->container['llmResponseSensitive'] = isset($data['llmResponseSensitive']) ? $data['llmResponseSensitive'] : null;
     }
 
     /**
@@ -579,6 +612,78 @@ class ListThreatsResponse implements ModelInterface, ArrayAccess
     public function setAntitamper($antitamper)
     {
         $this->container['antitamper'] = $antitamper;
+        return $this;
+    }
+
+    /**
+    * Gets llmPromptInjection
+    *  时间区间内大模型提示词注入攻击数量
+    *
+    * @return int|null
+    */
+    public function getLlmPromptInjection()
+    {
+        return $this->container['llmPromptInjection'];
+    }
+
+    /**
+    * Sets llmPromptInjection
+    *
+    * @param int|null $llmPromptInjection 时间区间内大模型提示词注入攻击数量
+    *
+    * @return $this
+    */
+    public function setLlmPromptInjection($llmPromptInjection)
+    {
+        $this->container['llmPromptInjection'] = $llmPromptInjection;
+        return $this;
+    }
+
+    /**
+    * Gets llmPromptSensitive
+    *  时间区间内大模型提示词合规检测数量
+    *
+    * @return int|null
+    */
+    public function getLlmPromptSensitive()
+    {
+        return $this->container['llmPromptSensitive'];
+    }
+
+    /**
+    * Sets llmPromptSensitive
+    *
+    * @param int|null $llmPromptSensitive 时间区间内大模型提示词合规检测数量
+    *
+    * @return $this
+    */
+    public function setLlmPromptSensitive($llmPromptSensitive)
+    {
+        $this->container['llmPromptSensitive'] = $llmPromptSensitive;
+        return $this;
+    }
+
+    /**
+    * Gets llmResponseSensitive
+    *  时间区间内大模型响应合规检测数量
+    *
+    * @return int|null
+    */
+    public function getLlmResponseSensitive()
+    {
+        return $this->container['llmResponseSensitive'];
+    }
+
+    /**
+    * Sets llmResponseSensitive
+    *
+    * @param int|null $llmResponseSensitive 时间区间内大模型响应合规检测数量
+    *
+    * @return $this
+    */
+    public function setLlmResponseSensitive($llmResponseSensitive)
+    {
+        $this->container['llmResponseSensitive'] = $llmResponseSensitive;
         return $this;
     }
 

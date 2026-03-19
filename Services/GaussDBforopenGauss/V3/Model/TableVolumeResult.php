@@ -26,8 +26,8 @@ class TableVolumeResult implements ModelInterface, ArrayAccess
     * tableOwner  **参数解释**: 表所属用户名称。 **取值范围**: 不涉及。
     * schemaName  **参数解释**: schema名称。 **取值范围**: 不涉及。
     * databaseName  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
-    * isPartType  **参数解释**: 表或者索引是否具有分区表的性质。 **取值范围**: 不涉及。
-    * isHashClusterKey  **参数解释**: 是否包含hash分区列信息。 **取值范围**: 不涉及。
+    * isPartType  **参数解释**: 表或者索引是否具有分区表的性质。 **取值范围**: - true：具有分区表的性质。 - false：不具有分区表的性质。
+    * isHashClusterKey  **参数解释**: 是否包含hash分区列信息。 **取值范围**: - true：包含hash分区列信息。 - false：不包含hash分区列信息。
     * tuples  **参数解释**: 表中行的数目。 **取值范围**: 不涉及。
     * createTime  **参数解释**: 创建时间。 **取值范围**: 不涉及。
     * updateTime  **参数解释**: 修改时间。 **取值范围**: 不涉及。
@@ -36,7 +36,7 @@ class TableVolumeResult implements ModelInterface, ArrayAccess
     * minRatio  **参数解释**: 单DN表大小最小值占比（表在各DN占用空间的最小值/totalsize）。 **取值范围**: 不涉及。
     * skewSize  **参数解释**: 表分布倾斜值（单DN表大小最大值 - 单DN表大小最小值）。 **取值范围**: 不涉及。
     * skewRatio  **参数解释**: 表分布倾斜率（skewsize/totalsize）。 **取值范围**: 不涉及。
-    * skewStddev  **参数解释**: 表分布标准方差（在表大小一定的情况下，该值越大表明表的整体分布情况越倾斜）。。 **取值范围**: 不涉及。
+    * skewStddev  **参数解释**: 表分布标准方差（在表大小一定的情况下，该值越大表明表的整体分布情况越倾斜）。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -68,8 +68,8 @@ class TableVolumeResult implements ModelInterface, ArrayAccess
     * tableOwner  **参数解释**: 表所属用户名称。 **取值范围**: 不涉及。
     * schemaName  **参数解释**: schema名称。 **取值范围**: 不涉及。
     * databaseName  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
-    * isPartType  **参数解释**: 表或者索引是否具有分区表的性质。 **取值范围**: 不涉及。
-    * isHashClusterKey  **参数解释**: 是否包含hash分区列信息。 **取值范围**: 不涉及。
+    * isPartType  **参数解释**: 表或者索引是否具有分区表的性质。 **取值范围**: - true：具有分区表的性质。 - false：不具有分区表的性质。
+    * isHashClusterKey  **参数解释**: 是否包含hash分区列信息。 **取值范围**: - true：包含hash分区列信息。 - false：不包含hash分区列信息。
     * tuples  **参数解释**: 表中行的数目。 **取值范围**: 不涉及。
     * createTime  **参数解释**: 创建时间。 **取值范围**: 不涉及。
     * updateTime  **参数解释**: 修改时间。 **取值范围**: 不涉及。
@@ -78,7 +78,7 @@ class TableVolumeResult implements ModelInterface, ArrayAccess
     * minRatio  **参数解释**: 单DN表大小最小值占比（表在各DN占用空间的最小值/totalsize）。 **取值范围**: 不涉及。
     * skewSize  **参数解释**: 表分布倾斜值（单DN表大小最大值 - 单DN表大小最小值）。 **取值范围**: 不涉及。
     * skewRatio  **参数解释**: 表分布倾斜率（skewsize/totalsize）。 **取值范围**: 不涉及。
-    * skewStddev  **参数解释**: 表分布标准方差（在表大小一定的情况下，该值越大表明表的整体分布情况越倾斜）。。 **取值范围**: 不涉及。
+    * skewStddev  **参数解释**: 表分布标准方差（在表大小一定的情况下，该值越大表明表的整体分布情况越倾斜）。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -131,8 +131,8 @@ class TableVolumeResult implements ModelInterface, ArrayAccess
     * tableOwner  **参数解释**: 表所属用户名称。 **取值范围**: 不涉及。
     * schemaName  **参数解释**: schema名称。 **取值范围**: 不涉及。
     * databaseName  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
-    * isPartType  **参数解释**: 表或者索引是否具有分区表的性质。 **取值范围**: 不涉及。
-    * isHashClusterKey  **参数解释**: 是否包含hash分区列信息。 **取值范围**: 不涉及。
+    * isPartType  **参数解释**: 表或者索引是否具有分区表的性质。 **取值范围**: - true：具有分区表的性质。 - false：不具有分区表的性质。
+    * isHashClusterKey  **参数解释**: 是否包含hash分区列信息。 **取值范围**: - true：包含hash分区列信息。 - false：不包含hash分区列信息。
     * tuples  **参数解释**: 表中行的数目。 **取值范围**: 不涉及。
     * createTime  **参数解释**: 创建时间。 **取值范围**: 不涉及。
     * updateTime  **参数解释**: 修改时间。 **取值范围**: 不涉及。
@@ -141,7 +141,7 @@ class TableVolumeResult implements ModelInterface, ArrayAccess
     * minRatio  **参数解释**: 单DN表大小最小值占比（表在各DN占用空间的最小值/totalsize）。 **取值范围**: 不涉及。
     * skewSize  **参数解释**: 表分布倾斜值（单DN表大小最大值 - 单DN表大小最小值）。 **取值范围**: 不涉及。
     * skewRatio  **参数解释**: 表分布倾斜率（skewsize/totalsize）。 **取值范围**: 不涉及。
-    * skewStddev  **参数解释**: 表分布标准方差（在表大小一定的情况下，该值越大表明表的整体分布情况越倾斜）。。 **取值范围**: 不涉及。
+    * skewStddev  **参数解释**: 表分布标准方差（在表大小一定的情况下，该值越大表明表的整体分布情况越倾斜）。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -173,8 +173,8 @@ class TableVolumeResult implements ModelInterface, ArrayAccess
     * tableOwner  **参数解释**: 表所属用户名称。 **取值范围**: 不涉及。
     * schemaName  **参数解释**: schema名称。 **取值范围**: 不涉及。
     * databaseName  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
-    * isPartType  **参数解释**: 表或者索引是否具有分区表的性质。 **取值范围**: 不涉及。
-    * isHashClusterKey  **参数解释**: 是否包含hash分区列信息。 **取值范围**: 不涉及。
+    * isPartType  **参数解释**: 表或者索引是否具有分区表的性质。 **取值范围**: - true：具有分区表的性质。 - false：不具有分区表的性质。
+    * isHashClusterKey  **参数解释**: 是否包含hash分区列信息。 **取值范围**: - true：包含hash分区列信息。 - false：不包含hash分区列信息。
     * tuples  **参数解释**: 表中行的数目。 **取值范围**: 不涉及。
     * createTime  **参数解释**: 创建时间。 **取值范围**: 不涉及。
     * updateTime  **参数解释**: 修改时间。 **取值范围**: 不涉及。
@@ -183,7 +183,7 @@ class TableVolumeResult implements ModelInterface, ArrayAccess
     * minRatio  **参数解释**: 单DN表大小最小值占比（表在各DN占用空间的最小值/totalsize）。 **取值范围**: 不涉及。
     * skewSize  **参数解释**: 表分布倾斜值（单DN表大小最大值 - 单DN表大小最小值）。 **取值范围**: 不涉及。
     * skewRatio  **参数解释**: 表分布倾斜率（skewsize/totalsize）。 **取值范围**: 不涉及。
-    * skewStddev  **参数解释**: 表分布标准方差（在表大小一定的情况下，该值越大表明表的整体分布情况越倾斜）。。 **取值范围**: 不涉及。
+    * skewStddev  **参数解释**: 表分布标准方差（在表大小一定的情况下，该值越大表明表的整体分布情况越倾斜）。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -215,8 +215,8 @@ class TableVolumeResult implements ModelInterface, ArrayAccess
     * tableOwner  **参数解释**: 表所属用户名称。 **取值范围**: 不涉及。
     * schemaName  **参数解释**: schema名称。 **取值范围**: 不涉及。
     * databaseName  **参数解释**: 数据库名称。 **取值范围**: 不涉及。
-    * isPartType  **参数解释**: 表或者索引是否具有分区表的性质。 **取值范围**: 不涉及。
-    * isHashClusterKey  **参数解释**: 是否包含hash分区列信息。 **取值范围**: 不涉及。
+    * isPartType  **参数解释**: 表或者索引是否具有分区表的性质。 **取值范围**: - true：具有分区表的性质。 - false：不具有分区表的性质。
+    * isHashClusterKey  **参数解释**: 是否包含hash分区列信息。 **取值范围**: - true：包含hash分区列信息。 - false：不包含hash分区列信息。
     * tuples  **参数解释**: 表中行的数目。 **取值范围**: 不涉及。
     * createTime  **参数解释**: 创建时间。 **取值范围**: 不涉及。
     * updateTime  **参数解释**: 修改时间。 **取值范围**: 不涉及。
@@ -225,7 +225,7 @@ class TableVolumeResult implements ModelInterface, ArrayAccess
     * minRatio  **参数解释**: 单DN表大小最小值占比（表在各DN占用空间的最小值/totalsize）。 **取值范围**: 不涉及。
     * skewSize  **参数解释**: 表分布倾斜值（单DN表大小最大值 - 单DN表大小最小值）。 **取值范围**: 不涉及。
     * skewRatio  **参数解释**: 表分布倾斜率（skewsize/totalsize）。 **取值范围**: 不涉及。
-    * skewStddev  **参数解释**: 表分布标准方差（在表大小一定的情况下，该值越大表明表的整体分布情况越倾斜）。。 **取值范围**: 不涉及。
+    * skewStddev  **参数解释**: 表分布标准方差（在表大小一定的情况下，该值越大表明表的整体分布情况越倾斜）。 **取值范围**: 不涉及。
     *
     * @var string[]
     */
@@ -494,7 +494,7 @@ class TableVolumeResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets isPartType
-    *  **参数解释**: 表或者索引是否具有分区表的性质。 **取值范围**: 不涉及。
+    *  **参数解释**: 表或者索引是否具有分区表的性质。 **取值范围**: - true：具有分区表的性质。 - false：不具有分区表的性质。
     *
     * @return bool|null
     */
@@ -506,7 +506,7 @@ class TableVolumeResult implements ModelInterface, ArrayAccess
     /**
     * Sets isPartType
     *
-    * @param bool|null $isPartType **参数解释**: 表或者索引是否具有分区表的性质。 **取值范围**: 不涉及。
+    * @param bool|null $isPartType **参数解释**: 表或者索引是否具有分区表的性质。 **取值范围**: - true：具有分区表的性质。 - false：不具有分区表的性质。
     *
     * @return $this
     */
@@ -518,7 +518,7 @@ class TableVolumeResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets isHashClusterKey
-    *  **参数解释**: 是否包含hash分区列信息。 **取值范围**: 不涉及。
+    *  **参数解释**: 是否包含hash分区列信息。 **取值范围**: - true：包含hash分区列信息。 - false：不包含hash分区列信息。
     *
     * @return bool|null
     */
@@ -530,7 +530,7 @@ class TableVolumeResult implements ModelInterface, ArrayAccess
     /**
     * Sets isHashClusterKey
     *
-    * @param bool|null $isHashClusterKey **参数解释**: 是否包含hash分区列信息。 **取值范围**: 不涉及。
+    * @param bool|null $isHashClusterKey **参数解释**: 是否包含hash分区列信息。 **取值范围**: - true：包含hash分区列信息。 - false：不包含hash分区列信息。
     *
     * @return $this
     */
@@ -734,7 +734,7 @@ class TableVolumeResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets skewStddev
-    *  **参数解释**: 表分布标准方差（在表大小一定的情况下，该值越大表明表的整体分布情况越倾斜）。。 **取值范围**: 不涉及。
+    *  **参数解释**: 表分布标准方差（在表大小一定的情况下，该值越大表明表的整体分布情况越倾斜）。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -746,7 +746,7 @@ class TableVolumeResult implements ModelInterface, ArrayAccess
     /**
     * Sets skewStddev
     *
-    * @param string|null $skewStddev **参数解释**: 表分布标准方差（在表大小一定的情况下，该值越大表明表的整体分布情况越倾斜）。。 **取值范围**: 不涉及。
+    * @param string|null $skewStddev **参数解释**: 表分布标准方差（在表大小一定的情况下，该值越大表明表的整体分布情况越倾斜）。 **取值范围**: 不涉及。
     *
     * @return $this
     */

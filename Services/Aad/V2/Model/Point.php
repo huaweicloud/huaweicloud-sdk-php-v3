@@ -50,7 +50,7 @@ class Point implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'time' => 'int32',
+        'time' => 'int64',
         'total' => 'int32',
         'attack' => 'int32',
         'basic' => 'int32',

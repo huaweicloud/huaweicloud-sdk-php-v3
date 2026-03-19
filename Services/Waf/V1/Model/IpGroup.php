@@ -16,7 +16,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'Ip_group';
+    protected static $openAPIModelName = 'IpGroup';
 
     /**
     * Array of property to type mappings. Used for (de)serialization

@@ -20,11 +20,11 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterType  **参数解释**: cce集群类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - existing：存量集群。 - adding：新增集群。  **默认取值**: 不涉及
-    * clusterId  集群id
+    * clusterType  **参数解释**: cce集群类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - existing：存量集群。 - adding：新增集群。 **默认取值**: 不涉及
+    * clusterId  **参数解释**: 集群id **约束限制**: 新增集群没有集群id，存量集群的集群id必填 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * clusterName  集群名称
-    * chargingMode  **参数解释**: 付费模式 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - on_demand：按需。 - free_security_check：免费安全体检。  **默认取值**: 不涉及
-    * cceProtectionType  **参数解释**: cce防护类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - cluster_level：集群级别防护。 - node_level：节点级别防护。  **默认取值**: 不涉及
+    * chargingMode  **参数解释**: 付费模式 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - on_demand：按需。 - free_security_check：免费安全体检。 **默认取值**: 不涉及
+    * cceProtectionType  **参数解释**: cce防护类型， **约束限制**: 当前只支持集群级别防护 **取值范围**: 包含如下两种： - cluster_level：集群级别防护。 - node_level：节点级别防护。 **默认取值**: 不涉及
     * preferPacketCycle  优先使用包周期配额；默认false
     *
     * @var string[]
@@ -40,11 +40,11 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterType  **参数解释**: cce集群类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - existing：存量集群。 - adding：新增集群。  **默认取值**: 不涉及
-    * clusterId  集群id
+    * clusterType  **参数解释**: cce集群类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - existing：存量集群。 - adding：新增集群。 **默认取值**: 不涉及
+    * clusterId  **参数解释**: 集群id **约束限制**: 新增集群没有集群id，存量集群的集群id必填 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * clusterName  集群名称
-    * chargingMode  **参数解释**: 付费模式 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - on_demand：按需。 - free_security_check：免费安全体检。  **默认取值**: 不涉及
-    * cceProtectionType  **参数解释**: cce防护类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - cluster_level：集群级别防护。 - node_level：节点级别防护。  **默认取值**: 不涉及
+    * chargingMode  **参数解释**: 付费模式 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - on_demand：按需。 - free_security_check：免费安全体检。 **默认取值**: 不涉及
+    * cceProtectionType  **参数解释**: cce防护类型， **约束限制**: 当前只支持集群级别防护 **取值范围**: 包含如下两种： - cluster_level：集群级别防护。 - node_level：节点级别防护。 **默认取值**: 不涉及
     * preferPacketCycle  优先使用包周期配额；默认false
     *
     * @var string[]
@@ -81,11 +81,11 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterType  **参数解释**: cce集群类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - existing：存量集群。 - adding：新增集群。  **默认取值**: 不涉及
-    * clusterId  集群id
+    * clusterType  **参数解释**: cce集群类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - existing：存量集群。 - adding：新增集群。 **默认取值**: 不涉及
+    * clusterId  **参数解释**: 集群id **约束限制**: 新增集群没有集群id，存量集群的集群id必填 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * clusterName  集群名称
-    * chargingMode  **参数解释**: 付费模式 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - on_demand：按需。 - free_security_check：免费安全体检。  **默认取值**: 不涉及
-    * cceProtectionType  **参数解释**: cce防护类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - cluster_level：集群级别防护。 - node_level：节点级别防护。  **默认取值**: 不涉及
+    * chargingMode  **参数解释**: 付费模式 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - on_demand：按需。 - free_security_check：免费安全体检。 **默认取值**: 不涉及
+    * cceProtectionType  **参数解释**: cce防护类型， **约束限制**: 当前只支持集群级别防护 **取值范围**: 包含如下两种： - cluster_level：集群级别防护。 - node_level：节点级别防护。 **默认取值**: 不涉及
     * preferPacketCycle  优先使用包周期配额；默认false
     *
     * @var string[]
@@ -101,11 +101,11 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterType  **参数解释**: cce集群类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - existing：存量集群。 - adding：新增集群。  **默认取值**: 不涉及
-    * clusterId  集群id
+    * clusterType  **参数解释**: cce集群类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - existing：存量集群。 - adding：新增集群。 **默认取值**: 不涉及
+    * clusterId  **参数解释**: 集群id **约束限制**: 新增集群没有集群id，存量集群的集群id必填 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * clusterName  集群名称
-    * chargingMode  **参数解释**: 付费模式 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - on_demand：按需。 - free_security_check：免费安全体检。  **默认取值**: 不涉及
-    * cceProtectionType  **参数解释**: cce防护类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - cluster_level：集群级别防护。 - node_level：节点级别防护。  **默认取值**: 不涉及
+    * chargingMode  **参数解释**: 付费模式 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - on_demand：按需。 - free_security_check：免费安全体检。 **默认取值**: 不涉及
+    * cceProtectionType  **参数解释**: cce防护类型， **约束限制**: 当前只支持集群级别防护 **取值范围**: 包含如下两种： - cluster_level：集群级别防护。 - node_level：节点级别防护。 **默认取值**: 不涉及
     * preferPacketCycle  优先使用包周期配额；默认false
     *
     * @var string[]
@@ -121,11 +121,11 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterType  **参数解释**: cce集群类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - existing：存量集群。 - adding：新增集群。  **默认取值**: 不涉及
-    * clusterId  集群id
+    * clusterType  **参数解释**: cce集群类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - existing：存量集群。 - adding：新增集群。 **默认取值**: 不涉及
+    * clusterId  **参数解释**: 集群id **约束限制**: 新增集群没有集群id，存量集群的集群id必填 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * clusterName  集群名称
-    * chargingMode  **参数解释**: 付费模式 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - on_demand：按需。 - free_security_check：免费安全体检。  **默认取值**: 不涉及
-    * cceProtectionType  **参数解释**: cce防护类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - cluster_level：集群级别防护。 - node_level：节点级别防护。  **默认取值**: 不涉及
+    * chargingMode  **参数解释**: 付费模式 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - on_demand：按需。 - free_security_check：免费安全体检。 **默认取值**: 不涉及
+    * cceProtectionType  **参数解释**: cce防护类型， **约束限制**: 当前只支持集群级别防护 **取值范围**: 包含如下两种： - cluster_level：集群级别防护。 - node_level：节点级别防护。 **默认取值**: 不涉及
     * preferPacketCycle  优先使用包周期配额；默认false
     *
     * @var string[]
@@ -258,6 +258,9 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['clusterType'] === null) {
+            $invalidProperties[] = "'clusterType' can't be null";
+        }
             $allowedValues = $this->getClusterTypeAllowableValues();
                 if (!is_null($this->container['clusterType']) && !in_array($this->container['clusterType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -266,7 +269,7 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['clusterType']) && !preg_match("/^.*$/", $this->container['clusterType'])) {
+            if (!preg_match("/^.*$/", $this->container['clusterType'])) {
                 $invalidProperties[] = "invalid value for 'clusterType', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['clusterId']) && !preg_match("/^.*$/", $this->container['clusterId'])) {
@@ -278,6 +281,9 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
             if (!preg_match("/^.*$/", $this->container['clusterName'])) {
                 $invalidProperties[] = "invalid value for 'clusterName', must be conform to the pattern /^.*$/.";
             }
+        if ($this->container['chargingMode'] === null) {
+            $invalidProperties[] = "'chargingMode' can't be null";
+        }
             $allowedValues = $this->getChargingModeAllowableValues();
                 if (!is_null($this->container['chargingMode']) && !in_array($this->container['chargingMode'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -286,9 +292,12 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['chargingMode']) && !preg_match("/^.*$/", $this->container['chargingMode'])) {
+            if (!preg_match("/^.*$/", $this->container['chargingMode'])) {
                 $invalidProperties[] = "invalid value for 'chargingMode', must be conform to the pattern /^.*$/.";
             }
+        if ($this->container['cceProtectionType'] === null) {
+            $invalidProperties[] = "'cceProtectionType' can't be null";
+        }
             $allowedValues = $this->getCceProtectionTypeAllowableValues();
                 if (!is_null($this->container['cceProtectionType']) && !in_array($this->container['cceProtectionType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -297,7 +306,7 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['cceProtectionType']) && !preg_match("/^.*$/", $this->container['cceProtectionType'])) {
+            if (!preg_match("/^.*$/", $this->container['cceProtectionType'])) {
                 $invalidProperties[] = "invalid value for 'cceProtectionType', must be conform to the pattern /^.*$/.";
             }
         return $invalidProperties;
@@ -316,9 +325,9 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterType
-    *  **参数解释**: cce集群类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - existing：存量集群。 - adding：新增集群。  **默认取值**: 不涉及
+    *  **参数解释**: cce集群类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - existing：存量集群。 - adding：新增集群。 **默认取值**: 不涉及
     *
-    * @return string|null
+    * @return string
     */
     public function getClusterType()
     {
@@ -328,7 +337,7 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets clusterType
     *
-    * @param string|null $clusterType **参数解释**: cce集群类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - existing：存量集群。 - adding：新增集群。  **默认取值**: 不涉及
+    * @param string $clusterType **参数解释**: cce集群类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - existing：存量集群。 - adding：新增集群。 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -340,7 +349,7 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群id
+    *  **参数解释**: 集群id **约束限制**: 新增集群没有集群id，存量集群的集群id必填 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -352,7 +361,7 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群id
+    * @param string|null $clusterId **参数解释**: 集群id **约束限制**: 新增集群没有集群id，存量集群的集群id必填 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -388,9 +397,9 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  **参数解释**: 付费模式 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - on_demand：按需。 - free_security_check：免费安全体检。  **默认取值**: 不涉及
+    *  **参数解释**: 付费模式 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - on_demand：按需。 - free_security_check：免费安全体检。 **默认取值**: 不涉及
     *
-    * @return string|null
+    * @return string
     */
     public function getChargingMode()
     {
@@ -400,7 +409,7 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param string|null $chargingMode **参数解释**: 付费模式 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - on_demand：按需。 - free_security_check：免费安全体检。  **默认取值**: 不涉及
+    * @param string $chargingMode **参数解释**: 付费模式 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - on_demand：按需。 - free_security_check：免费安全体检。 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -412,9 +421,9 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets cceProtectionType
-    *  **参数解释**: cce防护类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - cluster_level：集群级别防护。 - node_level：节点级别防护。  **默认取值**: 不涉及
+    *  **参数解释**: cce防护类型， **约束限制**: 当前只支持集群级别防护 **取值范围**: 包含如下两种： - cluster_level：集群级别防护。 - node_level：节点级别防护。 **默认取值**: 不涉及
     *
-    * @return string|null
+    * @return string
     */
     public function getCceProtectionType()
     {
@@ -424,7 +433,7 @@ class CceIntegrationProtectionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets cceProtectionType
     *
-    * @param string|null $cceProtectionType **参数解释**: cce防护类型 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - cluster_level：集群级别防护。 - node_level：节点级别防护。  **默认取值**: 不涉及
+    * @param string $cceProtectionType **参数解释**: cce防护类型， **约束限制**: 当前只支持集群级别防护 **取值范围**: 包含如下两种： - cluster_level：集群级别防护。 - node_level：节点级别防护。 **默认取值**: 不涉及
     *
     * @return $this
     */

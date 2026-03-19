@@ -21,25 +21,25 @@ class ListInstanceReplicationPolicyExecSubTasksResponse implements ModelInterfac
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * subtasks  老化策略执行记录子任务列表
-    * total  老化策略执行记录子任务总数
+    * subTasks  镜像同步策略执行记录子任务列表
+    * total  镜像同步策略执行记录子任务总数
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'subtasks' => '\HuaweiCloud\SDK\Swr\V2\Model\SubtaskDetail[]',
+            'subTasks' => '\HuaweiCloud\SDK\Swr\V2\Model\SubtaskDetail[]',
             'total' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * subtasks  老化策略执行记录子任务列表
-    * total  老化策略执行记录子任务总数
+    * subTasks  镜像同步策略执行记录子任务列表
+    * total  镜像同步策略执行记录子任务总数
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'subtasks' => null,
+        'subTasks' => null,
         'total' => null
     ];
 
@@ -66,37 +66,37 @@ class ListInstanceReplicationPolicyExecSubTasksResponse implements ModelInterfac
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * subtasks  老化策略执行记录子任务列表
-    * total  老化策略执行记录子任务总数
+    * subTasks  镜像同步策略执行记录子任务列表
+    * total  镜像同步策略执行记录子任务总数
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'subtasks' => 'subtasks',
+            'subTasks' => 'sub_tasks',
             'total' => 'total'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * subtasks  老化策略执行记录子任务列表
-    * total  老化策略执行记录子任务总数
+    * subTasks  镜像同步策略执行记录子任务列表
+    * total  镜像同步策略执行记录子任务总数
     *
     * @var string[]
     */
     protected static $setters = [
-            'subtasks' => 'setSubtasks',
+            'subTasks' => 'setSubTasks',
             'total' => 'setTotal'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * subtasks  老化策略执行记录子任务列表
-    * total  老化策略执行记录子任务总数
+    * subTasks  镜像同步策略执行记录子任务列表
+    * total  镜像同步策略执行记录子任务总数
     *
     * @var string[]
     */
     protected static $getters = [
-            'subtasks' => 'getSubtasks',
+            'subTasks' => 'getSubTasks',
             'total' => 'getTotal'
     ];
 
@@ -158,7 +158,7 @@ class ListInstanceReplicationPolicyExecSubTasksResponse implements ModelInterfac
     */
     public function __construct(array $data = null)
     {
-        $this->container['subtasks'] = isset($data['subtasks']) ? $data['subtasks'] : null;
+        $this->container['subTasks'] = isset($data['subTasks']) ? $data['subTasks'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
 
@@ -185,32 +185,32 @@ class ListInstanceReplicationPolicyExecSubTasksResponse implements ModelInterfac
     }
 
     /**
-    * Gets subtasks
-    *  老化策略执行记录子任务列表
+    * Gets subTasks
+    *  镜像同步策略执行记录子任务列表
     *
     * @return \HuaweiCloud\SDK\Swr\V2\Model\SubtaskDetail[]|null
     */
-    public function getSubtasks()
+    public function getSubTasks()
     {
-        return $this->container['subtasks'];
+        return $this->container['subTasks'];
     }
 
     /**
-    * Sets subtasks
+    * Sets subTasks
     *
-    * @param \HuaweiCloud\SDK\Swr\V2\Model\SubtaskDetail[]|null $subtasks 老化策略执行记录子任务列表
+    * @param \HuaweiCloud\SDK\Swr\V2\Model\SubtaskDetail[]|null $subTasks 镜像同步策略执行记录子任务列表
     *
     * @return $this
     */
-    public function setSubtasks($subtasks)
+    public function setSubTasks($subTasks)
     {
-        $this->container['subtasks'] = $subtasks;
+        $this->container['subTasks'] = $subTasks;
         return $this;
     }
 
     /**
     * Gets total
-    *  老化策略执行记录子任务总数
+    *  镜像同步策略执行记录子任务总数
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListInstanceReplicationPolicyExecSubTasksResponse implements ModelInterfac
     /**
     * Sets total
     *
-    * @param int|null $total 老化策略执行记录子任务总数
+    * @param int|null $total 镜像同步策略执行记录子任务总数
     *
     * @return $this
     */

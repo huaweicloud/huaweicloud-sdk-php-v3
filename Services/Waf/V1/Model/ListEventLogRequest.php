@@ -21,8 +21,8 @@ class ListEventLogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * page  页数
-    * pagesize  单页显示数
+    * page  **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
+    * pagesize  **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class ListEventLogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * page  页数
-    * pagesize  单页显示数
+    * page  **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
+    * pagesize  **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class ListEventLogRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * page  页数
-    * pagesize  单页显示数
+    * page  **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
+    * pagesize  **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class ListEventLogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * page  页数
-    * pagesize  单页显示数
+    * page  **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
+    * pagesize  **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class ListEventLogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * page  页数
-    * pagesize  单页显示数
+    * page  **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
+    * pagesize  **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
     *
     * @var string[]
     */
@@ -223,7 +223,7 @@ class ListEventLogRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets page
-    *  页数
+    *  **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
     *
     * @return int|null
     */
@@ -235,7 +235,7 @@ class ListEventLogRequest implements ModelInterface, ArrayAccess
     /**
     * Sets page
     *
-    * @param int|null $page 页数
+    * @param int|null $page **参数解释：** 分页查询时，返回第几页数据 **约束限制：** 不涉及 **取值范围：** page参数的实际有效范围取决于总数据量和pagesize的取值，不能大于总页数 **默认取值：** 1
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class ListEventLogRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets pagesize
-    *  单页显示数
+    *  **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
     *
     * @return int|null
     */
@@ -259,7 +259,7 @@ class ListEventLogRequest implements ModelInterface, ArrayAccess
     /**
     * Sets pagesize
     *
-    * @param int|null $pagesize 单页显示数
+    * @param int|null $pagesize **参数解释：** 分页查询时，每页包含的结果条数 **约束限制：** 不涉及 **取值范围：** [0, 总数据量] **默认取值：** 10
     *
     * @return $this
     */

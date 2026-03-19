@@ -20,7 +20,7 @@ class LeakageListInfoAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * category  操作类型。   - “block”：过滤。   - “log”：仅记录
+    * category  操作类型。   - block：过滤。   - log：仅记录
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class LeakageListInfoAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * category  操作类型。   - “block”：过滤。   - “log”：仅记录
+    * category  操作类型。   - block：过滤。   - log：仅记录
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class LeakageListInfoAction implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * category  操作类型。   - “block”：过滤。   - “log”：仅记录
+    * category  操作类型。   - block：过滤。   - log：仅记录
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class LeakageListInfoAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * category  操作类型。   - “block”：过滤。   - “log”：仅记录
+    * category  操作类型。   - block：过滤。   - log：仅记录
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class LeakageListInfoAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * category  操作类型。   - “block”：过滤。   - “log”：仅记录
+    * category  操作类型。   - block：过滤。   - log：仅记录
     *
     * @var string[]
     */
@@ -200,7 +200,7 @@ class LeakageListInfoAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  操作类型。   - “block”：过滤。   - “log”：仅记录
+    *  操作类型。   - block：过滤。   - log：仅记录
     *
     * @return string
     */
@@ -212,7 +212,7 @@ class LeakageListInfoAction implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string $category 操作类型。   - “block”：过滤。   - “log”：仅记录
+    * @param string $category 操作类型。   - block：过滤。   - log：仅记录
     *
     * @return $this
     */

@@ -20,10 +20,10 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * category  **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent  **默认取值：** 不涉及
-    * logicOperation  条件列表匹配逻辑, 包括：contain、not_contain、equal、not_equal、prefix、not_prefix、suffix、not_suffix、contain_any、not_contain_all、equal_any、not_equal_all、prefix_any、not_prefix_all、suffix_any、not_suffix_all
-    * contents  条件列表逻辑匹配内容。当logic_operation参数不以any或者all结尾时，需要传该参数。
-    * valueListId  引用表id。当logic_operation参数以any或者all结尾时，需要传该参数。此外，引用表类型要与category类型保持一致。
+    * category  **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent **默认取值：** 不涉及
+    * logicOperation  **参数解释：** 条件列表匹配逻辑 **约束限制：** 不涉及 **取值范围：** - contain_any: 包含任意一个 - not_contain_all: 不包含全部 - equal_any: 等于任意一个 - not_equal_all: 不等于全部 - prefix_any: 前缀匹配任意一个 - not_prefix_all: 前缀不匹配全部 - suffix_any: 后缀匹配任意一个 - not_suffix_all: 后缀不匹配全部 - contain: 包含 - not_contain: 不包含 - equal: 等于 - not_equal: 不等于 - prefix: 前缀匹配 - not_prefix: 前缀不匹配 - suffix: 后缀匹配 - not_suffix: 后缀不匹配 - len_equal: 长度等于 - len_not_equal: 长度不等于 - len_greater: 长度大于 - len_less: 长度小于 - len_greater_equal: 长度大于等于 - len_less_equal: 长度小于等于 - regular_match: 正则匹配 - regular_not_match: 正则不匹配 **默认取值：** 不涉及
+    * contents  **参数解释：** 条件列表逻辑匹配内容 **约束限制：** 当logic_operation参数不以any或者all结尾时，需要传该参数；仅支持单个匹配内容 **取值范围：** 匹配内容字符串长度范围：[1, 4096] **默认取值：** 不涉及
+    * valueListId  **参数解释：** 引用表ID **约束限制：** 当logic_operation参数以any或者all结尾时，需要传该参数；引用表类型要与category类型保持一致 **取值范围：** 通过ListValueList接口获取引用表ID **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * category  **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent  **默认取值：** 不涉及
-    * logicOperation  条件列表匹配逻辑, 包括：contain、not_contain、equal、not_equal、prefix、not_prefix、suffix、not_suffix、contain_any、not_contain_all、equal_any、not_equal_all、prefix_any、not_prefix_all、suffix_any、not_suffix_all
-    * contents  条件列表逻辑匹配内容。当logic_operation参数不以any或者all结尾时，需要传该参数。
-    * valueListId  引用表id。当logic_operation参数以any或者all结尾时，需要传该参数。此外，引用表类型要与category类型保持一致。
+    * category  **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent **默认取值：** 不涉及
+    * logicOperation  **参数解释：** 条件列表匹配逻辑 **约束限制：** 不涉及 **取值范围：** - contain_any: 包含任意一个 - not_contain_all: 不包含全部 - equal_any: 等于任意一个 - not_equal_all: 不等于全部 - prefix_any: 前缀匹配任意一个 - not_prefix_all: 前缀不匹配全部 - suffix_any: 后缀匹配任意一个 - not_suffix_all: 后缀不匹配全部 - contain: 包含 - not_contain: 不包含 - equal: 等于 - not_equal: 不等于 - prefix: 前缀匹配 - not_prefix: 前缀不匹配 - suffix: 后缀匹配 - not_suffix: 后缀不匹配 - len_equal: 长度等于 - len_not_equal: 长度不等于 - len_greater: 长度大于 - len_less: 长度小于 - len_greater_equal: 长度大于等于 - len_less_equal: 长度小于等于 - regular_match: 正则匹配 - regular_not_match: 正则不匹配 **默认取值：** 不涉及
+    * contents  **参数解释：** 条件列表逻辑匹配内容 **约束限制：** 当logic_operation参数不以any或者all结尾时，需要传该参数；仅支持单个匹配内容 **取值范围：** 匹配内容字符串长度范围：[1, 4096] **默认取值：** 不涉及
+    * valueListId  **参数解释：** 引用表ID **约束限制：** 当logic_operation参数以any或者all结尾时，需要传该参数；引用表类型要与category类型保持一致 **取值范围：** 通过ListValueList接口获取引用表ID **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * category  **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent  **默认取值：** 不涉及
-    * logicOperation  条件列表匹配逻辑, 包括：contain、not_contain、equal、not_equal、prefix、not_prefix、suffix、not_suffix、contain_any、not_contain_all、equal_any、not_equal_all、prefix_any、not_prefix_all、suffix_any、not_suffix_all
-    * contents  条件列表逻辑匹配内容。当logic_operation参数不以any或者all结尾时，需要传该参数。
-    * valueListId  引用表id。当logic_operation参数以any或者all结尾时，需要传该参数。此外，引用表类型要与category类型保持一致。
+    * category  **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent **默认取值：** 不涉及
+    * logicOperation  **参数解释：** 条件列表匹配逻辑 **约束限制：** 不涉及 **取值范围：** - contain_any: 包含任意一个 - not_contain_all: 不包含全部 - equal_any: 等于任意一个 - not_equal_all: 不等于全部 - prefix_any: 前缀匹配任意一个 - not_prefix_all: 前缀不匹配全部 - suffix_any: 后缀匹配任意一个 - not_suffix_all: 后缀不匹配全部 - contain: 包含 - not_contain: 不包含 - equal: 等于 - not_equal: 不等于 - prefix: 前缀匹配 - not_prefix: 前缀不匹配 - suffix: 后缀匹配 - not_suffix: 后缀不匹配 - len_equal: 长度等于 - len_not_equal: 长度不等于 - len_greater: 长度大于 - len_less: 长度小于 - len_greater_equal: 长度大于等于 - len_less_equal: 长度小于等于 - regular_match: 正则匹配 - regular_not_match: 正则不匹配 **默认取值：** 不涉及
+    * contents  **参数解释：** 条件列表逻辑匹配内容 **约束限制：** 当logic_operation参数不以any或者all结尾时，需要传该参数；仅支持单个匹配内容 **取值范围：** 匹配内容字符串长度范围：[1, 4096] **默认取值：** 不涉及
+    * valueListId  **参数解释：** 引用表ID **约束限制：** 当logic_operation参数以any或者all结尾时，需要传该参数；引用表类型要与category类型保持一致 **取值范围：** 通过ListValueList接口获取引用表ID **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * category  **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent  **默认取值：** 不涉及
-    * logicOperation  条件列表匹配逻辑, 包括：contain、not_contain、equal、not_equal、prefix、not_prefix、suffix、not_suffix、contain_any、not_contain_all、equal_any、not_equal_all、prefix_any、not_prefix_all、suffix_any、not_suffix_all
-    * contents  条件列表逻辑匹配内容。当logic_operation参数不以any或者all结尾时，需要传该参数。
-    * valueListId  引用表id。当logic_operation参数以any或者all结尾时，需要传该参数。此外，引用表类型要与category类型保持一致。
+    * category  **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent **默认取值：** 不涉及
+    * logicOperation  **参数解释：** 条件列表匹配逻辑 **约束限制：** 不涉及 **取值范围：** - contain_any: 包含任意一个 - not_contain_all: 不包含全部 - equal_any: 等于任意一个 - not_equal_all: 不等于全部 - prefix_any: 前缀匹配任意一个 - not_prefix_all: 前缀不匹配全部 - suffix_any: 后缀匹配任意一个 - not_suffix_all: 后缀不匹配全部 - contain: 包含 - not_contain: 不包含 - equal: 等于 - not_equal: 不等于 - prefix: 前缀匹配 - not_prefix: 前缀不匹配 - suffix: 后缀匹配 - not_suffix: 后缀不匹配 - len_equal: 长度等于 - len_not_equal: 长度不等于 - len_greater: 长度大于 - len_less: 长度小于 - len_greater_equal: 长度大于等于 - len_less_equal: 长度小于等于 - regular_match: 正则匹配 - regular_not_match: 正则不匹配 **默认取值：** 不涉及
+    * contents  **参数解释：** 条件列表逻辑匹配内容 **约束限制：** 当logic_operation参数不以any或者all结尾时，需要传该参数；仅支持单个匹配内容 **取值范围：** 匹配内容字符串长度范围：[1, 4096] **默认取值：** 不涉及
+    * valueListId  **参数解释：** 引用表ID **约束限制：** 当logic_operation参数以any或者all结尾时，需要传该参数；引用表类型要与category类型保持一致 **取值范围：** 通过ListValueList接口获取引用表ID **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * category  **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent  **默认取值：** 不涉及
-    * logicOperation  条件列表匹配逻辑, 包括：contain、not_contain、equal、not_equal、prefix、not_prefix、suffix、not_suffix、contain_any、not_contain_all、equal_any、not_equal_all、prefix_any、not_prefix_all、suffix_any、not_suffix_all
-    * contents  条件列表逻辑匹配内容。当logic_operation参数不以any或者all结尾时，需要传该参数。
-    * valueListId  引用表id。当logic_operation参数以any或者all结尾时，需要传该参数。此外，引用表类型要与category类型保持一致。
+    * category  **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent **默认取值：** 不涉及
+    * logicOperation  **参数解释：** 条件列表匹配逻辑 **约束限制：** 不涉及 **取值范围：** - contain_any: 包含任意一个 - not_contain_all: 不包含全部 - equal_any: 等于任意一个 - not_equal_all: 不等于全部 - prefix_any: 前缀匹配任意一个 - not_prefix_all: 前缀不匹配全部 - suffix_any: 后缀匹配任意一个 - not_suffix_all: 后缀不匹配全部 - contain: 包含 - not_contain: 不包含 - equal: 等于 - not_equal: 不等于 - prefix: 前缀匹配 - not_prefix: 前缀不匹配 - suffix: 后缀匹配 - not_suffix: 后缀不匹配 - len_equal: 长度等于 - len_not_equal: 长度不等于 - len_greater: 长度大于 - len_less: 长度小于 - len_greater_equal: 长度大于等于 - len_less_equal: 长度小于等于 - regular_match: 正则匹配 - regular_not_match: 正则不匹配 **默认取值：** 不涉及
+    * contents  **参数解释：** 条件列表逻辑匹配内容 **约束限制：** 当logic_operation参数不以any或者all结尾时，需要传该参数；仅支持单个匹配内容 **取值范围：** 匹配内容字符串长度范围：[1, 4096] **默认取值：** 不涉及
+    * valueListId  **参数解释：** 引用表ID **约束限制：** 当logic_operation参数以any或者all结尾时，需要传该参数；引用表类型要与category类型保持一致 **取值范围：** 通过ListValueList接口获取引用表ID **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -161,6 +161,30 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
     }
     const CATEGORY_URL = 'url';
     const CATEGORY_USER_AGENT = 'user-agent';
+    const LOGIC_OPERATION_CONTAIN_ANY = 'contain_any';
+    const LOGIC_OPERATION_NOT_CONTAIN_ALL = 'not_contain_all';
+    const LOGIC_OPERATION_EQUAL_ANY = 'equal_any';
+    const LOGIC_OPERATION_NOT_EQUAL_ALL = 'not_equal_all';
+    const LOGIC_OPERATION_PREFIX_ANY = 'prefix_any';
+    const LOGIC_OPERATION_NOT_PREFIX_ALL = 'not_prefix_all';
+    const LOGIC_OPERATION_SUFFIX_ANY = 'suffix_any';
+    const LOGIC_OPERATION_NOT_SUFFIX_ALL = 'not_suffix_all';
+    const LOGIC_OPERATION_CONTAIN = 'contain';
+    const LOGIC_OPERATION_NOT_CONTAIN = 'not_contain';
+    const LOGIC_OPERATION_EQUAL = 'equal';
+    const LOGIC_OPERATION_NOT_EQUAL = 'not_equal';
+    const LOGIC_OPERATION_PREFIX = 'prefix';
+    const LOGIC_OPERATION_NOT_PREFIX = 'not_prefix';
+    const LOGIC_OPERATION_SUFFIX = 'suffix';
+    const LOGIC_OPERATION_NOT_SUFFIX = 'not_suffix';
+    const LOGIC_OPERATION_LEN_EQUAL = 'len_equal';
+    const LOGIC_OPERATION_LEN_NOT_EQUAL = 'len_not_equal';
+    const LOGIC_OPERATION_LEN_GREATER = 'len_greater';
+    const LOGIC_OPERATION_LEN_LESS = 'len_less';
+    const LOGIC_OPERATION_LEN_GREATER_EQUAL = 'len_greater_equal';
+    const LOGIC_OPERATION_LEN_LESS_EQUAL = 'len_less_equal';
+    const LOGIC_OPERATION_REGULAR_MATCH = 'regular_match';
+    const LOGIC_OPERATION_REGULAR_NOT_MATCH = 'regular_not_match';
     
 
     /**
@@ -173,6 +197,41 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
         return [
             self::CATEGORY_URL,
             self::CATEGORY_USER_AGENT,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getLogicOperationAllowableValues()
+    {
+        return [
+            self::LOGIC_OPERATION_CONTAIN_ANY,
+            self::LOGIC_OPERATION_NOT_CONTAIN_ALL,
+            self::LOGIC_OPERATION_EQUAL_ANY,
+            self::LOGIC_OPERATION_NOT_EQUAL_ALL,
+            self::LOGIC_OPERATION_PREFIX_ANY,
+            self::LOGIC_OPERATION_NOT_PREFIX_ALL,
+            self::LOGIC_OPERATION_SUFFIX_ANY,
+            self::LOGIC_OPERATION_NOT_SUFFIX_ALL,
+            self::LOGIC_OPERATION_CONTAIN,
+            self::LOGIC_OPERATION_NOT_CONTAIN,
+            self::LOGIC_OPERATION_EQUAL,
+            self::LOGIC_OPERATION_NOT_EQUAL,
+            self::LOGIC_OPERATION_PREFIX,
+            self::LOGIC_OPERATION_NOT_PREFIX,
+            self::LOGIC_OPERATION_SUFFIX,
+            self::LOGIC_OPERATION_NOT_SUFFIX,
+            self::LOGIC_OPERATION_LEN_EQUAL,
+            self::LOGIC_OPERATION_LEN_NOT_EQUAL,
+            self::LOGIC_OPERATION_LEN_GREATER,
+            self::LOGIC_OPERATION_LEN_LESS,
+            self::LOGIC_OPERATION_LEN_GREATER_EQUAL,
+            self::LOGIC_OPERATION_LEN_LESS_EQUAL,
+            self::LOGIC_OPERATION_REGULAR_MATCH,
+            self::LOGIC_OPERATION_REGULAR_NOT_MATCH,
         ];
     }
 
@@ -206,10 +265,24 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['category'] === null) {
+            $invalidProperties[] = "'category' can't be null";
+        }
             $allowedValues = $this->getCategoryAllowableValues();
                 if (!is_null($this->container['category']) && !in_array($this->container['category'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'category', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+        if ($this->container['logicOperation'] === null) {
+            $invalidProperties[] = "'logicOperation' can't be null";
+        }
+            $allowedValues = $this->getLogicOperationAllowableValues();
+                if (!is_null($this->container['logicOperation']) && !in_array($this->container['logicOperation'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'logicOperation', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -230,9 +303,9 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent  **默认取值：** 不涉及
+    *  **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent **默认取值：** 不涉及
     *
-    * @return string|null
+    * @return string
     */
     public function getCategory()
     {
@@ -242,7 +315,7 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string|null $category **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent  **默认取值：** 不涉及
+    * @param string $category **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -254,9 +327,9 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicOperation
-    *  条件列表匹配逻辑, 包括：contain、not_contain、equal、not_equal、prefix、not_prefix、suffix、not_suffix、contain_any、not_contain_all、equal_any、not_equal_all、prefix_any、not_prefix_all、suffix_any、not_suffix_all
+    *  **参数解释：** 条件列表匹配逻辑 **约束限制：** 不涉及 **取值范围：** - contain_any: 包含任意一个 - not_contain_all: 不包含全部 - equal_any: 等于任意一个 - not_equal_all: 不等于全部 - prefix_any: 前缀匹配任意一个 - not_prefix_all: 前缀不匹配全部 - suffix_any: 后缀匹配任意一个 - not_suffix_all: 后缀不匹配全部 - contain: 包含 - not_contain: 不包含 - equal: 等于 - not_equal: 不等于 - prefix: 前缀匹配 - not_prefix: 前缀不匹配 - suffix: 后缀匹配 - not_suffix: 后缀不匹配 - len_equal: 长度等于 - len_not_equal: 长度不等于 - len_greater: 长度大于 - len_less: 长度小于 - len_greater_equal: 长度大于等于 - len_less_equal: 长度小于等于 - regular_match: 正则匹配 - regular_not_match: 正则不匹配 **默认取值：** 不涉及
     *
-    * @return string|null
+    * @return string
     */
     public function getLogicOperation()
     {
@@ -266,7 +339,7 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
     /**
     * Sets logicOperation
     *
-    * @param string|null $logicOperation 条件列表匹配逻辑, 包括：contain、not_contain、equal、not_equal、prefix、not_prefix、suffix、not_suffix、contain_any、not_contain_all、equal_any、not_equal_all、prefix_any、not_prefix_all、suffix_any、not_suffix_all
+    * @param string $logicOperation **参数解释：** 条件列表匹配逻辑 **约束限制：** 不涉及 **取值范围：** - contain_any: 包含任意一个 - not_contain_all: 不包含全部 - equal_any: 等于任意一个 - not_equal_all: 不等于全部 - prefix_any: 前缀匹配任意一个 - not_prefix_all: 前缀不匹配全部 - suffix_any: 后缀匹配任意一个 - not_suffix_all: 后缀不匹配全部 - contain: 包含 - not_contain: 不包含 - equal: 等于 - not_equal: 不等于 - prefix: 前缀匹配 - not_prefix: 前缀不匹配 - suffix: 后缀匹配 - not_suffix: 后缀不匹配 - len_equal: 长度等于 - len_not_equal: 长度不等于 - len_greater: 长度大于 - len_less: 长度小于 - len_greater_equal: 长度大于等于 - len_less_equal: 长度小于等于 - regular_match: 正则匹配 - regular_not_match: 正则不匹配 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -278,7 +351,7 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets contents
-    *  条件列表逻辑匹配内容。当logic_operation参数不以any或者all结尾时，需要传该参数。
+    *  **参数解释：** 条件列表逻辑匹配内容 **约束限制：** 当logic_operation参数不以any或者all结尾时，需要传该参数；仅支持单个匹配内容 **取值范围：** 匹配内容字符串长度范围：[1, 4096] **默认取值：** 不涉及
     *
     * @return string[]|null
     */
@@ -290,7 +363,7 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
     /**
     * Sets contents
     *
-    * @param string[]|null $contents 条件列表逻辑匹配内容。当logic_operation参数不以any或者all结尾时，需要传该参数。
+    * @param string[]|null $contents **参数解释：** 条件列表逻辑匹配内容 **约束限制：** 当logic_operation参数不以any或者all结尾时，需要传该参数；仅支持单个匹配内容 **取值范围：** 匹配内容字符串长度范围：[1, 4096] **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -302,7 +375,7 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets valueListId
-    *  引用表id。当logic_operation参数以any或者all结尾时，需要传该参数。此外，引用表类型要与category类型保持一致。
+    *  **参数解释：** 引用表ID **约束限制：** 当logic_operation参数以any或者all结尾时，需要传该参数；引用表类型要与category类型保持一致 **取值范围：** 通过ListValueList接口获取引用表ID **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -314,7 +387,7 @@ class AnticrawlerCondition implements ModelInterface, ArrayAccess
     /**
     * Sets valueListId
     *
-    * @param string|null $valueListId 引用表id。当logic_operation参数以any或者all结尾时，需要传该参数。此外，引用表类型要与category类型保持一致。
+    * @param string|null $valueListId **参数解释：** 引用表ID **约束限制：** 当logic_operation参数以any或者all结尾时，需要传该参数；引用表类型要与category类型保持一致 **取值范围：** 通过ListValueList接口获取引用表ID **默认取值：** 不涉及
     *
     * @return $this
     */

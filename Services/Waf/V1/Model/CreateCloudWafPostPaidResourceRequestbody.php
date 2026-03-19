@@ -20,7 +20,7 @@ class CreateCloudWafPostPaidResourceRequestbody implements ModelInterface, Array
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * consoleArea  租户所在的站点，hec-hk：华为云国际站
+    * consoleArea  租户所在的站点 - hec-hk：华为云国际站 - hws：华为云大陆站
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class CreateCloudWafPostPaidResourceRequestbody implements ModelInterface, Array
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * consoleArea  租户所在的站点，hec-hk：华为云国际站
+    * consoleArea  租户所在的站点 - hec-hk：华为云国际站 - hws：华为云大陆站
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class CreateCloudWafPostPaidResourceRequestbody implements ModelInterface, Array
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * consoleArea  租户所在的站点，hec-hk：华为云国际站
+    * consoleArea  租户所在的站点 - hec-hk：华为云国际站 - hws：华为云大陆站
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CreateCloudWafPostPaidResourceRequestbody implements ModelInterface, Array
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * consoleArea  租户所在的站点，hec-hk：华为云国际站
+    * consoleArea  租户所在的站点 - hec-hk：华为云国际站 - hws：华为云大陆站
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CreateCloudWafPostPaidResourceRequestbody implements ModelInterface, Array
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * consoleArea  租户所在的站点，hec-hk：华为云国际站
+    * consoleArea  租户所在的站点 - hec-hk：华为云国际站 - hws：华为云大陆站
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class CreateCloudWafPostPaidResourceRequestbody implements ModelInterface, Array
 
     /**
     * Gets consoleArea
-    *  租户所在的站点，hec-hk：华为云国际站
+    *  租户所在的站点 - hec-hk：华为云国际站 - hws：华为云大陆站
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class CreateCloudWafPostPaidResourceRequestbody implements ModelInterface, Array
     /**
     * Sets consoleArea
     *
-    * @param string $consoleArea 租户所在的站点，hec-hk：华为云国际站
+    * @param string $consoleArea 租户所在的站点 - hec-hk：华为云国际站 - hws：华为云大陆站
     *
     * @return $this
     */

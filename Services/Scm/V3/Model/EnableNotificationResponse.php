@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\DeH\V1\Model;
+namespace HuaweiCloud\SDK\Scm\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListDedicatedHostAllTypesResponse implements ModelInterface, ArrayAccess
+class EnableNotificationResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,26 +17,24 @@ class ListDedicatedHostAllTypesResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListDedicatedHostAllTypesResponse';
+    protected static $openAPIModelName = 'EnableNotificationResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dedicatedHostTypes  指定可用的DeH类型。
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'dedicatedHostTypes' => '\HuaweiCloud\SDK\DeH\V1\Model\DedicatedHostType[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dedicatedHostTypes  指定可用的DeH类型。
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'dedicatedHostTypes' => null
     ];
 
     /**
@@ -62,32 +60,29 @@ class ListDedicatedHostAllTypesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dedicatedHostTypes  指定可用的DeH类型。
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'dedicatedHostTypes' => 'dedicated_host_types'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dedicatedHostTypes  指定可用的DeH类型。
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'dedicatedHostTypes' => 'setDedicatedHostTypes'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dedicatedHostTypes  指定可用的DeH类型。
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'dedicatedHostTypes' => 'getDedicatedHostTypes'
     ];
 
     /**
@@ -148,7 +143,6 @@ class ListDedicatedHostAllTypesResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['dedicatedHostTypes'] = isset($data['dedicatedHostTypes']) ? $data['dedicatedHostTypes'] : null;
     }
 
     /**
@@ -171,30 +165,6 @@ class ListDedicatedHostAllTypesResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets dedicatedHostTypes
-    *  指定可用的DeH类型。
-    *
-    * @return \HuaweiCloud\SDK\DeH\V1\Model\DedicatedHostType[]|null
-    */
-    public function getDedicatedHostTypes()
-    {
-        return $this->container['dedicatedHostTypes'];
-    }
-
-    /**
-    * Sets dedicatedHostTypes
-    *
-    * @param \HuaweiCloud\SDK\DeH\V1\Model\DedicatedHostType[]|null $dedicatedHostTypes 指定可用的DeH类型。
-    *
-    * @return $this
-    */
-    public function setDedicatedHostTypes($dedicatedHostTypes)
-    {
-        $this->container['dedicatedHostTypes'] = $dedicatedHostTypes;
-        return $this;
     }
 
     /**

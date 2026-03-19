@@ -15374,6 +15374,9 @@ class GaussDBforopenGaussAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['instanceId'] !== null) {
+            $queryParams['instance_id'] = $localVarParams['instanceId'];
+        }
         if ($localVarParams['instanceName'] !== null) {
             $queryParams['instance_name'] = $localVarParams['instanceName'];
         }
@@ -15391,9 +15394,6 @@ class GaussDBforopenGaussAsyncClient extends Client
         }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];
-        }
-        if ($localVarParams['instanceId'] !== null) {
-            $pathParams['instance_id'] = $localVarParams['instanceId'];
         }
 
         if ($multipart) {

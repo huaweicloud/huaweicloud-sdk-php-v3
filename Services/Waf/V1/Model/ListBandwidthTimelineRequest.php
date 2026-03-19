@@ -22,12 +22,12 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * from  查询的带宽统计数据的起始时间（13位毫秒时间戳），需要和to同时使用
-    * to  查询的带宽统计数据的结束时间（13位毫秒时间戳），需要和from同时使用
-    * hosts  域名id，用于查询指定的防护域名在from到to这段时间内的带宽数据。通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id
-    * instances  引擎实例id，用于查询指定的独享引擎实例所防护的域名在from到to这段时间内的带宽数据。
-    * groupBy  展示维度，按天展示时传\"DAY\"；默认不传，按照分钟展示。
-    * displayOption  发送/接受字节数，查看峰值请输入1，查看平均值请输入0
+    * from  **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
+    * to  **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
+    * hosts  **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instances  **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * groupBy  **参数解释：** 展示维度，按天展示时传\"DAY\" **约束限制：** 不涉及 **取值范围：** - DAY **默认取值：** 不涉及
+    * displayOption  **参数解释：** 发送/接受字节数查看形式 **约束限制：** 不涉及 **取值范围：** - 0 平均值 - 1 峰值 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -36,8 +36,8 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'from' => 'int',
             'to' => 'int',
-            'hosts' => 'string',
-            'instances' => 'string',
+            'hosts' => 'string[]',
+            'instances' => 'string[]',
             'groupBy' => 'string',
             'displayOption' => 'int'
     ];
@@ -46,12 +46,12 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * from  查询的带宽统计数据的起始时间（13位毫秒时间戳），需要和to同时使用
-    * to  查询的带宽统计数据的结束时间（13位毫秒时间戳），需要和from同时使用
-    * hosts  域名id，用于查询指定的防护域名在from到to这段时间内的带宽数据。通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id
-    * instances  引擎实例id，用于查询指定的独享引擎实例所防护的域名在from到to这段时间内的带宽数据。
-    * groupBy  展示维度，按天展示时传\"DAY\"；默认不传，按照分钟展示。
-    * displayOption  发送/接受字节数，查看峰值请输入1，查看平均值请输入0
+    * from  **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
+    * to  **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
+    * hosts  **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instances  **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * groupBy  **参数解释：** 展示维度，按天展示时传\"DAY\" **约束限制：** 不涉及 **取值范围：** - DAY **默认取值：** 不涉及
+    * displayOption  **参数解释：** 发送/接受字节数查看形式 **约束限制：** 不涉及 **取值范围：** - 0 平均值 - 1 峰值 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -91,12 +91,12 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * from  查询的带宽统计数据的起始时间（13位毫秒时间戳），需要和to同时使用
-    * to  查询的带宽统计数据的结束时间（13位毫秒时间戳），需要和from同时使用
-    * hosts  域名id，用于查询指定的防护域名在from到to这段时间内的带宽数据。通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id
-    * instances  引擎实例id，用于查询指定的独享引擎实例所防护的域名在from到to这段时间内的带宽数据。
-    * groupBy  展示维度，按天展示时传\"DAY\"；默认不传，按照分钟展示。
-    * displayOption  发送/接受字节数，查看峰值请输入1，查看平均值请输入0
+    * from  **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
+    * to  **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
+    * hosts  **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instances  **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * groupBy  **参数解释：** 展示维度，按天展示时传\"DAY\" **约束限制：** 不涉及 **取值范围：** - DAY **默认取值：** 不涉及
+    * displayOption  **参数解释：** 发送/接受字节数查看形式 **约束限制：** 不涉及 **取值范围：** - 0 平均值 - 1 峰值 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -115,12 +115,12 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * from  查询的带宽统计数据的起始时间（13位毫秒时间戳），需要和to同时使用
-    * to  查询的带宽统计数据的结束时间（13位毫秒时间戳），需要和from同时使用
-    * hosts  域名id，用于查询指定的防护域名在from到to这段时间内的带宽数据。通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id
-    * instances  引擎实例id，用于查询指定的独享引擎实例所防护的域名在from到to这段时间内的带宽数据。
-    * groupBy  展示维度，按天展示时传\"DAY\"；默认不传，按照分钟展示。
-    * displayOption  发送/接受字节数，查看峰值请输入1，查看平均值请输入0
+    * from  **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
+    * to  **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
+    * hosts  **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instances  **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * groupBy  **参数解释：** 展示维度，按天展示时传\"DAY\" **约束限制：** 不涉及 **取值范围：** - DAY **默认取值：** 不涉及
+    * displayOption  **参数解释：** 发送/接受字节数查看形式 **约束限制：** 不涉及 **取值范围：** - 0 平均值 - 1 峰值 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -139,12 +139,12 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * from  查询的带宽统计数据的起始时间（13位毫秒时间戳），需要和to同时使用
-    * to  查询的带宽统计数据的结束时间（13位毫秒时间戳），需要和from同时使用
-    * hosts  域名id，用于查询指定的防护域名在from到to这段时间内的带宽数据。通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id
-    * instances  引擎实例id，用于查询指定的独享引擎实例所防护的域名在from到to这段时间内的带宽数据。
-    * groupBy  展示维度，按天展示时传\"DAY\"；默认不传，按照分钟展示。
-    * displayOption  发送/接受字节数，查看峰值请输入1，查看平均值请输入0
+    * from  **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
+    * to  **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
+    * hosts  **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instances  **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * groupBy  **参数解释：** 展示维度，按天展示时传\"DAY\" **约束限制：** 不涉及 **取值范围：** - DAY **默认取值：** 不涉及
+    * displayOption  **参数解释：** 发送/接受字节数查看形式 **约束限制：** 不涉及 **取值范围：** - 0 平均值 - 1 峰值 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -199,7 +199,22 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const DISPLAY_OPTION_0 = 0;
+    const DISPLAY_OPTION_1 = 1;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getDisplayOptionAllowableValues()
+    {
+        return [
+            self::DISPLAY_OPTION_0,
+            self::DISPLAY_OPTION_1,
+        ];
+    }
 
 
     /**
@@ -244,6 +259,14 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
         if ($this->container['to'] === null) {
             $invalidProperties[] = "'to' can't be null";
         }
+            $allowedValues = $this->getDisplayOptionAllowableValues();
+                if (!is_null($this->container['displayOption']) && !in_array($this->container['displayOption'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'displayOption', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -308,7 +331,7 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets from
-    *  查询的带宽统计数据的起始时间（13位毫秒时间戳），需要和to同时使用
+    *  **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
     *
     * @return int
     */
@@ -320,7 +343,7 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets from
     *
-    * @param int $from 查询的带宽统计数据的起始时间（13位毫秒时间戳），需要和to同时使用
+    * @param int $from **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -332,7 +355,7 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets to
-    *  查询的带宽统计数据的结束时间（13位毫秒时间戳），需要和from同时使用
+    *  **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
     *
     * @return int
     */
@@ -344,7 +367,7 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets to
     *
-    * @param int $to 查询的带宽统计数据的结束时间（13位毫秒时间戳），需要和from同时使用
+    * @param int $to **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -356,9 +379,9 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hosts
-    *  域名id，用于查询指定的防护域名在from到to这段时间内的带宽数据。通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id
+    *  **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getHosts()
     {
@@ -368,7 +391,7 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hosts
     *
-    * @param string|null $hosts 域名id，用于查询指定的防护域名在from到to这段时间内的带宽数据。通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id
+    * @param string[]|null $hosts **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -380,9 +403,9 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instances
-    *  引擎实例id，用于查询指定的独享引擎实例所防护的域名在from到to这段时间内的带宽数据。
+    *  **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getInstances()
     {
@@ -392,7 +415,7 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instances
     *
-    * @param string|null $instances 引擎实例id，用于查询指定的独享引擎实例所防护的域名在from到to这段时间内的带宽数据。
+    * @param string[]|null $instances **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -404,7 +427,7 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupBy
-    *  展示维度，按天展示时传\"DAY\"；默认不传，按照分钟展示。
+    *  **参数解释：** 展示维度，按天展示时传\"DAY\" **约束限制：** 不涉及 **取值范围：** - DAY **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -416,7 +439,7 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets groupBy
     *
-    * @param string|null $groupBy 展示维度，按天展示时传\"DAY\"；默认不传，按照分钟展示。
+    * @param string|null $groupBy **参数解释：** 展示维度，按天展示时传\"DAY\" **约束限制：** 不涉及 **取值范围：** - DAY **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -428,7 +451,7 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayOption
-    *  发送/接受字节数，查看峰值请输入1，查看平均值请输入0
+    *  **参数解释：** 发送/接受字节数查看形式 **约束限制：** 不涉及 **取值范围：** - 0 平均值 - 1 峰值 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -440,7 +463,7 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets displayOption
     *
-    * @param int|null $displayOption 发送/接受字节数，查看峰值请输入1，查看平均值请输入0
+    * @param int|null $displayOption **参数解释：** 发送/接受字节数查看形式 **约束限制：** 不涉及 **取值范围：** - 0 平均值 - 1 峰值 **默认取值：** 不涉及
     *
     * @return $this
     */

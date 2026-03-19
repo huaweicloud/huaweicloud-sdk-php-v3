@@ -26,7 +26,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * arch  独享引擎CPU架构，例如：x86与arm
     * instancename  独享引擎名称前缀
     * specification  独享引擎版本规格   - waf.instance.enterprise：企业版，对应控制台WI-500规格   - waf.instance.professional：专业版，对应控制台WI-100规格
-    * cpuFlavor  独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通资源租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格。
+    * cpuFlavor  独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，如8U32G的ECS规格
     * vpcId  独享引擎所在VPC的ID（通过调用虚拟私有云ListVpcs接口获取所有的VPC列表查询VPC的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * subnetId  独享引擎所在VPC内的子网ID（通过调用虚拟私有云ListSubnets接口获取所有的子网列表查询子网的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * securityGroup  独享引擎需要绑定的安全组ID（通过调用虚拟私有云ListSecurityGroups接口获取所有的安全组列表查询安全组的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
@@ -62,7 +62,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * arch  独享引擎CPU架构，例如：x86与arm
     * instancename  独享引擎名称前缀
     * specification  独享引擎版本规格   - waf.instance.enterprise：企业版，对应控制台WI-500规格   - waf.instance.professional：专业版，对应控制台WI-100规格
-    * cpuFlavor  独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通资源租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格。
+    * cpuFlavor  独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，如8U32G的ECS规格
     * vpcId  独享引擎所在VPC的ID（通过调用虚拟私有云ListVpcs接口获取所有的VPC列表查询VPC的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * subnetId  独享引擎所在VPC内的子网ID（通过调用虚拟私有云ListSubnets接口获取所有的子网列表查询子网的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * securityGroup  独享引擎需要绑定的安全组ID（通过调用虚拟私有云ListSecurityGroups接口获取所有的安全组列表查询安全组的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
@@ -119,7 +119,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * arch  独享引擎CPU架构，例如：x86与arm
     * instancename  独享引擎名称前缀
     * specification  独享引擎版本规格   - waf.instance.enterprise：企业版，对应控制台WI-500规格   - waf.instance.professional：专业版，对应控制台WI-100规格
-    * cpuFlavor  独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通资源租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格。
+    * cpuFlavor  独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，如8U32G的ECS规格
     * vpcId  独享引擎所在VPC的ID（通过调用虚拟私有云ListVpcs接口获取所有的VPC列表查询VPC的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * subnetId  独享引擎所在VPC内的子网ID（通过调用虚拟私有云ListSubnets接口获取所有的子网列表查询子网的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * securityGroup  独享引擎需要绑定的安全组ID（通过调用虚拟私有云ListSecurityGroups接口获取所有的安全组列表查询安全组的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
@@ -155,7 +155,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * arch  独享引擎CPU架构，例如：x86与arm
     * instancename  独享引擎名称前缀
     * specification  独享引擎版本规格   - waf.instance.enterprise：企业版，对应控制台WI-500规格   - waf.instance.professional：专业版，对应控制台WI-100规格
-    * cpuFlavor  独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通资源租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格。
+    * cpuFlavor  独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，如8U32G的ECS规格
     * vpcId  独享引擎所在VPC的ID（通过调用虚拟私有云ListVpcs接口获取所有的VPC列表查询VPC的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * subnetId  独享引擎所在VPC内的子网ID（通过调用虚拟私有云ListSubnets接口获取所有的子网列表查询子网的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * securityGroup  独享引擎需要绑定的安全组ID（通过调用虚拟私有云ListSecurityGroups接口获取所有的安全组列表查询安全组的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
@@ -191,7 +191,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * arch  独享引擎CPU架构，例如：x86与arm
     * instancename  独享引擎名称前缀
     * specification  独享引擎版本规格   - waf.instance.enterprise：企业版，对应控制台WI-500规格   - waf.instance.professional：专业版，对应控制台WI-100规格
-    * cpuFlavor  独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通资源租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格。
+    * cpuFlavor  独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，如8U32G的ECS规格
     * vpcId  独享引擎所在VPC的ID（通过调用虚拟私有云ListVpcs接口获取所有的VPC列表查询VPC的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * subnetId  独享引擎所在VPC内的子网ID（通过调用虚拟私有云ListSubnets接口获取所有的子网列表查询子网的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * securityGroup  独享引擎需要绑定的安全组ID（通过调用虚拟私有云ListSecurityGroups接口获取所有的安全组列表查询安全组的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
@@ -488,7 +488,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets cpuFlavor
-    *  独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通资源租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格。
+    *  独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，如8U32G的ECS规格
     *
     * @return string|null
     */
@@ -500,7 +500,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets cpuFlavor
     *
-    * @param string|null $cpuFlavor 独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通资源租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格。
+    * @param string|null $cpuFlavor 独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，如8U32G的ECS规格
     *
     * @return $this
     */

@@ -54,7 +54,7 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
             'prefix' => 'bool',
             'mode' => 'int',
             'conditions' => '\HuaweiCloud\SDK\Waf\V1\Model\CcCondition[]',
-            'action' => '\HuaweiCloud\SDK\Waf\V1\Model\CcrulesListInfoAction',
+            'action' => '\HuaweiCloud\SDK\Waf\V1\Model\UpdateCcRuleResponseBodyAction',
             'tagType' => 'string',
             'tagIndex' => 'string',
             'tagCondition' => '\HuaweiCloud\SDK\Waf\V1\Model\CcrulesListInfoTagCondition',
@@ -609,7 +609,7 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
     * Gets action
     *  action
     *
-    * @return \HuaweiCloud\SDK\Waf\V1\Model\CcrulesListInfoAction|null
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\UpdateCcRuleResponseBodyAction|null
     */
     public function getAction()
     {
@@ -619,7 +619,7 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\CcrulesListInfoAction|null $action action
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\UpdateCcRuleResponseBodyAction|null $action action
     *
     * @return $this
     */

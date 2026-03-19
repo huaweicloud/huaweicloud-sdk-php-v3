@@ -21,7 +21,8 @@ class UpdateIpGroupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  地址组名称
-    * ips  以逗号分隔的ip或ip段
+    * ips  **参数解释：** 以逗号分隔的ip或ip段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * ipRemarks  **参数解释：** ip或ip段的备注 **约束限制：** key必须是ips中包含的单个ip或ip段 **取值范围：** value必须匹配正则：[^<>]{0,64} **默认取值：** 不涉及
     * description  地址组描述
     *
     * @var string[]
@@ -29,13 +30,15 @@ class UpdateIpGroupRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'name' => 'string',
             'ips' => 'string',
+            'ipRemarks' => 'map[string,string]',
             'description' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  地址组名称
-    * ips  以逗号分隔的ip或ip段
+    * ips  **参数解释：** 以逗号分隔的ip或ip段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * ipRemarks  **参数解释：** ip或ip段的备注 **约束限制：** key必须是ips中包含的单个ip或ip段 **取值范围：** value必须匹配正则：[^<>]{0,64} **默认取值：** 不涉及
     * description  地址组描述
     *
     * @var string[]
@@ -43,6 +46,7 @@ class UpdateIpGroupRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'name' => null,
         'ips' => null,
+        'ipRemarks' => null,
         'description' => null
     ];
 
@@ -70,7 +74,8 @@ class UpdateIpGroupRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  地址组名称
-    * ips  以逗号分隔的ip或ip段
+    * ips  **参数解释：** 以逗号分隔的ip或ip段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * ipRemarks  **参数解释：** ip或ip段的备注 **约束限制：** key必须是ips中包含的单个ip或ip段 **取值范围：** value必须匹配正则：[^<>]{0,64} **默认取值：** 不涉及
     * description  地址组描述
     *
     * @var string[]
@@ -78,13 +83,15 @@ class UpdateIpGroupRequestBody implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'name' => 'name',
             'ips' => 'ips',
+            'ipRemarks' => 'ip_remarks',
             'description' => 'description'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  地址组名称
-    * ips  以逗号分隔的ip或ip段
+    * ips  **参数解释：** 以逗号分隔的ip或ip段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * ipRemarks  **参数解释：** ip或ip段的备注 **约束限制：** key必须是ips中包含的单个ip或ip段 **取值范围：** value必须匹配正则：[^<>]{0,64} **默认取值：** 不涉及
     * description  地址组描述
     *
     * @var string[]
@@ -92,13 +99,15 @@ class UpdateIpGroupRequestBody implements ModelInterface, ArrayAccess
     protected static $setters = [
             'name' => 'setName',
             'ips' => 'setIps',
+            'ipRemarks' => 'setIpRemarks',
             'description' => 'setDescription'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  地址组名称
-    * ips  以逗号分隔的ip或ip段
+    * ips  **参数解释：** 以逗号分隔的ip或ip段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * ipRemarks  **参数解释：** ip或ip段的备注 **约束限制：** key必须是ips中包含的单个ip或ip段 **取值范围：** value必须匹配正则：[^<>]{0,64} **默认取值：** 不涉及
     * description  地址组描述
     *
     * @var string[]
@@ -106,6 +115,7 @@ class UpdateIpGroupRequestBody implements ModelInterface, ArrayAccess
     protected static $getters = [
             'name' => 'getName',
             'ips' => 'getIps',
+            'ipRemarks' => 'getIpRemarks',
             'description' => 'getDescription'
     ];
 
@@ -169,6 +179,7 @@ class UpdateIpGroupRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['ips'] = isset($data['ips']) ? $data['ips'] : null;
+        $this->container['ipRemarks'] = isset($data['ipRemarks']) ? $data['ipRemarks'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
@@ -223,7 +234,7 @@ class UpdateIpGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets ips
-    *  以逗号分隔的ip或ip段
+    *  **参数解释：** 以逗号分隔的ip或ip段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -235,13 +246,37 @@ class UpdateIpGroupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets ips
     *
-    * @param string $ips 以逗号分隔的ip或ip段
+    * @param string $ips **参数解释：** 以逗号分隔的ip或ip段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
     public function setIps($ips)
     {
         $this->container['ips'] = $ips;
+        return $this;
+    }
+
+    /**
+    * Gets ipRemarks
+    *  **参数解释：** ip或ip段的备注 **约束限制：** key必须是ips中包含的单个ip或ip段 **取值范围：** value必须匹配正则：[^<>]{0,64} **默认取值：** 不涉及
+    *
+    * @return map[string,string]|null
+    */
+    public function getIpRemarks()
+    {
+        return $this->container['ipRemarks'];
+    }
+
+    /**
+    * Sets ipRemarks
+    *
+    * @param map[string,string]|null $ipRemarks **参数解释：** ip或ip段的备注 **约束限制：** key必须是ips中包含的单个ip或ip段 **取值范围：** value必须匹配正则：[^<>]{0,64} **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setIpRemarks($ipRemarks)
+    {
+        $this->container['ipRemarks'] = $ipRemarks;
         return $this;
     }
 

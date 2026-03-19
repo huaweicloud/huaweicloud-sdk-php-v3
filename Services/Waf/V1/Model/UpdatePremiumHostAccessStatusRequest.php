@@ -21,24 +21,32 @@ class UpdatePremiumHostAccessStatusRequest implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * hostId  **参数解释：** 独享模式域名ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'hostId' => 'string',
+            'contentType' => 'string',
+            'enterpriseProjectId' => 'string',
             'body' => '\HuaweiCloud\SDK\Waf\V1\Model\UpdatePremiumHostAccessStatusRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * hostId  **参数解释：** 独享模式域名ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'hostId' => null,
+        'contentType' => null,
+        'enterpriseProjectId' => null,
         'body' => null
     ];
 
@@ -66,36 +74,48 @@ class UpdatePremiumHostAccessStatusRequest implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * hostId  **参数解释：** 独享模式域名ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'hostId' => 'host_id',
+            'contentType' => 'Content-Type',
+            'enterpriseProjectId' => 'enterprise_project_id',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * hostId  **参数解释：** 独享模式域名ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
             'hostId' => 'setHostId',
+            'contentType' => 'setContentType',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * hostId  **参数解释：** 独享模式域名ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
             'hostId' => 'getHostId',
+            'contentType' => 'getContentType',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
             'body' => 'getBody'
     ];
 
@@ -158,6 +178,8 @@ class UpdatePremiumHostAccessStatusRequest implements ModelInterface, ArrayAcces
     public function __construct(array $data = null)
     {
         $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -171,6 +193,9 @@ class UpdatePremiumHostAccessStatusRequest implements ModelInterface, ArrayAcces
         $invalidProperties = [];
         if ($this->container['hostId'] === null) {
             $invalidProperties[] = "'hostId' can't be null";
+        }
+        if ($this->container['contentType'] === null) {
+            $invalidProperties[] = "'contentType' can't be null";
         }
         return $invalidProperties;
     }
@@ -207,6 +232,54 @@ class UpdatePremiumHostAccessStatusRequest implements ModelInterface, ArrayAcces
     public function setHostId($hostId)
     {
         $this->container['hostId'] = $hostId;
+        return $this;
+    }
+
+    /**
+    * Gets contentType
+    *  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    *
+    * @return string
+    */
+    public function getContentType()
+    {
+        return $this->container['contentType'];
+    }
+
+    /**
+    * Sets contentType
+    *
+    * @param string $contentType **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    *
+    * @return $this
+    */
+    public function setContentType($contentType)
+    {
+        $this->container['contentType'] = $contentType;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

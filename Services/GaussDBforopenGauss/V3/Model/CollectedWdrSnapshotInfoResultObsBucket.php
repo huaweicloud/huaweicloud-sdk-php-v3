@@ -32,7 +32,7 @@ class CollectedWdrSnapshotInfoResultObsBucket implements ModelInterface, ArrayAc
             'name' => 'string',
             'type' => 'string',
             'url' => 'string',
-            'port' => 'string',
+            'port' => 'int',
             'domainId' => 'string'
     ];
 
@@ -292,7 +292,7 @@ class CollectedWdrSnapshotInfoResultObsBucket implements ModelInterface, ArrayAc
     * Gets port
     *  **参数解释**： OBS服务端口号。 **取值范围**： 不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getPort()
     {
@@ -302,7 +302,7 @@ class CollectedWdrSnapshotInfoResultObsBucket implements ModelInterface, ArrayAc
     /**
     * Sets port
     *
-    * @param string|null $port **参数解释**： OBS服务端口号。 **取值范围**： 不涉及。
+    * @param int|null $port **参数解释**： OBS服务端口号。 **取值范围**： 不涉及。
     *
     * @return $this
     */

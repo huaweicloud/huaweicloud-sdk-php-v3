@@ -49,7 +49,7 @@ class CreateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
             'cpuUtilization' => 'int',
             'memoryUtilization' => 'int',
             'databases' => 'string',
-            'nodeInfos' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CreateLimitTaskNodeOption[]'
+            'nodeInfos' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CreateSqlLimitTaskNodeOption[]'
     ];
 
     /**
@@ -608,7 +608,7 @@ class CreateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
     * Gets nodeInfos
     *  **参数解释**: CN节点信息列表 **约束限制**: 如果“limit_type”为SQL_ID，则“node_infos”必选。
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CreateLimitTaskNodeOption[]|null
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CreateSqlLimitTaskNodeOption[]|null
     */
     public function getNodeInfos()
     {
@@ -618,7 +618,7 @@ class CreateSqlLimitTaskRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets nodeInfos
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CreateLimitTaskNodeOption[]|null $nodeInfos **参数解释**: CN节点信息列表 **约束限制**: 如果“limit_type”为SQL_ID，则“node_infos”必选。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\CreateSqlLimitTaskNodeOption[]|null $nodeInfos **参数解释**: CN节点信息列表 **约束限制**: 如果“limit_type”为SQL_ID，则“node_infos”必选。
     *
     * @return $this
     */

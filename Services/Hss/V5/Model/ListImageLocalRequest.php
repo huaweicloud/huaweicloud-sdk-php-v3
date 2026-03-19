@@ -20,37 +20,37 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * imageName  镜像名称
-    * imageVersion  镜像版本
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示数量
-    * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
-    * localImageType  **参数解释** : 镜像类型 **约束限制** : 不涉及 **取值范围** : 包含如下两种:  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** : 不涉及
-    * imageSize  镜像大小，单位字节
-    * startLatestUpdateTime  最近更新时间搜索开始日期，时间单位：毫秒（ms）
-    * endLatestUpdateTime  最近更新时间搜索结束日期，时间单位：毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间搜索开始日期，时间单位：毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间搜索结束日期，时间单位：毫秒（ms）
-    * hasVul  是否存在软件漏洞
-    * hostName  本地镜像所关联服务器的名称
-    * hostId  本地镜像所关联服务器的ID
-    * hostIp  本地镜像所关联服务器的IP（公网或私网）
-    * containerId  本地镜像所关联容器的ID
-    * containerName  本地镜像所关联容器的名称
-    * podId  本地镜像所关联Pod的ID
-    * podName  本地镜像所关联Pod的名称
-    * appName  本地镜像所关联软件的名称
-    * hasContainer  **参数解释**: 是否存在容器 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * imageName  **参数解释** 本地镜像的名称，用于模糊筛选指定名称的本地镜像列表 **约束限制** 支持部分匹配（如传入'web'可匹配所有名称含'web'的镜像），区分大小写 **取值范围** 字符长度1-256位，支持字母、数字、短横线、下划线、点号，禁止含@#$%等特殊字符 **默认取值** 无
+    * imageVersion  **参数解释** 本地镜像的版本标识，用于筛选指定版本的本地镜像，需与image_name配合使用 **约束限制** 仅当指定image_name时传参有效，否则筛选条件不生效 **取值范围** 字符长度1-128位，支持字母、数字、短横线、下划线、点号、冒号 **默认取值** 无
+    * scanStatus  **参数解释** 本地镜像的安全扫描状态，用于筛选指定扫描状态的镜像列表 **约束限制** 取值必须在指定范围内，否则返回空结果，区分大小写 **取值范围**   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描 **默认取值** 无
+    * localImageType  **参数解释** 本地镜像的存储来源类型，用于筛选不同来源的本地镜像 **约束限制** 取值必须在指定范围内，否则返回空结果，区分大小写 **取值范围**  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** 无
+    * imageSize  **参数解释** 本地镜像的大小（单位字节），用于筛选指定大小的镜像（精确匹配） **约束限制** 仅支持精确匹配，如需范围筛选需结合业务层处理 **取值范围** 取值0-9223372036854775807（约9EB） **默认取值** 无
+    * startLatestUpdateTime  **参数解释** 本地镜像版本最后更新时间的查询起始值（Unix时间戳，单位ms），与end_latest_update_time配合筛选时间范围 **时间格式** Unix时间戳（如1697509433000表示2023-10-16 10:23:53） **约束限制** 需与end_latest_update_time同时使用，且小于end_latest_update_time，否则筛选无效 **取值范围** 取值0-9223372036854775807 **默认取值** 无
+    * endLatestUpdateTime  **参数解释** 本地镜像版本最后更新时间的查询结束值（Unix时间戳，单位ms），与start_latest_update_time配合筛选时间范围 **时间格式** Unix时间戳（如1709973506292表示2024-03-08 15:18:26） **约束限制** 需与start_latest_update_time同时使用，且大于start_latest_update_time，否则筛选无效 **取值范围** 取值0-9223372036854775807 **默认取值** 无
+    * startLatestScanTime  **参数解释** 本地镜像最近一次扫描完成时间的查询起始值（Unix时间戳，单位ms），与end_latest_scan_time配合筛选时间范围 **时间格式** Unix时间戳（精确到毫秒） **约束限制** 仅对scan_status为success的镜像有效，需与end_latest_scan_time同时使用 **取值范围** 取值0-9223372036854775807 **默认取值** 无
+    * endLatestScanTime  **参数解释** 本地镜像最近一次扫描完成时间的查询结束值（Unix时间戳，单位ms），与start_latest_scan_time配合筛选时间范围 **时间格式** Unix时间戳（精确到毫秒） **约束限制** 仅对scan_status为success的镜像有效，且需大于start_latest_scan_time **取值范围** 取值0-9223372036854775807 **默认取值** 无
+    * hasVul  **参数解释** 用于筛选是否存在软件漏洞的本地镜像，true表示筛选有漏洞的镜像，false表示筛选无漏洞的镜像 **约束限制** 仅对scan_status为success的镜像有效，未扫描镜像不会被筛选 **取值范围** true（存在漏洞）、false（不存在漏洞） **默认取值** 无（不筛选漏洞状态）
+    * hostName  **参数解释** 本地镜像所关联的云服务器名称，用于筛选关联指定服务器的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对关联了服务器的镜像有效 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，禁止含特殊字符 **默认取值** 无
+    * hostId  **参数解释** 本地镜像所关联的云服务器唯一标识（ECS实例ID），用于精准筛选关联指定服务器的本地镜像 **约束限制** 精确匹配，仅对关联了该服务器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线 **默认取值** 无
+    * hostIp  **参数解释** 本地镜像所关联服务器的公网或私网IP地址，用于筛选关联指定IP服务器的本地镜像 **约束限制** 支持IPv4格式，精确匹配，多个IP需通过业务层分批查询 **取值范围** 符合IPv4格式的字符串（如 **默认取值** 无
+    * containerId  **参数解释** 本地镜像所关联的容器唯一标识（Docker容器ID），用于精准筛选关联指定容器的本地镜像 **约束限制** 精确匹配，仅对关联了容器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线、下划线 **默认取值** 无
+    * containerName  **参数解释** 本地镜像所关联的容器名称，用于筛选关联指定名称容器的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对关联了容器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线、下划线、点号 **默认取值** 无
+    * podId  **参数解释** 本地镜像所关联的Kubernetes Pod唯一标识，用于精准筛选关联指定Pod的本地镜像 **约束限制** 精确匹配，仅对K8s环境中关联了Pod的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线 **默认取值** 无
+    * podName  **参数解释** 本地镜像所关联的Kubernetes Pod名称，用于筛选关联指定名称Pod的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对K8s环境中关联了Pod的镜像有效 **取值范围** 字符长度1-63位，支持字母、数字、短横线，不能以短横线开头或结尾 **默认取值** 无
+    * appName  **参数解释** 本地镜像中部署的应用软件名称（如Nginx、MySQL），用于筛选包含指定应用的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对已识别应用的镜像有效 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线 **默认取值** 无
+    * hasContainer  **参数解释** 用于筛选是否关联了容器的本地镜像 **取值范围**: - true：关联容器的镜像 - false：未关联容器的镜像 **默认取值** 无（不筛选容器关联状态）
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'enterpriseProjectId' => 'string',
-            'imageName' => 'string',
-            'imageVersion' => 'string',
             'offset' => 'int',
             'limit' => 'int',
+            'imageName' => 'string',
+            'imageVersion' => 'string',
             'scanStatus' => 'string',
             'localImageType' => 'string',
             'imageSize' => 'int',
@@ -72,37 +72,37 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * imageName  镜像名称
-    * imageVersion  镜像版本
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示数量
-    * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
-    * localImageType  **参数解释** : 镜像类型 **约束限制** : 不涉及 **取值范围** : 包含如下两种:  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** : 不涉及
-    * imageSize  镜像大小，单位字节
-    * startLatestUpdateTime  最近更新时间搜索开始日期，时间单位：毫秒（ms）
-    * endLatestUpdateTime  最近更新时间搜索结束日期，时间单位：毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间搜索开始日期，时间单位：毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间搜索结束日期，时间单位：毫秒（ms）
-    * hasVul  是否存在软件漏洞
-    * hostName  本地镜像所关联服务器的名称
-    * hostId  本地镜像所关联服务器的ID
-    * hostIp  本地镜像所关联服务器的IP（公网或私网）
-    * containerId  本地镜像所关联容器的ID
-    * containerName  本地镜像所关联容器的名称
-    * podId  本地镜像所关联Pod的ID
-    * podName  本地镜像所关联Pod的名称
-    * appName  本地镜像所关联软件的名称
-    * hasContainer  **参数解释**: 是否存在容器 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * imageName  **参数解释** 本地镜像的名称，用于模糊筛选指定名称的本地镜像列表 **约束限制** 支持部分匹配（如传入'web'可匹配所有名称含'web'的镜像），区分大小写 **取值范围** 字符长度1-256位，支持字母、数字、短横线、下划线、点号，禁止含@#$%等特殊字符 **默认取值** 无
+    * imageVersion  **参数解释** 本地镜像的版本标识，用于筛选指定版本的本地镜像，需与image_name配合使用 **约束限制** 仅当指定image_name时传参有效，否则筛选条件不生效 **取值范围** 字符长度1-128位，支持字母、数字、短横线、下划线、点号、冒号 **默认取值** 无
+    * scanStatus  **参数解释** 本地镜像的安全扫描状态，用于筛选指定扫描状态的镜像列表 **约束限制** 取值必须在指定范围内，否则返回空结果，区分大小写 **取值范围**   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描 **默认取值** 无
+    * localImageType  **参数解释** 本地镜像的存储来源类型，用于筛选不同来源的本地镜像 **约束限制** 取值必须在指定范围内，否则返回空结果，区分大小写 **取值范围**  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** 无
+    * imageSize  **参数解释** 本地镜像的大小（单位字节），用于筛选指定大小的镜像（精确匹配） **约束限制** 仅支持精确匹配，如需范围筛选需结合业务层处理 **取值范围** 取值0-9223372036854775807（约9EB） **默认取值** 无
+    * startLatestUpdateTime  **参数解释** 本地镜像版本最后更新时间的查询起始值（Unix时间戳，单位ms），与end_latest_update_time配合筛选时间范围 **时间格式** Unix时间戳（如1697509433000表示2023-10-16 10:23:53） **约束限制** 需与end_latest_update_time同时使用，且小于end_latest_update_time，否则筛选无效 **取值范围** 取值0-9223372036854775807 **默认取值** 无
+    * endLatestUpdateTime  **参数解释** 本地镜像版本最后更新时间的查询结束值（Unix时间戳，单位ms），与start_latest_update_time配合筛选时间范围 **时间格式** Unix时间戳（如1709973506292表示2024-03-08 15:18:26） **约束限制** 需与start_latest_update_time同时使用，且大于start_latest_update_time，否则筛选无效 **取值范围** 取值0-9223372036854775807 **默认取值** 无
+    * startLatestScanTime  **参数解释** 本地镜像最近一次扫描完成时间的查询起始值（Unix时间戳，单位ms），与end_latest_scan_time配合筛选时间范围 **时间格式** Unix时间戳（精确到毫秒） **约束限制** 仅对scan_status为success的镜像有效，需与end_latest_scan_time同时使用 **取值范围** 取值0-9223372036854775807 **默认取值** 无
+    * endLatestScanTime  **参数解释** 本地镜像最近一次扫描完成时间的查询结束值（Unix时间戳，单位ms），与start_latest_scan_time配合筛选时间范围 **时间格式** Unix时间戳（精确到毫秒） **约束限制** 仅对scan_status为success的镜像有效，且需大于start_latest_scan_time **取值范围** 取值0-9223372036854775807 **默认取值** 无
+    * hasVul  **参数解释** 用于筛选是否存在软件漏洞的本地镜像，true表示筛选有漏洞的镜像，false表示筛选无漏洞的镜像 **约束限制** 仅对scan_status为success的镜像有效，未扫描镜像不会被筛选 **取值范围** true（存在漏洞）、false（不存在漏洞） **默认取值** 无（不筛选漏洞状态）
+    * hostName  **参数解释** 本地镜像所关联的云服务器名称，用于筛选关联指定服务器的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对关联了服务器的镜像有效 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，禁止含特殊字符 **默认取值** 无
+    * hostId  **参数解释** 本地镜像所关联的云服务器唯一标识（ECS实例ID），用于精准筛选关联指定服务器的本地镜像 **约束限制** 精确匹配，仅对关联了该服务器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线 **默认取值** 无
+    * hostIp  **参数解释** 本地镜像所关联服务器的公网或私网IP地址，用于筛选关联指定IP服务器的本地镜像 **约束限制** 支持IPv4格式，精确匹配，多个IP需通过业务层分批查询 **取值范围** 符合IPv4格式的字符串（如 **默认取值** 无
+    * containerId  **参数解释** 本地镜像所关联的容器唯一标识（Docker容器ID），用于精准筛选关联指定容器的本地镜像 **约束限制** 精确匹配，仅对关联了容器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线、下划线 **默认取值** 无
+    * containerName  **参数解释** 本地镜像所关联的容器名称，用于筛选关联指定名称容器的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对关联了容器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线、下划线、点号 **默认取值** 无
+    * podId  **参数解释** 本地镜像所关联的Kubernetes Pod唯一标识，用于精准筛选关联指定Pod的本地镜像 **约束限制** 精确匹配，仅对K8s环境中关联了Pod的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线 **默认取值** 无
+    * podName  **参数解释** 本地镜像所关联的Kubernetes Pod名称，用于筛选关联指定名称Pod的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对K8s环境中关联了Pod的镜像有效 **取值范围** 字符长度1-63位，支持字母、数字、短横线，不能以短横线开头或结尾 **默认取值** 无
+    * appName  **参数解释** 本地镜像中部署的应用软件名称（如Nginx、MySQL），用于筛选包含指定应用的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对已识别应用的镜像有效 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线 **默认取值** 无
+    * hasContainer  **参数解释** 用于筛选是否关联了容器的本地镜像 **取值范围**: - true：关联容器的镜像 - false：未关联容器的镜像 **默认取值** 无（不筛选容器关联状态）
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'enterpriseProjectId' => null,
-        'imageName' => null,
-        'imageVersion' => null,
         'offset' => 'int32',
         'limit' => 'int32',
+        'imageName' => null,
+        'imageVersion' => null,
         'scanStatus' => null,
         'localImageType' => null,
         'imageSize' => 'int64',
@@ -145,37 +145,37 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * imageName  镜像名称
-    * imageVersion  镜像版本
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示数量
-    * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
-    * localImageType  **参数解释** : 镜像类型 **约束限制** : 不涉及 **取值范围** : 包含如下两种:  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** : 不涉及
-    * imageSize  镜像大小，单位字节
-    * startLatestUpdateTime  最近更新时间搜索开始日期，时间单位：毫秒（ms）
-    * endLatestUpdateTime  最近更新时间搜索结束日期，时间单位：毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间搜索开始日期，时间单位：毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间搜索结束日期，时间单位：毫秒（ms）
-    * hasVul  是否存在软件漏洞
-    * hostName  本地镜像所关联服务器的名称
-    * hostId  本地镜像所关联服务器的ID
-    * hostIp  本地镜像所关联服务器的IP（公网或私网）
-    * containerId  本地镜像所关联容器的ID
-    * containerName  本地镜像所关联容器的名称
-    * podId  本地镜像所关联Pod的ID
-    * podName  本地镜像所关联Pod的名称
-    * appName  本地镜像所关联软件的名称
-    * hasContainer  **参数解释**: 是否存在容器 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * imageName  **参数解释** 本地镜像的名称，用于模糊筛选指定名称的本地镜像列表 **约束限制** 支持部分匹配（如传入'web'可匹配所有名称含'web'的镜像），区分大小写 **取值范围** 字符长度1-256位，支持字母、数字、短横线、下划线、点号，禁止含@#$%等特殊字符 **默认取值** 无
+    * imageVersion  **参数解释** 本地镜像的版本标识，用于筛选指定版本的本地镜像，需与image_name配合使用 **约束限制** 仅当指定image_name时传参有效，否则筛选条件不生效 **取值范围** 字符长度1-128位，支持字母、数字、短横线、下划线、点号、冒号 **默认取值** 无
+    * scanStatus  **参数解释** 本地镜像的安全扫描状态，用于筛选指定扫描状态的镜像列表 **约束限制** 取值必须在指定范围内，否则返回空结果，区分大小写 **取值范围**   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描 **默认取值** 无
+    * localImageType  **参数解释** 本地镜像的存储来源类型，用于筛选不同来源的本地镜像 **约束限制** 取值必须在指定范围内，否则返回空结果，区分大小写 **取值范围**  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** 无
+    * imageSize  **参数解释** 本地镜像的大小（单位字节），用于筛选指定大小的镜像（精确匹配） **约束限制** 仅支持精确匹配，如需范围筛选需结合业务层处理 **取值范围** 取值0-9223372036854775807（约9EB） **默认取值** 无
+    * startLatestUpdateTime  **参数解释** 本地镜像版本最后更新时间的查询起始值（Unix时间戳，单位ms），与end_latest_update_time配合筛选时间范围 **时间格式** Unix时间戳（如1697509433000表示2023-10-16 10:23:53） **约束限制** 需与end_latest_update_time同时使用，且小于end_latest_update_time，否则筛选无效 **取值范围** 取值0-9223372036854775807 **默认取值** 无
+    * endLatestUpdateTime  **参数解释** 本地镜像版本最后更新时间的查询结束值（Unix时间戳，单位ms），与start_latest_update_time配合筛选时间范围 **时间格式** Unix时间戳（如1709973506292表示2024-03-08 15:18:26） **约束限制** 需与start_latest_update_time同时使用，且大于start_latest_update_time，否则筛选无效 **取值范围** 取值0-9223372036854775807 **默认取值** 无
+    * startLatestScanTime  **参数解释** 本地镜像最近一次扫描完成时间的查询起始值（Unix时间戳，单位ms），与end_latest_scan_time配合筛选时间范围 **时间格式** Unix时间戳（精确到毫秒） **约束限制** 仅对scan_status为success的镜像有效，需与end_latest_scan_time同时使用 **取值范围** 取值0-9223372036854775807 **默认取值** 无
+    * endLatestScanTime  **参数解释** 本地镜像最近一次扫描完成时间的查询结束值（Unix时间戳，单位ms），与start_latest_scan_time配合筛选时间范围 **时间格式** Unix时间戳（精确到毫秒） **约束限制** 仅对scan_status为success的镜像有效，且需大于start_latest_scan_time **取值范围** 取值0-9223372036854775807 **默认取值** 无
+    * hasVul  **参数解释** 用于筛选是否存在软件漏洞的本地镜像，true表示筛选有漏洞的镜像，false表示筛选无漏洞的镜像 **约束限制** 仅对scan_status为success的镜像有效，未扫描镜像不会被筛选 **取值范围** true（存在漏洞）、false（不存在漏洞） **默认取值** 无（不筛选漏洞状态）
+    * hostName  **参数解释** 本地镜像所关联的云服务器名称，用于筛选关联指定服务器的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对关联了服务器的镜像有效 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，禁止含特殊字符 **默认取值** 无
+    * hostId  **参数解释** 本地镜像所关联的云服务器唯一标识（ECS实例ID），用于精准筛选关联指定服务器的本地镜像 **约束限制** 精确匹配，仅对关联了该服务器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线 **默认取值** 无
+    * hostIp  **参数解释** 本地镜像所关联服务器的公网或私网IP地址，用于筛选关联指定IP服务器的本地镜像 **约束限制** 支持IPv4格式，精确匹配，多个IP需通过业务层分批查询 **取值范围** 符合IPv4格式的字符串（如 **默认取值** 无
+    * containerId  **参数解释** 本地镜像所关联的容器唯一标识（Docker容器ID），用于精准筛选关联指定容器的本地镜像 **约束限制** 精确匹配，仅对关联了容器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线、下划线 **默认取值** 无
+    * containerName  **参数解释** 本地镜像所关联的容器名称，用于筛选关联指定名称容器的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对关联了容器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线、下划线、点号 **默认取值** 无
+    * podId  **参数解释** 本地镜像所关联的Kubernetes Pod唯一标识，用于精准筛选关联指定Pod的本地镜像 **约束限制** 精确匹配，仅对K8s环境中关联了Pod的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线 **默认取值** 无
+    * podName  **参数解释** 本地镜像所关联的Kubernetes Pod名称，用于筛选关联指定名称Pod的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对K8s环境中关联了Pod的镜像有效 **取值范围** 字符长度1-63位，支持字母、数字、短横线，不能以短横线开头或结尾 **默认取值** 无
+    * appName  **参数解释** 本地镜像中部署的应用软件名称（如Nginx、MySQL），用于筛选包含指定应用的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对已识别应用的镜像有效 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线 **默认取值** 无
+    * hasContainer  **参数解释** 用于筛选是否关联了容器的本地镜像 **取值范围**: - true：关联容器的镜像 - false：未关联容器的镜像 **默认取值** 无（不筛选容器关联状态）
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'enterpriseProjectId' => 'enterprise_project_id',
-            'imageName' => 'image_name',
-            'imageVersion' => 'image_version',
             'offset' => 'offset',
             'limit' => 'limit',
+            'imageName' => 'image_name',
+            'imageVersion' => 'image_version',
             'scanStatus' => 'scan_status',
             'localImageType' => 'local_image_type',
             'imageSize' => 'image_size',
@@ -197,37 +197,37 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * imageName  镜像名称
-    * imageVersion  镜像版本
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示数量
-    * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
-    * localImageType  **参数解释** : 镜像类型 **约束限制** : 不涉及 **取值范围** : 包含如下两种:  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** : 不涉及
-    * imageSize  镜像大小，单位字节
-    * startLatestUpdateTime  最近更新时间搜索开始日期，时间单位：毫秒（ms）
-    * endLatestUpdateTime  最近更新时间搜索结束日期，时间单位：毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间搜索开始日期，时间单位：毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间搜索结束日期，时间单位：毫秒（ms）
-    * hasVul  是否存在软件漏洞
-    * hostName  本地镜像所关联服务器的名称
-    * hostId  本地镜像所关联服务器的ID
-    * hostIp  本地镜像所关联服务器的IP（公网或私网）
-    * containerId  本地镜像所关联容器的ID
-    * containerName  本地镜像所关联容器的名称
-    * podId  本地镜像所关联Pod的ID
-    * podName  本地镜像所关联Pod的名称
-    * appName  本地镜像所关联软件的名称
-    * hasContainer  **参数解释**: 是否存在容器 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * imageName  **参数解释** 本地镜像的名称，用于模糊筛选指定名称的本地镜像列表 **约束限制** 支持部分匹配（如传入'web'可匹配所有名称含'web'的镜像），区分大小写 **取值范围** 字符长度1-256位，支持字母、数字、短横线、下划线、点号，禁止含@#$%等特殊字符 **默认取值** 无
+    * imageVersion  **参数解释** 本地镜像的版本标识，用于筛选指定版本的本地镜像，需与image_name配合使用 **约束限制** 仅当指定image_name时传参有效，否则筛选条件不生效 **取值范围** 字符长度1-128位，支持字母、数字、短横线、下划线、点号、冒号 **默认取值** 无
+    * scanStatus  **参数解释** 本地镜像的安全扫描状态，用于筛选指定扫描状态的镜像列表 **约束限制** 取值必须在指定范围内，否则返回空结果，区分大小写 **取值范围**   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描 **默认取值** 无
+    * localImageType  **参数解释** 本地镜像的存储来源类型，用于筛选不同来源的本地镜像 **约束限制** 取值必须在指定范围内，否则返回空结果，区分大小写 **取值范围**  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** 无
+    * imageSize  **参数解释** 本地镜像的大小（单位字节），用于筛选指定大小的镜像（精确匹配） **约束限制** 仅支持精确匹配，如需范围筛选需结合业务层处理 **取值范围** 取值0-9223372036854775807（约9EB） **默认取值** 无
+    * startLatestUpdateTime  **参数解释** 本地镜像版本最后更新时间的查询起始值（Unix时间戳，单位ms），与end_latest_update_time配合筛选时间范围 **时间格式** Unix时间戳（如1697509433000表示2023-10-16 10:23:53） **约束限制** 需与end_latest_update_time同时使用，且小于end_latest_update_time，否则筛选无效 **取值范围** 取值0-9223372036854775807 **默认取值** 无
+    * endLatestUpdateTime  **参数解释** 本地镜像版本最后更新时间的查询结束值（Unix时间戳，单位ms），与start_latest_update_time配合筛选时间范围 **时间格式** Unix时间戳（如1709973506292表示2024-03-08 15:18:26） **约束限制** 需与start_latest_update_time同时使用，且大于start_latest_update_time，否则筛选无效 **取值范围** 取值0-9223372036854775807 **默认取值** 无
+    * startLatestScanTime  **参数解释** 本地镜像最近一次扫描完成时间的查询起始值（Unix时间戳，单位ms），与end_latest_scan_time配合筛选时间范围 **时间格式** Unix时间戳（精确到毫秒） **约束限制** 仅对scan_status为success的镜像有效，需与end_latest_scan_time同时使用 **取值范围** 取值0-9223372036854775807 **默认取值** 无
+    * endLatestScanTime  **参数解释** 本地镜像最近一次扫描完成时间的查询结束值（Unix时间戳，单位ms），与start_latest_scan_time配合筛选时间范围 **时间格式** Unix时间戳（精确到毫秒） **约束限制** 仅对scan_status为success的镜像有效，且需大于start_latest_scan_time **取值范围** 取值0-9223372036854775807 **默认取值** 无
+    * hasVul  **参数解释** 用于筛选是否存在软件漏洞的本地镜像，true表示筛选有漏洞的镜像，false表示筛选无漏洞的镜像 **约束限制** 仅对scan_status为success的镜像有效，未扫描镜像不会被筛选 **取值范围** true（存在漏洞）、false（不存在漏洞） **默认取值** 无（不筛选漏洞状态）
+    * hostName  **参数解释** 本地镜像所关联的云服务器名称，用于筛选关联指定服务器的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对关联了服务器的镜像有效 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，禁止含特殊字符 **默认取值** 无
+    * hostId  **参数解释** 本地镜像所关联的云服务器唯一标识（ECS实例ID），用于精准筛选关联指定服务器的本地镜像 **约束限制** 精确匹配，仅对关联了该服务器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线 **默认取值** 无
+    * hostIp  **参数解释** 本地镜像所关联服务器的公网或私网IP地址，用于筛选关联指定IP服务器的本地镜像 **约束限制** 支持IPv4格式，精确匹配，多个IP需通过业务层分批查询 **取值范围** 符合IPv4格式的字符串（如 **默认取值** 无
+    * containerId  **参数解释** 本地镜像所关联的容器唯一标识（Docker容器ID），用于精准筛选关联指定容器的本地镜像 **约束限制** 精确匹配，仅对关联了容器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线、下划线 **默认取值** 无
+    * containerName  **参数解释** 本地镜像所关联的容器名称，用于筛选关联指定名称容器的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对关联了容器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线、下划线、点号 **默认取值** 无
+    * podId  **参数解释** 本地镜像所关联的Kubernetes Pod唯一标识，用于精准筛选关联指定Pod的本地镜像 **约束限制** 精确匹配，仅对K8s环境中关联了Pod的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线 **默认取值** 无
+    * podName  **参数解释** 本地镜像所关联的Kubernetes Pod名称，用于筛选关联指定名称Pod的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对K8s环境中关联了Pod的镜像有效 **取值范围** 字符长度1-63位，支持字母、数字、短横线，不能以短横线开头或结尾 **默认取值** 无
+    * appName  **参数解释** 本地镜像中部署的应用软件名称（如Nginx、MySQL），用于筛选包含指定应用的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对已识别应用的镜像有效 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线 **默认取值** 无
+    * hasContainer  **参数解释** 用于筛选是否关联了容器的本地镜像 **取值范围**: - true：关联容器的镜像 - false：未关联容器的镜像 **默认取值** 无（不筛选容器关联状态）
     *
     * @var string[]
     */
     protected static $setters = [
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'imageName' => 'setImageName',
-            'imageVersion' => 'setImageVersion',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
+            'imageName' => 'setImageName',
+            'imageVersion' => 'setImageVersion',
             'scanStatus' => 'setScanStatus',
             'localImageType' => 'setLocalImageType',
             'imageSize' => 'setImageSize',
@@ -249,37 +249,37 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseProjectId  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
-    * imageName  镜像名称
-    * imageVersion  镜像版本
-    * offset  偏移量：指定返回记录的开始位置
-    * limit  每页显示数量
-    * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
-    * localImageType  **参数解释** : 镜像类型 **约束限制** : 不涉及 **取值范围** : 包含如下两种:  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** : 不涉及
-    * imageSize  镜像大小，单位字节
-    * startLatestUpdateTime  最近更新时间搜索开始日期，时间单位：毫秒（ms）
-    * endLatestUpdateTime  最近更新时间搜索结束日期，时间单位：毫秒（ms）
-    * startLatestScanTime  最近一次扫描完成时间搜索开始日期，时间单位：毫秒（ms）
-    * endLatestScanTime  最近一次扫描完成时间搜索结束日期，时间单位：毫秒（ms）
-    * hasVul  是否存在软件漏洞
-    * hostName  本地镜像所关联服务器的名称
-    * hostId  本地镜像所关联服务器的ID
-    * hostIp  本地镜像所关联服务器的IP（公网或私网）
-    * containerId  本地镜像所关联容器的ID
-    * containerName  本地镜像所关联容器的名称
-    * podId  本地镜像所关联Pod的ID
-    * podName  本地镜像所关联Pod的名称
-    * appName  本地镜像所关联软件的名称
-    * hasContainer  **参数解释**: 是否存在容器 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
+    * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * imageName  **参数解释** 本地镜像的名称，用于模糊筛选指定名称的本地镜像列表 **约束限制** 支持部分匹配（如传入'web'可匹配所有名称含'web'的镜像），区分大小写 **取值范围** 字符长度1-256位，支持字母、数字、短横线、下划线、点号，禁止含@#$%等特殊字符 **默认取值** 无
+    * imageVersion  **参数解释** 本地镜像的版本标识，用于筛选指定版本的本地镜像，需与image_name配合使用 **约束限制** 仅当指定image_name时传参有效，否则筛选条件不生效 **取值范围** 字符长度1-128位，支持字母、数字、短横线、下划线、点号、冒号 **默认取值** 无
+    * scanStatus  **参数解释** 本地镜像的安全扫描状态，用于筛选指定扫描状态的镜像列表 **约束限制** 取值必须在指定范围内，否则返回空结果，区分大小写 **取值范围**   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描 **默认取值** 无
+    * localImageType  **参数解释** 本地镜像的存储来源类型，用于筛选不同来源的本地镜像 **约束限制** 取值必须在指定范围内，否则返回空结果，区分大小写 **取值范围**  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** 无
+    * imageSize  **参数解释** 本地镜像的大小（单位字节），用于筛选指定大小的镜像（精确匹配） **约束限制** 仅支持精确匹配，如需范围筛选需结合业务层处理 **取值范围** 取值0-9223372036854775807（约9EB） **默认取值** 无
+    * startLatestUpdateTime  **参数解释** 本地镜像版本最后更新时间的查询起始值（Unix时间戳，单位ms），与end_latest_update_time配合筛选时间范围 **时间格式** Unix时间戳（如1697509433000表示2023-10-16 10:23:53） **约束限制** 需与end_latest_update_time同时使用，且小于end_latest_update_time，否则筛选无效 **取值范围** 取值0-9223372036854775807 **默认取值** 无
+    * endLatestUpdateTime  **参数解释** 本地镜像版本最后更新时间的查询结束值（Unix时间戳，单位ms），与start_latest_update_time配合筛选时间范围 **时间格式** Unix时间戳（如1709973506292表示2024-03-08 15:18:26） **约束限制** 需与start_latest_update_time同时使用，且大于start_latest_update_time，否则筛选无效 **取值范围** 取值0-9223372036854775807 **默认取值** 无
+    * startLatestScanTime  **参数解释** 本地镜像最近一次扫描完成时间的查询起始值（Unix时间戳，单位ms），与end_latest_scan_time配合筛选时间范围 **时间格式** Unix时间戳（精确到毫秒） **约束限制** 仅对scan_status为success的镜像有效，需与end_latest_scan_time同时使用 **取值范围** 取值0-9223372036854775807 **默认取值** 无
+    * endLatestScanTime  **参数解释** 本地镜像最近一次扫描完成时间的查询结束值（Unix时间戳，单位ms），与start_latest_scan_time配合筛选时间范围 **时间格式** Unix时间戳（精确到毫秒） **约束限制** 仅对scan_status为success的镜像有效，且需大于start_latest_scan_time **取值范围** 取值0-9223372036854775807 **默认取值** 无
+    * hasVul  **参数解释** 用于筛选是否存在软件漏洞的本地镜像，true表示筛选有漏洞的镜像，false表示筛选无漏洞的镜像 **约束限制** 仅对scan_status为success的镜像有效，未扫描镜像不会被筛选 **取值范围** true（存在漏洞）、false（不存在漏洞） **默认取值** 无（不筛选漏洞状态）
+    * hostName  **参数解释** 本地镜像所关联的云服务器名称，用于筛选关联指定服务器的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对关联了服务器的镜像有效 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，禁止含特殊字符 **默认取值** 无
+    * hostId  **参数解释** 本地镜像所关联的云服务器唯一标识（ECS实例ID），用于精准筛选关联指定服务器的本地镜像 **约束限制** 精确匹配，仅对关联了该服务器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线 **默认取值** 无
+    * hostIp  **参数解释** 本地镜像所关联服务器的公网或私网IP地址，用于筛选关联指定IP服务器的本地镜像 **约束限制** 支持IPv4格式，精确匹配，多个IP需通过业务层分批查询 **取值范围** 符合IPv4格式的字符串（如 **默认取值** 无
+    * containerId  **参数解释** 本地镜像所关联的容器唯一标识（Docker容器ID），用于精准筛选关联指定容器的本地镜像 **约束限制** 精确匹配，仅对关联了容器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线、下划线 **默认取值** 无
+    * containerName  **参数解释** 本地镜像所关联的容器名称，用于筛选关联指定名称容器的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对关联了容器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线、下划线、点号 **默认取值** 无
+    * podId  **参数解释** 本地镜像所关联的Kubernetes Pod唯一标识，用于精准筛选关联指定Pod的本地镜像 **约束限制** 精确匹配，仅对K8s环境中关联了Pod的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线 **默认取值** 无
+    * podName  **参数解释** 本地镜像所关联的Kubernetes Pod名称，用于筛选关联指定名称Pod的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对K8s环境中关联了Pod的镜像有效 **取值范围** 字符长度1-63位，支持字母、数字、短横线，不能以短横线开头或结尾 **默认取值** 无
+    * appName  **参数解释** 本地镜像中部署的应用软件名称（如Nginx、MySQL），用于筛选包含指定应用的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对已识别应用的镜像有效 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线 **默认取值** 无
+    * hasContainer  **参数解释** 用于筛选是否关联了容器的本地镜像 **取值范围**: - true：关联容器的镜像 - false：未关联容器的镜像 **默认取值** 无（不筛选容器关联状态）
     *
     * @var string[]
     */
     protected static $getters = [
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'imageName' => 'getImageName',
-            'imageVersion' => 'getImageVersion',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
+            'imageName' => 'getImageName',
+            'imageVersion' => 'getImageVersion',
             'scanStatus' => 'getScanStatus',
             'localImageType' => 'getLocalImageType',
             'imageSize' => 'getImageSize',
@@ -358,10 +358,10 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
-        $this->container['imageName'] = isset($data['imageName']) ? $data['imageName'] : null;
-        $this->container['imageVersion'] = isset($data['imageVersion']) ? $data['imageVersion'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['imageName'] = isset($data['imageName']) ? $data['imageName'] : null;
+        $this->container['imageVersion'] = isset($data['imageVersion']) ? $data['imageVersion'] : null;
         $this->container['scanStatus'] = isset($data['scanStatus']) ? $data['scanStatus'] : null;
         $this->container['localImageType'] = isset($data['localImageType']) ? $data['localImageType'] : null;
         $this->container['imageSize'] = isset($data['imageSize']) ? $data['imageSize'] : null;
@@ -398,6 +398,18 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/^.*$/", $this->container['enterpriseProjectId'])) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /^.*$/.";
             }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2000000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2000000.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
+            }
             if (!is_null($this->container['imageName']) && (mb_strlen($this->container['imageName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'imageName', the character length must be smaller than or equal to 128.";
             }
@@ -416,23 +428,14 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['imageVersion']) && !preg_match("/^.*$/", $this->container['imageVersion'])) {
                 $invalidProperties[] = "invalid value for 'imageVersion', must be conform to the pattern /^.*$/.";
             }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2000000)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2000000.";
-            }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
-                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 200)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 200.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] < 10)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 10.";
-            }
             if (!is_null($this->container['scanStatus']) && (mb_strlen($this->container['scanStatus']) > 32)) {
                 $invalidProperties[] = "invalid value for 'scanStatus', the character length must be smaller than or equal to 32.";
             }
             if (!is_null($this->container['scanStatus']) && (mb_strlen($this->container['scanStatus']) < 0)) {
                 $invalidProperties[] = "invalid value for 'scanStatus', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['scanStatus']) && !preg_match("/^(unscan|success|scanning|failed|waiting_for_scan)$/", $this->container['scanStatus'])) {
+                $invalidProperties[] = "invalid value for 'scanStatus', must be conform to the pattern /^(unscan|success|scanning|failed|waiting_for_scan)$/.";
             }
             if (!is_null($this->container['localImageType']) && (mb_strlen($this->container['localImageType']) > 64)) {
                 $invalidProperties[] = "invalid value for 'localImageType', the character length must be smaller than or equal to 64.";
@@ -537,7 +540,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    *  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return string|null
     */
@@ -549,7 +552,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+    * @param string|null $enterpriseProjectId **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     *
     * @return $this
     */
@@ -560,56 +563,8 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets imageName
-    *  镜像名称
-    *
-    * @return string|null
-    */
-    public function getImageName()
-    {
-        return $this->container['imageName'];
-    }
-
-    /**
-    * Sets imageName
-    *
-    * @param string|null $imageName 镜像名称
-    *
-    * @return $this
-    */
-    public function setImageName($imageName)
-    {
-        $this->container['imageName'] = $imageName;
-        return $this;
-    }
-
-    /**
-    * Gets imageVersion
-    *  镜像版本
-    *
-    * @return string|null
-    */
-    public function getImageVersion()
-    {
-        return $this->container['imageVersion'];
-    }
-
-    /**
-    * Sets imageVersion
-    *
-    * @param string|null $imageVersion 镜像版本
-    *
-    * @return $this
-    */
-    public function setImageVersion($imageVersion)
-    {
-        $this->container['imageVersion'] = $imageVersion;
-        return $this;
-    }
-
-    /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置
+    *  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return int|null
     */
@@ -621,7 +576,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置
+    * @param int|null $offset **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     *
     * @return $this
     */
@@ -633,7 +588,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示数量
+    *  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return int|null
     */
@@ -645,7 +600,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示数量
+    * @param int|null $limit **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return $this
     */
@@ -656,8 +611,56 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets imageName
+    *  **参数解释** 本地镜像的名称，用于模糊筛选指定名称的本地镜像列表 **约束限制** 支持部分匹配（如传入'web'可匹配所有名称含'web'的镜像），区分大小写 **取值范围** 字符长度1-256位，支持字母、数字、短横线、下划线、点号，禁止含@#$%等特殊字符 **默认取值** 无
+    *
+    * @return string|null
+    */
+    public function getImageName()
+    {
+        return $this->container['imageName'];
+    }
+
+    /**
+    * Sets imageName
+    *
+    * @param string|null $imageName **参数解释** 本地镜像的名称，用于模糊筛选指定名称的本地镜像列表 **约束限制** 支持部分匹配（如传入'web'可匹配所有名称含'web'的镜像），区分大小写 **取值范围** 字符长度1-256位，支持字母、数字、短横线、下划线、点号，禁止含@#$%等特殊字符 **默认取值** 无
+    *
+    * @return $this
+    */
+    public function setImageName($imageName)
+    {
+        $this->container['imageName'] = $imageName;
+        return $this;
+    }
+
+    /**
+    * Gets imageVersion
+    *  **参数解释** 本地镜像的版本标识，用于筛选指定版本的本地镜像，需与image_name配合使用 **约束限制** 仅当指定image_name时传参有效，否则筛选条件不生效 **取值范围** 字符长度1-128位，支持字母、数字、短横线、下划线、点号、冒号 **默认取值** 无
+    *
+    * @return string|null
+    */
+    public function getImageVersion()
+    {
+        return $this->container['imageVersion'];
+    }
+
+    /**
+    * Sets imageVersion
+    *
+    * @param string|null $imageVersion **参数解释** 本地镜像的版本标识，用于筛选指定版本的本地镜像，需与image_name配合使用 **约束限制** 仅当指定image_name时传参有效，否则筛选条件不生效 **取值范围** 字符长度1-128位，支持字母、数字、短横线、下划线、点号、冒号 **默认取值** 无
+    *
+    * @return $this
+    */
+    public function setImageVersion($imageVersion)
+    {
+        $this->container['imageVersion'] = $imageVersion;
+        return $this;
+    }
+
+    /**
     * Gets scanStatus
-    *  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
+    *  **参数解释** 本地镜像的安全扫描状态，用于筛选指定扫描状态的镜像列表 **约束限制** 取值必须在指定范围内，否则返回空结果，区分大小写 **取值范围**   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描 **默认取值** 无
     *
     * @return string|null
     */
@@ -669,7 +672,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets scanStatus
     *
-    * @param string|null $scanStatus 扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
+    * @param string|null $scanStatus **参数解释** 本地镜像的安全扫描状态，用于筛选指定扫描状态的镜像列表 **约束限制** 取值必须在指定范围内，否则返回空结果，区分大小写 **取值范围**   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描 **默认取值** 无
     *
     * @return $this
     */
@@ -681,7 +684,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets localImageType
-    *  **参数解释** : 镜像类型 **约束限制** : 不涉及 **取值范围** : 包含如下两种:  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** : 不涉及
+    *  **参数解释** 本地镜像的存储来源类型，用于筛选不同来源的本地镜像 **约束限制** 取值必须在指定范围内，否则返回空结果，区分大小写 **取值范围**  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** 无
     *
     * @return string|null
     */
@@ -693,7 +696,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets localImageType
     *
-    * @param string|null $localImageType **参数解释** : 镜像类型 **约束限制** : 不涉及 **取值范围** : 包含如下两种:  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** : 不涉及
+    * @param string|null $localImageType **参数解释** 本地镜像的存储来源类型，用于筛选不同来源的本地镜像 **约束限制** 取值必须在指定范围内，否则返回空结果，区分大小写 **取值范围**  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** 无
     *
     * @return $this
     */
@@ -705,7 +708,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageSize
-    *  镜像大小，单位字节
+    *  **参数解释** 本地镜像的大小（单位字节），用于筛选指定大小的镜像（精确匹配） **约束限制** 仅支持精确匹配，如需范围筛选需结合业务层处理 **取值范围** 取值0-9223372036854775807（约9EB） **默认取值** 无
     *
     * @return int|null
     */
@@ -717,7 +720,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imageSize
     *
-    * @param int|null $imageSize 镜像大小，单位字节
+    * @param int|null $imageSize **参数解释** 本地镜像的大小（单位字节），用于筛选指定大小的镜像（精确匹配） **约束限制** 仅支持精确匹配，如需范围筛选需结合业务层处理 **取值范围** 取值0-9223372036854775807（约9EB） **默认取值** 无
     *
     * @return $this
     */
@@ -729,7 +732,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startLatestUpdateTime
-    *  最近更新时间搜索开始日期，时间单位：毫秒（ms）
+    *  **参数解释** 本地镜像版本最后更新时间的查询起始值（Unix时间戳，单位ms），与end_latest_update_time配合筛选时间范围 **时间格式** Unix时间戳（如1697509433000表示2023-10-16 10:23:53） **约束限制** 需与end_latest_update_time同时使用，且小于end_latest_update_time，否则筛选无效 **取值范围** 取值0-9223372036854775807 **默认取值** 无
     *
     * @return int|null
     */
@@ -741,7 +744,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startLatestUpdateTime
     *
-    * @param int|null $startLatestUpdateTime 最近更新时间搜索开始日期，时间单位：毫秒（ms）
+    * @param int|null $startLatestUpdateTime **参数解释** 本地镜像版本最后更新时间的查询起始值（Unix时间戳，单位ms），与end_latest_update_time配合筛选时间范围 **时间格式** Unix时间戳（如1697509433000表示2023-10-16 10:23:53） **约束限制** 需与end_latest_update_time同时使用，且小于end_latest_update_time，否则筛选无效 **取值范围** 取值0-9223372036854775807 **默认取值** 无
     *
     * @return $this
     */
@@ -753,7 +756,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endLatestUpdateTime
-    *  最近更新时间搜索结束日期，时间单位：毫秒（ms）
+    *  **参数解释** 本地镜像版本最后更新时间的查询结束值（Unix时间戳，单位ms），与start_latest_update_time配合筛选时间范围 **时间格式** Unix时间戳（如1709973506292表示2024-03-08 15:18:26） **约束限制** 需与start_latest_update_time同时使用，且大于start_latest_update_time，否则筛选无效 **取值范围** 取值0-9223372036854775807 **默认取值** 无
     *
     * @return int|null
     */
@@ -765,7 +768,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endLatestUpdateTime
     *
-    * @param int|null $endLatestUpdateTime 最近更新时间搜索结束日期，时间单位：毫秒（ms）
+    * @param int|null $endLatestUpdateTime **参数解释** 本地镜像版本最后更新时间的查询结束值（Unix时间戳，单位ms），与start_latest_update_time配合筛选时间范围 **时间格式** Unix时间戳（如1709973506292表示2024-03-08 15:18:26） **约束限制** 需与start_latest_update_time同时使用，且大于start_latest_update_time，否则筛选无效 **取值范围** 取值0-9223372036854775807 **默认取值** 无
     *
     * @return $this
     */
@@ -777,7 +780,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startLatestScanTime
-    *  最近一次扫描完成时间搜索开始日期，时间单位：毫秒（ms）
+    *  **参数解释** 本地镜像最近一次扫描完成时间的查询起始值（Unix时间戳，单位ms），与end_latest_scan_time配合筛选时间范围 **时间格式** Unix时间戳（精确到毫秒） **约束限制** 仅对scan_status为success的镜像有效，需与end_latest_scan_time同时使用 **取值范围** 取值0-9223372036854775807 **默认取值** 无
     *
     * @return int|null
     */
@@ -789,7 +792,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startLatestScanTime
     *
-    * @param int|null $startLatestScanTime 最近一次扫描完成时间搜索开始日期，时间单位：毫秒（ms）
+    * @param int|null $startLatestScanTime **参数解释** 本地镜像最近一次扫描完成时间的查询起始值（Unix时间戳，单位ms），与end_latest_scan_time配合筛选时间范围 **时间格式** Unix时间戳（精确到毫秒） **约束限制** 仅对scan_status为success的镜像有效，需与end_latest_scan_time同时使用 **取值范围** 取值0-9223372036854775807 **默认取值** 无
     *
     * @return $this
     */
@@ -801,7 +804,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endLatestScanTime
-    *  最近一次扫描完成时间搜索结束日期，时间单位：毫秒（ms）
+    *  **参数解释** 本地镜像最近一次扫描完成时间的查询结束值（Unix时间戳，单位ms），与start_latest_scan_time配合筛选时间范围 **时间格式** Unix时间戳（精确到毫秒） **约束限制** 仅对scan_status为success的镜像有效，且需大于start_latest_scan_time **取值范围** 取值0-9223372036854775807 **默认取值** 无
     *
     * @return int|null
     */
@@ -813,7 +816,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endLatestScanTime
     *
-    * @param int|null $endLatestScanTime 最近一次扫描完成时间搜索结束日期，时间单位：毫秒（ms）
+    * @param int|null $endLatestScanTime **参数解释** 本地镜像最近一次扫描完成时间的查询结束值（Unix时间戳，单位ms），与start_latest_scan_time配合筛选时间范围 **时间格式** Unix时间戳（精确到毫秒） **约束限制** 仅对scan_status为success的镜像有效，且需大于start_latest_scan_time **取值范围** 取值0-9223372036854775807 **默认取值** 无
     *
     * @return $this
     */
@@ -825,7 +828,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hasVul
-    *  是否存在软件漏洞
+    *  **参数解释** 用于筛选是否存在软件漏洞的本地镜像，true表示筛选有漏洞的镜像，false表示筛选无漏洞的镜像 **约束限制** 仅对scan_status为success的镜像有效，未扫描镜像不会被筛选 **取值范围** true（存在漏洞）、false（不存在漏洞） **默认取值** 无（不筛选漏洞状态）
     *
     * @return bool|null
     */
@@ -837,7 +840,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hasVul
     *
-    * @param bool|null $hasVul 是否存在软件漏洞
+    * @param bool|null $hasVul **参数解释** 用于筛选是否存在软件漏洞的本地镜像，true表示筛选有漏洞的镜像，false表示筛选无漏洞的镜像 **约束限制** 仅对scan_status为success的镜像有效，未扫描镜像不会被筛选 **取值范围** true（存在漏洞）、false（不存在漏洞） **默认取值** 无（不筛选漏洞状态）
     *
     * @return $this
     */
@@ -849,7 +852,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  本地镜像所关联服务器的名称
+    *  **参数解释** 本地镜像所关联的云服务器名称，用于筛选关联指定服务器的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对关联了服务器的镜像有效 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，禁止含特殊字符 **默认取值** 无
     *
     * @return string|null
     */
@@ -861,7 +864,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 本地镜像所关联服务器的名称
+    * @param string|null $hostName **参数解释** 本地镜像所关联的云服务器名称，用于筛选关联指定服务器的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对关联了服务器的镜像有效 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，禁止含特殊字符 **默认取值** 无
     *
     * @return $this
     */
@@ -873,7 +876,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  本地镜像所关联服务器的ID
+    *  **参数解释** 本地镜像所关联的云服务器唯一标识（ECS实例ID），用于精准筛选关联指定服务器的本地镜像 **约束限制** 精确匹配，仅对关联了该服务器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线 **默认取值** 无
     *
     * @return string|null
     */
@@ -885,7 +888,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 本地镜像所关联服务器的ID
+    * @param string|null $hostId **参数解释** 本地镜像所关联的云服务器唯一标识（ECS实例ID），用于精准筛选关联指定服务器的本地镜像 **约束限制** 精确匹配，仅对关联了该服务器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线 **默认取值** 无
     *
     * @return $this
     */
@@ -897,7 +900,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIp
-    *  本地镜像所关联服务器的IP（公网或私网）
+    *  **参数解释** 本地镜像所关联服务器的公网或私网IP地址，用于筛选关联指定IP服务器的本地镜像 **约束限制** 支持IPv4格式，精确匹配，多个IP需通过业务层分批查询 **取值范围** 符合IPv4格式的字符串（如 **默认取值** 无
     *
     * @return string|null
     */
@@ -909,7 +912,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostIp
     *
-    * @param string|null $hostIp 本地镜像所关联服务器的IP（公网或私网）
+    * @param string|null $hostIp **参数解释** 本地镜像所关联服务器的公网或私网IP地址，用于筛选关联指定IP服务器的本地镜像 **约束限制** 支持IPv4格式，精确匹配，多个IP需通过业务层分批查询 **取值范围** 符合IPv4格式的字符串（如 **默认取值** 无
     *
     * @return $this
     */
@@ -921,7 +924,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerId
-    *  本地镜像所关联容器的ID
+    *  **参数解释** 本地镜像所关联的容器唯一标识（Docker容器ID），用于精准筛选关联指定容器的本地镜像 **约束限制** 精确匹配，仅对关联了容器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线、下划线 **默认取值** 无
     *
     * @return string|null
     */
@@ -933,7 +936,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets containerId
     *
-    * @param string|null $containerId 本地镜像所关联容器的ID
+    * @param string|null $containerId **参数解释** 本地镜像所关联的容器唯一标识（Docker容器ID），用于精准筛选关联指定容器的本地镜像 **约束限制** 精确匹配，仅对关联了容器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线、下划线 **默认取值** 无
     *
     * @return $this
     */
@@ -945,7 +948,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerName
-    *  本地镜像所关联容器的名称
+    *  **参数解释** 本地镜像所关联的容器名称，用于筛选关联指定名称容器的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对关联了容器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线、下划线、点号 **默认取值** 无
     *
     * @return string|null
     */
@@ -957,7 +960,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets containerName
     *
-    * @param string|null $containerName 本地镜像所关联容器的名称
+    * @param string|null $containerName **参数解释** 本地镜像所关联的容器名称，用于筛选关联指定名称容器的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对关联了容器的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线、下划线、点号 **默认取值** 无
     *
     * @return $this
     */
@@ -969,7 +972,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets podId
-    *  本地镜像所关联Pod的ID
+    *  **参数解释** 本地镜像所关联的Kubernetes Pod唯一标识，用于精准筛选关联指定Pod的本地镜像 **约束限制** 精确匹配，仅对K8s环境中关联了Pod的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线 **默认取值** 无
     *
     * @return string|null
     */
@@ -981,7 +984,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets podId
     *
-    * @param string|null $podId 本地镜像所关联Pod的ID
+    * @param string|null $podId **参数解释** 本地镜像所关联的Kubernetes Pod唯一标识，用于精准筛选关联指定Pod的本地镜像 **约束限制** 精确匹配，仅对K8s环境中关联了Pod的镜像有效 **取值范围** 字符长度1-64位，支持字母、数字、短横线 **默认取值** 无
     *
     * @return $this
     */
@@ -993,7 +996,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets podName
-    *  本地镜像所关联Pod的名称
+    *  **参数解释** 本地镜像所关联的Kubernetes Pod名称，用于筛选关联指定名称Pod的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对K8s环境中关联了Pod的镜像有效 **取值范围** 字符长度1-63位，支持字母、数字、短横线，不能以短横线开头或结尾 **默认取值** 无
     *
     * @return string|null
     */
@@ -1005,7 +1008,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets podName
     *
-    * @param string|null $podName 本地镜像所关联Pod的名称
+    * @param string|null $podName **参数解释** 本地镜像所关联的Kubernetes Pod名称，用于筛选关联指定名称Pod的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对K8s环境中关联了Pod的镜像有效 **取值范围** 字符长度1-63位，支持字母、数字、短横线，不能以短横线开头或结尾 **默认取值** 无
     *
     * @return $this
     */
@@ -1017,7 +1020,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets appName
-    *  本地镜像所关联软件的名称
+    *  **参数解释** 本地镜像中部署的应用软件名称（如Nginx、MySQL），用于筛选包含指定应用的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对已识别应用的镜像有效 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线 **默认取值** 无
     *
     * @return string|null
     */
@@ -1029,7 +1032,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets appName
     *
-    * @param string|null $appName 本地镜像所关联软件的名称
+    * @param string|null $appName **参数解释** 本地镜像中部署的应用软件名称（如Nginx、MySQL），用于筛选包含指定应用的本地镜像 **约束限制** 支持模糊匹配，区分大小写，仅对已识别应用的镜像有效 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线 **默认取值** 无
     *
     * @return $this
     */
@@ -1041,7 +1044,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hasContainer
-    *  **参数解释**: 是否存在容器 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    *  **参数解释** 用于筛选是否关联了容器的本地镜像 **取值范围**: - true：关联容器的镜像 - false：未关联容器的镜像 **默认取值** 无（不筛选容器关联状态）
     *
     * @return bool|null
     */
@@ -1053,7 +1056,7 @@ class ListImageLocalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hasContainer
     *
-    * @param bool|null $hasContainer **参数解释**: 是否存在容器 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+    * @param bool|null $hasContainer **参数解释** 用于筛选是否关联了容器的本地镜像 **取值范围**: - true：关联容器的镜像 - false：未关联容器的镜像 **默认取值** 无（不筛选容器关联状态）
     *
     * @return $this
     */

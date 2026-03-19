@@ -26,7 +26,7 @@ class DeletePrivacyRuleResponse implements ModelInterface, ArrayAccess
     * timestamp  创建规则的时间，格式为13位毫秒时间戳
     * description  规则描述，可选参数，设置该规则的备注信息。
     * status  规则状态，0：关闭，1：开启
-    * url  隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
+    * url  隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*,以\"\\*\"号结尾代表路径前缀
     * category  屏蔽字段   - Params：请求参数   - Cookie：根据Cookie区分的Web访问者   - Header：自定义HTTP首部   - Form：表单参数
     * index  屏蔽字段名
     *
@@ -50,7 +50,7 @@ class DeletePrivacyRuleResponse implements ModelInterface, ArrayAccess
     * timestamp  创建规则的时间，格式为13位毫秒时间戳
     * description  规则描述，可选参数，设置该规则的备注信息。
     * status  规则状态，0：关闭，1：开启
-    * url  隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
+    * url  隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*,以\"\\*\"号结尾代表路径前缀
     * category  屏蔽字段   - Params：请求参数   - Cookie：根据Cookie区分的Web访问者   - Header：自定义HTTP首部   - Form：表单参数
     * index  屏蔽字段名
     *
@@ -95,7 +95,7 @@ class DeletePrivacyRuleResponse implements ModelInterface, ArrayAccess
     * timestamp  创建规则的时间，格式为13位毫秒时间戳
     * description  规则描述，可选参数，设置该规则的备注信息。
     * status  规则状态，0：关闭，1：开启
-    * url  隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
+    * url  隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*,以\"\\*\"号结尾代表路径前缀
     * category  屏蔽字段   - Params：请求参数   - Cookie：根据Cookie区分的Web访问者   - Header：自定义HTTP首部   - Form：表单参数
     * index  屏蔽字段名
     *
@@ -119,7 +119,7 @@ class DeletePrivacyRuleResponse implements ModelInterface, ArrayAccess
     * timestamp  创建规则的时间，格式为13位毫秒时间戳
     * description  规则描述，可选参数，设置该规则的备注信息。
     * status  规则状态，0：关闭，1：开启
-    * url  隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
+    * url  隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*,以\"\\*\"号结尾代表路径前缀
     * category  屏蔽字段   - Params：请求参数   - Cookie：根据Cookie区分的Web访问者   - Header：自定义HTTP首部   - Form：表单参数
     * index  屏蔽字段名
     *
@@ -143,7 +143,7 @@ class DeletePrivacyRuleResponse implements ModelInterface, ArrayAccess
     * timestamp  创建规则的时间，格式为13位毫秒时间戳
     * description  规则描述，可选参数，设置该规则的备注信息。
     * status  规则状态，0：关闭，1：开启
-    * url  隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
+    * url  隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*,以\"\\*\"号结尾代表路径前缀
     * category  屏蔽字段   - Params：请求参数   - Cookie：根据Cookie区分的Web访问者   - Header：自定义HTTP首部   - Form：表单参数
     * index  屏蔽字段名
     *
@@ -372,7 +372,7 @@ class DeletePrivacyRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets url
-    *  隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
+    *  隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*,以\"\\*\"号结尾代表路径前缀
     *
     * @return string|null
     */
@@ -384,7 +384,7 @@ class DeletePrivacyRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets url
     *
-    * @param string|null $url 隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/_*,以\"*\"号结尾代表路径前缀
+    * @param string|null $url 隐私屏蔽规则防护的url，需要填写标准的url格式，例如/admin/xxx或者/admin/\\*,以\"\\*\"号结尾代表路径前缀
     *
     * @return $this
     */

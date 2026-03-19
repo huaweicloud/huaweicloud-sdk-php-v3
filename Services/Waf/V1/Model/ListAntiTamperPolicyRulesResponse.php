@@ -21,20 +21,20 @@ class ListAntiTamperPolicyRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  防泄露规则数量
-    * items  防泄露规则列表
+    * total  网页防篡改规则总条数
+    * items  网页防篡改规则数组
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'total' => 'int',
-            'items' => '\HuaweiCloud\SDK\Waf\V1\Model\LeakageListInfo[]'
+            'items' => '\HuaweiCloud\SDK\Waf\V1\Model\AntiTamperRuleResponseBody[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  防泄露规则数量
-    * items  防泄露规则列表
+    * total  网页防篡改规则总条数
+    * items  网页防篡改规则数组
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListAntiTamperPolicyRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  防泄露规则数量
-    * items  防泄露规则列表
+    * total  网页防篡改规则总条数
+    * items  网页防篡改规则数组
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListAntiTamperPolicyRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  防泄露规则数量
-    * items  防泄露规则列表
+    * total  网页防篡改规则总条数
+    * items  网页防篡改规则数组
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListAntiTamperPolicyRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  防泄露规则数量
-    * items  防泄露规则列表
+    * total  网页防篡改规则总条数
+    * items  网页防篡改规则数组
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListAntiTamperPolicyRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  防泄露规则数量
+    *  网页防篡改规则总条数
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ListAntiTamperPolicyRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 防泄露规则数量
+    * @param int|null $total 网页防篡改规则总条数
     *
     * @return $this
     */
@@ -210,9 +210,9 @@ class ListAntiTamperPolicyRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets items
-    *  防泄露规则列表
+    *  网页防篡改规则数组
     *
-    * @return \HuaweiCloud\SDK\Waf\V1\Model\LeakageListInfo[]|null
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\AntiTamperRuleResponseBody[]|null
     */
     public function getItems()
     {
@@ -222,7 +222,7 @@ class ListAntiTamperPolicyRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\LeakageListInfo[]|null $items 防泄露规则列表
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\AntiTamperRuleResponseBody[]|null $items 网页防篡改规则数组
     *
     * @return $this
     */

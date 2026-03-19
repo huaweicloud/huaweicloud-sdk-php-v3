@@ -20,27 +20,27 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * imageName  镜像名称
-    * imageId  镜像ID
-    * imageDigest  镜像digest
-    * imageVersion  镜像版本
-    * localImageType  本地镜像类型
-    * scanStatus  扫描状态，包含如下：   - unscan：未扫描   - success：扫描完成   - scanning：正在扫描   - failed：扫描失败   - waiting：等待扫描
-    * imageSize  镜像大小，单位字节
-    * latestUpdateTime  镜像版本最后更新时间，时间单位毫秒（ms）
-    * latestScanTime  最近扫描时间，时间单位毫秒（ms）
-    * vulNum  漏洞个数
-    * unsafeSettingNum  基线扫描未通过数
-    * maliciousFileNum  恶意文件数
-    * hostNum  关联主机数
-    * containerNum  关联容器数
-    * componentNum  关联组件数
-    * scanFailedDesc  扫描失败原因，包含如下10种。   - \"unknown_error\":未知错误   - \"failed_to_match_agent\":对应主机未开启容器版防护或agent离线   - \"create_container_failed\":创建容器失败        - \"get_container_info_failed\":获取容器信息失败   - \"docker_offline\":docker引擎不在线   - \"get_docker_root_failed\":获取容器根文件系统失败   - \"image_not_exist_or_docker_api_fault\":镜像不存在或docker接口错误   - \"huge_image\":超大镜像   - \"docker_root_in_nfs\":容器根目录位于网络挂载   - \"response_timed_out\":响应超时
-    * severityLevel  镜像风险程度，在镜像扫描完成后展示，包含如下：   - Security：安全   - Low：低危   - Medium：中危   - High：高危
-    * hostName  服务器名称
-    * hostId  主机ID
-    * agentId  Agent ID
-    * nonScanReason  该镜像不支持扫描的原因；若该字段为空则表示镜像可以扫描
+    * imageName  **参数解释** 镜像名称 **取值范围** 字符长度0-256位
+    * imageId  **参数解释** 本地镜像的唯一标识，用于后续查询镜像详情、执行扫描等操作 **取值范围** 字符长度1-64位，支持字母、数字、短横线，符合UUID格式
+    * imageDigest  **参数解释** 本地镜像的加密摘要（SHA-256算法），用于唯一标识镜像内容，避免篡改 **取值范围** 字符长度64-128位，以'sha256:'开头，后跟十六进制字符串（如sha256:ce0b5d91b072730d0bc9518f11efd07eb7fdb9f43251e11a96cab5b1918b7044）
+    * imageVersion  **参数解释** 镜像版本 **取值范围** 字符长度0-256位
+    * localImageType  **参数解释** 本地镜像的存储来源类型，标识镜像是否来自华为云SWR仓库 **取值范围** swr_image：华为云SWR仓库镜像 other_image：非SWR仓库镜像
+    * scanStatus  **参数解释** 本地镜像的安全扫描状态，反映当前镜像是否完成安全检测 **取值范围** 扫描状态，包含如下：   - unscan：未扫描   - success：扫描完成   - scanning：正在扫描   - failed：扫描失败   - waiting：等待扫描
+    * imageSize  **参数解释** 本地镜像的实际存储大小，单位为字节（B） **取值范围** 取值0-9223372036854775807（约9EB）
+    * latestUpdateTime  **参数解释** 本地镜像版本的最后更新时间，即镜像创建或更新的时间戳 **取值范围** Unix时间戳（单位ms），取值0-9223372036854775807
+    * latestScanTime  **参数解释** 本地镜像最近一次完成安全扫描的时间戳，未扫描时该字段可能为0或空 **取值范围** Unix时间戳（单位ms），取值0-9223372036854775807，未扫描时为0
+    * vulNum  **参数解释** 本地镜像中检测到的软件漏洞总数，包含高、中、低危漏洞 **取值范围** 取值0-9223372036854775807
+    * unsafeSettingNum  **参数解释** 本地镜像在安全基线扫描中未通过的检查项数量，反映镜像配置合规性 **取值范围** 取值0-9223372036854775807
+    * maliciousFileNum  **参数解释** 本地镜像中检测到的恶意文件（如病毒、木马）总数 **取值范围** 取值0-9223372036854775807
+    * hostNum  **参数解释** 当前本地镜像所关联的云服务器总数 **取值范围** 取值0-9223372036854775807
+    * containerNum  **参数解释** 当前本地镜像所创建或关联的容器总数 **取值范围** 取值0-9223372036854775807
+    * componentNum  **参数解释** 本地镜像中包含的软件组件（如依赖库、应用程序）总数 **取值范围** 取值0-9223372036854775807
+    * scanFailedDesc  **参数解释** 当scan_status为failed时，该字段说明扫描失败的具体原因，未失败时为空字符串 **取值范围** - unknown_error：未知错误 - failed_to_match_agent：对应主机未开启容器版防护或agent离线 - create_container_failed：创建容器失败      - get_container_info_failed：获取容器信息失败 - docker_offline：docker引擎不在线 - get_docker_root_failed：获取容器根文件系统失败 - image_not_exist_or_docker_api_fault：镜像不存在或docker接口错误 - huge_image：超大镜像 - docker_root_in_nfs：容器根目录位于网络挂载 - response_timed_out：响应超时
+    * severityLevel  **参数解释** 根据镜像的漏洞、基线违规、恶意文件情况综合评定的风险等级 **取值范围** - Security：安全 - Low：低危 - Medium：中危 - High：高危
+    * hostName  **参数解释** 应用防护事件所属云服务器的名称，用于标识事件来源主机 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，符合华为云ECS命名规范
+    * hostId  **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * agentId  **参数解释** 本地镜像所在服务器上安装的HSS Agent唯一标识，用于关联Agent相关操作 **取值范围** 字符长度1-128位，支持字母、数字、短横线、下划线
+    * nonScanReason  **参数解释** 说明本地镜像无法进行安全扫描的具体原因（如镜像格式不支持、权限不足等），为空表示支持扫描 **取值范围** 字符长度0-1024位，支持中文、英文、数字、常用标点符号
     *
     * @var string[]
     */
@@ -70,27 +70,27 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * imageName  镜像名称
-    * imageId  镜像ID
-    * imageDigest  镜像digest
-    * imageVersion  镜像版本
-    * localImageType  本地镜像类型
-    * scanStatus  扫描状态，包含如下：   - unscan：未扫描   - success：扫描完成   - scanning：正在扫描   - failed：扫描失败   - waiting：等待扫描
-    * imageSize  镜像大小，单位字节
-    * latestUpdateTime  镜像版本最后更新时间，时间单位毫秒（ms）
-    * latestScanTime  最近扫描时间，时间单位毫秒（ms）
-    * vulNum  漏洞个数
-    * unsafeSettingNum  基线扫描未通过数
-    * maliciousFileNum  恶意文件数
-    * hostNum  关联主机数
-    * containerNum  关联容器数
-    * componentNum  关联组件数
-    * scanFailedDesc  扫描失败原因，包含如下10种。   - \"unknown_error\":未知错误   - \"failed_to_match_agent\":对应主机未开启容器版防护或agent离线   - \"create_container_failed\":创建容器失败        - \"get_container_info_failed\":获取容器信息失败   - \"docker_offline\":docker引擎不在线   - \"get_docker_root_failed\":获取容器根文件系统失败   - \"image_not_exist_or_docker_api_fault\":镜像不存在或docker接口错误   - \"huge_image\":超大镜像   - \"docker_root_in_nfs\":容器根目录位于网络挂载   - \"response_timed_out\":响应超时
-    * severityLevel  镜像风险程度，在镜像扫描完成后展示，包含如下：   - Security：安全   - Low：低危   - Medium：中危   - High：高危
-    * hostName  服务器名称
-    * hostId  主机ID
-    * agentId  Agent ID
-    * nonScanReason  该镜像不支持扫描的原因；若该字段为空则表示镜像可以扫描
+    * imageName  **参数解释** 镜像名称 **取值范围** 字符长度0-256位
+    * imageId  **参数解释** 本地镜像的唯一标识，用于后续查询镜像详情、执行扫描等操作 **取值范围** 字符长度1-64位，支持字母、数字、短横线，符合UUID格式
+    * imageDigest  **参数解释** 本地镜像的加密摘要（SHA-256算法），用于唯一标识镜像内容，避免篡改 **取值范围** 字符长度64-128位，以'sha256:'开头，后跟十六进制字符串（如sha256:ce0b5d91b072730d0bc9518f11efd07eb7fdb9f43251e11a96cab5b1918b7044）
+    * imageVersion  **参数解释** 镜像版本 **取值范围** 字符长度0-256位
+    * localImageType  **参数解释** 本地镜像的存储来源类型，标识镜像是否来自华为云SWR仓库 **取值范围** swr_image：华为云SWR仓库镜像 other_image：非SWR仓库镜像
+    * scanStatus  **参数解释** 本地镜像的安全扫描状态，反映当前镜像是否完成安全检测 **取值范围** 扫描状态，包含如下：   - unscan：未扫描   - success：扫描完成   - scanning：正在扫描   - failed：扫描失败   - waiting：等待扫描
+    * imageSize  **参数解释** 本地镜像的实际存储大小，单位为字节（B） **取值范围** 取值0-9223372036854775807（约9EB）
+    * latestUpdateTime  **参数解释** 本地镜像版本的最后更新时间，即镜像创建或更新的时间戳 **取值范围** Unix时间戳（单位ms），取值0-9223372036854775807
+    * latestScanTime  **参数解释** 本地镜像最近一次完成安全扫描的时间戳，未扫描时该字段可能为0或空 **取值范围** Unix时间戳（单位ms），取值0-9223372036854775807，未扫描时为0
+    * vulNum  **参数解释** 本地镜像中检测到的软件漏洞总数，包含高、中、低危漏洞 **取值范围** 取值0-9223372036854775807
+    * unsafeSettingNum  **参数解释** 本地镜像在安全基线扫描中未通过的检查项数量，反映镜像配置合规性 **取值范围** 取值0-9223372036854775807
+    * maliciousFileNum  **参数解释** 本地镜像中检测到的恶意文件（如病毒、木马）总数 **取值范围** 取值0-9223372036854775807
+    * hostNum  **参数解释** 当前本地镜像所关联的云服务器总数 **取值范围** 取值0-9223372036854775807
+    * containerNum  **参数解释** 当前本地镜像所创建或关联的容器总数 **取值范围** 取值0-9223372036854775807
+    * componentNum  **参数解释** 本地镜像中包含的软件组件（如依赖库、应用程序）总数 **取值范围** 取值0-9223372036854775807
+    * scanFailedDesc  **参数解释** 当scan_status为failed时，该字段说明扫描失败的具体原因，未失败时为空字符串 **取值范围** - unknown_error：未知错误 - failed_to_match_agent：对应主机未开启容器版防护或agent离线 - create_container_failed：创建容器失败      - get_container_info_failed：获取容器信息失败 - docker_offline：docker引擎不在线 - get_docker_root_failed：获取容器根文件系统失败 - image_not_exist_or_docker_api_fault：镜像不存在或docker接口错误 - huge_image：超大镜像 - docker_root_in_nfs：容器根目录位于网络挂载 - response_timed_out：响应超时
+    * severityLevel  **参数解释** 根据镜像的漏洞、基线违规、恶意文件情况综合评定的风险等级 **取值范围** - Security：安全 - Low：低危 - Medium：中危 - High：高危
+    * hostName  **参数解释** 应用防护事件所属云服务器的名称，用于标识事件来源主机 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，符合华为云ECS命名规范
+    * hostId  **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * agentId  **参数解释** 本地镜像所在服务器上安装的HSS Agent唯一标识，用于关联Agent相关操作 **取值范围** 字符长度1-128位，支持字母、数字、短横线、下划线
+    * nonScanReason  **参数解释** 说明本地镜像无法进行安全扫描的具体原因（如镜像格式不支持、权限不足等），为空表示支持扫描 **取值范围** 字符长度0-1024位，支持中文、英文、数字、常用标点符号
     *
     * @var string[]
     */
@@ -141,27 +141,27 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * imageName  镜像名称
-    * imageId  镜像ID
-    * imageDigest  镜像digest
-    * imageVersion  镜像版本
-    * localImageType  本地镜像类型
-    * scanStatus  扫描状态，包含如下：   - unscan：未扫描   - success：扫描完成   - scanning：正在扫描   - failed：扫描失败   - waiting：等待扫描
-    * imageSize  镜像大小，单位字节
-    * latestUpdateTime  镜像版本最后更新时间，时间单位毫秒（ms）
-    * latestScanTime  最近扫描时间，时间单位毫秒（ms）
-    * vulNum  漏洞个数
-    * unsafeSettingNum  基线扫描未通过数
-    * maliciousFileNum  恶意文件数
-    * hostNum  关联主机数
-    * containerNum  关联容器数
-    * componentNum  关联组件数
-    * scanFailedDesc  扫描失败原因，包含如下10种。   - \"unknown_error\":未知错误   - \"failed_to_match_agent\":对应主机未开启容器版防护或agent离线   - \"create_container_failed\":创建容器失败        - \"get_container_info_failed\":获取容器信息失败   - \"docker_offline\":docker引擎不在线   - \"get_docker_root_failed\":获取容器根文件系统失败   - \"image_not_exist_or_docker_api_fault\":镜像不存在或docker接口错误   - \"huge_image\":超大镜像   - \"docker_root_in_nfs\":容器根目录位于网络挂载   - \"response_timed_out\":响应超时
-    * severityLevel  镜像风险程度，在镜像扫描完成后展示，包含如下：   - Security：安全   - Low：低危   - Medium：中危   - High：高危
-    * hostName  服务器名称
-    * hostId  主机ID
-    * agentId  Agent ID
-    * nonScanReason  该镜像不支持扫描的原因；若该字段为空则表示镜像可以扫描
+    * imageName  **参数解释** 镜像名称 **取值范围** 字符长度0-256位
+    * imageId  **参数解释** 本地镜像的唯一标识，用于后续查询镜像详情、执行扫描等操作 **取值范围** 字符长度1-64位，支持字母、数字、短横线，符合UUID格式
+    * imageDigest  **参数解释** 本地镜像的加密摘要（SHA-256算法），用于唯一标识镜像内容，避免篡改 **取值范围** 字符长度64-128位，以'sha256:'开头，后跟十六进制字符串（如sha256:ce0b5d91b072730d0bc9518f11efd07eb7fdb9f43251e11a96cab5b1918b7044）
+    * imageVersion  **参数解释** 镜像版本 **取值范围** 字符长度0-256位
+    * localImageType  **参数解释** 本地镜像的存储来源类型，标识镜像是否来自华为云SWR仓库 **取值范围** swr_image：华为云SWR仓库镜像 other_image：非SWR仓库镜像
+    * scanStatus  **参数解释** 本地镜像的安全扫描状态，反映当前镜像是否完成安全检测 **取值范围** 扫描状态，包含如下：   - unscan：未扫描   - success：扫描完成   - scanning：正在扫描   - failed：扫描失败   - waiting：等待扫描
+    * imageSize  **参数解释** 本地镜像的实际存储大小，单位为字节（B） **取值范围** 取值0-9223372036854775807（约9EB）
+    * latestUpdateTime  **参数解释** 本地镜像版本的最后更新时间，即镜像创建或更新的时间戳 **取值范围** Unix时间戳（单位ms），取值0-9223372036854775807
+    * latestScanTime  **参数解释** 本地镜像最近一次完成安全扫描的时间戳，未扫描时该字段可能为0或空 **取值范围** Unix时间戳（单位ms），取值0-9223372036854775807，未扫描时为0
+    * vulNum  **参数解释** 本地镜像中检测到的软件漏洞总数，包含高、中、低危漏洞 **取值范围** 取值0-9223372036854775807
+    * unsafeSettingNum  **参数解释** 本地镜像在安全基线扫描中未通过的检查项数量，反映镜像配置合规性 **取值范围** 取值0-9223372036854775807
+    * maliciousFileNum  **参数解释** 本地镜像中检测到的恶意文件（如病毒、木马）总数 **取值范围** 取值0-9223372036854775807
+    * hostNum  **参数解释** 当前本地镜像所关联的云服务器总数 **取值范围** 取值0-9223372036854775807
+    * containerNum  **参数解释** 当前本地镜像所创建或关联的容器总数 **取值范围** 取值0-9223372036854775807
+    * componentNum  **参数解释** 本地镜像中包含的软件组件（如依赖库、应用程序）总数 **取值范围** 取值0-9223372036854775807
+    * scanFailedDesc  **参数解释** 当scan_status为failed时，该字段说明扫描失败的具体原因，未失败时为空字符串 **取值范围** - unknown_error：未知错误 - failed_to_match_agent：对应主机未开启容器版防护或agent离线 - create_container_failed：创建容器失败      - get_container_info_failed：获取容器信息失败 - docker_offline：docker引擎不在线 - get_docker_root_failed：获取容器根文件系统失败 - image_not_exist_or_docker_api_fault：镜像不存在或docker接口错误 - huge_image：超大镜像 - docker_root_in_nfs：容器根目录位于网络挂载 - response_timed_out：响应超时
+    * severityLevel  **参数解释** 根据镜像的漏洞、基线违规、恶意文件情况综合评定的风险等级 **取值范围** - Security：安全 - Low：低危 - Medium：中危 - High：高危
+    * hostName  **参数解释** 应用防护事件所属云服务器的名称，用于标识事件来源主机 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，符合华为云ECS命名规范
+    * hostId  **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * agentId  **参数解释** 本地镜像所在服务器上安装的HSS Agent唯一标识，用于关联Agent相关操作 **取值范围** 字符长度1-128位，支持字母、数字、短横线、下划线
+    * nonScanReason  **参数解释** 说明本地镜像无法进行安全扫描的具体原因（如镜像格式不支持、权限不足等），为空表示支持扫描 **取值范围** 字符长度0-1024位，支持中文、英文、数字、常用标点符号
     *
     * @var string[]
     */
@@ -191,27 +191,27 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * imageName  镜像名称
-    * imageId  镜像ID
-    * imageDigest  镜像digest
-    * imageVersion  镜像版本
-    * localImageType  本地镜像类型
-    * scanStatus  扫描状态，包含如下：   - unscan：未扫描   - success：扫描完成   - scanning：正在扫描   - failed：扫描失败   - waiting：等待扫描
-    * imageSize  镜像大小，单位字节
-    * latestUpdateTime  镜像版本最后更新时间，时间单位毫秒（ms）
-    * latestScanTime  最近扫描时间，时间单位毫秒（ms）
-    * vulNum  漏洞个数
-    * unsafeSettingNum  基线扫描未通过数
-    * maliciousFileNum  恶意文件数
-    * hostNum  关联主机数
-    * containerNum  关联容器数
-    * componentNum  关联组件数
-    * scanFailedDesc  扫描失败原因，包含如下10种。   - \"unknown_error\":未知错误   - \"failed_to_match_agent\":对应主机未开启容器版防护或agent离线   - \"create_container_failed\":创建容器失败        - \"get_container_info_failed\":获取容器信息失败   - \"docker_offline\":docker引擎不在线   - \"get_docker_root_failed\":获取容器根文件系统失败   - \"image_not_exist_or_docker_api_fault\":镜像不存在或docker接口错误   - \"huge_image\":超大镜像   - \"docker_root_in_nfs\":容器根目录位于网络挂载   - \"response_timed_out\":响应超时
-    * severityLevel  镜像风险程度，在镜像扫描完成后展示，包含如下：   - Security：安全   - Low：低危   - Medium：中危   - High：高危
-    * hostName  服务器名称
-    * hostId  主机ID
-    * agentId  Agent ID
-    * nonScanReason  该镜像不支持扫描的原因；若该字段为空则表示镜像可以扫描
+    * imageName  **参数解释** 镜像名称 **取值范围** 字符长度0-256位
+    * imageId  **参数解释** 本地镜像的唯一标识，用于后续查询镜像详情、执行扫描等操作 **取值范围** 字符长度1-64位，支持字母、数字、短横线，符合UUID格式
+    * imageDigest  **参数解释** 本地镜像的加密摘要（SHA-256算法），用于唯一标识镜像内容，避免篡改 **取值范围** 字符长度64-128位，以'sha256:'开头，后跟十六进制字符串（如sha256:ce0b5d91b072730d0bc9518f11efd07eb7fdb9f43251e11a96cab5b1918b7044）
+    * imageVersion  **参数解释** 镜像版本 **取值范围** 字符长度0-256位
+    * localImageType  **参数解释** 本地镜像的存储来源类型，标识镜像是否来自华为云SWR仓库 **取值范围** swr_image：华为云SWR仓库镜像 other_image：非SWR仓库镜像
+    * scanStatus  **参数解释** 本地镜像的安全扫描状态，反映当前镜像是否完成安全检测 **取值范围** 扫描状态，包含如下：   - unscan：未扫描   - success：扫描完成   - scanning：正在扫描   - failed：扫描失败   - waiting：等待扫描
+    * imageSize  **参数解释** 本地镜像的实际存储大小，单位为字节（B） **取值范围** 取值0-9223372036854775807（约9EB）
+    * latestUpdateTime  **参数解释** 本地镜像版本的最后更新时间，即镜像创建或更新的时间戳 **取值范围** Unix时间戳（单位ms），取值0-9223372036854775807
+    * latestScanTime  **参数解释** 本地镜像最近一次完成安全扫描的时间戳，未扫描时该字段可能为0或空 **取值范围** Unix时间戳（单位ms），取值0-9223372036854775807，未扫描时为0
+    * vulNum  **参数解释** 本地镜像中检测到的软件漏洞总数，包含高、中、低危漏洞 **取值范围** 取值0-9223372036854775807
+    * unsafeSettingNum  **参数解释** 本地镜像在安全基线扫描中未通过的检查项数量，反映镜像配置合规性 **取值范围** 取值0-9223372036854775807
+    * maliciousFileNum  **参数解释** 本地镜像中检测到的恶意文件（如病毒、木马）总数 **取值范围** 取值0-9223372036854775807
+    * hostNum  **参数解释** 当前本地镜像所关联的云服务器总数 **取值范围** 取值0-9223372036854775807
+    * containerNum  **参数解释** 当前本地镜像所创建或关联的容器总数 **取值范围** 取值0-9223372036854775807
+    * componentNum  **参数解释** 本地镜像中包含的软件组件（如依赖库、应用程序）总数 **取值范围** 取值0-9223372036854775807
+    * scanFailedDesc  **参数解释** 当scan_status为failed时，该字段说明扫描失败的具体原因，未失败时为空字符串 **取值范围** - unknown_error：未知错误 - failed_to_match_agent：对应主机未开启容器版防护或agent离线 - create_container_failed：创建容器失败      - get_container_info_failed：获取容器信息失败 - docker_offline：docker引擎不在线 - get_docker_root_failed：获取容器根文件系统失败 - image_not_exist_or_docker_api_fault：镜像不存在或docker接口错误 - huge_image：超大镜像 - docker_root_in_nfs：容器根目录位于网络挂载 - response_timed_out：响应超时
+    * severityLevel  **参数解释** 根据镜像的漏洞、基线违规、恶意文件情况综合评定的风险等级 **取值范围** - Security：安全 - Low：低危 - Medium：中危 - High：高危
+    * hostName  **参数解释** 应用防护事件所属云服务器的名称，用于标识事件来源主机 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，符合华为云ECS命名规范
+    * hostId  **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * agentId  **参数解释** 本地镜像所在服务器上安装的HSS Agent唯一标识，用于关联Agent相关操作 **取值范围** 字符长度1-128位，支持字母、数字、短横线、下划线
+    * nonScanReason  **参数解释** 说明本地镜像无法进行安全扫描的具体原因（如镜像格式不支持、权限不足等），为空表示支持扫描 **取值范围** 字符长度0-1024位，支持中文、英文、数字、常用标点符号
     *
     * @var string[]
     */
@@ -241,27 +241,27 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * imageName  镜像名称
-    * imageId  镜像ID
-    * imageDigest  镜像digest
-    * imageVersion  镜像版本
-    * localImageType  本地镜像类型
-    * scanStatus  扫描状态，包含如下：   - unscan：未扫描   - success：扫描完成   - scanning：正在扫描   - failed：扫描失败   - waiting：等待扫描
-    * imageSize  镜像大小，单位字节
-    * latestUpdateTime  镜像版本最后更新时间，时间单位毫秒（ms）
-    * latestScanTime  最近扫描时间，时间单位毫秒（ms）
-    * vulNum  漏洞个数
-    * unsafeSettingNum  基线扫描未通过数
-    * maliciousFileNum  恶意文件数
-    * hostNum  关联主机数
-    * containerNum  关联容器数
-    * componentNum  关联组件数
-    * scanFailedDesc  扫描失败原因，包含如下10种。   - \"unknown_error\":未知错误   - \"failed_to_match_agent\":对应主机未开启容器版防护或agent离线   - \"create_container_failed\":创建容器失败        - \"get_container_info_failed\":获取容器信息失败   - \"docker_offline\":docker引擎不在线   - \"get_docker_root_failed\":获取容器根文件系统失败   - \"image_not_exist_or_docker_api_fault\":镜像不存在或docker接口错误   - \"huge_image\":超大镜像   - \"docker_root_in_nfs\":容器根目录位于网络挂载   - \"response_timed_out\":响应超时
-    * severityLevel  镜像风险程度，在镜像扫描完成后展示，包含如下：   - Security：安全   - Low：低危   - Medium：中危   - High：高危
-    * hostName  服务器名称
-    * hostId  主机ID
-    * agentId  Agent ID
-    * nonScanReason  该镜像不支持扫描的原因；若该字段为空则表示镜像可以扫描
+    * imageName  **参数解释** 镜像名称 **取值范围** 字符长度0-256位
+    * imageId  **参数解释** 本地镜像的唯一标识，用于后续查询镜像详情、执行扫描等操作 **取值范围** 字符长度1-64位，支持字母、数字、短横线，符合UUID格式
+    * imageDigest  **参数解释** 本地镜像的加密摘要（SHA-256算法），用于唯一标识镜像内容，避免篡改 **取值范围** 字符长度64-128位，以'sha256:'开头，后跟十六进制字符串（如sha256:ce0b5d91b072730d0bc9518f11efd07eb7fdb9f43251e11a96cab5b1918b7044）
+    * imageVersion  **参数解释** 镜像版本 **取值范围** 字符长度0-256位
+    * localImageType  **参数解释** 本地镜像的存储来源类型，标识镜像是否来自华为云SWR仓库 **取值范围** swr_image：华为云SWR仓库镜像 other_image：非SWR仓库镜像
+    * scanStatus  **参数解释** 本地镜像的安全扫描状态，反映当前镜像是否完成安全检测 **取值范围** 扫描状态，包含如下：   - unscan：未扫描   - success：扫描完成   - scanning：正在扫描   - failed：扫描失败   - waiting：等待扫描
+    * imageSize  **参数解释** 本地镜像的实际存储大小，单位为字节（B） **取值范围** 取值0-9223372036854775807（约9EB）
+    * latestUpdateTime  **参数解释** 本地镜像版本的最后更新时间，即镜像创建或更新的时间戳 **取值范围** Unix时间戳（单位ms），取值0-9223372036854775807
+    * latestScanTime  **参数解释** 本地镜像最近一次完成安全扫描的时间戳，未扫描时该字段可能为0或空 **取值范围** Unix时间戳（单位ms），取值0-9223372036854775807，未扫描时为0
+    * vulNum  **参数解释** 本地镜像中检测到的软件漏洞总数，包含高、中、低危漏洞 **取值范围** 取值0-9223372036854775807
+    * unsafeSettingNum  **参数解释** 本地镜像在安全基线扫描中未通过的检查项数量，反映镜像配置合规性 **取值范围** 取值0-9223372036854775807
+    * maliciousFileNum  **参数解释** 本地镜像中检测到的恶意文件（如病毒、木马）总数 **取值范围** 取值0-9223372036854775807
+    * hostNum  **参数解释** 当前本地镜像所关联的云服务器总数 **取值范围** 取值0-9223372036854775807
+    * containerNum  **参数解释** 当前本地镜像所创建或关联的容器总数 **取值范围** 取值0-9223372036854775807
+    * componentNum  **参数解释** 本地镜像中包含的软件组件（如依赖库、应用程序）总数 **取值范围** 取值0-9223372036854775807
+    * scanFailedDesc  **参数解释** 当scan_status为failed时，该字段说明扫描失败的具体原因，未失败时为空字符串 **取值范围** - unknown_error：未知错误 - failed_to_match_agent：对应主机未开启容器版防护或agent离线 - create_container_failed：创建容器失败      - get_container_info_failed：获取容器信息失败 - docker_offline：docker引擎不在线 - get_docker_root_failed：获取容器根文件系统失败 - image_not_exist_or_docker_api_fault：镜像不存在或docker接口错误 - huge_image：超大镜像 - docker_root_in_nfs：容器根目录位于网络挂载 - response_timed_out：响应超时
+    * severityLevel  **参数解释** 根据镜像的漏洞、基线违规、恶意文件情况综合评定的风险等级 **取值范围** - Security：安全 - Low：低危 - Medium：中危 - High：高危
+    * hostName  **参数解释** 应用防护事件所属云服务器的名称，用于标识事件来源主机 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，符合华为云ECS命名规范
+    * hostId  **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+    * agentId  **参数解释** 本地镜像所在服务器上安装的HSS Agent唯一标识，用于关联Agent相关操作 **取值范围** 字符长度1-128位，支持字母、数字、短横线、下划线
+    * nonScanReason  **参数解释** 说明本地镜像无法进行安全扫描的具体原因（如镜像格式不支持、权限不足等），为空表示支持扫描 **取值范围** 字符长度0-1024位，支持中文、英文、数字、常用标点符号
     *
     * @var string[]
     */
@@ -520,7 +520,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageName
-    *  镜像名称
+    *  **参数解释** 镜像名称 **取值范围** 字符长度0-256位
     *
     * @return string|null
     */
@@ -532,7 +532,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imageName
     *
-    * @param string|null $imageName 镜像名称
+    * @param string|null $imageName **参数解释** 镜像名称 **取值范围** 字符长度0-256位
     *
     * @return $this
     */
@@ -544,7 +544,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageId
-    *  镜像ID
+    *  **参数解释** 本地镜像的唯一标识，用于后续查询镜像详情、执行扫描等操作 **取值范围** 字符长度1-64位，支持字母、数字、短横线，符合UUID格式
     *
     * @return string|null
     */
@@ -556,7 +556,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imageId
     *
-    * @param string|null $imageId 镜像ID
+    * @param string|null $imageId **参数解释** 本地镜像的唯一标识，用于后续查询镜像详情、执行扫描等操作 **取值范围** 字符长度1-64位，支持字母、数字、短横线，符合UUID格式
     *
     * @return $this
     */
@@ -568,7 +568,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageDigest
-    *  镜像digest
+    *  **参数解释** 本地镜像的加密摘要（SHA-256算法），用于唯一标识镜像内容，避免篡改 **取值范围** 字符长度64-128位，以'sha256:'开头，后跟十六进制字符串（如sha256:ce0b5d91b072730d0bc9518f11efd07eb7fdb9f43251e11a96cab5b1918b7044）
     *
     * @return string|null
     */
@@ -580,7 +580,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imageDigest
     *
-    * @param string|null $imageDigest 镜像digest
+    * @param string|null $imageDigest **参数解释** 本地镜像的加密摘要（SHA-256算法），用于唯一标识镜像内容，避免篡改 **取值范围** 字符长度64-128位，以'sha256:'开头，后跟十六进制字符串（如sha256:ce0b5d91b072730d0bc9518f11efd07eb7fdb9f43251e11a96cab5b1918b7044）
     *
     * @return $this
     */
@@ -592,7 +592,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageVersion
-    *  镜像版本
+    *  **参数解释** 镜像版本 **取值范围** 字符长度0-256位
     *
     * @return string|null
     */
@@ -604,7 +604,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imageVersion
     *
-    * @param string|null $imageVersion 镜像版本
+    * @param string|null $imageVersion **参数解释** 镜像版本 **取值范围** 字符长度0-256位
     *
     * @return $this
     */
@@ -616,7 +616,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets localImageType
-    *  本地镜像类型
+    *  **参数解释** 本地镜像的存储来源类型，标识镜像是否来自华为云SWR仓库 **取值范围** swr_image：华为云SWR仓库镜像 other_image：非SWR仓库镜像
     *
     * @return string|null
     */
@@ -628,7 +628,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets localImageType
     *
-    * @param string|null $localImageType 本地镜像类型
+    * @param string|null $localImageType **参数解释** 本地镜像的存储来源类型，标识镜像是否来自华为云SWR仓库 **取值范围** swr_image：华为云SWR仓库镜像 other_image：非SWR仓库镜像
     *
     * @return $this
     */
@@ -640,7 +640,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanStatus
-    *  扫描状态，包含如下：   - unscan：未扫描   - success：扫描完成   - scanning：正在扫描   - failed：扫描失败   - waiting：等待扫描
+    *  **参数解释** 本地镜像的安全扫描状态，反映当前镜像是否完成安全检测 **取值范围** 扫描状态，包含如下：   - unscan：未扫描   - success：扫描完成   - scanning：正在扫描   - failed：扫描失败   - waiting：等待扫描
     *
     * @return string|null
     */
@@ -652,7 +652,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanStatus
     *
-    * @param string|null $scanStatus 扫描状态，包含如下：   - unscan：未扫描   - success：扫描完成   - scanning：正在扫描   - failed：扫描失败   - waiting：等待扫描
+    * @param string|null $scanStatus **参数解释** 本地镜像的安全扫描状态，反映当前镜像是否完成安全检测 **取值范围** 扫描状态，包含如下：   - unscan：未扫描   - success：扫描完成   - scanning：正在扫描   - failed：扫描失败   - waiting：等待扫描
     *
     * @return $this
     */
@@ -664,7 +664,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageSize
-    *  镜像大小，单位字节
+    *  **参数解释** 本地镜像的实际存储大小，单位为字节（B） **取值范围** 取值0-9223372036854775807（约9EB）
     *
     * @return int|null
     */
@@ -676,7 +676,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imageSize
     *
-    * @param int|null $imageSize 镜像大小，单位字节
+    * @param int|null $imageSize **参数解释** 本地镜像的实际存储大小，单位为字节（B） **取值范围** 取值0-9223372036854775807（约9EB）
     *
     * @return $this
     */
@@ -688,7 +688,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets latestUpdateTime
-    *  镜像版本最后更新时间，时间单位毫秒（ms）
+    *  **参数解释** 本地镜像版本的最后更新时间，即镜像创建或更新的时间戳 **取值范围** Unix时间戳（单位ms），取值0-9223372036854775807
     *
     * @return int|null
     */
@@ -700,7 +700,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets latestUpdateTime
     *
-    * @param int|null $latestUpdateTime 镜像版本最后更新时间，时间单位毫秒（ms）
+    * @param int|null $latestUpdateTime **参数解释** 本地镜像版本的最后更新时间，即镜像创建或更新的时间戳 **取值范围** Unix时间戳（单位ms），取值0-9223372036854775807
     *
     * @return $this
     */
@@ -712,7 +712,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets latestScanTime
-    *  最近扫描时间，时间单位毫秒（ms）
+    *  **参数解释** 本地镜像最近一次完成安全扫描的时间戳，未扫描时该字段可能为0或空 **取值范围** Unix时间戳（单位ms），取值0-9223372036854775807，未扫描时为0
     *
     * @return int|null
     */
@@ -724,7 +724,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets latestScanTime
     *
-    * @param int|null $latestScanTime 最近扫描时间，时间单位毫秒（ms）
+    * @param int|null $latestScanTime **参数解释** 本地镜像最近一次完成安全扫描的时间戳，未扫描时该字段可能为0或空 **取值范围** Unix时间戳（单位ms），取值0-9223372036854775807，未扫描时为0
     *
     * @return $this
     */
@@ -736,7 +736,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vulNum
-    *  漏洞个数
+    *  **参数解释** 本地镜像中检测到的软件漏洞总数，包含高、中、低危漏洞 **取值范围** 取值0-9223372036854775807
     *
     * @return int|null
     */
@@ -748,7 +748,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vulNum
     *
-    * @param int|null $vulNum 漏洞个数
+    * @param int|null $vulNum **参数解释** 本地镜像中检测到的软件漏洞总数，包含高、中、低危漏洞 **取值范围** 取值0-9223372036854775807
     *
     * @return $this
     */
@@ -760,7 +760,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets unsafeSettingNum
-    *  基线扫描未通过数
+    *  **参数解释** 本地镜像在安全基线扫描中未通过的检查项数量，反映镜像配置合规性 **取值范围** 取值0-9223372036854775807
     *
     * @return int|null
     */
@@ -772,7 +772,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets unsafeSettingNum
     *
-    * @param int|null $unsafeSettingNum 基线扫描未通过数
+    * @param int|null $unsafeSettingNum **参数解释** 本地镜像在安全基线扫描中未通过的检查项数量，反映镜像配置合规性 **取值范围** 取值0-9223372036854775807
     *
     * @return $this
     */
@@ -784,7 +784,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets maliciousFileNum
-    *  恶意文件数
+    *  **参数解释** 本地镜像中检测到的恶意文件（如病毒、木马）总数 **取值范围** 取值0-9223372036854775807
     *
     * @return int|null
     */
@@ -796,7 +796,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets maliciousFileNum
     *
-    * @param int|null $maliciousFileNum 恶意文件数
+    * @param int|null $maliciousFileNum **参数解释** 本地镜像中检测到的恶意文件（如病毒、木马）总数 **取值范围** 取值0-9223372036854775807
     *
     * @return $this
     */
@@ -808,7 +808,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostNum
-    *  关联主机数
+    *  **参数解释** 当前本地镜像所关联的云服务器总数 **取值范围** 取值0-9223372036854775807
     *
     * @return int|null
     */
@@ -820,7 +820,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostNum
     *
-    * @param int|null $hostNum 关联主机数
+    * @param int|null $hostNum **参数解释** 当前本地镜像所关联的云服务器总数 **取值范围** 取值0-9223372036854775807
     *
     * @return $this
     */
@@ -832,7 +832,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerNum
-    *  关联容器数
+    *  **参数解释** 当前本地镜像所创建或关联的容器总数 **取值范围** 取值0-9223372036854775807
     *
     * @return int|null
     */
@@ -844,7 +844,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets containerNum
     *
-    * @param int|null $containerNum 关联容器数
+    * @param int|null $containerNum **参数解释** 当前本地镜像所创建或关联的容器总数 **取值范围** 取值0-9223372036854775807
     *
     * @return $this
     */
@@ -856,7 +856,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets componentNum
-    *  关联组件数
+    *  **参数解释** 本地镜像中包含的软件组件（如依赖库、应用程序）总数 **取值范围** 取值0-9223372036854775807
     *
     * @return int|null
     */
@@ -868,7 +868,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets componentNum
     *
-    * @param int|null $componentNum 关联组件数
+    * @param int|null $componentNum **参数解释** 本地镜像中包含的软件组件（如依赖库、应用程序）总数 **取值范围** 取值0-9223372036854775807
     *
     * @return $this
     */
@@ -880,7 +880,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanFailedDesc
-    *  扫描失败原因，包含如下10种。   - \"unknown_error\":未知错误   - \"failed_to_match_agent\":对应主机未开启容器版防护或agent离线   - \"create_container_failed\":创建容器失败        - \"get_container_info_failed\":获取容器信息失败   - \"docker_offline\":docker引擎不在线   - \"get_docker_root_failed\":获取容器根文件系统失败   - \"image_not_exist_or_docker_api_fault\":镜像不存在或docker接口错误   - \"huge_image\":超大镜像   - \"docker_root_in_nfs\":容器根目录位于网络挂载   - \"response_timed_out\":响应超时
+    *  **参数解释** 当scan_status为failed时，该字段说明扫描失败的具体原因，未失败时为空字符串 **取值范围** - unknown_error：未知错误 - failed_to_match_agent：对应主机未开启容器版防护或agent离线 - create_container_failed：创建容器失败      - get_container_info_failed：获取容器信息失败 - docker_offline：docker引擎不在线 - get_docker_root_failed：获取容器根文件系统失败 - image_not_exist_or_docker_api_fault：镜像不存在或docker接口错误 - huge_image：超大镜像 - docker_root_in_nfs：容器根目录位于网络挂载 - response_timed_out：响应超时
     *
     * @return string|null
     */
@@ -892,7 +892,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanFailedDesc
     *
-    * @param string|null $scanFailedDesc 扫描失败原因，包含如下10种。   - \"unknown_error\":未知错误   - \"failed_to_match_agent\":对应主机未开启容器版防护或agent离线   - \"create_container_failed\":创建容器失败        - \"get_container_info_failed\":获取容器信息失败   - \"docker_offline\":docker引擎不在线   - \"get_docker_root_failed\":获取容器根文件系统失败   - \"image_not_exist_or_docker_api_fault\":镜像不存在或docker接口错误   - \"huge_image\":超大镜像   - \"docker_root_in_nfs\":容器根目录位于网络挂载   - \"response_timed_out\":响应超时
+    * @param string|null $scanFailedDesc **参数解释** 当scan_status为failed时，该字段说明扫描失败的具体原因，未失败时为空字符串 **取值范围** - unknown_error：未知错误 - failed_to_match_agent：对应主机未开启容器版防护或agent离线 - create_container_failed：创建容器失败      - get_container_info_failed：获取容器信息失败 - docker_offline：docker引擎不在线 - get_docker_root_failed：获取容器根文件系统失败 - image_not_exist_or_docker_api_fault：镜像不存在或docker接口错误 - huge_image：超大镜像 - docker_root_in_nfs：容器根目录位于网络挂载 - response_timed_out：响应超时
     *
     * @return $this
     */
@@ -904,7 +904,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets severityLevel
-    *  镜像风险程度，在镜像扫描完成后展示，包含如下：   - Security：安全   - Low：低危   - Medium：中危   - High：高危
+    *  **参数解释** 根据镜像的漏洞、基线违规、恶意文件情况综合评定的风险等级 **取值范围** - Security：安全 - Low：低危 - Medium：中危 - High：高危
     *
     * @return string|null
     */
@@ -916,7 +916,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets severityLevel
     *
-    * @param string|null $severityLevel 镜像风险程度，在镜像扫描完成后展示，包含如下：   - Security：安全   - Low：低危   - Medium：中危   - High：高危
+    * @param string|null $severityLevel **参数解释** 根据镜像的漏洞、基线违规、恶意文件情况综合评定的风险等级 **取值范围** - Security：安全 - Low：低危 - Medium：中危 - High：高危
     *
     * @return $this
     */
@@ -928,7 +928,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  服务器名称
+    *  **参数解释** 应用防护事件所属云服务器的名称，用于标识事件来源主机 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，符合华为云ECS命名规范
     *
     * @return string|null
     */
@@ -940,7 +940,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 服务器名称
+    * @param string|null $hostName **参数解释** 应用防护事件所属云服务器的名称，用于标识事件来源主机 **取值范围** 字符长度1-64位，支持中文、英文、数字、短横线、下划线，符合华为云ECS命名规范
     *
     * @return $this
     */
@@ -952,7 +952,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机ID
+    *  **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -964,7 +964,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机ID
+    * @param string|null $hostId **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -976,7 +976,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  Agent ID
+    *  **参数解释** 本地镜像所在服务器上安装的HSS Agent唯一标识，用于关联Agent相关操作 **取值范围** 字符长度1-128位，支持字母、数字、短横线、下划线
     *
     * @return string|null
     */
@@ -988,7 +988,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId Agent ID
+    * @param string|null $agentId **参数解释** 本地镜像所在服务器上安装的HSS Agent唯一标识，用于关联Agent相关操作 **取值范围** 字符长度1-128位，支持字母、数字、短横线、下划线
     *
     * @return $this
     */
@@ -1000,7 +1000,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nonScanReason
-    *  该镜像不支持扫描的原因；若该字段为空则表示镜像可以扫描
+    *  **参数解释** 说明本地镜像无法进行安全扫描的具体原因（如镜像格式不支持、权限不足等），为空表示支持扫描 **取值范围** 字符长度0-1024位，支持中文、英文、数字、常用标点符号
     *
     * @return string|null
     */
@@ -1012,7 +1012,7 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nonScanReason
     *
-    * @param string|null $nonScanReason 该镜像不支持扫描的原因；若该字段为空则表示镜像可以扫描
+    * @param string|null $nonScanReason **参数解释** 说明本地镜像无法进行安全扫描的具体原因（如镜像格式不支持、权限不足等），为空表示支持扫描 **取值范围** 字符长度0-1024位，支持中文、英文、数字、常用标点符号
     *
     * @return $this
     */

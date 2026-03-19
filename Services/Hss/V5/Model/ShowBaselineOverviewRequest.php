@@ -22,24 +22,28 @@ class ShowBaselineOverviewRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * groupId  **参数解释**: 策略组ID。当传此字段时，返回当前策略组ID下的数据。当不传此字段时，返回当前企业项目下所有数据。 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * statisticsType  **参数解释** 统计类型，不同的查询类型返回不同的统计数据，为空表示返回所有数据 **约束限制** 不涉及 **取值范围** - weakpwd: 查询主机弱口令检测统计数据 - baseline_passrate: 查询基线检查通过率、主机配置基线通过率、基线风险统计、未通过检查项/已检查项 - host_risk_top_5: 查询主机配置风险TO5 - host_num: 未通过主机/主机总数  **默认取值** 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'enterpriseProjectId' => 'string',
-            'groupId' => 'string'
+            'groupId' => 'string',
+            'statisticsType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * groupId  **参数解释**: 策略组ID。当传此字段时，返回当前策略组ID下的数据。当不传此字段时，返回当前企业项目下所有数据。 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * statisticsType  **参数解释** 统计类型，不同的查询类型返回不同的统计数据，为空表示返回所有数据 **约束限制** 不涉及 **取值范围** - weakpwd: 查询主机弱口令检测统计数据 - baseline_passrate: 查询基线检查通过率、主机配置基线通过率、基线风险统计、未通过检查项/已检查项 - host_risk_top_5: 查询主机配置风险TO5 - host_num: 未通过主机/主机总数  **默认取值** 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'enterpriseProjectId' => null,
-        'groupId' => null
+        'groupId' => null,
+        'statisticsType' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ShowBaselineOverviewRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * groupId  **参数解释**: 策略组ID。当传此字段时，返回当前策略组ID下的数据。当不传此字段时，返回当前企业项目下所有数据。 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * statisticsType  **参数解释** 统计类型，不同的查询类型返回不同的统计数据，为空表示返回所有数据 **约束限制** 不涉及 **取值范围** - weakpwd: 查询主机弱口令检测统计数据 - baseline_passrate: 查询基线检查通过率、主机配置基线通过率、基线风险统计、未通过检查项/已检查项 - host_risk_top_5: 查询主机配置风险TO5 - host_num: 未通过主机/主机总数  **默认取值** 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'enterpriseProjectId' => 'enterprise_project_id',
-            'groupId' => 'group_id'
+            'groupId' => 'group_id',
+            'statisticsType' => 'statistics_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * groupId  **参数解释**: 策略组ID。当传此字段时，返回当前策略组ID下的数据。当不传此字段时，返回当前企业项目下所有数据。 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * statisticsType  **参数解释** 统计类型，不同的查询类型返回不同的统计数据，为空表示返回所有数据 **约束限制** 不涉及 **取值范围** - weakpwd: 查询主机弱口令检测统计数据 - baseline_passrate: 查询基线检查通过率、主机配置基线通过率、基线风险统计、未通过检查项/已检查项 - host_risk_top_5: 查询主机配置风险TO5 - host_num: 未通过主机/主机总数  **默认取值** 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'groupId' => 'setGroupId'
+            'groupId' => 'setGroupId',
+            'statisticsType' => 'setStatisticsType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * groupId  **参数解释**: 策略组ID。当传此字段时，返回当前策略组ID下的数据。当不传此字段时，返回当前企业项目下所有数据。 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * statisticsType  **参数解释** 统计类型，不同的查询类型返回不同的统计数据，为空表示返回所有数据 **约束限制** 不涉及 **取值范围** - weakpwd: 查询主机弱口令检测统计数据 - baseline_passrate: 查询基线检查通过率、主机配置基线通过率、基线风险统计、未通过检查项/已检查项 - host_risk_top_5: 查询主机配置风险TO5 - host_num: 未通过主机/主机总数  **默认取值** 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'groupId' => 'getGroupId'
+            'groupId' => 'getGroupId',
+            'statisticsType' => 'getStatisticsType'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ShowBaselineOverviewRequest implements ModelInterface, ArrayAccess
     {
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
+        $this->container['statisticsType'] = isset($data['statisticsType']) ? $data['statisticsType'] : null;
     }
 
     /**
@@ -186,6 +197,15 @@ class ShowBaselineOverviewRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['groupId']) && !preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['groupId'])) {
                 $invalidProperties[] = "invalid value for 'groupId', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
+            }
+            if (!is_null($this->container['statisticsType']) && (mb_strlen($this->container['statisticsType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'statisticsType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['statisticsType']) && (mb_strlen($this->container['statisticsType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'statisticsType', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['statisticsType']) && !preg_match("/^(weakpwd|baseline_passrate|host_risk_top_5|host_num)$/", $this->container['statisticsType'])) {
+                $invalidProperties[] = "invalid value for 'statisticsType', must be conform to the pattern /^(weakpwd|baseline_passrate|host_risk_top_5|host_num)$/.";
             }
         return $invalidProperties;
     }
@@ -246,6 +266,30 @@ class ShowBaselineOverviewRequest implements ModelInterface, ArrayAccess
     public function setGroupId($groupId)
     {
         $this->container['groupId'] = $groupId;
+        return $this;
+    }
+
+    /**
+    * Gets statisticsType
+    *  **参数解释** 统计类型，不同的查询类型返回不同的统计数据，为空表示返回所有数据 **约束限制** 不涉及 **取值范围** - weakpwd: 查询主机弱口令检测统计数据 - baseline_passrate: 查询基线检查通过率、主机配置基线通过率、基线风险统计、未通过检查项/已检查项 - host_risk_top_5: 查询主机配置风险TO5 - host_num: 未通过主机/主机总数  **默认取值** 不涉及
+    *
+    * @return string|null
+    */
+    public function getStatisticsType()
+    {
+        return $this->container['statisticsType'];
+    }
+
+    /**
+    * Sets statisticsType
+    *
+    * @param string|null $statisticsType **参数解释** 统计类型，不同的查询类型返回不同的统计数据，为空表示返回所有数据 **约束限制** 不涉及 **取值范围** - weakpwd: 查询主机弱口令检测统计数据 - baseline_passrate: 查询基线检查通过率、主机配置基线通过率、基线风险统计、未通过检查项/已检查项 - host_risk_top_5: 查询主机配置风险TO5 - host_num: 未通过主机/主机总数  **默认取值** 不涉及
+    *
+    * @return $this
+    */
+    public function setStatisticsType($statisticsType)
+    {
+        $this->container['statisticsType'] = $statisticsType;
         return $this;
     }
 

@@ -21,8 +21,8 @@ class ConfirmPolicyIpReputationMapRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * lang  **参数解释：** 语言的类型 - cn代表中文 - en代表英文  **约束限制：** 不涉及 **取值范围：** - cn - en  **默认取值：** - cn
-    * type  **参数解释：** 防护选项的详细信息的类型，当前仅支持“idc”。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * lang  **参数解释：** 语言类型 **约束限制：** 不涉及 **取值范围：** - cn 中文 - en 英文 **默认取值：** cn
+    * type  **参数解释：** 防护选项的详细信息的类型，当前仅支持“idc”。 **约束限制：** 不涉及 **取值范围：** - idc **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class ConfirmPolicyIpReputationMapRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * lang  **参数解释：** 语言的类型 - cn代表中文 - en代表英文  **约束限制：** 不涉及 **取值范围：** - cn - en  **默认取值：** - cn
-    * type  **参数解释：** 防护选项的详细信息的类型，当前仅支持“idc”。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * lang  **参数解释：** 语言类型 **约束限制：** 不涉及 **取值范围：** - cn 中文 - en 英文 **默认取值：** cn
+    * type  **参数解释：** 防护选项的详细信息的类型，当前仅支持“idc”。 **约束限制：** 不涉及 **取值范围：** - idc **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class ConfirmPolicyIpReputationMapRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * lang  **参数解释：** 语言的类型 - cn代表中文 - en代表英文  **约束限制：** 不涉及 **取值范围：** - cn - en  **默认取值：** - cn
-    * type  **参数解释：** 防护选项的详细信息的类型，当前仅支持“idc”。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * lang  **参数解释：** 语言类型 **约束限制：** 不涉及 **取值范围：** - cn 中文 - en 英文 **默认取值：** cn
+    * type  **参数解释：** 防护选项的详细信息的类型，当前仅支持“idc”。 **约束限制：** 不涉及 **取值范围：** - idc **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class ConfirmPolicyIpReputationMapRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * lang  **参数解释：** 语言的类型 - cn代表中文 - en代表英文  **约束限制：** 不涉及 **取值范围：** - cn - en  **默认取值：** - cn
-    * type  **参数解释：** 防护选项的详细信息的类型，当前仅支持“idc”。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * lang  **参数解释：** 语言类型 **约束限制：** 不涉及 **取值范围：** - cn 中文 - en 英文 **默认取值：** cn
+    * type  **参数解释：** 防护选项的详细信息的类型，当前仅支持“idc”。 **约束限制：** 不涉及 **取值范围：** - idc **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class ConfirmPolicyIpReputationMapRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * lang  **参数解释：** 语言的类型 - cn代表中文 - en代表英文  **约束限制：** 不涉及 **取值范围：** - cn - en  **默认取值：** - cn
-    * type  **参数解释：** 防护选项的详细信息的类型，当前仅支持“idc”。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * lang  **参数解释：** 语言类型 **约束限制：** 不涉及 **取值范围：** - cn 中文 - en 英文 **默认取值：** cn
+    * type  **参数解释：** 防护选项的详细信息的类型，当前仅支持“idc”。 **约束限制：** 不涉及 **取值范围：** - idc **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -149,7 +149,35 @@ class ConfirmPolicyIpReputationMapRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const LANG_CN = 'cn';
+    const LANG_EN = 'en';
+    const TYPE_IDC = 'idc';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getLangAllowableValues()
+    {
+        return [
+            self::LANG_CN,
+            self::LANG_EN,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_IDC,
+        ];
+    }
 
 
     /**
@@ -183,12 +211,25 @@ class ConfirmPolicyIpReputationMapRequest implements ModelInterface, ArrayAccess
         if ($this->container['contentType'] === null) {
             $invalidProperties[] = "'contentType' can't be null";
         }
-        if ($this->container['lang'] === null) {
-            $invalidProperties[] = "'lang' can't be null";
-        }
+            $allowedValues = $this->getLangAllowableValues();
+                if (!is_null($this->container['lang']) && !in_array($this->container['lang'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'lang', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -229,9 +270,9 @@ class ConfirmPolicyIpReputationMapRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets lang
-    *  **参数解释：** 语言的类型 - cn代表中文 - en代表英文  **约束限制：** 不涉及 **取值范围：** - cn - en  **默认取值：** - cn
+    *  **参数解释：** 语言类型 **约束限制：** 不涉及 **取值范围：** - cn 中文 - en 英文 **默认取值：** cn
     *
-    * @return string
+    * @return string|null
     */
     public function getLang()
     {
@@ -241,7 +282,7 @@ class ConfirmPolicyIpReputationMapRequest implements ModelInterface, ArrayAccess
     /**
     * Sets lang
     *
-    * @param string $lang **参数解释：** 语言的类型 - cn代表中文 - en代表英文  **约束限制：** 不涉及 **取值范围：** - cn - en  **默认取值：** - cn
+    * @param string|null $lang **参数解释：** 语言类型 **约束限制：** 不涉及 **取值范围：** - cn 中文 - en 英文 **默认取值：** cn
     *
     * @return $this
     */
@@ -253,7 +294,7 @@ class ConfirmPolicyIpReputationMapRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释：** 防护选项的详细信息的类型，当前仅支持“idc”。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  **参数解释：** 防护选项的详细信息的类型，当前仅支持“idc”。 **约束限制：** 不涉及 **取值范围：** - idc **默认取值：** 不涉及
     *
     * @return string
     */
@@ -265,7 +306,7 @@ class ConfirmPolicyIpReputationMapRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type **参数解释：** 防护选项的详细信息的类型，当前仅支持“idc”。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param string $type **参数解释：** 防护选项的详细信息的类型，当前仅支持“idc”。 **约束限制：** 不涉及 **取值范围：** - idc **默认取值：** 不涉及
     *
     * @return $this
     */

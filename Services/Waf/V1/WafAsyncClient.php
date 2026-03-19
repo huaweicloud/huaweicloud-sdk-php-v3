@@ -352,11 +352,11 @@ class WafAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['policyids'] !== null) {
-            $queryParams['policyids'] = $localVarParams['policyids'];
-        }
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['policyids'] !== null) {
+            $queryParams['policyids'] = $localVarParams['policyids'];
         }
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
@@ -1080,6 +1080,9 @@ class WafAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
         }
@@ -1147,6 +1150,9 @@ class WafAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
@@ -1216,6 +1222,9 @@ class WafAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
         }
@@ -1284,6 +1293,9 @@ class WafAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
         }
@@ -1351,6 +1363,9 @@ class WafAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
@@ -1623,6 +1638,9 @@ class WafAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
@@ -2043,6 +2061,9 @@ class WafAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['lang'] !== null) {
             $queryParams['lang'] = $localVarParams['lang'];
@@ -3809,7 +3830,7 @@ class WafAsyncClient extends Client
     /**
      * 购买包周期云模式waf
      *
-     * 购买包周期云模式waf。
+     * 购买包周期云模式waf
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5950,6 +5971,12 @@ class WafAsyncClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
+        if ($localVarParams['page'] !== null) {
+            $queryParams['page'] = $localVarParams['page'];
+        }
+        if ($localVarParams['pagesize'] !== null) {
+            $queryParams['pagesize'] = $localVarParams['pagesize'];
+        }
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
         }
@@ -6106,6 +6133,12 @@ class WafAsyncClient extends Client
         }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['page'] !== null) {
+            $queryParams['page'] = $localVarParams['page'];
+        }
+        if ($localVarParams['pagesize'] !== null) {
+            $queryParams['pagesize'] = $localVarParams['pagesize'];
         }
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
@@ -6498,6 +6531,12 @@ class WafAsyncClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
+        if ($localVarParams['page'] !== null) {
+            $queryParams['page'] = $localVarParams['page'];
+        }
+        if ($localVarParams['pagesize'] !== null) {
+            $queryParams['pagesize'] = $localVarParams['pagesize'];
+        }
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }
@@ -6839,6 +6878,12 @@ class WafAsyncClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
+        if ($localVarParams['page'] !== null) {
+            $queryParams['page'] = $localVarParams['page'];
+        }
+        if ($localVarParams['pagesize'] !== null) {
+            $queryParams['pagesize'] = $localVarParams['pagesize'];
+        }
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
         }
@@ -6919,20 +6964,95 @@ class WafAsyncClient extends Client
         if ($localVarParams['to'] !== null) {
             $queryParams['to'] = $localVarParams['to'];
         }
+        if ($localVarParams['ids'] !== null) {
+            $queryParams['ids'] = $localVarParams['ids'];
+        }
+        if ($localVarParams['nids'] !== null) {
+            $queryParams['nids'] = $localVarParams['nids'];
+        }
         if ($localVarParams['attacks'] !== null) {
             $queryParams['attacks'] = $localVarParams['attacks'];
+        }
+        if ($localVarParams['nattacks'] !== null) {
+            $queryParams['nattacks'] = $localVarParams['nattacks'];
+        }
+        if ($localVarParams['rules'] !== null) {
+            $queryParams['rules'] = $localVarParams['rules'];
+        }
+        if ($localVarParams['nrules'] !== null) {
+            $queryParams['nrules'] = $localVarParams['nrules'];
+        }
+        if ($localVarParams['sips'] !== null) {
+            $queryParams['sips'] = $localVarParams['sips'];
+        }
+        if ($localVarParams['nsips'] !== null) {
+            $queryParams['nsips'] = $localVarParams['nsips'];
+        }
+        if ($localVarParams['sip'] !== null) {
+            $queryParams['sip'] = $localVarParams['sip'];
+        }
+        if ($localVarParams['urls'] !== null) {
+            $queryParams['urls'] = $localVarParams['urls'];
+        }
+        if ($localVarParams['nurls'] !== null) {
+            $queryParams['nurls'] = $localVarParams['nurls'];
+        }
+        if ($localVarParams['url'] !== null) {
+            $queryParams['url'] = $localVarParams['url'];
+        }
+        if ($localVarParams['actions'] !== null) {
+            $queryParams['actions'] = $localVarParams['actions'];
+        }
+        if ($localVarParams['nactions'] !== null) {
+            $queryParams['nactions'] = $localVarParams['nactions'];
+        }
+        if ($localVarParams['domain'] !== null) {
+            $queryParams['domain'] = $localVarParams['domain'];
+        }
+        if ($localVarParams['ndomain'] !== null) {
+            $queryParams['ndomain'] = $localVarParams['ndomain'];
+        }
+        if ($localVarParams['domains'] !== null) {
+            $queryParams['domains'] = $localVarParams['domains'];
+        }
+        if ($localVarParams['ipCountries'] !== null) {
+            $queryParams['ip_countries'] = $localVarParams['ipCountries'];
+        }
+        if ($localVarParams['nipCountries'] !== null) {
+            $queryParams['nip_countries'] = $localVarParams['nipCountries'];
+        }
+        if ($localVarParams['ipRegions'] !== null) {
+            $queryParams['ip_regions'] = $localVarParams['ipRegions'];
+        }
+        if ($localVarParams['nipRegions'] !== null) {
+            $queryParams['nip_regions'] = $localVarParams['nipRegions'];
+        }
+        if ($localVarParams['responseCodes'] !== null) {
+            $queryParams['response_codes'] = $localVarParams['responseCodes'];
+        }
+        if ($localVarParams['payload'] !== null) {
+            $queryParams['payload'] = $localVarParams['payload'];
         }
         if ($localVarParams['hosts'] !== null) {
             $queryParams['hosts'] = $localVarParams['hosts'];
         }
-        if ($localVarParams['sips'] !== null) {
-            $queryParams['sips'] = $localVarParams['sips'];
+        if ($localVarParams['instances'] !== null) {
+            $queryParams['instances'] = $localVarParams['instances'];
         }
         if ($localVarParams['page'] !== null) {
             $queryParams['page'] = $localVarParams['page'];
         }
         if ($localVarParams['pagesize'] !== null) {
             $queryParams['pagesize'] = $localVarParams['pagesize'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDirection'] !== null) {
+            $queryParams['sort_direction'] = $localVarParams['sortDirection'];
+        }
+        if ($localVarParams['queryMode'] !== null) {
+            $queryParams['query_mode'] = $localVarParams['queryMode'];
         }
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
@@ -7073,11 +7193,11 @@ class WafAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['policyids'] !== null) {
-            $queryParams['policyids'] = $localVarParams['policyids'];
-        }
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['policyids'] !== null) {
+            $queryParams['policyids'] = $localVarParams['policyids'];
         }
         if ($localVarParams['page'] !== null) {
             $queryParams['page'] = $localVarParams['page'];
@@ -7518,7 +7638,7 @@ class WafAsyncClient extends Client
     
     public function listInstanceTagsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v1/{project_id}/waf/{resourceid}/tags';
+        $resourcePath = '/v1/{project_id}/waf/{resource_type}/{resourceid}/tags';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -7537,6 +7657,9 @@ class WafAsyncClient extends Client
         }
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
         }
         if ($localVarParams['resourceid'] !== null) {
             $pathParams['resourceid'] = $localVarParams['resourceid'];
@@ -7768,6 +7891,12 @@ class WafAsyncClient extends Client
         }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['page'] !== null) {
+            $queryParams['page'] = $localVarParams['page'];
+        }
+        if ($localVarParams['pagesize'] !== null) {
+            $queryParams['pagesize'] = $localVarParams['pagesize'];
         }
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
@@ -8388,6 +8517,12 @@ class WafAsyncClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
+        if ($localVarParams['page'] !== null) {
+            $queryParams['page'] = $localVarParams['page'];
+        }
+        if ($localVarParams['pagesize'] !== null) {
+            $queryParams['pagesize'] = $localVarParams['pagesize'];
+        }
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
         }
@@ -8945,8 +9080,20 @@ class WafAsyncClient extends Client
         if ($localVarParams['recent'] !== null) {
             $queryParams['recent'] = $localVarParams['recent'];
         }
+        if ($localVarParams['from'] !== null) {
+            $queryParams['from'] = $localVarParams['from'];
+        }
+        if ($localVarParams['to'] !== null) {
+            $queryParams['to'] = $localVarParams['to'];
+        }
+        if ($localVarParams['top'] !== null) {
+            $queryParams['top'] = $localVarParams['top'];
+        }
         if ($localVarParams['hosts'] !== null) {
             $queryParams['hosts'] = $localVarParams['hosts'];
+        }
+        if ($localVarParams['instances'] !== null) {
+            $queryParams['instances'] = $localVarParams['instances'];
         }
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
@@ -9096,8 +9243,17 @@ class WafAsyncClient extends Client
         if ($localVarParams['recent'] !== null) {
             $queryParams['recent'] = $localVarParams['recent'];
         }
+        if ($localVarParams['from'] !== null) {
+            $queryParams['from'] = $localVarParams['from'];
+        }
+        if ($localVarParams['to'] !== null) {
+            $queryParams['to'] = $localVarParams['to'];
+        }
         if ($localVarParams['hosts'] !== null) {
             $queryParams['hosts'] = $localVarParams['hosts'];
+        }
+        if ($localVarParams['instances'] !== null) {
+            $queryParams['instances'] = $localVarParams['instances'];
         }
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
@@ -10502,6 +10658,9 @@ class WafAsyncClient extends Client
         }
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams['region'] = $localVarParams['region'];
         }
 
         if ($multipart) {
@@ -13000,6 +13159,80 @@ class WafAsyncClient extends Client
     }
 
     /**
+     * 全局白名单(原误报屏蔽)防护规则的命中次数清零
+     *
+     * 全局白名单(原误报屏蔽)防护规则的命中次数清零
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateIgnoreRuleHitNumAsync($request)
+    {
+        return $this->updateIgnoreRuleHitNumAsyncWithHttpInfo($request);
+    }
+    
+    public function updateIgnoreRuleHitNumAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/ignore/{rule_id}/recount';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($localVarParams['ruleId'] !== null) {
+            $pathParams['rule_id'] = $localVarParams['ruleId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateIgnoreRuleHitNumResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateIgnoreRuleHitNumRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 修改云模式域名路由信息
      *
      * 更新云模式域名路由信息
@@ -13631,6 +13864,12 @@ class WafAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['hostId'] !== null) {
             $pathParams['host_id'] = $localVarParams['hostId'];
         }
@@ -13840,6 +14079,9 @@ class WafAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
@@ -14429,6 +14671,9 @@ class WafAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];

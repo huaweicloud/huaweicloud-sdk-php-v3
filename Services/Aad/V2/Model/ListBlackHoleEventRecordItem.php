@@ -62,8 +62,8 @@ class ListBlackHoleEventRecordItem implements ModelInterface, ArrayAccess
         'vipId' => null,
         'instanceId' => null,
         'eventType' => null,
-        'startTime' => 'int32',
-        'endTime' => 'int32'
+        'startTime' => 'int64',
+        'endTime' => 'int64'
     ];
 
     /**

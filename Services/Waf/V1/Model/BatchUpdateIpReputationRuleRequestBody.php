@@ -20,11 +20,11 @@ class BatchUpdateIpReputationRuleRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  **参数解释：** 规则描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * action  action
-    * type  **参数解释：** 规则类型（如idc表示机房IP情报类型） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * tags  **参数解释：** 标签列表，关联的情报标识 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * type  **参数解释：** 信誉类型（目前只支持idc） **约束限制：** 不涉及 **取值范围：** - idc  **默认取值：** 不涉及
+    * tags  **参数解释：** 标签列表，用于指定关联的情报标识，可通过ConfirmPolicyIpReputationMap接口查询；多个标识之间使用逗号\",\"分隔 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * policyRuleIds  **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
@@ -32,19 +32,19 @@ class BatchUpdateIpReputationRuleRequestBody implements ModelInterface, ArrayAcc
     protected static $openAPITypes = [
             'name' => 'string',
             'description' => 'string',
-            'action' => '\HuaweiCloud\SDK\Waf\V1\Model\BatchUpdateIpReputationRuleRequestBodyAction',
+            'action' => '\HuaweiCloud\SDK\Waf\V1\Model\CreateIpReputationRuleRequestBodyAction',
             'type' => 'string',
             'tags' => 'string[]',
-            'policyRuleIds' => '\HuaweiCloud\SDK\Waf\V1\Model\PolicyRuleIdRequestBodyPolicyRuleIds[]'
+            'policyRuleIds' => '\HuaweiCloud\SDK\Waf\V1\Model\BatchUpdateIpReputationRuleRequestBodyPolicyRuleIds[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  **参数解释：** 规则描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * action  action
-    * type  **参数解释：** 规则类型（如idc表示机房IP情报类型） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * tags  **参数解释：** 标签列表，关联的情报标识 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * type  **参数解释：** 信誉类型（目前只支持idc） **约束限制：** 不涉及 **取值范围：** - idc  **默认取值：** 不涉及
+    * tags  **参数解释：** 标签列表，用于指定关联的情报标识，可通过ConfirmPolicyIpReputationMap接口查询；多个标识之间使用逗号\",\"分隔 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * policyRuleIds  **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
@@ -81,11 +81,11 @@ class BatchUpdateIpReputationRuleRequestBody implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  **参数解释：** 规则描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * action  action
-    * type  **参数解释：** 规则类型（如idc表示机房IP情报类型） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * tags  **参数解释：** 标签列表，关联的情报标识 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * type  **参数解释：** 信誉类型（目前只支持idc） **约束限制：** 不涉及 **取值范围：** - idc  **默认取值：** 不涉及
+    * tags  **参数解释：** 标签列表，用于指定关联的情报标识，可通过ConfirmPolicyIpReputationMap接口查询；多个标识之间使用逗号\",\"分隔 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * policyRuleIds  **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
@@ -101,11 +101,11 @@ class BatchUpdateIpReputationRuleRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  **参数解释：** 规则描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * action  action
-    * type  **参数解释：** 规则类型（如idc表示机房IP情报类型） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * tags  **参数解释：** 标签列表，关联的情报标识 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * type  **参数解释：** 信誉类型（目前只支持idc） **约束限制：** 不涉及 **取值范围：** - idc  **默认取值：** 不涉及
+    * tags  **参数解释：** 标签列表，用于指定关联的情报标识，可通过ConfirmPolicyIpReputationMap接口查询；多个标识之间使用逗号\",\"分隔 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * policyRuleIds  **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
@@ -121,11 +121,11 @@ class BatchUpdateIpReputationRuleRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  **参数解释：** 规则描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * action  action
-    * type  **参数解释：** 规则类型（如idc表示机房IP情报类型） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * tags  **参数解释：** 标签列表，关联的情报标识 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * type  **参数解释：** 信誉类型（目前只支持idc） **约束限制：** 不涉及 **取值范围：** - idc  **默认取值：** 不涉及
+    * tags  **参数解释：** 标签列表，用于指定关联的情报标识，可通过ConfirmPolicyIpReputationMap接口查询；多个标识之间使用逗号\",\"分隔 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * policyRuleIds  **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
@@ -179,7 +179,20 @@ class BatchUpdateIpReputationRuleRequestBody implements ModelInterface, ArrayAcc
     {
         return self::$openAPIModelName;
     }
+    const TYPE_IDC = 'idc';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_IDC,
+        ];
+    }
 
 
     /**
@@ -222,6 +235,14 @@ class BatchUpdateIpReputationRuleRequestBody implements ModelInterface, ArrayAcc
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['tags'] === null) {
             $invalidProperties[] = "'tags' can't be null";
         }
@@ -244,7 +265,7 @@ class BatchUpdateIpReputationRuleRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Gets name
-    *  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -256,7 +277,7 @@ class BatchUpdateIpReputationRuleRequestBody implements ModelInterface, ArrayAcc
     /**
     * Sets name
     *
-    * @param string $name **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param string $name **参数解释：** 规则名称 **约束限制：** 长度范围：[1, 256] **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -294,7 +315,7 @@ class BatchUpdateIpReputationRuleRequestBody implements ModelInterface, ArrayAcc
     * Gets action
     *  action
     *
-    * @return \HuaweiCloud\SDK\Waf\V1\Model\BatchUpdateIpReputationRuleRequestBodyAction
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\CreateIpReputationRuleRequestBodyAction
     */
     public function getAction()
     {
@@ -304,7 +325,7 @@ class BatchUpdateIpReputationRuleRequestBody implements ModelInterface, ArrayAcc
     /**
     * Sets action
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\BatchUpdateIpReputationRuleRequestBodyAction $action action
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\CreateIpReputationRuleRequestBodyAction $action action
     *
     * @return $this
     */
@@ -316,7 +337,7 @@ class BatchUpdateIpReputationRuleRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Gets type
-    *  **参数解释：** 规则类型（如idc表示机房IP情报类型） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  **参数解释：** 信誉类型（目前只支持idc） **约束限制：** 不涉及 **取值范围：** - idc  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -328,7 +349,7 @@ class BatchUpdateIpReputationRuleRequestBody implements ModelInterface, ArrayAcc
     /**
     * Sets type
     *
-    * @param string $type **参数解释：** 规则类型（如idc表示机房IP情报类型） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param string $type **参数解释：** 信誉类型（目前只支持idc） **约束限制：** 不涉及 **取值范围：** - idc  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -340,7 +361,7 @@ class BatchUpdateIpReputationRuleRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Gets tags
-    *  **参数解释：** 标签列表，关联的情报标识 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  **参数解释：** 标签列表，用于指定关联的情报标识，可通过ConfirmPolicyIpReputationMap接口查询；多个标识之间使用逗号\",\"分隔 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string[]
     */
@@ -352,7 +373,7 @@ class BatchUpdateIpReputationRuleRequestBody implements ModelInterface, ArrayAcc
     /**
     * Sets tags
     *
-    * @param string[] $tags **参数解释：** 标签列表，关联的情报标识 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param string[] $tags **参数解释：** 标签列表，用于指定关联的情报标识，可通过ConfirmPolicyIpReputationMap接口查询；多个标识之间使用逗号\",\"分隔 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -366,7 +387,7 @@ class BatchUpdateIpReputationRuleRequestBody implements ModelInterface, ArrayAcc
     * Gets policyRuleIds
     *  **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
-    * @return \HuaweiCloud\SDK\Waf\V1\Model\PolicyRuleIdRequestBodyPolicyRuleIds[]
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\BatchUpdateIpReputationRuleRequestBodyPolicyRuleIds[]
     */
     public function getPolicyRuleIds()
     {
@@ -376,7 +397,7 @@ class BatchUpdateIpReputationRuleRequestBody implements ModelInterface, ArrayAcc
     /**
     * Sets policyRuleIds
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\PolicyRuleIdRequestBodyPolicyRuleIds[] $policyRuleIds **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\BatchUpdateIpReputationRuleRequestBodyPolicyRuleIds[] $policyRuleIds **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

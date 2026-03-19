@@ -21,13 +21,13 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * xLanguage  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
+    * xLanguage  **参数解释：** 地理位置展示语言 **约束限制：** 不涉及 **取值范围：** - zh-cn 中文 - en-us 英文 **默认取值：** en-us
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * from  起始时间（13位毫秒时间戳），需要和to同时使用
-    * to  结束时间（13位毫秒时间戳），需要和from同时使用
-    * top  要查询的前几的结果，最大值为10，默认值为5。
-    * hosts  域名id，通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id。默认不传，查询该项目下所有防护域名的top业务异常统计信息。
-    * instances  要查询引擎实例id
+    * from  **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
+    * to  **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
+    * top  **参数解释：** 查询前TopN的结果 **约束限制：** 不涉及 **取值范围：** [1, 10] **默认取值：** 5
+    * hosts  **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instances  **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -38,20 +38,20 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
             'from' => 'int',
             'to' => 'int',
             'top' => 'int',
-            'hosts' => 'string',
-            'instances' => 'string'
+            'hosts' => 'string[]',
+            'instances' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * xLanguage  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
+    * xLanguage  **参数解释：** 地理位置展示语言 **约束限制：** 不涉及 **取值范围：** - zh-cn 中文 - en-us 英文 **默认取值：** en-us
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * from  起始时间（13位毫秒时间戳），需要和to同时使用
-    * to  结束时间（13位毫秒时间戳），需要和from同时使用
-    * top  要查询的前几的结果，最大值为10，默认值为5。
-    * hosts  域名id，通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id。默认不传，查询该项目下所有防护域名的top业务异常统计信息。
-    * instances  要查询引擎实例id
+    * from  **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
+    * to  **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
+    * top  **参数解释：** 查询前TopN的结果 **约束限制：** 不涉及 **取值范围：** [1, 10] **默认取值：** 5
+    * hosts  **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instances  **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -90,13 +90,13 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * xLanguage  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
+    * xLanguage  **参数解释：** 地理位置展示语言 **约束限制：** 不涉及 **取值范围：** - zh-cn 中文 - en-us 英文 **默认取值：** en-us
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * from  起始时间（13位毫秒时间戳），需要和to同时使用
-    * to  结束时间（13位毫秒时间戳），需要和from同时使用
-    * top  要查询的前几的结果，最大值为10，默认值为5。
-    * hosts  域名id，通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id。默认不传，查询该项目下所有防护域名的top业务异常统计信息。
-    * instances  要查询引擎实例id
+    * from  **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
+    * to  **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
+    * top  **参数解释：** 查询前TopN的结果 **约束限制：** 不涉及 **取值范围：** [1, 10] **默认取值：** 5
+    * hosts  **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instances  **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -114,13 +114,13 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * xLanguage  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
+    * xLanguage  **参数解释：** 地理位置展示语言 **约束限制：** 不涉及 **取值范围：** - zh-cn 中文 - en-us 英文 **默认取值：** en-us
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * from  起始时间（13位毫秒时间戳），需要和to同时使用
-    * to  结束时间（13位毫秒时间戳），需要和from同时使用
-    * top  要查询的前几的结果，最大值为10，默认值为5。
-    * hosts  域名id，通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id。默认不传，查询该项目下所有防护域名的top业务异常统计信息。
-    * instances  要查询引擎实例id
+    * from  **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
+    * to  **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
+    * top  **参数解释：** 查询前TopN的结果 **约束限制：** 不涉及 **取值范围：** [1, 10] **默认取值：** 5
+    * hosts  **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instances  **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -138,13 +138,13 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * xLanguage  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
+    * xLanguage  **参数解释：** 地理位置展示语言 **约束限制：** 不涉及 **取值范围：** - zh-cn 中文 - en-us 英文 **默认取值：** en-us
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
-    * from  起始时间（13位毫秒时间戳），需要和to同时使用
-    * to  结束时间（13位毫秒时间戳），需要和from同时使用
-    * top  要查询的前几的结果，最大值为10，默认值为5。
-    * hosts  域名id，通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id。默认不传，查询该项目下所有防护域名的top业务异常统计信息。
-    * instances  要查询引擎实例id
+    * from  **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
+    * to  **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
+    * top  **参数解释：** 查询前TopN的结果 **约束限制：** 不涉及 **取值范围：** [1, 10] **默认取值：** 5
+    * hosts  **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instances  **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -199,7 +199,22 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const X_LANGUAGE_ZH_CN = 'zh-cn';
+    const X_LANGUAGE_EN_US = 'en-us';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getXLanguageAllowableValues()
+    {
+        return [
+            self::X_LANGUAGE_ZH_CN,
+            self::X_LANGUAGE_EN_US,
+        ];
+    }
 
 
     /**
@@ -238,6 +253,14 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
         if ($this->container['contentType'] === null) {
             $invalidProperties[] = "'contentType' can't be null";
         }
+            $allowedValues = $this->getXLanguageAllowableValues();
+                if (!is_null($this->container['xLanguage']) && !in_array($this->container['xLanguage'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'xLanguage', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['from'] === null) {
             $invalidProperties[] = "'from' can't be null";
         }
@@ -284,7 +307,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xLanguage
-    *  语言，默认值为en-us。zh-cn（中文）/en-us（英文）
+    *  **参数解释：** 地理位置展示语言 **约束限制：** 不涉及 **取值范围：** - zh-cn 中文 - en-us 英文 **默认取值：** en-us
     *
     * @return string|null
     */
@@ -296,7 +319,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xLanguage
     *
-    * @param string|null $xLanguage 语言，默认值为en-us。zh-cn（中文）/en-us（英文）
+    * @param string|null $xLanguage **参数解释：** 地理位置展示语言 **约束限制：** 不涉及 **取值范围：** - zh-cn 中文 - en-us 英文 **默认取值：** en-us
     *
     * @return $this
     */
@@ -332,7 +355,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets from
-    *  起始时间（13位毫秒时间戳），需要和to同时使用
+    *  **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
     *
     * @return int
     */
@@ -344,7 +367,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     /**
     * Sets from
     *
-    * @param int $from 起始时间（13位毫秒时间戳），需要和to同时使用
+    * @param int $from **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -356,7 +379,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets to
-    *  结束时间（13位毫秒时间戳），需要和from同时使用
+    *  **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
     *
     * @return int
     */
@@ -368,7 +391,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     /**
     * Sets to
     *
-    * @param int $to 结束时间（13位毫秒时间戳），需要和from同时使用
+    * @param int $to **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -380,7 +403,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets top
-    *  要查询的前几的结果，最大值为10，默认值为5。
+    *  **参数解释：** 查询前TopN的结果 **约束限制：** 不涉及 **取值范围：** [1, 10] **默认取值：** 5
     *
     * @return int|null
     */
@@ -392,7 +415,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     /**
     * Sets top
     *
-    * @param int|null $top 要查询的前几的结果，最大值为10，默认值为5。
+    * @param int|null $top **参数解释：** 查询前TopN的结果 **约束限制：** 不涉及 **取值范围：** [1, 10] **默认取值：** 5
     *
     * @return $this
     */
@@ -404,9 +427,9 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hosts
-    *  域名id，通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id。默认不传，查询该项目下所有防护域名的top业务异常统计信息。
+    *  **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getHosts()
     {
@@ -416,7 +439,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hosts
     *
-    * @param string|null $hosts 域名id，通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id。默认不传，查询该项目下所有防护域名的top业务异常统计信息。
+    * @param string[]|null $hosts **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -428,9 +451,9 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instances
-    *  要查询引擎实例id
+    *  **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getInstances()
     {
@@ -440,7 +463,7 @@ class ListOverviewsClassificationRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instances
     *
-    * @param string|null $instances 要查询引擎实例id
+    * @param string[]|null $instances **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

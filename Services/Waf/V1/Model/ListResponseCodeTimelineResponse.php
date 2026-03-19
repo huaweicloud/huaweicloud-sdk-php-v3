@@ -21,7 +21,7 @@ class ListResponseCodeTimelineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  **参数解释：** 安全统计的时间线，按时间顺序展示统计数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * body  安全统计的时间线，按时间顺序展示统计数据
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListResponseCodeTimelineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  **参数解释：** 安全统计的时间线，按时间顺序展示统计数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * body  安全统计的时间线，按时间顺序展示统计数据
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListResponseCodeTimelineResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  **参数解释：** 安全统计的时间线，按时间顺序展示统计数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * body  安全统计的时间线，按时间顺序展示统计数据
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListResponseCodeTimelineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  **参数解释：** 安全统计的时间线，按时间顺序展示统计数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * body  安全统计的时间线，按时间顺序展示统计数据
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListResponseCodeTimelineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  **参数解释：** 安全统计的时间线，按时间顺序展示统计数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * body  安全统计的时间线，按时间顺序展示统计数据
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListResponseCodeTimelineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
-    *  **参数解释：** 安全统计的时间线，按时间顺序展示统计数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  安全统计的时间线，按时间顺序展示统计数据
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\StatisticsTimelineItem[]|null
     */
@@ -187,7 +187,7 @@ class ListResponseCodeTimelineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\StatisticsTimelineItem[]|null $body **参数解释：** 安全统计的时间线，按时间顺序展示统计数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\StatisticsTimelineItem[]|null $body 安全统计的时间线，按时间顺序展示统计数据
     *
     * @return $this
     */

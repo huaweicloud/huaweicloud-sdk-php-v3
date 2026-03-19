@@ -42,7 +42,7 @@ class BatchCreateCcRuleRequestBody implements ModelInterface, ArrayAccess
             'name' => 'string',
             'mode' => 'int',
             'conditions' => '\HuaweiCloud\SDK\Waf\V1\Model\CcCondition[]',
-            'action' => '\HuaweiCloud\SDK\Waf\V1\Model\CreateCcRuleRequestBodyAction',
+            'action' => '\HuaweiCloud\SDK\Waf\V1\Model\BatchCreateCcRuleRequestBodyAction',
             'tagType' => 'string',
             'tagIndex' => 'string',
             'tagCondition' => '\HuaweiCloud\SDK\Waf\V1\Model\CcrulesListInfoTagCondition',
@@ -456,7 +456,7 @@ class BatchCreateCcRuleRequestBody implements ModelInterface, ArrayAccess
     * Gets action
     *  action
     *
-    * @return \HuaweiCloud\SDK\Waf\V1\Model\CreateCcRuleRequestBodyAction
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\BatchCreateCcRuleRequestBodyAction
     */
     public function getAction()
     {
@@ -466,7 +466,7 @@ class BatchCreateCcRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\CreateCcRuleRequestBodyAction $action action
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\BatchCreateCcRuleRequestBodyAction $action action
     *
     * @return $this
     */

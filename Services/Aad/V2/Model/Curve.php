@@ -43,7 +43,7 @@ class Curve implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'in' => 'float',
         'out' => 'float',
-        'time' => 'int32'
+        'time' => 'int64'
     ];
 
     /**

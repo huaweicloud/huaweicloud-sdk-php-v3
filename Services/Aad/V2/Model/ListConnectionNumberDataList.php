@@ -38,7 +38,7 @@ class ListConnectionNumberDataList implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'time' => 'int32',
+        'time' => 'int64',
         'value' => 'int32'
     ];
 

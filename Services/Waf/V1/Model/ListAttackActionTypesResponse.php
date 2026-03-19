@@ -21,8 +21,8 @@ class ListAttackActionTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  CountItem的总数量
-    * items  CountItem详细信息
+    * total  AttackActionCountItem的总数量
+    * items  AttackActionCountItem详细信息
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListAttackActionTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  CountItem的总数量
-    * items  CountItem详细信息
+    * total  AttackActionCountItem的总数量
+    * items  AttackActionCountItem详细信息
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListAttackActionTypesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  CountItem的总数量
-    * items  CountItem详细信息
+    * total  AttackActionCountItem的总数量
+    * items  AttackActionCountItem详细信息
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListAttackActionTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  CountItem的总数量
-    * items  CountItem详细信息
+    * total  AttackActionCountItem的总数量
+    * items  AttackActionCountItem详细信息
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListAttackActionTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  CountItem的总数量
-    * items  CountItem详细信息
+    * total  AttackActionCountItem的总数量
+    * items  AttackActionCountItem详细信息
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListAttackActionTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  CountItem的总数量
+    *  AttackActionCountItem的总数量
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ListAttackActionTypesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total CountItem的总数量
+    * @param int|null $total AttackActionCountItem的总数量
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListAttackActionTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets items
-    *  CountItem详细信息
+    *  AttackActionCountItem详细信息
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\AttackActionCountItem[]|null
     */
@@ -222,7 +222,7 @@ class ListAttackActionTypesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\AttackActionCountItem[]|null $items CountItem详细信息
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\AttackActionCountItem[]|null $items AttackActionCountItem详细信息
     *
     * @return $this
     */

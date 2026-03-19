@@ -20,28 +20,32 @@ class UpdatePunishmentRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * category  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - short_ip_block  - short_cookie_block  - short_params_block  **默认取值：** 不涉及
-    * blockTime  拦截时间，如果选择前缀为long的攻击惩罚类别，则block_time时长范围设置为301-1800;选择前缀为short的攻击惩罚类别，则block_time时长范围为0-300之间
+    * category  **参数解释：** 攻击惩罚类别 **约束限制：** 不支持修改 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - long_header_block  - short_ip_block  - short_cookie_block  - short_params_block  - short_header_block **默认取值：** 不涉及
+    * timeUnit  **参数解释：** 时间单位，会影响“拦截时间”参数的取值范围 **约束限制：** 不涉及 **取值范围：**  - SECOND  - MINUTE  - HOUR  - DAY  - MONTH **默认取值：** SECOND
+    * blockTime  **参数解释：** 拦截时间 **约束限制：** 取值范围取决于惩罚类别和时间单位 **取值范围：** - short_xxx   - SECOND  [1, 300] - long_xxx   - SECOND [301, 7776000]   - MINUTE [6, 129600]   - HOUR [1, 2160]   - DAY [1, 90]   - MONTH [1, 3] **默认取值：** 不涉及
     * description  规则描述
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'category' => 'string',
+            'timeUnit' => 'string',
             'blockTime' => 'int',
             'description' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * category  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - short_ip_block  - short_cookie_block  - short_params_block  **默认取值：** 不涉及
-    * blockTime  拦截时间，如果选择前缀为long的攻击惩罚类别，则block_time时长范围设置为301-1800;选择前缀为short的攻击惩罚类别，则block_time时长范围为0-300之间
+    * category  **参数解释：** 攻击惩罚类别 **约束限制：** 不支持修改 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - long_header_block  - short_ip_block  - short_cookie_block  - short_params_block  - short_header_block **默认取值：** 不涉及
+    * timeUnit  **参数解释：** 时间单位，会影响“拦截时间”参数的取值范围 **约束限制：** 不涉及 **取值范围：**  - SECOND  - MINUTE  - HOUR  - DAY  - MONTH **默认取值：** SECOND
+    * blockTime  **参数解释：** 拦截时间 **约束限制：** 取值范围取决于惩罚类别和时间单位 **取值范围：** - short_xxx   - SECOND  [1, 300] - long_xxx   - SECOND [301, 7776000]   - MINUTE [6, 129600]   - HOUR [1, 2160]   - DAY [1, 90]   - MONTH [1, 3] **默认取值：** 不涉及
     * description  规则描述
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'category' => null,
+        'timeUnit' => null,
         'blockTime' => 'int32',
         'description' => null
     ];
@@ -69,42 +73,48 @@ class UpdatePunishmentRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * category  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - short_ip_block  - short_cookie_block  - short_params_block  **默认取值：** 不涉及
-    * blockTime  拦截时间，如果选择前缀为long的攻击惩罚类别，则block_time时长范围设置为301-1800;选择前缀为short的攻击惩罚类别，则block_time时长范围为0-300之间
+    * category  **参数解释：** 攻击惩罚类别 **约束限制：** 不支持修改 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - long_header_block  - short_ip_block  - short_cookie_block  - short_params_block  - short_header_block **默认取值：** 不涉及
+    * timeUnit  **参数解释：** 时间单位，会影响“拦截时间”参数的取值范围 **约束限制：** 不涉及 **取值范围：**  - SECOND  - MINUTE  - HOUR  - DAY  - MONTH **默认取值：** SECOND
+    * blockTime  **参数解释：** 拦截时间 **约束限制：** 取值范围取决于惩罚类别和时间单位 **取值范围：** - short_xxx   - SECOND  [1, 300] - long_xxx   - SECOND [301, 7776000]   - MINUTE [6, 129600]   - HOUR [1, 2160]   - DAY [1, 90]   - MONTH [1, 3] **默认取值：** 不涉及
     * description  规则描述
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'category' => 'category',
+            'timeUnit' => 'time_unit',
             'blockTime' => 'block_time',
             'description' => 'description'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * category  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - short_ip_block  - short_cookie_block  - short_params_block  **默认取值：** 不涉及
-    * blockTime  拦截时间，如果选择前缀为long的攻击惩罚类别，则block_time时长范围设置为301-1800;选择前缀为short的攻击惩罚类别，则block_time时长范围为0-300之间
+    * category  **参数解释：** 攻击惩罚类别 **约束限制：** 不支持修改 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - long_header_block  - short_ip_block  - short_cookie_block  - short_params_block  - short_header_block **默认取值：** 不涉及
+    * timeUnit  **参数解释：** 时间单位，会影响“拦截时间”参数的取值范围 **约束限制：** 不涉及 **取值范围：**  - SECOND  - MINUTE  - HOUR  - DAY  - MONTH **默认取值：** SECOND
+    * blockTime  **参数解释：** 拦截时间 **约束限制：** 取值范围取决于惩罚类别和时间单位 **取值范围：** - short_xxx   - SECOND  [1, 300] - long_xxx   - SECOND [301, 7776000]   - MINUTE [6, 129600]   - HOUR [1, 2160]   - DAY [1, 90]   - MONTH [1, 3] **默认取值：** 不涉及
     * description  规则描述
     *
     * @var string[]
     */
     protected static $setters = [
             'category' => 'setCategory',
+            'timeUnit' => 'setTimeUnit',
             'blockTime' => 'setBlockTime',
             'description' => 'setDescription'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * category  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - short_ip_block  - short_cookie_block  - short_params_block  **默认取值：** 不涉及
-    * blockTime  拦截时间，如果选择前缀为long的攻击惩罚类别，则block_time时长范围设置为301-1800;选择前缀为short的攻击惩罚类别，则block_time时长范围为0-300之间
+    * category  **参数解释：** 攻击惩罚类别 **约束限制：** 不支持修改 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - long_header_block  - short_ip_block  - short_cookie_block  - short_params_block  - short_header_block **默认取值：** 不涉及
+    * timeUnit  **参数解释：** 时间单位，会影响“拦截时间”参数的取值范围 **约束限制：** 不涉及 **取值范围：**  - SECOND  - MINUTE  - HOUR  - DAY  - MONTH **默认取值：** SECOND
+    * blockTime  **参数解释：** 拦截时间 **约束限制：** 取值范围取决于惩罚类别和时间单位 **取值范围：** - short_xxx   - SECOND  [1, 300] - long_xxx   - SECOND [301, 7776000]   - MINUTE [6, 129600]   - HOUR [1, 2160]   - DAY [1, 90]   - MONTH [1, 3] **默认取值：** 不涉及
     * description  规则描述
     *
     * @var string[]
     */
     protected static $getters = [
             'category' => 'getCategory',
+            'timeUnit' => 'getTimeUnit',
             'blockTime' => 'getBlockTime',
             'description' => 'getDescription'
     ];
@@ -152,9 +162,16 @@ class UpdatePunishmentRuleRequestBody implements ModelInterface, ArrayAccess
     const CATEGORY_LONG_IP_BLOCK = 'long_ip_block';
     const CATEGORY_LONG_COOKIE_BLOCK = 'long_cookie_block';
     const CATEGORY_LONG_PARAMS_BLOCK = 'long_params_block';
+    const CATEGORY_LONG_HEADER_BLOCK = 'long_header_block';
     const CATEGORY_SHORT_IP_BLOCK = 'short_ip_block';
     const CATEGORY_SHORT_COOKIE_BLOCK = 'short_cookie_block';
     const CATEGORY_SHORT_PARAMS_BLOCK = 'short_params_block';
+    const CATEGORY_SHORT_HEADER_BLOCK = 'short_header_block';
+    const TIME_UNIT_SECOND = 'SECOND';
+    const TIME_UNIT_MINUTE = 'MINUTE';
+    const TIME_UNIT_HOUR = 'HOUR';
+    const TIME_UNIT_DAY = 'DAY';
+    const TIME_UNIT_MONTH = 'MONTH';
     
 
     /**
@@ -168,9 +185,27 @@ class UpdatePunishmentRuleRequestBody implements ModelInterface, ArrayAccess
             self::CATEGORY_LONG_IP_BLOCK,
             self::CATEGORY_LONG_COOKIE_BLOCK,
             self::CATEGORY_LONG_PARAMS_BLOCK,
+            self::CATEGORY_LONG_HEADER_BLOCK,
             self::CATEGORY_SHORT_IP_BLOCK,
             self::CATEGORY_SHORT_COOKIE_BLOCK,
             self::CATEGORY_SHORT_PARAMS_BLOCK,
+            self::CATEGORY_SHORT_HEADER_BLOCK,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTimeUnitAllowableValues()
+    {
+        return [
+            self::TIME_UNIT_SECOND,
+            self::TIME_UNIT_MINUTE,
+            self::TIME_UNIT_HOUR,
+            self::TIME_UNIT_DAY,
+            self::TIME_UNIT_MONTH,
         ];
     }
 
@@ -191,6 +226,7 @@ class UpdatePunishmentRuleRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['category'] = isset($data['category']) ? $data['category'] : null;
+        $this->container['timeUnit'] = isset($data['timeUnit']) ? $data['timeUnit'] : null;
         $this->container['blockTime'] = isset($data['blockTime']) ? $data['blockTime'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
@@ -214,6 +250,14 @@ class UpdatePunishmentRuleRequestBody implements ModelInterface, ArrayAccess
                 );
             }
 
+            $allowedValues = $this->getTimeUnitAllowableValues();
+                if (!is_null($this->container['timeUnit']) && !in_array($this->container['timeUnit'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'timeUnit', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['blockTime'] === null) {
             $invalidProperties[] = "'blockTime' can't be null";
         }
@@ -233,7 +277,7 @@ class UpdatePunishmentRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - short_ip_block  - short_cookie_block  - short_params_block  **默认取值：** 不涉及
+    *  **参数解释：** 攻击惩罚类别 **约束限制：** 不支持修改 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - long_header_block  - short_ip_block  - short_cookie_block  - short_params_block  - short_header_block **默认取值：** 不涉及
     *
     * @return string
     */
@@ -245,7 +289,7 @@ class UpdatePunishmentRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string $category **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - short_ip_block  - short_cookie_block  - short_params_block  **默认取值：** 不涉及
+    * @param string $category **参数解释：** 攻击惩罚类别 **约束限制：** 不支持修改 **取值范围：**  - long_ip_block  - long_cookie_block  - long_params_block  - long_header_block  - short_ip_block  - short_cookie_block  - short_params_block  - short_header_block **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -256,8 +300,32 @@ class UpdatePunishmentRuleRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets timeUnit
+    *  **参数解释：** 时间单位，会影响“拦截时间”参数的取值范围 **约束限制：** 不涉及 **取值范围：**  - SECOND  - MINUTE  - HOUR  - DAY  - MONTH **默认取值：** SECOND
+    *
+    * @return string|null
+    */
+    public function getTimeUnit()
+    {
+        return $this->container['timeUnit'];
+    }
+
+    /**
+    * Sets timeUnit
+    *
+    * @param string|null $timeUnit **参数解释：** 时间单位，会影响“拦截时间”参数的取值范围 **约束限制：** 不涉及 **取值范围：**  - SECOND  - MINUTE  - HOUR  - DAY  - MONTH **默认取值：** SECOND
+    *
+    * @return $this
+    */
+    public function setTimeUnit($timeUnit)
+    {
+        $this->container['timeUnit'] = $timeUnit;
+        return $this;
+    }
+
+    /**
     * Gets blockTime
-    *  拦截时间，如果选择前缀为long的攻击惩罚类别，则block_time时长范围设置为301-1800;选择前缀为short的攻击惩罚类别，则block_time时长范围为0-300之间
+    *  **参数解释：** 拦截时间 **约束限制：** 取值范围取决于惩罚类别和时间单位 **取值范围：** - short_xxx   - SECOND  [1, 300] - long_xxx   - SECOND [301, 7776000]   - MINUTE [6, 129600]   - HOUR [1, 2160]   - DAY [1, 90]   - MONTH [1, 3] **默认取值：** 不涉及
     *
     * @return int
     */
@@ -269,7 +337,7 @@ class UpdatePunishmentRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets blockTime
     *
-    * @param int $blockTime 拦截时间，如果选择前缀为long的攻击惩罚类别，则block_time时长范围设置为301-1800;选择前缀为short的攻击惩罚类别，则block_time时长范围为0-300之间
+    * @param int $blockTime **参数解释：** 拦截时间 **约束限制：** 取值范围取决于惩罚类别和时间单位 **取值范围：** - short_xxx   - SECOND  [1, 300] - long_xxx   - SECOND [301, 7776000]   - MINUTE [6, 129600]   - HOUR [1, 2160]   - DAY [1, 90]   - MONTH [1, 3] **默认取值：** 不涉及
     *
     * @return $this
     */

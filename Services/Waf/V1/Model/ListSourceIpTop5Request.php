@@ -21,29 +21,45 @@ class ListSourceIpTop5Request implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * recent  **参数解释：** 查询日志的时间范围，如1week（1周）、1month（1个月） **约束限制：** 不涉及 **取值范围：** - yesterday - today - 3days - 1week - 1month  **默认取值：** 不涉及
-    * hosts  要查询事件域名id列表
+    * recent  **参数解释：** 查询的时间范围，recent参数与from、to必须使用其中一个。当同时使用recent参数与from、to时，以recent参数为准 **约束限制：** 不涉及 **取值范围：**  - yesterday：昨天  - today：今天  - 3days：近3天   - 1week：近7天   - 1month：近30天  **默认取值：** 不涉及
+    * from  **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
+    * to  **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
+    * top  **参数解释：** 查询前TopN的结果 **约束限制：** 不涉及 **取值范围：** [1, 10] **默认取值：** 5
+    * hosts  **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instances  **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'contentType' => 'string',
             'recent' => 'string',
-            'hosts' => 'string[]'
+            'from' => 'int',
+            'to' => 'int',
+            'top' => 'int',
+            'hosts' => 'string[]',
+            'instances' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * recent  **参数解释：** 查询日志的时间范围，如1week（1周）、1month（1个月） **约束限制：** 不涉及 **取值范围：** - yesterday - today - 3days - 1week - 1month  **默认取值：** 不涉及
-    * hosts  要查询事件域名id列表
+    * recent  **参数解释：** 查询的时间范围，recent参数与from、to必须使用其中一个。当同时使用recent参数与from、to时，以recent参数为准 **约束限制：** 不涉及 **取值范围：**  - yesterday：昨天  - today：今天  - 3days：近3天   - 1week：近7天   - 1month：近30天  **默认取值：** 不涉及
+    * from  **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
+    * to  **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
+    * top  **参数解释：** 查询前TopN的结果 **约束限制：** 不涉及 **取值范围：** [1, 10] **默认取值：** 5
+    * hosts  **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instances  **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'contentType' => null,
         'recent' => null,
-        'hosts' => null
+        'from' => 'int32',
+        'to' => 'int32',
+        'top' => 'int32',
+        'hosts' => null,
+        'instances' => null
     ];
 
     /**
@@ -70,43 +86,67 @@ class ListSourceIpTop5Request implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * recent  **参数解释：** 查询日志的时间范围，如1week（1周）、1month（1个月） **约束限制：** 不涉及 **取值范围：** - yesterday - today - 3days - 1week - 1month  **默认取值：** 不涉及
-    * hosts  要查询事件域名id列表
+    * recent  **参数解释：** 查询的时间范围，recent参数与from、to必须使用其中一个。当同时使用recent参数与from、to时，以recent参数为准 **约束限制：** 不涉及 **取值范围：**  - yesterday：昨天  - today：今天  - 3days：近3天   - 1week：近7天   - 1month：近30天  **默认取值：** 不涉及
+    * from  **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
+    * to  **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
+    * top  **参数解释：** 查询前TopN的结果 **约束限制：** 不涉及 **取值范围：** [1, 10] **默认取值：** 5
+    * hosts  **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instances  **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'contentType' => 'Content-Type',
             'recent' => 'recent',
-            'hosts' => 'hosts'
+            'from' => 'from',
+            'to' => 'to',
+            'top' => 'top',
+            'hosts' => 'hosts',
+            'instances' => 'instances'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * recent  **参数解释：** 查询日志的时间范围，如1week（1周）、1month（1个月） **约束限制：** 不涉及 **取值范围：** - yesterday - today - 3days - 1week - 1month  **默认取值：** 不涉及
-    * hosts  要查询事件域名id列表
+    * recent  **参数解释：** 查询的时间范围，recent参数与from、to必须使用其中一个。当同时使用recent参数与from、to时，以recent参数为准 **约束限制：** 不涉及 **取值范围：**  - yesterday：昨天  - today：今天  - 3days：近3天   - 1week：近7天   - 1month：近30天  **默认取值：** 不涉及
+    * from  **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
+    * to  **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
+    * top  **参数解释：** 查询前TopN的结果 **约束限制：** 不涉及 **取值范围：** [1, 10] **默认取值：** 5
+    * hosts  **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instances  **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
             'contentType' => 'setContentType',
             'recent' => 'setRecent',
-            'hosts' => 'setHosts'
+            'from' => 'setFrom',
+            'to' => 'setTo',
+            'top' => 'setTop',
+            'hosts' => 'setHosts',
+            'instances' => 'setInstances'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
-    * recent  **参数解释：** 查询日志的时间范围，如1week（1周）、1month（1个月） **约束限制：** 不涉及 **取值范围：** - yesterday - today - 3days - 1week - 1month  **默认取值：** 不涉及
-    * hosts  要查询事件域名id列表
+    * recent  **参数解释：** 查询的时间范围，recent参数与from、to必须使用其中一个。当同时使用recent参数与from、to时，以recent参数为准 **约束限制：** 不涉及 **取值范围：**  - yesterday：昨天  - today：今天  - 3days：近3天   - 1week：近7天   - 1month：近30天  **默认取值：** 不涉及
+    * from  **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
+    * to  **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
+    * top  **参数解释：** 查询前TopN的结果 **约束限制：** 不涉及 **取值范围：** [1, 10] **默认取值：** 5
+    * hosts  **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instances  **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
             'contentType' => 'getContentType',
             'recent' => 'getRecent',
-            'hosts' => 'getHosts'
+            'from' => 'getFrom',
+            'to' => 'getTo',
+            'top' => 'getTop',
+            'hosts' => 'getHosts',
+            'instances' => 'getInstances'
     ];
 
     /**
@@ -149,7 +189,28 @@ class ListSourceIpTop5Request implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const RECENT_YESTERDAY = 'yesterday';
+    const RECENT_TODAY = 'today';
+    const RECENT__3DAYS = '3days';
+    const RECENT__1WEEK = '1week';
+    const RECENT__1MONTH = '1month';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getRecentAllowableValues()
+    {
+        return [
+            self::RECENT_YESTERDAY,
+            self::RECENT_TODAY,
+            self::RECENT__3DAYS,
+            self::RECENT__1WEEK,
+            self::RECENT__1MONTH,
+        ];
+    }
 
 
     /**
@@ -169,7 +230,11 @@ class ListSourceIpTop5Request implements ModelInterface, ArrayAccess
     {
         $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['recent'] = isset($data['recent']) ? $data['recent'] : null;
+        $this->container['from'] = isset($data['from']) ? $data['from'] : null;
+        $this->container['to'] = isset($data['to']) ? $data['to'] : null;
+        $this->container['top'] = isset($data['top']) ? $data['top'] : null;
         $this->container['hosts'] = isset($data['hosts']) ? $data['hosts'] : null;
+        $this->container['instances'] = isset($data['instances']) ? $data['instances'] : null;
     }
 
     /**
@@ -183,12 +248,14 @@ class ListSourceIpTop5Request implements ModelInterface, ArrayAccess
         if ($this->container['contentType'] === null) {
             $invalidProperties[] = "'contentType' can't be null";
         }
-        if ($this->container['recent'] === null) {
-            $invalidProperties[] = "'recent' can't be null";
-        }
-        if ($this->container['hosts'] === null) {
-            $invalidProperties[] = "'hosts' can't be null";
-        }
+            $allowedValues = $this->getRecentAllowableValues();
+                if (!is_null($this->container['recent']) && !in_array($this->container['recent'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'recent', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -229,9 +296,9 @@ class ListSourceIpTop5Request implements ModelInterface, ArrayAccess
 
     /**
     * Gets recent
-    *  **参数解释：** 查询日志的时间范围，如1week（1周）、1month（1个月） **约束限制：** 不涉及 **取值范围：** - yesterday - today - 3days - 1week - 1month  **默认取值：** 不涉及
+    *  **参数解释：** 查询的时间范围，recent参数与from、to必须使用其中一个。当同时使用recent参数与from、to时，以recent参数为准 **约束限制：** 不涉及 **取值范围：**  - yesterday：昨天  - today：今天  - 3days：近3天   - 1week：近7天   - 1month：近30天  **默认取值：** 不涉及
     *
-    * @return string
+    * @return string|null
     */
     public function getRecent()
     {
@@ -241,7 +308,7 @@ class ListSourceIpTop5Request implements ModelInterface, ArrayAccess
     /**
     * Sets recent
     *
-    * @param string $recent **参数解释：** 查询日志的时间范围，如1week（1周）、1month（1个月） **约束限制：** 不涉及 **取值范围：** - yesterday - today - 3days - 1week - 1month  **默认取值：** 不涉及
+    * @param string|null $recent **参数解释：** 查询的时间范围，recent参数与from、to必须使用其中一个。当同时使用recent参数与from、to时，以recent参数为准 **约束限制：** 不涉及 **取值范围：**  - yesterday：昨天  - today：今天  - 3days：近3天   - 1week：近7天   - 1month：近30天  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -252,10 +319,82 @@ class ListSourceIpTop5Request implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets hosts
-    *  要查询事件域名id列表
+    * Gets from
+    *  **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
     *
-    * @return string[]
+    * @return int|null
+    */
+    public function getFrom()
+    {
+        return $this->container['from'];
+    }
+
+    /**
+    * Sets from
+    *
+    * @param int|null $from **参数解释：** 起始时间(毫秒时间戳)，需要和to同时使用 **约束限制：** from <= to **取值范围：** from ~ to 最大范围30天 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setFrom($from)
+    {
+        $this->container['from'] = $from;
+        return $this;
+    }
+
+    /**
+    * Gets to
+    *  **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
+    *
+    * @return int|null
+    */
+    public function getTo()
+    {
+        return $this->container['to'];
+    }
+
+    /**
+    * Sets to
+    *
+    * @param int|null $to **参数解释：** 结束时间(毫秒时间戳)，需要和from同时使用 **约束限制：** from ~ to 最大范围30天 **取值范围：** 不能超过当天的结束时间 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setTo($to)
+    {
+        $this->container['to'] = $to;
+        return $this;
+    }
+
+    /**
+    * Gets top
+    *  **参数解释：** 查询前TopN的结果 **约束限制：** 不涉及 **取值范围：** [1, 10] **默认取值：** 5
+    *
+    * @return int|null
+    */
+    public function getTop()
+    {
+        return $this->container['top'];
+    }
+
+    /**
+    * Sets top
+    *
+    * @param int|null $top **参数解释：** 查询前TopN的结果 **约束限制：** 不涉及 **取值范围：** [1, 10] **默认取值：** 5
+    *
+    * @return $this
+    */
+    public function setTop($top)
+    {
+        $this->container['top'] = $top;
+        return $this;
+    }
+
+    /**
+    * Gets hosts
+    *  **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string[]|null
     */
     public function getHosts()
     {
@@ -265,13 +404,37 @@ class ListSourceIpTop5Request implements ModelInterface, ArrayAccess
     /**
     * Sets hosts
     *
-    * @param string[] $hosts 要查询事件域名id列表
+    * @param string[]|null $hosts **参数解释：** 要查询的域名id列表，通过 ”查询独享模式域名列表“（ListPremiumHost）或者 “查询云模式防护域名列表” （ListHost）接口获取；不传参代表查询全部域名的数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
     public function setHosts($hosts)
     {
         $this->container['hosts'] = $hosts;
+        return $this;
+    }
+
+    /**
+    * Gets instances
+    *  **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string[]|null
+    */
+    public function getInstances()
+    {
+        return $this->container['instances'];
+    }
+
+    /**
+    * Sets instances
+    *
+    * @param string[]|null $instances **参数解释：** 要查询的实例id列表，通过 “查询WAF独享引擎列表”（ListInstance）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setInstances($instances)
+    {
+        $this->container['instances'] = $instances;
         return $this;
     }
 
