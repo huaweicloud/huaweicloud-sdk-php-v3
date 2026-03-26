@@ -20,6 +20,8 @@
 
 namespace HuaweiCloud\SDK\Core\Http;
 
+use HuaweiCloud\SDK\Core\Exceptions\SdkException;
+
 class UserAgent
 {
     /**
@@ -170,10 +172,14 @@ class UserAgent
             return trim(com_create_guid(), '{}');
         } else {
             // Linux/Unix
-            $data = random_bytes(16);
-            $data[6] = chr(ord($data[6]) & 0x0f | 0x40); // 设置版本4
-            $data[8] = chr(ord($data[8]) & 0x3f | 0x80);
-            return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
+            return sprintf(
+                '%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
+                mt_rand(0, 0xffff), mt_rand(0, 0xffff),
+                mt_rand(0, 0xffff),
+                mt_rand(0, 0x0fff) | 0x4000, // 设置版本号为 4（随机生成）
+                mt_rand(0, 0x3fff) | 0x8000, // 设置多播标志位
+                mt_rand(0, 0xffff), mt_rand(0, 0xffff), mt_rand(0, 0xffff)
+            );
         }
     }
 
@@ -183,6 +189,14 @@ class UserAgent
     * @return string
     */
     public function GetAppFilePath() {
+        set_error_handler(function ($errno, $errstr, $errfile, $errline) {
+            if ($errno === E_WARNING && strpos($errstr, 'open_basedir') !== false) {
+                throw new SdkException("open_basedir 限制阻止访问路径: $errstr");
+            }
+            // 其他错误仍由默认处理程序处理
+            return false;
+        });
+
         $userDir = getenv('HOME') ?: (PHP_OS_FAMILY === 'Windows' ? getenv('USERPROFILE') : sys_get_temp_dir());
         $targetDir = $userDir . DIRECTORY_SEPARATOR . '.huaweicloud';
         $filePath = $targetDir . DIRECTORY_SEPARATOR . 'application_id';
@@ -190,7 +204,7 @@ class UserAgent
         // Create the directory (if it does not exist)
         if (!is_dir($targetDir)) {
             if (!mkdir($targetDir, 0777, true)) {
-                throw new Exception("无法创建目录: $targetDir");
+                throw new SdkException("无法创建目录: $targetDir");
             }
         }
         return $filePath;
@@ -202,16 +216,16 @@ class UserAgent
     * @return string
     */
     public function GetAppFile() {
-        $filePath = $this->GetAppFilePath();
-        // Check whether the file exists
-        if (!file_exists($filePath)) {
-            $uuid = $this->GenerateUUID();
-            $this->SaveAppFile($filePath, $uuid);
-            return $uuid;
-        }
-
-        // Reads the file content
         try {
+            $filePath = $this->GetAppFilePath();
+            // Check whether the file exists
+            if (!file_exists($filePath)) {
+                $uuid = $this->GenerateUUID();
+                $this->SaveAppFile($filePath, $uuid);
+                return $uuid;
+            }
+
+            // Reads the file content
             $fileHandle = fopen($filePath, 'r'); // Read-only mode
             if ($fileHandle) {
                 $content = fread($fileHandle, filesize($filePath)); // Read all content
@@ -228,9 +242,9 @@ class UserAgent
                     return $new_uuid;
                 }
             } else {
-                throw new Exception("Unable to open the file for reading");
+                return '';
             }
-        } catch (Exception $e) {
+        } catch (SdkException $e) {
             return '';
         }
     }
@@ -239,7 +253,6 @@ class UserAgent
     * Write the UUID to a file
     * @param $filePath
     * @param $uuid
-    * @return string
     */
     public function SaveAppFile($filePath, $uuid) {
         try {
@@ -248,9 +261,9 @@ class UserAgent
                 fwrite($fileHandle, $uuid); // No new line characters added anymore
                 fclose($fileHandle);
             } else {
-                throw new Exception("Unable to open the file for writing");
+                throw new SdkException("Unable to open the file for writing");
             }
-        } catch (Exception $e) {
+        } catch (SdkException $e) {
             echo "Save app file error: " . $e->getMessage();
         }
     }

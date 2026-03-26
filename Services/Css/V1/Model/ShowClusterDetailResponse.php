@@ -28,7 +28,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * updated  集群上次修改时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
     * name  集群名称。
     * publicIp  公网IP信息。
-    * snapshotPolicy  **参数解释**： 集群自动快照策略相关信息。 **取值范围**： 不涉及
+    * snapshotPolicy  snapshotPolicy
     * created  集群创建时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
     * id  集群ID。
     * status  集群状态值。  - 100：操作进行中，如创建中。 - 200：可用。 - 303：不可用，如创建失败。
@@ -67,7 +67,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
             'updated' => 'string',
             'name' => 'string',
             'publicIp' => 'string',
-            'snapshotPolicy' => 'object',
+            'snapshotPolicy' => '\HuaweiCloud\SDK\Css\V1\Model\SnapshotPolicyResp',
             'created' => 'string',
             'id' => 'string',
             'status' => 'string',
@@ -106,7 +106,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * updated  集群上次修改时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
     * name  集群名称。
     * publicIp  公网IP信息。
-    * snapshotPolicy  **参数解释**： 集群自动快照策略相关信息。 **取值范围**： 不涉及
+    * snapshotPolicy  snapshotPolicy
     * created  集群创建时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
     * id  集群ID。
     * status  集群状态值。  - 100：操作进行中，如创建中。 - 200：可用。 - 303：不可用，如创建失败。
@@ -205,7 +205,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * updated  集群上次修改时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
     * name  集群名称。
     * publicIp  公网IP信息。
-    * snapshotPolicy  **参数解释**： 集群自动快照策略相关信息。 **取值范围**： 不涉及
+    * snapshotPolicy  snapshotPolicy
     * created  集群创建时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
     * id  集群ID。
     * status  集群状态值。  - 100：操作进行中，如创建中。 - 200：可用。 - 303：不可用，如创建失败。
@@ -283,7 +283,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * updated  集群上次修改时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
     * name  集群名称。
     * publicIp  公网IP信息。
-    * snapshotPolicy  **参数解释**： 集群自动快照策略相关信息。 **取值范围**： 不涉及
+    * snapshotPolicy  snapshotPolicy
     * created  集群创建时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
     * id  集群ID。
     * status  集群状态值。  - 100：操作进行中，如创建中。 - 200：可用。 - 303：不可用，如创建失败。
@@ -361,7 +361,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * updated  集群上次修改时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
     * name  集群名称。
     * publicIp  公网IP信息。
-    * snapshotPolicy  **参数解释**： 集群自动快照策略相关信息。 **取值范围**： 不涉及
+    * snapshotPolicy  snapshotPolicy
     * created  集群创建时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
     * id  集群ID。
     * status  集群状态值。  - 100：操作进行中，如创建中。 - 200：可用。 - 303：不可用，如创建失败。
@@ -717,9 +717,9 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets snapshotPolicy
-    *  **参数解释**： 集群自动快照策略相关信息。 **取值范围**： 不涉及
+    *  snapshotPolicy
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Css\V1\Model\SnapshotPolicyResp|null
     */
     public function getSnapshotPolicy()
     {
@@ -729,7 +729,7 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets snapshotPolicy
     *
-    * @param object|null $snapshotPolicy **参数解释**： 集群自动快照策略相关信息。 **取值范围**： 不涉及
+    * @param \HuaweiCloud\SDK\Css\V1\Model\SnapshotPolicyResp|null $snapshotPolicy snapshotPolicy
     *
     * @return $this
     */

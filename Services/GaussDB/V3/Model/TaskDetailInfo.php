@@ -31,6 +31,8 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
     * createdTime  任务创建时间。格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * endedTime  任务结束时间。格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * failReason  任务失败原因。
+    * showDetail  **参数解释**：  是否支持通过[获取异步任务详情](https://support.huaweicloud.com/api-taurusdb/ShowTaskDetails.html)接口获取任务详情。  **取值范围**：  - true：是。 - false：否。
+    * actionNames  **参数解释**：  支持筛选的任务名称。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -45,7 +47,9 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
             'process' => 'string',
             'createdTime' => 'string',
             'endedTime' => 'string',
-            'failReason' => 'string'
+            'failReason' => 'string',
+            'showDetail' => 'bool',
+            'actionNames' => 'string[]'
     ];
 
     /**
@@ -61,6 +65,8 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
     * createdTime  任务创建时间。格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * endedTime  任务结束时间。格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * failReason  任务失败原因。
+    * showDetail  **参数解释**：  是否支持通过[获取异步任务详情](https://support.huaweicloud.com/api-taurusdb/ShowTaskDetails.html)接口获取任务详情。  **取值范围**：  - true：是。 - false：否。
+    * actionNames  **参数解释**：  支持筛选的任务名称。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -75,7 +81,9 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
         'process' => null,
         'createdTime' => null,
         'endedTime' => null,
-        'failReason' => null
+        'failReason' => null,
+        'showDetail' => null,
+        'actionNames' => null
     ];
 
     /**
@@ -112,6 +120,8 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
     * createdTime  任务创建时间。格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * endedTime  任务结束时间。格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * failReason  任务失败原因。
+    * showDetail  **参数解释**：  是否支持通过[获取异步任务详情](https://support.huaweicloud.com/api-taurusdb/ShowTaskDetails.html)接口获取任务详情。  **取值范围**：  - true：是。 - false：否。
+    * actionNames  **参数解释**：  支持筛选的任务名称。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -126,7 +136,9 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
             'process' => 'process',
             'createdTime' => 'created_time',
             'endedTime' => 'ended_time',
-            'failReason' => 'fail_reason'
+            'failReason' => 'fail_reason',
+            'showDetail' => 'show_detail',
+            'actionNames' => 'action_names'
     ];
 
     /**
@@ -142,6 +154,8 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
     * createdTime  任务创建时间。格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * endedTime  任务结束时间。格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * failReason  任务失败原因。
+    * showDetail  **参数解释**：  是否支持通过[获取异步任务详情](https://support.huaweicloud.com/api-taurusdb/ShowTaskDetails.html)接口获取任务详情。  **取值范围**：  - true：是。 - false：否。
+    * actionNames  **参数解释**：  支持筛选的任务名称。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -156,7 +170,9 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
             'process' => 'setProcess',
             'createdTime' => 'setCreatedTime',
             'endedTime' => 'setEndedTime',
-            'failReason' => 'setFailReason'
+            'failReason' => 'setFailReason',
+            'showDetail' => 'setShowDetail',
+            'actionNames' => 'setActionNames'
     ];
 
     /**
@@ -172,6 +188,8 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
     * createdTime  任务创建时间。格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * endedTime  任务结束时间。格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * failReason  任务失败原因。
+    * showDetail  **参数解释**：  是否支持通过[获取异步任务详情](https://support.huaweicloud.com/api-taurusdb/ShowTaskDetails.html)接口获取任务详情。  **取值范围**：  - true：是。 - false：否。
+    * actionNames  **参数解释**：  支持筛选的任务名称。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -186,7 +204,9 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
             'process' => 'getProcess',
             'createdTime' => 'getCreatedTime',
             'endedTime' => 'getEndedTime',
-            'failReason' => 'getFailReason'
+            'failReason' => 'getFailReason',
+            'showDetail' => 'getShowDetail',
+            'actionNames' => 'getActionNames'
     ];
 
     /**
@@ -258,6 +278,8 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
         $this->container['createdTime'] = isset($data['createdTime']) ? $data['createdTime'] : null;
         $this->container['endedTime'] = isset($data['endedTime']) ? $data['endedTime'] : null;
         $this->container['failReason'] = isset($data['failReason']) ? $data['failReason'] : null;
+        $this->container['showDetail'] = isset($data['showDetail']) ? $data['showDetail'] : null;
+        $this->container['actionNames'] = isset($data['actionNames']) ? $data['actionNames'] : null;
     }
 
     /**
@@ -543,6 +565,54 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
     public function setFailReason($failReason)
     {
         $this->container['failReason'] = $failReason;
+        return $this;
+    }
+
+    /**
+    * Gets showDetail
+    *  **参数解释**：  是否支持通过[获取异步任务详情](https://support.huaweicloud.com/api-taurusdb/ShowTaskDetails.html)接口获取任务详情。  **取值范围**：  - true：是。 - false：否。
+    *
+    * @return bool|null
+    */
+    public function getShowDetail()
+    {
+        return $this->container['showDetail'];
+    }
+
+    /**
+    * Sets showDetail
+    *
+    * @param bool|null $showDetail **参数解释**：  是否支持通过[获取异步任务详情](https://support.huaweicloud.com/api-taurusdb/ShowTaskDetails.html)接口获取任务详情。  **取值范围**：  - true：是。 - false：否。
+    *
+    * @return $this
+    */
+    public function setShowDetail($showDetail)
+    {
+        $this->container['showDetail'] = $showDetail;
+        return $this;
+    }
+
+    /**
+    * Gets actionNames
+    *  **参数解释**：  支持筛选的任务名称。  **取值范围**：  不涉及。
+    *
+    * @return string[]|null
+    */
+    public function getActionNames()
+    {
+        return $this->container['actionNames'];
+    }
+
+    /**
+    * Sets actionNames
+    *
+    * @param string[]|null $actionNames **参数解释**：  支持筛选的任务名称。  **取值范围**：  不涉及。
+    *
+    * @return $this
+    */
+    public function setActionNames($actionNames)
+    {
+        $this->container['actionNames'] = $actionNames;
         return $this;
     }
 

@@ -26,6 +26,10 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
     * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
     * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
+    * language  **参数解释**：  语言。  **取值范围**：  不涉及。
+    * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * alarmDetails  **参数解释**： 订阅的所有告警详细信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -35,7 +39,11 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
             'alarmLevel' => 'string',
             'notificationTarget' => 'string',
             'notificationTargetName' => 'string',
-            'notificationTargetType' => 'string'
+            'notificationTargetType' => 'string',
+            'language' => 'string',
+            'timeZone' => 'string',
+            'clusterId' => 'string',
+            'alarmDetails' => '\HuaweiCloud\SDK\Dws\V2\Model\AlarmSubDetailResopnse[]'
     ];
 
     /**
@@ -46,6 +54,10 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
     * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
     * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
+    * language  **参数解释**：  语言。  **取值范围**：  不涉及。
+    * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * alarmDetails  **参数解释**： 订阅的所有告警详细信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -55,7 +67,11 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
         'alarmLevel' => null,
         'notificationTarget' => null,
         'notificationTargetName' => null,
-        'notificationTargetType' => null
+        'notificationTargetType' => null,
+        'language' => null,
+        'timeZone' => null,
+        'clusterId' => null,
+        'alarmDetails' => null
     ];
 
     /**
@@ -87,6 +103,10 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
     * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
     * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
+    * language  **参数解释**：  语言。  **取值范围**：  不涉及。
+    * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * alarmDetails  **参数解释**： 订阅的所有告警详细信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -96,7 +116,11 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
             'alarmLevel' => 'alarm_level',
             'notificationTarget' => 'notification_target',
             'notificationTargetName' => 'notification_target_name',
-            'notificationTargetType' => 'notification_target_type'
+            'notificationTargetType' => 'notification_target_type',
+            'language' => 'language',
+            'timeZone' => 'time_zone',
+            'clusterId' => 'cluster_id',
+            'alarmDetails' => 'alarm_details'
     ];
 
     /**
@@ -107,6 +131,10 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
     * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
     * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
+    * language  **参数解释**：  语言。  **取值范围**：  不涉及。
+    * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * alarmDetails  **参数解释**： 订阅的所有告警详细信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -116,7 +144,11 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
             'alarmLevel' => 'setAlarmLevel',
             'notificationTarget' => 'setNotificationTarget',
             'notificationTargetName' => 'setNotificationTargetName',
-            'notificationTargetType' => 'setNotificationTargetType'
+            'notificationTargetType' => 'setNotificationTargetType',
+            'language' => 'setLanguage',
+            'timeZone' => 'setTimeZone',
+            'clusterId' => 'setClusterId',
+            'alarmDetails' => 'setAlarmDetails'
     ];
 
     /**
@@ -127,6 +159,10 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
     * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
     * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
+    * language  **参数解释**：  语言。  **取值范围**：  不涉及。
+    * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * alarmDetails  **参数解释**： 订阅的所有告警详细信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -136,7 +172,11 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
             'alarmLevel' => 'getAlarmLevel',
             'notificationTarget' => 'getNotificationTarget',
             'notificationTargetName' => 'getNotificationTargetName',
-            'notificationTargetType' => 'getNotificationTargetType'
+            'notificationTargetType' => 'getNotificationTargetType',
+            'language' => 'getLanguage',
+            'timeZone' => 'getTimeZone',
+            'clusterId' => 'getClusterId',
+            'alarmDetails' => 'getAlarmDetails'
     ];
 
     /**
@@ -203,6 +243,10 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
         $this->container['notificationTarget'] = isset($data['notificationTarget']) ? $data['notificationTarget'] : null;
         $this->container['notificationTargetName'] = isset($data['notificationTargetName']) ? $data['notificationTargetName'] : null;
         $this->container['notificationTargetType'] = isset($data['notificationTargetType']) ? $data['notificationTargetType'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
+        $this->container['timeZone'] = isset($data['timeZone']) ? $data['timeZone'] : null;
+        $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
+        $this->container['alarmDetails'] = isset($data['alarmDetails']) ? $data['alarmDetails'] : null;
     }
 
     /**
@@ -380,6 +424,102 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
     public function setNotificationTargetType($notificationTargetType)
     {
         $this->container['notificationTargetType'] = $notificationTargetType;
+        return $this;
+    }
+
+    /**
+    * Gets language
+    *  **参数解释**：  语言。  **取值范围**：  不涉及。
+    *
+    * @return string|null
+    */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+    * Sets language
+    *
+    * @param string|null $language **参数解释**：  语言。  **取值范围**：  不涉及。
+    *
+    * @return $this
+    */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
+        return $this;
+    }
+
+    /**
+    * Gets timeZone
+    *  **参数解释**： 时区。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getTimeZone()
+    {
+        return $this->container['timeZone'];
+    }
+
+    /**
+    * Sets timeZone
+    *
+    * @param string|null $timeZone **参数解释**： 时区。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setTimeZone($timeZone)
+    {
+        $this->container['timeZone'] = $timeZone;
+        return $this;
+    }
+
+    /**
+    * Gets clusterId
+    *  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getClusterId()
+    {
+        return $this->container['clusterId'];
+    }
+
+    /**
+    * Sets clusterId
+    *
+    * @param string|null $clusterId **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setClusterId($clusterId)
+    {
+        $this->container['clusterId'] = $clusterId;
+        return $this;
+    }
+
+    /**
+    * Gets alarmDetails
+    *  **参数解释**： 订阅的所有告警详细信息。 **取值范围**： 不涉及。
+    *
+    * @return \HuaweiCloud\SDK\Dws\V2\Model\AlarmSubDetailResopnse[]|null
+    */
+    public function getAlarmDetails()
+    {
+        return $this->container['alarmDetails'];
+    }
+
+    /**
+    * Sets alarmDetails
+    *
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\AlarmSubDetailResopnse[]|null $alarmDetails **参数解释**： 订阅的所有告警详细信息。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setAlarmDetails($alarmDetails)
+    {
+        $this->container['alarmDetails'] = $alarmDetails;
         return $this;
     }
 

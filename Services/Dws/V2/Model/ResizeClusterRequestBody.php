@@ -25,6 +25,8 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     * createNodeOnly  **参数解释**： 当前是否仅添加空闲节点。 **约束限制**： 不涉及。 **取值范围**： true：仅添加节点，如需扩容则需要单独操作 false：添加节点并扩容集群 **默认取值**： false
     * waitingForKilling  **参数解释**： 自动查杀作业等待时间。 **约束限制**： guestAgent插件版本8.2.1及以上才支持。 **取值范围**： 30~1200 **默认取值**： 0，即不限制。
     * autoRedistribute  **参数解释**： 扩容完成后是否自动启动重分布，默认是。如果设置为false，扩容后不进行重分布，此时集群任务信息处于“待重分布”状态，无法进行其他操作。 **约束限制**： 不涉及。 **取值范围**： - true：扩容后立即重分布。 - false：扩容后不进行重分布，此时集群任务信息处于“待重分布”状态。  **默认取值**： true
+    * mode  **参数解释**： 扩容模式，分为在线和离线。在线扩容过程中，支持数据增删改查及部分DDL语法，其余不支持的语法将会报错。在线扩容对业务影响更小，离线模式存在短暂的中断，数据库不可用。 **约束限制**： 不涉及。 **取值范围**： - insert：在线模式。 - read-only：离线模式。  **默认取值**： read-only
+    * redisConf  redisConf
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
             'logicalClusterName' => 'string',
             'createNodeOnly' => 'bool',
             'waitingForKilling' => 'int',
-            'autoRedistribute' => 'bool'
+            'autoRedistribute' => 'bool',
+            'mode' => 'string',
+            'redisConf' => '\HuaweiCloud\SDK\Dws\V2\Model\RedisConfReq'
     ];
 
     /**
@@ -43,6 +47,8 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     * createNodeOnly  **参数解释**： 当前是否仅添加空闲节点。 **约束限制**： 不涉及。 **取值范围**： true：仅添加节点，如需扩容则需要单独操作 false：添加节点并扩容集群 **默认取值**： false
     * waitingForKilling  **参数解释**： 自动查杀作业等待时间。 **约束限制**： guestAgent插件版本8.2.1及以上才支持。 **取值范围**： 30~1200 **默认取值**： 0，即不限制。
     * autoRedistribute  **参数解释**： 扩容完成后是否自动启动重分布，默认是。如果设置为false，扩容后不进行重分布，此时集群任务信息处于“待重分布”状态，无法进行其他操作。 **约束限制**： 不涉及。 **取值范围**： - true：扩容后立即重分布。 - false：扩容后不进行重分布，此时集群任务信息处于“待重分布”状态。  **默认取值**： true
+    * mode  **参数解释**： 扩容模式，分为在线和离线。在线扩容过程中，支持数据增删改查及部分DDL语法，其余不支持的语法将会报错。在线扩容对业务影响更小，离线模式存在短暂的中断，数据库不可用。 **约束限制**： 不涉及。 **取值范围**： - insert：在线模式。 - read-only：离线模式。  **默认取值**： read-only
+    * redisConf  redisConf
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
         'logicalClusterName' => null,
         'createNodeOnly' => null,
         'waitingForKilling' => 'int32',
-        'autoRedistribute' => null
+        'autoRedistribute' => null,
+        'mode' => null,
+        'redisConf' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     * createNodeOnly  **参数解释**： 当前是否仅添加空闲节点。 **约束限制**： 不涉及。 **取值范围**： true：仅添加节点，如需扩容则需要单独操作 false：添加节点并扩容集群 **默认取值**： false
     * waitingForKilling  **参数解释**： 自动查杀作业等待时间。 **约束限制**： guestAgent插件版本8.2.1及以上才支持。 **取值范围**： 30~1200 **默认取值**： 0，即不限制。
     * autoRedistribute  **参数解释**： 扩容完成后是否自动启动重分布，默认是。如果设置为false，扩容后不进行重分布，此时集群任务信息处于“待重分布”状态，无法进行其他操作。 **约束限制**： 不涉及。 **取值范围**： - true：扩容后立即重分布。 - false：扩容后不进行重分布，此时集群任务信息处于“待重分布”状态。  **默认取值**： true
+    * mode  **参数解释**： 扩容模式，分为在线和离线。在线扩容过程中，支持数据增删改查及部分DDL语法，其余不支持的语法将会报错。在线扩容对业务影响更小，离线模式存在短暂的中断，数据库不可用。 **约束限制**： 不涉及。 **取值范围**： - insert：在线模式。 - read-only：离线模式。  **默认取值**： read-only
+    * redisConf  redisConf
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
             'logicalClusterName' => 'logical_cluster_name',
             'createNodeOnly' => 'create_node_only',
             'waitingForKilling' => 'waiting_for_killing',
-            'autoRedistribute' => 'auto_redistribute'
+            'autoRedistribute' => 'auto_redistribute',
+            'mode' => 'mode',
+            'redisConf' => 'redis_conf'
     ];
 
     /**
@@ -100,6 +112,8 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     * createNodeOnly  **参数解释**： 当前是否仅添加空闲节点。 **约束限制**： 不涉及。 **取值范围**： true：仅添加节点，如需扩容则需要单独操作 false：添加节点并扩容集群 **默认取值**： false
     * waitingForKilling  **参数解释**： 自动查杀作业等待时间。 **约束限制**： guestAgent插件版本8.2.1及以上才支持。 **取值范围**： 30~1200 **默认取值**： 0，即不限制。
     * autoRedistribute  **参数解释**： 扩容完成后是否自动启动重分布，默认是。如果设置为false，扩容后不进行重分布，此时集群任务信息处于“待重分布”状态，无法进行其他操作。 **约束限制**： 不涉及。 **取值范围**： - true：扩容后立即重分布。 - false：扩容后不进行重分布，此时集群任务信息处于“待重分布”状态。  **默认取值**： true
+    * mode  **参数解释**： 扩容模式，分为在线和离线。在线扩容过程中，支持数据增删改查及部分DDL语法，其余不支持的语法将会报错。在线扩容对业务影响更小，离线模式存在短暂的中断，数据库不可用。 **约束限制**： 不涉及。 **取值范围**： - insert：在线模式。 - read-only：离线模式。  **默认取值**： read-only
+    * redisConf  redisConf
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
             'logicalClusterName' => 'setLogicalClusterName',
             'createNodeOnly' => 'setCreateNodeOnly',
             'waitingForKilling' => 'setWaitingForKilling',
-            'autoRedistribute' => 'setAutoRedistribute'
+            'autoRedistribute' => 'setAutoRedistribute',
+            'mode' => 'setMode',
+            'redisConf' => 'setRedisConf'
     ];
 
     /**
@@ -118,6 +134,8 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     * createNodeOnly  **参数解释**： 当前是否仅添加空闲节点。 **约束限制**： 不涉及。 **取值范围**： true：仅添加节点，如需扩容则需要单独操作 false：添加节点并扩容集群 **默认取值**： false
     * waitingForKilling  **参数解释**： 自动查杀作业等待时间。 **约束限制**： guestAgent插件版本8.2.1及以上才支持。 **取值范围**： 30~1200 **默认取值**： 0，即不限制。
     * autoRedistribute  **参数解释**： 扩容完成后是否自动启动重分布，默认是。如果设置为false，扩容后不进行重分布，此时集群任务信息处于“待重分布”状态，无法进行其他操作。 **约束限制**： 不涉及。 **取值范围**： - true：扩容后立即重分布。 - false：扩容后不进行重分布，此时集群任务信息处于“待重分布”状态。  **默认取值**： true
+    * mode  **参数解释**： 扩容模式，分为在线和离线。在线扩容过程中，支持数据增删改查及部分DDL语法，其余不支持的语法将会报错。在线扩容对业务影响更小，离线模式存在短暂的中断，数据库不可用。 **约束限制**： 不涉及。 **取值范围**： - insert：在线模式。 - read-only：离线模式。  **默认取值**： read-only
+    * redisConf  redisConf
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
             'logicalClusterName' => 'getLogicalClusterName',
             'createNodeOnly' => 'getCreateNodeOnly',
             'waitingForKilling' => 'getWaitingForKilling',
-            'autoRedistribute' => 'getAutoRedistribute'
+            'autoRedistribute' => 'getAutoRedistribute',
+            'mode' => 'getMode',
+            'redisConf' => 'getRedisConf'
     ];
 
     /**
@@ -192,6 +212,8 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
         $this->container['createNodeOnly'] = isset($data['createNodeOnly']) ? $data['createNodeOnly'] : null;
         $this->container['waitingForKilling'] = isset($data['waitingForKilling']) ? $data['waitingForKilling'] : null;
         $this->container['autoRedistribute'] = isset($data['autoRedistribute']) ? $data['autoRedistribute'] : null;
+        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['redisConf'] = isset($data['redisConf']) ? $data['redisConf'] : null;
     }
 
     /**
@@ -336,6 +358,54 @@ class ResizeClusterRequestBody implements ModelInterface, ArrayAccess
     public function setAutoRedistribute($autoRedistribute)
     {
         $this->container['autoRedistribute'] = $autoRedistribute;
+        return $this;
+    }
+
+    /**
+    * Gets mode
+    *  **参数解释**： 扩容模式，分为在线和离线。在线扩容过程中，支持数据增删改查及部分DDL语法，其余不支持的语法将会报错。在线扩容对业务影响更小，离线模式存在短暂的中断，数据库不可用。 **约束限制**： 不涉及。 **取值范围**： - insert：在线模式。 - read-only：离线模式。  **默认取值**： read-only
+    *
+    * @return string|null
+    */
+    public function getMode()
+    {
+        return $this->container['mode'];
+    }
+
+    /**
+    * Sets mode
+    *
+    * @param string|null $mode **参数解释**： 扩容模式，分为在线和离线。在线扩容过程中，支持数据增删改查及部分DDL语法，其余不支持的语法将会报错。在线扩容对业务影响更小，离线模式存在短暂的中断，数据库不可用。 **约束限制**： 不涉及。 **取值范围**： - insert：在线模式。 - read-only：离线模式。  **默认取值**： read-only
+    *
+    * @return $this
+    */
+    public function setMode($mode)
+    {
+        $this->container['mode'] = $mode;
+        return $this;
+    }
+
+    /**
+    * Gets redisConf
+    *  redisConf
+    *
+    * @return \HuaweiCloud\SDK\Dws\V2\Model\RedisConfReq|null
+    */
+    public function getRedisConf()
+    {
+        return $this->container['redisConf'];
+    }
+
+    /**
+    * Sets redisConf
+    *
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\RedisConfReq|null $redisConf redisConf
+    *
+    * @return $this
+    */
+    public function setRedisConf($redisConf)
+    {
+        $this->container['redisConf'] = $redisConf;
         return $this;
     }
 

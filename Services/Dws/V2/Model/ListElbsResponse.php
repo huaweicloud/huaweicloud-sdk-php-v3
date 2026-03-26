@@ -22,21 +22,25 @@ class ListElbsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * elbs  **参数解释**： 弹性负载均衡列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总条数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'elbs' => '\HuaweiCloud\SDK\Dws\V2\Model\ClusterElbInfo[]'
+            'elbs' => '\HuaweiCloud\SDK\Dws\V2\Model\ClusterElbInfo[]',
+            'count' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * elbs  **参数解释**： 弹性负载均衡列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总条数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'elbs' => null
+        'elbs' => null,
+        'count' => 'int32'
     ];
 
     /**
@@ -63,31 +67,37 @@ class ListElbsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * elbs  **参数解释**： 弹性负载均衡列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总条数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'elbs' => 'elbs'
+            'elbs' => 'elbs',
+            'count' => 'count'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * elbs  **参数解释**： 弹性负载均衡列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总条数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'elbs' => 'setElbs'
+            'elbs' => 'setElbs',
+            'count' => 'setCount'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * elbs  **参数解释**： 弹性负载均衡列表。 **取值范围**： 不涉及。
+    * count  **参数解释**： 总条数。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'elbs' => 'getElbs'
+            'elbs' => 'getElbs',
+            'count' => 'getCount'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListElbsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['elbs'] = isset($data['elbs']) ? $data['elbs'] : null;
+        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ListElbsResponse implements ModelInterface, ArrayAccess
     public function setElbs($elbs)
     {
         $this->container['elbs'] = $elbs;
+        return $this;
+    }
+
+    /**
+    * Gets count
+    *  **参数解释**： 总条数。 **取值范围**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getCount()
+    {
+        return $this->container['count'];
+    }
+
+    /**
+    * Sets count
+    *
+    * @param int|null $count **参数解释**： 总条数。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setCount($count)
+    {
+        $this->container['count'] = $count;
         return $this;
     }
 

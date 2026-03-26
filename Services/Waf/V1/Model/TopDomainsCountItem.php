@@ -22,24 +22,28 @@ class TopDomainsCountItem implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * key  **参数解释：** 域名ID **取值范围：** 不涉及
     * num  **参数解释：** 数量 **取值范围：** 不涉及
+    * webTag  **参数解释：** 网站名称，对应WAF控制台域名详情中的网站名称 **取值范围：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'key' => 'string',
-            'num' => 'int'
+            'num' => 'int',
+            'webTag' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * key  **参数解释：** 域名ID **取值范围：** 不涉及
     * num  **参数解释：** 数量 **取值范围：** 不涉及
+    * webTag  **参数解释：** 网站名称，对应WAF控制台域名详情中的网站名称 **取值范围：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'key' => null,
-        'num' => 'int64'
+        'num' => 'int64',
+        'webTag' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class TopDomainsCountItem implements ModelInterface, ArrayAccess
     * and the value is the original name
     * key  **参数解释：** 域名ID **取值范围：** 不涉及
     * num  **参数解释：** 数量 **取值范围：** 不涉及
+    * webTag  **参数解释：** 网站名称，对应WAF控制台域名详情中的网站名称 **取值范围：** 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'key' => 'key',
-            'num' => 'num'
+            'num' => 'num',
+            'webTag' => 'web_tag'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * key  **参数解释：** 域名ID **取值范围：** 不涉及
     * num  **参数解释：** 数量 **取值范围：** 不涉及
+    * webTag  **参数解释：** 网站名称，对应WAF控制台域名详情中的网站名称 **取值范围：** 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
             'key' => 'setKey',
-            'num' => 'setNum'
+            'num' => 'setNum',
+            'webTag' => 'setWebTag'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * key  **参数解释：** 域名ID **取值范围：** 不涉及
     * num  **参数解释：** 数量 **取值范围：** 不涉及
+    * webTag  **参数解释：** 网站名称，对应WAF控制台域名详情中的网站名称 **取值范围：** 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
             'key' => 'getKey',
-            'num' => 'getNum'
+            'num' => 'getNum',
+            'webTag' => 'getWebTag'
     ];
 
     /**
@@ -159,6 +169,7 @@ class TopDomainsCountItem implements ModelInterface, ArrayAccess
     {
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['num'] = isset($data['num']) ? $data['num'] : null;
+        $this->container['webTag'] = isset($data['webTag']) ? $data['webTag'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class TopDomainsCountItem implements ModelInterface, ArrayAccess
     public function setNum($num)
     {
         $this->container['num'] = $num;
+        return $this;
+    }
+
+    /**
+    * Gets webTag
+    *  **参数解释：** 网站名称，对应WAF控制台域名详情中的网站名称 **取值范围：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getWebTag()
+    {
+        return $this->container['webTag'];
+    }
+
+    /**
+    * Sets webTag
+    *
+    * @param string|null $webTag **参数解释：** 网站名称，对应WAF控制台域名详情中的网站名称 **取值范围：** 不涉及
+    *
+    * @return $this
+    */
+    public function setWebTag($webTag)
+    {
+        $this->container['webTag'] = $webTag;
         return $this;
     }
 

@@ -24,13 +24,15 @@ class ShowDataStoreFlavorDetailResponse implements ModelInterface, ArrayAccess
     * id  **参数解释**： 引擎类型id。 **取值范围**： 不涉及
     * dbname  **参数解释**： 引擎名称。 **取值范围**： 不涉及
     * versions  **参数解释**： 引擎版本。 **取值范围**： 不涉及
+    * modelList  modelList
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
             'dbname' => 'string',
-            'versions' => '\HuaweiCloud\SDK\Css\V1\Model\FlavorRespVersionBody[]'
+            'versions' => '\HuaweiCloud\SDK\Css\V1\Model\FlavorRespVersionBody[]',
+            'modelList' => '\HuaweiCloud\SDK\Css\V1\Model\ModelList'
     ];
 
     /**
@@ -38,13 +40,15 @@ class ShowDataStoreFlavorDetailResponse implements ModelInterface, ArrayAccess
     * id  **参数解释**： 引擎类型id。 **取值范围**： 不涉及
     * dbname  **参数解释**： 引擎名称。 **取值范围**： 不涉及
     * versions  **参数解释**： 引擎版本。 **取值范围**： 不涉及
+    * modelList  modelList
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
         'dbname' => null,
-        'versions' => null
+        'versions' => null,
+        'modelList' => null
     ];
 
     /**
@@ -73,13 +77,15 @@ class ShowDataStoreFlavorDetailResponse implements ModelInterface, ArrayAccess
     * id  **参数解释**： 引擎类型id。 **取值范围**： 不涉及
     * dbname  **参数解释**： 引擎名称。 **取值范围**： 不涉及
     * versions  **参数解释**： 引擎版本。 **取值范围**： 不涉及
+    * modelList  modelList
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'id' => 'id',
             'dbname' => 'dbname',
-            'versions' => 'versions'
+            'versions' => 'versions',
+            'modelList' => 'modelList'
     ];
 
     /**
@@ -87,13 +93,15 @@ class ShowDataStoreFlavorDetailResponse implements ModelInterface, ArrayAccess
     * id  **参数解释**： 引擎类型id。 **取值范围**： 不涉及
     * dbname  **参数解释**： 引擎名称。 **取值范围**： 不涉及
     * versions  **参数解释**： 引擎版本。 **取值范围**： 不涉及
+    * modelList  modelList
     *
     * @var string[]
     */
     protected static $setters = [
             'id' => 'setId',
             'dbname' => 'setDbname',
-            'versions' => 'setVersions'
+            'versions' => 'setVersions',
+            'modelList' => 'setModelList'
     ];
 
     /**
@@ -101,13 +109,15 @@ class ShowDataStoreFlavorDetailResponse implements ModelInterface, ArrayAccess
     * id  **参数解释**： 引擎类型id。 **取值范围**： 不涉及
     * dbname  **参数解释**： 引擎名称。 **取值范围**： 不涉及
     * versions  **参数解释**： 引擎版本。 **取值范围**： 不涉及
+    * modelList  modelList
     *
     * @var string[]
     */
     protected static $getters = [
             'id' => 'getId',
             'dbname' => 'getDbname',
-            'versions' => 'getVersions'
+            'versions' => 'getVersions',
+            'modelList' => 'getModelList'
     ];
 
     /**
@@ -171,6 +181,7 @@ class ShowDataStoreFlavorDetailResponse implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['dbname'] = isset($data['dbname']) ? $data['dbname'] : null;
         $this->container['versions'] = isset($data['versions']) ? $data['versions'] : null;
+        $this->container['modelList'] = isset($data['modelList']) ? $data['modelList'] : null;
     }
 
     /**
@@ -264,6 +275,30 @@ class ShowDataStoreFlavorDetailResponse implements ModelInterface, ArrayAccess
     public function setVersions($versions)
     {
         $this->container['versions'] = $versions;
+        return $this;
+    }
+
+    /**
+    * Gets modelList
+    *  modelList
+    *
+    * @return \HuaweiCloud\SDK\Css\V1\Model\ModelList|null
+    */
+    public function getModelList()
+    {
+        return $this->container['modelList'];
+    }
+
+    /**
+    * Sets modelList
+    *
+    * @param \HuaweiCloud\SDK\Css\V1\Model\ModelList|null $modelList modelList
+    *
+    * @return $this
+    */
+    public function setModelList($modelList)
+    {
+        $this->container['modelList'] = $modelList;
         return $this;
     }
 

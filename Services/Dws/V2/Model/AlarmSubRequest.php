@@ -27,6 +27,8 @@ class AlarmSubRequest implements ModelInterface, ArrayAccess
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
     * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * alarmDetail  **参数解释**： 细粒度告警详细信息，规则为告警ID与告警级别用英文冒号分割，告警之间用逗号分割。当该字段不为空时，alarm_level字段需要设置为空 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -37,7 +39,9 @@ class AlarmSubRequest implements ModelInterface, ArrayAccess
             'notificationTarget' => 'string',
             'notificationTargetName' => 'string',
             'notificationTargetType' => 'string',
-            'timeZone' => 'string'
+            'timeZone' => 'string',
+            'clusterId' => 'string',
+            'alarmDetail' => 'string'
     ];
 
     /**
@@ -49,6 +53,8 @@ class AlarmSubRequest implements ModelInterface, ArrayAccess
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
     * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * alarmDetail  **参数解释**： 细粒度告警详细信息，规则为告警ID与告警级别用英文冒号分割，告警之间用逗号分割。当该字段不为空时，alarm_level字段需要设置为空 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -59,7 +65,9 @@ class AlarmSubRequest implements ModelInterface, ArrayAccess
         'notificationTarget' => null,
         'notificationTargetName' => null,
         'notificationTargetType' => null,
-        'timeZone' => null
+        'timeZone' => null,
+        'clusterId' => null,
+        'alarmDetail' => null
     ];
 
     /**
@@ -92,6 +100,8 @@ class AlarmSubRequest implements ModelInterface, ArrayAccess
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
     * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * alarmDetail  **参数解释**： 细粒度告警详细信息，规则为告警ID与告警级别用英文冒号分割，告警之间用逗号分割。当该字段不为空时，alarm_level字段需要设置为空 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -102,7 +112,9 @@ class AlarmSubRequest implements ModelInterface, ArrayAccess
             'notificationTarget' => 'notification_target',
             'notificationTargetName' => 'notification_target_name',
             'notificationTargetType' => 'notification_target_type',
-            'timeZone' => 'time_zone'
+            'timeZone' => 'time_zone',
+            'clusterId' => 'cluster_id',
+            'alarmDetail' => 'alarm_detail'
     ];
 
     /**
@@ -114,6 +126,8 @@ class AlarmSubRequest implements ModelInterface, ArrayAccess
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
     * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * alarmDetail  **参数解释**： 细粒度告警详细信息，规则为告警ID与告警级别用英文冒号分割，告警之间用逗号分割。当该字段不为空时，alarm_level字段需要设置为空 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -124,7 +138,9 @@ class AlarmSubRequest implements ModelInterface, ArrayAccess
             'notificationTarget' => 'setNotificationTarget',
             'notificationTargetName' => 'setNotificationTargetName',
             'notificationTargetType' => 'setNotificationTargetType',
-            'timeZone' => 'setTimeZone'
+            'timeZone' => 'setTimeZone',
+            'clusterId' => 'setClusterId',
+            'alarmDetail' => 'setAlarmDetail'
     ];
 
     /**
@@ -136,6 +152,8 @@ class AlarmSubRequest implements ModelInterface, ArrayAccess
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
     * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
+    * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    * alarmDetail  **参数解释**： 细粒度告警详细信息，规则为告警ID与告警级别用英文冒号分割，告警之间用逗号分割。当该字段不为空时，alarm_level字段需要设置为空 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -146,7 +164,9 @@ class AlarmSubRequest implements ModelInterface, ArrayAccess
             'notificationTarget' => 'getNotificationTarget',
             'notificationTargetName' => 'getNotificationTargetName',
             'notificationTargetType' => 'getNotificationTargetType',
-            'timeZone' => 'getTimeZone'
+            'timeZone' => 'getTimeZone',
+            'clusterId' => 'getClusterId',
+            'alarmDetail' => 'getAlarmDetail'
     ];
 
     /**
@@ -214,6 +234,8 @@ class AlarmSubRequest implements ModelInterface, ArrayAccess
         $this->container['notificationTargetName'] = isset($data['notificationTargetName']) ? $data['notificationTargetName'] : null;
         $this->container['notificationTargetType'] = isset($data['notificationTargetType']) ? $data['notificationTargetType'] : null;
         $this->container['timeZone'] = isset($data['timeZone']) ? $data['timeZone'] : null;
+        $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
+        $this->container['alarmDetail'] = isset($data['alarmDetail']) ? $data['alarmDetail'] : null;
     }
 
     /**
@@ -418,6 +440,54 @@ class AlarmSubRequest implements ModelInterface, ArrayAccess
     public function setTimeZone($timeZone)
     {
         $this->container['timeZone'] = $timeZone;
+        return $this;
+    }
+
+    /**
+    * Gets clusterId
+    *  **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getClusterId()
+    {
+        return $this->container['clusterId'];
+    }
+
+    /**
+    * Sets clusterId
+    *
+    * @param string|null $clusterId **参数解释**： 集群ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setClusterId($clusterId)
+    {
+        $this->container['clusterId'] = $clusterId;
+        return $this;
+    }
+
+    /**
+    * Gets alarmDetail
+    *  **参数解释**： 细粒度告警详细信息，规则为告警ID与告警级别用英文冒号分割，告警之间用逗号分割。当该字段不为空时，alarm_level字段需要设置为空 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getAlarmDetail()
+    {
+        return $this->container['alarmDetail'];
+    }
+
+    /**
+    * Sets alarmDetail
+    *
+    * @param string|null $alarmDetail **参数解释**： 细粒度告警详细信息，规则为告警ID与告警级别用英文冒号分割，告警之间用逗号分割。当该字段不为空时，alarm_level字段需要设置为空 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setAlarmDetail($alarmDetail)
+    {
+        $this->container['alarmDetail'] = $alarmDetail;
         return $this;
     }
 

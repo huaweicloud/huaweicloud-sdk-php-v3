@@ -21,22 +21,20 @@ class ExportConsistencyResultsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  OK
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  OK
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
     ];
 
     /**
@@ -62,32 +60,29 @@ class ExportConsistencyResultsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  OK
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  OK
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  OK
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
     ];
 
     /**
@@ -148,7 +143,6 @@ class ExportConsistencyResultsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -171,30 +165,6 @@ class ExportConsistencyResultsResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets body
-    *  OK
-    *
-    * @return string|null
-    */
-    public function getBody()
-    {
-        return $this->container['body'];
-    }
-
-    /**
-    * Sets body
-    *
-    * @param string|null $body OK
-    *
-    * @return $this
-    */
-    public function setBody($body)
-    {
-        $this->container['body'] = $body;
-        return $this;
     }
 
     /**

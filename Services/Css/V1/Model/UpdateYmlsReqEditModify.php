@@ -20,22 +20,26 @@ class UpdateYmlsReqEditModify implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * elasticsearchYml  参数配置列表。值为需要修改的json数据。
+    * elasticsearchYml  **参数解释**： 参数配置列表，值为需要修改的json数据，OpenSearch集群也使用此参数，即修改opensearch.yml时，这里也是填写elasticsearch.yml。 **约束限制**： 不涉及
+    * kibanaYml  **参数解释**： 参数配置列表，值为需要修改的json数据。OpenSearch集群也使用此参数，即修改opensearch_dashboards.yml时，这里也是填写kibana.yml。 **约束限制**： 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'elasticsearchYml' => 'object'
+            'elasticsearchYml' => 'object',
+            'kibanaYml' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * elasticsearchYml  参数配置列表。值为需要修改的json数据。
+    * elasticsearchYml  **参数解释**： 参数配置列表，值为需要修改的json数据，OpenSearch集群也使用此参数，即修改opensearch.yml时，这里也是填写elasticsearch.yml。 **约束限制**： 不涉及
+    * kibanaYml  **参数解释**： 参数配置列表，值为需要修改的json数据。OpenSearch集群也使用此参数，即修改opensearch_dashboards.yml时，这里也是填写kibana.yml。 **约束限制**： 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'elasticsearchYml' => null
+        'elasticsearchYml' => null,
+        'kibanaYml' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class UpdateYmlsReqEditModify implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * elasticsearchYml  参数配置列表。值为需要修改的json数据。
+    * elasticsearchYml  **参数解释**： 参数配置列表，值为需要修改的json数据，OpenSearch集群也使用此参数，即修改opensearch.yml时，这里也是填写elasticsearch.yml。 **约束限制**： 不涉及
+    * kibanaYml  **参数解释**： 参数配置列表，值为需要修改的json数据。OpenSearch集群也使用此参数，即修改opensearch_dashboards.yml时，这里也是填写kibana.yml。 **约束限制**： 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'elasticsearchYml' => 'elasticsearch.yml'
+            'elasticsearchYml' => 'elasticsearch.yml',
+            'kibanaYml' => 'kibana.yml'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * elasticsearchYml  参数配置列表。值为需要修改的json数据。
+    * elasticsearchYml  **参数解释**： 参数配置列表，值为需要修改的json数据，OpenSearch集群也使用此参数，即修改opensearch.yml时，这里也是填写elasticsearch.yml。 **约束限制**： 不涉及
+    * kibanaYml  **参数解释**： 参数配置列表，值为需要修改的json数据。OpenSearch集群也使用此参数，即修改opensearch_dashboards.yml时，这里也是填写kibana.yml。 **约束限制**： 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
-            'elasticsearchYml' => 'setElasticsearchYml'
+            'elasticsearchYml' => 'setElasticsearchYml',
+            'kibanaYml' => 'setKibanaYml'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * elasticsearchYml  参数配置列表。值为需要修改的json数据。
+    * elasticsearchYml  **参数解释**： 参数配置列表，值为需要修改的json数据，OpenSearch集群也使用此参数，即修改opensearch.yml时，这里也是填写elasticsearch.yml。 **约束限制**： 不涉及
+    * kibanaYml  **参数解释**： 参数配置列表，值为需要修改的json数据。OpenSearch集群也使用此参数，即修改opensearch_dashboards.yml时，这里也是填写kibana.yml。 **约束限制**： 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
-            'elasticsearchYml' => 'getElasticsearchYml'
+            'elasticsearchYml' => 'getElasticsearchYml',
+            'kibanaYml' => 'getKibanaYml'
     ];
 
     /**
@@ -148,6 +158,7 @@ class UpdateYmlsReqEditModify implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['elasticsearchYml'] = isset($data['elasticsearchYml']) ? $data['elasticsearchYml'] : null;
+        $this->container['kibanaYml'] = isset($data['kibanaYml']) ? $data['kibanaYml'] : null;
     }
 
     /**
@@ -174,7 +185,7 @@ class UpdateYmlsReqEditModify implements ModelInterface, ArrayAccess
 
     /**
     * Gets elasticsearchYml
-    *  参数配置列表。值为需要修改的json数据。
+    *  **参数解释**： 参数配置列表，值为需要修改的json数据，OpenSearch集群也使用此参数，即修改opensearch.yml时，这里也是填写elasticsearch.yml。 **约束限制**： 不涉及
     *
     * @return object|null
     */
@@ -186,13 +197,37 @@ class UpdateYmlsReqEditModify implements ModelInterface, ArrayAccess
     /**
     * Sets elasticsearchYml
     *
-    * @param object|null $elasticsearchYml 参数配置列表。值为需要修改的json数据。
+    * @param object|null $elasticsearchYml **参数解释**： 参数配置列表，值为需要修改的json数据，OpenSearch集群也使用此参数，即修改opensearch.yml时，这里也是填写elasticsearch.yml。 **约束限制**： 不涉及
     *
     * @return $this
     */
     public function setElasticsearchYml($elasticsearchYml)
     {
         $this->container['elasticsearchYml'] = $elasticsearchYml;
+        return $this;
+    }
+
+    /**
+    * Gets kibanaYml
+    *  **参数解释**： 参数配置列表，值为需要修改的json数据。OpenSearch集群也使用此参数，即修改opensearch_dashboards.yml时，这里也是填写kibana.yml。 **约束限制**： 不涉及
+    *
+    * @return object|null
+    */
+    public function getKibanaYml()
+    {
+        return $this->container['kibanaYml'];
+    }
+
+    /**
+    * Sets kibanaYml
+    *
+    * @param object|null $kibanaYml **参数解释**： 参数配置列表，值为需要修改的json数据。OpenSearch集群也使用此参数，即修改opensearch_dashboards.yml时，这里也是填写kibana.yml。 **约束限制**： 不涉及
+    *
+    * @return $this
+    */
+    public function setKibanaYml($kibanaYml)
+    {
+        $this->container['kibanaYml'] = $kibanaYml;
         return $this;
     }
 

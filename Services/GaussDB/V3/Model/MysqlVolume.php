@@ -20,22 +20,26 @@ class MysqlVolume implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * size  磁盘大小。默认值为10，单位GB。 取值范围：10~128000，必须为10的整数倍。
+    * size  **参数解释**：  磁盘大小，单位GB。  **约束限制**：  必须为10的整数倍。创建按需实例时不可选。  **取值范围**：  10-128000。  **默认取值**：  10。
+    * type  **参数解释**：  磁盘存储类型。  **约束限制**：  不涉及。  **取值范围**：  - DL6：DL6存储类型。 - DL5：DL5存储类型。  **默认取值**：  DL6。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'size' => 'string'
+            'size' => 'string',
+            'type' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * size  磁盘大小。默认值为10，单位GB。 取值范围：10~128000，必须为10的整数倍。
+    * size  **参数解释**：  磁盘大小，单位GB。  **约束限制**：  必须为10的整数倍。创建按需实例时不可选。  **取值范围**：  10-128000。  **默认取值**：  10。
+    * type  **参数解释**：  磁盘存储类型。  **约束限制**：  不涉及。  **取值范围**：  - DL6：DL6存储类型。 - DL5：DL5存储类型。  **默认取值**：  DL6。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'size' => null
+        'size' => null,
+        'type' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class MysqlVolume implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * size  磁盘大小。默认值为10，单位GB。 取值范围：10~128000，必须为10的整数倍。
+    * size  **参数解释**：  磁盘大小，单位GB。  **约束限制**：  必须为10的整数倍。创建按需实例时不可选。  **取值范围**：  10-128000。  **默认取值**：  10。
+    * type  **参数解释**：  磁盘存储类型。  **约束限制**：  不涉及。  **取值范围**：  - DL6：DL6存储类型。 - DL5：DL5存储类型。  **默认取值**：  DL6。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'size' => 'size'
+            'size' => 'size',
+            'type' => 'type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * size  磁盘大小。默认值为10，单位GB。 取值范围：10~128000，必须为10的整数倍。
+    * size  **参数解释**：  磁盘大小，单位GB。  **约束限制**：  必须为10的整数倍。创建按需实例时不可选。  **取值范围**：  10-128000。  **默认取值**：  10。
+    * type  **参数解释**：  磁盘存储类型。  **约束限制**：  不涉及。  **取值范围**：  - DL6：DL6存储类型。 - DL5：DL5存储类型。  **默认取值**：  DL6。
     *
     * @var string[]
     */
     protected static $setters = [
-            'size' => 'setSize'
+            'size' => 'setSize',
+            'type' => 'setType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * size  磁盘大小。默认值为10，单位GB。 取值范围：10~128000，必须为10的整数倍。
+    * size  **参数解释**：  磁盘大小，单位GB。  **约束限制**：  必须为10的整数倍。创建按需实例时不可选。  **取值范围**：  10-128000。  **默认取值**：  10。
+    * type  **参数解释**：  磁盘存储类型。  **约束限制**：  不涉及。  **取值范围**：  - DL6：DL6存储类型。 - DL5：DL5存储类型。  **默认取值**：  DL6。
     *
     * @var string[]
     */
     protected static $getters = [
-            'size' => 'getSize'
+            'size' => 'getSize',
+            'type' => 'getType'
     ];
 
     /**
@@ -148,6 +158,7 @@ class MysqlVolume implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -158,9 +169,6 @@ class MysqlVolume implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['size'] === null) {
-            $invalidProperties[] = "'size' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -177,9 +185,9 @@ class MysqlVolume implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  磁盘大小。默认值为10，单位GB。 取值范围：10~128000，必须为10的整数倍。
+    *  **参数解释**：  磁盘大小，单位GB。  **约束限制**：  必须为10的整数倍。创建按需实例时不可选。  **取值范围**：  10-128000。  **默认取值**：  10。
     *
-    * @return string
+    * @return string|null
     */
     public function getSize()
     {
@@ -189,13 +197,37 @@ class MysqlVolume implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param string $size 磁盘大小。默认值为10，单位GB。 取值范围：10~128000，必须为10的整数倍。
+    * @param string|null $size **参数解释**：  磁盘大小，单位GB。  **约束限制**：  必须为10的整数倍。创建按需实例时不可选。  **取值范围**：  10-128000。  **默认取值**：  10。
     *
     * @return $this
     */
     public function setSize($size)
     {
         $this->container['size'] = $size;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  **参数解释**：  磁盘存储类型。  **约束限制**：  不涉及。  **取值范围**：  - DL6：DL6存储类型。 - DL5：DL5存储类型。  **默认取值**：  DL6。
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type **参数解释**：  磁盘存储类型。  **约束限制**：  不涉及。  **取值范围**：  - DL6：DL6存储类型。 - DL5：DL5存储类型。  **默认取值**：  DL6。
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

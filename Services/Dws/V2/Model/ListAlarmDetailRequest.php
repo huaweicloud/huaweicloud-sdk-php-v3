@@ -23,13 +23,19 @@ class ListAlarmDetailRequest implements ModelInterface, ArrayAccess
     * timeZone  **参数解释**： 时区信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： GMT+08:00
     * offset  **参数解释**： 分页偏移量，从0开始，页数减1。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0
     * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 10。
+    * from  **参数解释**：  开始UTC时间，单位精确到毫秒。  **取值范围**：  不涉及。
+    * to  **参数解释**：  结束UTC时间，单位精确到毫秒。  **取值范围**：  不涉及。
+    * recentDay  **参数解释**：  查询前N天到当前时间范围内的告警。  **约束限制**： 不涉及。 **取值范围**： 大于0。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'timeZone' => 'string',
             'offset' => 'string',
-            'limit' => 'string'
+            'limit' => 'string',
+            'from' => 'int',
+            'to' => 'int',
+            'recentDay' => 'int'
     ];
 
     /**
@@ -37,13 +43,19 @@ class ListAlarmDetailRequest implements ModelInterface, ArrayAccess
     * timeZone  **参数解释**： 时区信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： GMT+08:00
     * offset  **参数解释**： 分页偏移量，从0开始，页数减1。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0
     * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 10。
+    * from  **参数解释**：  开始UTC时间，单位精确到毫秒。  **取值范围**：  不涉及。
+    * to  **参数解释**：  结束UTC时间，单位精确到毫秒。  **取值范围**：  不涉及。
+    * recentDay  **参数解释**：  查询前N天到当前时间范围内的告警。  **约束限制**： 不涉及。 **取值范围**： 大于0。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'timeZone' => null,
         'offset' => null,
-        'limit' => null
+        'limit' => null,
+        'from' => 'int64',
+        'to' => 'int64',
+        'recentDay' => 'int32'
     ];
 
     /**
@@ -72,13 +84,19 @@ class ListAlarmDetailRequest implements ModelInterface, ArrayAccess
     * timeZone  **参数解释**： 时区信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： GMT+08:00
     * offset  **参数解释**： 分页偏移量，从0开始，页数减1。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0
     * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 10。
+    * from  **参数解释**：  开始UTC时间，单位精确到毫秒。  **取值范围**：  不涉及。
+    * to  **参数解释**：  结束UTC时间，单位精确到毫秒。  **取值范围**：  不涉及。
+    * recentDay  **参数解释**：  查询前N天到当前时间范围内的告警。  **约束限制**： 不涉及。 **取值范围**： 大于0。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'timeZone' => 'time_zone',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'from' => 'from',
+            'to' => 'to',
+            'recentDay' => 'recent_day'
     ];
 
     /**
@@ -86,13 +104,19 @@ class ListAlarmDetailRequest implements ModelInterface, ArrayAccess
     * timeZone  **参数解释**： 时区信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： GMT+08:00
     * offset  **参数解释**： 分页偏移量，从0开始，页数减1。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0
     * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 10。
+    * from  **参数解释**：  开始UTC时间，单位精确到毫秒。  **取值范围**：  不涉及。
+    * to  **参数解释**：  结束UTC时间，单位精确到毫秒。  **取值范围**：  不涉及。
+    * recentDay  **参数解释**：  查询前N天到当前时间范围内的告警。  **约束限制**： 不涉及。 **取值范围**： 大于0。
     *
     * @var string[]
     */
     protected static $setters = [
             'timeZone' => 'setTimeZone',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'from' => 'setFrom',
+            'to' => 'setTo',
+            'recentDay' => 'setRecentDay'
     ];
 
     /**
@@ -100,13 +124,19 @@ class ListAlarmDetailRequest implements ModelInterface, ArrayAccess
     * timeZone  **参数解释**： 时区信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： GMT+08:00
     * offset  **参数解释**： 分页偏移量，从0开始，页数减1。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0
     * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 10。
+    * from  **参数解释**：  开始UTC时间，单位精确到毫秒。  **取值范围**：  不涉及。
+    * to  **参数解释**：  结束UTC时间，单位精确到毫秒。  **取值范围**：  不涉及。
+    * recentDay  **参数解释**：  查询前N天到当前时间范围内的告警。  **约束限制**： 不涉及。 **取值范围**： 大于0。
     *
     * @var string[]
     */
     protected static $getters = [
             'timeZone' => 'getTimeZone',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'from' => 'getFrom',
+            'to' => 'getTo',
+            'recentDay' => 'getRecentDay'
     ];
 
     /**
@@ -170,6 +200,9 @@ class ListAlarmDetailRequest implements ModelInterface, ArrayAccess
         $this->container['timeZone'] = isset($data['timeZone']) ? $data['timeZone'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['from'] = isset($data['from']) ? $data['from'] : null;
+        $this->container['to'] = isset($data['to']) ? $data['to'] : null;
+        $this->container['recentDay'] = isset($data['recentDay']) ? $data['recentDay'] : null;
     }
 
     /**
@@ -263,6 +296,78 @@ class ListAlarmDetailRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets from
+    *  **参数解释**：  开始UTC时间，单位精确到毫秒。  **取值范围**：  不涉及。
+    *
+    * @return int|null
+    */
+    public function getFrom()
+    {
+        return $this->container['from'];
+    }
+
+    /**
+    * Sets from
+    *
+    * @param int|null $from **参数解释**：  开始UTC时间，单位精确到毫秒。  **取值范围**：  不涉及。
+    *
+    * @return $this
+    */
+    public function setFrom($from)
+    {
+        $this->container['from'] = $from;
+        return $this;
+    }
+
+    /**
+    * Gets to
+    *  **参数解释**：  结束UTC时间，单位精确到毫秒。  **取值范围**：  不涉及。
+    *
+    * @return int|null
+    */
+    public function getTo()
+    {
+        return $this->container['to'];
+    }
+
+    /**
+    * Sets to
+    *
+    * @param int|null $to **参数解释**：  结束UTC时间，单位精确到毫秒。  **取值范围**：  不涉及。
+    *
+    * @return $this
+    */
+    public function setTo($to)
+    {
+        $this->container['to'] = $to;
+        return $this;
+    }
+
+    /**
+    * Gets recentDay
+    *  **参数解释**：  查询前N天到当前时间范围内的告警。  **约束限制**： 不涉及。 **取值范围**： 大于0。
+    *
+    * @return int|null
+    */
+    public function getRecentDay()
+    {
+        return $this->container['recentDay'];
+    }
+
+    /**
+    * Sets recentDay
+    *
+    * @param int|null $recentDay **参数解释**：  查询前N天到当前时间范围内的告警。  **约束限制**： 不涉及。 **取值范围**： 大于0。
+    *
+    * @return $this
+    */
+    public function setRecentDay($recentDay)
+    {
+        $this->container['recentDay'] = $recentDay;
         return $this;
     }
 

@@ -31,6 +31,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     * adminStateUp  **参数解释**： 弹性负载均衡的管理状态。 **取值范围**： ACTIVE：使用中 PENDING_CREATE：创建中 ERROR：表示当前策略与同一监听器下的其他策略存在相同的规格配置。
     * bandwidth  **参数解释**： 带宽信息。 **取值范围**： 大于等于0的正整数。
     * vpcId  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
+    * ipTargetEnable  **参数解释**： 是否支持跨vpc绑定。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
             'type' => 'string',
             'adminStateUp' => 'bool',
             'bandwidth' => 'int',
-            'vpcId' => 'string'
+            'vpcId' => 'string',
+            'ipTargetEnable' => 'bool'
     ];
 
     /**
@@ -61,6 +63,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     * adminStateUp  **参数解释**： 弹性负载均衡的管理状态。 **取值范围**： ACTIVE：使用中 PENDING_CREATE：创建中 ERROR：表示当前策略与同一监听器下的其他策略存在相同的规格配置。
     * bandwidth  **参数解释**： 带宽信息。 **取值范围**： 大于等于0的正整数。
     * vpcId  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
+    * ipTargetEnable  **参数解释**： 是否支持跨vpc绑定。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
         'type' => null,
         'adminStateUp' => null,
         'bandwidth' => 'int32',
-        'vpcId' => null
+        'vpcId' => null,
+        'ipTargetEnable' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     * adminStateUp  **参数解释**： 弹性负载均衡的管理状态。 **取值范围**： ACTIVE：使用中 PENDING_CREATE：创建中 ERROR：表示当前策略与同一监听器下的其他策略存在相同的规格配置。
     * bandwidth  **参数解释**： 带宽信息。 **取值范围**： 大于等于0的正整数。
     * vpcId  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
+    * ipTargetEnable  **参数解释**： 是否支持跨vpc绑定。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
             'type' => 'type',
             'adminStateUp' => 'admin_state_up',
             'bandwidth' => 'bandwidth',
-            'vpcId' => 'vpc_id'
+            'vpcId' => 'vpc_id',
+            'ipTargetEnable' => 'ip_target_enable'
     ];
 
     /**
@@ -142,6 +148,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     * adminStateUp  **参数解释**： 弹性负载均衡的管理状态。 **取值范围**： ACTIVE：使用中 PENDING_CREATE：创建中 ERROR：表示当前策略与同一监听器下的其他策略存在相同的规格配置。
     * bandwidth  **参数解释**： 带宽信息。 **取值范围**： 大于等于0的正整数。
     * vpcId  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
+    * ipTargetEnable  **参数解释**： 是否支持跨vpc绑定。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'adminStateUp' => 'setAdminStateUp',
             'bandwidth' => 'setBandwidth',
-            'vpcId' => 'setVpcId'
+            'vpcId' => 'setVpcId',
+            'ipTargetEnable' => 'setIpTargetEnable'
     ];
 
     /**
@@ -172,6 +180,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     * adminStateUp  **参数解释**： 弹性负载均衡的管理状态。 **取值范围**： ACTIVE：使用中 PENDING_CREATE：创建中 ERROR：表示当前策略与同一监听器下的其他策略存在相同的规格配置。
     * bandwidth  **参数解释**： 带宽信息。 **取值范围**： 大于等于0的正整数。
     * vpcId  **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。
+    * ipTargetEnable  **参数解释**： 是否支持跨vpc绑定。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'adminStateUp' => 'getAdminStateUp',
             'bandwidth' => 'getBandwidth',
-            'vpcId' => 'getVpcId'
+            'vpcId' => 'getVpcId',
+            'ipTargetEnable' => 'getIpTargetEnable'
     ];
 
     /**
@@ -258,6 +268,7 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['bandwidth'] = isset($data['bandwidth']) ? $data['bandwidth'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
+        $this->container['ipTargetEnable'] = isset($data['ipTargetEnable']) ? $data['ipTargetEnable'] : null;
     }
 
     /**
@@ -543,6 +554,30 @@ class ClusterElbInfo implements ModelInterface, ArrayAccess
     public function setVpcId($vpcId)
     {
         $this->container['vpcId'] = $vpcId;
+        return $this;
+    }
+
+    /**
+    * Gets ipTargetEnable
+    *  **参数解释**： 是否支持跨vpc绑定。 **取值范围**： 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getIpTargetEnable()
+    {
+        return $this->container['ipTargetEnable'];
+    }
+
+    /**
+    * Sets ipTargetEnable
+    *
+    * @param bool|null $ipTargetEnable **参数解释**： 是否支持跨vpc绑定。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setIpTargetEnable($ipTargetEnable)
+    {
+        $this->container['ipTargetEnable'] = $ipTargetEnable;
         return $this;
     }
 

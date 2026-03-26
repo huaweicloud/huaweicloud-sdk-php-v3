@@ -24,7 +24,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * region  区域ID。
     * name  实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
     * datastore  datastore
-    * mode  实例类型，目前仅支持Cluster。
+    * mode  **参数解释**：    实例模式。  **约束限制**：   不涉及。  **取值范围**：  - Cluster：集群版。 - StandSingle：单机版。  **默认取值**：  不涉及。
     * flavorRef  规格码。
     * vpcId  虚拟私有云ID。
     * subnetId  子网的网络ID。
@@ -35,7 +35,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * timeZone  时区。默认时区为UTC。
     * availabilityZoneMode  可用区类型,单可用区single或多可用区multi。
     * masterAvailabilityZone  主可用区。
-    * slaveCount  只读节点个数。单次接口调用最多支持创建9个只读节点。
+    * slaveCount  只读节点个数。单次接口调用最多支持创建9个只读节点。实例模式取值为StandSingle时取值必须为0。
     * volume  volume
     * tags  tags
     * lowerCaseTableNames  表名大小写是否敏感，默认值是“1”。  取值范围： - 0：表名被存储成固定且表名称大小写敏感。 - 1：表名将被存储成小写且表名称大小写不敏感。
@@ -78,7 +78,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * region  区域ID。
     * name  实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
     * datastore  datastore
-    * mode  实例类型，目前仅支持Cluster。
+    * mode  **参数解释**：    实例模式。  **约束限制**：   不涉及。  **取值范围**：  - Cluster：集群版。 - StandSingle：单机版。  **默认取值**：  不涉及。
     * flavorRef  规格码。
     * vpcId  虚拟私有云ID。
     * subnetId  子网的网络ID。
@@ -89,7 +89,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * timeZone  时区。默认时区为UTC。
     * availabilityZoneMode  可用区类型,单可用区single或多可用区multi。
     * masterAvailabilityZone  主可用区。
-    * slaveCount  只读节点个数。单次接口调用最多支持创建9个只读节点。
+    * slaveCount  只读节点个数。单次接口调用最多支持创建9个只读节点。实例模式取值为StandSingle时取值必须为0。
     * volume  volume
     * tags  tags
     * lowerCaseTableNames  表名大小写是否敏感，默认值是“1”。  取值范围： - 0：表名被存储成固定且表名称大小写敏感。 - 1：表名将被存储成小写且表名称大小写不敏感。
@@ -153,7 +153,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * region  区域ID。
     * name  实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
     * datastore  datastore
-    * mode  实例类型，目前仅支持Cluster。
+    * mode  **参数解释**：    实例模式。  **约束限制**：   不涉及。  **取值范围**：  - Cluster：集群版。 - StandSingle：单机版。  **默认取值**：  不涉及。
     * flavorRef  规格码。
     * vpcId  虚拟私有云ID。
     * subnetId  子网的网络ID。
@@ -164,7 +164,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * timeZone  时区。默认时区为UTC。
     * availabilityZoneMode  可用区类型,单可用区single或多可用区multi。
     * masterAvailabilityZone  主可用区。
-    * slaveCount  只读节点个数。单次接口调用最多支持创建9个只读节点。
+    * slaveCount  只读节点个数。单次接口调用最多支持创建9个只读节点。实例模式取值为StandSingle时取值必须为0。
     * volume  volume
     * tags  tags
     * lowerCaseTableNames  表名大小写是否敏感，默认值是“1”。  取值范围： - 0：表名被存储成固定且表名称大小写敏感。 - 1：表名将被存储成小写且表名称大小写不敏感。
@@ -207,7 +207,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * region  区域ID。
     * name  实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
     * datastore  datastore
-    * mode  实例类型，目前仅支持Cluster。
+    * mode  **参数解释**：    实例模式。  **约束限制**：   不涉及。  **取值范围**：  - Cluster：集群版。 - StandSingle：单机版。  **默认取值**：  不涉及。
     * flavorRef  规格码。
     * vpcId  虚拟私有云ID。
     * subnetId  子网的网络ID。
@@ -218,7 +218,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * timeZone  时区。默认时区为UTC。
     * availabilityZoneMode  可用区类型,单可用区single或多可用区multi。
     * masterAvailabilityZone  主可用区。
-    * slaveCount  只读节点个数。单次接口调用最多支持创建9个只读节点。
+    * slaveCount  只读节点个数。单次接口调用最多支持创建9个只读节点。实例模式取值为StandSingle时取值必须为0。
     * volume  volume
     * tags  tags
     * lowerCaseTableNames  表名大小写是否敏感，默认值是“1”。  取值范围： - 0：表名被存储成固定且表名称大小写敏感。 - 1：表名将被存储成小写且表名称大小写不敏感。
@@ -261,7 +261,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * region  区域ID。
     * name  实例名称。用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
     * datastore  datastore
-    * mode  实例类型，目前仅支持Cluster。
+    * mode  **参数解释**：    实例模式。  **约束限制**：   不涉及。  **取值范围**：  - Cluster：集群版。 - StandSingle：单机版。  **默认取值**：  不涉及。
     * flavorRef  规格码。
     * vpcId  虚拟私有云ID。
     * subnetId  子网的网络ID。
@@ -272,7 +272,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * timeZone  时区。默认时区为UTC。
     * availabilityZoneMode  可用区类型,单可用区single或多可用区multi。
     * masterAvailabilityZone  主可用区。
-    * slaveCount  只读节点个数。单次接口调用最多支持创建9个只读节点。
+    * slaveCount  只读节点个数。单次接口调用最多支持创建9个只读节点。实例模式取值为StandSingle时取值必须为0。
     * volume  volume
     * tags  tags
     * lowerCaseTableNames  表名大小写是否敏感，默认值是“1”。  取值范围： - 0：表名被存储成固定且表名称大小写敏感。 - 1：表名将被存储成小写且表名称大小写不敏感。
@@ -548,7 +548,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
-    *  实例类型，目前仅支持Cluster。
+    *  **参数解释**：    实例模式。  **约束限制**：   不涉及。  **取值范围**：  - Cluster：集群版。 - StandSingle：单机版。  **默认取值**：  不涉及。
     *
     * @return string
     */
@@ -560,7 +560,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param string $mode 实例类型，目前仅支持Cluster。
+    * @param string $mode **参数解释**：    实例模式。  **约束限制**：   不涉及。  **取值范围**：  - Cluster：集群版。 - StandSingle：单机版。  **默认取值**：  不涉及。
     *
     * @return $this
     */
@@ -812,7 +812,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets slaveCount
-    *  只读节点个数。单次接口调用最多支持创建9个只读节点。
+    *  只读节点个数。单次接口调用最多支持创建9个只读节点。实例模式取值为StandSingle时取值必须为0。
     *
     * @return int
     */
@@ -824,7 +824,7 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets slaveCount
     *
-    * @param int $slaveCount 只读节点个数。单次接口调用最多支持创建9个只读节点。
+    * @param int $slaveCount 只读节点个数。单次接口调用最多支持创建9个只读节点。实例模式取值为StandSingle时取值必须为0。
     *
     * @return $this
     */

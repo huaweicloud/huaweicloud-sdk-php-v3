@@ -37,7 +37,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     * backupLevel  备份级别。
     * recycleBackupId  备份ID。
     * recycleStatus  回收状态。
-    * recycleBakcups  **参数解释**：  实例所有的回收站备份列表。
+    * recycleBackups  **参数解释**：  实例所有的回收站备份列表。
     *
     * @var string[]
     */
@@ -59,7 +59,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
             'backupLevel' => 'string',
             'recycleBackupId' => 'string',
             'recycleStatus' => 'string',
-            'recycleBakcups' => '\HuaweiCloud\SDK\GaussDB\V3\Model\RecycleBackupV3[]'
+            'recycleBackups' => '\HuaweiCloud\SDK\GaussDB\V3\Model\RecycleBackupV3[]'
     ];
 
     /**
@@ -81,7 +81,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     * backupLevel  备份级别。
     * recycleBackupId  备份ID。
     * recycleStatus  回收状态。
-    * recycleBakcups  **参数解释**：  实例所有的回收站备份列表。
+    * recycleBackups  **参数解释**：  实例所有的回收站备份列表。
     *
     * @var string[]
     */
@@ -103,7 +103,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
         'backupLevel' => null,
         'recycleBackupId' => null,
         'recycleStatus' => null,
-        'recycleBakcups' => null
+        'recycleBackups' => null
     ];
 
     /**
@@ -146,7 +146,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     * backupLevel  备份级别。
     * recycleBackupId  备份ID。
     * recycleStatus  回收状态。
-    * recycleBakcups  **参数解释**：  实例所有的回收站备份列表。
+    * recycleBackups  **参数解释**：  实例所有的回收站备份列表。
     *
     * @var string[]
     */
@@ -168,7 +168,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
             'backupLevel' => 'backup_level',
             'recycleBackupId' => 'recycle_backup_id',
             'recycleStatus' => 'recycle_status',
-            'recycleBakcups' => 'recycle_bakcups'
+            'recycleBackups' => 'recycle_backups'
     ];
 
     /**
@@ -190,7 +190,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     * backupLevel  备份级别。
     * recycleBackupId  备份ID。
     * recycleStatus  回收状态。
-    * recycleBakcups  **参数解释**：  实例所有的回收站备份列表。
+    * recycleBackups  **参数解释**：  实例所有的回收站备份列表。
     *
     * @var string[]
     */
@@ -212,7 +212,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
             'backupLevel' => 'setBackupLevel',
             'recycleBackupId' => 'setRecycleBackupId',
             'recycleStatus' => 'setRecycleStatus',
-            'recycleBakcups' => 'setRecycleBakcups'
+            'recycleBackups' => 'setRecycleBackups'
     ];
 
     /**
@@ -234,7 +234,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     * backupLevel  备份级别。
     * recycleBackupId  备份ID。
     * recycleStatus  回收状态。
-    * recycleBakcups  **参数解释**：  实例所有的回收站备份列表。
+    * recycleBackups  **参数解释**：  实例所有的回收站备份列表。
     *
     * @var string[]
     */
@@ -256,7 +256,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
             'backupLevel' => 'getBackupLevel',
             'recycleBackupId' => 'getRecycleBackupId',
             'recycleStatus' => 'getRecycleStatus',
-            'recycleBakcups' => 'getRecycleBakcups'
+            'recycleBackups' => 'getRecycleBackups'
     ];
 
     /**
@@ -334,7 +334,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
         $this->container['backupLevel'] = isset($data['backupLevel']) ? $data['backupLevel'] : null;
         $this->container['recycleBackupId'] = isset($data['recycleBackupId']) ? $data['recycleBackupId'] : null;
         $this->container['recycleStatus'] = isset($data['recycleStatus']) ? $data['recycleStatus'] : null;
-        $this->container['recycleBakcups'] = isset($data['recycleBakcups']) ? $data['recycleBakcups'] : null;
+        $this->container['recycleBackups'] = isset($data['recycleBackups']) ? $data['recycleBackups'] : null;
     }
 
     /**
@@ -768,26 +768,26 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets recycleBakcups
+    * Gets recycleBackups
     *  **参数解释**：  实例所有的回收站备份列表。
     *
     * @return \HuaweiCloud\SDK\GaussDB\V3\Model\RecycleBackupV3[]|null
     */
-    public function getRecycleBakcups()
+    public function getRecycleBackups()
     {
-        return $this->container['recycleBakcups'];
+        return $this->container['recycleBackups'];
     }
 
     /**
-    * Sets recycleBakcups
+    * Sets recycleBackups
     *
-    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\RecycleBackupV3[]|null $recycleBakcups **参数解释**：  实例所有的回收站备份列表。
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\RecycleBackupV3[]|null $recycleBackups **参数解释**：  实例所有的回收站备份列表。
     *
     * @return $this
     */
-    public function setRecycleBakcups($recycleBakcups)
+    public function setRecycleBackups($recycleBackups)
     {
-        $this->container['recycleBakcups'] = $recycleBakcups;
+        $this->container['recycleBackups'] = $recycleBackups;
         return $this;
     }
 

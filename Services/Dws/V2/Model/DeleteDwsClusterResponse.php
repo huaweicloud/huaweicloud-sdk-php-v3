@@ -21,20 +21,30 @@ class DeleteDwsClusterResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * errorCode  **参数解释**： 错误码。 **取值范围**： 不涉及。
+    * errorMsg  **参数解释**： 错误信息。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'errorCode' => 'string',
+            'errorMsg' => 'string',
+            'jobId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * errorCode  **参数解释**： 错误码。 **取值范围**： 不涉及。
+    * errorMsg  **参数解释**： 错误信息。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'errorCode' => null,
+        'errorMsg' => null,
+        'jobId' => null
     ];
 
     /**
@@ -60,29 +70,44 @@ class DeleteDwsClusterResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * errorCode  **参数解释**： 错误码。 **取值范围**： 不涉及。
+    * errorMsg  **参数解释**： 错误信息。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'errorCode' => 'error_code',
+            'errorMsg' => 'error_msg',
+            'jobId' => 'job_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * errorCode  **参数解释**： 错误码。 **取值范围**： 不涉及。
+    * errorMsg  **参数解释**： 错误信息。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
+            'errorCode' => 'setErrorCode',
+            'errorMsg' => 'setErrorMsg',
+            'jobId' => 'setJobId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * errorCode  **参数解释**： 错误码。 **取值范围**： 不涉及。
+    * errorMsg  **参数解释**： 错误信息。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
+            'errorCode' => 'getErrorCode',
+            'errorMsg' => 'getErrorMsg',
+            'jobId' => 'getJobId'
     ];
 
     /**
@@ -143,6 +168,9 @@ class DeleteDwsClusterResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
+        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
     }
 
     /**
@@ -165,6 +193,78 @@ class DeleteDwsClusterResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets errorCode
+    *  **参数解释**： 错误码。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getErrorCode()
+    {
+        return $this->container['errorCode'];
+    }
+
+    /**
+    * Sets errorCode
+    *
+    * @param string|null $errorCode **参数解释**： 错误码。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setErrorCode($errorCode)
+    {
+        $this->container['errorCode'] = $errorCode;
+        return $this;
+    }
+
+    /**
+    * Gets errorMsg
+    *  **参数解释**： 错误信息。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getErrorMsg()
+    {
+        return $this->container['errorMsg'];
+    }
+
+    /**
+    * Sets errorMsg
+    *
+    * @param string|null $errorMsg **参数解释**： 错误信息。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setErrorMsg($errorMsg)
+    {
+        $this->container['errorMsg'] = $errorMsg;
+        return $this;
+    }
+
+    /**
+    * Gets jobId
+    *  **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getJobId()
+    {
+        return $this->container['jobId'];
+    }
+
+    /**
+    * Sets jobId
+    *
+    * @param string|null $jobId **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setJobId($jobId)
+    {
+        $this->container['jobId'] = $jobId;
+        return $this;
     }
 
     /**

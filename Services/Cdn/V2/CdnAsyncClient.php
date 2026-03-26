@@ -3747,6 +3747,9 @@ class CdnAsyncClient extends Client
         if ($localVarParams['statType'] !== null) {
             $queryParams['stat_type'] = $localVarParams['statType'];
         }
+        if ($localVarParams['ipVersion'] !== null) {
+            $queryParams['ip_version'] = $localVarParams['ipVersion'];
+        }
         if ($localVarParams['interval'] !== null) {
             $queryParams['interval'] = $localVarParams['interval'];
         }

@@ -21,7 +21,7 @@ class UpdateYmlsReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * edit  edit
-    * instType  节点类型 目前koosearch集群涉及不同类型的节点。 kos: koosearch的搜索中控节点 kos-doc: koosearch的文档解析节点
+    * instType  **参数解释**： 节点类型。 **约束限制**： KooSearch集群涉及不同类型的节点，其他类型集群不涉及。 **取值范围**： - kos: KooSearch的搜索中控节点 - kos-doc: KooSearch的文档解析节点 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class UpdateYmlsReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * edit  edit
-    * instType  节点类型 目前koosearch集群涉及不同类型的节点。 kos: koosearch的搜索中控节点 kos-doc: koosearch的文档解析节点
+    * instType  **参数解释**： 节点类型。 **约束限制**： KooSearch集群涉及不同类型的节点，其他类型集群不涉及。 **取值范围**： - kos: KooSearch的搜索中控节点 - kos-doc: KooSearch的文档解析节点 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class UpdateYmlsReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * edit  edit
-    * instType  节点类型 目前koosearch集群涉及不同类型的节点。 kos: koosearch的搜索中控节点 kos-doc: koosearch的文档解析节点
+    * instType  **参数解释**： 节点类型。 **约束限制**： KooSearch集群涉及不同类型的节点，其他类型集群不涉及。 **取值范围**： - kos: KooSearch的搜索中控节点 - kos-doc: KooSearch的文档解析节点 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class UpdateYmlsReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * edit  edit
-    * instType  节点类型 目前koosearch集群涉及不同类型的节点。 kos: koosearch的搜索中控节点 kos-doc: koosearch的文档解析节点
+    * instType  **参数解释**： 节点类型。 **约束限制**： KooSearch集群涉及不同类型的节点，其他类型集群不涉及。 **取值范围**： - kos: KooSearch的搜索中控节点 - kos-doc: KooSearch的文档解析节点 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class UpdateYmlsReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * edit  edit
-    * instType  节点类型 目前koosearch集群涉及不同类型的节点。 kos: koosearch的搜索中控节点 kos-doc: koosearch的文档解析节点
+    * instType  **参数解释**： 节点类型。 **约束限制**： KooSearch集群涉及不同类型的节点，其他类型集群不涉及。 **取值范围**： - kos: KooSearch的搜索中控节点 - kos-doc: KooSearch的文档解析节点 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -235,7 +235,7 @@ class UpdateYmlsReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets instType
-    *  节点类型 目前koosearch集群涉及不同类型的节点。 kos: koosearch的搜索中控节点 kos-doc: koosearch的文档解析节点
+    *  **参数解释**： 节点类型。 **约束限制**： KooSearch集群涉及不同类型的节点，其他类型集群不涉及。 **取值范围**： - kos: KooSearch的搜索中控节点 - kos-doc: KooSearch的文档解析节点 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -247,7 +247,7 @@ class UpdateYmlsReq implements ModelInterface, ArrayAccess
     /**
     * Sets instType
     *
-    * @param string|null $instType 节点类型 目前koosearch集群涉及不同类型的节点。 kos: koosearch的搜索中控节点 kos-doc: koosearch的文档解析节点
+    * @param string|null $instType **参数解释**： 节点类型。 **约束限制**： KooSearch集群涉及不同类型的节点，其他类型集群不涉及。 **取值范围**： - kos: KooSearch的搜索中控节点 - kos-doc: KooSearch的文档解析节点 **默认取值**： 不涉及
     *
     * @return $this
     */

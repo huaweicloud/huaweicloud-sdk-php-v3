@@ -20,6 +20,10 @@ class ServerDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * capacityReservationId  容量预留ID
+    * capacityReservationSpecification  capacityReservationSpecification
+    * spodId  共池裸机按整机柜发放的同一批次的批创ID
+    * enclaveOptions  enclaveOptions
     * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * updated  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
     * autoTerminateTime  弹性云服务器定时删除时间。  时间格式例如：2020-01-19T03:30:52Z
@@ -73,6 +77,10 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'capacityReservationId' => 'string',
+            'capacityReservationSpecification' => '\HuaweiCloud\SDK\Ecs\V2\Model\CapacityReservationSpecification',
+            'spodId' => 'string',
+            'enclaveOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\EnclaveOptions',
             'status' => 'string',
             'updated' => 'string',
             'autoTerminateTime' => 'string',
@@ -126,6 +134,10 @@ class ServerDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * capacityReservationId  容量预留ID
+    * capacityReservationSpecification  capacityReservationSpecification
+    * spodId  共池裸机按整机柜发放的同一批次的批创ID
+    * enclaveOptions  enclaveOptions
     * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * updated  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
     * autoTerminateTime  弹性云服务器定时删除时间。  时间格式例如：2020-01-19T03:30:52Z
@@ -179,6 +191,10 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'capacityReservationId' => null,
+        'capacityReservationSpecification' => null,
+        'spodId' => null,
+        'enclaveOptions' => null,
         'status' => null,
         'updated' => null,
         'autoTerminateTime' => null,
@@ -253,6 +269,10 @@ class ServerDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * capacityReservationId  容量预留ID
+    * capacityReservationSpecification  capacityReservationSpecification
+    * spodId  共池裸机按整机柜发放的同一批次的批创ID
+    * enclaveOptions  enclaveOptions
     * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * updated  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
     * autoTerminateTime  弹性云服务器定时删除时间。  时间格式例如：2020-01-19T03:30:52Z
@@ -306,6 +326,10 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'capacityReservationId' => 'capacity_reservation_id',
+            'capacityReservationSpecification' => 'capacity_reservation_specification',
+            'spodId' => 'spod_id',
+            'enclaveOptions' => 'enclave_options',
             'status' => 'status',
             'updated' => 'updated',
             'autoTerminateTime' => 'auto_terminate_time',
@@ -359,6 +383,10 @@ class ServerDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * capacityReservationId  容量预留ID
+    * capacityReservationSpecification  capacityReservationSpecification
+    * spodId  共池裸机按整机柜发放的同一批次的批创ID
+    * enclaveOptions  enclaveOptions
     * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * updated  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
     * autoTerminateTime  弹性云服务器定时删除时间。  时间格式例如：2020-01-19T03:30:52Z
@@ -412,6 +440,10 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'capacityReservationId' => 'setCapacityReservationId',
+            'capacityReservationSpecification' => 'setCapacityReservationSpecification',
+            'spodId' => 'setSpodId',
+            'enclaveOptions' => 'setEnclaveOptions',
             'status' => 'setStatus',
             'updated' => 'setUpdated',
             'autoTerminateTime' => 'setAutoTerminateTime',
@@ -465,6 +497,10 @@ class ServerDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * capacityReservationId  容量预留ID
+    * capacityReservationSpecification  capacityReservationSpecification
+    * spodId  共池裸机按整机柜发放的同一批次的批创ID
+    * enclaveOptions  enclaveOptions
     * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * updated  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
     * autoTerminateTime  弹性云服务器定时删除时间。  时间格式例如：2020-01-19T03:30:52Z
@@ -518,6 +554,10 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'capacityReservationId' => 'getCapacityReservationId',
+            'capacityReservationSpecification' => 'getCapacityReservationSpecification',
+            'spodId' => 'getSpodId',
+            'enclaveOptions' => 'getEnclaveOptions',
             'status' => 'getStatus',
             'updated' => 'getUpdated',
             'autoTerminateTime' => 'getAutoTerminateTime',
@@ -627,6 +667,10 @@ class ServerDetail implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['capacityReservationId'] = isset($data['capacityReservationId']) ? $data['capacityReservationId'] : null;
+        $this->container['capacityReservationSpecification'] = isset($data['capacityReservationSpecification']) ? $data['capacityReservationSpecification'] : null;
+        $this->container['spodId'] = isset($data['spodId']) ? $data['spodId'] : null;
+        $this->container['enclaveOptions'] = isset($data['enclaveOptions']) ? $data['enclaveOptions'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
         $this->container['autoTerminateTime'] = isset($data['autoTerminateTime']) ? $data['autoTerminateTime'] : null;
@@ -686,6 +730,18 @@ class ServerDetail implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['capacityReservationId'] === null) {
+            $invalidProperties[] = "'capacityReservationId' can't be null";
+        }
+        if ($this->container['capacityReservationSpecification'] === null) {
+            $invalidProperties[] = "'capacityReservationSpecification' can't be null";
+        }
+        if ($this->container['spodId'] === null) {
+            $invalidProperties[] = "'spodId' can't be null";
+        }
+        if ($this->container['enclaveOptions'] === null) {
+            $invalidProperties[] = "'enclaveOptions' can't be null";
+        }
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
         }
@@ -803,6 +859,102 @@ class ServerDetail implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets capacityReservationId
+    *  容量预留ID
+    *
+    * @return string
+    */
+    public function getCapacityReservationId()
+    {
+        return $this->container['capacityReservationId'];
+    }
+
+    /**
+    * Sets capacityReservationId
+    *
+    * @param string $capacityReservationId 容量预留ID
+    *
+    * @return $this
+    */
+    public function setCapacityReservationId($capacityReservationId)
+    {
+        $this->container['capacityReservationId'] = $capacityReservationId;
+        return $this;
+    }
+
+    /**
+    * Gets capacityReservationSpecification
+    *  capacityReservationSpecification
+    *
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\CapacityReservationSpecification
+    */
+    public function getCapacityReservationSpecification()
+    {
+        return $this->container['capacityReservationSpecification'];
+    }
+
+    /**
+    * Sets capacityReservationSpecification
+    *
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\CapacityReservationSpecification $capacityReservationSpecification capacityReservationSpecification
+    *
+    * @return $this
+    */
+    public function setCapacityReservationSpecification($capacityReservationSpecification)
+    {
+        $this->container['capacityReservationSpecification'] = $capacityReservationSpecification;
+        return $this;
+    }
+
+    /**
+    * Gets spodId
+    *  共池裸机按整机柜发放的同一批次的批创ID
+    *
+    * @return string
+    */
+    public function getSpodId()
+    {
+        return $this->container['spodId'];
+    }
+
+    /**
+    * Sets spodId
+    *
+    * @param string $spodId 共池裸机按整机柜发放的同一批次的批创ID
+    *
+    * @return $this
+    */
+    public function setSpodId($spodId)
+    {
+        $this->container['spodId'] = $spodId;
+        return $this;
+    }
+
+    /**
+    * Gets enclaveOptions
+    *  enclaveOptions
+    *
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\EnclaveOptions
+    */
+    public function getEnclaveOptions()
+    {
+        return $this->container['enclaveOptions'];
+    }
+
+    /**
+    * Sets enclaveOptions
+    *
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\EnclaveOptions $enclaveOptions enclaveOptions
+    *
+    * @return $this
+    */
+    public function setEnclaveOptions($enclaveOptions)
+    {
+        $this->container['enclaveOptions'] = $enclaveOptions;
+        return $this;
     }
 
     /**
