@@ -186,6 +186,9 @@ class AutoScalingPolicyV2 implements ModelInterface, ArrayAccess
         if ($this->container['resourcePoolName'] === null) {
             $invalidProperties[] = "'resourcePoolName' can't be null";
         }
+        if ($this->container['autoScalingPolicy'] === null) {
+            $invalidProperties[] = "'autoScalingPolicy' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -252,7 +255,7 @@ class AutoScalingPolicyV2 implements ModelInterface, ArrayAccess
     * Gets autoScalingPolicy
     *  autoScalingPolicy
     *
-    * @return \HuaweiCloud\SDK\Mrs\V2\Model\AutoScalingPolicyInfo|null
+    * @return \HuaweiCloud\SDK\Mrs\V2\Model\AutoScalingPolicyInfo
     */
     public function getAutoScalingPolicy()
     {
@@ -262,7 +265,7 @@ class AutoScalingPolicyV2 implements ModelInterface, ArrayAccess
     /**
     * Sets autoScalingPolicy
     *
-    * @param \HuaweiCloud\SDK\Mrs\V2\Model\AutoScalingPolicyInfo|null $autoScalingPolicy autoScalingPolicy
+    * @param \HuaweiCloud\SDK\Mrs\V2\Model\AutoScalingPolicyInfo $autoScalingPolicy autoScalingPolicy
     *
     * @return $this
     */

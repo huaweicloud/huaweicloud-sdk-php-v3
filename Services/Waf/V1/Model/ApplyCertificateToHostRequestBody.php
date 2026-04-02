@@ -21,7 +21,7 @@ class ApplyCertificateToHostRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * cloudHostIds  云模式HTTPS域名id，通过查询云模式防护域名列表（ListHost）接口获取
-    * premiumHostIds  独享模式HTTPS域名id，通过独享模式域名列表（ListPremiumHost）接口获取
+    * premiumHostIds  独享模式HTTPS域名id，通过查询独享模式域名列表（ListPremiumHost）接口获取
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ApplyCertificateToHostRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * cloudHostIds  云模式HTTPS域名id，通过查询云模式防护域名列表（ListHost）接口获取
-    * premiumHostIds  独享模式HTTPS域名id，通过独享模式域名列表（ListPremiumHost）接口获取
+    * premiumHostIds  独享模式HTTPS域名id，通过查询独享模式域名列表（ListPremiumHost）接口获取
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ApplyCertificateToHostRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * cloudHostIds  云模式HTTPS域名id，通过查询云模式防护域名列表（ListHost）接口获取
-    * premiumHostIds  独享模式HTTPS域名id，通过独享模式域名列表（ListPremiumHost）接口获取
+    * premiumHostIds  独享模式HTTPS域名id，通过查询独享模式域名列表（ListPremiumHost）接口获取
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ApplyCertificateToHostRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * cloudHostIds  云模式HTTPS域名id，通过查询云模式防护域名列表（ListHost）接口获取
-    * premiumHostIds  独享模式HTTPS域名id，通过独享模式域名列表（ListPremiumHost）接口获取
+    * premiumHostIds  独享模式HTTPS域名id，通过查询独享模式域名列表（ListPremiumHost）接口获取
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ApplyCertificateToHostRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * cloudHostIds  云模式HTTPS域名id，通过查询云模式防护域名列表（ListHost）接口获取
-    * premiumHostIds  独享模式HTTPS域名id，通过独享模式域名列表（ListPremiumHost）接口获取
+    * premiumHostIds  独享模式HTTPS域名id，通过查询独享模式域名列表（ListPremiumHost）接口获取
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class ApplyCertificateToHostRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets premiumHostIds
-    *  独享模式HTTPS域名id，通过独享模式域名列表（ListPremiumHost）接口获取
+    *  独享模式HTTPS域名id，通过查询独享模式域名列表（ListPremiumHost）接口获取
     *
     * @return string[]|null
     */
@@ -221,7 +221,7 @@ class ApplyCertificateToHostRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets premiumHostIds
     *
-    * @param string[]|null $premiumHostIds 独享模式HTTPS域名id，通过独享模式域名列表（ListPremiumHost）接口获取
+    * @param string[]|null $premiumHostIds 独享模式HTTPS域名id，通过查询独享模式域名列表（ListPremiumHost）接口获取
     *
     * @return $this
     */

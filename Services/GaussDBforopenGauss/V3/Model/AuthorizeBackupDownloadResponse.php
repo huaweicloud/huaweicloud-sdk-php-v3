@@ -21,8 +21,8 @@ class AuthorizeBackupDownloadResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * bucket  OBS桶名。
-    * filePaths  通过OBS Browser+下载备份文件的路径名称。
+    * bucket  **参数解释**: 文件所在桶名。 **取值范围**: 不涉及。
+    * filePaths  **参数解释**: 通过OBS Browser+下载备份文件的路径名称。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class AuthorizeBackupDownloadResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * bucket  OBS桶名。
-    * filePaths  通过OBS Browser+下载备份文件的路径名称。
+    * bucket  **参数解释**: 文件所在桶名。 **取值范围**: 不涉及。
+    * filePaths  **参数解释**: 通过OBS Browser+下载备份文件的路径名称。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class AuthorizeBackupDownloadResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * bucket  OBS桶名。
-    * filePaths  通过OBS Browser+下载备份文件的路径名称。
+    * bucket  **参数解释**: 文件所在桶名。 **取值范围**: 不涉及。
+    * filePaths  **参数解释**: 通过OBS Browser+下载备份文件的路径名称。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class AuthorizeBackupDownloadResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * bucket  OBS桶名。
-    * filePaths  通过OBS Browser+下载备份文件的路径名称。
+    * bucket  **参数解释**: 文件所在桶名。 **取值范围**: 不涉及。
+    * filePaths  **参数解释**: 通过OBS Browser+下载备份文件的路径名称。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class AuthorizeBackupDownloadResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * bucket  OBS桶名。
-    * filePaths  通过OBS Browser+下载备份文件的路径名称。
+    * bucket  **参数解释**: 文件所在桶名。 **取值范围**: 不涉及。
+    * filePaths  **参数解释**: 通过OBS Browser+下载备份文件的路径名称。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class AuthorizeBackupDownloadResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets bucket
-    *  OBS桶名。
+    *  **参数解释**: 文件所在桶名。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class AuthorizeBackupDownloadResponse implements ModelInterface, ArrayAccess
     /**
     * Sets bucket
     *
-    * @param string|null $bucket OBS桶名。
+    * @param string|null $bucket **参数解释**: 文件所在桶名。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class AuthorizeBackupDownloadResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets filePaths
-    *  通过OBS Browser+下载备份文件的路径名称。
+    *  **参数解释**: 通过OBS Browser+下载备份文件的路径名称。
     *
     * @return string[]|null
     */
@@ -222,7 +222,7 @@ class AuthorizeBackupDownloadResponse implements ModelInterface, ArrayAccess
     /**
     * Sets filePaths
     *
-    * @param string[]|null $filePaths 通过OBS Browser+下载备份文件的路径名称。
+    * @param string[]|null $filePaths **参数解释**: 通过OBS Browser+下载备份文件的路径名称。
     *
     * @return $this
     */

@@ -7622,6 +7622,172 @@ class WafAsyncClient extends Client
     }
 
     /**
+     * 查询实例组列表
+     *
+     * 查询实例组列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listInstancePoolsAsync($request)
+    {
+        return $this->listInstancePoolsAsyncWithHttpInfo($request);
+    }
+    
+    public function listInstancePoolsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/premium-waf/pools';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['page'] !== null) {
+            $queryParams['page'] = $localVarParams['page'];
+        }
+        if ($localVarParams['pagesize'] !== null) {
+            $queryParams['pagesize'] = $localVarParams['pagesize'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['vpcId'] !== null) {
+            $queryParams['vpc_id'] = $localVarParams['vpcId'];
+        }
+        if ($localVarParams['detail'] !== null) {
+            $queryParams['detail'] = $localVarParams['detail'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListInstancePoolsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListInstancePoolsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询WAF独享引擎状态列表
+     *
+     * 查询WAF独享引擎状态列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listInstanceStatusAsync($request)
+    {
+        return $this->listInstanceStatusAsyncWithHttpInfo($request);
+    }
+    
+    public function listInstanceStatusAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/premium-waf/instance/status';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['page'] !== null) {
+            $queryParams['page'] = $localVarParams['page'];
+        }
+        if ($localVarParams['pagesize'] !== null) {
+            $queryParams['pagesize'] = $localVarParams['pagesize'];
+        }
+        if ($localVarParams['instanceIds'] !== null) {
+            $queryParams['instance_ids'] = $localVarParams['instanceIds'];
+        }
+        if ($localVarParams['runStatus'] !== null) {
+            $queryParams['run_status'] = $localVarParams['runStatus'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListInstanceStatusResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListInstanceStatusRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询WAF独享引擎标签
      *
      * 查询WAF独享引擎标签。独享模式只在部分局点支持，包括：华北-北京四、华东-上海一、华南-广州、华南-深圳  、中国-香港、亚太-曼谷、 亚太-新加坡。
@@ -8090,6 +8256,83 @@ class WafAsyncClient extends Client
     }
 
     /**
+     * 查询泛域名的防护事件中的子域名，仅泛域名存在子域名
+     *
+     * 查询泛域名的防护事件中的子域名，仅泛域名存在子域名
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listOverviewsHostDomainsAsync($request)
+    {
+        return $this->listOverviewsHostDomainsAsyncWithHttpInfo($request);
+    }
+    
+    public function listOverviewsHostDomainsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/waf/overviews/{host_id}/domains';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['from'] !== null) {
+            $queryParams['from'] = $localVarParams['from'];
+        }
+        if ($localVarParams['to'] !== null) {
+            $queryParams['to'] = $localVarParams['to'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['hostId'] !== null) {
+            $pathParams['host_id'] = $localVarParams['hostId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=utf-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=utf-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListOverviewsHostDomainsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListOverviewsHostDomainsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询防护策略列表
      *
      * 查询防护策略列表
@@ -8167,9 +8410,89 @@ class WafAsyncClient extends Client
     }
 
     /**
-     * 独享模式域名列表
+     * 查询所有策略指定类型的防护规则
      *
-     * 独享模式域名列表
+     * 查询所有策略指定类型的防护规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPolicyProtectRulesAsync($request)
+    {
+        return $this->listPolicyProtectRulesAsyncWithHttpInfo($request);
+    }
+    
+    public function listPolicyProtectRulesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/waf/policy/{rule_type}/rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyids'] !== null) {
+            $queryParams['policyids'] = $localVarParams['policyids'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['page'] !== null) {
+            $queryParams['page'] = $localVarParams['page'];
+        }
+        if ($localVarParams['pagesize'] !== null) {
+            $queryParams['pagesize'] = $localVarParams['pagesize'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['ruleType'] !== null) {
+            $pathParams['rule_type'] = $localVarParams['ruleType'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListPolicyProtectRulesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListPolicyProtectRulesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询独享模式域名列表
+     *
+     * 查询独享模式域名列表
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13696,7 +14019,7 @@ class WafAsyncClient extends Client
     
     public function updatePolicyRuleStatusAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/{ruletype}/{rule_id}/status';
+        $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/{rule_type}/{rule_id}/status';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -13719,8 +14042,8 @@ class WafAsyncClient extends Client
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
         }
-        if ($localVarParams['ruletype'] !== null) {
-            $pathParams['ruletype'] = $localVarParams['ruletype'];
+        if ($localVarParams['ruleType'] !== null) {
+            $pathParams['rule_type'] = $localVarParams['ruleType'];
         }
         if ($localVarParams['ruleId'] !== null) {
             $pathParams['rule_id'] = $localVarParams['ruleId'];
@@ -14642,6 +14965,89 @@ class WafAsyncClient extends Client
     }
 
     /**
+     * 查询Web防护漏洞情报
+     *
+     * 查询Web防护漏洞情报
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVulnRulesAsync($request)
+    {
+        return $this->listVulnRulesAsyncWithHttpInfo($request);
+    }
+    
+    public function listVulnRulesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/waf/vulnerability/notification';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['from'] !== null) {
+            $queryParams['from'] = $localVarParams['from'];
+        }
+        if ($localVarParams['to'] !== null) {
+            $queryParams['to'] = $localVarParams['to'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListVulnRulesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListVulnRulesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 根据Id查询Web防护规则
      *
      * 根据Id查询Web防护规则
@@ -14674,6 +15080,9 @@ class WafAsyncClient extends Client
         }
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
         }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];

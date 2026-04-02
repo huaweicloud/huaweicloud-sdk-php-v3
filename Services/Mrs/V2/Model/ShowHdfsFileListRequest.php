@@ -22,10 +22,10 @@ class ShowHdfsFileListRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  集群ID。获取方法，请参见[获取集群ID](https://support.huaweicloud.com/api-mrs/mrs_02_9001.html)。
     * path  文件目录。 比如访问“/tmp/test”目录列表，此处必须是目录，整体URI为/v2/{project_id}/clusters/{cluster_id}/files?path=%2Ftmp%2Ftest 单层目录要遵循以下规则： - 不能为空 - 不能以\".\"开头或结尾 - 不能包括下列符号 : :*?\"<>|\\;&,'`!{}[]$%+ - 不能超过255个字节
-    * offset  分页参数，表示从该偏移量开始查询文件列表，默认值为0。
+    * offset  分页参数，表示从该偏移量开始查询文件列表，默认值为1。
     * limit  分页参数，列表当前分页的数量限制，默认为100，最大1000。
     * sortKey  列表排序按该属性排序。缺省值：path_suffix - path_suffix：文件或目录名称 - length：文件大小 - modification_time：修改时间
-    * order  列表排序方式，desc为降序，asc为升序，默认值为desc。
+    * order  列表排序方式，desc为降序，asc为升序，默认值为asc。
     *
     * @var string[]
     */
@@ -42,10 +42,10 @@ class ShowHdfsFileListRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  集群ID。获取方法，请参见[获取集群ID](https://support.huaweicloud.com/api-mrs/mrs_02_9001.html)。
     * path  文件目录。 比如访问“/tmp/test”目录列表，此处必须是目录，整体URI为/v2/{project_id}/clusters/{cluster_id}/files?path=%2Ftmp%2Ftest 单层目录要遵循以下规则： - 不能为空 - 不能以\".\"开头或结尾 - 不能包括下列符号 : :*?\"<>|\\;&,'`!{}[]$%+ - 不能超过255个字节
-    * offset  分页参数，表示从该偏移量开始查询文件列表，默认值为0。
+    * offset  分页参数，表示从该偏移量开始查询文件列表，默认值为1。
     * limit  分页参数，列表当前分页的数量限制，默认为100，最大1000。
     * sortKey  列表排序按该属性排序。缺省值：path_suffix - path_suffix：文件或目录名称 - length：文件大小 - modification_time：修改时间
-    * order  列表排序方式，desc为降序，asc为升序，默认值为desc。
+    * order  列表排序方式，desc为降序，asc为升序，默认值为asc。
     *
     * @var string[]
     */
@@ -83,10 +83,10 @@ class ShowHdfsFileListRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * clusterId  集群ID。获取方法，请参见[获取集群ID](https://support.huaweicloud.com/api-mrs/mrs_02_9001.html)。
     * path  文件目录。 比如访问“/tmp/test”目录列表，此处必须是目录，整体URI为/v2/{project_id}/clusters/{cluster_id}/files?path=%2Ftmp%2Ftest 单层目录要遵循以下规则： - 不能为空 - 不能以\".\"开头或结尾 - 不能包括下列符号 : :*?\"<>|\\;&,'`!{}[]$%+ - 不能超过255个字节
-    * offset  分页参数，表示从该偏移量开始查询文件列表，默认值为0。
+    * offset  分页参数，表示从该偏移量开始查询文件列表，默认值为1。
     * limit  分页参数，列表当前分页的数量限制，默认为100，最大1000。
     * sortKey  列表排序按该属性排序。缺省值：path_suffix - path_suffix：文件或目录名称 - length：文件大小 - modification_time：修改时间
-    * order  列表排序方式，desc为降序，asc为升序，默认值为desc。
+    * order  列表排序方式，desc为降序，asc为升序，默认值为asc。
     *
     * @var string[]
     */
@@ -103,10 +103,10 @@ class ShowHdfsFileListRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  集群ID。获取方法，请参见[获取集群ID](https://support.huaweicloud.com/api-mrs/mrs_02_9001.html)。
     * path  文件目录。 比如访问“/tmp/test”目录列表，此处必须是目录，整体URI为/v2/{project_id}/clusters/{cluster_id}/files?path=%2Ftmp%2Ftest 单层目录要遵循以下规则： - 不能为空 - 不能以\".\"开头或结尾 - 不能包括下列符号 : :*?\"<>|\\;&,'`!{}[]$%+ - 不能超过255个字节
-    * offset  分页参数，表示从该偏移量开始查询文件列表，默认值为0。
+    * offset  分页参数，表示从该偏移量开始查询文件列表，默认值为1。
     * limit  分页参数，列表当前分页的数量限制，默认为100，最大1000。
     * sortKey  列表排序按该属性排序。缺省值：path_suffix - path_suffix：文件或目录名称 - length：文件大小 - modification_time：修改时间
-    * order  列表排序方式，desc为降序，asc为升序，默认值为desc。
+    * order  列表排序方式，desc为降序，asc为升序，默认值为asc。
     *
     * @var string[]
     */
@@ -123,10 +123,10 @@ class ShowHdfsFileListRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  集群ID。获取方法，请参见[获取集群ID](https://support.huaweicloud.com/api-mrs/mrs_02_9001.html)。
     * path  文件目录。 比如访问“/tmp/test”目录列表，此处必须是目录，整体URI为/v2/{project_id}/clusters/{cluster_id}/files?path=%2Ftmp%2Ftest 单层目录要遵循以下规则： - 不能为空 - 不能以\".\"开头或结尾 - 不能包括下列符号 : :*?\"<>|\\;&,'`!{}[]$%+ - 不能超过255个字节
-    * offset  分页参数，表示从该偏移量开始查询文件列表，默认值为0。
+    * offset  分页参数，表示从该偏移量开始查询文件列表，默认值为1。
     * limit  分页参数，列表当前分页的数量限制，默认为100，最大1000。
     * sortKey  列表排序按该属性排序。缺省值：path_suffix - path_suffix：文件或目录名称 - length：文件大小 - modification_time：修改时间
-    * order  列表排序方式，desc为降序，asc为升序，默认值为desc。
+    * order  列表排序方式，desc为降序，asc为升序，默认值为asc。
     *
     * @var string[]
     */
@@ -331,7 +331,7 @@ class ShowHdfsFileListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  分页参数，表示从该偏移量开始查询文件列表，默认值为0。
+    *  分页参数，表示从该偏移量开始查询文件列表，默认值为1。
     *
     * @return string|null
     */
@@ -343,7 +343,7 @@ class ShowHdfsFileListRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param string|null $offset 分页参数，表示从该偏移量开始查询文件列表，默认值为0。
+    * @param string|null $offset 分页参数，表示从该偏移量开始查询文件列表，默认值为1。
     *
     * @return $this
     */
@@ -403,7 +403,7 @@ class ShowHdfsFileListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets order
-    *  列表排序方式，desc为降序，asc为升序，默认值为desc。
+    *  列表排序方式，desc为降序，asc为升序，默认值为asc。
     *
     * @return string|null
     */
@@ -415,7 +415,7 @@ class ShowHdfsFileListRequest implements ModelInterface, ArrayAccess
     /**
     * Sets order
     *
-    * @param string|null $order 列表排序方式，desc为降序，asc为升序，默认值为desc。
+    * @param string|null $order 列表排序方式，desc为降序，asc为升序，默认值为asc。
     *
     * @return $this
     */

@@ -5664,9 +5664,9 @@ class EcsAsyncClient extends Client
     }
 
     /**
-     * 查询flavor的容量
+     * 查询规格的容量
      *
-     * 查询flavor的容量
+     * 查询规格的容量
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

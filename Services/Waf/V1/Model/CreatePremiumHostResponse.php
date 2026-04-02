@@ -23,7 +23,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  域名id
     * hostname  防护域名
-    * protocol  **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同事 **默认取值：** 不涉及
+    * protocol  **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同时 **默认取值：** 不涉及
     * server  防护域名的源站服务器配置信息
     * proxy  是否使用代理   - true：代表使用代理   - false：代表未使用代理
     * locked  域名冻结状态，0表示未冻结，1表示为冻结，冗余参数
@@ -79,7 +79,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  域名id
     * hostname  防护域名
-    * protocol  **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同事 **默认取值：** 不涉及
+    * protocol  **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同时 **默认取值：** 不涉及
     * server  防护域名的源站服务器配置信息
     * proxy  是否使用代理   - true：代表使用代理   - false：代表未使用代理
     * locked  域名冻结状态，0表示未冻结，1表示为冻结，冗余参数
@@ -156,7 +156,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  域名id
     * hostname  防护域名
-    * protocol  **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同事 **默认取值：** 不涉及
+    * protocol  **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同时 **默认取值：** 不涉及
     * server  防护域名的源站服务器配置信息
     * proxy  是否使用代理   - true：代表使用代理   - false：代表未使用代理
     * locked  域名冻结状态，0表示未冻结，1表示为冻结，冗余参数
@@ -212,7 +212,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  域名id
     * hostname  防护域名
-    * protocol  **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同事 **默认取值：** 不涉及
+    * protocol  **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同时 **默认取值：** 不涉及
     * server  防护域名的源站服务器配置信息
     * proxy  是否使用代理   - true：代表使用代理   - false：代表未使用代理
     * locked  域名冻结状态，0表示未冻结，1表示为冻结，冗余参数
@@ -268,7 +268,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  域名id
     * hostname  防护域名
-    * protocol  **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同事 **默认取值：** 不涉及
+    * protocol  **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同时 **默认取值：** 不涉及
     * server  防护域名的源站服务器配置信息
     * proxy  是否使用代理   - true：代表使用代理   - false：代表未使用代理
     * locked  域名冻结状态，0表示未冻结，1表示为冻结，冗余参数
@@ -559,7 +559,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同事 **默认取值：** 不涉及
+    *  **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同时 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -571,7 +571,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string|null $protocol **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同事 **默认取值：** 不涉及
+    * @param string|null $protocol **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同时 **默认取值：** 不涉及
     *
     * @return $this
     */

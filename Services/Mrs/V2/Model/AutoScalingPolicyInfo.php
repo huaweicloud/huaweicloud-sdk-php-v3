@@ -213,25 +213,16 @@ class AutoScalingPolicyInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['autoScalingEnable'] === null) {
-            $invalidProperties[] = "'autoScalingEnable' can't be null";
-        }
-        if ($this->container['minCapacity'] === null) {
-            $invalidProperties[] = "'minCapacity' can't be null";
-        }
-            if (($this->container['minCapacity'] > 500)) {
+            if (!is_null($this->container['minCapacity']) && ($this->container['minCapacity'] > 500)) {
                 $invalidProperties[] = "invalid value for 'minCapacity', must be smaller than or equal to 500.";
             }
-            if (($this->container['minCapacity'] < 0)) {
+            if (!is_null($this->container['minCapacity']) && ($this->container['minCapacity'] < 0)) {
                 $invalidProperties[] = "invalid value for 'minCapacity', must be bigger than or equal to 0.";
             }
-        if ($this->container['maxCapacity'] === null) {
-            $invalidProperties[] = "'maxCapacity' can't be null";
-        }
-            if (($this->container['maxCapacity'] > 500)) {
+            if (!is_null($this->container['maxCapacity']) && ($this->container['maxCapacity'] > 500)) {
                 $invalidProperties[] = "invalid value for 'maxCapacity', must be smaller than or equal to 500.";
             }
-            if (($this->container['maxCapacity'] < 0)) {
+            if (!is_null($this->container['maxCapacity']) && ($this->container['maxCapacity'] < 0)) {
                 $invalidProperties[] = "invalid value for 'maxCapacity', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -252,7 +243,7 @@ class AutoScalingPolicyInfo implements ModelInterface, ArrayAccess
     * Gets autoScalingEnable
     *  当前自动伸缩规则是否开启。
     *
-    * @return bool
+    * @return bool|null
     */
     public function getAutoScalingEnable()
     {
@@ -262,7 +253,7 @@ class AutoScalingPolicyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets autoScalingEnable
     *
-    * @param bool $autoScalingEnable 当前自动伸缩规则是否开启。
+    * @param bool|null $autoScalingEnable 当前自动伸缩规则是否开启。
     *
     * @return $this
     */
@@ -276,7 +267,7 @@ class AutoScalingPolicyInfo implements ModelInterface, ArrayAccess
     * Gets minCapacity
     *  指定该节点组的最小保留节点数。 取值范围：[0～500]
     *
-    * @return int
+    * @return int|null
     */
     public function getMinCapacity()
     {
@@ -286,7 +277,7 @@ class AutoScalingPolicyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets minCapacity
     *
-    * @param int $minCapacity 指定该节点组的最小保留节点数。 取值范围：[0～500]
+    * @param int|null $minCapacity 指定该节点组的最小保留节点数。 取值范围：[0～500]
     *
     * @return $this
     */
@@ -300,7 +291,7 @@ class AutoScalingPolicyInfo implements ModelInterface, ArrayAccess
     * Gets maxCapacity
     *  指定该节点组的最大节点数。 取值范围：[0～500]
     *
-    * @return int
+    * @return int|null
     */
     public function getMaxCapacity()
     {
@@ -310,7 +301,7 @@ class AutoScalingPolicyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets maxCapacity
     *
-    * @param int $maxCapacity 指定该节点组的最大节点数。 取值范围：[0～500]
+    * @param int|null $maxCapacity 指定该节点组的最大节点数。 取值范围：[0～500]
     *
     * @return $this
     */

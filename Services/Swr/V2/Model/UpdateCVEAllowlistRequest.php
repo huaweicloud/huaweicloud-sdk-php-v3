@@ -23,7 +23,7 @@ class UpdateCVEAllowlistRequest implements ModelInterface, ArrayAccess
     * id  白名单ID，查询命名空间信息时，会返回白名单ID
     * namespaceId  漏洞白名单列表所属的命名空间ID
     * expiresAt  漏洞白名单的有效期时间，以自 1970 年 1 月 1 日以来的秒数表示；如果没有配置，则永不过期
-    * items  漏洞列表
+    * items  漏洞列表，最多支持100条数据，且不能有重复漏洞。
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class UpdateCVEAllowlistRequest implements ModelInterface, ArrayAccess
     * id  白名单ID，查询命名空间信息时，会返回白名单ID
     * namespaceId  漏洞白名单列表所属的命名空间ID
     * expiresAt  漏洞白名单的有效期时间，以自 1970 年 1 月 1 日以来的秒数表示；如果没有配置，则永不过期
-    * items  漏洞列表
+    * items  漏洞列表，最多支持100条数据，且不能有重复漏洞。
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class UpdateCVEAllowlistRequest implements ModelInterface, ArrayAccess
     * id  白名单ID，查询命名空间信息时，会返回白名单ID
     * namespaceId  漏洞白名单列表所属的命名空间ID
     * expiresAt  漏洞白名单的有效期时间，以自 1970 年 1 月 1 日以来的秒数表示；如果没有配置，则永不过期
-    * items  漏洞列表
+    * items  漏洞列表，最多支持100条数据，且不能有重复漏洞。
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class UpdateCVEAllowlistRequest implements ModelInterface, ArrayAccess
     * id  白名单ID，查询命名空间信息时，会返回白名单ID
     * namespaceId  漏洞白名单列表所属的命名空间ID
     * expiresAt  漏洞白名单的有效期时间，以自 1970 年 1 月 1 日以来的秒数表示；如果没有配置，则永不过期
-    * items  漏洞列表
+    * items  漏洞列表，最多支持100条数据，且不能有重复漏洞。
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class UpdateCVEAllowlistRequest implements ModelInterface, ArrayAccess
     * id  白名单ID，查询命名空间信息时，会返回白名单ID
     * namespaceId  漏洞白名单列表所属的命名空间ID
     * expiresAt  漏洞白名单的有效期时间，以自 1970 年 1 月 1 日以来的秒数表示；如果没有配置，则永不过期
-    * items  漏洞列表
+    * items  漏洞列表，最多支持100条数据，且不能有重复漏洞。
     *
     * @var string[]
     */
@@ -279,7 +279,7 @@ class UpdateCVEAllowlistRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets items
-    *  漏洞列表
+    *  漏洞列表，最多支持100条数据，且不能有重复漏洞。
     *
     * @return \HuaweiCloud\SDK\Swr\V2\Model\CVEAllowlistItem[]|null
     */
@@ -291,7 +291,7 @@ class UpdateCVEAllowlistRequest implements ModelInterface, ArrayAccess
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\Swr\V2\Model\CVEAllowlistItem[]|null $items 漏洞列表
+    * @param \HuaweiCloud\SDK\Swr\V2\Model\CVEAllowlistItem[]|null $items 漏洞列表，最多支持100条数据，且不能有重复漏洞。
     *
     * @return $this
     */

@@ -20,6 +20,7 @@ class ShowWebProtectionRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * xLanguage  **参数解释：** 语言类型 **约束限制：** 不涉及 **取值范围：** - zh-cn 中文 - en-us 英文 **默认取值：** zh-cn
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
     * ruleId  **参数解释：** 基础防护规则id，通过查询内置规则集列表（ListWebBasicProtectionRules）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -27,6 +28,7 @@ class ShowWebProtectionRuleRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'contentType' => 'string',
             'xLanguage' => 'string',
             'enterpriseProjectId' => 'string',
             'ruleId' => 'string'
@@ -34,6 +36,7 @@ class ShowWebProtectionRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * xLanguage  **参数解释：** 语言类型 **约束限制：** 不涉及 **取值范围：** - zh-cn 中文 - en-us 英文 **默认取值：** zh-cn
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
     * ruleId  **参数解释：** 基础防护规则id，通过查询内置规则集列表（ListWebBasicProtectionRules）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -41,6 +44,7 @@ class ShowWebProtectionRuleRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'contentType' => null,
         'xLanguage' => null,
         'enterpriseProjectId' => null,
         'ruleId' => null
@@ -69,6 +73,7 @@ class ShowWebProtectionRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * xLanguage  **参数解释：** 语言类型 **约束限制：** 不涉及 **取值范围：** - zh-cn 中文 - en-us 英文 **默认取值：** zh-cn
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
     * ruleId  **参数解释：** 基础防护规则id，通过查询内置规则集列表（ListWebBasicProtectionRules）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -76,6 +81,7 @@ class ShowWebProtectionRuleRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'contentType' => 'Content-Type',
             'xLanguage' => 'X-Language',
             'enterpriseProjectId' => 'enterprise_project_id',
             'ruleId' => 'rule_id'
@@ -83,6 +89,7 @@ class ShowWebProtectionRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * xLanguage  **参数解释：** 语言类型 **约束限制：** 不涉及 **取值范围：** - zh-cn 中文 - en-us 英文 **默认取值：** zh-cn
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
     * ruleId  **参数解释：** 基础防护规则id，通过查询内置规则集列表（ListWebBasicProtectionRules）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -90,6 +97,7 @@ class ShowWebProtectionRuleRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'contentType' => 'setContentType',
             'xLanguage' => 'setXLanguage',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'ruleId' => 'setRuleId'
@@ -97,6 +105,7 @@ class ShowWebProtectionRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * contentType  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
     * xLanguage  **参数解释：** 语言类型 **约束限制：** 不涉及 **取值范围：** - zh-cn 中文 - en-us 英文 **默认取值：** zh-cn
     * enterpriseProjectId  **参数解释：** 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目ID。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。 **约束限制：** 不涉及 **取值范围：**  - 0：代表default企业项目  - all_granted_eps：代表所有企业项目  - 其它企业项目ID：长度为36个字符 **默认取值：** 0
     * ruleId  **参数解释：** 基础防护规则id，通过查询内置规则集列表（ListWebBasicProtectionRules）接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
@@ -104,6 +113,7 @@ class ShowWebProtectionRuleRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'contentType' => 'getContentType',
             'xLanguage' => 'getXLanguage',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'ruleId' => 'getRuleId'
@@ -182,6 +192,7 @@ class ShowWebProtectionRuleRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['ruleId'] = isset($data['ruleId']) ? $data['ruleId'] : null;
@@ -218,6 +229,30 @@ class ShowWebProtectionRuleRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets contentType
+    *  **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    *
+    * @return string|null
+    */
+    public function getContentType()
+    {
+        return $this->container['contentType'];
+    }
+
+    /**
+    * Sets contentType
+    *
+    * @param string|null $contentType **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** application/json;charset=utf8
+    *
+    * @return $this
+    */
+    public function setContentType($contentType)
+    {
+        $this->container['contentType'] = $contentType;
+        return $this;
     }
 
     /**

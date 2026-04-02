@@ -29,7 +29,7 @@ class ShowJobExeListNewRequest implements ModelInterface, ArrayAccess
     * jobResult  作业运行结果。 - FAILED：执行失败的作业。 - KILLED：执行中被手动终止的作业。 - UNDEFINED：正在执行的作业。 - SUCCEEDED：执行成功的作业。
     * queue  作业的资源对列类型名称，作业的资源对列类型名称，只能由数字、字母和特殊字符(-_)组成, 并且长度为1～64字符。
     * limit  返回结果中每页显示条数。缺省值：10
-    * offset  表示作业列表从该偏移量开始查询。缺省值：0
+    * offset  表示作业列表从该偏移量开始查询。缺省值：1
     * sortBy  返回结果的排序方式，默认值为desc。 - asc：按升序排列 - desc：按降序排列
     * submittedTimeBegin  查询该时间之后提交的作业，UTC的毫秒时间戳。例如：1562032041362。
     * submittedTimeEnd  查询该时间之前提交的作业UTC的毫秒时间戳。例如：1562032041362。
@@ -63,7 +63,7 @@ class ShowJobExeListNewRequest implements ModelInterface, ArrayAccess
     * jobResult  作业运行结果。 - FAILED：执行失败的作业。 - KILLED：执行中被手动终止的作业。 - UNDEFINED：正在执行的作业。 - SUCCEEDED：执行成功的作业。
     * queue  作业的资源对列类型名称，作业的资源对列类型名称，只能由数字、字母和特殊字符(-_)组成, 并且长度为1～64字符。
     * limit  返回结果中每页显示条数。缺省值：10
-    * offset  表示作业列表从该偏移量开始查询。缺省值：0
+    * offset  表示作业列表从该偏移量开始查询。缺省值：1
     * sortBy  返回结果的排序方式，默认值为desc。 - asc：按升序排列 - desc：按降序排列
     * submittedTimeBegin  查询该时间之后提交的作业，UTC的毫秒时间戳。例如：1562032041362。
     * submittedTimeEnd  查询该时间之前提交的作业UTC的毫秒时间戳。例如：1562032041362。
@@ -118,7 +118,7 @@ class ShowJobExeListNewRequest implements ModelInterface, ArrayAccess
     * jobResult  作业运行结果。 - FAILED：执行失败的作业。 - KILLED：执行中被手动终止的作业。 - UNDEFINED：正在执行的作业。 - SUCCEEDED：执行成功的作业。
     * queue  作业的资源对列类型名称，作业的资源对列类型名称，只能由数字、字母和特殊字符(-_)组成, 并且长度为1～64字符。
     * limit  返回结果中每页显示条数。缺省值：10
-    * offset  表示作业列表从该偏移量开始查询。缺省值：0
+    * offset  表示作业列表从该偏移量开始查询。缺省值：1
     * sortBy  返回结果的排序方式，默认值为desc。 - asc：按升序排列 - desc：按降序排列
     * submittedTimeBegin  查询该时间之后提交的作业，UTC的毫秒时间戳。例如：1562032041362。
     * submittedTimeEnd  查询该时间之前提交的作业UTC的毫秒时间戳。例如：1562032041362。
@@ -152,7 +152,7 @@ class ShowJobExeListNewRequest implements ModelInterface, ArrayAccess
     * jobResult  作业运行结果。 - FAILED：执行失败的作业。 - KILLED：执行中被手动终止的作业。 - UNDEFINED：正在执行的作业。 - SUCCEEDED：执行成功的作业。
     * queue  作业的资源对列类型名称，作业的资源对列类型名称，只能由数字、字母和特殊字符(-_)组成, 并且长度为1～64字符。
     * limit  返回结果中每页显示条数。缺省值：10
-    * offset  表示作业列表从该偏移量开始查询。缺省值：0
+    * offset  表示作业列表从该偏移量开始查询。缺省值：1
     * sortBy  返回结果的排序方式，默认值为desc。 - asc：按升序排列 - desc：按降序排列
     * submittedTimeBegin  查询该时间之后提交的作业，UTC的毫秒时间戳。例如：1562032041362。
     * submittedTimeEnd  查询该时间之前提交的作业UTC的毫秒时间戳。例如：1562032041362。
@@ -186,7 +186,7 @@ class ShowJobExeListNewRequest implements ModelInterface, ArrayAccess
     * jobResult  作业运行结果。 - FAILED：执行失败的作业。 - KILLED：执行中被手动终止的作业。 - UNDEFINED：正在执行的作业。 - SUCCEEDED：执行成功的作业。
     * queue  作业的资源对列类型名称，作业的资源对列类型名称，只能由数字、字母和特殊字符(-_)组成, 并且长度为1～64字符。
     * limit  返回结果中每页显示条数。缺省值：10
-    * offset  表示作业列表从该偏移量开始查询。缺省值：0
+    * offset  表示作业列表从该偏移量开始查询。缺省值：1
     * sortBy  返回结果的排序方式，默认值为desc。 - asc：按升序排列 - desc：按降序排列
     * submittedTimeBegin  查询该时间之后提交的作业，UTC的毫秒时间戳。例如：1562032041362。
     * submittedTimeEnd  查询该时间之前提交的作业UTC的毫秒时间戳。例如：1562032041362。
@@ -587,7 +587,7 @@ class ShowJobExeListNewRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  表示作业列表从该偏移量开始查询。缺省值：0
+    *  表示作业列表从该偏移量开始查询。缺省值：1
     *
     * @return string|null
     */
@@ -599,7 +599,7 @@ class ShowJobExeListNewRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param string|null $offset 表示作业列表从该偏移量开始查询。缺省值：0
+    * @param string|null $offset 表示作业列表从该偏移量开始查询。缺省值：1
     *
     * @return $this
     */

@@ -24,13 +24,15 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableDomainName  是否开启域名管理
     * enableCombinationRetention  老化策略是否支持多条规则
     * enableArtifactScanning  是否支持制品扫描
+    * enableArtifactGc  是否支持制品清理
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'enableDomainName' => 'bool',
             'enableCombinationRetention' => 'bool',
-            'enableArtifactScanning' => 'bool'
+            'enableArtifactScanning' => 'bool',
+            'enableArtifactGc' => 'bool'
     ];
 
     /**
@@ -38,13 +40,15 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableDomainName  是否开启域名管理
     * enableCombinationRetention  老化策略是否支持多条规则
     * enableArtifactScanning  是否支持制品扫描
+    * enableArtifactGc  是否支持制品清理
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'enableDomainName' => null,
         'enableCombinationRetention' => null,
-        'enableArtifactScanning' => null
+        'enableArtifactScanning' => null,
+        'enableArtifactGc' => null
     ];
 
     /**
@@ -73,13 +77,15 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableDomainName  是否开启域名管理
     * enableCombinationRetention  老化策略是否支持多条规则
     * enableArtifactScanning  是否支持制品扫描
+    * enableArtifactGc  是否支持制品清理
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'enableDomainName' => 'enableDomainName',
             'enableCombinationRetention' => 'enableCombinationRetention',
-            'enableArtifactScanning' => 'enableArtifactScanning'
+            'enableArtifactScanning' => 'enableArtifactScanning',
+            'enableArtifactGc' => 'enableArtifactGc'
     ];
 
     /**
@@ -87,13 +93,15 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableDomainName  是否开启域名管理
     * enableCombinationRetention  老化策略是否支持多条规则
     * enableArtifactScanning  是否支持制品扫描
+    * enableArtifactGc  是否支持制品清理
     *
     * @var string[]
     */
     protected static $setters = [
             'enableDomainName' => 'setEnableDomainName',
             'enableCombinationRetention' => 'setEnableCombinationRetention',
-            'enableArtifactScanning' => 'setEnableArtifactScanning'
+            'enableArtifactScanning' => 'setEnableArtifactScanning',
+            'enableArtifactGc' => 'setEnableArtifactGc'
     ];
 
     /**
@@ -101,13 +109,15 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableDomainName  是否开启域名管理
     * enableCombinationRetention  老化策略是否支持多条规则
     * enableArtifactScanning  是否支持制品扫描
+    * enableArtifactGc  是否支持制品清理
     *
     * @var string[]
     */
     protected static $getters = [
             'enableDomainName' => 'getEnableDomainName',
             'enableCombinationRetention' => 'getEnableCombinationRetention',
-            'enableArtifactScanning' => 'getEnableArtifactScanning'
+            'enableArtifactScanning' => 'getEnableArtifactScanning',
+            'enableArtifactGc' => 'getEnableArtifactGc'
     ];
 
     /**
@@ -171,6 +181,7 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
         $this->container['enableDomainName'] = isset($data['enableDomainName']) ? $data['enableDomainName'] : null;
         $this->container['enableCombinationRetention'] = isset($data['enableCombinationRetention']) ? $data['enableCombinationRetention'] : null;
         $this->container['enableArtifactScanning'] = isset($data['enableArtifactScanning']) ? $data['enableArtifactScanning'] : null;
+        $this->container['enableArtifactGc'] = isset($data['enableArtifactGc']) ? $data['enableArtifactGc'] : null;
     }
 
     /**
@@ -264,6 +275,30 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
     public function setEnableArtifactScanning($enableArtifactScanning)
     {
         $this->container['enableArtifactScanning'] = $enableArtifactScanning;
+        return $this;
+    }
+
+    /**
+    * Gets enableArtifactGc
+    *  是否支持制品清理
+    *
+    * @return bool|null
+    */
+    public function getEnableArtifactGc()
+    {
+        return $this->container['enableArtifactGc'];
+    }
+
+    /**
+    * Sets enableArtifactGc
+    *
+    * @param bool|null $enableArtifactGc 是否支持制品清理
+    *
+    * @return $this
+    */
+    public function setEnableArtifactGc($enableArtifactGc)
+    {
+        $this->container['enableArtifactGc'] = $enableArtifactGc;
         return $this;
     }
 
